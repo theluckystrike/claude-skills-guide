@@ -16,15 +16,15 @@ permalink: /claude-code-input-validation-sanitization-patterns-guide/
 
 [Building reliable Claude Code skills requires careful attention to how data flows through your prompts](/claude-skill-md-format-complete-specification-guide/), tools, and outputs. Input validation and sanitization patterns protect your skills from malformed data, injection attacks, and unexpected behavior that can break your automation workflows.
 
-Why Input Validation Matters for Claude Skills
+## Why Input Validation Matters for Claude Skills
 
 Claude Code skills interact with external systems through tools, MCP servers, and APIs. Each interface point represents a potential vulnerability where unexpected input can cause failures or security issues. When you chain multiple skills together, like using the [tdd skill](/best-claude-skills-for-developers-2026/) for test generation followed by the frontend-design skill for UI creation, the data passing between them must be predictable and safe.
 
 Without proper validation, a malformed response from one skill can cascade into failures across your entire workflow. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/), for instance, relies on clean data structures to store and retrieve context. Corrupted input can corrupt your persisted knowledge base.
 
-Core Validation Patterns
+## Core Validation Patterns
 
-Type Checking and Schema Validation
+## Type Checking and Schema Validation
 
 [The foundation of input validation begins with type checking](/best-claude-code-skills-to-install-first-2026/) When a skill receives data from an external source, whether from user input, API responses, or file contents, you must verify the data matches expected types before processing.
 
@@ -54,7 +54,7 @@ const result = validateInput(userData, {
 
 This pattern becomes essential when building skills that accept user-provided configurations. The pdf skill, for example, needs to validate page ranges, output formats, and file paths before attempting document generation.
 
-Range and Boundary Validation
+## Range and Boundary Validation
 
 Numeric inputs require boundary checks. Always validate that numbers fall within acceptable ranges, especially when those values affect loop counts, timeouts, or resource allocation.
 
@@ -76,9 +76,9 @@ validateNumericRange(timeout, 100, 30000);
 
 This pattern protects against denial-of-service scenarios where excessive resource requests could freeze your Claude Code session.
 
-Sanitization Techniques
+## Sanitization Techniques
 
-String Sanitization
+## String Sanitization
 
 User-provided strings often contain unwanted characters, excessive whitespace, or potential injection payloads. Sanitization transforms raw input into safe, predictable strings.
 
@@ -104,7 +104,7 @@ function sanitizeFilename(filename) {
 
 When using skills that generate files, like the canvas-design skill or any skill creating output artifacts, sanitizing filenames prevents path traversal vulnerabilities.
 
-HTML and Markdown Sanitization
+## HTML and Markdown Sanitization
 
 If your skill outputs HTML or markdown that gets rendered in downstream systems, you need to sanitize potentially dangerous content.
 
@@ -128,7 +128,7 @@ function sanitizeMarkdown(input) {
 
 The docx skill and pptx skill often generate documents from user-provided templates. Sanitizing template variables prevents script injection if those documents get opened in vulnerable viewers.
 
-Pattern: Defensive Skill Chaining
+## Pattern: Defensive Skill Chaining
 
 When chaining multiple skills together, each skill should validate input before processing and sanitize output before passing to the next skill.
 
@@ -139,7 +139,7 @@ User Input → [Skill A: Validate] → [Skill A: Process] → [Skill A: Sanitize
 
 This defensive approach ensures that even if one skill receives unexpected data, it either transforms it into something safe or fails gracefully with a clear error message.
 
-Multi-Skill Workflow Validation
+## Multi-Skill Workflow Validation
 
 Consider a workflow using the xlsx skill to generate spreadsheets from user data, then the pdf skill to convert those spreadsheets into reports:
 
@@ -165,7 +165,7 @@ function prepareSpreadsheetData(rawData) {
 
 This preparation function ensures the xlsx skill receives predictable, bounded data regardless of what the user originally provided.
 
-Error Handling and Graceful Degradation
+## Error Handling and Graceful Degradation
 
 Validation failures should never crash your skill unexpectedly. Implement graceful degradation that provides useful feedback:
 
@@ -197,7 +197,7 @@ function safeProcess(input, validators, processor) {
 
 This pattern allows skills like the tdd skill to handle malformed test specifications by providing helpful error messages rather than failing silently or crashing.
 
-Practical Implementation Tips
+## Practical Implementation Tips
 
 Start with validation at skill boundaries, the points where your skill receives input from Claude Code's tool system or sends output to external systems. Focus validation effort where data crosses trust boundaries.
 

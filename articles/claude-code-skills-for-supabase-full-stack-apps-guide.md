@@ -13,11 +13,9 @@ permalink: /claude-code-skills-for-supabase-full-stack-apps-guide/
 ---
 {% raw %}
 
-Claude Code Skills for Supabase Full Stack Apps Guide
-
 Building a Supabase-powered full-stack application involves multiple layers: database schema, authentication, backend logic, API endpoints, and frontend interfaces. [Claude Code skills](/claude-skill-md-format-complete-specification-guide/) streamline each phase of this workflow. This guide covers the most useful skills for Supabase development and shows how to invoke them effectively.
 
-Setting Up Your Supabase Project
+## Setting Up Your Supabase Project
 
 Before diving into skills, ensure your local environment is ready. Initialize a new project with your preferred framework. Supabase works well with Next.js, Remix, SvelteKit, or Vue. The key is establishing a clean connection to your Supabase instance.
 
@@ -52,7 +50,7 @@ export const supabaseAdmin = createClient<Database>(
 
 Using the generated `Database` type from `supabase gen types typescript` gives you end-to-end type safety from database to frontend, catching schema mismatches at compile time rather than at runtime. The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) helps maintain organized documentation of your project configuration across different environments.
 
-Database Design and Schema Management
+## Database Design and Schema Management
 
 Designing your PostgreSQL schema correctly from the start prevents costly migrations later. A well-structured schema should account for your access patterns, not just your data shape. Think about which queries will run most frequently and create indexes accordingly.
 
@@ -146,7 +144,7 @@ A useful pattern is to generate Supabase types directly from your database and c
 npx supabase gen types typescript --project-id your-project-id > lib/database.types.ts
 ```
 
-Backend Development with Edge Functions
+## Backend Development with Edge Functions
 
 Supabase Edge Functions run Deno at the edge, handling serverless backend logic. They are ideal for webhooks, background processing, and any backend operation that needs to happen outside the client. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) proves invaluable here. Write your tests first, then implement the function logic.
 
@@ -214,7 +212,7 @@ A few things this example demonstrates that are easy to get wrong: always handle
 
 The pptx skill helps create technical presentations for architecture reviews or sprint demos. Export your Edge Function documentation to slides for team meetings.
 
-Frontend Integration
+## Frontend Integration
 
 Connecting your frontend to Supabase involves handling authentication state, real-time subscriptions, and data fetching. The [frontend-design skill](/claude-frontend-design-skill-review-and-tutorial/) generates component structures that follow best practices for Supabase integration.
 
@@ -314,7 +312,7 @@ export function useTeamPosts(teamId: string) {
 
 Remember to enable the `realtime` feature for each table in the Supabase dashboard, and to set appropriate RLS policies. realtime subscriptions respect your row-level security rules.
 
-Testing and Quality Assurance
+## Testing and Quality Assurance
 
 The tdd skill integrates with your Supabase project to create comprehensive test suites. Test authentication flows, RLS policies, Edge Functions, and API integrations. For Supabase specifically, use the Supabase CLI to run a local stack so tests don't hit your production database:
 
@@ -383,7 +381,7 @@ The pdf skill generates test reports and quality documentation. Export your test
 | Real-time | Subscribe, receive events, unsubscribe | Jest with fake timers |
 | Type safety | Schema drift detection | `supabase gen types` in CI |
 
-Documentation and Knowledge Management
+## Documentation and Knowledge Management
 
 Maintaining clear documentation accelerates team collaboration. The docx skill creates comprehensive API documentation from your Supabase project.
 
@@ -402,7 +400,7 @@ supabase/
 
 The supermemory skill maintains contextual awareness of your project decisions, making it easier to recall why specific architectural choices were made. For instance, if you chose to use `profiles` as a separate table instead of extending `auth.users` directly, that reasoning should be captured so future developers don't inadvertently reverse it.
 
-Deployment and DevOps
+## Deployment and DevOps
 
 Deploying Supabase applications involves multiple steps: building your frontend, deploying Edge Functions, and configuring environment variables. Automate this with a CI/CD pipeline that runs your test suite against the local Supabase stack before deploying:
 
@@ -458,7 +456,7 @@ The webapp-testing skill validates your deployed application, checking that auth
 
 Use version control for your Supabase configuration. Store migrations and schema changes in your repository, enabling reproducible deployments across environments. Never apply schema changes directly in the Supabase dashboard without also creating the corresponding migration file. otherwise your local development environment and production will diverge silently.
 
-Skill-to-Phase Mapping for Supabase Projects
+## Skill-to-Phase Mapping for Supabase Projects
 
 | Project Phase | Recommended Skill | Primary Use Case |
 |---|---|---|
@@ -470,7 +468,7 @@ Skill-to-Phase Mapping for Supabase Projects
 | Compliance / reporting | pdf | Test reports, audit exports |
 | Production validation | webapp-testing | Post-deploy smoke tests |
 
-Summary
+## Summary
 
 Claude Code skills enhance every phase of Supabase full-stack development. The frontend-design skill accelerates UI implementation, especially for auth flows and real-time components. The tdd skill ensures reliable backend logic through test-driven development, and pairs naturally with Supabase's local development stack for genuine integration testing. The xlsx and docx skills maintain clear documentation for schema design and API contracts. The supermemory skill preserves project context across sessions, so architectural decisions don't get lost. The pdf skill generates reports and documentation for stakeholders and compliance needs.
 

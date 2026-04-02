@@ -16,7 +16,7 @@ permalink: /claude-md-template-for-new-projects-starter-guide/
 
 When you start a new project, having a solid prompt template saves time and ensures consistent results. [Claude MD templates are structured Markdown files that define how Claude should approach](/claude-skill-md-format-complete-specification-guide/) different types of project tasks. This guide walks you through creating and using these templates effectively, with real-world examples that apply across web apps, APIs, and backend services.
 
-What Is a Claude MD Template
+## What Is a Claude MD Template
 
 [A Claude MD template is a Markdown file containing predefined prompts, instructions, and context that you can reuse across multiple projects.](/claude-skill-md-format-complete-specification-guide/) Unlike Claude skills which extend Claude's capabilities, MD templates focus on structuring your prompts for specific workflows. Think of them as reusable project blueprints. documents that carry your team's conventions, your tech stack preferences, and the exact phrasing that produces the output you want.
 
@@ -24,7 +24,7 @@ When you combine a template with skills like tdd or frontend-design, you get a p
 
 The key insight is that Claude performs much better when it has explicit context upfront. A developer who pastes their stack, constraints, and patterns into a template before asking for code gets dramatically more useful output than one who starts from scratch each time.
 
-Creating Your First Template
+## Creating Your First Template
 
 Start by creating a templates folder in your project:
 
@@ -67,7 +67,7 @@ Review [FILE_PATH] for performance issues and security concerns.
 
 The `Code Conventions` section is what separates a useful template from a generic one. Claude will apply those rules without being asked again in each individual prompt.
 
-Why Conventions Belong in Your Template
+## Why Conventions Belong in Your Template
 
 Without conventions in your template, you will spend time correcting output: asking Claude to switch from class components to functional, or to use async/await instead of `.then()`. With a template, Claude absorbs your codebase's style once and applies it consistently.
 
@@ -83,7 +83,7 @@ Consider what happens across a two-week sprint without a template versus with on
 
 That consistency compounds. By week two, the generated code needs far less manual adjustment.
 
-Using Templates with Claude Skills
+## Using Templates with Claude Skills
 
 Templates become powerful when paired with Claude skills. The tdd skill works exceptionally well with project templates:
 
@@ -105,9 +105,9 @@ The pdf skill helps when you need to document your templates or extract requirem
 
 The skill handles the mechanical work. scaffolding, formatting, reading files. while your template handles the context. Neither replaces the other.
 
-Template Structure for Different Project Types
+## Template Structure for Different Project Types
 
-Web Application Template
+## Web Application Template
 
 ```markdown
 Web App Project Template
@@ -138,7 +138,7 @@ Wrap route-level components in ErrorBoundary.
 Log errors to Sentry using the logError() utility.
 ```
 
-API Project Template
+## API Project Template
 
 ```markdown
 API Project Template
@@ -175,7 +175,7 @@ Middleware Stack
 6. Error serializer
 ```
 
-CLI Tool Template
+## CLI Tool Template
 
 When building command-line tools, the template should capture flag conventions and output formats:
 
@@ -200,7 +200,7 @@ Output Conventions
 - Error: red cross + message, exit code 1
 ```
 
-Documentation Template
+## Documentation Template
 
 Pair this with the supermemory skill to maintain project knowledge:
 
@@ -208,9 +208,9 @@ Pair this with the supermemory skill to maintain project knowledge:
 /supermemory create documentation template with API reference, examples, and troubleshooting sections
 ```
 
-Advanced Template Techniques
+## Advanced Template Techniques
 
-Variables and Placeholders
+## Variables and Placeholders
 
 Use consistent placeholder syntax across templates. The bracket convention works well because it is easy to search and replace:
 
@@ -236,7 +236,7 @@ echo "Template initialized at .claude/CONTEXT.md"
 
 This turns your template into a proper initialization step you run once at project start.
 
-Including External Context
+## Including External Context
 
 Reference other files in your template so Claude always has the full picture:
 
@@ -249,7 +249,7 @@ See ./api/openapi.yaml for API contracts
 
 When you include references like this, you can ask Claude to read them: "Follow the patterns in ARCHITECTURE.md when creating this service." Claude will request those files and incorporate their content.
 
-Skill Chaining
+## Skill Chaining
 
 Chain multiple skills within templates to define a complete workflow:
 
@@ -267,7 +267,7 @@ Feature completion checklist
 
 Writing skill chains in your template documents your team's process and makes it executable.
 
-Organizing a Template Library
+## Organizing a Template Library
 
 Keep templates focused and modular. Instead of one massive template, create smaller focused templates for different scenarios:
 
@@ -292,7 +292,7 @@ Changes: Added accessibility section after Q1 audit findings
 -->
 ```
 
-Example Workflow
+## Example Workflow
 
 Here is how a typical session might flow using templates and skills:
 
@@ -321,7 +321,7 @@ Here is how a typical session might flow using templates and skills:
 
 Each step builds on the previous. By step six, Claude has accumulated context about your project conventions, your test setup, your component patterns, and your architecture decisions. That accumulated context makes the review substantially more useful than a generic code review.
 
-Common Mistakes to Avoid
+## Common Mistakes to Avoid
 
 Making templates too generic. A template that just says "use best practices" gives Claude nothing to work with. Spell out your specific conventions.
 
@@ -331,7 +331,7 @@ Putting everything in one file. A 500-line template is hard to maintain and wast
 
 Skipping the tech stack section. Claude will make assumptions about your stack if you do not specify. Those assumptions may be wrong. Always include exact versions for critical dependencies.
 
-Conclusion
+## Conclusion
 
 Claude MD templates transform how you start new projects. By creating reusable prompt structures, you standardize your workflow and reduce repetitive setup time. Combine templates with skills like tdd, frontend-design, pdf, and supermemory to build a comprehensive project toolkit.
 
@@ -339,7 +339,7 @@ The best teams treat their templates as living documents. They refine them after
 
 Start with one simple template, test it in your next project, and iterate. The best template is one you actually use.
 
-Step-by-Step Guide: Building Your Starter CLAUDE.md
+## Step-by-Step Guide: Building Your Starter CLAUDE.md
 
 Here is a concrete process for creating a CLAUDE.md template that your team actually uses.
 
@@ -353,7 +353,7 @@ Step 4. Add code generation constraints. List specific patterns you want enforce
 
 Step 5. Include examples of correct and incorrect patterns. For non-obvious conventions, pair the rule with a code example showing the right pattern and a comment explaining why the alternative is wrong. Claude Code generates these examples by extracting patterns from your existing codebase and presenting the most idiomatic version as the positive example.
 
-Common Pitfalls
+## Common Pitfalls
 
 Writing CLAUDE.md for an audience of developers rather than for Claude Code. CLAUDE.md is parsed by an AI, not a human. Prose that developers find clear ("follow good OOP principles") is too vague for Claude Code to act on. Every instruction should be concrete enough that you could write an automated test to check for compliance.
 
@@ -361,7 +361,7 @@ Including too much documentation context. If your CLAUDE.md tries to explain the
 
 Not updating CLAUDE.md when the tech stack changes. Outdated CLAUDE.md instructions that reference retired frameworks or deprecated patterns mislead Claude Code into generating code that does not compile. Assign ownership of CLAUDE.md to a specific team member and review it at the start of each sprint.
 
-Best Practices
+## Best Practices
 
 Start with the smallest possible CLAUDE.md. A 50-line CLAUDE.md that your team consistently maintains beats a 500-line document that drifts out of date within a month. Add sections when you identify a repeated correction in code review rather than trying to anticipate everything upfront.
 
@@ -369,12 +369,11 @@ Use CLAUDE.md as onboarding documentation. New team members should read CLAUDE.m
 
 Pair CLAUDE.md with automated linting. Coding standards that can be automatically enforced should be in linter configuration, not CLAUDE.md. Reserve CLAUDE.md for the standards that require judgment. things that pass the linter but still violate your team's quality standards.
 
-Integration Patterns
+## Integration Patterns
 
 Template repository with CLAUDE.md scaffolding. Create a GitHub template repository that includes a base CLAUDE.md for your organization's common standards. When teams create new projects from the template, they start with the organizational baseline and add project-specific rules. Claude Code helps generate the project-specific additions by analyzing the initial project description and tech stack.
 
 Pre-commit hook compliance check. Claude Code generates a pre-commit hook that runs a static analysis check against your CLAUDE.md rules. The hook uses AST-based analysis for rules like required docstrings and consistent error handling patterns, and line-based analysis for simpler rules like banned imports and prohibited function names.
-
 
 Related Reading
 

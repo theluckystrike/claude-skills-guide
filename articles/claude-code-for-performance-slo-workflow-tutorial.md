@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Performance SLO Workflow Tutorial"
 description: "Learn how to use Claude Code to implement and automate performance Service Level Objectives (SLOs) in your development workflow with practical examples."
@@ -18,7 +17,7 @@ score: 8
 
 Performance Service Level Objectives (SLOs) help teams define and measure the reliability of their systems. When implemented correctly, SLOs provide clear targets for response times, throughput, and resource usage. This guide shows you how to use Claude Code to create a performance SLO workflow that integrates smoothly into your development process.
 
-Understanding Performance SLOs in Practice
+## Understanding Performance SLOs in Practice
 
 An SLO consists of a metric, a target value, and a time window. For example, you might define that your API response time should stay under 200ms for 99.9% of requests over 30 days. Claude Code can help you define, measure, and track these objectives throughout your development lifecycle.
 
@@ -31,7 +30,7 @@ Before setting up the workflow, identify the key performance indicators (KPIs) t
 
 The performance-slo-automation skill provides templates for defining these metrics and creating actionable workflows.
 
-Setting Up Your First Performance SLO
+## Setting Up Your First Performance SLO
 
 The first step is creating a configuration file that defines your SLOs. Claude Code works well with structured YAML definitions that can be version-controlled alongside your code.
 
@@ -63,7 +62,7 @@ slos:
 
 This configuration defines three SLOs with different characteristics. The `target` represents your desired performance level, while `threshold` indicates when to alert. The claude-code-slo-definition-skill helps you validate these configurations.
 
-Creating the Claude Code Skill for SLO Checks
+## Creating the Claude Code Skill for SLO Checks
 
 Now let's build a skill that checks performance against your SLOs. Create a skill file that reads your metrics and provides actionable feedback:
 
@@ -100,7 +99,7 @@ def fetch_metric(metric_name):
 
 The claude-skills-for-slo-monitoring skill provides integrations with popular monitoring systems. You can connect to Prometheus, Grafana, DataDog, or custom instrumentation.
 
-Integrating SLO Checks into Your CI Pipeline
+## Integrating SLO Checks into Your CI Pipeline
 
 Automated SLO checks prevent performance regressions from reaching production. Add the check to your CI workflow:
 
@@ -126,7 +125,7 @@ jobs:
 
 The claude-code-ci-cd-integration skill helps you set up these checks with proper error handling and reporting.
 
-Building Performance Baselines
+## Building Performance Baselines
 
 Before you can effectively track SLOs, you need reliable baselines. Claude Code can help analyze historical data to establish appropriate targets.
 
@@ -144,7 +143,7 @@ Invoke the baseline analysis skill
 
 This generates a report with recommended targets based on your actual performance history. Starting with realistic targets prevents alert fatigue from unachievable SLOs.
 
-Alerting and Incident Response
+## Alerting and Incident Response
 
 When SLOs breach, you need clear escalation paths. Configure alerts that notify the right people at the right time.
 
@@ -168,7 +167,7 @@ alerts:
     runbook: /docs/runbooks/high-latency.md
 ```
 
-Measuring SLO Achievement Over Time
+## Measuring SLO Achievement Over Time
 
 Tracking SLO performance over time reveals trends and helps predict future reliability. Create dashboards that show:
 
@@ -179,7 +178,7 @@ Tracking SLO performance over time reveals trends and helps predict future relia
 
 The slo-dashboard-generation skill creates visualizations from your SLO data. Regular review of these metrics during team meetings keeps performance top of mind.
 
-Best Practices for SLO Workflows
+## Best Practices for SLO Workflows
 
 When implementing SLO workflows with Claude Code, keep these principles in mind:
 
@@ -191,7 +190,7 @@ Correlate metrics: Link SLO breaches to user impact. A 1% error rate matters mor
 
 Iterate on thresholds: Your initial targets won't be perfect. Review and adjust quarterly based on actual performance and user expectations.
 
-Automating SLO Remediation
+## Automating SLO Remediation
 
 Beyond alerting, Claude Code can help automate responses to common SLO breaches. The slo-automated-remediation skill provides patterns for:
 
@@ -214,14 +213,13 @@ async def handle_high_latency(slo_breach):
         await create_incident()
 ```
 
-Getting Started Today
+## Getting Started Today
 
 Begin your performance SLO journey by identifying the metrics that most directly impact user experience. Use the claude-code-performance-slo-starter skill to bootstrap your configuration.
 
 Most teams find the greatest impact from tracking API latency and error rates initially. As your monitoring matures, add more sophisticated SLOs around throughput, resource efficiency, and custom business metrics.
 
 Claude Code makes it straightforward to define, measure, and maintain performance objectives without creating excessive overhead. The key is starting with clear, achievable targets and iterating as your understanding of system behavior improves.
-
 
 Related Reading
 

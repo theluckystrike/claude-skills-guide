@@ -16,7 +16,7 @@ reviewed: true
 
 Open source maintenance is rewarding but demanding. From triaging issues to reviewing contributions and managing releases, maintainers juggle countless tasks that can quickly lead to burnout. Claude Code offers a powerful toolkit to automate repetitive workflows, respond to contributors faster, and focus your energy on high-impact decisions. This guide walks through practical strategies for integrating Claude Code into your OSS maintainer workflow.
 
-Setting Up Claude Code for OSS Projects
+## Setting Up Claude Code for OSS Projects
 
 Before automating your workflows, configure Claude Code to understand your project's structure, contribution guidelines, and community standards. Create a dedicated context file that captures essential project information.
 
@@ -36,11 +36,11 @@ Standards:
 
 This context helps Claude Code generate appropriate responses when contributors submit issues or pull requests. It understands your project's conventions and can enforce them consistently.
 
-Automating Issue Triage
+## Automating Issue Triage
 
 Issue triage consumes significant maintainer time. Claude Code can help categorize, label, and prioritize issues automatically, ensuring nothing falls through the cracks.
 
-Creating an Issue Triage Workflow
+## Creating an Issue Triage Workflow
 
 Set up a Claude Skill that analyzes incoming issues:
 
@@ -61,7 +61,7 @@ workflow:
 
 When a new issue arrives, Claude Code examines its content, identifies whether it's a bug report or feature request, checks for duplicates, applies relevant labels, and responds with appropriate guidance. This automation handles the initial response within minutes rather than hours.
 
-Practical Example: Bug Report Validation
+## Practical Example: Bug Report Validation
 
 Bug reports often lack critical information. Claude Code can validate reports against your issue template and request missing details:
 
@@ -76,11 +76,11 @@ Please update your issue with this information so we can help you better.
 
 This ensures contributors provide actionable information from the start, reducing back-and-forth and accelerating resolution.
 
-Streamlining Pull Request Reviews
+## Streamlining Pull Request Reviews
 
 Code review is essential but time-intensive. Claude Code helps maintainers review contributions efficiently by checking code quality, running tests, and identifying potential issues.
 
-Setting Up PR Review Automation
+## Setting Up PR Review Automation
 
 Create a skill that runs on every pull request:
 
@@ -101,7 +101,7 @@ checks:
 
 Claude Code executes these checks and provides a comprehensive review summary. Maintainers receive a clear overview of what's been done well and what needs attention.
 
-Providing Constructive Feedback
+## Providing Constructive Feedback
 
 When Claude Code identifies issues, it helps draft constructive feedback:
 
@@ -119,11 +119,11 @@ Would you like me to help implement any of these suggestions?
 
 This approach balances encouragement with actionable feedback, helping contributors improve while feeling valued.
 
-Managing Releases and Changelogs
+## Managing Releases and Changelogs
 
 Release management involves numerous manual steps: updating changelogs, tagging versions, publishing packages, and announcing releases. Claude Code can automate much of this process.
 
-Creating a Release Workflow
+## Creating a Release Workflow
 
 ```yaml
 skills/release/skill.md
@@ -142,7 +142,7 @@ steps:
 
 Running this skill with `claude: run release --type minor` handles the entire release process, ensuring consistency and reducing human error.
 
-Generating Changelogs Automatically
+## Generating Changelogs Automatically
 
 Claude Code can parse git history and conventional commits to generate meaningful changelogs:
 
@@ -164,11 +164,11 @@ v2.1.0 Features
 
 This automation transforms what used to be a tedious manual task into a one-command operation.
 
-Building Community Engagement
+## Building Community Engagement
 
 Successful open source projects thrive on community involvement. Claude Code helps maintainers engage with contributors meaningfully.
 
-Recognizing Contributor Contributions
+## Recognizing Contributor Contributions
 
 Create a skill that acknowledges contributions:
 
@@ -186,7 +186,7 @@ actions:
 
 Small gestures like personalized thank-yous and public recognition encourage continued contributions and make contributors feel valued.
 
-Guiding First-Time Contributors
+## Guiding First-Time Contributors
 
 First-time contributors often need extra guidance. Claude Code can provide customized onboarding:
 
@@ -205,11 +205,11 @@ Need help? We're here to support you!
 
 This warm welcome reduces friction and helps newcomers become productive contributors.
 
-Measuring and Improving Workflow Efficiency
+## Measuring and Improving Workflow Efficiency
 
 Track your automation's impact to ensure it's delivering value. Claude Code can help generate metrics and identify bottlenecks.
 
-Creating a Metrics Dashboard
+## Creating a Metrics Dashboard
 
 ```yaml
 skills/metrics/skill.md
@@ -228,7 +228,7 @@ reports:
 
 Regular metrics help you understand where your time goes and where automation provides the most value.
 
-Best Practices for Maintainer Workflows
+## Best Practices for Maintainer Workflows
 
 As you implement Claude Code in your OSS workflow, keep these principles in mind:
 
@@ -240,12 +240,11 @@ Document your workflows. Clear documentation helps other maintainers understand 
 
 Gather contributor feedback. Ask your community if the automated interactions feel helpful or impersonal, and refine accordingly.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms open source maintenance from reactive firefighting to proactive community building. By automating issue triage, streamlining code reviews, managing releases, and engaging contributors, you free up time for the work that matters most: mentoring contributors, making architectural decisions, and nurturing your project's vision.
 
 Start with one workflow, measure the results, and expand progressively. Your future self, and your community, will thank you for the time and energy saved through thoughtful automation.
-
 
 Related Reading
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code FastAPI Dependency Injection Patterns Guide
 
 FastAPI's dependency injection system is one of its most powerful features, enabling clean architecture and testable code. When combined with Claude Code, you can rapidly implement solid dependency injection patterns that follow best practices. This guide walks you through practical examples and actionable patterns you can apply immediately to your Python APIs.
 
-Understanding FastAPI Dependency Injection
+## Understanding FastAPI Dependency Injection
 
 FastAPI's dependency injection system allows you to declare dependencies at the route level, and FastAPI automatically resolves them for each request. This pattern promotes loose coupling, improves testability, and makes your code more maintainable.
 
@@ -29,9 +28,9 @@ What makes FastAPI's approach distinctive compared to frameworks like Django or 
 
 FastAPI also caches dependency results within a single request by default. If two route parameters depend on the same function, it only runs once per request. You can disable this with `use_cache=False` in `Depends()` when you need fresh state each time.
 
-Basic Dependency Injection Patterns
+## Basic Dependency Injection Patterns
 
-Simple Dependency with Depends
+## Simple Dependency with Depends
 
 The most straightforward pattern is creating a reusable dependency function that returns a value used by your route handler:
 
@@ -50,7 +49,7 @@ async def read_items(db_url: str = Depends(get_database_url)):
 
 This pattern separates configuration from your route logic. When testing, you can easily override `get_database_url` with a test database.
 
-Generator-Based Dependencies with Cleanup
+## Generator-Based Dependencies with Cleanup
 
 For resources that need proper cleanup. database sessions, file handles, HTTP clients. use generator dependencies. FastAPI executes code before the `yield` on the way in, and code after the `yield` on the way out, even if an exception occurs:
 
@@ -82,7 +81,7 @@ async def create_user(user_data: dict, db: AsyncSession = Depends(get_db)):
 
 This pattern ensures your session is always closed and transactions are always committed or rolled back, regardless of what happens in your route handler.
 
-Class-Based Dependencies
+## Class-Based Dependencies
 
 For more complex dependencies, use classes. FastAPI will instantiate them and handle async properly:
 
@@ -145,9 +144,9 @@ async def sensitive_action():
     return {"status": "ok"}
 ```
 
-Practical Dependency Patterns for Real Applications
+## Practical Dependency Patterns for Real Applications
 
-Authentication Dependencies
+## Authentication Dependencies
 
 One of the most common use cases is implementing authentication:
 
@@ -208,7 +207,7 @@ async def delete_article(
     return {"deleted": article_id}
 ```
 
-Optional Dependencies with Default Values
+## Optional Dependencies with Default Values
 
 Sometimes you need dependencies that are optional:
 
@@ -236,7 +235,7 @@ async def get_items(
     return items
 ```
 
-Parameterized Dependencies
+## Parameterized Dependencies
 
 For dependencies that need configuration, use factories:
 
@@ -264,7 +263,7 @@ async def create_data(
     # Your endpoint logic
 ```
 
-Dependency-Driven Pagination
+## Dependency-Driven Pagination
 
 Pagination is a great candidate for a reusable dependency. Rather than repeating query parameter validation across dozens of routes, extract it once:
 
@@ -300,9 +299,9 @@ async def list_articles(
     return result.scalars().all()
 ```
 
-Advanced Patterns for Production Systems
+## Advanced Patterns for Production Systems
 
-DependencyOverrides for Testing
+## DependencyOverrides for Testing
 
 FastAPI provides a powerful testing mechanism through dependency overrides:
 
@@ -345,7 +344,7 @@ async def test_create_user(app_with_mock_db):
 
 The `dependency_overrides` dict is global on the app object, so always clear it after tests to avoid state leaking between test cases.
 
-Nested Dependencies
+## Nested Dependencies
 
 Dependencies can depend on other dependencies, creating a clean hierarchy:
 
@@ -368,7 +367,7 @@ This pattern keeps each dependency focused on a single responsibility while comp
 
 FastAPI resolves nested dependencies in the correct order automatically. It builds a dependency graph, identifies what each function needs, and executes them in the right sequence. You never need to manually orchestrate this.
 
-Conditional Dependencies
+## Conditional Dependencies
 
 Use dependency conditions for feature flags or environment-specific behavior:
 
@@ -385,7 +384,7 @@ async def upload_file(
     # Upload using the appropriate backend
 ```
 
-Route-Level vs. Router-Level Dependencies
+## Route-Level vs. Router-Level Dependencies
 
 You can attach dependencies at different scopes. Route-level dependencies apply to one endpoint; router-level dependencies apply to all routes in a router:
 
@@ -416,7 +415,7 @@ app = FastAPI(dependencies=[Depends(log_request)])
 
 This is ideal for cross-cutting concerns like request logging, correlation ID injection, or global rate limiting.
 
-Comparing Dependency Patterns
+## Comparing Dependency Patterns
 
 | Pattern | Use Case | Cleanup Support | Testability |
 |---|---|---|---|
@@ -427,7 +426,7 @@ Comparing Dependency Patterns
 | Nested dependencies | Composed auth + profile | Inherited | Override any layer |
 | Router-level | Shared auth for a group | N/A | Override once for all |
 
-How Claude Code Accelerates DI Workflows
+## How Claude Code Accelerates DI Workflows
 
 Claude Code is particularly effective at FastAPI dependency injection work because DI patterns are highly structured and repetitive. You can describe your data model and ask Claude to scaffold a complete dependency chain:
 
@@ -439,7 +438,7 @@ Claude understands the relationship between `Depends()`, `Security()`, and `Back
 
 When you use Claude Code to refactor existing code toward better DI, give it the route file and ask it to extract repeated logic into reusable dependencies. It will identify patterns like repeated `db = get_db()` calls or copy-pasted auth checks and consolidate them correctly.
 
-Actionable Best Practices
+## Actionable Best Practices
 
 1. Keep dependencies focused: Each dependency should do one thing well. Don't bundle multiple responsibilities in a single dependency.
 
@@ -457,7 +456,7 @@ Actionable Best Practices
 
 8. Prefer dataclasses for grouped parameters: When a route needs several related query params, wrap them in a dataclass dependency rather than listing them individually on the route.
 
-Conclusion
+## Conclusion
 
 FastAPI's dependency injection system provides a solid foundation for building scalable Python APIs. By using these patterns with Claude Code's assistance, you can rapidly implement clean, testable, and maintainable code structures. Start with simple dependencies and gradually adopt more advanced patterns as your application grows in complexity.
 

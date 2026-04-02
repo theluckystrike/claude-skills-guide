@@ -16,7 +16,7 @@ permalink: /claude-code-plus-perplexity-for-research-driven-development/
 
 Modern software development increasingly demands that developers make informed technical decisions backed by current research, best practices, and real-world benchmarks. While Claude Code excels at implementing solutions and automating coding tasks, pairing it with Perplexity, a powerful AI-powered research tool, creates a workflow where every technical decision is grounded in evidence. This combination transforms development from guesswork into research-driven engineering.
 
-Understanding the Two-Tool Workflow
+## Understanding the Two-Tool Workflow
 
 Claude Code operates as your implementation partner: it reads code, writes new functionality, runs commands, manages files, and executes complex development workflows. It excels at taking a clear specification and transforming it into working software. However, Claude Code's knowledge has a cutoff date, and it may not always have the latest benchmarks, newly published libraries, or emerging patterns.
 
@@ -24,7 +24,7 @@ Perplexity fills this gap by providing real-time, sourced answers to technical q
 
 The research-driven development workflow cycles between these tools: use Perplexity to research technical decisions, then use Claude Code to implement based on what you discover.
 
-Practical Example: Choosing a Database Solution
+## Practical Example: Choosing a Database Solution
 
 Consider a common scenario: selecting a database for a new microservices project. Without research, you might default to PostgreSQL or MongoDB based on outdated assumptions. With the combined workflow, you get informed results.
 
@@ -44,7 +44,7 @@ I'm building a microservices application with these requirements: [list requirem
 
 Claude Code now has the context to recommend the best approach, and you can cite your Perplexity research when discussing architecture decisions with your team.
 
-Researching Performance Optimization Strategies
+## Researching Performance Optimization Strategies
 
 Performance optimization requires understanding current best practices and real-world benchmarks. Claude Code can implement optimizations, but Perplexity helps you identify which optimizations actually matter.
 
@@ -63,7 +63,7 @@ Then direct Claude Code with this context:
 Refactor this React dashboard to improve performance. Key priorities based on current research: implement React Server Components where appropriate, use proper code splitting with lazy loading, and optimize images with next/image patterns. Focus on the components in /dashboard that are causing the largest bundle size.
 ```
 
-Validating Security Recommendations
+## Validating Security Recommendations
 
 Security decisions require up-to-date information about vulnerabilities, best practices, and compliance requirements. Perplexity provides current security guidance that Claude Code can then implement.
 
@@ -78,7 +78,7 @@ Then implement with Claude Code:
 Implement authentication for this Next.js application using the recommended approach from current best practices. Include: secure token storage (not localStorage for access tokens), proper refresh token rotation, CSRF protection, and secure session management.
 ```
 
-Investigating Library Compatibility and Alternatives
+## Investigating Library Compatibility and Alternatives
 
 When integrating multiple libraries or frameworks, compatibility issues can derail projects. Use Perplexity to verify compatibility before implementation.
 
@@ -93,7 +93,7 @@ Then work with Claude Code:
 Migrate our React 19 application from Redux to the recommended state management solution. Preserve all current state shape and migration path. Use the modern patterns identified in our research.
 ```
 
-Building Research-Informed Codebases
+## Building Research-Informed Codebases
 
 The most powerful application of this workflow is building entire projects with research as a first-class concern. This means documenting research decisions alongside code, creating a traceable connection between evidence and implementation.
 
@@ -105,7 +105,7 @@ Create a RESEARCH.md file in the /docs directory that documents our technology c
 
 This creates a living document that future developers (including future-you) can reference to understand why certain decisions were made.
 
-Workflow Integration Tips
+## Workflow Integration Tips
 
 To make this workflow efficient, establish patterns that minimize context-switching overhead:
 
@@ -117,7 +117,7 @@ Store research results in a centralized location that Claude Code can reference.
 
 Use Perplexity's memory feature to build a project-specific knowledge base. When you research decisions for your project, having that context persist helps maintain consistency across the development lifecycle.
 
-Measuring the Impact
+## Measuring the Impact
 
 Research-driven development does take more time upfront, but the payoff comes in reduced rewrites, better architecture decisions, and more confident technical choices. Teams adopting this workflow report:
 
@@ -126,7 +126,7 @@ Research-driven development does take more time upfront, but the payoff comes in
 - Reduced technical debt from avoiding premature optimization or incorrect tool selection
 - More confident code reviews when decisions can be backed by research
 
-Conclusion
+## Conclusion
 
 Claude Code and Perplexity together create a development workflow where implementation is always informed by current research. Rather than relying on outdated assumptions or choosing tools based on past experience alone, every technical decision can be validated against the latest information. This combination doesn't slow you down, it makes your development faster by reducing the rework that comes from uninformed decisions. Start by pairing research sessions with implementation tasks, and watch your codebase become more principled and maintainable.
 

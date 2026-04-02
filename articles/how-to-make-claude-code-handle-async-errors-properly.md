@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-How to Make Claude Code Handle Async Errors Properly
-
 When working with Claude Code on JavaScript or TypeScript projects, asynchronous error handling often gets overlooked. The AI assistant may generate code that looks correct but fails silently in production when promises reject or async operations throw. This guide shows you how to structure your interactions to get Claude Code to handle async errors properly from the start.
 
-Why Async Error Handling Gets Missed
+## Why Async Error Handling Gets Missed
 
 Claude Code generates code quickly based on patterns it has seen in training data. The most common async error patterns it misses include:
 
@@ -30,7 +27,7 @@ Claude Code generates code quickly based on patterns it has seen in training dat
 
 These issues stem from Claude Code optimizing for the happy path, the code that works when everything goes right. Without explicit guidance, it assumes operations succeed.
 
-Start with the TDD Skill
+## Start with the TDD Skill
 
 The tdd skill fundamentally changes how Claude Code approaches error handling. When you activate test-driven development practices, Claude writes tests for failure cases before implementing functionality.
 
@@ -47,7 +44,7 @@ This loads instructions that tell Claude to:
 
 The tdd skill pushes Claude toward defensive coding. Instead of assuming `await fetchData()` succeeds, it will generate code that handles network failures, timeouts, and invalid responses.
 
-Specify Error Handling Requirements Explicitly
+## Specify Error Handling Requirements Explicitly
 
 After loading skills, state your error handling expectations directly in your prompt. Be specific about what should happen when async operations fail:
 
@@ -62,7 +59,7 @@ Handle these error cases explicitly:
 
 This level of specificity works better than vague requests like "handle errors properly." Claude Code responds well to enumerated error cases.
 
-Use the PDF Skill for Error Flow Documentation
+## Use the PDF Skill for Error Flow Documentation
 
 When building complex async workflows, document your error handling strategy using the pdf skill. This skill helps you generate diagrams and documentation that clarify the error paths Claude Code should handle.
 
@@ -76,7 +73,7 @@ Use the pdf skill to create an error flow diagram showing:
 
 Visual documentation serves as a reference for Claude Code throughout your session. When you reference the diagram in subsequent prompts, Claude maintains consistency in its error handling approach.
 
-Pattern: Explicit Error Handling Template
+## Pattern: Explicit Error Handling Template
 
 Provide Claude Code with a template for how you want async errors handled. This removes ambiguity:
 
@@ -105,7 +102,7 @@ async function fetchData(url: string): Promise<Data> {
 
 Claude Code will apply this pattern consistently across your codebase when you reference "the error handling pattern we established."
 
-Handle Promise.all Errors Properly
+## Handle Promise.all Errors Properly
 
 A common pitfall is using `Promise.all` without handling individual rejections. Claude Code often generates:
 
@@ -135,7 +132,7 @@ if (rejected.length > 0) {
 
 This pattern ensures partial failures don't crash your application.
 
-Timeout and Cancellation Patterns
+## Timeout and Cancellation Patterns
 
 Async operations need timeout handling. Show Claude Code how to implement timeouts properly:
 
@@ -159,7 +156,7 @@ async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
 
 This prevents infinite hangs and ensures cleanup happens.
 
-Frontend Design Considerations
+## Frontend Design Considerations
 
 When building frontend applications with Claude Code, async error handling affects user experience significantly. The frontend-design skill includes patterns for:
 
@@ -175,7 +172,7 @@ Use the frontend-design skill to create error handling UI:
 - Provide clear recovery actions for each error type
 ```
 
-Testing Async Error Handling
+## Testing Async Error Handling
 
 The tdd skill excels here, but be explicit about what you're testing:
 
@@ -189,7 +186,7 @@ Write tests for async error handling:
 
 These specific test cases ensure Claude Code generates solid error handling code.
 
-Summary
+## Summary
 
 Getting Claude Code to handle async errors properly requires three strategies:
 

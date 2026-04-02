@@ -17,7 +17,7 @@ Claude Code for Database Benchmark Workflow Tutorial
 
 Database performance benchmarking is essential for making informed decisions about database selection, infrastructure sizing, and query optimization. However, running meaningful benchmarks can be complex, requiring test data generation, workload simulation, metric collection, and result analysis. This tutorial shows you how to use Claude Code to streamline each phase of your database benchmark workflow, making it faster to gather reliable performance metrics.
 
-Why Use Claude Code for Benchmarks
+## Why Use Claude Code for Benchmarks
 
 Traditional benchmark workflows often involve writing custom scripts, manually configuring test scenarios, and spending hours interpreting results. Claude Code transforms this process by helping you:
 
@@ -28,7 +28,7 @@ Traditional benchmark workflows often involve writing custom scripts, manually c
 
 The key advantage is that Claude understands database concepts and can translate your high-level goals into specific benchmark implementations.
 
-Setting Up Your Benchmark Environment
+## Setting Up Your Benchmark Environment
 
 Before running benchmarks, you need a clean, isolated environment. Claude can help you set this up systematically.
 
@@ -115,7 +115,7 @@ if __name__ == "__main__":
     run_benchmark()
 ```
 
-Generating Test Data Efficiently
+## Generating Test Data Efficiently
 
 One of the most time-consuming parts of benchmarking is generating realistic test data. Claude can help you create data generation scripts that produce millions of rows efficiently.
 
@@ -213,7 +213,7 @@ if __name__ == "__main__":
     main()
 ```
 
-Running Comparative Benchmarks
+## Running Comparative Benchmarks
 
 When comparing databases or configurations, consistency is crucial. Claude can help you create a structured comparison framework that ensures fair tests.
 
@@ -286,7 +286,7 @@ if __name__ == "__main__":
     main()
 ```
 
-Analyzing and Interpreting Results
+## Analyzing and Interpreting Results
 
 Once you have benchmark data, Claude can help you interpret the results and identify actionable insights.
 
@@ -316,7 +316,7 @@ Can you analyze these results and explain:
 
 Claude will provide detailed analysis, explaining that while mean latencies are similar, the higher P99 in MySQL suggests occasional slow operations, possibly due to buffer pool management or lock contention.
 
-Best Practices for Reliable Benchmarks
+## Best Practices for Reliable Benchmarks
 
 Follow these guidelines for meaningful benchmark results:
 
@@ -330,12 +330,11 @@ Follow these guidelines for meaningful benchmark results:
 
 5. Document your methodology: Include database versions, configuration settings, and hardware specs.
 
-Conclusion
+## Conclusion
 
 Claude Code significantly accelerates database benchmark workflows by automating test data generation, creating standardized benchmark scripts, and helping interpret results. The key is providing clear context about your workload characteristics and measurement goals. With Claude's assistance, you can establish reliable benchmark processes that inform database decisions with confidence.
 
 Start with simple benchmarks, validate your methodology, then progressively add complexity as you refine your approach. The investment in solid benchmarking pays dividends in optimized queries, appropriate infrastructure sizing, and confident technology choices.
-
 
 Related Reading
 

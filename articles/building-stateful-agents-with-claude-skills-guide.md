@@ -16,7 +16,7 @@ permalink: /building-stateful-agents-with-claude-skills-guide/
 
 [Claude Code is stateless by default. Each session starts fresh](/claude-supermemory-skill-persistent-context-explained/), and within a session, each tool call is independent. But real-world agents need to track progress, remember past decisions, and resume interrupted work. This guide shows you how to build genuinely stateful agents using Claude skills.
 
-What Stateful Means for AI Agents
+## What Stateful Means for AI Agents
 
 [A stateful agent can answer these questions reliably](/best-claude-code-skills-to-install-first-2026/):
 - What have I done so far in this task?
@@ -26,11 +26,11 @@ What Stateful Means for AI Agents
 
 Statefulness in Claude Code is achieved by writing state to durable storage. files, databases, or the [`/supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/). and reading it back at the start of each invocation.
 
-The State File Pattern
+## The State File Pattern
 
 The most reliable approach: maintain a structured state file that the skill reads at the start of every invocation and updates throughout execution.
 
-State File Schema
+## State File Schema
 
 ```json
 {
@@ -66,7 +66,7 @@ State File Schema
 }
 ```
 
-Reading State in the Skill Body
+## Reading State in the Skill Body
 
 Include state management instructions in your skill's markdown body:
 
@@ -81,7 +81,7 @@ State file location: .claude/state/{task_id}.json
 If no task_id is provided, derive one from the task description: lowercase, spaces to hyphens.
 ```
 
-Updating State After Each Step
+## Updating State After Each Step
 
 ```
 After each file is processed:
@@ -96,7 +96,7 @@ Do not batch state updates. if interrupted mid-task, the state file should
 accurately reflect completed work.
 ```
 
-Implementing State Updates via Tool Calls
+## Implementing State Updates via Tool Calls
 
 The skill needs to read and write the state file as part of its execution. Template the exact pattern in the skill body:
 
@@ -110,7 +110,7 @@ State management procedure:
 State writes must happen via Write, not via Bash echo or Python scripts.
 ```
 
-Resumable Task Design
+## Resumable Task Design
 
 A well-designed stateful skill should be safe to invoke multiple times for the same task:
 
@@ -125,7 +125,7 @@ Idempotency rules:
 
 This means you can interrupt the agent, close Claude Code, reopen it, invoke the same skill again, and it picks up where it left off. This pattern is especially useful with skills like the [tdd skill](/best-claude-skills-for-developers-2026/) where test generation tasks may span multiple sessions.
 
-Long-Running Task Patterns
+## Long-Running Task Patterns
 
 For tasks that take more than a few minutes, design the skill to work in bounded chunks:
 
@@ -140,7 +140,7 @@ This prevents context window exhaustion and allows the user to review
 progress incrementally rather than waiting for a multi-hour run to complete.
 ```
 
-The supermemory Skill for Decision Memory
+## The supermemory Skill for Decision Memory
 
 The state file pattern handles task progress well, but the `/supermemory` skill is better suited for decisions about how to approach problems.
 
@@ -163,11 +163,11 @@ Retrieve all stored testing decisions and conventions for this project.
 
 This ensures future invocations know the established conventions without having to re-discover them from scratch.
 
-Agent Lifecycle Management
+## Agent Lifecycle Management
 
 A complete stateful agent needs lifecycle management: initialization, execution, checkpointing, and cleanup.
 
-Session Start Hook for State Loading
+## Session Start Hook for State Loading
 
 Use a `session.start` hook to load any relevant agent state at the beginning of a session:
 
@@ -218,7 +218,7 @@ Configure this hook in `~/.claude/settings.json`:
 }
 ```
 
-Session End Hook for State Checkpointing
+## Session End Hook for State Checkpointing
 
 ```python
 #!/usr/bin/env python3
@@ -237,7 +237,7 @@ for state_file in glob.glob(".claude/state/*.json"):
 sys.exit(0)
 ```
 
-State Cleanup
+## State Cleanup
 
 Old state files accumulate. Include cleanup in your skill:
 
@@ -249,7 +249,7 @@ When a task reaches "complete" or "cancelled" status:
 3. Never delete state files for in_progress tasks
 ```
 
-Common State Management Abstractions
+## Common State Management Abstractions
 
 For agents that track multi-turn conversations, a dedicated conversation state class keeps history bounded and queryable:
 
@@ -275,7 +275,7 @@ class ConversationState:
 
 Similarly, agents that call external tools benefit from a tool state tracker that records every invocation and its result, making it possible to replay or audit tool usage after the fact.
 
-Anti-Patterns in Stateful Skill Design
+## Anti-Patterns in Stateful Skill Design
 
 Storing state in conversation history: Conversation history is ephemeral and grows unbounded. Do not use it as your primary state store.
 
@@ -292,6 +292,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top skills every developer should know
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep long-running agents cost-efficient
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

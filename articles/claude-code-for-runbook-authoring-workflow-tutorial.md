@@ -17,7 +17,7 @@ Claude Code for Runbook Authoring Workflow Tutorial
 
 Runbooks are the backbone of reliable operational procedures. Whether you're handling incident response, deployment rollback, or routine maintenance, well-authored runbooks ensure consistency and reduce mean time to recovery (MTTR). In this tutorial, you'll learn how to use Claude Code to create, maintain, and evolve comprehensive runbooks that your team can actually use.
 
-Why Use Claude Code for Runbook Authoring
+## Why Use Claude Code for Runbook Authoring
 
 Traditional runbook creation is often a tedious documentation exercise that quickly becomes outdated. Claude Code transforms this workflow by acting as an intelligent collaborator that understands your infrastructure, suggests best practices, and helps maintain living documentation that evolves with your systems.
 
@@ -28,7 +28,7 @@ When you use Claude Code for runbook authoring, you gain several advantages:
 - Cross-team consistency: Standardized templates and language across all runbooks
 - Validation: Claude Code can verify that procedures are actually executable
 
-Traditional Runbook Authoring vs. Claude Code Assisted Authoring
+## Traditional Runbook Authoring vs. Claude Code Assisted Authoring
 
 The difference in quality and velocity between the old approach and the Claude Code workflow is significant. Here is how the two approaches compare across dimensions that matter to SRE and DevOps teams:
 
@@ -44,7 +44,7 @@ The difference in quality and velocity between the old approach and the Claude C
 
 The biggest win is not speed, it is quality. Claude Code asks questions a junior engineer writing their first runbook would not think to ask: What do you do if step 4 fails? What permissions are required? Is there a time window when this procedure should not run?
 
-Setting Up Your Runbook Project
+## Setting Up Your Runbook Project
 
 Before diving into authoring, set up a dedicated structure for your runbooks. This makes them discoverable and maintainable.
 
@@ -71,7 +71,7 @@ runbooks/
 
 The README.md should serve as an index with quick links to each runbook and their current status.
 
-Writing a Useful CLAUDE.md for Runbook Projects
+## Writing a Useful CLAUDE.md for Runbook Projects
 
 Before your first authoring session, create a `CLAUDE.md` file at the root of your runbooks directory. This file tells Claude about your infrastructure so the runbooks it generates use your actual tool names, cluster names, and environment variables rather than generic placeholders.
 
@@ -115,7 +115,7 @@ Required Sections in Every Runbook
 
 With this context in place, every runbook Claude generates will use your real cluster names, your severity definitions, and your notification channels. This is the difference between a generic template and a runbook your team will actually trust under pressure.
 
-Authoring Your First Runbook
+## Authoring Your First Runbook
 
 Let's walk through creating a runbook for a common scenario: database connection pool exhaustion. Start by invoking Claude Code with your project context:
 
@@ -161,7 +161,7 @@ Verification
 - Monitor for 30 minutes
 ```
 
-Iterating the Runbook with Follow-up Prompts
+## Iterating the Runbook with Follow-up Prompts
 
 The first generation is a skeleton. The real value comes from iterating. A sequence of follow-up prompts that produces a production-ready runbook:
 
@@ -335,9 +335,9 @@ Post-Incident Actions
 
 This is a dramatically more useful runbook than the initial skeleton. The diagnosis steps have real SQL. The resolution options are labeled with when to use each. Rollback is explicit. Post-incident actions are specific.
 
-Enhancing Runbooks with Claude Code Features
+## Enhancing Runbooks with Claude Code Features
 
-Adding Interactive Prompts
+## Adding Interactive Prompts
 
 Modern runbooks can include interactive elements that Claude Code can execute directly. Add executable blocks that your team can run:
 
@@ -358,7 +358,7 @@ psql -h $DB_HOST -U $DB_USER -c "SELECT datname, count(*) FROM pg_stat_activity 
 ```
 ```
 
-Integrating Monitoring Links
+## Integrating Monitoring Links
 
 Include direct links to your monitoring infrastructure:
 
@@ -370,7 +370,7 @@ Check Metrics
 
 Claude Code can help you generate these links dynamically based on your environment configuration.
 
-Creating Runbook Diagnostic Scripts
+## Creating Runbook Diagnostic Scripts
 
 For frequently-run diagnostics, Claude can generate standalone scripts that your team can run directly, rather than copying commands from markdown. Prompt: "Create a bash script that collects all diagnostic information for the database connection pool runbook and outputs a summary report."
 
@@ -427,11 +427,11 @@ echo "Copy this output into the #incidents thread before starting resolution."
 
 Store this script at `runbooks/incidents/scripts/db-connection-diagnostic.sh` and reference it from the runbook. Claude can generate equivalent scripts for any diagnostic procedure once it understands your tooling.
 
-Maintaining Runbooks Over Time
+## Maintaining Runbooks Over Time
 
 The real value of Claude Code comes from ongoing maintenance. Here's how to keep runbooks current:
 
-Review Triggers
+## Review Triggers
 
 Establish triggers for runbook updates:
 
@@ -443,7 +443,7 @@ Establish triggers for runbook updates:
 - Quarterly baseline review -->
 ```
 
-Using Claude Code for Updates
+## Using Claude Code for Updates
 
 When you need to update a runbook, engage Claude Code contextually:
 
@@ -453,7 +453,7 @@ claude --print "Update the database connection pool runbook to include new conne
 
 This approach ensures your runbooks evolve with your infrastructure.
 
-Runbook Review Workflow
+## Runbook Review Workflow
 
 A structured review process prevents runbook rot. Here is a practical workflow using Claude Code to assist with quarterly reviews:
 
@@ -467,7 +467,7 @@ Step 4: Post-incident enhancement. After every SEV-1 or SEV-2 incident, run: "We
 
 This turns each incident into a runbook improvement cycle. Over 6 months, your runbooks become significantly more accurate and complete than anything written purely from memory.
 
-Version-Controlling Runbooks with Code
+## Version-Controlling Runbooks with Code
 
 Treat runbooks as code by storing them in the same repository as your infrastructure definitions, or in a dedicated repository with the same review process as code.
 
@@ -486,7 +486,7 @@ Time-to-resolution improvement estimated: -15 minutes"
 
 Git history becomes your runbook audit trail. When an incident occurs, you can see exactly when a procedure was last updated and why.
 
-Advanced: Creating Runbook Templates
+## Advanced: Creating Runbook Templates
 
 For organizations with multiple similar procedures, create reusable templates. Here's a template structure Claude Code understands:
 
@@ -526,7 +526,7 @@ Post-procedure
 - [ ] Document in incident tracker
 ```
 
-Specialized Templates by Category
+## Specialized Templates by Category
 
 A single template does not fit all runbook categories. Build a template library with Claude's help. Here are the key template variants and what makes each one different:
 
@@ -634,7 +634,7 @@ Post-deployment Actions
 
 Prompt Claude to fill in the variables for each service: "Populate this deployment template for the api-server service. The smoke test is `curl -f https://api.example.com/health`. The CI deploy command is `gh workflow run deploy.yml -f service=api-server -f version=VERSION`."
 
-Building a Runbook Quality Checklist
+## Building a Runbook Quality Checklist
 
 Before any runbook goes into production use, run it through a quality checklist. Claude can both help you build this checklist and evaluate runbooks against it.
 
@@ -650,7 +650,7 @@ Before any runbook goes into production use, run it through a quality checklist.
 
 Prompt Claude: "Evaluate this runbook against the quality checklist and list any criteria it fails with specific line numbers."
 
-Best Practices Summary
+## Best Practices Summary
 
 1. Start small: Begin with your most critical procedures
 2. Make it executable: Include actual commands, not just descriptions
@@ -661,14 +661,13 @@ Best Practices Summary
 7. Run game days: Schedule quarterly drills where on-call engineers execute runbooks in staging to validate they still work
 8. Write for 3am: Assume the reader is sleep-deprived and stressed. Every ambiguity will cause a mistake under pressure. Ask Claude to review for ambiguity with: "Flag any step in this runbook that could be interpreted in more than one way."
 
-Conclusion
+## Conclusion
 
 Claude Code transforms runbook authoring from a documentation chore into a collaborative, maintainable practice. By treating runbooks as living documents and using Claude Code's contextual understanding, you create operational procedures that actually get used when incidents occur.
 
 The workflow is clear: start with a solid CLAUDE.md that describes your infrastructure, generate a skeleton runbook with a focused prompt, iterate with follow-up prompts to add specificity, validate commands against your real environment, and establish a review cycle tied to incidents and infrastructure changes.
 
 Start with one critical runbook, refine it through actual use, and gradually expand your library. Your future self, and your on-call team, will thank you.
-
 
 Related Reading
 

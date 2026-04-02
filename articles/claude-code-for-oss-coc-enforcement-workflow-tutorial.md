@@ -13,23 +13,22 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for OSS CoC Enforcement Workflow Tutorial
 
 Open source communities thrive when contributors feel safe and respected. A well-enforced Code of Conduct (CoC) is essential for healthy projects, but manually managing violations can be time-consuming and emotionally draining. This tutorial shows you how to build automated CoC enforcement workflows using Claude Code skills, helping maintainers handle reports consistently while reducing administrative burden.
 
-Understanding CoC Enforcement Challenges
+## Understanding CoC Enforcement Challenges
 
 Every open source project maintainer knows this scenario: a community member files a CoC violation report, and you're uncertain about the proper response sequence. Should you notify the accused first? How long should you wait for responses? When does an issue require escalation to the CoC committee?
 
 These questions have no universal answers, but establishing clear workflows ensures consistent handling. The goal isn't automation for its own sake, it's creating repeatable processes that protect both reporters and the accused while documenting every step for accountability.
 
-Building Your CoC Enforcement Skill
+## Building Your CoC Enforcement Skill
 
 A Claude Code skill for CoC enforcement should guide maintainers through a structured response workflow. Let's build one step by step.
 
-Skill Structure and Front Matter
+## Skill Structure and Front Matter
 
 Every skill begins with front matter that defines its scope and available tools:
 
@@ -42,7 +41,7 @@ description: Guided workflow for handling Code of Conduct violation reports
 
 The `tools` field is intentionally limited. CoC enforcement primarily requires document management and communication, not system operations. Restricting tools follows the principle of least privilege.
 
-Defining the Workflow Stages
+## Defining the Workflow Stages
 
 Your skill should guide maintainers through distinct stages:
 
@@ -86,7 +85,7 @@ Severity Levels:
 Determine urgency: Critical and High severity cases require response within 24 hours. Medium severity requires response within 72 hours.
 ```
 
-Creating Response Templates
+## Creating Response Templates
 
 Consistency matters in CoC enforcement. Create templates for common communications:
 
@@ -120,7 +119,7 @@ Accused Party Notification
 > [Your Name], CoC Committee
 ```
 
-Automating Documentation
+## Automating Documentation
 
 One of Claude Code's strengths is systematic file operations. Use this to maintain audit trails:
 
@@ -132,7 +131,7 @@ touch .coc/cases/$(date +%Y-%m)-${CASE_ID}/{intake.md,investigation.md,decision.
 
 Your skill can guide maintainers to populate each file sequentially, creating an immutable record of the entire process.
 
-Decision Documentation Template
+## Decision Documentation Template
 
 ```markdown
 Case Decision - [CASE-ID]
@@ -162,7 +161,7 @@ Sign-off
 - Date: [date]
 ```
 
-Escalation Workflows
+## Escalation Workflows
 
 Not every case can be resolved at the maintainer level. Build escalation paths into your skill:
 
@@ -184,25 +183,25 @@ When escalating, prepare a summary document containing:
 - Recommended response range
 ```
 
-Best Practices for CoC Workflow Skills
+## Best Practices for CoC Workflow Skills
 
-Maintain Confidentiality
+## Maintain Confidentiality
 
 Your skill should remind users never to share identifiable details in public channels. Use private repositories or encrypted storage for case files.
 
-Establish Clear Timelines
+## Establish Clear Timelines
 
 Document expected response windows and hold yourself accountable. Inaction erodes trust faster than imperfect action.
 
-Record Everything
+## Record Everything
 
 Every conversation, decision, and action should be documented. This protects both the project and individuals involved.
 
-Seek Training
+## Seek Training
 
 CoC enforcement often involves sensitive situations. Consider training from organizations like [Linux Foundation's TODO Group](https://todogroup.org/) or [Community Lights](https://communitylights.com/).
 
-Extending Your Workflow
+## Extending Your Workflow
 
 Once the basic workflow is working, consider enhancements:
 
@@ -211,7 +210,7 @@ Once the basic workflow is working, consider enhancements:
 - Integration with GitHub - Link CoC cases to issue tracking
 - Multi-language support - Serve diverse communities in their preferred language
 
-Conclusion
+## Conclusion
 
 Automating your CoC enforcement workflow with Claude Code doesn't replace human judgment, it enhances consistency and documentation. By structuring your responses, creating templates, and maintaining thorough records, you build a system that protects your community while respecting everyone's privacy.
 

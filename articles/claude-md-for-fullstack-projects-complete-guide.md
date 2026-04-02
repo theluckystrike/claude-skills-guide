@@ -18,7 +18,7 @@ Claude Code has evolved into a powerful development assistant that works across 
 
 This guide covers everything you need to know about creating and organizing Claude skills in markdown format for fullstack projects, with practical examples you can apply immediately.
 
-Understanding Claude Skill Files
+## Understanding Claude Skill Files
 
 A Claude skill is simply a markdown file with front matter that defines metadata and a body containing the skill's instructions. The format follows this structure:
 
@@ -34,7 +34,7 @@ Your prompt content goes here...
 
 The front matter uses YAML syntax to declare the skill's capabilities, while the markdown body provides detailed instructions, examples, and context that Claude uses when responding to queries.
 
-What Makes a Good Skill File
+## What Makes a Good Skill File
 
 The quality of a skill file is the single biggest factor in the quality of Claude's output. A skill that only says "write clean code" produces mediocre results. A skill that specifies naming conventions, import ordering, error handling patterns, and provides a concrete before/after example produces output you can ship.
 
@@ -122,7 +122,7 @@ Anti-patterns
 
 The second skill generates output that matches your project conventions from the first request, without follow-up corrections.
 
-Creating Skills for Frontend Development
+## Creating Skills for Frontend Development
 
 Frontend work with Claude benefits significantly from specialized skills. The `frontend-design` skill helps generate component structures, styling decisions, and responsive layouts. Here's how to structure a frontend skill:
 
@@ -146,7 +146,7 @@ Example response format:
 
 This approach ensures consistent component quality across your project. The `canvas-design` skill complements frontend work by generating visual assets directly in your project directory, eliminating the need for external design tools.
 
-A Complete Frontend Skill Suite
+## A Complete Frontend Skill Suite
 
 A production frontend skill library covers more than component scaffolding. These are the skills most teams need when working on a React or Vue codebase:
 
@@ -248,7 +248,7 @@ export function LoginForm() {
 ```
 ```
 
-Backend Skill Organization
+## Backend Skill Organization
 
 Backend development with Claude requires different skill focuses. Create separate skills for API design, database modeling, and server configuration:
 
@@ -270,7 +270,7 @@ Follow these conventions for all API endpoints:
 
 The `tdd` skill integrates with backend development by generating test-first implementations. When combined with your API skills, you get comprehensive coverage from design through testing.
 
-Building a Complete Backend Skill Set
+## Building a Complete Backend Skill Set
 
 A REST API design skill is a start, but backend work involves more surface area. These additional skills round out a Node.js or Python backend:
 
@@ -374,7 +374,7 @@ export function requireAuth(req: AuthRequest, res: Response, next: NextFunction)
 ```
 ```
 
-Database and Infrastructure Skills
+## Database and Infrastructure Skills
 
 Fullstack projects require database skills that work alongside your application code. The `pdf` skill helps generate database documentation, while custom skills can manage schema migrations:
 
@@ -396,7 +396,7 @@ When designing schemas:
 
 Infrastructure skills using the `supermemory` skill pattern help maintain context across deployments and environment configurations.
 
-Expanding Your Database Skill Library
+## Expanding Your Database Skill Library
 
 The schema design skill handles table creation, but you need additional skills for the full database lifecycle:
 
@@ -463,7 +463,7 @@ LIMIT $3;
 ```
 ```
 
-Comparing Skill Approaches: Inline vs. Dedicated Files
+## Comparing Skill Approaches: Inline vs. Dedicated Files
 
 There are two ways to give Claude database guidance: inline in a CLAUDE.md project file, or as dedicated skill files. Each has its place:
 
@@ -475,7 +475,7 @@ There are two ways to give Claude database guidance: inline in a CLAUDE.md proje
 
 For most solo developers and small teams, start with inline rules in CLAUDE.md. Move to dedicated skill files when you find yourself copying the same instructions across multiple projects.
 
-Cross-Cutting Skills for Fullstack Projects
+## Cross-Cutting Skills for Fullstack Projects
 
 Beyond layer-specific skills, create skills that span the entire stack:
 
@@ -501,7 +501,7 @@ When debugging issues:
 5. Reproduce the issue in development before proposing fixes
 ```
 
-A Production-Grade Code Review Skill
+## A Production-Grade Code Review Skill
 
 Code review skills are some of the most valuable in a team library because they encode collective knowledge about what typically goes wrong in your codebase:
 
@@ -538,7 +538,7 @@ Code Quality
 - [ ] New environment variables documented in .env.example
 ```
 
-A Structured Debugging Workflow Skill
+## A Structured Debugging Workflow Skill
 
 The debugging skill above covers the basics. An extended version guides Claude through a more systematic investigation:
 
@@ -574,7 +574,7 @@ Step 4: Propose fix with test
 Every bug fix must be accompanied by a test that fails before the fix and passes after.
 ```
 
-Organizing Your Skill Library
+## Organizing Your Skill Library
 
 Structure your skill files for discoverability and maintainability:
 
@@ -598,7 +598,7 @@ skills/
 
 This organization mirrors your project structure, making skills easy to find when working in specific areas.
 
-Versioning and Maintaining Skills
+## Versioning and Maintaining Skills
 
 Skills are code. They deserve the same maintenance discipline as your application code. Apply these practices:
 
@@ -619,7 +619,7 @@ Review skills after incidents. If Claude generated code that caused a bug or req
 
 Prune stale skills. A skill that describes your old class-component patterns will actively confuse Claude. Delete or archive skills that no longer reflect your codebase.
 
-Sharing Skills Across Projects
+## Sharing Skills Across Projects
 
 When you work on multiple projects with similar tech stacks, a shared skill library reduces duplication. One pattern that works well is a separate git repository for shared skills, included as a git submodule or symlinked into each project:
 
@@ -637,7 +637,7 @@ When you work on multiple projects with similar tech stacks, a shared skill libr
 
 Project-specific overrides live in the project's own `skills/` directory at higher precedence. Claude uses the project-specific skill when both exist.
 
-Advanced Skill Composition
+## Advanced Skill Composition
 
 Combine multiple skills effectively by understanding their interaction. A typical fullstack session might invoke:
 
@@ -648,7 +648,7 @@ Combine multiple skills effectively by understanding their interaction. A typica
 
 Claude automatically selects relevant skills based on context, but you can explicitly invoke skills using the skill invocation syntax.
 
-How Skill Composition Works in Practice
+## How Skill Composition Works in Practice
 
 When multiple skills apply to a task, Claude merges their guidance. The order of invocation matters when skills have conflicting instructions. Resolving conflicts explicitly is better than leaving it to chance.
 
@@ -667,7 +667,7 @@ This skill supersedes `legacy-patterns` for all component generation tasks.
 Named exports only. ignore any default export guidance from other skills.
 ```
 
-Skill Templates for Common Fullstack Stacks
+## Skill Templates for Common Fullstack Stacks
 
 To accelerate setup, here are starter skill configurations for three common stacks:
 
@@ -689,7 +689,7 @@ FastAPI + SQLAlchemy + Vue:
 - `skills/frontend/vue-composition.md`. Composition API patterns, Pinia store structure
 - `skills/shared/openapi-types.md`. generating TypeScript types from FastAPI's OpenAPI schema
 
-Real-World Example: Adding a New Feature
+## Real-World Example: Adding a New Feature
 
 Consider adding user authentication to a fullstack application. Your workflow with Claude skills:
 
@@ -701,7 +701,7 @@ Consider adding user authentication to a fullstack application. Your workflow wi
 
 Each skill contributes specialized guidance while maintaining consistency across the full stack.
 
-Walking Through the Authentication Feature in Detail
+## Walking Through the Authentication Feature in Detail
 
 A concrete walkthrough shows how skills interact in a real implementation session.
 
@@ -757,7 +757,7 @@ Step 4. Frontend forms. You invoke `react-component-builder` and `form-validator
 
 This four-step flow produces consistent, reviewable output because every decision. naming, error codes, validation approach, component structure. is governed by a skill file rather than Claude's defaults.
 
-Best Practices
+## Best Practices
 
 - Keep skills focused: Single-responsibility skills are easier to maintain and compose
 - Use descriptive names: Skill names should indicate their purpose at a glance
@@ -765,7 +765,7 @@ Best Practices
 - Version your skills: Track changes in git alongside your project code
 - Test skill outputs: Verify that skill-generated code meets your standards
 
-Measuring Skill Effectiveness
+## Measuring Skill Effectiveness
 
 It is worth tracking whether your skills are actually improving output quality. These are practical signals to watch:
 
@@ -776,12 +776,11 @@ It is worth tracking whether your skills are actually improving output quality. 
 
 A well-maintained skill library typically reduces first-draft revision time by 50-70% compared to general-purpose prompting, because Claude is working within your conventions rather than inventing its own.
 
-Conclusion
+## Conclusion
 
 Claude .md skill files provide a powerful mechanism for standardizing fullstack development workflows. By creating layer-specific skills for frontend, backend, and database work, and combining them with cross-cutting skills for debugging and documentation, you build a personalized development assistant that understands your project conventions and accelerates delivery across the entire stack.
 
 Start with skills for your most frequent tasks, then expand as you identify patterns worth codifying. Treat skills as living documents that evolve with your codebase. update them after incidents, after convention changes, and whenever Claude's output requires too many corrections. The investment in creating and maintaining your skill library pays dividends in consistent code quality, faster development cycles, and a team that ships with more confidence.
-
 
 Related Reading
 

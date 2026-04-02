@@ -15,24 +15,24 @@ Claude Code Webhook Handler Tutorial Guide
 
 Webhook handlers are essential for building responsive, event-driven applications. When integrated with Claude Code, they become even more powerful, enabling intelligent processing and automation of incoming events. This comprehensive guide walks you through building solid webhook handlers using Claude Code skills.
 
-Understanding Webhooks and Claude Code
+## Understanding Webhooks and Claude Code
 
 Webhooks are automated messages sent from applications when specific events occur. Unlike traditional APIs where you poll for data, webhooks push information to your endpoint in real-time. Claude Code enhances this pattern by providing intelligent processing capabilities that can analyze, categorize, and respond to incoming webhook data.
 
 When you combine webhooks with Claude Code skills, you unlock powerful possibilities: automated responses, intelligent routing, data enrichment, and more. The key is understanding how to properly structure your webhook handler to use these capabilities.
 
-Setting Up Your Webhook Handler
+## Setting Up Your Webhook Handler
 
 Before diving into code, you need to set up your development environment and understand the basic components. Here's what you'll need:
 
-Prerequisites
+## Prerequisites
 
 - Node.js 18 or higher installed
 - A Claude Code project with webhook handling capabilities
 - A public URL for receiving webhooks (ngrok is excellent for local development)
 - Basic understanding of HTTP methods and REST APIs
 
-Creating Your First Webhook Handler
+## Creating Your First Webhook Handler
 
 Let's build a practical webhook handler that processes GitHub repository events. This example demonstrates real-world patterns you can adapt for other webhook sources.
 
@@ -116,11 +116,11 @@ server.listen(3000, () => {
 
 This basic handler demonstrates critical security practices: signature verification and proper error handling. These patterns apply regardless of which webhook provider you're working with.
 
-Integrating Claude Code for Intelligent Processing
+## Integrating Claude Code for Intelligent Processing
 
 Now let's enhance our webhook handler with Claude Code skills for intelligent event processing. This is where the real power of integration comes alive.
 
-Building a Claude-Enhanced Handler
+## Building a Claude-Enhanced Handler
 
 ```javascript
 // claude-webhook-handler.js
@@ -163,9 +163,9 @@ async function routeEvent(analysis, payload) {
 
 The integration with Claude Code transforms raw webhook data into actionable intelligence. Instead of writing complex conditional logic, you describe what you want to achieve, and Claude handles the nuanced analysis.
 
-Best Practices for Production Webhooks
+## Best Practices for Production Webhooks
 
-Security Essentials
+## Security Essentials
 
 Security should be at the forefront of any webhook implementation. Here are essential practices:
 
@@ -175,7 +175,7 @@ Validate all input data. Never trust incoming data blindly. Validate schemas, ch
 
 Implement idempotency. Webhooks can be delivered multiple times if the sender doesn't receive a 200 response. Design your handler to handle duplicate deliveries gracefully by checking for unique identifiers.
 
-Performance Optimization
+## Performance Optimization
 
 ```javascript
 // Optimized webhook processing
@@ -204,7 +204,7 @@ function isHeavyProcessing(event) {
 
 By responding immediately and processing asynchronously, you prevent timeout issues and improve reliability.
 
-Testing Your Webhook Handler
+## Testing Your Webhook Handler
 
 Thorough testing is crucial for production-ready webhook handlers. Here's a testing strategy:
 
@@ -250,7 +250,7 @@ describe('Webhook Handler Tests', () => {
 });
 ```
 
-Common Pitfalls and How to Avoid Them
+## Common Pitfalls and How to Avoid Them
 
 Many developers encounter these issues when building webhook handlers:
 
@@ -262,7 +262,7 @@ Not handling edge cases. What happens when the payload is empty? When required f
 
 Forgetting about ordering. Some events must be processed in order. Use message queues when sequence matters.
 
-Conclusion
+## Conclusion
 
 Building webhook handlers with Claude Code combines the reliability of traditional webhook patterns with intelligent processing capabilities. Start with secure, simple implementations and gradually add complexity as your needs evolve. Remember to prioritize security, implement proper error handling, and test thoroughly.
 

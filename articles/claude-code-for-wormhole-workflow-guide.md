@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Wormhole Workflow Guide
 
@@ -30,7 +29,7 @@ A wormhole workflow is a systematic approach to capturing, transferring, and app
 
 The key insight is that Claude Code's skills system acts as the infrastructure for these wormholes, when you create a skill, you're essentially opening a permanent channel for that knowledge to flow across any project that loads that skill.
 
-Setting Up Your First Wormhole
+## Setting Up Your First Wormhole
 
 The foundation of any wormhole workflow is a well-structured skill that captures reusable patterns. Here's how to create a basic pattern-capturing skill:
 
@@ -56,7 +55,7 @@ The skill will store the pattern in a centralized `patterns/` directory with pro
 
 This simple skill becomes your first wormhole, any pattern captured through it becomes instantly accessible across all your projects.
 
-Building Bidirectional Wormholes
+## Building Bidirectional Wormholes
 
 A true wormhole allows information to flow in both directions. Here's how to implement bidirectional context sharing:
 
@@ -103,9 +102,9 @@ class WormholeBridge:
 
 This script creates a persistent wormhole bridge that survives between sessions. You can invoke it from any Claude Code session to access accumulated knowledge.
 
-Practical Wormhole Patterns
+## Practical Wormhole Patterns
 
-Pattern 1: The Instant Solution Wormhole
+## Pattern 1: The Instant Solution Wormhole
 
 When you solve a tricky bug, immediately capture the solution in a way that can be instantly applied elsewhere:
 
@@ -135,7 +134,7 @@ Tags
 EOF
 ```
 
-Pattern 2: Team Knowledge Wormhole
+## Pattern 2: Team Knowledge Wormhole
 
 Create a shared skill that teams can use to share solutions instantly:
 
@@ -160,7 +159,7 @@ Commands
 The skill reads from a team-shared location (can be configured via environment variable TEAM_WORMHOLE_PATH).
 ```
 
-Pattern 3: Context Preservation Wormhole
+## Pattern 3: Context Preservation Wormhole
 
 Before switching contexts (switching projects, ending a session), create a wormhole to preserve valuable context:
 
@@ -173,7 +172,7 @@ echo "Saving session context..."
 jq -r '.messages[-5:] | .[] | select(.role=="assistant") | .content' ~/.claude/history.json > .claude/wormholes/recent-solutions.md
 ```
 
-Automating Wormhole Creation
+## Automating Wormhole Creation
 
 The most powerful wormhole workflows are automated. Here's a skill that automatically creates wormholes for common scenarios:
 
@@ -203,7 +202,7 @@ All automatically captured content goes to:
 - `~/.claude/auto-wormholes/solutions/`
 ```
 
-Best Practices for Wormhole Workflows
+## Best Practices for Wormhole Workflows
 
 1. Standardize your wormhole structure: Use consistent naming conventions and file formats across all wormholes
 
@@ -217,7 +216,7 @@ Best Practices for Wormhole Workflows
 
 6. Version your wormholes: Track changes in your wormhole knowledge base using git
 
-Advanced: Cross-Language Wormholes
+## Advanced: Cross-Language Wormholes
 
 For teams working with multiple languages, create language-agnostic wormholes:
 
@@ -247,7 +246,7 @@ Each pattern includes:
 4. When to use each version
 ```
 
-Conclusion
+## Conclusion
 
 Wormhole workflows transform Claude Code from a session-based assistant into a persistent knowledge partner. By capturing solutions, patterns, and context in structured ways, you create instant-access channels that accelerate every future development task. Start with one simple wormhole, a single skill or pattern file, and watch as your productivity compounds over time.
 

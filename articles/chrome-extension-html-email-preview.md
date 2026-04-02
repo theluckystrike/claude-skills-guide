@@ -18,19 +18,19 @@ Chrome Extension HTML Email Preview: A Developer Guide
 
 Creating a Chrome extension that previews HTML emails directly in the browser solves a common problem for developers and email marketers. Instead of sending test emails to yourself or using third-party services, you can render HTML email templates instantly within Chrome. This guide walks you through building a functional HTML email preview extension from scratch.
 
-Why Build an Email Preview Extension
+## Why Build an Email Preview Extension
 
 Email development presents unique challenges. Email clients render HTML differently, and testing requires sending emails or using external preview tools. A Chrome extension that previews HTML email locally gives you instant feedback on your templates without leaving your development environment.
 
 The extension works well for developers building email templates, marketers testing campaign designs, and QA teams verifying email rendering across different contexts.
 
-Extension Architecture
+## Extension Architecture
 
 A Chrome extension for email preview operates through several interconnected components. The manifest defines permissions and entry points. Content scripts inject functionality into web pages. Background scripts handle messaging and storage. Popup interfaces provide user controls.
 
 For an HTML email preview extension, you need three primary capabilities: reading HTML content from the active tab, rendering that content in a preview pane, and handling inline styles that email clients commonly use.
 
-Setting Up the Manifest
+## Setting Up the Manifest
 
 Every Chrome extension requires a manifest file. For an email preview tool, you'll need specific permissions to access tab content:
 
@@ -64,7 +64,7 @@ Every Chrome extension requires a manifest file. For an email preview tool, you'
 
 The `activeTab` permission lets your extension access the current page when the user invokes it. The `scripting` permission enables JavaScript execution within pages for extracting and rendering content.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides controls for preview configuration. Users can adjust viewport width, toggle desktop and mobile views, and copy the rendered HTML:
 
@@ -151,7 +151,7 @@ The popup provides controls for preview configuration. Users can adjust viewport
 </html>
 ```
 
-Implementing Popup Logic
+## Implementing Popup Logic
 
 The popup script handles user interactions and manages the preview rendering. It applies email-specific styling and handles viewport resizing:
 
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Content Script for Page Extraction
+## Content Script for Page Extraction
 
 A content script enables extracting HTML directly from web pages. This proves useful when viewing email templates hosted online or in development environments:
 
@@ -317,7 +317,7 @@ class EmailExtractor {
 new EmailExtractor();
 ```
 
-Background Script for Tab Management
+## Background Script for Tab Management
 
 The background script coordinates between popup and content scripts, handling extension lifecycle events:
 
@@ -349,7 +349,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Adding Email Client Simulation
+## Adding Email Client Simulation
 
 Power users benefit from seeing how emails render across different clients. Add client simulation through CSS transforms:
 
@@ -395,7 +395,7 @@ function applyClientSimulation(client) {
 }
 ```
 
-Testing Your Extension
+## Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Test with various email templates:
 
@@ -406,7 +406,7 @@ Load your extension in Chrome by navigating to `chrome://extensions/`, enabling 
 
 Verify that the preview renders consistently and that viewport switching works correctly across different template types.
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for HTML email preview combines several practical skills: manifest configuration, content script injection, iframe rendering, and user interface design. The core pattern remains consistent, extract HTML content, wrap it with appropriate styling, and render in a controlled preview environment.
 

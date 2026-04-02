@@ -19,7 +19,7 @@ Best Claude Skills for Code Review Automation
 
 [Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`](/claude-skill-md-format-complete-specification-guide/). Here are the skills that deliver the most value in code review workflows.
 
-Test-Driven Review with the tdd Skill
+## Test-Driven Review with the tdd Skill
 
 The [`tdd` skill](/best-claude-skills-for-developers-2026/) is the most direct tool for review automation. Rather than reviewing untested code and hoping for the best, use it to verify test coverage before approving a PR.
 
@@ -37,7 +37,7 @@ The [`tdd` skill](/best-claude-skills-for-developers-2026/) is the most direct t
 
 Development teams using this approach report catching coverage gaps before merge that would otherwise surface as production bugs. The skill suggests specific edge cases based on the code pattern. numeric boundary conditions, null inputs, async failure paths. rather than generic advice.
 
-Reviewing Against Specifications with the pdf Skill
+## Reviewing Against Specifications with the pdf Skill
 
 When code must implement a PDF specification or comply with requirements documents, manual cross-referencing is tedious and error-prone. The `pdf` skill extracts the requirements so you can review against them directly.
 
@@ -53,7 +53,7 @@ Then in the same session:
 
 This catches implementation drift. where code evolves away from original requirements across multiple PRs without anyone tracking the gap.
 
-Documentation Completeness with the docx Skill
+## Documentation Completeness with the docx Skill
 
 Many teams require documentation updates alongside code changes. The `docx` skill reads and creates Word documents, which is useful when your PR process involves reviewing `.docx` API references or runbooks.
 
@@ -71,7 +71,7 @@ Documented endpoints: [paste docx output]
 
 For teams maintaining external APIs or compliance documentation, this prevents missing parameter descriptions and stale return types from reaching external consumers.
 
-Consistent Standards with the supermemory Skill
+## Consistent Standards with the supermemory Skill
 
 The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) maintains institutional knowledge across review sessions. Store your team's established conventions once, then recall them in every review.
 
@@ -95,7 +95,7 @@ Flag every violation.
 
 This eliminates the inconsistency where one reviewer flags issues another would have ignored. The stored conventions become the shared baseline.
 
-Frontend Validation with the frontend-design Skill
+## Frontend Validation with the frontend-design Skill
 
 For web application PRs, the `frontend-design` skill validates UI code against design system rules and accessibility requirements.
 
@@ -109,7 +109,7 @@ For web application PRs, the `frontend-design` skill validates UI code against d
 
 This catches visual inconsistencies before they reach production, keeping brand guidelines and design system rules enforced across all components.
 
-Custom Review Skills for Specific Concerns
+## Custom Review Skills for Specific Concerns
 
 Beyond the built-in skills, create custom review skills tailored to your stack. A security-focused skill in `~/.claude/skills/review-security.md`:
 
@@ -134,7 +134,7 @@ Do not flag false positives. Only report actual security issues.
 
 Invoke it with `/review-security Review src/auth/ and src/api/ for security vulnerabilities.`
 
-Comparing Skill Approaches
+## Comparing Skill Approaches
 
 | Skill | Best For | Limitations |
 |-------|----------|-------------|
@@ -146,7 +146,7 @@ Comparing Skill Approaches
 
 For most teams, the combination of `tdd` + `supermemory` + one custom security skill provides comprehensive coverage without overwhelming complexity.
 
-Pre-Commit Hook Setup
+## Pre-Commit Hook Setup
 
 For local enforcement before code reaches CI, wire skills into a pre-commit hook:
 
@@ -176,7 +176,7 @@ if echo "$OUTPUT" | grep -q "missing"; then
 fi
 ```
 
-CI Pipeline Integration
+## CI Pipeline Integration
 
 For GitHub Actions, drive Claude Code with `--print` to get structured output and fail the build if issues are found:
 
@@ -231,7 +231,7 @@ When reviewing authentication code:
 - Check for SQL injection via unsanitized inputs
 ```
 
-A Practical Review Pipeline
+## A Practical Review Pipeline
 
 Combining these skills into a structured review workflow produces consistent results:
 

@@ -13,8 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
-Chrome Extension Black Friday Deal Tracker: A Developer's Guide
+## Chrome Extension Black Friday Deal Tracker: A Developer's Guide
 
 Black Friday presents a unique challenge for developers and power users: deals appear across dozens of retailers, prices fluctuate hourly, and stock runs out within minutes. A well-built Chrome extension for tracking Black Friday deals can automate price monitoring, send instant notifications, and help you never miss a discount again. This guide walks through building a deal tracker extension from scratch.
 
@@ -24,7 +23,7 @@ Commercial deal trackers often come with limitations, subscription fees, restric
 
 The technical challenge is compelling. You need to handle dynamic content loaded via JavaScript, manage background tasks for price checking, implement cross-tab synchronization, and design an intuitive popup interface. These are real-world problems that translate to skills applicable across extension development.
 
-Core Architecture
+## Core Architecture
 
 A Chrome deal tracker extension consists of three primary components:
 
@@ -59,7 +58,7 @@ The manifest file defines these components and their permissions:
 }
 ```
 
-Extracting Product Data
+## Extracting Product Data
 
 Each retailer structures product pages differently. You'll need individual content scripts for major stores. Here's a pattern for extracting product information:
 
@@ -89,7 +88,7 @@ chrome.runtime.sendMessage({ type: 'PRODUCT_DATA', data: extractProductData() })
 
 This pattern extracts the product title, current price, and original price, then sends it to the background script for storage.
 
-Managing Price Storage
+## Managing Price Storage
 
 Chrome's storage API provides persistent data storage across browser sessions. Use it to maintain a list of tracked products:
 
@@ -124,7 +123,7 @@ async function addDeal(productData) {
 
 The price history array lets you calculate price drops and visualize trends over time.
 
-Implementing Price Monitoring
+## Implementing Price Monitoring
 
 For Black Friday, prices change rapidly. You need a mechanism to periodically check tracked URLs:
 
@@ -171,7 +170,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 The 15-minute interval balances between catching price drops and avoiding rate limiting from retailers.
 
-Notification System
+## Notification System
 
 Chrome notifications work even when the browser runs in the background:
 
@@ -200,7 +199,7 @@ async function sendNotification(deal, newPrice, discountPercent) {
 }
 ```
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides quick access to tracked deals without leaving your current tab:
 
@@ -258,7 +257,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Deployment Considerations
+## Deployment Considerations
 
 When distributing your extension through the Chrome Web Store, ensure you handle these practical concerns:
 
@@ -267,7 +266,7 @@ When distributing your extension through the Chrome Web Store, ensure you handle
 - Authentication: For personalized alerts, implement OAuth for email or Discord webhooks
 - Legal compliance: Review retailer terms of service regarding automated price checking
 
-Extension Testing
+## Extension Testing
 
 Test your extension thoroughly before relying on it during Black Friday:
 
@@ -285,12 +284,11 @@ Run: chrome.runtime.sendMessage({ type: 'TEST_EXTRACT' })
 
 Check that content scripts inject correctly on each retailer domain and that the popup displays accurate price information.
 
-Summary
+## Summary
 
 Building a Chrome extension for Black Friday deal tracking combines practical web scraping, browser API mastery, and UI design. The architecture demonstrated here, content scripts for extraction, background scripts for monitoring, and a popup for user interaction, provides a solid foundation you can extend with cloud sync, multiple notification channels, or price prediction algorithms.
 
 The skills developed through this project transfer directly to other extension types: inventory monitors, availability checkers, and price comparison tools. For developers looking to understand Chrome extension architecture deeply, a deal tracker is an excellent starting point.
-
 
 Related Reading
 

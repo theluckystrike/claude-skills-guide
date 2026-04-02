@@ -16,19 +16,19 @@ permalink: /claude-code-security-code-review-checklist-automation/
 
 Security code reviews are critical for maintaining secure applications, but they can be repetitive and time-consuming. Automating security checklist items with Claude Code skills frees developers to focus on complex security decisions while ensuring consistent coverage across all pull requests.
 
-Why Automate Security Checklists
+## Why Automate Security Checklists
 
 Manual security reviews often suffer from inconsistency. Different reviewers catch different issues, and simple checklist items get overlooked during time pressure. Automation solves this by applying the same checks to every commit, every time.
 
 Claude Code skills excel at this because they combine natural language understanding with tool execution. You describe what to check, and the skill handles the implementation across your codebase.
 
-Setting Up for Security Review
+## Setting Up for Security Review
 
 Start by ensuring Claude Code has access to your codebase and understands the programming languages you use. Create a CLAUDE.md file in your project root to initialize context, then navigate to your project directory. The automation approach works by combining Claude Code's understanding of code semantics with established security best practices, handling repetitive checks consistently while flagging complex issues that require human judgment.
 
-Building Your Security Checklist Automation
+## Building Your Security Checklist Automation
 
-Setting Up the Foundation
+## Setting Up the Foundation
 
 Start by creating a skill dedicated to security checks. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) helps maintain your checklist context across Claude sessions, so your security rules persist between code reviews.
 
@@ -41,7 +41,7 @@ Start by creating a skill dedicated to security checks. The [supermemory skill](
 5. Dependency vulnerability scanning
 ```
 
-Input Validation Verification
+## Input Validation Verification
 
 Every user input represents a potential attack vector. Automating validation checks ensures nothing slips through.
 
@@ -69,7 +69,7 @@ function validateInputs(fileContent) {
 
 Run this check using the frontend-design skill if you're working with forms, or directly invoke your custom security skill on backend code.
 
-SQL Injection Prevention
+## SQL Injection Prevention
 
 SQL injection remains one of the most dangerous vulnerabilities. Automate detection of unsafe database queries:
 
@@ -94,7 +94,7 @@ def check_sql_injection(file_content):
 
 The [tdd skill](/best-claude-skills-for-developers-2026/) complements this by generating parameterized query examples when it detects unsafe patterns in your code.
 
-Authentication Token Handling
+## Authentication Token Handling
 
 Improper token handling leads to session hijacking. Automate checks for secure token practices:
 
@@ -108,7 +108,7 @@ Improper token handling leads to session hijacking. Automate checks for secure t
 
 For projects using JWT, add checks for algorithm verification and expiration validation.
 
-Sensitive Data Exposure
+## Sensitive Data Exposure
 
 Prevent accidental exposure of secrets, API keys, and personal data:
 
@@ -128,7 +128,7 @@ patterns:
 
 The pdf skill helps if you need to scan documentation for accidentally embedded secrets, since it can extract text from PDF files that might contain credentials.
 
-Dependency Vulnerability Scanning
+## Dependency Vulnerability Scanning
 
 Third-party dependencies introduce security risks. Automate this check using a CI integration:
 
@@ -153,9 +153,9 @@ jobs:
 
 This runs on every pull request, catching vulnerable dependencies before they reach production.
 
-Integrating Skills into Your Workflow
+## Integrating Skills into Your Workflow
 
-Pre-Commit Checks
+## Pre-Commit Checks
 
 Run lightweight checks before code reaches review:
 
@@ -165,7 +165,7 @@ Run lightweight checks before code reaches review:
 claude /security-check --files $(git diff --cached --name-only)
 ```
 
-Pull Request Automation
+## Pull Request Automation
 
 For comprehensive reviews, invoke your security skill in the PR:
 
@@ -178,7 +178,7 @@ For comprehensive reviews, invoke your security skill in the PR:
 
 The skill runs all configured checks and reports findings in a structured format.
 
-Review Feedback Loop
+## Review Feedback Loop
 
 When security issues are found, use the tdd skill to generate remediation tests:
 
@@ -189,7 +189,7 @@ When security issues are found, use the tdd skill to generate remediation tests:
 
 This creates regression tests that prevent the same issue from reappearing.
 
-Customizing Your Checklist
+## Customizing Your Checklist
 
 Every project has specific security requirements. Adjust your automated checklist based on:
 
@@ -216,7 +216,7 @@ Store your custom checklist in a project-specific file that your security skill 
 }
 ```
 
-Measuring Effectiveness
+## Measuring Effectiveness
 
 Track your security automation success with metrics:
 
@@ -227,7 +227,7 @@ Track your security automation success with metrics:
 
 The xlsx skill helps generate reports from these metrics for team reviews and stakeholder updates.
 
-Conclusion
+## Conclusion
 
 Automating security code review checklists with Claude Code skills transforms security from a periodic chore into a continuous process. By automating repetitive checks, your team catches vulnerabilities earlier, reviews PRs faster, and maintains consistent security standards across all code.
 
@@ -235,7 +235,6 @@ Start with the checklist items that affect your project most, build incrementall
 ---
 
 Related Reading
-
 
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/). Enterprise security patterns including SIEM audit logging and ACL enforcement
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Core developer skills that complement automated security review workflows

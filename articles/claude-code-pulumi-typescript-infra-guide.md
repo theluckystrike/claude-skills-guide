@@ -18,7 +18,7 @@ Claude Code Pulumi TypeScript Infra Guide
 
 Infrastructure as Code has evolved significantly, and combining Claude Code with Pulumi TypeScript projects creates a powerful workflow for managing cloud resources. This guide shows you practical patterns for using Claude Code to accelerate your Pulumi infrastructure development. from initial project setup through production deployments and ongoing maintenance.
 
-Setting Up Your Pulumi TypeScript Project
+## Setting Up Your Pulumi TypeScript Project
 
 Before integrating Claude Code, ensure your Pulumi project is properly configured. Initialize a new TypeScript project if you haven't already:
 
@@ -47,7 +47,7 @@ my-infra/
  Pulumi.yaml        # Project metadata
 ```
 
-How Claude Code Enhances Pulumi Workflows
+## How Claude Code Enhances Pulumi Workflows
 
 Claude Code brings intelligent assistance to your infrastructure projects through natural language interaction. When working with Pulumi TypeScript, you can use several capabilities:
 
@@ -59,7 +59,7 @@ Documentation Reading: Use Claude Code's web-fetching capabilities to pull Pulum
 
 Drift Detection Assistance: After running `pulumi refresh`, Claude Code can help you interpret the diff output and decide which changes are intentional versus unexpected drift that needs investigation.
 
-Writing Your First Pulumi Resource
+## Writing Your First Pulumi Resource
 
 Here's a practical example of defining infrastructure with Pulumi TypeScript that Claude Code can help you build:
 
@@ -112,7 +112,7 @@ export const bucketArn = bucket.arn;
 
 Claude Code can generate variations of this code, add tags, modify the encryption settings, or extend it with additional resources like CloudFront distributions or IAM policies. When you say "add a CloudFront distribution in front of this bucket with HTTPS-only access," Claude generates the full `aws.cloudfront.Distribution` resource with the correct origin access identity configuration rather than a partial snippet.
 
-Managing Multi-Environment Deployments
+## Managing Multi-Environment Deployments
 
 Production infrastructure typically requires multiple environments. Use Pulumi stacks to manage dev, staging, and production:
 
@@ -150,7 +150,7 @@ const dbInstance = new aws.rds.Instance("app-db", {
 
 This pattern ensures your production database receives protection against accidental deletion while development environments remain easily disposable. Claude Code can help you extend this pattern across all resource types consistently. ask it to "audit all resources in this file and apply environment-based protection to anything stateful" and it will scan through, identify RDS instances, ElastiCache clusters, and S3 buckets, then add `protect: environment === "prod"` where appropriate.
 
-Comparison: Pulumi TypeScript vs Other IaC Tools
+## Comparison: Pulumi TypeScript vs Other IaC Tools
 
 Understanding where Pulumi fits helps you make better decisions about when to lean on Claude Code for generation versus configuration.
 
@@ -166,7 +166,7 @@ Understanding where Pulumi fits helps you make better decisions about when to le
 
 The TypeScript type system is a major advantage when using Claude Code. Claude can use the type definitions to generate correct code without guessing at argument names or optional fields.
 
-Testing Infrastructure Code
+## Testing Infrastructure Code
 
 Integrate testing into your Pulumi workflows using the testing skill. Pulumi has built-in mocking utilities that let you test infrastructure logic without actually provisioning resources:
 
@@ -234,7 +234,7 @@ new PolicyPack("security-baseline", {
 });
 ```
 
-Integrating with CI/CD Pipelines
+## Integrating with CI/CD Pipelines
 
 Automate your infrastructure deployments using GitHub Actions or similar CI systems. Here's a practical workflow configuration:
 
@@ -295,7 +295,7 @@ jobs:
 
 Claude Code helps you craft these pipeline configurations, explains the security implications of different approaches, and suggests optimizations for faster deployments. For example, it can add a matrix strategy to preview multiple stacks simultaneously, or add a manual approval gate before production deploys using GitHub Environments.
 
-Organizing Large-Scale Infrastructure
+## Organizing Large-Scale Infrastructure
 
 As your infrastructure grows, organize code into modules with clean interfaces:
 
@@ -356,7 +356,7 @@ const database = createDatabase(network.privateSubnetIds, security.dbSecurityGro
 
 This modular approach makes your infrastructure code maintainable and reusable across projects. Claude Code can help you refactor an existing monolithic `index.ts` into this structure. paste the file and ask "extract networking, compute, and storage into separate modules with TypeScript interfaces for their outputs."
 
-Handling Secrets and Sensitive Configuration
+## Handling Secrets and Sensitive Configuration
 
 Never store secrets in plaintext. Pulumi's secret system encrypts sensitive values at rest:
 
@@ -379,7 +379,7 @@ export const dbEndpoint = db.endpoint;  // Safe to export
 
 Claude Code understands this pattern and will automatically use `config.requireSecret()` instead of `config.require()` when you describe sensitive values. It can also audit your codebase to flag any places where secrets might be accidentally exported or logged.
 
-Leveraging Claude Skills for Infrastructure
+## Leveraging Claude Skills for Infrastructure
 
 Several Claude skills enhance your infrastructure development workflow:
 
@@ -391,7 +391,7 @@ Several Claude skills enhance your infrastructure development workflow:
 
 Each skill complements your Pulumi workflow differently. The supermemory skill proves particularly valuable for maintaining institutional knowledge about your infrastructure architecture. recording why you chose a particular instance type or why a security group rule exists prevents future engineers from "fixing" intentional constraints.
 
-Best Practices Summary
+## Best Practices Summary
 
 1. Use descriptive resource names: `webServerSecurityGroup` instead of `sg1`. Pulumi uses these names to generate physical resource names
 2. Enable stack protection: Protect production resources from accidental deletion with the `protect` resource option
@@ -402,7 +402,6 @@ Best Practices Summary
 7. Pin provider versions: Lock your `@pulumi/aws` version in `package.json` to prevent surprise breaking changes from provider updates
 
 Claude Code accelerates each of these practices through code generation, error analysis, and documentation assistance. The combination of intelligent AI assistance with Pulumi's infrastructure as code platform creates a productive workflow for teams managing cloud resources at any scale.
-
 
 Related Reading
 

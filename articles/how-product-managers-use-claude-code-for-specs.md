@@ -16,7 +16,7 @@ permalink: /how-product-managers-use-claude-code-for-specs/
 
 This guide shows practical ways product managers integrate Claude Code into their specification workflow, with real examples and code snippets you can apply immediately.
 
-Why Traditional Spec Workflows Break Down
+## Why Traditional Spec Workflows Break Down
 
 Before diving into the workflow, it helps to understand why specification cycles take so long. The root causes are consistent across most product teams:
 
@@ -27,7 +27,7 @@ Before diving into the workflow, it helps to understand why specification cycles
 
 Claude Code addresses all four problems directly. It does not replace your judgment as a PM, but it eliminates the mechanical overhead that makes spec writing feel like a tax on your time.
 
-Starting a Spec from Conversation Notes
+## Starting a Spec from Conversation Notes
 
 Product managers often begin with messy inputs, Slack threads, meeting transcripts, or scattered notes. [The supermemory skill proves invaluable here](/claude-supermemory-skill-persistent-context-explained/). It retrieves context from your stored conversations and documents, helping you reconstruct the reasoning behind feature requests.
 
@@ -51,7 +51,7 @@ NOTES:
 
 The output gives you a starting document that you can refine in minutes rather than building from scratch. More importantly, Claude will flag contradictions in the source material, catching ambiguity before it reaches engineering.
 
-Generating Structured Specifications
+## Generating Structured Specifications
 
 The pdf skill helps transform rough drafts into polished specification documents. Product managers use it to generate PDF exports of specs that stakeholders can annotate and review.
 
@@ -87,7 +87,7 @@ Out of Scope (v1)
 
 The out-of-scope section is often skipped but prevents scope creep during implementation. Claude is good at prompting you to include it based on what common feature requests tend to expand into.
 
-Visual Design Integration
+## Visual Design Integration
 
 Specifications often fail because they lack visual clarity. The frontend-design skill helps product managers describe UI expectations in ways that translate directly to implementation.
 
@@ -108,7 +108,7 @@ refreshes mid-flow."
 
 The output gives designers and engineers a shared reference. When the design says something slightly different than what engineering implements, this spec document becomes the tiebreaker, not another meeting.
 
-Comparison: Spec Quality With and Without Claude
+## Comparison: Spec Quality With and Without Claude
 
 | Aspect | Without Claude Code | With Claude Code |
 |---|---|---|
@@ -118,7 +118,7 @@ Comparison: Spec Quality With and Without Claude
 | Visual behavior | Underspecified | Described with component-level detail |
 | Update turnaround | 1-2 days | Same session |
 
-Automating Documentation Updates
+## Automating Documentation Updates
 
 When specs change, and they always do, keeping documentation current becomes painful. The docx skill enables product managers to programmatically update specification documents as requirements evolve.
 
@@ -145,7 +145,7 @@ Cover what changed, what it affects, and what developers need to know before the
 
 This three-step pattern prevents the common failure mode where specs get updated but nobody knows what changed or why.
 
-Practical Workflow Example
+## Practical Workflow Example
 
 Here's how a product manager might use multiple skills in a single specification cycle:
 
@@ -183,7 +183,7 @@ claude "Export this spec as a formatted PDF with our standard header and footer"
 
 Each step builds on the last. The total time investment is under an hour for a feature that would previously take most of a day to specify properly.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Product managers new to AI-assisted specification sometimes over-rely on generated content. Claude Code excels at structuring and refining your ideas, it should not replace your domain expertise. Always validate technical assumptions with your engineering team before finalizing specs.
 
@@ -197,7 +197,7 @@ Version proliferation: Specs stored in multiple formats (Google Docs, Notion, PD
 
 Over-specified edge cases: Claude is thorough, which can sometimes produce specs that enumerate edge cases engineers did not need to think about yet. Edit aggressively to keep your spec at the right level of detail for the current sprint.
 
-Advanced: Conditional Logic in Specs
+## Advanced: Conditional Logic in Specs
 
 For complex features, product managers can embed conditional logic directly into specifications. This helps developers understand scope variations without reading multiple documents.
 
@@ -227,7 +227,7 @@ enterprise with custom index."
 
 The resulting table format makes implementation decisions unambiguous and prevents the common scenario where a developer has to interrupt you with "what should happen when..."
 
-Measuring Success
+## Measuring Success
 
 The real value of AI-assisted specification shows in development velocity. Track these metrics:
 
@@ -240,7 +240,7 @@ That last metric is often overlooked. When bugs are filed because the spec did n
 
 Product managers using Claude Code consistently report improvements across all of these indicators, with the biggest gains in the clarification question category, often a 40-60% reduction during active sprints.
 
-Getting Started
+## Getting Started
 
 Begin with one skill that matches your biggest bottleneck. If documentation formatting slows you down, start with the docx skill. If design ambiguity causes delays, try frontend-design. As you become comfortable, layer in additional skills for a comprehensive workflow.
 

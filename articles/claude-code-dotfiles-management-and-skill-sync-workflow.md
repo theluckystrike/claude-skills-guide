@@ -16,13 +16,13 @@ permalink: /claude-code-dotfiles-management-and-skill-sync-workflow/
 
 [Managing Claude Code configuration across multiple machines](/shared-claude-skills-across-monorepo-multiple-packages/) requires a deliberate approach to dotfiles and skill synchronization. This guide presents a practical workflow for tracking your Claude settings in git, organizing skills for portability, and keeping everything synchronized between workstations.
 
-Why Track Claude Config in Dotfiles
+## Why Track Claude Config in Dotfiles
 
 [Your Claude Code setup includes several directories that benefit from version control](/claude-skill-md-format-complete-specification-guide/): skill definitions, custom prompts, configuration files, and agent instructions. When you work across multiple machines, perhaps a desktop at home and a laptop on the go, having these tracked in git eliminates the friction of manual replication.
 
 The standard Claude Code directories worth tracking include `~/.claude/skills/` for skill definitions, `~/.claude/agents/` for custom agent configurations, and `~/.claude/settings.json` for user preferences. Each of these can become part of a dotfiles repository with appropriate `.gitignore` rules.
 
-Setting Up Your Dotfiles Repository
+## Setting Up Your Dotfiles Repository
 
 Create a dedicated directory for Claude-specific configuration within your existing dotfiles setup:
 
@@ -47,7 +47,7 @@ skills/
 
 The key insight is treating `skills/` as [source-controlled content](/how-to-share-claude-skills-with-your-team/) while acknowledging that some files, like runtime cache or local overrides, should remain machine-specific.
 
-Skill Organization Patterns
+## Skill Organization Patterns
 
 Organizing skills effectively improves discoverability and reduces duplication. Consider a flat structure with descriptive filenames rather than deep nesting:
 
@@ -72,7 +72,7 @@ ln -s tdd-workflow.md ~/.claude/skills/tdd.md
 
 This lets you invoke `/pdf` or `/tdd` instead of longer names.
 
-Cross-Machine Sync Strategies
+## Cross-Machine Sync Strategies
 
 Synchronizing dotfiles between machines requires choosing a sync mechanism that fits your workflow. Three common approaches work well:
 
@@ -104,7 +104,7 @@ git push origin main
 
 Run this manually after establishing new skills, or schedule it daily with cron.
 
-Skill Sync Within Claude Sessions
+## Skill Sync Within Claude Sessions
 
 Within an active Claude session, you can refresh skills without restarting. The exact mechanism depends on your Claude Code version, but typically creating or modifying a skill file triggers automatic reloading.
 
@@ -116,7 +116,7 @@ For manual refresh, you can invoke a built-in command if available, or simply st
 
 If the skill loads correctly, you'll see its instructions applied to the session. Common failure points include syntax errors in front matter, broken YAML, or referenced files that don't exist.
 
-Practical Skill Examples
+## Practical Skill Examples
 
 Here are skills that benefit from dotfiles management:
 
@@ -146,7 +146,7 @@ Python required: pip install openpyxl
 
 Each skill file remains portable when stored in your dotfiles repository.
 
-Handling Machine-Specific Variations
+## Handling Machine-Specific Variations
 
 Some skills require machine-specific configuration. A skill that runs tests might need different paths on different machines. Handle this through environment detection:
 
@@ -161,7 +161,7 @@ fi
 
 Alternatively, use a local override file that your dotfiles git repository ignores but you maintain manually on each machine.
 
-Automation for Continuous Sync
+## Automation for Continuous Sync
 
 For teams or power users who want near-real-time synchronization, consider a simple daemon:
 
@@ -180,7 +180,7 @@ done
 
 This watches for file changes and automatically commits and pushes. Adjust the tool (`inotifywait` for Linux, `fswatch` for macOS) based on your operating system.
 
-Conclusion
+## Conclusion
 
 Managing Claude Code dotfiles and skills through git provides consistency across machines, backup protection, and the ability to share configurations with teammates. Start by organizing skills in a flat, descriptive structure, choose a sync strategy that matches your workflow, and automate incremental updates to keep machines in sync.
 

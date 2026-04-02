@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Effective test environment management forms the backbone of reliable software delivery. When your test environments are inconsistent or poorly configured, even the best-written tests produce misleading results. Claude Code provides skills and workflows that simplify environment setup, configuration, and maintenance, enabling teams to focus on writing tests rather than fighting infrastructure.
 
 This guide covers practical approaches to test environment management using Claude Code, focusing on real-world implementation patterns you can apply immediately.
 
-Understanding Test Environment Types
+## Understanding Test Environment Types
 
 Test environments come in several flavors, each serving different purposes in your development workflow. Local development environments run on your machine, providing fast feedback during development. Integration environments simulate connections to external services. Staging environments mirror production as closely as possible. Each environment type requires different configuration strategies.
 
@@ -27,7 +26,7 @@ Claude Code skills like the docker-compose skill help orchestrate multi-containe
 
 Local environments suit unit tests and quick integration checks. Use staging or production-like environments for acceptance testing and performance validation. The key is matching environment fidelity to the test objectives, higher stakes tests require environments that closely resemble production.
 
-Setting Up Local Test Environments
+## Setting Up Local Test Environments
 
 Begin by establishing a clean local test environment using containerization. Docker provides consistent, reproducible environments that eliminate "works on my machine" problems. In Claude Code, invoke the docker skill to generate appropriate Docker configurations for your test setup.
 
@@ -58,7 +57,7 @@ services:
 
 This configuration creates isolated database and cache services specifically for testing. The healthcheck ensures services are ready before tests run, preventing flaky test results from race conditions.
 
-Managing Environment Variables Securely
+## Managing Environment Variables Securely
 
 Environment variables configure your application behavior across different contexts. Never commit sensitive values like API keys or database credentials to version control. Instead, use environment files or secret management tools.
 
@@ -92,7 +91,7 @@ if (missing.length > 0) {
 }
 ```
 
-Container Orchestration for Complex Test Scenarios
+## Container Orchestration for Complex Test Scenarios
 
 Modern applications often require multiple services, databases, message queues, caching layers, and external API mocks. The docker-compose skill generates orchestration configurations that spin up entire system topologies for testing.
 
@@ -135,7 +134,7 @@ services:
 
 This setup ensures dependencies are healthy before tests run and provides realistic mock responses for external integrations.
 
-Test Data Management Strategies
+## Test Data Management Strategies
 
 Clean, consistent test data produces reliable test results. Several strategies exist for managing test data: database seeding, factory patterns, and snapshot-based approaches.
 
@@ -173,7 +172,7 @@ describe('UserService', () => {
 });
 ```
 
-CI/CD Integration for Test Environments
+## CI/CD Integration for Test Environments
 
 Automated pipelines require environment setup that works without human intervention. The github-actions skill generates CI workflows that provision test environments automatically.
 
@@ -214,7 +213,7 @@ jobs:
 
 This configuration uses GitHub Actions' built-in service containers, eliminating the need for complex Docker orchestration in your CI pipeline.
 
-Environment Isolation Best Practices
+## Environment Isolation Best Practices
 
 Maintaining isolation between test environments prevents data pollution and false positives. Follow these principles:
 
@@ -226,7 +225,7 @@ Implement environment-aware configuration. Use different configuration files or 
 
 Automate environment teardown. Tests should clean up after themselves. Implement lifecycle hooks that destroy created resources, preventing resource leaks that degrade test performance over time.
 
-Conclusion
+## Conclusion
 
 Test environment management requires upfront investment that pays dividends throughout your development lifecycle. Claude Code skills like docker-compose, factory-bot, and github-actions provide templates and workflows that accelerate environment setup while following best practices.
 

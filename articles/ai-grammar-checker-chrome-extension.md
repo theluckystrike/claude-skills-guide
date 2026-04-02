@@ -13,14 +13,11 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-AI Grammar Checker Chrome Extension: A Developer's Guide
-
 Chrome extensions that use AI for grammar checking have transformed how developers, writers, and power users handle written content. Unlike traditional spell-checkers that rely on static dictionaries, AI-powered grammar checkers analyze context, sentence structure, and writing style to provide intelligent suggestions.
 
 This guide explores how these extensions work technically, what APIs power them, and how you can integrate grammar checking into your own Chrome extension projects.
 
-How AI Grammar Checkers Differ from Traditional Tools
+## How AI Grammar Checkers Differ from Traditional Tools
 
 Traditional grammar tools use rule-based systems, they match words against dictionaries and apply predefined grammatical rules. These systems struggle with context. For example, knowing whether "their" or "they're" is correct requires understanding the sentence structure around the word.
 
@@ -34,7 +31,7 @@ AI grammar checkers use machine learning models trained on large corpora of text
 
 Chrome extensions access text through the `contentScript` API, send it to an AI service, and display results via the extension's UI overlay or popup.
 
-Core Architecture of an AI Grammar Checker Extension
+## Core Architecture of an AI Grammar Checker Extension
 
 A typical Chrome extension for grammar checking consists of three main components:
 
@@ -63,7 +60,7 @@ Here is a simplified manifest configuration for such an extension:
 
 The content script monitors input events on text areas and editable elements. When it detects a pause in typing, it sends the text to the background worker for processing.
 
-Capturing Text from Web Pages
+## Capturing Text from Web Pages
 
 The content script must identify editable areas on a webpage. Modern web apps use various elements for text input, so your script needs to handle multiple scenarios:
 
@@ -91,7 +88,7 @@ function captureText(element) {
 
 You then attach event listeners to track changes and debounce API calls to avoid overwhelming the grammar checking service.
 
-Connecting to AI Grammar APIs
+## Connecting to AI Grammar APIs
 
 Several APIs power grammar checking functionality in Chrome extensions. The most common approach involves calling an external AI service that processes text and returns corrections.
 
@@ -126,7 +123,7 @@ For more advanced AI capabilities, you can integrate with services like:
 - Grammarly's API, Offers comprehensive grammar checking (requires partnership)
 - LanguageTool Enterprise, Self-hosted option for privacy-sensitive applications
 
-Displaying Corrections to Users
+## Displaying Corrections to Users
 
 Once you receive corrections from the API, the extension needs to display them. Two common approaches exist:
 
@@ -165,7 +162,7 @@ function highlightIssue(element, issue) {
 }
 ```
 
-Performance Considerations
+## Performance Considerations
 
 Real-time grammar checking introduces latency concerns. Here are optimization strategies:
 
@@ -199,7 +196,7 @@ function getCachedCheck(text) {
 
 Limit scope, Check only the paragraph or section being edited rather than entire documents.
 
-Privacy and Security
+## Privacy and Security
 
 Grammar checker extensions handle sensitive data, everything users type could be sent to external servers. Consider these practices:
 
@@ -209,7 +206,7 @@ Grammar checker extensions handle sensitive data, everything users type could be
 - Request minimum necessary permissions
 - Allow users to exclude specific domains
 
-Building Your Own Extension
+## Building Your Own Extension
 
 To create a functional grammar checker extension, start with these steps:
 
@@ -221,7 +218,7 @@ To create a functional grammar checker extension, start with these steps:
 
 Many developers extend these basics by adding custom dictionaries, supporting multiple languages, or integrating with writing tools like Notion, Google Docs, and GitHub.
 
-Academic Writing Configuration
+## Academic Writing Configuration
 
 Academic writers need grammar checkers that understand formal tone, citation formatting, and style guide conventions. Add configurable style guide support:
 

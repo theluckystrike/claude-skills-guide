@@ -16,7 +16,7 @@ permalink: /claude-code-msw-mock-service-worker-guide/
 
 Mock Service Worker (MSW) has become the standard for intercepting network requests in browser and Node.js environments. When combined with Claude Code, you get a powerful development workflow where AI assistance helps you create, maintain, and debug API mocks efficiently. This guide covers practical approaches to using MSW with Claude Code for frontend development and testing.
 
-Setting Up MSW in Your Project
+## Setting Up MSW in Your Project
 
 Before integrating with Claude Code, you need MSW installed in your project. The setup process involves installing the package and generating service worker files. MSW version 2.x uses a slightly different approach than earlier versions, so ensure you follow the current documentation.
 
@@ -34,7 +34,7 @@ npx msw init ./public --save
 
 This creates the necessary service worker script in your public directory. The next step involves creating your mock handlers that define how network requests get intercepted.
 
-Creating Mock Handlers with Claude Code
+## Creating Mock Handlers with Claude Code
 
 When you need to create mock handlers, Claude Code can accelerate the process significantly. Describe your API endpoints and expected responses, and Claude helps generate the handler code.
 
@@ -62,7 +62,7 @@ export const handlers = [
 
 Claude Code can help you expand these handlers to cover edge cases, error responses, and more complex scenarios. When working on a new feature, describe the expected API contract to Claude, and it generates comprehensive mock handlers.
 
-Integrating MSW with Test Environments
+## Integrating MSW with Test Environments
 
 Testing is where MSW truly shines, and combining it with Claude's testing capabilities creates a reliable development workflow. The tdd skill in Claude Code works well with MSW to create test-first development patterns.
 
@@ -88,7 +88,7 @@ afterAll(() => server.close());
 
 With this setup, each test runs with a clean mock server state. Claude Code can help you write tests that verify your components handle various API responses correctly.
 
-Using the frontend-design Skill with MSW
+## Using the frontend-design Skill with MSW
 
 The frontend-design skill in Claude Code complements MSW nicely when building component libraries. When prototyping UI components that fetch data, you can use MSW to provide consistent mock data while designing the interface.
 
@@ -107,11 +107,11 @@ http.get('/api/profile', () => {
 
 Then work with the frontend-design skill to iterate on the component structure while MSW handles the data layer. This separation of concerns lets you focus on UI/UX decisions without worrying about backend availability.
 
-Advanced MSW Patterns with Claude Code
+## Advanced MSW Patterns with Claude Code
 
 As your application grows, your mock infrastructure needs to scale. Claude Code can help you implement advanced patterns like conditional handlers, response delays, and layered mocks.
 
-Conditional Responses Based on Request Headers
+## Conditional Responses Based on Request Headers
 
 ```javascript
 http.get('/api/data', ({ request }) => {
@@ -128,7 +128,7 @@ http.get('/api/data', ({ request }) => {
 });
 ```
 
-Simulating Network Latency
+## Simulating Network Latency
 
 ```javascript
 http.get('/api/slow-endpoint', async () => {
@@ -137,7 +137,7 @@ http.get('/api/slow-endpoint', async () => {
 });
 ```
 
-Using Query Parameters
+## Using Query Parameters
 
 ```javascript
 http.get('/api/users', ({ request }) => {
@@ -159,7 +159,7 @@ http.get('/api/users', ({ request }) => {
 
 These patterns become valuable when testing different application states or demonstrating loading scenarios.
 
-MSW with the supermemory Skill
+## MSW with the supermemory Skill
 
 For larger projects with complex API contracts, maintaining mock consistency across components and tests becomes challenging. The supermemory skill can help you track API versions, endpoint changes, and mock updates over time.
 
@@ -179,7 +179,7 @@ Known Issues
 
 This documentation stays searchable and helps team members understand the mock behavior without diving into handler code.
 
-Production Considerations
+## Production Considerations
 
 While MSW excels in development and testing, some teams use it in production for demo environments or when API access is restricted. For production use, ensure your mock handlers accurately reflect your actual API behavior.
 
@@ -195,7 +195,7 @@ export const handlers = isDevelopment
 
 This approach ensures mocks only activate in appropriate environments.
 
-Debugging MSW with Claude Code
+## Debugging MSW with Claude Code
 
 When mocks don't behave as expected, debugging becomes essential. MSW provides detailed console output about intercepted requests. Share these logs with Claude Code to diagnose issues:
 
@@ -206,10 +206,9 @@ When mocks don't behave as expected, debugging becomes essential. MSW provides d
 
 Claude Code can analyze your handler code and suggest corrections based on the error messages you encounter.
 
-Conclusion
+## Conclusion
 
 MSW combined with Claude Code creates a powerful development workflow for frontend applications. Whether you're prototyping new features, writing tests with the tdd skill, or designing components with frontend-design, mock APIs provide the consistency and control you need. Start with simple handlers and gradually adopt advanced patterns as your project complexity grows.
-
 
 Related Reading
 

@@ -17,7 +17,7 @@ tags: [claude-code, claude-skills]
 
 Claude Code transforms how developers approach coding tasks by providing specialized skills that handle complex workflows. This cookbook presents practical recipes you can implement immediately, covering document generation, frontend development, test-driven development, and knowledge management. Each recipe includes concrete examples, common pitfalls, and tips for integrating skills into real development pipelines.
 
-PDF Generation with the pdf Skill
+## PDF Generation with the pdf Skill
 
 The pdf skill streamlines document creation by converting markdown directly to formatted PDF files. This proves invaluable for generating reports, invoices, and technical documentation without leaving your development environment. Rather than exporting from Google Docs or wrestling with LaTeX, you stay in your terminal and produce polished output.
 
@@ -61,7 +61,7 @@ Next Sprint Goals
 
 Running the pdf skill against this template produces a properly formatted PDF you can attach to an email or upload to a shared drive, without ever touching a word processor. In a CI/CD context, you might trigger this as part of a release job to auto-generate changelogs in PDF form for non-technical stakeholders.
 
-PDF Skill Comparison Table
+## PDF Skill Comparison Table
 
 | Approach | Setup Time | Formatting Control | Automation Friendly |
 |---|---|---|---|
@@ -72,7 +72,7 @@ PDF Skill Comparison Table
 
 The pdf skill wins on the combination of low setup friction and automation compatibility, making it the right default for most developer documentation pipelines.
 
-Frontend Design with frontend-design
+## Frontend Design with frontend-design
 
 Building user interfaces often requires iterating between design tools and code. The frontend-design skill bridges this gap by generating production-ready HTML, CSS, and JavaScript from design specifications.
 
@@ -127,7 +127,7 @@ This is semantic, accessible markup that follows BEM naming conventions. You are
 
 The frontend-design skill is most effective when you give it enough constraints to work within. Specifying a design system (Bootstrap, Tailwind, Material) or a color palette produces more targeted output than asking for generic components.
 
-Test-Driven Development with tdd
+## Test-Driven Development with tdd
 
 The tdd skill implements test-driven development workflows by generating test files alongside your implementation code. This ensures your code remains testable and catches regressions early.
 
@@ -187,7 +187,7 @@ def test_handles_missing_price_field():
 
 One practical workflow is to describe a function's behavior in plain English to Claude, have the tdd skill generate the test file, then implement the function until all tests pass. This enforces a spec-first discipline without requiring you to write boilerplate test harnesses manually.
 
-When to Use tdd vs Writing Tests Manually
+## When to Use tdd vs Writing Tests Manually
 
 | Situation | Use tdd Skill | Write Manually |
 |---|---|---|
@@ -197,7 +197,7 @@ When to Use tdd vs Writing Tests Manually
 | Tests for legacy undocumented code | Yes | Often necessary |
 | Security-sensitive validation | Yes, but review carefully | Always review |
 
-Memory Management with supermemory
+## Memory Management with supermemory
 
 Long-running projects accumulate valuable context that you should not lose between sessions. The supermemory skill persists conversation context, code decisions, and project knowledge across sessions.
 
@@ -238,7 +238,7 @@ When you return to this project, a single retrieval call surfaces all of this co
 
 The practical effect is that you spend less time re-reading code to remember why decisions were made. For teams, this also creates lightweight decision documentation that lives alongside the code rather than buried in a wiki that nobody updates.
 
-What Is Worth Storing in supermemory
+## What Is Worth Storing in supermemory
 
 Not every decision needs to be persisted. Here is a simple heuristic:
 
@@ -247,7 +247,7 @@ Not every decision needs to be persisted. Here is a simple heuristic:
 - Store pointers to the key files affected by a decision so retrieval includes actionable context.
 - Do not store things that change frequently or that are self-evident from the code.
 
-Combining Skills for Complex Workflows
+## Combining Skills for Complex Workflows
 
 Individual skills become powerful when combined. Consider a workflow where supermemory remembers project context, tdd ensures test coverage, and pdf generates documentation:
 
@@ -262,7 +262,7 @@ A concrete example: you are building a billing module. Before writing a single l
 
 Without supermemory, that prior decision might be rediscovered only after writing code that needs to be ripped out. The skill chain prevents that regression before it happens.
 
-Skill Composition Patterns
+## Skill Composition Patterns
 
 Advanced users compose skills using the sequential tool calling pattern. Instead of invoking skills individually, you can specify a sequence:
 
@@ -285,7 +285,7 @@ Each step feeds into the next. The pattern becomes a repeatable template for any
 
 This approach standardizes your development process while allowing flexibility for project-specific requirements. Teams can codify their own pipeline variations without modifying the underlying skills.
 
-Performance Optimization Tips
+## Performance Optimization Tips
 
 When using multiple skills in a session, consider these optimization strategies:
 
@@ -297,12 +297,11 @@ Use memory strategically: Save context only when it provides future value. Not e
 
 Profile before optimizing: If skill chains feel slow, identify which step consumes the most time before restructuring. Often the bottleneck is a single verbose skill invocation, not the chain architecture itself.
 
-Conclusion
+## Conclusion
 
 These recipes represent starting points for integrating Claude skills into your development workflow. The combination of specialized skills like pdf, frontend-design, tdd, and supermemory creates a flexible toolkit adaptable to various project requirements. Start with the recipes that address your immediate needs, then explore skill composition as your workflow matures.
 
 The most durable habit is consistent use of supermemory across every project. Once you establish the practice of recording architectural decisions and their rationale, the other skills become more effective because Claude always has the context it needs to make good recommendations. The cookbook grows richer the more deliberately you feed it.
-
 
 Related Reading
 

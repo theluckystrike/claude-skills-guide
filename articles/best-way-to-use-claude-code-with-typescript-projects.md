@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Best Way to Use Claude Code with TypeScript Projects
-
 TypeScript has become the standard for building scalable JavaScript applications, and Claude Code brings intelligent automation to your development workflow. Using Claude Code effectively with TypeScript projects requires understanding which skills to apply and when to use them. This guide covers practical approaches that actually work for developers shipping TypeScript code.
 
-Setting Up Claude Code for TypeScript Development
+## Setting Up Claude Code for TypeScript Development
 
 Before diving into workflows, ensure your Claude Code environment is configured for TypeScript projects. The foundation starts with a well-structured project that Claude Code can understand:
 
@@ -40,7 +37,7 @@ Before diving into workflows, ensure your Claude Code environment is configured 
 
 A clean `tsconfig.json` helps Claude Code generate accurate code. When your TypeScript configuration is well-defined, Claude Code produces type-safe code without requiring extensive corrections.
 
-Essential Skills for TypeScript Workflows
+## Essential Skills for TypeScript Workflows
 
 Several Claude skills directly improve TypeScript development speed. Install these first:
 
@@ -49,7 +46,7 @@ Several Claude skills directly improve TypeScript development speed. Install the
 - docx: Produces technical documentation from code
 - supermemory: Maintains project context across sessions
 
-The tdd Skill for TypeScript
+## The tdd Skill for TypeScript
 
 The tdd skill works exceptionally well with TypeScript because the type system provides clear contracts for test generation. When you need to implement a new feature, invoke the tdd skill to create tests that define your expected behavior:
 
@@ -61,7 +58,7 @@ Use strict TypeScript types. Include proper error handling for invalid inputs.
 
 This approach ensures your implementation follows test-driven development principles from the start. The tdd skill generates both the test file and the corresponding TypeScript interfaces, reducing the friction between writing tests and implementation.
 
-Component Generation with frontend-design
+## Component Generation with frontend-design
 
 For frontend TypeScript projects using React, Vue, or Svelte, the frontend-design skill accelerates component creation. Instead of manually typing prop interfaces and component structures:
 
@@ -77,7 +74,7 @@ Create a DataTable component in TypeScript with the following requirements:
 
 The skill generates complete, typed components including proper TypeScript interfaces, reducing boilerplate significantly.
 
-Project Initialization and Structure
+## Project Initialization and Structure
 
 Starting a new TypeScript project with Claude Code requires providing clear context. Create a `CLAUDE.md` file in your project root that describes your TypeScript setup:
 
@@ -101,7 +98,7 @@ Key Files
 
 With this context, Claude Code understands your project structure and generates code that matches your existing patterns. The supermemory skill helps maintain this context across longer development sessions, remembering your conventions and preferences.
 
-Type-Safe API Development
+## Type-Safe API Development
 
 When building APIs with TypeScript, Claude Code excels at generating type-safe endpoints. Provide clear specifications for your routes:
 
@@ -115,7 +112,7 @@ Create a new route handler for /api/products that:
 
 Claude Code generates the route, corresponding service calls, and proper error handling. For API documentation, the docx skill can produce formatted documentation from your TypeScript interfaces and route definitions.
 
-Managing Large TypeScript Codebases
+## Managing Large TypeScript Codebases
 
 As TypeScript projects grow, context management becomes critical. Claude Code handles this through progressive disclosure of information. Use these strategies:
 
@@ -125,7 +122,7 @@ Use type annotations strategically. When sharing code with Claude Code, ensure y
 
 Use skill composition for complex tasks. The tdd skill generates tests while the docx skill produces documentation from the same codebase. Running them sequentially creates comprehensive test coverage and documentation.
 
-Debugging TypeScript with Claude Code
+## Debugging TypeScript with Claude Code
 
 When encountering TypeScript errors, Claude Code provides contextual debugging:
 
@@ -137,7 +134,7 @@ Expected: user.name should always be a string after validation
 
 Provide the exact error message and relevant code context. Claude Code identifies whether the issue stems from type inference, missing null checks, or incorrect type annotations.
 
-Practical Workflow Example
+## Practical Workflow Example
 
 A typical session working on a TypeScript feature might flow like this:
 
@@ -149,7 +146,7 @@ A typical session working on a TypeScript feature might flow like this:
 
 This workflow uses TypeScript's type system as a collaboration tool between you and Claude Code. The types serve as contracts that guide code generation accurately.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Several mistakes reduce Claude Code's effectiveness with TypeScript:
 
@@ -158,7 +155,7 @@ Several mistakes reduce Claude Code's effectiveness with TypeScript:
 - Ignoring lint errors: TypeScript and ESLint should agree on code style
 - Over-reliance on generated code: Review and understand what Claude Code produces
 
-Building for Production
+## Building for Production
 
 When preparing TypeScript projects for production, Claude Code helps with:
 

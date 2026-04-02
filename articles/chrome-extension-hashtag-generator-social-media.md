@@ -18,7 +18,7 @@ Chrome extension hashtag generator tools have become essential for social media 
 
 Whether you're building one from scratch or looking to understand how existing tools work under the hood, this guide covers the full picture. architecture, implementation patterns, platform-specific integration, performance considerations, and the privacy decisions that separate amateur extensions from production-ready ones.
 
-Understanding Hashtag Generator Architecture
+## Understanding Hashtag Generator Architecture
 
 A chrome extension hashtag generator for social media typically consists of three main components: a content script that captures post text, an analysis engine that determines relevant topics, and a presentation layer that displays suggestions to users. The architecture follows the Chrome Extension Manifest V3 pattern, with service workers handling API calls and content scripts managing page interactions.
 
@@ -46,7 +46,7 @@ User selects and inserts hashtags
 
 Each layer has distinct responsibilities. Content scripts can access the DOM but have limited API access. Service workers run in the background, can make network requests and use chrome.storage, but cannot access the DOM directly. The popup renders UI and coordinates between the two.
 
-Core Implementation Patterns
+## Core Implementation Patterns
 
 Building a functional hashtag generator extension requires understanding how to interact with social media platforms and process text effectively. Here's a basic implementation structure:
 
@@ -126,7 +126,7 @@ startObserving();
 
 The 400ms debounce is important. Without it, every keystroke triggers analysis. expensive if your analysis engine calls an API.
 
-Building the Hashtag Analysis Engine
+## Building the Hashtag Analysis Engine
 
 The analysis engine is where the magic happens. A solid implementation combines multiple techniques:
 
@@ -201,7 +201,7 @@ async function resolveHashtags(keywords) {
 
 The graceful fallback matters because service workers in extensions can be terminated and restarted by Chrome, and network requests can fail unpredictably.
 
-Scoring and Ranking Hashtags
+## Scoring and Ranking Hashtags
 
 Not all hashtag candidates are equal. A basic scoring system improves suggestion quality significantly:
 
@@ -236,7 +236,7 @@ function rankHashtags(candidates, context) {
 }
 ```
 
-Integrating with Social Media Platforms
+## Integrating with Social Media Platforms
 
 Different platforms have different DOM structures and API capabilities. Here's how to handle common scenarios:
 
@@ -311,7 +311,7 @@ function copyHashtagsToClipboard(hashtags) {
 }
 ```
 
-Platform Integration Comparison
+## Platform Integration Comparison
 
 Each platform presents different technical constraints that affect your implementation choices:
 
@@ -326,7 +326,7 @@ Each platform presents different technical constraints that affect your implemen
 
 The optimal hashtag count column reflects platform culture and algorithm behavior, not technical limits. Instagram technically allows 30 but studies consistently show engagement plateaus around 20–25. Twitter's algorithm actively reduces reach for posts that feel spammy, so 2–3 focused hashtags outperform 10 generic ones.
 
-Advanced Features for Power Users
+## Advanced Features for Power Users
 
 Beyond basic generation, consider implementing these advanced features:
 
@@ -434,7 +434,7 @@ document.addEventListener('click', async (e) => {
 });
 ```
 
-Extension UI Best Practices
+## Extension UI Best Practices
 
 The popup interface should be clean and functional. Provide quick actions while allowing access to advanced settings:
 
@@ -534,7 +534,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Handling Service Worker Lifecycle
+## Handling Service Worker Lifecycle
 
 Manifest V3 service workers are not persistent. Chrome terminates them after inactivity and restarts them on demand. This creates a specific class of bugs where state stored in module-level variables is lost between messages.
 
@@ -579,7 +579,7 @@ chrome.storage.onChanged.addListener((changes) => {
 });
 ```
 
-Privacy and Security Considerations
+## Privacy and Security Considerations
 
 When building hashtag generator extensions, consider these privacy aspects:
 
@@ -619,7 +619,7 @@ Content Security Policy also matters. Manifest V3 enforces strict CSP on extensi
 }
 ```
 
-Testing Your Extension
+## Testing Your Extension
 
 Chrome extensions are notoriously hard to test because they straddle the browser environment and external APIs. A few practical approaches:
 
@@ -661,7 +661,7 @@ const browser = await chromium.launchPersistentContext('', {
 });
 ```
 
-Conclusion
+## Conclusion
 
 Chrome extension hashtag generators for social media bridge the gap between content creation and discovery. For developers, the Manifest V3 architecture provides a solid foundation. For power users, these tools save time and improve content visibility.
 

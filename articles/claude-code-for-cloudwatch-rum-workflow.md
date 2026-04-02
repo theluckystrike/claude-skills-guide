@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for CloudWatch RUM Workflow
 
@@ -32,11 +31,11 @@ Key benefits include:
 
 For teams building user-facing web applications, CloudWatch RUM provides invaluable feedback loops that help you prioritize performance improvements based on real user impact.
 
-Setting Up CloudWatch RUM with Claude Code
+## Setting Up CloudWatch RUM with Claude Code
 
 The initial setup involves creating a RUM app monitor in AWS and adding the JavaScript snippet to your application. Claude Code can automate much of this process for you.
 
-Step 1: Create the RUM App Monitor
+## Step 1: Create the RUM App Monitor
 
 You can create a CloudWatch RUM app monitor using the AWS CLI or Terraform. Here's a Terraform configuration that Claude Code can help you generate and maintain:
 
@@ -68,7 +67,7 @@ resource "aws_cloudwatch_rum_app_monitor" "my_app" {
 
 Ask Claude Code to generate this configuration for your specific domain and requirements. It will tailor the settings based on your needs, such as enabling X-Ray tracing or configuring custom event collection.
 
-Step 2: Add the RUM JavaScript to Your Application
+## Step 2: Add the RUM JavaScript to Your Application
 
 Once you have your app monitor created, you'll receive a JavaScript snippet to add to your application. The snippet typically looks like this:
 
@@ -87,11 +86,11 @@ cwr('config',{
 
 Claude Code can help you integrate this snippet properly into your application, whether you're using a plain HTML setup, React, Vue, Angular, or another framework. Simply describe your application structure and ask Claude Code to find the best insertion point.
 
-Configuring Custom Events and Page Views
+## Configuring Custom Events and Page Views
 
 Out of the box, CloudWatch RUM tracks page loads and JavaScript errors. However, you often want to track custom events specific to your application, like button clicks, form submissions, or specific user journeys.
 
-Tracking Custom Events
+## Tracking Custom Events
 
 ```javascript
 // After RUM is initialized
@@ -106,7 +105,7 @@ cwr('recordEvent', {
 
 Claude Code can help you identify the key user interactions in your application that would benefit from custom tracking. Ask it to analyze your codebase and suggest a custom events strategy.
 
-Tracking Page Views in SPAs
+## Tracking Page Views in SPAs
 
 Single-page applications require special handling because the page doesn't actually reload. You need to manually record page views when the route changes:
 
@@ -136,11 +135,11 @@ function RUMPageViewTracker() {
 
 Claude Code can generate this component for your specific routing library, whether you're using React Router, Vue Router, Next.js routing, or any other solution.
 
-Integrating RUM Data with Your Development Workflow
+## Integrating RUM Data with Your Development Workflow
 
 The real value of CloudWatch RUM comes from using the data to inform your development priorities. Here are practical ways to integrate RUM insights into your workflow using Claude Code.
 
-Analyzing Error Patterns
+## Analyzing Error Patterns
 
 When you notice elevated error rates in the CloudWatch console, use Claude Code to investigate the root cause. Describe the error pattern you're seeing, and ask Claude Code to help you:
 
@@ -155,7 +154,7 @@ errors on the checkout page. Can you look at our checkout component and
 identify what might be causing this?"
 ```
 
-Performance Optimization Workflows
+## Performance Optimization Workflows
 
 Use RUM data to prioritize performance work. When CloudWatch RUM shows slow page load times:
 
@@ -168,7 +167,7 @@ Claude Code can help you:
 - Review images and assets that might be slowing down page loads
 - Optimize third-party script loading patterns
 
-Creating Alerts and Dashboards
+## Creating Alerts and Dashboards
 
 Claude Code can help you set up CloudWatch alarms based on RUM metrics. For example, alerting when error rates exceed a threshold:
 
@@ -192,7 +191,7 @@ resource "aws_cloudwatch_metric_alarm" "rum_error_rate" {
 
 Ask Claude Code to generate alerts for your specific monitoring needs, whether it's error rates, latency thresholds, or custom event occurrences.
 
-Best Practices for CloudWatch RUM with Claude Code
+## Best Practices for CloudWatch RUM with Claude Code
 
 Here are actionable tips to get the most out of your CloudWatch RUM implementation:
 
@@ -206,7 +205,7 @@ Here are actionable tips to get the most out of your CloudWatch RUM implementati
 
 5. Document your custom events: Maintain a simple schema of custom events you're tracking so your team can interpret RUM data consistently.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Claude Code can help you debug common CloudWatch RUM integration problems:
 
@@ -215,7 +214,7 @@ Claude Code can help you debug common CloudWatch RUM integration problems:
 - Performance impact: Ensure the RUM script loads asynchronously and doesn't block page rendering
 - Privacy concerns: Configure consent management if you need to comply with GDPR or similar regulations
 
-Conclusion
+## Conclusion
 
 CloudWatch RUM provides invaluable visibility into real user experiences, and Claude Code makes it significantly easier to set up, configure, and maintain. From generating Terraform configurations to creating custom event tracking components, Claude Code accelerates every step of your RUM implementation. Start with basic page load tracking, then progressively add custom events that align with your business metrics. The insights you gain will directly inform your prioritization of performance improvements and bug fixes.
 

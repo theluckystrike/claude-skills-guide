@@ -18,13 +18,13 @@ When you build Claude skills, every token in your skill body affects response ti
 
 This guide covers compression techniques that work in real skill development, tested across production skills like `frontend-design`, `pdf`, and `tdd`. For the complementary approach of profiling actual token consumption, see [Claude skill token usage profiling and optimization](/claude-skill-token-usage-profiling-and-optimization/).
 
-Why Compression Matters
+## Why Compression Matters
 
 Each skill invocation passes your skill body to the model. A 2,000-token skill costs roughly twice as much and takes twice as long as a 1,000-token skill. For skills used in automated pipelines or high-frequency workflows, this adds up quickly.
 
 Compression is not about removing useful information. It is about expressing the same constraints and context more efficiently.
 
-Technique 1: Use Implicits Instead of Explanations
+## Technique 1: Use Implicits Instead of Explanations
 
 The fastest way to shrink a skill body is removing explanatory phrases that Claude can infer. Replace verbose descriptions with concise directives.
 
@@ -44,7 +44,7 @@ Frontend developer. Generate complete, semantic HTML/CSS from component descript
 
 The after version maintains the same core instruction, role, task, output expectation, while dropping four sentences of context a competent model already understands.
 
-Technique 2: Inline Constraints Rather Than Prefacing Them
+## Technique 2: Inline Constraints Rather Than Prefacing Them
 
 Avoid long constraint sections that start with "Make sure to..." or "Always remember to...". State constraints as direct commands.
 
@@ -69,7 +69,7 @@ into:
 Cover edge cases, handle exceptions, mock external deps.
 ```
 
-Technique 3: Use Abbreviations Consistently
+## Technique 3: Use Abbreviations Consistently
 
 Establish a glossary at the top of your skill body, then use abbreviations throughout. This works for domain-specific terms you repeat frequently.
 
@@ -87,7 +87,7 @@ Extract req from user input. Generate ui spec. Use ctx to resolve ambiguities.
 
 For the [supermemory skill](/claude-supermemory-skill-persistent-context-explained/), which processes large amounts of context, abbreviations can reduce a 500-word body to under 300 tokens without losing functionality.
 
-Technique 4: Use Conditional Blocks
+## Technique 4: Use Conditional Blocks
 
 If your skill has multiple modes or conditional behaviors, compress them into single-line conditionals rather than separate paragraphs.
 
@@ -105,7 +105,7 @@ Input: file_path? → read+process | raw_text? → process | else → ask clarif
 
 This compact syntax communicates the same logic in a fraction of the space. The `pdf` skill uses this approach to handle different input types without bloating the skill body.
 
-Technique 5: Compress Examples
+## Technique 5: Compress Examples
 
 Examples clarify behavior, but full sentences are unnecessary. Show input-output pairs in minimal form.
 
@@ -122,7 +122,7 @@ After:
 
 Keep one detailed example in your skill for complex behaviors, then use this compressed notation for variations.
 
-Technique 6: Merge Related Instructions
+## Technique 6: Merge Related Instructions
 
 Skills often contain instructions that belong together but are spread across paragraphs. Merge them.
 
@@ -138,7 +138,7 @@ After:
 Output: JSON { component: string, styles: object, props: array }, no comments
 ```
 
-Technique 7: Remove Redundant Role Framing
+## Technique 7: Remove Redundant Role Framing
 
 If you invoke your skill with a trigger phrase that already establishes context, do not restate it in the body.
 
@@ -148,7 +148,7 @@ You are designing a component...
 ```
 The trigger phrase already sets this expectation. Start directly with the instruction.
 
-Measuring the Impact
+## Measuring the Impact
 
 After compressing, test your skill against its uncompressed version:
 
@@ -159,7 +159,7 @@ After compressing, test your skill against its uncompressed version:
 
 A well-compressed skill should show measurable improvement in speed without quality loss. If quality drops, restore specific instructions that provided essential context.
 
-When Not to Compress
+## When Not to Compress
 
 Compression has diminishing returns in certain scenarios:
 
@@ -169,7 +169,7 @@ Compression has diminishing returns in certain scenarios:
 
 The `tdd` skill benefits from keeping test structure expectations explicit rather than compressed, because test organization has many correct variations andClaude needs clear direction to pick the right one.
 
-Practical Example: Compressing a Real Skill
+## Practical Example: Compressing a Real Skill
 
 Here is a before/after comparison for a hypothetical skill:
 
@@ -193,12 +193,11 @@ Prioritize runtime errors and security. Skip trivial style issues.
 
 The compressed version maintains every constraint while reducing token count by 59%.
 
-Summary
+## Summary
 
 Prompt compression for Claude skills follows the same principles as general prompt engineering: be precise, be direct, and trust the model to infer. Remove explanations it does not need, merge related instructions, use abbreviations for repeated terms, and test thoroughly after compression.
 
 Applied to skills like `pdf` for document processing, `frontend-design` for component generation, or `tdd` for test creation, these techniques reduce costs and latency while preserving the quality that makes the skill useful.
-
 
 Related Reading
 

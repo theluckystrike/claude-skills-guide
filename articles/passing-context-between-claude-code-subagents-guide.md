@@ -16,13 +16,13 @@ permalink: /passing-context-between-claude-code-subagents-guide/
 
 Claude Code enables powerful multi-agent architectures through subagents. For an introduction to subagent coordination, see [multi-agent orchestration with Claude subagents](/multi-agent-orchestration-with-claude-subagents-guide/). When building complex workflows, you need reliable ways to pass context, share state, and coordinate results between subagents. This guide covers practical patterns for context passing that work in real production workflows.
 
-Understanding Subagent Context Architecture
+## Understanding Subagent Context Architecture
 
 [Claude Code subagents operate as isolated execution units within a parent session](/best-claude-code-skills-to-install-first-2026/) Each subagent receives its own context window, which means data generated in one subagent does not automatically propagate to another. This isolation provides safety and predictability, but requires explicit patterns for sharing information.
 
 The parent agent serves as the coordinator. It holds the master context and decides which pieces of information to pass to each subagent at invocation time. This design gives you fine-grained control over what each subagent sees and can act upon.
 
-Pattern 1: Explicit Context Injection at Invocation
+## Pattern 1: Explicit Context Injection at Invocation
 
 The most straightforward approach involves passing context directly when invoking a subagent. You construct the prompt with all necessary background information included.
 
@@ -32,7 +32,7 @@ The most straightforward approach involves passing context directly when invokin
 
 This pattern works well when the context is relatively small and static. For larger contexts, consider summarizing or extracting only the relevant portions before passing to the subagent.
 
-Pattern 2: Shared File-Based State
+## Pattern 2: Shared File-Based State
 
 When subagents need to work with larger datasets or maintain state across multiple turns, file-based storage provides a reliable mechanism. The parent agent writes context to a shared file, then instructs subagents to read from it.
 
@@ -58,7 +58,7 @@ Subagents then read this file at startup:
 
 This pattern integrates well with skills like the tdd skill, which might need access to test specifications or requirements documents across multiple subagent invocations.
 
-Pattern 3: Structured Result Passing
+## Pattern 3: Structured Result Passing
 
 For workflows where one subagent's output becomes another subagent's input, use structured result objects. Define a clear schema for what each subagent should return, making downstream processing reliable.
 
@@ -74,7 +74,7 @@ The parent agent then parses this output and passes it to the next subagent:
 
 This pattern works particularly well with the pdf skill for extraction workflows and the xlsx skill when generating reports from extracted data.
 
-Pattern 4: Context Summarization for Long Workflows
+## Pattern 4: Context Summarization for Long Workflows
 
 For extended multi-step workflows, context can grow beyond manageable limits. Periodic summarization keeps things efficient. The parent agent periodically asks a subagent to summarize the current state:
 
@@ -84,7 +84,7 @@ For extended multi-step workflows, context can grow beyond manageable limits. Pe
 
 Store this summary in a dedicated context file that gets passed to all subsequent subagents. This pattern prevents context window exhaustion in long-running workflows.
 
-Pattern 5: Event-Driven Coordination
+## Pattern 5: Event-Driven Coordination
 
 For more complex architectures, consider an event-based approach where subagents publish results to named channels, and other subagents subscribe to those channels.
 
@@ -99,7 +99,7 @@ channels:
 
 The frontend-design skill might publish component specifications to a channel that the pdf skill then consumes for documentation generation.
 
-Best Practices for Context Passing
+## Best Practices for Context Passing
 
 Keep context payloads focused. Include only what each subagent needs rather than dumping entire conversation histories. This improves both reliability and performance.
 
@@ -109,7 +109,7 @@ Log context passing points in your workflow. When a subagent fails, knowing exac
 
 Handle partial failures gracefully. If one subagent fails, ensure downstream subagents can still operate with the context they received up to that point.
 
-Combining Patterns in Production
+## Combining Patterns in Production
 
 Real-world workflows often combine multiple patterns. A typical production pipeline might use:
 
@@ -120,13 +120,13 @@ Real-world workflows often combine multiple patterns. A typical production pipel
 
 For example, a documentation generation pipeline might invoke the pdf skill to extract content, pass that to a writing subagent, then use the xlsx skill to generate supporting data tables, and finally invoke frontend-design skill for visual components.
 
-Troubleshooting Context Issues
+## Troubleshooting Context Issues
 
 If subagents appear to miss context, verify the parent agent actually received and stored the information first. Check file permissions if using file-based storage. Review whether the context exceeded token limits, which can cause truncation.
 
 When results seem inconsistent across subagents, ensure they're reading from the same version of shared files. Timestamp your context files to detect stale data issues.
 
-Implementing a Context Registry for Complex Pipelines
+## Implementing a Context Registry for Complex Pipelines
 
 When multi-agent workflows grow beyond 3-4 subagents, ad-hoc file-based context passing becomes difficult to reason about. A lightweight context registry, a structured JSON store with a consistent read/write interface, brings order to complex pipelines.
 
@@ -137,7 +137,6 @@ import json
 import os
 from datetime import datetime, timezone
 from pathlib import Path
-
 
 class ContextRegistry:
     """Simple file-backed context registry for multi-agent workflows."""
@@ -194,7 +193,6 @@ class ContextRegistry:
             if not v.get("expires_at") or v["expires_at"] > now
         }
 
-
 Usage in parent agent orchestration
 registry = ContextRegistry()
 
@@ -211,7 +209,7 @@ The TTL (time-to-live) on stored context prevents stale data from persisting acr
 
 The registry also serves as an audit log. The `stored_at` timestamps let you reconstruct the exact sequence of context-passing events when debugging a failed pipeline run.
 
-Validating Context Integrity Before Subagent Invocation
+## Validating Context Integrity Before Subagent Invocation
 
 Context corruption is subtle, a subagent receiving malformed JSON or truncated data will produce incorrect results without obvious errors. Adding validation before passing context to a subagent catches these issues early.
 
@@ -220,14 +218,12 @@ A simple schema validation pattern using Python's `typing` module:
 ```python
 from typing import TypedDict, Optional
 
-
 class ReviewTaskContext(TypedDict):
     task_id: str
     priority: str  # "high" | "medium" | "low"
     files_under_review: list[str]
     previous_review_comments: list[dict]
     reviewer: Optional[str]
-
 
 def validate_review_context(data: dict) -> tuple[bool, list[str]]:
     """
@@ -251,7 +247,6 @@ def validate_review_context(data: dict) -> tuple[bool, list[str]]:
             errors.append("files_under_review cannot be empty")
 
     return len(errors) == 0, errors
-
 
 Before invoking subagent
 context_data = load_context_from_registry()

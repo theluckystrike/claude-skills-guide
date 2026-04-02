@@ -24,7 +24,7 @@ Claude skills provide a structured approach to automation. By chaining together 
 
 Each skill is a Markdown file stored in `~/.claude/skills/` and invoked during a Claude Code session by typing `/skill-name`. For example, you invoke the tdd skill with `/tdd`, which prompts Claude to apply test-driven [workflows](/workflows-hub/) to your current task.
 
-Understanding Semantic Versioning Before Automating
+## Understanding Semantic Versioning Before Automating
 
 Before writing any automation, it pays to be precise about what you are updating. Every dependency version follows the `MAJOR.MINOR.PATCH` pattern defined by semver:
 
@@ -36,7 +36,7 @@ Before writing any automation, it pays to be precise about what you are updating
 
 Your workflow should behave differently depending on which segment changed. Automatically merging a PATCH update is generally safe. Auto-merging a MAJOR update without reading the migration guide is asking for a 2 AM incident.
 
-Building the Core Workflow
+## Building the Core Workflow
 
 The foundation of an automated dependency update workflow requires three main components: detection of outdated packages, execution of updates, and verification of results. Each component maps to specific Claude skills that handle the complexity.
 
@@ -72,7 +72,7 @@ Found 12 outdated packages:
 - typescript: 5.0.4 → 5.3.0 (minor)
 ```
 
-Extending the Scanner for Python Projects
+## Extending the Scanner for Python Projects
 
 The same skill pattern applies to Python projects using pip. Create `~/.claude/skills/pip-dep-scanner.md`:
 
@@ -110,7 +110,7 @@ for pkg in sorted(data, key=lambda x: x['name']):
 "
 ```
 
-Integrating with Version Control
+## Integrating with Version Control
 
 After identifying updates, the workflow should create branches, commit changes, and open pull requests automatically. You can do this directly from Claude Code using shell tools:
 
@@ -145,7 +145,7 @@ Major updates requiring manual review
 <!-- List any MAJOR version bumps here with migration notes -->
 ```
 
-Handling Breaking Changes with a Tiered Strategy
+## Handling Breaking Changes with a Tiered Strategy
 
 Despite careful planning, major version updates sometimes introduce breaking changes. Configure your workflow to auto-apply only patch and minor updates, and flag major updates for manual review:
 
@@ -198,7 +198,7 @@ echo "MINORS (test then merge): $MINORS"
 echo "MAJORS (human review): $MAJORS"
 ```
 
-Testing and Verification
+## Testing and Verification
 
 Updating dependencies without testing is a recipe for production issues. Invoke the `/tdd` skill after applying updates to validate that nothing regressed:
 
@@ -226,7 +226,7 @@ npm run test:e2e
 
 If any layer fails, stop and investigate before proceeding. The `/tdd` skill will surface the failure context and suggest whether it stems from the dependency change or pre-existing issues.
 
-Rollback Strategy
+## Rollback Strategy
 
 Every automated workflow needs a rollback plan. When a dependency update causes failures that are not immediately fixable, reverting to the known-good state should take seconds, not minutes.
 
@@ -263,7 +263,7 @@ Store your rollback commands in supermemory so Claude can execute them without y
 /supermemory store: pip rollback command. git checkout HEAD~1 -- requirements.txt && pip install -r requirements.txt
 ```
 
-Tracking with supermemory
+## Tracking with supermemory
 
 Dependency updates are not one-time events. Use `/supermemory` to log each update run and any issues encountered:
 
@@ -288,7 +288,7 @@ For example:
 /supermemory store: [axios] [1.6.7]->[1.7.2] [2026-03-01] [CLEAN] no changes needed
 ```
 
-Multi-Repo Workflow
+## Multi-Repo Workflow
 
 If you maintain multiple repositories, the single-repo workflow scales by looping over a list of project paths:
 
@@ -321,7 +321,7 @@ done
 
 Run this from a Claude Code session with `/dep-scanner` active, and Claude will monitor the output, highlight failures, and suggest targeted fixes without interrupting the successful repos.
 
-Comparison: Manual vs. Automated Dependency Management
+## Comparison: Manual vs. Automated Dependency Management
 
 | Concern | Manual process | Claude skills workflow |
 |---|---|---|
@@ -333,7 +333,7 @@ Comparison: Manual vs. Automated Dependency Management
 | Scheduling | Ad hoc, when remembered | GitHub Actions cron every Monday |
 | Breaking changes | Discovered in production | Caught by CI before merge |
 
-Scheduling and CI Integration
+## Scheduling and CI Integration
 
 Schedule the workflow using GitHub Actions to run every Monday morning:
 
@@ -400,7 +400,7 @@ jobs:
           commit-message: "chore: weekly python dependency update"
 ```
 
-Best Practices
+## Best Practices
 
 Test in isolation before merging updates. Use feature branches and CI pipelines to verify changes work correctly.
 
@@ -414,7 +414,7 @@ Separate security updates from routine updates. A security patch should merge wi
 
 Review transitive dependencies. Your direct dependencies often pull in their own dependencies. Use `npm ls` or `pip show --files` to understand the full dependency tree before applying updates that could affect it.
 
-Putting It Together
+## Putting It Together
 
 An automated dependency update workflow using Claude skills eliminates the manual overhead while keeping your projects current. Use `/dep-scanner` to identify what needs updating, `/tdd` to verify nothing broke, and `/supermemory` to build a knowledge base of past issues. Apply the tiered PATCH/MINOR/MAJOR strategy to let safe changes flow through automatically while routing risky updates to human review. Pair this with a CI pipeline for scheduled automation, and dependency hygiene becomes a background process rather than a recurring chore.
 
@@ -427,6 +427,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack including tdd
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Automate deployments with Claude skills
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

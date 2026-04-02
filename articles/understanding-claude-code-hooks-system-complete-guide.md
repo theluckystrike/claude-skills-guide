@@ -29,7 +29,7 @@ Hooks never interact with the Claude model directly. They are a CLI-level interc
 
 This design has important implications for how you think about hooks. They are not middleware in a request/response pipeline. they are gatekeepers and observers at the tool execution boundary. Claude decides it wants to run `rm -rf ./dist`, but before that command reaches the shell, your hook has the opportunity to allow, block, or modify it.
 
-Hook Types
+## Hook Types
 
 Claude Code defines three primary hook types.
 
@@ -84,7 +84,7 @@ Two sub-events: `session.start` and `session.end`.
 
 Session hooks are often overlooked but are among the most powerful. A well-crafted `session.start` hook can give Claude a precise picture of what work is in progress before it reads a single file. Instead of relying on Claude to discover state by exploring directories, you hand it a structured summary the moment it starts. This is particularly useful for long-running projects where Claude operates in many short sessions.
 
-Hook Configuration
+## Hook Configuration
 
 Hooks are defined in `.claude/settings.json` under the `"hooks"` key:
 
@@ -117,7 +117,7 @@ Hooks are defined in `.claude/settings.json` under the `"hooks"` key:
 }
 ```
 
-Matchers
+## Matchers
 
 The `matcher` object filters which events trigger the hook command. An empty matcher `{}` matches all events of that type.
 
@@ -131,7 +131,7 @@ Multiple hooks of the same type run in order. If any hook exits non-zero, subseq
 
 Understanding matcher specificity matters when you have multiple hooks. A hook matching only `["Bash"]` will not fire for `Write` calls. An empty matcher fires for everything. Order them so that the broadest hooks come last and specific blocking hooks come first. this keeps your security-critical checks fast because they short-circuit before logging hooks run.
 
-Writing a Hook Script
+## Writing a Hook Script
 
 A complete Python hook that blocks `bash` commands containing `rm -rf`:
 
@@ -172,7 +172,7 @@ Register it in `.claude/settings.json`:
 
 A few things worth noting about this script. First, it reads from stdin exactly once. do not read stdin in a loop or you will hang. Second, on the pass-through path it outputs the original JSON to stdout. If you forget to output JSON on the pass-through path and just exit 0, the hook chain may behave unexpectedly. Third, the error message on stderr is surfaced to Claude Code's output, so make it informative. Claude may see it and adjust its approach.
 
-Modifying Tool Input
+## Modifying Tool Input
 
 A hook can modify the event data before it is processed. Output modified JSON to stdout and exit 0.
 
@@ -220,7 +220,7 @@ print(json.dumps(data))
 sys.exit(0)
 ```
 
-Hook Performance
+## Hook Performance
 
 Hooks are synchronous. Claude Code waits for each hook to complete before proceeding. Slow hooks slow down every relevant operation.
 
@@ -257,7 +257,7 @@ sys.exit(0)
 
 A separate process (cron job, background daemon, or post-session script) can then ship those entries to your logging infrastructure without any impact on Claude's response time.
 
-Global vs Project Hooks
+## Global vs Project Hooks
 
 Like skills, hooks can be configured globally (`~/.claude/settings.json`) or per project (`.claude/settings.json`). Both sets are loaded. Global hooks run first, then project hooks. This is different from [auto-invocation](/claude-skills-auto-invocation-how-it-works/), which is skill-level behavior. They stack. there is no override mechanism that prevents a global hook from running.
 
@@ -275,7 +275,7 @@ A practical layered setup might look like this:
 
 The global hooks give you a consistent baseline of observability and safety. The project hooks give you fine-grained control for that project's specific needs. Neither interferes with the other.
 
-Session Start Context Injection
+## Session Start Context Injection
 
 A session start hook that prints a summary of active tasks in `.claude/state/`:
 
@@ -322,7 +322,7 @@ Register it:
 }
 ```
 
-Debugging Hooks
+## Debugging Hooks
 
 When a hook behaves unexpectedly, the first step is to test it in isolation. Because hooks read from stdin and write to stdout, you can pipe test JSON directly:
 
@@ -339,7 +339,7 @@ Common mistakes:
 - Assuming `tool_name` casing. check whether it is `"bash"` or `"Bash"` for your version
 - Slow hooks caused by imports that take time to initialize. pre-import heavy libraries at the top of the file
 
-Comparing Hook Types: When to Use Each
+## Comparing Hook Types: When to Use Each
 
 | Scenario | Hook Type |
 |---|---|
@@ -361,6 +361,5 @@ Related Reading
 - [Building Stateful Agents with Claude Skills](/building-stateful-agents-with-claude-skills-guide/). Hooks are core to stateful agent design
 - [Claude Skill .md File Format: Full Specification](/claude-skill-md-format-complete-specification-guide/). Skill file format reference
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top developer skills that work well with hooks
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

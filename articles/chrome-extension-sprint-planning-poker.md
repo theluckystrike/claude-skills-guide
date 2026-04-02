@@ -16,17 +16,17 @@ score: 8
 
 Sprint planning poker has become a staple in agile software development, helping teams estimate user stories with shared, anonymous voting. While dedicated web applications exist, Chrome extensions offer a convenient alternative that runs directly in your browser without requiring additional software installation or account creation.
 
-What Is Sprint Planning Poker
+## What Is Sprint Planning Poker
 
 Sprint planning poker, also known as estimation poker, is a consensus-based technique for estimating the effort required for user stories. Each team member receives a deck of cards with values like 0, 1, 2, 3, 5, 8, 13, 21, and so on, representing story points. During a planning session, the product owner describes a story, team members privately select their estimate, and everyone reveals their choice simultaneously.
 
 The beauty of this approach lies in anonymity. When estimates differ significantly, it sparks valuable discussion about requirements, edge cases, and technical complexity that might otherwise go unspoken. Teams often discover hidden assumptions during these conversations.
 
-Chrome Extension Options for Planning Poker
+## Chrome Extension Options for Planning Poker
 
 Several Chrome extensions bring planning poker functionality directly to your browser. Here's what to look for when selecting one:
 
-Key Features to Consider
+## Key Features to Consider
 
 Real-time Synchronization: The extension must update all participants' votes instantly when cards are revealed. Look for extensions that use WebSockets or polling to maintain live connection.
 
@@ -36,7 +36,7 @@ Card Decks: Standard Fibonacci sequences (1, 2, 3, 5, 8, 13, 21) work well, but 
 
 Voting Mechanics: Some extensions show cards face-down until reveal, while others display participant status (voted/not voted) without showing estimates. Choose based on your team's preference for anonymity versus transparency during voting.
 
-Using Planning Poker Extensions
+## Using Planning Poker Extensions
 
 The typical workflow with a planning poker Chrome extension looks like this:
 
@@ -50,9 +50,9 @@ The typical workflow with a planning poker Chrome extension looks like this:
 
 For teams using Jira or similar project management tools, some extensions integrate directly, allowing you to estimate stories without switching contexts.
 
-Practical Implementation Examples
+## Practical Implementation Examples
 
-Setting Up a Quick Estimation Session
+## Setting Up a Quick Estimation Session
 
 When you need to run an ad-hoc estimation session, Chrome extensions provide immediate access. Unlike web applications that might require account setup, extensions install once and remain available in your browser toolbar.
 
@@ -67,7 +67,7 @@ Here's a typical room creation flow:
 // 5. Start estimating
 ```
 
-Managing Remote Teams
+## Managing Remote Teams
 
 For distributed teams across time zones, planning poker Chrome extensions work particularly well. Since participants join through room codes, geographic location becomes irrelevant. The extension handles the synchronization, ensuring everyone sees votes simultaneously regardless of network latency.
 
@@ -77,7 +77,7 @@ When running remote sessions, establish clear protocols:
 - Use the "show votes" feature intentionally to prompt discussion
 - Designate a facilitator to keep the session focused
 
-Integrating with Sprint Planning Workflows
+## Integrating with Sprint Planning Workflows
 
 If your team uses Jira, you can estimate directly within that environment. Some Chrome extensions detect Jira story pages and allow estimation without leaving the ticket:
 
@@ -91,7 +91,7 @@ If your team uses Jira, you can estimate directly within that environment. Some 
 
 Not all extensions support this integration, so verify compatibility with your specific Jira setup before relying on it.
 
-Limitations and Workarounds
+## Limitations and Workarounds
 
 Chrome extensions for planning poker come with constraints worth understanding:
 
@@ -103,7 +103,7 @@ Feature Parity: Compared to dedicated planning poker platforms, Chrome extension
 
 Session Persistence: Room data typically disappears when the session ends. If you need historical records, manually document estimates or use a platform with data retention.
 
-Alternative Approaches
+## Alternative Approaches
 
 When Chrome extensions don't fit your needs, consider these alternatives:
 
@@ -113,7 +113,7 @@ Standalone Tools: Some teams use physical card decks for in-person sessions or v
 
 Custom Solutions: Development teams with specific requirements sometimes build custom estimation tools integrated with their internal systems. This approach requires development resources but delivers precisely tailored functionality.
 
-Getting Started
+## Getting Started
 
 To begin using a planning poker Chrome extension:
 
@@ -126,7 +126,6 @@ To begin using a planning poker Chrome extension:
 Most extensions work immediately without configuration. If your team adopts planning poker regularly, you'll quickly identify which features matter most for your workflow.
 
 The convenience of browser-based planning poker makes it accessible for teams wanting to try estimation games without committing to additional software. As your team grows more comfortable with sprint estimation, you can evaluate whether the extension meets your needs or whether a more full-featured platform would serve better.
-
 
 Related Reading
 

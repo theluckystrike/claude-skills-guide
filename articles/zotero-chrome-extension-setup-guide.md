@@ -17,7 +17,7 @@ tags: [claude-code, claude-skills]
 
 Zotero's Chrome connector transforms your browser into a powerful research assistant, automatically detecting and saving academic papers, web articles, and citations as you browse. For developers and power users, the extension offers granular control over metadata extraction, storage behavior, and integration with local Zotero installations. This guide covers the complete setup process, configuration options, and practical troubleshooting strategies.
 
-Prerequisites and Initial Installation
+## Prerequisites and Initial Installation
 
 Before installing the Chrome connector, ensure you have:
 
@@ -27,11 +27,11 @@ Before installing the Chrome connector, ensure you have:
 
 Install the extension from the Chrome Web Store or download directly from Zotero's website. After installation, the connector appears as a toolbar icon in Chrome.
 
-Configuring the Connector for Your Workflow
+## Configuring the Connector for Your Workflow
 
 The Chrome connector works by detecting metadata on web pages and sending it to your local Zotero desktop application via a local server. Open Zotero, navigate to Edit → Preferences → Connector to access configuration options.
 
-Setting Up Automatic Capture
+## Setting Up Automatic Capture
 
 The default behavior captures bibliographic metadata automatically when the connector detects a recognized item type. For more control:
 
@@ -47,15 +47,15 @@ Key preferences to adjust:
 - Proxy Autodetection: Let Zotero handle proxy configurations
 - Ignored Sites: Add domains where the connector should remain inactive
 
-Manual Item Saving
+## Manual Item Saving
 
 When automatic detection fails, use the toolbar icon to manually save items. Click the Zotero icon in Chrome's toolbar, the icon's badge indicates detected items. For complex pages with multiple references, use the "Save to Zotero" button within specific academic databases.
 
-Advanced Configuration for Developers
+## Advanced Configuration for Developers
 
 If you need programmatic control or custom integrations, the connector exposes several developer-facing options.
 
-Using the Connector API
+## Using the Connector API
 
 The Chrome connector communicates via HTTP to your local Zotero instance. The server runs on `localhost` with a configurable port (default: 23119). You can interact directly:
 
@@ -66,7 +66,7 @@ curl http://localhost:23119/allowed
 Response: {"version":6,"host":"MacOSX","sdk":false}
 ```
 
-Custom Metadata Selectors
+## Custom Metadata Selectors
 
 For sites not automatically recognized, create custom translators or use the connector's manual entry form. The metadata form accepts:
 
@@ -75,7 +75,7 @@ For sites not automatically recognized, create custom translators or use the con
 - Tags and Collections
 - Notes and attachments
 
-Debugging Connector Issues
+## Debugging Connector Issues
 
 When the connector fails to communicate with Zotero:
 
@@ -92,11 +92,11 @@ zoteroConnectorStatus
 
 This returns an object with connection state, detected items, and error messages.
 
-Integration with Reference Management
+## Integration with Reference Management
 
 The Chrome connector becomes powerful when combined with Zotero's ecosystem.
 
-Syncing to Online Library
+## Syncing to Online Library
 
 Enable sync in Zotero to automatically upload items to your online library. Configure sync settings in Edit → Preferences → Sync:
 
@@ -109,7 +109,7 @@ Sync settings structure
 
 Your captured research then becomes accessible across devices through zotero.org.
 
-Connecting with Third-Party Tools
+## Connecting with Third-Party Tools
 
 Many research workflows benefit from integrations:
 
@@ -117,9 +117,9 @@ Many research workflows benefit from integrations:
 - Citation managers: Export to BibTeX, RIS, or CSL JSON
 - Writing tools: Plugins for Obsidian, VS Code, and LaTeX editors
 
-Common Issues and Solutions
+## Common Issues and Solutions
 
-Connector Icon Grayed Out
+## Connector Icon Grayed Out
 
 This indicates the desktop app isn't running or the server failed to start. Launch Zotero and wait 10 seconds. If persistent, reset the connector:
 
@@ -129,7 +129,7 @@ rm -rf ~/Library/Application\ Support/Zotero/connectors/
 Restart Zotero and Chrome
 ```
 
-Metadata Missing or Incorrect
+## Metadata Missing or Incorrect
 
 When captured metadata lacks required fields:
 
@@ -137,11 +137,11 @@ When captured metadata lacks required fields:
 2. Use the "Retrieve Metadata" function to fetch from databases
 3. Install additional translators for specific publishers
 
-Proxy and Network Issues
+## Proxy and Network Issues
 
 Corporate networks may require proxy configuration. Set proxy rules in Zotero preferences or use the connector's manual proxy detection override.
 
-Writing Custom Translators
+## Writing Custom Translators
 
 When Zotero doesn't recognize a site automatically, the correct fix is a custom translator. not a manual workaround. Translators are JavaScript files that tell Zotero how to detect and extract metadata from a specific domain. You write one once; it works every time thereafter.
 
@@ -195,7 +195,7 @@ function doWeb(doc, url) {
 
 Most academic publisher sites use `citation_*` meta tags (a Google Scholar convention), so this pattern covers a wide range of portals. Test by loading your target URL, right-clicking anywhere on the page, and choosing "Save to Zotero". if your translator fires, the icon in Chrome's toolbar will change to match the item type.
 
-Bulk Import and Folder Organization
+## Bulk Import and Folder Organization
 
 Zotero's connector saves one item at a time from the browser, but your library management benefits from systematic organization from the start. Set up collections before you start a research project, then use the connector's collection selector to route items directly on save.
 
@@ -214,7 +214,7 @@ Paste the DOI list into Zotero's "Add Item by Identifier" dialog (the magic wand
 
 For RIS or BibTeX files exported from another manager, use `File → Import` and select the file. Zotero preserves tags and notes from most export formats.
 
-Using the Zotero Web API for Custom Tooling
+## Using the Zotero Web API for Custom Tooling
 
 The Zotero API gives programmatic access to your library without the connector. This is the right path when you want to build a reading pipeline, automate tag assignment, or pull citations into a custom writing environment.
 
@@ -252,7 +252,7 @@ curl -X POST \
 
 Rate limits are 100 requests per 30 seconds for write operations, 5 requests per second for reads. For bulk operations, build in a 200ms delay between calls.
 
-Integrating Zotero with Obsidian and VS Code
+## Integrating Zotero with Obsidian and VS Code
 
 Two integrations that substantially improve research workflows for developers and writers.
 
@@ -270,7 +270,7 @@ VS Code via Citation Picker: Install the "Zotero Citation Picker" extension for 
 
 Both integrations require the Zotero desktop app to be running. If you close Zotero, the local server goes down and both tools show connection errors until you relaunch.
 
-Maintaining Translator Health Over Time
+## Maintaining Translator Health Over Time
 
 Academic publisher sites change their HTML without warning. A translator that worked last month may silently fail after a site redesign. Two practices keep your setup reliable.
 
@@ -280,7 +280,7 @@ Second, when a site stops working, check the Zotero forum before writing a custo
 
 For sites you've written your own translators for, version-control them. Keep a `zotero-translators/` directory in your dotfiles or a private repo. After any Zotero major version update, reload your translators by restarting the app and verifying the target sites still save correctly.
 
-Automation Possibilities
+## Automation Possibilities
 
 For developers interested in extending functionality, several options exist:
 
@@ -291,7 +291,6 @@ For developers interested in extending functionality, several options exist:
 A practical automation worth building: a script that polls your Zotero library for items tagged "to-read", fetches their abstracts via the API, and sends a digest to your email or messaging app on a schedule. This closes the loop between capturing research and actually reading it. the gap where most Zotero libraries become graveyards of saved-but-never-read papers.
 
 This enables automated literature reviews, research notifications, and custom citation generation pipelines.
-
 
 Related Reading
 

@@ -16,7 +16,7 @@ permalink: /claude-skills-vs-langflow-for-building-ai-agents/
 
 [Claude skills and Langflow both help developers build AI agents, but they take fundamentally different approaches](/best-claude-code-skills-to-install-first-2026/) Langflow is a visual, drag-and-drop workflow builder for LLM pipelines. Claude skills are file-based, code-adjacent agent definitions that live in your repository. This comparison helps you choose the right approach for your needs.
 
-What Each Tool Is
+## What Each Tool Is
 
 Claude skills are lightweight, file-based definitions of agent behavior that run within Claude Code. A skill is a markdown file that instructs Claude on how to approach a task. what steps to follow, what tools to use, what output to produce. Skills integrate directly with the development workflow: they are version-controlled, composable, and live alongside your code.
 
@@ -24,7 +24,7 @@ Langflow is an open-source, visual platform for building LLM-powered workflows a
 
 ---
 
-Comparison Table
+## Comparison Table
 
 | Dimension | Claude Skills | Langflow |
 |---|---|---|
@@ -43,7 +43,7 @@ Comparison Table
 
 ---
 
-Claude Skills: Strengths
+## Claude Skills: Strengths
 
 Developer-native. Skills are text files. They work with your existing editor, your Git workflow, your code review process. There is no separate tool to learn, no UI to navigate, no export/import cycle. For developers, this is the lowest-friction way to encode reusable agent behavior.
 
@@ -57,7 +57,7 @@ No infrastructure required. Skills work wherever Claude Code runs. No server to 
 
 ---
 
-Claude Skills: Weaknesses
+## Claude Skills: Weaknesses
 
 Claude-only. Skills only work with Claude models. If you need to run different components of an agent workflow on different LLMs, or want to swap providers, Claude skills do not support this.
 
@@ -69,7 +69,7 @@ Limited to Claude Code's environment. Skills are most useful when you are workin
 
 ---
 
-Langflow: Strengths
+## Langflow: Strengths
 
 Visual development. Langflow's canvas makes it easy to see and understand complex LLM pipelines. Non-developers. product managers, data analysts, business stakeholders. can build and modify flows without writing code. This accessibility is Langflow's biggest advantage.
 
@@ -83,7 +83,7 @@ Observability. Langflow shows you the flow of data through each component visual
 
 ---
 
-Langflow: Weaknesses
+## Langflow: Weaknesses
 
 Version control pain. Flows are stored as JSON. While you can export them to Git, reviewing changes to a large JSON flow definition is difficult. CI/CD for Langflow flows requires extra tooling.
 
@@ -95,7 +95,7 @@ Performance. Langflow adds latency compared to direct API calls. For latency-sen
 
 ---
 
-When to Use Claude Skills
+## When to Use Claude Skills
 
 - You are a developer automating your own coding workflow
 - You want agent definitions that live in your Git repo alongside your code
@@ -103,7 +103,7 @@ When to Use Claude Skills
 - You want zero infrastructure overhead
 - Your team collaborates via Git and wants agent workflows reviewed in PRs
 
-When to Use Langflow
+## When to Use Langflow
 
 - You are building an end-user-facing application powered by an LLM pipeline
 - Your team includes non-developers who need to build or modify agent flows
@@ -121,7 +121,7 @@ They occupy different niches in the AI toolchain, and for teams building complet
 
 ---
 
-Verdict
+## Verdict
 
 Claude skills win on developer experience, version control, and simplicity for coding-environment automation. Langflow wins on visual development, multi-provider flexibility, and building deployable API-backed LLM applications.
 

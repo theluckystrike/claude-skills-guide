@@ -29,11 +29,11 @@ Popular terminal-based presentation tools include:
 - sentaku: Terminal-based presentation tool
 - t презентац: Russian-language terminal presenter
 
-Setting Up Your Terminal Presentation Environment
+## Setting Up Your Terminal Presentation Environment
 
 Before integrating with Claude Code, let's set up a basic terminal presentation environment. We'll use Marp as our primary tool because it offers excellent CLI support and generates professional HTML slides from Markdown.
 
-Installing Marp CLI
+## Installing Marp CLI
 
 Marp CLI can be installed via npm:
 
@@ -47,7 +47,7 @@ Verify the installation:
 marp --version
 ```
 
-Creating Your First Slide Deck
+## Creating Your First Slide Deck
 
 Create a new Markdown file for your presentation:
 
@@ -84,11 +84,11 @@ Save this as `presentation.md` and convert it to slides:
 marp presentation.md -o slides.html
 ```
 
-Integrating Claude Code into Your Workflow
+## Integrating Claude Code into Your Workflow
 
 Now here's where Claude Code becomes invaluable. By creating a custom skill for presentation workflows, you can automate repetitive tasks and get AI assistance for content creation.
 
-Creating a Presentation Skill
+## Creating a Presentation Skill
 
 Create a skill file at `~/.claude/skills/presentation-skill.md`:
 
@@ -116,7 +116,7 @@ When creating presentations:
 4. Apply consistent styling throughout
 ```
 
-Using Claude Code to Generate Slides
+## Using Claude Code to Generate Slides
 
 With your skill loaded, you can now work with Claude Code to create presentations. Here's a practical example:
 
@@ -155,11 +155,11 @@ REST Fundamentals
 <!-- ... more slides ... -->
 ```
 
-Advanced Workflow: Automated Presentation Generation
+## Advanced Workflow: Automated Presentation Generation
 
 For teams that need to generate presentations regularly (weekly reports, status updates), you can create an automated pipeline.
 
-Sample Automation Script
+## Sample Automation Script
 
 ```bash
 #!/bin/bash
@@ -189,11 +189,11 @@ Run it with:
 ./generate-presentation.sh "Kubernetes Basics"
 ```
 
-Enhancing Presentations with Code Examples
+## Enhancing Presentations with Code Examples
 
 One of the biggest advantages of terminal-based presentations is smooth code integration. Here's how to make your code snippets shine:
 
-Syntax Highlighting
+## Syntax Highlighting
 
 Marp supports syntax highlighting out of the box:
 
@@ -208,7 +208,7 @@ Usage
 print(fibonacci(10))  # Output: 55
 ```
 
-Live Code Execution in Demos
+## Live Code Execution in Demos
 
 For live coding demonstrations, consider using ttygif or asciinema to record your terminal and embed the recordings in presentations:
 
@@ -220,30 +220,30 @@ Embed in your slide
 ![](./demo.cast)
 ```
 
-Best Practices for Developer Presentations
+## Best Practices for Developer Presentations
 
-Keep It Clean
+## Keep It Clean
 
 - One idea per slide
 - Use bullet points, not paragraphs
 - Limit to 6 bullets per slide
 - Choose readable fonts (minimum 24pt)
 
-Make It Interactive
+## Make It Interactive
 
 - Include live demos when possible
 - Add speaker notes for complex slides
 - Use animations sparingly
 
-Optimize for Your Audience
+## Optimize for Your Audience
 
 - Developers: Include code examples
 - Executives: Focus on business value
 - Mixed: Balance technical depth with accessibility
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Slides Not Rendering Correctly
+## Slides Not Rendering Correctly
 
 If your Marp slides aren't rendering as expected:
 
@@ -251,7 +251,7 @@ If your Marp slides aren't rendering as expected:
 2. Verify Marp directives are in the correct position (top of file)
 3. Ensure you're using valid theme names
 
-PDF Export Problems
+## PDF Export Problems
 
 For PDF export issues:
 
@@ -260,7 +260,7 @@ Install puppeteer dependencies
 marp --puppeteer-args --no-sandbox --disable-setuid-sandbox
 ```
 
-Image Path Issues
+## Image Path Issues
 
 Use relative paths for images and ensure they're in an accessible location:
 
@@ -268,7 +268,7 @@ Use relative paths for images and ensure they're in an accessible location:
 ![](./images/diagram.png)
 ```
 
-Conclusion
+## Conclusion
 
 Terminal-based presentation workflows, sped up with Claude Code, offer developers a powerful alternative to traditional slide software. By staying in your terminal, using version control for your presentations, and using AI assistance, you can create professional slides faster than ever before.
 

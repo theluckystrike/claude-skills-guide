@@ -18,7 +18,7 @@ permalink: /claude-code-express-middleware-error-handling-patterns-guide/
 
 This guide covers practical Express middleware error handling patterns that [work cleanly with Claude Code workflows](/best-claude-code-skills-to-install-first-2026/). You'll find code examples compatible with Express 4.x and 5.x, plus tips on integrating these patterns into your development process.
 
-The Basics: Express Error Handling Middleware
+## The Basics: Express Error Handling Middleware
 
 Express provides a special middleware type specifically for error handling. Unlike regular middleware that takes three parameters (req, res, next), error handling middleware receives four: err, req, res, next.
 
@@ -41,7 +41,7 @@ app.use((err, req, res, next) => {
 
 This pattern catches errors from anywhere in your middleware chain. Place it last in your middleware stack to ensure it catches all unhandled errors.
 
-Creating Custom Error Classes
+## Creating Custom Error Classes
 
 Rather than throwing generic Error objects, create custom error classes that carry meaningful metadata. This pattern improves debugging and allows granular error handling.
 
@@ -100,7 +100,7 @@ app.get('/users/:id', async (req, res, next) => {
 });
 ```
 
-Async Error Handling Wrapper
+## Async Error Handling Wrapper
 
 Since Express doesn't automatically catch errors from async route handlers, you'll encounter unhandled promise rejections. Create a wrapper function to handle this automatically:
 
@@ -131,7 +131,7 @@ const asyncHandler = (
 };
 ```
 
-Structured Error Response Format
+## Structured Error Response Format
 
 Consistent error responses across your API improve client integration. Define a standard format:
 
@@ -158,7 +158,7 @@ const errorResponse = (err, req, res, next) => {
 module.exports = errorResponse;
 ```
 
-Middleware Chaining with Error-First Callbacks
+## Middleware Chaining with Error-First Callbacks
 
 When integrating multiple middleware pieces, handle errors through proper chaining. This pattern works well with authentication and validation middleware:
 
@@ -194,7 +194,7 @@ app.post('/api/orders',
 );
 ```
 
-Graceful Shutdown and Error Logging
+## Graceful Shutdown and Error Logging
 
 Production applications need proper error logging and graceful shutdown handling:
 
@@ -245,7 +245,7 @@ process.on('uncaughtException', (error) => {
 });
 ```
 
-Integrating with Claude Code Workflows
+## Integrating with Claude Code Workflows
 
 When building Express applications with Claude Code, these error handling patterns integrate naturally with your development workflow. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) helps you write tests for error scenarios before implementing handlers, ensuring your error paths work correctly.
 
@@ -255,7 +255,7 @@ The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/)
 
 If you're building forms that submit to Express backends, combine these patterns with the frontend-design skill to create user-friendly error displays that match your validation logic.
 
-Summary
+## Summary
 
 Effective Express middleware error handling requires several interconnected patterns:
 

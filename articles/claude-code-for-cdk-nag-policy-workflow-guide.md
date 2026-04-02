@@ -13,18 +13,15 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for CDK Nag Policy Workflow Guide
-
 AWS CDK Nag is an essential tool for enforcing security, governance, and best-practice policies on your cloud infrastructure. When combined with Claude Code, it becomes a powerful automation pipeline for catching compliance issues before they reach production. This guide shows you how to integrate Claude Code with CDK Nag workflows to streamline policy enforcement across your infrastructure-as-code projects.
 
-Understanding CDK Nag and Its Role in Infrastructure Security
+## Understanding CDK Nag and Its Role in Infrastructure Security
 
 CDK Nag (Cloud Development Kit Nag) extends the AWS CDK by analyzing your infrastructure stacks against predefined security and compliance rules. It works with well-known frameworks like AWS Foundational Security Best Practices (FSBP), PCI DSS, and HIPAA, catching issues like overly permissive IAM policies, unencrypted storage, or exposed resources early in the development cycle.
 
 Claude Code can dramatically improve your CDK Nag workflow by automating the interpretation of scan results, suggesting fixes, and even generating corrected code. Instead of manually reviewing each warning, you let Claude handle the repetitive analysis while you focus on architectural decisions.
 
-Setting Up Your CDK Nag Workflow with Claude Code
+## Setting Up Your CDK Nag Workflow with Claude Code
 
 Before integrating Claude Code into your workflow, ensure your CDK project has Nag scanning configured. Install the necessary packages:
 
@@ -60,7 +57,7 @@ export class MyStack extends cdk.Stack {
 
 Now when you run `cdk synth`, Nag will flag violations and you can feed those results directly to Claude Code for remediation guidance.
 
-Automating Policy Analysis with Claude Code
+## Automating Policy Analysis with Claude Code
 
 When CDK Nag reports violations, the output can be overwhelming, especially for large stacks with dozens of resources. Claude Code excels at parsing these results and explaining each issue in developer-friendly terms. Here's a practical workflow:
 
@@ -79,7 +76,7 @@ Read /tmp/nag-results.json and explain each security finding in plain language. 
 
 Claude will analyze each violation, explain the security risk, and provide concrete remediation code. This transforms dense JSON output into actionable fixes.
 
-Creating a Custom Claude Skill for CDK Nag
+## Creating a Custom Claude Skill for CDK Nag
 
 For teams working extensively with CDK, creating a dedicated skill for Nag workflows pays dividends. A custom skill can standardize how Claude responds to infrastructure policy issues:
 
@@ -105,7 +102,7 @@ Output format for each finding:
 
 Save this as `~/.claude/skills/cdk-nag-helper/skill.md` and invoke it whenever you need Nag analysis.
 
-Integrating CDK Nag into Your CI/CD Pipeline with Claude
+## Integrating CDK Nag into Your CI/CD Pipeline with Claude
 
 Automated policy enforcement only works when integrated into your continuous deployment process. Combine CDK Nag with Claude Code in your pipeline to ensure no non-compliant infrastructure reaches production:
 
@@ -140,7 +137,7 @@ jobs:
 
 This workflow ensures every deployment passes through policy review, with Claude generating human-readable reports for your team.
 
-Handling Common CDK Nag Patterns
+## Handling Common CDK Nag Patterns
 
 Certain violations recur frequently across CDK projects. Claude Code can recognize these patterns and provide pre-built solutions:
 
@@ -154,7 +151,7 @@ Missing Logging: For resources like API Gateways or load balancers, Claude ensur
 
 When explaining these fixes, Claude contextualizes each change against compliance frameworks, useful for teams needing to demonstrate adherence to auditors.
 
-Best Practices for CDK Nag Workflows
+## Best Practices for CDK Nag Workflows
 
 Working effectively with CDK Nag and Claude requires establishing good habits early:
 
@@ -166,7 +163,7 @@ Version Your Suppressions: Keep suppression files in version control. This preve
 
 Use Suppression Packs: Group suppressions by category (security, operational, compliance) to make reviews cleaner.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with CDK Nag transforms policy compliance from a manual chore into an automated, developer-friendly process. By letting Claude interpret scan results, generate remediation code, and enforce consistent standards, your team catches security issues earlier and spends less time on repetitive fixes. The combination of automated scanning and intelligent analysis ensures your infrastructure stays compliant while maintaining development velocity.
 

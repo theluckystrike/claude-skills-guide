@@ -18,7 +18,7 @@ Managing conversation history and temporary data is essential when working exten
 
 This guide covers practical approaches to automate data retention in your Claude Code workflows, including conversation archiving, temporary file cleanup, and session management strategies.
 
-Understanding Claude Code Data Storage
+## Understanding Claude Code Data Storage
 
 Claude Code stores several types of data that factor into retention planning:
 
@@ -29,7 +29,7 @@ Claude Code stores several types of data that factor into retention planning:
 
 The default behavior keeps conversation history indefinitely unless you configure otherwise. For developers running multiple projects daily, this accumulates several gigabytes within months.
 
-Basic Cleanup Script
+## Basic Cleanup Script
 
 Create a simple retention script to manage conversation history:
 
@@ -53,7 +53,7 @@ Run this weekly via cron:
 
 This approach works for developers who want hands-off cleanup without additional dependencies.
 
-Using the Supermemory Skill for Selective Archiving
+## Using the Supermemory Skill for Selective Archiving
 
 The supermemory skill provides intelligent conversation indexing and retrieval. Combine it with your retention policy to archive important discussions before cleanup:
 
@@ -71,7 +71,7 @@ claude --print "/supermemory archive --project client-api --label compliance"
 
 The workflow ensures valuable information survives the automated cleanup cycle.
 
-Implementing Policy by Project
+## Implementing Policy by Project
 
 Different projects demand different retention periods. A personal experiment might need zero retention, while client work requires 90-day minimum storage.
 
@@ -96,7 +96,7 @@ projects:
 
 Reference this configuration in your cleanup script to apply appropriate policies per project.
 
-PDF Skill Integration for Report Generation
+## PDF Skill Integration for Report Generation
 
 Generate compliance reports using the pdf skill after each retention cycle:
 
@@ -106,7 +106,7 @@ Generate compliance reports using the pdf skill after each retention cycle:
 
 This creates auditable documentation of your retention practices, useful for organizations with regulatory requirements.
 
-Automating with Scheduled Skills
+## Automating with Scheduled Skills
 
 Claude Code supports skill invocation through CLI. Chain skills for complete automation:
 
@@ -130,7 +130,7 @@ echo "Retention workflow completed"
 
 Schedule this script weekly and forget about manual cleanup.
 
-Handling Sensitive Data
+## Handling Sensitive Data
 
 For projects involving sensitive information, add encryption before retention cleanup:
 
@@ -154,7 +154,7 @@ done
 
 Encrypted archives maintain compliance while freeing disk space.
 
-Session-Level Retention Control
+## Session-Level Retention Control
 
 Control retention at the session level using Claude Code flags:
 
@@ -168,7 +168,7 @@ claude
 
 Use `--no-persist` for sensitive one-off tasks where you don't need conversation history afterward.
 
-Monitoring Disk Usage
+## Monitoring Disk Usage
 
 Track storage trends to refine your retention policy:
 
@@ -181,7 +181,7 @@ du -sh ~/.claude/skills
 
 Run this monthly and adjust retention days if storage grows unexpectedly.
 
-Tagging Conversations for Smarter Retention
+## Tagging Conversations for Smarter Retention
 
 Flat time-based deletion works for most cases, but high-value conversations deserve more nuanced treatment. A session where you worked through a complex architecture decision with Claude is not the same as a session where you asked it to rename some variables. Treating them identically wastes the archive value of the former.
 
@@ -213,7 +213,7 @@ done
 
 Creating a `.keep` file inside a project directory is a low-friction way to mark it for indefinite retention. The script costs nothing extra in complexity and saves you from accidentally deleting a conversation you need six months later.
 
-Retention Policies for Team Environments
+## Retention Policies for Team Environments
 
 Individual developer workflows and shared team environments have different retention requirements. On a shared development server where multiple engineers run Claude Code sessions, a single flat policy is not appropriate. one developer's client project should not be deleted because a colleague's experiment triggered a sweep.
 
@@ -236,7 +236,7 @@ Each user owns their subdirectory and configures their own policy. A team-shared
 
 Coordinate cleanup timing so multiple engineers' cron jobs do not run simultaneously and compete for the same resources. Stagger them by user. Alice's cron runs at 2am, Bob's at 3am. This is a small detail that prevents confusing log entries and the occasional file-lock conflict on shared storage.
 
-Integrating Retention with Git Workflows
+## Integrating Retention with Git Workflows
 
 Conversation history often maps to code changes in your repository. A session where you designed a new API endpoint with Claude's help is directly related to the pull request that implemented it. Linking the two gives you a richer audit trail than either provides alone.
 
@@ -265,7 +265,7 @@ done
 
 Running this script before your cleanup pass automatically protects any session that a commit message references. Sessions that never made it into a meaningful commit get cleaned up on schedule. This turns your git history into a natural signal for retention importance without requiring manual tagging.
 
-Verifying Your Retention Policy Works
+## Verifying Your Retention Policy Works
 
 A retention policy that runs silently is difficult to trust. You need a way to verify that cleanup actually happened, that the right files were deleted, and that archives were created correctly before deletion.
 
@@ -303,7 +303,7 @@ Monthly audit cron - dry run only, sends output to log
 
 Reviewing this log quarterly tells you whether your retention window is correctly calibrated. If the dry run shows hundreds of directories that would be deleted, your actual cleanup is running correctly. If it shows almost nothing, either your cleanup is working well or there is a bug. the log history helps you tell which.
 
-Best Practices Summary
+## Best Practices Summary
 
 - Define retention periods per project based on client requirements and personal needs
 - Archive before deleting using supermemory to preserve searchable history
@@ -316,7 +316,7 @@ Best Practices Summary
 - Link sessions to git commits for automatic protection of architecturally significant conversations
 - Stagger cron schedules in shared environments to avoid resource conflicts
 
-Conclusion
+## Conclusion
 
 A data retention policy for Claude Code prevents unbounded storage growth while preserving important conversation context. Start with a simple 30-day cleanup script, then layer in project-specific policies, archiving with supermemory, and compliance reporting with pdf as your needs evolve.
 

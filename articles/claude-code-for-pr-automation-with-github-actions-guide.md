@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for PR Automation with GitHub Actions Guide
 
 Pull request automation is one of the most impactful areas where Claude Code can transform your development workflow. By combining Claude's code understanding capabilities with GitHub Actions, you can create intelligent workflows that automatically review code, run tests, enforce standards, and provide valuable feedback on every PR. This guide walks you through setting up PR automation with Claude Code and GitHub Actions.
 
-Understanding the Integration Architecture
+## Understanding the Integration Architecture
 
 The integration between Claude Code and GitHub Actions works through a client-server model where GitHub Actions triggers Claude to analyze code and return results. You can set this up in two primary ways: using the Claude CLI directly within action runners, or using a dedicated API approach with Anthropic's Claude API.
 
@@ -27,7 +26,7 @@ For most teams, the CLI approach within GitHub Actions provides the simplest set
 
 The more scalable approach uses the Anthropic API directly, which allows you to build more sophisticated automation without installing Claude on every runner. This is ideal for high-volume workflows or when you need fine-grained control over the analysis process.
 
-Setting Up Your First PR Automation Workflow
+## Setting Up Your First PR Automation Workflow
 
 Let's start with a practical example that automatically reviews PRs when they're opened or updated. Create a new workflow file in your repository at `.github/workflows/claude-review.yml`:
 
@@ -65,7 +64,7 @@ jobs:
 
 This basic workflow triggers on every PR open and update, runs Claude against the code, and outputs the review. You'll need to set up the `CLAUDE_API_KEY` secret in your repository settings with an API key from Anthropic.
 
-Automating Code Quality Checks
+## Automating Code Quality Checks
 
 Beyond basic review, you can create more sophisticated checks that validate specific quality standards. Let's add a workflow that checks for common issues and enforces your team's standards:
 
@@ -121,7 +120,7 @@ jobs:
 
 This workflow uses the `tj-actions/changed-files` action to identify what actually changed in the PR, then feeds that focused context to Claude for more relevant analysis.
 
-Creating a Reusable Claude Action
+## Creating a Reusable Claude Action
 
 For teams running multiple Claude-powered workflows, creating a reusable composite action simplifies management. Here's how to package your Claude integration:
 
@@ -129,7 +128,6 @@ For teams running multiple Claude-powered workflows, creating a reusable composi
 .github/actions/claude-review/action.yml
 name: 'Claude Code Review'
 description: 'Run Claude Code analysis on PR changes'
-
 
 ```
 
@@ -156,7 +154,7 @@ jobs:
           task: "Review these changes for security vulnerabilities and code quality issues."
 ```
 
-Advanced: Conditional Workflows Based on Claude Output
+## Advanced: Conditional Workflows Based on Claude Output
 
 You can take automation further by making workflow decisions based on Claude's analysis. For instance, you might require human review for high-severity issues while auto-approving low-risk changes:
 
@@ -204,7 +202,7 @@ jobs:
 
 This intelligent gate automatically approves low-risk PRs while flagging higher-risk ones for manual review, saving time while maintaining safety.
 
-Best Practices for PR Automation
+## Best Practices for PR Automation
 
 When implementing Claude-powered PR automation, consider these practical recommendations to maximize value and minimize friction.
 
@@ -224,7 +222,7 @@ on:
 
 Finally, store Claude outputs as PR comments rather than relying on workflow logs. This keeps the feedback visible to all team members and creates a searchable record of automated reviews.
 
-Conclusion
+## Conclusion
 
 Claude Code combined with GitHub Actions provides a powerful platform for PR automation that can significantly improve your development workflow. Start with simple reviews and gradually add more sophisticated automation as your team gains confidence. The key is focusing on repetitive, objective checks that free your team to focus on higher-value code review while ensuring consistent quality across all pull requests.
 {% endraw %}

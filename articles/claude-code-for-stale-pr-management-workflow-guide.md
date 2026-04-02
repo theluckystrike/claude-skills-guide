@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Stale PR Management Workflow Guide"
 description: "Learn how to use Claude Code CLI to automate and streamline stale pull request management with practical examples and actionable advice."
@@ -14,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Introduction
 
@@ -22,7 +20,7 @@ Stale pull requests are a common problem in software development. When PRs sit f
 
 Claude Code (claude) offers powerful capabilities to automate and streamline your stale PR management workflow. we'll explore practical strategies for using Claude Code to identify, track, and revive stale pull requests, keeping your development pipeline healthy and moving forward.
 
-Understanding Stale PRs and Their Impact
+## Understanding Stale PRs and Their Impact
 
 Before diving into solutions, it's important to understand what makes a PR "stale" and why it matters. A stale PR typically exhibits one or more of these characteristics:
 
@@ -34,7 +32,7 @@ Before diving into solutions, it's important to understand what makes a PR "stal
 
 The impact of stale PRs extends beyond individual repositories. They can block dependent features, create context drift as codebases evolve, and frustrate team members who are waiting for their changes to be merged.
 
-Setting Up Claude Code for PR Management
+## Setting Up Claude Code for PR Management
 
 Ensure Claude Code is properly installed and configured. The CLI tool should be accessible in your terminal and authenticated with your GitHub account. You'll also want to set up the GitHub CLI (gh) for interacting with pull requests.
 
@@ -44,9 +42,9 @@ Once configured, you can invoke Claude in your repository context:
 claude "Help me understand the current state of open pull requests"
 ```
 
-Identifying Stale Pull Requests
+## Identifying Stale Pull Requests
 
-Using Claude to Analyze PR Status
+## Using Claude to Analyze PR Status
 
 Claude Code can help you identify stale PRs by analyzing your repository's open pull requests. Here's a practical approach:
 
@@ -66,7 +64,7 @@ Provide a summary of each potentially stale PR with its URL and the reason it mi
 
 Claude will parse the data and provide you with actionable insights about which PRs need attention.
 
-Creating a Stale PR Detection Script
+## Creating a Stale PR Detection Script
 
 For ongoing management, create a script that combines GitHub CLI with Claude Code:
 
@@ -93,9 +91,9 @@ claude "I found the following potentially stale PRs. For each one, suggest:
 3. Any blockers that need to be addressed"
 ```
 
-Automating Stale PR Follow-ups
+## Automating Stale PR Follow-ups
 
-Generating Follow-up Messages
+## Generating Follow-up Messages
 
 Claude Code can help generate appropriate follow-up messages for stale PRs. This is particularly useful for maintaining professional communication:
 
@@ -109,7 +107,7 @@ claude "Generate a friendly follow-up message for a stale pull request that:
 Make it suitable for internal team use."
 ```
 
-Creating Action Plans for Reviving Stale PRs
+## Creating Action Plans for Reviving Stale PRs
 
 When a PR has gone stale, Claude can help create an action plan to get it moving again:
 
@@ -123,9 +121,9 @@ claude "Analyze this stale pull request (URL) and create an action plan:
 Format this as a checklist that can be assigned to team members."
 ```
 
-Implementing Proactive Stale PR Prevention
+## Implementing Proactive Stale PR Prevention
 
-Setting Up Review Reminders
+## Setting Up Review Reminders
 
 Rather than just dealing with stale PRs after they occur, Claude can help you set up proactive prevention:
 
@@ -140,7 +138,7 @@ claude "Help me create a GitHub Actions workflow that:
 Provide the complete workflow YAML file."
 ```
 
-Creating PR Health Dashboards
+## Creating PR Health Dashboards
 
 Claude can help you generate regular reports on PR health across your repository:
 
@@ -156,9 +154,9 @@ claude "Create a script that generates a weekly PR health report including:
 The output should be suitable for sharing with a development team."
 ```
 
-Integrating with Development Workflows
+## Integrating with Development Workflows
 
-Pre-Merge Checks to Prevent Staleness
+## Pre-Merge Checks to Prevent Staleness
 
 Help prevent PRs from going stale before they even start:
 
@@ -173,7 +171,7 @@ claude "Create a GitHub Actions workflow that runs on PR creation to:
 This should help reduce PRs that become stale due to unclear requirements."
 ```
 
-Using Claude for PR Triage
+## Using Claude for PR Triage
 
 When you're overwhelmed with PRs, Claude can help with triage:
 
@@ -187,7 +185,7 @@ claude "I have 15 open pull requests in my queue. Please help me prioritize them
 Provide a prioritized list with brief rationale for each."
 ```
 
-Best Practices for Stale PR Management
+## Best Practices for Stale PR Management
 
 Based on practical experience, here are key recommendations for managing stale PRs effectively:
 
@@ -201,14 +199,13 @@ Automate Documentation: Use Claude to maintain records of why PRs were closed wi
 
 Celebrate Resolution: When stale PRs are successfully revived, acknowledge the effort. This encourages team members to address them rather than ignoring them.
 
-Conclusion
+## Conclusion
 
 Stale PRs don't have to be a persistent problem in your development workflow. By using Claude Code's capabilities, you can automate detection, streamline follow-ups, and implement preventive measures that keep your pull request pipeline healthy.
 
 Start by implementing one or two of the techniques in this guide, perhaps the stale PR detection script and weekly health reports, and expand from there. The key is consistency and making stale PR management a regular part of your development cadence.
 
 With Claude Code handling the heavy lifting of identification and suggestion, your team can focus on what matters most: writing great code and shipping features.
-
 
 Related Reading
 

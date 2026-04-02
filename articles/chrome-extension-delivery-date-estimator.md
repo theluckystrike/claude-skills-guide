@@ -13,12 +13,11 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 A chrome extension delivery date estimator helps developers predict when their extension will be reviewed and published to the Chrome Web Store. The review process can take anywhere from a few hours to several weeks, depending on complexity and current queue times. Understanding how these estimators work and building one into your development workflow can save significant waiting time and help you plan releases more effectively.
 
 This guide walks through how the Chrome Web Store review process actually works, what factors influence timing, and how to build a practical estimator you can use in your own release pipeline. The code examples are complete and ready to adapt.
 
-How Chrome Web Store Review Times Work
+## How Chrome Web Store Review Times Work
 
 The Chrome Web Store review team processes submissions based on several factors. New extensions with simple functionality may receive approval within 24-48 hours. Extensions requesting sensitive permissions, accessing user data, or containing complex code patterns can take 7-14 days or longer. During peak submission periods. often after major Chrome releases or holiday seasons. queue times increase substantially.
 
@@ -26,7 +25,7 @@ Google does not publish real-time queue metrics. What developers have instead is
 
 It is worth being clear about what an estimator can and cannot do. It cannot query Google's internal queue. It can model the average case based on your extension's characteristics and adjust for known variables. Think of it like an airline's on-time estimate: statistically grounded, but not a guarantee.
 
-Review States to Understand
+## Review States to Understand
 
 A submission passes through several states before reaching users:
 
@@ -37,7 +36,7 @@ A submission passes through several states before reaching users:
 
 An estimator primarily targets the transition from "pending" to "approved." Rejections reset the clock and should be treated as a separate submission in your model.
 
-Building a Simple Delivery Date Estimator
+## Building a Simple Delivery Date Estimator
 
 You can create a basic estimator using JavaScript and historical review time data. Here is a practical example you can integrate into a Node.js script, a browser page, or a VS Code extension sidebar:
 
@@ -97,7 +96,7 @@ console.log(`Estimated delivery: ${estimatedDate.toISOString()}`);
 
 This estimator provides a starting point. You can enhance it by tracking actual review times from your submissions and adjusting the multipliers accordingly.
 
-Interpreting Permission Weights
+## Interpreting Permission Weights
 
 The permission weights in the example above are not arbitrary. They reflect the level of scrutiny each permission triggers during manual review:
 
@@ -113,7 +112,7 @@ The permission weights in the example above are not arbitrary. They reflect the 
 
 Extensions requesting `webRequest` alongside `cookies` and `identity` are often delayed 2-3 weeks because the combination maps to common malware patterns. If your extension genuinely needs those permissions, your description and privacy policy need to be airtight, and providing a screencast demonstrating legitimate use can shorten review time.
 
-Integrating Queue Status Checks
+## Integrating Queue Status Checks
 
 A more sophisticated estimator incorporates real-time queue information. The Chrome Web Store does not provide a public API for queue status, but you can monitor review times through community resources and developer forums.
 
@@ -138,7 +137,7 @@ async function fetchAverageReviewTimes() {
 
 Building this data into your estimator improves accuracy over time as you collect more submission data. Even a simple spreadsheet with submission timestamps and approval timestamps, maintained across a handful of your own extensions, will let you calibrate the base times more accurately than generic community data.
 
-Building a Personal Calibration System
+## Building a Personal Calibration System
 
 The most accurate estimator is one trained on your own submissions. Here is a lightweight logging approach:
 
@@ -193,7 +192,7 @@ class SubmissionLogger {
 
 After five or six submissions, `computeCalibration` gives you a personalized baseline that replaces the generic community estimates.
 
-Factors That Affect Delivery Dates
+## Factors That Affect Delivery Dates
 
 Several key factors influence how quickly your extension gets reviewed:
 
@@ -209,7 +208,7 @@ Accurate Descriptions: Your extension's description, screenshots, and privacy po
 
 Remote Code: Manifest V3 prohibits remotely hosted code. If your extension fetched scripts from a CDN under MV2, you must bundle them in MV3. Any submission that violates this policy will be rejected during the automated pre-review phase, resetting your queue position.
 
-Best Practices for Faster Reviews
+## Best Practices for Faster Reviews
 
 Beyond using an estimator, follow these practices to minimize review times:
 
@@ -223,7 +222,7 @@ Avoid keyword stuffing in your name or description. This is flagged during autom
 
 Monitor your developer dashboard. If your extension enters the "Under Review" state and stays there for more than 10 days without a decision, you can submit a developer support request. This is not guaranteed to speed things up, but it creates a paper trail and occasionally surfaces issues the reviewer has not communicated.
 
-Practical Use Cases
+## Practical Use Cases
 
 A delivery date estimator proves valuable in several scenarios:
 
@@ -261,14 +260,13 @@ console.log(`::notice::Estimated Chrome Web Store delivery: ${deliveryDate.toDat
 // GitHub Actions will surface this as an annotation on the workflow run
 ```
 
-Conclusion
+## Conclusion
 
 A chrome extension delivery date estimator is a valuable tool for any developer working with the Chrome Web Store. By understanding the review process, tracking historical data, and factoring in your extension's specific characteristics, you can create accurate predictions that improve planning and reduce uncertainty.
 
 The key is starting simple and refining your estimator as you gather more submission data. Every extension you publish provides new data points to improve accuracy. The `SubmissionLogger` pattern above is low-effort to maintain and gives you personalized calibration within a handful of submissions.
 
 For most teams, the practical impact is not the hours saved on the estimate itself. it is the reduction in last-minute scrambles when a stakeholder asks why the extension is not live yet. Having a calibrated prediction you can point to, and a clear explanation of what drives review time, turns an opaque process into a manageable one.
-
 
 Related Reading
 

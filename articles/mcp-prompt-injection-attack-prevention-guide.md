@@ -13,10 +13,6 @@ permalink: /mcp-prompt-injection-attack-prevention-guide/
 ---
 {% raw %}
 
-
-
-MCP Prompt Injection Attack Prevention Guide
-
 [The Model Context Protocol (MCP) enables powerful integrations between Claude and external services](/building-your-first-mcp-tool-integration-guide-2026/), but these connections create potential attack surfaces for prompt injection. Understanding how to prevent these attacks is essential for developers building secure MCP-powered applications.
 
 What Is Prompt Injection in MCP?
@@ -36,7 +32,7 @@ def get_user_bio(user_id: str) -> str:
 
 If an attacker stores a crafted bio containing injection instructions, subsequent AI processing could execute unintended commands.
 
-Defense Strategies
+## Defense Strategies
 
 1. Input Sanitization and Validation
 
@@ -173,7 +169,7 @@ The combination of strict types (Pydantic validation) and parameterized queries 
 
 This approach also has a secondary benefit: it makes your tool interface self-documenting. Anyone reading the schema knows exactly what the tool accepts, which reduces the chance of accidentally passing unsanitized data.
 
-Indirect Prompt Injection: The Harder Problem
+## Indirect Prompt Injection: The Harder Problem
 
 Direct injection, where an attacker supplies malicious input directly to your MCP tool, is the easier case to defend against. The more dangerous scenario is indirect injection, where content retrieved from an external source (a webpage, a document, a database record) contains instructions that the AI model processes and acts on.
 
@@ -217,7 +213,7 @@ def build_summary_prompt(ticket_body: str) -> str:
 
 Restricting the output structure reduces the attack's potential impact even when sanitization misses a novel injection pattern.
 
-Testing Your Defenses
+## Testing Your Defenses
 
 Defenses you have not tested are defenses you do not actually have. Treat injection testing the same way you treat unit testing, systematic, automated, and run on every deploy.
 
@@ -248,7 +244,7 @@ def test_injection_resistance(tool_fn, safe_input: dict, payload_field: str):
 
 Run this as part of your CI pipeline. Any payload that produces unexpected output in the result is a signal to investigate, either your sanitization needs updating, or your system prompt framing needs to be stronger.
 
-Real-World Example
+## Real-World Example
 
 Imagine a documentation generator using the `pdf` skill combined with MCP data retrieval:
 
@@ -271,7 +267,7 @@ def generate_user_report(user_id: str) -> str:
 
 This prevents a malicious bio containing injection instructions from affecting the PDF generation process.
 
-Monitoring in Production
+## Monitoring in Production
 
 Detection is the feedback loop that makes your defenses adaptive. Sanitization rules written today may not cover novel injection patterns that appear six months from now. Logging suspicious patterns gives you the data to update your defenses proactively rather than reactively.
 
@@ -293,7 +289,7 @@ def log_sanitization_event(source: str, original: str, sanitized: str):
 
 Set up alerts for sanitization event rate spikes. A sudden increase in filtered content from a specific source is often the first signal of an active attack campaign. Reviewing those hashed events (and the raw content in a secure environment) lets you identify new patterns and update your sanitization rules before they succeed.
 
-Defense Checklist
+## Defense Checklist
 
 - [ ] Sanitize all external data before prompt inclusion
 - [ ] Use clear delimiters between trusted and untrusted content
@@ -307,7 +303,7 @@ Defense Checklist
 - [ ] Keep skill configurations updated
 - [ ] Review the `frontend-design` and `canvas-design` skills for secure UI patterns when building MCP dashboards
 
-Conclusion
+## Conclusion
 
 Prompt injection prevention requires defense in depth. No single technique eliminates the attack surface entirely, sanitization misses novel patterns, output constraints can be bypassed, and indirect injection through retrieved content presents challenges that sanitization alone cannot solve. The goal is layered resistance: sanitization reduces attack success rate, output constraints limit damage when attacks partially succeed, logging and monitoring enable rapid response when new patterns emerge, and regular testing validates that all of these layers actually work. By combining input sanitization, structured data boundaries, capability isolation, parameterized tool design, and active monitoring, you can build MCP integrations that remain secure against injection attacks. The key is treating all external data as potentially malicious until proven otherwise.
 

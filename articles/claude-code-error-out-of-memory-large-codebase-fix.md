@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Error Out of Memory Large Codebase Fix
-
 Working with large codebases in Claude Code can trigger memory exhaustion errors that halt your workflow. When your project grows beyond a certain size, you may encounter the dreaded out-of-memory (OOM) error. This guide provides practical solutions to fix and prevent these issues, covering everything from quick environment tweaks to long-term architectural strategies.
 
-Understanding the OOM Error
+## Understanding the OOM Error
 
 When Claude Code attempts to analyze or process files in a large repository, it loads file contents into memory. Projects with thousands of files, deep directory structures, or massive individual files can exceed available RAM. The error typically appears as:
 
@@ -38,7 +35,7 @@ It is worth distinguishing between two different failure modes you might encount
 
 Understanding which variant you are hitting will save you time. If you see the crash consistently on the same file or command, it is likely a single large file. If the crash happens gradually as you work through a session, it is cumulative heap exhaustion.
 
-Quick Fix: Increase Node.js Memory Limit
+## Quick Fix: Increase Node.js Memory Limit
 
 The fastest solution is to allocate more memory to the Node.js process running Claude Code. You can do this by setting the `NODE_OPTIONS` environment variable before launching Claude Code.
 
@@ -70,11 +67,11 @@ export NODE_OPTIONS="--max-old-space-size=4096 --expose-gc"
 
 This gives Node.js permission to release memory more aggressively between operations.
 
-Optimizing Context Window Usage
+## Optimizing Context Window Usage
 
 Large codebases strain Claude Code's context window. The model processes your entire project context, but you can control how much gets loaded at once.
 
-Selective File Watching
+## Selective File Watching
 
 Configure Claude Code to ignore unnecessary directories. Create a `.claudeignore` file in your project root:
 
@@ -107,7 +104,7 @@ IDE files
 
 This reduces the files Claude Code monitors and loads into memory. On a typical Node.js monorepo, excluding `node_modules` alone can eliminate hundreds of thousands of files from consideration. The `.claudeignore` file follows the same syntax as `.gitignore`, so you can use negation patterns if you need to re-include specific subdirectories.
 
-Know What Claude Code Actually Reads
+## Know What Claude Code Actually Reads
 
 Claude Code does not load your entire codebase into memory all at once. It reads files on demand as you work. However, certain operations. like asking "find all usages of this function" or "refactor this pattern everywhere". trigger broad file scans. Being deliberate about when you issue those broad commands helps you stay under the memory limit.
 
@@ -123,7 +120,7 @@ Then give Claude only those files
 
 This pattern. pre-filter with grep, then direct Claude to specific files. dramatically reduces memory consumption on operations that would otherwise scan thousands of files.
 
-Project-Specific Configuration
+## Project-Specific Configuration
 
 Create a `claude.json` configuration file in your project root to customize behavior for your codebase:
 
@@ -149,11 +146,11 @@ The `maxFileSize` field (in bytes) prevents Claude from loading individual files
 
 The `maxFileCount` field is a session-level cap on how many files Claude processes in a single context load. On monorepos with 50,000+ files this becomes critical: even if each file is small, holding 50,000 open file handles and their content metadata consumes significant memory.
 
-Working with Specific Language Codebases
+## Working with Specific Language Codebases
 
 Different languages and frameworks have unique memory pressure patterns.
 
-Node.js and JavaScript Projects
+## Node.js and JavaScript Projects
 
 JavaScript projects tend to have the deepest `node_modules` trees. Beyond excluding that directory, also exclude test snapshots and coverage reports:
 
@@ -175,7 +172,7 @@ When you need to work on a specific package within a monorepo, use the focus com
 
 This tells Claude Code to prioritize the `packages/auth` directory, reducing memory load from unrelated packages.
 
-Python Projects
+## Python Projects
 
 Python codebases accumulate virtual environment directories and bytecode caches that consume memory without providing any signal:
 
@@ -196,7 +193,7 @@ htmlcov/
 
 Compiled extension modules (`.so`, `.pyd`) are another common memory sink in scientific Python projects. If you are working on a package that includes Cython extensions or compiled C bindings, add those binary extensions to your ignore list.
 
-Java and JVM Projects
+## Java and JVM Projects
 
 Java projects carry particularly large dependency trees. Maven and Gradle each cache artifacts locally:
 
@@ -212,7 +209,7 @@ out/
 
 For Gradle projects specifically, the `.gradle` directory in your home folder is managed at the system level and does not need to be in `.claudeignore`, but the local `build/` and `.gradle/` directories in your project should always be excluded.
 
-Monorepos
+## Monorepos
 
 Monorepos present the most challenging scenario because they combine all of the above. The most effective strategy is to treat each package as its own working context. Rather than opening the monorepo root, work from the package directory directly, then switch to another package when needed.
 
@@ -225,7 +222,7 @@ then help me understand how the discount logic flows between them.
 
 This explicit file loading costs far less memory than asking Claude to "look at the whole repo and find the discount logic."
 
-Monitoring Memory Usage in Real Time
+## Monitoring Memory Usage in Real Time
 
 Track memory consumption to identify when problems occur before the crash hits:
 
@@ -251,7 +248,7 @@ If memory consistently approaches your limit, increase the allocation or restruc
 
 A useful heuristic: if you see RSS climbing steadily over a session without stabilizing, you are hitting a memory growth pattern rather than a one-time spike. In that case, periodic session restarts are more effective than just raising the limit.
 
-Comparison: Memory Strategies by Codebase Size
+## Comparison: Memory Strategies by Codebase Size
 
 | Codebase Size | Files | Recommended `max-old-space-size` | Key Strategies |
 |---|---|---|---|
@@ -261,7 +258,7 @@ Comparison: Memory Strategies by Codebase Size
 | Very large | 50,000+ | 8192–16384 MB | Pre-filter with grep, explicit file loading |
 | Monorepo | Varies | 8192 MB per working package | Package-level sessions, shared index externally |
 
-Best Practices for Large Codebase Workflows
+## Best Practices for Large Codebase Workflows
 
 Break work into focused sessions. Instead of asking Claude to refactor your entire codebase, work on specific modules. A command like "refactor the auth module" is far safer than "refactor the entire project."
 
@@ -281,7 +278,7 @@ Run: npm run test 2>&1 | grep -E "FAIL|ERROR" | head -50
 Then: claude "here are the failing tests, help me fix them: [paste]"
 ```
 
-When Memory Limits Are Not Enough
+## When Memory Limits Are Not Enough
 
 If you consistently hit memory limits despite all optimizations, the problem may be architectural.
 
@@ -293,7 +290,7 @@ Consider a dedicated developer machine or remote environment. If you are routine
 
 Work incrementally with the `tdd` skill. The `tdd` skill keeps focus on one test and one implementation file at a time, which is the minimum viable memory footprint for making progress on any change. When a codebase is too large to work on holistically, test-driven development forces the incremental scope that keeps memory usage predictable.
 
-Summary
+## Summary
 
 Claude Code out-of-memory errors with large codebases are solvable at every scale. Start with the quick fix of increasing Node.js memory via `NODE_OPTIONS`, then optimize your project configuration with `.claudeignore` and `claude.json`. Pre-filter with grep before asking Claude to scan broadly, work in package-scoped sessions on monorepos, and restart sessions periodically during long working days. When the codebase genuinely outgrows single-session processing, use the `tdd` skill to work incrementally and rely on external tools like LSP servers and ripgrep for navigation. These strategies keep your workflow productive regardless of codebase size.
 

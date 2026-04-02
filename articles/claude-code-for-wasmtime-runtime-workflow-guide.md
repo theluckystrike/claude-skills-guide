@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Wasmtime Runtime Workflow Guide"
 description: "Learn how to use Claude Code effectively with Wasmtime for WebAssembly runtime development. This guide covers workflow patterns, code examples, and."
@@ -14,10 +13,7 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
-
-Claude Code for Wasmtime Runtime Workflow Guide
 
 WebAssembly runtimes have become essential for modern application development, offering sandboxed execution with near-native performance. Wasmtime, the fast, standards-compliant WebAssembly runtime by Bytecode Alliance, stands out as a popular choice for embedding WASM in production applications. This guide shows you how to integrate Claude Code into your Wasmtime development workflow for maximum productivity.
 
@@ -31,11 +27,11 @@ When you use Claude Code for Wasmtime development, you get intelligent assistanc
 - Debugging WASM module loading and execution issues
 - Optimizing WASM module size and performance
 
-Setting Up Your Wasmtime Development Environment
+## Setting Up Your Wasmtime Development Environment
 
 Before integrating Claude Code, ensure your development environment is properly configured. You'll need Rust installed, along with the Wasmtime crates.
 
-Project Initialization
+## Project Initialization
 
 Start by creating a new Rust project for your Wasmtime host:
 
@@ -61,7 +57,7 @@ codegen-units = 1
 
 When you share this project structure with Claude Code, it will understand your dependency choices and provide contextually relevant suggestions for WASM module integration.
 
-Creating a .claude.md File
+## Creating a .claude.md File
 
 Create a `CLAUDE.md` file in your project root to guide Claude Code's interactions:
 
@@ -82,9 +78,9 @@ Key Patterns
 
 This context helps Claude Code provide accurate code suggestions that align with your Wasmtime architecture.
 
-Core Workflow Patterns
+## Core Workflow Patterns
 
-Loading and Executing WASM Modules
+## Loading and Executing WASM Modules
 
 The fundamental Wasmtime workflow involves creating a store, configuring the engine, loading a module, and instantiating it. Here's a practical pattern:
 
@@ -119,7 +115,7 @@ fn load_and_run_wasm(module_bytes: &[u8], wasm_func: &str) -> Result<(), Box<dyn
 
 Claude Code can help you extend this pattern with error handling, resource limits, and async execution when needed.
 
-Configuring Runtime Limits
+## Configuring Runtime Limits
 
 Production Wasmtime applications require proper resource configuration to prevent runaway WASM code:
 
@@ -148,7 +144,7 @@ fn create_configured_engine() -> Engine {
 
 Ask Claude Code to add benchmarking and monitoring to this configuration for production deployments.
 
-Working with WASM Components
+## Working with WASM Components
 
 Modern Wasmtime supports WASI Preview 2 (the component model). Here's how to integrate:
 
@@ -172,11 +168,11 @@ fn load_wasm_component(engine: &Engine, component_path: &str) -> Result<(), anyh
 }
 ```
 
-Debugging Common Wasmtime Issues
+## Debugging Common Wasmtime Issues
 
 Claude Code excels at helping you diagnose and fix Wasmtime-specific problems.
 
-Module Loading Errors
+## Module Loading Errors
 
 When you encounter "module was not compatible" errors:
 
@@ -203,7 +199,7 @@ fn debug_module_info(module: &Module) {
 }
 ```
 
-Runtime Trap Handling
+## Runtime Trap Handling
 
 WASM code can trap for various reasons. Implement proper error handling:
 
@@ -226,9 +222,9 @@ fn execute_with_trap_handling(store: &mut Store<WasiCtx>) -> Result<(), anyhow::
 }
 ```
 
-Optimizing Your Wasmtime Workflow
+## Optimizing Your Wasmtime Workflow
 
-Batch Compilation
+## Batch Compilation
 
 For applications that load many WASM modules, enable parallel compilation:
 
@@ -238,7 +234,7 @@ config.parallel_compilation(true);
 config.cranelift_nan_canonicalization(true);
 ```
 
-Module Caching
+## Module Caching
 
 Wasmtime supports module caching to avoid recompilation:
 
@@ -254,14 +250,14 @@ Configure the cache in your `~/.wasmtime/config.toml`:
 enabled = true
 ```
 
-Best Practices for Claude Code + Wasmtime Development
+## Best Practices for Claude Code + Wasmtime Development
 
 1. Provide context: Always share your Wasmtime version and WASM target when asking for help
 2. Share error messages: Include the full error output from Wasmtime for accurate diagnosis
 3. Specify the WASM target: Tell Claude Code if you're targeting `wasm32-wasi` or `wasm32-unknown-unknown`
 4. Include your dependencies: Share relevant crate versions in your questions
 
-Conclusion
+## Conclusion
 
 Claude Code significantly accelerates Wasmtime development by understanding the intricacies of WebAssembly runtimes, Rust's type system, and the WASI specifications. By providing proper context through CLAUDE.md files and sharing relevant error messages, you can use Claude Code's capabilities to build solid, production-ready Wasmtime applications faster.
 

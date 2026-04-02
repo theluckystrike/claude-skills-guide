@@ -15,11 +15,9 @@ score: 8
 
 {% raw %}
 
-Claude Code Keeps Breaking Imports When Refactoring
-
 If you've been working with Claude Code for any substantial amount of refactoring work, you've likely encountered a frustrating pattern: imports that worked perfectly before suddenly break after a refactoring session. This common issue happens because Claude Code, despite its impressive code understanding capabilities, doesn't always track all the subtle changes happening across your codebase during large-scale refactoring operations. The good news is that with the right strategies, skills, and workflows, you can minimize or even eliminate these import-related headaches entirely.
 
-Understanding Why Import Breakage Happens During Refactoring
+## Understanding Why Import Breakage Happens During Refactoring
 
 Before diving into solutions, it helps to understand the root causes of import breakage in Claude Code workflows. When you ask Claude Code to perform refactoring tasks, whether renaming files, moving code between modules, or restructuring directories, it operates based on the context available during the session. Several factors contribute to import failures.
 
@@ -27,7 +25,7 @@ First, Claude Code may not have complete visibility into all files that import f
 
 The result is a familiar scenario: you run the refactoring, everything looks correct in the edited files, but then your application fails to build or tests fail due to import errors. Understanding these mechanics helps you design better workflows and use Claude Code's features more effectively.
 
-Using Claude Skills to Prevent Import Breakage
+## Using Claude Skills to Prevent Import Breakage
 
 One of the most powerful features of Claude Code is the ability to create and use skills that enforce specific behaviors during refactoring operations. A well-designed import-preservation skill can dramatically reduce breakage by establishing clear rules about how imports should be handled.
 
@@ -52,7 +50,7 @@ You MUST:
 
 This proactive approach transforms import management from a reactive fix-it process into an integral part of the refactoring workflow.
 
-Configuring Claude Code for Better Import Handling
+## Configuring Claude Code for Better Import Handling
 
 Beyond skills, you can configure Claude Code's behavior through your project's configuration files. The claude.md file in your project root serves as a persistent instruction set that Claude Code loads at the start of each session.
 
@@ -79,7 +77,7 @@ Barrel export files
 
 This configuration gives Claude Code persistent knowledge about your project structure that survives individual sessions.
 
-Implementing a Pre-Refactoring Import Audit
+## Implementing a Pre-Refactoring Import Audit
 
 A highly effective strategy is to establish a pre-refactoring audit workflow. Before any significant refactoring operation, use Claude Code to map out all import relationships in the affected code areas. This creates a complete picture of what needs to be updated.
 
@@ -87,7 +85,7 @@ You can prompt Claude Code to perform this audit by asking it to find all files 
 
 The audit should also check for indirect dependencies, imports that come through barrel files or re-export chains. These indirect relationships often cause the most frustrating bugs because they're harder to track than direct imports.
 
-Post-Refactoring Verification Strategies
+## Post-Refactoring Verification Strategies
 
 After completing any refactoring that might affect imports, implement a verification step as part of your workflow. This doesn't just mean running your build; it means specifically checking for import-related errors.
 
@@ -95,7 +93,7 @@ Use Claude Code to run targeted commands that specifically validate import resol
 
 Make this verification explicit in your refactoring workflow. After Claude Code completes the refactoring, ask it to run these verification commands and report any import-related errors before considering the task complete.
 
-Leveraging Claude Code's Built-in Features
+## Leveraging Claude Code's Built-in Features
 
 Claude Code includes several features that can help with import management during refactoring. The read_file tool provides complete file content, which helps Claude Code understand import relationships. The edit_file tool can make precise changes to import statements without affecting surrounding code.
 
@@ -103,7 +101,7 @@ When working with Claude Code, break large refactoring operations into smaller, 
 
 You can also use Claude Code's ability to run commands to your advantage. Ask it to search for import patterns across your codebase using grep or similar tools, which helps identify all locations that need updating before making changes.
 
-Creating a Refactoring Verification Skill
+## Creating a Refactoring Verification Skill
 
 Consider creating a dedicated skill that handles the entire refactoring-to-verification workflow. This skill should encapsulate best practices for import-safe refactoring and provide a consistent process that team members can follow.
 

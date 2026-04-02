@@ -17,7 +17,7 @@ tags: [claude-code, claude-skills]
 
 Claude Code represents a paradigm shift in how developers interact with AI assistants through the command line. Unlike traditional CLI tools that execute predetermined commands, a Claude Code powered CLI tool uses intelligent agentic capabilities to understand context, execute complex multi-step tasks, and adapt to user needs dynamically. This article explores the product architecture required to build an effective CLI tool powered by Claude Code, focusing on core components, skill integration, and practical implementation strategies.
 
-Understanding Claude Code's Core Capabilities
+## Understanding Claude Code's Core Capabilities
 
 Before diving into architecture, it's essential to understand what Claude Code brings to the table. Claude Code is an AI-first CLI tool that combines terminal access with powerful agentic capabilities. It can execute shell commands, read and write files, and most importantly, use specialized skills that extend its functionality.
 
@@ -31,7 +31,7 @@ Skill System: The skill system in Claude Code allows developers to define reusab
 
 Function Calling: Claude Code excels at function calling, enabling the CLI tool to invoke external APIs and services based on natural language requests from users.
 
-Architectural Components of a Claude Code Powered CLI
+## Architectural Components of a Claude Code Powered CLI
 
 A well-designed CLI tool powered by Claude Code consists of several architectural layers that work together to deliver a smooth user experience.
 
@@ -99,11 +99,11 @@ Session Management: Track ongoing operations and enable resumption after interru
 
 Cache Management: Implement intelligent caching to reduce redundant API calls and improve performance.
 
-Designing Skills for Maximum Reusability
+## Designing Skills for Maximum Reusability
 
 The skill system is the heart of a Claude Code powered CLI tool. Well-designed skills are modular, composable, and focused on specific domains.
 
-Skill Composition Patterns
+## Skill Composition Patterns
 
 Skills should follow the single responsibility principle, focusing on one domain while enabling composition with other skills:
 
@@ -124,7 +124,7 @@ skills:
 
 This composition allows users to use individual skills or combine them for complex workflows.
 
-Context Passing Between Skills
+## Context Passing Between Skills
 
 When skills work together, they need to share context effectively. Design skills to accept input parameters and produce output that subsequent skills can consume:
 
@@ -146,11 +146,11 @@ class DeploymentContext:
         }
 ```
 
-Practical Example: Building a Developer Productivity CLI
+## Practical Example: Building a Developer Productivity CLI
 
 Let's examine a practical example of a developer productivity CLI powered by Claude Code. This CLI helps developers manage their entire development workflow.
 
-Core Features
+## Core Features
 
 1. Project Scaffolding: Create new projects from templates with appropriate configurations
 2. Environment Setup: Automatically configure development, staging, and production environments
@@ -158,7 +158,7 @@ Core Features
 4. Testing Coordination: Manage test suites across unit, integration, and e2e tests
 5. Deployment Automation: Streamline deployment to various platforms
 
-Implementation Architecture
+## Implementation Architecture
 
 ```bash
 CLI command structure
@@ -175,7 +175,7 @@ Each command invokes the appropriate skill, which uses Claude Code's agentic cap
 3. Read and modify files as needed
 4. Provide meaningful feedback and error handling
 
-Best Practices for CLI Tool Architecture
+## Best Practices for CLI Tool Architecture
 
 When building a Claude Code powered CLI tool, consider these architectural best practices:
 
@@ -189,7 +189,7 @@ Maintain Audit Trails: For production tools, maintain detailed logs of all opera
 
 Separate Concerns: Keep your command parsing, skill execution, and external integrations in separate modules for maintainability.
 
-Conclusion
+## Conclusion
 
 Building a CLI tool powered by Claude Code requires thoughtful architecture that uses its unique capabilities while maintaining the reliability users expect from command-line tools. By understanding Claude Code's core features, designing modular skills, implementing proper integration layers, and following best practices, you can create powerful CLI tools that significantly enhance developer productivity.
 

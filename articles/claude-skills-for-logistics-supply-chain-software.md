@@ -16,7 +16,7 @@ Logistics and supply chain operations involve complex orchestration of vendors, 
 
 This guide covers practical implementations of Claude skills for logistics supply chain software, with code examples you can adapt immediately.
 
-Inventory Management with xlsx and csv Skills
+## Inventory Management with xlsx and csv Skills
 
 Inventory tracking forms the backbone of any logistics system. The xlsx skill enables automated inventory updates across spreadsheets, maintaining SKU databases, stock levels, and reorder points without manual intervention.
 
@@ -48,7 +48,7 @@ flag discrepancies where difference > 5 units
 generate report in /reports/inventory-variance-{date}.xlsx
 ```
 
-Shipping Documentation with pdf Skill
+## Shipping Documentation with pdf Skill
 
 Generating Bills of Lading (BOL), packing lists, and customs documentation consumes significant staff time. The pdf skill automates creation and population of these forms from shipment data.
 
@@ -84,7 +84,7 @@ actions:
   - trigger webhook to update order status in ERP
 ```
 
-Route Optimization with Claude Code
+## Route Optimization with Claude Code
 
 Transportation routing combines multiple variables: delivery windows, vehicle capacity, fuel costs, traffic patterns, and driver schedules. While Claude skills don't perform the mathematical optimization directly, they orchestrate the data pipeline and integrate with routing engines.
 
@@ -103,7 +103,7 @@ Claude skill orchestration:
 4. Generate PDF route sheets for each driver
 ```
 
-Warehouse Operations and Picking Automation
+## Warehouse Operations and Picking Automation
 
 Warehouse management systems (WMS) require constant synchronization between physical movements and digital records. Claude skills automate the generation of pick lists, bin transfers, and cycle count reports.
 
@@ -123,7 +123,7 @@ steps:
     - Update inventory records in ERP
 ```
 
-Integration with Transportation Management Systems
+## Integration with Transportation Management Systems
 
 Modern logistics stacks connect multiple systems: ERPs, WMS, TMS (Transportation Management Systems), carrier portals, and customer-facing tracking. [Claude skills serve as the integration layer](/can-claude-code-skills-call-external-apis-automatically/), translating between formats and triggering downstream actions.
 
@@ -141,7 +141,7 @@ def process_carrier_update(payload):
     # /slack Send notification to #logistics-ops if status == "exception"
 ```
 
-Real-Time Alerts and Exception Handling
+## Real-Time Alerts and Exception Handling
 
 Supply chain disruptions require immediate attention. Claude skills monitor systems and generate alerts when exceptions occur.
 
@@ -159,7 +159,7 @@ actions:
     - Email to logistics-manager@company.com
 ```
 
-Best Practices for Logistics Skill Development
+## Best Practices for Logistics Skill Development
 
 When building Claude skills for logistics applications, consider these patterns:
 
@@ -188,7 +188,6 @@ def log_shipment_event(event_type, shipment_id, data):
 ```
 
 Claude skills transform logistics operations from reactive firefighting into proactive management. By automating document generation, inventory reconciliation, and exception monitoring, your team focuses on optimization rather than data entry. Start with one workflow, shipment documentation or inventory counting, and expand as you prove the value.
-
 
 Related Reading
 

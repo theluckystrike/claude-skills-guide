@@ -20,7 +20,7 @@ Next.js performance optimization requires a systematic approach covering bundle 
 
 Getting a Next.js application to feel fast involves multiple distinct layers. A page can have a perfect Lighthouse score in isolation and still feel sluggish in production if caching is misconfigured, if too much JavaScript ships to the browser, or if images load without proper prioritization. This guide walks through each layer methodically, with the kind of code-level detail that lets you take action immediately.
 
-Understanding the Performance Layers
+## Understanding the Performance Layers
 
 Before diving into specific techniques, it helps to have a mental model of where performance is lost. Next.js applications typically suffer in one or more of these areas:
 
@@ -34,7 +34,7 @@ Before diving into specific techniques, it helps to have a mental model of where
 
 Claude Code is useful at every layer because it can read your entire codebase at once and identify patterns that human reviewers often miss, like a `'use client'` directive added unnecessarily three levels up a component tree, causing an entire subtree to ship as client JavaScript.
 
-Analyzing Bundle Size
+## Analyzing Bundle Size
 
 Large JavaScript bundles directly impact initial load times and Time to Interactive (TTI). The first step is understanding what's actually in your bundle.
 
@@ -68,7 +68,7 @@ Then run `ANALYZE=true npm run build` whenever you want a fresh bundle report. L
 
 A common discovery is that a single component importing a full charting library (like Recharts or Chart.js) causes every page in the app to download that library. Dynamic imports solve this directly.
 
-Implementing Dynamic Imports
+## Implementing Dynamic Imports
 
 Code splitting at the component level reduces initial JavaScript payload. Next.js supports dynamic imports natively:
 
@@ -124,7 +124,7 @@ When to use dynamic imports vs. static imports:
 | Small utility component (< 5 kB) | No |
 | Shared layout component | No |
 
-Image Optimization Strategies
+## Image Optimization Strategies
 
 Images typically account for the largest portion of page weight. Next.js provides the `next/image` component, but proper configuration matters:
 
@@ -186,7 +186,7 @@ module.exports = {
 
 Enabling AVIF format can reduce image sizes by 20-50% compared to WebP, at the cost of slightly longer encoding time during the build. For most production sites the tradeoff is worthwhile.
 
-Route-Based Code Splitting
+## Route-Based Code Splitting
 
 Next.js automatically splits code by route, but you can optimize further with Route Groups:
 
@@ -215,7 +215,7 @@ NEXT_PRIVATE_DEBUG_CACHE=1 npm run build 2>&1 | grep "shared"
 
 This surfaces modules being marked as shared across routes, letting you decide whether that sharing is intentional.
 
-Reducing Client-Side JavaScript
+## Reducing Client-Side JavaScript
 
 Server Components in Next.js App Router reduce client-side JavaScript by default. The key is understanding which components truly need interactivity:
 
@@ -284,11 +284,11 @@ export function SaveButton() {
 
 The second pattern ships significantly less JavaScript because the product name, description, and image are rendered on the server and sent as HTML, no JavaScript required.
 
-Runtime Performance
+## Runtime Performance
 
 Bundle size affects load time, but runtime performance affects perceived responsiveness. Key areas include:
 
-Memoization Strategy
+## Memoization Strategy
 
 React.memo, useMemo, and useCallback prevent unnecessary re-renders, but overusing them adds complexity without benefit:
 
@@ -318,7 +318,7 @@ A practical rule: only add `useMemo` when you can measure a render time over 1ms
 
 Use React DevTools Profiler to identify components that re-render unexpectedly. The "highlight updates" feature in React DevTools makes wasteful re-renders visible at a glance, components flash when they render, so you can spot when a parent re-render is cascading into children unnecessarily.
 
-Virtualization for Large Lists
+## Virtualization for Large Lists
 
 Rendering thousands of items tanks performance. Use windowing libraries:
 
@@ -367,7 +367,7 @@ const virtualizer = useVirtualizer({
 })
 ```
 
-Caching Strategies
+## Caching Strategies
 
 Next.js provides multiple caching layers:
 
@@ -424,7 +424,7 @@ Caching decision matrix:
 | User-specific data | `no-store` | N/A |
 | Real-time data (prices, inventory) | `no-store` | N/A |
 
-Server-Side Data Fetching Patterns
+## Server-Side Data Fetching Patterns
 
 One of the most impactful optimizations available in Next.js App Router is moving data fetching out of Client Components entirely. Fetching data in Server Components eliminates client-server waterfalls, the pattern where the browser downloads JavaScript, executes it, discovers it needs data, makes an API request, then renders.
 
@@ -448,7 +448,7 @@ async function ProductPage({ params }) {
 
 By using `Promise.all`, both fetches happen simultaneously on the server. The client receives a fully rendered page without making any additional API requests after hydration.
 
-Measuring Performance
+## Measuring Performance
 
 Use the `supermemory` skill to track performance metrics over time. The skill can organize your benchmarks and help you correlate changes with performance improvements:
 
@@ -490,7 +490,7 @@ module.exports = {
 
 These assertions fail the CI pipeline if any page regresses below your defined thresholds, preventing performance regressions from shipping unnoticed.
 
-Automating Optimization Workflows
+## Automating Optimization Workflows
 
 Combine Claude Code with your existing tooling. Create a skill that runs a performance audit:
 
@@ -529,7 +529,7 @@ jobs:
 
 This posts Lighthouse results directly to each pull request, making performance impact visible before merging.
 
-A Prioritized Optimization Checklist
+## A Prioritized Optimization Checklist
 
 Not all optimizations are equal. Start with the ones that move metrics the most:
 
@@ -544,14 +544,13 @@ Not all optimizations are equal. Start with the ones that move metrics the most:
 9. Set up Lighthouse CI. prevents future regressions
 10. Profile with React DevTools. find and fix unexpected re-renders
 
-Summary
+## Summary
 
 Next.js performance optimization involves multiple layers: bundle size through code splitting, runtime performance through proper component architecture, and caching strategies for data fetching. Claude Code accelerates this process by analyzing your codebase, suggesting targeted optimizations, and helping you implement patterns like dynamic imports and virtualization.
 
 The specialized skills like `frontend-design`, `tdd`, and `supermemory` each contribute to a comprehensive performance workflow, from design patterns that prevent performance issues, to tests that catch regressions, to memory systems that track improvements over time.
 
 Start with bundle analysis, implement route-based and component-based code splitting, add image optimization, and layer on runtime optimizations as needed. Measure continuously to ensure your optimizations actually move the metrics that matter. The checklist above gives you a prioritized starting point that works for most Next.js applications, work through it top-to-bottom, measure after each change, and stop when your Core Web Vitals reach acceptable thresholds.
-
 
 Related Reading
 

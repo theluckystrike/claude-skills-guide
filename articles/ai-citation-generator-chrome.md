@@ -17,7 +17,7 @@ AI Citation Generator Chrome: A Developer Guide
 
 Citation management remains one of the most tedious aspects of academic and technical writing. For developers and power users who frequently reference research papers, documentation, and online resources, an AI-powered citation generator Chrome extension can dramatically streamline your workflow. This guide covers implementation patterns, practical use cases, and code examples for building or configuring these tools.
 
-Why AI-Powered Citations Matter
+## Why AI-Powered Citations Matter
 
 Traditional citation tools rely on database lookups. CrossRef, PubMed, or Google Scholar. These work well for published papers with DOIs but struggle with blog posts, GitHub repositories, conference talks, and dynamic web content. AI citation generators fill this gap by extracting metadata from any webpage and formatting it appropriately.
 
@@ -25,11 +25,11 @@ The key advantage is contextual understanding. An AI can distinguish between a s
 
 For developers specifically, the citation problem extends beyond academic papers. Technical blog posts, Stack Overflow answers, RFCs, npm package documentation, and internal wikis all need to be citable in different contexts. No citation database covers this space. An AI-powered extension that can handle any URL is the only practical solution.
 
-Architecture Patterns for Chrome Extensions
+## Architecture Patterns for Chrome Extensions
 
 A solid AI citation generator extension operates through several interconnected components:
 
-Manifest Configuration
+## Manifest Configuration
 
 Your extension needs specific permissions to function:
 
@@ -50,7 +50,7 @@ The `activeTab` permission allows your extension to access the current page's DO
 
 Note that `host_permissions: ["<all_urls>"]` is broad. For a personal tool this is fine. For a published extension, consider restricting it to specific domains and expanding based on user feedback. Chrome Web Store reviewers scrutinize extensions with broad host permissions, and some users will decline to install them.
 
-Content Extraction Layer
+## Content Extraction Layer
 
 The core extraction logic runs in a content script or via the Chrome DevTools Protocol. Here's a practical extraction pattern:
 
@@ -118,7 +118,7 @@ function extractJsonLd() {
 }
 ```
 
-AI Processing Integration
+## AI Processing Integration
 
 Once you have raw metadata, the AI layer processes and enhances it:
 
@@ -170,7 +170,7 @@ ${styleExamples[style]}`;
 
 Providing a format example in the prompt reduces hallucinated formatting. Language models know citation styles but sometimes introduce variation (extra punctuation, different date formats) that a rigid example constrains.
 
-Citation Style Support
+## Citation Style Support
 
 Different disciplines require different formats. A production-ready extension should support multiple styles:
 
@@ -210,7 +210,7 @@ The rule-based formatters are fast and deterministic. no API cost. The AI path i
 
 For developers citing technical sources, APA and MLA cover most use cases. IEEE is worth including if your users work in engineering or publish to IEEE venues. The AI path handles Chicago footnote format better than a rule-based approach because Chicago's note structure varies based on whether it is a first citation or a subsequent one.
 
-Practical Deployment Considerations
+## Practical Deployment Considerations
 
 When building a citation generator for Chrome, consider these production concerns:
 
@@ -235,7 +235,7 @@ Rate Limiting: If using paid AI APIs, implement request throttling. Queue citati
 
 API Key Security: Storing an API key in a Chrome extension is inherently risky. the key lives in the extension's storage and is accessible to anyone who can inspect the extension package. For a personal tool, use Chrome's `storage.sync` encrypted storage and accept that risk. For a published extension with multiple users, route requests through your own backend so the API key never leaves your server.
 
-Extension Ecosystem and Alternatives
+## Extension Ecosystem and Alternatives
 
 Several existing tools implement similar functionality. ZoteroBib offers web-based citation generation without installation. The CiteThisForMe extension provides a more polished UI at the cost of subscription fees. For developers who want full control, building your own solution using the patterns above gives you complete customization.
 
@@ -250,7 +250,7 @@ The comparison between existing tools and a custom build:
 
 For developers who primarily cite technical sources. GitHub repos, npm packages, API documentation, RFCs. the custom extension wins on coverage even if it requires more setup effort. Existing tools are optimized for academic citation databases and handle developer resources as an afterthought.
 
-Integration with Development Workflows
+## Integration with Development Workflows
 
 Power users often need citations within their documentation systems. You can extend your Chrome extension to integrate with static site generators and documentation tools:
 
@@ -289,7 +289,7 @@ const outputFormats = {
 
 The BibTeX output is particularly useful for developers who write papers or technical reports. you can generate a `.bib` entry directly from the browser without any copy-paste reformatting.
 
-Testing Your Extension
+## Testing Your Extension
 
 Before publishing or distributing your extension, test it against a representative set of URL types:
 
@@ -303,12 +303,11 @@ Before publishing or distributing your extension, test it against a representati
 
 For each URL, verify that the extracted metadata is correct before sending it to the AI, and that the final citation matches the expected format for your target style. Citation errors are easy to miss and hard to catch after the fact. a short testing checklist pays for itself.
 
-Conclusion
+## Conclusion
 
 Building an AI-powered citation generator for Chrome combines web scraping, AI processing, and format standardization into a practical tool. The architecture patterns shown here. metadata extraction, AI enhancement, and style formatting. provide a foundation for customization to your specific workflow needs. Whether you're citing academic papers, open-source projects, or web resources, automation significantly reduces the manual effort involved.
 
 Start with the basic extraction logic and a single citation style. Add JSON-LD extraction as a second pass for richer metadata. Layer in AI processing for sources where the metadata is incomplete. Add caching once the basic flow works. The result is a personalized citation workflow that handles the full range of sources you actually encounter. not just the sources that happen to be indexed in academic databases.
-
 
 Related Reading
 

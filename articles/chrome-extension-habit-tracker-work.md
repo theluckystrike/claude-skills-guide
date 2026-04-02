@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Habit Tracker for Work: A Developer Guide"
 description: "Build a Chrome extension habit tracker tailored for work productivity. Practical code examples, storage patterns, and implementation strategies for."
@@ -14,19 +13,18 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Chrome Extension Habit Tracker for Work: A Developer Guide
 
 Building a habit tracker as a Chrome extension offers unique advantages for work productivity. Unlike standalone apps, a browser-based tracker integrates directly with your workflow, triggering reminders at the right moments and tracking behaviors that happen online. This guide walks you through building a practical habit tracking extension using modern Chrome APIs.
 
-Why Build a Work-Focused Habit Tracker
+## Why Build a Work-Focused Habit Tracker
 
 Browser-based habit tracking fills a gap that general productivity apps miss. Many work habits happen in the browser, checking project management tools, reviewing dashboards, documenting progress. A Chrome extension can detect these behaviors and reinforce positive patterns without requiring manual logging.
 
 The key advantage is context awareness. Your extension knows what tab is active, can monitor specific domains, and can trigger interactions at opportune moments. For developers and power users who spend significant time in the browser, this integration feels natural rather than intrusive.
 
-Core Architecture
+## Core Architecture
 
 A habit tracker extension consists of three primary components:
 
@@ -54,7 +52,7 @@ Here's the manifest configuration for a minimal habit tracker:
 
 The storage permission enables Chrome's sync storage, which automatically backs up habit data to the user's Google account. This provides cross-device persistence without setting up a backend.
 
-Data Model Design
+## Data Model Design
 
 For a work habit tracker, keep the data model simple but extensible. Each habit needs a unique identifier, name, frequency settings, and historical completion data:
 
@@ -85,7 +83,7 @@ async function initializeHabits() {
 
 This structure stores habits in sync storage, making them available across all Chrome profiles where the user is signed in.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides quick access to log habits without leaving your current context. Use vanilla JavaScript to keep the extension lightweight:
 
@@ -149,7 +147,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Implementing Streak Calculations
+## Implementing Streak Calculations
 
 Streak tracking motivates consistent behavior. Calculate current streaks by checking consecutive days of completion:
 
@@ -182,7 +180,7 @@ function calculateStreak(completions) {
 
 This function returns the current consecutive day count, which you can display in the popup or use to trigger streak-based notifications.
 
-Adding Contextual Notifications
+## Adding Contextual Notifications
 
 Work habit trackers benefit from smart notifications that don't disrupt productivity. Use Chrome's notification API with scheduling:
 
@@ -225,7 +223,7 @@ async function showHabitReminder(habitId) {
 }
 ```
 
-Domain-Specific Tracking
+## Domain-Specific Tracking
 
 For work habits tied to specific websites, content scripts add valuable context:
 
@@ -245,7 +243,7 @@ if (window.location.pathname.includes('/pulls')) {
 
 This pattern lets you automatically log habits when users visit specific work tools, checking project management boards, reviewing code, or updating documentation.
 
-Extension Storage Considerations
+## Extension Storage Considerations
 
 Chrome provides three storage options with different characteristics:
 
@@ -268,7 +266,7 @@ async function pruneOldCompletions(habits, keepDays = 90) {
 }
 ```
 
-Extension Development Best Practices
+## Extension Development Best Practices
 
 When building a work habit tracker, prioritize these practices:
 
@@ -280,12 +278,11 @@ Respect user attention. Notifications should be informative but never distractin
 
 Consider offline behavior. Chrome extensions work offline by default, but sync storage operations queue until connectivity returns. Your UI should indicate when data might be stale.
 
-Extending Your Tracker
+## Extending Your Tracker
 
 Once the core habit tracking works, consider adding features like weekly reports exported as markdown, integration with calendar APIs for meeting-linked habits, or simple gamification with achievement badges stored in sync storage.
 
 The foundation built here, manifest configuration, storage patterns, popup UI, and notifications, provides a template for any productivity-focused Chrome extension. Adapt the data model and interfaces to match specific work flows and team needs.
-
 
 Related Reading
 

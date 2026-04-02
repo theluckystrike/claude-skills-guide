@@ -19,7 +19,7 @@ Building a Chrome Extension for a Read Later List
 
 A read later list is one of the most useful browser extensions you can build. Whether you're researching a topic, collecting tutorials, or saving articles for weekend reading, having a custom solution gives you full control over your data. This guide walks you through building a functional Chrome extension that saves URLs, titles, and snippets locally.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 Chrome extensions consist of several components that work together. For a read later list, you'll need:
 
@@ -30,7 +30,7 @@ Chrome extensions consist of several components that work together. For a read l
 
 The entire extension can run without a backend server since Chrome provides the `chrome.storage` API for persistent data.
 
-Setting Up the Manifest
+## Setting Up the Manifest
 
 Every extension starts with the manifest file. Here's a minimal configuration for a read later list:
 
@@ -50,7 +50,7 @@ Every extension starts with the manifest file. Here's a minimal configuration fo
 
 The `storage` permission enables the `chrome.storage.local` API, which persists data across browser sessions. The `activeTab` permission lets you access the current page's URL and title when saving.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides the user interface for your extension. Keep it simple and functional:
 
@@ -84,7 +84,7 @@ The popup provides the user interface for your extension. Keep it simple and fun
 
 This interface includes an input field for URLs, a save button, and a list that displays saved items. The styling keeps everything compact and usable.
 
-Implementing the Logic
+## Implementing the Logic
 
 The JavaScript handles saving, loading, and deleting items. Here's the core implementation:
 
@@ -152,7 +152,7 @@ function deleteItem(id) {
 
 This script automatically captures the current tab's URL when the input is empty, making it convenient to save pages quickly.
 
-Auto-Save from Context Menu
+## Auto-Save from Context Menu
 
 Adding a context menu option lets users save pages without opening the popup:
 
@@ -183,7 +183,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
 This creates a right-click menu option that instantly saves the current page to your list.
 
-Handling Storage Limits
+## Handling Storage Limits
 
 Chrome provides 5MB of local storage by default, which is sufficient for thousands of articles. If you need more or want cloud sync, consider these approaches:
 
@@ -198,7 +198,7 @@ chrome.storage.sync.set({ readLaterList: list }, () => {
 });
 ```
 
-Adding Search Functionality
+## Adding Search Functionality
 
 For power users with large lists, search becomes essential:
 
@@ -217,7 +217,7 @@ function searchItems(query) {
 
 Add an input field in your popup and trigger `searchItems` on input change.
 
-Loading and Testing Your Extension
+## Loading and Testing Your Extension
 
 To test your extension in Chrome:
 
@@ -228,7 +228,7 @@ To test your extension in Chrome:
 
 Any changes to your files require clicking the reload icon on your extension card.
 
-Extending the Features
+## Extending the Features
 
 Once the core functionality works, consider adding:
 
@@ -240,12 +240,11 @@ Once the core functionality works, consider adding:
 
 The Chrome Extensions documentation provides comprehensive APIs for implementing each of these features.
 
-Conclusion
+## Conclusion
 
 Building a read later list extension demonstrates fundamental Chrome extension concepts while creating a genuinely useful tool. The combination of storage APIs, popup interfaces, and context menus provides a solid foundation that you can extend based on your needs. Since everything runs locally, users maintain full control over their data without privacy concerns.
 
 Start with the basics outlined here, then iterate based on how you actually use the extension. The best features often emerge from personal workflow requirements.
-
 
 Related Reading
 

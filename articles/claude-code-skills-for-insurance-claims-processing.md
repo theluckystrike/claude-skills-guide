@@ -16,13 +16,13 @@ permalink: /claude-code-skills-for-insurance-claims-processing/
 
 Insurance claims processing involves repetitive document handling, data extraction, validation logic, and compliance checks. These tasks are ideal candidates for automation through Claude Code skills. This guide shows you how to build skills that handle claims intake, document analysis, fraud screening, and settlement calculation. For more domain-specific skill patterns, see the [use cases hub](/use-cases-hub/).
 
-Understanding Claims Processing Workflows
+## Understanding Claims Processing Workflows
 
 Claims processing typically follows a predictable sequence: intake, document collection, initial assessment, investigation, approval or denial, and payment. Each stage generates structured and unstructured data that Claude skills can process.
 
 A well-designed claims processing skill handles the document-heavy portions of this workflow. It reads submitted forms, extracts relevant data, validates completeness, checks for fraud indicators, and produces structured output for downstream systems.
 
-Building a Claims Intake Skill
+## Building a Claims Intake Skill
 
 The first skill handles initial claim submission. It accepts uploaded documents, extracts key information, and creates a standardized claim record. The [skill .md format guide](/claude-skill-md-format-complete-specification-guide/) covers the exact syntax needed to structure these instruction files.
 
@@ -64,7 +64,7 @@ Validation
 
 This skill demonstrates several key patterns: clear input specifications, structured extraction rules, consistent JSON output, and built-in validation. The skill outputs machine-readable data that downstream systems can consume.
 
-Document Validation and Completeness Checking
+## Document Validation and Completeness Checking
 
 After intake, claims require validation against policy terms and completeness requirements. Build a skill that automates this verification.
 
@@ -109,7 +109,7 @@ Output
 
 The validator skill applies business rules programmatically. It produces deterministic outputs based on clear conditional logic, exactly the pattern Claude Code skills excel at.
 
-Fraud Detection Patterns
+## Fraud Detection Patterns
 
 Fraud detection combines multiple data points to identify suspicious claims. Build a skill that analyzes claims against known fraud indicators.
 
@@ -153,7 +153,7 @@ Output Format
 
 Fraud screening requires pattern recognition across multiple dimensions. The skill applies scoring logic consistently, ensuring every claim receives objective evaluation.
 
-Claims Adjudication and Settlement
+## Claims Adjudication and Settlement
 
 The final processing stage calculates appropriate settlement amounts. Build a skill that computes claim values based on policy coverage and actual loss.
 
@@ -196,7 +196,7 @@ Output
 
 Adjudication combines mathematical calculation with policy-specific rules. The skill produces auditable output showing exactly how the settlement was derived.
 
-Integrating Skills into Claims Systems
+## Integrating Skills into Claims Systems
 
 These individual skills work as components in a larger claims processing pipeline. Connect them through a claims processing skill that orchestrates the workflow:
 
@@ -224,7 +224,7 @@ Produce complete claim file with all processing stage results and final disposit
 
 This orchestration skill demonstrates how Claude Code skills compose into powerful automation pipelines. Each skill handles a specific domain while the orchestrator manages workflow logic. For patterns on combining multiple skills this way, see [how to combine two Claude skills in one workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/).
 
-Best Practices for Claims Skills
+## Best Practices for Claims Skills
 
 When building claims processing skills, follow these guidelines:
 

@@ -14,14 +14,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Developer Portal Setup Guide
-
 Developer portals in Claude Code serve as centralized hubs for managing skills, templates, and automation workflows. This guide walks through the process of setting up a functional developer portal tailored to your development needs.
 
 Done right, a developer portal eliminates the friction of recreating context every session. Instead of typing long instructions every time you want Claude to follow your team's TDD conventions or generate code in your preferred style, you define those conventions once as skills, version them in a repository, and load them on demand. The portal is the infrastructure that makes that possible.
 
-Understanding Claude Code Skills Architecture
+## Understanding Claude Code Skills Architecture
 
 Claude Code uses a skill-based system stored in `~/.claude/skills/`. Each skill is a Markdown file containing instructions that Claude loads when you invoke it. The directory structure looks like this:
 
@@ -40,7 +37,7 @@ The `_index.md` file acts as a skill registry, listing all available skills and 
 
 Skills are intentionally simple. They are plain Markdown files with a YAML front matter block and a body that contains whatever instructions you want Claude to follow when the skill is active. There is no binary to compile, no package to publish, and no API to register with. The simplicity is a feature. it means anyone on your team can write and maintain skills without specialized knowledge.
 
-Skills vs. System Prompts vs. CLAUDE.md
+## Skills vs. System Prompts vs. CLAUDE.md
 
 Before diving into setup, it helps to understand where skills fit relative to other Claude Code configuration mechanisms:
 
@@ -53,7 +50,7 @@ Before diving into setup, it helps to understand where skills fit relative to ot
 
 Skills are the right tool when you want to opt in to a specific behavior for a specific task. Use `CLAUDE.md` for context that should always be present, and skills for workflows you invoke intentionally.
 
-Setting Up Your Skill Directory
+## Setting Up Your Skill Directory
 
 Start by creating the skills directory if it does not exist:
 
@@ -102,7 +99,7 @@ Format your output as a numbered list grouped by category. Use [BLOCKER], [SUGGE
 
 The second version gives Claude a consistent output format that your team can rely on across sessions.
 
-Configuring the Skills Index
+## Configuring the Skills Index
 
 The `_index.md` file is crucial for organizing your skills. Each skill should be listed with a brief description:
 
@@ -131,7 +128,7 @@ This index enables Tab completion in Claude Code, making skills discoverable dur
 
 Keep your index descriptions accurate and current. If a skill's behavior changes, update both the skill file and its index entry. A stale index is confusing and erodes trust in the portal.
 
-Creating a Developer Portal Structure
+## Creating a Developer Portal Structure
 
 A well-organized developer portal separates skills by domain. Here is a recommended structure:
 
@@ -179,7 +176,7 @@ ln -sf "$PORTAL_DIR/skills/_index.md" "$SKILLS_DIR/_index.md"
 echo "Skills installed. Run 'ls ~/.claude/skills/' to verify."
 ```
 
-Writing Effective Skill Files
+## Writing Effective Skill Files
 
 The quality of your skills directly affects Claude's output. A few patterns consistently produce better results.
 
@@ -229,7 +226,7 @@ When adding a new endpoint:
 4. Update the OpenAPI spec in docs/openapi.yaml
 ```
 
-Integrating Skills with Your Workflow
+## Integrating Skills with Your Workflow
 
 Skills become powerful when integrated into your daily workflow. The tdd skill, for example, transforms how you approach coding tasks. Invoke it with `/tdd` and describe your implementation goal. The skill guides Claude to generate tests first, then implement against those tests.
 
@@ -256,7 +253,7 @@ When invoked, follow these guidelines:
 
 A practical workflow integration is to invoke skills at the start of specific tasks rather than leaving a general skill active all session. Start a coding session by opening Claude Code normally, then invoke `/tdd` only when you sit down to write a new feature. This keeps the skill context focused and prevents conflicts between instructions.
 
-Automating Portal Tasks
+## Automating Portal Tasks
 
 You can combine skills with shell commands for automation. Create a script that updates your portal skills from a git repository:
 
@@ -283,7 +280,7 @@ Schedule this with cron or run it manually before starting your development sess
 
 For teams using dotfiles managers like `chezmoi` or `stow`, skills fit naturally into the managed dotfiles tree. Add `~/.claude/` to your dotfiles configuration alongside `.zshrc`, `.gitconfig`, and your editor config. This means a new team member or a new machine gets the full skill suite as part of the standard onboarding script.
 
-Testing Your Setup
+## Testing Your Setup
 
 After configuring your developer portal, verify everything works:
 
@@ -309,7 +306,7 @@ At the start of your response, print: "Skill loaded: [skill-name] v[version]"
 
 This confirms the skill loaded and tells you which version is active, which is useful when you have multiple copies of a skill installed.
 
-Extending Your Portal
+## Extending Your Portal
 
 Once your basic portal is running, extend it with specialized skills. The mcp-builder skill helps you create Model Context Protocol servers for external service integration. The webapp-testing skill enables automated browser testing directly from Claude Code.
 
@@ -331,7 +328,6 @@ Project-local skills get loaded automatically when you open Claude Code in that 
 For team environments, consider sharing skill configurations through a dotfiles repository or internal wiki. The goal is that any developer on your team can reproduce the exact same Claude Code environment in under five minutes, with no tribal knowledge required.
 
 ---
-
 
 Related Reading
 

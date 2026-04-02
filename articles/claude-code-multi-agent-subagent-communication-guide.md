@@ -16,7 +16,7 @@ permalink: /claude-code-multi-agent-subagent-communication-guide/
 
 [Claude Code supports multi-agent workflows where a primary agent orchestrates one or more subagents](/best-claude-code-skills-to-install-first-2026/), each running in isolated sessions with their own context. This architecture enables parallel work, task specialization, and complex autonomous workflows that single-session approaches cannot handle cleanly.
 
-The Multi-Agent Mental Model
+## The Multi-Agent Mental Model
 
 In a multi-agent Claude Code setup:
 
@@ -28,7 +28,7 @@ Each subagent runs in [its own isolated environment](/claude-agent-sandbox-skill
 
 The orchestrator writes task specifications, subagents execute them and write results, and the orchestrator aggregates and reports.
 
-Spawning Subagents
+## Spawning Subagents
 
 Claude Code subagents run using the `-p` (print mode) flag, which runs a non-interactive session, outputs to stdout, and exits. You capture the output in your orchestration script:
 
@@ -47,7 +47,7 @@ echo "Subagent complete: $SOURCE_FILE -> $OUTPUT_FILE"
 
 This is the correct way to invoke Claude Code non-interactively. There are no `--skill`, `--input-file`, or `--non-interactive` flags in the Claude Code CLI.
 
-Communication Patterns
+## Communication Patterns
 
 1. File-Based Message Passing
 
@@ -174,7 +174,7 @@ for result_file in result_files:
         print(f"  {task_id}: {len(content)} chars")
 ```
 
-Parallel Execution
+## Parallel Execution
 
 The power of multi-agent workflows is parallelism. Running 10 subagents in background processes is much faster than sequential runs. Be aware that [response latency and throughput scale differently](/claude-code-response-latency-optimization-with-skills/) in parallel vs sequential architectures:
 
@@ -210,7 +210,7 @@ for RESULT_FILE in "${RESULTS[@]}"; do
 done
 ```
 
-Rate Limiting Concurrent Subagents
+## Rate Limiting Concurrent Subagents
 
 Running too many subagents simultaneously can exhaust your API rate limits. Use a semaphore pattern:
 
@@ -249,7 +249,7 @@ wait
 echo "All tasks complete"
 ```
 
-Error Handling and Retries
+## Error Handling and Retries
 
 Subagents fail. network errors, rate limits, and context length issues all happen. Wrap subagent calls with retry logic:
 
@@ -278,7 +278,7 @@ run_subagent_with_retry() {
 }
 ```
 
-Using /supermemory for Shared Context
+## Using /supermemory for Shared Context
 
 If subagents need to share learned context, use [`/supermemory`](/claude-skills-token-optimization-reduce-api-costs/) to store context before spawning subagents, then retrieve it in each subagent's prompt:
 
@@ -302,7 +302,7 @@ wait
 
 ---
 
-Step-by-Step: Orchestrating a Multi-Agent Workflow
+## Step-by-Step: Orchestrating a Multi-Agent Workflow
 
 1. Define agent roles: before writing code, map out which agent does what. A typical setup has an orchestrator agent that breaks tasks into subtasks and n worker agents that each handle one specialized domain (e.g., code writing, test generation, documentation).
 2. Choose a communication pattern: agents can communicate synchronously (orchestrator waits for each worker to finish before proceeding) or asynchronously (orchestrator fans out all tasks at once and collects results). Async fan-out is faster for independent tasks.
@@ -311,7 +311,7 @@ Step-by-Step: Orchestrating a Multi-Agent Workflow
 5. Handle failures with retries: wrap each agent invocation in a retry loop with exponential backoff. A subagent that fails once due to a transient API error should retry 2-3 times before the orchestrator marks the task as failed.
 6. Aggregate and merge results: once all subagents have written to the context store, the orchestrator reads all outputs and merges them into a coherent final result.
 
-Communication Patterns Compared
+## Communication Patterns Compared
 
 ```
 // Pattern 1: Sequential chain
@@ -335,7 +335,7 @@ const finalResult = await agentE({ resultB, resultC, resultD });
 
 For Claude Code workflows, pattern 2 is most efficient when the subtasks are truly independent. it cuts total wall-clock time by the number of parallel workers.
 
-Common Multi-Agent Architectures
+## Common Multi-Agent Architectures
 
 | Architecture | Best For | Complexity | Fault Tolerance |
 |---|---|---|---|
@@ -345,7 +345,7 @@ Common Multi-Agent Architectures
 | Peer-to-peer | Collaborative refinement | High | Requires conflict resolution |
 | Blackboard | Shared knowledge building | Medium | Any agent can contribute |
 
-Advanced: Agent-to-Agent Tool Calls
+## Advanced: Agent-to-Agent Tool Calls
 
 In Claude's agent SDK, a subagent can be exposed as a tool that the orchestrator calls. This means the orchestrator does not need to know the implementation details of each subagent. it just calls a named tool and gets a result:
 
@@ -373,7 +373,7 @@ const response = await claude.messages.create({
 });
 ```
 
-Troubleshooting
+## Troubleshooting
 
 Context window overflow in the orchestrator: Each subagent's output gets appended to the orchestrator's context. For long-running workflows, summarize each subagent's output before passing it back to the orchestrator instead of passing the full raw output. A 200-word summary is usually sufficient for the orchestrator to make routing decisions.
 

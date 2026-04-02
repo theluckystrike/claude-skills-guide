@@ -13,19 +13,15 @@ permalink: /claude-code-for-fly-io-deployment-automation-workflow/
 ---
 {% raw %}
 
-
-
-Claude Code for Fly.io Deployment Automation Workflow
-
 Fly.io offers an elegant platform for deploying applications close to your users with automatic scaling and global distribution. When you combine Fly.io's infrastructure with Claude Code's automation capabilities, you create a deployment pipeline that handles build verification, health validation, and multi-region management without manual intervention. For an overview of deployment automation, visit the [workflows hub](/workflows-hub/). This guide shows you how to build a complete deployment automation workflow using Claude skills like `/tdd`, `/supermemory`, `/pdf`, and `/webapp-testing`.
 
-Why Fly.io Works Well with Claude Code Automation
+## Why Fly.io Works Well with Claude Code Automation
 
 [Fly.io's container-based deployment model pairs naturally with Claude Code's ability to execute shell commands](/best-claude-code-skills-to-install-first-2026/), analyze outputs, and make decisions based on results. The platform's CLI-first approach means every deployment step can be scripted and automated. Unlike complex Kubernetes setups, Fly.io provides a simpler abstraction that Claude Code can interact with directly, making it ideal for developers who want production-grade deployment without operational overhead.
 
 The key advantage is that [Claude Code can monitor deployment status, automatically rollback failed deployments, and maintain deployment history using skills](/claude-supermemory-skill-persistent-context-explained/) like `/supermemory` for context retention across sessions.
 
-Prerequisites and Project Setup
+## Prerequisites and Project Setup
 
 Before implementing the automation workflow, ensure you have the Fly.io CLI installed and authenticated:
 
@@ -69,7 +65,7 @@ primary_region = "iad"
   port = 9090
 ```
 
-Building the Deployment Automation Script
+## Building the Deployment Automation Script
 
 Create a `deploy.sh` script that handles the complete deployment lifecycle:
 
@@ -110,7 +106,7 @@ else
 fi
 ```
 
-Using Claude Skills for Enhanced Deployment Validation
+## Using Claude Skills for Enhanced Deployment Validation
 
 The `/tdd` skill becomes invaluable when integrated into your deployment pipeline. It ensures code quality before any deployment proceeds. a workflow covered in detail in the [automated testing pipeline guide](/claude-tdd-skill-test-driven-development-workflow/):
 
@@ -132,7 +128,7 @@ The `/webapp-testing` skill complements this by performing end-to-end tests that
 Run smoke tests against https://your-app-name.fly.dev to verify the deployed application.
 ```
 
-Automating Multi-Region Deployments
+## Automating Multi-Region Deployments
 
 Fly.io's strength lies in its ability to distribute applications across multiple regions. Claude Code can orchestrate this complexity:
 
@@ -160,7 +156,7 @@ echo "Multi-region deployment complete"
 fly regions list -a your-app-name
 ```
 
-Maintaining Deployment History with /supermemory
+## Maintaining Deployment History with /supermemory
 
 The `/supermemory` skill allows Claude Code to maintain context across deployment sessions. Create a skill that logs deployment history:
 
@@ -184,7 +180,7 @@ Reference this skill in your deployment script:
 Remember: deployed commit $(git rev-parse --short HEAD) to production at $(date -u +%Y-%m-%dT%H:%M:%SZ), status: success.
 ```
 
-Generating Deployment Reports with /pdf
+## Generating Deployment Reports with /pdf
 
 After each deployment, use the `/pdf` skill to generate a deployment report:
 
@@ -196,7 +192,7 @@ Include deployment time, commit hash, health check results, and rollback status.
 
 This creates documentation useful for audit trails and team communication.
 
-Error Handling and Rollback Strategies
+## Error Handling and Rollback Strategies
 
 Reliable deployment automation requires comprehensive error handling:
 
@@ -234,7 +230,7 @@ deploy_with_retry() {
 deploy_with_retry
 ```
 
-Continuous Deployment with GitHub Actions
+## Continuous Deployment with GitHub Actions
 
 Integrate your Fly.io deployment with GitHub Actions for automated CI/CD. see the [Claude Code GitHub Actions workflow guide](/claude-code-github-actions-workflow-matrix-strategy-guide/) for advanced pipeline patterns:
 
@@ -262,7 +258,7 @@ jobs:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 ```
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Fly.io creates a powerful deployment automation system that reduces manual effort while maintaining reliability. The workflow handles build verification, multi-region deployments, health checks, and automatic rollbacks without requiring constant developer attention. By integrating skills like `/tdd` for code quality, `/webapp-testing` for validation, and `/supermemory` for context retention, you build a deployment pipeline that improves over time with each execution.
 

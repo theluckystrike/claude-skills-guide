@@ -12,13 +12,13 @@ score: 7
 permalink: /claude-code-spring-boot-java-microservices-development/
 ---
 
-Introduction
+## Introduction
 
 Building microservices with Spring Boot requires managing multiple interdependent services, each with its own codebase, database, and API contracts. This complexity multiplies when coordinating REST endpoints, service-to-service communication, dependency injection, and comprehensive test coverage. Claude Code accelerates this entire workflow by understanding your architecture, generating boilerplate consistently, and helping you implement patterns correctly the first time.
 
 you'll learn how to use Claude Code to scaffold Spring Boot microservices projects, generate well-structured REST controllers, implement service layers and inter-service communication, and write integration tests, reducing development time while maintaining code quality.
 
-Project Scaffolding with Spring Initializr Prompts
+## Project Scaffolding with Spring Initializr Prompts
 
 Creating a new Spring Boot microservice starts with the right dependencies and project structure. Rather than manually navigating Spring Initializr, you can prompt Claude Code to generate the complete setup commands and configuration.
 
@@ -114,7 +114,7 @@ Claude Code will generate your `pom.xml` with all dependencies, application conf
 
 Claude Code also generates the application configuration files, ensuring your service registers with Eureka, configures the database connection pool, and sets appropriate logging levels. This eliminates setup errors and gets you building features immediately.
 
-REST Controller Generation and Routing
+## REST Controller Generation and Routing
 
 REST endpoints form the contract between your microservices. Claude Code can generate complete controller classes with proper annotation usage, method signatures, and HTTP status codes.
 
@@ -174,7 +174,7 @@ public class OrderController {
 
 Claude Code ensures consistent naming conventions, proper use of Spring annotations (RestController, GetMapping, PostMapping), and appropriate HTTP status codes. It also integrates validation and error handling, reducing bugs in your API layer.
 
-Service Layer and Business Logic Implementation
+## Service Layer and Business Logic Implementation
 
 The service layer contains your business logic, database interactions, and cross-cutting concerns. Claude Code can generate well-structured service classes with dependency injection and proper transaction management.
 
@@ -251,7 +251,7 @@ public class OrderService {
 
 This approach ensures your service layer follows Spring best practices: dependency injection via constructor, transaction boundaries, proper exception handling, and logging at key operations.
 
-Inter-Service Communication with RestTemplate and WebClient
+## Inter-Service Communication with RestTemplate and WebClient
 
 Microservices communicate with each other. Claude Code can generate solid client code for calling other services using either RestTemplate or the modern WebClient approach.
 
@@ -262,7 +262,7 @@ Claude Code will generate a client that discovers the payment service via Eureka
 
 Another common pattern: "Generate a RestTemplate configuration with connection pooling, timeouts, and retry logic for calling downstream services. Include a custom interceptor for adding correlation IDs to all outbound requests."
 
-Integration Testing with MockMvc and TestContainers
+## Integration Testing with MockMvc and TestContainers
 
 Testing microservices requires testing controllers, services, and databases in isolation and integration. Claude Code generates comprehensive test suites using MockMvc and TestContainers.
 
@@ -334,7 +334,7 @@ public class OrderControllerTest {
 
 Claude Code also generates database integration tests using TestContainers, spinning up a real PostgreSQL container for each test, ensuring your JPA mappings and database interactions work correctly.
 
-Building Consistent Microservice Patterns
+## Building Consistent Microservice Patterns
 
 The real power of Claude Code for microservices development is consistency at scale. When you have five, ten, or twenty services, generating code using the same prompts ensures they all follow the same patterns:
 

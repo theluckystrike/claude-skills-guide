@@ -24,18 +24,18 @@ k9s provides an intuitive terminal-based interface for navigating Kubernetes res
 - Debugging faster by analyzing logs and describing issues contextually
 - Creating reusable workflows for routine cluster operations
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before integrating Claude Code with k9s, ensure your environment is properly configured:
 
-Prerequisites
+## Prerequisites
 
 - k9s installed (version 0.27+ recommended)
 - kubectl configured with cluster access
 - Claude Code installed and authenticated
 - A Claude Skill for Kubernetes operations
 
-Creating a Kubernetes Management Skill
+## Creating a Kubernetes Management Skill
 
 Create a Claude Skill that understands Kubernetes concepts and can generate appropriate commands:
 
@@ -69,25 +69,25 @@ For each request:
 4. Suggest follow-up actions if needed
 ```
 
-Practical Workflows
+## Practical Workflows
 
-Debugging a Failing Pod
+## Debugging a Failing Pod
 
 When a pod enters a crash loop or fails unexpectedly, use this workflow:
 
-Step 1: Describe the failing pod
+## Step 1: Describe the failing pod
 
 ```bash
 kubectl describe pod {{pod-name}} -n {{namespace}}
 ```
 
-Step 2: Retrieve recent logs
+## Step 2: Retrieve recent logs
 
 ```bash
 kubectl logs {{pod-name}} -n {{namespace}} --previous --tail=100
 ```
 
-Step 3: Check resource limits and events
+## Step 3: Check resource limits and events
 
 ```bash
 kubectl get events -n {{namespace}} --sort-by='.lastTimestamp'
@@ -95,7 +95,7 @@ kubectl get events -n {{namespace}} --sort-by='.lastTimestamp'
 
 Claude Code can execute these sequentially and analyze the output to identify the root cause, whether it's OOM kills, liveness probe failures, or configuration errors.
 
-Efficient Log Analysis
+## Efficient Log Analysis
 
 Instead of manually scrolling through k9s log views, delegate log analysis to Claude:
 
@@ -111,7 +111,7 @@ Create a bash alias for quick log searches:
 alias k9logs='fzf --preview="kubectl logs {1} -n default --tail=50"'
 ```
 
-Resource Inventory and Cleanup
+## Resource Inventory and Cleanup
 
 Generate cluster-wide reports:
 
@@ -123,9 +123,9 @@ Find unused services
 kubectl get svc -A -o json | jq -r '.items[] | select(.spec.selector | length > 0) | .metadata.name'
 ```
 
-Automating Repetitive Tasks
+## Automating Repetitive Tasks
 
-Deployments with Rollout Verification
+## Deployments with Rollout Verification
 
 Create a script that combines deployment with verification:
 
@@ -150,7 +150,7 @@ echo "Quick health check:"
 kubectl get deployment $DEPLOYMENT -n $NAMESPACE
 ```
 
-Batch Operations
+## Batch Operations
 
 Execute commands across multiple namespaces:
 
@@ -187,7 +187,7 @@ additionalShortcuts:
     command: "kubectl get pods -A -l app={{ .ResourceName }}"
 ```
 
-Best Practices
+## Best Practices
 
 1. Use Context Switching Wisely
 
@@ -224,7 +224,7 @@ Set default namespace
 kubectl config set-context --current --namespace={{namespace}}
 ```
 
-Advanced: MCP Integration
+## Advanced: MCP Integration
 
 For deeper k9s integration, consider building a Model Context Protocol (MCP) server that exposes k9s functionality to Claude Code:
 
@@ -262,7 +262,7 @@ async def call_tool(name, arguments):
 
 This enables Claude Code to interact with your cluster through structured tool calls rather than raw command generation.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with k9s transforms Kubernetes management from manual navigation to efficient, scriptable workflows. Start with the basic kubectl integrations, then progressively build automation for your most common operations. The key is creating reproducible patterns that reduce cognitive load while maintaining safety through validation steps.
 

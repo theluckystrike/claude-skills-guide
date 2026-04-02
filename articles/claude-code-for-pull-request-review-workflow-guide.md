@@ -17,7 +17,7 @@ Claude Code for Pull Request Review Workflow Guide
 
 Pull request reviews are a critical part of software development, but they can also be time-consuming and inconsistent. Claude Code transforms your review process by providing intelligent, context-aware code analysis that helps you identify issues faster, maintain quality standards, and focus your attention where it matters most. This guide shows you how to integrate Claude into your PR workflow effectively.
 
-Setting Up Claude for Pull Request Reviews
+## Setting Up Claude for Pull Request Reviews
 
 Before diving into review workflows, ensure Claude Code is properly configured for your project. The key is creating a dedicated skill for code reviews that understands your project's standards, coding conventions, and common pitfall patterns.
 
@@ -43,11 +43,11 @@ Provide feedback in a structured format with severity levels (critical, major, m
 
 This skill gives Claude the context it needs to provide relevant, project-specific feedback.
 
-Reviewing Changed Files
+## Reviewing Changed Files
 
 The most straightforward way to use Claude for PR reviews is to analyze the files that have changed. Here's a practical workflow:
 
-Step 1: Get the Diff
+## Step 1: Get the Diff
 
 First, capture the changes you want reviewed:
 
@@ -62,7 +62,7 @@ Review staged changes
 git diff --cached
 ```
 
-Step 2: Invoke Claude for Review
+## Step 2: Invoke Claude for Review
 
 Use your review skill to analyze the changes:
 
@@ -80,11 +80,11 @@ Please review the following changes. I've attached the diff from my feature bran
 
 Claude will analyze the diff and provide structured feedback with specific line references and severity levels.
 
-Practical Review Examples
+## Practical Review Examples
 
 Let's walk through concrete examples of how Claude enhances different aspects of PR review.
 
-Example 1: Security Vulnerability Detection
+## Example 1: Security Vulnerability Detection
 
 When reviewing authentication code, Claude can identify common security mistakes:
 
@@ -110,7 +110,7 @@ Line 78: Missing Authorization Check
 The `deleteUser` function validates the request but doesn't verify the caller has admin privileges.
 ```
 
-Example 2: Performance Analysis
+## Example 2: Performance Analysis
 
 Claude excels at spotting performance anti-patterns:
 
@@ -139,7 +139,7 @@ const orders = await db.query(`
 This reduces 101 queries to 1 for 100 orders.
 ```
 
-Example 3: Code Quality Improvements
+## Example 3: Code Quality Improvements
 
 Beyond bugs and security, Claude helps enforce coding standards:
 
@@ -159,7 +159,7 @@ Missing Error Handling (Line 89)
 The API call lacks try-catch. If the external service fails, users see a generic 500 error.
 ```
 
-Integrating with Your CI Pipeline
+## Integrating with Your CI Pipeline
 
 For teams wanting automated preliminary reviews, integrate Claude into your CI workflow:
 
@@ -195,7 +195,7 @@ jobs:
 
 This runs an automated preliminary review on every PR, flagging obvious issues before human reviewers dive in.
 
-Best Practices for Effective Reviews
+## Best Practices for Effective Reviews
 
 1. Provide Context
 
@@ -233,7 +233,7 @@ Claude handles the mechanical aspects well, syntax errors, obvious bugs, style v
 - User experience considerations
 - Edge cases specific to your domain
 
-Actionable Summary
+## Actionable Summary
 
 To get started with Claude-powered PR reviews today:
 
@@ -245,7 +245,6 @@ To get started with Claude-powered PR reviews today:
 Claude doesn't replace thoughtful code review, it makes you more effective by handling the mechanical detection work, so you can focus on the higher-level architectural and design decisions that truly matter.
 
 The result: faster reviews, more consistent quality, and more time for the nuanced discussions that improve your codebase.
-
 
 Related Reading
 

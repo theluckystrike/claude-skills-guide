@@ -12,18 +12,15 @@ score: 7
 tags: [claude-code, claude-skills, api, changelog, documentation]
 ---
 
-
-Claude Code API Changelog Documentation Guide
-
 API changelogs are critical documentation artifacts that keep developers informed about changes, new features, deprecations, and breaking modifications. A well-maintained changelog builds trust with developers and reduces support burden. This guide explores how to use Claude Code to create, maintain, and automate your API changelog documentation workflow.
 
-Understanding API Changelog Requirements
+## Understanding API Changelog Requirements
 
 Before diving into the technical implementation, it's essential to understand what makes an effective API changelog. A quality changelog should include version numbers with clear semantic versioning indicators, change categories (added, changed, deprecated, removed, fixed, security), dates for each release, links to related issues or pull requests, and migration guides for breaking changes.
 
 Claude Code can assist in analyzing your existing codebase to identify changes that need documentation. By examining git commit history, diffs between versions, and code comments, Claude can help generate comprehensive changelog entries that would otherwise require significant manual effort.
 
-Setting Up Your Changelog Workflow
+## Setting Up Your Changelog Workflow
 
 The first step in creating an effective changelog workflow is establishing a consistent structure. Create a dedicated directory for your changelog documentation, typically in a `changelog` or `CHANGELOG` folder at your repository root. Within this directory, maintain separate files for each major version or use a single comprehensive file with clear version headings.
 
@@ -60,7 +57,7 @@ Security
 [Version] - YYYY-MM-DD
 ```
 
-Using Claude Code to Generate Changelog Entries
+## Using Claude Code to Generate Changelog Entries
 
 Claude Code excels at analyzing code changes and generating meaningful changelog entries. When working with Claude, you can provide context about your recent changes and ask it to draft appropriate entries. Here's how to structure your interactions:
 
@@ -75,7 +72,7 @@ Added
 - New `/api/v2/auth/token` endpoint with extended token lifetime options
 ```
 
-Automating Changelog Generation
+## Automating Changelog Generation
 
 While Claude Code is excellent for drafting and refining changelog entries, you can enhance your workflow with additional automation. Consider integrating tools like `conventional-changelog` or `release-it` to automatically generate changelogs based on your commit messages when following conventional commit conventions.
 
@@ -97,7 +94,7 @@ module.exports = {
 };
 ```
 
-Best Practices for API Changelogs
+## Best Practices for API Changelogs
 
 Maintaining a high-quality changelog requires consistent effort and attention to detail. Following these best practices will ensure your changelog remains valuable for developers.
 
@@ -109,7 +106,7 @@ Include Migration Guidance: For breaking changes or significant modifications, p
 
 Maintain Chronological Order: List the most recent changes at the top of each version section, making it easy for developers to find the latest updates.
 
-Documenting Deprecations Properly
+## Documenting Deprecations Properly
 
 Deprecation notices require special attention in API changelogs. When removing functionality, you must give developers adequate time to migrate. Your changelog should clearly indicate when features were deprecated, what the replacement is, and when they will be removed entirely.
 
@@ -125,16 +122,15 @@ Removed
   Use `POST /api/v2/auth/login` with the new request format instead.
 ```
 
-Integrating Changelog Documentation into Your API Reference
+## Integrating Changelog Documentation into Your API Reference
 
 Your changelog should be tightly integrated with your API reference documentation. Link to relevant changelog entries from endpoint descriptions, and include links to the full changelog in your API documentation navigation. Claude Code can help create these cross-references and ensure consistency across your documentation.
 
 Consider adding a "Recent Changes" section to your API reference landing page that highlights the most recent updates. This keeps developers informed without requiring them to dig through the full changelog.
 
-Conclusion
+## Conclusion
 
 Creating and maintaining API changelog documentation doesn't have to be a tedious process. By using Claude Code for drafting, refining, and automating your changelog workflow, you can ensure your developers always have access to clear, consistent, and actionable information about API changes. The key is establishing good habits early, using consistent formatting, and treating your changelog as a critical part of your API's user experience.
-
 
 Related Reading
 

@@ -15,13 +15,9 @@ score: 7
 
 {% raw %}
 
-
-
-Claude Code for Translation Key Extraction Workflow
-
 Translation key extraction is one of the most tedious yet essential tasks in internationalizing applications. Manually hunting through hundreds of files to find hardcoded strings, ensuring consistent naming conventions, and keeping translation files synchronized with the codebase consumes significant developer time. This guide demonstrates how to use Claude Code to automate and streamline your translation key extraction workflow, saving hours of repetitive work while improving consistency.
 
-Understanding the Translation Key Extraction Challenge
+## Understanding the Translation Key Extraction Challenge
 
 When building applications that require multiple language support, developers traditionally face a fundamental problem: identifying every user-facing string in the codebase and converting them into translation key references. This process becomes increasingly difficult as projects grow, teams expand, and the number of supported languages increases.
 
@@ -29,7 +25,7 @@ The manual approach typically involves developers scattered throughout the codeb
 
 Claude Code addresses this challenge by analyzing your entire codebase context, understanding your existing translation patterns, and systematically identifying strings that require extraction. The AI can examine multiple file types simultaneously, apply consistent naming conventions, and generate properly structured translation files that integrate smoothly with your existing i18n setup.
 
-Setting Up Your Extraction Foundation
+## Setting Up Your Extraction Foundation
 
 Before implementing Claude Code for key extraction, ensure your project has a proper internationalization infrastructure in place. Most modern JavaScript and TypeScript projects use libraries like i18next, react-i18next, or vue-i18n, while Python applications might employ Flask-Babel or Django's translation utilities. Regardless of your specific tooling, the fundamental structure remains similar: translation files organized by locale, a configuration defining supported languages, and utility functions for accessing translated strings.
 
@@ -53,7 +49,7 @@ Organize your translation files in a dedicated directory structure that Claude C
 
 This organization allows Claude Code to understand your existing translation patterns, key naming conventions, and file organization. When prompting Claude for key extraction, reference this structure explicitly to maintain consistency with your established patterns.
 
-Extracting Keys from Source Code
+## Extracting Keys from Source Code
 
 The core of the workflow involves asking Claude Code to analyze your source files and identify strings requiring translation. Structure your prompts to be specific about the file types, patterns, and output format you expect.
 
@@ -69,7 +65,7 @@ Claude Code will then scan the provided files, identify translatable strings, an
 
 The AI applies contextual understanding to generate meaningful keys. Rather than generic identifiers like "text_1" or "label_2", it produces descriptive keys like "login.form.emailPlaceholder" or "dashboard.sidebar.logoutButton" that clearly indicate where each string appears in your application.
 
-Handling Different String Patterns
+## Handling Different String Patterns
 
 Real-world applications contain various string patterns that require different handling strategies. Claude Code can identify and appropriately process each type.
 
@@ -79,7 +75,7 @@ Strings passed to translation functions require special attention. When code use
 
 Dynamic content introduces additional complexity. Strings containing variables like `Welcome, ${userName}` need special handling because the translation system must accommodate different languages with varying sentence structures. Claude Code identifies these patterns and generates appropriately structured keys with placeholder markers, ensuring translators understand where dynamic content will be inserted.
 
-Generating and Updating Translation Files
+## Generating and Updating Translation Files
 
 Once Claude Code extracts keys from your source files, the next step involves generating or updating your translation files. The AI can create new JSON files with extracted keys and empty values ready for translation, or populate existing files while preserving any translations you have already completed.
 
@@ -93,7 +89,7 @@ while preserving the existing translations.
 
 This merge capability proves invaluable for ongoing development where new features continuously introduce additional strings needing translation.
 
-Implementing Continuous Extraction
+## Implementing Continuous Extraction
 
 Rather than treating key extraction as an occasional large-scale effort, integrate it continuously into your development workflow. This prevents translation debt from accumulating and makes localization an ongoing consideration rather than a periodic crisis.
 
@@ -101,7 +97,7 @@ Create a Claude Code hook that triggers on specific events during development. C
 
 Establish a weekly extraction routine where Claude Code scans the entire codebase for new strings, generating reports of newly added translation keys. This systematic approach ensures no strings slip through unnoticed and provides localization teams with a steady stream of work rather than overwhelming batches.
 
-Best Practices for Key Extraction
+## Best Practices for Key Extraction
 
 Successful translation key extraction requires consistent naming conventions and organizational strategies. Follow these practices to maximize the effectiveness of your Claude Code workflow.
 
@@ -113,7 +109,7 @@ Avoid including implementation details in keys. While `button.submit_form_valida
 
 Finally, document your conventions in a CLAUDE.md file or project documentation. When multiple team members work with Claude Code for extraction, shared understanding of patterns ensures consistent results across different sessions and contributors.
 
-Automating the Complete Workflow
+## Automating the Complete Workflow
 
 Beyond individual extraction tasks, Claude Code can orchestrate the entire translation management workflow. Chain together analysis, extraction, file generation, and validation steps into cohesive automation sequences.
 

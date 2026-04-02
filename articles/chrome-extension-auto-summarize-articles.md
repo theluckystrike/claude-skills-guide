@@ -13,18 +13,17 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
 {% raw %}
 
 Building a Chrome extension to automatically summarize articles is a practical project that combines browser extension development with text processing. This guide walks you through creating an extension that extracts and condenses article content, perfect for developers looking to enhance productivity or power users wanting to consume content faster.
 
-How Chrome Extension Auto Summarize Works
+## How Chrome Extension Auto Summarize Works
 
 Chrome extensions that summarize articles typically work in three stages: content extraction, text processing, and display. The extension injects a content script into web pages, identifies the main article body, applies summarization algorithms, and presents the results to the user.
 
 Modern summarization approaches range from simple extractive methods (selecting key sentences) to more sophisticated abstractive techniques (generating new text). For browser extensions, extractive summarization offers better performance and reliability since it doesn't require external API calls or machine learning models.
 
-Setting Up Your Extension Project
+## Setting Up Your Extension Project
 
 Create a new directory for your extension with the following structure:
 
@@ -57,7 +56,7 @@ The manifest.json defines your extension's permissions and entry points:
 }
 ```
 
-Extracting Article Content
+## Extracting Article Content
 
 The content script runs on every page load and identifies the main article content. Use the content.js file to extract text from common article selectors:
 
@@ -103,7 +102,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This extraction method prioritizes semantic HTML elements while providing a fallback for pages without standard article markup.
 
-Implementing the Summarization Algorithm
+## Implementing the Summarization Algorithm
 
 For a client-side solution, implement a simple extractive summarizer using sentence scoring. This approach ranks sentences by their importance based on word frequency:
 
@@ -155,7 +154,7 @@ function summarizeText(text, maxSentences = 5) {
 
 This algorithm runs entirely in the browser without external dependencies, making it fast and privacy-friendly.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup.html provides a user interface for triggering summarization:
 
@@ -211,7 +210,7 @@ function summarizeText(text, maxSentences = 5) {
 }
 ```
 
-Extension Features for Power Users
+## Extension Features for Power Users
 
 Beyond basic summarization, consider adding these features:
 
@@ -232,7 +231,7 @@ Reading Time Estimation: Calculate and display estimated reading time for both t
 
 Copy to Clipboard: Add functionality to copy summaries for use in notes or sharing.
 
-Testing Your Extension
+## Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Select your extension directory. Test on various websites to ensure content extraction works across different page layouts.
 
@@ -255,7 +254,7 @@ async function testExtension() {
 }
 ```
 
-Performance Considerations
+## Performance Considerations
 
 Content script injection can impact page load time. Optimize by:
 
@@ -264,7 +263,7 @@ Content script injection can impact page load time. Optimize by:
 - Caching extracted content for revisited pages
 - Using Chrome's storage API to save summaries locally
 
-Existing TLDR and Summary Extensions
+## Existing TLDR and Summary Extensions
 
 If you prefer ready-made solutions, several Chrome extensions offer solid summarization:
 
@@ -276,7 +275,7 @@ If you prefer ready-made solutions, several Chrome extensions offer solid summar
 
 When evaluating these tools, consider accuracy with technical terminology, processing speed, privacy (where your data goes), customization options, and integration with your existing workflow.
 
-Practical Example: Summarizing API Documentation
+## Practical Example: Summarizing API Documentation
 
 Instead of reading 30 pages of API docs, a summarization workflow can streamline evaluation:
 
@@ -287,12 +286,11 @@ Instead of reading 30 pages of API docs, a summarization workflow can streamline
 
 This approach reduces documentation review time significantly while ensuring you don't miss critical information.
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for automatic article summarization demonstrates how browser extensions can enhance content consumption. The extractive approach described here provides fast, reliable summaries without external dependencies or API costs. Developers can extend this foundation with more sophisticated algorithms, machine learning models, or integration with external summarization services.
 
 For production use, consider adding error handling, loading states, and user preferences to create a polished experience. The complete code provides a working starting point for developers interested in browser extension development and text processing.
-
 
 Related Reading
 

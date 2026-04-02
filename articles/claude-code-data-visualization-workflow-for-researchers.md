@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Data Visualization Workflow for Researchers
 
 Data visualization is a critical skill for researchers across disciplines, from analyzing experimental results to communicating findings in publications. Claude Code offers a powerful, flexible workflow that integrates smoothly with Python, R, and other data science tools. This guide walks you through building an efficient data visualization pipeline using Claude Code, complete with practical examples and actionable strategies.
 
-Setting Up Your Data Visualization Environment
+## Setting Up Your Data Visualization Environment
 
 Before building visualizations, ensure your environment is properly configured. Claude Code works best with a dedicated Python environment using uv for package management:
 
@@ -37,11 +36,11 @@ uv pip install scipy statsmodels scikit-learn
 
 This setup provides the foundation for creating publication-quality visualizations. Claude Code can interact with this environment through the Bash tool, executing Python scripts and capturing outputs for review.
 
-Loading and Preparing Data with Claude Code
+## Loading and Preparing Data with Claude Code
 
 The first step in any visualization workflow is loading and preparing your data. Claude Code excels at this through its file handling capabilities and Python integration.
 
-Reading Common Data Formats
+## Reading Common Data Formats
 
 Use the Read tool to examine your data files, then write Python scripts to load them:
 
@@ -61,7 +60,7 @@ print(data_clean.describe())
 
 Claude Code can iterate on data cleaning scripts based on the output it receives. If you encounter errors or unexpected results, simply describe the issue and ask Claude to modify the script.
 
-Data Transformation Patterns
+## Data Transformation Patterns
 
 For research datasets, common transformations include:
 
@@ -77,11 +76,11 @@ def normalize_column(series):
 data_normalized = data_clean.apply(normalize_column)
 ```
 
-Building Static Visualizations
+## Building Static Visualizations
 
 Static visualizations remain the standard for academic publications. Matplotlib and Seaborn offer fine-grained control over every aspect of your figures.
 
-Creating Publication-Quality Figures
+## Creating Publication-Quality Figures
 
 Set up a consistent style for your research figures:
 
@@ -109,7 +108,7 @@ plt.tight_layout()
 plt.savefig('figure1.png', bbox_inches='tight')
 ```
 
-Multi-Panel Figures
+## Multi-Panel Figures
 
 For complex analyses, create multi-panel figures that present related findings together:
 
@@ -136,11 +135,11 @@ plt.tight_layout()
 plt.savefig('figure2_multipanel.png', bbox_inches='tight')
 ```
 
-Interactive Visualizations with Plotly
+## Interactive Visualizations with Plotly
 
 For web-based presentations or exploratory analysis, Plotly creates interactive visualizations that allow zooming, panning, and hovering for details.
 
-Basic Interactive Charts
+## Basic Interactive Charts
 
 ```python
 import plotly.express as px
@@ -163,7 +162,7 @@ fig.update_layout(
 fig.write_html('interactive_plot.html')
 ```
 
-Advanced Interactive Dashboards
+## Advanced Interactive Dashboards
 
 For comprehensive data exploration, build dashboards that combine multiple visualization types:
 
@@ -190,11 +189,11 @@ fig.update_layout(height=800, title_text="Research Data Dashboard")
 fig.write_html('dashboard.html')
 ```
 
-Statistical Visualization and Analysis
+## Statistical Visualization and Analysis
 
 Research visualization often requires showing statistical relationships and uncertainty.
 
-Visualizing Uncertainty
+## Visualizing Uncertainty
 
 ```python
 import matplotlib.pyplot as plt
@@ -214,7 +213,7 @@ plt.tight_layout()
 plt.savefig('stat_comparison.png')
 ```
 
-Regression Analysis Visualization
+## Regression Analysis Visualization
 
 ```python
 import seaborn as sns
@@ -240,11 +239,11 @@ plt.figtext(0.15, 0.02, f'R² = {r_value2:.3f}, p = {p_value:.4f}')
 plt.savefig('regression_analysis.png')
 ```
 
-Automating Your Workflow
+## Automating Your Workflow
 
 The true power of Claude Code lies in workflow automation. Create reusable scripts that process new data automatically.
 
-Batch Processing Template
+## Batch Processing Template
 
 ```python
 import os
@@ -274,7 +273,7 @@ num_processed = process_experiment_data('./raw_data', './output')
 print(f"Processed {num_processed} files")
 ```
 
-Best Practices for Research Visualization
+## Best Practices for Research Visualization
 
 1. Design for your audience: Publication figures require different styling than exploratory visualizations
 2. Maintain reproducibility: Version control your data and visualization scripts together
@@ -282,7 +281,7 @@ Best Practices for Research Visualization
 4. Label clearly: Every axis needs a label, every figure needs a caption
 5. Test export formats: Verify that PNG, PDF, and SVG exports look correct
 
-Conclusion
+## Conclusion
 
 Claude Code transforms data visualization from a manual, time-consuming process into an efficient, reproducible workflow. By integrating Python's powerful visualization libraries with Claude Code's file handling and iteration capabilities, researchers can focus on insights rather than technical details. Start with the examples above, adapt them to your specific data formats, and build a personalized visualization pipeline that accelerates your research.
 

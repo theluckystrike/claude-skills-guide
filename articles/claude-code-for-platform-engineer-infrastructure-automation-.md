@@ -15,11 +15,11 @@ tags: [claude-code, claude-skills]
 
 {% raw %}
 
-Claude Code for Platform Engineer: Infrastructure Automation Tips
+## Claude Code for Platform Engineer: Infrastructure Automation Tips
 
 Platform engineers are constantly juggling multiple tools, configurations, and automation pipelines. Claude Code emerges as a powerful ally, transforming how you approach infrastructure automation, configuration management, and DevOps workflows. This guide provides practical tips for using Claude Code effectively in your platform engineering daily tasks.
 
-Why Platform Engineers Need Claude Code
+## Why Platform Engineers Need Claude Code
 
 Modern platform engineers work across Terraform, Kubernetes, Docker, GitHub Actions, Ansible, and countless other tools. Each has its own syntax, quirks, and best practices. Claude Code understands these tools deeply and can:
 
@@ -31,7 +31,7 @@ Modern platform engineers work across Terraform, Kubernetes, Docker, GitHub Acti
 
 The key is knowing how to communicate with Claude Code effectively for infrastructure-specific tasks.
 
-Tip 1: Use Claude Code for Terraform Development
+## Tip 1: Use Claude Code for Terraform Development
 
 When writing Terraform configurations, provide Claude Code with context about your cloud provider and specific requirements.
 
@@ -52,7 +52,7 @@ Review my Terraform files in ./terraform/ for security issues and best practices
 
 This identifies common problems like hardcoded credentials, missing tags, or insecure IAM policies.
 
-Tip 2: Use Claude Code for Kubernetes Manifests
+## Tip 2: Use Claude Code for Kubernetes Manifests
 
 Kubernetes YAML can be verbose and error-prone. Claude Code simplifies creating and managing manifests.
 
@@ -73,7 +73,7 @@ Explain why this pod is stuck in CrashLoopBackOff:
 
 Claude Code analyzes events, container states, and logs to identify root causes.
 
-Tip 3: Automate Script Creation for Repetitive Tasks
+## Tip 3: Automate Script Creation for Repetitive Tasks
 
 Platform engineers often repeat the same tasks across environments. Use Claude Code to generate automation scripts.
 
@@ -89,7 +89,7 @@ Use environment variables for credentials
 
 Claude Code produces scripts with proper error handling, logging, and security practices.
 
-Tip 4: Build Claude Skills for Your Infrastructure Stack
+## Tip 4: Build Claude Skills for Your Infrastructure Stack
 
 Create custom Claude skills that understand your specific infrastructure patterns. A skill for your team's conventions:
 
@@ -129,7 +129,7 @@ Now invoke this skill with:
 /infra-deploy Review my Terraform changes in this PR
 ```
 
-Tip 5: Use Claude Code for Pipeline Debugging
+## Tip 5: Use Claude Code for Pipeline Debugging
 
 CI/CD pipelines often fail in mysterious ways. Claude Code excels at analyzing logs and identifying issues.
 
@@ -149,7 +149,7 @@ Claude Code identifies issues like:
 - Timeout configurations
 - Cache miss strategies
 
-Tip 6: Document Infrastructure with Claude Code
+## Tip 6: Document Infrastructure with Claude Code
 
 Good documentation is crucial but often neglected. Use Claude Code to generate and maintain docs.
 
@@ -168,7 +168,7 @@ Include:
 
 Claude Code transforms code into clear, readable documentation.
 
-Tip 7: Compose Multiple Tools for Complex Workflows
+## Tip 7: Compose Multiple Tools for Complex Workflows
 
 Platform engineering tasks often require orchestrating multiple tools. Claude Code naturally handles these compositions.
 
@@ -182,7 +182,7 @@ Example multi-step task:
 
 Claude Code sequences these steps, running kubectl commands, reading files, and generating plans.
 
-Tip 8: Use Claude Code for Security Reviews
+## Tip 8: Use Claude Code for Security Reviews
 
 Infrastructure security is paramount. Claude Code helps identify vulnerabilities early.
 
@@ -201,7 +201,7 @@ Review this IAM policy for overly permissive access:
 
 Claude Code identifies risks and suggests least-privilege alternatives.
 
-Best Practices for Platform Engineering with Claude Code
+## Best Practices for Platform Engineering with Claude Code
 
 1. Provide context: Include your cloud provider, tool versions, and organizational constraints in prompts
 
@@ -213,7 +213,7 @@ Best Practices for Platform Engineering with Claude Code
 
 5. Combine with CLI tools: Use Claude Code alongside kubectl, terraform, and awscli for maximum efficiency
 
-Conclusion
+## Conclusion
 
 Claude Code transforms platform engineering from manual, error-prone work into assisted automation. By understanding how to communicate your infrastructure requirements effectively, you can generate reliable Terraform, debug Kubernetes issues, create solid CI/CD pipelines, and maintain secure, well-documented infrastructure.
 

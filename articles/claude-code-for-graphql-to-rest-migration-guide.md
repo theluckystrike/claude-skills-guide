@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for GraphQL to REST Migration Guide
 
 Migrating from GraphQL to REST is a significant architectural decision that many teams face as their applications evolve. Whether you are dealing with over-fetching concerns, client complexity, or simply want to use REST's widespread ecosystem, Claude Code can dramatically streamline this migration process. This guide walks you through practical strategies for moving your API from GraphQL to REST while maintaining functionality and minimizing disruptions.
 
-Understanding Your Migration Scope
+## Understanding Your Migration Scope
 
 Before diving into code changes, assess the scope of your migration. GraphQL and REST differ fundamentally in how they handle data fetching, so understanding what your current GraphQL implementation does is crucial for a successful transition.
 
@@ -31,11 +30,11 @@ Analyze my GraphQL schema in the schema.graphql file and create a mapping docume
 
 This mapping document becomes your blueprint for designing REST endpoints. Each GraphQL query typically maps to one or more REST endpoints, while mutations correspond to POST, PUT, or DELETE operations.
 
-Designing Your REST API Structure
+## Designing Your REST API Structure
 
 REST APIs benefit from thoughtful resource-oriented design. Claude Code can help you translate your GraphQL queries into well-structured REST endpoints that follow RESTful conventions.
 
-Mapping GraphQL Queries to REST Endpoints
+## Mapping GraphQL Queries to REST Endpoints
 
 GraphQL queries that fetch related data often require decomposition in REST. For example, consider this GraphQL query:
 
@@ -76,11 +75,11 @@ Ask Claude Code to generate this mapping automatically:
 Convert my GraphQL queries in queries.graphql to REST endpoints. Create an endpoint mapping document showing the URL structure, HTTP methods, and request/response formats for each GraphQL operation.
 ```
 
-Implementing the Migration with Claude Code
+## Implementing the Migration with Claude Code
 
 Once you have your endpoint mapping, Claude Code can help you implement the REST API systematically. The key is to work incrementally, maintaining backward compatibility where possible.
 
-Setting Up Your REST Project
+## Setting Up Your REST Project
 
 Create a new REST API project or add REST endpoints to your existing codebase:
 
@@ -105,7 +104,7 @@ We are migrating from GraphQL to REST.
 - Include OpenAPI/Swagger documentation
 ```
 
-Building Endpoints Incrementally
+## Building Endpoints Incrementally
 
 Implement your REST endpoints one resource at a time. Claude Code excels at generating boilerplate and helping you connect new endpoints to your existing business logic.
 
@@ -144,11 +143,11 @@ exports.getUserById = async (req, res) => {
 };
 ```
 
-Handling Data Transformation
+## Handling Data Transformation
 
 One of the challenges in GraphQL to REST migration is handling the different data shapes. GraphQL allows clients to request exactly the fields they need, while REST typically returns fixed response structures.
 
-Creating Transform Layers
+## Creating Transform Layers
 
 Implement transformation functions to handle the data shape differences. Claude Code can generate these transformers based on your GraphQL schema:
 
@@ -179,11 +178,11 @@ exports.transformUserWithPosts = (user, posts) => ({
 });
 ```
 
-Managing Query Parameters and Filtering
+## Managing Query Parameters and Filtering
 
 REST APIs handle filtering differently than GraphQL. In GraphQL, you might pass multiple arguments to filter results, while REST uses query parameters.
 
-Implementing Query Parameter Handling
+## Implementing Query Parameter Handling
 
 ```
 Add query parameter handling to the GET /users endpoint. Support filtering by name, email, createdAfter, createdBefore, and sorting by name, createdAt. Add pagination with limit and offset parameters.
@@ -231,11 +230,11 @@ exports.getAllUsers = async (req, res) => {
 };
 ```
 
-Testing Your Migration
+## Testing Your Migration
 
 Comprehensive testing ensures your REST API behaves identically to your GraphQL implementation from the client's perspective.
 
-Generating Test Cases
+## Generating Test Cases
 
 Use Claude Code to generate tests that verify parity with your GraphQL behavior:
 
@@ -246,11 +245,11 @@ creating user (success and validation errors), updating user, deleting user.
 Use Jest and supertest. Include assertions for response status, structure, and error handling.
 ```
 
-Documentation and Client Migration
+## Documentation and Client Migration
 
 Your REST API needs clear documentation to help clients migrate from GraphQL.
 
-Generating OpenAPI Documentation
+## Generating OpenAPI Documentation
 
 Claude Code can generate OpenAPI specifications from your implementation:
 
@@ -260,7 +259,7 @@ Include all endpoints, request/response schemas, error codes, and examples.
 Output to docs/openapi.yaml.
 ```
 
-Best Practices for a Smooth Transition
+## Best Practices for a Smooth Transition
 
 Follow these recommendations when migrating with Claude Code:
 

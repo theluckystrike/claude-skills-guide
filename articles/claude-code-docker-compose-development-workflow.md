@@ -14,13 +14,9 @@ tags: [claude-code, claude-skills]
 ---
 {% raw %}
 
-
-
-Claude Code Docker Compose Development Workflow
-
 Docker Compose has become an essential tool for developers managing multi-container applications. When combined with Claude Code, you get a powerful development environment where AI assistance handles container orchestration, debugging, and service configuration while you focus on writing code. This guide shows you how to build an efficient development workflow using Claude Code with Docker Compose, covering everything from initial setup to production-ready patterns.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 The foundation of a solid Docker Compose workflow starts with a well-structured project. Your directory layout should separate concerns between your application code and container configuration. A more complete project structure looks like this:
 
@@ -64,7 +60,7 @@ claude "Create a docker-compose.yml with a Node.js API service, PostgreSQL datab
 
 Claude Code generates a Compose file tailored to your requirements, including health checks and `depends_on` conditions that prevent your API from starting before the database is ready. You can then refine it interactively: ask Claude to add a worker service, change the base image, or configure resource limits.
 
-Essential Docker Compose Commands for Development
+## Essential Docker Compose Commands for Development
 
 Claude Code excels at translating your intent into precise Docker commands. Here are the workflows you'll use most frequently:
 
@@ -128,7 +124,7 @@ The difference between `stop` and `down -v` matters: `stop` preserves your datab
 
 When you're stuck on a Docker issue, describe the problem to Claude. If your containers fail to start or you encounter networking problems, paste the error output and ask for troubleshooting steps. Claude can analyze the error messages and suggest fixes. whether it's a port conflict, missing environment variable, or volume mounting issue.
 
-Complete docker-compose.yml for a Production-Grade Dev Stack
+## Complete docker-compose.yml for a Production-Grade Dev Stack
 
 Below is a realistic, full-featured Compose file for a Node.js API with PostgreSQL, Redis, and a background worker. This is the kind of output you can ask Claude to generate for you:
 
@@ -205,7 +201,7 @@ volumes:
 
 The `service_healthy` condition on `depends_on` is critical. Without it, your API container starts immediately after PostgreSQL's container starts, but the database process inside may not be accepting connections yet. The health check ensures your API only starts when the database is truly ready.
 
-Integrating Claude Skills for Docker Workflows
+## Integrating Claude Skills for Docker Workflows
 
 Several Claude skills enhance your Docker Compose development:
 
@@ -256,11 +252,11 @@ Using `tmpfs` for the test database stores data in memory rather than on disk. I
 
 Run your test container in isolation: `docker-compose run --rm test`. This approach keeps your testing environment identical across all team members regardless of their local setup.
 
-Debugging Containerized Applications
+## Debugging Containerized Applications
 
 Debugging inside Docker containers requires a different approach than local development. Here is a structured way to diagnose the most common failure modes with Claude's help:
 
-Container exits immediately
+## Container exits immediately
 
 Check logs with `docker-compose logs service-name`. The most common causes are missing dependencies, syntax errors in environment variables, or an entrypoint script exiting non-zero. Paste the full log output to Claude for analysis.
 
@@ -268,7 +264,7 @@ Check logs with `docker-compose logs service-name`. The most common causes are m
 docker-compose logs api --tail=50
 ```
 
-Network connectivity issues
+## Network connectivity issues
 
 In Docker Compose, services communicate using their service names as hostnames. not `localhost`. If your API tries to connect to `localhost:5432`, it fails because Postgres is in a different container. The correct connection string is:
 
@@ -283,7 +279,7 @@ docker-compose exec api nslookup db
 docker-compose exec api curl -v http://cache:6379
 ```
 
-Permission problems on volume mounts
+## Permission problems on volume mounts
 
 Containers often run as a non-root user, but mounted host files may have different ownership. Fix this by matching UIDs in your Dockerfile:
 
@@ -297,7 +293,7 @@ COPY --chown=appuser:appgroup . .
 USER appuser
 ```
 
-Port already in use
+## Port already in use
 
 When a port is taken, Docker fails with `Bind for 0.0.0.0:5432 failed: port is already allocated`. Find what process holds it and either stop that process or change the host-side port mapping in Compose:
 
@@ -309,7 +305,7 @@ Then kill it or change the Compose mapping to "5433:5432"
 
 When debugging, provide Claude with specific error messages and your Compose configuration. The more context you give, the more accurate the troubleshooting guidance.
 
-Environment Configuration Best Practices
+## Environment Configuration Best Practices
 
 Environment variables are critical for Docker Compose workflows. A well-organized `.env` file covers all services:
 
@@ -374,11 +370,11 @@ REDIS_PASSWORD=
 LOG_LEVEL=debug
 ```
 
-Optimizing Development Speed
+## Optimizing Development Speed
 
 Slow builds and restarts kill developer productivity. These patterns keep iteration fast:
 
-Multi-stage Dockerfiles for dev vs. production
+## Multi-stage Dockerfiles for dev vs. production
 
 A `Dockerfile.dev` installs dev dependencies and uses nodemon for hot reloading:
 
@@ -398,7 +394,7 @@ COPY src/ ./src/
 CMD ["node", "src/index.js"]
 ```
 
-Hot-reload volume mounts
+## Hot-reload volume mounts
 
 ```yaml
 services:
@@ -417,7 +413,7 @@ services:
 
 The anonymous volume `/app/node_modules` prevents the host's `node_modules` directory (or its absence) from overwriting the container's installed packages. `CHOKIDAR_USEPOLLING=true` is needed on some macOS and Windows hosts where inotify events do not propagate into containers reliably.
 
-Comparison: volume mount strategies
+## Comparison: volume mount strategies
 
 | Strategy | Use case | Tradeoff |
 |---|---|---|
@@ -427,7 +423,7 @@ Comparison: volume mount strategies
 | Anonymous volume | Ephemeral scratch space | Cannot be reused across runs |
 | No volume (copy only) | Production builds | Immutable, no live reload |
 
-Managing Multiple Projects
+## Managing Multiple Projects
 
 As you work on multiple Docker Compose projects simultaneously, container and network names collide unless you use project names. There are two ways to set the project name:
 
@@ -461,7 +457,7 @@ docker compose ls
 
 The supermemory skill helps you remember project-specific Docker configurations across different work sessions. Ask Claude to index your Compose files, common debugging patterns, and the specific quirks of each project so you can retrieve them by name in future sessions.
 
-Splitting Configuration with Override Files
+## Splitting Configuration with Override Files
 
 Docker Compose supports layered configuration through override files. The base `docker-compose.yml` defines the canonical architecture, while environment-specific files add or change settings without touching the base:
 
@@ -518,11 +514,11 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
 This pattern keeps your development ergonomics (exposed ports, volume mounts, debug logging) completely separate from production concerns (resource limits, image tags, replica counts).
 
-Production Considerations
+## Production Considerations
 
 While Docker Compose excels at local development, production deployments typically use Kubernetes or managed container services. However, your Compose files still serve as valuable documentation for your architecture and can drive CI/CD pipelines.
 
-Using Compose in CI pipelines
+## Using Compose in CI pipelines
 
 GitHub Actions can spin up your full stack to run integration tests:
 
@@ -555,7 +551,7 @@ claude "Use the pdf skill to create an architecture diagram from this docker-com
 
 Keep development and production configurations separate using the override pattern described above. This avoids the common mistake of accidentally running production containers with development volume mounts that expose source code.
 
-Compose v1 vs. Compose v2 command syntax
+## Compose v1 vs. Compose v2 command syntax
 
 | Action | Compose v1 | Compose v2 |
 |---|---|---|
@@ -581,10 +577,9 @@ services:
 
 Start everything including tools: `docker compose --profile tools up -d`. By default, `docker compose up -d` starts only `api`, keeping your dev environment lean.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Docker Compose from a manual orchestration tool into an intelligent development partner. By describing your goals and problems in natural language, you get actionable Docker commands, debugging guidance, and complete Compose configurations tailored to your stack. The key practices covered here. layered override files, health check dependencies, hot-reload volume mounts, per-project naming, and CI integration. make the difference between a fragile local setup and one that works consistently across your entire team. Combined with skills like tdd for containerized testing, pdf for architecture documentation, and supermemory for knowledge retention, you build a development workflow that is both powerful and maintainable from day one.
-
 
 Related Reading
 

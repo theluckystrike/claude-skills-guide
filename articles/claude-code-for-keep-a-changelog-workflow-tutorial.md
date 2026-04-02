@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 
 Keeping a well-maintained changelog is one of those best practices that every developer acknowledges but few actually follow consistently. The Keep a Changelog specification provides a standardized format, but manually updating it after each release becomes tedious. This is where Claude Code shines, automating the maintenance of your changelog while ensuring it follows the established conventions.
@@ -46,11 +45,11 @@ Changed
 
 Claude Code can help you generate, maintain, and update this format automatically as part of your development workflow.
 
-Setting Up Your Changelog Workflow with Claude Code
+## Setting Up Your Changelog Workflow with Claude Code
 
 The first step is ensuring your project has a properly structured CHANGELOG.md file. You can create one manually or have Claude help you set it up. Here's how to configure Claude to assist with changelog management:
 
-Step 1: Create a CLAUDE.md Entry for Changelog
+## Step 1: Create a CLAUDE.md Entry for Changelog
 
 Add the following to your project's CLAUDE.md to help Claude understand your changelog preferences:
 
@@ -64,7 +63,7 @@ Changelog Management
 - Update changelog before creating release tags
 ```
 
-Step 2: Configure Conventional Commits
+## Step 2: Configure Conventional Commits
 
 Claude works best with changelog management when your project uses Conventional Commits. This provides the context needed to automatically categorize changes. Ensure your commit messages follow this format:
 
@@ -74,9 +73,9 @@ git commit -m "fix: resolve login redirect issue"
 git commit -m "docs: update API documentation"
 ```
 
-Practical Examples: Automating Changelog Updates
+## Practical Examples: Automating Changelog Updates
 
-Example 1: Generating Changelog Entries from Commits
+## Example 1: Generating Changelog Entries from Commits
 
 When you're ready to release a new version, ask Claude Code to generate the changelog entry:
 
@@ -100,7 +99,7 @@ Changed
 - Improve initial page load by 40%
 ```
 
-Example 2: Reviewing Unreleased Changes
+## Example 2: Reviewing Unreleased Changes
 
 Before creating a release, ask Claude to review what's changed:
 
@@ -108,7 +107,7 @@ Before creating a release, ask Claude to review what's changed:
 
 Claude will scan commits, PRs, and diffs to present a summary of unreleased changes organized by type.
 
-Example 3: Maintaining the Changelog File
+## Example 3: Maintaining the Changelog File
 
 Ask Claude to update your CHANGELOG.md:
 
@@ -129,7 +128,7 @@ Changed
 - Updated dependencies
 ```
 
-Actionable Advice for Changelog Success
+## Actionable Advice for Changelog Success
 
 1. Update Continuously, Not Just at Release
 
@@ -193,7 +192,7 @@ jobs:
           claude "Analyze PR #{{ github.event.pull_request.number }} and add appropriate entry to CHANGELOG.md Unreleased section"
 ```
 
-Integrating Changelog into Your Development Cycle
+## Integrating Changelog into Your Development Cycle
 
 The most effective approach makes changelog maintenance part of your regular workflow:
 
@@ -204,7 +203,7 @@ The most effective approach makes changelog maintenance part of your regular wor
 
 This continuous approach prevents the overwhelming task of reconstructing changelogs from memory at release time.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 - Vague Descriptions: Instead of "Added stuff," write "Added user authentication with OAuth2 support"
 - Inconsistent Categorization: Always use the Keep a Changelog section names
@@ -213,7 +212,7 @@ Common Pitfalls to Avoid
 
 Claude Code can help enforce these standards by validating your changelog entries against the Keep a Changelog specification.
 
-Conclusion
+## Conclusion
 
 Maintaining a well-structured changelog doesn't have to be a burden. By using Claude Code's understanding of your project context, commit history, and the Keep a Changelog format, you can automate most of this work while ensuring consistency and completeness.
 

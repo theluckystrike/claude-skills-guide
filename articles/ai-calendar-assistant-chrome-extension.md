@@ -13,19 +13,18 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-
 {% raw %}
 Building an AI calendar assistant as a Chrome extension combines browser extension development with natural language processing and calendar API integration. This guide walks you through the architecture, implementation patterns, and practical considerations for creating a production-ready AI calendar assistant Chrome extension.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 A Chrome extension for AI calendar management typically consists of three core components: the background service worker handling API communications, the content script for UI injection, and a popup interface for quick interactions. The AI layer sits either locally (using WebLLM or similar) or connects to external APIs like OpenAI, Anthropic, or self-hosted models.
 
 The most practical architecture uses a hybrid approach: lightweight NLP runs locally for intent classification, while complex reasoning delegates to external AI services. This reduces API costs and improves response times for common operations.
 
-Core Components and Implementation
+## Core Components and Implementation
 
-Manifest Configuration
+## Manifest Configuration
 
 Your extension starts with the manifest file. For a modern AI calendar assistant, you'll need permissions for storage, identity, and calendar APIs:
 
@@ -48,7 +47,7 @@ Your extension starts with the manifest file. For a modern AI calendar assistant
 }
 ```
 
-Calendar API Integration
+## Calendar API Integration
 
 Google Calendar provides a solid API for reading and writing events. Here's a service module for handling calendar operations:
 
@@ -89,7 +88,7 @@ export class CalendarService {
 }
 ```
 
-Natural Language Processing Layer
+## Natural Language Processing Layer
 
 The AI component interprets natural language inputs and converts them to structured calendar events. A practical implementation uses intent recognition combined with entity extraction:
 
@@ -144,7 +143,7 @@ export class CalendarNLP {
 }
 ```
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides quick access to AI scheduling. Design it for rapid input with immediate feedback:
 
@@ -174,7 +173,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Security and Performance Considerations
+## Security and Performance Considerations
 
 When building AI calendar assistants, consider these practical aspects:
 
@@ -212,7 +211,7 @@ class RateLimitedClient {
 }
 ```
 
-Injecting a Scheduling Prompt Into Gmail and Google Meet
+## Injecting a Scheduling Prompt Into Gmail and Google Meet
 
 Content scripts allow your extension to inject UI directly into pages the user is already visiting. A practical enhancement is detecting meeting invites in Gmail and offering a one-click "Add to Calendar" button powered by your NLP layer:
 
@@ -262,7 +261,7 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 The background service worker receives the `PARSE_EMAIL` message and calls your NLP service, keeping API keys out of the content script context entirely.
 
-Handling Recurring Events
+## Handling Recurring Events
 
 Recurring events are one of the trickiest cases for natural language scheduling. Phrases like "every Tuesday at 3 PM for the next 6 weeks" require generating an RFC 5545-compliant recurrence rule. Google Calendar's API accepts these as a `recurrence` array on the event object:
 
@@ -298,7 +297,7 @@ const event = {
 
 Always pass the user's local timezone using `Intl.DateTimeFormat().resolvedOptions().timeZone`. Failing to do so is the most common source of events appearing one hour off for users in non-UTC zones.
 
-Conflict Detection Before Event Creation
+## Conflict Detection Before Event Creation
 
 Creating an event that overlaps an existing one is a poor user experience. Add a conflict check step that queries the user's free/busy status before committing to the creation:
 
@@ -338,7 +337,7 @@ if (conflicts) {
 
 The `freeBusy` endpoint is lightweight and fast, making it practical to call on every creation attempt without a noticeable performance hit.
 
-Caching Calendar Data Locally
+## Caching Calendar Data Locally
 
 Fetching the full event list every time the popup opens creates unnecessary latency and burns through API quota. A simple TTL cache in `chrome.storage.local` dramatically improves perceived performance:
 
@@ -367,16 +366,15 @@ async function getCachedEvents(accessToken, timeMin, timeMax) {
 
 Invalidate the cache whenever you create, update, or delete an event so the next popup open reflects the correct state. A simple approach is to delete all keys matching the `events_` prefix after any write operation.
 
-Extension Distribution
+## Extension Distribution
 
 For Chrome Web Store submission, prepare your extension with proper icons (128x128, 48x48, 16x16), a detailed description, and privacy policy. Users increasingly scrutinize calendar permissions, so explain exactly how AI processes their data.
 
 Consider offering a self-hosted option where users run their own AI models, addressing privacy concerns for enterprise users.
 
-Conclusion
+## Conclusion
 
 Building an AI calendar assistant Chrome extension requires integrating multiple technologies: browser APIs, calendar services, and AI/ML capabilities. Start with the Google Calendar API, add simple pattern matching for common requests, then layer in AI for complex natural language understanding. The key is balancing functionality with performance and security considerations specific to calendar data.
-
 
 Related Reading
 

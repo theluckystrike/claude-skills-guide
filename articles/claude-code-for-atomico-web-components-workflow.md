@@ -13,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Atomico Web Components Workflow
 
 Atomico is a modern web components library that combines the simplicity of custom elements with a React-like developer experience. When paired with Claude Code, you can dramatically accelerate your web components development workflow, from initial scaffolding to testing and optimization. This guide shows you how to use Claude Code effectively for building production-ready Atomico web components.
 
-Understanding Atomico and Its Developer Experience
+## Understanding Atomico and Its Developer Experience
 
 Atomico distinguishes itself from other web component libraries by offering a component-based API that feels familiar to React developers while outputting native custom elements. The library uses a syntax similar to React's JSX, making it accessible to developers already comfortable with React patterns. What makes Atomico particularly powerful is its small bundle size and built-in support for TypeScript, reactive properties, and lifecycle hooks.
 
 When you combine Atomico with Claude Code, you gain an AI assistant that understands web component architecture, shadow DOM concepts, and modern JavaScript patterns. Claude Code can help you generate component structures, implement complex logic, set up testing environments, and ensure your components follow best practices for accessibility and performance.
 
-Setting Up Your Atomico Project with Claude Code
+## Setting Up Your Atomico Project with Claude Code
 
 Before diving into component development, ensure your project is properly configured. Claude Code can guide you through the initial setup or help you integrate Atomico into an existing project. The key files you'll need include a proper package.json with Atomico as a dependency, TypeScript configuration for type safety, and a build tool like Vite for development and bundling.
 
@@ -54,7 +53,7 @@ Your tsconfig.json should enable modern JavaScript features and web component ty
 }
 ```
 
-Creating Your First Atomico Component
+## Creating Your First Atomico Component
 
 Atomico components are defined using a function that returns JSX-like syntax. Claude Code can help you create components with proper typing, styling, and best practices from the start. Here's a practical example of a button component:
 
@@ -97,7 +96,7 @@ customElements.define("my-button", c(Button));
 
 When working with Claude Code, describe your component requirements clearly. Instead of saying "create a button," specify the exact functionality: "Create an Atomico button component with primary and secondary variants, disabled state support, and slot for content."
 
-Managing Component State and Reactivity
+## Managing Component State and Reactivity
 
 Atomico provides reactive properties that automatically trigger re-renders when changed. Claude Code excels at helping you understand and implement these patterns correctly. The key concepts include using the props object to define reactive properties, implementing custom getters and setters for computed values, and using the useEffect hook for side effects.
 
@@ -128,7 +127,7 @@ customElements.define("my-counter", c(Counter));
 
 When asking Claude Code to implement stateful components, specify your state requirements explicitly. Mention which properties should be reactive, any initial values, and how state changes should affect the DOM.
 
-Styling Strategies for Shadow DOM
+## Styling Strategies for Shadow DOM
 
 One of the most powerful features of web components is shadow DOM, which provides style encapsulation. Atomico supports multiple styling approaches including inline styles, CSS files, and CSS-in-JS patterns. Claude Code can help you choose the right approach based on your project's requirements.
 
@@ -165,7 +164,7 @@ function MyButton({ variant }) {
 
 When working with Claude Code on styling, describe your visual requirements in detail. Specify colors, spacing, typography, and any interactive states like hover or focus. Claude Code can translate these descriptions into proper CSS while maintaining shadow DOM encapsulation.
 
-Testing Your Atomico Components
+## Testing Your Atomico Components
 
 Testing web components requires understanding how to interact with custom elements in the DOM. Claude Code can help you set up testing with tools like Web Test Runner or Vitest, and write tests that properly interact with shadow DOM boundaries.
 
@@ -197,13 +196,13 @@ describe("my-button", () => {
 
 When requesting tests from Claude Code, specify what behaviors need testing: rendering, attribute changes, event dispatching, and edge cases. Claude Code understands web component testing patterns and will generate appropriate test coverage.
 
-Best Practices for Component Development
+## Best Practices for Component Development
 
 Following these practices will ensure your Atomico components are maintainable and production-ready. First, always define proper types for your props to enable TypeScript support and IDE autocompletion. Second, use semantic HTML elements within your components for better accessibility. Third, emit custom events when your component needs to communicate with the outside world.
 
 Claude Code can help you implement these patterns consistently. When describing components, always mention accessibility requirements: "Create an accessible button that handles keyboard navigation and screen readers." For event handling, specify the events your component should emit: "The component should emit 'change' events when the value updates."
 
-Conclusion
+## Conclusion
 
 Using Claude Code for Atomico web components development significantly accelerates your workflow. The AI assistant understands web component architecture, shadow DOM patterns, and modern JavaScript best practices. By providing clear, detailed requirements and using Claude Code's understanding of Atomico's API, you can generate production-ready components quickly while maintaining high code quality.
 

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Shell Operator Workflow Tutorial"
 description: "Learn how to use Claude Code to build, debug, and automate shell operator workflows. A comprehensive guide for developers working with Kubernetes."
@@ -14,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Shell Operator Workflow Tutorial
-
 Shell operators are fundamental to infrastructure automation, enabling you to build custom controllers that manage resources outside the Kubernetes API. Whether you're creating a Kubernetes Operator that wraps a CLI tool, building a shell-based automation system, or managing infrastructure as code, Claude Code can dramatically accelerate your workflow. This tutorial shows you how to use Claude Code effectively when building and maintaining shell operator workflows.
 
-Understanding Shell Operators
+## Understanding Shell Operators
 
 A shell operator is essentially a program that runs in a loop, watching for events and taking action when something changes. In the Kubernetes ecosystem, operators extend the API to manage custom resources. Shell operators typically work by:
 
@@ -30,7 +26,7 @@ A shell operator is essentially a program that runs in a loop, watching for even
 
 Claude Code can assist at every stage, from initial operator design to debugging production issues.
 
-Setting Up Your Operator Project
+## Setting Up Your Operator Project
 
 Start by describing your operator requirements to Claude. Instead of writing boilerplate code manually, explain what you need:
 
@@ -54,9 +50,9 @@ backup-operator/
      mock_data/
 ```
 
-Core Operator Patterns
+## Core Operator Patterns
 
-The Reconciliation Loop
+## The Reconciliation Loop
 
 Every operator needs a reconciliation loop that watches for changes and takes action. Here's a pattern Claude often generates:
 
@@ -93,7 +89,7 @@ done
 
 Claude generates this with proper error handling and the ability to handle edge cases you might not initially consider.
 
-Handling Status Updates
+## Handling Status Updates
 
 Shell operators need to update resource status. Here's a common pattern:
 
@@ -117,7 +113,7 @@ Usage
 update_status "backup-001" "production" "Running" "Starting backup process"
 ```
 
-Debugging Operator Issues
+## Debugging Operator Issues
 
 When your operator fails in production, Claude becomes invaluable for debugging. Describe the symptoms:
 
@@ -131,7 +127,7 @@ Claude will guide you through common issues:
 - Permission denied: Check that your script has execute permissions in the container image
 - Missing dependencies: Verify all required commands are available in your operator image
 
-Common Debugging Patterns
+## Common Debugging Patterns
 
 ```bash
 Debug: Enable verbose output
@@ -147,7 +143,7 @@ Debug: Capture full output
 exec > >(tee /var/log/operator.log) 2>&1
 ```
 
-Building Operator Skills
+## Building Operator Skills
 
 You can create a Claude Skill specifically for your operator to ensure consistent behavior:
 
@@ -157,7 +153,7 @@ name: shell-operator
 description: "Specialized assistance for building and debugging shell-based Kubernetes operators"
 ```
 
-Testing Your Operator
+## Testing Your Operator
 
 Automated testing is crucial for reliable operators. Claude can help set up comprehensive test suites:
 
@@ -221,9 +217,9 @@ test_operator_integration() {
 }
 ```
 
-Best Practices
+## Best Practices
 
-Resource Management
+## Resource Management
 
 Always handle cleanup properly in shell operators:
 
@@ -242,7 +238,7 @@ cleanup() {
 trap cleanup EXIT SIGTERM SIGINT
 ```
 
-Secret Handling
+## Secret Handling
 
 Never log secrets:
 
@@ -258,7 +254,7 @@ Reference secrets as files, not environment variables
 DB_PASSWORD=$(cat /secrets/db/password)
 ```
 
-Observability
+## Observability
 
 Add structured logging:
 
@@ -277,7 +273,7 @@ log_json() {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms shell operator development from manually writing scripts to describing requirements and letting AI generate solid, production-ready code. By using Claude's capabilities for code generation, debugging, and skill creation, you can build more reliable operators faster. Start with clear descriptions of your operator's purpose, use skills to maintain consistency, and always test thoroughly before deploying to production.
 

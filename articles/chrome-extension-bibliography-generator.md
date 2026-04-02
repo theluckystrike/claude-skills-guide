@@ -21,7 +21,7 @@ Manual citation formatting consumes significant time, especially when working ac
 
 For developers, building this extension provides hands-on experience with Chrome's extension APIs, content scripts, and message passing between components. The project combines web scraping, data parsing, and formatting logic, skills transferable to many other extension projects.
 
-Core Architecture
+## Core Architecture
 
 A bibliography generator extension consists of three primary components:
 
@@ -49,7 +49,7 @@ The manifest declares which websites the extension can access and what capabilit
 }
 ```
 
-Extracting Metadata from Web Pages
+## Extracting Metadata from Web Pages
 
 The content script runs on every page and extracts relevant bibliographic information. Different website structures require different extraction strategies:
 
@@ -115,7 +115,7 @@ chrome.runtime.sendMessage({
 });
 ```
 
-Citation Style Formatting
+## Citation Style Formatting
 
 The background script receives metadata and formats it according to selected citation styles. Here's a formatter implementing APA, MLA, and Chicago styles:
 
@@ -163,7 +163,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides users with style selection and quick actions:
 
@@ -217,7 +217,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
 });
 ```
 
-Handling Edge Cases
+## Handling Edge Cases
 
 Real-world websites present various challenges. Implement fallback strategies for incomplete metadata:
 
@@ -235,7 +235,7 @@ function normalizeMetadata(raw) {
 
 For pages with no standard metadata, you might implement a fallback that extracts the first heading and uses the page's last-modified date from the server headers.
 
-Extension Deployment
+## Extension Deployment
 
 When your extension is ready, package it for distribution:
 
@@ -245,11 +245,11 @@ When your extension is ready, package it for distribution:
 4. Select your extension directory
 5. Distribute the generated `.crx` file or publish to Chrome Web Store
 
-Conclusion
+## Conclusion
 
 Building a bibliography generator Chrome extension combines practical utility with valuable development experience. The extension architecture, manifest configuration, content scripts, message passing, applies directly to countless other extension projects. Start with the basic implementation above, then expand with features like citation collection management, export to BibTeX or RIS formats, and integration with reference managers like Zotero.
 
-Step-by-Step Guide: Capturing a Citation
+## Step-by-Step Guide: Capturing a Citation
 
 1. Navigate to any article or web page you want to cite
 2. Click the extension icon. the popup shows auto-detected metadata
@@ -259,7 +259,7 @@ Step-by-Step Guide: Capturing a Citation
 
 For pages with poor metadata, the popup shows editable fields so you can correct values before generating the citation.
 
-Advanced: BibTeX and RIS Export
+## Advanced: BibTeX and RIS Export
 
 Academic workflows often require machine-readable formats. Add BibTeX export:
 
@@ -286,7 +286,7 @@ function toRIS(ref) {
 }
 ```
 
-Comparison with Manual Citation Tools
+## Comparison with Manual Citation Tools
 
 | Approach | Speed | Format support | Cost |
 |---|---|---|---|
@@ -296,7 +296,7 @@ Comparison with Manual Citation Tools
 
 The extension wins on speed for developers already working in Chrome. you never leave the page you are citing.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Metadata not extracting correctly: Build a fallback chain for title extraction:
 
@@ -331,7 +331,6 @@ Clipboard permission denied: Trigger copy only from a direct button click handle
 Publication date off by one day: Parse dates with `new Date(dateString).toLocaleDateString()` to display the correct local date.
 
 Start with the basic implementation, then expand with BibTeX/RIS export and integration with reference managers like Zotero.
-
 
 Related Reading
 

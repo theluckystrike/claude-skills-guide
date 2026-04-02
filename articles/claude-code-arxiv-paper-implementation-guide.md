@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code ArXiv Paper Implementation Guide
 
 Research papers on ArXiv contain cutting-edge algorithms and techniques, but translating academic descriptions into working code can be challenging. The gap between a paper's mathematical formalism and a running implementation often takes experienced engineers days of careful reading, failed experiments, and hard-won debugging. This guide shows you how to use Claude Code to efficiently understand and implement algorithms directly from ArXiv papers. from reading the abstract to running validated tests against reported benchmarks.
 
-Why Use Claude Code for Paper Implementation
+## Why Use Claude Code for Paper Implementation
 
 Claude Code excels at parsing dense technical writing and converting it into executable code. When you feed a research paper to Claude, it can:
 
@@ -32,7 +31,7 @@ Claude Code excels at parsing dense technical writing and converting it into exe
 
 The key is providing Claude with the right context and structure to work effectively.
 
-Claude Code vs. Manual Implementation
+## Claude Code vs. Manual Implementation
 
 | Approach | Time to First Running Code | Risk of Misreading Paper | Handles Math Notation | Suggests Tests |
 |---|---|---|---|---|
@@ -43,7 +42,7 @@ Claude Code vs. Manual Implementation
 
 The sweet spot for Claude Code is papers where no reference implementation exists. which is the case for most papers published within the last 12 months.
 
-Setting Up Your Workflow
+## Setting Up Your Workflow
 
 Before implementing a paper, prepare your workspace:
 
@@ -91,7 +90,7 @@ Paper: Attention Is All You Need
 
 Reference this file at the start of each Claude session to restore context instantly.
 
-Extracting Algorithms from Papers
+## Extracting Algorithms from Papers
 
 The first step is getting Claude to understand the paper's core contribution. Share the paper's abstract and key sections, then ask Claude to extract the algorithm:
 
@@ -107,7 +106,7 @@ Claude will break down complex algorithms into actionable steps. For instance, w
 
 That last point. residual connection ordering. is a classic example of an ambiguity where the original paper uses post-norm but most modern reimplementations use pre-norm for training stability. Claude will flag this kind of practical deviation and explain the trade-off.
 
-Structuring Your Extraction Prompt
+## Structuring Your Extraction Prompt
 
 Vague prompts produce vague extractions. Here is a prompt template that consistently produces high-quality pseudocode:
 
@@ -123,7 +122,7 @@ Task:
 5. Flag any equations that require numerical stability considerations.
 ```
 
-Translating Mathematics to Code
+## Translating Mathematics to Code
 
 Research papers express algorithms mathematically. Claude Code excels at converting these formulas into executable functions.
 
@@ -177,7 +176,7 @@ def scaled_dot_product_attention(query, key, value, mask=None, scale=True):
 
 Notice how the docstring captures input/output specifications. this is essential for maintainability. It also adds the `mask` parameter which the formula does not show but which is required for any practical transformer implementation.
 
-Multi-Head Attention: From Formula to Module
+## Multi-Head Attention: From Formula to Module
 
 The full multi-head attention module shows how a single formula expands into a complete class:
 
@@ -234,7 +233,7 @@ class MultiHeadAttention(nn.Module):
         return self.w_o(attn_output), attn_weights
 ```
 
-Handling Pseudocode Translation
+## Handling Pseudocode Translation
 
 Papers often include pseudocode that differs from actual programming languages. Claude can convert pseudocode to your target language while handling ambiguities. A common source of bugs is when pseudocode uses 1-based indexing, mathematical notation for in-place updates, or assumes operations that are not atomic in practice.
 
@@ -272,7 +271,7 @@ def update_with_gradient_clipping(parameters, gradients, learning_rate=0.01, cli
 
 When pseudocode is ambiguous, prompt Claude explicitly: "The pseudocode uses `update(x, g)` without defining it. Based on the paper's surrounding context and the optimization method described in Section 4, what is the most likely intended operation?"
 
-Building Complete Implementations
+## Building Complete Implementations
 
 Once you have core functions, ask Claude to help assemble a complete implementation. A well-structured modular layout looks like this:
 
@@ -287,7 +286,7 @@ src/
  config.py         # Hyperparameters as dataclass or config file
 ```
 
-A Practical Config Module
+## A Practical Config Module
 
 Papers report specific hyperparameter values that must be preserved exactly for reproducibility. A dataclass config makes this explicit:
 
@@ -337,7 +336,7 @@ def get_big_config() -> TransformerConfig:
     )
 ```
 
-Training Loop with Warmup Schedule
+## Training Loop with Warmup Schedule
 
 The paper's custom learning rate schedule is easy to miss in a first pass. Here is how Claude translates the formula into a scheduler:
 
@@ -405,7 +404,7 @@ def train_epoch(model, dataloader, optimizer, scheduler, criterion, device):
     return total_loss / len(dataloader)
 ```
 
-Testing Your Implementation
+## Testing Your Implementation
 
 Always validate against the paper's reported results. Claude can help generate test cases at multiple levels: unit tests for individual functions, integration tests for full forward passes, and regression tests against known outputs.
 
@@ -501,7 +500,7 @@ pytest tests/ -v --tb=short
 
 For numerical validation against the paper, compare your model's output on the paper's toy example if one is provided, or reproduce a single training step and compare loss values to any reported curves.
 
-Best Practices for Paper Implementation
+## Best Practices for Paper Implementation
 
 Provide Complete Context
 Include the paper's relevant sections, not just excerpts. Claude needs full context to handle edge cases and dependencies correctly. If a paper is 30+ pages, paste in Section 3 (Method), relevant appendices, and the main table of results. Skip the related work and introduction.
@@ -525,7 +524,7 @@ git commit -m "feat: add positional encoding"
 git commit -m "test: validate attention weight normalization"
 ```
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 | Pitfall | Description | How to Avoid |
 |---|---|---|
@@ -537,7 +536,7 @@ Common Pitfalls to Avoid
 | Ignoring hardware constraints | Batch size assumes specific GPU memory | Start with batch_size=1 and scale up with gradient accumulation |
 | Missing the masking | Causal or padding masks described in prose | Read every sentence in the forward pass description, not just equations |
 
-Handling Numerical Stability
+## Handling Numerical Stability
 
 Some algorithms are sensitive to numerical precision. Claude can flag these proactively if you ask:
 
@@ -563,7 +562,7 @@ Fix: gradient clipping before optimizer step
 torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
 ```
 
-Accelerating the Workflow with Claude Code Sessions
+## Accelerating the Workflow with Claude Code Sessions
 
 For a complete paper implementation, a productive Claude Code session flow looks like this:
 
@@ -575,7 +574,7 @@ For a complete paper implementation, a productive Claude Code session flow looks
 
 Keeping sessions focused on one module at a time prevents context overflow and makes each Claude interaction more precise.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms paper implementation from a tedious translation exercise into an interactive learning experience. By providing clear context, requesting modular implementations, and validating against paper results, you can efficiently bring academic research into your projects.
 

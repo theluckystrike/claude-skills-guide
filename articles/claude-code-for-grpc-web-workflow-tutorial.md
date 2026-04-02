@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for gRPC Web Workflow Tutorial
-
 [gRPC Web](https://github.com/grpc/grpc-web) has become a popular choice for building high-performance web APIs that communicate with backend services. When combined with Claude Code's AI-assisted development capabilities, you can significantly accelerate your gRPC Web workflow, from defining proto files to generating client code and implementing services. This tutorial walks you through integrating Claude Code into every stage of your gRPC Web development process.
 
-Understanding the gRPC Web Architecture
+## Understanding the gRPC Web Architecture
 
 Before diving into the workflow, let's establish the key components of a gRPC Web implementation:
 
@@ -29,7 +26,7 @@ Before diving into the workflow, let's establish the key components of a gRPC We
 
 Claude Code can assist you at each layer, generating boilerplate, validating proto definitions, and even helping debug communication issues between client and server.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 The first step is ensuring your local environment has the necessary tools. Claude Code can help verify and set up these dependencies:
 
@@ -80,7 +77,7 @@ message CreateUserRequest {
 }
 ```
 
-Generating Client Code with Claude Code
+## Generating Client Code with Claude Code
 
 Once your proto file is ready, the next step is generating the Web-compatible client code. Claude Code can help you construct the correct generation commands and troubleshoot issues:
 
@@ -102,7 +99,7 @@ After generation, you'll have several output files:
 
 Claude Code can verify these generated files and help you import them correctly in your frontend application.
 
-Implementing the Frontend Client
+## Implementing the Frontend Client
 
 With generated code in place, you can now implement the web client. Here's a practical example using the generated gRPC-Web client:
 
@@ -146,7 +143,7 @@ async function createUser(name, email) {
 }
 ```
 
-Debugging gRPC-Web Issues with Claude Code
+## Debugging gRPC-Web Issues with Claude Code
 
 One of the most valuable aspects of using Claude Code in your workflow is debugging. When gRPC-Web requests fail, Claude can help you trace through common issues:
 
@@ -164,7 +161,7 @@ Problem: Stream not working
 
 Claude Code can analyze your proxy configuration and suggest fixes for these common issues.
 
-Best Practices for gRPC-Web with Claude Code
+## Best Practices for gRPC-Web with Claude Code
 
 To get the most out of your gRPC-Web workflow, follow these best practices that Claude Code can help enforce:
 
@@ -178,7 +175,7 @@ To get the most out of your gRPC-Web workflow, follow these best practices that 
 
 5. Document your proto API: Add comments to your proto files using standard proto documentation syntax. Claude can help generate documentation from these comments.
 
-Advanced: Using Claude Code Skills for gRPC
+## Advanced: Using Claude Code Skills for gRPC
 
 You can create custom Claude Code skills specifically optimized for gRPC-Web development. Here's a skill definition that provides gRPC-specific guidance:
 
@@ -202,7 +199,7 @@ When asked to review code, focus on:
 4. Type safety in TypeScript implementations
 ```
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your gRPC-Web workflow transforms how you build and maintain web APIs. From generating initial proto definitions to debugging production issues, Claude Code acts as an intelligent partner throughout the development lifecycle. The key is establishing clean proto definitions, maintaining generated code properly, and using Claude's debugging capabilities when issues arise.
 

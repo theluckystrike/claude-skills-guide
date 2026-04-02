@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for IBC Cosmos Workflow"
 description: "A practical guide to using Claude Code for developing Inter-Blockchain Communication workflows in the Cosmos ecosystem. Learn how to automate IBC."
@@ -14,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for IBC Cosmos Workflow
 
@@ -22,7 +20,7 @@ The Inter-Blockchain Communication (IBC) protocol is the backbone of the Cosmos 
 
 This guide walks you through practical workflows for developing IBC-enabled applications using Claude Code, with concrete examples and actionable patterns you can apply immediately.
 
-Understanding IBC Architecture Basics
+## Understanding IBC Architecture Basics
 
 Before diving into Claude Code workflows, it's essential to understand the key components you'll be working with. IBC operates through a relayer process that monitors source chains for outgoing packets and relays them to destination chains. The relayer handles the transportation layer, while the IBC protocol itself handles authentication through light clients.
 
@@ -35,7 +33,7 @@ The core concepts include:
 
 When building IBC workflows, you'll often work with configuration files that define chain parameters, connection paths, and channel configurations. Claude Code excels at generating and validating these configurations.
 
-Setting Up Your IBC Development Environment
+## Setting Up Your IBC Development Environment
 
 Claude Code can help you set up a complete IBC development environment. Start by creating a project structure that separates your relayer configuration from your application code.
 
@@ -72,7 +70,7 @@ Key Commands
 
 This context helps Claude Code understand your specific IBC topology and provide relevant assistance.
 
-Generating Relayer Configurations
+## Generating Relayer Configurations
 
 One of Claude Code's strongest capabilities is generating complex configuration files. IBC relayer configurations can be tedious to write manually. Here's how to use Claude Code for this task.
 
@@ -108,7 +106,7 @@ Ask Claude Code to generate this configuration:
 
 Claude Code will generate the complete configuration, and you can refine it based on your specific requirements.
 
-Automating Channel Creation Workflows
+## Automating Channel Creation Workflows
 
 Creating IBC channels involves multiple steps: establishing a connection first, then creating channels within that connection. Claude Code can automate this multi-step process.
 
@@ -128,7 +126,7 @@ When working with Claude Code, describe your full workflow:
 
 Claude Code will generate a comprehensive script with proper error handling and validation steps.
 
-Debugging Cross-Chain Transaction Failures
+## Debugging Cross-Chain Transaction Failures
 
 IBC packet failures can be challenging to debug. Common issues include timeout blocks exceeded, acknowledgment failures, and connection routing problems. Claude Code can help you diagnose and resolve these issues systematically.
 
@@ -153,7 +151,7 @@ Ask Claude Code for debugging help:
 
 Claude Code will provide a targeted debugging workflow for your specific scenario.
 
-Implementing Cross-Chain Token Transfers
+## Implementing Cross-Chain Token Transfers
 
 IBC token transfers require proper denomination handling and channel configuration. Here's a practical example of handling cross-chain transfers programmatically:
 
@@ -204,7 +202,7 @@ Claude Code can help you implement these patterns with proper type safety and er
 
 > "Write TypeScript functions for IBC token transfers that handle both fungible and non-fungible token types, with proper timeout handling and error recovery logic."
 
-Building Custom IBC Middleware
+## Building Custom IBC Middleware
 
 For advanced use cases, you may need custom IBC middleware for application-specific packet handling. Claude Code can help scaffold these components:
 
@@ -254,7 +252,7 @@ Ask Claude Code to generate middleware boilerplate:
 
 > "Generate an IBC middleware implementation in Go that adds packet logging, metrics collection, and automatic retry logic for failed acknowledgments."
 
-Monitoring IBC Channel Health
+## Monitoring IBC Channel Health
 
 Production IBC workflows require monitoring. Here's a monitoring approach:
 
@@ -299,7 +297,7 @@ check_pending_packets
 
 Integrate this with your existing monitoring stack or ask Claude Code to adapt it for Prometheus/Grafana.
 
-Best Practices for IBC Development with Claude Code
+## Best Practices for IBC Development with Claude Code
 
 When working with Claude Code on IBC projects, follow these practices for optimal results:
 
@@ -318,7 +316,7 @@ Break Down Complex Tasks: Instead of asking for an entire IBC application, decom
 
 Validate Generated Code: Always review generated configurations and code. IBC involves real value transfers, errors can be costly. Test thoroughly on testnets before production.
 
-Conclusion
+## Conclusion
 
 Claude Code significantly accelerates IBC Cosmos workflow development by automating configuration generation, providing debugging assistance, and scaffolding complex components. The key is providing rich context about your specific chain topology and requirements.
 

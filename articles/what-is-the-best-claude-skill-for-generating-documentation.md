@@ -18,7 +18,7 @@ permalink: /what-is-the-best-claude-skill-for-generating-documentation/
 
 This guide compares the major documentation skills, explains when to use each one, and shows you concrete examples of how to combine them into a complete documentation workflow.
 
-Understanding Claude Skills for Documentation
+## Understanding Claude Skills for Documentation
 
 Claude skills are modular capabilities that extend Claude Code's functionality. Skills are Markdown files that you invoke with a slash command, they load a specialized set of instructions and capabilities into the conversation, telling Claude Code how to approach a particular task.
 
@@ -30,7 +30,7 @@ Output-format skills like `docx`, `pdf`, `pptx`, and `xlsx` focus on producing d
 
 Process skills like `tdd`, `supermemory`, and `frontend-design` integrate documentation into a development workflow. You use these when the goal is documentation that stays in sync with code or persists across sessions.
 
-The Best Option: docx Skill for Structured Documentation
+## The Best Option: docx Skill for Structured Documentation
 
 The docx skill stands out as the most versatile option for generating documentation. This skill allows you to create, edit, and format Microsoft Word documents programmatically, making it ideal for generating professional technical documentation that requires precise formatting, headers, tables, and embedded code blocks.
 
@@ -71,7 +71,7 @@ Use tables for the failure modes section. Highlight all CLI commands in code blo
 
 The output is ready to paste into Confluence, share as an email attachment, or store in your documentation repository.
 
-PDF Skill for Static Documentation
+## PDF Skill for Static Documentation
 
 If your documentation needs to be distributed as static files, the pdf skill offers excellent capabilities. This skill enables PDF creation and editing, making it suitable for generating downloadable documentation, API references, and user manuals.
 
@@ -91,7 +91,7 @@ The pdf skill also handles documentation that gets distributed externally. If yo
 
 Where pdf falls short is in documentation that changes frequently. Regenerating and redistributing PDFs every time the API changes is operationally heavier than updating a web-based reference doc. Use pdf for point-in-time documentation: release notes, compliance artifacts, versioned user manuals.
 
-Combining Skills for Comprehensive Documentation
+## Combining Skills for Comprehensive Documentation
 
 For most development workflows, the best approach combines multiple skills. Using the xlsx skill alongside docx allows you to generate documentation that includes data tables and metrics. The pptx skill enables you to create documentation presentations for stakeholder reviews.
 
@@ -116,7 +116,7 @@ There is no `from supermemory import Memory` Python package. The `/supermemory` 
 
 Supermemory is especially valuable for large projects where documentation work happens across many sessions over weeks or months. Without it, you have to re-explain context every time you start a new Claude Code session. With supermemory storing your architectural decisions, naming conventions, and style choices, the documentation Claude Code produces in session 20 is consistent with what it produced in session 1.
 
-Automation with TDD and Code Documentation
+## Automation with TDD and Code Documentation
 
 For developers practicing test-driven development, the tdd skill generates documentation alongside test code. This skill creates comprehensive docstrings and comments that serve as living documentation:
 
@@ -160,7 +160,7 @@ A new developer reading these tests understands the expected behavior immediatel
 
 For backend Python and Node.js projects, the tdd skill pairs well with tools like Sphinx (Python) or JSDoc (JavaScript) that automatically generate HTML reference docs from docstrings. Claude Code generates the docstrings; the build pipeline generates the reference site.
 
-Frontend Documentation with frontend-design
+## Frontend Documentation with frontend-design
 
 For projects requiring UI component documentation, the frontend-design skill helps create style guides and component libraries. This skill generates documentation that describes design systems, color palettes, and component APIs:
 
@@ -191,7 +191,7 @@ Include:
 
 The output feeds directly into a Storybook instance or a static design system site. Teams that maintain a component library find this skill saves significant time over manually maintaining component documentation that goes out of date every time a prop changes.
 
-Choosing the Right Skill for Your Needs
+## Choosing the Right Skill for Your Needs
 
 The best Claude skill for documentation depends on your specific requirements:
 
@@ -213,7 +213,7 @@ Most professional documentation workflows benefit from combining two or more of 
 
 Add pdf when you need a compliance or release artifact. Add pptx when you need to present the architecture to non-technical stakeholders.
 
-Building a Documentation Workflow
+## Building a Documentation Workflow
 
 Rather than treating documentation as a one-time task, the most effective teams build it into their development workflow as a continuous process. Claude Code skills make this practical by reducing the time cost enough that it becomes sustainable.
 
@@ -229,7 +229,7 @@ During incidents: Pull up the runbook generated by `/docx`. If it is missing ste
 
 This workflow keeps documentation alive rather than letting it become a historical artifact that no one trusts.
 
-Getting Started
+## Getting Started
 
 To begin using these skills, ensure you have Claude Code installed. The built-in skills like `/docx`, `/pdf`, `/pptx`, and `/xlsx` are available immediately. Community skills can be added by placing a Markdown skill file in `~/.claude/skills/`.
 

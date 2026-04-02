@@ -18,7 +18,7 @@ Wappalyzer has become the go-to tool for technology fingerprinting, helping deve
 
 This guide evaluates the best Wappalyzer alternatives with Chrome extensions, focusing on detection accuracy, developer features, API access, and overall value. It also covers building your own lightweight detector when off-the-shelf options don't fit your workflow.
 
-Why Developers Are Looking for Wappalyzer Alternatives
+## Why Developers Are Looking for Wappalyzer Alternatives
 
 Wappalyzer's shift toward a paid model changed its value proposition for many use cases. The free tier now limits daily lookups, and API access requires a paid subscription. For individual developers doing occasional tech-stack research, the cost is hard to justify. For teams doing competitive analysis at scale, the API pricing adds up quickly.
 
@@ -29,7 +29,7 @@ Beyond pricing, there are legitimate privacy and operational reasons to consider
 - Detection gaps: No single tool detects every technology, so knowing which tools have better coverage for your target tech stack matters
 - API integration: Some teams need to embed technology detection in their own pipelines rather than using a browser extension
 
-What Makes a Good Technology Detector
+## What Makes a Good Technology Detector
 
 Before evaluating specific tools, consider what matters for your particular use case:
 
@@ -39,7 +39,7 @@ Before evaluating specific tools, consider what matters for your particular use 
 - Developer features: API access, CLI tools, export options, and batch processing determine whether the tool fits into automated workflows.
 - Privacy: Does the extension send every URL you visit to a remote server? Read the privacy policy before installing.
 
-Top Wappalyzer Alternatives
+## Top Wappalyzer Alternatives
 
 1. BuiltWith
 
@@ -316,7 +316,7 @@ chrome.runtime.sendMessage({
 
 This custom approach gives complete control over detection rules and data handling. Your company's internal analytics platform, your custom CMS, or your proprietary CDN can all be added to the detection patterns. something no commercial tool will ever cover.
 
-Comparison Summary
+## Comparison Summary
 
 | Tool | Free Tier | API Access | Open Source | DB Size | Best For |
 |------|-----------|------------|-------------|---------|----------|
@@ -326,7 +326,7 @@ Comparison Summary
 | Library Detector | Yes | No | Yes | ~200 | JS developers, runtime accuracy |
 | Custom Extension | Yes | Custom | Yes | Custom | Proprietary technology detection |
 
-Practical Use Cases
+## Practical Use Cases
 
 Security Audits: Use BuiltWith or self-hosted Wappalyzer to identify outdated technologies before penetration testing. A site still running jQuery 1.x or an unpatched CMS version is an immediate flag for the report.
 
@@ -338,7 +338,7 @@ Enterprise Technology Inventory: Self-hosted Wappalyzer enables complete technol
 
 Freelance Proposals: When scoping a migration or redesign project, technology detection tells you what you're working with before writing the proposal. A site on a custom legacy CMS needs a different migration plan than one on standard WordPress.
 
-Combining Multiple Tools
+## Combining Multiple Tools
 
 No single tool has 100% coverage. Experienced developers keep two or three detectors available and cross-reference results when a detection seems incomplete or suspicious.
 
@@ -350,7 +350,7 @@ A practical setup for most developers:
 
 When BuiltWith and WhatRuns disagree on a technology, inspect the page source manually. False positives happen when detection patterns are overly broad. detecting React because a script URL contains the string "react" inside an unrelated word, for example.
 
-Choosing the Right Alternative
+## Choosing the Right Alternative
 
 The best Wappalyzer alternative depends on your specific needs:
 
@@ -363,7 +363,6 @@ The best Wappalyzer alternative depends on your specific needs:
 Each alternative offers distinct advantages over Wappalyzer's current free tier. Test two or three options with websites you know well to calibrate which tool's coverage matches your most common use cases before committing to one as your daily driver.
 
 ---
-
 
 Related Reading
 

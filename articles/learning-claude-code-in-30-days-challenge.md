@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Learning Claude Code in 30 Days: A Structured Challenge
-
 Claude Code represents a paradigm shift in developer productivity. Rather than treating AI as a simple chat interface, mastering Claude Code means understanding how to build reusable skills, use Model Context Protocol (MCP) servers, and create automation workflows that scale. This 30-day challenge transforms you from a casual user into a power user capable of building sophisticated AI-assisted development pipelines.
 
-Challenge Overview
+## Challenge Overview
 
 This challenge assumes basic familiarity with command-line tools and at least one programming language. Each week focuses on a distinct skill tier, progressing from fundamentals through advanced automation. By day 30, you will have built a complete skill ecosystem tailored to your development workflow.
 
@@ -32,7 +29,7 @@ Prerequisites:
 
 Week 1: Foundations (Days 1-7)
 
-Day 1-2: Skill Discovery and Installation
+## Day 1-2: Skill Discovery and Installation
 
 Start by exploring the skill system. Skills are Markdown files stored in `~/.claude/skills/`. Community-created skills can be downloaded and placed in that directory.
 
@@ -48,7 +45,7 @@ Download a community skill (example)
 curl -o ~/.claude/skills/pdf.md https://example.com/skills/pdf.md
 ```
 
-Day 3-4: Understanding Skill Anatomy
+## Day 3-4: Understanding Skill Anatomy
 
 Every skill consists of three main components: front matter metadata, system instructions, and optional tool definitions. Create your first skill to understand the structure:
 
@@ -68,7 +65,7 @@ When asked to create a new project, generate a complete structure including:
 Always explain what each generated file does.
 ```
 
-Day 5-7: Modifying Existing Skills
+## Day 5-7: Modifying Existing Skills
 
 Rather than building from scratch, customize existing skills for your needs. The frontend-design skill provides UI patterns, modify its defaults to match your component library. The tdd skill generates test files, adjust its templates to match your testing framework conventions.
 
@@ -78,7 +75,7 @@ Week 1 Milestone: You can install, inspect, and modify skills. You understand th
 
 Week 2: Integration and Tools (Days 8-14)
 
-Day 8-9: MCP Server Setup
+## Day 8-9: MCP Server Setup
 
 Model Context Protocol servers extend Claude's capabilities by connecting to external services. The supermemory skill, for instance, uses an MCP server to maintain persistent context across sessions.
 
@@ -90,7 +87,7 @@ Configure in your Claude settings
 (settings typically stored in ~/.claude/settings.json)
 ```
 
-Day 10-11: Building Custom MCP Tools
+## Day 10-11: Building Custom MCP Tools
 
 Create a simple MCP server to connect Claude with your internal APIs:
 
@@ -110,7 +107,7 @@ if __name__ == "__main__":
     stdio_server.run(app)
 ```
 
-Day 12-14: Chain Multiple Skills
+## Day 12-14: Chain Multiple Skills
 
 Combine skills for complex workflows. Use the pdf skill to generate documentation, then employ the canvas-design skill to create visual summaries:
 
@@ -128,7 +125,7 @@ Week 2 Milestone: You can set up MCP servers and understand how to chain externa
 
 Week 3: Automation and Workflows (Days 15-21)
 
-Day 15-17: Scripting Skill Execution
+## Day 15-17: Scripting Skill Execution
 
 Automate skill execution using shell scripts or CI/CD pipelines:
 
@@ -141,7 +138,7 @@ claude --print "Check for security vulnerabilities in the codebase"
 claude --print "Update API documentation based on current source"
 ```
 
-Day 18-19: Event-Driven Automation
+## Day 18-19: Event-Driven Automation
 
 Set up triggers for skill execution based on file changes or git events:
 
@@ -152,7 +149,7 @@ while inotifywait -e modify ./src/*.py; do
 done
 ```
 
-Day 20-21: Creating Reusable Workflows
+## Day 20-21: Creating Reusable Workflows
 
 Build a personal workflow skill that orchestrates multiple skills:
 
@@ -176,7 +173,7 @@ Week 3 Milestone: You can automate repetitive tasks and create composite workflo
 
 Week 4: Mastery and Teaching (Days 22-30)
 
-Day 22-24: Advanced Skill Patterns
+## Day 22-24: Advanced Skill Patterns
 
 Implement advanced patterns like conditional tool usage and context-aware responses:
 
@@ -198,7 +195,7 @@ When project type is detected:
 - Python: Use pip/poetry commands, check pyproject.toml
 ```
 
-Day 25-27: Sharing and Versioning Skills
+## Day 25-27: Sharing and Versioning Skills
 
 Publish your optimized skills to share with the community or maintain private registries:
 
@@ -211,7 +208,7 @@ git add shared-skills/
 git commit -m "Add project-specific workflow skills"
 ```
 
-Day 28-30: Teaching Others
+## Day 28-30: Teaching Others
 
 Document your learning journey. Create a skill that teaches the concepts you've mastered. This reinforces your understanding while helping others.
 
@@ -219,7 +216,7 @@ Final Milestone: You possess a complete skill ecosystem tailored to your workflo
 
 ---
 
-Continuing Your Journey
+## Continuing Your Journey
 
 The 30-day challenge provides structure, but mastery comes from continuous experimentation. Key focus areas for ongoing learning:
 
@@ -233,7 +230,6 @@ Claude Code rewards developers who invest time in understanding its architecture
 Start small, iterate quickly, and most importantly, automate what bores you.
 
 ---
-
 
 Related Reading
 

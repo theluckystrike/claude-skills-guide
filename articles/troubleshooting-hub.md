@@ -18,7 +18,7 @@ Skills break in predictable ways. A YAML typo stops the skill from loading. A mi
 
 This hub maps every common Claude Code skill error to its cause and fix, then points you to the detailed article for each one.
 
-Table of Contents
+## Table of Contents
 
 1. [Quick-Fix Reference Table](#quick-fix-reference-table)
 2. [Skill Not Loading / Not Triggering](#skill-not-loading--not-triggering)
@@ -32,7 +32,7 @@ Table of Contents
 
 ---
 
-Quick-Fix Reference Table
+## Quick-Fix Reference Table
 
 Start here. Find your error, check the likely cause, apply the fix, then follow the link for a full walkthrough.
 
@@ -53,7 +53,7 @@ Start here. Find your error, check the likely cause, apply the fix, then follow 
 
 ---
 
-Skill Not Loading / Not Triggering
+## Skill Not Loading / Not Triggering
 
 The most common frustration with Claude skills: you installed the skill, but nothing happens when you expect it to activate. There are two distinct failure modes here.
 
@@ -68,7 +68,7 @@ Not triggering automatically means the file loads fine but auto-invocation doesn
 
 ---
 
-Permission and Security Errors
+## Permission and Security Errors
 
 Claude Code operates a layered permissions model. Skills that request file system access, shell execution, or network calls must have those permissions explicitly granted. When they don't, you get a `permission denied` error, or worse, silent behavior where Claude refuses the action without explaining why.
 
@@ -84,7 +84,7 @@ Understanding the full permissions model before deploying skills in production e
 
 ---
 
-YAML and Format Errors
+## YAML and Format Errors
 
 The skill.md format uses YAML front matter for machine-readable metadata. YAML is strict: tabs instead of spaces, an unmatched quotation mark, a missing colon, or a string that contains a special character without proper quoting will break parsing entirely.
 
@@ -115,7 +115,7 @@ Format errors in the skill *body* (the Markdown section below the front matter) 
 
 ---
 
-Performance Issues
+## Performance Issues
 
 Two performance problems appear regularly: slow responses and infinite loops. Both are usually caused by skills that don't set clear boundaries on what Claude should do.
 
@@ -129,7 +129,7 @@ Infinite loops are a logic error: the skill instructs Claude to retry an operati
 
 ---
 
-Context Window Errors
+## Context Window Errors
 
 Every Claude model has a finite context window. When a skill session fills that window, through a combination of the skill body, conversation history, tool outputs, and any documents being processed, Claude starts degrading: dropping earlier instructions, losing track of task state, or returning a hard context overflow error.
 
@@ -145,7 +145,7 @@ The most effective prevention strategies:
 
 ---
 
-Output and State Issues
+## Output and State Issues
 
 Broken output formatting is common when a skill tries to enforce a specific output structure but doesn't give Claude explicit enough instructions. The skill body should specify the exact format (JSON schema, Markdown table, plain text), not just describe it vaguely. If Claude's default formatting habits conflict with what the skill wants, add a rule like: "Always respond with a JSON object matching this exact schema. Never add prose outside the JSON block."
 
@@ -157,7 +157,7 @@ State loss between sessions is not a bug, it is how Claude Code works by design.
 
 ---
 
-General Code Quality and Behavioral Issues
+## General Code Quality and Behavioral Issues
 
 A second category of troubleshooting covers cases where Claude Code runs fine from a technical standpoint but produces incorrect or problematic output: wrong imports, insecure code, files in the wrong directory, missed error handling, or output in the wrong programming language.
 
@@ -185,7 +185,7 @@ Advanced diagnostics:
 
 ---
 
-Full Troubleshooting Article Index
+## Full Troubleshooting Article Index
 
 | Article | What You'll Learn |
 |---------|-------------------|

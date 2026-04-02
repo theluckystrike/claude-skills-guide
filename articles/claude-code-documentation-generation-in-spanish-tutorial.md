@@ -18,7 +18,7 @@ permalink: /claude-code-documentation-generation-in-spanish-tutorial/
 
 This guide shows you how to [set up a documentation generation workflow that produces Spanish-language output](/claude-skill-md-format-complete-specification-guide/) that produces Spanish-language output from your codebase. You will learn to configure Claude Code skills, generate different types of documentation, and integrate the workflow into your development process.
 
-Prerequisites
+## Prerequisites
 
 Before starting, ensure you have:
 
@@ -32,7 +32,7 @@ The following skills enhance the workflow but are not strictly required:
 - supermemory skill: For storing terminology preferences across sessions
 - tdd skill: For generating test documentation alongside code documentation
 
-Setting Up Your Spanish Documentation Workflow
+## Setting Up Your Spanish Documentation Workflow
 
 The foundation of generating Spanish documentation lies in how you structure your prompts. Claude Code responds to natural language instructions, so you can specify language preferences directly in your requests.
 
@@ -45,7 +45,7 @@ description: Generate Spanish-language documentation for codebases
 
 This skill file stores Spanish documentation instructions in its body. When you invoke it, Claude Code follows those instructions when generating documentation.
 
-Project Configuration File
+## Project Configuration File
 
 For consistent results across a project, create a `claude-docs.json` file in your project root to define language and output preferences:
 
@@ -75,7 +75,7 @@ destinada a [usuario objetivo]. El stack tecnológico es: [lista de tecnologías
 Genera documentación técnica en español siguiendo las convenciones de la industria.
 ```
 
-Generating Function Documentation in Spanish
+## Generating Function Documentation in Spanish
 
 To document a specific function in Spanish, invoke Claude Code with a precise prompt:
 
@@ -111,7 +111,7 @@ function sumar(a, b) {
 
 This approach works for JavaScript, TypeScript, Python, and other languages. Adjust the documentation format to match your language's conventions.
 
-Creating README Files in Spanish
+## Creating README Files in Spanish
 
 Project README files often need the most attention whenlocalizing for Spanish-speaking teams. Use the following workflow:
 
@@ -140,7 +140,7 @@ Document all exported functions with their parameters and return types."
 
 This segmented approach prevents context overflow for large codebases.
 
-Using the docx and xlsx Skills for Structured Documentation
+## Using the docx and xlsx Skills for Structured Documentation
 
 When your documentation requires formal corporate templates or offline distribution, the `docx` skill creates professionally formatted Word documents. Place `docx.md` in your `.claude/` directory, then invoke `/docx`:
 
@@ -154,7 +154,7 @@ Crea una guía de API en español para mi proyecto de biblioteca JavaScript. Inc
 
 For API matrices, feature comparisons, or tabular technical data, the `xlsx` skill generates structured spreadsheets. Place `xlsx.md` in `.claude/` and invoke `/xlsx` with a prompt describing your columns and content.
 
-API Documentation in Spanish
+## API Documentation in Spanish
 
 API documentation requires consistent terminology and structure. [The pdf skill works well for generating formatted API docs](/what-is-the-best-claude-skill-for-generating-documentation/):
 
@@ -179,7 +179,7 @@ Include header with project name and generation date.
 Language: Spanish
 ```
 
-Managing Terminology with Supermemory
+## Managing Terminology with Supermemory
 
 When generating Spanish documentation across multiple sessions, maintaining consistent terminology matters. [The supermemory skill stores your preferences](/building-stateful-agents-with-claude-skills-guide/):
 
@@ -203,7 +203,7 @@ Maintain consistent translations for technical terms.
 
 This ensures your entire documentation suite uses the same vocabulary, which is critical for professional deliverables.
 
-Automating Documentation Generation
+## Automating Documentation Generation
 
 To streamline the workflow, create a shell script that invokes Claude Code:
 
@@ -242,11 +242,11 @@ jobs:
           claude "Run spanish-docs skill on ./src directory"
 ```
 
-Full Prompt Examples in Spanish
+## Full Prompt Examples in Spanish
 
 The following complete prompts can be used directly in Claude Code sessions.
 
-JavaScript Library Documentation
+## JavaScript Library Documentation
 
 ```
 Eres un escritor técnico especializado en documentación para desarrolladores.
@@ -263,7 +263,7 @@ Incluye:
 Usa markdown con encabezados jerárquicos y código ejecutable.
 ```
 
-REST API Documentation
+## REST API Documentation
 
 ```
 Genera documentación de API en español para un servicio RESTful de gestión de tareas.
@@ -278,7 +278,7 @@ Para cada endpoint incluye: método, URL, parámetros, cuerpo de solicitud,
 respuestas posibles con códigos de estado y ejemplos de uso.
 ```
 
-README Completo de Proyecto
+## README Completo de Proyecto
 
 ```
 Crea un README.md completo en español para un proyecto de aplicación web
@@ -294,7 +294,7 @@ llamada "GestorPro". Incluye:
 - Créditos
 ```
 
-Best Practices
+## Best Practices
 
 When generating Spanish documentation with Claude Code, keep these points in mind:
 
@@ -315,12 +315,11 @@ Combine with the frontend-design skill: When documenting UI components, the fron
 
 Use the tdd skill for test documentation: Generate test case descriptions in Spanish alongside your test files.
 
-Conclusion
+## Conclusion
 
 Claude Code skills provide a powerful foundation for generating Spanish-language documentation. By configuring language settings, storing terminology preferences with supermemory, and using targeted prompts, you can automate documentation workflows that serve Spanish-speaking teams and users.
 
 The key is starting simple: document a single function in Spanish, refine your terminology mappings, then expand to full project READMEs and API documentation. As your configuration matures, the workflow becomes increasingly automated while maintaining consistency across your documentation suite.
-
 
 Related Reading
 

@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Fortran Scientific Code Modernization Guide
-
 Legacy Fortran code forms the backbone of many scientific and engineering applications, from climate models to computational physics. However, maintaining these aging codebases presents significant challenges. This guide demonstrates how Claude Code can accelerate Fortran modernization while preserving correctness and improving maintainability.
 
 Modernizing Fortran is not merely a cosmetic exercise. It directly affects your team's ability to onboard new developers, integrate with modern toolchains, and take advantage of compiler optimizations that have improved dramatically over the past two decades. Claude Code shortens what can otherwise be a months-long manual effort into a systematic, verifiable process.
 
-Setting Up Claude Code for Fortran Development
+## Setting Up Claude Code for Fortran Development
 
 Claude Code provides solid support for Fortran development through its file editing, bash execution, and code analysis capabilities. Before beginning modernization, ensure your environment is configured properly:
 
@@ -31,7 +28,7 @@ Claude Code provides solid support for Fortran development through its file edit
 
 Claude Code can interact with your compiler and build tools directly through bash commands, enabling smooth integration with existing workflows. A useful first session is simply asking Claude Code to compile your project and report any warnings. older code frequently generates hundreds of deprecation warnings that tell you exactly where modernization effort is needed.
 
-A Quick Environment Check
+## A Quick Environment Check
 
 ```bash
 Verify compiler version
@@ -45,11 +42,11 @@ grep -rn "IMPLICIT " src/ | grep -v "NONE"
 
 Claude Code can run these searches, parse the output, and give you a count by file. turning a vague sense of "a lot of technical debt" into a concrete inventory.
 
-Analyzing Legacy Fortran Codebases
+## Analyzing Legacy Fortran Codebases
 
 The first step in modernization is understanding what you have. Claude Code excels at code analysis through its file-reading and grep capabilities. Here's how to use them effectively:
 
-Assessing Code Structure
+## Assessing Code Structure
 
 Use Claude Code to scan your codebase and identify key characteristics:
 
@@ -71,9 +68,9 @@ Claude Code can review entire directories and provide comprehensive reports on c
 
 This kind of inventory lets you prioritize. Files with COMMON blocks and implicit typing are the highest-risk targets and should be modernized first because the bugs they hide are the most dangerous.
 
-Modernization Patterns and Examples
+## Modernization Patterns and Examples
 
-Converting from Fixed-Format to Free-Format
+## Converting from Fixed-Format to Free-Format
 
 Legacy Fortran often uses fixed-format source code with columns-based positioning. The constraint that code must start in column 7 and continuation characters appear in column 6 makes modern tooling painful. Free-format offers better readability and removes those column restrictions:
 
@@ -113,7 +110,7 @@ The differences matter beyond aesthetics. `intent(in)` and `intent(out)` attribu
 
 Claude Code can systematically convert these patterns across entire files, adding proper `implicit none` declarations and improving variable naming.
 
-Replacing Common Blocks with Modules
+## Replacing Common Blocks with Modules
 
 Common blocks are the single largest source of bugs in legacy Fortran. They share raw memory between program units with no type checking. if one unit declares `COMMON /PHYSICS/ MASS, VELOCITY` as reals and another accidentally declares them in a different order, the compiler says nothing and you get silent data corruption.
 
@@ -152,7 +149,7 @@ The module version enforces privacy by default, documents which names are intent
 
 Claude Code can identify all common block usages across multiple files and generate corresponding module definitions, handling the cross-file dependency analysis that makes this refactoring tedious to do by hand.
 
-Introducing Derived Types for Structured Data
+## Introducing Derived Types for Structured Data
 
 One of the most impactful modernization steps is replacing scattered parallel arrays with derived types. Scientific code often has patterns like `x_pos(i)`, `y_pos(i)`, `z_pos(i)`, `x_vel(i)`, `y_vel(i)`, `z_vel(i)`. six separate arrays where a single array of a structured type is clearer and safer:
 
@@ -195,7 +192,7 @@ end module particle_system
 
 With this approach, you can pass a single `particle` to any subroutine instead of threading six separate arrays through every call signature. When you later add a `temperature` field, you add it in one place rather than adding a seventh array across the entire codebase.
 
-Eliminating GOTO with Structured Control Flow
+## Eliminating GOTO with Structured Control Flow
 
 Legacy Fortran with heavy GOTO usage is notoriously difficult to reason about. Claude Code can trace control flow and convert GOTO spaghetti into structured alternatives:
 
@@ -227,7 +224,7 @@ end do
 
 The structured version is not only readable but also allows compilers to generate better code because the control flow is predictable.
 
-Testing and Validation Strategies
+## Testing and Validation Strategies
 
 Modernization must preserve correctness. A common failure mode is making syntactic improvements that inadvertently change numerical behavior. Claude Code can help establish solid testing before you touch a single line of production code:
 
@@ -274,7 +271,7 @@ end module test_utils
 
 The strategy is to run both the old and new implementation against identical inputs and compare outputs. For numerical code, exact equality is rarely appropriate. use relative tolerances that reflect the expected precision of your algorithm.
 
-Performance Optimization with Claude Code
+## Performance Optimization with Claude Code
 
 Modernized Fortran can achieve better performance through several well-understood techniques. Claude Code can identify optimization opportunities by reading your code and suggesting modern alternatives:
 
@@ -327,7 +324,7 @@ end do
 | Module procedures | EXTERNAL + interface | module `contains` | Compile-time checking |
 | `intent` attributes | none | `intent(in/out/inout)` | Optimization hints |
 
-Practical Workflow for Modernization Projects
+## Practical Workflow for Modernization Projects
 
 A realistic modernization project follows this sequence:
 
@@ -344,14 +341,13 @@ The key discipline is never making two kinds of changes at once. If you convert 
 
 Claude Code fits into every step: it reads multiple source files to track dependencies, executes build commands to verify compilability, and can generate test skeletons for subroutines based on their signatures.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Fortran modernization from a daunting task into a manageable process. Its ability to read, analyze, edit, and validate code makes it an invaluable tool for scientific computing teams. By following the patterns and strategies in this guide, you can systematically modernize legacy Fortran code while maintaining correctness and improving long-term maintainability.
 
 The key is starting small, testing thoroughly, and gradually adopting modern Fortran features. Treat each COMMON block converted and each GOTO eliminated as a measurable win. Over the course of weeks, these incremental improvements compound into a codebase that new team members can read, that static analysis tools can check, and that modern compilers can optimize aggressively.
 
 With Claude Code as your assistant, you have a powerful partner in preserving and improving your scientific computing infrastructure. The institutional knowledge embedded in decades-old Fortran code is worth protecting. modernization ensures it survives into the next generation of hardware and toolchains.
-
 
 Related Reading
 

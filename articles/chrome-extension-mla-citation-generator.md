@@ -17,17 +17,17 @@ score: 8
 
 Academic writing requires accurate citations, and the Modern Language Association (MLA) format remains one of the most common citation styles in humanities and liberal arts. Building a Chrome extension for MLA citation generation gives you instant, reliable citations without leaving your browser. This guide covers implementation strategies, code patterns, and practical considerations for developers and power users who want their own customized citation solution.
 
-Understanding MLA Citation Requirements
+## Understanding MLA Citation Requirements
 
 The MLA Handbook (9th edition) specifies precise formatting rules for different source types. A proper MLA citation for a website includes the author name (if available), page title, website name, publication date, URL, and access date. The core challenge for any citation generator is extracting these components reliably from diverse web page structures.
 
 Most websites expose metadata through standard tags, but the implementation varies significantly. Some sites use proper meta tags, others rely on structured data, and some provide no machine-readable information at all. Your extension needs fallback strategies for each scenario.
 
-Extension Architecture
+## Extension Architecture
 
 A functional MLA citation generator Chrome extension requires three core components: a content script for metadata extraction, a background script for processing and formatting, and a popup interface for user interaction. The content script runs on web pages and collects available information, then passes it to the background script for formatting according to MLA rules.
 
-Project Structure
+## Project Structure
 
 ```
 mla-citation-generator/
@@ -39,7 +39,7 @@ mla-citation-generator/
  styles.css
 ```
 
-Manifest Configuration
+## Manifest Configuration
 
 Your manifest.json defines permissions and declares the extension's capabilities:
 
@@ -60,7 +60,7 @@ Your manifest.json defines permissions and declares the extension's capabilities
 }
 ```
 
-Implementing Metadata Extraction
+## Implementing Metadata Extraction
 
 The content script extracts relevant information from the current page. A solid extraction function tries multiple strategies in sequence, falling back to less reliable methods when preferred options fail.
 
@@ -138,7 +138,7 @@ function extractPublishDate() {
 chrome.runtime.sendMessage({ type: 'EXTRACT_DATA', data: extractPageData() });
 ```
 
-MLA Formatting Logic
+## MLA Formatting Logic
 
 The background script receives extracted data and formats it according to MLA 9th edition guidelines. Handle each source type with its specific rules:
 
@@ -206,7 +206,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides users with generated citations and copy functionality:
 
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Handling Edge Cases
+## Handling Edge Cases
 
 Real-world websites present various challenges. When metadata is missing, you need intelligent fallbacks:
 
@@ -269,7 +269,7 @@ Real-world websites present various challenges. When metadata is missing, you ne
 
 Consider adding a manual edit feature that lets users correct extraction errors before copying. The formatting function should also validate output to ensure required MLA components are present.
 
-Testing Your Extension
+## Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Test with various source types:
 
@@ -281,7 +281,7 @@ Load your extension in Chrome by navigating to `chrome://extensions/`, enabling 
 
 Verify that citations match MLA 9th edition format by cross-referencing the MLA Handbook or Purdue OWL guidelines.
 
-Power User Features
+## Power User Features
 
 Beyond basic citation generation, consider adding these enhancements:
 
@@ -292,7 +292,6 @@ Beyond basic citation generation, consider adding these enhancements:
 - Integration: Export to reference managers like Zotero or BibTeX
 
 Building your own MLA citation generator gives you complete control over formatting preferences and eliminates dependence on third-party services. The extension runs entirely in your browser, keeping your research data private while providing instant citations whenever you need them.
-
 
 Related Reading
 

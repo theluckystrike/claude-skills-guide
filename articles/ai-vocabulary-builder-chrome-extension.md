@@ -15,7 +15,7 @@ score: 8
 {% raw %}
 AI vocabulary builder chrome extensions represent a specialized category of browser tools that use artificial intelligence to help users learn new words, track terminology, and improve language comprehension while browsing the web. For developers and power users, understanding how to build and customize these extensions provides significant opportunities for creating personalized learning experiences.
 
-How AI Vocabulary Builder Extensions Function
+## How AI Vocabulary Builder Extensions Function
 
 At their core, AI vocabulary builder extensions capture text from web pages, analyze the context, and help users learn new words through intelligent definitions, examples, and spaced repetition. The typical architecture consists of three interconnected components: a content script that captures user-selected text, a background service worker that handles API calls to AI services, and a popup or side panel interface for displaying definitions and managing word lists.
 
@@ -48,9 +48,9 @@ The implementation uses Chrome Extension Manifest V3, which provides solid isola
 
 Notice the addition of `contextMenus` permission and `side_panel` support. Chrome's Side Panel API (introduced in Manifest V3) is a significantly better UX choice for vocabulary builders than a popup. it stays open while the user continues reading, which is exactly the workflow learners need.
 
-Core Implementation Patterns
+## Core Implementation Patterns
 
-Text Capture and Context Analysis
+## Text Capture and Context Analysis
 
 The content script listens for user text selection and extracts contextual information. This approach ensures that users actively choose words they want to learn rather than passively receiving suggestions.
 
@@ -93,7 +93,7 @@ document.addEventListener('mouseup', () => {
 });
 ```
 
-AI-Powered Definition Generation
+## AI-Powered Definition Generation
 
 The background script communicates with AI APIs to generate rich definitions, example sentences, and pronunciation guides. This approach provides more comprehensive learning materials than traditional dictionary APIs.
 
@@ -138,7 +138,7 @@ When choosing an AI backend, the tradeoff looks like this:
 
 For most developers building a personal tool or small-team product, GPT-4o-mini at roughly $0.15 per million input tokens makes AI-quality definitions essentially free at any realistic usage volume. For enterprise deployments where data residency matters, a local model or a self-hosted inference endpoint is the right answer.
 
-Local Storage and Word List Management
+## Local Storage and Word List Management
 
 For privacy and offline access, vocabulary data can be stored locally using Chrome's storage API. This approach also enables features like spaced repetition review.
 
@@ -178,7 +178,7 @@ const VocabularyStore = {
 
 `chrome.storage.local` has a 10 MB default quota, which holds tens of thousands of word records without issue. If you need cross-device sync, swap `chrome.storage.local` for `chrome.storage.sync`, which mirrors data to the user's Google account. though the sync quota is only 100 KB total, so you'd need to store only core fields (word, definition, reviewCount) and fetch examples on demand.
 
-Implementing a Proper Spaced Repetition Schedule
+## Implementing a Proper Spaced Repetition Schedule
 
 The `isDueForReview` function above uses a simple exponential backoff, but a proper SM-2 algorithm from the Anki/SuperMemo tradition performs noticeably better for long-term retention:
 
@@ -212,9 +212,9 @@ function updateSM2(card, quality) {
 
 The SM-2 algorithm adjusts the review interval based on how confidently the user recalls each word. A word answered with confidence 5 rapidly expands its interval; a word answered with confidence 2 resets to a one-day interval. This is the same core algorithm behind Anki's scheduling engine and produces dramatically better retention than fixed-interval review.
 
-Advanced Features for Power Users
+## Advanced Features for Power Users
 
-Contextual Learning Enhancement
+## Contextual Learning Enhancement
 
 Advanced implementations analyze the surrounding sentence structure to provide contextually accurate definitions. This is particularly valuable for technical terminology or words with multiple meanings.
 
@@ -248,7 +248,7 @@ function getPageDomain() {
 
 Passing the hostname to the AI lets it calibrate tone: a word on `arxiv.org` deserves a technical definition; the same word on a news site might warrant a more accessible explanation.
 
-Export and Synchronization
+## Export and Synchronization
 
 Power users often need to export their vocabulary lists for use in other applications or to back up their learning data.
 
@@ -282,7 +282,7 @@ async function downloadExport(format) {
 }
 ```
 
-Integration with Anki and Other Flashcard Systems
+## Integration with Anki and Other Flashcard Systems
 
 Many language learners use spaced repetition systems like Anki. Building export functionality that formats vocabulary data for these systems significantly increases the utility of your extension. Anki uses a tab-separated format with front and back fields:
 
@@ -306,7 +306,7 @@ async function exportToAnki() {
 
 Users import this file into Anki via File > Import, selecting "Tab-separated" as the format. Fields map to the front and back of a Basic card. If your AI backend returns audio pronunciation data, you can also embed `[sound:word.mp3]` references in the back field, though generating and hosting audio adds significant infrastructure complexity.
 
-Security and Privacy Considerations
+## Security and Privacy Considerations
 
 When building AI vocabulary extensions, handling user data responsibly is essential. Consider implementing:
 
@@ -318,7 +318,7 @@ When building AI vocabulary extensions, handling user data responsibly is essent
 
 One privacy concern specific to vocabulary builders: the extension reads selected text from every page the user visits. Make this explicit in your privacy policy and in the extension's onboarding flow. Users are increasingly privacy-conscious and will uninstall tools that feel opaque about data handling.
 
-Building Your Own Extension
+## Building Your Own Extension
 
 Starting with a minimal viable product allows you to validate the core user experience before adding advanced features. A practical build order:
 

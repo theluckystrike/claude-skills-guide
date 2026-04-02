@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Clojure re-frame Workflow Guide"
 description: "Master the art of using Claude Code for Clojure re-frame development. Learn practical workflows, debugging strategies, and code generation patterns for."
@@ -14,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Clojure re-frame Workflow Guide
 
 Clojure developers working with re-frame have discovered a powerful ally in Claude Code. This guide demonstrates how to use Claude Code effectively for re-frame projects, from initial setup to advanced state management patterns.
 
-Understanding re-frame Architecture
+## Understanding re-frame Architecture
 
 Before diving into workflow optimization, it's essential to understand how re-frame organizes application state. re-frame follows a unidirectional data flow pattern with three key layers:
 
@@ -30,7 +28,7 @@ Before diving into workflow optimization, it's essential to understand how re-fr
 
 Claude Code excels at understanding this architecture because it maps well to prompt-based descriptions. When you explain your component hierarchy or state flow, Claude Code can generate idiomatic Clojure that follows re-frame conventions.
 
-Setting Up Claude Code for Clojure Projects
+## Setting Up Claude Code for Clojure Projects
 
 Proper project configuration ensures Claude Code understands your re-frame codebase. Create a CLAUDE.md file in your project root:
 
@@ -51,7 +49,7 @@ Key Conventions
 
 This context helps Claude Code generate code that matches your project's conventions.
 
-Generating re-frame Components
+## Generating re-frame Components
 
 One of Claude Code's strongest use cases is generating component code. Provide clear specifications describing the component's purpose, data requirements, and user interactions.
 
@@ -82,7 +80,7 @@ For example, when requesting a form component:
 
 Claude Code generates this pattern when you specify the component's props and behavior. The output follows re-frame conventions with proper destructuring and Reagent component structure.
 
-Handling Event Handlers
+## Handling Event Handlers
 
 Event handlers are the backbone of re-frame applications. Claude Code helps generate both simple and complex handlers with proper effects.
 
@@ -105,7 +103,7 @@ For a registration handler with validation:
 
 The key is describing the handler's purpose clearly. Explain what inputs it receives, what validation it performs, and how the database state changes.
 
-Debugging re-frame Applications
+## Debugging re-frame Applications
 
 When debugging, provide Claude Code with specific error messages and relevant code sections. The workflow differs slightly from traditional debugging:
 
@@ -130,7 +128,7 @@ What could cause this?
 
 Claude Code typically identifies missing initialization or path issues quickly.
 
-Working with Effects and Coeffects
+## Working with Effects and Coeffects
 
 re-frame's effect system can be challenging. Claude Code helps generate proper effect handlers for side effects like HTTP calls:
 
@@ -147,7 +145,7 @@ re-frame's effect system can be challenging. Claude Code helps generate proper e
 
 This pattern integrates cleanly with the event system. When requesting effect handlers, describe the external system you're integrating and what data flows back into re-frame.
 
-Optimizing Component Rendering
+## Optimizing Component Rendering
 
 Performance matters in re-frame applications. Claude Code helps optimize components by suggesting proper memoization and subscription patterns.
 
@@ -169,7 +167,7 @@ For expensive computations in components:
 
 Claude Code suggests this pattern when you describe performance issues. The key is identifying computations that run on every render and moving them to subscription level.
 
-Building Complete Features
+## Building Complete Features
 
 For feature development, provide a structured approach:
 
@@ -190,7 +188,7 @@ Create a pagination component for a data table with:
 
 Claude Code generates the full feature set following this specification.
 
-Best Practices for Claude Code with re-frame
+## Best Practices for Claude Code with re-frame
 
 Provide Complete Context: Include your project structure and conventions in CLAUDE.md. The more Claude Code knows about your patterns, the better the output.
 
@@ -200,7 +198,7 @@ Iterate on Components: Generate initial versions, test them, then refine. Prompt
 
 Test Generated Code: Always verify generated handlers and subscriptions work correctly. The logic may be syntactically correct but miss edge cases.
 
-Summary
+## Summary
 
 Claude Code transforms re-frame development by accelerating component creation, event handler implementation, and debugging workflows. The key lies in providing clear, structured prompts that describe data flow and user interactions. As you develop familiarity with this workflow, you'll find Claude Code becomes an invaluable pair programmer for your ClojureScript projects.
 

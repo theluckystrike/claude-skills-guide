@@ -16,13 +16,13 @@ categories: [guides]
 
 Chrome extensions that display Google Calendar in a sidebar offer significant productivity gains for users who constantly switch between their calendar and other web applications. This guide walks you through building a Chrome extension that renders Google Calendar in a sidebar panel, covering the necessary APIs, implementation strategies, and practical code examples.
 
-Understanding the Google Calendar Integration Options
+## Understanding the Google Calendar Integration Options
 
 When building a Chrome extension that interacts with Google Calendar, you have several approaches available. The most common method involves using the Google Calendar API to fetch calendar events and display them in a custom-built sidebar interface. Alternatively, you can embed Google's official calendar view using an iframe, though this approach comes with limitations around customization.
 
 For developers seeking full control over the sidebar experience, fetching events via the Google Calendar API and rendering them with your own UI components provides the greatest flexibility. This approach lets you create a sidebar that matches your exact design requirements while maintaining full functionality.
 
-Setting Up Your Chrome Extension Project
+## Setting Up Your Chrome Extension Project
 
 Every Chrome extension requires a manifest file. For sidebar implementations targeting Google Calendar, you'll need Manifest V3 (the current standard). Here's a minimal manifest configuration:
 
@@ -53,7 +53,7 @@ Every Chrome extension requires a manifest file. For sidebar implementations tar
 
 The OAuth2 configuration is essential for accessing user calendar data. You'll need to set up a project in the Google Cloud Console to obtain your client ID and enable the Calendar API.
 
-Implementing the Sidebar Panel
+## Implementing the Sidebar Panel
 
 The sidebar itself is an HTML file that loads when users activate your extension. Create a well-structured sidebar.html with proper styling for the collapsible panel:
 
@@ -129,7 +129,7 @@ The CSS controls the sidebar behavior and appearance:
 }
 ```
 
-Authenticating with Google Calendar API
+## Authenticating with Google Calendar API
 
 The authentication flow uses Google's Identity Services for secure OAuth2 implementation. Your sidebar.js handles the complete auth workflow:
 
@@ -181,7 +181,7 @@ function handleAuthClick() {
 
 This implementation follows Google's recommended pattern for browser-based OAuth, using the newer token model instead of the legacy gapi.auth2 approach.
 
-Fetching and Displaying Calendar Events
+## Fetching and Displaying Calendar Events
 
 Once authenticated, you can retrieve calendar events using the Calendar API. The following function fetches events for the current day:
 
@@ -236,7 +236,7 @@ function displayEvents(events) {
 
 The API returns events with both date-time formatted events and all-day events (which use the `date` field instead of `dateTime`). The display function handles both formats gracefully.
 
-Adding Practical Features
+## Adding Practical Features
 
 A truly useful calendar sidebar includes additional functionality beyond basic event display. Consider implementing these features:
 
@@ -248,7 +248,7 @@ Multiple Calendars: Fetch events from multiple calendar IDs (not just 'primary')
 
 Real-time Updates: Use the Calendar API's watch endpoint to receive push notifications when calendar changes occur, then refresh your display automatically.
 
-Handling Edge Cases and Errors
+## Handling Edge Cases and Errors
 
 Solid error handling improves the extension experience significantly. Common scenarios to handle include:
 
@@ -257,7 +257,7 @@ Solid error handling improves the extension experience significantly. Common sce
 - Empty calendars: Show helpful messages when no events exist rather than blank panels.
 - Permission denied: Handle cases where users revoke calendar access through their Google account settings.
 
-Security Considerations
+## Security Considerations
 
 When building extensions that handle OAuth credentials, follow security best practices:
 
@@ -266,14 +266,13 @@ When building extensions that handle OAuth credentials, follow security best pra
 - Implement proper Content Security Policy headers
 - Never log or expose access tokens in client-side code
 
-Deployment and Distribution
+## Deployment and Distribution
 
 Once your extension is functional, package it for distribution through the Chrome Web Store. You'll need to create a ZIP file containing your manifest, HTML, CSS, JavaScript, and any icon assets. The store review process typically takes 1-3 days for new extensions.
 
 For internal distribution within organizations, you can use Chrome Enterprise policies to deploy extensions managed fashion without public listing.
 
 Building a Google Calendar sidebar extension requires understanding OAuth flows, the Calendar API, and Chrome extension architecture. The investment pays off in a productivity tool that keeps your calendar visible while working in other browser tabs.
-
 
 Related Reading
 

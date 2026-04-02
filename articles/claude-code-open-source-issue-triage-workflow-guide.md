@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code Open Source Issue Triage Workflow Guide"
 description: "Learn how to use Claude Code to efficiently triage open source issues, prioritize bug reports, and streamline your contribution workflow."
@@ -16,10 +15,9 @@ score: 7
 
 {% raw %}
 
-
 Open source projects often struggle with managing incoming issues. Between duplicate reports, poorly documented bugs, and feature requests that lack context, maintainers spend hours each week just categorizing and prioritizing incoming traffic. This guide shows you how to use Claude Code to create an efficient issue triage workflow that saves time and helps contributors get started faster.
 
-Understanding Issue Triage Challenges
+## Understanding Issue Triage Challenges
 
 Before diving into the workflow, it's important to recognize what makes issue triage difficult. Most open source projects face similar challenges:
 
@@ -31,7 +29,7 @@ Before diving into the workflow, it's important to recognize what makes issue tr
 
 Claude Code can help automate many of these tasks, giving maintainers more time to focus on actually solving problems rather than organizing them.
 
-Setting Up Your Triage Workflow
+## Setting Up Your Triage Workflow
 
 The foundation of an efficient triage workflow is a well-configured Claude Code setup. You'll want to install the appropriate skills and configure them for your project's specific needs.
 
@@ -64,11 +62,11 @@ triage_rules:
     features: ["use case", "proposed solution", "alternatives considered"]
 ```
 
-Categorizing Issues Effectively
+## Categorizing Issues Effectively
 
 The first step in triage is categorization. Claude Code can analyze issue content and suggest appropriate labels based on your project's guidelines.
 
-Automatic Labeling
+## Automatic Labeling
 
 When Claude encounters a new issue, it should automatically analyze the content and suggest labels. Here's a practical example of how this works:
 
@@ -84,7 +82,7 @@ Claude Analysis:
 
 The system then adds a comment requesting the missing information while applying the initial labels.
 
-Duplicate Detection
+## Duplicate Detection
 
 Finding duplicate issues manually takes time. Claude Code can compare new issues against existing ones using semantic similarity. When a potential duplicate is found, it comments with a reference to the original issue:
 
@@ -94,11 +92,11 @@ Could you confirm if your issue has the same symptoms? If yes, we'll track the f
 the original issue.
 ```
 
-Prioritizing What Matters
+## Prioritizing What Matters
 
 Not all issues are created equal. A solid triage workflow prioritizes based on impact, severity, and project goals.
 
-Priority Framework
+## Priority Framework
 
 Use a structured approach to determine priority:
 
@@ -109,7 +107,7 @@ Use a structured approach to determine priority:
 
 Claude can automatically apply these priorities based on keywords, issue templates, and your project's historical data.
 
-Handling Feature Requests
+## Handling Feature Requests
 
 Feature requests require different handling than bug reports. Create a standard template that helps contributors provide useful information:
 
@@ -124,11 +122,11 @@ Additional Context: Screenshots, mockups, or related issues
 
 Claude can validate that feature requests include this information before accepting them, reducing back-and-forth communication.
 
-Streamlining Contributor Onboarding
+## Streamlining Contributor Onboarding
 
 New contributors often struggle to find a good first issue. A well-organized triage process makes this easier.
 
-Good First Issue Labeling
+## Good First Issue Labeling
 
 Identify issues suitable for newcomers by looking for:
 
@@ -140,7 +138,7 @@ Identify issues suitable for newcomers by looking for:
 
 Claude can automatically apply a "good first issue" label when these criteria are met, then verify the issue description is clear enough for a newcomer to understand.
 
-First-PR Guidance
+## First-PR Guidance
 
 When a contributor expresses interest in an issue, Claude can provide tailored guidance:
 
@@ -154,11 +152,11 @@ When a contributor expresses interest in an issue, Claude can provide tailored g
 5. Reference the issue in your PR: "Closes #456"
 ```
 
-Automating Triage Tasks
+## Automating Triage Tasks
 
 The real power of Claude Code comes from automating repetitive tasks.
 
-Stale Issue Management
+## Stale Issue Management
 
 Issues that haven't been updated in months need periodic review. Set up automated reminders:
 
@@ -171,7 +169,7 @@ stale_detection:
     Please update if you're still experiencing the problem, or we'll close it soon."
 ```
 
-Welcome Messages
+## Welcome Messages
 
 Automatically greet new contributors with helpful information:
 
@@ -185,13 +183,13 @@ please include:
 We typically respond within 24-48 hours.
 ```
 
-Best Practices and Actionable Tips
+## Best Practices and Actionable Tips
 
-Document Your Triage Process
+## Document Your Triage Process
 
 Create a CONTRIBUTING.md section that explains your triage workflow. This sets expectations for contributors and helps them understand how their issues will be handled.
 
-Iterate and Improve
+## Iterate and Improve
 
 Triage workflows aren't static. Review what's working and what's not:
 
@@ -199,15 +197,15 @@ Triage workflows aren't static. Review what's working and what's not:
 - Measure time-to-first-response
 - Survey contributors about their experience
 
-Maintain Human Oversight
+## Maintain Human Oversight
 
 Automation helps, but maintainers should review AI suggestions. Use Claude as a first pass, then have humans make final decisions on complex issues.
 
-Keep Issue Templates Updated
+## Keep Issue Templates Updated
 
 If contributors consistently miss providing certain information, update your issue templates to make that information required.
 
-Conclusion
+## Conclusion
 
 An efficient issue triage workflow is crucial for healthy open source projects. By using Claude Code's automation capabilities, you can reduce manual work, improve response times, and create a better experience for contributors. Start with the basics, automatic labeling and duplicate detection, then gradually add more sophisticated automation as your project grows.
 

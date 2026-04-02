@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Kube State Metrics Workflow: A Complete Guide
 
@@ -31,11 +30,11 @@ For example, KSM can tell you:
 
 These metrics are invaluable for understanding cluster health and setting up meaningful alerts.
 
-Setting Up Claude Code for KSM Workflows
+## Setting Up Claude Code for KSM Workflows
 
 Before diving into examples, ensure Claude Code is configured with access to your Kubernetes context. The most effective approach is creating a dedicated skill for Kubernetes operations.
 
-Creating a K8s Operations Skill
+## Creating a K8s Operations Skill
 
 ```yaml
 ~/.claude/skills/kubernetes-skill/skill.md
@@ -48,9 +47,9 @@ Focus on Kube State Metrics and Prometheus integration
 
 When working with KSM, provide Claude Code with your cluster context, including which metrics you're currently tracking and what alerting rules exist. This context helps generate more accurate and relevant configurations.
 
-Practical Examples: Building Your KSM Workflow
+## Practical Examples: Building Your KSM Workflow
 
-Example 1: Deploying and Configuring Kube State Metrics
+## Example 1: Deploying and Configuring Kube State Metrics
 
 Claude Code can help you deploy KSM and configure it appropriately for your cluster size:
 
@@ -88,7 +87,7 @@ spec:
 
 When asking Claude Code to generate this, specify your cluster's scale. For large clusters with hundreds of namespaces, you might need to adjust resource limits and potentially use sharding strategies.
 
-Example 2: Creating Custom Metrics with PromQL
+## Example 2: Creating Custom Metrics with PromQL
 
 Kube State Metrics provides a solid foundation, but you'll often need custom metrics tailored to your application. Here's how Claude Code can help:
 
@@ -110,7 +109,7 @@ kube_deployment_status_replicas_available{namespace="production"}
 
 Claude Code excels at writing PromQL queries when you describe what you want to monitor. Provide concrete examples of failure scenarios you're concerned about, and it can generate appropriate queries.
 
-Example 3: Alerting Rules Configuration
+## Example 3: Alerting Rules Configuration
 
 ```yaml
 prometheus-alerts.yaml - Generated with Claude Code
@@ -144,9 +143,9 @@ spec:
         description: "Deployment {{ $labels.namespace }}/{{ $labels.deployment }} has mismatched replicas"
 ```
 
-Advanced Workflow: Extending Kube State Metrics
+## Advanced Workflow: Extending Kube State Metrics
 
-Building Custom Metrics Exporters
+## Building Custom Metrics Exporters
 
 When KSM doesn't expose the specific metrics you need, consider building a custom exporter. Claude Code can help scaffold this:
 
@@ -211,13 +210,13 @@ spec:
     - production
 ```
 
-Actionable Advice for KSM Workflows
+## Actionable Advice for KSM Workflows
 
-Start Simple and Iterate
+## Start Simple and Iterate
 
 Begin with the default KSM metrics. They're battle-tested and cover most common use cases. Only extend with custom metrics when you have specific operational needs that the defaults don't address.
 
-Resource Planning for KSM
+## Resource Planning for KSM
 
 As your cluster grows, KSM resource requirements increase. Here's a practical guideline:
 
@@ -229,7 +228,7 @@ As your cluster grows, KSM resource requirements increase. Here's a practical gu
 
 Claude Code can help you calculate these based on your actual cluster metrics.
 
-Implementing Cost-Based Alerting
+## Implementing Cost-Based Alerting
 
 One powerful pattern is correlating KSM metrics with cloud provider costs. Use pod restart counts and resource requests to identify inefficient workloads:
 
@@ -242,7 +241,7 @@ kube_pod_container_resource_requests{resource="cpu"}
 
 This helps identify pods requesting more CPU than they actually use.
 
-Monitoring Claude Code Itself
+## Monitoring Claude Code Itself
 
 Don't forget to monitor your AI-assisted workflows. Track metrics like:
 - Time spent configuring KSM rules
@@ -251,7 +250,7 @@ Don't forget to monitor your AI-assisted workflows. Track metrics like:
 
 This meta-monitoring helps you optimize your own processes.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Kube State Metrics from a complex configuration task into a streamlined workflow. By using AI assistance for generating manifests, writing PromQL queries, and designing alerting strategies, you can build solid Kubernetes monitoring faster while reducing errors.
 

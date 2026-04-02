@@ -13,9 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
-Chrome Extension Employee Recognition Tool: Build Your Own
-
 Employee recognition plays a critical role in maintaining workplace morale and productivity. While many teams rely on email chains or Slack messages to acknowledge achievements, a dedicated Chrome extension can streamline this process directly from the browser. This guide walks you through building a custom employee recognition tool as a Chrome extension, tailored for developers and power users who want full control over their workflow.
 
 Why Build a Chrome Extension for Recognition?
@@ -29,7 +26,7 @@ Browser-based tools integrate smoothly with daily workflows. Developers, designe
 
 The flexibility of Chrome's extension API allows you to connect to internal systems, CRMs, or communication tools that your team already uses.
 
-Extension Architecture
+## Extension Architecture
 
 A Chrome extension for employee recognition typically consists of three main components:
 
@@ -39,9 +36,9 @@ A Chrome extension for employee recognition typically consists of three main com
 
 For a recognition tool, you'll likely need to store data (user preferences, recognition history) using Chrome's storage API, and potentially make HTTP requests to integrate with external services.
 
-Core Implementation
+## Core Implementation
 
-Manifest V3 Configuration
+## Manifest V3 Configuration
 
 Modern Chrome extensions use Manifest V3. Here's a basic configuration for a recognition tool:
 
@@ -66,7 +63,7 @@ Modern Chrome extensions use Manifest V3. Here's a basic configuration for a rec
 }
 ```
 
-Popup HTML Structure
+## Popup HTML Structure
 
 The popup provides the primary user interface. Keep it lightweight since it loads on each click:
 
@@ -104,7 +101,7 @@ The popup provides the primary user interface. Keep it lightweight since it load
 </html>
 ```
 
-Handling Recognition Logic
+## Handling Recognition Logic
 
 The popup JavaScript handles form submission and storage:
 
@@ -165,9 +162,9 @@ async function updateHistory() {
 updateHistory();
 ```
 
-Advanced Integrations
+## Advanced Integrations
 
-Integrating with Slack
+## Integrating with Slack
 
 Many teams use Slack for daily communication. You can integrate your recognition tool with Slack's web API:
 
@@ -203,7 +200,7 @@ async function notifySlack(recognition) {
 }
 ```
 
-Context-Aware Recognition
+## Context-Aware Recognition
 
 For power users, consider adding context-awareness. Content scripts can detect when someone completes a significant action in web-based tools like GitHub, Jira, or project management platforms:
 
@@ -231,7 +228,7 @@ function extractDomainContext(hostname) {
 }
 ```
 
-Storing Data Securely
+## Storing Data Securely
 
 For extensions that handle sensitive recognition data, use encrypted storage:
 
@@ -253,7 +250,7 @@ export async function getSecureRecognitions() {
 }
 ```
 
-Deployment and Distribution
+## Deployment and Distribution
 
 Once your extension is ready, you have several distribution options:
 
@@ -263,12 +260,11 @@ Once your extension is ready, you have several distribution options:
 
 For internal team tools, loading unpacked extensions or using Chrome Enterprise policies keeps distribution simple without store review requirements.
 
-Summary
+## Summary
 
 Building a Chrome extension for employee recognition gives your team a dedicated tool that fits naturally into daily browser workflows. Start with the basic popup interface, then expand with Slack integration, context-aware recognition, and secure storage as needed. The Chrome extension API provides everything you need to create a powerful, customized recognition system that integrates with your existing tools.
 
 The key is starting simple, capture recognitions, store them locally, and gradually add integrations that matter most to your team.
-
 
 Related Reading
 

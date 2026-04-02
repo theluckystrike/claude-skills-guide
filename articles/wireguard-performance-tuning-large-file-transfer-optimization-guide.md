@@ -18,7 +18,7 @@ WireGuard Performance Tuning for Large File Transfer Optimization Guide
 
 WireGuard has revolutionized VPN technology with its minimal codebase and exceptional performance. When it comes to moving large files across WireGuard tunnels, however, default configurations rarely deliver optimal throughput. This guide explores proven techniques to maximize your file transfer speeds while maintaining the security and simplicity that make WireGuard attractive.
 
-Understanding WireGuard's Architecture
+## Understanding WireGuard's Architecture
 
 WireGuard operates at the kernel level on Linux systems, using stateful packet inspection without the overhead of traditional VPN protocols. This design inherently reduces latency and CPU overhead, but large file transfers expose bottlenecks that require deliberate tuning.
 
@@ -28,7 +28,7 @@ A key distinction from older VPN protocols: WireGuard is UDP-based. This means i
 
 Another important characteristic: WireGuard is single-threaded per tunnel in the kernel module's default configuration. A single WireGuard interface processes packets on one CPU core. For multi-gigabit workloads, this becomes the ceiling unless you deliberately spread load across multiple tunnel instances or rely on newer kernel features.
 
-WireGuard vs. Other VPN Protocols for Large Transfers
+## WireGuard vs. Other VPN Protocols for Large Transfers
 
 Before diving into tuning, it helps to understand where WireGuard stands relative to alternatives for bulk transfer use cases:
 
@@ -41,7 +41,7 @@ Before diving into tuning, it helps to understand where WireGuard stands relativ
 
 WireGuard's kernel integration is its key advantage for bulk transfers. The encryption and decryption happen without userspace context switches, which is critical when moving data at sustained gigabit rates.
 
-MTU Optimization for Large Transfers
+## MTU Optimization for Large Transfers
 
 Maximum Transmission Unit (MTU) settings often cause the most immediate performance improvements. WireGuard adds 60 bytes to packets (20 bytes IPv4 header + 40 bytes WireGuard overhead), meaning default Ethernet MTU of 1500 bytes results in fragmentation.
 
@@ -89,7 +89,7 @@ done
 
 Run this script targeting your WireGuard endpoint's IP before setting the MTU in your config.
 
-Kernel Tuning for Throughput
+## Kernel Tuning for Throughput
 
 Linux kernel parameters dramatically influence WireGuard performance. Add these settings to `/etc/sysctl.conf`:
 
@@ -138,7 +138,7 @@ modprobe tcp_bbr
 echo "tcp_bbr" >> /etc/modules-load.d/bbr.conf
 ```
 
-WireGuard Interface Configuration
+## WireGuard Interface Configuration
 
 Optimize your WireGuard peer configuration for throughput:
 
@@ -184,7 +184,7 @@ PublicKey = client_public_key
 AllowedIPs = 10.0.0.2/32
 ```
 
-Using Parallel Connections for File Transfers
+## Using Parallel Connections for File Transfers
 
 WireGuard's low overhead makes parallel connections highly effective. When transferring large files, split the workload across multiple connections:
 
@@ -228,7 +228,7 @@ rclone copy \
   /local/data s3:bucket/path
 ```
 
-Hardware Acceleration
+## Hardware Acceleration
 
 Modern CPUs with AES-NI instructions accelerate WireGuard's cryptography. WireGuard actually uses ChaCha20-Poly1305 rather than AES by default. a deliberate choice because ChaCha20 performs well even without hardware acceleration. However, on CPUs with AES-NI, the kernel may use AES-GCM-based paths where beneficial.
 
@@ -250,7 +250,7 @@ For high-throughput deployments, CPU selection matters. AMD EPYC and Intel Xeon 
 
 For dedicated file transfer appliances, consider DPDK-based WireGuard implementations that bypass the kernel networking stack entirely for even lower latency and higher throughput, though these require specific NIC support and more complex configuration.
 
-Multiple WireGuard Instances for CPU Parallelism
+## Multiple WireGuard Instances for CPU Parallelism
 
 Since WireGuard is effectively single-threaded per tunnel, running multiple instances on different ports distributes encryption load across CPU cores:
 
@@ -268,7 +268,7 @@ ip route add 10.0.0.0/8 \
 
 This distributes flows across four WireGuard tunnels, using four CPU cores for encryption. For 10 Gbps+ scenarios, this technique can deliver near-linear scaling up to the number of available cores.
 
-Network Interface Tuning
+## Network Interface Tuning
 
 Bind WireGuard to specific network interfaces or CPUs for optimal performance:
 
@@ -295,7 +295,7 @@ echo 8 > /proc/irq/[IRQ4]/smp_affinity
 
 For dedicated file transfer servers, consider using dedicated network interfaces exclusively for WireGuard traffic to minimize context switching. Isolating WireGuard traffic to specific NICs and CPU NUMA nodes eliminates cross-socket memory access overhead, which matters at 10+ Gbps speeds.
 
-Measuring and Monitoring Performance
+## Measuring and Monitoring Performance
 
 Quantify improvements with systematic benchmarking:
 
@@ -338,7 +338,7 @@ Network interface errors (CRC errors suggest physical layer problems)
 ip -s link show wg0
 ```
 
-Common Bottlenecks and Solutions
+## Common Bottlenecks and Solutions
 
 | Symptom | Likely Cause | Solution |
 |---|---|---|
@@ -372,7 +372,7 @@ Bufferbloat: Large kernel buffers help throughput but can cause latency spikes t
 tc qdisc replace dev wg0 root fq_codel
 ```
 
-Practical Implementation Checklist
+## Practical Implementation Checklist
 
 1. Measure baseline performance with iperf3 and a real large file transfer. document Mbps, CPU%, and latency
 2. Run MTU path discovery and set optimal MTU in wg0.conf
@@ -388,7 +388,6 @@ Practical Implementation Checklist
 WireGuard's simplicity doesn't mean sacrificing performance. With thoughtful tuning, you can achieve multi-gigabit throughput suitable for enterprise file distribution, backup synchronization, and media production workflows. Start with MTU and kernel tuning. these two changes alone often deliver 2-3x improvement over default configurations. Then move to BBR, parallel connections, and hardware-specific optimizations as your workload demands.
 
 ---
-
 
 Related Reading
 

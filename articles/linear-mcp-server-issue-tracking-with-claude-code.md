@@ -18,7 +18,7 @@ Managing issues and projects directly from your coding environment saves context
 
 This guide walks you through setting up the Linear MCP server and demonstrates practical workflows for issue tracking with Claude Code.
 
-Setting Up the Linear MCP Server
+## Setting Up the Linear MCP Server
 
 Before using Linear with Claude Code, you need to configure the MCP server. You'll need your Linear API key and the MCP server package installed.
 
@@ -42,7 +42,7 @@ Add your Linear API key to your environment variables or Claude Code configurati
 
 Once configured, Claude Code gains access to Linear tools including createIssue, updateIssue, listIssues, and searchIssues. These tools map directly to Linear's GraphQL API operations.
 
-Creating Issues from Claude Code
+## Creating Issues from Claude Code
 
 The most common workflow involves creating issues directly from your coding context. When you encounter a bug or feature request during a coding session, you can log it without switching applications.
 
@@ -60,7 +60,7 @@ This creates an issue in your specified team with priority level 2 (urgent). The
 
 The integration works particularly well when combined with other skills. Use the tdd skill to generate test cases for your new issue, then create the issue with those test details included. Or use the code-analysis skill to gather relevant code context before writing your issue description. For a broader view of how Claude skills fit into issue-driven workflows, see the [Claude skills workflow for technical product managers guide](/claude-skills-workflow-for-technical-product-managers/).
 
-Querying and Managing Issues
+## Querying and Managing Issues
 
 Beyond creation, the Linear MCP server lets you query existing issues to stay organized. You can list issues by status, assignee, or project:
 
@@ -88,7 +88,7 @@ listIssues(
 )
 ```
 
-Integrating with Development Workflows
+## Integrating with Development Workflows
 
 The real power emerges when you combine Linear issue tracking with Claude Code's other capabilities. Here are practical integration patterns:
 
@@ -120,7 +120,7 @@ Query supermemory for related historical context, then createIssue with links to
 
 ```
 
-Automating Issue Workflows
+## Automating Issue Workflows
 
 You can script common issue management patterns. Create a skill that handles routine updates:
 
@@ -135,7 +135,7 @@ For each issue in the current sprint, check if there's been activity using the L
 
 This automation reduces manual status updates and keeps your team aware of bottlenecks. You can explore even more patterns in the [Claude skills with Linear project management tutorial](/claude-skills-with-linear-project-management-tutorial/).
 
-Practical Example: Bug Reporting Workflow
+## Practical Example: Bug Reporting Workflow
 
 Here's a complete workflow for reporting and tracking bugs:
 
@@ -154,7 +154,7 @@ createIssue(
 )
 ```
 
-Best Practices
+## Best Practices
 
 Keep your Linear integration effective with these approaches:
 
@@ -165,7 +165,7 @@ Keep your Linear integration effective with these approaches:
 
 Before committing your Linear API key to any config file, review the [MCP credential management and secrets handling guide](/mcp-credential-management-and-secrets-handling/) for secure storage patterns.
 
-Conclusion
+## Conclusion
 
 The Linear MCP server transforms Claude Code into a powerful issue tracking hub. By creating and managing issues directly in your coding workflow, you maintain focus, preserve context, and keep your team synchronized. Combined with Claude Code skills like tdd for test management, pdf for documentation generation, and supermemory for knowledge recall, you build a cohesive development environment that bridges coding and project management.
 

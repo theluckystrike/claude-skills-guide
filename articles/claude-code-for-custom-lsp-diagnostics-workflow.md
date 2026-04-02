@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Custom LSP Diagnostics Workflow
 
@@ -21,7 +20,7 @@ The Language Server Protocol (LSP) has revolutionized how we approach code analy
 
 This guide walks you through building a custom LSP diagnostics workflow using Claude Code, with practical examples you can adapt for your own projects.
 
-Understanding LSP Diagnostics in Claude Code
+## Understanding LSP Diagnostics in Claude Code
 
 LSP diagnostics are standardized messages that language servers send to clients to report errors, warnings, and other issues in your code. Claude Code can interact with these diagnostics to help you build workflows that automatically detect, categorize, and respond to code issues.
 
@@ -38,7 +37,7 @@ The LSP specification defines four severity levels:
 
 Claude Code can consume all four levels and apply different automations to each, giving you fine-grained control over how your pipeline responds.
 
-Setting Up Your Diagnostic Collection
+## Setting Up Your Diagnostic Collection
 
 The first step in building a custom diagnostics workflow is capturing LSP messages. Here's a basic setup using Claude Code's tools:
 
@@ -176,11 +175,11 @@ class LSPClient:
 
 This client manages the full LSP lifecycle: initialization, file opening, and asynchronous diagnostic collection from the server's push notifications.
 
-Building a Custom Diagnostics Pipeline
+## Building a Custom Diagnostics Pipeline
 
 A well-designed diagnostics pipeline has three main stages: collection, analysis, and action. Let's build each component.
 
-Stage 1: Collection
+## Stage 1: Collection
 
 Create a Claude Code skill that intercepts diagnostics from your language server:
 
@@ -232,7 +231,7 @@ def collect_project_diagnostics(lsp_client, source_root, extensions=None):
     return all_diagnostics
 ```
 
-Stage 2: Analysis
+## Stage 2: Analysis
 
 Once collected, diagnostics need categorization. Here's a pattern for analyzing and grouping issues:
 
@@ -304,7 +303,7 @@ def record_diagnostics_snapshot(analyzed, db_path="diagnostics.db"):
 
 Running this on every CI build gives you a historical error trend chart, you can spot if a refactor branch is quietly accumulating warnings that will become errors later.
 
-Stage 3: Action
+## Stage 3: Action
 
 The final stage is taking action based on your analysis. This could mean generating reports, triggering notifications, or automatically creating fix suggestions:
 
@@ -361,7 +360,7 @@ def evaluate_quality_gate(analyzed, config):
     return (len(violations) == 0, violations)
 ```
 
-Practical Example: Git Pre-Commit Diagnostics
+## Practical Example: Git Pre-Commit Diagnostics
 
 One powerful use case is running diagnostics before commits. Here's how to integrate with git hooks:
 
@@ -437,7 +436,7 @@ fi
 exit 0
 ```
 
-Advanced: Custom Diagnostic Rules
+## Advanced: Custom Diagnostic Rules
 
 Beyond standard LSP diagnostics, you can create custom rules specific to your project:
 
@@ -550,7 +549,7 @@ def run_custom_rules(file_path, source_code):
     return findings
 ```
 
-Integrating with Claude Code for AI-Powered Fix Suggestions
+## Integrating with Claude Code for AI-Powered Fix Suggestions
 
 The most powerful use of this pipeline is feeding diagnostics back to Claude Code to generate fix suggestions automatically. Once you have structured diagnostic output, you can prompt Claude with the affected code context:
 
@@ -602,7 +601,7 @@ def generate_fix_suggestions(diagnostics, source_code_map):
     return suggestions
 ```
 
-Best Practices for Diagnostic Workflows
+## Best Practices for Diagnostic Workflows
 
 When building your custom LSP diagnostics workflow, keep these principles in mind:
 
@@ -658,7 +657,7 @@ def get_diagnostics_with_cache(lsp_client, file_path, cache):
 
 This makes large-project diagnostic runs fast on incremental changes, only modified files get re-analyzed.
 
-Conclusion
+## Conclusion
 
 Building custom LSP diagnostics workflows with Claude Code opens up powerful possibilities for automated code quality assurance. By collecting diagnostics, analyzing patterns, and taking targeted actions, you can catch issues early, enforce standards consistently, and focus your attention on what matters most, writing great code.
 

@@ -16,13 +16,13 @@ permalink: /when-to-split-one-claude-skill-into-multiple-files/
 
 Claude skills are powerful tools that extend Claude Code's capabilities. As your skills grow in complexity, you might wonder whether to keep everything in a single file or split it across multiple files. This guide walks through the decision-making process with practical examples.
 
-The Single File Trap
+## The Single File Trap
 
 When you first create a Claude skill, starting with a single file feels natural. You have a simple prompt, a few tools, and everything works in one place. However, skills tend to grow. What starts as a straightforward document processor can evolve into something with hundreds of lines handling multiple file types, edge cases, and configuration options. Reviewing the [complete skill .md file format specification](/claude-skill-md-format-complete-specification-guide/) before you start helps you understand the structural limits of a single file early on.
 
 The pdf skill is a good example. Initially, it might handle basic text extraction. Over time, it adds form filling, table extraction, merge operations, and watermarking. A single file handling all of this becomes difficult to navigate, test, and maintain.
 
-Signs You Should Split Your Skill
+## Signs You Should Split Your Skill
 
 Here are the key indicators that it's time to split your skill into multiple files:
 
@@ -42,7 +42,7 @@ If your skill has dozens of configuration options, environment variables, or con
 
 Skills intended for open source or team use benefit from modularity. Contributors can work on specific features without understanding the whole system. The tdd skill, for instance, might have separate files for test generation, assertion libraries, and test runner integration. The [guide to sharing Claude skills with your team](/how-to-share-claude-skills-with-your-team/) covers distribution workflows that become much simpler once skills are cleanly modularized.
 
-How to Structure Multi-File Skills
+## How to Structure Multi-File Skills
 
 Claude skills support a straightforward file structure. Here's a practical example:
 
@@ -76,7 +76,7 @@ Implementation
 Use modules from ./modules/ for each capability.
 ```
 
-Practical Example: Splitting a Data Analysis Skill
+## Practical Example: Splitting a Data Analysis Skill
 
 Imagine you have a data analysis skill that started simple but now handles CSV processing, statistical calculations, visualization generation, and report formatting. Here's how you might split it:
 
@@ -111,7 +111,7 @@ data-analysis/
 
 Each file now has a focused responsibility. The csv-handler module handles reading, parsing, and validating CSV files. The statistics module focuses on calculations like mean, median, standard deviation, and correlation. This separation makes testing easier and lets users understand each component independently. Pairing a modular data skill with the [Claude skills for data science and Jupyter notebooks guide](/claude-skills-for-data-science-and-jupyter-notebooks/) gives you a complete picture of how split skills integrate into analytical workflows.
 
-When to Keep Things Together
+## When to Keep Things Together
 
 Single-file skills aren't always wrong. Keep everything in one file when:
 
@@ -122,7 +122,7 @@ Single-file skills aren't always wrong. Keep everything in one file when:
 
 The supermemory skill is an example where a focused, single-file approach works well. It has a clear purpose, managing semantic memory storage, and doesn't need extensive modularity.
 
-Best Practices for Multi-File Skills
+## Best Practices for Multi-File Skills
 
 1. Name files descriptively: Use clear, action-oriented names like `parser.md`, `validator.md`, or `generator.md`
 
@@ -134,13 +134,13 @@ Best Practices for Multi-File Skills
 
 5. Test each module: Modular skills are easier to test. Verify each component works independently before integration
 
-Common Pitfalls
+## Common Pitfalls
 
 Avoid over-splitting. Creating a separate file for every small function adds complexity without benefit. If you find yourself creating files with just a few lines each, reconsider the structure. Managing [context window constraints in Claude skills](/claude-md-too-long-context-window-optimization/) is an equally important consideration, splitting files changes how context is loaded and can affect performance.
 
 Another pitfall is unclear dependencies. When modules depend on each other in complex ways, the benefit of separation disappears. Keep dependencies simple and documented.
 
-Conclusion
+## Conclusion
 
 Splitting Claude skills into multiple files becomes worthwhile when skills grow beyond a single focused capability, share common utilities, or need to support multiple configuration scenarios. The key is recognizing growth signals early and refactoring before the skill becomes unmaintainable.
 

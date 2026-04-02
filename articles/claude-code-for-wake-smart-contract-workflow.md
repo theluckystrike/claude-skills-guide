@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Wake Smart Contract Workflow
 
@@ -33,7 +32,7 @@ The combination works because Wake exposes contract state as typed Python object
 | Solidity | Smart contract implementation |
 | Git | Version control, deployment audit trail |
 
-Setting Up Wake with Claude Code
+## Setting Up Wake with Claude Code
 
 Before integrating with Claude Code, ensure Wake is properly installed in your project environment. Create a new Python virtual environment and install Wake alongside its dependencies:
 
@@ -76,7 +75,7 @@ compilation_timeout = 30
 
 Once the project is initialized, open it with Claude Code so it can index the file structure, read the existing contracts and tests, and understand the project's conventions before you start working.
 
-Project Structure Best Practices
+## Project Structure Best Practices
 
 Wake projects follow a consistent structure. Keeping to this layout helps Claude give better suggestions because it can predict where files live:
 
@@ -99,7 +98,7 @@ my-project/
 
 Keep contracts in `contracts/`, tests in `tests/`, and deployment scripts in `scripts/`. Use `conftest.py` for shared fixtures so you do not duplicate setup logic across test files.
 
-Creating a Claude Skill for Wake Development
+## Creating a Claude Skill for Wake Development
 
 Develop a specialized Claude Skill that understands Wake's commands and Python testing framework. This skill should include knowledge of Wake's testing syntax, deployment commands, and common development patterns.
 

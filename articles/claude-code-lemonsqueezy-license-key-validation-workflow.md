@@ -13,7 +13,6 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code LemonSqueezy License Key Validation Workflow
 
@@ -21,7 +20,7 @@ Software licensing is a critical component of any commercial application. Whethe
 
 This guide walks you through creating a practical license key validation system using Claude Code skills and LemonSqueezy's API. from basic key checking to full activation management, caching strategies, and server-side proxy patterns.
 
-Understanding the LemonSqueezy License API
+## Understanding the LemonSqueezy License API
 
 LemonSqueezy generates unique license keys for each purchase. These keys can be validated against their API to check:
 
@@ -32,7 +31,7 @@ LemonSqueezy generates unique license keys for each purchase. These keys can be 
 
 The primary endpoint for license validation is `POST /v1/licenses/validate`, which checks a key against a specific instance identifier. There's also `GET /v1/licenses/{license_key}` for reading raw license data.
 
-LemonSqueezy License States
+## LemonSqueezy License States
 
 Understanding the possible states a license can be in helps you write correct validation logic:
 
@@ -46,7 +45,7 @@ Understanding the possible states a license can be in helps you write correct va
 
 Always handle all five states rather than assuming anything that isn't `active` is a generic failure.
 
-Building the Validation Skill
+## Building the Validation Skill
 
 Create a new Claude Code skill for license validation. This skill will handle the communication with LemonSqueezy's API and provide clear responses about license status.
 
@@ -84,7 +83,7 @@ Replace `{license_key}` with the user's license key and `{api_key}` with your Le
 
 Once this skill file is committed to your `.claude/skills/` directory, Claude Code can answer questions like "Is license key XXXX-YYYY valid?" directly within your terminal workflow. This is especially useful during support conversations or internal tooling where you want to check a customer's license without opening the LemonSqueezy dashboard.
 
-Implementing the Validation Function
+## Implementing the Validation Function
 
 Beyond the skill, you can create a reusable validation function that your applications can call. Here's a practical example in JavaScript that you can integrate into any project:
 
@@ -126,7 +125,7 @@ async function validateLicense(licenseKey, apiKey) {
 
 This function returns a clear object with all the information your application needs to make licensing decisions. Note that the `status` field is included so callers can distinguish between `expired`, `disabled`, and `inactive` states rather than treating all non-active responses identically.
 
-Python Version
+## Python Version
 
 For Python-based desktop apps, CLI tools, or backend services:
 
@@ -171,7 +170,7 @@ def validate_license(license_key: str, api_key: str) -> dict:
         return {"valid": False, "error": str(e)}
 ```
 
-Building a Server-Side Proxy
+## Building a Server-Side Proxy
 
 Never call the LemonSqueezy API directly from client-side JavaScript or a desktop app binary. The API key would be exposed in network traffic or decompilation. Instead, route validation through a lightweight server-side proxy.
 
@@ -243,7 +242,7 @@ app.listen(3000, () => console.log('License proxy running on port 3000'));
 
 Clients now call `/api/validate-license` with their key. The server holds the secret API key and handles caching.
 
-Automated License Checking in CI/CD
+## Automated License Checking in CI/CD
 
 One powerful use case is integrating license validation into your continuous integration pipeline. You can create a Claude Code workflow that checks licenses during deployment:
 
@@ -279,7 +278,7 @@ jobs:
 
 This workflow can be triggered manually or as part of your release process to ensure only valid licenses are activated.
 
-Creating an Activation/Deactivation System
+## Creating an Activation/Deactivation System
 
 For desktop applications that need to track activations (like limiting usage to a specific number of machines), you can implement an activation system:
 
@@ -323,7 +322,7 @@ async function deactivateLicense(licenseKey, activationId, apiKey) {
 
 This allows users to transfer their license between machines by deactivating on the old machine and activating on the new one.
 
-Generating a Stable Machine ID
+## Generating a Stable Machine ID
 
 A machine ID needs to be deterministic (same machine always gets the same ID) but not personally identifiable. A common approach is to hash a combination of hardware identifiers:
 
@@ -344,7 +343,7 @@ function getStableMachineId(appName) {
 
 Store the returned `activation_id` from LemonSqueezy after a successful activation. you'll need it later for deactivation.
 
-Handling Offline Grace Periods
+## Handling Offline Grace Periods
 
 A common UX problem is that license validation requires a network call. If your user is on a plane or in a spotty-coverage area, don't lock them out. Implement a grace period using locally cached validation results:
 
@@ -384,7 +383,7 @@ async function checkLicense(licenseKey) {
 
 A 7-day grace period is a reasonable default. Adjust it based on your product's connectivity expectations.
 
-Using Claude Code to Scaffold the Validation Workflow
+## Using Claude Code to Scaffold the Validation Workflow
 
 Claude Code can generate the entire validation stack from a single prompt. A precise prompt produces better results:
 
@@ -400,7 +399,7 @@ Build a LemonSqueezy license validation system for an Electron app with:
 
 Claude Code will scaffold the proxy server, the client-side SDK, the TypeScript interfaces, and wire everything together. You then review the output, drop in your LemonSqueezy API key, and have a working system in minutes rather than days.
 
-Best Practices for Production Systems
+## Best Practices for Production Systems
 
 When implementing license validation in production, keep these principles in mind:
 
@@ -423,7 +422,7 @@ Handle network failures gracefully. If LemonSqueezy's API is unavailable, decide
 
 Log validation attempts. Keep track of when and where licenses are validated to detect potential abuse or piracy. Unusual patterns. like the same key being validated from 50 different machines in an hour. are worth alerting on.
 
-Conclusion
+## Conclusion
 
 Building a license validation workflow with Claude Code and LemonSqueezy combines the best of both worlds: Claude Code's agentic capabilities for automation and LemonSqueezy's solid licensing infrastructure. Whether you're validating licenses in a CLI tool, a web application, or a desktop app, the patterns outlined in this guide provide a solid foundation.
 

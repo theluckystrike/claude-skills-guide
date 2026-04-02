@@ -13,12 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Vibe Coding vs Traditional Development: A Practical Comparison
+## Vibe Coding vs Traditional Development: A Practical Comparison
 
 The software development landscape has shifted dramatically with the rise of AI-assisted coding tools. Developers now have two distinct paths: traditional development where you write every line of code manually, and vibe coding where you describe your intent and let AI generate the implementation. Understanding when each approach works best will help you build better software faster.
 
-Core Differences Between the Two Approaches
+## Core Differences Between the Two Approaches
 
 Traditional development follows a well-established pattern: you plan, write code, test, debug, and iterate. Every function, every variable, every conditional statement comes from your keyboard. This gives you complete control but requires significant time investment for boilerplate and repetitive tasks.
 
@@ -48,7 +47,7 @@ You: Create a TypeScript interface for a user with id, name, email, and createdA
 
 Claude Code generates both the interface and the function based on your description. The result is functionally equivalent, but the time investment differs significantly.
 
-When Vibe Coding Works Best
+## When Vibe Coding Works Best
 
 Vibe coding excels in specific scenarios where the overhead of manual implementation outweighs the benefits:
 
@@ -62,7 +61,7 @@ Documentation Tasks: Using skills like pdf and docx, you can generate documentat
 
 For instance, the frontend-design skill specializes in generating UI components with proper structure, responsive design, and accessibility considerations. When you need a button component or a form layout, describing the requirement produces working code faster than writing it from scratch.
 
-When Traditional Development Remains Necessary
+## When Traditional Development Remains Necessary
 
 Despite the productivity gains from vibe coding, certain scenarios demand direct manual control:
 
@@ -76,15 +75,15 @@ Debugging and Troubleshooting: When something breaks, understanding the code dee
 
 The tdd skill demonstrates a hybrid approach worth considering. It encourages writing tests first, then using AI to implement the functionality that makes those tests pass. This combines the productivity of vibe coding with the rigor of test-driven development.
 
-A Practical Workflow Comparison
+## A Practical Workflow Comparison
 
 Let me walk through implementing a simple feature both ways: a user notification system.
 
-Traditional Development Path
+## Traditional Development Path
 
 You'd start by designing the data structures, then write the notification service, create database queries, implement error handling, and finally write tests. The process might take 2-3 hours for a well-structured implementation.
 
-Vibe Coding Path
+## Vibe Coding Path
 
 With Claude Code, you'd describe the requirement: "Create a notification service that sends email and SMS alerts. Include retry logic, a database schema for tracking notification status, and unit tests."
 
@@ -92,7 +91,7 @@ The AI generates the initial implementation in minutes. You then review, refine,
 
 The quality difference matters too. Traditional code reflects your mental model directly. Vibe-coded code represents the AI's interpretation of your description, sometimes accurate, sometimes requiring clarification.
 
-Productivity and Trade-offs
+## Productivity and Trade-offs
 
 The productivity gains from vibe coding are real but context-dependent:
 
@@ -107,7 +106,7 @@ The productivity gains from vibe coding are real but context-dependent:
 
 The supermemory skill offers an interesting advantage for vibe coding workflows. It maintains context across sessions, helping Claude understand your preferences, coding style, and project conventions over time. This leads to increasingly accurate code generation that aligns with your standards.
 
-Making the Right Choice
+## Making the Right Choice
 
 The best developers combine both approaches strategically. Here's a decision framework:
 
@@ -125,7 +124,7 @@ Choose traditional development when:
 
 The skill system in Claude Code helps optimize this decision. Skills like tdd for test-driven workflows, frontend-design for UI components, and pdf for document generation each enhance specific aspects of both approaches.
 
-Conclusion
+## Conclusion
 
 Vibe coding versus traditional development isn't an either-or decision. They're complementary tools in a modern developer's toolkit. The key is recognizing which approach serves each task best.
 

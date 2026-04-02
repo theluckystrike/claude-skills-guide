@@ -13,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude API Prompt Caching Performance Optimization Guide
 
 Prompt caching is one of the most impactful optimizations you can implement when building production applications with the Claude API. By reusing context that's been previously processed, you can dramatically reduce latency, lower API costs, and improve the responsiveness of your AI-powered features. This guide walks you through practical strategies for implementing prompt caching effectively.
 
-Understanding How Prompt Caching Works
+## Understanding How Prompt Caching Works
 
 When you send a request to the Claude API, the model processes the entire prompt, including system instructions, conversation history, and user messages. Without caching, every request must reprocess all this context from scratch. With prompt caching enabled, the API stores previously processed context in a cache, allowing subsequent requests to reference that cached content instead of reprocessing it entirely.
 
 The key insight is that many applications have static or slowly changing context: system prompts, documentation, knowledge bases, and lengthy conversation histories. By identifying these stable elements, you can cache them and only send dynamic content with each request.
 
-Implementing Cache Commands in Your Prompts
+## Implementing Cache Commands in Your Prompts
 
 The Claude API supports special cache commands that tell the model which parts of your prompt should be cached. These commands use XML-like tags that you include directly in your prompt:
 
@@ -58,9 +57,9 @@ The above code contains a SQL injection vulnerability in the get_user_data funct
 
 The `<cache>` tags indicate which sections should be stored in the cache. On the first request, the entire prompt is processed. Subsequent requests with the same cached content will be significantly faster because the model only processes the new, uncached portions.
 
-Strategic Caching Patterns for Production
+## Strategic Caching Patterns for Production
 
-Pattern 1: Knowledge Base Caching
+## Pattern 1: Knowledge Base Caching
 
 If your application queries against a static knowledge base, product documentation, company policies, or technical specifications, you can cache the entire knowledge base once and only send the user's specific question:
 
@@ -89,7 +88,7 @@ Provide a concise, accurate answer based on the knowledge base above."""
 
 This pattern is particularly effective for customer support applications where the product documentation rarely changes but users ask varied questions.
 
-Pattern 2: System Prompt Caching
+## Pattern 2: System Prompt Caching
 
 Your system prompt, instructions that define the AI's behavior, tone, and capabilities, remains constant across requests. Cache it once and reuse it:
 
@@ -123,7 +122,7 @@ def create_request(user_message, cached_system=True):
     }
 ```
 
-Pattern 3: Conversation History Summarization and Caching
+## Pattern 3: Conversation History Summarization and Caching
 
 For multi-turn conversations, you can periodically summarize and cache the conversation history, keeping only recent messages in full:
 
@@ -154,9 +153,9 @@ User: {current_message}"""
     }
 ```
 
-Optimizing Cache Performance
+## Optimizing Cache Performance
 
-Cache Key Strategies
+## Cache Key Strategies
 
 The effectiveness of caching depends on how you structure your cached content. Follow these principles:
 
@@ -166,7 +165,7 @@ The effectiveness of caching depends on how you structure your cached content. F
 
 3. Use consistent formatting: Cache content should have consistent structure across requests. Variations in whitespace or formatting can affect cache hits.
 
-Monitoring Cache Performance
+## Monitoring Cache Performance
 
 Track these metrics to understand your caching effectiveness:
 
@@ -193,7 +192,7 @@ def log_cache_metrics(request, response):
 
 A high cache hit ratio (above 70% is excellent) indicates your caching strategy is working well. If hit ratios are low, review what you're including in cache tags.
 
-Cache Invalidation Strategies
+## Cache Invalidation Strategies
 
 Cached content becomes stale when your underlying data changes. Implement appropriate invalidation:
 
@@ -218,7 +217,7 @@ def should_refresh_cache(cache_entry):
     return False
 ```
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 1. Caching too much dynamic content: If you're frequently invalidating caches, you're not gaining the performance benefit. Keep cached sections stable.
 
@@ -228,7 +227,7 @@ Common Pitfalls to Avoid
 
 4. Forgetting about cache limits: Check API documentation for any limits on cached content size or number of cache entries.
 
-Conclusion
+## Conclusion
 
 Prompt caching is a powerful optimization that can reduce API costs by 30-70% while improving response times. The key is identifying the stable, reusable components of your prompts, system instructions, documentation, knowledge bases, and strategically caching them. Implement the patterns in this guide, monitor your cache hit ratios, and adjust your approach based on actual production data.
 

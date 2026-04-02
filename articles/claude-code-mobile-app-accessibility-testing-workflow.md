@@ -13,16 +13,13 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code Mobile App Accessibility Testing Workflow
 
 Mobile app accessibility is no longer optional, it's a legal requirement and a business imperative. With over 1 billion people worldwide living with some form of disability, ensuring your mobile app is accessible isn't just good practice; it's essential for reaching your full audience. Legislation like the Americans with Disabilities Act (ADA), the European Accessibility Act, and Apple and Google's own App Store guidelines increasingly enforce accessibility standards. Failing to comply can mean rejected app submissions, costly lawsuits, or simply losing a large segment of potential users.
 
 This guide walks you through building a comprehensive accessibility testing workflow using Claude Code, covering automated scanning, manual testing strategies, real-world scenarios, and continuous integration setup. Whether you're working in Swift, Kotlin, or React Native, the patterns here apply across the board.
 
-Understanding Mobile Accessibility Testing Fundamentals
+## Understanding Mobile Accessibility Testing Fundamentals
 
 Mobile accessibility testing differs significantly from web accessibility testing due to the unique characteristics of mobile interfaces. Touch targets, screen reader behavior, text scaling, gesture-based navigation, and haptic feedback all require specialized attention that desktop tools simply don't address.
 
@@ -38,7 +35,7 @@ Before diving into the workflow, it's crucial to understand the key areas where 
 
 Claude Code can assist in identifying these issues through its analysis capabilities, but a structured workflow ensures consistent, thorough testing across your entire app. The key is treating accessibility as a first-class part of development rather than a post-release audit.
 
-Setting Up Your Accessibility Testing Environment
+## Setting Up Your Accessibility Testing Environment
 
 The first step in building your accessibility testing workflow is establishing the right toolset. Claude Code works best when combined with platform-specific testing tools and a clear project structure.
 
@@ -99,11 +96,11 @@ fun testButtonHasContentDescription() {
 
 Claude Code can generate these test stubs automatically. Open a Claude Code session in your project directory and prompt: "Generate accessibility test cases for every UIButton and UILabel in my HomeViewController." Claude Code will analyze the file, identify interactive elements, and produce meaningful test cases tailored to your code.
 
-Creating an Automated Testing Pipeline with Claude Code
+## Creating an Automated Testing Pipeline with Claude Code
 
 Once your environment is configured, you can build an automated pipeline that catches accessibility issues during development rather than after release. Claude Code can help generate test cases, analyze code for potential issues, document findings, and suggest fixes, all within a single session.
 
-Step 1: Code Analysis Phase
+## Step 1: Code Analysis Phase
 
 Before running your app, use Claude Code to analyze your codebase for common accessibility anti-patterns. This proactive approach catches issues early when they're cheapest to fix:
 
@@ -131,7 +128,7 @@ You can also ask Claude Code to generate a custom linting configuration. ESLint 
 }
 ```
 
-Step 2: Runtime Testing
+## Step 2: Runtime Testing
 
 Integrate accessibility testing into your regular test suite so failures block merges before they reach production. For React Native apps, jest-native provides expressive matchers:
 
@@ -192,7 +189,7 @@ func testAllScreensHaveAccessibleElements() {
 }
 ```
 
-Step 3: Screen Reader Testing
+## Step 3: Screen Reader Testing
 
 Automated tests can't catch everything. VoiceOver (iOS) and TalkBack (Android) testing requires manual verification because screen reader behavior depends on context, focus order, and announcement timing that static analysis cannot fully model.
 
@@ -209,7 +206,7 @@ Create a structured checklist for Claude Code to help guide your manual testing 
 
 One practical approach is to record screen reader sessions during QA and save the audio alongside your pull requests. This creates an auditable trail that shows how the app actually sounds to screen reader users, something no automated test can replicate.
 
-Step 4: Contrast and Visual Testing
+## Step 4: Contrast and Visual Testing
 
 Color contrast issues affect a wide range of users including those with low vision and color blindness. Claude Code can integrate with color analysis tools to flag violations early:
 
@@ -242,7 +239,7 @@ print("PASS" if ratio >= 4.5 else "FAIL - Below WCAG AA threshold")
 
 Ask Claude Code to generate contrast checks for your entire design token file, outputting a pass/fail report for every text-on-background combination in your design system.
 
-Implementing Continuous Integration for Accessibility
+## Implementing Continuous Integration for Accessibility
 
 To maintain accessibility over time, integrate testing into your CI/CD pipeline so that regressions are caught automatically. Claude Code can help generate the configuration files and scripts needed for automated enforcement.
 
@@ -304,7 +301,7 @@ jobs:
 
 Set a minimum accessibility score threshold so the pipeline fails if the score drops below your baseline. This prevents accessibility debt from accumulating incrementally across many small PRs.
 
-Accessibility Testing Comparison: Tools and Approaches
+## Accessibility Testing Comparison: Tools and Approaches
 
 | Tool | Platform | Automated | Manual | Best For |
 |------|----------|-----------|--------|----------|
@@ -320,7 +317,7 @@ Accessibility Testing Comparison: Tools and Approaches
 
 Claude Code fills the role of intelligent code analysis and test generation that complements all of these tools. It doesn't replace device testing, but it dramatically reduces the number of issues that reach device testing in the first place.
 
-Prioritizing and Fixing Accessibility Issues
+## Prioritizing and Fixing Accessibility Issues
 
 Not all accessibility issues carry equal weight. Use this prioritization framework when addressing findings, focusing engineering effort where it has the most impact:
 
@@ -366,7 +363,7 @@ override fun onResume() {
 
 Ask Claude Code to audit your navigation transitions and generate the correct focus management code for each screen. This is particularly valuable in apps with complex tab-based or drawer navigation, where default system behavior often sends focus to unexpected elements.
 
-Real-World Scenario: Fixing a Checkout Flow
+## Real-World Scenario: Fixing a Checkout Flow
 
 Consider a real-world scenario: your e-commerce app's checkout flow has a 15% abandonment rate among users who enabled screen readers. Claude Code can help diagnose and fix this systematically.
 
@@ -382,7 +379,7 @@ Claude Code might identify:
 
 After Claude Code identifies the issues, it can generate fixes for each one and create new test cases to prevent regression. The combination of analysis, fix generation, and test generation in a single tool dramatically reduces the time from discovery to resolution.
 
-Measuring Accessibility Success
+## Measuring Accessibility Success
 
 Track your accessibility progress over time with measurable metrics tied to development milestones:
 
@@ -416,7 +413,7 @@ print(f"Critical: {len(report['critical'])}, Serious: {len(report['serious'])}")
 
 Regular audits, combined with automated testing, create a sustainable workflow that improves accessibility over time without becoming a bottleneck in your development process.
 
-Building Sustainable Accessibility Habits
+## Building Sustainable Accessibility Habits
 
 The best accessibility workflow is one that becomes second nature to your team. Achieving this requires both tooling and culture.
 

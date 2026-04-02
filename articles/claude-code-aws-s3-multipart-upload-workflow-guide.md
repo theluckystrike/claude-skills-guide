@@ -16,7 +16,7 @@ permalink: /claude-code-aws-s3-multipart-upload-workflow-guide/
 
 Large file uploads to Amazon S3 can be challenging when dealing with files exceeding 5GB or unstable network connections. AWS S3 multipart upload breaks large files into parts, enabling parallel uploads and resumable transfers. This guide shows you how to use Claude Code to create efficient multipart upload workflows that automate the entire process.
 
-Understanding Multipart Upload Basics
+## Understanding Multipart Upload Basics
 
 Before diving into Claude Code workflows, let's understand how multipart uploads work in AWS S3. When you upload a large object, S3 allows you to break it into parts (typically 5MB to 5GB each). Each part uploads independently, and you can even upload parts in parallel for faster throughput.
 
@@ -28,7 +28,7 @@ The multipart upload process follows three stages:
 
 This is where Claude Code shines, it can manage the entire lifecycle, handle errors, and resume interrupted uploads automatically.
 
-Setting Up AWS Credentials for Claude Code
+## Setting Up AWS Credentials for Claude Code
 
 Before creating multipart upload workflows, ensure your AWS credentials are configured properly. You can set up credentials using environment variables or AWS profiles:
 
@@ -40,7 +40,7 @@ export AWS_DEFAULT_REGION="us-east-1"
 
 Alternatively, use AWS profiles with the `AWS_PROFILE` environment variable. Claude Code can read these automatically when executing AWS CLI commands or calling the SDK.
 
-Creating a Claude Code Skill for Multipart Upload
+## Creating a Claude Code Skill for Multipart Upload
 
 Here's a practical skill that handles multipart uploads efficiently:
 
@@ -76,7 +76,7 @@ Complete Upload
 aws s3api complete-multipart-upload --bucket BUCKET --key KEY --upload-id ID --multipart-upload file.json
 ```
 
-Practical Example: Automated Upload Script
+## Practical Example: Automated Upload Script
 
 Here's a practical bash script that Claude Code can use to perform multipart uploads:
 
@@ -135,7 +135,7 @@ aws s3api complete-multipart-upload \
   --region "$REGION"
 ```
 
-Handling Large Files with Resume Capability
+## Handling Large Files with Resume Capability
 
 One of the most valuable features you can add to multipart upload workflows is resume capability. Here's how Claude Code can help manage this:
 
@@ -192,7 +192,7 @@ class MultipartUploader:
         return etag
 ```
 
-Best Practices for Claude Code S3 Workflows
+## Best Practices for Claude Code S3 Workflows
 
 When implementing multipart upload workflows with Claude Code, consider these best practices:
 
@@ -227,7 +227,7 @@ aws s3api create-multipart-upload \
   --use-accelerate-endpoint
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms AWS S3 multipart uploads from complex manual processes into automated, reliable workflows. By combining Claude Code's skill system with AWS CLI or SDK capabilities, you can build solid upload handlers that handle large files efficiently, recover from failures automatically, and scale to meet production demands.
 

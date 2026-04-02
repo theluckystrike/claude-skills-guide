@@ -13,10 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
 Setting up Claude Code for local development transforms your terminal into an intelligent coding assistant. This guide walks through the complete setup process, from installation to advanced configuration that unlocks the full potential of Claude Code for your development workflow. Rather than covering only the happy path, this guide addresses the real friction points. environment quirks, permission systems, skill orchestration, and monorepo layouts. that developers encounter after the initial install.
 
-Prerequisites and Initial Installation
+## Prerequisites and Initial Installation
 
 Before beginning, ensure you have Node.js 18+ and npm installed. Claude Code operates as a local CLI tool, giving you direct access to AI-assisted coding without relying on web interfaces.
 
@@ -52,7 +51,7 @@ npm install -g @anthropic-ai/claude-code
 
 Using `sudo npm install -g` works but creates files owned by root, which causes permission cascades on future updates. The prefix fix is the permanent solution.
 
-API Key Setup
+## API Key Setup
 
 Claude Code requires an Anthropic API key to function. Set it in your shell profile so it persists across sessions:
 
@@ -69,7 +68,7 @@ claude "Say hello in one sentence"
 
 If this returns a response, your installation is complete. If it times out, check whether your network requires a proxy. Claude Code respects the `HTTPS_PROXY` environment variable.
 
-Understanding the CLAUDE.md File
+## Understanding the CLAUDE.md File
 
 Before diving into settings files, understand the most important configuration mechanism: `CLAUDE.md`. This Markdown file, placed in your project root (or `~/.claude/CLAUDE.md` for global settings), is read automatically at the start of every Claude Code session. It gives Claude persistent context about your project without you having to re-explain conventions each time.
 
@@ -101,7 +100,7 @@ Do Not Touch
 
 This file is the difference between Claude giving generic advice and Claude giving advice that fits your actual project. Spend 10 minutes writing it when you set up a new project.
 
-Project-Specific Configuration
+## Project-Specific Configuration
 
 Create a `claude-settings.json` file in your project root to configure Claude Code behavior per-project. This file controls which files Claude can read, write, and execute, providing granular control over the AI's capabilities.
 
@@ -119,7 +118,7 @@ Create a `claude-settings.json` file in your project root to configure Claude Co
 
 The permissions system ensures Claude Code respects your project's boundaries. You can explicitly grant read access to source directories while blocking sensitive areas like environment files or credentials.
 
-Permission Patterns That Matter
+## Permission Patterns That Matter
 
 The `deny` list deserves careful attention. A solid baseline for most projects:
 
@@ -151,13 +150,13 @@ The `deny` list deserves careful attention. A solid baseline for most projects:
 
 The `node_modules` and `dist` exclusions keep Claude's context focused. it should be reading your source, not generated output. The `.git` exclusion prevents accidental modification of Git history.
 
-Integrating Claude Skills
+## Integrating Claude Skills
 
 Claude Code gains superpowers through skill integrations. Skills extend the CLI with specialized capabilities for different development tasks. The skill system loads automatically based on your current working directory or can be invoked explicitly.
 
 Skills live in `~/.claude/skills/` for global availability, or `.claude/skills/` within a project for project-scoped skills. Each skill is a Markdown file that gives Claude specific instructions, conventions, and tool usage patterns for a domain.
 
-PDF Manipulation with the pdf Skill
+## PDF Manipulation with the pdf Skill
 
 The pdf skill enables programmatic PDF creation and editing. Install it by creating a skills directory in your project:
 
@@ -184,7 +183,7 @@ to ensure portability across systems.
 
 Once configured, you can instruct Claude to generate reports, invoices, or documentation directly as PDF files without re-explaining your preferred library in each session.
 
-Test-Driven Development with tdd
+## Test-Driven Development with tdd
 
 The tdd skill streamlines the test-first development workflow. It creates test files alongside your source code, runs tests automatically, and helps debug failures. Activate it by mentioning "using tdd" in your request:
 
@@ -215,7 +214,7 @@ Always run `npm test -- --testPathPattern=FILENAME` after
 generating tests to verify they fail before implementing.
 ```
 
-Frontend Design with frontend-design
+## Frontend Design with frontend-design
 
 The frontend-design skill assists with UI component creation, responsive layouts, and design system implementation. It understands modern frameworks like React, Vue, and Tailwind CSS. When working on front-end features, invoke it explicitly:
 
@@ -240,7 +239,7 @@ Components: check src/components/ui/ before creating new ones
 Accessibility: all interactive elements need aria-labels and keyboard handlers
 ```
 
-Memory Management with supermemory
+## Memory Management with supermemory
 
 The supermemory skill maintains context across sessions. It indexes your codebase, remembers previous discussions, and retrieves relevant information when needed. This proves invaluable for large projects where you return to specific features days later.
 
@@ -258,7 +257,7 @@ Configure memory persistence in your `claude-settings.json`:
 
 Memory is most valuable when working on a large codebase where the same architectural patterns repeat. Instead of re-explaining "our services use the repository pattern, repositories are in src/repositories/" every session, the memory skill recalls this from previous conversations.
 
-Environment Variables and API Keys
+## Environment Variables and API Keys
 
 For production workflows, you may need to provide Claude Code with API access. Never commit API keys to your repository. Instead, use environment variables that Claude Code can access securely:
 
@@ -269,7 +268,7 @@ export OPENAI_API_KEY="sk-..."
 
 Claude Code respects your shell's environment variables. For project-specific secrets, use a `.env.local` file and ensure it is listed in your `.gitignore`.
 
-Layered Environment Variable Strategy
+## Layered Environment Variable Strategy
 
 Most projects need different values in development, staging, and production. A clean layering approach:
 
@@ -292,7 +291,7 @@ Add this to your `.gitignore`:
 
 When Claude Code generates code that reads environment variables, it will follow whatever pattern you document in your `CLAUDE.md`. If you specify "use dotenv with the `.env.local` override pattern," Claude generates `require('dotenv').config({ path: '.env.local' })` automatically.
 
-Custom Command Aliases
+## Custom Command Aliases
 
 Speed up your workflow with shell aliases for common Claude Code commands. Add these to your `~/.bashrc` or `~/.zshrc`:
 
@@ -318,7 +317,7 @@ For project-level aliases, consider a `Makefile` or `package.json` scripts secti
 
 Running `npm run ai:review` before every commit builds a habit of AI-assisted code review without requiring any typing.
 
-Working with Git Integration
+## Working with Git Integration
 
 Claude Code integrates with Git for version control workflows. Stage and commit changes through natural language:
 
@@ -332,7 +331,7 @@ The CLI understands Git semantics and will propose appropriate commit messages b
 claude "Show me what changed in the auth module"
 ```
 
-Pre-Commit Review Workflow
+## Pre-Commit Review Workflow
 
 A practical pattern is to run Claude Code as part of a pre-commit review step:
 
@@ -350,7 +349,7 @@ Claude will flag issues like:
 
 This catches issues that linters miss because Claude understands intent, not just syntax. For teams, codifying this in a `CONTRIBUTING.md` as a recommended step (not a required hook) maintains developer autonomy while improving review quality.
 
-Writing Commit Messages
+## Writing Commit Messages
 
 Claude Code follows your project's commit message conventions if you document them in `CLAUDE.md`:
 
@@ -363,7 +362,7 @@ Keep subject under 72 characters, body explains the why not the what.
 
 With this context, `claude "Commit the changes"` produces properly formatted commit messages matching your team's style.
 
-Performance Optimization
+## Performance Optimization
 
 Large codebases benefit from optimized configuration. Limit the context window for faster responses by restricting file scanning:
 
@@ -378,7 +377,7 @@ Large codebases benefit from optimized configuration. Limit the context window f
 
 For monorepos, create separate `claude-settings.json` files in each workspace to maintain focused context per component.
 
-Monorepo Layout
+## Monorepo Layout
 
 In a typical monorepo with multiple packages, scope Claude's context to the package you are actively working on:
 
@@ -398,7 +397,7 @@ my-monorepo/
 
 Claude reads `CLAUDE.md` files from the current directory up to the root, merging them. This means your root `CLAUDE.md` can document monorepo-wide patterns (like "use pnpm workspaces, not npm") while package-level files document local conventions.
 
-Excluding Generated Code
+## Excluding Generated Code
 
 A common performance bottleneck is Claude scanning generated files. Be explicit in your settings:
 
@@ -420,7 +419,7 @@ A common performance bottleneck is Claude scanning generated files. Be explicit 
 
 Generated GraphQL types, Prisma client files, and compiled JavaScript all add noise without value. Excluding them keeps responses faster and more accurate.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 If Claude Code fails to respond, check your network connection first. the CLI requires internet access for API calls. Permission errors typically stem from incorrect file ownership; verify your project directories are writable.
 
@@ -432,7 +431,7 @@ claude --verbose "your request"
 
 This outputs detailed diagnostics that help identify configuration problems or missing dependencies.
 
-Issue Reference
+## Issue Reference
 
 | Symptom | Likely Cause | Fix |
 |---|---|---|
@@ -444,7 +443,7 @@ Issue Reference
 | Session context lost | No `--resume` flag | Use `claude --resume` to continue previous session |
 | Hangs on startup | Proxy required | Set `HTTPS_PROXY` environment variable |
 
-Resetting a Broken Session
+## Resetting a Broken Session
 
 If a session gets into a bad state (Claude is confused about the project state or stuck in a loop), reset cleanly:
 
@@ -465,7 +464,7 @@ claude "You are working on the Payments API (Node.js/TypeScript).
 Read CLAUDE.md for conventions. The current task is: $1"
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code becomes genuinely powerful when properly configured. Project-specific settings, skill integrations, and environment configuration transform it from a simple CLI into an intelligent development partner. Start with basic setup, then gradually add skills and customization as your workflow matures.
 

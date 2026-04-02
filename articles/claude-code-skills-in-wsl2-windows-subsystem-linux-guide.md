@@ -22,7 +22,7 @@ WSL2 offers several advantages for developers working with Claude Code skills. T
 
 Many skills work identically in WSL2 as they do on native Linux. Skills like pdf for document processing, xlsx for spreadsheet manipulation, and tdd for test-driven development workflows execute without modification. The primary difference lies in how you configure the initial setup and manage file paths between Windows and Linux.
 
-Prerequisites
+## Prerequisites
 
 Before installing Claude Code skills in WSL2, ensure you have:
 
@@ -44,7 +44,7 @@ Check if Claude Code is installed
 which claude || echo "Claude Code not found"
 ```
 
-Installing Claude Code in WSL2
+## Installing Claude Code in WSL2
 
 If you have not installed Claude Code in WSL2 yet, the process differs slightly from Windows installation. Use the official installation script:
 
@@ -61,7 +61,7 @@ claude --version
 
 You may need to authenticate with your Anthropic account. The authentication process works the same as on native Linux.
 
-Setting Up the Skills Directory
+## Setting Up the Skills Directory
 
 Claude Code skills live in `~/.claude/skills/` within your WSL2 home directory. Create this directory if it does not exist:
 
@@ -72,11 +72,11 @@ ls -la ~/.claude/
 
 This creates the standard location where Claude looks for skill files. Skills you download or create will go here.
 
-Installing Community Skills
+## Installing Community Skills
 
 Several community-built skills work well in WSL2. You can manually install them by creating skill files. Here is how to add some popular skills:
 
-The PDF Skill
+## The PDF Skill
 
 The pdf skill handles PDF manipulation including extraction, merging, and form filling. Create the skill file:
 
@@ -95,7 +95,7 @@ When asked to work with PDFs:
 EOF
 ```
 
-The Spreadsheet Skill
+## The Spreadsheet Skill
 
 The xlsx skill works with Excel files and CSV data:
 
@@ -114,7 +114,7 @@ When working with spreadsheets:
 EOF
 ```
 
-The TDD Skill
+## The TDD Skill
 
 For test-driven development, create the [tdd skill](/claude-tdd-skill-test-driven-development-workflow/):
 
@@ -133,7 +133,7 @@ When helping with TDD:
 EOF
 ```
 
-The Frontend Design Skill
+## The Frontend Design Skill
 
 For frontend development with design system integration:
 
@@ -152,7 +152,7 @@ When working on frontend:
 EOF
 ```
 
-The Supermemory Skill
+## The Supermemory Skill
 
 For note-taking and knowledge management:
 
@@ -171,7 +171,7 @@ When managing knowledge:
 EOF
 ```
 
-Invoking Skills in WSL2
+## Invoking Skills in WSL2
 
 Once installed, invoke skills using the slash command syntax within a Claude Code session:
 
@@ -185,7 +185,7 @@ Once installed, invoke skills using the slash command syntax within a Claude Cod
 
 The invocation works identically to native Linux. Ensure you are running Claude Code inside WSL2, not in Windows PowerShell or CMD.
 
-Handling Windows-Linux File Paths
+## Handling Windows-Linux File Paths
 
 One common challenge involves accessing files across the Windows and Linux filesystems. WSL2 mounts Windows drives under `/mnt/`. For example:
 
@@ -203,9 +203,9 @@ Open VS Code from WSL2
 code filename.md
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Skills Not Loading
+## Skills Not Loading
 
 If skills do not load, verify the directory structure:
 
@@ -216,7 +216,7 @@ ls -la ~/.claude/skills/<skill-name>/
 
 Each skill needs a `SKILL.md` file in its directory.
 
-Authentication Problems
+## Authentication Problems
 
 If authentication fails, check your network connectivity from WSL2:
 
@@ -226,7 +226,7 @@ curl -I https://claude.ai
 
 Some corporate networks may require proxy configuration.
 
-Python Dependency Errors
+## Python Dependency Errors
 
 Many skills require Python packages. Install dependencies within WSL2:
 
@@ -242,7 +242,7 @@ source ~/.claude/skills-venv/bin/activate
 pip install openpyxl pandas
 ```
 
-Performance Considerations
+## Performance Considerations
 
 WSL2 performance generally matches native Linux for CPU-bound tasks and file operations within the Linux filesystem. For skills that process large files or run intensive computations, working from the Linux side (`~/`) rather than `/mnt/c/` provides significant speed improvements.
 
@@ -256,7 +256,7 @@ Check disk I/O
 iostat -x 1
 ```
 
-Conclusion
+## Conclusion
 
 Running Claude Code skills in WSL2 combines the best of both worlds: Windows as your host OS with a full Linux development environment. Skills like pdf, xlsx, tdd, frontend-design, and [supermemory](/claude-supermemory-skill-persistent-context-explained/) function identically to their native Linux counterparts once properly installed.
 

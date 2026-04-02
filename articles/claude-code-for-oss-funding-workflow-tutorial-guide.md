@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for OSS Funding Workflow Tutorial Guide
 
 Open source software powers much of the modern internet, yet sustainable funding remains one of the biggest challenges for maintainers. we'll explore how Claude Code can help automate and streamline your OSS funding workflows, making it easier to attract sponsors, manage donations, and build sustainable open source projects.
 
-Understanding OSS Funding Models
+## Understanding OSS Funding Models
 
 Before diving into Claude Code integrations, it's essential to understand the various funding models available for open source projects:
 
@@ -31,7 +30,7 @@ Before diving into Claude Code integrations, it's essential to understand the va
 
 Claude Code can assist with setting up, managing, and optimizing each of these funding approaches.
 
-Setting Up Claude Code for Funding Workflows
+## Setting Up Claude Code for Funding Workflows
 
 The first step is configuring Claude Code to handle funding-related tasks. Create a dedicated `CLAUDE.md` file in your project root:
 
@@ -51,7 +50,7 @@ Funding Tasks
 - Draft corporate sponsorship proposals
 ```
 
-Generating FUNDING.yml Configuration
+## Generating FUNDING.yml Configuration
 
 One of the most practical uses of Claude Code is generating a proper `FUNDING.yml` file. This file appears on your GitHub repository and makes it easy for users to sponsor your work.
 
@@ -73,7 +72,7 @@ Claude Code can generate this file with appropriate tiers:
 claude "Create a FUNDING.yml with GitHub Sponsors at $5, $15, and $50 tiers, plus Open Collective integration"
 ```
 
-Automating Sponsor Communications
+## Automating Sponsor Communications
 
 Managing sponsor relationships requires consistent communication. Claude Code can help draft sponsor updates, thank you messages, and feature announcements:
 
@@ -97,7 +96,7 @@ def generate_sponsor_update(project_name, month, metrics):
     """
 ```
 
-Creating Sponsor-Only Tiers
+## Creating Sponsor-Only Tiers
 
 For projects offering premium features to sponsors, Claude Code can help architect the tier system:
 
@@ -120,7 +119,7 @@ function checkSponsorAccess(user, requiredTier) {
 }
 ```
 
-Building Corporate Sponsorship Proposals
+## Building Corporate Sponsorship Proposals
 
 Corporate sponsorships often require formal proposals. Claude Code can help draft these documents:
 
@@ -149,7 +148,7 @@ Run this command with Claude Code:
 claude "Generate a corporate sponsorship proposal for an open source Python testing framework targeting enterprise companies"
 ```
 
-Managing Issue Bounties
+## Managing Issue Bounties
 
 For projects using bounty systems, Claude Code can help track and manage funded issues:
 
@@ -178,7 +177,7 @@ jobs:
             }
 ```
 
-Best Practices for OSS Funding
+## Best Practices for OSS Funding
 
 Here are actionable tips from experienced maintainers:
 
@@ -192,7 +191,7 @@ Here are actionable tips from experienced maintainers:
 
 5. Automate what you can: Use Claude Code to handle repetitive funding tasks so you can focus on development.
 
-Conclusion
+## Conclusion
 
 Claude Code is a powerful ally in building sustainable open source projects. By automating funding setup, communications, and tier management, you can focus more on what matters, building great software.
 
@@ -200,7 +199,7 @@ Start small: create your FUNDING.yml today, then gradually add more sophisticate
 
 Remember, sustainable open source isn't just about getting funded, it's about building relationships with people who believe in your work. Let Claude Code handle the logistics while you nurture those connections.
 
-Generating Compelling Sponsor Profiles and README Sections
+## Generating Compelling Sponsor Profiles and README Sections
 
 The most common mistake OSS maintainers make with funding is treating it as an afterthought. A one-line "please sponsor me" link buried in the README converts far worse than a well-crafted section that explains the value sponsors receive.
 
@@ -234,7 +233,7 @@ features, work that isn't tracked in commit counts but keeps the library reliabl
 
 For projects targeting corporate sponsors, Claude Code can draft the more formal proposal content, executive summary, ROI section, support terms, that corporate procurement teams expect.
 
-Tracking Funding ROI and Reporting to Sponsors
+## Tracking Funding ROI and Reporting to Sponsors
 
 Sponsors stay longer when they see their contribution is working. Quarterly or monthly updates showing concrete progress builds trust and reduces churn. Claude Code can help generate consistent sponsor updates from your GitHub activity.
 
@@ -284,7 +283,7 @@ Pass prompt to Claude Code: claude --print "$prompt"
 
 Consistent, data-backed updates to your sponsors demonstrate accountability and make the sponsorship feel like a genuine business relationship rather than a donation.
 
-Conclusion
+## Conclusion
 
 Claude Code is a powerful ally in building sustainable open source projects. By automating funding setup, communications, and tier management, you can focus more on what matters, building great software.
 

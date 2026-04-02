@@ -23,7 +23,7 @@ An eBay sniper is a tool that places bids in the final seconds of an auction, ma
 
 Chrome extensions offer a unique advantage for this use case because they run directly in your browser, can interact with eBay's web interface, and operate without requiring a separate server infrastructure.
 
-Core Architecture
+## Core Architecture
 
 A functional eBay sniper extension consists of several key components:
 
@@ -33,7 +33,7 @@ A functional eBay sniper extension consists of several key components:
 4. Popup interface - User configuration and status display
 5. Storage - Persists auction watchlists and bid settings
 
-Manifest Configuration
+## Manifest Configuration
 
 Your `manifest.json` needs specific permissions to interact with eBay:
 
@@ -58,7 +58,7 @@ Your `manifest.json` needs specific permissions to interact with eBay:
 
 The `host_permissions` specification is critical. Without explicit access to eBay's domain, your content scripts cannot read or manipulate auction data.
 
-Parsing eBay Auction Data
+## Parsing eBay Auction Data
 
 eBay's HTML structure changes frequently, so your parser needs to be solid. Here's a content script pattern for extracting auction information:
 
@@ -91,7 +91,7 @@ function extractEndTime() {
 
 The `extractEndTime` function handles eBay's dynamic rendering, which often loads auction end times via JavaScript after the initial page load.
 
-Implementing the Snipe Mechanism
+## Implementing the Snipe Mechanism
 
 True sniping requires sub-second precision. While JavaScript's `setTimeout` provides basic timing, it lacks the accuracy needed for competitive auctions. Here's an improved approach:
 
@@ -139,7 +139,7 @@ class BidScheduler {
 
 This implementation uses a buffer strategy, attempting to place bids one second before auction close. The actual timing accuracy depends on network latency and browser event loop performance.
 
-Storage and State Management
+## Storage and State Management
 
 Chrome's `storage.local` API provides persistence for your extension:
 
@@ -163,7 +163,7 @@ async function getWatchedAuctions() {
 
 This pattern ensures you maintain a unique list of watched auctions while updating existing entries when users modify their max bid or other parameters.
 
-Handling Authentication
+## Handling Authentication
 
 Most sniping tools require authentication to place bids. For extensions, you have two primary approaches:
 
@@ -180,7 +180,7 @@ function isUserLoggedIn() {
 }
 ```
 
-Rate Limiting and Error Handling
+## Rate Limiting and Error Handling
 
 eBay implements rate limiting on bid endpoints. Your extension must implement exponential backoff:
 
@@ -198,7 +198,7 @@ async function placeBidWithRetry(auctionId, maxBid, maxRetries = 3) {
 }
 ```
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides user configuration. Here's a minimal implementation:
 
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Ethical Considerations and Legal Compliance
+## Ethical Considerations and Legal Compliance
 
 Automated bidding tools operate in a gray area of eBay's terms of service. Before building or using a sniper tool:
 
@@ -245,12 +245,11 @@ Automated bidding tools operate in a gray area of eBay's terms of service. Befor
 - Implement reasonable rate limits to avoid server strain
 - Never exceed your maximum bid amount intentionally
 
-Conclusion
+## Conclusion
 
 Building an eBay sniper Chrome extension requires understanding Chrome extension architecture, DOM parsing, asynchronous JavaScript patterns, and careful error handling. The components outlined here provide a foundation for developers interested in auction automation.
 
 Remember that successful sniping depends on network reliability, timing precision, and adherence to platform policies. Start with the monitoring features, tracking prices and alerting you to auction endings, before implementing automated bid placement.
-
 
 Related Reading
 

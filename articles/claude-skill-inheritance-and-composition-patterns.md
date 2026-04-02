@@ -16,17 +16,17 @@ permalink: /claude-skill-inheritance-and-composition-patterns/
 
 Claude skills are Markdown files that enhance Claude Code's capabilities. By understanding how to structure skills with inheritance and composition patterns, you can build modular, reusable skill sets that scale across projects and teams. Before diving into advanced patterns, read [how to write a skill .md file](/how-to-write-a-skill-md-file-for-claude-code/) to understand the foundational format.
 
-How Claude Skills Work
+## How Claude Skills Work
 
 A Claude skill is simply a Markdown file stored in `~/.claude/skills/` that contains instructions Claude loads when you invoke the skill. The skill file can include directives for file operations, command execution, thinking processes, and output formatting.
 
 When you invoke a skill with `/skillname`, Claude reads the file and applies those instructions to your current session. This makes skills powerful extensions to Claude's base capabilities.
 
-Inheritance Patterns in Claude Skills
+## Inheritance Patterns in Claude Skills
 
 Inheritance in Claude skills works through file inclusion and directive referencing. Rather than duplicating instructions across multiple skills, you can create base skills that other skills extend.
 
-Creating a Base Skill
+## Creating a Base Skill
 
 A base skill contains common instructions that multiple specialized skills can inherit:
 
@@ -48,7 +48,7 @@ Output Format
 - Include file paths in all file-related responses
 ```
 
-Extending Base Skills
+## Extending Base Skills
 
 Specialized skills reference the base skill and add their own context:
 
@@ -72,11 +72,11 @@ Design System Integration
 
 This inheritance pattern reduces duplication and ensures consistent behavior across related skills.
 
-Composition Patterns for Complex Workflows
+## Composition Patterns for Complex Workflows
 
 Composition allows you to combine multiple skills for sophisticated workflows. Unlike inheritance (which extends a single base), composition draws from multiple specialized skills.
 
-Sequential Skill Composition
+## Sequential Skill Composition
 
 Run multiple skills in sequence for multi-step processes:
 
@@ -93,7 +93,7 @@ Phase 3: Generate Output
 Use docx skill to create formatted documentation files.
 ```
 
-Parallel Skill Composition
+## Parallel Skill Composition
 
 Execute multiple skills simultaneously for coordinated operations:
 
@@ -107,7 +107,7 @@ Concurrent Operations
 - Aggregate results when all complete
 ```
 
-Conditional Skill Selection
+## Conditional Skill Selection
 
 Choose which skills to apply based on context:
 
@@ -121,9 +121,9 @@ Conditions
 - IF visualization needed: add frontend-design skill
 ```
 
-Practical Examples
+## Practical Examples
 
-Example 1: API Documentation Generator
+## Example 1: API Documentation Generator
 
 This workflow combines multiple skills to generate comprehensive API documentation:
 
@@ -144,7 +144,7 @@ Workflow
 5. Export parameter data to xlsx for reference
 ```
 
-Example 2: Full-Stack Code Review
+## Example 2: Full-Stack Code Review
 
 Combining skills for comprehensive code analysis:
 
@@ -165,7 +165,7 @@ Review Process
 - Security: Run SAST checks, dependency audits
 ```
 
-Example 3: Data Pipeline Automation
+## Example 3: Data Pipeline Automation
 
 Building a data processing workflow:
 
@@ -184,13 +184,13 @@ Pipeline Stages
 4. Output: Generate pdf summary reports
 ```
 
-Best Practices for Skill Composition
+## Best Practices for Skill Composition
 
-Keep Skills Focused
+## Keep Skills Focused
 
 Each skill should have a single responsibility. The frontend-design skill handles UI concerns, the tdd skill manages testing workflows, and the pdf skill processes documents. Combining unrelated responsibilities makes skills harder to maintain and test.
 
-Use Clear Naming Conventions
+## Use Clear Naming Conventions
 
 Name skills descriptively so their purpose is obvious:
 
@@ -199,7 +199,7 @@ Name skills descriptively so their purpose is obvious:
 - `frontend-accessibility.md`. Accessibility review and fixes
 - `supermemory-search.md`. Knowledge base queries
 
-Document Skill Dependencies
+## Document Skill Dependencies
 
 When composing skills, clearly document which skills are required:
 
@@ -214,11 +214,11 @@ Usage
 Invoke this skill when you need to generate tests for PDF processing logic.
 ```
 
-Version Control Your Skills
+## Version Control Your Skills
 
 Store skills in git repositories to track changes and collaborate with team members. This enables review workflows, rollback capabilities, and shared skill libraries. If you need to undo a bad update, the guide on [how to rollback a bad Claude skill update safely](/how-do-i-rollback-a-bad-claude-skill-update-safely/) walks through the process step by step.
 
-Advanced Composition: Skill Chaining
+## Advanced Composition: Skill Chaining
 
 Skill chaining creates dependencies where one skill's output feeds into another:
 
@@ -240,12 +240,11 @@ Each chain element specifies:
 
 This chaining approach mirrors CI/CD pipelines but operates within Claude Code sessions.
 
-Conclusion
+## Conclusion
 
 Claude skill inheritance and composition patterns enable powerful workflow automation. By creating base skills with shared instructions and composing specialized skills for specific tasks, you build maintainable systems that scale. The key is keeping skills focused, documenting dependencies, and treating skills as modular building blocks.
 
 Whether you're combining the pdf skill with tdd for documentation workflows, or building comprehensive code review systems with multiple specialized skills, these patterns provide the foundation for sophisticated AI-assisted development processes.
-
 
 Related Reading
 

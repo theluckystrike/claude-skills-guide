@@ -19,13 +19,13 @@ Chrome's experimental features represent a treasure trove of performance optimiz
 
 This guide focuses specifically on experimental features that impact browsing and rendering speed, helping you build a faster Chrome configuration for development workflows.
 
-Understanding Chrome's Experimental Feature System
+## Understanding Chrome's Experimental Feature System
 
 Chrome maintains three release channels: Stable, Beta, and Dev/Canary. Experimental features appear first in Canary, then graduate to Dev, Beta, and eventually Stable, often taking months or years to reach the majority of users. By accessing chrome://flags, you can enable these features early and reap performance benefits immediately.
 
 The key to using experimental features safely involves understanding that not all flags are suitable for daily use. Some introduce incomplete functionality, while others may have security implications. Focus on flags categorized as "speed" or "performance" related to minimize risk.
 
-Essential Speed-Related Experimental Features
+## Essential Speed-Related Experimental Features
 
 1. Parallel Downloading
 
@@ -81,11 +81,11 @@ Flag: `#enable-quic`
 
 QUIC is Google's alternative to TCP that reduces connection latency by eliminating handshakes on previously connected routes. Many Google services already support QUIC, and enabling this flag improves performance when accessing those services.
 
-Measuring Performance Improvements
+## Measuring Performance Improvements
 
 Before enabling any experimental features, establish a baseline. Use Chrome's built-in performance tools to measure changes objectively.
 
-Using Chrome DevTools for Benchmarks
+## Using Chrome DevTools for Benchmarks
 
 Open DevTools (F12) and navigate to the Performance tab. Record a reload of your most-used development pages before and after enabling flags. Pay attention to these metrics:
 
@@ -101,7 +101,7 @@ const { connectStart, connectEnd } = performance.getEntriesByType('navigation')[
 console.log(`TCP handshake: ${connectEnd - connectStart}ms`);
 ```
 
-Real-World Testing Protocol
+## Real-World Testing Protocol
 
 Create a reproducible test scenario:
 
@@ -113,11 +113,11 @@ Create a reproducible test scenario:
 
 This eliminates variance from extensions, cached data, and session state.
 
-Combining Experimental Features with Development Tools
+## Combining Experimental Features with Development Tools
 
 For web developers, combining experimental Chrome features with proper development practices maximizes productivity gains.
 
-Integration with Lighthouse
+## Integration with Lighthouse
 
 Run Lighthouse CI in your CI/CD pipeline to catch performance regressions:
 
@@ -134,7 +134,7 @@ Run Lighthouse CI in your CI/CD pipeline to catch performance regressions:
 
 Enable experimental flags in Chrome's settings before running Lighthouse to test how your application performs with upcoming browser features.
 
-Automated Browser Testing
+## Automated Browser Testing
 
 When testing across different Chrome versions with experimental features, use Puppeteer to programmatically launch Chrome with specific flags:
 
@@ -160,7 +160,7 @@ const puppeteer = require('puppeteer');
 })();
 ```
 
-Risks and Considerations
+## Risks and Considerations
 
 While experimental features can improve speed, consider these factors before enabling them in production environments:
 
@@ -172,7 +172,7 @@ Compatibility: Web applications may behave differently with experimental feature
 
 Automatic Updates: Google may change or remove experimental features without notice. Your carefully tuned configuration could change after an update.
 
-Recommended Configuration for Developers
+## Recommended Configuration for Developers
 
 Based on extensive testing, this combination of experimental features provides the best balance of speed and stability for development workflows:
 
@@ -187,14 +187,13 @@ Based on extensive testing, this combination of experimental features provides t
 
 Enable these flags one at a time and measure the impact on your specific workflow. Different development tasks benefit from different configurations, the best setup depends on your typical workload.
 
-Conclusion
+## Conclusion
 
 Chrome's experimental features offer real, measurable performance improvements for developers willing to explore beyond stable releases. The flags covered in this guide represent the most impactful speed-related experiments currently available.
 
 Start with one or two flags, measure the impact, and gradually build a Chrome configuration optimized for your development needs. The performance gains may seem small individually, but combined they create a noticeably faster development environment.
 
 Remember to periodically revisit chrome://flags as Google constantly adds and modifies experimental features. The next performance breakthrough might be just a flag away.
-
 
 Related Reading
 

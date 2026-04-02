@@ -20,7 +20,7 @@ This guide covers the techniques that make the difference.
 
 Scope note: This article focuses specifically on output accuracy and quality. how to write skill bodies that produce correct, consistent, and well-formed results. If you are looking to reduce response latency or token usage rather than improve correctness, see [Speed Up Claude Code Responses with Better Prompt Structure](/speed-up-claude-code-responses-with-better-prompt-structure/).
 
-Start with a Clear Role Statement
+## Start with a Clear Role Statement
 
 The first sentence of your skill body should tell Claude exactly what role it is playing. Role framing affects output style, vocabulary, and decision-making throughout the response.
 
@@ -42,7 +42,7 @@ Role framing is not cosmetic. When Claude knows it is acting as a senior enginee
 
 The specificity of your role statement also signals the level of assumed knowledge. "You are a Python developer" and "You are a data engineer with five years of experience building ETL pipelines in Python with Apache Airflow" will produce very different default outputs from the same user input.
 
-Role Statement Templates
+## Role Statement Templates
 
 Here are three patterns that work reliably:
 
@@ -65,7 +65,7 @@ You are a [role] on a team working in [tech stack]. The codebase follows
 that other engineers will maintain.
 ```
 
-Define Input Format Explicitly
+## Define Input Format Explicitly
 
 Tell the skill what input it should expect. Claude will then interpret ambiguous user messages through this lens.
 
@@ -91,7 +91,7 @@ Input types:
 
 This kind of branching logic would take an engineer several paragraphs to write clearly in prose. In a skill body, a few bullet points covering the main cases is usually sufficient.
 
-Constrain the Output Format
+## Constrain the Output Format
 
 Unconstrained output format is the most common cause of inconsistent skill behavior. Specify the output format in detail:
 
@@ -109,7 +109,7 @@ Do NOT include:
 
 The "Do NOT include" section is as important as the positive instructions. It prevents Claude from filling responses with content you do not want.
 
-Format Constraints That Actually Work
+## Format Constraints That Actually Work
 
 Some format constraints are more reliable than others. Here is what works in practice:
 
@@ -135,7 +135,7 @@ just the raw JSON object. Schema:
 }
 ```
 
-Use Numbered Steps for Multi-Stage Tasks
+## Use Numbered Steps for Multi-Stage Tasks
 
 When a skill involves a sequence of steps, number them. Claude follows numbered lists more reliably than prose instructions.
 
@@ -170,7 +170,7 @@ When you receive a migration request:
 5. Output a checklist the developer can follow
 ```
 
-Include Negative Examples
+## Include Negative Examples
 
 For skills where wrong output is costly, include examples of what NOT to do:
 
@@ -197,7 +197,7 @@ Write this instead:
 
 The before/after format makes the quality gap concrete. Claude can apply the same contrast judgment to novel cases.
 
-Calibrate Verbosity
+## Calibrate Verbosity
 
 By default, Claude tends toward thorough explanations. For skills where you want terse output, say so explicitly:
 
@@ -237,7 +237,7 @@ Output structure:
 - Never add a "Conclusion" or "Summary" section
 ```
 
-Handle Edge Cases in the Prompt
+## Handle Edge Cases in the Prompt
 
 Anticipate the most common edge cases and specify how to handle them:
 
@@ -261,7 +261,7 @@ question per turn.
 
 The "one question" constraint prevents the skill from stalling indefinitely with a list of questions when it encounters any ambiguity.
 
-Edge Case Categories Worth Covering
+## Edge Case Categories Worth Covering
 
 For most skills, you should anticipate and address at least these categories:
 
@@ -270,7 +270,7 @@ For most skills, you should anticipate and address at least these categories:
 3. Already-done cases: What should the skill do when the work is already done? (Component already exists, test is already passing, etc.)
 4. Scope creep triggers: What should the skill do when it notices a related problem? (Sees a bug in adjacent code while reviewing the requested function)
 
-Test Your Skill with Real Inputs
+## Test Your Skill with Real Inputs
 
 Writing a good skill body is iterative:
 
@@ -290,7 +290,7 @@ Keep a test cases file alongside each skill:
 
 The test cases file serves two purposes. First, it lets you quickly re-validate the skill after making changes. run the same test inputs and check that outputs still meet expectations. Second, it documents the skill's intended behavior for your future self or for anyone else who inherits the skill.
 
-What to Record in Test Cases
+## What to Record in Test Cases
 
 A useful test cases file has three sections:
 
@@ -322,7 +322,7 @@ Why it was wrong
 
 This format makes skill debugging fast. When an output looks wrong, you can compare it against the "rejected outputs" section to see if it is a known anti-pattern with a known fix.
 
-Layering Context Across Skill Body Sections
+## Layering Context Across Skill Body Sections
 
 For complex skills, organize the skill body into clear sections rather than writing everything as a single block of instructions:
 
@@ -351,7 +351,7 @@ Constraints
 
 Sectioned skill bodies are easier to maintain than prose blocks. When the codebase updates. Express 5 instead of 4, for example. you can change one line in the Context section rather than hunting through prose for all the places you mentioned the version.
 
-Common Anti-Patterns
+## Common Anti-Patterns
 
 Circular instructions: "Write good code. Make sure it is correct. Ensure quality." These add words but no constraints.
 
@@ -367,7 +367,7 @@ Over-specifying the obvious: Instructions like "write valid syntax" or "use corr
 
 Burying the critical constraint: If there is one instruction that absolutely must be followed. never modify the database in dry-run mode, always include error handling, always match the existing file naming convention. put it first or give it its own section. Instructions buried in the middle of a long skill body are more likely to be underweighted.
 
-A Worked Example: Before and After
+## A Worked Example: Before and After
 
 Here is a real-world skill body transformation. The original produced inconsistent output; the revised version produces reliable output.
 
@@ -410,6 +410,5 @@ Related Reading
 - [Claude Skill .md File Format: Full Specification](/claude-skill-md-format-complete-specification-guide/). Format reference for skill files
 - [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Step-by-step skill creation
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How trigger phrases interact with skill bodies
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

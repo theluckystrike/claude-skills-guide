@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-What Is an AI Agent Loop Explained Simply
-
 If you've ever used Claude Code or any AI coding assistant, you've witnessed an AI agent loop in action, even if you didn't know it by name. Understanding this concept helps you become a better prompter, debugger, and builder of AI-powered workflows. This guide breaks down the AI agent loop in simple terms with practical examples you can apply to your Claude Code projects.
 
-The Simple Definition
+## The Simple Definition
 
 An AI agent loop is the continuous cycle where an AI system:
 
@@ -30,7 +27,7 @@ An AI agent loop is the continuous cycle where an AI system:
 
 Think of it like a human developer debugging code. You try something, see what happens, learn from the error, try a different approach, and keep going until it works. An AI agent does the same thing, automatically.
 
-Breaking Down Each Step
+## Breaking Down Each Step
 
 1. Think (Planning)
 
@@ -64,11 +61,11 @@ This is where the loop gets powerful. The AI learns from observations and modifi
 
 The loop continues until either the task is complete or the AI determines it cannot proceed (at which point it should ask you for help or clarification).
 
-Real-World Example with Claude Code
+## Real-World Example with Claude Code
 
 Let's trace through a concrete example:
 
-You ask: "Fix the login bug in my React app"
+## You ask: "Fix the login bug in my React app"
 
 Here's how the AI agent loop works:
 
@@ -86,7 +83,7 @@ Here's how the AI agent loop works:
 
 This happens in seconds, with Claude making dozens of small decisions and tool calls along the way.
 
-How Claude Code Skills Amplify the Agent Loop
+## How Claude Code Skills Amplify the Agent Loop
 
 Skills in Claude Code make the agent loop even more powerful. A skill is essentially a pre-configured set of instructions that guides Claude's thinking, acting, and adjusting for specific tasks.
 
@@ -109,7 +106,7 @@ Other skills that enhance the agent loop include:
 
 Each skill adjusts how Claude thinks and acts within the loop for that particular domain.
 
-Why the Agent Loop Matters
+## Why the Agent Loop Matters
 
 Understanding the agent loop helps you:
 
@@ -122,7 +119,7 @@ If Claude gets stuck in a loop, you can interrupt and provide new information, e
 Build Multi-Step Workflows
 When chaining multiple Claude Code commands or skills together, you're creating a larger process made of smaller loops. Understanding this helps you design better automation.
 
-Common Loop Patterns
+## Common Loop Patterns
 
 Single-Pass Loop
 The AI completes the task in one iteration. Simple requests like "What does this file do?" typically resolve in a single think-act-observe-adjust-complete sequence.
@@ -136,7 +133,7 @@ The AI hits an obstacle, adjusts its approach, and tries again. This is crucial 
 Human-in-the-Loop
 At key moments, the AI pauses and asks for confirmation or clarification. Claude Code does this when actions require permission or when it encounters ambiguity.
 
-Key Takeaways
+## Key Takeaways
 
 - An AI agent loop is a continuous cycle of thinking, acting, observing, adjusting, and repeating
 - Each iteration makes the AI smarter about what works for your specific task
@@ -145,7 +142,6 @@ Key Takeaways
 - Claude Code executes these loops rapidly, often completing dozens of iterations in seconds
 
 The next time you use Claude Code, watch for the agent loop in action. You'll see a powerful, iterative process working to solve your problems, one small step at a time.
-
 
 Related Reading
 

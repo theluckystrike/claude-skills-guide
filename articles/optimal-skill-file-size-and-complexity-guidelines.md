@@ -18,7 +18,7 @@ permalink: /optimal-skill-file-size-and-complexity-guidelines/
 
 This guide provides practical recommendations for determining optimal skill file size and complexity, with real examples you can apply immediately.
 
-Why Skill Size Matters
+## Why Skill Size Matters
 
 Skills that are too small often lack context, requiring users to provide excessive instructions each time. Conversely, skills that grow too large become difficult to maintain, debug, and modify. The sweet spot allows Claude to understand the skill's purpose without overwhelming it with unnecessary details.
 
@@ -26,7 +26,7 @@ Consider the difference between a skill that handles a single narrow task versus
 
 In contrast, imagine a hypothetical skill that tries to handle document processing, spreadsheet analysis, and email automation all in one file. The complexity would grow exponentially, and Claude would struggle to determine which behavior applies in any given situation.
 
-Recommended File Size Range
+## Recommended File Size Range
 
 For most skills, aim for a file size between 2,000 and 8,000 characters. This range provides enough room to establish clear instructions, include examples, and define edge cases without becoming unwieldy.
 
@@ -69,11 +69,11 @@ Edge Cases
 
 This structure provides approximately 1,500 characters, slightly leaner than recommended but appropriate for focused skills. Complex skills like `frontend-design` require more detail but should still maintain internal organization.
 
-Managing Complexity Through Organization
+## Managing Complexity Through Organization
 
 When a skill's functionality grows beyond 8,000 characters, consider splitting it into multiple focused skills. The modular approach allows users to combine skills as needed rather than dealing with monolithic files.
 
-Signs Your Skill Is Too Complex
+## Signs Your Skill Is Too Complex
 
 Watch for these warning indicators:
 
@@ -85,7 +85,7 @@ Watch for these warning indicators:
 
 4. Difficulty explaining the skill. If you struggle to describe what the skill does in a single sentence, it probably does too much.
 
-Splitting Complex Skills
+## Splitting Complex Skills
 
 The `tdd` skill demonstrates effective decomposition. Rather than including every aspect of test-driven development, it focuses on guiding the TDD cycle: red, green, refactor. Additional functionality like test generation or coverage analysis could exist as separate skills that complement `tdd` when needed.
 
@@ -101,9 +101,9 @@ tdd/                      # Skill group
 
 This organization allows users to invoke the core skill alone or load additional skills for specific needs.
 
-Best Practices for Skill Structure
+## Best Practices for Skill Structure
 
-Use Clear Section Headers
+## Use Clear Section Headers
 
 Organize your skill with explicit sections. Claude processes structured content more reliably than dense paragraphs. Common sections include:
 
@@ -113,7 +113,7 @@ Organize your skill with explicit sections. Claude processes structured content 
 - Examples: 2-3 concrete usage examples
 - Limitations: What the skill explicitly does not handle
 
-Include Actionable Examples
+## Include Actionable Examples
 
 Examples bridge the gap between abstract instructions and actual behavior. Each example should demonstrate a specific use case with expected inputs and outputs:
 
@@ -126,11 +126,11 @@ When the user says: "Create a test for the user authentication function"
 3. Refactor while keeping tests green
 ```
 
-Define Boundaries Clearly
+## Define Boundaries Clearly
 
 Explicitly state what your skill does not cover. The [`supermemory` skill](/claude-supermemory-skill-persistent-context-explained/), for instance, might focus on memory retrieval and organization while explicitly excluding external API integrations or real-time sync functionality.
 
-Testing Your Skill Complexity
+## Testing Your Skill Complexity
 
 After writing a skill, evaluate its complexity with these questions:
 
@@ -141,7 +141,7 @@ After writing a skill, evaluate its complexity with these questions:
 
 If you answer "no" to any of these, consider refactoring.
 
-Conclusion
+## Conclusion
 
 Optimal skill complexity balances comprehensiveness with maintainability. Aim for files between 2,000 and 8,000 characters, split larger skills into focused modules, and use clear structural organization. Skills like `pdf` and `tdd` demonstrate that focused, well-structured skills outperform monolithic alternatives.
 

@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Wing Cloud Language Workflow
 
@@ -32,7 +31,7 @@ Claude Code understands this full stack. It can generate Wing code, explain clou
 
 What makes Wing unusual is the boundary it draws between "preflight" code (runs at compile time or deploy time) and "inflight" code (runs inside a cloud function at runtime). That distinction creates a class of bugs that confuse even experienced cloud developers. Claude Code can flag when you're accessing preflight values inside an inflight closure, explain the separation, and rewrite the code correctly, turning a cryptic compiler error into a teachable moment.
 
-Wing vs. Other IaC Approaches
+## Wing vs. Other IaC Approaches
 
 Before diving in, it helps to understand where Wing sits relative to other infrastructure-as-code tools:
 
@@ -46,7 +45,7 @@ Before diving in, it helps to understand where Wing sits relative to other infra
 
 Wing is the only mainstream option where inflight application logic and cloud resource definitions live in the same file with type-safe cross-boundary access. That makes Claude Code particularly valuable: it can reason about the entire program at once rather than jumping between separate infrastructure and application files.
 
-Setting Up Your Wing Development Environment
+## Setting Up Your Wing Development Environment
 
 Before integrating Claude Code, ensure your environment is ready:
 
@@ -76,7 +75,7 @@ dist/
 
 This keeps Claude's context focused on source files rather than generated compilation artifacts.
 
-Creating a Wing-Focused Claude Skill
+## Creating a Wing-Focused Claude Skill
 
 Build a skill that understands Wing syntax and cloud patterns:
 
@@ -118,7 +117,7 @@ You are an expert in Wing REST API patterns. When building APIs:
 5. Handle errors with try/catch and return appropriate HTTP status codes
 ```
 
-Practical Example: Building a Cloud Queue Processor
+## Practical Example: Building a Cloud Queue Processor
 
 Let's walk through a real workflow where Claude Code accelerates Wing development. Suppose you need a queue-triggered function that processes uploaded files:
 
@@ -178,7 +177,7 @@ queue.set_consumer(inflight (key: str) => {
 
 Iterative prompting like this lets you build production-quality Wings code in small, verifiable steps.
 
-Building a REST API with Wing and Claude
+## Building a REST API with Wing and Claude
 
 Wing's `cloud.Api` resource is one of its most powerful features. Here is a complete example of prompting Claude to build a small CRUD API:
 
@@ -226,7 +225,7 @@ api.get("/items/{id}", inflight (req: cloud.ApiRequest): cloud.ApiResponse => {
 
 This demonstrates Claude's ability to handle Wing's inflight/preflight boundary, path parameters, JSON serialization, and HTTP status codes in a single shot.
 
-Debugging Wing Compilation Errors
+## Debugging Wing Compilation Errors
 
 One of Claude Code's most valuable contributions is helping interpret Wing's compiler messages. When you encounter errors, share the full error output:
 
@@ -255,7 +254,7 @@ Prompt to Claude:
 
 Claude will explain that Wing cannot automatically serialize complex objects across the preflight/inflight divide, show you which value is causing the problem, and offer concrete rewrites, either capturing only primitive values or using Wing's `Json` type for serializable data.
 
-Generating Unit Tests with Claude
+## Generating Unit Tests with Claude
 
 Wing's testing simulator benefits from well-structured test cases. Ask Claude to generate tests:
 
@@ -294,7 +293,7 @@ wing test main.w
 
 The simulator runs all tests locally against an in-memory cloud environment. Claude Code can help you interpret test failures by examining both the test code and the Wing resource under test at the same time.
 
-Prompt Patterns That Work Well with Wing
+## Prompt Patterns That Work Well with Wing
 
 Beyond one-shot code generation, certain prompt patterns consistently produce high-quality Wing code:
 
@@ -312,7 +311,7 @@ Review prompts:
 
 The review pattern is especially useful before deploying to a real cloud account, since Wing's simulator catches some errors but not all runtime failures.
 
-Actionable Best Practices
+## Actionable Best Practices
 
 1. Provide Wing context in prompts: Mention specific Wing versions, target platforms (AWS, GCP, Azure), and resource types you need.
 
@@ -328,7 +327,7 @@ Actionable Best Practices
 
 7. Let Claude write your `wingsdk` imports: Wing's standard library is growing rapidly and the correct `bring` statement for newer modules is easy to get wrong. Asking Claude to generate the import line saves lookup time.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Wing development from manual coding to collaborative creation. By providing context about Wing's syntax, cloud resource patterns, and your specific requirements, you get accurate, idiomatic code that compiles correctly the first time. The combination lets you focus on cloud architecture decisions while Claude handles implementation details.
 

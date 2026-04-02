@@ -27,11 +27,11 @@ The Intl API provides several objects that fingerprinting scripts can query:
 
 Each of these objects can reveal information about the browser's supported locales, time zones, and formatting preferences.
 
-How Locale Fingerprinting Works
+## How Locale Fingerprinting Works
 
 When you visit a website, JavaScript code can instantiate Intl objects with various locale arguments and observe how the browser responds. The responses vary based on your operating system, browser version, installed language packs, and regional settings.
 
-Detecting Supported Locales
+## Detecting Supported Locales
 
 One of the primary fingerprinting techniques involves querying which locales your browser supports:
 
@@ -61,7 +61,7 @@ console.log(detectedLocales);
 
 The array of supported locales forms a unique fingerprint. Users with uncommon language combinations will have more distinctive fingerprints.
 
-Time Zone Detection
+## Time Zone Detection
 
 The Intl API can also reveal your time zone:
 
@@ -84,7 +84,7 @@ function detectTimezone() {
 
 This reveals not only your current time zone but also how many time zones your browser recognizes, which varies between operating systems and browser versions.
 
-Number and Date Format Variations
+## Number and Date Format Variations
 
 Different locales format numbers and dates differently. Fingerprinters can detect these variations:
 
@@ -109,11 +109,11 @@ function detectFormatPreferences() {
 
 The way your browser formats these values depends on your system locale settings and installed language packs.
 
-What Information Can Be Extracted
+## What Information Can Be Extracted
 
 Through Intl API fingerprinting, websites can determine:
 
-Operating System Details
+## Operating System Details
 
 Different operating systems ship with different default locales and language support. By analyzing the supported locales, fingerprinters can often identify:
 
@@ -121,7 +121,7 @@ Different operating systems ship with different default locales and language sup
 - Language packs installed
 - Regional settings configuration
 
-Language Preferences
+## Language Preferences
 
 The combination of preferred languages reveals:
 
@@ -130,7 +130,7 @@ The combination of preferred languages reveals:
 - Language learning or usage patterns
 - Geographic location indicators
 
-Browser Configuration
+## Browser Configuration
 
 Browser-specific behavior includes:
 
@@ -139,11 +139,11 @@ Browser-specific behavior includes:
 - Date format variations
 - Currency display preferences
 
-Real-World Fingerprinting Examples
+## Real-World Fingerprinting Examples
 
 Modern fingerprinting libraries incorporate Intl API queries alongside traditional techniques. Libraries like FingerprintJS and others have added Intl-based signals to their fingerprinting algorithms.
 
-Basic Fingerprint Collector
+## Basic Fingerprint Collector
 
 A comprehensive fingerprinting script might combine multiple signals:
 
@@ -180,25 +180,25 @@ function collectIntlFingerprint() {
 
 This information, combined with other fingerprinting vectors, creates a highly unique browser signature.
 
-Privacy Implications
+## Privacy Implications
 
 The use of the Intl API for fingerprinting raises significant privacy concerns:
 
-Difficult to Detect
+## Difficult to Detect
 
 Unlike canvas fingerprinting which requires rendering hidden graphics, Intl API fingerprinting uses standard formatting operations that appear completely normal to users. There's no visible indication that your browser is being queried for locale information.
 
-Persistent Across Sessions
+## Persistent Across Sessions
 
 Unlike cookies which can be cleared, locale settings are inherent to your browser and system configuration. Your fingerprint remains consistent across sessions, allowing trackers to recognize you even when using incognito mode or clearing all cookies.
 
-Difficult to Protect
+## Difficult to Protect
 
 Standard privacy tools like ad blockers and anti-tracking extensions often don't block Intl API queries because they're legitimate JavaScript APIs used for web functionality. This makes protection particularly challenging.
 
-Protection Strategies
+## Protection Strategies
 
-Browser Configuration
+## Browser Configuration
 
 Some browsers have implemented protections against Intl fingerprinting:
 
@@ -206,7 +206,7 @@ Some browsers have implemented protections against Intl fingerprinting:
 - Brave Browser randomizes certain Intl responses
 - Tor Browser provides the most comprehensive protection by presenting uniform locale information
 
-Extension-Based Protection
+## Extension-Based Protection
 
 Some privacy extensions attempt to mitigate Intl fingerprinting:
 
@@ -214,7 +214,7 @@ Some privacy extensions attempt to mitigate Intl fingerprinting:
 - Tools that block or randomize timezone information
 - Language preference randomizers
 
-Technical Mitigation
+## Technical Mitigation
 
 For developers concerned about their applications being used for fingerprinting:
 
@@ -231,11 +231,11 @@ Intl.DateTimeFormat = function(...args) {
 Intl.DateTimeFormat.prototype = originalDateTimeFormat.prototype;
 ```
 
-Detection and Monitoring
+## Detection and Monitoring
 
 If you want to check whether your browser is being fingerprinted via the Intl API:
 
-Check Available Information
+## Check Available Information
 
 You can see what information your browser reveals:
 
@@ -247,7 +247,7 @@ console.log('Timezone:', Intl.DateTimeFormat().resolvedOptions().timeZone);
 console.log('Available locales:', Intl.supportedValuesOf('locale').slice(0, 20));
 ```
 
-Testing Tools
+## Testing Tools
 
 Several online tools can analyze your browser's fingerprint including Intl-based signals:
 
@@ -257,7 +257,7 @@ Several online tools can analyze your browser's fingerprint including Intl-based
 
 These tools show you exactly what information websites can collect about your browser configuration.
 
-The Future of Intl Fingerprinting
+## The Future of Intl Fingerprinting
 
 As traditional fingerprinting techniques become more widely known and blocked, fingerprinters are increasingly turning to less obvious vectors like the Intl API. The Webkit team has noted this trend, and browser vendors are gradually implementing protections.
 
@@ -268,12 +268,11 @@ Future developments may include:
 - Web standards proposals to limit fingerprinting vectors
 - Privacy-focused browser defaults that limit information exposure
 
-Conclusion
+## Conclusion
 
 The Internationalization API represents a subtle but powerful tool in the fingerprinting arsenal. While it serves legitimate purposes for web internationalization, it also exposes information that can uniquely identify users. Understanding this technique is the first step toward protecting yourself and your users from this form of tracking.
 
 As with all fingerprinting vectors, the best protection comes from using privacy-focused browsers, keeping software updated, and being aware of the information your browser reveals. The fight against browser fingerprinting is ongoing, and awareness of techniques like Intl API fingerprinting is essential for maintaining online privacy.
-
 
 Related Reading
 

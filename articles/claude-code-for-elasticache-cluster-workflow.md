@@ -13,20 +13,17 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
-
-Claude Code for ElastiCache Cluster Workflow
 
 Amazon ElastiCache is a critical infrastructure component for applications requiring high-performance caching. Managing ElastiCache clusters, whether Redis or Memcached, involves careful configuration, security considerations, and operational best practices. Claude Code can significantly streamline your ElastiCache workflows, from initial cluster provisioning to day-to-day operations and troubleshooting.
 
 This guide covers practical approaches for using Claude Code in your ElastiCache cluster management tasks.
 
-Setting Up ElastiCache Clusters with Claude Code
+## Setting Up ElastiCache Clusters with Claude Code
 
 When provisioning new ElastiCache clusters, Claude Code can help you generate proper infrastructure-as-code configurations and ensure best practices are followed from the start.
 
-Terraform Configuration
+## Terraform Configuration
 
 Claude Code excels at generating Terraform configurations for ElastiCache clusters. Here's how to approach this:
 
@@ -73,7 +70,7 @@ resource "aws_elasticache_replication_group" "redis_cluster" {
 
 When working with Claude Code, provide context about your existing infrastructure and specify requirements like node type, replication strategy, and security requirements. The more specific you are about your use case, the more accurate the generated configuration will be.
 
-Security Considerations
+## Security Considerations
 
 ElastiCache security involves multiple layers. Claude Code can help you implement:
 
@@ -108,11 +105,11 @@ Here's an example IAM policy Claude Code might help generate:
 }
 ```
 
-Connecting Applications to ElastiCache
+## Connecting Applications to ElastiCache
 
 Claude Code can help you write application code that properly connects to your ElastiCache cluster with connection pooling, error handling, and best practices.
 
-Node.js Example with Redis
+## Node.js Example with Redis
 
 ```javascript
 const Redis = require('ioredis');
@@ -179,7 +176,7 @@ class ElastiCacheClient {
 }
 ```
 
-Python Example with Redis
+## Python Example with Redis
 
 ```python
 import redis
@@ -222,11 +219,11 @@ class ElastiCacheManager:
             return 0
 ```
 
-Monitoring and Operations
+## Monitoring and Operations
 
 Claude Code can help you set up proper monitoring and alerting for ElastiCache clusters, ensuring you can quickly identify and respond to issues.
 
-CloudWatch Metrics to Monitor
+## CloudWatch Metrics to Monitor
 
 Key metrics Claude Code might help you create dashboards for:
 
@@ -239,7 +236,7 @@ Key metrics Claude Code might help you create dashboards for:
 | ReplicationLag | Seconds behind primary | > 30s |
 | CacheHitRate | Hit ratio percentage | < 80% |
 
-Setting Up Alerts
+## Setting Up Alerts
 
 ```hcl
 CloudWatch Alarm for ElastiCache CPU
@@ -266,11 +263,11 @@ resource "aws_cloudwatch_metric_alarm" "redis_cpu" {
 }
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Claude Code can assist with diagnosing and resolving common ElastiCache problems.
 
-High Memory Usage
+## High Memory Usage
 
 When experiencing memory pressure:
 
@@ -288,7 +285,7 @@ redis-cli -h $ENDPOINT --no-auth-warning --bigkeys
 redis-cli -h $ENDPOINT --no-auth-warning INFO stats | grep evicted
 ```
 
-Replication Lag
+## Replication Lag
 
 For Redis replication issues:
 
@@ -300,7 +297,7 @@ Monitor lag in real-time
 watch -n 1 'redis-cli -h $ENDPOINT INFO replication | grep -i lag'
 ```
 
-Best Practices Summary
+## Best Practices Summary
 
 When working with ElastiCache and Claude Code:
 

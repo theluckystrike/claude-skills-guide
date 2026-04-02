@@ -13,19 +13,18 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
 {% raw %}
 Remote work offers flexibility and freedom, but it also blurs the boundaries between focused work and rest. Without the natural interruptions of an office environment, colleagues stopping by, meetings, or simply walking to a different room, developers and power users often find themselves staring at screens for hours without taking breaks. This habit leads to eye strain, decreased productivity, and burnout.
 
 A well-designed Chrome extension for break reminders solves this problem by proactively nudging you to step away from the keyboard. I'll walk you through building a break reminder extension tailored for remote workers, complete with practical code examples you can customize.
 
-Why Break Reminders Matter for Developers
+## Why Break Reminders Matter for Developers
 
 As developers, we spend countless hours debugging code, writing functions, and reviewing pull requests. The Pomodoro Technique and similar productivity methods work because they acknowledge a simple truth: our brains need recovery time to maintain peak performance.
 
 Chrome extensions offer the perfect vehicle for break reminders because they run directly in your browser, the same place you likely spend most of your work hours. Unlike standalone apps that might get hidden behind other windows, a browser extension can display notifications directly in your workflow.
 
-Project Structure
+## Project Structure
 
 A Chrome extension requires a few essential files:
 
@@ -63,7 +62,7 @@ The manifest.json file defines the extension's configuration and permissions:
 
 Notice we're using Manifest V3, which is the current standard for Chrome extensions. This version requires service workers instead of background pages, which we'll implement in background.js.
 
-Implementing the Timer Logic
+## Implementing the Timer Logic
 
 The core functionality lives in the background service worker. This script runs independently of any open tabs, making it ideal for timing-based features:
 
@@ -102,7 +101,7 @@ function showNotification(title, message) {
 
 This implementation alternates between work and break periods. After each work duration, it triggers a notification reminding you to take a break. After each break, it notifies you when it's time to resume working.
 
-Building the Settings Popup
+## Building the Settings Popup
 
 Users need a way to configure their preferred intervals. The popup.html provides a simple interface:
 
@@ -160,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Adding Sound Notifications
+## Adding Sound Notifications
 
 For developers who might miss visual notifications, adding an audio cue increases the likelihood of actually taking a break. Chrome extensions can play sounds using the HTML5 Audio API through content scripts or by using chrome.alarms with audio playback in the background.
 
@@ -181,7 +180,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 ```
 
-Customizing for Different Work Styles
+## Customizing for Different Work Styles
 
 Every developer works differently. Some prefer the Pomodoro-style 25/5 intervals, while others might prefer longer deep work sessions with less frequent breaks. The extension's settings allow customization, but you can also add presets:
 
@@ -195,7 +194,7 @@ const presets = {
 
 Add these to your popup.js to give users quick configuration options.
 
-Testing Your Extension
+## Testing Your Extension
 
 Before publishing to the Chrome Web Store, test your extension locally:
 
@@ -205,7 +204,7 @@ Before publishing to the Chrome Web Store, test your extension locally:
 4. The extension icon should appear in your toolbar
 5. Test the notifications and verify settings persist across browser restarts
 
-Installation and Usage
+## Installation and Usage
 
 To install your custom extension:
 - Click the extension icon in the Chrome toolbar
@@ -215,7 +214,7 @@ To install your custom extension:
 
 The extension runs in the background, so you don't need to keep the popup open. Your settings persist across browser sessions and even after closing and reopening Chrome.
 
-Extending the Extension
+## Extending the Extension
 
 Once you have the basic break reminder working, consider adding these enhancements:
 - Website blocking during break times to enforce the pause
@@ -226,7 +225,6 @@ Once you have the basic break reminder working, consider adding these enhancemen
 Building a break reminder extension teaches valuable skills about Chrome's extension APIs while creating a genuinely useful tool for your own productivity. The combination of background service workers, the notifications API, and storage synchronization provides a solid foundation for more complex extensions.
 
 Remember: the best productivity tools are the ones you'll actually use. Start with a simple implementation, test it in your daily workflow, and iterate based on what works for your specific remote work situation.
-
 
 Related Reading
 

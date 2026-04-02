@@ -13,18 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Changelog: What Changed This Week
-
 Keeping track of Claude Code updates helps developers and power users stay productive with the latest features, skill releases, and capability improvements. This weekly changelog covers the most significant updates affecting how you work with Claude skills and the Claude Code CLI, and explains what each change means for your day-to-day workflows.
 
-Why Following the Changelog Matters
+## Why Following the Changelog Matters
 
 Claude Code is a fast-moving tool. Skills added last month may already have improved versions with better prompting strategies, new tool integrations, or performance fixes. If you installed the `tdd` skill three months ago and never updated it, you're likely missing test pattern refinements that ship weekly based on community feedback.
 
 This changelog is structured to give you not just what changed, but why it matters and what you should do about it. Each section covers a specific area of the system, with concrete examples where behavior has changed.
 
-Recent Skill Framework Updates
+## Recent Skill Framework Updates
 
 The Claude skills system has seen several refinements that improve how skills interact with tools and manage complex workflows. These changes directly impact skill authors building custom capabilities.
 
@@ -60,7 +57,7 @@ print(f"Selected skill: {skill_name}")
 
 This pattern is increasingly common in agent workflows that need to produce different artifact types based on user input at runtime.
 
-Tool Integration Improvements
+## Tool Integration Improvements
 
 Tool calling within skills received stability improvements this week. The execution context now properly isolates tool state between skill invocations, preventing cross-contamination when chaining multiple skills together.
 
@@ -99,7 +96,7 @@ Wait for completion or handle timeout
 wait $ART_PID && echo "Art generation complete" || echo "Generation timed out"
 ```
 
-New Skill Capabilities
+## New Skill Capabilities
 
 Several new features expanded what skills can accomplish this week:
 
@@ -131,7 +128,7 @@ async def stream_metric_updates(metric_name: str):
         }
 ```
 
-Bug Fixes and Performance
+## Bug Fixes and Performance
 
 The team addressed several issues affecting developer experience:
 
@@ -142,7 +139,7 @@ The team addressed several issues affecting developer experience:
 
 If you maintain skills that others use on Windows, the path resolution fix is worth testing. Run your skill on a Windows machine or WSL environment and verify file references resolve correctly after the update.
 
-Deprecation Notices
+## Deprecation Notices
 
 The legacy skill format using `+description` front matter fields is now deprecated. Migration to the standard `description` field completes by the end of the month. Skills still using the old format will continue working but will emit warnings during loading.
 
@@ -168,7 +165,7 @@ description: "Current format"
 
 This is a straightforward find-and-replace. If you maintain a private skill library, run the grep above before the end-of-month deadline to avoid warning noise during startup.
 
-Comparing Old vs New Behavior: Key Changes at a Glance
+## Comparing Old vs New Behavior: Key Changes at a Glance
 
 | Area | Previous Behavior | New Behavior |
 |---|---|---|
@@ -181,7 +178,7 @@ Comparing Old vs New Behavior: Key Changes at a Glance
 | MCP server responses | Request-response only | Streaming responses supported |
 | Windows path handling | Often broken for relative paths | Correct backslash handling |
 
-Coming Soon
+## Coming Soon
 
 Preview features landing next week include:
 
@@ -191,7 +188,7 @@ Preview features landing next week include:
 
 The multi-file skill packages feature is particularly significant. Right now, complex skills sometimes need to embed long code blocks directly in the Markdown file, making them hard to read and edit. Packages will allow a skill to reference external Python files, configs, and templates in a structured directory layout.
 
-Staying Updated
+## Staying Updated
 
 To check your current Claude Code version and installed skills:
 
@@ -218,7 +215,7 @@ claude --version
 
 The `internal-comms` skill received a significant update this week with new templates for project status reports. If you regularly communicate team progress, this skill now generates formatted updates in multiple formats compatible with the `docx` skill for Word documents or direct Markdown output. The new templates cover sprint retrospectives, incident postmortems, and stakeholder briefings.
 
-Practical Example: Chaining Skills With the New Context Isolation
+## Practical Example: Chaining Skills With the New Context Isolation
 
 Here is a full example demonstrating how multiple skills now work together reliably after the context isolation fix:
 
@@ -277,7 +274,6 @@ The key insight here is that with proper context isolation, each step in this pi
 ---
 
 Each weekly update improves either skill authoring, tool integration, or runtime performance. Bookmark this changelog to stay informed about changes that affect your Claude Code workflows. If you maintain a private skill library or build on top of the MCP framework, the deprecation notice and tool isolation fixes deserve attention before the end of the month.
-
 
 Related Reading
 

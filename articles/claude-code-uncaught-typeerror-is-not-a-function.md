@@ -15,11 +15,11 @@ score: 8
 
 {% raw %}
 
-How to Fix "Uncaught TypeError: Is Not a Function" in Claude Code
+## How to Fix "Uncaught TypeError: Is Not a Function" in Claude Code
 
 If you've been working with Claude Code skills, you've likely encountered the frustrating "Uncaught TypeError: X is not a function" error. This is one of the most common JavaScript runtime errors that can interrupt your development workflow. Understanding what causes this error and how to fix it will make you a more effective Claude Code developer.
 
-Understanding the Is Not a Function Error
+## Understanding the Is Not a Function Error
 
 The "X is not a function" error occurs when your code attempts to call something as a function, but that something is not actually a function. In JavaScript, functions are first-class objects, which means they can be assigned to variables, passed as arguments, and returned from other functions. However, when you try to invoke a non-function value, JavaScript throws a TypeError.
 
@@ -41,13 +41,13 @@ The error message itself can be cryptic. You might see variations like:
 
 Each variation tells you something different about the root cause. When the subject is `undefined` or `null`, the variable was never assigned a function at all. When it includes an object path like `user.getName`, you're calling a method that doesn't exist on that object. Recognizing these patterns is half the battle.
 
-Why This Error Is Especially Common in Claude Code Projects
+## Why This Error Is Especially Common in Claude Code Projects
 
 Claude Code skills are often composed of multiple JavaScript modules that interact through defined interfaces. When you're wiring up skills, passing callbacks between modules, or dynamically loading functionality, the opportunity for type mismatch increases significantly. A skill might export a handler function, but if the import path is wrong or the export name mismatches, you'll get this error the moment that handler is invoked.
 
 Additionally, Claude Code skills frequently use asynchronous patterns, fetching data, calling external APIs, processing file contents, which introduces another layer of complexity where function references can easily get confused with the promise objects wrapping them.
 
-Common Causes of Is Not a Function Errors
+## Common Causes of Is Not a Function Errors
 
 1. Method Name Typos
 
@@ -265,7 +265,7 @@ processor.run("myData"); // TypeError: Cannot read properties of null
 
 The fix is to use proper initialization guards or await the module setup before registering handlers.
 
-How Claude Code Helps Debug These Errors
+## How Claude Code Helps Debug These Errors
 
 Claude Code provides several features that make debugging these errors easier:
 
@@ -292,9 +292,9 @@ A useful prompt pattern: "I'm getting `TypeError: X is not a function` on line 4
 
 Claude Code can review your code before execution to catch potential issues. Before running a new skill or a newly integrated module, ask Claude to trace through the function call chain and verify that every identifier you're calling is actually a function at the point of invocation.
 
-Practical Solutions for Function Call TypeErrors
+## Practical Solutions for Function Call TypeErrors
 
-Solution 1: Verify Function Existence
+## Solution 1: Verify Function Existence
 
 Always check if a function exists before calling it:
 
@@ -330,7 +330,7 @@ plugins.forEach(plugin => {
 });
 ```
 
-Solution 3: Bind Methods Correctly
+## Solution 3: Bind Methods Correctly
 
 For class methods used as callbacks:
 
@@ -360,7 +360,7 @@ class Button {
 }
 ```
 
-Solution 4: Debug with Console Logging
+## Solution 4: Debug with Console Logging
 
 Add strategic logging to understand what's happening:
 
@@ -372,7 +372,7 @@ console.log('user prototype methods:', Object.getOwnPropertyNames(Object.getProt
 
 The prototype methods log is especially useful for class instances where the methods live on the prototype rather than the instance itself.
 
-Solution 5: Use a Type Guard Pattern
+## Solution 5: Use a Type Guard Pattern
 
 For more solid code in shared skill utilities, add explicit type guards at function boundaries:
 
@@ -391,7 +391,7 @@ safeCall(userProcessor.handleData, payload);
 // Now you get a meaningful error message instead of the cryptic default
 ```
 
-Solution 6: Validate Imports at Module Load Time
+## Solution 6: Validate Imports at Module Load Time
 
 For Claude Code skills that depend on specific exports from utility modules, validate those exports when the skill initializes rather than at call time:
 
@@ -413,7 +413,7 @@ REQUIRED_FUNCTIONS.forEach(fnName => {
 
 This surfaces configuration errors immediately at startup rather than during an actual request.
 
-Comparison: Approaches to Avoiding TypeError
+## Comparison: Approaches to Avoiding TypeError
 
 | Approach | When to Use | Trade-offs |
 |---|---|---|
@@ -424,7 +424,7 @@ Comparison: Approaches to Avoiding TypeError
 | Runtime validation at init | Shared skill utilities | Fails fast, clear error messages |
 | ESLint `no-undef` rule | Development workflow | Catches undefined variables statically |
 
-Preventing These Errors
+## Preventing These Errors
 
 1. Use TypeScript: TypeScript can catch these errors at compile time before they ever hit production. If you're building substantial Claude Code skills, the type safety is worth the setup overhead.
 
@@ -438,7 +438,7 @@ Preventing These Errors
 
 6. Code Review Function Signatures: When reviewing code with Claude, explicitly ask it to verify that every callback, handler, and imported function is being called correctly.
 
-Conclusion
+## Conclusion
 
 The "Uncaught TypeError: is not a function" error is common but fixable. By understanding its causes, typos, incorrect imports, async issues, context loss, and race conditions, you can quickly debug and prevent these errors in your Claude Code projects. The key is to read the error message carefully, inspect the actual type and value of the failing identifier, and trace backward through the call chain to find where the mismatch occurred.
 
@@ -447,7 +447,6 @@ Remember to verify function existence before calling, use proper imports, handle
 With these debugging techniques and Claude Code's assistance, you'll spend less time fixing runtime errors and more time building great applications.
 
 {% endraw %}
-
 
 Related Reading
 

@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Flaky Test Detection and Fix Guide
-
 Flaky tests are one of the most frustrating problems in software development. They pass and fail intermittently, eroding trust in your test suite and wasting developer time. This guide shows you how to use Claude Code to detect, diagnose, and fix flaky tests effectively.
 
-Understanding Flaky Tests
+## Understanding Flaky Tests
 
 A flaky test is one that produces different results when run multiple times without any code changes. These tests undermine confidence in continuous integration and can mask real regressions. Common causes include:
 
@@ -30,11 +27,11 @@ A flaky test is one that produces different results when run multiple times with
 
 Claude Code can help you identify these patterns and provide actionable fixes.
 
-Detecting Flaky Tests with Claude Code
+## Detecting Flaky Tests with Claude Code
 
 The first step is identifying which tests are flaky. Claude Code can analyze your test suite and detect common flakiness patterns.
 
-Analyzing Test Files
+## Analyzing Test Files
 
 Ask Claude to examine your test files for known flaky patterns:
 
@@ -48,7 +45,7 @@ Look through my test files in the tests/ directory and identify any patterns tha
 
 Claude will analyze your codebase and provide specific file locations and line numbers where issues exist.
 
-Running Iterations to Find Flakiness
+## Running Iterations to Find Flakiness
 
 For tests you suspect are flaky, run them multiple times:
 
@@ -61,11 +58,11 @@ done
 
 Ask Claude to analyze the output and identify which tests fail intermittently and what patterns they share.
 
-Diagnosing Root Causes
+## Diagnosing Root Causes
 
 Once you've identified flaky tests, Claude Code can help diagnose the root cause.
 
-Analyzing Test Output
+## Analyzing Test Output
 
 Provide Claude with the failing test output and ask for analysis:
 
@@ -81,7 +78,7 @@ What are the differences? What could cause intermittent failures?
 
 Claude will identify timing issues, race conditions, or state leakage that might not be obvious.
 
-Examining Async Code
+## Examining Async Code
 
 Flaky tests often involve async operations. Ask Claude to review async test code:
 
@@ -94,11 +91,11 @@ Suggest specific fixes with code changes.
 
 Claude can recommend adding proper waits, using fixtures for cleanup, or restructuring async assertions.
 
-Fixing Flaky Tests
+## Fixing Flaky Tests
 
 Claude Code provides actionable fixes for common flaky test patterns.
 
-Fixing Shared State Issues
+## Fixing Shared State Issues
 
 When tests share state, they can interfere with each other:
 
@@ -131,7 +128,7 @@ class TestUser:
 
 Ask Claude to refactor your tests with proper fixtures and cleanup.
 
-Fixing Race Conditions
+## Fixing Race Conditions
 
 For tests with timing issues:
 
@@ -149,7 +146,7 @@ test('user data loads', async () => {
 });
 ```
 
-Fixing Time-Dependent Tests
+## Fixing Time-Dependent Tests
 
 Tests that depend on current time or dates are inherently flaky:
 
@@ -170,11 +167,11 @@ def test_subscription_active():
 
 Ask Claude to identify time dependencies and suggest appropriate fixes.
 
-Preventing Future Flakiness
+## Preventing Future Flakiness
 
 Beyond fixing existing flaky tests, Claude Code can help you prevent new ones.
 
-Adding Test Reliability Checks
+## Adding Test Reliability Checks
 
 Ask Claude to review your test suite and recommend reliability improvements:
 
@@ -186,7 +183,7 @@ Review my test suite and suggest:
 4. Mocking strategies for external dependencies
 ```
 
-Implementing Test Health Monitoring
+## Implementing Test Health Monitoring
 
 Consider adding logging to track flaky tests over time:
 
@@ -214,7 +211,7 @@ def track_test_flakiness(test_name, func, *args, kwargs):
     return result
 ```
 
-Best Practices for Test Reliability
+## Best Practices for Test Reliability
 
 Follow these guidelines to minimize flaky tests:
 
@@ -224,7 +221,7 @@ Follow these guidelines to minimize flaky tests:
 4. Use deterministic data - Avoid random values or time-dependent assertions
 5. Run tests in isolation - Configure your test runner to run tests in random order
 
-Conclusion
+## Conclusion
 
 Flaky tests don't have to plague your development workflow. By using Claude Code to detect, diagnose, and fix flaky tests, you can build a more reliable test suite. Start by identifying your flakiest tests, apply the fixes suggested in this guide, and implement prevention strategies to maintain test reliability over time.
 

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Building a Chrome Extension for Team World Clock Management"
 description: "A practical guide for developers building Chrome extensions to manage world clocks across distributed teams. Learn architecture patterns, timezone."
@@ -14,14 +13,11 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Building a Chrome Extension for Team World Clock Management
-
 Managing time across distributed teams presents unique challenges. When your team spans San Francisco, London, Tokyo, and Sydney, simply checking "what time is it there?" becomes a repetitive task that eats into productivity. A well-designed Chrome extension for team world clocks solves this problem by placing timezone information directly in your browser, updated in real-time.
 
 This guide walks through building a Chrome extension specifically designed for team world clock management, covering architecture decisions, timezone handling, and practical implementation patterns that work for development teams of any size.
 
-Extension Architecture Overview
+## Extension Architecture Overview
 
 A team world clock extension consists of three core components working together. The popup interface displays clocks in a compact format when users click the extension icon. The options page allows team configuration, including adding members and selecting their timezones. The background service worker handles real-time updates and optionally syncs with team dashboards.
 
@@ -49,7 +45,7 @@ Modern Chrome extensions use Manifest V3, which requires certain architectural c
 }
 ```
 
-Timezone Data Handling
+## Timezone Data Handling
 
 JavaScript's built-in `Intl` API provides solid timezone functionality without external dependencies. For a team clock extension, you need to convert between timezones accurately and handle daylight saving time transitions automatically.
 
@@ -80,7 +76,7 @@ function getTimezoneOffset(timezone) {
 
 The `Intl` API handles the complex calculations internally, including historical timezone rules and daylight saving transitions. This means your extension automatically adjusts when regions change their clocks, without requiring database updates.
 
-Storing Team Configuration
+## Storing Team Configuration
 
 Chrome's `chrome.storage` API provides persistent storage that syncs across devices when users sign into Chrome. For team clock data, you'll structure your storage to hold both team member information and display preferences.
 
@@ -108,7 +104,7 @@ const defaultTeamMember = {
 
 Using `chrome.storage.sync` ensures team configurations persist across machines and remain available after browser restarts. The sync limit of 100KB is more than sufficient for storing hundreds of team members.
 
-Real-Time Updates with Alarms
+## Real-Time Updates with Alarms
 
 In Manifest V3, you cannot run persistent background scripts. Instead, use the `chrome.alarms` API to schedule periodic updates for clock refreshes.
 
@@ -137,7 +133,7 @@ function updateAllClocks() {
 
 This pattern keeps resource usage minimal while ensuring clocks update every minute. The alarm API is designed to be battery-efficient and survives browser restarts.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup displays team clocks in a clean, scannable format. Using Flexbox and CSS Grid, you can create a responsive layout that shows timezone, current time, and working status at a glance.
 
@@ -186,7 +182,7 @@ The popup displays team clocks in a clean, scannable format. Using Flexbox and C
 
 The `tabular-nums` font variant ensures digit widths remain constant, preventing time display jitter during updates.
 
-Working Hours Visualization
+## Working Hours Visualization
 
 A practical feature for team coordination is showing whether each team member is currently in working hours. This requires comparing the current time against each member's defined schedule.
 
@@ -208,7 +204,7 @@ function getWorkingStatus(timezone, workingHours) {
 
 This simple calculation runs efficiently and provides immediate visual feedback about team availability.
 
-Extension-to-Webpage Communication
+## Extension-to-Webpage Communication
 
 For advanced use cases, your extension might need to inject content scripts that display times directly on web pages. This pattern uses message passing between the background script and injected scripts.
 
@@ -231,7 +227,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 Content scripts can then display floating team times or integrate with your existing tools.
 
-Testing and Deployment
+## Testing and Deployment
 
 Before publishing to the Chrome Web Store, test your extension thoroughly across different scenarios. Verify timezone conversions against known values, test alarm functionality after browser restocks, and ensure storage sync works across devices.
 
@@ -253,7 +249,6 @@ function testTimezoneConversion() {
 ```
 
 Building a team world clock extension requires careful attention to timezone accuracy, storage management, and battery-efficient updates. The patterns outlined here provide a solid foundation for creating a useful tool that your distributed team will actually use daily.
-
 
 Related Reading
 

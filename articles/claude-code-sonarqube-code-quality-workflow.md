@@ -16,7 +16,7 @@ permalink: /claude-code-sonarqube-code-quality-workflow/
 
 Integrating Claude Code with SonarQube creates a powerful code quality pipeline that catches issues before they reach production. This workflow combines Claude's AI-assisted development capabilities with SonarQube's static analysis engine, giving you automated quality gates that improve codebases systematically. Where SonarQube identifies what is wrong, Claude helps you understand why it matters and how to fix it efficiently. a pairing that turns static analysis from a blocking step into an actionable feedback loop.
 
-Setting Up SonarQube for Your Project
+## Setting Up SonarQube for Your Project
 
 Before integrating with Claude, ensure SonarQube is running and accessible. You can use the community edition via Docker:
 
@@ -44,7 +44,7 @@ docker run -d \
   sonarqube:community
 ```
 
-Basic SonarQube Scanner Integration
+## Basic SonarQube Scanner Integration
 
 The most straightforward approach uses the SonarQube Scanner CLI directly in your workflow. Install the scanner globally:
 
@@ -81,7 +81,7 @@ mvn sonar:sonar \
   -Dsonar.token=$SONAR_TOKEN
 ```
 
-Integrating with Claude Code Sessions
+## Integrating with Claude Code Sessions
 
 When working in Claude Code, you can invoke analysis at specific points in your development workflow. While Claude does not have a dedicated SonarQube skill, the integration is straightforward because Claude can read your project files, execute shell commands, and interpret JSON output from the SonarQube API.
 
@@ -100,7 +100,7 @@ For each issue, explain the root cause and show me the minimal fix.
 
 This creates a feedback loop where AI assistance and static analysis work together. Instead of reading raw issue IDs like `javascript:S1523` and looking them up in documentation, Claude translates them into plain explanations with code-level fixes tailored to your actual codebase.
 
-Fetching SonarQube Results Directly
+## Fetching SonarQube Results Directly
 
 You can also ask Claude to fetch and interpret existing analysis results without re-running the scanner:
 
@@ -119,7 +119,7 @@ curl -s -u $SONAR_TOKEN: \
 
 Then format the results into a sprint-ready task list with explanations. far more useful than scanning a dashboard manually.
 
-Automated Quality Gates in CI/CD
+## Automated Quality Gates in CI/CD
 
 For automated pipelines, create a shell script that combines analysis with quality gate enforcement:
 
@@ -155,7 +155,7 @@ echo "Quality gate passed!"
 
 This script runs analysis, retrieves quality gate status, and fails the build if standards are not met. Integrate it into GitHub Actions, GitLab CI, or Jenkins pipelines.
 
-GitHub Actions Integration
+## GitHub Actions Integration
 
 Here is a complete GitHub Actions workflow that runs SonarQube analysis on every pull request:
 
@@ -201,7 +201,7 @@ jobs:
 
 The `fetch-depth: 0` flag is critical. it ensures SonarQube receives full git history for accurate blame annotations and new-code detection. Without it, every line appears as "new code" and quality gate thresholds behave unexpectedly.
 
-Claude Code Workflow Patterns
+## Claude Code Workflow Patterns
 
 Several Claude Code skills complement SonarQube analysis effectively:
 
@@ -213,7 +213,7 @@ For frontend projects, combining frontend-design skill guidance with SonarQube e
 
 The supermemory skill helps track recurring code quality issues across your projects. When SonarQube repeatedly flags similar problems, use supermemory to document patterns and prevention strategies for future development.
 
-Practical Example: Fixing Technical Debt
+## Practical Example: Fixing Technical Debt
 
 Suppose SonarQube flags duplicated code across your codebase. Here is how the combined workflow works:
 
@@ -235,7 +235,7 @@ Claude reads the actual files, spots the duplicated logic, and proposes a concre
 
 This cycle continues until your quality gates pass. Over time, your codebase improves systematically rather than accumulating technical debt indefinitely.
 
-Customizing Quality Profiles
+## Customizing Quality Profiles
 
 SonarQube allows you to customize which rules apply to your project. Access Quality Profiles from the administration menu and activate or deactivate rules based on your team's standards.
 
@@ -259,7 +259,7 @@ curl -s -u $SONAR_TOKEN: \
 
 Check this file into version control. When onboarding a new project or restoring from scratch, import it via the SonarQube UI or API to get consistent settings without manual reconfiguration.
 
-Monitoring Quality Trends
+## Monitoring Quality Trends
 
 SonarQube's web interface provides dashboards showing quality trends over time. Key metrics to track include:
 
@@ -277,7 +277,7 @@ Review these metrics during sprint retrospectives. A useful retrospective struct
 
 This keeps quality work grounded in data rather than gut feeling, and prevents the common pattern of ignoring technical debt until it blocks feature work.
 
-Setting Up Automated Quality Reports
+## Setting Up Automated Quality Reports
 
 For weekly or release-based reporting, automate quality snapshots with a cron job or scheduled CI pipeline:
 
@@ -292,7 +292,7 @@ curl -s -u $SONAR_TOKEN: \
 
 Over time, this archive lets you demonstrate measurable quality improvement to stakeholders and correlate quality regressions with specific feature work or team changes.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with SonarQube creates a comprehensive code quality workflow. Claude handles the intelligent aspects. understanding context, suggesting solutions, and assisting with refactoring. while SonarQube provides objective, automated analysis. Together, they form a quality pipeline that improves codebases systematically without slowing development velocity.
 

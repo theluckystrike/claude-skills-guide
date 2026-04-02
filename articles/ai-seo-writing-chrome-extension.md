@@ -17,11 +17,11 @@ score: 8
 
 Building an AI-powered SEO writing Chrome extension requires understanding both browser extension architecture and SEO optimization techniques. This guide walks through practical implementation strategies with concrete code examples.
 
-Core Extension Architecture
+## Core Extension Architecture
 
 A functional AI SEO writing extension consists of several key components working together. The manifest file defines the extension's capabilities, while content scripts handle page interaction. Background scripts manage API communication, and the popup UI provides user controls.
 
-Manifest Configuration
+## Manifest Configuration
 
 Your manifest.json must declare the necessary permissions:
 
@@ -41,7 +41,7 @@ Your manifest.json must declare the necessary permissions:
 
 The host_permissions field is critical for API calls to AI services. Without proper declaration, network requests will fail.
 
-Content Script Integration
+## Content Script Integration
 
 Content scripts run in the context of web pages and can analyze existing content. Here's a pattern for extracting page text:
 
@@ -74,7 +74,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This extraction method targets common content areas and provides basic metrics for SEO analysis.
 
-Background Script API Integration
+## Background Script API Integration
 
 The background script handles communication with AI APIs securely. Never expose API keys in content scripts or popup files:
 
@@ -131,7 +131,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This approach keeps API keys in chrome.storage, which is more secure than hardcoding them.
 
-Popup UI Implementation
+## Popup UI Implementation
 
 The popup provides the user interface. Use a clean, functional design:
 
@@ -181,7 +181,7 @@ document.getElementById('generate').addEventListener('click', async () => {
 });
 ```
 
-SEO Optimization Features
+## SEO Optimization Features
 
 Beyond content generation, effective SEO extensions should provide these capabilities:
 
@@ -193,7 +193,7 @@ Readability Scoring: Implement Flesch-Kincaid or similar metrics to ensure conte
 
 Internal Linking Suggestions: Scan page content for opportunities to add relevant internal links based on your site's existing content.
 
-Configuration and Storage
+## Configuration and Storage
 
 Store user preferences securely:
 
@@ -210,7 +210,7 @@ async function loadSettings() {
 
 Users should configure their API keys through a dedicated settings page rather than hardcoding them in the extension.
 
-Security Considerations
+## Security Considerations
 
 When building AI-powered extensions, follow these security practices:
 
@@ -222,7 +222,7 @@ Validate all content passed to AI APIs to prevent injection attacks.
 
 Use content security policy headers in your extension to restrict script execution.
 
-Keyword Density and Heading Analysis
+## Keyword Density and Heading Analysis
 
 An SEO extension that only generates content misses half the value. Analysis of existing page content is equally important. The following utility calculates keyword density and heading structure in one pass:
 
@@ -263,7 +263,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This gives the popup enough data to flag common SEO issues: keyword density above 3% (potential over-optimization), no keyword in the H1, or a page with too few headings for its word count. Returning structured data rather than pre-formatted strings keeps the popup logic flexible and makes the data easy to send to your AI prompt as context.
 
-Building SEO-Aware AI Prompts
+## Building SEO-Aware AI Prompts
 
 The quality of AI-generated SEO content depends almost entirely on the quality of the prompt. A generic "write SEO content" instruction produces generic output. The background script should construct prompts that include the page's current state:
 
@@ -296,7 +296,7 @@ function buildSEOPrompt(context) {
 
 Injecting real page diagnostics into the prompt produces output that addresses the specific deficiencies of the page being edited, not generic advice. This is the difference between an extension users return to and one they uninstall after the first session.
 
-Meta Tag Extraction and Editing
+## Meta Tag Extraction and Editing
 
 Reading and writing meta tags from a content script requires careful DOM handling. Many CMS editors render meta tags dynamically, so a simple `document.querySelector` will not always find what you expect:
 
@@ -335,7 +335,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 Note that writing meta tags via content script only affects the in-memory DOM. For the change to persist, the user must copy the suggested value into their CMS editor. The extension's role is suggestion and preview, not permanent DOM modification. which also avoids complications with sites that use strict Content Security Policies.
 
-Rate Limiting and Cost Management
+## Rate Limiting and Cost Management
 
 AI API calls are expensive at scale. An extension used on dozens of pages per day by multiple users can accumulate API costs quickly. Implement token budgets and per-session rate limiting in the background script:
 
@@ -368,7 +368,7 @@ async function generateSEOContentWithLimit(prompt) {
 
 Store `requestLog` in `chrome.storage.session` rather than in-memory if you want the rate limit to survive service worker restarts, which Manifest V3 background scripts are subject to frequently.
 
-Deployment and Testing
+## Deployment and Testing
 
 Before publishing to the Chrome Web Store:
 
@@ -392,7 +392,6 @@ chrome.storage.local.get('apiKey', (result) => {
 ```
 
 Silent errors in Chrome extensions are a common source of hard-to-reproduce user complaints. Logging them explicitly from the start saves significant debugging time after launch.
-
 
 Related Reading
 

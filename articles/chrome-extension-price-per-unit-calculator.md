@@ -19,7 +19,7 @@ Pricing a Chrome extension correctly can make or break your monetization strateg
 
 This guide walks you through building a chrome extension price per unit calculator, the mathematics behind unit pricing, and practical scenarios where these calculations matter.
 
-Why Price Per Unit Matters for Chrome Extensions
+## Why Price Per Unit Matters for Chrome Extensions
 
 Chrome extensions occupy a unique space in the software ecosystem. Unlike traditional desktop applications, they live in the browser, receive automatic updates, and often serve as complementary tools to larger platforms. When determining what to charge, you need to consider development costs, ongoing maintenance, hosting expenses, and the perceived value users receive.
 
@@ -31,7 +31,7 @@ A price per unit calculator helps you answer fundamental questions:
 
 The unit in question could refer to a single installation, a monthly subscription, an annual license, or even feature-based pricing tiers. Understanding your unit economics prevents pricing too low (leaving money on the table) or too high (driving users to competitors).
 
-The Basic Formula
+## The Basic Formula
 
 At its core, price per unit calculation follows this formula:
 
@@ -46,7 +46,7 @@ For Chrome extensions, these variables translate as follows:
 - Expected units sold: Your projected user base over a given period
 - Target profit: The margin you want to maintain
 
-Building a Simple Calculator
+## Building a Simple Calculator
 
 Here is a JavaScript function that implements a basic price per unit calculator for Chrome extensions:
 
@@ -84,9 +84,9 @@ console.log(result);
 
 This calculator produces output showing the break-even price versus the target price with profit margin.
 
-Real-World Pricing Scenarios
+## Real-World Pricing Scenarios
 
-Scenario One: One-Time Purchase Extension
+## Scenario One: One-Time Purchase Extension
 
 Imagine you built a productivity extension that helps developers manage API keys. You invested $3,000 in development and design. You estimate 500 potential paid users.
 
@@ -101,7 +101,7 @@ const oneTimePurchase = calculatePricePerUnit({
 
 This yields a break-even price of $6.00 per user, or $8.00 with your 25% margin. This price falls within the typical range for utility extensions, where users expect to pay between $5 and $15 for purchases.
 
-Scenario Two: Subscription Model
+## Scenario Two: Subscription Model
 
 Many Chrome extensions now use subscriptions rather than one-time purchases. The calculator adapts to account for recurring costs:
 
@@ -137,7 +137,7 @@ const subResult = calculateSubscriptionPrice({
 });
 ```
 
-Scenario Three: Tiered Pricing
+## Scenario Three: Tiered Pricing
 
 Rather than a single unit price, many extensions offer tiered pricing. You can calculate these tiers using the same underlying logic:
 
@@ -157,7 +157,7 @@ function calculateTieredPricing(baseConfig) {
 }
 ```
 
-Additional Cost Considerations
+## Additional Cost Considerations
 
 Beyond the basic formula, Chrome extension pricing must account for factors that do not appear in traditional unit economics:
 
@@ -169,7 +169,7 @@ Refund Rates: Plan for a percentage of users requesting refunds. A safe assumpti
 
 Churn: Subscription extensions face monthly churn. Your effective unit economics must account for users who cancel. If you have 10% monthly churn, you need to acquire new users constantly to maintain your user base.
 
-Optimizing Your Price Point
+## Optimizing Your Price Point
 
 Once you have calculated your base price, validate it against market alternatives. Search for extensions solving similar problems and note their pricing. Consider:
 
@@ -179,14 +179,13 @@ Once you have calculated your base price, validate it against market alternative
 
 A/B testing different price points remains the most reliable way to find optimal pricing. Chrome Web Store allows you to adjust prices, so start with a price informed by your calculations and iterate based on conversion data.
 
-Conclusion
+## Conclusion
 
 Building a chrome extension price per unit calculator requires understanding your costs, projecting your user base, and defining your profit targets. The formulas provided in this guide give you a starting framework, but real-world pricing involves market research, competitor analysis, and ongoing optimization.
 
 The key takeaway: do not arbitrarily pick a price. Calculate it based on your actual economics, then validate against market expectations. This approach leads to sustainable pricing that supports your extension's longevity while delivering value to users.
 
 ---
-
 
 Related Reading
 

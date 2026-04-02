@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Keeps Adding Unnecessary Console Log Statements: Solutions and Best Practices
 
 If you've been working with Claude Code for any length of time, you've likely noticed a common pattern: Claude seems to have an affinity for sprinkling `console.log` statements throughout your code. While debugging is essential, these extra log statements often accumulate, cluttering production code and making it harder to maintain clean, professional codebases. This guide explores why this happens and how to work with Claude Code more effectively to keep your code lean.
 
-Why Claude Code Adds Console Log Statements
+## Why Claude Code Adds Console Log Statements
 
 Understanding why Claude Code adds console logs is the first step to addressing the behavior. There are several common scenarios where Claude Code tends to insert logging:
 
@@ -39,9 +38,9 @@ Many programming tutorials and documentation examples include console.log statem
 
 Claude Code may not always know your preferences regarding logging. Without explicit instructions about code style or logging preferences, Claude errs on the side of adding more information rather than less.
 
-Practical Solutions
+## Practical Solutions
 
-Solution 1: Provide Explicit Instructions in System Prompts
+## Solution 1: Provide Explicit Instructions in System Prompts
 
 One of the most effective ways to reduce unnecessary console logs is to include your preferences in your Claude Code configuration or project-specific instructions. Create a `.claude/settings.json` file or add instructions in your project's documentation:
 
@@ -65,7 +64,7 @@ Claude Code Preferences
 - Use proper debugging tools instead of console logging
 ```
 
-Solution 2: Use Claude Code's Built-in Preferences
+## Solution 2: Use Claude Code's Built-in Preferences
 
 Claude Code supports project-specific settings that can help control logging behavior. Create a `CLAUDE.md` file in your project root with explicit guidelines:
 
@@ -79,7 +78,7 @@ Logging Preferences
 - Prefer using breakpoints and debugger statements for JavaScript/TypeScript
 ```
 
-Solution 3: Use Proper Debugging Tools
+## Solution 3: Use Proper Debugging Tools
 
 Instead of console logging, guide Claude Code toward more professional debugging approaches:
 
@@ -101,7 +100,7 @@ function processUserData(user) {
 }
 ```
 
-Solution 4: Clean Up After Claude
+## Solution 4: Clean Up After Claude
 
 Make it a habit to review and remove console log statements that Claude adds. This is especially important before commits. You can create a simple pre-commit hook to catch this:
 
@@ -116,7 +115,7 @@ if git diff --cached --name-only | xargs grep -l "console.log" 2>/dev/null; then
 fi
 ```
 
-Solution 5: Configure Claude Code with Custom Instructions
+## Solution 5: Configure Claude Code with Custom Instructions
 
 You can provide persistent instructions to Claude Code about your logging preferences. Edit your Claude Code settings to include:
 
@@ -128,9 +127,9 @@ When writing or modifying code:
 - If you add logs for debugging, remove them before finishing
 ```
 
-Best Practices for Working with Claude Code
+## Best Practices for Working with Claude Code
 
-Establish Clear Project Conventions
+## Establish Clear Project Conventions
 
 Define your project's logging standards in a `CONTRIBUTING.md` or `CLAUDE.md` file. This gives Claude Code clear guidelines to follow:
 
@@ -144,7 +143,7 @@ Code Style
 - Write tests instead of using console for verification
 ```
 
-Use Explicit Instructions
+## Use Explicit Instructions
 
 When asking Claude Code to perform tasks, be explicit about your logging preferences:
 
@@ -156,21 +155,21 @@ When asking Claude Code to perform tasks, be explicit about your logging prefere
 "Fix the bug in the payment processing code - use breakpoints for debugging, not console.log"
 ```
 
-Review Changes Carefully
+## Review Changes Carefully
 
 Always review Claude Code's changes before accepting them. Check specifically for:
 - Unnecessary console.log statements
 - Debug code left behind
 - Commented-out logging code
 
-Use IDE Extensions
+## Use IDE Extensions
 
 Use IDE extensions that highlight console.log usage to catch them early:
 - ESLint rules for detecting console statements
 - IDE plugins that warn about console usage
 - Code review tools that flag debug logging
 
-Understanding the Balance
+## Understanding the Balance
 
 It's important to note that console.log statements aren't inherently bad. They serve a legitimate purpose during development and debugging. The goal isn't to eliminate all logging but to ensure:
 
@@ -178,7 +177,7 @@ It's important to note that console.log statements aren't inherently bad. They s
 2. Intentional logging: Any logging in production should be deliberate and use proper logging frameworks
 3. Clean code: The codebase remains professional and maintainable
 
-Conclusion
+## Conclusion
 
 Claude Code's tendency to add console.log statements comes from good intentions, transparency and debugging assistance, but can lead to cluttered codebases if not managed. By providing clear instructions, using proper debugging tools, and establishing project conventions, you can work effectively with Claude Code while maintaining clean, professional code.
 
@@ -190,7 +189,6 @@ Remember to:
 
 With these strategies, you can enjoy Claude Code's powerful capabilities while keeping your codebase clean and professional.
 {% endraw %}
-
 
 Related Reading
 

@@ -16,7 +16,7 @@ Claude Code for Twistlock Prisma Cloud Workflow Tutorial
 
 Cloud security has become a critical concern for development teams, and Twistlock (now part of Prisma Cloud) provides solid container and cloud-native security scanning capabilities. This tutorial demonstrates how to use Claude Code to automate Twistlock Prisma Cloud workflows, reducing manual effort and improving your security posture.
 
-Understanding Twistlock and Prisma Cloud Integration
+## Understanding Twistlock and Prisma Cloud Integration
 
 Twistlock, acquired by Palo Alto Networks and integrated into Prisma Cloud, offers comprehensive container security, cloud security posture management (CSPM), and runtime defense. The platform provides REST APIs and a command-line interface that Claude Code can interact with to automate security tasks.
 
@@ -24,7 +24,7 @@ When you combine Claude Code's natural language processing with Twistlock's powe
 
 Before beginning this tutorial, ensure you have access to a Prisma Cloud Compute edition with API access enabled, or a Prisma Cloud Enterprise license for full CSPM features.
 
-Setting Up Twistlock API Access
+## Setting Up Twistlock API Access
 
 The first step involves configuring authentication with your Twistlock/Prisma Cloud environment. You'll need to generate API credentials from your console.
 
@@ -67,7 +67,7 @@ When asked about compliance:
 Always format vulnerability findings in a readable table.
 ```
 
-Automating Container Image Scanning
+## Automating Container Image Scanning
 
 One of the most valuable use cases for Claude Code with Twistlock is automating container image vulnerability scans. Instead of manually checking each image, you can delegate this to Claude Code.
 
@@ -85,7 +85,7 @@ echo "$SCAN_RESULT" | jq '.vulnerabilities[] | select(.severity == "critical")'
 
 Claude Code can process these results and provide actionable summaries. For example, you can ask Claude to explain which vulnerabilities require immediate attention and suggest remediation steps based on the CVE data.
 
-Creating Automated Compliance Workflows
+## Creating Automated Compliance Workflows
 
 Compliance monitoring becomes smooth when you integrate Claude Code with Twistlock's compliance APIs. You can create scheduled checks that automatically assess your infrastructure against industry standards.
 
@@ -120,7 +120,7 @@ def summarize_compliance(report):
     }
 ```
 
-Implementing Runtime Defense Alerts
+## Implementing Runtime Defense Alerts
 
 Twistlock provides runtime defense capabilities that monitor container behavior for suspicious activities. Claude Code can help you process and respond to these alerts efficiently.
 
@@ -131,7 +131,7 @@ When Twistlock detects anomalous behavior, it generates alerts that can be forwa
 - Guide you through forensic investigation
 - Help create rules to prevent similar incidents
 
-Best Practices for Twistlock and Claude Code Integration
+## Best Practices for Twistlock and Claude Code Integration
 
 When implementing these workflows, consider the following best practices:
 
@@ -143,7 +143,7 @@ Result Caching: For frequently queried data (like compliance baselines), impleme
 
 Error Handling: Always implement solid error handling for API failures, authentication issues, and network timeouts.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Twistlock Prisma Cloud transforms your security operations from reactive to proactive. By automating vulnerability scanning, compliance checks, and alert processing, you enable your development team to focus on building secure applications while maintaining solid security posture.
 

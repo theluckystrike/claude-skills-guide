@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for NPM Package Publishing Workflow Guide
 
 Publishing npm packages efficiently requires careful coordination of initialization, testing, versioning, and release processes. Claude Code can serve as an intelligent assistant throughout this entire workflow, helping you set up projects correctly, maintain consistent quality, and automate repetitive tasks. This guide walks you through integrating Claude Code into your npm publishing pipeline.
 
-Setting Up Your Package with Claude Code
+## Setting Up Your Package with Claude Code
 
 The foundation of any npm package begins with proper initialization. Claude Code can guide you through creating a well-structured package that follows community best practices.
 
@@ -58,7 +57,7 @@ Claude will generate the appropriate configuration files. Here's what a well-str
 }
 ```
 
-Scaffolding with CLAUDE.md
+## Scaffolding with CLAUDE.md
 
 Before generating any package code, establish context by creating a `CLAUDE.md` file in your project root. This tells Claude Code about your package goals, coding standards, and preferred tooling for every subsequent interaction:
 
@@ -97,11 +96,11 @@ For dual-format packages, configure your `package.json` exports field to serve b
 
 With this context in place, Claude Code generates code that matches your standards from the first interaction.
 
-Automating Quality Checks
+## Automating Quality Checks
 
 Before publishing, your package must pass several quality gates. Claude Code can help you create comprehensive checks that run automatically before each release.
 
-Setting Up Pre-Publish Validation
+## Setting Up Pre-Publish Validation
 
 Create a skill that validates your package before publication:
 
@@ -124,7 +123,7 @@ Report any failures with specific error messages.
 
 This skill ensures you never accidentally publish broken packages.
 
-Managing Version Numbers
+## Managing Version Numbers
 
 Semantic versioning is critical for npm packages. Claude can help you determine the correct version bump:
 
@@ -138,11 +137,11 @@ Claude will explain that this requires a major version bump (X.0.0) due to the b
 npm version major -m "Bump to %s due to breaking API change"
 ```
 
-Streamlining the Release Process
+## Streamlining the Release Process
 
 The actual publishing step involves multiple commands that are easy to forget or mistype. Claude Code can automate this process while adding safety checks.
 
-Creating a Publish Skill
+## Creating a Publish Skill
 
 Here's a skill that handles the complete publish workflow:
 
@@ -164,7 +163,7 @@ Publish the current package to npm following this workflow:
 Report success with the published version and npm URL.
 ```
 
-HandlingScoped Packages
+## HandlingScoped Packages
 
 For organizations or private packages, scoped packages require additional consideration. Claude can guide you through:
 
@@ -178,11 +177,11 @@ npm publish
 
 Ask Claude: "Help me configure my package.json for a scoped organization package called @myorg/utils"
 
-Maintaining Your Published Package
+## Maintaining Your Published Package
 
 Publishing is just the beginning. Claude Code continues to help with ongoing maintenance.
 
-Updating Dependencies Safely
+## Updating Dependencies Safely
 
 Outdated dependencies create security vulnerabilities. Ask Claude to audit and update:
 
@@ -195,7 +194,7 @@ Audit our package.json dependencies and identify:
 Recommend which updates are safe to apply automatically vs. which need manual review.
 ```
 
-Managing Changelogs
+## Managing Changelogs
 
 Keeping a changelog helps users understand what's new. Claude can generate changelogs from git commits:
 
@@ -203,7 +202,7 @@ Keeping a changelog helps users understand what's new. Claude can generate chang
 Generate a changelog for version 1.2.0 by analyzing git commits since v1.1.0. Format it using Keep a Changelog standards with sections for Added, Changed, Deprecated, Removed, Fixed, and Security.
 ```
 
-Best Practices Summary
+## Best Practices Summary
 
 When using Claude Code for npm publishing, keep these principles in mind:
 
@@ -217,7 +216,7 @@ Document your public API. Users need to know how to import and use your function
 
 Test in a clean environment. Before publishing major changes, verify your package installs correctly in a fresh directory. Claude can simulate this with temporary directories.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms npm package publishing from a manual, error-prone process into an assisted workflow where you remain in control while benefiting from intelligent automation. By integrating Claude into initialization, quality checks, versioning, and maintenance tasks, you publish faster with greater confidence. Start with the basic skills outlined here, then customize and expand them to match your specific package requirements and organizational standards.
 {% endraw %}

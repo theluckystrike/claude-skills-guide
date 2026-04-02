@@ -16,7 +16,7 @@ permalink: /advanced-claude-skills-with-tool-use-and-function-calling/
 
 [Claude's tool use capabilities transform skills from prompt-only text generators into agents](/claude-skill-md-format-complete-specification-guide/) that can read files, execute code, call APIs, and take real actions in your development environment. This guide covers the advanced patterns for designing skills that use tools precisely and reliably.
 
-How Tools Work Within Skills
+## How Tools Work Within Skills
 
 [When a skill is invoked, it operates within a specific tool context](/best-claude-code-skills-to-install-first-2026/) That context determines:
 
@@ -26,7 +26,7 @@ How Tools Work Within Skills
 
 Claude decides autonomously when to call a tool based on the task requirements and the guidance in the skill body. Your job as a skill author is to shape that decision-making.
 
-Declaring Tool Requirements
+## Declaring Tool Requirements
 
 The `tools` field in a skill's front matter limits tool availability for that skill:
 
@@ -45,11 +45,11 @@ This skill can only use `Read`, `Write`, and `Bash`. Even if the session has `We
 
 If you omit `tools` entirely, the skill inherits all session-level tools.
 
-Guiding Tool Use in the Skill Body
+## Guiding Tool Use in the Skill Body
 
 Restricting which tools are available is not enough for reliable behavior. You also need to tell the skill when and how to use each tool.
 
-Specify When to Read Files
+## Specify When to Read Files
 
 Without guidance, Claude may or may not read relevant files before acting. Make it explicit:
 
@@ -62,7 +62,7 @@ Before writing any code:
 Do not guess at file contents. Always read them first.
 ```
 
-Specify bash Command Patterns
+## Specify bash Command Patterns
 
 For skills that use bash, template the common commands to reduce variation:
 
@@ -74,7 +74,7 @@ When formatting code: npx prettier --write {file_path}
 Always run the formatter on any file you write before completing the task.
 ```
 
-Specify Output File Handling
+## Specify Output File Handling
 
 For skills like `docx` and `pdf` that create files, be precise about file naming and location:
 
@@ -87,7 +87,7 @@ If ./output/ does not exist, create it with: mkdir -p ./output/
 Confirm the output file path in your response.
 ```
 
-Building a Custom Tool via MCP
+## Building a Custom Tool via MCP
 
 If the built-in tools don't do what you need, you can expose custom functionality through the Model Context Protocol (MCP). An MCP server exposes functions that Claude treats as tools.
 
@@ -171,11 +171,11 @@ When reviewing code:
 4. Provide a structured review with: violations, suggestions, and a summary score
 ```
 
-Tool Chaining Patterns
+## Tool Chaining Patterns
 
 Some tasks require chaining multiple tool calls in a specific sequence. Guide this explicitly in the skill body.
 
-Read-Modify-Write Pattern
+## Read-Modify-Write Pattern
 
 For the `frontend-design` skill:
 
@@ -193,7 +193,7 @@ To add a new component:
 If step 8 produces errors, fix them and re-run before completing.
 ```
 
-Test-Execute-Verify Pattern
+## Test-Execute-Verify Pattern
 
 For the `tdd` skill:
 
@@ -208,7 +208,7 @@ For any implementation task:
 Never report success unless step 4 produces all passing tests.
 ```
 
-Handling Tool Errors
+## Handling Tool Errors
 
 Claude needs explicit guidance on how to handle tool failures. Without it, it may either ignore errors or halt unexpectedly.
 
@@ -224,7 +224,7 @@ Error handling:
   completing the task, even if the user didn't ask you to
 ```
 
-Tool Use Limits
+## Tool Use Limits
 
 The `max_turns` field in skill front matter limits the total number of tool calls plus model turns the skill can take:
 
@@ -234,7 +234,7 @@ max_turns: 10
 
 For skills that need to read many files, this can be a bottleneck. Size appropriately: a `tdd` skill that might read 3 files, write 2 files, and run tests 3 times needs at least 8 turns plus model turns.
 
-Debugging Tool-Heavy Skills
+## Debugging Tool-Heavy Skills
 
 To see exactly what tool calls a skill is making, watch the tool call output that Claude Code prints inline as the skill runs. Claude Code shows each tool call and its result in the terminal as they execute. Use this during skill development to verify the tool call sequence matches your design.
 

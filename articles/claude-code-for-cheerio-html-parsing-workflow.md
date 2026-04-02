@@ -13,10 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
 When you need to extract structured data from HTML documents, Cheerio provides a fast, jQuery-like API that pairs perfectly with Claude Code. Whether you're building a web scraper, monitoring competitor prices, or aggregating content from multiple sources, this guide shows you how to create efficient HTML parsing workflows that use Claude Code's automation capabilities.
 
-Setting Up Cheerio in Your Project
+## Setting Up Cheerio in Your Project
 
 Before diving into parsing workflows, you need to install and configure Cheerio properly. Create a new Node.js project or use an existing one:
 
@@ -43,7 +42,7 @@ export async function fetchAndParse(url) {
 
 This foundation lets you focus on data extraction rather than boilerplate setup.
 
-Basic Element Selection and Extraction
+## Basic Element Selection and Extraction
 
 Cheerio's selector API mirrors jQuery, making it intuitive for developers familiar with frontend JavaScript. The key is understanding how to target elements precisely while handling edge cases gracefully.
 
@@ -77,7 +76,7 @@ $('img.gallery-image').each((i, el) => {
 
 Claude Code can help you iterate on selectors when initial attempts don't capture the right elements. Describe the structure you're seeing and ask for alternative selector strategies.
 
-Handling Dynamic Tables and Lists
+## Handling Dynamic Tables and Lists
 
 Tabular data requires different extraction strategies. When scraping product listings, financial data, or comparison tables, you'll often need to combine multiple selectors and handle variable row structures.
 
@@ -117,7 +116,7 @@ function extractTitle($) {
 }
 ```
 
-Pagination and Multi-Page Scraping
+## Pagination and Multi-Page Scraping
 
 Real-world scraping often requires traversing multiple pages. Build a paginated workflow that handles navigation automatically:
 
@@ -149,7 +148,7 @@ async function scrapeAllPages(baseUrl, maxPages = 10) {
 
 Claude Code can help you extend this pattern to handle infinite scroll pages, API-based pagination, or sessions that require authentication.
 
-Handling Malformed HTML
+## Handling Malformed HTML
 
 Cheerio is forgiving with malformed HTML, but you'll encounter edge cases. Use error boundaries and validation to prevent crashes:
 
@@ -185,7 +184,7 @@ async function extractWithFallback(url, selectors) {
 
 This approach ensures your scraper continues running even when pages change structure or return unexpected content.
 
-Integrating with Claude Code Workflows
+## Integrating with Claude Code Workflows
 
 The real power emerges when you combine Cheerio parsing with Claude Code's task orchestration. Create reusable skills that encapsulate your parsing logic:
 
@@ -207,7 +206,7 @@ Available functions:
 
 This lets you delegate HTML parsing tasks to Claude Code while maintaining clean, testable extraction logic in your codebase.
 
-Best Practices for Production Scrapers
+## Best Practices for Production Scrapers
 
 When moving from development to production, follow these guidelines:
 
@@ -246,7 +245,7 @@ function validateProduct(product) {
 
 Store results incrementally. For large scraping jobs, save progress after each batch to avoid losing work if the process crashes.
 
-Conclusion
+## Conclusion
 
 Cheerio provides a solid foundation for HTML parsing in Node.js, and when combined with Claude Code's automation capabilities, you can build sophisticated data extraction workflows. Start with basic text and attribute extraction, then progressively add pagination, error handling, and validation as your needs grow. The key is maintaining clean separation between fetching, parsing, and data processing so each component remains testable and maintainable.
 

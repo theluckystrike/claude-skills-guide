@@ -17,7 +17,7 @@ score: 8
 
 The Language Server Protocol (LSP) has revolutionized how development tools provide intelligent code assistance. By standardizing communication between editors and language services, LSP enables features like autocomplete, go-to-definition, symbol search, and real-time diagnostics across any language and editor combination. For developers working with Claude Code, integrating LSP workflows can dramatically enhance your coding experience by combining Claude's AI capabilities with the precise code intelligence that LSP provides.
 
-Understanding LSP and Claude Code Integration
+## Understanding LSP and Claude Code Integration
 
 LSP operates on a client-server model where your editor acts as the client and language servers (like rust-analyzer for Rust or pylsp for Python) provide language-specific intelligence. The protocol defines messages for features like code completion, hover information, document symbols, and refactoring operations. This standardization means you get consistent intelligent assistance regardless of the language you're working in.
 
@@ -25,7 +25,7 @@ Claude Code complements LSP by providing natural language understanding, code ge
 
 The integration typically works in two directions: Claude Code can use LSP responses to gain deeper code understanding, and you can use Claude to configure, debug, or enhance your LSP setup. This bidirectional relationship creates a smooth development experience where AI assistance and language intelligence work in harmony.
 
-Setting Up Your LSP Environment
+## Setting Up Your LSP Environment
 
 Before integrating with Claude Code, ensure your LSP infrastructure is properly configured. Most modern editors like VS Code, Neovim, and Emacs have built-in LSP support, but the setup process varies. For Neovim, you'll need language server clients like `nvim-lspconfig` and `mason.nvim` to manage server installations.
 
@@ -69,7 +69,7 @@ lspconfig.rust_analyzer.setup {
 
 This configuration sets up Python, TypeScript, and Rust language servers with appropriate settings for each language. The capabilities object ensures LSP features integrate properly with autocompletion and other editor features.
 
-Creating Claude Code Skills for LSP Workflows
+## Creating Claude Code Skills for LSP Workflows
 
 You can create Claude Code skills that interact with your LSP setup to automate common tasks. These skills can query LSP for symbol information, trigger refactorings, or coordinate between Claude's generation capabilities and LSP's analysis features.
 
@@ -95,7 +95,7 @@ Invoke this skill when you see LSP errors in your editor's diagnostic panel.
 
 This skill bridges the gap between LSP's raw error data and Claude's ability to understand and explain complex issues. You can extend it to automatically apply fixes for common errors or escalate complex issues to you for review.
 
-Practical Workflows for Enhanced Development
+## Practical Workflows for Enhanced Development
 
 One powerful workflow combines LSP's precise code navigation with Claude's generative capabilities. When you need to understand a large codebase, use LSP's "go to definition" and "find references" features to understand code structure, then use Claude to explain how components interact in natural language.
 
@@ -103,7 +103,7 @@ Consider this development scenario: you're adding a new feature to an existing c
 
 Another valuable workflow uses LSP for precise refactoring while Claude handles the creative aspects. For instance, when renaming a function across a large codebase, LSP's rename capabilities ensure all references update correctly. Claude can then review the changes and suggest any additional modifications needed for the refactoring to be complete.
 
-Troubleshooting Common LSP Issues
+## Troubleshooting Common LSP Issues
 
 Even well-configured LSP setups can encounter problems. Claude Code can help diagnose and resolve common issues like servers not starting, incorrect language detection, or missing features. When LSP diagnostics seem wrong, ask Claude to analyze whether the issue stems from server configuration, missing dependencies, or incorrect project settings.
 
@@ -111,7 +111,7 @@ A systematic debugging approach involves checking three key areas: the language 
 
 For projects with multiple languages or complex build systems, LSP configuration becomes especially important. Document your LSP setup in a README or Claude skill so team members can quickly get the same intelligent assistance you rely on.
 
-Optimizing Your Combined Workflow
+## Optimizing Your Combined Workflow
 
 To get the most from Claude Code and LSP working together, establish habits that use both technologies effectively. Use LSP for tasks requiring precision: accurate autocomplete, exact symbol references, and reliable error detection. Use Claude Code for tasks requiring creativity: generating new code, explaining complex logic, and handling ambiguous requirements.
 
@@ -120,7 +120,6 @@ Consider creating a Claude skill that summarizes LSP workspace symbols, giving y
 The combination of LSP's deterministic code intelligence and Claude's flexible AI assistance represents the future of developer productivity. By understanding both tools and how they complement each other, you can create workflows that are both precise and intelligent, catching errors early while generating high-quality code efficiently.
 
 Start by ensuring your LSP setup works correctly, then layer Claude Code skills on top to automate common tasks and enhance your development experience. The investment in setting up this integrated workflow pays dividends in reduced friction and improved code quality throughout your projects.
-
 
 Related Reading
 

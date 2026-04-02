@@ -13,19 +13,18 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code API Gateway Configuration Guide
 
 API gateways serve as the critical entry point for securing, managing, and routing requests to your Claude Code integrations. Whether you're building a multi-tenant SaaS platform or integrating Claude Code into an enterprise workflow, proper gateway configuration ensures reliable performance, security, and observability. This guide covers practical configuration patterns for developers and power users working with Claude Code behind API gateways.
 
-Understanding the Gateway Role with Claude Code
+## Understanding the Gateway Role with Claude Code
 
 When you expose Claude Code capabilities through an API gateway, you gain several advantages: centralized authentication, rate limiting, request transformation, and detailed analytics. The gateway sits between your clients and the Claude Code execution environment, handling cross-cutting concerns so your core application logic remains clean.
 
 Claude Code operates through a command-line interface that processes prompts and returns responses. When wrapping this capability behind a gateway, you essentially create a RESTful or GraphQL facade that translates HTTP requests into Claude Code invocations. This pattern works well whether you're using the supermemory skill for contextual memory management or integrating with external services.
 
-Why a Gateway Matters for AI Workloads
+## Why a Gateway Matters for AI Workloads
 
 Claude Code integrations have characteristics that differ from typical API backends and that make gateway configuration more important:
 
@@ -34,7 +33,7 @@ Claude Code integrations have characteristics that differ from typical API backe
 - Stateful context: Many Claude Code workflows maintain context across multiple requests. Gateway session handling must preserve this continuity.
 - Large payloads: Code files, context windows, and structured responses can produce payloads far larger than typical REST responses. Compression and buffering configuration matters significantly.
 
-Choosing the Right Gateway for Your Use Case
+## Choosing the Right Gateway for Your Use Case
 
 Before diving into configuration, choosing the right gateway tool saves significant rework. Here is a comparison of the most common options:
 
@@ -49,9 +48,9 @@ Before diving into configuration, choosing the right gateway tool saves signific
 
 For most development teams getting started, Nginx covers 80% of requirements with minimal complexity. Kong is the right choice when you need plugin-based extensibility without writing code. AWS API Gateway makes sense when your Claude Code integration runs on AWS Lambda or ECS and you want native IAM integration.
 
-Basic Gateway Configuration Patterns
+## Basic Gateway Configuration Patterns
 
-Nginx Configuration
+## Nginx Configuration
 
 Nginx provides a straightforward reverse proxy setup for Claude Code endpoints. Here's a practical configuration:
 
@@ -118,7 +117,7 @@ location /claude/ {
 
 The `X-Request-ID` header is particularly valuable: it creates a traceable identifier that propagates through your entire stack, making it possible to correlate gateway logs, application logs, and Claude Code execution records for a single request.
 
-Kong Gateway Integration
+## Kong Gateway Integration
 
 For more advanced requirements, Kong Gateway offers plugin-based extensibility. Install the Claude Code service and route:
 
@@ -172,7 +171,7 @@ curl -X POST http://localhost:8001/services/claude-code-service/plugins \
 
 This layered approach means that by the time a request reaches your Claude Code backend, it has already been authenticated, counted against rate limits, validated for size, and tagged with a correlation ID.
 
-AWS API Gateway Configuration
+## AWS API Gateway Configuration
 
 For teams running Claude Code on AWS infrastructure, API Gateway with Lambda proxy integration provides a fully managed entry point:
 
@@ -227,9 +226,9 @@ aws apigateway create-usage-plan \
 
 AWS API Gateway handles TLS termination, geographic distribution via CloudFront integration, and native IAM authorization. removing significant operational overhead from your team.
 
-Authentication and Security
+## Authentication and Security
 
-JWT Validation
+## JWT Validation
 
 Secure your Claude Code endpoint by validating JWT tokens at the gateway:
 
@@ -264,7 +263,7 @@ A well-structured JWT payload for Claude Code access control might look like:
 
 By embedding permissions in the JWT, your gateway can enforce access rules without making a database call for every request. The permissions travel with the token and are validated cryptographically.
 
-OAuth 2.0 Proxy Integration
+## OAuth 2.0 Proxy Integration
 
 For organizations using OAuth 2.0, integrate an authorization proxy:
 
@@ -288,7 +287,7 @@ data:
 
 This setup works particularly well when combining Claude Code with the tdd skill for test-driven development workflows, where developers need authenticated access to AI-assisted coding assistance.
 
-API Key Management
+## API Key Management
 
 For service-to-service integrations, API key authentication is simpler than OAuth but requires careful key lifecycle management:
 
@@ -319,7 +318,7 @@ server {
 
 In production, replace the static map with a Lua-based lookup against a Redis key store to enable dynamic key management without reloading Nginx configuration.
 
-Comparing Authentication Methods
+## Comparing Authentication Methods
 
 | Method | Complexity | Scalability | Revocation Speed | Best Use Case |
 |---|---|---|---|---|
@@ -331,7 +330,7 @@ Comparing Authentication Methods
 
 For most Claude Code deployments, JWT with short expiry times (1-4 hours) provides the best balance of security and operational simplicity.
 
-Rate Limiting and Throttling
+## Rate Limiting and Throttling
 
 Claude Code operations vary significantly in execution time. A simple prompt might complete in seconds, while complex code generation or analysis tasks can take minutes. Implement tiered rate limiting to accommodate this variance:
 
@@ -352,7 +351,7 @@ Claude Code operations vary significantly in execution time. A simple prompt mig
 
 Consider implementing a queue system for long-running operations rather than holding open HTTP connections. This approach, combined with the frontend-design skill for building status dashboards, provides better user experience for intensive Claude Code workloads.
 
-Tiered Rate Limiting by Consumer
+## Tiered Rate Limiting by Consumer
 
 A flat rate limit treats all users the same, which does not reflect real usage patterns. Implement consumer tiers in Kong to give power users higher limits:
 
@@ -384,7 +383,7 @@ curl -X POST http://localhost:8001/consumers/enterprise-tier-user/plugins \
 
 This creates a billing-aligned rate limiting structure where your most valuable customers get the capacity they need without impacting other users.
 
-Queue-Based Architecture for Long Operations
+## Queue-Based Architecture for Long Operations
 
 For Claude Code tasks that run longer than 30 seconds, a synchronous HTTP model creates problems: clients may timeout, load balancers may terminate connections, and retry logic can cause duplicate execution. A queue-based pattern solves this:
 
@@ -438,9 +437,9 @@ app.get('/claude/status/:jobId', async (req, res) => {
 
 This pattern decouples request submission from result retrieval, enabling Claude Code to handle variable-duration tasks without timeout pressure.
 
-Request and Response Transformation
+## Request and Response Transformation
 
-Input Formatting
+## Input Formatting
 
 Gateway-level transformation allows you to standardize input before reaching Claude Code:
 
@@ -468,7 +467,7 @@ end
 
 This pattern enables sophisticated prompt engineering at the gateway layer, injecting context based on HTTP headers or path parameters.
 
-Prompt Injection Prevention
+## Prompt Injection Prevention
 
 When transforming user input, you must guard against prompt injection. attempts by users to override system-level instructions through crafted input. Add a sanitization step before forwarding to Claude Code:
 
@@ -508,7 +507,7 @@ app.post('/claude/invoke', sanitizePrompt, async (req, res) => {
 });
 ```
 
-Response Handling
+## Response Handling
 
 Transform Claude Code responses for your specific client needs:
 
@@ -527,7 +526,7 @@ location /claude/ {
 }
 ```
 
-Streaming Response Support
+## Streaming Response Support
 
 For long Claude Code responses, streaming improves perceived performance significantly. Configure your gateway to pass through Server-Sent Events:
 
@@ -555,9 +554,9 @@ location /claude/stream {
 
 With streaming enabled, clients receive partial responses as they are generated rather than waiting for the full completion. For large code generation tasks, this means the user sees the first functions appearing within seconds instead of waiting for the entire file.
 
-Monitoring and Observability
+## Monitoring and Observability
 
-Logging Configuration
+## Logging Configuration
 
 Detailed logging supports debugging and performance analysis:
 
@@ -582,7 +581,7 @@ error_log /var/log/nginx/claude_error.log warn;
 
 Integrate these logs with your observability stack. The supermemory skill can help maintain historical context across gateway logs for pattern recognition.
 
-Metrics Collection
+## Metrics Collection
 
 Export Prometheus metrics from your gateway:
 
@@ -598,7 +597,7 @@ Prometheus metrics export
 
 These metrics inform scaling decisions and help identify performance bottlenecks in your Claude Code integration.
 
-Key Metrics to Track
+## Key Metrics to Track
 
 For Claude Code specifically, standard web API metrics are necessary but insufficient. Track these additional signals:
 
@@ -614,7 +613,7 @@ For Claude Code specifically, standard web API metrics are necessary but insuffi
 
 Set up alerting on queue depth and upstream error rate immediately. these are the two signals most likely to indicate a production problem before users file support tickets.
 
-Distributed Tracing
+## Distributed Tracing
 
 Add trace context propagation to correlate gateway activity with downstream Claude Code execution:
 
@@ -634,9 +633,9 @@ location /claude/ {
 
 With distributed tracing active, a single slow request can be inspected from gateway receipt through queue wait time through Claude Code execution. making performance investigations dramatically faster.
 
-Health Checks and Circuit Breaking
+## Health Checks and Circuit Breaking
 
-Backend Health Checks
+## Backend Health Checks
 
 Configure active health checks to detect Claude Code backend failures before they affect users:
 
@@ -661,7 +660,7 @@ curl -X PATCH http://localhost:8001/services/claude-code-service \
   -d "healthchecks.passive.unhealthy.http_failures=3"
 ```
 
-Circuit Breaker Pattern
+## Circuit Breaker Pattern
 
 For high-traffic deployments, implement circuit breaking to fail fast when the Claude Code backend is overwhelmed:
 
@@ -707,14 +706,13 @@ app.post('/claude/invoke', async (req, res) => {
 
 The circuit breaker prevents a degraded Claude Code backend from cascading into gateway-level failures by failing fast and returning a clear error to clients.
 
-Conclusion
+## Conclusion
 
 API gateway configuration for Claude Code involves balancing security, performance, and observability. Start with basic proxy configuration, then layer in authentication, rate limiting, and transformation as your use cases demand. The patterns shown here translate across gateway implementations. whether you use Nginx, Kong, AWS API Gateway, or another platform.
 
 A practical deployment sequence: start with Nginx reverse proxy and JWT authentication, add Redis-backed rate limiting once you understand your traffic patterns, then instrument with Prometheus and structured logging before you go to production. Add queue-based async handling once request durations start exceeding 30 seconds regularly, and introduce circuit breaking when you have multiple Claude Code backend instances that can fail independently.
 
 Remember that Claude Code integrates well with specialized skills like the pdf skill for document generation, canvas-design for visual outputs, and docx for structured reporting. Your gateway configuration should accommodate these varied response types while maintaining consistent security and performance characteristics.
-
 
 Related Reading
 

@@ -17,7 +17,7 @@ Claude Code for Knowledge Sharing Workflow Tutorial
 
 Knowledge sharing is one of the most valuable yet underutilized capabilities in modern development teams. When done right, it accelerates onboarding, reduces duplicate work, and preserves institutional knowledge. Claude Code provides powerful primitives for building knowledge sharing workflows that can capture, organize, and distribute information automatically. This tutorial walks you through creating practical knowledge sharing systems using skills, tools, and structured workflows.
 
-Understanding Knowledge Sharing Workflows
+## Understanding Knowledge Sharing Workflows
 
 A knowledge sharing workflow is a repeatable process that captures information, structures it for future use, and distributes it to the right people. In the context of Claude Code, these workflows typically involve:
 
@@ -27,7 +27,7 @@ A knowledge sharing workflow is a repeatable process that captures information, 
 
 The key advantage of using Claude Code for this is that workflows become executable,  they're not just documentation, they're automated processes that can run repeatedly.
 
-Building a Knowledge Capture Skill
+## Building a Knowledge Capture Skill
 
 The foundation of any knowledge sharing workflow is a skill that can capture information effectively. Let's create a skill designed to extract and format knowledge from development sessions.
 
@@ -59,11 +59,11 @@ If ./knowledge/ doesn't exist, create it first.
 
 This skill provides clear instructions for capturing knowledge in a structured format. The key is specifying both what to capture and how to format it,  this consistency makes knowledge searchable and usable later.
 
-Creating an Automated Documentation Workflow
+## Creating an Automated Documentation Workflow
 
 Beyond manual capture, you can build skills that automatically generate documentation as part of regular development work. This is particularly valuable for API documentation, component libraries, and architectural decision records.
 
-The Documentation Generation Pattern
+## The Documentation Generation Pattern
 
 Create a skill that triggers documentation generation when code changes:
 
@@ -93,7 +93,7 @@ If there are any breaking changes, note them prominently with "## Breaking Chang
 
 This skill can be invoked whenever code is modified, ensuring documentation stays current without extra effort from developers.
 
-Building a Team Knowledge Base Skill
+## Building a Team Knowledge Base Skill
 
 A team knowledge base skill serves as the central hub for accessing and organizing shared knowledge. This skill should handle both contribution and retrieval.
 
@@ -125,7 +125,7 @@ Categories for knowledge:
 
 This skill provides a consistent interface for both searching existing knowledge and adding new entries.
 
-Implementing Cross-Repository Knowledge Sync
+## Implementing Cross-Repository Knowledge Sync
 
 For organizations with multiple codebases, sharing knowledge across repositories becomes crucial. You can build a workflow that synchronizes knowledge bases across projects.
 
@@ -158,27 +158,27 @@ After sync, summarize what was added or updated in your response.
 
 This workflow ensures teams benefit from knowledge generated in other projects without manual copying.
 
-Knowledge Sharing Best Practices
+## Knowledge Sharing Best Practices
 
 When building knowledge sharing workflows with Claude Code, keep these principles in mind:
 
-Structure Consistency Matters
+## Structure Consistency Matters
 
 The format you choose for captured knowledge determines how usable it becomes later. Always use consistent headers, predictable file naming, and standardized metadata. This makes search and retrieval reliable.
 
-Capture Context, Not Just Solutions
+## Capture Context, Not Just Solutions
 
 A solution without context is rarely reusable. Train your knowledge capture skills to record the problem space, constraints considered, and rationale for decisions. This helps future readers understand when to apply the captured knowledge.
 
-Automate Distribution
+## Automate Distribution
 
 Knowledge that sits in a repository without being seen provides no value. Build notification or distribution into your workflows,  whether that's updating a team wiki, posting to Slack, or generating digest emails.
 
-Review and Prune
+## Review and Prune
 
 Knowledge bases can become stale. Include periodic review cycles in your workflow where outdated information is flagged or removed. Consider adding a "last verified" timestamp to each knowledge entry.
 
-Putting It All Together
+## Putting It All Together
 
 A complete knowledge sharing ecosystem combines these skills into a cohesive workflow:
 

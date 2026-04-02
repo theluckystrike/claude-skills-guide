@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Axe Accessibility Testing Guide
-
 Automated accessibility testing has become essential for building inclusive web applications. Axe, the accessibility engine from Deque Systems, provides a powerful library for detecting accessibility violations directly in your development workflow. This guide demonstrates how to integrate axe accessibility testing with Claude Code using specialized skills and practical automation patterns.
 
-Understanding Axe and Accessibility Testing
+## Understanding Axe and Accessibility Testing
 
 Axe is an open-source accessibility testing engine that runs in browsers and CI/CD pipelines. It checks against WCAG 2.1, Section 508, and ARIA accessibility standards. The library offers over 100 accessibility rules covering common issues like missing alt text, improper heading hierarchy, color contrast failures, and keyboard navigation problems.
 
@@ -28,7 +25,7 @@ Axe operates in three modes: browser extensions for manual audits, JavaScript li
 
 Understanding axe's violation severity levels is critical for prioritization. Critical violations block screen reader users entirely, examples include interactive elements with no accessible name, or form fields with no associated labels. Serious violations make tasks significantly harder but not impossible. Moderate and minor violations create friction and should be resolved but rarely block work entirely. A practical strategy is to set your CI/CD pipeline to fail on critical and serious, track moderate in your backlog, and fix minor violations as you touch related code.
 
-Setting Up Your Testing Environment
+## Setting Up Your Testing Environment
 
 First, install the required dependencies in your project:
 
@@ -95,7 +92,7 @@ async function auditPage(url) {
 
 The Playwright integration is preferred over raw Puppeteer because Playwright handles authentication flows, dynamic content rendering, and multi-page navigation more reliably. When testing applications that require login, you can authenticate first, then run the audit on protected pages.
 
-Using Claude Code Skills for Accessibility
+## Using Claude Code Skills for Accessibility
 
 The `/frontend-design` skill helps generate accessible components from the start. When starting a new component, prompt Claude with explicit accessibility requirements:
 
@@ -141,7 +138,7 @@ const results = await new AxeBuilder({ page })
 
 Document every exclusion with a comment explaining why it exists. Claude is good at generating these explanatory comments when you provide the business context.
 
-Practical Workflow for Automated Audits
+## Practical Workflow for Automated Audits
 
 Integrate axe testing into your Claude Code workflow using these steps:
 
@@ -234,9 +231,9 @@ console.log('No blocking violations. Moderate/minor tracked separately.');
 "
 ```
 
-Common Axe Violations and Fixes
+## Common Axe Violations and Fixes
 
-Color Contrast Failures
+## Color Contrast Failures
 
 Axe frequently flags contrast ratio issues. Use Claude to suggest fixes:
 
@@ -265,7 +262,7 @@ When working with design systems, contrast failures often originate in color tok
 
 Catching a failing token at the design system level is significantly more efficient than fixing it in dozens of individual components.
 
-Missing ARIA Attributes
+## Missing ARIA Attributes
 
 Dynamic content requires proper ARIA handling:
 
@@ -299,7 +296,7 @@ The `aria-expanded` pattern applies to any disclosure widget: accordions, dropdo
 
 The `aria-controls` attribute links the button to the element it controls, which helps screen reader users understand the relationship even without visual context.
 
-Focus Management Issues
+## Focus Management Issues
 
 Ensure proper focus handling for modal dialogs:
 
@@ -346,7 +343,7 @@ function closeModal(modalElement) {
 
 Without this, keyboard users lose their place in the page after dismissing a modal, they land at the top of the document and must tab through everything again to return to where they were.
 
-Landmark Region Violations
+## Landmark Region Violations
 
 Axe also checks for missing landmark regions. Pages without proper landmarks force screen reader users to navigate linearly through every element to find content. A complete landmark structure looks like:
 
@@ -364,7 +361,7 @@ Axe also checks for missing landmark regions. Pages without proper landmarks for
 
 If your page has multiple navigation elements (main nav plus breadcrumbs, for example), each needs a unique `aria-label` to distinguish them. Axe flags duplicate landmark roles without distinguishing labels as a violation.
 
-Comparing Axe Against Other Testing Tools
+## Comparing Axe Against Other Testing Tools
 
 Axe is not the only automated accessibility testing tool, and understanding its strengths and limitations helps you build a complete testing strategy.
 
@@ -378,7 +375,7 @@ Axe is not the only automated accessibility testing tool, and understanding its 
 
 Automated tools collectively catch about 30-40% of WCAG violations. The remaining violations require manual testing: checking tab order makes logical sense, verifying that screen reader announcements are meaningful, testing with real assistive technologies like NVDA, JAWS, or VoiceOver. Use axe as your automated baseline, then layer manual testing on top for complete coverage.
 
-Best Practices for Sustainable Accessibility
+## Best Practices for Sustainable Accessibility
 
 1. Run tests locally before commits: Catch issues early in development
 2. Use axe-core in component tests: Test accessibility at the unit level
@@ -389,7 +386,7 @@ Best Practices for Sustainable Accessibility
 7. Establish a baseline early: Running axe on a new project before writing any code gives you a clean baseline to maintain; retrofitting accessibility on legacy code is significantly harder
 8. Keep axe-core updated: New rules are added regularly; updating the library can surface violations in previously clean code, which is worth catching early
 
-Conclusion
+## Conclusion
 
 Integrating axe accessibility testing with Claude Code transforms accessibility from a periodic audit into a continuous process. By using skills like `/frontend-design` for accessible component generation and `/tdd` for automated test creation, you build accessibility into your development DNA rather than treating it as an afterthought.
 

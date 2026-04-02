@@ -16,13 +16,13 @@ permalink: /how-to-make-claude-code-handle-edge-cases-properly/
 
 Edge cases are the silent killers of production software. A null pointer, an empty array, an unexpected API response. these seemingly minor scenarios cause more production incidents than any feature bug. Claude Code can generate reliable code that handles edge cases, but you need to guide it explicitly. This guide shows you how.
 
-Why Edge Cases Slip Through
+## Why Edge Cases Slip Through
 
 When you ask Claude Code to write a function, it typically generates the "happy path". the code that executes when everything works as expected. The function processes valid input, returns expected output, and everything flows smoothly. What it often misses are the boundary conditions: empty inputs, null values, extreme values, race conditions, and unexpected state combinations.
 
 This happens because most prompts focus on what should happen, not what could go wrong. You need to change your approach.
 
-Prompt Engineering for Edge Case Coverage
+## Prompt Engineering for Edge Case Coverage
 
 The most effective way to get Claude Code to handle edge cases is through explicit prompt engineering. Your prompts must enumerate the conditions you expect the code to handle.
 
@@ -44,7 +44,7 @@ Write a function that calculates the average of an array of numbers. Handle thes
 
 This second prompt gives Claude Code clear boundaries to handle. The more specific you are about edge cases, the more likely the generated code addresses them.
 
-Use the TDD Skill for Edge Case Test Coverage
+## Use the TDD Skill for Edge Case Test Coverage
 
 The tdd skill excels at generating comprehensive test coverage, which naturally surfaces edge cases. When you invoke the tdd skill, direct it explicitly toward boundary conditions:
 
@@ -62,7 +62,7 @@ For example, when generating tests for a file processing function, specify:
 - Corrupted file formats
 - Files with unusual extensions but valid content
 
-Configure Edge Case Handling in Skills
+## Configure Edge Case Handling in Skills
 
 Several Claude skills have configuration options specifically for edge case handling. The code-review skill, when properly configured, will flag missing null checks, unhandled return values, and missing error conditions:
 
@@ -82,7 +82,7 @@ When starting new code generation, ask supermemory to retrieve relevant past edg
 /supermemory recall edge cases from similar payment processing implementations
 ```
 
-Pattern-Based Edge Case Handling
+## Pattern-Based Edge Case Handling
 
 Teach Claude Code to recognize common edge case patterns by specifying them in your prompts. These patterns apply across many scenarios:
 
@@ -117,7 +117,7 @@ For collection processing, handle:
 
 ```
 
-Real-World Example: API Response Handling
+## Real-World Example: API Response Handling
 
 Consider an API client that fetches user data. A naive implementation might look like:
 
@@ -147,7 +147,7 @@ Write an API client function to fetch user profiles that handles:
 
 The generated code will include proper error handling, validation, and defensive programming throughout.
 
-The Frontend Design Skill and Edge Cases
+## The Frontend Design Skill and Edge Cases
 
 For frontend work, the frontend-design skill can generate components with built-in edge case handling. Specify edge case requirements in your component definitions:
 
@@ -165,7 +165,7 @@ Generate a data table component that handles:
 
 The frontend-design skill understands common UI edge cases and will generate appropriate loading skeletons, empty states, and error boundaries.
 
-Document Edge Cases in Your Codebase
+## Document Edge Cases in Your Codebase
 
 Use comments and documentation to teach Claude Code about your specific project's edge cases. The pdf skill can help you generate documentation from your edge case specs:
 
@@ -179,7 +179,7 @@ Store this documentation in your project and reference it in prompts:
 Following the edge case spec in ./docs/edge-cases.md, implement the new checkout flow
 ```
 
-Validation and Sanitization Layer
+## Validation and Sanitization Layer
 
 Always include explicit validation and sanitization in your prompts. Claude Code generates more reliable code when you specify validation requirements:
 
@@ -191,7 +191,6 @@ Implement input validation for a registration form:
 - Phone: format validation for international numbers
 - All inputs: SQL injection prevention, XSS prevention, maximum length enforcement
 ```
-
 
 Related Reading
 

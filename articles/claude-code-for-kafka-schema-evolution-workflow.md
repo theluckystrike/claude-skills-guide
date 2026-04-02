@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Kafka Schema Evolution Workflow
-
 Managing schema evolution is one of the most challenging aspects of building event-driven systems with Apache Kafka. As your services evolve, your schemas must change, but without proper governance, those changes can break consumers, cause data corruption, or bring production systems to a halt. Claude Code offers a powerful workflow for automating schema management, validating compatibility, and maintaining documentation throughout your Kafka schema lifecycle.
 
 This guide shows you how to use Claude Code to build a solid Kafka schema evolution workflow that prevents breaking changes before they reach production.
 
-Understanding Schema Evolution Challenges
+## Understanding Schema Evolution Challenges
 
 Kafka schemas typically use Apache Avro or Protocol Buffers (Protobuf) for serialization. These formats provide backward and forward compatibility when used correctly, but teams often struggle with:
 
@@ -31,7 +28,7 @@ Kafka schemas typically use Apache Avro or Protocol Buffers (Protobuf) for seria
 
 Claude Code can help automate all of these concerns through a skill-based workflow that integrates with your existing schema registry.
 
-Setting Up Your Schema Evolution Skill
+## Setting Up Your Schema Evolution Skill
 
 Create a dedicated Claude skill for schema management. First, establish the skill file structure:
 
@@ -56,7 +53,7 @@ Available Commands
 - "validate all schemas" - Runs compatibility checks across all subjects
 ```
 
-Validating Schema Compatibility
+## Validating Schema Compatibility
 
 One of the most valuable Claude Code workflows is automatic compatibility checking. Create a validation script that interfaces with your schema registry:
 
@@ -86,7 +83,7 @@ claude "Check if the new user-profile-v3.avsc is compatible with the current use
 
 Claude will execute the validation, parse the compatibility response, and explain whether the schema change is safe to deploy or what breaking changes need to be addressed.
 
-Automating Schema Documentation
+## Automating Schema Documentation
 
 Schema changes often lack proper documentation, leaving downstream consumers unaware of modifications. Use Claude Code to generate comprehensive migration guides automatically:
 
@@ -123,7 +120,7 @@ Consumer Actions Required
 None for v2 consumers. v3 consumers must handle missing `account_tier` field.
 ```
 
-Managing Multi-Service Schema Dependencies
+## Managing Multi-Service Schema Dependencies
 
 Large Kafka deployments often have schemas that reference other schemas. Claude Code can track these dependencies and warn you when changes might cascade:
 
@@ -155,7 +152,7 @@ claude "Analyze how changes to the common-enums.avsc would affect other schemas 
 
 Claude will build a dependency graph and identify all schemas that would be impacted by changes to the referenced schema.
 
-Best Practices for Schema Evolution Workflow
+## Best Practices for Schema Evolution Workflow
 
 Implement these practices to maintain schema health:
 
@@ -210,7 +207,7 @@ Schema Changelog
 - Deprecated: old_field
 ```
 
-Integrating with CI/CD Pipelines
+## Integrating with CI/CD Pipelines
 
 For production workflows, integrate schema validation into your CI pipeline:
 
@@ -233,7 +230,7 @@ jobs:
 
 This ensures that any schema changes proposed in pull requests are automatically validated before merging.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Kafka schema evolution from a manual, error-prone process into an automated, governed workflow. By using Claude's ability to execute scripts, analyze files, and generate documentation, you can catch compatibility issues early, maintain clear schema histories, and ensure your event-driven architecture remains resilient as it scales.
 

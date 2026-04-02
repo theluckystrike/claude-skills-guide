@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "How to Pass State Between AI Agents: A Practical Guide"
 description: "Master the techniques for passing state between AI agents with Claude Code. Learn practical patterns for multi-agent workflows, context sharing, and."
@@ -14,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 How to Pass State Between AI Agents: A Practical Guide
 
@@ -22,7 +20,7 @@ As AI agent systems grow more sophisticated, the need for multiple agents to col
 
 This guide covers framework-agnostic patterns for state sharing between AI agents. applicable to Claude, OpenAI, LangChain, CrewAI, and custom agent systems. The techniques here work regardless of which AI provider or orchestration library you use. If you are specifically working with Claude Code subagents, see the companion guide [Passing Context Between Claude Code Subagents](/passing-context-between-claude-code-subagents-guide/) for Claude-specific invocation patterns and skill integration.
 
-Understanding State in Multi-Agent Systems
+## Understanding State in Multi-Agent Systems
 
 When multiple AI agents work together, each agent typically maintains its own context. conversation history, learned preferences, and working memory. The challenge lies in effectively sharing relevant state information between agents without losing fidelity or creating conflicts. This problem appears across all multi-agent frameworks, from LangGraph and CrewAI to AutoGen and Claude Code.
 
@@ -35,7 +33,7 @@ State in multi-agent systems generally falls into several categories:
 
 The patterns below apply to any agent runtime. Where a pattern has a Claude Code-specific flavor, that is noted explicitly.
 
-Techniques for Passing State Between Agents
+## Techniques for Passing State Between Agents
 
 1. File-Based State Sharing
 
@@ -148,7 +146,7 @@ WHERE workflow_id = 'workflow-123'
 AND state_type = 'context';
 ```
 
-Best Practices for State Passing
+## Best Practices for State Passing
 
 When implementing state passing between AI agents, consider these practical guidelines:
 
@@ -172,7 +170,7 @@ Only pass necessary information. Large state objects increase memory usage and p
 
 In concurrent scenarios, implement conflict resolution strategies. Last-write-wins, merge strategies, or explicit resolution protocols help maintain data integrity.
 
-Claude Code Integration Patterns
+## Claude Code Integration Patterns
 
 Claude Code excels at multi-agent workflows through its tool use capabilities. Here's a practical pattern for coordinating agents:
 
@@ -211,7 +209,7 @@ async function coordinateAgents(agents, initialState) {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Passing state between AI agents is a fundamental capability for building sophisticated multi-agent systems. The patterns covered here. file-based sharing, structured JSON context, environment variables, and database-backed state. apply broadly across agent frameworks and are not tied to any single provider.
 

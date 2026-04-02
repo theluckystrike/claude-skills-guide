@@ -19,7 +19,7 @@ Incident communication is one of the most critical yet often overlooked aspects 
 
 This guide explores practical strategies for using Claude Code to improve incident response communication, reduce cognitive load during crises, and maintain clear audit trails of what happened and when.
 
-Understanding Incident Communication Challenges
+## Understanding Incident Communication Challenges
 
 Before diving into solutions, let's identify the common problems in incident communication:
 
@@ -31,7 +31,7 @@ Before diving into solutions, let's identify the common problems in incident com
 
 Claude Code can help address each of these challenges through intelligent automation and structured workflows.
 
-Setting Up Claude Code for Incident Workflows
+## Setting Up Claude Code for Incident Workflows
 
 The first step is creating a dedicated Claude Code project for incident management. This provides a centralized context for all incident-related interactions.
 
@@ -64,11 +64,11 @@ Configure your Claude Code with incident-specific instructions:
 
 This setup ensures Claude Code always has context about your team's communication channels and escalation paths.
 
-Automating Incident Status Updates
+## Automating Incident Status Updates
 
 One of the most valuable applications of Claude Code is generating consistent, comprehensive status updates. During an incident, you can use Claude to draft updates while you focus on fixing the problem.
 
-Creating a Status Update Workflow
+## Creating a Status Update Workflow
 
 ```bash
 When you need to generate a status update
@@ -99,7 +99,7 @@ Incident Timeline: 2026-03-15
 - ETA: 10 minutes to complete migration
 ```
 
-Building Incident Response Templates
+## Building Incident Response Templates
 
 Create reusable templates for consistent communication. Store these in your project directory:
 
@@ -133,7 +133,7 @@ Use the context from ./current-incident.md and format for
 stakeholder distribution."
 ```
 
-Integrating with Communication Platforms
+## Integrating with Communication Platforms
 
 Claude Code can integrate with your existing communication tools through scripts and APIs. Here's an example of posting updates to Slack:
 
@@ -173,7 +173,7 @@ claude "Generate the status update, then execute:
 python3 ~/scripts/incident-notify.py '{{update}}' #incidents"
 ```
 
-Post-Incident Documentation
+## Post-Incident Documentation
 
 After resolving an incident, thorough documentation is crucial for learning and improvement. Claude Code can help generate comprehensive post-mortems:
 
@@ -222,7 +222,7 @@ What Could Improve
 {IMPROVEMENTS}
 ```
 
-Best Practices for Incident Communication
+## Best Practices for Incident Communication
 
 1. Establish Clear Ownership
 
@@ -276,7 +276,7 @@ claude "Show me the current incident configuration and
 templates. Verify all paths exist."
 ```
 
-Measuring Improvement
+## Measuring Improvement
 
 Track these metrics to gauge communication effectiveness:
 
@@ -285,14 +285,13 @@ Track these metrics to gauge communication effectiveness:
 - Stakeholder satisfaction: Do stakeholders feel adequately informed?
 - Post-mortem completeness: Are post-mortems thorough and actionable?
 
-Conclusion
+## Conclusion
 
 Claude Code transforms incident communication from a manual, error-prone process into a structured, automated workflow. By investing time in setting up templates, configuring integrations, and establishing patterns, your team can maintain clear communication even during high-stress situations.
 
 The key is to let Claude Code handle the mechanical aspects of communication, formatting, distribution, documentation, so your responders can focus on what matters most: resolving the incident quickly and safely.
 
 Start small: create one template, test one integration, and gradually expand your incident communication capabilities. Your future self (and your on-call team) will thank you.
-
 
 Related Reading
 

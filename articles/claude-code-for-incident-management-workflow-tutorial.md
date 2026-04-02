@@ -17,7 +17,7 @@ Claude Code for Incident Management Workflow Tutorial
 
 Incident management is one of the most valuable areas to automate with Claude Code skills. Whether you're handling service outages, security breaches, or production issues, well-designed Claude skills can reduce response times, ensure consistent processes, and free your team from repetitive triage work. This tutorial walks you through building a complete incident management workflow using Claude skills.
 
-Understanding Incident Management in Claude Code
+## Understanding Incident Management in Claude Code
 
 Before diving into code, let's establish what an incident management workflow needs to accomplish. Traditional incident response follows a structured lifecycle: detection, triage, mitigation, resolution, and post-incident review. Each stage generates specific artifacts, status updates, escalation notifications, runbook links, and RCA documents.
 
@@ -30,7 +30,7 @@ Claude skills excel at this because they can:
 
 The key is designing skills that handle one responsibility well, then composing them together for complex workflows.
 
-Building Your First Incident Triage Skill
+## Building Your First Incident Triage Skill
 
 Every incident workflow starts with triage, quickly understanding what happened and how serious it is. Let's create a skill that accepts an alert and produces a structured incident assessment.
 
@@ -84,7 +84,7 @@ Produce your assessment in this structure:
 
 This skill uses front matter variables (`{{alert_summary}}`, etc.) to receive dynamic input. When you call this skill from another automation, you pass values for these variables.
 
-Creating an On-Call Escalation Handler
+## Creating an On-Call Escalation Handler
 
 Once triage identifies an incident, you need to notify the right people. The escalation skill handles this by determining who to contact based on severity, time of day, and incident type.
 
@@ -144,7 +144,7 @@ Output
 Confirm the escalation was sent and list all notified parties.
 ```
 
-Building a Post-Incident Review Automator
+## Building a Post-Incident Review Automator
 
 After an incident is resolved, teams need to conduct post-incident reviews (PIRs) or root cause analyses (RCAs). This skill automates gathering the necessary data and generating a template.
 
@@ -221,7 +221,7 @@ Output
 Write the complete PIR to `/incident-reviews/{{incident_id}}-pir.md` and confirm the file was created.
 ```
 
-Composing Skills into a Complete Workflow
+## Composing Skills into a Complete Workflow
 
 The real power of Claude skills comes from composing multiple skills together. You can create a master skill that orchestrates the entire incident lifecycle:
 
@@ -278,7 +278,7 @@ Output
 Provide a summary of actions taken at each stage and confirm all documentation is complete.
 ```
 
-Best Practices for Incident Management Skills
+## Best Practices for Incident Management Skills
 
 When building your own incident management skills, keep these principles in mind:
 
@@ -292,14 +292,13 @@ Include human judgment points. Automated workflows should flag decisions that ne
 
 Test with simulation. Before deploying, simulate incidents and verify your skills respond correctly. Run tabletop exercises where Claude handles the incident.
 
-Conclusion
+## Conclusion
 
 Claude skills transform incident management from reactive firefighting into structured, reproducible processes. By building skills for triage, escalation, resolution guidance, and post-incident reviews, you create a system that scales with your organization while maintaining consistency.
 
 Start with the triage skill, add escalation handling, then layer in resolution guidance. Before long, you'll have a complete incident management system that reduces response times and improves outcomes.
 
 The key is treating skills as composable building blocks, each one focused, well-tested, and designed to work with others. Your incident management workflow will only be as strong as its weakest skill, so invest time in making each one solid.
-
 
 Related Reading
 

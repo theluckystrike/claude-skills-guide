@@ -18,7 +18,7 @@ permalink: /build-personal-ai-assistant-with-claude-skills-guide/
 
 This guide walks through [building a personal AI assistant](/best-claude-code-skills-to-install-first-2026/) tailored to a developer's daily workflow. You will set up persistent memory, create custom skills for your most common tasks, and wire them into a system that feels genuinely assistive rather than just reactive.
 
-What Makes Claude Skills Different from Plain Prompting
+## What Makes Claude Skills Different from Plain Prompting
 
 Before building, understand what skills actually are. [Claude skills are Markdown files stored in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` inside a Claude Code session, Claude reads that file as part of its context and follows the instructions inside it.
 
@@ -30,7 +30,7 @@ This means skills are:
 
 [The `supermemory` skill extends this further by storing structured information](/claude-supermemory-skill-persistent-context-explained/) about you, your projects, and your preferences. The `tdd` skill gives you test-driven development guidance on demand. The `pdf` skill handles document generation. The `frontend-design` skill accelerates UI work. These are your building blocks.
 
-Step 1: Set Up Your Personal Memory Layer
+## Step 1: Set Up Your Personal Memory Layer
 
 The foundation of any personal assistant is memory. Without it, every session starts from zero and you repeat context constantly. The `supermemory` skill solves this.
 
@@ -64,7 +64,7 @@ Add to my active projects:
 - Deployment: npm package, published to registry
 ```
 
-Step 2: Create a Morning Briefing Skill
+## Step 2: Create a Morning Briefing Skill
 
 A personal assistant should give you an orientation each morning. what is outstanding, what is scheduled, what needs attention. Create a skill for this.
 
@@ -97,7 +97,7 @@ Here is my git log: [paste output]
 Today I have a 10am design review and need to ship the recurring invoice feature by Friday.
 ```
 
-Step 3: Create a Code Review Skill
+## Step 3: Create a Code Review Skill
 
 Code review is one of the most impactful tasks you can partially automate. Build a personal review skill tuned to your standards:
 
@@ -131,7 +131,7 @@ Review this diff before I commit:
 [paste git diff output]
 ```
 
-Step 4: Build a Daily Task Automation Skill
+## Step 4: Build a Daily Task Automation Skill
 
 For recurring tasks. writing commit messages, generating changelogs, summarizing PRs. create dedicated skills so you never have to re-explain context.
 
@@ -179,7 +179,7 @@ Base the entry on the commit messages provided. Keep each line under 100 charact
 Write for a technical audience. Skip internal refactors unless they affect behavior.
 ```
 
-Step 5: Wire Skills with Supermemory for Long-Term Context
+## Step 5: Wire Skills with Supermemory for Long-Term Context
 
 The real power comes from combining skills with persistent memory. When starting any new coding session:
 
@@ -208,7 +208,7 @@ Retrieve it months later when you forget why you made that choice:
 What was my rationale for using SQLite in invoice-cli?
 ```
 
-Step 6: Store Your Skill Library in Dotfiles
+## Step 6: Store Your Skill Library in Dotfiles
 
 Skills are just text files. Back them up and version-control them with your dotfiles:
 
@@ -225,7 +225,7 @@ git push
 
 When you set up a new machine, restoring your entire personal assistant takes one `git clone` and one symlink.
 
-Building the Habit
+## Building the Habit
 
 A personal assistant is only as useful as how consistently you use it. Suggested daily routine:
 

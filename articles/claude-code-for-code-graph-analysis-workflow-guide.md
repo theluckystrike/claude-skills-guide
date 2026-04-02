@@ -13,18 +13,15 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Code Graph Analysis Workflow Guide
-
 Code graph analysis is one of the most powerful ways to understand unfamiliar codebases, identify architectural patterns, and make informed refactoring decisions. When combined with Claude Code's skill system and MCP (Model Context Protocol) tools, you can build automated workflows that map dependencies, visualize relationships, and surface insights that would take hours to discover manually. This guide walks you through creating an effective code graph analysis workflow using Claude Code.
 
-Understanding Code Graphs and Why They Matter
+## Understanding Code Graphs and Why They Matter
 
 A code graph represents your codebase as a network of interconnected nodes, files, functions, classes, and modules, with edges defining their relationships. These relationships include imports, function calls, inheritance hierarchies, and data flow. By analyzing this graph, you can answer critical questions like: "What modules depend on this service?", "Where does this function get called?", or "What's the overall architecture of this system?"
 
 Traditional grep-based searches only go so far. Code graph analysis reveals the structural reality of your codebase, making it invaluable for large-scale refactoring, security audits, and onboarding new team members.
 
-Setting Up Your Code Graph Analysis Environment
+## Setting Up Your Code Graph Analysis Environment
 
 Before building analysis workflows, ensure you have the right tools installed. Claude Code works with several MCP servers designed for code analysis:
 
@@ -52,9 +49,9 @@ You are a code graph analysis expert. When analyzing code:
 5. Present findings with clear visualizations
 ```
 
-Building the Analysis Workflow
+## Building the Analysis Workflow
 
-Step 1: Project Discovery
+## Step 1: Project Discovery
 
 Start by understanding the project's structure and technology:
 
@@ -66,7 +63,7 @@ find . -name "package.json" -o -name "pyproject.toml" -o -name "Cargo.toml" | he
 
 The first phase of any code graph analysis is identifying what you're working with. Look for configuration files that reveal the tech stack, `package.json` for Node.js, `pyproject.toml` or `requirements.txt` for Python, `Cargo.toml` for Rust. Also check for framework-specific files like `next.config.js` or `angular.json` that indicate the application framework.
 
-Step 2: Mapping Module Dependencies
+## Step 2: Mapping Module Dependencies
 
 Once you know the project type, map how modules depend on each other:
 
@@ -96,7 +93,7 @@ def extract_imports(filepath):
     return imports
 ```
 
-Step 3: Identifying Entry Points
+## Step 3: Identifying Entry Points
 
 Every application has entry points, files that kick off execution. For web applications, these are typically server files or route handlers. For libraries, they're the main export files. Identifying entry points helps you trace the call graph from user-facing code backward to understand dependencies.
 
@@ -106,7 +103,7 @@ Common entry points include:
 - `main.rs` or `lib.rs` for Rust
 - Route files in frameworks like `routes.ts` or `views.py`
 
-Step 4: Detecting Circular Dependencies
+## Step 4: Detecting Circular Dependencies
 
 Circular dependencies are one of the most damaging patterns in large codebases. They cause cryptic import errors, make testing difficult, and create tight coupling that prevents independent deployment. Use this approach to detect them:
 
@@ -145,7 +142,7 @@ function findCycles(graph) {
 }
 ```
 
-Automating Analysis with Claude Skills
+## Automating Analysis with Claude Skills
 
 The real power of Claude Code comes from automating these workflows. Create a skill that combines multiple analysis steps:
 
@@ -168,7 +165,7 @@ Run a complete code graph analysis:
 
 This skill can then be invoked with natural language like "Analyze the code graph for this project and find any circular dependencies."
 
-Actionable Advice for Effective Analysis
+## Actionable Advice for Effective Analysis
 
 Start Small, Scale Up: Begin analyzing individual modules before attempting full codebase analysis. This helps you validate your approach and understand the nuances of your specific codebase.
 
@@ -180,7 +177,7 @@ Visualize Results: Use tools like Graphviz or Mermaid to generate visual represe
 
 Track Changes Over Time: Store analysis results and compare them across versions. This helps measure the impact of refactoring efforts and identify growing complexity.
 
-Conclusion
+## Conclusion
 
 Code graph analysis with Claude Code transforms how you understand and work with codebases. By using skills and MCP tools, you can automate the discovery of dependencies, detect problematic patterns, and maintain architectural health as your project grows. Start with the workflows outlined here, customize them to your tech stack, and make code graph analysis a regular part of your development practice.
 

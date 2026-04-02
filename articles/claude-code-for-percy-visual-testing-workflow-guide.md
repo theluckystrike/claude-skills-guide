@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Percy Visual Testing Workflow Guide
 
@@ -21,7 +20,7 @@ Visual testing is a critical component of modern web development. While unit tes
 
 This guide walks you through setting up and optimizing a Claude Code-driven Percy visual testing workflow that fits smoothly into your development process.
 
-Understanding Percy and Visual Testing Fundamentals
+## Understanding Percy and Visual Testing Fundamentals
 
 Percy is a visual testing and review platform that captures screenshots of your application at various states and compares them against baseline images to detect visual changes. These changes, called visual diffs, help teams identify unintended UI modifications caused by code changes.
 
@@ -34,7 +33,7 @@ The typical Percy workflow involves:
 
 Integrating Claude Code into this workflow adds intelligent automation, you can instruct Claude to manage test execution, analyze results, and even make decisions about visual changes based on your preferences.
 
-Setting Up Percy with Your Project
+## Setting Up Percy with Your Project
 
 Before integrating with Claude Code, ensure Percy is properly configured in your project. Most JavaScript projects use the `@percy/cli` and `@percy/ember` (or similar framework-specific package) packages.
 
@@ -71,7 +70,7 @@ module.exports = {
 };
 ```
 
-Creating a Claude Skill for Percy Workflows
+## Creating a Claude Skill for Percy Workflows
 
 Now you'll create a Claude Skill that understands Percy's concepts and can execute visual testing workflows. This skill will encapsulate best practices for running Percy tests and interpreting results.
 
@@ -116,11 +115,11 @@ Common Percy Commands
 - `percy token` - Manage API tokens
 ```
 
-Automating Visual Testing Workflows
+## Automating Visual Testing Workflows
 
 One of Claude Code's strengths is its ability to automate complex sequences. Here's how to create a comprehensive visual testing workflow:
 
-Running Tests Across Multiple Viewports
+## Running Tests Across Multiple Viewports
 
 Modern applications must work across device sizes. Configure Percy to capture snapshots at multiple widths:
 
@@ -140,7 +139,7 @@ const percyConfig = {
 module.exports = percyConfig;
 ```
 
-Integrating with CI Pipelines
+## Integrating with CI Pipelines
 
 Automate Percy tests within your continuous integration pipeline. Here's a GitHub Actions example:
 
@@ -163,7 +162,7 @@ jobs:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 ```
 
-Best Practices for Visual Testing with Claude
+## Best Practices for Visual Testing with Claude
 
 1. Establish Clear Baseline Policies
 
@@ -210,7 +209,7 @@ curl -s "https://percy.io/api/v1/builds/${PERCY_BUILD_ID}" \
   -H "Authorization: Token token=${PERCY_TOKEN}" | jq '.data.attributes'
 ```
 
-Handling Visual Regression Workflows
+## Handling Visual Regression Workflows
 
 When Percy detects visual changes, follow this decision framework:
 
@@ -219,7 +218,7 @@ When Percy detects visual changes, follow this decision framework:
 3. False positive? Add Percy CSS rules or adjust snapshot targeting
 4. Unclear impact? Share the build URL with designers for review
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Percy creates a powerful visual testing workflow that combines intelligent automation with comprehensive visual regression detection. By following the setup guidelines, creating dedicated skills, and implementing best practices outlined in this guide, you'll catch visual regressions early and maintain consistent UI quality across your applications.
 

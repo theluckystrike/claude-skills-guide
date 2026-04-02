@@ -29,7 +29,7 @@ Manual runbook testing suffers from several problems that automation can solve:
 
 Claude Code can help you create executable runbook tests that verify procedures work correctly across environments.
 
-Setting Up Your Runbook Testing Framework
+## Setting Up Your Runbook Testing Framework
 
 Before you can test runbooks with Claude Code, you need a proper testing infrastructure. Create a dedicated directory for your runbook tests:
 
@@ -38,7 +38,7 @@ mkdir -p runbook-tests/{scripts,fixtures,reports}
 cd runbook-tests
 ```
 
-Creating a Runbook Test Skill
+## Creating a Runbook Test Skill
 
 The foundation of automated runbook testing is a Claude Code skill that understands your infrastructure. Here's a basic skill structure:
 
@@ -52,7 +52,7 @@ trigger: when I need to test a runbook
 
 Your skill should include functions that can execute runbook steps and verify their outcomes. The key is creating idempotent test commands that can run repeatedly.
 
-Writing Testable Runbooks
+## Writing Testable Runbooks
 
 The first step in runbook testing is authoring runbooks that can actually be tested. Here's a pattern for writing testable runbook steps:
 
@@ -80,7 +80,7 @@ curl -f http://localhost:8080/health || exit 1
 Expected: HTTP 200 response
 ```
 
-Practical Example: Testing a Database Failover Runbook
+## Practical Example: Testing a Database Failover Runbook
 
 Let's walk through testing a real runbook. Assume you have a failover procedure:
 
@@ -128,7 +128,7 @@ Rollback
 If anything fails: `git checkout /etc/myapp/db.conf && systemctl restart myapp`
 ```
 
-Testing This Runbook with Claude Code
+## Testing This Runbook with Claude Code
 
 You can prompt Claude Code to test this runbook systematically:
 
@@ -166,7 +166,7 @@ ALL TESTS PASSED
 Time: 45 seconds
 ```
 
-Advanced: Continuous Runbook Testing
+## Advanced: Continuous Runbook Testing
 
 For enterprise environments, you can integrate runbook testing into your CI/CD pipeline. Create a GitHub Actions workflow:
 
@@ -201,7 +201,7 @@ jobs:
           path: ./runbook-tests/results.json
 ```
 
-Best Practices for Runbook Testing
+## Best Practices for Runbook Testing
 
 Follow these guidelines for effective runbook testing:
 
@@ -252,7 +252,7 @@ Track which runbooks have been tested and when:
 }
 ```
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Be aware of these common mistakes when implementing runbook testing:
 
@@ -261,7 +261,7 @@ Be aware of these common mistakes when implementing runbook testing:
 - Testing in production - Never run experimental tests against production systems
 - Forgetting to update tests - When procedures change, update both the runbook and its tests
 
-Conclusion
+## Conclusion
 
 Automated runbook testing with Claude Code transforms static documentation into executable, verifiable procedures. By following this tutorial, you can reduce operational incidents, improve team confidence in runbooks, and ensure your emergency procedures actually work when you need them.
 

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude MD for Enforcing Architecture Patterns"
 description: "Learn how to use Claude Code with custom skills to enforce architectural patterns consistently across your codebase. Practical examples and."
@@ -14,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude MD for Enforcing Architecture Patterns
-
 Consistent architecture patterns across a codebase prevent technical debt, simplify onboarding, and make refactoring manageable. Yet enforcing these patterns manually through code reviews alone is time-consuming and error-prone. Claude Code, combined with custom skill definitions, offers a powerful solution for automating architectural consistency checks. This guide walks through exactly how to build, deploy, and iterate on architecture enforcement skills that keep your codebase clean as it grows.
 
-The Problem with Manual Pattern Enforcement
+## The Problem with Manual Pattern Enforcement
 
 Development teams often document their architecture decisions in style guides, ADR records, or wiki pages. These documents serve as reference, but they don't actively prevent violations. A developer unfamiliar with the conventions might introduce a service that doesn't follow your layering rules, or create a component that bypasses your dependency injection patterns.
 
@@ -40,7 +36,7 @@ Consider the gap between what ESLint can check and what your architecture actual
 
 This gap is where teams accumulate silent technical debt. Claude MD skills fill it.
 
-How Claude MD Skills Work
+## How Claude MD Skills Work
 
 Claude Code uses a skill system that extends its capabilities through custom definitions. These skills live as markdown files stored in `~/.claude/skills/`, and each file teaches Claude about a specific domain of your project's conventions.
 
@@ -55,7 +51,7 @@ When you invoke a skill using `/skill-name` inside a Claude Code session, Claude
 
 Skills are not magic, they work because Claude is reading detailed instructions at inference time. The quality of your skill definition directly determines the quality of enforcement. Vague rules produce vague feedback; precise rules with examples produce precise corrections.
 
-Creating an Architecture Enforcement Skill
+## Creating an Architecture Enforcement Skill
 
 Let's build a skill that enforces a layered architecture pattern. This example assumes a standard three-layer setup: presentation, business logic, and data access. Save this file to `~/.claude/skills/enforce-layered-architecture.md`:
 
@@ -115,9 +111,9 @@ Or inline within a generation request:
 Create a new OrderService that retrieves order history for a user.
 ```
 
-Practical Examples
+## Practical Examples
 
-Example 1: Validating Dependency Direction
+## Example 1: Validating Dependency Direction
 
 Consider this TypeScript code in a presentation layer controller:
 
@@ -164,7 +160,7 @@ class UserController {
 
 Claude will also explain why this matters: the presentation layer should have no knowledge of how data is stored. If you switch from SQL to a document database, only the data-access layer changes. The controller remains untouched.
 
-Example 2: Enforcing Interface Segregation
+## Example 2: Enforcing Interface Segregation
 
 A skill focused on interface patterns can enforce that all data access goes through interfaces, making each component independently testable:
 
@@ -225,7 +221,7 @@ export class PostgresUserRepository implements IUserRepository {
 
 Now unit tests for `UserService` can inject a mock repository without any database. Swapping Postgres for another database means implementing the interface in a new file, nothing else changes.
 
-Example 3: Cross-Layer Communication with DTOs
+## Example 3: Cross-Layer Communication with DTOs
 
 Your skill can also govern how data moves between layers. Exposing raw database entities to the presentation layer creates invisible coupling that breaks unexpectedly during schema migrations.
 
@@ -260,7 +256,7 @@ export class UserMapper {
 
 The presentation layer never sees `user_id` or `email_address`, it only knows `id` and `email`. If your database schema renames a column, only the mapper changes.
 
-Skill Patterns for Common Architectures
+## Skill Patterns for Common Architectures
 
 Different teams use different architectural styles. Here is a comparison of what each enforcement skill should focus on:
 
@@ -274,7 +270,7 @@ Different teams use different architectural styles. Here is a comparison of what
 
 For each architecture style, the skill structure is the same, you describe the rules, list forbidden patterns, and provide before/after examples. The specifics change, but the approach scales.
 
-Combining Skills for Comprehensive Enforcement
+## Combining Skills for Comprehensive Enforcement
 
 You can create multiple skills that work together. A mature architecture enforcement strategy might include:
 
@@ -295,7 +291,7 @@ Create a new PaymentService with full test coverage.
 
 Claude loads both skill definitions into context and generates code that satisfies both simultaneously: correctly layered structure with tests in the right locations.
 
-Writing Effective Skill Definitions
+## Writing Effective Skill Definitions
 
 The difference between a skill that works and one that produces inconsistent results often comes down to how precisely the rules are written. These practices make skill definitions more effective:
 
@@ -307,7 +303,7 @@ State what to do, not just what not to do. "Never import repositories from contr
 
 Version your skill definitions. Store skills in your project repository under a `/.claude/skills/` directory rather than only in `~/.claude/skills/`. This lets you track how your architectural rules evolve over time alongside the code they govern.
 
-Implementing Skills in Your Workflow
+## Implementing Skills in Your Workflow
 
 Start by documenting your existing patterns clearly. The skill format works best when you can express rules precisely. Begin with one architectural concern, create the skill, and test it against a few known violations in your codebase. If Claude catches all of them and explains them correctly, the skill is ready for daily use.
 
@@ -327,7 +323,7 @@ Here is the diff for PR #142. List every architecture violation and the correcte
 
 This makes code review faster. Reviewers can focus on logic, performance, and business correctness rather than pattern compliance. Claude handles the mechanical enforcement.
 
-Integrating with CI/CD
+## Integrating with CI/CD
 
 For teams that want automated enforcement, Claude skills can be part of a CI pipeline. A simple approach uses Claude Code's non-interactive mode with a review prompt against every pull request diff:
 
@@ -341,7 +337,7 @@ claude --skill enforce-layered-architecture \
 
 This runs Claude as a review step before merging. Combined with the skill definition checked into your repository, every developer gets the same enforcement criteria applied consistently.
 
-Measuring Effectiveness
+## Measuring Effectiveness
 
 Track pattern violations over time by running Claude's review capabilities on pull requests. You should see violations decrease as developers internalize the patterns. Useful metrics to track:
 
@@ -352,12 +348,11 @@ Track pattern violations over time by running Claude's review capabilities on pu
 
 The skills also serve as excellent onboarding material, new team members can read the skill definitions to understand exactly what architectural expectations exist, then validate their understanding by having Claude review their first contributions.
 
-Conclusion
+## Conclusion
 
 Claude MD skills transform architectural guidance from passive documentation into active enforcement. By encoding your patterns as skills, you get consistent application across your codebase, faster code reviews, and improved developer experience. The investment is modest, a well-written skill file for a layered architecture takes an hour to write and saves hundreds of hours of review time as the codebase grows.
 
 Start with your most critical patterns, iterate on the skill definitions based on what Claude misses or misinterprets, and watch your architecture remain clean without manual policing. Store the skills in your repository so the rules evolve alongside the code they govern.
-
 
 Related Reading
 

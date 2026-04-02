@@ -14,12 +14,9 @@ score: 7
 ---
 {% raw %}
 
-
-Claude Code Keeps Generating Placeholder TODO Comments
-
 If you've been working with Claude Code, you've probably seen it, those familiar `// TODO: implement error handling` or `// TODO: add validation` comments scattered throughout generated code. While well-intentioned, these placeholder comments can accumulate quickly and become technical debt if not addressed properly.  why Claude Code generates these comments and how you can control this behavior effectively.
 
-Why Claude Code Generates TODO Comments
+## Why Claude Code Generates TODO Comments
 
 Claude Code generates placeholder TODO comments for several reasons related to how Large Language Models approach code generation. Understanding these motivations helps you address the root cause rather than just treating symptoms.
 
@@ -33,7 +30,7 @@ Context Window Boundaries: When working on very large functions or multi-file ge
 
 Scaffolding Ambiguity: Prompts that say "create a module for X" without specifying the full scope often trigger TODO generation because the model is producing a structural scaffold rather than a complete implementation.
 
-Real-World Example: What TODO Pollution Looks Like
+## Real-World Example: What TODO Pollution Looks Like
 
 Here's a realistic example of what Claude Code produces when given a vague prompt for a payment processing function:
 
@@ -63,7 +60,7 @@ class PaymentService {
 
 This looks productive at a glance but is almost entirely unimplemented. In a large codebase, dozens of these functions create a false sense of progress, your IDE's TODO panel fills up, code reviews slow down, and the most important business logic never gets written.
 
-Practical Solutions
+## Practical Solutions
 
 1. Provide Complete Specifications
 
@@ -200,7 +197,7 @@ Do this in sequence:
 
 Each function gets full attention, and there's no pressure to scaffold over gaps.
 
-Finding and Fixing Existing TODO Comments
+## Finding and Fixing Existing TODO Comments
 
 If you already have TODO comments scattered throughout your codebase, you can use Claude Code to find and address them:
 
@@ -232,7 +229,7 @@ Read src/services/payment.ts. For each TODO comment:
 - If the code already handles it implicitly, delete the TODO
 ```
 
-Comparison: Vague vs. Specific Prompts
+## Comparison: Vague vs. Specific Prompts
 
 | Scenario | Vague Prompt Result | Specific Prompt Result |
 |---|---|---|
@@ -244,7 +241,7 @@ Comparison: Vague vs. Specific Prompts
 
 The pattern is consistent: every TODO corresponds to something the model would have implemented if the prompt had specified it.
 
-Configuring Claude Code Behavior
+## Configuring Claude Code Behavior
 
 While there's no global setting to disable TODO comments, you can influence behavior through:
 
@@ -261,7 +258,7 @@ A practical ~/.claude/settings.json addition:
 }
 ```
 
-When TODO Comments Are Acceptable
+## When TODO Comments Are Acceptable
 
 Not all TODO comments are problematic. They're appropriate when:
 
@@ -273,7 +270,7 @@ Not all TODO comments are problematic. They're appropriate when:
 
 The issue arises when TODO becomes a default placeholder instead of a deliberate tracking mechanism. A good test: if you can't write a GitHub issue number next to the TODO within 24 hours of creating it, the comment shouldn't exist.
 
-Spotting the Pattern Before It Embeds
+## Spotting the Pattern Before It Embeds
 
 The fastest way to catch TODO inflation early is to add a pre-commit check:
 
@@ -291,14 +288,13 @@ fi
 
 This is aggressive but effective. If your team prefers a softer approach, use a warning without `exit 1` so it surfaces during review without blocking the commit.
 
-Conclusion
+## Conclusion
 
 Claude Code generating placeholder TODO comments typically indicates a gap between your expectations and the information provided. By improving context, using CLAUDE.md files, and creating custom skills, you can dramatically reduce or eliminate these placeholders. The goal is always production-ready code, and with the right prompting strategies, Claude Code can deliver exactly that.
 
 The most reliable mental model: every TODO Claude Code generates represents a question it didn't know how to answer. Give it better inputs, and it won't need to ask.
 
 Remember: TODO comments should be deliberate tracking tools, not AI-generated placeholders for unimplemented features.
-
 
 Related Reading
 

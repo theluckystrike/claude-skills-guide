@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code Hypothesis Property Testing Guide
 
 Property-based testing transforms how you verify software correctness. Instead of writing dozens of example-based tests, you define properties that should hold true for any input, and let a library generate hundreds of test cases automatically. Hypothesis, Python's premier property-based testing library, does exactly this. Combined with Claude Code's coding assistance, you can build solid test suites that catch bugs you didn't even know existed.
 
-Understanding Property-Based Testing
+## Understanding Property-Based Testing
 
 Traditional example-based testing requires you to manually craft specific inputs:
 
@@ -44,7 +41,7 @@ def test_sort_produces_sorted_result(xs):
 
 This simple test runs against thousands of automatically generated lists, catching edge cases like empty lists, single elements, duplicates, and massive collections that manual testing would never cover.
 
-Property-Based vs Example-Based Testing: When to Use Each
+## Property-Based vs Example-Based Testing: When to Use Each
 
 Both approaches have their place. Knowing when to reach for each one prevents over-engineering while ensuring you get coverage where it matters most.
 
@@ -60,7 +57,7 @@ Both approaches have their place. Knowing when to reach for each one prevents ov
 
 A practical rule: use example-based tests for documented requirements ("given input X, return Y") and property-based tests for algorithmic correctness ("this operation should always preserve these invariants"). In most production Python codebases, a 70/30 split favoring example-based tests works well, with property tests concentrated around data transformation, validation, and serialization code.
 
-Setting Up Hypothesis with Claude Code
+## Setting Up Hypothesis with Claude Code
 
 When starting a new Python project, use the tdd skill to scaffold your testing infrastructure:
 
@@ -82,7 +79,7 @@ What Hypothesis strategies would test a function accepting Dict[str, List[int]]?
 
 Claude will recommend `st.dicts(st.text(), st.lists(st.integers()))` and may generate the complete test scaffold.
 
-Configuring Hypothesis for Your Project
+## Configuring Hypothesis for Your Project
 
 Hypothesis is highly configurable. Create a `conftest.py` at your project root to set project-wide defaults:
 
@@ -126,7 +123,7 @@ HYPOTHESIS_PROFILE=ci pytest tests/
 
 This approach keeps local test runs fast while ensuring your CI pipeline runs a thorough search for failures. Ask Claude Code to generate this configuration when you describe your project's CI setup.
 
-The Hypothesis Database
+## The Hypothesis Database
 
 One of Hypothesis's most powerful features is its failure database. When a failing example is found, Hypothesis saves it so future runs always replay the known failure first:
 
@@ -142,11 +139,11 @@ settings.register_profile(
 
 Commit the `.hypothesis/examples` directory to version control. This way, a failure found on one developer's machine is guaranteed to be tested on every other machine and in every CI run. When a bug is fixed, delete the saved example with `hypothesis database --clear` to stop replaying it.
 
-Writing Effective Property Tests
+## Writing Effective Property Tests
 
 The art of property-based testing lies in identifying genuine properties. Here are patterns that work well:
 
-Reversibility
+## Reversibility
 
 Many operations have inverses. Sorting should be reversible only in specific ways, but encoding and decoding should be perfect inverses:
 
@@ -158,7 +155,7 @@ def test_base64_encode_decode_inverse(data):
     assert decoded == data
 ```
 
-Idempotence
+## Idempotence
 
 Applying an operation multiple times should produce the same result as applying it once:
 
@@ -169,7 +166,7 @@ def test_deduplication_idempotent(items):
     assert result == list(set(result))
 ```
 
-Invariants
+## Invariants
 
 Certain properties should remain true regardless of input. The sum of numbers doesn't depend on their order:
 
@@ -179,7 +176,7 @@ def test_sum_order_independent(numbers):
     assert sum(numbers) == sum(reversed(numbers))
 ```
 
-Commutativity and Associativity
+## Commutativity and Associativity
 
 Mathematical operations that should commute or associate give you powerful invariant properties:
 
@@ -195,7 +192,7 @@ def test_addition_associative(a, b, c):
 
 These seem trivial for built-in addition, but become non-trivial when you write your own `BigDecimal`, `Money`, or `Percentage` classes that wrap numeric types.
 
-Oracle Testing: Comparing Two Implementations
+## Oracle Testing: Comparing Two Implementations
 
 One of the most powerful property testing patterns is comparing a fast, optimized implementation against a slow but obviously correct reference implementation:
 
@@ -219,7 +216,7 @@ def test_optimized_search_matches_naive(needle, haystack):
 
 This oracle pattern lets you confidently refactor or optimize algorithms without maintaining exhaustive example-based test suites. The reference implementation documents intent while the property test enforces correctness.
 
-Metamorphic Properties
+## Metamorphic Properties
 
 Sometimes there is no oracle, but you can reason about how a function should respond to related inputs:
 
@@ -237,7 +234,7 @@ def test_max_with_appended_element(items, element):
     assert result == max(max(items), element)
 ```
 
-Handling Complex Data Structures
+## Handling Complex Data Structures
 
 Hypothesis provides strategies for most Python types, but complex data requires custom strategies. Suppose you're testing a function that processes user profiles:
 
@@ -256,7 +253,7 @@ The `st.builds` strategy constructs objects directly using your existing class, 
 
 For even more complex structures, ask Claude to help design a strategy. The pdf skill can generate documentation for your testing patterns if you need to share them with team members.
 
-Building Composite Strategies
+## Building Composite Strategies
 
 The `@st.composite` decorator lets you build strategies that combine multiple simpler strategies with constraints. This is essential for testing functions that require valid relationships between their inputs:
 
@@ -288,7 +285,7 @@ def test_date_range_duration_always_positive(date_range):
 
 Ask Claude Code to generate composite strategies for your domain types by describing the relationships and constraints that must hold between fields.
 
-Strategies for API Data
+## Strategies for API Data
 
 Testing HTTP API handlers often means generating realistic but random JSON bodies. Hypothesis handles this cleanly:
 
@@ -334,7 +331,7 @@ def test_integer_division_properties(a, b):
 
 Use `assume` sparingly. If Hypothesis has to discard too many generated values, it will raise a `Unsatisfiable` error. When you find yourself writing complex `assume` conditions, a composite strategy is usually a better choice.
 
-Debugging Failing Property Tests
+## Debugging Failing Property Tests
 
 When Hypothesis finds a failing case, it shrinks the example to the minimal reproducible case. This "minimal failing example" appears in your test output:
 
@@ -352,7 +349,7 @@ Why does my sort test fail on [0, 0, 0]? Here's my implementation:
 
 Claude will examine your code, identify the bug, and suggest a fix. This pairing, Hypothesis finding bugs and Claude explaining them, creates a powerful debugging loop.
 
-Reproducing Failures Deterministically
+## Reproducing Failures Deterministically
 
 After Hypothesis shrinks a failing example, it prints a `@reproduce_failure` decorator you can add to your test to always run that exact failing case:
 
@@ -368,7 +365,7 @@ def test_sort_produces_sorted_result(xs):
 
 This is more reliable than copying the output value directly because it uses Hypothesis's internal binary encoding. Use this in combination with a debugger to step through the exact failing execution.
 
-Structuring Your Bug Report to Claude
+## Structuring Your Bug Report to Claude
 
 When sharing a Hypothesis failure with Claude Code, include the full context for the fastest resolution:
 
@@ -393,7 +390,7 @@ Hypothesis version: 6.92.0
 
 This structured format lets Claude immediately skip clarifying questions and jump to diagnosis. In most cases it will identify the root cause and suggest both a fix and an additional example-based regression test to prevent recurrence.
 
-Integrating with Test Suites
+## Integrating with Test Suites
 
 Property tests coexist with traditional tests. Add Hypothesis tests alongside example-based tests in the same file:
 
@@ -414,7 +411,7 @@ def test_sort_properties(xs):
 
 The tdd skill can help you balance both approaches, suggesting when property-based tests add value versus when simple examples suffice.
 
-Organizing Property Tests in a Large Codebase
+## Organizing Property Tests in a Large Codebase
 
 As your property test suite grows, a clear file organization prevents duplication and makes it easier to run subsets of tests:
 
@@ -463,7 +460,7 @@ def valid_order(draw, user=None):
     return Order(user=user, items=items)
 ```
 
-Advanced Hypothesis Features
+## Advanced Hypothesis Features
 
 Once comfortable with basics, explore Hypothesis' advanced capabilities:
 
@@ -493,7 +490,7 @@ class StackMachine(RuleBasedStateMachine):
 
 This tests your stack implementation against thousands of random push-pop sequences, ensuring internal consistency.
 
-Stateful Testing for REST APIs
+## Stateful Testing for REST APIs
 
 Stateful testing is particularly powerful for testing REST APIs where the order of operations matters. Here is a more complete stateful test for a simple task management API:
 
@@ -562,7 +559,7 @@ TestTaskAPI = TaskAPIStateMachine.TestCase
 
 The `@invariant()` decorator runs after every step, continuously asserting that your system's state matches the expected model. This is how Hypothesis finds race conditions, state machine bugs, and inconsistencies that no manually crafted test sequence would ever hit.
 
-Hypothesis and pytest-xdist Parallelism
+## Hypothesis and pytest-xdist Parallelism
 
 Running Hypothesis tests in parallel with pytest-xdist speeds up large suites significantly. However, the failure database can cause conflicts when multiple workers write to it simultaneously. Configure it safely:
 
@@ -586,7 +583,7 @@ def hypothesis_parallel_config(tmp_path_factory):
 
 Ask Claude to generate the full parallel testing configuration once you describe your CI environment and the number of workers you run.
 
-Targeting: Guiding Hypothesis Toward Interesting Inputs
+## Targeting: Guiding Hypothesis Toward Interesting Inputs
 
 The `target` function lets you guide Hypothesis to search for inputs that maximize a metric. This is useful for performance testing or finding worst-case inputs:
 
@@ -608,7 +605,7 @@ def test_sort_performance_does_not_degrade(items):
 
 Hypothesis will try to maximize `elapsed` across its search, effectively performing automated adversarial testing of your algorithm's performance characteristics.
 
-Common Property Testing Mistakes and How to Fix Them
+## Common Property Testing Mistakes and How to Fix Them
 
 Understanding common mistakes helps you write more effective property tests from the start. Claude Code is good at identifying these patterns in code review:
 
@@ -621,7 +618,7 @@ Understanding common mistakes helps you write more effective property tests from
 | Missing `min_size` on required collections | Empty list breaks function precondition | Set `min_size=1` when function requires non-empty input |
 | Testing internal implementation | Asserting on private attribute values | Test observable behavior only |
 
-Getting Started Today
+## Getting Started Today
 
 Property-based testing with Hypothesis catches bugs that example-based testing misses. Combined with Claude Code's assistance, explaining failures, suggesting strategies, and generating test scaffolds, you have a powerful combination for building reliable Python software.
 
@@ -635,12 +632,11 @@ Your tests become more comprehensive with less manual effort. That's the power o
 
 ---
 
-Related Topics
+## Related Topics
 
 - Test-Driven Development with Claude Code
 - Python Testing Best Practices
 - [Claude Skills for Developers](/best-claude-skills-for-developers-2026/)
-
 
 Related Reading
 

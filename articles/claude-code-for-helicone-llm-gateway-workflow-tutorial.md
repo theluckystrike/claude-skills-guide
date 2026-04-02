@@ -27,15 +27,15 @@ Helicone is an open-source LLM gateway that sits between your application and LL
 
 By routing Claude Code's LLM requests through Helicone, you gain these benefits while maintaining full compatibility.
 
-Setting Up Helicone
+## Setting Up Helicone
 
 Before integrating with Claude Code, you need a Helicone instance. You have two options:
 
-Option 1: Helicone Cloud
+## Option 1: Helicone Cloud
 
 Sign up at helicone.ai and get your API key. This is the fastest way to start.
 
-Option 2: Self-Hosted
+## Option 2: Self-Hosted
 
 For full control, deploy Helicone using Docker:
 
@@ -46,11 +46,11 @@ docker run -d -p \
   ghcr.io/helicone/helicone
 ```
 
-Configuring Claude Code for Helicone
+## Configuring Claude Code for Helicone
 
 Claude Code can use Helicone as its API endpoint with a simple configuration. The key is setting the appropriate environment variables and API base URL.
 
-Environment Setup
+## Environment Setup
 
 Create a `.env` file in your project:
 
@@ -64,7 +64,7 @@ export ANTHROPIC_API_BASE="https://gateway.helicone.ai"
 export ANTHROPIC_API_KEY="your_helicone_api_key"
 ```
 
-Using Helicone with Claude Code Skills
+## Using Helicone with Claude Code Skills
 
 When creating Claude Code skills that interact with LLMs, you can configure them to route through Helicone by setting the API base in the skill's environment context.
 
@@ -83,11 +83,11 @@ env:
 You are an assistant that makes LLM calls through Helicone gateway.
 ```
 
-Building Helicone-Aware Workflows
+## Building Helicone-Aware Workflows
 
 Let's create practical workflows that use Helicone's features.
 
-Workflow 1: Cached Summarization
+## Workflow 1: Cached Summarization
 
 This workflow uses Helicone's caching to reduce costs for repeated summarization tasks:
 
@@ -116,7 +116,7 @@ def summarize_with_cache(text: str) -> str:
 
 Helicone automatically caches requests with the same semantic meaning. Subsequent calls with similar text return cached responses instantly.
 
-Workflow 2: Request Transformation
+## Workflow 2: Request Transformation
 
 Use Helicone's request transformation to modify prompts dynamically:
 
@@ -141,7 +141,7 @@ response = client.messages.create(
 
 This lets you track usage by custom dimensions in the Helicone dashboard.
 
-Workflow 3: Fallback with Rate Limiting
+## Workflow 3: Fallback with Rate Limiting
 
 Build resilient workflows that handle rate limits gracefully:
 
@@ -173,9 +173,9 @@ def call_with_retry(prompt: str, max_retries: int = 3) -> str:
 
 Helicone's rate limiting headers help your code respond appropriately to quota constraints.
 
-Advanced Patterns
+## Advanced Patterns
 
-Prompt Caching with System Prompts
+## Prompt Caching with System Prompts
 
 Helicone supports prompt caching to reduce costs on long system prompts:
 
@@ -194,7 +194,7 @@ response = client.messages.create(
 )
 ```
 
-Request Routing by User
+## Request Routing by User
 
 Route different users to different models based on tier:
 
@@ -213,7 +213,7 @@ def get_client_for_user(user_tier: str):
     return client, model
 ```
 
-Monitoring with Helicone Dashboard
+## Monitoring with Helicone Dashboard
 
 Once your Claude Code workflows are running through Helicone, access the dashboard to:
 
@@ -222,7 +222,7 @@ Once your Claude Code workflows are running through Helicone, access the dashboa
 3. Monitor Rate Limits: See when limits are hit and adjust
 4. Set Alerts: Get notified of anomalies or high usage
 
-Best Practices
+## Best Practices
 
 - Enable Caching Early: Set up caching from the start to maximize savings
 - Use Custom Properties: Add metadata to track usage by feature or user
@@ -230,7 +230,7 @@ Best Practices
 - Monitor Cache Rates: Aim for 30%+ cache hit rates for significant savings
 - Set Up Alerts: Get notified of errors or unusual patterns
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Helicone's LLM gateway transforms your AI development workflow. You gain observability into every LLM call, reduce costs through intelligent caching, and build more resilient applications with rate limiting and retry logic.
 

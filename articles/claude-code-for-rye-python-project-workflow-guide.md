@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Rye Python Project Workflow Guide
 
 Rye is a modern Python project management tool created by Armin Ronacher (the creator of Flask and Sphinx). It provides an all-in-one solution for managing virtual environments, dependencies, toolchains, and publishing packages. When combined with Claude Code, you get a powerful AI-assisted development workflow that can automate repetitive tasks, generate code, and help debug issues. This guide shows you how to integrate Claude Code into your Rye-based Python projects for maximum productivity.
 
-Understanding Rye and Claude Code
+## Understanding Rye and Claude Code
 
 Before diving into workflows, let's clarify what each tool brings to your development process.
 
@@ -39,11 +38,11 @@ Claude Code contributes:
 
 Together, they form a comprehensive development environment where Claude Code understands your project's structure (via Rye's configuration) and can take actions using appropriate tools.
 
-Setting Up Your Rye Project with Claude Code
+## Setting Up Your Rye Project with Claude Code
 
 The first step is creating a new Rye project and ensuring Claude Code can work with it effectively.
 
-Creating a New Project
+## Creating a New Project
 
 ```bash
 Install Rye if you haven't already
@@ -64,7 +63,7 @@ When you run `rye init`, it generates several configuration files that Claude Co
 - `.python-version` - Python version specification
 - `.rye/` - Toolchain configuration
 
-Configuring Claude Code for Rye Projects
+## Configuring Claude Code for Rye Projects
 
 Create a CLAUDE.md file in your project root to help Claude understand your Rye setup:
 
@@ -85,9 +84,9 @@ Always use rye commands instead of raw python/pip commands.
 
 This file ensures Claude Code always uses Rye commands for project operations, maintaining consistency across your team.
 
-Daily Development Workflow
+## Daily Development Workflow
 
-Starting a New Feature
+## Starting a New Feature
 
 When beginning new work, Claude Code can help you follow a structured approach:
 
@@ -104,7 +103,7 @@ User: I need to add user authentication to this project. Can you first look at t
 Claude: I'll examine your project structure and current code to understand what we're working with...
 ```
 
-Dependency Management
+## Dependency Management
 
 Rye makes dependency management straightforward, and Claude Code can help you add and manage dependencies intelligently:
 
@@ -125,7 +124,7 @@ When you ask Claude to add a dependency, it will:
 3. Run `rye sync` to update the virtual environment
 4. Verify the installation works
 
-Running and Debugging
+## Running and Debugging
 
 Claude Code excels at debugging. When you encounter errors:
 
@@ -136,11 +135,11 @@ rye run python src/main.py
 
 Share the error output with Claude and ask for debugging help. Claude will analyze the stack trace, examine relevant code, and suggest fixes.
 
-Automated Testing Workflow
+## Automated Testing Workflow
 
 Testing is essential for maintainable code. Here's how to use Claude Code with Rye's testing tools.
 
-Setting Up Tests
+## Setting Up Tests
 
 ```bash
 Add pytest as a dev dependency
@@ -154,7 +153,7 @@ Run tests
 rye test
 ```
 
-Working with Claude on Test-Driven Development
+## Working with Claude on Test-Driven Development
 
 You can ask Claude to implement TDD workflows:
 
@@ -168,7 +167,7 @@ Claude will:
 3. Run `rye test` to verify
 4. Refactor as needed
 
-Test Coverage Analysis
+## Test Coverage Analysis
 
 Ask Claude to analyze your test coverage:
 
@@ -178,9 +177,9 @@ User: What's our current test coverage? Are there any critical functions lacking
 
 Claude will run coverage reports and identify gaps in your test suite.
 
-Code Quality and Maintenance
+## Code Quality and Maintenance
 
-Formatting and Linting
+## Formatting and Linting
 
 Rye includes tool management for formatters and linters:
 
@@ -206,7 +205,7 @@ target-version = "py311"
 line-length = 88
 ```
 
-Automated Code Review
+## Automated Code Review
 
 Use Claude Code for code review:
 
@@ -221,7 +220,7 @@ Claude will examine your code and provide feedback on:
 - Security concerns
 - Missing documentation
 
-Building and Publishing
+## Building and Publishing
 
 When you're ready to release your package:
 
@@ -239,9 +238,9 @@ Claude can help you:
 - Prepare the package for distribution
 - Handle publishing credentials
 
-Advanced Workflows
+## Advanced Workflows
 
-Multi-Python Version Testing
+## Multi-Python Version Testing
 
 Rye supports multiple Python versions. Test your code against different versions:
 
@@ -256,7 +255,7 @@ Run tests with specific version
 rye run --python 3.10 pytest
 ```
 
-Using Claude Skills with Rye
+## Using Claude Skills with Rye
 
 Create custom Claude skills for your Rye workflow. For example, a skill that always runs tests after generating code:
 
@@ -275,7 +274,7 @@ When asked to write code:
 4. Report results and any failures
 ```
 
-Best Practices
+## Best Practices
 
 1. Always use Rye commands - Don't use raw `python` or `pip`. Use `rye run`, `rye add`, etc.
 2. Keep CLAUDE.md updated - Document project-specific context
@@ -283,7 +282,7 @@ Best Practices
 4. Use Claude for refactoring - Don't manually rewrite code when Claude can help
 5. Use locked dependencies - Commit `requirements.lock` for reproducible builds
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Rye gives you the best of both worlds: a powerful Python project management tool and an intelligent AI assistant. By following this workflow guide, you can significantly improve your development productivity, maintain higher code quality, and streamline your entire Python development process.
 

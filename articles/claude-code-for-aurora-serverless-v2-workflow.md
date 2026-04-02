@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Aurora Serverless V2 Workflow"
 description: "A practical guide to using Claude Code skills for Aurora Serverless V2 workflows. Learn how to set up, design, and manage serverless databases with AI."
@@ -14,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Aurora Serverless V2 Workflow
 
 Amazon Aurora Serverless V2 represents a significant evolution in serverless database technology, offering automatic scaling, pay-per-use pricing, and MySQL/PostgreSQL compatibility. However, working effectively with Aurora Serverless V2 requires understanding its unique characteristics, connection management, and scaling behavior. This guide shows you how to use Claude Code skills to streamline your Aurora Serverless V2 workflow, from initial setup through ongoing management.
 
-Understanding Aurora Serverless V2 Characteristics
+## Understanding Aurora Serverless V2 Characteristics
 
 Before diving into the workflow, it's essential to understand what makes Aurora Serverless V2 different from traditional provisioned Aurora instances. Unlike its predecessor, V2 supports multi-AZ scaling, capacity units measured in Aurora Capacity Units (ACUs), and instant scaling without database restarts.
 
@@ -34,7 +32,7 @@ Key characteristics to keep in mind:
 
 Here are how Claude Code skills enhance your workflow.
 
-Setting Up Claude Code for Aurora Development
+## Setting Up Claude Code for Aurora Development
 
 To work effectively with Aurora Serverless V2, you'll need Claude Code with several key skills. The most relevant include the xlsx skill for tracking capacity planning, the docx skill for documentation, and optionally the pdf skill for generating technical documentation.
 
@@ -57,13 +55,13 @@ mkdir -p migrations
 
 Now you're ready to use Claude Code to assist with your Aurora setup.
 
-Designing Your Aurora Schema
+## Designing Your Aurora Schema
 
 Schema design for Aurora Serverless V2 follows similar principles to standard PostgreSQL or MySQL, but with specific considerations for serverless environments. Use Claude to accelerate your schema design while accounting for connection patterns.
 
 When designing your schema, consider these serverless-specific factors:
 
-Connection Pooling Requirements
+## Connection Pooling Requirements
 
 Aurora Serverless V2 has different connection characteristics than provisioned instances. The database can scale rapidly, but each new capacity unit may briefly affect connection availability. Implement connection pooling with PgBouncer or RDS Proxy:
 
@@ -92,7 +90,7 @@ export async function testConnection() {
 export default pool;
 ```
 
-Indexing Strategy for Variable Workloads
+## Indexing Strategy for Variable Workloads
 
 With Aurora Serverless V2's scaling behavior, your indexing strategy directly impacts performance. Over-indexing increases write latency during scaling events, while under-indexing hurts query performance. Use Claude to analyze your query patterns:
 
@@ -108,11 +106,11 @@ write overhead during rapid scaling events. Focus on:
 - Exclusion constraints if applicable
 ```
 
-Managing Migrations with Claude
+## Managing Migrations with Claude
 
 Database migrations become more critical in serverless environments where schema changes can trigger scaling events. Claude Code helps you write safe, reversible migrations.
 
-Writing Safe Migrations
+## Writing Safe Migrations
 
 Always write migrations that can be rolled back and don't lock tables during scaling events:
 
@@ -148,7 +146,7 @@ for Aurora PostgreSQL. Include both up and down functions.
 Ensure it's safe for a table with 100k+ rows.
 ```
 
-Implementing the Data Access Layer
+## Implementing the Data Access Layer
 
 Create a solid data access layer that handles Aurora Serverless V2's connection characteristics. Use Claude to generate TypeScript types and query builders:
 
@@ -194,7 +192,7 @@ export class UserRepository {
 export const userRepository = new UserRepository();
 ```
 
-Monitoring and Optimization
+## Monitoring and Optimization
 
 Aurora Serverless V2 provides CloudWatch metrics for monitoring. Use Claude to analyze these metrics and suggest optimizations:
 
@@ -214,7 +212,7 @@ Suggest which metrics are most critical for:
 - Scaling issue detection
 ```
 
-Best Practices Summary
+## Best Practices Summary
 
 When working with Aurora Serverless V2 and Claude Code, keep these practices in mind:
 

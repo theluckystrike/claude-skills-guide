@@ -210,7 +210,7 @@ Convert a flow to Apex
 "Convert this Flow Builder logic to an Apex class: loop through opportunity line items, calculate discount based on quantity tiers, and update the opportunity amount"
 ```
 
-Practical Workflow Example
+## Practical Workflow Example
 
 Here is how these skills work together in a real development scenario:
 
@@ -222,7 +222,7 @@ Here is how these skills work together in a real development scenario:
 
 This workflow reduces manual coding time significantly, especially for repetitive patterns like trigger handlers and test classes.
 
-Limitations and Considerations
+## Limitations and Considerations
 
 These skills work best with standard Salesforce patterns. Complex scenarios involving Platform Events, Big Objects, or Experience Cloud may require manual refinement. Always review generated code against your organization's coding standards and security requirements.
 
@@ -236,7 +236,6 @@ if (Schema.sObjectType.Opportunity.fields.Amount.isUpdateable()) {
 ```
 
 Add these security checks before deploying to production environments.
-
 
 Related Reading
 

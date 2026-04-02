@@ -18,7 +18,7 @@ Competitive analysis is one of the most time-consuming tasks for developers and 
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. This guide walks through building an automated competitive analysis pipeline using skills that handle document processing, data extraction, memory management, and reporting.
 
-The Core Skill Combination
+## The Core Skill Combination
 
 A competitive analysis workflow requires several specialized skills working together:
 
@@ -29,7 +29,7 @@ A competitive analysis workflow requires several specialized skills working toge
 
 Each skill handles a specific stage of the workflow, and when chained together, they reduce manual effort significantly. The key insight is that no single skill does everything, the power comes from how they compose. You process raw documents with pdf, structure the extracted data with xlsx, persist key insights with supermemory, and communicate findings with pptx. Treat them as pipeline stages, not isolated tools.
 
-Stage 1: Gathering and Processing Competitor Documents
+## Stage 1: Gathering and Processing Competitor Documents
 
 Start by collecting publicly available competitor materials, pricing pages, feature comparison sheets, annual reports, and technical documentation. Store these as PDF files in a designated directory, then invoke the [pdf skill](/best-claude-skills-for-data-analysis/) to extract structured data:
 
@@ -56,7 +56,7 @@ Output each section separately with the page number where you found it
 
 Specificity matters here. A vague prompt like "summarize this PDF" returns a narrative summary. A structured extraction prompt returns data you can drop directly into a comparison matrix.
 
-Building a Document Collection System
+## Building a Document Collection System
 
 Before running analysis, organize your inputs. A flat directory works for small collections; for ongoing competitive tracking, use a date-stamped structure:
 
@@ -70,7 +70,7 @@ reports/weekly-2026-03-13.pptx
 
 This structure makes it easy to reference specific documents in your Claude Code sessions and to track when information was captured.
 
-Stage 2: Processing Web Content
+## Stage 2: Processing Web Content
 
 For competitor websites, you can use Claude Code's built-in ability to read content you paste or fetch via shell commands. The webapp-testing skill helps when you need to verify what's actually rendering on a competitor's page:
 
@@ -116,7 +116,7 @@ Flag anything that looks like a promotional price vs. a permanent change.
 
 This diff-style analysis is where automation saves the most time. You would need to read both pages manually and note differences by hand, the skill does it in seconds.
 
-Stage 3: Building the Competitive Intelligence Database
+## Stage 3: Building the Competitive Intelligence Database
 
 The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) serves as your long-term memory layer. Use it to store competitor profiles with key attributes so context persists across sessions:
 
@@ -157,7 +157,7 @@ When you tag entries with `CHANGE:` markers, you can later query:
 
 This returns a consolidated view of pricing movement across your entire tracked set, which is exactly what you need for a quarterly competitive review.
 
-Stage 4: Data Analysis and Visualization
+## Stage 4: Data Analysis and Visualization
 
 The xlsx skill transforms raw competitive data into analyzable formats. Create a feature comparison matrix:
 
@@ -197,7 +197,7 @@ Sheet 3 - Gap Analysis:
 
 This turns qualitative competitive impressions into a defensible quantitative model. When a stakeholder asks why you're prioritizing a particular feature, you can point to the gap analysis sheet.
 
-Stage 5: Automated Reporting
+## Stage 5: Automated Reporting
 
 Use the pptx skill to generate stakeholder-ready presentations from your stored competitive intelligence:
 
@@ -242,7 +242,7 @@ Slide 5 - Recommended Actions
 
 A templated approach ensures your reports are comparable month over month, which is essential for tracking whether your competitive position is improving.
 
-Workflow Automation Tips
+## Workflow Automation Tips
 
 Chain these stages using a regular workflow. A basic shell script triggers data collection, and you run the Claude Code analysis in a dedicated session:
 
@@ -268,7 +268,7 @@ A practical weekly rhythm looks like this:
 
 This schedule keeps the work distributed and prevents the "12-hour competitive review marathon" that teams often fall into. Small automated sessions beat a single exhausting manual effort every time.
 
-Handling Rate Limits and Data Freshness
+## Handling Rate Limits and Data Freshness
 
 Some competitor sites block automated scraping. For those, rely on manual capture, take a screenshot or copy the page content manually once per cycle, then paste it into your session. The automation handles the majority of sources; don't let edge cases derail the whole system.
 
@@ -284,7 +284,7 @@ Action needed: Manual verification before next quarterly report
 
 This prevents you from presenting outdated information confidently. Stale data labeled as stale is far less dangerous than stale data that looks current.
 
-When to Use Manual Review
+## When to Use Manual Review
 
 Automation handles data collection and formatting, but human judgment is essential for strategic interpretation. Use automated outputs as a starting point, then apply domain expertise to identify implications the system cannot assess, market positioning, brand perception, and emerging competitive threats require contextual understanding beyond data extraction.
 

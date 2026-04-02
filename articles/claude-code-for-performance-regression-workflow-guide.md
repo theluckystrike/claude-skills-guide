@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Performance Regression Workflow Guide"
 description: "Learn how to use Claude Code to detect, prevent, and manage performance regressions in your development workflow with practical examples and actionable."
@@ -16,10 +15,9 @@ score: 8
 
 {% raw %}
 
-
 Performance regressions silently degrade user experience and can quickly spiral into critical issues if not caught early. As applications grow in complexity, manual performance testing becomes impractical. This guide shows you how to use Claude Code to build an automated performance regression detection workflow that catches issues before they reach production.
 
-Understanding Performance Regression in Modern Development
+## Understanding Performance Regression in Modern Development
 
 A performance regression occurs when code changes cause measurable degradation in application performance, slower response times, increased memory consumption, or reduced throughput. These regressions often slip through unit tests because they typically only verify correctness, not performance characteristics.
 
@@ -33,11 +31,11 @@ Common sources of performance regressions include:
 
 Traditional approaches rely on dedicated performance testing suites that run infrequently, often only before releases. By then, it's often too late to make significant changes without delaying shipments.
 
-Setting Up Claude Code for Performance Monitoring
+## Setting Up Claude Code for Performance Monitoring
 
 Claude Code can serve as an intelligent layer in your performance testing workflow, helping you define baselines, detect anomalies, and investigate root causes. Here's how to integrate it effectively.
 
-Creating a Performance Benchmark Skill
+## Creating a Performance Benchmark Skill
 
 First, create a Claude skill that establishes performance benchmarks for your critical paths:
 
@@ -78,7 +76,7 @@ Define benchmarks in `.claude/benchmarks.json`:
 
 This skill pattern lets you define what "good" looks like for your application and automatically checks against those standards.
 
-Integrating with Your CI Pipeline
+## Integrating with Your CI Pipeline
 
 The real power comes from running these checks automatically. Add performance checks to your CI workflow:
 
@@ -115,11 +113,11 @@ jobs:
 
 This workflow runs on every pull request, catching regressions before they merge.
 
-Detecting and Investigating Performance Regressions
+## Detecting and Investigating Performance Regressions
 
 When Claude Code detects a regression, it should provide actionable information. Here's a practical investigation workflow.
 
-Step 1: Identify the Regression Scope
+## Step 1: Identify the Regression Scope
 
 When your benchmarks flag a regression, start by understanding its scope:
 
@@ -130,7 +128,7 @@ claude_code benchmark --compare --since="last-release"
 
 This command compares performance between your current code and the last release, focusing on what changed.
 
-Step 2: Analyze Code Changes
+## Step 2: Analyze Code Changes
 
 Use Claude's code analysis capabilities to identify likely culprits:
 
@@ -144,7 +142,7 @@ claude_code analyze changes \
 
 This scans recent commits for common performance issues like database queries inside loops.
 
-Step 3: Profile and Validate
+## Step 3: Profile and Validate
 
 Once you've identified potential causes, verify with profiling:
 
@@ -166,15 +164,15 @@ performance.mark('end');
 performance.measure('Function Duration', 'start', 'end');
 ```
 
-Building a Sustainable Performance Workflow
+## Building a Sustainable Performance Workflow
 
 Effective performance regression prevention requires more than tools, it needs process and culture.
 
-Establish Clear Baselines
+## Establish Clear Baselines
 
 Your first step is establishing what "good" looks like. Run benchmarks on your production-equivalent environment and save those results as baselines. Update baselines intentionally, not accidentally.
 
-Define Meaningful Thresholds
+## Define Meaningful Thresholds
 
 Not all regressions are equal. A 5% increase in response time for a 10ms endpoint matters far less than the same increase for a 500ms endpoint. Define thresholds based on user-perceptible impact:
 
@@ -195,7 +193,7 @@ Not all regressions are equal. A 5% increase in response time for a 10ms endpoin
 }
 ```
 
-Make Performance Visible
+## Make Performance Visible
 
 Integrate performance metrics into your development workflow:
 
@@ -203,7 +201,7 @@ Integrate performance metrics into your development workflow:
 - Create dashboards showing performance trends over time
 - Block merges on critical regressions (but allow overrides with justification)
 
-Automate Root Cause Suggestions
+## Automate Root Cause Suggestions
 
 When regressions occur, Claude Code can suggest investigation paths:
 
@@ -225,7 +223,7 @@ Analyze these changes and suggest:
 """
 ```
 
-Best Practices for Continuous Improvement
+## Best Practices for Continuous Improvement
 
 Building a performance-aware culture takes time. Here are strategies that work:
 
@@ -237,7 +235,7 @@ Document your findings: When you find and fix regressions, document them. This b
 
 Celebrate improvements: When your optimizations improve performance, acknowledge it. This reinforces the value of performance work.
 
-Conclusion
+## Conclusion
 
 Performance regression workflows don't need to be complex or burdensome. By integrating Claude Code into your development process, defining baselines, automating checks, and investigating systematically, you can catch regressions early while maintaining development velocity.
 

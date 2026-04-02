@@ -29,7 +29,7 @@ The time cost adds up faster than most teams realize. A developer opening three 
 
 Beyond time, there is a quality consistency problem. The same developer writes dramatically different PR descriptions on Monday morning versus Friday afternoon. Junior engineers tend to under-describe their changes, while some senior engineers over-explain implementation details while omitting the business reason for the change. A generator trained on your team's best examples produces reliable, uniform output regardless of who opens the PR or when.
 
-Manual vs. Automated PR Descriptions: A Comparison
+## Manual vs. Automated PR Descriptions: A Comparison
 
 | Aspect | Manual | Claude Code Automated |
 |--------|--------|-----------------------|
@@ -41,7 +41,7 @@ Manual vs. Automated PR Descriptions: A Comparison
 | Coverage on Friday afternoon | Notoriously weak | Same as Monday morning |
 | Onboarding curve for new hires | Must learn team conventions | Embedded in the generator |
 
-Setting Up the PR Description Generator
+## Setting Up the PR Description Generator
 
 The foundation of this workflow is a Claude Code skill that analyzes your git changes and generates structured descriptions. Create a new skill for this purpose:
 
@@ -51,7 +51,7 @@ Create a skill file: ~/.claude/skills/pr-description-generator.md
 
 This creates a skill scaffold. Now you'll configure it to extract the right information from your codebase.
 
-Core Components of the Generator
+## Core Components of the Generator
 
 Your PR description generator needs several key components working together:
 
@@ -153,11 +153,11 @@ detect_breaking_changes() {
 }
 ```
 
-Implementing the Workflow
+## Implementing the Workflow
 
 Here's a practical implementation using a Claude Code skill:
 
-Step 1: Create the Analysis Script
+## Step 1: Create the Analysis Script
 
 ```bash
 #!/bin/bash
@@ -194,7 +194,7 @@ if [ -n "$TICKET" ]; then
 fi
 ```
 
-Step 2: Build the Claude Skill
+## Step 2: Build the Claude Skill
 
 Create `skill.ts` with the main logic:
 
@@ -276,7 +276,7 @@ generateChecklist(analysis: AnalysisResult): string {
 }
 ```
 
-Step 3: Configure the Workflow
+## Step 3: Configure the Workflow
 
 Add a configuration file to customize the generator behavior:
 
@@ -302,11 +302,11 @@ templates:
 
 The `categorize.patterns` list is where you adapt the generator to your project layout. A Django monorepo might use `apps/*/models.py` for database-affecting changes, while a Next.js app would tag `app//page.tsx` files as user-facing route changes.
 
-Using the Generator in Your Workflow
+## Using the Generator in Your Workflow
 
 Once configured, using the generator is straightforward:
 
-Manual Generation
+## Manual Generation
 
 ```bash
 claude --print "/pr-description-generator"
@@ -327,7 +327,7 @@ gh pr create \
 
 Using `--draft` by default is a good habit. it lets you review the generated description before marking the PR ready for review, giving you a chance to add human context.
 
-Pre-Push Automation
+## Pre-Push Automation
 
 Integrate the generator into your development workflow by adding it to your pre-push hook:
 
@@ -362,7 +362,7 @@ while read local_ref local_sha remote_ref remote_sha; do
 done
 ```
 
-CI Integration
+## CI Integration
 
 For automated PR description generation on GitHub Actions:
 
@@ -416,7 +416,7 @@ If you only want to generate the description once (not on every push to the PR),
           claude /pr-description-generator > pr_description.md
 ```
 
-Structuring the Generated Output
+## Structuring the Generated Output
 
 The raw output from the generator is useful, but structuring it for GitHub's markdown renderer makes it much more scannable for reviewers. A well-structured PR description follows this pattern:
 
@@ -460,15 +460,15 @@ Reviewer checklist
 
 Claude Code can generate all of this structure automatically when the skill prompt instructs it to follow the template. The key is providing the template in the skill configuration so the model outputs exactly the sections your team expects.
 
-Best Practices and Tips
+## Best Practices and Tips
 
-Review Generated Descriptions
+## Review Generated Descriptions
 
 Always review the generated description before submitting. The generator captures technical details, but you should add context about business logic, user impact, and any manual testing performed.
 
 A useful habit is to run the generator, read the output critically, and ask yourself two questions: "Would a reviewer who wrote none of this code understand what problem this solves?" and "Is there anything I know about this change that the diff alone cannot communicate?" The answers to those questions are what you add manually before marking the PR ready.
 
-Customize for Your Team
+## Customize for Your Team
 
 Every team has different requirements. Adjust the generator to include:
 
@@ -490,13 +490,13 @@ done
 
 These screenshots can then be referenced in the auto-generated description, giving reviewers visual context without any manual effort.
 
-Maintain the Generator
+## Maintain the Generator
 
 As your codebase evolves, update the generator to recognize new patterns. Keep the categorization rules current with your project structure.
 
 Track the quality of generated descriptions over time by adding a simple feedback mechanism. a thumbs-up or thumbs-down reaction on the auto-generated comment. Over several sprints, low scores point to areas where the generator's patterns need updating, while high scores confirm the generator is working well for those change types.
 
-Handling Large Diffs
+## Handling Large Diffs
 
 Very large PRs. those touching hundreds of files. can produce diffs too large for a single Claude context window. The generator should detect this and switch to a summarization strategy:
 
@@ -518,7 +518,7 @@ async function generateWithLargeDiffHandling(diff: string): Promise<string> {
 
 When the diff is chunked this way, the description will be somewhat less precise for individual line changes, but will still accurately describe what areas of the codebase changed and why, which is the most valuable part of a PR description for reviewers.
 
-Conclusion
+## Conclusion
 
 Automating pull request descriptions with Claude Code improves consistency, saves time, and ensures reviewers always have the context they need. Start with the basic workflow shown here, then customize it to match your team's specific needs and conventions.
 

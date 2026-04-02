@@ -18,7 +18,7 @@ permalink: /cloudflare-mcp-server-edge-automation-workflow/
 
 This guide walks through setting up the Cloudflare MCP server, configuring authentication, and building practical automation workflows for edge deployments.
 
-Prerequisites and Installation
+## Prerequisites and Installation
 
 You need Node.js 18 or higher and a Cloudflare account with API token permissions. Install the MCP server globally:
 
@@ -52,7 +52,7 @@ Store your credentials in `~/.claude/mcp-servers.json`:
 
 Restart Claude Code to load the new server configuration.
 
-Managing Workers Through Natural Language
+## Managing Workers Through Natural Language
 
 Once configured, you can deploy Workers without leaving your terminal. The MCP server exposes Cloudflare's entire Workers API as tools Claude Code can invoke.
 
@@ -72,7 +72,7 @@ Update the authentication Worker to cache responses for authenticated users with
 
 The MCP server parses your intent, modifies the Worker script appropriately, and redeploys. For complex changes, Claude Code may use the tdd skill to generate tests before modifying production code.
 
-Automating DNS Configuration
+## Automating DNS Configuration
 
 DNS management becomes straightforward with conversational queries. Query record status:
 
@@ -94,7 +94,7 @@ Ensure all A records from the old provider are replicated here with the same val
 
 Claude Code compares current state against your description and makes only the necessary API calls.
 
-Edge Storage and Database Automation
+## Edge Storage and Database Automation
 
 Cloudflare's distributed data layer includes KV, Durable Objects, and D1. The MCP server provides tools for each.
 
@@ -122,7 +122,7 @@ Create a D1 database 'analytics' and execute the schema from migrations/producti
 
 This approach works well with the pdf skill when you need to extract schema documentation from existing database designs.
 
-Building Composite Automation Workflows
+## Building Composite Automation Workflows
 
 Combine multiple operations into cohesive workflows. A typical deployment pipeline might look like:
 
@@ -140,7 +140,7 @@ Deploy the api-v2 Worker to staging, create the config KV namespace, set environ
 
 Claude Code orchestrates each step, handling dependencies and rollback if any operation fails.
 
-Practical Example: Global Configuration Sync
+## Practical Example: Global Configuration Sync
 
 Consider a scenario where you manage multiple domains requiring consistent security headers. Use the MCP server to apply configurations across zones:
 
@@ -158,7 +158,7 @@ Purge the cache for all URLs in the 'promotions' KV namespace whenever the names
 
 Implement this by configuring a Worker that watches KV changes and triggers cache tags, all described in natural language.
 
-Integration with Claude Skills
+## Integration with Claude Skills
 
 The Cloudflare MCP server integrates naturally with other Claude skills. Use frontend-design to generate Worker UI templates, then deploy them directly to edge locations. The pdf skill can extract configuration requirements from existing documentation and apply them programmatically.
 
@@ -170,7 +170,7 @@ Check the error logs from the past hour for the checkout Worker and identify the
 
 This unified approach brings together infrastructure queries and application analysis in one conversation.
 
-Security Considerations
+## Security Considerations
 
 When automating Cloudflare through MCP, follow security best practices. Use API tokens with minimum necessary permissions rather than global API keys. Rotate tokens regularly and revoke them when automation scripts are decommissioned.
 
@@ -182,7 +182,7 @@ Add a new secret 'STRIPE_WEBHOOK_SECRET' to the payments Worker
 
 This keeps secrets out of version control while making them available to your deployed Workers.
 
-Summary
+## Summary
 
 The Cloudflare MCP server transforms edge infrastructure management into conversational workflows. By describing desired states in natural language, you provision Workers, manage DNS, configure storage, and deploy global applications without memorizing API endpoints or writing boilerplate scripts.
 

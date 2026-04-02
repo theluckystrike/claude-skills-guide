@@ -14,10 +14,9 @@ tags: [claude-code, claude-skills]
 ---
 {% raw %}
 
-
 AI-assisted code review is transforming how development teams catch bugs, enforce standards, and ship quality code. Instead of waiting hours for human reviewers, developers can get instant feedback on syntax errors, security vulnerabilities, and style violations. This guide covers practical workflows to integrate AI code review into your development process effectively.
 
-Setting Up AI Code Review in Your Pipeline
+## Setting Up AI Code Review in Your Pipeline
 
 The first step is choosing where AI review fits in your workflow. Most teams place it before human review, acting as a first pass that handles repetitive checks. This frees your team to focus on architecture, logic, and design decisions rather than formatting issues.
 
@@ -29,7 +28,7 @@ Place best-claude-skills-for-code-review-automation.md in .claude/ and invoke wi
 
 This skill can run as part of your pre-commit hooks or as part of your CI pipeline. The configuration file lets you define which rules to enforce and which to ignore.
 
-Configuring Review Rules That Matter
+## Configuring Review Rules That Matter
 
 Generic AI review produces noise. You need to tailor the rules to your codebase and team conventions. Most AI review tools support configuration files that specify your preferences.
 
@@ -53,7 +52,7 @@ rules:
 
 This configuration tells the AI what to flag and at what severity level. Errors block merge, warnings suggest changes, and info items provide helpful context without blocking.
 
-The Pre-Commit Workflow
+## The Pre-Commit Workflow
 
 Running AI review before code reaches your repository catches issues early. The claude-code-git-hooks-pre-commit-automation skill makes this straightforward to set up.
 
@@ -69,7 +68,7 @@ This approach gives feedback before you push, when fixing issues costs less time
 
 A common pattern is to run lighter checks pre-commit and deeper analysis in CI. Pre-commit might check formatting and obvious errors. CI runs security scans, complex logic analysis, and cross-file dependency checks.
 
-Integrating with CI/CD Pipelines
+## Integrating with CI/CD Pipelines
 
 Continuous Integration is where AI review shines for larger changes. The claude-skills-with-github-actions-ci-cd-pipeline skill provides templates for GitHub Actions integration.
 
@@ -94,7 +93,7 @@ jobs:
 
 This runs on every pull request, providing structured feedback as comments. You can configure it to block merging on errors or just provide information.
 
-Using Multiple Skills Together
+## Using Multiple Skills Together
 
 Effective AI review often requires combining several specialized skills. The how-to-combine-multiple-claude-skills-in-one-project skill shows how to orchestrate multiple tools.
 
@@ -116,7 +115,7 @@ When reviewing PRs, run these skills in order:
 3. security-scan --owasp-top-10
 ```
 
-Handling False Positives
+## Handling False Positives
 
 AI reviews produce false positives. A good workflow includes mechanisms to handle them gracefully. The most effective approach is an ignore system that teaches the AI your preferences.
 
@@ -131,7 +130,7 @@ Over time, the system learns your ignores and stops flagging similar patterns. T
 
 Another approach is using the supermemory skill to track review history. It maintains context about why certain decisions were made, preventing the same debates from repeating.
 
-Measuring Review Quality
+## Measuring Review Quality
 
 Track metrics to ensure your AI review is improving code quality without creating bottlenecks. Key metrics include:
 
@@ -142,7 +141,7 @@ Track metrics to ensure your AI review is improving code quality without creatin
 
 The measuring-claude-code-skill-efficiency-metrics skill helps you set up dashboards for these metrics. Regular review of these numbers lets you tune your configuration.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Teams often make mistakes when introducing AI review. The biggest is over-configuration, enabling too many rules creates noise that developers ignore. Start small, measure, then add rules incrementally.
 
@@ -150,7 +149,7 @@ Another pitfall is treating AI review as a replacement for human review. AI exce
 
 Finally, avoid ignoring the feedback. If developers routinely dismiss AI suggestions without explanation, your rules probably need adjustment. The goal is helpful feedback, not an adversarial relationship.
 
-Building Your Custom Review Skill
+## Building Your Custom Review Skill
 
 For teams with specific needs, building a custom review skill provides the most control. The best-claude-skills-for-code-review-automation guide walks through creating specialized checks.
 
@@ -162,14 +161,13 @@ A custom skill might enforce domain-specific rules like:
 
 The skill reads your codebase context and applies rules that match your architecture. This level of customization makes AI review significantly more valuable than generic tools.
 
-Getting Started Today
+## Getting Started Today
 
 Start small with one review skill and expand as your team builds confidence. The claude-code-for-code-review-preparation-tips skill helps you prepare code for review efficiently.
 
 Most teams see immediate value from basic formatting and security checks. As you add more rules and refine configurations, the quality of feedback improves. The goal is faster iteration cycles without sacrificing code quality.
 
 AI-assisted review handles the repetitive checks while your team focuses on what matters: building great software.
-
 
 Related Reading
 

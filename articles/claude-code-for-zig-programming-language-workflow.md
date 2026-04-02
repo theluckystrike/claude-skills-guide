@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Zig Programming Language Workflow
 
@@ -31,7 +30,7 @@ Zig's philosophy of "no hidden control flow" and "no hidden memory allocations" 
 
 Unlike higher-level languages, Zig requires developers to think carefully about memory management, error handling, and compile-time execution. Claude Code can help you navigate these patterns while learning the language.
 
-Setting Up Your Zig Development Environment
+## Setting Up Your Zig Development Environment
 
 Before integrating Claude Code, ensure your Zig toolchain is properly configured. Here's a minimal setup:
 
@@ -56,11 +55,11 @@ Run Claude Code with your project context
 claude --print "Analyze the build.zig file and explain the target configuration"
 ```
 
-Project Scaffolding with Claude Code
+## Project Scaffolding with Claude Code
 
 One of the most valuable Claude Code capabilities is rapid project scaffolding. Instead of manually creating build configurations, test files, and module structures, you can describe your requirements and let Claude generate the foundation.
 
-Creating a Library Project
+## Creating a Library Project
 
 When you need a reusable Zig library, prompt Claude with your requirements:
 
@@ -102,11 +101,11 @@ pub fn build(b: *std.Build) void {
 }
 ```
 
-Code Generation Patterns
+## Code Generation Patterns
 
 Zig's comptime feature is powerful but can be challenging to grasp. Claude Code excels at generating comptime patterns for common scenarios.
 
-Generate a Comptime String Table
+## Generate a Comptime String Table
 
 String tables are useful for parsers and interpreters:
 
@@ -137,11 +136,11 @@ const keywords = StringTable.init(&.{
 
 When you need patterns like this, ask Claude to generate them with your specific requirements.
 
-Debugging Memory Issues
+## Debugging Memory Issues
 
 Zig's manual memory management means you'll inevitably encounter allocation bugs. Claude Code can help analyze and fix these issues.
 
-Common Allocation Patterns
+## Common Allocation Patterns
 
 Here's a safe allocation pattern Claude might suggest:
 
@@ -171,7 +170,7 @@ What could be wrong?
 
 Claude will analyze your code and suggest fixes based on Zig's ownership model.
 
-Integrating C Libraries
+## Integrating C Libraries
 
 Zig's C interoperability is excellent, and Claude can help translate C headers and create bindings:
 
@@ -198,7 +197,7 @@ pub fn encode(src: []const u8, allocator: std.mem.Allocator) ![]u8 {
 }
 ```
 
-Actionable Tips for Zig Development with Claude
+## Actionable Tips for Zig Development with Claude
 
 1. Provide build context: Always share your `build.zig` when asking for help, as Zig's build system affects how code compiles.
 
@@ -210,7 +209,7 @@ Actionable Tips for Zig Development with Claude
 
 5. Test with Zigtest: Include your test files when debugging. Claude can help write comprehensive test cases.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Zig development by handling boilerplate, explaining complex patterns, and accelerating your prototyping cycle. The combination of Zig's explicit design philosophy and Claude's code generation capabilities creates a powerful workflow for systems programmers.
 

@@ -18,7 +18,7 @@ permalink: /mcp-server-sandbox-isolation-security-guide/
 
 This guide covers practical approaches to sandbox isolation for MCP servers, with concrete examples you can implement today.
 
-Understanding MCP Server Security Boundaries
+## Understanding MCP Server Security Boundaries
 
 [MCP servers extend Claude Code's capabilities by connecting to external services, databases, and APIs](/building-your-first-mcp-tool-integration-guide-2026/) Each server potentially has access to credentials, filesystem paths, and network resources. Without proper isolation, a compromised or misconfigured server could expose your entire development environment.
 
@@ -33,7 +33,7 @@ Before diving into implementation, it is worth being specific about what you are
 
 Understanding which threat you are most exposed to helps prioritize which isolation controls to implement first.
 
-Implementing Process Isolation
+## Implementing Process Isolation
 
 The most effective way to isolate an MCP server is running it in a separate process with restricted permissions. Here's a practical example using a constrained user account:
 
@@ -100,7 +100,7 @@ Run the server under this profile with:
 sandbox-exec -f /etc/mcp-server.sb node /opt/mcp-file-server/server.js
 ```
 
-Network Isolation Techniques
+## Network Isolation Techniques
 
 Network boundaries prevent MCP servers from making arbitrary connections to internal services. Consider these configurations:
 
@@ -158,7 +158,7 @@ spec:
           port: 5432
 ```
 
-Filesystem Access Control
+## Filesystem Access Control
 
 Restrict filesystem access by configuring allowed paths explicitly. Many MCP servers support a `allowedDirectories` parameter:
 
@@ -199,7 +199,7 @@ Beyond path restrictions, consider what file operations each server actually nee
 
 Separating read, write, append, and execute permissions prevents a server with legitimate write access from overwriting source files, and prevents a server with read access to source from writing data exfiltration payloads anywhere.
 
-Credential and Secret Management
+## Credential and Secret Management
 
 Never hardcode credentials in MCP server configurations. Instead, use environment variables or secret management tools:
 
@@ -235,7 +235,7 @@ chmod 700 /opt/mcp-file-server
 chmod 600 /opt/mcp-file-server/.env
 ```
 
-Testing Your Isolation Configuration
+## Testing Your Isolation Configuration
 
 Verifying your security configuration is critical. Create a test suite that validates isolation boundaries:
 
@@ -281,7 +281,7 @@ Pair this with the tdd skill to maintain a comprehensive test suite that validat
 
 Security configuration tests belong in the same CI pipeline as functional tests. A deployment pipeline that validates application behavior but skips isolation verification can silently regress your security posture when a dependency update changes permission behavior.
 
-Monitoring and Audit Logging
+## Monitoring and Audit Logging
 
 Implement logging for all MCP server operations. Track:
 
@@ -323,7 +323,7 @@ For structured log analysis, emit audit events as JSON and ship them to a log ag
 
 A useful alerting pattern: alert on any file access event for paths in your `denied_paths` list, even if the deny policy caught it. Repeated denied-path access attempts by an MCP server that should not be requesting them indicates either a misconfiguration or an active exploitation attempt.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Several mistakes frequently appear in MCP server deployments:
 
@@ -339,7 +339,7 @@ Using the same isolation profile for all servers. Different MCP servers have leg
 
 Mounting secrets at predictable paths. If you mount credentials via a file at a well-known path like `/etc/mcp-secrets.json`, and your filesystem isolation has any gap, that file is an obvious target. Use environment variable injection at process startup rather than filesystem-mounted secrets where possible.
 
-Container-Based Isolation
+## Container-Based Isolation
 
 For maximum isolation, run MCP servers inside containers:
 
@@ -394,7 +394,7 @@ networks:
 
 The `read_only: true` directive at the container level means any write attempt outside explicitly mounted volumes fails. Combined with `cap_drop: ALL` and `no-new-privileges`, the container cannot escalate permissions even if the application code is exploited. The `internal: true` network setting means the container has no route to the internet, it can only reach other containers on the same named network.
 
-Isolation Layer Comparison
+## Isolation Layer Comparison
 
 | Technique | Strength | Complexity | Best For |
 |-----------|----------|------------|----------|
@@ -408,7 +408,7 @@ Isolation Layer Comparison
 
 No single technique covers all threat vectors. In practice, the right posture combines a process-level technique (dedicated user or container) with a network-level technique (firewall rules or NetworkPolicy) and a credential technique (env vars from a secrets manager). That combination addresses the most common attack paths without requiring full-stack container orchestration for every project.
 
-Summary
+## Summary
 
 Securing MCP servers requires attention to multiple layers: process isolation, network boundaries, filesystem restrictions, and credential management. Start with restrictive configurations and expand permissions only when necessary.
 

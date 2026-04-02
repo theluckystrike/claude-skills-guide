@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Plotly Dash Python Workflow
 
 Plotly Dash has become one of the most popular frameworks for building analytical web applications in Python. When combined with Claude Code, developers can dramatically accelerate their Dash development workflow, from initial project setup to deployment. This guide explores practical strategies for using Claude Code effectively with Plotly Dash projects, covering project structure, interactive patterns, performance tuning, and production deployment.
 
-Setting Up Your Dash Project with Claude Code
+## Setting Up Your Dash Project with Claude Code
 
 When starting a new Dash project, Claude Code can handle the boilerplate and help you establish a solid foundation. Begin by initializing your project structure and installing dependencies.
 
@@ -40,7 +39,7 @@ pip install dash-bootstrap-components flask-caching gunicorn
 
 Claude Code can then help you create the basic app structure. Share your project requirements, and ask Claude to generate a clean, well-organized Dash application layout with proper separation of concerns between callbacks, layout, and data processing logic. A useful prompt pattern is: "Generate a Dash application that visualizes [your dataset], supports filtering by [columns], and uses [chart type] as the primary visualization." Claude Code will produce a working skeleton you can immediately extend rather than writing everything from scratch.
 
-Structuring Your Dash Application
+## Structuring Your Dash Application
 
 A well-structured Dash application is easier to maintain and extend. Claude Code can guide you in implementing best practices:
 
@@ -87,11 +86,11 @@ if __name__ == '__main__':
 
 The `register(app)` pattern lets each callback module define its own callbacks while keeping `app.py` clean. Ask Claude Code to scaffold this pattern for any new Dash project and you avoid the common trap of a single file with hundreds of lines of interleaved layout and callback logic.
 
-Building Interactive Visualizations
+## Building Interactive Visualizations
 
 Plotly Dash shines when creating interactive data visualizations. Claude Code can help you implement advanced patterns:
 
-Dynamic Dropdown Updates
+## Dynamic Dropdown Updates
 
 One common requirement is populating dropdown options based on data:
 
@@ -146,7 +145,7 @@ def update_chart(category, subcategory):
     return fig
 ```
 
-Multi-Page Navigation
+## Multi-Page Navigation
 
 For larger dashboards, Claude Code can generate complete multi-page setups using `dcc.Location` and page routing. This pattern prevents all callbacks from loading on page load, which significantly improves perceived performance:
 
@@ -168,7 +167,7 @@ app.layout = html.Div([
 
 Each page lives in a `pages/` directory and registers itself automatically. Claude Code can scaffold all page files with proper naming conventions and handle the routing boilerplate so you focus on the actual content.
 
-Pattern Matching Callbacks
+## Pattern Matching Callbacks
 
 When you need dynamic components. for example, a list of charts the user can add or remove. pattern matching callbacks are the right tool. Ask Claude Code to implement MATCH or ALL callbacks and it will produce correct ID structures that avoid common bugs:
 
@@ -186,7 +185,7 @@ def update_chart(metric):
     return fig
 ```
 
-Working with State Management
+## Working with State Management
 
 Dash applications often need to maintain state across callbacks. Claude Code can suggest appropriate patterns:
 
@@ -216,7 +215,7 @@ For complex applications, `dcc.Store` with `storage_type='session'` or `storage_
 
 When you need server-side state shared across multiple users (for example, a shared annotation layer on a chart), consider using a simple Redis or SQLite-backed approach. Claude Code can generate a Flask endpoint alongside your Dash app that handles reads and writes, keeping state consistent across concurrent sessions.
 
-Optimizing Performance
+## Optimizing Performance
 
 Large Dash applications can suffer from performance issues. Claude Code can help identify bottlenecks and implement optimizations:
 
@@ -271,7 +270,7 @@ Comparison of data loading strategies:
 | Background callback | Long-running ETL jobs | Complexity of progress feedback |
 | dcc.Store + clientside | UI state only | Data size limited by browser |
 
-Testing Your Dash Applications
+## Testing Your Dash Applications
 
 Claude Code can help you establish testing practices for Dash applications using pytest:
 
@@ -323,7 +322,7 @@ def test_filter_updates_chart(dash_duo):
 
 Claude Code handles the boilerplate for waiting on elements and managing the headless browser lifecycle. You describe the user interaction in plain language and it generates the corresponding test steps.
 
-Deployment Considerations
+## Deployment Considerations
 
 When deploying Dash applications, Claude Code can guide you through various hosting options:
 
@@ -364,7 +363,7 @@ Deployment platform comparison:
 | Fly.io | Edge deployment, cheap | Smaller ecosystem |
 | Google Cloud Run | Serverless Docker, auto-scale | Cold start latency |
 
-Best Practices Summary
+## Best Practices Summary
 
 Here are key recommendations for productive Dash development with Claude Code:
 

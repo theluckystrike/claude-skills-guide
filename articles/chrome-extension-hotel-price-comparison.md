@@ -19,11 +19,11 @@ Hotel booking prices fluctuate constantly based on demand, timing, and available
 
 This guide examines the technical architecture behind these extensions, practical implementation approaches, and considerations for building your own solution.
 
-How Hotel Price Comparison Extensions Work
+## How Hotel Price Comparison Extensions Work
 
 Chrome extensions that compare hotel prices typically rely on one or more of these methods:
 
-Direct API Integration
+## Direct API Integration
 
 The most reliable approach involves integrating with hotel booking APIs that provide real-time pricing data. Major platforms offer affiliate programs with API access:
 
@@ -51,7 +51,7 @@ async function fetchHotelPrices(location, checkIn, checkOut) {
 
 API integration provides accurate, real-time data but typically requires partnership agreements or affiliate program membership.
 
-Web Scraping Approaches
+## Web Scraping Approaches
 
 Some extensions use web scraping to gather prices from multiple booking sites. This approach requires careful implementation to avoid detection and respect terms of service:
 
@@ -84,7 +84,7 @@ async function scrapeBookingSites(url) {
 
 Modern Chrome extensions run in service workers with Manifest V3, which imposes stricter limitations on background processing and network requests.
 
-Price Aggregation Services
+## Price Aggregation Services
 
 Several services aggregate hotel pricing data through partnerships with major booking platforms. Developers can integrate these APIs instead of building scrapers:
 
@@ -124,9 +124,9 @@ class HotelPriceAggregator {
 }
 ```
 
-Key Technical Considerations
+## Key Technical Considerations
 
-Rate Limiting and Caching
+## Rate Limiting and Caching
 
 Hotel APIs enforce rate limits that require thoughtful implementation:
 
@@ -175,7 +175,7 @@ class RateLimitedPriceFetcher {
 }
 ```
 
-Data Storage Options
+## Data Storage Options
 
 Chrome extensions can store price data using several mechanisms:
 
@@ -208,7 +208,7 @@ async function savePriceHistory(hotelId, priceData) {
 }
 ```
 
-Handling Dynamic Content
+## Handling Dynamic Content
 
 Many booking sites load prices dynamically using JavaScript. Chrome DevTools Protocol provides solutions:
 
@@ -246,7 +246,7 @@ async function getDynamicPrices(pageUrl) {
 }
 ```
 
-Building a Custom Price Tracker
+## Building a Custom Price Tracker
 
 For developers who want full control, building a custom hotel price tracker involves:
 
@@ -283,13 +283,13 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
 });
 ```
 
-Conclusion
+## Conclusion
 
 Chrome extension hotel price comparison tools rely on API integrations, web scraping, or aggregation services to deliver pricing data. For developers, understanding these approaches enables building custom solutions tailored to specific travel needs. The key technical challenges include rate limiting compliance, handling dynamic content, and designing efficient storage for price history.
 
 Whether integrating existing APIs or building from scratch, the architecture decisions around data sourcing, caching, and notifications directly impact the extension's reliability and user experience.
 
-Step-by-Step: Price Scraping Architecture
+## Step-by-Step: Price Scraping Architecture
 
 Building a hotel price comparison extension requires navigating several technical challenges: rate limiting, CORS restrictions, and the fact that most hotel booking sites render prices via JavaScript rather than static HTML.
 
@@ -300,7 +300,7 @@ Building a hotel price comparison extension requires navigating several technica
 5. Display the comparison panel: inject a floating sidebar into the page that ranks results by price and highlights the cheapest option with a green badge.
 6. Cache results in `chrome.storage.session`: prices expire when the browser session ends, so session storage is appropriate. it avoids stale data showing up on a new search.
 
-Advanced: Handling JavaScript-Rendered Prices
+## Advanced: Handling JavaScript-Rendered Prices
 
 Most hotel sites load prices after the initial HTML response via XHR or WebSocket. Use a `MutationObserver` to detect when price elements appear in the DOM rather than reading them on `DOMContentLoaded`:
 
@@ -319,7 +319,7 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 Stop observing after 10 seconds or once you have collected at least one price to avoid continuous CPU usage.
 
-Comparison with Existing Aggregators
+## Comparison with Existing Aggregators
 
 | Tool | Data freshness | Sites covered | Privacy | Cost |
 |---|---|---|---|---|
@@ -331,7 +331,7 @@ Comparison with Existing Aggregators
 
 The extension's advantage is privacy: no search data leaves the browser. Prices are read directly from pages the user already has open, so there is no third-party API call and no account required.
 
-Troubleshooting
+## Troubleshooting
 
 Prices not extracting from Booking.com: Booking.com uses server-side A/B testing that changes DOM structure. Add a fallback selector chain: try `[data-testid="price-and-discounted-price"]` first, then `.bui-price-display__value`, then any element with text matching `/\$[\d,]+/`. Log which selector matched so you can update it when Booking.com deploys a new layout.
 

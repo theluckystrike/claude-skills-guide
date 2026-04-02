@@ -29,7 +29,7 @@ Code intelligence indexing goes beyond simple text search. It's the process of t
 
 Traditional indexing tools like ctags provide symbol tables. Modern approaches like tree-sitter parsers give you ASTs. But combining these with Claude's language understanding creates something more powerful, an index that understands not just what code does, but why it was written that way.
 
-Building a Basic Code Indexing Skill
+## Building a Basic Code Indexing Skill
 
 The foundation of any code intelligence workflow is a Claude Code skill that can parse and analyze your codebase. Here's a skill that extracts function signatures and creates a searchable index:
 
@@ -73,7 +73,7 @@ Use the tool `read_file` to read source files, `bash` for file discovery with `f
 
 This basic skill provides the structure. Now let's make it functional with actual implementation code that your skill body can use.
 
-Parsing Source Files Effectively
+## Parsing Source Files Effectively
 
 The key to good code intelligence is proper parsing. Here's a Python script you can include in your skill that uses tree-sitter for language-agnostic parsing:
 
@@ -139,7 +139,7 @@ if __name__ == '__main__':
 
 This script demonstrates the core pattern: parse code into an AST, then extract meaningful symbols. The output feeds directly into your index.
 
-Building Semantic Relationships
+## Building Semantic Relationships
 
 A code index is only as good as its relationships. Once you have symbols, you need to connect them:
 
@@ -178,7 +178,7 @@ def build_import_graph(source_files: list) -> dict:
 
 The resulting graph lets you answer questions like "what breaks if I change this function?" or "where is this utility used across my codebase?"
 
-Integrating with Claude Code
+## Integrating with Claude Code
 
 Now for the magic: connecting your index to Claude Code for interactive querying. Create a skill that loads your index and enables natural language queries:
 
@@ -223,7 +223,7 @@ Found 3 authentication functions:
 The skill reads your index and uses Claude's understanding to match intent, not just keywords.
 ```
 
-Practical Workflow: Automated Documentation
+## Practical Workflow: Automated Documentation
 
 One powerful application is generating documentation from your index. Here's a workflow that documents APIs automatically:
 
@@ -234,7 +234,7 @@ One powerful application is generating documentation from your index. Here's a w
 
 This approach ensures your docs stay synchronized with code, every time you build, you regenerate from the current state.
 
-Actionable Advice for Implementation
+## Actionable Advice for Implementation
 
 Start small and iterate. Here's a recommended path:
 
@@ -252,12 +252,11 @@ Key principles:
 - Test your parsing: Edge cases in real codebases will break naive parsers
 - Iterate on queries: Natural language search requires tuning based on how developers actually ask questions
 
-Conclusion
+## Conclusion
 
 Claude Code transforms code intelligence from a static, pre-built feature into a customizable workflow. By building your own indexing skills, you create tooling that understands your specific codebase, your team's patterns, and your project's unique requirements.
 
 The investment pays dividends in developer productivity, code quality, and the ability to explore and understand large codebases with ease. Start with the basics, symbol extraction, and build toward the sophisticated semantic understanding your projects need.
-
 
 Related Reading
 

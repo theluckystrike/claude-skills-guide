@@ -13,12 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Keeps Deleting My Comments in Code: Causes and Solutions
+## Claude Code Keeps Deleting My Comments in Code: Causes and Solutions
 
 If you've been working with Claude Code and noticed that your carefully crafted code comments mysteriously disappear after AI-assisted edits, you're not alone. This is one of the most common frustrations developers face when using AI coding assistants. Understanding why this happens and how to prevent it can significantly improve your experience with Claude Code.
 
-Why Claude Code Removes Comments
+## Why Claude Code Removes Comments
 
 Claude Code's primary goal is to improve code quality and maintainability. Sometimes, in its efforts to clean up and refactor code, it may interpret comments as unnecessary or redundant. Several factors contribute to this behavior:
 
@@ -34,7 +33,7 @@ Claude Code's primary goal is to improve code quality and maintainability. Somet
 
 Understanding these triggers helps you write prompts that sidestep the problem rather than fighting Claude's default tendencies.
 
-How to Prevent Comment Deletion
+## How to Prevent Comment Deletion
 
 The good news is that you have several strategies to ensure your comments remain intact while working with Claude Code.
 
@@ -177,7 +176,7 @@ When reviewing a diff, scan specifically for lines that begin with `#`, `//`, `/
 
 Building this habit is cheap insurance. It takes about ten seconds to scan a diff for comment deletions, and catching them before accepting the change is far less disruptive than recovering them from version control after the fact.
 
-Understanding Claude Code's Editing Behavior
+## Understanding Claude Code's Editing Behavior
 
 To effectively work with Claude Code, it helps to understand how its editing decisions are made:
 
@@ -189,7 +188,7 @@ Context Summarization: In long conversations, Claude Code may summarize or omit 
 
 Regeneration vs. Preservation: Claude Code generates text, it does not copy-paste. When it produces a modified version of your code, it is generating new text that represents the modified file. This means anything not explicitly preserved in its generation is subject to omission. The mental model of "Claude is editing my file" is less accurate than "Claude is writing a new version of my file." That shift in mental model explains why persistent rules (in `CLAUDE.md`) and explicit per-prompt instructions are both necessary.
 
-Comparison: Prompt Strategies by Effectiveness
+## Comparison: Prompt Strategies by Effectiveness
 
 Different prompt strategies produce different results when it comes to comment preservation. Here is a practical comparison:
 
@@ -204,7 +203,7 @@ Different prompt strategies produce different results when it comes to comment p
 
 For most developers, the right answer is to combine CLAUDE.md rules with targeted edit requests. The CLAUDE.md rule catches the common case; targeted edit framing handles the edge cases where you're asking Claude to restructure something substantial.
 
-Best Practices for Working with Comments
+## Best Practices for Working with Comments
 
 1. Add explicit instructions: "Preserve all comments" should be part of your standard prompt vocabulary.
 
@@ -223,7 +222,7 @@ Best Practices for Working with Comments
 
 6. Use docstrings for critical explanations: In Python, JavaScript (JSDoc), and similar languages, formal docstring formats are harder for Claude to remove because they carry structural meaning. If an explanation is important enough that losing it would cause harm, move it from a loose inline comment into a docstring that documents the function's behavior, parameters, or return value.
 
-Conclusion
+## Conclusion
 
 While Claude Code's comment deletion behavior can be frustrating, it's entirely preventable with the right approach. By being explicit about your preferences, using configuration files like `CLAUDE.md`, and carefully reviewing changes before applying them, you can maintain your code's documentation while still benefiting from AI-assisted development.
 
@@ -232,7 +231,6 @@ Remember: Claude Code is a tool that follows your instructions. The key is to ma
 ---
 
 *Have you found other effective ways to preserve comments while working with Claude Code? The solution that works best often depends on your specific workflow and project requirements.*
-
 
 Related Reading
 

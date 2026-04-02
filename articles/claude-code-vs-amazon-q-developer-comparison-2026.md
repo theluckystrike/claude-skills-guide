@@ -18,7 +18,7 @@ Amazon Q Developer and Claude Code both target professional software developers,
 
 ---
 
-Pricing Reality
+## Pricing Reality
 
 Amazon Q Developer has a meaningful free tier. Individual developers can use code completion and the chat interface at no cost. Q Business plans for enterprise features start around $20/user/month.
 
@@ -26,7 +26,7 @@ Claude Code has no free tier. it is usage-based via the Anthropic API. A typical
 
 ---
 
-When to Use Claude Code
+## When to Use Claude Code
 
 - You need an agent that executes real, multi-step changes across your codebase
 - You want to build reusable skills for shared team workflows
@@ -34,7 +34,7 @@ When to Use Claude Code
 - Complex refactoring and reasoning tasks are your primary use case
 - You prioritize model quality and agentic capability over inline IDE completion
 
-When to Use Amazon Q Developer
+## When to Use Amazon Q Developer
 
 - Your team is AWS-native and benefits from deep AWS service knowledge
 - You want inline code completion in your IDE
@@ -44,7 +44,7 @@ When to Use Amazon Q Developer
 
 ---
 
-Verdict
+## Verdict
 
 For [pure agentic coding capability and reusable team workflows](/comparisons-hub/), Claude Code is the stronger tool. For AWS-native development, especially when AWS service knowledge, inline completion, and built-in security scanning matter, Amazon Q Developer is genuinely competitive and often free to start.
 
@@ -52,7 +52,7 @@ Teams building on AWS will benefit from both: Q Developer for AWS-specific work 
 
 ---
 
-Combining Both Tools
+## Combining Both Tools
 
 Many developers use both tools strategically rather than choosing one exclusively. Use Amazon Q for AWS infrastructure tasks and Claude Code for application logic, testing, and cross-platform work.
 

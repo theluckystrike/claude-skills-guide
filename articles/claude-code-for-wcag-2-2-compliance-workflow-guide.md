@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for WCAG 2.2 Compliance Workflow Guide
 
 Web accessibility is no longer optional, it's a legal requirement in many jurisdictions and a fundamental aspect of inclusive design. WCAG 2.2 (Web Content Accessibility Guidelines) introduces several new success criteria that address user experience gaps for people with disabilities. This guide shows you how to use Claude Code to build, audit, and maintain WCAG 2.2 compliant applications throughout your development workflow.
 
-Understanding WCAG 2.2 Key Changes
+## Understanding WCAG 2.2 Key Changes
 
 WCAG 2.2 builds on previous versions with three new success criteria that directly impact code implementation:
 
@@ -31,7 +30,7 @@ WCAG 2.2 builds on previous versions with three new success criteria that direct
 
 Claude Code can help you implement these criteria systematically, catching accessibility issues before they reach production.
 
-Setting Up Your Accessibility-First Workflow
+## Setting Up Your Accessibility-First Workflow
 
 Before writing code, configure Claude Code with accessibility-aware prompts. Create a skill that defines your accessibility requirements:
 
@@ -52,9 +51,9 @@ When reviewing code for accessibility, check for:
 
 This skill becomes your accessibility reviewer, automatically checking every component you create.
 
-Implementing Accessible Components with Claude Code
+## Implementing Accessible Components with Claude Code
 
-Focus Management for Modals
+## Focus Management for Modals
 
 One of the most common accessibility failures involves modal dialogs. Claude Code can generate properly accessible modal components:
 
@@ -127,7 +126,7 @@ function Modal({ isOpen, onClose, title, children }) {
 
 Ask Claude Code to explain each accessibility feature in this component, it will walk you through the focus trap, aria attributes, and keyboard handling.
 
-Auditing Existing Code for Violations
+## Auditing Existing Code for Violations
 
 Beyond building new accessible components, Claude Code works as a direct code-analysis partner for existing code. Share your markup and ask Claude to identify WCAG violations:
 
@@ -147,7 +146,7 @@ const pageContent = `
 
 Claude identifies missing landmark regions (`<header>`, `<nav>`, `<main>`), the lack of proper heading hierarchy, and the need for descriptive button text instead of "Click here." This hands-on checker workflow. paste code, get feedback, iterate. catches issues that automated tools miss because it understands intent, not just syntax.
 
-Automated Testing for Accessibility
+## Automated Testing for Accessibility
 
 Integrate accessibility testing into your CI/CD pipeline using established tools. Claude Code can help write these tests:
 
@@ -193,7 +192,7 @@ describe('Accessibility Tests', () => {
 
 Run these tests locally with Claude Code monitoring the output for specific accessibility failures.
 
-Color Contrast Checking Workflow
+## Color Contrast Checking Workflow
 
 Claude Code can analyze your color palette for WCAG compliance. Create a simple contrast checker:
 
@@ -238,7 +237,7 @@ function checkCompliance(ratio) {
 
 Ask Claude Code to generate a comprehensive color audit of your design system, it will check each color combination against these thresholds.
 
-Real-Time Accessibility Review Process
+## Real-Time Accessibility Review Process
 
 Establish a workflow where Claude Code reviews accessibility before any merge:
 
@@ -264,7 +263,7 @@ jobs:
         run: npx axe https://staging.example.com --exit
 ```
 
-Actionable Tips for WCAG 2.2 Compliance
+## Actionable Tips for WCAG 2.2 Compliance
 
 - Start with semantic HTML: Use `<button>`, `<a>`, `<nav>`, `<main>` instead of `<div>` for interactive elements
 - Test with keyboard only: Navigate your entire application using only Tab, Shift+Tab, Enter, and Escape
@@ -272,11 +271,11 @@ Actionable Tips for WCAG 2.2 Compliance
 - Document ARIA usage: Explain why each ARIA attribute exists in code comments
 - Automate early: Integrate accessibility testing from day one rather than retrofitting later
 
-Limitations and Complementary Testing
+## Limitations and Complementary Testing
 
 While Claude Code is powerful for code-level analysis, automated tools cannot detect all accessibility issues. Things like whether alt text meaningfully describes an image, whether error messages are helpful, or whether the overall user experience is usable for people with disabilities require human judgment. The most effective accessibility strategy combines automated testing with axe-core, AI-assisted code review with Claude Code, manual testing with screen readers (NVDA, VoiceOver, JAWS), and user testing with people who have disabilities.
 
-Conclusion
+## Conclusion
 
 Building WCAG 2.2 compliant applications doesn't have to be a manual, time-consuming process. By integrating Claude Code into your workflow, with accessibility-focused skills, automated testing, and systematic component patterns, you create a sustainable system that catches issues early and maintains compliance over time.
 

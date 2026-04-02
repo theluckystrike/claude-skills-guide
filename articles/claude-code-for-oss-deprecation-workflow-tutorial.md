@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for OSS Deprecation Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline open source deprecation workflows, from planning deprecated features to communicating changes to users."
@@ -14,12 +13,11 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 
 Managing feature deprecations in open source projects is one of the most challenging aspects of project maintenance. You need to balance backward compatibility with the freedom to evolve your codebase, communicate changes clearly to users, and ensure a smooth migration path. Claude Code provides powerful capabilities to automate and systematize this process, making deprecations less painful for both maintainers and users.
 
-Understanding OSS Deprecation Challenges
+## Understanding OSS Deprecation Challenges
 
 Open source maintainers face unique challenges when deprecating features. Your user base may include thousands of developers with varying levels of engagement, some closely follow your releases, others stick with older versions for years. When you deprecate a feature, you must consider:
 
@@ -27,7 +25,7 @@ User communication becomes critical. Users need clear warnings, migration guides
 
 Claude Code can help you create a structured deprecation workflow that addresses these challenges systematically.
 
-Setting Up a Deprecation Skill
+## Setting Up a Deprecation Skill
 
 The first step is creating a dedicated Claude Code skill that handles all deprecation-related tasks. This skill encapsulates your project's deprecation policies and provides consistent handling across your codebase.
 
@@ -58,7 +56,7 @@ Actions
 
 This skill ensures every deprecation follows your established process.
 
-Implementing Deprecation Detection
+## Implementing Deprecation Detection
 
 Claude Code can automatically detect code patterns that indicate deprecation needs. Create detection rules that scan your codebase:
 
@@ -96,7 +94,7 @@ def detect_deprecation_patterns(code_changes):
 
 This automation catches deprecation candidates early in the development process.
 
-Creating Deprecation Notices
+## Creating Deprecation Notices
 
 Clear, actionable deprecation notices help users understand what changed and how to adapt. Claude Code can generate standardized deprecation messages:
 
@@ -123,7 +121,7 @@ function generateDeprecationNotice(deprecation) {
 
 Include these notices in multiple formats, inline code comments, documentation, and CHANGELOG entries.
 
-Building Migration Guides
+## Building Migration Guides
 
 Automated migration tools significantly reduce user friction. Claude Code can help create codemods and migration scripts:
 
@@ -184,7 +182,7 @@ Timeline
 - Removal planned: v3.0.0
 ```
 
-Managing Version Communication
+## Managing Version Communication
 
 Claude Code can help manage the complex communication around deprecations across different version branches:
 
@@ -212,7 +210,7 @@ deprecation_policy:
 
 This ensures consistent communication regardless of who handles the deprecation.
 
-Automating Deprecation Workflows
+## Automating Deprecation Workflows
 
 Integrate deprecation handling into your existing development workflow:
 
@@ -246,7 +244,7 @@ jobs:
 
 This automation catches missing documentation before deprecations reach users.
 
-Best Practices for Deprecation Management
+## Best Practices for Deprecation Management
 
 Follow these principles for successful deprecation management:
 
@@ -269,7 +267,7 @@ compatibility_matrix = {
 }
 ```
 
-Measuring Deprecation Success
+## Measuring Deprecation Success
 
 Track deprecation metrics to ensure smooth transitions:
 
@@ -288,7 +286,7 @@ def calculate_deprecation_metrics(project):
 
 High migration rates and low support ticket volume indicate successful deprecations.
 
-Conclusion
+## Conclusion
 
 Managing deprecations doesn't have to be chaotic. Claude Code helps you systematize the process, ensuring consistent communication, clear migration paths, and smooth transitions for your users. Start by creating a deprecation skill, implement detection automation, and build comprehensive migration guides. Your users will appreciate the clarity, and your project will evolve more smoothly.
 

@@ -15,12 +15,9 @@ score: 7
 
 {% raw %}
 
-
-Claude Code for Grafana Plugin Development Workflow
-
 Grafana plugins extend Grafana's capabilities with custom visualizations, data sources, and panels. Developing these plugins involves multiple steps, from scaffolding to debugging, and Claude Code can significantly accelerate each phase. This guide shows you how to create a Claude skill tailored for Grafana plugin development, complete with practical examples and workflow patterns.
 
-Why Use Claude Code for Grafana Plugin Development
+## Why Use Claude Code for Grafana Plugin Development
 
 Grafana plugin development requires knowledge of React, TypeScript, the Grafana SDK, and often backend Go or Python code for data source plugins. The complexity can be overwhelming, especially when switching between different plugin types (data source, panel, app, or scene).
 
@@ -32,7 +29,7 @@ Claude Code helps by:
 
 A well-designed skill centralizes these capabilities, making plugin development faster and more consistent.
 
-Creating a Grafana Plugin Development Skill
+## Creating a Grafana Plugin Development Skill
 
 The first step is creating a skill file that captures the plugin development workflow. Save this as `grafana-plugin-dev.md` in your skills directory.
 
@@ -56,7 +53,7 @@ Available Commands
 
 This minimal skill declaration gives Claude context about your development workflow. You can expand it with more specific commands as your needs grow.
 
-Scaffolding a New Plugin
+## Scaffolding a New Plugin
 
 When starting a new Grafana plugin, you typically use `@grafana/create-plugin`. Claude can guide you through this process or generate the necessary files manually if you need more control.
 
@@ -82,11 +79,11 @@ my-panel-plugin/
 
 Claude can help you customize each file. For example, to add a custom option to your panel, ask Claude to generate the options schema and the corresponding React component.
 
-Writing Panel Plugin Code
+## Writing Panel Plugin Code
 
 A typical panel plugin needs three main components: the options schema, the panel component, and the module registration. Here's how Claude helps you write each.
 
-Panel Options Schema
+## Panel Options Schema
 
 Define your panel's configurable options using the Grafana schema:
 
@@ -121,7 +118,7 @@ export const schema: PanelOptionsSerializer = {
 };
 ```
 
-Panel Component
+## Panel Component
 
 The React component renders your visualization:
 
@@ -154,11 +151,11 @@ export const SimplePanel: React.FC<PanelProps<SimpleOptions>> = ({
 
 Claude can generate boilerplate like this instantly, letting you focus on the actual visualization logic.
 
-Data Source Plugin Development
+## Data Source Plugin Development
 
 Data source plugins require additional components: query executors, config pages, and backend code. Here's a typical workflow.
 
-Query Executor
+## Query Executor
 
 The query executor runs when Grafana requests data:
 
@@ -189,7 +186,7 @@ async function fetchData(query: MyQuery, range: TimeRange) {
 }
 ```
 
-Config Page
+## Config Page
 
 Users configure your data source through a config page:
 
@@ -221,7 +218,7 @@ export const ConfigEditor: React.FC<DataSourcePluginOptionsEditorProps<MyDataSou
 };
 ```
 
-Testing and Debugging
+## Testing and Debugging
 
 Claude helps you debug plugin issues by reading logs, explaining error messages, and suggesting fixes. Common issues include:
 
@@ -243,7 +240,7 @@ try {
 
 TypeScript errors: Run `npm run build` to see compilation errors. Claude can explain type mismatches and suggest fixes.
 
-Best Practices for Plugin Development with Claude
+## Best Practices for Plugin Development with Claude
 
 1. Start with the official scaffolding rather than writing from scratch, this ensures compatibility with Grafana's plugin infrastructure.
 
@@ -255,7 +252,7 @@ Best Practices for Plugin Development with Claude
 
 5. Document your skill, if you create custom commands for your workflow, document them clearly so Claude knows when to use each pattern.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Grafana plugin development from a complex, multi-step process into a guided workflow. By creating a dedicated skill for plugin development, you get instant access to scaffolding, code generation, and debugging assistance, all tailored to the Grafana plugin SDK. Start with a simple skill definition and expand it as you encounter new plugin patterns. The result is faster development cycles and more reliable plugins.
 {% endraw %}

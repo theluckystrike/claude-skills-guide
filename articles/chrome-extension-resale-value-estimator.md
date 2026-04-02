@@ -13,7 +13,7 @@ categories: [guides]
 
 Building a Chrome extension takes significant time and effort. When you decide to sell your extension. whether to pivot to new projects, monetize your work, or simply move on. understanding its worth becomes essential. This guide walks you through the process of estimating your Chrome extension's resale value, with practical methods you can apply immediately, including the formulas that serious buyers actually use.
 
-Why Estimate Your Extension's Value
+## Why Estimate Your Extension's Value
 
 Before listing your extension on marketplaces or approaching buyers, having a clear valuation helps you:
 
@@ -24,11 +24,11 @@ Before listing your extension on marketplaces or approaching buyers, having a cl
 
 Without a structured valuation, you risk either leaving significant money on the table or pricing yourself out of a deal entirely. A $500/month extension might sell for $12,000 at the wrong multiplier or $30,000 at the right one. and which outcome you get depends almost entirely on preparation.
 
-Key Metrics That Determine Value
+## Key Metrics That Determine Value
 
 Several factors directly influence how much buyers will pay for your Chrome extension.
 
-Active Users and Growth Trajectory
+## Active Users and Growth Trajectory
 
 The number of active users forms the foundation of any valuation. A Chrome extension with 10,000 daily active users commands significantly more value than one with 500. However, growth trajectory matters equally. a declining user base reduces value, while consistent growth increases it.
 
@@ -47,7 +47,7 @@ console.log(`Retention Rate: ${retentionRate}%`); // 80%
 
 Buyers want at least 90 days of user data, and ideally 6-12 months. A trend line matters more than a single data point. An extension at 8,000 MAU and growing 5% month-over-month is worth more than one at 12,000 MAU that has been flat for a year.
 
-Revenue Streams
+## Revenue Streams
 
 If your extension generates revenue through freemium models, subscriptions, or one-time purchases, current and projected revenue heavily influences valuation. Buyers typically apply multipliers to annual revenue. extensions with proven monetization fetch 24-48x annual revenue, depending on other factors.
 
@@ -60,21 +60,21 @@ Document all revenue sources:
 
 Subscription revenue gets the highest multiples because it is predictable and recurring. One-time purchase revenue gets lower multiples because it requires constant user acquisition. Advertising and affiliate revenue sits in the middle. reliable but subject to platform and partner risk.
 
-Review Quality and Quantity
+## Review Quality and Quantity
 
 A strong rating (4.5+ stars) with substantial reviews signals quality and reduces perceived risk for buyers. Extensions with thousands of reviews see 20-30% higher valuations than similar extensions with fewer reviews.
 
 The distribution of reviews matters as well. An extension with 4.7 stars from 2,000 reviews carries more weight than one with 4.9 stars from 40 reviews. Buyers understand that a large review set with a high average is hard to fake and reflects genuine user satisfaction.
 
-Technical Debt and Maintainability
+## Technical Debt and Maintainability
 
 Extensions with clean, well-documented codebases are more valuable than those with technical debt. Buyers need to maintain and update your extension after purchase, so code quality directly affects perceived value.
 
 This is the factor sellers most often underestimate. A buyer who must spend 40 hours understanding undocumented code before shipping their first update will discount accordingly. often by 15-25% of the otherwise-calculated value.
 
-Valuation Methods
+## Valuation Methods
 
-Revenue-Based Valuation
+## Revenue-Based Valuation
 
 For monetized extensions, start with this formula:
 
@@ -102,11 +102,11 @@ Here is a more complete multiplier reference based on current market conditions:
 
 These multipliers assume the extension is not dependent on a single platform or partner that could change terms. If your entire revenue depends on one affiliate relationship or one enterprise client, buyers will apply a discount to reflect that concentration risk.
 
-User-Based Valuation
+## User-Based Valuation
 
 For free extensions with large user bases, apply a per-user valuation:
 
-Value = Active Users x Value Per User
+## Value = Active Users x Value Per User
 
 Typical values range from $0.50-$5.00 per monthly active user, depending on engagement and industry:
 
@@ -133,7 +133,7 @@ console.log(`Estimated Value: $${value}`); // $30,000
 
 Developer-focused extensions command the highest per-user values because developers are high-value advertising targets, more likely to pay for premium features, and more willing to recommend tools to colleagues. Social extensions have the lowest per-user value despite often having the largest raw user counts.
 
-Asset-Based Valuation
+## Asset-Based Valuation
 
 For extensions with valuable assets beyond the code:
 
@@ -146,7 +146,7 @@ Add 10-50% to your valuation for these assets.
 
 An email list of 15,000 verified users of your extension is a meaningful asset. A buyer can re-engage that list if Chrome Web Store changes affect discoverability. A proprietary dataset built up through user interactions may be more valuable than the extension itself, depending on the niche.
 
-Triangulating Across Methods
+## Triangulating Across Methods
 
 In practice, use all three methods and compare the results. If revenue-based valuation gives you $50,000 but user-based valuation gives you $8,000, the gap signals something worth investigating. perhaps your revenue is unusually high relative to your user base (is it sustainable?), or your engagement metrics are weaker than they look.
 
@@ -190,17 +190,17 @@ with_assets: $89,700
 
 A large gap between revenue-based and user-based estimates should prompt you to reconsider assumptions before presenting a number to buyers.
 
-Preparing Your Extension for Sale
+## Preparing Your Extension for Sale
 
 Before listing, maximize value by addressing these areas:
 
-Clean Up Your Codebase
+## Clean Up Your Codebase
 
 Refactor obvious issues and add documentation. Buyers need to understand how your extension works quickly.
 
 At minimum, add a `ARCHITECTURE.md` file that explains the major components, how they communicate, and what each file does. Buyers and their technical evaluators will read this first. A well-written architecture document can reduce buyer hesitation significantly and compress due diligence timelines.
 
-Organize Your Data
+## Organize Your Data
 
 Compile comprehensive reports on:
 
@@ -212,7 +212,7 @@ Compile comprehensive reports on:
 
 Transparency about known issues is counterintuitively valuable. Buyers are sophisticated enough to discover problems during due diligence. Disclosing them upfront signals trustworthiness and prevents deal collapse late in the process.
 
-Transfer Readiness
+## Transfer Readiness
 
 Ensure you can transfer:
 
@@ -223,7 +223,7 @@ Ensure you can transfer:
 
 The Chrome Web Store does not support direct account transfers. You will need to either transfer the developer account credentials (which requires the buyer to trust your cleanup of all sensitive data), or publish to a new account and redirect users. Plan which approach you will offer before listing.
 
-Common Valuation Mistakes
+## Common Valuation Mistakes
 
 Avoid these pitfalls when estimating your extension's value:
 
@@ -237,7 +237,7 @@ Setting emotional prices: Your personal investment does not always translate to 
 
 Ignoring churn rate: If 40% of your users uninstall within 30 days, your MAU figures are misleading. Calculate 30-day and 90-day retention and present them honestly.
 
-Where to Sell Your Extension
+## Where to Sell Your Extension
 
 Several marketplaces help Chrome extension sales:
 

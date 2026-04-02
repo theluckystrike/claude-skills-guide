@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for SRE Toil Automation Workflow
 
@@ -21,7 +20,7 @@ Site Reliability Engineering (SRE) teams spend significant time on repetitive op
 
 This guide provides a practical workflow for using Claude Code to identify, automate, and manage SRE toil.
 
-Understanding Toil in Your SRE Practice
+## Understanding Toil in Your SRE Practice
 
 Before automating, you need to identify what constitutes toil in your environment. Common sources include:
 
@@ -33,7 +32,7 @@ Before automating, you need to identify what constitutes toil in your environmen
 
 The key principle: if a task is repetitive, follows predictable patterns, and doesn't require human judgment, it's a candidate for automation with Claude Code.
 
-Setting Up Claude Code for SRE Workflows
+## Setting Up Claude Code for SRE Workflows
 
 First, configure Claude Code with the necessary tools for SRE operations:
 
@@ -55,11 +54,11 @@ Create a `.claude/settings.json` for your SRE automation:
 }
 ```
 
-Automating Incident Response with Claude Code
+## Automating Incident Response with Claude Code
 
 One of the highest-value automation opportunities is incident response. Claude Code can assist with initial triage, context gathering, and runbook execution.
 
-Building an Incident Triage Agent
+## Building an Incident Triage Agent
 
 Create a Claude Code agent that triages alerts:
 
@@ -115,7 +114,7 @@ class IncidentTriageAgent:
         }
 ```
 
-Integrating with Alerting Systems
+## Integrating with Alerting Systems
 
 Connect Claude Code to your alert pipeline:
 
@@ -124,7 +123,7 @@ Process PagerDuty webhooks
 claude --print "Process this PagerDuty alert and provide triage steps: $(cat alert.json)"
 ```
 
-Automating Log Analysis and Debugging
+## Automating Log Analysis and Debugging
 
 Log analysis is a classic toil source. Claude Code can automatically:
 
@@ -133,7 +132,7 @@ Log analysis is a classic toil source. Claude Code can automatically:
 3. Correlate events across services
 4. Generate preliminary findings
 
-Log Analysis Workflow
+## Log Analysis Workflow
 
 ```bash
 #!/bin/bash
@@ -164,7 +163,7 @@ echo "Top Errors:" >> analysis.json
 cat errors.txt >> analysis.json
 ```
 
-Deployment Verification Automation
+## Deployment Verification Automation
 
 Automate post-deployment verification with Claude Code:
 
@@ -201,11 +200,11 @@ Use with Claude Code
 claude --print "Verify deployment health for my-service in the production environment"
 ```
 
-Infrastructure as Code and CI/CD Automation
+## Infrastructure as Code and CI/CD Automation
 
 Beyond incident response, Claude Code handles infrastructure generation and pipeline automation that SRE teams manage daily.
 
-Generating Terraform Configurations
+## Generating Terraform Configurations
 
 Instead of hand-writing YAML and HCL, describe your infrastructure needs conversationally:
 
@@ -217,7 +216,7 @@ production environment
 
 Claude generates the complete Terraform configuration including route tables, NAT gateways, and security groups, following infrastructure best practices.
 
-CI/CD Pipeline Patterns
+## CI/CD Pipeline Patterns
 
 Automate pipeline generation for common scenarios:
 
@@ -225,7 +224,7 @@ Automate pipeline generation for common scenarios:
 - PR automation: Automatic test runs, deployment previews, changelog generation from commits, and Slack notifications on build status
 - Container orchestration: Kubernetes manifest generation, horizontal pod autoscaler configs, and cross-namespace resource management
 
-Configuration and Secrets Management
+## Configuration and Secrets Management
 
 SRE teams can automate configuration drift detection across environments:
 
@@ -236,7 +235,7 @@ identify differences in environment variables
 
 For secrets, Claude helps integrate with AWS Secrets Manager, HashiCorp Vault, and Kubernetes secrets, including credential rotation workflows.
 
-Creating Self-Service Runbooks
+## Creating Self-Service Runbooks
 
 Transform static runbooks into executable Claude Code workflows:
 
@@ -278,9 +277,9 @@ claude --print "Execute the database connection pool runbook. Severity: critical
 ```
 ```
 
-Best Practices for SRE Toil Automation
+## Best Practices for SRE Toil Automation
 
-Start with Measurement
+## Start with Measurement
 
 Before automating, measure your toil:
 
@@ -288,7 +287,7 @@ Before automating, measure your toil:
 - Categorize tasks by type and frequency
 - Identify tasks that take >30 minutes per occurrence
 
-Prioritize High-Impact Automations
+## Prioritize High-Impact Automations
 
 Focus automation efforts on:
 
@@ -296,7 +295,7 @@ Focus automation efforts on:
 2. High-stress contexts: On-call, incident response
 3. Error-prone manual processes: Where human error is likely
 
-Maintain Human Oversight
+## Maintain Human Oversight
 
 Even with automation, maintain human oversight:
 
@@ -305,7 +304,7 @@ Even with automation, maintain human oversight:
 - Set up alerting for automation failures
 - Regular reviews of automation effectiveness
 
-Version Control Your Automations
+## Version Control Your Automations
 
 Treat your Claude Code workflows as code:
 
@@ -315,7 +314,7 @@ git commit -m "Add deployment verification automation"
 git push origin sre-automation
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms SRE toil management from reactive firefighting to proactive automation. By identifying repetitive tasks, building targeted agents, and integrating with existing tooling, you can significantly reduce operational burden.
 

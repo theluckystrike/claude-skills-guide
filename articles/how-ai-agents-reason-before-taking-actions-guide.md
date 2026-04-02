@@ -13,12 +13,9 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-How AI Agents Reason Before Taking Actions: A Complete Guide
-
 Understanding how AI agents reason before taking actions is crucial for developers working with Claude Code and similar AI assistants. This guide explores the internal reasoning processes that make AI agents effective at executing complex tasks while maintaining safety and accuracy.
 
-The Foundation: Reasoning Before Acting
+## The Foundation: Reasoning Before Acting
 
 AI agents don't simply respond to prompts, they engage in deliberate thought processes that mirror human problem-solving. When you ask Claude Code to refactor a codebase or debug an issue, the agent first analyzes the request, breaks it down into manageable components, and plans an execution strategy before writing a single line of code.
 
@@ -31,7 +28,7 @@ This reasoning-first approach is what distinguishes capable AI agents from simpl
 
 The contrast with naive automation is stark. A simple script executes instructions mechanically. An AI agent that reasons first will notice, for example, that your request to "delete all unused imports" might break a module that uses star imports, and it will flag that ambiguity before touching a file.
 
-The Reasoning Loop: Observe, Think, Act, Verify
+## The Reasoning Loop: Observe, Think, Act, Verify
 
 AI agent reasoning follows a cyclical pattern that runs continuously throughout task execution. Understanding this loop helps you work with agents more effectively.
 
@@ -45,7 +42,7 @@ Verify: The agent checks whether the action produced the expected result and upd
 
 This is sometimes called a ReAct loop (Reasoning + Acting), and it is the foundation of modern agentic behavior. Claude Code runs this loop implicitly every time you hand it a task.
 
-How Claude Code Plans Its Approach
+## How Claude Code Plans Its Approach
 
 When you initiate a task, Claude Code engages in a multi-stage reasoning process. Let's examine how this works in practice with a concrete example.
 
@@ -66,7 +63,7 @@ This planning phase happens internally, and you can often observe it through Cla
 
 The depth of this planning phase scales with task complexity. For a one-line bug fix, planning takes seconds. For a cross-cutting feature that touches authentication, routing, database schema, and tests, the agent may spend several tool calls just gathering context before proposing any changes.
 
-Practical Example: Debugging with Reasoning
+## Practical Example: Debugging with Reasoning
 
 Consider a scenario where you're debugging a failing test. Here's how Claude Code reasons through the problem:
 
@@ -98,7 +95,7 @@ Agent reasoning trace (what happens before any edit):
 
 This systematic reasoning prevents the agent from making random changes that could introduce new bugs. The fix is targeted and justified by evidence, not guesswork.
 
-Chain of Thought: Making Reasoning Visible
+## Chain of Thought: Making Reasoning Visible
 
 One of Claude Code's powerful features is its ability to make reasoning visible through structured prompts. When you ask the agent to explain its thought process, it can break down complex decisions into clear steps.
 
@@ -120,7 +117,7 @@ This transparency helps you understand and validate the agent's decisions before
 
 When the agent externalizes its reasoning, you become a genuine reviewer rather than a passive observer. You can catch misunderstandings early, before they turn into ten edited files that need to be reverted.
 
-Tools That Enable Reasoning
+## Tools That Enable Reasoning
 
 Claude Code provides several tools that support the reasoning process:
 
@@ -136,7 +133,7 @@ Each tool enables the agent to gather the information needed for informed decisi
 
 A key pattern to notice: the agent uses read-only tools heavily before using write tools. A well-reasoned session will show multiple `read_file`, `bash`, and `grep` calls before a single `edit` call. If you see an agent jumping to edits immediately, that is a signal that the reasoning phase was shortcut.
 
-Where AI Agent Reasoning Can Go Wrong
+## Where AI Agent Reasoning Can Go Wrong
 
 Understanding failure modes helps you compensate with better prompting and oversight.
 
@@ -148,7 +145,7 @@ Ambiguous goals: The agent reasons about what you asked, not necessarily what yo
 
 Action without verification: Agents sometimes skip the verify step, especially on fast tasks. Ask the agent to run tests or check output after each significant change.
 
-Comparing AI Reasoning Approaches
+## Comparing AI Reasoning Approaches
 
 Not all AI agents reason the same way. Here is a quick comparison of common approaches:
 
@@ -161,7 +158,7 @@ Not all AI agents reason the same way. Here is a quick comparison of common appr
 
 Claude Code primarily uses the ReAct loop approach, which makes it adaptive, it can change course mid-task when new information changes the picture. This adaptability is what makes it genuinely useful for real codebases rather than toy examples.
 
-Best Practices for Working with AI Reasoning
+## Best Practices for Working with AI Reasoning
 
 To get the best results from AI agents, structure your requests to enable effective reasoning:
 
@@ -174,7 +171,7 @@ To get the best results from AI agents, structure your requests to enable effect
 
 When Claude Code knows what you're trying to achieve and what constraints exist, it can reason more effectively about the best way to accomplish your goals.
 
-A Real-World Workflow: Feature Addition with Full Reasoning
+## A Real-World Workflow: Feature Addition with Full Reasoning
 
 Here is what a well-structured agent session looks like from start to finish when adding a rate-limiting feature to a REST API:
 
@@ -202,7 +199,7 @@ Step 4 - Verify
 
 Notice that the agent checked in at the plan stage before touching any files. That one pause catches scope misunderstandings before they compound.
 
-Conclusion
+## Conclusion
 
 AI agents like Claude Code reason through problems systematically before taking action. This reasoning-first approach ensures that the agent gathers necessary information, evaluates options, and plans execution strategies that align with your goals. By understanding this process, you can provide better context and guidance that helps the agent reason more effectively on your behalf.
 

@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Design System Tokens: A Frontend Developer Guide
 
@@ -41,7 +40,7 @@ There are two levels of tokens worth distinguishing from the start:
 
 Semantic tokens are the workhorse of a design system. When you change a semantic token's underlying value (say, updating `primary.500` from `#0066CC` to `#0052A3`), every component that references it updates automatically.
 
-Working with Color Tokens
+## Working with Color Tokens
 
 Color tokens in the canvas-design skill follow a hierarchical naming convention. Here's how to apply them effectively:
 
@@ -68,7 +67,7 @@ const cardTitle = {
 
 The token hierarchy uses scales from 50 to 900, where lower numbers are lighter and higher numbers are darker. This scale system allows you to create visual hierarchy without guessing hex values.
 
-Practical Color Scale Reference
+## Practical Color Scale Reference
 
 When you need to choose a shade, this mental model helps:
 
@@ -87,7 +86,7 @@ When you need to choose a shade, this mental model helps:
 
 Using this scale consistently means your interactive states (default → hover → active) will always follow the pattern `500 → 600 → 700`, which creates a predictable visual rhythm that users learn quickly.
 
-Accessible Color Combinations
+## Accessible Color Combinations
 
 Color tokens also help you maintain WCAG contrast ratios. Here are combinations that reliably pass AA contrast (4.5:1 for normal text):
 
@@ -105,7 +104,7 @@ const accessiblePairs = {
 
 Claude Code can audit your component library against these pairs and flag any combinations that fall below the threshold.
 
-Typography Tokens for Consistent Text
+## Typography Tokens for Consistent Text
 
 Typography tokens handle font families, sizes, weights, and line heights. Here's a practical example:
 
@@ -133,7 +132,7 @@ const captionStyles = {
 
 Typography tokens automatically adapt to your theme configuration, making global font changes straightforward.
 
-Building a Type Scale
+## Building a Type Scale
 
 A well-designed type scale creates hierarchy without needing to reach for font weight or color. The canvas-design skill ships with a modular scale that covers most needs:
 
@@ -164,7 +163,7 @@ const blogPostStyles = {
 
 When Claude Code generates a layout, it picks from these scales automatically. You can ask it to "use a tighter type scale" or "make the heading hierarchy more pronounced" and it will adjust token references accordingly.
 
-Spacing and Layout Tokens
+## Spacing and Layout Tokens
 
 Spacing tokens use a consistent scale that ensures visual rhythm throughout your interface:
 
@@ -184,7 +183,7 @@ const formField = {
 
 The spacing scale typically follows: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64. Each step increases the spacing by a consistent multiplier.
 
-Spatial Reasoning with the Scale
+## Spatial Reasoning with the Scale
 
 A common mistake is reaching for arbitrary pixel values when a token would do. Here's a practical mapping for common layout scenarios:
 
@@ -216,7 +215,7 @@ const sectionSeparator = {
 
 Using the scale consistently means your eye picks up the rhythm intuitively. Components that use `gap: '4'` visually group themselves; components separated by `marginTop: '12'` feel like distinct sections.
 
-Shadow and Elevation Tokens
+## Shadow and Elevation Tokens
 
 Shadows create depth and indicate interactive states. The canvas-design skill provides tokens for various elevation levels:
 
@@ -239,7 +238,7 @@ const modalOverlay = {
 };
 ```
 
-Shadow as a Communication Tool
+## Shadow as a Communication Tool
 
 Elevation tokens do more than look nice. they communicate interactive affordance. A consistent elevation system tells users what they can click and what will appear on top of what:
 
@@ -270,7 +269,7 @@ const tooltip = {
 };
 ```
 
-Border and Radius Tokens
+## Border and Radius Tokens
 
 Consistent border and radius values tie your interface together:
 
@@ -297,7 +296,7 @@ const buttonPill = {
 };
 ```
 
-Radius as Brand Personality
+## Radius as Brand Personality
 
 The border radius scale is one of the most powerful brand levers available. The same layout with different radii reads as completely different personalities:
 
@@ -335,7 +334,7 @@ const saasTheme = {
 
 Claude Code will ask about your brand personality when you start a canvas-design session. Providing this context up front means the generated tokens will match your product's voice without manual adjustment.
 
-Combining Tokens for Component Patterns
+## Combining Tokens for Component Patterns
 
 The real power of design tokens emerges when you combine them into reusable component patterns:
 
@@ -374,7 +373,7 @@ const createButton = (variant = 'primary') => {
 };
 ```
 
-Building a Form Component Library
+## Building a Form Component Library
 
 Forms are where token consistency matters most. Users fill out dozens of forms. inconsistency in input styling creates cognitive friction. Here's a complete token-driven form system:
 
@@ -436,7 +435,7 @@ const errorText = {
 
 Every state is handled through token references. When you update your brand color, the focus ring updates automatically. When you switch to dark mode, the theme layer swaps `white` and `gray.900` without touching the component code.
 
-Theme Customization
+## Theme Customization
 
 The canvas-design skill supports theme customization through token overrides:
 
@@ -466,7 +465,7 @@ const customTheme = {
 };
 ```
 
-Implementing Dark Mode with Semantic Tokens
+## Implementing Dark Mode with Semantic Tokens
 
 Dark mode is where the semantic token layer pays for itself. If you've used primitive tokens directly (`gray.900` for text), dark mode requires touching every component. Semantic tokens let you flip the theme in one place:
 
@@ -499,7 +498,7 @@ const cardWithDarkMode = {
 
 Claude Code understands this semantic layer pattern and will generate components using semantic tokens rather than primitives when you specify that dark mode support is required.
 
-Best Practices for Token Usage
+## Best Practices for Token Usage
 
 1. Prefer semantic tokens: Use `text-primary` over `gray-900` when the meaning is clear. Semantic tokens communicate intent.
 
@@ -517,7 +516,7 @@ Best Practices for Token Usage
 
 8. Keep primitive and semantic layers separate: Your primitive palette (`blue.500`, `red.600`) should never be referenced in components. Enforce this via lint rules or code review guidelines.
 
-Token Naming Anti-Patterns to Avoid
+## Token Naming Anti-Patterns to Avoid
 
 ```javascript
 // BAD. hard to refactor, no intent
@@ -537,7 +536,7 @@ const goodTokenUsage = {
 };
 ```
 
-Conclusion
+## Conclusion
 
 Design system tokens transform how you build user interfaces. By using Claude Code's canvas-design skill token system, you create applications that are consistent, maintainable, and themable. Start with the basic color, typography, and spacing tokens, then build up to more complex component patterns as your familiarity grows.
 

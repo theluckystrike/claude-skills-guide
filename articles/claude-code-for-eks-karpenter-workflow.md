@@ -13,11 +13,10 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Managing Amazon EKS clusters with Karpenter doesn't have to be complex. With Claude Code, you can automate Karpenter provisioning, optimize node lifecycle management, and build reproducible infrastructure workflows. This guide walks you through practical examples to integrate Claude Code into your EKS Karpenter operations.
 
-Understanding the EKS Karpenter Workflow
+## Understanding the EKS Karpenter Workflow
 
 Karpenter is an open-source Kubernetes autoscaler that dynamically provisions nodes based on workload requirements. It replaces the traditional Kubernetes Cluster Autoscaler (CAS) with faster, more cost-effective node provisioning. Understanding the differences helps you see where Claude Code adds the most value:
 
@@ -41,7 +40,7 @@ The typical Karpenter workflow involves four phases:
 
 Claude Code can assist at every phase. Let's walk through each one.
 
-Setting Up Claude Code for EKS Karpenter
+## Setting Up Claude Code for EKS Karpenter
 
 Before diving into workflows, ensure Claude Code is configured with appropriate AWS credentials and kubectl access. You'll need:
 
@@ -88,11 +87,11 @@ helm upgrade --install karpenter oci://public.ecr.aws/karpenter/karpenter \
   --wait
 ```
 
-Creating Karpenter NodeClasses and Provisioners with Claude Code
+## Creating Karpenter NodeClasses and Provisioners with Claude Code
 
 One of the most powerful applications of Claude Code is generating Karpenter configurations from a plain-language description. Instead of memorizing the exact YAML schema, you describe your requirements conversationally.
 
-EC2NodeClass
+## EC2NodeClass
 
 The `EC2NodeClass` defines AWS-specific settings that all NodePools in a cluster share or reference:
 
@@ -132,7 +131,7 @@ spec:
 
 Claude Code can generate this file after you describe your VPC tagging scheme, the IAM role name, and any custom `userData` requirements. It will also validate that your subnet and security group selector tags exist in your account.
 
-Provisioner for Compute-Intensive Workloads
+## Provisioner for Compute-Intensive Workloads
 
 For a Provisioner targeting compute-intensive workloads, you might ask Claude Code to generate a configuration that:
 
@@ -172,11 +171,11 @@ spec:
 
 Note the use of `ttlSecondsUntilExpired: 86400`. This ensures nodes are regularly recycled, which keeps them on the latest AMI and reduces the risk of long-lived configuration drift. Claude Code can help you choose an appropriate TTL based on your patching policy.
 
-Building Automated Node Pool Management
+## Building Automated Node Pool Management
 
 NodePools allow you to define different node characteristics for various workload types. A well-structured production environment typically uses three or more NodePools with different cost and performance profiles:
 
-General Purpose NodePool
+## General Purpose NodePool
 
 ```yaml
 apiVersion: karpenter.sh/v1
@@ -216,7 +215,7 @@ spec:
     expireAfter: 720h             # 30 days
 ```
 
-Memory-Optimized NodePool
+## Memory-Optimized NodePool
 
 ```yaml
 apiVersion: karpenter.sh/v1
@@ -255,7 +254,7 @@ spec:
     consolidateAfter: 60s
 ```
 
-Spot NodePool for Batch Workloads
+## Spot NodePool for Batch Workloads
 
 ```yaml
 apiVersion: karpenter.sh/v1
@@ -300,7 +299,7 @@ spec:
 
 Claude Code can generate these configurations and also create corresponding Helm values files for GitOps deployments. Ask it to produce a Helmfile or Kustomize overlay that manages all three NodePools as a single unit.
 
-Matching Workloads to NodePools
+## Matching Workloads to NodePools
 
 Pods select a NodePool through `nodeSelector` or `nodeAffinity`. Here is a deployment using the memory-optimized pool:
 
@@ -336,11 +335,11 @@ spec:
               memory: "4Gi"
 ```
 
-Implementing Cost Optimization Workflows
+## Implementing Cost Optimization Workflows
 
 Karpenter's consolidation capability is one of its strongest cost levers. Claude Code can help you implement comprehensive strategies at multiple levels.
 
-Right-Sizing Recommendations
+## Right-Sizing Recommendations
 
 Ask Claude Code to analyze your current workload patterns and recommend NodePool configurations:
 
@@ -380,7 +379,7 @@ Identify:
 Recommend specific NodePool changes to reduce our monthly compute cost.
 ```
 
-Budget Alerts and Automation
+## Budget Alerts and Automation
 
 Create a Claude Code script that monitors Karpenter-driven costs and triggers alerts:
 
@@ -419,7 +418,7 @@ if python3 -c "import sys; sys.exit(0 if float('$COST') > $BUDGET_THRESHOLD else
 fi
 ```
 
-Spot Interruption Handling
+## Spot Interruption Handling
 
 Karpenter automatically handles Spot interruption notices via the SQS interruption queue, but you should also configure Pod Disruption Budgets to prevent too many pods from being evicted at once:
 
@@ -444,11 +443,11 @@ generate a PDB that keeps at least 50% of replicas available at all times.
 Output each PDB as a separate YAML file named {deployment-name}-pdb.yaml.
 ```
 
-Disaster Recovery and Migration
+## Disaster Recovery and Migration
 
 Claude Code can also assist with disaster recovery scenarios involving Karpenter. A solid backup and validation workflow ensures you can recover quickly from misconfigurations or cluster failures.
 
-Backup All Karpenter Resources
+## Backup All Karpenter Resources
 
 ```bash
 #!/usr/bin/env bash
@@ -477,7 +476,7 @@ tar czf "${BACKUP_DIR}.tar.gz" "$BACKUP_DIR/"
 echo "Archive: ${BACKUP_DIR}.tar.gz"
 ```
 
-Validate Cluster State Before Maintenance
+## Validate Cluster State Before Maintenance
 
 Before applying Karpenter updates or making significant changes, validate the cluster is in a healthy state:
 
@@ -520,7 +519,7 @@ Review the pre-maintenance check output and tell me:
 3. Are the pending pods caused by resource constraints or node taints?
 ```
 
-Rolling Back a Bad NodePool Configuration
+## Rolling Back a Bad NodePool Configuration
 
 If a NodePool configuration causes nodes to fail to provision, you can restore from backup:
 
@@ -537,7 +536,7 @@ kubectl get nodepools
 kubectl get nodeclaims
 ```
 
-Monitoring Karpenter with Prometheus and Grafana
+## Monitoring Karpenter with Prometheus and Grafana
 
 Karpenter exposes a Prometheus metrics endpoint. Claude Code can generate the ServiceMonitor and alerting rules needed to ingest these metrics:
 
@@ -572,7 +571,7 @@ Key Karpenter metrics to alert on:
 
 Ask Claude Code to generate a Prometheus `PrometheusRule` for these alerts, then a Grafana dashboard JSON that visualizes node count, cost per hour, and consolidation efficiency over time.
 
-Best Practices for Claude Code and Karpenter
+## Best Practices for Claude Code and Karpenter
 
 To get the most out of your Claude Code and Karpenter integration:
 
@@ -628,11 +627,11 @@ RUNBOOK.md section explaining: what each NodePool is for,
 how workloads select them, and the steps to add a new NodePool type.
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Claude Code is particularly useful for troubleshooting because it can correlate information from multiple sources, controller logs, events, node status, and pod conditions, at once.
 
-Pods Stuck in Pending
+## Pods Stuck in Pending
 
 ```bash
 Collect diagnostic data
@@ -651,7 +650,7 @@ Is it a resource request issue, a NodePool selector mismatch,
 a taint/toleration problem, or an AWS capacity issue?
 ```
 
-Node Consolidation Not Working
+## Node Consolidation Not Working
 
 ```bash
 kubectl get nodepools -o yaml > nodepools.yaml
@@ -666,7 +665,7 @@ What conditions would prevent Karpenter from consolidating these nodes?
 Check for: PodDisruptionBudgets, do-not-disrupt annotations, non-evictable system pods, or consolidation policy settings.
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Karpenter management from manual configuration to intelligent automation. By using Claude Code's ability to understand infrastructure requirements and generate valid Kubernetes manifests, you can streamline your EKS operations while maintaining best practices.
 

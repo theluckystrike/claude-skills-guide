@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude MD Example for Flutter Mobile Application
 
 Creating effective Claude skill files for Flutter mobile applications requires understanding both the skill format and how Claude Code processes cross-platform development workflows. This guide provides practical examples you can adapt immediately for building Flutter apps with Dart.
 
-The Claude Skill Format
+## The Claude Skill Format
 
 Claude skills are Markdown files with a specific structure that Claude reads when you invoke them. For Flutter projects, these skills help Claude understand your tooling, state management approach, and preferred development practices.
 
@@ -42,7 +39,7 @@ Guidelines
 
 The skill loads when you type `/skillname` in Claude Code, making these instructions part of the AI's context for your session.
 
-Flutter App Architecture Skill
+## Flutter App Architecture Skill
 
 For a Flutter project using BLoC pattern and Clean Architecture, create a skill that guides Claude through your preferred patterns. Save this as `~/.claude/skills/flutter-app.md`:
 
@@ -82,7 +79,7 @@ Flutter Widgets
 
 This skill file teaches Claude about your Flutter architecture preferences automatically.
 
-Flutter Testing Skill
+## Flutter Testing Skill
 
 Create a separate skill for testing workflows:
 
@@ -119,7 +116,7 @@ Integration Tests
 - Clear app state between tests
 ```
 
-Flutter State Management Skill
+## Flutter State Management Skill
 
 Different projects use different state management solutions. Create a skill that matches your stack:
 
@@ -151,7 +148,7 @@ Code Patterns
 - Use select() to minimize rebuilds
 ```
 
-Combining Skills for Flutter Projects
+## Combining Skills for Flutter Projects
 
 You can load multiple skills for comprehensive Flutter development guidance. For a production Flutter app, invoke each skill in your Claude Code session:
 
@@ -163,7 +160,7 @@ You can load multiple skills for comprehensive Flutter development guidance. For
 
 This combines architecture guidelines, testing patterns, and state management preferences in one session.
 
-Practical Example: Building a Feature
+## Practical Example: Building a Feature
 
 When you create a new feature in your Flutter app, your skill file ensures Claude generates consistent code. For instance, a request for a user profile screen might produce:
 
@@ -198,7 +195,7 @@ class ProfileScreen extends StatelessWidget {
 
 The skill file ensures Claude understands your preferred patterns for state classes, event handling, and widget structure.
 
-Using Claude Skills with Mobile Frameworks
+## Using Claude Skills with Mobile Frameworks
 
 Mobile development often involves platform-specific code. Create skills that address these nuances:
 
@@ -229,7 +226,7 @@ Permissions
 - Provide rationale to users
 ```
 
-Advanced: Conditional Skill Loading
+## Advanced: Conditional Skill Loading
 
 You can create skill files that adapt based on context:
 
@@ -262,12 +259,11 @@ If Using Riverpod
 - Follow provider organization best practices
 ```
 
-Conclusion
+## Conclusion
 
 Claude skill files transform how you work with Flutter by encoding your project conventions, architecture patterns, and team preferences. Start with basic skills for architecture and testing, then expand to cover specific frameworks and workflows.
 
 For Flutter development, consider installing complementary skills like the `frontend-design` skill for UI/UX consistency, the `tdd` skill for test-driven development workflows, and the `supermemory` skill to maintain context across Flutter development sessions.
-
 
 Related Reading
 
@@ -277,8 +273,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-
-Writing a Project CLAUDE.md for Flutter
+## Writing a Project CLAUDE.md for Flutter
 
 A `CLAUDE.md` at your Flutter project root gives Claude Code persistent context about your state management choice, folder structure, and conventions without requiring skill invocations each session:
 
@@ -321,9 +316,9 @@ Testing
 - Run `flutter test --coverage` to generate coverage report
 ```
 
-Practical Workflow: Generating Features with Claude Code
+## Practical Workflow: Generating Features with Claude Code
 
-Creating a New Screen
+## Creating a New Screen
 
 Describe your feature requirements and let Claude Code scaffold the complete slice:
 
@@ -339,7 +334,7 @@ create a product detail screen with these requirements:
 
 Claude Code generates the data model with freezed annotations, the repository interface and implementation, the Riverpod provider with AsyncValue, and the screen widget. all in the right folders with correct imports.
 
-Updating Code Generation After Changes
+## Updating Code Generation After Changes
 
 When you modify a freezed class or add a Riverpod provider, remind Claude Code to trigger code generation:
 
@@ -351,7 +346,7 @@ that display Product to show the wishlisted state with a heart icon.
 
 Claude Code runs `flutter pub run build_runner build --delete-conflicting-outputs` after modifying generated files, ensuring the project compiles without manual intervention.
 
-Handling Platform-Specific Code with Claude Code
+## Handling Platform-Specific Code with Claude Code
 
 Flutter's platform channel API requires matching implementations on both iOS (Swift/ObjC) and Android (Kotlin/Java). Claude Code handles both sides when given clear context:
 
@@ -367,7 +362,7 @@ Use our existing channel naming convention: com.myapp/device_info
 
 This saves significant context-switching time compared to manually writing and testing each platform implementation.
 
-Common Flutter + Claude Code Pitfalls
+## Common Flutter + Claude Code Pitfalls
 
 Missing build_runner step: After Claude Code creates new freezed models or Riverpod providers, always run `flutter pub run build_runner build`. If the generated `.g.dart` and `.freezed.dart` files are not updated, the project will have type errors that Claude Code cannot resolve without running code generation first.
 

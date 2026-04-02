@@ -16,7 +16,7 @@ tags: [claude-code, claude-skills]
 
 Claude Code (claude.ai) is a powerful AI assistant, but like any tool, it has boundaries. When working with massive files, log files, datasets, large codebases, you might encounter crashes or sluggish performance. This guide covers practical solutions to keep Claude running smoothly when handling large files.
 
-Understanding the Problem
+## Understanding the Problem
 
 Claude Code processes files by reading their contents into context. When a file exceeds reasonable limits, the system can become unresponsive or crash entirely. This commonly happens with:
 
@@ -45,7 +45,7 @@ Here is a rough token budget breakdown to illustrate how quickly a large file ca
 
 The table makes the problem concrete: anything over a few hundred kilobytes starts creating real risk of degraded performance or an outright crash.
 
-Crash vs. Slow vs. Truncated: Diagnosing the Symptom
+## Crash vs. Slow vs. Truncated: Diagnosing the Symptom
 
 Not all large-file problems look the same. Understanding which symptom you are seeing helps you choose the right fix:
 
@@ -57,7 +57,7 @@ Not all large-file problems look the same. Understanding which symptom you are s
 | "File too large" error message | Hard limit enforced by Claude Code CLI | Adjust maxFileSize config (Solution 2) |
 | Garbled or hallucinated content | Context overflow; earlier content dropped | Pre-process to reduce size (Solution 6) |
 
-Solution 1: Use File Splitting
+## Solution 1: Use File Splitting
 
 The most practical approach is breaking large files into smaller chunks. Instead of asking Claude to read an entire 50MB log file, split it first.
 
@@ -72,7 +72,7 @@ tail -n +2 large_dataset.csv | split -l 5000 - dataset_part_
 
 After splitting, process each chunk separately. This approach works well when analyzing logs with the [supermemory skill](/claude-supermemory-skill-persistent-context-explained/), which helps track insights across multiple file segments.
 
-Automated Splitting with Python
+## Automated Splitting with Python
 
 The bash `split` command works well for uniform files, but Python gives you more control when chunks need to be semantically meaningful, for example, splitting a large JSON array so each chunk is still valid JSON:
 
@@ -137,7 +137,7 @@ def split_log_by_hour(filepath, output_dir="."):
 
 Hour-based log files are rarely larger than a few MB even for busy services, and they are much easier to correlate with deployment events or incidents.
 
-Solution 2: Adjust Context Settings
+## Solution 2: Adjust Context Settings
 
 Claude Code supports several settings that control how it handles file content. In your configuration, you can set limits:
 
@@ -151,7 +151,7 @@ Claude Code supports several settings that control how it handles file content. 
 
 Reducing the maximum file size forces Claude to request chunked reading, preventing crashes on oversized files.
 
-Where to Find Your Configuration File
+## Where to Find Your Configuration File
 
 The Claude Code CLI reads configuration from `~/.claude/settings.json` on macOS/Linux and `%APPDATA%\Claude\settings.json` on Windows. If the file does not exist, create it, Claude Code will pick it up on the next launch.
 
@@ -170,7 +170,7 @@ The full set of relevant configuration keys:
 
 Setting `streaming: true` is especially important for large files because it lets Claude begin returning output before the entire context is processed, reducing perceived latency and the likelihood of a timeout-triggered crash.
 
-Solution 3: Use Selective Reading
+## Solution 3: Use Selective Reading
 
 Instead of loading entire files, use partial reading techniques. Many programming tasks don't require the whole file.
 
@@ -186,7 +186,7 @@ def read_first_n_lines(filepath, n=100):
 
 When working with PDF files using the pdf skill, request specific page ranges rather than the entire document. If you regularly hit size limits, review [context window optimization strategies](/claude-md-too-long-context-window-optimization/) to keep file processing lean. Similarly, when generating presentations with pptx, process slides individually for large decks.
 
-Targeted Reads Using Claude Code's Built-in Read Tool
+## Targeted Reads Using Claude Code's Built-in Read Tool
 
 Claude Code's Read tool accepts `offset` and `limit` parameters that let you read a file in windows without loading the whole thing. Instead of asking Claude to read a 5,000-line file, start with the first 200 lines to understand the structure, then read specific sections by line range:
 
@@ -197,7 +197,7 @@ Read /path/to/large_codebase.py with offset=800 limit=100  # Lines 800-900
 
 This pattern is particularly useful when you need to understand a large class definition buried in the middle of a file, you can navigate to the exact line range without loading surrounding content.
 
-Extracting Relevant Sections with Ripgrep
+## Extracting Relevant Sections with Ripgrep
 
 Before handing a file to Claude, use `ripgrep` to extract only the sections you care about:
 
@@ -214,7 +214,7 @@ rg -C 5 "DatabaseError" application.log > errors_with_context.log
 
 The resulting extracted file is typically 5–50x smaller than the original, fitting comfortably within the context window.
 
-Solution 4: Increase System Resources
+## Solution 4: Increase System Resources
 
 Claude Code runs within your environment's memory constraints. If you're experiencing crashes:
 
@@ -233,7 +233,7 @@ services:
       - MAX_CONTEXT=200000
 ```
 
-Checking Memory Pressure Before Running Claude
+## Checking Memory Pressure Before Running Claude
 
 On macOS, use the `memory_pressure` command to check available memory before starting a large-file session:
 
@@ -254,11 +254,11 @@ If the "available" column is under 2GB and you plan to process files larger than
 
 For long sessions processing many large files in sequence, restart Claude Code periodically to reclaim memory that was allocated for earlier files but not yet garbage-collected.
 
-Solution 5: Use Skill-Specific Optimizations
+## Solution 5: Use Skill-Specific Optimizations
 
 Different Claude skills handle large files in unique ways. Understanding these patterns helps prevent crashes:
 
-Using the xlsx Skill for Large Spreadsheets
+## Using the xlsx Skill for Large Spreadsheets
 
 The xlsx skill can process large Excel files efficiently by reading only necessary columns:
 
@@ -301,7 +301,7 @@ Usage: only read the columns you need
 data = read_columns("large_dataset.xlsx", ["customer_id", "amount", "date"])
 ```
 
-Using tdd for Code Analysis
+## Using tdd for Code Analysis
 
 When analyzing large codebases with the [tdd skill](/claude-tdd-skill-test-driven-development-workflow/), focus on specific modules rather than entire repositories. Break your analysis into targeted sessions:
 
@@ -326,7 +326,7 @@ wc -l $(cat file_list.txt) | sort -rn | head -20
 
 Hand this summary to Claude and ask it to identify the 3-5 files most relevant to the bug or feature you are working on. Reading targeted files instead of the whole codebase reduces context usage by 80-95% in a typical project.
 
-Using canvas-design for Large Assets
+## Using canvas-design for Large Assets
 
 The canvas-design skill handles image assets differently. For large design files, work with optimized versions:
 
@@ -350,7 +350,7 @@ for f in *.png; do
 done
 ```
 
-Solution 6: Implement Pre-processing Pipelines
+## Solution 6: Implement Pre-processing Pipelines
 
 Create preprocessing scripts that extract relevant information before sending files to Claude:
 
@@ -370,7 +370,7 @@ grep "specific_pattern" large_codebase.js > matched_lines.js
 
 This filtering reduces file size while preserving the information you need.
 
-A More Complete Pre-processing Pipeline
+## A More Complete Pre-processing Pipeline
 
 For production log analysis workflows, a multi-stage pipeline is more solid than a single grep command:
 
@@ -430,7 +430,7 @@ echo "Feed summary.txt to Claude first, then errors.log for targeted analysis."
 
 Running this script on a 200MB log file typically produces a `summary.txt` under 2KB and an `errors.log` under 100KB, both trivially small for Claude's context window.
 
-Solution 7: Use External Tools for Initial Processing
+## Solution 7: Use External Tools for Initial Processing
 
 Before involving Claude, use dedicated tools for heavy lifting:
 
@@ -441,7 +441,7 @@ Before involving Claude, use dedicated tools for heavy lifting:
 
 The docx skill can help you document these workflows for team consistency.
 
-Practical jq Recipes for Large JSON Files
+## Practical jq Recipes for Large JSON Files
 
 `jq` is indispensable for reducing large JSON files before passing them to Claude. Here are the most useful patterns:
 
@@ -472,7 +472,7 @@ jq '{
 
 Run the summary jq command first to understand the shape and scale of your data. Then extract only the records and fields Claude needs for the specific task.
 
-Using awk for Structured Log Reduction
+## Using awk for Structured Log Reduction
 
 `awk` is faster than Python for line-oriented log processing and handles files of any size because it streams line-by-line:
 
@@ -490,7 +490,7 @@ awk '/2026-03-14T14:00/,/2026-03-14T15:00/' app.log > incident_window.log
 
 The time-window extraction (`awk '/pattern1/,/pattern2/'`) is particularly useful for isolating the logs from a specific incident without needing to know exact line numbers.
 
-Solution 8: Monitor and Set Alerts
+## Solution 8: Monitor and Set Alerts
 
 Implement monitoring to catch large file issues before they cause crashes:
 
@@ -508,7 +508,7 @@ function safeRead(filepath) {
 }
 ```
 
-A More Solid File Safety Wrapper
+## A More Solid File Safety Wrapper
 
 The basic check above throws an error on large files but does not offer an alternative. A more useful wrapper auto-splits the file and returns the first safe chunk with a warning:
 
@@ -569,7 +569,7 @@ if (result.truncated) {
 
 Integrate this wrapper into any tooling or scripts that pass files to Claude Code, and you will eliminate the most common category of unexpected crashes.
 
-Prevention Strategies
+## Prevention Strategies
 
 The best fix is prevention. Establish these practices:
 
@@ -579,7 +579,7 @@ The best fix is prevention. Establish these practices:
 4. Document file handling procedures for your team
 5. Test with sample data before processing production files
 
-Team-Wide File Handling Standards
+## Team-Wide File Handling Standards
 
 If you are setting up Claude Code for a development team, document the file handling conventions in your project's `CLAUDE.md` (the project instructions file Claude reads automatically). Here is a template section:
 
@@ -604,7 +604,7 @@ Files that are always too large to read directly
 
 Documenting this in `CLAUDE.md` means Claude itself can reference these guidelines when helping teammates who are unfamiliar with the project's file sizes.
 
-When All Else Fails
+## When All Else Fails
 
 If Claude continues crashing on large files:
 
@@ -613,7 +613,7 @@ If Claude continues crashing on large files:
 - Verify your Claude Code installation is up to date
 - Consider using the CLI version with more memory allocation
 
-Advanced Debugging Checklist
+## Advanced Debugging Checklist
 
 When the above tips still do not resolve the crashes, work through this checklist:
 

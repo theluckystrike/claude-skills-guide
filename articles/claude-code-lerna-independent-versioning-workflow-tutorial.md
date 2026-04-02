@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Lerna Independent Versioning Workflow Tutorial
 
@@ -21,7 +20,7 @@ Managing multiple npm packages in a monorepo presents unique versioning challeng
 
 This tutorial walks you through setting up Lerna with independent versioning and integrating Claude Code for intelligent version management and automated releases.
 
-Understanding Lerna's Versioning Modes
+## Understanding Lerna's Versioning Modes
 
 Lerna offers two versioning strategies: fixed and independent. In fixed mode, all packages share a single version number that increments together. While simple, this approach forces coordinated releases even when only one package changed.
 
@@ -49,7 +48,7 @@ Your `lerna.json` should include:
 }
 ```
 
-Setting Up Your Monorepo Structure
+## Setting Up Your Monorepo Structure
 
 Organize your monorepo with a clear packages directory:
 
@@ -80,7 +79,7 @@ Each package needs its own `package.json` with proper name and version:
 
 Notice the caret (`^`) in dependencies, this allows each package to specify version ranges rather than exact matches, supporting independent evolution.
 
-Integrating Claude Code for Version Management
+## Integrating Claude Code for Version Management
 
 Claude Code can assist with intelligent version bumping, changelog generation, and release automation. Create a skill that understands your monorepo structure and applies consistent versioning policies.
 
@@ -125,11 +124,11 @@ lerna version --conventional-commits \
 
 This creates detailed changelogs showing exactly what changed in each package.
 
-Practical Workflow Example
+## Practical Workflow Example
 
 Here's a complete workflow for managing independent versions with Claude Code:
 
-Step 1: Initialize the Monorepo
+## Step 1: Initialize the Monorepo
 
 ```bash
 mkdir my-org && cd my-org
@@ -137,7 +136,7 @@ npx lerna init --independent
 npm install -D lerna conventional-changelog-conventionalcommits
 ```
 
-Step 2: Configure Conventional Commits
+## Step 2: Configure Conventional Commits
 
 In `lerna.json`:
 
@@ -154,7 +153,7 @@ In `lerna.json`:
 }
 ```
 
-Step 3: Create a Release Script
+## Step 3: Create a Release Script
 
 Add to your root `package.json`:
 
@@ -167,7 +166,7 @@ Add to your root `package.json`:
 }
 ```
 
-Step 4: Execute the Release
+## Step 4: Execute the Release
 
 ```bash
 Analyze changes, bump versions, generate changelogs
@@ -177,11 +176,11 @@ Publish to npm
 npm run publish
 ```
 
-Handling Dependencies Between Packages
+## Handling Dependencies Between Packages
 
 Independent versioning requires careful dependency management. When package A depends on package B, you need strategies to prevent breakage:
 
-Strategy 1: Flexible Version Ranges
+## Strategy 1: Flexible Version Ranges
 
 Use caret (`^`) or tilde (`~`) ranges in dependencies:
 
@@ -193,7 +192,7 @@ Use caret (`^`) or tilde (`~`) ranges in dependencies:
 
 This allows patch and minor updates without breaking changes.
 
-Strategy 2: Lerna's Dependency Graph
+## Strategy 2: Lerna's Dependency Graph
 
 Lerna automatically links local packages during development:
 
@@ -202,7 +201,7 @@ Links local packages before running scripts
 lerna bootstrap --scope=@myorg/ui-components
 ```
 
-Strategy 3: CI Validation
+## Strategy 3: CI Validation
 
 Add continuous integration checks to catch version mismatches:
 
@@ -214,7 +213,7 @@ Verify peer dependency compatibility
 lerna exec -- npm ls peerDependencies
 ```
 
-Best Practices for Independent Versioning
+## Best Practices for Independent Versioning
 
 1. Adopt Conventional Commits: Structure commit messages consistently so Lerna can determine version impact automatically.
 
@@ -246,7 +245,7 @@ Best Practices for Independent Versioning
 
 5. Document Breaking Changes: Maintain a `CHANGELOG.md` in each package root, or rely on Lerna's automatic generation.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 - Overly Strict Ranges: Avoid exact versions (`1.0.0`) in internal dependencies, they defeat independent versioning's purpose.
 
@@ -256,7 +255,7 @@ Common Pitfalls to Avoid
 
 - Manual Version Bumps: Let Lerna's conventional commits handle versioning, manual bumps introduce human error.
 
-Conclusion
+## Conclusion
 
 Lerna's independent versioning mode, combined with Claude Code's automation capabilities, provides a solid foundation for monorepo package management. Each package evolves at its own pace while maintaining dependency compatibility through flexible version ranges.
 

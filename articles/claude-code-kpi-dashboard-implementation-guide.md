@@ -18,7 +18,7 @@ Claude Code KPI Dashboard Implementation Guide
 
 Building a KPI dashboard with Claude Code transforms how you track and visualize project metrics. This implementation guide walks through creating a custom skill that aggregates data, generates visualizations, and delivers real-time insights directly in your development workflow.
 
-Why Build a KPI Dashboard with Claude
+## Why Build a KPI Dashboard with Claude
 
 Most teams struggle with scattered metrics across multiple tools. A Claude Code KPI dashboard centralizes your metrics by invoking skills that pull data from various sources, whether GitHub issues, CI/CD pipelines, or custom databases, and presents them in a unified view. The advantage lies in automation: your dashboard updates automatically when you ask Claude, eliminating manual spreadsheet updates.
 
@@ -26,7 +26,7 @@ Before implementing, identify which metrics matter most. Common KPIs include com
 
 The real productivity gain comes from eliminating context switching. Instead of opening four browser tabs to check your CI status, GitHub metrics, error tracking dashboard, and deployment history, you ask Claude once and get everything summarized and actionable. Teams that build this habit consistently report saving 30 to 60 minutes per day that would otherwise go to status-gathering overhead.
 
-Setting Up Your KPI Dashboard Skill
+## Setting Up Your KPI Dashboard Skill
 
 Create a new skill file at `~/.claude/skills/user/kpi-dashboard.md`. This skill will handle data fetching, processing, and visualization generation.
 
@@ -51,7 +51,7 @@ Data Sources
 
 The `tools` field grants this skill access to file reading, command execution, and search capabilities. Adjust these permissions based on where your metrics data lives. A skill with too many permissions is a security liability; a skill with too few won't be able to reach all your data sources.
 
-Choosing the Right KPIs
+## Choosing the Right KPIs
 
 Not all metrics are worth tracking. The best KPIs are ones you can act on. Here is a framework for deciding what to include:
 
@@ -67,11 +67,11 @@ Not all metrics are worth tracking. The best KPIs are ones you can act on. Here 
 
 Vanity metrics to avoid: total lines of code, raw commit count without context, number of code reviews (without factoring review quality), and story points completed (which teams game).
 
-Data Aggregation Strategies
+## Data Aggregation Strategies
 
 Your dashboard needs data from multiple sources. The most effective approach combines direct file parsing with API integration.
 
-Git Metrics Collection
+## Git Metrics Collection
 
 Track commit activity and code review cycles using Git metadata:
 
@@ -149,7 +149,7 @@ def get_test_coverage(repo_path):
 
 Run this script from your Claude skill using the Bash tool. Store the results in a temporary JSON file that subsequent steps can read.
 
-CI/CD Pipeline Metrics
+## CI/CD Pipeline Metrics
 
 For GitHub Actions, query the API directly:
 
@@ -166,7 +166,7 @@ gh run list --limit 30 --json status,conclusion,createdAt,name \
 
 For CircleCI or Jenkins, replace the gh CLI call with your platform's API endpoint. The jq transformation pattern is the same regardless of source.
 
-Integration with the SuperMemory Skill
+## Integration with the SuperMemory Skill
 
 For persistent metric storage, use the supermemory skill to maintain historical data:
 
@@ -184,7 +184,7 @@ Retrieve last 30 days of stored metrics
 sm-cli search "kpi-metrics" --limit 30 | sort -t: -k2
 ```
 
-Visualization Generation
+## Visualization Generation
 
 Once you have raw metrics, transform them into visual dashboards. The canvas-design skill excels at creating shareable visualizations:
 
@@ -214,7 +214,7 @@ For terminal-focused teams, generate ASCII dashboards directly:
 
 The trend indicators in the right column are the critical addition. A raw number without context tells you almost nothing. Knowing commits are up 12% this week versus last week tells you the team is moving faster, or that someone is making lots of small commits to inflate their count, which is itself a signal worth investigating.
 
-Generating an HTML Dashboard
+## Generating an HTML Dashboard
 
 For teams that want a browser-based view, Claude can generate a standalone HTML file:
 
@@ -247,7 +247,7 @@ def render_html_dashboard(metrics: dict, output_path: str):
     return output_path
 ```
 
-Real-Time Dashboard Updates
+## Real-Time Dashboard Updates
 
 Automate dashboard refreshes using cron jobs or webhook triggers:
 
@@ -276,7 +276,7 @@ if (( $(echo "$PASS_RATE < 80" | bc -l) )); then
 fi
 ```
 
-Advanced: Test-Driven Dashboard Development
+## Advanced: Test-Driven Dashboard Development
 
 Apply the tdd skill principles to your dashboard implementation. Write tests before building:
 
@@ -320,7 +320,7 @@ def test_dashboard_trend_indicator():
 
 This test-driven approach ensures your metrics calculations remain accurate as your project evolves. Bugs in dashboard logic are particularly insidious because they erode trust: once stakeholders see wrong numbers, they stop trusting the dashboard entirely.
 
-PDF Report Generation
+## PDF Report Generation
 
 For stakeholders who prefer static reports, integrate the pdf skill to generate downloadable KPI summaries:
 
@@ -334,7 +334,7 @@ Use pdf skill to create weekly KPI reports with:
 
 The pdf skill accepts your aggregated data and produces formatted reports suitable for leadership reviews. Scheduling these to send every Monday morning before standup creates a strong habit loop, teams start the week with shared context instead of each person arriving with a different mental model of project health.
 
-Best Practices for KPI Dashboard Implementation
+## Best Practices for KPI Dashboard Implementation
 
 Keep your dashboard focused on actionable metrics. Avoid tracking vanity metrics that don't influence decisions. Refresh data on intervals matching your team's workflow, hourly for fast-moving projects, daily for stable ones.
 
@@ -362,14 +362,13 @@ test_coverage_pct:
 
 When metrics breach warning thresholds, the dashboard highlights them in yellow. Critical breaches appear in red and trigger Slack alerts.
 
-Conclusion
+## Conclusion
 
 A Claude Code KPI dashboard automates metric collection and visualization, saving hours of manual tracking. Start with basic Git metrics, then expand to include CI/CD data, error tracking, and business KPIs as your implementation matures.
 
 The combination of skills powers a complete solution: canvas-design for visualizations, pdf for reports, supermemory for historical storage, and tdd for reliable calculations. Your dashboard becomes a living document that improves alongside your project.
 
 The most important step is simply starting. A five-metric ASCII dashboard you actually look at every morning is worth more than a 50-metric Grafana deployment that nobody checks. Build the habit first, then add complexity.
-
 
 Related Reading
 

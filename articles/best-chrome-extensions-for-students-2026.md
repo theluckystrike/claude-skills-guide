@@ -166,12 +166,11 @@ Features include:
 
 For students navigating large codebases for coursework or open-source contributions, Octotree provides the directory overview that GitHub's default interface lacks.
 
-Conclusion
+## Conclusion
 
 These extensions represent the essential toolkit for students in 2026. They address real problems: navigating efficiently, managing information overload, and working across multiple projects simultaneously. The best part is that all of these tools are free to use, making them accessible regardless of your budget.
 
 Start with Vimium and Dark Reader for immediate productivity gains, then add the others based on your specific workflow needs. As your projects grow more complex, you will find these extensions becoming indispensable parts of your daily toolkit.
-
 
 Related Reading
 

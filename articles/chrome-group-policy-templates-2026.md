@@ -19,7 +19,7 @@ Chrome group policy templates enable IT administrators to control browser settin
 
 This guide covers the full workflow: downloading and installing the ADMX files, configuring the most important policy categories, deploying via registry and JSON, troubleshooting policy conflicts, and deciding when to move from on-premises Group Policy to Chrome Browser Cloud Management.
 
-Getting Started with Chrome ADMX Templates
+## Getting Started with Chrome ADMX Templates
 
 Chrome Enterprise ships with two ADMX template files: `chrome.admx` and `chrome.adml`. The English version covers most policies, while the language-specific files provide localized policy descriptions in Group Policy Editor.
 
@@ -46,9 +46,9 @@ Copy-Item -Path ".\ChromeEnterpriseBundle\PolicyDefinitions\en-US\chrome.adml" `
 
 After importing, you will find Chrome policies under Computer Configuration > Administrative Templates > Google Chrome. The policies divide into categories: Extensions, Privacy, Security, Network, and User Experience. Refresh Group Policy Management Console if the Chrome node does not appear immediately after the copy.
 
-Key Policy Categories for 2026
+## Key Policy Categories for 2026
 
-Extension Management Policies
+## Extension Management Policies
 
 Chrome provides granular control over extensions through several key policies:
 
@@ -70,7 +70,7 @@ The update URL after the semicolon tells Chrome where to fetch the extension. Fo
 
 The extension IDs are the 32-character identifiers from the Chrome Web Store URL. This approach works well for corporate-licensed extensions or internal tools your team develops.
 
-Extension Policy Comparison
+## Extension Policy Comparison
 
 | Policy | Effect | Typical Use Case |
 |---|---|---|
@@ -81,7 +81,7 @@ Extension Policy Comparison
 
 The `ExtensionSettings` policy is the most powerful and is preferred when you need to mix installation modes for different extensions in one policy object. See the JSON configuration section below for a practical example.
 
-Security Policies
+## Security Policies
 
 Browser security policies help protect against threats while maintaining productivity:
 
@@ -92,7 +92,7 @@ Browser security policies help protect against threats while maintaining product
 
 For organizations handling sensitive data, the PrintJobBackgroundingEnabled policy lets you disable background printing, which prevents sensitive documents from lingering in the print spooler. Similarly, ScreenCaptureAllowed can be set to `false` to block screenshots in Chrome. useful for financial services or healthcare desktops where screen capture poses a data leakage risk.
 
-Network and Proxy Settings
+## Network and Proxy Settings
 
 Chrome respects Windows proxy settings by default, but you can override them:
 
@@ -116,7 +116,7 @@ Set-ItemProperty -Path $chromePath -Name "ProxyBypassList" -Value "*.example.com
 
 Use `pac_script` when your proxy topology is complex. a PAC file gives you per-domain routing logic that a single server address cannot express.
 
-User Experience Policies
+## User Experience Policies
 
 These policies control what users see and can change in Chrome:
 
@@ -125,7 +125,7 @@ These policies control what users see and can change in Chrome:
 - IncognitoModeAvailability: `1` disables incognito mode. Pair this with web filtering policies to prevent users from bypassing content controls.
 - SpellCheckServiceEnabled: Disables sending text to Google's spell-check service over the network. relevant in air-gapped or high-security environments.
 
-Managing Chrome via JSON Configuration
+## Managing Chrome via JSON Configuration
 
 While Group Policy works well for traditional Windows environments, modern DevOps teams often prefer JSON-based configuration. Chrome supports this through the `ExtensionSettings` policy value and through a `managed_preferences` file deployed to the Chrome installation directory.
 
@@ -167,7 +167,7 @@ Copy-Item -Path ".\chrome_policy.json" -Destination $policyPath -Force
 
 Note that `master_preferences` applies only on the first run for a new profile. For enforced policies that must apply on every run and cannot be overridden by users, use the registry path (`HKLM:\SOFTWARE\Policies\Google\Chrome`) or Group Policy. Reserve `master_preferences` for default settings you want to pre-configure but are willing to let users change.
 
-Chrome Browser Cloud Management
+## Chrome Browser Cloud Management
 
 For organizations without traditional Active Directory, Chrome Browser Cloud Management (CBCM) provides a cloud-based alternative hosted in the Google Admin console. This service allows you to:
 
@@ -197,7 +197,7 @@ The transition from ADMX-based management to cloud management requires careful p
 4. Test security-critical policies (extension allowlist, proxy) in a pilot OU before moving them to cloud
 5. Remove the corresponding registry/GPO entries once cloud policies are confirmed working
 
-Troubleshooting Policy Application
+## Troubleshooting Policy Application
 
 When policies do not apply as expected, systematic debugging helps identify the problem quickly.
 
@@ -205,7 +205,7 @@ chrome://policy
 
 The most useful first step is always to open `chrome://policy` in the browser on an affected machine. This page lists every active policy, its source (Platform, Cloud, or Merged), and whether it parsed correctly. A red background next to a policy value indicates a configuration error. typically a type mismatch (string where integer is expected) or an invalid JSON value.
 
-Standard Debugging Steps
+## Standard Debugging Steps
 
 1. Verify ADMX import: Check that `chrome.admx` appears in Group Policy Management Console under Administrative Templates.
 2. Check policy precedence: Computer Configuration policies override User Configuration policies. Enforced policies override non-enforced. Closer OUs override parent OUs.
@@ -231,7 +231,7 @@ Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Google\Chrome" | Format-List
 
 A policy visible in the registry but not appearing in `chrome://policy` usually indicates an ADMX import problem. A policy in `chrome://policy` but labeled "Ignored" means a higher-precedence source is overriding it. check whether a cloud policy or a higher-level GPO is setting the same key.
 
-Common Policy Conflicts
+## Common Policy Conflicts
 
 | Symptom | Likely Cause | Fix |
 |---|---|---|
@@ -240,7 +240,7 @@ Common Policy Conflicts
 | Proxy settings ignored | Chrome falling back to Windows system proxy | Explicitly set `ProxyMode` to `fixed_servers` |
 | Cloud policy overriding on-prem GPO | Cloud policies have higher precedence by default | Set `PolicyCloudManagementEnabled` to `false` to enforce local-only policies |
 
-Automation with PowerShell
+## Automation with PowerShell
 
 PowerShell scripts can automate Chrome policy deployment across your fleet. The following script deploys a standard set of policies to all Windows computers in an OU:
 
@@ -282,7 +282,7 @@ This approach works for organizations with PowerShell Remoting enabled and appro
 
 For Intune-managed endpoints, use the Settings Catalog in the Endpoint Manager portal. Search for "Google Chrome" in the catalog. Microsoft imports the Chrome ADMX templates and exposes most policies natively. This eliminates the need to deploy a custom ADMX file or manage registry keys directly for Intune-joined machines.
 
-Keeping Templates Current
+## Keeping Templates Current
 
 Chrome releases a new stable version every four weeks. New releases occasionally introduce new policy keys or deprecate old ones. When you upgrade Chrome across your fleet, also check whether a new ADMX bundle is available:
 
@@ -293,14 +293,13 @@ Chrome releases a new stable version every four weeks. New releases occasionally
 
 Policy documentation for every key is available at [chromeenterprise.google/policies](https://chromeenterprise.google/policies/). Each entry includes the minimum Chrome version that supports the policy, the data type, allowed values, and notes on deprecated predecessors. bookmark this reference for day-to-day admin work.
 
-Looking Ahead
+## Looking Ahead
 
 Chrome group policy templates will continue evolving as Google adds features and responds to enterprise requirements. Key areas to watch in 2026 include expanded AI feature controls (Gemini-powered features in Chrome now have their own policy namespace), tighter integration between CBCM and Google Workspace licensing, and new policies for PassKeys and WebAuthn credential management.
 
 The combination of traditional ADMX policies, JSON configuration, and cloud-based management gives administrators flexibility in how they manage Chrome across their organizations. Choose the approach that best fits your infrastructure: ADMX and registry for traditional AD environments, CBCM for cloud-first or hybrid setups, and Intune Settings Catalog for Microsoft 365-centric organizations. All three can coexist during a transition, with policy precedence ensuring the most authoritative source always wins.
 
 ---
-
 
 Related Reading
 

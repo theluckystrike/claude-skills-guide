@@ -17,7 +17,7 @@ Claude Code for Claude Error Handling Patterns Workflow Guide
 
 Error handling is a critical aspect of building solid Claude Code workflows. When you're orchestrating AI agents to perform complex tasks, failures are inevitable, whether from API timeouts, malformed responses, or unexpected state changes. This guide explores practical error handling patterns that will make your Claude Code workflows more resilient and maintainable.
 
-Understanding Error Types in Claude Code
+## Understanding Error Types in Claude Code
 
 Before diving into patterns, it's essential to understand what can go wrong in a Claude Code workflow. Errors typically fall into several categories:
 
@@ -31,7 +31,7 @@ Before diving into patterns, it's essential to understand what can go wrong in a
 
 Understanding these error categories helps you design appropriate handling strategies for each scenario. A network timeout deserves a retry; a security violation deserves an immediate halt. Treating all errors the same way is one of the most common workflow design mistakes.
 
-Error Severity Levels
+## Error Severity Levels
 
 Not all errors are created equal. A useful mental model is to classify errors by severity before choosing a response strategy:
 
@@ -45,7 +45,7 @@ Not all errors are created equal. A useful mental model is to classify errors by
 
 This table gives you a quick reference for routing each error type to the right handler.
 
-Pattern 1: Try-Catch with Tool Results
+## Pattern 1: Try-Catch with Tool Results
 
 The fundamental error handling pattern in Claude Code involves checking tool execution results. Every tool returns a result object that indicates success or failure.
 
@@ -88,7 +88,7 @@ if not install_result["success"]:
 
 Wrapping bash calls in a helper like this means you get consistent error objects everywhere in your workflow, making downstream handling easier to reason about.
 
-Pattern 2: Defensive Parameter Validation
+## Pattern 2: Defensive Parameter Validation
 
 Before calling any tool with user-provided parameters, validate inputs thoroughly. This prevents errors from propagating through your workflow.
 
@@ -138,7 +138,7 @@ def validate_and_execute(command):
 
 Failing fast with a clear, specific error message is far more helpful than letting invalid inputs reach downstream steps and produce confusing failures.
 
-Pattern 3: Retry Logic with Exponential Backoff
+## Pattern 3: Retry Logic with Exponential Backoff
 
 Transient errors often resolve themselves if you wait and retry. Implement retry logic with exponential backoff for operations that might succeed on a subsequent attempt:
 
@@ -194,7 +194,7 @@ def retry_with_jitter(func, max_retries=4, base_delay=0.5, max_delay=30):
 
 The jitter ensures that concurrent workflows don't all hammer an API at the exact same retry interval, which can trigger additional rate limiting.
 
-When NOT to Retry
+## When NOT to Retry
 
 Retrying is only appropriate for transient failures. Never retry these error types:
 
@@ -203,7 +203,7 @@ Retrying is only appropriate for transient failures. Never retry these error typ
 - Not found errors (404): The resource doesn't exist; retrying won't create it
 - Business logic errors: If a rule prevents the operation, the rule won't change between attempts
 
-Pattern 4: Circuit Breaker for External Services
+## Pattern 4: Circuit Breaker for External Services
 
 When working with unreliable external services, implement a circuit breaker pattern to prevent cascading failures:
 
@@ -254,7 +254,7 @@ Understanding the three states is key to getting value from this pattern:
 
 The half-open state is what makes circuit breakers smarter than simple "fail after N errors" guards. It allows automatic recovery when the upstream service comes back online.
 
-Pattern 5: Graceful Degradation
+## Pattern 5: Graceful Degradation
 
 Not all errors warrant stopping your workflow. Implement graceful degradation to continue operations with reduced functionality:
 
@@ -321,7 +321,7 @@ render_user(result.data, show_stale_warning=result.degraded)
 
 Making degradation explicit in return types prevents silent failures where callers assume they got fresh data when they actually got stale defaults.
 
-Pattern 6: Comprehensive Logging and Error Context
+## Pattern 6: Comprehensive Logging and Error Context
 
 Always log sufficient context to diagnose issues later. Include relevant state information in your error messages:
 
@@ -393,7 +393,7 @@ def safe_execute_with_context(command, operation_id, step):
 
 When reviewing logs after an incident, you want to answer: "What was the system doing when this failed, and what state was it in?" The `operation_id` and `step` fields let you reconstruct the sequence of events for any given workflow run.
 
-Pattern 7: Structured Error Recovery Workflows
+## Pattern 7: Structured Error Recovery Workflows
 
 Design your workflows with explicit recovery paths for common error scenarios:
 
@@ -482,7 +482,7 @@ class WorkflowRunner:
 
 Checkpointing lets your workflow resume from a known-good intermediate state rather than starting over from scratch, which is especially valuable for long-running workflows that perform expensive operations.
 
-Pattern 8: Testing Your Error Handling
+## Pattern 8: Testing Your Error Handling
 
 Error handling code that is never tested is error handling that will fail exactly when you need it most. Inject failures deliberately to verify your handlers work:
 
@@ -506,7 +506,7 @@ runner.run()  # Should succeed via recovery paths despite 50% failure rate
 
 Write at least one test for each error branch in your workflow. If you can't easily inject a particular failure, that's a signal your code is too tightly coupled and should be refactored to accept injectable dependencies.
 
-Choosing the Right Pattern
+## Choosing the Right Pattern
 
 Here is a quick decision guide for selecting the appropriate error handling approach:
 
@@ -523,7 +523,7 @@ Here is a quick decision guide for selecting the appropriate error handling appr
 
 Use these patterns in combination, a single workflow might use validation at entry, retries for network calls, a circuit breaker for external APIs, graceful degradation for optional features, structured logging throughout, and checkpointing for the overall flow.
 
-Best Practices Summary
+## Best Practices Summary
 
 1. Always check tool results - Never assume success
 2. Validate early, fail fast - Check inputs before processing
@@ -536,14 +536,13 @@ Best Practices Summary
 9. Match pattern to error type - Different errors need different responses
 10. Make degradation visible - Surface when callers receive fallback data
 
-Conclusion
+## Conclusion
 
 Error handling isn't about preventing all failures, it's about responding to them gracefully. By implementing these patterns in your Claude Code workflows, you'll build systems that recover automatically from common issues, provide clear feedback when human intervention is needed, and continue operating even when components fail.
 
 Start with the basics: always check tool results and log errors with context. Then layer in retry logic, circuit breakers, and graceful degradation as your workflows grow more complex. Add checkpointing when workflows become expensive to re-run, and invest in fault injection tests to prove your recovery paths actually work.
 
 The patterns in this guide compound well together. A workflow that combines validation, structured retries, circuit breakers, checkpointing, and comprehensive logging is genuinely resilient, not just error-handled in the superficial sense of catching exceptions and printing messages, but capable of recovering automatically from the most common real-world failures. Your future self (and your users) will thank you when something inevitably goes wrong.
-
 
 Related Reading
 

@@ -18,7 +18,7 @@ permalink: /claude-skills-for-startup-founders-and-solopreneurs/
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. [This guide covers the skills that have the most immediate impact for founders](/claude-skill-md-format-complete-specification-guide/).
 
-Speed Up Documentation with the pdf Skill
+## Speed Up Documentation with the pdf Skill
 
 Every startup deals with contracts, pitch decks, and technical documentation. The pdf skill lets you automate document processing tasks that would otherwise consume hours.
 
@@ -38,7 +38,7 @@ For generating PDFs, API documentation, investor updates, onboarding guides, use
 Create a two-page investor update PDF with: key metrics (MRR, churn, new customers this month), product milestones completed, and next quarter priorities. Use the data below.
 ```
 
-Build Your Frontend Faster with frontend-design
+## Build Your Frontend Faster with frontend-design
 
 The frontend-design skill accelerates UI development by encoding design system knowledge and component patterns. Rather than looking up Tailwind class combinations or debating layout approaches, invoke the skill to generate production-ready code:
 
@@ -65,7 +65,7 @@ function PricingPage() {
 
 For founders validating ideas quickly, this removes the need to hire designers or spend cycles on visual polish. You get clean, modern interfaces that let you test hypotheses without delay.
 
-Test-Driven Development Without the Overhead
+## Test-Driven Development Without the Overhead
 
 The tdd skill makes writing tests practical even when you're building alone. Instead of treating testing as an afterthought, invoke the skill to write tests before implementing features:
 
@@ -99,7 +99,7 @@ describe('CheckoutService', () => {
 
 This approach prevents bugs from reaching production and gives you confidence when iterating. For solo builders, this matters, you don't have a QA team to catch regressions.
 
-Remember Everything with supermemory
+## Remember Everything with supermemory
 
 Founders juggle conversations across multiple channels. The supermemory skill stores and retrieves context from meetings, customer interactions, and decisions made across sessions.
 
@@ -119,7 +119,7 @@ Retrieve it later:
 
 For solopreneurs managing everything alone, having a reliable memory system prevents important context from falling through the cracks between sessions.
 
-Automate Spreadsheets with xlsx
+## Automate Spreadsheets with xlsx
 
 The xlsx skill handles spreadsheet automation that would otherwise require Excel expertise or dedicated tools.
 
@@ -150,7 +150,7 @@ def generate_monthly_report(transactions, output_path):
 
 Founders can generate investor updates, track burn rate, and manage financial models without manual spreadsheet maintenance.
 
-Test Web Applications with webapp-testing
+## Test Web Applications with webapp-testing
 
 Before launching features, use the webapp-testing skill to write automated tests for your web application:
 
@@ -186,7 +186,7 @@ test('shows error for duplicate email', async ({ page }) => {
 
 For startups with limited resources, automated testing prevents the reputation damage that comes from shipping broken features.
 
-Putting It All Together
+## Putting It All Together
 
 The real power comes from combining these skills. A typical workflow for shipping a new feature:
 
@@ -205,6 +205,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top skills every developer should know
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Decide when skills beat plain prompts
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

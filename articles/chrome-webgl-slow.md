@@ -17,7 +17,7 @@ score: 8
 
 WebGL powers many modern web experiences, from interactive 3D visualizations to browser-based games and data visualization tools. When Chrome WebGL slows down, it disrupts productivity and user experience. This guide provides practical techniques to diagnose, troubleshoot, and resolve WebGL performance issues in Chrome, covering both browser-level fixes and application-level code optimizations.
 
-Understanding WebGL Performance in Chrome
+## Understanding WebGL Performance in Chrome
 
 WebGL runs on your GPU through Chrome's rendering pipeline. Performance bottlenecks typically stem from three sources: GPU limitations, driver issues, or software conflicts within Chrome itself. Identifying the exact cause requires systematic diagnosis.
 
@@ -41,9 +41,9 @@ Each layer in this stack is a potential performance bottleneck. A slow WebGL exp
 
 Before diving into solutions, verify that WebGL is actually enabled in Chrome. Navigate to `chrome://settings` and search for "Hardware acceleration." Ensure this setting is enabled, this is the most common cause of WebGL problems that appears deceptively simple but blocks the entire pipeline.
 
-Diagnosing WebGL Performance Issues
+## Diagnosing WebGL Performance Issues
 
-Checking WebGL Status
+## Checking WebGL Status
 
 Chrome provides internal pages to inspect WebGL status. Visit `chrome://gpu` to see a comprehensive report of graphics capabilities. Look for sections showing "WebGL" status, entries marked as "Hardware accelerated" indicate proper functioning, while "Software only" or disabled entries signal problems.
 
@@ -61,7 +61,7 @@ If you see multiple entries showing "Software only," your system is likely falli
 
 For developers, the WebGL Inspector extension provides detailed frame-by-frame analysis. Install it from the Chrome Web Store to examine draw calls, shader compilation, and buffer operations in real-time.
 
-Using Chrome's Performance Profiler
+## Using Chrome's Performance Profiler
 
 When debugging WebGL applications, Chrome's built-in profiler reveals where time gets spent:
 
@@ -109,9 +109,9 @@ function render() {
 
 This gives you a running average FPS along with the worst single frame in each 60-frame window. Worst-frame latency often reveals hitches that average FPS obscures.
 
-Common Causes and Solutions
+## Common Causes and Solutions
 
-Outdated Graphics Drivers
+## Outdated Graphics Drivers
 
 Outdated GPU drivers frequently cause Chrome WebGL slow performance. Graphics drivers bridge your operating system and GPU, they must be current for WebGL to function optimally.
 
@@ -123,7 +123,7 @@ For Intel integrated graphics: Use the Intel Driver & Support Assistant.
 
 After updating drivers, restart Chrome completely and test WebGL performance again. On Windows, you can also try the "Display Driver Uninstaller" (DDU) tool to perform a clean driver removal before installing the latest version, residual registry entries from old drivers sometimes cause persistent issues that update installers cannot resolve.
 
-Chrome Flags for WebGL
+## Chrome Flags for WebGL
 
 Chrome offers experimental flags that can resolve WebGL issues. Type `chrome://flags` in the address bar and search for these relevant options:
 
@@ -137,7 +137,7 @@ Chrome offers experimental flags that can resolve WebGL issues. Type `chrome://f
 
 After changing flags, click "Relaunch" to apply changes. Keep a note of which flags you change, if something breaks, you will want to revert specific flags rather than hunting through dozens of modified settings.
 
-Hardware Acceleration Conflicts
+## Hardware Acceleration Conflicts
 
 Sometimes other applications interfere with Chrome's GPU usage. Close applications that might compete for GPU resources, especially:
 
@@ -149,7 +149,7 @@ Sometimes other applications interfere with Chrome's GPU usage. Close applicatio
 
 On laptops with dual graphics (integrated + discrete), verify Chrome is using the discrete GPU for hardware-accelerated tasks. On Windows, right-click the Chrome shortcut and look for "Run with graphics processor" options. On macOS, System Preferences > Battery > Energy Mode affects which GPU Chrome uses.
 
-Extension Conflicts
+## Extension Conflicts
 
 Certain Chrome extensions interfere with WebGL rendering. Extensions that inject scripts or modify page content can break WebGL contexts. Test by:
 
@@ -159,11 +159,11 @@ Certain Chrome extensions interfere with WebGL rendering. Extensions that inject
 
 Extensions most likely to cause issues include ad blockers with aggressive JavaScript injection, developer tools extensions that hook into the rendering pipeline, and accessibility extensions that intercept canvas events.
 
-Optimizing WebGL Applications
+## Optimizing WebGL Applications
 
 If you are developing WebGL applications, several techniques produce meaningful performance improvements in Chrome.
 
-Minimize Draw Calls
+## Minimize Draw Calls
 
 Each draw call has overhead, switching GPU state, issuing commands across the CPU-GPU bridge, and waiting for the results. Reducing draw calls is often the most impactful optimization available. Batch geometries together:
 
@@ -188,7 +188,7 @@ gl.drawArraysInstanced(gl.TRIANGLES, 0, vertexCount, objects.length);
 
 Instanced rendering pushes all the per-object variation into a single GPU buffer and renders everything in one call. For scenes with hundreds of identical objects (particles, crowds, repeated environment props), this can cut draw call counts by 99%.
 
-Optimize Shader Compilation
+## Optimize Shader Compilation
 
 Shader compilation causes visible stuttering on first render. Chrome compiles shaders lazily, the first time a shader program is used in a draw call is when actual compilation happens. Precompile shaders during application initialization:
 
@@ -225,7 +225,7 @@ function precompileShaders(gl, shaderPrograms) {
 
 The dummy draw call is important. Chrome and most GPU drivers defer actual machine code generation until the shader is used in a draw call. Calling `gl.drawArrays` with zero vertices triggers compilation without producing any visible output.
 
-Use requestAnimationFrame Correctly
+## Use requestAnimationFrame Correctly
 
 Always sync rendering with the display refresh rate and avoid doing work when the tab is not visible:
 
@@ -257,7 +257,7 @@ animationId = requestAnimationFrame(render);
 
 Without the visibility check, your WebGL application continues consuming CPU and GPU resources even when the user switches tabs. On battery-powered devices this drains the battery; on shared systems it steals resources from other applications.
 
-Reduce Texture Upload Overhead
+## Reduce Texture Upload Overhead
 
 Uploading textures from CPU to GPU memory is expensive. Minimize uploads per frame:
 
@@ -288,7 +288,7 @@ function render() {
 
 Using `texSubImage2D` instead of `texImage2D` also avoids re-allocating GPU memory for the texture on every upload, which is faster when the texture dimensions do not change.
 
-Profile with WebGL Developer Tools
+## Profile with WebGL Developer Tools
 
 Chrome's WebGL Inspector (available in Developer Tools under "More tools" > "WebGL Inspector") helps identify:
 
@@ -321,7 +321,7 @@ if (ext) {
 }
 ```
 
-Chrome Settings for Better WebGL
+## Chrome Settings for Better WebGL
 
 Beyond flags, adjust these Chrome settings:
 
@@ -333,7 +333,7 @@ Beyond flags, adjust these Chrome settings:
 
 4. Check for Chrome updates: Chrome ships regular updates that include GPU bug fixes and ANGLE improvements. An outdated Chrome version may have known WebGL issues already fixed in the current release.
 
-When to Reset Chrome
+## When to Reset Chrome
 
 If all else fails, Chrome's graphics settings can become corrupted. Resetting is straightforward:
 
@@ -343,7 +343,7 @@ If all else fails, Chrome's graphics settings can become corrupted. Resetting is
 
 This clears all GPU-related overrides and returns Chrome to a known-good state. For persistent issues that survive a settings reset, try deleting Chrome's GPU cache files manually, they live in the user data directory under `GPUCache/`. On macOS this is `~/Library/Application Support/Google/Chrome/Default/GPUCache/`. Deleting this folder forces Chrome to rebuild the cache from scratch.
 
-Diagnosis Checklist
+## Diagnosis Checklist
 
 Work through this checklist in order to resolve Chrome WebGL slow issues efficiently:
 
@@ -361,7 +361,6 @@ Work through this checklist in order to resolve Chrome WebGL slow issues efficie
 Following this sequence resolves the vast majority of Chrome WebGL slow issues without requiring application code changes.
 
 ---
-
 
 Related Reading
 

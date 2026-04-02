@@ -18,7 +18,7 @@ Performance optimization remains one of the most critical aspects of modern web 
 
 This guide walks you through building a Chrome extension that uses Google's Page Speed Insights API and Lighthouse to analyze web pages in real-time. You'll learn the technical foundation, practical implementation patterns, and how to present meaningful data to users.
 
-Understanding the Page Speed Insights API
+## Understanding the Page Speed Insights API
 
 The Page Speed Insights API combines Lighthouse performance audits with real-user data to provide comprehensive performance metrics. The API returns scores from 0 to 100 across multiple categories, including Largest Contentful Paint (LCP), First Input Delay (FID), Cumulative Layout Shift (CLS), and Total Blocking Time (TBT).
 
@@ -29,7 +29,7 @@ For Chrome extensions, you have two primary approaches:
 
 Each approach has trade-offs. The REST API is simpler but requires network requests and has rate limits. Running Lighthouse locally provides more control but increases extension complexity.
 
-Setting Up Your Extension Structure
+## Setting Up Your Extension Structure
 
 A basic Chrome extension for page speed analysis needs a manifest file, background service worker, and content scripts or popup interface. Here's the essential structure:
 
@@ -60,7 +60,7 @@ The manifest defines permissions and declares the extension's capabilities:
 }
 ```
 
-Implementing the Analysis Logic
+## Implementing the Analysis Logic
 
 The core functionality lives in your popup or background script. Here's a practical implementation that calls the Page Speed Insights API:
 
@@ -84,7 +84,7 @@ async function analyzePageSpeed(url) {
 
 This function returns the core Web Vitals that matter most for user experience. The performance score provides a quick overall assessment, while individual metrics help identify specific optimization opportunities.
 
-Building the User Interface
+## Building the User Interface
 
 Your popup should present results in a clear, actionable format. Here's a practical popup implementation:
 
@@ -151,7 +151,7 @@ function getScoreClass(score) {
 }
 ```
 
-Using Lighthouse Programmatically
+## Using Lighthouse Programmatically
 
 For more advanced use cases, running Lighthouse directly in your extension provides deeper insights without API rate limits. This approach uses the Lighthouse Puppeteer or standalone package:
 
@@ -173,7 +173,7 @@ async function runLighthouseLocal(url) {
 
 This method requires bundling Lighthouse with your extension or loading it from a background script. The advantage is unlimited analysis without API costs and access to all Lighthouse audits.
 
-Presenting Actionable Recommendations
+## Presenting Actionable Recommendations
 
 Raw metrics help developers understand current performance, but actionable recommendations solve problems. Extend your extension to show specific improvement suggestions:
 
@@ -202,7 +202,7 @@ function extractRecommendations(lighthouseResult) {
 }
 ```
 
-Handling Common Challenges
+## Handling Common Challenges
 
 When building page speed analysis extensions, you'll encounter several practical challenges:
 
@@ -214,12 +214,11 @@ Rate limiting affects both API and local Lighthouse runs. Cache results and impl
 
 Tab state matters when analyzing. Ensure the target page has fully loaded before running analysis by checking `tab.status === 'complete'`.
 
-Practical Applications
+## Practical Applications
 
 Chrome extensions analyzing page speed serve various use cases. Development teams use them for quick performance checks during development. QA engineers incorporate them into testing workflows. Site owners monitor competitor performance. SEO specialists track optimization progress over time.
 
 The key to building a useful tool is presenting data in context. Don't just show scores, explain what they mean and provide concrete next steps for improvement.
-
 
 Related Reading
 

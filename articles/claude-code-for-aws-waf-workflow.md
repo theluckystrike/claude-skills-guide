@@ -14,8 +14,6 @@ score: 8
 
 {% raw %}
 
-Claude Code for AWS WAF Workflow: A Practical Guide
-
 AWS Web Application Firewall (WAF) is a critical security service that protects web applications from common web exploits and bots. However, configuring and managing AWS WAF rules can be complex and time-consuming. This guide shows you how to use Claude Code to automate AWS WAF workflows, from initial setup to ongoing management.
 
 Why Use Claude Code for AWS WAF?
@@ -30,7 +28,7 @@ Managing AWS WAF manually through the AWS Console is error-prone and doesn't sca
 
 The combination of Claude Code's code generation capabilities and AWS's infrastructure-as-code approach makes for a powerful security automation workflow.
 
-Setting Up Your AWS WAF Project
+## Setting Up Your AWS WAF Project
 
 Before you start, ensure you have the AWS CLI configured and appropriate credentials. Create a new directory for your WAF project:
 
@@ -60,7 +58,7 @@ Standards
 - Include logging configuration
 ```
 
-Creating Your First WAF Web ACL
+## Creating Your First WAF Web ACL
 
 Let me generate a CloudFormation template for a basic WAF Web ACL with common security rules:
 
@@ -180,18 +178,18 @@ Outputs:
       Name: !Sub '${Environment}-WebACLArn'
 ```
 
-Automating WAF Rule Reviews
+## Automating WAF Rule Reviews
 
 One of the most valuable Claude Code workflows is auditing existing WAF configurations. Create a skill that analyzes your WAF rules:
 
-Creating a WAF Audit Skill
+## Creating a WAF Audit Skill
 
 ```yaml
 name: "waf-audit"
 description: "Audit AWS WAF configurations for security and best practices"
 ```
 
-Running the Audit
+## Running the Audit
 
 Ask Claude Code to analyze your WAF setup:
 
@@ -206,11 +204,11 @@ Audit the WAF configuration in this project. Check for:
 Generate a detailed audit report with remediation steps.
 ```
 
-Implementing Custom WAF Rules
+## Implementing Custom WAF Rules
 
 AWS Managed Rules are great, but you often need custom rules for specific threats. Here's how to create custom rules with Claude Code:
 
-Geo-Blocking Rule
+## Geo-Blocking Rule
 
 ```yaml
 Custom Geo-Blocking Rule
@@ -232,7 +230,7 @@ Custom Geo-Blocking Rule
     MetricName: GeoBlockingRule
 ```
 
-Bot Control Rule
+## Bot Control Rule
 
 ```yaml
 AWS WAF Bot Control
@@ -252,11 +250,11 @@ AWS WAF Bot Control
     MetricName: BotControlRule
 ```
 
-Integrating WAF with Application Deployment
+## Integrating WAF with Application Deployment
 
 A complete security workflow integrates WAF with your CI/CD pipeline. Here's how to automate WAF deployments:
 
-GitHub Actions Workflow
+## GitHub Actions Workflow
 
 ```yaml
 name: Deploy WAF
@@ -299,11 +297,11 @@ Create a GitHub Actions workflow that:
 5. Sends deployment notifications to Slack
 ```
 
-Monitoring WAF with CloudWatch
+## Monitoring WAF with CloudWatch
 
 Effective WAF management requires monitoring. Claude Code can help create comprehensive dashboards:
 
-CloudWatch Dashboard Configuration
+## CloudWatch Dashboard Configuration
 
 ```json
 {
@@ -334,7 +332,7 @@ CloudWatch Dashboard Configuration
 }
 ```
 
-Best Practices for Claude Code WAF Workflows
+## Best Practices for Claude Code WAF Workflows
 
 Based on real-world implementations, here are actionable tips:
 
@@ -398,7 +396,7 @@ SQLInjectionRule
 - Review: After any WAF incident
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms AWS WAF management from a manual, error-prone process into an automated, repeatable workflow. By generating CloudFormation templates, auditing configurations, and creating documentation, you can establish solid WAF governance across your infrastructure.
 

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Standardizing Pull Request Workflows with Claude Code Skills"
 description: "Learn how to use Claude Code skills to create consistent, automated, and efficient pull request workflows across your development team."
@@ -34,7 +33,7 @@ Compliance gaps: Regulated industries need audit trails. Ad-hoc PR processes mak
 
 Claude Code skills solve these problems by encoding your team's best practices into reusable, version-controlled workflows that execute consistently every time.
 
-The Cost of Doing Nothing
+## The Cost of Doing Nothing
 
 It's worth dwelling on what inconsistent PR workflows actually cost. Research from the 2024 DORA State of DevOps report consistently shows that teams with strong automated quality gates ship faster and with fewer incidents than those relying on manual processes alone. The math is straightforward:
 
@@ -44,7 +43,7 @@ It's worth dwelling on what inconsistent PR workflows actually cost. Research fr
 
 Standardizing with Claude Code skills is an investment, but the payoff compounds every day your team uses it.
 
-Core Components of a Standardized PR Workflow
+## Core Components of a Standardized PR Workflow
 
 A comprehensive PR workflow with Claude Code skills typically includes these stages:
 
@@ -149,7 +148,7 @@ Summarize pull request $PR_NUMBER for a reviewer unfamiliar with the changes.
 5. Write a 3-5 sentence plain English summary suitable for a Slack message
 ```
 
-Comparison: Ad-Hoc vs. Skills-Based PR Workflow
+## Comparison: Ad-Hoc vs. Skills-Based PR Workflow
 
 Understanding the concrete difference between an unstructured workflow and a skills-based one helps make the case to your team.
 
@@ -165,17 +164,17 @@ Understanding the concrete difference between an unstructured workflow and a ski
 
 The skills-based approach doesn't replace human reviewers, it makes them faster by handling the mechanical work first.
 
-Building Your Own PR Skills
+## Building Your Own PR Skills
 
 Creating standardized PR workflows with Claude Code skills involves these steps:
 
-Step 1: Audit Your Current Process
+## Step 1: Audit Your Current Process
 
 Before automating, document your existing workflow. What checks do you perform? What questions do reviewers consistently ask? What errors keep recurring? This becomes your requirements document.
 
 A useful exercise: look at the last 20 merged PRs and note every comment that falls into a category like "missing test," "style issue," or "please add a description." Those categories become the first wave of automated checks.
 
-Step 2: Prioritize High-Impact Checks
+## Step 2: Prioritize High-Impact Checks
 
 Start with checks that catch the most common issues:
 
@@ -184,13 +183,13 @@ Start with checks that catch the most common issues:
 3. Security scanning (critical for compliance)
 4. Documentation completeness (often overlooked)
 
-Step 3: Encode as Claude Code Skills
+## Step 3: Encode as Claude Code Skills
 
 Transform your checklist into Claude Code skill definitions. The skill format is plain markdown, natural language instructions that Claude Code interprets and executes. This makes skills readable by non-engineers, which is a meaningful advantage when discussing requirements with product or security teams.
 
 Place your skills in `.claude/skills/` at the repository root and commit them. Every developer on your team now has access through Claude Code.
 
-Step 4: Integrate with Your CI/CD Pipeline
+## Step 4: Integrate with Your CI/CD Pipeline
 
 Claude Code skills work alongside your existing CI tools. Use them to:
 
@@ -218,7 +217,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 ```
 
-Step 5: Iterate and Improve
+## Step 5: Iterate and Improve
 
 Collect metrics on PR cycle times, review feedback, and defect rates. Use these to identify gaps in your automated workflow and refine your skills accordingly.
 
@@ -229,7 +228,7 @@ A practical iteration cycle:
 3. Add new skill steps to address those gaps
 4. Retire checks that create noise without catching real problems
 
-Real-World Scenario: Onboarding a New Developer
+## Real-World Scenario: Onboarding a New Developer
 
 Consider what happens when a new developer opens their first PR without a standardized workflow versus with one.
 
@@ -239,7 +238,7 @@ With Claude Code skills: The developer runs `/pr-validate` before submitting. Th
 
 The skill system acts as a knowledgeable colleague available at any hour, one who never gets tired of answering the same questions.
 
-Measuring Success
+## Measuring Success
 
 To validate your standardized workflow is working, track these metrics:
 
@@ -253,7 +252,7 @@ Establish a baseline before rolling out skills, then measure monthly. Most teams
 
 Claude Code skills give you consistency. Measuring outcomes proves their value.
 
-Advanced Patterns
+## Advanced Patterns
 
 Once basic PR skills are in place, more sophisticated patterns become available.
 
@@ -263,7 +262,7 @@ Cross-repository consistency: Store shared skills in a central repository and re
 
 Escalation paths: Build skills that recognize high-risk changes, large diffs, changes to core infrastructure, modifications to authentication logic, and automatically request review from specific team members or security engineers.
 
-Conclusion
+## Conclusion
 
 Standardizing pull request workflows with Claude Code skills transforms a manual, inconsistent process into a scalable, automated quality gate. The investment upfront, documenting your process, encoding your standards, integrating with your tooling, pays dividends in faster reviews, better code quality, and happier developers.
 

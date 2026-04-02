@@ -19,7 +19,7 @@ LastPass has served millions of users as a password manager over the years, but 
 
 This guide evaluates the best LastPass alternatives with Chrome extensions, focusing on what matters to developers: security transparency, CLI access, API capabilities, and self-hosting options.
 
-Bitwarden: The Open-Source Leader
+## Bitwarden: The Open-Source Leader
 
 Bitwarden stands as the most complete open-source alternative to LastPass, offering a Chrome extension that provides feature parity with commercial password managers. The extension includes:
 
@@ -62,7 +62,7 @@ services:
       - DOMAIN=https://your-domain.com
 ```
 
-Proton Pass: Privacy-First Alternative
+## Proton Pass: Privacy-First Alternative
 
 Proton Pass, developed by the same team behind Proton Mail, offers a Chrome extension emphasizing privacy and end-to-end encryption. The extension provides:
 
@@ -99,7 +99,7 @@ const securePassword = await pp.generatePassword({
 
 The free tier includes unlimited passwords and devices, making it attractive for individual developers.
 
-1Password: Premium Developer Features
+## 1Password: Premium Developer Features
 
 1Password continues offering one of the most polished Chrome extensions, with features specifically designed for developer workflows:
 
@@ -130,7 +130,7 @@ eval $(op env --exec "npm run build")
 
 While 1Password requires a subscription, the developer-focused features and polished experience justify the cost for teams requiring enterprise-grade security.
 
-KeePassXC: Local-First Option
+## KeePassXC: Local-First Option
 
 For developers who prefer complete local control without cloud dependencies, KeePassXC offers a different approach. While it lacks an official Chrome extension, several integration options exist:
 
@@ -160,7 +160,7 @@ Settings → Integration → KeePassHTTP → Set Association Key
 
 The trade-off is manual synchronization, but you gain complete control over your data without any cloud exposure.
 
-NordPass: Simplified Experience
+## NordPass: Simplified Experience
 
 NordPass, from the creators of NordVPN, offers a streamlined Chrome extension with a focus on simplicity:
 
@@ -184,7 +184,7 @@ Import from other managers
 np import --source lastpass --file import.csv
 ```
 
-Feature Comparison
+## Feature Comparison
 
 | Feature | Bitwarden | Proton Pass | 1Password | KeePassXC | NordPass |
 |---------|-----------|--------------|------------|-----------|----------|
@@ -194,7 +194,7 @@ Feature Comparison
 | CLI Tools | Yes | Limited | Yes | Limited | Limited |
 | API Access | Yes | Limited | Yes | No | Limited |
 
-Migration from LastPass
+## Migration from LastPass
 
 Moving away from LastPass requires exporting your data and importing to your chosen alternative. Here's the general process:
 
@@ -215,7 +215,7 @@ Moving away from LastPass requires exporting your data and importing to your cho
 
 For developers managing team credentials, maintain a transition period where both systems remain active while team members gradually migrate.
 
-Choosing the Right Alternative
+## Choosing the Right Alternative
 
 Select your LastPass alternative based on your priorities:
 
@@ -225,7 +225,6 @@ Select your LastPass alternative based on your priorities:
 - Complete local control: KeePassXC provides offline-only password management with browser integration
 
 The Chrome extension experience varies significantly. Bitwarden provides the most feature-complete free extension, while 1Password offers the smoothest overall experience for teams willing to pay.
-
 
 Related Reading
 

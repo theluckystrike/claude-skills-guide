@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code FastAPI OpenAPI Schema Generation Workflow
 
 FastAPI has become one of the most popular Python frameworks for building modern APIs, largely because it automatically generates OpenAPI documentation from your code. When combined with Claude Code, you can streamline the entire workflow of designing, implementing, and documenting your APIs. This guide shows you how to use Claude Code effectively for FastAPI OpenAPI schema generation.
 
-Understanding FastAPI's OpenAPI Generation
+## Understanding FastAPI's OpenAPI Generation
 
 FastAPI uses Pydantic models to define request and response schemas automatically. When you create endpoint functions with type hints, FastAPI introspects them at runtime to produce a complete OpenAPI specification. This specification can then be used to generate API documentation, client SDKs, and validate API contracts.
 
@@ -31,7 +28,7 @@ The key components that FastAPI uses for schema generation include:
 - Response models - Specify what the API returns
 - Field validators - Add constraints and validation rules
 
-Setting Up Your FastAPI Project for Schema Generation
+## Setting Up Your FastAPI Project for Schema Generation
 
 Before using Claude Code for OpenAPI schema generation, ensure your project is properly configured. Create a new FastAPI project with the necessary dependencies:
 
@@ -83,11 +80,11 @@ async def get_user(user_id: int):
     pass
 ```
 
-Using Claude Code for Schema-First Development
+## Using Claude Code for Schema-First Development
 
 Schema-first development involves designing your API contract before implementing the logic. Claude Code excels at this workflow by helping you define comprehensive OpenAPI schemas that capture all edge cases and business requirements.
 
-Step 1: Define Your Schema Requirements
+## Step 1: Define Your Schema Requirements
 
 When starting a new API endpoint, provide Claude Code with clear requirements:
 
@@ -142,7 +139,7 @@ class Order(BaseModel):
     shipping_address: ShippingAddress
 ```
 
-Step 2: Generate Endpoint Definitions
+## Step 2: Generate Endpoint Definitions
 
 After defining your models, ask Claude Code to create the corresponding endpoints:
 
@@ -159,15 +156,15 @@ Include proper error responses (404 for not found, 400 for invalid status transi
 
 Claude Code will generate the complete endpoint implementations with proper error handling.
 
-Accessing and Using the Generated OpenAPI Schema
+## Accessing and Using the Generated OpenAPI Schema
 
 FastAPI automatically generates the OpenAPI schema at runtime. You can access it in several ways:
 
-Via the Automatic Docs Endpoint
+## Via the Automatic Docs Endpoint
 
 Start your FastAPI server and visit `/docs` for the Swagger UI or `/redoc` for ReDoc documentation. Both are generated from the OpenAPI schema.
 
-Programmatically Access the Schema
+## Programmatically Access the Schema
 
 To get the raw OpenAPI JSON schema:
 
@@ -185,7 +182,7 @@ with open("openapi.json", "w") as f:
     json.dump(openapi_schema, f, indent=2)
 ```
 
-Using the CLI
+## Using the CLI
 
 Generate the OpenAPI schema from the command line:
 
@@ -193,9 +190,9 @@ Generate the OpenAPI schema from the command line:
 uvicorn main:app --generate-openapi-schema > openapi.json
 ```
 
-Best Practices for Schema Generation with Claude Code
+## Best Practices for Schema Generation with Claude Code
 
-Use Descriptive Field Names and Documentation
+## Use Descriptive Field Names and Documentation
 
 Always add docstrings and field descriptions for better auto-generated documentation:
 
@@ -213,7 +210,7 @@ class UserProfile(BaseModel):
     )
 ```
 
-Use Response Models for Clear API Contracts
+## Use Response Models for Clear API Contracts
 
 Always specify response models to ensure the OpenAPI schema accurately documents your API responses:
 
@@ -225,7 +222,7 @@ async def list_users(limit: int = 100, offset: int = 0):
     return users
 ```
 
-Use Enums for Constrained Values
+## Use Enums for Constrained Values
 
 Define enums for fields with limited valid values:
 
@@ -244,11 +241,11 @@ class User(BaseModel):
 
 This generates proper OpenAPI schema with enum constraints.
 
-Automating Schema Validation
+## Automating Schema Validation
 
 Integrate OpenAPI schema validation into your development workflow:
 
-Generate Client SDKs
+## Generate Client SDKs
 
 Use the OpenAPI schema to generate typed client libraries:
 
@@ -257,7 +254,7 @@ pip install openapi-generator-cli
 openapi-generator generate -i openapi.json -g python -o ./client
 ```
 
-Contract Testing
+## Contract Testing
 
 Validate that your implementation matches the schema:
 
@@ -266,13 +263,13 @@ pip install pytest-openapi-schema
 pytest --validate-schema test_api.py
 ```
 
-Common Issues and Solutions
+## Common Issues and Solutions
 
-Schema Not Generating Properly
+## Schema Not Generating Properly
 
 If your OpenAPI schema is incomplete, ensure you're using Pydantic models with proper type hints. Avoid using `Any` types when possible, and ensure all nested models are properly imported.
 
-Circular Import Errors
+## Circular Import Errors
 
 When models span multiple files, organize them properly:
 
@@ -284,11 +281,11 @@ from .order import Order, OrderCreate
 __all__ = ["User", "UserCreate", "Order", "OrderCreate"]
 ```
 
-Schema Version Compatibility
+## Schema Version Compatibility
 
 Ensure your FastAPI and Pydantic versions are compatible. FastAPI 0.100+ requires Pydantic v2.
 
-Actionable Workflow Summary
+## Actionable Workflow Summary
 
 1. Define requirements first - Tell Claude Code your data requirements before implementation
 2. Use schema-first approach - Generate Pydantic models before writing endpoint logic

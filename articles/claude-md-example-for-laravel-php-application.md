@@ -16,7 +16,7 @@ permalink: /claude-md-example-for-laravel-php-application/
 
 Laravel is one of the most popular PHP frameworks, known for its elegant syntax and powerful features. When combined with Claude Code's skill system, you can create a highly productive development environment tailored specifically for Laravel development. This guide shows you how to create effective Claude MD files for your Laravel projects.
 
-Setting Up Claude Skills for Laravel
+## Setting Up Claude Skills for Laravel
 
 The Claude skills system works by placing Markdown files in your skills directory. Each skill file contains instructions that Claude follows when working on your project. For Laravel development, creating a dedicated skill helps Claude understand your coding conventions, package preferences, and architectural patterns.
 
@@ -47,7 +47,7 @@ Key conventions:
 - Migrations go in database/migrations/
 ```
 
-Using the Laravel Skill in Your Projects
+## Using the Laravel Skill in Your Projects
 
 Activate the skill in your Claude Code session by typing:
 
@@ -61,7 +61,7 @@ Then describe your task. For example, you might say:
 
 Claude will generate the models, migrations, controllers, and views following Laravel conventions.
 
-Real-World Example: Building an API Endpoint
+## Real-World Example: Building an API Endpoint
 
 When you need to create a RESTful API in Laravel, the skill helps you generate proper resource controllers with authentication. Here is what Claude produces:
 
@@ -144,7 +144,7 @@ class ArticleController extends Controller
 }
 ```
 
-Enhancing Your Workflow with Additional Skills
+## Enhancing Your Workflow with Additional Skills
 
 For a complete Laravel development setup, consider combining the Laravel skill with other Claude skills. The tdd skill helps you write tests first, ensuring your code is properly tested before implementation. This works particularly well with Laravel's feature tests and unit tests.
 
@@ -154,7 +154,7 @@ For frontend work in your Laravel application, the frontend-design skill assists
 
 When generating documentation for your Laravel packages or APIs, the pdf skill can help create professional documentation files, though for most Laravel projects, Markdown-based documentation served via Laravel's markdown rendering capabilities is often sufficient.
 
-Practical Example: Database Migrations
+## Practical Example: Database Migrations
 
 The Laravel skill ensures your migrations follow best practices. Here is an example migration generated for a articles table:
 
@@ -197,7 +197,7 @@ return new class extends Migration
 
 Notice how the migration includes proper foreign key constraints, appropriate indexes for query performance, and timestamps. The Laravel skill ensures these patterns are followed consistently.
 
-Testing Your Laravel Application
+## Testing Your Laravel Application
 
 With the tdd skill loaded alongside Laravel, you can generate comprehensive test cases:
 
@@ -269,7 +269,7 @@ class ArticleApiTest extends TestCase
 }
 ```
 
-Project-Specific Customization
+## Project-Specific Customization
 
 For each Laravel project, create a `CLAUDE.md` file in your project root. This file overrides the general Laravel skill with project-specific details:
 
@@ -294,10 +294,9 @@ When generating code:
 
 This project-specific file works alongside the general Laravel skill, giving you the best of both worlds: general Laravel conventions and project-specific patterns.
 
-Conclusion
+## Conclusion
 
 Creating a Claude MD file for your Laravel PHP application significantly improves your development workflow. By defining your conventions, preferred packages, and architectural patterns, Claude generates code that matches your team's standards from the start. Combine this with skills like tdd for testing and supermemory for context retention, and you have a powerful development setup for Laravel projects.
-
 
 Related Reading
 

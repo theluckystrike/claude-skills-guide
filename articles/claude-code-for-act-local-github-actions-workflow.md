@@ -17,7 +17,6 @@ score: 7
 categories: [guides]
 ---
 
-
 {% raw %}
 Claude Code for Act Local GitHub Actions Workflow
 
@@ -34,7 +33,7 @@ Benefits of using Act:
 - Offline development, Work on your workflows without an internet connection
 - Cost savings, Reduce CI minutes consumed on GitHub
 
-Installing Act
+## Installing Act
 
 Before integrating with Claude Code, you'll need to install Act. The installation process depends on your operating system.
 
@@ -48,7 +47,7 @@ Or using curl
 curl https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
 ```
 
-Linux Installation
+## Linux Installation
 
 ```bash
 Using apt
@@ -58,7 +57,7 @@ Or using the install script
 curl https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
 ```
 
-Windows Installation
+## Windows Installation
 
 ```powershell
 Using winget
@@ -74,7 +73,7 @@ After installation, verify that Act is working:
 act --version
 ```
 
-Setting Up Act with Your Project
+## Setting Up Act with Your Project
 
 Once Act is installed, navigate to your project repository that contains GitHub Actions workflows:
 
@@ -90,7 +89,7 @@ act -l
 
 This command lists all the workflows Act found, making it easy to identify which ones you want to run locally.
 
-Running GitHub Actions Locally with Act
+## Running GitHub Actions Locally with Act
 
 The basic command to run a workflow is straightforward:
 
@@ -105,18 +104,18 @@ Run a specific job
 act -j job-name
 ```
 
-Using Secrets and Variables Locally
+## Using Secrets and Variables Locally
 
 When running locally, Act needs access to secrets and environment variables. There are several ways to provide them:
 
-Option 1: Environment Variables
+## Option 1: Environment Variables
 
 ```bash
 export MY_SECRET="your-secret-value"
 act
 ```
 
-Option 2: Secrets File
+## Option 2: Secrets File
 
 Create a `.secrets` file in your project root (add it to `.gitignore`):
 
@@ -126,17 +125,17 @@ MY_SECRET=your-secret-value
 ANOTHER_SECRET=another-value
 ```
 
-Option 3: Inline Secrets
+## Option 3: Inline Secrets
 
 ```bash
 act --secret MY_SECRET=your-secret-value
 ```
 
-Integrating Act with Claude Code
+## Integrating Act with Claude Code
 
 This is where the real power emerges. Claude Code can help you create, debug, and optimize your GitHub Actions workflows by understanding your project's context and generating appropriate workflow configurations.
 
-Using Claude Code to Generate Workflows
+## Using Claude Code to Generate Workflows
 
 When you need a new GitHub Actions workflow, ask Claude Code to create one based on your project requirements:
 
@@ -197,7 +196,7 @@ jobs:
           region: us-west-2
 ```
 
-Debugging Failed Workflows with Claude Code
+## Debugging Failed Workflows with Claude Code
 
 When Act runs a workflow and something fails, you can paste the error output to Claude Code for analysis:
 
@@ -208,7 +207,7 @@ Claude Code will provide specific troubleshooting steps, which might include:
 - Using actions/cache to cache node_modules
 - Checking if the action version is correct
 
-Optimizing Your Workflows
+## Optimizing Your Workflows
 
 Ask Claude Code to review and optimize your existing workflows:
 
@@ -220,17 +219,17 @@ Claude Code might suggest:
 - Using smaller runner images
 - Skipping unnecessary steps on certain branches
 
-Practical Example: Complete Workflow Development Cycle
+## Practical Example: Complete Workflow Development Cycle
 
 Let's walk through a complete development cycle using Act and Claude Code:
 
-Step 1: Define Your Requirements
+## Step 1: Define Your Requirements
 
 Start by explaining your CI/CD needs to Claude Code:
 
 > "I need a workflow that builds a Docker image, runs unit tests inside the container, and pushes the image to Docker Hub on every push to main."
 
-Step 2: Generate the Workflow
+## Step 2: Generate the Workflow
 
 Claude Code generates:
 
@@ -274,7 +273,7 @@ jobs:
           tags: myapp:latest,myapp:${{ github.sha }}
 ```
 
-Step 3: Test Locally with Act
+## Step 3: Test Locally with Act
 
 Run the workflow locally:
 
@@ -286,7 +285,7 @@ Run the actual workflow
 act
 ```
 
-Step 4: Debug with Claude Code
+## Step 4: Debug with Claude Code
 
 If tests fail or Docker build errors occur, copy the error output and ask Claude Code:
 
@@ -294,9 +293,9 @@ If tests fail or Docker build errors occur, copy the error output and ask Claude
 
 Claude Code will identify issues like incorrect paths in Dockerfile or missing files in the build context.
 
-Advanced Act Features
+## Advanced Act Features
 
-Using Custom Act Configuration
+## Using Custom Act Configuration
 
 Create a `.actrc` file in your project root to customize Act's behavior:
 
@@ -307,14 +306,14 @@ Create a `.actrc` file in your project root to customize Act's behavior:
 --secret-file .secrets
 ```
 
-Running Specific Matrix Combinations
+## Running Specific Matrix Combinations
 
 ```bash
 Run only Node.js 20 on macOS
 act -j test --matrix node-version:20
 ```
 
-Using Act with GitHub Enterprise
+## Using Act with GitHub Enterprise
 
 For enterprise users, configure the GitHub instance:
 
@@ -322,7 +321,7 @@ For enterprise users, configure the GitHub instance:
 act --hostname github.mycompany.com
 ```
 
-Best Practices for Local CI/CD Development
+## Best Practices for Local CI/CD Development
 
 1. Always test locally first, Use Act before every pull request
 2. Keep secrets local, Never commit real secrets; use `.secrets` file with `.gitignore`
@@ -333,7 +332,7 @@ Best Practices for Local CI/CD Development
 4. Cache dependencies, Configure caching in Act to speed up subsequent runs
 5. Use Claude Code, Use Claude Code for workflow generation, debugging, and optimization
 
-Conclusion
+## Conclusion
 
 Act transforms how you develop and test GitHub Actions workflows. By running CI/CD pipelines locally, you get faster feedback, easier debugging, and reduced costs. Combined with Claude Code's ability to generate, analyze, and optimize your workflows, you have a complete local development environment for modern DevOps practices.
 

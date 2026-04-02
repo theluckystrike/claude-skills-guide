@@ -29,11 +29,11 @@ Claude Code brings several advantages to your benchmark workflow:
 
 The combination of Claude Code's contextual understanding and JMH's precision makes for a powerful performance investigation workflow. Rather than reading through the full JMH documentation each time you start a new project, you can describe your goal in plain English and Claude Code generates a working starting point you can refine.
 
-Setting Up Your JMH Project
+## Setting Up Your JMH Project
 
 The first step is creating a JMH-capable project. Rather than manually configuring build files, ask Claude Code to scaffold everything for you.
 
-Maven Setup
+## Maven Setup
 
 For a Maven project, include the JMH dependencies and the JMH Maven plugin. The annotation processor dependency is what generates the benchmark runner code during compilation, this is easy to miss and will cause mysterious failures if omitted.
 
@@ -91,7 +91,7 @@ You also need the maven-compiler-plugin to ensure annotation processing runs cor
 </plugin>
 ```
 
-Gradle Setup
+## Gradle Setup
 
 For Gradle, the setup is simpler with the `jmh-gradle-plugin`:
 
@@ -115,11 +115,11 @@ The `resultsFile` and `resultFormat` settings are worth configuring from the sta
 
 Ask Claude Code to generate either of these configurations and explain any parts you don't understand. A prompt like "Generate a complete Maven pom.xml for a JMH project targeting Java 17, including shade plugin setup" will produce a ready-to-use file.
 
-Writing Effective Benchmarks
+## Writing Effective Benchmarks
 
 A well-written benchmark is the key to meaningful results. Here's how Claude Code can help you write benchmarks that accurately measure what you care about.
 
-Basic Benchmark Structure
+## Basic Benchmark Structure
 
 Every JMH benchmark follows a similar pattern:
 
@@ -156,7 +156,7 @@ public class StringBenchmark {
 
 The annotations control everything about how JMH runs your benchmark. Ask Claude Code to explain each one: what `@BenchmarkMode` does, why `@State(Scope.Thread)` matters versus `Scope.Benchmark`, and how `@Setup(Level.Trial)` differs from `@Setup(Level.Iteration)`. Understanding these distinctions prevents subtle measurement errors.
 
-Annotation Reference
+## Annotation Reference
 
 | Annotation | Purpose | Common Values |
 |---|---|---|
@@ -170,7 +170,7 @@ Annotation Reference
 | `@TearDown` | Post-benchmark cleanup | Same levels as @Setup |
 | `@Param` | Parameterize over multiple values | Array of string values |
 
-Common Benchmark Patterns
+## Common Benchmark Patterns
 
 Claude Code can help you implement several common benchmark scenarios.
 
@@ -257,11 +257,11 @@ public class QueueBenchmark {
 
 Ask Claude Code to generate thread-safety-aware benchmarks when you're working with concurrent data structures.
 
-Running Your Benchmarks
+## Running Your Benchmarks
 
 Once your benchmarks are written, running them properly is crucial for accurate results.
 
-Command Line Execution
+## Command Line Execution
 
 Run benchmarks using Maven or Gradle:
 
@@ -280,7 +280,7 @@ Gradle with filter
 ./gradlew jmh --include '.*StringBenchmark.*'
 ```
 
-Key JMH Command-Line Flags
+## Key JMH Command-Line Flags
 
 When running the jar directly, you have fine-grained control over execution:
 
@@ -309,7 +309,7 @@ java -jar target/benchmark.jar \
 
 The `-prof gc` option is particularly valuable when benchmarking memory-intensive operations. It adds allocation rate and GC pause data to your output, letting you understand whether one implementation is faster because it allocates less.
 
-Interpreting Results
+## Interpreting Results
 
 After running, JMH produces output like this:
 
@@ -331,11 +331,11 @@ Ask Claude Code to interpret these results in context. It can explain:
 
 The `±` column is the 99.9% confidence interval. If two benchmarks' error ranges overlap, the difference may not be meaningful. Claude Code can help you determine whether you need more iterations to get a decisive result.
 
-Common Pitfalls and How Claude Code Helps You Avoid Them
+## Common Pitfalls and How Claude Code Helps You Avoid Them
 
 JMH benchmarking has several well-known failure modes. Claude Code can audit your benchmark code and flag these issues before you waste time running flawed measurements.
 
-Dead Code Elimination
+## Dead Code Elimination
 
 The JIT compiler aggressively eliminates code that doesn't affect observable program state. A benchmark that computes a value but never uses it may be measuring nothing:
 
@@ -361,7 +361,7 @@ public int goodBenchmark() {
 }
 ```
 
-Constant Folding
+## Constant Folding
 
 If your benchmark inputs are constants, the JIT may precompute the result at compile time:
 
@@ -384,11 +384,11 @@ public class MathBenchmark {
 }
 ```
 
-Loop Unrolling
+## Loop Unrolling
 
 The JIT may unroll or vectorize loops in ways that don't reflect real workload behavior. Use realistic data sizes and avoid trivially small loops.
 
-Setup Overhead in Measurements
+## Setup Overhead in Measurements
 
 Using `@Setup(Level.Invocation)` runs setup before every single benchmark invocation, which can dominate measurement time for fast operations. Reserve invocation-level setup for benchmarks where state must be reset between calls (like sorting an already-sorted array):
 
@@ -417,7 +417,7 @@ public class SortBenchmark {
 }
 ```
 
-Best Practices for Reliable Benchmarks
+## Best Practices for Reliable Benchmarks
 
 Follow these guidelines, and ask Claude Code to review your implementation against them:
 
@@ -435,7 +435,7 @@ Follow these guidelines, and ask Claude Code to review your implementation again
 
 7. Version your benchmark results: Save JSON output alongside your code so you can compare across commits. Claude Code can help write scripts that diff two result files and flag regressions.
 
-Integrating Claude Code into Your Workflow
+## Integrating Claude Code into Your Workflow
 
 Here's a practical workflow for using Claude Code with JMH across a real performance investigation:
 
@@ -455,7 +455,7 @@ Step 7. Regression testing: Once you have baseline results, write a simple CI sc
 
 This workflow transforms JMH from a complex tool into a natural part of your development process. Performance work that previously required deep JMH expertise becomes accessible to any developer on the team.
 
-A Complete Working Example
+## A Complete Working Example
 
 Here is a complete benchmark comparing four approaches to building a comma-separated string from a list:
 
@@ -521,10 +521,9 @@ public class JoinBenchmark {
 
 This benchmark is complete and correct. It uses Blackhole properly, parameterizes over realistic sizes, and includes warmup and fork configuration. Generate this kind of starting template by describing your requirements to Claude Code, then customize it for your specific comparison.
 
-Conclusion
+## Conclusion
 
 Claude Code makes JMH benchmarking accessible by handling project setup, generating benchmark code, reviewing implementations for common pitfalls, and interpreting results. Start with simple benchmarks that answer a specific question, follow the best practices around warmup and dead code elimination, and let Claude Code guide you through the process. Your performance optimization efforts will benefit from more accurate, reliable benchmark data, and you'll develop a solid understanding of JMH that carries forward to future investigations.
-
 
 Related Reading
 

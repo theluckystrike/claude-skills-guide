@@ -13,18 +13,15 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-How to Choose the Right MCP Server
-
 Model Context Protocol (MCP) servers extend Claude Code's capabilities by connecting it to external tools, databases, and services. With hundreds of MCP servers available, choosing the right one for your workflow can feel overwhelming. This guide walks you through a practical decision framework to find the perfect match.
 
-Understanding MCP Servers in Claude Code
+## Understanding MCP Servers in Claude Code
 
 MCP servers act as bridges between Claude Code and external systems. While Claude Code skills provide instruction-based customization, MCP servers give Claude actual tool access, filesystem operations, API calls, database queries, and more. Understanding this distinction is your first step toward making informed choices.
 
 Claude Code supports multiple MCP server types: filesystem servers for reading and writing files, API integration servers for external services, database connectors for SQL and NoSQL systems, and specialized tools for cloud platforms like AWS, GCP, or Azure. Each server type serves different purposes, and your choice should align with your actual needs.
 
-Evaluate Your Workflow Requirements
+## Evaluate Your Workflow Requirements
 
 Before browsing the MCP server marketplace, honestly assess what you actually need. Start by listing the external systems you interact with daily. Are you constantly querying databases, managing cloud infrastructure, or working with specific APIs? These are your primary candidates.
 
@@ -32,9 +29,9 @@ Consider your security requirements next. MCP servers often require credentials 
 
 Think about the integration complexity as well. Some MCP servers work out of the box with minimal configuration, while others require substantial setup. If you're evaluating servers for a team, factor in the onboarding time for each option.
 
-Popular MCP Servers and When to Use Them
+## Popular MCP Servers and When to Use Them
 
-Filesystem and Development Tools
+## Filesystem and Development Tools
 
 The Filesystem MCP server is perhaps the most fundamental choice. It grants Claude Code direct access to read, write, and navigate your filesystem. Most developers find it essential for any substantive work. However, be mindful of the permissions you grant, limiting access to specific directories reduces risk.
 
@@ -50,7 +47,7 @@ Configure filesystem MCP with restricted directory access
 }
 ```
 
-Database Connectivity
+## Database Connectivity
 
 For database work, several options exist depending on your stack. The PostgreSQL MCP server connects Claude to Postgres databases, enabling schema queries, data exploration, and even migration assistance. The SQLite MCP works similarly for local database files.
 
@@ -68,7 +65,7 @@ PostgreSQL MCP configuration example
 
 If you use Prisma or other ORMs, consider whether you need direct database access or if an ORM-specific integration better suits your workflow. The direct approach offers more flexibility but requires more careful permission management.
 
-Cloud Platform Integration
+## Cloud Platform Integration
 
 AWS, GCP, and Azure each have official MCP servers that expose cloud resource management. These are particularly valuable for infrastructure-as-code workflows, deployment automation, and cloud resource debugging. A typical configuration might grant read access to EC2 instances, S3 buckets, and Lambda functions while restricting destructive operations.
 
@@ -86,17 +83,17 @@ AWS, GCP, and Azure each have official MCP servers that expose cloud resource ma
 }
 ```
 
-API and Webhook Integration
+## API and Webhook Integration
 
 Servers like the GitHub MCP bring repository management directly into your Claude workflow. You can create issues, review pull requests, and manage releases without leaving your terminal. Similar servers exist for GitLab, Jira, Slack, and dozens of other services.
 
 The key consideration here is credential management. Many API-based MCP servers support OAuth or token-based authentication. Always use dedicated service accounts with minimal required permissions rather than personal credentials, especially in team environments.
 
-Extending MCP with Claude Code Skills
+## Extending MCP with Claude Code Skills
 
 Beyond server-level integrations, Claude Code skills provide specialized tool capabilities. Two commonly paired with MCP workflows:
 
-Data Processing with the xlsx Skill
+## Data Processing with the xlsx Skill
 
 The xlsx skill handles spreadsheet operations for reporting and data analysis:
 
@@ -114,7 +111,7 @@ def generate_sprint_report(sprint_data, team_velocity):
     xlsx.save(report, "sprint-report.xlsx")
 ```
 
-Document Generation with the pdf Skill
+## Document Generation with the pdf Skill
 
 The pdf skill creates formatted documents, API references, deployment reports, and technical specifications, directly from your codebase:
 
@@ -135,7 +132,7 @@ def generate_api_documentation(api_spec, output_path):
 
 These skills complement MCP servers by processing data retrieved through server connections, for example, querying a database via PostgreSQL MCP and generating a formatted report with the xlsx skill.
 
-Decision Framework: Questions to Ask
+## Decision Framework: Questions to Ask
 
 Use these questions to narrow your choices:
 
@@ -149,7 +146,7 @@ How does it handle credentials? Avoid servers that require hardcoded credentials
 
 What's the performance impact? Some servers add noticeable latency to each request. Test critical workflows with any server before committing to it.
 
-Practical Example: Building a Full-Stack Workflow
+## Practical Example: Building a Full-Stack Workflow
 
 Imagine you're building a Next.js application with PostgreSQL, deployed to AWS. A practical MCP server combination might include:
 
@@ -160,7 +157,7 @@ Imagine you're building a Next.js application with PostgreSQL, deployed to AWS. 
 
 This combination covers your stack without unnecessary additions. You skip the Azure MCP because you're not using Azure. You don't need a Kubernetes MCP if your deployment doesn't use containers at that level.
 
-Security Best Practices
+## Security Best Practices
 
 Security deserves ongoing attention with MCP servers. Follow these principles:
 
@@ -174,7 +171,7 @@ Monitor access: Enable logging where available. Know what data your MCP servers 
 
 Keep servers updated: Like any software, MCP servers receive security patches. Stay current with updates.
 
-Conclusion
+## Conclusion
 
 Choosing the right MCP server comes down to understanding your actual workflow needs, evaluating security implications, and matching servers to specific problems rather than collecting tools. Start with fundamental servers like filesystem access, then add specialized integrations as your needs become clear.
 

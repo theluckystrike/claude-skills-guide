@@ -18,7 +18,7 @@ Claude Code for Apache Spark ML Workflow
 
 Apache Spark has become the backbone of enterprise machine learning pipelines, enabling developers to process massive datasets and train models at scale. When combined with Claude Code, you can dramatically accelerate your Spark ML development workflow, from feature engineering to model deployment. This guide provides practical strategies and code examples to help you build efficient ML pipelines using Spark's MLlib library with Claude Code as your intelligent development partner.
 
-Setting Up Your Spark ML Environment
+## Setting Up Your Spark ML Environment
 
 Before building ML pipelines, you need a properly configured Spark environment. Claude Code can help you set up the ideal development stack with all necessary dependencies.
 
@@ -45,7 +45,7 @@ print(f"MLlib Version: {spark.sparkContext._jvm.org.apache.spark.ml.MLlib._versi
 
 Actionable Tip: Always specify memory configurations explicitly in your Spark session. Claude Code can help you tune these parameters based on your cluster resources and data size. For production workloads, consider using dynamic allocation with proper bounds.
 
-Data Preprocessing and Feature Engineering
+## Data Preprocessing and Feature Engineering
 
 Feature engineering is often the most time-consuming part of ML development. Claude Code can help you write efficient transformations and handle common preprocessing challenges.
 
@@ -89,7 +89,7 @@ processed_df = preprocess_data(raw_df)
 
 Actionable Tip: When working with large datasets, push transformations as close to the data source as possible. Use Spark's Catalyst optimizer to automatically improve query plans. Claude Code can suggest optimizations specific to your data distribution.
 
-Building ML Pipelines with Spark MLlib
+## Building ML Pipelines with Spark MLlib
 
 Spark MLlib provides a comprehensive pipeline API that enables you to chain transformers and estimators. Claude Code can help you construct solid pipelines that handle everything from data loading to model training.
 
@@ -146,7 +146,7 @@ print(f"Model AUC: {auc_score:.4f}")
 
 Actionable Tip: Use CrossValidator for hyperparameter tuning on smaller datasets, but consider using trainValidationSplit for faster iteration on large-scale data. Claude Code can help you design efficient parameter grids that balance search space with computational cost.
 
-Model Persistence and Deployment
+## Model Persistence and Deployment
 
 Once you've trained a satisfactory model, proper persistence ensures reproducibility and enables deployment to production environments.
 
@@ -180,7 +180,7 @@ streaming_predictions.write \
 
 Actionable Tip: Version your models using a clear naming convention. Store metadata including training date, dataset version, and hyperparameters alongside the model. This practice is essential for model governance and debugging production issues.
 
-Troubleshooting Common Spark ML Issues
+## Troubleshooting Common Spark ML Issues
 
 Claude Code can help you diagnose and resolve common challenges in Spark ML workflows.
 
@@ -193,7 +193,7 @@ Claude Code can help you diagnose and resolve common challenges in Spark ML work
 
 Actionable Tip: Always monitor Spark UI during development to identify bottlenecks. Pay attention to stage completion times and shuffle read/write volumes. Claude Code can analyze these metrics and suggest specific optimizations.
 
-Integrating Spark ML with MLOps
+## Integrating Spark ML with MLOps
 
 For production ML systems, integrating Spark ML with MLOps practices ensures reliability and maintainability.
 
@@ -225,7 +225,7 @@ with mlflow.start_run(run_name="production_model"):
 
 Actionable Tip: Use MLflow or similar frameworks for experiment tracking and model registry. This enables reproducibility and provides a clear audit trail for regulatory compliance in enterprise environments.
 
-Conclusion
+## Conclusion
 
 Claude Code significantly enhances your Apache Spark ML workflow by helping you write better code faster, optimize performance, and follow best practices. From environment setup through feature engineering, pipeline construction, and production deployment, Claude Code serves as an intelligent partner that understands both software development patterns and Spark ML specifics.
 

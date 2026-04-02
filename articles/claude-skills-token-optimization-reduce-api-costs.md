@@ -16,13 +16,13 @@ permalink: /claude-skills-token-optimization-reduce-api-costs/
 
 Token consumption is the primary cost driver when using Claude Code. Every file read, tool call, and response counts against your token budget. Skills amplify this because they add instructions to the context window on every invocation. This guide covers practical strategies to minimize token usage without sacrificing output quality.
 
-How Skills Affect Token Usage
+## How Skills Affect Token Usage
 
 When you invoke a skill, Claude loads the entire `.md` file into the conversation context. A 500-line skill file adds roughly 2,000-3,000 tokens before Claude even starts working. If the skill instructs Claude to read multiple files, run tests, and iterate, a single invocation can consume 50,000-100,000 tokens.
 
 The key insight: skill design directly controls token cost. A well-structured skill uses fewer tokens to produce the same result.
 
-Strategy 1: Keep Skill Files Concise
+## Strategy 1: Keep Skill Files Concise
 
 Every line in your skill `.md` file costs tokens on every invocation. Remove verbose explanations, redundant examples, and instructions Claude already follows by default.
 
@@ -44,7 +44,7 @@ Workflow
 
 The concise version communicates the same workflow in one quarter of the tokens.
 
-Strategy 2: Scope File Reads
+## Strategy 2: Scope File Reads
 
 Skills that instruct Claude to "read the entire project structure" or "scan all files" consume massive token budgets. Instead, direct Claude to read specific files relevant to the current task.
 
@@ -58,7 +58,7 @@ Start with the file mentioned in the prompt. Read imports to understand dependen
 Do not pre-read the entire project.
 ```
 
-Strategy 3: Limit Iteration Rounds
+## Strategy 3: Limit Iteration Rounds
 
 Skills that loop ("fix errors until tests pass") can run indefinitely if a test has a genuine bug. Set explicit iteration limits.
 
@@ -71,7 +71,7 @@ Iteration limits
 
 This prevents runaway token consumption from infinite retry loops. See the [guide on fixing skill infinite loops](/how-to-fix-claude-skill-infinite-loop-issue/) for detailed patterns.
 
-Strategy 4: Use Targeted Tool Calls
+## Strategy 4: Use Targeted Tool Calls
 
 Skills can specify which tools Claude should prefer. Directing Claude to use `Grep` instead of `Read` for searching, and `Edit` instead of `Write` for modifications, reduces token transfer significantly.
 
@@ -84,7 +84,7 @@ Tool preferences
 
 An `Edit` call that changes 3 lines transfers only those lines. A `Write` call that replaces the same file transfers the entire file content.
 
-Strategy 5: Manage Context Window Proactively
+## Strategy 5: Manage Context Window Proactively
 
 Long conversations accumulate context that inflates every subsequent API call. For token-sensitive workflows:
 
@@ -92,7 +92,7 @@ Long conversations accumulate context that inflates every subsequent API call. F
 - Use the [`supermemory` skill](/claude-supermemory-skill-persistent-context-explained/) to persist key decisions across sessions without carrying full conversation history
 - Break large tasks into smaller, focused prompts rather than one mega-prompt
 
-Strategy 6: Avoid Redundant Skill Instructions
+## Strategy 6: Avoid Redundant Skill Instructions
 
 If your `CLAUDE.md` already contains project conventions (naming patterns, test frameworks, directory structure), do not repeat them in skill files. Skills inherit the project context automatically.
 
@@ -104,7 +104,7 @@ Good. references existing context
 Follow the testing conventions defined in CLAUDE.md.
 ```
 
-Strategy 7: Front-Load Instructions, Back-Load Detail
+## Strategy 7: Front-Load Instructions, Back-Load Detail
 
 Claude reads skill files from top to bottom. Instructions that appear early carry more weight and are processed before Claude commits to an approach. If your skill file opens with a 200-line background section before getting to the actual instructions, Claude has already started forming a plan that may not match your intent, and you have paid for all of those preamble tokens.
 
@@ -131,7 +131,7 @@ Background context that Claude rarely needs...
 
 The Quick Reference section gives Claude an immediate orientation before reading the detailed workflow. Extended notes can be placed last and, for simple tasks, Claude may not even need to process them fully because the intent is already clear.
 
-Strategy 8: Use Output Format Instructions to Limit Response Size
+## Strategy 8: Use Output Format Instructions to Limit Response Size
 
 Claude's responses are part of the token bill too. A verbose response costs the same as a verbose file read. Skills can constrain output format to what you actually need:
 
@@ -145,7 +145,7 @@ Output format
 
 Without this, Claude tends to produce a paragraph-level summary after completing each task. Across hundreds of skill invocations per month, those summaries add up to meaningful cost.
 
-Strategy 9: Split Large Skills into Composed Sub-Skills
+## Strategy 9: Split Large Skills into Composed Sub-Skills
 
 A single 600-line skill that handles "everything related to deployments" will load all 600 lines even when the user only needs to run a health check. Split large skills into focused sub-skills and invoke only what's needed:
 
@@ -159,7 +159,7 @@ skills/
 
 A health check invocation loads only `deploy-check.md`, a 40-line file, instead of a 600-line omnibus skill. This is the same principle as microservices applied to skill design: each unit does one thing and loads only what that thing requires.
 
-Strategy 10: Cache Repeated Context in CLAUDE.md
+## Strategy 10: Cache Repeated Context in CLAUDE.md
 
 If multiple skills all need the same information, API endpoint URLs, environment names, directory structure conventions, and they each define it inline, you pay for that duplication on every invocation of every skill. Move shared context into `CLAUDE.md` once:
 
@@ -179,7 +179,7 @@ Environments
 
 Skills then reference this implicitly, Claude loads `CLAUDE.md` once per session and all skills benefit from it without repeating it. If a skill file says "follow project structure conventions," that is enough; Claude already knows what those conventions are.
 
-Measuring Token Usage
+## Measuring Token Usage
 
 Monitor your token consumption to identify which skills and tasks cost the most:
 
@@ -188,11 +188,11 @@ Monitor your token consumption to identify which skills and tasks cost the most:
 - Track which skills consistently consume the most tokens and optimize those first
 - Keep a simple spreadsheet: task type, skill used, approximate tokens, date, patterns emerge after a week of data
 
-Reading the Token Counter Correctly
+## Reading the Token Counter Correctly
 
 Claude Code displays context and output tokens separately. For optimization purposes, focus on context tokens, which grow with conversation length and file reads. Output tokens are generally small relative to context. If context tokens are spiking, the culprit is almost always one of: a large skill file, a full-file Read that could have been a Grep, or a long conversation that should have been started fresh.
 
-Cost Comparison: Optimized vs Unoptimized
+## Cost Comparison: Optimized vs Unoptimized
 
 A typical code review task illustrates the difference:
 
@@ -205,7 +205,7 @@ A typical code review task illustrates the difference:
 
 The optimized skill costs less than no skill at all because it prevents Claude from exploring unnecessary paths. Splitting into sub-skills cuts costs further by loading only the portion of the skill relevant to the current invocation.
 
-Putting It All Together: A Refactoring Checklist
+## Putting It All Together: A Refactoring Checklist
 
 When you have an existing skill that's consuming too many tokens, work through this checklist in order:
 

@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Wormhole Bridge Workflow Guide
 
@@ -21,13 +20,13 @@ Cross-chain bridge development requires precise coordination between multiple bl
 
 Wormhole stands as one of the most popular protocols for bridging assets across chains, but managing bridge operations manually can be error-prone and time-consuming. This guide shows you how to use Claude Code to automate and streamline your Wormhole bridge workflows, reducing manual effort while maintaining security and reliability.
 
-Understanding Wormhole Bridge Architecture
+## Understanding Wormhole Bridge Architecture
 
 Before diving into workflows, it's essential to understand how Wormhole operates. Wormhole uses a guardian network that signs messages when a user deposits tokens into a bridge contract on the source chain. These signed messages (VAAs - Verified Action Approvals) are then relayed to the target chain, where the tokens are minted or released. This architecture enables cross-chain communication without requiring trust in centralized intermediaries.
 
 When building workflows around Wormhole, you'll typically interact with three main components: the source chain (where assets originate), the Wormhole network (that validates and signs transfers), and the target chain (where assets are received). Claude Code can help you coordinate operations across all three layers, handling the complexity of multi-step transactions and providing real-time status updates.
 
-Setting Up Your Claude Code Environment
+## Setting Up Your Claude Code Environment
 
 The first step involves configuring your development environment with the necessary tools and credentials. You'll need Node.js, the Wormhole SDK, and appropriate blockchain RPC endpoints for your target chains. Install the Wormhole TypeScript SDK using your preferred package manager:
 
@@ -51,7 +50,7 @@ const wh = new Wormhole("MAINNET", [
 
 Create a dedicated skill for Wormhole operations that encapsulates your bridge logic. This skill should include tool definitions for the operations you want to automate, such as checking balances, initiating transfers, and monitoring confirmation status.
 
-Building the Bridge Workflow Skill
+## Building the Bridge Workflow Skill
 
 Your Wormhole bridge workflow skill should handle the complete lifecycle of a cross-chain transfer. Here's a practical structure for a bridge operation skill:
 
@@ -98,7 +97,7 @@ async function initiateBridgeTransfer(
 }
 ```
 
-Monitoring and Confirmation Handling
+## Monitoring and Confirmation Handling
 
 Bridge transactions require careful monitoring since confirmation times vary significantly between chains. Your workflow should include solid status checking that polls for completion while handling potential failures gracefully.
 
@@ -146,7 +145,7 @@ async function pollForVAA(
 }
 ```
 
-Error Handling and Retry Logic
+## Error Handling and Retry Logic
 
 Network failures, gas price fluctuations, and chain reorganizations can cause bridge transactions to fail or stall. Your workflow should implement exponential backoff for retries and clear error reporting:
 
@@ -178,7 +177,7 @@ async function executeWithRetry<T>(
 }
 ```
 
-Practical Workflow Example
+## Practical Workflow Example
 
 Combining these components, here's how you might structure a complete bridge workflow that Claude Code can execute:
 
@@ -228,7 +227,7 @@ async function executeBridgeWorkflow(request: BridgeRequest): Promise<BridgeResu
 }
 ```
 
-Best Practices for Production Workflows
+## Best Practices for Production Workflows
 
 When deploying Wormhole bridge workflows in production, consider these key recommendations:
 

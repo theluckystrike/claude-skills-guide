@@ -17,13 +17,13 @@ permalink: /claude-code-upstash-redis-rate-limiting-workflow/
 
 Building solid rate limiting into your applications is essential for API protection, cost control, and abuse prevention. When combined with Claude Code's automation capabilities, Upstash Redis provides a powerful foundation for implementing sophisticated rate limiting workflows. This guide walks you through creating an integrated system that uses Claude Code skills with Upstash's edge-friendly Redis solution.
 
-Why Upstash for Rate Limiting
+## Why Upstash for Rate Limiting
 
 Upstash offers several advantages that make it ideal for rate limiting implementations. Its global edge network ensures low latency regardless of where your users are located. The pay-per-request pricing model means you only pay for what you use, perfect for variable workloads. Redis compatibility means you can use familiar commands and patterns while benefiting from Upstash's managed infrastructure.
 
 Unlike traditional Redis deployments, Upstash provides built-in rate limiting primitives through its QStash message queue and specialized rate limiting commands. This eliminates the need to implement complex sliding window algorithms from scratch.
 
-Setting Up Your Claude Code Environment
+## Setting Up Your Claude Code Environment
 
 Before implementing the rate limiting workflow, ensure Claude Code is installed and configured. You'll need Node.js 18 or later, and an Upstash account with a created database.
 
@@ -41,7 +41,7 @@ Create a new skill for managing rate limiting operations:
 mkdir -p ~/.claude/skills/rate-limiter
 ```
 
-Building the Upstash Integration Skill
+## Building the Upstash Integration Skill
 
 Create a comprehensive skill file that handles all rate limiting operations:
 
@@ -302,8 +302,6 @@ Monitor for rate limit evasion attempts and implement IP-based fallback limits i
 Conclusion
 
 Combining Claude Code's automation capabilities with Upstash Redis creates a powerful rate limiting system. The examples in this guide provide starting points for fixed window, sliding window, and token bucket implementations. Adapt these patterns to your specific requirements, and use Claude Code to automate the ongoing management and monitoring of your rate limiting infrastructure.
-
-
 
 Related Reading
 

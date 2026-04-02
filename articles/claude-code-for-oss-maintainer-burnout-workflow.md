@@ -13,19 +13,18 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for OSS Maintainer Burnout Workflow
 
 Open source maintainer burnout is a growing crisis in our industry. The constant pressure of triaging issues, reviewing pull requests, answering questions, and maintaining documentation while balancing paid work creates a perfect storm of exhaustion. Many maintainers eventually abandon projects they love because the workload became unsustainable. Claude Code offers a practical solution, not by replacing human connection, but by automating repetitive tasks and reducing the cognitive load that leads to burnout.
 
-Understanding Maintainer Burnout Triggers
+## Understanding Maintainer Burnout Triggers
 
 Burnout in open source typically stems from three sources: context switching, decision fatigue, and unbounded requests. Every notification, issue comment, and PR review pulls your attention in different directions. Each decision, from whether to merge a PR to how to respond to a feature request, drains mental energy. And the endless stream of community requests feels impossible to ever "catch up" on.
 
 Claude Code directly addresses these triggers by handling routine tasks automatically, providing structured workflows that reduce decision complexity, and creating bounded, manageable work sessions rather than reactive firefighting.
 
-Setting Up a Burnout-Prevention Maintenance Skill
+## Setting Up a Burnout-Prevention Maintenance Skill
 
 The first step is creating a dedicated skill for routine maintenance tasks. This skill handles the repetitive work that accumulates daily, freeing you to focus on meaningful contributions.
 
@@ -68,7 +67,7 @@ For dependency update PRs:
 
 This skill provides consistent, predictable handling of routine tasks. When you're overwhelmed, running this skill on a scheduled basis prevents the backlog from growing unmanageable.
 
-Creating Bounded Work Sessions
+## Creating Bounded Work Sessions
 
 One of the most effective burnout-prevention strategies is creating bounded work sessions with clear scope. Claude Code skills can enforce these boundaries:
 
@@ -105,7 +104,7 @@ Then stop working.
 
 This prevents the common trap of "just one more PR" that leads to hours of unintended overtime.
 
-Automating Community Response Templates
+## Automating Community Response Templates
 
 Many maintainer burnout triggers come from repetitive community interactions. Creating template-based responses reduces the cognitive load of answering similar questions repeatedly:
 
@@ -145,7 +144,7 @@ Response Guidelines
 
 When paired with Claude Code's ability to read and categorize incoming issues, this creates an automated first response system that handles the bulk of routine inquiries.
 
-Implementing Scheduled Maintenance Windows
+## Implementing Scheduled Maintenance Windows
 
 Instead of reacting to notifications as they arrive, schedule dedicated maintenance windows and use Claude Code to process bulk tasks:
 
@@ -184,7 +183,7 @@ At session end, output:
 
 This creates a sustainable rhythm: brief, focused sessions rather than constant low-level attention drain.
 
-Practical Recovery Workflow for Burned Out Maintainers
+## Practical Recovery Workflow for Burned Out Maintainers
 
 If you're already experiencing burnout, Claude Code can help you recover by creating structure around your return:
 
@@ -229,7 +228,7 @@ Never feel guilty about:
 - Prioritizing your health
 ```
 
-Key Principles for Sustainable OSS Involvement
+## Key Principles for Sustainable OSS Involvement
 
 The workflows above share common principles that prevent burnout:
 
@@ -239,7 +238,7 @@ The workflows above share common principles that prevent burnout:
 4. Saying no is healthy: Every "yes" to something trivial is a "no" to something important
 5. Human connection remains: Use automation for tasks, not relationships
 
-Conclusion
+## Conclusion
 
 Claude Code won't solve the systemic issues around open source sustainability, but it provides practical tools for individual maintainers to create sustainable workflows. The key is using technology to create boundaries, reduce cognitive load, and make maintenance work manageable rather than overwhelming.
 

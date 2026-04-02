@@ -13,7 +13,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Chrome Extension Broken Link Finder: A Developer Guide
 
@@ -21,7 +20,7 @@ A broken link checker built as a Chrome extension provides real-time link valida
 
 This guide walks through building a broken link finder extension from scratch, covering the core architecture, implementation patterns, and practical code examples you can adapt for your own projects.
 
-Core Architecture
+## Core Architecture
 
 A broken link finder extension operates across three main components:
 
@@ -31,7 +30,7 @@ A broken link finder extension operates across three main components:
 
 The separation keeps the UI responsive even when checking many links simultaneously. The background worker also persists across page navigations, allowing cached results to display immediately.
 
-Setting Up the Manifest
+## Setting Up the Manifest
 
 Every Chrome extension starts with a manifest file. For a broken link finder, you need Manifest V3 with specific permissions:
 
@@ -65,7 +64,7 @@ Every Chrome extension starts with a manifest file. For a broken link finder, yo
 
 The `host_permissions` with `<all_urls>` is essential, it allows your extension to make requests to any website to check link status. Without this, CORS policies block your HTTP requests.
 
-Content Script Implementation
+## Content Script Implementation
 
 The content script runs on the current page and extracts all links. Here's a practical implementation:
 
@@ -126,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 This script normalizes URLs by removing fragments and filtering out non-HTTP links. Using a Set removes duplicate links efficiently.
 
-Background Worker for Link Checking
+## Background Worker for Link Checking
 
 The background worker handles the actual HTTP requests. It uses a queue system to avoid overwhelming target servers:
 
@@ -213,7 +212,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 This implementation includes several important features: caching to avoid re-checking links, rate limiting to respect server resources, timeout handling for slow responses, and parallel checking with proper result ordering.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup displays results and provides controls for users:
 
@@ -330,7 +329,7 @@ The popup displays results and provides controls for users:
 </html>
 ```
 
-Popup Logic
+## Popup Logic
 
 The popup script coordinates between the user interface and the background worker:
 
@@ -400,7 +399,7 @@ function displayResults(results) {
 }
 ```
 
-Advanced Features to Consider
+## Advanced Features to Consider
 
 Once the basic implementation works, consider adding these power user features:
 
@@ -412,7 +411,7 @@ Scheduled checks. Re-check previously visited pages automatically and notify use
 
 Custom headers. Handle authentication-required links or respect custom server configurations.
 
-Performance Optimizations
+## Performance Optimizations
 
 For pages with hundreds of links, optimize your extension with these patterns:
 
@@ -421,7 +420,7 @@ For pages with hundreds of links, optimize your extension with these patterns:
 3. Connection pooling. Reuse HTTP connections where possible
 4. Priority queue. Check visible links first, defer off-screen links
 
-Testing Your Extension
+## Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Test thoroughly:
 
@@ -432,14 +431,13 @@ Load your extension in Chrome by navigating to `chrome://extensions/`, enabling 
 - Non-standard HTTP ports
 - International domain names
 
-Conclusion
+## Conclusion
 
 Building a broken link finder Chrome extension combines browser extension APIs with practical HTTP handling patterns. The core implementation is straightforward, scan links, validate with HEAD requests, display results, but production-ready extensions require attention to caching, rate limiting, and error handling.
 
 Start with the basic architecture shown here, then add features based on your specific use case. Whether you're building for personal use or as a product, the patterns established here provide a solid foundation.
 
 ---
-
 
 Related Reading
 

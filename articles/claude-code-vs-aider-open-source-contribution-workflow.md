@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code vs Aider: Open Source Contribution Workflow."
 description: "Compare Claude Code and Aider for open source contributions. Learn practical workflows, skill advantages, and which tool best suits your OSS."
@@ -14,12 +13,11 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code vs Aider: Open Source Contribution Workflow Comparison
+## Claude Code vs Aider: Open Source Contribution Workflow Comparison
 
 Open source contribution has evolved significantly with AI assistance. Two popular tools, Claude Code and Aider, offer distinct approaches to helping developers contribute to OSS projects. This guide examines their workflows, strengths, and practical applications for open source contributions.
 
-Understanding Both Tools
+## Understanding Both Tools
 
 Claude Code is Anthropic's CLI coding assistant that excels at understanding context, maintaining conversation history, and working with extensible skills. It uses the Model Context Protocol (MCP) for integrations and provides a terminal-based interface with powerful file operations.
 
@@ -27,7 +25,7 @@ Aider is an open source AI pair programming tool that works directly in your ter
 
 Both tools can meaningfully accelerate the OSS contribution loop, but they are optimized for different parts of that loop. Understanding where each one excels saves you from fighting the tool instead of fixing the bug.
 
-Initial Repository Setup
+## Initial Repository Setup
 
 When starting an open source contribution, the initial setup phase differs significantly between tools.
 
@@ -75,7 +73,7 @@ Aider immediately tracks all file modifications, providing granular control over
 aider --model gpt-4o --no-auto-commits
 ```
 
-Understanding the Codebase
+## Understanding the Codebase
 
 Both tools help you understand unfamiliar code, but their approaches differ.
 
@@ -103,7 +101,7 @@ In Aider
 
 This opens files for simultaneous editing and review. Aider is faster when you already know which files you need to change; Claude Code is faster when you do not.
 
-Implementing Changes
+## Implementing Changes
 
 For actual code implementation, Claude Code offers several advantages through its skills system. The claude-code-open-source-contribution-workflow skill provides structured guidance for OSS contributions:
 
@@ -154,7 +152,7 @@ Aider also supports `/ask` for questions without making edits, which is useful f
 
 This git-native approach suits developers who prefer tight integration with their version control workflow.
 
-Practical Example: Fixing a Bug
+## Practical Example: Fixing a Bug
 
 Let's compare workflows for fixing a bug in an OSS project. The scenario: a popular Python CLI tool throws an unhandled `KeyError` when the config file is missing a new required field added in the last release.
 
@@ -207,7 +205,7 @@ Fix the KeyError in parse_config when timeout key is absent. Use a default of 30
 
 Aider makes the edit, shows the diff, and waits for approval. You confirm, and it commits with a generated message. The loop is fast and deterministic.
 
-Skills and Extensibility
+## Skills and Extensibility
 
 Claude Code's skills system provides significant advantages for OSS work. You can create skills for:
 
@@ -236,7 +234,7 @@ Once this skill is in `~/.claude/skills/`, it loads instantly and applies to eve
 
 Aider supports chatable commands and can integrate with external tools through shell execution, though it lacks a comparable skill system. Its extensibility comes through configuration files, `.aider.conf.yml`, and shell integrations like running custom scripts before or after commits.
 
-Tool Comparison at a Glance
+## Tool Comparison at a Glance
 
 | Dimension | Claude Code | Aider |
 |---|---|---|
@@ -251,7 +249,7 @@ Tool Comparison at a Glance
 | Offline / air-gapped | No | With local model support, yes |
 | Cost model | Anthropic API tokens | API tokens per model chosen |
 
-Handling Code Review Feedback
+## Handling Code Review Feedback
 
 One underrated dimension is how each tool helps you address maintainer feedback after a PR is submitted.
 
@@ -278,7 +276,7 @@ Fix: treat timeout=0 as a valid value. Only use the default when the key is abse
 
 Both approaches work. Claude Code's advantage is that it already has the PR context in memory if you have been working in the same session.
 
-When to Choose Each Tool
+## When to Choose Each Tool
 
 Choose Claude Code when:
 
@@ -298,7 +296,7 @@ Choose Aider when:
 - You want model flexibility beyond Anthropic's API
 - You need a fully open source toolchain
 
-Best Practices for Both Tools
+## Best Practices for Both Tools
 
 Regardless of your choice, follow these OSS contribution practices:
 
@@ -313,7 +311,7 @@ Regardless of your choice, follow these OSS contribution practices:
 
 For Claude Code users specifically: invest time in building a project-specific `CLAUDE.md`. Ten minutes of setup can save hours across multiple contribution sessions. For Aider users: commit frequently in small logical units. Aider's `/undo` is forgiving, but meaningful commit history makes your PR easier to review and cherry-pick.
 
-Conclusion
+## Conclusion
 
 Claude Code and Aider represent different philosophies in AI-assisted development. Claude Code's skill system, contextual understanding, and automatic workflow guidance make it powerful for complex OSS contributions. Aider's git-native approach and lightweight editing suit developers who prefer direct control.
 

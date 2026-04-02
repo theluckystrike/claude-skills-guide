@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Changesets Versioning Workflow
 
@@ -33,7 +32,7 @@ The alternative. tools that auto-detect version bumps from commit messages. requ
 
 For monorepos with interdependent packages, Changesets handles linked versioning automatically. If package A depends on package B and you bump B, Changesets can automatically bump A's dependency on B. This kind of coordination is painful to do manually across dozens of packages.
 
-Setting Up Changesets in Your Project
+## Setting Up Changesets in Your Project
 
 First, install Changesets in your project:
 
@@ -81,7 +80,7 @@ packages:
 
 Changesets reads this file automatically, so no additional configuration is needed for pnpm monorepos.
 
-Changelog Format Configuration
+## Changelog Format Configuration
 
 By default, Changesets generates basic changelogs. You can use the `@changesets/changelog-github` package to get PR links and contributor attributions in your changelogs:
 
@@ -104,7 +103,7 @@ Then update `.changeset/config.json`:
 
 The `updateInternalDependencies` field controls what version bump internal dependency updates trigger. Setting it to `"patch"` means bumping package B will also create a patch bump for any package A in the monorepo that depends on B.
 
-Creating Changesets with Claude Code
+## Creating Changesets with Claude Code
 
 With Claude Code, creating changesets becomes almost effortless. When you've made changes to your code, simply ask Claude:
 
@@ -146,7 +145,7 @@ according to the user's locale. Supports optional timezone override.
 
 The front matter declares which packages are affected and the bump type. The body becomes your changelog entry. Claude Code can write accurate, descriptive entries based on a summary of your diff. which is especially useful when you want professional-quality changelogs without spending time writing them manually.
 
-Integrating Changesets into Your CI/CD Pipeline
+## Integrating Changesets into Your CI/CD Pipeline
 
 The real power emerges when you automate the entire release process. Create a GitHub Actions workflow that handles versioning automatically:
 
@@ -241,7 +240,7 @@ Add these scripts to your root `package.json`:
 
 With this setup, every PR that includes a changeset file feeds into an auto-maintained "Version Packages" PR. When you merge the version PR, packages publish automatically. This is the model used by popular open-source projects like Remix, Vite, and SvelteKit.
 
-Using Claude Code to Manage the Versioning Workflow
+## Using Claude Code to Manage the Versioning Workflow
 
 Claude Code can assist you at every stage of the Changesets workflow. Here's how to use it effectively:
 
@@ -296,9 +295,9 @@ npx changeset status --verbose
 
 This prints a detailed breakdown of every package that will be versioned, what the new version will be, and which changeset files contributed. Claude can interpret this output and flag anything unexpected. like a major version bump you didn't intend, or a package being included that shouldn't be.
 
-Best Practices for Changesets with Claude Code
+## Best Practices for Changesets with Claude Code
 
-Write Clear Change Descriptions
+## Write Clear Change Descriptions
 
 Your changeset comments become your changelog. Be specific:
 
@@ -307,11 +306,11 @@ Your changeset comments become your changelog. Be specific:
 
 Claude can help you write better descriptions if you ask for suggestions.
 
-Match Changeset Granularity to PR Size
+## Match Changeset Granularity to PR Size
 
 One changeset file per PR is the common pattern, but for large PRs that touch many packages with different concerns, create separate changeset files. Each file can describe a different logical change, and Changesets will merge them correctly at version time. Claude can help you decide how to split a large PR's changes across multiple changeset files.
 
-Run Changesets Locally Before Committing
+## Run Changesets Locally Before Committing
 
 Before pushing to CI, test your versioning locally:
 
@@ -322,11 +321,11 @@ npm run build
 
 This catches build issues before they reach your CI pipeline.
 
-Keep Changeset Descriptions User-Facing
+## Keep Changeset Descriptions User-Facing
 
 Write changeset descriptions for consumers of your package, not for your internal team. Instead of "refactored the auth module to use the new session store," write "Fixed a bug where sessions would expire prematurely after 15 minutes of inactivity." The description goes directly into your changelog, which your users read.
 
-Use Pre-Commit Hooks
+## Use Pre-Commit Hooks
 
 Prevent forgotten changesets by adding a pre-commit hook:
 
@@ -360,9 +359,9 @@ if (!hasChangeset && !onlyDocChanges) {
 
 This prevents the common scenario where a developer forgets to add a changeset and only finds out when CI fails.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Version Conflicts
+## Version Conflicts
 
 If you see version conflicts between packages, check your `package.json` dependencies. Ensure consistent versioning across linked packages:
 
@@ -372,7 +371,7 @@ npx changeset status
 
 This shows which packages will be versioned and any relationship issues.
 
-Authentication Failures
+## Authentication Failures
 
 For npm publishing errors, verify your `.npmrc` file exists and contains:
 
@@ -382,7 +381,7 @@ For npm publishing errors, verify your `.npmrc` file exists and contains:
 
 Also check that your `NPM_TOKEN` secret is set in GitHub repository settings under Settings > Secrets and variables > Actions. The token needs `Automation` level access in npm. a read-write token that bypasses 2FA, which is necessary for unattended CI publishing.
 
-Missing Changesets in CI
+## Missing Changesets in CI
 
 If CI fails because no changesets exist, either add one or skip the release:
 
@@ -401,11 +400,11 @@ else
 fi
 ```
 
-Unexpected Major Bumps in a Monorepo
+## Unexpected Major Bumps in a Monorepo
 
 If you see an unexpected major version bump, it often comes from the `linked` configuration in `.changeset/config.json`. Linked packages share a version number and bump together. If any package in the linked group gets a major bump, all of them do. Audit your `linked` array and ensure packages are only grouped when that behavior is intentional.
 
-Changesets vs. Alternative Versioning Tools
+## Changesets vs. Alternative Versioning Tools
 
 | Tool | Approach | Changelog Quality | Monorepo Support | Manual Control |
 |---|---|---|---|---|
@@ -417,7 +416,7 @@ Changesets vs. Alternative Versioning Tools
 
 Changesets wins when changelog quality and deliberate versioning matter more than zero-friction automation. It requires more ceremony than semantic-release, but the resulting changelogs are noticeably better and version bumps are never surprising.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Changesets creates a powerful, automated versioning system that keeps your releases organized, documented, and reproducible. The explicit nature of Changesets means your changelogs tell accurate stories, while Claude Code handles the mechanical parts of the workflow. Start with the setup steps above, integrate with your CI/CD pipeline, and enjoy stress-free versioning.
 

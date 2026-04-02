@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for ESLint Custom Plugin Workflow Tutorial
 
@@ -31,7 +30,7 @@ Before diving into the workflow, let's clarify when custom plugins make sense. Y
 
 Custom plugins integrate smoothly with your existing ESLint configuration and can be shared across projects or published as npm packages.
 
-Setting Up Your Plugin Project
+## Setting Up Your Plugin Project
 
 The first step is scaffolding your plugin project with a structure that Claude Code can understand and work with efficiently. Create a new directory and initialize it:
 
@@ -54,7 +53,7 @@ eslint-plugin-my-team/
  README.md
 ```
 
-Creating Your First Rule
+## Creating Your First Rule
 
 Now comes the core of your plugin: the rule itself. A rule is a JavaScript object with a `create` function that returns an AST visitor. Let's create a rule that detects hardcoded credentials:
 
@@ -107,7 +106,7 @@ module.exports = {
 
 This rule checks property assignments for sensitive key names and reports when it finds potential credentials. The schema allows customization of allowed keys, giving teams flexibility.
 
-Integrating with Claude Code
+## Integrating with Claude Code
 
 Here's where the workflow becomes powerful. Create a Claude Code skill to automate repetitive tasks around your plugin:
 
@@ -133,7 +132,7 @@ When writing tests, use the ESLint RuleTester:
 
 This skill gives Claude Code context about your plugin development workflow, enabling it to assist more effectively.
 
-Writing Comprehensive Tests
+## Writing Comprehensive Tests
 
 Every rule needs tests. ESLint provides `RuleTester` which makes this straightforward. Here's how to test our credential rule:
 
@@ -181,7 +180,7 @@ npm install --save-dev mocha
 npx mocha tests/rules/*.test.js
 ```
 
-Publishing and Sharing Your Plugin
+## Publishing and Sharing Your Plugin
 
 When your plugin is ready, you can publish it to npm for reuse across projects:
 
@@ -206,7 +205,7 @@ module.exports = {
 };
 ```
 
-Automating Plugin Development with Claude Code
+## Automating Plugin Development with Claude Code
 
 Beyond creating individual rules, Claude Code can help with entire workflows. Consider creating skills for:
 
@@ -217,7 +216,7 @@ Beyond creating individual rules, Claude Code can help with entire workflows. Co
 
 The key is providing Claude Code with context about your plugin's structure and conventions through well-crafted skills.
 
-Best Practices for Plugin Development
+## Best Practices for Plugin Development
 
 Follow these guidelines for maintainable plugins:
 
@@ -227,12 +226,11 @@ Follow these guidelines for maintainable plugins:
 4. Write comprehensive tests: Cover edge cases and valid configurations
 5. Document thoroughly: Include examples of both passing and failing code
 
-Conclusion
+## Conclusion
 
 Building custom ESLint plugins with Claude Code transforms what used to be a manual process into a collaborative, AI-assisted workflow. From scaffolding new rules to testing and publishing, Claude Code understands your plugin's structure and can meaningfully contribute to development.
 
 Start small with a single rule addressing a specific problem, then expand as you see the benefits. Your team will appreciate the consistency, and future developers will thank you for catching issues before they reach production.
-
 
 Related Reading
 

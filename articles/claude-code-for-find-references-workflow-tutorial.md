@@ -15,12 +15,11 @@ score: 8
 
 {% raw %}
 
-
 Finding references across a codebase is one of the most frequent tasks developers perform. Whether you're tracing a function call, understanding a class hierarchy, or preparing to refactor, knowing where code is used saves time and prevents bugs. Claude Code provides powerful capabilities to search and track references across your entire project, making this traditionally tedious task much faster and more accurate.
 
 This tutorial walks you through practical workflows for finding references using Claude Code, with real examples you can apply immediately to your development process.
 
-Understanding Claude Code's Reference Finding Capabilities
+## Understanding Claude Code's Reference Finding Capabilities
 
 Claude Code can search through files, understand code relationships, and provide context around each reference. Unlike simple grep searches, Claude Code understands code structure, it knows the difference between a function definition and a function call, between a variable and a similarly named string.
 
@@ -28,7 +27,7 @@ The key advantage is that Claude Code doesn't just find text matches; it underst
 
 To start using reference finding, you invoke Claude Code in your project directory and describe what you're looking for. For example, you might say "find all references to the User class" or "show me where this validateInput function is called."
 
-Basic Reference Search Workflow
+## Basic Reference Search Workflow
 
 The simplest way to find references is using Claude Code's built-in search capabilities. When you're in your project directory, you can ask Claude Code directly:
 
@@ -40,7 +39,7 @@ Claude Code will scan your project files and return a comprehensive list of loca
 
 For better results, be specific about what you're looking for. Instead of a vague "find user references," try "find all places where the User.authenticate method is called" or "show me imports of the AuthService module."
 
-Tracking Function and Method Usages
+## Tracking Function and Method Usages
 
 When working with larger codebases, you often need to understand not just where something is used, but how it's used. Claude Code can categorize references by their context, showing you which calls are in tests, which are in production code, and which are in configuration files.
 
@@ -54,7 +53,7 @@ Claude Code will return categorized results that help you assess the scope of yo
 
 This workflow is particularly valuable before refactoring. You get a complete picture of dependencies without manually searching through dozens of files.
 
-Finding References Across Multiple Files and Directories
+## Finding References Across Multiple Files and Directories
 
 Modern projects often span multiple directories and even repositories. Claude Code's search extends across your entire project structure, making it easy to find references regardless of where they're located.
 
@@ -72,7 +71,7 @@ Search the entire /apps directory for uses of the OrderTotal class
 
 You can also combine conditions. For instance, "find all calls to processOrder that aren't in the test files" or "show me where this error is thrown, excluding the error handling code."
 
-Practical Example: Refactoring a Legacy Function
+## Practical Example: Refactoring a Legacy Function
 
 Let's walk through a real-world scenario. Imagine you have a legacy function that needs refactoring:
 
@@ -105,7 +104,7 @@ This reveals that some callers pass literal tax rates while others pass variable
 
 With this information, you can confidently refactor, knowing exactly what behavior to preserve and where tests need updating.
 
-Advanced: Cross-Repository Reference Tracking
+## Advanced: Cross-Repository Reference Tracking
 
 For larger organizations, references often span repositories. While Claude Code primarily searches within the current project, you can extend your workflow to handle cross-repo searches.
 
@@ -117,7 +116,7 @@ In the /repos/frontend directory, find all imports of the Button component from 
 
 This lets you track dependencies across repositories without leaving your development context. You can create scripts that automate these searches for frequently tracked dependencies.
 
-Best Practices for Reference Finding
+## Best Practices for Reference Finding
 
 To get the most out of Claude Code's reference finding, follow these practical tips:
 
@@ -131,7 +130,7 @@ Iterate on your searches. Start broad, then narrow based on what you learn. Firs
 
 Combine with other Claude Code capabilities. After finding references, ask Claude Code to explain the code at those locations, summarize the usage patterns, or help you make targeted changes.
 
-Automating Reference Searches
+## Automating Reference Searches
 
 For repetitive reference checks, perhaps part of your code review process, you can create reusable prompts. Save commonly used reference searches as text files and feed them to Claude Code:
 
@@ -148,7 +147,7 @@ claude-code --prompt-file /prompts/payment-refs.txt
 
 This approach standardizes reference searches across your team and makes it easy to track changes in specific areas over time.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms reference finding from a manual, error-prone task into an efficient, accurate workflow. By understanding code semantics rather than just matching text, it provides context that helps you make informed decisions about your code.
 

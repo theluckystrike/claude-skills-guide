@@ -13,9 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code with PlanetScale Database Workflow Guide
-
 PlanetScale is a MySQL-compatible serverless database platform that offers powerful features like branching, schema changes, and horizontal scaling. When combined with Claude Code, you get an intelligent pair programming experience for database development. This guide walks you through setting up and optimizing your workflow. from initial connection through schema design, query optimization, and production deployments.
 
 Why Combine Claude Code with PlanetScale?
@@ -30,7 +27,7 @@ PlanetScale's unique architecture provides database branching similar to git. bu
 
 The combination creates a powerful workflow where Claude handles the code generation while PlanetScale handles the database infrastructure. What makes this pairing particularly effective is that PlanetScale's constraints (no foreign key enforcement, no `RENAME TABLE`, no certain `ALTER TABLE` operations) are exactly the kind of platform-specific knowledge Claude Code can apply automatically when you ask it to generate migrations.
 
-Understanding PlanetScale's Architecture
+## Understanding PlanetScale's Architecture
 
 Before diving into workflows, it helps to understand what makes PlanetScale different from a traditional MySQL deployment. This affects how Claude Code should generate code for you.
 
@@ -43,9 +40,9 @@ PlanetScale is built on Vitess, the sharding system that powers YouTube's databa
 
 Understanding these constraints shapes how you prompt Claude. Instead of "add a foreign key from orders to users," say "add an index on orders.user_id to support joins to users without a foreign key constraint." Claude Code knows PlanetScale's FK behavior and will flag it, but being precise in your prompts produces better results.
 
-Setting Up Your PlanetScale Connection
+## Setting Up Your PlanetScale Connection
 
-Prerequisites
+## Prerequisites
 
 Ensure you have the following installed:
 
@@ -53,7 +50,7 @@ Ensure you have the following installed:
 - MySQL client (for direct queries)
 - Node.js or Python for application development
 
-Configuring Environment Variables
+## Configuring Environment Variables
 
 Create a `.env` file in your project root:
 
@@ -71,7 +68,7 @@ Never commit credentials to version control. Use a `.gitignore` pattern:
 *.local
 ```
 
-Connecting via PlanetScale CLI Proxy
+## Connecting via PlanetScale CLI Proxy
 
 For local development, the CLI proxy is the recommended approach. It handles authentication through your PlanetScale account and avoids storing a long-lived password:
 
@@ -91,11 +88,11 @@ DATABASE_URL="mysql://127.0.0.1:3309/my-app"
 
 This is particularly useful when using Claude Code's Bash tool to run migrations or seed scripts. the proxy provides a live connection without exposing credentials in command history.
 
-Database Branching Workflow
+## Database Branching Workflow
 
 PlanetScale's standout feature is database branching. Each branch operates as an isolated development environment. perfect for trying new features without affecting production.
 
-Creating a Development Branch
+## Creating a Development Branch
 
 Use the PlanetScale CLI to create a branch for your current task:
 
@@ -116,7 +113,7 @@ main (production schema)
          Open deploy request to main
 ```
 
-Claude-Assisted Schema Design
+## Claude-Assisted Schema Design
 
 When designing a new feature schema, describe your requirements to Claude:
 
@@ -152,11 +149,11 @@ model User {
 
 Note the `@db.UnsignedInt` and explicit `@db.VarChar` annotations. Claude adds these when targeting PlanetScale to match the SQL types precisely rather than relying on Prisma's defaults.
 
-Migration Management Strategies
+## Migration Management Strategies
 
 Effective migration management is crucial for team collaboration. PlanetScale's deploy requests serve as the review mechanism, but the quality of that review depends on well-written migrations.
 
-Writing Safe Migrations
+## Writing Safe Migrations
 
 PlanetScale blocks certain operations because they are unsafe on a distributed system. Claude Code knows these constraints and will avoid them:
 
@@ -180,11 +177,11 @@ ALTER TABLE users ADD COLUMN preferences JSON;
 -- ALTER TABLE users DROP COLUMN preferences;
 ```
 
-Expanding vs Contracting Schema Changes
+## Expanding vs Contracting Schema Changes
 
 For zero-downtime schema changes, use the expand-and-contract pattern. Claude Code can walk you through it when you describe what you want to achieve:
 
-Step 1. Expand: Add the new column without removing the old one
+## Step 1. Expand: Add the new column without removing the old one
 
 ```sql
 ALTER TABLE users ADD COLUMN display_name VARCHAR(255);
@@ -196,7 +193,7 @@ Step 2. Migrate: Update application code to write to both columns. Deploy applic
 UPDATE users SET display_name = full_name WHERE display_name IS NULL;
 ```
 
-Step 3. Contract: Remove the old column once all code references the new one
+## Step 3. Contract: Remove the old column once all code references the new one
 
 ```sql
 ALTER TABLE users DROP COLUMN full_name;
@@ -204,7 +201,7 @@ ALTER TABLE users DROP COLUMN full_name;
 
 This three-step process avoids any moment where the application reads a column that does not exist. Ask Claude Code "how do I rename the `full_name` column to `display_name` with zero downtime on PlanetScale?" and it will walk through exactly this pattern.
 
-Reviewing Migration Impact
+## Reviewing Migration Impact
 
 Before applying migrations to production, ask Claude to analyze potential impacts:
 
@@ -216,9 +213,9 @@ Claude will check for unsupported operations like:
 - Foreign key constraints (PlanetScale handles these differently)
 - Statements that might cause full-table locks even with Vitess's online DDL
 
-Connecting Your Application
+## Connecting Your Application
 
-Using the MySQL Protocol
+## Using the MySQL Protocol
 
 PlanetScale exposes a MySQL-compatible interface. Connect using standard libraries:
 
@@ -241,7 +238,7 @@ const [rows] = await connection.execute(
 
 Always use parameterized queries as shown above. Claude Code will generate parameterized queries by default. if you see it generating string interpolation for SQL, stop and ask it to rewrite using placeholders.
 
-Handling Connection Pooling
+## Handling Connection Pooling
 
 For serverless environments like Vercel or AWS Lambda, each function invocation may create a new database connection. Without pooling limits, this can exhaust PlanetScale's connection limit. Configure pooling appropriately:
 
@@ -288,7 +285,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 This pattern prevents connection pool exhaustion during Next.js hot reloads in development. Claude Code can generate this boilerplate from a simple prompt: "Create a PlanetScale connection pool singleton safe for Next.js development reloads."
 
-Query Optimization with Claude
+## Query Optimization with Claude
 
 Claude can help optimize slow queries. Share your query and execution plan:
 
@@ -322,7 +319,7 @@ GROUP BY u.id;
 
 Paste the JSON output into Claude Code and ask "identify the performance bottleneck and suggest index changes."
 
-Deployment Workflow
+## Deployment Workflow
 
 When you're ready to deploy schema changes to production:
 
@@ -372,7 +369,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 fi
 ```
 
-Best Practices Summary
+## Best Practices Summary
 
 - Use branches for all schema changes. Never modify production schema directly; always go through a branch and deploy request
 - Store credentials in environment variables. Never commit to version control; use the CLI proxy for local development

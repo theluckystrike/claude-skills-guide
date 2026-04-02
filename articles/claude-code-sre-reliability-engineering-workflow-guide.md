@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code SRE Reliability Engineering Workflow Guide"
 description: "Master Site Reliability Engineering workflows with Claude Code. Learn practical skills for incident response, monitoring automation, and building."
@@ -18,7 +17,7 @@ tags: [claude-code, sre, reliability-engineering, claude-skills]
 
 Site Reliability Engineering (SRE) bridges the gap between development and operations, focusing on building and maintaining reliable systems at scale. Claude Code, with its powerful CLI tools and extensible skills framework, offers a solid toolkit for SRE practitioners. This guide walks through practical workflows that use Claude Code to enhance reliability engineering practices.
 
-Understanding Claude Code for SRE
+## Understanding Claude Code for SRE
 
 Claude Code provides a terminal-based AI assistant that can execute commands, manage files, and integrate with your existing toolchain. For SRE work, this translates to rapid incident response, automated monitoring checks, and intelligent runbook generation. The key advantage is having an AI partner that understands your infrastructure context and can take actions based on your specifications.
 
@@ -26,9 +25,9 @@ The foundation begins with understanding how Claude Code skills work. Skills are
 
 What makes Claude Code particularly suited to SRE work is its ability to hold context across a long working session. During an incident, you might need to cross-reference deployment logs, correlate metrics from three different monitoring systems, and draft a stakeholder communication. all while staying focused on remediation. Claude Code lets you do this without context-switching between tools, because it can read files, run commands, and draft text in the same terminal session.
 
-Core Skills for SRE Workflows
+## Core Skills for SRE Workflows
 
-Incident Response Automation
+## Incident Response Automation
 
 When outages occur, speed matters. Claude Code can help orchestrate incident response workflows that reduce MTTR (Mean Time To Recovery). The incident-response-automation skill provides templates for common failure scenarios.
 
@@ -55,7 +54,7 @@ Check deployment diff, review error logs from 14:15 to now, and list the top
 
 This level of specificity produces faster, more actionable output than a generic "look into this" prompt. SRE work rewards precise questions.
 
-Monitoring and Observability Checks
+## Monitoring and Observability Checks
 
 Claude Code excels at aggregating data from multiple monitoring sources. The observability-dashboard skill helps you create consolidated views of system health:
 
@@ -89,7 +88,7 @@ curl -X POST "$SLACK_WEBHOOK_URL" \
 
 Running this as a cron job gives your team a consistent morning briefing without manual effort.
 
-Runbook Generation and Maintenance
+## Runbook Generation and Maintenance
 
 One of the most time-consuming SRE tasks is maintaining runbooks. Claude Code can generate and update runbooks based on incident patterns. The runbook-generator skill analyzes your historical incident data:
 
@@ -138,9 +137,9 @@ If downstream unhealthy: Activate circuit breaker and notify owning team
 
 This structure is executable: the commands are copy-pasteable, and the resolution paths are specific enough to act on at 3 AM without needing to escalate.
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Pre-Deployment Reliability Checks
+## Pre-Deployment Reliability Checks
 
 Before shipping code to production, use Claude Code to run comprehensive checks:
 
@@ -168,7 +167,7 @@ You can build this into your CI/CD pipeline as a gate. A GitHub Actions step tha
 
 If Claude finds critical issues, your pipeline can block the deployment and require human sign-off.
 
-Post-Incident Analysis
+## Post-Incident Analysis
 
 After resolving an incident, conduct thorough blameless post-mortems:
 
@@ -182,7 +181,7 @@ Claude correlates data from logs, metrics, and incident management systems to bu
 
 The pattern analysis piece is where Claude Code provides outsized value. Manually correlating dozens of past incidents to find systemic issues is tedious and easy to do poorly. Claude can surface correlations a human reviewer might miss. like "four of the six api-gateway incidents in the past month started within 20 minutes of a database maintenance window."
 
-Capacity Planning and Scaling
+## Capacity Planning and Scaling
 
 SRE teams must plan for growth. Claude Code can analyze trends and recommend scaling strategies:
 
@@ -207,7 +206,7 @@ Format as a capacity plan document suitable for engineering leadership.
 
 The output becomes a starting point for infrastructure investment conversations. grounded in real data rather than gut feel.
 
-Error Budget Management
+## Error Budget Management
 
 Error budgets are central to SRE practice: you define an acceptable reliability target (say, 99.9% uptime), and track how much of the "unreliability budget" you've consumed. Claude Code can help maintain error budget dashboards and generate alerts when burn rates are too high.
 
@@ -223,7 +222,7 @@ If burn rate exceeds 5x, draft an error budget policy alert for the team.
 
 This kind of calculation is straightforward but tedious to do manually. Running it daily ensures your team has current information about reliability status without anyone needing to maintain a custom dashboard.
 
-Integrating Claude Code into Your Toolchain
+## Integrating Claude Code into Your Toolchain
 
 To get maximum benefit, integrate Claude Code with your existing SRE tools:
 
@@ -264,7 +263,7 @@ api-gateway: platform team (platform-eng@company.com)
 
 The initial setup takes some time, but the automation benefits compound over months of operation.
 
-Building a Reliability Culture with Claude Code
+## Building a Reliability Culture with Claude Code
 
 One underrated use of Claude Code in SRE work is knowledge transfer. SRE teams often accumulate enormous tribal knowledge about system behavior. why certain services are sensitive to traffic spikes, which database queries need indexes, which third-party APIs have reliability issues. This knowledge lives in the heads of senior engineers and gets lost when people leave.
 
@@ -279,7 +278,7 @@ each failure mode I describe with its symptoms, causes, and remediation steps.
 
 This turns informal knowledge-sharing sessions into lasting documentation.
 
-Best Practices
+## Best Practices
 
 When adopting Claude Code for SRE workflows, follow these principles:
 
@@ -293,7 +292,7 @@ When adopting Claude Code for SRE workflows, follow these principles:
 
 The validation point deserves emphasis. Claude Code is particularly useful for drafting and analysis work, but any action that modifies production infrastructure should have a human review the proposed commands before execution. Use Claude to generate the plan, then have the on-call engineer verify it.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms SRE workflows by automating routine tasks, accelerating incident response, and keeping documentation current. The key is starting with well-defined use cases and gradually expanding as your team builds confidence with the tool.
 

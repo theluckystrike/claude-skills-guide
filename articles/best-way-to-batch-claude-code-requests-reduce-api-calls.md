@@ -17,7 +17,7 @@ score: 8
 
 When you're working with Claude Code extensively, each individual request generates API calls that accumulate quickly. Whether you're automating workflows, running batch processing tasks, or managing multiple development operations, understanding how to batch requests effectively can save you significant costs, often reducing API calls by 50-70%. This guide covers the best strategies for batching Claude Code requests efficiently.
 
-Why Batching Matters
+## Why Batching Matters
 
 Every time Claude Code processes a prompt, it makes API calls that consume both input and output tokens. In typical development workflows, developers make dozens or hundreds of individual requests per session. By grouping related operations into batched requests, you can dramatically reduce the total number of API calls while maintaining the same work output.
 
@@ -27,7 +27,7 @@ The key benefits of batching include:
 - Improved throughput: Bulk operations complete faster than sequential requests
 - Better context usage: Grouped requests can share context more efficiently
 
-Strategy 1: Use Multi-Turn Conversations Effectively
+## Strategy 1: Use Multi-Turn Conversations Effectively
 
 The most straightforward way to batch requests is through multi-turn conversations within a single session. Instead of starting fresh with each task, maintain context and chain related operations together.
 
@@ -45,11 +45,11 @@ claude "Create a user model with email and password fields, add validation rules
 
 This approach works because Claude Code maintains conversation context within a session. By combining related tasks into a single prompt, you reduce the overhead of context reconstruction that occurs with separate sessions.
 
-Strategy 2: Use Claude Skills for Batch Operations
+## Strategy 2: Use Claude Skills for Batch Operations
 
 Claude Code skills are specifically designed to handle repetitive tasks efficiently. Several skills excel at batching operations:
 
-The xlsx Skill for Bulk Data Processing
+## The xlsx Skill for Bulk Data Processing
 
 The xlsx skill is particularly powerful for batch operations involving spreadsheet data. Instead of making individual API calls for each row or file, you can process entire datasets in one operation.
 
@@ -62,7 +62,7 @@ merge them into a single spreadsheet, apply formatting, and save as
 
 This single request handles what would otherwise require dozens of individual file operations.
 
-The pdf Skill for Batch Document Processing
+## The pdf Skill for Batch Document Processing
 
 Similarly, the pdf skill can handle multiple PDF operations in one batch:
 
@@ -71,7 +71,7 @@ claude "Using the pdf skill, extract text from all PDFs in the /documents folder
 create a summary document, and save it as /documents/summary.txt"
 ```
 
-The pptx Skill for Presentation Automation
+## The pptx Skill for Presentation Automation
 
 For batch presentation tasks, the pptx skill allows creating multiple slides or modifying multiple files in single operations:
 
@@ -80,7 +80,7 @@ claude "Use the pptx skill to create a 10-slide presentation from the
 content in /data/weekly-report.md, applying the company template"
 ```
 
-Strategy 3: Use Hooks for Automatic Request Batching
+## Strategy 3: Use Hooks for Automatic Request Batching
 
 Claude Code's hooks system provides powerful automation for batching. You can configure hooks to accumulate operations and execute them in groups rather than individually.
 
@@ -101,7 +101,7 @@ Create a `.claude/hooks.json` file to define batching behavior:
 
 This configuration groups tool calls together, executing up to 10 operations in a single API call with a maximum 500ms wait time for accumulating additional operations.
 
-Strategy 4: Subagent Orchestration for Parallel Processing
+## Strategy 4: Subagent Orchestration for Parallel Processing
 
 Claude Code's subagent feature allows you to coordinate multiple parallel workers that can process different parts of a task simultaneously. This is particularly useful for batch operations on large codebases.
 
@@ -115,7 +115,7 @@ claude "Use the supervisor-worker pattern to process all files in /src:
 
 This approach processes multiple code paths in parallel while still producing a consolidated output, maximizing efficiency.
 
-Strategy 5: Batch Processing with Shell Scripts
+## Strategy 5: Batch Processing with Shell Scripts
 
 For truly large-scale operations, wrap multiple Claude Code invocations in shell scripts that optimize API usage:
 
@@ -140,7 +140,7 @@ EOF
 
 This script passes multiple files to a single Claude session rather than invoking Claude separately for each file.
 
-Strategy 6: Use MCP Servers for External Batching
+## Strategy 6: Use MCP Servers for External Batching
 
 Model Context Protocol (MCP) servers can handle external batch operations that would otherwise require multiple Claude Code invocations. For example, a database MCP server can batch multiple queries:
 
@@ -154,13 +154,13 @@ claude "Use the database MCP server to:
 
 This single prompt triggers multiple database operations through the MCP server without generating additional API calls for each query.
 
-Best Practices for Maximum Efficiency
+## Best Practices for Maximum Efficiency
 
-Combine Context-Dependent Operations
+## Combine Context-Dependent Operations
 
 Group operations that share context. If you're working on a specific feature, complete all related tasks in one session rather than returning to it multiple times.
 
-Use Concise Prompts
+## Use Concise Prompts
 
 Within batched requests, be specific but concise. Extra verbose explanations add to input tokens without improving results:
 
@@ -176,7 +176,7 @@ Concise (fewer tokens, same result):
 "Review this code for performance issues"
 ```
 
-Set Up Skill Auto-Loading
+## Set Up Skill Auto-Loading
 
 Configure your project to automatically load relevant skills for common batch operations. Add to your `.claude/settings.json`:
 
@@ -189,7 +189,7 @@ Configure your project to automatically load relevant skills for common batch op
 }
 ```
 
-Monitor Token Usage
+## Monitor Token Usage
 
 Use Claude Code's built-in token tracking to identify batching opportunities:
 
@@ -199,12 +199,11 @@ claude --verbose "Your task here" 2>&1 | grep -i token
 
 This shows token usage per operation, helping you identify where batching would have the most impact.
 
-Conclusion
+## Conclusion
 
 Batching Claude Code requests effectively is one of the most powerful ways to reduce API costs while maintaining productivity. By using multi-turn conversations, Claude Skills, hooks, subagents, shell scripts, and MCP servers, you can consolidate what would be dozens of individual requests into a handful of efficient batch operations. Start implementing these strategies today, and you'll likely see 50-70% reduction in API calls for typical development workflows.
 
 The key is to think in terms of complete tasks rather than individual actions. Every time you would naturally say "now do this next thing," consider whether it can be incorporated into your current batch of operations instead.
-
 
 Related Reading
 

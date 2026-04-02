@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Configure8 Portal Workflow Guide"
 description: "Learn how to use Claude Code to streamline your Configure8 developer portal workflow. This guide covers automation, API integration, and practical."
@@ -14,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Configure8 Portal Workflow Guide
 
 Configure8 has emerged as a powerful developer portal platform that helps teams manage APIs, documentation, and internal developer tools in one unified location. When combined with Claude Code's AI-assisted capabilities, you can dramatically streamline portal configuration, documentation generation, and workflow automation. This guide walks you through practical strategies for integrating Claude Code into your Configure8 portal workflows. from initial setup through advanced multi-stage sync pipelines.
 
-Understanding Configure8 Portal Architecture
+## Understanding Configure8 Portal Architecture
 
 Before diving into workflows, it is essential to understand what Configure8 brings to your organization. Configure8 provides a centralized hub where teams can catalog APIs, generate documentation automatically, manage service catalogs, and enforce governance policies across your infrastructure. The platform exposes REST APIs and configuration options that make it ideal for programmatic management through Claude Code.
 
@@ -33,7 +31,7 @@ The key components you need to understand include:
 
 Each of these components can be automated and enhanced using Claude Code's skill system and tool-calling capabilities. The power of the integration comes from using Claude Code not just as a script runner but as an AI layer that interprets ambiguous inputs, fills documentation gaps, and flags policy violations with actionable explanations rather than terse error codes.
 
-Setting Up Claude Code for Configure8
+## Setting Up Claude Code for Configure8
 
 Getting started requires proper authentication and configuration. You will need to obtain your Configure8 API credentials and store them securely in your environment. Here is how to configure Claude Code to work with your portal.
 
@@ -69,7 +67,7 @@ Configure8 error message to the user rather than a generic failure message.
 
 This skill gives Claude Code the context it needs to make sensible decisions when running portal management commands.
 
-Automating Service Registration
+## Automating Service Registration
 
 One of the most time-consuming tasks in maintaining a developer portal is keeping the service catalog up to date. Claude Code can help automate service registration by scanning your infrastructure and registering new services automatically.
 
@@ -122,7 +120,6 @@ class Configure8Client:
         services = []
         return services
 
-
 def upsert_service(client: Configure8Client, service_data: Dict) -> str:
     """Register a new service or update it if it already exists."""
     existing = client.get_service_by_name(service_data["name"])
@@ -132,7 +129,6 @@ def upsert_service(client: Configure8Client, service_data: Dict) -> str:
     else:
         client.register_service(service_data)
         return f"Registered: {service_data['name']}"
-
 
 def sync_services_to_portal():
     client = Configure8Client(
@@ -151,7 +147,7 @@ Note the `upsert_service` function: a naive `register_service` call fails with a
 
 This automation can run on a schedule or trigger based on infrastructure changes, ensuring your portal always reflects the current state of your services.
 
-Documentation Generation Workflow
+## Documentation Generation Workflow
 
 Configure8 excels at API documentation, but keeping that documentation current requires ongoing effort. Claude Code can generate and update documentation based on your codebase, OpenAPI specifications, and code comments.
 
@@ -189,7 +185,6 @@ def enrich_openapi_spec(spec_path: str, client: Configure8Client) -> dict:
 
     return spec
 
-
 def publish_spec_to_portal(client: Configure8Client, service_id: str, spec: dict):
     spec_json = json.dumps(spec)
     endpoint = f"{client.base_url}/services/{service_id}/api-specs"
@@ -204,7 +199,7 @@ def publish_spec_to_portal(client: Configure8Client, service_id: str, spec: dict
 
 Teams that run this pipeline on every pull request find that their documentation coverage climbs from around 40 percent to over 90 percent within a few sprints, because the automation removes the activation energy barrier of writing descriptions manually.
 
-Policy Enforcement and Governance
+## Policy Enforcement and Governance
 
 Large organizations need consistent governance across their developer portal. Claude Code can help enforce policies by reviewing proposed changes before they reach the portal.
 
@@ -228,7 +223,6 @@ class ValidationResult:
     def add_violation(self, msg: str):
         self.violations.append(msg)
         self.passed = False
-
 
 def validate_service_payload(service_data: dict) -> ValidationResult:
     result = ValidationResult()
@@ -263,7 +257,7 @@ Plug this validator into your registration workflow and into a GitHub Actions st
 
 This automated governance reduces manual review burden while maintaining quality standards.
 
-Best Practices for Claude Code and Configure8 Integration
+## Best Practices for Claude Code and Configure8 Integration
 
 When integrating Claude Code with Configure8, these practices make the difference between a brittle script and a reliable production workflow.
 
@@ -320,7 +314,7 @@ def staging_client():
 
 Running the full sync against staging on every CI build catches regressions before they reach the production portal.
 
-Advanced Workflow: Complete Portal Sync
+## Advanced Workflow: Complete Portal Sync
 
 For teams with complex infrastructure, a comprehensive sync workflow coordinates multiple automation streams into a single reliable pipeline:
 
@@ -375,7 +369,7 @@ This end-to-end workflow ensures your developer portal remains accurate, well-do
 4. Documentation enrichment keeps API specs current using Claude Code's language understanding
 5. Audit logging captures every change for compliance and debugging
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Configure8 portal management from a manual, error-prone process into an automated, reliable workflow. By using AI-assisted automation for service registration, documentation generation, and policy enforcement, your team can focus on building great developer experiences rather than managing portal infrastructure. Start with simple automations. a single upsert script run manually. and progressively add the validation layer, the documentation enrichment step, and finally the full scheduled sync as you build confidence in each stage.
 

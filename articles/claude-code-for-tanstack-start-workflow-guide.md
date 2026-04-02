@@ -19,11 +19,11 @@ TanStack Start (now part of TanStack Router) provides a powerful, type-safe rout
 
 This guide explores practical workflows for using Claude Code when building applications with TanStack Start, covering project initialization, route configuration, data loading, and common patterns for building production-ready applications.
 
-Setting Up TanStack Start with Claude Code
+## Setting Up TanStack Start with Claude Code
 
 Claude Code can help scaffold your TanStack Start project and configure the essential pieces for type-safe development. While the framework provides its own initialization tools, Claude Code excels at customizing configurations and setting up the project structure according to best practices.
 
-Initializing Your Project
+## Initializing Your Project
 
 Begin by creating a new TanStack Start project using your preferred package manager. Claude Code can then help configure the routing structure and set up type-safe routes:
 
@@ -35,7 +35,7 @@ cd my-tanstack-app
 
 After initialization, Claude Code can help you configure the router and set up the file-based routing structure. You'll want to ensure your `tsconfig.json` paths are properly configured for the router's type inference to work correctly.
 
-Configuring Type-Safe Routing
+## Configuring Type-Safe Routing
 
 TanStack Start's strength lies in its type-safe routing system. Claude Code can help you set up route definitions that provide full type inference for params, loaders, and actions:
 
@@ -61,11 +61,11 @@ export const route = createRootRoute({
 
 Claude Code can generate these route files with proper TypeScript types, ensuring that your route parameters and data loaders are fully typed throughout your application.
 
-Working with Data Loading
+## Working with Data Loading
 
 TanStack Start's loader system provides a powerful way to fetch data on the server and hydrate it to the client. Claude Code can help you implement loaders with proper error handling, loading states, and type safety.
 
-Creating Type-Safe Loaders
+## Creating Type-Safe Loaders
 
 Loaders in TanStack Start run on the server and provide data to your components. Claude Code can help you create loaders that properly type their responses:
 
@@ -99,7 +99,7 @@ function PostDetail() {
 
 The type inference works both ways, Claude Code understands your API return types and ensures the component receives properly typed data.
 
-Handling Loading and Error States
+## Handling Loading and Error States
 
 Claude Code can help you implement proper loading and error boundaries for your routes. TanStack Start provides built-in mechanisms for handling these states:
 
@@ -116,11 +116,11 @@ export const route = createFileRoute('/posts/$postId')({
 
 This pattern ensures users see appropriate feedback while data is loading or when errors occur.
 
-Building Nested Layouts
+## Building Nested Layouts
 
 One of TanStack Start's most powerful features is its nested layout system. Claude Code can help you create complex layout hierarchies with shared state and data loading.
 
-Implementing Nested Route Layouts
+## Implementing Nested Route Layouts
 
 Nested layouts allow you to share UI components across multiple child routes while maintaining separate data loading for each:
 
@@ -155,7 +155,7 @@ function DashboardLayout() {
 
 Child routes render within the `<Outlet />` component, allowing the sidebar to persist while the main content changes.
 
-Shared Data Across Nested Routes
+## Shared Data Across Nested Routes
 
 Claude Code can help you optimize data loading in nested layouts using TanStack Query's caching mechanisms. This prevents redundant fetches while keeping data fresh:
 
@@ -174,11 +174,11 @@ export const childRoute = createFileRoute('/dashboard/settings')({
 })
 ```
 
-Integrating with TanStack Query
+## Integrating with TanStack Query
 
 TanStack Start pairs excellently with TanStack Query for client-side data management. Claude Code can help you set up the integration and implement best practices for caching and invalidation.
 
-Setting Up Query Integration
+## Setting Up Query Integration
 
 Configure TanStack Query with appropriate default options for your application's needs:
 
@@ -208,7 +208,7 @@ export default function App() {
 }
 ```
 
-Optimistic Updates and Mutations
+## Optimistic Updates and Mutations
 
 Claude Code can help you implement optimistic updates for better user experience when performing mutations:
 
@@ -235,11 +235,11 @@ const createPost = useMutation({
 
 This pattern provides immediate feedback to users while ensuring the UI stays in sync with the server.
 
-Best Practices for TanStack Start with Claude Code
+## Best Practices for TanStack Start with Claude Code
 
 When working with TanStack Start and Claude Code, following these patterns will help you build more maintainable applications.
 
-Route Organization
+## Route Organization
 
 Structure your routes logically and use file-based routing conventions. Claude Code can help you refactor routes as your application grows:
 
@@ -248,7 +248,7 @@ Structure your routes logically and use file-based routing conventions. Claude C
 - Implement route guards for authentication
 - Use layout routes for shared UI components
 
-Type Safety
+## Type Safety
 
 Take advantage of TanStack Start's type inference throughout your application:
 
@@ -257,7 +257,7 @@ Take advantage of TanStack Start's type inference throughout your application:
 - Use TypeScript's strict mode
 - Generate route types automatically with the router generator
 
-Error Handling
+## Error Handling
 
 Implement comprehensive error handling at multiple levels:
 
@@ -266,7 +266,7 @@ Implement comprehensive error handling at multiple levels:
 - API-level error handling with proper HTTP status codes
 - User-friendly error messages in the UI
 
-Conclusion
+## Conclusion
 
 Claude Code combined with TanStack Start provides a powerful workflow for building type-safe React applications. The framework's routing and data loading capabilities, paired with Claude Code's ability to generate boilerplate and implement patterns quickly, enable rapid development without sacrificing code quality.
 

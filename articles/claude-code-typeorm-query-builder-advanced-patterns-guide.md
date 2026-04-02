@@ -18,7 +18,7 @@ Mastering TypeORM Query Builder: Advanced Patterns for Complex Database Operatio
 
 The TypeORM Query Builder is one of the most powerful tools in the TypeORM ecosystem, allowing developers to construct complex database queries programmatically. While basic CRUD operations are straightforward, mastering advanced Query Builder patterns will improve your application's data access layer to enterprise-grade quality. This guide explores sophisticated techniques for building dynamic, efficient, and maintainable database queries.
 
-Understanding the Query Builder Foundation
+## Understanding the Query Builder Foundation
 
 Before diving into advanced patterns, let's establish a solid foundation. The Query Builder in TypeORM allows you to build SQL queries using a fluent, chainable API. Unlike traditional repositories that abstract away SQL complexity, the Query Builder gives you fine-grained control over every aspect of your queries.
 
@@ -32,7 +32,7 @@ const users = await dataSource
 
 This basic pattern forms the backbone of all advanced techniques we'll explore.
 
-Query Builder vs Repository Methods: When to Use Each
+## Query Builder vs Repository Methods: When to Use Each
 
 Before reaching for the Query Builder, it helps to know when the simpler `find` API is sufficient and when it isn't. Using the wrong tool increases code complexity without benefit.
 
@@ -57,11 +57,11 @@ Claude Code is effective at making this decision for you. Give it your use case 
 I need to find all users who have placed at least 3 orders in the last 30 days and whose total spend exceeds $500. Should I use the TypeORM find API or the Query Builder?
 ```
 
-Subqueries: Powerful Nested Data Retrieval
+## Subqueries: Powerful Nested Data Retrieval
 
 Subqueries allow you to nest queries within queries, enabling complex data filtering and aggregation that would be difficult or impossible with simple JOINs. TypeORM's Query Builder makes subqueries intuitive and type-safe.
 
-Correlated Subqueries for Row-Specific Analysis
+## Correlated Subqueries for Row-Specific Analysis
 
 Correlated subqueries reference the outer query's table, enabling row-by-row analysis. This pattern is invaluable for finding records that meet conditions relative to other records in the same dataset.
 
@@ -83,7 +83,7 @@ const usersWithLatestOrder = await dataSource
 
 This query finds all users whose last order matches the maximum order date for each user, a perfect example of correlated subquery power.
 
-Subqueries in WHERE Clauses for Complex Filtering
+## Subqueries in WHERE Clauses for Complex Filtering
 
 You can also use subqueries directly in WHERE conditions to filter based on aggregated data:
 
@@ -105,7 +105,7 @@ const highValueCustomers = await dataSource
 
 This finds all customers whose total order amount exceeds $10,000.
 
-Subqueries in SELECT for Computed Columns
+## Subqueries in SELECT for Computed Columns
 
 A lesser-known pattern is using subqueries inside the SELECT clause to compute per-row aggregate values without a GROUP BY on the outer query. This is useful when you need the full entity object alongside a computed field:
 
@@ -149,11 +149,11 @@ Ask Claude Code to generate this pattern for your specific entities:
 I have User and Order entities. Write a TypeORM Query Builder query that returns all users enriched with their completed order count and total spend using SELECT subqueries.
 ```
 
-Advanced Join Patterns
+## Advanced Join Patterns
 
 Joins are essential for combining data from multiple tables, but TypeORM offers advanced patterns beyond simple inner joins.
 
-Left Join with Custom Conditions
+## Left Join with Custom Conditions
 
 Sometimes you need LEFT JOINs with specific conditions beyond the default relationship mapping:
 
@@ -170,7 +170,7 @@ const usersWithPendingOrders = await dataSource
 
 This retrieves all users with their pending orders (if any) and counts how many pending orders each user has.
 
-Multiple Joins with Aliases
+## Multiple Joins with Aliases
 
 For complex reporting queries, you often need to join the same table multiple times with different conditions:
 
@@ -193,7 +193,7 @@ const userActivityReport = await dataSource
 
 This pattern is particularly useful for analytics dashboards where you need to aggregate the same related entity under different conditions.
 
-Three-Level Deep Joins
+## Three-Level Deep Joins
 
 When your domain model has deeply nested relationships, you need to chain joins carefully to avoid N+1 queries:
 
@@ -214,7 +214,7 @@ const ordersWithFullDetails = await dataSource
 
 This single query replaces what would otherwise be four separate queries (order -> user, order -> items, item -> product, product -> category). Claude Code can analyze your existing data-fetching code and spot N+1 patterns, then generate the equivalent deep join query.
 
-Join Type Comparison
+## Join Type Comparison
 
 Understanding which join type to use is critical for both correctness and performance:
 
@@ -231,11 +231,11 @@ Ask Claude:
 My query returns fewer rows than expected. I have a User leftJoin to Orders but I'm getting no users without orders. Why and how do I fix it?
 ```
 
-Dynamic Query Construction
+## Dynamic Query Construction
 
 Building queries conditionally based on runtime parameters is a common requirement. The Query Builder excels at this through its fluent API.
 
-Conditional Where Clauses
+## Conditional Where Clauses
 
 Build WHERE clauses dynamically based on input parameters:
 
@@ -268,7 +268,7 @@ function buildUserSearchQuery(
 
 This pattern allows complete flexibility while maintaining query safety through parameterization.
 
-Using Brackets for Complex OR/AND Logic
+## Using Brackets for Complex OR/AND Logic
 
 When you need to combine AND and OR conditions across multiple fields, use TypeORM's `Brackets` helper to control precedence:
 
@@ -292,7 +292,7 @@ const results = await dataSource
 
 Without `Brackets`, chaining `.orWhere` at the top level can produce incorrect SQL like `WHERE active = true AND category = 'electronics' OR category = 'computers'`, which evaluates differently than intended. The `Brackets` wrapper generates parentheses in the output SQL, enforcing the grouping you want.
 
-Building a Reusable Filter Utility
+## Building a Reusable Filter Utility
 
 For applications with many filterable list endpoints, build a generic filter application helper:
 
@@ -373,7 +373,7 @@ Ask Claude Code to extend this utility with additional operators or to generate 
 Generate a TypeORM dynamic filter utility that accepts filters derived from a REST API query string and safely applies them to a query builder without SQL injection risk.
 ```
 
-Dynamic Ordering and Pagination
+## Dynamic Ordering and Pagination
 
 Implement flexible sorting and pagination:
 
@@ -413,7 +413,7 @@ const nextPage = await qb
 
 Cursor-based pagination is not always applicable (it works best with stable, monotonic sort columns like auto-increment IDs or UUIDs sorted by creation time), but when it is, it provides consistent query performance regardless of how deep into the dataset you are.
 
-Transactional Query Building
+## Transactional Query Building
 
 For operations requiring multiple queries to succeed or fail together, TypeORM's Query Builder integrates smoothly with transactions:
 
@@ -442,7 +442,7 @@ await dataSource.transaction(async (manager) => {
 });
 ```
 
-Pessimistic Locking in Transactions
+## Pessimistic Locking in Transactions
 
 When two concurrent requests might update the same row (for example, two processes decrementing inventory), use pessimistic locking to prevent race conditions:
 
@@ -484,7 +484,7 @@ TypeORM translates `setLock("pessimistic_write")` to `SELECT ... FOR UPDATE` in 
 | `pessimistic_write` | SELECT ... FOR UPDATE | Read-then-update pattern |
 | `optimistic` | Uses version column | Low contention, high read |
 
-Bulk Insert and Upsert
+## Bulk Insert and Upsert
 
 For importing large datasets or syncing external records, the Query Builder's bulk insert is far more efficient than individual `save()` calls:
 
@@ -512,9 +512,9 @@ await dataSource
 
 This is significantly faster than looping through records and calling `save()` individually. A batch of 1,000 records that takes 3–4 seconds with individual saves typically completes in under 100 ms with bulk insert.
 
-Performance Optimization Patterns
+## Performance Optimization Patterns
 
-Eager Loading vs Lazy Loading
+## Eager Loading vs Lazy Loading
 
 Choose your loading strategy based on your use case. Eager loading is perfect for known relationships, while lazy loading suits unpredictable access patterns:
 
@@ -534,7 +534,7 @@ const users = await userRepo
   .getMany();
 ```
 
-Selecting Only the Columns You Need
+## Selecting Only the Columns You Need
 
 By default, `getMany()` fetches all columns. For wide tables or API endpoints that only need a subset of fields, use `.select()` to reduce data transfer:
 
@@ -550,7 +550,7 @@ const userSummaries = await dataSource
 
 For endpoints that return hundreds of rows in a list, avoiding large text or blob columns can halve the response payload size.
 
-Query Result Caching
+## Query Result Caching
 
 For frequently accessed, rarely changing data, use TypeORM's built-in caching:
 
@@ -583,7 +583,7 @@ const dataSource = new DataSource({
 
 Without a Redis cache configured, TypeORM falls back to in-memory caching (useful for development, but not suitable for multi-instance production deployments).
 
-Diagnosing Slow Queries with Claude Code
+## Diagnosing Slow Queries with Claude Code
 
 When a query runs slowly in production, provide Claude with the query and ask it to identify optimization opportunities:
 
@@ -597,7 +597,7 @@ What indexes should I add, and are there any structural changes to the query its
 
 Claude can identify missing indexes on JOIN columns, suggest covering indexes for common WHERE + SELECT combinations, and point out patterns like `LOWER()` on a non-expression-indexed column that prevent index usage.
 
-Putting It Together: A Repository Pattern with Query Builder
+## Putting It Together: A Repository Pattern with Query Builder
 
 For production applications, encapsulate your Query Builder logic inside repository methods rather than scattering it across service files:
 
@@ -657,7 +657,7 @@ export class UserRepository extends Repository<User> {
 
 The `getManyAndCount()` call at the end returns both the paginated results and the total matching row count in a single database round-trip, exactly what a paginated API endpoint needs.
 
-Conclusion
+## Conclusion
 
 The TypeORM Query Builder transforms database operations from rigid SQL strings into flexible, type-safe, and maintainable code. By mastering these advanced patterns, subqueries (including computed SELECT subqueries), complex multi-alias joins, dynamic query construction with `Brackets` for correct precedence, bulk insert/upsert, transactional pessimistic locking, and performance-conscious patterns like column selection and cursor-based pagination, you'll build data access layers that are both powerful and elegant.
 

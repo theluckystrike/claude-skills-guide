@@ -16,13 +16,13 @@ score: 7
 
 Event-driven architecture has become essential for building responsive, scalable APIs. Whether you're handling webhooks from external services, processing background jobs, or streaming real-time updates to clients, Claude Code provides powerful patterns for implementing these systems effectively. This guide shows you how to design event-driven APIs that remain maintainable as complexity grows.
 
-Understanding Event-Driven Patterns in APIs
+## Understanding Event-Driven Patterns in APIs
 
 Traditional request-response APIs block while waiting for operations to complete. Event-driven APIs invert this model by returning immediately and processing work asynchronously. This approach shines when dealing with slow operations, third-party integrations, or systems that need to notify multiple consumers.
 
 The core patterns include webhooks for receiving external events, message queues for internal event processing, Server-Sent Events (SSE) for pushing updates to clients, and WebSockets for bidirectional real-time communication. Each pattern serves different use cases, and Claude Code skills can help you implement all of them.
 
-Webhook Implementation Patterns
+## Webhook Implementation Patterns
 
 Webhooks represent the foundation of event-driven APIs. When an external service needs to notify your system of something, it sends an HTTP POST to your endpoint. The receiving endpoint must validate the request, acknowledge receipt quickly, and process the payload asynchronously.
 
@@ -54,7 +54,7 @@ The key principle here is responding within milliseconds while delegating actual
 
 Claude Code works exceptionally well with the tdd skill for building webhook handlers. You can describe your expected behavior and let the skill generate comprehensive test cases that verify signature validation, proper acknowledgment timing, and error handling under various failure scenarios.
 
-Message Queue Architecture
+## Message Queue Architecture
 
 For internal event processing, message queues decouple producers from consumers. Your API publishes events, and independent workers process them. This isolation means one slow consumer doesn't block the entire system.
 
@@ -96,7 +96,7 @@ async function processEvent(event) {
 
 The supermemory skill proves valuable here for maintaining event schema documentation. As your system evolves, keeping track of all event types and their payloads prevents confusion between teams and services.
 
-Server-Sent Events for Real-Time Updates
+## Server-Sent Events for Real-Time Updates
 
 When clients need live updates but don't require bidirectional communication, Server-Sent Events provide a simpler alternative to WebSockets. The browser maintains a persistent connection, and your server pushes updates when available.
 
@@ -123,7 +123,7 @@ This pattern works particularly well for dashboards, notification centers, and l
 
 The frontend-design skill helps when building the client-side code to consume these events, especially when combined with framework-specific patterns for managing connection state and displaying real-time data.
 
-Handling Event Ordering and Idempotency
+## Handling Event Ordering and Idempotency
 
 One of the hardest aspects of event-driven systems is dealing with out-of-order events and duplicate delivery. Network issues cause retries, and events can arrive in unexpected sequences.
 
@@ -157,7 +157,7 @@ async function handleOrderEvent(event) {
 
 The pdf skill can generate documentation for your event schemas, making it easy to share contract details with internal teams or external partners who need to integrate with your system.
 
-Testing Event-Driven Systems
+## Testing Event-Driven Systems
 
 Testing asynchronous systems requires different strategies than synchronous code. You need to verify event publication, message queue behavior, and consumer side effects in isolation and together.
 
@@ -189,7 +189,7 @@ describe('Order processing', () => {
 
 The tdd skill excels at generating these test patterns, helping you think through edge cases before implementation begins.
 
-Monitoring Event Systems
+## Monitoring Event Systems
 
 Event-driven architectures introduce new failure modes that traditional monitoring doesn't catch. You need visibility into message flow, processing latency, and dead letter queues.
 
@@ -221,10 +221,9 @@ app.get('/health/events', async (req, res) => {
 });
 ```
 
-Summary
+## Summary
 
 Event-driven API design requires careful attention to acknowledgment patterns, idempotency, ordering, and monitoring. Webhooks handle external events, message queues process internal ones, and SSE or WebSockets push updates to clients. Each pattern serves specific use cases, and Claude Code skills like tdd, supermemory, frontend-design, and pdf help you implement them systematically while maintaining documentation and test coverage.
-
 
 Related Reading
 

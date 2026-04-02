@@ -13,12 +13,9 @@ score: 7
 permalink: /how-to-make-claude-code-not-add-unused-imports/
 ---
 
-
-How to Make Claude Code Not Add Unused Imports
-
 One of the most common frustrations developers face when working with Claude Code is the AI assistant's tendency to add unused imports while coding. Whether you're working in Python, JavaScript, TypeScript, or other languages, unused imports clutter your codebase and can trigger linter warnings or build failures. This guide covers practical techniques to prevent Claude Code from adding unnecessary imports.
 
-Understanding Why Claude Adds Unused Imports
+## Understanding Why Claude Adds Unused Imports
 
 Before diving into solutions, it's helpful to understand why Claude Code adds unused imports in the first place. Claude operates proactively, it anticipates potential needs and adds imports "just in case." While this behavior stems from a helpful intent, it often leads to:
 
@@ -28,7 +25,7 @@ Before diving into solutions, it's helpful to understand why Claude Code adds un
 
 The good news is that you can configure Claude Code to be more conservative about imports through several mechanisms.
 
-Use CLAUDE.md for Project-Wide Import Guidance
+## Use CLAUDE.md for Project-Wide Import Guidance
 
 The most effective way to control import behavior is through a CLAUDE.md file in your project root. This file provides persistent instructions that Claude follows across all interactions.
 
@@ -51,7 +48,7 @@ Before Adding Any Import
 
 This approach works because Claude reads CLAUDE.md at the start of each session and incorporates its guidelines into its reasoning. The instructions are specific enough to significantly reduce unused import additions.
 
-Configure Claude Code Settings Globally
+## Configure Claude Code Settings Globally
 
 For settings that apply across all your projects, you can configure Claude Code's global settings. The `~/.claude/settings.json` file controls session-wide behavior:
 
@@ -70,7 +67,7 @@ For settings that apply across all your projects, you can configure Claude Code'
 
 The `conservativeMode` setting encourages Claude to be more cautious about adding code, including imports. While not all settings are officially documented, users have reported success with this configuration approach.
 
-Create a Custom Skill for Import Management
+## Create a Custom Skill for Import Management
 
 For more granular control, create a custom Claude skill focused on import best practices. This is particularly useful if you work on multiple projects with different import requirements.
 
@@ -111,7 +108,7 @@ To use this skill, invoke it explicitly in your conversations:
 @import-discipline Please help me write this function while maintaining import discipline
 ```
 
-Use Pre-Commit Hooks as a Safety Net
+## Use Pre-Commit Hooks as a Safety Net
 
 Even with Claude configured correctly, a safety net of pre-commit hooks provides peace of mind. Configure your project's pre-commit to catch unused imports:
 
@@ -145,7 +142,7 @@ repos:
 
 These hooks will fail the commit if Claude accidentally adds unused imports, ensuring they never reach your main branch.
 
-Provide Contextual Guidance in Each Session
+## Provide Contextual Guidance in Each Session
 
 For one-off projects or when you need temporary import restrictions, provide explicit instructions in your initial prompt:
 
@@ -155,7 +152,7 @@ Please help me with this coding task. Important: Do NOT add any imports unless t
 
 This approach gives you session-specific control without modifying persistent configuration files.
 
-Practical Example: Python Refactoring Session
+## Practical Example: Python Refactoring Session
 
 Here's how these techniques work together in practice:
 
@@ -170,12 +167,11 @@ When refactoring a Python file, Claude will:
 - Remove imports that become unused after refactoring
 - Verify with flake8 before considering the task complete
 
-Conclusion
+## Conclusion
 
 Preventing Claude Code from adding unused imports requires a multi-layered approach. Start with a well-crafted CLAUDE.md file for project-wide guidance, create a dedicated import-discipline skill for explicit control, and maintain pre-commit hooks as your safety net. Combined, these techniques ensure your codebase remains clean and import-free.
 
 Remember: Claude responds well to explicit instructions. The more clearly you communicate your import preferences, the better Claude Code will follow them. Start with these configurations and adjust based on your specific project needs.
-
 
 Related Reading
 

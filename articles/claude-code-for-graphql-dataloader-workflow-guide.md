@@ -13,20 +13,17 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for GraphQL DataLoader Workflow Guide
-
 GraphQL's flexibility can become a performance nightmare without proper data loading strategies. When your queries request multiple related objects, naive implementations trigger the infamous N+1 problem, making hundreds of database calls where one would suffice. DataLoader is the solution, and knowing how to integrate it effectively with Claude Code can transform your GraphQL development workflow.
 
 This guide walks you through implementing GraphQL DataLoader patterns using Claude Code, with practical examples you can apply immediately to your projects.
 
-Understanding the DataLoader Pattern
+## Understanding the DataLoader Pattern
 
 DataLoader is a utility specification originally created by Facebook that provides a consistent API for loading data from various sources while batching and caching requests. Instead of executing individual queries for each related object, DataLoader collects multiple requests and executes them as a single batch.
 
 The core benefits are straightforward: reduced database round trips, built-in caching within a request lifecycle, and cleaner separation of concerns between your GraphQL resolver logic and data fetching mechanics.
 
-The N+1 Problem Without DataLoader
+## The N+1 Problem Without DataLoader
 
 Consider a typical GraphQL query fetching authors with their posts:
 
@@ -43,7 +40,7 @@ query {
 
 Without DataLoader, if you have 10 authors each with 5 posts, you're looking at 1 query for authors plus 50 individual post queries, one for each author. That's 51 database calls. DataLoader reduces this to 2: one for authors, one batched query for all posts.
 
-Setting Up DataLoader with Claude Code
+## Setting Up DataLoader with Claude Code
 
 When working with Claude Code to implement DataLoader workflows, start by understanding the fundamental setup pattern. Here's how to create a basic DataLoader:
 
@@ -65,7 +62,7 @@ const createLoaders = () => ({
 
 The key insight for Claude Code workflows: create loaders per-request to ensure clean caching. Each GraphQL request should get its own set of fresh loaders, preventing stale data between requests.
 
-Integrating DataLoader with GraphQL Resolvers
+## Integrating DataLoader with GraphQL Resolvers
 
 The real power emerges when you connect DataLoader to your GraphQL schema resolvers. Here's a complete working example:
 
@@ -111,11 +108,11 @@ const QueryType = new GraphQLObjectType({
 
 Notice how we pass the loaders through the GraphQL context. This is crucial for maintaining the batching behavior across your entire query execution.
 
-Workflow Patterns for Claude Code Development
+## Workflow Patterns for Claude Code Development
 
 When implementing DataLoader patterns with Claude Code assistance, follow these proven workflow strategies:
 
-Pattern 1: Context-Based Loader Injection
+## Pattern 1: Context-Based Loader Injection
 
 Always inject loaders through the GraphQL context. This ensures each request gets fresh caching and avoids memory leaks from long-lived loaders:
 
@@ -134,7 +131,7 @@ app.use('/graphql', graphqlHTTP((req) => ({
 })));
 ```
 
-Pattern 2: Caching Strategies
+## Pattern 2: Caching Strategies
 
 DataLoader provides request-level caching automatically. For application-level caching, you have two approaches:
 
@@ -154,7 +151,7 @@ const createLoaders = (cacheEnabled = true) => ({
 });
 ```
 
-Pattern 3: Handling Complex Batch Keys
+## Pattern 3: Handling Complex Batch Keys
 
 Sometimes simple ID-based batching isn't enough. For multi-tenant applications or complex filtering:
 
@@ -176,7 +173,7 @@ const createLoaders = () => ({
 });
 ```
 
-Practical Example: Building a Complete Schema
+## Practical Example: Building a Complete Schema
 
 Here's a practical end-to-end example combining all patterns:
 
@@ -231,7 +228,7 @@ const UserType = new GraphQLObjectType({
 });
 ```
 
-Actionable Advice for Implementation
+## Actionable Advice for Implementation
 
 When implementing DataLoader with Claude Code, keep these recommendations in mind:
 

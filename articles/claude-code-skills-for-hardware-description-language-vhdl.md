@@ -16,7 +16,7 @@ permalink: /claude-code-skills-for-hardware-description-language-vhdl/
 
 Hardware Description Languages like VHDL require precise syntax, rigorous testing, and careful documentation. Unlike software programming, a single missing signal in a sensitivity list can produce a latch that passes simulation but fails after synthesis. Claude Code skills enhance your development workflow by providing specialized assistance for these failure-prone aspects of VHDL projects, from entity creation through simulation testbenches and datasheet generation. This guide covers practical applications of Claude skills for VHDL development. For an overview of how [Claude skills work with advanced use cases](/advanced-hub/), the advanced hub covers multi-agent orchestration and specialized tooling.
 
-Setting Up VHDL Projects with Claude
+## Setting Up VHDL Projects with Claude
 
 When starting a new VHDL project, organization matters. Describe your project structure requirements to Claude Code and it will scaffold the repository with proper directories for source files, testbenches, and simulation results:
 
@@ -85,7 +85,7 @@ end architecture rtl;
 
 Notice the use of active-low reset (`rst_n`), `NUMERIC_STD` instead of the deprecated `STD_LOGIC_ARITH`, and named process labels, all best practices Claude applies by default based on VHDL-2008 conventions.
 
-Test-Driven Development for VHDL with TDD Skill
+## Test-Driven Development for VHDL with TDD Skill
 
 The `/tdd` skill adapts test-driven development principles for hardware. While traditional TDD works differently in VHDL (since you cannot run unit tests the same way as software), the skill helps you think through testbench creation systematically.
 
@@ -192,7 +192,7 @@ end architecture test;
 
 The TDD skill adds a `constant CLK_PERIOD` to centralize timing parameters, names all processes, includes a `to_string` call in the assert message for easier debugging, and structures stimulus to test both the normal counting path and the mid-count reset scenario.
 
-Writing Synthesizable RTL with Claude's Guidance
+## Writing Synthesizable RTL with Claude's Guidance
 
 One of the most practical uses of Claude for VHDL is catching synthesizability issues before you run through a multi-hour synthesis run. Paste a combinational process and ask:
 
@@ -236,7 +236,7 @@ begin
 end process;
 ```
 
-Generating FSM Code and Testbenches
+## Generating FSM Code and Testbenches
 
 Finite state machines are among the most tedious VHDL structures to write correctly. Ask Claude to generate a parameterized FSM from a state diagram description:
 
@@ -289,7 +289,7 @@ end process output_logic;
 
 The three-process FSM style (state register, next state logic, output logic) is recommended by most FPGA synthesis guides because it maps cleanly to hardware and avoids common pitfalls of combined single-process approaches.
 
-Documenting VHDL Projects with PDF and Docx Skills
+## Documenting VHDL Projects with PDF and Docx Skills
 
 Hardware projects require comprehensive documentation. The `pdf` skill helps generate documentation from your VHDL source files. After completing a module, ask Claude:
 
@@ -333,7 +333,7 @@ For design specifications and technical reports, the `docx` skill creates format
 - Test plans and results
 - Project milestones and gate reviews
 
-Code Review with Claude
+## Code Review with Claude
 
 Claude Code analyzes VHDL code for common issues when you paste your module and ask for a review. It checks for:
 
@@ -353,7 +353,7 @@ Review this VHDL module for synthesis warnings and best practices.
 
 Claude will provide line-by-line feedback and suggest improvements following VHDL-2008 standards. For teams moving from VHDL-93 to VHDL-2008, Claude can also flag constructs that are now cleaner or deprecated, such as replacing `std_logic_vector` arithmetic workarounds with direct `unsigned`/`signed` operations from `NUMERIC_STD`.
 
-VHDL vs. Verilog: When Claude Helps You Decide
+## VHDL vs. Verilog: When Claude Helps You Decide
 
 Some teams face the choice between VHDL and Verilog (or SystemVerilog). Claude can explain trade-offs and even translate modules between the languages when you need to integrate IP from both:
 
@@ -368,7 +368,7 @@ Some teams face the choice between VHDL and Verilog (or SystemVerilog). Claude c
 
 If you inherit a Verilog module that needs to connect to your VHDL top level, Claude can generate a VHDL wrapper entity that instantiates the Verilog component through a mixed-language simulation or synthesis flow.
 
-Memory Exploration with Supermemory
+## Memory Exploration with Supermemory
 
 The [supermemory skill maintains context](/claude-supermemory-skill-persistent-context-explained/) across your VHDL project. It remembers:
 
@@ -379,7 +379,7 @@ The [supermemory skill maintains context](/claude-supermemory-skill-persistent-c
 
 This becomes valuable in large FPGA projects where consistency matters across multiple modules. Without persistent context, you might describe your naming conventions again in every Claude conversation. With supermemory, those conventions are applied automatically from the first generated line.
 
-Integration with Frontend Design Skills
+## Integration with Frontend Design Skills
 
 While VHDL targets hardware, the `frontend-design` skill helps when you need to create:
 
@@ -390,7 +390,7 @@ While VHDL targets hardware, the `frontend-design` skill helps when you need to 
 
 Use the frontend-design skill to build dashboards that display VHDL simulation results or live hardware status from an embedded soft processor. A common pattern is generating a lightweight Flask or FastAPI backend that reads simulation VCD files and serves waveform data to a JavaScript viewer.
 
-Practical Workflow Example
+## Practical Workflow Example
 
 A typical VHDL development session with Claude skills, from blank repo to reviewed module:
 
@@ -403,7 +403,7 @@ A typical VHDL development session with Claude skills, from blank repo to review
 
 This workflow reduces iteration cycles by catching issues at the code review stage rather than during synthesis or place-and-route, where feedback loops are much slower.
 
-Skills That Work Together for VHDL
+## Skills That Work Together for VHDL
 
 Several Claude skills complement each other in hardware development:
 
@@ -416,7 +416,7 @@ Several Claude skills complement each other in hardware development:
 
 Each skill focuses on a specific aspect of development, allowing you to chain them naturally throughout your workflow. A single design iteration might touch tdd for testbench generation, direct prompting for a code review, and pdf for the final datasheet, three different skills working on the same source file.
 
-Key Takeaways
+## Key Takeaways
 
 Claude Code transforms VHDL development by providing structured assistance for testing, documentation, and code quality. The TDD skill encourages test-first thinking for testbenches. Direct code review prompts catch synthesis issues, latches, sensitivity list gaps, incomplete case statements, early in the cycle before they reach a multi-hour synthesis run. Documentation skills automate datasheet generation from entity definitions. For teams looking to apply [skill inheritance and composition patterns](/claude-skill-inheritance-and-composition-patterns/), modular skill design scales well across large hardware projects with dozens of IP blocks.
 

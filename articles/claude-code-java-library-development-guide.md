@@ -13,12 +13,9 @@ score: 7
 ---
 {% raw %}
 
-
-Claude Code Java Library Development Guide
-
 Creating a well-structured Java library requires careful planning, clean architecture, and thorough testing. This guide walks you through building production-ready Java libraries using Claude Code, covering project setup, implementation patterns, testing strategies, and publishing workflows.
 
-Setting Up Your Java Library Project
+## Setting Up Your Java Library Project
 
 Start by initializing a new Java library project with Maven or Gradle. For most libraries, Gradle with the Kotlin DSL provides better IDE support and cleaner configuration. Create a new directory and initialize the project structure:
 
@@ -78,7 +75,7 @@ publishing {
 
 The `java-library` plugin automatically configures the `api` and `implementation` configurations, allowing you to control which dependencies are exposed to consumers of your library.
 
-Maven vs Gradle: Which to Choose
+## Maven vs Gradle: Which to Choose
 
 Both build tools are well-supported, but they have different strengths for library development:
 
@@ -93,7 +90,7 @@ Both build tools are well-supported, but they have different strengths for libra
 
 For new projects, Gradle with the Kotlin DSL is the better default. For libraries that target enterprise environments where Maven is the standard, matching that tooling reduces friction for contributors.
 
-Defining Clear Public APIs
+## Defining Clear Public APIs
 
 A well-designed library exposes a clean, minimal public API. Use interfaces to define contracts and provide implementation details only when necessary. The principle of least surprise applies here. if a developer can guess what a method does from its name and signature, you've designed it well.
 
@@ -146,7 +143,7 @@ class UpperCaseTransformer implements Transformer<String, String> {
 
 This pattern lets you change the implementation freely without breaking binary compatibility. Claude Code is useful here. ask it to review your public API surface before you ship: "Review this class and identify any methods or fields that should be package-private or moved to an internal package."
 
-Implementing Core Features
+## Implementing Core Features
 
 When implementing library features, follow the single responsibility principle. Each class should do one thing well. Use dependency injection to make your code testable and flexible. Here's an example of a service class with constructor injection:
 
@@ -175,7 +172,7 @@ public class HttpClient {
 
 Note the use of `Objects.requireNonNull` with descriptive messages. Failing fast with a clear error is better than a NullPointerException deep in call stack later.
 
-The Builder Pattern for Complex Configuration
+## The Builder Pattern for Complex Configuration
 
 When a class needs more than three or four constructor parameters, the Builder pattern dramatically improves readability:
 
@@ -239,7 +236,7 @@ public final class ClientConfig {
 
 This design allows callers to configure only what they care about, with all other settings using sensible defaults.
 
-Writing Tests with TDD Patterns
+## Writing Tests with TDD Patterns
 
 Test-driven development leads to better API design because you write the code from a consumer's perspective before you write the implementation. Create a test directory structure matching your source packages:
 
@@ -335,7 +332,7 @@ tasks.register<Test>("integrationTest") {
 }
 ```
 
-Managing Dependencies Carefully
+## Managing Dependencies Carefully
 
 Library dependencies carry forward to your users. every dependency you add is a dependency they must resolve, and potential conflicts multiply. The goal is a small, stable dependency footprint.
 
@@ -365,7 +362,7 @@ dependencies {
 
 Run `./gradlew dependencies` regularly to inspect your full dependency tree and spot unexpected transitive pulls. Claude Code can help you audit this output: paste the tree and ask "Which of these transitive dependencies pose version conflict risks, and how should I resolve them?"
 
-Documenting Your Library
+## Documenting Your Library
 
 Good documentation makes your library usable. The most important documentation is the Javadoc on every public class and method, because IDEs surface it directly in autocomplete.
 
@@ -407,11 +404,11 @@ Generate the Javadoc site as part of your build to catch broken `{@code}` blocks
 open build/docs/javadoc/index.html
 ```
 
-Writing a Useful README
+## Writing a Useful README
 
 Your README is the first thing a developer sees. It should answer three questions in the first ten lines: what does this library do, how do I add it as a dependency, and what does basic usage look like? Put a copy-pasteable dependency snippet at the top, not buried below a wall of text.
 
-Publishing to Maven Central
+## Publishing to Maven Central
 
 To share your library with the Java community, publish to Maven Central. The modern path uses the Central Portal at `central.sonatype.com` rather than the legacy OSSRH Nexus.
 
@@ -499,7 +496,7 @@ Run the publish command locally when testing:
 ./gradlew publish
 ```
 
-Versioning Strategy
+## Versioning Strategy
 
 Follow semantic versioning strictly for libraries. consumers depend on it to make upgrade decisions:
 
@@ -511,7 +508,7 @@ Follow semantic versioning strictly for libraries. consumers depend on it to mak
 
 Never break binary compatibility in a patch or minor release. Use `@Deprecated` with a `forRemoval = true` flag to signal upcoming removals at least one minor version before the breaking major release.
 
-Using Claude Code for Library Development
+## Using Claude Code for Library Development
 
 Claude Code accelerates every phase of Java library development. Here are specific prompts that produce high-value results:
 
@@ -524,7 +521,6 @@ Claude Code accelerates every phase of Java library development. Here are specif
 Claude Code works best when you give it the full context. paste in the class, describe the audience (library consumers vs. internal developers), and specify what kind of feedback you want.
 
 Building a Java library is an exercise in restraint. expose only what users need, test thoroughly, and document generously. Claude Code accelerates each phase of this process, from initial project scaffold through API review, test generation, and release automation.
-
 
 Related Reading
 

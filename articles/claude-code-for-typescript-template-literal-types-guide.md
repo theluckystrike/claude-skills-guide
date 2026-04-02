@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for TypeScript Template Literal Types Guide
-
 TypeScript's template literal types represent one of the most powerful type-system features introduced in recent years. They allow you to create precise, composable string types that can dramatically improve type safety in your applications. This guide shows you how to use Claude Code CLI to work with template literal types effectively, from basic usage to advanced patterns.
 
-Understanding Template Literal Types
+## Understanding Template Literal Types
 
 Template literal types build on string literal types, but with the ability to combine multiple string types using template literals. Unlike regular string types that represent any string, template literal types narrow down to specific string patterns.
 
@@ -44,7 +41,7 @@ type ColoredSize = `${Color}-${Size}`;
 
 This cross-product behavior is what makes template literal types so powerful for describing constrained string shapes at compile time rather than runtime.
 
-Built-In String Utility Types
+## Built-In String Utility Types
 
 TypeScript ships four built-in intrinsic string manipulation types that are designed specifically for use inside template literals:
 
@@ -71,7 +68,7 @@ type EventConstant = `EVENT_${Uppercase<DOMEvent>}`;
 
 When you ask Claude Code to explain these utilities, it will also point out a subtle difference: `Capitalize` and `Uncapitalize` only affect the first character, while `Uppercase` and `Lowercase` affect the entire string. That distinction trips up developers who expect `Capitalize` to title-case multi-word strings.
 
-Using Claude Code to Explore Template Literal Types
+## Using Claude Code to Explore Template Literal Types
 
 Claude Code excels at interactive type exploration. When you're uncertain about what a complex template literal type produces, ask Claude to analyze it:
 
@@ -84,7 +81,7 @@ Claude will explain that this creates a pattern type matching strings like `/use
 
 You can also ask Claude to generate type playground snippets you can drop directly into the TypeScript playground at typescriptlang.org to verify behavior interactively. This combination of AI explanation plus live experimentation is faster than reading documentation alone.
 
-Practical Example: Event Handler Types
+## Practical Example: Event Handler Types
 
 A common real-world use case involves generating event handler names:
 
@@ -110,11 +107,11 @@ type EventHandlerProps = {
 // { onClick?: ...; onFocus?: ...; onBlur?: ...; onKeydown?: ...; onKeyup?: ... }
 ```
 
-Advanced Patterns for Type-Safe APIs
+## Advanced Patterns for Type-Safe APIs
 
 Template literal types shine when building type-safe APIs. Claude Code can help you generate these patterns automatically and explain each component.
 
-Building Type-Safe Route Handlers
+## Building Type-Safe Route Handlers
 
 ```typescript
 type HTTPMethod = "get" | "post" | "put" | "delete";
@@ -141,7 +138,7 @@ type RouteWithParams =
   | `/orders/${string}:orderId`;
 ```
 
-Type-Safe CSS Class Names
+## Type-Safe CSS Class Names
 
 Design systems benefit enormously from template literal types. You can model your token system directly in the type system:
 
@@ -157,7 +154,7 @@ type PaddingClass = `p${Direction}-${Spacing}`;
 
 This approach means your editor autocompletes valid Tailwind-style class names without needing a PostCSS plugin or runtime validation. Ask Claude Code to generate these token systems from your design documentation.
 
-Type-Safe i18n Translation Keys
+## Type-Safe i18n Translation Keys
 
 Internationalization libraries often use dot-notation keys like `"user.profile.title"`. Template literal types let you model that structure:
 
@@ -182,7 +179,7 @@ t("product.title");   // OK
 t("user.title");      // TypeScript error. invalid combination
 ```
 
-Infer with Template Literal Types
+## Infer with Template Literal Types
 
 One of the most powerful capabilities is extracting segments from a string type using `infer`. This lets you decompose string shapes into their component parts at the type level:
 
@@ -215,7 +212,7 @@ type AllParams = ExtractAllParams<"/users/:userId/posts/:postId">;
 // Type: "userId" | "postId"
 ```
 
-Debugging Template Literal Types
+## Debugging Template Literal Types
 
 One of Claude Code's greatest strengths is helping debug complex types. When you encounter type errors with template literals, Claude can:
 
@@ -250,7 +247,7 @@ type PrefixedMaybe = `prefix_${MaybeUndefined}`;
 
 When TypeScript produces a long union-type error spanning dozens of lines, paste it directly into Claude Code and ask for a summary of which branch is failing. Claude can pinpoint the problematic member in the union without you having to read every line.
 
-Mapped Types with Template Literals
+## Mapped Types with Template Literals
 
 Template literal types become even more powerful when combined with mapped types. This combination lets you transform the keys of an object type while reshaping their names:
 
@@ -287,7 +284,7 @@ type Validators<T> = {
 
 Ask Claude Code to generate a complete class implementing both `Getters<T>` and `Setters<T>` for a given interface. This is one of those tasks where Claude shines. the boilerplate is tedious to write by hand, but the type constraints make it easy to verify correctness.
 
-Comparison: Template Literal Types vs. Runtime Validation
+## Comparison: Template Literal Types vs. Runtime Validation
 
 It helps to understand what template literal types can and cannot do compared to runtime validation libraries like Zod:
 
@@ -302,9 +299,9 @@ It helps to understand what template literal types can and cannot do compared to
 
 The practical advice: use template literal types to model the shape of string values you control (API routes, CSS tokens, event names, i18n keys), and use runtime validation for data that arrives from outside your codebase (form inputs, API responses, config files).
 
-Actionable Advice for Working with Template Literal Types
+## Actionable Advice for Working with Template Literal Types
 
-Start Simple and Iterate
+## Start Simple and Iterate
 
 Begin with basic patterns like prefix/suffix combinations, then progressively add complexity. Ask Claude to verify each step:
 
@@ -319,7 +316,7 @@ Add support for dynamic column names like "tbl_users_columnName"
 
 Iterating in small steps makes it easier to spot when a pattern diverges from your intent. Claude Code is particularly good at this incremental refinement workflow. each prompt builds on the previous one.
 
-Use Type Inference
+## Use Type Inference
 
 Template literal types work exceptionally well with TypeScript's inference capabilities. Use them in function parameters to infer precise types:
 
@@ -354,7 +351,7 @@ const tokens = {
 
 This gives you the benefits of type checking without losing the literal type information. Ask Claude to show you more patterns where `satisfies` improves template literal type ergonomics.
 
-Combine with Conditional Types
+## Combine with Conditional Types
 
 For advanced usage, combine template literals with conditional types:
 
@@ -370,7 +367,7 @@ type Vowels = StringToUnion<"aeiou">;
 
 Claude can help you construct these sophisticated patterns step by step, explaining each conditional branch. Be aware that deeply recursive types can hit TypeScript's recursion limit. ask Claude to help you recognize and work around those limits with tail-call optimization patterns or depth-limiting guards.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Through Claude Code assistance, you'll quickly identify and avoid these frequent mistakes:
 
@@ -405,7 +402,7 @@ type Greeting = `Hello, ${string}`;
 
 The syntax looks identical but the semantics are completely different. When explaining code to Claude Code, be explicit about whether you're working at the type level or value level to get the most precise assistance.
 
-Maximizing Claude Code's Potential
+## Maximizing Claude Code's Potential
 
 To get the most from Claude when working with template literal types:
 

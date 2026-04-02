@@ -13,8 +13,6 @@ permalink: /claude-code-skills-for-real-estate-listing-platforms/
 ---
 {% raw %}
 
-Claude Code Skills for Real Estate Listing Platforms
-
 Building a real estate listing platform involves managing property data, integrating maps, implementing search filters, and handling media assets. Claude Code provides skills that accelerate development across these areas. This guide covers practical skills for real estate developers. from bulk data ingestion and document generation to geospatial filtering, automated testing, and production deployment considerations.
 
 xlsx: Property Data Management
@@ -258,7 +256,7 @@ def generate_status_graphic(prop, status: str) -> bytes:
     return message.content[0].text
 ```
 
-Map Integration: Location-Based Features
+## Map Integration: Location-Based Features
 
 Real estate platforms require map integrations. While Claude Code doesn't directly handle map APIs, the skills here support the coordinate data that drives mapping libraries.
 
@@ -338,7 +336,7 @@ function useMapListings(mapRef) {
 
 This approach keeps the map responsive while avoiding excessive API calls.
 
-Data Visualization
+## Data Visualization
 
 Claude Code generates visualization code for market trends, price histories, and neighborhood statistics. Describe what you need and Claude will implement the chart or dashboard component.
 
@@ -387,7 +385,7 @@ function PriceHistoryChart({ data }) {
 
 Days-on-market bar charts segmented by neighborhood give buyers and sellers a quick read on market velocity. Inventory level line charts show seasonal patterns that help agents advise clients on timing. Price distribution histograms help buyers understand whether a listing is priced at the low end or high end of comparable properties.
 
-Search and Filtering Implementation
+## Search and Filtering Implementation
 
 Effective search functionality separates professional platforms from basic listings. Here's how to structure property search:
 
@@ -471,7 +469,7 @@ def search_listings(session: Session, filters: dict, page: int = 1, per_page: in
 
 A well-designed search API also surfaces saved searches and email alerts. When a new listing matches a saved search, your platform can immediately notify interested buyers. a feature that dramatically improves buyer engagement metrics.
 
-Automated Testing with TDD
+## Automated Testing with TDD
 
 Quality real estate platforms require rigorous testing. [Use the TDD skill to write tests first](/claude-tdd-skill-test-driven-development-workflow/):
 
@@ -530,7 +528,7 @@ class TestFilterProperties:
 
 Beyond unit tests, real estate platforms benefit from integration tests that verify the full request-to-response cycle, including database queries and pagination. Property data integrity tests. ensuring that price-per-sqft is always computed correctly and that sold properties don't appear in active searches. catch the kind of subtle bugs that erode user trust.
 
-Handling Media Assets
+## Handling Media Assets
 
 Property photos are the most critical content on a real estate listing platform. Photo management involves upload, storage, resizing, and delivery at the right resolution for each context.
 
@@ -581,7 +579,7 @@ def process_property_photo(image_file, property_id: str, position: int) -> dict:
 
 Storing multiple resolutions lets you serve thumbnail-sized images on the search results grid, card-sized images on the listing detail page, and full-resolution images in the photo gallery lightbox. keeping page load times fast at every entry point.
 
-Putting It Together
+## Putting It Together
 
 A production real estate platform combines these skills:
 
@@ -595,7 +593,7 @@ A production real estate platform combines these skills:
 
 Each skill handles a specific domain, reducing context switching and maintaining consistency across your codebase. The combination also creates natural boundaries for team ownership. backend engineers own the data ingestion and search layer, frontend engineers own the visualization and map components, and marketing teams can generate collateral without touching the codebase.
 
-Deployment Considerations
+## Deployment Considerations
 
 For a real estate platform serving tens of thousands of listings, a few infrastructure decisions matter more than others:
 
@@ -610,7 +608,6 @@ For a real estate platform serving tens of thousands of listings, a few infrastr
 The xlsx and pdf skills reduce the engineering burden on the data pipeline and document generation side, freeing engineering time for the user-facing search and map experience that drives platform differentiation.
 
 ---
-
 
 Related Reading
 

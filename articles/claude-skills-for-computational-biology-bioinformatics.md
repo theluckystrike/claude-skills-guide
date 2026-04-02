@@ -16,7 +16,7 @@ Computational biology and bioinformatics workflows involve intensive data proces
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. They provide standing instructions for specialized tasks without requiring Python imports or package installations.
 
-Essential Skills for Bioinformatics Workflows
+## Essential Skills for Bioinformatics Workflows
 
 xlsx Skill for Experimental Data Management
 
@@ -51,9 +51,9 @@ Create a Python module for parsing FASTQ files, include tests for quality score 
 
 This skill generates test scaffolding, validates pipeline components, and ensures your analysis code handles edge cases, critical when processing sensitive biological data where reproducibility matters.
 
-Specialized Workflows for Biological Data
+## Specialized Workflows for Biological Data
 
-Sequence Analysis and Manipulation
+## Sequence Analysis and Manipulation
 
 Bioinformatics workflows frequently require sequence manipulation: filtering reads, translating DNA to protein, identifying motifs, and preparing data for downstream analysis. Claude skills provide conversational interfaces to these operations without requiring custom script creation for each task.
 
@@ -64,7 +64,7 @@ Parse alignment_summary.tsv, filter reads with mapping quality < 30, calculate c
 
 The skill translates your intent into executable code, handles file I/O, and produces outputs in standard formats compatible with genome browsers and other tools.
 
-Phylogenetic Analysis Pipelines
+## Phylogenetic Analysis Pipelines
 
 Building phylogenetic trees from sequence data involves multiple steps: alignment, model selection, tree construction, and visualization. Claude skills coordinate these steps into cohesive workflows.
 
@@ -75,7 +75,7 @@ Build a pipeline that takes multiple FASTA sequences, performs Clustal alignment
 
 This skill generates modular, testable code that you can integrate into larger analysis frameworks.
 
-NGS Data Processing
+## NGS Data Processing
 
 Next-generation sequencing data requires quality control, trimming, alignment, and variant calling, repetitive tasks ideal for automation. Claude skills provide templates and execution guidance for standard pipelines.
 
@@ -86,7 +86,7 @@ Extract sample metadata from experiment_manifest.pdf, validate sample names matc
 
 This approach reduces configuration errors and ensures consistent processing across samples.
 
-Integration with Existing Bioinformatics Tools
+## Integration with Existing Bioinformatics Tools
 
 Claude skills work alongside established bioinformatics tools rather than replacing them. The key integration points include:
 
@@ -101,7 +101,7 @@ Statistical Analysis in R: The tdd skill creates R functions with testthat unit 
 Create R functions for DESeq2 differential expression analysis including normalizations, model fitting, and results extraction with comprehensive test cases using testthat
 ```
 
-Knowledge Management with supermemory Skill
+## Knowledge Management with supermemory Skill
 
 Bioinformatics projects accumulate substantial institutional knowledge: protocol notes, analysis decisions, troubleshooting logs, and results interpretations. The [supermemory skill maintains persistent context](/claude-supermemory-skill-persistent-context-explained/) across sessions, making this knowledge accessible conversationally.
 
@@ -112,7 +112,7 @@ Search previous conversations for RNA-seq alignment parameters used on project-a
 
 This skill preserves institutional knowledge that would otherwise be lost between projects or team member transitions.
 
-Documentation and Reporting
+## Documentation and Reporting
 
 Research reproducibility requires comprehensive documentation. Claude skills generate analysis reports, update laboratory notebooks, and create publication-ready figures.
 
@@ -123,7 +123,7 @@ Parse variant_calling_results.vcf, generate summary statistics including transit
 
 This automation ensures documentation keeps pace with analysis without becoming a separate burden.
 
-Practical Implementation
+## Practical Implementation
 
 To integrate Claude skills into your bioinformatics workflow:
 
@@ -136,7 +136,6 @@ To integrate Claude skills into your bioinformatics workflow:
 Skills function as collaborative assistants rather than autonomous agents, they respond to your direction while handling implementation details. This approach maintains researcher control while accelerating mechanical tasks.
 
 The bioinformatics community benefits from reproducible, well-documented analysis. Claude skills support these goals by automating documentation generation, test creation, and pipeline construction. Your domain expertise remains essential; skills amplify your productivity without substituting for scientific judgment.
-
 
 Related Reading
 

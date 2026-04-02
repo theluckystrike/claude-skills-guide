@@ -13,16 +13,13 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code vs Jan AI: Local AI Assistant Comparison
 
 The landscape of local AI coding assistants has evolved dramatically, giving developers powerful alternatives to cloud-based solutions. Two prominent contenders in this space are Claude Code and Jan AI. While both aim to bring AI-powered development assistance to your local environment, they take different approaches and excel in distinct areas. This guide breaks down their key differences, strengths, and practical use cases to help you choose the right tool for your workflow.
 
-Understanding the Core Architecture
+## Understanding the Core Architecture
 
-Claude Code: The Skill-Based Approach
+## Claude Code: The Skill-Based Approach
 
 Claude Code represents Anthropic's vision for a local-first AI coding assistant with a unique skills system. Skills are modular, reusable prompt templates that define how Claude approaches different tasks. This architecture allows you to:
 
@@ -41,7 +38,7 @@ description: Performs thorough code reviews
 
 This granular control makes Claude Code particularly appealing for teams with strict security requirements or specific workflow needs.
 
-Jan AI: The Open-Source Flexibility
+## Jan AI: The Open-Source Flexibility
 
 Jan AI takes a fundamentally open-source approach, built on top of the Llama ecosystem and other open models. It positions itself as a self-hostable alternative to cloud AI services, running entirely on your local hardware. This means:
 
@@ -51,9 +48,9 @@ Jan AI takes a fundamentally open-source approach, built on top of the Llama eco
 
 Jan AI supports various model architectures and can run everything from small, efficient models to large, capable ones depending on your hardware capabilities.
 
-Feature Comparison
+## Feature Comparison
 
-Tool Integration and Capabilities
+## Tool Integration and Capabilities
 
 Claude Code shines with its Model Context Protocol (MCP), which provides a standardized way to connect AI models to external tools and services. MCP enables:
 
@@ -71,7 +68,7 @@ e.g., ~/.claude/pdf.md, ~/.claude/pptx.md
 
 Jan AI provides tool integration through its extensible framework, but the setup typically requires more manual configuration. The trade-off is greater flexibility for advanced users who want fine-grained control.
 
-Local Model Performance
+## Local Model Performance
 
 Both tools run models locally, but they optimize differently:
 
@@ -84,9 +81,9 @@ Both tools run models locally, but they optimize differently:
 
 For developers with modern Macs (M1-M3), both tools offer responsive experiences. Claude Code's advantage lies in its optimization for coding-specific tasks, having been trained with a focus on developer workflows.
 
-Practical Examples
+## Practical Examples
 
-Example 1: Code Refactoring with Claude Code Skills
+## Example 1: Code Refactoring with Claude Code Skills
 
 Let's say you want to refactor a legacy Python codebase. With Claude Code, you can create a specialized skill for this task:
 
@@ -106,7 +103,7 @@ Guidelines
 
 Invoke this skill on your codebase, and Claude Code will systematically analyze and refactor files while respecting the tool constraints you defined.
 
-Example 2: Running Jan AI with Custom Models
+## Example 2: Running Jan AI with Custom Models
 
 With Jan AI, you can experiment with different models based on your needs:
 
@@ -120,7 +117,7 @@ jan run --model llama-3-70b
 
 The flexibility to swap models based on task complexity is a significant advantage for users who want to optimize for speed or capability.
 
-Example 3: Context-Aware Development
+## Example 3: Context-Aware Development
 
 Claude Code excels at maintaining context across complex multi-file operations. Consider a scenario where you need to:
 
@@ -130,7 +127,7 @@ Claude Code excels at maintaining context across complex multi-file operations. 
 
 Claude Code's skills can be chained together, with each skill building on the context established by previous interactions. The skill system remembers your project structure, coding conventions, and preferences across sessions.
 
-When to Choose Each Tool
+## When to Choose Each Tool
 
 Choose Claude Code If:
 
@@ -148,7 +145,7 @@ Choose Jan AI If:
 - You want to experiment with cutting-edge models as they release
 - Self-hosting and data privacy are paramount concerns
 
-The Hybrid Approach
+## The Hybrid Approach
 
 Many developers find value in using both tools for different purposes. You might use:
 
@@ -157,7 +154,7 @@ Many developers find value in using both tools for different purposes. You might
 
 Both tools can coexist on your development machine, each excelling in their respective strengths.
 
-Conclusion
+## Conclusion
 
 Claude Code and Jan AI represent two different philosophies in the local AI assistant space. Claude Code offers a polished, skill-based approach with excellent tool integration and minimal friction. Jan AI provides unparalleled flexibility and control for users who want to deeply customize their AI setup.
 

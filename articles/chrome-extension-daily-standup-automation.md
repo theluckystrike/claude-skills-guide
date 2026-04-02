@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Daily Standup Automation: A Practical Guide"
 description: "Learn how to build a Chrome extension that automates your daily standup workflow. Practical code examples, APIs, and implementation patterns for."
@@ -14,7 +13,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Chrome Extension Daily Standup Automation: A Practical Guide
 
@@ -22,7 +20,7 @@ Daily standups are essential for team coordination, but the ritual of documentin
 
 This guide walks you through building a Chrome extension that collects activity data from GitHub, Jira, Linear, and other tools, then formats it into a clean standup update.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 A standup automation extension operates across several components:
 
@@ -33,7 +31,7 @@ A standup automation extension operates across several components:
 
 The key challenge is accessing data from multiple sources without requiring you to manually input credentials for each service. We'll use OAuth flows where supported and API tokens for services that require them.
 
-Setting Up Your Extension Project
+## Setting Up Your Extension Project
 
 Every Chrome extension needs a manifest file. For a standup automation tool, you'll need to request appropriate permissions:
 
@@ -64,7 +62,7 @@ Every Chrome extension needs a manifest file. For a standup automation tool, you
 
 The host permissions allow your extension to interact with GitHub and Linear APIs directly from the background worker.
 
-Extracting Activity Data from GitHub
+## Extracting Activity Data from GitHub
 
 GitHub provides a clean API for fetching your recent contributions. Here's how to retrieve commits and pull requests from the past 24 hours:
 
@@ -113,7 +111,7 @@ async function getGitHubActivity(token, username) {
 
 This function retrieves the events and filters them to show only those from yesterday. You can adapt the date range to match your team's standup cadence.
 
-Integrating with Linear for Task Tracking
+## Integrating with Linear for Task Tracking
 
 Linear uses GraphQL for its API. Here's how to fetch your assigned issues:
 
@@ -149,7 +147,7 @@ async function getLinearIssues(apiKey) {
 
 The key insight here is filtering for issues assigned to you that were recently updated. This gives you a solid foundation for the "what I'm working on today" portion of your standup.
 
-Building the Standup Generator
+## Building the Standup Generator
 
 Once you have data from multiple sources, you need to combine and format it:
 
@@ -191,7 +189,7 @@ function generateStandupMessage(data) {
 
 This generates a markdown-formatted standup that works well with Slack, Teams, or any markdown-supported platform.
 
-Creating the Popup Interface
+## Creating the Popup Interface
 
 Your popup needs to be simple and functional:
 
@@ -232,7 +230,7 @@ Your popup needs to be simple and functional:
 
 The popup provides straightforward controls: generate the standup from your activity data, then copy it to your clipboard for pasting into Slack or your team's standup channel.
 
-Handling Authentication Securely
+## Handling Authentication Securely
 
 Never store API tokens in your extension's source code. Instead, use Chrome's secure storage:
 
@@ -259,7 +257,7 @@ function getStoredToken(keyName) {
 
 Users should configure their API tokens once through the extension's options page, and those tokens persist across browser sessions through Chrome's sync storage.
 
-Performance and Rate Limiting
+## Performance and Rate Limiting
 
 APIs have rate limits, and you don't want to hit them during standup generation:
 
@@ -284,7 +282,7 @@ async function cachedFetch(url, options, cacheKey, ttlMinutes = 15) {
 
 This caching layer ensures that repeated standup generations don't trigger unnecessary API calls. The 15-minute TTL balances fresh data with API efficiency.
 
-Deployment and Testing
+## Deployment and Testing
 
 Before distributing your extension, test it thoroughly:
 
@@ -295,7 +293,7 @@ Before distributing your extension, test it thoroughly:
 
 When ready, you can publish through the Chrome Web Store. Ensure your listing clearly explains what data your extension accesses and why.
 
-Conclusion
+## Conclusion
 
 Automating daily standups through a Chrome extension combines browser APIs, external service integrations, and thoughtful UI design. The core implementation involves retrieving activity data from your development tools, formatting it into a consistent structure, and providing easy copy-paste functionality.
 
@@ -304,7 +302,6 @@ Start with one integration, GitHub or Linear, and expand from there. Power users
 The time invested in building this tool pays back quickly when you eliminate the manual effort of composing daily standups while ensuring accurate, data-driven updates.
 
 ---
-
 
 Related Reading
 

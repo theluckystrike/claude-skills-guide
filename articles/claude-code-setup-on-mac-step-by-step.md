@@ -16,7 +16,7 @@ permalink: /claude-code-setup-on-mac-step-by-step/
 
 Getting Claude Code running on your Mac unlocks a powerful AI assistant directly in your terminal. This guide walks you through every step, from installation to your first commands, with practical examples developers can use immediately. For broader onboarding resources, see the [getting started hub](/getting-started-hub/).
 
-Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have:
 
@@ -31,7 +31,7 @@ Check Node.js is available:
 node --version
 ```
 
-Installing Claude Code
+## Installing Claude Code
 
 Install Claude Code globally using npm:
 
@@ -47,7 +47,7 @@ claude --version
 
 You should see output indicating the installed version, confirming the CLI is accessible.
 
-Authenticating with Your API Key
+## Authenticating with Your API Key
 
 Claude Code requires authentication to connect to Anthropic's API. Set your API key as an environment variable. Add this to your shell profile for persistence:
 
@@ -64,7 +64,7 @@ source ~/.zshrc
 
 For better security, consider using a `.env` file with a tool like `direnv`, or use macOS Keychain to store your API key securely.
 
-Project-Level Configuration
+## Project-Level Configuration
 
 Claude Code supports project-specific instructions via a `CLAUDE.md` file in your project root. This file describes your project to Claude at the start of each session. You can also load [Claude Code skills](/claude-skill-md-format-complete-specification-guide/) to bring in reusable specialized workflows:
 
@@ -77,7 +77,7 @@ This is a TypeScript React application using Vite.
 
 When you start Claude from that directory, it reads `CLAUDE.md` automatically and applies those conventions throughout your session.
 
-Your First Conversation
+## Your First Conversation
 
 Start an interactive session:
 
@@ -93,7 +93,7 @@ Explain what this bash command does: find . -name "*.js" -type f
 
 Claude responds with a breakdown of the command's purpose and behavior.
 
-Using Claude Without Interactive Mode
+## Using Claude Without Interactive Mode
 
 For automation, pipe input directly to Claude:
 
@@ -103,9 +103,9 @@ echo "Write a Python function that calculates factorial" | claude
 
 This outputs the result without entering interactive mode, useful for scripts and pipelines.
 
-Integrating with Your Development Workflow
+## Integrating with Your Development Workflow
 
-Using Claude with Git
+## Using Claude with Git
 
 Combine Claude with git for intelligent code reviews:
 
@@ -115,7 +115,7 @@ git diff | claude "Review these changes and suggest improvements"
 
 This pipes your uncommitted changes to Claude, which analyzes them and provides feedback.
 
-Creating Aliases for Common Tasks
+## Creating Aliases for Common Tasks
 
 Speed up your workflow with shell aliases in `~/.zshrc`:
 
@@ -125,9 +125,9 @@ alias claude-review="git diff | claude"
 
 Reload your shell, then use `claude-review` to instantly get code review feedback.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-API Key Not Recognized
+## API Key Not Recognized
 
 If Claude reports authentication failures, verify your environment variable:
 
@@ -137,7 +137,7 @@ echo $ANTHROPIC_API_KEY
 
 Ensure no leading or trailing spaces when you set the variable.
 
-Permission Denied Errors
+## Permission Denied Errors
 
 On first run, macOS may block the binary. Open System Settings > Privacy & Security and allow the application to run, or run:
 
@@ -145,7 +145,7 @@ On first run, macOS may block the binary. Open System Settings > Privacy & Secur
 xattr -rd com.apple.quarantine /usr/local/bin/claude
 ```
 
-Slow Responses
+## Slow Responses
 
 If responses feel sluggish, try a faster model by passing the `--model` flag:
 
@@ -155,7 +155,7 @@ claude --model claude-haiku-4-5 "Your prompt here"
 
 Haiku responds faster for straightforward tasks.
 
-Advanced: Using MCP Servers
+## Advanced: Using MCP Servers
 
 For expanded capabilities, [configure Model Context Protocol servers](/building-your-first-mcp-tool-integration-guide-2026/). Create or edit `~/.claude/settings.json`:
 
@@ -174,7 +174,7 @@ This gives Claude access to read and write files in your specified directories t
 
 Restart your Claude session to load the MCP configuration.
 
-Summary
+## Summary
 
 Setting up Claude Code on Mac involves four core steps:
 
@@ -185,7 +185,7 @@ Setting up Claude Code on Mac involves four core steps:
 
 Once configured, Claude becomes a persistent coding companion in your terminal, ready to explain code, write functions, review changes, and automate repetitive tasks.
 
-Choosing the Right Model for Your Needs
+## Choosing the Right Model for Your Needs
 
 Claude Code supports multiple models, each suited to different use cases. Pass the `--model` flag to select a model per command:
 
@@ -202,7 +202,7 @@ claude --model claude-opus-4-5 "Design a microservices migration plan"
 
 Switch models based on the task at hand. For routine work, Haiku keeps things fast. For anything requiring deep reasoning, Sonnet or Opus deliver the necessary capability.
 
-Practical Example: Automated Code Reviews
+## Practical Example: Automated Code Reviews
 
 A powerful workflow combines Claude with your existing git hooks. Create a script for pre-commit reviews:
 
@@ -225,7 +225,7 @@ echo "~/scripts/claude-review.sh" >> .git/hooks/pre-commit
 
 Every commit now includes automated code review feedback.
 
-Performance Tips
+## Performance Tips
 
 Maximize Claude Code efficiency with these practices:
 

@@ -19,7 +19,7 @@ Building a Chrome extension for watermarking images is a practical project that 
 
 This guide walks through creating a functional image watermarking extension from scratch. You'll learn the core APIs, understand the extension architecture, and have working code you can extend for your specific needs.
 
-Extension Architecture Overview
+## Extension Architecture Overview
 
 A Chrome extension for image watermarking consists of three main components:
 
@@ -30,7 +30,7 @@ A Chrome extension for image watermarking consists of three main components:
 
 For watermarking specifically, you'll work primarily with the Canvas API for image manipulation and the Chrome Downloads API for saving processed images.
 
-Setting Up the Manifest
+## Setting Up the Manifest
 
 Your extension begins with the manifest.json file. This configuration declares what your extension can access:
 
@@ -61,7 +61,7 @@ Your extension begins with the manifest.json file. This configuration declares w
 
 The manifest_version 3 is the current standard. Key permissions include `activeTab` for accessing the current page, `downloads` for saving processed images, and `scripting` for executing code in page contexts.
 
-The Popup Interface
+## The Popup Interface
 
 The popup provides the user interface where users configure their watermark settings. Create a simple HTML form:
 
@@ -110,7 +110,7 @@ The popup provides the user interface where users configure their watermark sett
 
 This popup collects all necessary configuration. The form includes text input, position selection, font size, and opacity controls.
 
-Core Watermarking Logic
+## Core Watermarking Logic
 
 The actual image processing happens through the Canvas API. Here's a solid implementation:
 
@@ -187,7 +187,7 @@ async function watermarkImage(imageUrl, settings) {
 
 This function loads an image, creates an off-screen canvas, draws the original image, then overlays the watermark text at the calculated position. The shadow effect improves text visibility on any background.
 
-Connecting Popup to Content Script
+## Connecting Popup to Content Script
 
 The popup communicates with content scripts through message passing. In your popup.js:
 
@@ -219,7 +219,7 @@ document.getElementById('processBtn').addEventListener('click', async () => {
 
 The content script listens for these messages and processes images on the page.
 
-Content Script Implementation
+## Content Script Implementation
 
 The content script runs in the context of web pages and handles image detection:
 
@@ -258,7 +258,7 @@ async function processPageImages(settings) {
 
 This script finds all meaningful images on the page and applies the watermark to each one.
 
-Handling Cross-Origin Images
+## Handling Cross-Origin Images
 
 A common challenge is watermarking images from different domains. The Canvas API throws a security error when trying to export tainted canvases. Solutions include:
 
@@ -268,7 +268,7 @@ A common challenge is watermarking images from different domains. The Canvas API
 
 For most web images, adding `crossOrigin: 'anonymous'` to the image loading code works. Some sites require server-side proxying.
 
-Advanced: Adding Image Upload
+## Advanced: Adding Image Upload
 
 For users who want to watermark local images, add a file input to your popup:
 
@@ -293,7 +293,7 @@ document.getElementById('uploadBtn').addEventListener('change', async (e) => {
 
 This allows processing images that haven't been uploaded to the web yet.
 
-Deployment Steps
+## Deployment Steps
 
 To publish your extension:
 
@@ -303,12 +303,11 @@ To publish your extension:
 4. Zip your files - Include manifest, HTML, JS, CSS, and icons
 5. Submit to Chrome Web Store - $5 one-time developer registration fee
 
-Conclusion
+## Conclusion
 
 Building an image watermarking extension demonstrates practical use of Chrome extension APIs while creating a genuinely useful tool. The Canvas API provides powerful image manipulation capabilities, and the extension architecture cleanly separates UI, logic, and content interaction.
 
 From here, you can extend functionality by adding custom logo uploads, batch processing controls, different watermark styles (tiled, diagonal), or integration with cloud storage. The foundation established here scales to more complex image processing workflows.
-
 
 Related Reading
 

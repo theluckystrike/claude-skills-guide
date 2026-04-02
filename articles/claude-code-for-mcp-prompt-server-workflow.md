@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for MCP Prompt Server Workflow
-
 The Model Context Protocol (MCP) prompt server workflow represents one of the most powerful patterns for extending Claude Code's capabilities. By serving carefully crafted prompts through a dedicated server, you can create reusable, version-controlled prompt management systems that integrate smoothly with your development workflow.
 
 This guide walks you through building an MCP prompt server workflow from scratch, with practical examples you can adapt to your projects.
 
-Understanding MCP Prompt Servers
+## Understanding MCP Prompt Servers
 
 An MCP prompt server is a specialized service that serves prompts to Claude Code on demand. Instead of hardcoding prompts in your skills or configuration files, you centralize them in a server that Claude Code can query dynamically.
 
@@ -33,7 +30,7 @@ The workflow typically follows this pattern:
 
 This separation of concerns allows you to update prompts without modifying your Claude Code configuration, version control your prompts alongside your code, and share prompt libraries across multiple projects.
 
-Setting Up Your First Prompt Server
+## Setting Up Your First Prompt Server
 
 Before creating a prompt server, ensure you have Node.js 18+ installed. You'll also need the MCP SDK for Python or TypeScript, depending on your preference.
 
@@ -80,7 +77,7 @@ server.run();
 
 Save this as `server.ts` and run it with `npx tsx server.ts`. Your prompt server is now running and ready to serve prompts.
 
-Connecting Claude Code to Your Prompt Server
+## Connecting Claude Code to Your Prompt Server
 
 Once your server runs, connect Claude Code to it using the MCP configuration. Create or update your Claude Code settings file:
 
@@ -98,9 +95,9 @@ Once your server runs, connect Claude Code to it using the MCP configuration. Cr
 
 Restart Claude Code, and it will automatically discover the prompts your server exposes. You can verify the connection by asking Claude Code to list available prompts from your server.
 
-Practical Workflow Patterns
+## Practical Workflow Patterns
 
-Context-Aware Prompt Selection
+## Context-Aware Prompt Selection
 
 One powerful pattern is serving different prompts based on project context. For example, your server can detect whether you're working on a frontend or backend project and serve appropriate prompts:
 
@@ -132,7 +129,7 @@ server.prompt(
 );
 ```
 
-Versioned Prompt Management
+## Versioned Prompt Management
 
 For production systems, version your prompts to track changes over time. Store prompts with version metadata:
 
@@ -170,7 +167,7 @@ server.prompt(
 
 This approach lets you roll back prompts if issues arise and compare behavior across versions.
 
-Best Practices for MCP Prompt Servers
+## Best Practices for MCP Prompt Servers
 
 When building prompt servers for production use, follow these established patterns:
 
@@ -184,7 +181,7 @@ Implement caching. For expensive prompt generation (like those requiring file sy
 
 Secure your server. If prompts contain sensitive information, implement authentication. Use environment variables for secrets rather than hardcoding them in your server code.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 If Claude Code isn't connecting to your prompt server, verify the server is running and accessible. Check that the command and arguments in your MCP configuration match exactly what's needed to start your server.
 
@@ -192,7 +189,7 @@ When prompts aren't being served correctly, inspect the server logs for errors. 
 
 For performance problems, ensure your server handles concurrent requests appropriately. Implement connection pooling and consider adding request timeouts for expensive operations.
 
-Conclusion
+## Conclusion
 
 The MCP prompt server workflow unlocks powerful capabilities for Claude Code users. By centralizing prompt management, implementing version control, and building context-aware prompt selection, you can create sophisticated systems that adapt to your project's needs.
 

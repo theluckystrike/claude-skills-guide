@@ -15,7 +15,7 @@ tags: [chrome, claude-skills]
 
 Markdown has become the standard for technical documentation, README files, and note-taking. A Chrome extension that previews markdown in real-time transforms your browser into a powerful writing environment. This guide explores the top options, implementation patterns, and how to choose the right extension for your workflow.
 
-Why Live Markdown Preview Matters
+## Why Live Markdown Preview Matters
 
 Writing markdown directly in code editors works well, but sometimes you need to preview how it renders without committing to a build process. Chrome extensions for markdown preview bridge this gap by rendering your content instantly within the browser.
 
@@ -25,7 +25,7 @@ Beyond error prevention, live preview directly impacts writing speed. Research f
 
 Live preview also improves collaboration. Sharing a browser tab with a rendered markdown file is far easier than sending raw `.md` files to non-technical stakeholders who may not understand the syntax. Extensions that support remote URLs let reviewers open a GitHub raw file and instantly see a readable document.
 
-Top Chrome Extension Markdown Preview Options
+## Top Chrome Extension Markdown Preview Options
 
 1. Markdown Preview Plus
 
@@ -65,7 +65,7 @@ One practical use case: when reviewing a repository's CONTRIBUTING.md or SECURIT
 
 MarkDownload takes a different angle. rather than rendering markdown, it converts web pages into markdown and lets you save or copy the result. This makes it invaluable for capturing documentation from sites like MDN, Stack Overflow answers, or API reference pages. You get clean, portable text you can paste into your own docs or notes without carrying over the original site's HTML cruft.
 
-Implementation: Building Your Own Preview Extension
+## Implementation: Building Your Own Preview Extension
 
 For developers who want deeper customization, building a custom markdown preview Chrome extension provides complete control. Here's a foundation using the popular marked library:
 
@@ -119,7 +119,7 @@ async function renderMarkdown(markdown) {
 </html>
 ```
 
-Adding Syntax Highlighting to the Custom Extension
+## Adding Syntax Highlighting to the Custom Extension
 
 The basic implementation above renders markdown but leaves code blocks unstyled. Integrating Highlight.js produces properly colored output:
 
@@ -155,7 +155,7 @@ You also need to link the Highlight.js stylesheet in `popup.html`:
 
 Choose from dozens of themes: `github-dark.min.css` for dark mode, `monokai.min.css` for a classic editor feel, or `atom-one-light.min.css` for a clean, high-contrast look.
 
-Persisting User Preferences with chrome.storage
+## Persisting User Preferences with chrome.storage
 
 A production-quality extension remembers the user's last document and preferred theme. The `chrome.storage.local` API provides a simple key-value store:
 
@@ -189,7 +189,7 @@ function applyTheme(themeName) {
 
 This pattern keeps the popup's state alive between browser sessions without requiring any backend.
 
-Exporting to HTML
+## Exporting to HTML
 
 Adding an export button lets users save the rendered output as a standalone HTML file:
 
@@ -219,23 +219,23 @@ document.getElementById('export-btn').addEventListener('click', () => {
 
 The exported file uses the `github-markdown-css` stylesheet, so it renders identically to a GitHub README in any browser, no extension required.
 
-Advanced Features to Consider
+## Advanced Features to Consider
 
 When selecting or building a markdown preview extension, these advanced features significantly impact your workflow:
 
-Syntax Highlighting
+## Syntax Highlighting
 
 Code blocks in markdown deserve proper syntax highlighting. Extensions using Prism.js or Highlight.js provide color-coded output that matches your preferred code editor. This becomes essential when documenting programming tutorials or API references.
 
 Prism.js is lighter and more modular. you can load only the language grammars you need. Highlight.js performs better with auto-detection when the author omits the language identifier on fenced code blocks. For documentation repos that mix many languages, Highlight.js auto-detection reduces the number of unlabeled gray blocks.
 
-Table Support
+## Table Support
 
 GitHub-flavored markdown tables require specific parsing. Ensure your extension handles alignment, cell spanning, and nested content within table cells.
 
 A common pitfall is the pipe character inside table cells. Correct GFM table parsers handle escaped pipes (`\|`) as literal content rather than cell delimiters. If your extension uses a basic regex-based parser, tables with embedded pipes will break unpredictably.
 
-Math Equations
+## Math Equations
 
 Technical documentation often includes mathematical notation. Extensions supporting KaTeX or MathJax render equations beautifully:
 
@@ -247,13 +247,13 @@ $$
 
 KaTeX renders faster than MathJax and is the better choice for extensions where rendering latency is noticeable. MathJax supports a broader subset of LaTeX commands, making it preferable when your docs include advanced notation like commutative diagrams or custom macros.
 
-Image Handling
+## Image Handling
 
 Preview extensions must handle relative and absolute image paths correctly. Some extensions offer image paste support, allowing you to drop screenshots directly into the preview.
 
 For local file previews, extensions need the `file://` scheme permission to load images stored relative to the markdown file. Without this, `![alt](./screenshot.png)` renders as a broken image icon. The Markdown Preview Plus extension handles this correctly by default; custom builds must explicitly include the `file://` scheme in the manifest's `host_permissions`.
 
-Scroll Sync
+## Scroll Sync
 
 A split-pane preview is only as useful as its scroll synchronization. When the source textarea scrolls, the preview pane should scroll proportionally. Here's a minimal implementation:
 
@@ -268,7 +268,7 @@ markdownInput.addEventListener('scroll', () => {
 
 This linear mapping breaks down for documents where sections have unequal source-to-rendered height ratios (for example, a short heading in source expands to a large rendered element). Production tools like Typora use a more sophisticated line-based mapping algorithm that anchors scroll position to individual block elements.
 
-Comparing Popular Extensions
+## Comparing Popular Extensions
 
 | Extension | Live Preview | GitHub Support | Custom CSS | Math Support | Local Files | Scroll Sync |
 |-----------|-------------|----------------|------------|--------------|-------------|-------------|
@@ -278,7 +278,7 @@ Comparing Popular Extensions
 | MarkDownload | N/A (converter) | Yes | No | No | N/A | N/A |
 | Custom Extension | Configurable | Custom | Full control | Configurable | Configurable | Configurable |
 
-Choosing the Right Extension for Your Workflow
+## Choosing the Right Extension for Your Workflow
 
 Different roles benefit from different tools:
 
@@ -290,7 +290,7 @@ Content teams with non-technical reviewers benefit most from extensions like Git
 
 Extension developers building custom tooling should start with the marked + Highlight.js stack described above. It is small, actively maintained, and handles the vast majority of GFM documents correctly. Reserve MathJax for repositories that explicitly require it.
 
-Best Practices for Documentation Workflows
+## Best Practices for Documentation Workflows
 
 Integrating markdown preview extensions into your daily workflow maximizes productivity:
 
@@ -306,7 +306,7 @@ Integrating markdown preview extensions into your daily workflow maximizes produ
 
 6. Pin extension versions in team environments. Chrome auto-updates extensions silently. If a new version of your preferred extension changes rendering behavior, it can introduce subtle discrepancies between your local preview and the final deployed output. For critical documentation pipelines, consider maintaining an unpacked local version pinned to a known-good release.
 
-Security Considerations
+## Security Considerations
 
 When installing any Chrome extension, verify the permissions it requests. Markdown preview extensions typically need:
 
@@ -331,15 +331,13 @@ previewArea.innerHTML = renderSafe(markdownInput.value);
 
 This one addition eliminates the entire class of XSS vulnerabilities in your preview pipeline.
 
-Conclusion
+## Conclusion
 
 Chrome extension markdown preview tools serve different needs depending on your workflow. For casual browsing, Markdown Preview Plus or Markdown Viewer provide immediate value. Developers building documentation systems benefit from understanding the implementation details covered here.
 
 The best approach often combines multiple tools: a browser extension for quick previews, a code editor with live rendering for primary writing, and a static site generator for final production. This layered strategy gives you flexibility while maintaining productivity across various documentation tasks.
 
 Whether you adopt an existing extension or build your own, the fundamentals remain constant: choose a well-maintained parser, add syntax highlighting for code blocks, sanitize HTML output, and persist user preferences. Get those four right and you have a preview environment that matches production rendering closely enough to catch formatting errors before they reach your audience.
-
-
 
 Related Reading
 

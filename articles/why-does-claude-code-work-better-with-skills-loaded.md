@@ -16,7 +16,7 @@ score: 7
 
 When you first start using Claude Code, you get a capable AI assistant that handles general programming tasks. But once you load domain-specific skills, the experience transforms. The same AI becomes noticeably more accurate, produces better output, and requires fewer clarifying questions. This is not magic. it is the result of how Claude's skill system works under the hood.
 
-The Core Problem: Generalists Lack Depth
+## The Core Problem: Generalists Lack Depth
 
 Claude Code without skills operates as a generalist. It understands programming concepts broadly but lacks specialized knowledge in particular domains. Ask it to generate a complex Excel spreadsheet, and it handles basic formulas well. Ask it to create a financial model with conditional formatting, charts, and pivot tables. and you will spend more time correcting mistakes than if you had loaded the xlsx skill first.
 
@@ -31,7 +31,7 @@ The generalist problem shows up in predictable ways:
 
 Skills address all of these at once by giving Claude a domain-specific briefing before it starts work.
 
-How Skills Fix This
+## How Skills Fix This
 
 Skills are Markdown files that contain detailed instructions, examples, and context specific to a domain. When you invoke a skill with `/skill-name`, Claude Code loads that information into its active context. The difference is immediate and measurable.
 
@@ -51,7 +51,7 @@ When writing code with this skill loaded:
 
 That 60-word file changes every output Claude produces in the session. It is not that Claude did not know what TDD was. it is that without the skill, Claude had no reason to apply TDD discipline to your specific workflow.
 
-Better Output Quality
+## Better Output Quality
 
 With the tdd skill loaded, Claude Code does not just write code. it writes code with test-driven development patterns baked in. It suggests test cases you had not considered, sets up proper test structures, and follows your project's testing conventions automatically.
 
@@ -106,7 +106,7 @@ def login(username: str, password: str) -> str | None:
 
 The skill does not add lines for their own sake. It produces code where the tests define the contract before the implementation exists. which is the entire point of TDD.
 
-Reduced Need for Clarification
+## Reduced Need for Clarification
 
 The pdf skill demonstrates this clearly. Without it, asking Claude to "process this PDF" requires you to specify format, extraction method, and output structure each time. With the skill loaded:
 
@@ -128,7 +128,7 @@ Without the skill, the same task might require:
 
 With the skill, steps 2 through 7 disappear because the skill already covers them. The skill encodes your domain knowledge so you never have to re-teach it.
 
-Contextual Awareness
+## Contextual Awareness
 
 Skills provide persistent context that improves throughout your session. The supermemory skill maintains awareness of your project's history, your coding preferences, and decisions made in earlier conversations. This means:
 
@@ -144,7 +144,7 @@ This contextual memory transforms Claude from a stateless assistant into somethi
 
 The practical impact is largest when you return to a project after time away. Without persistent memory, you spend the first 20 minutes of a session rebuilding context. With a well-maintained supermemory skill, Claude comes back up to speed alongside you.
 
-Domain-Specific Tooling
+## Domain-Specific Tooling
 
 The frontend-design skill brings knowledge of modern CSS frameworks, component libraries, and design systems. It knows the difference between Tailwind, Chakra UI, and Bootstrap patterns. and more importantly, it knows which one matches your existing codebase.
 
@@ -156,7 +156,7 @@ Claude Code with this skill loaded does not just generate generic HTML. It produ
 
 A practical example: without the skill, Claude might generate a pricing table using inline styles or Bootstrap classes. useless if your project uses Tailwind. With the skill specifying your stack, the output uses your actual utility classes, matches your existing breakpoint conventions, and includes the ARIA roles your team has standardized on.
 
-What a Well-Designed Skill Actually Looks Like
+## What a Well-Designed Skill Actually Looks Like
 
 Understanding the structure of an effective skill helps you get more from the ones you create. Good skills share a few properties:
 
@@ -197,7 +197,7 @@ Common Pitfalls
 
 This 150-word file gives Claude everything it needs to write production-appropriate API code for this specific project without a single clarifying question.
 
-Practical Impact Across Workflows
+## Practical Impact Across Workflows
 
 The difference becomes clearest when you compare workflows with and without skills.
 
@@ -234,7 +234,7 @@ Maintainability. Skills live in version-controlled files. You can track changes,
 | Shareable with team | Copy-paste | Git sync |
 | Evolves over time | Rarely | Naturally |
 
-When Skills Matter Most
+## When Skills Matter Most
 
 Skills provide the most value in three scenarios:
 
@@ -246,7 +246,7 @@ Skills provide the most value in three scenarios:
 
 A fourth scenario is worth adding: team consistency. When multiple developers share the same skill files through a shared repository, every team member's Claude sessions follow the same conventions. Code review becomes easier because the AI-generated code already matches team standards before human review begins.
 
-Loading Skills Is Simple
+## Loading Skills Is Simple
 
 You do not need to configure anything complex. Skills live in `~/.claude/skills/` as Markdown files. Once installed, invoke them with a slash command at the start of your request:
 
@@ -278,14 +278,13 @@ Include: stack description, conventions, examples, common pitfalls
 
 Skills can also reference each other conceptually. You might have a base `python.md` skill for general Python conventions and a `python-django.md` skill that extends it with Django-specific patterns. Load both when working on a Django project.
 
-The Bottom Line
+## The Bottom Line
 
 Claude Code works better with skills loaded because skills solve the fundamental limitation of general-purpose AI: they provide targeted, domain-specific knowledge without requiring you to repeat context every session. You get higher-quality output, fewer clarification rounds, and results that integrate with your existing workflow from the first interaction.
 
 The skills system transforms Claude Code from a useful generalist into a specialized expert for whatever domain you need. and that expertise compounds over time as you build a personal library of skills tailored to your exact needs.
 
 The investment is small. A well-crafted skill takes 15 to 30 minutes to write. The return on that time is measured in hours of recovered productivity over the months that follow. If you are using Claude Code regularly without a library of project-specific skills, you are getting a fraction of the value the tool is capable of delivering.
-
 
 Related Reading
 

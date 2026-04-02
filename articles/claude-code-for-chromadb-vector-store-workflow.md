@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for ChromaDB Vector Store Workflow
 
@@ -21,7 +20,7 @@ Vector databases have become essential infrastructure for building AI applicatio
 
 This guide walks you through building a complete ChromaDB vector store workflow using Claude Code, from initial setup to advanced querying patterns.
 
-Understanding ChromaDB and Vector Stores
+## Understanding ChromaDB and Vector Stores
 
 ChromaDB is an embedded vector database written in Python, designed specifically for AI applications. Unlike traditional databases that store exact matches, vector stores enable semantic search, finding relevant content based on meaning rather than keyword matching.
 
@@ -33,7 +32,7 @@ The workflow typically involves three main stages:
 
 Claude Code can automate each of these stages, making it ideal for building dynamic knowledge bases that evolve over time.
 
-Setting Up ChromaDB with Claude Code
+## Setting Up ChromaDB with Claude Code
 
 Before implementing the workflow, ensure you have the required dependencies installed. Create a Python environment and install ChromaDB along with an embedding provider:
 
@@ -66,7 +65,7 @@ class VectorStoreManager:
 
 This initialization sets up a persistent ChromaDB instance that saves data to disk, ensuring your vector store survives restarts.
 
-Building the Document Ingestion Pipeline
+## Building the Document Ingestion Pipeline
 
 The ingestion pipeline transforms raw documents into embeddings and stores them in ChromaDB. Here's a complete implementation:
 
@@ -113,7 +112,7 @@ def add_to_knowledge_base(documents: list[str], collection_name: str = "knowledg
     return f"Added {len(ids)} documents to {collection_name}"
 ```
 
-Implementing Semantic Search Queries
+## Implementing Semantic Search Queries
 
 Once your documents are stored, querying becomes the core operation. ChromaDB supports similarity search with configurable metrics:
 
@@ -151,7 +150,7 @@ class VectorQueryEngine:
 
 The similarity score ranges from 0 to 1, where 1 indicates an exact match. The conversion from distance (`dist`) to similarity (`1 - dist`) makes scores more intuitive.
 
-Advanced Filtering and Metadata Queries
+## Advanced Filtering and Metadata Queries
 
 ChromaDB supports metadata filtering combined with vector search, enabling precise retrieval:
 
@@ -173,7 +172,7 @@ def search_with_filters(query, source_type=None, date_range=None, n_results=10):
 
 This pattern is powerful for building domain-specific search systems. For example, you might filter by document type, author, or date to narrow results to the most relevant context.
 
-Building RAG Workflows with Claude Code
+## Building RAG Workflows with Claude Code
 
 The most impactful use of ChromaDB with Claude Code is implementing retrieval-augmented generation. Here's a practical pattern:
 
@@ -202,7 +201,7 @@ def rag_query(user_question, collection_name="knowledge", max_context_docs=5):
 
 This function retrieves relevant context and formats it for use in prompts. Claude Code can then use this context to generate accurate, grounded responses.
 
-Best Practices for Production Workflows
+## Best Practices for Production Workflows
 
 When deploying ChromaDB vector stores in production, consider these recommendations:
 
@@ -222,7 +221,7 @@ Collection Management: Regularly clean up outdated collections and implement ver
 
 Monitoring: Track query latency and similarity score distributions to identify when embeddings may need recalculation or when your retrieval threshold needs adjustment.
 
-Conclusion
+## Conclusion
 
 ChromaDB combined with Claude Code provides a powerful foundation for building semantic search and knowledge retrieval systems. The workflow patterns covered here, from document ingestion to advanced filtering, give you the tools to create sophisticated AI applications that can reason over large document collections.
 

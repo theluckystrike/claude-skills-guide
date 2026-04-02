@@ -13,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for License Compatibility Workflow Guide
-
 Software license compatibility is one of the most overlooked yet critical aspects of modern software development. When you're building applications that depend on open source libraries, understanding which licenses can coexist in your project isn't just good practice, it's often a legal requirement. This guide shows you how to use Claude Code to streamline your license compatibility workflow, saving hours of manual research while ensuring your project remains compliant.
 
-Understanding License Compatibility Challenges
+## Understanding License Compatibility Challenges
 
 Before diving into the workflow, it's essential to understand what makes license compatibility complex. Software licenses range from permissive (MIT, Apache 2.0, BSD) to copyleft (GPL, AGPL, LGPL), and mixing incompatible licenses can create legal liabilities or force you to open-source your proprietary code.
 
@@ -30,7 +27,7 @@ The challenge intensifies because:
 
 This is where Claude Code becomes invaluable, it can analyze your dependency tree, identify license conflicts, and suggest resolutions much faster than manual investigation.
 
-Setting Up License Analysis in Claude Code
+## Setting Up License Analysis in Claude Code
 
 The first step is configuring Claude Code to understand your project's dependencies. Create a skill that specializes in license analysis for your specific ecosystem.
 
@@ -60,11 +57,11 @@ Create a skill definition file:
 
 This setup gives Claude Code the context it needs to help with license-related queries throughout your development workflow.
 
-The License Compatibility Analysis Workflow
+## The License Compatibility Analysis Workflow
 
 Here's a practical workflow you can follow using Claude Code to maintain license compatibility:
 
-Step 1: Export Your Dependency Tree
+## Step 1: Export Your Dependency Tree
 
 Start by generating a complete list of your project's dependencies with their licenses:
 
@@ -77,7 +74,7 @@ pip freeze -l > requirements.txt
 pip-licenses --format=csv > licenses.csv
 ```
 
-Step 2: Ask Claude Code to Analyze
+## Step 2: Ask Claude Code to Analyze
 
 Once you have your dependency information, engage Claude Code:
 
@@ -90,7 +87,7 @@ and suggest alternative packages where available.
 
 Claude Code can process your dependency list and provide insights based on its training about various license terms and their compatibility.
 
-Step 3: Review and Document Findings
+## Step 3: Review and Document Findings
 
 The analysis should produce a clear report. Here's what a typical compatibility report looks like:
 
@@ -106,11 +103,11 @@ All dependencies are MIT-licensed or similarly permissive.
 No license conflicts detected.
 ```
 
-Resolving License Conflicts
+## Resolving License Conflicts
 
 When Claude Code identifies a conflict, it can suggest practical solutions. Here are common resolution strategies:
 
-Strategy 1: Find Alternative Packages
+## Strategy 1: Find Alternative Packages
 
 If a dependency uses a problematic license, ask Claude Code for alternatives:
 
@@ -120,7 +117,7 @@ similar functionality. Consider packages with active maintenance and
 good community support.
 ```
 
-Strategy 2: License Compatibility Matrix
+## Strategy 2: License Compatibility Matrix
 
 Claude Code can help you understand complex compatibility rules. For example:
 
@@ -131,7 +128,7 @@ conditions can I use an LGPL-licensed library in an MIT-licensed project?
 
 This helps you make informed decisions about whether specific license combinations are acceptable for your use case.
 
-Strategy 3: Modular Architecture
+## Strategy 3: Modular Architecture
 
 For unavoidable conflicts, consider structuring your project to isolate incompatible components:
 
@@ -141,11 +138,11 @@ from my main application, allowing me to keep the core project MIT-licensed
 while still using the necessary functionality.
 ```
 
-Automating Ongoing License Monitoring
+## Automating Ongoing License Monitoring
 
 Beyond initial analysis, you can set up ongoing monitoring to catch new license issues as dependencies update:
 
-Using Package Manager Features
+## Using Package Manager Features
 
 Modern package managers include license checking:
 
@@ -157,7 +154,7 @@ pip-licenses with audit
 pip-licenses --audit
 ```
 
-Creating a Claude Code Skill for Regular Checks
+## Creating a Claude Code Skill for Regular Checks
 
 Build a reusable skill for periodic license reviews:
 
@@ -182,7 +179,7 @@ function analyzeWithClaude(dependencies) {
 
 Run this check weekly or before releases to catch new dependencies that might introduce license conflicts.
 
-Practical Example: Full Workflow Walkthrough
+## Practical Example: Full Workflow Walkthrough
 
 Let's walk through a complete example of using Claude Code for license compatibility:
 
@@ -215,7 +212,7 @@ Step 4: Claude Code responds with analysis and recommendations you can act on im
 
 This workflow takes minutes instead of hours of manual research.
 
-Best Practices for License Compatibility
+## Best Practices for License Compatibility
 
 To maintain good license hygiene in your projects:
 
@@ -225,7 +222,7 @@ To maintain good license hygiene in your projects:
 4. Use license scanners - Combine automated tools with Claude Code analysis for comprehensive coverage
 5. Stay informed - License interpretations evolve; periodic reviews catch new considerations
 
-Conclusion
+## Conclusion
 
 License compatibility doesn't have to be a painful part of software development. By integrating Claude Code into your workflow, you can automate much of the analysis, get expert guidance on complex license interactions, and maintain confidence that your project remains compliant. The key is establishing good habits early, regular checks, clear documentation, and using AI assistance for the heavy lifting of research.
 

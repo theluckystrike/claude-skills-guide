@@ -13,9 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Git Filter-Repo Workflow
-
 Git filter-repo is a powerful tool for rewriting Git history, but it can be intimidating due to its complexity and the irreversible nature of history rewriting. This guide shows how Claude Code can help you safely navigate filter-repo workflows, generate correct commands, and avoid common pitfalls, whether you are removing accidentally committed secrets, carving out a subdirectory into its own repository, or reducing a bloated monorepo to something manageable.
 
 What is Git Filter-Repo?
@@ -40,7 +37,7 @@ Here is a quick comparison of the three main history-rewriting tools:
 
 Git's own documentation now explicitly recommends git-filter-repo over git-filter-branch for any history rewriting task. BFG is still useful for its simplicity on pure file-removal tasks, but git-filter-repo handles every scenario BFG covers and more, with better performance on large repositories.
 
-Setting Up Filter-Repo with Claude Code
+## Setting Up Filter-Repo with Claude Code
 
 First, ensure you have filter-repo installed. Claude Code can help you verify this:
 
@@ -76,7 +73,7 @@ cd ..
 
 A clean `git fsck` with no errors means your backup is reliable. If fsck reports errors, stop and investigate before touching the primary repository.
 
-Using Claude Code to Plan Your Filter-Repo Operation
+## Using Claude Code to Plan Your Filter-Repo Operation
 
 The most valuable way Claude Code assists with filter-repo workflows is in the planning phase. Before running any destructive commands, describe your goal to Claude and ask for a step-by-step plan.
 
@@ -105,11 +102,11 @@ The `--analyze` step deserves a pause before proceeding. It produces several fil
 
 Feeding this analysis output to Claude Code lets it generate targeted commands rather than broad sweeps. For example, if `path-all-sizes.txt` shows that a single `assets/videos/` directory accounts for 90% of your repository size, Claude can help you craft a command that removes only that directory rather than setting an arbitrary size threshold that might catch legitimate large files.
 
-Automating Common Filter-Repo Tasks
+## Automating Common Filter-Repo Tasks
 
 Claude Code excels at generating precise filter-repo commands for specific scenarios. Here are common workflows:
 
-Removing Sensitive Data
+## Removing Sensitive Data
 
 To remove API keys or credentials that were accidentally committed:
 
@@ -136,7 +133,7 @@ regex:ghp_[A-Za-z0-9]{36}==>REMOVED_GITHUB_TOKEN
 
 The `==>` separator lets you replace the sensitive value with a placeholder rather than deleting the line entirely, which keeps your diff history readable. Ask Claude Code to review your expressions file before running it, it can catch patterns that are too broad (catching things you did not intend) or too narrow (missing variants of the same credential format).
 
-Extracting a Subdirectory
+## Extracting a Subdirectory
 
 To create a new repository from a subdirectory:
 
@@ -157,7 +154,7 @@ git filter-repo \
   --path-rename client:frontend
 ```
 
-Path Rewriting
+## Path Rewriting
 
 To rename directories across all commits:
 
@@ -166,7 +163,7 @@ Change 'lib/' to 'library/' throughout history
 git filter-repo --path-rewrite lib:library
 ```
 
-Combining Multiple Operations
+## Combining Multiple Operations
 
 A common real-world scenario combines several operations: extracting a subdirectory, removing large test fixtures, and cleaning up secrets. Claude Code can chain these into a single script:
 
@@ -203,7 +200,7 @@ echo "Filtered repository is ready. Review before force-pushing."
 
 The `read -p` pause is intentional, it gives you a chance to review the analysis output before committing to the irreversible filter step.
 
-Safe Practices with Claude Code Assistance
+## Safe Practices with Claude Code Assistance
 
 Filter-repo operations are destructive and cannot be undone. Claude Code helps you follow these safety practices:
 
@@ -228,11 +225,11 @@ Checklist for safe filter-repo operation
 
 The collaborator communication step is the one teams most often skip. When you rewrite history, every local clone held by every developer becomes permanently diverged from the new canonical history. Git will refuse to let them pull normally. If they push their diverged history before re-cloning, you end up with two competing histories merged together, a situation that is extremely difficult to recover from. Claude Code can draft the notification message for your team explaining exactly what happened, what they need to do, and why a simple `git pull` will not work.
 
-Handling Post-Filter Issues
+## Handling Post-Filter Issues
 
 After running filter-repo, you may encounter common issues that Claude Code can help troubleshoot:
 
-Detached HEAD or Missing Branches
+## Detached HEAD or Missing Branches
 
 ```bash
 Check current branch state
@@ -243,7 +240,7 @@ Recreate main branch if needed
 git checkout -b main
 ```
 
-Large Object References
+## Large Object References
 
 If you see warnings about reachable objects:
 
@@ -255,7 +252,7 @@ git gc --prune=now --aggressive
 
 This step is important for two reasons. First, until you run gc, the old large objects are still physically present in `.git/objects/`, the repository size on disk has not actually shrunk yet. Second, if you push before running gc, GitHub or your Git host may still serve the old objects from their object cache, meaning the sensitive data or large files remain accessible by SHA even after your filter operation. Running gc locally and then force-pushing ensures the cleaned state is what gets pushed.
 
-Push Rejection
+## Push Rejection
 
 Force pushing may be rejected by branch protection rules:
 
@@ -268,7 +265,7 @@ git push --force --tags
 
 On GitHub, you can temporarily disable branch protection rules through the repository Settings page under Branches. On self-hosted GitLab, the equivalent is under Settings > Repository > Protected Branches. Remember to re-enable protection immediately after the force push completes, this is another item Claude Code can add to your checklist.
 
-Verifying the Clean State
+## Verifying the Clean State
 
 After force-pushing, verify that the sensitive data or large files are actually gone and not accessible via any remaining refs:
 
@@ -281,7 +278,7 @@ Should return no results if the filter worked correctly
 
 If this returns commits, your filter expressions file did not match every occurrence. You'll need to refine the expressions and run the entire process again from the backup.
 
-Integrating Filter-Repo into Your Development Workflow
+## Integrating Filter-Repo into Your Development Workflow
 
 For ongoing repository maintenance, consider these Claude Code enhanced practices:
 
@@ -310,7 +307,7 @@ done < <(git diff --cached --name-only -z HEAD 2>/dev/null || git ls-files -z)
 
 Claude Code can customize this hook for your specific limits and file types, and can extend it to scan for credential patterns using the same regex approach as the filter-repo expressions file, preventing secrets from entering history rather than cleaning them out after the fact.
 
-Conclusion
+## Conclusion
 
 Git filter-repo combined with Claude Code provides a powerful workflow for repository maintenance. Claude acts as your assistant, generating correct commands, helping you plan complex operations, and troubleshooting issues that arise. Start with small, safe operations and gradually tackle more complex history rewrites as you gain confidence.
 

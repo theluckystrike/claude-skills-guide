@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Hygen Code Generation Workflow
 
@@ -48,7 +47,7 @@ The real productivity gain comes from eliminating the two most common friction p
 | Manually edit generated boilerplate | Claude extends templates for your exact use case |
 | Forget to create related test files | Claude runs multiple generators in one pass |
 
-Setting Up the Integration
+## Setting Up the Integration
 
 First, ensure both tools are installed in your project:
 
@@ -85,9 +84,9 @@ Hygen template. Available generators:
 Always run with `--dry` first if the user hasn't used the generator before.
 ```
 
-Practical Examples
+## Practical Examples
 
-Example 1: Generating a React Component
+## Example 1: Generating a React Component
 
 Let's say you frequently create React components and want to automate this with Hygen. Create a template at `_templates/component/new.ejs.t`:
 
@@ -142,7 +141,7 @@ describe('<%= name %>', () => {
 
 With Claude Code, you can simply ask: "Create a new React component called Button in src/components" and Claude will run all three generators in sequence, producing the component, its stylesheet, and its test file simultaneously.
 
-Example 2: Creating API Endpoints
+## Example 2: Creating API Endpoints
 
 For backend development, generate API endpoints consistently:
 
@@ -190,7 +189,7 @@ module.exports = {
 
 When you run `hygen route new`, Hygen collects input interactively. Claude Code can pre-fill these answers based on your natural language description, bypassing the interactive prompt entirely.
 
-Example 3: Database Model Generation
+## Example 3: Database Model Generation
 
 Generate consistent database models:
 
@@ -225,7 +224,7 @@ export function init<%= name %>(sequelize: any) {
 }
 ```
 
-Example 4: Full Feature Scaffolding
+## Example 4: Full Feature Scaffolding
 
 The real power of Claude Code + Hygen emerges when you scaffold an entire feature at once. Create a `_templates/feature/new.ejs.t` that acts as an orchestrator, or tell Claude Code to run multiple generators in sequence:
 
@@ -237,7 +236,7 @@ GET/POST/PUT/DELETE; the service class; and the corresponding test files.
 
 Claude Code will run four or five Hygen generators in order, then open the relevant files and note what needs customization. This turns a 20-minute scaffolding task into a 30-second one.
 
-Creating a Claude Skill for Hygen
+## Creating a Claude Skill for Hygen
 
 To make this workflow smooth, create a Claude skill specifically for Hygen operations. Here's how to structure it:
 
@@ -278,7 +277,7 @@ Project Conventions
 
 With these instructions in the skill, Claude Code will enforce your team's conventions on every generated file without any manual reminder.
 
-Best Practices
+## Best Practices
 
 1. Organize Templates Logically
 
@@ -357,7 +356,7 @@ Commit `_templates/` to your repository. This means:
 
 Add a brief `_templates/README.md` listing all available generators and their expected arguments. Claude Code will read this file to understand what's available before suggesting a generation command.
 
-Automating Template Discovery
+## Automating Template Discovery
 
 Claude Code can help you discover and recommend templates based on context. Add this to your skill:
 
@@ -378,7 +377,7 @@ What kinds of files do we create manually that we don't have generators for?
 
 Claude Code will compare the two and suggest new templates for patterns it observes in your codebase, such as a consistent `__tests__` structure, a recurring service interface shape, or a standard configuration file format.
 
-Handling Template Updates
+## Handling Template Updates
 
 One of the less-discussed challenges of code generation is keeping generated files in sync when templates change. Claude Code can help here too:
 
@@ -388,7 +387,7 @@ One of the less-discussed challenges of code generation is keeping generated fil
 
 This is particularly useful when adopting a new linting rule or TypeScript strictness setting, update the template once, then let Claude Code propagate the change across all generated files that haven't been substantially modified.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Hygen creates a powerful code generation workflow that reduces boilerplate while maintaining consistency. Claude handles the natural language interface and template suggestions, while Hygen provides the solid generation engine. Start with a few simple templates, establish conventions, and gradually expand your template library as your project grows.
 

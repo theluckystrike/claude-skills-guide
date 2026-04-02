@@ -20,7 +20,7 @@ Database ORM (Object-Relational Mapping) code generation is one of the most repe
 
 This guide walks you through a practical workflow for generating ORM code using Claude Code. You'll learn how to set up the workflow, generate models from existing schemas, create repositories, and maintain consistency across your codebase.
 
-Understanding the ORM Code Generation Pipeline
+## Understanding the ORM Code Generation Pipeline
 
 Before diving into the workflow, it's helpful to understand what ORM code generation typically includes:
 
@@ -32,7 +32,7 @@ Before diving into the workflow, it's helpful to understand what ORM code genera
 
 Claude Code can assist with all of these, either by generating from scratch or by reverse-engineering from an existing database schema.
 
-Starting with Schema Definition
+## Starting with Schema Definition
 
 The foundation of any ORM code generation workflow is a well-defined database schema. You can either start with an existing database or define your schema in a schema definition language. Here's a practical example using Prisma schema:
 
@@ -67,7 +67,7 @@ model Tag {
 
 This schema defines three models with relationships: users have many posts, posts have many tags through a many-to-many relationship. With Claude Code, you can generate the complete ORM layer from this schema.
 
-Generating ORM Models with Claude Code
+## Generating ORM Models with Claude Code
 
 Once your schema is ready, Claude Code can generate the corresponding ORM models. The key is providing clear context about your tech stack and preferences. Here's a prompt template:
 
@@ -120,7 +120,7 @@ export class User {
 
 The generated code follows best practices including proper decorators, relationship definitions, and automatic timestamp handling.
 
-Creating Repository and Service Layers
+## Creating Repository and Service Layers
 
 Beyond basic entity models, you'll need repository and service layers that encapsulate business logic. Claude Code excels at generating these patterns consistently. Here's how to prompt it:
 
@@ -177,7 +177,7 @@ export class UserRepository {
 }
 ```
 
-Generating Query Builders and Custom Queries
+## Generating Query Builders and Custom Queries
 
 For complex queries, you can use Claude Code to generate dedicated query builder classes or DTOs (Data Transfer Objects). These help maintain type safety throughout your application.
 
@@ -189,7 +189,7 @@ Generate a UserQueryBuilder class for complex user searches with:
 - Return type-safe result arrays
 ```
 
-Best Practices for ORM Code Generation
+## Best Practices for ORM Code Generation
 
 To get the most out of Claude Code for ORM code generation, follow these best practices:
 
@@ -203,7 +203,7 @@ To get the most out of Claude Code for ORM code generation, follow these best pr
 
 5. Use templates for repeated patterns: If you generate similar code repeatedly, create a prompt template to speed up future generations.
 
-Integrating with Your Development Workflow
+## Integrating with Your Development Workflow
 
 The real power of Claude Code for ORM generation comes from integrating it into your daily workflow:
 
@@ -214,12 +214,11 @@ The real power of Claude Code for ORM generation comes from integrating it into 
 
 With practice, you'll find the right balance between AI-generated code and hand-written optimizations. The goal isn't to eliminate all manual coding, it's to eliminate the repetitive boilerplate so you can focus on what makes your application unique.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms database ORM code generation from a tedious chore into a streamlined workflow. By starting with well-defined schemas and providing clear prompts, you can generate type-safe, consistent ORM code that follows best practices. The key is treating AI as a powerful assistant that handles the boilerplate while you maintain creative control over your application's architecture.
 
 Start with simple entity generation, gradually add repository and service layers, and soon you'll have a complete, maintainable data access layer generated in minutes instead of hours.
-
 
 Related Reading
 

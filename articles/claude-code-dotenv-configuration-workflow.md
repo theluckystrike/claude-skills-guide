@@ -13,10 +13,9 @@ categories: [workflows]
 tags: [claude-code, claude-skills]
 ---
 
-
 Environment variables are the backbone of flexible software configuration. When working with Claude Code (the CLI interface for Claude), properly configured dotenv files streamline your development workflow and keep sensitive information secure. This guide walks you through a practical Claude Code dotenv configuration workflow that works smoothly across projects. from the initial setup through multi-environment management, debugging, and team adoption.
 
-Understanding the Basics
+## Understanding the Basics
 
 A `.env` file stores configuration values outside your codebase. Instead of hardcoding API keys, database credentials, or feature flags, you keep them in a separate file that loads into your environment when needed. This separation offers several advantages: you can share code without exposing secrets, switch configurations between environments, and maintain a clean separation of concerns.
 
@@ -33,7 +32,7 @@ Here is a quick comparison of why environment variables beat the alternatives fo
 
 For local development workflows with Claude Code, `.env` files hit the right balance of simplicity and safety. You can graduate to a secrets manager for production without changing your application code.
 
-Setting Up Your Dotenv Workflow
+## Setting Up Your Dotenv Workflow
 
 The first step involves creating a `.env` file in your project root. This file should never enter version control. add it to your `.gitignore` immediately. A typical setup includes API keys, database connection strings, and feature toggles specific to your workflow.
 
@@ -51,7 +50,7 @@ Copy `.env.example` to `.env` and fill in your actual values. The distinction be
 
 An important detail: commit `.env.example` to version control and never commit `.env`. When a new developer joins the team, they clone the repo, copy the example file, and fill in their own values. This workflow requires zero coordination beyond the initial documentation of which variables exist.
 
-Loading Environment Variables for Claude Code
+## Loading Environment Variables for Claude Code
 
 Several approaches exist for making these variables available to Claude Code. The simplest method uses a shell wrapper that loads your `.env` file before invoking Claude commands. Create a shell function or script that handles this automatically:
 
@@ -90,7 +89,7 @@ function claude-env
 end
 ```
 
-Practical Workflows with Specific Skills
+## Practical Workflows with Specific Skills
 
 When using specialized skills like `frontend-design` for creating visual assets or `pdf` for document generation, environment variables can customize behavior. For instance, if you're generating PDFs with the pdf skill, you might configure output directories or API endpoints:
 
@@ -133,7 +132,7 @@ FEATURE_FLAG_NEW_PRICING=true
 
 By setting `FEATURE_FLAG_NEW_PRICING=true` locally, the developer can ask Claude Code to help implement code that reads this flag and routes accordingly, without worrying that the feature will accidentally activate in production before it's ready.
 
-Advanced Configuration Patterns
+## Advanced Configuration Patterns
 
 For complex projects, consider a multi-file approach that separates concerns. Create environment files for different contexts:
 
@@ -191,7 +190,7 @@ run-tests:
 
 Invoking `make generate-pdf PROMPT="Generate monthly report"` gives you one repeatable command that handles environment loading automatically.
 
-Security Considerations
+## Security Considerations
 
 Never commit actual `.env` files to version control. Your `.gitignore` should include at minimum:
 
@@ -221,7 +220,7 @@ Wrap this in a script so developers never need to handle the decryption step man
 
 For CI/CD pipelines, inject environment variables directly through your platform (GitHub Actions secrets, CircleCI environment variables, AWS Secrets Manager). Never store real secrets in `.env` files that live in your repository, even in private repos. access can be revoked from individuals but git history is permanent.
 
-Integrating with Claude Code Projects
+## Integrating with Claude Code Projects
 
 When initializing a new project with Claude Code, include an environment setup step in your workflow. This ensures consistent configuration across all project contributors:
 
@@ -266,7 +265,7 @@ Document your environment requirements in your project README or a dedicated `EN
 | `DEBUG_MODE` | No | `false` | Enable verbose logging |
 | `PORT` | No | `3000` | Server port |
 
-Troubleshooting
+## Troubleshooting
 
 If Claude Code isn't recognizing your environment variables, verify they're properly exported. The `set -a` command in bash automatically exports all variables after sourcing, which is why it's essential in the wrapper functions shown earlier.
 
@@ -301,14 +300,13 @@ Variable defined but not available in subshells: Make sure you're using `set -a`
 export ANTHROPIC_API_KEY=$(grep ANTHROPIC_API_KEY .env | cut -d= -f2)
 ```
 
-Conclusion
+## Conclusion
 
 A solid dotenv configuration workflow transforms how you work with Claude Code. By properly managing environment variables, you create reproducible, secure, and team-friendly development processes. Whether you're generating PDFs with the pdf skill, running tests through tdd, or building frontend components with frontend-design, environment-driven configuration provides the flexibility you need.
 
 Start with a simple `.env` setup and expand as your requirements grow. The patterns shown here scale from small personal projects to large team environments, maintaining clarity and security throughout. The investment in a proper wrapper function, a well-documented `.env.example`, and a clear `.gitignore` pays dividends every time a new developer onboards or you switch between projects.
 
 ---
-
 
 Related Reading
 

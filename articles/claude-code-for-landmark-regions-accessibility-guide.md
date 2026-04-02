@@ -15,11 +15,9 @@ score: 7
 
 {% raw %}
 
-Claude Code for Landmark Regions Accessibility Guide
-
 ARIA landmark regions are invisible yet powerful structural elements that help screen reader users navigate web pages efficiently. By properly implementing landmark regions, you create a semantic backbone that assistive technologies can traverse, allowing users to jump between main content, navigation, sidebars, and other key sections without reading through every element. This guide demonstrates how to use Claude Code and related skills to implement, audit, and maintain landmark regions in your projects.
 
-Understanding ARIA Landmark Regions
+## Understanding ARIA Landmark Regions
 
 Landmark regions are HTML elements or ARIA roles that identify major page sections. Screen readers recognize these regions and provide keyboard shortcuts for quick navigation. The seven primary landmark roles include:
 
@@ -35,7 +33,7 @@ Modern HTML5 semantic elements automatically map to these landmarks. The `<main>
 
 However, improper implementation creates problems. A page with multiple `<nav>` elements but no accessible names forces screen reader users to guess which navigation contains the primary menu versus supplementary links. Similarly, pages without a main landmark force users to read through headers, sidebars, and footers to find actual content.
 
-HTML5 Elements to ARIA Role Mapping
+## HTML5 Elements to ARIA Role Mapping
 
 Understanding the implicit mappings eliminates redundant role attributes in your markup. When a semantic element already provides the correct implicit role, adding an explicit `role` attribute is noise, not a problem per se, but unnecessary.
 
@@ -52,7 +50,7 @@ Understanding the implicit mappings eliminates redundant role attributes in your
 
 A header nested inside an `<article>` does not get the `banner` role, it remains a generic `<header>` element with no landmark semantics. This distinction catches many developers off guard during audits.
 
-Setting Up Your Accessibility Environment
+## Setting Up Your Accessibility Environment
 
 Before implementing landmark regions, configure Claude Code with appropriate skills. The accessibility-testing skill provides automated auditing capabilities, while the frontend-design skill offers templates for proper landmark implementation.
 
@@ -72,19 +70,19 @@ and proper implementation patterns
 
 These skills work together, frontend-design generates proper markup, while tdd ensures landmarks remain correctly implemented through refactoring and updates.
 
-Prompting Claude Code Effectively for Accessibility Work
+## Prompting Claude Code Effectively for Accessibility Work
 
 The quality of output from Claude Code scales directly with how specifically you describe your page structure. Compare these two prompts:
 
-Vague prompt: "Add landmark regions to my page."
+## Vague prompt: "Add landmark regions to my page."
 
 Effective prompt: "I have a marketing landing page built with generic `<div>` elements. The page has: a top header with a logo and primary nav, a hero section, three feature cards in a row, a pricing table, a contact form, and a footer with social links and legal text. Audit this HTML and add appropriate landmark regions with aria-label values for any duplicated landmark types. Flag any places where I have nested landmarks."
 
 The second prompt gives Claude Code enough context to generate accurate, non-generic markup rather than a boilerplate skeleton you have to adapt anyway.
 
-Implementing Landmark Regions Correctly
+## Implementing Landmark Regions Correctly
 
-Using Semantic HTML
+## Using Semantic HTML
 
 The simplest approach uses semantic HTML5 elements, which browsers and assistive technologies automatically recognize:
 
@@ -125,7 +123,7 @@ The simplest approach uses semantic HTML5 elements, which browsers and assistive
 
 Notice the navigation element includes an `aria-label` attribute. When multiple elements share the same role, the label provides context, screen readers announce "navigation, primary" rather than simply "navigation." Without the label, users navigating between landmarks cannot distinguish one `<nav>` from another.
 
-Adding Landmarks to Existing Projects
+## Adding Landmarks to Existing Projects
 
 For legacy applications without semantic markup, add landmark roles to existing containers:
 
@@ -165,7 +163,7 @@ When adding roles to existing elements, ensure the element's semantics remain co
 
 For large legacy codebases, Claude Code can scan your templates and flag every element that should carry a landmark role but does not. Provide it with a representative page template and ask for a full audit with specific line-number references to fix.
 
-Dynamic Content and Single-Page Applications
+## Dynamic Content and Single-Page Applications
 
 Single-page applications and dynamically loaded content require special attention. When content loads asynchronously, landmarks must exist in the initial HTML:
 
@@ -181,7 +179,7 @@ Single-page applications and dynamically loaded content require special attentio
 
 JavaScript then populates the main content area without requiring new landmark containers. This approach maintains consistent navigation structure regardless of which view displays.
 
-Route Changes and Focus Management in SPAs
+## Route Changes and Focus Management in SPAs
 
 In a single-page application, navigating between routes does not trigger a page reload, so the browser does not automatically move focus or announce a new page to screen readers. Proper landmark structure is necessary but not sufficient, you also need to manage focus on route transitions.
 
@@ -240,7 +238,7 @@ function RouteChangeAnnouncer() {
 
 The `tabIndex={-1}` on the `<main>` element allows programmatic focus without placing it in the natural tab order. This is a standard pattern for focus management in accessible SPAs.
 
-Form and Search Landmarks
+## Form and Search Landmarks
 
 The `form` and `search` landmarks are commonly missed. A form only gains the `form` landmark role when it has an accessible name. An unnamed `<form>` element has no implicit landmark role at all.
 
@@ -274,7 +272,7 @@ The `form` and `search` landmarks are commonly missed. A form only gains the `fo
 
 Ask Claude Code to audit your forms specifically for accessible names. In a typical codebase, fewer than half of forms that should be landmarks actually carry the necessary label.
 
-Auditing Landmark Implementation
+## Auditing Landmark Implementation
 
 Regular audits ensure landmarks remain correctly implemented as projects evolve. Claude Code with accessibility skills can scan your codebase:
 
@@ -293,7 +291,7 @@ Common issues discovered during audits include:
 - Empty landmark containers that confuse users
 - Landmark roles added but semantic elements ignored
 
-Automated Auditing with axe-core
+## Automated Auditing with axe-core
 
 For programmatic auditing during development and CI pipelines, axe-core provides reliable landmark checks:
 
@@ -378,7 +376,7 @@ test('all navigation landmarks are labeled', async ({ page }) => {
 
 Ask Claude Code to generate a complete Playwright accessibility test suite for your project. Provide your site map and page types, and request tests that cover landmark structure, focus order, and keyboard navigation.
 
-Manual Testing with Screen Readers
+## Manual Testing with Screen Readers
 
 Automated tools catch structural problems but cannot verify that the landmark labels are meaningful to real users. Manual testing with actual screen readers remains essential.
 
@@ -393,7 +391,7 @@ Automated tools catch structural problems but cannot verify that the landmark la
 
 A practical testing workflow: open your page in NVDA or VoiceOver, navigate directly to the landmarks list, and verify that each landmark has a meaningful name. Then navigate the page using only landmark shortcuts and ask: can I reach every section of this page without using the tab key? If the answer is no, a section is likely missing a landmark.
 
-Best Practices and Common Pitfalls
+## Best Practices and Common Pitfalls
 
 Do
 
@@ -404,7 +402,7 @@ Do
 - Verify landmarks on error pages, empty states, and modal dialogs
 - Use skip links in addition to landmarks for keyboard users who do not use screen readers
 
-Don't
+## Don't
 
 - Nest landmarks inside other landmarks
 - Add landmark roles to non-landmark containers without cause
@@ -412,7 +410,7 @@ Don't
 - Use landmarks for styling hooks (use classes instead)
 - Add role attributes that duplicate the implicit role of an HTML element
 
-Skip Links: The Companion to Landmarks
+## Skip Links: The Companion to Landmarks
 
 Landmark regions help screen reader users, but keyboard-only users who do not use screen readers benefit from skip links. These are anchors that appear on focus and allow users to jump past repetitive navigation directly to main content. Skip links and landmarks serve different but overlapping audiences and should both be present.
 
@@ -445,7 +443,7 @@ Landmark regions help screen reader users, but keyboard-only users who do not us
 </main>
 ```
 
-Nested Landmarks: The Most Common Mistake
+## Nested Landmarks: The Most Common Mistake
 
 The most common mistake involves placing one landmark inside another in ways that create confusing page structure. For example, putting a `<nav>` inside `<header>` is perfectly acceptable, a primary navigation inside a banner is expected. But creating a landmark inside `<main>` when you simply want to group content visually is incorrect.
 
@@ -473,13 +471,13 @@ The most common mistake involves placing one landmark inside another in ways tha
 
 In the corrected example, the in-page table of contents navigation carries a clear `aria-label` that tells screen reader users exactly what it is. Users navigating by landmarks will encounter "navigation, on this page". clear and expected.
 
-Landmark Density: More Is Not Better
+## Landmark Density: More Is Not Better
 
 Adding a landmark to every `<section>` on your page creates a landmark list that is as useless as no landmarks at all. The WCAG guidance on the `region` role (which `<section>` maps to) is explicit: only use it for sections that are important enough to be listed in the landmark navigation.
 
 A useful heuristic: if a user would reasonably want to navigate directly to this section from a landmarks list, give it a landmark. If it is just a visual grouping of related content, use `<section>` without a label and it will not become a region landmark.
 
-Testing Your Implementation End-to-End
+## Testing Your Implementation End-to-End
 
 A complete accessibility workflow for landmark regions involves three layers of verification:
 
@@ -491,7 +489,7 @@ A complete accessibility workflow for landmark regions involves three layers of 
 
 Claude Code can generate the configuration for all three layers. Describe your build toolchain, whether you use Vite, Next.js, Astro, or a custom setup, and ask for a complete accessibility testing pipeline that runs on every pull request.
 
-Conclusion
+## Conclusion
 
 Landmark regions form the navigation backbone of accessible websites. By using Claude Code and accessibility skills, you can implement proper landmarks from project start and maintain them through development cycles. The investment is minimal, proper landmark implementation takes minutes, while the benefit to screen reader users is substantial. Users gain the ability to navigate directly to content that matters to them, bypassing repetitive elements that would otherwise require dozens of tab presses.
 

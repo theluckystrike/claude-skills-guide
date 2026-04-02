@@ -13,12 +13,9 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
-Building a Chrome Extension for Gaming Deal Finding
-
 Building a Chrome extension for gaming deal discovery combines web scraping, API integration, and real-time price monitoring into a practical developer tool. This guide walks through the architecture, implementation patterns, and key considerations for creating a functional gaming deal finder extension.
 
-Core Architecture
+## Core Architecture
 
 A gaming deal finder extension needs three main components: a background service for periodic price checks, a content script for displaying deals on retailer sites, and a popup interface for quick access to saved deals. The background service handles API calls and stores data, while the popup provides the user-facing interface.
 
@@ -53,7 +50,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 ```
 
-Price Tracking Implementation
+## Price Tracking Implementation
 
 Store your tracked games in Chrome's synchronized storage. This keeps data consistent across devices when the user signs into Chrome:
 
@@ -93,7 +90,7 @@ class DealStorage {
 }
 ```
 
-API Integration Patterns
+## API Integration Patterns
 
 Most gaming deals come from aggregators like CheapShark, which provides an API for accessing store prices. Here's how to integrate:
 
@@ -150,7 +147,7 @@ async function fetchWithRetry(url, maxRetries = 3) {
 }
 ```
 
-Content Script for Deal Display
+## Content Script for Deal Display
 
 Content scripts run in the context of web pages and can inject deal information directly into retailer sites:
 
@@ -198,7 +195,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Popup Interface Design
+## Popup Interface Design
 
 The popup provides quick access without leaving the current page:
 
@@ -256,7 +253,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Notifications for Price Drops
+## Notifications for Price Drops
 
 Chrome's notifications API alerts users when prices drop below their threshold:
 
@@ -279,12 +276,11 @@ async function checkPriceAlerts() {
 }
 ```
 
-Deployment Considerations
+## Deployment Considerations
 
 When publishing to the Chrome Web Store, ensure your extension handles edge cases properly. Test with various store layouts, implement proper error handling for API failures, and provide clear user onboarding. Privacy policies are required for extensions that access sensitive data.
 
 Consider adding support for multiple language regions and currency preferences for international users. The CheapShark API supports multiple store regions, which you can use for a more comprehensive deal-finding experience.
-
 
 Related Reading
 
@@ -296,7 +292,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Advanced: Historical Price Charts
+## Advanced: Historical Price Charts
 
 Store price history and render a simple sparkline using the canvas element in your popup:
 
@@ -324,7 +320,7 @@ function drawSparkline(canvas, priceHistory) {
 
 Add a `<canvas width="120" height="30">` element next to each game in the popup HTML and call `drawSparkline` after loading deal data.
 
-Comparison with Alternatives
+## Comparison with Alternatives
 
 | Approach | Pros | Cons |
 |---|---|---|
@@ -335,7 +331,7 @@ Comparison with Alternatives
 
 A custom extension beats alternatives for developers who want inline deal comparisons on any retailer page without switching tabs.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 `chrome.storage.sync` quota exceeded: Sync storage is limited to 100KB total. For users tracking many games, store price history in `chrome.storage.local` and only sync the game ID list:
 

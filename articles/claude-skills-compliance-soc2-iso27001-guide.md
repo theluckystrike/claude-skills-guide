@@ -18,7 +18,7 @@ Security compliance isn't optional in regulated industries. When your organizati
 
 This guide shows how to use Claude skills to support SOC2 and ISO27001 compliance workflows without turning your development environment into a bureaucracy.
 
-Understanding Compliance Requirements
+## Understanding Compliance Requirements
 
 SOC2 focuses on trust service criteria: security, availability, processing integrity, confidentiality, and privacy. ISO27001 is more broader, requiring an Information Security Management System (ISMS) with defined controls, risk assessments, and continuous improvement cycles.
 
@@ -31,7 +31,7 @@ Both frameworks share common technical requirements that Claude skills can addre
 - Incident response procedures
 - Security awareness training materials
 
-Using the tdd Skill for Secure Development
+## Using the tdd Skill for Secure Development
 
 The tdd skill accelerates secure software development by enforcing test-first patterns. For compliance, this means you can demonstrate that security requirements are codified in tests from day one.
 
@@ -59,7 +59,7 @@ def test_password_policy_enforcement():
 
 Run these tests in your CI pipeline to maintain continuous compliance evidence. Automating the test pipeline end-to-end is covered in the [automated testing pipeline with Claude TDD skill guide](/claude-tdd-skill-test-driven-development-workflow/).
 
-Documenting Controls with the pdf Skill
+## Documenting Controls with the pdf Skill
 
 Compliance requires evidence. The pdf skill can extract, generate, and validate documentation needed for audits.
 
@@ -79,7 +79,7 @@ For ISO27001, you'll need Statement of Applicability (SoA) documents. Use the sk
 
 The skill preserves formatting, making it easier to maintain consistent documentation across your compliance artifacts.
 
-Using supermemory for Audit Trails
+## Using supermemory for Audit Trails
 
 The supermemory skill provides persistent context across Claude sessions. For compliance, this becomes invaluable for maintaining audit trails without manual note-taking.
 
@@ -96,7 +96,7 @@ When auditors request evidence of change approval processes, query your memory:
 
 This creates a searchable, timestamped record of security decisions that satisfies SOC2's audit trail requirements.
 
-Frontend Security with frontend-design
+## Frontend Security with frontend-design
 
 The frontend-design skill includes security patterns for web applications. For SOC2, this addresses CC6.1 (Logical Access) and CC6.7 (Data Transmission).
 
@@ -117,7 +117,7 @@ res.setHeader('Strict-Transport-Security', 'max-age=31536000');
 
 For ISO27001 A.14.1 (Requirements for information systems), these patterns demonstrate that security was considered in the design phase.
 
-Automating Compliance Workflows
+## Automating Compliance Workflows
 
 Beyond individual skills, combine them into compliance automation:
 
@@ -131,7 +131,7 @@ Daily compliance check workflow
 
 This workflow creates continuous evidence for your compliance posture.
 
-Mapping Skills to Compliance Controls
+## Mapping Skills to Compliance Controls
 
 | Skill | SOC2 Trust Service Criteria | ISO27001 Control |
 |-------|----------------------------|------------------|
@@ -140,7 +140,7 @@ Mapping Skills to Compliance Controls
 | supermemory | CC7.1, CC7.2 | A.12.4 |
 | frontend-design | CC6.1, CC6.7 | A.14.1 |
 
-Best Practices for Compliance-Focused Claude Usage
+## Best Practices for Compliance-Focused Claude Usage
 
 Keep compliance evidence separate from project code. Create a dedicated directory:
 
@@ -155,7 +155,7 @@ Document every Claude-assisted security decision. Use the supermemory skill to t
 
 Review generated code for sensitive data before committing. Claude skills accelerate development but don't replace security review. The [Claude Code secret scanning guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/) shows how to add automated credential detection before any code leaves your machine.
 
-SOC2 Pre-Audit Readiness Checklist
+## SOC2 Pre-Audit Readiness Checklist
 
 Auditors arrive with a standard evidence request list. Running through this checklist before your audit window opens prevents last-minute scrambles. Use the skills above to generate or verify each item.
 
@@ -190,7 +190,7 @@ Availability (A1.1)
 
 ---
 
-ISO27001 Control Implementation Reference
+## ISO27001 Control Implementation Reference
 
 ISO27001 Annex A contains 93 controls across four categories. The table below maps the controls most commonly flagged during gap assessments to the Claude skills that help address them.
 
@@ -207,11 +207,11 @@ For Annex A controls not covered by Claude skills directly, use the pdf skill to
 
 ---
 
-Practical Audit Preparation Workflow
+## Practical Audit Preparation Workflow
 
 Treat audit preparation as a six-week sprint, not a two-day fire drill. This workflow uses Claude skills at each phase.
 
-Six Weeks Out: Evidence Inventory
+## Six Weeks Out: Evidence Inventory
 
 Pull together every piece of evidence an auditor could request. Use the pdf skill to process policy documents and extract control references:
 
@@ -221,7 +221,7 @@ Pull together every piece of evidence an auditor could request. Use the pdf skil
 
 Compare the extracted list against your target framework controls. Gaps become your sprint backlog.
 
-Four Weeks Out: Control Testing
+## Four Weeks Out: Control Testing
 
 Run the tdd skill to generate tests for each technical control that lacks automated verification:
 
@@ -231,7 +231,7 @@ Run the tdd skill to generate tests for each technical control that lacks automa
 
 Each test file should reference the specific control in its docstring. This creates machine-readable evidence that the control exists and is tested.
 
-Two Weeks Out: Documentation Review
+## Two Weeks Out: Documentation Review
 
 Use the pdf skill to consolidate your evidence package:
 
@@ -241,7 +241,7 @@ Use the pdf skill to consolidate your evidence package:
 
 Auditors prefer structured evidence packages over loose files. A consolidated PDF with a table of contents reduces back-and-forth during fieldwork.
 
-Final Week: Audit Trail Reconciliation
+## Final Week: Audit Trail Reconciliation
 
 Query supermemory to confirm that all significant security decisions made during the audit period are recorded:
 
@@ -253,7 +253,7 @@ Any gaps in the timeline need to be reconstructed from calendar records, Slack, 
 
 ---
 
-Continuous Compliance: Moving Beyond Point-in-Time Audits
+## Continuous Compliance: Moving Beyond Point-in-Time Audits
 
 SOC2 Type II and ISO27001 surveillance audits evaluate your controls over a period of time, not just at a snapshot. Point-in-time readiness is necessary but not sufficient. The real goal is a compliance posture that holds up on any randomly selected day in the audit window.
 
@@ -267,7 +267,7 @@ Schedule monthly evidence pulls. Set a recurring calendar event to run your pdf 
 
 ---
 
-Building Your Compliance Stack
+## Building Your Compliance Stack
 
 Start with the tdd skill for test-driven security. Add the pdf skill for documentation management. Use supermemory for audit trails. These three skills cover the majority of technical controls required by both SOC2 and ISO27001.
 

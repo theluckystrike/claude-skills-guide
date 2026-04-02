@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Neovim AI Coding Setup with Claude 2026: Complete Guide"
 description: "Learn how to set up Neovim with Claude Code for AI-powered coding in 2026. Configure plugins, integrate skills, and boost your development workflow."
@@ -14,8 +13,7 @@ reviewed: true
 score: 7
 ---
 
-
-Neovim AI Coding Setup with Claude 2026: Complete Guide for Developers
+## Neovim AI Coding Setup with Claude 2026: Complete Guide for Developers
 
 Setting up Neovim with AI-assisted coding capabilities transforms your editor into a powerful development environment. This guide walks through configuring Neovim to work smoothly with Claude Code in 2026, covering everything from basic installation to advanced workflow automation that will meaningfully accelerate your daily coding tasks.
 
@@ -27,7 +25,7 @@ Claude Code complements this perfectly. Its CLI-first design means you can invok
 
 The practical result: a sub-200ms startup time, complete keyboard control, and AI assistance that lives inside the same terminal workflow you already use.
 
-Prerequisites
+## Prerequisites
 
 Before configuring your setup, ensure you have:
 
@@ -51,7 +49,7 @@ Add to ~/.zshrc or ~/.bashrc
 export ANTHROPIC_API_KEY="your-key-here"
 ```
 
-Choosing a Plugin Manager
+## Choosing a Plugin Manager
 
 lazy.nvim has become the clear standard in 2026, replacing Packer and vim-plug for most setups. Its declarative configuration, automatic lockfile generation, and profiling tools make it the right foundation for an AI-augmented setup.
 
@@ -75,7 +73,7 @@ require("lazy").setup("plugins")
 
 This setup automatically loads any plugin spec files placed in `~/.config/nvim/lua/plugins/`.
 
-Installing Essential Plugins
+## Installing Essential Plugins
 
 The foundation of your AI-enhanced Neovim setup relies on well-chosen plugins. Less is more. each plugin you install adds startup cost and potential for conflict.
 
@@ -110,7 +108,7 @@ return {
 
 These plugins provide code analysis, AI chat capabilities, and documentation generation directly within Neovim.
 
-Plugin Comparison Table
+## Plugin Comparison Table
 
 Not all AI plugins serve the same purpose. Here is how the major options compare for a Claude-first workflow:
 
@@ -123,7 +121,7 @@ Not all AI plugins serve the same purpose. Here is how the major options compare
 
 For most developers, `codecompanion.nvim` paired with direct Claude CLI integration covers 90% of use cases without the overhead of heavier plugins.
 
-Configuring Claude Code Integration
+## Configuring Claude Code Integration
 
 Claude Code integrates with Neovim through its CLI and optional plugins. The most reliable approach uses the CLI directly, allowing you to invoke Claude for code review, refactoring, and generation tasks.
 
@@ -159,7 +157,7 @@ For a vertical split instead of a horizontal one. often more practical on widesc
 vim.cmd("vsplit | terminal " .. cmd)
 ```
 
-Passing the Current Buffer to Claude
+## Passing the Current Buffer to Claude
 
 A common pattern is sending the current file's content directly to Claude without leaving Neovim. This uses Neovim's job API to run Claude asynchronously and capture the output:
 
@@ -205,9 +203,9 @@ vim.keymap.set("n", "<leader>ca", function()
 end, { desc = "Ask Claude about current file" })
 ```
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Code Review Workflow
+## Code Review Workflow
 
 Use Claude to review code in your current buffer by passing it to `claude --print`:
 
@@ -253,7 +251,7 @@ vim.keymap.set("n", "<leader>cr", function()
 end, { desc = "Claude: review current file" })
 ```
 
-AI-Powered Code Generation
+## AI-Powered Code Generation
 
 Generate boilerplate code or implement functions using Claude skills. For frontend development, the frontend-design skill provides specialized guidance. Start an interactive session and invoke the skill:
 
@@ -274,7 +272,7 @@ vim.keymap.set("n", "<leader>cg", function()
 end, { desc = "Claude: generate code" })
 ```
 
-Test-Driven Development Setup
+## Test-Driven Development Setup
 
 Integrate the tdd skill for test generation. The simplest approach is a keymap that opens a terminal with a non-interactive Claude invocation:
 
@@ -297,7 +295,7 @@ This integration allows you to generate tests while writing implementation code 
 
 For a full TDD cycle inside Neovim, combine the test generation keymap with a test runner split. The pattern is: write a function, press `<leader>tg` to generate tests in a new file, open a terminal split running your test runner in watch mode, then iterate. Claude handles the repetitive scaffolding while you focus on logic.
 
-Refactoring with Selection Context
+## Refactoring with Selection Context
 
 One of the most practical uses of Claude in Neovim is refactoring selected code. Use visual mode to select a block, then pass it directly to Claude:
 
@@ -330,7 +328,7 @@ vim.keymap.set("v", "<leader>rf", function()
 end, { desc = "Claude: refactor selection" })
 ```
 
-Leveraging Claude Skills in Neovim
+## Leveraging Claude Skills in Neovim
 
 Claude skills extend your editor's capabilities beyond basic AI assistance. Each skill targets specific development scenarios:
 
@@ -372,7 +370,7 @@ for key, info in pairs(skills) do
 end
 ```
 
-Skills Comparison for Developer Workflows
+## Skills Comparison for Developer Workflows
 
 | Skill | Best For | Typical Use Case |
 |---|---|---|
@@ -382,7 +380,7 @@ Skills Comparison for Developer Workflows
 | /supermemory | Large codebases | Maintaining context across long sessions |
 | /pdf | Documentation work | Generating formatted reports and specs |
 
-Advanced Configuration: Context Awareness
+## Advanced Configuration: Context Awareness
 
 The supermemory skill proves particularly valuable in Neovim workflows. Configure it to remember your project structure:
 
@@ -425,7 +423,7 @@ exec claude
 
 Reference this script from your Neovim keymap instead of calling `claude` directly.
 
-Performance Optimization
+## Performance Optimization
 
 AI-assisted editing can introduce latency if not configured properly. Optimize your setup by:
 
@@ -479,7 +477,7 @@ local function get_current_function()
 end
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Authentication failures typically stem from an invalid or missing API key. Verify your `ANTHROPIC_API_KEY` environment variable is set correctly:
 
@@ -497,7 +495,7 @@ nvim --startuptime startup.log +q
 
 Review the generated log to identify problematic plugins. Look for anything taking more than 10ms. that is a candidate for lazy-loading.
 
-Common Error Reference
+## Common Error Reference
 
 | Error | Cause | Fix |
 |---|---|---|
@@ -525,14 +523,13 @@ end, {})
 
 Run `:PrintEnv` to see exactly what environment variables Neovim has access to, and confirm `ANTHROPIC_API_KEY` is present.
 
-Conclusion
+## Conclusion
 
 A well-configured Neovim setup with Claude Code dramatically improves development productivity. The combination of intelligent plugins, CLI integration, and specialized skills creates a powerful AI-assisted development environment. Start with the basic configuration, then gradually add advanced features as you become comfortable with the workflow.
 
 The most effective path forward is iterative: start with the terminal split integration and a single review keymap, use it for a week, then add the refactoring and generation keymaps once you understand where AI assistance actually saves time in your workflow. Over-configuring upfront creates maintenance burden without proportional benefit.
 
 Experiment with different skill combinations to find what works best for your specific use case. The modular nature of both Neovim and Claude skills allows for highly personalized setups that match your development style. Developers working on large TypeScript codebases will gravitate toward different skill combinations than those building Python data pipelines or Go microservices. and both configurations can live in the same `init.lua` behind feature flags.
-
 
 Related Reading
 

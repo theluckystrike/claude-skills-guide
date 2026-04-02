@@ -19,7 +19,7 @@ When you need to quickly assess and improve content readability while browsing, 
 
 This guide evaluates the best readability-focused Chrome extensions available in 2026, with a focus on tools that go beyond basic text extraction to provide meaningful readability analysis and content improvement features.
 
-What Makes a Good Readability Extension
+## What Makes a Good Readability Extension
 
 Before diving into alternatives, let's establish what developers should look for:
 
@@ -28,7 +28,7 @@ Before diving into alternatives, let's establish what developers should look for
 - Customization options: Adjustable fonts, themes, and reading preferences
 - Developer features: Keyboard shortcuts, export options, and minimal resource usage
 
-Top Readability Alternatives in 2026
+## Top Readability Alternatives in 2026
 
 1. Mercury Reader (Free + Premium)
 
@@ -171,7 +171,7 @@ Configuration is stored in a local JSON file:
 
 LeanREAD is particularly appealing for developers who already use Vim-style keybindings in their editor and terminal.
 
-Open-Source and Self-Hosted Alternatives
+## Open-Source and Self-Hosted Alternatives
 
 For developers who value transparency and data ownership, several open-source options exist:
 
@@ -202,7 +202,7 @@ async function extractArticle(url) {
 
 This open-source solution gives developers full control over the reading experience, enabling custom frontends and reader implementations.
 
-Privacy Considerations
+## Privacy Considerations
 
 When choosing a reading mode extension, consider your threat model:
 
@@ -212,7 +212,7 @@ Browser data access varies by extension. Some require access to all websites, wh
 
 Open-source options allow you to verify that no data leaves your machine. Self-hosting provides the strongest privacy guarantees.
 
-Making the Right Choice
+## Making the Right Choice
 
 Consider your specific needs:
 
@@ -224,7 +224,7 @@ Consider your specific needs:
 | Minimal resource usage | Chrome built-in Reader Mode |
 | Markdown workflow | Zettlr |
 
-Implementation Tips for Developers
+## Implementation Tips for Developers
 
 If you're building tools that work with readability extensions, here are some practical patterns:
 
@@ -265,14 +265,13 @@ const analyzeReadability = (text) => {
 };
 ```
 
-Conclusion
+## Conclusion
 
 The Chrome extension ecosystem in 2026 offers solid alternatives to the original Readability extension. For developers and power users, Mercury Reader and Textise Dot iitty stand out as the most capable options, one for superior reading experience, the other for text extraction workflows.
 
 The built-in Chrome reader mode provides a no-install alternative for basic needs, while Zettlr serves users whose workflow centers on Markdown documentation.
 
 Evaluate based on your specific use case: quick reading, content extraction, research organization, or integration with existing tooling. Each option here delivers solid performance without requiring paid subscriptions for core functionality.
-
 
 Related Reading
 

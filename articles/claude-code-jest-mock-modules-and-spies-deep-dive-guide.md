@@ -17,11 +17,11 @@ Claude Code Jest Mock Modules and Spies Detailed look Guide
 
 Effective unit testing requires isolating code under test from its dependencies. Jest provides powerful mocking capabilities that enable you to replace real implementations with controlled mocks, spies, and stubs. This detailed look guide explores advanced mocking techniques with Jest, demonstrating how Claude Code can help you write comprehensive tests that verify behavior rather than implementation details.
 
-Understanding Mock Functions and Their Applications
+## Understanding Mock Functions and Their Applications
 
 Mock functions (also called spies) are the foundation of Jest's testing capabilities. They allow you to capture function calls, modify return values, and verify interactions without affecting the actual implementation. When working with Claude Code, you can describe your testing intent and receive guidance on selecting the appropriate mocking strategy for your specific scenario.
 
-Creating Basic Mocks
+## Creating Basic Mocks
 
 The simplest way to create a mock function is through `jest.fn()`. This creates a mock implementation that tracks all calls and arguments:
 
@@ -49,7 +49,7 @@ Mocking Modules with jest.mock()
 
 When your code imports external modules, you often need to replace the entire module with a mock version. Jest's `jest.mock()` provides module-level mocking that applies to all imports within a test file.
 
-Complete Module Replacement
+## Complete Module Replacement
 
 Consider a service that makes API calls:
 
@@ -138,9 +138,9 @@ describe('Partial Module Mocking', () => {
 });
 ```
 
-Advanced Spy Techniques for Complex Scenarios
+## Advanced Spy Techniques for Complex Scenarios
 
-Mocking Object Methods
+## Mocking Object Methods
 
 For objects with multiple methods, `jest.spyOn()` provides fine-grained control:
 
@@ -174,7 +174,7 @@ describe('Math Operations', () => {
 });
 ```
 
-Chaining Mock Methods
+## Chaining Mock Methods
 
 Jest spies support method chaining for complex scenarios:
 
@@ -192,7 +192,7 @@ it('demonstrates spy method chaining', () => {
 });
 ```
 
-Working with Async Mocks and Promises
+## Working with Async Mocks and Promises
 
 Asynchronous code requires special attention when mocking. Jest provides several patterns for handling promises and async operations:
 
@@ -226,7 +226,7 @@ describe('Async Mocking Patterns', () => {
 });
 ```
 
-Best Practices for Effective Mocking
+## Best Practices for Effective Mocking
 
 1. Clean Up After Tests
 
@@ -272,7 +272,7 @@ Choose the appropriate mocking strategy based on what you're testing:
 - Integration tests: Mock only infrastructure (HTTP clients)
 - E2E tests: Use real implementations where possible
 
-Conclusion
+## Conclusion
 
 Mastering Jest's mocking capabilities transforms your tests from simple assertions into powerful verification tools. Mock functions and spies enable you to test complex interactions, verify behavior, and isolate code under test effectively. With Claude Code's assistance, you can quickly generate appropriate mocks, debug failing tests, and explore advanced patterns tailored to your specific testing challenges.
 

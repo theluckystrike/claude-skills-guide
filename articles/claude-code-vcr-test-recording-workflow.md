@@ -16,7 +16,7 @@ permalink: /claude-code-vcr-test-recording-workflow/
 
 Reproducible testing is the backbone of reliable AI-assisted development. When working with Claude Code, you often need to capture complex interactions, API calls, and tool executions to create deterministic test suites. The VCR (Video Cassette Recorder) pattern, historically used for HTTP recording in Ruby, has found new life in AI development workflows. This guide shows you how to implement a VCR-style test recording workflow that captures and replays Claude Code interactions with precision.
 
-Understanding the VCR Pattern for AI Testing
+## Understanding the VCR Pattern for AI Testing
 
 The VCR pattern records interactions between your code and external services, then replays those recordings during subsequent test runs. For Claude Code, this means capturing the entire conversation context, tool invocations, and responses to create replayable test fixtures.
 
@@ -27,7 +27,7 @@ When you integrate the VCR pattern with Claude Code, you gain several advantages
 - Faster test execution by skipping actual API calls
 - Debugging capability to step through recorded interactions
 
-Setting Up Your Test Recording Infrastructure
+## Setting Up Your Test Recording Infrastructure
 
 Begin by creating a dedicated skill that handles recording and playback. The skill uses file system operations to store interaction logs in a structured format.
 
@@ -70,7 +70,7 @@ class ClaudeVCR:
 
 This Python class provides the foundation for your VCR system. Store it in your project as `claude_vcr.py` and integrate it with your test framework.
 
-Creating a Recording Skill
+## Creating a Recording Skill
 
 You can encapsulate the recording logic in a Claude skill for easier access. The skill uses the `pdf` skill to generate test reports and the `tdd` skill to structure your test cases properly.
 
@@ -111,7 +111,7 @@ Best Practices
 -
 ```
 
-Implementing the Test Workflow
+## Implementing the Test Workflow
 
 With your infrastructure in place, implement a practical testing workflow. This example demonstrates recording a file processing task.
 
@@ -148,7 +148,7 @@ def test_file_processing_workflow():
     assert recordings[0]["interaction"]["tools_called"][0]["pattern"] == "data/*.csv"
 ```
 
-Advanced: Conditional Recording Modes
+## Advanced: Conditional Recording Modes
 
 For more sophisticated testing, implement different recording modes that control when to record, replay, or use live calls.
 
@@ -184,13 +184,13 @@ class SmartVCR(ClaudeVCR):
 
 This approach integrates smoothly with CI/CD pipelines. You can record new tests in development, switch to playback mode in CI, and use live mode for integration testing.
 
-Integrating with Claude Skills
+## Integrating with Claude Skills
 
 The VCR workflow pairs well with other Claude skills. Use the `supermemory` skill to store test metadata and retrieval patterns. When debugging, invoke the `frontend-design` skill to visualize test coverage metrics.
 
 For documentation generation, the `pdf` skill can export test reports from your cassettes. The `tdd` skill provides complementary guidance for structuring test-driven development workflows alongside your recording strategy.
 
-Managing Cassettes Effectively
+## Managing Cassettes Effectively
 
 Organize your cassettes using a clear directory structure:
 
@@ -222,12 +222,11 @@ def record(self, session_id: str, interaction: dict):
         }) + "\n")
 ```
 
-Conclusion
+## Conclusion
 
 The VCR test recording workflow transforms Claude Code development from unpredictable to deterministic. By capturing interactions as reusable cassettes, you build a test suite that runs consistently without API dependencies or network constraints. Start with simple session recordings, then expand to conditional modes and cassette versioning as your testing needs mature.
 
 The pattern works particularly well for regression testing, CI/CD pipelines, and debugging complex multi-step workflows. Combine it with skills like `tdd` for structured test development, `supermemory` for knowledge management, and `pdf` for generating comprehensive test reports.
-
 
 Related Reading
 

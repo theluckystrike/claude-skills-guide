@@ -15,13 +15,13 @@ Claude Code for Test Driven Development Workflow Tutorial
 
 Test-driven development (TDD) is a powerful methodology that can dramatically improve your code quality and design. When combined with Claude Code, you get an intelligent partner that can accelerate your TDD cycles while helping you stay focused on the red-green-refactor rhythm. This tutorial shows you how to use Claude Code effectively within a TDD workflow.
 
-Understanding the TDD Cycle with Claude Code
+## Understanding the TDD Cycle with Claude Code
 
 The classic TDD cycle follows three steps: write a failing test (red), write minimal code to make it pass (green), and refactor while keeping tests passing. Claude Code can assist at each stage, but understanding when and how to involve it is crucial for maintaining the discipline that makes TDD effective.
 
 Before invoking Claude Code, write your failing test yourself. This is non-negotiable because the act of writing the test forces you to clarify your understanding of the desired behavior. Once you have a failing test, Claude Code becomes a valuable partner in generating the minimal implementation.
 
-Setting Up Your TDD Environment
+## Setting Up Your TDD Environment
 
 Ensure your project is properly configured for TDD before involving Claude Code:
 
@@ -46,7 +46,7 @@ pip install pytest
 
 Having a clean, fast test suite is essential because Claude Code will run tests frequently to verify its suggestions work correctly.
 
-Writing Your First Failing Test
+## Writing Your First Failing Test
 
 The red phase is where your understanding becomes concrete code. Write a test that describes exactly what you want:
 
@@ -70,11 +70,11 @@ npx jest
 
 You should see a failure because `Calculator` doesn't exist yet. Now you're ready to involve Claude Code strategically.
 
-Using Claude Code for Green Phase Implementation
+## Using Claude Code for Green Phase Implementation
 
 When moving to the green phase, you have two productive options for involving Claude Code:
 
-Option 1: Generate Minimal Implementation
+## Option 1: Generate Minimal Implementation
 
 Prompt Claude Code with the failing test and ask for minimal code:
 
@@ -84,7 +84,7 @@ The test at __tests__/calculator.test.ts is failing. Create the minimal implemen
 
 This approach keeps you in control while letting Claude Code handle the mechanical implementation.
 
-Option 2: Pair Programming Session
+## Option 2: Pair Programming Session
 
 For more complex scenarios, engage Claude Code in a pair programming session:
 
@@ -94,7 +94,7 @@ I need to implement a function that validates email addresses. Here's the test I
 
 This collaborative approach helps you learn while ensuring the implementation matches your test expectations.
 
-Refactoring with Claude Code Assistance
+## Refactoring with Claude Code Assistance
 
 The refactor phase is where TDD really shines, and Claude Code can be particularly helpful here. After tests pass, you can ask Claude Code to suggest improvements:
 
@@ -109,7 +109,7 @@ Claude Code will analyze your code and propose changes, which you can accept or 
 - Breaking large functions into smaller pieces
 - Applying design patterns where appropriate
 
-Example Refactoring Session
+## Example Refactoring Session
 
 ```typescript
 // Before refactoring
@@ -156,15 +156,15 @@ class OrderProcessor {
 
 The key is to verify all tests still pass after each refactoring step.
 
-Best Practices for TDD with Claude Code
+## Best Practices for TDD with Claude Code
 
 Following these practices will help you get the most out of Claude Code in your TDD workflow:
 
-Keep Tests Under Your Control
+## Keep Tests Under Your Control
 
 Never let Claude Code write your tests. The test-writing phase is where you define behavior and catch design issues. Claude Code should implement code to pass your tests, not write the tests themselves.
 
-Run Tests Frequently
+## Run Tests Frequently
 
 Make test running a habit. After every change, run your test suite:
 
@@ -175,7 +175,7 @@ Add to your package.json scripts
 
 The watch mode is excellent for TDD because it runs only relevant tests as you make changes.
 
-Use Explicit Prompts
+## Use Explicit Prompts
 
 When interacting with Claude Code during TDD, be specific about what you want:
 
@@ -185,15 +185,15 @@ Create a function that parses CSV strings into arrays of objects. Write the impl
 
 Specific prompts lead to better implementations that match your expectations.
 
-Review Before Accepting
+## Review Before Accepting
 
 Always review Claude Code's suggestions before applying them. Verify that the implementation matches your test expectations and doesn't introduce unnecessary complexity.
 
-Advanced TDD Patterns with Claude Code
+## Advanced TDD Patterns with Claude Code
 
 Once you're comfortable with basic TDD, these advanced patterns can further enhance your workflow:
 
-Test Data Generation
+## Test Data Generation
 
 Use Claude Code to generate test data builders:
 
@@ -203,7 +203,7 @@ Create a TypeScript test helper that generates sample User objects with random b
 
 This speeds up test writing while ensuring consistent, realistic test data.
 
-Property-Based Testing Assistance
+## Property-Based Testing Assistance
 
 For complex functions, consider property-based testing. Ask Claude Code to help identify properties that should hold true:
 
@@ -211,7 +211,7 @@ For complex functions, consider property-based testing. Ask Claude Code to help 
 For a function that sorts an array, what invariants should hold regardless of input? Help me write property-based tests using fast-check.
 ```
 
-Legacy Code Integration
+## Legacy Code Integration
 
 When adding tests to legacy code, use Claude Code to help identify testing boundaries:
 
@@ -219,7 +219,7 @@ When adding tests to legacy code, use Claude Code to help identify testing bound
 I need to add tests to this legacy function that has no tests. Analyze the code and suggest the smallest unit I can safely test in isolation.
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code is a powerful ally in your TDD workflow, but it works best when you maintain the discipline that makes TDD effective. Write your tests yourself, use Claude Code for implementation and refactoring, and always verify with your test suite. The combination of human test design and AI-assisted implementation creates a powerful feedback loop that leads to better-designed, more reliable code.
 

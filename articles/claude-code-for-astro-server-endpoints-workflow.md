@@ -13,13 +13,9 @@ permalink: /claude-code-for-astro-server-endpoints-workflow/
 ---
 {% raw %}
 
-
-
-Claude Code for Astro Server Endpoints Workflow
-
 Astro's server endpoints (also known as API routes) enable you to build full-stack applications with the same elegant developer experience that makes Astro famous for static sites. When combined with Claude Code, you get AI-assisted development for your backend logic, data handling, and API implementations. This guide walks you through practical workflows for creating and managing server endpoints in Astro using Claude Code.
 
-Understanding Astro Server Endpoints
+## Understanding Astro Server Endpoints
 
 Astro supports multiple rendering modes that determine how your endpoints work. In Astro 5.0 and later, you can choose between static site generation (SSG), server-side rendering (SSR), and hybrid rendering. For server endpoints, you'll primarily work with SSR or hybrid mode, where your API routes run on the server at request time.
 
@@ -27,7 +23,7 @@ Server endpoints in Astro follow a simple file-based routing system. Place your 
 
 When you need AI assistance for building these endpoints, Claude Code can help generate the implementation, handle error cases, and suggest best practices. The key is knowing how to prompt Claude effectively for server-side code.
 
-Setting Up Your Astro Project for Server Endpoints
+## Setting Up Your Astro Project for Server Endpoints
 
 Before creating server endpoints, ensure your Astro project is configured for server-side rendering. Start by adding the server adapter for your deployment platform:
 
@@ -53,7 +49,7 @@ export default defineConfig({
 
 With this setup, you can now create API endpoints that handle dynamic requests.
 
-Creating Your First Server Endpoint
+## Creating Your First Server Endpoint
 
 Create a basic endpoint to understand the pattern. In `src/pages/api/health.ts`:
 
@@ -73,7 +69,7 @@ export const GET = async () => {
 
 This endpoint returns a JSON response with health status. When working with Claude Code, you can generate more complex endpoints by describing your requirements clearly.
 
-Prompting Claude for Endpoint Development
+## Prompting Claude for Endpoint Development
 
 Effective prompting makes a significant difference when Claude Code generates your server endpoints. Instead of vague requests, provide specific details about your API requirements.
 
@@ -93,11 +89,11 @@ Create a TypeScript API endpoint at src/pages/api/users.ts that:
 
 Claude will generate a comprehensive implementation that handles edge cases you might have missed.
 
-Working with Request Data
+## Working with Request Data
 
 Server endpoints often need to handle request bodies, query parameters, and headers. Here's how Claude Code can help you manage these:
 
-Handling Query Parameters
+## Handling Query Parameters
 
 ```typescript
 export const GET = async ({ url }) => {
@@ -120,7 +116,7 @@ export const GET = async ({ url }) => {
 };
 ```
 
-Handling Request Bodies
+## Handling Request Bodies
 
 For POST, PUT, and PATCH requests:
 
@@ -153,7 +149,7 @@ export const POST = async ({ request }) => {
 
 When prompting Claude for these patterns, specify the validation rules and error handling requirements explicitly.
 
-Integrating with Databases and External APIs
+## Integrating with Databases and External APIs
 
 Server endpoints become powerful when connecting to databases. Here's a practical pattern for database integration:
 
@@ -184,7 +180,7 @@ For more complex database operations, ask Claude to implement proper patterns:
 - Transaction handling for multi-step operations
 - Connection pooling for performance
 
-Authentication and Authorization
+## Authentication and Authorization
 
 Protecting your endpoints is crucial. Claude Code can help implement proper auth patterns:
 
@@ -221,7 +217,7 @@ export const GET = async ({ request }) => {
 
 When implementing authentication, specify your auth provider (JWT, session-based, OAuth) in your prompts to Claude.
 
-Best Practices for Server Endpoints
+## Best Practices for Server Endpoints
 
 Follow these practices when building with Claude Code assistance:
 
@@ -239,7 +235,7 @@ Follow these practices when building with Claude Code assistance:
 
 When prompting Claude Code, reference these practices to ensure they're incorporated in the generated code.
 
-Testing Your Endpoints
+## Testing Your Endpoints
 
 Claude Code can help generate tests for your endpoints. Request test implementations that cover:
 
@@ -265,7 +261,7 @@ describe('API /api/users', () => {
 });
 ```
 
-Conclusion
+## Conclusion
 
 Building server endpoints in Astro with Claude Code combines the best of both worlds, Astro's elegant developer experience and AI-assisted coding. By understanding the endpoint patterns, providing specific prompts, and following best practices, you can rapidly develop solid APIs for your applications.
 

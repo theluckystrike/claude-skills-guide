@@ -13,12 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 Why Is Claude Code Producing Code That Does Not Run?
 
 If you've ever watched Claude Code generate what looks like perfect code only to see it fail when you run it, you're not alone. This is one of the most common frustrations developers face when working with AI coding assistants. Understanding why this happens, and how to prevent it, can dramatically improve your experience with Claude Code.
 
-Understanding the Root Causes
+## Understanding the Root Causes
 
 1. Context Window Limitations
 
@@ -69,7 +68,7 @@ Claude does not know what operating system you're running, what version of Node.
 
 These failures don't indicate a problem with the generated logic, they indicate missing context about execution environment.
 
-Diagnosing Failures Systematically
+## Diagnosing Failures Systematically
 
 When Claude-generated code fails to run, resist the urge to immediately ask Claude to fix it without first diagnosing the root cause. A structured diagnosis gives Claude the context it needs to generate a correct fix.
 
@@ -86,11 +85,11 @@ Use this checklist:
 
 Once you've identified the category, you can give Claude a precise fix request rather than a vague "this doesn't work."
 
-How Claude Code Skills Can Help
+## How Claude Code Skills Can Help
 
 Claude Code skills are markdown files that provide specialized instructions to Claude. By using the right skills, you can significantly improve the quality of generated code.
 
-Using the Review Skill
+## Using the Review Skill
 
 The `/review` skill is particularly useful for catching potential issues before you run the code. Activate it by typing:
 
@@ -106,7 +105,7 @@ This loads the review skill which instructs Claude to:
 
 The review skill is most powerful when paired with an explicit codebase context. Tell Claude which files to check imports against, and it will catch mismatches that would otherwise slip through.
 
-Using the TDD Skill for Test-Driven Development
+## Using the TDD Skill for Test-Driven Development
 
 The `/tdd` skill encourages generating tests alongside code, which often reveals missing implementations or incorrect assumptions. Activate it with:
 
@@ -116,7 +115,7 @@ The `/tdd` skill encourages generating tests alongside code, which often reveals
 
 The skill prompts Claude to generate testable code with clear interfaces, making it easier to verify the output immediately. Writing tests first forces Claude to think about the function's observable behavior rather than just its internal logic, this catches many hallucinated APIs because the tests would need to actually call the methods.
 
-Using the Spec Skill for Complete Implementations
+## Using the Spec Skill for Complete Implementations
 
 When you need Claude to produce production-ready code with no shortcuts, the `/spec` skill enforces completeness. It instructs Claude to:
 - Eliminate all TODO comments and stub implementations
@@ -126,9 +125,9 @@ When you need Claude to produce production-ready code with no shortcuts, the `/s
 
 This is particularly valuable for functions that will handle user input or external data, where incomplete implementations create security or reliability gaps.
 
-Practical Examples
+## Practical Examples
 
-Example 1: Missing Dependencies
+## Example 1: Missing Dependencies
 
 Problem: Claude generates code using a library you haven't installed.
 
@@ -176,7 +175,7 @@ export function SearchComponent({ onSearch }) {
 }
 ```
 
-Example 2: Incorrect Import Paths
+## Example 2: Incorrect Import Paths
 
 Problem: Claude assumes wrong import paths based on project structure guesses.
 
@@ -205,7 +204,7 @@ Now generate a new component that also uses formatDate.
 
 This gives Claude a concrete example to pattern-match against rather than guessing.
 
-Example 3: Incomplete Function Implementation
+## Example 3: Incomplete Function Implementation
 
 Problem: Claude generates a function stub with "TODO" comments or incomplete logic.
 
@@ -227,7 +226,7 @@ Generate a complete implementation. "Complete" means:
 - Returns a typed result, not any
 ```
 
-Example 4: Version Mismatch
+## Example 4: Version Mismatch
 
 Problem: Generated code uses an API from a newer version than what's installed.
 
@@ -261,7 +260,7 @@ const user = await prisma.user.findUnique({
 });
 ```
 
-Best Practices for Better Code Generation
+## Best Practices for Better Code Generation
 
 1. Provide Clear Context
 
@@ -342,7 +341,7 @@ When debugging, always include the full error message, the stack trace, and the 
 
 Long sessions where Claude has generated many different pieces of code can cause confusion. Claude's earlier context may drift out of the active window, causing it to generate code that contradicts earlier decisions. If you notice inconsistencies in generated code, different error handling styles, different naming conventions, conflicting type definitions, start a fresh session with a clean summary of what you've built so far.
 
-Comparing Prompt Strategies
+## Comparing Prompt Strategies
 
 The quality of generated code varies significantly based on how you frame your request. Here's a comparison of weak and strong prompting patterns:
 
@@ -353,7 +352,7 @@ The quality of generated code varies significantly based on how you frame your r
 | "Fix this bug" | "This function throws 'Cannot read property map of undefined' on line 12. The `users` variable comes from `db.query()` which can return null on empty results. Fix it to handle null." |
 | "Make this TypeScript" | "Convert this to TypeScript. The function accepts an array of `User` objects (defined in `src/types/user.ts`) and returns a `Promise<ProcessedUser[]>`. Don't use `any`." |
 
-Understanding Claude Code's Limitations
+## Understanding Claude Code's Limitations
 
 It's important to recognize that Claude Code has inherent limitations:
 
@@ -365,12 +364,11 @@ It's important to recognize that Claude Code has inherent limitations:
 
 Knowing these limitations helps you compensate for them rather than being surprised by them. When you hit a wall, the fix is almost always to provide more context, not to ask Claude to try harder.
 
-Conclusion
+## Conclusion
 
 While Claude Code sometimes produces non-runnable code, understanding the causes and using the right strategies can dramatically improve results. Use Claude Code skills like `/review`, `/tdd`, `/spec`, and `/debug` to guide generation. Provide clear context including dependency versions, project structure, and runtime environment. Use iterative refinement and always verify before running.
 
 The key is treating Claude Code as a powerful coding partner rather than a perfect code generator. With the right approach, you can harness its capabilities while avoiding the common pitfalls that lead to non-runnable code.
-
 
 Related Reading
 

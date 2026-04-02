@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Cookie Editor: A Developer's Guide"
 description: "Master cookie manipulation in Chrome extensions. Practical code examples, API usage patterns, and security best practices for developers building."
@@ -14,20 +13,17 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-
-Chrome Extension Cookie Editor: A Developer's Guide
-
 Chrome extensions provide powerful capabilities for managing browser cookies, enabling developers to build sophisticated tools for session management, testing, and debugging. Understanding how to read, write, and delete cookies through the Chrome Extension API opens up numerous possibilities for automation and developer productivity.
 
 This guide covers practical implementations for developers building cookie management features into Chrome extensions, from basic API usage to a complete popup editor with import/export support.
 
-Understanding the Chrome Cookies API
+## Understanding the Chrome Cookies API
 
 Chrome extensions interact with cookies through the `chrome.cookies` API, which provides methods for querying, setting, and removing cookies across all URLs. Unlike standard JavaScript cookie access, the cookies API works with HTTP-only cookies and can access cookies set on any domain.
 
 The API is available in background service workers, content scripts (with limitations), and popup pages. It uses a callback-based interface that can be wrapped in Promises for cleaner async/await code, which is what all examples in this guide use.
 
-Manifest V3 vs Manifest V2
+## Manifest V3 vs Manifest V2
 
 Most new extensions should target Manifest V3 (MV3), which Chrome now requires for new submissions to the Web Store. The cookies API works the same way in both versions, but the manifest structure differs:
 
@@ -55,7 +51,7 @@ Most new extensions should target Manifest V3 (MV3), which Chrome now requires f
 
 In MV2, `background` used `scripts` and `persistent`. In MV3, it uses a `service_worker`. The cookies API calls themselves are identical.
 
-Required Permissions
+## Required Permissions
 
 Before using the cookies API, you must declare the appropriate permissions in your extension's manifest:
 
@@ -86,7 +82,7 @@ For a developer tool scoped to your own staging environments, use targeted host 
 
 This minimizes the extension's footprint and makes it easier to pass Chrome Web Store review.
 
-Reading Cookies
+## Reading Cookies
 
 Retrieving cookies for a specific URL requires the `chrome.cookies.get()` method:
 
@@ -136,7 +132,7 @@ async function getSecurePersistentCookies(domain) {
 
 Note that `getAll()` with a `domain` filter uses a suffix match, it returns cookies for the exact domain and all subdomains. Pass `.example.com` to explicitly include subdomain cookies, or `example.com` (without the leading dot) to match only that exact domain.
 
-Setting Cookies
+## Setting Cookies
 
 Creating or updating cookies uses `chrome.cookies.set()`:
 
@@ -191,7 +187,7 @@ async function copyCookieToUrl(sourceCookie, targetUrl) {
 }
 ```
 
-Deleting Cookies
+## Deleting Cookies
 
 Removing cookies requires `chrome.cookies.remove()`:
 
@@ -241,7 +237,7 @@ async function clearAllCookiesForDomain(domain) {
 }
 ```
 
-Cookie Attributes Explained
+## Cookie Attributes Explained
 
 Understanding cookie attributes helps you manage cookies correctly:
 
@@ -260,7 +256,7 @@ Understanding cookie attributes helps you manage cookies correctly:
 
 The `sameSite` attribute accepts `'strict'`, `'lax'`, or `'no_restriction'`. Modern browsers default to `'lax'`, so explicitly setting this attribute ensures consistent behavior. Use `'strict'` for authentication cookies to prevent CSRF, and `'no_restriction'` (equivalent to `SameSite=None`) when you explicitly need cross-site cookies, which also requires `secure: true`.
 
-Listening for Cookie Changes
+## Listening for Cookie Changes
 
 The `chrome.cookies.onChanged` event fires whenever any cookie is created, modified, or removed. This is useful for building reactive UIs that stay in sync with actual browser state:
 
@@ -285,7 +281,7 @@ The `cause` field tells you why the change happened:
 - `evicted`. the browser evicted it due to storage pressure
 - `expired_overwrite`. a cookie was set with a past expiration to delete it
 
-Building a Cookie Editor Popup
+## Building a Cookie Editor Popup
 
 A practical cookie editor extension includes a popup interface for viewing and editing cookies. Here is a complete example with add, edit, and delete functionality:
 
@@ -372,7 +368,7 @@ The corresponding HTML for the popup:
 </html>
 ```
 
-Exporting and Importing Cookies
+## Exporting and Importing Cookies
 
 A powerful feature for developer tools is the ability to export a full cookie set to JSON and re-import it later, useful for preserving authenticated sessions across environments or test runs:
 
@@ -413,7 +409,7 @@ async function importCookies(targetUrl, cookieData) {
 
 Note that `chrome.downloads` requires adding `"downloads"` to your manifest permissions.
 
-Security Considerations
+## Security Considerations
 
 When building cookie management features, follow these security practices:
 
@@ -453,7 +449,7 @@ Content Security Policy: Add a strict CSP to your manifest to prevent injection 
 }
 ```
 
-Common Use Cases for Developers
+## Common Use Cases for Developers
 
 Chrome extension cookie manipulation serves various development scenarios:
 
@@ -465,7 +461,7 @@ Chrome extension cookie manipulation serves various development scenarios:
 - Automated Testing: Use a background extension to inject test session cookies before each Playwright or Puppeteer test run
 - Cookie Backup and Restore: Export cookies before a browser clear, then restore them to resume work without re-authenticating everywhere
 
-Debugging Cookie Operations
+## Debugging Cookie Operations
 
 When cookie operations fail silently, check `chrome.runtime.lastError` immediately after any API call, Chrome clears it after each callback:
 
@@ -489,7 +485,6 @@ Common failure reasons:
 - You're trying to set a `secure` cookie on an `http://` URL
 
 Building a cookie editor extension requires understanding the Chrome cookies API, proper permission configuration, and security best practices. The methods covered here provide the foundation for creating powerful cookie management tools tailored to your development workflow.
-
 
 Related Reading
 

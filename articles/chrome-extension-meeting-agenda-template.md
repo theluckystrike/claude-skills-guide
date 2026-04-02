@@ -13,18 +13,17 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Chrome Extension Meeting Agenda Template: A Developer's Guide
+## Chrome Extension Meeting Agenda Template: A Developer's Guide
 
 Building Chrome extensions requires coordinated discussions between developers, designers, and product managers. A well-structured meeting agenda template saves time and ensures nothing gets missed. This guide covers how to create effective meeting agenda templates specifically tailored for Chrome extension development workflows.
 
-Why Chrome Extension Meetings Need Specialized Agendas
+## Why Chrome Extension Meetings Need Specialized Agendas
 
 Chrome extension projects involve unique challenges that regular development meetings don't address. You deal with manifest versioning, browser API compatibility, permission requests, and Chrome Web Store compliance. A generic meeting agenda wastes time on context-switching and often misses critical extension-specific topics.
 
 A good Chrome extension meeting agenda template should include sections for manifest review, API usage discussions, permission justification, and Web Store submission status. These items need to appear consistently across sprint planning, code review, and release preparation meetings.
 
-Basic Meeting Agenda Template Structure
+## Basic Meeting Agenda Template Structure
 
 Here's a practical template you can adapt for your team:
 
@@ -61,7 +60,7 @@ Action Items & Next Steps (5 min)
 
 This template runs approximately 45 minutes. Adjust time allocations based on your meeting length.
 
-Using Code Snippets in Agenda Items
+## Using Code Snippets in Agenda Items
 
 When discussing specific features, include relevant code references directly in the agenda. This keeps meetings focused and provides context for async discussion afterward.
 
@@ -81,9 +80,9 @@ const getSettings = () => chrome.storage.sync.get(['theme', 'notifications']);
 
 Including these snippets in your agenda gives attendees time to review before the meeting starts.
 
-Template for Different Meeting Types
+## Template for Different Meeting Types
 
-Sprint Planning Meeting
+## Sprint Planning Meeting
 
 ```markdown
 Sprint Planning - Chrome Extension [VERSION]
@@ -104,7 +103,7 @@ Dependencies (10 min)
 - Build tool changes
 ```
 
-Code Review Meeting
+## Code Review Meeting
 
 ```markdown
 Code Review - Chrome Extension PR #[NUMBER]
@@ -130,7 +129,7 @@ Testing
 - [ ] Background persistence verified
 ```
 
-Release Preparation Meeting
+## Release Preparation Meeting
 
 ```markdown
 Release Checklist - Version [X.Y.Z]
@@ -157,7 +156,7 @@ Post-Release Plan (5 min)
 - Prepare hotfix if needed
 ```
 
-Automating Agenda Distribution
+## Automating Agenda Distribution
 
 You can set up a simple automation to share agenda templates with your team. A basic approach uses a shared document or your team's project management tool. For teams using GitHub, consider storing templates in your extension's repository:
 
@@ -172,7 +171,7 @@ Template files structure
 
 Team members can then submit agenda items as issues or pull requests before meetings, creating a documented history of discussion topics and decisions.
 
-Best Practices for Effective Meetings
+## Best Practices for Effective Meetings
 
 Keep your meetings productive by following a few consistent rules. Distribute the agenda at least 24 hours before the meeting. This gives developers time to review code snippets, check relevant Chrome API documentation, and prepare their contributions.
 
@@ -180,13 +179,13 @@ Designate a note-taker for each meeting. Record decisions alongside the reasonin
 
 End every meeting with clear action items. Each item should have an owner and a deadline. Without accountability, agenda items become forgotten items.
 
-Adapting Templates to Your Workflow
+## Adapting Templates to Your Workflow
 
 Every Chrome extension project has unique needs. Your team size, release cadence, and extension complexity all affect how meetings should run. Start with the templates above and modify them based on what actually gets discussed.
 
 Track which agenda items consistently get cut due to time constraints. This indicates either the meeting is too short or the template includes unnecessary sections. Conversely, topics that frequently overflow their time slots might need their own dedicated meetings.
 
-Integrating Agendas with Project Management Tools
+## Integrating Agendas with Project Management Tools
 
 Storing meeting templates as plain markdown in your repository is a good start, but connecting them to your project management workflow reduces the friction between agenda planning and task tracking. Teams using Jira can link agenda items directly to tickets; teams using GitHub Issues can create issues from action items at the end of each meeting.
 
@@ -241,14 +240,13 @@ jobs:
 
 The prepared file appears in the repository at the start of each meeting cycle, ready for team members to add pre-meeting context before the call begins.
 
-Conclusion
+## Conclusion
 
 Effective Chrome extension development requires meetings that address the unique aspects of browser extension projects. A well-designed meeting agenda template ensures consistent coverage of manifest versioning, Chrome API usage, permission management, and Web Store compliance.
 
 Start with the templates provided, adapt them to your team's workflow, and refine them over time. The goal is meetings that respect everyone's time while ensuring critical extension-specific topics receive proper attention.
 
-
-Measuring Meeting Effectiveness
+## Measuring Meeting Effectiveness
 
 Running structured meetings is valuable only if the structure actually improves outcomes. Measure two leading indicators after implementing agenda templates: the percentage of meetings that end with all action items assigned, and the percentage of action items from the previous meeting that were completed before the next meeting.
 

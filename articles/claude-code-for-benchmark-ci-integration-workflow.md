@@ -25,7 +25,7 @@ Many teams struggle with inconsistent code reviews, subjective quality assessmen
 
 The key insight is that Claude Code is not just a chat interface. it is also a headless CLI tool that accepts prompts via flags and writes results to stdout. That property makes it composable with every CI platform that can run a shell command: GitHub Actions, GitLab CI, CircleCI, Buildkite, Jenkins, and others.
 
-Planning Your Benchmark Strategy
+## Planning Your Benchmark Strategy
 
 Before writing a single line of YAML, decide what you actually want to measure. The most useful benchmarks in CI fall into three categories:
 
@@ -37,7 +37,7 @@ Security surface analysis looks for secrets accidentally committed, dangerous de
 
 A practical starting point is to pick one category and build a single reliable benchmark before expanding. The failure mode of ambitious CI integrations is building five checks that each produce noisy results, causing the team to ignore all of them. One high-signal benchmark that reliably catches real problems is worth more than five that cry wolf.
 
-Setting Up Your CI Environment
+## Setting Up Your CI Environment
 
 Before integrating Claude Code, ensure your CI environment has the necessary dependencies. Most CI providers offer runners with Node.js and bash support, which is sufficient for Claude Code integration.
 
@@ -81,7 +81,7 @@ For production pipelines, cache the npm global install across runs to reduce set
       claude-code-${{ runner.os }}-
 ```
 
-Creating Benchmark Scripts
+## Creating Benchmark Scripts
 
 Organize your benchmarks into focused scripts that measure specific aspects of your codebase. Create a benchmarks directory in your project root:
 
@@ -158,7 +158,7 @@ claude -p "$CLAUDE_PROMPT" > .claude/benchmarks/results/performance-report.txt
 
 Limiting analysis to changed files keeps benchmark run time proportional to the size of the change rather than the size of the codebase.
 
-GitHub Actions Workflow Example
+## GitHub Actions Workflow Example
 
 Here's a complete GitHub Actions workflow that integrates Claude Code benchmarking:
 
@@ -239,7 +239,7 @@ jobs:
 
 This workflow runs on every push and pull request, executing benchmarks and posting results directly to your pull requests. The `fetch-depth: 0` option on the checkout step is essential for the performance diff script to have access to the full git history needed to compare against the base branch.
 
-Formatting Results for Pull Requests
+## Formatting Results for Pull Requests
 
 Raw JSON in a PR comment is hard to read. Add a script that converts your benchmark JSON into readable Markdown:
 
@@ -305,7 +305,7 @@ generatePRSummary();
 
 This produces a PR comment that looks like a proper review summary, making it easy for authors and reviewers to understand the benchmark output at a glance.
 
-Tracking Metrics Over Time
+## Tracking Metrics Over Time
 
 Storing benchmark results allows you to track performance trends. Create a simple tracking mechanism using JSON files:
 
@@ -369,7 +369,7 @@ git commit -m "chore: benchmark metrics for ${{ github.sha }}"
 git push origin benchmark-metrics
 ```
 
-CI Provider Comparison
+## CI Provider Comparison
 
 Claude Code CI integration works across all major providers. Here is a quick comparison of the relevant differences:
 
@@ -383,7 +383,7 @@ Claude Code CI integration works across all major providers. Here is a quick com
 
 The setup script from earlier in this guide works unchanged across all of these. the differences are only in how you store the API key and how you upload results.
 
-Cost Management
+## Cost Management
 
 Claude Code API calls in CI cost real money. A code quality scan of a medium-sized codebase typically uses 5,000-15,000 tokens per run. At current pricing, that works out to roughly $0.01-$0.05 per CI run, which is negligible for most teams but can accumulate if you're not careful.
 
@@ -407,7 +407,7 @@ on:
 
 Set a monthly budget alert in your Anthropic console so you notice unexpected usage spikes before they become a surprise on your invoice.
 
-Best Practices for CI Integration
+## Best Practices for CI Integration
 
 When integrating Claude Code into your CI pipeline, follow these practical recommendations to maximize value and minimize friction.
 
@@ -438,14 +438,13 @@ fi
 claude -p "$CLAUDE_PROMPT" > .claude/benchmarks/results/quality-report.txt
 ```
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your CI/CD pipeline transforms it from a simple automation tool into an intelligent partner in your development process. By setting up automated benchmarks for code quality, performance, and security, you gain consistent insights that help your team ship better software faster.
 
 Start with a single benchmark, measure your baseline, and gradually expand to more comprehensive analysis. Use the explicit JSON schema pattern to get machine-parseable output, limit scope to changed files to keep costs and run times proportional, and format results as readable Markdown before posting them to PRs.
 
 The investment in setting up these workflows pays dividends in reduced bugs, better performance, and more confident releases. Teams that have consistent, automated AI-powered code review in CI develop better intuitions about what kinds of issues Claude Code catches reliably. and that shapes how they write code from the start.
-
 
 Related Reading
 

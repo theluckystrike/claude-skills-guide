@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for AI Red Teaming Workflow Guide"
 description: "A comprehensive guide to building AI red teaming workflows with Claude Code, featuring practical examples, testing patterns, and production-ready."
@@ -14,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for AI Red Teaming Workflow Guide
 
 AI red teaming has become an essential practice for identifying vulnerabilities, biases, and failure modes in AI systems before deployment. This guide shows you how to build effective red teaming workflows using Claude Code, enabling systematic testing and improvement of your AI applications.
 
-Understanding AI Red Teaming with Claude Code
+## Understanding AI Red Teaming with Claude Code
 
 AI red teaming involves simulating adversarial attacks, probing for harmful outputs, and stress-testing AI systems to discover weaknesses. Claude Code enhances this process by automating test generation, orchestrating complex attack scenarios, and analyzing results at scale.
 
@@ -30,11 +28,11 @@ When you integrate Claude Code into your red teaming workflow, you gain several 
 - Consistent documentation of findings
 - Reproducible testing pipelines
 
-Setting Up Your Red Teaming Environment
+## Setting Up Your Red Teaming Environment
 
 Before building workflows, establish a proper testing environment that isolates your red teaming activities from production systems.
 
-Project Structure
+## Project Structure
 
 Create a dedicated red teaming project structure:
 
@@ -57,7 +55,7 @@ ai-red-team/
  runner.js
 ```
 
-Configuration for Safe Testing
+## Configuration for Safe Testing
 
 Always use separate API keys and environment variables for red teaming:
 
@@ -72,11 +70,11 @@ export const config = {
 };
 ```
 
-Building Test Case Libraries
+## Building Test Case Libraries
 
 Effective red teaming requires comprehensive test case libraries covering different vulnerability categories.
 
-Bias Testing
+## Bias Testing
 
 Create systematic bias tests across demographic categories:
 
@@ -95,7 +93,7 @@ Create systematic bias tests across demographic categories:
 }
 ```
 
-Jailbreak Attempt Testing
+## Jailbreak Attempt Testing
 
 Document common jailbreak patterns for detection:
 
@@ -120,7 +118,7 @@ Document common jailbreak patterns for detection:
 }
 ```
 
-Automating Test Execution
+## Automating Test Execution
 
 Build a solid test runner that executes all test cases systematically:
 
@@ -195,11 +193,11 @@ class RedTeamRunner {
 export { RedTeamRunner };
 ```
 
-Analyzing Results and Generating Reports
+## Analyzing Results and Generating Reports
 
 After running tests, analyze the results to identify patterns and generate actionable reports.
 
-Result Analysis Pattern
+## Result Analysis Pattern
 
 ```javascript
 // analyze.js
@@ -254,7 +252,7 @@ function containsHarmfulContent(response) {
 }
 ```
 
-Report Generation
+## Report Generation
 
 Create comprehensive reports for stakeholders:
 
@@ -292,11 +290,11 @@ Recommendations
 }
 ```
 
-Integrating with CI/CD Pipelines
+## Integrating with CI/CD Pipelines
 
 Automate red teaming as part of your deployment pipeline to catch issues before they reach production.
 
-GitHub Actions Example
+## GitHub Actions Example
 
 ```yaml
 name: AI Red Teaming
@@ -320,7 +318,7 @@ jobs:
           path: results/
 ```
 
-Best Practices for Effective Red Teaming
+## Best Practices for Effective Red Teaming
 
 Follow these practices to maximize the value of your red teaming efforts:
 
@@ -334,7 +332,7 @@ Focus on Realistic Scenarios: Prioritize test cases that reflect actual user beh
 
 Measure Progress: Track vulnerability counts and severity over time to demonstrate improvement and justify continued investment in AI safety.
 
-Conclusion
+## Conclusion
 
 Building a solid AI red teaming workflow with Claude Code enables systematic security testing and continuous improvement of your AI systems. By automating test execution, maintaining comprehensive test libraries, and integrating with CI/CD pipelines, you can catch vulnerabilities before they reach production while building more trustworthy AI applications.
 

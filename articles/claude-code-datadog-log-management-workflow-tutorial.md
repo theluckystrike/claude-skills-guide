@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code Datadog Log Management Workflow Tutorial"
 description: "Learn how to use Claude Code skills for efficient Datadog log management. This tutorial covers practical workflows for searching, filtering."
@@ -14,12 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 
 Effective log management is crucial for maintaining healthy applications and identifying issues. Datadog provides powerful log analytics capabilities, and Claude Code can enhance your workflow by automating repetitive tasks, constructing complex queries, and providing intelligent log analysis. This tutorial demonstrates how to combine Claude Code skills with Datadog to streamline your log management processes.
 
-Setting Up Claude Code for Datadog Integration
+## Setting Up Claude Code for Datadog Integration
 
 Before diving into log management workflows, you need to configure Claude Code to communicate with your Datadog account. The recommended approach uses Datadog's API through a dedicated skill that handles authentication and API interactions smoothly.
 
@@ -34,7 +32,7 @@ export DATADOG_APP_KEY="your_app_key"
 
 The skill automatically handles rate limiting, retry logic, and response parsing, allowing you to focus on analyzing logs rather than managing API interactions.
 
-Constructing Efficient Log Searches
+## Constructing Efficient Log Searches
 
 One of the most common tasks in log management is constructing precise search queries. Datadog's log search syntax is powerful but can be complex for beginners. Claude Code can help you build accurate queries based on natural language descriptions.
 
@@ -52,7 +50,7 @@ service:payment status:error @http.response_time_ms:>2000 @timestamp:>now-1h
 
 This natural language approach is particularly valuable when you're searching for patterns you don't encounter frequently. You can also ask Claude Code to explain existing queries, helping you understand Datadog's search syntax better over time.
 
-Automated Log Analysis Workflows
+## Automated Log Analysis Workflows
 
 Beyond simple searches, Claude Code excels at creating automated analysis workflows. Let's walk through a practical example of building a log analysis routine for monitoring application health.
 
@@ -72,7 +70,7 @@ description: Automated daily log health analysis
 
 This workflow runs automatically each morning, giving you a proactive view of application health before you start your day.
 
-Real-Time Log Monitoring and Alerting
+## Real-Time Log Monitoring and Alerting
 
 Claude Code can help you set up sophisticated monitoring pipelines that react to log patterns in real-time. Suppose you want to monitor for potential security incidents. You might create a monitor that tracks:
 
@@ -96,7 +94,7 @@ Open Claude Code and test the monitor definition:
 claude --print "Test the security-log-watch monitor using the log data in sample-security-logs.json and verify it triggers correctly"
 ```
 
-Log Correlation and Root Cause Analysis
+## Log Correlation and Root Cause Analysis
 
 When investigating incidents, correlating logs across services is essential but time-consuming. Claude Code can automate much of this correlation work, helping you trace requests through your entire system.
 
@@ -115,7 +113,7 @@ Claude Code executes multiple queries in parallel and correlates the results:
 
 The correlation analysis might reveal, for example, that 73% of slow checkouts involve a specific database table that experiences high contention during peak hours.
 
-Creating Custom Log Dashboards
+## Creating Custom Log Dashboards
 
 Claude Code can generate Datadog dashboard configurations based on your requirements. Describe the metrics and visualizations you need, and Claude Code produces the JSON configuration:
 
@@ -158,7 +156,7 @@ curl -X POST "https://api.datadoghq.com/api/v1/dashboard" \
   -d @dashboard-config.json
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Datadog log management from a manual, time-consuming process into an automated, intelligent workflow. By using natural language queries, automated analysis workflows, and smooth integration with Datadog's API, you can significantly improve your ability to monitor, debug, and optimize your applications.
 

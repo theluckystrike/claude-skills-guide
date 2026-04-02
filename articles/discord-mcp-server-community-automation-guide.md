@@ -16,13 +16,13 @@ permalink: /discord-mcp-server-community-automation-guide/
 
 [Building community automation for Discord with the Model Context Protocol (MCP) opens up powerful workflows](/building-your-first-mcp-tool-integration-guide-2026/) for developers managing online communities. This guide covers practical implementation patterns, configuration examples, and real-world automation scenarios using MCP servers with Discord bots.
 
-Understanding the MCP-Discord Connection
+## Understanding the MCP-Discord Connection
 
 [MCP servers extend Claude Code](/building-your-first-mcp-tool-integration-guide-2026/)'s capabilities by exposing tools that interact with external services. When you combine MCP with Discord's API, you create a bridge between Claude's reasoning capabilities and your community management tasks. This means Claude can read messages, manage roles, moderate content, and respond to community events without manual intervention.
 
 The key components involve setting up a Discord bot, configuring an MCP server to communicate with Discord's API, and defining the automation rules that Claude follows.
 
-Setting Up Your Discord Bot
+## Setting Up Your Discord Bot
 
 Before integrating with MCP, you need a Discord bot with appropriate permissions. Create one through the Discord Developer Portal and grant these intents:
 
@@ -32,7 +32,7 @@ Before integrating with MCP, you need a Discord bot with appropriate permissions
 
 Install your bot to your server and note the token. Store this securely, you will reference it in your MCP server configuration.
 
-Creating the MCP Server Structure
+## Creating the MCP Server Structure
 
 A basic Discord MCP server requires a few key files. Here is a minimal implementation using Node.js:
 
@@ -136,7 +136,7 @@ const transport = new StdioServerTransport();
 await server.connect(transport);
 ```
 
-Configuring Claude Code to Use Your Server
+## Configuring Claude Code to Use Your Server
 
 Add the Discord MCP server to your `~/.claude/settings.json`:
 
@@ -156,15 +156,15 @@ Add the Discord MCP server to your `~/.claude/settings.json`:
 
 Restart Claude Code, and the Discord tools become available in your sessions.
 
-Practical Automation Workflows
+## Practical Automation Workflows
 
 With the MCP server running, you can create powerful community automation workflows.
 
-Automated Welcome System
+## Automated Welcome System
 
 Combine the `welcome_new_member` tool with Discord's member join events. When a new member joins, Claude can send a personalized greeting, assign a "New Member" role, and post an introduction prompt in your welcome channel. This creates a consistent onboarding experience without manual moderation.
 
-Role Assignment Based on Activity
+## Role Assignment Based on Activity
 
 Track message counts and assign roles automatically. A common pattern involves users earning roles after posting a certain number of messages or completing verification steps. The `assign_role` tool integrates with your activity tracking logic:
 
@@ -181,7 +181,7 @@ async function checkMemberActivity(guild, memberId) {
 }
 ```
 
-Content Moderation
+## Content Moderation
 
 The `moderate_message` tool enables automated moderation. Integrate with content filters to automatically delete messages containing spam, prohibited content, or links to malicious sites. You can layer in warning systems that notify users before taking action:
 
@@ -205,13 +205,13 @@ async function moderateMessage(message) {
 }
 ```
 
-Advanced: Connecting Multiple Skills
+## Advanced: Connecting Multiple Skills
 
 The real power emerges when you combine Discord MCP automation with other Claude skills. Pair the tdd skill with your Discord server to automatically generate test cases for your bot's moderation logic. Use the pdf skill to generate weekly community reports summarizing member activity, message volumes, and moderation actions.
 
 The supermemory skill works well for maintaining community knowledge bases, Claude can automatically document community events, FAQ responses, and policy decisions into a searchable knowledge base that your moderation team can reference. If your community has a web portal, the frontend-design skill can help generate UI components for moderation dashboards.
 
-Security Considerations
+## Security Considerations
 
 When building Discord automation, keep these security practices in mind:
 
@@ -220,7 +220,7 @@ When building Discord automation, keep these security practices in mind:
 - Rate Limiting: Discord's API has rate limits. Implement request queuing to avoid hitting these limits during high-activity periods.
 - Audit Logging: Record automation actions for accountability. Store logs in a separate system for review.
 
-Deployment Options
+## Deployment Options
 
 For production deployments, consider containerizing your MCP server:
 
@@ -236,7 +236,7 @@ CMD ["node", "index.js"]
 
 This containerized approach makes it easier to manage dependencies and scale your automation across multiple servers.
 
-Summary
+## Summary
 
 Discord MCP server automation transforms community management from manual moderation to intelligent, programmable workflows. Start with basic welcome messages and role assignments, then expand into sophisticated content moderation and analytics. The key is building on solid fundamentals: secure token handling, proper permission scopes, and thoughtful automation rules that enhance rather than replace human community managers.
 

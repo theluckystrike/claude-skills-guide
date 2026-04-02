@@ -13,12 +13,9 @@ score: 7
 permalink: /claude-code-git-blame-code-archaeology-guide/
 ---
 
-
-Claude Code Git Blame: Code Archaeology Guide
-
 Every developer eventually encounters a piece of code that raises questions: Why was this written this way? Who added this workaround? When was this logic introduced, and what problem was it solving? These questions form the foundation of code archaeology, the practice of digging through historical context to understand present-day code decisions. Git blame is your primary tool for this investigation, and when combined with Claude Code, it becomes significantly more powerful.
 
-Understanding Git Blame Fundamentals
+## Understanding Git Blame Fundamentals
 
 Git blame annotates every line in a file with the commit that last modified it, along with the author and timestamp. This annotation reveals the history behind each line of code, transforming a static file into a historical record. The basic command is straightforward:
 
@@ -36,7 +33,7 @@ git blame -L 10,30 filename.js
 
 This limits the annotation to lines 10 through 30, perfect for examining a specific function without distraction.
 
-Using Git Blame with Claude Code
+## Using Git Blame with Claude Code
 
 Claude Code can run git commands directly, making it an ideal interface for code archaeology. Instead of manually parsing blame output, you can ask Claude Code to investigate and explain:
 
@@ -54,9 +51,9 @@ git blame --date=short -L 50,75 utils/format.js
 
 The `--date=short` format produces more readable timestamps, while the line range focuses your investigation. Claude Code can help you construct these commands when you're unsure of the exact syntax.
 
-Practical Code Archaeology Workflows
+## Practical Code Archaeology Workflows
 
-Investigating Legacy Workarounds
+## Investigating Legacy Workarounds
 
 Legacy code often contains workarounds that made sense at the time but now seem arbitrary. A common scenario involves business logic that was added to address specific edge cases:
 
@@ -72,7 +69,7 @@ git blame -L 45,60 api/users.js
 
 The output might show that the `legacy_access` check was added in 2019 by a developer who has since left the company. The commit message might reference a ticket number, which you can then look up for full context. This workflow transforms mysterious code into documented decisions.
 
-Tracking Feature Evolution
+## Tracking Feature Evolution
 
 Understanding how a feature evolved over time helps when planning refactors or debugging issues. By running git blame on related files across your codebase, you can trace the chronology of a feature:
 
@@ -83,7 +80,7 @@ git blame hooks/useButton.js | head -30
 
 Comparing timelines across files reveals whether UI components and their logic evolved together or separately. This context proves valuable when deciding whether to refactor related code.
 
-Identifying Stale Code
+## Identifying Stale Code
 
 Code that hasn't been modified in years might be dead code, or it might be stable code that simply works correctly. Git blame helps distinguish between these scenarios:
 
@@ -93,7 +90,7 @@ git blame --since="2024-01-01" -- lib/validation.js
 
 This shows only lines modified since January 2024, revealing which parts of your validation library remain active versus untouched. Combined with code coverage data, you can identify candidates for removal.
 
-Advanced Git Blame Techniques
+## Advanced Git Blame Techniques
 
 The `-w` flag ignores whitespace changes, focusing only on substantive code modifications:
 
@@ -120,7 +117,7 @@ For investigation-heavy workflows, consider creating a Claude Code skill that en
 
 Skills like the supermemory skill can store investigation results for future reference, building institutional knowledge over time.
 
-Connecting Blame Results to Claude Code Context
+## Connecting Blame Results to Claude Code Context
 
 Once git blame identifies a commit of interest, you can retrieve its full details:
 
@@ -144,7 +141,7 @@ git log --oneline --grep="AUTH-" --all
 
 This searches commit messages for specific ticket prefixes, connecting code changes to their business justifications.
 
-Common Pitfalls and How to Avoid Them
+## Common Pitfalls and How to Avoid Them
 
 Git blame sometimes shows unexpected results because lines were moved or copied. The `-C` flag helps, but it slows execution significantly. For large files, start with basic blame, then add flags as needed.
 
@@ -152,7 +149,7 @@ Blame timestamps reflect the commit author's local time, not UTC. If your team w
 
 Code copied from Stack Overflow or tutorials often shows the Stack Overflow post's timestamp as the commit time if the developer committed immediately after pasting. This isn't useful archaeology, in those cases, look for surrounding context that shows the developer's genuine contribution.
 
-Automation Opportunities
+## Automation Opportunities
 
 For recurring investigation patterns, create reusable scripts or Claude Code skills. A typical automation might:
 
@@ -163,7 +160,7 @@ For recurring investigation patterns, create reusable scripts or Claude Code ski
 
 Skills like the tdd skill can integrate testing context, showing whether specific lines have adequate test coverage based on when they were last modified.
 
-Summary
+## Summary
 
 Git blame transforms code files from static text into historical documents. Combined with Claude Code's natural language interface, it becomes a powerful tool for code archaeology, understanding why code exists, who wrote it, and what problems it was meant to solve. Start with basic blame commands, then progressively adopt advanced flags like `-w`, `-M`, and `-C` as your investigations require. Build custom skills around your team's common patterns, and your codebase's history becomes an open book rather than a mystery.
 

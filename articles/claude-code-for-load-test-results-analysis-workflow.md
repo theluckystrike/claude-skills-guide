@@ -34,9 +34,9 @@ A Claude Code skill can:
 4. Generate human-readable summaries and recommendations
 5. Identify regressions or improvements across test runs
 
-Building Your Load Test Analysis Skill
+## Building Your Load Test Analysis Skill
 
-Skill Structure
+## Skill Structure
 
 Create a new skill file at `skills/load-test-analyzer.md` with this structure:
 
@@ -66,7 +66,7 @@ When the user asks to analyze load test results:
 4. Trend Analysis: Track metrics across multiple test runs
 ```
 
-Parsing Different Load Test Formats
+## Parsing Different Load Test Formats
 
 Your skill needs to handle various output formats. Here's how to implement parsers for common tools:
 
@@ -91,7 +91,7 @@ def parse_k6_results(json_file):
     return metrics
 ```
 
-JMeter CSV Parsing
+## JMeter CSV Parsing
 
 JMeter's CSV format requires handling headers and timestamp columns:
 
@@ -112,9 +112,9 @@ def parse_jmeter_csv(csv_file):
     return results
 ```
 
-Practical Analysis Examples
+## Practical Analysis Examples
 
-Example 1: Quick Bottleneck Identification
+## Example 1: Quick Bottleneck Identification
 
 When analyzing results, focus on these key indicators:
 
@@ -133,7 +133,7 @@ Analyze the load test results in results/k6-summary.json. Identify:
 - Recommendations for improvement
 ```
 
-Example 2: Automated Regression Detection
+## Example 2: Automated Regression Detection
 
 Compare current results against a baseline:
 
@@ -160,7 +160,7 @@ def detect_regression(current, baseline, threshold=0.2):
     return regressions
 ```
 
-Example 3: Generating Performance Reports
+## Example 3: Generating Performance Reports
 
 Create automated reports that teams can act on:
 
@@ -191,7 +191,7 @@ Recommendations
 3. Low Priority: Monitor /api/checkout under higher load
 ```
 
-Best Practices for Load Test Skills
+## Best Practices for Load Test Skills
 
 1. Define Clear Thresholds
 
@@ -252,14 +252,13 @@ baselines/
   2026-03-15-staging.json
 ```
 
-Conclusion
+## Conclusion
 
 A Claude Code skill for load test analysis transforms raw performance data into actionable insights. By automating metric calculation, regression detection, and report generation, you save time while ensuring consistent, thorough analysis.
 
 Start with the quick summary mode, then expand to comparison and trend analysis as your skill matures. The key is defining clear thresholds and maintaining historical baselines so Claude can identify regressions automatically.
 
 With the right skill design, your team can make data-driven performance decisions faster and more reliably than ever before.
-
 
 Related Reading
 
@@ -269,7 +268,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Load Test Analysis Workflow
+## Step-by-Step: Load Test Analysis Workflow
 
 1. Run your load test: use k6, Locust, JMeter, or Artillery to generate load. Output results to a JSON or CSV file. all major tools support structured output formats.
 2. Feed results to Claude Code: pass the results file path to Claude Code: `claude> analyze the load test results in results.json and identify bottlenecks`. Claude reads the file and produces a prioritized list of findings.
@@ -278,7 +277,7 @@ Step-by-Step: Load Test Analysis Workflow
 5. Generate fix recommendations: for each bottleneck Claude identifies, ask for specific code-level recommendations. Claude can suggest database query optimizations, caching strategies, or connection pool sizing changes.
 6. Draft a performance report: ask Claude to write a structured report with executive summary, methodology, findings, and recommendations. This report can be shared with stakeholders without requiring them to interpret raw numbers.
 
-Parsing k6 Results with Claude Code
+## Parsing k6 Results with Claude Code
 
 k6 outputs a summary JSON with all key metrics. Claude Code can parse this directly:
 
@@ -304,7 +303,7 @@ export default function() {
 
 Pass `k6 run --summary-export=results.json test.js` and then ask Claude Code to analyze `results.json`.
 
-Load Test Analysis Comparison
+## Load Test Analysis Comparison
 
 | Analysis method | Speed | Depth | Actionability | Repeatability |
 |---|---|---|---|---|
@@ -316,7 +315,7 @@ Load Test Analysis Comparison
 
 Claude Code analysis sits in a valuable middle ground: faster than manual review, cheaper than APM tools for one-off analysis, and more actionable than simple threshold alerts.
 
-Advanced: Automated Regression Detection
+## Advanced: Automated Regression Detection
 
 Add Claude Code to your CI/CD pipeline to automatically compare load test results against a stored baseline:
 
@@ -340,7 +339,7 @@ if p95_delta > 50 or error_delta > 0.01:
     sys.exit(1)  # Fail the CI pipeline
 ```
 
-Troubleshooting
+## Troubleshooting
 
 Claude Code output too verbose for CI use: Add "Respond in 5 bullet points maximum" to your analysis prompt. Long reports are valuable for investigation but not for CI gate decisions where a concise pass/fail with a reason is more actionable.
 

@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Inngest Durable Workflow for Long Running Tasks
-
 Building applications that handle long-running tasks is a common challenge in modern software development. Whether you're processing large datasets, running AI model inference, or coordinating complex multi-step workflows, you need a reliable way to manage state and ensure tasks complete successfully even when interruptions occur. This guide explores how to combine Claude Code with Inngest to create solid, durable workflows that handle long-running tasks with ease.
 
-Understanding Durable Workflows
+## Understanding Durable Workflows
 
 Traditional request-response HTTP patterns work well for quick operations, but many real-world tasks take minutes, hours, or even days to complete. Durable workflows solve this problem by providing a framework for:
 
@@ -38,7 +35,7 @@ Claude Code brings powerful AI-assisted development capabilities to your workflo
 3. Code generation: Quickly scaffold Inngest workflow definitions and step functions
 4. Documentation assistance: Generate documentation for your workflow states and events
 
-Getting Started with Inngest
+## Getting Started with Inngest
 
 First, install the Inngest SDK and set up your project:
 
@@ -58,7 +55,7 @@ const inngest = new Inngest({
 });
 ```
 
-Building Your First Durable Workflow
+## Building Your First Durable Workflow
 
 Let's create a workflow that processes a batch of items with multiple steps. This demonstrates key patterns for long-running tasks:
 
@@ -109,7 +106,7 @@ const batchProcessWorkflow = inngest.createWorkflow(
 );
 ```
 
-Handling Long-Running Operations
+## Handling Long-Running Operations
 
 For operations that take significant time, Inngest provides the `sleep` and `waitForEvent` primitives. Here's how to use them with Claude Code assistance:
 
@@ -143,7 +140,7 @@ const aiAnalysisWorkflow = inngest.createWorkflow(
 );
 ```
 
-Error Handling and Retries
+## Error Handling and Retries
 
 Claude Code can help you design solid error handling strategies. Here's a pattern for implementing retries with backoff:
 
@@ -172,7 +169,7 @@ const robustProcessingStep = inngest.step({
 });
 ```
 
-Best Practices for Claude Code + Inngest Integration
+## Best Practices for Claude Code + Inngest Integration
 
 1. Use Descriptive Step IDs
 
@@ -232,7 +229,7 @@ const longRunningWorkflow = inngest.createWorkflow(
 );
 ```
 
-Monitoring and Debugging
+## Monitoring and Debugging
 
 Inngest provides a dashboard to monitor workflow execution. Combine this with Claude Code's debugging capabilities:
 
@@ -240,7 +237,7 @@ Inngest provides a dashboard to monitor workflow execution. Combine this with Cl
 2. Analyze logs: Use Claude Code to interpret Inngest execution logs
 3. Plan recovery: Ask Claude Code for strategies to recover from specific failure states
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Inngest gives you a powerful toolkit for building reliable long-running task systems. Inngest handles the complexity of durable execution, while Claude Code assists with design, implementation, and debugging. Start with simple workflows and progressively adopt more advanced patterns as your needs grow.
 

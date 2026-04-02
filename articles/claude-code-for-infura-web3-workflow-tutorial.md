@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Infura Web3 Workflow Tutorial
 
 Web3 development has evolved significantly, and integrating AI assistants like Claude Code into your workflow can dramatically improve productivity. This tutorial will walk you through setting up Claude Code with Infura, the industry-leading Ethereum API provider, to streamline your blockchain development process. Whether you're querying on-chain data, debugging failed transactions, or deploying smart contracts, Claude Code reduces the friction at every step.
 
-Understanding the Integration
+## Understanding the Integration
 
 Infura provides developers with scalable APIs for interacting with Ethereum and other blockchain networks. When combined with Claude Code's command-line capabilities, you can automate repetitive tasks, debug smart contracts, and manage deployments more efficiently.
 
@@ -36,7 +35,7 @@ Why Use Claude Code with Infura?
 - Network Switching: Ask Claude Code to adapt scripts across mainnet, testnets, and L2s
 - ABI Decoding: Paste raw transaction data and Claude Code can parse it against a contract ABI
 
-Infura vs. Other Providers
+## Infura vs. Other Providers
 
 Before committing to Infura, it is worth understanding the landscape. All three providers below deliver reliable JSON-RPC endpoints, but they differ in focus and pricing structure.
 
@@ -49,11 +48,11 @@ Before committing to Infura, it is worth understanding the landscape. All three 
 
 For production workloads where you need archive data (historical state), you will need to upgrade beyond Infura's base plan or switch providers. For most tutorial and staging use cases, the free tier is sufficient.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before diving into the tutorial, ensure you have the necessary tools installed. You'll need Node.js, npm, and Claude Code installed on your system.
 
-Installing Required Dependencies
+## Installing Required Dependencies
 
 First, create a new project directory and install the required packages:
 
@@ -72,7 +71,7 @@ Also install development dependencies for testing and linting your scripts:
 npm install --save-dev jest eslint
 ```
 
-Project Structure
+## Project Structure
 
 Keep your scripts organized from the start:
 
@@ -90,7 +89,7 @@ infura-claude-tutorial/
      balance.test.js
 ```
 
-Configuring Infura Credentials
+## Configuring Infura Credentials
 
 Create a `.env` file in your project root to store your Infura API credentials securely:
 
@@ -111,9 +110,9 @@ node_modules/
 
 For production environments, use a secrets manager such as AWS Secrets Manager, HashiCorp Vault, or GitHub Actions encrypted secrets rather than a `.env` file.
 
-Practical Examples
+## Practical Examples
 
-Example 1: Checking Account Balance
+## Example 1: Checking Account Balance
 
 Let's start with a basic example, checking an Ethereum wallet balance using Claude Code to generate the script:
 
@@ -169,7 +168,7 @@ checkBalance('0x742d35Cc6634C0532925a3b844Bc9e7595f0fEa1');
 
 When you ask Claude Code to write this, a prompt like "write a function that checks an Ethereum address balance via Infura, converts WEI to ETH, and validates the address format" produces something close to the above in seconds.
 
-Example 2: Sending Transactions
+## Example 2: Sending Transactions
 
 Here's how you can create a transaction sending script:
 
@@ -206,7 +205,7 @@ const estimatedCostWei = gasEstimate * gasPrice.gasPrice;
 console.log(`Estimated cost: ${ethers.formatEther(estimatedCostWei)} ETH`);
 ```
 
-Example 3: Monitoring Smart Contract Events
+## Example 3: Monitoring Smart Contract Events
 
 For more advanced use cases, you can monitor smart contract events:
 
@@ -247,9 +246,9 @@ function createMonitor() {
 }
 ```
 
-Advanced Workflows with Claude Code
+## Advanced Workflows with Claude Code
 
-Automating Deployment Scripts
+## Automating Deployment Scripts
 
 Claude Code excels at helping you generate deployment scripts for your smart contracts. Here's a pattern for deploying an ERC-20 token:
 
@@ -298,7 +297,7 @@ fs.writeFileSync(
 console.log('Deployment record saved');
 ```
 
-Debugging Failed Transactions
+## Debugging Failed Transactions
 
 When transactions fail, Claude Code can help you analyze the error and determine the cause:
 
@@ -343,7 +342,7 @@ async function getRevertReason(txHash) {
 
 Paste the error output into Claude Code with the prompt "what does this Solidity revert reason mean and how do I fix it?" Claude Code will explain the root cause and suggest corrective action.
 
-Querying Historical Data
+## Querying Historical Data
 
 One common task is pulling historical token balances or event logs for auditing or analytics. With archive node access, Infura lets you query any past block state:
 
@@ -362,9 +361,9 @@ async function historicalBalance(address, blockNumber) {
 
 You can use this to reconstruct treasury balances at the end of each month for accounting purposes, or to verify balances at a specific snapshot block for airdrop eligibility.
 
-Best Practices and Actionable Advice
+## Best Practices and Actionable Advice
 
-Security First
+## Security First
 
 1. Never expose private keys in code: Use environment variables or secrets management tools
 2. Validate all inputs: Sanitize addresses and amounts before transactions
@@ -372,7 +371,7 @@ Security First
 4. Rotate API keys regularly: Treat Infura keys like passwords, rotate them on a schedule and immediately if exposed
 5. Restrict key permissions: In the Infura dashboard, restrict API keys to specific allowed origins when possible
 
-Performance Optimization
+## Performance Optimization
 
 - Batch requests: Use multicall contracts to reduce RPC calls
 - Cache responses: Implement caching for frequently accessed data
@@ -380,7 +379,7 @@ Performance Optimization
 - Use WebSocket for subscriptions: HTTPS polling is wasteful for event monitoring; use `wss://` endpoints instead
 - Paginate event log queries: Querying events over thousands of blocks in a single call can time out; query in chunks of 2000 blocks
 
-Error Handling
+## Error Handling
 
 Implement solid error handling in all your Web3 scripts:
 
@@ -407,7 +406,7 @@ function classifyError(error) {
 }
 ```
 
-Workflow Pattern: Claude Code as Your Web3 Pair Programmer
+## Workflow Pattern: Claude Code as Your Web3 Pair Programmer
 
 The most effective way to use Claude Code with Infura is as an interactive pair programmer rather than a one-shot code generator. The recommended cycle:
 
@@ -419,7 +418,7 @@ The most effective way to use Claude Code with Infura is as an interactive pair 
 
 This loop is significantly faster than reading through Infura documentation and ethers.js changelogs independently.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Infura opens up powerful possibilities for Web3 development. From generating scripts to debugging transactions, this combination helps you work more efficiently on the blockchain. Start with the basic examples in this tutorial, then explore more advanced use cases as you become comfortable with the workflow.
 

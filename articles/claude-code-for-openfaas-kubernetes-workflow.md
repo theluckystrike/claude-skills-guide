@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for OpenFaaS Kubernetes Workflow"
 description: "Learn how to build serverless functions with OpenFaaS on Kubernetes using Claude Code. Automate function deployment, manage workflows, and optimize."
@@ -14,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for OpenFaaS Kubernetes Workflow
 
@@ -22,7 +20,7 @@ Serverless functions have revolutionized how developers build and deploy applica
 
 This guide walks you through building a complete OpenFaaS Kubernetes workflow using Claude Code, with practical examples and actionable strategies you can apply to your projects immediately.
 
-Understanding OpenFaaS on Kubernetes
+## Understanding OpenFaaS on Kubernetes
 
 OpenFaaS is an open-source framework that lets you package functions as containers and deploy them to Kubernetes. Unlike cloud-provider lock-in solutions, OpenFaaS gives you full control over your serverless infrastructure while maintaining simplicity.
 
@@ -33,11 +31,11 @@ When you use Claude Code alongside OpenFaaS, you gain several advantages:
 - Debugging assistance - Analyze logs and troubleshoot function failures
 - Workflow orchestration - Chain multiple functions together for complex processing pipelines
 
-Setting Up Your OpenFaaS Environment
+## Setting Up Your OpenFaaS Environment
 
 Before building functions, ensure your Kubernetes cluster has OpenFaaS properly installed. Claude Code can help you verify the installation and configure your environment.
 
-Installing OpenFaaS with Claude Code
+## Installing OpenFaaS with Claude Code
 
 First, ensure you have a working Kubernetes cluster. Then use the official OpenFaaS Helm chart for installation:
 
@@ -62,11 +60,11 @@ kubectl get secret -n openfaas basic-auth -o jsonpath="{.data.basic-auth-admin-p
 
 Claude Code can create a comprehensive setup script that handles all these steps plus configures your local environment for function deployment.
 
-Creating Your First OpenFaaS Function
+## Creating Your First OpenFaaS Function
 
 OpenFaaS supports multiple programming languages through templates. Let's create a function using Python, which is a common choice for data processing and automation tasks.
 
-Function Structure and Implementation
+## Function Structure and Implementation
 
 A typical OpenFaaS function follows this pattern:
 
@@ -104,7 +102,7 @@ def process_data(data):
 
 When working with Claude Code, you can provide context about your function requirements, and it will generate optimized implementations with proper error handling, logging, and testing stubs.
 
-Deploying the Function
+## Deploying the Function
 
 Use the OpenFaaS CLI to deploy your function:
 
@@ -144,11 +142,11 @@ functions:
       description: "Processes incoming data payloads"
 ```
 
-Building Complex Workflows with Function Chaining
+## Building Complex Workflows with Function Chaining
 
 Real-world applications often require chaining multiple functions together. OpenFaaS supports this through its async invocation pattern and queueing system.
 
-Designing a Data Processing Pipeline
+## Designing a Data Processing Pipeline
 
 Consider a typical data processing workflow:
 
@@ -194,7 +192,7 @@ def invoke_next_function(function_name, payload):
     return response.json()
 ```
 
-Managing Pipeline State
+## Managing Pipeline State
 
 For more complex pipelines, consider using a state management approach:
 
@@ -261,11 +259,11 @@ def execute_stage(stage_name, data):
     return {"executed": stage_name, "success": True}
 ```
 
-Integrating Claude Code with CI/CD
+## Integrating Claude Code with CI/CD
 
 Automating your OpenFaaS deployments through CI/CD ensures consistent, repeatable releases. Claude Code can help generate pipeline configurations and optimize your deployment workflow.
 
-GitHub Actions Workflow
+## GitHub Actions Workflow
 
 ```yaml
 name: Deploy OpenFaaS Functions
@@ -301,7 +299,7 @@ jobs:
           OPENFAAS_PASSWORD: ${{ secrets.OPENFAAS_PASSWORD }}
 ```
 
-Automated Testing in CI
+## Automated Testing in CI
 
 Add automated testing to ensure function quality:
 
@@ -346,11 +344,11 @@ def test_handle_string_input():
     assert result["status"] == "success"
 ```
 
-Optimizing Function Performance
+## Optimizing Function Performance
 
 Claude Code can help you identify performance bottlenecks and optimize your functions for better throughput and resource usage.
 
-Resource Allocation Guidelines
+## Resource Allocation Guidelines
 
 Configure appropriate resource limits based on function requirements:
 
@@ -380,7 +378,7 @@ functions:
       periodSeconds: 5
 ```
 
-Caching Strategies
+## Caching Strategies
 
 For functions that process similar data, implement caching:
 
@@ -429,11 +427,11 @@ def process_data(data):
     return {"processed": True, "data": data}
 ```
 
-Monitoring and Observability
+## Monitoring and Observability
 
 Effective monitoring is crucial for production OpenFaaS deployments. Claude Code can help set up comprehensive observability.
 
-Logging Best Practices
+## Logging Best Practices
 
 ```python
 import json
@@ -482,7 +480,7 @@ def process_data(data):
     return {"processed": True}
 ```
 
-Prometheus Metrics Integration
+## Prometheus Metrics Integration
 
 For metrics collection, extend your function:
 
@@ -520,7 +518,7 @@ def handle(req):
         REQUEST_DURATION.observe(time.time() - start_time)
 ```
 
-Best Practices and Actionable Tips
+## Best Practices and Actionable Tips
 
 To get the most out of Claude Code with OpenFaaS, consider these proven strategies:
 
@@ -540,7 +538,7 @@ To get the most out of Claude Code with OpenFaaS, consider these proven strategi
 
 8. Test locally before deployment - Use `faas-cli up` for local development and testing.
 
-Conclusion
+## Conclusion
 
 Building OpenFaaS functions on Kubernetes doesn't have to be complicated. Claude Code serves as an intelligent development partner, helping you design efficient functions, generate configuration files, debug issues, and optimize performance.
 

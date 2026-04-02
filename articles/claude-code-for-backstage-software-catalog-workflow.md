@@ -15,19 +15,17 @@ score: 7
 
 {% raw %}
 
-Claude Code for Backstage Software Catalog Workflow
-
 Backstage, Spotify's open-source developer portal, has become the standard for building internal developer platforms. Its Software Catalog is the heart of Backstage, enabling teams to track services, libraries, and components across the organization. Managing this catalog effectively requires careful workflow design, and Claude Code can significantly accelerate how you create, maintain, and automate your Backstage software catalog.
 
 This guide explores practical workflows for using Claude Code with Backstage's software catalog, from initial setup to automated entity management.
 
-Understanding Backstage Software Catalog
+## Understanding Backstage Software Catalog
 
 The Backstage Software Catalog is a centralized registry that maintains metadata about your organization's software assets. Each piece of software is represented as an entity in YAML format, following the Backstage entity model. These entities include services, libraries, websites, components, and APIs, each with specific lifecycle states, ownership information, and relationships.
 
 When working with Claude Code, you can use its understanding of YAML structures, Kubernetes-like patterns, and API definitions to help generate valid catalog entities, validate existing definitions, and create automation scripts that keep your catalog in sync with your actual codebase.
 
-Setting Up Your Backstage Catalog Project
+## Setting Up Your Backstage Catalog Project
 
 Before creating workflows, organize your Backstage catalog configuration in a structured way. The typical approach involves storing entity definitions alongside your code or in a dedicated catalog repository.
 
@@ -57,7 +55,7 @@ This is a Backstage software catalog repository. Follow these conventions:
 5. Reference external APIs using the spec.apispec or spec.definition fields
 ```
 
-Creating Service Entities with Claude Code
+## Creating Service Entities with Claude Code
 
 When adding new services to your catalog, Claude Code can generate the correct YAML structure based on your service description. Here's a practical workflow for creating service entities:
 
@@ -90,11 +88,11 @@ Claude Code can help you:
 - Identify missing ownership information
 - Create relationships between entities
 
-Automating Catalog Updates
+## Automating Catalog Updates
 
 A common challenge in Backstage catalog management is keeping entities synchronized with actual code. Claude Code can help create automation workflows that handle several scenarios:
 
-Bulk Entity Generation
+## Bulk Entity Generation
 
 When migrating existing services to Backstage, you might need to create many entities at once. Claude Code can analyze your repository structure and generate appropriate catalog entries:
 
@@ -103,7 +101,7 @@ Claude Code can process a list of repositories and generate
 corresponding catalog entities with proper metadata
 ```
 
-Relationship Mapping
+## Relationship Mapping
 
 Backstage entities can reference each other through relationships like `providesApis`, `consumesApis`, and `dependsOn`. Claude Code helps establish these relationships by analyzing your code dependencies:
 
@@ -123,7 +121,7 @@ spec:
     - component:payment-service
 ```
 
-Validating Entity Definitions
+## Validating Entity Definitions
 
 Backstage requires specific validation for entities to be ingested correctly. Claude Code can validate your entities against the schema and identify issues before deployment:
 
@@ -154,7 +152,7 @@ async function validateCatalog() {
 }
 ```
 
-Documenting APIs in the Catalog
+## Documenting APIs in the Catalog
 
 One of Backstage's powerful features is API documentation. Claude Code excels at generating OpenAPI specifications and associating them with catalog entities:
 
@@ -177,7 +175,7 @@ spec:
     $openapi: ./api-specs/payment-api.yaml
 ```
 
-Workflow Best Practices
+## Workflow Best Practices
 
 When using Claude Code with Backstage, consider these best practices:
 
@@ -191,7 +189,7 @@ Maintain relationships: Keep entity relationships synchronized with actual code 
 
 Automate documentation: Use Claude Code to generate and update API documentation, README files, and other metadata that enriches your catalog entries.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Backstage software catalog management from a manual, error-prone process into an automated, consistent workflow. By using its understanding of YAML structures, API definitions, and code patterns, you can rapidly create valid entities, maintain relationships, and keep your catalog synchronized with your evolving codebase.
 

@@ -17,11 +17,11 @@ Claude Code Container Security Scanning Workflow Guide
 
 Container security scanning has become an essential part of modern DevSecOps practices. This guide shows you how to use Claude Code skills to build solid container security scanning workflows that integrate smoothly into your development pipeline.
 
-Why Container Security Scanning Matters
+## Why Container Security Scanning Matters
 
 Every container image you deploy could contain known vulnerabilities, misconfigurations, or exposed secrets. Without automated scanning, these security risks silently make their way into production. Claude Code skills can automate the entire security scanning lifecycle, from image building to deployment approval.
 
-Setting Up Your Security Scanning Environment
+## Setting Up Your Security Scanning Environment
 
 Before building workflows, ensure you have the necessary tools installed. The most popular container security scanner is Trivy, which you can install via:
 
@@ -39,7 +39,7 @@ For Kubernetes environments, Trivy Operator provides continuous vulnerability sc
 kubectl apply -f https://raw.githubusercontent.com/aquasecurity/trivy-operator/main/deploy/trivy-operator.yaml
 ```
 
-Creating a Claude Code Skill for Container Scanning
+## Creating a Claude Code Skill for Container Scanning
 
 Create a skill that performs comprehensive container security scans. Save this as `claude-skills/container-security-scan.md`:
 
@@ -88,13 +88,13 @@ Present findings in this structure:
 - Recommended fixes with versions
 ```
 
-Triaging Scan Results Effectively
+## Triaging Scan Results Effectively
 
 The key challenge is not just running scans but effectively triaging results. A single base image might contain dozens of vulnerabilities, many of which may not apply to your specific application or may have available patches. Claude Code can help prioritize findings and suggest remediation steps based on your project's dependency tree.
 
 For teams using MCP servers, the mcp-server-docker extension provides direct Docker daemon communication for scanning images without manual image export steps, reducing workflow friction and providing faster feedback during development.
 
-Integrating Security Scanning into CI/CD Pipelines
+## Integrating Security Scanning into CI/CD Pipelines
 
 Claude Code excels at automating CI/CD security workflows. Here's a practical example integrating Trivy into GitHub Actions:
 
@@ -140,7 +140,7 @@ jobs:
           sarif_file: 'trivy-results.sarif'
 ```
 
-Continuous Security with Trivy Operator
+## Continuous Security with Trivy Operator
 
 For Kubernetes deployments, Trivy Operator provides automatic scanning of running pods. Create a configuration:
 
@@ -163,7 +163,7 @@ spec:
 
 The operator automatically scans new images and running pods, reporting vulnerabilities through Kubernetes resources and Prometheus metrics.
 
-Building a Multi-Stage Security Workflow
+## Building a Multi-Stage Security Workflow
 
 Claude Code skills can orchestrate complex security workflows. Here's a pattern for a comprehensive pipeline:
 
@@ -208,7 +208,7 @@ Pipeline Stages
    - Enable continuously scanning
 ```
 
-Best Practices for Container Security
+## Best Practices for Container Security
 
 Follow these practices when implementing container security with Claude Code:
 
@@ -218,7 +218,7 @@ Follow these practices when implementing container security with Claude Code:
 - Set severity thresholds: Fail builds on CRITICAL vulnerabilities, warn on HIGH
 - Monitor continuously: Deploy operators that continuously scan running workloads
 
-Automating Vulnerability Remediation
+## Automating Vulnerability Remediation
 
 Claude Code can help automate the remediation process. Create a skill that:
 
@@ -233,7 +233,7 @@ trivy image --format json --output scan.json myapp:latest
 jq '.Results[].Vulnerabilities[] | select(.FixedVersion != null)' scan.json
 ```
 
-Conclusion
+## Conclusion
 
 Container security scanning is critical for modern applications. Claude Code skills enable you to automate vulnerability detection, integrate security into CI/CD pipelines, and maintain continuous security posture. Start with basic Trivy scanning and progressively add more sophisticated automation as your security maturity grows.
 

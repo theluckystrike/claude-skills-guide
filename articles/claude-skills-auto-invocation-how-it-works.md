@@ -16,7 +16,7 @@ permalink: /claude-skills-auto-invocation-how-it-works/
 
 Some Claude Code skills activate automatically without you typing `/skill-name` explicitly. This is the auto invocation system. an intelligent layer that checks skill TRIGGER conditions against your current request and loads the relevant skill when there's a match.
 
-Understanding the Auto Invocation Mechanism
+## Understanding the Auto Invocation Mechanism
 
 Each skill file can declare a TRIGGER condition. a set of patterns that tells Claude when to auto-invoke the skill without an explicit command. When your request or context matches a TRIGGER, Claude loads that skill and follows its instructions automatically.
 
@@ -29,7 +29,7 @@ DO NOT TRIGGER when: user only mentions PDF in passing without requesting file o
 
 This keeps interactions focused. skills load when relevant, not on every mention of a keyword.
 
-The Auto-Invocation Pipeline
+## The Auto-Invocation Pipeline
 
 Before Claude processes your message normally, it runs through a structured evaluation sequence:
 
@@ -39,7 +39,7 @@ Before Claude processes your message normally, it runs through a structured eval
 4. Threshold filtering: scores below the activation threshold are dropped
 5. Skill dispatch: the best-matching skill is invoked
 
-How the System Detects Skill Requirements
+## How the System Detects Skill Requirements
 
 The detection process uses semantic similarity, not substring matching. When you ask "run tests on this function," the system understands you are requesting testing, the context involves code, you want execution. the `/tdd` skill watches for these intent signals. Saying "check if this code handles edge cases" can trigger `/tdd` even without mentioning "test."
 
@@ -59,7 +59,7 @@ Skills are explicitly invoked with the `/skill-name` slash command prefix. They 
 
 The skill definitions themselves are what Claude reads to understand when to activate. To understand how those definitions are structured, see [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/).
 
-Specific Trigger Phrases Work Better Than Generic Ones
+## Specific Trigger Phrases Work Better Than Generic Ones
 
 Describe specific trigger scenarios in the skill's body content:
 
@@ -73,27 +73,27 @@ A trigger description that is too generic creates noise:
 When the user asks for help with code  # fires on almost any development request
 ```
 
-Practical Examples
+## Practical Examples
 
-Working with Documents
+## Working with Documents
 
 When you ask Claude to work with documents, the system automatically loads relevant processing capabilities. For instance, requesting modifications to a `.docx` file invokes the docx skill, giving Claude awareness of paragraph styles, tracked changes, and document formatting. Similarly, spreadsheet operations with `.xlsx` files automatically engage the xlsx skill, providing formula support and data visualization capabilities. For a full breakdown of document-processing skills in data workflows, see [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/).
 
-Development Workflows
+## Development Workflows
 
 In development contexts, auto invocation significantly accelerates workflows. When you mention needing tests, the tdd skill activates with awareness of testing frameworks and assertion patterns. Working with presentations? The pptx skill loads with layout and formatting knowledge. This means less manual skill selection and more immediate productivity.
 
-Creative and Design Tasks
+## Creative and Design Tasks
 
 Design-oriented requests trigger specialized creative skills. For visual design work, the canvas-design skill provides composition principles and color theory knowledge.
 
-The Progressive Disclosure Model
+## The Progressive Disclosure Model
 
 Auto invocation follows a three-tier disclosure approach. At level one, you see skill names and descriptions, the basic catalog of capabilities. At level two, you can load complete skill guidance for detailed understanding. At level three, skills access additional resources and specialized tooling.
 
 This design philosophy means you don't need to memorize all available skills. Simply express what you want to accomplish, and Claude intelligently selects the right toolset. However, you maintain control, you can explicitly invoke any skill regardless of automatic detection.
 
-Explicit Skill Invocation
+## Explicit Skill Invocation
 
 While auto invocation handles most cases, explicit invocation provides precision control. You can directly request a specific skill:
 
@@ -105,27 +105,27 @@ Use the skill-creator skill to scaffold a new skill file.
 
 Explicit invocation proves useful when working across multiple skill domains in a single session or when automatic detection doesn't match your intent. For a side-by-side look at when explicit skill invocation beats plain prompting, see [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/).
 
-Skill Categories and Triggers
+## Skill Categories and Triggers
 
 Understanding which triggers activate which skills helps you work more effectively:
 
 Document Processing: pdf, docx, xlsx, pptx, activated by file extensions and document-related verbs
 
-Development: tdd, invoke with /tdd for testing, building patterns
+## Development: tdd, invoke with /tdd for testing, building patterns
 
-Creative: canvas-design, invoke with /canvas-design for visual design
+## Creative: canvas-design, invoke with /canvas-design for visual design
 
-Knowledge: supermemory, engaged when searching or retrieving stored information
+## Knowledge: supermemory, engaged when searching or retrieving stored information
 
-Integration: webapp-testing, triggered by browser automation or testing requests
+## Integration: webapp-testing, triggered by browser automation or testing requests
 
-Best Practices for Using Auto Invocation
+## Best Practices for Using Auto Invocation
 
 To maximize the benefit of auto invocation, use natural language that clearly describes your goal. Specific, action-oriented requests produce better skill matching than vague descriptions. When working on complex projects spanning multiple domains, consider explicitly invoking skills to maintain context clarity.
 
 The auto invocation system handles most everyday interactions smoothly. Reserve explicit skill selection for specialized workflows or when you need specific tooling beyond what automatic detection provides.
 
-Real-World Development Scenarios
+## Real-World Development Scenarios
 
 Consider a typical development session where you need to build a new feature. You might start by discussing the requirements verbally. As soon as you mention creating API endpoints or working with database schemas, you can invoke /tdd to start with test-driven patterns for server-side development. When you switch to building the frontend interface and reference component libraries or styling frameworks, the system transitions to frontend-design capabilities automatically.
 
@@ -133,15 +133,15 @@ This automatic transition between skill domains reduces friction. You don't need
 
 Another practical scenario involves data analysis. When you upload a CSV file and ask for insights, the xlsx skill engages with spreadsheet manipulation capabilities. Requesting charts or graphs activates data visualization features. If you then ask to export those findings into a formatted report document, the transition to docx handling happens naturally without interruption.
 
-Understanding Skill Loading Behavior
+## Understanding Skill Loading Behavior
 
 Each skill operates at a specific privilege level within the system architecture. Core skills load with basic pattern recognition capabilities. Specialized skills like pdf or pptx bring additional dependencies and context windows optimized for their specific tasks. Understanding this hierarchy helps you predict system behavior and optimize your workflow.
 
 When skills load, they initialize with relevant tooling and knowledge bases. The pdf skill, for instance, includes libraries for text extraction, form manipulation, and document generation. The supermemory skill connects to storage systems for retrieving previously saved information. The webapp-testing skill provides browser automation primitives for validating frontend behavior.
 
-Troubleshooting Auto Invocation Issues
+## Troubleshooting Auto Invocation Issues
 
-Common Problems and Fixes
+## Common Problems and Fixes
 
 | Problem | Cause | Fix |
 |---------|-------|-----|

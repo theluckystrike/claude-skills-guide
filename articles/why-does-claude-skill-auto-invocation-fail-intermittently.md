@@ -16,13 +16,13 @@ permalink: /why-does-claude-skill-auto-invocation-fail-intermittently/
 
 If you've ever watched Claude fail to invoke a skill you expected it to use, despite having the perfect context for the `pdf` skill to kick in, or the `frontend-design` skill to handle your UI work, you're not alone. Auto invocation, the mechanism where Claude automatically selects and activates a skill based on your conversation context (explained in depth in [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/)), can fail without warning. Understanding why this happens and how to work around it will make you significantly more productive.
 
-How Auto Invocation Works
+## How Auto Invocation Works
 
 Claude determines whether to auto-invoke a skill by analyzing your conversation context against the skill's trigger conditions. When you mention terms like "extract the text from this PDF" or start describing a component layout, Claude's underlying model evaluates whether a registered skill matches the intent. The skill registry, populated through your skill configuration files, provides the matching logic.
 
 The system relies on several signals: your explicit language, implicit task patterns, and the skill's defined triggers. For a technical breakdown, see [how Claude skills auto-invocation works](/claude-skills-auto-invocation-how-it-works/). When any of these signals weaken or conflict, auto invocation fails.
 
-Common Causes of Intermittent Failure
+## Common Causes of Intermittent Failure
 
 1. Ambiguous Context Signals
 
@@ -50,9 +50,9 @@ This inconsistency means skills with flexible triggers can appear to fail interm
 
 Your current session's tool configuration affects which skills can actually execute. A skill designed for file operations requires `Read` and `Write` access. If your session has limited tools available, the skill may fail silently during invocation, causing Claude to skip it.
 
-Debugging Auto Invocation Failures
+## Debugging Auto Invocation Failures
 
-Check Active Skills
+## Check Active Skills
 
 Run your skill list command to see what's currently registered:
 
@@ -64,7 +64,7 @@ Most common command patterns
 
 Verify the skill you expect is actually loaded. Sometimes a configuration error prevents registration entirely.
 
-Force Manual Invocation
+## Force Manual Invocation
 
 When auto invocation fails, invoke manually to confirm the skill works:
 
@@ -76,14 +76,14 @@ When auto invocation fails, invoke manually to confirm the skill works:
 
 If manual invocation succeeds, the issue is specifically with auto-detection, not the skill itself.
 
-Review Recent Context
+## Review Recent Context
 
 Examine your last few messages. Did you accidentally change the context in a way that masked the trigger? Try restating your intent more explicitly:
 
 Instead of: "Can you extract the data?"
 Try: "Can you use the pdf skill to extract the data?"
 
-Check Skill Configuration Files
+## Check Skill Configuration Files
 
 Open your skill definition and verify the triggers haven't been accidentally modified:
 
@@ -97,9 +97,9 @@ triggers:
 
 Ensure your recent conversation actually contains these trigger patterns.
 
-Practical Solutions
+## Practical Solutions
 
-Use Explicit Invocations When It Matters
+## Use Explicit Invocations When It Matters
 
 For critical workflows, don't rely on auto invocation. Start your request with the skill name:
 
@@ -110,19 +110,19 @@ For critical workflows, don't rely on auto invocation. Start your request with t
 
 This guarantees the skill activates regardless of context ambiguity.
 
-Structure Skills with Distinct Triggers
+## Structure Skills with Distinct Triggers
 
 When creating custom skills, use triggers that don't overlap with existing skills. If you have a `design-system` skill, avoid triggers like "design" or "UI" that would conflict with `frontend-design`.
 
-Keep Conversations Focused
+## Keep Conversations Focused
 
 Long conversations with multiple topics increase the chance of context dilution. Start new conversations for distinct tasks. This prevents token truncation from hiding your skill triggers.
 
-Verify Tool Permissions
+## Verify Tool Permissions
 
 Confirm your session has the tools your skill requires. A skill like `canvas-design` needs specific tool access to generate images. Without proper permissions, invocation may fail silently.
 
-When to Expect This Behavior
+## When to Expect This Behavior
 
 Auto invocation failure is more likely in these scenarios:
 
@@ -131,7 +131,7 @@ Auto invocation failure is more likely in these scenarios:
 - Custom skill conflicts: Self-created skills with similar triggers to each other or to community skills
 - Resource-constrained sessions: Lower token limits or restricted tool access
 
-Building Reliable Skill Workflows
+## Building Reliable Skill Workflows
 
 The most reliable approach combines auto invocation as a convenience with manual invocation as a guarantee. Expect intermittent failures, plan for them, and use explicit skill calls when precision matters. Skills like `pdf`, `frontend-design`, and `tdd` all work best when you provide clear signals, even a simple prefix like `/skill-name` removes all ambiguity.
 

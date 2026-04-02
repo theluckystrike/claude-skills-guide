@@ -16,7 +16,7 @@ score: 8
 
 Package registry workflows are fundamental to modern software development. Whether you're publishing npm packages, pushing Python distributions to PyPI, or managing container images in a registry, these repetitive tasks are perfect candidates for automation with Claude Code. This tutorial walks you through building skills that streamline your entire package management lifecycle.
 
-Understanding Package Registry Workflows
+## Understanding Package Registry Workflows
 
 Before diving into automation, let's identify the common operations you'll encounter when working with package registries:
 
@@ -28,7 +28,7 @@ Before diving into automation, let's identify the common operations you'll encou
 
 Claude Code can assist with all of these operations by reading your project configuration, executing registry commands, and handling the git operations that accompany releases.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 First, ensure Claude Code has access to the necessary tools for your registry workflow. When starting a session, confirm these tools are available:
 
@@ -50,11 +50,11 @@ You are a package registry automation assistant. Your role is to help publish pa
 
 This skill configuration ensures Claude has the necessary capabilities while staying focused on registry operations.
 
-Publishing npm Packages
+## Publishing npm Packages
 
 One of the most common workflows is publishing JavaScript/TypeScript packages to npm. Here's how to streamline this with Claude Code:
 
-Step 1: Verify Package Configuration
+## Step 1: Verify Package Configuration
 
 Before publishing, Claude can check your package.json for common issues:
 
@@ -67,7 +67,7 @@ Before publishing, Claude can check your package.json for common issues:
 - files array excludes unnecessary dependencies
 ```
 
-Step 2: Version Bumping
+## Step 2: Version Bumping
 
 When you're ready to release a new version, ask Claude to handle the version bump:
 
@@ -82,7 +82,7 @@ Claude will:
 4. Commit the version change
 5. Optionally run `npm publish`
 
-Step 3: HandlingScoped Packages
+## Step 3: HandlingScoped Packages
 
 For organizations using scoped packages (@myorg/package), Claude understands the authentication requirements:
 
@@ -93,11 +93,11 @@ For private scopes:
 npm publish --access restricted
 ```
 
-Working with PyPI Registries
+## Working with PyPI Registries
 
 Python package distribution via PyPI follows a different pattern. Claude Code can guide you through the setup and publication process.
 
-Preparing Your Package
+## Preparing Your Package
 
 Ensure your project follows modern Python packaging standards:
 
@@ -112,7 +112,7 @@ my-package/
          __init__.py
 ```
 
-Building and Publishing
+## Building and Publishing
 
 When you ask Claude to publish to PyPI, it will:
 
@@ -135,11 +135,11 @@ readme = "README.md"
 requires-python = ">=3.8"
 ```
 
-Container Registry Workflows
+## Container Registry Workflows
 
 For Docker and container registries, Claude Code helps manage image building, tagging, and pushing.
 
-Building and Tagging Images
+## Building and Tagging Images
 
 Request Claude to build and tag a new image version:
 
@@ -156,7 +156,7 @@ docker push myregistry/app:v2.1.0
 docker push myregistry/app:latest
 ```
 
-Managing Multi-Platform Images
+## Managing Multi-Platform Images
 
 Modern registries support multi-architecture images. Claude can orchestrate builds across platforms:
 
@@ -167,11 +167,11 @@ docker buildx build \
   --push .
 ```
 
-Automating Dependency Updates
+## Automating Dependency Updates
 
 Beyond publishing, Claude Code excels at keeping dependencies fresh and secure.
 
-Checking for Updates
+## Checking for Updates
 
 Ask Claude to audit your dependencies:
 
@@ -184,7 +184,7 @@ Claude will run:
 - `pip list --outdated` for Python packages
 - `docker scout cves` for container vulnerabilities
 
-Applying Safe Updates
+## Applying Safe Updates
 
 For minor and patch updates that rarely break compatibility:
 
@@ -198,17 +198,17 @@ Claude will:
 3. Run tests to verify compatibility
 4. Commit changes with descriptive messages
 
-Best Practices for Registry Automation
+## Best Practices for Registry Automation
 
 When building skills for package registry workflows, keep these recommendations in mind:
 
-Security First
+## Security First
 
 - Never hardcode tokens: Use environment variables or secrets management
 - Validate before publish: Run tests and linting before any release
 - Use scoped credentials: Create specific tokens for publishing with minimal permissions
 
-Idempotent Operations
+## Idempotent Operations
 
 Design your workflows to be safely repeatable:
 
@@ -216,7 +216,7 @@ Design your workflows to be safely repeatable:
 - Use `--force` or `--allow-existing` flags when appropriate
 - Implement rollback procedures for failed releases
 
-Comprehensive Logging
+## Comprehensive Logging
 
 Claude should log all registry operations:
 
@@ -225,12 +225,11 @@ Include verbose output and capture logs
 npm publish --dry-run 2>&1 | tee release-log.txt
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms package registry workflows from manual, error-prone processes into automated, reliable operations. Whether you're managing npm packages, Python distributions, or container images, the patterns covered in this tutorial provide a foundation for efficient registry automation.
 
 Start with simple workflows like version bumping and dependency checking, then gradually expand to full publication pipelines. The key is maintaining the balance between automation and the oversight necessary to catch issues before they reach your users.
-
 
 Related Reading
 

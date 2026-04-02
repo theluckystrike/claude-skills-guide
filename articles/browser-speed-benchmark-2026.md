@@ -19,7 +19,7 @@ Browser performance remains a critical factor for web developers and power users
 
 This guide covers practical methods to benchmark browser speed in 2026, with code examples you can run immediately.
 
-Why Benchmark Browser Speed
+## Why Benchmark Browser Speed
 
 Different browsers use different rendering engines, JavaScript interpreters, and hardware acceleration strategies. These differences manifest in real-world performance variations that affect page load times, animation smoothness, and JavaScript execution speed.
 
@@ -27,7 +27,7 @@ For developers, benchmarking helps identify performance bottlenecks in web appli
 
 Beyond raw speed, benchmarking also surfaces consistency problems. A browser that renders your application quickly on average but occasionally stalls for 500ms creates a worse user experience than one that is uniformly 20% slower. Understanding variance, not just averages, is one of the most practical insights benchmarking provides.
 
-The Browser Landscape in 2026
+## The Browser Landscape in 2026
 
 Before diving into methodology, it helps to understand the current competitive landscape. The four major desktop browsers each use distinct engine stacks:
 
@@ -44,7 +44,7 @@ Firefox uses SpiderMonkey, which has improved dramatically over the past several
 
 Safari uses WebKit and JavaScriptCore, and on Apple Silicon hardware it benefits from tight hardware integration that synthetic benchmarks frequently undercount. Battery efficiency metrics especially favor Safari on macOS.
 
-Key Metrics to Measure
+## Key Metrics to Measure
 
 Before running benchmarks, understand which metrics matter:
 
@@ -57,7 +57,7 @@ These four categories map to four different user experiences. Slow JavaScript ex
 
 Knowing which metric matters for your workload helps you design targeted benchmarks rather than running generic tests that may not reflect your users' actual experience.
 
-Simple JavaScript Benchmark
+## Simple JavaScript Benchmark
 
 The most straightforward way to measure JavaScript performance uses the `performance.now()` API:
 
@@ -122,7 +122,7 @@ coldStartBenchmark();
 
 Reporting both average and variance gives you a more honest picture of what your users will experience.
 
-DOM Manipulation Benchmark
+## DOM Manipulation Benchmark
 
 DOM operations often represent the biggest performance bottleneck in web applications:
 
@@ -184,7 +184,7 @@ function domBenchmarkOptimized() {
 
 Run both versions and compare the numbers. The ratio between them tells you how efficiently each browser batches layout operations, a detail that matters when your application does a lot of list rendering.
 
-CSS Animation and Rendering Benchmark
+## CSS Animation and Rendering Benchmark
 
 JavaScript engine speed is only one axis of browser performance. CSS animation throughput directly affects how smooth your UI feels:
 
@@ -233,7 +233,7 @@ animationBenchmark();
 
 This canvas benchmark measures how many frames per second the browser can sustain while performing geometric calculations and 2D rendering. Expect results around 55-60 FPS on modern hardware in browsers with good GPU acceleration. Results below 40 FPS suggest the browser is not using hardware acceleration effectively, which you can verify by checking the browser's GPU process in its task manager.
 
-Using Speedometer 3.0
+## Using Speedometer 3.0
 
 Speedometer, developed by Apple, remains the industry standard for browser responsiveness testing. In 2026, Speedometer 3.0 provides comprehensive testing across multiple browser subsystems.
 
@@ -262,7 +262,7 @@ Other standardized benchmarks worth running:
 
 Running all four gives you a multi-dimensional profile rather than a single number that can mislead.
 
-Browser-Specific Performance APIs
+## Browser-Specific Performance APIs
 
 Modern browsers expose specialized APIs for performance measurement:
 
@@ -334,7 +334,7 @@ onINP(sendToAnalytics);  // Interaction to Next Paint (replaced FID as a Core We
 
 This captures real-world performance across your actual user base, which synthetic benchmarks can never fully replicate. Field data and lab data together give you the complete picture.
 
-Comparing Results Across Browsers
+## Comparing Results Across Browsers
 
 Run the same benchmarks across Chrome, Firefox, Edge, and Safari to get comparative data. For accurate results:
 
@@ -357,7 +357,7 @@ A structured comparison table helps you document and share results clearly:
 
 Numbers here are representative ranges, not precise measurements. Your hardware, OS, and background load will produce different absolute numbers. What matters for your decisions is the relative ranking on your specific machine with your specific workload.
 
-Automating Benchmarks with Puppeteer
+## Automating Benchmarks with Puppeteer
 
 For continuous performance testing, automate browser benchmarks using Puppeteer:
 
@@ -446,7 +446,7 @@ auditPages(urls).then(results => {
 
 Running this in CI on every pull request catches performance regressions before they reach production. Store results over time and you build a performance history that lets you attribute changes to specific commits.
 
-Memory Usage Benchmarking
+## Memory Usage Benchmarking
 
 Memory efficiency affects long-running browser sessions. A browser that leaks memory across tab navigation will feel sluggish after an hour of use even if its benchmark scores are excellent.
 
@@ -496,7 +496,7 @@ memoryLeakTest();
 
 Note that `performance.measureUserAgentSpecificMemory()` requires a cross-origin isolated context (the page must be served with appropriate `COOP` and `COEP` headers). For development testing, Chrome DevTools' Memory panel provides detailed heap snapshots without this restriction.
 
-Interpreting Your Results
+## Interpreting Your Results
 
 When analyzing benchmark data, focus on consistency over single high or low scores. Performance variance often matters more than absolute numbers. A browser that consistently performs at 100ms is more predictable than one that sometimes hits 50ms and other times 200ms.
 
@@ -509,7 +509,7 @@ A practical framework for interpreting results:
 3. Test on representative hardware. benchmarking on a high-end developer machine understates performance problems that real users with mid-range devices will experience
 4. Test on a slow network. browser parsing and rendering performance compounds with network latency; tools like Chrome DevTools network throttling let you simulate 3G conditions
 
-Conclusion
+## Conclusion
 
 Browser speed benchmarking provides actionable data for both development optimization and browser selection. The techniques covered here, from simple JavaScript timing to automated Puppeteer testing, give you the tools to measure performance objectively.
 
@@ -518,7 +518,6 @@ Remember that synthetic benchmarks represent controlled conditions. Real-world p
 The most useful benchmarking practice combines three sources: standardized benchmarks (Speedometer, JetStream) for cross-browser comparison, custom micro-benchmarks targeting your specific code patterns, and field data via the Web Vitals library capturing what real users actually experience. No single source tells the whole story, but together they give you a reliable, actionable view of browser performance for your workload.
 
 Run your own benchmarks and share results. Performance characteristics change with each browser update, making regular testing valuable for staying informed.
-
 
 Related Reading
 

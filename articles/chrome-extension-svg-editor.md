@@ -18,19 +18,19 @@ Chrome Extension SVG Editor: A Developer Guide
 
 Creating a Chrome extension for SVG editing opens up powerful possibilities for web developers, designers, and power users who need to manipulate scalable vector graphics directly in their browser. This guide walks you through the core concepts, APIs, and practical implementation patterns for building a functional SVG editor extension.
 
-Understanding SVG in the Browser
+## Understanding SVG in the Browser
 
 Scalable Vector Graphics (SVG) are XML-based images that can be manipulated with code. Browsers provide solid support for SVG through the DOM, allowing you to select, modify, and create SVG elements just like HTML elements. A Chrome extension can use this capability to provide an in-browser editing experience without requiring users to switch to dedicated desktop software.
 
 The key advantage of building a browser-based SVG editor is integration with existing workflows. Users can edit SVGs on websites they visit, modify downloaded assets, or create new graphics without leaving their browser environment.
 
-Extension Architecture Overview
+## Extension Architecture Overview
 
 A Chrome extension SVG editor typically consists of three main components working together. The content script operates within web page contexts, allowing direct interaction with SVG elements on any page. The background service worker manages extension state, handles file operations, and coordinates communication between different parts of the extension. The popup or side panel provides the user interface for accessing editing tools.
 
 This three-component architecture ensures that your extension can work with SVG content anywhere on the web while maintaining a responsive interface.
 
-Setting Up the Manifest
+## Setting Up the Manifest
 
 Every Chrome extension begins with the manifest file. For an SVG editor, you'll need Manifest V3 with specific permissions to interact with page content and handle file operations.
 
@@ -66,7 +66,7 @@ Every Chrome extension begins with the manifest file. For an SVG editor, you'll 
 
 This manifest grants the essential permissions for capturing page content, storing user preferences, and handling file downloads.
 
-Building the Content Script
+## Building the Content Script
 
 The content script is the heart of your SVG editor, responsible for detecting and interacting with SVG elements on the current page. Here's a practical implementation:
 
@@ -122,7 +122,7 @@ new SVGEditor();
 
 This content script detects all SVG elements on a page and provides methods to inspect and modify them based on commands from the popup interface.
 
-Creating the Popup Interface
+## Creating the Popup Interface
 
 The popup provides users with controls for selecting and editing SVG elements. A practical implementation uses a clean interface with element selection and attribute editing:
 
@@ -168,7 +168,7 @@ The popup provides users with controls for selecting and editing SVG elements. A
 </html>
 ```
 
-Implementing Popup Logic
+## Implementing Popup Logic
 
 The popup script connects user interface actions to the content script through message passing:
 
@@ -233,13 +233,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Advanced Features to Consider
+## Advanced Features to Consider
 
 Beyond basic color and stroke modifications, consider implementing path manipulation for more advanced editing capabilities. The SVG `path` element uses the `d` attribute with commands like M (move), L (line), C (cubic bezier), and Q (quadratic bezier). Parsing and modifying these path commands allows users to reshape vector graphics.
 
 Rotation and scaling transformations can be applied using SVG transform attributes. The transform attribute supports rotate, scale, translate, and matrix operations that can be combined for complex transformations.
 
-Handling Edge Cases
+## Handling Edge Cases
 
 When building SVG editor extensions, you'll encounter several common challenges. Inline SVGs versus external references require different handling, inline SVGs exist directly in the DOM while external ones load via the `img` tag or `background-image`. Your extension should detect both types and provide appropriate functionality.
 
@@ -248,7 +248,6 @@ Cross-origin restrictions can limit your ability to read or modify certain SVG c
 Performance matters when dealing with complex SVG documents. Use efficient DOM queries and consider implementing debouncing for real-time editing features to maintain smooth performance.
 
 Building a Chrome extension for SVG editing provides a valuable tool for developers and designers who work with vector graphics regularly. The architecture and code examples here give you a foundation to create a functional editor that integrates smoothly with the browser workflow.
-
 
 Related Reading
 

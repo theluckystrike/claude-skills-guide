@@ -13,20 +13,17 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code for Zellij Terminal Multiplexer Workflow
 
 Zellij is a modern terminal multiplexer written in Rust that offers a fresh approach to terminal session management. Unlike traditional multiplexers, Zellij provides a plugin system, layout management, and first-class support for strider plugins that make it particularly well-suited for AI-assisted development workflows. This guide explores how to integrate Claude Code with Zellij to create a powerful, persistent development environment.
 
-Why Zellij for Claude Code Development
+## Why Zellij for Claude Code Development
 
 Zellij brings several advantages that make it an excellent choice for Claude Code workflows. The layout system allows you to predefined terminal arrangements that persist across sessions, meaning you can set up your ideal development environment once and restore it instantly. The plugin ecosystem enables extending functionality without external dependencies, and the Rust-based architecture provides excellent performance even with large terminal histories.
 
 The strider plugins in Zellij are particularly relevant for AI workflows, as they allow for closer integration with development tools and automation scripts. When combined with Claude Code, you get persistent context, organized workspaces, and the ability to run multiple AI-assisted tasks in parallel.
 
-Setting Up Zellij for Claude Code
+## Setting Up Zellij for Claude Code
 
 Before integrating with Claude Code, ensure Zellij is installed on your system. The installation process varies by operating system:
 
@@ -59,7 +56,7 @@ layout {
 
 This creates a layout with a status bar pane at the top and two vertical panes below for running Claude Code and other development tools simultaneously.
 
-Persistent Claude Code Sessions in Zellij
+## Persistent Claude Code Sessions in Zellij
 
 One of Zellij's strongest features is its session persistence. Unlike tmux, which requires explicit session attachment, Zellij sessions can be configured to survive terminal closures and automatically reattach when you return.
 
@@ -85,7 +82,7 @@ fi
 
 Make this script executable and use it to start Claude Code in a persistent Zellij session. This approach ensures your Claude Code session survives SSH disconnections, system restarts, and terminal closures.
 
-Running Multiple Claude Code Instances in Parallel
+## Running Multiple Claude Code Instances in Parallel
 
 Zellij's pane and layout system makes it straightforward to run multiple Claude Code instances for parallel task processing. This is particularly useful when you need to work on different features simultaneously or when running tests while continuing development.
 
@@ -114,7 +111,7 @@ In pane 3
 cd /path/to/tests && claude
 ```
 
-Integrating Zellij Layouts with Claude Code Workflows
+## Integrating Zellij Layouts with Claude Code Workflows
 
 Zellij layouts can be customized to match specific development workflows. For a typical web development scenario with Claude Code, consider this layout:
 
@@ -143,7 +140,7 @@ layout {
 
 This layout dedicates space for Claude Code while keeping development servers and container monitoring visible. The top pane provides room for displaying Claude Code's thinking process and tool outputs.
 
-Using Zellij Plugins with Claude Code
+## Using Zellij Plugins with Claude Code
 
 Zellij supports plugins that can enhance your Claude Code workflow. The official catppuccin plugin, for example, provides a pleasing color scheme that reduces eye strain during long coding sessions with Claude Code:
 
@@ -163,7 +160,7 @@ EOF
 
 For development workflows involving Claude Code, consider creating custom plugins that automate common tasks. The plugin system uses WebAssembly, allowing you to write custom functionality in Rust that interacts with your terminal sessions.
 
-Advanced Workflow: Claude Code with Zellij and Git
+## Advanced Workflow: Claude Code with Zellij and Git
 
 Combine Zellij's session management with Git operations for a complete AI-assisted development workflow. Create a layout that separates your Claude Code session from Git operations:
 
@@ -198,7 +195,7 @@ zellij send-keys "npm run dev" "Enter"
 
 This script creates a complete development environment with Claude Code, Git monitoring, and development servers all running simultaneously.
 
-Best Practices for Zellij and Claude Code Integration
+## Best Practices for Zellij and Claude Code Integration
 
 When combining Zellij with Claude Code, follow these best practices to maximize productivity:
 
@@ -222,7 +219,7 @@ keybinds {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Zellij provides a solid foundation for Claude Code workflows through its session persistence, flexible layouts, and plugin ecosystem. By setting up proper layouts, using multi-pane configurations, and creating automation scripts, you can build a development environment that maintains context across sessions and enables parallel AI-assisted development. The combination of Zellij's modern architecture with Claude Code's AI capabilities creates a powerful, productive workflow for developers working on complex projects.
 

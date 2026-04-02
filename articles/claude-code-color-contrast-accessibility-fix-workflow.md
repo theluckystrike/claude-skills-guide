@@ -16,19 +16,19 @@ permalink: /claude-code-color-contrast-accessibility-fix-workflow/
 
 [Accessibility issues in web applications often slip through development cycles](/best-claude-code-skills-to-install-first-2026/), particularly color contrast problems that affect users with visual impairments. Addressing these issues systematically saves time and ensures compliance with WCAG guidelines. This workflow uses Claude Code skills to automate detection, analysis, and remediation of color contrast problems in your projects.
 
-Understanding Color Contrast Requirements
+## Understanding Color Contrast Requirements
 
 Web Content Accessibility Guidelines (WCAG) 2.1 require a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text. Many teams discover contrast issues late in development, leading to expensive redesigns. Integrating accessibility checks into your development workflow prevents these problems from reaching production.
 
 The challenge lies not just in detecting issues, but in systematically fixing them across entire codebases. Manual checking becomes impractical as projects grow, which is where Claude Code skills provide significant value.
 
-Setting Up Your Accessibility Workflow
+## Setting Up Your Accessibility Workflow
 
 Before starting, ensure you have the necessary Claude Code skills installed. The [frontend-design skill](/best-claude-code-skills-for-frontend-development/) includes accessibility-aware component generation, while [tdd](/best-claude-skills-for-developers-2026/) helps you write tests that validate contrast requirements.
 
 Check your `~/.claude/skills/` directory to verify these skills are present. If they are not installed, download the `.md` files from community GitHub repositories and place them in `~/.claude/skills/`. There is no official marketplace.
 
-Step 1: Scan Your Project for Contrast Issues
+## Step 1: Scan Your Project for Contrast Issues
 
 Start by analyzing your codebase for potential color contrast violations. Ask Claude to examine your CSS files, component styles, and inline styles to identify color pairs that fail WCAG requirements. Provide the relevant style files as context and request a review of color combinations for WCAG AA compliance. Claude will identify specific hex color codes, affected elements, and calculated contrast ratios.
 
@@ -49,7 +49,7 @@ Object.entries(colors).forEach(([name, value]) => {
 });
 ```
 
-Step 2: Generate Accessible Color Alternatives
+## Step 2: Generate Accessible Color Alternatives
 
 Once you have identified problematic colors, the next step involves generating compliant alternatives. The frontend-design skill can suggest color modifications that maintain your design intent while meeting accessibility standards.
 
@@ -67,7 +67,7 @@ Use frontend-design to update multiple files
 /update-color-variables --old "#777777" --new "#595959" --files "src//*.css"
 ```
 
-Step 3: Automate Testing for Contrast Compliance
+## Step 3: Automate Testing for Contrast Compliance
 
 Integrating contrast checks into your testing pipeline ensures new code does not introduce accessibility regressions. The tdd skill helps you create tests that validate contrast requirements.
 
@@ -91,7 +91,7 @@ describe('Color Contrast Compliance', () => {
 
 Run these tests as part of your CI/CD pipeline to catch contrast issues before deployment.
 
-Step 4: Document Accessibility Changes
+## Step 4: Document Accessibility Changes
 
 Maintaining documentation of accessibility improvements helps teams track compliance over time. The pdf skill can generate accessibility reports for stakeholders.
 
@@ -102,7 +102,7 @@ Generate accessibility report
 
 This creates a comprehensive document showing your current contrast compliance status, areas that have been fixed, and remaining issues. Share these reports during sprint reviews or include them in compliance documentation.
 
-Step 5: Continuous Monitoring with supermemory
+## Step 5: Continuous Monitoring with supermemory
 
 For ongoing projects, use the supermemory skill to maintain context about accessibility decisions across sessions. This skill helps Claude Code remember which colors have been modified, why certain choices were made, and what still needs attention.
 
@@ -113,7 +113,7 @@ Save accessibility context
 
 When you return to the project later, Claude Code can reference this context and avoid reintroducing contrast issues.
 
-Practical Example: Fixing a Component Library
+## Practical Example: Fixing a Component Library
 
 Consider a button component with insufficient contrast:
 
@@ -143,7 +143,7 @@ Using the workflow described above:
 }
 ```
 
-Workflow Integration Tips
+## Workflow Integration Tips
 
 Integrate this workflow effectively by establishing these practices:
 
@@ -154,7 +154,7 @@ Integrate this workflow effectively by establishing these practices:
 
 The canvas-design skill also helps by generating accessible color palettes during the design phase, preventing issues before implementation begins.
 
-Conclusion
+## Conclusion
 
 Addressing color contrast accessibility issues does not require manual testing across every page of your application. By using Claude Code skills like frontend-design, tdd, pdf, and supermemory, you can build automated workflows that detect, fix, test, and document accessibility compliance. This systematic approach saves development time while ensuring your applications remain accessible to all users.
 

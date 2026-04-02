@@ -13,13 +13,11 @@ permalink: /claude-code-nextjs-image-optimization-guide/
 ---
 {% raw %}
 
-Claude Code Next.js Image Optimization Guide
-
 Image optimization in Next.js combines the framework's built-in Image component with modern formats like WebP and AVIF. [When you pair Next.js image handling with Claude Code's CLI capabilities](/best-claude-code-skills-to-install-first-2026/), you can automate optimization workflows, validate image implementations, and maintain consistent performance across your application.
 
 This guide covers practical approaches for [developers using Claude Code for frontend work](/best-claude-code-skills-for-frontend-development/) with Next.js image optimization, from foundational component usage to advanced automation and testing patterns.
 
-Next.js Image Component Basics
+## Next.js Image Component Basics
 
 The Next.js Image component (`next/image`) provides automatic optimization out of the box. It handles lazy loading, format conversion, and responsive sizing without manual configuration. Here's a basic implementation:
 
@@ -46,7 +44,7 @@ The `priority` prop tells Next.js to preload this image, which is essential for 
 
 It is worth understanding what the Image component does automatically compared to a plain `<img>` tag. Next.js injects a `srcset` attribute based on the `sizes` prop you provide, serves WebP or AVIF where the browser supports it, applies lazy loading by default for below-the-fold images, and prevents cumulative layout shift (CLS) by reserving space for the image dimensions. These four behaviors alone account for most of the performance gains in image-heavy applications.
 
-Optimizing with Claude Code and frontend-design Skill
+## Optimizing with Claude Code and frontend-design Skill
 
 The `frontend-design` skill helps you structure image-heavy pages correctly. When you need to build a gallery or product listing, describe your requirements to Claude:
 
@@ -88,7 +86,7 @@ The `sizes` prop is critical here. It tells the browser how wide the image will 
 
 When asking Claude to generate components with the `frontend-design` skill, be specific about your grid structure. Telling Claude "three-column grid on desktop, single column on mobile" will produce a more accurate `sizes` value than a vague request about a "responsive gallery."
 
-Static Image Handling
+## Static Image Handling
 
 For images stored in your repository, place them in the `public` folder. Next.js treats these as static assets:
 
@@ -142,7 +140,7 @@ When working with static images, you can also use the `unoptimized` prop for ext
 
 This skips Next.js optimization entirely, useful when your CDN handles format conversion and resizing. Use `unoptimized` sparingly. it removes the automatic WebP/AVIF conversion and srcset generation. It is appropriate for assets served from a CDN like Cloudinary or Imgix that applies its own transformations via URL parameters.
 
-Remote Images Configuration
+## Remote Images Configuration
 
 Next.js requires explicit domain configuration for remote images. Update your `next.config.js`:
 
@@ -174,7 +172,7 @@ The `pathname` field supports wildcards. Using `'/'` permits any path on the hos
 
 For user-generated content where image URLs come from a database, you may not know all hostnames in advance. In that case, a common pattern is to proxy images through your own domain or use a dedicated image CDN that exposes a single consistent hostname. This keeps your `remotePatterns` list stable and avoids the need to redeploy whenever a new image source appears.
 
-Testing Image Implementations
+## Testing Image Implementations
 
 The `tdd` skill helps you [write tests for image components through a test-driven pipeline](/claude-tdd-skill-test-driven-development-workflow/). Describe your testing requirements:
 
@@ -218,7 +216,7 @@ Running tests through Claude's TDD workflow ensures your image components work c
 
 For end-to-end testing of image loading behavior, Playwright can verify that images actually load and appear correctly in a real browser. Ask Claude with the `tdd` skill to scaffold a Playwright test that checks LCP timing and confirms no images return a 404 status.
 
-Image Formats and Quality Settings
+## Image Formats and Quality Settings
 
 Next.js automatically converts images to WebP or AVIF based on browser support. AVIF offers better compression but takes longer to generate. Configure your preference in `next.config.js`:
 
@@ -256,7 +254,7 @@ For sites with thousands of product images, the default quality setting of 75 is
 />
 ```
 
-Fill Layout for Unknown Dimensions
+## Fill Layout for Unknown Dimensions
 
 When you do not know an image's dimensions at build time. user-uploaded content, CMS images. use the `fill` prop instead of `width` and `height`. The image expands to fill its parent container:
 
@@ -278,7 +276,7 @@ export function CoverImage({ src, alt }) {
 
 The parent `div` must have `position: relative` for the fill to work. The `aspectRatio` style locks the container to a predictable shape, which prevents layout shift. Using `objectFit: cover` crops the image to fit rather than stretching it. This pattern is common for blog post hero images, user avatars, and any context where content editors upload arbitrary image sizes.
 
-Automating Image Workflows
+## Automating Image Workflows
 
 You can combine Claude Code with build scripts to automate image processing. For example, generate blur placeholders during your build process:
 
@@ -338,7 +336,7 @@ buildManifest();
 
 Add this script to your `prebuild` npm script so it runs automatically before each deployment. Then import `image-manifest.json` in your components and read `blurDataURL` and dimensions from it. This eliminates the need to hardcode blur hashes or dimensions in component props while keeping everything static at runtime.
 
-Common Mistakes and How to Avoid Them
+## Common Mistakes and How to Avoid Them
 
 Missing `sizes` on gallery images. This is the single most common mistake. When `sizes` is absent, the browser assumes the image could be full-viewport width and downloads a large file even when the image renders at 300px. Always provide a `sizes` value that matches your CSS layout.
 
@@ -348,7 +346,7 @@ Not configuring `remotePatterns` before going to production. If your images come
 
 Relying on `fill` without a positioned parent. The `fill` prop requires `position: relative` on the parent. Without it, the image either collapses or overlaps other content. Always pair `fill` with explicit container dimensions.
 
-Summary
+## Summary
 
 Next.js image optimization works best when you understand the component's key features: the `priority` prop for above-the-fold content, the `sizes` prop for responsive images, direct imports for static assets, and proper remote domain configuration. The `fill` layout handles dynamic content where dimensions are unknown, and build-time scripts can generate blur placeholders and manifests to keep components clean. After optimizing images, you can deploy your Next.js app with confidence using [Claude Code's Vercel deployment workflow](/claude-code-vercel-deployment-nextjs-workflow-guide/). Using Claude Code with skills like `frontend-design` and `tdd` accelerates development while maintaining quality through tested implementations.
 

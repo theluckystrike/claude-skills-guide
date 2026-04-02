@@ -18,7 +18,7 @@ Claude Code for Security Scan Automation
 
 Security scanning automation has become essential for teams shipping code frequently. Claude Code provides a powerful foundation for building automated security workflows that catch vulnerabilities before they reach production. This guide shows you how to use Claude Code skills and hooks to create solid security scan pipelines. from dependency audits and secret detection through container scanning and full CI/CD integration.
 
-Why Automate Security Scanning with Claude Code
+## Why Automate Security Scanning with Claude Code
 
 Manual security reviews are slow and inconsistent. The same engineer who writes a feature rarely catches the subtle vulnerability they just introduced. Automated scanning solves the consistency problem, but most teams bolt it on as an afterthought. a GitHub Action that runs and whose results nobody reads.
 
@@ -33,7 +33,7 @@ The combination works particularly well across four scanning domains:
 | Static code analysis (SAST) | Semgrep, Bandit, ESLint | Maps findings to fix patterns in your codebase |
 | Container scanning | Trivy, Grype | Prioritizes base image upgrades vs package fixes |
 
-Setting Up Security Scan Skills
+## Setting Up Security Scan Skills
 
 Claude Code works best for security automation when you configure dedicated skills for different scanning tasks. The tdd skill proves surprisingly useful here. while designed for test-driven development, its structured approach to running commands and validating outputs maps directly to security scan execution.
 
@@ -87,7 +87,7 @@ For Python projects, extend the skill to cover multiple package managers:
 
 Once these skills are in place, you can trigger a full security sweep from a single Claude Code prompt: "Run the security-scanner skill and tell me which findings need immediate attention."
 
-Automating Dependency Vulnerability Scans
+## Automating Dependency Vulnerability Scans
 
 Dependency scanning represents one of the highest-ROI security automations. Tools like npm audit, pip-audit, and OWASP Dependency-Check all produce machine-readable output that Claude Code can process.
 
@@ -149,7 +149,7 @@ echo "pip-audit passed"
 exit 0
 ```
 
-Filtering Vulnerability Noise
+## Filtering Vulnerability Noise
 
 Raw `npm audit` output often contains dozens of findings, most of which are transitive dependencies you cannot directly fix. Claude Code helps here by filtering to what matters:
 
@@ -178,7 +178,7 @@ export function filterActionableVulns(auditJson) {
 
 Pass this to Claude Code and ask: "Which of these should I fix this sprint versus track in the backlog?"
 
-Secret Detection in Codebases
+## Secret Detection in Codebases
 
 Detecting secrets committed accidentally happens more often than teams realize. The supermemory skill offers an interesting approach. its document indexing capabilities can be adapted to track sensitive patterns across your codebase.
 
@@ -251,7 +251,7 @@ export async function runSecretScan(repoPath) {
 }
 ```
 
-What to Do When a Secret Is Found in History
+## What to Do When a Secret Is Found in History
 
 Finding a secret in the current working tree is straightforward. remove it and rotate the credential. Finding one in git history is harder. Claude Code can guide you through the remediation:
 
@@ -274,7 +274,7 @@ git push origin --force --tags
 
 Ask Claude Code to walk through this sequence with you. it can verify each step's output and flag if the secret is still present in any branch before you push.
 
-SAST Integration for Code Analysis
+## SAST Integration for Code Analysis
 
 Static Application Security Testing (SAST) tools analyze source code for vulnerabilities. Tools like Semgrep, Bandit (Python), and ESLint (with security rules) fit well into Claude Code workflows.
 
@@ -300,7 +300,7 @@ export async function parseSecurityReport(pdfPath) {
 
 This becomes valuable when integrating with commercial scanners that produce PDF reports. Claude Code can parse these and extract actionable data.
 
-Semgrep for Custom Rule Writing
+## Semgrep for Custom Rule Writing
 
 Semgrep is exceptional for codebases with custom security requirements. Unlike generic SAST tools, you write rules in the same language as your source code:
 
@@ -331,7 +331,7 @@ semgrep --config .semgrep/ --json --output semgrep-results.json .
 
 Then use Claude Code to analyze the results file: "Read semgrep-results.json and group findings by severity. For the ERROR-level findings, show me the file and line, and suggest a fix for each one."
 
-Bandit for Python Security Analysis
+## Bandit for Python Security Analysis
 
 Bandit integrates tightly with Python workflows:
 
@@ -368,7 +368,7 @@ The most common Bandit findings and their fixes:
 | B501 | TLS verification disabled | Remove `verify=False` from requests |
 | B602 | `subprocess` with `shell=True` | Use list args, set `shell=False` |
 
-Container Security Scanning
+## Container Security Scanning
 
 Containerized applications require their own scanning layer. Trivy and Grype are popular open-source tools that integrate easily:
 
@@ -429,7 +429,7 @@ export async function scanContainer(imageName) {
 }
 ```
 
-Base Image Strategy
+## Base Image Strategy
 
 The single most impactful container security decision is your base image. Most container vulnerabilities come from the OS layer, not your application code:
 
@@ -444,7 +444,7 @@ The single most impactful container security decision is your base image. Most c
 
 Claude Code can help you evaluate base image tradeoffs for your specific application. Share your Trivy output and ask: "Which of these vulnerabilities are in the base image versus my application dependencies? What base image change would eliminate the most critical findings?"
 
-CI/CD Pipeline Integration
+## CI/CD Pipeline Integration
 
 Putting it all together, your CI/CD pipeline benefits from layered security scanning:
 
@@ -521,7 +521,7 @@ jobs:
 
 Each stage runs in parallel where possible, giving you fast feedback. Claude Code hooks can trigger these scans automatically, ensuring security checks happen consistently without manual intervention.
 
-Handling Pipeline Failures Gracefully
+## Handling Pipeline Failures Gracefully
 
 A common mistake is making all security findings pipeline-blocking from day one. Teams push back, start bypassing hooks, and the automation erodes. A graduated approach works better:
 
@@ -538,7 +538,7 @@ Phase 3: Block on high (ongoing)
 
 Claude Code helps enforce this policy by tracking which findings existed before the policy change. Ask Claude to "compare this week's audit output against last week's baseline and show me only new findings."
 
-Building Custom Security Workflows
+## Building Custom Security Workflows
 
 The real power of Claude Code for security automation comes from combining these tools into custom workflows. You can create skills that:
 
@@ -632,7 +632,7 @@ if __name__ == "__main__":
 
 For teams using the frontend-design skill to build React applications, adding security scanning to the component generation workflow catches issues like unsafe DOM manipulation or missing CSRF protections early. Ask Claude Code to run the SAST scan immediately after generating a new component, before the code is committed.
 
-Measuring Security Posture Over Time
+## Measuring Security Posture Over Time
 
 Automation without measurement is incomplete. Track these metrics sprint over sprint:
 
@@ -661,7 +661,6 @@ diff last-week.txt this-week.txt | grep "^[<>]"
 Pass the diff output to Claude Code with the prompt: "Summarize what's new and what's been resolved compared to last week. Flag anything that's been open for more than two weeks."
 
 The key is treating security scanning as code. version controlled, automated, and integrated into your development workflow. Claude Code provides the automation layer that makes this practical without adding friction to your development process.
-
 
 Related Reading
 

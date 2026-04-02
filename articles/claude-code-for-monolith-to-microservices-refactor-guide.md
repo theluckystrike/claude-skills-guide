@@ -18,7 +18,7 @@ permalink: /claude-code-for-monolith-to-microservices-refactor-guide/
 
 [This guide demonstrates how to use Claude Code and its ecosystem of skills to execute a successful monolith-to-microservices transformation](/claude-skill-md-format-complete-specification-guide/)
 
-Understanding Your Starting Point
+## Understanding Your Starting Point
 
 Before writing any code, you need a clear picture of your existing codebase. Use Claude Code to analyze the monolith structure and identify natural service boundaries.
 
@@ -36,7 +36,7 @@ Provide a detailed report with file paths and line numbers."
 
 This analysis reveals the *strangler fig pattern* opportunities, areas where you can gradually extract functionality without disrupting the existing system.
 
-Establishing Service Boundaries
+## Establishing Service Boundaries
 
 The most critical decision in microservices migration involves defining service boundaries. Poorly designed boundaries create distributed monoliths that sacrifice the benefits of microservices architecture.
 
@@ -54,11 +54,11 @@ Suggest 4-6 service candidates with their proposed responsibilities."
 
 For this process, [the supermemory skill proves invaluable](/claude-supermemory-skill-persistent-context-explained/), keeping track of decisions and architectural patterns you've established.
 
-Extracting Your First Service
+## Extracting Your First Service
 
 Start with the simplest service extraction, a module with minimal dependencies. This approach builds team confidence and validates your tooling before tackling complex migrations.
 
-Step 1: Isolate the Module
+## Step 1: Isolate the Module
 
 ```bash
 claude "Create a new directory structure for the [service-name] service following this pattern:
@@ -75,7 +75,7 @@ claude "Create a new directory structure for the [service-name] service followin
 Generate the basic service scaffold with TypeScript interfaces matching the current monolith's contracts."
 ```
 
-Step 2: Extract Data Access
+## Step 2: Extract Data Access
 
 Database decomposition often determines migration success. You have several patterns available:
 
@@ -106,7 +106,7 @@ class UserRepository {
 
 Claude Code can automate this transformation while preserving existing business logic.
 
-Step 3: Create API Contracts
+## Step 3: Create API Contracts
 
 Define clear interfaces between services. Use OpenAPI specifications for REST services or Protocol Buffers for gRPC:
 
@@ -131,7 +131,7 @@ claude (tdd) "Write unit tests for the UserService that verify:
 Then implement the service to pass these tests."
 ```
 
-Implementing Inter-Service Communication
+## Implementing Inter-Service Communication
 
 Once multiple services exist, they need to communicate. Claude Code helps implement reliable communication patterns.
 
@@ -178,7 +178,7 @@ class OrderEventPublisher {
 
 [The pdf skill helps generate architecture documentation](/best-claude-code-skills-to-install-first-2026/) and API references automatically.
 
-Handling Shared Dependencies
+## Handling Shared Dependencies
 
 Monoliths often contain shared utilities that cause friction during extraction. Claude Code identifies these dependencies and suggests solutions:
 
@@ -195,7 +195,7 @@ For each dependency, suggest whether to:
 3. Replace with a microservice"
 ```
 
-Testing the Refactored System
+## Testing the Refactored System
 
 Comprehensive testing prevents regressions during migration. The tdd skill accelerates test creation:
 
@@ -217,7 +217,7 @@ claude "Generate Pact contract tests for the customer-service consumer (order-se
 - Error response contracts"
 ```
 
-Deployment Considerations
+## Deployment Considerations
 
 Microservices require different deployment strategies than monoliths. Use infrastructure-as-code approaches:
 
@@ -242,7 +242,7 @@ services:
 
 The frontend-design skill assists if your monolith includes a web frontend that needs updating to consume multiple service endpoints.
 
-Gradual Migration Strategy
+## Gradual Migration Strategy
 
 The strangler fig pattern allows incremental migration:
 
@@ -255,7 +255,7 @@ The strangler fig pattern allows incremental migration:
 
 Claude Code helps implement this pattern by generating the routing logic and verification tests simultaneously.
 
-Monitoring and Observability
+## Monitoring and Observability
 
 Distributed systems require enhanced observability:
 
@@ -269,7 +269,7 @@ claude "Implement structured logging for the extracted services:
 
 The supermemory skill maintains your observability strategy decisions across sessions, ensuring consistent implementation across all services.
 
-Conclusion
+## Conclusion
 
 Claude Code dramatically accelerates monolith-to-microservices refactoring by automating repetitive tasks, generating boilerplate, and ensuring test coverage. Success requires starting small, validating each extraction, and maintaining comprehensive observability.
 

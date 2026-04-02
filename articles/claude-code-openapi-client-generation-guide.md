@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code OpenAPI Client Generation Guide
-
 Generating type-safe API clients from OpenAPI specifications can dramatically accelerate your development workflow. When you combine Claude Code's natural language capabilities with your existing OpenAPI definitions, you get intelligent, context-aware client generation that goes beyond what traditional code generators offer.
 
 This guide shows you practical approaches to generating OpenAPI clients using Claude Code, with real examples you can apply to your projects today.
 
-Why Generate OpenAPI Clients with Claude Code
+## Why Generate OpenAPI Clients with Claude Code
 
 Traditional OpenAPI code generators like `openapi-generator` produce functional but often verbose code. You receive every possible method and type, even when you only need a subset of your API. Claude Code changes this equation by understanding your specific use case and generating focused, context-appropriate client code.
 
@@ -31,7 +28,7 @@ When you explain your project structure and requirements to Claude, it can:
 - Add business logic layer abstractions on top of raw API calls
 - Handle authentication patterns specific to your project
 
-Setting Up Your Claude Code Environment
+## Setting Up Your Claude Code Environment
 
 Before generating clients, configure Claude Code with the necessary tools. You'll need file system access, shell execution, and potentially web fetching if your OpenAPI specs are hosted remotely.
 
@@ -46,7 +43,7 @@ description: Generate type-safe API client code from OpenAPI specifications
 
 This skill has access to file operations, shell commands for running code generation tools, and web fetching to retrieve specs from URLs.
 
-Setting Up Your OpenAPI Specification
+## Setting Up Your OpenAPI Specification
 
 Before generating clients, ensure your OpenAPI specification is well-structured. Claude works best with specs that include clear operation IDs, descriptive summaries, and proper type definitions.
 
@@ -89,7 +86,7 @@ components:
 
 Keep this specification accessible in your project, you'll reference it when working with Claude.
 
-Parsing OpenAPI Specifications
+## Parsing OpenAPI Specifications
 
 The first step in any code generation workflow is parsing the specification. This Python helper handles both local files and remote URLs, supporting YAML and JSON formats:
 
@@ -113,7 +110,7 @@ def parse_openapi_spec(spec_path_or_url):
 
 For a complete workflow, build on this to extract endpoint information, request/response models, authentication requirements, and custom types.
 
-Building a Code Generation Class
+## Building a Code Generation Class
 
 For more structured generation, the `OpenAPICodeGenerator` class wraps spec parsing and endpoint extraction into a reusable tool:
 
@@ -155,7 +152,7 @@ class OpenAPICodeGenerator:
 
 This foundation extends to support multiple output languages, custom templates, and integration with popular HTTP client libraries.
 
-Generating TypeScript Clients
+## Generating TypeScript Clients
 
 TypeScript projects benefit significantly from OpenAPI client generation because you get type safety across your API interactions. Here's how to work with Claude to generate optimized clients.
 
@@ -225,7 +222,7 @@ export class ECommerceClient {
 
 This approach gives you a clean, maintainable client without the bloat of generated code containing every possible method.
 
-Generating Python Clients
+## Generating Python Clients
 
 Python projects benefit from client generation that follows your existing architecture patterns. Claude can create clients using `requests`, `httpx`, or async alternatives.
 
@@ -265,7 +262,7 @@ class APIClient:
         return response.json()
 ```
 
-Integrating with Your CI/CD Pipeline
+## Integrating with Your CI/CD Pipeline
 
 For maximum efficiency, integrate OpenAPI client generation into your CI/CD pipeline. A script can fetch the latest spec, generate the client, and validate the output in one step:
 
@@ -286,13 +283,13 @@ npm run lint -- "$OUTPUT_DIR"
 
 This automation ensures your API client always stays in sync with your API specification.
 
-Combining with Claude Skills
+## Combining with Claude Skills
 
 For enhanced productivity, combine OpenAPI client generation with other Claude skills. The `frontend-design` skill can help generate React components that consume your API client with proper state management. The `tdd` skill ensures your generated client has test coverage from the start.
 
 The `supermemory` skill proves valuable for remembering API changes across sessions, when your OpenAPI spec updates, Claude can reference previous client implementations and highlight breaking changes.
 
-Best Practices for Client Generation
+## Best Practices for Client Generation
 
 Keep your OpenAPI specification as the single source of truth. When you modify your spec, regenerate clients rather than manually editing generated code. This prevents drift between your API contract and implementation.
 
@@ -312,12 +309,11 @@ generate-client.sh
 claude --print "Generate a TypeScript API client from ./api spec.yaml with these requirements: [your requirements here]"
 ```
 
-Summary
+## Summary
 
 Claude Code transforms OpenAPI client generation from a one-size-fits-all approach to context-aware, project-specific code creation. By explaining your architecture requirements and specific endpoint needs, you receive focused client code that integrates cleanly with your existing codebase.
 
 The key is providing clear context about your project structure, only requesting the endpoints you need, and specifying your preferred patterns for error handling, caching, and authentication.
-
 
 Related Reading
 

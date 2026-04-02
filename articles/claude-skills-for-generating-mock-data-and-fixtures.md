@@ -16,13 +16,13 @@ permalink: /claude-skills-for-generating-mock-data-and-fixtures/
 
 Generating realistic [mock data](/claude-tdd-skill-test-driven-development-workflow/) and test fixtures is a common problem in software development. Whether you are building a new application, writing automated tests, or prototyping features, having access to well-structured fake data accelerates your workflow significantly. Claude Code skills offer a powerful approach to generating this data without external libraries or manual data entry.
 
-Understanding Mock Data Generation in Claude
+## Understanding Mock Data Generation in Claude
 
 [Claude Code handles mock data generation through its skill system](/best-claude-code-skills-to-install-first-2026/) When you invoke a skill focused on data generation, Claude uses its understanding of data structures, programming patterns, and domain-specific requirements to produce realistic test data. The key advantage is that Claude generates data that matches your specific data models rather than generic random values.
 
 The primary approach for mock data generation is through custom skills you build for your domain-specific needs, or by describing your requirements directly to Claude Code without a skill. Each skill loads instructions that guide Claude's output to produce structured, type-safe data matching your project requirements.
 
-Creating a Basic Mock Data Skill
+## Creating a Basic Mock Data Skill
 
 The simplest approach involves creating a custom skill file in your Claude skills directory. This skill contains prompts that tell Claude exactly what data structure you need:
 
@@ -44,7 +44,7 @@ Output data in the requested format (JSON, YAML, or code literals).
 
 Save this as `~/.claude/skills/mock-data.md` and invoke it with `/mock-data` in your Claude session.
 
-Generating JSON Fixtures for API Testing
+## Generating JSON Fixtures for API Testing
 
 A practical use case involves generating JSON fixtures that mimic your API responses. This is particularly useful when building frontend applications that need to consume API data before the backend is fully developed.
 
@@ -118,7 +118,7 @@ Claude produces five distinct fixtures with realistic variations, which you can 
 ]
 ```
 
-Python Fixtures with Faker and Factory Boy
+## Python Fixtures with Faker and Factory Boy
 
 For Python projects using pytest, you can combine Claude skills with established libraries like Faker and Factory Boy. Describe your data models to Claude and it generates the factory classes:
 
@@ -139,7 +139,6 @@ class UserFactory(factory.Factory):
     created_at = factory.LazyFunction(lambda: fake.date_time_between(start_date="-2y"))
     is_active = factory.LazyFunction(lambda: fake.boolean(chance_of_getting_true=85))
     role = factory.LazyFunction(lambda: fake.random_element(["admin", "user", "moderator"]))
-
 
 class OrderFactory(factory.Factory):
     class Meta:
@@ -179,7 +178,7 @@ def sample_orders_with_users():
     return {"user": user, "orders": orders}
 ```
 
-Generating Database Seed Scripts
+## Generating Database Seed Scripts
 
 For database development and testing, Claude skills can generate SQL or ORM seed scripts. Describe your schema and requirements:
 
@@ -212,7 +211,7 @@ SELECT
 FROM generate_series(1, 200);
 ```
 
-TypeScript Mock Data with Zod Schemas
+## TypeScript Mock Data with Zod Schemas
 
 When building TypeScript applications with Zod for runtime validation, generate mock data that conforms to your schemas:
 
@@ -246,7 +245,7 @@ Ask Claude to generate mock users matching this schema:
 Generate 10 User objects matching this Zod schema. Include varied ages (18-65), different role combinations, and realistic preference settings.
 ```
 
-Best Practices for Mock Data
+## Best Practices for Mock Data
 
 Follow these practices when generating test fixtures with Claude skills:
 
@@ -265,6 +264,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack including data handling
 - [Claude Code Pytest Fixtures and Parametrize Workflow](/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/). Advanced pytest patterns
 - [Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Data handling with Claude
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

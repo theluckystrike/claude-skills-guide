@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for SolidJS Resources Workflow Guide
 
 SolidJS offers a unique reactive programming model with primitives like signals, stores, and resources. When combined with Claude Code CLI, you can dramatically accelerate your development workflow, getting AI assistance for generating boilerplate, debugging reactive state, and optimizing component performance. This guide walks you through integrating Claude Code into your SolidJS projects effectively.
 
-Understanding SolidJS Reactive Resources
+## Understanding SolidJS Reactive Resources
 
 Before diving into the workflow, it's essential to understand what makes SolidJS distinct. Unlike React's virtual DOM diffing, SolidJS uses fine-grained reactivity with compiled updates. Your core primitives include:
 
@@ -32,7 +31,7 @@ Before diving into the workflow, it's essential to understand what makes SolidJS
 
 Claude Code can help you reason about these primitives, generate proper patterns, and debug issues when your reactivity isn't behaving as expected. The key is learning how to ask the right questions and provide enough context for Claude Code to understand your specific reactive graph.
 
-SolidJS vs React: Core Differences
+## SolidJS vs React: Core Differences
 
 Understanding where SolidJS diverges from React helps you write better prompts to Claude Code. The AI's training data includes a lot of React patterns, so being explicit about SolidJS semantics improves output quality.
 
@@ -47,7 +46,7 @@ Understanding where SolidJS diverges from React helps you write better prompts t
 
 When asking Claude Code to convert React patterns, explicitly state these differences. Something like "SolidJS components only run once, the JSX is not re-evaluated on state change, only the reactive expressions inside it" gives Claude Code the context to produce idiomatic output rather than React-style patterns wrapped in SolidJS syntax.
 
-Setting Up Claude Code with Your SolidJS Project
+## Setting Up Claude Code with Your SolidJS Project
 
 The first step is ensuring Claude Code understands your project structure. In your SolidJS project directory, create a CLAUDE.md file at the project root to give Claude Code context about your project.
 
@@ -87,7 +86,7 @@ You can also create a `.claude/settings.json` in your project root:
 
 The more context you provide in CLAUDE.md, the less time you spend correcting generated code. Claude Code uses this file to align on naming conventions, file locations, and architectural decisions before generating anything.
 
-Working with Signals Effectively
+## Working with Signals Effectively
 
 Signals are the building blocks of SolidJS reactivity. When requesting Claude Code's help with signals, describe your intent clearly:
 
@@ -121,7 +120,7 @@ function Counter() {
 
 When debugging signal issues, ask Claude Code to explain why updates aren't propagating. Common culprits include calling signal functions without parentheses (passing the function instead of its value) or creating signals inside components instead of outside.
 
-Common Signal Mistakes and How to Spot Them
+## Common Signal Mistakes and How to Spot Them
 
 When you ask Claude Code to review reactivity bugs, it will look for these patterns. Knowing them yourself helps you write better prompts:
 
@@ -153,7 +152,7 @@ function Component() {
 
 When sharing code for debugging, include the part of the reactive graph where you believe the break is occurring. Claude Code performs better when you say "this signal updates correctly (I checked with console.log) but this derived memo does not re-run" rather than "my UI doesn't update."
 
-Managing Complex State with Stores
+## Managing Complex State with Stores
 
 For nested or complex state, SolidJS stores provide mutable-style APIs with reactive tracking:
 
@@ -179,7 +178,7 @@ setState('user', 'name', 'New Name');
 
 Claude Code excels at generating store patterns for common scenarios. Request patterns like "CRUD operations for a todo list store" or "form state management with validation" to get production-ready implementations.
 
-Store Pattern: Todo List with CRUD
+## Store Pattern: Todo List with CRUD
 
 Here is the kind of complete store pattern you can request from Claude Code with a single well-formed prompt:
 
@@ -234,7 +233,7 @@ The prompt that generates this kind of output would be: "Create a SolidJS store 
 
 Being specific about which APIs to use prevents Claude Code from defaulting to React-style patterns.
 
-Handling Async Data with Resources
+## Handling Async Data with Resources
 
 SolidJS resources handle async data gracefully, integrating with Suspense:
 
@@ -265,7 +264,7 @@ When working with resources, Claude Code can help you:
 3. Handle race conditions with abort controllers
 4. Optimize resource fetching with fine-grained source signals
 
-Resources with Error Handling and Refetching
+## Resources with Error Handling and Refetching
 
 A more complete resource pattern handles loading, error, and success states explicitly:
 
@@ -315,7 +314,7 @@ Ask Claude Code to generate this pattern with: "Create a SolidJS resource compon
 
 The abort signal is passed automatically by `createResource` when the source signal changes, this prevents race conditions where an older request completes after a newer one.
 
-Resource Source Signals for Dependent Fetching
+## Resource Source Signals for Dependent Fetching
 
 A common pattern is fetching data that depends on another piece of state:
 
@@ -336,7 +335,7 @@ const [userPosts] = createResource(
 
 When `selectedUserId()` returns `null` or `undefined`, the resource does not fetch. When it changes to a new value, the resource automatically refetches. Claude Code can generate dependent fetching chains when you describe the dependency relationship explicitly.
 
-Practical Workflow: Debugging Reactivity Issues
+## Practical Workflow: Debugging Reactivity Issues
 
 One of the most valuable Claude Code use cases is debugging reactivity problems. When your UI isn't updating as expected:
 
@@ -358,7 +357,7 @@ A useful debugging prompt template for Claude Code:
 
 The more specific your description of what does and does not update, the faster Claude Code can narrow down the issue.
 
-Optimizing Performance with createMemo and createEffect
+## Optimizing Performance with createMemo and createEffect
 
 SolidJS provides memoization primitives that Claude Code can help you place strategically:
 
@@ -380,7 +379,7 @@ createEffect(() => {
 
 Ask Claude Code to analyze performance bottlenecks by describing your component tree and data flow. It can suggest where to add `createMemo` to prevent unnecessary recalculations.
 
-When to Use createMemo vs Inline Computation
+## When to Use createMemo vs Inline Computation
 
 This is a common question worth asking Claude Code directly. The general rule:
 
@@ -404,7 +403,7 @@ return <p>Total: {items().length}</p>;
 
 Claude Code will suggest `createMemo` placements when you ask it to review a component for unnecessary reactivity. Provide a component and ask: "Where could I add createMemo to reduce redundant computations in this component?"
 
-Building Reusable Primitives with Claude Code
+## Building Reusable Primitives with Claude Code
 
 One high-use use of Claude Code in a SolidJS project is generating custom reactive primitives that encapsulate common patterns. Rather than writing signals and effects inline, you can build composable utilities:
 
@@ -447,7 +446,7 @@ function ResponsiveComponent() {
 
 Claude Code generates clean primitives like this from short prompts. The key is asking for primitives that return signals or accessors, not components, that keeps them composable.
 
-Actionable Tips for Your Workflow
+## Actionable Tips for Your Workflow
 
 1. Start with clear prompts: "Generate a SolidJS store for managing authentication state with login/logout methods and TypeScript types" works better than vague requests.
 
@@ -463,7 +462,7 @@ Actionable Tips for Your Workflow
 
 7. Learn patterns, don't just copy: After Claude Code generates solutions, ask follow-up questions like "Why did you use produce here instead of a path-based setter?" to understand the reasoning behind the generated code.
 
-Conclusion
+## Conclusion
 
 Claude Code paired with SolidJS gives you AI-assisted development while using Solid's excellent reactivity model. By understanding signals, stores, and resources, and how to communicate your intent to Claude Code, you can build reactive applications faster and with fewer bugs.
 

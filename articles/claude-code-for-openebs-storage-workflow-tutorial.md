@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for OpenEBS Storage Workflow Tutorial
-
 OpenEBS is a powerful container-native storage solution that provides persistent storage for Kubernetes workloads. When combined with Claude Code, you can automate complex storage workflows, reduce manual errors, and accelerate your DevOps processes. This tutorial walks you through practical examples of using Claude Code to manage OpenEBS storage operations efficiently, from initial provisioning through long-term monitoring and recovery.
 
-Understanding OpenEBS Architecture
+## Understanding OpenEBS Architecture
 
 Before diving into workflows, it's essential to understand how OpenEBS works. OpenEBS uses a volume-based approach where each persistent volume is backed by a dedicated container. This architecture provides isolation, scalability, and flexibility that traditional storage solutions struggle to match in containerized environments.
 
@@ -35,7 +32,7 @@ Understanding these engines helps you choose the right storage backend for your 
 
 Claude Code can help you navigate these choices by explaining trade-offs and generating appropriate configurations based on your requirements. You can ask something like "which OpenEBS engine should I use for a PostgreSQL cluster that needs point-in-time recovery?" and receive a reasoned recommendation with the corresponding configuration.
 
-Setting Up Claude Code for OpenEBS
+## Setting Up Claude Code for OpenEBS
 
 To interact with OpenEBS, Claude Code needs access to your Kubernetes cluster. The most common approach uses the Kubernetes API through kubectl. Ensure your environment has proper authentication configured:
 
@@ -64,7 +61,7 @@ kubectl get pods -n openebs --watch
 
 When working with Claude Code, you can delegate cluster operations directly. Simply describe what you want to accomplish, and Claude Code can execute the appropriate kubectl commands, generate YAML manifests, and verify the results. Claude Code is particularly useful for diagnosing issues. paste in the output of `kubectl describe pvc` and it will interpret the events and suggest a fix.
 
-Creating PersistentVolumes with Claude Code
+## Creating PersistentVolumes with Claude Code
 
 One of the most common storage workflows involves provisioning PersistentVolumes (PVs) for applications. Here's how Claude Code simplifies this process:
 
@@ -133,7 +130,7 @@ spec:
       storage: 10Gi
 ```
 
-Managing Storage Classes Dynamically
+## Managing Storage Classes Dynamically
 
 Storage Classes define how storage is provisioned. OpenEBS provides several pre-configured storage classes, but you often need custom configurations for specific performance or redundancy requirements.
 
@@ -193,7 +190,7 @@ parameters:
 
 When you need to modify storage settings across multiple PVCs, Claude Code can identify all affected resources and generate appropriate patch operations. For example, migrating all PVCs from an old storage class to a new one requires listing, snapshotting, and reprovisioning. a multi-step workflow Claude Code can script end-to-end.
 
-Automating Backup and Restore Workflows
+## Automating Backup and Restore Workflows
 
 Data protection is critical for any storage strategy. OpenEBS provides snapshot and clone capabilities that integrate with Kubernetes' volume snapshot APIs. Claude Code can orchestrate these operations:
 
@@ -286,7 +283,7 @@ spec:
           restartPolicy: OnFailure
 ```
 
-Monitoring OpenEBS Volumes
+## Monitoring OpenEBS Volumes
 
 Effective storage management requires monitoring. Claude Code can help you set up and interpret OpenEBS monitoring:
 
@@ -339,7 +336,7 @@ Key metrics to alert on in your Grafana dashboard:
 
 When an alert fires, Claude Code can help you interpret the output. Paste in the Prometheus query result or `kubectl describe` output and ask "why is my cStor pool degraded and how do I fix it?". Claude Code will diagnose the likely cause and generate the remediation steps.
 
-Resizing PersistentVolumes
+## Resizing PersistentVolumes
 
 Kubernetes supports volume expansion for supported CSI drivers, and OpenEBS cStor CSI supports it. To resize a PVC, first ensure the storage class has `allowVolumeExpansion: true`:
 
@@ -367,7 +364,7 @@ kubectl get pvc app-data-pvc -w
 
 Claude Code is helpful here because resize operations can sometimes stall. When a PVC stays in `FileSystemResizePending` state, Claude Code can diagnose whether the issue is a node-level filesystem resize that requires a pod restart, a pool capacity problem, or a CSI driver version mismatch.
 
-Troubleshooting Common OpenEBS Issues with Claude Code
+## Troubleshooting Common OpenEBS Issues with Claude Code
 
 One of the most practical uses of Claude Code in OpenEBS workflows is troubleshooting. The following patterns come up frequently:
 
@@ -396,7 +393,7 @@ kubectl patch cvr <cvr-name> -n openebs -p '{"spec":{"targetIP":"<target-ip>","c
 
 Pool disk failures: When a disk fails, cStor degrades but stays available. Claude Code can generate the disk replacement workflow including uncordon, disk replacement, and pool rebuild commands.
 
-Best Practices for Claude Code with OpenEBS
+## Best Practices for Claude Code with OpenEBS
 
 When using Claude Code for OpenEBS workflows, follow these actionable recommendations:
 
@@ -412,7 +409,7 @@ Test in non-production first: When trying new OpenEBS features or configurations
 
 Pin your OpenEBS version: Storage infrastructure should not change without planning. Use `helm upgrade --version` to control upgrades and ask Claude Code to summarize the release notes between your current and target versions before committing to an upgrade.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms OpenEBS storage management from manual, error-prone processes into streamlined, automated workflows. By using Claude Code's capabilities, you can provision storage faster, manage configurations more consistently, and reduce the operational burden of persistent storage in Kubernetes. The combination of Claude Code's natural language understanding and OpenEBS's rich API surface means complex operations like tiered storage provisioning, cross-namespace snapshot scheduling, and pool capacity planning become conversational rather than requiring deep specialist knowledge.
 

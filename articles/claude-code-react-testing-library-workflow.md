@@ -16,7 +16,7 @@ permalink: /claude-code-react-testing-library-workflow/
 
 Integrating React Testing Library into your development workflow with Claude Code transforms how you approach component testing. Rather than treating tests as an afterthought, this workflow positions testing as a core part of your development process, resulting in more reliable React applications and faster debugging cycles.
 
-Setting Up React Testing Library with Claude Code
+## Setting Up React Testing Library with Claude Code
 
 Before implementing the workflow, ensure your project has React Testing Library properly installed. React Testing Library works with Jest or Vitest as test runners:
 
@@ -47,7 +47,7 @@ Testing conventions for this project
 
 When Claude Code reads this file, it understands your testing preferences and applies them automatically when generating or modifying tests.
 
-Writing Your First Component Test
+## Writing Your First Component Test
 
 React Testing Library queries elements the way users interact with them, by text, label, or role rather than by test IDs when possible. Consider a simple button component:
 
@@ -96,7 +96,7 @@ describe('Button component', () => {
 
 This test demonstrates three core patterns: verifying rendered content, testing user interactions, and checking component state.
 
-Writing Component Tests with Claude Code
+## Writing Component Tests with Claude Code
 
 The most effective approach involves prompting Claude Code to write tests alongside your components. When describing a new feature, include testing requirements in your prompt:
 
@@ -111,7 +111,7 @@ Include tests that verify:
 
 This prompts Claude to generate both the component and corresponding tests, ensuring testability is considered from the start.
 
-Query Priority for Reliable Tests
+## Query Priority for Reliable Tests
 
 React Testing Library encourages queries that mirror how users interact with your application. Claude Code understands this principle and generates tests using the correct query priority:
 
@@ -126,11 +126,11 @@ const submitButton = screen.getByRole('button', { name: /submit/i });
 
 When reviewing code, Claude Code can identify instances where you should upgrade queries to more accessible alternatives, improving both test reliability and application accessibility.
 
-Mocking Dependencies Effectively
+## Mocking Dependencies Effectively
 
 External dependencies often complicate testing. Claude Code excels at generating appropriate mocks for common scenarios:
 
-Mocking API Calls
+## Mocking API Calls
 
 ```javascript
 // Before running tests, mock the API module
@@ -150,7 +150,7 @@ afterEach(() => {
 });
 ```
 
-Mocking Modules
+## Mocking Modules
 
 For modules that don't work well in test environments, use jest.mock():
 
@@ -169,7 +169,7 @@ jest.mock('next/navigation', () => ({
 
 Claude Code can generate these mocks automatically when you specify which dependencies need mocking. The tdd skill provides additional patterns for test-driven development workflows.
 
-Testing Complex Interactions with userEvent
+## Testing Complex Interactions with userEvent
 
 The `userEvent` library simulates real user behavior more accurately than `fireEvent`, capturing nuances like debouncing, focus management, and typing speed. This leads to tests that catch issues fireEvent might miss.
 
@@ -215,15 +215,15 @@ test('submits form with valid credentials', async () => {
 });
 ```
 
-Integrating Testing into Your Development Cycle
+## Integrating Testing into Your Development Cycle
 
 Establishing a consistent testing workflow prevents test debt from accumulating. Consider these integration points:
 
-Pre-Commit Testing
+## Pre-Commit Testing
 
 Configure your git hooks to run tests before allowing commits. The claude-md-for-dependency-management-rules skill can help establish these conventions across your team.
 
-Test-Driven Development Pattern
+## Test-Driven Development Pattern
 
 For new features, follow this cycle:
 
@@ -234,7 +234,7 @@ For new features, follow this cycle:
 
 This approach, detailed in the claude-tdd-skill-test-driven-development-workflow guide, ensures every piece of code has explicit validation.
 
-Continuous Testing in CI
+## Continuous Testing in CI
 
 Your continuous integration pipeline should run the full test suite on every pull request. Claude Code can help configure GitHub Actions workflows that execute tests and report results:
 
@@ -246,11 +246,11 @@ Your continuous integration pipeline should run the full test suite on every pul
   uses: codecov/codecov-action@v3
 ```
 
-Debugging Failing Tests
+## Debugging Failing Tests
 
 When tests fail, Claude Code helps identify the root cause by analyzing error messages and code behavior. Common debugging scenarios include:
 
-Async Testing Issues
+## Async Testing Issues
 
 ```javascript
 // Wait for async operations to complete
@@ -262,7 +262,7 @@ await waitFor(() => {
 const element = await screen.findByText('Loaded Data');
 ```
 
-Testing Component State Changes
+## Testing Component State Changes
 
 ```javascript
 // Test state updates by waiting for them to render
@@ -276,7 +276,7 @@ await waitFor(() => {
 });
 ```
 
-Testing Accessibility
+## Testing Accessibility
 
 React Testing Library pairs naturally with accessibility testing. The claude-code-aria-labels-implementation-guide skill covers how to write tests that verify your components are accessible to all users.
 
@@ -294,7 +294,7 @@ test('form validates and announces errors', async () => {
 });
 ```
 
-Managing Test Data and Fixtures
+## Managing Test Data and Fixtures
 
 Creating reusable test fixtures improves test maintainability. Store mock data in dedicated files:
 
@@ -312,7 +312,7 @@ export const mockUsers = [mockUser, /* ... more users */];
 
 The claude-code-factory-bot-test-data-guide skill provides patterns for generating dynamic test data at scale.
 
-Best Practices for Maintainable Tests
+## Best Practices for Maintainable Tests
 
 Follow these principles to keep your test suite sustainable as the project grows:
 
@@ -324,7 +324,7 @@ Keep tests independent. Each test should run in isolation and not depend on the 
 
 Use descriptive test names. When tests fail, you want the name to immediately communicate what broke. `it('should show error message when network request fails')` is far more helpful than `it('handles error state')`.
 
-Performance Considerations
+## Performance Considerations
 
 Running a full test suite on every change becomes impractical as projects grow. Strategies for maintaining speed include:
 
@@ -335,12 +335,11 @@ Running a full test suite on every change becomes impractical as projects grow. 
 
 The supermemory skill can help remember which tests relate to specific components, making targeted test runs easier.
 
-Conclusion
+## Conclusion
 
 Integrating React Testing Library with Claude Code creates a powerful testing workflow that catches bugs early and maintains code quality over time. By establishing clear testing conventions, writing user-centric tests, and integrating testing into your development cycle, you build confidence in your React applications.
 
 Remember to prioritize accessibility in your tests, use appropriate mocking strategies, and use Claude Code's capabilities to generate and debug tests efficiently. With practice, this workflow becomes second nature, leading to more solid and maintainable React code.
-
 
 Related Reading
 

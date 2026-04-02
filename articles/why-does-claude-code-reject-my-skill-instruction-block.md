@@ -16,15 +16,15 @@ permalink: /why-does-claude-code-reject-my-skill-instruction-block/
 
 When Claude Code rejects your skill instruction block, it can feel like hitting a wall. You've written what seems like a perfectly valid skill file, but Claude refuses to load it. The rejection usually stems from a handful of common issues that are easy to fix once you know what to look for. This guide walks through the most frequent causes and provides practical solutions you can apply immediately.
 
-Understanding How Claude Code Processes Skills
+## Understanding How Claude Code Processes Skills
 
 Before troubleshooting, it helps to understand what happens when Claude Code loads a skill. When you create a skill file, Claude reads the entire file during initialization. The YAML front matter contains metadata, and the Markdown body contains your instructions. Both sections must be properly formatted for Claude to parse and use them effectively.
 
 The instruction block in your skill file is not just any Markdown content. [Claude interprets it as structured guidance](/claude-skill-md-format-complete-specification-guide/) that influences how it behaves when the skill is active. If the parser encounters anything unexpected, it rejects the entire block rather than guessing at your intent.
 
-Common Reasons for Rejection
+## Common Reasons for Rejection
 
-YAML Front Matter Errors
+## YAML Front Matter Errors
 
 The front matter sits between the `---` delimiters at the top of your skill file. Even a single misplaced character causes parsing to fail. Common issues include:
 
@@ -44,7 +44,7 @@ description: A skill that does something useful
 
 If you're unsure about your YAML syntax, paste it into a YAML validator before saving.
 
-Malformed Instruction Block Syntax
+## Malformed Instruction Block Syntax
 
 The instruction block itself has specific formatting requirements. Claude expects clear, structured prompts with logical separation between different aspects of the skill behavior. Common syntax problems include:
 
@@ -77,13 +77,13 @@ Output Format
 Always present results in markdown format with clear headings.
 ```
 
-Character Limit Exceeded
+## Character Limit Exceeded
 
 Claude Code imposes limits on instruction block size. While the exact limit varies based on context window availability, extremely long instruction blocks get truncated or rejected. If your skill includes extensive documentation or repetitive content, trim it down.
 
 Instead of writing exhaustive instructions, focus on principles and patterns. Claude can reference external documentation when needed. For skills like `frontend-design`, `tdd`, or `pdf`, the instruction block should define behavior, not every possible scenario.
 
-Conflicting Directives
+## Conflicting Directives
 
 Sometimes the rejection isn't about syntax but about contradictory instructions. If your skill says "always use short responses" in one section and "provide detailed explanations" in another, Claude may reject the ambiguous block.
 
@@ -97,7 +97,7 @@ Priority Guidelines
 3. Maintain readability as a secondary concern
 ```
 
-Special Characters and Escaping Issues
+## Special Characters and Escaping Issues
 
 Certain characters have special meaning in Markdown and YAML. Using them without proper escaping causes unexpected behavior:
 
@@ -105,7 +105,7 @@ Certain characters have special meaning in Markdown and YAML. Using them without
 - Escape pipes `|` when they appear in tables
 - Use code blocks for any text that looks like formatting
 
-Practical Debugging Steps
+## Practical Debugging Steps
 
 When your skill gets rejected, work through these steps systematically:
 
@@ -113,23 +113,23 @@ Step 1: [Validate the YAML](/how-do-i-debug-a-claude-skill-that-silently-fails/)
 
 Extract the front matter and run it through a YAML linter. Most editors have extensions that highlight YAML errors in real time.
 
-Step 2: Simplify the instructions
+## Step 2: Simplify the instructions
 
 Comment out half your instruction block. If it loads, the problem is in the removed half. Repeat until you isolate the problematic section.
 
-Step 3: Check for hidden characters
+## Step 3: Check for hidden characters
 
 Copy your text into a plain text editor and enable invisible characters. Sometimes whitespace characters sneak in that break parsing.
 
-Step 4: Validate the complete file
+## Step 4: Validate the complete file
 
 Use a Markdown parser to ensure the entire file is well-formed. Tools like `markdownlint` catch structural issues.
 
-Step 5: Test incrementally
+## Step 5: Test incrementally
 
 Add sections one at a time. Skills like those from the `supermemory` ecosystem often work better with modular instruction blocks that build up gradually.
 
-Examples of Rejected vs Accepted Skills
+## Examples of Rejected vs Accepted Skills
 
 Consider this rejected skill due to YAML issues:
 
@@ -169,7 +169,7 @@ Only approve PRs that meet quality standards. Provide detailed feedback.
 When changes are needed, suggest specific improvements before approval.
 ```
 
-Prevention Best Practices
+## Prevention Best Practices
 
 Once you've fixed your skill, prevent future rejections with these habits:
 
@@ -180,7 +180,7 @@ Once you've fixed your skill, prevent future rejections with these habits:
 
 Skills like `claude-tdd-skill` demonstrate well-structured instruction blocks that you can study as reference. The community skills in the Claude Skills Hub show patterns that work reliably across different use cases.
 
-Getting Help
+## Getting Help
 
 If you've tried these solutions and your skill still gets rejected, check the Claude Code documentation for any recent changes to skill formatting requirements. Community forums often surface new limitations or bugs that affect specific skill types.
 

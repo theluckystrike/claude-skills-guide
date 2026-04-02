@@ -13,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for jsPolicy Workflow Tutorial Guide
-
 jsPolicy is a powerful Kubernetes policy engine that allows you to write admission policies in JavaScript or TypeScript. When combined with Claude Code, you can dramatically accelerate your policy development workflow, from initial creation to testing and debugging. This guide walks you through practical patterns for using Claude Code with jsPolicy.
 
-Understanding jsPolicy Fundamentals
+## Understanding jsPolicy Fundamentals
 
 Before diving into the workflow, let's establish what jsPolicy brings to Kubernetes security. Unlike traditional policy engines that require learning domain-specific languages, jsPolicy lets you write policies using familiar JavaScript. This means you can use your existing JS knowledge while enforcing security guardrails across your clusters.
 
@@ -26,7 +23,7 @@ jsPolicy operates at the admission controller level, intercepting requests to cr
 
 Claude Code can assist you at every stage of working with jsPolicy, from scaffolding your first policy to troubleshooting complex validation rules.
 
-Setting Up Your jsPolicy Development Environment
+## Setting Up Your jsPolicy Development Environment
 
 The first step is ensuring your local environment is properly configured. Claude Code can help you set this up quickly. Start by creating a new jsPolicy project structure:
 
@@ -54,7 +51,7 @@ spec:
 
 The key configuration elements include the operations you want to intercept, the resource types to validate, and a reference to your JavaScript policy file.
 
-Writing Your First jsPolicy with Claude Code
+## Writing Your First jsPolicy with Claude Code
 
 When you're ready to write actual policy logic, Claude Code becomes invaluable. Here's a practical example of a policy that enforces required labels on all pods:
 
@@ -103,7 +100,7 @@ registerPolicy({
 
 Notice how we use jsPolicy's `registerPolicy` function and chain validation methods. The `allow.if()` and `deny.if()` helpers make your policies readable while providing clear deny messages.
 
-Debugging Policy Failures
+## Debugging Policy Failures
 
 When your policies don't work as expected, debugging can be challenging. Claude Code excels at helping you troubleshoot. Here's a systematic approach:
 
@@ -128,7 +125,7 @@ handler: deny.unless(
 
 The optional chaining operator (`?.`) prevents errors when fields don't exist, which is crucial since Kubernetes resources vary in structure.
 
-Testing Policies Before Deployment
+## Testing Policies Before Deployment
 
 One of the most valuable practices is testing your policies before applying them to production. Claude Code can help you set up a testing workflow using the jsPolicy testing framework:
 
@@ -169,7 +166,7 @@ describe("Required Labels Policy", () => {
 
 Running these tests locally catches issues before they affect your cluster. Claude can also help you expand test coverage to handle edge cases you might not have considered.
 
-Best Practices for Claude-Assisted jsPolicy Development
+## Best Practices for Claude-Assisted jsPolicy Development
 
 As you become more proficient with this workflow, keep these recommendations in mind:
 
@@ -181,7 +178,7 @@ Start with audit policies before moving to enforcement. Using `warn` instead of 
 
 Use policy grouping strategically. Rather than one massive policy file, create focused policies for specific concerns. This makes debugging easier and reduces the blast radius of issues.
 
-Integrating Claude Code Into Your Daily Workflow
+## Integrating Claude Code Into Your Daily Workflow
 
 Beyond individual policy development, Claude Code becomes even more powerful when integrated into your daily routine. Consider creating a Claude skill specifically for jsPolicy that encapsulates your team's conventions and common patterns.
 

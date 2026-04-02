@@ -15,11 +15,11 @@ score: 7
 
 {% raw %}
 
-Understanding and Fixing Docker Permission Denied Bind Mount Errors in Claude Code
+## Understanding and Fixing Docker Permission Denied Bind Mount Errors in Claude Code
 
 When using Claude Code to work with Docker containers, you may encounter the frustrating "permission denied" error when trying to access bind-mounted directories. This issue commonly arises when Docker containers need to read from or write to host directories, and understanding how to resolve it is essential for smooth development workflows with Claude Code.
 
-What Causes Docker Bind Mount Permission Errors
+## What Causes Docker Bind Mount Permission Errors
 
 Docker bind mounts allow you to share directories between your host system and containers. However, permission denied errors occur when the user inside the container lacks the necessary permissions to access the mounted directory on the host.
 
@@ -41,7 +41,7 @@ These errors typically happen because:
 
 When Claude Code executes Docker commands through its agentic workflow, writing files, reading project configs, or processing outputs, these permission issues interrupt the loop. Claude may retry the command, produce confusing error messages, or silently fail depending on how your setup handles the error.
 
-Diagnosing the Problem
+## Diagnosing the Problem
 
 Before applying a fix, identify the actual cause. Run these commands to gather information:
 
@@ -73,7 +73,7 @@ Returns: Enforcing, Permissive, or Disabled
 
 If it returns "Enforcing," you need the `:z` or `:Z` flag on your bind mount (covered below).
 
-Solution 1: Using Named Volumes Instead of Bind Mounts
+## Solution 1: Using Named Volumes Instead of Bind Mounts
 
 Named volumes are managed by Docker and automatically handle permission issues. Create a volume instead of a bind mount:
 
@@ -96,7 +96,7 @@ docker run \
   myimage
 ```
 
-Solution 2: Adjusting Container User Permissions
+## Solution 2: Adjusting Container User Permissions
 
 You can run containers with your host user's UID and GID to match ownership:
 
@@ -115,7 +115,7 @@ You can also hardcode a specific UID instead of using subshell expansion, which 
 docker run -v $(pwd):/app -u 1000:1000 myimage
 ```
 
-Solution 3: Fixing Permissions After Container Start
+## Solution 3: Fixing Permissions After Container Start
 
 If the container is already running, you can fix permissions from inside:
 
@@ -157,7 +157,7 @@ ENTRYPOINT ["/entrypoint.sh"]
 CMD ["python", "main.py"]
 ```
 
-Solution 4: Using Docker Compose with User Configuration
+## Solution 4: Using Docker Compose with User Configuration
 
 Docker Compose simplifies permission handling with the `user` directive:
 
@@ -218,7 +218,7 @@ volumes:
 
 The `${UID:-1000}` syntax provides a fallback value of 1000 if the variable isn't set, preventing Compose from failing when the variable is undefined.
 
-Solution 5: SELinux and AppArmor Label Fixes
+## Solution 5: SELinux and AppArmor Label Fixes
 
 On Linux systems running SELinux (common on RHEL, Fedora, and CentOS), you need to add a label flag to your bind mount:
 
@@ -253,7 +253,7 @@ docker run --security-opt apparmor=unconfined -v $(pwd):/app myimage
 
 Use the unconfined option only in development, never in production.
 
-Solution 6: Fixing Permissions in the Dockerfile
+## Solution 6: Fixing Permissions in the Dockerfile
 
 The most maintainable long-term solution is to fix permissions at image build time. Create a non-root user in your Dockerfile with a UID that matches your typical host user:
 
@@ -300,7 +300,7 @@ Build with your actual UID:
 docker build --build-arg USER_UID=$(id -u) --build-arg USER_GID=$(id -g) -t myimage .
 ```
 
-Solution 7: Creating a Custom Claude Code Skill for Docker Permissions
+## Solution 7: Creating a Custom Claude Code Skill for Docker Permissions
 
 You can create a Claude Code skill that automatically handles Docker permission issues. Create a file at `~/.claude/skills/docker-permission-fixer/skill.md`:
 
@@ -329,7 +329,7 @@ When you encounter "permission denied" errors with bind mounts:
 
 This skill can then provide contextual help when Claude Code detects Docker permission errors.
 
-Preventing Permission Issues in Claude Code Workflows
+## Preventing Permission Issues in Claude Code Workflows
 
 When working with Claude Code and Docker, follow these best practices to avoid hitting permission errors in the first place:
 
@@ -340,7 +340,7 @@ When working with Claude Code and Docker, follow these best practices to avoid h
 5. Add your user to the docker group on Linux: `sudo usermod -aG docker $USER` (requires logout/login to take effect)
 6. Test bind mounts before handing off to Claude Code: Run a quick write test manually before letting Claude Code work inside the container
 
-Common Scenarios and Solutions at a Glance
+## Common Scenarios and Solutions at a Glance
 
 | Scenario | Root Cause | Fix |
 |---|---|---|
@@ -351,9 +351,9 @@ Common Scenarios and Solutions at a Glance
 | Works on host but not in CI | CI runner has different UID | Use `--build-arg` to set UID at build time |
 | Docker socket not accessible | User not in docker group | `sudo usermod -aG docker $USER` |
 
-Common Scenarios and Solutions
+## Common Scenarios and Solutions
 
-Scenario: Claude Code Can't Read Project Files in Container
+## Scenario: Claude Code Can't Read Project Files in Container
 
 Problem: Your container can't read source files mounted from the host.
 
@@ -370,7 +370,7 @@ Then run with matching UID
 docker run -v /path/to/project:/app -u $(id -u):$(id -g) myimage
 ```
 
-Scenario: Container Can't Write Build Outputs
+## Scenario: Container Can't Write Build Outputs
 
 Problem: Build artifacts can't be written to mounted directories. Common with compiled languages or any workflow that generates output files.
 
@@ -389,7 +389,7 @@ docker run -v $(pwd)/output:/output -u $(id -u):$(id -g) build-image
 
 Docker cannot create the host directory for you, and without it the mount fails silently or with a permission error.
 
-Scenario: Docker-in-Docker with Claude Code
+## Scenario: Docker-in-Docker with Claude Code
 
 Problem: Running Docker inside containers requires socket access. This comes up when Claude Code is itself running inside a container and needs to spin up additional containers.
 
@@ -401,7 +401,7 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock -u $(id -u):$(id -g) doc
 
 This grants the container full Docker access on the host, use only with trusted images. The container can control the host Docker daemon completely, which is a significant security boundary to cross.
 
-Scenario: Permission Errors Only in CI/CD
+## Scenario: Permission Errors Only in CI/CD
 
 Problem: Everything works locally but the pipeline fails with permission errors.
 
@@ -419,7 +419,7 @@ GitHub Actions example
       -t myimage .
 ```
 
-Quick Reference Commands
+## Quick Reference Commands
 
 One-liner to run any container with your current user's permissions:
 
@@ -447,12 +447,11 @@ groups | grep docker
 
 These commands cover the most common diagnostic and remediation steps. Bookmark them if you work regularly with Docker in development, you will use them repeatedly.
 
-Conclusion
+## Conclusion
 
 Docker bind mount permission errors are common but fully solvable once you understand the root cause. In most cases it comes down to a UID/GID mismatch between the host and the container. The fastest fix for development is the `-u $(id -u):$(id -g)` flag. The most maintainable long-term fix is building images with a matching non-root user baked in via the Dockerfile.
 
 For Claude Code integration specifically, getting permissions right upfront means Claude can read and write project files, generate outputs, and iterate without hitting dead ends mid-workflow. If you are setting up a containerized Claude Code development environment for the first time, start with the Docker Compose approach (Solution 4) and the Dockerfile non-root user (Solution 6) together, that combination handles the majority of real-world cases.
-
 
 Related Reading
 

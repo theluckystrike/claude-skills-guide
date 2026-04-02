@@ -17,7 +17,7 @@ Manifest V3 Privacy: What Developers and Power Users Need to Know
 
 Chrome extensions have long been a powerful way to customize browser behavior, but they also present significant privacy concerns. With the transition from Manifest V2 to Manifest V3, Google introduced substantial changes to how extensions handle permissions, network requests, and user data. Understanding these changes helps developers build privacy-respecting extensions and empowers power users to make informed decisions about the extensions they install.
 
-The Permission Model Changes
+## The Permission Model Changes
 
 Manifest V3 fundamentally reimagines how extensions request and use permissions. The most significant change involves how extensions access data on websites they interact with.
 
@@ -41,7 +41,7 @@ Here's how the permission structure differs:
 
 The key distinction is that `host_permissions` in V3 controls which sites an extension can access, while `permissions` now focuses on API capabilities. This separation makes it clearer what data an extension can potentially access.
 
-Manifest V2 vs. V3: Side-by-Side Comparison
+## Manifest V2 vs. V3: Side-by-Side Comparison
 
 The scope of the changes goes well beyond permissions. Here is a full comparison across the axes that matter most for privacy and security:
 
@@ -58,7 +58,7 @@ The scope of the changes goes well beyond permissions. Here is a full comparison
 
 The pattern is consistent: V3 trades developer flexibility for user privacy and security. Extension authors lose some power; users gain more meaningful control.
 
-Background Pages vs. Service Workers
+## Background Pages vs. Service Workers
 
 One of the less-discussed privacy improvements in V3 is the shift from persistent background pages to service workers. In V2, a background page ran continuously as long as the browser was open. This gave extensions a permanent context to monitor events, accumulate data, and make network requests at any time. without any user action triggering the behavior.
 
@@ -100,7 +100,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 });
 ```
 
-The Declarative Net Request API
+## The Declarative Net Request API
 
 One of the most impactful privacy-related changes in Manifest V3 is the replacement of the `webRequest` API with the `declarativeNetRequest` API for blocking network requests.
 
@@ -160,7 +160,7 @@ The extension registers these rules in its manifest:
 
 This approach shifts the blocking logic from runtime execution to static rules, reducing the extension's ability to make dynamic decisions about network traffic.
 
-Dynamic Rules: When Static is Not Enough
+## Dynamic Rules: When Static is Not Enough
 
 For use cases that require runtime-determined blocking (user-defined blocklists, for example), V3 provides `chrome.declarativeNetRequest.updateDynamicRules()`. Dynamic rules are still declarative in structure. they cannot inspect request bodies. but they can be added or removed at runtime:
 
@@ -200,7 +200,7 @@ webRequest vs. declarativeNetRequest: Practical Tradeoffs
 
 The performance improvement is a genuine benefit. `webRequest` forced every matching request through extension JavaScript, creating measurable latency. `declarativeNetRequest` runs in the browser's network stack with no JavaScript overhead.
 
-Optional Permissions: Privacy Through Just-In-Time Access
+## Optional Permissions: Privacy Through Just-In-Time Access
 
 Manifest V3 encourages. and in some cases requires. the use of optional permissions. Instead of declaring all permissions at install time, extensions can request additional access only when the user performs an action that requires it.
 
@@ -234,7 +234,7 @@ Declare optional permissions in the manifest without granting them at install:
 
 From a privacy standpoint, this is meaningful. An extension with optional permissions only accesses protected APIs when the user explicitly triggers the relevant action. Chrome displays a prompt confirming the request, keeping the user informed in real time rather than asking for blanket trust at install.
 
-User Privacy Controls in V3
+## User Privacy Controls in V3
 
 Manifest V3 provides users with more visibility and control over extension permissions. When installing an extension from the Chrome Web Store, users now see clearly labeled permission requests separated into categories: "Data access on all websites," "Data access on specific sites," and "Site access."
 
@@ -242,7 +242,7 @@ Chrome also implements automatic permission revocation for extensions that haven
 
 For developers, this means designing extensions with minimal permissions from the start. Using `activeTab` instead of broad host access not only improves privacy but also increases user trust and installation rates.
 
-Privacy Best Practices for Extension Developers
+## Privacy Best Practices for Extension Developers
 
 Building privacy-conscious extensions involves more than just complying with Manifest V3 requirements. Consider these practices:
 
@@ -281,7 +281,7 @@ Use content script `world` isolation. V3 lets you specify whether a content scri
 }
 ```
 
-What Power Users Should Know
+## What Power Users Should Know
 
 For users concerned about extension privacy, Manifest V3 provides better tools for managing browser extensions:
 
@@ -293,7 +293,7 @@ For users concerned about extension privacy, Manifest V3 provides better tools f
 6. Inspect network activity. For extensions you want to scrutinize closely, use Chrome DevTools (F12 → Network) with the extension active. If a simple utility extension is making unexpected outbound requests to third-party domains, that warrants investigation.
 7. Check the Chrome Web Store listing date and update history. Extensions that were last updated years ago predate V3 requirements and may still be running with V2 permission models. Extensions that suddenly gained a large number of new permissions in a recent update warrant scrutiny.
 
-Red Flags in Extension Permission Requests
+## Red Flags in Extension Permission Requests
 
 Some permission combinations are inherently higher risk than others:
 
@@ -308,7 +308,7 @@ Some permission combinations are inherently higher risk than others:
 
 None of these permission combinations are automatically malicious. a legitimate password manager, for example, genuinely needs cookie access and broad host permissions. The question is whether the extension's stated purpose justifies the level of access it requests.
 
-Limitations and Ongoing Debates
+## Limitations and Ongoing Debates
 
 Manifest V3 is not without its critics. Several privacy and security concerns remain unresolved or are actively debated in the extension developer community:
 
@@ -322,14 +322,13 @@ Side-loaded extensions. Extensions installed outside the Chrome Web Store (via d
 
 Understanding these limitations does not negate V3's improvements. it helps set realistic expectations. V3 raises the bar significantly for extensions distributed through the Chrome Web Store, which covers the vast majority of users.
 
-The Future of Extension Privacy
+## The Future of Extension Privacy
 
 Manifest V3 represents a shift toward more controlled extension behavior, but privacy remains a shared responsibility between developers and users. Google continues to refine the platform, with potential future changes focusing on tighter restrictions on extension capabilities and more granular user controls.
 
 For developers, building privacy-respecting extensions isn't just about compliance. it's about user trust. Extensions that demonstrate responsible data handling earn positive reviews and sustained user bases. For power users, understanding these changes helps make better decisions about which extensions to trust with their browsing data.
 
 The Manifest V3 privacy model isn't perfect, but it represents meaningful progress toward a browser extension ecosystem where user privacy is the default rather than the exception.
-
 
 Related Reading
 

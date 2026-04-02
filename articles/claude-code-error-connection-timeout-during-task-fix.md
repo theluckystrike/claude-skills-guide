@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Error: Connection Timeout During Task Fix
-
 Connection timeout errors in Claude Code can interrupt your workflow during critical development tasks. When the CLI cannot establish or maintain a connection to Anthropic's API servers, tasks fail mid-execution, leaving incomplete work and frustrating error messages. This guide provides practical solutions for developers and power users facing these timeout issues.
 
-Understanding Connection Timeout Errors
+## Understanding Connection Timeout Errors
 
 A connection timeout occurs when Claude Code fails to establish a network connection within the expected time frame. The error typically manifests as:
 
@@ -34,7 +31,7 @@ Claude Code API request failed: connect ETIMEDOUT
 
 These errors can occur during initial connection, between API calls in long-running tasks, or when processing large responses. Understanding the root cause helps you apply the right fix.
 
-Common Causes and Solutions
+## Common Causes and Solutions
 
 1. Network Configuration Issues
 
@@ -124,7 +121,7 @@ claude --verbose "your task" 2>&1 | grep -i rate
 
 Solution: Implement exponential backoff in your automation scripts. If you consistently hit limits, consider upgrading your plan or distributing requests across multiple API keys.
 
-Working with Claude Skills During Timeout Issues
+## Working with Claude Skills During Timeout Issues
 
 When connection timeouts occur during skill execution, perhaps while using tdd for test-driven development or supermemory for knowledge retrieval, the partial state can complicate recovery.
 
@@ -140,11 +137,11 @@ claude --continue
 
 Best practice: Break large tasks into smaller steps when working with skills. This reduces the impact of timeouts and makes recovery easier.
 
-Performance Optimization for Complex Tasks
+## Performance Optimization for Complex Tasks
 
 Prevent timeouts by optimizing how you structure complex tasks:
 
-Chunk Large Operations
+## Chunk Large Operations
 
 Instead of processing an entire codebase:
 
@@ -153,7 +150,7 @@ Process files in batches
 find ./src -name "*.ts" | head -10 | xargs -I {} claude "analyze {}"
 ```
 
-Use Streaming Responsibly
+## Use Streaming Responsibly
 
 Skills that generate large outputs, like those using algorithmic-art or canvas-design, may benefit from streaming disabled:
 
@@ -161,7 +158,7 @@ Skills that generate large outputs, like those using algorithmic-art or canvas-d
 claude --print "generate the design"
 ```
 
-Configure Retry Behavior
+## Configure Retry Behavior
 
 Add automatic retries for transient failures:
 
@@ -180,7 +177,7 @@ retry_claude() {
 }
 ```
 
-Debugging Tools and Techniques
+## Debugging Tools and Techniques
 
 When standard fixes don't resolve the issue, use detailed debugging:
 
@@ -202,7 +199,7 @@ Or use mtr for more detailed analysis
 mtr api.anthropic.com
 ```
 
-Prevention Strategies
+## Prevention Strategies
 
 1. Monitor network health before starting large tasks
 2. Keep Claude Code updated for the latest connection handling improvements
@@ -217,7 +214,7 @@ curl -s -o /dev/null -w "%{http_code}" https://api.anthropic.com && \
     echo "Connection check failed"
 ```
 
-When to Seek Additional Help
+## When to Seek Additional Help
 
 If you've tried these solutions and still experience timeout errors:
 

@@ -26,7 +26,7 @@ Claude Code isn't just another AI assistant, it's a powerful development environ
 
 The key advantage is the interactive nature of the learning experience. When you're stuck on a problem, Claude Code can guide you through the solution step by step. When you need to practice, it can generate infinite variations of problems tailored to your skill level. This personalized approach makes your preparation far more effective than passive watching or reading.
 
-Setting Up Your Interview Preparation Environment
+## Setting Up Your Interview Preparation Environment
 
 Before diving into practice, create a dedicated workspace for your interview prep. This helps mentally separate your study time from regular coding work.
 
@@ -51,11 +51,11 @@ interview-prep/
  notes/
 ```
 
-Leveraging Claude Code Skills for Algorithm Practice
+## Leveraging Claude Code Skills for Algorithm Practice
 
 Claude Code offers specialized skills that make algorithm practice more effective.  how to use these tools.
 
-Interactive Problem Solving
+## Interactive Problem Solving
 
 When you're stuck on a problem, describe it to Claude Code and ask for guidance rather than just the solution. For example:
 
@@ -63,7 +63,7 @@ When you're stuck on a problem, describe it to Claude Code and ask for guidance 
 
 This approach helps you develop problem-solving instincts rather than just copying answers. Claude Code can provide hints, ask probing questions, and help you think through the approach before showing implementation details.
 
-Generating Practice Problems
+## Generating Practice Problems
 
 Use Claude Code to generate targeted practice problems based on your weak areas. If you struggle with dynamic programming, ask:
 
@@ -71,7 +71,7 @@ Use Claude Code to generate targeted practice problems based on your weak areas.
 
 This gives you unlimited practice material tailored to your needs. You can also ask for variations of problems you've already solved to ensure you truly understand the underlying patterns.
 
-Code Review and Optimization
+## Code Review and Optimization
 
 After implementing a solution, ask Claude Code to review your code. This is invaluable for learning clean coding practices and understanding time/space complexity:
 
@@ -79,11 +79,11 @@ After implementing a solution, ask Claude Code to review your code. This is inva
 
 Claude Code can identify improvements you might miss and help you understand why certain approaches are better than others.
 
-System Design Practice with Claude Code
+## System Design Practice with Claude Code
 
 System design questions often trip up developers because they require broad knowledge and practical judgment. Claude Code can help you practice these discussions.
 
-Simulating Design Discussions
+## Simulating Design Discussions
 
 Present a system design problem and have Claude Code play the role of the interviewer:
 
@@ -91,7 +91,7 @@ Present a system design problem and have Claude Code play the role of the interv
 
 This interactive format helps you practice the verbal explanation skills crucial for system design interviews. Claude Code can probe into areas you haven't considered, helping you develop a more comprehensive design thinking approach.
 
-Learning From Real-World Architectures
+## Learning From Real-World Architectures
 
 Ask Claude Code to explain how real systems are designed:
 
@@ -99,11 +99,11 @@ Ask Claude Code to explain how real systems are designed:
 
 Understanding real-world implementations gives you concrete examples to reference during interviews and helps you think at scale.
 
-Creating a Study Schedule with Claude Code
+## Creating a Study Schedule with Claude Code
 
 Consistency is key in interview preparation. Use Claude Code to create and maintain a study schedule.
 
-Weekly Planning
+## Weekly Planning
 
 At the start of each week, work with Claude Code to plan your sessions:
 
@@ -111,7 +111,7 @@ At the start of each week, work with Claude Code to plan your sessions:
 
 Claude Code can help you break down complex topics into manageable daily goals, ensuring you cover everything without burning out.
 
-Progress Tracking
+## Progress Tracking
 
 Keep track of problems solved and concepts reviewed. Ask Claude Code to help you maintain this log and periodically review your progress:
 
@@ -119,11 +119,11 @@ Keep track of problems solved and concepts reviewed. Ask Claude Code to help you
 
 This data-driven approach ensures you're allocating time efficiently.
 
-Mock Interview Practice
+## Mock Interview Practice
 
 Perhaps the most valuable use of Claude Code is practicing for actual interviews through mock sessions.
 
-Timed Practice Sessions
+## Timed Practice Sessions
 
 Set a timer and work through problems as if in a real interview:
 
@@ -131,7 +131,7 @@ Set a timer and work through problems as if in a real interview:
 
 The time pressure helps you develop the stamina and speed needed for real interviews. After the timer ends, work through the solution together, discussing any mistakes or inefficiencies.
 
-Explaining Your Thought Process
+## Explaining Your Thought Process
 
 Practice thinking out loud during problem-solving. This skill is crucial in actual interviews but often neglected in solo practice. Ask Claude Code to explicitly evaluate your communication:
 
@@ -139,7 +139,7 @@ Practice thinking out loud during problem-solving. This skill is crucial in actu
 
 This targeted feedback helps you develop the verbal skills that interviewers value highly.
 
-Additional Tips for Success
+## Additional Tips for Success
 
 Beyond the technical preparation, keep these tips in mind:
 
@@ -151,7 +151,7 @@ Practice under pressure. Simulate interview conditions regularly. Use timers, av
 
 Take care of yourself. Sleep, exercise, and breaks are essential. Burnout will hurt your performance more than skipping a study session.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms interview preparation from a solitary, often frustrating endeavor into an interactive, efficient learning experience. By using its skills for problem generation, code review, system design practice, and mock interviews, you can significantly accelerate your preparation and build confidence for the real thing.
 

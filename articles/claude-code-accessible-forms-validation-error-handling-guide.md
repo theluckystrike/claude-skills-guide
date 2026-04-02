@@ -18,7 +18,7 @@ permalink: /claude-code-accessible-forms-validation-error-handling-guide/
 
 [This guide covers practical approaches to accessible form validation using Claude Code skills](/claude-tdd-skill-test-driven-development-workflow/), with code examples you can apply immediately.
 
-Understanding WCAG Form Accessibility Requirements
+## Understanding WCAG Form Accessibility Requirements
 
 Web Content Accessibility Guidelines (WCAG) specify several requirements for form validation:
 
@@ -29,7 +29,7 @@ Web Content Accessibility Guidelines (WCAG) specify several requirements for for
 
 The [frontend-design skill](/best-claude-code-skills-for-frontend-development/) understands these requirements and generates form components with proper ARIA attributes, labels, and error message containers built in.
 
-Setting Up Accessible Form Markup
+## Setting Up Accessible Form Markup
 
 Start with semantic HTML that supports screen readers. The frontend-design skill generates forms with proper structure:
 
@@ -60,7 +60,7 @@ Start with semantic HTML that supports screen readers. The frontend-design skill
 
 Key accessibility attributes include `aria-describedby` linking the input to its error message, `aria-live` ensuring dynamic errors are announced, and proper label association.
 
-Implementing Validation with the tdd Skill
+## Implementing Validation with the tdd Skill
 
 Use the [tdd skill](/best-claude-skills-for-developers-2026/) to develop validation logic test-first. This ensures your error handling works correctly for all users:
 
@@ -79,7 +79,7 @@ The tdd skill generates comprehensive test cases covering:
 - Real-time vs submit-time validation
 - Error message content and structure
 
-Real-Time Validation Patterns
+## Real-Time Validation Patterns
 
 Implementing real-time validation requires balancing usability with accessibility. The frontend-design skill suggests these patterns:
 
@@ -108,7 +108,7 @@ const validateField = async (field, value) => {
 
 This pattern updates both visual error display and ARIA attributes, ensuring screen reader users receive the same information as visual users.
 
-Custom Error Announcements with ARIA
+## Custom Error Announcements with ARIA
 
 For sophisticated error announcement strategies, go beyond a single `aria-live` container. Rather than relying solely on `aria-live`, consider these approaches:
 
@@ -133,7 +133,7 @@ const announceError = (message, containerId) => {
 
 This technique provides clear feedback without interrupting the user's current navigation.
 
-Form-Level Validation Errors
+## Form-Level Validation Errors
 
 When validation fails on multiple fields, communicate all errors clearly. The frontend-design skill generates form-level error summaries:
 
@@ -154,7 +154,7 @@ When validation fails on multiple fields, communicate all errors clearly. The fr
 
 This pattern allows keyboard users to jump directly to the first error, with each list item linking to the problematic field.
 
-Validation for Specific Input Types
+## Validation for Specific Input Types
 
 Different input types require different validation strategies. The pdf skill can generate comprehensive validation documentation for your team:
 
@@ -172,7 +172,7 @@ Common patterns include:
 - Credit Card: Luhn algorithm validation
 - URL: Protocol and structure validation
 
-Error Prevention and User Assistance
+## Error Prevention and User Assistance
 
 Beyond validation, accessible forms help users avoid errors through:
 
@@ -187,7 +187,7 @@ The supermemory skill helps maintain consistency across your forms by rememberin
 "Where did we document our required field validation approach?"
 ```
 
-Testing Accessibility
+## Testing Accessibility
 
 Validate your accessible forms using multiple methods:
 
@@ -204,7 +204,7 @@ readers, focus moves to the first error field, and all form
 controls are keyboard accessible"
 ```
 
-Handling Multi-Step Form Accessibility
+## Handling Multi-Step Form Accessibility
 
 Multi-step forms (wizards) introduce additional accessibility challenges beyond single-form validation. Users need to understand their progress, navigate between steps, and recover from errors in earlier steps without losing data.
 
@@ -283,7 +283,7 @@ class MultiStepFormValidator {
 
 The `requestAnimationFrame` trick ensures the DOM change triggers the screen reader's live region announcement even when the text was previously the same string.
 
-Automated Accessibility Testing for Forms
+## Automated Accessibility Testing for Forms
 
 Manual testing with screen readers is essential but time-consuming. Automated testing catches the most common accessibility violations and runs on every commit, preventing regressions.
 
@@ -346,7 +346,7 @@ describe('LoginForm accessibility', () => {
 
 Running these tests in CI ensures that accessible form behavior is maintained as the component evolves. The `jest-axe` integration catches WCAG violations automatically, while the custom tests verify specific accessible interaction patterns that axe cannot detect through static analysis alone.
 
-Summary
+## Summary
 
 Accessible form validation requires attention to both implementation and user experience. Use these key practices:
 

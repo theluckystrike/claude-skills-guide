@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for GraphQL Codegen Workflow Tutorial
 
@@ -40,7 +39,7 @@ You let Codegen handle it automatically, ensuring your types always match your s
 
 Without codegen, teams typically end up with hand-written interfaces that drift from the actual schema over time. A backend developer renames a field, the schema gets updated, but the frontend TypeScript interfaces never get touched. The result is silent type mismatches that only surface at runtime. Codegen eliminates this entire category of bug.
 
-Codegen vs. Manual Typing: A Direct Comparison
+## Codegen vs. Manual Typing: A Direct Comparison
 
 | Approach | Type Safety | Maintenance | Schema Drift Risk | Setup Cost |
 |---|---|---|---|---|
@@ -51,7 +50,7 @@ Codegen vs. Manual Typing: A Direct Comparison
 
 For any team running more than one or two active API consumers, codegen wins clearly on the maintenance and drift dimensions.
 
-Setting Up Your Claude Code Project
+## Setting Up Your Claude Code Project
 
 First, ensure you have Claude Code installed and configured. If you haven't already, install it and set up your project:
 
@@ -79,7 +78,7 @@ For projects using React with urql, use:
 npm install -D @graphql-codegen/typescript-urql
 ```
 
-Choosing the Right Plugins
+## Choosing the Right Plugins
 
 The plugin ecosystem for graphql-codegen is large. Here is a practical breakdown of the most common choices:
 
@@ -174,11 +173,11 @@ generates:
 
 Notice the separation of concerns: base types in one file, operation types in a second, framework-specific hooks in a third. This lets you share the base types with a backend package while keeping React-specific output isolated.
 
-Automating with Claude Code
+## Automating with Claude Code
 
 Here's where Claude Code shines. Instead of manually running codegen commands, you can create Claude Code prompts that handle the entire workflow.
 
-Creating Your Codegen Agent
+## Creating Your Codegen Agent
 
 Create a file called `.claude/codegen-agent.md` in your project:
 
@@ -195,7 +194,7 @@ You are responsible for maintaining the GraphQL codegen workflow. Your responsib
 Always run `graphql-codegen` after any schema modifications.
 ```
 
-A More Complete Codegen Agent Prompt
+## A More Complete Codegen Agent Prompt
 
 The brief agent above is a good starting point. A more detailed version gives Claude Code enough context to handle edge cases:
 
@@ -237,7 +236,7 @@ Do Not
 - Disable strict mode in the codegen config
 ```
 
-Integrating with Claude Code
+## Integrating with Claude Code
 
 Now you can invoke Claude Code to handle codegen:
 
@@ -257,7 +256,7 @@ Or create a custom script in your `package.json`:
 }
 ```
 
-Using Claude Code to Diagnose Codegen Failures
+## Using Claude Code to Diagnose Codegen Failures
 
 When codegen fails, Claude Code can read the error output and trace it back to the source. A typical interaction:
 
@@ -272,9 +271,9 @@ Check schema.graphql and the relevant operation files to explain what is wrong."
 
 Claude will read both the error output and the source files, then tell you exactly which field in which operation file is inconsistent with the current schema, far faster than manually cross-referencing error messages with schema definitions.
 
-Advanced Workflow Patterns
+## Advanced Workflow Patterns
 
-Automatic Schema Sync
+## Automatic Schema Sync
 
 Set up Claude Code to automatically sync your schema from your API:
 
@@ -415,7 +414,7 @@ Report what changed in the schema compared to the previous version."
 
 Claude will execute each step, diff the schema changes, and summarize what types were added, removed, or modified, turning a routine maintenance task into a quick informational summary.
 
-Watching for Changes
+## Watching for Changes
 
 Use Claude Code's file watching capabilities to trigger codegen automatically:
 
@@ -441,7 +440,7 @@ npm run codegen:watch
 
 The `--watch` flag in graphql-codegen uses chokidar under the hood, which reliably picks up changes to `.graphql` files and the schema. When an error appears in watch mode, paste it to Claude for a diagnosis.
 
-Integrating Codegen into CI/CD
+## Integrating Codegen into CI/CD
 
 A common mistake is running codegen only locally and committing the generated files. A better approach: run codegen in CI and treat any diff as a failure.
 
@@ -485,7 +484,7 @@ jobs:
 
 This workflow fails the PR if any generated type file differs from what the checked-in schema would produce, catching schema/type drift before it merges.
 
-Best Practices
+## Best Practices
 
 1. Use Fragment Matching
 
@@ -623,9 +622,9 @@ Whether to commit generated files to version control is a team decision, but her
 
 For most teams, committing generated files to version control and running the CI check above strikes the best balance.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Schema Parse Errors
+## Schema Parse Errors
 
 If you encounter schema parsing errors, ensure your schema file is valid:
 
@@ -646,7 +645,7 @@ claude --print "The graphql-codegen command is failing with this error: [paste e
 Read schema.graphql and identify the parse problem."
 ```
 
-Type Mismatches After Schema Updates
+## Type Mismatches After Schema Updates
 
 When generated types don't match your expectations after a schema update, the usual causes are:
 
@@ -662,7 +661,7 @@ claude --print "After updating schema.graphql, I'm getting this codegen error:
 Find all .graphql files that reference fullName and tell me what to change."
 ```
 
-Watch Mode Issues
+## Watch Mode Issues
 
 For watch mode problems, ensure you're using the correct file paths in your configuration and that your TypeScript project is properly configured. Common causes:
 
@@ -686,7 +685,7 @@ For the last issue, verify your `tsconfig.json`:
 }
 ```
 
-Resolving Plugin Conflicts
+## Resolving Plugin Conflicts
 
 When using multiple plugins that both emit types for the same operations, you may see duplicate identifier errors. The solution is usually to use `import-types` preset:
 
@@ -702,7 +701,7 @@ generates:
 
 This tells the `typescript-operations` plugin to import base types from `./types.ts` (the output of the `typescript` plugin) rather than re-declaring them.
 
-Putting It All Together: A Real Workflow
+## Putting It All Together: A Real Workflow
 
 Here is how a typical day looks with this setup running:
 
@@ -717,7 +716,7 @@ Here is how a typical day looks with this setup running:
 
 Claude Code accelerates steps 2, 3, and 5, it reads the schema diff, locates affected operation files, and proposes the exact changes needed. What used to take 20-30 minutes of manual cross-referencing takes under five minutes.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms GraphQL codegen from a manual, error-prone process into an automated, reliable workflow. By integrating codegen with Claude Code's capabilities, you get:
 

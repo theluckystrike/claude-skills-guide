@@ -13,14 +13,13 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Not Recognizing TypeScript Path Aliases in tsconfig: Fix Guide
+## Claude Code Not Recognizing TypeScript Path Aliases in tsconfig: Fix Guide
 
 When working with TypeScript projects that use path aliases (like `@components/*` or `@lib/*`), you may encounter a situation where Claude Code generates incorrect import paths or fails to recognize your configured aliases. This creates friction during development, especially in larger codebases where path aliases improve code organization and maintainability.
 
 This guide provides practical solutions to ensure Claude Code properly recognizes and respects your TypeScript path alias configurations.
 
-Understanding the Problem
+## Understanding the Problem
 
 TypeScript path aliases allow you to define shortcut paths in your `tsconfig.json` instead of using relative imports:
 
@@ -55,7 +54,7 @@ When Claude Code does not recognize these aliases, it may generate relative impo
 
 The frustration compounds in large monorepos where a file buried five directories deep would otherwise require imports like `../../../../../../../../shared/utils/format`. Path aliases eliminate this entirely, and when your AI assistant keeps reverting to relative paths, it defeats much of the point.
 
-Root Causes
+## Root Causes
 
 Several factors can cause Claude Code to miss your TypeScript path aliases:
 
@@ -67,9 +66,9 @@ Several factors can cause Claude Code to miss your TypeScript path aliases:
 
 The most common root cause in practice is a mismatch between what TypeScript knows and what your bundler knows. TypeScript compilation can succeed with path aliases, but at runtime your bundler may not know how to resolve them, leading to import errors that look like path alias failures even when the `tsconfig.json` is correctly written.
 
-Solutions
+## Solutions
 
-Solution 1: Verify Your tsconfig.json Structure
+## Solution 1: Verify Your tsconfig.json Structure
 
 Ensure your `tsconfig.json` has the correct path alias configuration:
 
@@ -106,7 +105,7 @@ A common mistake is setting `baseUrl` to `"./src"` and then writing paths relati
 
 Note the order: more specific aliases (`@components/*`) should appear before the catch-all (`@/*`). TypeScript resolves paths in order, and a catch-all defined first will match everything before your specific aliases get a chance.
 
-Solution 2: Install ts-node and Ensure Type Resolution
+## Solution 2: Install ts-node and Ensure Type Resolution
 
 If you are using Node.js tools, install the necessary TypeScript resolution packages:
 
@@ -148,7 +147,7 @@ npm install --save-dev tsc-alias
 
 This post-processes the compiled output and replaces `@utils/format` with the actual relative path `../../utils/format` in the `.js` files. Without this step, your compiled code will fail at runtime even if TypeScript compilation succeeds.
 
-Solution 3: Configure Your Bundler to Match
+## Solution 3: Configure Your Bundler to Match
 
 For Vite projects, update `vite.config.ts`:
 
@@ -219,7 +218,7 @@ module.exports = {
 };
 ```
 
-Solution 4: Restart the TypeScript Language Server
+## Solution 4: Restart the TypeScript Language Server
 
 Claude Code relies on the TypeScript language server for code intelligence. After modifying your `tsconfig.json`:
 
@@ -228,7 +227,7 @@ Claude Code relies on the TypeScript language server for code intelligence. Afte
 
 The TypeScript language server caches resolution data aggressively. Even after you correct your `tsconfig.json`, the old (incorrect) resolution data stays in memory until the server restarts. This is one of the more confusing debugging experiences because the configuration looks right but the behavior hasn't changed yet. Always restart the language server as the last step when troubleshooting path alias issues.
 
-Solution 5: Provide Explicit Context to Claude Code
+## Solution 5: Provide Explicit Context to Claude Code
 
 When working with Claude Code, you can explicitly reference your path aliases in your prompts:
 
@@ -278,7 +277,7 @@ Example WRONG import (never do this):
 import { useAuth } from '../../hooks/useAuth';
 ```
 
-Diagnosing Path Alias Problems Systematically
+## Diagnosing Path Alias Problems Systematically
 
 When Claude Code keeps generating wrong imports despite your configuration, work through this diagnostic checklist:
 
@@ -290,7 +289,7 @@ npx tsc --noEmit --diagnostics
 
 A single syntax error in `tsconfig.json` can silently disable path resolution. The TypeScript compiler will fall back to default behavior rather than error loudly.
 
-Step 2: Trace how TypeScript resolves a specific import
+## Step 2: Trace how TypeScript resolves a specific import
 
 ```bash
 npx tsc --traceResolution 2>&1 | grep "@components"
@@ -304,7 +303,7 @@ baseUrl option is set to '.', using this value to resolve non-relative module na
 Resolving module name '@components/Button' relative to base url '.' gives 'src/components/Button'.
 ```
 
-Step 3: Check whether multiple tsconfig files conflict
+## Step 3: Check whether multiple tsconfig files conflict
 
 In monorepos or projects with separate `tsconfig.build.json` and `tsconfig.json`, aliases defined in one file may not be inherited by the other:
 
@@ -314,7 +313,7 @@ ls tsconfig*.json
 
 If you see multiple files, verify which one your editor and bundler are actually reading.
 
-Step 4: Confirm the target directories exist
+## Step 4: Confirm the target directories exist
 
 ```bash
 ls src/components src/utils src/lib src/hooks
@@ -322,7 +321,7 @@ ls src/components src/utils src/lib src/hooks
 
 TypeScript and bundlers will silently fail to resolve aliases pointing at non-existent directories. No error, just incorrect behavior.
 
-Bundler Comparison Table
+## Bundler Comparison Table
 
 | Bundler | Path Alias Support | Recommended Approach |
 |---|---|---|
@@ -334,7 +333,7 @@ Bundler Comparison Table
 | Parcel | Automatic from tsconfig | No extra config needed |
 | ts-node | Requires registration | Use `-r tsconfig-paths/register` |
 
-Integration with Claude Skills
+## Integration with Claude Skills
 
 Several Claude Code skills can help manage path alias configurations:
 
@@ -350,7 +349,7 @@ When using these skills, reference your path aliases in the skill invocation:
 /tdd Write tests for the auth module using @lib/* aliases
 ```
 
-Common Configuration Mistakes
+## Common Configuration Mistakes
 
 Avoid these frequent errors when setting up path aliases:
 
@@ -386,7 +385,7 @@ module.exports = {
 };
 ```
 
-Testing Your Configuration
+## Testing Your Configuration
 
 Verify that your path aliases work correctly:
 
@@ -414,7 +413,7 @@ npx ts-node -r tsconfig-paths/register test-aliases.ts
 
 If this executes without error, your alias configuration is working correctly for both TypeScript compilation and runtime resolution.
 
-Summary
+## Summary
 
 Claude Code recognition of TypeScript path aliases requires proper configuration in both your `tsconfig.json` and your build tool. The key steps are:
 
@@ -428,7 +427,6 @@ Claude Code recognition of TypeScript path aliases requires proper configuration
 By ensuring consistency across your TypeScript and build configurations, Claude Code will correctly recognize and use your path aliases throughout your project.
 
 ---
-
 
 Related Reading
 

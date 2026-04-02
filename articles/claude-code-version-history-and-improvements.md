@@ -13,13 +13,12 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code Version History and Improvements
 
 Claude Code has undergone significant evolution since its initial release, transforming from a basic CLI assistant into a powerful agentic coding tool. Understanding this version history helps developers appreciate the capabilities available today and make informed decisions about which features to use in their workflows.
 
-The Early Days: Claude Code 1.0
+## The Early Days: Claude Code 1.0
 
 The first public release of Claude Code focused on establishing core functionality. Version 1.0 introduced basic file operations, git integration, and a simple skill system. Developers could write Claude skills using a Markdown-based format that defined prompts and metadata.
 
@@ -36,7 +35,7 @@ You are a file organization assistant. Help users organize their files efficient
 
 This foundational version established the pattern that would evolve into the sophisticated skill ecosystem we see today. The skill-creator skill emerged as developers needed guidance on building more complex capabilities.
 
-Version 2.0: The MCP Revolution
+## Version 2.0: The MCP Revolution
 
 Claude Code 2.0 introduced the Model Context Protocol (MCP), which became a turning point for extensibility. MCP allowed Claude to connect with external services, databases, and tools through a standardized interface. This opened doors for skills like supermemory, which provides intelligent context management across sessions.
 
@@ -53,7 +52,7 @@ You are a database expert. Help write queries and optimize database performance.
 
 Version 2.0 also brought improved tool use capabilities. The model could now chain multiple tool calls together, enabling more complex workflows. Developers began building specialized skills for specific domains, tdd skills for test-driven development workflows, pdf skills for document processing, and frontend-design skills for UI implementation.
 
-Version 3.0: Enhanced Agent Capabilities
+## Version 3.0: Enhanced Agent Capabilities
 
 Claude Code 3.0 introduced persistent agents that could maintain context across multiple sessions. This version brought the `--resume` flag, allowing developers to continue long-running tasks after interruptions. The improvements made Claude Code suitable for substantial development projects.
 
@@ -78,7 +77,7 @@ The permission system received a major overhaul. The `--dangerously-skip-permiss
 
 Skills like docx and pptx used these hooks to provide rich document generation capabilities. The version also introduced better error handling and retry logic, making Claude Code more reliable for production use.
 
-Version 4.0: The Skills Ecosystem Explosion
+## Version 4.0: The Skills Ecosystem Explosion
 
 Version 4.0 marked a mature phase for Claude Code's skill ecosystem. The artifacts-builder skill enabled creation of complex web applications directly in Claude Code. Canvas-design skills brought visual design capabilities, while algorithmic-art skills opened creative possibilities.
 
@@ -91,7 +90,7 @@ This version introduced:
 
 The xlsx skill received significant updates, enabling complex spreadsheet operations with formulas and data visualization. Developers could now build comprehensive data analysis workflows without leaving Claude Code.
 
-Recent Improvements: Version 5.0 and Beyond
+## Recent Improvements: Version 5.0 and Beyond
 
 The latest versions have focused on developer experience and specialized capabilities. Claude Code now supports:
 
@@ -110,7 +109,7 @@ You are an API testing expert. Execute requests and validate responses.
 
 Improved memory and context management through integrations with the supermemory skill. Claude Code can now maintain context across weeks or months of work, remembering project conventions and previous decisions.
 
-How the Skill API Has Changed Across Versions
+## How the Skill API Has Changed Across Versions
 
 One of the most practically useful things to understand about Claude Code's evolution is how the skill format itself has changed. because old skill files do not always behave identically under new versions.
 
@@ -156,7 +155,7 @@ In version 4.0, the hooks system made skill behavior interceptable at the tool-c
 
 This pattern is essential for teams where multiple developers contribute skills. You get an auditable, enforceable policy on what skills can touch, rather than trusting the skill author remembered to set the right `tools` list.
 
-The Practical Impact of Context Window Growth
+## The Practical Impact of Context Window Growth
 
 Context window expansions across versions are not just marketing metrics. they change what workflows are actually feasible. The progression from 8K to 32K to 100K+ tokens unlocked qualitatively different categories of work.
 
@@ -191,7 +190,7 @@ claude --dangerously-skip-permissions \
 
 In the automated configuration, hooks take over the safety role. Define them explicitly rather than relying on the model's judgment alone.
 
-Choosing the Right Version for Your Needs
+## Choosing the Right Version for Your Needs
 
 Different versions suit different use cases:
 
@@ -201,7 +200,7 @@ Different versions suit different use cases:
 
 The skill ecosystem has matured significantly. Whether you need the canvas-design skill for visual projects, the pdf skill for document processing, or the artifacts-builder for React applications, Claude Code provides the foundation to build efficient workflows.
 
-Migrating Skills Written for Older Versions
+## Migrating Skills Written for Older Versions
 
 If you have a skill library built under version 1.0 or 2.0 conventions, most skills will continue to work under current versions. backward compatibility has been a consistent design priority. But you may not be getting full value from newer capabilities.
 
@@ -222,12 +221,11 @@ The second common upgrade is replacing hardcoded file paths with glob patterns. 
 
 The third upgrade worth considering for any team using skills in automation: add a `version` field to your skill metadata and increment it when behavior changes. This makes it possible to audit which version of a skill was running when a particular automated task produced a specific output. essential for debugging incidents that happened days or weeks earlier.
 
-Looking Forward
+## Looking Forward
 
 Claude Code continues to evolve with regular improvements to model capabilities, skill APIs, and integrations. The platform has grown from a helpful CLI assistant into a comprehensive development environment that handles everything from quick code reviews to full application development.
 
 Understanding this evolution helps developers use Claude Code effectively. The skills you write today will continue working while benefiting from underlying improvements to the platform. The teams that get the most from the platform are those that revisit their skill libraries periodically. not to rewrite from scratch, but to remove constraints that made sense under older limitations and add structured metadata that current versions actually use.
-
 
 Related Reading
 

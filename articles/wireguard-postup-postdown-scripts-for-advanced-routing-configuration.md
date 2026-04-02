@@ -15,7 +15,7 @@ reviewed: true
 {% raw %}
 WireGuard's `PostUp` and `PostDown` directives are powerful features that allow you to execute shell commands automatically when your VPN tunnel is established or torn down. These scripts enable advanced routing configurations, automated firewall rule management, and dynamic network setup that responds to your VPN connection state.
 
-Understanding PostUp and PostDown
+## Understanding PostUp and PostDown
 
 In your WireGuard configuration file (`wg0.conf`), the `PostUp` and `PostDown` options let you define commands that run after the interface is brought up or down, respectively. This automation is essential for complex network topologies where you need to configure routes, DNS servers, or firewall rules dynamically.
 
@@ -34,7 +34,7 @@ Endpoint = vpn.example.com:51820
 AllowedIPs = 0.0.0.0/0
 ```
 
-How wg-quick Processes These Directives
+## How wg-quick Processes These Directives
 
 When you run `wg-quick up wg0`, it reads the `[Interface]` section and executes each `PostUp` line as a shell command via `/bin/sh -c`. The variable `%i` is substituted with the interface name, which is useful for writing reusable scripts:
 
@@ -47,7 +47,7 @@ PostDown = iptables -D FORWARD -o %i -j ACCEPT
 
 Using `%i` makes your configuration portable. If you rename the interface from `wg0` to `wg-prod`, you don't need to update the PostUp/PostDown lines.
 
-PostUp vs PreUp and PostDown vs PreDown
+## PostUp vs PreUp and PostDown vs PreDown
 
 WireGuard actually supports four hook points: `PreUp`, `PostUp`, `PreDown`, and `PostDown`. Understanding when each fires helps you place commands correctly:
 
@@ -60,11 +60,11 @@ WireGuard actually supports four hook points: `PreUp`, `PostUp`, `PreDown`, and 
 
 Most configurations only need `PostUp` and `PostDown`. Use `PreDown` when you need to cleanly terminate connections before the tunnel disappears, such as notifying a load balancer to drain the node.
 
-Basic Firewall Configuration
+## Basic Firewall Configuration
 
 One of the most common uses for PostUp/PostDown is managing iptables rules. This ensures your firewall adapts to your VPN connection automatically.
 
-Allowing Forward Traffic
+## Allowing Forward Traffic
 
 ```ini
 [Interface]
@@ -88,7 +88,7 @@ net.ipv6.conf.all.forwarding = 1
 
 Apply the change immediately with `sysctl -p /etc/sysctl.conf`. Without this setting, the iptables FORWARD rules will have no effect because the kernel will not route packets between interfaces regardless of firewall policy.
 
-Stateful Connection Tracking
+## Stateful Connection Tracking
 
 For a more secure setup, restrict forwarding to established connections rather than accepting all forwarded traffic:
 
@@ -103,7 +103,7 @@ PostDown = iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 
 The `conntrack` module allows return traffic for connections initiated through the VPN while blocking uninitiated inbound connections on the forwarding chain.
 
-DNS Configuration Automation
+## DNS Configuration Automation
 
 You can automatically change your DNS servers when the VPN connects, ensuring all DNS queries go through your VPN's DNS resolver.
 
@@ -119,7 +119,7 @@ PostDown = resolvectl revert wg0
 
 The `~.` domain suffix tells systemd-resolved to route all DNS queries through this interface by default, the tilde prefix means "all domains" and the dot represents the DNS search root. This is the correct way to set up full-tunnel DNS routing on modern Ubuntu and Fedora systems using systemd-resolved.
 
-DNS Leak Prevention
+## DNS Leak Prevention
 
 A common misconfiguration causes DNS queries to bypass the VPN even when all other traffic routes through it. To prevent DNS leaks on systems using resolv.conf directly:
 
@@ -142,7 +142,7 @@ PostDown = networksetup -setdnsservers Wi-Fi "Empty"
 
 Replace `Wi-Fi` with your actual interface name as shown in System Preferences or via `networksetup -listallnetworkservices`.
 
-Split Tunneling with Custom Routes
+## Split Tunneling with Custom Routes
 
 PostUp scripts enable sophisticated split tunneling by adding specific routes only when the VPN is active.
 
@@ -157,7 +157,7 @@ PostDown = ip route del 10.8.0.0/16 via 10.0.0.1 dev wg0
 
 This routes specific private network ranges through the VPN while keeping other traffic on your default connection.
 
-Policy-Based Routing with Route Tables
+## Policy-Based Routing with Route Tables
 
 For more sophisticated split tunneling that avoids conflicts with the main routing table, use a separate routing table:
 
@@ -171,7 +171,7 @@ PostDown = ip route flush table 100
 
 This creates a routing policy that applies only to traffic originating from the VPN subnet. All traffic from `10.0.0.0/24` uses table 100, which routes by default through the VPN but keeps local subnet traffic on the physical interface. Traffic from other addresses continues to use the main routing table unaffected.
 
-Source-Based Routing for Multi-WAN
+## Source-Based Routing for Multi-WAN
 
 If your server has multiple WAN interfaces and you want VPN clients to exit through a specific one:
 
@@ -185,7 +185,7 @@ PostDown = ip route flush table 200
 
 Here, all VPN client traffic exits through `eth1` (your secondary WAN) rather than the default gateway on `eth0`. This is useful for separating VPN traffic from other server traffic for billing, bandwidth monitoring, or geographic routing purposes.
 
-Kill Switch Implementation
+## Kill Switch Implementation
 
 A VPN kill switch prevents data leaks by blocking all traffic when the VPN disconnects unexpectedly.
 
@@ -211,7 +211,7 @@ PostDown = iptables -D OUTPUT ! -o wg0 -j DROP
 
 The ordering matters here, iptables evaluates rules in chain order, and `-I` inserts at the top of the chain. The DROP rule is inserted last, meaning the ACCEPT rules above it take precedence for local traffic. If you use `-A` (append) instead of `-I` (insert), the order could be wrong depending on existing rules.
 
-Kill Switch with nftables
+## Kill Switch with nftables
 
 For systems using nftables, a kill switch is expressed as a set of named rules that are easier to manage atomically:
 
@@ -226,7 +226,7 @@ PostDown = nft delete table inet wg_killswitch
 
 The `PostDown` command deletes the entire table and all its chains and rules in a single operation, which is cleaner than tracking individual rules.
 
-WireGuard with NFTables
+## WireGuard with NFTables
 
 For systems using nftables instead of iptables, the syntax is similar but uses the nft command.
 
@@ -266,7 +266,7 @@ table ip wg0_rules {
 
 This approach is more maintainable and avoids the handle-number lookup problem.
 
-Advanced: IPv6 Support
+## Advanced: IPv6 Support
 
 Managing both IPv4 and IPv6 requires additional rules.
 
@@ -295,7 +295,7 @@ PostDown = ip6tables -D FORWARD -o wg0 -j ACCEPT
 
 Peers would receive addresses like `2001:db8:1::2/48` and route natively without masquerade.
 
-Multiple Peers with Different Rules
+## Multiple Peers with Different Rules
 
 When managing multiple WireGuard peers, you can use environment variables to identify which peer connected.
 
@@ -346,7 +346,7 @@ echo "$(date): PostUp for $INTERFACE completed" >> /var/log/wireguard.log
 
 Make the script executable: `chmod +x /etc/wireguard/postup.sh`. Always use absolute paths in PostUp/PostDown lines, both for the script itself and for any commands inside the script, to avoid failures due to PATH differences when running as root.
 
-Comparison: Inline Commands vs External Scripts
+## Comparison: Inline Commands vs External Scripts
 
 Choosing between inline PostUp commands and external script files depends on your configuration's complexity:
 
@@ -358,7 +358,7 @@ Choosing between inline PostUp commands and external script files depends on you
 
 For production deployments, external scripts are almost always preferable. They can be version-controlled, tested independently, and modified without editing the WireGuard configuration directly.
 
-Troubleshooting PostUp/PostDown Issues
+## Troubleshooting PostUp/PostDown Issues
 
 When your PostUp or PostDown commands fail, WireGuard may not provide detailed error messages. Here are debugging strategies:
 
@@ -404,7 +404,7 @@ Common failure modes:
 | PostDown fails silently | Trying to delete a rule that doesn't exist | Use `-C` checks or `2>/dev/null` |
 | Rules duplicate on restart | PostDown didn't run before PostUp | Use idempotent rule checks |
 
-Best Practices
+## Best Practices
 
 Always clean up: Ensure your PostDown commands exactly reverse what PostUp does. Orphaned iptables rules after a VPN session ends create security vulnerabilities and can cause hard-to-diagnose connectivity issues.
 
@@ -423,12 +423,11 @@ Prefer named tables and chains: When using nftables, creating named tables for W
 
 Document your rules: Add comments to your PostUp script explaining why each rule exists. Firewall configurations become difficult to maintain when the reasoning is not preserved alongside the commands.
 
-Conclusion
+## Conclusion
 
 WireGuard's PostUp and PostDown directives transform a simple VPN tunnel into a fully programmable network solution. By automating routing, firewall rules, and DNS configuration, you can create sophisticated VPN setups that adapt dynamically to connection states while maintaining security and privacy.
 
 Whether you need a simple kill switch or complex multi-peer routing with policy-based forwarding tables, these hooks provide the flexibility to customize your WireGuard deployment precisely. The key is to treat PostUp and PostDown as complementary pairs, every rule added on up must be removed on down, and to move beyond inline commands to external scripts as your configuration grows in complexity. With good logging, idempotent rule checks, and thorough testing across reboot scenarios, a WireGuard configuration built on solid PostUp/PostDown practices will be both reliable and maintainable over time.
-
 
 Related Reading
 

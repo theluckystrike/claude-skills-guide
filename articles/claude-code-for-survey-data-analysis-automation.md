@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Survey Data Analysis Automation"
 description: "Learn how to automate survey data analysis using Claude Code. This guide covers practical techniques for processing, analyzing, and visualizing survey."
@@ -14,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Survey Data Analysis Automation
 
@@ -22,7 +20,7 @@ Survey data analysis is a common yet time-consuming task for developers and data
 
 This guide demonstrates how to use Claude Code's tool use capabilities to build efficient survey data analysis automation that saves hours of manual work.
 
-Setting Up Your Survey Analysis Project
+## Setting Up Your Survey Analysis Project
 
 Before diving into analysis, establish a well-organized project structure. Claude Code works best when it has clear visibility into your data and scripts:
 
@@ -41,11 +39,11 @@ survey-analysis/
 
 Initialize your project with a configuration file that defines your survey structure, question types, and analysis parameters. This allows Claude Code to adapt its analysis approach based on your specific survey design.
 
-Data Ingestion and Cleaning
+## Data Ingestion and Cleaning
 
 The first step in any survey analysis pipeline is data ingestion and cleaning. Claude Code can automate this process by reading various file formats and standardizing the data structure.
 
-Reading Survey Data
+## Reading Survey Data
 
 Claude Code supports multiple survey data formats including CSV, Excel, and JSON. Here's a practical example of setting up data ingestion:
 
@@ -69,7 +67,7 @@ and apply appropriate loading strategies
 survey_data = load_survey_data('data/raw/survey_responses.csv')
 ```
 
-Automated Data Cleaning
+## Automated Data Cleaning
 
 Survey data often contains inconsistencies that require cleaning: missing values, duplicate responses, and inconsistent formatting. Claude Code can build comprehensive cleaning pipelines:
 
@@ -93,11 +91,11 @@ def clean_survey_data(df):
 cleaned_data = clean_survey_data(survey_data)
 ```
 
-Statistical Analysis Automation
+## Statistical Analysis Automation
 
 Once your data is clean, Claude Code can perform statistical analysis automatically. This includes descriptive statistics, correlation analysis, and segment-based insights.
 
-Computing Summary Statistics
+## Computing Summary Statistics
 
 Automate the computation of key metrics across your survey questions:
 
@@ -125,7 +123,7 @@ rating_questions = [col for col in df.columns if 'rating' in col.lower()]
 summary = generate_survey_summary(cleaned_data, rating_questions)
 ```
 
-Cross-Segment Analysis
+## Cross-Segment Analysis
 
 Compare survey responses across different segments to uncover nuanced insights:
 
@@ -155,11 +153,11 @@ department_satisfaction = segment_analysis(
 )
 ```
 
-Visualization and Reporting
+## Visualization and Reporting
 
 Claude Code can generate automated visualizations and reports that make survey insights actionable. Integration with libraries like Matplotlib and Seaborn enables professional-quality charts.
 
-Automated Chart Generation
+## Automated Chart Generation
 
 Create visualizations that highlight key findings:
 
@@ -186,7 +184,7 @@ def generate_survey_charts(df, output_dir='reports/'):
     plt.close()
 ```
 
-Report Generation
+## Report Generation
 
 Combine analysis and visualizations into comprehensive reports:
 
@@ -214,7 +212,7 @@ def generate_analysis_report(df, output_path='reports/survey_report.md'):
         f.write('\n'.join(report))
 ```
 
-Workflow Orchestration with Claude Code
+## Workflow Orchestration with Claude Code
 
 The real power of Claude Code emerges when you combine these individual components into cohesive automation workflows. Create a main script that orchestrates the entire pipeline:
 
@@ -240,7 +238,7 @@ Claude Code can execute this entire pipeline
 with a single command, saving hours of manual work
 ```
 
-Best Practices for Survey Analysis Automation
+## Best Practices for Survey Analysis Automation
 
 When building survey analysis automation with Claude Code, consider these practical tips:
 
@@ -252,7 +250,7 @@ Version control your analysis scripts. Just as you version control your data, ma
 
 Separate data from logic. Keep your raw data immutable and perform all transformations in code. This allows you to re-run analyses with different parameters without risking data corruption.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms survey data analysis from a repetitive manual process into an efficient, automated workflow. By using its tool use capabilities, developers can build solid analysis pipelines that handle data ingestion, cleaning, statistical analysis, and visualization with minimal manual intervention.
 

@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Elastic APM Integration Workflow
 
@@ -21,7 +20,7 @@ Modern application monitoring requires smooth integration between development to
 
 This guide explores practical approaches to integrating Claude Code with Elastic APM, providing actionable examples for developers looking to enhance their observability stack.
 
-Understanding the Integration Architecture
+## Understanding the Integration Architecture
 
 Claude Code can interact with Elastic APM through multiple pathways: direct API calls to Elasticsearch, webhook integrations from Elastic alerts, or by reading and analyzing APM data exports. The integration enables you to automate monitoring tasks, generate intelligent insights from traces, and build self-healing infrastructure workflows.
 
@@ -32,7 +31,7 @@ The fundamental architecture involves three components:
 
 For authentication, you'll need an Elasticsearch API key or basic auth credentials. Store these securely using environment variables rather than hardcoding them in scripts.
 
-Setting Up the Basic Connection
+## Setting Up the Basic Connection
 
 Before building complex workflows, establish a reliable connection between Claude Code and your Elastic APM endpoint. Create a configuration file that handles authentication and provides reusable connection functions.
 
@@ -67,7 +66,7 @@ def verify_connection():
 
 Run this script to ensure your credentials work before proceeding with more complex integrations.
 
-Automated Error Detection and Alerting
+## Automated Error Detection and Alerting
 
 One of the most valuable workflows involves automatically detecting errors in your APM data and triggering appropriate responses. This section demonstrates how to build an error monitoring pipeline that identifies issues before they impact users.
 
@@ -94,7 +93,7 @@ def get_recent_errors(client, service_name=None, time_range="15m"):
 
 This function enables you to regularly poll for errors and take action. For continuous monitoring, consider running this as a scheduled task or integrating it with a workflow automation tool.
 
-Performance Anomaly Detection
+## Performance Anomaly Detection
 
 Beyond basic error tracking, Claude Code can help identify performance anomalies by analyzing APM metrics over time. This workflow compares current performance against historical baselines to detect degradation.
 
@@ -129,7 +128,7 @@ def analyze_transaction_times(client, service_name, operation_name):
 
 When performance metrics exceed acceptable thresholds, you can trigger alerts, rollbacks, or scaling actions automatically.
 
-Building Distributed Trace Analysis Workflows
+## Building Distributed Trace Analysis Workflows
 
 Elastic APM excels at distributed tracing, but analyzing traces manually can be overwhelming. Claude Code can automate trace analysis to identify bottlenecks and optimization opportunities.
 
@@ -161,7 +160,7 @@ def find_slow_traces(client, threshold_ms=1000, service=None):
 
 This workflow surfaces the slowest transactions across your system, enabling targeted optimization efforts.
 
-Service Map Generation and Analysis
+## Service Map Generation and Analysis
 
 Elastic APM's service maps provide visual representations of service dependencies. Claude Code can analyze these relationships to identify critical paths and potential failure points.
 
@@ -202,7 +201,7 @@ def get_service_dependencies(client):
 
 Use this data to generate dependency graphs, identify tightly coupled services, or find opportunities for architectural improvements.
 
-Integrating with Incident Response
+## Integrating with Incident Response
 
 For production environments, integrate Claude Code workflows with your incident management system. When APM detects issues, automatically create incident tickets, notify on-call engineers, or trigger runbook execution.
 
@@ -221,7 +220,7 @@ def create_incident_from_apm(error_data):
     return incident
 ```
 
-Best Practices for Production Deployments
+## Best Practices for Production Deployments
 
 When deploying Claude Code with Elastic APM in production environments, follow these recommendations:
 
@@ -233,7 +232,7 @@ Optimize Query Performance: Use specific date ranges and filters in your queries
 
 Monitor the Monitor: Track your automation workflows themselves. Ensure that error detection logic remains accurate as your system evolves.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Elastic APM opens powerful possibilities for automated observability. From real-time error detection to performance analysis and incident response automation, these workflows help maintain application health while reducing manual monitoring burden.
 

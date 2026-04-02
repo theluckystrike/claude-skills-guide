@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Bug Reporting Best Practices
-
 When you encounter a bug in your Claude Code setup, a well-crafted bug report accelerates resolution significantly. Whether you're working with skills like `tdd` for test-driven development workflows, `supermemory` for knowledge management, or `frontend-design` for UI generation, the bug reporting process remains consistent. This guide covers practical patterns for documenting issues that maintainers can actually use.
 
-Why Bug Reports Matter in Claude Code
+## Why Bug Reports Matter in Claude Code
 
 Claude Code extends the model's capabilities through skills, modular prompt packages that add domain-specific functionality. When a skill fails to produce expected output, crashes, or behaves unexpectedly, your bug report becomes the primary diagnostic tool. Unlike traditional software where you might include stack traces, Claude Code bugs often manifest as:
 
@@ -29,7 +26,7 @@ Claude Code extends the model's capabilities through skills, modular prompt pack
 
 The difference between a bug fixed in 24 hours versus one that lingers for months often comes down to how well the report communicates the problem.
 
-Essential Components of a Bug Report
+## Essential Components of a Bug Report
 
 Every effective bug report contains five core elements. Missing any of these dramatically reduces the chances of rapid resolution.
 
@@ -86,7 +83,7 @@ If you're debugging skill interactions with `frontend-design`, capture the exact
 
 Create the smallest possible demonstration of the bug. Remove unnecessary complexity. If you can reproduce the issue with a single skill and one prompt, that's far more useful than a complex multi-step workflow.
 
-Code Snippets That Help Maintainers
+## Code Snippets That Help Maintainers
 
 When reporting bugs involving skill behavior, include actual prompts and outputs. Use code blocks for readability:
 
@@ -113,27 +110,27 @@ describe('add', () => {
 
 This specificity allows maintainers to run identical commands and observe the failure directly.
 
-Categorizing Common Claude Code Bug Types
+## Categorizing Common Claude Code Bug Types
 
 Understanding the bug category helps maintainers route your report effectively.
 
-Tool Execution Failures
+## Tool Execution Failures
 
 When a skill attempts to use a tool (read_file, bash, write_file) and it fails, document the exact tool call and error message. Skills like `pdf` rely heavily on tool execution for document generation.
 
-Prompt Interpretation Issues
+## Prompt Interpretation Issues
 
 Sometimes Claude misinterprets skill instructions. Document the exact prompt you used and how the interpretation diverged from your intent.
 
-Skill Loading Errors
+## Skill Loading Errors
 
 If a skill fails to load on initialization, capture the complete error output. This often indicates front matter issues or missing dependencies.
 
-Context Management Problems
+## Context Management Problems
 
 With skills that manage long conversations like `supermemory`, document where context appears to be lost or corrupted.
 
-Structuring Your Report for Maximum Impact
+## Structuring Your Report for Maximum Impact
 
 Use a consistent template for all bug reports:
 
@@ -168,7 +165,7 @@ If you have a hypothesis about the cause.
 
 This structure mirrors what open-source maintainers expect and enables quick triage.
 
-What to Avoid
+## What to Avoid
 
 Resist the temptation to report bugs that stem from your own configuration errors. Before submitting, verify the issue persists after:
 
@@ -178,7 +175,7 @@ Resist the temptation to report bugs that stem from your own configuration error
 
 Also avoid reporting feature requests as bugs. If Claude doesn't have a capability you want, that's a feature request, not a bug.
 
-Leveraging Skills for Better Bug Reports
+## Leveraging Skills for Better Bug Reports
 
 Several Claude skills can improve your bug reporting workflow:
 
@@ -187,7 +184,7 @@ Several Claude skills can improve your bug reporting workflow:
 - Use `supermemory` to track bugs across sessions and link related issues
 - Reference `frontend-design` patterns when reporting UI-related bugs in skill output
 
-Final Checklist Before Submission
+## Final Checklist Before Submission
 
 - [ ] Included environment details (version, OS, skills)
 - [ ] Provided reproducible steps (numbered, specific)
@@ -197,7 +194,6 @@ Final Checklist Before Submission
 - [ ] Verified bug persists with minimal setup
 
 Quality bug reports respect maintainer time. By following these practices, you contribute to a healthier Claude Code ecosystem where issues get resolved faster and skills improve more rapidly.
-
 
 Related Reading
 

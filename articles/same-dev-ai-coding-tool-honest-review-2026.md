@@ -15,11 +15,6 @@ score: 7
 
 {% raw %}
 
-
-
-
-Claude Code Honest Review 2026: A Developer's Perspective
-
 After months of using Claude Code as my primary AI coding assistant in 2026, here's my honest assessment. This review covers the skills system, practical capabilities, real-world examples, and where the tool still falls short. If you're evaluating whether Claude Code is worth adding to your development workflow, this is the ground-level perspective you need.
 
 What Is Claude Code?
@@ -28,7 +23,7 @@ Claude Code is Anthropic's CLI tool that brings Claude AI capabilities directly 
 
 The key differentiator is the skills system. customizable capabilities that extend Claude Code's functionality for specific tasks like spreadsheet manipulation, PDF processing, presentations, and more. Where a browser-based assistant only has access to what you paste into a chat window, Claude Code can read your actual codebase, run commands, inspect outputs, and iterate. all without leaving your terminal.
 
-How Claude Code Compares to Alternatives in 2026
+## How Claude Code Compares to Alternatives in 2026
 
 Before diving deep, here is a straightforward comparison against the tools developers are actually choosing between this year:
 
@@ -45,7 +40,7 @@ Before diving deep, here is a straightforward comparison against the tools devel
 
 Claude Code's advantage is the depth of integration with your terminal environment and the extensibility of the skills system. Its disadvantage is the absence of a GUI and the requirement for connectivity.
 
-The Skills System: What Makes It Powerful
+## The Skills System: What Makes It Powerful
 
 Claude Code's skills are defined in JSON and loaded dynamically. Here's a practical example of a basic skill structure:
 
@@ -132,7 +127,7 @@ prs.save('update.pptx')
 
 The real value here is generating consistent, data-driven slide decks from scripts rather than manually updating PowerPoint files each sprint.
 
-Writing Custom Skills
+## Writing Custom Skills
 
 Beyond community skills, you can write your own. Here is a minimal example for a skill that checks your Git repository for large files before a commit:
 
@@ -147,9 +142,9 @@ Beyond community skills, you can write your own. Here is a minimal example for a
 
 Skills like this encode team-specific workflows and enforce conventions automatically, which is where the system pays dividends in larger teams.
 
-Real-World Usage: What Works Well
+## Real-World Usage: What Works Well
 
-Code Review and Refactoring
+## Code Review and Refactoring
 
 Claude Code excels at understanding codebase context. When I ask it to review a function, it reads the surrounding code, understands dependencies, and provides actionable feedback:
 
@@ -165,7 +160,7 @@ Found issues:
 
 What separates this from a web-based review is that Claude Code actually reads the files it references. It can follow imports, check how functions are called elsewhere in the codebase, and give recommendations that account for your actual architecture rather than generic advice.
 
-Automated Testing
+## Automated Testing
 
 One of the most practical features is generating tests. Given a function, Claude Code can create unit tests following TDD principles:
 
@@ -187,7 +182,7 @@ def test_calculate_discount():
 
 The generated tests are notably thorough at covering edge cases when you give Claude Code the actual implementation to read. I've found it generates better tests when you also share any existing tests as examples of your preferred style.
 
-Shell Scripting and DevOps
+## Shell Scripting and DevOps
 
 Claude Code shines at writing shell scripts, Dockerfiles, and CI/CD configurations. A representative workflow:
 
@@ -222,7 +217,7 @@ echo "Deployment $DEPLOYMENT is healthy ($READY/$DESIRED replicas ready)"
 
 The output accounts for your actual environment because Claude Code reads your existing infrastructure files before generating new ones.
 
-Debugging Complex Issues
+## Debugging Complex Issues
 
 A less-discussed but high-value use case is debugging. Rather than pasting error messages into a browser, you can ask Claude Code to read your logs, trace the error through your codebase, and propose a fix:
 
@@ -236,21 +231,21 @@ Here's the fix: [generates corrected SQL and updated test]
 
 This pattern. read the context, trace the root cause, propose a complete fix. is where Claude Code consistently outperforms copy-pasting into a chat interface.
 
-Honest Limitations
+## Honest Limitations
 
-Context Window Challenges
+## Context Window Challenges
 
 While Claude Code handles large codebases better than many competitors, extremely large projects can still hit context limitations. The solution is breaking tasks into smaller chunks or using the skill system to focus on specific files. In monorepos with hundreds of thousands of lines of code, you need to be intentional about pointing Claude Code at the relevant directories rather than asking it to "understand the whole codebase."
 
-Skill Discovery
+## Skill Discovery
 
 Finding the right skill for your task isn't always straightforward. The ecosystem is growing but lacks a centralized, well-organized registry. Users often rely on GitHub searches or community recommendations. Investing time in building a team-specific skill library early pays off. but there is a real upfront cost.
 
-Offline Capabilities
+## Offline Capabilities
 
 Claude Code requires an internet connection for the AI features. While some skills work offline (local file operations), the core AI assistance needs connectivity. There's no local LLM option built-in without additional setup, which is a meaningful limitation for environments with strict network controls or developers working on airplanes.
 
-Learning Curve
+## Learning Curve
 
 Mastering Claude Code requires understanding:
 - How to write effective prompts that use file-reading rather than pasting context manually
@@ -260,7 +255,7 @@ Mastering Claude Code requires understanding:
 
 The productivity gain is real, but it typically takes two to three weeks of regular use before the workflow feels natural rather than friction-heavy.
 
-Cost at Scale
+## Cost at Scale
 
 For individual developers or small teams, the cost of API usage is manageable. For larger teams running Claude Code continuously across many developers, the cumulative API costs deserve deliberate tracking. Establishing guidelines on which tasks are appropriate for AI assistance (and which are fast enough to handle manually) helps keep costs predictable.
 
@@ -279,7 +274,7 @@ Maybe not for:
 - Projects requiring complete offline capability or operating in air-gapped environments
 - Workflows where the primary need is inline code completion rather than reasoning about larger tasks
 
-The Verdict
+## The Verdict
 
 Claude Code in 2026 is a mature, powerful tool that genuinely improves developer productivity for the right user profile. The skills system is its strongest feature, enabling specialized capabilities that go beyond simple code completion. The honest assessment: it's not perfect, but it's genuinely useful for daily development work, particularly for the class of tasks that require reasoning across multiple files, generating scripts from context, or debugging problems where the root cause lives far from the symptom.
 

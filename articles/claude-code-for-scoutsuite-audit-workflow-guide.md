@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for ScoutSuite Audit Workflow Guide
 
@@ -25,13 +24,13 @@ ScoutSuite is an open-source multi-cloud security auditing tool that supports AW
 
 That's where Claude Code comes in. By combining ScoutSuite with Claude Code's AI-powered assistance, you can create automated workflows that handle everything from triggering scans to analyzing findings and generating actionable reports.
 
-What ScoutSuite Audits
+## What ScoutSuite Audits
 
 ScoutSuite checks configurations across dozens of cloud services. On AWS alone it covers IAM, EC2, S3, RDS, Lambda, CloudTrail, CloudWatch, VPC, KMS, SNS, SQS, and more. The tool maps findings against CIS benchmarks and common security frameworks, giving you a structured baseline rather than a raw list of configuration values.
 
 Understanding what ScoutSuite covers helps you write better Claude Code prompts when you want focused analysis on a specific service or compliance framework.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before building your audit workflow, ensure you have the required tools installed:
 
@@ -53,7 +52,7 @@ For GCP:
 gcloud auth application-default login
 ```
 
-Permissions Required for Each Provider
+## Permissions Required for Each Provider
 
 ScoutSuite needs read-only access to your cloud environment. Claude Code can generate the minimum required IAM policies so you avoid granting excessive permissions to your audit account.
 
@@ -73,7 +72,7 @@ Create an Azure custom role definition JSON file that grants ScoutSuite read-onl
 
 Having these least-privilege definitions ready means your audit pipeline never runs with more access than it needs. an important principle when the audit tooling itself could become an attack surface.
 
-Creating Your First Automated Audit Script
+## Creating Your First Automated Audit Script
 
 Let's build a Claude Code-powered script that runs a ScoutSuite audit and processes the results. Create a new file called `audit-workflow.sh`:
 
@@ -103,7 +102,7 @@ Add error handling to this audit script: check that cloud credentials are valid 
 
 Claude will add credential pre-checks (e.g., `aws sts get-caller-identity` for AWS), trap the scout exit code, and write timestamped log entries. small additions that make a big difference when running automated audits unattended.
 
-Setting Up a CLAUDE.md for Your Audit Project
+## Setting Up a CLAUDE.md for Your Audit Project
 
 One of the most effective ways to use Claude Code for recurring audit workflows is to configure a `CLAUDE.md` file that gives Claude persistent context about your security environment and standards.
 
@@ -131,7 +130,7 @@ EOF
 
 With this context in place, every time you run Claude Code inside this directory it already knows your compliance goals, severity thresholds, and environment structure. This eliminates repetitive context-setting in each session and produces more precisely targeted analysis.
 
-Building the Complete Audit Workflow
+## Building the Complete Audit Workflow
 
 Here's a comprehensive workflow that combines ScoutSuite scanning with Claude Code analysis:
 
@@ -167,7 +166,7 @@ echo "Audit complete! Reports available in $REPORT_DIR"
 
 Each step produces a distinct artifact suited to a different audience: `analysis.txt` is for the security engineering team, `remediation-plan.md` is for the team that will implement fixes, and `executive-summary.md` is for leadership. Claude Code produces all three from the same scan results without requiring you to manually translate between technical and non-technical language.
 
-Practical Example: AWS Security Audit
+## Practical Example: AWS Security Audit
 
 Let's walk through a practical example of auditing an AWS environment:
 
@@ -188,7 +187,7 @@ When Claude Code analyzes the results, it might identify issues like:
 - Overly permissive IAM roles. "Detected 5 IAM roles with AdministratorAccess. Consider implementing least-privilege permissions."
 - Insecure security groups. "Found 12 security groups with inbound traffic from 0.0.0.0/0 on ports 22 or 3389."
 
-Generating Remediation Scripts
+## Generating Remediation Scripts
 
 Once Claude identifies issues, you can ask it to generate the remediation commands directly:
 
@@ -225,7 +224,7 @@ done
 
 Review all auto-remediation scripts before running them. Claude Code is useful for generating the code quickly, but a human should verify the target resources are correct before executing changes against production infrastructure.
 
-Multi-Account Auditing
+## Multi-Account Auditing
 
 For organizations with multiple AWS accounts, ask Claude to help build a cross-account audit runner:
 
@@ -235,7 +234,7 @@ Extend the audit script to loop over multiple AWS account profiles from a config
 
 Claude will produce a script that reads account profiles from a YAML config, assumes an audit role in each account using `aws sts assume-role`, runs ScoutSuite per account, and then aggregates the findings. This pattern is common in organizations using AWS Organizations.
 
-Automating with CI/CD Integration
+## Automating with CI/CD Integration
 
 You can integrate this workflow into your CI/CD pipeline for continuous security monitoring:
 
@@ -265,7 +264,7 @@ jobs:
           claude -p "Review the ScoutSuite report and create actionable items"
 ```
 
-Failing the Build on Critical Findings
+## Failing the Build on Critical Findings
 
 A more advanced CI/CD pattern is to parse ScoutSuite's JSON output and fail the pipeline if critical findings exceed a threshold:
 
@@ -290,7 +289,7 @@ echo "No critical findings. Pipeline continues."
 
 Ask Claude to extend this with a threshold you define. for example, fail only if there are more than 5 new critical findings compared to the previous scan. Claude can help you write the diff logic against stored baseline JSON.
 
-Posting Findings as GitHub Issues
+## Posting Findings as GitHub Issues
 
 Another powerful integration is auto-creating GitHub Issues for newly discovered critical findings:
 
@@ -300,7 +299,7 @@ Write a Python script that reads ScoutSuite JSON output, identifies new critical
 
 Claude produces a script using `PyGithub` that deduplicates findings, formats the issue body with severity, affected resources, and remediation steps, and assigns it to the appropriate team. This closes the loop between automated scanning and developer workflow without requiring anyone to manually read audit reports.
 
-Trending and Historical Reporting
+## Trending and Historical Reporting
 
 A single audit snapshot is useful, but tracking how your security posture changes over time is more valuable. Ask Claude to help build a trending report:
 
@@ -320,7 +319,7 @@ A typical trend table looks like this:
 
 Showing this kind of concrete reduction in findings over time makes the case for continuing investment in automated security tooling.
 
-Best Practices for Your Audit Workflow
+## Best Practices for Your Audit Workflow
 
 When implementing ScoutSuite with Claude Code, consider these best practices:
 
@@ -336,7 +335,7 @@ When implementing ScoutSuite with Claude Code, consider these best practices:
 
 6. Separate audit credentials. Never run ScoutSuite using human credentials or admin roles. Create a dedicated audit service account with scoped read-only permissions, rotate its credentials quarterly, and log all its API calls to CloudTrail or equivalent.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with ScoutSuite transforms cloud security auditing from a manual, sporadic process into an automated, continuous workflow. By following this guide, you can:
 

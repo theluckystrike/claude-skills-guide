@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code SRE Postmortem Documentation Workflow Guide"
 description: "Learn how to use Claude Code and skills to streamline SRE postmortem documentation. Practical examples for incident analysis, root cause analysis, and."
@@ -14,22 +13,19 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code SRE Postmortem Documentation Workflow Guide
 
 Every incident tells a story. As Site Reliability Engineers, our job is not just to fix the immediate problem but to capture the lessons learned so our teams can prevent recurrence. Postmortem documentation is the backbone of a learning culture, yet it often gets neglected in the rush to return to normal operations. Claude Code transforms this process from a tedious chore into an efficient, thorough workflow that produces better documentation with less effort.
 
 This guide walks you through using Claude Code and its skill ecosystem to create comprehensive SRE postmortems that drive real organizational improvement.
 
-Understanding the Postmortem Challenge
+## Understanding the Postmortem Challenge
 
 Traditional postmortem writing involves multiple time-consuming steps: gathering data from various sources, synthesizing logs and metrics, identifying root cause, and structuring findings into a readable document. Claude Code accelerates each of these phases through its file operations, code analysis capabilities, and specialized skills.
 
 The key advantage lies in context preservation. Claude Code maintains conversation context across lengthy analysis sessions, allowing you to iteratively explore incident details without repeating yourself. This is particularly valuable when investigating complex incidents spanning multiple services and time periods.
 
-Setting Up Your Postmortem Environment
+## Setting Up Your Postmortem Environment
 
 Before diving into incident documentation, configure Claude Code for SRE workflows. The internal-comms skill provides structured templates for incident communications, while the docx skill enables generating polished postmortem documents in Microsoft Word format when your organization requires it.
 
@@ -41,7 +37,7 @@ mkdir -p incidents/INC-2026-0314-service-outage/{logs,metrics,screenshots}
 
 This directory structure keeps all incident-related artifacts organized and accessible to Claude Code for analysis. When you later ask Claude to analyze the incident, it can reference files from this structured location.
 
-Phase One: Data Collection and Preservation
+## Phase One: Data Collection and Preservation
 
 The moments following incident detection are critical for documentation. Preserve everything that might be relevant before starting remediation. Claude Code's bash execution skill helps automate this collection process.
 
@@ -67,7 +63,7 @@ curl -s "http://prometheus/api/v1/query?query=up{job='${AFFECTED_APP}'}" > "inci
 
 This script captures infrastructure state, application logs, and metrics at incident time. Running this during an active incident preserves the exact conditions that led to the failure.
 
-Phase Two: Log Analysis with Claude Code
+## Phase Two: Log Analysis with Claude Code
 
 Once you have collected incident data, use Claude Code to analyze logs and identify patterns. The analysis skill can process large log files and extract meaningful insights.
 
@@ -84,7 +80,7 @@ Claude Code processes the event log, looking for:
 
 The AI explains its findings in context, translating technical events into narrative descriptions that non-on-call team members can understand.
 
-Phase Three: Root Cause Analysis
+## Phase Three: Root Cause Analysis
 
 Traditional root cause analysis often settles for surface-level explanations like "the database was down" or "the deployment failed." Claude Code helps you dig deeper using the "Five Whys" technique systematically.
 
@@ -100,7 +96,7 @@ Claude guides you through layered questioning:
 
 This systematic questioning reveals systemic issues that single-incident fixes miss.
 
-Phase Four: Document Generation
+## Phase Four: Document Generation
 
 With analysis complete, generate the postmortem document. The internal-comms skill includes postmortem templates optimized for clarity and actionability.
 
@@ -116,7 +112,7 @@ For organizations requiring formal documentation, use the docx skill to create p
 claude "Use the docx skill to create a formal postmortem document from the INC-2026-0314 analysis, applying our company template with logo placement in the header and compliance section in the footer."
 ```
 
-Phase Five: Action Item Tracking
+## Phase Five: Action Item Tracking
 
 Effective postmortems drive systemic improvement through tracked action items. Claude Code helps translate findings into actionable work.
 
@@ -126,7 +122,7 @@ For each identified improvement, generate a task:
 
 This bridges incident analysis and engineering work, ensuring findings translate into preventions.
 
-Automating Postmortem Workflows
+## Automating Postmortem Workflows
 
 For high-volume incident teams, consider automating portions of the postmortem workflow. Create a Claude skill that combines these phases into a repeatable process.
 
@@ -139,7 +135,7 @@ description: "Streamline SRE postmortem creation from incident data"
 
 This skill automates routine portions while preserving human judgment for analysis and conclusions.
 
-Best Practices for AI-Assisted Postmortems
+## Best Practices for AI-Assisted Postmortems
 
 Preserve objectivity. While Claude Code helps analyze data, ensure human reviewers validate root cause conclusions. AI can miss context that humans understand intuitively.
 
@@ -149,7 +145,7 @@ Make action items specific. Vague items like "improve monitoring" rarely get com
 
 Follow up consistently. Schedule periodic reviews of past action items to ensure systemic improvements actually happened. Document whether implemented changes achieved their intended effect.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms postmortem documentation from a burdensome chore into an efficient workflow that produces higher-quality learning materials. By automating data collection, accelerating analysis, and generating structured documents, your team can focus on what matters: preventing incidents from recurring.
 

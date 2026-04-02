@@ -16,7 +16,7 @@ permalink: /how-to-fix-claude-skill-infinite-loop-issue/
 
 An infinite loop in a Claude Code skill is one of the more disruptive problems you can encounter. The session hangs, tokens drain, and Claude keeps calling the same tool or repeating the same step without making progress. This guide explains why Claude skill infinite loops happen, how to break out of one, and how to redesign your skill to prevent it.
 
-What an Infinite Loop Looks Like in Claude Code
+## What an Infinite Loop Looks Like in Claude Code
 
 Unlike a traditional programming loop, a Claude skill infinite loop is not a binary branch that repeats forever. It is a behavior pattern where Claude keeps taking the same action because the skill instructions, tool results, or environment create conditions where no exit criterion is ever met.
 
@@ -28,7 +28,7 @@ Common symptoms:
 - The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) writes a memory entry, reads it back, and re-writes it in a loop
 - Token usage spikes unusually fast for a simple task
 
-How to Stop an Active Loop
+## How to Stop an Active Loop
 
 Interrupt immediately:
 - Press `Ctrl+C` in the Claude Code terminal to interrupt the current operation
@@ -41,7 +41,7 @@ Stop all current tasks. Summarize the last 5 actions you took and what you were 
 
 This breaks the execution pattern and gives you visibility into what Claude was doing.
 
-Root Cause 1: Ambiguous Exit Condition in Skill Instructions
+## Root Cause 1: Ambiguous Exit Condition in Skill Instructions
 
 The most common cause. Skill instructions like "keep fixing errors until all tests pass" create an implicit loop. If tests cannot pass (due to a real bug, missing dependency, or an incorrect test itself), Claude has no exit condition and will keep trying.
 
@@ -63,7 +63,7 @@ Do not attempt more than one fix per test per invocation.
 
 The `tdd` skill in well-maintained versions includes a maximum iteration count for exactly this reason.
 
-Root Cause 2: Tool Output Triggering Re-invocation
+## Root Cause 2: Tool Output Triggering Re-invocation
 
 Some skill workflows read file output, process it, and write back. If the write changes the file in a way that the read step treats as "not done", the loop continues:
 
@@ -83,7 +83,7 @@ After processing the file, add `<!-- processed: YYYY-MM-DD -->` to the first lin
 Before processing, check if this marker exists. If it does, stop.
 ```
 
-Root Cause 3: CLAUDE.md Skill Auto-Invocation Loop
+## Root Cause 3: CLAUDE.md Skill Auto-Invocation Loop
 
 If your `CLAUDE.md` includes an instruction to invoke a skill at the start of every session, and that skill itself modifies `CLAUDE.md`, you can create a session-to-session loop.
 
@@ -102,7 +102,7 @@ At session start, run /supermemory to load context.
 supermemory should read from ~/.claude-memory/, not write to this file.
 ```
 
-Root Cause 4: Recursive Bash Calls
+## Root Cause 4: Recursive Bash Calls
 
 A skill that instructs Claude to run a shell script, and that script invokes Claude again (e.g., via `claude --print`), can create a process-level loop.
 
@@ -143,7 +143,7 @@ Or reduce the skill to a review mode:
 Review src/Button.tsx and list violations. Do not rewrite the file.
 ```
 
-Root Cause 6: supermemory Re-reading Its Own Output
+## Root Cause 6: supermemory Re-reading Its Own Output
 
 If `supermemory` stores a record, then is invoked again without a clear "what to do with memory" instruction, it may read its own previous session summaries, generate a new summary that includes the previous summary, and store that. exponentially growing the memory store.
 
@@ -155,7 +155,7 @@ READ the last checkpoint for project X.
 Do not write a new checkpoint unless I explicitly ask.
 ```
 
-Preventing Loops in Custom Skills
+## Preventing Loops in Custom Skills
 
 When writing your own skills, follow these rules:
 
@@ -174,7 +174,7 @@ Iteration Rules
 - If all errors are resolved, stop immediately
 ```
 
-Diagnosing Hangs: System Resources and Logs
+## Diagnosing Hangs: System Resources and Logs
 
 Sometimes a skill appears to loop but is actually stalled due to system constraints. Check resources before assuming a logic bug:
 
@@ -201,7 +201,7 @@ journalctl --user -u claude --since "1 hour ago"
 
 If a skill depends on missing MCP tools, it may hang waiting for responses. Run `/mcp` inside a Claude Code session to verify available tools match what the skill requires.
 
-Clearing Corrupted Cache
+## Clearing Corrupted Cache
 
 Claude Code caches skill data, which can become corrupted and cause repeated hangs:
 
@@ -212,7 +212,7 @@ rm -rf ~/.claude/skills/state/
 
 Restart Claude Code after clearing these directories.
 
-Emergency Recovery After a Loop
+## Emergency Recovery After a Loop
 
 If a loop consumed significant tokens or left your codebase in a partial state:
 

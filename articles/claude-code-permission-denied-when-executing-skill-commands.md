@@ -18,7 +18,7 @@ Permission denied errors when executing skill commands in Claude Code can stop y
 
 [This guide covers the most common causes of permission denied errors when executing skill commands](/claude-skill-md-format-complete-specification-guide/) and provides actionable solutions you can implement immediately.
 
-Understanding the Error Messages
+## Understanding the Error Messages
 
 When Claude Code refuses to execute a skill command, the error message typically reveals the underlying cause. Here are the most common variations you'll encounter:
 
@@ -30,7 +30,7 @@ bash: ./script.sh: Permission denied
 
 Each of these messages points to a different layer of the permission system. Identifying which layer is blocking execution is the first step toward resolution.
 
-Common Causes and Solutions
+## Common Causes and Solutions
 
 1. File System Permission Issues
 
@@ -186,9 +186,9 @@ sudo chgrp -R staff /usr/local/share/claude/skills/
 sudo chmod -R 775 /usr/local/share/claude/skills/
 ```
 
-Prevention Strategies
+## Prevention Strategies
 
-Keep Skills Updated
+## Keep Skills Updated
 
 Outdated skills may reference deprecated APIs or use deprecated permission patterns. Regularly update your skills:
 
@@ -197,7 +197,7 @@ cd ~/.claude/skills/your-skill
 git pull origin main
 ```
 
-Use Version Control for Skill Development
+## Use Version Control for Skill Development
 
 When creating custom skills, use the skill-md format with proper YAML front matter:
 
@@ -208,7 +208,7 @@ description: Automates daily development tasks
 ---
 ```
 
-Test Skills in Isolated Environments
+## Test Skills in Isolated Environments
 
 Before deploying a new skill to your main workflow, test it in a project directory where you can verify its behavior:
 
@@ -220,7 +220,7 @@ claude "Use the my-new-skill to do X"
 
 This isolation ensures any permission issues are caught before affecting your production work.
 
-Quick Reference Checklist
+## Quick Reference Checklist
 
 When you encounter a permission denied error, work through these items in order:
 
@@ -232,7 +232,7 @@ When you encounter a permission denied error, work through these items in order:
 6. Verify the skill is installed in an accessible location
 7. Review Claude Code's execution logs for policy violations
 
-Conclusion
+## Conclusion
 
 Permission denied errors in Claude Code skill execution usually stem from file permissions, sandbox policies, or PATH configuration. By systematically diagnosing which layer is causing the block, you can apply the appropriate fix and get back to productive work.
 

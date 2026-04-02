@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "How to Make Claude Code Respect Module Boundaries"
 description: "Practical techniques for controlling Claude Code's context awareness across module boundaries in multi-file projects. Learn to scope Claude's knowledge."
@@ -14,13 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-
-How to Make Claude Code Respect Module Boundaries
-
 When working on large codebases, Claude Code often pulls context from across your entire project. This behavior works well for small projects but becomes problematic when you need focused analysis within specific module boundaries. Here's how to control Claude's scope effectively.
 
-The Module Boundary Problem
+## The Module Boundary Problem
 
 Claude Code excels at understanding project-wide relationships, but sometimes you need it to stay within a specific module. For example, when using the tdd skill to write tests for a single service, you don't want Claude pulling in unrelated code from other modules. Similarly, when the pdf skill generates documentation, it should reference only the relevant component.
 
@@ -28,7 +23,7 @@ The problem compounds as projects grow. A mono-repo with eight services, a share
 
 The solution involves combining project-specific configuration files, explicit directory structure, and targeted prompts that make the desired scope unambiguous.
 
-Understanding How Claude Selects Context
+## Understanding How Claude Selects Context
 
 Before diving into techniques, it helps to understand what drives Claude's context selection. Claude Code reads files it discovers through a combination of:
 
@@ -39,7 +34,7 @@ Before diving into techniques, it helps to understand what drives Claude's conte
 
 When you start a session from your project root, Claude has access to everything. When you start from a subdirectory and also have a `CLAUDE.md` there, Claude reads that instruction file first and uses it as a framing document for the entire session. This is the fundamental lever you control.
 
-Using CLAUDE.md for Module Scoping
+## Using CLAUDE.md for Module Scoping
 
 Create a `CLAUDE.md` file in your module's root directory. This file instructs Claude Code to treat that directory as an isolated context.
 
@@ -72,7 +67,7 @@ The more specific you are about what "outside the boundary" means, the more reli
 
 When you start a session with `claude` from this directory, Claude reads the local `CLAUDE.md` and limits its context accordingly.
 
-CLAUDE.md Placement Strategy
+## CLAUDE.md Placement Strategy
 
 You can have multiple `CLAUDE.md` files at different directory levels. Claude reads them hierarchically. the root-level file provides broad project context, while module-level files narrow the scope. This lets you communicate both global constraints and local ones simultaneously:
 
@@ -87,7 +82,7 @@ You can have multiple `CLAUDE.md` files at different directory levels. Claude re
      CLAUDE.md          # "Shared utilities only. No business logic lives here."
 ```
 
-Project-Wide Boundaries with .claude/settings.json
+## Project-Wide Boundaries with .claude/settings.json
 
 For more granular control across multiple modules, create a `.claude/settings.json` in your project root:
 
@@ -118,11 +113,11 @@ For more granular control across multiple modules, create a `.claude/settings.js
 
 This configuration helps Claude understand which modules exist and their relationships, enabling more accurate context selection when you reference modules by name in prompts.
 
-Skill-Specific Boundary Techniques
+## Skill-Specific Boundary Techniques
 
 Different skills benefit from different scoping approaches.
 
-For Testing with tdd
+## For Testing with tdd
 
 When using the tdd skill, explicitly scope your requests:
 
@@ -137,7 +132,7 @@ This prevents the skill from analyzing unrelated modules and generates more focu
 Only mock dependencies within src/auth/. Do not import from src/payment/ or src/user/.
 ```
 
-For Documentation with pdf
+## For Documentation with pdf
 
 The pdf skill works similarly. Scope documentation requests to avoid pulling in tangential modules:
 
@@ -146,7 +141,7 @@ The pdf skill works similarly. Scope documentation requests to avoid pulling in 
 Include only the public methods exported from src/payment/index.ts
 ```
 
-For Frontend Work with frontend-design
+## For Frontend Work with frontend-design
 
 When the frontend-design skill analyzes your UI, specify component boundaries:
 
@@ -155,7 +150,7 @@ When the frontend-design skill analyzes your UI, specify component boundaries:
 Do not analyze src/components/admin/. that is a separate team's concern
 ```
 
-Directory Structure as a Boundary Signal
+## Directory Structure as a Boundary Signal
 
 The physical layout of your project communicates intent to Claude. A flat structure makes boundaries ambiguous; a well-organized hierarchy makes them obvious. Compare these two layouts:
 
@@ -187,7 +182,7 @@ src/
 
 In the second layout, when you tell Claude "work in src/auth/," the boundary is visually and structurally unambiguous. Claude's context gathering follows directory traversal patterns, so a clean hierarchy makes scoping instructions easier to honor.
 
-The index.ts Boundary Pattern
+## The index.ts Boundary Pattern
 
 One effective convention is to treat each module's `index.ts` as the formal boundary. Document this in your root `CLAUDE.md`:
 
@@ -203,7 +198,7 @@ Incorrect: import { hashPassword } from '../user/services/password.util'
 
 When Claude sees this rule, it generates cross-module code correctly and flags violations when reviewing existing code.
 
-Using Directory-Specific Prompts
+## Using Directory-Specific Prompts
 
 For persistent module awareness, add a prompt file to each module:
 
@@ -235,7 +230,7 @@ any backend source files. Reference API contracts from src/types/api.ts.
 
 Claude reads this file when you change into that directory, maintaining module isolation throughout your session.
 
-Context Switching Techniques
+## Context Switching Techniques
 
 When you need to switch modules mid-session, explicitly tell Claude to change scope:
 
@@ -246,7 +241,7 @@ Forget the frontend context from earlier in this session.
 
 Claude will release the previous context and load only the new module's files. This works because Claude Code tracks your current working directory and any explicit scope directives. The phrase "forget the frontend context" is useful here. it signals a deliberate scope change rather than an accidental one.
 
-Comparison: Implicit vs. Explicit Scope Switching
+## Comparison: Implicit vs. Explicit Scope Switching
 
 | Approach | What happens | Risk |
 |---|---|---|
@@ -257,7 +252,7 @@ Comparison: Implicit vs. Explicit Scope Switching
 
 For clean isolation, starting a fresh session from the target directory is the most reliable option.
 
-Best Practices for Module Boundaries
+## Best Practices for Module Boundaries
 
 Keep your module structure explicit in documentation. If you use the supermemory skill to store project context, create separate memories for each module:
 
@@ -269,7 +264,7 @@ Keep your module structure explicit in documentation. If you use the supermemory
 
 This approach creates persistent, scoped references that Claude can access without pulling in unrelated context.
 
-What to Document in Each Module's CLAUDE.md
+## What to Document in Each Module's CLAUDE.md
 
 Every module-level `CLAUDE.md` should answer these questions:
 
@@ -304,7 +299,7 @@ Protected Files
 - src/stripe/webhook.ts. requires security review before changes
 ```
 
-Debugging Boundary Issues
+## Debugging Boundary Issues
 
 If Claude isn't respecting boundaries, check three things:
 
@@ -326,7 +321,7 @@ Beyond those three, watch for these specific failure patterns:
 - Claude asks to read files in other modules: Add "Do not read files outside this directory" to your CLAUDE.md.
 - Boundary respected at first but drifts over a long session: Create a note at the top of your session prompt that you can re-paste when scope drift occurs: "Reminder: we are working in src/auth/ only."
 
-Summary
+## Summary
 
 Making Claude Code respect module boundaries requires a combination of configuration files, explicit prompts, and session management. The key techniques are:
 

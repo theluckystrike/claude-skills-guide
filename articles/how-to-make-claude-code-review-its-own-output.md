@@ -50,7 +50,7 @@ For each issue found, provide:
 
 After creating this skill, invoke it with `/review` whenever you want Claude to analyze generated code.
 
-Method 2: Using Claude Skills for Automated Review
+## Method 2: Using Claude Skills for Automated Review
 
 Several community skills include review components. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) enforces test-driven development, which naturally creates a review cycle, you write tests, then implementation, then verify the tests pass. This catches issues early.
 
@@ -58,7 +58,7 @@ The [frontend-design skill](https://claude.ai/skills/frontend-design) includes a
 
 For documentation workflows, the [pdf skill](https://claude.ai/skills/pdf) reviews generated PDFs for formatting consistency and content completeness. This matters when you automate report generation.
 
-Method 3: Multi-Pass Generation Patterns
+## Method 3: Multi-Pass Generation Patterns
 
 Advanced users implement multi-pass workflows where Claude generates, reviews, and revises in sequence. Here's a practical pattern:
 
@@ -105,7 +105,7 @@ done
 
 This isn't production-grade (parsing LLM output reliably is complex), but it demonstrates the multi-pass concept.
 
-Method 4: Supermemory for Pattern Learning
+## Method 4: Supermemory for Pattern Learning
 
 The [supermemory skill](https://claude.ai/skills/super-memory) enables Claude to recall past mistakes and corrections. When you provide feedback on generated code, "This approach won't scale", Supermemory stores that context. Future generations in similar situations will reference that learning.
 
@@ -117,7 +117,7 @@ To use this effectively:
 
 Over time, Claude's output improves based on your specific preferences and project requirements.
 
-Practical Review Checklist
+## Practical Review Checklist
 
 Whether using skills or prompts, run through these areas when reviewing Claude's output:
 
@@ -129,7 +129,7 @@ Whether using skills or prompts, run through these areas when reviewing Claude's
 | Testing | Edge cases covered, mocking appropriate, assertions meaningful |
 | Documentation | Comments explain why, not just what; README updated |
 
-Built-in Review Tools
+## Built-in Review Tools
 
 Claude Code includes some review capabilities out of the box. The `/test` command generates tests alongside code, which serves as a form of review by forcing the implementation to be testable. Similarly, `/edit` lets you reference specific code sections for targeted improvements.
 
@@ -141,7 +141,7 @@ claude "Write a React component" | eslint --stdin
 
 This catches style issues and common bugs automatically.
 
-When Self-Review Works Best
+## When Self-Review Works Best
 
 Self-review shines for:
 
@@ -152,7 +152,7 @@ Self-review shines for:
 
 It has limits, Claude cannot catch logical errors that depend on domain knowledge it lacks, or security issues in code that interacts with systems it doesn't understand. Use self-review as a first pass, not a replacement for human review.
 
-Making It Automatic
+## Making It Automatic
 
 To automate review in your workflow:
 
@@ -177,7 +177,6 @@ This makes review a standard part of your workflow rather than an occasional ste
 ---
 
 Building self-review into your Claude Code workflow takes minimal setup but delivers consistent value. Start with prompt-based reviews, add skills for structure, and iterate based on what your projects need. The goal isn't perfect code, it's fewer mistakes reaching your codebase and better understanding of how to improve both AI-assisted and manual development.
-
 
 Related Reading
 

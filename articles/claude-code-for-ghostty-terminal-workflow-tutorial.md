@@ -15,19 +15,17 @@ score: 8
 
 {% raw %}
 
-Claude Code for Ghostty Terminal Workflow Tutorial
-
 Ghostty is a modern terminal emulator built with Zig that has quickly become a favorite among developers for its exceptional performance, native-feel experience on macOS, and deep integration capabilities. When paired with Claude Code, it creates an incredibly efficient development environment that uses the best of both worlds: Ghostty's blazing-fast rendering and Claude Code's AI-powered coding assistance. This tutorial will guide you through setting up and maximizing this powerful combination.
 
-Why Ghostty for Claude Code Development
+## Why Ghostty for Claude Code Development
 
 Ghostty offers several compelling advantages that make it an ideal terminal for Claude Code workflows. First and foremost, Ghostty's GPU-accelerated rendering ensures that even complex terminal outputs from Claude Code sessions display smoothly without lag. The terminal's native macOS implementation means it feels like a first-party application rather than a cross-platform wrapper.
 
 Additionally, Ghostty supports advanced features like window multiplexing and sessions that persist across restarts, crucial when you're working on long-running Claude Code tasks that span multiple sessions. Its configuration system, while powerful, remains approachable, allowing you to customize your environment specifically for AI-assisted development.
 
-Installing and Configuring Ghostty
+## Installing and Configuring Ghostty
 
-Installation
+## Installation
 
 Ghostty can be installed on macOS through Homebrew:
 
@@ -37,7 +35,7 @@ brew install ghostty
 
 For other platforms, check the official Ghostty GitHub repository for build instructions. The terminal is actively developed and supports Linux with some limitations.
 
-Basic Ghostty Configuration
+## Basic Ghostty Configuration
 
 Create or edit your Ghostty configuration file at `~/.config/ghostty/config`:
 
@@ -56,9 +54,9 @@ shell-integration = "no-cursor"
 
 The configuration uses a simple key-value format that's easy to understand and modify. Adjust the font size and padding according to your preferences.
 
-Integrating Claude Code with Ghostty
+## Integrating Claude Code with Ghostty
 
-Running Claude Code in Ghostty
+## Running Claude Code in Ghostty
 
 Once Ghostty is installed, running Claude Code is straightforward. Ensure you have Claude Code installed globally or use npx:
 
@@ -72,7 +70,7 @@ npx @anthropic-ai/claude-code
 
 Within Ghostty, you can invoke Claude Code just like you would in any terminal. The key to an optimal experience lies in configuring Ghostty to handle Claude Code's output efficiently.
 
-Optimizing Ghostty for AI Interactions
+## Optimizing Ghostty for AI Interactions
 
 Add these settings to your Ghostty configuration to enhance the Claude Code experience:
 
@@ -89,9 +87,9 @@ mouse = true
 
 The infinite scrollback is particularly important when working with Claude Code, as it allows you to scroll back through extensive code generations, refactoring sessions, and multi-turn conversations.
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Example 1: Code Review Session
+## Example 1: Code Review Session
 
 One powerful workflow involves using Claude Code to review code changes in your project:
 
@@ -105,7 +103,7 @@ Can you review the changes in the last commit and identify any potential issues?
 
 Ghostty's fast rendering ensures you see Claude Code's analysis as it develops, and you can scroll back to review the complete analysis afterward.
 
-Example 2: Interactive Refactoring
+## Example 2: Interactive Refactoring
 
 For larger refactoring tasks, Ghostty's window management shines:
 
@@ -122,7 +120,7 @@ npm test
 
 This split-pane workflow lets you see Claude Code's refactoring suggestions while simultaneously running tests to verify changes work correctly.
 
-Example 3: File Navigation and Editing
+## Example 3: File Navigation and Editing
 
 Ghostty integrates well with terminal-based editors that Claude Code might invoke:
 
@@ -136,9 +134,9 @@ editor = "nvim"
 
 When Claude Code needs to open a file for editing, it will use your configured editor within Ghostty, maintaining your established workflow.
 
-Advanced Tips and Best Practices
+## Advanced Tips and Best Practices
 
-Custom Keybindings
+## Custom Keybindings
 
 Ghostty allows you to create custom keybindings that can streamline your Claude Code interactions. For example, you might want a quick shortcut to start a new Claude Code session:
 
@@ -147,7 +145,7 @@ Ghostty keybindings use a specific format
 Consult Ghostty documentation for the exact syntax for your use case
 ```
 
-Managing Multiple Projects
+## Managing Multiple Projects
 
 When working on multiple projects with Claude Code, use Ghostty's session management:
 
@@ -161,7 +159,7 @@ Ctrl+Shift+N
 
 This allows you to maintain separate Claude Code contexts for different projects without losing state.
 
-Performance Optimization
+## Performance Optimization
 
 Ghostty is already fast, but you can further optimize for Claude Code workloads:
 
@@ -174,9 +172,9 @@ font-features = false
 
 These settings prioritize performance over visual effects, which can be beneficial during intensive Claude Code sessions.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Long Output Handling
+## Long Output Handling
 
 If you encounter very long outputs from Claude Code, Ghostty's scrollback settings should handle them. If you notice performance degradation:
 
@@ -184,7 +182,7 @@ If you encounter very long outputs from Claude Code, Ghostty's scrollback settin
 2. Consider using Claude Code's `--max-tokens` flag to limit output length
 3. Break large requests into smaller chunks
 
-Encoding and Unicode
+## Encoding and Unicode
 
 Ghostty handles UTF-8 well, but if you encounter encoding issues with Claude Code:
 
@@ -193,7 +191,7 @@ Ensure proper encoding
 locale = "en_US.UTF-8"
 ```
 
-Conclusion
+## Conclusion
 
 The combination of Ghostty and Claude Code creates a powerful, efficient development environment. Ghostty's performance and native feel, paired with Claude Code's AI capabilities, enables a workflow that feels both fast and intelligent. Start with the basic configuration, then gradually explore advanced features as you become more comfortable with the setup.
 

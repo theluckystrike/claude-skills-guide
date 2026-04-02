@@ -13,22 +13,19 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Chrome Extension Focus Mode for Studying: A Practical Guide
-
 Distractions dominate modern studying environments. Social media notifications, email alerts, and endless browser tabs fragment attention into unusable pieces. Chrome extensions that create focus modes offer a solution, they block distracting websites, organize study sessions, and establish boundaries between work and leisure browsing. This guide examines practical approaches to implementing focus mode through Chrome extensions, with code examples for developers building custom solutions.
 
-Understanding Focus Mode Mechanics
+## Understanding Focus Mode Mechanics
 
 Focus mode in browser extensions operates through three primary mechanisms: URL blocking, tab management, and session timing. URL blocking intercepts requests to specified domains before they load, presenting a placeholder page instead. Tab management controls which tabs remain accessible during study sessions, optionally hiding or disabling others. Session timing enforces structured work intervals using techniques like the Pomodoro method.
 
 The Chrome APIs enabling these features include `chrome.webRequest` for intercepting network requests, `chrome.tabs` for managing browser tabs, and `chrome.alarms` for scheduling focus sessions. Extensions combine these APIs to create cohesive productivity tools.
 
-Building a Custom Focus Mode Extension
+## Building a Custom Focus Mode Extension
 
 Developers can create personalized focus mode extensions using the Chrome Extension Manifest V3. The following example demonstrates a basic implementation that blocks specified websites during active focus sessions.
 
-Manifest Configuration
+## Manifest Configuration
 
 ```json
 {
@@ -54,7 +51,7 @@ Manifest Configuration
 
 The manifest declares necessary permissions for blocking URLs, accessing storage for settings, and managing tabs. The service worker handles the blocking logic while the popup provides user controls.
 
-Background Blocking Logic
+## Background Blocking Logic
 
 ```javascript
 // background.js
@@ -73,7 +70,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 This simple implementation cancels all requests to blocked domains. In production, you'd tie the blocking to a toggle state stored in `chrome.storage` so users can enable and disable focus mode as needed.
 
-Focus Timer Implementation
+## Focus Timer Implementation
 
 ```javascript
 // popup.js - Focus session timer
@@ -107,7 +104,7 @@ function endFocusSession() {
 
 This timer implements the Pomodoro technique, notifying users when sessions end. The `chrome.notifications` API delivers system notifications even when the extension popup isn't open.
 
-Popular Focus Mode Extensions
+## Popular Focus Mode Extensions
 
 Several established extensions provide focus mode functionality without requiring custom development.
 
@@ -117,7 +114,7 @@ StayFocusd limits time spent on distracting sites by tracking usage and enforcin
 
 Forest gamifies focus by growing virtual trees during productive sessions. The mobile app integrates with the Chrome extension, rewarding focus time across devices.
 
-Advanced: Dynamic Blocking Based on Content
+## Advanced: Dynamic Blocking Based on Content
 
 More sophisticated focus modes analyze page content rather than just URLs. This approach blocks specific content types within allowed domains, for example, blocking YouTube's recommendation algorithm while allowing educational videos.
 
@@ -147,7 +144,7 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 This content script hides matching elements rather than blocking network requests, allowing more granular control over what users see.
 
-Workspace Management for Study Sessions
+## Workspace Management for Study Sessions
 
 Beyond blocking, managing browser workspaces improves focus. Group related study tabs into collections, then hide entire groups during deep work sessions.
 
@@ -176,7 +173,7 @@ async function hideStudyWorkspace(groupId) {
 
 This code creates a tab group for study materials, collapses it to reduce visual clutter, and can hide the entire workspace with `hideStudyWorkspace()` during focus sessions.
 
-Best Practices for Implementation
+## Best Practices for Implementation
 
 When building or configuring focus mode extensions, consider these practical recommendations.
 
@@ -188,7 +185,7 @@ Third, build in accountability mechanisms. Some extensions require users to type
 
 Fourth, integrate break reminders. Focus mode works best when paired with structured breaks using the Pomodoro method or similar techniques. Extensions that enforce breaks prevent burnout and maintain long-term productivity.
 
-Using the Declarative Net Request API
+## Using the Declarative Net Request API
 
 Manifest V3 requires extensions to use the `declarativeNetRequest` API instead of `webRequest` for blocking. This change shifts filtering from runtime JavaScript to static rule sets, which Chrome processes more efficiently. Updating a blocking extension for MV3 compatibility requires restructuring the blocking logic:
 
@@ -264,12 +261,11 @@ async function setFocusMode(active) {
 
 This pattern lets users customize their blocklist in the extension options while still using the efficient declarative blocking mechanism. The `updateDynamicRules` call takes effect immediately without reloading the extension.
 
-Conclusion
+## Conclusion
 
 Chrome extensions transform the browser from a distraction source into a focused study environment. Whether using established tools like LeechBlock NG or building custom solutions with the Chrome Extension API, the key lies in matching features to personal study habits. Start simple, block your most problematic sites, use a timer, and gradually expand your system as focus becomes automatic.
 
-
-Syncing Focus Schedules Across Devices
+## Syncing Focus Schedules Across Devices
 
 A focus mode extension that only blocks sites on one device is only partially effective. distractions are always one device switch away. For students and developers who move between a desktop, laptop, and mobile device, syncing block schedules makes the system more solid.
 

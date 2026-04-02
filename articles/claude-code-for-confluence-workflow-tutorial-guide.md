@@ -17,7 +17,7 @@ Claude Code for Confluence Workflow Tutorial Guide
 
 Confluence is a powerful collaboration platform, but managing content workflows manually can be time-consuming. This guide shows you how to use Claude Code CLI to automate Confluence workflows, saving hours of repetitive work and ensuring consistency across your team's documentation.
 
-Understanding Claude Code and Confluence Integration
+## Understanding Claude Code and Confluence Integration
 
 Claude Code is Anthropic's command-line interface that brings AI assistance directly to your terminal. When combined with Confluence's REST API, you can create sophisticated automation scripts that handle page creation, updates, space management, and complex workflow approvals.
 
@@ -26,7 +26,7 @@ Before diving in, ensure you have:
 - Confluence Cloud or Server with API access
 - Basic familiarity with JavaScript/Node.js
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Start by creating a dedicated project directory for your Confluence automation:
 
@@ -44,7 +44,7 @@ CONFLUENCE_EMAIL=your.email@company.com
 CONFLUENCE_API_TOKEN=your_api_token_here
 ```
 
-Creating Your First Automated Page Creation
+## Creating Your First Automated Page Creation
 
 Let's build a simple script that creates a new Confluence page using Claude Code. This foundational example demonstrates the core concepts you'll build upon:
 
@@ -92,7 +92,7 @@ Run this script with Claude Code assistance:
 npx claude run --script create-meeting-notes.js
 ```
 
-Building Multi-Step Approval Workflows
+## Building Multi-Step Approval Workflows
 
 Real-world documentation often requires approval chains. Here's how to automate a review workflow:
 
@@ -121,7 +121,7 @@ async function initiateReviewWorkflow(pageId, reviewers) {
 }
 ```
 
-Automating Content Sync Across Spaces
+## Automating Content Sync Across Spaces
 
 A common use case is keeping template content synchronized across multiple spaces. This script uses Claude Code to intelligently update pages while preserving local modifications:
 
@@ -159,7 +159,7 @@ async function syncTemplateToSpaces(templatePageId, targetSpaces) {
 }
 ```
 
-Implementing Scheduled Content Updates
+## Implementing Scheduled Content Updates
 
 Use cron jobs combined with Claude Code for time-sensitive documentation:
 
@@ -180,7 +180,7 @@ function setupWeeklyReports() {
 }
 ```
 
-Best Practices for Production Workflows
+## Best Practices for Production Workflows
 
 When deploying Claude Code workflows for Confluence in production, follow these guidelines:
 
@@ -215,7 +215,7 @@ function logAction(action, details) {
 
 Security: Never commit API tokens to version control. Use environment variables or secrets management tools, and rotate tokens regularly.
 
-Advanced: Using Claude Code's AI Capabilities
+## Advanced: Using Claude Code's AI Capabilities
 
 One of Claude Code's unique advantages is its AI processing capability. You can analyze existing Confluence content and generate intelligent summaries or suggestions:
 
@@ -236,8 +236,7 @@ async function analyzePageAndSuggestImprovements(pageId) {
 }
 ```
 
-
-Step-by-Step Guide: Setting Up Your First Automation
+## Step-by-Step Guide: Setting Up Your First Automation
 
 Here is a concrete workflow for automating Confluence page creation and review processes using Claude Code.
 
@@ -251,7 +250,7 @@ Step 4. Add approval workflow triggers. Extend your script to notify reviewers w
 
 Step 5. Schedule recurring automations. Wire up node-cron to run your automation on a schedule. Weekly standup templates, monthly review reminders, and quarterly documentation audits all benefit from scheduled creation. Claude Code generates the cron expressions and validates them against your timezone requirements.
 
-Common Pitfalls
+## Common Pitfalls
 
 Using page IDs that expire across environments. Confluence page IDs are environment-specific, a page ID from your staging instance does not work in production. Claude Code can help you build lookup functions that find pages by title and space key rather than hardcoded IDs.
 
@@ -263,7 +262,7 @@ Not versioning page updates correctly. The Confluence API requires you to specif
 
 Creating pages without checking for duplicates. Running your automation twice can create duplicate pages if you do not check for existing content first. Claude Code generates idempotent creation functions that check for existing pages by title before creating new ones.
 
-Best Practices
+## Best Practices
 
 Use a dedicated automation account. Create a service account for your Claude Code automations rather than using a personal account. This makes audit logs clearer, limits the scope of compromise if credentials are exposed, and prevents automation actions from appearing in your personal notification stream.
 
@@ -275,7 +274,7 @@ Log all automated changes with context. Each automated page modification should 
 
 Implement dry-run mode. Add a DRY_RUN environment variable that causes your automation to log what it would do without actually making API calls. Claude Code generates the dry-run scaffolding that wraps API calls in conditional blocks, making it safe to test logic changes in production-connected environments.
 
-Advanced Automation Scenarios
+## Advanced Automation Scenarios
 
 Confluence automation reaches its full potential when integrated with the events driving your engineering workflow. Claude Code generates the integration layer that connects Confluence to the tools your team already uses.
 
@@ -287,7 +286,7 @@ On-call runbook synchronization. Runbooks drift from actual system behavior over
 
 Customer-facing release notes generation. Engineering-focused commit messages rarely translate well to customer communication. Claude Code generates the release notes pipeline that reads merged pull requests since the last release, filters out internal and infrastructure changes, rewrites remaining changes in business-friendly language using a configurable prompt template, and creates a formatted Confluence release notes page in your public documentation space.
 
-Security Considerations
+## Security Considerations
 
 Automating Confluence requires careful handling of credentials and content permissions to avoid exposing sensitive information or creating security gaps in your documentation.
 
@@ -295,8 +294,7 @@ API token rotation. Confluence API tokens do not expire automatically. Claude Co
 
 Content permission inheritance. Pages created by automation scripts inherit permissions from their parent page. If your automation creates pages in a space with broad read access, sensitive content (salary information, customer data summaries) can be inadvertently exposed. Claude Code generates the permission-setting API calls that apply explicit restrictions to sensitive automated pages immediately after creation.
 
-
-Integration Patterns
+## Integration Patterns
 
 GitHub Actions integration. Trigger Confluence updates automatically when pull requests are merged. Claude Code generates the GitHub Actions workflow that calls your automation scripts, updating your documentation space with release notes, API changes, and deployment records.
 
@@ -304,12 +302,11 @@ Jira issue linking. When creating Confluence pages for features or bugs, automat
 
 Slack notifications for page reviews. When your automation creates a review request, also send a Slack notification to the reviewer. Claude Code generates the Slack webhook call with a properly formatted message block including the page title, space, and a direct link for one-click access.
 
-Conclusion
+## Conclusion
 
 Automating Confluence workflows with Claude Code transforms how your team manages documentation. Start with simple scripts like page creation, then gradually build complex approval chains and scheduled tasks. The key is to identify repetitive tasks, prototype solutions, and iterate based on team feedback.
 
 Remember to test thoroughly in a non-production environment before deploying automation scripts. With proper error handling and logging, your Confluence automation will become a reliable asset in your development workflow.
-
 
 Related Reading
 

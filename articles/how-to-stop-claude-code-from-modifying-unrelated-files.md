@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-How to Stop Claude Code from Modifying Unrelated Files
-
 Claude Code is an incredibly powerful AI assistant that can help you write, refactor, and debug code across your entire codebase. However, one common frustration developers face is when Claude Code inadvertently modifies files that were never intended to be changed. Whether it's updating dependency files, touching configuration you wanted to keep untouched, or making unwanted changes to third-party code, these unintended modifications can break builds, introduce bugs, or complicate your git history.
 
 This guide provides practical techniques and Claude Code features you can use to keep Claude Code focused exclusively on the files you want modified.
 
-Understanding Why Claude Code Modifies Unrelated Files
+## Understanding Why Claude Code Modifies Unrelated Files
 
 Before diving into solutions, it's helpful to understand why this happens. Claude Code analyzes your entire project context to provide relevant suggestions. When you ask it to make changes, it may:
 
@@ -34,7 +31,7 @@ Before diving into solutions, it's helpful to understand why this happens. Claud
 
 Here are the specific techniques to prevent these issues.
 
-Technique 1: Use Explicit File Scope in Your Prompts
+## Technique 1: Use Explicit File Scope in Your Prompts
 
 The most effective way to prevent unintended modifications is to be explicit about which files should be changed. Include specific file paths in your requests rather than describing changes generically.
 
@@ -47,7 +44,7 @@ Use:
 You can also use glob patterns to be precise:
 > "Modify only `src/components/Header.tsx` to add the new navigation items. Leave all other component files unchanged."
 
-Technique 2: Create a Claude.md File with File Constraints
+## Technique 2: Create a Claude.md File with File Constraints
 
 For project-wide guidance, create or update a `CLAUDE.md` file in your project root. This file provides persistent instructions that Claude Code follows across sessions.
 
@@ -68,7 +65,7 @@ Change Scope
 
 This approach works well for teams that want consistent behavior across all developers using Claude Code in the project.
 
-Technique 3: Use the --dry-run Approach with Git
+## Technique 3: Use the --dry-run Approach with Git
 
 Before accepting any changes, you can use git's capabilities to review what would be modified:
 
@@ -79,7 +76,7 @@ Before accepting any changes, you can use git's capabilities to review what woul
 
 You can also create a skill that automatically shows a diff summary before applying changes, helping you catch unintended modifications early.
 
-Technique 4: Use Claude Code's Permission System
+## Technique 4: Use Claude Code's Permission System
 
 Claude Code requests permission before modifying files. Pay attention to these permission prompts and:
 
@@ -92,7 +89,7 @@ If Claude Code is making too many changes automatically, you can also:
 - Use `claude --verbose` to see more detailed information about what it's planning to do
 - Break complex tasks into smaller, more focused requests
 
-Technique 5: Use Git Worktrees for Isolated Changes
+## Technique 5: Use Git Worktrees for Isolated Changes
 
 For high-risk operations, consider using git worktrees to create an isolated copy of your project:
 
@@ -102,7 +99,7 @@ git worktree add /path/to/isolated-copy main
 
 Work with Claude Code in the isolated copy, then review the changes before merging them back to your main branch. This provides a safety net for experiments or large refactoring tasks.
 
-Technique 6: Configure Allowed Directories in Skills
+## Technique 6: Configure Allowed Directories in Skills
 
 If you're using Claude Code skills for specific workflows, you can configure them to only operate within certain directories:
 
@@ -124,7 +121,7 @@ Do not modify any files outside these paths.
 
 This ensures the skill instructs Claude to only make changes within the specified paths, preventing drift into unrelated areas of your codebase.
 
-Technique 7: Break Down Complex Tasks
+## Technique 7: Break Down Complex Tasks
 
 Large, complex requests increase the likelihood of unintended modifications. Break your tasks into smaller, focused steps:
 
@@ -138,7 +135,7 @@ Use sequential smaller requests:
 
 This approach gives you more control and opportunities to catch any unwanted changes.
 
-Technique 8: Use .claudeignore to Exclude Files
+## Technique 8: Use .claudeignore to Exclude Files
 
 Similar to .gitignore, you can create a `.claudeignore` file in your project root to tell Claude Code which files should never be modified:
 
@@ -153,7 +150,7 @@ docker-compose.yml
 
 This provides a project-wide safety net against accidental modifications to sensitive or configuration files.
 
-Putting It All Together
+## Putting It All Together
 
 Here's a practical workflow for making changes with minimal risk of unintended modifications:
 
@@ -166,7 +163,6 @@ Here's a practical workflow for making changes with minimal risk of unintended m
 By combining these techniques, you can harness Claude Code's powerful capabilities while maintaining precise control over what gets modified in your codebase. Remember that the goal isn't to restrict Claude Code unnecessarily, but to ensure that its impressive abilities are directed exactly where you need them.
 
 The key is communication: the more explicit you are about boundaries, the more accurately Claude Code will respect them. Start with clear instructions, use the tools available to you, and always review before accepting changes.
-
 
 Related Reading
 

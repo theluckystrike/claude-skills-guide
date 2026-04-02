@@ -13,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Polars DataFrame Workflow Guide
-
 Polars has emerged as one of the fastest DataFrame libraries available, offering Rust-powered performance with a Pythonic API that data scientists and engineers increasingly prefer over pandas. When combined with Claude Code, the CLI companion for Claude AI, you gain a powerful workflow that can automate repetitive data tasks, generate transformation code, and help you explore datasets interactively. This guide shows you how to integrate Claude Code into your Polars workflows for maximum productivity.
 
-Setting Up Your Polars Environment with Claude Code
+## Setting Up Your Polars Environment with Claude Code
 
 Before diving into workflows, ensure your development environment is properly configured. Claude Code works best when it has access to your Python environment and project dependencies.
 
@@ -39,7 +36,7 @@ cd polars-workflows
 
 Claude Code can then help you create scripts, debug issues, and generate documentation for your data processing pipelines.
 
-Loading and Inspecting Data with Claude Code
+## Loading and Inspecting Data with Claude Code
 
 One of the most common tasks in data analysis is loading data and understanding its structure. Claude Code can dramatically speed up this exploratory phase.
 
@@ -76,11 +73,11 @@ df = pl.read_csv("data/sales_data.csv", schema=schema)
 
 The key advantage here is that Claude understands the context of your data processing goals, so it can recommend the most efficient approaches based on what you're trying to achieve.
 
-Transforming Data: Common Patterns
+## Transforming Data: Common Patterns
 
 Polars excels at data transformations, and Claude Code serves as an excellent partner for generating these transformations. Here are essential patterns you should master.
 
-Filtering and Selection
+## Filtering and Selection
 
 Filtering data efficiently is crucial for large datasets:
 
@@ -99,7 +96,7 @@ subset = df.select(["order_id", "customer_id", "price"])
 
 Claude Code can help you construct complex filters by understanding your business logic. Simply describe what you want to filter, and it can generate the appropriate expression chain.
 
-Aggregations and GroupBy
+## Aggregations and GroupBy
 
 Polars makes aggregations straightforward:
 
@@ -118,7 +115,7 @@ ranked = df.group_by("category").agg([
 ]).sort("total_sales", descending=True)
 ```
 
-Window Functions
+## Window Functions
 
 Window functions are where Polars truly shines compared to pandas:
 
@@ -140,7 +137,7 @@ df_ranked = df.with_columns(
 )
 ```
 
-Building ETL Pipelines with the Lazy API
+## Building ETL Pipelines with the Lazy API
 
 For production workflows, use Polars' lazy API to build full ETL pipelines. The lazy API builds a query plan without executing immediately, allowing Polars to optimize the entire transformation chain before running:
 
@@ -181,9 +178,9 @@ result = (
 )
 ```
 
-Handling Common Data Challenges
+## Handling Common Data Challenges
 
-Null Values
+## Null Values
 
 Polars handles nulls explicitly, which prevents silent failures:
 
@@ -198,7 +195,7 @@ Drop rows with nulls in critical columns
 df = df.drop_nulls(subset=["id", "amount"])
 ```
 
-Schema Mismatches
+## Schema Mismatches
 
 When reading data with inconsistent schemas, use schema overrides:
 
@@ -207,17 +204,17 @@ df = pl.read_csv("data/file.csv",
                  schema_overrides={"amount": pl.Float64, "date": pl.Date})
 ```
 
-Integrating Claude Skills into Your Workflow
+## Integrating Claude Skills into Your Workflow
 
 Several Claude skills enhance Polars workflows. The xlsx skill helps when you need to read or write Excel files as part of your pipeline. The pdf skill assists when extracting tabular data from PDF reports. For testing, the tdd skill provides guidance on writing unit tests for your transformation functions.
 
 The docx skill can parse Word documents containing data specifications. The supermemory skill helps you recall previous pipeline configurations and troubleshooting steps across projects.
 
-Building Reusable Data Processing Pipelines
+## Building Reusable Data Processing Pipelines
 
 A powerful workflow involves creating reusable pipelines that can be applied across different datasets. Claude Code can help you design these pipelines modularly.
 
-Creating Transformation Functions
+## Creating Transformation Functions
 
 Structure your code for reusability:
 
@@ -255,7 +252,7 @@ processed_df = (
 )
 ```
 
-Exporting Results
+## Exporting Results
 
 Once your data is processed, Claude Code can help you export to various formats:
 
@@ -270,11 +267,11 @@ Export to JSON
 df.write_json("output/processed_data.json")
 ```
 
-Debugging and Optimization Tips
+## Debugging and Optimization Tips
 
 When working with Polars through Claude Code, keep these debugging strategies in mind.
 
-Understanding Query Execution
+## Understanding Query Execution
 
 Polars uses lazy evaluation. To see the execution plan:
 
@@ -288,7 +285,7 @@ print(query.explain())
 
 This shows you how Polars will execute your transformations, helping you identify potential bottlenecks.
 
-Common Performance Pitfalls
+## Common Performance Pitfalls
 
 Claude Code can help you avoid these common mistakes:
 
@@ -296,7 +293,7 @@ Claude Code can help you avoid these common mistakes:
 - Collecting data too early: Keep data in lazy mode as long as possible
 - Missing schema definitions: Define schemas when loading to avoid inference overhead
 
-Actionable Advice for Productive Workflows
+## Actionable Advice for Productive Workflows
 
 To get the most out of combining Claude Code with Polars:
 

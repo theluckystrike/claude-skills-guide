@@ -19,7 +19,7 @@ International shipping costs involve more than just freight charges. Import duti
 
 This guide covers the technical implementation of an import duty calculator extension, including the underlying calculations, data sources, and practical code examples.
 
-Understanding Import Duty Calculations
+## Understanding Import Duty Calculations
 
 Import duties depend on several factors that vary by country and product type. The primary components include:
 
@@ -36,7 +36,7 @@ Duty = (CIF Value) × (Duty Rate)
 
 Where CIF represents Cost, Insurance, and Freight added to the original product value.
 
-Core Architecture for the Extension
+## Core Architecture for the Extension
 
 A chrome extension import duty calculator requires three main components:
 
@@ -44,7 +44,7 @@ A chrome extension import duty calculator requires three main components:
 2. Calculation Engine: Logic to determine applicable duties based on current tariff rates
 3. Data Storage: Cached tariff rates and trade agreement data
 
-Manifest Configuration
+## Manifest Configuration
 
 Your extension needs Manifest V3 configuration with appropriate permissions:
 
@@ -61,7 +61,7 @@ Your extension needs Manifest V3 configuration with appropriate permissions:
 }
 ```
 
-Popup HTML Structure
+## Popup HTML Structure
 
 The popup provides the user interface for entering shipment details:
 
@@ -127,7 +127,7 @@ The popup provides the user interface for entering shipment details:
 </html>
 ```
 
-Calculation Logic in JavaScript
+## Calculation Logic in JavaScript
 
 The popup script handles the actual duty calculations:
 
@@ -218,18 +218,18 @@ function calculateDuties() {
 document.getElementById('calculateBtn').addEventListener('click', calculateDuties);
 ```
 
-Data Sources for Accurate Calculations
+## Data Sources for Accurate Calculations
 
 Production-grade duty calculators require reliable tariff data:
 
-Free Data Sources
+## Free Data Sources
 
 - World Bank Trade Data: Provides basic tariff information by country
 - WTO Tariff Data: Official tariff rates by HS code
 - EU TARIC: Comprehensive EU tariff database
 - US HTS Database: US International Trade Commission provides searchable rates
 
-API Options for Real-Time Data
+## API Options for Real-Time Data
 
 For more accurate rates, consider integrating with commercial APIs:
 
@@ -253,11 +253,11 @@ Popular options include:
 - Ebury API for multi-country calculations
 - Freightos for comprehensive landed cost estimates
 
-Handling Edge Cases
+## Handling Edge Cases
 
 Solid duty calculators must handle several edge cases:
 
-De Minimis Thresholds
+## De Minimis Thresholds
 
 Many countries have value thresholds below which no duties apply:
 
@@ -284,7 +284,7 @@ function checkDeMinimis(cifValue, destCountry) {
 }
 ```
 
-Special Product Categories
+## Special Product Categories
 
 Certain products have unique duty calculations:
 
@@ -293,7 +293,7 @@ Certain products have unique duty calculations:
 - Electronics: May qualify for duty-free treatment under trade agreements
 - Food Products: May require additional inspections and fees
 
-Enhancing the Extension
+## Enhancing the Extension
 
 Beyond basic calculations, consider adding these features:
 
@@ -309,14 +309,13 @@ Combine duties with shipping costs, insurance, and fulfillment fees for complete
 Multi-Item Support
 Allow users to calculate duties for multiple products in a single shipment.
 
-Conclusion
+## Conclusion
 
 Building a chrome extension import duty calculator requires understanding international trade rules, handling complex tariff schedules, and presenting results clearly. The foundation outlined here provides a starting point that you can extend based on your specific use case.
 
 For e-commerce sellers, accurate duty estimates prevent unexpected costs and help with pricing decisions. For developers, the integration points with trade databases and APIs offer opportunities for more sophisticated implementations.
 
 Start with the basic calculation logic, then progressively add features like real-time API data, trade agreement handling, and multi-currency support as your extension matures.
-
 
 Related Reading
 

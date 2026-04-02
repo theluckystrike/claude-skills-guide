@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for OpenLineage Workflow Tutorial Guide
 
@@ -25,7 +24,7 @@ OpenLineage is an open-source framework that provides uniform metadata collectio
 
 The core model is straightforward: every job execution emits events that describe what data was read, what was written, and metadata about the run itself. These events flow to a backend (Marquez is the reference implementation) where lineage graphs are assembled and made queryable. The standard is governed by the OpenLineage project under the Linux Foundation, which means the spec is stable and growing in adoption.
 
-The OpenLineage Data Model
+## The OpenLineage Data Model
 
 Before writing any code, it helps to understand the three entities the spec tracks:
 
@@ -49,7 +48,7 @@ Claude Code brings AI-assisted development to your OpenLineage workflow. It can 
 
 But there are more specific productivity gains worth calling out. OpenLineage integrations involve a fair amount of boilerplate, run IDs, timestamps, facet construction, error handling around emission failures. Claude Code handles that boilerplate reliably so you can focus on the semantics of your specific pipeline. When you describe your pipeline shape (sources, transformations, sinks), Claude generates the structural scaffolding immediately.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before diving into OpenLineage, ensure you have Claude Code installed and your development environment configured:
 
@@ -75,7 +74,7 @@ docker run --name marquez \
   marquezproject/marquez:latest
 ```
 
-Creating Your First OpenLineage Integration
+## Creating Your First OpenLineage Integration
 
 Let's build a basic OpenLineage integration using Claude Code. Start by describing your workflow to Claude:
 
@@ -140,7 +139,7 @@ client.emit(
 
 Claude Code can help you extend this basic pattern to handle complex workflows with multiple tasks and dependencies. The pattern you want to establish early is: one `run_id` per logical job execution, emitted at START, then re-used on COMPLETE or FAIL. This is the most common mistake in new integrations, generating a new run ID at completion time, which breaks lineage graph assembly in Marquez.
 
-Integrating with Apache Airflow
+## Integrating with Apache Airflow
 
 Airflow is one of the most common use cases for OpenLineage. Here's how to set up the integration:
 
@@ -203,7 +202,7 @@ The Airflow integration uses listeners and extractors. Listeners hook into task 
 
 For built-in operators (BigQueryOperator, S3FileTransformOperator, etc.), extractors exist already. For custom PythonOperator tasks, you write a custom extractor or emit events manually as shown above.
 
-Configuring the OpenLineage Airflow Provider
+## Configuring the OpenLineage Airflow Provider
 
 In your `airflow.cfg` or environment variables, set:
 
@@ -214,7 +213,7 @@ OPENLINEAGE_NAMESPACE=your-airflow-namespace
 
 The provider picks these up automatically. Once configured, every operator that has an extractor starts emitting lineage without changes to your DAG code.
 
-Custom Lineage Events for Complex Workflows
+## Custom Lineage Events for Complex Workflows
 
 For workflows beyond standard integrations, you can emit custom lineage events with rich schema facets:
 
@@ -285,7 +284,7 @@ client.emit(
 
 Schema facets are particularly valuable. When Marquez stores schema alongside lineage, you can detect breaking schema changes by comparing facets across runs. A column that existed in run 1 but not run 2 is a signal worth surfacing in your data quality pipeline.
 
-Using dbt with OpenLineage
+## Using dbt with OpenLineage
 
 dbt is another high-value integration target. The `dbt-ol` package wraps dbt commands and emits OpenLineage events for each model run:
 
@@ -308,7 +307,7 @@ to my Marquez instance at http://marquez.internal:5000?
 
 Claude will produce the correct environment variable configuration and explain how to handle service account credentials for the BigQuery connection.
 
-Debugging OpenLineage Issues with Claude Code
+## Debugging OpenLineage Issues with Claude Code
 
 When your lineage collection isn't working as expected, Claude Code can help diagnose common issues:
 
@@ -326,7 +325,7 @@ the input datasets aren't being captured in the run events?
 
 Paste the relevant code and Claude will walk through the event structure, check that InputDataset objects are being added to the inputs list (not inputs_facets), and verify that the run_id from the START event is being reused on COMPLETE.
 
-Writing Tests for Your OpenLineage Integrations
+## Writing Tests for Your OpenLineage Integrations
 
 Untested lineage code tends to silently emit wrong or incomplete events for months before anyone notices. Write tests that verify the structure of emitted events rather than just checking that no exception was raised.
 
@@ -372,7 +371,7 @@ class TestSalesPipelineLineage(unittest.TestCase):
 
 That last test, verifying that run IDs match, catches the most common lineage bug in production integrations.
 
-Best Practices for OpenLineage Workflows
+## Best Practices for OpenLineage Workflows
 
 Follow these recommendations for solid lineage tracking:
 
@@ -394,7 +393,7 @@ def safe_emit(client, event):
         logging.warning(f"OpenLineage emission failed: {e}")
 ```
 
-Comparing OpenLineage Client Libraries
+## Comparing OpenLineage Client Libraries
 
 | Language | Package | Notes |
 |---|---|---|
@@ -405,7 +404,7 @@ Comparing OpenLineage Client Libraries
 
 For most data engineering teams working in Python, the `openlineage-python` package is the right starting point. Use Claude Code to generate integration code in this package, it has good coverage in Claude's training data and produces correct, idiomatic usage.
 
-Conclusion
+## Conclusion
 
 Integrating OpenLineage into your data workflows doesn't have to be complex. With Claude Code as your development partner, you can rapidly implement lineage tracking, debug issues, and maintain comprehensive metadata coverage across your data ecosystem.
 

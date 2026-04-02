@@ -13,9 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Winglang Workflow Tutorial Guide
-
 Winglang is a revolutionary programming language designed specifically for cloud development. It allows developers to write application code and cloud infrastructure in a single file, bridging the gap between application logic and infrastructure definition. When combined with Claude Code, Winglang development becomes even more powerful, enabling you to build, test, and deploy cloud applications with AI-assisted guidance throughout your workflow.
 
 What is Winglang and Why Use It with Claude Code?
@@ -29,7 +26,7 @@ When you use Claude Code alongside Winglang, you gain several advantages:
 - Error debugging: Claude Code can analyze error messages and suggest fixes
 - Code generation: Quickly scaffold new wings and resources
 
-Setting Up Claude Code for Winglang Development
+## Setting Up Claude Code for Winglang Development
 
 Before diving into Winglang workflows, ensure your development environment is properly configured. Claude Code should be installed and authenticated with your Anthropic account. For Winglang specifically, you'll want to create a project-specific configuration that helps Claude understand your cloud targets and preferences.
 
@@ -37,7 +34,7 @@ Start by initializing a new Winglang project if you haven't already. The standar
 
 This preparation ensures Claude Code provides relevant suggestions that align with your project's requirements. The CLAUDE.md file acts as a persistent context layer that Claude Code references throughout your development sessions.
 
-Building Your First Winglang Resource with Claude Code
+## Building Your First Winglang Resource with Claude Code
 
 Let's walk through creating a simple cloud queue infrastructure using Winglang with Claude Code assistance. This practical example demonstrates how the AI coding assistant accelerates your workflow.
 
@@ -47,7 +44,7 @@ The generated code will typically look like a class definition using Wing's reso
 
 After generating the initial resource, you can iterate with Claude Code to add more sophisticated features. Request enhancements like lambda triggers, retry policies, or encryption settings, and Claude Code will update your code while explaining the cloud implications of each addition.
 
-Integrating Application Logic with Infrastructure
+## Integrating Application Logic with Infrastructure
 
 One of Winglang's strongest features is the ability to embed application code directly alongside infrastructure definition. Claude Code excels at helping you structure this integration properly.
 
@@ -57,7 +54,7 @@ When working with these integrations, Claude Code can suggest best practices for
 
 The key is to be specific about your use case when prompting Claude Code. Instead of generic requests, describe what your application needs to accomplish, and let Claude Code translate that into appropriate Winglang constructs.
 
-Testing Winglang Applications Locally
+## Testing Winglang Applications Locally
 
 Winglang provides a local simulator that lets you test cloud applications without deploying to actual cloud resources. Claude Code can significantly accelerate your testing workflow by helping you write test cases, interpret test results, and debug failures.
 
@@ -65,7 +62,7 @@ When you encounter test failures, Claude Code becomes particularly valuable. Pas
 
 For comprehensive testing guidance, request that Claude Code help you structure tests for your specific resource combinations. Different cloud resources have different testing considerations, and Claude Code can outline the appropriate approach for your particular architecture.
 
-Deploying to Cloud Providers
+## Deploying to Cloud Providers
 
 Once your Winglang application passes local tests, the next step is cloud deployment. Claude Code can guide you through the deployment process, help interpret CLI output, and troubleshoot deployment issues.
 
@@ -75,7 +72,7 @@ When deploying, Winglang compiles your code to CloudFormation (for AWS), Terrafo
 
 If deployment fails, Claude Code analyzes error messages and suggests specific remediation steps. Many deployment failures stem from permission issues, resource limits, or configuration problems, all of which Claude Code can help diagnose and resolve.
 
-Advanced Workflow Patterns
+## Advanced Workflow Patterns
 
 As you become more proficient with Winglang and Claude Code, explore advanced patterns that further accelerate development. Claude Code can assist with implementing architectural patterns like event-driven architectures, microservices communication, and distributed system components.
 
@@ -83,7 +80,7 @@ For example, when building an event-driven system, you might need to coordinate 
 
 Another powerful pattern involves using Winglang's ability to define reusable constructs. Claude Code can help you extract common infrastructure patterns into reusable components, teaching you how to build abstraction layers that make your infrastructure code more maintainable.
 
-Actionable Tips for Success
+## Actionable Tips for Success
 
 To get the most from Claude Code in your Winglang workflow, follow these practical recommendations:
 
@@ -97,7 +94,7 @@ Use CLAUDE.md strategically: Include Winglang-specific guidance in your project 
 
 Combine with documentation: While Claude Code provides excellent guidance, also reference official Winglang documentation for definitive answers on language specifications and cloud target capabilities.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Winglang development from a potentially steep learning curve into an iterative, guided experience. By handling routine code generation, explaining complex concepts, and troubleshooting issues, Claude Code lets you focus on solving business problems rather than wrestling with infrastructure syntax.
 

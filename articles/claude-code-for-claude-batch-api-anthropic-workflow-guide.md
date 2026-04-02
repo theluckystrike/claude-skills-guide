@@ -15,7 +15,7 @@ Claude Code for Claude Batch API: Anthropic Workflow Guide
 
 The Claude Batch API from Anthropic represents a powerful way to process large volumes of prompts efficiently and cost-effectively. When combined with Claude Code, you get a streamlined development experience that enables rapid prototyping, batch processing, and automated workflows. This guide walks you through everything you need to know to integrate these tools effectively.
 
-Understanding the Claude Batch API
+## Understanding the Claude Batch API
 
 The Claude Batch API allows you to submit multiple prompts in a single request, receiving results asynchronously. This approach offers significant advantages for workloads involving hundreds or thousands of similar tasks, think document processing, content generation at scale, or batch analysis tasks.
 
@@ -26,11 +26,11 @@ Key benefits include:
 - Reliability: Built-in retry logic and automatic rate limiting
 - Simplicity: Single API call to initiate batch processing
 
-Setting Up Claude Code for Batch Operations
+## Setting Up Claude Code for Batch Operations
 
 Before diving into batch workflows, ensure your development environment is properly configured. Claude Code provides CLI commands that simplify interacting with Anthropic's API.
 
-Installation and Configuration
+## Installation and Configuration
 
 First, verify Claude Code is installed and authenticated:
 
@@ -56,7 +56,7 @@ Create a project configuration to streamline batch operations:
 }
 ```
 
-Environment Variables
+## Environment Variables
 
 For production workflows, use environment variables to manage sensitive configuration:
 
@@ -66,11 +66,11 @@ export ANTHROPIC_BASE_URL="https://api.anthropic.com"
 export BATCH_MAX_CONCURRENT=10
 ```
 
-Creating Effective Batch Requests
+## Creating Effective Batch Requests
 
 The success of your batch workflow depends heavily on how you structure your requests.  patterns for different use cases.
 
-Structured Prompt Templates
+## Structured Prompt Templates
 
 Define reusable prompt templates that work well with batch processing:
 
@@ -107,7 +107,7 @@ prompts = [
 results = await process_batch(prompts)
 ```
 
-Handling Large Batches
+## Handling Large Batches
 
 For very large workloads, implement chunking to stay within API limits:
 
@@ -135,9 +135,9 @@ async def process_large_batch(all_prompts: List[str], chunk_size: int = 100):
     return all_results
 ```
 
-Implementing Workflow Patterns
+## Implementing Workflow Patterns
 
-Sequential Processing with Checkpoints
+## Sequential Processing with Checkpoints
 
 For long-running batch jobs, implement checkpointing to handle interruptions gracefully:
 
@@ -180,7 +180,7 @@ class BatchProcessor:
         return results
 ```
 
-Parallel Batch Processing
+## Parallel Batch Processing
 
 Maximize throughput by running multiple batch operations concurrently:
 
@@ -214,9 +214,9 @@ async def run_parallel_batches(all_prompts: List[str], batch_size: int = 100):
     }
 ```
 
-Best Practices and Optimization
+## Best Practices and Optimization
 
-Rate Limiting and Throttling
+## Rate Limiting and Throttling
 
 Implement intelligent rate limiting to avoid API rejections:
 
@@ -247,7 +247,7 @@ class RateLimiter:
         self.requests.append(now)
 ```
 
-Error Handling Strategies
+## Error Handling Strategies
 
 Implement solid error handling for production workloads:
 
@@ -274,7 +274,7 @@ async def process_with_retry(prompts: List[str], max_retries: int = 3):
             await asyncio.sleep(wait_time)
 ```
 
-Monitoring and Observability
+## Monitoring and Observability
 
 Track your batch operations with structured logging:
 
@@ -303,7 +303,7 @@ async def monitored_batch_process(prompts: List[str]):
         raise
 ```
 
-Conclusion
+## Conclusion
 
 The combination of Claude Code and Anthropic's Batch API enables powerful automation scenarios for developers. By implementing the patterns and practices outlined in this guide, proper chunking, checkpointing, rate limiting, and error handling, you can build reliable, scalable batch processing workflows that handle thousands of prompts efficiently.
 

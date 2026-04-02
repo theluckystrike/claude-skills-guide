@@ -13,22 +13,19 @@ reviewed: true
 score: 7
 ---
 
-
-Best Way to Scope Tasks for Claude Code Success
-
 Getting Claude Code to produce high-quality results depends heavily on how you frame your requests. The difference between a well-scoped task and a vague one often determines whether Claude nails your requirements or produces generic, unusable output. This guide provides a practical framework for developers and power users who want consistent success with Claude Code.
 
-Why Task Scoping Matters
+## Why Task Scoping Matters
 
 Claude Code operates best when it has clear boundaries around what you're trying to accomplish. A poorly scoped task like "fix this code" leaves too many decisions to the model. What constitutes "fixed"? What style should apply? Which tests need passing? The model must make guesses, and those guesses rarely align with your intent.
 
 Well-scoped tasks eliminate ambiguity. They tell Claude exactly what success looks like, what constraints apply, and what the boundaries of the work are. The effort you invest in framing your request directly correlates to the quality of the output.
 
-The BARK Framework for Task Scoping
+## The BARK Framework for Task Scoping
 
 A reliable approach to task scoping uses four components: Boundary, Action, Reference, and Knowledge. Each element constrains and directs Claude's behavior.
 
-Boundary
+## Boundary
 
 Define what is included and, equally important, what is excluded from the task. Boundaries prevent scope creep and keep Claude focused on your specific goal.
 
@@ -40,7 +37,7 @@ note them in your response but don't fix them without explicit permission.
 
 Setting boundaries becomes especially valuable when working with large codebases. The `frontend-design` skill benefits from explicit boundaries around which components to modify, while the `tdd` skill needs clear limits on which files are fair game for test creation.
 
-Action
+## Action
 
 Specify the concrete action you want Claude to take. Verbs matter. "Improve the code" is ambiguous; "Refactor the user service to use dependency injection" is clear.
 
@@ -55,7 +52,7 @@ Break complex actions into sequential steps when possible. Instead of "implement
 
 The `pdf` and `docx` skills benefit from this sequential approach when generating documents. Each step produces a specific deliverable rather than an abstract improvement.
 
-Reference
+## Reference
 
 Provide context that Claude should consider when completing the task. References can include existing code patterns, documentation, style guides, or prior decisions.
 
@@ -68,7 +65,7 @@ current system boundaries.
 
 References help Claude match your project's established conventions. The `supermemory` skill can retrieve relevant context from your project's knowledge base, but providing explicit references ensures consistency.
 
-Knowledge
+## Knowledge
 
 State any specific knowledge or constraints that apply. This includes technical requirements, business rules, or external dependencies.
 
@@ -81,11 +78,11 @@ State any specific knowledge or constraints that apply. This includes technical 
 
 Knowledge constraints prevent Claude from making assumptions that conflict with your requirements.
 
-Task Size: Finding the Right Granularity
+## Task Size: Finding the Right Granularity
 
 One of the most common mistakes is asking Claude to do too much in a single turn. While Claude Code can handle complex multi-step tasks, breaking work into smaller scoped requests typically yields better results.
 
-When to Break Down Tasks
+## When to Break Down Tasks
 
 Consider decomposing a task when it involves:
 
@@ -102,13 +99,13 @@ Turn 2: "Now add the React component with these props and styling..."
 Turn 3: "Add integration tests for the new endpoint..."
 ```
 
-When to Keep Tasks Together
+## When to Keep Tasks Together
 
 Some tasks should stay unified because their pieces are tightly coupled. The `tdd` skill works best when implementation and tests evolve together in a single conversation. Refactoring a single file to improve its structure benefits from keeping the entire file in context rather than processing it in chunks.
 
-Practical Examples
+## Practical Examples
 
-Example 1: Code Review Request
+## Example 1: Code Review Request
 
 Poorly Scoped:
 ```
@@ -129,7 +126,7 @@ Don't review the admin dashboard code in this file.
 
 The well-scoped version tells Claude exactly what to look for, which parts matter, and what to ignore.
 
-Example 2: New Feature Implementation
+## Example 2: New Feature Implementation
 
 Poorly Scoped:
 ```
@@ -157,7 +154,7 @@ Deliverables:
 
 This scope provides enough detail for Claude to produce usable code without excessive back-and-forth.
 
-Example 3: Documentation Generation
+## Example 3: Documentation Generation
 
 Poorly Scoped:
 ```
@@ -178,7 +175,7 @@ Output to docs/api/users.md
 
 The `pdf` and `docx` skills can transform this documentation into different formats once the source content exists.
 
-Common Scoping Mistakes to Avoid
+## Common Scoping Mistakes to Avoid
 
 Vague success criteria: "Make it better" doesn't tell Claude what "better" means. Specify measurable or observable outcomes.
 
@@ -188,7 +185,7 @@ Over-constraint: Being so specific that Claude has no room to make reasonable de
 
 Ignoring boundaries: Not specifying what Claude should not do leads to unwanted changes in unrelated code.
 
-Testing Your Task Scope
+## Testing Your Task Scope
 
 Before sending a task to Claude, review it against these questions:
 

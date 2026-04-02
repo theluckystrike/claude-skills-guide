@@ -17,13 +17,13 @@ Chrome Extension AI Image Generator: A Complete Guide for Developers
 
 Building a Chrome extension that integrates AI image generation opens up powerful possibilities for browser-based creative workflows. This guide walks you through the architecture, implementation patterns, and practical considerations for creating a chrome extension AI image generator that actually works.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 A chrome extension AI image generator typically consists of three core components: the popup interface (where users input prompts), the background service worker (handling API communication), and content scripts (optional, for in-page generation). The real magic happens in how you connect these pieces to an AI image generation API.
 
 Modern AI image APIs like DALL-E 3, Stable Diffusion, or Midjourney provide REST endpoints that your extension can call. The key challenge is managing API keys securely and handling asynchronous image generation within the extension's lifecycle.
 
-Project Structure
+## Project Structure
 
 Every Chrome extension needs a manifest file. For an AI image generator, your manifest.json should look something like this:
 
@@ -43,7 +43,7 @@ Every Chrome extension needs a manifest file. For an AI image generator, your ma
 
 The host_permissions field is critical, you need to explicitly declare which external APIs your extension will communicate with. Without this, your fetch requests will fail.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup is your user's primary interaction point. Keep it simple: a text input for the prompt, a generate button, and an image display area. Here's a practical HTML structure:
 
@@ -66,7 +66,7 @@ The popup is your user's primary interaction point. Keep it simple: a text input
 </html>
 ```
 
-Implementing the Generation Logic
+## Implementing the Generation Logic
 
 The JavaScript in your popup handles the user interaction and communicates with your background script. Here's a working pattern:
 
@@ -98,7 +98,7 @@ document.getElementById('generate').addEventListener('click', async () => {
 });
 ```
 
-Managing API Communication
+## Managing API Communication
 
 The background script acts as a secure intermediary between your popup and the AI API. This separation keeps your API keys safer than embedding them in the popup:
 
@@ -136,7 +136,7 @@ async function generateImage(prompt) {
 
 Notice the `return true` at the end, that's essential for async message handling in Manifest V3.
 
-Storing API Keys Securely
+## Storing API Keys Securely
 
 Never hardcode API keys in your extension code. Instead, use chrome.storage to keep them secure:
 
@@ -155,7 +155,7 @@ async function getApiKey() {
 
 Using `chrome.storage.session` keeps the key in memory and clears it when the browser closes. For persistent storage across sessions, use `chrome.storage.sync` instead, but be aware this persists until explicitly removed.
 
-Handling Rate Limits and Errors
+## Handling Rate Limits and Errors
 
 AI APIs impose rate limits, and your extension needs to handle these gracefully. Implement retry logic with exponential backoff:
 
@@ -176,7 +176,7 @@ async function generateWithRetry(prompt, maxRetries = 3) {
 }
 ```
 
-Extension Context Isolation and Security
+## Extension Context Isolation and Security
 
 Modern Chrome extensions should use Manifest V3 with strict isolation. When your extension needs to display the generated image, you have two options: open the image URL in a new tab, or use the chrome.downloads API to save it locally. Displaying external images directly in the popup can trigger CORS issues depending on the API response headers.
 
@@ -190,11 +190,11 @@ chrome.tabs.sendMessage(activeTabId, {
 });
 ```
 
-Practical Use Cases
+## Practical Use Cases
 
 A chrome extension AI image generator shines in several scenarios: quick mockups during web development, generating social media assets without leaving your workflow, creating placeholder images for design prototypes, or batch-generating variations for A/B testing. The browser context eliminates the need to switch between applications.
 
-Deployment Considerations
+## Deployment Considerations
 
 When publishing to the Chrome Web Store, ensure your extension follows their policies. AI-generated content policies are evolving, so review the latest guidelines before submission. Also, provide clear documentation about any API costs, users need to understand they'll need their own API key and that generation isn't free.
 
@@ -203,7 +203,6 @@ Your extension should include a settings page where users can input their API ke
 ---
 
 Building a chrome extension AI image generator is straightforward once you understand the message-passing architecture between components. Focus on secure API key management, graceful error handling, and a clean user interface. The real value comes from integrating AI image generation directly into your existing browser workflow, eliminating context switching and speeding up creative iteration.
-
 
 Related Reading
 

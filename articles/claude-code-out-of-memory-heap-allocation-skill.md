@@ -15,11 +15,9 @@ score: 7
 
 {% raw %}
 
-Claude Code Out of Memory Heap Allocation Skill
-
 When working with Claude Code on memory-intensive tasks, understanding heap allocation becomes crucial for maintaining stable and efficient workflows. This guide explores practical skills and techniques to handle out-of-memory errors, optimize memory usage, and build solid Claude Code experiences.
 
-Understanding Heap Allocation in Claude Code
+## Understanding Heap Allocation in Claude Code
 
 Heap allocation refers to dynamic memory management where data is allocated at runtime rather than compile time. In Claude Code, the underlying Node.js process uses heap memory to store:
 
@@ -35,7 +33,7 @@ Node.js divides heap memory into two main segments: the young generation (for sh
 
 Claude Code tasks that involve reading large codebases, processing bulk files, or building large in-memory indexes are the scenarios most likely to trigger this failure mode.
 
-Common Causes of Heap Exhaustion
+## Common Causes of Heap Exhaustion
 
 Before learning solutions, identify the root causes:
 
@@ -49,7 +47,7 @@ Before learning solutions, identify the root causes:
 
 Recognizing which cause applies to your situation shapes the right solution. A one-time file load crash calls for a different fix than a gradual leak that only surfaces after an hour of runtime.
 
-Diagnosing the Error Before You Fix It
+## Diagnosing the Error Before You Fix It
 
 When Claude Code prints `FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory`, the immediate priority is capturing context. Add this diagnostic wrapper before you change anything else:
 
@@ -75,9 +73,9 @@ NODE_OPTIONS="--expose-gc --trace-gc" claude
 
 The GC log lines show how often the collector runs and how much memory is reclaimed each cycle. If heap usage climbs monotonically between collections, you have a leak. If it spikes once on a specific operation, you have an allocation problem that chunking can solve.
 
-Essential Memory Management Skills
+## Essential Memory Management Skills
 
-Skill 1: Streaming Large Files
+## Skill 1: Streaming Large Files
 
 Instead of loading entire files into memory, use streaming techniques to process data in chunks:
 
@@ -130,7 +128,7 @@ async function streamBinaryFile(filePath, bufferSize = 65536) {
 
 The `finally` block ensures the file descriptor is released even if processing throws, which matters for long-running skill sessions where file handle exhaustion is also possible.
 
-Skill 2: Implementing Memory-Efficient Caching
+## Skill 2: Implementing Memory-Efficient Caching
 
 Create a bounded cache that automatically evicts old entries:
 
@@ -189,7 +187,7 @@ class WeakCache {
 
 This pattern is useful for large parsed objects like ASTs or JSON trees where you want the cache to hold on to live objects but release them under memory pressure without explicit eviction logic.
 
-Skill 3: Memory Profiling in Skills
+## Skill 3: Memory Profiling in Skills
 
 Add memory monitoring to your skills:
 
@@ -231,7 +229,7 @@ claudeSkill.register('parse-codebase', withMemoryTracking('parse-codebase', asyn
 
 This gives you a per-invocation memory cost that appears in your terminal logs, making it easy to identify which skill is the culprit when heap usage climbs.
 
-Skill 4: Chunked Processing for Large Data
+## Skill 4: Chunked Processing for Large Data
 
 Process data in manageable chunks:
 
@@ -268,7 +266,7 @@ for await (const result of chunkedGenerator(largeArray, 500, processChunk)) {
 
 The generator pattern is the right choice when results need to be written to disk or streamed to another process, since you never hold more than one chunk worth of output at once.
 
-Configuring Claude Code for Higher Memory Limits
+## Configuring Claude Code for Higher Memory Limits
 
 Sometimes the issue isn't your skill but Claude Code's default memory allocation. Increase the Node.js heap size:
 
@@ -301,7 +299,7 @@ Use this table as a starting point for sizing the heap based on your machine:
 
 Do not set the limit above 80% of physical RAM. The operating system needs headroom, and pushing too close to the physical limit causes swapping, which is far slower than a graceful out-of-memory crash.
 
-Best Practices for Memory-Efficient Skills
+## Best Practices for Memory-Efficient Skills
 
 1. Load only what you need: Use lazy loading for skill components
 2. Release references: Explicitly set variables to null when done
@@ -312,7 +310,7 @@ Best Practices for Memory-Efficient Skills
 7. Avoid synchronous reads for large files: `fs.readFileSync` on a 500 MB log file will allocate that entire buffer in one operation; always prefer async streams
 8. Keep intermediate results small: If you only need a count or a summary, compute it in the processing loop rather than collecting all items then post-processing
 
-Detecting and Preventing Memory Leaks
+## Detecting and Preventing Memory Leaks
 
 Common leak sources in Claude Code skills:
 
@@ -372,7 +370,7 @@ function startPolling(skill) {
 
 Leaked timers are particularly insidious because the heap growth is slow, often a few kilobytes per hour, and only becomes visible after a long-running session.
 
-When to Reach for External Storage Instead
+## When to Reach for External Storage Instead
 
 Some tasks simply exceed what in-process memory can reasonably handle. If you find yourself configuring heaps larger than 8 GB to process a dataset, consider pushing the data to a more appropriate store:
 
@@ -382,14 +380,13 @@ Some tasks simply exceed what in-process memory can reasonably handle. If you fi
 
 Claude Code skills can invoke shell commands to work with these stores, keeping the Node.js heap small while still operating on large data volumes.
 
-Conclusion
+## Conclusion
 
 Managing heap allocation effectively in Claude Code skills requires understanding memory mechanics and implementing proper techniques. By using streaming, bounded caches, chunked processing, and memory monitoring, you can build solid skills that handle large-scale operations without running out of memory.
 
 Remember: the goal isn't just to fix out-of-memory errors but to prevent them through thoughtful design. Start with memory-efficient patterns, monitor usage in production, and iterate based on real-world performance data. Increasing the heap limit is a valid short-term fix, but the durable solution is always designing skills that keep memory usage proportional to the task rather than to the size of the input.
 
 {% endraw %}
-
 
 Related Reading
 

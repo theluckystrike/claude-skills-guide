@@ -15,7 +15,7 @@ Claude Code for Pandera Dataframe Validation Workflow Tutorial
 
 Data validation is a critical aspect of any data pipeline, yet it's often overlooked or implemented inconsistently. Pandera is a powerful Python library that brings schema validation to pandas DataFrames, making your data pipelines more solid and maintainable. In this tutorial, you'll learn how to use Claude Code to create efficient Pandera validation workflows that catch data quality issues early.
 
-Understanding Pandera and Its Role in Data Validation
+## Understanding Pandera and Its Role in Data Validation
 
 Pandera provides a declarative way to define schemas for your pandas DataFrames. Unlike traditional validation approaches that scatter checks throughout your code, Pandera allows you to define schemas once and reuse them across your entire pipeline. This approach offers several key advantages:
 
@@ -30,7 +30,7 @@ Before diving into the workflow, ensure you have Pandera installed:
 pip install pandera
 ```
 
-Setting Up Your Pandera Validation Schema
+## Setting Up Your Pandera Validation Schema
 
 The first step in creating a Pandera validation workflow is defining your data schema. Let's walk through a practical example involving user analytics data:
 
@@ -50,7 +50,7 @@ user_schema = DataFrameSchema({
 
 This schema defines the expected structure of your user data. Each column includes specific validation rules that the data must satisfy.
 
-Integrating Validation into Your Data Pipeline
+## Integrating Validation into Your Data Pipeline
 
 Now let's see how to integrate this schema into a practical data processing workflow:
 
@@ -87,11 +87,11 @@ def safe_process_user_data(raw_data: pd.DataFrame) -> tuple[pd.DataFrame, list]:
         return pd.DataFrame(), errors
 ```
 
-Using Claude Code to Generate and Maintain Schemas
+## Using Claude Code to Generate and Maintain Schemas
 
 Claude Code can significantly accelerate your Pandera workflow by generating schemas from existing data or documentation. Here's how to use Claude effectively:
 
-Generating Schemas from Sample Data
+## Generating Schemas from Sample Data
 
 When you have sample data but no schema, ask Claude to generate a Pandera schema:
 
@@ -99,7 +99,7 @@ When you have sample data but no schema, ask Claude to generate a Pandera schema
 
 Claude will analyze your data and create a comprehensive schema with sensible defaults.
 
-Documenting Your Schemas
+## Documenting Your Schemas
 
 For better maintainability, add docstrings and type hints to your schemas:
 
@@ -118,7 +118,7 @@ user_schema = DataFrameSchema(
 )
 ```
 
-Creating Reusable Validation Decorators
+## Creating Reusable Validation Decorators
 
 For complex pipelines, consider creating custom validation decorators:
 
@@ -146,7 +146,7 @@ def load_and_process_users():
 
 This approach ensures validation happens automatically without explicit calls in every function.
 
-Best Practices for Pandera Workflows
+## Best Practices for Pandera Workflows
 
 To get the most out of Pandera in your projects, follow these best practices:
 
@@ -204,7 +204,7 @@ except SchemaError as e:
     raise
 ```
 
-Conclusion
+## Conclusion
 
 Pandera transforms dataframe validation from an ad-hoc process into a structured, maintainable workflow. By integrating it with Claude Code, you can generate schemas faster, document them better, and maintain consistency across your data pipelines.
 

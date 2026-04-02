@@ -18,7 +18,7 @@ State machine design patterns provide a powerful way to structure Claude skills 
 
 [This approach is particularly valuable when building skills that must maintain context across multiple interactions](/claude-skill-md-format-complete-specification-guide/), validate input at different stages, or provide structured guidance through sequential processes.
 
-Why State Machines Work Well in Claude Skills
+## Why State Machines Work Well in Claude Skills
 
 Claude skills are essentially instruction sets that guide Claude's behavior during a session. Traditional skills often rely on extensive conditional logic scattered throughout the file. This quickly becomes difficult to maintain as complexity grows.
 
@@ -29,7 +29,7 @@ State machines solve this by making the flow explicit and visible in a single pl
 - User control: Users can understand where they are in the workflow and what options are available
 - Testability: Individual states and transitions can be tested independently
 
-Basic State Machine Structure
+## Basic State Machine Structure
 
 The simplest implementation uses YAML front matter or a dedicated configuration section within your skill file. Here's a pattern for a skill that guides users through a code review process:
 
@@ -59,7 +59,7 @@ Present your findings in a structured format.
 
 This pattern shows how each state has a clear purpose and how transitions define when to move forward.
 
-Implementing State Machines with Skill Files
+## Implementing State Machines with Skill Files
 
 For more complex scenarios, consider using the `get_skill` function to load different skill components based on current state. The supermemory skill demonstrates this pattern effectively, it maintains context across sessions by loading relevant historical information before processing new requests.
 
@@ -95,7 +95,7 @@ def process_turn(user_input, current_state):
 
 This logic would live in a supporting script, with your skill file orchestrating the flow.
 
-Practical Example: Multi-File Processing Skill
+## Practical Example: Multi-File Processing Skill
 
 Consider a skill that helps batch process documents using the pdf skill. A state machine approach ensures each document is properly handled:
 
@@ -118,7 +118,7 @@ Present the results to the user. Ask if they need additional operations or want 
 
 This structure prevents the skill from attempting to process invalid files and keeps the user informed throughout.
 
-State Machines with the TDD Skill
+## State Machines with the TDD Skill
 
 The tdd skill benefits significantly from state machine thinking. Rather than treating test-driven development as a single continuous process, you can structure it into distinct phases:
 
@@ -144,7 +144,7 @@ All tests pass. Summarize what was built and ask about next steps.
 
 This structure helps users understand where they are in the TDD cycle and what to expect next.
 
-Advanced Pattern: Conditional State Transitions
+## Advanced Pattern: Conditional State Transitions
 
 For skills that need more sophisticated logic, you can implement conditional transitions based on context. The frontend-design skill often needs this when adapting to different project requirements:
 
@@ -157,7 +157,7 @@ Transition conditions:
 
 This allows a single skill to handle multiple scenarios while maintaining clear decision points.
 
-Best Practices for State Machine Design
+## Best Practices for State Machine Design
 
 When implementing state machines in your Claude skills, keep these principles in mind:
 
@@ -169,7 +169,7 @@ Include fallback states: Handle unexpected inputs gracefully. A "confused" or "c
 
 Document state transitions: Include clear comments or transition rules so others can understand and modify your skill.
 
-Conclusion
+## Conclusion
 
 State machine design patterns transform Claude skills from simple instruction lists into structured, maintainable workflows. By making states and transitions explicit, you create skills that are easier to debug, extend, and customize. Whether you're building a simple guided workflow with the pdf skill or a complex development process with tdd, applying these patterns will make your skills more maintainable and user-friendly.
 

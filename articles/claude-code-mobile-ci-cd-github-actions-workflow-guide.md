@@ -15,17 +15,15 @@ score: 7
 
 {% raw %}
 
-Claude Code Mobile CI/CD GitHub Actions Workflow Guide
-
 Mobile app development demands reliable CI/CD pipelines to ensure consistent builds, comprehensive testing, and smooth deployments to app stores. This guide shows you how to build production-ready mobile CI/CD workflows using GitHub Actions with Claude Code to automate repetitive tasks and catch issues early. Whether you're building iOS apps with Xcode, Android apps with Gradle, or cross-platform apps with React Native or Flutter, these patterns will help you ship faster with confidence.
 
-Why Mobile CI/CD Needs Special Attention
+## Why Mobile CI/CD Needs Special Attention
 
 Mobile development introduces unique challenges that general-purpose CI/CD workflows don't address. You need to manage platform-specific build tools, handle code signing certificates and secrets securely, test on multiple device configurations, and navigate app store submission requirements. GitHub Actions provides the flexibility to handle these scenarios, while Claude Code can help you generate workflow configurations, debug failures, and maintain your pipelines over time.
 
 Unlike web applications where you can often deploy continuously, mobile apps require careful coordination between builds, tests, and releases. A single workflow that tries to do everything often becomes fragile. Instead, consider separating your pipelines into distinct stages: continuous integration for every pull request, build pipelines for release candidates, and deployment pipelines for app store submissions.
 
-Setting Up Your First Mobile CI Workflow
+## Setting Up Your First Mobile CI Workflow
 
 The foundation of any mobile CI/CD setup starts with a solid continuous integration workflow that runs on every pull request. This workflow should validate code quickly, catch obvious issues, and provide fast feedback to developers. For mobile projects, this typically means running linters, unit tests, and building a debug APK or IPA file to verify the project compiles.
 
@@ -115,7 +113,7 @@ For iOS projects, you'll need to use macOS runners since Xcode only runs on Appl
           path: build/*.ipa
 ```
 
-Managing Code Signing and Secrets Securely
+## Managing Code Signing and Secrets Securely
 
 Code signing represents one of the most challenging aspects of mobile CI/CD. You need to store certificates and provisioning profiles securely, make them available during builds, and manage their expiration dates. GitHub Secrets provide encrypted storage for sensitive values, while the keychain and signing actions handle the complexity of configuring iOS code signing on macOS runners.
 
@@ -172,7 +170,7 @@ iOS code signing requires more setup because you need to create a signing certif
         run: xcodebuild -workspace MyApp.xcworkspace -scheme Release -configuration Release build CODE_SIGN_IDENTITY="${{ secrets.CERTIFICATE_NAME }}" PROVISIONING_PROFILE="${{ secrets.PROVISIONING_PROFILE_NAME }}"
 ```
 
-Automating App Store Deployments
+## Automating App Store Deployments
 
 Once your CI pipeline works reliably, you can extend it to handle app store submissions. Both Apple and Google provide actions that integrate with their respective submission APIs. For Play Store deployments, the r0adkll/upload-google-play action handles the upload process:
 
@@ -234,7 +232,7 @@ For iOS App Store deployments, the deliver action from fastlane remains the indu
           DELIVER_USER: ${{ secrets.DELIVER_USER }}
 ```
 
-Optimizing Mobile Workflow Performance
+## Optimizing Mobile Workflow Performance
 
 Mobile builds can be slow, so optimizing your workflows saves significant time and CI runner minutes. The most effective optimization is caching dependencies and build outputs. Both Android's Gradle and iOS's CocoaPods support dependency caching:
 
@@ -281,7 +279,7 @@ The cache action stores Gradle's download directory and wrapper files, skipping 
 
 Beyond caching, consider splitting your workflow into parallel jobs for independent tasks. If your project has both Android and iOS components, build them in separate jobs that run simultaneously rather than sequentially.
 
-Testing Mobile Apps in CI
+## Testing Mobile Apps in CI
 
 Unit tests verify your business logic, but mobile apps also need UI and integration tests. For Android, Espresso tests run on Android emulators. For iOS, you can use XCTest. Both require emulator or simulator setup in your workflow:
 
@@ -321,7 +319,7 @@ Unit tests verify your business logic, but mobile apps also need UI and integrat
 
 For React Native and Flutter projects, you can use Expo and Flutter's built-in testing commands respectively, following similar patterns of setup, test execution, and artifact collection.
 
-Best Practices for Mobile CI/CD
+## Best Practices for Mobile CI/CD
 
 Building reliable mobile CI/CD workflows requires attention to several key practices. First, keep your workflows as simple as possible while still catching issues. Start with basic lint and test runs, then add complexity as needed. Second, use matrix strategies to test on multiple Android API levels or iOS versions if your app supports older platforms. Third, always upload build artifacts even for failed builds, debugging a CI failure without the artifact that caused it is unnecessarily difficult.
 

@@ -16,7 +16,7 @@ permalink: /how-to-share-claude-skills-with-your-team/
 
 [Claude Code skills are `.md` files in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/). Sharing them across a team means distributing those files consistently. Here are practical approaches that work.
 
-The Git Repository Approach
+## The Git Repository Approach
 
 Store your team's skills in a shared Git repository. Each developer clones it and symlinks or copies the files to their local skills directory.
 
@@ -34,7 +34,7 @@ ln -s ~/team-claude-skills/*.md ~/.claude/skills/
 
 When someone improves a skill, they commit the `.md` file, open a PR, and after merge, everyone runs `git pull` to get the update.
 
-Setting Up the Skills Repository
+## Setting Up the Skills Repository
 
 Structure the repo simply:
 
@@ -49,7 +49,7 @@ claude-skills/
 
 The README should cover three things: how to install the skills, what each one does, and who to contact when something is wrong.
 
-Categorizing Your Skills
+## Categorizing Your Skills
 
 Most teams benefit from organizing skills into three categories:
 
@@ -61,7 +61,7 @@ Quality Assurance Skills define your standards for code quality, security, and d
 
 Start by identifying which category has the most friction on your team, and build skills there first.
 
-Required Metadata for Every Shared Skill
+## Required Metadata for Every Shared Skill
 
 Every skill in the shared repo should have consistent front matter:
 
@@ -78,7 +78,7 @@ This skill generates API documentation in our standard format...
 
 Keep your skill descriptions accurate. when you update a skill, update the description so developers know what the skill does and what changed.
 
-Automating Distribution
+## Automating Distribution
 
 [A GitHub Actions workflow can notify the team when skills are updated](/claude-skills-with-github-actions-ci-cd-pipeline/):
 
@@ -103,7 +103,7 @@ jobs:
 
 Combine with a Slack notification action to alert the team automatically.
 
-Keeping Skills Updated
+## Keeping Skills Updated
 
 Team members should pull updates regularly:
 
@@ -120,7 +120,7 @@ Add to ~/.zshrc or ~/.bashrc
 alias skills-update="cd ~/team-claude-skills && git pull && cp *.md ~/.claude/skills/ && echo 'Skills updated'"
 ```
 
-Naming Conventions
+## Naming Conventions
 
 Use descriptive, consistent names that reflect the skill's purpose:
 
@@ -130,7 +130,7 @@ Use descriptive, consistent names that reflect the skill's purpose:
 
 Avoid generic names that conflict with official skills. If you have a custom PDF workflow, name it `pdf-internal` rather than `pdf`.
 
-Documentation Standards
+## Documentation Standards
 
 Before adding a skill to the shared repo, it should include:
 
@@ -141,11 +141,11 @@ Before adding a skill to the shared repo, it should include:
 
 Skills with good documentation get used. Skills with vague descriptions sit unused.
 
-Measuring Adoption
+## Measuring Adoption
 
 Ask developers which skills they actually use in team retrospectives. Remove or simplify skills that nobody invokes. a smaller, well-maintained skill set beats a large, confusing one.
 
-Managing Skill Evolution
+## Managing Skill Evolution
 
 As your team grows and changes, your skills should evolve too:
 
@@ -155,7 +155,7 @@ Feedback Loop: Create a mechanism for team members to suggest improvements. The 
 
 Deprecation Process: When you need to remove or significantly change a skill, communicate this clearly and provide migration guidance. A skill that disappears without warning breaks workflows.
 
-Permission Models: Who Can Change What
+## Permission Models: Who Can Change What
 
 Not everyone should have write access to the shared skills repo. Treat skills like shared configuration. they affect everyone's workflow, so changes deserve scrutiny.
 
@@ -177,7 +177,7 @@ All .md skill files require owner review
 
 This automatically requests a review from the skills-owners team on every PR that touches skill files, with no manual process required.
 
-Onboarding New Developers: A Step-by-Step Workflow
+## Onboarding New Developers: A Step-by-Step Workflow
 
 New hires often skip skill setup because nobody shows them the process. Make it explicit in your onboarding checklist:
 
@@ -200,7 +200,7 @@ Step 4. Assign a skill improvement task in the first two weeks. New team members
 
 This four-step process takes under thirty minutes and significantly improves the chance that new hires actually adopt the shared skills.
 
-Team Conventions That Prevent Conflicts
+## Team Conventions That Prevent Conflicts
 
 When multiple people contribute skills over time, naming collisions and overlapping functionality become real problems. Establish these conventions early:
 
@@ -214,7 +214,7 @@ Document why a skill exists, not just what it does. The front matter description
 
 Agree on a review turnaround. If skill PRs sit for two weeks, contributors stop opening them. Set an explicit expectation: owners review skill PRs within three business days. Skills are low-risk changes. fast review cycles keep the repo healthy.
 
-Splitting Skills by Environment
+## Splitting Skills by Environment
 
 Some skills should only run in specific environments. A production deployment skill should not be invocable casually during local development. Consider maintaining separate skill sets:
 
@@ -233,7 +233,7 @@ claude-skills/
 
 Developers install all three sets but document clearly in the README which skills are safe to invoke in each context. This is especially important for teams where junior engineers have local access but limited CI or production access. the skill file can include a note: "This skill assumes you have production AWS credentials configured. Do not invoke in a local-only environment."
 
-Measuring Adoption
+## Measuring Adoption
 
 Ask developers which skills they actually use in team retrospectives. Remove or simplify skills that nobody invokes. a smaller, well-maintained skill set beats a large, confusing one.
 
@@ -248,7 +248,6 @@ Related Reading
 - [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/). Full contribution walkthrough
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Format your skill correctly before submitting
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 ---
 

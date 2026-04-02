@@ -18,7 +18,7 @@ Chrome Signage Kiosk Digital Display: A Developer Guide
 
 Chrome OS has become a dominant platform for digital signage and kiosk deployments due to its security model, easy management through Google Admin Console, and the familiar Chromium engine that powers it. This guide covers the technical foundations for building Chrome signage kiosk digital display solutions, from initial setup to advanced customization.
 
-Understanding Chrome Kiosk Mode
+## Understanding Chrome Kiosk Mode
 
 Chrome Kiosk mode restricts a device to running a single web application or Chrome extension, making it ideal for unattended digital displays. When you configure a Chrome device in kiosk mode, the browser launches directly into your specified URL, hides the traditional browser chrome, and prevents users from accessing other applications or system settings.
 
@@ -26,7 +26,7 @@ To enable kiosk mode, you typically use one of three approaches: Google Admin Co
 
 The underlying mechanism works by launching Chrome with a special flag that locks the session to your designated application. The operating system treats the Chrome window as the only visible surface, effectively transforming consumer hardware into purpose-built signage equipment.
 
-Building Your Digital Signage Web App
+## Building Your Digital Signage Web App
 
 A Chrome signage kiosk digital display requires a web application designed specifically for continuous operation in fullscreen mode. Unlike traditional websites, digital signage applications must handle network interruptions gracefully, manage memory efficiently over extended periods, and provide automated recovery from errors.
 
@@ -65,7 +65,7 @@ Consider this basic HTML structure for a digital signage display:
 
 The key principle is using viewport units and removing all scroll behavior. Your content should scale responsively to fit any display size while maintaining aspect ratio when necessary.
 
-Implementing Content Rotation
+## Implementing Content Rotation
 
 Most digital signage displays cycle through multiple pieces of content, news ticks, promotional slides, weather widgets, and scheduled announcements. Building a content rotation system requires careful timing management to ensure smooth transitions without memory leaks.
 
@@ -110,7 +110,7 @@ class ContentRotator {
 
 This simple rotator manages slide transitions and ensures only the current slide exists in the DOM, preventing memory accumulation over extended periods. For production deployments, you would extend this with fade transitions, preloading, and error handling for failed content loads.
 
-Handling Network Failures
+## Handling Network Failures
 
 Network connectivity represents the most common point of failure for Chrome kiosk digital displays. Your application must detect when connectivity drops and display appropriate fallback content rather than showing broken states or blank screens.
 
@@ -146,7 +146,7 @@ const network = new NetworkMonitor((isOnline) => {
 
 Pair this with a fallback content strategy that caches essential assets locally using the Cache API or localStorage. For critical deployments, consider implementing a more solid solution using Service Workers to cache your entire application for offline operation.
 
-Managing Display Rotation and Orientation
+## Managing Display Rotation and Orientation
 
 Chrome kiosk digital displays often need to support both landscape and portrait orientations, or rotate based on time of day. The Screen Orientation API provides the programmatic control needed for these scenarios:
 
@@ -166,7 +166,7 @@ setOrientation('portrait-primary');   // Portrait, home button bottom
 
 Not all displays support orientation locking, particularly when running in kiosk mode without fullscreen. Always detect capability and provide graceful degradation for displays that cannot change orientation programmatically.
 
-Automated Refresh and Memory Management
+## Automated Refresh and Memory Management
 
 Long-running Chrome kiosk digital display deployments can suffer from memory leaks as the browser accumulates data over days or weeks of continuous operation. Implementing automated refresh cycles prevents this degradation while maintaining the appearance of continuous operation.
 
@@ -193,7 +193,7 @@ class KioskManager {
 
 Schedule refreshes during natural content transition periods to minimize visible disruption. A one-hour refresh interval works well for most deployments, though you may need to adjust based on your application's memory characteristics.
 
-Deployment Configuration
+## Deployment Configuration
 
 When deploying your Chrome signage kiosk digital display, create a dedicated configuration that launches directly into your application:
 
@@ -205,7 +205,7 @@ The additional flags improve the kiosk experience by enabling dark mode for redu
 
 For managed Chrome OS devices, deploy the `KioskAutoLaunch` and `KioskId` policies through Google Admin Console to ensure your application starts automatically when the device boots.
 
-Performance Optimization
+## Performance Optimization
 
 Your digital signage application runs continuously, so every performance inefficiency compounds over time. Apply these optimization strategies:
 
@@ -213,12 +213,11 @@ First, use CSS animations instead of JavaScript-driven animations for smoother 6
 
 Monitor your application using Chrome DevTools in remote debugging mode during development to identify memory leaks before deployment. The Memory panel provides heap snapshots and allocation timelines that reveal which objects persist unexpectedly.
 
-Summary
+## Summary
 
 Building effective Chrome signage kiosk digital display solutions requires understanding the unique constraints of continuous operation, network dependency, and unattended hardware. Focus on solid content rotation, graceful failure handling, and automated maintenance routines to create deployments that run reliably for months without intervention.
 
 The Chromium foundation provides excellent digital signage capabilities through kiosk mode, but success depends on building your web application with the same resilience expectations. Design for failure, optimize for long, and test thoroughly under realistic conditions before deployment.
-
 
 Related Reading
 

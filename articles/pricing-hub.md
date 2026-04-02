@@ -18,7 +18,7 @@ AI coding tools have a reputation for cost unpredictability. A developer prototy
 
 This hub covers Claude Code's pricing tiers, how skills affect token consumption, practical cost optimization strategies, and a direct comparison with the other major AI coding tools available in 2026.
 
-Table of Contents
+## Table of Contents
 
 1. [Claude Code Pricing Overview](#claude-code-pricing-overview)
 2. [Token Usage and API Costs](#token-usage-and-api-costs)
@@ -30,7 +30,7 @@ Table of Contents
 
 ---
 
-Claude Code Pricing Overview
+## Claude Code Pricing Overview
 
 Claude Code's pricing reflects its position as a professional developer tool built on top of Anthropic's API. Unlike simpler AI coding tools that offer a flat monthly subscription with no usage metering, Claude Code's cost scales with actual usage, which is both its strength and its complexity.
 
@@ -46,7 +46,7 @@ Free tier: Claude Code does not offer a meaningfully functional free tier for pr
 
 ---
 
-Token Usage and API Costs
+## Token Usage and API Costs
 
 Every Claude Code session consumes tokens. Understanding which operations are expensive, and which are cheap, lets you make smarter architectural decisions about how you use skills.
 
@@ -72,7 +72,7 @@ These numbers vary based on model choice, context size, and skill efficiency. Th
 
 ---
 
-Cost Optimization Strategies
+## Cost Optimization Strategies
 
 The most effective cost reduction comes from reducing unnecessary context, not from degrading the quality of Claude's work. These strategies keep costs low without sacrificing output quality.
 
@@ -108,7 +108,7 @@ For CI/CD integrations, filter what Claude sees. A PR with 50 changed files does
 
 ---
 
-Side-by-Side Comparison Table
+## Side-by-Side Comparison Table
 
 | Feature | Claude Code | GitHub Copilot | Cursor | Replit AI |
 |---------|------------|----------------|--------|-----------|
@@ -138,7 +138,7 @@ Claude Code is the clear choice when you need: long context windows, a programma
 
 ---
 
-When to Choose Each Tool
+## When to Choose Each Tool
 
 Choose Claude Code if:
 - You work on large codebases where 128K+ context windows matter
@@ -161,7 +161,7 @@ Choose Cursor if:
 
 ---
 
-ROI Calculation for Teams
+## ROI Calculation for Teams
 
 The ROI calculation for Claude Code at the team level is most compelling for two scenarios: code review automation and documentation generation.
 
@@ -179,7 +179,7 @@ For individual developers, Claude Code becomes cost-neutral compared to GitHub C
 
 ---
 
-Full Article Index
+## Full Article Index
 
 | Article | What You'll Learn |
 |---------|-------------------|

@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Technical Debt Tracking Workflow
-
 Technical debt accumulates in every codebase. Without a systematic approach, it quietly slows down development, introduces bugs, and makes refactoring increasingly expensive. A Claude Code technical debt tracking workflow helps you identify debt early, document it properly, and systematically address it before it derails your project.
 
 This guide shows you how to build an automated workflow that integrates with your existing development process.
 
-Setting Up Debt Discovery with Claude Code
+## Setting Up Debt Discovery with Claude Code
 
 The first step involves scanning your codebase for common debt patterns. You can invoke Claude Code with specific prompts to identify areas needing attention. A typical discovery session uses the analyze or inspect patterns.
 
@@ -31,7 +28,7 @@ Ask Claude to identify code smells and debt patterns
 
 This approach works well for JavaScript and TypeScript projects. For Python codebases, extend the prompt to include PEP 8 violations and missing type hints. Claude Code can examine multiple files in a session, making it effective for both small modules and larger packages.
 
-Categorizing and Prioritizing Debt Items
+## Categorizing and Prioritizing Debt Items
 
 Once you identify debt, organizing it into categories helps with prioritization. Create a structured format that Claude Code can parse and export. A markdown-based tracking system works well with skills like supermemory for persistent storage.
 
@@ -53,7 +50,7 @@ Priority: Low
 
 You can automate this categorization using a custom skill. Define patterns for each priority level based on business impact, frequency of changes, and risk surface area.
 
-Automating Debt Detection in CI/CD
+## Automating Debt Detection in CI/CD
 
 Static analysis tools catch many debt patterns automatically. Integrate these checks into your CI pipeline using GitHub Actions or similar platforms.
 
@@ -80,7 +77,7 @@ jobs:
 
 For projects with existing test infrastructure, the tdd skill helps convert debt items into test cases. Each debt item becomes a failing test that validates the fix. This approach ensures you actually address the debt rather than just documenting it.
 
-Tracking Debt with External Tools
+## Tracking Debt with External Tools
 
 For teams using project management software, sync debt items to tools like Linear, Jira, or Notion. The linear-mcp-server and jira-mcp-server skills provide direct integration.
 
@@ -91,7 +88,7 @@ Create debt ticket in Linear via MCP
 
 The notepad-mcp-server works for simpler tracking needs. You can maintain a single source of truth that both humans and automated tools reference.
 
-Visualizing Debt Over Time
+## Visualizing Debt Over Time
 
 Technical debt becomes more manageable when you can see trends. The xlsx skill generates reports tracking debt counts, age, and resolution velocity.
 
@@ -105,7 +102,7 @@ This creates a spreadsheet with:
 
 For visual dashboards, export data to tools like Grafana or Datadog. The datadog-mcp-server skill helps you push metrics to these platforms automatically.
 
-Creating a Debt Review Cadence
+## Creating a Debt Review Cadence
 
 Sustainable debt management requires regular attention. Establish a weekly or bi-weekly review where your team examines new debt items and triages existing ones. Claude Code can prepare these reviews automatically.
 
@@ -116,7 +113,7 @@ Generate weekly debt summary
 
 The claude-md skill helps format these summaries according to your team's conventions. Consistent formatting makes information easier to scan and act upon.
 
-Integrating Debt Tracking into Daily Workflow
+## Integrating Debt Tracking into Daily Workflow
 
 The most effective approach weaves debt awareness into normal development. When Claude Code helps with code reviews or feature development, it can flag debt it encounters.
 
@@ -127,7 +124,7 @@ In a code review context
 
 The claude-code-review skill, when properly configured, checks for debt patterns during every review. This real-time feedback prevents debt from accumulating unnoticed.
 
-Automating Documentation Generation
+## Automating Documentation Generation
 
 Documentation debt often gets overlooked. Use the pdf and docx skills to generate debt reports in formats suitable for stakeholder review.
 
@@ -138,7 +135,7 @@ Export current debt status to PDF report
 
 This automation transforms technical metrics into business-readable documents.
 
-Building a Debt Reduction Workflow
+## Building a Debt Reduction Workflow
 
 The ultimate goal is reducing debt systematically. Create a pipeline that converts debt items into actionable tasks.
 
@@ -148,11 +145,11 @@ The ultimate goal is reducing debt systematically. Create a pipeline that conver
 4. Implementation: Debt fixed during dedicated sprints or alongside feature work
 5. Verification: Tests validate fixes and prevent regression
 
-Automated Reduction Strategies
+## Automated Reduction Strategies
 
 Once debt is identified and prioritized, systematic reduction requires concrete execution steps for each debt category.
 
-Dependency Updates
+## Dependency Updates
 
 Handle dependency updates systematically with a dedicated skill:
 
@@ -172,7 +169,7 @@ When asked to update dependencies:
 Always prioritize: security fixes > major version stability > minor/patch updates
 ```
 
-Dead Code Removal
+## Dead Code Removal
 
 Dead code is some of the easiest debt to eliminate. Use Claude Code to analyze import statements and function calls to find unreachable code:
 
@@ -182,11 +179,11 @@ Dead code is some of the easiest debt to eliminate. Use Claude Code to analyze i
 
 For UI components, the frontend-design skill helps identify unused React components that no route or parent component imports.
 
-Type Safety Improvements
+## Type Safety Improvements
 
 Migrating to TypeScript or improving existing type coverage reduces a specific category of debt. Make incremental changes module by module rather than attempting an entire codebase at once. Claude Code can suggest types based on usage patterns across your project.
 
-Measuring Progress
+## Measuring Progress
 
 Track your debt reduction over time using concrete metrics. Key measurements include:
 
@@ -198,7 +195,7 @@ Track your debt reduction over time using concrete metrics. Key measurements inc
 
 Claude Code can generate these metrics on demand using the analyze prompt with specific output formats.
 
-Conclusion
+## Conclusion
 
 A Claude Code technical debt tracking workflow combines automated detection, structured documentation, and regular review cycles. By integrating debt awareness into daily development, you prevent accumulation and maintain codebase health over time.
 

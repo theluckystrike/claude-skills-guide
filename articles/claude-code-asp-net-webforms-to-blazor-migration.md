@@ -19,13 +19,13 @@ Migrating legacy ASP.NET WebForms applications to modern Blazor represents one o
 
 This guide walks you through using Claude Code to execute a successful WebForms to Blazor migration, covering assessment, component conversion, state management patterns, and deployment strategies.
 
-Why Migrate from WebForms to Blazor
+## Why Migrate from WebForms to Blazor
 
 ASP.NET WebForms served enterprise applications well for nearly two decades, but modern development demands have exposed its limitations. The page lifecycle model, ViewState overhead, and tight server coupling create performance bottlenecks that become increasingly problematic as applications scale. Blazor addresses these issues through a component-based architecture that separates concerns cleanly and enables both server-side and client-side rendering options.
 
 The business case for migration strengthens considerably when you factor in developer productivity. Blazor's C#-everywhere approach means your team works in a single language throughout the stack, sharing models and logic between server and client without the cognitive overhead of switching between C# and JavaScript ecosystems.
 
-Phase 1: Application Assessment with Claude Code
+## Phase 1: Application Assessment with Claude Code
 
 Begin your migration journey by having Claude Code analyze your WebForms application comprehensively. Create a detailed assessment prompt:
 
@@ -44,7 +44,7 @@ Provide a migration complexity score and prioritized migration path.
 
 Claude Code examines your codebase and produces a detailed assessment report. This report categorizes pages by complexity, identifies code that can migrate directly versus code requiring refactoring, and highlights potential compatibility issues with third-party dependencies.
 
-Sample Assessment Output
+## Sample Assessment Output
 
 Claude Code might identify patterns like this:
 
@@ -63,7 +63,7 @@ Key Challenges Identified:
 4. Telerik/DevExpress controls - research Blazor UI component libraries
 ```
 
-Phase 2: Setting Up the Blazor Project Structure
+## Phase 2: Setting Up the Blazor Project Structure
 
 Claude Code excels at scaffolding the migration project with proper structure. Request a project setup:
 
@@ -80,11 +80,11 @@ Create a new Blazor Server project structure for migrating my WebForms app. Incl
 
 Claude Code generates the project scaffold, establishing the architectural foundation for your migration. The shared project approach mirrors the using statements and imports that WebForms code-behind files relied upon.
 
-Phase 3: Component Conversion Strategy
+## Phase 3: Component Conversion Strategy
 
 The heart of WebForms to Blazor migration involves converting pages and user controls to Blazor components. Claude Code handles this translation systematically.
 
-Converting WebForms Pages to Blazor
+## Converting WebForms Pages to Blazor
 
 For each WebForms page, request Claude Code to perform the conversion:
 
@@ -183,7 +183,7 @@ else
 }
 ```
 
-Handling WebForms Specific Patterns
+## Handling WebForms Specific Patterns
 
 WebForms includes several patterns that require special handling during migration. Claude Code addresses these systematically:
 
@@ -219,7 +219,7 @@ var userId = Session["UserId"];
 - Circuit handler for connection awareness
 ```
 
-Phase 4: Data Access Layer Modernization
+## Phase 4: Data Access Layer Modernization
 
 Your WebForms likely uses ADO.NET or early Entity Framework versions. Claude Code helps modernize this layer while preserving business logic:
 
@@ -236,7 +236,7 @@ Existing code is in Data/ folder with CustomerRepository, OrderRepository classe
 
 Claude Code generates the modernized data layer, applying best practices like unit of work patterns, proper disposal, and connection pooling.
 
-Phase 5: Testing the Migration
+## Phase 5: Testing the Migration
 
 Validation proves critical in migration projects. Claude Code helps create comprehensive tests:
 
@@ -251,13 +251,12 @@ Create integration tests for my Blazor customer management:
 Use bUnit for component testing and xUnit for service layer tests.
 ```
 
-Conclusion
+## Conclusion
 
 Migrating WebForms to Blazor with Claude Code transforms an intimidating modernization project into a manageable, step-by-step process. Claude Code handles the mechanical translation while your team focuses on architectural decisions and business logic validation. The systematic approach, assessment, scaffolding, component conversion, data layer modernization, and testing, ensures nothing falls through the cracks.
 
 Start with a small, low-risk page to establish your migration patterns, then scale systematically across your application. Claude Code's consistent output and ability to maintain context across the migration makes it an invaluable partner in your modernization journey.
 {% endraw %}
-
 
 Related Reading
 

@@ -17,7 +17,7 @@ tags: [chrome-extension, onenote, web-clipping, productivity-tools]
 
 The OneNote Clipper is Microsoft's official Chrome extension that lets you save web content directly to your OneNote notebooks. For developers and power users who frequently collect documentation, tutorials, and research materials, this extension provides a streamlined workflow for organizing web-based information. This guide covers the complete setup process, configuration options, and practical usage scenarios.
 
-Installing the OneNote Clipper
+## Installing the OneNote Clipper
 
 The installation process requires a Microsoft account and access to the Chrome Web Store. Here's how to get started:
 
@@ -30,11 +30,11 @@ The installation process requires a Microsoft account and access to the Chrome W
 
 After installation, you'll see the OneNote icon in your Chrome toolbar. The first time you click it, you'll be prompted to sign in with your Microsoft account.
 
-Account Configuration and Initial Setup
+## Account Configuration and Initial Setup
 
 Once installed, sign in using your Microsoft credentials. The extension supports both personal Microsoft accounts and work/school accounts connected to Microsoft 365. After authentication, you can configure several key settings:
 
-Selecting Default Notebook and Section
+## Selecting Default Notebook and Section
 
 By default, clips go to your default OneNote notebook. To customize this:
 
@@ -45,7 +45,7 @@ By default, clips go to your default OneNote notebook. To customize this:
 
 For developers, creating a dedicated notebook called "Web Clips" with sections for Documentation, Tutorials, API References, and Code Snippets provides excellent organization.
 
-Configuring Clip Modes
+## Configuring Clip Modes
 
 The OneNote Clipper offers three clipping modes:
 
@@ -55,9 +55,9 @@ The OneNote Clipper offers three clipping modes:
 
 Power users should configure their preferred mode in the extension settings. The Article mode works best for most documentation and blog posts, as it removes clutter while preserving formatting and code blocks.
 
-Practical Usage Patterns for Developers
+## Practical Usage Patterns for Developers
 
-Saving Documentation and API References
+## Saving Documentation and API References
 
 When browsing technical documentation, the OneNote Clipper preserves code snippets, syntax highlighting, and formatting. This makes it invaluable for saving:
 
@@ -68,7 +68,7 @@ When browsing technical documentation, the OneNote Clipper preserves code snippe
 
 To clip documentation effectively, navigate to the specific page, click the OneNote icon, and select "Article" mode. The extension extracts the main content while removing sidebars and navigation elements.
 
-Organizing Research Materials
+## Organizing Research Materials
 
 Create a systematic approach to organizing clipped content:
 
@@ -76,7 +76,7 @@ Create a systematic approach to organizing clipped content:
 2. Create destination sections: Set up sections for different topics before clipping
 3. Add annotations: Use OneNote's drawing and highlighting tools to mark key sections
 
-Batch Clipping Workflow
+## Batch Clipping Workflow
 
 For research sessions involving multiple pages:
 
@@ -87,16 +87,16 @@ For research sessions involving multiple pages:
 
 This workflow is particularly useful when researching a specific topic across multiple documentation pages or tutorials.
 
-Advanced Configuration Options
+## Advanced Configuration Options
 
-Keyboard Shortcuts
+## Keyboard Shortcuts
 
 Configure keyboard shortcuts for faster clipping:
 
 - Default: `Alt+Shift+S` (Windows) or `Cmd+Shift+S` (Mac)
 - Customize in Chrome's extensions settings
 
-Automatic Tagging
+## Automatic Tagging
 
 While the extension doesn't support automatic tagging, you can create a consistent tagging practice:
 
@@ -104,7 +104,7 @@ While the extension doesn't support automatic tagging, you can create a consiste
 2. Add relevant tags at the beginning of the note
 3. Use OneNote's search to find all notes with specific tags
 
-Integration with OneNote's Web App
+## Integration with OneNote's Web App
 
 The desktop and web versions of OneNote sync automatically. Clips made through the Chrome extension appear immediately in:
 
@@ -114,9 +114,9 @@ The desktop and web versions of OneNote sync automatically. Clips made through t
 
 This cross-platform availability ensures your clipped content is accessible regardless of your working environment.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Content Not Clipping Properly
+## Content Not Clipping Properly
 
 Some websites use anti-scraping measures that prevent clean clipping. For these cases:
 
@@ -124,7 +124,7 @@ Some websites use anti-scraping measures that prevent clean clipping. For these 
 - Manually copy the content and paste into a new OneNote page
 - Use OneNote's web clipping feature directly from the desktop app
 
-Authentication Problems
+## Authentication Problems
 
 If you encounter sign-in issues:
 
@@ -132,7 +132,7 @@ If you encounter sign-in issues:
 2. Ensure you're using a supported account type
 3. Try disabling conflicting extensions temporarily
 
-Sync Delays
+## Sync Delays
 
 OneNote sync typically completes within seconds. If clips don't appear:
 
@@ -140,7 +140,7 @@ OneNote sync typically completes within seconds. If clips don't appear:
 2. Check your internet connection
 3. Verify the clip destination notebook exists
 
-Clipping Code Snippets and Technical Documentation
+## Clipping Code Snippets and Technical Documentation
 
 Developers have specific needs when clipping technical content that general-purpose web clippers don't always handle well. The OneNote Clipper's Article mode preserves most code formatting from documentation sites, but understanding its behavior on different source types helps you get clean clips.
 
@@ -157,7 +157,7 @@ When a code snippet clips poorly, a more reliable alternative is:
 
 OneNote preserves code block formatting well when pasted from a properly formatted source. Use the `Courier New` font or a OneNote code block style for consistency.
 
-Alternatives and Complementary Tools
+## Alternatives and Complementary Tools
 
 While the OneNote Clipper excels at web clipping, developers might also consider:
 
@@ -167,7 +167,7 @@ While the OneNote Clipper excels at web clipping, developers might also consider
 
 The OneNote Clipper remains the best choice for users already invested in the Microsoft ecosystem, particularly those using OneNote for note-taking across devices.
 
-Building a Developer Research System with OneNote Clips
+## Building a Developer Research System with OneNote Clips
 
 The OneNote Clipper becomes significantly more valuable when paired with a systematic organizational approach. Ad-hoc clipping into a single notebook produces a disorganized pile of content that's hard to search. A structured system makes your clipped content retrievable when you actually need it.
 
@@ -199,7 +199,7 @@ The Inbox section is key. Clip first, organize later. At the end of each week, s
 
 For code-heavy documentation, the Article clip mode preserves syntax highlighting in most documentation sites. If a page renders code blocks poorly after clipping, switch to Full Page mode to capture the exact rendered output.
 
-Exporting and Processing Clipped Content
+## Exporting and Processing Clipped Content
 
 OneNote's web interface and desktop apps expose notebook content through the OneNote API, enabling programmatic access to your clipped content. This opens up workflows for search, summarization, and integration with other tools.
 
@@ -243,12 +243,11 @@ def get_page_content(access_token, page_id):
 
 This enables workflows like generating a weekly digest of everything you've clipped, feeding clipped content to an LLM for summarization, or syncing selected clips to other note-taking systems. The Microsoft Graph API is free to use with any Microsoft account and doesn't require additional service subscriptions.
 
-Conclusion
+## Conclusion
 
 Setting up the OneNote Clipper Chrome extension takes only a few minutes but provides long-term value for organizing web-based research and documentation. By configuring default notebooks, understanding the clipping modes, and establishing consistent organization practices, developers can build a reliable system for capturing and retrieving technical information.
 
 The key to success lies in establishing your organizational system early, create notebooks and sections that match your workflow, add tags consistently, and review your clips regularly. With proper setup, the OneNote Clipper becomes an essential tool in your productivity arsenal.
-
 
 Related Reading
 

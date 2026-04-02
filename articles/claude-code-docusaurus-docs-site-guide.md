@@ -17,7 +17,7 @@ Claude Code Docusaurus Documentation Site Guide
 
 Docusaurus is Facebook's open-source documentation framework that makes it simple to create and maintain documentation websites. Combined with Claude Code's powerful skills and AI capabilities, you can dramatically accelerate your documentation workflow, from initial site setup to ongoing content maintenance. This guide explores practical strategies for using Claude Code with Docusaurus projects.
 
-Setting Up Your Docusaurus Project
+## Setting Up Your Docusaurus Project
 
 Claude Code can guide you through the entire Docusaurus initialization process. Rather than manually running through every configuration step, you can use Claude's expertise to get started quickly.
 
@@ -31,11 +31,11 @@ npm start
 
 When you need to customize the configuration, Claude Code can help you modify the `docusaurus.config.js` file. For instance, if you want to add Google Analytics or configure the navigation bar, Claude can generate the appropriate configuration code and explain each option.
 
-Content Creation Workflow
+## Content Creation Workflow
 
 One of Claude Code's strongest capabilities is assisting with content generation. When writing documentation, you can use Claude to draft new pages, improve existing content, and ensure consistency across your documentation.
 
-Generating New Documentation Pages
+## Generating New Documentation Pages
 
 When you need to create a new documentation page, describe the content you want to document to Claude. Provide context about your API, feature, or concept, and Claude will generate well-structured Markdown content following Docusaurus best practices.
 
@@ -48,7 +48,7 @@ For example, when documenting an API endpoint, you can ask Claude to create a pa
 
 Claude understands Docusaurus-specific features like Admonitions (tips, warnings, cautions), Code blocks with syntax highlighting, and MDX components. It will naturally incorporate these elements into your documentation.
 
-Improving Existing Documentation
+## Improving Existing Documentation
 
 Beyond generating new content, Claude excels at reviewing and improving documentation. Share your existing docs with Claude and ask it to:
 - Identify unclear explanations
@@ -59,11 +59,11 @@ Beyond generating new content, Claude excels at reviewing and improving document
 
 This iterative improvement process helps maintain high-quality documentation without manual review cycles.
 
-Theme Customization and Styling
+## Theme Customization and Styling
 
 Docusaurus offers extensive theming capabilities, and Claude Code can help you customize every aspect of your site's appearance.
 
-Customizing the Color Palette
+## Customizing the Color Palette
 
 To match your brand or personal preferences, modify the color scheme in your configuration. Claude can help you understand which colors to change and provide appropriate hex values:
 
@@ -83,19 +83,19 @@ themeConfig: {
 }
 ```
 
-Adding Custom CSS
+## Adding Custom CSS
 
 For deeper customization, you can add custom CSS. Claude can help you write CSS rules targeting specific Docusaurus components. Whether you want to customize the sidebar appearance, adjust code block styling, or modify the footer, Claude can generate the appropriate CSS and explain how it integrates with Docusaurus's styling system.
 
-Creating Custom Components
+## Creating Custom Components
 
 Docusaurus supports MDX, allowing you to embed React components in your Markdown. Claude can help you create custom components that enhance your documentation, interactive diagrams, live code editors, or specialized information displays.
 
-Plugin and Preset Configuration
+## Plugin and Preset Configuration
 
 Docusaurus's plugin system extends functionality significantly. Claude can help you configure various plugins for enhanced features.
 
-Search Integration
+## Search Integration
 
 Adding search to your documentation improves usability dramatically. Claude can guide you through setting up local search with `@easyops-cn/docusaurus-search-local` or integrate Algolia DocSearch:
 
@@ -111,7 +111,7 @@ plugins: [
 ],
 ```
 
-Versioning Support
+## Versioning Support
 
 For projects with multiple versions, Docusaurus provides built-in versioning. Claude can help you:
 - Create new versions of your documentation
@@ -119,11 +119,11 @@ For projects with multiple versions, Docusaurus provides built-in versioning. Cl
 - Configure version dropdown navigation
 - Archive old documentation versions
 
-Automated Documentation from Code
+## Automated Documentation from Code
 
 A powerful workflow involves automatically generating documentation from your source code. Claude Code can assist in setting up documentation generators and integrating them into your build process.
 
-API Documentation Generation
+## API Documentation Generation
 
 For JavaScript or TypeScript projects, tools like JSDoc, TypeDoc, or specialized solutions can generate API reference documentation. Claude can help you:
 - Configure these tools appropriately
@@ -131,18 +131,18 @@ For JavaScript or TypeScript projects, tools like JSDoc, TypeDoc, or specialized
 - Customize templates for consistent styling
 - Review generated documentation for accuracy
 
-Markdown Generation from Code Comments
+## Markdown Generation from Code Comments
 
 You can also maintain documentation directly in your code comments. Claude helps by:
 - Suggesting documentation comments for functions and classes
 - Ensuring consistent documentation patterns
 - Generating Markdown files from well-documented code
 
-Continuous Integration and Deployment
+## Continuous Integration and Deployment
 
 Automating your documentation workflow ensures consistency and saves time. Claude can help you set up CI/CD pipelines for your Docusaurus site.
 
-GitHub Actions Workflow
+## GitHub Actions Workflow
 
 Deploy your documentation automatically when code changes. Claude can help create a GitHub Actions workflow:
 
@@ -167,11 +167,11 @@ jobs:
           publish_dir: ./build
 ```
 
-Preview Deployments
+## Preview Deployments
 
 Set up preview deployments for pull requests so reviewers can see documentation changes in context. Claude can guide you through configuring Vercel, Netlify, or GitHub Pages for this purpose.
 
-Best Practices for Documentation Maintenance
+## Best Practices for Documentation Maintenance
 
 Maintaining documentation long-term requires consistent effort. Here are strategies Claude recommends:
 
@@ -185,13 +185,12 @@ Content Templates: Create templates for common documentation types. Claude can h
 
 Feedback Integration: Encourage documentation feedback from users. Use issues or comments to track improvements, and use Claude to address feedback systematically.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Docusaurus documentation workflows from manual effort to AI-assisted efficiency. From initial setup through ongoing maintenance, Claude's capabilities integrate naturally with every aspect of documentation development. By using these tools, you can maintain high-quality documentation with significantly less effort, freeing you to focus on what matters most: the content itself.
 
 Whether you're starting fresh or improving existing documentation, Claude Code provides practical assistance at every step. The workflows outlined in this guide represent proven patterns for documentation success in modern development teams.
 {% endraw %}
-
 
 Related Reading
 

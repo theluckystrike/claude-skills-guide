@@ -18,7 +18,7 @@ Open source projects thrive on contributions from diverse developers with varyin
 
 This guide explains how to create effective Claude MD files for open source projects that enhance developer experience, reduce friction for new contributors, and maintain quality standards across all contributions.
 
-Why Open Source Projects Need Claude MD Files
+## Why Open Source Projects Need Claude MD Files
 
 Open source projects face unique challenges that Claude MD files can address:
 
@@ -29,7 +29,7 @@ Open source projects face unique challenges that Claude MD files can address:
 
 [Claude Code loads skill files from `~/.claude/skills/`](/best-claude-code-skills-to-install-first-2026/) when invoked, making it an ideal tool to enforce project-specific behaviors without requiring contributors to install complex tooling or remember extensive contribution guidelines.
 
-Essential Claude MD Files for Open Source Projects
+## Essential Claude MD Files for Open Source Projects
 
 Every open source project should consider creating these core Claude MD files:
 
@@ -158,9 +158,9 @@ Documentation
 - [ ] Breaking changes are documented
 ```
 
-Advanced Claude MD Patterns for Open Source
+## Advanced Claude MD Patterns for Open Source
 
-Multi-File Skill Structure
+## Multi-File Skill Structure
 
 For larger projects, organize skills into logical groups:
 
@@ -180,7 +180,7 @@ For larger projects, organize skills into logical groups:
      pr-guidelines.md
 ```
 
-Conditional Context Loading
+## Conditional Context Loading
 
 Use YAML front matter to control when skills activate:
 
@@ -191,7 +191,7 @@ description: Standards for React components
 ---
 ```
 
-Project-Specific Tool Restrictions
+## Project-Specific Tool Restrictions
 
 Control which tools Claude Code can use:
 
@@ -202,7 +202,7 @@ description: Restricted tool access for production
 ---
 ```
 
-Best Practices for Open Source Claude MD Files
+## Best Practices for Open Source Claude MD Files
 
 1. Keep Files Focused and Modular
 
@@ -229,7 +229,7 @@ Reference your Claude MD files in:
 - Pull request templates
 - Documentation index
 
-Complete Project Structure
+## Complete Project Structure
 
 Here's an example of how a well-organized open source project might structure its Claude MD files:
 
@@ -248,7 +248,7 @@ my-open-source-project/
      CLAUDE.md                 # GitHub-specific guidelines
 ```
 
-Measuring Success
+## Measuring Success
 
 Track how effectively your Claude MD files work by monitoring:
 
@@ -257,7 +257,7 @@ Track how effectively your Claude MD files work by monitoring:
 - Review cycle time: Do reviews require less back-and-forth?
 - Contributor satisfaction: Do contributors find the guidelines helpful?
 
-Conclusion
+## Conclusion
 
 Claude MD files transform how AI assistants interact with your open source project. By providing clear, actionable guidelines, you reduce friction for contributors while maintaining the quality standards your project requires. Start with the essentials, project overview, contribution guidelines, and coding standards, then expand as your project grows.
 

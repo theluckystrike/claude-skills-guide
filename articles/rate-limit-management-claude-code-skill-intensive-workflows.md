@@ -16,7 +16,7 @@ permalink: /rate-limit-management-claude-code-skill-intensive-workflows/
 
 [When running skill-intensive workflows with Claude Code, hitting rate limits is a real concern](/best-claude-code-skills-to-install-first-2026/) Batch-processing documents with `/pdf`, generating test suites with `/tdd`, or building multiple frontend components with `/frontend-design` all consume API resources. This guide covers practical strategies for staying within rate limits.
 
-Understanding Rate Limits in Claude Code
+## Understanding Rate Limits in Claude Code
 
 Claude Code operates within Anthropic's API rate limiting framework. The exact limits depend on your plan tier. Key metrics:
 
@@ -25,7 +25,7 @@ Claude Code operates within Anthropic's API rate limiting framework. The exact l
 
 Skill invocations that process large files or generate substantial output consume more tokens. Running `/pdf` on a 500-page document or `/tdd` across an entire codebase will hit limits faster than simple skill calls.
 
-Strategy 1: Space Out Skill Invocations
+## Strategy 1: Space Out Skill Invocations
 
 The simplest approach is adding deliberate pauses between skill invocations. Claude Code is an interactive tool. you control when you invoke each skill. For automated workflows using Claude Code in non-interactive mode (via the CLI with `-p`), add sleeps in your orchestration scripts:
 
@@ -44,7 +44,7 @@ done
 
 For standard tiers, 2-3 seconds between heavy skill calls works well. For higher tiers, reduce to 1 second.
 
-Strategy 2: Choose Lighter Skills for Context Gathering
+## Strategy 2: Choose Lighter Skills for Context Gathering
 
 Not all skills consume the same resources. Structure workflows to start with context-gathering before heavy generation:
 
@@ -58,7 +58,7 @@ Higher consumption:
 
 Use `/supermemory` to retrieve relevant project context before invoking `/tdd` or `/pdf`. This avoids re-summarizing context that is already stored.
 
-Strategy 3: Break Large Tasks Into Smaller Chunks
+## Strategy 3: Break Large Tasks Into Smaller Chunks
 
 Instead of one massive skill invocation that processes everything at once, split work into smaller chunks:
 
@@ -78,7 +78,7 @@ Do:
 
 This approach keeps individual invocations within token limits and prevents timeouts.
 
-Strategy 4: Cache Results Between Sessions
+## Strategy 4: Cache Results Between Sessions
 
 Use `/supermemory` to store results from heavy skill operations so you don't repeat them:
 
@@ -95,7 +95,7 @@ In future sessions, retrieve with:
 
 This avoids re-running expensive `/pdf` operations when the underlying document hasn't changed. For deeper caching strategies, see [Caching Strategies for Claude Code Skill Outputs](/caching-strategies-for-claude-code-skill-outputs/).
 
-Real-World Workflow Example
+## Real-World Workflow Example
 
 A code review automation using multiple skills:
 
@@ -130,7 +130,7 @@ Step 5: Output
 claude -p "/xlsx Export review metrics to review-report.xlsx"
 ```
 
-Handling Rate Limit Errors
+## Handling Rate Limit Errors
 
 When you hit a rate limit, Claude Code returns an error. Implement exponential backoff in orchestration scripts:
 
@@ -157,7 +157,7 @@ invoke_with_retry() {
 invoke_with_retry "claude -p '/pdf Analyze large-document.pdf'"
 ```
 
-Monitoring Usage
+## Monitoring Usage
 
 Track rate limit proximity by watching for warning messages in Claude Code's output. Most plans display usage percentage when you're approaching limits.
 
@@ -179,7 +179,7 @@ claude -p "/pdf Analyze document.pdf"
 
 Review the log periodically to identify which skills consume the most calls and optimize accordingly.
 
-Estimating Token Consumption Before Invocation
+## Estimating Token Consumption Before Invocation
 
 Preventing rate limit errors is more reliable than handling them after the fact. Before invoking a heavy skill, estimate how many tokens the operation will consume. This lets you decide whether to proceed immediately, wait, or chunk the task.
 
@@ -192,7 +192,6 @@ def estimate_tokens(text: str, model: str = "gpt-4") -> int:
     """Estimate token count for a given text string."""
     enc = tiktoken.encoding_for_model(model)
     return len(enc.encode(text))
-
 
 def should_proceed_or_chunk(file_path: str, chunk_threshold: int = 50000) -> dict:
     """Determine whether to process a file directly or chunk it."""
@@ -209,7 +208,6 @@ def should_proceed_or_chunk(file_path: str, chunk_threshold: int = 50000) -> dic
         "suggested_chunks": max(1, token_count // chunk_threshold)
     }
 
-
 Usage before invoking /pdf skill
 result = should_proceed_or_chunk("annual-report.pdf")
 print(f"Tokens: ~{result['token_count']:,}")
@@ -220,7 +218,7 @@ if result['recommendation'] == 'chunk':
 
 For the `/pdf` skill specifically, a rough rule of thumb: each page of a text-heavy document contributes approximately 300-600 tokens to the context. A 50-page specification document will consume 15,000-30,000 tokens before your prompt and the model's response. If you're at 80% of your TPM limit, wait for the window to reset rather than triggering a rate limit error mid-processing.
 
-Building a Rate Limit Dashboard for Automated Pipelines
+## Building a Rate Limit Dashboard for Automated Pipelines
 
 When running unattended Claude Code pipelines overnight or in CI systems, a simple monitoring dashboard prevents the silent failure mode where rate limits stop your pipeline and you discover incomplete results hours later.
 
@@ -274,7 +272,7 @@ fi
 
 This prevents pipelines from immediately retrying after a rate limit, which would just trigger another rate limit error.
 
-Summary
+## Summary
 
 Managing rate limits in skill-intensive workflows:
 

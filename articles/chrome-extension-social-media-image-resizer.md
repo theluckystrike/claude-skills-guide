@@ -13,12 +13,11 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 Building a Chrome extension for social media image resizing solves a real problem. Every platform demands different dimensions, Instagram posts need 1080×1080, Twitter/X headers require 1500×500, LinkedIn banners want 1584×396, and Facebook cover photos need 820×312. Manually adjusting images for each platform wastes time. A well-built extension automates this workflow entirely.
 
 This guide covers the architecture, implementation patterns, and key decisions for creating a production-ready social media image resizer extension.
 
-Extension Architecture
+## Extension Architecture
 
 A Chrome extension consists of three core components: the manifest file, background scripts, and content scripts or popup interfaces. For image resizing, you'll need:
 
@@ -43,7 +42,7 @@ The manifest defines what your extension can access:
 }
 ```
 
-Core Resizing Logic
+## Core Resizing Logic
 
 The Canvas API provides the foundation for image manipulation. The resizing function accepts source image data and target dimensions, then outputs a resized blob:
 
@@ -75,7 +74,7 @@ async function resizeImage(imageSource, targetWidth, targetHeight, format = 'ima
 
 This function handles the core transformation. The 0.92 quality parameter balances file size against visual fidelity for JPEG output.
 
-Platform Presets
+## Platform Presets
 
 Different platforms enforce strict dimension requirements. Store these as configurable presets:
 
@@ -103,7 +102,7 @@ const PLATFORM_PRESETS = {
 
 Users select a preset, and the extension applies the corresponding dimensions automatically.
 
-Integration Approaches
+## Integration Approaches
 
 You have three primary integration strategies:
 
@@ -169,7 +168,7 @@ dropZone.addEventListener('drop', async (e) => {
 });
 ```
 
-Image Processing Pipeline
+## Image Processing Pipeline
 
 The complete processing pipeline involves several stages:
 
@@ -207,7 +206,7 @@ async function smartCrop(imageSource, targetWidth, targetHeight) {
 }
 ```
 
-Handling Cross-Origin Images
+## Handling Cross-Origin Images
 
 When processing images from websites, CORS restrictions apply. The extension needs appropriate permissions and the `crossOrigin` attribute set:
 
@@ -225,7 +224,7 @@ async function loadImageWithCors(url) {
 
 The website serving the image must include `Access-Control-Allow-Origin` headers, or you need to route the image through a proxy service in your background script.
 
-User Preferences Storage
+## User Preferences Storage
 
 Persist user preferences using Chrome's storage API:
 
@@ -242,7 +241,7 @@ async function loadPreferences() {
 
 This allows users to set their preferred output format, default platform, and quality settings across sessions.
 
-Performance Considerations
+## Performance Considerations
 
 Image processing in the browser can be memory-intensive. Optimize by:
 
@@ -251,7 +250,7 @@ Image processing in the browser can be memory-intensive. Optimize by:
 - Using `requestAnimationFrame` for smooth UI updates during processing
 - Limiting maximum input dimensions (e.g., 4096×4096) to prevent crashes
 
-Testing and Debugging
+## Testing and Debugging
 
 Use Chrome's developer tools to debug extension components:
 
@@ -262,7 +261,6 @@ Use Chrome's developer tools to debug extension components:
 Test with various image sizes and formats, including edge cases like extremely wide or tall images, to ensure graceful handling.
 
 A well-designed social media image resizer extension eliminates repetitive manual work. The patterns outlined here provide a foundation for building extensions that integrate smoothly with users' existing workflows while handling the diverse requirements of modern social platforms.
-
 
 Related Reading
 

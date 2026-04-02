@@ -14,7 +14,7 @@ permalink: /best-claude-skills-for-data-analysis/
 
 [Data analysis workflows demand tools that handle diverse file formats](/best-claude-code-skills-to-install-first-2026/), automate repetitive tasks, and transform raw information into actionable insights. Claude Code skills extend the AI assistant's capabilities beyond conversational queries, enabling programmatic manipulation of spreadsheets, documents, and datasets. This guide examines the most valuable Claude skills for data analysis workflows, focusing on practical applications developers and power users can implement immediately.
 
-Spreadsheet Mastery with xlsx Skill
+## Spreadsheet Mastery with xlsx Skill
 
 [The xlsx skill stands as the cornerstone for any data analysis workflow](/claude-skill-md-format-complete-specification-guide/) involving tabular data. This skill enables creation, modification, and analysis of Excel files, CSV files, and other spreadsheet formats while preserving formulas and formatting.
 
@@ -24,7 +24,7 @@ Spreadsheet Mastery with xlsx Skill
 
 The xlsx skill excels at batch processing multiple files, applying consistent formatting across workbooks, and generating calculated fields. For analysts working with financial models or recurring reports, the ability to programmatically update spreadsheets eliminates manual copy-paste workflows that consume hours each week.
 
-PDF Data Extraction with pdf Skill
+## PDF Data Extraction with pdf Skill
 
 Extracting structured data from PDF documents represents a common problem in data analysis. The pdf skill transforms static documents into usable datasets through intelligent text and table extraction.
 
@@ -36,7 +36,7 @@ This skill proves invaluable when analyzing vendor contracts, extracting line it
 
 The skill supports both text-based PDFs and scanned documents through optional OCR capabilities, making it versatile for various data sources. To understand how pdf and other skills compare when choosing your stack, see [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/).
 
-Test-Driven Data Processing with tdd Skill
+## Test-Driven Data Processing with tdd Skill
 
 Reliable data analysis requires trustworthy code. The tdd skill brings test-driven development practices to data processing pipelines, ensuring your transformation logic produces accurate results.
 
@@ -54,7 +54,7 @@ Ensures edge cases like None, empty strings, and malformed input are handled
 
 The tdd skill guides developers through the red-green-refactor cycle, automatically generating test cases based on function signatures and docstrings. For data pipelines that run in production, this discipline prevents the subtle bugs that emerge from unhandled null values or unexpected input formats. See [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) for how tdd integrates with a broader developer skill stack.
 
-Document Creation with docx Skill
+## Document Creation with docx Skill
 
 Analysis results often require distribution through formal documents. The docx skill generates Word documents programmatically, enabling automated report generation from analysis outputs.
 
@@ -64,7 +64,7 @@ Analysis results often require distribution through formal documents. The docx s
 
 This skill pairs effectively with xlsx, when your Python script completes spreadsheet analysis, docx packages the findings into a professionally formatted report ready for stakeholder distribution.
 
-Presentation Generation with pptx Skill
+## Presentation Generation with pptx Skill
 
 Translating data insights into presentations demands a separate skill entirely. The pptx skill automates slide creation, enabling data-driven storytelling without manual PowerPoint work.
 
@@ -74,13 +74,13 @@ Translating data insights into presentations demands a separate skill entirely. 
 
 For teams that run weekly or monthly analyses, automating slide generation ensures consistency while saving hours of repetitive work. The skill supports corporate templates, enabling brand-aligned outputs without manual formatting.
 
-Knowledge Management with supermemory Skill
+## Knowledge Management with supermemory Skill
 
 Long-term analysis projects benefit from systematic knowledge capture. The supermemory skill extends Claude's context window, maintaining detailed information across extended analysis sessions.
 
 This skill proves essential when analyzing multi-phase projects where earlier findings inform later conclusions. Rather than re-prompting Claude with background context, supermemory maintains the analytical context throughout your investigation.
 
-Combining Skills for Powerful Workflows
+## Combining Skills for Powerful Workflows
 
 The real power emerges when combining these skills into integrated pipelines. Consider a typical analytics workflow:
 
@@ -110,7 +110,7 @@ claude -p "/pptx Create a 5-slide summary deck from the invoice analysis: $INVOI
 
 For frontend teams that need to surface this data in dashboards, see [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) for how these analysis outputs integrate with UI workflows.
 
-Choosing the Right Skills
+## Choosing the Right Skills
 
 Select skills based on your specific data sources and output requirements:
 
@@ -125,7 +125,7 @@ Select skills based on your specific data sources and output requirements:
 
 For developers building recurring analysis pipelines, investing time in skill integration pays dividends within weeks. The initial setup overhead transforms into time savings with each subsequent run.
 
-Getting Started
+## Getting Started
 
 Begin by identifying the most time-consuming manual task in your current workflow. If you regularly copy data from PDFs into spreadsheets, the pdf and xlsx combination addresses that problem immediately. If report generation consumes hours weekly, docx and pptx skills likely offer the highest return on investment.
 

@@ -15,13 +15,13 @@ Building a Chrome extension that saves articles for offline reading is a practic
 
 This guide covers the essential components: manifest configuration, content extraction, storage mechanisms, and synchronization strategies. By the end, you'll have a clear roadmap for building a production-ready offline article saver.
 
-Understanding the Core Requirements
+## Understanding the Core Requirements
 
 An offline article saver needs to accomplish four main tasks: capture the article content from a web page, strip unnecessary elements like navigation and ads, store the cleaned content locally, and provide a way to read that content without an internet connection.
 
 The challenge lies in reliably extracting the main content from diverse website layouts. Sites use different HTML structures, JavaScript frameworks, and content delivery methods. Your extension needs to handle this variability while preserving the article's essential content, text, images, headings, and formatting.
 
-Manifest Configuration
+## Manifest Configuration
 
 Every Chrome extension begins with the manifest file. For an offline article saver, you need specific permissions to interact with pages and store data:
 
@@ -50,7 +50,7 @@ Every Chrome extension begins with the manifest file. For an offline article sav
 
 The `activeTab` permission lets your extension access the current tab when the user explicitly invokes it. The `storage` permission enables the chrome.storage API, which provides more capacity than localStorage and works in service workers. The `host_permissions` with `<all_urls>` allows your content script to run on any website.
 
-Content Extraction Strategies
+## Content Extraction Strategies
 
 Extracting the main article content from a web page requires parsing the DOM intelligently. There are several approaches, each with trade-offs between accuracy and complexity.
 
@@ -91,7 +91,7 @@ function extractArticleContent(doc) {
 
 This approach works reasonably well for sites with standard layouts. For more complex sites, consider integrating Mozilla's Readability library, which provides sophisticated content detection and cleaning.
 
-Storage Options and Trade-offs
+## Storage Options and Trade-offs
 
 Chrome extensions have several storage options, each suited for different use cases:
 
@@ -130,7 +130,7 @@ async function getSavedArticles() {
 }
 ```
 
-Handling Images for Offline Access
+## Handling Images for Offline Access
 
 Images present a unique challenge for offline article saving. You need to either inline them as base64 data or download and store them separately.
 
@@ -167,7 +167,7 @@ function blobToBase64(blob) {
 
 This approach works for smaller images but can significantly increase storage usage. For production extensions, consider downloading images separately and storing their URLs alongside the article, then serving them from local cache when offline.
 
-Building the Reading Interface
+## Building the Reading Interface
 
 The reading view should prioritize readability and offline accessibility. Use a dedicated HTML file that loads content from storage:
 
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 Style the reading view with comfortable typography, max-width around 65 characters, adequate line height, and sufficient contrast. Consider adding dark mode support for reading in low-light conditions.
 
-Synchronization Strategies
+## Synchronization Strategies
 
 If you want to sync articles across devices, you'll need a backend service. The extension can push saved articles to a server and pull them on other devices:
 
@@ -223,13 +223,13 @@ async function syncArticles() {
 
 The merge logic should handle conflicts by preferring the most recently modified version of each article.
 
-Testing Your Extension
+## Testing Your Extension
 
 Test your extension across different site types, news sites, blogs, technical documentation, and forums. Each has different HTML structures and may require adjustments to your extraction logic.
 
 Use Chrome's developer tools to inspect how your content script interacts with pages. Check that your extension correctly handles pages with lazy-loaded images, JavaScript-rendered content, and paywalls.
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for saving articles offline requires careful consideration of content extraction, storage, and user experience. Start with the core functionality, extracting and storing article content, then add features like image handling and synchronization as needed.
 

@@ -19,7 +19,7 @@ Building newsletters has traditionally required switching between multiple platf
 
 This guide explores the capabilities of Chrome extensions designed for newsletter creation, practical implementation patterns, and how to integrate these tools into your development environment.
 
-Why Use a Chrome Extension for Newsletter Design
+## Why Use a Chrome Extension for Newsletter Design
 
 The browser has become a natural workspace for many development tasks. Newsletter design fits well in this paradigm because email clients render HTML similarly to web pages, and browser developer tools provide immediate feedback on rendering issues.
 
@@ -31,11 +31,11 @@ A dedicated Chrome extension for newsletter design typically offers three core a
 
 These tools bridge the gap between raw HTML coding and visual email builders, giving you precise control over the final output.
 
-Core Features to Look For
+## Core Features to Look For
 
 When evaluating a Chrome extension newsletter design tool, prioritize these capabilities:
 
-Template Management
+## Template Management
 
 Effective templates should be portable. Look for extensions that support importing from local files rather than locking you into cloud storage:
 
@@ -53,7 +53,7 @@ Effective templates should be portable. Look for extensions that support importi
 
 This JSON structure allows you to store templates in your repository and render them programmatically.
 
-Inline CSS and Email Client Compatibility
+## Inline CSS and Email Client Compatibility
 
 Email clients have varying CSS support. The best Chrome extensions include:
 
@@ -62,7 +62,7 @@ Email clients have varying CSS support. The best Chrome extensions include:
 - Fallback font stacks
 - Preview mode simulating major email clients (Gmail, Apple Mail, Outlook)
 
-Code Editor Integration
+## Code Editor Integration
 
 Some extensions inject a code editor directly into the browser, supporting syntax highlighting for HTML, CSS, and template languages like Handlebars or Liquid:
 
@@ -86,11 +86,11 @@ Some extensions inject a code editor directly into the browser, supporting synta
 </table>
 ```
 
-Building a Custom Newsletter Pipeline
+## Building a Custom Newsletter Pipeline
 
 For developers who want full control, you can build a custom pipeline using Chrome extensions combined with local tools:
 
-Step 1: Define Your Template Structure
+## Step 1: Define Your Template Structure
 
 Create a reusable template directory:
 
@@ -102,11 +102,11 @@ newsletter-templates/
  styles/inline.css
 ```
 
-Step 2: Use a Chrome Extension for Preview
+## Step 2: Use a Chrome Extension for Preview
 
 Install an extension that monitors a local directory and provides live preview. Extensions like "Mail Preview" can watch your template files and render changes instantly as you edit in your preferred code editor.
 
-Step 3: Generate and Export
+## Step 3: Generate and Export
 
 When ready, use the extension to:
 
@@ -115,11 +115,11 @@ When ready, use the extension to:
 - Apply inline CSS automatically
 - Export as single HTML file or batch process multiple campaigns
 
-Step 4: Test Across Email Clients
+## Step 4: Test Across Email Clients
 
 Chrome extensions like "Email on Acid" or "Litmus" integrate with your workflow to send test emails and capture screenshots across multiple email clients without manual copy-pasting.
 
-Practical Example: Automated Weekly Newsletter
+## Practical Example: Automated Weekly Newsletter
 
 Consider a weekly developer newsletter that pulls content from a JSON feed:
 
@@ -150,7 +150,7 @@ Consider a weekly developer newsletter that pulls content from a JSON feed:
 
 A Chrome extension can ingest this JSON, merge it with your HTML template, and produce a campaign-ready email in seconds. This approach scales well for newsletters with consistent structure but varying content.
 
-Limitations and Workarounds
+## Limitations and Workarounds
 
 Chrome extension newsletter tools have constraints worth noting:
 
@@ -160,7 +160,7 @@ Chrome extension newsletter tools have constraints worth noting:
 
 For critical campaigns, run final tests using a service like Mailtrap or your own test accounts before full distribution.
 
-Integrating Version Control Into Your Newsletter Workflow
+## Integrating Version Control Into Your Newsletter Workflow
 
 One of the most underused advantages of a browser-based newsletter tool is how naturally it fits with Git. When your templates are plain HTML files and your content is JSON or Markdown, every change becomes diffable and reversible.
 
@@ -188,7 +188,7 @@ This structure gives you a full audit trail of every newsletter sent. You can di
 
 For teams, the Chrome extension acts as the local build and preview tool while CI handles the final render for distribution. A simple GitHub Actions workflow can run the same build script the extension uses, ensuring the preview in your browser matches what gets sent to subscribers.
 
-Comparing Chrome Extension Tools Against Dedicated Email Platforms
+## Comparing Chrome Extension Tools Against Dedicated Email Platforms
 
 Developers frequently ask whether a Chrome extension approach is worth adopting over established platforms like Mailchimp, Beehiiv, or ConvertKit. The answer depends on what you value.
 
@@ -198,7 +198,7 @@ Chrome extension tools earn their place in a different scenario: when you alread
 
 A hybrid approach works well for many developer-focused newsletters: use a Chrome extension for local template development and preview, then push the final HTML through a sending API with your own subscriber database managed in a simple Postgres table or a flat CSV. This gives you platform-level control at a fraction of the cost.
 
-Debugging Email Rendering Issues Directly in the Browser
+## Debugging Email Rendering Issues Directly in the Browser
 
 The Chrome DevTools integration is one of the most practical reasons to keep newsletter design in the browser. When a layout breaks in a specific email client, you can replicate the rendering environment by manipulating CSS in DevTools, testing fallback styles, and confirming the fix before touching the source template.
 
@@ -208,7 +208,7 @@ For Outlook compatibility, Chrome DevTools cannot replicate the Word rendering e
 
 When images are missing or sized incorrectly, the Network panel shows exactly what URLs the template references and whether they return 200 responses. useful when images are hosted on a CDN with access restrictions, since you catch authorization errors at design time rather than after sending.
 
-Building a Minimal Custom Extension
+## Building a Minimal Custom Extension
 
 If existing Chrome extension newsletter tools do not fit your specific workflow, building a minimal custom extension is more accessible than most developers expect. A barebones extension requires only four files: a `manifest.json` defining permissions and entry points, a popup HTML file providing the user interface, a content script for interacting with page content, and a background service worker for longer-running tasks.
 
@@ -216,14 +216,13 @@ For a newsletter preview use case, the popup is sufficient without a content scr
 
 The entire functional core fits in under 150 lines of JavaScript. The investment is a few hours to build and a few minutes per issue to operate. a realistic path for developers with unusual formatting requirements or proprietary template systems.
 
-Conclusion
+## Conclusion
 
 A Chrome extension newsletter design tool accelerates your workflow by keeping design and development in the browser. For developers comfortable with code, these extensions offer the flexibility of raw HTML with helpful abstractions for email-specific challenges like inline CSS and cross-client compatibility.
 
 The most effective approach combines a capable Chrome extension with version-controlled templates, local data processing, and targeted testing. This gives you reproducibility, customization, and the ability to iterate quickly on campaign design.
 
 Explore the Chrome Web Store for options that match your specific needs, or consider building a minimal extension tailored to your newsletter format if existing tools don't fit your workflow.
-
 
 Related Reading
 

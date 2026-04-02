@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Redis Streams Workflow Guide"
 description: "A comprehensive guide to building Redis Streams workflows with Claude Code, featuring practical examples, code patterns, and production-ready."
@@ -14,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Redis Streams Workflow Guide
 
 Redis Streams is a powerful data structure designed for building real-time message processing systems, event sourcing architectures, and distributed task queues. When combined with Claude Code, you can create intelligent, context-aware workflows that process stream data with the power of AI. This guide walks you through building solid Redis Streams workflows using Claude Code, from basic patterns to production-ready implementations.
 
-Understanding Redis Streams and Claude Code
+## Understanding Redis Streams and Claude Code
 
 Redis Streams (introduced in Redis 5.0) provides a log-structured data type that excels at capturing ordered, immutable events. Unlike traditional pub/sub, streams support consumer groups, message acknowledgment, and persistent storage, making them ideal for building reliable, scalable workflows.
 
@@ -31,11 +29,11 @@ Claude Code extends these capabilities by adding intelligent processing logic. Y
 - Generate responses based on stream context
 - Build conversational interfaces around stream processing
 
-Setting Up Your Redis Streams Environment
+## Setting Up Your Redis Streams Environment
 
 Before building workflows, ensure you have Redis running with streams support. Most managed Redis services (Redis Enterprise, Amazon ElastiCache, Redis Cloud) support streams out of the box.
 
-Installing Required Dependencies
+## Installing Required Dependencies
 
 Create a new Claude Code project and install the necessary Redis client:
 
@@ -44,7 +42,7 @@ npm init -y
 npm install ioredis uuid
 ```
 
-Basic Redis Streams Connection
+## Basic Redis Streams Connection
 
 Here's a practical connection setup for working with streams:
 
@@ -68,7 +66,7 @@ async function connect() {
 module.exports = { redis, connect };
 ```
 
-Creating Stream Producers
+## Creating Stream Producers
 
 Producers are the foundation of any stream workflow. They generate entries that flow through your system. Here's how to create a solid stream producer:
 
@@ -103,7 +101,7 @@ async function trackUserEvent(userId, eventType, properties) {
 
 This pattern creates entries with structured data that Claude Code can process intelligently.
 
-Building Stream Consumers with Claude Code
+## Building Stream Consumers with Claude Code
 
 Consumer groups enable multiple workers to process stream entries collaboratively. Here's a production-ready consumer pattern:
 
@@ -178,7 +176,7 @@ class StreamConsumer {
 }
 ```
 
-Integrating Claude Code for Intelligent Processing
+## Integrating Claude Code for Intelligent Processing
 
 Now comes the powerful part, using Claude Code to process stream entries intelligently:
 
@@ -233,7 +231,7 @@ Respond with a JSON object containing:
 
 This creates an intelligent routing system where Claude Code analyzes each event and directs it to the appropriate queue.
 
-Building a Complete Workflow
+## Building a Complete Workflow
 
 Here's how all the pieces fit together in a production workflow:
 
@@ -265,7 +263,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-Best Practices for Production Deployments
+## Best Practices for Production Deployments
 
 When deploying Redis Streams workflows with Claude Code in production, follow these essential practices:
 
@@ -313,7 +311,7 @@ async function processEntry(id, data) {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Redis Streams combined with Claude Code creates powerful, intelligent workflow systems. By using streams for reliable message delivery and Claude Code for intelligent processing, you can build applications that handle complex routing, analysis, and decision-making automatically.
 

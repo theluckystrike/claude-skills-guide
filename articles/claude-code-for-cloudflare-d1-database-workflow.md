@@ -13,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Cloudflare D1 Database Workflow
 
 Building applications with Cloudflare D1 and Claude Code together creates a powerful development workflow that combines edge database capabilities with AI-assisted coding. This guide walks you through practical strategies for working with D1 databases, from initial setup to advanced querying patterns, all while using Claude Code to accelerate your development process.
 
-Why Cloudflare D1 with Claude Code
+## Why Cloudflare D1 with Claude Code
 
 Cloudflare D1 is a serverless SQL database that runs at the edge, giving you the simplicity of SQLite with global distribution. When you pair it with Claude Code, you get an intelligent assistant that understands database patterns, can generate migrations, and helps you write efficient queries. The combination is particularly valuable for developers building global applications who want to minimize infrastructure complexity while maintaining solid data layer capabilities.
 
 The workflow benefits are immediate: Claude Code can generate schema definitions, create API endpoints for database operations, write tests for your data access layer, and help troubleshoot query performance issues. Instead of switching between documentation and your IDE, you can work with an AI that understands both your application code and database patterns.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before working with D1, ensure your local environment is configured. Claude Code works best when your project has proper structure and dependencies declared.
 
@@ -57,11 +56,11 @@ database_id = "your-database-id"
 
 Now you're ready to use Claude Code for database operations throughout your project.
 
-Connecting Claude Code to Your D1 Databases
+## Connecting Claude Code to Your D1 Databases
 
 The most effective workflow for D1 combines the Cloudflare MCP server with custom skills for database operations.
 
-Installing the Cloudflare MCP Server
+## Installing the Cloudflare MCP Server
 
 Set up the Cloudflare MCP server to enable Claude Code to interact with your D1 databases directly:
 
@@ -72,7 +71,7 @@ npm install -g @cloudflare/mcp-server
 
 Configure MCP in your Claude Code settings to connect to your Cloudflare account. Once configured, Claude Code can execute D1 queries directly, helping you debug issues, explore data, and run migrations.
 
-Creating a D1-Focused Skill
+## Creating a D1-Focused Skill
 
 For repeated D1 operations, create a custom skill that understands your database schema and common patterns. Here's a skill structure for D1 workflows:
 
@@ -108,7 +107,7 @@ When writing queries, always:
 4. Return meaningful error messages
 ```
 
-Designing Your Database Schema
+## Designing Your Database Schema
 
 Claude Code excels at generating database schemas that follow best practices. When designing your D1 schema, think about your access patterns first. D1 works exceptionally well for read-heavy workloads with moderate write volumes, making it ideal for content management systems, user profiles, and caching layers.
 
@@ -146,7 +145,7 @@ CREATE INDEX idx_posts_published ON posts(published, created_at DESC);
 
 Notice the use of `unixepoch()` for timestamps, this gives you sortable integer values that work efficiently with D1's indexing. Claude Code can help you reason through these decisions and explain why certain patterns work better at the edge.
 
-Creating Database Migrations
+## Creating Database Migrations
 
 Migrations are critical for maintaining schema consistency across environments. Claude Code can generate migration files and help you understand the implications of schema changes.
 
@@ -171,7 +170,7 @@ wrangler d1 execute my-database --remote --file=./migrations/001_initial.sql
 
 Claude Code can help you write safe migrations that handle existing data, add columns without locking tables, and create appropriate indexes for new query patterns.
 
-Migration Prompt Example
+## Migration Prompt Example
 
 Ask Claude Code to generate a migration with proper transaction wrapping:
 
@@ -203,7 +202,7 @@ COMMIT;
 
 Wrapping migrations in `BEGIN`/`COMMIT` ensures that if any statement fails, the entire migration rolls back, leaving your schema in a consistent state.
 
-Building Data Access Functions
+## Building Data Access Functions
 
 Create a clean abstraction layer for database operations. This separation makes your code testable and allows Claude Code to understand your data flow.
 
@@ -255,7 +254,7 @@ export async function listUsers(
 
 Claude Code can help you expand this pattern to cover all your data access needs, add pagination, and implement complex queries efficiently.
 
-Working with Workers and D1
+## Working with Workers and D1
 
 Cloudflare Workers access D1 through bindings. Claude Code can help you integrate database operations into your worker handlers:
 
@@ -289,7 +288,7 @@ export default {
 
 The `Env` type should include your D1 binding. Claude Code can help you define this type based on your `wrangler.toml` configuration.
 
-Optimizing Queries for Edge Performance
+## Optimizing Queries for Edge Performance
 
 D1's edge nature requires some adjustments to traditional database thinking. Here are key optimizations Claude Code can help you implement:
 
@@ -324,7 +323,7 @@ const batch = [
 const results = await db.batch(batch);
 ```
 
-Testing Your Database Layer
+## Testing Your Database Layer
 
 Claude Code can help you write tests that verify database operations without requiring a real D1 instance. Use the `miniflare` testing utilities:
 
@@ -356,7 +355,7 @@ For integration tests, use `wrangler dev` with local D1:
 wrangler dev --local --env test
 ```
 
-Deployment and Production Considerations
+## Deployment and Production Considerations
 
 When deploying your D1-powered application:
 
@@ -386,7 +385,7 @@ jobs:
         run: wrangler d1 execute my-database --remote --file=./migrations/latest.sql
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Claude Code can help diagnose and fix common D1 problems that arise during development and deployment.
 
@@ -420,7 +419,7 @@ For query timeouts, ask Claude Code to analyze your query and suggest optimizati
 Parameter Binding Errors
 For binding errors, request help converting your code to use proper parameter binding. Always prefer `.bind()` over string interpolation to avoid both injection risks and query plan cache misses.
 
-Conclusion
+## Conclusion
 
 Claude Code combined with Cloudflare D1 gives you a powerful development workflow for building edge-ready applications. The AI assistant understands both the database layer and your application code, enabling faster development of solid data-driven features. Start with simple schemas and queries, then progressively add complexity as your application needs grow.
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Alchemy SDK Workflow Tutorial
 
 Building blockchain applications requires managing complex API interactions, monitoring network events, and handling sensitive operations like transaction signing. Integrating Claude Code with Alchemy SDK creates a powerful development environment where you can automate repetitive tasks, debug smart contract interactions, and build solid dApp backends using natural language commands. This tutorial walks you through setting up and maximizing this workflow combination.
 
-Understanding the Integration Architecture
+## Understanding the Integration Architecture
 
 Claude Code operates as your AI-powered development assistant, while Alchemy SDK provides the infrastructure layer for Ethereum, Polygon, Arbitrum, and other EVM-compatible networks. Together, they form a workflow where Claude Code handles the logic and orchestration, calling Alchemy SDK methods to execute blockchain operations.
 
@@ -27,7 +26,7 @@ The integration works through Node.js scripts that Claude Code can execute direc
 
 Before proceeding, ensure you have Node.js 18+ installed, an Alchemy account with an API key, and Claude Code configured on your system. You'll also need a basic JavaScript or TypeScript project set up with the Alchemy SDK dependency.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Start by creating a new project directory and initializing it with npm. Then install the Alchemy SDK along with dotenv for managing your API keys securely:
 
@@ -63,11 +62,11 @@ export default alchemy;
 
 This setup gives Claude Code a ready-to-use Alchemy instance that it can import and use for any blockchain operation you describe.
 
-Automating Common Blockchain Tasks
+## Automating Common Blockchain Tasks
 
 One of the most valuable use cases for this integration is automating repetitive blockchain queries. Instead of writing custom scripts for each task, you can describe what you need in natural language, and Claude Code generates the appropriate Alchemy SDK calls.
 
-Fetching Token Balances
+## Fetching Token Balances
 
 To get the ETH balance for an address, simply describe the task to Claude Code:
 
@@ -98,7 +97,7 @@ async function getTokenBalances(address) {
 }
 ```
 
-Monitoring Smart Contract Events
+## Monitoring Smart Contract Events
 
 Real-time event monitoring becomes straightforward with Alchemy's SDK and Claude Code's ability to create ongoing scripts. For example, to monitor USDC transfers:
 
@@ -129,7 +128,7 @@ monitorTransfers();
 
 Claude Code can help you construct the correct event signatures and filter parameters, taking the guesswork out of smart contract interaction.
 
-Building a Transaction Monitoring Dashboard
+## Building a Transaction Monitoring Dashboard
 
 A practical application of this integration is building a transaction monitoring system. Claude Code can generate a complete dashboard that tracks pending transactions, confirmsations, and events for specific addresses:
 
@@ -170,7 +169,7 @@ export default TransactionMonitor;
 
 This class provides methods to watch pending transactions, retrieve historical data, and wait for confirmations. Claude Code can instantiate and use this class based on your monitoring requirements.
 
-Debugging with Alchemy's Enhanced APIs
+## Debugging with Alchemy's Enhanced APIs
 
 Alchemy provides enhanced APIs that go beyond standard JSON-RPC endpoints. Claude Code can use these for debugging smart contract issues:
 
@@ -205,7 +204,7 @@ async function findFailedTransactions(address, blockRange) {
 
 The debug trace reveals exactly what happened during transaction execution, including gas usage, state changes, and revert reasons, information crucial for fixing failing transactions.
 
-Best Practices for Production Workflows
+## Best Practices for Production Workflows
 
 When using Claude Code with Alchemy SDK in production environments, follow these guidelines:
 
@@ -230,7 +229,7 @@ Use WebSocket connections for real-time features: When monitoring pending transa
 
 Use Alchemy's webhook notifications: For production monitoring, configure Alchemy webhooks to receive notifications without maintaining persistent connections.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Alchemy SDK transforms blockchain development from manual API manipulation into conversational task execution. By describing your requirements naturally, you can generate sophisticated blockchain queries, build monitoring systems, and debug complex transactions without deep expertise in each Alchemy API method. Start with simple queries, then progressively build more complex workflows as you become comfortable with the integration patterns.
 

@@ -12,7 +12,6 @@ categories: [guides]
 tags: [claude-code, chrome-extension, productivity]
 ---
 
-
 {% raw %}
 Chrome Extension Research Organizer: A Developer Guide
 
@@ -20,7 +19,7 @@ Building a Chrome extension to organize your research is one of the most practic
 
 This guide walks you through building a research organizer extension from scratch, covering architecture, data storage, and practical implementation patterns that work for developers and power users.
 
-Why Build Your Own Instead of Using an Existing Tool
+## Why Build Your Own Instead of Using an Existing Tool
 
 Before writing a line of code, it's fair to ask whether this is worth building at all. Plenty of existing tools, Pocket, Raindrop.io, Notion web clipper, Obsidian's browser plugin, handle research capture. The answer depends on your workflow.
 
@@ -30,7 +29,7 @@ The case against: you take on maintenance responsibility. Chrome's extension API
 
 For developers who value data ownership and customization, building your own wins. This guide gives you a production-quality foundation.
 
-Core Features Every Research Organizer Needs
+## Core Features Every Research Organizer Needs
 
 Before writing code, define what your organizer should accomplish. The most useful research organizers share a common feature set: the ability to capture URLs with metadata, tag and categorize entries, add personal notes, search across all entries, and export data in portable formats. Some extensions add collaboration features, but for personal use, focus on the core capabilities first.
 
@@ -47,7 +46,7 @@ Here is a comparison of the main storage options to help you decide:
 
 For most personal research organizers, `chrome.storage.local` is the right default. It's straightforward, fast, and 10MB holds thousands of entries. If you later need cross-device sync, you can migrate entries to `chrome.storage.sync` incrementally, keeping only the most recent N entries in sync storage.
 
-Setting Up Your Extension
+## Setting Up Your Extension
 
 Every Chrome extension begins with the manifest file. For a research organizer, you need permissions for storage, activeTab (to capture the current page), and scripting (to extract page metadata):
 
@@ -106,7 +105,7 @@ Create a basic popup interface with HTML and JavaScript. The popup serves as you
 
 Making the URL field `readonly` is a deliberate UX choice. It prevents accidental edits while still making the URL visible and copyable. Users who need to save a slightly different URL (a canonical version without tracking parameters, for instance) can use the notes field or a preprocessing step in JavaScript.
 
-Implementing the Storage Logic
+## Implementing the Storage Logic
 
 The JavaScript for your popup handles capturing the current page and saving it to Chrome storage. This is where the real functionality lives:
 
@@ -160,7 +159,7 @@ url: cleanUrl(document.getElementById('url').value),
 
 This small addition means your saved entries link directly to the canonical content rather than carrying analytics metadata that will be meaningless six months later.
 
-Adding Search and Filtering
+## Adding Search and Filtering
 
 A research organizer without search is just a bookmark manager. Add a dedicated search page that loads in a new tab:
 
@@ -219,7 +218,7 @@ render(results);
 
 The weight values here prioritize title matches over tag matches over note matches, which reflects how most people think about their research, the title is the most reliable signal of relevance.
 
-Tag Management and Organization
+## Tag Management and Organization
 
 Tags are only useful if they're consistent. A sprawling tag vocabulary with minor variations (`react`, `React`, `reactjs`, `React.js`) creates fragmentation that defeats the purpose. Add a tag autocomplete feature that pulls from your existing tags:
 
@@ -261,7 +260,7 @@ const entry = {
 
 A collection selector in the popup lets you switch contexts before saving, and the search page can filter by collection to show only the entries relevant to your current focus.
 
-Advanced: Extracting Page Content
+## Advanced: Extracting Page Content
 
 For a more powerful research tool, automatically extract meaningful content from pages when saving. Use the scripting API to pull out meta descriptions, article text, or specific elements:
 
@@ -308,7 +307,7 @@ function: () => {
 
 The reading time estimate is particularly useful for research curation. When you return to your saved entries later, knowing that an article is a 3-minute read versus a 25-minute read helps you triage what to re-read versus what to skim.
 
-Export and Backup
+## Export and Backup
 
 Research is valuable, ensure you can export it. Add an export function that downloads your data as JSON:
 
@@ -357,7 +356,7 @@ document.getElementById('exportMd').addEventListener('click', async () => {
 
 Having both JSON and Markdown exports gives you the best of both worlds: JSON for programmatic reimport, Markdown for human consumption in other tools.
 
-Keyboard Shortcuts and Power User Features
+## Keyboard Shortcuts and Power User Features
 
 A research organizer you actually use is one that gets out of your way. Adding a keyboard shortcut to trigger the popup without reaching for the mouse dramatically improves the capture experience:
 
@@ -408,7 +407,7 @@ chrome.commands.onCommand.addListener(async (command) => {
 
 The automatic `unsorted` tag on quick-saved entries gives you a clear queue to review and properly tag later. A weekly triage session through your unsorted entries is enough to keep your research collection organized.
 
-Next Steps for Your Organizer
+## Next Steps for Your Organizer
 
 With these core features in place, you have a functional research organizer that is genuinely useful for day-to-day work. From here, consider these extensions based on your evolving needs:
 
@@ -421,7 +420,6 @@ Reading list mode: Add a "read later" flag to entries. A dedicated reading list 
 Integration with note-taking tools: If you use Obsidian, you can write entries directly to your vault as Markdown files via the Local REST API plugin. If you use Notion, the Notion API accepts page creation requests that map cleanly to your entry structure.
 
 The beauty of building your own organizer is tailoring it exactly to your workflow. Start with the foundation described here, use it daily for a few weeks, and then add features based on where you actually feel friction. Features built in response to real problems are far more useful than features built speculatively.
-
 
 Related Reading
 

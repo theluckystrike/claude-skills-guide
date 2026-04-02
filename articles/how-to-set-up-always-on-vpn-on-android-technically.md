@@ -18,7 +18,7 @@ How to Set Up Always-On VPN on Android: Technical Implementation Guide
 
 Always-on VPN is a critical security feature that ensures your Android device maintains a constant VPN connection, automatically reconnecting when connectivity is restored. This technical guide walks you through the implementation options, from built-in Android features to custom VPN app configurations.
 
-Understanding Always-On VPN in Android
+## Understanding Always-On VPN in Android
 
 Android provides native always-on VPN support since Android 4.4 (API 20), but the implementation has evolved significantly. There are two primary approaches to achieving always-on VPN:
 
@@ -29,15 +29,15 @@ Understanding the difference between these approaches matters before you configu
 
 For personal devices where you want simple, reliable protection, the native feature is the right starting point. For enterprise deployments or cases where you need granular control over what traffic goes through the VPN, a third-party implementation or MDM-enforced configuration gives you more use.
 
-How Android Enforces Always-On VPN Internally
+## How Android Enforces Always-On VPN Internally
 
 When always-on VPN is enabled at the OS level, Android places a routing rule at the top of the policy routing table that sends all traffic through the VPN interface. If the VPN interface is not available. because the app has not started yet or the connection dropped. Android consults the block-untunneled-traffic policy. With the kill switch enabled, it drops traffic rather than routing it over the plain network. Without the kill switch, traffic falls through to the default network.
 
 This is why the kill switch setting matters so much. Always-on VPN without a kill switch is not actually always-on for privacy purposes. there are windows during startup and reconnection where traffic can leak.
 
-Method 1: Using Android's Native Always-On VPN
+## Method 1: Using Android's Native Always-On VPN
 
-Prerequisites
+## Prerequisites
 
 - Android 5.0 (API 21) or higher for full functionality
 - A VPN app that supports the always-on VPN API
@@ -47,7 +47,7 @@ Not all VPN apps support Android's always-on API even if they claim always-on be
 
 Popular VPN apps with confirmed native always-on support include: WireGuard for Android, OpenVPN for Android, Mullvad, ProtonVPN, and the built-in IKEv2/IPsec VPN client on devices running Android 8 or newer.
 
-Step-by-Step Configuration
+## Step-by-Step Configuration
 
 For Users (Device Settings)
 
@@ -136,7 +136,7 @@ class VpnStateReceiver : BroadcastReceiver() {
 }
 ```
 
-Configuring via MDM/EMM
+## Configuring via MDM/EMM
 
 For enterprise deployments, always-on VPN can be enforced via mobile device management:
 
@@ -175,11 +175,11 @@ dpm.setAlwaysOnVpnPackage(
 
 The `lockdownWhitelist` parameter, added in Android 11, allows you to specify a set of package names that are permitted to bypass the VPN even when lockdown is enabled. This is useful for allowing system update services or certificate validation to operate while still blocking all other untunneled traffic.
 
-Method 2: Third-Party VPN Apps with Always-On
+## Method 2: Third-Party VPN Apps with Always-On
 
 Popular VPN providers implement their own always-on mechanisms:
 
-OpenVPN for Android
+## OpenVPN for Android
 
 ```bash
 OpenVPN configuration for always-connect
@@ -223,7 +223,7 @@ The `PersistentKeepalive = 25` line is the most important setting for always-on 
 
 Setting `AllowedIPs = 0.0.0.0/0, ::/0` routes all IPv4 and IPv6 traffic through the tunnel. This is the correct setting for always-on full-tunnel VPN. If you use split tunneling, restrict this to specific subnets. but note that split tunneling reduces the protection always-on VPN is meant to provide.
 
-Comparing OpenVPN vs WireGuard for Always-On Use
+## Comparing OpenVPN vs WireGuard for Always-On Use
 
 | Feature | OpenVPN | WireGuard |
 |---|---|---|
@@ -266,11 +266,11 @@ Create custom always-on logic using Tasker:
 
 The Tasker approach lets you create conditional always-on logic that the native OS feature cannot handle. Common use cases include: reconnecting only when on untrusted networks (anything that is not your home WiFi SSID), pausing the VPN when connected to a specific corporate network that blocks VPN, and logging connection drops with timestamps for auditing.
 
-Understanding VPN Kill Switch
+## Understanding VPN Kill Switch
 
 A kill switch prevents data leaks when the VPN connection drops unexpectedly:
 
-Implementation Types
+## Implementation Types
 
 1. System-level kill switch (Android 11+)
    - Integrated into the OS VPN API
@@ -284,7 +284,7 @@ The system-level kill switch is implemented via the `BLOCK_UNTUNNELED_TRAFFIC` p
 
 Application-level kill switches work differently. When the VPN app detects a disconnect, it programmatically blocks outbound traffic using Android's `VpnService.protect()` mechanism or custom iptables rules. The enforcement depends entirely on the app's reliability and response time, which varies. App-level kill switches from reputable providers are generally reliable but are technically inferior to the system-level approach because they have a small reactive gap.
 
-Testing Your Kill Switch
+## Testing Your Kill Switch
 
 ```bash
 Test script to verify kill switch functionality
@@ -318,9 +318,9 @@ Should return: Network is unreachable (if kill switch is active)
 Or: 64 bytes from 8.8.8.8 (kill switch is NOT active. a leak)
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Always-On VPN Not Connecting
+## Always-On VPN Not Connecting
 
 1. Check VPN app permissions
    ```bash
@@ -342,7 +342,7 @@ If `adb shell dumpsys vpn` shows the service in a perpetual "connecting" state, 
 
 If always-on VPN connects on demand but drops after a few minutes, the issue is usually Android's battery optimization killing the VPN service process. Navigate to Settings → Apps → [VPN app] → Battery and set it to "Unrestricted." On some OEM Android versions (MIUI, One UI, ColorOS), there is an additional background process whitelist that must be configured separately.
 
-Battery Drain Issues
+## Battery Drain Issues
 
 Always-on VPN can impact battery life. Mitigate by:
 
@@ -355,7 +355,7 @@ Keepalive interval tuning deserves attention. A keepalive every 10 seconds keeps
 
 WireGuard's kernel-level implementation means the crypto operations run without crossing the user-space/kernel-space boundary. OpenVPN on Android runs entirely in user space, which adds overhead for every packet. On modern Android devices with AES hardware acceleration, the difference is smaller than it once was, but WireGuard still wins on battery in real-world testing by a meaningful margin on high-traffic workloads.
 
-Network Transition Issues
+## Network Transition Issues
 
 When switching between WiFi and cellular:
 
@@ -393,9 +393,9 @@ connectivityManager.registerDefaultNetworkCallback(networkCallback)
 
 WireGuard handles this more gracefully than OpenVPN by design. Because WireGuard tunnels are identified by key pairs rather than TCP connections, switching from WiFi to cellular does not require tearing down and rebuilding the tunnel. the packets simply start arriving from a new source IP, and the server's WireGuard implementation handles the transition transparently.
 
-Security Considerations
+## Security Considerations
 
-Certificate Pinning
+## Certificate Pinning
 
 Implement certificate pinning to prevent MITM attacks:
 
@@ -411,7 +411,7 @@ val okHttpClient = OkHttpClient.Builder()
 
 Certificate pinning is relevant primarily for VPN management traffic. the API calls your VPN app makes to your server to authenticate, fetch configuration, or check for updates. The tunnel traffic itself is protected by the VPN protocol's own cryptography. For WireGuard, the public key embedded in the configuration IS the pin. you cannot be MITMed without the attacker having your server's private key.
 
-DNS Leak Prevention
+## DNS Leak Prevention
 
 Ensure all DNS queries route through the VPN:
 
@@ -433,7 +433,7 @@ builder.addDnsServer("1.1.1.1")   // Fallback. still routes through tunnel
 
 Also consider using Android 9's Private DNS (DNS over TLS) feature as an additional layer, pointed at a DNS provider that logs nothing. This protects DNS queries even in the brief windows where the VPN is not tunneling traffic.
 
-Verifying Your Configuration Is Working
+## Verifying Your Configuration Is Working
 
 After setup, verify that always-on VPN is genuinely protecting all traffic:
 
@@ -442,14 +442,13 @@ After setup, verify that always-on VPN is genuinely protecting all traffic:
 3. Toggle WiFi off and back on. the VPN should reconnect within a few seconds
 4. Uninstall and reinstall the VPN app. always-on should re-engage when the app reinstalls and starts
 
-Conclusion
+## Conclusion
 
 Setting up always-on VPN on Android requires understanding both the native OS capabilities and third-party implementation options. For most users, enabling the built-in always-on VPN feature provides adequate protection. Advanced users and enterprises can use custom implementations with additional features like split tunneling, custom kill switches, and granular control.
 
 The single most important configuration choice is the kill switch. Always-on VPN without a kill switch leaves traffic-leak windows that undermine the feature's purpose. Enable system-level lockdown mode whenever possible, verify it is working with a leak test, and prefer WireGuard over OpenVPN for the combination of performance, battery life, and clean network transition handling.
 
 Remember to regularly test your VPN configuration to ensure it functions correctly, especially after system updates or VPN app changes.
-
 
 Related Reading
 

@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Next.js Authentication NextAuth Guide
-
 Building secure authentication into Next.js applications becomes significantly easier when you combine the power of NextAuth.js with Claude Code's CLI capabilities. This guide walks you through setting up authentication, configuring providers, and protecting routes in your Next.js projects using Claude Code as your development assistant. Whether you're adding auth to an existing app or starting from scratch, the patterns here give you a production-ready foundation.
 
-Setting Up NextAuth in Your Next.js Project
+## Setting Up NextAuth in Your Next.js Project
 
 Before integrating NextAuth, ensure you have a Next.js project ready. If you're starting fresh, Claude Code can scaffold a project with the necessary dependencies:
 
@@ -32,7 +29,7 @@ The next-auth package provides the authentication framework, while Claude Code h
 
 One of the first things to decide is whether you'll use the App Router or Pages Router. NextAuth v4 supports both, but the configuration differs slightly. This guide focuses on the App Router pattern since it's the current Next.js default.
 
-Configuring NextAuth Providers
+## Configuring NextAuth Providers
 
 NextAuth supports multiple authentication providers including Google, GitHub, credentials, and more. Here's how to configure a basic setup with GitHub OAuth:
 
@@ -67,7 +64,7 @@ export { handler as GET, handler as POST }
 
 Claude Code can help you customize this configuration based on your specific provider requirements. For instance, if you need to add role-based access control or custom user attributes, the CLI can modify the callbacks to include your business logic.
 
-Adding Multiple Providers
+## Adding Multiple Providers
 
 Most production applications need more than one provider. Here's how to combine GitHub, Google, and email/password credentials in a single configuration:
 
@@ -134,7 +131,7 @@ const handler = NextAuth({
 export { handler as GET, handler as POST }
 ```
 
-Provider Comparison
+## Provider Comparison
 
 Understanding when to use each provider type helps you make better architectural decisions:
 
@@ -146,7 +143,7 @@ Understanding when to use each provider type helps you make better architectural
 | Magic Link | Passwordless, low friction | Medium | Modern, convenient |
 | SAML/OIDC | Enterprise SSO | High | Enterprise standard |
 
-Protecting Routes with Middleware
+## Protecting Routes with Middleware
 
 Next.js middleware provides an efficient way to protect routes at the edge. Create a middleware file to enforce authentication:
 
@@ -171,7 +168,7 @@ export const config = {
 
 This configuration ensures that unauthenticated users are redirected to the sign-in page when attempting to access protected areas. Claude Code can extend this pattern to handle role-based routing, where different user roles access different parts of your application.
 
-Role-Based Route Protection
+## Role-Based Route Protection
 
 For applications with multiple user roles, extend the middleware to check role claims stored in the JWT:
 
@@ -228,7 +225,7 @@ callbacks: {
 },
 ```
 
-Managing Sessions and User State
+## Managing Sessions and User State
 
 Client-side session management requires wrapping your application with a SessionProvider. This enables components throughout your app to access authentication state:
 
@@ -284,7 +281,7 @@ export function UserMenu() {
 }
 ```
 
-Server-Side Session Access
+## Server-Side Session Access
 
 In Server Components, you access the session differently. no hook needed:
 
@@ -312,7 +309,7 @@ export default async function DashboardPage() {
 
 Exporting `authOptions` from your route handler and importing it in Server Components keeps your configuration DRY and avoids duplicating the NextAuth setup.
 
-Protecting API Routes
+## Protecting API Routes
 
 For API routes that require authentication, use `getServerSession` directly:
 
@@ -335,7 +332,7 @@ export async function GET() {
 }
 ```
 
-Integrating Claude Skills for Enhanced Development
+## Integrating Claude Skills for Enhanced Development
 
 Several Claude skills can accelerate your Next.js authentication development workflow. The frontend-design skill helps you create polished login pages and authenticated layouts that match your brand. When you need to generate PDF documentation for your authentication flow or API endpoints, the pdf skill generates professional documentation directly from your code comments.
 
@@ -353,7 +350,7 @@ id and role in the JWT token"
 
 Claude Code will read your existing configuration, understand the database schema if present, and produce code that integrates cleanly with what you already have.
 
-Handling Authentication Errors and Edge Cases
+## Handling Authentication Errors and Edge Cases
 
 Solid authentication requires proper error handling. NextAuth provides several ways to manage errors:
 
@@ -393,7 +390,7 @@ export default function AuthError() {
 
 Implementing proper error pages improves user experience significantly. Claude Code can generate these error handling components automatically based on your existing NextAuth configuration.
 
-Handling Account Linking Conflicts
+## Handling Account Linking Conflicts
 
 A common edge case is when a user tries to sign in with Google using an email already registered with GitHub. NextAuth's `OAuthAccountNotLinked` error covers this, but you can also allow account linking with a custom `signIn` callback:
 
@@ -428,7 +425,7 @@ callbacks: {
 },
 ```
 
-Environment Variable Best Practices
+## Environment Variable Best Practices
 
 Never expose sensitive credentials in your codebase. Use environment variables for all authentication secrets:
 
@@ -462,7 +459,7 @@ GOOGLE_CLIENT_SECRET=
 DATABASE_URL=
 ```
 
-Validating Environment Variables at Startup
+## Validating Environment Variables at Startup
 
 For production apps, validate that all required environment variables are present when the server starts. Create a small validation module:
 
@@ -486,12 +483,11 @@ export const env = {
 
 Import `env` in your NextAuth config instead of accessing `process.env` directly. This way, any missing variable causes a clear startup failure rather than a cryptic runtime error.
 
-Conclusion
+## Conclusion
 
 Implementing authentication with NextAuth in Next.js provides a solid foundation for securing your applications. The combination of NextAuth's flexible provider system and Claude Code's development assistance makes building secure, production-ready authentication remarkably straightforward. Remember to always use environment variables for sensitive credentials, implement proper error handling, and use middleware for efficient route protection.
 
 As your application grows, lean on Claude Code to extend these patterns. adding new providers, implementing account linking, building admin-only sections, or integrating with a database adapter like Prisma or Drizzle. The CLI's ability to read your existing code and extend it coherently saves hours of boilerplate work on each iteration.
-
 
 Related Reading
 

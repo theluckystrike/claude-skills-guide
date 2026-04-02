@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for tRPC React Query Workflow
 
 Building type-safe APIs with tRPC combined with React Query (TanStack Query) creates a powerful full-stack TypeScript development experience. However, setting up this workflow efficiently and maintaining it as your application grows requires understanding the integration points. I'll show you how Claude Code can accelerate your tRPC and React Query development workflow.
 
-Understanding the tRPC and React Query Integration
+## Understanding the tRPC and React Query Integration
 
 tRPC automatically generates TypeScript types from your backend procedures, and React Query handles the client-side data fetching and caching. When used together, you get end-to-end type safety without any code generation step. The key insight is that tRPC's `useQuery` and `useMutation` hooks are built on top of React Query, giving you all its powerful features out of the box.
 
@@ -64,7 +63,7 @@ function App() {
 }
 ```
 
-Using Claude Code to Generate tRPC Procedures
+## Using Claude Code to Generate tRPC Procedures
 
 One of the most valuable ways Claude Code helps with this workflow is by generating boilerplate code for your tRPC routers and procedures. When you need to create a new feature, you can describe what you want in natural language and let Claude generate the corresponding backend and frontend code.
 
@@ -125,7 +124,7 @@ export const userRouter = router({
 });
 ```
 
-Creating React Query Components with Claude Code
+## Creating React Query Components with Claude Code
 
 Once your tRPC procedures are defined, Claude Code can help you create the React components that consume them. It understands the types that tRPC generates, so the code it produces is fully typed.
 
@@ -202,7 +201,7 @@ export function CreateUser() {
 }
 ```
 
-Optimizing Your Workflow with Claude Code
+## Optimizing Your Workflow with Claude Code
 
 Here are practical tips for getting the most out of Claude Code in your tRPC React Query workflow:
 
@@ -262,7 +261,7 @@ if (isError) {
 }
 ```
 
-Best Practices for Type Safety
+## Best Practices for Type Safety
 
 To maximize the benefits of the tRPC React Query workflow, follow these best practices that Claude Code can help you implement:
 
@@ -271,7 +270,7 @@ To maximize the benefits of the tRPC React Query workflow, follow these best pra
 - Use the context for request-scoped data: Access the authenticated user in your procedures
 - Keep your router modular: Split routers by feature domain
 
-Conclusion
+## Conclusion
 
 Claude Code significantly accelerates tRPC and React Query development by generating type-safe boilerplate code, helping you set up proper caching strategies, and ensuring your components handle loading and error states correctly. The key is to first establish a well-structured router, then let Claude Code generate the consuming components with proper types and best practices built in.
 

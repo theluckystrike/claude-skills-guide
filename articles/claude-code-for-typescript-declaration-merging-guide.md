@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for TypeScript Declaration Merging Guide
 
@@ -21,13 +20,13 @@ TypeScript's declaration merging is one of the most powerful yet underutilized f
 
 This guide covers the fundamentals of declaration merging, practical patterns for everyday use, and how Claude Code can help you implement and maintain complex type systems.
 
-Understanding Declaration Merging
+## Understanding Declaration Merging
 
 Declaration merging occurs when TypeScript combines two or more declarations with the same name into a single definition. The merged definition incorporates the type information from all contributing declarations. This feature is particularly useful for extending third-party libraries, creating comprehensive type definitions, and organizing your codebase.
 
 TypeScript supports three types of declaration merging: interface merging, namespace merging, and class merging. Each serves different purposes and has specific rules governing how combinations work.
 
-Interface Merging
+## Interface Merging
 
 Interface merging is the most common form of declaration merging. When you declare two interfaces with the same name, TypeScript automatically merges their members:
 
@@ -53,7 +52,7 @@ interface User {
 
 This pattern is invaluable when you want to extend types across different files or modules without modifying the original definition. It's particularly useful in large codebases where different teams might need to add properties to shared types.
 
-Namespace Merging
+## Namespace Merging
 
 Namespaces can merge in a way that combines both type and value aspects:
 
@@ -77,9 +76,9 @@ console.log(Validation.isUrl('https://example.com'));
 
 Namespace merging is often used with interfaces to create organized type definitions that group related types and values together.
 
-Practical Patterns with Declaration Merging
+## Practical Patterns with Declaration Merging
 
-Extending Third-Party Types
+## Extending Third-Party Types
 
 One of the most powerful applications of declaration merging is extending types from npm packages without modifying node_modules. This is done through ambient declarations:
 
@@ -102,7 +101,7 @@ declare module 'express' {
 
 With this pattern, every Request and Response object in your Express application automatically has the additional properties. This is particularly useful when you need to add authentication context or custom response helpers.
 
-Creating Comprehensive Type Definitions
+## Creating Comprehensive Type Definitions
 
 Declaration merging allows you to build types incrementally across your codebase. This is especially useful in monorepos or large applications where types need to be defined in multiple places:
 
@@ -129,7 +128,7 @@ interface Product {
 // Final Product has all properties from all three files
 ```
 
-Enum Extension Patterns
+## Enum Extension Patterns
 
 Enums in TypeScript can also be merged, though with some restrictions:
 
@@ -147,11 +146,11 @@ enum Status {
 // Combined: Pending, Active, Completed, Cancelled
 ```
 
-Working with Claude Code
+## Working with Claude Code
 
 Claude Code can significantly accelerate your declaration merging workflow. Here are strategies for getting the most out of AI-assisted type definition.
 
-Prompting Claude for Type Augmentation
+## Prompting Claude for Type Augmentation
 
 When you need to extend existing types, provide Claude with clear context about what you're trying to achieve:
 
@@ -164,7 +163,7 @@ augmentation in a new types/react-augmented.d.ts file.
 
 Claude will generate the proper module declaration syntax, ensuring correct TypeScript compilation.
 
-Generating Ambient Declarations
+## Generating Ambient Declarations
 
 For projects using JavaScript or external libraries without types, ask Claude to generate ambient declarations:
 
@@ -174,7 +173,7 @@ Create a declarations.d.ts file with type definitions for the commonly used
 functions: groupBy, sortBy, omit, pick, and merge.
 ```
 
-Checking for Conflicts
+## Checking for Conflicts
 
 When merging declarations, TypeScript will error if there are incompatible types for the same property. Ask Claude to review your type definitions:
 
@@ -184,9 +183,9 @@ any type conflicts that would cause compilation errors. Also suggest how to
 resolve each conflict.
 ```
 
-Common Pitfalls and Solutions
+## Common Pitfalls and Solutions
 
-Merging Incompatible Types
+## Merging Incompatible Types
 
 The most common error occurs when merging interfaces with incompatible property types:
 
@@ -202,7 +201,7 @@ interface Config {
 
 Solution: Ensure all declarations use compatible types, or use intersection types instead of merging.
 
-Module Augmentation Scope
+## Module Augmentation Scope
 
 When using module augmentation, the module must be in the global scope or explicitly imported:
 
@@ -219,7 +218,7 @@ declare global {
 // Then you can use process.env.NODE_ENV with full type safety
 ```
 
-Namespace Merging with Classes
+## Namespace Merging with Classes
 
 You cannot merge classes directly, but you can merge namespaces with classes to add static members:
 
@@ -235,7 +234,7 @@ namespace ApiClient {
 }
 ```
 
-Best Practices
+## Best Practices
 
 1. Organize declarations consistently: Keep all declarations for a single type in predictable locations within your project structure.
 

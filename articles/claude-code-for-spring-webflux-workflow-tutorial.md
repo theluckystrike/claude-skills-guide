@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Spring WebFlux Workflow Tutorial"
 description: "Learn how to use Claude Code to build reactive Spring WebFlux applications. This tutorial covers practical examples, code snippets, and actionable."
@@ -14,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code for Spring WebFlux Workflow Tutorial
 
 Spring WebFlux is Spring's reactive web framework, designed for building asynchronous, non-blocking applications. When combined with Claude Code, you can dramatically accelerate your reactive Spring development workflow, from project setup to testing and deployment. This tutorial provides practical guidance for using Claude Code effectively with Spring WebFlux, with actionable examples you can apply immediately to your projects.
 
-Understanding Reactive Spring Fundamentals
+## Understanding Reactive Spring Fundamentals
 
 Before diving into the workflow, it's essential to understand what makes Spring WebFlux different from traditional Spring MVC. While Spring MVC uses a synchronous, thread-per-request model, WebFlux embraces reactive programming with non-blocking I/O. This approach allows your application to handle many concurrent connections with fewer threads, making it ideal for high-throughput scenarios like real-time data streaming, microservices, and IoT applications.
 
@@ -29,7 +25,7 @@ The core of reactive programming in Spring WebFlux revolves around Project React
 
 Claude Code can help you grasp these concepts by explaining code examples and answering questions about reactive patterns. When you encounter unfamiliar reactive operators or need clarification on backpressure, simply ask Claude to explain the specific concept in context of your codebase.
 
-Setting Up Your Spring WebFlux Project
+## Setting Up Your Spring WebFlux Project
 
 Starting a new Spring WebFlux project involves several configuration steps. Claude Code can automate much of this setup, helping you create a well-structured project from the beginning.
 
@@ -39,7 +35,7 @@ First, ensure you have the necessary prerequisites: Java 17 or later, and your p
 
 Claude will generate the appropriate build configuration, dependencies, and initial project structure. Pay attention to the dependency versions it suggests, Spring Boot's dependency management handles most version compatibility, but being aware of the reactive stack components ensures you're using compatible libraries.
 
-Building Your First Reactive Endpoint
+## Building Your First Reactive Endpoint
 
 With your project set up, let's create a practical reactive REST endpoint. We'll build a simple product API that demonstrates common WebFlux patterns.
 
@@ -148,7 +144,7 @@ public class ProductController {
 
 When working with these files, ask Claude Code to review your reactive chains for common pitfalls: missing error handling, blocking calls in reactive streams, or improper backpressure handling.
 
-Handling Errors and Exceptions
+## Handling Errors and Exceptions
 
 Error handling in reactive applications requires a different approach than traditional Spring MVC. Instead of exception handlers, WebFlux uses functional error handling and the `onError` operators.
 
@@ -174,7 +170,7 @@ You can also implement a global error handler using `@ControllerAdvice` equivale
 
 Claude Code can help you implement comprehensive error handling strategies, ensuring your reactive application properly propagates and handles errors at appropriate levels.
 
-Testing Reactive Applications
+## Testing Reactive Applications
 
 Testing reactive code requires specialized approaches. Spring WebFlux provides `WebTestClient` for integration testing and Project Reactor offers test utilities for unit testing.
 
@@ -259,7 +255,7 @@ class ProductControllerIntegrationTest {
 
 Ask Claude Code to generate comprehensive test cases, including edge cases and error scenarios that you might overlook.
 
-Best Practices for Productive Workflows
+## Best Practices for Productive Workflows
 
 To maximize your productivity with Claude Code and Spring WebFlux, consider these practical tips:
 
@@ -271,7 +267,7 @@ Use Claude for code review: After implementing reactive chains, ask Claude to re
 
 Document complex reactive flows: When your reactive streams become complex, ask Claude to add comments explaining what each operator does. This improves maintainability for your team.
 
-Conclusion
+## Conclusion
 
 Spring WebFlux opens up powerful possibilities for building responsive, high-concurrency applications. By combining it with Claude Code, you can accelerate development while following best practices for reactive programming. Remember to think reactively throughout your stack, from database access to external API calls, and use Claude Code's capabilities to generate, review, and improve your reactive code.
 

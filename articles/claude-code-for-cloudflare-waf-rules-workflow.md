@@ -15,16 +15,15 @@ score: 7
 
 {% raw %}
 
-
 Managing Cloudflare Web Application Firewall (WAF) rules effectively is crucial for protecting your applications from malicious traffic. However, crafting precise WAF expressions, testing them thoroughly, and maintaining them over time can be challenging. This guide shows you how to integrate Claude Code into your Cloudflare WAF workflow to automate rule creation, validate configurations, and maintain solid security policies with less manual effort.
 
-Understanding Cloudflare WAF in Your Development Workflow
+## Understanding Cloudflare WAF in Your Development Workflow
 
 Cloudflare WAF acts as a protective layer between your application and incoming traffic, inspecting requests and blocking those that match defined security rules. These rules can target SQL injection attempts, cross-site scripting (XSS), path traversal, and other attack vectors. The challenge many teams face is that WAF rule syntax, using Cloudflare's expression builder, requires specific knowledge that not every developer possesses.
 
 Claude Code bridges this gap by helping you translate security requirements into correct WAF rule expressions. Instead of memorizing Cloudflare's expression language, you can describe what you want to block in natural language, and Claude Code generates the appropriate rules. This makes WAF management accessible to more team members while ensuring rules follow best practices.
 
-Setting Up Claude Code for WAF Rule Management
+## Setting Up Claude Code for WAF Rule Management
 
 To get started with Claude Code for Cloudflare WAF, you'll need a few prerequisites in place. First, ensure you have Cloudflare API credentials configured with appropriate permissions to read and write WAF rules. You'll also want to install any relevant Claude Skills that specialize in Cloudflare configuration.
 
@@ -47,11 +46,11 @@ waf-templates/
 
 With this structure in place, Claude Code can quickly generate rules based on your templates, adapting them to your specific needs.
 
-Creating WAF Rules with Claude Code
+## Creating WAF Rules with Claude Code
 
 The real power of using Claude Code for Cloudflare WAF rules comes from its ability to generate correct expressions from descriptions. Let's walk through practical examples of common WAF scenarios.
 
-Blocking SQL Injection Attempts
+## Blocking SQL Injection Attempts
 
 One of the most common WAF use cases is preventing SQL injection attacks. Instead of manually constructing complex expressions, you can describe the requirement to Claude Code:
 
@@ -70,7 +69,7 @@ description: "Prevents SQL injection in query parameters and headers"
 
 The generated rule uses Cloudflare's expression language correctly, checking both query strings and headers for suspicious patterns.
 
-Rate Limiting for API Protection
+## Rate Limiting for API Protection
 
 Another common scenario is protecting API endpoints from abuse. Claude Code can help you create rate limiting rules that match your specific traffic patterns:
 
@@ -81,7 +80,7 @@ description: "Limit API requests to 100 per minute per IP"
 
 This rule automatically limits API endpoints to 100 requests per minute per IP address, helping prevent both accidental and intentional abuse.
 
-Custom Bot Management Rules
+## Custom Bot Management Rules
 
 For more advanced security, you can create rules that identify and block specific bot patterns. Claude Code can help you refine these rules based on user agent strings, IP reputation, and behavioral signals:
 
@@ -92,7 +91,7 @@ description: "Blocks bots flagged in threat intelligence feeds"
 
 This expression blocks requests from IPs with threat scores above certain thresholds when combined with suspicious user agents.
 
-Testing and Validating WAF Rules
+## Testing and Validating WAF Rules
 
 Before deploying WAF rules to production, thorough testing is essential. Claude Code can help you validate rules against test cases and ensure they behave as expected.
 
@@ -121,7 +120,7 @@ test_cases = [
 
 Run these tests in a staging environment that mirrors your production Cloudflare configuration. Claude Code can help you interpret the results and refine rules that produce false positives or false negatives.
 
-Deploying and Maintaining WAF Rules
+## Deploying and Maintaining WAF Rules
 
 Once your rules are tested, deployment becomes the next challenge. A solid workflow involves version control, gradual rollout, and monitoring. Store your WAF rules in Git alongside your application code, treating infrastructure as code. This approach provides audit trails, rollback capabilities, and collaborative review processes.
 
@@ -142,7 +141,7 @@ claude --print "Generate Cloudflare WAF deployment script for rule changes in th
 
 The output would include API calls to update your Cloudflare WAF rules, with appropriate error handling and rollback instructions.
 
-Best Practices for WAF Rule Management
+## Best Practices for WAF Rule Management
 
 As you integrate Claude Code into your WAF workflow, keep these practical tips in mind for optimal results.
 
@@ -154,7 +153,7 @@ Third, document your rules clearly. Each rule should have a meaningful name and 
 
 Finally, review and update rules regularly. Attack patterns evolve, and your WAF rules should evolve too. Schedule periodic reviews, monthly or quarterly, to assess whether existing rules remain relevant and effective.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Cloudflare WAF rule management from a specialized skill into an accessible workflow for any developer. By generating correct expressions from natural language descriptions, helping you test thoroughly, and automating deployment processes, Claude Code makes web application security more manageable. Start integrating these practices into your workflow today, and you'll have solid WAF protection with less manual effort and fewer configuration errors.
 

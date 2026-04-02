@@ -13,20 +13,17 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
-
-Claude Code Container Registry Workflow Guide
 
 Container registries are the backbone of modern deployment pipelines, yet managing builds, tags, and pushes often involves repetitive CLI commands prone to human error. This guide shows you how to automate container registry workflows using Claude Code, reducing manual steps, preventing deployment errors, and giving your team a consistent, repeatable process regardless of which registry you use.
 
-Why Automate Container Registry Workflows
+## Why Automate Container Registry Workflows
 
 Manual registry workflows introduce several problems at scale. Engineers paste the wrong SHA, forget to push to a secondary registry, or skip the security scan step when under pressure. Over time these small inconsistencies compound into hard-to-debug production incidents.
 
 Claude Code solves this by generating reliable, parameterized scripts from natural language descriptions of your intent. You describe what you need once, Claude generates the commands, and you run them through CI or a Makefile target that never changes.
 
-Choosing the Right Registry for Your Use Case
+## Choosing the Right Registry for Your Use Case
 
 Before automating anything, it helps to understand the tradeoffs between the major registries.
 
@@ -40,7 +37,7 @@ Before automating anything, it helps to understand the tradeoffs between the maj
 
 Claude Code works equally well with all of them. You tell it which registry you're targeting and it generates the right login, tag, and push commands for that platform.
 
-Setting Up Your Registry Credentials
+## Setting Up Your Registry Credentials
 
 Before automating registry operations, store your credentials securely. Never hardcode tokens in your project files.
 
@@ -61,7 +58,7 @@ aws ecr get-login-password --region us-east-1 | \
 
 Store credentials in your environment or a `.env` file that Claude Code can reference through your project configuration. For CI pipelines, inject them as secrets and reference them from the workflow environment rather than committing anything sensitive to the repository.
 
-Building Images with Claude Code
+## Building Images with Claude Code
 
 When you need to build a container image, provide Claude with context about your Dockerfile and target registry:
 
@@ -112,7 +109,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 For teams using Podman instead of Docker, the workflow remains identical, Podman is CLI-compatible with Docker. Claude Code can generate Podman-specific commands if you specify your container runtime preference, including `podman build`, `podman tag`, and `podman push`.
 
-Automating Registry Push Workflows
+## Automating Registry Push Workflows
 
 The key to efficient registry management is a disciplined tagging strategy combined with automated pushing. Here's how to structure your requests to Claude:
 
@@ -153,7 +150,7 @@ echo "All registry pushes complete for SHA: ${SHA}"
 
 The parallel push pattern using background jobs significantly reduces pipeline time when pushing to multiple registries. Claude Code will generate this pattern automatically when you mention multiple push targets.
 
-Tagging Strategy Comparison
+## Tagging Strategy Comparison
 
 Choosing the right tagging strategy depends on your deployment model.
 
@@ -167,7 +164,7 @@ Choosing the right tagging strategy depends on your deployment model.
 
 The most solid approach combines two strategies: use a git SHA tag for precision and traceability, and a mutable environment tag (like `staging`) for easy promotion. Ask Claude to generate tagging scripts that apply both simultaneously.
 
-Using the TDD Skill for Container Testing
+## Using the TDD Skill for Container Testing
 
 Before pushing images to production registries, validate your containers using the tdd skill. This helps write tests that verify your containerized applications behave correctly:
 
@@ -218,7 +215,7 @@ def test_users_endpoint_returns_json(running_container):
 
 Running these tests before pushing catches configuration problems, missing environment variables, misconfigured ports, missing migrations, before they reach the registry and downstream deployments.
 
-Generating Documentation with the PDF Skill
+## Generating Documentation with the PDF Skill
 
 After deployment, you might need to generate reports about your container configurations or pull specific documentation from PDFs about registry settings. Use the pdf skill:
 
@@ -229,7 +226,7 @@ and summarize which CVEs affect our production containers
 
 This is especially useful when your security team produces compliance reports in PDF format and you need to cross-reference CVEs against your running container image list. Claude can extract the relevant sections, filter by severity, and produce a structured summary you can act on.
 
-Managing Multi-Environment Deployments
+## Managing Multi-Environment Deployments
 
 For teams managing multiple environments (dev, staging, production), Claude Code can generate environment-specific workflows that enforce promotion gates between environments:
 
@@ -287,7 +284,7 @@ The `cache-from` and `cache-to` lines enable GitHub Actions layer caching, which
 
 For multi-environment promotion, you can extend this workflow to require a manual approval before the production deployment step executes, using GitHub's environment protection rules.
 
-Scanning Images Before Push
+## Scanning Images Before Push
 
 Security scanning is a non-negotiable step before pushing to production registries. The earlier you catch vulnerabilities, the cheaper they are to fix, catching a CVE at build time is far better than discovering it in a production incident.
 
@@ -322,7 +319,7 @@ Combined with the `actions/upload-sarif` action, this creates a feedback loop wh
 
 Other scanners Claude can help configure include Grype (from Anchore), Snyk container scanning, and AWS ECR's native scanning using Inspector. The choice depends on your existing security tooling.
 
-Using SuperMemory for Registry Context
+## Using SuperMemory for Registry Context
 
 When managing complex multi-registry setups across multiple projects, the supermemory skill helps maintain context across sessions:
 
@@ -335,7 +332,7 @@ This is particularly useful for large teams where different engineers work on di
 
 You can also use supermemory to record past incidents, for example, storing a note that a specific base image tag caused a production issue, so future Claude sessions have that context available when generating new Dockerfiles.
 
-Cleaning Up Old Images
+## Cleaning Up Old Images
 
 Registry storage costs money, and old tags accumulate quickly in active projects. A service that deploys multiple times a day can generate hundreds of image tags per month. Here's an efficient cleanup request:
 
@@ -384,7 +381,7 @@ for version in to_delete:
 
 Ask Claude to generate similar scripts for ECR using the boto3 library, or for Docker Hub using the Docker Hub API. The logic is the same, retrieve a list, filter by age and tag pattern, and delete what's outside your retention policy.
 
-Best Practices for Registry Workflows
+## Best Practices for Registry Workflows
 
 When working with Claude Code and container registries, follow these patterns consistently:
 
@@ -405,7 +402,6 @@ Document your tagging conventions in CLAUDE.md. Adding a note like "images are t
 {% endraw %}
 
 ---
-
 
 Related Reading
 

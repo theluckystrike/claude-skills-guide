@@ -13,17 +13,16 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Helm Hooks Workflow Tutorial
 
 Helm hooks are a powerful mechanism for orchestrating complex deployment workflows in Kubernetes. When combined with Claude Code, you can create intelligent, context-aware automation that transforms your deployment pipelines from simple scripts into sophisticated, adaptive workflows. This tutorial shows you how to integrate Claude Code with Helm hooks to level up your Kubernetes deployment automation.
 
-Understanding Helm Hooks
+## Understanding Helm Hooks
 
 Helm hooks allow you to intervene at various points in the Helm release lifecycle. Think of hooks as checkpoints where you can run custom logic, database migrations, backup operations, validation tests, or cleanup tasks, before, during, or after a Helm installation or upgrade.
 
-Available Hook Types
+## Available Hook Types
 
 Helm provides several hook types that execute at different stages:
 
@@ -39,7 +38,7 @@ Helm provides several hook types that execute at different stages:
 
 Each hook type serves a specific purpose in your deployment pipeline, and understanding when each executes is crucial for designing solid workflows.
 
-Setting Up Claude Code Integration
+## Setting Up Claude Code Integration
 
 Before creating hooks, ensure Claude Code is installed and authenticated with access to your Kubernetes cluster:
 
@@ -58,7 +57,7 @@ mkdir -p helm-hooks/{hooks,scripts,templates}
 cd helm-hooks
 ```
 
-Creating Intelligent Pre-Install Hooks
+## Creating Intelligent Pre-Install Hooks
 
 Let's create a pre-install hook that uses Claude Code to validate your deployment configuration and perform dynamic checks:
 
@@ -120,7 +119,7 @@ EOF
 echo "Validation complete"
 ```
 
-Building Post-Install Verification Hooks
+## Building Post-Install Verification Hooks
 
 Post-install hooks are ideal for running comprehensive health checks and smoke tests. Here's how to create a sophisticated verification hook:
 
@@ -216,7 +215,7 @@ if __name__ == "__main__":
     sys.exit(0 if success else 1)
 ```
 
-Implementing Database Migration Hooks
+## Implementing Database Migration Hooks
 
 Database migrations are critical pre-upgrade operations. Here's a hook that uses Claude Code to analyze your schema and determine the appropriate migration strategy:
 
@@ -256,7 +255,7 @@ spec:
       name: "{{ .Release.Name }}-migrations"
 ```
 
-Best Practices for Claude Code + Helm Hooks
+## Best Practices for Claude Code + Helm Hooks
 
 When integrating Claude Code with Helm hooks, follow these guidelines for production-ready workflows:
 
@@ -315,7 +314,7 @@ env:
       key: api-key
 ```
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Helm hooks transforms your Kubernetes deployments from simple package installations into intelligent, automated workflows. By using Claude Code's analysis capabilities in pre-install validation, post-install verification, and migration hooks, you gain confidence in your deployments while reducing manual oversight.
 

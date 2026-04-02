@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Rust Profiling Workflow Tutorial Guide"
 description: "Learn how to integrate Claude Code into your Rust profiling workflow for efficient performance optimization. This guide covers practical examples."
@@ -14,12 +13,11 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 
 Rust profiling is essential for understanding your application's performance characteristics, but it can be complex to set up and interpret. Claude Code can streamline this workflow by helping you configure profiling tools, analyze results, and implement optimizations. This guide shows you how to integrate Claude Code into your Rust profiling workflow effectively.
 
-Setting Up Your Rust Profiling Environment
+## Setting Up Your Rust Profiling Environment
 
 Before diving into profiling, ensure your development environment is properly configured. You'll need Rust's built-in profiling tools along with some additional utilities.
 
@@ -49,7 +47,7 @@ echo "Flamegraph saved to $OUTPUT_FILE"
 
 This setup gives Claude Code a consistent interface for running profiles across your project.
 
-Integrating Claude Code into Your Profiling Workflow
+## Integrating Claude Code into Your Profiling Workflow
 
 Claude Code excels at automating repetitive profiling tasks and helping interpret complex results. Create a custom skill that wraps common profiling operations.
 
@@ -74,7 +72,7 @@ When you need to profile, invoke this skill with specific parameters:
 
 Claude Code will execute the profiling run and present the results in a structured format.
 
-Practical Example: Identifying Hot Paths
+## Practical Example: Identifying Hot Paths
 
 Let's walk through a real profiling scenario. Consider a Rust application with performance issues:
 
@@ -112,7 +110,7 @@ cargo flamegraph --bin myapp --duration 10
 
 The flamegraph reveals that string processing in the loop is consuming excessive CPU cycles. This is where Claude Code helps, it can analyze the profile output and suggest specific optimizations.
 
-Interpreting Profiling Results with Claude
+## Interpreting Profiling Results with Claude
 
 Once you have profiling data, Claude Code can help interpret the results. After generating a flamegraph or profiler output, ask Claude to analyze it:
 
@@ -126,7 +124,7 @@ Claude will provide targeted advice based on the actual hotspots in your code. F
 - Avoiding redundant string allocations
 - Using `&str` instead of `String` where possible
 
-Continuous Profiling for Long-Running Applications
+## Continuous Profiling for Long-Running Applications
 
 For services that run continuously, set up periodic profiling:
 
@@ -160,11 +158,11 @@ Integrate this with Claude Code for automated analysis:
 
 This setup enables ongoing performance monitoring without manual intervention.
 
-Best Practices for Rust Profiling with Claude
+## Best Practices for Rust Profiling with Claude
 
 Follow these guidelines for effective profiling workflows:
 
-Profile in Release Mode with Debug Info
+## Profile in Release Mode with Debug Info
 
 ```bash
 Cargo.toml
@@ -175,22 +173,22 @@ opt-level = 3
 
 Release mode with debug symbols gives you accurate performance data while maintaining optimizations.
 
-Focus on Algorithmic Improvements First
+## Focus on Algorithmic Improvements First
 
 Before micro-optimizing, ensure your algorithms are appropriate. Profile to confirm you're optimizing the right code paths.
 
-Compare Profiles After Changes
+## Compare Profiles After Changes
 
 Always baseline your performance before making changes, then compare profiles after optimizations to verify improvements.
 
-Use Appropriate Profiling Tools
+## Use Appropriate Profiling Tools
 
 - flamegraph: Visualize call hierarchies and identify hot paths
 - cargo-profiler: Function-level timing analysis
 -  Instruments (macOS): Native performance tools
 - perf: Linux profiling system
 
-Applying Optimizations with Claude Code Assistance
+## Applying Optimizations with Claude Code Assistance
 
 Once you have profiling data pointing to specific bottlenecks, the next step is actually implementing fixes. This is where Claude Code's code generation capabilities become a force multiplier. Rather than manually researching Rust optimization patterns, you can paste your hot function along with the profiler output and ask Claude to rewrite it.
 
@@ -227,7 +225,7 @@ and rewrite the function to minimize heap usage without changing its behavior."
 
 Claude will typically respond with the rewritten function, an explanation of each change, and a note on which changes are safe and which involve tradeoffs.
 
-Benchmarking Changes with Criterion
+## Benchmarking Changes with Criterion
 
 Profiling tells you where time is spent; benchmarking tells you whether your fix actually helped. The two tools work together, and Claude Code can generate Criterion benchmarks from your existing function signatures automatically.
 
@@ -279,7 +277,7 @@ criterion_main!(benches);
 
 Run this before and after your optimization changes and compare the HTML reports Criterion generates. This gives you a quantified regression check you can commit alongside the code change.
 
-Memory Profiling with DHAT and heaptrack
+## Memory Profiling with DHAT and heaptrack
 
 CPU flamegraphs show time; they do not show allocations. For applications where heap pressure causes performance issues, you need a memory profiler. Claude Code can help you set up both DHAT (part of Valgrind) and heaptrack, depending on your platform.
 
@@ -307,7 +305,7 @@ DHAT output is dense and not immediately readable for developers unfamiliar with
 
 For macOS developers, heaptrack is available via Homebrew and provides similar heap profiling capability with a GUI viewer. Claude can generate the build and run commands specific to your project structure.
 
-Working with Async Rust Profiling
+## Working with Async Rust Profiling
 
 Tokio-based applications have a separate profiling surface that CPU flamegraphs miss: task scheduling overhead, long poll times, and stalled futures. The `tokio-console` tool exposes this at runtime.
 
@@ -344,7 +342,7 @@ Here is the async function. Identify what could cause long polls and how to brea
 
 Claude will check for common patterns: blocking I/O called inside async context, large synchronous computations on the async thread, and `Mutex` locks held across `.await` points. All three are easy to miss in code review but show up immediately in tokio-console.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your Rust profiling workflow significantly reduces the time and expertise required to identify and fix performance bottlenecks. By automating profiling execution, analyzing results, and suggesting targeted optimizations, Claude Code makes performance optimization accessible to developers at all levels.
 

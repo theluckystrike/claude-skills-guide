@@ -13,13 +13,12 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code LaunchDarkly Targeting Rules Setup Workflow
 
 Feature flags have become an essential part of modern software development, enabling teams to control feature releases, run A/B tests, and implement gradual rollouts without deploying new code. LaunchDarkly is one of the most popular feature flag platforms, and understanding how to set up targeting rules effectively can significantly improve your deployment workflows. we'll explore how Claude Code can help you set up, manage, and automate LaunchDarkly targeting rules as part of your development workflow.
 
-Understanding LaunchDarkly Targeting Rules
+## Understanding LaunchDarkly Targeting Rules
 
 LaunchDarkly targeting rules determine which users receive specific feature flag states. These rules can be simple or complex, depending on your use case. At their core, targeting rules consist of conditions that evaluate user attributes like email, country, custom attributes, or built-in properties to determine flag behavior.
 
@@ -27,7 +26,7 @@ The basic flow involves creating a feature flag, defining user segments or indiv
 
 Claude Code can assist you in several ways when working with LaunchDarkly targeting rules. The AI assistant can help you design effective rule structures, generate the necessary API calls, create automation scripts, and even help debug issues when flags don't behave as expected.
 
-Setting Up Your LaunchDarkly Environment
+## Setting Up Your LaunchDarkly Environment
 
 Before you can manage targeting rules with Claude Code, you'll need to set up your LaunchDarkly environment properly. This involves obtaining your API key from the LaunchDarkly dashboard and configuring your development environment to communicate with LaunchDarkly's REST API.
 
@@ -53,7 +52,7 @@ ld_client = launchdarkly_server_sdk.Client(
 
 Claude Code can help you generate these initialization scripts and ensure you're following best practices for API key management, such as using environment variables instead of hardcoding credentials.
 
-Creating and Managing Targeting Rules
+## Creating and Managing Targeting Rules
 
 With your environment set up, you can now create and manage targeting rules. LaunchDarkly supports several types of targeting rules, including individual user targeting, rules based on user attributes, and percentage rollouts. Understanding when to use each type will help you design effective flag strategies.
 
@@ -87,7 +86,7 @@ flag = {
 
 Claude Code can help you generate these rule configurations based on your requirements, suggest optimizations, and even validate your rules before deployment to catch potential issues.
 
-Implementing Percentage Rollouts
+## Implementing Percentage Rollouts
 
 Percentage rollouts are essential for safe production deployments. Instead of flipping a switch for all users simultaneously, you can gradually increase the percentage of users receiving a new feature while monitoring for issues.
 
@@ -108,7 +107,7 @@ rollout = {
 
 The weights are specified in units of 10,000, so 1000 represents 10% of users. Claude Code can help you calculate appropriate percentages based on your rollout strategy and generate the correct configuration.
 
-Using Claude Code Skills for LaunchDarkly Automation
+## Using Claude Code Skills for LaunchDarkly Automation
 
 Claude Code skills can significantly streamline your LaunchDarkly workflow. Rather than manually navigating the dashboard or writing one-off scripts, you can create reusable skills that handle common operations.
 
@@ -146,7 +145,7 @@ def update_rollout_percentage(flag_key, percentage):
 
 This function takes the flag key and desired percentage, then calculates the appropriate weights for the rollout variations. You can call this from a scheduled job, CI/CD pipeline, or manually as needed.
 
-Best Practices for Targeting Rules
+## Best Practices for Targeting Rules
 
 When working with LaunchDarkly targeting rules, several best practices will help you avoid common pitfalls and maintain a healthy feature flag system.
 
@@ -158,7 +157,7 @@ Third, implement proper flag lifecycle management. Remove or disable flags that 
 
 Finally, test your targeting rules thoroughly before relying on them in production. Create test users with various attributes and verify they receive the expected flag variations. Claude Code can help you write automated tests that validate your targeting configurations.
 
-Conclusion
+## Conclusion
 
 Setting up LaunchDarkly targeting rules is a critical skill for modern development teams practicing progressive delivery. By using Claude Code's capabilities, you can automate flag management, create reusable workflows, and ensure consistent configurations across your projects. Whether you're implementing individual user targeting, attribute-based rules, or percentage rollouts, Claude Code can help you work more efficiently and reduce the risk of misconfiguration.
 

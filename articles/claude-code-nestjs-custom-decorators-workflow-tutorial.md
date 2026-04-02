@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code NestJS Custom Decorators Workflow Tutorial
 
 NestJS decorators are one of the most powerful features for building scalable backend applications. When combined with Claude Code's development workflow, you can create clean, maintainable, and type-safe decorator patterns that accelerate your development process. This tutorial walks you through creating custom decorators in NestJS while using Claude Code for intelligent code generation and refactoring.
 
-Understanding NestJS Decorators
+## Understanding NestJS Decorators
 
 Decorators in NestJS allow you to add metadata to classes, methods, properties, and parameters. They follow the decorator pattern introduced in TypeScript and are extensively used throughout the NestJS framework for dependency injection, routing, and middleware configuration.
 
@@ -31,11 +30,11 @@ The most common decorator types in NestJS include:
 
 Creating custom decorators enables you to encapsulate repetitive logic, implement cross-cutting concerns, and build a more expressive API for your application.
 
-Creating Your First Custom Decorator
+## Creating Your First Custom Decorator
 
 Let's start with a practical example. Suppose you need to track which user performed an action in your application for audit logging purposes. Instead of manually extracting the user from the request in every handler, you can create a custom decorator.
 
-The User Decorator
+## The User Decorator
 
 First, create a decorator file in your decorators folder:
 
@@ -71,11 +70,11 @@ export class PostsController {
 
 The `CurrentUser` decorator handles two scenarios: when called without arguments, it returns the entire user object; when called with a property name like `'id'`, it returns just that specific property.
 
-Decorator Composition for Complex Workflows
+## Decorator Composition for Complex Workflows
 
 As your application grows, you'll find yourself combining multiple decorators to handle complex authentication and authorization scenarios. NestJS allows you to compose decorators for cleaner, more expressive code.
 
-Creating Custom Method Decorators
+## Creating Custom Method Decorators
 
 Let's build a decorator that logs method execution time:
 
@@ -107,7 +106,7 @@ export class TimeoutGuard implements CanActivate {
 }
 ```
 
-Combining Decorators for Authorization
+## Combining Decorators for Authorization
 
 A more practical example combines multiple decorators to create an expressive authorization system:
 
@@ -145,11 +144,11 @@ export class AdminController {
 }
 ```
 
-Parameter Decorators for Request Handling
+## Parameter Decorators for Request Handling
 
 Parameter decorators provide the most granular control over request handling. They allow you to extract specific parts of the request and inject them directly as function parameters.
 
-Building a Paginated Query Decorator
+## Building a Paginated Query Decorator
 
 Here's how to create a decorator that automatically parses pagination parameters:
 
@@ -191,7 +190,7 @@ export class ProductsController {
 }
 ```
 
-Best Practices for Custom Decorators
+## Best Practices for Custom Decorators
 
 When building custom decorators in your NestJS applications, follow these guidelines for maintainable and scalable code:
 
@@ -205,7 +204,7 @@ Document your decorators: Since decorators can be cryptic, always add JSDoc comm
 
 Test thoroughly: Decorators are used throughout your application, so comprehensive testing is crucial. Test both success and failure scenarios.
 
-Integrating with Claude Code Workflow
+## Integrating with Claude Code Workflow
 
 Claude Code can significantly accelerate your decorator development workflow. When working on NestJS projects, you can use Claude Code to:
 
@@ -217,7 +216,7 @@ Claude Code can significantly accelerate your decorator development workflow. Wh
 
 For example, when you need a new decorator, you can describe it to Claude Code: "Create a decorator that extracts the current tenant ID from the request header and validates it against the database." Claude Code will generate a complete, type-safe implementation.
 
-Conclusion
+## Conclusion
 
 Custom decorators in NestJS provide a powerful mechanism for building clean, maintainable, and expressive applications. By understanding how to create class, method, and parameter decorators, you can encapsulate cross-cutting concerns and reduce boilerplate code throughout your application.
 

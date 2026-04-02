@@ -17,7 +17,7 @@ Claude Code for PR Diff Analysis Workflow Tutorial
 
 Pull request diff analysis is one of the most time-consuming aspects of code review. Manually scanning through dozens of changed files, identifying potential issues, and providing constructive feedback takes hours that could be spent on feature development. In this tutorial, you'll learn how to build a Claude Code skill that automates PR diff analysis, helping you review code faster and more consistently.
 
-Understanding PR Diff Analysis in Claude Code
+## Understanding PR Diff Analysis in Claude Code
 
 Before diving into the skill implementation, it's important to understand how Claude Code handles diffs. When working with pull requests, you typically fetch the diff content and analyze changed files for patterns, potential bugs, security issues, and code quality concerns.
 
@@ -29,7 +29,7 @@ A well-designed PR diff analysis skill should:
 4. Suggest improvements based on best practices
 5. Generate a comprehensive review summary
 
-Building the PR Diff Analysis Skill
+## Building the PR Diff Analysis Skill
 
 Let's create a skill that can analyze diff output and provide actionable feedback. Save this as `skills/pr-diff-analyzer.md`:
 
@@ -104,7 +104,7 @@ Use the following tools to perform thorough analysis:
 
 This skill provides a comprehensive framework for PR analysis. However, the real power comes from extending it with specific checks for your tech stack.
 
-Practical Example: Analyzing a Real Diff
+## Practical Example: Analyzing a Real Diff
 
 Let's walk through how this skill works in practice. Suppose you've fetched a diff from a PR:
 
@@ -121,7 +121,7 @@ Let's walk through how this skill works in practice. Suppose you've fetched a di
 
 When you invoke the pr-diff-analyzer skill on this diff, it will identify the critical security improvement (parameterized query instead of string concatenation) and highlight it as a positive change while checking for other issues in the same file.
 
-Extending the Skill for Specific Languages
+## Extending the Skill for Specific Languages
 
 Different programming languages have different patterns and anti-patterns. You can create specialized skills or extend the base skill with language-specific checks. Here's an example extension for JavaScript/TypeScript:
 
@@ -138,7 +138,7 @@ When analyzing JavaScript diffs, additionally check for:
 - Memory leaks in useEffect hooks (React)
 ```
 
-Automating Diff Fetching
+## Automating Diff Fetching
 
 To make your workflow truly efficient, combine the analyzer skill with diff fetching capabilities. Create a helper skill that fetches diffs from GitHub:
 
@@ -170,7 +170,7 @@ curl -H "Authorization: token $GITHUB_TOKEN" \
 ```
 ```
 
-Creating a Complete Workflow
+## Creating a Complete Workflow
 
 The most powerful approach combines multiple skills into a cohesive workflow. Here's how to chain them:
 
@@ -210,7 +210,7 @@ Generate a final report with:
 - Automated vs manual review checklist
 ```
 
-Best Practices for PR Analysis Skills
+## Best Practices for PR Analysis Skills
 
 When building and using PR diff analysis skills, keep these best practices in mind:
 
@@ -224,12 +224,11 @@ Keep humans in the loop. Automated analysis should augment human review, not rep
 
 Iterate and improve. Track which issues your skills find most valuable and refine your rules over time. Regular updates keep your analysis relevant and useful.
 
-Conclusion
+## Conclusion
 
 Building a PR diff analysis skill for Claude Code transforms how you approach code reviews. By automating the initial scan for common issues, you free up mental energy for higher-level architectural and design decisions. The skills outlined in this tutorial provide a foundation you can customize to your project's specific needs.
 
 Start with the basic pr-diff-analyzer skill, extend it with language-specific checks, and gradually build a comprehensive review workflow that fits your team's style. With Claude Code handling the initial legwork, your code reviews will become faster, more consistent, and more thorough.
-
 
 Related Reading
 

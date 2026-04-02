@@ -28,7 +28,7 @@ Manual issue triage consumes hours each week. Developers switch context to read 
 
 The key advantage is that Claude Code operates within your existing workflow. It can interact with GitHub's API, read from your issue tracker, and make decisions based on criteria you define.
 
-Setting Up Your Issue Triage Skill
+## Setting Up Your Issue Triage Skill
 
 The foundation of your triage system is a Claude Code skill that analyzes incoming issues. Create a new skill file called `issue-trier.md` in your skills directory:
 
@@ -73,7 +73,7 @@ Triage Result
 Always provide a confidence score (1-10) for your classification.
 ```
 
-Integrating with GitHub Issues
+## Integrating with GitHub Issues
 
 To make your triage skill functional, you need to connect it to your actual issue tracker. The most straightforward approach uses GitHub's CLI tool `gh` combined with Claude Code:
 
@@ -106,11 +106,11 @@ echo "$ISSUES" | while read issue; do
 done
 ```
 
-Building an Automated Triage Pipeline
+## Building an Automated Triage Pipeline
 
 The real power of Claude Code for issue triage emerges when you chain multiple skills together into a pipeline. Here's a practical architecture:
 
-Step 1: Issue Ingestion
+## Step 1: Issue Ingestion
 
 When a new issue is created (triggered via webhook or scheduled job), Claude Code reads the issue content:
 
@@ -127,7 +127,7 @@ def fetch_new_issue(issue_number, repo):
     return json.loads(result.stdout)
 ```
 
-Step 2: Classification
+## Step 2: Classification
 
 Pass the issue to your triage skill for analysis. The skill evaluates the content against your classification criteria and outputs its assessment:
 
@@ -142,7 +142,7 @@ Author: {issue_author}
 Provide your classification using the format defined in your skill.
 ```
 
-Step 3: Action Execution
+## Step 3: Action Execution
 
 Based on the classification, Claude Code can take automated actions:
 
@@ -157,9 +157,9 @@ Add triage comment
 gh issue comment {issue_number} --body "Thank you for reporting! This issue has been triaged as a [severity] [type]. We'll look into it shortly."
 ```
 
-Advanced Patterns for Issue Triage
+## Advanced Patterns for Issue Triage
 
-Using Claude Code with MCP Servers
+## Using Claude Code with MCP Servers
 
 If your issue tracker supports the Model Context Protocol, you can create more sophisticated integrations. An MCP server for your issue tracker enables Claude Code to:
 
@@ -167,7 +167,7 @@ If your issue tracker supports the Model Context Protocol, you can create more s
 - Update issue metadata directly
 - Listen for new issue events in real-time
 
-Handling Ambiguous Issues
+## Handling Ambiguous Issues
 
 Not every issue is clear-cut. Your triage skill should flag uncertain classifications for human review:
 
@@ -206,7 +206,6 @@ Conclusion
 Claude Code transforms issue triage from a manual chore into an automated workflow that scales with your project. By combining carefully crafted skills with GitHub's CLI and API, you can automatically classify, label, and route issues while maintaining human oversight for complex cases. Start with simple label automation, then gradually expand to more sophisticated classification as your triage skill improves.
 
 The key is treating your triage system as a collaborative effort between Claude and your team, automating the routine while keeping humans available for nuanced decisions that require domain expertise or contextual judgment.
-
 
 Related Reading
 

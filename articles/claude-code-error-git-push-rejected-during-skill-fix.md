@@ -16,7 +16,7 @@ permalink: /claude-code-error-git-push-rejected-during-skill-fix/
 
 When working with Claude Code and custom skills, you may encounter a frustrating scenario: you fix a bug in your skill, attempt to push your changes, and Git rejects your push with an error message about remote changes or branch protection. This guide walks through the common causes of this issue and provides practical solutions for developers and power users.
 
-Understanding the Rejection Error
+## Understanding the Rejection Error
 
 The git push rejection typically manifests in one of these forms:
 
@@ -29,13 +29,13 @@ error: failed to push some refs to 'remote'
 
 This occurs when your local branch has diverged from the remote branch. In the context of Claude skills, this usually happens because the skill definition files were modified elsewhere, perhaps through another session, an automated CI pipeline, or a different machine syncing your skills.
 
-Why This Happens with Claude Skills
+## Why This Happens with Claude Skills
 
 Claude skills live in your repository as `.md` files with specific front matter formatting. When you use skills like `frontend-design` to generate code, `pdf` to create documentation, or `tdd` to scaffold tests, these tools may modify files in your repository. If you're simultaneously working on skill fixes across multiple environments, remote divergence becomes likely.
 
 Consider this workflow: you notice your custom skill `supermemory` has an outdated pattern. You open Claude Code on your laptop, edit the skill file, and prepare to push. Meanwhile, your desktop machine auto-synced a newer version or a CI job updated the skill metadata. Now your push fails because Git sees conflicting histories.
 
-Resolving the Push Rejection
+## Resolving the Push Rejection
 
 Option 1: Pull and Merge (Recommended for Most Cases)
 
@@ -64,7 +64,7 @@ git push origin main
 
 This method preserves your skill fix while incorporating remote updates. It's ideal when the remote changes don't conflict with your modifications.
 
-Option 2: Rebase for Clean History
+## Option 2: Rebase for Clean History
 
 If you prefer a linear history, use rebase instead:
 
@@ -103,9 +103,9 @@ Then create a PR through GitHub UI or CLI
 gh pr create --base main --head feature/your-skill-fix
 ```
 
-Preventing Future Push Rejections
+## Preventing Future Push Rejections
 
-Sync Before Starting Work
+## Sync Before Starting Work
 
 Always pull the latest changes before editing skill files:
 
@@ -115,7 +115,7 @@ git pull origin main
 
 This habit prevents divergence before it starts.
 
-Use Dedicated Branches for Skill Development
+## Use Dedicated Branches for Skill Development
 
 Create feature branches for skill modifications:
 
@@ -128,7 +128,7 @@ Open a PR when ready
 
 This workflow keeps your main branch clean and allows review of skill changes.
 
-Configure Git to Auto-Fetch
+## Configure Git to Auto-Fetch
 
 Add these settings to your global Git config:
 
@@ -139,7 +139,7 @@ git config --global pull.rebase true
 
 These settings automatically clean up stale remote branches and use rebase during pulls.
 
-Document Your Skill Dependencies
+## Document Your Skill Dependencies
 
 If multiple skills interact (for instance, `pdf` and `docx` both reference shared templates), document their relationships. This helps when resolving conflicts:
 
@@ -152,7 +152,7 @@ Skill Dependencies
 - Changes to base templates require coordinated updates
 ```
 
-Working with Specific Skills
+## Working with Specific Skills
 
 When fixing skills like `frontend-design` or `canvas-design`, you may generate new files. Track these additions:
 
@@ -173,7 +173,7 @@ outputs/*.png
 outputs/*.pdf
 ```
 
-Common Error Messages and Solutions
+## Common Error Messages and Solutions
 
 "Updates were rejected because the remote contains work you do not have locally"
 
@@ -191,12 +191,11 @@ Your SSH keys aren't configured correctly. Verify with:
 ssh -T git@github.com
 ```
 
-Conclusion
+## Conclusion
 
 Git push rejections during Claude skill fixes are common but solvable. The key is understanding why divergence occurs, typically from multi-machine workflows or automated processes updating skill files. Pull-and-merge works for most cases, while rebase offers cleaner history for advanced users. Always sync before starting work and consider branch-based workflows for significant skill modifications.
 
 For power users managing multiple skills like `mcp-builder`, `skill-creator`, and domain-specific skills, establishing a consistent Git workflow prevents these interruptions. Remember to document skill dependencies when multiple skills share templates or configurations.
-
 
 Related Reading
 

@@ -13,14 +13,11 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Chrome OS Kiosk Mode and Managed Guest Session Configuration
-
 Chrome OS provides two powerful mechanisms for deploying locked-down, single-purpose device configurations: Kiosk Mode and Managed Guest Sessions. These features serve different use cases but share a common goal, providing controlled access to Chrome OS devices while maintaining security and manageability.
 
 This guide covers the technical implementation details for both approaches, with practical configuration examples for enterprise administrators and developers building kiosk-style applications. Whether you are deploying a fleet of self-service terminals in a hospital lobby or setting up shared Chromebooks for a school computer lab, understanding how these two modes differ will help you choose the right approach and avoid common pitfalls.
 
-Understanding the Two Approaches
+## Understanding the Two Approaches
 
 Kiosk Mode runs a single specified web app or Android app as the only accessible application on the device. The user cannot exit Kiosk Mode without administrative credentials. This is ideal for digital signage, point-of-sale terminals, and dedicated information kiosks.
 
@@ -28,7 +25,7 @@ Managed Guest Sessions create a temporary, guest-oriented session that persists 
 
 Both modes integrate with Google Admin Console for centralized management, but they differ significantly in deployment complexity and user experience.
 
-Quick Comparison
+## Quick Comparison
 
 | Feature | Kiosk Mode | Managed Guest Session |
 |---|---|---|
@@ -42,9 +39,9 @@ Quick Comparison
 
 Understanding these distinctions upfront will save you from a common mistake: deploying Managed Guest Sessions when you actually need the strict lockdown of Kiosk Mode, or vice versa.
 
-Kiosk Mode Implementation
+## Kiosk Mode Implementation
 
-Prerequisites
+## Prerequisites
 
 Before configuring Kiosk Mode, ensure you have:
 
@@ -53,7 +50,7 @@ Before configuring Kiosk Mode, ensure you have:
 - A Kiosk app (PWA or Android app) published to your organization or the public Chrome Web Store
 - Chrome OS version 87 or later for PWA kiosk support (Android app kiosks require version 64+)
 
-Configuration via Google Admin Console
+## Configuration via Google Admin Console
 
 1. Navigate to Devices > Chrome > Apps & Extensions > Kiosks in Google Admin Console
 2. Click Add and select your kiosk application
@@ -64,7 +61,7 @@ When adding the app, you will be prompted to choose whether it auto-launches on 
 
 You can also configure multiple kiosk apps per organizational unit. The device will display a selection screen unless exactly one app has auto-launch enabled. This is useful for testing, where you might want engineers to choose between a production and staging version of your kiosk app.
 
-Command-Line Configuration for Testing
+## Command-Line Configuration for Testing
 
 For development and testing, you can enable Kiosk Mode directly on a Chrome OS device:
 
@@ -90,7 +87,7 @@ Get detailed information about a specific kiosk session
 kiosk_launcher info <app-id>
 ```
 
-JSON Configuration for Auto-Setup
+## JSON Configuration for Auto-Setup
 
 Create a provisioning configuration for bulk deployment:
 
@@ -122,7 +119,7 @@ gcloud alpha chromeos-devices update DEVICE_ID \
   --project=YOUR_PROJECT_ID
 ```
 
-Advanced Kiosk Configuration Options
+## Advanced Kiosk Configuration Options
 
 Beyond basic app selection, Chrome OS exposes several advanced kiosk configuration options that enterprise deployments commonly need:
 
@@ -146,11 +143,11 @@ The `power_management_policy` block is critical for digital signage deployments.
 
 The `required_platform_version` field lets you pin your fleet to a specific Chrome OS version, preventing automatic OS updates that might break your kiosk app. Use this carefully, security updates will also be deferred, so establish a tested update cadence rather than pinning indefinitely.
 
-Managed Guest Session Configuration
+## Managed Guest Session Configuration
 
 Managed Guest Sessions provide a middle ground between full Kiosk Mode and regular user accounts. Users get a Chrome browser experience with enterprise-defined policies, but no personal data persists.
 
-Enabling Managed Guest Sessions
+## Enabling Managed Guest Sessions
 
 In Google Admin Console:
 
@@ -163,7 +160,7 @@ In Google Admin Console:
 
 After enabling, the Managed Guest Session option appears on the device's login screen. Users click "Browse as Guest" to start a session. At logout, Chrome OS wipes all browsing data, cookies, local storage, and downloaded files, giving each user a clean slate.
 
-Session Policies for Managed Guests
+## Session Policies for Managed Guests
 
 Configure what managed guests can access:
 
@@ -185,7 +182,7 @@ These policies control whether users can install extensions, use printers, trans
 
 The `SessionExpirationTimeout` value is in minutes. Setting it to 480 means sessions automatically terminate after 8 hours of activity, useful for library computers or public terminals where you want to reclaim the device overnight. Note that this timer measures session duration, not idle time. For idle-based timeouts, use the `DeviceIdleTimeout` policy separately.
 
-Customizing the Managed Guest Experience
+## Customizing the Managed Guest Experience
 
 Add enterprise branding and default configurations:
 
@@ -207,7 +204,7 @@ Add enterprise branding and default configurations:
 }
 ```
 
-Pre-Installing Extensions in Managed Guest Sessions
+## Pre-Installing Extensions in Managed Guest Sessions
 
 One powerful feature of Managed Guest Sessions is the ability to force-install specific Chrome extensions that appear automatically in every guest session. This is useful for accessibility tools, translation aids, or productivity extensions that should be available to all shared-device users:
 
@@ -227,7 +224,7 @@ One powerful feature of Managed Guest Sessions is the ability to force-install s
 
 The `ExtensionInstallBlacklist: ["*"]` setting blocks users from installing any extensions not explicitly whitelisted. Combined with `ExtensionInstallForcelist`, you get a controlled extension environment where pre-approved tools are always available but users cannot add unauthorized extensions.
 
-Managed Guest Session vs. Kiosk Mode: When to Use Each
+## Managed Guest Session vs. Kiosk Mode: When to Use Each
 
 The decision between Kiosk Mode and Managed Guest Sessions often comes down to how much flexibility you want users to have:
 
@@ -242,7 +239,7 @@ The decision between Kiosk Mode and Managed Guest Sessions often comes down to h
 | Hotel lobby workstation | Managed Guest Session | Guests need email, printing |
 | Workforce training center | Managed Guest Session | Multiple learning platforms |
 
-Use Case: Developer Kiosk for Testing
+## Use Case: Developer Kiosk for Testing
 
 Developers often need dedicated test devices that simulate end-user environments. Chrome OS Kiosk Mode excels here:
 
@@ -264,7 +261,7 @@ Developers often need dedicated test devices that simulate end-user environments
 
 This setup provides a clean, reproducible test environment that mirrors production kiosk deployments.
 
-Remote Debugging a Kiosk App
+## Remote Debugging a Kiosk App
 
 With `DevToolsAvailability` set to `allowed`, you can attach Chrome DevTools remotely to inspect your kiosk app without physically accessing the device:
 
@@ -280,7 +277,7 @@ Your kiosk app will appear under Remote Target
 
 Remote debugging is invaluable when troubleshooting production kiosk issues, you can inspect the DOM, monitor network requests, and execute console commands without interrupting the kiosk session or touching the physical hardware.
 
-Simulating Kiosk Mode in a Browser Window
+## Simulating Kiosk Mode in a Browser Window
 
 During initial development, use Chrome's `--kiosk` flag to simulate the kiosk environment before enrolling a device:
 
@@ -303,7 +300,7 @@ google-chrome \
 
 This launches Chrome in a full-screen, borderless window that closely approximates the Chrome OS Kiosk Mode experience. The main differences are that you can still use keyboard shortcuts like Alt+F4 to exit, and Chrome OS-specific APIs are not available in this mode.
 
-Security Considerations
+## Security Considerations
 
 Both Kiosk Mode and Managed Guest Sessions operate within Chrome OS's sandboxed architecture, but you should still implement additional safeguards:
 
@@ -330,7 +327,7 @@ Both Kiosk Mode and Managed Guest Sessions operate within Chrome OS's sandboxed 
 }
 ```
 
-URL Filtering in Depth
+## URL Filtering in Depth
 
 The URL filtering policy in Chrome OS supports several pattern types beyond simple domain matching:
 
@@ -351,7 +348,7 @@ Using `URLBlocklist: ["*"]` combined with an explicit allowlist is the most secu
 
 Include `chrome-extension://*` in the allowlist if you have force-installed extensions, some extensions load local resources from the `chrome-extension://` scheme and will break if this scheme is blocked.
 
-Hardening the Physical Device
+## Hardening the Physical Device
 
 Policies alone do not protect against physical tampering. For unattended kiosk deployments, consider these hardware-level safeguards:
 
@@ -372,7 +369,7 @@ Policies alone do not protect against physical tampering. For unattended kiosk d
 
 `DeviceRebootOnShutdown` ensures that if a kiosk device is shut down rather than restarted, it reboots automatically. This prevents the device from sitting in a powered-off state in a public location where it might be accessed during the boot sequence.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Kiosk app fails to launch: Verify the app ID is correct and the app is published to your organization or publicly. Check Chrome OS version compatibility. Review the device log at `chrome://device-log` for specific error messages. Common causes include app ID mismatches, network failures preventing the app from loading, and policy conflicts between organizational units.
 
@@ -407,7 +404,7 @@ App updates breaking the kiosk: If a kiosk app auto-updates and introduces a reg
 
 Kiosk device not appearing in Admin Console: Enrollment failures commonly occur when the device cannot reach Google's enrollment servers during the setup process. Ensure the device has internet access and the domain's enrollment token has not expired. Check that the organizational unit associated with the enrollment token has Chrome enrollment enabled.
 
-Monitoring and Reporting
+## Monitoring and Reporting
 
 Google Admin Console provides a device overview report that shows the online/offline status of all enrolled Chrome devices, the version of Chrome OS running on each, and the last sync time for policy updates. For kiosk deployments at scale, set up alerts for devices that have been offline for an extended period, this usually indicates a network failure, power outage, or hardware issue that needs physical investigation.
 
@@ -421,14 +418,13 @@ curl -H "Authorization: Bearer $(gcloud auth print-access-token)" \
 
 Use this to build dashboards tracking fleet health, identifying devices with outdated Chrome OS versions, and auditing policy compliance across organizational units.
 
-Summary
+## Summary
 
 Chrome OS Kiosk Mode delivers fully locked-down single-app experiences ideal for digital signage and point-of-sale. Managed Guest Sessions provide flexible, ephemeral browsing environments perfect for shared devices in enterprise and educational settings. Both integrate with Google Admin Console for centralized management and support extensive policy customization.
 
 Choose Kiosk Mode when you need absolute control over the user experience, when the device should do one thing and only one thing. Choose Managed Guest Sessions when you need browser functionality with temporary, secure guest access and the flexibility to support multiple web-based workflows per session.
 
 For large-scale deployments, invest time in your policy JSON structure and organizational unit hierarchy before enrolling devices. Restructuring your Admin Console OU tree after enrolling hundreds of devices is painful. Plan for monitoring and alerting from the start so you can detect device failures before users do.
-
 
 Related Reading
 

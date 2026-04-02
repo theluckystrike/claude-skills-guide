@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Mob Programming Workflow Tutorial"
 description: "Learn how to integrate Claude Code into mob programming sessions for enhanced collaboration, knowledge sharing, and productivity. Practical examples."
@@ -14,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 
 Mob programming transforms how development teams collaborate by having everyone work on the same code simultaneously. When you add Claude Code to your mob programming sessions, you gain an intelligent partner that can explain code, suggest improvements, and accelerate problem-solving. This tutorial shows you how to integrate Claude Code into your mob programming workflow effectively.
@@ -25,7 +23,7 @@ Mob programming extends pair programming to include the entire team at one keybo
 
 The real power emerges when Claude Code handles routine tasks, freeing your team to focus on architectural decisions and creative problem-solving. The AI can also serve as a knowledge anchor, remembering patterns across sessions and ensuring institutional knowledge stays in your codebase.
 
-Setting Up Claude Code for Mob Sessions
+## Setting Up Claude Code for Mob Sessions
 
 Before starting your first mob session with Claude Code, configure your environment for collaborative success. Create a dedicated context file that captures your team's conventions and preferences:
 
@@ -54,9 +52,9 @@ Session Protocol
 
 This context file ensures Claude Code understands your team's approach and provides consistent, aligned suggestions throughout each session.
 
-Running Effective Mob Sessions with Claude Code
+## Running Effective Mob Sessions with Claude Code
 
-Session Structure and Roles
+## Session Structure and Roles
 
 Successful mob programming sessions with Claude Code follow a structured approach. The driver focuses on typing and syntax while the navigator directs the overall strategy. Claude Code becomes a research assistant that can quickly look up APIs, find code patterns, or explain complex concepts.
 
@@ -72,11 +70,11 @@ During sessions, invoke Claude Code strategically. Use it for:
 - Suggesting refactoring opportunities
 - Running tests and analyzing failures
 
-Practical Example: Building a Feature Together
+## Practical Example: Building a Feature Together
 
 Imagine your mob team is implementing user authentication. Here's how Claude Code enhances the session:
 
-Step 1: Planning Phase
+## Step 1: Planning Phase
 
 The navigator asks Claude Code to outline an authentication flow:
 
@@ -86,7 +84,7 @@ Navigator: "What are the best practices for implementing JWT authentication in a
 
 Claude Code responds with a structured overview covering token generation, storage, refresh mechanisms, and security considerations. Your team discusses and decides on the approach together.
 
-Step 2: Implementation Phase
+## Step 2: Implementation Phase
 
 The driver implements the authentication controller while Claude Code provides real-time suggestions:
 
@@ -96,7 +94,7 @@ Driver: "Write a register endpoint that validates email format and password stre
 
 Claude Code generates the endpoint with appropriate validation, error handling, and security headers. The driver types it while the navigator reviews and suggests modifications.
 
-Step 3: Testing Phase
+## Step 3: Testing Phase
 
 After implementation, invoke Claude Code to generate test cases:
 
@@ -106,11 +104,11 @@ claude --print "Generate Jest tests for the register endpoint covering success, 
 
 This ensures comprehensive test coverage without the team spending hours writing tests manually.
 
-Optimizing Claude Code Prompts for Mob Programming
+## Optimizing Claude Code Prompts for Mob Programming
 
 The quality of your Claude Code interactions directly impacts session productivity. Craft prompts that provide clear context and specific expectations.
 
-Effective Prompt Patterns
+## Effective Prompt Patterns
 
 Context-Rich Prompts
 Instead of: "Write a function to process user data"
@@ -130,7 +128,7 @@ Use Claude Code's test generation capabilities:
 claude --print "Write failing tests first for the payment processing module, then implement the code to make them pass"
 ```
 
-Handling Claude Code Responses
+## Handling Claude Code Responses
 
 When Claude Code provides code, treat it as a starting point for discussion rather than final output. Your team should:
 
@@ -141,9 +139,9 @@ When Claude Code provides code, treat it as a starting point for discussion rath
 
 This collaborative approach ensures code quality while using AI efficiency.
 
-Best Practices for Mob Programming with Claude Code
+## Best Practices for Mob Programming with Claude Code
 
-Establish Clear Boundaries
+## Establish Clear Boundaries
 
 Define what Claude Code should and shouldn't do in your sessions. Some teams prefer Claude Code to:
 - Never modify files directly (always review first)
@@ -152,7 +150,7 @@ Define what Claude Code should and shouldn't do in your sessions. Some teams pre
 
 Others give Claude Code more autonomy. Document your preferences in your mob-session.md.
 
-Rotate the AI Context
+## Rotate the AI Context
 
 Just as drivers rotate, periodically refresh Claude Code's context to prevent drift:
 
@@ -161,7 +159,7 @@ At each rotation, provide a brief summary
 claude --print "Summary: We just implemented user registration. Next, we need to build the login flow with JWT tokens."
 ```
 
-Preserve Institutional Knowledge
+## Preserve Institutional Knowledge
 
 Use Claude Code to document decisions and patterns:
 
@@ -171,7 +169,7 @@ claude --print "Create a ADR (Architecture Decision Record) documenting why we c
 
 This builds a searchable knowledge base that helps future onboarding and prevents repeated discussions.
 
-Measure and Iterate
+## Measure and Iterate
 
 Track how Claude Code impacts your mob sessions:
 
@@ -181,7 +179,7 @@ Track how Claude Code impacts your mob sessions:
 
 Adjust your approach based on results. The optimal workflow evolves with your team's experience.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Over-Reliance on AI Suggestions
 Claude Code provides suggestions, not decisions. Always discuss and decide as a team. Blindly accepting AI output removes the collaborative benefit of mob programming.
@@ -192,7 +190,7 @@ Frequent interruptions to consult Claude Code break flow. Batch research request
 Skipping Code Review
 Even in mob programming, review changes before committing. Claude Code can miss business logic nuances or team-specific requirements.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into mob programming transforms your sessions into more efficient, knowledge-sharing experiences. The AI handles routine tasks, provides instant documentation access, and maintains consistency, allowing your team to focus on what matters: solving problems together.
 
@@ -202,7 +200,7 @@ The future of mob programming includes AI collaborators that amplify human creat
 
 ---
 
-Next Steps
+## Next Steps
 
 - Create your team's mob-session.md file
 - Schedule a pilot mob session with Claude Code

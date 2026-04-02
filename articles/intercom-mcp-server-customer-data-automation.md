@@ -22,7 +22,7 @@ A Model Context Protocol (MCP) server for Intercom exposes Intercom's API capabi
 
 The MCP approach differs from traditional integrations because it treats Intercom as a context source that Claude can query and manipulate programmatically. [You gain conversational control over your customer data workflows](/how-do-i-combine-two-claude-skills-in-one-workflow/)ustomer data while maintaining the auditability and error handling you'd expect from API-based automation.
 
-Core Capabilities
+## Core Capabilities
 
 An Intercom MCP server typically provides tools for three operational categories:
 
@@ -32,7 +32,7 @@ Segmentation and Tagging. Add or remove tags from users, update segment membersh
 
 Conversation Operations. Retrieve conversation history, send replies from automated workflows, and extract conversation metadata for analysis. Combined with tools like the pdf skill or xlsx skill, you can generate reports from conversation data.
 
-Setting Up Your Server
+## Setting Up Your Server
 
 You'll need an Intercom access token and Node.js installed. Create a basic MCP server structure:
 
@@ -117,9 +117,9 @@ server.start();
 
 Register this server in your MCP configuration, and Claude gains access to these tools.
 
-Practical Automation Examples
+## Practical Automation Examples
 
-Automated User Onboarding
+## Automated User Onboarding
 
 When new users sign up for your application, you can trigger Intercom profile creation and segment assignment:
 
@@ -145,7 +145,7 @@ async function onUserSignup(user) {
 
 This replaces manual Intercom admin actions and ensures every new user enters your marketing automation pipeline immediately.
 
-Behavior-Triggered Tag Updates
+## Behavior-Triggered Tag Updates
 
 Use the MCP server to update user segments based on application behavior. When users complete key actions, their Intercom profile reflects these milestones:
 
@@ -162,7 +162,7 @@ async function onFeatureUsage(email, featureName, usageCount) {
 
 This enables segment-based messaging, you can send different onboarding sequences to first-time users versus power users without manual list management.
 
-Customer Data Export for Analysis
+## Customer Data Export for Analysis
 
 Pull user data for analysis using the MCP server, then process it with other skills:
 
@@ -180,19 +180,19 @@ async function exportUserMetrics() {
 }
 ```
 
-Combining with Claude Skills
+## Combining with Claude Skills
 
 The Intercom MCP server becomes more powerful when combined with other Claude skills. The xlsx skill can transform raw user data into formatted reports with pivot tables and charts. The pdf skill lets you generate personalized onboarding PDFs triggered by segment membership. The supermemory skill can maintain context across customer interactions, surfacing relevant history when Claude assists with support conversations.
 
 For testing your automation workflows, the tdd skill helps you write integration tests that verify user data flows correctly between your application and Intercom. If you're building a frontend dashboard to visualize Intercom data, the frontend-design skill provides component patterns and styling guidance.
 
-Security Considerations
+## Security Considerations
 
 When automating customer data through MCP servers, several practices protect sensitive information:
 
 Store your Intercom access token in environment variables rather than configuration files. Use scoped tokens with minimum required permissions, if your automation only reads user data, avoid granting write access. Implement request logging to maintain audit trails of automated data modifications. Consider rate limiting on tools that perform bulk operations to avoid hitting Intercom API limits.
 
-Error Handling Patterns
+## Error Handling Patterns
 
 Well-written MCP tool implementations handle common failure scenarios:
 
@@ -218,7 +218,7 @@ server.addTool({
 
 This pattern ensures your automation handles duplicate emails gracefully rather than failing silently or crashing.
 
-Next Steps
+## Next Steps
 
 Start with a single automation, perhaps syncing new user signups, and expand as you validate the workflow. The MCP architecture makes it straightforward to add new tools as your customer data needs evolve. Document your tool definitions so team members understand what automated operations are possible.
 

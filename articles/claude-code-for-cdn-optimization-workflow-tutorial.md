@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for CDN Optimization Workflow Tutorial"
 description: "Learn how to use Claude Code to automate and streamline your CDN optimization workflow. This comprehensive tutorial covers caching strategies, asset."
@@ -14,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for CDN Optimization Workflow Tutorial
 
 Content Delivery Networks (CDNs) are critical infrastructure for modern web applications, but optimizing them effectively requires understanding caching behaviors, asset patterns, and performance metrics. This tutorial shows you how to use Claude Code to automate CDN optimization tasks, from configuring cache policies to analyzing hit rates and reducing latency.
 
-Understanding CDN Optimization with Claude Code
+## Understanding CDN Optimization with Claude Code
 
 Claude Code can assist with CDN optimization through several key capabilities:
 
@@ -29,7 +27,7 @@ Claude Code can assist with CDN optimization through several key capabilities:
 3. Cache Policy Design - Creating effective caching strategies
 4. Performance Monitoring - Analyzing CDN metrics and suggesting improvements
 
-Setting Up Your CDN Optimization Project
+## Setting Up Your CDN Optimization Project
 
 Before diving into optimization tasks, create a dedicated project structure for your CDN workflow:
 
@@ -39,7 +37,7 @@ cd cdn-optimization-project
 mkdir -p config/analysis/recommendations
 ```
 
-Creating a Claude.md Context File
+## Creating a Claude.md Context File
 
 Create a `CLAUDE.md` file to help Claude understand your CDN infrastructure:
 
@@ -66,9 +64,9 @@ Known Issues
 - Missing compression on legacy images
 ```
 
-Practical Optimization Workflows
+## Practical Optimization Workflows
 
-Workflow 1: Analyzing Cache Hit Rates
+## Workflow 1: Analyzing Cache Hit Rates
 
 Claude Code can help you analyze CDN cache performance. Provide Claude with access to your CDN logs or metrics:
 
@@ -103,7 +101,7 @@ Claude will examine patterns and suggest specific optimizations:
 }
 ```
 
-Workflow 2: Implementing Cache Rules
+## Workflow 2: Implementing Cache Rules
 
 Use Claude Code to generate appropriate cache rules for different asset types:
 
@@ -157,11 +155,11 @@ async function handleRequest(request) {
 }
 ```
 
-Workflow 3: Asset Optimization Pipeline
+## Workflow 3: Asset Optimization Pipeline
 
 Claude Code can help design an automated asset optimization workflow:
 
-Step 1: Image Optimization Configuration
+## Step 1: Image Optimization Configuration
 
 ```yaml
 cdn-optimization.yml
@@ -184,7 +182,7 @@ image_optimization:
   prefetch_threshold: 100
 ```
 
-Step 2: Bundle Optimization
+## Step 2: Bundle Optimization
 
 Claude can analyze your build output and suggest splitting strategies:
 
@@ -196,7 +194,7 @@ Our JavaScript bundle is 2.5MB. Analyze the bundle and recommend:
 4. Tree shaking improvements
 ```
 
-Automated CDN Health Checks
+## Automated CDN Health Checks
 
 Set up automated monitoring with Claude Code integration:
 
@@ -220,7 +218,7 @@ checks:
     critical_days: 7
 ```
 
-Best Practices for CDN Optimization
+## Best Practices for CDN Optimization
 
 1. Use Consistent Cache Keys
 
@@ -261,7 +259,7 @@ Regularly review these metrics:
 - Origin request reduction
 - Bandwidth cost trends
 
-Integrating CDN Optimization into CI/CD
+## Integrating CDN Optimization into CI/CD
 
 Add CDN validation to your deployment pipeline:
 
@@ -293,20 +291,20 @@ jobs:
           npx image-checker --quality-threshold 85
 ```
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 1. Over-caching dynamic content - Always set appropriate cache headers for personalized content
 2. Ignoring cache invalidation - Implement proper purge strategies for updates
 3. Missing geographic optimization - Configure origin shields and regional caches
 4. Neglecting HTTP/2 or HTTP/3 - Ensure your CDN properly supports modern protocols
 
-Conclusion
+## Conclusion
 
 Claude Code significantly accelerates CDN optimization by automating analysis, generating configuration rules, and identifying improvement opportunities. Start with the workflows in this tutorial, and customize them to your specific infrastructure needs.
 
 Remember: CDN optimization is an ongoing process. Regular monitoring, analysis, and iteration will continuously improve your performance and reduce costs.
 
-Step-by-Step: CDN Optimization Workflow with Claude Code
+## Step-by-Step: CDN Optimization Workflow with Claude Code
 
 1. Audit current asset delivery: run `claude> analyze my webpack bundle and identify assets over 100KB that are not split or lazy-loaded`. Claude Code will read your bundle stats and produce a prioritized list.
 2. Configure cache headers: ask Claude Code to generate the correct `Cache-Control` headers for each asset type. immutable for hashed assets, `no-store` for HTML, and `s-maxage` for API responses.
@@ -315,7 +313,7 @@ Step-by-Step: CDN Optimization Workflow with Claude Code
 5. Configure CDN-specific behaviors: each CDN (Cloudflare, CloudFront, Fastly) has provider-specific configuration syntax. Claude Code can generate Cloudflare Workers scripts, CloudFront behaviors, or Fastly VCL from a plain-language description of your caching rules.
 6. Measure and iterate: generate a Lighthouse CI configuration to track CDN performance metrics across deployments. Ask Claude Code to add the Lighthouse CI step to your existing GitHub Actions workflow.
 
-Cloudflare Workers Cache API
+## Cloudflare Workers Cache API
 
 For fine-grained control over what Cloudflare caches, use a Worker to intercept requests and apply custom cache logic:
 
@@ -354,7 +352,7 @@ export default {
 
 Claude Code can generate, review, and deploy this kind of Worker from a plain-language description of your caching requirements.
 
-CDN Configuration Comparison
+## CDN Configuration Comparison
 
 | Provider | Config format | Worker/edge compute | Price tier | Claude Code support |
 |---|---|---|---|---|
@@ -364,7 +362,7 @@ CDN Configuration Comparison
 | Vercel Edge | vercel.json / Edge Functions | Yes (Edge Functions) | Free–Enterprise | Full (native integration) |
 | Netlify | netlify.toml / Edge Functions | Yes (Deno-based) | Free–Pro | Full (netlify.toml) |
 
-Advanced: Stale-While-Revalidate for API Routes
+## Advanced: Stale-While-Revalidate for API Routes
 
 The `stale-while-revalidate` directive lets the CDN serve a cached (potentially stale) response immediately while fetching a fresh version in the background. This eliminates cache-miss latency for frequently updated data:
 
@@ -382,7 +380,7 @@ app.get('/api/leaderboard', async (req, res) => {
 
 Ask Claude Code to audit all your API routes and suggest appropriate `max-age` and `stale-while-revalidate` values based on how frequently each endpoint's data changes.
 
-Troubleshooting
+## Troubleshooting
 
 Assets not being cached at the CDN edge: Check the response `CF-Cache-Status` header (Cloudflare) or `X-Cache` header (CloudFront). A value of `MISS` means the request reached your origin. A value of `HIT` means it was served from cache. If you always see `MISS`, verify that your origin is not sending `Cache-Control: private` or `Set-Cookie` headers, which instruct CDNs not to cache the response.
 

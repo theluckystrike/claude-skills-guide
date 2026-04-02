@@ -32,7 +32,7 @@ Core capabilities include:
 - Running tests in parallel via the `selenium-side-runner` CLI tool
 - Plugging in custom commands through the user-extensions API
 
-Installing and Setting Up
+## Installing and Setting Up
 
 To install the Selenium IDE Chrome extension:
 
@@ -45,7 +45,7 @@ After installation, clicking the icon opens the Selenium IDE interface in a new 
 
 When you create a new project, Selenium IDE saves it as a `.side` file. a JSON-formatted project file that stores all test suites, individual tests, and project-level settings. Commit this file to version control just like source code. Teams often store `.side` files alongside the application they test, which makes test updates part of the same pull request as feature changes.
 
-Recording Your First Test
+## Recording Your First Test
 
 The recording workflow follows three basic phases:
 
@@ -61,7 +61,7 @@ Navigate through your target website as a user would. Click buttons, fill forms,
 
 Click the record button again to stop. Review the command list in the sidebar. Each action appears as a row with command, target, and value fields. Before saving, scan through the recorded steps and delete any accidental clicks or spurious mouseover events that crept in. Clean recordings run faster and are easier to maintain.
 
-Understanding Commands and Locators
+## Understanding Commands and Locators
 
 Selenium IDE uses a command-based syntax. Each row represents an action or assertion:
 
@@ -89,7 +89,7 @@ Locators identify web elements. Selenium IDE automatically selects a locator str
 
 The Chrome extension automatically chooses the most reliable locator, typically preferring `id` when available, then falling back to CSS or XPath. You can override this by specifying the strategy explicitly, or by clicking the small dropdown arrow next to the target field to see alternative locators Selenium IDE found for that element. This is invaluable when the auto-selected locator is fragile. you can often find a more stable alternative in the same list.
 
-Locator Strategy Comparison
+## Locator Strategy Comparison
 
 | Strategy | Stability | Readability | Performance | When to Use |
 |---|---|---|---|---|
@@ -102,7 +102,7 @@ Locator Strategy Comparison
 
 The single most impactful thing a development team can do to improve test reliability is to add `data-testid` attributes to key interactive elements. Ask your developers to add `data-testid="login-submit"` to important buttons and form fields. this gives your Selenium tests a stable anchor that survives CSS refactors and DOM restructuring.
 
-Practical Example: Testing a Login Form
+## Practical Example: Testing a Login Form
 
 Consider a login page with email and password fields plus a submit button. Here's how to record a login test:
 
@@ -138,7 +138,7 @@ Welcome, Test User
 
 After reviewing, you would typically add a `waitForElementVisible` before the final `assertText` to handle network latency, and swap the auto-generated `css=button[type=submit]` for `css=[data-testid=login-submit]` if your app has that attribute set.
 
-Exporting to Code
+## Exporting to Code
 
 Selenium IDE transforms recorded tests into executable code. Click the "Export" button to choose your target language:
 
@@ -172,7 +172,7 @@ def test_login():
 
 This exported code becomes the foundation for a more sophisticated test suite. The generated file is intentionally minimal. it does not include fixtures, teardown hooks, or page object structure. Treat it as a starting draft, not a finished product.
 
-Improving Exported Python Tests
+## Improving Exported Python Tests
 
 Here is how to harden the exported code with explicit waits and proper teardown:
 
@@ -209,7 +209,7 @@ def test_login_with_valid_credentials(driver):
 
 The `WebDriverWait` + `expected_conditions` pattern eliminates the timing guesses that make raw Selenium tests flaky in CI environments where network latency is unpredictable.
 
-Adding Control Flow
+## Adding Control Flow
 
 Beyond simple recording, Selenium IDE supports logic constructs through its user-extensions API. You can add:
 
@@ -229,7 +229,7 @@ end
 
 This pattern prevents the test from failing on pages where the banner appears while still running cleanly when it does not. Without this, you would need two separate test paths or a custom `executeScript` workaround.
 
-Using Variables
+## Using Variables
 
 Variables let you capture dynamic values from the page and reference them later in the same test:
 
@@ -241,7 +241,7 @@ assertText  |  css=h1  |  Order ${orderNumber}
 
 The `${variableName}` syntax works in any target or value field. Variables reset between test runs by default, so there is no state leakage between tests.
 
-Running Tests from the Command Line
+## Running Tests from the Command Line
 
 Selenium IDE tests can run headlessly in CI pipelines using `selenium-side-runner`:
 
@@ -269,7 +269,7 @@ selenium-side-runner --max-workers 4 my-project.side
 
 This distributes test suites across four Chrome instances simultaneously, cutting run time proportionally for larger suites.
 
-Best Practices for Reliable Tests
+## Best Practices for Reliable Tests
 
 Recorded tests often fail due to brittle element selectors or timing issues. Follow these practices:
 
@@ -299,7 +299,7 @@ Review recordings before saving. Delete extra steps like accidental right-clicks
 
 Group related tests into suites. Selenium IDE lets you organize tests into suites. Use this to separate smoke tests (fast, run on every commit) from regression suites (thorough, run nightly). The `selenium-side-runner` CLI lets you specify a suite name to run only that subset.
 
-Limitations and When to Use Code
+## Limitations and When to Use Code
 
 The Selenium IDE Chrome extension excels for quick prototypes and simple regression tests. However, it has real constraints that push complex automation toward hand-written code:
 
@@ -316,7 +316,7 @@ The Selenium IDE Chrome extension excels for quick prototypes and simple regress
 
 The IDE is not trying to replace Playwright or Cypress. It solves a specific problem: getting from zero to working test in under ten minutes. For that goal, nothing beats it. For everything else, use the export function as a head start and build from there.
 
-Integrating Exported Tests into a CI Pipeline
+## Integrating Exported Tests into a CI Pipeline
 
 Once you export tests to Python or Java, integrating them into GitHub Actions is straightforward:
 
@@ -344,7 +344,7 @@ jobs:
 
 The `browser-actions/setup-chrome` action handles matching ChromeDriver version to the installed Chrome version, which was historically the most common source of CI failures in Selenium projects.
 
-Conclusion
+## Conclusion
 
 The Chrome extension Selenium IDE recorder provides a fast path to browser automation without writing code. Record your interactions, export to your preferred language, and build a solid test suite from functional prototypes. Use it for rapid prototyping, simple regression coverage, and teaching test automation concepts to team members who are not yet fluent in WebDriver APIs.
 

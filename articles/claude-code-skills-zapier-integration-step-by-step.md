@@ -13,15 +13,13 @@ permalink: /claude-code-skills-zapier-integration-step-by-step/
 ---
 {% raw %}
 
-
-
-Claude Code Skills + Zapier: Step-by-Step Integration
+## Claude Code Skills + Zapier: Step-by-Step Integration
 
 Connecting Claude Code skills to Zapier lets you route skill output into thousands of external services. Slack, Google Sheets, Notion, GitHub, and more. The integration works through webhooks: your shell sends data to Zapier, and Zapier acts on it.
 
 This guide covers the full setup from creating a Zapier webhook endpoint to triggering downstream actions from Claude skill output.
 
-How the Integration Works
+## How the Integration Works
 
 [Claude skills run locally inside Claude Code](/claude-skills-automated-social-media-content-workflow/). They do not natively speak HTTP. The bridge is a shell script or small helper program that:
 
@@ -31,7 +29,7 @@ How the Integration Works
 
 You never need a dedicated server. A simple `curl` call or Node.js script handles delivery.
 
-Step 1: Create a Zapier Webhook Endpoint
+## Step 1: Create a Zapier Webhook Endpoint
 
 In Zapier, create a new Zap and set the trigger to Webhooks by Zapier:
 
@@ -42,7 +40,7 @@ In Zapier, create a new Zap and set the trigger to Webhooks by Zapier:
 
 Keep this Zap in test mode until you have confirmed delivery.
 
-Step 2: Capture Claude Skill Output
+## Step 2: Capture Claude Skill Output
 
 [Run a Claude Code session and redirect output](/claude-skills-with-github-actions-ci-cd-pipeline/). Here is a shell script that invokes Claude Code in print mode, captures the output, and sends it to Zapier:
 
@@ -69,7 +67,7 @@ chmod +x zapier-send.sh
 ./zapier-send.sh "Summarize the test results in /tmp/results.txt"
 ```
 
-Step 3: Use Skill Output as the Payload
+## Step 3: Use Skill Output as the Payload
 
 Skills like `/pdf` and `/tdd` produce structured text output. You can include the skill invocation in your prompt and ship the result to Zapier.
 
@@ -98,7 +96,7 @@ curl -s -X POST "$ZAPIER_WEBHOOK" \
   -d "$PAYLOAD"
 ```
 
-Step 4: Configure Zapier Actions
+## Step 4: Configure Zapier Actions
 
 In your Zap, add an action after the webhook trigger. Common patterns:
 
@@ -124,7 +122,7 @@ Body: {{output.summary}}
 Labels: testing, automated
 ```
 
-Securing Your Webhook
+## Securing Your Webhook
 
 For production use, add a shared secret to your requests and verify it in Zapier's filter step:
 
@@ -138,7 +136,7 @@ curl -s -X POST "$ZAPIER_WEBHOOK" \
 
 In Zapier, add a Filter step: only continue if `X-Webhook-Secret` equals your expected value.
 
-Keeping Context with /supermemory
+## Keeping Context with /supermemory
 
 If you want Claude to remember your Zapier endpoint across sessions, store it using the `/supermemory` skill:
 
@@ -150,7 +148,7 @@ Remember to always include the event type and timestamp in webhook payloads
 
 On future sessions, `/supermemory` surfaces this context so you maintain consistent payload structure without re-explaining it each time.
 
-Practical Example: PDF Report → Zapier → Email
+## Practical Example: PDF Report → Zapier → Email
 
 When you [generate a report with `/pdf`](/automated-code-documentation-workflow-with-claude-skills/), send the output to Zapier, which emails it to stakeholders:
 
@@ -172,15 +170,15 @@ curl -s -X POST "$ZAPIER_WEBHOOK" \
 
 In Zapier, route this to Gmail or SendGrid with the report content in the email body.
 
-Multi-Step Zap Configurations for Developer Workflows
+## Multi-Step Zap Configurations for Developer Workflows
 
 Single-action Zaps are a starting point. Real productivity comes from chaining steps. Here are three complete Zap configurations tuned for Claude skill output.
 
-Zap: Code Review Alert → Jira Ticket → Slack Notification
+## Zap: Code Review Alert → Jira Ticket → Slack Notification
 
 This three-step Zap handles the full handoff when Claude flags an issue during code review.
 
-Trigger: Webhooks by Zapier. Catch Hook
+## Trigger: Webhooks by Zapier. Catch Hook
 
 Step 1. Filter: Only continue if `event` equals `code_review_issue`. This prevents unrelated payloads from creating noise in Jira.
 
@@ -227,7 +225,7 @@ curl -s -X POST "$ZAPIER_WEBHOOK" \
 
 The filter in Zapier stops the Jira+Slack chain when the review is clean, so you only create tickets for real issues.
 
-Zap: Daily Standup Report → Google Sheets → Email Digest
+## Zap: Daily Standup Report → Google Sheets → Email Digest
 
 Claude can generate a standup summary from your git log and ship it automatically each morning.
 
@@ -275,11 +273,11 @@ Add this to your crontab with `crontab -e`:
 
 Weekday standups delivered and logged automatically, zero manual effort.
 
-Error Handling and Retry Patterns
+## Error Handling and Retry Patterns
 
 Zapier retries failed actions automatically for most app steps, but webhook delivery from your shell is fire-and-forget. Build retry logic into the sending side.
 
-Retry with Exponential Backoff
+## Retry with Exponential Backoff
 
 ```bash
 #!/bin/bash
@@ -309,7 +307,7 @@ exit 1
 
 Zapier returns HTTP 200 immediately on receipt. it does not wait for downstream steps. An HTTP 200 means your payload arrived; it does not mean Slack received the message. Check the Zapier task history for downstream step failures.
 
-Dead-Letter Logging
+## Dead-Letter Logging
 
 When delivery fails entirely, log the payload locally so you can replay it later:
 
@@ -332,7 +330,7 @@ for f in "$HOME/.zapier-failed"/*.json; do
 done
 ```
 
-Structuring Payloads for Complex Zaps
+## Structuring Payloads for Complex Zaps
 
 As your Zaps grow past two or three steps, a flat payload gets unwieldy. Nest your data to keep field mapping readable in the Zapier editor.
 
@@ -363,7 +361,7 @@ print(json.dumps(payload))
 
 In Zapier, you now reference `meta.event`, `meta.timestamp`, `content.summary`, and `content.has_issues` as distinct fields. Filters and formatters can branch on `content.has_issues` without parsing text.
 
-Troubleshooting
+## Troubleshooting
 
 Zapier shows no data received: Check that your curl command succeeds locally with `--verbose`. Ensure the webhook URL is not expired. Zapier test webhooks time out after a few minutes.
 
@@ -382,7 +380,6 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top skills every developer should know
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Decide when skills beat plain prompts
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -16,7 +16,7 @@ permalink: /claude-code-french-developer-community-resources-guide/
 
 [French developers using Claude Code have access to a growing ecosystem of community resources](/best-claude-code-skills-to-install-first-2026/), localized documentation, and specialized tools. This guide covers practical ways to connect with other French-speaking developers, find relevant skills, and accelerate your workflow.
 
-Finding French Developer Communities
+## Finding French Developer Communities
 
 The French developer scene is active across multiple platforms. [Several Discord servers cater specifically to French-speaking developers working with AI tools](/claude-skill-md-format-complete-specification-guide/) These communities often share Claude Code configurations, discuss skill implementations, and troubleshoot issues in French.
 
@@ -24,7 +24,7 @@ Reddit's r/frenchdev and r/dev__FR subreddits host discussions about AI-assisted
 
 GitHub itself contains French-language repositories focused on AI development. Searching for "Claude Code" combined with "français" or "french" returns projects where developers document their setups in French. Star these repositories to track updates.
 
-Claude Skills Relevant for French Developers
+## Claude Skills Relevant for French Developers
 
 Several Claude skills work particularly well for French development workflows. [The supermemory skill helps you organize research](/building-stateful-agents-with-claude-skills-guide/) across French documentation and tutorials. When you accumulate links, code snippets, and notes from various French sources, supermemory provides a searchable knowledge base:
 
@@ -40,7 +40,7 @@ The pdf skill extracts text from French technical documentation:
 
 For frontend work, frontend-design generates component documentation in French when you specify the language in your prompts. [The tdd skill assists in writing tests in French](/claude-tdd-skill-test-driven-development-workflow/), producing test descriptions that match your project's language conventions.
 
-Working with French Documentation
+## Working with French Documentation
 
 French technical documentation exists for most major frameworks. The French Django documentation at docs.djangoproject.com/fr/ provides complete coverage. Symfony's French docs at symfony.com/doc/current/index.html offer comprehensive guidance. React's French translation at fr.react.dev serves the frontend community.
 
@@ -52,7 +52,7 @@ When Claude Code processes French documentation, specify the language explicitly
 
 This ensures Claude Code correctly interprets French technical terminology.
 
-Building French-Language Projects
+## Building French-Language Projects
 
 French development projects often require bilingual considerations. Claude Code can assist with internationalization (i18n) workflows. When setting up translation files, use clear prompts:
 
@@ -66,7 +66,7 @@ The xlsx skill helps manage translation spreadsheets. Import your translation fi
 /xlsx add French translations totranslations.xlsx from source column B
 ```
 
-French Coding Conventions and Standards
+## French Coding Conventions and Standards
 
 French developers follow specific naming conventions. French variable names often appear in projects where teams prefer local language identifiers. Claude Code adapts to these preferences when you specify them:
 
@@ -84,7 +84,7 @@ When working on French projects, pay attention to date formats. French uses DD/M
 
 French number formatting uses commas as decimal separators (12,50 €) rather than periods. This matters when generating financial reports or price calculations. Include formatting requirements explicitly in your prompts to avoid confusion.
 
-Local Development Environments
+## Local Development Environments
 
 French developers frequently use development environments configured for French locales. Setting up VS Code with French interface elements integrates well with Claude Code workflows. The key is consistency between your IDE settings and Claude Code interactions.
 
@@ -99,7 +99,7 @@ export LC_ALL=fr_FR.UTF-8
 
 These settings ensure proper handling of French characters in file names, paths, and content processed by Claude Code. Restart your terminal after making these changes.
 
-Practical Workflow Example
+## Practical Workflow Example
 
 A French developer building a web application might use this workflow:
 
@@ -133,13 +133,13 @@ Finally, generate documentation using pdf:
 
 The docx skill also assists when creating Microsoft Word documentation in French. Both skills adapt their output language based on your prompts.
 
-French Developer Events and Meetups
+## French Developer Events and Meetups
 
 French developer meetups occur regularly in major cities. Paris, Lyon, Marseille, and Bordeaux host monthly gatherings focused on web development, AI tools, and specific frameworks. These events often feature talks about AI-assisted development workflows.
 
 Online events have expanded access to French developer communities. Twitch streams and YouTube live sessions cover topics ranging from beginner programming to advanced AI integration. Following relevant channels keeps you informed about emerging practices.
 
-Continuing Your Learning
+## Continuing Your Learning
 
 The French developer community continues producing tutorials, videos, and blog posts about AI-assisted development. YouTube channels like Grafikart and Les Teachers du Net cover web development topics in French. Following these creators helps you stay current with development practices.
 
@@ -148,7 +148,6 @@ Discord servers dedicated to specific frameworks often have channels for AI tool
 Your first step: explore one community listed above and share your Claude Code setup. The French developer ecosystem welcomes newcomers working with AI assistance.
 
 ---
-
 
 Related Reading
 

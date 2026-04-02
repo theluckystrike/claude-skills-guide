@@ -18,7 +18,7 @@ This guide covers building a dedicated skills monorepo. a repository whose sole 
 
 [Managing multiple Claude skills across several projects becomes unwieldy without a clear organizational strategy](/best-claude-code-skills-to-install-first-2026/) A dedicated skills monorepo centralizes your skill library, enables shared template dependencies between skills, and simplifies version control. This guide covers practical approaches for developers and power users who want to maintain a scalable, standalone skill architecture.
 
-Understanding Skill Structure
+## Understanding Skill Structure
 
 Claude skills are Markdown files with YAML front matter that define invocation patterns, descriptions, and optional hooks. Each skill typically lives in its own directory, containing the main `skill.md` file alongside supporting resources like templates, scripts, and configuration files.
 
@@ -34,7 +34,7 @@ my-custom-skill/
 
 When you accumulate dozens of skills across projects, duplicating this structure becomes a maintenance headache. A monorepo solves this by providing a single source of truth.
 
-Recommended Directory Layout
+## Recommended Directory Layout
 
 The most effective monorepo structure groups skills by functional area while maintaining a flat root for easy discovery:
 
@@ -66,7 +66,7 @@ claude-skills-monorepo/
 
 This structure allows you to invoke any skill using its path: `/development/tdd` or `/data/pdf`. Claude Code loads the `skill.md` file from the specified directory and applies its instructions to your current task. For the full specification of the skill.md format, see the [skill MD format guide](/claude-skill-md-format-complete-specification-guide/).
 
-Implementing Shared Dependencies
+## Implementing Shared Dependencies
 
 Many skills repeat the same prompt patterns or helper functions. A monorepo enables true code reuse through shared components. Here's how to structure shared resources:
 
@@ -96,7 +96,7 @@ Now analyze the provided code and identify issues.
 
 This dependency injection pattern keeps your skills DRY (Don't Repeat Yourself) while maintaining modularity.
 
-Skill Composition Patterns
+## Skill Composition Patterns
 
 Advanced users often need skills that combine multiple capabilities. Rather than creating monolithic skills, compose them from smaller, focused units.
 
@@ -122,7 +122,7 @@ This skill coordinates multiple specialized skills for full-stack frontend devel
 
 When invoked, Claude loads each composed skill in sequence, passing context between them. This approach gives you flexibility without maintaining duplicate skill definitions.
 
-Version Control and Updates
+## Version Control and Updates
 
 A monorepo provides natural version control for your skills. Each skill lives as a discrete unit with its own git history, making it easy to track changes and roll back problematic updates.
 
@@ -134,7 +134,7 @@ Recommended practices:
 
 This structure also simplifies sharing skills with your team. Clone the monorepo, configure the skills path in your Claude Code settings, and everyone accesses the same curated skill library.
 
-Configuring Claude Code to Use Your Monorepo
+## Configuring Claude Code to Use Your Monorepo
 
 By default, Claude Code looks for skills in `~/.claude/skills/`. You can customize this location or maintain multiple skill directories:
 
@@ -154,7 +154,7 @@ By default, Claude Code looks for skills in `~/.claude/skills/`. You can customi
 
 This configuration allows you to organize skills across categories while maintaining clean invocation paths.
 
-Real-World Example: Data Analysis Pipeline
+## Real-World Example: Data Analysis Pipeline
 
 Consider a common workflow: extracting data from PDFs, processing it with analysis skills, and generating reports.
 
@@ -188,7 +188,7 @@ Step 3: Generate formatted report
 [Your analysis here]
 ```
 
-Maintenance and Scaling
+## Maintenance and Scaling
 
 As your skill library grows, a monorepo provides tooling opportunities:
 
@@ -212,7 +212,7 @@ done
 
 This catches errors before they reach production usage.
 
-Conclusion
+## Conclusion
 
 Organizing Claude skills in a monorepo provides structure, reuse, and maintainability for growing skill libraries. The key is establishing clear directory conventions, implementing shared component patterns, and configuring Claude Code to point to your centralized repository. Whether you manage five skills or fifty, this approach scales without becoming chaotic.
 

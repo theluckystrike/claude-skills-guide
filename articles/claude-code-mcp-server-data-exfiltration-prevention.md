@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code MCP Server Data Exfiltration Prevention
-
 When you connect Claude Code to external services through MCP servers, you're opening doors that go both ways. A well-configured MCP server can read files, query databases, call APIs, and interact with your development environment. But without proper security measures, these same capabilities become vectors for data exfiltration. This guide covers practical patterns for securing your MCP servers and preventing unintended data leakage.
 
-Understanding the Data Exfiltration Risk
+## Understanding the Data Exfiltration Risk
 
 MCP servers operate as bridges between Claude Code and external systems. When you install a skill like pdf or frontend-design, these skills may depend on MCP servers to function. The problem: once an MCP server has access to your files, environment variables, or API credentials, that access can theoretically be misused either through misconfiguration, compromised prompts, or adversarial prompts injected through conversation context.
 
@@ -31,7 +28,7 @@ Data exfiltration in this context means unauthorized transmission of sensitive i
 
 The risk increases when MCP servers have broad filesystem access or network capabilities, which many default configurations do.
 
-Principle of Least Privilege for MCP Servers
+## Principle of Least Privilege for MCP Servers
 
 The foundational security principle applies directly: each MCP server should have only the minimum access necessary to perform its function. If you're using the tdd skill for test-driven development, it needs file read/write access to your test directories, but it doesn't need network access or environment variable visibility.
 
@@ -56,7 +53,7 @@ Create separate MCP server configurations for different skill categories:
 
 By restricting `allowedDirectories`, you prevent MCP servers from accessing sensitive paths like `~/.ssh`, `~/.aws`, or project directories containing credentials.
 
-Input Validation and Sanitization Patterns
+## Input Validation and Sanitization Patterns
 
 When building custom MCP servers or skills that process external data, validate everything that could become a data exfiltration vector. The supermemory skill, for example, processes notes and memories that might contain sensitive information. Implement validation at the MCP server level:
 
@@ -90,7 +87,7 @@ class SecureInputValidator:
 
 This pattern prevents accidental transmission of credentials that might be pasted into conversation context. Skills like slack-gif-creator and canvas-design that accept user input should implement similar checks.
 
-Network Segmentation and Firewall Rules
+## Network Segmentation and Firewall Rules
 
 For MCP servers that require network access, restrict outbound connections to known endpoints. If your mcp-builder skill needs to interact with specific APIs, configure firewall rules or use container networking to limit what destinations it can reach:
 
@@ -121,7 +118,7 @@ networks:
         - subnet: 172.20.0.0/16
 ```
 
-Audit Logging and Monitoring
+## Audit Logging and Monitoring
 
 Implement comprehensive logging for all MCP server interactions. Track which skills access which resources and flag unusual patterns. The internal-comms skill demonstrates a useful pattern: logging every external API call with timestamps and data summaries:
 
@@ -143,7 +140,7 @@ function logMCPAccess(skillName, action, resource, timestamp = new Date()) {
 
 Review these logs regularly. A spike in filesystem access from a skill that typically doesn't read files, or network calls to unfamiliar domains, can indicate a problem.
 
-Skill-Specific Recommendations
+## Skill-Specific Recommendations
 
 Different skills present different risk profiles. Here's a quick reference:
 
@@ -152,7 +149,7 @@ Different skills present different risk profiles. Here's a quick reference:
 - tdd: Test-driven development skills need write access to test files but should have read-only access to production source files in sensitive projects.
 - algorithmic-art: Generally low risk since it primarily generates output, but verify that any image processing doesn't transmit data externally.
 
-Building Secure Custom Skills
+## Building Secure Custom Skills
 
 When creating your own skills that integrate with MCP servers, embed security requirements in the skill definition itself. Use the `capabilities` field to explicitly declare what the skill can and cannot do:
 
@@ -169,7 +166,7 @@ description: Process documents with security constraints
 
 This declarative approach makes security requirements visible and enforceable.
 
-Regular Security Audits
+## Regular Security Audits
 
 Schedule periodic reviews of your MCP server configurations and installed skills. Check for:
 
@@ -180,12 +177,11 @@ Schedule periodic reviews of your MCP server configurations and installed skills
 
 Remove unused skills and servers. Each active integration is a potential attack surface.
 
-Summary
+## Summary
 
 Preventing data exfiltration through Claude Code MCP servers requires a defense-in-depth approach. Apply least privilege principles to MCP server permissions, validate and sanitize all inputs, segment network access, maintain audit logs, and regularly audit your configurations. By implementing these patterns, you can safely use powerful skills like pdf, tdd, frontend-design, and mcp-builder without exposing your sensitive data to unnecessary risk.
 
 The convenience of MCP-powered skills shouldn't come at the cost of security. Take time to configure access controls properly, and your development workflow will remain both productive and secure.
-
 
 Related Reading
 

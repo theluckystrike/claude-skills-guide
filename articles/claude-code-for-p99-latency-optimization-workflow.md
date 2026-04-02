@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for P99 Latency Optimization Workflow"
 description: "Learn how to use Claude Code to optimize P99 latency in your applications with practical workflows, code examples, and actionable strategies for."
@@ -18,13 +17,13 @@ score: 8
 
 P99 latency optimization is one of the most challenging aspects of building high-performance applications. While average response times might look healthy, the slowest 1% of requests can destroy user experience, trigger timeouts, and cascade into system failures. This guide shows you how to use Claude Code to systematically identify, analyze, and fix P99 latency issues in your applications.
 
-Understanding P99 Latency and Why It Matters
+## Understanding P99 Latency and Why It Matters
 
 P99 latency represents the 99th percentile response time, the threshold below which 99% of your requests fall. If your P99 latency is 2 seconds, it means 99% of requests complete within 2 seconds, but 1% take longer. That 1% might seem acceptable until you realize it represents thousands of failed user sessions at scale.
 
 Traditional profiling tools give you raw data, but Claude Code brings intelligent analysis to the process. It can help you understand not just where latency comes from, but why certain patterns cause P99 spikes and how to fix them efficiently.
 
-Setting Up Latency Monitoring with Claude Code
+## Setting Up Latency Monitoring with Claude Code
 
 Before optimizing, you need measurement. Claude Code can help you set up comprehensive latency tracking across your stack. Here's a practical workflow:
 
@@ -54,7 +53,7 @@ Analyze my request latency metrics and identify which endpoints have the highest
 
 Claude Code can help you create custom skills for your specific stack that automate this analysis and provide actionable insights.
 
-Identifying P99 Latency Root Causes
+## Identifying P99 Latency Root Causes
 
 The hardest part of P99 optimization is often finding the actual bottleneck. P99 spikes typically come from a few common sources:
 
@@ -88,11 +87,11 @@ Claude Code excels at helping you trace through these issues. You can paste your
 Review this function and identify potential P99 latency contributors. Look for blocking operations, missing async/await, database queries that could be optimized, and missing cache layers.
 ```
 
-Practical Optimization Workflow
+## Practical Optimization Workflow
 
 Here's a proven workflow for using Claude Code in your P99 optimization efforts:
 
-Step 1: Baseline Measurement
+## Step 1: Baseline Measurement
 
 Before making changes, establish a clear baseline. Use Claude Code to query your metrics:
 
@@ -101,7 +100,7 @@ Query your metrics system for P99 baseline
 claude-code query "Get P50, P90, P95, and P99 latency for all endpoints over the last 24 hours"
 ```
 
-Step 2: Prioritize Impact
+## Step 2: Prioritize Impact
 
 Not all optimizations are equal. Work with Claude Code to prioritize:
 
@@ -113,7 +112,7 @@ Not all optimizations are equal. Work with Claude Code to prioritize:
 Prioritize my latency optimization efforts. List the top 5 endpoints by potential user impact, considering both P99 severity and request volume.
 ```
 
-Step 3: Implement and Verify
+## Step 3: Implement and Verify
 
 For each optimization, follow this cycle:
 
@@ -136,7 +135,7 @@ SELECT id, status, total FROM orders WHERE user_id = ? AND created_at > ?
 Use EXPLAIN ANALYZE to verify the query uses the index
 ```
 
-Step 4: Monitor for Regression
+## Step 4: Monitor for Regression
 
 P99 optimizations can sometimes introduce new issues. Claude Code can help you set up continuous monitoring:
 
@@ -144,7 +143,7 @@ P99 optimizations can sometimes introduce new issues. Claude Code can help you s
 Create a monitoring skill that alerts when P99 latency exceeds 150% of the 7-day baseline for any endpoint.
 ```
 
-Advanced Techniques for P99 Optimization
+## Advanced Techniques for P99 Optimization
 
 Once you've addressed the basics, consider these advanced strategies:
 
@@ -225,7 +224,7 @@ async function adaptiveRequest(ctx, options = {}) {
 }
 ```
 
-Integrating Claude Code into Your CI/CD Pipeline
+## Integrating Claude Code into Your CI/CD Pipeline
 
 To prevent P99 regressions, integrate latency testing into your CI pipeline. Claude Code can help generate appropriate tests:
 
@@ -235,7 +234,7 @@ Create a load test that measures P99 latency for the /api/users endpoint under 1
 
 You can then run these tests in your CI pipeline and block deployments that regress P99 performance.
 
-Conclusion
+## Conclusion
 
 P99 latency optimization requires a systematic approach, measure, prioritize, fix, and verify. Claude Code accelerates every step of this process by helping you analyze metrics intelligently, identify root causes quickly, implement fixes accurately, and monitor for regressions continuously.
 

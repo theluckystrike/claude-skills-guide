@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Zero Trust Security Workflow Guide
 
@@ -21,7 +20,7 @@ The traditional perimeter-based security model assumes everything inside your ne
 
 This guide shows developers how to apply zero trust principles when working with Claude Code, covering practical implementations, code patterns, and actionable security practices.
 
-Understanding Zero Trust in AI-Assisted Development
+## Understanding Zero Trust in AI-Assisted Development
 
 Zero trust operates on a simple premise: every request, action, and output must be verified regardless of its source. When Claude Code writes code, executes shell commands, or accesses files, these actions should be treated as potentially harmful until validated.
 
@@ -33,7 +32,7 @@ Traditional development security focuses on protecting the perimeter. Zero trust
 
 The shift matters more for AI assistants than it did for human developers. A human developer who has been with your team for two years has an established track record, institutional context, and accountability for their actions. An AI session starts fresh every time with no institutional memory and no inherent accountability. Zero trust compensates for exactly these properties.
 
-The Threat Surface of AI-Assisted Development
+## The Threat Surface of AI-Assisted Development
 
 Before implementing controls, understand what you are actually protecting against. The threats in an AI-assisted development workflow differ from conventional application security threats:
 
@@ -47,7 +46,7 @@ Output trust elevation: Developers sometimes merge AI-generated code directly wi
 
 Each threat has a countermeasure. The patterns in this guide address all four.
 
-Implementing Zero Trust with Claude Code
+## Implementing Zero Trust with Claude Code
 
 1. Permission Boundaries and Tool Restrictions
 
@@ -238,9 +237,9 @@ def verify_dependency(package_name: str, ecosystem: str) -> DependencyVerificati
 
 This check will not catch every malicious package, but it catches hallucinated names before they can be exploited. Pair it with `npm audit` or `pip-audit` after installation to catch known vulnerabilities in legitimate packages.
 
-Practical Zero Trust Workflows
+## Practical Zero Trust Workflows
 
-Automated Security Scanning
+## Automated Security Scanning
 
 Integrate security scanning into your Claude Code workflow:
 
@@ -287,7 +286,7 @@ def run_semgrep_validation(code_path: str) -> list:
     return [f["message"] for f in findings if f["extra"]["severity"] == "ERROR"]
 ```
 
-Secrets Management Integration
+## Secrets Management Integration
 
 Never allow Claude Code direct access to secrets. Instead, implement secret injection through secure channels:
 
@@ -320,7 +319,7 @@ def create_scoped_session_token(task_type: str, duration_minutes: int = 60) -> s
     return token["auth"]["client_token"]
 ```
 
-Comparing Zero Trust Approaches
+## Comparing Zero Trust Approaches
 
 Different implementation strategies involve different trade-offs. Choose based on your team's security requirements and operational tolerance:
 
@@ -333,7 +332,7 @@ Different implementation strategies involve different trade-offs. Choose based o
 
 For most teams, the middle two options offer the best return on investment. Config-only is insufficient for codebases handling sensitive data. Full verification pipelines are appropriate for financial, healthcare, or security-critical applications.
 
-Actionable Best Practices
+## Actionable Best Practices
 
 1. Validate before executing: Implement mandatory code review for AI-generated changes before they reach your codebase.
 
@@ -358,7 +357,7 @@ security:
 
 7. Test your controls: Periodically attempt to violate your own restrictions to verify they work. A permission configuration that has never been tested under adversarial conditions provides false confidence.
 
-Monitoring and Incident Response
+## Monitoring and Incident Response
 
 Zero trust requires monitoring. Set up alerts for unusual patterns:
 
@@ -390,7 +389,7 @@ Define a clear incident response procedure before you need it:
 
 The most important step is containment. A revoked session token means no further actions can be taken, bounding the damage window to whatever occurred before detection.
 
-Building a Zero Trust Culture
+## Building a Zero Trust Culture
 
 Technical controls are necessary but not sufficient. Your team's practices determine whether zero trust actually holds:
 
@@ -401,7 +400,7 @@ Technical controls are necessary but not sufficient. Your team's practices deter
 
 Teams that implement the technical controls but skip the cultural practices end up with security theater: checkboxes that indicate compliance without delivering protection.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your development workflow doesn't mean abandoning security. Zero trust principles, explicit verification, least privilege, and assume breach, provide a framework for safe AI-assisted development. Implement the patterns in this guide to maintain security while benefiting from AI productivity.
 

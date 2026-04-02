@@ -16,7 +16,7 @@ permalink: /claude-code-gitignore-best-practices/
 
 When working with Claude Code and its skills ecosystem, proper `.gitignore` configuration prevents accidentally committing sensitive data, skill cache files, and project artifacts that should stay local. This guide covers essential gitignore patterns for Claude Code projects. For a broader introduction to project setup, see [Claude Code for beginners: getting started 2026](/claude-code-for-beginners-complete-getting-started-2026/).
 
-Why Gitignore Matters for Claude Code
+## Why Gitignore Matters for Claude Code
 
 Claude Code stores skill data, conversation history, and working files in specific directories within your project. Without proper exclusions, you risk committing:
 
@@ -25,7 +25,7 @@ Claude Code stores skill data, conversation history, and working files in specif
 - API keys and credentials used by skills
 - Build artifacts from skill-powered workflows
 
-Essential Claude Code Gitignore Patterns
+## Essential Claude Code Gitignore Patterns
 
 Add these patterns to your project's `.gitignore` to keep your repository clean and secure:
 
@@ -94,9 +94,9 @@ Commit base settings but not local overrides
 
 This pattern lets your team share a baseline configuration through source control without clobbering each developer's local preferences.
 
-Skill-Specific Gitignore Recommendations
+## Skill-Specific Gitignore Recommendations
 
-For Projects Using the pdf Skill
+## For Projects Using the pdf Skill
 
 If you're processing documents with the `pdf` skill, exclude output directories. The [best Claude Code skills to install first in 2026](/best-claude-code-skills-to-install-first-2026/) guide covers which skills generate the most filesystem output worth excluding:
 
@@ -107,7 +107,7 @@ processed-docs/
 extracted-data/
 ```
 
-For Projects Using the tdd Skill
+## For Projects Using the tdd Skill
 
 When running test-driven development:
 
@@ -118,7 +118,7 @@ coverage/
 .nyc_output/
 ```
 
-For Projects Using the xlsx and docx Skills
+## For Projects Using the xlsx and docx Skills
 
 Spreadsheet and document automation generates temporary files:
 
@@ -128,7 +128,7 @@ excel-temp/
 docx-cache/
 ```
 
-Global vs Project-Level Gitignore
+## Global vs Project-Level Gitignore
 
 Git supports two tiers of ignore rules, and understanding the difference is important for Claude Code workflows.
 
@@ -189,7 +189,7 @@ Ignore most of .claude/ but share the base settings
 
 This approach is common on teams that want all developers running the same skill set without enforcing local machine paths or personal preferences.
 
-Verifying Your Gitignore
+## Verifying Your Gitignore
 
 Before committing, check what will be tracked:
 
@@ -204,9 +204,9 @@ Verify gitignore is working
 git check-ignore -v filename
 ```
 
-Common Mistakes to Avoid
+## Common Mistakes to Avoid
 
-Ignoring Lock Files
+## Ignoring Lock Files
 
 One of the most damaging gitignore mistakes is accidentally excluding lock files. Lock files (`package-lock.json`, `yarn.lock`, `poetry.lock`, `Gemfile.lock`) record the exact dependency versions your project used when it last worked. They should almost always be committed.
 
@@ -221,7 +221,7 @@ Dangerous: excludes package-lock.json and yarn.lock too
 *.lock
 ```
 
-Over-Ignoring Source Directories
+## Over-Ignoring Source Directories
 
 Adding `src/` or `lib/` to `.gitignore` by mistake wipes your source code from tracking. This usually happens when someone copies a gitignore template from a different project type. Always review templates before applying them. a Node.js template might safely ignore `lib/` (where TypeScript compiles to), but in a Python project `lib/` might be where your actual source lives.
 
@@ -229,7 +229,7 @@ Committing `.claude/settings.json` with Embedded Credentials
 
 Claude Code settings files can accumulate API keys, MCP server URLs with embedded tokens, and file paths that expose your directory structure. Even if a key is rotated, its presence in git history creates a security audit trail problem. If you have already committed sensitive data, use `git filter-repo` or `BFG Repo Cleaner` to scrub history. simply deleting the file in a new commit is not enough.
 
-Forgetting Already-Tracked Files
+## Forgetting Already-Tracked Files
 
 Adding a pattern to `.gitignore` does not automatically un-track files that are already in the repository. If you accidentally committed `.claude/settings.json` and then added it to `.gitignore`, git will keep tracking it. You must explicitly remove it from tracking:
 
@@ -240,7 +240,7 @@ git commit -m "stop tracking claude settings"
 
 The `--cached` flag removes the file from git's index without deleting it from your working directory.
 
-Duplicate and Conflicting Patterns
+## Duplicate and Conflicting Patterns
 
 Gitignore files read top to bottom, and negation patterns (`!pattern`) only un-ignore something that was ignored by an earlier rule. A common mistake is placing a negation before the rule it is meant to override:
 
@@ -254,11 +254,11 @@ Correct. negate after the broader ignore
 !.claude/settings.json
 ```
 
-Gitignore Templates for Different Project Types
+## Gitignore Templates for Different Project Types
 
 Claude Code is used across a wide variety of project structures. Here are focused gitignore examples for the most common setups.
 
-Node.js / TypeScript Projects
+## Node.js / TypeScript Projects
 
 ```
 Claude Code
@@ -297,7 +297,7 @@ Lock files. DO NOT IGNORE
 package-lock.json and yarn.lock should be committed
 ```
 
-Python Projects
+## Python Projects
 
 ```
 Claude Code
@@ -337,7 +337,7 @@ Jupyter notebooks. optional, include if notebooks are source
 .ipynb_checkpoints/
 ```
 
-Jekyll / Static Site Projects
+## Jekyll / Static Site Projects
 
 If you use Claude Code to generate or edit content for a Jekyll site (as this very guide does), your gitignore needs to account for both Jekyll's build output and Claude Code's working files:
 
@@ -367,7 +367,7 @@ OS
 
 Note that `_site/` is always safe to gitignore for Jekyll projects. GitHub Pages rebuilds it on every push, so committing it adds churn without value.
 
-Integrating with Claude Skills Workflow
+## Integrating with Claude Skills Workflow
 
 When using skills like `docx` for documentation or `xlsx` for data analysis, ensure your workflow generates to excluded directories. The [Claude xlsx skill spreadsheet automation tutorial](/claude-xlsx-skill-spreadsheet-automation-tutorial/) shows how to configure output paths to keep generated files out of source control. Configure skill output paths in your project structure:
 
@@ -380,7 +380,7 @@ project/
     exports/
 ```
 
-Best Practices Summary
+## Best Practices Summary
 
 - Add Claude Code specific patterns to every project `.gitignore`
 - Use a global gitignore for system-level exclusions

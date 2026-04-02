@@ -24,7 +24,7 @@ Chrome Remote Desktop relies on your internet connection and the computational r
 - Suboptimal display and connection settings. Default settings prioritize quality over speed
 - Firewall or router configuration issues. Incorrectly configured network equipment can fragment packets or block traffic
 
-Quick Fixes to Improve Performance
+## Quick Fixes to Improve Performance
 
 1. Reduce Display Quality
 
@@ -70,7 +70,7 @@ Access the Chrome Remote Desktop settings:
 
 5. Optimize Network Settings
 
-Port Forwarding
+## Port Forwarding
 
 Chrome Remote Desktop uses port 443 (TCP) and 3478 (UDP). Ensure these are open:
 
@@ -105,9 +105,9 @@ If you're experiencing display glitches or lag:
 
 Sometimes the browser-based version performs better than the installed extension. Try accessing Chrome Remote Desktop through `remotedesktop.google.com` rather than using the installed app.
 
-Advanced Solutions
+## Advanced Solutions
 
-Use Alternative Ports
+## Use Alternative Ports
 
 Chrome Remote Desktop can use alternative ports if port 443 is problematic. Create a config file:
 
@@ -122,7 +122,7 @@ Windows: `%USERPROFILE%\.chromeremotedesktop\cfg.json`
 }
 ```
 
-Set Up a VPN for Better Security and Performance
+## Set Up a VPN for Better Security and Performance
 
 Using a VPN can sometimes improve performance by:
 
@@ -132,7 +132,7 @@ Using a VPN can sometimes improve performance by:
 
 Popular options include WireGuard, OpenVPN, or Tailscale.
 
-Monitor Network Performance
+## Monitor Network Performance
 
 Use these tools to diagnose network issues:
 
@@ -147,7 +147,7 @@ Monitor bandwidth
 iftop -i eth0
 ```
 
-Consider Alternatives for High-Performance Needs
+## Consider Alternatives for High-Performance Needs
 
 If Chrome Remote Desktop is consistently too slow, consider:
 
@@ -156,11 +156,11 @@ If Chrome Remote Desktop is consistently too slow, consider:
 - RustDesk for self-hosted alternatives
 - VNC over SSH for maximum control
 
-Optimizing the Host Machine for Remote Sessions
+## Optimizing the Host Machine for Remote Sessions
 
 The host machine does the heavy lifting in a Chrome Remote Desktop session. It encodes the display output, compresses frames, and sends them over the network. Any bottleneck here will show up as lag on the client side regardless of how fast the connection is.
 
-Reduce Host Display Resolution Before Connecting
+## Reduce Host Display Resolution Before Connecting
 
 One of the most effective and overlooked optimizations is lowering the host machine's actual screen resolution before a session starts, not just using the "fit to window" option in the session toolbar. A 4K display at native resolution generates far more pixel data per frame than a 1080p display. On Linux, you can change this from the command line:
 
@@ -174,7 +174,7 @@ xrandr --output HDMI-1 --mode 1920x1080
 
 On Windows, right-click the desktop, choose Display Settings, and drop the resolution to 1920x1080 or lower before starting your remote session. This alone can cut bandwidth usage in half and reduce encoding time on the host CPU.
 
-Disable Visual Effects on the Host
+## Disable Visual Effects on the Host
 
 Windows and macOS both apply animations, transparency effects, and font smoothing that generate unnecessary frame updates during a remote session. On Windows:
 
@@ -184,7 +184,7 @@ Windows and macOS both apply animations, transparency effects, and font smoothin
 
 On macOS, go to System Settings, Accessibility, Display, and enable "Reduce Motion" and "Reduce Transparency." These settings eliminate a class of CPU work on the host that contributes to choppy sessions.
 
-Limit Background Services During Sessions
+## Limit Background Services During Sessions
 
 Scheduled tasks, backup software, and antivirus scans frequently kick off during the day and compete with Chrome Remote Desktop for CPU and disk I/O. On Windows, you can temporarily disable Windows Update delivery from Task Scheduler or reschedule scans to overnight hours. On Linux, check for cron jobs or systemd timers that might run during business hours:
 
@@ -201,11 +201,11 @@ ls /etc/cron.d/
 
 Suspending resource-heavy background jobs during remote sessions is often more impactful than any browser-level setting.
 
-Diagnosing Your Connection Quality
+## Diagnosing Your Connection Quality
 
 Before applying fixes blindly, it helps to establish a baseline measurement of your connection quality. Knowing your actual round-trip time to the host tells you whether you're dealing with a network problem, a hardware problem, or a configuration problem.
 
-Measure Round-Trip Time and Packet Loss
+## Measure Round-Trip Time and Packet Loss
 
 ```bash
 Run a continuous ping to measure latency variance (jitter)
@@ -217,7 +217,7 @@ ping -n 100 your-host-ip
 
 A round-trip time under 30ms generally produces smooth sessions. Between 30ms and 80ms, you will notice some delay but it remains workable. Above 80ms, the lag becomes disruptive for interactive use. Packet loss above 1% causes visible freezing and frame corruption.
 
-Check Bandwidth Available to the Session
+## Check Bandwidth Available to the Session
 
 Chrome Remote Desktop typically needs 2-5 Mbps for a comfortable 1080p session. Run a speed test specifically from the host machine's network interface, not from a phone or another device on the same WiFi network. A fast house internet connection might still produce poor remote desktop performance if the host is on WiFi with weak signal.
 
@@ -232,11 +232,11 @@ curl -o /dev/null http://speedtest.tele2.net/10MB.zip
 
 If you find that bandwidth is fine but latency is high, the issue is geographic distance or routing, and a VPN with a server located close to the host machine can sometimes improve the path.
 
-Using Chrome Remote Desktop for Developer Workflows
+## Using Chrome Remote Desktop for Developer Workflows
 
 Developers often push Chrome Remote Desktop harder than casual users. Running an IDE, compiling code, and streaming terminal output simultaneously creates unique performance demands worth addressing specifically.
 
-Run Terminals and IDEs in Low-Overhead Configurations
+## Run Terminals and IDEs in Low-Overhead Configurations
 
 Heavy IDEs like VS Code or JetBrains tools render constantly even when idle, due to cursor blinking, syntax highlighting repaints, and extension activity. During remote sessions, consider:
 
@@ -255,7 +255,7 @@ Reattach later
 tmux attach -t dev
 ```
 
-Keep a Lightweight Browser Profile on the Host
+## Keep a Lightweight Browser Profile on the Host
 
 If you are using a browser inside the remote session, avoid running your full personal Chrome profile with dozens of extensions. Create a dedicated minimal profile for remote work:
 
@@ -266,7 +266,7 @@ If you are using a browser inside the remote session, avoid running your full pe
 
 This reduces the memory and CPU footprint of the in-session browser to a fraction of what a loaded personal profile consumes.
 
-Script a Pre-Session Optimization Routine
+## Script a Pre-Session Optimization Routine
 
 For developers who use Chrome Remote Desktop regularly, a short shell script that prepares the host can eliminate manual setup time:
 
@@ -289,7 +289,7 @@ echo "Host ready for remote session."
 
 Run this script before initiating a session for consistently better performance without remembering individual steps each time.
 
-Summary Checklist
+## Summary Checklist
 
 - [ ] Reduce display resolution and quality settings
 - [ ] Lower the host's actual screen resolution before connecting
@@ -305,7 +305,6 @@ Summary Checklist
 - [ ] Use tmux or a minimal browser profile for developer workflows
 
 Most users see significant improvement after trying the quick fixes, particularly reducing display quality and using a wired connection. The host-side optimizations around screen resolution and visual effects deliver results that browser settings alone cannot. If problems persist, the advanced solutions like VPN setup or alternative remote desktop software may provide better results.
-
 
 Related Reading
 

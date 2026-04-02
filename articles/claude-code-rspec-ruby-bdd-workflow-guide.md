@@ -13,12 +13,9 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code RSpec Ruby BDD Workflow Guide
-
 Integrating Claude Code into your RSpec and BDD workflow transforms how Ruby developers write, maintain, and debug tests. This guide provides practical strategies for combining Claude's AI capabilities with RSpec, Cucumber, and Behavior-Driven Development practices to accelerate your test-driven development cycle.
 
-Setting Up RSpec with Claude Code
+## Setting Up RSpec with Claude Code
 
 Before implementing the workflow, ensure your Ruby project has RSpec properly configured alongside Claude Code. The combination works exceptionally well when your testing infrastructure is clean and organized.
 
@@ -42,7 +39,7 @@ Configure your `.rspec` file for optimal output:
 
 Claude Code can navigate your RSpec setup quickly when you provide context about your Rails version, Ruby version, and testing dependencies. Include these details in your CLAUDE.md file for faster onboarding.
 
-Writing RSpec Tests with Claude Code
+## Writing RSpec Tests with Claude Code
 
 Claude Code excels at generating RSpec examples that follow BDD principles. When requesting test creation, specify the expected behavior rather than implementation details.
 
@@ -72,7 +69,7 @@ end
 
 The generated tests follow RSpec best practices, including the use of Factory Bot, shoulda-matchers, and descriptive example names that document behavior.
 
-Implementing BDD with Cucumber and RSpec
+## Implementing BDD with Cucumber and RSpec
 
 Behavior-Driven Development in Ruby typically combines Cucumber's Gherkin syntax with RSpec for underlying step definitions. Claude Code helps bridge these two layers efficiently.
 
@@ -116,7 +113,7 @@ end
 
 The step definitions follow the Arrange-Act-Assert pattern and integrate cleanly with Capybara for feature testing.
 
-Using the TDD Skill for Test-First Development
+## Using the TDD Skill for Test-First Development
 
 The claude-tdd skill specifically enhances test-driven development workflows. This skill emphasizes writing tests before implementation, a core BDD principle that improves code design and reduces bugs.
 
@@ -166,7 +163,7 @@ RSpec.describe 'Shopping Cart', type: :feature do
 end
 ```
 
-Managing Test Data with Factory Bot
+## Managing Test Data with Factory Bot
 
 Effective BDD requires clean, reproducible test data. Claude Code understands Factory Bot patterns and generates factories that support your test scenarios.
 
@@ -209,13 +206,13 @@ FactoryBot.define do
 end
 ```
 
-Integrating Documentation Workflows
+## Integrating Documentation Workflows
 
 The pdf skill complements BDD workflows by generating test reports and documentation. After running your RSpec suite, use this skill to create formatted documentation for stakeholders.
 
 The supermemory skill helps maintain context across test sessions, remembering which scenarios you've covered and identifying gaps in your test suite.
 
-Best Practices for RSpec and BDD Workflows
+## Best Practices for RSpec and BDD Workflows
 
 Follow these practices when combining Claude Code with RSpec:
 
@@ -267,7 +264,7 @@ end
 
 This structure makes tests self-documenting and easy to maintain when requirements change.
 
-Automating Test Maintenance
+## Automating Test Maintenance
 
 Claude Code assists with common RSpec maintenance tasks:
 
@@ -287,7 +284,7 @@ Refactor these repetitive specs using shared examples:
 
 Claude Code produces clean, DRY test code that follows RSpec conventions.
 
-CI Integration and Reporting
+## CI Integration and Reporting
 
 Integrate your RSpec workflow with continuous integration:
 
@@ -314,10 +311,9 @@ jobs:
 
 Claude Code can generate CI configurations and help interpret test failures in CI environments.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with RSpec and BDD practices creates a powerful development workflow. The AI assistant generates clean, maintainable tests following RSpec conventions, helps implement BDD with Cucumber, and supports the test-first mentality that leads to better-designed Ruby applications.
-
 
 Related Reading
 

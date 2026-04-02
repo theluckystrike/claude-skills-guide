@@ -17,7 +17,7 @@ Chrome Extension for Amazon Product Research
 
 Product research on Amazon requires gathering data from multiple pages, tracking price history, analyzing reviews, and identifying trends. For developers and power users, building a custom Chrome extension automates these tasks and provides personalized workflows. This guide covers the architecture, implementation patterns, and practical considerations for creating Amazon product research extensions.
 
-Understanding the Amazon Product Research Workflow
+## Understanding the Amazon Product Research Workflow
 
 Before writing code, understand what data points matter for product research:
 
@@ -30,7 +30,7 @@ Before writing code, understand what data points matter for product research:
 
 Chrome extensions excel at this because they can inject scripts into Amazon pages, extract DOM elements, and aggregate data across multiple products.
 
-Extension Architecture
+## Extension Architecture
 
 A typical Amazon product research extension uses the Manifest V3 architecture with three main components:
 
@@ -60,7 +60,7 @@ A typical Amazon product research extension uses the Manifest V3 architecture wi
 
 The content script runs on Amazon pages and extracts product data. The background service worker handles data aggregation and storage. The popup provides the user interface for viewing and exporting research data.
 
-Extracting Product Data from Amazon Pages
+## Extracting Product Data from Amazon Pages
 
 Content scripts inject into Amazon product pages and extract relevant data using DOM queries. Here's a practical implementation:
 
@@ -116,7 +116,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Building a Research Dashboard
+## Building a Research Dashboard
 
 For multi-product research, aggregate data into a dashboard view. Store research results using Chrome's storage API:
 
@@ -153,7 +153,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Handling Amazon's Dynamic Content
+## Handling Amazon's Dynamic Content
 
 Amazon uses heavy JavaScript rendering, so content scripts must wait for page elements to load. Use mutation observers or wait for specific elements:
 
@@ -200,7 +200,7 @@ async function extractWithWait() {
 }
 ```
 
-Exporting Research Data
+## Exporting Research Data
 
 Power users need to export data for deeper analysis. Support CSV and JSON formats:
 
@@ -244,7 +244,7 @@ function exportToJSON(products) {
 }
 ```
 
-Rate Limiting and Ethical Considerations
+## Rate Limiting and Ethical Considerations
 
 When building product research extensions, respect Amazon's terms of service and implement rate limiting:
 
@@ -280,7 +280,7 @@ const rateLimiter = {
 
 Avoid overwhelming Amazon's servers with rapid requests. Space out your data collection to minimize impact on their infrastructure.
 
-Testing Your Extension
+## Testing Your Extension
 
 Test extensions locally using Chrome's developer mode:
 
@@ -291,12 +291,11 @@ Test extensions locally using Chrome's developer mode:
 
 Create separate test cases for different Amazon domain variations (amazon.com, amazon.co.uk, amazon.de, etc.) since DOM structures may vary.
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for Amazon product research gives you complete control over your data collection workflow. Start with basic product extraction, then expand to include price tracking, review analysis, and competitive benchmarking. The key is structuring your data early so you can scale your research capabilities over time.
 
 For developers, the extension serves as a foundation for more advanced tools, integrate with external databases, add machine learning for sentiment analysis, or connect to inventory management systems. The browser is your interface, and Amazon's data is your canvas.
-
 
 Related Reading
 
@@ -306,7 +305,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Building the Amazon Product Researcher
+## Step-by-Step: Building the Amazon Product Researcher
 
 1. Detect Amazon product pages: check the URL for `/dp/` and extract the ASIN from the path. The ASIN is the 10-character alphanumeric identifier in the URL segment after `/dp/`.
 2. Aggregate product data from the page: read product title, brand, price, rating, review count, and BSR (Best Sellers Rank) from the DOM. All of these are present in structured data (`application/ld+json`) or in predictable elements.
@@ -315,7 +314,7 @@ Step-by-Step: Building the Amazon Product Researcher
 5. Research competitor products: based on the product category and BSR, suggest 3-5 competing products. You can use the Amazon Product Advertising API for this, or scrape the "Customers also bought" section.
 6. Export research notes: let users save their product research as a structured note (title, ASIN, price, pros, cons, verdict) to `chrome.storage.local` with export to Notion or Airtable.
 
-Extracting Amazon Structured Data
+## Extracting Amazon Structured Data
 
 ```javascript
 function extractProductData() {
@@ -347,7 +346,7 @@ function extractProductData() {
 }
 ```
 
-Comparison with Dedicated Research Tools
+## Comparison with Dedicated Research Tools
 
 | Tool | Real-time data | AI analysis | Review sentiment | Export | Cost |
 |---|---|---|---|---|---|
@@ -359,7 +358,7 @@ Comparison with Dedicated Research Tools
 
 The custom extension is most powerful for individual buyers and small sellers who need AI-driven review analysis without paying for a full research platform subscription.
 
-Advanced: Review Sentiment Analysis
+## Advanced: Review Sentiment Analysis
 
 Classify reviews into sentiment categories for quick competitive analysis:
 
@@ -375,7 +374,7 @@ async function analyzeReviews(reviews) {
 }
 ```
 
-Troubleshooting
+## Troubleshooting
 
 BSR not found on all product pages: BSR is only shown for products ranked in a category. Check for `productDetails` table rows matching "Best Sellers Rank" text. the format changes between categories and product types.
 

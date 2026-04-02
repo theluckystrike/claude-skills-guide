@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Code Freeze Deployment Workflow"
 description: "Learn how to use Claude Code effectively during code freeze periods to maintain stability, reduce deployment risks, and keep your team productive."
@@ -20,7 +19,7 @@ Code freeze periods are critical moments in software development where teams hal
 
 This guide explores practical strategies and code examples for using Claude Code during code freeze periods, from automated validation to controlled deployment pipelines.
 
-Understanding Code Freeze in Modern DevOps
+## Understanding Code Freeze in Modern DevOps
 
 A code freeze (also known as a feature freeze) is a development phase where new code changes are restricted or heavily controlled. During this period, teams typically:
 
@@ -31,7 +30,7 @@ A code freeze (also known as a feature freeze) is a development phase where new 
 
 The challenge many teams face is balancing the need for caution with maintaining momentum. This is where Claude Code becomes invaluable, it can automate many validation tasks, enforce policies, and help developers work efficiently within constraints.
 
-Setting Up Claude Code for Code Freeze Workflows
+## Setting Up Claude Code for Code Freeze Workflows
 
 Before entering code freeze, configure Claude Code with specific skills and rules that align with your freeze policies. Create a dedicated skill for code freeze validation:
 
@@ -53,7 +52,7 @@ Validation Rules
 - Run extended linting checks
 ```
 
-Automated Change Classification
+## Automated Change Classification
 
 One of Claude Code's most valuable capabilities during code freeze is automatic change classification. Before any code reaches review, Claude can categorize changes as:
 
@@ -71,7 +70,7 @@ Claude will categorize and recommend the appropriate path
 
 This classification helps reviewers prioritize their time and ensures critical fixes get fast-tracked while maintaining proper oversight for routine changes.
 
-Pre-Deployment Validation Pipeline
+## Pre-Deployment Validation Pipeline
 
 During code freeze, every change requires thorough validation before deployment. Claude Code can orchestrate a comprehensive pre-deployment check:
 
@@ -117,7 +116,7 @@ if __name__ == "__main__":
     sys.exit(0 if success else 1)
 ```
 
-Controlled Deployment with Approval Gates
+## Controlled Deployment with Approval Gates
 
 Code freeze deployments require additional approval checkpoints. Claude Code can help manage this process by generating clear deployment requests:
 
@@ -151,7 +150,7 @@ jobs:
           min-reviewers: 2
 ```
 
-Hotfix Workflows During Code Freeze
+## Hotfix Workflows During Code Freeze
 
 Despite the freeze, production issues sometimes demand immediate attention. Claude Code supports controlled hotfix workflows that maintain safety while enabling speed:
 
@@ -173,7 +172,7 @@ The key is ensuring hotfixes still go through proper channels while reducing fri
 - Identifying similar fixes that were previously validated
 - Ensuring proper rollback procedures are documented
 
-Post-Deployment Monitoring Integration
+## Post-Deployment Monitoring Integration
 
 After deploying during code freeze, monitoring becomes even more critical. Claude Code can help configure and interpret monitoring alerts:
 
@@ -189,7 +188,7 @@ This integration with your monitoring stack provides:
 - Summary reports for stakeholders
 - Historical comparison with previous deployments
 
-Best Practices for Code Freeze Success
+## Best Practices for Code Freeze Success
 
 To maximize Claude Code's effectiveness during code freeze periods, follow these proven practices:
 

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Bootcamp Students: Productivity Guide"
 description: "Master Claude Code to accelerate your coding bootcamp journey. Learn practical tips, workflows, and strategies to complete projects faster and learn."
@@ -14,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Bootcamp Students: Productivity Guide
-
 Coding bootcamps move at an intense pace. Between learning new frameworks, building portfolio projects, and preparing for technical interviews, every hour counts. Claude Code can be your secret weapon to work smarter, not just harder. This guide shows you how to use this AI coding assistant to maximize your bootcamp productivity.
 
-Why Bootcamp Students Need Claude Code
+## Why Bootcamp Students Need Claude Code
 
 Bootcamp students face unique challenges: compressed timelines, overwhelming amounts of new information, and the need to build real projects quickly. Claude Code helps in several ways:
 
@@ -28,9 +24,9 @@ Bootcamp students face unique challenges: compressed timelines, overwhelming amo
 - Generate boilerplate: Focus on learning concepts, not repetitive code
 - Practice effectively: Get help with coding challenges and algorithm practice
 
-Setting Up Claude Code for Bootcamp Success
+## Setting Up Claude Code for Bootcamp Success
 
-Installation
+## Installation
 
 Most bootcamp environments use Node.js, making npm the easiest installation method:
 
@@ -44,7 +40,7 @@ Verify your installation:
 claude --version
 ```
 
-Initial Configuration
+## Initial Configuration
 
 Create a claude.md file in your project root to set up your preferences:
 
@@ -66,9 +62,9 @@ Help Me Learn
 - Point out learning resources for concepts I struggle with
 ```
 
-Practical Workflows for Bootcamp Students
+## Practical Workflows for Bootcamp Students
 
-Understanding New Concepts
+## Understanding New Concepts
 
 When you encounter unfamiliar code, ask Claude Code to explain:
 
@@ -82,7 +78,7 @@ For algorithm problems:
 Walk me through the time and space complexity of this sorting approach
 ```
 
-Building Projects Faster
+## Building Projects Faster
 
 For portfolio projects, use a structured approach:
 
@@ -101,7 +97,7 @@ Create a user authentication component in React with:
 - Use useState for form management
 ```
 
-Debugging Effectively
+## Debugging Effectively
 
 Instead of pasting entire error messages, try these approaches:
 
@@ -116,7 +112,7 @@ For logic bugs:
 My function should return the sum of all even numbers in an array, but it's returning incorrect results. Can you help me find the bug?
 ```
 
-Code Review Your Own Work
+## Code Review Your Own Work
 
 Before submitting assignments, use Claude Code to review:
 
@@ -128,9 +124,9 @@ Review this code for:
 - Anything I should test more thoroughly
 ```
 
-Bootcamp-Specific Tips
+## Bootcamp-Specific Tips
 
-Managing Multiple Projects
+## Managing Multiple Projects
 
 Bootcamp students often juggle several projects. Use project-specific claude.md files:
 
@@ -141,7 +137,7 @@ Project: E-commerce Dashboard
 - Struggling with: Filtering and sorting logic
 ```
 
-Preparing for Technical Interviews
+## Preparing for Technical Interviews
 
 Claude Code excels at interview prep:
 
@@ -160,7 +156,7 @@ Mock interviews:
 Let's do a mock coding interview. Give me a problem, then evaluate my solution
 ```
 
-Building Your Portfolio
+## Building Your Portfolio
 
 Your portfolio is crucial for job searches. Use Claude Code to:
 
@@ -169,7 +165,7 @@ Your portfolio is crucial for job searches. Use Claude Code to:
 - Create demo scripts
 - Write clean, professional code that impresses reviewers
 
-Essential Skills to Install
+## Essential Skills to Install
 
 For bootcamp students, these skills provide the most value:
 
@@ -186,9 +182,9 @@ Install skills using:
 claude /[skill-name]
 ```
 
-Common Bootcamp Mistakes to Avoid
+## Common Bootcamp Mistakes to Avoid
 
-Relying Too Much on AI
+## Relying Too Much on AI
 
 Claude Code should enhance your learning, not replace it. Always:
 
@@ -196,7 +192,7 @@ Claude Code should enhance your learning, not replace it. Always:
 - Study the code Claude Code generates
 - Understand *why* the solution works, not just *what* it does
 
-Not Providing Context
+## Not Providing Context
 
 Vague prompts lead to poor results. Instead of:
 
@@ -210,7 +206,7 @@ Try:
 My authentication login is failing with a 401 error. I've verified the API endpoint works in Postman. Here's my fetch call and the error handling code.
 ```
 
-Skipping the Learning Step
+## Skipping the Learning Step
 
 Always ask for explanations:
 
@@ -222,7 +218,7 @@ Before you write the code, explain the approach you'll take
 What are the tradeoffs of this solution?
 ```
 
-Measuring Your Productivity Gains
+## Measuring Your Productivity Gains
 
 Track your progress with these metrics:
 
@@ -231,7 +227,7 @@ Track your progress with these metrics:
 - Understanding depth: Can you explain generated code?
 - Interview readiness: Track problems solved confidently
 
-Conclusion
+## Conclusion
 
 Claude Code is a powerful tool for bootcamp students, but remember: it's a supplement to your learning, not a replacement. Use it to accelerate your understanding, not to bypass the hard work of becoming a developer.
 

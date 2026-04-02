@@ -16,7 +16,7 @@ permalink: /claude-skill-not-triggering-automatically-troubleshoot/
 
 You typed `/tdd` or `/pdf` in a Claude Code session and nothing happened. or Claude responded as if the skill did not exist. This is one of the most-reported issues with Claude skills, and it is almost always a configuration or file-placement problem. This guide walks through every known cause and gives you a fix for each one.
 
-How Skill Invocation Works
+## How Skill Invocation Works
 
 When you type `/skill-name` in Claude Code, the runtime looks for a matching `.md` file in two locations (checked in this order):
 
@@ -27,7 +27,7 @@ The filename must match the invocation name exactly. `/tdd` looks for `tdd.md`, 
 
 There is no automatic context-based triggering in 2026. you must invoke skills explicitly.
 
-Step 1: Confirm the Skill File Exists
+## Step 1: Confirm the Skill File Exists
 
 ```bash
 Check global skills
@@ -48,7 +48,7 @@ mkdir -p .claude/skills/
 cp path/to/tdd.md .claude/skills/tdd.md
 ```
 
-Step 2: Verify Filename Case and Hyphens
+## Step 2: Verify Filename Case and Hyphens
 
 Skill filenames are case-sensitive on Linux and case-preserving on macOS. Hyphens must match exactly.
 
@@ -65,7 +65,7 @@ Rename if case is wrong
 mv ~/.claude/skills/TDD.md ~/.claude/skills/tdd.md
 ```
 
-Step 3: Check File Permissions
+## Step 3: Check File Permissions
 
 Claude Code must be able to read the skill file. Restrictive permissions cause silent failures:
 
@@ -78,7 +78,7 @@ chmod 644 ~/.claude/skills/*.md
 chmod 755 ~/.claude/skills/
 ```
 
-Step 4: Validate the YAML Front Matter
+## Step 4: Validate the YAML Front Matter
 
 A malformed YAML block at the top of the skill file can cause issues. Verify the front matter is valid YAML with only supported fields. Claude Code skills recognize `name` and `description` in front matter:
 
@@ -105,7 +105,7 @@ print('YAML OK')
 "
 ```
 
-Step 5: Confirm You Are in Claude Code CLI
+## Step 5: Confirm You Are in Claude Code CLI
 
 The `/skill-name` syntax is a Claude Code CLI feature. It does not work on claude.ai in the browser, in the API, or in third-party Claude integrations. Confirm you are running the CLI:
 
@@ -119,7 +119,7 @@ If `claude` is not found, install it:
 npm install -g @anthropic-ai/claude-code
 ```
 
-Step 6: Check for CLAUDE.md Auto-Invocation Config
+## Step 6: Check for CLAUDE.md Auto-Invocation Config
 
 Some workflows configure skills to load automatically via `CLAUDE.md`. If you expected automatic triggering (not manual `/skill-name` invocation), you may need to add the skill to your `CLAUDE.md`:
 
@@ -134,7 +134,7 @@ Load the following skills at session start:
 
 Without this, `supermemory` and `tdd` skills need explicit invocation every session.
 
-Step 7: Debug With an Explicit Confirmation Prompt
+## Step 7: Debug With an Explicit Confirmation Prompt
 
 After invoking a skill, immediately ask Claude to confirm it loaded:
 
@@ -145,7 +145,7 @@ You have just loaded the tdd skill. Confirm this and summarize its instructions 
 
 If the skill loaded, Claude will describe it accurately. If it did not load, Claude will respond generically. which tells you the file was not read.
 
-Step 8: Check for Conflicting Project and Global Skill Names
+## Step 8: Check for Conflicting Project and Global Skill Names
 
 If you have a `tdd.md` in both `.claude/skills/` and `~/.claude/skills/`, the project-local version takes priority. If the project-local version is outdated or broken, the global one never loads.
 
@@ -154,7 +154,7 @@ See both versions
 diff .claude/skills/tdd.md ~/.claude/skills/tdd.md 2>/dev/null || echo "Only one version found"
 ```
 
-Step 9: Restart the Claude Code Session
+## Step 9: Restart the Claude Code Session
 
 Claude Code reads skill files when the session starts, not on every invocation. If you added or modified a skill file while a session was already running, you need to restart:
 
@@ -194,7 +194,7 @@ Project Conventions
 EOF
 ```
 
-Summary Checklist
+## Summary Checklist
 
 - File exists in `~/.claude/skills/` or `.claude/skills/`
 - Filename matches invocation exactly (case-sensitive)

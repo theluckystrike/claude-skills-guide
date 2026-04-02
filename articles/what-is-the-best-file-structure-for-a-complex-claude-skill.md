@@ -16,7 +16,7 @@ permalink: /what-is-the-best-file-structure-for-a-complex-claude-skill/
 
 [As Claude Code skills grow in sophistication, developers quickly discover that a single Markdown file no longer suffices](/claude-skill-md-format-complete-specification-guide/) Complex skills handling multi-step workflows, multiple tools, or extensive state management benefit from a well-organized file structure. This guide examines proven patterns for structuring complex Claude skills that scale.
 
-The Baseline: Single File Structure
+## The Baseline: Single File Structure
 
 Simple skills work fine as standalone `.md` files. A basic skill might contain:
 
@@ -30,7 +30,7 @@ The `skill.md` file includes your instructions, tool definitions, and examples. 
 
 However, when your skill grows to handle multiple domains, manages complex state, or coordinates multiple tools, the single-file approach becomes unwieldy.
 
-Recommended Directory Structure for Complex Skills
+## Recommended Directory Structure for Complex Skills
 
 The most scalable structure separates concerns into distinct files and directories:
 
@@ -59,9 +59,9 @@ The most scalable structure separates concerns into distinct files and directori
 
 This structure mirrors how professional developers organize code repositories, making it intuitive for anyone familiar with standard software development practices.
 
-Breaking Down Each Component
+## Breaking Down Each Component
 
-The Main skill.md File
+## The Main skill.md File
 
 Your primary entry point should remain lean. Include only high-level orchestration logic:
 
@@ -91,7 +91,7 @@ For specific tasks, use the appropriate sub-skill:
 Always start by understanding the user's exact requirements.
 ```
 
-Separation of Prompts and Logic
+## Separation of Prompts and Logic
 
 Skills like pdf, xlsx, and pptx demonstrate this pattern well. The skill handles tool orchestration while prompt templates define specific behaviors.
 
@@ -109,7 +109,7 @@ Generate a professional PDF report with the following sections:
 Use professional tone. Include page numbers and headers.
 ```
 
-Configuration Management
+## Configuration Management
 
 Complex skills often need configurable behavior. Use YAML or JSON in your `config/` directory:
 
@@ -123,7 +123,7 @@ max_lines_per_file: 500
 
 `tools`, `auto_save`, `temperature`, and `max_tokens` are not recognized by Claude Code. Configuration for Claude's behavior belongs in the skill body as instructions, not in YAML config files.
 
-State Management
+## State Management
 
 Skills that maintain context across sessions should use a dedicated state file:
 
@@ -142,7 +142,7 @@ Skills that maintain context across sessions should use a dedicated state file:
 
 The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) exemplifies this pattern, maintaining persistent context across Claude sessions.
 
-Practical Example: A Multi-Tool Data Analysis Skill
+## Practical Example: A Multi-Tool Data Analysis Skill
 
 Consider a skill that handles end-to-end data analysis. Here's how to structure it:
 
@@ -195,7 +195,7 @@ For specific analysis types, refer to:
 - Visualization: prompts/templates/visualization-plan.md
 ```
 
-When to Split Across Files
+## When to Split Across Files
 
 Consider splitting your skill when any of these conditions apply:
 
@@ -206,7 +206,7 @@ Consider splitting your skill when any of these conditions apply:
 
 The tdd skill demonstrates smart separation, it keeps test templates, assertion helpers, and workflow prompts in distinct files while maintaining a clean main entry point.
 
-Avoiding Common Mistakes
+## Avoiding Common Mistakes
 
 A frequent error is dumping everything into `skill.md`. While convenient initially, this creates maintenance nightmares:
 
@@ -216,7 +216,7 @@ A frequent error is dumping everything into `skill.md`. While convenient initial
 
 Another mistake is over-engineering simple skills. If your skill only invokes one tool and provides straightforward instructions, a single file remains the best approach.
 
-Loading External Files in Your Skill
+## Loading External Files in Your Skill
 
 Claude Code skills can reference external files using relative paths. In your `skill.md`:
 
@@ -236,7 +236,7 @@ Refer to: prompts/examples/financial-data.md
 
 This keeps your main file readable while accessing detailed content from dedicated files.
 
-Conclusion
+## Conclusion
 
 The best file structure for a complex Claude skill balances simplicity with scalability. Start with a single file and refactor when complexity demands it. Use directory structures that mirror software development best practices, separate configuration from logic, prompts from templates, and tests from implementation.
 

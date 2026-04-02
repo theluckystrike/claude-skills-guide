@@ -13,11 +13,10 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Distributed load testing has become essential for validating that applications can handle real-world traffic patterns. When your system needs to scale across multiple geographic regions or simulate thousands of concurrent users, traditional testing approaches fall short. This guide shows you how to integrate Claude Code into your distributed load testing workflow, automating test generation, execution, and result analysis.
 
-Why Use Claude Code for Load Testing
+## Why Use Claude Code for Load Testing
 
 Claude Code excels at understanding your application's architecture and generating relevant test scenarios. Instead of manually writing complex load testing scripts, you can use Claude Code to analyze your API endpoints, data models, and user flows, then generate appropriate test configurations.
 
@@ -27,7 +26,7 @@ The key advantages include:
 - Result analysis and insight extraction from performance metrics
 - CI/CD integration for automated performance regression detection
 
-Setting Up Your Load Testing Environment
+## Setting Up Your Load Testing Environment
 
 Before implementing distributed load tests, ensure your environment is properly configured. You'll need a load testing tool like k6, Locust, or Artillery, along with Claude Code skills designed for performance testing.
 
@@ -52,7 +51,7 @@ Success Criteria
 - Max concurrent users: 10,000
 ```
 
-Generating Load Test Scripts with Claude Code
+## Generating Load Test Scripts with Claude Code
 
 One of Claude Code's most valuable capabilities is generating comprehensive load test scripts from your existing API definitions. If you use OpenAPI/Swagger specifications, Claude Code can analyze them and create appropriate test scenarios.
 
@@ -129,11 +128,11 @@ export default function(data) {
 }
 ```
 
-Distributed Execution Strategies
+## Distributed Execution Strategies
 
 Single-machine load testing has limitations. For truly distributed testing, you need to coordinate multiple load generators. Claude Code can help you set up and manage distributed testing infrastructure.
 
-Kubernetes-Based Distribution
+## Kubernetes-Based Distribution
 
 For cloud-native applications, deploying load tests across Kubernetes provides excellent scalability. Claude Code can generate the necessary Kubernetes manifests:
 
@@ -167,7 +166,7 @@ spec:
       restartPolicy: Never
 ```
 
-Multi-Region Testing
+## Multi-Region Testing
 
 To test global application performance, simulate traffic from multiple geographic regions. Claude Code can help you set up a configuration that coordinates tests across regions:
 
@@ -198,7 +197,7 @@ export const options = {
 };
 ```
 
-Analyzing Test Results
+## Analyzing Test Results
 
 Load testing generates massive amounts of data. Claude Code can help you analyze results and identify performance bottlenecks. After running your tests, import the results and ask Claude Code for insights:
 
@@ -212,7 +211,7 @@ Analyze these k6 metrics and identify:
 
 Claude Code will examine your metrics and provide actionable recommendations based on established performance engineering patterns.
 
-Integrating with CI/CD Pipelines
+## Integrating with CI/CD Pipelines
 
 Automating load tests in your CI/CD pipeline ensures performance doesn't regress. Here's a GitHub Actions workflow example:
 
@@ -256,7 +255,7 @@ jobs:
           path: results/*.json
 ```
 
-Best Practices for Claude Code Load Testing
+## Best Practices for Claude Code Load Testing
 
 Follow these recommendations to get the most out of your AI-assisted load testing workflow:
 
@@ -270,7 +269,7 @@ Follow these recommendations to get the most out of your AI-assisted load testin
 
 5. Automate gradually - Begin with manual testing, then progressively add automation as you validate your scenarios.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms distributed load testing from a manual, error-prone process into an automated, intelligent workflow. By using AI for test generation, execution, and analysis, you can more quickly identify performance issues and validate system reliability at scale. The key is integrating Claude Code into your existing tooling while maintaining control over test scenarios and success criteria.
 {% endraw %}

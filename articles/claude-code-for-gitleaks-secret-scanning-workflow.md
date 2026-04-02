@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Gitleaks Secret Scanning Workflow"
 description: "Learn how to integrate Claude Code with Gitleaks for automated secret scanning in your development workflow. Practical examples and actionable advice."
@@ -29,7 +28,7 @@ Gitleaks runs as a standalone CLI tool that detects secrets in your codebase. It
 
 The combination matters because raw Gitleaks output requires interpretation. A developer who encounters a finding for the first time may not know whether to rotate a key immediately, whether a particular pattern is a test credential, or how to safely rewrite Git history. Claude Code bridges that gap by turning scanner output into actionable guidance.
 
-Understanding What Gitleaks Detects
+## Understanding What Gitleaks Detects
 
 Before integrating with Claude Code, it helps to understand what Gitleaks actually looks for. The tool uses a combination of regular expressions and entropy analysis to identify potential secrets. Here is a breakdown of common detection categories:
 
@@ -44,7 +43,7 @@ Before integrating with Claude Code, it helps to understand what Gitleaks actual
 
 Understanding this taxonomy helps you configure Claude Code prompts to provide more specific remediation guidance depending on which category a finding falls into.
 
-Setting Up Gitleaks with Claude Code
+## Setting Up Gitleaks with Claude Code
 
 Before integrating, ensure Gitleaks is installed on your system. The recommended approach is to use Homebrew on macOS:
 
@@ -85,7 +84,7 @@ Invoke with: `/gitleaks-secret-scanner`
 
 This basic skill structure provides a foundation. To make it more powerful, enhance it with detailed output parsing and remediation guidance.
 
-Running Your First Scan
+## Running Your First Scan
 
 With Gitleaks installed, run a full repository scan to establish your baseline:
 
@@ -127,11 +126,11 @@ A typical JSON report entry looks like this:
 
 You can ask Claude Code to parse a report file like this and receive a prioritized list of findings with specific remediation steps for each one. The combination of file path, line number, rule ID, and commit hash gives Claude enough context to provide precise guidance.
 
-Running Automated Scans
+## Running Automated Scans
 
 The most effective secret scanning workflow runs at multiple points in your development cycle:
 
-Pre-commit Scanning
+## Pre-commit Scanning
 
 Prevent secrets from entering your repository by scanning before each commit. Create a pre-commit hook:
 
@@ -174,7 +173,7 @@ pre-commit install
 
 This approach ensures consistent hook behavior across the entire team regardless of platform, and the pre-commit framework handles installation automatically when developers set up their environment.
 
-CI/CD Integration
+## CI/CD Integration
 
 For automated scanning in your CI pipeline, add Gitleaks to GitHub Actions:
 
@@ -235,7 +234,7 @@ stage('Secret Scanning') {
 }
 ```
 
-Customizing Gitleaks Rules
+## Customizing Gitleaks Rules
 
 Every project has different secret patterns. Gitleaks allows you to create custom rules for organization-specific secrets. Create a `gitleaks.toml` configuration file:
 
@@ -273,7 +272,7 @@ commits = [
 
 The allowlist accepts file paths as regex patterns, specific regex matches for known safe values, and specific commit hashes to ignore entirely. Use commit-level allowlisting sparingly, it is better to fix the issue than to permanently suppress it.
 
-Working with Scan Results
+## Working with Scan Results
 
 When Gitleaks detects secrets, you need a clear process for handling findings. Here is a practical workflow:
 
@@ -287,7 +286,7 @@ When Gitleaks detects secrets, you need a clear process for handling findings. H
 
 5. Update patterns: If a detection was a false positive, add it to your Gitleaks allowlist.
 
-Rotating Exposed Credentials
+## Rotating Exposed Credentials
 
 Rotation procedures differ by service type. Here are the most common scenarios:
 
@@ -314,7 +313,7 @@ GitHub personal access token:
 
 Navigate to GitHub Settings > Developer settings > Personal access tokens, revoke the token, and generate a new one with the minimum required scopes. Update any services that used the old token immediately.
 
-Cleaning Git History
+## Cleaning Git History
 
 Removing a secret from Git history requires rewriting commits. The recommended tool is `git filter-repo`:
 
@@ -335,7 +334,7 @@ git push origin --force --tags
 
 history rewriting is destructive. All contributors must re-clone the repository after a force push. Coordinate with your team and announce the change in advance. Also note that if the secret was visible in any pull request diffs, those may still be cached, contact your Git hosting provider to purge cached data.
 
-Advanced: Claude Code Enhanced Workflow
+## Advanced: Claude Code Enhanced Workflow
 
 To take your secret scanning further, create an enhanced Claude Skill that provides detailed remediation guidance:
 
@@ -362,7 +361,7 @@ Steps
 
 This enhanced skill provides developers with context-specific advice rather than just raw scan output.
 
-Integrating with Issue Trackers
+## Integrating with Issue Trackers
 
 You can extend this further to automatically create GitHub issues for each finding:
 
@@ -393,7 +392,7 @@ fi
 
 This script creates a GitHub issue for each finding, making it easy to track remediation progress through your normal issue workflow.
 
-Secrets Management Best Practices
+## Secrets Management Best Practices
 
 Secret scanning is reactive, it catches problems after they occur. Pairing it with proactive secrets management prevents most issues from arising. Here is how common secrets management tools compare:
 
@@ -413,7 +412,7 @@ For most development teams, the practical recommendation is:
 3. Use short-lived credentials and automatic rotation wherever possible
 4. Apply least-privilege IAM policies so a leaked key has limited blast radius
 
-Best Practices for Secret Scanning
+## Best Practices for Secret Scanning
 
 Follow these practices to maintain security without slowing development:
 
@@ -425,7 +424,7 @@ Follow these practices to maintain security without slowing development:
 - Scan third-party dependencies: Secrets sometimes appear in vendored code or lock files; scan those too
 - Archive reports: Keep historical scan reports to demonstrate security posture over time during audits
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Gitleaks creates a solid secret scanning workflow that catches vulnerabilities early and provides actionable remediation guidance. Start with basic scans in your pre-commit hooks, then expand to CI/CD integration and custom rules as your security maturity grows. Remember that secret scanning is part of a larger security strategy, combine it with secrets management, access controls, and team education for comprehensive protection.
 

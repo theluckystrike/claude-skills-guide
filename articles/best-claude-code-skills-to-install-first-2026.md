@@ -16,7 +16,7 @@ permalink: /best-claude-code-skills-to-install-first-2026/
 
 [Claude Code's extensibility system works through skills. Markdown files stored in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/) When you invoke `/skill-name` in a session, Claude loads those instructions and operates as a domain specialist. Here are the skills worth adding first.
 
-How Skills Work
+## How Skills Work
 
 Skills are `.md` files in `~/.claude/skills/`. Native skills ship pre-installed; community skills you download manually. There are no Python imports, no extra flags, and no `require()` calls. Invocation is always:
 
@@ -24,7 +24,7 @@ Skills are `.md` files in `~/.claude/skills/`. Native skills ship pre-installed;
 /skill-name [your task here]
 ```
 
-The PDF Skill for Document Automation
+## The PDF Skill for Document Automation
 
 The pdf skill is worth prioritizing if you work with technical documentation, contracts, or data extraction. Invoke it directly:
 
@@ -42,7 +42,7 @@ The pdf skill is worth prioritizing if you work with technical documentation, co
 
 The skill handles multi-column layouts, scanned documents, and form fields. For developers processing batches of invoices or pulling requirements from specification PDFs, it replaces manual copy-paste workflows entirely.
 
-Test-Driven Development with the TDD Skill
+## Test-Driven Development with the TDD Skill
 
 The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) enforces test-first development practices. It generates unit tests, integration tests, and edge case suggestions based on code you provide.
 
@@ -72,7 +72,7 @@ The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) enforces te
 
 [The skill works with pytest, Jest, Vitest, and Bun Test](/claude-tdd-skill-test-driven-development-workflow/) For API developers and service teams, it catches regressions before they reach production by structuring development around failing tests first. The skill analyzes your existing code and suggests meaningful test cases you might have overlooked, ensuring better coverage without the boilerplate overhead.
 
-Spreadsheet Automation with the xlsx Skill
+## Spreadsheet Automation with the xlsx Skill
 
 The xlsx skill creates, edits, and analyzes `.xlsx`, `.xlsm`, `.csv`, and `.tsv` files.
 
@@ -102,7 +102,7 @@ The xlsx skill creates, edits, and analyzes `.xlsx`, `.xlsm`, `.csv`, and `.tsv`
 
 Business analysts processing financial data or generating weekly reports find this skill eliminates repetitive formula work and manual chart creation. The skill preserves formulas during edits, making it safe for maintaining calculation-heavy spreadsheets.
 
-Memory Management with the supermemory Skill
+## Memory Management with the supermemory Skill
 
 The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) provides persistent context across Claude sessions. Default conversations reset; this skill maintains knowledge of your projects, preferences, and decisions.
 
@@ -120,7 +120,7 @@ The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) pro
 
 Power users managing multiple long-running projects benefit most. Instead of re-explaining your stack at the start of every session, you recall it in one line.
 
-Frontend Design with the frontend-design Skill
+## Frontend Design with the frontend-design Skill
 
 The [frontend-design skill](/best-claude-code-skills-for-frontend-development/) generates responsive layouts, applies design system tokens, and validates UI implementations against specifications.
 
@@ -138,7 +138,7 @@ The [frontend-design skill](/best-claude-code-skills-for-frontend-development/) 
 
 For web application developers, this skill accelerates prototyping and flags accessibility problems before they accumulate into a backlog.
 
-Web Application Testing with the webapp-testing Skill
+## Web Application Testing with the webapp-testing Skill
 
 The webapp-testing skill automates browser interactions via Playwright.
 
@@ -152,8 +152,7 @@ The webapp-testing skill automates browser interactions via Playwright.
 
 This skill replaces manual regression testing. Frontend developers and QA engineers point it at a local dev server and get a structured test run with screenshots. It integrates well with CI/CD pipelines, catching visual regressions before they reach production.
 
-
-Visual Asset Generation with the canvas-design Skill
+## Visual Asset Generation with the canvas-design Skill
 
 The canvas-design skill produces visual assets. images, diagrams, and design mockups. from text descriptions.
 
@@ -167,7 +166,7 @@ The canvas-design skill produces visual assets. images, diagrams, and design moc
 
 For a full breakdown of the frontend skill stack, see [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/).
 
-Document Creation with the docx and pptx Skills
+## Document Creation with the docx and pptx Skills
 
 The docx and pptx skills enable programmatic generation of professional documents and presentations.
 
@@ -181,11 +180,11 @@ The docx and pptx skills enable programmatic generation of professional document
 
 These skills handle formatting preservation, tracked changes, and comments. useful for generating status reports, technical documentation, or client presentations automatically.
 
-Building Custom Skills with skill-creator
+## Building Custom Skills with skill-creator
 
 The skill-creator skill guides you through creating custom skill files tailored to your specific workflows. When none of the existing skills fit your needs, this tool helps you author a new `.md` skill file. Learn how to structure those skills properly in [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/).
 
-Choosing Your First Skills
+## Choosing Your First Skills
 
 Your starting set should match your actual daily work:
 
@@ -210,7 +209,6 @@ Related Reading
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Extend skills into CI/CD and infrastructure automation
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep your skill usage cost-efficient at scale
 - [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Know when to trust official vs community skills
-
 
 ---
 

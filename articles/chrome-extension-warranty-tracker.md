@@ -14,7 +14,7 @@ categories: [guides]
 {% raw %}
 A warranty tracker Chrome extension solves a common problem: keeping track of the warranties for products you've purchased. Instead of stuffing receipts in drawers or searching through email inboxes for purchase confirmations, you can manage everything directly from your browser. This guide covers how these extensions work, what features to look for, and how developers can build their own.
 
-Why You Need a Warranty Tracker
+## Why You Need a Warranty Tracker
 
 Product warranties typically range from 30 days to several years. The challenge is remembering which products have coverage, when that coverage expires, and what documentation you need to file a claim. A Chrome extension keeps this information at your fingertips without requiring a separate app or service.
 
@@ -27,9 +27,9 @@ Most warranty periods follow predictable patterns:
 
 Without a tracking system, warranties become useless. You forget the purchase date, lose the receipt, and miss the claim window. A dedicated extension solves this by storing warranty information where you already do most of your shopping.
 
-Core Features of a Warranty Tracker Extension
+## Core Features of a Warranty Tracker Extension
 
-Automatic Receipt Capture
+## Automatic Receipt Capture
 
 The most useful warranty trackers integrate with your shopping workflow. When you complete a purchase on supported retail sites, the extension can automatically capture:
 
@@ -40,7 +40,7 @@ The most useful warranty trackers integrate with your shopping workflow. When yo
 
 This automation eliminates manual data entry. Look for extensions that support major retailers out of the box.
 
-Expiration Alerts
+## Expiration Alerts
 
 Timely notifications matter more than the warranty itself. Quality extensions offer:
 
@@ -50,7 +50,7 @@ Timely notifications matter more than the warranty itself. Quality extensions of
 
 Some users prefer weekly digest emails; others want immediate alerts. The best extensions let you customize this per warranty.
 
-Document Storage
+## Document Storage
 
 Warranty claims require proof of purchase. Your extension should store:
 
@@ -61,7 +61,7 @@ Warranty claims require proof of purchase. Your extension should store:
 
 Cloud sync ensures this data survives browser reinstalls or device changes. Local-only storage risks data loss.
 
-Search and Organization
+## Search and Organization
 
 As your warranty collection grows, finding specific items becomes critical. Useful features include:
 
@@ -70,11 +70,11 @@ As your warranty collection grows, finding specific items becomes critical. Usef
 - Sort by expiration date or purchase date
 - Tags for custom organization
 
-Building Your Own Warranty Tracker
+## Building Your Own Warranty Tracker
 
 For developers, building a warranty tracker extension is a practical project that touches on several Chrome extension APIs. Here's how to structure one.
 
-Manifest Setup
+## Manifest Setup
 
 Your `manifest.json` defines permissions and capabilities:
 
@@ -104,7 +104,7 @@ Your `manifest.json` defines permissions and capabilities:
 
 The `host_permissions` array specifies which retail sites the extension can access for automatic data capture.
 
-Data Storage Pattern
+## Data Storage Pattern
 
 Chrome's `chrome.storage` API provides persistent storage that syncs across devices:
 
@@ -143,7 +143,7 @@ function calculateExpiration(warrantyData) {
 }
 ```
 
-Content Script for Retail Sites
+## Content Script for Retail Sites
 
 To capture purchase data automatically, inject a content script on retail websites:
 
@@ -178,7 +178,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Notification System
+## Notification System
 
 Set up expiration reminders using Chrome's notification API:
 
@@ -212,7 +212,7 @@ function scheduleReminder(warranty) {
 }
 ```
 
-Popup Interface
+## Popup Interface
 
 The user-facing popup provides quick access to warranty management:
 
@@ -293,30 +293,29 @@ function getWarrantyStatus(expirationDate) {
 }
 ```
 
-Practical Usage Tips
+## Practical Usage Tips
 
-Register Products Immediately
+## Register Products Immediately
 
 The best time to add a warranty is right after purchase. Keep the extension popup pinned for quick access during the unboxing process.
 
-Photograph Receipts Immediately
+## Photograph Receipts Immediately
 
 Receipts fade and digital copies get deleted. Snap a photo while the receipt is handy, then store it in the extension before you forget.
 
-Set Calendar Reminders
+## Set Calendar Reminders
 
 Browser notifications work well, but adding warranties to your personal calendar provides a backup system. Calendar entries persist even if you switch browsers or reinstall your OS.
 
-Review Quarterly
+## Review Quarterly
 
 Set a recurring calendar reminder to review your warranty collection quarterly. Remove expired warranties and check if any products still have valid coverage you forgot about.
 
-Conclusion
+## Conclusion
 
 A Chrome extension warranty tracker transforms an overlooked task into a systematic process. Whether you use an existing extension or build your own, the goal remains the same: ensure you never miss a warranty claim again. The convenience of browser integration makes this approach more sustainable than standalone apps or paper systems.
 
 For developers, the project demonstrates practical use of Chrome extension APIs while creating something genuinely useful. The combination of storage sync, notifications, and content scripts creates a complete solution that works across devices.
-
 
 Related Reading
 

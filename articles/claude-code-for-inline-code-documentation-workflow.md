@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Inline Code Documentation Workflow"
 description: "Learn how to use Claude Code to automate and streamline inline code documentation, making your codebase more maintainable and accessible."
@@ -20,7 +19,7 @@ Inline documentation is one of the most neglected aspects of software developmen
 
 This guide walks you through practical workflows for using Claude Code to generate, maintain, and improve inline documentation across your codebase.
 
-Why Inline Documentation Matters
+## Why Inline Documentation Matters
 
 Before diving into the how, let's briefly cover the why. Inline documentation, JSDoc comments, docstrings, type hints, and explanatory comments, serves multiple purposes:
 
@@ -31,7 +30,7 @@ Before diving into the how, let's briefly cover the why. Inline documentation, J
 
 The challenge is keeping documentation in sync with code as it evolves. Claude Code addresses this by making documentation generation part of your existing workflow.
 
-Setting Up Documentation Skills
+## Setting Up Documentation Skills
 
 The first step is equipping Claude Code with documentation capabilities. Several skills in the Claude Skills ecosystem target this exact problem.
 
@@ -59,7 +58,7 @@ function calculateTotal(items, taxRate) {
 
 Install documentation skills by saving them to your `.claude/` directory and invoking them with `/docstring-generator` or similar commands.
 
-The Inline Documentation Workflow
+## The Inline Documentation Workflow
 
 Here's a practical workflow for documenting a new feature:
 
@@ -79,7 +78,7 @@ Claude generates initial documentation, review it for accuracy and add context t
 Step 4: Commit with documentation
 Include documentation changes in your pull requests.
 
-Documenting Complex Functions
+## Documenting Complex Functions
 
 Complex functions benefit the most from documentation but are hardest to document well. Here's how Claude Code handles this:
 
@@ -113,7 +112,7 @@ def process_user_upload(file_data: bytes,
 
 Notice how the generated documentation includes the return structure, possible exceptions, and even helpful notes, this is the level of detail that makes documentation valuable.
 
-Maintaining Documentation Over Time
+## Maintaining Documentation Over Time
 
 Documentation rot is real: code changes, but comments don't. Claude Code helps combat this through two mechanisms:
 
@@ -133,7 +132,7 @@ claude "Audit the documentation in src/api/. Look for: missing docstrings, outda
 
 This catches drift before it becomes a problem.
 
-Cross-Language Documentation
+## Cross-Language Documentation
 
 Claude Code isn't limited to one language. Here's how it handles documentation across common languages:
 
@@ -149,7 +148,7 @@ When generating documentation, specify your preferred format:
 claude "Add Google-style docstrings to the Python data processing module"
 ```
 
-Best Practices for AI-Assisted Documentation
+## Best Practices for AI-Assisted Documentation
 
 To get the most out of Claude Code for documentation:
 
@@ -163,7 +162,7 @@ Include edge cases: Ask Claude to document edge cases explicitly: "Document the 
 
 Use documentation in reviews: Make documentation part of your review checklist.
 
-Integrating Documentation into CI
+## Integrating Documentation into CI
 
 For teams adopting AI-assisted documentation, consider adding checks to your CI pipeline:
 
@@ -185,7 +184,7 @@ jobs:
 
 This ensures documentation doesn't lag behind code changes.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms inline documentation from a dreaded chore into a smooth part of your development workflow. By generating initial documentation, helping maintain it over time, and integrating with your existing processes, it addresses the core challenges that have kept documentation standards low across the industry.
 

@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Echidna Fuzzing Workflow
 
@@ -34,7 +33,7 @@ The tool works by:
 
 Properties can include checks like "the contract balance should never go negative" or "only the owner can call this function." When Echidna finds an input that breaks your property, it gives you the exact transaction sequence that triggered the vulnerability.
 
-Setting Up Echidna with Claude Code
+## Setting Up Echidna with Claude Code
 
 Before creating your fuzzing workflow, ensure you have the necessary tools installed. You'll need:
 
@@ -64,7 +63,7 @@ cryticArgs: ["--pragma-version", "^0.8.0"]
 
 Claude Code can help you customize this configuration based on your specific contract structure. Simply describe your contract's architecture, and Claude can suggest appropriate sender addresses, gas limits, and testing strategies.
 
-Writing Effective Property-Based Tests
+## Writing Effective Property-Based Tests
 
 The key to successful fuzzing with Echidna lies in writing clear, meaningful properties. These are Solidity functions that Echidna will call repeatedly to verify invariants in your contract.
 
@@ -111,7 +110,7 @@ When writing properties with Claude Code, consider these best practices:
 - Use descriptive names: Name functions starting with `echidna_` so Echidna recognizes them
 - Handle edge cases: Use require statements to filter invalid inputs before assertions
 
-Running Your Fuzzing Campaign
+## Running Your Fuzzing Campaign
 
 With your configuration and tests in place, execute the fuzzing campaign:
 
@@ -132,7 +131,7 @@ Call sequence:
 
 This output shows that calling `transfer` with more tokens than available can break your total supply invariant. Use this information to fix the vulnerability and re-run the tests.
 
-Integrating Fuzzing into Your Development Workflow
+## Integrating Fuzzing into Your Development Workflow
 
 To get maximum benefit from Echidna, integrate fuzzing into your regular development process:
 
@@ -161,7 +160,7 @@ Regression testing: Save Echidna outputs as regression tests. When you fix a bug
 
 Iterative improvement: Start with simple properties and gradually add more complex invariants as your contract evolves.
 
-Interpreting Results with Claude Code
+## Interpreting Results with Claude Code
 
 When Echidna discovers a vulnerability, it outputs a minimal reproduction sequence. Here's sample output for a failing property:
 
@@ -184,7 +183,7 @@ Claude can also help you triage findings by distinguishing:
 - False positives: Properties that are too strict or incorrectly defined
 - Low severity: Issues that don't pose practical risk
 
-Common Echidna Issues and Solutions
+## Common Echidna Issues and Solutions
 
 Claude Code can help troubleshoot common fuzzing challenges:
 
@@ -193,7 +192,7 @@ Claude Code can help troubleshoot common fuzzing challenges:
 - False positives: Refine property logic to handle valid edge cases
 - Timeout issues: Increase gas limits in your configuration
 
-Best Practices for Effective Fuzzing
+## Best Practices for Effective Fuzzing
 
 Follow these recommendations to get the most from your Echidna campaigns:
 
@@ -207,7 +206,7 @@ Combine with other tools: Use Echidna alongside static analysis (Slither), forma
 
 Track findings over time: Maintain a database of discovered vulnerabilities and their status to understand your security posture improvements.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code's assistance with Echidna's powerful fuzzing capabilities creates a formidable security testing pipeline. By writing clear property-based tests, integrating fuzzing into your workflow, and iteratively improving your test suite, you can catch critical vulnerabilities before they reach production.
 

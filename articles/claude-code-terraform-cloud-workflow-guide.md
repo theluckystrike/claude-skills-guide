@@ -15,12 +15,9 @@ tags: [claude-code, claude-skills]
 
 {% raw %}
 
-
-Claude Code Terraform Cloud Workflow Guide
-
 Managing infrastructure at scale requires reliable automation and intelligent tooling. This guide shows you how to integrate Claude Code into your Terraform Cloud workflow, creating a powerful combination that handles everything from initial provisioning to ongoing state management and compliance checking. Whether you are a solo DevOps engineer or part of a large platform team, the patterns here will help you ship infrastructure changes faster, with fewer manual errors and better audit trails.
 
-Why Claude Code Belongs in Your IaC Workflow
+## Why Claude Code Belongs in Your IaC Workflow
 
 Terraform is declarative and powerful, but the cognitive load around plan reviews, module composition, and state troubleshooting is real. Engineers spend time deciphering long plan outputs, cross-referencing documentation, and writing boilerplate modules. Claude Code reduces that overhead by acting as an on-demand infrastructure collaborator.
 
@@ -36,7 +33,7 @@ The practical benefits break down into three categories:
 
 This comparison is not hypothetical. Teams that pair Claude Code with Terraform Cloud typically cut plan review time in half and catch misconfigurations before they reach production.
 
-Setting Up Claude Code with Terraform Cloud
+## Setting Up Claude Code with Terraform Cloud
 
 Before building your workflow, ensure your environment is properly configured. You will need Terraform CLI installed locally, a Terraform Cloud account, and the necessary API token for authentication.
 
@@ -76,7 +73,7 @@ terraform {
 
 With this setup, `terraform workspace select staging` maps to the `myapp-staging` workspace in Terraform Cloud. Claude Code can then iterate across workspaces systematically when you ask it to run plans or check drift across all environments.
 
-Building the Claude Code Workflow
+## Building the Claude Code Workflow
 
 The core of your automated workflow involves creating a structured prompt that handles common Terraform operations. A well-designed workflow should cover the full lifecycle: planning, applying, state management, and drift detection.
 
@@ -101,7 +98,7 @@ When handling sensitive resources:
 
 The `CLAUDE.md` file is your primary lever for controlling Claude Code's behavior in this repository. Be specific about what requires human approval. A good rule of thumb: any change that touches security groups, IAM roles, database parameters, or DNS records should require an explicit confirmation step.
 
-Automating Plan Reviews
+## Automating Plan Reviews
 
 One of the most valuable use cases combines Claude Code with GitHub Actions for automated plan reviews. This workflow generates detailed explanations of infrastructure changes:
 
@@ -156,7 +153,7 @@ A more complete GitHub Actions step that feeds tfsec output to Claude for interp
 
 The `claude_review.py` script passes both files to Claude and asks it to produce a structured comment: a one-paragraph summary, a table of high-severity security findings with remediation steps, and a list of resources being added, changed, or destroyed. Reviewers get a concise brief instead of hundreds of lines of raw diff.
 
-Sentinel Policy Integration
+## Sentinel Policy Integration
 
 Terraform Cloud's Sentinel policy framework enforces compliance rules before plans can be applied. Claude Code can help you write Sentinel policies and debug policy failures.
 
@@ -184,7 +181,7 @@ main = rule {
 
 When a policy fails, Terraform Cloud returns an error message but does not always make it obvious which resource triggered the failure. Paste the error into Claude Code and ask it to trace back through your Terraform code to find the non-compliant resource. This typically takes seconds instead of the multi-minute manual grep-and-trace cycle.
 
-Integrating Additional Skills
+## Integrating Additional Skills
 
 Several Claude Code skills enhance infrastructure workflows significantly. The tdd skill helps generate test cases for your infrastructure modules using Terratest patterns:
 
@@ -241,7 +238,7 @@ The pdf skill proves valuable when you need to generate compliance documentation
 
 For teams managing multiple environments, the supermemory skill maintains context across sessions, remembering previous infrastructure decisions and their rationale.
 
-State Management Patterns
+## State Management Patterns
 
 Terraform Cloud handles state locking automatically, but your workflow should include manual intervention procedures for edge cases. When state corruption occurs:
 
@@ -276,7 +273,7 @@ After import, ask Claude Code to compare the imported state with your existing r
 
 Build error handling into your Claude Code prompts to catch these scenarios early. A solid workflow includes retry logic, timeout handling, and clear escalation paths.
 
-Practical Example: Multi-Environment Deployment
+## Practical Example: Multi-Environment Deployment
 
 Consider a practical scenario deploying across development, staging, and production environments. Your directory structure might look like:
 
@@ -321,7 +318,7 @@ Environment-Specific Rules
   Blast radius = estimated number of users or services affected.
 ```
 
-Security Considerations
+## Security Considerations
 
 When integrating Claude Code into infrastructure workflows, follow security best practices:
 
@@ -351,7 +348,7 @@ Pair this with a restrictive IAM role that only grants the permissions your Terr
 
 The webapp-testing skill can validate that deployed infrastructure meets your application's requirements by running integration tests against newly provisioned resources.
 
-Drift Detection and Remediation
+## Drift Detection and Remediation
 
 Infrastructure drift occurs when live resources diverge from Terraform state, usually due to manual console changes or out-of-band scripts. Schedule a daily drift check using Terraform Cloud's run triggers or a cron-based GitHub Actions workflow:
 
@@ -390,10 +387,9 @@ jobs:
 
 When drift is detected, paste the plan output into Claude Code and ask it to categorize each change: expected (from a recent manual hotfix), unexpected (potential security issue), or ambiguous (needs investigation). This triage step saves significant time before you decide whether to remediate automatically or escalate.
 
-Conclusion
+## Conclusion
 
 Building automated Terraform Cloud workflows with Claude Code creates a powerful synergy. The AI handles routine operations, explains complex changes, and maintains operational awareness while you focus on architectural decisions. Start with the basic setup, then progressively add automation layers: plan reviews, compliance checking, testing, drift detection, and runbook generation. Each layer compounds on the previous one, and within a few sprints you have a mature infrastructure pipeline that catches problems early, documents itself, and requires far less manual intervention than a traditional Terraform workflow.
-
 
 Related Reading
 

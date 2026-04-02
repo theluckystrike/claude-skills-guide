@@ -13,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Chrome Extension Product Review Summary AI: A Developer Guide
-
 Product reviews are everywhere. Amazon, G2, Capterra, Trustpilot. For developers building e-commerce tools, comparison engines, or shopping assistants, extracting meaningful insights from thousands of reviews manually is impractical. This guide shows you how to build a Chrome extension that uses AI to summarize product reviews directly in the browser.
 
-Why Build a Review Summary Extension
+## Why Build a Review Summary Extension
 
 The average product page displays dozens or hundreds of reviews. Reading through them takes time your users don't have. A Chrome extension that injects AI-generated summaries solves this problem by:
 
@@ -29,7 +26,7 @@ The average product page displays dozens or hundreds of reviews. Reading through
 
 For developers, this is also a practical project for learning modern extension development patterns, API integration, and AI text processing. The architecture patterns you'll use here. content scripts extracting page data, background workers making API calls, result injection back into the DOM. apply to a wide range of Chrome extension use cases beyond review summarization.
 
-Architecture Overview
+## Architecture Overview
 
 A Chrome extension for review summarization consists of three main components:
 
@@ -59,7 +56,7 @@ Content script injects summary UI into the page DOM
 
 Understanding this flow upfront helps you debug issues at the right layer. DOM extraction failures are content script problems. API errors are background worker problems. Display glitches are injection problems.
 
-Step-by-Step Implementation
+## Step-by-Step Implementation
 
 1. Manifest Configuration
 
@@ -359,7 +356,7 @@ if (document.readyState === 'loading') {
 }
 ```
 
-Handling API Costs and Rate Limits
+## Handling API Costs and Rate Limits
 
 Calling an AI API for every page load gets expensive fast. Implement these strategies:
 
@@ -418,7 +415,7 @@ async function getSummaryWithTTL(reviews, apiKey, ttlMs = 86400000) {
 }
 ```
 
-Prompt Engineering for Better Summaries
+## Prompt Engineering for Better Summaries
 
 The quality of your summaries depends heavily on how you prompt the AI. Generic prompts produce generic results. Here are prompts tuned for different use cases:
 
@@ -456,7 +453,7 @@ Analyze the sentiment distribution in these reviews. Return JSON:
 
 Using structured JSON output makes it easier to render results programmatically. display a sentiment bar, highlight theme tags, and pass data to analytics.
 
-Practical Considerations
+## Practical Considerations
 
 Privacy: Your extension reads review text from third-party pages. Be transparent about this in your privacy policy and only send data to AI APIs when the user explicitly triggers summarization. Avoid logging review text server-side if possible. the goal is client-side summarization.
 
@@ -491,7 +488,7 @@ const observer = new MutationObserver(() => {
 observer.observe(document.body, { childList: true, subtree: true });
 ```
 
-Comparing AI Providers for Review Summarization
+## Comparing AI Providers for Review Summarization
 
 | Provider | Model | Cost per 1M tokens (input) | Latency | Best for |
 |---|---|---|---|---|
@@ -502,7 +499,7 @@ Comparing AI Providers for Review Summarization
 
 For a user-installed extension, latency and cost per call both matter. At typical page-level usage (10–50 reviews, ~2,000 tokens), any of the above models cost a fraction of a cent per summary. GPT-4o-mini and Haiku are the sweet spot for this use case.
 
-Alternative Approaches
+## Alternative Approaches
 
 If building from scratch isn't your goal, several existing tools handle this:
 
@@ -512,7 +509,7 @@ If building from scratch isn't your goal, several existing tools handle this:
 
 For developers, building your own extension gives you full control over the summarization logic, the UI, and which sites to support. It also gives you data. you can log which products users are researching (with their consent) and build richer features on top.
 
-Testing Your Extension Across Sites
+## Testing Your Extension Across Sites
 
 Review site markup evolves constantly. Amazon redesigns its product pages, G2 updates its HTML structure, and Trustpilot occasionally rotates class names. Building solid tests into your development workflow prevents silent failures.
 
@@ -547,7 +544,7 @@ function showExtractionError() {
 }
 ```
 
-Prompt Engineering for Better Summaries
+## Prompt Engineering for Better Summaries
 
 The quality of your summaries depends as much on prompt design as on the AI model. Generic prompts produce generic summaries. Tailoring your prompt to the review context dramatically improves output relevance.
 
@@ -577,7 +574,7 @@ function getPromptForSite(hostname) {
 
 For cost-sensitive applications, a two-stage approach can reduce token usage: first run a lightweight classification step to determine if the product has mostly positive, negative, or mixed reviews. Only perform the full detailed summary for mixed or negative cases where users need more nuance.
 
-Privacy-First Architecture
+## Privacy-First Architecture
 
 Sending review text to third-party AI APIs raises legitimate privacy concerns, especially in enterprise contexts. Several design patterns let you build privacy-respecting extensions.
 

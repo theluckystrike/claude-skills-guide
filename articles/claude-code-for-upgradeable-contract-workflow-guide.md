@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Upgradeable Contract Workflow Guide
 
 Upgradeable smart contracts are essential for production blockchain applications where bug fixes and feature additions must be deployed without losing state or requiring users to migrate. This guide shows you how to use Claude Code to streamline the entire upgradeable contract development lifecycle, from initial setup through deployment and subsequent upgrades.
 
-Understanding Upgradeable Contract Architecture
+## Understanding Upgradeable Contract Architecture
 
 Before diving into workflows, it's crucial to understand the proxy pattern architecture that makes upgrades possible. Upgradeable contracts separate storage from logic using three main components:
 
@@ -29,7 +28,7 @@ Before diving into workflows, it's crucial to understand the proxy pattern archi
 
 The key insight is that the proxy's storage remains intact when you point to a new implementation. This allows you to fix bugs or add features while preserving all user balances, permissions, and other state data.
 
-Setting Up Your Project with Claude Code
+## Setting Up Your Project with Claude Code
 
 Initialize your upgradeable contract project with proper tooling:
 
@@ -68,11 +67,11 @@ module.exports = {
 
 Claude Code can help you scaffold these files and explain each configuration choice. Simply ask: "Set up a Hardhat project with OpenZeppelin upgrades plugin" and Claude will generate the appropriate structure.
 
-Writing Your First Upgradeable Contract
+## Writing Your First Upgradeable Contract
 
 When writing upgradeable contracts, you must follow specific rules that differ from traditional Solidity development. Claude Code can guide you through these requirements:
 
-Initial Implementation
+## Initial Implementation
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -106,11 +105,11 @@ Key points Claude Code will emphasize:
 - Call parent initializers in the correct order
 - Use the `__custom:oz-upgrades-unsafe-allow` comment for constructor restrictions
 
-Deployment Workflow
+## Deployment Workflow
 
 The deployment process differs significantly from standard contracts. Here's the recommended workflow:
 
-Step 1: Deploy Proxy and Implementation
+## Step 1: Deploy Proxy and Implementation
 
 ```bash
 npx hardhat run scripts/deploy.js --network sepolia
@@ -137,7 +136,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-Step 2: Verify the Deployment
+## Step 2: Verify the Deployment
 
 Always verify your proxy setup is correct:
 
@@ -152,11 +151,11 @@ async function verify() {
 }
 ```
 
-Managing Upgrades
+## Managing Upgrades
 
 When you need to fix a bug or add features, follow this workflow:
 
-Step 1: Create a New Implementation
+## Step 1: Create a New Implementation
 
 Never modify the existing implementation contract. Instead, create a new version:
 
@@ -185,7 +184,7 @@ Critical rules for upgrades:
 - Never change the order of existing variables
 - Use reinitializer version numbers to prevent initialization conflicts
 
-Step 2: Deploy and Upgrade
+## Step 2: Deploy and Upgrade
 
 ```javascript
 async function upgrade() {
@@ -197,9 +196,9 @@ async function upgrade() {
 }
 ```
 
-Best Practices for Upgradeable Contract Workflows
+## Best Practices for Upgradeable Contract Workflows
 
-Use Testnets First
+## Use Testnets First
 
 Always deploy to testnets (Sepolia, Goerli, or Holesky) before mainnet. Test your entire upgrade flow including:
 
@@ -208,7 +207,7 @@ Always deploy to testnets (Sepolia, Goerli, or Holesky) before mainnet. Test you
 - The upgrade process
 - Post-upgrade state verification
 
-Implement Timelock Controls
+## Implement Timelock Controls
 
 For production contracts, never allow immediate upgrades. Use a timelock controller:
 
@@ -228,7 +227,7 @@ async function upgradeWithTimelock() {
 }
 ```
 
-Maintain Upgrade Documentation
+## Maintain Upgrade Documentation
 
 Create a changelog documenting:
 
@@ -237,7 +236,7 @@ Create a changelog documenting:
 - Testing results
 - Deployment addresses
 
-Automating with Claude Code
+## Automating with Claude Code
 
 Claude Code can significantly accelerate your workflow:
 
@@ -249,7 +248,7 @@ Claude Code can significantly accelerate your workflow:
 
 Ask Claude: "Review my upgradeable contract for storage layout conflicts" or "Generate a deployment script for my proxy contract" to get started.
 
-Conclusion
+## Conclusion
 
 Upgradeable contracts require disciplined workflows and careful attention to storage management. By using Claude Code to assist with script generation, code review, and workflow automation, you can significantly reduce the risk of costly upgrade mistakes. Start with testnets, use timelock controls for production, and always maintain thorough documentation of your upgrade history.
 

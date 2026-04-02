@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code vLLM Inference Server Deployment Workflow
 
@@ -23,7 +22,7 @@ This guide focuses on the deployment automation workflow: using Claude Code slas
 
 This guide walks you through a complete deployment workflow using Claude Code skills, showing practical examples you can adapt for your infrastructure.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before deploying vLLM, ensure your development environment is properly configured. Claude Code can handle this automatically with the right skills loaded.
 
@@ -43,7 +42,7 @@ Create a Dockerfile optimized for vLLM:
 
 The generated Dockerfile will include proper GPU access configuration, volume mounts for model caching, and health check endpoints that Kubernetes can use for readiness probes.
 
-Building the vLLM Container
+## Building the vLLM Container
 
 With your Dockerfile ready, build and test the container locally:
 
@@ -65,7 +64,7 @@ docker run --gpus all -p 8000:8000 \
 
 Claude Code can generate this command with the appropriate model and resource allocations based on your hardware specifications. It understands GPU memory requirements and will suggest appropriate values based on the model size you specify.
 
-Kubernetes Deployment Configuration
+## Kubernetes Deployment Configuration
 
 For production deployments, Kubernetes is the standard orchestration platform. Claude Code excels at generating Kubernetes manifests tailored to vLLM's requirements.
 
@@ -111,7 +110,7 @@ readinessProbe:
 
 Claude Code understands that vLLM needs warm-up time before serving requests and configures appropriate probe delays accordingly.
 
-Environment Variables and Configuration
+## Environment Variables and Configuration
 
 vLLM relies on numerous environment variables for optimal performance. Claude Code can generate secure configuration files:
 
@@ -132,7 +131,7 @@ env:
       key: huggingface-token
 ```
 
-Continuous Deployment with GitHub Actions
+## Continuous Deployment with GitHub Actions
 
 Automate your deployment pipeline with Claude Code generating GitHub Actions workflows:
 
@@ -157,7 +156,7 @@ deploy-staging:
 
 Claude Code ensures the pipeline follows best practices including image signing, vulnerability scanning, and proper secret management.
 
-Monitoring and Observability
+## Monitoring and Observability
 
 Production inference servers require comprehensive monitoring. Claude Code can set up Prometheus metrics collection and Grafana dashboards:
 
@@ -179,7 +178,7 @@ vLLM exposes metrics at the `/metrics` endpoint in Prometheus format. Claude Cod
 
 The generated Grafana dashboard includes key performance indicators: requests per second, latency percentiles (p50, p95, p99), GPU memory usage, GPU usage percentage, and error rates by type.
 
-Handling Model Updates
+## Handling Model Updates
 
 When you need to update the model or change configurations, Claude Code can generate rollback procedures and update strategies:
 
@@ -189,7 +188,7 @@ When you need to update the model or change configurations, Claude Code can gene
 
 The strategy ensures zero-downtime updates by using vLLM's ability to hot-reload models while serving requests. Claude Code generates the necessary Kubernetes resources for canary deployments using Istio or similar service meshes.
 
-Security Hardening
+## Security Hardening
 
 Production deployments require security hardening. Claude Code can audit and improve your deployment:
 
@@ -199,7 +198,7 @@ Production deployments require security hardening. Claude Code can audit and imp
 
 Common security improvements include restricting the metrics endpoint to internal networks, adding authentication middleware, running vLLM as a non-root user, and implementing network policies to restrict communication.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms vLLM inference server deployment from a manual, error-prone process into an automated, repeatable workflow. By using skills for Docker, Kubernetes, GitHub Actions, and monitoring, you can deploy production-grade inference infrastructure in minutes rather than days.
 
@@ -207,7 +206,6 @@ The key is loading the appropriate skills before starting your deployment projec
 
 If you have not yet written the vLLM inference server itself, the companion guide [Claude Code for vLLM Inference Server Workflow](/claude-code-for-vllm-inference-server-workflow/) covers using Claude Code to build the FastAPI server, initialize the LLM engine, and add inline Prometheus instrumentation before you containerize and deploy.
 {% endraw %}
-
 
 Related Reading
 

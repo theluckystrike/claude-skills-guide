@@ -12,12 +12,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Inngest Event Driven Function Workflow Tutorial
-
 Event-driven architectures have become the backbone of modern applications, enabling systems to respond to user actions, external triggers, and system events in real-time. Combining Claude Code with Inngest creates a powerful workflow where AI-powered functions respond to events automatically. This tutorial walks you through building event-driven function workflows using Claude Code and Inngest, with practical examples you can apply to your projects.
 
-Why Event-Driven Workflows Matter
+## Why Event-Driven Workflows Matter
 
 Traditional request-response patterns require your system to constantly poll for changes or maintain long-running processes. Event-driven architectures flip this model, instead of asking "is there work to do?", your functions react to events as they happen. This approach offers several advantages for developers building AI-enhanced applications.
 
@@ -25,7 +22,7 @@ First, event-driven workflows reduce unnecessary computation. Your code only run
 
 Inngest simplifies event-driven workflows by providing a serverless runtime that executes functions based on events. When combined with Claude Code's ability to understand context and generate appropriate responses, you can build intelligent systems that process events with AI-powered logic.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before building event-driven workflows, ensure your environment is ready. You'll need Node.js 18 or higher, a Claude Code API key, and the Inngest SDK. Create a new project and install the required dependencies:
 
@@ -61,7 +58,7 @@ export const inngest = new Inngest({
 export { anthropic };
 ```
 
-Creating Your First Event-Driven Function
+## Creating Your First Event-Driven Function
 
 Now let's create a function that responds to events using Claude Code. This example processes customer support tickets when they're submitted:
 
@@ -102,7 +99,7 @@ export const processTicket = inngest.createFunction(
 
 This function listens for the `ticket/submitted` event. When triggered, it sends the ticket details to Claude Code for AI-powered analysis. The results are returned and can trigger subsequent events in your workflow.
 
-Building Multi-Step Event Workflows
+## Building Multi-Step Event Workflows
 
 One of Inngest's powerful features is the ability to chain functions together. Let's build a more complex workflow that handles user onboarding:
 
@@ -188,7 +185,7 @@ export const onboardingWorkflow = inngest.createFunction(
 );
 ```
 
-Handling Webhooks with Claude Code
+## Handling Webhooks with Claude Code
 
 Event-driven workflows often respond to external webhooks. Here's how to process Stripe webhooks with AI-powered analysis:
 
@@ -231,7 +228,7 @@ export const handleStripeWebhook = inngest.createFunction(
 );
 ```
 
-Testing Your Event-Driven Functions
+## Testing Your Event-Driven Functions
 
 Testing is crucial for reliable workflows. Create tests that verify your functions respond correctly to events:
 
@@ -261,7 +258,7 @@ test('processes successful payment event', async () => {
 
 Run tests with `npx vitest` to verify your event handlers work correctly before deploying to production.
 
-Deploying Your Event-Driven Workflow
+## Deploying Your Event-Driven Workflow
 
 When ready to deploy, host your functions on a platform that supports Inngest. Vercel, Netlify, and Cloudflare Workers all work well. For Vercel deployment, create an API route:
 
@@ -277,7 +274,7 @@ export const { GET, POST, PUT } = serve({
 
 Deploy with `vercel deploy --prod` and configure your Inngest event key in the Vercel dashboard.
 
-Conclusion
+## Conclusion
 
 Building event-driven function workflows with Claude Code and Inngest combines the best of both worlds: reliable event handling and AI-powered processing. Start with simple single-function workflows, then expand to multi-step processes as your application grows. The key is identifying events in your system that could benefit from AI analysis or generation, then wiring them up with Inngest's declarative function definitions.
 

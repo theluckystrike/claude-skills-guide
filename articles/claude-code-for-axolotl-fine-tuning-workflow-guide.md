@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Axolotl Fine-Tuning Workflow Guide
 
 Fine-tuning large language models doesn't have to be a fragmented process of switching between scripts, configuration files, and documentation. By integrating Claude Code into your Axolotl workflow, you can automate repetitive tasks, validate configurations before training, and maintain clear documentation throughout the process. This guide walks you through practical strategies for using Claude Code as your AI-assisted fine-tuning companion.
 
-Understanding the Axolotl Workflow
+## Understanding the Axolotl Workflow
 
 Axolotl provides a streamlined approach to fine-tuning open-source language models, but the workflow involves several distinct phases that can benefit from automation and intelligent assistance:
 
@@ -30,11 +29,11 @@ Axolotl provides a streamlined approach to fine-tuning open-source language mode
 
 Each phase presents opportunities for Claude Code to reduce manual effort and prevent common errors.
 
-Dataset Preparation with Claude Code
+## Dataset Preparation with Claude Code
 
 The foundation of successful fine-tuning lies in well-prepared datasets. Claude Code can help you transform raw data into Axolotl-compatible formats, whether you're working with JSON, JSONL, or specialized formats.
 
-Converting Raw Data to Training Format
+## Converting Raw Data to Training Format
 
 When you have raw conversation data or document collections, Claude Code can generate conversion scripts or directly transform the data:
 
@@ -68,7 +67,7 @@ def convert_to_axolotl_format(input_file, output_file, format_type="chat"):
 
 Claude Code can generate this transformation logic based on your specific data structure, then execute the conversion, validate the output, and even perform quality checks like detecting empty responses or mismatched message counts.
 
-Dataset Validation
+## Dataset Validation
 
 Before training, validate your dataset programmatically:
 
@@ -100,11 +99,11 @@ validate_dataset('dataset.jsonl')
 "
 ```
 
-Configuration Validation and Generation
+## Configuration Validation and Generation
 
 Axolotl's YAML configuration files are powerful but can be finicky. Claude Code excels at both generating these configurations and validating them before training begins.
 
-Generating Base Configurations
+## Generating Base Configurations
 
 Describe your target model and hardware setup to Claude Code, and it can generate a starter configuration:
 
@@ -142,7 +141,7 @@ optimizer: paged_adamw_32bit
 logging_steps: 10
 ```
 
-Pre-Training Validation Checklist
+## Pre-Training Validation Checklist
 
 Before executing training, create a validation workflow:
 
@@ -166,11 +165,11 @@ echo " Output directory writable"
 
 Claude Code can wrap all these checks into a single validation command, catching configuration errors before you waste hours on a failed training run.
 
-Training Execution and Monitoring
+## Training Execution and Monitoring
 
 Once your dataset and configuration are ready, Claude Code can assist with execution and real-time monitoring.
 
-Training Command Generation
+## Training Command Generation
 
 Based on your hardware and model, Claude Code can generate the appropriate accelerate command:
 
@@ -185,7 +184,7 @@ Multi-GPU with FSDP
 accelerate launch --config_file configs/fsdp.yaml -m axolotl train config.yaml
 ```
 
-Monitoring Progress
+## Monitoring Progress
 
 Create a monitoring script that Claude Code can execute during training:
 
@@ -207,7 +206,7 @@ echo "=== Latest Checkpoint ==="
 ls -t ./outputs/*/ | head -1
 ```
 
-Iterative Refinement Workflow
+## Iterative Refinement Workflow
 
 Fine-tuning is rarely a single-pass process. Claude Code helps you establish an iterative workflow:
 
@@ -217,7 +216,7 @@ Fine-tuning is rarely a single-pass process. Claude Code helps you establish an 
 4. Augment Data - Add targeted examples for weak areas
 5. Retrain - Continue from checkpoint or restart
 
-Creating Evaluation Sets
+## Creating Evaluation Sets
 
 ```python
 def create_eval_set(dataset_path, eval_size=100):
@@ -243,7 +242,7 @@ def create_eval_set(dataset_path, eval_size=100):
     return len(train_data), len(eval_data)
 ```
 
-Actionable Recommendations
+## Actionable Recommendations
 
 To maximize your productivity with Axolotl and Claude Code:
 

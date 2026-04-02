@@ -17,13 +17,13 @@ permalink: /should-i-switch-from-continue-dev-to-claude/
 
 If you're currently using Continue.dev as your AI coding assistant, you might be wondering whether switching to Claude Code is worth the transition. Both tools have transformed how developers work, but they take fundamentally different approaches to AI-assisted coding. This guide breaks down the key differences, highlights Claude Code's unique strengths, and helps you decide if making the switch makes sense for your workflow.
 
-Understanding the Core Differences
+## Understanding the Core Differences
 
 Continue.dev and Claude Code represent two different philosophies in AI-assisted development. Continue.dev functions as a powerful extension that connects to various AI models through a clean interface, while Claude Code is Anthropic's specialized CLI tool built specifically for complex software development tasks.
 
 The most significant difference lies in how each tool handles multi-step tasks and project context. Continue.dev excels at quick, targeted assistance within your IDE, making it ideal for inline code suggestions and explanations. Claude Code, on the other hand, shines when tackling larger architectural decisions, comprehensive code reviews, and complex debugging scenarios that span multiple files.
 
-Claude Code Skills: A Game-Changing Feature
+## Claude Code Skills: A Game-Changing Feature
 
 One of Claude Code's most distinctive capabilities is its skills system. Skills are reusable, composable tools that extend Claude Code's functionality for specific domains or tasks. Unlike simple commands or scripts, skills can maintain state, access project-specific context, and provide specialized capabilities that evolve with your project.
 
@@ -36,7 +36,7 @@ Create a skill file: ~/.claude/skills/my-stack.md
 
 This skill can then help you generate contextually appropriate code that follows your project's established patterns, something Continue.dev's more general approach can't match.
 
-Tool Use and Execution Capabilities
+## Tool Use and Execution Capabilities
 
 Claude Code's tool use capabilities go far beyond what most AI coding assistants offer. When you grant permissions, Claude Code can execute commands, modify files, and run tests autonomously. This transforms it from a passive assistant into an active team member that can handle entire workflows.
 
@@ -49,9 +49,9 @@ claude "Add user authentication flow: create migration, update models, add route
 
 Claude will analyze your project structure, create appropriate files, execute migrations, and verify everything works before reporting back. Continue.dev can assist with individual tasks, but this level of autonomous multi-step execution requires significantly more manual coordination.
 
-Practical Examples: Real-World Comparison
+## Practical Examples: Real-World Comparison
 
-Example 1: Debugging a Complex Issue
+## Example 1: Debugging a Complex Issue
 
 Imagine you're tracking down a memory leak in a Node.js application. With Continue.dev, you'd likely paste error messages and code snippets, receiving suggestions one at a time. With Claude Code, you can provide broader context and let it investigate systematically:
 
@@ -61,7 +61,7 @@ claude "Our API server is showing increasing memory usage over time. Check the r
 
 Claude Code will examine multiple files, run diagnostic commands, and provide a comprehensive analysis with specific fix recommendations.
 
-Example 2: Building a New Feature
+## Example 2: Building a New Feature
 
 When implementing a new feature, Claude Code's project understanding proves invaluable. It can read your existing patterns, understand your testing approach, and generate code that integrates smoothly:
 
@@ -71,7 +71,7 @@ claude "Add a rate limiting middleware to our Express API following our existing
 
 Claude will examine your existing middleware, understand your coding conventions, create appropriate files, and write tests that match your current test suite's structure and style.
 
-Example 3: Code Review and Refactoring
+## Example 3: Code Review and Refactoring
 
 Claude Code excels at comprehensive code reviews that consider your entire codebase:
 
@@ -81,7 +81,7 @@ claude "Review the auth module for security issues. Check for SQL injection, XSS
 
 This holistic review capability, understanding security implications across your entire codebase, represents a significant advantage over more targeted IDE-based assistance.
 
-When Continue.dev Might Still Be the Right Choice
+## When Continue.dev Might Still Be the Right Choice
 
 Switching tools isn't always the right answer. Continue.dev remains an excellent choice if you:
 
@@ -92,7 +92,7 @@ Switching tools isn't always the right answer. Continue.dev remains an excellent
 
 Continue.dev's IDE integration provides a smooth experience for quick code modifications and explanations. If your workflow centers on inline editing and you rarely need multi-step autonomous assistance, the transition might not provide enough benefit to justify the learning curve.
 
-Making the Switch: Practical Considerations
+## Making the Switch: Practical Considerations
 
 If you decide to try Claude Code, here are practical tips for a smooth transition:
 
@@ -104,7 +104,7 @@ If you decide to try Claude Code, here are practical tips for a smooth transitio
 
 4. Use for complex tasks first: Begin by using Claude Code for tasks where it clearly excels, complex debugging, architecture decisions, and comprehensive code generation.
 
-Conclusion
+## Conclusion
 
 The choice between Continue.dev and Claude Code ultimately depends on your workflow priorities. Claude Code's skills system, autonomous execution capabilities, and holistic project understanding make it particularly powerful for developers tackling complex, multi-step software engineering tasks. Its ability to maintain context across extended sessions and execute complete workflows represents a significant evolution in AI-assisted development.
 

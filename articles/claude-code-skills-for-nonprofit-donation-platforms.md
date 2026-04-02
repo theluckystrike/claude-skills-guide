@@ -16,7 +16,7 @@ permalink: /claude-code-skills-for-nonprofit-donation-platforms/
 
 Building a nonprofit donation platform requires handling sensitive financial data, generating tax receipts, managing donor relationships, and ensuring PCI compliance. Claude Code skills accelerate these tasks by providing structured workflows for common nonprofit platform patterns. This guide covers the most useful skills for donation platform development. For more industry-specific automation patterns, see the [use cases hub](/use-cases-hub/).
 
-Understanding the Skill Model
+## Understanding the Skill Model
 
 Claude skills are instruction files loaded from `~/.claude/skills/` when you invoke them with slash commands. They do not execute code. they guide Claude to produce better code for your specific domain. For nonprofit donation platforms, this means getting Stripe-ready implementations, proper receipt generation, and donor data handling patterns from the start. See the [skill .md format specification](/claude-skill-md-format-complete-specification-guide/) for writing these instruction files correctly.
 
@@ -65,7 +65,7 @@ export async function createDonationIntent(amount, donorEmail, isRecurring) {
 
 This skill also covers Stripe Webhook handling for donation confirmations, failed payment recovery, and refund processing. critical for maintaining donor trust.
 
-One-Time vs. Recurring Donations: What Changes
+## One-Time vs. Recurring Donations: What Changes
 
 One-time and recurring donations use different Stripe objects, and the skill helps Claude keep them straight:
 
@@ -148,7 +148,7 @@ def generate_donation_receipt(donor_name, amount, date, organization_ein):
 
 The skill ensures your receipts include: organization legal name, EIN, donation date, amount, statement of goods/services provided (or lack thereof), and good-faith estimate of value.
 
-IRS Requirements: What Must Be on a 501(c)(3) Receipt
+## IRS Requirements: What Must Be on a 501(c)(3) Receipt
 
 The IRS has specific requirements for donation acknowledgment letters. Missing any of these fields can invalidate the donor's deduction claim:
 
@@ -163,7 +163,7 @@ The IRS has specific requirements for donation acknowledgment letters. Missing a
 | Good-faith value estimate | Yes if goods provided | e.g., gala dinner = $75 value |
 | Signature | No | But professional presentation builds trust |
 
-Year-End Tax Summary Generation
+## Year-End Tax Summary Generation
 
 For recurring donors, you need an annual summary that aggregates all gifts. The pdf skill handles this pattern too:
 
@@ -250,7 +250,7 @@ export async function storeDonorInfo(donorData) {
 
 This skill also covers GDPR compliance for international donors, data retention policies, and secure logging practices that avoid exposing donor information. For a deeper look at credential and secret protection, see the [secret scanning guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/).
 
-PCI DSS Compliance: What Nonprofits Must Know
+## PCI DSS Compliance: What Nonprofits Must Know
 
 Even though Stripe handles card data, your platform still falls under PCI DSS scope. The security skill helps Claude produce code that meets the relevant requirements:
 
@@ -280,7 +280,7 @@ export async function auditLogDonorAccess(userId, donorId, action, metadata = {}
 
 Attach this to every endpoint that reads or modifies donor records. When a data breach investigation occurs. and for any platform that handles money, it eventually does. this log is what protects you.
 
-GDPR for International Donors
+## GDPR for International Donors
 
 If your nonprofit accepts donations from donors in the EU, GDPR applies. The security skill generates a deletion workflow:
 
@@ -356,7 +356,7 @@ async def create_donation(donation: DonationCreate):
 
 The skill ensures consistent error handling, proper HTTP status codes, and documentation generation for your donor management API.
 
-Complete Nonprofit API Surface
+## Complete Nonprofit API Surface
 
 A well-designed nonprofit platform needs a consistent set of endpoints. The api-design skill helps Claude produce these with correct HTTP semantics:
 
@@ -428,7 +428,7 @@ export function buildDonationConfirmation(donation, donor) {
 }
 ```
 
-The Full Donor Communication Lifecycle
+## The Full Donor Communication Lifecycle
 
 Donor communication is not just a confirmation email. Each event in the donation lifecycle needs a corresponding template:
 
@@ -502,7 +502,7 @@ export async function handleStripeWebhook(payload, signature) {
 
 This skill covers idempotency (critical for payment webhooks), retry logic, and alerting for failed processing.
 
-Idempotency: The Most Important Webhook Concept
+## Idempotency: The Most Important Webhook Concept
 
 Stripe retries failed webhooks up to 24 hours. Without idempotency, a temporary database outage causes every donation during that period to be processed twice. The webhook skill generates idempotency-safe handlers:
 
@@ -534,7 +534,7 @@ export async function fulfillDonation(paymentIntent) {
 
 The database transaction prevents the scenario where two simultaneous webhook deliveries both pass the initial check and both generate receipts.
 
-Webhook Event Priority Table
+## Webhook Event Priority Table
 
 Not all webhook events are equally important. Here is how to prioritize your implementation:
 
@@ -550,7 +550,7 @@ Not all webhook events are equally important. Here is how to prioritize your imp
 
 Implement Critical events first. High and Medium can follow in the next iteration.
 
-Practical Integration Workflow
+## Practical Integration Workflow
 
 Combine these skills for a complete donation flow:
 
@@ -563,7 +563,7 @@ Combine these skills for a complete donation flow:
 
 Each skill produces production-ready code that handles the edge cases specific to nonprofit donation platforms.
 
-End-to-End Sequence Diagram
+## End-to-End Sequence Diagram
 
 Here is the complete data flow for a one-time donation, showing how each skill's output connects:
 
@@ -602,7 +602,7 @@ storeDonorInfo()           generate_donation_receipt()
 
 This sequence handles the happy path. Each skill also handles the failure modes at its step: Stripe retries cover webhook failures, the PDF generator handles rendering errors, and the email service queues retries on delivery failure.
 
-Choosing the Right Tech Stack
+## Choosing the Right Tech Stack
 
 When Claude generates the initial scaffold, the skill context helps it pick appropriate libraries for your stack:
 

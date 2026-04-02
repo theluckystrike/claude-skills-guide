@@ -18,7 +18,7 @@ permalink: /caching-strategies-for-claude-code-skill-outputs/
 
 This guide covers practical caching strategies you can implement for Claude Code skills, from simple file-based caches to sophisticated persistent storage systems. For complementary performance gains, see [Claude skills slow performance speed-up guide](/claude-skills-slow-performance-speed-up-guide/).
 
-Understanding Skill Caching Opportunities
+## Understanding Skill Caching Opportunities
 
 Not every skill benefit from caching. The key is identifying operations that are:
 
@@ -28,11 +28,11 @@ Not every skill benefit from caching. The key is identifying operations that are
 
 The `pdf` skill excels at this. Generating a PDF from Markdown involves parsing, formatting, and rendering, work that doesn't change if the source content remains identical. Similarly, the `supermemory` skill benefits from caching when retrieving previously indexed information, avoiding redundant embedding computations.
 
-File-Based Caching for Skill Outputs
+## File-Based Caching for Skill Outputs
 
 The simplest approach stores cached outputs as files in your project. This works well for skills that generate artifacts like documents, images, or compiled code.
 
-Implementing a Basic File Cache
+## Implementing a Basic File Cache
 
 Create a cache directory and check for existing outputs before running expensive operations:
 
@@ -60,7 +60,7 @@ echo "$OUTPUT"
 
 This pattern works with any skill that produces file output. The `docx` skill and the `pptx` skill both generate deterministic outputs from input data, perfect candidates for this approach.
 
-Cache Invalidation Strategies
+## Cache Invalidation Strategies
 
 File-based caching requires careful invalidation to avoid serving stale data. Common approaches include:
 
@@ -84,11 +84,11 @@ CACHE_VERSION="v2"
 CACHED_OUTPUT="$CACHE_DIR/$CACHE_VERSION-$SKILL_NAME-$INPUT_HASH.output"
 ```
 
-Using Claude Code Sessions for Context Caching
+## Using Claude Code Sessions for Context Caching
 
 Claude Code maintains conversation context within sessions. You can use this to avoid reprocessing information across skill invocations.
 
-Session-Level Caching Pattern
+## Session-Level Caching Pattern
 
 When running multiple skills that share context, work within a single Claude Code session rather than starting fresh each time. Within one session, invoke the skills sequentially:
 
@@ -103,11 +103,11 @@ When running multiple skills that share context, work within a single Claude Cod
 
 The `supermemory` skill demonstrates this effectively. It maintains an indexed memory across interactions, so repeated queries about the same content retrieve cached context rather than recomputing it.
 
-MCP-Based Persistent Caching
+## MCP-Based Persistent Caching
 
 For more sophisticated caching, use [MCP (Model Context Protocol) servers](/building-your-first-mcp-tool-integration-guide-2026/) with persistent storage capabilities. This approach works across sessions and supports distributed caching for teams.
 
-MCP Cache Server Example
+## MCP Cache Server Example
 
 ```python
 cache-server.py - MCP server with Redis-backed caching
@@ -188,7 +188,7 @@ Register this in your `.claude/settings.json`:
 
 Now any skill can use `cache_get` and `cache_set` tools for instant retrieval of previous outputs.
 
-Skill-Specific Caching Recommendations
+## Skill-Specific Caching Recommendations
 
 Different skills warrant different caching strategies:
 
@@ -202,7 +202,7 @@ The `canvas-design` skill: Cache generated visual assets when the same design br
 
 The `supermemory` skill: This skill handles caching internally by design, but you can enhance it by providing context about what information was previously retrieved in your session.
 
-In-Memory Caching for Single Sessions
+## In-Memory Caching for Single Sessions
 
 For fast, temporary caching within a single Claude Code session, an in-memory cache avoids filesystem overhead entirely. This works well when you need immediate access to recently processed information but don't need persistence across sessions:
 
@@ -237,7 +237,7 @@ def process_with_cache(prompt, context):
 
 Start with in-memory caching for immediate benefits, then add file-based or MCP-backed persistence when you need cross-session continuity.
 
-Stale-While-Revalidate Pattern
+## Stale-While-Revalidate Pattern
 
 For scenarios where fresh data is desirable but cached data is acceptable as a fallback, implement the stale-while-revalidate pattern. This returns cached results immediately while triggering a background refresh:
 
@@ -254,7 +254,7 @@ async def get_data_with_swr(key, fetch_function):
 
 This pattern is particularly useful for skill outputs tied to external data sources where freshness matters but latency matters more.
 
-Monitoring Cache Effectiveness
+## Monitoring Cache Effectiveness
 
 Track your cache hit rate to ensure your strategy delivers value:
 
@@ -283,7 +283,7 @@ record_cache_miss() {
 
 A healthy cache hit rate depends on your use case but typically ranges from 40-80% for active projects. If you see low hit rates, examine whether your cache keys are too specific or your input patterns vary more than expected.
 
-Conclusion
+## Conclusion
 
 Implementing caching for Claude Code skills reduces redundant computation, speeds up repeated operations, and lowers API costs. Start with simple file-based caching for skills like `pdf` and `docx` that generate deterministic outputs. The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) provides a persistent caching layer for knowledge and context across sessions. Scale to MCP-backed persistent caching for team environments and complex workflows. Monitor your hit rates and adjust cache TTL and invalidation strategies as your usage patterns evolve.
 

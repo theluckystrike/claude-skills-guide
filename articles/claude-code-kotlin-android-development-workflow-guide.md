@@ -16,11 +16,11 @@ permalink: /claude-code-kotlin-android-development-workflow-guide/
 
 [Developing Android applications with Kotlin becomes significantly more productive when you integrate Claude Code into your workflow](/best-claude-code-skills-to-install-first-2026/) This guide covers practical strategies for using Claude and its skill system to accelerate Android development, from project scaffolding to testing and documentation.
 
-Setting Up Claude Code for Android Development
+## Setting Up Claude Code for Android Development
 
 [Before integrating Claude into your Android workflow, ensure you have the necessary tools installed](/claude-skill-md-format-complete-specification-guide/) You'll need Android Studio or the command-line SDK tools, along with Claude Code installed on your system. The combination of these tools creates a powerful development environment where Claude handles reasoning and code generation while you maintain full control over your project.
 
-Prerequisites
+## Prerequisites
 
 - Java Development Kit (JDK) 17+: Android Studio Dolphin and newer require JDK 17
 - Android Studio: Latest stable version (Giraffe or later recommended)
@@ -43,7 +43,7 @@ echo $ANDROID_HOME
 
 Create your project structure before inviting Claude into your development sessions. When working on Kotlin Android projects, having your `build.gradle.kts` files and project structure visible to Claude allows for accurate context-aware suggestions.
 
-Project Structure Best Practices
+## Project Structure Best Practices
 
 Organize your Kotlin Android project for maintainability:
 
@@ -59,11 +59,11 @@ app/
  build.gradle.kts
 ```
 
-Claude Skills for Android Development
+## Claude Skills for Android Development
 
 Claude's skill system extends its capabilities for specific development scenarios. For Android development with Kotlin, several skills prove particularly valuable.
 
-The TDD Skill for Android
+## The TDD Skill for Android
 
 The [`tdd` skill](/best-claude-skills-for-developers-2026/) transforms how you approach Android development. Activate it in your Claude session:
 
@@ -108,7 +108,7 @@ class UserRepository(
 }
 ```
 
-Documentation Generation with the PDF Skill
+## Documentation Generation with the PDF Skill
 
 The `pdf` skill helps generate documentation for your Android project. After completing feature development, use it to create API documentation or user guides:
 
@@ -138,7 +138,7 @@ class AuthViewModel(
 }
 ```
 
-Frontend Design Considerations
+## Frontend Design Considerations
 
 When building Android UIs with Jetpack Compose, the `frontend-design` skill provides valuable guidance on component design and layout optimization. While designed for web development, its principles translate well to Compose layouts:
 
@@ -148,7 +148,7 @@ When building Android UIs with Jetpack Compose, the `frontend-design` skill prov
 
 Claude will suggest composition patterns, state management approaches, and accessibility considerations for your Android UI code.
 
-The xlsx Skill for Build Management
+## The xlsx Skill for Build Management
 
 When managing Android build variants, Gradle configurations, or dependency versions, the xlsx skill helps generate configuration files and track dependency changes:
 
@@ -158,9 +158,9 @@ When managing Android build variants, Gradle configurations, or dependency versi
 
 [Use this skill to create spreadsheets that track your dependency versions](/best-claude-code-skills-to-install-first-2026/), build variant configurations, or API endpoints across environments. This proves valuable when managing multi-module Android projects with complex dependency trees.
 
-Practical Android Development Workflow
+## Practical Android Development Workflow
 
-Project Initialization and Structure
+## Project Initialization and Structure
 
 Start each Android project with a clear architecture in mind. Use Claude to draft your project structure:
 
@@ -193,7 +193,7 @@ fun UserProfileScreen(
 }
 ```
 
-Dependency Injection with Hilt
+## Dependency Injection with Hilt
 
 Hilt is the standard for Android dependency injection. Claude Code can help you set up DI modules correctly:
 
@@ -229,7 +229,7 @@ object NetworkModule {
 }
 ```
 
-Coroutines and Flow for Async Operations
+## Coroutines and Flow for Async Operations
 
 Kotlin Coroutines and Flow are essential for responsive Android apps. Here's a practical pattern for handling network and cache together:
 
@@ -255,7 +255,7 @@ class UserRepository(
 
 Ask Claude Code to explain async patterns, debug coroutine issues, or optimize flow operations.
 
-Dependency Management
+## Dependency Management
 
 Claude helps manage Android dependencies by understanding version compatibility. When adding libraries, ask Claude to verify Gradle dependency versions work together:
 
@@ -278,7 +278,7 @@ dependencies {
 
 You can also ask Claude to audit your existing dependencies and identify outdated packages that might have security vulnerabilities.
 
-Testing Strategy
+## Testing Strategy
 
 Implement a comprehensive testing strategy using the tdd skill. For Android, focus on three testing layers:
 
@@ -301,7 +301,7 @@ fun `should show error when user not found`() = runTest {
 }
 ```
 
-Debugging with Claude Code
+## Debugging with Claude Code
 
 When encountering Android-specific issues, provide Claude with targeted context:
 
@@ -320,7 +320,7 @@ database. Here's the relevant code: [paste code]
 
 Include the stack trace and relevant code snippets for accurate assistance. Claude recognizes common Android patterns and suggests targeted solutions.
 
-Daily Integration Strategy
+## Daily Integration Strategy
 
 Structure your Claude Code usage throughout the development day:
 
@@ -329,7 +329,7 @@ Structure your Claude Code usage throughout the development day:
 3. Debugging: Paste error logs and stack traces for analysis
 4. Documentation: Generate KDoc comments and README updates
 
-Memory and Knowledge Management
+## Memory and Knowledge Management
 
 For ongoing Android projects, consider integrating [`supermemory`](/claude-skills-token-optimization-reduce-api-costs/) to maintain project context across sessions:
 
@@ -339,7 +339,7 @@ For ongoing Android projects, consider integrating [`supermemory`](/claude-skill
 
 This skill helps Claude remember architectural decisions, previous refactorings, and project-specific conventions. When you return to a project after a break, Claude accesses your stored knowledge and provides contextually relevant suggestions.
 
-Automation with Claude Code Scripts
+## Automation with Claude Code Scripts
 
 Beyond interactive sessions, you can automate repetitive Android development tasks. Create scripts that handle:
 
@@ -357,7 +357,7 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 
 Call these scripts directly from Claude sessions for streamlined workflows.
 
-Advanced Integration: Custom Skills
+## Advanced Integration: Custom Skills
 
 For teams working on large Android projects, consider creating custom skills that encode your organization's patterns. See [how to write a skill .md file](/how-to-write-a-skill-md-file-for-claude-code/) for the format details. A custom skill might include:
 
@@ -368,7 +368,7 @@ For teams working on large Android projects, consider creating custom skills tha
 
 Store these custom skills in your team's shared knowledge base and load them for relevant projects.
 
-Best Practices for Claude-Assisted Android Development
+## Best Practices for Claude-Assisted Android Development
 
 Maintain code quality by following these guidelines when working with Claude:
 
@@ -384,7 +384,7 @@ Document Your Conventions: Use supermemory to store project-specific patterns. T
 
 Keep Your Project Structure Consistent: Claude works best when your Android project follows standard conventions. Use the recommended directory structure for source sets, resources, and tests.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your Kotlin Android development workflow transforms how you build mobile applications. The combination of AI-assisted code generation, structured testing approaches with the tdd skill, and documentation capabilities creates a comprehensive development environment. Start with simple implementations and gradually adopt more advanced workflows as your team becomes comfortable with the collaboration pattern.
 

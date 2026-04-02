@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Keeps Adding Code I Did Not Ask For
-
 If you've used Claude Code for any significant amount of coding, you've probably experienced this: you ask for a small change, and suddenly there are dozens of new lines you didn't expect. Maybe you asked to fix a bug, and Claude Code refactored the entire module. Perhaps you wanted a simple function, and got a full file with error handling, logging, and tests. This behavior is one of the most common frustrations developers face when working with AI coding assistants. The good news is that understanding why it happens, and learning how to direct Claude Code more precisely, solves the problem in most cases.
 
-Why Claude Code Over-Generates Code
+## Why Claude Code Over-Generates Code
 
 Claude Code's tendency to add unrequested code stems from how it was trained. The model learned from millions of codebases that follow best practices: comprehensive error handling, thorough documentation, proper type hints, and complete implementations. When Claude Code sees an opportunity to "improve" your code, it often does so proactively, even when you didn't ask for improvements.
 
@@ -26,7 +23,7 @@ There are several common triggers for this behavior. First, when you ask for a s
 
 Understanding these triggers helps you craft prompts that explicitly limit scope.
 
-Techniques to Control Code Generation
+## Techniques to Control Code Generation
 
 The most effective way to prevent unwanted code additions is to be extremely specific in your prompts. Instead of asking "add user authentication," try "add a simple password check function that returns true or false, no more than 10 lines." Specificity eliminates ambiguity about what you actually want.
 
@@ -44,7 +41,7 @@ When making code changes:
 5. Ask before adding new dependencies
 ```
 
-Using Claude Code Skills to Constrain Behavior
+## Using Claude Code Skills to Constrain Behavior
 
 Claude Code skills provide another powerful way to control code generation. Skills like code-scope help maintain focus on specific tasks, while minimal-change skills explicitly instruct the model to make the smallest necessary modification.
 
@@ -65,7 +62,7 @@ constraints:
   - "Always ask before refactoring"
 ```
 
-Practical Examples
+## Practical Examples
 
 Let's look at real scenarios where better prompting eliminates unwanted code.
 
@@ -109,7 +106,7 @@ No TypeScript types needed. No JSDoc comments. No error handling.
 Just the function, 3-5 lines max."
 ```
 
-Configuring Claude Code for Minimal Changes
+## Configuring Claude Code for Minimal Changes
 
 Your CLAUDE.md file (or claude.md) serves as a persistent instruction set for Claude Code. Here's an effective configuration for developers who want minimal, focused changes:
 
@@ -135,7 +132,7 @@ When adding features:
 
 This configuration tells Claude Code your preferences upfront, reducing the need to repeat constraints in every prompt.
 
-Practical Example: API Endpoint Boilerplate
+## Practical Example: API Endpoint Boilerplate
 
 Here's a real scenario where focused prompting eliminates unwanted boilerplate:
 
@@ -194,7 +191,7 @@ def get_user(user_id):
 
 The difference is dramatic. from a full file to 3 lines. For many workflows, that concise version is exactly what's needed.
 
-Creating a Custom Minimal-Code Skill
+## Creating a Custom Minimal-Code Skill
 
 You can create a custom skill that instructs Claude Code to minimize boilerplate by default:
 
@@ -205,7 +202,7 @@ description: Generate minimal, focused code snippets without boilerplate
 
 Place it in `~/.claude/skills/minimal-code.md` and invoke it in a session with `/minimal-code` to set a persistent preference for concise output during that session.
 
-When to Allow Extra Code
+## When to Allow Extra Code
 
 Sometimes the extra code Claude Code adds is actually beneficial. Error handling, type safety, and proper logging make code more solid. The key is knowing when to accept these additions and when to reject them.
 
@@ -213,10 +210,9 @@ Accept extra code when you're building new features from scratch, when working o
 
 The goal isn't to eliminate all extra code, it's to have control over what gets added. With practice, you'll find the right balance between accepting helpful improvements and maintaining the focused scope you need.
 
-Summary
+## Summary
 
 Claude Code keeps adding code you didn't ask for because it follows best practices learned from millions of codebases. To control this behavior, write specific prompts with explicit constraints, use claude.md to establish persistent preferences, use skills designed for focused changes, and clearly communicate scope limits in every request. The investment in crafting better prompts pays off quickly in cleaner, more predictable code generation.
-
 
 Related Reading
 

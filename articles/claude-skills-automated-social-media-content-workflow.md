@@ -16,13 +16,13 @@ permalink: /claude-skills-automated-social-media-content-workflow/
 
 [Social media management](/build-personal-ai-assistant-with-claude-skills-guide/) for developers and content creators. This guide walks through building an automated social media content workflow using Claude Code skills, Markdown files stored in `~/.claude/skills/` that you invoke with `/skill-name` inside a Claude Code session.
 
-Understanding the Workflow Architecture
+## Understanding the Workflow Architecture
 
 An effective automated social media content workflow consists of four phases: content generation, scheduling, publication, and analytics. Claude Code skills address each phase, letting you assemble a pipeline that fits your specific needs.
 
 The workflow begins with content creation, where skills like pdf and docx help process underlying content assets. The xlsx skill manages scheduling data, while supermemory maintains your content calendar and brand guidelines across sessions.
 
-Content Generation with Claude Skills
+## Content Generation with Claude Skills
 
 Creating social media content starts with existing assets, blog posts, whitepapers, product announcements. The pdf skill reads long-form PDF documents and extracts platform-ready snippets. Invoke it to process a whitepaper:
 
@@ -40,7 +40,7 @@ Read product-launch.docx and generate three LinkedIn post drafts from the key be
 
 For image requirements, describe your needs directly to Claude Code, it can generate HTML/CSS mockups or prompt structures for tools like Figma or Canva, but there is no `canvas-design` skill with a `require()` API.
 
-Scheduling and Calendar Management
+## Scheduling and Calendar Management
 
 Once content exists, organization is critical. The xlsx skill builds and manages scheduling spreadsheets:
 
@@ -60,7 +60,7 @@ Supermemory enhances this by storing strategy decisions across sessions. Record 
 
 This creates institutional knowledge that improves over time.
 
-Publication Automation
+## Publication Automation
 
 Direct publication requires API integration with platform SDKs, this happens outside Claude Code via scripts or scheduling tools. The practical pattern is to export your approved content from the xlsx calendar and feed it to a posting script:
 
@@ -84,7 +84,7 @@ The tdd skill helps if you build custom publication tooling. Use it to write tes
 Write tests for a function that validates post character limits per platform (Twitter: 280, LinkedIn: 3000, Instagram caption: 2200)
 ```
 
-Analytics and Performance Tracking
+## Analytics and Performance Tracking
 
 The xlsx skill creates analytics dashboards that aggregate engagement metrics:
 
@@ -99,7 +99,7 @@ Import platform analytics weekly. Use formulas to identify trends. For historica
 /supermemory store: Q1 2026 - blog topics about developer productivity outperformed product announcements by 40% engagement
 ```
 
-Practical Example: Product Launch Campaign
+## Practical Example: Product Launch Campaign
 
 Here is how the workflow operates for a feature launch:
 
@@ -109,7 +109,7 @@ Here is how the workflow operates for a feature launch:
 4. Store launch hashtags and key messages with `/supermemory` for team consistency
 5. After launch, import analytics into the xlsx dashboard and log results with `/supermemory`
 
-Tailoring Content Per Platform
+## Tailoring Content Per Platform
 
 Generating one piece of content and pushing it identically to every platform is a fast path to poor engagement. Each platform has a distinct format expectation, audience behavior, and algorithm preference. The `/docx` and `/pdf` skills generate raw material, your job is to reshape that material for each destination.
 
@@ -134,7 +134,7 @@ Extract all numerical statistics and benchmark results from this whitepaper. For
 
 This turns dense technical documents into a library of ready-to-use proof points.
 
-Maintaining Brand Voice Across Sessions
+## Maintaining Brand Voice Across Sessions
 
 One of the practical problems with AI-generated content is inconsistency. Claude does not remember your brand guidelines session-to-session unless you build that memory explicitly. The supermemory skill solves this by persisting style rules and voice guidelines:
 
@@ -152,7 +152,7 @@ This surfaces the stored rules and puts them in the active context before you st
 
 For teams, this shared memory becomes especially valuable. When multiple contributors use the same supermemory store, every session starts with the same baseline, no more inconsistent tone between posts written by different people.
 
-Approval Workflows and Quality Gates
+## Approval Workflows and Quality Gates
 
 Content going directly from generation to publication without review is a liability. The xlsx skill supports multi-stage approval tracking:
 
@@ -176,7 +176,7 @@ Write tests for a social media post validator that checks:
 
 Running these checks programmatically before posts enter the approval queue saves review time and prevents obvious errors from reaching human reviewers.
 
-Repurposing Content at Scale
+## Repurposing Content at Scale
 
 The most impactful application of this workflow is systematic repurposing. A single long-form piece of content, a blog post, a recorded talk transcript, a product changelog, can generate weeks of social posts if you process it correctly.
 
@@ -197,7 +197,7 @@ Store the output in your xlsx calendar across different dates and platforms. A s
 /supermemory store: content-extracted: developer-productivity-blog-post-march2026.pdf - extracted 14 posts on 2026-03-18
 ```
 
-Building Your Own Workflow
+## Building Your Own Workflow
 
 Start with one phase. Automating the scheduling spreadsheet with `/xlsx` is the lowest-friction starting point, it immediately centralizes your content calendar. Add supermemory for strategy tracking, then layer in pdf or docx for content extraction as needs become clearer.
 
@@ -220,7 +220,6 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack including tdd
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Automate deployments with Claude skills
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 ---
 

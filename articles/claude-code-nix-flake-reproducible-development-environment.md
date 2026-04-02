@@ -16,7 +16,7 @@ permalink: /claude-code-nix-flake-reproducible-development-environment/
 
 Development environment reproducibility remains one of the hardest problems in software engineering. You ship code that works on your machine, only to watch it fail on a colleague's workstation or in CI. The traditional solutions, Docker containers, virtual machines, or extensive README instructions, each bring tradeoffs around weight, speed, and flexibility. Nix Flakes offer a compelling alternative, and when combined with Claude Code, they create a powerful workflow for declarative, [reproducible environment](/claude-code-dockerfile-generation-multi-stage-build-guide/) environments.
 
-What Nix Flakes Bring to Development
+## What Nix Flakes Bring to Development
 
 [Nix Flakes provide a purely functional approach to package management and system configuration](/best-claude-code-skills-to-install-first-2026/) Unlike traditional package managers that install packages into a global namespace, Nix stores each package in its own isolated directory with all dependencies. This isolation eliminates the "works on my machine" problem entirely.
 
@@ -53,7 +53,7 @@ Here's a basic flake for a Python project:
 
 This single file replaces environment-specific setup scripts, Dockerfiles, and "install these packages" README sections. Unlike [dev container setups](/claude-code-dev-containers-devcontainer-json-setup-guide/), Nix runs directly on the host without a container runtime.
 
-Combining Claude Code with Nix Flakes
+## Combining Claude Code with Nix Flakes
 
 Claude Code excels at understanding your project context and automating tasks. When your project includes a Nix Flake, Claude can interact with it to set up environments, run commands in the correct context, and help you maintain your environment definitions.
 
@@ -61,7 +61,7 @@ The workflow becomes straightforward: define your environment in `flake.nix`, th
 
 For instance, the tdd skill can run tests within your Nix development shell, ensuring tests execute in the exact environment you defined. The pdf skill can generate documentation about your environment setup. The super memory skill can remember your project-specific configurations across sessions.
 
-Practical Example: A Complete Project Setup
+## Practical Example: A Complete Project Setup
 
 Consider a project that requires multiple tools: Go for the backend, Node.js for the frontend, and various linting tools. Your flake defines all of these:
 
@@ -116,7 +116,7 @@ Consider a project that requires multiple tools: Go for the backend, Node.js for
 
 With this setup, running `nix develop` in your project directory drops you into an environment with exactly the versions of Go, Node.js, and tools you specified. No system-wide installations required.
 
-Managing Multiple Development Shells
+## Managing Multiple Development Shells
 
 Large projects often require separate environments for different components. Nix Flakes handle this elegantly by defining multiple named shells:
 
@@ -146,7 +146,7 @@ Large projects often require separate environments for different components. Nix
 
 Enter a specific shell with `nix develop .#backend`. Claude Code can help you switch between environments by understanding which tools each shell provides. When you run `nix flake show`, all available shells and outputs are listed, share that output with Claude when debugging environment-related issues.
 
-Integrating Claude Code Commands
+## Integrating Claude Code Commands
 
 Claude Code can automate your Nix workflows directly. A simple skill that understands your flake structure can help developers get started quickly:
 
@@ -180,7 +180,7 @@ For updating dependencies:
 
 This pattern scales to larger teams. When everyone uses the same flake, environment consistency is guaranteed by definition.
 
-Advanced Patterns with Overlays and Inputs
+## Advanced Patterns with Overlays and Inputs
 
 As your project grows, Nix Flakes support sophisticated patterns. You can pin specific versions of dependencies, use overlays to customize packages, and compose flakes together.
 
@@ -203,7 +203,7 @@ inputs.sharedEnv.url = "github:yourorg/shared-dev-env";
 
 The docx skill can help generate documentation about these configurations. The artifacts-builder skill can create visualization of your environment dependencies.
 
-Flake Checks for Local CI
+## Flake Checks for Local CI
 
 Flakes support running checks, equivalent to CI pipelines, locally before you push:
 
@@ -226,7 +226,7 @@ Flakes support running checks, equivalent to CI pipelines, locally before you pu
 
 Run all checks with `nix flake check`. Claude Code can help interpret results and fix failing tests before they reach CI.
 
-Flake Templates for Project Scaffolding
+## Flake Templates for Project Scaffolding
 
 Standardize new project setups with templates:
 
@@ -244,7 +244,7 @@ Standardize new project setups with templates:
 
 Use `nix flake init -t .` to generate new projects from a template. Claude Code can help customize these templates for your team's conventions.
 
-Debugging Flake Issues with Claude Code
+## Debugging Flake Issues with Claude Code
 
 When your Flake configuration fails, Claude Code can help diagnose problems. Common issues include:
 
@@ -260,7 +260,7 @@ buildInputs = with pkgs; [
 
 Hash mismatch errors indicate a source package changed upstream. Update the hash in your Flake, or temporarily use `sha256 = "0000000000000000000000000000000000000000000000000000000000000000";` to let Nix report the correct hash.
 
-Claude Code-Specific Configuration in Flakes
+## Claude Code-Specific Configuration in Flakes
 
 You can set Claude Code environment variables directly in your flake's `devShell` definition:
 
@@ -273,7 +273,7 @@ devShells.default = pkgs.mkShell {
 
 This ensures Claude Code reads project-specific configuration when you enter the shell with `nix develop`. The combination means Claude Code understands exactly what tools and versions are available in your reproducible environment.
 
-When to Choose Nix Flakes Over Docker
+## When to Choose Nix Flakes Over Docker
 
 Docker containers excel at full-system isolation and deployment. Nix Flakes excel at development environment consistency without container overhead. For local development, Nix typically provides faster iteration, changes to your environment apply instantly without container rebuilds. See the [full Docker vs Nix comparison for Claude Code projects](/using-claude-code-inside-docker-container-tutorial/) for a detailed breakdown.
 
@@ -291,7 +291,7 @@ packages.dockerImage = pkgs.dockerTools.buildImage {
 };
 ```
 
-Maintaining Your Flake Over Time
+## Maintaining Your Flake Over Time
 
 Nix Flakes require occasional maintenance. Input repositories update, and you may need to pin versions for stability. A practical workflow includes:
 
@@ -302,7 +302,7 @@ Nix Flakes require occasional maintenance. Input repositories update, and you ma
 
 The xlsx skill can track version history and dependencies in a spreadsheet. The pptx skill can create presentations about your environment setup for team onboarding.
 
-Getting Started Today
+## Getting Started Today
 
 If you're new to Nix, start small. Create a flake for a single project, add one tool you're currently installing manually, and test the result. The initial learning curve pays dividends quickly as you extend your flake to cover more of your development stack.
 

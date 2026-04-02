@@ -19,19 +19,19 @@ Creating professional mockups and screenshots is essential for documenting Chrom
 
 This guide explores practical approaches to using and building chrome extension mockup screenshot tools that integrate smoothly into your development workflow.
 
-Why Mockup Screenshots Matter for Extension Development
+## Why Mockup Screenshots Matter for Extension Development
 
 When building Chrome extensions, visual documentation serves multiple purposes. User interface mockups help validate design decisions before writing code. Screenshots in your extension's Chrome Web Store listing directly impact download rates. Technical documentation benefits from clear annotated screenshots that explain complex features.
 
 The challenge many developers face is switching between multiple tools, a design tool for mockups, a screenshot utility for captures, and an image editor for annotations. A dedicated chrome extension mockup screenshot tool consolidates these workflows into a single, browser-based solution.
 
-Core Features of a Mockup Screenshot Tool
+## Core Features of a Mockup Screenshot Tool
 
 An effective chrome extension mockup screenshot tool typically includes several key capabilities. First, region selection lets you capture specific portions of the extension popup, options page, or background UI. Second, annotation tools enable adding text labels, arrows, rectangles, and highlights to emphasize important areas. Third, device frame options help present screenshots in browser window mockups for professional presentations. Fourth, export functionality supports multiple formats including PNG, JPEG, and WebP with configurable quality settings.
 
 Building these features requires understanding the Chrome extension APIs that enable screenshot capture and canvas manipulation.
 
-Capturing Screenshots with Chrome APIs
+## Capturing Screenshots with Chrome APIs
 
 The foundation of any chrome extension mockup screenshot tool is the `chrome.tabs.captureVisibleTab` API. This method captures the visible area of the active tab as an image data URL.
 
@@ -75,7 +75,7 @@ async function captureAndCrop(region) {
 }
 ```
 
-Building the Annotation System
+## Building the Annotation System
 
 Once you have a screenshot captured, the next component is an annotation layer. HTML5 Canvas provides the rendering foundation for drawing shapes, text, and highlights over your captured image.
 
@@ -164,7 +164,7 @@ class AnnotationCanvas {
 }
 ```
 
-Integrating Device Frame Mockups
+## Integrating Device Frame Mockups
 
 For professional presentations, wrapping screenshots in browser window frames adds polish. You can implement this by overlaying a transparent PNG frame onto your captured image.
 
@@ -214,7 +214,7 @@ function applyBrowserFrame(screenshotDataUrl, frameColor = '#333333') {
 }
 ```
 
-Saving and Exporting
+## Saving and Exporting
 
 The final step is saving your annotated mockup. The `chrome.downloads` API handles file export:
 
@@ -236,18 +236,17 @@ async function saveScreenshot(dataUrl, filename = 'mockup.png') {
 }
 ```
 
-Practical Implementation Tips
+## Practical Implementation Tips
 
 When building your chrome extension mockup screenshot tool, consider these practical aspects. Handle high-DPI displays by accounting for `devicePixelRatio` when calculating capture dimensions. Implement undo functionality by maintaining an annotation history stack. Provide keyboard shortcuts for common actions to improve power user workflow efficiency. Store recent captures in extension storage for quick access to previous versions.
 
 Testing your extension across different Chrome versions ensures compatibility with the capture APIs, as these have evolved over time. Always request the minimum necessary permissions, using `activeTab` instead of `tabs` where possible improves user trust and security review approval rates.
 
-Conclusion
+## Conclusion
 
 A chrome extension mockup screenshot tool combines screenshot capture, annotation, and export capabilities into a streamlined workflow. By using Chrome's APIs and HTML5 Canvas, you can build powerful features that rival standalone design tools while maintaining the convenience of browser integration.
 
 Whether you need to create Web Store listings, technical documentation, or stakeholder presentations, having a custom mockup screenshot tool integrated into your development environment saves context-switching and accelerates your workflow.
-
 
 Related Reading
 

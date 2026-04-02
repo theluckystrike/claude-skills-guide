@@ -16,7 +16,7 @@ score: 7
 
 Creating Jira tickets often requires switching contexts, navigating through multiple menus, and manually filling in repetitive fields. A Chrome extension that creates Jira tickets directly from your browser eliminates this friction, letting you capture issues while you work. This guide walks through building a functional Jira ticket creator extension, from API authentication to form handling and deployment.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 A Chrome extension for Jira ticket creation consists of three main components: a popup interface for entering ticket details, a background script handling Jira API communication, and the manifest configuration tying everything together. The extension communicates with Jira Cloud via REST API, requiring OAuth 2.0 or API token authentication depending on your Jira setup.
 
@@ -33,7 +33,7 @@ Understanding how these parts interact helps you debug issues and plan enhanceme
 
 This separation of concerns is important. The background service worker persists longer than the popup (which closes the moment the user clicks elsewhere), making it the right place to hold credentials and execute network requests.
 
-Comparing Authentication Approaches
+## Comparing Authentication Approaches
 
 Before writing any code, decide how you will authenticate with Jira. Your choice affects security, setup complexity, and whether the extension can be distributed to teammates.
 
@@ -48,7 +48,7 @@ For a personal productivity extension used only by you or a small team with Jira
 
 This guide uses API token authentication. The OAuth approach involves additional redirect URI handling and Atlassian app registration that is outside the scope of a simple extension, but the Jira Cloud REST API supports both interchangeably.
 
-Setting Up Jira API Access
+## Setting Up Jira API Access
 
 Before building the extension, you need API credentials. For Jira Cloud, generate an API token from your Atlassian account settings at `id.atlassian.com/manage-profile/security/api-tokens`. Store your Jira domain, email, and token securely. you will need these for the extension configuration.
 
@@ -78,7 +78,7 @@ curl -u your-email@domain.com:YOUR_API_TOKEN \
 
 Note the `key` field from each project in the response. These short uppercase strings (like `PROJ`, `ENG`, `OPS`) are what users will enter in the extension form.
 
-Creating the Extension Structure
+## Creating the Extension Structure
 
 Create a new directory for your extension and add the following files:
 
@@ -120,7 +120,7 @@ The `host_permissions` field grants the extension access to Jira domains, which 
 
 One thing to watch: Manifest V3 uses a service worker for the background script instead of a persistent background page. Service workers can be terminated when idle, so you should not rely on in-memory state in `background.js`. Use `chrome.storage` for anything that needs to persist.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides the user interface for entering ticket details. Keep it focused on the essential fields most teams need:
 
@@ -257,7 +257,7 @@ button {
 }
 ```
 
-Handling Form Submission and API Calls
+## Handling Form Submission and API Calls
 
 The popup.js script handles form submission, loads saved settings, and communicates with the background script. A key improvement over the minimal version is auto-loading the project key from storage so users do not have to retype it every time:
 
@@ -343,7 +343,7 @@ document.getElementById('ticket-form').addEventListener('submit', async (e) => {
 
 Note the `fields` wrapper added to `ticketData`. Jira's REST API v3 expects the issue fields nested under a `fields` key. this is a common mistake that causes confusing `400 Bad Request` errors when first building the integration.
 
-Managing Authentication in the Background
+## Managing Authentication in the Background
 
 The background script holds your API credentials and makes the actual Jira API calls. For security, store credentials in Chrome's `storage.sync` API rather than hardcoding them. `storage.sync` encrypts data at rest and syncs across the user's Chrome profile on different devices:
 
@@ -413,7 +413,7 @@ async function createTicket(ticketData) {
 
 The `return true` inside the message listener is critical. Without it, Chrome closes the message channel before the async `createTicket` function completes, and `sendResponse` never reaches the popup.
 
-Adding a Settings Page
+## Adding a Settings Page
 
 A settings page lets users enter their own credentials without touching the code. This is what makes the extension shareable:
 
@@ -486,7 +486,7 @@ document.getElementById('save-btn').addEventListener('click', async () => {
 });
 ```
 
-Capturing Page Context Automatically
+## Capturing Page Context Automatically
 
 One of the most useful enhancements is automatically populating the description with information from the current browser tab. When a user is looking at a bug on a staging site, they almost always want the URL in the ticket. The `activeTab` permission lets you read this without any additional user prompts:
 
@@ -515,7 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 This single addition saves a copy-paste step on almost every ticket. Users can always clear or edit the pre-filled description.
 
-Common Errors and How to Fix Them
+## Common Errors and How to Fix Them
 
 | Error | Likely Cause | Fix |
 |---|---|---|
@@ -528,7 +528,7 @@ Common Errors and How to Fix Them
 
 The CORS error is the most common architectural mistake. Chrome extensions can bypass CORS restrictions only in background scripts that have `host_permissions` configured. not in popup scripts. Always route API calls through the background service worker.
 
-Testing and Deployment
+## Testing and Deployment
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Select your extension directory and test the workflow:
 
@@ -548,7 +548,7 @@ To distribute the extension to teammates without publishing to the Chrome Web St
 
 To publish publicly on the Chrome Web Store, you need a developer account ($5 one-time fee), screenshots, a privacy policy describing credential handling, and a review that typically takes a few days.
 
-Extending the Extension
+## Extending the Extension
 
 Once the basic version works, several enhancements significantly improve daily usefulness:
 
@@ -604,7 +604,6 @@ Keyboard Shortcut: Register a keyboard shortcut in the manifest to open the popu
 AI-Assisted Descriptions: Integrate with Claude or another AI API to generate a structured bug report from a screenshot or copied error message. The user pastes the stack trace, clicks "Generate Description", and the extension fills in a well-formatted bug report automatically. This is particularly powerful for teams that struggle with low-information tickets.
 
 A well-built Jira ticket creator extension reduces context switching and standardizes how your team captures issues. The foundation established here scales with your workflow needs.
-
 
 Related Reading
 

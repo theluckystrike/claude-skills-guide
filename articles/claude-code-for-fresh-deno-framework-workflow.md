@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Fresh Deno Framework Workflow"
 description: "Learn how to use Claude Code CLI to build, debug, and deploy Fresh Deno applications with practical examples and actionable workflows."
@@ -16,7 +15,6 @@ score: 7
 
 {% raw %}
 
-
 Fresh is Deno's official web framework, a modern, island-based framework that delivers zero-config TypeScript applications with excellent performance. Combined with Claude Code, the AI-powered CLI companion, you can accelerate Fresh development significantly. This guide walks you through practical workflows to build, debug, and deploy Fresh applications using Claude Code.
 
 Why Combine Fresh with Claude Code?
@@ -31,7 +29,7 @@ Claude Code enhances this developer experience by providing:
 
 Together, they create a powerful workflow for modern web development.
 
-Setting Up Your Fresh Project with Claude Code
+## Setting Up Your Fresh Project with Claude Code
 
 Before diving into workflows, ensure you have Deno and Claude Code installed. Initialize a Fresh project:
 
@@ -48,11 +46,11 @@ I'm working on a Fresh Deno project with islands in the islands/ directory and r
 
 Claude Code understands Fresh's directory structure and can generate appropriate code.
 
-Creating Routes and Pages
+## Creating Routes and Pages
 
 Fresh uses file-based routing. Routes in the `routes/` directory become your application's endpoints. Here's how Claude Code helps:
 
-Building a Todo Route
+## Building a Todo Route
 
 Ask Claude Code to generate a todo route with an interactive island:
 
@@ -136,11 +134,11 @@ export default function TodoList() {
 
 This pattern, static route with interactive island, exemplifies Fresh's island architecture.
 
-Working with Fresh Components and Layouts
+## Working with Fresh Components and Layouts
 
 Fresh provides reusable components in the `components/` directory. These render on the server and send HTML to the client. Claude Code helps create consistent components:
 
-Creating a Layout Component
+## Creating a Layout Component
 
 Request a shared layout:
 
@@ -185,7 +183,7 @@ export default function Layout({ children, title = "My App" }: LayoutProps) {
 
 Apply this layout in your routes using Fresh's `wrap` function or by importing directly.
 
-Debugging Fresh Applications
+## Debugging Fresh Applications
 
 Claude Code excels at debugging. When encountering issues:
 
@@ -207,7 +205,7 @@ I'm getting 'Cannot read property of undefined' when clicking my island button. 
 
 Claude Code analyzes your code and identifies potential causes, often related to island-client boundary issues or missing exports.
 
-Integrating APIs and Data Fetching
+## Integrating APIs and Data Fetching
 
 Fresh handles server-side data fetching through route handlers. Use the `handler` export:
 
@@ -236,7 +234,7 @@ export default function Home({ data }: PageProps<Data>) {
 
 Claude Code can generate complete API integrations, database queries, external API calls, form handling, with proper error handling.
 
-Deployment with Deno Deploy
+## Deployment with Deno Deploy
 
 Fresh deploys effortlessly to Deno Deploy. Claude Code helps with:
 
@@ -250,7 +248,7 @@ Example deployment prompt:
 How do I configure Deno KV for persistent storage in my Fresh app and what permissions do I need in deno.json?
 ```
 
-Best Practices for Fresh Development with Claude Code
+## Best Practices for Fresh Development with Claude Code
 
 1. Use islands sparingly - Only interactive components need island hydration; everything else should be static
 
@@ -262,7 +260,7 @@ Best Practices for Fresh Development with Claude Code
 
 5. Cache intelligently - Use Fresh's built-in caching for static content
 
-Conclusion
+## Conclusion
 
 Claude Code and Fresh form a powerful combination for modern web development. Fresh's island architecture delivers fast, minimal JavaScript applications, while Claude Code accelerates your workflow through intelligent code generation, debugging, and refactoring.
 

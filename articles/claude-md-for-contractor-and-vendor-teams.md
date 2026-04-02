@@ -13,20 +13,17 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude MD for Contractor and Vendor Teams
-
 When you bring external contractors and vendors into your development workflow, communication gaps, inconsistent code quality, and onboarding delays quickly become expensive problems. Claude Code skills written in Markdown (.md) offer a powerful solution: they let you encode your team's standards, processes, and best practices into reusable, executable prompts that external collaborators can run directly in their environment.
 
 This guide shows developer teams how to use Claude MD skills to onboard contractors faster, enforce coding standards, and maintain consistent output across multiple external contributors.
 
-Why Contractor Teams Need Standardized Claude Skills
+## Why Contractor Teams Need Standardized Claude Skills
 
 External developers often work across multiple clients with different expectations. Without explicit guidance, they'll default to their own patterns, tool preferences, and code styles. The result: pull requests full of formatting debates, missed requirements, and time-consuming revision cycles.
 
 Claude MD skills solve this by making your team's standards executable. Instead of writing lengthy onboarding documents that nobody reads, you create skills that contractors can invoke to check their work against your specific requirements. The skill becomes a gatekeeper that runs before code ever reaches your review process.
 
-Creating Skills for Contractor Onboarding
+## Creating Skills for Contractor Onboarding
 
 The first skill every vendor team should create is an onboarding checker. This skill validates that contractors have configured their environment correctly and understand your baseline requirements.
 
@@ -51,7 +48,7 @@ Report any failures immediately. Do not proceed until all checks pass.
 
 This skill runs in seconds and catches configuration issues before they cause problems later. Contractors appreciate clear, automated feedback rather than vague "fix your environment" comments in code reviews.
 
-Enforcing Code Standards with Quality Skills
+## Enforcing Code Standards with Quality Skills
 
 Contractor code reviews consume significant time when reviewers must catch style violations, missing tests, and insecure patterns. Create a pre-submission quality skill that contractors run before opening pull requests:
 
@@ -92,11 +89,11 @@ Report the results. Only proceed if all checks pass with zero errors.
 
 This skill acts as a first line of defense. Your reviewers still examine the code, but they spend less time on preventable issues.
 
-Domain-Specific Skills for Specialized Work
+## Domain-Specific Skills for Specialized Work
 
 Different vendors specialize in different areas. Create targeted skills that speak to their specific domain expertise.
 
-For Frontend Contractors
+## For Frontend Contractors
 
 If you're working with a UI/UX vendor, the `frontend-design` skill helps maintain design system compliance:
 
@@ -119,7 +116,7 @@ For each component you're submitting:
 Flag any deviations. If the design specifies values not in the system, document them for review before implementation.
 ```
 
-For Documentation Vendors
+## For Documentation Vendors
 
 When contractors handle documentation, the `pdf` skill becomes valuable for generating consistent outputs:
 
@@ -142,7 +139,7 @@ For API documentation or user guides:
 Output to `dist/docs/` with naming convention: `{project}-docs-{date}.pdf`
 ```
 
-For Testing Specialists
+## For Testing Specialists
 
 Vendor QA teams benefit from skills that encode your testing requirements:
 
@@ -165,7 +162,7 @@ For each feature branch:
 Run: `npm run test:coverage` and verify the report shows >80% coverage.
 ```
 
-Memory and Context Skills
+## Memory and Context Skills
 
 Long-term contractors often struggle with institutional knowledge that full-time team members take for granted. The `supermemory` skill helps contractors maintain their own knowledge base:
 
@@ -188,7 +185,7 @@ Run this skill weekly to review and update your memory store.
 
 This creates a searchable knowledge base that travels with the contractor and can be handed off when the engagement ends.
 
-Collaboration Workflows
+## Collaboration Workflows
 
 Structure your contractor interactions around these skill-based workflows:
 
@@ -202,7 +199,7 @@ During review: Your team runs their own validation skills to verify contractor w
 
 This creates a clear feedback loop where contractors self-check before code reaches you, reducing review cycles significantly.
 
-Measuring Impact
+## Measuring Impact
 
 Track these metrics to evaluate your contractor skill implementation:
 
@@ -213,7 +210,7 @@ Track these metrics to evaluate your contractor skill implementation:
 
 Most teams see a 30-50% reduction in review cycles within the first month of implementing these skills.
 
-Implementation Tips
+## Implementation Tips
 
 Start small. Create one skill for your next contractor onboarding and expand based on recurring issues you see in reviews. Involve your contractors in skill development, they often identify gaps and improvements that make the skills more useful.
 
@@ -222,7 +219,6 @@ Keep skills version-controlled alongside your code. Update them when standards c
 The goal isn't to micromanage external developers, it's to give them clear, automated guidance that helps them deliver work meeting your standards the first time.
 
 ---
-
 
 Related Reading
 

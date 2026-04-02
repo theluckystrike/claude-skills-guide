@@ -16,7 +16,7 @@ permalink: /claude-code-skill-tool-not-found-error-solution/
 
 The tool not found error in Claude Code skills typically means Claude cannot find the skill file itself. Skills are plain Markdown files. they do not declare tools in front matter, and there is no `tools:` configuration field. This guide covers how to fix skill file loading errors.
 
-Understanding "Not Found" Errors
+## Understanding "Not Found" Errors
 
 Skill file not found:
 ```
@@ -27,9 +27,9 @@ Claude looked for `tdd.md` in the skills directories and did not find it. The fi
 
 If Claude mentions a tool is unavailable during a skill session, that is a session-level permissions issue, not a skill configuration issue. Skills cannot declare or restrict which tools Claude uses.
 
-Fixing Type 1: Skill File Not Found
+## Fixing Type 1: Skill File Not Found
 
-Step 1: Verify the file exists
+## Step 1: Verify the file exists
 
 ```bash
 Check global skills
@@ -39,7 +39,7 @@ Check project-local skills
 ls .claude/skills/ 2>/dev/null
 ```
 
-Step 2: Confirm the filename matches
+## Step 2: Confirm the filename matches
 
 Skill names are case-sensitive. `/tdd` maps to `tdd.md`, not `TDD.md` or `Tdd.md`.
 
@@ -48,7 +48,7 @@ ls ~/.claude/skills/ | grep -i tdd
 Must output exactly: tdd.md
 ```
 
-Step 3: Install the missing skill
+## Step 3: Install the missing skill
 
 If the file is absent, place it in the correct directory:
 
@@ -58,7 +58,7 @@ cp ~/downloads/tdd.md ~/.claude/skills/tdd.md
 chmod 644 ~/.claude/skills/tdd.md
 ```
 
-Step 4: Check for a custom skills directory
+## Step 4: Check for a custom skills directory
 
 Your `settings.json` may redirect skill loading:
 
@@ -68,7 +68,7 @@ cat ~/.claude/settings.json | python3 -m json.tool | grep -A2 skill
 
 If `skillsDir` is set, skills must live in that path, not `~/.claude/skills/`.
 
-Tool Access Issues During Skill Sessions
+## Tool Access Issues During Skill Sessions
 
 Skills do not configure which tools Claude can use. If Claude cannot use a specific tool (like `WebSearch` or `Bash`) during a skill session, check:
 
@@ -76,11 +76,11 @@ Skills do not configure which tools Claude can use. If Claude cannot use a speci
 2. Network access. `WebSearch` requires network access. If your environment is offline, this tool is unavailable regardless of which skill is active
 3. Claude Code settings. Tool availability is controlled by `~/.claude/settings.json`, not skill files
 
-Permission restrictions that surface as "not found"
+## Permission restrictions that surface as "not found"
 
 Claude Code's permissions system controls what tools can access. If a tool requires permissions that haven't been granted, it may surface as "not found" rather than explicitly stating a permission error. This is especially relevant for tools that access files, run shell commands, or interact with network resources. Check `~/.claude/settings.json` and verify the necessary permission flags are set.
 
-MCP Server Configuration Issues
+## MCP Server Configuration Issues
 
 MCP servers extend Claude Code's capabilities by providing additional tools and integrations. When an MCP server is not properly configured or is not running, any tools it provides will trigger a "not found" error.
 
@@ -137,7 +137,7 @@ Or install globally
 npm install -g eslint prettier
 ```
 
-Diagnostic Command
+## Diagnostic Command
 
 Run this to check all skills and verify their front matter parses correctly:
 
@@ -161,7 +161,7 @@ for path in glob.glob(os.path.expanduser('~/.claude/skills/*.md')):
 EOF
 ```
 
-Minimum Working Skill File
+## Minimum Working Skill File
 
 If you want to rule out a tool declaration issue entirely, strip the skill to minimum:
 
@@ -177,7 +177,7 @@ This is a minimal skill. Claude will use default tool access.
 
 If the stripped skill works but the original does not, a tool declaration in the original is causing the error.
 
-Advanced Troubleshooting Techniques
+## Advanced Troubleshooting Techniques
 
 When basic troubleshooting does not resolve the issue:
 
@@ -185,14 +185,14 @@ When basic troubleshooting does not resolve the issue:
 - Isolate the problem by temporarily disabling other skills and MCP servers to determine whether a conflict between components is causing the error
 - Community resources. The Claude Code community forums and GitHub issues pages are useful for persistent problems. When posting for help, include your exact error messages, Claude Code version, and a description of your skill/MCP setup
 
-Prevention
+## Prevention
 
 - Keep skills and MCP servers updated. developers regularly release compatibility fixes
 - Document your skill configuration: which skills provide which tools, and what permissions each requires
 - Test new skills in a development environment before using them in production
 - Use version control for your skill configuration files so you can roll back if a change introduces problems
 
-Summary
+## Summary
 
 - Skill file not found: check `~/.claude/skills/`, verify filename case, confirm no custom `skillsDir`
 - Tool not found within skill: check YAML `tools` list for case mismatches, verify the tool is available in your session type, install external binaries for `pdf`/`docx` skills

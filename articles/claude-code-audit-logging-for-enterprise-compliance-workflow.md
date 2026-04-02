@@ -13,25 +13,24 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Audit Logging for Enterprise Compliance Workflow
 
 Enterprise compliance requirements demand comprehensive audit trails for any system that handles sensitive data or makes automated decisions. When teams adopt Claude Code for development workflows, implementing proper audit logging becomes essential for meeting regulatory requirements like SOC 2, ISO 27001, HIPAA, and GDPR. This guide provides practical patterns for building compliance-ready audit logging into your Claude Code skills and workflows.
 
-Understanding Enterprise Compliance Requirements
+## Understanding Enterprise Compliance Requirements
 
 Before implementing audit logging, you need to understand what compliance frameworks require. SOC 2 Type II demands evidence of operational controls and security monitoring. ISO 27001 mandates traceability of all access and changes to information systems. GDPR requires the ability to demonstrate data processing activities. Each framework has specific requirements for what must be logged, how long logs must be retained, and how they must be protected.
 
 The core requirements across most frameworks include: who performed an action, what action was performed, when it occurred, what resources were affected, and the outcome of the action. Your Claude Code audit logging implementation must capture all these elements consistently.
 
-Designing Your Audit Log Architecture
+## Designing Your Audit Log Architecture
 
 A solid audit logging system for Claude Code consists of three main components: the logging layer within your skills, a centralized log aggregation system, and a retention policy that meets compliance requirements. Let's examine each component in detail.
 
 First, your skill-level logging captures what happens during individual Claude Code interactions. This includes the prompt used, files accessed, tools executed, and the AI's responses. Second, centralized aggregation collects logs from multiple users and projects into a unified system. Third, retention policies ensure logs are kept for the required duration, typically seven years for financial compliance, though requirements vary by industry and region.
 
-Implementing Skill-Level Audit Logging
+## Implementing Skill-Level Audit Logging
 
 The foundation of enterprise audit logging starts with implementing proper logging within your Claude skills. Here's a practical pattern for capturing comprehensive audit information:
 

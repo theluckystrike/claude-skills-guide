@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Data Visualization Best Practices
-
 Data visualization transforms complex datasets into understandable insights. When combined with Claude Code's capabilities, you can rapidly generate charts, build interactive dashboards, and create compelling data presentations. This guide covers practical approaches for developers and power users working with data visualization in Claude Code environments, from initial chart selection through performance optimization and export pipelines.
 
-Setting Up Your Visualization Workflow
+## Setting Up Your Visualization Workflow
 
 Before generating visualizations, establish a solid foundation. Create a dedicated directory structure for your data projects:
 
@@ -40,7 +37,7 @@ For Python-based visualization
 pip install matplotlib seaborn plotly pandas
 ```
 
-Choosing the Right Chart Type
+## Choosing the Right Chart Type
 
 Selecting appropriate visualization types directly impacts data comprehension. This is the single decision that most affects whether your audience understands your data or walks away confused.
 
@@ -65,7 +62,7 @@ Distribution Analysis: Histograms reveal frequency distributions. Box plots comp
 
 Correlation Studies: Scatter plots identify relationships between two numeric variables. Consider adding trend lines for clarity. When you have many overlapping points, switch to a hexbin chart or apply transparency to reveal density.
 
-Generating Charts Programmatically
+## Generating Charts Programmatically
 
 Claude Code can generate visualizations through multiple approaches. The algorithmic-art skill offers p5.js-based techniques for creative visualizations, while standard JavaScript libraries like Chart.js, D3.js, and Recharts provide production-ready solutions.
 
@@ -167,7 +164,7 @@ def plot_bar_comparison(df, category_col, value_col, title, output_path=None):
 
 For complex visualizations requiring TDD approaches, the tdd skill helps you build testable chart components. Write assertions for expected render outputs before implementing visualization logic.
 
-Building Interactive Dashboards
+## Building Interactive Dashboards
 
 Dashboards combine multiple visualizations into unified interfaces. Structure dashboard code to separate data fetching, processing, and rendering concerns:
 
@@ -226,7 +223,7 @@ A real-world dashboard scenario: you are building a sales performance dashboard 
 
 The frontend-design skill assists with dashboard layout patterns and responsive grid systems. SuperMemory integration helps you maintain context across long dashboard development sessions by tracking component states and user interactions.
 
-Handling Data Preparation
+## Handling Data Preparation
 
 Raw data rarely arrives visualization-ready. Implement transformation pipelines that clean, aggregate, and format data before rendering:
 
@@ -288,7 +285,7 @@ def prepare_chart_data(df, date_col=None, value_col=None, category_col=None):
     return df.reset_index(drop=True)
 ```
 
-Accessibility in Visualizations
+## Accessibility in Visualizations
 
 Accessible visualizations ensure all users comprehend your data. Implement these practices:
 
@@ -315,7 +312,7 @@ function makeChartAccessible(canvas, description) {
 
 The ai-coding-tools-for-accessibility-improvements skill offers detailed guidance for building inclusive data visualizations.
 
-Performance Optimization
+## Performance Optimization
 
 Large datasets challenge visualization performance. Apply these optimization techniques:
 
@@ -353,7 +350,7 @@ function lazyLoadChart(containerId, chartFactory) {
 
 When rendering more than 50,000 data points in a scatter plot, switch from SVG to a WebGL-based renderer like regl-scatterplot or deck.gl. The difference between a 2-second render and a 50ms render is the difference between a tool people use and one they abandon.
 
-Export and Sharing
+## Export and Sharing
 
 Data visualizations often require export capabilities for reports and presentations. The pptx skill helps embed charts into presentations programmatically. For document outputs, pdf skill generates PDF reports with embedded visualizations.
 
@@ -385,7 +382,7 @@ function exportChartAsPNG(chartInstance, filename = 'chart.png', scale = 2) {
 }
 ```
 
-Maintaining Visualization Code
+## Maintaining Visualization Code
 
 As projects grow, visualization code requires maintenance similar to other application code. Apply version control to data files and chart configurations. Document chart purpose and data sources within code comments.
 
@@ -416,12 +413,11 @@ ChartRegistry.register('revenue-bar', (data, opts) => ({
 
 Regular review cycles ensure visualizations remain accurate as underlying data definitions evolve. Automated tests, particularly useful when following the tdd skill, validate chart rendering across different data scenarios.
 
-Conclusion
+## Conclusion
 
 Effective data visualization combines appropriate chart selection, clean data preparation, and accessible implementation. Claude Code's ecosystem, particularly skills like canvas-design, pdf, tdd, and frontend-design, provides solid support for building visualization workflows. Start with simple charts, iterate based on user feedback, and progressively add complexity as your data story demands.
 
 The biggest use comes from investing in reusable data preparation functions and chart configuration registries early. Once those foundations are in place, generating a new chart for a new dataset takes minutes rather than hours.
-
 
 Related Reading
 

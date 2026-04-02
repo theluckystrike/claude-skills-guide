@@ -16,11 +16,11 @@ permalink: /anthropic-model-context-protocol-updates-march-2026/
 
 [The Model Context Protocol (MCP) March 2026 release brings meaningful improvements](/building-your-first-mcp-tool-integration-guide-2026/) for developers building Claude Code workflows. This article covers the key changes, what they mean in practice, and how to migrate existing configurations.
 
-What Changed in March 2026
+## What Changed in March 2026
 
 The update focuses on three areas: [enhanced tool discovery, improved state management, and streamlined authentication](/mcp-oauth-21-authentication-implementation-guide/) for enterprise deployments.
 
-Enhanced Tool Discovery
+## Enhanced Tool Discovery
 
 Previously, MCP tools had to be registered at server startup. The March 2026 update supports dynamic tool registration, meaning servers can expose additional capabilities based on runtime context without restarting.
 
@@ -54,7 +54,7 @@ async function onProjectOpen(projectType) {
 
 Claude Code picks up newly registered tools on the next tool-discovery pass without requiring a restart or a new conversation session. This is a practical improvement for skills that need to adapt to the active repository, such as a `/review` skill that should expose different lint tools depending on whether you are working in a TypeScript monorepo versus a Python service.
 
-Improved State Persistence
+## Improved State Persistence
 
 The update introduces a standardized checkpoint format for tool state. This allows MCP servers to serialize and restore internal state across sessions, so workflows don't lose progress when you switch between projects.
 
@@ -82,7 +82,7 @@ server.onRestore(async (checkpoint) => {
 
 For teams running shared MCP servers, you can redirect the checkpoint directory to a shared network location by setting `MCP_STATE_DIR` in the server's environment block. This lets multiple developers resume from a consistent state, which is particularly useful for long-running code review or migration workflows where context would otherwise be lost between sessions.
 
-OAuth 2.1 Authentication
+## OAuth 2.1 Authentication
 
 Enterprise teams benefit from a cleaner OAuth 2.1 integration. The new flow supports:
 
@@ -129,7 +129,7 @@ Once `useAuth` is called, every tool invocation is automatically gated behind a 
 
 For teams already using Azure AD or Okta, this eliminates the custom token-refresh code that most teams were maintaining in their own server wrappers.
 
-Connecting to Multiple Data Sources
+## Connecting to Multiple Data Sources
 
 The updated MCP makes multi-database configurations simpler. Here is an example `~/.claude/settings.json` snippet connecting two PostgreSQL instances:
 
@@ -171,7 +171,7 @@ You can also mix data source types. Here is an example that connects a PostgreSQ
 
 With this configuration, Claude Code can cross-reference database records against local documentation files in a single response, a pattern that works well for generating release notes or compliance reports.
 
-Migration Path
+## Migration Path
 
 Existing MCP configurations continue to work without changes. The March 2026 release is fully backward-compatible: old-style static tool registration, pre-checkpoint state management, and existing auth approaches all continue to function. You only need to take action if you want to adopt new capabilities.
 
@@ -185,7 +185,7 @@ To use the new features:
 
 If you are on a team, coordinate the package update so all developers move to `server-core@latest` together. Mixed versions can cause checkpoint format mismatches if one server writes a checkpoint that an older server version cannot parse.
 
-Performance Improvements
+## Performance Improvements
 
 The March release includes internal optimizations:
 
@@ -195,7 +195,7 @@ The March release includes internal optimizations:
 
 These gains compound when running multiple MCP servers in parallel.
 
-Security Updates
+## Security Updates
 
 This release adds sandboxing defaults and audit logging for enterprise compliance. Sensitive data in tool responses can be automatically redacted using response filters configured in your MCP server.
 
@@ -217,7 +217,7 @@ server.addResponseFilter({
 
 Filters run on all tool responses before Claude Code receives them, so there is no path by which filtered content reaches the model or appears in conversation history. This is important for teams subject to SOC 2 or HIPAA requirements, where sensitive data must not transit through third-party AI services.
 
-What's Coming
+## What's Coming
 
 The March 2026 update lays groundwork for:
 
@@ -225,7 +225,7 @@ The March 2026 update lays groundwork for:
 - Cross-session memory sharing between Claude instances
 - Enhanced debugging tools for tool chain development
 
-Summary
+## Summary
 
 The March 2026 MCP update improves tool discovery, state persistence, and authentication. The migration is straightforward for existing deployments, and the performance gains are noticeable in workflows that use multiple skills like `/tdd`, `/pdf`, and `/supermemory` together. Update your server packages to take advantage of these changes.
 
@@ -236,6 +236,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Where MCP fits in the developer stack
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How Claude decides when to load skills
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep API costs down as you scale
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

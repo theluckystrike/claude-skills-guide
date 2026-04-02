@@ -18,11 +18,11 @@ Web scraping has evolved significantly with the emergence of AI-powered tools. Z
 
 This tutorial walks you through building a complete ZenRows scraping workflow using Claude Code. You'll learn how to set up the integration, handle common scraping challenges, and create reusable code that scales.
 
-Prerequisites and Environment Setup
+## Prerequisites and Environment Setup
 
 Before diving into the code, ensure you have Node.js installed and a ZenRows API key. If you haven't already, sign up at ZenRows to get your API key.
 
-Installing Required Dependencies
+## Installing Required Dependencies
 
 Create a new directory for your project and install the necessary packages:
 
@@ -46,7 +46,7 @@ claude
 
 You can create a `CLAUDE.md` file where you define project-specific instructions for Claude Code, which it will read automatically at session start.
 
-Building Your First ZenRows Scraper
+## Building Your First ZenRows Scraper
 
 Now let's create a basic scraper that uses ZenRows to fetch webpage content. Create a file called `scraper.js`:
 
@@ -91,7 +91,7 @@ module.exports = ZenRowsScraper;
 
 This basic class provides the foundation for all your scraping needs. The key parameters include `js_rendering` for JavaScript-heavy sites, `premium_proxy` for difficult targets, and `country` for geo-specific requests.
 
-Integrating Claude Code for Smart Scraping
+## Integrating Claude Code for Smart Scraping
 
 The real power emerges when you combine ZenRows with Claude Code. Create a CLAUDE.md file to guide Claude Code on your scraping project:
 
@@ -119,7 +119,7 @@ Now you can ask Claude Code to help with specific scraping tasks:
 
 Claude Code can analyze the HTML structure and create targeted extraction functions.
 
-Handling Dynamic Content
+## Handling Dynamic Content
 
 Many modern websites use JavaScript to load content dynamically. ZenRows handles this with its JavaScript rendering feature. Here's an enhanced scraper that handles various dynamic content scenarios:
 
@@ -160,7 +160,7 @@ class DynamicScraper extends ZenRowsScraper {
 
 This pattern handles transient failures gracefully, which is crucial for production scraping systems.
 
-Creating Reusable Extraction Functions
+## Creating Reusable Extraction Functions
 
 One of Claude Code's strengths is generating targeted extraction logic. Here's how to structure your extraction utilities:
 
@@ -200,7 +200,7 @@ class ContentExtractor {
 
 Ask Claude Code to adapt these patterns for specific websites by describing the HTML structure you're working with.
 
-Building Production Workflows
+## Building Production Workflows
 
 For larger scraping projects, create orchestration scripts that manage multiple pages:
 
@@ -242,7 +242,7 @@ class ScraperWorkflow {
 
 This workflow processes URLs in controlled batches, respecting rate limits while maximizing throughput.
 
-Best Practices for Claude Code Scraping Projects
+## Best Practices for Claude Code Scraping Projects
 
 When working on ZenRows projects with Claude Code, keep these practices in mind:
 
@@ -254,7 +254,7 @@ Data Validation: After scraping, validate the extracted data. Claude Code can he
 
 Logging: Maintain detailed logs of your scraping activities. This helps debug issues and provides audit trails for compliance purposes.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with ZenRows creates a powerful scraping solution that balances simplicity with sophistication. The ZenRows API handles the complex anti-bot mechanisms, while Claude Code helps you write maintainable, adaptive extraction logic.
 

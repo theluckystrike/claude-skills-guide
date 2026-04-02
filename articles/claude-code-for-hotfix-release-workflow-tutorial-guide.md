@@ -18,7 +18,7 @@ When a critical bug hits production, every minute counts. Hotfix release workflo
 
 This tutorial guide walks you through building a Claude Code-powered hotfix workflow that reduces release time while maintaining code quality and safety.
 
-Understanding Hotfix Release Challenges
+## Understanding Hotfix Release Challenges
 
 Hotfix releases differ from normal development cycles in several critical ways:
 
@@ -29,7 +29,7 @@ Hotfix releases differ from normal development cycles in several critical ways:
 
 Claude Code addresses these challenges by automating the mechanical parts of the workflow while keeping you in control of critical decisions.
 
-Setting Up Your Hotfix Skill
+## Setting Up Your Hotfix Skill
 
 The foundation of a Claude Code hotfix workflow is a dedicated skill tailored for emergency fixes. Here's how to create one:
 
@@ -67,11 +67,11 @@ Step 4: Verify and Deploy
 
 This skill provides a structured approach while keeping the workflow flexible.
 
-Practical Example: Fixing a Production Bug
+## Practical Example: Fixing a Production Bug
 
 Let's walk through a real scenario. Imagine your payment processing API is returning 500 errors for a specific card type.
 
-Step 1: Invoke the Hotfix Skill
+## Step 1: Invoke the Hotfix Skill
 
 ```bash
 claude --skill hotfix
@@ -81,14 +81,14 @@ Then describe the issue:
 
 > "Payment API returning 500 errors for Visa cards starting at 2:30 PM UTC. Error logs show null pointer in PaymentService line 87."
 
-Step 2: Claude Analyzes the Issue
+## Step 2: Claude Analyzes the Issue
 
 Claude will:
 - Search for the relevant error patterns in logs
 - Examine the PaymentService code
 - Identify the null pointer cause (likely missing validation for a new card format)
 
-Step 3: Create the Fix Branch
+## Step 3: Create the Fix Branch
 
 Claude creates a branch based on the current production tag:
 
@@ -97,7 +97,7 @@ git fetch --tags
 git checkout -b hotfix/visa-null-pointer-fix v2.3.1
 ```
 
-Step 4: Implement the Fix
+## Step 4: Implement the Fix
 
 Claude provides the fix with clear explanation:
 
@@ -118,7 +118,7 @@ public PaymentResult processCard(PaymentCard card) {
 }
 ```
 
-Step 5: Verify Quickly
+## Step 5: Verify Quickly
 
 Run targeted tests to validate the fix:
 
@@ -132,7 +132,7 @@ curl -X POST https://api.example.com/payment \
   -d '{"cardNumber":"4111111111111111","type":null}'
 ```
 
-Automating the Hotfix Workflow
+## Automating the Hotfix Workflow
 
 For repeated hotfixes, create a more automated skill that handles the entire:
 
@@ -158,9 +158,9 @@ When invoked with a bug description:
    - Deployment recommendation
 ```
 
-Best Practices for Hotfix Workflows
+## Best Practices for Hotfix Workflows
 
-Keep It Minimal
+## Keep It Minimal
 
 The golden rule of hotfixes: fix only what's broken. Use Claude to stay focused:
 
@@ -168,7 +168,7 @@ The golden rule of hotfixes: fix only what's broken. Use Claude to stay focused:
 - Review each change before committing
 - Reject suggested improvements that aren't directly related to the bug
 
-Use Tags, Not Branches
+## Use Tags, Not Branches
 
 Always base your hotfix branch on a production tag, not main:
 
@@ -180,7 +180,7 @@ Right - stable production baseline
 git checkout -b hotfix/fix v2.3.1
 ```
 
-Document Everything
+## Document Everything
 
 Hotfixes need clear audit trails. Include in your commit message:
 
@@ -189,7 +189,7 @@ Hotfixes need clear audit trails. Include in your commit message:
 - Fix approach
 - Testing performed
 
-Automate Deployment Safety
+## Automate Deployment Safety
 
 Add pre-deployment checks in your workflow:
 
@@ -204,7 +204,7 @@ mvn test -q || { echo "Tests failed"; exit 1; }
 echo "Hotfix ready for deployment"
 ```
 
-Advanced: Integrating with CI/CD
+## Advanced: Integrating with CI/CD
 
 For organizations with automated pipelines, Claude Code can generate deployment PRs that trigger CI:
 
@@ -220,14 +220,13 @@ After Fix Implementation
 4. On approval, merge and deploy to production
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms hotfix workflows from frantic firefighting into structured, repeatable processes. By creating dedicated hotfix skills, automating branch management, and maintaining focused fix scopes, you can ship critical fixes faster without compromising quality.
 
 The key is preparation: build your hotfix skill once, test it in non-emergency scenarios, and when production issues arise, you'll have a reliable system in place.
 
 Remember: speed matters in hotfixes, but so does safety. Let Claude handle the mechanical tasks while you focus on the critical decisions that only a human can make.
-
 
 Related Reading
 

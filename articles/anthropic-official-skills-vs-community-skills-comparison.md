@@ -20,11 +20,11 @@ What Are Claude Skills?
 
 Claude skills are `.md` files that extend Claude Code's behavior for specific tasks. When you invoke a skill with `/skill-name`, Claude reads the skill file and gains specialized instructions, patterns, and tooling for that domain. Skills range from document processing (`/pdf`, `/xlsx`) to test-driven development (`/tdd`) to custom community integrations. If you're new to how skills activate, see [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/).
 
-Official Skills: Built by Anthropic
+## Official Skills: Built by Anthropic
 
 [Anthropic's official skills ship with Claude Code and are maintained alongside the core product](/claude-skill-md-format-complete-specification-guide/)
 
-Characteristics of Official Skills
+## Characteristics of Official Skills
 
 Reliability: Official skills maintain compatibility across Claude versions. When Anthropic releases updates, official skills are tested and updated in sync.
 
@@ -38,15 +38,15 @@ Integration depth: Official skills integrate directly with Claude's tool system.
 
 Security: Official skills pass Anthropic's review process, making them appropriate for sensitive data.
 
-Popular Official Skills
+## Popular Official Skills
 
 `pdf` handles PDF extraction, merging, and form filling. `tdd` assists with test-driven development, writing tests before implementation. `canvas-design` generates visual assets in PNG and PDF formats.
 
-Community Skills: Built by Developers
+## Community Skills: Built by Developers
 
 Community skills are `.md` files created by developers outside Anthropic. They live in community repositories and can be added to your local `~/.claude/skills/` directory.
 
-Characteristics of Community Skills
+## Characteristics of Community Skills
 
 Rapid iteration: Community skills often target new capabilities before official support arrives.
 
@@ -54,7 +54,7 @@ Specialization: Where official skills aim for broad use, community skills solve 
 
 Flexibility: Community skills can combine external APIs, custom context, and specialized instructions. Learn how to build and share your own in [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/).
 
-Community Skill Structure
+## Community Skill Structure
 
 A community skill is a single `.md` file:
 
@@ -75,7 +75,7 @@ Usage
 
 That's it. no Python packages, no YAML action definitions, no build step.
 
-Invocation
+## Invocation
 
 Both official and community skills use the same invocation syntax:
 
@@ -84,7 +84,7 @@ Both official and community skills use the same invocation syntax:
 /my-community-skill do the thing
 ```
 
-Choosing Between Official and Community Skills
+## Choosing Between Official and Community Skills
 
 Use official skills when:
 - Stability matters. production environments need predictable behavior
@@ -96,7 +96,7 @@ Use community skills when:
 - You're integrating with a specific tool, API, or team convention
 - You want to experiment with new patterns
 
-Auditing a Community Skill Before Installation
+## Auditing a Community Skill Before Installation
 
 Before dropping a community skill into `~/.claude/skills/`, spend five minutes reviewing it. A skill file is plain Markdown. you can read it in any text editor. Look for these patterns:
 
@@ -132,7 +132,7 @@ docs(readme): update installation steps
 
 Clean, readable, scoped to a single concern. That's the pattern you want.
 
-Practical Example: Document Processing
+## Practical Example: Document Processing
 
 The official `pdf` skill handles PDF manipulation. extracting text, merging documents, and filling forms. For a deeper look at the pdf skill in action, see [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) where it anchors an end-to-end pipeline.
 
@@ -146,7 +146,7 @@ Community skills can apply machine learning models, integrate specific OCR servi
 
 The tradeoff is maintenance: the official `pdf` skill will work after a Claude update. A community skill built around a specific API version might not.
 
-Building a Team-Specific Community Skill
+## Building a Team-Specific Community Skill
 
 If your team has conventions that no official skill covers, building a custom skill is the right move. Here is a concrete example: a skill that generates changelog entries in Keep a Changelog format.
 
@@ -202,7 +202,7 @@ Invoke it:
 
 Claude will read your git history, categorize commits, and return formatted changelog content ready to paste into `CHANGELOG.md`. No official skill covers this exact workflow. A community skill solves it in under 30 lines.
 
-Version Pinning Community Skills
+## Version Pinning Community Skills
 
 Community skills are plain files. there is no package manager enforcing versions. If your team relies on a community skill for a production workflow, treat it like a vendored dependency:
 
@@ -220,7 +220,7 @@ git commit -m "chore: vendor conventional-commits skill v1.2.0"
 
 Claude Code checks both `~/.claude/skills/` (global) and `.claude/skills/` (project-local). Project-local skills take precedence when a name conflict exists. Vendoring the skill into the repo means every team member and every CI environment uses the exact same version, and your PR history shows when and why it changed.
 
-Side-by-Side Comparison
+## Side-by-Side Comparison
 
 | Factor | Official Skills | Community Skills |
 |---|---|---|
@@ -233,7 +233,7 @@ Side-by-Side Comparison
 | Version pinning | Automatic with Claude | Manual (vendor or lock) |
 | Best for | Core workflows, sensitive data | Team conventions, niche APIs |
 
-Hybrid Approaches
+## Hybrid Approaches
 
 Most developers use official skills for core work (PDF handling, spreadsheet operations, testing) and community skills for specialized requirements. Both types coexist in your skill directory and work the same way. For a complete overview of what each official skill brings to developer workflows, see [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/).
 
@@ -255,7 +255,7 @@ A practical hybrid setup looks like this:
 
 The separation is intentional: global community skills apply everywhere you work, project-local vendored skills are scoped to a single repo and go through code review.
 
-Maintaining Your Skill Stack
+## Maintaining Your Skill Stack
 
 Quarterly review your active skills. Official skills update with Claude releases. check release notes for changes. Community skills depend on their maintainers. pin to a specific version if the skill is critical to your workflow.
 

@@ -16,13 +16,13 @@ permalink: /claude-code-bundle-size-reduction-webpack-vite-workflow/
 
 [Reducing bundle size remains one of the most impactful optimizations](/best-claude-code-skills-to-install-first-2026/) you can make for web application performance. When migrating from Webpack to Vite, developers often see immediate improvements, but achieving truly optimized bundles requires intentional configuration and workflow adjustments. This guide walks through a practical workflow using Claude Code skills to analyze, migrate, and optimize your build pipeline.
 
-Why Vite Beats Webpack on Bundle Size
+## Why Vite Beats Webpack on Bundle Size
 
 [Vite uses native ES modules and uses modern browser capabilities](/claude-skill-md-format-complete-specification-guide/), eliminating the need for extensive bundling during development. In production, Vite ships with Rollup under the hood, which generally produces smaller bundles than Webpack due to more aggressive tree-shaking and simpler chunking strategies.
 
 The typical reduction ranges from 15% to 40% depending on your existing Webpack configuration and dependencies. However, realizing these gains requires proper setup, simply swapping build tools without configuration adjustments often yields subpar results.
 
-Analyzing Your Current Webpack Bundle
+## Analyzing Your Current Webpack Bundle
 
 Before migrating, understand what you're working with. The frontend-design skill helps visualize your current dependency graph, but for bundle analysis, you'll want to use a combination of tools.
 
@@ -46,7 +46,7 @@ module.exports = {
 
 Run this with your production Webpack config to generate a detailed report. Look for three main categories of bloat: duplicate dependencies, unnecessarily large libraries, and code that could be lazy-loaded.
 
-Setting Up Vite with Optimized Output
+## Setting Up Vite with Optimized Output
 
 Once you have your analysis, create a Vite config that addresses the findings:
 
@@ -84,7 +84,7 @@ export default defineConfig({
 
 The `manualChunks` configuration splits your bundle into logical pieces, enabling browsers to cache vendor code separately from application code. This reduces re-downloads when your application code changes.
 
-Tree-Shaking: Advanced Techniques
+## Tree-Shaking: Advanced Techniques
 
 Vite's Rollup backend performs tree-shaking by default, but it only removes unused code if that code is written in a tree-shakeable way. Common pitfalls include importing entire libraries instead of specific functions:
 
@@ -106,7 +106,7 @@ import { format, addDays } from 'date-fns';
 // Result: ~700 bytes vs ~70KB for moment
 ```
 
-Code Splitting Strategies
+## Code Splitting Strategies
 
 Effective code splitting dramatically reduces initial load times. Use dynamic imports for routes and heavy components:
 
@@ -146,7 +146,7 @@ rollupOptions: {
 }
 ```
 
-Custom Bundle Analysis Skill
+## Custom Bundle Analysis Skill
 
 Create a dedicated skill file at `.claude/skills/bundle-analysis.md` for repeatable analysis:
 
@@ -169,7 +169,7 @@ For `/analyze-bundle`:
 5. Provide recommendations with expected savings
 ```
 
-Lightweight Alternatives Reference
+## Lightweight Alternatives Reference
 
 When the skill identifies oversized dependencies, use this reference for common swaps:
 
@@ -180,7 +180,7 @@ When the skill identifies oversized dependencies, use this reference for common 
 | axios | native fetch | ~15KB |
 | moment/locale | dynamic imports | ~30KB |
 
-Tree-Shaking at the Package Level
+## Tree-Shaking at the Package Level
 
 Beyond import-level tree-shaking, verify that your `package.json` enables aggressive dead-code elimination:
 
@@ -192,7 +192,7 @@ Beyond import-level tree-shaking, verify that your `package.json` enables aggres
 
 This tells bundlers the code has no side effects, enabling removal of unused exports. Review this setting in both your own packages and dependencies.
 
-Using Claude Skills for Optimization Workflow
+## Using Claude Skills for Optimization Workflow
 
 Several Claude Code skills accelerate the optimization process. The [tdd skill](/best-claude-skills-for-developers-2026/) helps you set up proper test coverage to ensure your optimizations don't break functionality. Before making significant changes, invoke the skill to establish test baselines:
 
@@ -204,7 +204,7 @@ The pdf skill proves useful when you need to generate bundle size reports for st
 
 For teams using [supermemory](/claude-skills-token-optimization-reduce-api-costs/) to maintain project context, store your optimization configurations and findings so they persist across sessions. This is particularly valuable when optimizing large codebases over multiple sessions.
 
-Measuring and Monitoring Results
+## Measuring and Monitoring Results
 
 After implementing these changes, measure the impact systematically. Build your application with Vite and compare output:
 
@@ -227,15 +227,15 @@ du -h dist/assets/*.js > bundle-sizes.txt
 git diff bundle-sizes.txt
 ```
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Several mistakes undermine bundle optimization efforts. First, avoid removing `node_modules` from your chunks if you haven't configured proper splitting, dependencies must live somewhere. Second, don't over-minify; some transformations break functionality. Third, ensure your `browserslist` target aligns with your user base, supporting older browsers increases bundle size significantly.
 
 Another frequent error involves forgetting to update import paths after splitting chunks. If your application code expects certain modules in specific locations, breaking those apart requires updating imports or configuring module federation.
 
-Automating the Workflow
+## Automating the Workflow
 
-CI/CD Bundle Size Enforcement
+## CI/CD Bundle Size Enforcement
 
 Integrate bundle analysis into your CI pipeline with a GitHub Actions workflow that fails PRs exceeding size thresholds:
 
@@ -260,7 +260,7 @@ jobs:
             }
 ```
 
-Workflow Cadences
+## Workflow Cadences
 
 Structure your optimization into regular checkpoints:
 
@@ -276,7 +276,7 @@ The skill-creator skill can help you build custom automation skills that run the
 
 This automation ensures team members stay informed about bundle size trends and can catch regressions before they reach production.
 
-Conclusion
+## Conclusion
 
 Migrating from Webpack to Vite provides a strong foundation for bundle size reduction, but the real gains come from proper configuration and ongoing monitoring. Use dynamic imports strategically, split vendor code intelligently, and replace large dependencies with modular alternatives. The workflow combining Vite's built-in optimizations with Claude Code skills like frontend-design, tdd, and supermemory creates a repeatable process for maintaining lean bundles as your application evolves.
 ---

@@ -1,7 +1,5 @@
 ---
 
-
-
 layout: default
 title: "Claude MD Changes Not Taking Effect Fix Guide"
 description: "Troubleshoot and fix Claude Code MD file changes not taking effect. Practical solutions for developers dealing with markdown rendering issues."
@@ -19,7 +17,7 @@ permalink: /claude-md-changes-not-taking-effect-fix-guide/
 
 When working with Claude Code and markdown files, you may encounter situations where your .md file changes do not appear to take effect. This guide provides practical solutions for developers and power users debugging markdown rendering issues in Claude Code environments. Whether your changes vanish on rebuild, your front matter stops parsing, or your content silently renders wrong, every cause and fix is covered here.
 
-Understanding the Problem
+## Understanding the Problem
 
 Markdown files processed through Claude Code may fail to render correctly due to several factors: caching mechanisms, front matter parsing issues, Liquid template conflicts, or configuration problems in your skill definitions. Identifying the root cause is essential for applying the right fix.
 
@@ -27,7 +25,7 @@ The failure modes fall into two broad categories. The first is silent failure. t
 
 Understanding which category you are dealing with shapes your debugging approach. Silent failures usually point to caching or configuration issues. Hard failures leave traces in build logs that you can follow directly to the cause.
 
-Common Causes and Solutions
+## Common Causes and Solutions
 
 1. Front Matter Parsing Conflicts
 
@@ -240,7 +238,7 @@ If your web server or preview tool is pointed at a different directory than Jeky
 
 For production deployments, confirm that the deployment step copies from the correct source. A Dockerfile or deployment script that hardcodes `_site/` may be copying from a stale local build rather than the fresh CI-generated one.
 
-Debugging Steps
+## Debugging Steps
 
 When changes still do not take effect after trying the solutions above, follow this systematic debugging approach:
 
@@ -293,7 +291,7 @@ git diff HEAD~1 -- your-file.md
 
 This narrows the change to exactly what you modified and often immediately reveals the cause.
 
-Prevention Best Practices
+## Prevention Best Practices
 
 Adopt these practices to minimize future issues:
 
@@ -305,7 +303,7 @@ Adopt these practices to minimize future issues:
 6. Add a smoke-test file to your repository: a minimal .md file that exercises front matter parsing, code blocks, and tables. Run it as part of your CI build to catch rendering pipeline breakage early
 7. Never rely on `render_with_liquid: false` in `_config.yml` defaults for GitHub Pages deployments. always use explicit raw tags in files that contain Liquid-like syntax
 
-Related Skills and Tools
+## Related Skills and Tools
 
 Several Claude skills can assist with markdown and documentation workflows. The docx skill helps generate Word documents from markdown sources. For PDF generation, the pdf skill provides conversion capabilities. When building documentation sites, frontend-design skills assist with layout and styling. The tdd skill can help write tests verifying your markdown renders correctly across different outputs.
 
@@ -332,7 +330,7 @@ exit $EXIT
 
 Hook this into a pre-commit script and it becomes automatic quality control.
 
-Summary
+## Summary
 
 Markdown rendering issues in Claude Code typically stem from front matter problems, Liquid conflicts, caching, or configuration errors. By systematically checking each potential cause and applying the corresponding fix, you can resolve most issues quickly. Remember to clear caches after making configuration changes, validate YAML syntax, and use raw tags when including template syntax in your content.
 
@@ -341,7 +339,6 @@ The most important diagnostic habit is reading build logs carefully. Jekyll and 
 For persistent issues, consult your specific skill documentation or rebuild from a known-good configuration template.
 
 ---
-
 
 Related Reading
 

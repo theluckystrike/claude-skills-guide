@@ -13,10 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
 Dhat (Dynamic Heap Analysis Tool) is a powerful memory profiling tool for Python that helps developers understand memory allocation patterns and identify potential memory issues. When combined with Claude Code, you have an intelligent assistant that can guide you through setting up Dhat, interpreting its output, and implementing fixes. This guide walks you through a complete memory profiling workflow using Claude Code and Dhat.
 
-What is Dhat and Why Use It
+## What is Dhat and Why Use It
 
 Dhat is part of the Python memory profiler ecosystem, designed to give developers insight into how their Python programs allocate and use memory. Unlike basic memory profiling that simply shows total memory usage, Dhat provides detailed breakdowns of:
 
@@ -27,7 +26,7 @@ Dhat is part of the Python memory profiler ecosystem, designed to give developer
 
 This granular view is invaluable for identifying memory leaks, understanding why your application uses more memory than expected, and optimizing performance-critical code.
 
-Setting Up Dhat with Claude Code
+## Setting Up Dhat with Claude Code
 
 Before you can profile your Python application, you need to install Dhat and its dependencies. Claude Code can help you set this up correctly.
 
@@ -44,11 +43,11 @@ Dhat works by wrapping your Python execution with its profiler. There are two pr
 
 Claude Code can help you choose the right approach based on your use case. For quick profiling of existing scripts, command-line mode is usually sufficient. For more detailed profiling or profiling specific functions, the import mode offers more control.
 
-Creating a Profiling Session
+## Creating a Profiling Session
 
 When you're ready to profile your application, Claude Code can guide you through creating an effective profiling session. Here's a typical workflow:
 
-Step 1: Identify What to Profile
+## Step 1: Identify What to Profile
 
 Before running Dhat, identify the specific code path you want to analyze. Is it the entire application startup? A specific function? A data processing pipeline? The more focused your profiling session, the easier it is to interpret results.
 
@@ -75,7 +74,7 @@ if __name__ == "__main__":
     dh.stop()
 ```
 
-Step 2: Run the Profiler
+## Step 2: Run the Profiler
 
 Execute your profiled code and collect the Dhat output:
 
@@ -85,11 +84,11 @@ python -m dhat your_script.py
 
 Dhat will generate a JSON report showing allocation statistics. This output can be difficult to interpret at first, which is where Claude Code becomes invaluable.
 
-Interpreting Dhat Output with Claude Code
+## Interpreting Dhat Output with Claude Code
 
 Dhat output contains several key metrics that require understanding to act upon effectively. Here's how to interpret the main components:
 
-Understanding Allocation Counts
+## Understanding Allocation Counts
 
 The allocation count shows how many times each function or line of code allocated memory. High allocation counts in loops are common symptoms of memory inefficiency.
 
@@ -98,11 +97,11 @@ Total:     1,000,000 allocations
 Peak:      250 MB
 ```
 
-Reading Retained Memory
+## Reading Retained Memory
 
 Retained memory shows memory that's still in use after the profiled code completes. This is often where you'll find memory leaks or unnecessary memory retention.
 
-Identifying Allocation Sites
+## Identifying Allocation Sites
 
 Dhat shows you exactly where in your code memory allocations occur. This is crucial for knowing what to optimize. Look for:
 
@@ -112,11 +111,11 @@ Dhat shows you exactly where in your code memory allocations occur. This is cruc
 
 Claude Code can help translate these raw numbers into actionable insights. You can paste your Dhat output to Claude Code and ask for specific recommendations.
 
-Common Patterns Dhat Reveals
+## Common Patterns Dhat Reveals
 
 Through Dhat profiling, you'll commonly discover several memory anti-patterns:
 
-String Concatenation in Loops
+## String Concatenation in Loops
 
 ```python
 Bad: Creates new string each iteration
@@ -129,7 +128,7 @@ parts = [process(item) for item in large_list]
 result = "".join(parts)
 ```
 
-List Appending Without Reserve
+## List Appending Without Reserve
 
 ```python
 Inefficient
@@ -143,7 +142,7 @@ for i in range(1000000):
     results[i] = compute(i)
 ```
 
-Unnecessary Object Creation
+## Unnecessary Object Creation
 
 Creating objects in tight loops when you could reuse them:
 
@@ -159,15 +158,15 @@ for item in items:
     output = formatter.format(item)
 ```
 
-Integrating Dhat into Your Development Workflow
+## Integrating Dhat into Your Development Workflow
 
 For the best results, make Dhat profiling a regular part of your development process rather than something you do only when problems arise.
 
-Pre-Deployment Profiling
+## Pre-Deployment Profiling
 
 Before deploying performance-critical code, run it through Dhat to establish a baseline. This makes it easier to detect regressions later.
 
-CI/CD Integration
+## CI/CD Integration
 
 You can integrate Dhat into your continuous integration pipeline to catch memory issues before they reach production:
 
@@ -179,11 +178,11 @@ Example GitHub Actions step
     python -m dhat tests/test_performance.py --output profile.json
 ```
 
-Regular Performance Audits
+## Regular Performance Audits
 
 Schedule periodic profiling sessions for long-running applications. Memory issues often emerge only after extended operation.
 
-Using Claude Code Alongside Dhat
+## Using Claude Code Alongside Dhat
 
 Claude Code enhances your Dhat workflow in several ways:
 
@@ -196,7 +195,7 @@ Here's an example prompt to use with Claude Code:
 
 > "I ran Dhat on my Python script and got these results. Can you identify the top three memory allocation issues and suggest specific code changes to address them?"
 
-Best Practices for Effective Profiling
+## Best Practices for Effective Profiling
 
 To get the most out of your Dhat sessions:
 
@@ -206,7 +205,7 @@ To get the most out of your Dhat sessions:
 - Focus on hot paths: Prioritize optimizing frequently-executed code
 - Iterate: Profile, fix, re-profile to verify improvements
 
-Conclusion
+## Conclusion
 
 Dhat provides detailed memory allocation insights that are essential for building efficient Python applications. When combined with Claude Code's ability to explain results, suggest fixes, and implement changes, you have a powerful workflow for memory optimization. Start integrating Dhat into your development process today, and let Claude Code help you interpret and act on the results.
 

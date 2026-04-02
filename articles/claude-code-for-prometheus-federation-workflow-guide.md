@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Prometheus Federation Workflow Guide
 
@@ -21,7 +20,7 @@ Prometheus federation enables you to aggregate metrics across multiple Prometheu
 
 This guide shows you how to use Claude Code to build solid Prometheus federation workflows that are maintainable, documented, and reproducible.
 
-Understanding Prometheus Federation Architecture
+## Understanding Prometheus Federation Architecture
 
 Before diving into Claude Code integration, let's establish the core concepts. Prometheus federation works through a push-pull model where a central Prometheus server scrapes metrics from child Prometheus instances. This allows you to:
 
@@ -32,7 +31,7 @@ Before diving into Claude Code integration, let's establish the core concepts. P
 
 The federation pattern typically involves three components: the global Prometheus (which scrapes from federates), the federate endpoints (which expose specific metric families), and the scrape configuration that ties them together.
 
-Federation Topology Choices
+## Federation Topology Choices
 
 Before writing a single line of configuration, you need to decide which federation topology suits your infrastructure. The wrong choice leads to metric duplication, high cardinality, or query latency problems that are difficult to undo later.
 
@@ -58,7 +57,7 @@ Which federation topology do you recommend, and what configuration would you gen
 
 Claude Code will factor in your series count, retention mismatch, and alerting requirements to produce a specific recommendation rather than a generic answer.
 
-Setting Up Claude Code for Prometheus Management
+## Setting Up Claude Code for Prometheus Management
 
 Claude Code provides an ideal interface for managing Prometheus configurations because it can read your existing setup, understand your infrastructure context, and generate appropriate configurations. Start by ensuring Claude Code has access to your monitoring infrastructure files:
 
@@ -69,7 +68,7 @@ ls -la /path/to/prometheus/configs/
 
 Create a skill specifically for Prometheus federation management. This skill should include the ability to read Prometheus configuration files, understand relabeling rules, and generate valid federation scrape configs.
 
-Organizing Your Configuration Repository
+## Organizing Your Configuration Repository
 
 The most effective pattern is a flat directory structure where each Prometheus instance has its own folder:
 
@@ -105,7 +104,7 @@ Output a report with file and line number for each issue."
 
 This kind of cross-file analysis is exactly where Claude Code outperforms manual review. A single Prometheus config is readable; ten configs with shared relabeling logic are error-prone at scale.
 
-Generating Federation Configurations
+## Generating Federation Configurations
 
 One of the most valuable Claude Code applications is automated configuration generation. Instead of manually writing scrape configs for each federate, you can describe your infrastructure and let Claude Code generate the appropriate configuration:
 
@@ -153,7 +152,7 @@ job and instance labels from each cluster, or should it relabel them
 with global context?
 ```
 
-Implementing Metric Filtering Strategies
+## Implementing Metric Filtering Strategies
 
 Not all metrics should be federated. Sending every metric from every child Prometheus to your global instance creates unnecessary bandwidth costs and storage overhead. Effective federation requires selective metric exposure.
 
@@ -172,7 +171,7 @@ params:
 
 Claude Code can help you design optimal filter patterns based on what metrics your applications expose and what queries your dashboards require. Ask Claude to analyze your existing metric names and suggest efficient filter patterns that capture everything you need without excess.
 
-Auditing What Gets Federated
+## Auditing What Gets Federated
 
 Before deploying a new federation config, audit it against your actual metric catalog. Claude Code can help you cross-reference your `match[]` patterns against a metric list:
 
@@ -190,7 +189,7 @@ Then ask Claude Code:
 
 This workflow catches both over-federation (sending unnecessary metrics) and under-federation (missing SLIs that dashboards depend on) before you push to production.
 
-Naming Conventions for Federated Recording Rules
+## Naming Conventions for Federated Recording Rules
 
 The standard convention for recording rules that are intended for federation uses colons to encode aggregation levels: `job:metric:aggregation`. This naming convention is what makes the `{__name__=~"job:.*"}` match pattern so clean.
 
@@ -210,7 +209,7 @@ groups:
 
 Ask Claude Code to review your existing recording rules and rename them to follow the colon convention. It can perform the rename across all rule files, update any dashboards that reference the old names, and generate a migration checklist.
 
-Handling Federation with Service Discovery
+## Handling Federation with Service Discovery
 
 For dynamic infrastructure where Prometheus instances come and go, static configurations won't scale. Integrate Prometheus service discovery with your federation setup:
 
@@ -228,7 +227,7 @@ For dynamic infrastructure where Prometheus instances come and go, static config
 
 Claude Code can generate these service discovery configurations from your Kubernetes cluster context. Provide your cluster configuration and desired federation labels, and Claude will produce the appropriate relabeling rules.
 
-Relabeling Patterns for Multi-Cluster Environments
+## Relabeling Patterns for Multi-Cluster Environments
 
 When scraping federates across multiple clusters, you need to add cluster-level labels to prevent time series collisions. Without this, `job:http_requests_total:rate5m{job="api-server"}` from cluster A overwrites the same series from cluster B.
 
@@ -260,7 +259,7 @@ When scraping federates across multiple clusters, you need to add cluster-level 
 
 Adding `cluster` and `region` labels at the global scrape level keeps them consistent regardless of what the child Prometheus exposes. Claude Code can generate this pattern for all of your clusters from a simple YAML inventory file listing cluster names and endpoints.
 
-Monitoring Federation Health
+## Monitoring Federation Health
 
 A federation setup isn't complete without monitoring the federation itself. Claude Code can help you create alerting rules that detect federation failures:
 
@@ -280,7 +279,7 @@ groups:
 
 Ask Claude Code to analyze your current alerting rules and suggest federation-specific alerts that catch common failure modes: target downtime, metric gaps, and replication lag.
 
-Detecting Silent Metric Loss
+## Detecting Silent Metric Loss
 
 Target downtime is easy to alert on because the `up` metric goes to zero. Silent metric loss is harder: the federate endpoint is up, but specific recording rules stopped producing data because an underlying job disappeared or a relabeling rule changed.
 
@@ -315,7 +314,7 @@ groups:
 
 Generate the full set of integrity alerts for your specific metric names by giving Claude Code your recording rules file and asking it to produce an `absent()` alert for each federated metric.
 
-Federation Latency and Staleness
+## Federation Latency and Staleness
 
 Federation introduces a scrape delay on top of the child Prometheus's own scrape interval. If your global scrape interval is 30 seconds and the child's scrape interval is 15 seconds, a metric can be up to 45 seconds stale at the global layer. This matters for SLO burn rate alerts that use short windows.
 
@@ -330,7 +329,7 @@ Use the scrape_interval hint to communicate expected freshness
 
 Ask Claude Code to review your alerting rules and flag any rules that use `[1m]` rate windows on federated metrics. these will produce misleading results given the staleness window.
 
-Best Practices for Claude Code + Prometheus Workflows
+## Best Practices for Claude Code + Prometheus Workflows
 
 When integrating Claude Code with your Prometheus federation, follow these proven patterns:
 
@@ -356,7 +355,7 @@ echo "All configs valid"
 
 Track cardinality budget: Federation compounds cardinality. If each of 10 clusters has 5,000 series federated, your global instance carries 50,000 series before any global recording rules. Ask Claude Code to calculate your projected global cardinality based on your match patterns and cluster series counts before deploying.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Prometheus federation from a manual, error-prone process into a structured, maintainable workflow. By generating configurations automatically, designing efficient metric filters, and creating comprehensive monitoring, you can build federation architectures that scale with your infrastructure while remaining manageable.
 

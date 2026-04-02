@@ -16,13 +16,13 @@ permalink: /claude-skills-workflow-for-technical-product-managers/
 
 [Technical product managers balance engineering precision with product vision](/best-claude-code-skills-to-install-first-2026/) Claude Code skills provide a structured way to accelerate requirements gathering, technical specification, and cross-team communication. This guide shows you a practical workflow that integrates Claude skills into your daily product management routine.
 
-The Role of Skills in Technical Product Management
+## The Role of Skills in Technical Product Management
 
 Claude skills are Markdown files that define reusable workflows. They work as specialized assistants that understand your domain and apply consistent patterns across different projects. For [technical product managers](/build-personal-ai-assistant-with-claude-skills-guide/), skills help maintain quality standards while reducing repetitive work.
 
 When you invoke a skill in Claude Code, it loads context-specific instructions. This means you get tailored assistance for writing PRDs, reviewing technical specifications, or managing sprint planning without explaining your requirements each time.
 
-Setting Up Your PM Skill Stack
+## Setting Up Your PM Skill Stack
 
 Create a dedicated skills folder for your product management workflows:
 
@@ -62,11 +62,11 @@ Activate it in your Claude session:
 /pm-requirements
 ```
 
-Workflow for Feature Planning
+## Workflow for Feature Planning
 
 Use Claude skills to structure your feature planning process. The workflow consists of three phases: discovery, specification, and validation.
 
-Phase 1: Discovery
+## Phase 1: Discovery
 
 During discovery, gather context from stakeholders and technical teams. Use a structured approach to capture requirements:
 
@@ -100,7 +100,7 @@ Technical Notes
 - Include timestamp in filename
 ```
 
-Phase 2: Technical Specification
+## Phase 2: Technical Specification
 
 After requirements are clear, work with engineering on technical specifications. Use the API specification skill to ensure your team documents endpoints consistently:
 
@@ -123,7 +123,7 @@ For each endpoint, verify:
 
 This skill helps you catch specification gaps before development begins, reducing rework later.
 
-Phase 3: Validation
+## Phase 3: Validation
 
 Before sprint planning, validate that requirements and technical specs align. Create a validation checklist skill:
 
@@ -141,11 +141,11 @@ Checklist:
 - [ ] Performance requirements are realistic and measurable
 ```
 
-Managing Sprint Communication
+## Managing Sprint Communication
 
 Technical PMs spend significant time communicating across teams. Claude skills streamline this by providing templates and checklists for common communications.
 
-Sprint Kickoff Documents
+## Sprint Kickoff Documents
 
 Generate structured kickoff documents using your skills:
 
@@ -181,7 +181,7 @@ Definition of Done
 - [ ] QA sign-off
 ```
 
-Technical Review Requests
+## Technical Review Requests
 
 When reviewing technical decisions, use a consistent framework:
 
@@ -213,7 +213,7 @@ Next Steps
 - [ ] Action 2
 ```
 
-Integrating with Existing Tools
+## Integrating with Existing Tools
 
 Your Claude skills workflow should connect with your existing project management tools. Skills can generate output in formats your team already uses.
 
@@ -248,7 +248,7 @@ For Confluence, output in wiki markup:
 
 Generates wiki-formatted requirements ready for your team wiki.
 
-Measuring Workflow Effectiveness
+## Measuring Workflow Effectiveness
 
 Track these metrics to validate your skill-based workflow:
 
@@ -259,7 +259,7 @@ Track these metrics to validate your skill-based workflow:
 
 Adjust your skills based on recurring issues. If engineers consistently ask about edge cases, update your requirements skill to explicitly prompt for edge case identification.
 
-Conclusion
+## Conclusion
 
 Claude skills transform how technical product managers work by providing consistent, reusable workflows for requirements gathering, technical specification, and cross-team communication. Start with three core skills, requirements, API specification, and validation, and expand as your workflow matures. The key is building skills that encode your team's standards and preferences, then applying them consistently across projects.
 
@@ -270,6 +270,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Complementary skills for your engineering team
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Advanced skill activation patterns
 - [Claude Code Skills for QA Engineers](/best-claude-skills-for-code-review-automation/). Bridge QA with your PM workflow
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

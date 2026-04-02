@@ -19,7 +19,7 @@ Controlling file downloads in Chrome across an organization is a common requirem
 
 This guide walks you through configuring Chrome to block file downloads using Windows Group Policy, with practical examples tailored for developers and power users managing enterprise Chrome deployments. By the end, you'll have a complete picture of every available mechanism. from blanket blocks to fine-grained, per-domain rules. along with tested PowerShell snippets you can deploy immediately.
 
-Understanding Chrome's Group Policy Framework
+## Understanding Chrome's Group Policy Framework
 
 Chrome Enterprise policies are stored in the Windows Registry and managed through Group Policy Objects (GPOs). When you install Chrome for enterprise, administrative templates (ADMX files) are added to your policy editor, exposing dozens of configurable settings under Computer Configuration → Administrative Templates → Google Chrome.
 
@@ -27,7 +27,7 @@ The policy engine operates on a hierarchy: machine-level policies apply to all u
 
 Before making any changes, download the latest Chrome ADMX templates from Google's enterprise download page. The templates are versioned alongside Chrome, so an outdated template file can expose a different set of policy options than what your installed Chrome version actually supports. Extract the bundle, copy `chrome.admx` and `google.admx` to `C:\Windows\PolicyDefinitions`, and copy the matching `.adml` language files to `C:\Windows\PolicyDefinitions\en-US`. Once those are in place, Group Policy Editor will show the full Chrome policy tree.
 
-Registry Layout and Precedence
+## Registry Layout and Precedence
 
 Policies land in one of two registry hives:
 
@@ -39,13 +39,13 @@ Policies land in one of two registry hives:
 
 For enforcement, always write to the machine hive. Recommended policies belong in the `\Recommended` subkey and show up in Chrome settings as defaults that users can change.
 
-Blocking All Downloads System-Wide
+## Blocking All Downloads System-Wide
 
 The most straightforward approach blocks all file downloads entirely. This is useful for kiosk systems, secure terminals, or environments where internet access should be read-only.
 
 Navigate to your Group Policy Editor and locate:
 
-Computer Configuration → Administrative Templates → Google Chrome → Download restrictions
+## Computer Configuration → Administrative Templates → Google Chrome → Download restrictions
 
 You'll find a policy called "Download restrictions" with three possible values:
 
@@ -73,7 +73,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Google\Chrome" -Name "DownloadRe
 
 After applying this policy, users attempting to download any file will see Chrome block the action and display a notification explaining the download was blocked by administrator policy.
 
-Deploying to Many Machines at Once
+## Deploying to Many Machines at Once
 
 For an environment with hundreds of machines, apply the registry entry through a GPO startup script or push it with your RMM tool. Here is a self-contained PowerShell script suitable for a software deployment package:
 
@@ -96,7 +96,7 @@ Write-Output "DownloadRestrictions set to $RestrictionLevel on $(hostname)"
 
 Run it as `Set-ChromeDownloadPolicy.ps1 -RestrictionLevel 2` during imaging or via a remote execution tool. The `-RestrictionLevel` parameter lets you reuse the same script to relax restrictions (pass `0`) on developer workstations without maintaining separate scripts.
 
-Blocking Specific File Types
+## Blocking Specific File Types
 
 A more practical scenario for most organizations involves blocking dangerous file types while allowing safe ones. Chrome allows you to specify allowed file extensions or blocklist certain extensions.
 
@@ -112,7 +112,7 @@ HKLM\SOFTWARE\Policies\Google\Chrome\DownloadRestrictions = 1
 
 For blocking specific extensions, you'll need to use Chrome's content settings or a more sophisticated approach using the "ExtensionInstallForcelist" policy combined with a custom extension that intercepts downloads.
 
-File-Type Blocking Matrix
+## File-Type Blocking Matrix
 
 Chrome's native `DownloadRestrictions` policy is all-or-nothing at the file level. To achieve per-extension blocking you have two practical options:
 
@@ -152,7 +152,7 @@ New-ItemProperty `
   -PropertyType String -Force
 ```
 
-Using Content Settings for Granular Control
+## Using Content Settings for Granular Control
 
 Beyond Group Policy, Chrome's content settings provide another layer of control. You can configure these programmatically through the `ContentSettings` policy:
 
@@ -171,7 +171,7 @@ Beyond Group Policy, Chrome's content settings provide another layer of control.
 
 Deploy this configuration through Group Policy by creating a JSON file and referencing it in your policy settings.
 
-Combining Content Settings with URL Rules
+## Combining Content Settings with URL Rules
 
 Content settings and URL allow/blocklists operate independently but complement each other. A practical layered configuration for a mid-sized organization might look like:
 
@@ -182,7 +182,7 @@ Content settings and URL allow/blocklists operate independently but complement e
 
 This defense-in-depth approach avoids the user friction of a full block while still closing the most common download-based attack vectors.
 
-Enterprise Deployment with Chrome Browser Cloud Management
+## Enterprise Deployment with Chrome Browser Cloud Management
 
 For organizations using Chrome Browser Cloud Management, you can configure these policies through the Google Admin console. This provides a centralized interface for managing Chrome policies across your entire organization without touching individual machines.
 
@@ -193,7 +193,7 @@ The cloud-based approach offers advantages for distributed teams:
 - Reporting and compliance dashboards
 - User-level and machine-level targeting
 
-Cloud Management vs. On-Premises GPO. Comparison
+## Cloud Management vs. On-Premises GPO. Comparison
 
 | Feature | On-Premises GPO | Chrome Browser Cloud Management |
 |---------|----------------|----------------------------------|
@@ -206,7 +206,7 @@ Cloud Management vs. On-Premises GPO. Comparison
 
 If your organization is migrating from on-premises Active Directory to a cloud-first model, Chrome Browser Cloud Management is the better long-term choice. Policies applied through the Admin console override locally set GPO values when the two conflict, so plan your transition carefully.
 
-Blocking Downloads from Specific Domains
+## Blocking Downloads from Specific Domains
 
 Sometimes you need to allow downloads from trusted domains while blocking them from untrusted sources. This requires a more nuanced approach using Chrome extensions or the "URLBlocklist" policy.
 
@@ -230,7 +230,7 @@ HKLM\SOFTWARE\Policies\Google\Chrome\URLAllowlist = [
 ]
 ```
 
-PowerShell Script for Bulk URL Rules
+## PowerShell Script for Bulk URL Rules
 
 Managing many URL rules by hand in the registry is error-prone. This script reads a plain-text file of blocked URLs and writes them as numbered registry values:
 
@@ -263,7 +263,7 @@ Write-Output "Wrote $($index - 1) URL blocklist entries."
 
 Store `blocklist.txt` in version control alongside your other infrastructure-as-code files. That way URL rule changes go through your normal review process rather than being applied ad hoc.
 
-Practical Implementation for Developers
+## Practical Implementation for Developers
 
 If you're developing Chrome extensions or enterprise tools, you can programmatically check download restrictions in your code:
 
@@ -290,7 +290,7 @@ chrome.policy.get(['DownloadRestrictions'], (result) => {
 
 For testing your policies before deployment, Chrome provides a policy testing tool at `chrome://policy`. This shows all currently applied policies and their values, making it easy to verify your configuration is working correctly.
 
-Testing Policies in a Local VM Before Rollout
+## Testing Policies in a Local VM Before Rollout
 
 Always validate in a non-production environment before pushing to endpoints. A repeatable test workflow:
 
@@ -329,7 +329,7 @@ const { chromium } = require('playwright');
 
 Integrate this test into your CI pipeline so that any change to Chrome policies is automatically validated against a live Chrome instance.
 
-Verification and Troubleshooting
+## Verification and Troubleshooting
 
 After deploying your download restrictions, verify they work correctly:
 
@@ -346,7 +346,7 @@ Common issues include:
 
 For enterprise environments, use Group Policy Results (gpresult /r) to see which policies are being applied to specific machines and users.
 
-Troubleshooting Decision Tree
+## Troubleshooting Decision Tree
 
 ```
 chrome://policy shows DownloadRestrictions?
@@ -365,7 +365,7 @@ chrome://policy shows DownloadRestrictions?
           → Force Chrome restart or run: gpupdate /force
 ```
 
-Additional Diagnostic Commands
+## Additional Diagnostic Commands
 
 ```powershell
 Show all applied machine policies (verbose)
@@ -383,7 +383,7 @@ Get-ItemProperty "HKCU:\SOFTWARE\Policies\Google\Chrome" -ErrorAction SilentlyCo
   Select-Object DownloadRestrictions
 ```
 
-When to Use Each Restriction Level
+## When to Use Each Restriction Level
 
 Choose your restriction level based on your security requirements:
 
@@ -395,7 +395,7 @@ Choose your restriction level based on your security requirements:
 
 Most organizations find Level 1 provides the right balance, blocking known malicious files while allowing legitimate business downloads. If you choose Level 2, build an exceptions workflow so that users with legitimate download needs can request a temporary allow-listing through your IT helpdesk without requiring policy changes that affect the whole machine.
 
-Real-World Scenario: Regulated Financial Services Firm
+## Real-World Scenario: Regulated Financial Services Firm
 
 A securities trading firm needs to prevent traders from downloading market data files to personal USB drives while still allowing their compliance team to download audit reports. The solution:
 

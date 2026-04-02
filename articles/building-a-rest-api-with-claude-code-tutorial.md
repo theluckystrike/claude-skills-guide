@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Building a REST API with Claude Code Tutorial
-
 Building REST APIs can feel overwhelming when you are managing routing, validation, testing, and documentation simultaneously. Claude Code offers a powerful workflow that accelerates API development from initial design to production-ready endpoints. This tutorial walks you through creating a complete REST API using Claude Code and its ecosystem of skills.
 
-Setting Up Your API Project
+## Setting Up Your API Project
 
 Before writing code, establish a clean project structure. Create a new directory and initialize your project:
 
@@ -37,7 +34,7 @@ cd user-api
 
 Claude Code works well with either approach. The key is having a clear project structure that Claude can understand and navigate.
 
-Using Claude Skills for API Development
+## Using Claude Skills for API Development
 
 Several Claude skills accelerate REST API development. The tdd skill helps you write tests before implementation, following test-driven development principles. The supermemory skill lets you maintain context across complex multi-file API projects.
 
@@ -57,7 +54,7 @@ Write validation for email format and password minimum 8 characters.
 
 Claude generates tests first, then implements the route to satisfy those tests.
 
-Defining Your API Specification First
+## Defining Your API Specification First
 
 A well-designed API begins with clear specification before implementation. Document your endpoints, request methods, and expected responses upfront:
 
@@ -83,34 +80,7 @@ class User(BaseModel):
 
 Claude Code translates these specifications into complete implementations regardless of framework, Express, FastAPI, or others.
 
-Defining Your API Specification
-
-A well-designed API begins with clear specification. Document your endpoints, request methods, and expected responses before writing implementation code:
-
-- Resource paths: `/users`, `/products`, `/orders`
-- HTTP methods: GET for retrieval, POST for creation, PUT/PATCH for updates, DELETE for removal
-- Request/response formats: JSON structures with field types
-- Status codes: 200 for success, 201 for created, 404 for not found, 400 for bad request
-
-For Python projects, FastAPI provides a strong alternative to Express:
-
-```python
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import Optional
-import uuid
-
-app = FastAPI()
-
-class User(BaseModel):
-    name: str
-    email: str
-    bio: Optional[str] = None
-```
-
-Claude Code translates these specifications into code for either framework. Use the `tdd` skill to structure your development: write tests first, then implement to meet those tests.
-
-Creating Your First Endpoint
+## Creating Your First Endpoint
 
 Create a basic Express server with user management endpoints:
 
@@ -167,7 +137,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 ```
 
-Testing Your API with the TDD Skill
+## Testing Your API with the TDD Skill
 
 The tdd skill transforms how you approach API testing. Activate it and describe comprehensive test scenarios:
 
@@ -186,7 +156,7 @@ Claude generates a test file using your preferred testing framework. The generat
 
 For a more comprehensive testing approach, load the tdd skill before writing any endpoint code. This ensures your implementation satisfies real requirements from the start.
 
-Documenting Your API
+## Documenting Your API
 
 API documentation is critical for team collaboration. The pdf skill can generate PDF documentation from your API specifications. First, create an OpenAPI specification:
 
@@ -243,7 +213,7 @@ paths:
 
 Use the frontend-design skill if you need to build an admin dashboard for your API. While frontend-design focuses on visual interfaces, it can help you create API testing UIs or admin panels.
 
-Connecting MCP Servers for Enhanced API Development
+## Connecting MCP Servers for Enhanced API Development
 
 Model Context Protocol servers extend Claude's capabilities for API work. The filesystem MCP server lets Claude read and write API configuration files. The HTTP MCP server enables Claude to make actual HTTP requests to test your running API.
 
@@ -268,7 +238,7 @@ with {"email": "test@example.com", "name": "Test User", "password": "password123
 and verify the response
 ```
 
-Error Handling Best Practices
+## Error Handling Best Practices
 
 Production APIs need solid error handling. Add centralized error handling to your Express app:
 
@@ -293,7 +263,7 @@ Write tests for: 500 error on server exception, 404 on undefined routes,
 and proper error response format for all error types
 ```
 
-Deployment Considerations
+## Deployment Considerations
 
 When deploying your API, consider environment variables for sensitive configuration. Use the supermemory skill to track deployment notes and environment-specific settings:
 
@@ -305,12 +275,11 @@ database connection string in environment variable DATABASE_URL
 
 Supermemory maintains persistent context across sessions, making it invaluable for tracking deployment details and environment configurations you return to repeatedly.
 
-Summary
+## Summary
 
 Building REST APIs with Claude Code combines traditional development practices with AI-assisted workflows. The tdd skill ensures testability from the start. MCP servers enable direct API testing. Skills like supermemory help maintain context across complex projects.
 
 Your next steps: scaffold a new API project, load the tdd skill, and build one endpoint following test-driven development. The workflow becomes intuitive quickly, and the resulting APIs tend to be more reliable and maintainable.
-
 
 Related Reading
 

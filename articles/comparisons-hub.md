@@ -16,7 +16,7 @@ permalink: /comparisons-hub/
 
 Choosing the right tool is half the battle. This hub collects every comparison guide on the site, skills vs prompts, official vs community skills, and decision frameworks to help you pick the right approach for every workflow.
 
-Table of Contents
+## Table of Contents
 
 1. [Skills vs Prompts](#skills-vs-prompts)
 2. [Official vs Community Skills](#official-vs-community-skills)
@@ -25,7 +25,7 @@ Table of Contents
 
 ---
 
-Skills vs Prompts
+## Skills vs Prompts
 
 The most common question new Claude users ask: *should I use a skill or just write a prompt?*
 
@@ -47,7 +47,7 @@ Full guide: [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-promp
 
 ---
 
-Official vs Community Skills
+## Official vs Community Skills
 
 Anthropic ships a curated set of official skills with Claude Code: pdf, tdd, xlsx, pptx, docx, frontend-design, canvas-design, and others. These are security-audited, well-documented, and maintained across Claude versions.
 
@@ -59,7 +59,7 @@ Full guide: [Official vs Community Claude Skills: Which Should You Use?](/anthro
 
 ---
 
-Decision Framework
+## Decision Framework
 
 Use this framework when deciding between options:
 
@@ -75,7 +75,7 @@ When building custom skills, the path is: understand the [skill.md format](/clau
 
 ---
 
-How to Evaluate a Comparison Before Committing
+## How to Evaluate a Comparison Before Committing
 
 Not every comparison on this site. or anywhere else. applies equally to your situation. Before acting on a recommendation, run through this quick filter:
 
@@ -89,7 +89,7 @@ Stability vs innovation is a genuine tradeoff. Official Anthropic skills are sta
 
 ---
 
-How Skills and Prompts Interact in Practice
+## How Skills and Prompts Interact in Practice
 
 Skills and prompts aren't mutually exclusive. the best Claude Code workflows combine both. Here's a pattern that works at scale:
 
@@ -104,7 +104,7 @@ The cost of a poorly written skill is subtle: it produces acceptable but not exc
 
 ---
 
-Full Guide Index: Comparisons Cluster
+## Full Guide Index: Comparisons Cluster
 
 | Article | What You'll Learn |
 |---------|-------------------|
@@ -129,7 +129,7 @@ Full Guide Index: Comparisons Cluster
 
 ---
 
-Related Hubs
+## Related Hubs
 
 - [Getting Started with Claude Skills](/getting-started-hub/). Learn the foundations before comparing options
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The top skills worth choosing over prompts

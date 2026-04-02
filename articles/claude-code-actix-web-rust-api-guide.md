@@ -16,7 +16,7 @@ permalink: /claude-code-actix-web-rust-api-guide/
 
 [Actix Web remains one of the most performant web frameworks in the Rust ecosystem](/best-claude-code-skills-to-install-first-2026/) When combined with Claude Code's AI capabilities, you can rapidly prototype, develop, and test REST APIs while using Rust's memory safety guarantees. This guide covers building practical APIs using Claude Code sessions and relevant skills.
 
-Why Actix Web for Rust APIs
+## Why Actix Web for Rust APIs
 
 Before getting into code, it is worth understanding why teams choose Actix Web over alternatives. The Rust web framework landscape includes several capable options, Axum, Warp, Rocket, and Tide are all production-ready. Here is how they compare on the axes that matter most:
 
@@ -31,7 +31,7 @@ Actix Web wins on benchmark throughput and ecosystem breadth. It has mature midd
 
 The tradeoff is that Actix's actor system adds conceptual overhead early in the learning curve. Claude Code helps flatten that curve by generating idiomatic patterns you can inspect and adapt.
 
-Setting Up Your Rust API Project
+## Setting Up Your Rust API Project
 
 Initialize a new Actix Web project using Cargo:
 
@@ -68,7 +68,7 @@ dotenvy = "0.15"
 uuid = { version = "1", features = ["v4", "serde"] }
 ```
 
-Creating Your First Endpoint
+## Creating Your First Endpoint
 
 Define a simple REST endpoint with request validation. Here's a practical example of a user management endpoint:
 
@@ -129,7 +129,7 @@ curl -X POST http://127.0.0.1:8080/users \
   -d '{"name": "Charlie", "email": "charlie@example.com"}'
 ```
 
-Structuring Routes with App State
+## Structuring Routes with App State
 
 In-memory data is fine for prototypes, but real applications need shared state, database pools, configuration, caches. Actix Web's `web::Data` wrapper handles this cleanly:
 
@@ -175,7 +175,7 @@ example handler that increments the counter."
 
 Claude produces the boilerplate correctly, including the `move` closure in `HttpServer::new` that trips up many developers new to Rust's ownership rules.
 
-Using Claude Code with Your API
+## Using Claude Code with Your API
 
 Activate Claude Code and use specific skills to enhance your development workflow. The `/tdd` skill helps generate unit tests for your endpoint handlers:
 
@@ -211,7 +211,7 @@ wrap() calls on an App. Does order matter for authentication + logging?"
 
 These targeted questions get precise answers that would otherwise require significant time reading the Actix documentation and source code.
 
-Advanced: Database Integration with Diesel
+## Advanced: Database Integration with Diesel
 
 Connect your Actix Web API to a PostgreSQL database using Diesel ORM:
 
@@ -288,7 +288,7 @@ For each one, suggest the appropriate error handling pattern and whether it
 should return 400, 500, or 503."
 ```
 
-Error Handling Patterns
+## Error Handling Patterns
 
 Implement consistent error responses across your API by defining a custom error type that implements `actix_web::ResponseError`:
 
@@ -342,7 +342,7 @@ Generate test cases for the create_user endpoint covering: valid input, missing 
 
 The generated tests should verify not just that an error occurs, but that the response body has the correct `code` field and that the HTTP status code matches your contract.
 
-Input Validation with the Validator Crate
+## Input Validation with the Validator Crate
 
 Raw Serde deserialization catches type mismatches but not semantic invalidity, an empty string is a valid `String` in Serde. Use the `validator` crate for domain-level validation:
 
@@ -388,7 +388,7 @@ name (required, 1-200 chars), price (positive float), sku (alphanumeric, 6-20 ch
 description (optional, max 5000 chars), category_ids (non-empty list of positive integers)"
 ```
 
-Using supermemory for API Patterns
+## Using supermemory for API Patterns
 
 The `/supermemory` skill stores your preferred API patterns across sessions. Store common patterns:
 
@@ -412,7 +412,7 @@ This makes handlers testable without a real database.
 
 The repository pattern note is especially valuable. When you start a new service six weeks later and ask Claude to scaffold handlers, it will apply the pattern automatically without you having to re-explain it.
 
-Combining Multiple Skills
+## Combining Multiple Skills
 
 For full-stack API development, combine skills effectively:
 
@@ -458,8 +458,7 @@ Generate OpenAPI 3.0 documentation for the Product CRUD endpoints
 
 Each step is independent and reversible. If the generated migration looks wrong, fix it before generating the handlers. Claude Code gives you checkpoints rather than a single opaque output.
 
-
-Step-by-Step Guide: Building Your First Actix Web API with Claude Code
+## Step-by-Step Guide: Building Your First Actix Web API with Claude Code
 
 Here is a concrete workflow for building a production-ready Actix Web API from scratch using Claude Code at every stage.
 
@@ -473,7 +472,7 @@ Step 4. Wire up routing and middleware. Ask Claude Code to generate the App conf
 
 Step 5. Add database integration. Tell Claude Code which database you're using and it generates the connection pool setup, connection extraction in handlers, and an example repository pattern to keep database logic separate from HTTP handling.
 
-Common Pitfalls
+## Common Pitfalls
 
 Forgetting to call `.await` on async handlers. Actix Web handlers must be async functions, but forgetting to await inner futures produces compilation errors with confusing messages. Claude Code generates correctly awaited handler bodies and the /tdd skill writes tests that verify async behavior.
 
@@ -485,7 +484,7 @@ Not validating request bodies. The `web::Json<T>` extractor returns a 400 error 
 
 Ignoring connection pool exhaustion. When every handler holds a database connection, pool exhaustion causes request timeouts under load. Claude Code can review your handler patterns and suggest connection borrowing scopes that release connections as quickly as possible.
 
-Best Practices
+## Best Practices
 
 Use custom error types instead of Box<dyn Error>. Define an AppError enum that implements Actix Web's ResponseError trait. This lets you return specific HTTP status codes and structured JSON error responses from any handler. Claude Code generates a complete error module with common variants like NotFound, Unauthorized, and InternalError.
 
@@ -497,7 +496,7 @@ Add structured logging with tracing. The tracing crate integrates with Actix Web
 
 Write integration tests with actix-web's test utilities. The actix-web::test module provides an HTTP test client that exercises your actual App configuration. Claude Code with the /tdd skill generates integration tests that cover authentication, error responses, and business logic without a running server.
 
-Advanced: State Management and Middleware
+## Advanced: State Management and Middleware
 
 For production APIs, you need request-level state management and cross-cutting middleware:
 
@@ -526,7 +525,7 @@ async fn build_app(state: web::Data<AppState>) -> App<...> {
 
 Claude Code generates this configuration with proper type annotations and handles the lifetime complexity that async Actix Web applications require.
 
-Integration Patterns
+## Integration Patterns
 
 Combining with the /supermemory skill. Store your API conventions, error format, pagination parameters, authentication patterns, in supermemory at the start of a project. Claude Code retrieves these conventions in future sessions, ensuring consistency across all endpoints even when working on different parts of the API weeks apart.
 
@@ -534,7 +533,7 @@ Generating OpenAPI documentation. Use the `utoipa` crate with Claude Code to gen
 
 Connecting to a React frontend. Use the /frontend-design skill to scaffold React components that consume your Actix Web API. The skill generates typed fetch functions based on your API response shapes, keeping the frontend and backend in sync.
 
-Conclusion
+## Conclusion
 
 Claude Code accelerates Actix Web development by generating tests, documenting APIs, and maintaining consistent patterns across your codebase. The combination of Rust's performance and AI-assisted development creates a productive workflow for building high-performance web services.
 
@@ -549,6 +548,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). CI/CD integration
 - [Frontend Design Skills for React Development](/best-claude-code-skills-for-frontend-development/). Building UI layers
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

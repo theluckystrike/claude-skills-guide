@@ -18,17 +18,17 @@ Every growing team needs a reliable handbook that documents processes, workflows
 
 This guide walks you through building a comprehensive team handbook workflow using Claude Code, complete with practical examples, code snippets, and actionable strategies you can implement immediately.
 
-Understanding the Team Handbook Challenge
+## Understanding the Team Handbook Challenge
 
-The Documentation Dilemma
+## The Documentation Dilemma
 
 Traditional team handbooks suffer from several common problems. First, content becomes stale, documentation that was accurate six months ago is now misleading. Second, formatting becomes inconsistent as different contributors use different structures and styles. Third, version fragmentation emerges as multiple versions exist across different platforms. Finally, engagement drops because team members avoid updating docs since it's tedious.
 
 Claude Code addresses these challenges by treating your handbook as code, versionable, testable, and automatable. Instead of static documents, you create living documentation that evolves with your team.
 
-Setting Up Your Handbook Repository
+## Setting Up Your Handbook Repository
 
-Repository Structure
+## Repository Structure
 
 A well-organized handbook repository is essential. Here's a recommended structure:
 
@@ -50,7 +50,7 @@ team-handbook/
  README.md
 ```
 
-The CLAUDE.md Foundation
+## The CLAUDE.md Foundation
 
 Every handbook repository should include a `CLAUDE.md` file that tells Claude Code how to interact with and maintain your documentation. This file serves as the configuration layer for all handbook-related activities.
 
@@ -79,9 +79,9 @@ Claude Code should:
 3. Generate diffs for review
 ```
 
-Creating Workflow Tutorials with Claude Code
+## Creating Workflow Tutorials with Claude Code
 
-Onboarding Workflow Tutorial
+## Onboarding Workflow Tutorial
 
 Let's create a practical onboarding workflow using Claude Code. This example demonstrates how to structure tutorial content that new team members can follow independently.
 
@@ -127,7 +127,7 @@ Include architecture diagrams and key component descriptions to help new develop
 Your first task should be a "good first issue" that touches multiple parts of the codebase, requires understanding your code review process, and results in a merged PR.
 ```
 
-Generating Tutorial Content with Claude
+## Generating Tutorial Content with Claude
 
 Claude Code can help generate consistent, high-quality tutorial content. Use the following prompt pattern to automate content creation:
 
@@ -142,9 +142,9 @@ Generate a tutorial for [workflow name] that:
 
 This pattern ensures every workflow tutorial follows a consistent structure that team members can rely on.
 
-Automating Handbook Maintenance
+## Automating Handbook Maintenance
 
-Creating a Documentation Update Skill
+## Creating a Documentation Update Skill
 
 Build a custom skill to maintain your handbook automatically. This skill focuses on proactive documentation health:
 
@@ -166,7 +166,7 @@ When invoked, you should:
 Focus on practical, actionable improvements.
 ```
 
-Setting Up Automated Reviews
+## Setting Up Automated Reviews
 
 Use Claude Code hooks to automatically review documentation changes before they enter your repository:
 
@@ -177,9 +177,9 @@ claude --review docs/
 
 This triggers Claude to analyze your documentation and flag potential issues including broken links, inconsistent formatting, and outdated information.
 
-Best Practices for Team Handbook Workflows
+## Best Practices for Team Handbook Workflows
 
-Version Your Documentation
+## Version Your Documentation
 
 Tag significant handbook versions to maintain a clear historical record:
 
@@ -190,28 +190,27 @@ git tag handbook/v1.1.0 -m "Added incident response workflow"
 
 Versioning allows you to track how documentation evolves and makes it easy to reference specific points in time.
 
-Link to Code, Not Away From It
+## Link to Code, Not Away From It
 
 Keep documentation close to the code it describes. When referencing a process, include the actual commands or code snippets rather than linking to external resources. This reduces link rot and keeps information accessible offline.
 
-Make It Discoverable
+## Make It Discoverable
 
 Structure your handbook so team members can quickly find what they need. Use clear navigation hierarchies, include a comprehensive index, and consider adding a quick-start guide for common tasks.
 
-Review and Iterate
+## Review and Iterate
 
 Schedule regular handbook reviews, monthly or quarterly, to ensure content stays current. Use Claude Code to identify stale sections and suggest updates based on recent git activity in relevant code areas.
 
-Measuring Handbook Success
+## Measuring Handbook Success
 
 Track engagement with your documentation through several metrics. Monitor how many merge requests include links to handbook pages, which sections get the most views through search analytics, and gather team feedback on documentation clarity and completeness.
 
-Conclusion
+## Conclusion
 
 Building a team handbook with Claude Code transforms static documentation into an active, collaborative resource. By treating your handbook as code, versioned, automated, and integrated into your development workflow, you create documentation that evolves with your team rather than falling behind. The key is starting small, establishing clear patterns, and iterating based on what your team actually needs.
 
 Start with one workflow today, refine it based on usage, and expand gradually. Your future team members will thank you for investing in clear, maintainable documentation that makes getting up to speed straightforward and efficient.
-
 
 Related Reading
 

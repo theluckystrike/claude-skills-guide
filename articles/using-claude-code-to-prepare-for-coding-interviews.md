@@ -13,12 +13,9 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Using Claude Code to Prepare for Coding Interviews
-
 Preparing for coding interviews requires deliberate practice, structured review, and efficient feedback loops. Claude Code offers a powerful skill system that can accelerate your preparation by simulating interview scenarios, generating practice problems, reviewing your solutions, and helping you understand core concepts. This guide shows how to use Claude Code effectively for technical interview prep.
 
-Setting Up Your Interview Practice Environment
+## Setting Up Your Interview Practice Environment
 
 Before diving into practice problems, set up a dedicated workspace for your interview preparation. Create a folder structure that mirrors what you'll encounter in real interviews:
 
@@ -37,7 +34,7 @@ cargo new practice --bin  # for Rust
 
 This gives Claude context about your environment when you start practice sessions. Claude Code works best when it understands your tooling and preferences.
 
-Using the TDD Skill for Algorithm Practice
+## Using the TDD Skill for Algorithm Practice
 
 The `/tdd` skill transforms how you approach algorithm problems. Rather than jumping straight to coding, the skill enforces a test-driven workflow that mimics real interview expectations.
 
@@ -66,7 +63,7 @@ cargo test
 
 The feedback loop is immediate. When tests fail, describe the failure to Claude and iterate. This process builds the habit of writing testable, correct code under pressure, exactly what interviews demand.
 
-Leveraging the Code Review Skill for Solution Analysis
+## Leveraging the Code Review Skill for Solution Analysis
 
 The code review skill helps you understand not just whether your solution works, but how it can be improved. After solving a problem, activate the skill:
 
@@ -92,7 +89,7 @@ pivot selection to guarantee O(n log n) average case.
 
 This targeted feedback helps you internalize performance considerations that interviewers frequently probe.
 
-Creating Practice Sessions with Supermemory
+## Creating Practice Sessions with Supermemory
 
 The supermemory skill serves as your study companion throughout the interview preparation journey. It helps you organize concepts, track progress, and review weak areas.
 
@@ -115,7 +112,7 @@ in the past week.
 
 This spaced repetition approach ensures you retain material across all essential topics: arrays, strings, trees, graphs, dynamic programming, and system design.
 
-System Design Practice with Claude Code
+## System Design Practice with Claude Code
 
 For senior roles, system design questions require a different preparation approach. Create a skill specifically for system design practice:
 
@@ -156,7 +153,7 @@ evaluate your approach against industry-standard patterns.
 
 Use this skill to practice explaining complex systems verbally, crucial for the interview format.
 
-Mock Interview Simulations
+## Mock Interview Simulations
 
 Conduct mock interviews using Claude Code's conversational abilities. Set a timer for 30 minutes, choose a problem, and treat Claude as your interviewer:
 
@@ -168,7 +165,7 @@ problem. After I solve it, ask follow-up questions about my approach.
 
 This simulation builds the stamina and communication skills that developers often neglect in favor of pure problem-solving practice. The ability to think aloud, explain your reasoning, and handle hints gracefully separates successful candidates from others.
 
-PDF Skill for Reading Interview Resources
+## PDF Skill for Reading Interview Resources
 
 The pdf skill helps you process interview preparation books and papers efficiently. If you have resources like "Cracking the Coding Interview" in PDF format:
 
@@ -180,7 +177,7 @@ from this chapter. Extract the common template approaches.
 
 This extracts actionable insights from dense material, saving hours of reading time while ensuring you capture essential patterns.
 
-Structuring Your Practice Sessions
+## Structuring Your Practice Sessions
 
 A productive interview preparation session with Claude Code follows this structure:
 
@@ -208,7 +205,7 @@ Topics to Review
 - [ ] System design: Database partitioning
 ```
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Developers often make these mistakes when using AI tools for interview prep:
 
@@ -217,14 +214,13 @@ Developers often make these mistakes when using AI tools for interview prep:
 - Ignoring communication: Practice explaining your solutions out loud. Claude can simulate this by asking you to justify decisions.
 - No reflection: Always review what you learned after each session. The supermemory skill makes this systematic.
 
-Final Thoughts
+## Final Thoughts
 
 Claude Code becomes a powerful interview preparation partner when used intentionally. The skill system lets you customize your practice environment, whether you're grinding algorithm problems with tdd, analyzing solutions with code review, or building system design muscles with custom skills.
 
 Success in technical interviews comes from consistent practice and clear communication. Claude Code amplifies your preparation efficiency, but the fundamental work of solving problems, making mistakes, and learning from them remains yours to do.
 
 Start with one skill, build a habit, and iterate. Your next interview will be better for it.
-
 
 Related Reading
 

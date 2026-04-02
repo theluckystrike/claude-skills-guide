@@ -13,12 +13,9 @@ score: 7
 permalink: /claude-code-maximum-call-stack-exceeded-skill-debug/
 ---
 
-
-Claude Code Maximum Call Stack Exceeded: Skill Debug Guide
-
 The "Maximum call stack size exceeded" error in Claude Code skills is one of the most frustrating issues you can encounter. Unlike syntax errors or missing files, this error typically stems from design patterns in your skill that cause infinite recursion or unbounded loops. This guide will help you diagnose, fix, and prevent this error.
 
-Understanding the Error
+## Understanding the Error
 
 When Claude Code reports "Maximum call stack size exceeded," it means the underlying JavaScript runtime has hit its limit on how many nested function calls it can handle. In the context of Claude Code skills, this typically occurs in three scenarios:
 
@@ -26,9 +23,9 @@ When Claude Code reports "Maximum call stack size exceeded," it means the underl
 2. Tool use loops. A skill repeatedly calls tools that trigger further skill actions
 3. Complex state transitions. State machine logic creates circular dependencies
 
-Common Causes and Solutions
+## Common Causes and Solutions
 
-Cause 1: Recursive Skill Auto-Invocation
+## Cause 1: Recursive Skill Auto-Invocation
 
 The most frequent culprit is skills that automatically trigger based on their own output. Here's a problematic example:
 
@@ -50,7 +47,7 @@ You are a code reviewer skill.
 - Stop after completing one review cycle
 ```
 
-Cause 2: Tool Calling Without Bounds
+## Cause 2: Tool Calling Without Bounds
 
 Skills that use MCP tools or other tool-calling mechanisms can hit stack limits if they don't cap iterations:
 
@@ -74,7 +71,7 @@ Process the bug list with these constraints:
 - Report remaining bugs for manual review
 ```
 
-Cause 3: Circular Skill Dependencies
+## Cause 3: Circular Skill Dependencies
 
 If you have multiple skills that reference each other, you might create circular triggers:
 
@@ -96,9 +93,9 @@ You coordinate between documentation generation and content updates:
 3. Use explicit commands rather than auto-invocation
 ```
 
-Debugging Techniques
+## Debugging Techniques
 
-Step 1: Enable Verbose Logging
+## Step 1: Enable Verbose Logging
 
 Run Claude Code with verbose output to see the execution flow:
 
@@ -108,7 +105,7 @@ claude --verbose /path/to/project
 
 This shows each tool call and skill invocation, helping you identify where the recursion starts.
 
-Step 2: Simplify and Isolate
+## Step 2: Simplify and Isolate
 
 Create a minimal reproduction of your skill to isolate the problem:
 
@@ -123,7 +120,7 @@ Do NOT repeat or loop. Output once and exit.
 
 If this basic version still fails, the issue is in skill loading itself, not your logic.
 
-Step 3: Check Skill Metadata
+## Step 3: Check Skill Metadata
 
 Review your skill's YAML front matter for problematic patterns:
 
@@ -137,7 +134,7 @@ Check for auto-invocation triggers
 
 The `file_change` trigger combined with a `process` action that modifies files creates a loop.
 
-Step 4: Add Debugging Output
+## Step 4: Add Debugging Output
 
 Insert explicit checkpoints in your skill instructions:
 
@@ -151,7 +148,7 @@ Debug checkpoint 3: About to return
 
 If you see "Debug checkpoint 1" repeatedly without reaching checkpoint 2, you have a loop at initialization.
 
-Prevention Best Practices
+## Prevention Best Practices
 
 1. Always Set Explicit Limits
 
@@ -200,7 +197,7 @@ Boundaries
 - DO NOT trigger other skills automatically
 ```
 
-Using Claude Code's Built-in Safeguards
+## Using Claude Code's Built-in Safeguards
 
 Claude Code provides some built-in protections, but they're not foolproof:
 
@@ -210,7 +207,7 @@ Claude Code provides some built-in protections, but they're not foolproof:
 
 However, these are last resorts. Don't rely on them to fix poorly designed skills.
 
-Fixed Skill Template
+## Fixed Skill Template
 
 Here's a template that avoids call stack issues:
 
@@ -243,7 +240,7 @@ Termination
 - Do NOT loop or repeat
 ```
 
-When to Seek Additional Help
+## When to Seek Additional Help
 
 If you've tried these solutions and still encounter call stack errors:
 
@@ -252,12 +249,11 @@ If you've tried these solutions and still encounter call stack errors:
 3. Test in isolation. Disable other skills and test incrementally
 4. Report the issue. If it's a Claude Code bug, the team needs to know
 
-Conclusion
+## Conclusion
 
 The "Maximum call stack size exceeded" error is preventable with careful skill design. Always add explicit bounds, avoid circular dependencies, and test boundary conditions. The key principle: never assume your skill won't loop. design it to fail safely if it does.
 
 Remember: Claude Code skills should complete their task and stop. If your skill keeps running, you have a design problem, not a feature.
-
 
 Related Reading
 

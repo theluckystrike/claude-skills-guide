@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Key Points Extractor: Building a."
 description: "Learn how to build a Chrome extension that extracts key points from any web page. Practical code examples, API integration patterns, and implementation."
@@ -14,12 +13,11 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Chrome Extension Key Points Extractor: Building a Content Summarization Tool
+## Chrome Extension Key Points Extractor: Building a Content Summarization Tool
 
 Chrome extensions that extract key points from web content have become essential tools for researchers, developers, and anyone who consumes large amounts of information. Building one requires understanding the Chrome extension architecture, content extraction techniques, and integration with AI or rule-based summarization services. This guide walks you through creating a functional key points extractor extension from scratch.
 
-Understanding the Core Architecture
+## Understanding the Core Architecture
 
 A key points extractor extension operates through a pipeline: content script injection, DOM parsing, text extraction, processing through a summarization engine, and display through a popup or side panel. The architecture must balance performance with accuracy, ensuring the extension doesn't slow down page loads or consume excessive memory.
 
@@ -43,7 +41,7 @@ The manifest file defines the extension's capabilities and permissions. For a ke
 
 The content script runs in the context of the target page, extracting visible text while avoiding navigation elements, ads, and other non-content areas. This selective extraction improves the quality of the extracted key points by removing noise from the original content.
 
-Content Extraction Strategies
+## Content Extraction Strategies
 
 Effective content extraction requires distinguishing between main article content and page clutter. The Document Object Model provides multiple approaches: semantic element targeting, text density analysis, and machine learning classifiers. For most implementations, a combination of semantic targeting and text density works well.
 
@@ -82,7 +80,7 @@ function cleanText(text) {
 
 The fallback mechanism ensures the extension works even on pages without standard semantic markup, such as single-page applications or non-standard layouts.
 
-Building the Summarization Engine
+## Building the Summarization Engine
 
 The summarization engine transforms extracted text into key points. Two primary approaches exist: extractive methods that identify and rank important sentences, and abstractive methods that generate new summaries using AI models.
 
@@ -122,7 +120,7 @@ function extractKeyPoints(text, maxPoints = 5) {
 
 This approach works offline and requires no API keys, making it suitable for basic use cases. For higher quality summaries, integrate with an AI API like Anthropic or OpenAI.
 
-Integrating AI Summarization
+## Integrating AI Summarization
 
 For production-quality key points, connect to a language model API. The extension sends extracted content to the API and receives generated summaries. Implement proper error handling and rate limiting:
 
@@ -157,7 +155,7 @@ async function getAIKeyPoints(text, apiKey) {
 
 Store API keys securely using chrome.storage with the protected storage API, ensuring credentials never appear in plain text or version control.
 
-User Interface Design
+## User Interface Design
 
 The popup interface displays extracted key points with options to copy, save, or regenerate. Design for clarity and quick access:
 
@@ -207,7 +205,7 @@ document.getElementById('extract-btn').addEventListener('click', async () => {
 });
 ```
 
-Performance Optimization
+## Performance Optimization
 
 Content extraction must complete quickly to avoid blocking the page. Use requestIdleCallback for non-critical processing, implement caching to avoid re-extracting content, and consider using web workers for heavy computation:
 
@@ -236,7 +234,7 @@ async function cacheContent(url, content) {
 }
 ```
 
-Extension Testing and Debugging
+## Extension Testing and Debugging
 
 Chrome provides excellent debugging tools for extension development. Load your extension in developer mode through chrome://extensions, use the service worker console for background script debugging, and inspect popup and content script contexts individually.
 

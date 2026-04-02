@@ -16,7 +16,7 @@ permalink: /claude-code-skill-memory-limit-exceeded-process-killed-fix/
 
 Memory limit exceeded errors can abruptly terminate your Claude Code sessions, especially when working with resource-intensive tasks like PDF processing, large codebase analysis, or generating complex output. This guide provides practical solutions for developers and power users facing these issues.
 
-Understanding the Error
+## Understanding the Error
 
 When Claude Code encounters a [memory limit exceeded](/claude-code-skills-context-window-exceeded-error-fix/) error, you typically see messages like "Process killed" or "Out of memory" in your terminal. This occurs when the operating system terminates the Node.js process that runs Claude Code to prevent a complete system freeze.
 
@@ -29,7 +29,7 @@ The error is particularly common when:
 
 Claude Code skills do not have their own CLI syntax like `claude -s skill-name` or flags like `--max-memory`. Skills are plain Markdown files stored in `~/.claude/skills/` and are invoked interactively by typing `/skill-name` in a Claude Code session. Memory management happens at the OS and process level, not through skill configuration.
 
-Quick Fixes for Memory Issues
+## Quick Fixes for Memory Issues
 
 1. Increase System Memory Limits
 
@@ -84,9 +84,9 @@ Make swap permanent (add to /etc/fstab)
 /swapfile none swap sw 0 0
 ```
 
-Skill-Specific Solutions
+## Skill-Specific Solutions
 
-PDF Processing
+## PDF Processing
 
 The `/pdf` skill is particularly memory-intensive when handling large documents. Guide it to work incrementally:
 
@@ -109,7 +109,7 @@ pdftk large.pdf cat 51-100 output part2.pdf
 
 Then process each part in a separate Claude Code conversation using `/pdf`.
 
-TDD and Code Analysis
+## TDD and Code Analysis
 
 The `/tdd` skill benefits from scoped requests. Rather than asking it to analyze an entire large codebase, direct it to specific directories or modules:
 
@@ -131,9 +131,9 @@ Index only the files in ./notes/2026-q1/ for now.
 I will ask you to index additional folders after this completes.
 ```
 
-Monitoring and Prevention
+## Monitoring and Prevention
 
-Use Memory Monitoring Tools
+## Use Memory Monitoring Tools
 
 Keep track of memory usage during skill execution:
 
@@ -149,7 +149,7 @@ while true; do
 done
 ```
 
-Set Node.js Heap Size
+## Set Node.js Heap Size
 
 Claude Code runs on Node.js. You can increase the V8 heap size via environment variable before launching:
 
@@ -160,9 +160,9 @@ NODE_OPTIONS="--max-old-space-size=8192" claude
 
 This is the correct way to influence Claude Code's memory ceiling. Note that `~/.claude/settings.json` does not support `memory`, `max_heap_size`, `gc_enabled`, or per-skill memory fields. those are not valid configuration keys. The `NODE_OPTIONS` environment variable is the appropriate lever.
 
-Advanced Solutions
+## Advanced Solutions
 
-Container-Based Isolation
+## Container-Based Isolation
 
 For truly memory-intensive operations, consider running Claude Code inside a Docker container with explicit memory limits:
 
@@ -181,7 +181,7 @@ Run with memory limits
 docker run --memory=8g --memory-swap=12g -it your-claude-image
 ```
 
-Profile Memory Usage
+## Profile Memory Usage
 
 Identify which operations consume the most memory:
 
@@ -194,9 +194,9 @@ Maximum resident set size (kbytes)
 Minor (reclaiming a frame) page faults
 ```
 
-Common Scenarios and Fixes
+## Common Scenarios and Fixes
 
-Scenario 1: /pdf Skill Crashes on Large Files
+## Scenario 1: /pdf Skill Crashes on Large Files
 
 Problem: Processing a 500+ page PDF causes a "[process killed](/claude-code-skill-timeout-error-how-to-increase-the-limit/)" error.
 
@@ -205,7 +205,7 @@ Solution:
 2. Process each chunk in a separate Claude Code session using `/pdf`
 3. Ask Claude to summarize one section at a time and combine the results
 
-Scenario 2: /tdd Runs Out of Memory on Large Codebases
+## Scenario 2: /tdd Runs Out of Memory on Large Codebases
 
 Problem: Generating tests for an entire repository exhausts available memory.
 
@@ -214,7 +214,7 @@ Solution:
 2. Use `/tdd` on a single file or directory per session
 3. Close and reopen Claude Code between large modules to free heap memory
 
-Scenario 3: /supermemory Indexing Fails
+## Scenario 3: /supermemory Indexing Fails
 
 Problem: Indexing a large knowledge base causes memory exhaustion.
 
@@ -223,7 +223,7 @@ Solution:
 2. Start a fresh Claude Code session between large indexing batches
 3. Increase swap space to provide overflow capacity (see swap section above)
 
-Prevention Best Practices
+## Prevention Best Practices
 
 1. Always monitor memory usage before running intensive skills
 2. Start small when testing skills with large datasets
@@ -234,14 +234,12 @@ Prevention Best Practices
 
 When memory errors persist despite these fixes, consider upgrading your system RAM or using remote compute resources for memory-intensive tasks. The combination of proper environment configuration, monitoring, and incremental task scoping resolves the majority of memory limit exceeded issues with Claude Code skills.
 
-
 Related Reading
 
 - [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/). Fix context window errors alongside memory limit issues for smooth skill performance.
 - [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/). Investigate related performance bottlenecks that accompany memory limit errors.
 - [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/). Resolve context window errors that often appear together with memory limit issues.
 - [Getting Started with Claude Skills](/getting-started-hub/). Learn best practices for skill configuration to prevent resource limit errors.
-
 
 Built by Claude Skills Guide. More at [zovo.one](https://zovo.one)
 

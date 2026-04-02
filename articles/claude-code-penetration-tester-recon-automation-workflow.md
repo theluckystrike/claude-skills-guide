@@ -18,7 +18,7 @@ Reconnaissance remains the most time-intensive phase of any penetration test. Th
 
 This guide walks you through building a practical recon automation workflow using Claude Code skills and features designed for security professionals.
 
-Setting Up Your Penetration Testing Environment
+## Setting Up Your Penetration Testing Environment
 
 Before diving into automation, establish a dedicated working environment for your reconnaissance activities. Create a structured project directory that organizes tools, outputs, and scripts logically.
 
@@ -31,7 +31,7 @@ cd ~/pt-recon
 
 Install essential recon tools that Claude Code will orchestrate: nmap, subfinder, amass, nuclei, and httpx form the backbone of most enumeration workflows. Use your system's package manager or containerized solutions to maintain consistency across environments.
 
-Automating Subdomain Enumeration
+## Automating Subdomain Enumeration
 
 Subdomain enumeration typically involves chaining multiple tools with varying methodologies, passive DNS aggregation, certificate transparency logs, and active brute forcing. Claude Code excels at orchestrating these pipelines while maintaining result correlation.
 
@@ -60,7 +60,7 @@ def passive_enum(domain):
 
 The power of Claude Code lies in its ability to sequence these operations intelligently. Rather than running tools sequentially, identify opportunities for parallel execution while respecting dependencies, passive enumeration should complete before active brute forcing begins.
 
-Port Scanning Automation with Nmap
+## Port Scanning Automation with Nmap
 
 Network enumeration demands careful attention to timing and scope compliance. Build a Claude Code workflow that handles common scanning scenarios while providing clear progress feedback.
 
@@ -85,7 +85,7 @@ grep -E "^(22|80|443|445|3389|8080)" "$OUTPUT_DIR/nmap-quick-$TARGET".gnmap | \
 
 Integrate scan results automatically into your findings database. Claude Code can parse nmap output formats and populate tracking spreadsheets or security tooling APIs, eliminating manual data transfer between tools.
 
-Web Application Discovery and categorization
+## Web Application Discovery and categorization
 
 Web applications often hide behind non-standard ports or unconventional URLs. Automate the discovery and initial categorization process to quickly identify attack surfaces.
 
@@ -108,7 +108,7 @@ def categorize_web_tech(tech_stack):
 
 Claude Code can maintain context across reconnaissance phases, remembering which targets yielded interesting findings and suggesting logical next steps. This contextual awareness distinguishes AI-assisted workflows from simple script chaining.
 
-Vulnerability Assessment Integration
+## Vulnerability Assessment Integration
 
 Transform raw enumeration data into focused vulnerability assessment runs. Connect reconnaissance outputs directly to vulnerability scanners, targeting discovered services with appropriate check categories.
 
@@ -128,7 +128,7 @@ service_mappings:
     severity: [critical,high]
 ```
 
-Managing Reconnaissance Scope
+## Managing Reconnaissance Scope
 
 Effective penetration testers maintain strict scope discipline. Claude Code workflows should enforce scope boundaries automatically, alerting when targets fall outside defined parameters.
 
@@ -147,7 +147,7 @@ def validate_scope(target, scope_file):
     )
 ```
 
-Building Reusable Workflows
+## Building Reusable Workflows
 
 The true value of Claude Code-assisted reconnaissance emerges through workflow reuse. Document your automation pipelines as Claude Code skills that accept parameters and produce consistent outputs.
 
@@ -155,7 +155,7 @@ Structure skills to handle common variations, different output formats, scan int
 
 Create skill documentation that explains when to apply each workflow, required inputs, expected outputs, and common troubleshooting scenarios. Well-documented skills accelerate team knowledge transfer and ensure consistent methodology across engagements.
 
-Continuous Improvement and Iteration
+## Continuous Improvement and Iteration
 
 Review reconnaissance outputs after each engagement to identify automation gaps. Track which workflow stages produced valuable findings versus those requiring refinement. This feedback loop continuously improves your automation toolkit.
 
@@ -165,12 +165,11 @@ The combination of Claude Code's natural language interface with structured auto
 
 ---
 
-Related Resources
+## Related Resources
 
 - Claude Code Skills Tutorial
 - Security Automation with Claude Code
 - AI-Powered Penetration Testing Guide
-
 
 Related Reading
 

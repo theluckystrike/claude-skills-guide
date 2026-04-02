@@ -16,13 +16,13 @@ permalink: /claude-md-for-database-conventions-and-patterns/
 
 Database consistency remains one of the most challenging aspects of software development. When teams work across multiple projects, maintaining uniform naming conventions, table structures, and relationship patterns becomes difficult without explicit guidelines. Claude's markdown-based skills provide a practical solution for codifying and enforcing database conventions directly in your workflow.
 
-How Claude Skills Work with Database Conventions
+## How Claude Skills Work with Database Conventions
 
 [Claude Code loads skills from `~/.claude/skills/` as plain Markdown files](/claude-skill-md-format-complete-specification-guide/) Each skill contains instructions that guide Claude's behavior when you activate it. For database conventions, you can create a custom skill that defines your team's standards for naming tables, columns, relationships, and indexes.
 
 [The power of using Claude skills for database work lies in their ability to apply consistent rules](/best-claude-code-skills-to-install-first-2026/) across every interaction. Whether you're generating new schemas, reviewing existing code, or refactoring legacy tables, the skill ensures your conventions stay intact throughout the development lifecycle.
 
-Creating a Database Conventions Skill
+## Creating a Database Conventions Skill
 
 A database conventions skill is simply a Markdown file that Claude loads when activated. Here's how to structure one for your team:
 
@@ -53,7 +53,7 @@ Relationship Patterns
 
 Save this as `~/.claude/skills/database-conventions.md` and activate it with `/database-conventions` in your Claude session.
 
-Applying Conventions to Schema Generation
+## Applying Conventions to Schema Generation
 
 When you need to generate new database schemas, activate your conventions skill and describe your requirements. Claude will follow your rules automatically:
 
@@ -65,13 +65,13 @@ Create a schema for a blog system with posts, categories, and tags. Include prop
 
 Claude will generate tables following your conventions, singular table names, standard columns, proper foreign key naming, and appropriate indexes. The skill applies your team's standards without requiring you to repeat them in every request.
 
-Integration with Other Skills
+## Integration with Other Skills
 
 Database conventions work well alongside other Claude skills. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) helps you write migration tests alongside your schema changes. The [pdf skill](/best-claude-skills-for-data-analysis/) lets you generate database documentation in PDF format for stakeholders. Combined with the [supermemory skill](/best-claude-skills-for-developers-2026/), you can maintain a searchable history of schema decisions and migrations.
 
 For frontend developers working with ORMs, the [frontend-design skill](/best-claude-code-skills-for-frontend-development/) pairs with database conventions to ensure your API responses match your schema structure consistently.
 
-Pattern Enforcement Beyond Naming
+## Pattern Enforcement Beyond Naming
 
 Beyond simple naming conventions, your skill can encode architectural patterns. Consider including rules for:
 
@@ -83,13 +83,13 @@ UUID vs Integer Keys: Your conventions should specify whether to use UUIDs or au
 
 Cascade Rules: Define standard delete behavior, usually ON DELETE SET NULL for optional relationships and ON DELETE CASCADE for required ones.
 
-Using MCP Servers with Database Skills
+## Using MCP Servers with Database Skills
 
 The AWS MCP server and other database-related MCP tools work directly with your conventions skill. When you connect to a database through an MCP server, activate your conventions skill first to ensure all generated queries follow your standards.
 
 For teams using PostgreSQL, the conventions skill can include rules specific to that database, such as array column usage, JSONB best practices, or specific index types like GIN and BRIN for different use cases.
 
-Real-World Example
+## Real-World Example
 
 Suppose your team is building an e-commerce platform. Your database conventions skill includes rules for:
 
@@ -120,13 +120,13 @@ CREATE INDEX idx_wishlist_product ON customers_wishlist(product_id);
 
 The schema follows every convention automatically, prefixed table name, UUID primary key, standard timestamps, soft delete column, proper foreign keys with cascade rules, and appropriate indexes.
 
-Maintaining Your Conventions Skill
+## Maintaining Your Conventions Skill
 
 As your project evolves, update your conventions skill to reflect new requirements. Review it quarterly to remove outdated rules and add patterns for new features. Version control your skill file alongside your code so team members can track convention changes over time.
 
 Document any exceptions directly in the skill file using comments. If a specific table genuinely requires different treatment, note the rationale so future developers understand why the standard was modified.
 
-Summary
+## Summary
 
 Claude's markdown skills provide an effective framework for enforcing database conventions without creating complex build scripts or linters. By defining your standards in a plain Markdown file, you get consistent schema design across every project, automatic application of patterns, and documentation that doubles as executable instructions. Combine your conventions skill with other Claude skills like tdd, pdf, and supermemory to build a comprehensive database workflow that scales with your team.
 

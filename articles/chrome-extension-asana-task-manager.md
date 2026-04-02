@@ -18,7 +18,7 @@ Managing tasks efficiently is critical for developer productivity. Asana remains
 
 This guide covers how Chrome extensions interact with Asana, practical implementation approaches for developers building these tools, and configuration tips for power users.
 
-Understanding Asana's API for Extension Development
+## Understanding Asana's API for Extension Development
 
 Before building or using a Chrome extension for Asana, you need to understand how the API handles authentication and task operations. Asana uses OAuth 2.0 for authentication, which means your extension must implement a secure token exchange flow.
 
@@ -31,7 +31,7 @@ The Asana API provides endpoints for:
 
 For a Chrome extension, you'll typically need the `default` OAuth scope at minimum, with additional scopes depending on functionality. The `task:full` scope allows complete task manipulation, while `task:read` provides read-only access.
 
-Building a Basic Asana Task Manager Extension
+## Building a Basic Asana Task Manager Extension
 
 The architecture of a Chrome extension for Asana involves three main components: a popup interface, a background service worker for API calls, and content scripts for page interaction. Here's how these pieces connect:
 
@@ -173,7 +173,7 @@ function renderTasks(tasks) {
 }
 ```
 
-Extension Manifest Configuration
+## Extension Manifest Configuration
 
 Your extension needs proper manifest configuration:
 
@@ -201,11 +201,11 @@ Your extension needs proper manifest configuration:
 }
 ```
 
-Advanced Features for Power Users
+## Advanced Features for Power Users
 
 Beyond basic task viewing and completion, consider implementing these advanced features:
 
-Quick Task Creation
+## Quick Task Creation
 
 Add a keyboard shortcut to create tasks from any page:
 
@@ -232,7 +232,7 @@ async function quickCreateTask(url, title) {
 }
 ```
 
-Project Switching
+## Project Switching
 
 Store multiple project associations and allow quick switching:
 
@@ -244,7 +244,7 @@ async function switchProject(projectId) {
 }
 ```
 
-Due Date Reminders
+## Due Date Reminders
 
 Use Chrome's alarms API for due date notifications:
 
@@ -267,7 +267,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 ```
 
-Security Considerations
+## Security Considerations
 
 When building Asana integrations, prioritize security:
 
@@ -276,7 +276,7 @@ When building Asana integrations, prioritize security:
 - Validate all inputs: Sanitize task names and descriptions before sending to the API
 - Use minimal scopes: Request only the permissions your extension actually needs
 
-Using Existing Extensions
+## Using Existing Extensions
 
 If you prefer using existing solutions, several Chrome extensions already provide Asana integration:
 
@@ -286,12 +286,11 @@ If you prefer using existing solutions, several Chrome extensions already provid
 
 When evaluating extensions, verify their OAuth implementation, read permissions carefully, and check last update dates to ensure active maintenance.
 
-Conclusion
+## Conclusion
 
 Chrome extensions for Asana task management bridge the gap between your browser workflow and project management system. By implementing OAuth authentication, proper API interaction, and thoughtful UI design, developers can create powerful tools that significantly improve productivity. The code examples above provide a foundation, extend them based on your specific workflow requirements.
 
 For power users, combining these extensions with keyboard shortcuts and custom configurations creates a smooth task management experience that keeps you focused on coding rather than context switching.
-
 
 Related Reading
 

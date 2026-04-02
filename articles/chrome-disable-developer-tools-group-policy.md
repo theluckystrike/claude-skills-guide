@@ -13,14 +13,13 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 
 Disabling Chrome Developer Tools through Group Policy is a common requirement for enterprise environments, educational institutions, and organizations that need to restrict access to browser debugging capabilities. Whether you're managing a fleet of workstations or securing kiosk systems, controlling DevTools access provides an additional layer of policy enforcement.
 
 This guide covers the methods available for disabling Chrome Developer Tools, from Group Policy configurations to registry-based approaches, with practical examples for various deployment scenarios.
 
-Understanding Chrome Enterprise Policies
+## Understanding Chrome Enterprise Policies
 
 Chrome supports enterprise policy management through Windows Group Policy Objects (GPO) and the Windows Registry. The browser checks for policy settings in a specific order: machine-level registry, user-level registry, and finally policy files deployed via Group Policy.
 
@@ -30,7 +29,7 @@ Chrome's enterprise policy framework was designed for large-scale deployments. G
 
 To obtain the ADMX templates, download the Chrome Enterprise Bundle from Google's enterprise download page. The bundle includes `chrome.admx`, `google.admx`, and the corresponding `.adml` language files. Copy them to `C:\Windows\PolicyDefinitions\` (and the `.adml` files to `C:\Windows\PolicyDefinitions\en-US\`) on your domain controller or the machine where you run the Group Policy Editor. The Chrome policy nodes appear immediately after copying. no restart required.
 
-Policy Settings Explained
+## Policy Settings Explained
 
 The `DeveloperToolsAvailability` policy accepts three values:
 
@@ -44,9 +43,9 @@ Value 2 provides the most restrictive configuration, preventing both the keyboar
 
 The distinction between value 1 and value 2 matters more than it appears. Value 1 disables the in-browser UI but leaves port 9222 open for remote debugging. Any tool that speaks the Chrome DevTools Protocol (CDP) can still attach, inspect network traffic, execute JavaScript in the page context, and read DOM state. If your goal is preventing data extraction or script injection, value 1 is insufficient. value 2 is the correct choice for security-motivated deployments.
 
-Configuring via Group Policy
+## Configuring via Group Policy
 
-Step 1: Access Group Policy Editor
+## Step 1: Access Group Policy Editor
 
 Open the Local Group Policy Editor on your Windows machine:
 
@@ -58,7 +57,7 @@ Navigate to: Computer Configuration → Administrative Templates → Google Chro
 
 `gpedit.msc` is only available on Windows Pro, Enterprise, and Education editions. Windows Home does not include the Local Group Policy Editor. For Home edition machines, use the registry-based method described in the next section.
 
-Step 2: Configure the Policy
+## Step 2: Configure the Policy
 
 1. Double-click "Allow Developer Tools"
 2. Select Disabled
@@ -68,7 +67,7 @@ This configuration disables Developer Tools for all users on the machine. The po
 
 When you set this policy to Disabled, Chrome maps it internally to `DeveloperToolsAvailability = 2`. The "Allow Developer Tools" naming in the GPO UI is slightly confusing. "Disabled" means you are disabling DevTools access, not disabling the policy itself.
 
-Step 3: Force Policy Update
+## Step 3: Force Policy Update
 
 To apply changes immediately without waiting for Group Policy refresh:
 
@@ -95,11 +94,11 @@ Get-ADComputer -Filter * -SearchBase $ou | ForEach-Object {
 }
 ```
 
-Registry-Based Deployment
+## Registry-Based Deployment
 
 For environments without Active Directory or for script-based deployments, you can modify the Windows Registry directly. This method works for both machine-level and user-level configurations.
 
-Machine-Level Configuration
+## Machine-Level Configuration
 
 Create a registry file or use PowerShell to deploy:
 
@@ -132,7 +131,7 @@ Windows Registry Editor Version 5.00
 
 Double-clicking the `.reg` file on target machines merges the key. You can also deploy it silently via `regedit /s policy.reg` in a logon script or software deployment tool.
 
-User-Level Configuration
+## User-Level Configuration
 
 For per-user policies without administrator privileges:
 
@@ -144,7 +143,7 @@ User-level policies take precedence over machine-level settings for non-admin us
 
 A subtle but important behavior: when both HKLM and HKCU keys exist, Chrome uses HKCU for that specific user while other users on the same machine may have different settings. For consistent enforcement across all users on a shared machine, HKLM is the correct location.
 
-Deploying via Intune or MDM
+## Deploying via Intune or MDM
 
 For organizations using Microsoft Intune or another MDM platform, registry-based Chrome policy deployment works through the Windows Registry CSP. Create a configuration profile with OMA-URI settings:
 
@@ -156,7 +155,7 @@ Value: <enabled/><data id="DeveloperToolsAvailability" value="2"/>
 
 Alternatively, use the Chrome ADMX ingestion feature in Intune to import the Chrome ADMX template directly, which exposes the policy in the Configuration Profiles UI without requiring manual OMA-URI entries.
 
-Enterprise Deployment with Active Directory
+## Enterprise Deployment with Active Directory
 
 In large organizations using Active Directory, deploy the policy through Group Policy Management:
 
@@ -170,7 +169,7 @@ The policy propagates during the next Group Policy refresh cycle, typically ever
 
 For kiosk deployments where immediate enforcement is critical, you can set a shorter background refresh interval by configuring the "Set Group Policy refresh interval for computers" policy under Computer Configuration → Administrative Templates → System → Group Policy. Setting this to 15 or 30 minutes reduces the window between deployment and enforcement.
 
-GPO Scope and Targeting
+## GPO Scope and Targeting
 
 By default, a GPO linked to an OU applies to all computer objects in that OU. Use security filtering to narrow the scope if needed:
 
@@ -180,11 +179,11 @@ By default, a GPO linked to an OU applies to all computer objects in that OU. Us
 
 For WMI filtering. applying the policy only to machines running a specific version of Windows or Chrome. you can attach a WMI filter to the GPO. However, WMI filters add evaluation overhead and complexity; use them only when security group targeting is insufficient.
 
-Verification and Testing
+## Verification and Testing
 
 After deploying the policy, verify it's working correctly:
 
-Check Applied Policies
+## Check Applied Policies
 
 Open Chrome and navigate to `chrome://policy`. Look for the `DeveloperToolsAvailability` entry in the list of active policies.
 
@@ -192,7 +191,7 @@ The `chrome://policy` page shows every active Chrome policy, its source (whether
 
 The page also shows a "Show unset policies" toggle that reveals all available policy names even if they are not currently configured. useful for confirming that a policy name is recognized by the installed version of Chrome.
 
-Test Accessibility
+## Test Accessibility
 
 Attempt to open Developer Tools using:
 - F12 keyboard shortcut
@@ -204,7 +203,7 @@ All these methods should be blocked when the policy is correctly applied.
 
 When DevTools is correctly disabled, Chrome typically shows a notification in the DevTools panel area indicating the feature is blocked by policy, or simply does not respond to the keyboard shortcuts. The exact behavior can vary slightly between Chrome versions.
 
-Check Registry Directly
+## Check Registry Directly
 
 ```powershell
 Verify the registry key exists
@@ -236,18 +235,18 @@ foreach ($path in $paths) {
 }
 ```
 
-Limitations and Workarounds
+## Limitations and Workarounds
 
 Understanding the limitations helps set realistic expectations:
 
-Not Foolproof
+## Not Foolproof
 
 Tech-savvy users can still access debugging capabilities through:
 - Third-party browser extensions
 - External debugging tools connected via Chrome's remote debugging port
 - Alternative browsers installed on the same system
 
-Value 1 vs Value 2
+## Value 1 vs Value 2
 
 Using value 1 instead of 2 leaves the debugging port (9222 by default) accessible. This allows external tools to connect:
 
@@ -262,7 +261,7 @@ chrome({ port: 9222 }, (client) => {
 
 For maximum restriction, always use value 2.
 
-Alternative Browser Access
+## Alternative Browser Access
 
 The Group Policy approach applies only to Google Chrome. If users have Firefox, Edge, or another browser installed, they retain access to equivalent developer tools through those browsers. A comprehensive lockdown strategy must either remove alternative browsers or apply equivalent restrictions through those browsers' own policy mechanisms.
 
@@ -279,7 +278,7 @@ New-ItemProperty -Path $edgePath -Name "DeveloperToolsAvailability" -Value 2 -Pr
 
 Firefox uses a different policy system (policies.json or Windows Group Policy via its own ADMX templates). If Firefox access is a concern, it requires separate policy configuration or removal from managed machines.
 
-Extension-Based Workarounds
+## Extension-Based Workarounds
 
 Browser extensions that inject scripts or provide alternative debugging UIs can partially circumvent DevTools restrictions. Pair the DevTools policy with extension management policies to close this gap:
 
@@ -293,7 +292,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Google\Chrome\ExtensionInstallAl
 
 A more practical approach for most organizations is to allowlist a specific set of approved extensions rather than blocking everything, which tends to create support overhead.
 
-Additional Security Considerations
+## Additional Security Considerations
 
 Combine Developer Tools restrictions with other Chrome policies for defense in depth:
 
@@ -344,7 +343,7 @@ New-ItemProperty -Path $blockPath -Name "1" -Value "*" -PropertyType String -For
 
 This script produces a browser locked to a specific URL, with no history, no password saving, no extensions, and no DevTools access. Appropriate for public-facing terminals or staff-facing kiosk applications where browser functionality must be tightly constrained.
 
-Summary
+## Summary
 
 Disabling Chrome Developer Tools through Group Policy provides a straightforward mechanism for controlling browser debugging capabilities in enterprise environments. The key points:
 
@@ -354,7 +353,6 @@ Disabling Chrome Developer Tools through Group Policy provides a straightforward
 - Understand that determined users can find workarounds, use this as one layer of a broader security strategy
 
 For most organizational use cases, combining Developer Tools restrictions with other Chrome policies creates an effective control mechanism that balances security with usability.
-
 
 Related Reading
 

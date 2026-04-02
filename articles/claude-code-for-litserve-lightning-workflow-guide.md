@@ -18,7 +18,7 @@ Claude Code for LitServe Lightning Workflow Guide
 
 LitServe is a blazing-fast AI model serving engine built on top of FastAPI, designed specifically for AI inference. Lightning AI provides a complete platform for building, training, and deploying AI applications. Together, these tools enable developers to productionize AI models efficiently. This guide shows you how to use Claude Code CLI to streamline your LitServe development workflow within the Lightning ecosystem, covering architecture decisions, batching strategies, performance tuning, and production-grade deployment patterns.
 
-Understanding the LitServe Architecture
+## Understanding the LitServe Architecture
 
 LitServe extends FastAPI with AI-specific optimizations, making it ideal for serving neural networks, language models, and other ML workloads. The framework handles batch inference, GPU acceleration, and streaming responses out of the box. Lightning AI adds orchestration, deployment, and scaling capabilities on top.
 
@@ -35,7 +35,7 @@ This separation is intentional and powerful. Claude Code can help you keep each 
 
 When you combine Claude Code with LitServe, you gain an intelligent development partner that understands both your application logic and the AI serving infrastructure. Claude Code can help you scaffold servers, debug inference issues, optimize batch processing, and generate deployment configurations.
 
-LitServe vs. Alternatives
+## LitServe vs. Alternatives
 
 Before committing to LitServe, it helps to understand the landscape. Claude Code can reason through these tradeoffs with you when you describe your requirements:
 
@@ -50,7 +50,7 @@ Before committing to LitServe, it helps to understand the landscape. Claude Code
 
 LitServe hits the sweet spot for most teams: minimal boilerplate, native batching, and straightforward Lightning AI deployment. Claude Code excels at helping you get a LitServe server production-ready faster than any of the more complex alternatives.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before starting, ensure you have Claude Code installed and a Lightning AI account. Create a new project directory and initialize it with the necessary dependencies:
 
@@ -68,7 +68,7 @@ claude --print "Check that litserve and lightning are properly installed by chec
 
 Claude Code can generate a comprehensive setup script that ensures all dependencies are compatible. This prevents common version conflicts between PyTorch, CUDA, and the serving libraries.
 
-Recommended Project Structure
+## Recommended Project Structure
 
 Claude Code will typically suggest organizing a LitServe project like this:
 
@@ -91,7 +91,7 @@ litserve-lightning-project/
 
 You can generate this scaffold by asking Claude Code: "Create a LitServe project scaffold for serving a HuggingFace text classification model with proper separation of concerns."
 
-Pinning Compatible Versions
+## Pinning Compatible Versions
 
 A common source of pain in AI serving projects is version incompatibility. Claude Code can generate a reliable `requirements.txt`:
 
@@ -107,7 +107,7 @@ redis==5.0.1
 prometheus-client==0.20.0
 ```
 
-Creating Your First LitServe Server
+## Creating Your First LitServe Server
 
 A minimal LitServe server requires defining a model loader and the inference logic. Here's a practical example of serving a text classification model:
 
@@ -147,7 +147,7 @@ if __name__ == "__main__":
 
 Claude Code excels at expanding this skeleton into production-ready code. You can ask it to add error handling, request validation, logging, and monitoring with simple prompts.
 
-Adding Solid Input Validation
+## Adding Solid Input Validation
 
 The skeleton above has no input validation, a significant production risk. Claude Code will expand `decode_request` to catch bad inputs early:
 
@@ -222,7 +222,7 @@ class ClassificationLitAPI(LitAPI):
         }
 ```
 
-Integrating Claude Code for Development
+## Integrating Claude Code for Development
 
 Claude Code becomes particularly valuable when you need to add advanced features. For instance, to implement batching for higher throughput:
 
@@ -235,7 +235,7 @@ Claude Code understands LitServe's batching API and can configure optimal batch 
 
 When debugging inference issues, provide Claude Code with your error logs and model architecture details. It can identify common problems like tensor shape mismatches, device placement errors, or memory leaks.
 
-Implementing Dynamic Batching
+## Implementing Dynamic Batching
 
 Dynamic batching is one of the highest-impact optimizations for GPU-based serving. Instead of processing one request at a time, LitServe collects requests into batches and processes them together, GPU usage can go from 15% to 85%+ on bursty workloads.
 
@@ -304,7 +304,7 @@ if __name__ == "__main__":
     server.run(port=8000)
 ```
 
-Benchmarking Batching Impact
+## Benchmarking Batching Impact
 
 Claude Code can generate a load testing script to quantify the throughput improvement from batching:
 
@@ -356,7 +356,7 @@ print(f"P95 latency: {results['p95_ms']:.1f}ms")
 print(f"P99 latency: {results['p99_ms']:.1f}ms")
 ```
 
-Deploying to Lightning AI
+## Deploying to Lightning AI
 
 Lightning AI provides several deployment options: Lightning Apps, ServeDeploy, and cloud inference endpoints. For LitServe servers, the recommended approach uses Lightning's serve capabilities.
 
@@ -407,7 +407,7 @@ lightning run app app.py --cloud
 
 Claude Code can also help you set up CI/CD pipelines for automatic deployments, configure environment variables securely, and set up monitoring dashboards.
 
-Docker Containerization
+## Docker Containerization
 
 For portable deployments outside Lightning AI, Claude Code generates production-ready Dockerfiles:
 
@@ -450,7 +450,7 @@ docker build -t my-litserve-app:latest .
 docker run --gpus all -p 8000:8000 my-litserve-app:latest
 ```
 
-Environment-Specific Configuration
+## Environment-Specific Configuration
 
 Claude Code will help you manage configuration across dev, staging, and production using environment variables and a config module:
 
@@ -473,7 +473,7 @@ class ServerConfig:
 config = ServerConfig()
 ```
 
-Optimizing Performance
+## Optimizing Performance
 
 Production LitServe deployments require careful performance tuning. Claude Code can analyze your serving patterns and recommend optimizations:
 
@@ -490,7 +490,7 @@ def encode_response(self, output):
 
 Claude Code understands the streaming API and can migrate synchronous endpoints to streaming with minimal code changes.
 
-Redis Caching for Repeated Requests
+## Redis Caching for Repeated Requests
 
 For production workloads where many users send identical or near-identical queries (search autocomplete, FAQ classification), response caching can dramatically reduce GPU load. Claude Code can add Redis caching to any LitServe server:
 
@@ -565,7 +565,7 @@ class CachedClassificationLitAPI(LitAPI):
         return result
 ```
 
-Streaming Responses for Language Models
+## Streaming Responses for Language Models
 
 When serving generative models, streaming is essential for good user experience. Claude Code can configure LitServe's streaming generator pattern:
 
@@ -634,7 +634,7 @@ if __name__ == "__main__":
     server.run(port=8000)
 ```
 
-Performance Optimization Summary
+## Performance Optimization Summary
 
 Claude Code can reason through the performance levers available at each layer of the stack. Here is a prioritized checklist Claude will typically recommend:
 
@@ -649,7 +649,7 @@ Claude Code can reason through the performance levers available at each layer of
 | 7 | Increase `workers_per_device` | Linear CPU throughput scaling | Low |
 | 8 | Enable streaming for generative models | Perceived latency improvement | Medium |
 
-Adding Observability
+## Adding Observability
 
 Production servers need monitoring. Claude Code can instrument your LitServe server with Prometheus metrics and structured logging in a single session:
 
@@ -728,7 +728,7 @@ class MonitoredClassificationLitAPI(LitAPI):
             return torch.softmax(outputs.logits, dim=-1).cpu().numpy()
 ```
 
-Best Practices for Claude Code + LitServe Workflows
+## Best Practices for Claude Code + LitServe Workflows
 
 1. Version Control Your Prompts: Store Claude Code interaction history to reproduce and audit development decisions.
 
@@ -740,7 +740,7 @@ Best Practices for Claude Code + LitServe Workflows
 
 5. Monitor GPU Usage: Use Lightning's built-in observability to track inference latency and throughput.
 
-Writing Testable LitAPI Code
+## Writing Testable LitAPI Code
 
 One of the most valuable things Claude Code does is encourage, and generate, unit tests for each method of your LitAPI. Because the four methods are separated by design, you can test each independently:
 
@@ -796,7 +796,7 @@ def test_encode_response_negative(api):
 
 Run tests with pytest, and use Claude Code to expand coverage when you add new features. This discipline catches regressions early, especially useful when Claude Code is iterating rapidly on your inference logic.
 
-CI/CD with GitHub Actions
+## CI/CD with GitHub Actions
 
 Claude Code can generate a complete GitHub Actions workflow for testing and deploying your LitServe server:
 
@@ -839,7 +839,7 @@ jobs:
           LIGHTNING_API_KEY: ${{ secrets.LIGHTNING_API_KEY }}
 ```
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with LitServe and Lightning AI creates a powerful development workflow for AI serving. Claude Code acts as an intelligent development partner, handling boilerplate generation, debugging, optimization suggestions, and deployment configuration. Start with simple servers, then progressively add batching, streaming, and monitoring as your requirements grow.
 

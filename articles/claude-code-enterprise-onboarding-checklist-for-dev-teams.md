@@ -13,17 +13,16 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Enterprise Onboarding Checklist for Dev Teams
 
 Enterprise adoption of AI coding assistants requires more than just installing a tool, it demands thoughtful integration into your existing development workflows, security infrastructure, and team conventions. This checklist guides development teams through a systematic approach to onboarding Claude Code in enterprise environments, ensuring both productivity gains and compliance with organizational standards.
 
-Pre-Installation Assessment
+## Pre-Installation Assessment
 
 Before deploying Claude Code across your organization, conduct a thorough assessment of your current tooling landscape and security requirements.
 
-Infrastructure Readiness
+## Infrastructure Readiness
 
 Verify that your development environment meets the minimum requirements:
 
@@ -39,7 +38,7 @@ curl -I https://api.anthropic.com
 For air-gapped environments, copy skill .md files to ~/.claude/skills/ manually
 ```
 
-Security Review Checklist
+## Security Review Checklist
 
 Your security team should review the following before approval:
 
@@ -48,11 +47,11 @@ Your security team should review the following before approval:
 - [ ] Audit logging requirements for AI assistant interactions
 - [ ] Compliance with industry-specific regulations (GDPR, HIPAA, SOC 2)
 
-Installation and Initial Configuration
+## Installation and Initial Configuration
 
 With assessment complete, proceed to installation and configuration.
 
-Team-Wide Installation
+## Team-Wide Installation
 
 For enterprise deployments, consider a centralized installation approach rather than individual setups:
 
@@ -68,7 +67,7 @@ sudo apt-get install claude-code  # Debian/Ubuntu
 sudo yum install claude-code      # RHEL/CentOS
 ```
 
-Authentication Setup
+## Authentication Setup
 
 Configure enterprise authentication early. Claude Code supports multiple authentication methods suitable for enterprise environments:
 
@@ -88,11 +87,11 @@ export ANTHROPIC_API_KEY="sk-ant-..."
 export ANTHROPIC_API_KEY_FILE="/secrets/claude-api-key"
 ```
 
-Workspace Configuration Standards
+## Workspace Configuration Standards
 
 Establish team-wide workspace conventions to ensure consistency across projects.
 
-Project Initialization
+## Project Initialization
 
 Create a standardized project template that includes Claude Code configuration:
 
@@ -121,7 +120,7 @@ skills:
     - /shared-org-skills
 ```
 
-Skill Installation Standards
+## Skill Installation Standards
 
 Curate a core set of skills appropriate for your tech stack:
 
@@ -140,11 +139,11 @@ Maintain a skills manifest in your organization's shared documentation:
 | @company/api-client | Standardized API patterns | 1.5.0 | API Team |
 | @company/security | Security scanning and validation | 3.0.0 | Security Team |
 
-Team Workflow Integration
+## Team Workflow Integration
 
 Define clear workflows for how Claude Code integrates with your development processes.
 
-Code Review Integration
+## Code Review Integration
 
 Configure Claude Code to work within your existing review process:
 
@@ -171,7 +170,7 @@ rules:
     severity: warn
 ```
 
-Documentation Standards
+## Documentation Standards
 
 Require Claude Code to maintain documentation:
 
@@ -182,11 +181,11 @@ Use the company template at ./docs/templates/api.md.
 Include: parameters, return types, examples, and error cases.
 ```
 
-Security and Compliance Enforcement
+## Security and Compliance Enforcement
 
 Enterprise environments require solid security controls around AI tool usage.
 
-Audit Logging
+## Audit Logging
 
 Enable comprehensive audit logging from day one:
 
@@ -214,7 +213,7 @@ tail -f /var/log/claude/audit.jsonl | \
     --data-binary @-
 ```
 
-Data Privacy Controls
+## Data Privacy Controls
 
 Implement data handling policies:
 
@@ -226,7 +225,7 @@ Configure data handling via environment variables or settings.json
 }
 ```
 
-Rate Limiting and Budgets
+## Rate Limiting and Budgets
 
 Prevent runaway costs with spending controls:
 
@@ -241,11 +240,11 @@ budget:
     ml: 15000
 ```
 
-Onboarding Developer Checklist
+## Onboarding Developer Checklist
 
 Provide new developers with a concrete onboarding path:
 
-Day 1 Setup
+## Day 1 Setup
 
 - [ ] Install Claude Code via approved package manager
 - [ ] Authenticate using company credentials
@@ -253,25 +252,25 @@ Day 1 Setup
 - [ ] Review `.claude/config.yaml` in your project
 - [ ] Complete security awareness training
 
-Week 1 Goals
+## Week 1 Goals
 
 - [ ] Use Claude Code for three code reviews
 - [ ] Write one custom skill for repetitive task
 - [ ] Review audit logs for your interactions
 - [ ] Shadow senior developer using AI-assisted workflows
 
-First Month Milestones
+## First Month Milestones
 
 - [ ] Propose one improvement to team skill library
 - [ ] Integrate Claude Code into CI pipeline
 - [ ] Mentor another developer on effective prompts
 - [ ] Document lessons learned in team wiki
 
-Continuous Improvement
+## Continuous Improvement
 
 Enterprise onboarding is not a one-time event, establish processes for ongoing optimization.
 
-Feedback Loops
+## Feedback Loops
 
 Collect usage data and team feedback monthly:
 
@@ -283,7 +282,7 @@ Team retrospective. run Claude Code and describe what you need:
 In the REPL: "Generate a retrospective template for Q1 and save it to ./retro-q1.md"
 ```
 
-Skill Lifecycle Management
+## Skill Lifecycle Management
 
 Maintain your skill ecosystem:
 

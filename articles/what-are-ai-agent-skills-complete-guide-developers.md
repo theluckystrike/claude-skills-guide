@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "What Are AI Agent Skills: Complete Guide for Developers"
 description: "A comprehensive guide to AI agent skills, focusing on Claude Code capabilities and how developers can use skills for automation, coding, and."
@@ -14,18 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
-What Are AI Agent Skills: Complete Guide for Developers
-
 As AI agents become increasingly sophisticated, understanding their capabilities, and specifically their "skills", is essential for developers looking to use these tools effectively. This guide provides a comprehensive overview of AI agent skills, with a focus on Claude Code and how you can use its skill system to enhance your development workflow.
 
-Understanding AI Agent Skills
+## Understanding AI Agent Skills
 
 AI agent skills are specialized capabilities that extend an AI agent's core functionality. Think of them as plugins or extensions that add domain-specific knowledge, tools, and workflows. While a base AI model can understand language and generate responses, skills enable the agent to perform specialized tasks with greater accuracy and efficiency.
 
 In Claude Code, skills are designed to help developers with specific tasks, from working with particular file formats to executing complex development workflows. Skills can include custom instructions, tool integrations, and knowledge bases that the agent references when handling relevant tasks.
 
-Core Claude Code Skills and Features
+## Core Claude Code Skills and Features
 
 Claude Code offers several built-in skills that enhance its capabilities for developers:
 
@@ -87,9 +83,9 @@ For creative tasks, Claude Code offers:
 - Algorithmic art: Generate algorithmic art using p5.js with seeded randomness
 - Slack GIF creator: Produce optimized animated GIFs for team communication
 
-How to Use Claude Code Skills Effectively
+## How to Use Claude Code Skills Effectively
 
-Progressive Disclosure
+## Progressive Disclosure
 
 Claude Code uses a progressive disclosure system for skills:
 
@@ -99,7 +95,7 @@ Claude Code uses a progressive disclosure system for skills:
 
 To use a skill, simply request it. For example, if you need to work with spreadsheets, you might say: "Create an Excel report with sales data and charts."
 
-Best Practices for Skill Usage
+## Best Practices for Skill Usage
 
 1. Be Specific About Your Goal: Instead of saying "work with data," specify "create a CSV file with monthly sales figures and add a pivot table."
 
@@ -109,9 +105,9 @@ Best Practices for Skill Usage
 
 4. Iterate and Refine: Skills work best when you provide feedback. If the output isn't quite right, explain what needs to change.
 
-Practical Examples
+## Practical Examples
 
-Example 1: Creating a Spreadsheet Report
+## Example 1: Creating a Spreadsheet Report
 
 ```python
 Tell Claude Code: "Create a monthly sales report with
@@ -125,7 +121,7 @@ Claude will use xlsx skills to:
 - Generate charts for visualization
 ```
 
-Example 2: Automated Testing Workflow
+## Example 2: Automated Testing Workflow
 
 ```bash
 Tell Claude Code: "Run our test suite, identify failing
@@ -138,7 +134,7 @@ Claude will:
 - Propose code changes to fix issues
 ```
 
-Example 3: Documentation Generation
+## Example 3: Documentation Generation
 
 ```markdown
 Tell Claude Code: "Read our API code and generate
@@ -151,7 +147,7 @@ Claude will:
 - Create examples based on code usage
 ```
 
-Custom Skills and Extensibility
+## Custom Skills and Extensibility
 
 Beyond built-in skills, you can create custom skills tailored to your organization's needs. The skill-creator skill provides guidance for building skills that extend Claude Code's capabilities with specialized knowledge, workflows, or tool integrations.
 
@@ -162,7 +158,7 @@ Custom skills can:
 - Integrate with internal tools and APIs
 - Automate recurring tasks unique to your workflow
 
-Conclusion
+## Conclusion
 
 AI agent skills represent a powerful way to extend Claude Code's capabilities and streamline your development workflow. By understanding the available skills and how to use them effectively, you can dramatically increase your productivity and handle increasingly complex tasks with confidence.
 

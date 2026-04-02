@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Outlook Calendar Integration: A."
 description: "Learn how to build Chrome extensions that integrate with Outlook Calendar. Practical code examples, API authentication, and implementation patterns for."
@@ -14,14 +13,13 @@ categories: [integrations]
 tags: [claude-code, claude-skills]
 ---
 
-
-Chrome Extension Outlook Calendar Integration: A Developer Guide
+## Chrome Extension Outlook Calendar Integration: A Developer Guide
 
 Building a Chrome extension that connects to Outlook Calendar opens up powerful productivity workflows. Whether you want to automatically log meeting details, sync calendar events across platforms, or create custom reminder systems, the Microsoft Graph API provides the foundation you need.
 
 This guide walks you through the technical implementation of integrating Outlook Calendar into your Chrome extension, with practical code examples you can adapt for your own projects.
 
-Understanding the Microsoft Graph API
+## Understanding the Microsoft Graph API
 
 Outlook Calendar access flows through Microsoft Graph, a unified API endpoint for Microsoft services. The API exposes calendar events, schedules, and availability through RESTful endpoints that support CRUD operations.
 
@@ -29,7 +27,7 @@ Before writing any code, you need to register your application in the Azure port
 
 Chrome extensions communicate with Microsoft Graph using OAuth 2.0 with the authorization code flow. This involves redirecting users to Microsoft's login page, handling the callback with an authorization code, and exchanging that code for access and refresh tokens.
 
-Setting Up Authentication
+## Setting Up Authentication
 
 Your extension needs a background script to handle authentication. Here's a practical implementation pattern:
 
@@ -77,7 +75,7 @@ function exchangeCodeForTokens(code) {
 
 The key insight here is using `chrome.identity.launchWebAuthFlow`, which handles the OAuth popup flow within the extension context. Store the resulting tokens securely using `chrome.storage.local` rather than localStorage for better security.
 
-Reading Calendar Events
+## Reading Calendar Events
 
 Once authenticated, fetching calendar events is straightforward with the Graph API:
 
@@ -112,7 +110,7 @@ async function getUpcomingEvents(accessToken, startDate, endDate) {
 
 This function retrieves events within a date range, selecting only the fields you need to minimize payload size. The API returns events with timezone-aware start and end times, which you'll need to handle carefully when displaying them to users.
 
-Creating Calendar Events
+## Creating Calendar Events
 
 Creating events requires constructing the proper JSON payload:
 
@@ -159,7 +157,7 @@ async function createCalendarEvent(accessToken, eventDetails) {
 
 The API accepts HTML content in the body, which gives you flexibility for formatting meeting agendas or including embedded links. Timezone handling uses the IANA timezone format, which JavaScript's `Intl` API provides natively.
 
-Implementing Token Refresh
+## Implementing Token Refresh
 
 Access tokens expire, typically within an hour. Your extension needs to handle refresh tokens to maintain uninterrupted functionality:
 
@@ -190,7 +188,7 @@ async function refreshAccessToken(refreshToken, clientId) {
 
 Call this function proactively before making API requests, or implement error handling that triggers refresh when you receive a 401 response.
 
-Practical Use Cases
+## Practical Use Cases
 
 With the fundamentals in place, you can build several practical features:
 
@@ -202,13 +200,13 @@ Smart Reminders: Implement custom reminder logic that goes beyond what Outlook o
 
 Availability Checker: Query free/busy information for a group of colleagues and display optimal meeting times directly in your extension's popup.
 
-Security Considerations
+## Security Considerations
 
 When building calendar integrations, security deserves serious attention. Never store tokens in localStorage or plain chrome.storage without considering the implications. Use `chrome.storage.session` for sensitive temporary data, and encrypt tokens at rest if your threat model requires it.
 
 The OAuth flow shown here uses the authorization code flow, which is more secure than the implicit flow. For production deployments, implement token storage on a backend server rather than in the extension itself, using the extension as a thin client that proxies requests through your server.
 
-Testing Your Integration
+## Testing Your Integration
 
 Microsoft provides a Graph Explorer tool that lets you test API calls without writing code. Use this to validate your API requests before implementing them in the extension. The explorer shows exact request/response formats and helps troubleshoot authentication issues.
 
@@ -217,7 +215,6 @@ For extension testing, use Chrome's developer mode to load your unpacked extensi
 Building a Chrome extension with Outlook Calendar integration combines web development skills with Microsoft Graph expertise. The APIs are well-documented and the authentication flow follows standard OAuth patterns, making the implementation straightforward once you understand the specific Microsoft requirements.
 
 ---
-
 
 Related Reading
 

@@ -16,7 +16,7 @@ score: 8
 
 PR bots have become essential tools for maintaining code quality and streamlining code review processes. When you integrate Claude Code into these workflows, you unlock powerful capabilities like automated code analysis, intelligent summarization, and contextual feedback generation. This guide walks you through practical approaches to building effective PR bot integrations that enhance your development pipeline.
 
-Understanding PR Bot Integration Points
+## Understanding PR Bot Integration Points
 
 Before diving into implementation, identify where Claude Code adds the most value in your PR workflow. Most teams find success placing AI assistance at three key stages: pre-commit validation, PR description generation, and review automation.
 
@@ -24,7 +24,7 @@ Pre-commit validation catches issues before they reach reviewers. PR description
 
 Claude Code excels at understanding context, generating human-readable summaries, and applying consistent standards across all PRs. Unlike traditional linting tools that only check syntax, Claude Code comprehends intent and can suggest improvements based on your project's specific patterns.
 
-Setting Up Claude Code for PR Automation
+## Setting Up Claude Code for PR Automation
 
 The first step is configuring Claude Code to run in your CI/CD environment. You'll need to set up authentication and define the scope of analysis. Here's a practical starting point:
 
@@ -61,7 +61,7 @@ jobs:
 
 This basic setup runs Claude Code on every PR and outputs analysis results as comments. The configuration file controls what checks Claude Code performs and how it reports findings.
 
-Configuring Analysis Rules
+## Configuring Analysis Rules
 
 Generic analysis produces noise. Define rules specific to your codebase and team's priorities. Create a `.claude/pr-rules.yaml` file that specifies your requirements:
 
@@ -92,7 +92,7 @@ comments:
 
 This configuration tells Claude Code to prioritize security issues, flag complex functions, and format output as GitHub PR review comments. Adjust these values based on your team's standards and tolerance for warnings versus errors.
 
-Building a PR Summary Generator
+## Building a PR Summary Generator
 
 Beyond analysis, Claude Code excels at generating useful PR descriptions. Create a custom skill that extracts key information and produces human-readable summaries. Here's a practical implementation:
 
@@ -126,11 +126,11 @@ module.exports = {
 
 This skill extracts the essential information and uses Claude Code's language capabilities to produce a well-structured summary. Developers can then edit and refine the generated description rather than writing from scratch.
 
-Integrating with Popular PR Bots
+## Integrating with Popular PR Bots
 
 Most teams use existing PR bot infrastructure rather than building from scratch. Claude Code integrates well with common tools like Danger, Renovate, and custom GitHub Apps.
 
-GitHub App Integration
+## GitHub App Integration
 
 For GitHub Apps, create a webhook handler that forwards PR events to Claude Code:
 
@@ -168,7 +168,7 @@ app.webserver.post('/github-webhook', async (req, res) => {
 
 This handler receives GitHub webhook events, runs Claude Code analysis, and posts results back to the PR. The integration is straightforward but powerful, you control exactly what analysis runs and how results display.
 
-Danger.js Integration
+## Danger.js Integration
 
 If you use Danger.js, add Claude Code as a rule:
 
@@ -193,7 +193,7 @@ if (analysis.complexityWarnings.length > 0) {
 
 Danger.js provides a clean DSL for posting results, and Claude Code fits naturally into this pattern. The analysis results map directly to Danger's warning and message functions.
 
-Best Practices for PR Bot Workflows
+## Best Practices for PR Bot Workflows
 
 Successful PR bot integration requires balancing automation with developer experience. Follow these principles for effective implementations.
 
@@ -205,7 +205,7 @@ Provide actionable guidance. Instead of generic comments like "this could be imp
 
 Monitor and iterate. Track metrics like comment volume, review time, and developer satisfaction. If Claude Code comments go ignored, they're not providing value. Continuously refine your rules based on actual usage patterns.
 
-Advanced: Context-Aware Analysis
+## Advanced: Context-Aware Analysis
 
 As your integration matures, add context awareness. Store project-specific knowledge and use it to improve analysis quality. For example, track common patterns in your codebase and have Claude Code reference them when suggesting changes:
 
@@ -228,12 +228,11 @@ analysis:
 
 This context helps Claude Code provide suggestions that align with your project's established patterns rather than generic recommendations.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your PR bot workflows transforms automated code review from a compliance exercise into genuine quality assistance. Start with basic analysis, expand to summary generation, and gradually add context-aware features as your team builds confidence. The key is maintaining the right balance between automation and developer control, Claude Code should augment human review, not replace the judgment that makes code reviews valuable.
 
 Remember to iterate on your configuration based on real feedback. The most successful implementations evolve with team needs, continuously improving to catch issues that matter while avoiding noise that frustrates developers.
-
 
 Related Reading
 

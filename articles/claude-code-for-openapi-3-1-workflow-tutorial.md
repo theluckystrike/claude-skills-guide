@@ -17,13 +17,13 @@ score: 7
 
 OpenAPI 3.1 represents a significant evolution in API specification, introducing a more powerful schema system based on JSON Schema 2020-12. For developers working with modern APIs, combining Claude Code with OpenAPI 3.1 creates a powerful workflow that accelerates API design, generates client SDKs, and ensures documentation stays in sync with implementation. This tutorial walks you through practical strategies to integrate Claude Code into your OpenAPI 3.1 development process.
 
-Understanding OpenAPI 3.1 and Claude Code
+## Understanding OpenAPI 3.1 and Claude Code
 
 OpenAPI 3.1 removes the `allOf`, `oneOf`, and `anyOf` limitations from earlier versions, enabling full JSON Schema compatibility. This means you can use keywords like `if`, `then`, `else`, and the `dependentSchemas` feature directly in your API specifications. Claude Code, with its advanced code understanding capabilities, can help you navigate these new features while maintaining clean, production-ready specifications.
 
 The key advantage of using Claude Code with OpenAPI 3.1 is its ability to understand both the specification semantics and your specific implementation context. It can suggest improvements, catch validation issues, and generate boilerplate code based on your specifications.
 
-Setting Up Your OpenAPI 3.1 Project
+## Setting Up Your OpenAPI 3.1 Project
 
 Before diving into workflows, ensure your project is properly configured. Create a dedicated directory for your API specification and initialize the basic structure:
 
@@ -54,7 +54,7 @@ paths:
 
 This foundation allows Claude Code to understand your API structure and provide relevant suggestions as you expand the specification.
 
-Leveraging Claude Code for Specification Writing
+## Leveraging Claude Code for Specification Writing
 
 One of the most valuable workflows is using Claude Code as a collaborative specification writer. Instead of manually writing every detail, you can describe your API requirements conversationally and let Claude Code generate the corresponding OpenAPI 3.1 YAML.
 
@@ -107,7 +107,7 @@ components:
 
 This conditional schema pattern is a powerful OpenAPI 3.1 feature that Claude Code can help you implement correctly.
 
-Generating Client Code and SDKs
+## Generating Client Code and SDKs
 
 After defining your specification, Claude Code can generate client libraries in various languages. Use the specification context to prompt targeted code generation:
 
@@ -135,7 +135,7 @@ class ApiClient {
 
 This approach ensures your client code stays synchronized with your specification without manual coordination.
 
-Maintaining Documentation with Claude Code
+## Maintaining Documentation with Claude Code
 
 OpenAPI 3.1 specifications are self-documenting, but you can enhance clarity with descriptive annotations. Claude Code helps you add meaningful descriptions, examples, and Markdown summaries throughout your specification.
 
@@ -148,7 +148,7 @@ When reviewing your specification, ask Claude Code to:
 
 This documentation-first approach improves API discoverability and reduces support requests from API consumers.
 
-Implementing Validation and Testing Workflows
+## Implementing Validation and Testing Workflows
 
 Claude Code can help implement validation logic that mirrors your OpenAPI 3.1 schemas. For example, request schema validation code:
 
@@ -180,7 +180,7 @@ function validateUserRegistration(data) {
 }
 ```
 
-Best Practices for Claude Code and OpenAPI 3.1
+## Best Practices for Claude Code and OpenAPI 3.1
 
 Following these practices maximizes your workflow efficiency:
 
@@ -194,7 +194,7 @@ Use descriptive naming - Operation IDs like `listActiveUsersByRegion` provide mo
 
 Document breaking changes - OpenAPI 3.1 supports `deprecated` flags and `breaking` annotations. Use these to communicate changes clearly to API consumers.
 
-Automating Repetitive Tasks
+## Automating Repetitive Tasks
 
 Beyond specification writing, Claude Code can automate recurring API development tasks:
 
@@ -205,7 +205,7 @@ Beyond specification writing, Claude Code can automate recurring API development
 
 These automations reduce boilerplate work, letting your team focus on business logic and API design decisions.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your OpenAPI 3.1 workflow transforms API development from a documentation exercise into a collaborative design process. By using Claude Code's understanding of both specification semantics and implementation patterns, you can create better APIs faster, maintain accurate documentation, and ensure your specification serves as a reliable source of truth throughout your project's lifecycle.
 

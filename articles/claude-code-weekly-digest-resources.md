@@ -16,7 +16,7 @@ permalink: /claude-code-weekly-digest-resources/
 
 Claude Code has transformed how developers approach daily coding tasks. The ecosystem around AI-assisted development continues to mature, with community-contributed skills, curated resource collections, and weekly digests becoming essential reading for developers who want to stay current. This guide collects the most practical weekly digest resources and shows you how to integrate them into your development workflow.
 
-Understanding Claude Code Skills Architecture
+## Understanding Claude Code Skills Architecture
 
 Before diving into resources, it's worth understanding how Claude Code organizes its extensibility. Skills are Markdown files stored in `~/.claude/skills/` that define specialized behavior for specific domains. When you invoke a skill using the `/skill-name` syntax, Claude loads those instructions and operates with domain-specific knowledge.
 
@@ -28,7 +28,7 @@ The skill invocation pattern remains consistent across all skills:
 
 This uniform interface means you can chain skills together in a single session. Need to extract data from a PDF, generate tests, then document the results? Chain the pdf, tdd, and docx skills in sequence.
 
-Essential Weekly Digest Resources
+## Essential Weekly Digest Resources
 
 Several community-maintained collections track the best new skills, prompts, and workflows. These digests typically surface new skills, highlight underutilized features, and provide real-world usage examples that documentation alone cannot offer.
 
@@ -36,7 +36,7 @@ The [supermemory skill deserves special attention](/claude-supermemory-skill-per
 
 For frontend developers, the frontend-design skill provides a bridge between design systems and code. Weekly digests covering this skill often include new component patterns, accessibility improvements, and responsive layout techniques that work across frameworks.
 
-GitHub Repository Watchlist
+## GitHub Repository Watchlist
 
 Several GitHub repositories maintain active collections of Claude Code skills and workflows:
 
@@ -46,11 +46,11 @@ Several GitHub repositories maintain active collections of Claude Code skills an
 
 Monitor these repositories weekly for new skill releases. The pattern is straightforward: skills ship as Markdown files you copy to `~/.claude/skills/`. No package manager, no version conflicts.
 
-Practical Skill Combinations for Weekly Workflows
+## Practical Skill Combinations for Weekly Workflows
 
 The real power of Claude Code emerges when you combine skills for complex workflows. Here are combinations that match common developer weekly routines:
 
-Monday Code Review Sessions
+## Monday Code Review Sessions
 
 Start your week with the tdd and docx skills working together:
 
@@ -61,7 +61,7 @@ Start your week with the tdd and docx skills working together:
 
 The tdd skill analyzes your code and suggests edge cases you might have missed. The docx skill then formats those findings into a shareable document for team communication.
 
-Documentation Updates with PDF Integration
+## Documentation Updates with PDF Integration
 
 Many teams maintain technical specifications in PDF format. The pdf skill extracts this content for processing:
 
@@ -72,7 +72,7 @@ Many teams maintain technical specifications in PDF format. The pdf skill extrac
 
 This workflow saves hours of manual specification parsing and ensures your tests match the current documentation.
 
-Spreadsheet Analysis for Sprint Planning
+## Spreadsheet Analysis for Sprint Planning
 
 For developers managing project data, the xlsx skill handles spreadsheet operations directly:
 
@@ -83,7 +83,7 @@ For developers managing project data, the xlsx skill handles spreadsheet operati
 
 Combine this with the supermemory skill to remember which metrics matter most for your team.
 
-Canvas Creation for Visual Documentation
+## Canvas Creation for Visual Documentation
 
 The canvas-design skill generates visual artifacts:
 
@@ -94,7 +94,7 @@ The canvas-design skill generates visual artifacts:
 
 These visuals integrate directly into documentation or presentation materials.
 
-Building Your Personal Resource Collection
+## Building Your Personal Resource Collection
 
 Rather than relying solely on weekly digests, consider building a personal collection using the supermemory skill. The [best Claude Code skills to install first in 2026](/best-claude-code-skills-to-install-first-2026/) covers the highest-value starting skills. The supermemory workflow involves:
 
@@ -104,7 +104,7 @@ Rather than relying solely on weekly digests, consider building a personal colle
 
 This creates a compound knowledge base that improves over time. Unlike static documentation, your personal collection adapts to your specific needs.
 
-Staying Current with Skill Updates
+## Staying Current with Skill Updates
 
 Claude Code skills receive updates through community contribution. Check the official repository weekly for:
 
@@ -115,7 +115,7 @@ Claude Code skills receive updates through community contribution. Check the off
 
 The canvas-design skill, for example, continues to expand its visual output capabilities. Following the digest ensures you catch improvements like these rather than continuing to use outdated patterns.
 
-Community Resources Worth Bookmarking
+## Community Resources Worth Bookmarking
 
 Several resources provide regular Claude Code coverage:
 
@@ -125,7 +125,7 @@ Several resources provide regular Claude Code coverage:
 
 For developers focused on specific domains, the pptx skill helps create presentations for team updates, while the mcp-builder skill assists when you need to extend Claude with custom tools.
 
-Optimization Tips for Power Users
+## Optimization Tips for Power Users
 
 Once you've established a baseline workflow, optimize for speed:
 
@@ -135,7 +135,7 @@ Once you've established a baseline workflow, optimize for speed:
 
 The docx skill proves valuable for team communication, generating status updates and project reports that incorporate data from other skills.
 
-Moving Forward
+## Moving Forward
 
 Claude Code's weekly digest resources provide a steady stream of new techniques and skills. The key is establishing a personal system to capture what matters for your specific domain. Whether you prioritize the pdf skill for document processing, the tdd skill for test generation, or the supermemory skill for knowledge management, consistency matters more than comprehensiveness.
 

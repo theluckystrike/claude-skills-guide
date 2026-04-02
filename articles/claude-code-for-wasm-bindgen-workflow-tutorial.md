@@ -13,10 +13,7 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code for wasm-bindgen Workflow Tutorial
 
 WebAssembly (WASM) has become essential for bringing high-performance compute to web applications. When combined with Rust's memory safety and performance, wasm-bindgen provides a powerful toolkit for building fast, interoperable modules. This guide shows you how to use Claude Code to automate and accelerate your wasm-bindgen development workflow.
 
@@ -32,7 +29,7 @@ The wasm-bindgen ecosystem involves multiple moving parts: Rust code, Cargo conf
 
 The key is providing Claude Code with clear context about your project structure and build requirements.
 
-Setting Up Your Project Structure
+## Setting Up Your Project Structure
 
 Before diving into code, establish a clean project structure that separates Rust and JavaScript concerns. Here's a recommended layout:
 
@@ -55,7 +52,7 @@ Ask Claude Code to scaffold this structure:
 
 Claude Code will generate appropriate configuration files and show you how to install dependencies.
 
-Writing Rust Functions for WASM
+## Writing Rust Functions for WASM
 
 When writing Rust functions intended for WASM, there are specific patterns that work best. Here's an example Rust library with functions callable from JavaScript:
 
@@ -95,7 +92,7 @@ pub fn process_array(arr: &[i32]) -> Vec<i32> {
 
 The `#[wasm_bindgen]` attribute is the key, it generates the JavaScript glue code. Ask Claude Code to explain specific attributes or help you convert existing Rust code to WASM-compatible versions.
 
-Building and Publishing Your WASM Module
+## Building and Publishing Your WASM Module
 
 The build process typically uses `wasm-pack`. Add this to your package.json scripts:
 
@@ -117,7 +114,7 @@ When building fails, and it will, Claude Code can parse the compilation errors a
 
 Run the build and paste errors to Claude Code for guided debugging.
 
-Consuming WASM in JavaScript/TypeScript
+## Consuming WASM in JavaScript/TypeScript
 
 Once built, your WASM module is available in the `pkg/` directory. Here's how to use it in TypeScript:
 
@@ -146,7 +143,7 @@ run();
 
 Claude Code can help you write TypeScript type definitions and handle async initialization properly.
 
-Optimizing WASM for Production
+## Optimizing WASM for Production
 
 Production WASM requires attention to file size and load time. Claude Code can help you:
 
@@ -174,7 +171,7 @@ async function loadComputationHeavyModule() {
 }
 ```
 
-Testing Your WASM Module
+## Testing Your WASM Module
 
 Testing is critical because WASM bugs can be harder to diagnose. Create tests in Rust:
 
@@ -207,7 +204,7 @@ describe('WASM functions', () => {
 });
 ```
 
-Common Pitfalls and How to Avoid Them
+## Common Pitfalls and How to Avoid Them
 
 Working with wasm-bindgen has a learning curve. Here are frequent issues:
 
@@ -253,7 +250,7 @@ pub fn process_object(obj: &JsValue) -> Result<JsValue, JsValue> {
 }
 ```
 
-Integrating with Frameworks
+## Integrating with Frameworks
 
 Modern web frameworks have specific integration patterns. For React:
 
@@ -276,7 +273,7 @@ export function useWasmCompute(input: number) {
 
 For Vue, Svelte, or other frameworks, Claude Code can generate appropriate component wrappers.
 
-Conclusion
+## Conclusion
 
 Claude Code dramatically accelerates wasm-bindgen development by handling the boilerplate, debugging cryptic errors, and generating integration code. The workflow becomes:
 

@@ -13,7 +13,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 The March 2026 update to Claude Code brings significant improvements that extend beyond basic code assistance. This release focuses on deeper integration with specialized workflows, enhanced skill orchestration, and smarter context management. frontend-design
 
 A standout addition is the frontend-design skill, which generates production-ready UI components with responsive layouts. Unlike simple code generators, this skill understands design principles and accessibility standards out of the box.
@@ -90,7 +89,7 @@ export function DataTable({ columns, rows, onSort, caption }) {
 
 That level of accessibility scaffolding used to require explicit prompting to get right. The skill now produces it by default.
 
-Skill Chaining Improvements
+## Skill Chaining Improvements
 
 Skills can now reference each other's outputs smoothly. For example, the pdf skill can accept formatted content from the docx skill, creating powerful document generation pipelines:
 
@@ -108,7 +107,7 @@ workflow:
 
 The same chaining works across more combinations now. The tdd skill can feed generated test files directly into a CI configuration generator. The supermemory skill can annotate outputs from any upstream skill with project-specific context before they land in files. These compositions were theoretically possible before but required manual wiring. The March 2026 update makes them first-class.
 
-Context Persistence Enhancements
+## Context Persistence Enhancements
 
 Memory management receives substantial upgrades. The supermemory skill now maintains cross-session context more reliably, with improved deduplication and retrieval algorithms. Projects with extensive codebases benefit from smarter context window usage.
 
@@ -120,7 +119,7 @@ Key improvements include:
 
 In practice, this means you spend less time re-explaining your codebase architecture at the start of each session. The supermemory skill is the mechanism that persists this state. it is worth explicitly invoking it to store architectural decisions, naming conventions, and dependency relationships for any project you work on regularly.
 
-Testing and Quality Assurance
+## Testing and Quality Assurance
 
 The tdd (test-driven development) skill gains enhanced capabilities for generating meaningful test cases. It now analyzes code patterns to suggest edge cases that developers often overlook:
 
@@ -176,7 +175,7 @@ func TestCalculateDiscount(t *testing.T) {
 
 The overflow case and negative price case are examples the skill adds without prompting, based on the function signature.
 
-File Operations and Workspace Management
+## File Operations and Workspace Management
 
 File handling becomes more sophisticated with better conflict resolution and parallel operation support. The March 2026 update introduces:
 
@@ -192,7 +191,7 @@ Generates 5 API endpoint files with consistent structure
 
 The template expansion feature is particularly useful for projects with strict conventions. Define a template once. handler file, service interface, repository interface, test file. and expand it for every new resource without manually enforcing consistency.
 
-Performance Optimizations
+## Performance Optimizations
 
 Response times improve noticeably across all interaction modes. Local processing achieves near-instant results for common patterns, while cloud-enhanced operations benefit from improved caching strategies.
 
@@ -206,7 +205,7 @@ Benchmarks from the release notes show:
 
 The context retrieval improvement is the most impactful for day-to-day use. Large monorepos and projects with deep import graphs previously caused noticeable pauses when Claude was figuring out what to load. That pause is substantially reduced in this update.
 
-Developer Experience Improvements
+## Developer Experience Improvements
 
 Debugging assistance becomes more contextual. When Claude Code identifies issues, it now provides:
 
@@ -218,7 +217,7 @@ Here is a concrete example of the difference. Previously, if you reported a nil 
 
 The algorithmic-art skill receives performance optimizations for complex generative art projects, enabling real-time parameter adjustment without full regeneration. For developers using Claude in creative tooling, this makes interactive parameter exploration practical where it previously required waiting for a full render cycle.
 
-Migration Considerations
+## Migration Considerations
 
 Users upgrading from earlier versions should note these breaking changes:
 
@@ -234,13 +233,13 @@ claude migrate --from 2025.x --dry-run
 
 Review the output before running without `--dry-run`. The script correctly handles flag renaming and config schema updates but cannot migrate custom skill implementations that used internal APIs. those require manual review.
 
-What Has Not Changed
+## What Has Not Changed
 
 It is worth noting what is stable. The core invocation model is the same. The way you invoke skills from the CLI, the way you reference files in prompts, and the way output is written to disk are all unchanged. If you have shell scripts or CI pipelines that invoke Claude Code, they will continue to work without modification unless they use one of the renamed flags mentioned above.
 
 The CLAUDE.md project instruction file format is also unchanged. Existing CLAUDE.md files continue to work exactly as before.
 
-Looking Forward
+## Looking Forward
 
 The March 2026 release establishes a foundation for upcoming capabilities in natural language understanding and specialized domain expertise. The skill ecosystem now supports more granular permission controls, preparing for enterprise deployment scenarios where different team members need different levels of access to file operations, external integrations, and model capabilities.
 
@@ -249,7 +248,6 @@ For developers building custom integrations, the updated API provides hooks for 
 The focus on skill interoperability signals a shift toward treating Claude Code as an extensible development environment rather than a simple assistant. This approach empowers teams to build personalized workflows that match their specific project requirements. Rather than adapting your workflow to what Claude Code supports, you can now build Claude Code into the workflow you already have.
 
 ---
-
 
 Related Reading
 

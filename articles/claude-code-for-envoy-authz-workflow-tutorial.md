@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Envoy Authorization Workflow Tutorial
 
@@ -21,7 +20,7 @@ Authorization is one of the most critical aspects of any API gateway or service 
 
 This tutorial walks you through building production-ready authorization workflows with Envoy and Claude Code, covering everything from initial JWT setup through advanced policy enforcement patterns.
 
-Understanding Envoy's Authorization Architecture
+## Understanding Envoy's Authorization Architecture
 
 Envoy supports multiple authorization mechanisms: RBAC (Role-Based Access Control), JWT validation, and External Authorization. The most flexible approach combines these, using JWT for authentication, ext_authz for policy enforcement, and RBAC for fine-grained permissions.
 
@@ -44,7 +43,7 @@ Here is how these three mechanisms compare at a glance:
 
 Claude Code can help you decide which combination to use based on your requirements. A common prompt pattern is: "I need to enforce these rules in Envoy: [list your rules]. Which authorization mechanism is best for each?" Claude will map each rule to the appropriate filter and explain the trade-offs.
 
-Implementing JWT Authentication
+## Implementing JWT Authentication
 
 JWT validation is often the first step in authorization. Envoy's JWT Authentication filter can validate tokens from major providers like Auth0, Okta, or your own identity service. Claude Code can generate the correct configuration for your specific provider.
 
@@ -84,7 +83,7 @@ The `forward` and `payload_in_metadata` fields work together to pass token infor
 
 When you ask Claude Code to generate JWT configuration, include specifics about your provider: "Generate Envoy JWT auth config for Okta with audience validation and JWKS caching at 5-minute intervals." This level of detail produces immediately usable output.
 
-Building External Authorization Workflows
+## Building External Authorization Workflows
 
 For complex authorization logic that exceeds JWT claims or RBAC capabilities, Envoy's External Authorization (ext_authz) filter calls out to your authorization service. This pattern is incredibly powerful because it allows you to implement arbitrary policy decisions in code rather than YAML configuration.
 
@@ -111,7 +110,7 @@ The `metadata_context_namespaces` field is what makes the JWT and ext_authz filt
 
 The `failure_mode_allow` setting is critical, it determines whether request traffic is permitted when the authorization service is unavailable. For production systems, keep this `false` and instead focus on making your authorization service highly available through replicas and circuit breaking.
 
-Integrating with Your Auth Service
+## Integrating with Your Auth Service
 
 When implementing ext_authz, you need to understand the gRPC service definition. Claude Code can generate both the Envoy configuration and a starting point for your authorization service. The core interface is the `envoy.service.auth.v3.Authorization` service:
 
@@ -157,7 +156,7 @@ func (s *authServer) Check(ctx context.Context, req *authv3.CheckRequest) (*auth
 
 Claude Code can generate variations of this pattern for Python, Java, or Node.js. Ask: "Generate an ext_authz gRPC server in Python that validates users against a Postgres roles table" and Claude will produce a complete implementation with database queries and appropriate error handling.
 
-Adding Headers to Authorized Requests
+## Adding Headers to Authorized Requests
 
 A powerful feature of ext_authz is the ability to inject headers into authorized requests before they reach your upstream service:
 
@@ -177,7 +176,7 @@ return &authv3.CheckResponse{
 
 This pattern lets your upstream services trust headers injected by the authorization service rather than re-validating tokens themselves, a key benefit of centralizing auth in Envoy.
 
-Implementing Role-Based Access Control
+## Implementing Role-Based Access Control
 
 Envoy's built-in RBAC filter provides another authorization layer. It's particularly useful for simple policies based on principals, namespaces, or routes. Here's an RBAC configuration that combines multiple principals and permission types:
 
@@ -231,7 +230,7 @@ Envoy's built-in RBAC filter provides another authorization layer. It's particul
 
 This configuration demonstrates three distinct patterns: matching a JWT claim to check for the "admin" role, restricting API reads to users with a specific email domain, and allowing service-to-service calls based on SPIFFE identity. Claude Code can expand this into more complex scenarios involving multiple roles, time-based restrictions, or header-based conditions.
 
-Shadow Mode for Safe Policy Testing
+## Shadow Mode for Safe Policy Testing
 
 Before enforcing RBAC in production, run it in shadow (log-only) mode to validate your policies without blocking traffic:
 
@@ -253,7 +252,7 @@ Before enforcing RBAC in production, run it in shadow (log-only) mode to validat
 
 In shadow mode, Envoy logs what the policy would have done without actually blocking anything. This gives you confidence that your policy is correct before switching from `shadow_rules` to `rules`.
 
-Debugging Authorization Issues
+## Debugging Authorization Issues
 
 Authorization failures can be difficult to diagnose because the symptoms often appear as 403 Forbidden with little context. Claude Code helps you debug these issues by analyzing your configuration and suggesting diagnostic steps.
 
@@ -291,7 +290,7 @@ When debugging, enable access logging with authorization metadata and add detail
 
 This access log format captures the effective RBAC policy and JWT subject alongside each request, giving you a complete picture of what authorization decisions were made.
 
-Useful Admin API Endpoints
+## Useful Admin API Endpoints
 
 Envoy's admin interface exposes endpoints that help diagnose authorization issues:
 
@@ -311,7 +310,7 @@ curl http://localhost:9901/stats | grep ext_authz
 
 Claude Code can parse the output of these commands and identify anomalies. Paste the stats output and ask: "These are my Envoy RBAC stats. Why are denied requests spiking at 14:00?" Claude will analyze the pattern and suggest root causes.
 
-Production Best Practices
+## Production Best Practices
 
 When deploying Envoy authorization in production, several practices ensure reliability and security:
 
@@ -389,7 +388,7 @@ transport_socket:
 
 Policy Testing: Use Claude Code to generate test cases for your authorization policies before deployment. Describe your policy rules and ask Claude to generate a test matrix covering allow cases, deny cases, and edge cases. This catches policy gaps that manual review often misses.
 
-Migrating from Legacy Auth to Envoy Auth
+## Migrating from Legacy Auth to Envoy Auth
 
 If you are migrating from application-level auth to centralized Envoy auth, use a phased approach to avoid breaking existing clients:
 
@@ -399,7 +398,7 @@ If you are migrating from application-level auth to centralized Envoy auth, use 
 
 Claude Code can help you draft migration plans and generate the incremental configuration changes for each phase. Ask: "I have application-level auth in a Node.js Express app. Help me migrate to Envoy ext_authz in three phases without downtime."
 
-Conclusion
+## Conclusion
 
 Building authorization workflows with Envoy requires careful attention to configuration details and integration patterns. Claude Code accelerates this process by generating correct configurations, explaining complex interactions, and helping you debug issues when they arise. Start with simple JWT validation, add external authorization for complex policies, and layer RBAC for fine-grained control.
 

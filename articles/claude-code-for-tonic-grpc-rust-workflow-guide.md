@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Tonic gRPC Rust Workflow Guide
 
@@ -39,7 +38,7 @@ Before diving into code, it helps to understand how Tonic compares to other appr
 
 For internal service-to-service communication in a polyglot environment, Tonic's automatic client generation alone justifies the setup overhead.
 
-Setting Up Your Tonic Project
+## Setting Up Your Tonic Project
 
 Initialize a new Tonic project with the necessary dependencies:
 
@@ -108,7 +107,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 Claude Code is particularly useful here, ask it to explain what the generated code contains, or have it add custom attributes to generated structs (like `#[derive(serde::Serialize)]`) using `tonic_build::configure().type_attribute(...)`.
 
-Defining Your gRPC Service
+## Defining Your gRPC Service
 
 Create a proto file defining your service interface. This is where Claude Code can assist significantly, ask it to review your schema for consistency or suggest field numbering strategies:
 
@@ -203,7 +202,7 @@ message DeleteUserResponse { bool success = 1; }
 
 Wrapping each response (rather than returning the resource directly) gives you room to add metadata fields like `request_id` or `warnings` later without breaking the contract.
 
-Implementing the Tonic Service
+## Implementing the Tonic Service
 
 Claude Code can help generate the service implementation. Here's a complete, working pattern using an in-memory store:
 
@@ -320,7 +319,7 @@ impl UserService for UserServiceImpl {
 
 Notice the streaming implementation uses `tokio::sync::mpsc::channel` and `ReceiverStream`. The `type ListUsersStream` associated type declaration is required by the generated trait.
 
-Creating the Server
+## Creating the Server
 
 Configure your gRPC server with appropriate settings:
 
@@ -350,7 +349,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
-Adding Interceptors
+## Adding Interceptors
 
 Interceptors let you apply cross-cutting concerns like authentication and logging without polluting your service logic:
 
@@ -382,7 +381,7 @@ Server::builder()
 
 Claude Code is useful here for generating interceptors that match your auth provider's token format, whether that's JWT, API keys, or mutual TLS certificate inspection.
 
-Generating Clients
+## Generating Clients
 
 For client-side code, generate Rust clients from your proto definitions:
 
@@ -429,7 +428,7 @@ async fn demo_client() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
-Client Connection Pooling and Retry
+## Client Connection Pooling and Retry
 
 For production clients, add retry logic and timeouts:
 
@@ -451,7 +450,7 @@ async fn build_production_client() -> Result<UserServiceClient<Channel>, Box<dyn
 
 Claude Code can help generate connection management wrappers that pool channels across multiple backend instances and implement health-based routing.
 
-Implementing Health Checks
+## Implementing Health Checks
 
 Add health check endpoints using gRPC's Health service. This enables Kubernetes liveness probes and load balancer health checks:
 
@@ -495,7 +494,7 @@ async fn run_server_with_health() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
-Configuring TLS in Production
+## Configuring TLS in Production
 
 Always use TLS for production gRPC connections. Tonic supports both server TLS and mutual TLS (mTLS):
 
@@ -524,7 +523,7 @@ async fn run_tls_server() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
-Workflow Best Practices
+## Workflow Best Practices
 
 When using Claude Code for Tonic development, follow these practices:
 
@@ -562,7 +561,7 @@ Server::builder()
 
 Version Your Proto Packages: Use package names like `example.v1` from the start. When breaking changes are unavoidable, create `example.v2` alongside v1, allowing gradual client migration.
 
-Debugging Common Issues
+## Debugging Common Issues
 
 Claude Code helps troubleshoot common Tonic problems. Here are the most frequent problems and their solutions:
 
@@ -577,7 +576,7 @@ Claude Code helps troubleshoot common Tonic problems. Here are the most frequent
 
 When pasting error output into Claude Code, include the full `cargo build` output and the relevant `.proto` file. The generated code lives in your `target/` directory under `OUT_DIR`, Claude Code can read those files directly to explain what the compiler is working with.
 
-Testing Tonic Services
+## Testing Tonic Services
 
 Write integration tests using Tonic's in-process transport to avoid network overhead:
 
@@ -629,7 +628,7 @@ mod tests {
 
 Ask Claude Code to generate test cases for edge cases like duplicate emails, missing required fields, and concurrent writes. It can also generate property-based tests using the `proptest` crate.
 
-Conclusion
+## Conclusion
 
 Claude Code significantly accelerates Tonic gRPC development by understanding your project context and generating appropriate boilerplate. The workflow involves defining proto files, generating code, implementing services, and creating clients, each step where Claude Code provides valuable assistance. Start with well-designed proto definitions, implement services incrementally, and use Claude Code for debugging and optimization.
 

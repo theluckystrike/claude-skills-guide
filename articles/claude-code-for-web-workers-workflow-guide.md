@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Web Workers Workflow Guide
 
@@ -25,7 +24,7 @@ Common use cases for web workers include:
 - Mathematical computations: Running simulations, cryptographic operations, or machine learning inference
 - Background synchronization: Syncing data with servers without impacting UI responsiveness
 
-Understanding Web Workers in the Claude Code Context
+## Understanding Web Workers in the Claude Code Context
 
 Claude Code operates as a CLI tool that can read, write, and execute code based on your instructions. When applied to web workers development, it becomes an intelligent pair programmer that understands the intricacies of multi-threaded JavaScript, message channels, and browser APIs.
 
@@ -35,11 +34,11 @@ The key advantage is Claude Code's ability to:
 - Refactor monolithic scripts into worker-compatible modules
 - Suggest optimization strategies for worker performance
 
-Setting Up Your Web Worker Project
+## Setting Up Your Web Worker Project
 
 Before diving into workflows, ensure your project structure supports web workers properly. Claude Code can help scaffold this:
 
-Recommended Project Structure
+## Recommended Project Structure
 
 ```
 src/
@@ -51,7 +50,7 @@ src/
  index.html
 ```
 
-Creating a Basic Web Worker
+## Creating a Basic Web Worker
 
 Ask Claude Code to generate a worker with proper error handling and message protocols:
 
@@ -92,9 +91,9 @@ function processData(data) {
 
 Claude Code can generate this boilerplate and explain each component, helping you understand the message protocol design.
 
-The Web Worker Development Workflow
+## The Web Worker Development Workflow
 
-Phase 1: Worker Creation and Initial Code
+## Phase 1: Worker Creation and Initial Code
 
 When you need a new web worker, describe your use case to Claude Code:
 
@@ -108,7 +107,7 @@ Claude Code will generate a worker with:
 - Progress reporting for long operations
 - Cleanup handlers
 
-Phase 1b: Async Communication Pattern
+## Phase 1b: Async Communication Pattern
 
 For cleaner main-thread code, use a `WorkerManager` class that wraps workers with async/await support:
 
@@ -157,7 +156,7 @@ class WorkerManager {
 
 This pattern enables clean async/await communication with workers.
 
-Phase 2: Testing and Debugging
+## Phase 2: Testing and Debugging
 
 Web worker debugging is notoriously difficult. Claude Code helps in several ways:
 
@@ -190,18 +189,18 @@ ImageData object could not be cloned"?
 
 Claude Code explains that `ImageData` objects cannot be directly passed between threads and suggests using `Transferable` objects or converting to `ArrayBuffer`.
 
-Phase 3: Optimizing Worker Communication
+## Phase 3: Optimizing Worker Communication
 
 The biggest performance bottleneck in web workers is data serialization. Claude Code can analyze your message patterns and suggest improvements:
 
-Problem: Passing Large Arrays
+## Problem: Passing Large Arrays
 
 ```javascript
 // Slow: Structured cloning
 self.postMessage({ data: largeArray });
 ```
 
-Solution: Transferable Objects
+## Solution: Transferable Objects
 
 ```javascript
 // Fast: Zero-copy transfer
@@ -211,9 +210,9 @@ self.postMessage({ data: buffer }, [buffer]);
 
 Claude Code can refactor your existing code to use transferables, explaining when to use them and the trade-offs.
 
-Advanced Patterns with Claude Code
+## Advanced Patterns with Claude Code
 
-Dedicated Workers for Domain Separation
+## Dedicated Workers for Domain Separation
 
 For complex applications, consider dedicated workers that handle specific domains. This improves organization and makes debugging easier:
 
@@ -243,7 +242,7 @@ function routeTask(task) {
 }
 ```
 
-Worker Pool with Lifecycle Management
+## Worker Pool with Lifecycle Management
 
 For complex applications requiring multiple workers, consider a worker pool pattern. Ask Claude Code to generate a manager:
 
@@ -304,7 +303,7 @@ class WorkerPool {
 }
 ```
 
-SharedArrayBuffer for High-Performance Scenarios
+## SharedArrayBuffer for High-Performance Scenarios
 
 For truly intensive computations, SharedArrayBuffer allows multiple threads to access the same memory:
 
@@ -325,7 +324,7 @@ self.onmessage = (e) => {
 
 Claude Code can explain the security requirements (requires `Cross-Origin-Opener-Policy` and `Cross-Origin-Embedder-Policy` headers) and help implement them.
 
-Practical Tips for Web Worker Development
+## Practical Tips for Web Worker Development
 
 1. Always Use Message Protocols: Define consistent message structures with `type`, `payload`, and `requestId` fields. This makes debugging and scaling much easier.
 
@@ -377,7 +376,7 @@ self.console = {
 };
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms web worker development from a painful debugging session into a structured, maintainable workflow. By using its code generation, error analysis, and refactoring capabilities, you can focus on solving business problems rather than wrestling with thread synchronization.
 

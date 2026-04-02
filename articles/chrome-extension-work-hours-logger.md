@@ -13,14 +13,11 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
 {% raw %}
-
-Chrome Extension Work Hours Logger: A Developer Guide
 
 Time tracking remains a persistent challenge for developers and professionals working in browser-centric environments. Whether you're billing clients, tracking project hours, or analyzing your productivity patterns, a well-built Chrome extension work hours logger can automate much of this manual effort. This guide explores how these extensions work, what APIs they use, and how developers can build custom solutions.
 
-How Chrome Extension Work Hours Loggers Work
+## How Chrome Extension Work Hours Loggers Work
 
 Chrome extensions that track work hours typically operate through one or more of these mechanisms:
 
@@ -31,7 +28,7 @@ Chrome extensions that track work hours typically operate through one or more of
 
 Most production extensions combine these approaches. The simplest implementations start with active tab tracking, then add layers of sophistication as users request more detailed reporting.
 
-Key Chrome APIs for Time Tracking
+## Key Chrome APIs for Time Tracking
 
 Building a work hours logger requires familiarity with several Chrome extension APIs:
 
@@ -99,7 +96,7 @@ chrome.storage.local.get(['workSessions'], (result) => {
 });
 ```
 
-Building a Simple Work Hours Logger
+## Building a Simple Work Hours Logger
 
 Here's a minimal implementation that tracks active tab time:
 
@@ -170,7 +167,7 @@ chrome.windows.onFocusChanged.addListener((windowId) => {
 
 This basic implementation captures how long you spend on each tab. Extend it with idle detection to exclude away time, and add a popup UI for manual categorization.
 
-Features Power Users Should Look For
+## Features Power Users Should Look For
 
 When evaluating or building a work hours logger, these features distinguish basic trackers from powerful productivity tools:
 
@@ -184,7 +181,7 @@ Idle detection tuning. Customizable idle thresholds matter because everyone has 
 
 Cross-browser sync. If you use multiple browsers, syncing data across them provides a complete picture of your work time.
 
-Popular Chrome Extensions for Work Hours Logging
+## Popular Chrome Extensions for Work Hours Logging
 
 Several extensions implement these patterns:
 
@@ -196,7 +193,7 @@ Clockwise focuses on calendar-based time tracking, showing how your meetings con
 
 ActivityWatch takes a developer-friendly approach, open-source, self-hosted, and highly customizable. It runs locally, giving you complete control over your data.
 
-Building for Specific Use Cases
+## Building for Specific Use Cases
 
 A chrome extension work hours logger for developers might track time spent in documentation, code review, and issue tracking. Customize your implementation by filtering domains:
 
@@ -216,7 +213,7 @@ function categorizeSession(url) {
 
 For agencies tracking multiple clients, add client-based grouping and rate configuration per project. Store rates in chrome.storage.sync to keep them consistent across devices.
 
-Privacy Considerations
+## Privacy Considerations
 
 Work hours loggers collect sensitive data about your activity. Consider these privacy aspects when building or choosing an extension:
 
@@ -231,7 +228,6 @@ Building your own logger gives you complete control over these decisions. Self-h
 ---
 
 Whether you need simple time tracking for personal productivity or detailed billing for client work, a chrome extension work hours logger can automate the process. Start with active tab tracking, add idle detection for accuracy, and layer on project categorization as your needs grow. The Chrome APIs provide everything needed to build powerful time tracking directly in your browser.
-
 
 Related Reading
 

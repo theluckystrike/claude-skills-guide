@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Conventional Commits Enforcement Workflow
 
@@ -21,7 +20,7 @@ Maintaining consistent commit messages is crucial for automated versioning, chan
 
 If you are new to Conventional Commits or want interactive workflows for crafting messages day-to-day, see the companion guide: [Claude Code for Conventional Commits Workflow Guide](/claude-code-for-conventional-commits-workflow-guide/).
 
-What Are Conventional Commits and Why Enforce Them
+## What Are Conventional Commits and Why Enforce Them
 
 The [Conventional Commits specification](https://www.conventionalcommits.org/) defines a lightweight structure for commit messages:
 
@@ -53,7 +52,7 @@ A `BREAKING CHANGE:` footer on any commit type triggers a MAJOR version bump reg
 
 Without a consistent format, tools like `standard-version`, `release-please`, and `semantic-release` cannot automatically determine the correct next version number or generate meaningful changelogs. Enforcement is not about bureaucracy, it is about making automation reliable.
 
-Setting Up Commit Message Validation with Husky
+## Setting Up Commit Message Validation with Husky
 
 The most effective way to enforce Conventional Commits is through Git hooks that validate messages before they're committed. Combine Husky with commitlint for a solid setup.
 
@@ -94,7 +93,7 @@ module.exports = {
 
 Now when developers run `git commit`, Husky intercepts the commit and validates the message against your rules. If the message doesn't conform, the commit is rejected with helpful error messages.
 
-Understanding commitlint Rule Severity
+## Understanding commitlint Rule Severity
 
 Each rule takes a severity level as its first array element:
 
@@ -122,7 +121,7 @@ module.exports = {
 };
 ```
 
-Scopes Enforcement
+## Scopes Enforcement
 
 Once your team is comfortable with types, add scope validation. Scopes make changelogs much more readable by grouping changes by subsystem:
 
@@ -143,7 +142,7 @@ module.exports = {
 
 A scoped commit looks like `feat(auth): add OAuth2 PKCE flow`. With this rule in place, an unrecognized scope like `feat(authentication):` would be blocked and the developer prompted to use `auth` instead.
 
-Making Husky Play Nicely with CI
+## Making Husky Play Nicely with CI
 
 Husky should only run on developer machines, not in CI. Prevent accidental Husky installation in CI environments by adding a `prepare` guard:
 
@@ -163,7 +162,7 @@ npm install --save-dev is-ci
 
 This skips Husky setup in CI environments where the `CI` environment variable is set, which is true by default on GitHub Actions, GitLab CI, CircleCI, and most other platforms.
 
-Creating a Claude Code Skill for Commit Assistance
+## Creating a Claude Code Skill for Commit Assistance
 
 Building a Claude Code skill that helps generate Conventional Commits improves developer experience while maintaining standards. Create a skill file at `skills/conventional-commit-skill.md`:
 
@@ -223,7 +222,7 @@ After generating, show the developer the result and offer to run `git commit -m 
 
 This skill provides an interactive workflow where Claude prompts developers through the commit message creation process, ensuring all required elements are present and properly formatted.
 
-Extending the Skill with Git Context
+## Extending the Skill with Git Context
 
 A more powerful version of this skill reads the actual staged diff before prompting the developer. This lets Claude suggest a commit message based on the real changes rather than asking the developer to describe them:
 
@@ -266,7 +265,7 @@ Confirmation Flow
 
 This approach is significantly faster than starting from scratch and tends to produce more accurate messages because Claude is working from ground truth rather than developer memory.
 
-Batch Commit Skill for Multi-Change Commits
+## Batch Commit Skill for Multi-Change Commits
 
 Sometimes a PR accumulates several logical changes across many files. A batch variant helps developers split a large change into atomic commits:
 
@@ -295,7 +294,7 @@ Present the full plan before executing anything. Ask for approval before
 running any `git add` or `git commit` commands.
 ```
 
-Automating Version Bumps with Conventional Commits
+## Automating Version Bumps with Conventional Commits
 
 One of the strongest benefits of Conventional Commits is automated version management. Tools like standard-version or release-please can automatically determine the next version number based on your commit history.
 
@@ -325,7 +324,7 @@ When you run `npm run release`, standard-version:
 
 Feature commits (`feat:`) trigger minor version bumps, while fix commits (`fix:`) trigger patch bumps. Include `BREAKING CHANGE:` in any commit to trigger a major version bump.
 
-Comparing Versioning Tools
+## Comparing Versioning Tools
 
 Three tools dominate the automated versioning space. Here is how they compare:
 
@@ -341,7 +340,7 @@ Three tools dominate the automated versioning space. Here is how they compare:
 
 `standard-version` is technically deprecated in favor of `changelogen` or direct use of `release-please`, but it remains widely used and fully functional. For new projects, prefer `release-please` if you are on GitHub or `semantic-release` if you need to publish to npm automatically.
 
-Configuring release-please
+## Configuring release-please
 
 For GitHub-hosted projects, release-please offers a tighter integration. Create a configuration file at `release-please-config.json`:
 
@@ -390,7 +389,7 @@ jobs:
 
 When commits land on `main`, release-please opens or updates a "Release PR" that shows the pending changelog and proposed version bump. Merging that PR creates the tag and GitHub release automatically.
 
-CI/CD Pipeline Enforcement
+## CI/CD Pipeline Enforcement
 
 Validation in local Git hooks can be bypassed by developers. Ensure consistent enforcement by adding validation in your CI pipeline.
 
@@ -433,7 +432,7 @@ Why `fetch-depth: 0` Matters
 
 The `fetch-depth: 0` option is critical. By default, `actions/checkout` performs a shallow clone with only the latest commit. commitlint needs access to the full commit range from the PR base to the head to validate all commits in the PR, not just the last one. Without `fetch-depth: 0`, the `--from ... --to ...` range validation will fail with a "fatal: ambiguous argument" error.
 
-GitLab CI Equivalent
+## GitLab CI Equivalent
 
 For GitLab-hosted projects, the equivalent pipeline stage in `.gitlab-ci.yml`:
 
@@ -450,7 +449,7 @@ commitlint:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 ```
 
-Handling Merge Commits and Squash Strategies
+## Handling Merge Commits and Squash Strategies
 
 If your repository uses squash merging, the squashed commit message must itself conform to Conventional Commits. GitHub's squash merge default uses the PR title as the commit message, which is often not formatted correctly.
 
@@ -494,7 +493,7 @@ jobs:
           requireScope: false
 ```
 
-Best Practices for Implementation
+## Best Practices for Implementation
 
 Start with lenient rules and tighten them gradually as your team adapts. Initially, focus on enforcing the type field and basic format. Add scope requirements and body validation in subsequent phases.
 
@@ -504,7 +503,7 @@ Consider enabling commit message suggestions in your IDE or Git client. Many dev
 
 Finally, document your commit conventions in CONTRIBUTING.md. New team members need clear guidance on your standards and the tooling that enforces them.
 
-Rollout Phasing for Teams
+## Rollout Phasing for Teams
 
 A phased rollout reduces friction and builds buy-in:
 
@@ -517,7 +516,7 @@ A phased rollout reduces friction and builds buy-in:
 
 Skipping the awareness phase is the most common mistake. If developers don't understand why the format matters, they will resent the tooling that enforces it. A 30-minute walkthrough of how commits feed into the automated changelog is usually enough to earn buy-in.
 
-Providing Good Error Messages
+## Providing Good Error Messages
 
 The default commitlint error output is functional but terse. You can configure a custom prompt in your `commitlint.config.js` to make failures more actionable:
 
@@ -553,7 +552,7 @@ module.exports = {
 
 With the `@commitlint/prompt-cli` package, developers can run `npx commit` to get an interactive guided prompt rather than writing the message freehand.
 
-Conclusion
+## Conclusion
 
 Enforcing Conventional Commits through Claude Code skills, Git hooks, and CI pipelines creates a solid system that improves project maintainability. The initial setup investment pays dividends through automated versioning, meaningful changelogs, and consistent commit history. Start with local validation, add Claude-assisted message generation, then extend enforcement to your CI pipeline for comprehensive coverage.
 

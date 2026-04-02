@@ -18,13 +18,13 @@ Building microservices architectures requires careful consideration of how servi
 
 This guide covers practical patterns for implementing microservices communication using Claude Code skills, with real code examples you can apply to your architecture.
 
-Understanding Microservices Communication
+## Understanding Microservices Communication
 
 Microservices communicate through two primary mechanisms: synchronous communication where a client waits for a response, and asynchronous communication where services exchange messages without blocking. Each approach has trade-offs around latency, consistency, and complexity that affect your system design.
 
 Claude Code skills can generate boilerplate code, validate API contracts, implement error handling, and create documentation for all these communication patterns. The [skill system](/building-production-ai-agents-with-claude-skills-2026/) acts as a specialized assistant that understands your architecture and produces consistent, production-ready implementations.
 
-Pattern 1: REST API Communication
+## Pattern 1: REST API Communication
 
 REST remains the most common pattern for synchronous microservices communication. Claude Code skills can generate client libraries, validate request/response schemas, and implement retry logic.
 
@@ -109,7 +109,7 @@ class UserServiceClient {
 }
 ```
 
-Pattern 2: Message Queue Communication
+## Pattern 2: Message Queue Communication
 
 Asynchronous communication through [message queues decouples services](/claude-code-multi-agent-orchestration-patterns-guide/) and improves system resilience. Claude Code skills can generate publisher and consumer code, handle dead letter queues, and implement idempotency.
 
@@ -221,7 +221,7 @@ class ResilientPublisher:
             self.connection.close()
 ```
 
-Pattern 3: Event-Driven Communication
+## Pattern 3: Event-Driven Communication
 
 Event-driven architectures enable loose coupling and scalability. Services emit events that other services consume independently, allowing you to add new consumers without modifying producers.
 
@@ -239,7 +239,7 @@ Create event-driven communication that includes:
 4. Schema evolution handling
 5. Event sourcing support
 
-Pattern 4: Saga Pattern for Distributed Transactions
+## Pattern 4: Saga Pattern for Distributed Transactions
 
 When microservices need to coordinate multi-step operations across services, the saga pattern provides a way to maintain consistency without distributed transactions. For broader agent coordination patterns, see [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/).
 
@@ -341,7 +341,7 @@ async function processOrder(orderData: OrderData) {
 }
 ```
 
-Choosing the Right Pattern
+## Choosing the Right Pattern
 
 Select your communication pattern based on these factors:
 

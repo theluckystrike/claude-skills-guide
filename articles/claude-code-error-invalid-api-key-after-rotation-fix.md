@@ -16,13 +16,13 @@ tags: [claude-code, claude-skills]
 
 Rotating API keys is a security best practice, but it often breaks your Claude Code workflow when the old credentials remain cached or stored in multiple locations. This guide provides practical solutions for resolving the invalid API key error after rotation, covering environment variables, configuration files, and skill-specific credentials.
 
-Why API Key Rotation Breaks Claude Code
+## Why API Key Rotation Breaks Claude Code
 
 When you rotate your Anthropic API key in the console, any application storing the old key will continue using invalid credentials until you update all references. Claude Code reads API keys from multiple sources, and if any location still contains the old key, authentication will fail. Understanding these sources helps you systematically track down every place that needs updating.
 
 Common scenarios causing the error after rotation include environment variables pointing to expired keys, configuration files with cached credentials, MCP servers holding stale authentication, and skills that store API keys directly in their configuration.
 
-Verify Your API Key First
+## Verify Your API Key First
 
 Before troubleshooting configuration, confirm your API key works directly with a curl request:
 
@@ -36,7 +36,7 @@ curl -s https://api.anthropic.com/v1/messages \
 
 A successful response confirms the key is valid. If you receive an error, obtain a fresh key from your Anthropic console. Also watch for whitespace or formatting issues. extra spaces before or after your API key, or accidentally copying surrounding text from the dashboard, causes validation failures.
 
-Identifying the Error
+## Identifying the Error
 
 After rotating your API key, you may encounter error messages like:
 
@@ -48,7 +48,7 @@ Authentication failed: API key not recognized
 
 The error typically appears when starting Claude Code, initializing a skill that requires API access, or running any task that calls the Anthropic API. If you recently rotated your key and now see these errors, the solution involves updating credential storage across your system.
 
-Solution 1: Update Environment Variables
+## Solution 1: Update Environment Variables
 
 The first and most common place to check is your shell environment. Many developers store API keys in `.bashrc`, `.zshrc`, or `.env` files.
 
@@ -84,7 +84,7 @@ After updating, verify the change took effect:
 echo $ANTHROPIC_API_KEY
 ```
 
-Solution 2: Update Claude Code Configuration File
+## Solution 2: Update Claude Code Configuration File
 
 Claude Code stores authentication settings in its configuration file. The location varies by operating system:
 
@@ -113,7 +113,7 @@ Replace the old key with your new API key. If the entire section is missing, you
 
 Some users prefer removing this section entirely and relying on environment variables, which eliminates synchronization issues between different credential sources.
 
-Solution 3: Update MCP Server Credentials
+## Solution 3: Update MCP Server Credentials
 
 If you use MCP (Model Context Protocol) servers that connect to external APIs, they may store their own credentials. Common MCP servers requiring API keys include brave-search, tavily, and custom servers you may have configured.
 
@@ -141,7 +141,7 @@ Update any stored API keys in these configurations:
 
 Restart Claude Code after updating MCP credentials to ensure the new keys load correctly.
 
-Solution 4: Update Skill-Specific Credentials
+## Solution 4: Update Skill-Specific Credentials
 
 Many Claude skills include their own API key configuration. When rotating keys, you must update each skill that uses the Anthropic API or other services.
 
@@ -163,7 +163,7 @@ find ~/.claude/skills -name "*.json" -o -name ".env" | xargs grep -l "sk-ant"
 
 Update any matches with your new API key.
 
-Solution 5: Clear Cached Credentials
+## Solution 5: Clear Cached Credentials
 
 Claude Code may cache credentials in memory during extended sessions. If updating credentials doesn't resolve the error immediately, restart Claude Code entirely to clear cached authentication state.
 
@@ -175,7 +175,7 @@ security find-internet-password -s "anthropic.com"
 security delete-internet-password -s "anthropic.com"
 ```
 
-Preventing Future Rotation Issues
+## Preventing Future Rotation Issues
 
 To avoid this problem in the future, consider these practices:
 
@@ -204,7 +204,7 @@ find . -name ".env" -exec sed -i '' "s/ANTHROPIC_API_KEY=.*/ANTHROPIC_API_KEY=$N
 echo "API key rotated across all locations"
 ```
 
-Solution 6: Fix Permission and Network Issues
+## Solution 6: Fix Permission and Network Issues
 
 Claude Code needs read access to your configuration files. Check file permissions:
 
@@ -218,7 +218,7 @@ Some organizations route API requests through proxies that interfere with authen
 
 Claude Code checks for your API key in this order: `ANTHROPIC_API_KEY` environment variable, then `CLAUDE_API_KEY` environment variable, then the configuration file at `~/.claude/settings.json`. Multiple Claude installations or conflicting configuration files across directories can load stale credentials. check each location systematically.
 
-Verification Steps
+## Verification Steps
 
 After applying fixes, verify that Claude Code recognizes your new API key:
 
@@ -228,7 +228,6 @@ After applying fixes, verify that Claude Code recognizes your new API key:
 4. Confirm environment variables display the new key
 
 If errors persist, systematically check each credential location again, it's easy to miss a configuration file storing the old key.
-
 
 Related Reading
 

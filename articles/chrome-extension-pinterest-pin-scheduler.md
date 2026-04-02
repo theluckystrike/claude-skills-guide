@@ -14,7 +14,7 @@ Pinterest remains one of the most powerful visual discovery platforms, but sched
 
 This guide explores the technical foundations of creating a Chrome extension for Pinterest pin scheduling, covering the Pinterest API, extension architecture, and practical implementation patterns.
 
-Understanding Pinterest's API Constraints
+## Understanding Pinterest's API Constraints
 
 Before building any scheduling solution, you need to understand Pinterest's platform limitations. Pinterest provides a GraphQL-based API through the Pinterest API for developers, but it comes with specific constraints:
 
@@ -25,7 +25,7 @@ Before building any scheduling solution, you need to understand Pinterest's plat
 
 For a Chrome extension approach, you have two primary options: using the official Pinterest API or simulating user actions through the web interface. The API approach is more solid and compliant, while the web interface approach offers flexibility but requires careful implementation to avoid detection.
 
-Extension Architecture Fundamentals
+## Extension Architecture Fundamentals
 
 A Pinterest pin scheduler extension consists of several key components:
 
@@ -58,7 +58,7 @@ Manifest File (manifest.json)
 
 The manifest defines the extension's capabilities, including OAuth configuration for Pinterest API access and background worker setup for scheduled tasks.
 
-Core Components
+## Core Components
 
 Popup Interface (popup.html/popup.js): The user-facing interface where users create scheduled pins, select boards, and configure posting times.
 
@@ -91,11 +91,11 @@ async function checkAndPostScheduledPins() {
 }
 ```
 
-Implementing Pin Creation and Scheduling
+## Implementing Pin Creation and Scheduling
 
 The core functionality involves capturing pin content and scheduling it for future posting. Here's a practical implementation pattern:
 
-Content Capture from Active Tab
+## Content Capture from Active Tab
 
 ```javascript
 // content.js - Inject into Pinterest pages
@@ -116,7 +116,7 @@ function getCurrentBoardId() {
 }
 ```
 
-Scheduling Logic
+## Scheduling Logic
 
 ```javascript
 // scheduler.js - Handle scheduling operations
@@ -156,7 +156,7 @@ class PinScheduler {
 }
 ```
 
-Pinterest API Integration
+## Pinterest API Integration
 
 For actual posting, you'll need to integrate with Pinterest's API. Here's the posting function:
 
@@ -203,7 +203,7 @@ class PinterestClient {
 }
 ```
 
-Handling Rate Limits and Errors
+## Handling Rate Limits and Errors
 
 Solid scheduling requires proper error handling:
 
@@ -225,7 +225,7 @@ async function postPinWithRetry(pinData, client, maxRetries = 3) {
 }
 ```
 
-Local Storage Schema
+## Local Storage Schema
 
 For a complete solution, maintain a structured storage schema:
 
@@ -247,7 +247,7 @@ const storageSchema = {
 };
 ```
 
-Best Practices for Production Extensions
+## Best Practices for Production Extensions
 
 When deploying a Pinterest pin scheduler extension, consider these developer-focused recommendations:
 
@@ -257,7 +257,7 @@ When deploying a Pinterest pin scheduler extension, consider these developer-foc
 4. Implement notifications: Use Chrome notifications to alert users of successful posts or failures
 5. Add analytics tracking: Monitor posting success rates and optimal posting times
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for Pinterest pin scheduling gives developers and power users precise control over their content strategy. By using the Pinterest API and Chrome's background processing capabilities, you can create a scheduling system tailored to your specific workflow needs.
 

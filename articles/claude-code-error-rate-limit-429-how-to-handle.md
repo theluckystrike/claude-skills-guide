@@ -16,7 +16,7 @@ permalink: /claude-code-error-rate-limit-429-how-to-handle/
 
 When you're deep in a coding session with Claude Code, the last thing you want is your workflow interrupted by an HTTP 429 error. This status code means you've hit a rate limit, the server is throttling your requests because you've sent too many in a short time window. Understanding how to handle this error gracefully keeps your development momentum intact.
 
-What Triggers the 429 Error in Claude Code
+## What Triggers the 429 Error in Claude Code
 
 Claude Code imposes rate limits to ensure fair resource allocation across all users. Several scenarios commonly trigger this error:
 
@@ -28,7 +28,7 @@ Long-running conversations. Extended sessions with thousands of message exchange
 
 Repeated tool invocations. Skills that call external tools repeatedly, like tdd running multiple test cycles, or frontend-design generating numerous iterations, can trigger throttling if the tool invocations happen too rapidly.
 
-Immediate Response: Recognizing the Error
+## Immediate Response: Recognizing the Error
 
 When a 429 error occurs, Claude Code typically displays a clear message:
 
@@ -39,7 +39,7 @@ Rate limit exceeded. Please wait before retrying.
 
 The error message often includes a `Retry-After` header indicating how many seconds to wait. This is your key to recovery, honoring this wait time prevents further throttling and gets you back to coding faster.
 
-Implementing Retry Logic
+## Implementing Retry Logic
 
 The most solid approach to handling rate limits is implementing automatic retry with exponential backoff. Here's a practical pattern you can use in your Claude Code workflows:
 
@@ -71,9 +71,9 @@ function sleep(ms) {
 
 This pattern doubles the wait time with each failed attempt (1 second, then 2 seconds, then 4 seconds), giving the server time to recover while minimizing total wait time.
 
-Practical Strategies for Different Workflows
+## Practical Strategies for Different Workflows
 
-Bulk Processing with the xlsx Skill
+## Bulk Processing with the xlsx Skill
 
 When using xlsx to process large datasets, batch your operations instead of sending individual requests for each row:
 
@@ -90,7 +90,7 @@ for i in range(0, len(data), batch_size):
     await sleep(2000)  # Brief pause between batches
 ```
 
-Document Generation with the pdf Skill
+## Document Generation with the pdf Skill
 
 The pdf skill excels at generating documents, but generating dozens in rapid succession triggers rate limits. Space out your requests:
 
@@ -113,7 +113,7 @@ async def generate_documents_safely(docs):
     return results
 ```
 
-Test-Driven Development with the tdd Skill
+## Test-Driven Development with the tdd Skill
 
 When tdd runs multiple test cycles, build pauses into your workflow:
 
@@ -126,7 +126,7 @@ for test_file in test_files; do
 done
 ```
 
-Design Iterations with frontend-design
+## Design Iterations with frontend-design
 
 The frontend-design skill may generate multiple mockups. Request them sequentially rather than in parallel:
 
@@ -140,7 +140,7 @@ for (const type of mockups) {
 }
 ```
 
-Monitoring Your Rate Limit Usage
+## Monitoring Your Rate Limit Usage
 
 Keep track of your request patterns to avoid hitting limits proactively. Several approaches help:
 
@@ -175,7 +175,7 @@ async function safeBatchOperation(operations) {
 }
 ```
 
-Checkpointing for Long Tasks
+## Checkpointing for Long Tasks
 
 When rate limits interrupt long-running workflows, implement checkpointing to preserve progress:
 
@@ -209,7 +209,7 @@ Do this:
 claude "fix these three functions: [list them all at once]"
 ```
 
-Best Practices Summary
+## Best Practices Summary
 
 1. Honor the Retry-After header. It's your clearest guide to when you can resume
 2. Use exponential backoff. Starting with short waits and increasing prevents hammering the server
@@ -218,7 +218,7 @@ Best Practices Summary
 5. Monitor proactively. Track your request rate before hitting errors
 6. Consider upgrading. If you consistently hit limits, higher-tier plans often offer increased quotas
 
-When Rate Limits Become a Pattern
+## When Rate Limits Become a Pattern
 
 If you frequently encounter 429 errors despite implementing these strategies, consider whether your workflow architecture needs adjustment. Skills like supermemory can help you track which operations consume the most requests, enabling you to optimize high-traffic patterns.
 

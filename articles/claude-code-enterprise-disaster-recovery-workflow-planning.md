@@ -13,18 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code Enterprise Disaster Recovery Workflow Planning
 
 Disaster recovery (DR) is no longer an optional safeguard for enterprise systems, it's a fundamental requirement. As organizations increasingly rely on complex distributed systems, the need for solid, automated DR workflows has never been more critical. This guide explores how Claude Code can be used to plan, implement, and automate enterprise disaster recovery workflows effectively.
 
-Understanding Enterprise Disaster Recovery Requirements
+## Understanding Enterprise Disaster Recovery Requirements
 
 Enterprise disaster recovery differs significantly from simple backup strategies. It encompasses data protection, system redundancy, failover mechanisms, and comprehensive testing protocols. The goal is not just to recover from failures but to maintain business continuity with minimal downtime and data loss.
 
-Key Components of Enterprise DR
+## Key Components of Enterprise DR
 
 Every enterprise disaster recovery plan should address several critical areas:
 
@@ -34,7 +31,7 @@ Every enterprise disaster recovery plan should address several critical areas:
 - Recovery Time Objectives (RTO): The maximum acceptable time to restore services
 - Recovery Point Objectives (RPO): The maximum acceptable amount of data loss measured in time
 
-RTO vs. RPO: Understanding the Tradeoffs
+## RTO vs. RPO: Understanding the Tradeoffs
 
 RTO and RPO are the two foundational metrics of any DR plan, and they often exist in tension with each other. A near-zero RPO requires continuous or near-continuous replication, which increases infrastructure costs significantly. A near-zero RTO requires hot standby systems that are always ready to serve traffic, which is expensive but sometimes necessary for mission-critical services.
 
@@ -47,7 +44,7 @@ RTO and RPO are the two foundational metrics of any DR plan, and they often exis
 
 One of the first things Claude Code can help you do is classify your services into these tiers based on business impact analysis. Providing Claude with a list of your systems and their business functions allows it to help draft a tiering document that your stakeholders can review and approve.
 
-DR Strategy Patterns
+## DR Strategy Patterns
 
 Before writing a single line of automation, choose the right DR strategy for each tier:
 
@@ -60,7 +57,7 @@ Before writing a single line of automation, choose the right DR strategy for eac
 
 Most enterprises use a mix of these strategies across their service tiers. Tier 0 services warrant Active/Active or Warm Standby, while Tier 3 systems can use Backup and Restore. Claude Code can help you document which strategy applies to each service and generate the corresponding infrastructure templates.
 
-Building DR Workflows with Claude Code
+## Building DR Workflows with Claude Code
 
 Claude Code excels at automating complex workflows, making it an ideal tool for disaster recovery planning and execution. disaster-recovery-assessment
 description: Analyzes infrastructure for DR readiness and generates recommendations
@@ -134,7 +131,6 @@ def verify_database_backups(config: Dict[str, Any]) -> List[Dict[str, Any]]:
 
     return results
 
-
 def get_last_backup_time(database_name: str) -> datetime:
     """Query the last backup time from AWS Backup or RDS automated backups."""
     client = boto3.client('rds')
@@ -151,7 +147,6 @@ def get_last_backup_time(database_name: str) -> datetime:
         return snapshots[0]['SnapshotCreateTime'].replace(tzinfo=None)
     raise ValueError(f"No snapshots found for {database_name}")
 
-
 def verify_backup_integrity(backup_path: str) -> bool:
     """Verify backup file integrity by comparing stored checksum against recalculated hash."""
     checksum_file = backup_path + '.sha256'
@@ -165,7 +160,6 @@ def verify_backup_integrity(backup_path: str) -> bool:
         return sha256.hexdigest() == expected
     except FileNotFoundError:
         return False
-
 
 def test_restore_dry_run(backup_path: str, engine: str) -> bool:
     """Perform a lightweight dry-run restore to verify the backup is not corrupt."""
@@ -182,7 +176,6 @@ def test_restore_dry_run(backup_path: str, engine: str) -> bool:
         )
         return result.returncode == 0
     return True  # Unknown engines pass by default; add cases as needed
-
 
 def run_verification(config_path: str) -> bool:
     """Main entry point for backup verification job."""
@@ -201,7 +194,6 @@ def run_verification(config_path: str) -> bool:
     if warned:
         print(f"\nWARNING: {len(warned)} backup(s) have integrity issues.")
     return True
-
 
 if __name__ == '__main__':
     import sys
@@ -229,7 +221,6 @@ from typing import Optional
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 log = logging.getLogger(__name__)
 
-
 @dataclass
 class FailoverConfig:
     primary_region: str
@@ -243,7 +234,6 @@ class FailoverConfig:
     desired_count_primary: int = 4
     desired_count_secondary: int = 4
 
-
 def check_primary_health(config: FailoverConfig) -> bool:
     """Check Route53 health check status for primary region."""
     client = boto3.client('route53')
@@ -253,7 +243,6 @@ def check_primary_health(config: FailoverConfig) -> bool:
     total = len(checks)
     log.info(f"Health check: {healthy}/{total} endpoints healthy")
     return healthy / total >= 0.6  # 60% threshold before triggering failover
-
 
 def promote_rds_replica(config: FailoverConfig) -> bool:
     """Promote RDS read replica to standalone primary in secondary region."""
@@ -273,7 +262,6 @@ def promote_rds_replica(config: FailoverConfig) -> bool:
         log.error(f"RDS promotion failed: {e}")
         return False
 
-
 def scale_ecs_service(config: FailoverConfig, region: str, desired: int) -> bool:
     """Scale an ECS service to the specified desired count."""
     ecs = boto3.client('ecs', region_name=region)
@@ -288,7 +276,6 @@ def scale_ecs_service(config: FailoverConfig, region: str, desired: int) -> bool
     except Exception as e:
         log.error(f"ECS scale failed in {region}: {e}")
         return False
-
 
 def update_dns_to_secondary(config: FailoverConfig) -> bool:
     """Update Route53 DNS records to point traffic at secondary region."""
@@ -318,7 +305,6 @@ def update_dns_to_secondary(config: FailoverConfig) -> bool:
         log.error(f"DNS update failed: {e}")
         return False
 
-
 def execute_failover(config: FailoverConfig) -> bool:
     """Orchestrate full failover sequence."""
     log.info("=== INITIATING REGIONAL FAILOVER ===")
@@ -340,7 +326,6 @@ def execute_failover(config: FailoverConfig) -> bool:
 
     log.info("=== FAILOVER COMPLETE ===")
     return True
-
 
 if __name__ == '__main__':
     config = FailoverConfig(
@@ -396,7 +381,6 @@ import json
 from typing import Dict, Any, List
 from datetime import datetime
 
-
 def test_backup_restoration() -> Dict[str, Any]:
     """Restore latest backup to isolated test environment and verify data consistency."""
     start = time.time()
@@ -423,7 +407,6 @@ def test_backup_restoration() -> Dict[str, Any]:
     except Exception as e:
         return {'test': 'backup_restoration', 'passed': False, 'error': str(e)}
 
-
 def test_failover_timing() -> Dict[str, Any]:
     """Measure actual failover time against RTO target."""
     rto_target_seconds = 900  # 15 minutes
@@ -449,7 +432,6 @@ def test_failover_timing() -> Dict[str, Any]:
     except Exception as e:
         return {'test': 'failover_timing', 'passed': False, 'error': str(e)}
 
-
 def test_data_integrity() -> Dict[str, Any]:
     """Verify data consistency between primary and recovered secondary."""
     start = time.time()
@@ -470,7 +452,6 @@ def test_data_integrity() -> Dict[str, Any]:
     except Exception as e:
         return {'test': 'data_integrity', 'passed': False, 'error': str(e)}
 
-
 def test_rollback() -> Dict[str, Any]:
     """Verify ability to roll back to primary after failover."""
     start = time.time()
@@ -484,7 +465,6 @@ def test_rollback() -> Dict[str, Any]:
         }
     except Exception as e:
         return {'test': 'rollback', 'passed': False, 'error': str(e)}
-
 
 def run_dr_tests() -> bool:
     """Execute comprehensive disaster recovery tests and generate report."""
@@ -503,7 +483,6 @@ def run_dr_tests() -> bool:
     print(f"\nResults: {passed}/{total} tests passed")
     return all(t.get('passed', False) for t in test_results)
 
-
 def generate_dr_test_report(results: List[Dict[str, Any]]) -> None:
     """Write DR test report to JSON and print summary."""
     report = {
@@ -515,7 +494,6 @@ def generate_dr_test_report(results: List[Dict[str, Any]]) -> None:
         json.dump(report, f, indent=2)
     print(json.dumps(report, indent=2))
 
-
 Stub implementations. replace with your actual infrastructure calls
 def find_latest_backup(db_name): return {'snapshot_id': 'snap-001', 'age_hours': 2.5}
 def restore_to_test_env(snapshot_id): return 'test-cluster-001'
@@ -524,7 +502,6 @@ def trigger_staging_failover(): time.sleep(1)
 def check_secondary_healthy(): return True
 def compute_table_checksums(target): return {'orders': 'abc123', 'users': 'def456'}
 def execute_rollback_to_primary(): return True
-
 
 if __name__ == '__main__':
     import sys
@@ -548,7 +525,6 @@ import logging
 from typing import Callable, List, Dict, Any
 
 log = logging.getLogger(__name__)
-
 
 class ChaosExperiment:
     def __init__(self, name: str, target: str, action: Callable, validations: List[Callable]):
@@ -589,29 +565,24 @@ class ChaosExperiment:
             'overall_passed': all(v['passed'] for v in validation_results)
         }
 
-
 Example experiment definitions
 def simulate_az_failure():
     """Simulate AZ failure by disabling a specific availability zone in staging."""
     log.info("Simulating AZ failure. blocking traffic to us-east-1a")
     # In practice: modify security groups, NACLs, or use AWS FIS (Fault Injection Simulator)
 
-
 def check_failover_initiated() -> bool:
     """Verify that the failover mechanism triggered automatically."""
     # Check your monitoring/alerting system for failover event
     return True  # Replace with real check
 
-
 def verify_rto_met() -> bool:
     """Verify service was restored within RTO window."""
     return True  # Replace with actual service health check
 
-
 def verify_rpo_met() -> bool:
     """Verify data loss is within RPO limits."""
     return True  # Replace with data consistency check
-
 
 experiments = [
     ChaosExperiment(

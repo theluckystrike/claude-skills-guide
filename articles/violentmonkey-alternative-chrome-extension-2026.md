@@ -16,7 +16,7 @@ tags: [chrome, userscripts, automation]
 
 If you rely on userscripts to customize web pages, automate repetitive tasks, or enhance browser functionality, you have likely encountered Violentmonkey. This open-source userscript manager provides a solid foundation for running custom JavaScript across websites. However, as we move through 2026, several alternatives have emerged that offer improved features, better performance, and enhanced developer experiences. This guide evaluates the top Violentmonkey alternatives for Chrome, helping you choose the right tool for your workflow.
 
-Understanding Userscript Managers
+## Understanding Userscript Managers
 
 Userscript managers enable you to inject custom JavaScript into web pages automatically. These tools power everything from simple UI tweaks to complex automation workflows. Violentmonkey has maintained popularity due to its open-source nature and straightforward approach, but the ecosystem has evolved significantly.
 
@@ -26,7 +26,7 @@ Before comparing tools, it helps to understand what a userscript manager actuall
 
 The shift from Chrome's Manifest V2 (MV2) to Manifest V3 (MV3) extension architecture has been the dominant technical story for userscript managers over the past two years. MV3 restricts the `chrome.declarativeNetRequest` API, removes the ability to eval arbitrary code strings, and imposes tighter content security policies. This has forced every major manager to rethink how they execute injected scripts, and the quality of each tool's MV3 implementation is now a key differentiator.
 
-Top Violentmonkey Alternatives in 2026
+## Top Violentmonkey Alternatives in 2026
 
 1. Tampermonkey
 
@@ -240,7 +240,7 @@ Sleeky's value proposition is clearest in memory-constrained environments. older
 
 For a focused use case. say, a single script that reformats your company's internal dashboards. Sleeky adds no overhead at all.
 
-Feature Comparison
+## Feature Comparison
 
 | Feature | Tampermonkey | ScriptCat | Violentmonkey NG | Sleeky |
 |---------|--------------|-----------|------------------|--------|
@@ -255,7 +255,7 @@ Feature Comparison
 | Open Source | Partial | Yes | Yes | Yes |
 | Debug Tools | Basic | Advanced | Basic | None |
 
-Choosing the Right Alternative
+## Choosing the Right Alternative
 
 Your choice depends on your specific needs:
 
@@ -267,7 +267,7 @@ Choose Violentmonkey NG if you prefer the Violentmonkey experience but need bett
 
 Choose Sleeky if memory usage matters and you prefer a no-frills approach to userscript management. Ideal for users running a handful of focused scripts on lower-powered hardware.
 
-Migration Tips
+## Migration Tips
 
 When switching between managers, keep these points in mind:
 
@@ -305,7 +305,7 @@ A reliable migration checklist:
 5. For scripts that make network requests, verify the `@connect` directives match what the script actually calls
 6. Only uninstall the source manager after running both in parallel for at least a week
 
-Manifest V3 Impact on Userscript Managers
+## Manifest V3 Impact on Userscript Managers
 
 The Chrome extension platform's shift to MV3 has had uneven effects across the userscript manager ecosystem. The core challenge is that MV3 eliminated the `chrome.tabs.executeScript` API that MV2 extensions used to inject arbitrary code. MV3 replacements require content scripts to be declared statically in the manifest, which conflicts with the fundamentally dynamic nature of userscript injection.
 
@@ -318,7 +318,7 @@ Each manager has solved this differently:
 
 The practical implication: if you are running Chrome 120 or later (which is essentially everyone as of 2026), the `userScripts` API-based managers (Violentmonkey NG, Sleeky) have the cleanest implementation. If you are in a managed enterprise environment pinned to an older Chrome version, Tampermonkey's hybrid approach is the most compatible.
 
-Writing Your First Custom Script
+## Writing Your First Custom Script
 
 If you are new to userscripts, the fastest way to get productive is to pick a page you use daily and solve one small annoyance. Here is a complete, well-commented example that works in all four managers:
 
@@ -368,12 +368,11 @@ If you are new to userscripts, the fastest way to get productive is to pick a pa
 
 This script demonstrates the essential patterns: metadata block, persistent storage, DOM manipulation, and a MutationObserver for dynamic pages. From here, the same structure scales to far more sophisticated automation.
 
-Conclusion
+## Conclusion
 
 The userscript ecosystem in 2026 offers solid alternatives to Violentmonkey, each with distinct strengths. Tampermonkey remains the gold standard for script library compatibility, while ScriptCat provides superior developer tools. Violentmonkey NG revitalizes the original project, and Sleeky delivers lightweight efficiency.
 
 For most developers and power users, Tampermonkey or ScriptCat will provide the best experience. The key is evaluating your specific requirements. whether that is script compatibility, development features, background task support, or resource efficiency. and selecting the manager that aligns with your workflow. The MV3 transition has pushed all four managers to ship more thoughtful architectures, and any of them is a solid choice for a well-maintained script library in 2026.
-
 
 Related Reading
 

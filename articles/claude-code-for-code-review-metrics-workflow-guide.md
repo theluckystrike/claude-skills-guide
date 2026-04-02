@@ -18,7 +18,7 @@ Claude Code for Code Review Metrics Workflow Guide
 
 Code review metrics provide valuable insights into your development process, helping teams identify bottlenecks, improve collaboration, and maintain high code quality. This guide explores how to use Claude Code CLI to track, measure, and analyze code review metrics effectively, transforming raw data into actionable improvements for your development workflow.
 
-Understanding Code Review Metrics
+## Understanding Code Review Metrics
 
 Before implementing a metrics workflow, it's essential to understand which metrics matter most for your team. Code review metrics fall into several categories that each reveal different aspects of your review process.
 
@@ -30,7 +30,7 @@ Collaboration Metrics evaluate team dynamics: comment patterns, review participa
 
 Understanding these categories helps you choose which metrics to track based on your team's specific goals and problems.
 
-Metrics That Matter Most
+## Metrics That Matter Most
 
 Not all metrics carry equal weight. Here is a quick reference to help teams prioritize what to track first:
 
@@ -46,7 +46,7 @@ Not all metrics carry equal weight. Here is a quick reference to help teams prio
 
 Teams new to metrics collection should start with the top three process metrics before expanding to quality and collaboration dimensions. Trying to capture everything at once leads to data overload and analysis paralysis.
 
-Setting Up Metrics Collection with Claude Code
+## Setting Up Metrics Collection with Claude Code
 
 Claude Code can automate the collection of review metrics from your version control system. Here's a practical setup approach using a Python script that Claude Code can execute:
 
@@ -142,7 +142,7 @@ if __name__ == "__main__":
 
 This script forms the foundation of your metrics collection. Run it regularly to accumulate historical data that reveals trends over time.
 
-Persisting Metrics to JSON
+## Persisting Metrics to JSON
 
 Raw metrics are only useful when stored historically. Extend the script to append results to a rolling JSON file so you can compare week-over-week trends:
 
@@ -171,7 +171,7 @@ def append_metrics(metrics):
 
 Once you have several weeks of data, Claude Code can analyze `metrics_history.json` directly: ask it to identify trend inflections, flag weeks where metrics degraded, and suggest potential causes based on commit or PR volume patterns.
 
-Building an Automated Metrics Dashboard
+## Building an Automated Metrics Dashboard
 
 Once you've collected initial data, Claude Code can help you build a simple dashboard that visualizes key metrics. Create a script that generates HTML reports:
 
@@ -230,11 +230,11 @@ def generate_dashboard(metrics, output_file="metrics_dashboard.html"):
 
 This dashboard provides at-a-glance visibility into your review process. Customize it with additional metrics relevant to your team's goals.
 
-Adding Trend Charts
+## Adding Trend Charts
 
 For more advanced visualization, have Claude Code extend the dashboard to include a simple inline chart using Chart.js. Ask it to read the historical JSON file and render a line chart of average merge time per week. Because Chart.js is loaded from a CDN and uses vanilla JavaScript, there are no build-tool dependencies, the generated HTML file opens directly in any browser, making it easy to share with teammates who do not have local tooling configured.
 
-Implementing Continuous Metrics Tracking
+## Implementing Continuous Metrics Tracking
 
 Effective metrics tracking requires automation. Set up a workflow that Claude Code executes on a schedule:
 
@@ -282,7 +282,7 @@ jobs:
 
 This automation ensures you consistently capture metrics without manual intervention, building a reliable historical dataset. The `[skip ci]` flag on the commit message prevents the workflow from triggering itself recursively.
 
-Local Development Alias
+## Local Development Alias
 
 For teams that want on-demand metrics without waiting for the scheduled run, add a shell alias to your project's developer onboarding script:
 
@@ -293,7 +293,7 @@ alias review-metrics="python scripts/collect_metrics.py && open metrics_dashboar
 
 Running `review-metrics` from the project root fetches the latest data and opens the dashboard in your default browser within a few seconds.
 
-Analyzing Metrics for Actionable Insights
+## Analyzing Metrics for Actionable Insights
 
 Collecting data is only valuable when you act on it. Claude Code can help analyze your metrics to identify specific improvement areas. Use the following prompt pattern after generating your metrics file:
 
@@ -311,7 +311,7 @@ High Rework Rate: High percentages of changes requested after initial review sug
 
 Uneven Reviewer Load: When one or two engineers handle most reviews, they become knowledge silos and burn out. Claude Code can parse your reviewer distribution data and flag imbalances: any reviewer handling more than 30% of reviews is a risk to sustainable team velocity.
 
-Sample Analysis Prompt Workflow
+## Sample Analysis Prompt Workflow
 
 Here is a repeatable workflow you can run monthly using Claude Code:
 
@@ -328,7 +328,7 @@ claude "Using the same data, generate a markdown summary table suitable for a te
 
 This three-step workflow takes under five minutes and produces a retro-ready summary without any manual data wrangling.
 
-Integrating Metrics into Team Workflow
+## Integrating Metrics into Team Workflow
 
 Successfully implementing metrics requires team buy-in and proper integration. Start with these steps:
 
@@ -342,7 +342,7 @@ Successfully implementing metrics requires team buy-in and proper integration. S
 
 5. Avoid Gamification Pitfalls: Metrics should reflect genuine process quality, not encourage superficial behavior. If you track comment counts, watch for a pattern where engineers add trivial nit comments just to hit a threshold. If you see this, shift to tracking comment resolution rate instead.
 
-Embedding Metrics in Pull Request Templates
+## Embedding Metrics in Pull Request Templates
 
 One practical integration is surfacing relevant context directly in PR descriptions. Add a lightweight GitHub Actions step that posts a comment on each new PR showing the author's personal review stats:
 
@@ -355,7 +355,7 @@ One practical integration is surfacing relevant context directly in PR descripti
 
 The `author_stats.py` script reads `metrics_history.json`, filters by author, and outputs a short markdown summary: average PR size, average cycles to merge, and last five PR outcomes. Authors see their own patterns and can self-correct before reviewers even look at the code.
 
-Best Practices for Metrics Workflow
+## Best Practices for Metrics Workflow
 
 Follow these guidelines to ensure your metrics workflow remains valuable:
 
@@ -371,14 +371,13 @@ Keep Historical Data in Version Control: Storing `metrics_history.json` in your 
 
 Segment by PR Type: Not all PRs are equal. A one-line hotfix and a 500-line feature refactor should not share the same target merge time. Add a PR type field to your schema and segment your metrics accordingly so you are comparing like with like.
 
-Conclusion
+## Conclusion
 
 Implementing a code review metrics workflow with Claude Code transforms abstract data into actionable insights that improve your development process. By automating collection, building dashboards, and analyzing trends, you gain visibility into how your team reviews code and where improvements are possible.
 
 Start small with basic metrics like PR count and review time, then expand as your workflow matures. The key is consistency, regular collection and analysis that builds the historical data needed to identify meaningful patterns and drive continuous improvement in your code review process.
 
 Claude Code accelerates every part of this workflow: it generates the collection scripts, extends the dashboard, analyzes trend data, and drafts team-facing summaries. The investment in setting up this pipeline pays dividends every sprint, turning your review process from a black box into a measurable, improvable system.
-
 
 Related Reading
 

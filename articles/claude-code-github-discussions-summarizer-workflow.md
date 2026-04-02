@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code GitHub Discussions Summarizer Workflow"
 description: "Learn how to build an automated workflow that uses Claude Code to summarize GitHub Discussions, saving time and helping teams stay informed."
@@ -13,7 +12,6 @@ tags: [claude-code, claude-skills, github, automation, workflow]
 reviewed: true
 score: 7
 ---
-
 
 {% raw %}
 Claude Code GitHub Discussions Summarizer Workflow
@@ -32,7 +30,7 @@ An automated summarizer solves these problems by:
 - Saving hours of manual reading time
 - Making discussion content accessible to newcomers
 
-Prerequisites
+## Prerequisites
 
 Before building your summarizer workflow, ensure you have:
 
@@ -40,7 +38,7 @@ Before building your summarizer workflow, ensure you have:
 - A GitHub Personal Access Token with `repo` and `read:discussion` scopes
 - Basic familiarity with shell scripting and JSON processing
 
-Core Architecture
+## Core Architecture
 
 The workflow consists of three main components:
 
@@ -48,7 +46,7 @@ The workflow consists of three main components:
 2. Content Processor: Extracts relevant information from each discussion
 3. Summary Generator: Uses Claude Code to generate concise, actionable summaries
 
-Setting Up the Environment
+## Setting Up the Environment
 
 Create a new directory for your workflow and set up the necessary configuration:
 
@@ -67,7 +65,7 @@ export REPO_NAME="your-repo"
 export OUTPUT_DIR="./summaries"
 ```
 
-Fetching GitHub Discussions
+## Fetching GitHub Discussions
 
 The first step is retrieving discussions from your target repository. Here's a shell script that fetches open discussions:
 
@@ -108,7 +106,7 @@ curl -s -X POST \
 
 This script uses GitHub's GraphQL API to fetch the 20 most recently updated open discussions along with their comments.
 
-Processing Discussion Data
+## Processing Discussion Data
 
 Once you have the raw discussion data, you need to format it for Claude Code. Create a script to extract and structure the content:
 
@@ -138,7 +136,7 @@ jq -r '.data.repository.discussions.nodes[] | @base64' "$OUTPUT_DIR/discussions_
 done
 ```
 
-Building the Summary Prompt
+## Building the Summary Prompt
 
 The key to getting useful summaries is crafting an effective prompt. Here's a prompt template optimized for GitHub Discussions:
 
@@ -172,7 +170,7 @@ Write a 3-4 sentence summary that a developer could read to understand the discu
 Now analyze this discussion:
 ```
 
-Generating Summaries with Claude Code
+## Generating Summaries with Claude Code
 
 Now create the main automation script that processes each discussion through Claude Code:
 
@@ -208,11 +206,11 @@ done
 echo "All summaries generated!"
 ```
 
-Advanced Features
+## Advanced Features
 
 Once you have the basic workflow running, consider adding these enhancements:
 
-Scheduled Automation
+## Scheduled Automation
 
 Use cron to run your summarizer daily:
 
@@ -221,7 +219,7 @@ Add to crontab
 0 9 * * * cd ~/github-discussion-summarizer && ./generate_summaries.sh
 ```
 
-Category Filtering
+## Category Filtering
 
 Modify the GraphQL query to focus on specific discussion categories:
 
@@ -229,7 +227,7 @@ Modify the GraphQL query to focus on specific discussion categories:
 discussions(first: 20, first: 10, category: {slug: "q-and-a"}) {
 ```
 
-Notification Integration
+## Notification Integration
 
 Send summaries to Slack or Discord using webhooks:
 
@@ -243,7 +241,7 @@ curl -s -X POST "$WEBHOOK_URL" \
   -d "{\"text\": \"New Discussion Summary available: $(cat $SUMMARY_FILE)\"}"
 ```
 
-Best Practices
+## Best Practices
 
 When implementing this workflow in production, keep these tips in mind:
 
@@ -252,7 +250,7 @@ When implementing this workflow in production, keep these tips in mind:
 - Filtering: Focus on discussions with recent activity to avoid summarizing stale threads
 - Customization: Tailor the summary prompt to your team's specific needs and priorities
 
-Conclusion
+## Conclusion
 
 Automating GitHub Discussion summaries with Claude Code transforms how your team consumes community feedback. Instead of spending hours scanning through threads, developers can quickly review concise summaries and focus on high-value work. The workflow is flexible, start with the basic version and extend it as your needs evolve.
 

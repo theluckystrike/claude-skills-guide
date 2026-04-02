@@ -13,9 +13,7 @@ permalink: /claude-skills-for-automated-github-issue-triage/
 ---
 {% raw %}
 
-
-
-Automated GitHub Issue Triage with Claude Skills
+## Automated GitHub Issue Triage with Claude Skills
 
 Managing GitHub issues at scale quickly becomes overwhelming. When your repository accumulates hundreds of issues, manually triaging each one, categorizing, labeling, assigning priority, and routing to the right maintainers, eats away development time. Claude skills offer a practical solution by automating these workflows while maintaining accuracy.
 
@@ -23,7 +21,7 @@ This guide covers how to build an automated GitHub issue triage system using Cla
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. They give Claude standing instructions for recurring tasks without requiring you to re-explain the context each time.
 
-Understanding the Triage Pipeline
+## Understanding the Triage Pipeline
 
 Before implementing automation, identify the stages where Claude skills add value:
 
@@ -34,7 +32,7 @@ Before implementing automation, identify the stages where Claude skills add valu
 
 Each stage can use Claude skills to process the issue content intelligently.
 
-Extracting Issue Content with Claude Code
+## Extracting Issue Content with Claude Code
 
 The foundation of automated triage is reading issue data reliably. Claude Code can fetch issue data directly via the GitHub CLI:
 
@@ -48,7 +46,7 @@ gh issue list --label "" --json number,title,body --limit 50 > unlabeled_issues.
 
 With the data in hand, you can paste it into a Claude Code session or reference the file directly.
 
-Creating a Triage Skill
+## Creating a Triage Skill
 
 Build a custom triage skill at `~/.claude/skills/issue-triage.md`:
 
@@ -78,7 +76,7 @@ Here are 10 unlabeled issues from our repository. Classify each one.
 [paste issue JSON from gh issue list output]
 ```
 
-Applying Labels with GitHub CLI
+## Applying Labels with GitHub CLI
 
 Once Claude provides triage decisions, apply them programmatically:
 
@@ -93,7 +91,7 @@ Close a duplicate
 gh issue close 456 --comment "Closing as duplicate of #123"
 ```
 
-Integrating with GitHub Actions
+## Integrating with GitHub Actions
 
 For a fully automated pipeline, combine shell-based triage with GitHub Actions:
 
@@ -127,7 +125,7 @@ jobs:
 
 The classification script uses Claude's API to analyze the issue, then applies labels via `gh issue edit`. This is separate from Claude skills, it's a standalone script that calls the Anthropic API programmatically for a server-side automation task.
 
-Practical Triage Rules
+## Practical Triage Rules
 
 Rather than relying entirely on AI classification, establish rules that can be applied consistently:
 
@@ -155,7 +153,7 @@ def calculate_priority(issue_data):
     return 'high' if score >= 4 else 'medium' if score >= 2 else 'low'
 ```
 
-Using supermemory for Pattern Tracking
+## Using supermemory for Pattern Tracking
 
 The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) tracks historical patterns across triage sessions. Invoke it to record what you learn:
 
@@ -167,7 +165,7 @@ The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) tra
 
 Over time, supermemory builds a reference that makes triage faster and more consistent.
 
-Handling Edge Cases
+## Handling Edge Cases
 
 Duplicate detection. Before labeling a new issue, search for existing ones:
 
@@ -187,13 +185,13 @@ Are any of these duplicates? If so, which one should we close as a duplicate of 
 
 Needs more info. Issues lacking reproduction steps get a `needs-information` label and a polite comment. Your triage skill's output includes a `comment_if_needed` field, use that text with `gh issue comment`.
 
-Skills Worth Adding to Your Triage Workflow
+## Skills Worth Adding to Your Triage Workflow
 
 - [tdd](/best-claude-skills-for-developers-2026/). When issues describe desired behavior, use `/tdd` to generate test cases that capture the expected functionality
 - webapp-testing. For UI bug reports, use `/webapp-testing` to attempt reproducing the described behavior against a local dev server
 - supermemory. Maintains ongoing context about issue patterns, module owners, and historical resolution times
 
-Monitoring and Iteration
+## Monitoring and Iteration
 
 Track triage accuracy over time. Log when humans override AI-generated labels:
 
@@ -206,7 +204,7 @@ def log_triage_feedback(issue_id, ai_labels, human_labels):
 
 Review these logs monthly. Patterns emerge, perhaps certain issue types are consistently misclassified, or priority scoring needs adjustment based on your team's actual velocity.
 
-Summary
+## Summary
 
 Automated GitHub issue triage using Claude skills reduces maintainer burden while ensuring consistent classification. Start with a custom `/issue-triage` skill for interactive triage sessions, then layer in GitHub Actions for automated labeling on new issues. Use supermemory to accumulate pattern knowledge, and maintain a feedback loop for continuous improvement.
 

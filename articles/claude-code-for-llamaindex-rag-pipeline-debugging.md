@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for LlamaIndex RAG Pipeline Debugging
 
 Debugging Retrieval-Augmented Generation (RAG) pipelines built with LlamaIndex can be challenging, especially when dealing with complex document processing, embedding generation, and query understanding. Claude Code provides a powerful toolkit that makes debugging these pipelines significantly more manageable. This guide explores how to use Claude Code's skills and features to effectively debug LlamaIndex RAG pipelines, including practical code examples, diagnostic patterns, and strategies for fixing the most common failure modes.
 
-Understanding RAG Pipeline Components
+## Understanding RAG Pipeline Components
 
 Before diving into debugging, it's essential to understand the key components of a LlamaIndex RAG pipeline:
 
@@ -33,7 +32,7 @@ Before diving into debugging, it's essential to understand the key components of
 
 Each component presents potential points of failure that require systematic debugging. The challenge is that failures are often silent. the pipeline runs without errors but produces irrelevant answers or empty results. A disciplined, stage-by-stage approach is the only reliable way to isolate root causes.
 
-Where Failures Typically Occur
+## Where Failures Typically Occur
 
 | Pipeline Stage | Common Failure Mode | Visible Symptom |
 |---|---|---|
@@ -47,7 +46,7 @@ Where Failures Typically Occur
 
 Understanding which stage is failing saves hours of debugging. The approach below tests each stage in isolation before combining them.
 
-Setting Up Claude Code for RAG Debugging
+## Setting Up Claude Code for RAG Debugging
 
 Start by ensuring Claude Code is properly configured with the necessary skills. The most relevant skills for RAG debugging include:
 
@@ -68,7 +67,7 @@ pip install llama-index llama-index-callbacks-arize-phoenix arize-phoenix
 
 Phoenix provides a full observability UI for LlamaIndex traces, which is invaluable when you need to see exactly what happened during a multi-step query.
 
-Practical Debugging Techniques
+## Practical Debugging Techniques
 
 1. Inspecting Document Loading
 
@@ -368,11 +367,11 @@ def run_regression(query_engine, golden_path=GOLDEN_SET):
 
 Run this after every pipeline change. A drop in pass rate pinpoints which queries broke and guides your next debugging session.
 
-Common RAG Issues and Solutions
+## Common RAG Issues and Solutions
 
-Issue 1: Retrieval Returns No Results
+## Issue 1: Retrieval Returns No Results
 
-Symptoms: Queries return empty source nodes
+## Symptoms: Queries return empty source nodes
 
 Debugging Approach:
 1. Verify the vector store contains embeddings with `len(index.docstore.docs)`
@@ -382,9 +381,9 @@ Debugging Approach:
 
 Fix: Usually either re-index from scratch (if dimension mismatch) or reduce `similarity_cutoff` from the default (if threshold is too aggressive).
 
-Issue 2: Poor Response Quality
+## Issue 2: Poor Response Quality
 
-Symptoms: Responses are irrelevant or incomplete
+## Symptoms: Responses are irrelevant or incomplete
 
 Debugging Approach:
 1. Examine retrieved context for relevance. print the full text of each source node
@@ -394,9 +393,9 @@ Debugging Approach:
 
 Fix: Most quality issues trace back to chunks that are either too small (no context) or too large (diluted signal). Run the chunk evaluation function with three different sizes and compare recall.
 
-Issue 3: Slow Query Performance
+## Issue 3: Slow Query Performance
 
-Symptoms: Queries take excessive time
+## Symptoms: Queries take excessive time
 
 Debugging Approach:
 1. Check vector database indexing. FAISS in-memory is fast; Chroma or Weaviate with network calls adds latency
@@ -413,9 +412,9 @@ Fix: Profile each stage using the Phoenix callback handler. Typically either the
 | Reduce similarity_top_k from 10 to 3 | 2–3x | May miss relevant context |
 | Use async query engine | Near-linear scaling | More complex error handling |
 
-Issue 4: Hallucinations and Fabricated Facts
+## Issue 4: Hallucinations and Fabricated Facts
 
-Symptoms: LLM generates confident-sounding answers not supported by retrieved context
+## Symptoms: LLM generates confident-sounding answers not supported by retrieved context
 
 Debugging Approach:
 1. Print retrieved source nodes alongside the response. verify the claim appears in the context
@@ -424,7 +423,7 @@ Debugging Approach:
 
 Fix: Add an explicit instruction in the synthesizer prompt: "Only answer using the provided context. If the context does not contain the answer, say you don't know." Also increase `similarity_top_k` to provide more context options.
 
-Best Practices for RAG Debugging
+## Best Practices for RAG Debugging
 
 1. Incremental Testing - Test each pipeline component independently before integration. Never try to debug retrieval quality when you haven't yet confirmed documents are loading correctly.
 
@@ -448,7 +447,7 @@ storage_context = StorageContext.from_defaults(persist_dir="./storage")
 index = load_index_from_storage(storage_context)
 ```
 
-Advanced Debugging with Claude Code
+## Advanced Debugging with Claude Code
 
 For complex RAG issues, use Claude Code's ability to analyze your entire codebase:
 
@@ -502,7 +501,7 @@ sub_question_engine = SubQuestionQueryEngine.from_defaults(query_engine_tools=to
 response = sub_question_engine.query("Compare the performance of feature A and feature B in the latest release")
 ```
 
-Debugging Checklist
+## Debugging Checklist
 
 Use this checklist before escalating a RAG pipeline issue:
 
@@ -515,7 +514,7 @@ Use this checklist before escalating a RAG pipeline issue:
 - [ ] Confirmed index is persisted and loaded, not rebuilt on each query
 - [ ] Run regression test suite after any configuration change
 
-Conclusion
+## Conclusion
 
 Debugging LlamaIndex RAG pipelines requires a systematic approach and the right tools. Claude Code provides essential capabilities for analyzing documents, examining pipeline components, and identifying issues at each stage. By following the techniques outlined in this guide. stage-by-stage isolation, quantitative chunk evaluation, embedding consistency checks, and regression testing. you can effectively diagnose and resolve common RAG pipeline problems, leading to more reliable and accurate retrieval-augmented generation systems.
 
@@ -523,7 +522,6 @@ The most important mindset shift is treating debugging as measurement, not guess
 
 Remember that successful RAG debugging is iterative. continuously monitor, analyze, and refine your pipeline based on real-world performance and user feedback.
 {% endraw %}
-
 
 Related Reading
 

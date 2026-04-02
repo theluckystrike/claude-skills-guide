@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for On-Call Runbook Workflow Tutorial
 
@@ -25,11 +24,11 @@ Claude Code is Anthropic's CLI tool that brings Claude's reasoning capabilities 
 
 The key advantage is that Claude Code doesn't just follow scripts, it understands context. It knows which services depend on which databases, understands your deployment patterns, and can adapt runbook steps to your specific environment.
 
-Setting Up Your First Claude-Managed Runbook
+## Setting Up Your First Claude-Managed Runbook
 
 Before diving into complex workflows, let's set up a basic runbook structure that Claude Code can work with. The goal is to create runbooks that are both human-readable and machine-executable.
 
-Project Structure
+## Project Structure
 
 Create a runbook directory in your project:
 
@@ -61,7 +60,7 @@ Remediation
 3. Scale up if needed: `kubectl scale deployment/payment --replicas=5`
 ```
 
-Creating Claude-Enabled Runbook Scripts
+## Creating Claude-Enabled Runbook Scripts
 
 The real power comes from creating executable runbooks that Claude Code can run autonomously. Let's create a Python script that Claude can execute during incidents.
 
@@ -137,7 +136,7 @@ if __name__ == "__main__":
     print(f"\n Report saved to incident-report-{runner.service}.json")
 ```
 
-Integrating Claude Code with Your Runbooks
+## Integrating Claude Code with Your Runbooks
 
 Now comes the magic part, letting Claude Code interact with your runbooks. Create a `CLAUDE.md` file in your project root to give Claude context about your runbooks:
 
@@ -172,11 +171,11 @@ Emergency Contacts
 - Incident Commander: PagerDuty escalation
 ```
 
-Interactive Incident Response Workflow
+## Interactive Incident Response Workflow
 
 When you're on-call and something goes wrong, here's how to work with Claude Code effectively:
 
-Step 1: Initial Assessment
+## Step 1: Initial Assessment
 
 ```bash
 claude "Something is wrong with our payment service. Error rates are up 40%. 
@@ -186,7 +185,7 @@ what's happening."
 
 Claude will read the runbook, understand your service topology, and start running diagnostic commands.
 
-Step 2: Collaborative Diagnosis
+## Step 2: Collaborative Diagnosis
 
 Claude doesn't just run commands, it explains what's happening:
 
@@ -199,7 +198,7 @@ Based on the runbook and current metrics, I see:
 Let me check the recent deployment to confirm the hypothesis...
 ```
 
-Step 3: Guided Remediation
+## Step 3: Guided Remediation
 
 Once Claude identifies the issue, it walks you through fixes:
 
@@ -215,9 +214,9 @@ kubectl rollout undo deployment/payment-api
 Would you like me to execute this, or would you prefer to do it manually?
 ```
 
-Best Practices for Claude-Managed Runbooks
+## Best Practices for Claude-Managed Runbooks
 
-Keep Runbooks Living Documents
+## Keep Runbooks Living Documents
 
 The biggest failure of traditional runbooks is stagnation. With Claude Code, you can keep runbooks current by:
 
@@ -225,7 +224,7 @@ The biggest failure of traditional runbooks is stagnation. With Claude Code, you
 2. Auto-update from deployments: Add post-deploy hooks that document changes
 3. Review after incidents: Update runbooks based on what actually worked
 
-Use Descriptive Command Patterns
+## Use Descriptive Command Patterns
 
 Claude performs better when commands are well-documented:
 
@@ -237,7 +236,7 @@ Check Service Health
 - If fails: Check events with `kubectl describe pods -l app=YOUR_SERVICE`
 ```
 
-Implement Graduated Severity Responses
+## Implement Graduated Severity Responses
 
 Create separate workflows for different severity levels:
 
@@ -257,7 +256,7 @@ def handle_incident(severity, symptoms):
         provide_diagnostic_commands()
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms on-call from a stressful, error-prone experience into a structured, confident response process. By combining well-documented runbooks with Claude's autonomous execution capabilities, you get the best of both worlds: human judgment for critical decisions and automated execution for repetitive tasks.
 

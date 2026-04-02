@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for LazyGit Workflow Tutorial Guide
 
@@ -21,7 +20,7 @@ Version control is the backbone of modern software development, and mastering gi
 
 This guide walks you through integrating Claude Code with LazyGit, providing practical examples and actionable workflows you can start using immediately.
 
-What is LazyGit and Why Use It
+## What is LazyGit and Why Use It
 
 LazyGit is a terminal user interface for git commands that provides a visual, keyboard-driven approach to version control. Instead of memorizing complex git commands or switching between terminal and GitHub's web interface, you can perform operations like staging files, reviewing changes, and managing branches through an interactive TUI.
 
@@ -32,7 +31,7 @@ The benefits of using LazyGit include:
 - Reduced cognitive load: Intuitive interface reduces the need to recall git syntax
 - Faster reviews: Quickly stage, unstage, and review diffs
 
-Setting Up LazyGit with Claude Code
+## Setting Up LazyGit with Claude Code
 
 Before integrating with Claude Code, ensure LazyGit is installed on your system. The installation process varies by operating system:
 
@@ -49,7 +48,7 @@ Windows
 winget install lazygit
 ```
 
-Configuring LazyGit for Optimal Use
+## Configuring LazyGit for Optimal Use
 
 Create a configuration file at `~/.config/lazygit/config.yml` to customize your setup:
 
@@ -67,7 +66,7 @@ ui:
 
 This configuration enables untracked file visibility and customizes the author display. Adjust these settings based on your preferences.
 
-Integrating Claude Code for Smarter Git Operations
+## Integrating Claude Code for Smarter Git Operations
 
 Claude Code can enhance your LazyGit workflow in several ways:
 
@@ -105,9 +104,9 @@ description: Clean up merged local branches
 This skill helps clean up local branches that have been merged into main.
 ```
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Daily Development Workflow
+## Daily Development Workflow
 
 Here's a typical workflow combining LazyGit and Claude Code:
 
@@ -117,7 +116,7 @@ Here's a typical workflow combining LazyGit and Claude Code:
 4. Get AI assistance: Ask Claude Code to review your staged changes
 5. Commit with confidence: Use Claude's suggested message or write your own
 
-Handling Merge Conflicts
+## Handling Merge Conflicts
 
 When merge conflicts arise, Claude Code becomes particularly valuable:
 
@@ -128,7 +127,7 @@ View conflicts in LazyGit, then ask Claude
 
 Claude displays each conflict section and guides you through the resolution process.
 
-Code Review Before Committing
+## Code Review Before Committing
 
 Before committing significant changes, use Claude for preliminary review:
 
@@ -138,9 +137,9 @@ Before committing significant changes, use Claude for preliminary review:
 
 This preemptive review catches common mistakes before they enter the commit history.
 
-Advanced Patterns
+## Advanced Patterns
 
-Custom LazyGit Keybindings
+## Custom LazyGit Keybindings
 
 Extend LazyGit's functionality with custom keybindings that trigger Claude Code commands:
 
@@ -156,7 +155,7 @@ keybinding:
         description: "AI commit message"
 ```
 
-Creating a Claude Skill for Git Operations
+## Creating a Claude Skill for Git Operations
 
 Build a reusable skill for common git tasks:
 
@@ -184,7 +183,7 @@ Ask me to:
 - "Help me resolve these conflicts"
 ```
 
-Automating Repetitive Tasks
+## Automating Repetitive Tasks
 
 Use Claude Code to handle repetitive git operations:
 
@@ -194,9 +193,9 @@ Use Claude Code to handle repetitive git operations:
 
 Claude executes the branch creation, stages relevant files, and prepares for commit, all within your LazyGit workflow.
 
-Actionable Advice
+## Actionable Advice
 
-Best Practices
+## Best Practices
 
 1. Commit frequently: LazyGit makes staging and committing quick, use it
 2. Write meaningful messages: Let Claude help generate descriptive commits
@@ -204,21 +203,21 @@ Best Practices
 4. Clean up regularly: Remove merged branches to keep your repo organized
 5. Use staging: Stage partial changes to create focused commits
 
-Performance Tips
+## Performance Tips
 
 - Use Custom Views: Configure LazyGit views for your most-used operations
 - Keyboard Over Mouse: Master keyboard shortcuts for speed
 - Mnemonic Keys: Learn the logical keybindings (`s` for stage, `u` for unstaged)
 - Quick Access: Set up aliases for frequently-used LazyGit commands
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 - Avoid large commits: Break changes into logical, reviewable units
 - Don't skip reviews: Use Claude's AI review even for quick changes
 - Never force push to shared branches: Maintain collaboration integrity
 - Backup before destructive operations: LazyGit confirms deletions, but verify first
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with LazyGit transforms your version control workflow from a necessary chore into an efficient, intelligent process. LazyGit provides the visual, keyboard-driven interface that makes git operations accessible, while Claude Code adds AI-powered assistance for understanding, reviewing, and optimizing your changes.
 

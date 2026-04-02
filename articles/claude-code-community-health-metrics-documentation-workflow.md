@@ -13,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Community Health Metrics Documentation Workflow
 
 Building a thriving community around your Claude Code skills requires more than just great code, it demands systematic tracking of community health metrics and clear documentation workflows. This guide walks you through establishing a comprehensive documentation system that helps you understand your community's needs, track engagement, and make data-driven decisions about your skills' evolution.
 
-Why Community Health Metrics Matter
+## Why Community Health Metrics Matter
 
 Community health metrics provide visibility into how developers interact with your Claude Code skills. Without documented metrics, you're essentially flying blind, you can't identify which features matter most, where contributors are dropping off, or whether your community is actually growing.
 
 Effective metrics documentation serves multiple purposes: it helps maintainers prioritize development efforts, provides transparency for contributors, and creates a foundation for governance decisions. When your metrics are well-documented, every stakeholder can understand the project's trajectory and contribute meaningfully.
 
-Key Metrics to Track
+## Key Metrics to Track
 
 Your documentation should capture several categories of health metrics:
 
@@ -35,11 +34,11 @@ Contribution Metrics reflect community participation. Monitor pull requests, iss
 
 Quality Metrics assess the health of your codebase. Document test coverage, vulnerability counts, response time to issues, and the percentage of documented APIs.
 
-Establishing Your Documentation Workflow
+## Establishing Your Documentation Workflow
 
 A sustainable documentation workflow ensures metrics stay current without overwhelming your team. Here's how to build one that scales:
 
-Step 1: Define Your Data Collection Points
+## Step 1: Define Your Data Collection Points
 
 Identify where metrics can be automatically collected versus manually tracked. For automatic collection, set up scripts that pull data from GitHub APIs, package managers, and analytics tools. For manual metrics, create templates that contributors can fill out during regular activities.
 
@@ -62,7 +61,7 @@ metrics:
       frequency: daily
 ```
 
-Step 2: Create Documentation Templates
+## Step 2: Create Documentation Templates
 
 Standardize how you record metrics to ensure consistency across your team. Create templates for weekly, monthly, and quarterly reviews that capture the same data points each period.
 
@@ -87,7 +86,7 @@ Quality
 - Average issue response time: {{response_time}}h
 ```
 
-Step 3: Automate Where Possible
+## Step 3: Automate Where Possible
 
 Manual tracking quickly becomes unsustainable. Invest in automation early:
 
@@ -116,11 +115,11 @@ jobs:
         uses: peter-evans/create-pull-request@v5
 ```
 
-Practical Example: Building a Metrics Dashboard
+## Practical Example: Building a Metrics Dashboard
 
 Let's walk through creating a comprehensive metrics documentation system for a Claude skill project.
 
-Setting Up the Data Pipeline
+## Setting Up the Data Pipeline
 
 First, establish a script that pulls metrics from multiple sources and consolidates them:
 
@@ -174,7 +173,7 @@ class MetricsCollector:
         return response.json()
 ```
 
-Generating Documentation
+## Generating Documentation
 
 After collecting data, generate readable documentation:
 
@@ -208,19 +207,19 @@ Action Items
     return report
 ```
 
-Maintaining Your Documentation Workflow
+## Maintaining Your Documentation Workflow
 
 Documentation workflows fail when they're not integrated into regular practice. Here's how to keep yours healthy:
 
-Schedule Regular Reviews
+## Schedule Regular Reviews
 
 Block time weekly for metrics review and monthly for comprehensive analysis. Treat these appointments as non-negotiable, they're as important as fixing critical bugs.
 
-Involve the Community
+## Involve the Community
 
 Share metrics publicly and invite community participation in interpretation. Often, developers closest to the code spot patterns that maintainers miss. Consider creating a `#community-health` channel or regular community calls focused on metrics discussion.
 
-Set Alert Thresholds
+## Set Alert Thresholds
 
 Define what constitutes concerning metrics and configure alerts:
 
@@ -238,11 +237,11 @@ thresholds:
     stale_issues_percent: > 30%
 ```
 
-Iterate and Improve
+## Iterate and Improve
 
 Your metrics documentation should evolve. Quarterly, review what's working and what isn't. Remove metrics that don't drive decisions, add new ones as your community changes, and refine how you present information.
 
-Actionable Takeaways
+## Actionable Takeaways
 
 Start building your community health metrics documentation today:
 

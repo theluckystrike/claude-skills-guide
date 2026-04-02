@@ -18,7 +18,7 @@ When working with Claude Code or Claude desktop skills, you will inevitably enco
 
 This guide provides practical patterns for developers and power users dealing with conflicting instructions in Claude MD environments. For a deeper look at the skill format itself, see the [Claude skill .md format complete specification guide](/claude-skill-md-format-complete-specification-guide/).
 
-Understanding Instruction Conflicts
+## Understanding Instruction Conflicts
 
 An instruction conflict occurs when two or more directives cannot all be satisfied simultaneously. In Claude's architecture, conflicts can arise at several levels:
 
@@ -31,7 +31,7 @@ For example, a `pdf` skill might instruct Claude to extract all table data, whil
 
 Consider a more subtle conflict: a documentation skill tells Claude to always include code comments, while a brevity-focused skill says to keep outputs minimal. Neither instruction is wrong in isolation, but together they produce inconsistent output depending on which one Claude weights more heavily at any given moment. These quiet conflicts are often more damaging than obvious ones because they are harder to detect and reproduce.
 
-Why Conflicts Are More Common Than You Expect
+## Why Conflicts Are More Common Than You Expect
 
 Most developers start with a single skill and add more as their workflows grow. Each new skill is written in isolation, which means it carries implicit assumptions about what other skills are or are not doing. The `frontend-design` skill assumes it has full latitude over component structure. The `tdd` skill assumes it controls how functions are shaped to be testable. When both load together, they tug at the same decisions from different angles.
 
@@ -39,7 +39,7 @@ System prompts in `CLAUDE.md` add another layer. A project-level `CLAUDE.md` mig
 
 The cost of leaving conflicts unresolved is not just wrong output on a single run. It is variance. the same prompt producing different results in different sessions, making your workflows unreliable and harder to debug.
 
-Resolution Strategies
+## Resolution Strategies
 
 1. Explicit Priority Declaration
 
@@ -175,9 +175,9 @@ function findOverlappingDirectives(skills) {
 
 The logging output becomes invaluable during debugging when you cannot tell why Claude followed one skill's guidance instead of another's.
 
-Practical Examples
+## Practical Examples
 
-Example 1: PDF Extraction with Schema Validation
+## Example 1: PDF Extraction with Schema Validation
 
 You want to extract data from a PDF while ensuring type consistency:
 
@@ -204,7 +204,7 @@ Using the pdf-with-validation skill configuration:
 
 The numbered steps reinforce the sequential structure defined in the skill configuration.
 
-Example 2: Frontend Design with Testing
+## Example 2: Frontend Design with Testing
 
 When `frontend-design` and `tdd` both load, they may conflict on code structure preferences:
 
@@ -222,7 +222,7 @@ This declares that when test files exist, the `tdd` skill guidance overrides `fr
 
 In practice, this resolves the most common friction between these two skills. The `frontend-design` skill might prefer colocation of styles and markup in a single component file, while `tdd` wants functions extracted so they can be unit tested independently. Giving `tdd` precedence when test files exist means Claude will structure new components with testing in mind. smaller functions, explicit prop interfaces, and separated logic. rather than optimizing purely for visual organization.
 
-Example 3: Memory and Documentation Conflicts
+## Example 3: Memory and Documentation Conflicts
 
 The `supermemory` skill might want to record every action, while you want selective logging:
 
@@ -242,7 +242,7 @@ supermemory:
 
 This pattern is particularly relevant for long-running workflows where indiscriminate logging creates noise that buries important decisions. By declaring what to record and what to ignore, you maintain a useful audit trail without filling memory with every file read and tool call.
 
-Example 4: Tone Conflicts Between Project and User Instructions
+## Example 4: Tone Conflicts Between Project and User Instructions
 
 A `CLAUDE.md` at the user level might set Claude's communication style to "concise, no explanations," while a project-level `CLAUDE.md` requires verbose, documented output for audit purposes. Both are legitimate preferences in their respective contexts.
 
@@ -257,7 +257,7 @@ For conversational replies and status updates, follow user-level tone settings.
 
 The key is separating code output (where verbosity has audit value) from conversational output (where brevity improves usability). Most tone conflicts can be resolved this way. by narrowing the scope of each instruction so they no longer overlap.
 
-Best Practices
+## Best Practices
 
 Define a clear hierarchy before starting complex projects. Document which skills take precedence and under what conditions. A simple table in your project `CLAUDE.md` works well:
 
@@ -280,7 +280,7 @@ Keep skill instruction scope narrow. Skills that define behavior for a broad sur
 
 Document resolution decisions. When you add a priority declaration or override to resolve a conflict, add a comment explaining why. Six months later, neither you nor another developer will remember what prompted the resolution, and removing it may reintroduce the original problem.
 
-Common Pitfalls
+## Common Pitfalls
 
 Avoid leaving conflicts unresolved. Unaddressed conflicts lead to unpredictable behavior where Claude may:
 
@@ -296,7 +296,7 @@ Circular dependencies can emerge in fallback chains if you are not careful. If s
 
 Forgetting about `CLAUDE.md` as a conflict source. Developers focus on skill-to-skill conflicts but often overlook that project or user `CLAUDE.md` files can conflict with skill instructions just as easily. Audit your `CLAUDE.md` files when adding new skills to look for overlapping directives.
 
-Conclusion
+## Conclusion
 
 Resolving conflicting instructions in Claude MD requires explicit strategy rather than hoping for implicit correctness. By declaring priority, using phase-based execution, implementing fallback chains, and using conflict detection hooks, you build reliable systems that handle ambiguity gracefully.
 

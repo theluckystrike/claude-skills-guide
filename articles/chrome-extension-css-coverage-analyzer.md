@@ -13,18 +13,17 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Chrome Extension CSS Coverage Analyzer: Identify Unused Styles
+## Chrome Extension CSS Coverage Analyzer: Identify Unused Styles
 
 CSS coverage analysis helps developers discover which stylesheet rules your application actually uses versus what gets loaded but never applied. Chrome DevTools includes built-in coverage functionality, and several Chrome extensions extend this capability with enhanced features for development workflows. This guide explains how CSS coverage analysis works, what tools exist, and how to use them effectively.
 
-Understanding CSS Coverage Analysis
+## Understanding CSS Coverage Analysis
 
 When a browser loads a webpage, it parses all linked and inline CSS files, building a stylesheet that gets applied to the DOM. However, many styles never match any element, perhaps from deprecated utility classes, leftover code from refactoring, or conditional styles for features users never. These unused styles still consume bandwidth, increase parsing time, and add complexity to your stylesheets.
 
 CSS coverage analysis works by instrumenting the CSS engine to track which rules match any element during page load and interaction. Chrome's DevTools Protocol exposes this through the CSS domain, enabling tools to collect per-rule usage statistics.
 
-Using Chrome DevTools Coverage Tab
+## Using Chrome DevTools Coverage Tab
 
 Chrome DevTools provides native coverage analysis without requiring any extension:
 
@@ -38,15 +37,15 @@ The coverage tab displays each CSS file with a percentage indicating how much of
 
 This native feature works well for manual analysis, but developers often need more, extensions can automate reporting, integrate with build processes, and provide continuous monitoring.
 
-Chrome Extensions for CSS Coverage Analysis
+## Chrome Extensions for CSS Coverage Analysis
 
 Several extensions enhance the native DevTools functionality:
 
-CSS Coverage Plus
+## CSS Coverage Plus
 
 This extension adds batch coverage collection, export capabilities, and comparison between runs. You can capture coverage across multiple pages in a single session, then export results as JSON or CSV for analysis. The comparison feature highlights rules that became unused after code changes, useful for catching regression.
 
-Puppeteer-based Coverage Scripts
+## Puppeteer-based Coverage Scripts
 
 For automated testing pipelines, you can programmatically collect CSS coverage using Puppeteer:
 
@@ -83,7 +82,7 @@ async function collectCSSCoverage(url) {
 
 This approach integrates with CI/CD pipelines, allowing you to fail builds when CSS coverage drops below a threshold.
 
-DevTools Protocol Implementation
+## DevTools Protocol Implementation
 
 For custom tooling, directly using the Chrome DevTools Protocol provides maximum flexibility:
 
@@ -114,15 +113,15 @@ async function analyzeCSS(fileUrl) {
 }
 ```
 
-Practical Workflow for Removing Unused CSS
+## Practical Workflow for Removing Unused CSS
 
 Follow this systematic approach to clean up unused styles:
 
-Step 1: Establish a Baseline
+## Step 1: Establish a Baseline
 
 Run coverage analysis on your production build during typical user flows. Capture both mobile and desktop views, as responsive designs often include conditional styles that appear unused on one viewport.
 
-Step 2: Categorize Unused Rules
+## Step 2: Categorize Unused Rules
 
 Not all unused CSS represents dead code. Distinguish between:
 
@@ -143,15 +142,15 @@ Mark conditional and dynamic rules with comments to avoid accidental removal:
 .dynamic-class-{id} { }
 ```
 
-Step 3: Prioritize Impact
+## Step 3: Prioritize Impact
 
 Sort unused rules by file size impact. Removing a 50KB unused stylesheet provides more value than fifty 1KB rules. Focus on large frameworks or UI kits where unused styles accumulate quickly.
 
-Step 4: Verify and Deploy
+## Step 4: Verify and Deploy
 
 After removing unused styles, re-run coverage analysis to confirm no regressions. Test across browsers, as different engines may apply rules differently. Deploy incrementally, monitoring for style-related bug reports.
 
-Limitations and Considerations
+## Limitations and Considerations
 
 CSS coverage analysis has constraints worth understanding:
 
@@ -163,7 +162,7 @@ Pseudo-classes and States: Coverage captures initial page load plus interaction-
 
 Inlined Styles: Styles applied via JavaScript's `style` property aren't tracked in CSS coverage, use different tooling for inline style auditing.
 
-Build Tool Integration
+## Build Tool Integration
 
 Modern build tools can automate CSS purging based on coverage analysis:
 
@@ -173,10 +172,9 @@ Modern build tools can automate CSS purging based on coverage analysis:
 
 These tools complement runtime coverage analysis by performing static elimination at build time, reducing the runtime investigation needed.
 
-Conclusion
+## Conclusion
 
 CSS coverage analysis through Chrome DevTools and related extensions provides essential visibility into stylesheet efficiency. By systematically identifying and removing unused CSS, you reduce page weight, improve load times, and simplify stylesheet maintenance. Start with the native coverage tab for quick audits, then explore extensions and build tool integrations for automated, continuous optimization.
-
 
 Related Reading
 

@@ -15,7 +15,7 @@ Claude Code Docker Compose API Tutorial Guide
 
 Docker Compose has become an essential tool for developers working with APIs. When combined with Claude Code, it creates a powerful workflow for building, testing, and deploying API services. This comprehensive guide will walk you through setting up a complete API development environment using Docker Compose and Claude Code.
 
-Understanding the Docker Compose API Workflow
+## Understanding the Docker Compose API Workflow
 
 Docker Compose allows you to define and run multi-container applications. For API development, you'll typically have containers for your API server, database, cache, and potentially other services like message queues or authentication services.
 
@@ -26,11 +26,11 @@ Claude Code can interact with your Docker Compose setup to help you:
 - Write integration tests
 - Document your API infrastructure
 
-Setting Up Your First API Stack
+## Setting Up Your First API Stack
 
 Let's create a practical example of a REST API stack using Docker Compose. We'll build a simple TODO API with Node.js, PostgreSQL, and Redis.
 
-Creating the Docker Compose Configuration
+## Creating the Docker Compose Configuration
 
 First, create a `docker-compose.yml` file in your project root:
 
@@ -78,7 +78,7 @@ volumes:
 
 This configuration sets up three services: your Node.js API, PostgreSQL database, and Redis cache. The `depends_on` ensures services start in the correct order.
 
-Creating the API Service
+## Creating the API Service
 
 Create a simple Express.js API to work with this stack. Here's a basic setup:
 
@@ -125,11 +125,11 @@ app.post('/api/todos', async (req, res) => {
 app.listen(3000, () => console.log('API running on port 3000'));
 ```
 
-Working with Claude Code
+## Working with Claude Code
 
 Claude Code can help you at every stage of your Docker Compose API development workflow. Here are practical ways to use it:
 
-Generating Configuration Files
+## Generating Configuration Files
 
 When starting a new project, ask Claude Code to generate appropriate Docker configurations:
 
@@ -141,11 +141,11 @@ volume mounting.
 
 Claude will generate a complete configuration tailored to your requirements.
 
-Debugging Container Issues
+## Debugging Container Issues
 
 When containers fail to start or behave unexpectedly, Claude Code can help analyze logs and identify problems. Provide the output of `docker-compose logs` and ask for debugging assistance.
 
-Writing Tests
+## Writing Tests
 
 Claude Code excels at writing integration tests for your API:
 
@@ -181,11 +181,11 @@ describe('TODO API', () => {
 });
 ```
 
-Best Practices for Docker Compose API Development
+## Best Practices for Docker Compose API Development
 
 Follow these recommendations for efficient API development with Docker Compose:
 
-Use Health Checks
+## Use Health Checks
 
 Always define health checks for your services:
 
@@ -207,7 +207,7 @@ services:
 
 This ensures your API container waits until the database is ready before starting.
 
-Implement Proper Environment Management
+## Implement Proper Environment Management
 
 Use environment files for sensitive configuration:
 
@@ -226,7 +226,7 @@ services:
       - .env
 ```
 
-Use Named Volumes for Development
+## Use Named Volumes for Development
 
 Named volumes persist data across container restarts:
 
@@ -236,7 +236,7 @@ volumes:
     driver: local
 ```
 
-Optimize for Development Speed
+## Optimize for Development Speed
 
 Use volume mounting and live reload:
 
@@ -250,11 +250,11 @@ services:
       - NODE_ENV=development
 ```
 
-Managing Multiple Environments
+## Managing Multiple Environments
 
 As your project grows, you'll need different configurations for development, staging, and production:
 
-Development Override
+## Development Override
 
 Create a `docker-compose.override.yml` for local development:
 
@@ -275,7 +275,7 @@ services:
 
 This automatically merges with your base configuration when running `docker-compose up`.
 
-Production Configuration
+## Production Configuration
 
 Create `docker-compose.prod.yml` for production:
 
@@ -299,11 +299,11 @@ services:
 
 Deploy with: `docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d`
 
-Testing Your API Stack
+## Testing Your API Stack
 
 Automated testing is crucial for reliable API development. Here's a testing workflow:
 
-Unit Tests
+## Unit Tests
 
 Test individual functions and components in isolation:
 
@@ -321,7 +321,7 @@ describe('Todo Service', () => {
 });
 ```
 
-Integration Tests
+## Integration Tests
 
 Test API endpoints with a running database:
 
@@ -348,7 +348,7 @@ describe('API Integration Tests', () => {
 });
 ```
 
-End-to-End Tests
+## End-to-End Tests
 
 Simulate real user scenarios:
 
@@ -372,15 +372,15 @@ test('complete todo workflow', async ({ page }) => {
 });
 ```
 
-Deployment Considerations
+## Deployment Considerations
 
 When deploying your Docker Compose API stack to production:
 
-Use Docker Swarm or Kubernetes
+## Use Docker Swarm or Kubernetes
 
 For production workloads, consider orchestrating with Docker Swarm or Kubernetes. Docker Compose files can often be converted to Kubernetes manifests using tools like `kompose`.
 
-Implement Monitoring
+## Implement Monitoring
 
 Add monitoring to track API performance:
 
@@ -396,7 +396,7 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
 ```
 
-Set Up Log Aggregation
+## Set Up Log Aggregation
 
 Centralize logs for debugging:
 
@@ -410,7 +410,7 @@ services:
         tag: "api.{{.Name}}"
 ```
 
-Conclusion
+## Conclusion
 
 Combining Docker Compose with Claude Code creates a powerful development environment for building APIs. Docker Compose handles the complexity of multi-container applications, while Claude Code assists with configuration generation, debugging, testing, and documentation.
 

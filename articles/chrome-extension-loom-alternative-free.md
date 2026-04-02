@@ -13,13 +13,12 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Screen recording has become essential for developer workflows, creating tutorials, bug reports, and code walkthroughs. Loom set the standard, but its free tier comes with limitations that frustrate power users. Several legitimate free alternatives exist, each with distinct trade-offs worth understanding.
 
 This guide evaluates Chrome extensions and desktop applications that replace Loom's core functionality without subscription costs. You'll find options ranging from simple browser-based tools to fully self-hosted solutions.
 
-Screenity: The Strongest Free Alternative
+## Screenity: The Strongest Free Alternative
 
 Screenity stands out as the most capable free Loom alternative for Chrome. It offers unlimited recording without watermarks, supports system audio capture, and runs entirely in-browser without requiring desktop software.
 
@@ -38,7 +37,7 @@ The extension captures your entire screen, a specific application window, or a b
 
 One limitation: Screenity stores recordings locally by default. If you need cloud hosting, you'll need to integrate with Google Drive or upload recordings manually. This trade-off actually benefits privacy-conscious developers, you control where your content lives.
 
-OBS Studio: Professional-Grade Free Recording
+## OBS Studio: Professional-Grade Free Recording
 
 For developers willing to step outside the browser, OBS Studio provides unlimited recording with no strings attached. While not a Chrome extension, it integrates smoothly with any browser-based workflow.
 
@@ -58,7 +57,7 @@ OBS Studio exceeds Loom's capabilities in several areas: custom scenes, multiple
 
 The desktop application approach means you can't trigger recordings directly from browser shortcuts. However, you can create keyboard shortcuts mapped to OBS scenes, achieving similar convenience.
 
-ShareX: Windows Power User Choice
+## ShareX: Windows Power User Choice
 
 ShareX dominates Windows screen capture and offers recording capabilities that rival Loom's premium features. It captures screenshots, GIFs, and video recordings with an extensive customization ecosystem.
 
@@ -78,7 +77,7 @@ ShareX dominates Windows screen capture and offers recording capabilities that r
 
 The main drawback is platform exclusivity. ShareX runs only on Windows, making it unsuitable for macOS and Linux developers. However, if your workflow centers on Windows, ShareX provides exceptional value with zero cost.
 
-Chrome Built-in Capture API
+## Chrome Built-in Capture API
 
 For developers building custom solutions, Chrome's native APIs enable programmatic screen recording without third-party extensions. The `getDisplayMedia()` API provides direct access to screen capture:
 
@@ -111,7 +110,7 @@ async function startRecording() {
 
 This approach requires building a custom extension or application, but offers complete control. You can implement your own upload logic, add custom annotations, or integrate with internal tooling.
 
-Self-Hosted Alternatives
+## Self-Hosted Alternatives
 
 Developers with infrastructure knowledge can deploy self-hosted recording solutions. This approach eliminates ongoing costs while providing complete data ownership.
 
@@ -129,7 +128,7 @@ Integrate with your custom Chrome extension
 
 Peer5 and similar WebRTC-based solutions enable real-time recording and streaming. These work well for live code reviews and collaborative sessions, though setup complexity increases.
 
-Comparing the Options
+## Comparing the Options
 
 | Tool | Platform | Cost | Cloud Storage | Audio Capture | Best For |
 |------|-----------|------|---------------|---------------|----------|
@@ -138,7 +137,7 @@ Comparing the Options
 | ShareX | Windows | Free | Configurable | Yes | Power users |
 | Custom API | Custom | Development time | Your choice | Yes | Integrated workflows |
 
-Recommendations by Use Case
+## Recommendations by Use Case
 
 Bug reporting: Use Screenity for quick captures with system audio. The speed of browser-based recording matters when documenting reproducible issues.
 
@@ -148,12 +147,11 @@ Internal team communication: Consider self-hosted solutions if compliance requir
 
 Developer tool integration: Build custom solutions using `getDisplayMedia()`. Connect recordings directly to your issue tracker or documentation pipeline.
 
-Conclusion
+## Conclusion
 
 Free Loom alternatives exist and some exceed Loom's free tier capabilities. Screenity handles most use cases with minimal friction. OBS Studio serves developers prioritizing production quality. ShareX satisfies Windows power users. For complete control, custom implementations using Chrome's APIs unlock unlimited customization.
 
 The "free" label sometimes masks limitations, watch for recording time caps, watermarks, or restricted export options. Screenity's unlimited recording without watermarks makes it the most honest free alternative. For professional workflows, OBS Studio's zero cost combined with maximum flexibility earns its place in any developer's toolkit.
-
 
 Related Reading
 

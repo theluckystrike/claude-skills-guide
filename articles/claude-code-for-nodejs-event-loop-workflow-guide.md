@@ -13,10 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
 The Node.js event loop is the heart of asynchronous JavaScript execution, yet it remains one of the most misunderstood concepts for many developers. Understanding how the event loop works is essential for building high-performance Node.js applications, and Claude Code can be an invaluable partner in this learning journey. This guide walks you through practical Node.js event loop patterns with actionable examples that you can immediately apply to your projects.
 
-Understanding the Event Loop Phases
+## Understanding the Event Loop Phases
 
 The Node.js event loop consists of several phases that execute in a specific order: timers, pending callbacks, idle/prepare, poll, check, and close callbacks. Each phase has its own queue of callbacks waiting to be processed. When you run Node.js, the event loop continuously cycles through these phases as long as there are events to process.
 
@@ -63,7 +62,7 @@ Claude Code can help you experiment with these phases by generating variations o
 
 One powerful use of Claude Code here is asking it to trace the execution order of a specific file. Paste your code and say: "Walk me through the execution order of every async callback in this file and explain which event loop phase each one belongs to." Claude will produce a numbered trace that makes the invisible visible.
 
-Promises and the Microtask Queue
+## Promises and the Microtask Queue
 
 Understanding how promises interact with the event loop is critical for modern Node.js development. Promises and `process.nextTick()` callbacks run in the microtask queue, which executes between event loop phases and takes priority over regular callbacks.
 
@@ -114,11 +113,11 @@ function drainQueue() {
 
 Use Claude Code to analyze your existing async code and identify potential microtask ordering issues. Ask: "Does this code have any nextTick recursion or microtask starvation risks?"
 
-Practical Patterns for Async Operations
+## Practical Patterns for Async Operations
 
 When building real applications, you'll frequently encounter scenarios where you need to control execution order, handle multiple async operations, or prevent callback hell. Here are battle-tested patterns that work well with Claude Code assistance.
 
-Sequential Execution with async/await
+## Sequential Execution with async/await
 
 Sequential execution is the simplest mental model but comes at a performance cost. each operation waits for the previous one to finish. Use this when operations depend on one another's results.
 
@@ -137,7 +136,7 @@ async function fetchUserData(userId) {
 }
 ```
 
-Parallel Execution with Promise.all
+## Parallel Execution with Promise.all
 
 When operations are independent, run them in parallel. This can dramatically reduce total latency. three 100ms database calls run in ~100ms total instead of ~300ms.
 
@@ -167,7 +166,7 @@ async function fetchAllDataSafe(userId) {
 }
 ```
 
-Controlled Concurrency with p-limit
+## Controlled Concurrency with p-limit
 
 Parallel execution without limits can overwhelm databases, APIs, or file descriptors. Controlled concurrency lets you run N operations at a time, keeping throughput high without exhausting resources.
 
@@ -181,7 +180,7 @@ const results = await Promise.all(
 );
 ```
 
-Comparing Async Patterns at a Glance
+## Comparing Async Patterns at a Glance
 
 | Pattern | When to Use | Tradeoff |
 |---|---|---|
@@ -193,7 +192,7 @@ Comparing Async Patterns at a Glance
 
 Ask Claude Code to refactor your existing callback-based code to use these modern patterns. Claude can identify nested callbacks and transform them into cleaner async/await syntax. A useful prompt: "Refactor this function from callback style to async/await and add proper error handling."
 
-Event Loop Blocking and Performance
+## Event Loop Blocking and Performance
 
 One common mistake is blocking the event loop with CPU-intensive operations. This prevents Node.js from processing other events and can cause your entire application to freeze. Every millisecond spent in a synchronous loop is a millisecond where HTTP requests go unhandled, timers fire late, and users experience latency.
 
@@ -254,7 +253,7 @@ async function processLargeArray(items) {
 
 This pattern keeps your application responsive even when processing millions of records. Claude Code can analyze your codebase for patterns that might block the event loop and suggest appropriate solutions, whether that means using Worker Threads, breaking up operations with `setImmediate`, or offloading to external services.
 
-Diagnosing Event Loop Lag in Production
+## Diagnosing Event Loop Lag in Production
 
 Event loop lag is the delay between when a callback is scheduled and when it actually executes. Under normal conditions this is under 1ms. When it climbs above 50ms, users notice. Above 200ms, requests time out.
 
@@ -299,7 +298,7 @@ setTimeout(() => {
 
 Feed these metrics into your observability stack (Datadog, Prometheus, CloudWatch) to get alerts before users are impacted.
 
-Actionable Advice for Daily Development
+## Actionable Advice for Daily Development
 
 Here are practical tips you can start applying immediately:
 
@@ -335,7 +334,7 @@ Claude can also help you write targeted benchmarks using `autocannon` or `wrk` t
 npx autocannon -c 100 -d 10 http://localhost:3000/api/data
 ```
 
-Common Mistakes and How to Avoid Them
+## Common Mistakes and How to Avoid Them
 
 | Mistake | Symptom | Fix |
 |---|---|---|
@@ -346,7 +345,7 @@ Common Mistakes and How to Avoid Them
 | Recursive `nextTick` | App hangs | Replace with `setImmediate` |
 | Missing error handlers on EventEmitters | Crash on first error | Always attach `.on('error', handler)` |
 
-Conclusion
+## Conclusion
 
 The Node.js event loop doesn't have to be mysterious. With practical examples and Claude Code assistance, you can build solid async applications that perform well under production load. Start with the simple patterns in this guide, experiment with variations, and gradually incorporate more advanced techniques as your understanding deepens.
 

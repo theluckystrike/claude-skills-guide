@@ -16,7 +16,7 @@ permalink: /claude-skills-for-rust-systems-programming/
 
 [Rust systems programming demands precision with memory safety](/claude-code-skills-for-c-sharp-dotnet-developers/), zero-cost abstractions, and fearless concurrency. Claude Code skills can accelerate your development workflow by providing specialized guidance for Rust-specific challenges. This guide covers practical applications of Claude skills for systems programming tasks.
 
-Setting Up Rust-Focused Skills
+## Setting Up Rust-Focused Skills
 
 Claude skills are Markdown files that inject specialized instructions into your coding sessions. For Rust development, you can activate built-in skills or create custom ones targeting systems programming patterns.
 
@@ -24,7 +24,7 @@ To check available skills in Claude Code, run `ls ~/.claude/skills/` in your ter
 
 For Rust-specific work, the general coding skills provide solid foundations, but creating custom skills targeting Rust idioms yields better results. Place custom skills in `~/.claude/skills/` with the `.md` extension.
 
-Why Rust-Specific Skills Matter
+## Why Rust-Specific Skills Matter
 
 Generic coding skills treat all languages similarly. A Rust-specific skill tells Claude to apply Rust idioms by default: prefer `Result` over panics, minimize `clone()` calls, use `&str` slices over `String` where appropriate, and audit unsafe blocks for invariant documentation. This shifts the conversation from "how do I fix this borrow error" to "here is the ownership design that avoids the error entirely."
 
@@ -38,7 +38,7 @@ The table below shows the difference in guidance quality a custom skill provides
 | Unsafe block | Writes the block, no comments | Documents SAFETY invariants inline |
 | Performance question | General advice | Checks allocation paths, suggests profiling with `perf` or `criterion` |
 
-Working with Unsafe Code
+## Working with Unsafe Code
 
 Systems programming frequently requires unsafe Rust for FFI bindings, manual memory management, and performance-critical sections. Claude can help you write safer unsafe code by applying strict discipline.
 
@@ -69,7 +69,7 @@ When working with unsafe code, Claude can verify:
 - Dereferenced blocks contain no undefined behavior
 - FFI boundaries use appropriate transmute patterns
 
-The Minimal Unsafe Surface Rule
+## The Minimal Unsafe Surface Rule
 
 One of the most effective practices Claude enforces when using a Rust skill is minimizing the surface area of unsafe blocks. Rather than marking a whole function unsafe, isolate the unsafe operation to the smallest possible scope and expose a safe public API:
 
@@ -91,11 +91,11 @@ pub fn read_at<T: Copy>(buf: &[u8], offset: usize) -> T {
 
 The `pub` API is entirely safe. Only the one-liner read is unsafe, surrounded by explicit bounds checking. Claude generates this wrapper pattern automatically when you describe your use case.
 
-Memory Management Patterns
+## Memory Management Patterns
 
 Rust's ownership system eliminates garbage collection but requires careful design. Claude skills can guide you through common memory patterns in systems code.
 
-Manual Drop with std::mem
+## Manual Drop with std::mem
 
 For deferring drops or taking ownership of invalid values:
 
@@ -116,7 +116,7 @@ fn forget_allocation() {
 
 Claude can suggest when to use `mem::forget` versus explicit drops, and warn about memory leaks in long-running systems programs. The primary legitimate use of `mem::forget` is when transferring ownership to a foreign function that will take responsibility for freeing the memory. for instance, when implementing a C callback that hands a heap allocation back to C code.
 
-Reference Cycles with Rc and RefCell
+## Reference Cycles with Rc and RefCell
 
 For shared ownership in more complex graphs:
 
@@ -146,7 +146,7 @@ fn shared_reference_example() {
 
 For performance-critical systems code, Claude can advise on when to use `Rc` versus `Arc`, and whether interior mutability patterns are appropriate for your use case.
 
-Choosing the Right Smart Pointer
+## Choosing the Right Smart Pointer
 
 Claude skill guidance for smart pointer selection follows a clear decision tree:
 
@@ -161,7 +161,7 @@ Claude skill guidance for smart pointer selection follows a clear decision tree:
 
 When you describe your data structure to Claude with the Rust skill active, it reasons through this table and recommends the correct combination rather than defaulting to the most permissive option.
 
-FFI and C Interoperability
+## FFI and C Interoperability
 
 Rust excels at calling C libraries, but FFI requires careful attention to ABI compatibility. Here's a practical example binding to a C library:
 
@@ -199,7 +199,7 @@ When working with FFI, Claude can verify:
 - Error handling covers all C error paths
 - Raw pointer lifetimes prevent use-after-free bugs
 
-Exposing Rust to C
+## Exposing Rust to C
 
 Going the other direction. exporting Rust functions for use from C. requires `#[no_mangle]` and `extern "C"` declarations. Claude generates the correct signatures including `repr(C)` struct annotations:
 
@@ -244,11 +244,11 @@ pub unsafe extern "C" fn rust_free_string(ptr: *mut c_char) {
 
 Claude ensures the matching `free_*` function is always generated alongside any `into_raw()` call, preventing the most common FFI memory leak.
 
-Performance Optimization Patterns
+## Performance Optimization Patterns
 
 Systems programming often requires squeezing out maximum performance. Claude can help identify optimization opportunities in your Rust code.
 
-Stack Allocation with Inline Arrays
+## Stack Allocation with Inline Arrays
 
 For performance-sensitive code with known sizes:
 
@@ -263,7 +263,7 @@ fn sum_vec(arr: &Vec<i32>) -> i32 {
 }
 ```
 
-Avoiding Iterator Overhead When Needed
+## Avoiding Iterator Overhead When Needed
 
 Sometimes iterators add overhead that matters in hot paths:
 
@@ -283,7 +283,7 @@ fn iterator_sum(values: &[i32]) -> i32 {
 
 For the compiler, both may optimize identically, but in tight loops with branch prediction, explicit indexing sometimes performs better on specific architectures. Always benchmark before committing to one approach.
 
-Benchmarking with Criterion
+## Benchmarking with Criterion
 
 Claude generates benchmark harnesses using `criterion` so you can measure rather than guess:
 
@@ -309,7 +309,7 @@ criterion_main!(benches);
 
 Ask Claude to generate criterion benchmarks for any hot path you're uncertain about. The `black_box` wrapper prevents the compiler from optimizing away the computation entirely, giving you realistic measurements.
 
-Allocation Profiling
+## Allocation Profiling
 
 For systems that must operate within tight memory budgets, Claude can help you audit allocation sites. The pattern is to wrap your allocator with a counting shim during testing:
 
@@ -346,7 +346,7 @@ fn hot_path_makes_no_allocations() {
 
 Claude generates this pattern and adapts the assertion to your specific function under test.
 
-Building Custom Rust Skills
+## Building Custom Rust Skills
 
 [Create a custom skill file](/claude-skill-md-format-complete-specification-guide/):
 
@@ -374,7 +374,7 @@ Activate this skill during Rust systems work:
 /rust-systems
 ```
 
-Combining Skills for Complex Projects
+## Combining Skills for Complex Projects
 
 For large systems projects you can stack skills. A typical combination for a Rust daemon that calls a C library and exposes a REST API might be:
 
@@ -386,7 +386,7 @@ For large systems projects you can stack skills. A typical combination for a Rus
 
 Claude applies all active skills simultaneously, so FFI code gets safety scrutiny while API handlers get idiomatic error response guidance.
 
-Practical Workflow
+## Practical Workflow
 
 When tackling a new systems programming task with Claude, start by describing the problem and target constraints. Claude can then help you:
 
@@ -398,7 +398,7 @@ When tackling a new systems programming task with Claude, start by describing th
 6. Run `cargo clippy -- -D warnings` to catch idiom violations before review
 7. Profile with `criterion` and the counting allocator pattern to verify memory budgets
 
-Example Session: Wrapping a C Compression Library
+## Example Session: Wrapping a C Compression Library
 
 A concrete example of the workflow in action: suppose you need to wrap `libzstd` for use in a Rust service. Describe this to Claude with the Rust skill active and the session proceeds as follows:
 
@@ -415,7 +415,6 @@ For ongoing projects, periodic code review sessions with Claude help maintain sa
 ---
 
 Rust systems programming rewards precision. Claude skills enhance your workflow by providing instant guidance on patterns, catching subtle bugs in unsafe code, and helping you navigate the borrow checker. The combination enables productive systems programming while maintaining safety guarantees.
-
 
 Related Reading
 

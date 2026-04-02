@@ -17,7 +17,7 @@ score: 8
 
 Chromebooks have evolved significantly, but resource constraints remain a reality, especially when running multiple development tools, Docker containers, or browser-based IDEs. Choosing the lightest browser for your Chromebook directly impacts your workflow efficiency and system responsiveness. This guide evaluates browser options specifically for developers and power users who need minimal resource consumption without sacrificing essential functionality.
 
-Why Browser Weight Matters on Chromebooks
+## Why Browser Weight Matters on Chromebooks
 
 Chromebooks typically feature ARM-based processors or entry-level Intel chips with limited RAM compared to traditional laptops. When you run a browser alongside development environments, the browser's memory footprint becomes critical. A lightweight browser can mean the difference between a smooth development session and constant tab-thrashing.
 
@@ -34,7 +34,7 @@ The key metrics to consider are:
 
 Understanding these metrics lets you make an informed trade-off rather than just picking the browser with the lowest raw memory number.
 
-Top Lightweight Browser Options
+## Top Lightweight Browser Options
 
 1. Chrome (with Optimization)
 
@@ -94,7 +94,7 @@ Install on ChromeOS Linux container
 sudo apt install falkon
 ```
 
-Memory profile: Approximately 150-200MB baseline with minimal per-tab overhead
+## Memory profile: Approximately 150-200MB baseline with minimal per-tab overhead
 
 Falkon is a specialized tool. Its extension ecosystem is small enough that most developers will find it unusable as a primary browser. Where it shines is as a dedicated browser for a single task, running a local preview server, viewing static HTML output, or browsing documentation that does not require login or complex JavaScript.
 
@@ -113,7 +113,7 @@ Ungoogled Chromium occupies an interesting position: it has roughly the same mem
 
 The trade-off is update lag. Ungoogled Chromium releases follow upstream Chromium with a delay, which means you may be running a browser version that is behind on security patches. On a dedicated development machine that does not handle sensitive credentials, this is an acceptable risk. On a machine where you also do banking or access production credentials, it is not.
 
-Performance Benchmarks
+## Performance Benchmarks
 
 Here's a comparative memory analysis under standardized conditions (10 tabs, including GitHub, Stack Overflow, and a documentation site):
 
@@ -129,7 +129,7 @@ These figures vary based on your specific Chromebook model and ChromeOS version.
 
 The per-tab average is more actionable than baseline RAM for development workflows. Developers routinely keep 8-15 tabs open, API docs, GitHub PRs, local dev server, issue tracker, and various reference pages. With Chrome at 85MB per tab, 12 tabs consumes about 1.3GB above baseline. With Falkon at 45MB per tab, the same 12 tabs consumes about 720MB above baseline. That 580MB difference is material on a 4GB Chromebook.
 
-CPU Usage Under Load
+## CPU Usage Under Load
 
 Memory is only part of the picture. CPU usage during page rendering affects perceived performance on lower-powered Chromebook CPUs:
 
@@ -143,11 +143,11 @@ Memory is only part of the picture. CPU usage during page rendering affects perc
 
 Brave's ad blocking has a measurable impact on CPU usage under active browsing conditions because it eliminates the JavaScript from third-party trackers and ads. Pages with heavy ad loads, common on tutorial and blog sites that developers browse regularly, render noticeably faster in Brave than Chrome on the same hardware.
 
-Optimizing Your Browser for Development
+## Optimizing Your Browser for Development
 
 Regardless of your browser choice, these optimizations improve performance on resource-constrained Chromebooks:
 
-Disable Unnecessary Services
+## Disable Unnecessary Services
 
 ```javascript
 // Chrome flags to disable in chrome://flags
@@ -158,7 +158,7 @@ Disable Unnecessary Services
 
 Hardware acceleration is counterintuitively worth disabling on some Chromebooks. The integrated GPUs in entry-level Chromebook chips sometimes perform worse with hardware acceleration enabled due to driver overhead. If you notice sluggish scrolling or high GPU memory usage, toggle this flag and test with it off.
 
-Use Tab Suspension Extensions
+## Use Tab Suspension Extensions
 
 Extensions like "The Great Suspender" automatically suspend inactive tabs:
 
@@ -173,7 +173,7 @@ Extensions like "The Great Suspender" automatically suspend inactive tabs:
 
 Whitelist your localhost development servers and any pages where you need live updates (CI dashboards, log tails). Everything else can safely suspend after 5-10 minutes of inactivity without impacting your workflow.
 
-Use Progressive Web Apps
+## Use Progressive Web Apps
 
 Convert frequently-used web apps to PWAs for reduced overhead:
 
@@ -185,7 +185,7 @@ lighthouse https://your-dev-app.com --view --preset=perf
 
 PWAs installed from Chrome or Brave run in their own lightweight window without the full browser chrome. Installing GitHub, Linear, Notion, or Figma as PWAs instead of keeping them as persistent tabs reduces your browser's tab count and moves their memory into separate, manageable processes. On ChromeOS, PWAs integrate with the shelf and app launcher, making them feel like native apps while using less overhead than a full browser tab.
 
-Profile Your Actual Memory Usage
+## Profile Your Actual Memory Usage
 
 Before making a browser switch, measure your current usage with Chrome's built-in Task Manager:
 
@@ -197,7 +197,7 @@ Look at the Memory footprint column for each tab and extension
 
 This often reveals that a small number of tabs or extensions are responsible for most of the memory consumption. A JavaScript-heavy single-page app might use 300-400MB by itself. An extension with a background service might consume 50-80MB continuously. Identifying the actual culprits lets you make targeted changes rather than switching browsers wholesale.
 
-Extension Recommendations for Developers
+## Extension Recommendations for Developers
 
 Even lightweight browsers need developer tools. Here are essential extensions that won't bog down your Chromebook:
 
@@ -211,7 +211,7 @@ A note on extension hygiene: each extension adds to your browser's memory footpr
 
 For API development specifically, consider replacing Postman (which is an Electron app that consumes significant RAM) with the Requestly extension or with Bruno (a native app with a lighter footprint). The goal is to keep your toolchain's total memory budget reasonable, and the browser is just one component of that budget.
 
-Making the Switch
+## Making the Switch
 
 If you're transitioning to a lighter browser, export your bookmarks and settings:
 
@@ -226,14 +226,13 @@ A phased approach works better than a hard cutover. Run your target lightweight 
 
 Pay attention to authentication flows. If you use browser-saved passwords or rely on a specific browser's integration with your password manager extension, verify these work in your target browser before switching. Some password managers have better support for Chromium-based browsers than for Firefox-based ones, and vice versa.
 
-Conclusion
+## Conclusion
 
 For developers on Chromebooks seeking the lightest browser, Falkon offers the lowest resource footprint but with limited extension support. Brave provides the best balance, lightweight enough for Chromebooks while maintaining Chrome extension compatibility. If you need full Chrome DevTools integration, stick with Chrome but aggressively manage tabs and disable unnecessary features.
 
 The "best" lightest browser ultimately depends on your specific workflow. Test each option with your actual development tasks before committing. Resource monitoring tools like Chrome's Task Manager (`Shift+Esc`) help you measure real-world impact.
 
 A practical recommendation: use Brave as your primary browser and supplement it with Falkon for read-only documentation browsing. Install your most-used web apps as PWAs to move them out of the browser tab pool. Enable Memory Saver in any Chromium-based browser you use. Audit your extensions quarterly. These steps will improve browser performance on any Chromebook more reliably than any single browser swap.
-
 
 Related Reading
 

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "AI Task Prioritizer Chrome Extension: A Practical Guide for Developers"
 description: "Build an AI-powered task prioritization Chrome extension with practical code examples. Learn to integrate AI APIs, manage task data, and create intuitive."
@@ -14,7 +13,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 AI Task Prioritizer Chrome Extension: A Practical Guide for Developers
 
@@ -26,7 +24,7 @@ Traditional task managers rely on manual prioritization, drag-and-drop, star rat
 
 The browser environment provides unique advantages. You have access to clipboard history, active tab context, and the ability to observe your browsing patterns. A well-designed AI task prioritizer can suggest tasks based on what you're currently working on, deadlines approaching in your calendar, or patterns in your productivity data.
 
-Core Architecture
+## Core Architecture
 
 An AI task prioritizer Chrome extension consists of four interconnected components:
 
@@ -37,9 +35,9 @@ An AI task prioritizer Chrome extension consists of four interconnected componen
 
 The data flows between these components using Chrome's message passing system. Content scripts gather context, background workers handle API calls and storage, and the popup provides the primary user interface.
 
-Implementation Guide
+## Implementation Guide
 
-Step 1: Manifest Configuration
+## Step 1: Manifest Configuration
 
 Your extension begins with the manifest file. Version 3 is required for modern Chrome extensions:
 
@@ -67,7 +65,7 @@ Your extension begins with the manifest file. Version 3 is required for modern C
 }
 ```
 
-Step 2: Task Data Model
+## Step 2: Task Data Model
 
 Define a structured format for tasks that includes the information your AI needs for prioritization:
 
@@ -87,7 +85,7 @@ const taskSchema = {
 };
 ```
 
-Step 3: AI Integration
+## Step 3: AI Integration
 
 The core value proposition comes from analyzing tasks and generating priority scores. Here's a practical implementation using a simple scoring algorithm that you can extend with more sophisticated AI:
 
@@ -156,7 +154,7 @@ function scoreContext(task, context) {
 }
 ```
 
-Step 4: Context Gathering
+## Step 4: Context Gathering
 
 A powerful feature of browser-based task management is gathering context from your current workflow:
 
@@ -193,7 +191,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Step 5: Popup Interface
+## Step 5: Popup Interface
 
 The popup provides quick access to your prioritized task list:
 
@@ -285,7 +283,7 @@ function renderTasks(tasks) {
 }
 ```
 
-Extending with Advanced AI
+## Extending with Advanced AI
 
 The implementation above uses rule-based scoring. For more sophisticated prioritization, consider integrating large language models through APIs. You can send task lists to services like Anthropic, OpenAI, or local models, and receive natural language explanations for recommendations.
 
@@ -298,7 +296,7 @@ and the context that I'm currently working on [context].
 Return the ranked list with brief reasoning for each.
 ```
 
-Performance Considerations
+## Performance Considerations
 
 Chrome extensions run in a constrained environment. Optimize your implementation by:
 
@@ -307,7 +305,7 @@ Chrome extensions run in a constrained environment. Optimize your implementation
 - Using Web Workers. Offload computation to prevent UI blocking
 - Limiting storage. Sync only essential data, keep history local
 
-Security and Privacy
+## Security and Privacy
 
 When handling task data, especially if including sensitive project information:
 
@@ -316,12 +314,11 @@ When handling task data, especially if including sensitive project information:
 - Provide clear user controls for data retention and deletion
 - Consider on-device inference for privacy-sensitive applications
 
-Conclusion
+## Conclusion
 
 Building an AI task prioritizer Chrome extension combines browser APIs, local storage, and AI inference into a powerful productivity tool. The extension architecture allows smooth integration with your workflow, gathering context from your browsing activity and surfacing actionable task recommendations when you need them.
 
 The code patterns shown here provide a foundation, you can extend the scoring algorithm, integrate more sophisticated AI services, or add features like calendar synchronization, time tracking, and team collaboration. Start with a minimal viable version and iterate based on your own productivity patterns.
-
 
 Related Reading
 

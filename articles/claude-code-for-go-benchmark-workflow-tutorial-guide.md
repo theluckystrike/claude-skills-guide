@@ -16,7 +16,7 @@ reviewed: true
 
 Go's built-in testing package provides powerful benchmarking capabilities, but setting up comprehensive benchmarks and analyzing their results can be time-consuming. Claude Code transforms this workflow by helping you write efficient benchmarks, interpret results, and iterate on performance optimizations. This guide walks you through a complete Go benchmark workflow enhanced with Claude Code.
 
-Setting Up Your Go Benchmark Environment
+## Setting Up Your Go Benchmark Environment
 
 Before integrating Claude Code, ensure your Go environment is properly configured. Create a dedicated benchmark directory and initialize your module:
 
@@ -30,7 +30,7 @@ Claude Code can help you set up the basic benchmark structure. Simply ask it to 
 
 The key is organizing your code so benchmarks live alongside the code they test. Go's convention places benchmark files in the same package as the code being tested, with the naming pattern `*_test.go`. Claude Code understands this convention and will generate appropriate benchmark code.
 
-Writing Effective Benchmarks with Claude Code Assistance
+## Writing Effective Benchmarks with Claude Code Assistance
 
 Writing benchmarks that accurately measure performance requires attention to detail. Claude Code can help you craft benchmarks that follow Go best practices and avoid common pitfalls.
 
@@ -89,7 +89,7 @@ func BenchmarkProcessStrings VariousSizes(b *testing.B) {
 
 This sub-benchmark pattern allows you to see performance characteristics across different input sizes in a single benchmark run.
 
-Running Benchmarks Effectively
+## Running Benchmarks Effectively
 
 Once your benchmarks are written, running them correctly is crucial for meaningful results. Claude Code can guide you through the various command-line options and help you interpret the output.
 
@@ -119,7 +119,7 @@ go test -bench=. -benchmem -count=5 ./...
 
 Running benchmarks multiple times helps identify variance in your measurements. Claude Code can help you analyze these results and determine whether differences are statistically significant.
 
-Analyzing Benchmark Results with Claude Code
+## Analyzing Benchmark Results with Claude Code
 
 Interpreting benchmark results requires understanding both the raw numbers and their practical implications. Claude Code excels at helping you make sense of complex benchmark output.
 
@@ -159,7 +159,7 @@ go test -bench=. -benchmem -json > benchmark_v2.json
 
 Claude Code can write a simple comparison script that highlights meaningful differences between the two runs.
 
-Integrating Benchmarks into CI/CD
+## Integrating Benchmarks into CI/CD
 
 Automating benchmark runs as part of your continuous integration ensures performance regressions are caught early. Claude Code can help you set up GitHub Actions or other CI systems to run and track benchmarks.
 
@@ -201,12 +201,11 @@ jobs:
 
 Claude Code can help you customize this workflow for your specific needs, such as comparing results against a baseline or alerting on regression.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your Go benchmark workflow significantly improves productivity. From writing initial benchmarks to analyzing results and setting up CI/CD automation, Claude Code serves as an knowledgeable partner throughout the process. The key is to start with well-structured benchmarks, run them consistently, and use the insights to guide your optimizations.
 
 Remember that benchmarks are most valuable when they reflect real-world usage patterns. Work with Claude Code to create benchmark scenarios that match your production workloads, and your optimization efforts will yield meaningful performance improvements.
-
 
 Related Reading
 

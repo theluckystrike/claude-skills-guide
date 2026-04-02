@@ -16,13 +16,13 @@ tags: [claude-code, claude-skills]
 
 Modern development often requires quickly generating code examples that match your project's specific patterns and requirements. Claude Code provides a powerful workflow for creating accurate, context-aware code examples that integrate smoothly with your existing codebase. This guide walks you through an effective methodology for generating high-quality code examples using Claude Code.
 
-Understanding the Workflow
+## Understanding the Workflow
 
 The code example generation workflow in Claude Code revolves around providing clear context, specifying requirements precisely, and iteratively refining the output. Unlike traditional documentation or tutorial resources, Claude Code can analyze your specific project structure and generate examples that follow your coding conventions.
 
 The process begins with establishing context. When you start a Claude Code session, you can provide information about your project stack, existing patterns, and specific requirements. This context allows Claude Code to generate examples that align with your codebase rather than generic tutorials.
 
-Setting Up Your Context
+## Setting Up Your Context
 
 Before generating code examples, establish your project context within Claude Code. This involves specifying:
 
@@ -38,7 +38,7 @@ Our components follow this pattern: [provide example]. Generate a data table
 component that handles sorting and pagination.
 ```
 
-Generating Practical Examples
+## Generating Practical Examples
 
 Once context is established, you can request specific code examples. The key to getting high-quality output lies in specificity. Rather than asking for "a function that processes user data," describe exactly what you need:
 
@@ -47,7 +47,7 @@ Once context is established, you can request specific code examples. The key to 
 - Integration points with your existing code
 - Any performance considerations
 
-API Endpoint Generation
+## API Endpoint Generation
 
 Consider generating a REST API endpoint. Instead of a generic example, specify your framework and requirements:
 
@@ -104,7 +104,7 @@ export default router;
 
 This example demonstrates how specificity yields better results. The output follows TypeScript conventions, includes proper error handling, and matches typical Express patterns.
 
-Integrating Claude Skills
+## Integrating Claude Skills
 
 Claude Code works exceptionally well when combined with specialized skills. The pdf skill can help you generate documentation for your code examples. The tdd skill assists in creating test-driven examples alongside your implementation code. The supermemory skill can remember your preferred patterns across sessions.
 
@@ -116,7 +116,7 @@ Generate both implementation and API documentation
 following OpenAPI specification
 ```
 
-Iterative Refinement
+## Iterative Refinement
 
 Code example generation rarely produces perfect output on the first try. The workflow embraces iteration. After receiving initial examples:
 
@@ -126,9 +126,9 @@ Code example generation rarely produces perfect output on the first try. The wor
 
 This iterative approach works particularly well for complex examples. A data processing pipeline might require several refinement cycles to handle all edge cases correctly.
 
-Workflow Best Practices
+## Workflow Best Practices
 
-Provide Realistic Constraints
+## Provide Realistic Constraints
 
 When generating examples, include real-world constraints that affect your implementation:
 
@@ -137,7 +137,7 @@ When generating examples, include real-world constraints that affect your implem
 - Browser compatibility needs
 - Security considerations
 
-Use Version Information
+## Use Version Information
 
 Specify library and framework versions to avoid generating outdated patterns. Claude Code can then provide examples using current best practices:
 
@@ -145,7 +145,7 @@ Specify library and framework versions to avoid generating outdated patterns. Cl
 Using Python 3.11, FastAPI 0.100+, and SQLAlchemy 2.0
 ```
 
-Request Multiple Approaches
+## Request Multiple Approaches
 
 For learning or comparison purposes, ask for multiple implementation approaches:
 
@@ -158,7 +158,7 @@ Show me three ways to implement caching:
 
 This helps you understand tradeoffs and choose the best approach for your specific use case.
 
-Automating Repetitive Generation
+## Automating Repetitive Generation
 
 For teams that frequently generate similar code patterns, you can establish templates within Claude Code. Define your common patterns once, then reuse them:
 
@@ -172,12 +172,11 @@ For teams that frequently generate similar code patterns, you can establish temp
 
 This approach accelerates development while maintaining consistency across your codebase.
 
-Conclusion
+## Conclusion
 
 The Claude Code code example generation workflow transforms how developers create and integrate code examples into their projects. By providing clear context, specifying requirements precisely, and iterating on the output, you generate examples that fit smoothly into your existing codebase. Combined with specialized skills like pdf for documentation and tdd for test coverage, this workflow becomes a powerful part of your development toolkit.
 
 The key is treating Claude Code as a collaborative partner rather than a simple code generator. The more context and feedback you provide, the better the examples become. Start with specific requirements, review the output critically, and refine iteratively until your code examples match your project's standards perfectly.
-
 
 Related Reading
 

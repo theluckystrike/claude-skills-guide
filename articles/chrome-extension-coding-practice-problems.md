@@ -16,7 +16,7 @@ score: 8
 
 Building Chrome extensions requires understanding browser-specific APIs, the extension lifecycle, and the nuances of Chrome's permission system. This guide provides practical coding problems that simulate real-world extension development scenarios, helping developers build production-ready extensions. Whether you are moving from Manifest V2 to V3, learning service worker constraints for the first time, or struggling with cross-context communication, the problems below offer focused, runnable examples you can adapt immediately.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before diving into practice problems, ensure your environment is properly configured. You'll need Chrome or Chromium-based browsers for testing, a code editor, and the Chrome Developer Tools.
 
@@ -47,7 +47,7 @@ Your manifest.json defines the extension's capabilities:
 
 To load the extension during development, navigate to `chrome://extensions`, enable Developer Mode in the upper-right corner, then click "Load unpacked" and select your project folder. Chrome will display any manifest errors immediately. Keep this tab open as you work, each time you make changes to the background script or manifest, click the refresh icon on your extension card to reload it.
 
-Manifest V2 vs. Manifest V3: What Changed
+## Manifest V2 vs. Manifest V3: What Changed
 
 Developers migrating from V2 face several breaking changes. Understanding the differences up front prevents wasted debugging time.
 
@@ -61,7 +61,7 @@ Developers migrating from V2 face several breaking changes. Understanding the di
 
 The most impactful change is the shift to service workers. Code that relied on a persistent background page keeping variables alive will silently fail in V3 because the service worker terminates after roughly 30 seconds of inactivity.
 
-Practice Problem 1: Message Passing Between Contexts
+## Practice Problem 1: Message Passing Between Contexts
 
 Chrome extensions operate across multiple execution contexts, background scripts, content scripts, and popup pages. Communicating between these contexts is a fundamental skill.
 
@@ -109,7 +109,7 @@ async function sendMessageToTab(tabId, message) {
 }
 ```
 
-One-time vs. long-lived connections
+## One-time vs. long-lived connections
 
 For simple request/response pairs, `chrome.tabs.sendMessage` is sufficient. For streaming data or ongoing communication (such as a sidebar panel that needs live updates), use `chrome.runtime.connect` to establish a long-lived port:
 
@@ -139,7 +139,7 @@ chrome.runtime.onConnect.addListener((port) => {
 
 Long-lived ports also keep the service worker alive for the duration of the connection, which is useful when you need the background script to remain active during multi-step operations.
 
-Practice Problem 2: Handling Asynchronous Operations
+## Practice Problem 2: Handling Asynchronous Operations
 
 Modern Chrome extensions frequently interact with storage, tabs, and network requests. Mastering async patterns is essential.
 
@@ -205,7 +205,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
 
 This pattern eliminates the need to send explicit messages for preference updates, the storage change event propagates automatically to all extension contexts.
 
-Practice Problem 3: Working with Declarative Net Requests
+## Practice Problem 3: Working with Declarative Net Requests
 
 Manifest V3 replaced webRequest with declarativeNetRequest for network filtering. This is a common friction point for developers.
 
@@ -253,7 +253,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 Remember that declarativeNetRequest requires the "declarativeNetRequest" permission and appropriate host permissions.
 
-Dynamic rules vs. static rules
+## Dynamic rules vs. static rules
 
 The API supports two rule sets:
 
@@ -281,7 +281,7 @@ async function setBlockingEnabled(enabled) {
 
 Dynamic rules have a limit of 5,000 per extension. If you need a larger list, consider static rules (up to 30,000) or apply server-side URL categorization to keep the active set small.
 
-Practice Problem 4: Service Worker Lifecycle Management
+## Practice Problem 4: Service Worker Lifecycle Management
 
 Background scripts in Manifest V3 are service workers, which introduces lifecycle considerations. They can be terminated after inactivity.
 
@@ -328,7 +328,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-The "service worker terminated" trap
+## The "service worker terminated" trap
 
 The `setInterval` call above has a subtle flaw: Chrome may terminate the service worker before the interval fires, and intervals do not persist across restarts. A more reliable pattern is to persist state immediately after every mutation rather than on a timer:
 
@@ -354,7 +354,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 This eliminates the race condition entirely: every write is immediately durable regardless of when the service worker terminates.
 
-Keeping the service worker alive for long tasks
+## Keeping the service worker alive for long tasks
 
 For operations that must complete without interruption, such as uploading a file or running a multi-step background job, use the chrome.alarms API to schedule periodic wakeups:
 
@@ -372,7 +372,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 Delete the alarm once the long-running task completes to avoid unnecessary wakeups.
 
-Practice Problem 5: Content Script Injection Patterns
+## Practice Problem 5: Content Script Injection Patterns
 
 Injecting scripts and styles into pages requires understanding the differences between static and programmatic injection.
 
@@ -409,7 +409,7 @@ function initExtension() {
 }
 ```
 
-Avoiding double-injection
+## Avoiding double-injection
 
 `chrome.scripting.executeScript` re-injects the script every time it is called. If the user clicks the action button twice, your content script runs twice, potentially creating duplicate event listeners or DOM elements. Guard against this with an injection guard variable:
 
@@ -424,7 +424,7 @@ if (window.__myExtensionLoaded) {
 }
 ```
 
-Injecting CSS alongside scripts
+## Injecting CSS alongside scripts
 
 Visual modifications often require both a script and a stylesheet. Inject them together to avoid a flash of unstyled content:
 
@@ -444,7 +444,7 @@ await Promise.all([
 
 Running both in parallel via `Promise.all` is faster than awaiting each sequentially and minimizes the window during which the script runs without its associated styles.
 
-Practice Problem 6: Cross-Origin Fetch from the Background Script
+## Practice Problem 6: Cross-Origin Fetch from the Background Script
 
 Content scripts share the page's origin and are subject to its CORS policy. Background service workers operate under the extension's origin and can make cross-origin requests to any host listed in `host_permissions`.
 
@@ -482,7 +482,7 @@ async function fetchData(query) {
 
 This proxy pattern keeps sensitive API keys out of content scripts (which are visible to the page) and centralizes network logic in the background script where it can be rate-limited or cached.
 
-Debugging Tips
+## Debugging Tips
 
 When developing Chrome extensions, these debugging patterns save significant time:
 
@@ -498,7 +498,7 @@ When developing Chrome extensions, these debugging patterns save significant tim
 
 6. Simulating service worker termination: In the service worker DevTools panel, click "Stop" to manually terminate the worker, then trigger an action that should wake it up. This quickly surfaces bugs caused by assuming in-memory state persists.
 
-Common error messages and their causes
+## Common error messages and their causes
 
 | Error message | Likely cause |
 |---|---|
@@ -508,14 +508,13 @@ Common error messages and their causes
 | "Maximum dynamic rules exceeded" | You hit the 5,000 dynamic rule limit in declarativeNetRequest |
 | "Service worker registration failed" | Syntax error in background.js, or the file path in the manifest is wrong |
 
-Moving Forward
+## Moving Forward
 
 These practice problems cover the core patterns you'll encounter building Chrome extensions. Focus on understanding message passing architecture, async handling with chrome.storage, and the service worker lifecycle. Once comfortable with these patterns, explore more advanced topics like native messaging, identity API integration, and debugging memory issues in long-running extensions.
 
 The extension APIs most worth studying after this foundation are `chrome.alarms` for scheduled background tasks, `chrome.identity` for OAuth flows, `chrome.notifications` for system-level alerts, and `chrome.offscreen` for running DOM-dependent code outside a visible tab.
 
 Building real extensions, even simple ones, provides the best learning experience. Start with a problem you want to solve, then work through the implementation details using these patterns as reference. Publish to the Chrome Web Store early, even as an unlisted extension: the review process and the store's detailed crash reporting surface issues that are impossible to reproduce locally.
-
 
 Related Reading
 

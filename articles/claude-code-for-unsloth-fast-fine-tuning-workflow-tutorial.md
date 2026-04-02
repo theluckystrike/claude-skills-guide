@@ -17,7 +17,7 @@ Fine-tuning large language models has become essential for developers building s
 
 This tutorial walks you through setting up and using Claude Code with Unsloth for efficient LLM fine-tuning.
 
-Understanding Unsloth's Speed Advantages
+## Understanding Unsloth's Speed Advantages
 
 Unsloth achieves remarkable speed improvements through several key optimizations:
 
@@ -27,7 +27,7 @@ Unsloth achieves remarkable speed improvements through several key optimizations
 
 These optimizations allow you to fine-tune models like Llama 3, Mistral, and Phi-3 on consumer hardware with significantly reduced training times.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before diving into the workflow, ensure your environment is properly configured. First, install the necessary dependencies:
 
@@ -51,9 +51,9 @@ claude project create unsloth-finetune
 cd unsloth-finetune
 ```
 
-Building Your Fine-Tuning Pipeline
+## Building Your Fine-Tuning Pipeline
 
-Step 1: Data Preparation
+## Step 1: Data Preparation
 
 Organize your training data in the appropriate format. Unsloth works well with JSONL files containing prompt-response pairs:
 
@@ -78,7 +78,7 @@ dataset = load_dataset('json', data_files='train.jsonl')
 dataset = dataset.map(format_dataset, batched=True)
 ```
 
-Step 2: Model Configuration
+## Step 2: Model Configuration
 
 Initialize your Unsloth model with optimal settings:
 
@@ -106,7 +106,7 @@ model = FastLanguageModel.get_peft_model(
 )
 ```
 
-Step 3: Training Configuration
+## Step 3: Training Configuration
 
 Configure the training arguments using SFTTrainer from TRL:
 
@@ -140,7 +140,7 @@ trainer = SFTTrainer(
 trainer.train()
 ```
 
-Automating Workflow with Claude Code
+## Automating Workflow with Claude Code
 
 Claude Code excels at automating repetitive tasks in your fine-tuning workflow. Create a Claude Code skill to streamline common operations:
 
@@ -175,9 +175,9 @@ Use Claude Code's agent capabilities to iterate on prompts and datasets:
 claude "Analyze my training dataset and suggest improvements for better model performance"
 ```
 
-Optimization Tips and Best Practices
+## Optimization Tips and Best Practices
 
-Memory Optimization
+## Memory Optimization
 
 When working with larger models, implement these memory-saving techniques:
 
@@ -193,13 +193,13 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 )
 ```
 
-Training Speed Improvements
+## Training Speed Improvements
 
 - Use gradient accumulation: Simulate larger batch sizes without memory overhead
 - Enable mixed precision: Use BF16 when supported by your GPU
 - Optimize data loading: Increase `num_workers` in DataLoader for faster preprocessing
 
-Validation and Testing
+## Validation and Testing
 
 Always validate your fine-tuned model before deployment:
 
@@ -215,14 +215,14 @@ outputs = model.generate(inputs, max_new_tokens=128)
 print(tokenizer.decode(outputs[0]))
 ```
 
-Common Pitfalls and How to Avoid Them
+## Common Pitfalls and How to Avoid Them
 
 1. Overfitting on small datasets: Use appropriate validation splits and monitor loss curves
 2. Incorrect data formatting: Ensure consistent prompt templates throughout your dataset
 3. Insufficient training steps: Start with more epochs and reduce based on validation performance
 4. Memory issues: Reduce batch size and enable gradient checkpointing
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Unsloth creates a powerful fine-tuning workflow that significantly reduces development time while maintaining high model quality. By automating data preparation, model configuration, and training processes, you can focus on iterative improvements and experimentation.
 
@@ -230,7 +230,7 @@ Start with smaller models like Phi-3 or Mistral 7B to understand the workflow, t
 
 Remember to monitor GPU memory usage and adjust parameters accordingly. With practice, you'll develop an intuition for optimal configurations that balance speed, memory efficiency, and model performance.
 
-Happy fine-tuning!
+## Happy fine-tuning!
 
 Related Reading
 

@@ -17,13 +17,13 @@ Claude Code for Benchmark Reporting Workflow Tutorial
 
 Automating benchmark reporting is essential for maintaining performance visibility in any software project. Claude Code can serve as the backbone of your benchmark reporting workflow, orchestrating test execution, collecting results, and generating actionable reports. This tutorial walks you through building a complete benchmark reporting pipeline using Claude Code skills and automation patterns.
 
-Understanding the Benchmark Reporting Pipeline
+## Understanding the Benchmark Reporting Pipeline
 
 A benchmark reporting workflow typically involves three core stages: execution, collection, and presentation. Claude Code excels at each stage by using its ability to run shell commands, read and write files, and generate formatted output.
 
 Before diving into implementation, ensure you have Claude Code installed and configured with access to the tools you'll need for running benchmarks and processing results.
 
-Setting Up Your First Benchmark Skill
+## Setting Up Your First Benchmark Skill
 
 The foundation of your workflow is a Claude skill dedicated to running benchmarks. Create a new skill file at `~/.claude/skills/user/benchmark-runner.md`:
 
@@ -55,7 +55,7 @@ Always format results as JSON and append to the.
 
 This skill provides Claude with the context it needs to run benchmarks consistently across your project.
 
-Building the Report Generation Workflow
+## Building the Report Generation Workflow
 
 Once you have benchmark results, the next step is transforming raw data into meaningful reports. Create a companion skill for generating reports:
 
@@ -86,7 +86,7 @@ Your reports should include:
 - Actionable recommendations
 ```
 
-Automating the Full Pipeline
+## Automating the Full Pipeline
 
 Now let's combine these skills into an automated workflow. Create a shell script that Claude Code can execute:
 
@@ -117,7 +117,7 @@ claude --print "Read the benchmark results and generate a report" \
 echo "Benchmark run complete. Results saved to $RESULTS_DIR"
 ```
 
-Integrating with CI/CD
+## Integrating with CI/CD
 
 For continuous performance monitoring, integrate your benchmark workflow into your CI pipeline. Here's a GitHub Actions example:
 
@@ -164,7 +164,7 @@ jobs:
             });
 ```
 
-Practical Example: API Performance Monitoring
+## Practical Example: API Performance Monitoring
 
 Let's walk through a practical example of monitoring API latency. First, create a simple benchmark test:
 
@@ -214,7 +214,7 @@ API Latency Analysis
 Trend: Latency decreased 12% compared to last week's average.
 ```
 
-Best Practices for Benchmark Workflows
+## Best Practices for Benchmark Workflows
 
 Follow these recommendations to get the most out of your Claude-powered benchmark reporting:
 
@@ -228,12 +228,11 @@ Automate responsibly: Schedule benchmarks to run during low-traffic periods, and
 
 Iterate on your reports: Start with simple metrics and gradually add complexity. Ask stakeholders what information they need most and tailor your reports accordingly.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms benchmark reporting from a manual, error-prone process into an automated, insights-driven workflow. By creating dedicated skills for running tests and generating reports, you establish a consistent system that scales with your project. The key is starting simple, run a basic benchmark, generate a simple report, then gradually add complexity as your needs evolve.
 
 With the foundation we've built here, you have everything needed to establish professional-grade performance monitoring that keeps your team informed and your applications optimized.
-
 
 Related Reading
 

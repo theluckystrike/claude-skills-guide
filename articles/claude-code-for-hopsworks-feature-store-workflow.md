@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Hopsworks Feature Store Workflow
 
@@ -21,13 +20,13 @@ Feature stores have become the backbone of production machine learning systems, 
 
 This guide walks you through integrating Claude Code with Hopsworks Feature Store, from initial setup to production-ready feature pipelines.
 
-Understanding the Hopsworks Feature Store Architecture
+## Understanding the Hopsworks Feature Store Architecture
 
 Before diving into the workflow, it's essential to understand what Hopsworks offers. The platform provides three core components: the Feature Store (for storing and managing features), Feature Groups (grouped features with common metadata), and Feature Views (a defined set of features for training or serving).
 
 Hopsworks supports both online and offline feature stores. The offline store serves training data from a data lake, while the online store provides low-latency feature serving for inference. This separation is crucial for production ML systems, and Claude Code can help you manage both effectively.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Start by ensuring your environment has the required dependencies. You'll need the `hopsworks` Python library and appropriate credentials:
 
@@ -49,11 +48,11 @@ project = hopsworks.login(
 
 Claude Code can help you set up this configuration and manage API keys securely using environment variables or secrets management tools.
 
-Creating Feature Groups with Claude Code Assistance
+## Creating Feature Groups with Claude Code Assistance
 
 Feature groups are the building blocks of your feature store. They contain related features that are computed together and share the same schema. Here's a practical workflow for creating feature groups with AI assistance:
 
-Step 1: Define Your Feature Schema
+## Step 1: Define Your Feature Schema
 
 Before writing code, document your features clearly. For example, if you're building a fraud detection system, you might need features like:
 
@@ -62,7 +61,7 @@ Before writing code, document your features clearly. For example, if you're buil
 - `merchant_risk_score`: Risk assessment for the merchant
 - `account_age_days`: How long the account has been active
 
-Step 2: Generate Feature Group Code
+## Step 2: Generate Feature Group Code
 
 Use Claude Code to generate the feature group creation code:
 
@@ -96,7 +95,7 @@ fg.save()
 
 Claude Code can help you customize this template for your specific use case, add validation rules, and handle complex data types.
 
-Step 3: Backfill Historical Data
+## Step 3: Backfill Historical Data
 
 For new feature groups, you'll often need to backfill historical data. Claude Code can generate the necessary transformation code:
 
@@ -118,11 +117,11 @@ feature_store.create_training_dataset(
 ).save()
 ```
 
-Building Feature Pipelines
+## Building Feature Pipelines
 
 Feature pipelines transform raw data into store-ready features. These typically run on schedules to keep features updated. Claude Code can help you build solid pipelines using Apache Spark or Python.
 
-Using the Spark Integration
+## Using the Spark Integration
 
 For large-scale feature computation, use the Spark integration:
 
@@ -143,7 +142,7 @@ fg.insert(feature_df)
 
 Claude Code skills like the spark skill can help you optimize these pipelines, handle schema evolution, and manage backfills.
 
-Creating Feature Views for Training and Serving
+## Creating Feature Views for Training and Serving
 
 Feature Views define the contract between your feature store and models. They ensure consistent feature sets across training and inference.
 
@@ -166,7 +165,7 @@ serving_vector = fv.serving.get_inference_data(
 )
 ```
 
-Best Practices for Claude Code + Hopsworks Workflows
+## Best Practices for Claude Code + Hopsworks Workflows
 
 To maximize the benefits of this integration, follow these actionable best practices:
 
@@ -230,7 +229,7 @@ config = {
 project = hopsworks.login(config)
 ```
 
-Monitoring and Maintenance
+## Monitoring and Maintenance
 
 Once your features are in production, continuous monitoring is essential. Track feature statistics, monitor for data drift, and set up alerts for anomalies. Hopsworks provides built-in statistics computation that Claude Code can help you configure and interpret.
 
@@ -246,7 +245,7 @@ if stats.num_nulls > threshold:
     alert_team("Feature quality degradation detected")
 ```
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Hopsworks Feature Store creates a powerful workflow for managing ML features. By using AI assistance for code generation, documentation, and validation, you can move faster while maintaining high quality standards. Start with feature group creation, build solid pipelines, and establish monitoring practices to keep your feature store healthy in production.
 

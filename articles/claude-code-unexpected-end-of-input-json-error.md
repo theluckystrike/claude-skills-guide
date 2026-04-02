@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Fixing Claude Code's "Unexpected End of Input" JSON Error
 
 If you're working with Claude Code (claude.ai/cli), you've probably encountered the frustrating "unexpected end of input" JSON error at some point. This error typically occurs when Claude Code tries to parse a configuration file or JSON input and finds that the file is incomplete, malformed, or truncated. we'll explore what causes this error, how to identify it, and, most importantly, how to fix it.
 
-Understanding the Error
+## Understanding the Error
 
 The "unexpected end of input" error is a JSON parsing error that happens when the JSON parser reaches the end of the input but expects more data to complete a valid JSON structure. This could be a missing closing bracket, a missing quote, or an incomplete object/array.
 
@@ -35,7 +34,7 @@ In the context of Claude Code, this error commonly appears in several scenarios:
 
 Understanding which file is the culprit is half the battle. Claude Code's error message usually includes the file path; read the full error message before starting to debug.
 
-Anatomy of a JSON Parse Error
+## Anatomy of a JSON Parse Error
 
 Before diving into specific fixes, it helps to understand the different types of JSON errors you might encounter:
 
@@ -48,7 +47,7 @@ Before diving into specific fixes, it helps to understand the different types of
 
 The "unexpected end of input" variant is almost always a structural problem: an unclosed bracket, brace, or string. JSON does not allow trailing commas, comments, or single-quoted strings, so those cases produce different error messages.
 
-Common Causes and Solutions
+## Common Causes and Solutions
 
 1. Incomplete Configuration Files
 
@@ -196,11 +195,11 @@ df -h ~
 
 If you find a truncated settings file, the safest approach is to delete it and let Claude Code recreate it with defaults, then re-add your custom settings one section at a time.
 
-Debugging Steps
+## Debugging Steps
 
 When you encounter this error, follow these systematic debugging steps:
 
-Step 1: Validate Your JSON
+## Step 1: Validate Your JSON
 
 Use a JSON validator to check if your configuration files are valid. You can use online tools or the command line:
 
@@ -239,7 +238,7 @@ except json.JSONDecodeError as e:
 "
 ```
 
-Step 2: Check Recent Changes
+## Step 2: Check Recent Changes
 
 If the error appeared after a recent change, review your recent edits to configuration files:
 
@@ -253,7 +252,7 @@ ls -la ~/.config/Claude/settings.json
 
 If you didn't version-control the settings file (most people don't), check if your editor's undo history can help you identify what changed. Many editors also keep backup files (`settings.json~` or `settings.json.bak`).
 
-Step 3: Simplify and Rebuild
+## Step 3: Simplify and Rebuild
 
 If you're unsure where the problem is, start with a minimal valid configuration and gradually add back your settings:
 
@@ -272,7 +271,7 @@ python3 -c "import json; json.load(open('settings.json')); print('OK')"
 
 This bisection approach quickly narrows down which server entry contains the syntax error, even in large configuration files.
 
-Step 4: Check File Permissions
+## Step 4: Check File Permissions
 
 Sometimes, Claude Code might not be able to read the full configuration file due to permission issues. Verify file permissions:
 
@@ -283,7 +282,7 @@ chmod 644 ~/.config/Claude/settings.json
 
 On macOS, the `~/Library/Application Support/Claude/` directory is sometimes protected by macOS privacy controls. If you recently changed your system privacy settings or migrated from another machine, verify that your terminal application has Full Disk Access in System Settings > Privacy & Security > Full Disk Access.
 
-Step 5: Check for BOM or Encoding Issues
+## Step 5: Check for BOM or Encoding Issues
 
 A subtle but real source of parse errors is a Byte Order Mark (BOM) at the start of the file. Some Windows editors prepend a BOM (`\xEF\xBB\xBF`) to UTF-8 files, which is invisible in most text editors but causes JSON parsers to fail immediately.
 
@@ -298,9 +297,9 @@ sed -i '' $'1s/^\xEF\xBB\xBF//' settings.json   # macOS
 sed -i '1s/^\xEF\xBB\xBF//' settings.json         # Linux
 ```
 
-Preventing Future Errors
+## Preventing Future Errors
 
-Use a Linter
+## Use a Linter
 
 Set up a linter or pre-commit hook to validate JSON files before committing:
 
@@ -329,7 +328,7 @@ if [ "$ERRORS" -gt 0 ]; then
 fi
 ```
 
-Use an Editor with JSON Validation
+## Use an Editor with JSON Validation
 
 Most modern editors validate JSON in real time. If you're editing Claude Code configuration files in a plain text editor, consider switching to VS Code with the built-in JSON language support, which shows inline errors as you type. The JSON extension in VS Code also provides schema validation for known configuration formats.
 
@@ -363,7 +362,7 @@ For VS Code, you can associate Claude Code's settings file with a JSON schema fo
 }
 ```
 
-Version Control Your Configurations
+## Version Control Your Configurations
 
 Keep your Claude Code configurations in version control (with appropriate .gitignore entries for sensitive data):
 
@@ -383,7 +382,7 @@ sed "s/YOUR_API_KEY/$ANTHROPIC_API_KEY/g" settings.template.json > "$SETTINGS_DI
 python3 -c "import json; json.load(open('$SETTINGS_DIR/settings.json'))" && echo "Settings valid"
 ```
 
-Use Claude Code's Built-in Validation
+## Use Claude Code's Built-in Validation
 
 Claude Code will often tell you which file has the parsing error. Pay attention to error messages, they usually include the file path.
 
@@ -398,7 +397,7 @@ Error reading MCP configuration: SyntaxError: Unexpected token } in JSON at posi
 
 The file path in the first line tells you which file to fix. The second line tells you what the parser found. The position number (234 in the example above) is the byte offset in the file, which you can use with your editor's "Go to offset" feature.
 
-Advanced: Debugging MCP Server Responses
+## Advanced: Debugging MCP Server Responses
 
 If the error comes from an MCP server returning invalid JSON, you can debug it by:
 
@@ -430,7 +429,7 @@ console.error("Server starting...");
 process.stderr.write("Debug: " + JSON.stringify(data) + "\n");
 ```
 
-Quick Reference: Most Common Fixes
+## Quick Reference: Most Common Fixes
 
 | Symptom | Most Likely Cause | Fix |
 |---------|------------------|-----|
@@ -441,7 +440,7 @@ Quick Reference: Most Common Fixes
 | Error with environment variable | Unquoted or unterminated string | Wrap value in single quotes |
 | Error from MCP tool response | Server writing to stdout | Redirect server debug output to stderr |
 
-Conclusion
+## Conclusion
 
 The "unexpected end of input" JSON error in Claude Code is usually caused by malformed configuration files, most commonly missing closing braces or brackets. The fix is straightforward: validate your JSON, check for typos, and ensure all brackets and braces are properly closed.
 
@@ -449,7 +448,6 @@ By following the debugging steps outlined in this guide, you can quickly identif
 
 If you continue to experience this error after checking your local configurations, it might be worth checking Claude Code's documentation or community forums for known issues with specific versions or configurations. The Claude Code GitHub repository also tracks open issues, so searching for "unexpected end of input" there may surface a version-specific bug or workaround.
 {% endraw %}
-
 
 Related Reading
 

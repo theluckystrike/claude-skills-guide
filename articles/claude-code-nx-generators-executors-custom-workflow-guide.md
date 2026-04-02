@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code Nx Generators Executors Custom Workflow Guide"
 description: "A comprehensive guide to building custom workflows with Nx generators and executors using Claude Code. Learn how to automate your development workflow."
@@ -14,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Nx Generators Executors Custom Workflow Guide
 
@@ -22,7 +20,7 @@ Nx is a powerful build system and monorepo management tool that has become essen
 
 This guide walks you through building custom Nx workflows with Claude Code, providing practical examples and actionable advice you can start using immediately.
 
-Understanding Nx Generators and Executors
+## Understanding Nx Generators and Executors
 
 Before diving into custom workflows, let's clarify what generators and executors do in the Nx ecosystem.
 
@@ -48,11 +46,11 @@ Executors are the runtime engines that run your tasks. While generators create c
 
 Executors consume options defined in your `project.json` files and execute the actual work.
 
-Setting Up Your Nx Project with Claude Code
+## Setting Up Your Nx Project with Claude Code
 
 Let's start by setting up an Nx project where you can implement custom generators and executors.
 
-Initialize Your Workspace
+## Initialize Your Workspace
 
 ```bash
 Create a new Nx workspace
@@ -64,7 +62,7 @@ Navigate to the workspace
 cd my-workspace
 ```
 
-Install Required Dependencies
+## Install Required Dependencies
 
 ```bash
 Install Nx plugin for creating custom generators
@@ -75,11 +73,11 @@ npx nx g @nx/plugin:plugin my-plugin \
   --directory=packages/my-plugin
 ```
 
-Creating Custom Generators
+## Creating Custom Generators
 
 Custom generators allow you to define reusable scaffolding patterns specific to your organization's needs.
 
-Generator Structure
+## Generator Structure
 
 A custom generator follows this structure:
 
@@ -94,7 +92,7 @@ my-plugin/
  package.json
 ```
 
-Implementing a Custom Generator
+## Implementing a Custom Generator
 
 Create a generator that scaffolds a feature with all necessary files:
 
@@ -142,7 +140,7 @@ export async function myGenerator(
 export default myGenerator;
 ```
 
-Generator Schema Definition
+## Generator Schema Definition
 
 Define the options your generator accepts:
 
@@ -171,11 +169,11 @@ Define the options your generator accepts:
 }
 ```
 
-Building Custom Executors
+## Building Custom Executors
 
 Custom executors let you define specialized task runners for your workflow.
 
-Executor Implementation
+## Executor Implementation
 
 Here's an executor that runs a custom build process:
 
@@ -211,7 +209,7 @@ async function performBuild(
 export default myExecutor;
 ```
 
-Executor Schema
+## Executor Schema
 
 ```json
 // packages/my-plugin/executors/my-executor/schema.json
@@ -234,11 +232,11 @@ Executor Schema
 }
 ```
 
-Integrating with Claude Code
+## Integrating with Claude Code
 
 Now comes the powerful part, using Claude Code to interact with your custom Nx workflows.
 
-Using Claude Code to Run Generators
+## Using Claude Code to Run Generators
 
 Claude Code can execute Nx generators directly through its bash tool:
 
@@ -247,7 +245,7 @@ Run your custom generator
 npx nx g my-plugin:my-feature my-project --directory=features/new-feature
 ```
 
-Creating a Claude Code Workflow Script
+## Creating a Claude Code Workflow Script
 
 For complex workflows, create a script that combines multiple Nx operations:
 
@@ -279,7 +277,7 @@ async function customWorkflow() {
 customWorkflow();
 ```
 
-Best Practices for Custom Nx Workflows
+## Best Practices for Custom Nx Workflows
 
 Follow these recommendations to get the most out of your custom workflows.
 
@@ -325,7 +323,7 @@ describe('my-generator', () => {
 
 Always use TypeScript for your generators and executors. The Nx ecosystem provides excellent type definitions that catch errors at development time.
 
-Advanced: Composing Multiple Generators
+## Advanced: Composing Multiple Generators
 
 For complex workflows, compose multiple generators:
 
@@ -351,7 +349,7 @@ export async function compositeGenerator(
 }
 ```
 
-Conclusion
+## Conclusion
 
 Nx generators and executors provide a powerful foundation for automating your development workflow. By creating custom generators, you can enforce organizational standards and accelerate development. Custom executors let you encapsulate complex build and deployment logic.
 

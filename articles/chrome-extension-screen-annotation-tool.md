@@ -13,14 +13,11 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Chrome Extension Screen Annotation Tool: A Developer Guide
-
 Screen annotation tools have become essential for developers, technical writers, and support teams. Whether you need to highlight a bug in a screenshot, create visual documentation, or explain a complex UI concept to stakeholders, a well-built Chrome extension can transform static screenshots into interactive, annotated visuals.
 
 This guide covers the technical foundations of building a Chrome extension for screen annotation, from understanding the Chrome APIs you'll need to implementing drawing, text overlay, and export functionality.
 
-Core Architecture
+## Core Architecture
 
 A screen annotation extension typically consists of three main components:
 
@@ -30,7 +27,7 @@ A screen annotation extension typically consists of three main components:
 
 The key Chrome APIs you'll work with include `chrome.tabs.captureVisibleTab()`, `chrome.downloads`, `chrome.storage`, and the Canvas API for rendering.
 
-Capturing Screenshots
+## Capturing Screenshots
 
 The foundation of any annotation tool is screenshot capture. Chrome provides the `chrome.tabs.captureVisibleTab()` API for this purpose:
 
@@ -54,7 +51,7 @@ This returns a base64-encoded data URL that you can render directly onto a canva
 
 For full-page screenshots, you'll need to capture multiple viewports and stitch them together, or use the more advanced Page Capture API with `chrome.pageCapture.saveAsMHTML()` for document-style captures.
 
-Building the Annotation Canvas
+## Building the Annotation Canvas
 
 Once you have the screenshot, the next step is creating an interactive canvas overlay. Here's a practical implementation pattern:
 
@@ -88,7 +85,7 @@ class AnnotationCanvas {
 
 The canvas approach gives you pixel-level control over rendering. Each annotation (rectangle, arrow, text) gets stored as a data object, enabling features like undo/redo and layer management.
 
-Drawing Tools Implementation
+## Drawing Tools Implementation
 
 For a practical annotation tool, you'll implement several drawing modes:
 
@@ -153,7 +150,7 @@ drawText(x, y, text, fontSize = 16, color = '#ffffff', bgColor = '#000000') {
 }
 ```
 
-Managing Annotations
+## Managing Annotations
 
 Storing annotations as structured data rather than rasterizing immediately provides flexibility:
 
@@ -206,7 +203,7 @@ class AnnotationManager {
 
 This approach lets users undo mistakes, edit existing annotations, or save annotation presets for common use cases.
 
-Export Functionality
+## Export Functionality
 
 When users finish annotating, you need a way to export the result. The Downloads API handles this cleanly:
 
@@ -231,7 +228,7 @@ function exportCanvas(canvas, filename = 'screenshot-annotation.png') {
 }
 ```
 
-Keyboard Shortcuts and User Experience
+## Keyboard Shortcuts and User Experience
 
 Power users expect keyboard-driven workflows. Register global shortcuts in your manifest:
 
@@ -262,7 +259,7 @@ chrome.commands.onCommand.addListener((command) => {
 });
 ```
 
-Performance Considerations
+## Performance Considerations
 
 For extensions that handle frequent annotations, optimize your rendering:
 
@@ -270,12 +267,11 @@ For extensions that handle frequent annotations, optimize your rendering:
 2. RequestAnimationFrame - Use for smooth drawing updates during mouse movement
 3. Debounce storage - Don't save to chrome.storage on every stroke; batch updates
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for screen annotation combines web platform APIs with canvas graphics programming. The key decisions involve choosing between immediate-mode rendering (simpler) versus retained-mode annotation objects (more features), handling cross-origin constraints, and designing intuitive keyboard shortcuts for power users.
 
 The implementation patterns shown here provide a foundation you can extend with features like cloud sync, team sharing, or integration with documentation systems. Start with the core capture-and-annotate flow, then layer in advanced features based on your users' workflows.
-
 
 Related Reading
 

@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code SOLID Principles Implementation
-
 SOLID principles provide a solid framework for writing maintainable, scalable software. When working with Claude Code, guiding the AI to produce code that adheres to these principles requires specific prompting strategies and workflow patterns. This guide shows you how to implement SOLID principles effectively in your Claude Code workflow.
 
-Single Responsibility in AI-Generated Code
+## Single Responsibility in AI-Generated Code
 
 The Single Responsibility Principle states that a class or function should have only one reason to change. Claude Code tends to generate large, multipurpose functions when given broad instructions. You can counter this by explicitly stating responsibility boundaries.
 
@@ -59,7 +56,7 @@ class UserNotifier:
 
 When prompting Claude Code, use phrases like "Create a separate validator class for input validation" or "Extract the email logic into its own service." The tdd skill can help you write tests that enforce single responsibility by defining clear contracts for each component.
 
-Open/Closed Principle Through AI Prompts
+## Open/Closed Principle Through AI Prompts
 
 The Open/Closed Principle states that software entities should be open for extension but closed for modification. Getting Claude Code to respect this principle means prompting for abstraction from the start.
 
@@ -86,7 +83,7 @@ Prompt Claude with "Create an interface first, then implement specific handlers"
 
 The frontend-design skill demonstrates this well when creating component systems, prompt it to build a base component with extension points rather than one-off components.
 
-Liskov Substitution Through Contract Enforcement
+## Liskov Substitution Through Contract Enforcement
 
 The Liskov Substitution Principle requires that derived classes must be substitutable for their base classes. Claude Code often generates subclasses with incompatible signatures or behaviors.
 
@@ -125,7 +122,7 @@ class Penguin implements Bird {
 
 When working with Claude, specify "Ensure subclasses can replace parent classes without breaking behavior" or "Use composition over inheritance when behavior differs significantly."
 
-Interface Segregation for Cleaner Contracts
+## Interface Segregation for Cleaner Contracts
 
 The Interface Segregation Principle advocates for narrow, specific interfaces rather than broad ones. Claude Code frequently generates "god interfaces" with many methods.
 
@@ -159,7 +156,7 @@ type Reporter interface {
 
 Prompt Claude with "Split this large interface into focused contracts" or "Create minimal interfaces that clients actually need." The supermemory skill can help you maintain these interface contracts across sessions by remembering your architectural decisions.
 
-Dependency Inversion for Flexible Systems
+## Dependency Inversion for Flexible Systems
 
 The Dependency Inversion Principle states that high-level modules should not depend on low-level modules. Both should depend on abstractions. Claude Code frequently creates direct dependencies that couple your code to specific implementations.
 
@@ -193,7 +190,7 @@ interface Database {
 
 When prompting Claude, use "Inject dependencies rather than instantiating them directly" or "Depend on abstractions, not concrete implementations." This becomes especially valuable when using the pdf skill to generate reports, you can inject different report generators without modifying the service that uses them.
 
-Practical Workflow for SOLID Implementation
+## Practical Workflow for SOLID Implementation
 
 Integrating SOLID principles into your Claude Code workflow involves three consistent practices:
 
@@ -203,7 +200,7 @@ Second, review generated code for responsibility boundaries. After Claude genera
 
 Third, maintain a skill that documents your team's SOLID conventions. Store prompts that successfully produce compliant code and reuse them. The skill-creator skill can help you build reusable prompts that enforce these patterns across projects.
 
-Common Violations and Corrections
+## Common Violations and Corrections
 
 Watch for these frequent SOLID violations when working with Claude Code:
 
@@ -215,7 +212,7 @@ Primitive obsession happens when simple types replace meaningful abstractions. A
 
 The artifacts-builder skill proves useful when you need to prototype SOLID-compliant designs quickly, the interactive nature helps you iterate on abstractions before committing to implementation.
 
-Conclusion
+## Conclusion
 
 Implementing SOLID principles with Claude Code requires explicit guidance, consistent patterns, and proactive refactoring. By prompting for abstractions first, enforcing responsibility boundaries, and maintaining clear contracts, you can use AI assistance while building maintainable software. The key lies in treating Claude Code as a pair programmer that needs clear architectural direction rather than a magic solution that understands implicit requirements.
 

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Packer Machine Image Workflow"
 description: "Learn how to use Claude Code to streamline Packer machine image creation workflows. This guide covers template generation, validation, building, and."
@@ -14,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Packer Machine Image Workflow
 
@@ -22,7 +20,7 @@ Packer by HashiCorp is a powerful tool for creating identical machine images acr
 
 This guide shows you how to use Claude Code to streamline every phase of your Packer machine image workflow.
 
-Understanding Packer Workflow Basics
+## Understanding Packer Workflow Basics
 
 Before diving into Claude Code integration, let's briefly review the Packer workflow. A typical Packer workflow involves:
 
@@ -34,7 +32,7 @@ Before diving into Claude Code integration, let's briefly review the Packer work
 
 Claude Code excels at each of these phases, providing intelligent assistance that speeds up development and reduces errors.
 
-Setting Up Packer Projects with Claude Code
+## Setting Up Packer Projects with Claude Code
 
 Claude Code can help you scaffold new Packer projects quickly. When starting a new image pipeline, simply describe your requirements:
 
@@ -104,11 +102,11 @@ build {
 
 This example demonstrates several key Packer concepts: source ami filtering, provisioners for installing software, and tagging strategies. Claude Code generates idiomatic HCL that follows HashiCorp best practices.
 
-Validating Packer Templates
+## Validating Packer Templates
 
 One of the most valuable ways Claude Code assists with Packer is through validation. Template errors can be expensive, building a faulty image wastes significant time and cloud resources. Claude Code can review your templates before you run them.
 
-Interactive Template Review
+## Interactive Template Review
 
 When you have a Packer template, ask Claude Code to review it:
 
@@ -123,7 +121,7 @@ Claude Code will analyze your configuration and identify issues like:
 - Inefficiencies - Unnecessary provisioner steps, suboptimal instance types
 - Best practice violations - Missing tags, outdated source AMIs
 
-Automated Validation Commands
+## Automated Validation Commands
 
 Claude Code can also execute Packer validation commands:
 
@@ -148,11 +146,11 @@ packer fmt -check .
 packer inspect .
 ```
 
-Building Images with Claude Code Assistance
+## Building Images with Claude Code Assistance
 
 When you're ready to build, Claude Code helps orchestrate the process intelligently.
 
-Parallel Builds for Multiple Regions
+## Parallel Builds for Multiple Regions
 
 For multi-region deployments, you can build simultaneously:
 
@@ -182,7 +180,7 @@ build {
 
 Claude Code can manage this build process, monitoring outputs and handling any failures gracefully.
 
-Build Notification and Logging
+## Build Notification and Logging
 
 Set up notifications to track build status:
 
@@ -199,9 +197,9 @@ build {
 
 The manifest output provides detailed information about the built artifacts, which Claude Code can parse and act upon.
 
-Practical Examples: Complete Image Workflows
+## Practical Examples: Complete Image Workflows
 
-Example 1: Development Environment Image
+## Example 1: Development Environment Image
 
 Here's a complete Packer template for a development environment:
 
@@ -257,7 +255,7 @@ build {
 }
 ```
 
-Example 2: Production-Ready Image with Hardening
+## Example 2: Production-Ready Image with Hardening
 
 For production images, security hardening is essential:
 
@@ -305,7 +303,7 @@ build {
 }
 ```
 
-Best Practices for Packer Workflows with Claude Code
+## Best Practices for Packer Workflows with Claude Code
 
 1. Use Variable Files for Environment-Specific Settings
 
@@ -363,7 +361,7 @@ aws ec2 terminate-instance-instances --instance-ids i-xxxxx
 
 Claude Code can orchestrate this entire test lifecycle, creating resources, running tests, and cleaning up automatically.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Packer workflows from manual, error-prone processes into streamlined, automated pipelines. By using Claude Code's ability to generate templates, validate configurations, and orchestrate builds, you can:
 

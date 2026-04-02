@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Agent Handoff Strategies for Long Running Tasks Guide"
 description: "Master agent handoff strategies for long running tasks with Claude Code. Learn practical techniques for managing extended workflows, maintaining."
@@ -14,18 +13,15 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Agent Handoff Strategies for Long Running Tasks Guide
-
 Long-running tasks present unique challenges for AI agents. Whether you're deploying a complex infrastructure, running extensive test suites, or building multi-phase applications, understanding how to effectively manage handoffs and maintain context is crucial for success. This guide explores practical strategies for handling extended workflows with Claude Code, ensuring your tasks complete reliably even when they span hours or require multiple sessions.
 
-Understanding the Challenge
+## Understanding the Challenge
 
 When executing long-running tasks, several complications arise that shorter tasks avoid. Context windows have limits, sessions can be interrupted, and the sheer complexity of multi-step workflows can overwhelm even capable AI agents. Additionally, external factors like API rate limits, network issues, or system resource constraints may require pausing and resuming work.
 
 Claude Code addresses these challenges through several built-in capabilities. The agent maintains conversation context within sessions, supports checkpoint patterns for state preservation, and provides solid tool usage for verification at each step. However, effective handoff strategies require planning and explicit techniques that work with these capabilities.
 
-Core Handoff Strategies
+## Core Handoff Strategies
 
 1. State Checkpointing with Record Notes
 
@@ -149,9 +145,9 @@ The skill includes:
 
 Subsequent sessions can load this skill and immediately have access to verified procedures, reducing handoff friction.
 
-Practical Examples
+## Practical Examples
 
-Example 1: Multi-Stage Build Process
+## Example 1: Multi-Stage Build Process
 
 Consider a React application with a complex build pipeline:
 
@@ -181,7 +177,7 @@ Verify: Health endpoint responds, smoke tests pass
 
 At each checkpoint, record progress. If the session interrupts during testing, you know exactly where to resume.
 
-Example 2: Database Migration with Data Backfill
+## Example 2: Database Migration with Data Backfill
 
 ```bash
 Before starting: Create backup
@@ -200,7 +196,7 @@ When resuming:
 - Verify foreign key constraints
 ```
 
-Example 3: Infrastructure as Code Deployment
+## Example 3: Infrastructure as Code Deployment
 
 ```bash
 Initial: Validate all configurations
@@ -221,7 +217,7 @@ Verification:
 - Run integration tests
 ```
 
-Best Practices Summary
+## Best Practices Summary
 
 1. Plan checkpoints explicitly - Identify natural pause points before starting
 2. Verify at each gate - Use tools to confirm success before proceeding
@@ -230,7 +226,7 @@ Best Practices Summary
 5. Use skills for repetition - Encapsulate verified procedures for reuse
 6. Consider agent specialization - Split very long tasks across focused agents
 
-Conclusion
+## Conclusion
 
 Agent handoff strategies transform long-running tasks from risky single operations into reliable, recoverable workflows. Claude Code's tool-calling capabilities, combined with explicit checkpointing and state management, enable solid execution of complex, multi-hour projects.
 

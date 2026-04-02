@@ -13,18 +13,15 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude.md Example for Data Science Python Project
-
 Claude Code skills use `.md` files to encapsulate project-specific knowledge, preferences, and workflows. For data science Python projects, these skill files become invaluable for maintaining consistent analysis patterns, enforcing coding standards, and accelerating common data tasks. This guide provides practical examples of Claude.md files tailored for data science workflows.
 
-Why Data Science Projects Need Custom Skills
+## Why Data Science Projects Need Custom Skills
 
 Data science projects involve repetitive patterns: exploratory data analysis, feature engineering, model training, and results documentation. Each team typically develops their own conventions for handling missing values, encoding categorical variables, or logging experiments. A well-crafted Claude.md file captures these conventions and makes them available to every team member working with Claude Code.
 
 The skill file acts as a persistent context that Claude references for every conversation in your project. Unlike vague prompts, a structured skill file gives Claude specific instructions about your tools, conventions, and preferred libraries.
 
-Basic Project Setup Skill
+## Basic Project Setup Skill
 
 The foundation skill for any data science project specifies your environment and core dependencies:
 
@@ -53,7 +50,7 @@ Code Standards
 
 This skill ensures Claude understands your stack and enforces your team's coding standards. When you ask Claude to write a new analysis script, it will automatically apply type hints and follow your docstring convention.
 
-Data Analysis Workflow Skill
+## Data Analysis Workflow Skill
 
 For projects focused on exploratory data analysis, extend your skill with specific patterns:
 
@@ -78,7 +75,7 @@ Missing Value Strategy
 
 This skill teaches Claude your preferred EDA sequence. Instead of manually specifying each step, Claude will automatically follow your workflow when you ask for data exploration.
 
-Machine Learning Pipeline Skill
+## Machine Learning Pipeline Skill
 
 For ML-focused projects, add specific guidance for model development:
 
@@ -103,7 +100,7 @@ Feature Engineering
 
 This skill transforms Claude from a code generator into a domain expert that understands your ML workflow. It will suggest appropriate evaluation metrics and warn against common pitfalls like data leakage.
 
-Working with PDF and Excel Files
+## Working with PDF and Excel Files
 
 Data science projects often involve importing data from various sources. The pdf and xlsx skills integrate with your Claude.md to handle file processing:
 
@@ -116,7 +113,7 @@ File Import Patterns
 
 When combined with the pdf skill, Claude can extract tables from research papers or reports and immediately begin analysis without manual copying.
 
-Testing Data Science Code
+## Testing Data Science Code
 
 The tdd skill complements your data science workflow by ensuring code quality:
 
@@ -128,7 +125,7 @@ Testing Requirements
 - Integration tests for pipeline end-to-end execution
 ```
 
-Project Memory and Documentation
+## Project Memory and Documentation
 
 The supermemory skill helps maintain project context across sessions:
 
@@ -142,7 +139,7 @@ Documentation Standards
 
 This ensures your project remains maintainable as complexity grows. Claude will proactively suggest documentation updates when you complete significant milestones.
 
-Putting It All Together
+## Putting It All Together
 
 Create your project skill by combining relevant sections:
 
@@ -166,8 +163,7 @@ Place this file in your project root as `CLAUDE.md` or in a `.claude/skills/` di
 
 The real power emerges when you customize skills for different sub-projects. A data preprocessing skill in your ETL directory, a modeling skill in your experiments folder, Claude adapts its behavior based on which skill file it finds.
 
-
-Step-by-Step Guide: Building Your Data Science CLAUDE.md
+## Step-by-Step Guide: Building Your Data Science CLAUDE.md
 
 Here is a concrete workflow for creating an effective CLAUDE.md file for your data science project.
 
@@ -181,7 +177,7 @@ Step 4. Include environment troubleshooting hints. Document known issues with yo
 
 Step 5. Version your skill file alongside your data code. Commit CLAUDE.md to the same Git repository as your data pipeline. When the project's conventions change, update CLAUDE.md in the same commit. This keeps the skill file synchronized with the actual project state.
 
-Common Pitfalls
+## Common Pitfalls
 
 Writing vague instructions. Saying "use good variable names" gives Claude Code nothing actionable. Instead, be specific: DataFrame variables must be named df_purpose (e.g. df_train, df_features). Specific rules produce consistent code.
 
@@ -193,7 +189,7 @@ Making the skill file too long. Skill files over 500 lines dilute the signal. Cl
 
 Not testing the skill file with real tasks. After writing CLAUDE.md, test it by asking Claude Code to complete a representative task from scratch. Review the output for compliance with your rules. This testing reveals ambiguous instructions before they confuse the team.
 
-Best Practices
+## Best Practices
 
 Use hierarchical skill files for multi-project workspaces. Place a global CLAUDE.md in your home directory with organization-wide conventions, and project-specific CLAUDE.md files in each project root. Claude Code merges both when working in a project directory, applying the most specific rule when there is a conflict.
 
@@ -203,7 +199,7 @@ Include example code snippets for non-obvious conventions. For complex patterns 
 
 Document what to do when things go wrong. Add a section describing common failure modes and their remedies. This turns CLAUDE.md into a troubleshooting guide as well as a style guide.
 
-Integration Patterns
+## Integration Patterns
 
 DVC pipeline integration. For projects using DVC to version data and pipeline stages, add a CLAUDE.md section documenting your dvc.yaml stage names and their expected inputs and outputs. Claude Code then generates code that reads from and writes to the correct DVC-managed paths.
 
@@ -211,15 +207,13 @@ Jupyter and VS Code integration. Add VS Code workspace settings that enable the 
 
 CI integration for skill file compliance. Claude Code can generate a GitHub Actions job that runs a compliance check against your CLAUDE.md rules, verifying that all Python files have type hints, all functions have docstrings, and all notebooks have been cleared of output before commit.
 
-
-Organizing Multi-Stage Pipelines
+## Organizing Multi-Stage Pipelines
 
 Data science projects often involve multiple stages: raw data ingestion, cleaning, feature engineering, model training, and evaluation. Each stage has different performance characteristics, data dependencies, and failure modes. Document these stages explicitly in your CLAUDE.md so Claude Code understands the pipeline context when generating code.
 
 Specify which stages should be idempotent (safe to re-run), which should be skipped if outputs already exist, and which should always regenerate outputs. Claude Code uses these annotations when generating pipeline scripts, adding the appropriate existence checks and cache validation logic. When a pipeline stage fails mid-run, the restart behavior should be clear from the CLAUDE.md annotations rather than requiring developer investigation.
 
 For large datasets, document the approximate size of each stage's inputs and outputs. Claude Code uses this information to suggest appropriate chunk sizes for pandas operations and to flag operations likely to exhaust memory. such as a merge that would create a DataFrame too large to fit in RAM given your documented dataset sizes.
-
 
 Related Reading
 

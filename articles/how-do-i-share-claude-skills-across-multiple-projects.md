@@ -13,17 +13,15 @@ permalink: /how-do-i-share-claude-skills-across-multiple-projects/
 ---
 {% raw %}
 
-
-
 [Sharing Claude skills across multiple projects](/how-do-i-make-a-claude-skill-available-organization-wide/) ways to standardize your development workflow and avoid duplicating effort. Whether you're working on a monorepo with multiple packages or maintaining separate repositories for different applications, having a strategy for skill sharing can significantly boost your productivity.
 
-Understanding Claude Skill Sharing
+## Understanding Claude Skill Sharing
 
 Claude skills are essentially prompt templates that extend Claude Code's capabilities. When you create a skill for one project, you naturally want to reuse it in others. There are several approaches to achieving this, each with its own trade-offs.
 
 The simplest method involves exporting your skill definitions as JSON or YAML files that can be imported into any project. This approach works well for skills that don't require project-specific customization. For more complex scenarios, you might consider a shared library approach where common skills live in a dedicated repository that multiple projects reference.
 
-Version Control Strategies
+## Version Control Strategies
 
 The most reliable way to share skills across projects is through Git. Create a dedicated repository for your organization's skill library, then add it as a submodule to each project that needs access. This ensures version consistency and allows you to track changes across all projects using the shared skills.
 
@@ -42,7 +40,7 @@ git submodule update --init --recursive
 
 For projects that need bleeding-edge skills, consider a different approach. Instead of submodules, you can clone the skills repository directly and pull changes as needed. This works well for personal projects where you want automatic access to the latest skill improvements.
 
-Directory Structure Best Practices
+## Directory Structure Best Practices
 
 Organizing your shared skills repository requires careful consideration. A flat structure might seem simpler initially, but a categorized approach scales better as your skill library grows.
 
@@ -67,7 +65,7 @@ claude-skills/
 
 This structure makes it easy to find relevant skills and understand what each one does. When combined with clear naming conventions, developers can quickly locate the skill they need without extensive documentation.
 
-Importing Skills Into Your Project
+## Importing Skills Into Your Project
 
 Once you've set up your shared skills repository, importing skills into a new project is straightforward. The exact mechanism depends on how you've organized your skills, but the general pattern remains consistent.
 
@@ -90,7 +88,7 @@ Once you've set up your shared skills repository, importing skills into a new pr
 
 Many teams find it helpful to create a meta-skill that handles the import process. This meta-skill can scan your shared repository and automatically enable relevant skills based on your project's technology stack. The [supermemory skill pairs excellently](/building-stateful-agents-with-claude-skills-guide/), as it can remember which skills work best for different project types.
 
-Handling Project-Specific Variations
+## Handling Project-Specific Variations
 
 Sometimes you need a shared skill but with slight modifications for different projects. Rather than forking the entire skill, consider parameterization. Skills can accept variables that change their behavior based on context.
 
@@ -114,7 +112,7 @@ Sometimes you need a shared skill but with slight modifications for different pr
 
 This approach lets you maintain a single source of truth while accommodating project-specific needs. The key is designing skills with sensible defaults that can be overridden without modifying the core skill logic.
 
-Syncing Updates Across Projects
+## Syncing Updates Across Projects
 
 Keeping skills synchronized across many projects requires automation. A simple GitHub Actions workflow can notify you when shared skills are updated, or even automatically create pull requests in dependent projects.
 
@@ -142,7 +140,7 @@ jobs:
 
 You can extend this pattern to automatically update skill references in all your projects. The [pdf skill works well for generating change logs](/automated-code-documentation-workflow-with-claude-skills/) that document what changed in each skill update.
 
-Practical Workflow Example
+## Practical Workflow Example
 
 Let's walk through a complete workflow for sharing skills across multiple projects. Imagine you have three projects: a frontend application, a backend API, and a shared utilities package.
 
@@ -152,12 +150,11 @@ When starting a new project, clone your skills repository as a submodule. Run th
 
 The key is establishing the infrastructure early. Spending time on proper skill organization pays dividends as your project portfolio grows. Developers can focus on writing code rather than reinventing common patterns.
 
-Conclusion
+## Conclusion
 
 Sharing Claude skills across multiple projects transforms your development workflow from repetitive to standardized. By implementing version-controlled skill libraries, structured directories, and automated synchronization, you create a scalable system that improves with each new project.
 
 Start small with your most valuable skills, then expand as you identify more opportunities for reuse. The initial investment in setting up proper sharing infrastructure pays off quickly as your [skill library grows](/getting-started-hub/).
-
 
 Related Reading
 

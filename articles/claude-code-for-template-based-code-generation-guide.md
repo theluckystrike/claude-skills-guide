@@ -17,13 +17,13 @@ Claude Code for Template Based Code Generation Guide
 
 Template-based code generation is one of the most powerful techniques for accelerating software development. By defining reusable code patterns and using Claude Code to populate them with context-specific details, you can eliminate repetitive coding tasks, ensure consistency across your codebase, and focus on what truly matters: solving unique business problems. This guide walks you through practical strategies for using Claude Code in template-based code generation workflows.
 
-Why Template-Based Generation Matters
+## Why Template-Based Generation Matters
 
 Every development team encounters repetitive code patterns. API endpoints with similar structures, CRUD operations for different entities, test fixtures, and configuration files all follow predictable patterns that differ only in specific details like entity names, field types, or business rules. Writing these manually is error-prone and time-consuming.
 
 Claude Code excels at this task because it understands code context, can apply templating logic intelligently, and produces syntactically correct output that integrates smoothly with your existing codebase. Unlike simple string replacement tools, Claude Code comprehends programming languages, idioms, and best practices.
 
-Setting Up Your Template Foundation
+## Setting Up Your Template Foundation
 
 Before generating code, you need well-structured templates. The most common approach uses Jinja2-style templating, which Claude Code can process natively. Here's how to structure your templates:
 
@@ -62,11 +62,11 @@ def read_{{ model_name|lower }}s(
 
 This template uses Jinja2 features like filters (`|lower`) and loops to create flexible, reusable code patterns.
 
-Generating Code with Claude Code
+## Generating Code with Claude Code
 
 Once your templates are ready, you can use Claude Code to populate them. The process involves providing Claude Code with the template, specifying the variables, and letting it generate the output. Here's a practical workflow:
 
-Step 1: Define Your Generation Context
+## Step 1: Define Your Generation Context
 
 Provide Claude Code with clear context about what you want to generate:
 
@@ -79,7 +79,7 @@ Generate a complete API endpoint file using the template
 at templates/api_endpoint.py.j2 with model_name=User.
 ```
 
-Step 2: Review and Refine
+## Step 2: Review and Refine
 
 Claude Code will generate the populated template. Always review the output for:
 
@@ -88,7 +88,7 @@ Claude Code will generate the populated template. Always review the output for:
 - Business logic accuracy
 - Error handling completeness
 
-Step 3: Apply Validation
+## Step 3: Apply Validation
 
 Generate test cases alongside your code to verify correctness:
 
@@ -111,9 +111,9 @@ def test_create_user():
     assert "id" in data
 ```
 
-Advanced Template Patterns
+## Advanced Template Patterns
 
-Conditional Logic
+## Conditional Logic
 
 Templates can include conditional logic to handle variations:
 
@@ -131,7 +131,7 @@ def get_public_data():
     return {"message": "Data retrieved successfully"}
 ```
 
-Inheritance and Composition
+## Inheritance and Composition
 
 Create base templates that other templates extend:
 
@@ -151,7 +151,7 @@ class {{ model_name }}Create({{ model_name }}Base):
     pass
 ```
 
-Template Organization Strategies
+## Template Organization Strategies
 
 As your template library grows, organize templates by technology stack and use case. A practical directory structure helps Claude Code locate and apply the right template:
 
@@ -178,7 +178,7 @@ As your template library grows, organize templates by technology stack and use c
 
 This organization lets you invoke specific template subsets rather than loading everything for every request. The supermemory skill tracks template versions across sessions, while tdd generates test files alongside your generated implementations to ensure correctness.
 
-Best Practices for Template-Based Generation
+## Best Practices for Template-Based Generation
 
 1. Keep Templates Versioned
 
@@ -222,7 +222,7 @@ def test_user_template_renders_correctly():
 
 Start with simple templates and gradually add complexity. Monitor what patterns your team uses most frequently and create templates for those first.
 
-Actionable Next Steps
+## Actionable Next Steps
 
 1. Audit your codebase for repetitive patterns that could benefit from templating
 2. Create your first template for a simple use case like API response schemas
@@ -231,7 +231,6 @@ Actionable Next Steps
 5. Automate generation with shell scripts or make targets for one-command code generation
 
 Template-based code generation with Claude Code transforms how you approach repetitive coding tasks. By investing time in creating well-designed templates, you gain consistency, speed, and reliability across your codebase. Start small, iterate frequently, and watch your development velocity increase.
-
 
 Related Reading
 

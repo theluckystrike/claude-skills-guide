@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for LLM Code Review Workflow"
 description: "Master the art of building LLM-powered code review workflows with Claude Code. Learn practical implementations, automation patterns, and best practices."
@@ -18,7 +17,7 @@ score: 8
 
 Integrating Large Language Models into your code review workflow represents one of the most impactful applications of AI in software development. Claude Code provides a powerful CLI foundation for building sophisticated LLM-powered review systems that can analyze code, provide feedback, and even suggest improvements in real-time. This guide walks you through creating an effective LLM code review workflow using Claude Code.
 
-Understanding LLM Code Review Architecture
+## Understanding LLM Code Review Architecture
 
 Before diving into implementation, it's essential to understand the architectural components that make LLM code review work effectively. The system consists of three primary layers: the trigger mechanism (when reviews happen), the LLM processing layer (what analysis occurs), and the feedback delivery system (how results reach developers).
 
@@ -26,7 +25,7 @@ Claude Code excels at serving as the orchestration layer that connects these com
 
 The core workflow follows this pattern: a developer commits code or opens a pull request, Claude Code intercepts the event, sends relevant code context to an LLM, processes the response, and delivers actionable feedback. This automation transforms code review from a bottleneck into a smooth part of the development process.
 
-Setting Up Your Claude Code Review Skill
+## Setting Up Your Claude Code Review Skill
 
 The first practical step is creating a Claude Code skill that handles code review tasks. A well-structured skill encapsulates the review logic and makes it reusable across different projects.
 
@@ -57,7 +56,7 @@ Provide feedback in markdown with clear sections for each review category.
 
 This skill definition provides the foundation for consistent, high-quality reviews. The key is ensuring the skill has access to the right tools and clear instructions about what to analyze.
 
-Implementing the Review Workflow
+## Implementing the Review Workflow
 
 With the skill defined, you can now implement the actual review logic. The workflow typically involves fetching the code changes, preparing context for the LLM, and formatting the response appropriately.
 
@@ -80,7 +79,7 @@ $DIFF_CONTENT"
 
 This script demonstrates the core pattern but needs enhancement for production use. A more solid approach includes error handling, context window management for large changes, and structured output parsing.
 
-Advanced Patterns for Large Codebases
+## Advanced Patterns for Large Codebases
 
 When working with large codebases, sending entire files to the LLM becomes impractical. Instead, implement a targeted approach that focuses on changed files and their immediate dependencies.
 
@@ -112,7 +111,7 @@ for (const file of changedFiles) {
 
 This targeted approach keeps token usage manageable while ensuring the LLM has sufficient context to provide meaningful feedback.
 
-Integrating with Pull Request Systems
+## Integrating with Pull Request Systems
 
 For teams using GitHub, GitLab, or similar platforms, integrating LLM review results directly into pull request comments creates a smooth experience. Claude Code can execute API calls to post review results:
 
@@ -129,7 +128,7 @@ The integration typically requires:
 
 Many teams find it valuable to separate LLM review into two categories: fast automated checks (style, basic quality) that run on every commit, and comprehensive reviews that run on pull request creation.
 
-Best Practices for Effective LLM Code Review
+## Best Practices for Effective LLM Code Review
 
 Implementing LLM code review successfully requires attention to several practical considerations that significantly impact effectiveness.
 
@@ -141,7 +140,7 @@ Combine LLM and Human Review: LLM reviews excel at catching certain issues but m
 
 Monitor and Measure: Track review metrics like time to feedback, issue detection rates, and developer satisfaction. These metrics help justify the investment and identify improvement areas.
 
-Handling Sensitive Code and Security
+## Handling Sensitive Code and Security
 
 When reviewing sensitive code, credentials, proprietary algorithms, or security-critical sections, implement appropriate safeguards:
 
@@ -152,7 +151,7 @@ When reviewing sensitive code, credentials, proprietary algorithms, or security-
 
 Many organizations require these precautions before deploying LLM review in production environments.
 
-Conclusion
+## Conclusion
 
 Building an LLM-powered code review workflow with Claude Code transforms how teams ship software. By automating initial review feedback, developers receive faster iteration cycles while maintaining code quality standards. The key lies in thoughtful implementation: create well-defined skills, build solid automation scripts, integrate smoothly with your existing tools, and continuously refine based on team feedback.
 

@@ -17,7 +17,7 @@ Claude Code for Soak Testing Workflow Tutorial Guide
 
 Soak testing is a critical performance testing methodology that runs your application under sustained load over an extended period, typically hours or even days. The goal is to uncover memory leaks, resource exhaustion, database connection pool degradation, and other issues that only manifest during prolonged operation. you'll learn how to use Claude Code CLI to build, automate, and analyze soak testing workflows effectively.
 
-Understanding Soak Testing Fundamentals
+## Understanding Soak Testing Fundamentals
 
 Before diving into the Claude Code implementation, let's establish the core principles of soak testing. Unlike load testing which focuses on peak capacity, or stress testing which pushes beyond limits, soak testing simulates real-world usage patterns over time. This reveals cumulative failures that short tests cannot detect.
 
@@ -29,7 +29,7 @@ Common issues discovered through soak testing include:
 - Session timeout issues: Tokens or sessions expiring unexpectedly
 - Resource degradation: Gradual performance decline due to caching or indexing issues
 
-Setting Up Your Claude Code Environment
+## Setting Up Your Claude Code Environment
 
 First, ensure Claude Code is installed and configured on your system. The CLI tool provides powerful capabilities for generating test scripts, analyzing results, and automating workflows.
 
@@ -41,11 +41,11 @@ Initialize a new project with test directory structure
 mkdir -p soak-tests/{scripts,results,reports}
 ```
 
-Building a Soak Test Script with Claude Code
+## Building a Soak Test Script with Claude Code
 
 Claude Code excels at generating test scripts tailored to your specific application. Here's how to create a comprehensive soak test:
 
-Step 1: Analyze Your Application's API Surface
+## Step 1: Analyze Your Application's API Surface
 
 Ask Claude to help you document the endpoints and operations that need testing:
 
@@ -59,7 +59,7 @@ I need to create a soak test for my REST API. The main endpoints are:
 Generate a load test script that simulates 100 concurrent users making requests over 8 hours.
 ```
 
-Step 2: Generate the Test Script
+## Step 2: Generate the Test Script
 
 Claude can generate scripts in various languages. Here's an example using k6 (a popular load testing tool):
 
@@ -137,7 +137,7 @@ function generateUserPayload() {
 }
 ```
 
-Automating Soak Test Execution
+## Automating Soak Test Execution
 
 Claude Code can help you create automation scripts that run soak tests on schedule and manage the results:
 
@@ -174,11 +174,11 @@ k6 report \
 echo "Report generated: $OUTPUT_DIR/report.html"
 ```
 
-Analyzing Soak Test Results
+## Analyzing Soak Test Results
 
 One of Claude Code's most valuable capabilities is analyzing test results to identify issues. Here's a practical approach:
 
-Memory Leak Detection
+## Memory Leak Detection
 
 ```python
 analyze-memory.py - Memory trend analysis
@@ -217,7 +217,7 @@ def analyze_memory_trend(results_file):
     return True
 ```
 
-Performance Degradation Analysis
+## Performance Degradation Analysis
 
 Ask Claude to generate queries that identify performance trends:
 
@@ -229,29 +229,29 @@ Analyze the k6 results and identify:
 4. Peak error periods and their characteristics
 ```
 
-Best Practices for Claude Code Soak Testing
+## Best Practices for Claude Code Soak Testing
 
 Based on practical experience, here are actionable recommendations:
 
-Test Environment Configuration
+## Test Environment Configuration
 
 - Isolate test environments: Run soak tests in dedicated staging environments to avoid impacting production
 - Monitor baseline metrics: Establish performance baselines before running soak tests
 - Control external dependencies: Mock third-party APIs to prevent flakiness from external services
 
-Test Design
+## Test Design
 
 - Start with realistic load: Begin with 50-70% of expected peak load
 - Include varied user patterns: Not all users behave identically, mix read and write operations
 - Plan for graceful degradation: Include mechanisms to stop tests safely if critical errors occur
 
-Analysis and Monitoring
+## Analysis and Monitoring
 
 - Collect comprehensive metrics: CPU, memory, disk I/O, network, database connections
 - Set up alerting: Notify team immediately if error rates exceed thresholds
 - Document findings: Maintain a knowledge base of soak test discoveries
 
-Integrating Claude Code into CI/CD
+## Integrating Claude Code into CI/CD
 
 Automate soak testing as part of your deployment pipeline:
 
@@ -281,12 +281,11 @@ jobs:
           path: soak-tests/results/
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms soak testing from a manually intensive process into an automated, intelligent workflow. By using its capabilities for script generation, result analysis, and CI/CD integration, you can establish solid soak testing practices that catch critical issues before they reach production. Start with realistic tests, monitor comprehensively, and iterate based on findings.
 
 Remember: the best soak tests are those that closely mirror real-world usage patterns over time. Let Claude Code help you build tests that truly stress your system in ways that matter.
-
 
 Related Reading
 

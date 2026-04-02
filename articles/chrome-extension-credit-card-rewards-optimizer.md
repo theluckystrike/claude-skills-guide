@@ -17,7 +17,7 @@ score: 8
 
 Credit card rewards optimization has evolved beyond manual spreadsheets. Developers and power users now use Chrome extensions to automatically calculate the best card for each purchase, track earning rates, and maximize points redemption values. This guide explores the technical architecture behind these tools and provides practical implementation patterns for building your own rewards optimizer.
 
-Understanding the Core Architecture
+## Understanding the Core Architecture
 
 A Chrome extension for credit card rewards optimization typically consists of three main components: a content script that detects transaction details on merchant websites, a background service worker for data processing and card matching, and a popup interface for displaying results to users.
 
@@ -71,7 +71,7 @@ chrome.runtime.sendMessage({
 });
 ```
 
-Card Database and Matching Logic
+## Card Database and Matching Logic
 
 The background script maintains a structured database of credit card reward rates. For a production implementation, you would store this data in Chrome's storage API with versioning to handle rate changes:
 
@@ -129,7 +129,7 @@ function findBestCard(merchantInfo) {
 }
 ```
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides real-time feedback when users click the extension icon. Implementing a clean interface requires handling the message passing between popup and background script:
 
@@ -168,7 +168,7 @@ function renderRecommendation(card) {
 }
 ```
 
-Handling Dynamic Content and Edge Cases
+## Handling Dynamic Content and Edge Cases
 
 Modern e-commerce sites use dynamic content loading, which requires MutationObserver to detect when merchant information becomes available:
 
@@ -215,7 +215,7 @@ function extractFromReactState() {
 }
 ```
 
-Data Privacy Considerations
+## Data Privacy Considerations
 
 When building rewards optimizer extensions, handle user financial data carefully. Store card information locally using Chrome's encrypted storage rather than transmitting sensitive data:
 
@@ -234,7 +234,7 @@ async function saveCardData(cardId, cardData) {
 // Only store: card name, reward rates, annual fee, issuer
 ```
 
-Extension Manifest Configuration
+## Extension Manifest Configuration
 
 Your extension needs proper permissions in the manifest file:
 
@@ -267,13 +267,13 @@ Your extension needs proper permissions in the manifest file:
 }
 ```
 
-Key Limitations and Workarounds
+## Key Limitations and Workarounds
 
 Chrome extensions face inherent limitations for rewards optimization. They cannot access mobile apps, in-store transactions, or merchant sites that require API authentication. Additionally, reward rates change frequently, maintaining an accurate database requires regular updates from user reports or manual entry.
 
 For comprehensive optimization, pair your extension with manual tracking for offline purchases and annual fee calculations. The extension handles the quick decision-making at checkout; you handle the strategic optimization.
 
-Step-by-Step: Setting Up Your Card Profiles
+## Step-by-Step: Setting Up Your Card Profiles
 
 1. Click the extension icon and navigate to "My Cards"
 2. Add each credit card with reward categories and rates (e.g., Amex Gold: 4x dining, 1x general)
@@ -282,7 +282,7 @@ Step-by-Step: Setting Up Your Card Profiles
 5. The content script detects the merchant category and injects a recommendation overlay
 6. The overlay shows which card earns the most rewards for that purchase
 
-Advanced: Automatic Category Detection
+## Advanced: Automatic Category Detection
 
 ```javascript
 const CATEGORY_PATTERNS = [
@@ -300,7 +300,7 @@ function detectCategory(url) {
 }
 ```
 
-Comparison with Bank-Provided Tools
+## Comparison with Bank-Provided Tools
 
 | Feature | This Extension | Issuer apps | MaxRewards |
 |---|---|---|---|
@@ -311,7 +311,7 @@ Comparison with Bank-Provided Tools
 
 The extension wins on privacy. your card data and browsing history stay entirely in the browser.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Category detection wrong for unfamiliar site: Build a user correction mechanism that stores hostname-to-category overrides in `chrome.storage.local`.
 
@@ -325,7 +325,6 @@ function shouldShowOverlay(url) { return !EXCLUDED.some(p => p.test(url)); }
 Reward rates out of date: Add a "Last updated" timestamp and show a warning badge when rates are more than 6 months old.
 
 For comprehensive optimization, pair your extension with manual tracking for offline purchases and annual fee calculations. The extension handles quick checkout decisions; strategic card selection requires a broader view.
-
 
 Related Reading
 

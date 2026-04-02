@@ -13,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Charm Bracelet Workflow Guide
 
 Think of your Claude Code workflow like building a charm bracelet. Each skill, each automation, each prompt pattern is a charm, and when you string them together thoughtfully, you create something greater than the sum of its parts. This guide shows you how to design, assemble, and maintain modular workflows that scale with your project needs.
 
-Understanding the Charm Bracelet Metaphor
+## Understanding the Charm Bracelet Metaphor
 
 The charm bracelet analogy works perfectly for Claude Code workflows because both share three key characteristics: modularity, composability, and personal customization. Each charm serves a specific purpose, perhaps one handles API documentation, another manages test generation, and a third orchestrates deployment. Individually, they're useful. Together, they create a cohesive system that reflects your specific workflow needs.
 
 This approach transforms Claude Code from a simple coding assistant into a personalized development environment that understands your project's unique patterns and requirements.
 
-Building Your First Charm: Skill Selection
+## Building Your First Charm: Skill Selection
 
 Before assembling your workflow bracelet, you need to select the right charms. Start by auditing your most frequent development tasks:
 
@@ -47,11 +46,11 @@ Here's how to invoke individual skills to test them:
 /refactor Improve error handling in login handler
 ```
 
-Stringing Charms Together: Workflow Composition
+## Stringing Charms Together: Workflow Composition
 
 The real power emerges when you chain skills together. A charm bracelet workflow combines multiple skills in sequence or parallel to accomplish complex tasks. Here's a practical example:
 
-Complete Feature Development Workflow
+## Complete Feature Development Workflow
 
 When adding a new feature to your application, you might string together these charms:
 
@@ -78,9 +77,9 @@ workflows:
         prompt: "Review code for security vulnerabilities"
 ```
 
-Designing Your Bracelet: Workflow Architecture
+## Designing Your Bracelet: Workflow Architecture
 
-The Central Thread: Project Context
+## The Central Thread: Project Context
 
 Every charm bracelet needs a central thread, your project's CLAUDE.md file. This file maintains context across all skills, ensuring each charm understands your project's architecture, coding standards, and business logic.
 
@@ -103,7 +102,7 @@ Business Rules
 - API responses: ISO 8601 dates, snake_case JSON
 ```
 
-Charm Compatibility: Skill Interactions
+## Charm Compatibility: Skill Interactions
 
 Not all charms work well together. Consider these compatibility rules:
 
@@ -116,11 +115,11 @@ Potential Conflicts
 - Multiple code-generation charms may overwrite each other's work
 - aggressive-optimization + readability-focused can conflict
 
-Maintaining Your Bracelet: Workflow Evolution
+## Maintaining Your Bracelet: Workflow Evolution
 
 Your charm bracelet needs regular maintenance as your project evolves.
 
-Quarterly Workflow Reviews
+## Quarterly Workflow Reviews
 
 Every few months, evaluate your workflow effectiveness:
 
@@ -134,7 +133,7 @@ Workflow Audit Checklist
 - [ ] Document new workflow patterns discovered
 ```
 
-Scaling Your Bracelet
+## Scaling Your Bracelet
 
 As projects grow, your charm collection should evolve:
 
@@ -150,9 +149,9 @@ Enterprise Phase (50+ developers)
 - Focus: Governance and compliance
 - Key charms: audit-logging, access-control, compliance-scanning
 
-Practical Examples: Real-World Workflows
+## Practical Examples: Real-World Workflows
 
-Example 1: Bug Fix Workflow
+## Example 1: Bug Fix Workflow
 
 ```
 /investigate "Login fails intermittently for users with special characters in password"
@@ -160,7 +159,7 @@ Example 1: Bug Fix Workflow
 /fix "Implement the bug fix based on test expectations"
 ```
 
-Example 2: Feature Delivery Workflow
+## Example 2: Feature Delivery Workflow
 
 ```
 /architect "Design notification system for in-app messages"
@@ -170,7 +169,7 @@ Example 2: Feature Delivery Workflow
 /security "Scan for vulnerabilities in new notification endpoints"
 ```
 
-Example 3: Code Review Workflow
+## Example 3: Code Review Workflow
 
 ```
 /analyze "Review the authentication module for security issues"
@@ -178,9 +177,9 @@ Example 3: Code Review Workflow
 /optimize "Performance tune the database queries in reports"
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Charm Collision: When Skills Conflict
+## Charm Collision: When Skills Conflict
 
 If two skills produce conflicting outputs, create a coordination layer:
 
@@ -196,7 +195,7 @@ coordination:
     - skill: security
 ```
 
-Context Bleeding: Managing State
+## Context Bleeding: Managing State
 
 Skills can inadvertently share context. Use explicit context boundaries:
 
@@ -205,7 +204,7 @@ Skills can inadvertently share context. Use explicit context boundaries:
 /skill-two "Work independently on the notification service. Start fresh."
 ```
 
-Conclusion: Building Your Perfect Bracelet
+## Conclusion: Building Your Perfect Bracelet
 
 The charm bracelet workflow model transforms how you interact with Claude Code. Rather than treating each interaction as isolated, you design intentional chains of skills that reflect your project's unique needs. Start small, two or three charms that address your most frequent tasks. As your workflow matures, add complexity incrementally.
 

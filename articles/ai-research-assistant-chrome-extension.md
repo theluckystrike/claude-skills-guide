@@ -13,13 +13,12 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 AI research assistant Chrome extensions transform how developers and researchers gather, organize, and synthesize information from the web. Rather than manually collecting bookmarks, copying text snippets, and toggling between dozens of tabs, these tools let you capture, annotate, and process web content directly within your browser.
 
 This guide covers the technical architecture of AI-powered research extensions, practical implementation patterns, and real-world use cases for developers building or customizing these tools.
 
-How Chrome Extensions Access Web Content
+## How Chrome Extensions Access Web Content
 
 Chrome extensions interact with web pages through several APIs. For research assistants, the most critical is the `chrome.scripting` API, which lets your extension inject content scripts into pages you visit.
 
@@ -68,7 +67,7 @@ chrome.runtime.sendMessage({
 });
 ```
 
-Building the Extension's Core Logic
+## Building the Extension's Core Logic
 
 A well-structured research assistant extension separates concerns across three components:
 
@@ -111,9 +110,9 @@ async function processResearchContent(content) {
 }
 ```
 
-Practical Use Cases for Developers
+## Practical Use Cases for Developers
 
-Code Documentation Research
+## Code Documentation Research
 
 When exploring new libraries or frameworks, you often visit documentation pages, GitHub repos, and Stack Overflow threads scattered across many tabs. A research assistant extension can:
 
@@ -133,7 +132,7 @@ function extractCodeSnippets() {
 }
 ```
 
-Technical Article Curation
+## Technical Article Curation
 
 Building a personal knowledge base requires organizing articles by topic, extracting key insights, and linking related concepts. Your extension can automatically tag and categorize saved content:
 
@@ -155,7 +154,7 @@ function categorizeContent(url) {
 }
 ```
 
-API Reference Management
+## API Reference Management
 
 Working with multiple APIs means constantly referring back to authentication requirements, endpoint structures, and response formats. Research assistants can index and search your saved API documentation:
 
@@ -183,7 +182,7 @@ function indexApiEndpoints() {
 }
 ```
 
-Considerations for Extension Performance
+## Considerations for Extension Performance
 
 Research assistant extensions can consume significant resources if not optimized. Follow these practices:
 
@@ -203,7 +202,7 @@ Research assistant extensions can consume significant resources if not optimized
 }
 ```
 
-Extending Functionality with AI Providers
+## Extending Functionality with AI Providers
 
 The real power of research assistants comes from integrating AI processing. Most implementations support multiple providers:
 
@@ -244,12 +243,11 @@ const providers = {
 };
 ```
 
-Conclusion
+## Conclusion
 
 AI research assistant Chrome extensions bridge the gap between passive browsing and active knowledge building. By understanding how to extract web content, process it with AI services, and organize results for later retrieval, developers can create powerful tools tailored to their specific research workflows.
 
 The patterns covered here, content script injection, background service worker architecture, and AI provider integration, form the foundation for building extensions that scale from personal projects to production releases used by thousands of researchers.
-
 
 Related Reading
 
@@ -259,7 +257,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Building the Research Assistant
+## Step-by-Step: Building the Research Assistant
 
 1. Set up Manifest V3 with `storage`, `contextMenus`, `sidePanel`, and `activeTab` permissions. The `sidePanel` permission (Chrome 114+) lets you open a persistent sidebar panel alongside the web page. ideal for research workflows.
 2. Implement text selection capture: use a context menu with `contexts: ['selection']` so users can right-click any selected text and send it to the research assistant. The text is passed to the background script via `chrome.runtime.sendMessage`.
@@ -268,7 +266,7 @@ Step-by-Step: Building the Research Assistant
 5. Save to research notes: add a "Save to Notes" button that appends the research result to a collection in `chrome.storage.local`. Display saved notes in a second tab within the side panel.
 6. Export research session: at the end of a research session, let users export all saved notes as a Markdown file with the source URL and timestamp for each entry.
 
-Using the Chrome Side Panel API
+## Using the Chrome Side Panel API
 
 The Side Panel API gives the extension a persistent, browser-managed sidebar that opens alongside the page:
 
@@ -288,7 +286,7 @@ chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
 
 The side panel persists across page navigations within the same tab, which is exactly what researchers need. the notes panel stays open as they move between sources.
 
-Comparison with Research Tools
+## Comparison with Research Tools
 
 | Tool | Browser integration | AI analysis | Note export | Offline | Cost |
 |---|---|---|---|---|---|
@@ -300,7 +298,7 @@ Comparison with Research Tools
 
 The key advantage of a custom extension is the tight integration with the side panel and local storage. research notes accumulate automatically as you browse, with no account required.
 
-Advanced: Cross-Page Research Graph
+## Advanced: Cross-Page Research Graph
 
 Build a knowledge graph of research sessions by tracking how concepts from different pages connect:
 
@@ -321,7 +319,7 @@ async function linkConcepts(newNote, existingNotes) {
 
 Display this graph as a simple list of "Related notes" links within each note, or render it as a visual node graph using a lightweight library like Cytoscape.js bundled with the extension.
 
-Troubleshooting
+## Troubleshooting
 
 Side panel not opening on some pages: The side panel requires the `sidePanel` permission and Chrome 114+. On older Chrome versions, fall back to opening a popup window using `chrome.windows.create`. Check `chrome.sidePanel` availability at runtime before calling its API.
 

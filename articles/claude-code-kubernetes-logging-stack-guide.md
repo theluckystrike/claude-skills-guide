@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code Kubernetes Logging Stack Guide"
 description: "A practical guide to building a Kubernetes logging stack with Claude Code. Learn how to configure Fluent Bit, Loki, and Grafana while leveraging Claude."
@@ -14,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code Kubernetes Logging Stack Guide
 
 Setting up a solid logging stack in Kubernetes doesn't have to be overwhelming. This guide walks you through building a production-ready logging pipeline using Fluent Bit, Loki, and Grafana, while showing how Claude Code and its skills accelerate every step of the process.
 
-Understanding the Logging Stack Components
+## Understanding the Logging Stack Components
 
 A complete Kubernetes logging solution requires three layers: collection, aggregation, and visualization. Fluent Bit runs as a DaemonSet on each node, collecting logs from containers and forwarding them to Loki. Loki then indexes and stores these logs efficiently, while Grafana provides the querying and dashboarding interface.
 
@@ -29,7 +25,7 @@ This separation of concerns keeps the system scalable. Fluent Bit handles the hi
 
 When you're configuring this stack, Claude Code becomes invaluable for generating YAML manifests, debugging configuration issues, and explaining how each component fits together. The kubernetes-mcp-server skill can also help manage cluster interactions directly from your terminal.
 
-Setting Up Fluent Bit with Claude Code
+## Setting Up Fluent Bit with Claude Code
 
 Fluent Bit configuration involves creating a ConfigMap for the Fluent Bit daemon and a DaemonSet to deploy it across your nodes. Here's a practical starting point:
 
@@ -77,7 +73,7 @@ The parsers.conf section deserves special attention. Without proper parsing, you
 
 When Claude Code helps you configure Fluent Bit, it can analyze your existing log formats and suggest appropriate parser configurations. This is particularly useful when dealing with applications that don't output JSON logs by default.
 
-Deploying Loki for Log Aggregation
+## Deploying Loki for Log Aggregation
 
 Loki differs from traditional log databases by only indexing metadata labels rather than full log content. This approach dramatically reduces storage costs while maintaining fast query performance. Deploy Loki with a simple Helm chart or manual YAML manifests.
 
@@ -115,7 +111,7 @@ For production environments, you'll want to configure object storage like S3 or 
 
 The schema_config section defines how Loki indexes your logs. Starting with v12 schema provides better compression and query performance. If you're migrating from an older Loki version, the ttd skill can assist with schema migrations.
 
-Connecting Grafana for Visualization
+## Connecting Grafana for Visualization
 
 Grafana completes the stack by providing powerful querying and visualization capabilities. Add Loki as a data source using the HTTP endpoint:
 
@@ -133,7 +129,7 @@ This query filters logs from the my-service application containing the word "err
 
 Grafana dashboards become more powerful when you combine logs with metrics. Create panels that show error rates alongside the actual error messages, giving you immediate context when incidents occur.
 
-Automating with Claude Skills
+## Automating with Claude Skills
 
 Several Claude skills accelerate logging stack management. The grafana-mcp-server skill lets you create dashboards programmatically. The pdf skill helps generate incident reports from log queries. For debugging, the supermemory skill maintains context across complex troubleshooting sessions.
 
@@ -145,7 +141,7 @@ When investigating production issues, chain multiple skills together:
 
 The tdd skill proves useful when writing tests for log parsing logic or building custom Fluent Bit filters that handle your application's specific log format.
 
-Common Pitfalls and Solutions
+## Common Pitfalls and Solutions
 
 The most frequent issue involves Fluent Bit not collecting logs from specific namespaces. This usually stems from RBAC permissions. Ensure your Fluent Bit service account has cluster-reader permissions:
 
@@ -173,7 +169,7 @@ limits_config:
 
 Claude Code can analyze your current resource usage and suggest appropriate limits for your cluster's scale.
 
-Production Recommendations
+## Production Recommendations
 
 For production environments, implement log retention policies that balance storage costs with compliance requirements. Loki supports configurable retention through the table_manager:
 
@@ -196,12 +192,11 @@ Consider enabling tail-based logging in Fluent Bit for real-time debugging capab
 
 Monitoring the monitoring stack itself matters. Create dashboards that track Fluent Bit throughput, Loki ingestion rates, and Grafana query performance. Claude Code's monitoring skills can generate these automatically based on your current setup.
 
-Conclusion
+## Conclusion
 
 Building a Kubernetes logging stack requires careful coordination between collection, storage, and visualization layers. Fluent Bit handles high-volume ingestion efficiently, Loki provides cost-effective log storage, and Grafana delivers powerful analysis capabilities. Claude Code accelerates every phase, from initial configuration generation to ongoing maintenance and troubleshooting.
 
 The skills ecosystem amplifies this workflow. Use the grafana-mcp-server for programmatic dashboard creation, the pdf skill for incident documentation, and supermemory for maintaining investigation context across complex incidents.
-
 
 Related Reading
 

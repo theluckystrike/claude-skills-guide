@@ -16,7 +16,7 @@ permalink: /claude-code-for-beginners-complete-getting-started-2026/
 
 [Claude Code is Anthropic's command-line tool that brings Claude directly into your development workflow](/best-claude-code-skills-to-install-first-2026/) Instead of switching to a browser to ask Claude questions, you work with Claude in your terminal, and Claude can read your files, write code, and run commands. This guide walks you through getting started from zero.
 
-What You Need Before Starting
+## What You Need Before Starting
 
 - A computer running macOS, Linux, or Windows (via WSL)
 - Node.js installed (version 18 or later). check with `node --version`
@@ -25,7 +25,7 @@ What You Need Before Starting
 
 [You do not need to be a senior developer or understand how AI models work](/claude-skill-md-format-complete-specification-guide/) If you can navigate a terminal and open files, you are ready.
 
-Step 1: Install Claude Code
+## Step 1: Install Claude Code
 
 Claude Code installs via npm. Open your terminal and run:
 
@@ -41,7 +41,7 @@ claude --version
 
 You should see a version number. If you see "command not found", restart your terminal.
 
-Step 2: Authenticate
+## Step 2: Authenticate
 
 Claude Code needs your Anthropic API key to work. Get one at console.anthropic.com under "API Keys".
 
@@ -53,7 +53,7 @@ export ANTHROPIC_API_KEY="your-key-here"
 
 Add this to your shell profile (e.g., `~/.zshrc` or `~/.bashrc`) so it persists across sessions. you only need to do this once.
 
-Step 3: Start Your First Session
+## Step 3: Start Your First Session
 
 Navigate to a project folder you are working on (or create a new one for practice):
 
@@ -77,7 +77,7 @@ Claude will write the function. Ask it to save to a file:
 
 Claude will write the file to your current directory.
 
-Step 4: Understand What Claude Code Can Do
+## Step 4: Understand What Claude Code Can Do
 
 Claude Code has tools. abilities to take action on your computer. By default it can:
 
@@ -95,7 +95,7 @@ I'll write this to math-utils.js
 Done. The file has been created with the average function.
 ```
 
-Step 5: Try a Real Task
+## Step 5: Try a Real Task
 
 Create a simple Node.js project:
 
@@ -113,7 +113,7 @@ Ask Claude to build something:
 
 Watch what Claude does. It will think through the problem, write the code, install any needed packages, test it, and show you the result. This is the core loop: describe what you want, Claude builds it.
 
-Step 6: Use Skills
+## Step 6: Use Skills
 
 Skills are pre-configured modes that make Claude especially good at specific tasks. A skill is a Markdown file stored in `~/.claude/skills/`. You invoke skills with a `/skill-name` slash command at the start of your message.
 
@@ -146,7 +146,7 @@ In future sessions, retrieve it:
 /supermemory What are the module conventions for this project?
 ```
 
-Step 7: Set Up CLAUDE.md
+## Step 7: Set Up CLAUDE.md
 
 The `CLAUDE.md` file is a project briefing document that Claude reads at the start of every session. Put information about your project there so Claude does not need you to explain it every time.
 
@@ -163,7 +163,7 @@ Claude will generate a draft. Review it and add:
 - How to run tests
 - Any important constraints
 
-Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Trying to do too much in one message: Break large requests into steps. "Build me a full e-commerce site" will not go well. "Build a product listing page that shows items from a JSON file" is a good start.
 
@@ -173,7 +173,7 @@ Forgetting to set up CLAUDE.md: Without it, Claude has to rediscover your projec
 
 Running Claude Code in the wrong directory: Claude can only read files in your current directory and subdirectories. Start sessions from your project root.
 
-What to Try Next
+## What to Try Next
 
 Once you are comfortable with the basics:
 

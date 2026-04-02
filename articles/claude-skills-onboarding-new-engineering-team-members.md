@@ -16,7 +16,7 @@ permalink: /claude-skills-onboarding-new-engineering-team-members/
 
 [Joining a new engineering team means learning new tools, processes, and conventions](/best-claude-code-skills-to-install-first-2026/) Claude skills can accelerate this onboarding by automating documentation reviews, generating test scaffolds, and helping you understand codebase patterns faster. This guide covers the essential skills every new team member should configure during their first week.
 
-Setting Up Your Claude Skills Environment
+## Setting Up Your Claude Skills Environment
 
 Before diving into team-specific workflows, ensure your Claude Code installation includes the core skills. The base installation provides document processing and code execution, but specialized skills unlock faster onboarding.
 
@@ -38,7 +38,7 @@ If you're starting fresh, add these foundational skills first:
 
 These five skills cover the majority of onboarding tasks, from reading architecture documents to validating your first pull requests.
 
-Document Processing with the PDF Skill
+## Document Processing with the PDF Skill
 
 New team members often receive architecture decision records, API specifications, and runbooks in PDF format. The pdf skill lets you extract and organize this information without switching between tools.
 
@@ -56,7 +56,7 @@ New team members often receive architecture decision records, API specifications
 
 This skill becomes particularly valuable when reviewing technical documentation during your first sprint. Instead of manually searching through long documents, you can ask specific questions and get targeted answers.
 
-Test-Driven Development with the TDD Skill
+## Test-Driven Development with the TDD Skill
 
 Every team has different testing conventions. some prefer Jest, others use Pytest or RSpec. The tdd skill adapts to your team's patterns when you provide context about your tech stack.
 
@@ -74,7 +74,7 @@ When writing your first tests, provide the skill with examples from the codebase
 
 The skill generates tests that match your team's naming conventions, fixture usage, and assertion styles. Review these generated tests to learn how your team structures test files.
 
-Memory Management with the Supermemory Skill
+## Memory Management with the Supermemory Skill
 
 Team knowledge lives in Slack threads, Google Docs, Notion pages, and engineering blog posts. The supermemory skill acts as your personal knowledge base, retrieving relevant context when you need it.
 
@@ -104,7 +104,7 @@ Later, when you're in a PR review or debugging session, retrieve this informatio
 
 This skill reduces the number of Slack messages you need to send asking "how do we..." questions.
 
-Frontend Workflows with Frontend-Design and Webapp-Testing
+## Frontend Workflows with Frontend-Design and Webapp-Testing
 
 If your team works on web applications, the frontend-design and webapp-testing skills speed up UI development and validation.
 
@@ -130,7 +130,7 @@ The webapp-testing skill runs your application and validates behavior:
 
 These skills validate your work against team standards without requiring manual browser testing for every change.
 
-Practical Onboarding Workflow
+## Practical Onboarding Workflow
 
 Here's a typical first-week workflow using these skills:
 
@@ -144,7 +144,7 @@ Here's a typical first-week workflow using these skills:
 
 This workflow ensures you learn by doing rather than passively reading documentation.
 
-Skill Customization for Team Context
+## Skill Customization for Team Context
 
 Once you're comfortable with the base skills, customize them for your team's specific needs. Many skills accept configuration options:
 
@@ -176,7 +176,7 @@ For the webapp-testing skill, configure your local development URL:
 
 These configurations make the skills feel like extensions of your team's existing tools rather than generic utilities.
 
-Creating a Team Onboarding CLAUDE.md
+## Creating a Team Onboarding CLAUDE.md
 
 For team leads setting up the onboarding experience, a dedicated `CLAUDE.md` file transforms passive documentation into an interactive guide. Unlike architecture docs that explain what the code does, an onboarding `CLAUDE.md` explains how to work on the codebase effectively.
 
@@ -241,7 +241,7 @@ Version control your `CLAUDE.md` files alongside your code, this creates a histo
 
 To measure onboarding effectiveness, track time-to-productivity metrics: can new hires make their first commit on day one? Complete a small feature by end of week one? If not, the `CLAUDE.md` likely needs improvement. The docx skill can generate onboarding progress reports, giving you structured feedback on which parts of onboarding create bottlenecks.
 
-Building Your Personal Skill Stack
+## Building Your Personal Skill Stack
 
 As you become more productive with Claude skills, you'll naturally discover which ones fit your role best. Backend engineers might rely more heavily on pdf for reading protobuf definitions and API contracts. Frontend developers will find the frontend-design skill indispensable for matching pixel-perfect implementations.
 

@@ -17,7 +17,7 @@ Claude Code for Performance Testing Strategy Workflow
 
 Performance testing is critical for delivering responsive applications, but it often gets overlooked in fast-paced development cycles. Claude Code can help automate, standardize, and improve your performance testing workflow. This guide shows you how to build a performance testing strategy workflow that integrates smoothly with your development process.
 
-Why Use Claude Code for Performance Testing
+## Why Use Claude Code for Performance Testing
 
 Traditional performance testing often relies on manual scripts, scattered tools, and inconsistent execution. Claude Code changes this by bringing AI-assisted automation to every stage of the testing workflow. You can create skills that:
 
@@ -28,7 +28,7 @@ Traditional performance testing often relies on manual scripts, scattered tools,
 
 The key advantage is that Claude Code understands your codebase context. It can read your existing tests, understand your API contracts, and generate relevant performance tests without requiring extensive manual configuration.
 
-Building a Performance Testing Skill
+## Building a Performance Testing Skill
 
 A well-designed performance testing skill should encapsulate your testing strategy and provide consistent behavior across runs. Here's how to structure such a skill:
 
@@ -59,11 +59,11 @@ Always use realistic test data from fixtures/test-data.json.
 
 Notice the use of the `{{ env.VARIABLE }}` syntax for environment-specific configuration. This makes your skill portable across different environments.
 
-Defining Performance Test Scenarios
+## Defining Performance Test Scenarios
 
 The most effective performance tests simulate real-world usage patterns. Use Claude Code to generate comprehensive test scenarios based on your application's actual traffic patterns.
 
-API Endpoint Testing
+## API Endpoint Testing
 
 For REST APIs, create tests that cover different endpoint categories:
 
@@ -110,7 +110,7 @@ export default function () {
 
 This script generates realistic load patterns weighted by expected traffic. You can customize the weights based on your analytics data.
 
-Database Query Performance
+## Database Query Performance
 
 Performance testing isn't complete without database query analysis. Create a skill that:
 
@@ -128,7 +128,7 @@ For database performance testing:
 5. Flag any query exceeding 100ms
 ```
 
-Setting Up Baseline Comparison
+## Setting Up Baseline Comparison
 
 A performance testing strategy is only valuable with consistent baseline comparisons. Claude Code can automate the entire baseline management workflow:
 
@@ -160,7 +160,7 @@ Regressions Detected
 2. GET /api/dashboard: error rate increased
 ```
 
-Integrating with CI/CD
+## Integrating with CI/CD
 
 Automated performance testing only works when integrated into your continuous integration pipeline. Here's how to configure your CI to run performance tests with Claude Code:
 
@@ -203,7 +203,7 @@ jobs:
             });
 ```
 
-Best Practices for Performance Testing with Claude Code
+## Best Practices for Performance Testing with Claude Code
 
 Follow these actionable tips to get the most out of your performance testing workflow:
 
@@ -217,12 +217,11 @@ Separate Concerns: Keep unit performance tests (fast, focused) separate from int
 
 Document Context: Include application state, environment details, and test configuration in your results. This helps debug performance issues later.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms performance testing from a manual, sporadic activity into an automated, consistent workflow. By creating dedicated performance testing skills, generating realistic test scenarios, and integrating with CI/CD, you can catch performance regressions before they reach production. Start with a simple skill that runs basic endpoint tests, then expand to cover database queries, frontend rendering, and full integration scenarios as your testing matures.
 
 The key is consistency, run the same tests, compare against the same baselines, and act on the same metrics every time. Claude Code makes this automation accessible without requiring extensive custom tooling.
-
 
 Related Reading
 

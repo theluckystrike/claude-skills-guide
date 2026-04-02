@@ -20,7 +20,7 @@ Open source software governance encompasses the policies, processes, and practic
 
 This tutorial guide walks you through practical implementations of Claude Code for OSS governance workflows, covering license compliance, contributor agreement management, security vulnerability handling, and automated policy enforcement.
 
-Understanding OSS Governance Challenges
+## Understanding OSS Governance Challenges
 
 Before diving into solutions, it's essential to understand the core challenges that OSS governance addresses:
 
@@ -34,7 +34,7 @@ Policy Enforcement: Project governance often requires adherence to coding standa
 
 Claude Code excels at these tasks by combining AI understanding with powerful tool execution capabilities.
 
-Setting Up Claude Code for Governance Tasks
+## Setting Up Claude Code for Governance Tasks
 
 First, ensure Claude Code is installed and configured for your project:
 
@@ -64,11 +64,11 @@ Create a dedicated governance agent configuration:
 }
 ```
 
-License Compliance Automation
+## License Compliance Automation
 
 One of the most time-consuming governance tasks is ensuring license compliance across all dependencies. Here's how to automate this with Claude Code:
 
-Building a License Checker
+## Building a License Checker
 
 Create a script that analyzes your project's dependencies:
 
@@ -128,7 +128,7 @@ if __name__ == "__main__":
         print("All dependencies have approved licenses!")
 ```
 
-Integrating with Claude Code
+## Integrating with Claude Code
 
 Now integrate this into your Claude Code workflow:
 
@@ -139,11 +139,11 @@ claude run "Check license compliance for all dependencies and report any issues"
 
 Claude Code can execute this script and interpret the results, providing natural language summaries and recommendations for resolving violations.
 
-Contributor Agreement Management
+## Contributor Agreement Management
 
 Managing contributor license agreements is critical for legal protection. Here's a workflow for automating this process:
 
-Automated CLA Check
+## Automated CLA Check
 
 ```python
 #!/usr/bin/env python3
@@ -195,18 +195,18 @@ if __name__ == "__main__":
         print(f"Commits missing DCO sign-off: {len(missing)}")
 ```
 
-CLA Verification Workflow
+## CLA Verification Workflow
 
 ```bash
 Use Claude Code to verify all contributors have signed
 claude run "Review recent pull requests and verify each contributor has signed the CLA or DCO. Report any unsigned contributions."
 ```
 
-Security Vulnerability Handling
+## Security Vulnerability Handling
 
 Automated security vulnerability detection is essential for OSS governance:
 
-Vulnerability Scanning Integration
+## Vulnerability Scanning Integration
 
 ```yaml
 .claude/security-workflow.yml
@@ -236,11 +236,11 @@ Run security scan with Claude Code
 claude run "Run a comprehensive security vulnerability scan on all dependencies. Prioritize critical and high severity issues and create a remediation plan."
 ```
 
-Automated Policy Enforcement
+## Automated Policy Enforcement
 
 Implement governance policies that Claude Code can enforce:
 
-Commit Message Standards
+## Commit Message Standards
 
 ```python
 validate_commit_message.py
@@ -267,7 +267,7 @@ if __name__ == "__main__":
     sys.exit(0 if valid else 1)
 ```
 
-Code Review Policy Automation
+## Code Review Policy Automation
 
 ```bash
 Configure Claude Code to enforce review policies
@@ -277,7 +277,7 @@ Run policy check
 claude run "Verify that all merged pull requests have received at least 2 approvals and all CI checks have passed."
 ```
 
-Practical Workflow Example
+## Practical Workflow Example
 
 Here's a complete governance workflow combining all elements:
 
@@ -308,7 +308,7 @@ echo "Generating governance report..."
 claude run "Create a summary report of all governance metrics"
 ```
 
-Best Practices for Implementation
+## Best Practices for Implementation
 
 When implementing Claude Code for OSS governance, consider these recommendations:
 
@@ -322,14 +322,13 @@ Document Everything: Ensure your governance workflows are documented so contribu
 
 Monitor and Iterate: Track false positives and negatives, adjusting your Claude Code prompts and scripts accordingly.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms OSS governance from a manual, error-prone process into an automated, consistent workflow. By integrating license compliance checks, contributor agreement verification, security scanning, and policy enforcement, you can maintain solid governance without overwhelming your maintainers.
 
 The key is starting with clear definitions of your governance policies, then gradually automating each aspect. Claude Code's combination of AI understanding and tool execution makes it exceptionally well-suited for these tasks, providing both automation efficiency and intelligent interpretation of results.
 
 Start implementing these workflows today, and you'll see significant improvements in your project's governance consistency while reducing the manual burden on your team.
-
 
 Related Reading
 

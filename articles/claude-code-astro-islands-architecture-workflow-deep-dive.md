@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Astro Islands Architecture Workflow Detailed look
 
@@ -21,7 +20,7 @@ Astro's islands architecture has revolutionized how developers think about build
 
 This guide walks you through practical strategies for working with Astro's islands architecture using Claude Code, from initial project setup to advanced optimization techniques.
 
-Understanding the Islands Architecture Pattern
+## Understanding the Islands Architecture Pattern
 
 Traditional Single Page Applications (SPAs) ship JavaScript for the entire application, even when most of the page is static content. This approach works well for highly interactive applications but creates unnecessary overhead for content-heavy sites like blogs, marketing pages, and documentation.
 
@@ -35,7 +34,7 @@ Astro's islands architecture inverts this paradigm. By default, every component 
 
 This granular control means your page ships with minimal JavaScript while still supporting rich interactivity where needed.
 
-Setting Up Your Astro Project with Claude Code
+## Setting Up Your Astro Project with Claude Code
 
 When starting a new Astro project, Claude Code can help you configure the ideal setup for islands architecture. Here's a practical workflow:
 
@@ -49,7 +48,7 @@ npx astro add react vue svelte tailwind
 
 Claude Code can then help you organize your project structure for optimal islands usage. The key is identifying which parts of your UI truly need client-side interactivity versus what can remain static.
 
-Component Strategy: Identifying Island Candidates
+## Component Strategy: Identifying Island Candidates
 
 One of the most important decisions in islands architecture is determining which components should be hydrated. Here's a practical framework:
 
@@ -69,7 +68,7 @@ Hydrated Islands (With Directives)
 
 Claude Code can analyze your component tree and recommend appropriate hydration strategies based on actual usage patterns.
 
-Practical Example: Building an Interactive Blog
+## Practical Example: Building an Interactive Blog
 
 Let's walk through building a blog with Astro where most content is static but certain elements require interactivity:
 
@@ -107,11 +106,11 @@ const { post } = Astro.props;
 
 The key insight is matching hydration strategy to user experience priorities. The comment section loads immediately because users expect to see and interact with it right away. The newsletter signup waits until the browser is idle, prioritizing the initial page render.
 
-Advanced Patterns: State Management Across Islands
+## Advanced Patterns: State Management Across Islands
 
 When you have multiple interactive islands on a page, you'll need to share state between them. Astro provides several approaches:
 
-Using Nano Stores for Cross-Island State
+## Using Nano Stores for Cross-Island State
 
 Nano Stores is a lightweight state management library that works across different UI frameworks:
 
@@ -144,7 +143,7 @@ export function addToCart(item: Omit<CartItem, 'quantity'>) {
 
 This works smoothly across React, Vue, Svelte, and other islands because Nano Stores is framework-agnostic.
 
-Server-Side State with Islands
+## Server-Side State with Islands
 
 For data that changes infrequently, consider using Astro's server islands feature:
 
@@ -161,7 +160,7 @@ const products = await getLatestProducts();
 ))}
 ```
 
-Optimizing Island Performance
+## Optimizing Island Performance
 
 Once your islands are working, follow these optimization strategies:
 
@@ -202,7 +201,7 @@ Each island should be as small as possible. Break complex features into smaller 
 <QuickActions client:idle />
 ```
 
-Debugging Islands Hydration Issues
+## Debugging Islands Hydration Issues
 
 When things don't work as expected, Claude Code can help you diagnose common issues:
 
@@ -211,7 +210,7 @@ When things don't work as expected, Claude Code can help you diagnose common iss
 3. Verify Directive Syntax - Small typos like `client:load` vs `client:load` can cause issues
 4. Check for Framework Conflicts - Ensure you're not mixing incompatible framework versions
 
-Best Practices Summary
+## Best Practices Summary
 
 - Start with all components static (no hydration directive)
 - Add hydration only where genuinely needed
@@ -221,7 +220,7 @@ Best Practices Summary
 - Monitor bundle sizes and hydration overhead
 - Test across devices and network conditions
 
-Conclusion
+## Conclusion
 
 Astro's islands architecture provides a powerful foundation for building web applications that are fast by default. By combining it with Claude Code's AI-assisted development workflow, you can rapidly prototype, implement, and optimize interactive experiences without the traditional performance trade-offs.
 

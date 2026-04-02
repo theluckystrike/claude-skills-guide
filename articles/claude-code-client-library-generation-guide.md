@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Client Library Generation Guide
 
 Client library generation is one of the most practical applications of Claude Code skills. Instead of manually writing boilerplate code for API integrations, you can use skill-based workflows to generate type-safe, well-documented client libraries automatically. This guide shows you how to build and customize these generation pipelines. from a simple OpenAPI spec to a production-ready client with tests and documentation.
 
-Understanding Client Library Generation in Claude Code
+## Understanding Client Library Generation in Claude Code
 
 Claude Code skills can generate client libraries by analyzing API specifications, service definitions, or existing code patterns. The process typically involves reading OpenAPI/Swagger specs, understanding service interfaces, and outputting ready-to-use client code in your preferred language.
 
@@ -27,7 +26,7 @@ The core workflow uses the `read_file` tool to parse specification files, then u
 
 What separates Claude Code generation from generic code generators is context awareness. Standard generators blindly translate spec fields into methods. Claude Code reads your existing codebase conventions, notices that your team uses `httpx` instead of `requests`, and outputs code that fits naturally. It can also identify gaps in the spec. undocumented error codes, missing pagination logic, inconsistent field naming. and either fix them or flag them for review before any code is written.
 
-Why Generate Client Libraries Instead of Writing Them Manually
+## Why Generate Client Libraries Instead of Writing Them Manually
 
 Manually written clients accumulate subtle divergences from the actual API over time. A field gets renamed in the backend, a developer updates the server code, and suddenly the client silently sends the wrong key. Generated clients solve this by treating the spec as the single source of truth.
 
@@ -41,7 +40,7 @@ The tradeoff comparison looks like this:
 
 The Claude Code approach wins on custom logic because you can express preferences in plain language inside your skill definition. "Use snake_case for Python, generate docstrings in Google style, raise typed exceptions rather than returning raw dicts". these are instructions Claude follows throughout the generation, not post-processing hacks.
 
-Generating Libraries from API Specifications
+## Generating Libraries from API Specifications
 
 The most common approach involves parsing OpenAPI or gRPC definitions. Here's a practical workflow:
 
@@ -124,7 +123,7 @@ Notice this is significantly richer than a naive generator output. The client us
 
 This pattern extends to other languages. The `frontend-design` skill can generate TypeScript clients with full type inference, while custom skills can output Go, Rust, or Java clients based on your project requirements.
 
-TypeScript Client Generation
+## TypeScript Client Generation
 
 For TypeScript projects, generated clients benefit from discriminated unions for error handling and full generic inference:
 
@@ -195,7 +194,7 @@ class APIClient {
 
 The `frontend-design` skill extends this further by generating React hooks (`useResource`, `useResourceList`) that wrap the client methods with SWR or React Query, including loading and error states.
 
-Customizing Generation Templates
+## Customizing Generation Templates
 
 Client library generation becomes powerful when you customize output templates. You can create skills that define code style conventions, error handling patterns, and documentation standards.
 
@@ -222,7 +221,7 @@ The `template-skill` provides theming capabilities that work alongside generatio
 
 Beyond the template syntax, the real customization power comes from natural language instructions embedded in the skill file. You can tell Claude to add retry logic with exponential backoff to any `5xx` response, to snake_case all incoming JSON keys before mapping to dataclasses, or to generate an async variant alongside the sync client. These instructions persist across all generated files in a session, keeping the output coherent.
 
-Integrating with Documentation Workflows
+## Integrating with Documentation Workflows
 
 Generated client libraries benefit from paired documentation workflows. The `pdf` skill can generate API reference documents from the same specification files used for code generation. The `docx` skill creates onboarding guides with code examples.
 
@@ -236,7 +235,7 @@ This multi-skill approach ensures your client library ships with:
 
 A useful pattern is generating a `CHANGELOG.md` entry as part of every regeneration. The skill compares the previous spec hash with the new one, summarizes what changed (new endpoints, deprecated fields, modified response shapes), and prepends the entry automatically.
 
-Test-Driven Client Development
+## Test-Driven Client Development
 
 The `tdd` skill pairs exceptionally well with client library generation. After generating your client code, invoke the skill to create test suites that validate:
 
@@ -298,7 +297,7 @@ class TestAPIClient:
 
 The test suite uses `respx` to mock the HTTP layer, meaning tests run without a live API and without patching your client internals. This is the style the `tdd` skill produces. tests that validate behavior at the HTTP boundary, not at internal method calls.
 
-Version Management and Updates
+## Version Management and Updates
 
 Client libraries require maintenance as APIs evolve. Claude Code skills can automate version management through specification diffing and migration script generation.
 
@@ -330,7 +329,7 @@ def normalize_tags(raw_tags):
 
 The `supermemory` skill helps maintain institutional knowledge by storing generated patterns and common solutions, making future client generations faster and more consistent.
 
-Language-Specific Generation Patterns
+## Language-Specific Generation Patterns
 
 Different languages require different approaches:
 
@@ -346,7 +345,7 @@ Java/Kotlin: Generate builder patterns for request objects, proper `CompletableF
 
 The key difference when generating for statically typed languages is that Claude produces the type definitions first, then generates the method implementations that reference them. This catches type inconsistencies in the spec before you write a single line of business logic.
 
-Automating the Generation Pipeline
+## Automating the Generation Pipeline
 
 For continuous integration, chain skills together:
 
@@ -390,7 +389,7 @@ jobs:
 
 This pipeline ensures every API update produces consistent, tested, documented client libraries without manual intervention. The pull request step is important. it keeps a human in the loop to review generated diffs before merging, which is especially useful for catching breaking changes the spec didn't explicitly document.
 
-Handling Authentication Complexity
+## Handling Authentication Complexity
 
 Real-world APIs often use authentication schemes more complex than a single bearer token. Claude Code can generate clients that handle:
 
@@ -400,7 +399,7 @@ API key rotation: Some APIs issue short-lived keys. The generated client can acc
 
 HMAC signatures: For APIs that require signed requests, the generation skill can produce a signing interceptor that hashes the request body and adds the signature header, keeping this concern separate from the endpoint methods.
 
-Best Practices
+## Best Practices
 
 When building client library generation skills, follow these guidelines:
 
@@ -410,14 +409,13 @@ When building client library generation skills, follow these guidelines:
 4. Test generated code. Run the generated client against mock servers before releasing. A test that exercises every generated method, even shallowly, catches serialization bugs that static analysis misses.
 5. Document limitations. Note any spec features that the generator does not yet support (webhooks, binary uploads, streaming endpoints) so developers know where to add custom code.
 
-Conclusion
+## Conclusion
 
 Claude Code client library generation transforms API integration from repetitive boilerplate work into an automated, reproducible process. By combining generation skills with testing, documentation, and template customization, you can build production-quality clients in minutes rather than hours.
 
 The key is starting simple: generate basic clients, add tests via the `tdd` skill, document with `pdf` or `docx`, then layer in customization as your needs evolve. Once the pipeline is in place, the cost of updating your client when the API changes drops to nearly zero. run the skill, review the diff, merge.
 
 The deeper benefit is consistency. Every developer on your team works from the same generated foundation. Error handling is uniform, logging is uniform, retry behavior is uniform. That consistency is worth more than any individual code quality improvement.
-
 
 Related Reading
 

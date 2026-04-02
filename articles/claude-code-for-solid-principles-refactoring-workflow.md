@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for SOLID Principles Refactoring Workflow
-
 Writing clean, maintainable code is a goal every developer pursues, yet the path to achieving it often feels overwhelming. The SOLID principles, Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion, provide a proven framework for object-oriented design. But applying these principles to existing codebases, especially large ones, requires a systematic approach. This is where Claude Code becomes invaluable.
 
 This guide presents a practical workflow for using Claude Code to refactor code toward SOLID principles, making the process faster, safer, and more methodical.
 
-Understanding SOLID and Why It Matters
+## Understanding SOLID and Why It Matters
 
 Before diving into the workflow, let's briefly revisit what each SOLID principle means:
 
@@ -32,7 +29,7 @@ Before diving into the workflow, let's briefly revisit what each SOLID principle
 
 Violating these principles leads to code that is hard to test, maintain, and extend. But manually auditing and refactoring an entire codebase is time-consuming. Claude Code can accelerate this process significantly.
 
-Setting Up the Refactoring Session
+## Setting Up the Refactoring Session
 
 Start by creating a focused skill or prompt for the refactoring session. Create a new skill file for SOLID refactoring:
 
@@ -47,7 +44,7 @@ You are a code quality expert specializing in SOLID principles. When I provide c
 
 This skill establishes context and gives Claude Code a clear mandate. The explicit tool list ensures the session has necessary capabilities while maintaining focus.
 
-Phase 1: Audit the Current State
+## Phase 1: Audit the Current State
 
 Begin by understanding what you're working with. Use Claude Code to scan your codebase and identify potential SOLID violations:
 
@@ -64,7 +61,7 @@ Review the following code and identify any SOLID principle violations. For each 
 
 This initial audit serves as a baseline. Document the violations you find, this becomes your refactoring roadmap.
 
-Phase 2: Prioritize and Plan
+## Phase 2: Prioritize and Plan
 
 Not all violations carry equal weight. Use these criteria to prioritize:
 
@@ -80,7 +77,7 @@ Based on the violations found, create a prioritized refactoring plan. List the t
 
 This gives you an actionable plan rather than an overwhelming list.
 
-Phase 3: Single Responsibility First
+## Phase 3: Single Responsibility First
 
 The Single Responsibility Principle (SRP) is often the easiest to identify and fix, and it frequently unlocks improvements in other areas. Look for these warning signs:
 
@@ -159,7 +156,7 @@ class OrderProcessor:
 
 Claude Code can suggest these refactorings while preserving functionality. Always ask for the "before" and "after" to verify the changes maintain behavior.
 
-Phase 4: Address Dependency Inversion
+## Phase 4: Address Dependency Inversion
 
 Once you have smaller, focused classes, applying Dependency Inversion becomes natural. The goal is to depend on abstractions (protocols, interfaces, abstract classes) rather than concrete implementations.
 
@@ -197,7 +194,7 @@ class MockOrderRepository(OrderRepository):
         pass  # No-op for testing
 ```
 
-Phase 5: Verify and Test
+## Phase 5: Verify and Test
 
 After each refactoring phase, verification is crucial. Claude Code can help by:
 
@@ -207,14 +204,14 @@ After each refactoring phase, verification is crucial. Claude Code can help by:
 
 Always run your test suite after substantial refactoring. If tests pass, you have confidence the refactoring preserved behavior.
 
-Tips for Effective AI-Assisted Refactoring
+## Tips for Effective AI-Assisted Refactoring
 
 - Take it slow: Refactor one principle at a time. Trying to fix everything at once increases risk.
 - Commit frequently: Each successful refactoring should be a separate commit. This makes rollback easier if something goes wrong.
 - Communicate intent: Tell Claude Code what you're trying to achieve. "Refactor this to follow the Open-Closed Principle by introducing a strategy pattern" yields better results than "make this better."
 - Review AI suggestions: Claude Code is a tool, not a replacement for judgment. Verify suggestions make sense for your specific context.
 
-Conclusion
+## Conclusion
 
 Refactoring toward SOLID principles doesn't have to be a painful, months-long endeavor. With Claude Code as your assistant, you can systematically audit, plan, and refactor code while maintaining confidence through each step. The key is establishing a clear workflow: audit first, prioritize, refactor incrementally, and always verify with tests.
 

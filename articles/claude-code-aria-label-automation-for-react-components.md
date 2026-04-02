@@ -17,7 +17,7 @@ Claude Code ARIA Label Automation for React Components
 
 Manually adding ARIA labels to React components is tedious and error-prone. Claude Code transforms this workflow through intelligent automation, enabling you to generate accessible components at scale while maintaining consistency across your codebase.
 
-The Accessibility Challenge in React
+## The Accessibility Challenge in React
 
 React's component-based architecture creates unique accessibility challenges. Each button, input, and interactive element needs proper ARIA attributes. When building complex UIs with dozens or hundreds of components, maintaining consistent ARIA labeling becomes overwhelming. Common issues include:
 
@@ -28,7 +28,7 @@ React's component-based architecture creates unique accessibility challenges. Ea
 
 Claude Code addresses these challenges through specialized skills that understand React patterns and accessibility best practices.
 
-Key Claude Code Skills for ARIA Automation
+## Key Claude Code Skills for ARIA Automation
 
 1. The Frontend-Design Skill
 
@@ -92,11 +92,11 @@ test('SearchButton should have no accessibility violations', async () => {
 });
 ```
 
-Automated ARIA Label Generation Workflow
+## Automated ARIA Label Generation Workflow
 
 Here's how to automate ARIA label implementation in your React project:
 
-Step 1: Create an Accessibility Specification
+## Step 1: Create an Accessibility Specification
 
 Define your component library's ARIA conventions in a CLAUDE.md file:
 
@@ -112,7 +112,7 @@ All interactive elements must have proper ARIA labels:
 5. Navigation: proper role and aria-current for links
 ```
 
-Step 2: Generate Components with ARIA
+## Step 2: Generate Components with ARIA
 
 When creating new components, instruct Claude Code:
 
@@ -183,7 +183,7 @@ function FileUpload({ onFileSelect, onFileRemove, progress }) {
 }
 ```
 
-Step 3: Run Accessibility Audits
+## Step 3: Run Accessibility Audits
 
 After component generation, use Claude Code to audit your entire component library:
 
@@ -205,7 +205,7 @@ Found issues:
 - components/Menu.jsx: Missing aria-expanded on toggle button
 ```
 
-Step 4: Auto-Fix Issues
+## Step 4: Auto-Fix Issues
 
 Let Claude Code automatically fix the identified issues:
 
@@ -215,9 +215,9 @@ Fix all the accessibility issues identified in the previous audit
 
 The skill will update each component with the appropriate ARIA attributes while preserving your existing code and styling.
 
-Advanced Patterns for Complex Components
+## Advanced Patterns for Complex Components
 
-Dynamic ARIA Labels
+## Dynamic ARIA Labels
 
 For components with changing states, use computed ARIA labels:
 
@@ -237,7 +237,7 @@ function ToggleButton({ isOn, onToggle }) {
 }
 ```
 
-Form Input Associations
+## Form Input Associations
 
 The frontend-design skill automatically generates proper label associations:
 
@@ -264,7 +264,7 @@ function FormField({ label, error, id, ...props }) {
 }
 ```
 
-Complex Widget ARIA
+## Complex Widget ARIA
 
 For compound components like tabs or accordions, Claude Code generates complete ARIA patterns:
 
@@ -300,9 +300,9 @@ function Tabs({ tabs, activeTab, onChange }) {
 }
 ```
 
-Integrating with Your Development Workflow
+## Integrating with Your Development Workflow
 
-Pre-Commit Hooks
+## Pre-Commit Hooks
 
 Add accessibility validation to your pre-commit workflow:
 
@@ -311,7 +311,7 @@ Add accessibility validation to your pre-commit workflow:
 npm run test:accessibility
 ```
 
-CI/CD Integration
+## CI/CD Integration
 
 Include accessibility tests in your continuous integration:
 
@@ -324,7 +324,7 @@ Include accessibility tests in your continuous integration:
   run: npx axe-cli build//*.{html,jsx,tsx}
 ```
 
-Component Library Documentation
+## Component Library Documentation
 
 Generate accessibility documentation automatically:
 
@@ -336,7 +336,7 @@ Document the accessibility features of all components in the components/ directo
 - Known limitations
 ```
 
-Measuring Accessibility Success
+## Measuring Accessibility Success
 
 Track your accessibility improvements over time:
 
@@ -355,7 +355,7 @@ Generate an accessibility report for this week's changes. Compare:
 - WCAG 2.1 AA compliance status
 ```
 
-Conclusion
+## Conclusion
 
 Automating ARIA label implementation in React components through Claude Code transforms accessibility from a burdensome chore into an integral part of your development workflow. By using the frontend-design, tdd, and axe-accessibility-testing skills together, you can:
 

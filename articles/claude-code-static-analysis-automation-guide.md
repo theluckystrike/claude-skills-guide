@@ -13,22 +13,21 @@ reviewed: true
 score: 7
 ---
 
-
 Static analysis catches bugs before they reach production, but setting up and maintaining analysis pipelines takes time. Claude Code transforms static analysis from a manual chore into an automated workflow that runs continuously without developer intervention. This guide shows you how to build practical static analysis automation using Claude skills, with real configuration examples and decision frameworks for teams of every size.
 
-Why Automate Static Analysis with Claude Code
+## Why Automate Static Analysis with Claude Code
 
 Traditional static analysis requires configuring tools like ESLint, Pylint, or TypeScript compiler settings, then remembering to run them. Claude Code skills automate the entire process, from tool selection to configuration to execution. You get consistent code quality checks without the overhead.
 
 The real advantage comes from combining multiple analysis tools. A single skill can run ESLint for JavaScript, Pylint for Python, and security scanners simultaneously, then aggregate results into actionable feedback. Without automation, static analysis is the first thing dropped when a team is under deadline pressure. With automation baked into the commit workflow, it runs whether anyone remembers or not.
 
-The Cost of Skipping Static Analysis
+## The Cost of Skipping Static Analysis
 
 Consider a common scenario: a developer leaves a `console.log` statement in production JavaScript, or a Python function accepts `None` where a string is required. Both bugs pass code review because reviewers are human and tired. ESLint catches the first in milliseconds. Mypy catches the second before the code ever runs. Automated static analysis is cheap insurance.
 
 Teams that measure this consistently find that automated linting catches 15-30% of bugs that would otherwise reach QA or production. The earlier in the pipeline you catch a bug, the cheaper it is to fix.
 
-Tool Selection by Language and Use Case
+## Tool Selection by Language and Use Case
 
 Before automating, you need to pick the right tools. The wrong tool selection leads to noise, ignored warnings, and pipelines that developers learn to bypass.
 
@@ -42,7 +41,7 @@ Before automating, you need to pick the right tools. The wrong tool selection le
 
 Start with one column. usually linting. before adding type checking and security scanning. Adding all tools at once to an existing codebase generates hundreds of warnings and discourages adoption.
 
-Setting Up Your First Static Analysis Skill
+## Setting Up Your First Static Analysis Skill
 
 Create a skill that runs static analysis on your codebase. The skill definition specifies which tools to use and how to present findings:
 
@@ -68,9 +67,9 @@ node -e "
 
 This gives you immediate, actionable output rather than a wall of text to parse manually.
 
-Practical Examples by Language
+## Practical Examples by Language
 
-JavaScript and TypeScript Projects
+## JavaScript and TypeScript Projects
 
 For JavaScript projects, combine ESLint with TypeScript compiler checks:
 
@@ -104,7 +103,7 @@ A production-ready ESLint configuration for TypeScript projects should include b
 
 The `@typescript-eslint/no-floating-promises` rule deserves special mention. it catches unhandled async errors that are easy to miss in code review but cause silent failures in production.
 
-Python Projects
+## Python Projects
 
 Python analysis typically uses multiple tools:
 
@@ -146,7 +145,7 @@ disallow_incomplete_defs = true
 
 Start with `warn_return_any` before enabling `disallow_untyped_defs` on an existing codebase. The progressive approach lets you introduce type checking without blocking all forward progress.
 
-Security-Focused Analysis
+## Security-Focused Analysis
 
 For security scanning, combine dependency checking with static vulnerability detection:
 
@@ -176,7 +175,7 @@ Common Bandit findings worth prioritizing:
 
 Focus on High severity findings first. Low severity findings like B311 often have legitimate uses (non-security random number generation) and should be reviewed in context rather than fixed automatically.
 
-Integrating Analysis into Development Workflow
+## Integrating Analysis into Development Workflow
 
 Static analysis works best when it runs automatically. Use Claude Code hooks to trigger analysis at key points:
 
@@ -217,7 +216,7 @@ jobs:
 
 The `|| true` on ESLint prevents the step from immediately failing if there are warnings. this lets you collect all results before deciding whether to fail the build. Fail on `tsc` and `npm audit --audit-level=high`, but treat ESLint warnings as informational until you've cleared the backlog.
 
-Analyzing Results Effectively
+## Analyzing Results Effectively
 
 Raw analysis output needs interpretation. Claude skills can:
 
@@ -240,7 +239,7 @@ A practical approach to result prioritization: treat analysis output as a severi
 
 This prevents the common failure mode where every lint warning is treated as a blocker, teams get annoyed, and the tooling gets disabled.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Running too many analysis tools creates noise rather than value. Start with a minimal set. ESLint for JavaScript, Pylint for Python. and add tools gradually based on project needs.
 
@@ -258,7 +257,7 @@ const response: any = await legacyClient.fetch(endpoint);
 
 That comment is documentation. It tells the next developer that this is a known issue, not an oversight.
 
-Advanced: Multi-Language Project Analysis
+## Advanced: Multi-Language Project Analysis
 
 Large projects often span multiple languages. A comprehensive skill might:
 
@@ -292,7 +291,7 @@ exit $FAILED
 
 The `-ll` flag on Bandit limits output to Medium and High severity findings, reducing noise on initial adoption.
 
-Measuring Success
+## Measuring Success
 
 Track these metrics to validate your static analysis automation:
 
@@ -305,7 +304,7 @@ The `pdf` skill can generate automated reports for stakeholders, turning analysi
 
 A healthy pipeline should show a declining trend in new issues over time, with fix time staying stable or improving. If fix time is growing, the team is accumulating technical debt faster than the pipeline can motivate them to address it. a signal to revisit your severity thresholds and make the highest-priority fixes impossible to ignore.
 
-Conclusion
+## Conclusion
 
 Claude Code makes static analysis practical for teams that previously found it too cumbersome. Start with basic linting, then expand to security scanning and multi-language support as your pipeline matures. The key is automation that fits naturally into your existing workflow rather than adding manual steps.
 

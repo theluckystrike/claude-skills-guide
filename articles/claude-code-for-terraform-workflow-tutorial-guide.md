@@ -17,7 +17,7 @@ Infrastructure as Code (IaC) has revolutionized how we manage cloud resources, a
 
 This comprehensive guide will walk you through integrating Claude Code into your Terraform projects, demonstrating practical examples that will save you time and reduce mistakes.
 
-Understanding the Claude Code and Terraform Integration
+## Understanding the Claude Code and Terraform Integration
 
 Claude Code isn't just another CLI tool, it's an AI assistant that understands your infrastructure intent. When you combine it with Terraform, you get a powerful combination that can:
 
@@ -29,7 +29,7 @@ Claude Code isn't just another CLI tool, it's an AI assistant that understands y
 
 The integration works through natural language conversations. You describe what infrastructure you need, and Claude Code translates that into valid Terraform code.
 
-Setting Up Claude Code for Terraform Development
+## Setting Up Claude Code for Terraform Development
 
 Before diving into examples, let's ensure your environment is properly configured. First, install Claude Code if you haven't already:
 
@@ -50,11 +50,11 @@ touch main.tf variables.tf outputs.tf provider.tf
 
 Now you're ready to start using Claude Code effectively with Terraform.
 
-Practical Example: Building a Web Application Infrastructure
+## Practical Example: Building a Web Application Infrastructure
 
 Let's walk through a real-world scenario where Claude Code dramatically improves your Terraform workflow. Suppose you need to deploy a basic web application infrastructure on AWS.
 
-Step 1: Describe Your Infrastructure Intent
+## Step 1: Describe Your Infrastructure Intent
 
 Instead of writing everything from scratch, tell Claude Code what you need:
 
@@ -100,7 +100,7 @@ resource "aws_subnet" "private" {
 }
 ```
 
-Step 2: Define Variables Properly
+## Step 2: Define Variables Properly
 
 Claude Code helps you create clean, well-documented variable definitions:
 
@@ -123,11 +123,11 @@ variable "environment" {
 
 Notice how Claude Code adds validation rules, this prevents misconfiguration errors before you even run `terraform plan`.
 
-Advanced Workflow: Infrastructure Review and Optimization
+## Advanced Workflow: Infrastructure Review and Optimization
 
 One of Claude Code's most valuable features is its ability to review existing Terraform code. Here's how to use this capability:
 
-Automated Code Review
+## Automated Code Review
 
 Run Claude Code in review mode on your Terraform files:
 
@@ -142,7 +142,7 @@ Claude Code will analyze your configurations and provide:
 3. Best practice compliance - including naming conventions, tag strategies, and module usage
 4. Performance improvements - like enabling caching or optimizing networking
 
-Converting Hard-Coded Values to Variables
+## Converting Hard-Coded Values to Variables
 
 Claude Code can automatically refactor your Terraform:
 
@@ -164,7 +164,7 @@ resource "aws_instance" "web" {
 }
 ```
 
-Debugging Terraform Errors with Claude Code
+## Debugging Terraform Errors with Claude Code
 
 When Terraform fails, and it will, Claude Code becomes invaluable for debugging. Instead of scrolling through lengthy error logs, ask Claude Code for help:
 
@@ -193,7 +193,7 @@ resource "aws_db_instance" "main" {
 }
 ```
 
-Actionable Best Practices
+## Actionable Best Practices
 
 To get the most out of Claude Code in your Terraform workflow, follow these recommendations:
 
@@ -257,7 +257,7 @@ resource "aws_instance" "this" {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Terraform development from a manual, error-prone process into a collaborative, intelligent workflow. By using its capabilities for code generation, review, debugging, and optimization, you can significantly accelerate your infrastructure delivery while maintaining high quality and security standards.
 

@@ -13,13 +13,12 @@ categories: [workflows]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code Clerk: Organization Roles, Permissions, and Workflow
 
 Claude Code's clerk functionality provides a powerful framework for managing organizational workflows, role-based access control, and approval processes. This guide walks you through setting up clerk, defining roles, configuring permissions, and building efficient workflows that scale with your organization, from a two-person startup to an enterprise engineering department.
 
-Understanding the Clerk Framework
+## Understanding the Clerk Framework
 
 The clerk system in Claude Code enables organizations to delegate specific tasks to AI agents while maintaining proper oversight through role-based permissions. Think of clerk as your organization's digital workforce coordinator, assigning tasks to the right agents with the appropriate level of authority.
 
@@ -37,7 +36,7 @@ Before jumping into configuration, it helps to understand how the three componen
 
 A user can belong to multiple organizations and hold multiple roles. A workflow can require different roles at different stages. The composition of these three gives you fine-grained, auditable control over who can do what and when.
 
-Setting Up Your Organization
+## Setting Up Your Organization
 
 Before configuring roles and permissions, you need to establish your organization structure. Initialize a new organization using the Claude Code CLI:
 
@@ -89,7 +88,7 @@ clerk org member add \
   --role "Code Reviewer"
 ```
 
-Defining Roles with Precision
+## Defining Roles with Precision
 
 Roles in the clerk system follow a granular permission model. Rather than broad categories, you define roles by specifying exactly which actions members can perform. Create a role using the `clerk role create` command:
 
@@ -140,7 +139,7 @@ List existing roles to see your current configuration:
 clerk role list --organization "engineering-team" --format table
 ```
 
-Configuring Permission Scopes
+## Configuring Permission Scopes
 
 Permissions in clerk can be scoped to specific resources or resource types. This prevents over-permissioning and follows the principle of least privilege. Scope configuration uses resource identifiers:
 
@@ -189,7 +188,7 @@ clerk permission assign \
 
 The expiry flag on contractor permissions is particularly useful. When the engagement ends, permissions expire automatically without requiring a manual cleanup step. A quarterly audit then just confirms that no expired-but-still-active permissions slipped through.
 
-Building Workflows with Approvals
+## Building Workflows with Approvals
 
 Workflows automate task routing based on role permissions. A typical code review workflow might require approval from a Code Reviewer before merging, with additional sign-off for critical changes:
 
@@ -245,7 +244,7 @@ clerk workflow stage add \
 
 Conditional stages are the key to building workflows that don't create unnecessary friction for low-risk changes while still enforcing rigorous review for high-impact ones. A hotfix that touches a single line and a migration that modifies the core auth schema both trigger the same workflow, but the schema migration triggers additional approval stages that the hotfix skips.
 
-Managing Workflow Assignments
+## Managing Workflow Assignments
 
 Clerk provides multiple ways to assign tasks to appropriate reviewers. The automatic assignment uses role-based routing:
 
@@ -289,7 +288,7 @@ clerk workflow escalation set \
 
 This configuration escalates unreviewed pull requests to a Senior Reviewer after 48 hours and sends a notification to the tech lead. The original Code Reviewer assignment remains visible in the audit log, so accountability is preserved even when escalation occurs.
 
-Configuring Notifications
+## Configuring Notifications
 
 Notifications connect clerk approvals to the communication channels your team already uses. Configure integrations to reach reviewers where they work:
 
@@ -316,7 +315,7 @@ clerk workflow notify \
 
 Email notifications work the same way but route through your SMTP configuration. The `{pr.url}`, `{elapsed}`, and similar placeholders pull live data from the workflow context, so notifications contain the information reviewers need to act without navigating to a separate dashboard.
 
-Monitoring and Audit Trails
+## Monitoring and Audit Trails
 
 Every action within the clerk system generates audit logs for compliance and debugging. Query recent activities:
 
@@ -353,7 +352,7 @@ clerk audit export \
 
 For SOC 2 or ISO 27001 compliance, the audit export is one of the artifacts auditors commonly request. Automating the export on a quarterly schedule into a secured S3 bucket or equivalent storage gives you a complete trail without manual effort at audit time.
 
-Role and Permission Health Checks
+## Role and Permission Health Checks
 
 Over time, permission configurations drift. Roles accumulate permissions that were once needed and never removed. Scopes become broader than intended. Clerk provides health check commands to surface these issues:
 
@@ -374,7 +373,7 @@ clerk member audit \
 
 Running these quarterly and acting on the results keeps your permission model tight. "Over-permissioned" findings are especially important. they often indicate that a temporary access grant was never revoked.
 
-Best Practices for Clerk Implementation
+## Best Practices for Clerk Implementation
 
 When implementing clerk in your organization, start simple and iterate. Begin with a basic role structure and add complexity as your needs evolve. Document your role definitions and workflow logic so team members understand the approval process.
 

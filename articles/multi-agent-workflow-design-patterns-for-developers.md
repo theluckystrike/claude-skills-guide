@@ -13,12 +13,9 @@ categories: [workflows]
 tags: [claude-code, claude-skills]
 ---
 
-
-Multi-Agent Workflow Design Patterns for Developers
-
 As software projects grow in complexity, single-agent approaches often hit bottlenecks. Multi-agent workflows, where multiple AI agents collaborate, delegate tasks, and share context, have emerged as a powerful paradigm for handling sophisticated development challenges. Claude Code's architecture supports several proven patterns that enable developers to build solid, scalable multi-agent systems.
 
-Understanding Multi-Agent Architecture in Claude Code
+## Understanding Multi-Agent Architecture in Claude Code
 
 Claude Code introduces a skill-based architecture that naturally supports multi-agent coordination. Each skill can function as an autonomous agent with specific capabilities, tools, and knowledge domains. The key to effective multi-agent design lies in understanding how these agents communicate, delegate work, and maintain coherent state across complex tasks.
 
@@ -26,7 +23,7 @@ The architecture provides several primitives that make multi-agent workflows pra
 
 A single agent working alone is fundamentally limited by its context window and specialization. Multi-agent systems distribute cognitive load: one agent focuses on understanding requirements, another on writing code, another on generating tests, and yet another on reviewing the assembled result. The gains are not just parallelism, they are also quality improvements that come from forcing each concern into a separate, focused unit.
 
-When to Use Multi-Agent Workflows
+## When to Use Multi-Agent Workflows
 
 Not every task benefits from multiple agents. A quick file rename or a single-function bugfix rarely justifies the coordination overhead. Multi-agent workflows pay off when:
 
@@ -38,7 +35,7 @@ Not every task benefits from multiple agents. A quick file rename or a single-fu
 
 As a rule of thumb: if you find yourself asking a single agent to "first do X, then do Y, then review the result," that is usually a sign the work should be split across agents.
 
-Comparing Single-Agent vs. Multi-Agent Approaches
+## Comparing Single-Agent vs. Multi-Agent Approaches
 
 | Dimension | Single Agent | Multi-Agent |
 |---|---|---|
@@ -50,7 +47,7 @@ Comparing Single-Agent vs. Multi-Agent Approaches
 | Debuggability | Single trace to inspect | Each agent produces its own log |
 | Best for | Simple, linear tasks | Complex, multi-concern problems |
 
-Pattern 1: The Orchestrator Pattern
+## Pattern 1: The Orchestrator Pattern
 
 The orchestrator pattern uses a central agent that breaks down complex tasks and delegates sub-tasks to specialized worker agents. This pattern excels when you have a clear hierarchy of responsibilities and need centralized control over task decomposition.
 
@@ -63,7 +60,7 @@ description: Coordinates complex project tasks across specialized agents
 
 The orchestrator agent analyzes the incoming request, identifies required expertise domains, and invokes appropriate specialist skills in sequence or parallel based on task dependencies. For example, when processing a new feature request, the orchestrator might first invoke the code-agent to implement the feature, then hand off to review-agent for code review, and finally delegate to docs-agent for documentation updates.
 
-Orchestrator Implementation Details
+## Orchestrator Implementation Details
 
 The orchestrator skill typically holds a planning prompt that instructs the agent to output a structured task list before delegating:
 
@@ -78,7 +75,7 @@ You are an orchestrator. Before doing any work:
 
 The orchestrator does not need to be the most capable agent in the fleet, it needs to be the best at decomposition and delegation. Its role is coordination, not execution.
 
-Handling Orchestrator Failures
+## Handling Orchestrator Failures
 
 When the orchestrator itself fails, the entire workflow stalls. Mitigate this by:
 
@@ -86,7 +83,7 @@ When the orchestrator itself fails, the entire workflow stalls. Mitigate this by
 - Writing orchestrator outputs in a structured format (JSON or YAML task lists) that can be resumed by a human or a second orchestrator instance
 - Logging the decomposition plan before any delegated work begins, so partial progress is not lost
 
-Pattern 2: Handoff Chains
+## Pattern 2: Handoff Chains
 
 The handoff pattern enables smooth context transfer between agents as work progresses through different phases. Each agent enriches the shared context before passing control to the next agent, ensuring continuity without requiring full re-explanation of preceding work.
 
@@ -99,7 +96,7 @@ description: Transfers code context to review specialist
 
 Effective handoff chains require careful attention to what context gets preserved. Claude Code skills support explicit context declaration through front matter, allowing you to specify which artifacts, decisions, and state should transfer between agents. This prevents information loss while avoiding overwhelming the receiving agent with irrelevant details.
 
-Designing a Handoff Payload
+## Designing a Handoff Payload
 
 A well-designed handoff payload is the difference between a smooth chain and a confused downstream agent. Structure your handoff payloads to include:
 
@@ -120,7 +117,7 @@ A well-designed handoff payload is the difference between a smooth chain and a c
 
 The `decisions_made` field is especially important. Downstream agents often re-derive decisions the upstream agent already made, wasting time or, worse, making a different choice and introducing inconsistency. Explicitly recording decisions prevents this.
 
-Handoff Chain for a Feature Development Workflow
+## Handoff Chain for a Feature Development Workflow
 
 A real feature development handoff chain might look like:
 
@@ -132,7 +129,7 @@ A real feature development handoff chain might look like:
 
 Each agent reads the full output of the previous stage. No agent needs access to the original issue after stage one, the spec document is the single source of truth that flows through the chain.
 
-Pattern 3: Parallel Specialist Execution
+## Pattern 3: Parallel Specialist Execution
 
 For tasks with independent sub-components, parallel execution dramatically reduces overall completion time. Multiple specialized agents work simultaneously on different aspects of a problem, with results aggregated upon completion.
 
@@ -147,7 +144,7 @@ Consider a scenario where you need to assess a codebase for security vulnerabili
 
 This pattern particularly shines during code review sprints, comprehensive audits, and when exploring multiple implementation approaches simultaneously.
 
-Parallel Execution Example: Codebase Audit
+## Parallel Execution Example: Codebase Audit
 
 ```
 Orchestrator receives: "Run a full audit of the payments module"
@@ -163,7 +160,7 @@ Aggregator receives all four reports → produces unified audit document
 
 Total time: approximately as long as the slowest individual agent, rather than the sum of all four. For a module with 2,000 lines of code, this can reduce a 10-minute sequential audit to 3 minutes.
 
-Synchronization and Aggregation
+## Synchronization and Aggregation
 
 Parallel execution requires a synchronization step. Design your aggregator agent to:
 
@@ -172,7 +169,7 @@ Parallel execution requires a synchronization step. Design your aggregator agent
 - Assign priority levels to findings so the developer knows where to focus first
 - Preserve the raw output of each specialist for deeper investigation when needed
 
-Pattern 4: Debate and Consensus
+## Pattern 4: Debate and Consensus
 
 For critical decisions requiring thorough analysis, a debate pattern allows multiple agents to examine a problem from different perspectives, argue for their approaches, and converge on optimal solutions.
 
@@ -185,7 +182,7 @@ description: Coordinates architectural decision debates
 
 The debate pattern works by invoking agents with different priorities and heuristics, then using a reconciliation mechanism to synthesize their recommendations. This leads to more solid decisions than any single perspective could achieve. Claude Code's flexible skill invocation supports implementing these coordination logic through skill composition.
 
-Structuring a Productive Debate
+## Structuring a Productive Debate
 
 An unstructured debate produces noise. Structure the debate by assigning each agent a role with an explicit mandate:
 
@@ -199,7 +196,7 @@ An unstructured debate produces noise. Structure the debate by assigning each ag
 
 The reconciler agent is the critical addition that turns debate into a decision. Without it, you have four competing opinions; with it, you have a structured trade-off analysis.
 
-When the Debate Pattern is Worth the Cost
+## When the Debate Pattern is Worth the Cost
 
 The debate pattern is expensive, it runs multiple full agents on the same problem. Reserve it for:
 
@@ -210,7 +207,7 @@ The debate pattern is expensive, it runs multiple full agents on the same proble
 
 For routine feature work, the added cost is rarely justified.
 
-Pattern 5: Map-Reduce for Large Codebases
+## Pattern 5: Map-Reduce for Large Codebases
 
 A fifth pattern that becomes essential at scale is map-reduce. When the input is too large for a single agent's context window, you split it across many worker agents (map) and then aggregate the results (reduce).
 
@@ -231,7 +228,7 @@ This pattern is particularly useful for:
 
 The key design choice in map-reduce is what unit to split on. File count is simple but uneven, a 5-line config file and a 1,000-line service file are not comparable units. Consider splitting by lines of code, by module, or by logical subsystem rather than by raw file count.
 
-Real-World Implementation Example
+## Real-World Implementation Example
 
 Consider building a comprehensive API refactoring workflow. You might compose several specialized skills:
 
@@ -250,7 +247,7 @@ description: Complete API refactoring pipeline
 
 Each agent receives enriched context from its predecessor, including analysis results, planned changes, and validation outcomes. The workflow supports automatic rollback if any stage fails, ensuring safe progression through complex refactoring operations.
 
-Failure Recovery in the Refactoring Workflow
+## Failure Recovery in the Refactoring Workflow
 
 What happens when the code-modifier agent introduces a breaking change that causes test-validator to fail? Design your workflow to:
 
@@ -261,7 +258,7 @@ What happens when the code-modifier agent introduces a breaking change that caus
 
 This retry-from-checkpoint approach keeps workflows practical. A full pipeline re-run from scratch on every failure is too slow and expensive for interactive use.
 
-Best Practices for Multi-Agent Design
+## Best Practices for Multi-Agent Design
 
 When designing multi-agent workflows with Claude Code, consider these proven guidelines:
 
@@ -279,7 +276,7 @@ Idempotent Agents: Design each agent so that re-running it on the same input pro
 
 Small, Focused Prompts: Long, multi-purpose prompts in agent skill files tend to produce unfocused output. Each skill file should have a single, clear purpose that can be described in one sentence.
 
-Common Mistakes to Avoid
+## Common Mistakes to Avoid
 
 | Mistake | Why It Hurts | Better Approach |
 |---|---|---|
@@ -289,7 +286,7 @@ Common Mistakes to Avoid
 | No logging of agent decisions | Impossible to debug unexpected outputs | Each agent should write a brief decision log to the handoff payload |
 | Treating agents as infallible | Downstream agents trust upstream errors without question | Include a validation step before critical handoffs |
 
-Conclusion
+## Conclusion
 
 Multi-agent workflows represent a significant advancement in AI-assisted development. Claude Code's skill architecture provides solid primitives for implementing orchestrator patterns, handoff chains, parallel execution, debate mechanisms, and map-reduce workflows. By composing specialized agents into thoughtful workflows, developers can tackle substantially more complex problems while maintaining reliability and coherence.
 

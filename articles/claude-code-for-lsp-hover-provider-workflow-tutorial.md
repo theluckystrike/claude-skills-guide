@@ -17,7 +17,7 @@ Claude Code for LSP Hover Provider Workflow Tutorial
 
 The Language Server Protocol (LSP) has revolutionized how development tools understand and interact with code. LSP hover providers are one of the most valuable features, displaying contextual information when developers hover over code symbols. This tutorial shows you how to create Claude Code skills that implement LSP-style hover provider workflows, bringing rich contextual information directly into your AI-assisted development workflow.
 
-Understanding LSP Hover in the Claude Code Context
+## Understanding LSP Hover in the Claude Code Context
 
 Traditional LSP hover providers work within code editors like VS Code, displaying type information, documentation, and symbol details when you hover over code. While Claude Code doesn't have a native hover UI, you can replicate this functionality by creating skills that:
 
@@ -27,7 +27,7 @@ Traditional LSP hover providers work within code editors like VS Code, displayin
 
 This workflow becomes particularly powerful when combined with MCP (Model Context Protocol) servers that understand your codebase's structure.
 
-Setting Up Your First Hover Provider Skill
+## Setting Up Your First Hover Provider Skill
 
 Create a new skill file at `~/.claude/skills/hover-provider-skill/skill.md`:
 
@@ -81,7 +81,7 @@ To use this skill, simply ask questions like:
 
 This skill provides the foundation for hover-like functionality. Now let's enhance it with MCP integration.
 
-Integrating MCP Servers for Enhanced Hover Information
+## Integrating MCP Servers for Enhanced Hover Information
 
 MCP servers can provide rich contextual information about your codebase. Here's how to create an enhanced hover provider that uses MCP:
 
@@ -141,11 +141,11 @@ Provide responses using this structure:
 ```
 ```
 
-Creating a Practical Workflow for Code Review
+## Creating a Practical Workflow for Code Review
 
 Beyond basic symbol information, you can create hover provider skills that serve specific workflows:
 
-The Code Review Hover Skill
+## The Code Review Hover Skill
 
 ```markdown
 ---
@@ -190,7 +190,7 @@ Always provide concrete suggestions:
 - Alternative implementations
 ```
 
-Testing Your Hover Provider Skills
+## Testing Your Hover Provider Skills
 
 After creating your skills, test them with various scenarios:
 
@@ -205,7 +205,7 @@ Test code review mode
 claude -p "Review this code for security issues: [paste code]"
 ```
 
-Test Cases to Validate
+## Test Cases to Validate
 
 1. Function analysis: Can you identify what a function does, its parameters, and return type?
 2. Class understanding: Can you explain class structure, methods, and relationships?
@@ -213,11 +213,11 @@ Test Cases to Validate
 4. Documentation lookup: Can you find and present relevant docs?
 5. Cross-file references: Can you trace symbols across multiple files?
 
-Advanced: Building a Context-Aware Hover System
+## Advanced: Building a Context-Aware Hover System
 
 For more sophisticated implementations, consider building a multi-step hover workflow:
 
-Step 1: Symbol Detection
+## Step 1: Symbol Detection
 
 Create a skill that automatically detects what the user is asking about:
 
@@ -239,7 +239,7 @@ When the user asks about code, first determine:
 Based on detection, route to appropriate analysis routine.
 ```
 
-Step 2: Intelligent Caching
+## Step 2: Intelligent Caching
 
 For large codebases, implement caching to avoid repeated analysis:
 
@@ -247,7 +247,7 @@ For large codebases, implement caching to avoid repeated analysis:
 - Invalidate cache on file changes
 - Use incremental updates
 
-Step 3: Contextual Recommendations
+## Step 3: Contextual Recommendations
 
 Beyond static analysis, provide contextual suggestions:
 
@@ -255,7 +255,7 @@ Beyond static analysis, provide contextual suggestions:
 - "Consider using the existing utility in utils/"
 - "This pattern is used X times in your codebase"
 
-Best Practices for Hover Provider Skills
+## Best Practices for Hover Provider Skills
 
 1. Keep responses focused: Don't overwhelm users with too much information
 2. Provide actionable advice: Always include concrete next steps
@@ -263,14 +263,13 @@ Best Practices for Hover Provider Skills
 4. Learn from interactions: Track which queries are most common
 5. Integrate with existing tools: Use MCP servers for richer data
 
-Conclusion
+## Conclusion
 
 Building LSP hover provider workflows with Claude Code brings the power of intelligent code analysis to your AI-assisted development process. Start with a basic skill that can identify and explain symbols, then gradually add MCP integration, code review capabilities, and contextual awareness.
 
 The key is to iterate: begin simple, test with real workflows, and expand capabilities as you discover new use cases. Your hover provider skills will become invaluable tools for understanding unfamiliar code, reviewing changes, and learning new APIs.
 
 Remember, the goal isn't to replicate a visual hover UI, it's to provide the same rich, contextual information through a conversational interface that uses Claude Code's strengths in understanding and explaining code.
-
 
 Related Reading
 

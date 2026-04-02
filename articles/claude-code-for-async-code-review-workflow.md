@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Async Code Review Workflow"
 description: "Learn how to use Claude Code to create efficient asynchronous code review workflows that work across time zones and improve developer productivity."
@@ -16,10 +15,9 @@ score: 8
 
 {% raw %}
 
-
 As software development teams become increasingly distributed across time zones, traditional synchronous code review practices often create bottlenecks. Developers wait hours, or even days, for feedback on pull requests, slowing down iteration cycles and frustrating team members. This is where Claude Code for async code review workflow transforms your development process.
 
-Understanding Async Code Review
+## Understanding Async Code Review
 
 Async code review is a workflow where code feedback happens asynchronously rather than in real-time. Instead of scheduling live review sessions or expecting immediate responses, developers submit their work and receive thoughtful, detailed feedback on their own schedule. This approach works particularly well for:
 
@@ -30,11 +28,11 @@ Async code review is a workflow where code feedback happens asynchronously rathe
 
 Claude Code excels at enabling this workflow by handling the initial review pass autonomously, leaving human reviewers to focus on architecture, logic, and design decisions.
 
-Setting Up Claude Code for Async Reviews
+## Setting Up Claude Code for Async Reviews
 
 The foundation of an async code review workflow with Claude Code starts with the right skill configuration. The best-claude-skills-for-code-review-automation skill provides essential automation capabilities. Place the skill file in your project's `.claude/` directory and invoke it using `/best-claude-skills-for-code-review-automation`.
 
-Creating a Dedicated Review Skill
+## Creating a Dedicated Review Skill
 
 Create a new file in your `.claude/skills/` directory called `async-code-review-skill.md` to define your team's coding standards and review requirements:
 
@@ -72,7 +70,7 @@ Provide review results in structured format with severity levels.
 
 This skill provides a foundation that you can customize based on your project's specific requirements.
 
-Configuring Review Triggers
+## Configuring Review Triggers
 
 Establish clear triggers for when Claude Code should initiate reviews:
 
@@ -89,11 +87,11 @@ review_triggers:
 
 This configuration ensures Claude Code automatically reviews code at key workflow stages without requiring manual invocation.
 
-Creating Effective Review Prompts
+## Creating Effective Review Prompts
 
 The quality of your async code review depends heavily on how you prompt Claude Code. Well-crafted prompts produce thorough, actionable feedback.
 
-Basic Review Prompt Structure
+## Basic Review Prompt Structure
 
 ```markdown
 Review the following pull request for the {repository} project:
@@ -118,7 +116,7 @@ Provide feedback in this format:
 - Suggestion: [how to fix]
 ```
 
-Specialized Review Prompts
+## Specialized Review Prompts
 
 Different review scenarios benefit from targeted prompts:
 
@@ -141,11 +139,11 @@ Evaluate this code's architectural impact:
 - Will this scale appropriately?
 ```
 
-Building Review Automation Pipelines
+## Building Review Automation Pipelines
 
 Integrate Claude Code reviews into your existing CI/CD infrastructure for smooth async workflows.
 
-Pre-Submission Local Review
+## Pre-Submission Local Review
 
 Before developers create pull requests, they can run Claude Code locally to catch issues early and reduce review cycles:
 
@@ -155,7 +153,7 @@ claude-code review --files src//*.ts --config .claude/review-config.json
 
 This command runs the review skill against specified files and outputs results directly to the terminal. Developers can address issues before their code ever reaches the review stage.
 
-GitHub Actions Integration
+## GitHub Actions Integration
 
 ```yaml
 name: Async Code Review
@@ -178,7 +176,7 @@ jobs:
             // Post Claude's review findings as PR comments
 ```
 
-Review Queue Management
+## Review Queue Management
 
 For teams processing many pull requests, create a prioritized review queue:
 
@@ -217,7 +215,7 @@ class ReviewQueue:
                 entry["status"] = "complete"
 ```
 
-Dividing AI and Human Review Responsibilities
+## Dividing AI and Human Review Responsibilities
 
 After the automated review completes, human reviewers focus on aspects that require domain expertise. The AI review serves as a first pass, handling:
 
@@ -232,7 +230,7 @@ Human reviewers then concentrate on:
 - Edge cases: Are boundary conditions handled properly?
 - Performance: Are there optimization opportunities?
 
-Handling Review Feedback
+## Handling Review Feedback
 
 When a developer receives feedback, they can use Claude Code to understand concerns and generate appropriate responses:
 
@@ -255,11 +253,11 @@ Generate review summaries that capture the reasoning behind key decisions:
 claude-code generate-review-summary --conversation review-thread.md
 ```
 
-Feedback Documentation Practices
+## Feedback Documentation Practices
 
 Async code review thrives on clear, documented feedback. Claude Code can generate structured review reports that serve as documentation.
 
-Review Report Template
+## Review Report Template
 
 Each async review should produce:
 
@@ -298,9 +296,9 @@ Follow-up Required
 - [ ] Documentation updates
 ```
 
-Best Practices for Async Review Workflows
+## Best Practices for Async Review Workflows
 
-Establish Clear SLAs
+## Establish Clear SLAs
 
 Define expected response times for different priority levels:
 
@@ -308,7 +306,7 @@ Define expected response times for different priority levels:
 - Regular features: 8 hours  
 - Refactoring/cleanup: 24 hours
 
-Use Review Labels
+## Use Review Labels
 
 Implement labeling to categorize reviews:
 
@@ -317,7 +315,7 @@ Implement labeling to categorize reviews:
 - `review:performance` - Performance optimization review
 - `review:documentation` - Docs and comments review
 
-Enable Self-Service Reviews
+## Enable Self-Service Reviews
 
 Train developers to run preliminary reviews themselves:
 
@@ -328,7 +326,7 @@ claude --print "Review my staged changes and identify any issues before I submit
 
 This shifts basic feedback to the developer, reducing review cycles.
 
-Auto-Label Pull Requests
+## Auto-Label Pull Requests
 
 Claude Code can help auto-label PRs based on the changes detected, saving reviewer triage time:
 
@@ -336,11 +334,11 @@ Claude Code can help auto-label PRs based on the changes detected, saving review
 claude-code label-pr --files changed-files.ts --apply-labels
 ```
 
-Integrate with Team Communication
+## Integrate with Team Communication
 
 Connect review notifications to your team's preferred communication channels. Whether you use Slack, Discord, or Microsoft Teams, automated notifications keep everyone informed without requiring constant checking of the repository.
 
-Measuring Async Review Effectiveness
+## Measuring Async Review Effectiveness
 
 Track key metrics to optimize your workflow:
 
@@ -349,7 +347,7 @@ Track key metrics to optimize your workflow:
 - Issue detection rate: Problems caught per review
 - False positive rate: Incorrect issues flagged
 
-Conclusion
+## Conclusion
 
 Claude Code transforms async code review from a bottleneck into a competitive advantage. By automating initial review passes, generating structured feedback, and integrating smoothly with existing tools, distributed teams can maintain high code quality without sacrificing productivity. The key is establishing clear workflows, crafting effective prompts, and treating Claude Code reviews as a collaborative starting point rather than a replacement for human insight.
 

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Metaflow Workflow Tutorial"
 description: "Master Metaflow workflow development with Claude Code. Learn how to build, debug, and deploy data science pipelines using practical examples and."
@@ -13,7 +12,6 @@ tags: [claude-code, claude-skills, metaflow, data-workflows, ml-pipelines]
 reviewed: true
 score: 8
 ---
-
 
 {% raw %}
 Claude Code for Metaflow Workflow Tutorial
@@ -33,7 +31,7 @@ Metaflow workflows often involve complex data transformations, model training pi
 
 Whether you're building a simple ETL pipeline or a complex ML training workflow, Claude Code can help you move faster while maintaining code quality.
 
-Setting Up Claude Code for Your Metaflow Project
+## Setting Up Claude Code for Your Metaflow Project
 
 Before diving into workflow development, configure Claude Code to understand your Metaflow project structure. Create a `CLAUDE.md` file in your project root:
 
@@ -54,7 +52,7 @@ We use Metaflow with:
 
 This context helps Claude Code provide more relevant suggestions when working on your flows.
 
-Creating Your First Metaflow Flow
+## Creating Your First Metaflow Flow
 
 Let's walk through building a simple data processing flow with Claude Code. Start by asking Claude Code to scaffold a basic flow:
 
@@ -157,7 +155,7 @@ if __name__ == '__main__':
     CustomerChurnFlow()
 ```
 
-Adding Branching and Parallel Processing
+## Adding Branching and Parallel Processing
 
 Metaflow excels at parallel processing. Here's how to extend your flow with branching:
 
@@ -192,7 +190,7 @@ def merge_results(self, inputs):
     self.next(self.end)
 ```
 
-Working with Conditional Logic
+## Working with Conditional Logic
 
 You can add conditional branches to your flows based on flow state:
 
@@ -223,7 +221,7 @@ def retrain_model(self):
     self.next(self.evaluate_model)
 ```
 
-Debugging Metaflow Flows with Claude Code
+## Debugging Metaflow Flows with Claude Code
 
 When your flow fails, Claude Code can help you debug effectively. Share the error message and ask for analysis:
 
@@ -236,7 +234,7 @@ Can you help me understand what's going wrong and how to fix it?
 
 Claude Code will analyze the error and suggest fixes based on the specific Metaflow patterns you're using.
 
-Best Practices for Claude Code + Metaflow Development
+## Best Practices for Claude Code + Metaflow Development
 
 Follow these recommendations for the best experience:
 
@@ -250,7 +248,7 @@ Follow these recommendations for the best experience:
 
 5. Version your models: Use Metaflow's artifact system to track model versions across runs.
 
-Advanced: Custom Metaflow Clients with Claude Code
+## Advanced: Custom Metaflow Clients with Claude Code
 
 For more advanced use cases, you can create custom skills that interact with Metaflow's client API:
 
@@ -271,7 +269,7 @@ def get_latest_successful_run(flow_name):
 
 You can ask Claude Code to integrate these patterns into your workflows for enhanced monitoring and analysis.
 
-Conclusion
+## Conclusion
 
 Claude Code significantly accelerates Metaflow workflow development by handling boilerplate, suggesting optimizations, and helping debug issues. The combination of Metaflow's solid infrastructure and Claude Code's AI assistance lets you focus on the logic that matters, building data pipelines that scale.
 

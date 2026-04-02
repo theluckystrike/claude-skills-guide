@@ -13,18 +13,15 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code Vanilla Extract Type Safe CSS
-
 Type-safe CSS has become essential for maintainable frontend development, especially when building complex Claude skills that require reliable styling. Vanilla Extract provides a zero-runtime approach to CSS-in-TypeScript that integrates smoothly with modern build tools and Claude Code workflows.
 
-What Makes Vanilla Extract Different
+## What Makes Vanilla Extract Different
 
 Unlike traditional CSS-in-JS solutions that inject styles at runtime, Vanilla Extract generates static CSS files at build time. This approach eliminates runtime overhead and provides complete type safety through TypeScript's type system. When you use Vanilla Extract, every class name, variable, and theme value gets validated during development, catching errors before they reach production.
 
 The library works by defining styles in `.css.ts` files using typed JavaScript objects. These definitions then compile to atomic CSS classes that you apply to your components. The compilation process happens during your build step, making it compatible with any framework or vanilla JavaScript project.
 
-Setting Up Vanilla Extract
+## Setting Up Vanilla Extract
 
 To get started with Vanilla Extract in a Claude Code project, install the necessary dependencies:
 
@@ -45,7 +42,7 @@ export default defineConfig({
 
 This setup enables TypeScript to understand your Vanilla Extract style definitions while generating optimized CSS output.
 
-Creating Type-Safe Styles
+## Creating Type-Safe Styles
 
 Define your styles using the `style` function from Vanilla Extract:
 
@@ -84,7 +81,7 @@ export const button = style({
 
 Every property in these style objects gets full TypeScript support. Mistyping a CSS property or using an invalid value triggers immediate type errors in your editor.
 
-Using Themes for Consistent Design
+## Using Themes for Consistent Design
 
 Vanilla Extract's theme system helps maintain design consistency across your skill's interface. Define themes in a dedicated file:
 
@@ -151,7 +148,7 @@ export const darkTheme = createTheme(contract, {
 });
 ```
 
-Integrating with Claude Skills
+## Integrating with Claude Skills
 
 When building Claude skills that include frontend components, using Vanilla Extract provides confidence in your styling code. The type checking catches mistakes immediately, which proves valuable when iterating quickly on skill prototypes. Combined with the frontend-design skill for layout assistance and the pdf skill for generating styled documentation, you can maintain consistency across all output formats.
 
@@ -189,7 +186,7 @@ globalStyle('*, *::before, *::after', {
 });
 ```
 
-Advanced Patterns
+## Advanced Patterns
 
 Vanilla Extract supports complex patterns like recipe systems for compound component styles. The recipe system helps when building interactive components with multiple states:
 
@@ -227,13 +224,13 @@ Apply these recipes with variant props:
 const className = buttonRecipe({ variant: 'primary', size: 'small' });
 ```
 
-Performance Benefits
+## Performance Benefits
 
 Vanilla Extract generates minimal, deduplicated CSS. Unlike runtime CSS-in-JS libraries that add JavaScript bundle size, Vanilla Extract produces plain CSS files that browsers optimize efficiently. Your skill loads faster because there's no runtime style injection overhead.
 
 The static output also means better caching. Users downloading your skill's styles benefit from browser cache hits on unchanged CSS files.
 
-Debugging and Development
+## Debugging and Development
 
 During development, enable debug class names to understand generated styles:
 
@@ -247,12 +244,11 @@ This adds readable suffixes to generated class names, making browser DevTools in
 
 Vanilla Extract integrates with standard debugging workflows. The supermemory skill can help track styling decisions across skill iterations, while the tdd skill assists in writing tests for component behavior that depends on your styled elements.
 
-Getting Started
+## Getting Started
 
 Begin by adding Vanilla Extract to an existing project or creating a fresh skill with the library from the start. The type safety immediately shows value when refactoring components or updating design tokens across your codebase.
 
 The initial setup requires minimal configuration, and the learning curve stays low if you already know TypeScript. Start with simple component styles, then gradually adopt themes and recipes as your skill grows in complexity.
-
 
 Related Reading
 

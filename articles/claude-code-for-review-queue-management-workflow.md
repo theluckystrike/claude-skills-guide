@@ -16,19 +16,19 @@ score: 8
 
 Building an effective review queue management workflow is essential for development teams that want to maintain code quality without bottlenecks. Claude Code provides powerful capabilities to automate, prioritize, and orchestrate your review pipeline. This guide walks you through practical patterns for creating a solid review queue system that scales with your team.
 
-Understanding Review Queue Challenges
+## Understanding Review Queue Challenges
 
 Before implementing a solution, it's important to understand the common problems in review queue management. Teams often struggle with reviews piling up, uneven workload distribution, and unclear prioritization. When reviews stall, so does feature delivery. A well-designed queue management system addresses these issues by providing visibility, automation, and intelligent routing.
 
 The key challenges include: determining which reviews to prioritize based on dependencies and urgency, assigning reviews to the right reviewers with the appropriate expertise, tracking review status across multiple pull requests, and ensuring timely follow-ups on stale reviews. Claude Code can help automate much of this process, reducing manual overhead and keeping your pipeline flowing smoothly.
 
-Core Concepts of Queue Management
+## Core Concepts of Queue Management
 
 A review queue is essentially a prioritized list of pull requests waiting for review. The queue management workflow involves three main phases: intake, processing, and completion. During intake, new pull requests enter the queue with metadata like priority, affected components, and requested reviewers. Processing involves actually reviewing the code, providing feedback, and making decisions. Completion marks when changes are approved, rejected, or require revisions.
 
 Claude Code can assist at each phase by extracting metadata, suggesting reviewers based on code ownership, sending notifications, and tracking progress. The goal is to create a system that requires minimal manual intervention while maintaining visibility into the review pipeline.
 
-Building a Review Queue Skill
+## Building a Review Queue Skill
 
 Let's create a practical Claude Code skill for managing review queues. This skill will handle common operations like checking queue status, prioritizing reviews, and assigning reviewers.
 
@@ -111,7 +111,7 @@ class ReviewQueue:
 
 This basic implementation provides the foundation for queue management. You can extend it with GitHub API integration, webhook handlers, and notification systems to create a complete workflow.
 
-Implementing Priority-Based Routing
+## Implementing Priority-Based Routing
 
 Smart priority routing ensures that critical reviews get attention first while balancing reviewer workload. The priority should factor in multiple criteria: business impact, dependency on other changes, staleness, and reviewer availability.
 
@@ -145,7 +145,7 @@ def calculate_priority_score(review: Dict, team_workload: Dict) -> float:
 
 This scoring system ensures that urgent reviews rise to the top while accounting for how long they've been waiting and current team capacity.
 
-Automating Review Assignments
+## Automating Review Assignments
 
 Manual assignment leads to imbalanced workloads and forgotten reviews. Automating this process improves efficiency and ensures fair distribution. The key is matching review requirements with reviewer expertise while considering current workload.
 
@@ -172,7 +172,7 @@ def suggest_reviewers(review: Dict, team_members: List[Dict], max_load: int = 3)
 
 This function considers both technical expertise and availability, ensuring you assign reviews to people who can provide meaningful feedback without overwhelming them.
 
-Integration with Claude Code Skills
+## Integration with Claude Code Skills
 
 To make this workflow operational within Claude Code, create a skill file that wraps these functions:
 
@@ -192,7 +192,7 @@ Usage
 Invoke this skill when you need to manage or query the review queue.
 ```
 
-Best Practices for Queue Management
+## Best Practices for Queue Management
 
 When implementing review queue management, consider these practical tips to maximize effectiveness.
 
@@ -204,12 +204,11 @@ Third, regularly audit your queue. Schedule time weekly to review stale items an
 
 Finally, collect metrics to continuously improve. Track average review time by priority, reviewer workload distribution, and queue depth over time. Use these insights to refine your priority calculations and team processes.
 
-Conclusion
+## Conclusion
 
 Implementing a review queue management workflow with Claude Code transforms how your team handles code reviews. By automating prioritization, assignment, and tracking, you reduce manual overhead and ensure reviews receive appropriate attention. The patterns and code examples in this guide provide a foundation you can adapt to your specific workflow and team size.
 
 Start with the basic queue structure, then progressively add complexity as your needs evolve. The investment in building a solid review queue system pays dividends in faster iteration cycles and improved code quality.
-
 
 Related Reading
 

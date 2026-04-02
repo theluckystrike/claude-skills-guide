@@ -13,8 +13,6 @@ permalink: /claude-code-for-statuspage-workflow-tutorial/
 ---
 {% raw %}
 
-Claude Code for Statuspage Workflow Tutorial
-
 Status pages are critical for transparent communication with users during incidents and maintenance windows. Managing status pages manually can be time-consuming, especially when you're dealing with multiple components, scheduled maintenance, and rapid incident updates. This tutorial shows you how to use Claude Code to automate your statuspage workflow, from incident creation to automated status updates based on your monitoring systems.
 
 Why Automate Statuspage Workflows?
@@ -26,7 +24,7 @@ When an incident occurs, every minute counts. Manual status page updates slow do
 - Reduced human error - Eliminate typos and missing information during high-stress incidents
 - Integration with existing tools - Connect your monitoring, alerting, and deployment systems smoothly
 
-Prerequisites
+## Prerequisites
 
 Before implementing the statuspage workflow, ensure you have:
 
@@ -35,11 +33,11 @@ Before implementing the statuspage workflow, ensure you have:
 3. API key - Generate from your statuspage admin panel
 4. Optional: Monitoring integration - PagerDuty, Datadog, or similar tools
 
-Setting Up the Statuspage Automation Skill
+## Setting Up the Statuspage Automation Skill
 
 Create a custom Claude skill that handles statuspage operations. This skill will manage components, incidents, and scheduled maintenance.
 
-Create the Skill Configuration
+## Create the Skill Configuration
 
 ```markdown
 Statuspage Automation Skill
@@ -59,7 +57,7 @@ API Integration
 - Supports page_id configuration
 ```
 
-Environment Setup
+## Environment Setup
 
 Configure your environment variables for secure API access:
 
@@ -69,11 +67,11 @@ export STATUSPAGE_API_KEY="your_api_key_here"
 export STATUSPAGE_PAGE_ID="your_page_id"
 ```
 
-Automating Incident Creation
+## Automating Incident Creation
 
 The most critical statuspage automation is incident creation. Here's how to set up Claude Code to automatically create incidents when your monitoring systems detect issues.
 
-Incident Detection Workflow
+## Incident Detection Workflow
 
 ```python
 #!/usr/bin/env python3
@@ -124,7 +122,7 @@ if __name__ == "__main__":
     print(f"Created incident: {incident.get('id')}")
 ```
 
-Integrating with Monitoring Alerts
+## Integrating with Monitoring Alerts
 
 Connect Claude Code to your monitoring system for automatic incident creation:
 
@@ -147,11 +145,11 @@ handlers:
         info: minor
 ```
 
-Managing Component Statuses
+## Managing Component Statuses
 
 Claude Code can help you maintain accurate component statuses across your infrastructure.
 
-Component Status Update Script
+## Component Status Update Script
 
 ```python
 def update_component_status(component_id, new_status):
@@ -185,7 +183,7 @@ COMPONENT_STATUSES = {
 }
 ```
 
-Bulk Status Checks
+## Bulk Status Checks
 
 Automate regular component health checks:
 
@@ -206,11 +204,11 @@ def check_all_components(monitor_funcs):
     return results
 ```
 
-Scheduled Maintenance Automation
+## Scheduled Maintenance Automation
 
 Claude Code can manage scheduled maintenance windows, ensuring proper notification to users before and during maintenance.
 
-Creating Maintenance Windows
+## Creating Maintenance Windows
 
 ```python
 def schedule_maintenance(component_ids, start_at, end_at, title, description):
@@ -252,7 +250,7 @@ maintenance = schedule_maintenance(
 )
 ```
 
-Best Practices for Statuspage Automation
+## Best Practices for Statuspage Automation
 
 When implementing Claude Code for statuspage workflows, follow these best practices:
 
@@ -262,7 +260,7 @@ When implementing Claude Code for statuspage workflows, follow these best practi
 4. Test in staging - Verify your automation works correctly before deploying to production
 5. Monitor your automation - Set up alerts for failed API calls or unexpected behavior
 
-Advanced: Multi-Team Coordination
+## Advanced: Multi-Team Coordination
 
 For larger organizations, coordinate status updates across teams:
 
@@ -292,7 +290,7 @@ class StatuspageOrchestrator:
         return incident
 ```
 
-Conclusion
+## Conclusion
 
 Automating your statuspage workflow with Claude Code transforms how you communicate with users during incidents. By implementing the workflows in this tutorial, you'll reduce response times, ensure consistent communication, and free up your team to focus on resolving issues rather than manually updating status pages.
 

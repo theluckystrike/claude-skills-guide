@@ -13,17 +13,16 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Reentrancy Guard Workflow
 
 Reentrancy bugs are among the most insidious issues in software development. They occur when a function gets called again before it finishes executing, leading to corrupted state, duplicate operations, and unpredictable behavior. Whether you're building async applications, webhooks, or concurrent systems, implementing solid reentrancy guards is essential for reliability. This guide shows you how to use Claude Code to design, implement, and test reentrancy guard workflows effectively.
 
-Understanding Reentrancy Problems
+## Understanding Reentrancy Problems
 
 Before diving into solutions, it's crucial to recognize the various forms reentrancy issues can take in your codebase.
 
-Common Reentrancy Scenarios
+## Common Reentrancy Scenarios
 
 Async/Await Race Conditions: When multiple async operations can trigger the same callback simultaneously, you might process the same data twice or overwrite state inconsistently.
 
@@ -55,11 +54,11 @@ Node.js's single-threaded event loop does not protect you from this class of bug
 
 Claude Code helps by recognizing these patterns when you share code, then generating the appropriate guard for your specific situation. The output is not generic boilerplate. it takes the shape of your actual data models and async patterns.
 
-Building Reentrancy Guards with Claude Code
+## Building Reentrancy Guards with Claude Code
 
 Claude Code can help you design and implement reentrancy guards tailored to your specific use case. Here's how to approach this systematically.
 
-The Semaphore Pattern
+## The Semaphore Pattern
 
 A semaphore-based guard uses a flag to track whether a function is currently executing. Claude Code can generate this pattern in multiple languages:
 
@@ -94,7 +93,7 @@ The `try/finally` block is critical. Without it, an exception thrown inside `pro
 
 When the guard returns early (the order is already being processed), you have a decision to make: silently skip, return an indicator, or queue the request for retry. Claude can help you implement each variant. For webhook deduplication, silent skip is often correct. For UI-triggered actions like a "submit" button, returning a status indicator and disabling the button is better UX. For job queues, queuing the request and processing it after the current execution completes is the safest approach.
 
-Queue-on-Contention Pattern
+## Queue-on-Contention Pattern
 
 Rather than dropping concurrent calls, you can queue them:
 
@@ -136,7 +135,7 @@ await Promise.all([
 
 This pattern serializes access to a resource without losing requests. It is useful for database writes where the second and third callers should wait rather than fail, but you still need them to eventually succeed.
 
-Distributed Reentrancy Guards
+## Distributed Reentrancy Guards
 
 For multi-instance deployments, you need distributed locks. Claude Code can help you implement Redis-based locks:
 
@@ -199,7 +198,7 @@ await withDistributedLock(lockClient, `payment:${orderId}`, async () => {
 
 Claude Code can generate this wrapper and integrate it into your existing service classes, adapting variable names and error handling to match your codebase's conventions.
 
-Lock TTL and Crash Recovery
+## Lock TTL and Crash Recovery
 
 The TTL on your distributed lock is a safety valve, not a guarantee. If your function takes longer than `lockTTL` milliseconds, the lock expires and another instance can acquire it while the original is still running. This means you should:
 
@@ -241,11 +240,11 @@ class LockExtender {
 }
 ```
 
-Implementing Idempotency Keys
+## Implementing Idempotency Keys
 
 Beyond simple guards, idempotency keys provide a solid solution for preventing duplicate operations. Claude Code excels at generating idempotent workflow implementations.
 
-Idempotency Key Strategy
+## Idempotency Key Strategy
 
 1. Generate a unique key for each operation (typically a UUID)
 2. Store the key with the operation's result on first execution
@@ -296,7 +295,7 @@ RETURNING *;
 
 This approach is more durable than Redis caching because it survives cache flushes and server restarts. Claude generates the migration to add the unique constraint alongside the query.
 
-Comparing Guard Approaches
+## Comparing Guard Approaches
 
 Understanding which guard type fits your situation prevents over-engineering. Here is a comparison of the main approaches:
 
@@ -311,11 +310,11 @@ Understanding which guard type fits your situation prevents over-engineering. He
 
 Claude Code helps you choose the right tool by asking about your deployment topology (single instance vs. horizontal scale), durability requirements (can a duplicate slip through during a restart?), and acceptable latency (database locks add overhead vs. in-memory checks).
 
-Automating Guard Implementation with Claude Code Skills
+## Automating Guard Implementation with Claude Code Skills
 
 You can create a Claude Code skill that specifically targets reentrancy vulnerabilities in your codebase.
 
-Sample Skill Definition
+## Sample Skill Definition
 
 Create a skill that scans for functions lacking reentrancy protection:
 
@@ -343,11 +342,11 @@ When you invoke this skill against a service file, Claude reads the file and ret
 
 You can extend the skill to also generate tests for each guard it adds, ensuring the protection works correctly before the code ships to production.
 
-Testing Reentrancy Guards
+## Testing Reentrancy Guards
 
 A guard is only as good as its tests. Claude Code can help you write comprehensive tests that verify your guards work correctly.
 
-Concurrency Testing Patterns
+## Concurrency Testing Patterns
 
 ```javascript
 async function testConcurrentExecution() {
@@ -372,7 +371,7 @@ async function testConcurrentExecution() {
 
 This test launches 10 concurrent calls and verifies that exactly one succeeded. Claude can generate the full test suite including edge cases: what happens when the guarded function throws? Does the guard release correctly so future calls can proceed? What if two separate order IDs are processed concurrently. do they block each other (they should not)?
 
-Testing Lock Expiry and Recovery
+## Testing Lock Expiry and Recovery
 
 For distributed lock scenarios, you need to test TTL expiry behavior:
 
@@ -418,7 +417,7 @@ describe('DistributedLock', () => {
 
 Claude Code generates tests like these automatically when you ask it to write a test suite for a guard implementation. It knows to test the failure modes. expired locks, wrong owners, concurrent acquisitions. not just the happy path.
 
-Actionable Advice for Implementation
+## Actionable Advice for Implementation
 
 Start by auditing your codebase for functions that:
 - Make external API calls

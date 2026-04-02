@@ -18,7 +18,7 @@ Android development involves a lot of boilerplate. Jetpack Compose components, R
 
 This guide covers five practical skill areas for Android/Kotlin development, with working examples and guidance on what to include in your skill `.md` files.
 
-Jetpack Compose UI Generation
+## Jetpack Compose UI Generation
 
 Compose's declarative model is a good fit for Claude. The component structure is predictable, the theming system is well-defined, and the patterns for state hoisting are consistent. A `compose` skill can generate complete, functional screen components from a description.
 
@@ -105,7 +105,7 @@ private fun ProductDetailContentPreview() {
 }
 ```
 
-Room Database Setup
+## Room Database Setup
 
 Room has a specific structure: entities, DAOs, the database class, and type converters. Claude generates all of these correctly when the skill gives it a schema description. The key is telling the skill what to produce and in what order.
 
@@ -180,7 +180,7 @@ abstract class AppDatabase : RoomDatabase() {
 }
 ```
 
-Retrofit API Clients
+## Retrofit API Clients
 
 Retrofit service interfaces are highly formulaic. A Claude skill that understands your API conventions can generate a complete service interface, data classes, and a Hilt module in one pass.
 
@@ -234,7 +234,7 @@ class UserRepository @Inject constructor(
 }
 ```
 
-Testing with Espresso and Robolectric
+## Testing with Espresso and Robolectric
 
 UI testing in Android is where developers lose the most time. Claude can generate test scaffolding reliably when you constrain the output format.
 
@@ -307,7 +307,7 @@ class ProductViewModelTest {
 
 The skill instruction for testing should include: "Always use a Fake implementation of repositories rather than Mockito mocks in ViewModel tests. Use runTest and advanceUntilIdle for coroutine testing."
 
-Gradle Build Optimization
+## Gradle Build Optimization
 
 Gradle build times are a recurring problem. Claude can audit your `build.gradle.kts` files and apply specific optimizations. A skill for this is more useful than a general prompt because it can be scoped to your project's setup.
 
@@ -364,7 +364,7 @@ dependencies {
 }
 ```
 
-Writing the Skill Files
+## Writing the Skill Files
 
 Each of these areas benefits from a dedicated skill `.md` file. Keep each skill focused: a `compose` skill for UI, a `room` skill for database setup, a `retrofit` skill for API clients. Mixing them into a single "android" skill produces lower-quality output because the instructions compete.
 

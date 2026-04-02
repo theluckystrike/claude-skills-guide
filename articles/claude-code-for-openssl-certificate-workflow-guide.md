@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for OpenSSL Certificate Workflow Guide"
 description: "Learn how to use Claude Code to automate OpenSSL certificate workflows including generation, validation, renewal, and management of SSL/TLS certificates."
@@ -24,7 +23,7 @@ Manual certificate management introduces several risks. Expiring certificates ca
 
 Claude Code can help you generate certificates, validate configurations, automate renewals, and troubleshoot certificate issues, all through natural language commands. This approach reduces the learning curve for OpenSSL while providing reproducible, auditable certificate operations.
 
-Generating Self-Signed Certificates for Development
+## Generating Self-Signed Certificates for Development
 
 Development environments often require self-signed certificates. Claude Code can generate these quickly with appropriate configurations. Here's how to request a development certificate:
 
@@ -110,7 +109,7 @@ DNS.2 = www.example.com
 DNS.3 = api.example.com
 ```
 
-Validating Certificate Chains and Configurations
+## Validating Certificate Chains and Configurations
 
 Before deploying certificates, validation is crucial. Claude Code can perform comprehensive certificate checks:
 
@@ -145,7 +144,7 @@ openssl s_client -connect example.com:443 -showcerts </dev/null 2>/dev/null | \
   openssl x509 -noout -subject -issuer
 ```
 
-Converting Certificate Formats
+## Converting Certificate Formats
 
 Different systems require different certificate formats. Claude Code handles format conversions effortlessly:
 
@@ -180,7 +179,7 @@ keytool -importkeystore \
   -destkeystore keystore.jks -deststoretype JKS
 ```
 
-Automating Certificate Renewal Workflows
+## Automating Certificate Renewal Workflows
 
 Certificate expiration is a common cause of service outages. Claude Code can help you set up renewal reminders and automate the renewal process.
 
@@ -207,7 +206,7 @@ for cert in /certs/*.crt; do
 done
 ```
 
-Troubleshooting Common Certificate Issues
+## Troubleshooting Common Certificate Issues
 
 When certificate errors occur, Claude Code can diagnose the problem quickly. Common issues include:
 
@@ -241,7 +240,7 @@ Debug why certificate chain verification is failing
 openssl s_client -connect example.com:443 -verify_return_error -showcerts
 ```
 
-Best Practices for Certificate Management
+## Best Practices for Certificate Management
 
 Follow these recommendations when managing certificates with Claude Code:
 

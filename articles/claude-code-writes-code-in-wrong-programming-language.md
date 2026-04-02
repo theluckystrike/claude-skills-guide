@@ -16,7 +16,7 @@ score: 7
 
 Claude Code occasionally generates code in the wrong programming language when working on projects with multiple languages or unclear context. This issue commonly occurs in polyglot repositories, when switching between tasks, or when initial prompts lack specificity. Understanding why this happens and how to prevent it will significantly improve your AI-assisted development workflow.
 
-Why Claude Code Picks the Wrong Language
+## Why Claude Code Picks the Wrong Language
 
 Claude Code analyzes your project structure, file extensions, and conversation context to determine which language to use. However, several factors can lead to incorrect language selection:
 
@@ -30,7 +30,7 @@ Recency bias in the conversation window. Claude weights recent messages more hea
 
 Shared vocabulary across languages. Some concepts map to multiple languages equally well. "Write a function to hash a password" could reasonably be answered in Python, Node.js, Go, or Ruby. Without a language signal, Claude makes a judgment call based on everything else it knows about your project.
 
-Immediate Fixes for Wrong Language Output
+## Immediate Fixes for Wrong Language Output
 
 When you notice Claude writing Python instead of TypeScript, or Ruby instead of Go, you can intervene immediately:
 
@@ -84,9 +84,9 @@ Add input validation using the validator package.
 
 This forces Claude to match the language of the code you already have, rather than making an inference. It is especially useful when the existing code is not in Claude's recent context.
 
-Long-Term Prevention Strategies
+## Long-Term Prevention Strategies
 
-Configure Project-Specific Skills
+## Configure Project-Specific Skills
 
 Create custom skills for your primary language stack to establish consistent defaults. Place these in your `~/.claude/skills/` directory:
 
@@ -116,7 +116,7 @@ Use dataclasses or Pydantic models for structured data.
 
 Activate the appropriate skill at the start of each session and you rarely need to specify the language again for routine tasks. The skill acts as a persistent instruction that Claude reads before generating any code.
 
-Use the tdd Skill with Language Constraints
+## Use the tdd Skill with Language Constraints
 
 The `tdd` skill helps maintain language consistency during test-driven development. Activate it with explicit language boundaries:
 
@@ -127,7 +127,7 @@ Using TypeScript with Vitest, write tests for a user authentication module with 
 
 The tdd skill generates test cases in your specified language first, which then constrains the implementation to match. Since the test file is committed to a specific language's syntax, Claude has no reason to deviate when writing the corresponding implementation.
 
-Use a CLAUDE.md File for Project-Wide Rules
+## Use a CLAUDE.md File for Project-Wide Rules
 
 A `CLAUDE.md` file in your project root sets explicit expectations that Claude Code reads at session start. This is the single most effective long-term prevention technique for multi-language projects:
 
@@ -155,11 +155,11 @@ Per-Directory Defaults
 
 Claude Code reads this file on session start, establishing clear language boundaries from the beginning. The per-directory mapping is particularly useful because it makes the rule deterministic: Claude does not have to infer, it just checks the path.
 
-Handling Multi-Language Projects
+## Handling Multi-Language Projects
 
 Large repositories often genuinely need multiple languages. Here are patterns that work well in practice:
 
-Language-Specific Directories
+## Language-Specific Directories
 
 Structure your project so languages are clearly separated:
 
@@ -174,7 +174,7 @@ Structure your project so languages are clearly separated:
 
 When working in each directory, the path itself provides language context. Pair this with the `CLAUDE.md` per-directory mapping described above and language confusion becomes rare.
 
-Per-File Language Hints
+## Per-File Language Hints
 
 Add comments at the top of files in ambiguous situations:
 
@@ -193,7 +193,7 @@ Data pipeline utilities. not for use in the Go service layer.
 
 These comments are cheap to add during initial file creation and pay dividends every time Claude encounters the file in a new session.
 
-Skill Stacking for Polyglot Projects
+## Skill Stacking for Polyglot Projects
 
 When using skills like `frontend-design` or `pdf` alongside backend skills, be explicit about boundaries when switching contexts:
 
@@ -210,7 +210,7 @@ Using Go, write the backend handler for this component's API endpoint.
 
 The explicit boundary prevents the `frontend-design` skill's TypeScript defaults from leaking into your Go handler.
 
-Detecting Language Mismatch Early
+## Detecting Language Mismatch Early
 
 Watch for these warning signs before wrong-language code appears:
 
@@ -222,9 +222,9 @@ Watch for these warning signs before wrong-language code appears:
 
 If you catch any of these early, correct immediately rather than letting Claude continue down the wrong path. A wrong-language code block followed by two more wrong-language blocks means three corrections instead of one.
 
-Language Confusion in Common Scenarios
+## Language Confusion in Common Scenarios
 
-Scenario 1: Shared Utility Functions
+## Scenario 1: Shared Utility Functions
 
 You have a Go backend and a TypeScript frontend that both need to validate email addresses. You ask Claude to "write an email validator." Which language does it pick?
 
@@ -239,7 +239,7 @@ that returns an error type, not a bool.
 
 The file path, extension, and the Go-idiomatic "returns an error type" instruction all converge on the right answer.
 
-Scenario 2: Config Files Next to Source Code
+## Scenario 2: Config Files Next to Source Code
 
 Many projects store Python or YAML config files alongside Go or TypeScript source. If your recent context includes a `config.py` file and you ask "add a new config value," Claude might generate Python even if your runtime config loader is in Go.
 
@@ -249,7 +249,7 @@ Fix: Always reference the specific config file you want to modify:
 In backend/config/config.go, add a new field for the rate limit window.
 ```
 
-Scenario 3: Test Files with Ambiguous Names
+## Scenario 3: Test Files with Ambiguous Names
 
 Test files are particularly susceptible to language confusion because they often have generic names like `test_utils.py` or `helpers_test.go`. If Claude reads `helpers_test` without the `.go` extension, it might assume the wrong language.
 
@@ -260,7 +260,7 @@ In backend/handlers/user_test.go, using the Go testing package and testify,
 add a test for the new validation logic.
 ```
 
-Using supermemory for Language Context
+## Using supermemory for Language Context
 
 The `supermemory` skill can store project language preferences across sessions. Configure it to remember:
 
@@ -283,7 +283,7 @@ Key constraint: No Node.js on the backend. all server code is Go
 
 When Claude reads this at session start, it has the full picture before you write your first prompt.
 
-Comparison: Language Specification Techniques
+## Comparison: Language Specification Techniques
 
 | Technique | Best For | Reliability | Setup Cost |
 |---|---|---|---|
@@ -295,14 +295,13 @@ Comparison: Language Specification Techniques
 | supermemory entry | Cross-session projects | High | Low |
 | Paste existing code snippet | Modifying existing functions | Very high | None |
 
-Summary
+## Summary
 
 Language mismatches in Claude Code are almost always a context problem, not a capability problem. Claude knows all the languages involved. it just needs a clear signal about which one applies to the current task. The most reliable fixes are the ones that make the context unambiguous: file paths with extensions, `CLAUDE.md` directory mappings, and pasting existing code before asking for modifications. For long-running projects, a custom skill file combined with a `CLAUDE.md` eliminates the problem almost entirely, since both documents are read at session start before any code is generated.
 
 When you do encounter a wrong-language response, correct it immediately with a strong signal rather than a vague correction. "Rewrite that in TypeScript" is weaker than "In src/api/client.ts, rewrite that function using fetch." Specificity is the key.
 
 ---
-
 
 Related Reading
 

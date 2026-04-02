@@ -16,7 +16,7 @@ permalink: /claude-memory-feature-vs-supermemory-skill-comparison/
 
 When working with Claude Code, there are two distinct ways to manage context: the built-in session memory that Claude maintains automatically, and the `/[supermemory](/claude-supermemory-skill-persistent-context-explained/)` skill that provides persistent storage across sessions. Understanding the difference helps you choose the right approach for each situation.
 
-Built-in Session Memory
+## Built-in Session Memory
 
 [Claude's built-in memory is the conversation history within a single session](/claude-supermemory-skill-persistent-context-explained/). When you have an active Claude Code session, Claude maintains awareness of everything discussed so far: which files you have looked at, what decisions you have made, what code you have already written.
 
@@ -45,7 +45,7 @@ Where session memory wins:
 
 The limitation: this context disappears when the session ends. Start a new session and Claude starts fresh with no memory of the previous conversation. This is the gap that supermemory and CLAUDE.md are designed to fill.
 
-The /supermemory Skill
+## The /supermemory Skill
 
 The `/supermemory` skill adds persistence across sessions. You invoke it explicitly with the `/supermemory` slash command to store or retrieve information.
 
@@ -80,7 +80,7 @@ Where supermemory wins:
 - Personal preferences that should follow you across machines but are not appropriate for a shared CLAUDE.md
 - Post-mortems and lessons learned that should inform future debugging on the same project
 
-More Supermemory Invocation Examples
+## More Supermemory Invocation Examples
 
 Storing a post-incident note:
 
@@ -121,7 +121,7 @@ Append to invoice-generator decisions:
 better CSS support and smaller Docker image
 ```
 
-Key Differences
+## Key Differences
 
 | Aspect | Built-in Session Memory | /supermemory Skill | CLAUDE.md |
 |---|---|---|---|
@@ -135,7 +135,7 @@ Key Differences
 | Best for | Within-session iteration | Long-term accumulated decisions | Stable project conventions |
 | Survives machine change | No | Depends on skill backend | Yes if committed to repo |
 
-When to Use Each
+## When to Use Each
 
 Use built-in session memory when:
 - You are doing a single focused task within one session
@@ -159,7 +159,7 @@ Use CLAUDE.md as an alternative to supermemory when:
 - You want context to load automatically without any invocation step
 - The project has multiple contributors who all need the same baseline context
 
-Combining All Three Effectively
+## Combining All Three Effectively
 
 Many workflows use all three together, and each layer has a distinct role:
 
@@ -194,7 +194,7 @@ When CLAUDE.md and supermemory diverge:
 
 If supermemory records a decision that contradicts what is in CLAUDE.md, it is a signal to update CLAUDE.md. The rule of thumb: if a decision has become stable and is now team policy, it graduates from supermemory into CLAUDE.md where it is version-controlled and shared.
 
-The CLAUDE.md Alternative
+## The CLAUDE.md Alternative
 
 For most project context needs, a well-maintained `CLAUDE.md` file is simpler than supermemory:
 

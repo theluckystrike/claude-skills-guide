@@ -27,7 +27,7 @@ Beyond pure convenience, the business case for automated image optimization is c
 
 The problem is that most teams lack consistent standards. One developer compresses at quality 75, another at 95, a third forgets to add WebP variants altogether. Claude Code enforces your standards programmatically, every single time, without relying on anyone remembering to run a tool.
 
-Understanding Modern Image Formats
+## Understanding Modern Image Formats
 
 Before building your pipeline, you need to understand the format landscape. Choosing the wrong format is the single biggest optimization mistake teams make.
 
@@ -49,7 +49,7 @@ For a modern project built in 2025 or 2026, your defaults should be:
 
 Claude Code can help you audit an existing project to identify format mismatches. Ask it to scan your assets directory and report any PNG files above 200 KB (probable JPEG candidates), any GIF files (probable video candidates), and any JPEG files missing WebP counterparts.
 
-Setting Up Your Image Optimization Skill
+## Setting Up Your Image Optimization Skill
 
 The first step is creating a Claude skill that encapsulates your optimization logic. Create a file called `.claude/image-optimization.md` in your project:
 
@@ -87,7 +87,7 @@ Project Rules
 
 This gives Claude Code enough context to make sensible decisions when processing new image types it hasn't seen before.
 
-Creating the Optimization Script
+## Creating the Optimization Script
 
 Now create the actual processing script that Claude will use. A Node.js script using the `sharp` library provides excellent performance and flexibility:
 
@@ -157,7 +157,7 @@ This script generates multiple sizes and formats for each input image, creating 
 
 The `withoutEnlargement: true` flag is important. it prevents sharp from upscaling a 400px image to 1920px, which would create a larger, blurry file. Always respect source dimensions.
 
-Adding an Audit Mode
+## Adding an Audit Mode
 
 Before running full optimization, it helps to run in audit-only mode to understand what will change. Add this function to your script:
 
@@ -198,7 +198,7 @@ async function auditImages(inputDir) {
 
 Running `node scripts/optimize-images.js --audit ./images/raw` before optimization gives you a clear picture of which files will benefit most. This is especially useful when onboarding a legacy codebase with years of accumulated unoptimized assets.
 
-Generating Responsive Image Markup
+## Generating Responsive Image Markup
 
 Once you have optimized images, you need HTML markup that tells browsers which variants to load. Claude can generate this markup automatically:
 
@@ -232,7 +232,7 @@ function generatePictureElement(imageName, alt, widths = [320, 640, 960, 1280, 1
 
 This generates proper `<picture>` elements with multiple sources, letting browsers choose the best format and size for each user.
 
-Understanding the sizes Attribute
+## Understanding the sizes Attribute
 
 One common mistake is omitting the `sizes` attribute. Without it, the browser defaults to assuming the image fills 100% of the viewport width, and it may download a larger variant than necessary. Add `sizes` to your generated markup:
 
@@ -266,7 +266,7 @@ function generatePictureWithSizes(imageName, alt, sizesHint = '(max-width: 768px
 
 Claude Code can help you determine the right `sizes` value for each image based on its context in the layout. Describe the CSS grid or flex structure the image sits within, and Claude will calculate the appropriate descriptor.
 
-Integrating with Your Development Workflow
+## Integrating with Your Development Workflow
 
 The real power comes from integrating these tools into your daily workflow. Create a Claude command that orchestrates the entire pipeline:
 
@@ -309,7 +309,7 @@ async function handleOptimizeImages(args) {
 }
 ```
 
-Using the Manifest in Templates
+## Using the Manifest in Templates
 
 The JSON manifest enables template-driven image insertion. A typical manifest entry looks like:
 
@@ -337,9 +337,9 @@ The JSON manifest enables template-driven image insertion. A typical manifest en
 
 Templates in your SSG or CMS can read this manifest to generate correct markup without hard-coding paths. Claude Code can write template helpers for Next.js, Astro, Hugo, Jekyll, or whatever framework you use.
 
-Framework-Specific Integration
+## Framework-Specific Integration
 
-Next.js
+## Next.js
 
 Next.js has a built-in `next/image` component that handles much of this automatically, but you may still want to pre-generate optimized variants for external delivery. Ask Claude Code to generate a custom loader:
 
@@ -355,11 +355,11 @@ Hugo / Jekyll (Static Sites)
 
 For static site generators, Claude Code can generate a shortcode or include that reads from your manifest file and outputs a complete `<picture>` element with correct paths and attributes.
 
-Plain HTML
+## Plain HTML
 
 When working with plain HTML sites, Claude Code can do a one-time replacement scan. finding all `<img>` tags and converting them to `<picture>` elements with proper srcset, while also generating the optimized variants.
 
-Best Practices for Image Optimization
+## Best Practices for Image Optimization
 
 Follow these guidelines for optimal results:
 
@@ -377,7 +377,7 @@ Preserve metadata selectively. By default, strip EXIF data for privacy and file 
 
 Avoid double compression. Never run optimization on already-optimized output files. Keep your source originals in a separate, unoptimized directory and treat the output directory as a build artifact.
 
-Comparing Optimization Approaches
+## Comparing Optimization Approaches
 
 | Approach | Setup Effort | Ongoing Effort | Consistency | Best For |
 |----------|-------------|---------------|-------------|----------|
@@ -389,7 +389,7 @@ Comparing Optimization Approaches
 
 Claude Code sits in a sweet spot. quick to set up because you describe what you want in plain English, and highly consistent because the same script runs every time. The CI/CD integration is the next step for larger teams.
 
-Automating on Commit
+## Automating on Commit
 
 Add image optimization to your pre-commit workflow to ensure optimized images never accidentally get committed:
 
@@ -415,7 +415,7 @@ For a more solid setup, use a dedicated git hook manager like Husky:
 
 This configuration runs optimization only on images that are being committed, rather than the entire directory. much faster for large projects.
 
-CI/CD Pipeline Integration
+## CI/CD Pipeline Integration
 
 For teams, a CI/CD step ensures images are always optimized regardless of local developer setup:
 
@@ -433,7 +433,7 @@ For teams, a CI/CD step ensures images are always optimized regardless of local 
 
 The `--fail-on-oversized` flag causes the CI step to fail if any output image exceeds 200 KB. a useful quality gate that prevents regressions.
 
-Measuring Results
+## Measuring Results
 
 After deploying your optimized images, measure the impact. Useful metrics to track:
 
@@ -444,7 +444,7 @@ After deploying your optimized images, measure the impact. Useful metrics to tra
 
 A typical e-commerce product page might go from 2.4 MB to 800 KB after proper optimization. a 67% reduction that directly translates to faster load times and better conversion rates, particularly on mobile networks.
 
-Conclusion
+## Conclusion
 
 Claude Code makes image optimization repeatable and automated. By creating skills that encapsulate your optimization logic, generating responsive variants in modern formats, and integrating with your build pipeline, you eliminate the manual tedium of image optimization while ensuring every image on your site is optimized for performance.
 

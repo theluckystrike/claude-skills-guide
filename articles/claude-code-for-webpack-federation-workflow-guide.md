@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Webpack Federation Workflow Guide"
 description: "Learn how to use Claude Code to create and manage Webpack Module Federation workflows. Practical examples, code snippets, and actionable advice for."
@@ -14,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Webpack Federation Workflow Guide
-
 Webpack Module Federation has transformed how developers build micro-frontend architectures by enabling runtime code sharing between independent applications. This guide shows you how to use Claude Code to set up, configure, and maintain a Webpack Federation workflow that scales across teams and projects.
 
-Understanding Module Federation Basics
+## Understanding Module Federation Basics
 
 Module Federation allows multiple separate builds to share code at runtime. Instead of bundling all dependencies into each application, you can expose and consume remote modules dynamically. This approach significantly reduces bundle sizes and enables independent deployment of application features.
 
@@ -27,7 +23,7 @@ Claude Code can help you understand the core concepts by explaining how hosts an
 
 The key concepts involve three main components: the host application that consumes remote modules, the remote applications that expose their functionality, and the shared dependencies that both applications can use without duplication.
 
-Setting Up Your Federation Project Structure
+## Setting Up Your Federation Project Structure
 
 A well-organized project structure is essential for maintaining federation workflows across multiple teams. Claude Code can help you create a scalable directory structure that separates host applications from remote modules while keeping shared configurations consistent.
 
@@ -45,7 +41,7 @@ federation-workspace/
 
 Start by creating this structure and then configure each application's webpack config to participate in the federation. Claude Code can generate the initial webpack configuration for both hosts and remotes, ensuring all the necessary federation plugins are properly configured.
 
-Configuring Host and Remote Applications
+## Configuring Host and Remote Applications
 
 The federation plugin sits at the heart of your configuration. For remote applications, you define what gets exposed. For host applications, you specify which remotes to consume.
 
@@ -129,7 +125,7 @@ module.exports = {
 
 Claude Code can help you generate these configurations and explain why certain settings matter. When troubleshooting federation issues, ask Claude to analyze your config and identify potential problems like version mismatches or incorrect public paths.
 
-Consuming Federation Modules in Your Application
+## Consuming Federation Modules in Your Application
 
 Once your federation is configured, consuming remote modules requires dynamic imports. The remote code loads at runtime when needed, and the host application treats the remote module like any local component.
 
@@ -154,7 +150,7 @@ export default App;
 
 The Suspense component handles the loading state while the remote module downloads. This pattern works smoothly with React's code splitting features, making federation integration feel natural.
 
-Handling Shared Dependencies Effectively
+## Handling Shared Dependencies Effectively
 
 One of the most important aspects of federation workflow is managing shared dependencies. When multiple applications share the same library version, webpack loads a single instance. When versions differ, each application loads its own copy, which increases bundle size.
 
@@ -171,7 +167,7 @@ shared: {
 
 The async option loads the dependency independently in each chunk, avoiding version conflicts while still benefiting from code splitting.
 
-Troubleshooting Common Federation Issues
+## Troubleshooting Common Federation Issues
 
 Several common issues arise when working with Module Federation. Claude Code can diagnose and help resolve these problems quickly.
 
@@ -181,7 +177,7 @@ Loading failures often stem from incorrect public paths or CORS misconfiguration
 
 Style conflicts between federated applications require isolation strategies. CSS Modules or scoped styling solutions prevent styles from leaking between applications. Claude Code can suggest appropriate styling approaches for your federation architecture.
 
-Automating Federation Workflows with Claude Code
+## Automating Federation Workflows with Claude Code
 
 Beyond initial setup, Claude Code can help you maintain and evolve your federation architecture over time. Create custom skills for common federation tasks like adding new remotes, updating shared configurations, or auditing dependency versions across your federation.
 

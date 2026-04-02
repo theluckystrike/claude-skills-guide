@@ -16,7 +16,7 @@ permalink: /claude-skills-for-enterprise-security-compliance-guide/
 
 Deploying Claude Code in an enterprise environment means dealing with requirements that don't exist in personal or small-team use: access control, audit trails, data residency, secret management, and compliance frameworks. This guide covers how to configure Claude skills to meet these requirements without gutting their utility.
 
-The Enterprise Security Stack for Claude Code
+## The Enterprise Security Stack for Claude Code
 
 A production enterprise deployment of Claude Code typically involves five layers of control:
 
@@ -26,9 +26,9 @@ A production enterprise deployment of Claude Code typically involves five layers
 4. Data boundary enforcement: Preventing sensitive data from leaving approved systems
 5. Change management: Tracking skill modifications and their approval status
 
-Identity and Access Control
+## Identity and Access Control
 
-Team-Based Skill Access
+## Team-Based Skill Access
 
 Use `pre-skill` hooks to enforce skill access policies based on user identity:
 
@@ -97,7 +97,7 @@ users:
     teams: [design-engineering]
 ```
 
-LDAP/Active Directory Integration
+## LDAP/Active Directory Integration
 
 For larger teams, replace the static YAML with LDAP/AD lookups:
 
@@ -122,9 +122,9 @@ def get_user_groups(email):
     return []
 ```
 
-Secret Management
+## Secret Management
 
-Never Let Claude See Secrets Directly
+## Never Let Claude See Secrets Directly
 
 The biggest risk in AI coding tools: accidentally giving Claude access to production credentials. Skills like the [tdd skill](/best-claude-skills-for-developers-2026/) need access to run tests, while the [`pdf` skill](/best-claude-skills-for-data-analysis/) reads documents. scope each appropriately. Claude might log them, include them in generated code, or surface them in responses.
 
@@ -142,7 +142,7 @@ Read src/config/database.ts to understand the database configuration schema.
 
 `context_files` is not a valid skill front matter field. Use prose instructions in the skill body to specify which files Claude should read.
 
-Vault Integration for Skill Tool Calls
+## Vault Integration for Skill Tool Calls
 
 If a skill needs to authenticate to an external service, use a vault-backed credential provider via a pre-tool hook:
 
@@ -174,9 +174,9 @@ print(json.dumps(data))
 sys.exit(0)
 ```
 
-Audit Logging for Compliance
+## Audit Logging for Compliance
 
-SIEM-Compatible Audit Logs
+## SIEM-Compatible Audit Logs
 
 Compliance frameworks like SOC 2 and ISO 27001 require structured, tamper-evident logs. Use post-tool hooks to write to a SIEM-compatible format:
 
@@ -225,7 +225,7 @@ with open(audit_log_path, "a") as f:
 sys.exit(0)
 ```
 
-Tracking Skill Invocations for Access Reviews
+## Tracking Skill Invocations for Access Reviews
 
 For periodic access reviews, track which users invoked which skills:
 
@@ -245,9 +245,9 @@ with open(usage_log, "a") as f:
 
 Run quarterly access reviews by analyzing this log to verify users still need the skills they're invoking.
 
-Data Boundary Enforcement
+## Data Boundary Enforcement
 
-Blocking PII Exfiltration
+## Blocking PII Exfiltration
 
 Use pre-tool hooks to scan for PII in WebFetch and WebSearch calls:
 
@@ -268,7 +268,7 @@ if data["tool_name"] in ["WebFetch", "WebSearch"]:
             sys.exit(1)
 ```
 
-Restricting Write Access to Non-Production Paths
+## Restricting Write Access to Non-Production Paths
 
 For environments where Claude Code might have access to production config:
 
@@ -289,7 +289,7 @@ if data["tool_name"] == "Write":
             sys.exit(1)
 ```
 
-Skill Version Control and Change Management
+## Skill Version Control and Change Management
 
 In enterprise deployments, skill changes should go through the same review process as code changes.
 

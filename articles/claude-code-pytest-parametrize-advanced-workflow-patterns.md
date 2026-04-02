@@ -16,7 +16,7 @@ permalink: /claude-code-pytest-parametrize-advanced-workflow-patterns/
 
 When you need to test multiple input combinations, edge cases, or data-driven scenarios, pytest's `@pytest.mark.parametrize` decorator becomes indispensable. While basic parametrization covers simple use cases, advanced patterns unlock powerful workflows that dramatically reduce test code while increasing coverage. This guide explores sophisticated parametrization techniques that integrate smoothly with Claude Code workflows and automation skills.
 
-Beyond Basic Parametrization
+## Beyond Basic Parametrization
 
 The fundamental `@pytest.mark.parametrize` decorator accepts multiple parameter sets as arguments. However, real-world scenarios often require more sophisticated approaches. Understanding when to apply advanced patterns separates maintainable test suites from unmanageable ones.
 
@@ -42,7 +42,7 @@ def test_email_validation(email, expected):
 
 This basic pattern works well for straightforward cases. But what happens when your parametrization needs to reference fixtures, generate data dynamically, or apply conditional logic?
 
-Fixture-Based Parametrization
+## Fixture-Based Parametrization
 
 One of the most powerful patterns combines fixtures with parametrization. Instead of hardcoding test data, you can generate it from fixtures, enabling dynamic test data creation:
 
@@ -68,7 +68,7 @@ def test_invalid_emails(email):
 
 This pattern proves invaluable when your test data comes from external sources like configuration files, databases, or API responses. Claude Code can help you generate these fixtures automatically when working with existing test suites.
 
-Indirect Parametrization for Complex Scenarios
+## Indirect Parametrization for Complex Scenarios
 
 Indirect parametrization allows you to transform parameter values before they reach your test function. This pattern is particularly useful when you need to perform setup or conversion operations on your test parameters:
 
@@ -98,7 +98,7 @@ def test_user_processing(user_data, user_processor):
 
 The `indirect=["user_data"]` argument tells pytest to pass the parameter through the fixture function before the test receives it. This separation of concerns keeps your test logic clean while handling complex data transformation.
 
-Multiple Parametrize Markers Combined
+## Multiple Parametrize Markers Combined
 
 When testing functions with multiple parameters, combining multiple `@pytest.mark.parametrize` decorators creates a cartesian product of all combinations:
 
@@ -129,7 +129,7 @@ def test_login(username, password, expected):
 
 Custom IDs make test output more readable and allow selective test execution with `pytest -k "admin-correct"`.
 
-Conditional Parametrization with Hooks
+## Conditional Parametrization with Hooks
 
 For scenarios where parametrization depends on runtime conditions or environment variables, pytest hooks provide elegant solutions:
 
@@ -152,7 +152,7 @@ def test_deployment_config(environment):
 
 This pattern enables environment-specific test execution without modifying test files. Combine it with Claude Code's environment detection capabilities for intelligent test selection in different deployment contexts.
 
-Parametrization with Class-Based Test Organization
+## Parametrization with Class-Based Test Organization
 
 When parametrization becomes complex, organizing tests into classes provides better structure and shared context:
 
@@ -182,7 +182,7 @@ class TestAPICrudOperations:
 
 This approach ensures consistent setup across parametrized tests while maintaining clear test isolation.
 
-Integration with Claude Code Workflows
+## Integration with Claude Code Workflows
 
 When using Claude Code for test automation, these advanced parametrization patterns enable more sophisticated testing strategies. The tdd skill works particularly well with parametrization since it encourages comprehensive test coverage before implementation.
 
@@ -195,7 +195,7 @@ Consider a scenario where Claude Code generates parametrized tests based on spec
 
 This workflow significantly reduces the manual effort required to maintain comprehensive test suites, especially for functions with many input combinations.
 
-Performance Considerations
+## Performance Considerations
 
 Parametrized tests can impact test suite performance if not managed carefully. Apply these optimizations:
 
@@ -209,7 +209,7 @@ pytest tests/ -n auto --dist loadfile
 
 For very large parameter sets, consider generating tests dynamically based on runtime conditions rather than enumerating all combinations upfront.
 
-Actionable Recommendations
+## Actionable Recommendations
 
 Implement these patterns progressively in your test suites:
 

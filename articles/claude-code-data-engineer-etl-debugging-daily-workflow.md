@@ -13,12 +13,9 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code Data Engineer ETL Debugging Daily Workflow
-
 Data engineers spend a significant portion of their day debugging ETL pipelines, investigating data quality issues, and tracing the root cause of pipeline failures. Claude Code transforms this traditionally time-consuming workflow into a more efficient process by acting as an intelligent pair programmer that understands your pipeline logic, data schemas, and debugging patterns. This guide walks you through practical techniques for debugging ETL pipelines using Claude Code skills and features.
 
-Understanding Your ETL Pipeline Context
+## Understanding Your ETL Pipeline Context
 
 Before diving into debugging, establish your pipeline context within Claude Code. Create a `claude.md` file in your project root that describes your ETL architecture:
 
@@ -44,9 +41,9 @@ Common issues to watch for:
 
 This context file helps Claude Code understand your pipeline structure and anticipate common failure modes. When you ask for debugging help, Claude already knows your file organization and data contracts.
 
-Daily Debugging Workflow with Claude Code
+## Daily Debugging Workflow with Claude Code
 
-Morning Pipeline Health Check
+## Morning Pipeline Health Check
 
 Start your day by checking pipeline status. Use Claude Code to analyze logs and identify any overnight failures:
 
@@ -59,7 +56,7 @@ whether it's a recurring issue."
 
 Claude Code will parse through log files, identify patterns, and present a concise summary. This beats manually scrolling through thousands of log lines.
 
-Investigating Data Quality Issues
+## Investigating Data Quality Issues
 
 When data quality checks fail, Claude Code helps you trace the problem efficiently. Suppose your order validation is rejecting records with null customer_ids. Ask Claude:
 
@@ -72,7 +69,7 @@ customer_id was ever populated."
 
 Claude reads the failed records, correlates them with source data, and identifies patterns you might miss. It can also suggest whether the issue is a data source problem or a transformation bug.
 
-Debugging Transformation Logic
+## Debugging Transformation Logic
 
 For pipeline code debugging, use Claude's code analysis capabilities. When a transformation is producing incorrect results:
 
@@ -85,7 +82,7 @@ and identify where records might be filtered out without proper logging."
 
 Provide Claude with the relevant code and error context. It analyzes the logic, identifies potential issues like missing null checks, incorrect join conditions, or overly aggressive filtering, and explains the problem in plain terms.
 
-Using Claude Code Skills for ETL Work
+## Using Claude Code Skills for ETL Work
 
 Several Claude Code skills enhance your ETL debugging workflow. The xlsx skill helps when you need to analyze data quality reports in spreadsheet format. Load it with `/skill xlsx` when working with Excel exports of failed records.
 
@@ -109,9 +106,9 @@ The bug first appeared in production on March 10. Start from the current HEAD
 and work backward to find the problematic commit."
 ```
 
-Practical Debugging Patterns
+## Practical Debugging Patterns
 
-Pattern 1: Schema Evolution Issues
+## Pattern 1: Schema Evolution Issues
 
 When upstream schema changes break your pipeline, Claude helps identify what's different:
 
@@ -122,7 +119,7 @@ fields, and changed data types. Update the transformation code to handle
 both versions."
 ```
 
-Pattern 2: Performance Degradation
+## Pattern 2: Performance Degradation
 
 For slow-running pipelines:
 
@@ -132,7 +129,7 @@ Identify which tasks have increased in runtime the most over the past week.
 Check if there are data volume changes or inefficient queries in those tasks."
 ```
 
-Pattern 3: Dead Letter Queue Analysis
+## Pattern 3: Dead Letter Queue Analysis
 
 When records land in dead letter queues:
 
@@ -143,7 +140,7 @@ For each category, suggest whether the fix belongs in the source system,
 the transformation logic, or the data quality rules."
 ```
 
-Automating Routine Debug Tasks
+## Automating Routine Debug Tasks
 
 Create custom skills for your most common debugging scenarios. Save this as `~/.claude/skills/etl-debug.md`:
 
@@ -168,7 +165,7 @@ Common patterns to recognize:
 
 Load this skill automatically for ETL work by adding it to your project-specific `claude.md` or using `/load-skill etl-debug` at the start of debugging sessions.
 
-Best Practices for Claude-Assisted Debugging
+## Best Practices for Claude-Assisted Debugging
 
 Provide complete context: Include log snippets, error messages, and relevant code sections in your queries. Claude works best when it has specific information rather than vague descriptions.
 
@@ -178,7 +175,7 @@ Verify before deploying: Claude can suggest fixes quickly, but always review cha
 
 Document recurring issues: When Claude helps solve a problem, add the pattern to your team's knowledge base. This builds institutional memory and speeds up future debugging.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms ETL debugging from a manual, time-intensive process into a collaborative conversation. By providing context about your pipeline, using specialized skills, and following practical debugging patterns, you can identify and fix issues faster while building more maintainable pipelines. The key is treating Claude as a debugging partner that understands your specific infrastructure rather than a generic code assistant.
 

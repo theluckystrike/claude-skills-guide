@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for GitHub Actions Self-Hosted Runner Guide
 
@@ -32,7 +31,7 @@ When you add Claude Code to this mix, you gain AI-powered code review, automated
 
 The combination is particularly valuable for teams that already self-host because the runner machine persists Claude Code's binary, model cache, and any skills between runs, eliminating cold-start installation overhead on every job.
 
-Comparing Hosted vs. Self-Hosted Runners for Claude Code
+## Comparing Hosted vs. Self-Hosted Runners for Claude Code
 
 Before committing to self-hosted infrastructure, it helps to understand the practical trade-offs:
 
@@ -49,9 +48,9 @@ Before committing to self-hosted infrastructure, it helps to understand the prac
 
 For teams running more than a few hundred workflow minutes per month with Claude Code, self-hosted runners pay for themselves quickly, and the persistent environment makes multi-step workflows significantly faster.
 
-Setting Up Claude Code on Your Self-Hosted Runner
+## Setting Up Claude Code on Your Self-Hosted Runner
 
-Prerequisites
+## Prerequisites
 
 Before installing Claude Code, ensure your runner meets these requirements:
 
@@ -61,7 +60,7 @@ Before installing Claude Code, ensure your runner meets these requirements:
 - Git installed
 - The GitHub Actions runner service already registered to your repository or organization
 
-Installation Steps
+## Installation Steps
 
 First, SSH into your self-hosted runner machine and install Claude Code via npm:
 
@@ -96,7 +95,7 @@ sudo systemctl restart actions.runner.<org>.<repo>.service
 
 This approach avoids storing the key in plaintext files that might be readable by other processes on the machine.
 
-Registering the Runner with a Label
+## Registering the Runner with a Label
 
 When you register the runner, add a descriptive label so workflows can target it specifically:
 
@@ -111,11 +110,11 @@ When you register the runner, add a descriptive label so workflows can target it
 
 Using the `claude-code` label lets you route only AI-assisted jobs to this runner while other jobs use standard runners.
 
-Configuring GitHub Actions to Use Claude Code
+## Configuring GitHub Actions to Use Claude Code
 
 Now you need to create workflows that invoke Claude Code on your self-hosted runners. The key is targeting the `self-hosted` label in your workflow.
 
-Basic Workflow Example
+## Basic Workflow Example
 
 Create a new workflow file in your repository:
 
@@ -145,7 +144,7 @@ jobs:
 
 This workflow triggers on pull requests and uses Claude Code to review your code changes. The `fetch-depth: 0` option ensures Claude has access to the full commit history and can produce meaningful diff-aware reviews rather than just scanning the current state of files.
 
-Posting Review Comments Automatically
+## Posting Review Comments Automatically
 
 A more useful pattern is to capture Claude's output and post it as a PR comment:
 
@@ -189,7 +188,7 @@ jobs:
             })
 ```
 
-Advanced: Using Claude Code Skills in CI/CD
+## Advanced: Using Claude Code Skills in CI/CD
 
 You can use Claude Code skills for more specialized tasks. Here's how to use custom skills in your workflows:
 
@@ -225,9 +224,9 @@ jobs:
 
 Skills stored in your repository's `skills/` directory become reusable building blocks. Teams often maintain a library of skills, one for security audits, one for migration analysis, one for generating test cases, and invoke them via `workflow_dispatch` whenever needed.
 
-Real-World Workflow Patterns
+## Real-World Workflow Patterns
 
-Automated Test Generation on Merge
+## Automated Test Generation on Merge
 
 When a branch merges to main, have Claude generate tests for any new functions that lack coverage:
 
@@ -262,7 +261,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-Scheduled Documentation Refresh
+## Scheduled Documentation Refresh
 
 Keep README files and API docs in sync with the code on a weekly schedule:
 
@@ -301,7 +300,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-Best Practices for Running Claude Code on Self-Hosted Runners
+## Best Practices for Running Claude Code on Self-Hosted Runners
 
 1. Manage API Costs Effectively
 
@@ -402,9 +401,9 @@ steps:
 
 Retaining logs for 30 days gives you an audit trail for any AI-generated code changes, useful when a reviewer later asks "why did this function change?" You can trace it back to the exact Claude invocation and prompt.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Claude Code Not Found
+## Claude Code Not Found
 
 If Claude Code isn't recognized, check your PATH:
 
@@ -422,7 +421,7 @@ Add to PATH if needed. For the Actions runner service, PATH changes in `.bashrc`
     claude --version
 ```
 
-Authentication Failures
+## Authentication Failures
 
 If your API key is invalid or expired, the error will appear in the step output. Rotate the key in the Anthropic console, then update the GitHub Secret:
 
@@ -432,7 +431,7 @@ gh secret set CLAUDE_API_KEY --body "new-api-key-here" --repo <org>/<repo>
 
 You do not need to restart the runner, GitHub Secrets are injected fresh at job start time.
 
-Memory Issues
+## Memory Issues
 
 If Claude Code crashes due to memory constraints, add a swap file:
 
@@ -446,7 +445,7 @@ Make it persistent across reboots
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
-Workflow Taking Too Long
+## Workflow Taking Too Long
 
 If Claude Code is timing out inside a job, the most common cause is an overly broad prompt operating on a large repository. Add `--max-turns 5` to limit recursive operations and scope the working directory:
 
@@ -458,7 +457,7 @@ If Claude Code is timing out inside a job, the most common cause is an overly br
     ANTHROPIC_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
 ```
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with GitHub Actions self-hosted runners unlocks powerful AI-assisted development workflows while maintaining control over your infrastructure. Start with the basic workflow examples above, then customize them to match your team's needs. Remember to monitor API usage, secure your credentials, and implement proper logging for production deployments.
 

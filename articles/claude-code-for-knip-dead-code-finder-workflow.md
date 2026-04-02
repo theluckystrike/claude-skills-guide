@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Knip Dead Code Finder Workflow
 
 Dead code accumulates in every growing codebase, unused exports, obsolete dependencies, abandoned files, and TypeScript declarations that no longer serve any purpose. Left unchecked, this technical debt slows down CI pipelines, bloats bundle sizes, and creates confusion for developers navigating the codebase. Knip, the dead code finder for JavaScript and TypeScript projects, detects these issues systematically. When combined with Claude Code's agentic capabilities, you get an automated workflow that not only finds dead code but helps you safely remove it.
 
-What Knip Detects
+## What Knip Detects
 
 Knip scans your project for several categories of unused code:
 
@@ -31,7 +30,7 @@ Knip scans your project for several categories of unused code:
 
 Knip supports most JavaScript and TypeScript ecosystems including npm, yarn, pnpm, monorepos, and popular frameworks like React, Next.js, and Jest.
 
-Setting Up Knip in Your Project
+## Setting Up Knip in Your Project
 
 First, install Knip as a development dependency:
 
@@ -59,7 +58,7 @@ npx knip
 
 The output shows issues organized by severity and type, with clear indicators of what can be safely removed.
 
-Creating a Claude Code Skill for Knip
+## Creating a Claude Code Skill for Knip
 
 You can create a dedicated Claude Code skill that encapsulates the Knip workflow. This skill will run Knip analysis and help you address the findings. Here's a skill that integrates Knip into your Claude Code sessions:
 
@@ -87,11 +86,11 @@ Run the analysis with: `npx knip`
 After reviewing the output, identify safe-to-remove items and proceed with cleanup.
 ```
 
-Integrating Knip Into Your Development Workflow
+## Integrating Knip Into Your Development Workflow
 
 The real power emerges when you integrate Knip into regular development cycles. Here are practical approaches:
 
-Pre-Commit Checks
+## Pre-Commit Checks
 
 Run Knip before commits to prevent dead code from entering the repository:
 
@@ -101,7 +100,7 @@ npx knip --strict
 
 The `--strict` flag causes Knip to exit with an error code if it finds any issues, blocking commits that introduce unused code.
 
-CI/CD Integration
+## CI/CD Integration
 
 Add Knip to your CI pipeline for automated detection:
 
@@ -123,7 +122,7 @@ jobs:
 
 This ensures dead code is caught during code review rather than accumulating silently.
 
-Automated Cleanup with Claude Code
+## Automated Cleanup with Claude Code
 
 Once Knip identifies issues, Claude Code can help address them systematically. For unused exports, Claude Code can:
 
@@ -138,7 +137,7 @@ For unused dependencies, Claude Code can:
 2. Run `npm install` to update lock files
 3. Execute your test suite to verify nothing depends on the removed package
 
-Practical Example: Cleaning Up a React Project
+## Practical Example: Cleaning Up a React Project
 
 Consider a React project where Knip reports an unused component:
 
@@ -167,11 +166,11 @@ Claude Code can:
 2. Search the codebase for any remaining imports
 3. If none found, commit the dependency removal
 
-Best Practices for Knip Workflows
+## Best Practices for Knip Workflows
 
 Follow these guidelines for effective dead code management:
 
-Start Conservative
+## Start Conservative
 
 Begin with a lenient configuration that only catches obvious issues:
 
@@ -185,23 +184,23 @@ Begin with a lenient configuration that only catches obvious issues:
 
 Gradually tighten the configuration as your confidence grows.
 
-Review Before Removal
+## Review Before Removal
 
 Always verify Knip's findings before deleting code. Some "unused" exports might be consumed dynamically or by external tools. Claude Code's search capabilities help validate each finding.
 
-Prioritize Dependencies First
+## Prioritize Dependencies First
 
 Unused dependencies are the highest-impact cleanup, they directly affect install times and bundle size. Address those before diving into internal dead code.
 
-Make It Routine
+## Make It Routine
 
 Run Knip regularly (ideally on every commit or daily) rather than attempting massive cleanup sessions. Small, incremental removals are safer and easier to review.
 
-Track Progress
+## Track Progress
 
 Document your cleanup efforts in a CHANGELOG or dedicated notes. This helps team members understand why code disappeared and provides context for future debugging.
 
-Conclusion
+## Conclusion
 
 Knip combined with Claude Code creates a powerful dead code detection and removal workflow. The integration brings several key advantages: automated scanning during development, intelligent verification before deletion, and systematic cleanup that minimizes risk. By establishing this workflow early in your project and running it consistently, you maintain a cleaner codebase that stays maintainable as it grows. The time invested in setting up this workflow pays dividends through faster builds, smaller bundles, and easier code navigation for your entire team.
 {% endraw %}

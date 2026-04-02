@@ -18,7 +18,7 @@ Device trust has become a critical component of enterprise security architecture
 
 This guide covers the technical implementation details developers and power users need to integrate device trust verification into their workflows.
 
-What the Device Trust Connector Actually Does
+## What the Device Trust Connector Actually Does
 
 The Chrome Enterprise Device Trust Connector acts as a bridge between Chrome Browser's built-in attestation capabilities and your organization's verification systems. When a user attempts to access enterprise resources, the browser collects device health signals, operating system version, security patch level, Chrome version, and whether the device meets your defined compliance policies.
 
@@ -26,7 +26,7 @@ These signals get packaged into a verification request that your backend systems
 
 The connector works without requiring full mobile device management (MDM) enrollment, making it suitable for scenarios where you need to verify contractor devices, personal laptops used for BYOD, or hybrid environments with mixed management levels.
 
-Architecture Overview
+## Architecture Overview
 
 The trust verification flow involves three primary components:
 
@@ -36,9 +36,9 @@ The trust verification flow involves three primary components:
 
 The browser generates a device attestation token using its own identity. This token is cryptographically signed and includes the device signals your connector service can verify.
 
-Implementation for Developers
+## Implementation for Developers
 
-Token Verification Service
+## Token Verification Service
 
 Your connector service needs to validate incoming tokens from Chrome Browser. Here's a conceptual implementation in Python:
 
@@ -107,7 +107,7 @@ class DeviceTrustVerifier:
 
 This example shows the core verification pattern. You extract device signals from the token payload and apply your organization's specific policies.
 
-Integration with API Gateways
+## Integration with API Gateways
 
 For production deployments, you'll typically integrate token verification at your API gateway level. Here's how you might configure this with an Express.js middleware:
 
@@ -155,7 +155,7 @@ const DeviceTrustMiddleware = (options) => {
 module.exports = DeviceTrustMiddleware;
 ```
 
-Configuration Requirements
+## Configuration Requirements
 
 To enable device trust verification, your organization needs to configure Chrome Browser Cloud Management. The admin console provides the settings to enable device trust and define which signals get collected.
 
@@ -168,7 +168,7 @@ Key configuration points include:
 
 The browser generates tokens with a short validity period (typically minutes, not hours) to prevent token replay attacks. Your service must handle this by implementing proper token refresh logic in your client applications.
 
-Use Cases for Power Users
+## Use Cases for Power Users
 
 Beyond programmatic integration, power users can use device trust in several practical scenarios:
 
@@ -178,7 +178,7 @@ Endpoint Hygiene Monitoring - Use the device signals to build dashboards showing
 
 Self-Service Device Verification - Build internal tools that let users check their device trust status before attempting to access protected resources. This reduces support tickets and helps users understand what they need to fix.
 
-Security Considerations
+## Security Considerations
 
 When implementing device trust verification, consider these architectural decisions:
 
@@ -187,12 +187,11 @@ When implementing device trust verification, consider these architectural decisi
 - Privacy implications - Device signals contain identifiable information. Implement appropriate data handling policies and minimize collection to only what's necessary.
 - Fallback strategies - Define what happens when device trust verification fails. Complete denial might lock out legitimate users with temporary issues.
 
-Next Steps
+## Next Steps
 
 Start by enabling device trust in your Chrome Browser Cloud Management console and configuring a basic verification endpoint. Test the token structure and signal formats before implementing full policy evaluation. Iterate on your policy rules based on actual device population data.
 
 The device trust connector provides a foundation for zero-trust browser access, but the effectiveness depends on well-designed policies that balance security requirements with usability.
-
 
 Related Reading
 

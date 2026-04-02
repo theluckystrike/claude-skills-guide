@@ -19,7 +19,7 @@ SimilarWeb has long been a go-to tool for website traffic analysis and competiti
 
 This guide explores the best SimilarWeb alternative Chrome extensions for developers and power users who need website analytics, competitor research, and market intelligence without breaking the bank.
 
-What SimilarWeb Offers
+## What SimilarWeb Offers
 
 SimilarWeb provides comprehensive digital intelligence including:
 
@@ -32,7 +32,7 @@ SimilarWeb provides comprehensive digital intelligence including:
 
 For many users, the core value lies in quick traffic estimates and competitor benchmarking. Several extensions now offer similar functionality at a fraction of the cost, or completely free.
 
-Top SimilarWeb Alternatives in 2026
+## Top SimilarWeb Alternatives in 2026
 
 1. Traffic estimator Chrome Extensions
 
@@ -139,11 +139,11 @@ Similar to BuiltWith, Wappalyzer identifies technologies used on websites. The C
 
 For developers researching competitors or potential clients, this technology intelligence complements traffic data nicely.
 
-Building Custom Traffic Analysis
+## Building Custom Traffic Analysis
 
 For developers who need full control over their analytics, building custom solutions using available APIs provides flexibility without subscription costs.
 
-Using Common Crawl Data
+## Using Common Crawl Data
 
 For historical and comparative analysis, the Common Crawl dataset offers valuable insights:
 
@@ -176,7 +176,7 @@ checkDomainInCrawl('example.com')
 
 This approach won't give you exact traffic numbers, but it helps understand a site's web presence and historical activity.
 
-Google Trends API Integration
+## Google Trends API Integration
 
 For relative interest analysis, combining Google Trends data provides context:
 
@@ -204,7 +204,7 @@ compareDomains(['competitor-a.com', 'competitor-b.com'])
 
 This gives you relative popularity trends, which often correlates with traffic patterns.
 
-Choosing the Right Tool
+## Choosing the Right Tool
 
 Consider these factors when selecting a SimilarWeb alternative:
 
@@ -224,7 +224,7 @@ Integration Requirements
 - Want browser-native → Most extensions
 - Building custom → APIs + Common Crawl
 
-A Practical Stack for Developers
+## A Practical Stack for Developers
 
 For developers seeking comprehensive competitive intelligence without SimilarWeb costs, here's a recommended combination:
 
@@ -235,14 +235,13 @@ For developers seeking comprehensive competitive intelligence without SimilarWeb
 
 This combination covers most use cases that would otherwise require SimilarWeb's premium features.
 
-Conclusion
+## Conclusion
 
 SimilarWeb remains powerful, but the alternatives in 2026 have matured considerably. For developers and technical users, combining free extensions like SEOquake and Wappalyzer with custom API integrations provides a cost-effective alternative to expensive subscriptions.
 
 The key is understanding what data you actually need. If you require exact traffic numbers for enterprise decisions, SimilarWeb's premium data may still justify the cost. But for most developers, indie hackers, and small teams, the alternatives covered here provide sufficient intelligence for competitive research and market analysis.
 
 Building your own tooling around free APIs gives you the most flexibility and control, plus the satisfaction of owning your analytics pipeline.
-
 
 Related Reading
 

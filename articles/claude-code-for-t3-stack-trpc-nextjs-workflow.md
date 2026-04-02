@@ -19,7 +19,7 @@ The T3 stack, built around tRPC, Next.js, TypeScript, Tailwind CSS, and Prisma, 
 
 This guide explores practical ways to use Claude Code when building with the T3 stack, covering project setup, API development, and common troubleshooting patterns.
 
-Setting Up Your T3 Stack Project
+## Setting Up Your T3 Stack Project
 
 Claude Code can help scaffold your T3 stack project and configure the essential pieces. While the official `create-t3-app` CLI handles most initial setup, Claude Code excels at customizing configurations and adding new features:
 
@@ -52,7 +52,7 @@ my-t3-app/
  next.config.js
 ```
 
-Building Type-Safe API Routers with tRPC
+## Building Type-Safe API Routers with tRPC
 
 One of the T3 stack's greatest strengths is end-to-end type safety. Claude Code can help you create routers that maintain this safety while following best practices:
 
@@ -114,7 +114,7 @@ export const postRouter = createTRPCRouter({
 });
 ```
 
-Consuming tRPC Endpoints in Next.js Components
+## Consuming tRPC Endpoints in Next.js Components
 
 When building your frontend, Claude Code can help you write type-safe queries and mutations. The tRPC hooks automatically infer types from your backend routers:
 
@@ -187,11 +187,11 @@ export default function Home() {
 }
 ```
 
-Debugging Common T3 Stack Issues
+## Debugging Common T3 Stack Issues
 
 Claude Code is particularly helpful when debugging type errors or configuration problems in your T3 stack application.
 
-Resolving tRPC Type Errors
+## Resolving tRPC Type Errors
 
 When you encounter type errors in tRPC procedures, the issue often relates to Zod schema definitions or router configuration. Here's how to approach common scenarios:
 
@@ -199,7 +199,7 @@ When you encounter type errors in tRPC procedures, the issue often relates to Zo
 2. Context type mismatches: Ensure your `Context` type includes all required properties
 3. Procedure type conflicts: Verify public and protected procedures have correct middleware
 
-Fixing Next.js Build Issues
+## Fixing Next.js Build Issues
 
 If your Next.js build fails after adding new tRPC routers:
 
@@ -209,7 +209,7 @@ rm -rf .next
 npm run build
 ```
 
-Database Schema Changes
+## Database Schema Changes
 
 When modifying your Prisma schema, regenerate your client:
 
@@ -218,7 +218,7 @@ npx prisma generate
 npx prisma db push
 ```
 
-Integrating Authentication with NextAuth.js
+## Integrating Authentication with NextAuth.js
 
 The T3 stack typically includes NextAuth.js for authentication. Claude Code can help you configure providers and protect routes:
 
@@ -263,7 +263,7 @@ export const authOptions: NextAuthOptions = {
 };
 ```
 
-Optimizing Your Development Workflow
+## Optimizing Your Development Workflow
 
 Here are practical tips for maximizing productivity with Claude Code and the T3 stack:
 
@@ -272,13 +272,12 @@ Here are practical tips for maximizing productivity with Claude Code and the T3 
 3. Run type checks frequently: `npm run typecheck` catches issues early
 4. Use tRPC's invalidation to refresh data after mutations automatically
 
-Conclusion
+## Conclusion
 
 Claude Code combined with the T3 stack creates a powerful development environment where type safety flows smoothly from your database through your API to your frontend. By understanding the core patterns, router definitions, procedure types, and frontend consumption, you can build solid full-stack applications with confidence.
 
 The key is using Claude Code not just for code generation, but as a pair programmer that understands the T3 stack's conventions and can help you navigate the nuances of type-safe API development.
 {% endraw %}
-
 
 Related Reading
 

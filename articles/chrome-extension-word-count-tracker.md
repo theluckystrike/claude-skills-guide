@@ -20,7 +20,7 @@ A word count tracker Chrome extension serves as a practical tool for writers, co
 
 This guide walks you through creating a fully functional word count tracker from scratch, covering the manifest configuration, content script implementation, popup UI, and storage mechanisms. By the end, you will have a working extension you can load into Chrome and use immediately, plus a solid understanding of the architectural patterns that power more advanced extensions.
 
-Understanding the Core Architecture
+## Understanding the Core Architecture
 
 A word count tracker extension operates through three primary components working in concert. The content script analyzes text on the current page, the popup provides a quick-access interface for viewing statistics, and the background worker handles cross-tab communication and persistent storage.
 
@@ -37,7 +37,7 @@ Here is how data flows in a typical interaction:
 
 This round-trip happens in milliseconds and gives you a clean model for building any extension that processes page content.
 
-Comparing Extension Architectures
+## Comparing Extension Architectures
 
 Before committing to a single approach, consider how different architectures affect performance and maintainability:
 
@@ -50,7 +50,7 @@ Before committing to a single approach, consider how different architectures aff
 
 For a basic word count tracker, on-demand analysis is the right starting point. You can layer in MutationObserver support once the core works.
 
-Setting Up Your Extension
+## Setting Up Your Extension
 
 Create a new directory for your extension project and add the manifest file:
 
@@ -88,7 +88,7 @@ word-count-tracker/
  icon.png
 ```
 
-Implementing the Content Script
+## Implementing the Content Script
 
 The content script runs within the context of web pages and performs the actual text analysis. Create a `content.js` file that extracts text from page elements:
 
@@ -135,7 +135,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This content script provides two levels of analysis: full page statistics and selected text statistics. The message listener allows other extension components to request analysis on demand.
 
-Improving Word Count Accuracy
+## Improving Word Count Accuracy
 
 The basic `split(/\s+/)` approach works for most cases but under-counts some languages and over-counts others. Here are three progressively more accurate strategies:
 
@@ -161,7 +161,7 @@ function countWordsUnicode(text) {
 
 For most content-writing use cases, Strategy 2 is the right balance of accuracy and simplicity. If you are building for international audiences or platforms that handle CJK characters, Strategy 3 is worth the extra complexity.
 
-Counting Reading Time
+## Counting Reading Time
 
 A feature users frequently request is estimated reading time. The standard figure used by Medium and similar platforms is 200-250 words per minute for average adult readers:
 
@@ -176,7 +176,7 @@ function estimateReadingTime(wordCount, wpm = 225) {
 
 Add this to your `analyzePage` return value and surface it in the popup.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides users with quick access to word count data without leaving their current page. Create `popup.html`:
 
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 Using `toLocaleString()` on the numbers automatically formats them with thousands separators (e.g., `12,450` instead of `12450`), which is a small but appreciated usability improvement.
 
-Adding Persistent Storage
+## Adding Persistent Storage
 
 To track word counts over time or save user preferences, use the Chrome storage API. Add configuration options for excluding certain elements:
 
@@ -313,7 +313,7 @@ async function analyzePage() {
 }
 ```
 
-Choosing Between storage.sync and storage.local
+## Choosing Between storage.sync and storage.local
 
 Chrome gives you two storage areas for extensions, and picking the right one matters:
 
@@ -327,7 +327,7 @@ Chrome gives you two storage areas for extensions, and picking the right one mat
 
 For user preferences like excluded selectors and word count goals, `storage.sync` is the right choice. If you are storing per-URL word count history, use `storage.local` to avoid hitting the sync quota.
 
-Tracking Word Count History
+## Tracking Word Count History
 
 A useful feature is logging the word count each time the user opens the popup on a given URL, so they can see how content on a page changes over time:
 
@@ -345,7 +345,7 @@ async function logWordCount(url, wordCount) {
 
 Call this from your popup after a successful `sendMessage` response.
 
-Loading and Testing Your Extension
+## Loading and Testing Your Extension
 
 To test your extension in Chrome:
 
@@ -356,7 +356,7 @@ To test your extension in Chrome:
 
 The extension immediately analyzes the current page and displays statistics in the popup. You can also select text on the page to see counts for just that selection.
 
-Common Errors and Fixes
+## Common Errors and Fixes
 
 When developing Chrome extensions, these are the most frequent problems you will encounter:
 
@@ -378,7 +378,7 @@ Chrome caches injected scripts. After editing `content.js`, go to `chrome://exte
 Storage quota exceeded.
 If you are logging history for many URLs, the local storage can fill up. Add a cleanup routine that removes entries older than 30 days.
 
-Extending the Functionality
+## Extending the Functionality
 
 Once the core word counting works, consider adding these enhancements:
 
@@ -402,7 +402,7 @@ observer.observe(document.body, {
 });
 ```
 
-Implementing a Word Count Goal with Visual Feedback
+## Implementing a Word Count Goal with Visual Feedback
 
 Goals are one of the most motivating features you can add. Here is a complete implementation that stores a goal in `storage.sync` and updates the progress bar in the popup:
 
@@ -439,7 +439,7 @@ chrome.storage.sync.get('wordCountGoal', ({ wordCountGoal }) => {
 });
 ```
 
-Adding a Keyboard Shortcut
+## Adding a Keyboard Shortcut
 
 Register a keyboard shortcut in `manifest.json` under the `commands` key:
 
@@ -457,7 +457,7 @@ Register a keyboard shortcut in `manifest.json` under the `commands` key:
 
 The `_execute_action` command is a special reserved name that triggers the extension action (opens the popup) without needing any additional JavaScript.
 
-Publishing Considerations
+## Publishing Considerations
 
 If you plan to publish your extension on the Chrome Web Store, there are a few requirements to prepare for:
 
@@ -467,7 +467,6 @@ If you plan to publish your extension on the Chrome Web Store, there are a few r
 - Testing on Chrome Beta or Canary before submitting catches compatibility issues early
 
 Building a word count tracker teaches you essential Chrome extension development skills that transfer directly to more complex projects. The patterns shown here. content script analysis, popup communication, storage integration, and real-time updates. form the foundation for building productivity tools, accessibility checkers, and data extraction extensions.
-
 
 Related Reading
 

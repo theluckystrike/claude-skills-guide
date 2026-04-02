@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Automated Pull Request Review Workflow Guide
 
@@ -32,7 +31,7 @@ Manual PR reviews consume significant developer time, especially for repetitive 
 
 Claude Code skills can orchestrate these checks, aggregate results, and format feedback in a way that integrates smoothly with your existing workflow.
 
-Setting Up Your PR Review Skill
+## Setting Up Your PR Review Skill
 
 Create a new skill for automated PR reviews. This skill will handle the entire review process from detecting new PRs to posting comments.
 
@@ -49,7 +48,7 @@ This skill automatically reviews pull requests for common issues.
 
 The skill declares the tools it needs: `bash` for running linters and scanners, `read_file` for examining code, and `write_file` for generating review output.
 
-Running Code Quality Checks
+## Running Code Quality Checks
 
 The core of automated review is running static analysis tools. Here's how to structure these checks:
 
@@ -73,7 +72,7 @@ npx prettier --check "/*.{js,ts,json,md}" 2>&1 || true
 
 Store this as a script your skill can invoke. The `|| true` ensures one failed check doesn't stop the entire review process.
 
-Implementing Security Scanning
+## Implementing Security Scanning
 
 Security vulnerabilities deserve special attention in automated reviews. Integrate SAST tools to catch common issues:
 
@@ -96,7 +95,7 @@ fi
 
 The skill parses output from these tools and transforms it into actionable feedback.
 
-Generating Review Comments
+## Generating Review Comments
 
 Once checks complete, aggregate results into a structured review:
 
@@ -145,7 +144,7 @@ if __name__ == "__main__":
 
 This script takes JSON input from your various checks and produces a formatted markdown review.
 
-Integrating with GitHub
+## Integrating with GitHub
 
 To post automated reviews to GitHub, use the GitHub CLI or API:
 
@@ -162,7 +161,7 @@ gh pr review $PR_NUMBER \
 
 For more sophisticated integration, create a GitHub App with appropriate permissions to post reviews directly.
 
-Complete Workflow Example
+## Complete Workflow Example
 
 Here's how all pieces fit together in a cohesive workflow:
 
@@ -202,7 +201,7 @@ Process
    For security vulnerabilities, consider setting PR status to failed.
 ```
 
-Best Practices for PR Review Automation
+## Best Practices for PR Review Automation
 
 Start small and iterate. Begin with formatting and linting checks, then gradually add security scans and more complex analysis. This approach lets you tune false positive rates before overwhelming reviewers.
 
@@ -214,7 +213,7 @@ Keep skills focused. Rather than one monolithic review skill, consider separate 
 
 Monitor and tune. Track false positive rates and developer feedback. Regularly update your check configurations to reduce noise and improve signal.
 
-Conclusion
+## Conclusion
 
 Automated PR review workflows powered by Claude Code skills transform how teams handle code quality. By catching issues early, providing instant feedback, and enforcing consistent standards, you free developers to focus on what matters most: building great software. Start with simple linting checks, gradually add more sophisticated analysis, and watch your code quality improve while review cycles shorten.
 

@@ -18,15 +18,15 @@ Developing Solidity smart contracts requires a unique set of patterns, security 
 
 Scope note: This guide is about *building* new Claude Code skills tailored to Solidity. writing the skill files themselves, defining auditing checklists, gas-optimization templates, and compiler-version rules that Claude will follow. If you want to learn how to *use* existing skills like `/tdd`, `/pdf`, and `/supermemory` inside a Solidity project, see [Claude Skills for Solidity Smart Contract Development](/claude-skills-for-solidity-smart-contract-development/).
 
-Understanding the Solidity Development Workflow
+## Understanding the Solidity Development Workflow
 
 Solidity development differs significantly from traditional software engineering. Your skills must account for the Ethereum Virtual Machine (EVM) constraints, gas optimization requirements, and the immutable nature of deployed contracts. A well-crafted Solidity skill guides Claude through the complete development lifecycle: initial implementation, [testing with the tdd skill](/claude-tdd-skill-test-driven-development-workflow/), security auditing, and deployment preparation.
 
 The skill body should establish clear rules for Solidity-specific operations. When writing contracts, Claude needs explicit guidance about compiler versions, visibility modifiers, and access control patterns. Without this direction, generated code may contain vulnerabilities or fail to follow community standards.
 
-Essential Skill Components for Solidity
+## Essential Skill Components for Solidity
 
-Compiler Version Management
+## Compiler Version Management
 
 Every Solidity file begins with a version pragma. Your skill should enforce consistent version usage across the project:
 
@@ -37,7 +37,7 @@ When writing Solidity contracts:
 - Never use ^ for dependencies that must remain stable
 ```
 
-Security Pattern Enforcement
+## Security Pattern Enforcement
 
 Solidity requires specific security patterns that differ from other languages. Your skill should include explicit guidance for common vulnerabilities:
 
@@ -53,7 +53,7 @@ For access control:
 - Never rely on tx.origin for authorization
 ```
 
-Testing Framework Integration
+## Testing Framework Integration
 
 Solidity testing typically uses Hardhat or Foundry. Your skill should template testing patterns:
 
@@ -77,11 +77,11 @@ contract TokenTest is Test {
 }
 ```
 
-Building a Contract Auditing Skill
+## Building a Contract Auditing Skill
 
 One of the most valuable Solidity skills is a contract auditor. This skill reviews code for common vulnerability patterns and suggests improvements.
 
-Creating the Audit Skill
+## Creating the Audit Skill
 
 Your auditing skill should include a comprehensive checklist:
 
@@ -97,7 +97,7 @@ When auditing Solidity code:
 8. Confirm contract has pausable functionality for emergencies
 ```
 
-Practical Audit Example
+## Practical Audit Example
 
 When prompted to audit, the skill should output structured findings:
 
@@ -117,7 +117,7 @@ Medium
 - [ ] Consider marking functions as pure/view where applicable
 ```
 
-Gas Optimization Skills
+## Gas Optimization Skills
 
 Gas optimization is crucial for Solidity. A dedicated skill can analyze contracts and suggest improvements:
 
@@ -155,7 +155,7 @@ function sum(uint256[] calldata arr) public pure returns (uint256) {
 }
 ```
 
-Deployment and Verification Skills
+## Deployment and Verification Skills
 
 Deployment preparation requires specific checks:
 
@@ -170,7 +170,7 @@ Before deployment:
 7. Test on testnet with realistic conditions
 ```
 
-Combining Skills for Complete Workflow
+## Combining Skills for Complete Workflow
 
 The most powerful approach combines multiple specialized skills. Create a master Solidity skill that orchestrates:
 
@@ -182,7 +182,7 @@ The most powerful approach combines multiple specialized skills. Create a master
 
 Each skill remains focused on its domain while the [master skill coordinates the workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/). This separation keeps each skill maintainable and reusable across different projects.
 
-Best Practices for Solidity Skills
+## Best Practices for Solidity Skills
 
 Keep your skills maintainable by following these principles:
 

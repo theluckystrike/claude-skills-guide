@@ -16,7 +16,7 @@ permalink: /claude-code-skill-circular-dependency-detected-error-fix/
 
 The circular dependency detected error in Claude Code skills halts execution abruptly, leaving developers frustrated and workflows broken. [This error occurs when skills form an interdependent loop](/claude-skill-md-format-complete-specification-guide/) import loop. skill A loads skill B, which loads skill A again, creating an infinite recursion that Claude's runtime terminates. Understanding the root causes and applying the right fixes restores your workflow within minutes.
 
-Recognizing the Circular Dependency Error
+## Recognizing the Circular Dependency Error
 
 When this error triggers, Claude Code displays a message similar to:
 
@@ -36,7 +36,7 @@ Circular dependency detected: auth -> user -> permissions -> auth
 
 In this three-node cycle, `auth` loads `user`, `user` loads `permissions`, and `permissions` loops back to `auth`. The fix is the same regardless of chain length. you need to remove at least one edge in the cycle.
 
-Why Circular Dependencies Break Skill Loading
+## Why Circular Dependencies Break Skill Loading
 
 When Claude Code initializes a skill, it walks the dependency tree before executing any code. The loader maintains a "currently loading" set. If it encounters a skill that is already in that set, it knows a cycle exists and raises the error immediately rather than entering an infinite loop.
 
@@ -44,7 +44,7 @@ This eager detection is intentional: a circular dependency that is not caught at
 
 Understanding this loading model also explains why lazy loading (covered below in Fix 2) resolves the problem: if you defer the import until the function body executes rather than the module top level, the skill is fully initialized before the second import is attempted, and the loader's "currently loading" set is empty again.
 
-Common Causes in Claude Code Skills
+## Common Causes in Claude Code Skills
 
 1. Direct Skill-to-Skill Imports
 
@@ -88,7 +88,7 @@ Advanced skill configurations using the supermemory skill for context management
 
 If your skills directory contains symlinks or alias files that point back to parent directories, the module resolver can follow a path that looks different on disk but resolves to the same skill. This produces a circular dependency that is invisible when reading the source code directly. Check for symlinks with `ls -la` in your skills directory if conventional debugging yields no results.
 
-Diagnosing the Full Dependency Chain
+## Diagnosing the Full Dependency Chain
 
 Before applying any fix, map the full dependency graph of the skills involved. Three approaches help:
 
@@ -116,9 +116,9 @@ grep -r "^requires:" ./skills/
 
 Once the full graph is on paper (or a whiteboard), the cycle is usually obvious and the best place to cut it becomes clear.
 
-Fix Strategies
+## Fix Strategies
 
-Fix 1: Break the Import Chain
+## Fix 1: Break the Import Chain
 
 Identify the cycle using the error message. Open each skill file involved and locate the import statement creating the loop. Refactor the code to extract shared functionality into a separate, neutral module that neither skill depends on.
 
@@ -159,7 +159,7 @@ The key principle is that the shared module lives outside the skills directory a
 
 When extracting shared code, resist the temptation to put "just a little bit of logic" back in a skill and call it from the shared module. Any path from the shared module back to a skill recreates the cycle.
 
-Fix 2: Use Lazy Loading
+## Fix 2: Use Lazy Loading
 
 Instead of importing modules at the top of your skill file, import them inside the function that needs them. This defers the import until execution time, avoiding the circular reference during skill loading.
 
@@ -197,7 +197,7 @@ module.exports = {
 
 This pattern both resolves the circular dependency and improves startup time by deferring expensive imports until they are actually required.
 
-Fix 3: Remove or Refactor Metadata Dependencies
+## Fix 3: Remove or Refactor Metadata Dependencies
 
 Check the front matter of each skill involved in the circular dependency. If you find mutual dependency declarations, remove them or restructure to a one-way dependency.
 
@@ -218,7 +218,7 @@ After:   skill-a -> skill-base
          (skill-base has no skill dependencies)
 ```
 
-Fix 4: Check Parent Skill Configurations
+## Fix 4: Check Parent Skill Configurations
 
 If you're using skill orchestration with the super-agent or orchestrator patterns, verify that parent skills don't inadvertently create circular chains through their child skill configurations.
 
@@ -249,7 +249,7 @@ module.exports = {
 
 This dependency-injection approach eliminates the import cycle entirely while still giving child skills access to orchestration capabilities.
 
-Preventing Circular Dependencies
+## Preventing Circular Dependencies
 
 Adopt practices that prevent this error from recurring:
 
@@ -265,7 +265,7 @@ Enforce a no-cross-skill-imports rule at the lower layers. Primitive skills (tho
 
 Use CI checks. Add a script to your CI pipeline that loads each skill independently and confirms no circular dependency errors appear. A five-line shell script that iterates over skills files and calls a loader is enough to catch regressions before merge.
 
-When the Error Persists
+## When the Error Persists
 
 If you continue seeing the circular dependency error after applying these fixes, consider these additional causes:
 
@@ -279,7 +279,7 @@ Incorrect file paths after refactoring: After extracting shared logic to a neutr
 
 To debug the full dependency chain, inspect the skill's front matter `tools` field and trace which skills it references against your skills directory. Building a quick visualization. even a hand-drawn graph. often reveals the cycle path faster than reading code.
 
-Comparison of Fix Strategies
+## Comparison of Fix Strategies
 
 | Strategy | Best used when | Effort | Risk of regression |
 |---|---|---|---|
@@ -291,7 +291,7 @@ Comparison of Fix Strategies
 
 For most cases, extracting a neutral shared module is the cleanest solution and the easiest to explain to other developers. Lazy loading is the fastest fix when you need to unblock yourself immediately and refactor properly later.
 
-Conclusion
+## Conclusion
 
 The circular dependency detected error in Claude Code skills stems from import loops that break the skill loading process. By identifying the skills involved, breaking the import chain through refactoring or lazy loading, and removing circular metadata declarations, you restore full functionality. Prevent future occurrences by maintaining clear dependency boundaries and testing skill loading after any configuration changes. With these strategies, skills like pdf, tdd, frontend-design, supermemory, and any other skill combination work without conflicts. For broader skill composition patterns that avoid these issues by design, see [Claude skill inheritance and composition patterns](/claude-skill-inheritance-and-composition-patterns/).
 

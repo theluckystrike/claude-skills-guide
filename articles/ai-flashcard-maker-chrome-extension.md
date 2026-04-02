@@ -18,13 +18,13 @@ AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool
 
 Creating a Chrome extension that generates flashcards automatically using AI transforms how you capture and retain knowledge from web content. This guide walks you through building a complete AI flashcard maker extension from scratch, covering architecture, implementation patterns, and practical code examples you can adapt for your own projects.
 
-Why Build an AI Flashcard Maker Extension
+## Why Build an AI Flashcard Maker Extension
 
 Chrome extensions have direct access to webpage content through the Document Object Model (DOM). When you combine this with AI text processing capabilities, you can automatically extract key concepts, definitions, and terminology from articles, documentation, or any web content you encounter. The result is a personal learning tool that works wherever you browse.
 
 This approach serves several practical scenarios: developers learning new frameworks can generate cards from documentation, students studying research papers, or professionals keeping up with industry news. The extension becomes a knowledge capture system that works passively as you browse.
 
-Core Architecture
+## Core Architecture
 
 Your AI flashcard maker extension operates through three main components working together:
 
@@ -36,9 +36,9 @@ Popup Interface - Provides user controls for reviewing cards, adjusting AI setti
 
 The AI processing itself happens through calls to language model APIs. You can use OpenAI, Anthropic, or local models depending on your privacy requirements and computational resources.
 
-Implementation Guide
+## Implementation Guide
 
-Manifest Configuration
+## Manifest Configuration
 
 Every Chrome extension starts with the manifest file. For an AI flashcard maker, you need specific permissions to access page content and make external API calls:
 
@@ -72,7 +72,7 @@ Every Chrome extension starts with the manifest file. For an AI flashcard maker,
 
 The `activeTab` permission allows your extension to access the current page when the user explicitly triggers it, while `scripting` lets you extract page content programmatically.
 
-Content Script: Extracting Page Content
+## Content Script: Extracting Page Content
 
 The content script runs in the context of web pages and extracts text for the AI to process. You want to capture meaningful content while filtering out navigation, ads, and other non-essential elements:
 
@@ -116,7 +116,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This script prioritizes semantic HTML elements that typically contain the main content. It falls back to the body text if no specific content area exists.
 
-Background Worker: Managing State and API Calls
+## Background Worker: Managing State and API Calls
 
 The background service worker handles the heavy lifting, communicating with AI APIs and storing generated flashcards:
 
@@ -173,7 +173,7 @@ async function saveFlashcards(cards) {
 
 This implementation uses Anthropic's API, but you can swap in OpenAI or other providers. The code limits content to 3000 characters to stay within token limits while preserving enough context for meaningful card generation.
 
-Popup Interface: User Controls
+## Popup Interface: User Controls
 
 The popup provides the interface users interact with most frequently:
 
@@ -248,7 +248,7 @@ async function updateCardCount() {
 updateCardCount();
 ```
 
-Practical Considerations
+## Practical Considerations
 
 API Costs - AI API calls incur costs based on token usage. Implement caching to avoid regenerating cards for the same content. Store generated cards locally and check for duplicates before calling the API.
 
@@ -258,12 +258,11 @@ Rate Limiting - API providers impose rate limits. Implement queuing and retry lo
 
 Export Options - Users typically want their flashcards in standard formats. Support export to Anki (.apkg), CSV, or JSON for compatibility with popular flashcard applications.
 
-Extending Your Extension
+## Extending Your Extension
 
 Once the core functionality works, consider adding features like spaced repetition scheduling, card editing capabilities, or integration with knowledge management tools. The Chrome storage API provides ample space for storing thousands of flashcards locally.
 
 Building an AI flashcard maker extension demonstrates how browser extensions can use AI to enhance productivity and learning. The patterns shown here, content extraction, background processing, and AI integration, apply broadly to many extension projects beyond flashcard generation.
-
 
 Related Reading
 

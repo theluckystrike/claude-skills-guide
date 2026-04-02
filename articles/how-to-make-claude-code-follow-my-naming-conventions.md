@@ -14,17 +14,15 @@ permalink: /how-to-make-claude-code-follow-my-naming-conventions/
 
 {% raw %}
 
-How to Make Claude Code Follow My Naming Conventions
-
 Getting Claude Code to consistently respect your naming conventions is essential for maintaining code quality across your projects. Whether you prefer camelCase, PascalCase, snake_case, or any other naming style, you can configure Claude Code to understand and apply your conventions automatically. This guide explores practical methods to ensure AI-generated code matches your project's naming standards from the first line written.
 
-Why Naming Conventions Matter
+## Why Naming Conventions Matter
 
 Naming conventions are the backbone of readable and maintainable code. When Claude Code generates code that doesn't match your project's established patterns, you spend valuable time refactoring and correcting inconsistencies. This becomes especially painful in larger teams where multiple developers interact with the same codebase.
 
 The good news is that Claude Code is highly configurable. By providing clear, persistent instructions about your naming preferences, you can reduce manual corrections and maintain consistency throughout your project lifecycle.
 
-Using .claude.json for Global Naming Preferences
+## Using .claude.json for Global Naming Preferences
 
 The most straightforward approach to enforce naming conventions is through the `.claude.json` configuration file. This file lives in your project root and provides Claude Code with persistent context about your preferences.
 
@@ -54,7 +52,7 @@ Create or update your `.claude.json` with specific naming instructions:
 
 This configuration serves as a baseline that Claude Code references when generating any new code. The preferences cover all common naming contexts, from JavaScript variables to database schemas.
 
-Creating a Naming Conventions Skill
+## Creating a Naming Conventions Skill
 
 For more complex or language-specific naming requirements, create a dedicated Claude skill that enforces your conventions. Skills provide richer context and can handle nuanced rules that configuration files cannot express.
 
@@ -103,11 +101,11 @@ Always verify generated names match these patterns before completing code genera
 
 This skill activates automatically and provides comprehensive guidance for every code generation task.
 
-Language-Specific Naming Patterns
+## Language-Specific Naming Patterns
 
 Different programming languages have different conventions. You can configure Claude Code to apply the right convention based on the language being used.
 
-Python Conventions
+## Python Conventions
 
 For Python projects, add specific instructions:
 
@@ -127,7 +125,7 @@ Use SCREAMING_SNAKE_CASE for:
 - enum values
 ```
 
-Java/Kotlin Conventions
+## Java/Kotlin Conventions
 
 For Java and Kotlin projects:
 
@@ -146,11 +144,11 @@ For Java and Kotlin projects:
 // - constants: public static final int MAX_SIZE = 100
 ```
 
-Enforcing Naming in Specific Contexts
+## Enforcing Naming in Specific Contexts
 
 Some naming conventions are context-dependent. You can create targeted instructions for specific scenarios.
 
-API Response Naming
+## API Response Naming
 
 When generating API code, enforce consistent JSON naming:
 
@@ -166,7 +164,7 @@ When generating API endpoints and responses:
 - This applies to request bodies, response payloads, and error objects
 ```
 
-Database Naming Conventions
+## Database Naming Conventions
 
 For database-related code generation:
 
@@ -186,7 +184,7 @@ For database-related code generation:
 -- - Unique indexes: uk_users_email
 ```
 
-Verifying Naming Compliance
+## Verifying Naming Compliance
 
 After configuring your naming conventions, verify that Claude Code follows them consistently. Create a verification skill that reviews generated code:
 
@@ -209,13 +207,13 @@ Before completing any code generation task:
 If violations exist, refactor the code to match conventions before finalizing.
 ```
 
-Combining Approaches for Maximum Effect
+## Combining Approaches for Maximum Effect
 
 The most solid solution combines multiple approaches. Start with `.claude.json` for baseline preferences, add a comprehensive skill for detailed rules, and use verification steps to catch any misses.
 
 This layered approach ensures that even if one layer misses a specific convention, another layer catches it. The result is consistent, convention-compliant code that requires minimal manual intervention.
 
-Testing Your Configuration
+## Testing Your Configuration
 
 After setting up your naming conventions, test them with a simple prompt:
 
@@ -231,12 +229,11 @@ Check the output:
 
 If anything doesn't match, adjust your configuration and retest. Fine-tuning your settings takes some initial effort but pays dividends in reduced refactoring time.
 
-Conclusion
+## Conclusion
 
 Making Claude Code follow your naming conventions is straightforward with the right configuration. Start with `.claude.json` for broad coverage, add a dedicated skill for detailed rules, and implement verification steps to ensure compliance. Once configured, Claude Code becomes an active participant in maintaining your project's naming standards, generating code that's ready to merge from the first draft.
 
 {% endraw %}
-
 
 Related Reading
 

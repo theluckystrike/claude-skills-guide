@@ -16,13 +16,13 @@ score: 8
 
 Building a Chrome extension that edits images directly in the browser opens up powerful possibilities for web applications, productivity tools, and content creation workflows. This guide provides a practical approach to creating image editing extensions using the Canvas API and Chrome's extension APIs.
 
-Core Concepts Behind Browser-Based Image Editing
+## Core Concepts Behind Browser-Based Image Editing
 
 Browser-based image editing relies on the HTML5 Canvas element as the foundation. The Canvas API provides methods for drawing images, applying transformations, manipulating pixel data, and exporting the results. When combined with Chrome's extension APIs, you can capture images from web pages, edit them, and save the results locally.
 
 The key components you need to understand are the Canvas 2D context for rendering, the `ImageData` API for pixel-level manipulation, and Chrome's `tabs` and `downloads` APIs for capturing and saving images. These technologies work together to create a complete image editing pipeline running entirely in the browser.
 
-Setting Up Your Extension Project
+## Setting Up Your Extension Project
 
 Every Chrome extension requires a manifest file that defines its capabilities and permissions. For image editing, your manifest needs specific permissions to interact with web pages and download files.
 
@@ -41,7 +41,7 @@ Every Chrome extension requires a manifest file that defines its capabilities an
 
 The `activeTab` permission allows your extension to access the current tab when the user clicks the extension icon. The `scripting` permission enables executing JavaScript in the context of the page, which you need for capturing images.
 
-Capturing Images from Web Pages
+## Capturing Images from Web Pages
 
 The first step in building an image editor is capturing the source image. Chrome provides the `chrome.tabs.captureVisibleTab` method for taking screenshots of the current page.
 
@@ -57,7 +57,7 @@ async function captureCurrentTab() {
 
 This function returns a data URL containing the base64-encoded PNG image. You can load this directly into an HTML Image element or draw it onto a Canvas for editing.
 
-Building the Image Editor Interface
+## Building the Image Editor Interface
 
 Your extension needs a user interface for applying edits. A popup HTML file serves as the control panel where users adjust settings and trigger actions.
 
@@ -91,7 +91,7 @@ Your extension needs a user interface for applying edits. A popup HTML file serv
 
 This basic interface includes a canvas for displaying the image, buttons for capture and save operations, and sliders for brightness and contrast adjustments.
 
-Implementing Image Filters
+## Implementing Image Filters
 
 The Canvas API allows you to manipulate pixel data directly, which enables implementing custom filters. For brightness and contrast adjustments, you iterate through each pixel and apply mathematical transformations.
 
@@ -118,7 +118,7 @@ function applyBrightnessContrast(imageData, brightness, contrast) {
 
 This function modifies the pixel data in place. The brightness value shifts all color channels uniformly, while the contrast calculation uses a factor that expands or compresses the color range around the mid-gray point.
 
-Adding Crop and Resize Functionality
+## Adding Crop and Resize Functionality
 
 Cropping and resizing are essential features for any image editor. The Canvas API handles both operations through the `drawImage` method.
 
@@ -144,7 +144,7 @@ function resizeImage(canvas, newWidth, newHeight) {
 
 The crop function extracts a rectangular region from the original image. The resize function scales the image to new dimensions, with the browser handling the interpolation automatically.
 
-Saving Edited Images
+## Saving Edited Images
 
 Once users finish editing, you need to save the result. Chrome's Downloads API handles file storage without requiring the user to manually download through the browser.
 
@@ -163,7 +163,7 @@ async function saveImage(canvas, filename = 'edited-image.png') {
 
 This function converts the canvas to a PNG data URL, creates a blob from it, and triggers a download with the specified filename. The `saveAs: true` option prompts the user to choose where to save the file.
 
-Advanced: Adding Text Overlays
+## Advanced: Adding Text Overlays
 
 Text overlays transform your image editor into an annotation tool. You can draw text directly onto the canvas with custom fonts, sizes, and colors.
 
@@ -192,7 +192,7 @@ function addTextOverlay(canvas, text, x, y, options = {}) {
 
 This function draws text with a semi-transparent background for readability. The background rectangle ensures text remains visible regardless of the underlying image colors.
 
-Performance Considerations
+## Performance Considerations
 
 When building image editing extensions, performance matters significantly, especially when processing large images. Several strategies help maintain responsiveness during edits.
 
@@ -216,12 +216,11 @@ function resetToOriginal(canvas) {
 
 Caching the original image enables a non-destructive workflow where users can experiment freely and return to the starting point.
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for image editing combines web technologies with Chrome's extension APIs to create powerful browser-based tools. The Canvas API provides the rendering engine, while Chrome's permissions system enables capturing and saving images from any web page.
 
 The implementation patterns shown here form a foundation you can extend with additional features like filters, transformations, drawing tools, and integration with cloud storage. Start with the core functionality, then add complexity as you understand your users' workflows.
-
 
 Related Reading
 

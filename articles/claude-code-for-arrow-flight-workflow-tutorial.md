@@ -13,9 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Arrow Flight Workflow Tutorial
-
 Apache Arrow Flight is a high-performance protocol for transferring Arrow data between processes, machines, and cloud regions. When combined with Claude Code's AI-assisted development capabilities, you can rapidly build, debug, and optimize Arrow Flight workflows. This tutorial walks you through practical patterns for integrating Claude Code into your Arrow Flight projects, from a minimal server and client up through production-ready authentication, streaming, and comprehensive test suites.
 
 Why Arrow Flight?
@@ -31,7 +28,7 @@ Before diving into code, it is worth understanding why you would choose Arrow Fl
 
 Flight also integrates naturally with the broader Arrow ecosystem, pandas, Polars, DuckDB, Spark, and Snowflake all support Arrow IPC, so data flows between systems without format conversion.
 
-Setting Up Your Arrow Flight Environment
+## Setting Up Your Arrow Flight Environment
 
 Before building workflows, ensure your development environment has the necessary dependencies. Arrow Flight requires both the Arrow C++ libraries and the Python bindings. Use Claude Code to help you set up and verify your installation:
 
@@ -55,7 +52,7 @@ polars>=0.20.0
 
 The key components you'll work with include the Flight client for sending requests, the Flight server for receiving data, and PyArrow for data serialization. Understanding how these pieces interact is essential for building solid workflows.
 
-Building a Basic Flight Server
+## Building a Basic Flight Server
 
 A Flight server exposes Arrow data through the Flight protocol, enabling efficient binary transfer without serialization overhead. Here's a practical server implementation that Claude Code can help you create:
 
@@ -109,7 +106,7 @@ Note the use of `FlightServerBase` (not the deprecated `ServerBase`). The `list_
 
 Claude Code can help you extend this with authentication middleware, SSL/TLS encryption, and custom ticket handling for more complex scenarios. A prompt like "add basic token authentication to this Flight server" will produce a working `FlightServerAuthHandler` subclass in seconds.
 
-Creating a Flight Client Workflow
+## Creating a Flight Client Workflow
 
 The client side connects to Flight servers and performs data operations. Building a solid client involves proper error handling, connection pooling, and efficient data transformation:
 
@@ -152,7 +149,7 @@ def list_datasets(client):
 
 Claude Code excels at expanding this foundation. You can ask it to add retry logic, implement circuit breakers, or create async variants for improved performance in high-throughput scenarios. The timeout parameters are exposed as arguments here so callers can tune them based on dataset size, a 30-second timeout is reasonable for small tables but inadequate for a multi-gigabyte transfer.
 
-Integrating with Data Pipelines
+## Integrating with Data Pipelines
 
 Arrow Flight becomes powerful when integrated into larger data workflows. Claude Code can help you connect Flight operations with pandas, Polars, or other data processing libraries:
 
@@ -201,7 +198,7 @@ print(summary)
 
 This pattern is particularly useful for ETL pipelines where data needs to be transferred between services efficiently. Polars is worth adding to your toolbox here: its Arrow-native internals mean that `pl.from_arrow()` is essentially free, there is no data copying, just a schema handshake.
 
-Error Handling and Retry Patterns
+## Error Handling and Retry Patterns
 
 Production workflows require solid error handling. Claude Code can generate comprehensive retry logic with exponential backoff, which is essential when dealing with transient network errors in long-running pipelines:
 
@@ -266,7 +263,7 @@ def safe_fetch(client, dataset_name):
         raise
 ```
 
-Optimizing Performance
+## Optimizing Performance
 
 Arrow Flight's efficiency comes from columnar data representation and zero-copy transfers. Maximize performance with these techniques:
 
@@ -295,7 +292,6 @@ def optimized_batch_upload(client, name, df, batch_size=65536):
 
     writer.close()
 
-
 def streaming_fetch(client, dataset_name):
     """Iterate over a large dataset without loading it all into memory."""
     ticket = flight.Ticket(dataset_name.encode())
@@ -309,7 +305,7 @@ def streaming_fetch(client, dataset_name):
 
 Using `streaming_fetch` in your pipeline means you can process a 100 GB dataset on a machine with 8 GB of RAM, as long as each batch fits in memory individually.
 
-Authentication and TLS
+## Authentication and TLS
 
 Exposing a Flight server on a network without authentication is only appropriate for local development. For production, implement token-based authentication:
 
@@ -333,7 +329,6 @@ class TokenAuthServerMiddlewareFactory(flight.ServerMiddlewareFactory):
             raise flight.FlightUnauthenticatedError("Invalid token")
         return TokenAuthServerMiddleware(token)
 
-
 class SecureFlightServer(ExampleFlightServer):
     def __init__(self, location):
         super().__init__(location)
@@ -341,7 +336,6 @@ class SecureFlightServer(ExampleFlightServer):
 Start server with auth middleware
 server = SecureFlightServer("grpc://0.0.0.0:8815")
 server._middleware = {"auth": TokenAuthServerMiddlewareFactory()}
-
 
 Client sends the token in call headers
 def create_authenticated_client(host, port, token):
@@ -355,7 +349,7 @@ def create_authenticated_client(host, port, token):
 
 For TLS, pass `tls_root_certs` to the client and provide `cert_chain` and `private_key` to the server. Claude Code can generate a complete TLS setup script including certificate generation for development.
 
-Testing Your Workflows
+## Testing Your Workflows
 
 Claude Code can generate comprehensive tests for your Flight workflows. The key insight for testing Flight is to spin up an in-process server during test setup, this avoids mocking the transport layer and gives you full integration coverage without needing a separate server process:
 
@@ -382,7 +376,6 @@ def flight_client(flight_server):
     location = flight_server._location
     return flight.FlightClient(location)
 
-
 def test_upload_and_fetch(flight_client):
     """Round-trip: upload a table, then fetch it back."""
     original = pa.table({
@@ -396,7 +389,6 @@ def test_upload_and_fetch(flight_client):
     assert fetched.column_names == original.column_names
     assert fetched.equals(original)
 
-
 def test_pandas_roundtrip(flight_client):
     """Test pandas DataFrame survives a Flight roundtrip."""
     df = pd.DataFrame({"a": [1.0, 2.0, 3.0], "b": ["x", "y", "z"]})
@@ -405,12 +397,10 @@ def test_pandas_roundtrip(flight_client):
 
     pd.testing.assert_frame_equal(df, result)
 
-
 def test_dataset_not_found_raises(flight_client):
     """Missing dataset should raise FlightServerError."""
     with pytest.raises(flight.FlightServerError, match="not found"):
         fetch_dataset(flight_client, "nonexistent_dataset")
-
 
 def test_list_datasets(flight_client):
     """list_datasets should include uploaded datasets."""
@@ -422,7 +412,7 @@ def test_list_datasets(flight_client):
 
 Pair these integration tests with fast unit tests for pure data transformation logic. Keep the in-process server fixture at `scope="module"` so it starts once per test file, Flight servers take a moment to bind their port and you do not want to pay that cost per test.
 
-Practical Workflow: Serving ML Features
+## Practical Workflow: Serving ML Features
 
 A common real-world pattern is using Arrow Flight as a feature store transport. Model training jobs fetch feature tables from a central Flight server; inference services push prediction results back. Claude Code can scaffold this entire pattern from a short description:
 
@@ -448,7 +438,7 @@ class FeatureStoreServer(flight.FlightServerBase):
 
 This server is entirely stateless with respect to in-memory storage, all data lives on disk as Parquet. Restart the server and all datasets are immediately available again. You can scale this horizontally by placing the data directory on shared NFS or an S3-compatible store mounted via s3fs.
 
-Conclusion
+## Conclusion
 
 Building Arrow Flight workflows with Claude Code combines high-performance data transfer with AI-assisted development. Start with the basic server and client patterns shown here, then progressively add authentication, TLS, compression, and retry logic as your workflow matures. Claude Code's ability to generate boilerplate, suggest improvements, and help debug type mismatches and schema errors makes this process significantly faster than working from documentation alone.
 

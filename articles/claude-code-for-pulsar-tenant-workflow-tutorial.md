@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Pulsar Tenant Workflow Tutorial
 
 Apache Pulsar's multi-tenant architecture is one of its most powerful features, enabling organizations to isolate workloads, enforce resource quotas, and manage access control across different teams and projects. However, managing Pulsar tenants programmatically can be complex, especially when you need to automate tenant provisioning, configure permissions, and set up namespace-level policies. This tutorial shows you how to use Claude Code to simplify and accelerate your Pulsar tenant workflows.
 
-Understanding Pulsar Tenants and Namespaces
+## Understanding Pulsar Tenants and Namespaces
 
 Before diving into the workflow automation, let's establish the foundational concepts. In Apache Pulsar, the hierarchy follows a clear structure: Tenants sit at the top level and can contain multiple Namespaces, which in turn hold Topics. Each level has its own configuration and access control settings.
 
@@ -30,7 +29,7 @@ Tenants are particularly useful when you need to:
 
 Namespaces provide a middle layer where you can configure message retention, replication settings, and rate limiting. Understanding this hierarchy is crucial for designing efficient tenant workflows.
 
-Setting Up Claude Code for Pulsar Management
+## Setting Up Claude Code for Pulsar Management
 
 Claude Code interacts with Pulsar through its administrative APIs, which are accessible via the `pulsar-admin` CLI tool or directly through the REST API. To get started, ensure you have the Pulsar admin client installed and configured with appropriate credentials.
 
@@ -42,11 +41,11 @@ pulsar-admin tenants list
 
 This command should return all tenants in your Pulsar cluster. If you're working with a remote cluster, make sure your `PULSAR_WEB_URL` and authentication tokens are properly configured in your environment.
 
-Automating Tenant Creation with Claude Code
+## Automating Tenant Creation with Claude Code
 
 Creating tenants manually is tedious and error-prone, especially when you need to provision multiple tenants with similar configurations. Here's a practical workflow using Claude Code to automate tenant creation:
 
-Step 1: Define Tenant Configuration
+## Step 1: Define Tenant Configuration
 
 Create a configuration file that specifies tenant details:
 
@@ -61,7 +60,7 @@ Create a configuration file that specifies tenant details:
 }
 ```
 
-Step 2: Create a Claude Code Script
+## Step 2: Create a Claude Code Script
 
 You can write a Claude Code script to parse this configuration and create tenants programmatically:
 
@@ -93,7 +92,7 @@ create_pulsar_tenant('tenant-config.json')
 
 This script reads your configuration and uses the Pulsar admin CLI to provision the tenant with the specified roles and cluster assignments.
 
-Managing Namespace Policies Across Tenants
+## Managing Namespace Policies Across Tenants
 
 Once tenants are created, you'll often need to configure namespace-level policies. This includes setting retention policies, configuring message TTL, and establishing backlogs. Here's how to streamline this with Claude Code:
 
@@ -115,7 +114,7 @@ pulsar-admin namespaces set-backlog-quota analytics-team/reporting \
 
 You can wrap these commands in a shell script that Claude Code can execute, making it easy to apply consistent policies across multiple namespaces.
 
-Implementing Role-Based Access Control
+## Implementing Role-Based Access Control
 
 Security is paramount in multi-tenant environments. Claude Code can help you manage role-based access control (RBAC) by automating permission grants and revocations:
 
@@ -149,7 +148,7 @@ manage_tenant_permissions('analytics-team', 'revoke', 'former-employee')
 
 This approach ensures consistent access control management and provides an audit trail through your script history.
 
-Building a Complete Tenant Lifecycle Workflow
+## Building a Complete Tenant Lifecycle Workflow
 
 To fully use Claude Code, consider building a comprehensive workflow that handles the entire tenant lifecycle:
 
@@ -192,7 +191,7 @@ def deprovision_tenant(tenant_name, namespaces):
     )
 ```
 
-Best Practices and Actionable Advice
+## Best Practices and Actionable Advice
 
 When implementing Claude Code workflows for Pulsar tenant management, keep these recommendations in mind:
 
@@ -202,7 +201,7 @@ When implementing Claude Code workflows for Pulsar tenant management, keep these
 - Log everything: Maintain detailed logs of all operations for troubleshooting and compliance purposes.
 - Separate environments: Never run production workflows against production clusters without thorough testing in staging environments.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Pulsar tenant management from a manual, error-prone process into a streamlined, automated workflow. By defining configurations as code, scripting common operations, and implementing comprehensive lifecycle management, you can significantly reduce operational overhead while improving consistency and security across your Pulsar infrastructure.
 

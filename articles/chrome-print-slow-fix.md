@@ -28,7 +28,7 @@ Before diving into fixes, understanding the root causes helps you apply the righ
 - Printer driver issues: Outdated or incompatible printer drivers can cause communication delays.
 - Sandbox limitations: Chrome's sandboxed architecture adds overhead to the print process.
 
-Quick Browser Settings to Speed Up Printing
+## Quick Browser Settings to Speed Up Printing
 
 Start with these immediate adjustments in Chrome's print dialog:
 
@@ -51,31 +51,31 @@ javascript:window.print();
 
 Then select "Save as PDF" as your destination instead of a physical printer. This gives you a reusable digital copy.
 
-Chrome Flags for Faster Printing
+## Chrome Flags for Faster Printing
 
 Chrome's experimental features include settings that can significantly improve print performance. Type `chrome://flags` in your address bar and search for these:
 
-Print Preview Simplification
+## Print Preview Simplification
 
 Look for "Print Preview Simplification" and enable it. This flag reduces the processing Chrome performs when generating print previews.
 
-Hardware Acceleration
+## Hardware Acceleration
 
 Ensure hardware acceleration is enabled (this is usually default). Go to `chrome://settings` → Advanced → System and verify "Use hardware acceleration when available" is turned on.
 
 After changing any flags, restart Chrome for changes to take effect.
 
-Extension-Related Fixes
+## Extension-Related Fixes
 
 Problematic extensions often cause Chrome print slow issues. Here's how to diagnose and resolve:
 
-Identify Problematic Extensions
+## Identify Problematic Extensions
 
 1. Open Chrome in incognito mode (Ctrl+Shift+N)
 2. Try printing the same document
 3. If printing works smoothly in incognito, an extension is likely the culprit
 
-Disable Extensions Selectively
+## Disable Extensions Selectively
 
 ```bash
 Disable specific extension by ID via command line
@@ -85,7 +85,7 @@ chrome --disable-extension=[EXTENSION_ID]
 
 Common offenders include ad blockers, page manipulators, and script managers that interfere with print styling.
 
-Create Print-Specific Profiles
+## Create Print-Specific Profiles
 
 Create a separate Chrome profile dedicated to printing:
 
@@ -96,11 +96,11 @@ chrome --profile-directory="PrintProfile"
 
 Install only essential extensions in this profile.
 
-Developer Techniques: Optimizing Print CSS
+## Developer Techniques: Optimizing Print CSS
 
 If you control the web content being printed, proper print CSS dramatically improves speed:
 
-Use Print-Specific Stylesheets
+## Use Print-Specific Stylesheets
 
 ```css
 /* print.css */
@@ -130,7 +130,7 @@ Use Print-Specific Stylesheets
 }
 ```
 
-Defer Non-Essential Scripts
+## Defer Non-Essential Scripts
 
 Prevent heavy JavaScript from blocking print rendering:
 
@@ -143,7 +143,7 @@ if (!window.matchMedia('print').matches) {
 }
 ```
 
-Use Content Visibility
+## Use Content Visibility
 
 For long pages, CSS `content-visibility` helps Chrome skip rendering off-screen content:
 
@@ -155,13 +155,13 @@ For long pages, CSS `content-visibility` helps Chrome skip rendering off-screen 
 }
 ```
 
-System-Level Optimizations
+## System-Level Optimizations
 
-Update Printer Drivers
+## Update Printer Drivers
 
 Outdated drivers cause significant delays. Visit your printer manufacturer's website and install the latest drivers for your model.
 
-Adjust Power Settings
+## Adjust Power Settings
 
 Chrome runs slower when your system is in power-saving mode. Ensure your laptop is plugged in or change power settings to "High performance":
 
@@ -173,7 +173,7 @@ macOS: Disable App Nap for Chrome (Terminal)
 defaults write org.google.Chrome NSAppSleepDisabled -bool YES
 ```
 
-Increase Chrome's Resource Allocation
+## Increase Chrome's Resource Allocation
 
 For complex print jobs, allocate more memory to Chrome:
 
@@ -182,11 +182,11 @@ Increase memory cache size
 chrome --disk-cache-size=536870912  # 512MB
 ```
 
-Advanced: Programmatic Print Triggers
+## Advanced: Programmatic Print Triggers
 
 For developers building print functionality, these techniques ensure faster execution:
 
-Use window.print() Wisely
+## Use window.print() Wisely
 
 ```javascript
 // Wait for all resources before triggering print
@@ -199,7 +199,7 @@ window.addEventListener('load', function() {
 });
 ```
 
-Use Print API Events
+## Use Print API Events
 
 ```javascript
 // Clean up after printing completes
@@ -211,7 +211,7 @@ window.matchMedia('print').addEventListener('change', e => {
 });
 ```
 
-Consider Server-Side PDF Generation
+## Consider Server-Side PDF Generation
 
 For enterprise applications, generating PDFs server-side eliminates client-side rendering delays:
 
@@ -229,7 +229,7 @@ def print_report(id):
     return response
 ```
 
-Quick Fixes Summary
+## Quick Fixes Summary
 
 If you need a fast solution right now, try these in order:
 
@@ -239,7 +239,7 @@ If you need a fast solution right now, try these in order:
 4. Try printing in incognito mode to rule out extensions
 5. Use "Save as PDF" instead of direct printing for complex documents
 
-When to Look Elsewhere
+## When to Look Elsewhere
 
 If you've tried everything and Chrome still prints slowly, consider these alternatives:
 
@@ -250,7 +250,6 @@ If you've tried everything and Chrome still prints slowly, consider these altern
 Chrome's print performance continues to improve with each release. Keeping Chrome updated ensures you benefit from the latest optimizations.
 
 ---
-
 
 Related Reading
 

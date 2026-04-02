@@ -13,13 +13,12 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Long-running tasks are a common challenge when working with AI-assisted development. Whether you're refactoring a large codebase, generating documentation across multiple files, or running extensive test suites, knowing when your task completes, without constantly monitoring the terminal, improves your workflow significantly.
 
 This guide covers how to set up notification systems for Claude Code to alert you when long tasks finish, using native macOS and Linux tools plus practical integration patterns. By the end, you'll have a complete notification toolkit that keeps you productive while Claude handles heavy lifting in the background.
 
-Why Long-Running Claude Code Tasks Need Notifications
+## Why Long-Running Claude Code Tasks Need Notifications
 
 Modern AI-assisted development introduces a new category of task: operations that take anywhere from two minutes to twenty. Traditional development tools, compilers, linters, test runners, usually finish in seconds. Claude Code is different. Analyzing a 50,000-line codebase for security vulnerabilities, generating comprehensive API documentation, or migrating an entire test suite to a new framework can occupy Claude for five, ten, or fifteen minutes.
 
@@ -27,7 +26,7 @@ Without notifications, developers face a bad tradeoff: either stay glued to the 
 
 The productivity math is straightforward. If a Claude Code task takes eight minutes and you have a five-second setup time to add a notification wrapper, you recover those eight minutes of attention for focused work. Over a week of regular Claude Code usage, that adds up to hours of reclaimed focus time.
 
-Understanding Claude Code Task Notifications
+## Understanding Claude Code Task Notifications
 
 Claude Code runs in your terminal, which means standard terminal output keeps you informed while the process runs. However, for tasks that take minutes or longer, you need external notification mechanisms to avoid wasting time checking the terminal.
 
@@ -35,7 +34,7 @@ The key is combining Claude Code with system-level notification tools that can t
 
 Claude Code's `--print` flag is particularly important for notification workflows. It causes Claude to output its response to stdout and exit, making it easy to chain with shell operators and capture output for parsing. Without `--print`, Claude runs interactively and notification wrappers behave differently.
 
-Setting Up macOS Notifications with Terminal Notifiers
+## Setting Up macOS Notifications with Terminal Notifiers
 
 macOS users have several options for sending notifications. The `terminal-notifier` gem provides a reliable way to send alerts from command-line scripts:
 
@@ -78,7 +77,7 @@ macOS Notification Comparison
 | `osascript` | No (built-in) | Yes | None | Zero-setup teams |
 | `alerter` | Yes (brew) | Yes | Button callbacks | Advanced automation |
 
-Linux Desktop Notifications
+## Linux Desktop Notifications
 
 Linux users can use `notify-send` from the `libnotify` package:
 
@@ -121,7 +120,7 @@ Auto-expire after 10 seconds (in milliseconds)
 notify-send -t 10000 "Claude Code" "Refactoring complete"
 ```
 
-Practical Example: Cross-Platform Notification Scripts
+## Practical Example: Cross-Platform Notification Scripts
 
 Create reusable notification scripts for common scenarios. This pattern works across macOS and Linux:
 
@@ -202,7 +201,7 @@ exit $EXIT_CODE
 
 This version logs every task with timestamps and duration, making it easy to audit how long Claude Code tasks take over time.
 
-Advanced: Notification Based on Task Output
+## Advanced: Notification Based on Task Output
 
 For more sophisticated scenarios, parse Claude Code output and send different notifications based on results:
 
@@ -261,7 +260,7 @@ else
 fi
 ```
 
-Integration with Claude Skills
+## Integration with Claude Skills
 
 Several Claude skills enhance notification workflows for specific tasks:
 
@@ -293,7 +292,7 @@ npm test 2>&1 | tail -20
 [ $? -eq 0 ] && notify-send -u critical "TDD" "All tests passing. cycle complete"
 ```
 
-Using Aliases for Quick Notification Access
+## Using Aliases for Quick Notification Access
 
 Add shell aliases to your `.bashrc` or `.zshrc` for faster usage:
 
@@ -337,7 +336,7 @@ cc_run() {
 }
 ```
 
-Notification Sounds and Critical Alerts
+## Notification Sounds and Critical Alerts
 
 For important tasks, enable sound alerts alongside visual notifications:
 
@@ -365,7 +364,7 @@ The `-u critical` flag on Linux raises the notification priority, ensuring it ap
 
 Available macOS system sounds for `terminal-notifier -sound`: `Basso`, `Blow`, `Bottle`, `Frog`, `Funk`, `Glass`, `Hero`, `Morse`, `Ping`, `Pop`, `Purr`, `Sosumi`, `Submarine`, `Tink`, and `default`.
 
-Troubleshooting Notification Issues
+## Troubleshooting Notification Issues
 
 If notifications aren't appearing, check these common issues:
 
@@ -381,7 +380,7 @@ If notifications aren't appearing, check these common issues:
 
 6. Ruby gem path issues: If `terminal-notifier` was installed with a specific Ruby version, it may not be in the default PATH. Use `gem environment` to find the gem binaries directory and add it to your PATH.
 
-Fallback: SMS or Email Notifications
+## Fallback: SMS or Email Notifications
 
 For truly long-running tasks (30+ minutes) or headless servers, consider email or SMS fallbacks:
 
@@ -414,7 +413,7 @@ exit $EXIT_CODE
 
 The `ntfy.sh` approach works for mobile notifications, subscribe to your topic in the ntfy app and receive push notifications on your phone when server-side Claude Code tasks finish.
 
-Automating Notifications for Repeated Tasks
+## Automating Notifications for Repeated Tasks
 
 For recurring workflows, create shell functions in your profile:
 
@@ -478,14 +477,13 @@ claude_run() {
 
 The shared log gives engineering managers visibility into how the team uses Claude Code and which task types take the longest, useful data for capacity planning and workflow optimization.
 
-Final Thoughts
+## Final Thoughts
 
 Setting up notifications for long-running Claude Code tasks transforms your development experience. Rather than watching terminal output, you receive alerts when work completes, whether you're reviewing code, generating documentation, or running comprehensive tests.
 
 The right notification setup depends on your workflow: simple `&&` chains work for occasional use, shell functions serve regular users, and full logging wrappers benefit teams that want visibility into AI tool usage patterns.
 
 Start with simple notifications using the scripts above, then customize based on your workflow. The investment of a few minutes pays dividends in focused, efficient development sessions. Once the habit forms, you'll find yourself queuing multiple Claude Code tasks in sequence and working on other priorities while the AI does the heavy lifting, checking your screen only when the notification arrives.
-
 
 Related Reading
 

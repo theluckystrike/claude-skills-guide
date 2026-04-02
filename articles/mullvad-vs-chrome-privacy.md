@@ -13,12 +13,9 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-
-Mullvad vs Chrome Privacy: A Developer and Power User Guide
-
 When building privacy-conscious applications or simply browsing the web without leaving traces, the choice between Mullvad Browser and Chrome carries significant implications. This comparison breaks down the technical differences for developers and power users who need to understand exactly what happens to their network traffic, browsing fingerprint, and personal data.
 
-The Fundamental Difference
+## The Fundamental Difference
 
 Chrome, developed by Google, is designed to personalize your experience and serve targeted advertisements. Every feature in Chrome exists partially to improve ad targeting precision. Mullvad Browser, built by the Mullvad VPN team, aims to make all users look identical to prevent fingerprinting-based tracking.
 
@@ -28,7 +25,7 @@ At the architecture level, the two browsers have fundamentally different goals b
 
 This architectural divergence means the privacy gap is not just about settings you toggle. It is about what the browser does before you even open a tab.
 
-Feature Comparison at a Glance
+## Feature Comparison at a Glance
 
 | Feature | Chrome | Mullvad Browser |
 |---|---|---|
@@ -45,7 +42,7 @@ Feature Comparison at a Glance
 | DevTools maturity | Excellent | Good |
 | Price | Free | Free (VPN sold separately) |
 
-Network Traffic and DNS Queries
+## Network Traffic and DNS Queries
 
 Chrome sends all DNS queries through your system's default resolver, which typically reveals every domain you visit to your ISP or network administrator. For developers testing applications, this means production traffic can be logged at the network level. Chrome also sends prefetch requests for links visible in the viewport, which can cause your resolver to log domains for pages you never actually visited.
 
@@ -73,7 +70,7 @@ If you see no output from the port 53 tcpdump while browsing in Mullvad, your DN
 
 Another key difference is SNI (Server Name Indication) exposure. During the TLS handshake, the requested domain is sent in plaintext so servers can present the correct certificate. Both Chrome and Mullvad expose this by default, but Mullvad is paired with the expectation of VPN use, which tunnels the entire connection and hides SNI from your local network.
 
-Fingerprinting Resistance
+## Fingerprinting Resistance
 
 Browser fingerprinting creates a unique identifier based on your device's characteristics: screen resolution, installed fonts, GPU renderer, timezone, and dozens of other signals. Chrome exposes extensive fingerprinting surface through its rich API access and consistent user agent string.
 
@@ -119,7 +116,7 @@ const fingerprint = {
 
 When you run this in Chrome, you get your real device values. In Mullvad, canvas returns noise-added pixel data, WebGL reports a generic string, screen uses common dimensions, and timezone reports UTC regardless of your actual location.
 
-Developer Tools and Extensions
+## Developer Tools and Extensions
 
 Chrome provides the most comprehensive developer tools in any browser. The Chrome DevTools protocol enables sophisticated debugging, performance profiling, and automated testing. Extensions for development workflows, like React Developer Tools, Redux DevTools, and various API clients, work smoothly.
 
@@ -143,7 +140,7 @@ Here is a practical breakdown of DevTools capability differences:
 
 If you rely on the Chrome DevTools Protocol (CDP) for test automation with Playwright or Puppeteer, you cannot use Mullvad Browser as a drop-in replacement. Mullvad uses Gecko, so you would need the Firefox driver instead.
 
-Cookie and Storage Handling
+## Cookie and Storage Handling
 
 Chrome maintains persistent storage across sessions, including cookies, localStorage, IndexedDB, and cache. This persistence enables persistent logins and offline functionality but creates tracking surface that persists across websites.
 
@@ -169,7 +166,7 @@ This has a direct implication for developers building analytics pipelines. If yo
 
 The storage clearing behavior also affects multi-step authentication flows. If your app uses OAuth and relies on state cookies surviving across redirects, verify those flows under Mullvad's strict mode. They work in most cases because cookies within a single session are preserved, it is only at browser close that everything wipes.
 
-Threat Model Comparison
+## Threat Model Comparison
 
 Understanding what you are actually protected against with each browser helps set realistic expectations.
 
@@ -197,7 +194,7 @@ Mullvad Browser does not protect against:
 
 Neither browser provides anonymity by itself. Mullvad reduces the signals available for passive tracking. Actual anonymity requires combining the browser with a VPN, not using identifying accounts, and avoiding behaviors that re-link your identity.
 
-Practical Implications for Developers
+## Practical Implications for Developers
 
 When testing privacy-focused applications, using Mullvad Browser reveals how your application behaves under strict privacy conditions. You discover which features break when cookies are blocked, how your analytics handles missing referrer data, and whether your authentication flows work without persistent storage.
 
@@ -251,7 +248,7 @@ function storageAvailable(type) {
 }
 ```
 
-Network Level Considerations
+## Network Level Considerations
 
 Both browsers operate at the application layer and cannot fully protect against network-level surveillance. Your ISP, network administrator, or anyone monitoring network traffic can see which IP addresses you connect to, even when using HTTPS. The domain name in SNI (Server Name Indication) remains visible during TLS handshake.
 
@@ -278,7 +275,7 @@ dig +short https example.com TYPE65
 
 ECH support is still rolling out across major CDNs. Cloudflare-proxied domains typically support it. When your application runs behind Cloudflare, users on modern browsers with ECH support effectively hide the requested domain from network observers even without a VPN.
 
-Making the Choice
+## Making the Choice
 
 Your browser choice depends on your threat model and workflow requirements. Chrome serves developers who need powerful debugging capabilities and don't mind Google's data collection. Mullvad Browser suits privacy-conscious users and developers testing how applications behave under strict privacy conditions.
 
@@ -296,7 +293,7 @@ This three-browser approach costs nothing and gives you the right tool for each 
 
 The key insight is that browser privacy is one layer of a larger security strategy. Understanding what each browser does and doesn't protect allows you to make informed decisions about your development environment and personal browsing habits.
 
-Extension Policies and Third-Party Code Injection
+## Extension Policies and Third-Party Code Injection
 
 One of the sharpest privacy differences between Mullvad Browser and Chrome involves how each handles browser extensions and third-party script injection.
 
@@ -308,7 +305,7 @@ This creates a practical tension for developers. A typical development Chrome pr
 
 The cleanest approach is profile separation. Keep a hardened Chrome profile with minimal extensions for general development, a full-extension Chrome profile for productivity, and Mullvad Browser for any browsing where you want to minimize tracking. research, competitor analysis, or sessions involving sensitive personal accounts.
 
-Handling Cookies and Local Storage for Development Testing
+## Handling Cookies and Local Storage for Development Testing
 
 Chrome defaults to persistent cookies with no automatic expiration for first-party cookies, and partitioned storage for third-party contexts under its Privacy Sandbox changes. Developers building applications can rely on cookies persisting across browser restarts, localStorage and sessionStorage behaving predictably, and IndexedDB data persisting indefinitely unless explicitly cleared.
 

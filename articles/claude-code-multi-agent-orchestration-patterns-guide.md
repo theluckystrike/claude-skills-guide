@@ -16,7 +16,7 @@ permalink: /claude-code-multi-agent-orchestration-patterns-guide/
 
 Multi-agent orchestration is a powerful pattern for handling complex software workflows. Instead of a single Claude Code process managing everything sequentially, you can spawn multiple independent agents, each focused on a specific task, and coordinate their work. This guide covers practical patterns for orchestrating multiple Claude Code agents effectively.
 
-What Multi-Agent Orchestration Means in Claude Code Context
+## What Multi-Agent Orchestration Means in Claude Code Context
 
 In Claude Code, multi-agent orchestration refers to spawning and managing multiple independent agent instances that work together on different parts of a larger problem. Each agent can:
 
@@ -29,7 +29,7 @@ This differs from a single agent working through tasks sequentially. With multi-
 
 The Claude Code execution model supports this through environment isolation, allowing agents to run independently while sharing results through files, APIs, or message passing.
 
-Parallel Agent Spawning Patterns
+## Parallel Agent Spawning Patterns
 
 The fundamental pattern for multi-agent orchestration is spawning agents concurrently for independent work. Here's the basic structure:
 
@@ -70,7 +70,7 @@ This pattern demonstrates:
 
 For more complex workflows, you might add timeouts, retry logic, or early termination based on failures.
 
-Task Decomposition and Delegation Patterns
+## Task Decomposition and Delegation Patterns
 
 Effective multi-agent systems require clear task decomposition. Each agent should understand exactly what it owns and how it reports results. Here's a practical decomposition structure:
 
@@ -117,7 +117,7 @@ Key principles:
 - Status files: Agents create `.status` files to signal completion
 - Fault tolerance: Optional dependencies allow partial success
 
-Shared Context and State Management
+## Shared Context and State Management
 
 When multiple agents work simultaneously, they need synchronized access to shared state. Several patterns manage this effectively:
 
@@ -152,7 +152,7 @@ Process all results
 jq -s 'add' *-results.json > combined-report.json
 ```
 
-Single vs. Multi-Agent: When to Use Each
+## Single vs. Multi-Agent: When to Use Each
 
 Use a single agent when:
 
@@ -173,7 +173,7 @@ Use multiple agents when:
 
 A practical heuristic: if your workflow has 2+ independent sections that could run simultaneously, multi-agent is worth considering.
 
-Practical Example: Code Review + Testing + Documentation
+## Practical Example: Code Review + Testing + Documentation
 
 Here's a complete example orchestrating three parallel agents:
 
@@ -248,7 +248,7 @@ This pattern demonstrates:
 4. Clean synchronization: Single wait command blocks until all complete
 5. Result aggregation: Coordinator combines outputs in desired order
 
-Common Pitfalls and How to Avoid Them
+## Common Pitfalls and How to Avoid Them
 
 Pitfall: Excessive coordination overhead
 - Solution: Keep agents as independent as possible
@@ -270,7 +270,7 @@ Pitfall: Timeout and resource exhaustion
 - Solution: Set agent timeouts and resource limits
 - Monitor total memory and CPU across all agents
 
-Best Practices for Production Workflows
+## Best Practices for Production Workflows
 
 1. Always validate agent outputs: Don't assume agents succeeded just because they exited
 2. Use structured result formats: JSON or YAML, not free-form text

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for React Reasoning Agent Workflow"
 description: "Learn how to build intelligent React applications with Claude Code reasoning agent workflows. This guide covers agent architectures, tool calling."
@@ -14,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code for React Reasoning Agent Workflow
 
 Building intelligent React applications that can reason, plan, and execute tasks autonomously has become increasingly accessible with Claude Code. A reasoning agent workflow combines large language model capabilities with structured tool execution, enabling your React apps to handle complex, multi-step operations while maintaining user control. This guide walks you through implementing effective reasoning agent workflows in React applications.
 
-Understanding Reasoning Agent Architecture
+## Understanding Reasoning Agent Architecture
 
 A reasoning agent fundamentally operates through a continuous loop: observe the current state, reason about what action to take next, execute the action, and evaluate the results. In React, this translates to components that can dynamically respond to user intent while using AI capabilities.
 
@@ -67,7 +63,7 @@ const useAgent = () => {
 };
 ```
 
-Setting Up Claude Code for React Agents
+## Setting Up Claude Code for React Agents
 
 Before implementing reasoning workflows, ensure your React project has the proper Claude Code integration. You'll need the Anthropic SDK or a compatible wrapper that supports tool calling.
 
@@ -93,7 +89,7 @@ export const createAgentClient = () => ({
 });
 ```
 
-Implementing Tool Calling Patterns
+## Implementing Tool Calling Patterns
 
 Tools enable your agent to interact with the real world, making API calls, querying databases, or manipulating UI state. Define tools using a structured schema that Claude can understand and invoke.
 
@@ -139,7 +135,7 @@ const toolDefinitions = [
 ];
 ```
 
-Building a Shopping Assistant Example
+## Building a Shopping Assistant Example
 
 Let's put these concepts together into a practical shopping assistant that helps users find products, check shipping, and manage their cart.
 
@@ -224,7 +220,7 @@ const ShoppingAgent: React.FC = () => {
 };
 ```
 
-Managing Agent State Effectively
+## Managing Agent State Effectively
 
 State management in reasoning agents requires careful consideration. Your React components need to track multiple evolving states simultaneously.
 
@@ -297,7 +293,7 @@ export const AgentProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 };
 ```
 
-Best Practices for Production Workflows
+## Best Practices for Production Workflows
 
 When deploying reasoning agent workflows in production React applications, consider these practical guidelines.
 
@@ -325,7 +321,7 @@ Handle Errors Gracefully: Build retry logic for transient failures, but provide 
 
 Monitor Token Usage: Reasoning agents can consume significant tokens, especially with extended conversations. Implement usage tracking and consider summarizing older messages to stay within context limits.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Several mistakes frequently cause issues in React agent implementations. Don't pass excessive context that exceeds model limits, be selective about what history to include. Avoid blocking the main thread with synchronous AI calls; always use async patterns. Finally, don't forget to validate tool inputs on both the client and server sides for security.
 

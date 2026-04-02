@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Gateway Routing Pattern Workflow
 
 The gateway routing pattern is a fundamental architectural pattern in modern software systems that directs incoming requests to appropriate backend services based on routing rules. When combined with Claude Code's CLI capabilities, developers can automate the creation, testing, and maintenance of gateway routing configurations across their infrastructure. This guide walks you through practical workflows for implementing gateway routing patterns using Claude Code, with actionable examples you can apply immediately.
 
-Understanding Gateway Routing Patterns
+## Understanding Gateway Routing Patterns
 
 Gateway routing sits at the entry point of your application architecture, acting as a single entry for multiple services. Instead of clients calling services directly, they communicate through a gateway that intelligently routes requests. This pattern provides several key benefits:
 
@@ -30,7 +29,7 @@ Gateway routing sits at the entry point of your application architecture, acting
 
 Claude Code can help you generate routing configurations, debug routing issues, and maintain routing logic across different gateway implementations like NGINX, Envoy, Traefik, or cloud-native API gateways.
 
-Setting Up Your Gateway Routing Project
+## Setting Up Your Gateway Routing Project
 
 Before implementing routing patterns, establish a project structure that Claude Code can work with effectively. Create a dedicated directory for your gateway configuration:
 
@@ -58,7 +57,7 @@ routes:
 
 This structure gives Claude Code context about your routing topology, enabling it to suggest improvements and detect conflicts.
 
-Implementing Dynamic Routing with Claude Code
+## Implementing Dynamic Routing with Claude Code
 
 Dynamic routing allows your gateway to adapt to service changes without manual reconfiguration. Claude Code can generate routing logic that responds to service registries, environment variables, or configuration databases.
 
@@ -107,11 +106,11 @@ class DynamicRouter {
 
 Claude Code can help you extend this base implementation with advanced features like weighted routing, circuit breaking, and traffic mirroring.
 
-Version-Based Routing Workflow
+## Version-Based Routing Workflow
 
 API versioning is one of the most common gateway routing use cases. Claude Code excels at generating version routing configurations that handle gradual rollouts and canary deployments.
 
-Defining Version Routes
+## Defining Version Routes
 
 Create a version routing configuration:
 
@@ -138,7 +137,7 @@ version_routing:
       destination: user-service-v2
 ```
 
-Implementing Traffic Splitting
+## Implementing Traffic Splitting
 
 Claude Code can generate the traffic splitting logic:
 
@@ -166,11 +165,11 @@ function createTrafficSplitter(config) {
 
 When implementing version-based routing, always include fallback logic for requests without version headers. This ensures backward compatibility while you migrate clients to newer versions.
 
-Service Discovery Integration
+## Service Discovery Integration
 
 Modern gateway routing depends on service discovery to route traffic to healthy service instances. Claude Code can help you integrate with service discovery systems like Consul, etcd, or Kubernetes DNS.
 
-Consul Integration Example
+## Consul Integration Example
 
 ```javascript
 // gateway-routing/service-discovery/consul.js
@@ -219,11 +218,11 @@ class ConsulServiceDiscovery {
 
 Claude Code can help you add health check integration, circuit breaker patterns, and retry logic to make your service discovery more resilient.
 
-Debugging Routing Issues
+## Debugging Routing Issues
 
 When routing fails, debugging can be challenging. Claude Code provides powerful debugging workflows for tracing routing decisions.
 
-Enable Request Tracing
+## Enable Request Tracing
 
 Add tracing middleware to understand routing behavior:
 
@@ -257,7 +256,7 @@ function createRoutingTraceLogger() {
 
 Use Claude Code to analyze these traces and identify patterns in routing failures. You can ask Claude to review routing logs and suggest improvements to your configuration.
 
-Best Practices for Gateway Routing
+## Best Practices for Gateway Routing
 
 Follow these guidelines when implementing gateway routing with Claude Code:
 
@@ -271,7 +270,7 @@ Follow these guidelines when implementing gateway routing with Claude Code:
 
 5. Test routing changes thoroughly: Use staging environments to validate routing changes before production deployment. Claude Code can generate test cases for common routing scenarios.
 
-Conclusion
+## Conclusion
 
 Gateway routing patterns are essential for building scalable, maintainable microservices architectures. By using Claude Code's capabilities, you can automate the creation, testing, and debugging of routing configurations across your infrastructure. Start with simple path-based routing, then progressively add dynamic service discovery, version-based traffic splitting, and advanced resilience patterns as your system grows.
 

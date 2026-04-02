@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Semantic Code Search Workflow Tutorial
 
@@ -31,7 +30,7 @@ This approach is particularly valuable when:
 - You're looking for patterns across multiple files
 - You want to find all places where a specific concept is implemented
 
-Setting Up Claude Code for Code Search
+## Setting Up Claude Code for Code Search
 
 First, ensure you have Claude Code installed. The easiest method is via Homebrew:
 
@@ -49,9 +48,9 @@ claude auth
 
 Now you're ready to start searching.
 
-Basic Semantic Search Techniques
+## Basic Semantic Search Techniques
 
-Finding Functions by Purpose
+## Finding Functions by Purpose
 
 The most powerful feature of Claude Code is its ability to understand code intent. Instead of guessing variable names, describe what you're looking for:
 
@@ -61,7 +60,7 @@ claude "find all functions that handle user authentication"
 
 Claude will analyze your codebase and return not just matching functions, but explain why each result is relevant. This is invaluable when you're new to a project or searching for functionality you know exists but can't name.
 
-Searching Across File Types
+## Searching Across File Types
 
 You can scope your searches to specific file types or directories:
 
@@ -71,7 +70,7 @@ claude "find database connection logic" --include="*.{js,ts,py}"
 
 This targets your search to JavaScript, TypeScript, and Python files, useful when you know the implementation lives in backend code.
 
-Context-Aware Results
+## Context-Aware Results
 
 One of Claude Code's strongest features is providing context around matches. When you ask:
 
@@ -85,9 +84,9 @@ You'll receive results that include:
 - Explanation of how each result relates to email validation
 - Potential related functions you might also want to examine
 
-Advanced Workflow Patterns
+## Advanced Workflow Patterns
 
-Building Reusable Search Commands
+## Building Reusable Search Commands
 
 For frequently used searches, create custom slash commands within Claude Code. Create a `.claude/commands` directory in your project and add command files:
 
@@ -105,7 +104,7 @@ Search for route definitions, controller methods, and API handlers across the co
 
 Now you can invoke it with `/find-api` when working in Claude Code's interactive mode.
 
-Combining with Traditional Tools
+## Combining with Traditional Tools
 
 Semantic search doesn't replace traditional tools, it complements them. A powerful workflow combines both approaches:
 
@@ -119,7 +118,7 @@ grep -r "processPayment" --include="*.js" -n
 
 This hybrid approach gives you both intelligent understanding and precise control.
 
-Batch Analysis for Codebase Surveys
+## Batch Analysis for Codebase Surveys
 
 When starting on a new project or conducting a thorough review, use Claude Code's batch analysis:
 
@@ -133,9 +132,9 @@ This provides a comprehensive report including:
 - Potential issues or inconsistencies
 - Suggestions for standardization
 
-Practical Examples
+## Practical Examples
 
-Example 1: Finding Related Functions
+## Example 1: Finding Related Functions
 
 You need to modify how user permissions are checked across your application:
 
@@ -145,7 +144,7 @@ claude "find all permission checks and role verifications"
 
 Claude returns functions like `checkUserRole()`, `verifyPermissions()`, `hasAccess()`, and even identifies permission-related logic embedded in middleware, results you might miss with traditional search.
 
-Example 2: Understanding Code Flow
+## Example 2: Understanding Code Flow
 
 Tracing how data flows through your application becomes trivial:
 
@@ -155,7 +154,7 @@ claude "trace the user data from login to dashboard display"
 
 You'll get a step-by-step explanation of the data flow, including transformations, storage, and presentation layers.
 
-Example 3: Finding Similar Implementations
+## Example 3: Finding Similar Implementations
 
 Need to implement a new feature similar to existing code:
 
@@ -165,17 +164,17 @@ claude "find all file upload implementations to use as a reference"
 
 Claude provides examples of upload handling throughout your codebase, with explanations of each approach's pros and cons.
 
-Best Practices for Effective Searches
+## Best Practices for Effective Searches
 
-Be Specific About Intent
+## Be Specific About Intent
 
 Instead of vague queries like "find the cache code", be specific: "find where we cache API responses and the invalidation logic."
 
-Use Domain Terminology
+## Use Domain Terminology
 
 use your project's domain language. If your team refers to "subscriptions" rather than "memberships", use that terminology in your searches.
 
-Iterate and Refine
+## Iterate and Refine
 
 Semantic search is conversational. If the first result isn't quite right, refine your query:
 
@@ -185,7 +184,7 @@ claude "not that one - find the backend implementation specifically"
 
 This iterative approach progressively narrows to exactly what you need.
 
-Combine with Code Navigation
+## Combine with Code Navigation
 
 Use Claude Code results as a map, then navigate directly to files to make changes. The workflow becomes:
 
@@ -195,7 +194,7 @@ Use Claude Code results as a map, then navigate directly to files to make change
 4. Make your changes
 5. Ask Claude to verify your implementation
 
-Integrating into Your Daily Workflow
+## Integrating into Your Daily Workflow
 
 To make semantic search a habit, consider these integration points:
 
@@ -207,7 +206,7 @@ Debugging: When tracking down bugs, describe the symptom rather than guessing at
 
 Refactoring: Before major changes, use Claude to find all related code that might need updates.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms code search from a mechanical pattern-matching exercise into an intelligent conversation about your codebase. By understanding intent rather than just syntax, you find code faster, understand it better, and make more informed decisions about modifications.
 

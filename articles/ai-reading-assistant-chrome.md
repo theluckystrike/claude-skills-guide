@@ -17,7 +17,7 @@ AI Reading Assistant Chrome: Technical Implementation Guide
 
 AI reading assistants have transformed how developers and power users consume web content. These tools use large language models to summarize, simplify, and extract key information from articles, documentation, and technical posts. This guide covers the technical architecture, implementation patterns, and practical code examples for building or integrating an AI reading assistant in Chrome.
 
-How AI Reading Assistants Work in Chrome
+## How AI Reading Assistants Work in Chrome
 
 An AI reading assistant Chrome extension typically operates through a combination of content scripts, background workers, and external AI API calls. The content script extracts the page content, sends it to an AI service, and displays the processed result back to the user through a floating panel or sidebar.
 
@@ -25,7 +25,7 @@ The core workflow involves three stages: content extraction, AI processing, and 
 
 Modern implementations often include caching layers to avoid redundant API calls, smart content detection to identify article boundaries, and customizable prompt templates that let users control how the AI processes different types of content.
 
-Building a Basic AI Reading Assistant Extension
+## Building a Basic AI Reading Assistant Extension
 
 Creating an AI reading assistant Chrome extension starts with the manifest file. Here's a minimal setup for manifest version 3:
 
@@ -125,7 +125,7 @@ async function callAIAPI(content) {
 }
 ```
 
-Choosing the Right AI Model and Prompt Strategy
+## Choosing the Right AI Model and Prompt Strategy
 
 The model you choose and how you write your system prompt have a larger impact on output quality than almost any other factor. Here's a comparison of common options:
 
@@ -162,7 +162,7 @@ const PROMPT_MODES = {
 
 Giving users a mode selector turns a simple summarizer into a genuinely useful reading tool. A developer reading API documentation wants the `explain` mode. A researcher comparing studies wants `extract`. A journalist fact-checking an article wants `critique`.
 
-Integrating with Existing AI Services
+## Integrating with Existing AI Services
 
 Rather than building from scratch, developers can integrate established AI reading assistant services into Chrome through extensions. Several open-source projects provide drop-in solutions that handle API integration, content detection, and UI rendering.
 
@@ -219,7 +219,7 @@ app.listen(3000);
 
 This proxy keeps your API key off of every user's machine, serves cached responses instantly for repeated content, and gives you a place to add authentication, logging, or usage limits later.
 
-Optimizing Performance and User Experience
+## Optimizing Performance and User Experience
 
 A well-designed AI reading assistant should feel instantaneous. Implement these optimizations to improve responsiveness:
 
@@ -291,7 +291,7 @@ async function streamSummary(content, outputElement) {
 
 Set `stream: true` in the request body, then read from the response body as a stream. Each chunk arrives as a server-sent event that you parse and append to the output element. The user sees the summary building in real time.
 
-Handling Long Articles and Token Limits
+## Handling Long Articles and Token Limits
 
 Technical documentation, research papers, and long-form journalism regularly exceed 10,000 words. Most AI APIs have token limits ranging from 4,000 to 128,000 tokens depending on the model. A naive implementation that truncates at 10,000 characters will miss the second half of most long articles.
 
@@ -341,7 +341,7 @@ async function summarizeChunk(text) {
 
 Running chunk summaries in parallel with `Promise.all` keeps total processing time reasonable even for very long content. A 20,000 word article divided into 5 chunks processes in roughly the time of a single API call rather than five sequential calls.
 
-Security Considerations
+## Security Considerations
 
 When building AI reading assistants, handle user data carefully. Never send sensitive information to AI APIs without explicit user consent. Implement clear data handling policies and consider offering local processing options for sensitive content.
 
@@ -355,12 +355,11 @@ User consent for each domain: Some users want the extension to only run on pages
 
 Audit logging for team deployments: If you are building this for a team rather than personal use, log which URLs are being summarized (without logging the full content) so you can identify unexpected usage patterns and enforce acceptable use policies.
 
-Conclusion
+## Conclusion
 
 Building an AI reading assistant Chrome extension requires understanding content extraction, API integration, and efficient UI patterns. The examples above provide a starting point for developers looking to create custom solutions or integrate existing services. Focus on performance optimization and user privacy to build tools that developers and power users actually want to use.
 
 The streaming response pattern and hierarchical summarization for long content are the two improvements most likely to make a real difference in day-to-day use. A reading assistant that responds instantly and handles full-length technical articles without truncation is genuinely useful. One that takes 8 seconds and cuts off halfway through the document gets disabled after a week.
-
 
 Related Reading
 

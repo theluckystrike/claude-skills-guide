@@ -13,28 +13,23 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Rootly Incident Workflow Tutorial
 
 When production incidents strike, every minute counts. Teams need (MTTR) Claude Code  Rootly  incident response 
 
-Rootly  incident management  runbookSLO  post-mortem  Claude Code  incident response 
-
-
-
-
+## Rootly  incident management  runbookSLO  post-mortem  Claude Code  incident response
 
 - Rootly  Rootly 
 - Rootly API  Rootly  API 
 - Claude Code 
 - Node.js 16+  Python 3.8+
 
- Rootly  Claude Code 
+## Rootly  Claude Code
 
- Rootly API 
+## Rootly API
 
- Rootly  Settings → API  API 
+## Rootly  Settings → API  API
 
 ```bash
 
@@ -42,9 +37,9 @@ export ROOTLY_API_KEY="your_api_key_here"
 export ROOTLY_ORGANIZATION="your_org_slug"
 ```
 
- Rootly MCP Server 
+## Rootly MCP Server
 
-Claude Code  MCP (Model Context Protocol)  Rootly MCP server 
+## Claude Code  MCP (Model Context Protocol)  Rootly MCP server
 
 ```json
 {
@@ -63,9 +58,7 @@ Claude Code  MCP (Model Context Protocol)  Rootly MCP server
 
  Claude Code  (`claude_settings.json`) 
 
-
-
- MCP server 
+## MCP server
 
 ```bash
 claude #  Claude Code  MCP server 
@@ -73,11 +66,11 @@ claude #  Claude Code  MCP server
 
  rootly server
 
- Incident Workflow 
+## Incident Workflow
 
- Incident
+## Incident
 
- Rootly  incident
+## Rootly  incident
 
 ```typescript
 // create-incident.ts
@@ -128,9 +121,9 @@ await createIncident({
 });
 ```
 
- Runbook
+## Runbook
 
- Claude Code 
+## Claude Code
 
 ```python
 runbook_executor.py
@@ -219,7 +212,6 @@ CLAUDE_PROMPT = """
 3. 
 4. 
 
-
 """
 
 def run_ai_diagnosis(prompt: str) -> str:
@@ -228,9 +220,9 @@ def run_ai_diagnosis(prompt: str) -> str:
     pass
 ```
 
-Post-Mortem 
+## Post-Mortem
 
-Incident  post-mortem 
+## Incident  post-mortem
 
 ```typescript
 // auto-postmortem.ts
@@ -259,12 +251,9 @@ Incident
 - : ${calculateDuration(incident)}
 - : ${incident.data.attributes.impact}
 
-
 ${formatTimeline(timeline)}
 
-
 ${JSON.stringify(metrics, null, 2)}
-
 
 1.  (Summary)
 2.  (Root Cause)
@@ -289,21 +278,15 @@ ${JSON.stringify(metrics, null, 2)}
 }
 ```
 
-AI-Driven Incident Response
-
-
+## AI-Driven Incident Response
 
 ```yaml
 .claude/workflows/incident-response.md
 Claude Code  Incident Response
 
-
-
 - PagerDuty 
 - Datadog 
 - 
-
-
 
 1. 
 -  incident 
@@ -315,7 +298,6 @@ Claude Code  Incident Response
 ```
 
 {{error_logs}}
-
 
 {{metrics_data}}
 ```
@@ -337,8 +319,6 @@ Claude Code  Incident Response
 -  on-call 
 -  incident channel Slack
 -  escalation 
-
-
 
 1. 
  AI 
@@ -379,16 +359,12 @@ async function executeAction(action: string, params: any) {
 - 
 - 
 
-
-
  Claude Code  Rootly  incident response 
 
 1. AI 
 2. 
 3. 
 4. 
-
-
 
 Practical Integration Patterns
 

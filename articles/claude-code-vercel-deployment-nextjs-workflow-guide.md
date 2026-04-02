@@ -13,17 +13,13 @@ permalink: /claude-code-vercel-deployment-nextjs-workflow-guide/
 ---
 {% raw %}
 
-
-
-Claude Code Vercel Deployment Next.js Workflow Guide
-
 Deploying Next.js applications to Vercel becomes remarkably powerful when combined with Claude Code's automation capabilities. This guide walks you through setting up a streamlined deployment workflow that handles everything from preview deployments to production releases, with intelligent checks at each stage using Claude skills like `/tdd`, `/frontend-design`, `/pdf`, and `/supermemory`.
 
-Why Automate Vercel Deployments with Claude Code
+## Why Automate Vercel Deployments with Claude Code
 
 Vercel's platform already handles the heavy lifting of infrastructure, but the deployment workflow often involves manual steps: verifying builds, checking environment variables, validating configuration, and ensuring everything works before promoting to production. Claude Code fills these gaps by automating validation, generating deployment documentation, and maintaining a memory of deployment history for troubleshooting.
 
-Setting Up Your Next.js Project for Claude-Assisted Deployment
+## Setting Up Your Next.js Project for Claude-Assisted Deployment
 
 Before implementing the workflow, ensure your Next.js project has the necessary structure and Vercel configuration. Create a `vercel.json` file in your project root:
 
@@ -43,7 +39,7 @@ npm install -g vercel
 vercel link
 ```
 
-Creating the Deployment Automation Script
+## Creating the Deployment Automation Script
 
 Create `deploy.sh` in your project root:
 
@@ -78,7 +74,7 @@ echo "Deployment complete"
 
 Make the script executable: `chmod +x deploy.sh`
 
-Integrating Claude Skills into Your Workflow
+## Integrating Claude Skills into Your Workflow
 
 The [`/tdd` skill](/best-claude-skills-for-developers-2026/) adds value to your deployment pipeline by reviewing test coverage before deployment. In a Claude Code session before deploying:
 
@@ -94,7 +90,7 @@ The `/frontend-design` skill validates UI components before promoting to product
 Review the new components in this PR for accessibility issues and design system compliance.
 ```
 
-Managing Environment Variables
+## Managing Environment Variables
 
 Use Vercel's secrets management for production:
 
@@ -109,7 +105,7 @@ Reference in deployments:
 vercel --yes --env=NEXT_PUBLIC_API_URL=@next-public-api-url
 ```
 
-Setting Up Preview Deployment Automation
+## Setting Up Preview Deployment Automation
 
 Create a GitHub Actions workflow for PR previews:
 
@@ -135,7 +131,7 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 ```
 
-Using Claude Skills for Deployment Documentation
+## Using Claude Skills for Deployment Documentation
 
 After each deployment, use [`/pdf`](/best-claude-skills-for-data-analysis/) to generate a deployment summary:
 
@@ -156,7 +152,7 @@ Store: Production deployment v1.2.3 deployed 2026-03-13.
 Commit abc123. All tests passing. Vercel URL: https://my-app.vercel.app
 ```
 
-Production Best Practices
+## Production Best Practices
 
 Always run a preview deployment and verify it works before promoting to production:
 
@@ -189,7 +185,7 @@ const nextConfig = {
 module.exports = nextConfig
 ```
 
-Pre-Deployment TDD Gate with Claude API
+## Pre-Deployment TDD Gate with Claude API
 
 For teams that want a programmatic quality gate, build a pre-deployment check that sends your staged diff to Claude's `tdd` skill for analysis before Vercel deploys:
 
@@ -213,7 +209,7 @@ Return JSON: { "approved": true/false, "risk_level": "low|medium|high", "issues"
 
 Wire this into a GitHub Actions job that runs before Vercel's automatic deployment. If the gate blocks, cancel the deployment via the Vercel API. Use `supermemory` to store deployment metadata (commit SHA, gate result, deployment URL) for faster incident debugging later.
 
-Handling Rollbacks and Deployment Failures
+## Handling Rollbacks and Deployment Failures
 
 When a production deployment goes wrong, speed matters. Vercel keeps every deployment permanently accessible, which means rollbacks are instant. but knowing which deployment to roll back to requires good tracking.
 
@@ -249,7 +245,7 @@ post-deploy-health-check:
 
 If this job fails, trigger an alert to your team and reference the last good deployment URL stored via `/supermemory`. Claude Code can pull that stored URL and issue the `vercel promote` command automatically during an incident response session.
 
-Optimizing Build Performance for Large Next.js Apps
+## Optimizing Build Performance for Large Next.js Apps
 
 As Next.js projects grow, build times on Vercel can balloon past 5 minutes. Several techniques keep builds fast.
 
@@ -295,7 +291,7 @@ module.exports = withBundleAnalyzer(baseConfig)
 
 Run analysis locally with `ANALYZE=true npm run build` and never accidentally include it in Vercel's build environment.
 
-Managing Multiple Environments: Preview, Staging, and Production
+## Managing Multiple Environments: Preview, Staging, and Production
 
 Most production Next.js apps need three distinct environments, not two. Vercel's native preview/production split handles two, but staging requires an explicit deployment target.
 
@@ -335,7 +331,7 @@ Deployed 2026-03-20. Testing: checkout flow, webhook handling.
 
 This makes handoffs between team members frictionless. Anyone picking up the incident or review can query context instantly rather than digging through Slack history.
 
-Debugging Environment Variable Issues
+## Debugging Environment Variable Issues
 
 Environment variable problems are the most common source of Vercel deployment failures that pass locally. The key insight: Vercel distinguishes between build-time and runtime variables, and Next.js adds a third distinction with `NEXT_PUBLIC_` prefix variables that get inlined at build time.
 
@@ -372,7 +368,7 @@ needed to add them:
 [paste build log]
 ```
 
-Automating Lighthouse Audits on Preview Deployments
+## Automating Lighthouse Audits on Preview Deployments
 
 Every PR preview is an opportunity to catch performance regressions before they reach production. Integrate Lighthouse CI directly into your Vercel preview workflow:
 
@@ -421,7 +417,7 @@ and suggest targeted fixes:
 
 This pattern catches real-world performance regressions that unit tests miss entirely.
 
-Wrapping Up
+## Wrapping Up
 
 This workflow transforms Vercel deployments from manual processes into automated, reliable operations. Claude Code acts as your intelligent deployment assistant, validating code before release and maintaining deployment history through `/tdd`, `/frontend-design`, `/pdf`, and `/supermemory`.
 

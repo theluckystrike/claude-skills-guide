@@ -13,18 +13,15 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code Checkov Security Scanning Guide
-
 Infrastructure-as-code has revolutionized how teams provision and manage cloud resources, but it has also introduced new security attack surfaces. Misconfigured Terraform, CloudFormation, Kubernetes manifests, and Dockerfiles can expose your infrastructure to serious vulnerabilities. Checkov, an open-source static code analysis tool, scans infrastructure definitions for security and compliance issues before deployment. Integrating Checkov into your Claude Code workflow transforms infrastructure security from a manual review process into an automated guardrail.
 
-What Checkov Detects
+## What Checkov Detects
 
 Checkov performs static analysis on infrastructure code across multiple frameworks. The tool ships with over 800 built-in policy checks covering common misconfigurations. For Terraform files, it detects issues like unsecured S3 buckets, overly permissive IAM policies, missing encryption at rest, and public RDS instances. In Kubernetes manifests, Checkov identifies privileged containers, missing resource limits, insecure security contexts, and network policies that are too permissive. Dockerfiles get scanned for exposed sensitive ports, usage of vulnerable base images, and running processes as root.
 
 The tool categorizes findings by severity, critical, high, medium, low, and informational, so you can prioritize remediation efforts. Each policy check includes a description explaining the security risk and remediation guidance. This makes Checkov an excellent companion for Claude Code because the AI can parse these findings and help you write corrected infrastructure code.
 
-Setting Up Checkov with Claude Code
+## Setting Up Checkov with Claude Code
 
 The installation process takes moments. Checkov runs as a Python package, so you need Python 3.8 or later on your system:
 
@@ -40,7 +37,7 @@ checkov --version
 
 You should see output displaying the installed version number. Once Checkov is available, you can invoke it directly from within Claude Code using bash commands. The integration requires no special skills, you simply call the `checkov` binary as part of your workflow.
 
-Running Your First Scan
+## Running Your First Scan
 
 Navigate to a directory containing your infrastructure code and run Checkov:
 
@@ -64,7 +61,7 @@ checkov -d ./terraform/aws-production --output json > checkov-results.json
 
 The JSON output provides structured data that Claude Code can process programmatically. You can ask Claude to summarize findings, explain specific failures, or generate corrected infrastructure code based on the scan results.
 
-Integrating Checkov into Claude Code Workflows
+## Integrating Checkov into Claude Code Workflows
 
 The real power emerges when you make Checkov part of your daily development cycle. Here is a practical workflow for infrastructure development:
 
@@ -128,7 +125,7 @@ jobs:
 
 This configuration runs Checkov on every pull request and uploads results as SARIF format, which GitHub displays as code scanning alerts. The integration requires no additional skills, just standard CI/CD configuration.
 
-Scanning Specific Frameworks
+## Scanning Specific Frameworks
 
 Checkov supports numerous infrastructure frameworks. Here is how to target specific resources:
 
@@ -158,7 +155,7 @@ checkov -f template.json --framework arm
 
 You can also scan multiple frameworks simultaneously or let Checkov auto-detect the file types present in your directory.
 
-Custom Policy Development
+## Custom Policy Development
 
 When built-in policies do not cover your organization's specific requirements, Checkov allows custom policy creation. Write policies in Python and register them in your Checkov configuration:
 
@@ -187,7 +184,7 @@ check = S3BucketNotPublic()
 
 Place this file in a custom policies directory and reference it when running scans. Claude Code can help you write custom policies by describing your organization's security requirements.
 
-Suppressing False Positives
+## Suppressing False Positives
 
 Some findings may not apply to your specific context. Checkov supports suppression comments directly in your infrastructure code:
 
@@ -202,12 +199,11 @@ resource "aws_s3_bucket" "audit_logs" {
 
 The skip comment includes the Checkov ID and a reason. This documentation approach ensures your team understands why certain controls are bypassed while preventing the same finding from appearing in future scans.
 
-Combining Checkov with Claude Skills
+## Combining Checkov with Claude Skills
 
 For comprehensive security automation, combine Checkov with other Claude Code capabilities. The tdd skill helps you write test cases that verify your infrastructure behaves as expected after remediation. The pdf skill can generate formatted security reports from Checkov JSON output for stakeholder distribution. The supermemory skill maintains a knowledge base of recurring issues and their solutions across your infrastructure codebase.
 
 This multi-skill approach turns infrastructure security from a point-in-time scan into a continuous improvement practice. Claude becomes your security partner, running scans, explaining findings, generating fixes, and documenting the remediation process.
-
 
 Related Reading
 

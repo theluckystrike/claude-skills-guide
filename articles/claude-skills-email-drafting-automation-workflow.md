@@ -18,13 +18,13 @@ Developers spend more time writing emails than they should. Incident reports, AP
 
 This guide covers building a practical email drafting workflow using Claude skills. No external email API required. this works directly inside Claude Code sessions and produces drafts you copy into your email client.
 
-The Core Approach
+## The Core Approach
 
 Claude skills are Markdown files in `~/.claude/skills/`. You invoke them with `/skill-name` inside a Claude Code session. For email drafting, you create one skill per email type. each skill encodes the format, tone, required fields, and any relevant conventions for that type of communication.
 
 The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) stores your personal context: your name, role, communication preferences, and frequently used boilerplate. Combining a typed email skill with your supermemory context produces drafts that read like you wrote them.
 
-Step 1: Set Up Your Communication Profile in Supermemory
+## Step 1: Set Up Your Communication Profile in Supermemory
 
 Before writing any email skills, load your communication context into supermemory:
 
@@ -51,7 +51,7 @@ Retrieve this at the start of any email drafting session:
 Retrieve my communication profile before drafting any emails.
 ```
 
-Step 2: Create an Incident Report Email Skill
+## Step 2: Create an Incident Report Email Skill
 
 Incident communications follow a strict format: what happened, when, impact, root cause, resolution, and prevention steps. Inconsistent incident emails erode trust. A skill ensures every incident report has the same structure.
 
@@ -104,7 +104,7 @@ Incident details:
 
 The output is a complete, ready-to-send incident report in under ten seconds.
 
-Step 3: Create an API Deprecation Notice Skill
+## Step 3: Create an API Deprecation Notice Skill
 
 API deprecation emails need to be clear about timelines, migration paths, and impact. Ambiguous deprecation notices generate follow-up emails and support tickets. A skill enforces clarity.
 
@@ -156,7 +156,7 @@ Deprecation details:
 - Help: #api-support Slack channel
 ```
 
-Step 4: Build a Sprint Update Email Skill
+## Step 4: Build a Sprint Update Email Skill
 
 End-of-sprint emails to stakeholders follow a pattern: what shipped, what did not, what is next, any blockers that need attention. Most engineers write these from scratch each sprint.
 
@@ -188,7 +188,7 @@ Tone: factual, no hype. If it was a bad sprint, say so plainly. Stakeholders res
 Maximum length: 300 words. Force brevity.
 ```
 
-Step 5: Create a pdf-Formatted Email Package
+## Step 5: Create a pdf-Formatted Email Package
 
 For important communications that need a paper trail, combine your email draft with the `pdf` skill to generate a formatted record:
 
@@ -201,7 +201,7 @@ After drafting the email, use /pdf to create a formatted sprint summary document
 
 The [`pdf` skill](/best-claude-skills-for-data-analysis/) packages the content with proper formatting, date, and section headers. Store these in a `communications/` folder in your project for future reference.
 
-Step 6: Batch Email Generation
+## Step 6: Batch Email Generation
 
 When you need to send multiple communications at once. say, deprecation notices for five endpoints, or update emails for three teams. use supermemory to store the shared context and iterate:
 
@@ -221,7 +221,7 @@ Now draft deprecation notices for these three endpoints:
 
 Claude generates all three drafts in sequence, each with the correct endpoint-specific details pulled from the shared context.
 
-Organizing Your Email Skills
+## Organizing Your Email Skills
 
 As you build out more skills, name them consistently:
 

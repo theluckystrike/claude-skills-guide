@@ -13,15 +13,11 @@ permalink: /claude-code-github-actions-approval-workflows/
 ---
 {% raw %}
 
-
-
-Claude Code GitHub Actions Approval Workflows
-
 [Manual approval gates are essential for production deployments](/claude-tdd-skill-test-driven-development-workflow/), security-sensitive operations, and any workflow requiring human oversight before critical actions execute. GitHub Actions provides native environment protection through required reviewers, and Claude Code skills can enhance these workflows with intelligent decision-making, automated checks, and streamlined approval processes.
 
 This guide covers practical implementations of approval workflows using GitHub Actions environments and Claude Code skills for developers who need controlled deployment pipelines.
 
-Understanding GitHub Actions Environment Protection
+## Understanding GitHub Actions Environment Protection
 
 [GitHub repository environments provide the foundation for approval workflows](/how-do-i-combine-two-claude-skills-in-one-workflow/) Environments allow you to configure protection rules, including required reviewers who must approve workflow runs before they can proceed.
 
@@ -34,7 +30,7 @@ To enable environment protection, navigate to your repository settings and creat
 
 Once configured, any workflow job that references this environment will pause and wait for approval before executing.
 
-Basic Approval Workflow Implementation
+## Basic Approval Workflow Implementation
 
 Here is a straightforward workflow that requires approval before deploying to a production environment:
 
@@ -79,7 +75,7 @@ jobs:
 
 The `environment: production` line triggers GitHub's built-in approval mechanism. When the workflow reaches this job, it enters a waiting state until at least one required reviewer approves it.
 
-Enhancing Approvals with Claude Code Skills
+## Enhancing Approvals with Claude Code Skills
 
 Claude Code can augment approval workflows by performing automated pre-checks, gathering context, and providing recommendations to reviewers. The supermemory skill is particularly useful for retrieving relevant deployment history and context before approval decisions.
 
@@ -91,7 +87,7 @@ claude "Summarize the last 20 commits on main, highlight any changes to database
 
 This gives reviewers actionable information without requiring them to dig through git logs manually.
 
-Multi-Environment Approval Chains
+## Multi-Environment Approval Chains
 
 Complex projects often require sequential approvals across multiple environments. You can model this with a staged deployment approach where each environment requires approval:
 
@@ -141,7 +137,7 @@ jobs:
 
 This workflow creates a clear chain: build → staging approval → tests → production approval. Each environment has its own protection rules, allowing different reviewers for each stage.
 
-Using the tdd Skill for Approval Validation
+## Using the tdd Skill for Approval Validation
 
 The tdd skill can generate automated validation tests that run as part of the approval process. Create tests specifically for deployment validation:
 
@@ -184,7 +180,7 @@ jobs:
 
 The workflow runs automated checks before requiring human approval, ensuring that deployments meet specific criteria regardless of approval status.
 
-Slack Integration for Approval Notifications
+## Slack Integration for Approval Notifications
 
 Real-world teams need timely approval notifications. Use GitHub's official Slack actions to send alerts when a workflow enters a waiting state:
 
@@ -228,7 +224,7 @@ jobs:
 
 This configuration notifies your Slack channel when approval is needed, with a direct link to the workflow run.
 
-Best Practices for Approval Workflows
+## Best Practices for Approval Workflows
 
 Implement these practices to make approval workflows effective:
 
@@ -253,7 +249,7 @@ Pre-Approval Checklist
 
 Reference this checklist in your environment's deployment policy documentation.
 
-Conclusion
+## Conclusion
 
 GitHub Actions environment protection combined with Claude Code skills creates powerful approval workflows for production systems. Start with basic environment protection, then enhance workflows with the tdd skill for automated validation, supermemory for context gathering, and Slack notifications for timely approvals.
 

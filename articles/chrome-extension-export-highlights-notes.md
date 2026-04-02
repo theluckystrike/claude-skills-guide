@@ -18,7 +18,7 @@ Chrome extensions that handle reading, annotation, and note-taking have become e
 
 This guide covers practical approaches to exporting highlights and notes from Chrome extensions, with code examples you can adapt for your own projects.
 
-Understanding the Data Structure
+## Understanding the Data Structure
 
 Before exporting, you need to understand how Chrome extensions typically store highlights and notes. Most extensions use one of these approaches:
 
@@ -49,7 +49,7 @@ const highlight = {
 
 Choosing the right storage backend up front matters a great deal. `localStorage` works for small highlight sets but will hit its quota limit once a user accumulates hundreds of annotated pages. `IndexedDB` scales to tens of thousands of records without complaint, but requires more boilerplate. The `chrome.storage` API sits in the middle: it offers a clean async interface, built-in sync across devices, and a quota of around 100 KB for `sync` or roughly unlimited for `local`. For most annotation extensions, `chrome.storage.local` is the right starting point.
 
-Exporting via chrome.storage API
+## Exporting via chrome.storage API
 
 The `chrome.storage` API is the standard way extensions persist data. Here's how to export highlights and notes:
 
@@ -90,7 +90,7 @@ async function exportAllHighlightsPaginated() {
 
 This pattern also makes it straightforward to export highlights grouped by domain or by date range without loading the entire dataset into memory at once.
 
-Exporting to Markdown Format
+## Exporting to Markdown Format
 
 Markdown is particularly useful because it integrates with note-taking apps like Obsidian, Notion, and Roam Research:
 
@@ -138,7 +138,7 @@ function exportToObsidianMarkdown(highlights, pageTitle, pageUrl, tags) {
 
 Roam Research users prefer a slightly different format with `((block-uid))` references, but a basic block-level export works well with `[[page title]]` syntax as wiki-style links.
 
-Building an Export Popup UI
+## Building an Export Popup UI
 
 Users need a simple interface to trigger exports. Here's a popup implementation:
 
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Comparing Export Format Options
+## Comparing Export Format Options
 
 Different downstream workflows demand different formats. The table below summarizes when to reach for each:
 
@@ -212,7 +212,7 @@ Different downstream workflows demand different formats. The table below summari
 
 For teams building annotation tools, offering JSON as the canonical format plus Markdown and CSV as convenience exports covers the majority of user workflows without significant added complexity.
 
-Handling Cross-Extension Data Sharing
+## Handling Cross-Extension Data Sharing
 
 If you're building multiple extensions or integrating with web services, consider using the Cross-Extension Messaging API:
 
@@ -231,7 +231,7 @@ chrome.runtime.sendMessage(extensionId, {
 
 Cross-extension messaging requires that the receiving extension explicitly whitelists the sender's ID in its manifest. This is a useful pattern when you split annotation storage into one extension and export/sync into another, keeping each extension's surface area small.
 
-CSV Export for Spreadsheet Analysis
+## CSV Export for Spreadsheet Analysis
 
 Sometimes you need data in a format suitable for spreadsheets:
 
@@ -261,7 +261,7 @@ function sanitizeForCSV(text) {
 
 Running the resulting CSV through a validator like csvlint before shipping to users will catch these edge cases before they become support tickets.
 
-Automating Exports with Background Scripts
+## Automating Exports with Background Scripts
 
 For power users, automatic scheduled exports are valuable:
 
@@ -316,7 +316,7 @@ async function performIncrementalExport() {
 
 This pattern keeps individual export files small and makes it practical to store months of backup history without bloating the user's Downloads folder.
 
-Real-World Scenario: Research Workflow Integration
+## Real-World Scenario: Research Workflow Integration
 
 Consider a researcher who highlights academic papers and needs to push those highlights into a Zotero-compatible notes format. The export logic would look like this:
 
@@ -326,7 +326,7 @@ Consider a researcher who highlights academic papers and needs to push those hig
 
 This kind of integration turns a simple annotation extension into a full research pipeline tool. The extension itself stays lightweight. the export format is the integration surface.
 
-Security Considerations
+## Security Considerations
 
 When exporting user data, keep these security practices in mind:
 
@@ -346,12 +346,11 @@ a.click();
 setTimeout(() => URL.revokeObjectURL(url), 100);
 ```
 
-Conclusion
+## Conclusion
 
 Exporting highlights and notes from Chrome extensions requires understanding storage APIs, data formatting, and user interface patterns. The approaches covered here, JSON, Markdown, CSV, and automated exports, provide a foundation for building solid export functionality.
 
 These patterns work whether you're extending an existing annotation tool or building a new reading companion. Start with the data structure that matches your needs, then layer in export formats as your users require them. Incremental exports, paginated storage reads, and Obsidian-compatible Markdown output are all straightforward additions once the core pipeline is in place. The key is treating the export format as a first-class feature rather than an afterthought, because for knowledge workers, the ability to own and move their data is often more important than any individual annotation feature.
-
 
 Related Reading
 
@@ -361,7 +360,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Integration with Notion via API
+## Integration with Notion via API
 
 Push highlights directly to a Notion page using the Notion API:
 
@@ -387,7 +386,7 @@ async function pushToNotion(highlight, notionPageId, apiKey) {
 
 Store the Notion API key and page ID in `chrome.storage.sync` so the integration persists across devices.
 
-Advanced: Obsidian Vault Export
+## Advanced: Obsidian Vault Export
 
 Generate Obsidian-compatible markdown with YAML frontmatter for Dataview compatibility:
 
@@ -406,7 +405,7 @@ function exportToObsidian(highlights, pageTitle) {
 }
 ```
 
-Comparison with Existing Tools
+## Comparison with Existing Tools
 
 | Tool | Export formats | Sync | Price |
 |---|---|---|---|
@@ -417,7 +416,7 @@ Comparison with Existing Tools
 
 Building your own gives complete control over formats and integrations. Readwise remains the most polished commercial option for users who want a no-build solution.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 `URL.createObjectURL` failing in service worker: Service workers cannot use `createObjectURL`. Convert the blob to a data URL instead:
 
@@ -443,6 +442,5 @@ async function compressJSON(data) {
 ```
 
 These patterns work whether you are extending an existing annotation tool or building a new reading companion from scratch. Start with the data structure that matches your needs, then layer in export formats as your users require them.
-
 
 {% endraw %}

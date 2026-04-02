@@ -13,12 +13,9 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code Flask Blueprint Architecture Guide
-
 Flask blueprints provide the foundation for building maintainable, scalable Flask applications. When combined with Claude Code's development capabilities, you can rapidly scaffold, refactor, and extend your Flask projects while following professional architecture patterns.
 
-Understanding Flask Blueprints
+## Understanding Flask Blueprints
 
 A blueprint in Flask is a way to organize your application into reusable components. Instead of dumping all routes, views, and logic into a single `app.py` file, blueprints let you partition your application into modular, self-contained modules. Each blueprint can define its own routes, templates, static files, and even database models.
 
@@ -38,7 +35,7 @@ When you scale beyond a simple API, organizing with blueprints becomes essential
 
 A blueprint is not an application, it is a recipe for extending one. The routes, error handlers, and before/after request hooks a blueprint defines do not become active until the blueprint is registered with a Flask app instance. This distinction matters when testing: you can create a minimal test app that registers only the blueprint under test, keeping tests fast and isolated.
 
-When Blueprints Become Necessary
+## When Blueprints Become Necessary
 
 For a small project, a personal API or a quick prototype, blueprints add ceremony without much benefit. A single `app.py` is fine. The signal to introduce blueprints is when you find yourself scrolling past 200–300 lines of routes and asking "where is the user registration handler again?"
 
@@ -51,7 +48,7 @@ More specifically, introduce blueprints when:
 
 A blueprint also makes it straightforward to extract a module into its own microservice later. The blueprint's routes, models, and services are already isolated, you mostly need to pull them out and wrap a new Flask app around them.
 
-Project Structure for Production Flask Apps
+## Project Structure for Production Flask Apps
 
 A well-organized Flask project with blueprints typically follows this structure:
 
@@ -96,7 +93,7 @@ This organization separates concerns cleanly. The `blueprints` directory contain
 
 Notice that models live outside the blueprint directories. This is intentional: models represent your data layer and are shared across blueprints. Placing `user.py` inside `auth/` would create tight coupling, your `api` blueprint would have to import from `auth` just to query users, which is the dependency tangle blueprints are meant to prevent.
 
-Creating Blueprints with Claude Code
+## Creating Blueprints with Claude Code
 
 Claude Code can accelerate blueprint creation significantly. When working on a new Flask feature, describe your requirements and let Claude Code scaffold the blueprint structure. A prompt like "Create a payments blueprint with routes for creating a charge, listing invoices, and handling Stripe webhooks, using SQLAlchemy models" will produce a reasonable starting scaffold that you then refine.
 
@@ -129,7 +126,7 @@ def test_create_user_returns_201(client):
 
 Running these tests against a not-yet-implemented blueprint gives you immediate, precise feedback on what to build. Claude Code can then implement the route handlers to make each test pass, one at a time.
 
-Blueprint Patterns and Best Practices
+## Blueprint Patterns and Best Practices
 
 One effective pattern involves creating a factory function that initializes your Flask app and registers blueprints dynamically:
 
@@ -177,7 +174,7 @@ login_manager.login_view = 'auth.login'
 
 Blueprints import `db` from `app.extensions`, not from `app`. This breaks the circular import that would occur if blueprints imported from `app/__init__.py`, which in turn imports the blueprints.
 
-Cross-Blueprint Communication
+## Cross-Blueprint Communication
 
 When blueprints need to share functionality, avoid direct imports between them. Instead, use application-wide signals or shared services. A better approach involves creating service layers that blueprints can import independently:
 
@@ -211,7 +208,7 @@ notification_svc = NotificationService()
 
 Both `auth_bp` and `api_bp` can import `notification_svc` from `app.services.notification` without knowing about each other. The service owns the shared behavior; blueprints are just callers.
 
-Error Handling per Blueprint
+## Error Handling per Blueprint
 
 Each blueprint can define its own error handlers, keeping error responses consistent within that module:
 
@@ -234,7 +231,7 @@ def handle_forbidden(error):
 
 Blueprint-scoped error handlers only catch errors raised within that blueprint's routes. Application-wide error handlers (registered on `app` itself) catch everything else. This means your API blueprint can return JSON error responses while your main blueprint returns HTML error pages, without any conditional logic checking the request's `Accept` header.
 
-Before and After Request Hooks
+## Before and After Request Hooks
 
 Blueprints support `before_request`, `after_request`, and `teardown_request` hooks scoped to their own routes:
 
@@ -253,7 +250,7 @@ def add_cors_headers(response):
 
 This keeps API-specific middleware out of your app factory and out of your main or auth blueprints. Each blueprint enforces its own contract.
 
-Database Models and Migrations
+## Database Models and Migrations
 
 When using SQLAlchemy with blueprints, define models in a shared `models` directory. Each model file can correspond to a specific domain:
 
@@ -307,7 +304,7 @@ flask db upgrade
 
 When you have multiple environments, keep migration scripts in version control. Every developer and every deployment runs the same migration sequence, keeping schemas in sync.
 
-Testing Blueprints
+## Testing Blueprints
 
 Testing each blueprint in isolation improves reliability. Use Flask's test client to test blueprint routes independently:
 
@@ -353,7 +350,7 @@ The `auth_headers` fixture shows a common pattern: one blueprint's behavior (log
 
 The tdd skill integrates well with this workflow, helping you write comprehensive test coverage before implementing route handlers. When you describe the test cases to Claude Code first, the generated implementation tends to be tighter, it is written to satisfy explicit assertions rather than to be "generally correct."
 
-Scaling Considerations
+## Scaling Considerations
 
 As your Flask application grows, consider these scaling patterns:
 
@@ -389,14 +386,13 @@ Both blueprints are registered in the app factory. Old clients hit `/api/v1/user
 
 Third, use blueprint-specific request processing with `before_request` handlers. This allows different validation logic for different parts of your application. The admin blueprint validates admin-level JWT claims. The public API blueprint validates rate limit headers. The internal service blueprint validates a shared secret. None of these need to know about each other.
 
-Conclusion
+## Conclusion
 
 Flask blueprints provide essential structure for maintainable applications. By organizing code into logical, reusable modules, you create a codebase that scales gracefully. Claude Code accelerates this process through rapid scaffolding, test-driven development workflows, and intelligent code generation.
 
 The key lies in establishing clear conventions early, consistent naming, directory structure, and error handling patterns. Once established, these patterns compound: each new feature fits naturally into the existing architecture. A new developer joining the project can navigate the codebase immediately because every feature follows the same shape.
 
 Start with two or three blueprints, `auth`, `api`, and `main` covers most applications. Resist the urge to over-blueprint early. Add a new blueprint when a domain grows large enough to warrant its own URL namespace and its own team responsibility. The factory pattern and shared extensions directory make adding blueprints later painless, so there is no need to anticipate every future module on day one.
-
 
 Related Reading
 

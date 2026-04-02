@@ -18,7 +18,7 @@ Building software for fintech and healthcare sectors requires more than standard
 
 Claude skills provide targeted solutions for regulated industry challenges. This guide covers practical implementations for financial services and healthcare applications, with code examples you can adapt immediately.
 
-Core Challenges in Regulated Industries
+## Core Challenges in Regulated Industries
 
 Regulated development differs from typical software engineering in several critical ways:
 
@@ -30,7 +30,7 @@ Regulated development differs from typical software engineering in several criti
 
 The tdd skill helps enforce test coverage requirements that satisfy compliance auditors. When building for regulated industries, tests serve dual purposes: validating functionality and demonstrating due diligence.
 
-Regulatory Framework Comparison
+## Regulatory Framework Comparison
 
 Understanding the distinctions between major frameworks helps you prioritize compliance effort. Here is a quick reference across the four most common frameworks developers encounter:
 
@@ -43,7 +43,7 @@ Understanding the distinctions between major frameworks helps you prioritize com
 
 Each framework has overlapping requirements around access control and logging, which means a well-structured compliance architecture can satisfy multiple frameworks simultaneously. The sections below focus on building that shared foundation first, then adding framework-specific controls on top.
 
-Building HIPAA-Compliant Healthcare Applications
+## Building HIPAA-Compliant Healthcare Applications
 
 Healthcare developers must handle protected health information (PHI) with strict safeguards. The [claude-code-hipaa-compliant-development-workflow-guide](/claude-code-hipaa-compliant-development-workflow-guide/) provides comprehensive patterns, but here are essential implementations:
 
@@ -83,7 +83,7 @@ class HealthcareDataAccess {
 
 The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) helps maintain compliance context across sessions without storing sensitive data in logs.
 
-PHI De-identification Patterns
+## PHI De-identification Patterns
 
 HIPAA's Safe Harbor method requires removing 18 specific identifiers before data can be treated as de-identified. Automating this removal prevents accidental PHI exposure in development and test environments:
 
@@ -115,7 +115,7 @@ const clean = deidentifyRecord(raw);
 
 Note that name de-identification requires NLP-based entity recognition rather than simple regex. Libraries like spaCy's `en_core_web_sm` model or AWS Comprehend Medical handle named entity recognition for clinical text and should replace the regex approach for production PHI pipelines.
 
-Encryption Key Management for PHI at Rest
+## Encryption Key Management for PHI at Rest
 
 Choosing the right key management strategy is often where teams make expensive mistakes. Here is a comparison of common approaches:
 
@@ -174,7 +174,7 @@ class KMSEncryptionService:
 
 This pattern, called envelope encryption, stores only the encrypted data key alongside the ciphertext. The actual encryption key never persists in your database.
 
-Fintech Payment Processing Compliance
+## Fintech Payment Processing Compliance
 
 Financial applications require PCI-DSS compliance. Use the [claude-code-soc2-compliance-audit-preparation-guide-2026](/claude-code-soc2-compliance-audit-preparation-guide-2026/) for SOC 2 preparation, but implement payment handling with tokenization:
 
@@ -205,7 +205,7 @@ class PaymentTokenizer:
 
 The [claude-code-secret-scanning-prevent-credential-leaks-guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/) prevents accidentally committing API keys or payment credentials.
 
-PCI-DSS Scope Reduction Strategies
+## PCI-DSS Scope Reduction Strategies
 
 The cheapest compliance is compliance you do not have to do. Reducing your PCI scope is the most impactful action a fintech team can take. Here is how different architectural choices affect your scope:
 
@@ -219,7 +219,7 @@ The cheapest compliance is compliance you do not have to do. Reducing your PCI s
 
 For the vast majority of fintech applications, using a hosted payment page or a JavaScript tokenization library like Stripe.js reduces your PCI scope to SAQ A or SAQ A-EP, which are self-assessment questionnaires requiring far less evidence than a full QSA audit.
 
-Transaction Anomaly Detection
+## Transaction Anomaly Detection
 
 Compliance frameworks increasingly require controls around fraud detection. Here is a lightweight rule-based anomaly detector you can extend:
 
@@ -283,7 +283,7 @@ class AnomalyDetector:
 
 This pattern generates structured audit log entries for every anomalous transaction, which satisfies PCI-DSS Requirement 10 (track and monitor all access to network resources and cardholder data) and SOC 2 CC7.2 (anomaly and event monitoring).
 
-Automating Compliance Documentation
+## Automating Compliance Documentation
 
 Regulated industries require extensive documentation. The [/pdf skill](/best-claude-skills-for-data-analysis/) generates compliance reports:
 
@@ -309,7 +309,7 @@ Save as compliance-evidence.xlsx
 
 `from xlsx import Workbook` is not valid. the xlsx skill is invoked with `/xlsx`, not imported as a Python package.
 
-SOC 2 Control Evidence Mapping
+## SOC 2 Control Evidence Mapping
 
 When preparing for a SOC 2 audit, auditors expect evidence mapped to specific Trust Service Criteria (TSC). Here is how to structure your evidence workbook output from the `/xlsx` skill:
 
@@ -325,7 +325,7 @@ When preparing for a SOC 2 audit, auditors expect evidence mapped to specific Tr
 
 Using Claude Code with the `/xlsx` skill to ingest your CI/CD pipeline logs and generate this evidence workbook takes roughly 15 minutes rather than the 4–8 hours a manual evidence collection process typically requires.
 
-Generating a HIPAA Risk Assessment Narrative
+## Generating a HIPAA Risk Assessment Narrative
 
 The HIPAA Security Rule requires a documented risk analysis at least annually. Claude Code can draft the narrative structure from your existing technical controls:
 
@@ -352,7 +352,7 @@ Generate:
 Output as a formal PDF with section headers matching NIST SP 800-30 format.
 ```
 
-Security Code Review Workflow
+## Security Code Review Workflow
 
 Integrate security scanning using Claude Code hooks in `~/.claude/settings.json`. The `PreToolUse` hook can block dangerous patterns before Claude executes bash commands:
 
@@ -388,7 +388,7 @@ echo "$INPUT"
 
 Use the `/tdd` skill to enforce test coverage for security-critical paths before merging.
 
-Extended Security Hook: Credential and Secret Detection
+## Extended Security Hook: Credential and Secret Detection
 
 The hook above catches `eval`, but a regulated environment needs broader coverage. Here is a more complete version that blocks common secret patterns:
 
@@ -429,7 +429,7 @@ echo "$INPUT"
 
 Pair this hook with a `PostToolUse` hook that writes every executed command to an immutable audit log, satisfying the traceability requirements shared by HIPAA, PCI-DSS, and SOC 2.
 
-TDD for Compliance-Critical Paths
+## TDD for Compliance-Critical Paths
 
 Compliance auditors often ask for evidence that security controls are tested, not just present. The `/tdd` skill workflow forces tests to exist before implementation, creating a natural paper trail:
 
@@ -447,7 +447,7 @@ Run the tests (they should fail), then implement the class to make them pass.
 
 This workflow produces both a test suite and a traceable commit history showing tests were written before code, strong evidence for SOC 2 CC8.1 change management controls.
 
-Frontend Design for Compliance Forms
+## Frontend Design for Compliance Forms
 
 The [frontend-design skill](/claude-frontend-design-skill-review-and-tutorial/) helps build accessible, compliant forms:
 
@@ -491,7 +491,7 @@ function PatientDataForm({ onSubmit }) {
 }
 ```
 
-Consent Management for GDPR and HIPAA
+## Consent Management for GDPR and HIPAA
 
 Forms in regulated industries often require explicit consent capture with a verifiable audit record. Here is a consent component that records the consent event with the exact text the user agreed to:
 
@@ -560,7 +560,7 @@ async function hashText(text) {
 
 Hashing the consent text and storing it with the timestamp proves the user saw a specific version of the consent language, a requirement under GDPR Article 7(1) that auditors frequently check.
 
-Infrastructure for Regulated Workloads
+## Infrastructure for Regulated Workloads
 
 The [claude-skills-for-infrastructure-as-code-terraform](/claude-code-skills-for-infrastructure-as-code-terraform/) skill helps provision compliant infrastructure:
 
@@ -584,7 +584,7 @@ module "encrypted_vpc" {
 }
 ```
 
-Compliance Infrastructure Checklist by Cloud Provider
+## Compliance Infrastructure Checklist by Cloud Provider
 
 Different cloud providers expose the same controls through different service names. Here is a cross-provider reference for the infrastructure controls that appear most frequently in HIPAA and PCI audits:
 
@@ -599,7 +599,7 @@ Different cloud providers expose the same controls through different service nam
 | Privileged access management | AWS IAM + AWS Organizations | Azure PIM | Cloud Identity |
 | Database encryption | RDS encrypted storage | Azure SQL TDE | Cloud SQL encryption |
 
-Terraform Module for Audit-Ready S3 Bucket
+## Terraform Module for Audit-Ready S3 Bucket
 
 Compliance often requires proving that audit logs cannot be deleted or modified. Here is a Terraform module that creates an S3 bucket with Object Lock and access logging:
 
@@ -648,7 +648,7 @@ resource "aws_s3_bucket_logging" "audit_logs" {
 
 Using COMPLIANCE mode Object Lock means not even the bucket owner or AWS root account can delete objects before the retention period expires. This is a strong control for HIPAA §164.312(b) audit control requirements.
 
-Selecting the Right Skills for Your Stack
+## Selecting the Right Skills for Your Stack
 
 For fintech development, prioritize:
 
@@ -664,7 +664,7 @@ For healthcare applications, focus on:
 
 Both industries benefit from the [claude-code-permissions-model-security-guide-2026](/claude-code-permissions-model-security-guide-2026/) to enforce principle of least privilege.
 
-Skill Selection by Compliance Priority
+## Skill Selection by Compliance Priority
 
 The table below maps common compliance requirements to the Claude skills best suited to address them:
 
@@ -679,7 +679,7 @@ The table below maps common compliance requirements to the Claude skills best su
 | Risk assessment documentation | pdf | supermemory |
 | Incident response runbooks | pdf | tdd |
 
-Summary
+## Summary
 
 Building for regulated industries doesn't mean abandoning developer productivity. Claude skills provide specialized workflows that embed compliance into your development process:
 

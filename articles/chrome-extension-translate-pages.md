@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Translate Pages: A Developer Guide"
 description: "Learn how to build chrome extension translate pages with practical code examples. Target developers and power users looking to integrate translation."
@@ -14,13 +13,12 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Translating web page content automatically has become essential for developers working with international users and for power users browsing foreign-language content. Chrome extensions that translate pages offer a flexible solution that runs directly in the browser, processing content without sending entire pages to external services.
 
 This guide walks you through building a chrome extension translate pages feature using the Chrome Extension Manifest V3 architecture. You'll learn the core patterns, implementation details, and practical considerations for creating a functional translation tool.
 
-Understanding the Translation Extension Architecture
+## Understanding the Translation Extension Architecture
 
 Chrome extension translate pages typically work through a combination of content scripts, background service workers, and popup interfaces. The content script extracts text from the current page, the background script handles API communication with translation services, and the popup provides user controls.
 
@@ -46,7 +44,7 @@ Here's a basic Manifest V3 structure for a translation extension:
 }
 ```
 
-Extracting Page Content
+## Extracting Page Content
 
 The first step in building chrome extension translate pages functionality is capturing the content you want to translate. Content scripts run in the context of web pages and can access the DOM directly.
 
@@ -85,7 +83,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This approach captures both the full text for complete translation and structured content for more targeted translation of specific sections.
 
-Handling Translation API Communication
+## Handling Translation API Communication
 
 The background service worker manages communication with translation APIs. This separation keeps API keys secure and handles the asynchronous nature of network requests.
 
@@ -145,7 +143,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This example uses MyMemory, a free translation API suitable for learning and prototyping. For production use, you'd integrate paid services like Google Translate, DeepL, or Microsoft Translator.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides the user interface for selecting target languages and triggering translations:
 
@@ -211,7 +209,7 @@ document.getElementById('translateBtn').addEventListener('click', async () => {
 });
 ```
 
-Replacing Page Content with Translations
+## Replacing Page Content with Translations
 
 For a complete page translation experience, you can replace the original content with translated text directly in the page:
 
@@ -243,7 +241,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Handling Language Detection
+## Handling Language Detection
 
 Detecting the source language automatically improves user experience. You can implement detection by analyzing the page's HTML lang attribute or using language detection libraries:
 
@@ -268,7 +266,7 @@ function detectLanguage() {
 }
 ```
 
-Performance and User Experience Considerations
+## Performance and User Experience Considerations
 
 When building production-ready chrome extension translate pages, consider these practical aspects:
 
@@ -300,14 +298,13 @@ function shouldTranslate(element) {
 
 User Preferences: Persist language choices and API keys using chrome.storage for a better experience across sessions.
 
-Conclusion
+## Conclusion
 
 Building chrome extension translate pages requires understanding content script injection, background service worker communication, and translation API integration. The patterns covered here provide a foundation that you can extend with additional features like text-to-speech for translated content, offline translation using WebAssembly models, or integration with machine learning APIs for better accuracy.
 
 The key is starting simple, extracting text, translating through an API, and displaying results, then gradually adding features like content replacement, caching, and language detection based on user needs.
 
 For developers looking to customize their translation experience, the Chrome Extension APIs offer flexibility in how you capture, process, and display translated content. Power users benefit from having translation functionality integrated directly into their browser workflow without needing separate tools or copy-pasting content between applications.
-
 
 Related Reading
 

@@ -13,14 +13,11 @@ score: 7
 permalink: /claude-code-docker-compose-test-setup-guide/
 ---
 
-
 {% raw %}
-
-Claude Code Docker Compose Test Setup Guide
 
 Running Claude Code skills inside Docker Compose gives you repeatable test environments where you can spin up databases, mock APIs, and isolated skill executions without polluting your host system. This guide walks through practical setups for testing skills that interact with external services, databases, and CI pipelines.
 
-Why Use Docker Compose for Skill Testing
+## Why Use Docker Compose for Skill Testing
 
 When you test Claude Code skills that modify files, call APIs, or manage infrastructure, you need controlled environments. Docker Compose lets you:
 
@@ -32,7 +29,7 @@ When you test Claude Code skills that modify files, call APIs, or manage infrast
 
 The `tdd` skill, for example, works best when it can create and destroy test databases without affecting your local setup. Similarly, the `pdf` skill needs controlled file system access that containers provide naturally.
 
-Basic Docker Compose Setup for Claude Code
+## Basic Docker Compose Setup for Claude Code
 
 Create a `docker-compose.yml` that runs Claude Code in an isolated container with access to your project files:
 
@@ -80,7 +77,7 @@ networks:
 
 This setup gives you three containers: one for Claude Code, one for a PostgreSQL test database, and one for a mock API server. All three share a network so they can communicate.
 
-Testing the tdd Skill in Docker
+## Testing the tdd Skill in Docker
 
 The `tdd` skill shines when you need to generate tests against a fresh database. Here's how to test it:
 
@@ -118,7 +115,7 @@ docker compose exec claude-code npx -y @anthropic-ai/claude-code pdf \
   --output /app/extracted/
 ```
 
-Mocking External Services
+## Mocking External Services
 
 Skills that call third-party APIs need mocking. Use the mock-api service to intercept requests:
 
@@ -144,7 +141,7 @@ Skills that call third-party APIs need mocking. Use the mock-api service to inte
 
 Save this as `mockserver/init.json` and the mock-api container initializes with these expectations. Your skill sees realistic responses without hitting real APIs. This approach works well for testing the `supermemory` skill when it calls external storage services, or the `frontend-design` skill when it validates against design system APIs.
 
-Running Multiple Skill Instances
+## Running Multiple Skill Instances
 
 For testing agent swarms or multi-skill workflows, scale the Claude Code service:
 
@@ -171,7 +168,7 @@ services:
 
 The `supermemory` skill can use Redis to share context between instances, simulating a multi-agent workflow on your local machine.
 
-CI Integration
+## CI Integration
 
 Once your Compose setup works locally, translate it to CI. GitHub Actions example:
 
@@ -203,7 +200,7 @@ jobs:
 
 The `-T` flag disables pseudo-TTY allocation, which works better in CI environments. The `-v` flag removes volumes, ensuring each CI run starts with a completely fresh database.
 
-Debugging Skills in Containers
+## Debugging Skills in Containers
 
 When a skill fails inside Docker, attach to the running container:
 
@@ -227,7 +224,7 @@ services:
 
 Then exec into the container and run your debugging tools from the mounted `/debug` folder.
 
-Health Checks for Skill Services
+## Health Checks for Skill Services
 
 Add health checks to ensure services are ready before running skills:
 
@@ -249,7 +246,7 @@ services:
 
 Docker Compose waits for the database to be healthy before starting Claude Code, preventing connection failures on startup.
 
-Cleanup and Resource Management
+## Cleanup and Resource Management
 
 Always clean up after testing:
 
@@ -273,12 +270,11 @@ docker compose up -d --build
 
 This rebuilds containers with your latest skill code while reusing downloaded layers.
 
-Summary
+## Summary
 
 Docker Compose provides the isolation and repeatability you need for testing Claude Code skills. Whether you're running the `tdd` skill against a fresh database, the `pdf` skill on isolated documents, or coordinating multiple instances with `supermemory`, containers give you confidence that your skills work correctly before deploying to production.
 
 The key patterns are: isolate each test run with fresh volumes, mock external dependencies, scale horizontally for multi-agent tests, and mirror your local setup in CI for consistent results.
-
 
 Related Reading
 

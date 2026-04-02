@@ -13,10 +13,9 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 Building a Chrome extension for live meeting transcription requires understanding browser permissions, Web Speech API integration, and audio capture mechanisms. This guide covers the technical implementation for developers and power users who want to create or customize real-time transcription tools.
 
-Understanding the Core Components
+## Understanding the Core Components
 
 A live meeting transcription extension relies on three main pillars: audio capture, speech recognition, and display/output. Chrome provides APIs for each layer, though each comes with specific constraints you need to work around.
 
@@ -42,7 +41,7 @@ recognition.onresult = (event) => {
 
 The `continuous` flag keeps recognition active across pauses, while `interimResults` provides real-time feedback as speakers talk. Setting the correct language code matters significantly for accuracy, always match it to your expected speakers.
 
-Choosing Your Recognition Approach
+## Choosing Your Recognition Approach
 
 Before writing any code, decide which speech recognition backend fits your requirements. The options differ significantly in cost, accuracy, and complexity:
 
@@ -56,7 +55,7 @@ Before writing any code, decide which speech recognition backend fits your requi
 
 The Web Speech API is the right starting point for prototyping and personal use because it requires no API key and zero infrastructure. For team deployments where accuracy and speaker labeling matter, AssemblyAI's streaming API delivers the best developer experience with a generous free tier.
 
-Audio Source Handling
+## Audio Source Handling
 
 Meeting transcription extensions must handle multiple audio sources: microphone input, system audio (via tab capture), and external sources. Chrome's `getUserMedia` API handles microphone access, while `chrome.tabCapture` enables capturing audio from browser tabs running video conferencing software.
 
@@ -96,7 +95,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Manifest Configuration
+## Manifest Configuration
 
 Your `manifest.json` must declare the right permissions. For a full-featured transcription extension:
 
@@ -127,7 +126,7 @@ Manifest V3 introduced stricter background worker limits. Speech recognition cre
 
 Adding `downloads` to the permissions list enables the extension to export transcripts as `.txt` or `.json` files without any browser prompts beyond the standard save dialog.
 
-Complete Background Worker with Reconnection Logic
+## Complete Background Worker with Reconnection Logic
 
 The background script is the heart of the extension. It manages the recognition lifecycle, handles disconnects, and routes messages to the popup and content scripts:
 
@@ -239,7 +238,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 The 150 ms restart delay in `onend` is intentional. Calling `recognition.start()` immediately after `onend` fires can cause a race condition where Chrome rejects the start because the prior instance has not fully released its audio handle yet.
 
-Real-Time Display and Timestamping
+## Real-Time Display and Timestamping
 
 Live transcription requires efficient UI updates. React to the DOM directly from your content script or popup, but batch updates to prevent performance degradation:
 
@@ -315,7 +314,7 @@ async function saveTranscript(sessionId, transcriptData) {
 }
 ```
 
-Handling API Limitations
+## Handling API Limitations
 
 The Web Speech API has constraints you should plan for. It requires an active internet connection for Chrome's cloud-based recognition (free tier). Recognition accuracy varies by accent, audio quality, and background noise. The API may stop unexpectedly, implement solid reconnection logic:
 
@@ -358,7 +357,7 @@ function startHeartbeat() {
 }
 ```
 
-Integrating AssemblyAI Streaming for Production
+## Integrating AssemblyAI Streaming for Production
 
 When Web Speech API accuracy is insufficient, AssemblyAI's streaming WebSocket API is the most developer-friendly upgrade path. It returns word-level timestamps and speaker labels without requiring any server infrastructure from your side:
 
@@ -421,7 +420,7 @@ function convertFloat32ToInt16(buffer) {
 
 The PCM conversion from Float32 to Int16 is required because AssemblyAI's streaming endpoint expects raw linear PCM audio, not WebM or Opus compressed data. The `ScriptProcessor` approach is deprecated in favor of `AudioWorklet`, but remains the more compatible option for Chrome extensions where the worklet module loading path is constrained by extension sandboxing.
 
-Speaker Diarization Challenges
+## Speaker Diarization Challenges
 
 Distinguishing between speakers remains difficult with the base Web Speech API. Several approaches help:
 
@@ -476,7 +475,7 @@ recognition.onresult = (event) => {
 };
 ```
 
-Exporting Transcripts
+## Exporting Transcripts
 
 After a meeting, users need to act on the transcript. Add export functionality directly to the popup:
 
@@ -520,7 +519,7 @@ async function exportTranscript(sessionId, format = 'txt') {
 
 The `chrome.downloads.download` call requires the `downloads` permission in `manifest.json`. Using `saveAs: true` prompts the standard file picker, which is the correct behavior for user-generated content.
 
-Extension Architecture Recommendations
+## Extension Architecture Recommendations
 
 For production deployments, structure your extension with clear separation:
 
@@ -551,7 +550,6 @@ async function enforceStorageQuota(maxSessions = 20) {
 Call `enforceStorageQuota` at the start of each new recording session to keep the extension self-managing without requiring user intervention.
 
 Building a Chrome extension for live meeting transcription involves navigating browser APIs, managing audio streams, and handling the inherent limitations of client-side speech recognition. Start with the Web Speech API for prototyping, then evaluate external services for production accuracy requirements.
-
 
 Related Reading
 

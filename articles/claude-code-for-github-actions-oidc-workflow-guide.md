@@ -17,7 +17,6 @@ score: 7
 categories: [guides]
 ---
 
-
 {% raw %}
 Claude Code for GitHub Actions OIDC Workflow Guide
 
@@ -33,11 +32,11 @@ Benefits of OIDC:
 - Reduced attack surface, No long-lived secrets to rotate or revoke
 - Fine-grained permissions, Scope tokens to specific roles and resources
 
-Setting Up OIDC for AWS
+## Setting Up OIDC for AWS
 
 AWS uses IAM Roles with Web Identity Federation to enable OIDC authentication from GitHub Actions.
 
-Step 1: Create an IAM OIDC Provider in AWS
+## Step 1: Create an IAM OIDC Provider in AWS
 
 First, register GitHub as an OIDC identity provider in IAM:
 
@@ -49,7 +48,7 @@ aws iam create-open-id-connect-provider \
   --thumbprint-list "6938FD4D9B1C1B20EED1D8B0CEE4F3A1B8C9D0E1F"
 ```
 
-Step 2: Create an IAM Role with Trust Policy
+## Step 2: Create an IAM Role with Trust Policy
 
 Create a role that GitHub can assume, with conditions matching your repository:
 
@@ -74,7 +73,7 @@ Create a role that GitHub can assume, with conditions matching your repository:
 }
 ```
 
-Step 3: Configure GitHub Secrets
+## Step 3: Configure GitHub Secrets
 
 In your GitHub repository, add these settings:
 
@@ -82,7 +81,7 @@ In your GitHub repository, add these settings:
 2. Add an AWS region variable: `AWS_REGION = us-east-1`
 3. No AWS_ACCESS_KEY_ID or AWS_SECRET_ACCESS_KEY needed!
 
-Step 4: Create the GitHub Actions Workflow
+## Step 4: Create the GitHub Actions Workflow
 
 Here's a complete workflow using OIDC:
 
@@ -117,11 +116,11 @@ jobs:
 
 The key permission is `id-token: write`, this tells GitHub to mint an OIDC token for the workflow.
 
-Setting Up OIDC for Azure
+## Setting Up OIDC for Azure
 
 Azure uses Azure Active Directory (Entra ID) to manage OIDC federation with GitHub.
 
-Step 1: Register a Federated Identity
+## Step 1: Register a Federated Identity
 
 Create a workload identity in Azure:
 
@@ -146,7 +145,7 @@ az rest --method POST \
   }'
 ```
 
-Step 2: Create the GitHub Actions Workflow
+## Step 2: Create the GitHub Actions Workflow
 
 ```yaml
 name: Deploy to Azure with OIDC
@@ -177,7 +176,7 @@ jobs:
           az webapp up --name your-app --resource-group your-rg --runtime "NODE:18-lts"
 ```
 
-Step 3: Configure Azure Secrets
+## Step 3: Configure Azure Secrets
 
 Add these repository secrets:
 - `AZURE_CLIENT_ID`, Application (client) ID
@@ -186,11 +185,11 @@ Add these repository secrets:
 
 Note that you still need these identifiers, but the secret itself (password/certificate) is replaced by OIDC federation.
 
-Setting Up OIDC for GCP
+## Setting Up OIDC for GCP
 
 Google Cloud uses Workload Identity Federation to connect GitHub Actions.
 
-Step 1: Create a Workload Identity Pool
+## Step 1: Create a Workload Identity Pool
 
 ```bash
 Create workload identity pool
@@ -206,7 +205,7 @@ gcloud iam workload-identity-pools describe github-pool \
   --format="value(name)"
 ```
 
-Step 2: Create a Service Account and Link It
+## Step 2: Create a Service Account and Link It
 
 ```bash
 Create service account
@@ -220,7 +219,7 @@ gcloud iam service-accounts add-iam-policy-binding \
   --role="roles/storage.objectAdmin"
 ```
 
-Step 3: Configure GitHub Actions
+## Step 3: Configure GitHub Actions
 
 ```yaml
 name: Deploy to GCP with OIDC
@@ -253,7 +252,7 @@ jobs:
             --allow-unauthenticated
 ```
 
-Using Claude Code to Generate OIDC Workflows
+## Using Claude Code to Generate OIDC Workflows
 
 Claude Code can help you set up OIDC authentication quickly. Here's a prompt you can use:
 
@@ -265,7 +264,7 @@ Claude Code can help you set up OIDC authentication quickly. Here's a prompt you
 
 Claude Code will generate the complete workflow with the correct OIDC configuration for your chosen provider.
 
-Best Practices for OIDC in GitHub Actions
+## Best Practices for OIDC in GitHub Actions
 
 1. Scope permissions tightly, Use `sub` conditions to restrict which repository branches or paths can authenticate:
    ```json
@@ -285,7 +284,7 @@ Best Practices for OIDC in GitHub Actions
 
 5. Use environment protection rules, Combine OIDC with GitHub Environments requiring approvals for production deployments.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 "Request not valid" errors
 - Ensure your OIDC provider thumbprint is correct
@@ -299,7 +298,7 @@ Token expired errors
 - This usually indicates network issues fetching the token
 - Ensure GitHub Actions runners can reach your cloud provider's STS endpoint
 
-Conclusion
+## Conclusion
 
 OIDC authentication for GitHub Actions is a significant security improvement over storing long-lived secrets. By using temporary, scoped tokens, you reduce the risk of credential compromise while simplifying your security posture. Claude Code can help you generate the appropriate workflow files for your cloud provider, making the setup process straightforward.
 

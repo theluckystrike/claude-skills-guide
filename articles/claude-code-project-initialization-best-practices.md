@@ -16,7 +16,7 @@ permalink: /claude-code-project-initialization-best-practices/
 
 Initializing a project correctly in Claude Code sets the foundation for productive AI-assisted development sessions. The choices you make during project setup, how you configure CLAUDE.md, which skills to load, how you structure your working directory, directly impact how effectively Claude understands and contributes to your codebase. This guide covers practical initialization patterns that developers and power users apply to get the most from Claude Code from the very first session.
 
-The CLAUDE.md File: Your Project's DNA
+## The CLAUDE.md File: Your Project's DNA
 
 The CLAUDE.md file sits at the root of your project and serves as the primary configuration mechanism. Claude reads this file automatically at the start of every session, making it the single most important initialization step. A well-crafted CLAUDE.md establishes context that would otherwise require repeated explanations.
 
@@ -46,7 +46,7 @@ Working Conventions
 
 This configuration works because it provides exactly the information Claude needs to make informed decisions without overwhelming it with unnecessary detail.
 
-Skill Loading: Curate, Do Not Accumulate
+## Skill Loading: Curate, Do Not Accumulate
 
 [A common initialization mistake involves loading too many skills simultaneously](/best-claude-code-skills-to-install-first-2026/). Each skill adds tokens to every subsequent request, increases initialization time, and can create conflicting instructions. The best practice is to load only skills directly relevant to your current work.
 
@@ -81,7 +81,7 @@ Invoke these at session start:
 
 This approach keeps your token usage efficient while ensuring skills are available when needed.
 
-Directory Structure and Context Windows
+## Directory Structure and Context Windows
 
 Large projects risk hitting Claude's context window limits during initialization. If your project contains thousands of files, Claude cannot reasonably parse all of them in a single session start. Instead, structure your initialization to focus Claude on relevant areas.
 
@@ -104,7 +104,7 @@ my-monorepo/
 
 When you enter a subdirectory, Claude picks up the local CLAUDE.md automatically. This provides focused context without loading the entire repository's history and configuration.
 
-Environment Variables and Secrets
+## Environment Variables and Secrets
 
 [Never include sensitive values in CLAUDE.md or any configuration file](/how-do-i-set-environment-variables-for-a-claude-skill/) that might be committed to version control. Instead, establish environment variable patterns during initialization.
 
@@ -127,7 +127,7 @@ Required variables: DATABASE_URL, API_KEY, REDIS_URL
 
 This practice prevents accidental secret exposure while ensuring Claude understands your application's configuration requirements.
 
-Initialization Commands Worth Automating
+## Initialization Commands Worth Automating
 
 Several initialization tasks repeat across projects. Automating these saves time and ensures consistency:
 
@@ -155,7 +155,7 @@ function init-claude-project() {
 }
 ```
 
-Session Initialization Checklist
+## Session Initialization Checklist
 
 Before starting a productive Claude Code session, verify these items:
 
@@ -167,7 +167,7 @@ Before starting a productive Claude Code session, verify these items:
 
 Running this quick checklist prevents common initialization issues like Claude missing context, using outdated configuration, or working with missing dependencies.
 
-Project Initialization for Different Scenarios
+## Project Initialization for Different Scenarios
 
 The best initialization approach varies by project type:
 
@@ -179,7 +179,7 @@ Team projects need CLAUDE.md that references shared documents, coding standards 
 
 Experimental projects can use minimal CLAUDE.md with emphasis on the exploration goals rather than strict conventions.
 
-What to Avoid During Initialization
+## What to Avoid During Initialization
 
 Several patterns reduce Claude Code's effectiveness:
 
@@ -190,7 +190,7 @@ Several patterns reduce Claude Code's effectiveness:
 
 Maintain your CLAUDE.md as a living document. Update it when project structure changes, new dependencies are added, or team conventions evolve.
 
-Final Thoughts
+## Final Thoughts
 
 Proper project initialization in Claude Code is not a one-time setup task, it is an ongoing practice that compounds over time. A well-configured project at the start of your session means Claude delivers better results with fewer clarifying questions. Invest time in crafting effective CLAUDE.md files, maintain focused skill loading practices, and your Claude Code experience will improve dramatically.
 

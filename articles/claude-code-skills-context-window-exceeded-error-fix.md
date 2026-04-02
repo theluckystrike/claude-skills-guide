@@ -16,7 +16,7 @@ permalink: /claude-code-skills-context-window-exceeded-error-fix/
 
 The [context window exceeded](/claude-md-too-long-context-window-optimization/) error is a hard wall. When the total tokens in your session. conversation history, skill definitions, file contents, and tool outputs. exceed Claude's limit, the model cannot continue. This guide explains why it happens specifically when using Claude Code skills, and gives you practical, tested fixes.
 
-Why Skills Make Context Window Errors More Likely
+## Why Skills Make Context Window Errors More Likely
 
 Skills are `.md` files loaded into your session context when you invoke them with `/skill-name`. A skill like `supermemory` or `tdd` might be 300-800 tokens on its own. If you invoke three or four skills in a long session, you are burning 1,000–3,000 tokens on skill definitions before you write a single line of productive prompt.
 
@@ -29,7 +29,7 @@ Common patterns that trigger the error:
 - Invoking `/frontend-design` and pasting in your entire design token file for reference
 - Chaining `/supermemory` with `/docx` and `/pdf` in the same workflow
 
-Immediate Fix: Save Context and Start Fresh
+## Immediate Fix: Save Context and Start Fresh
 
 When you see the error mid-session, the fastest recovery is:
 
@@ -49,7 +49,7 @@ Keep it under 200 words.
 
 This is faster than trying to compress the existing session.
 
-Fix 1: Never Paste File Content. Use Read Calls
+## Fix 1: Never Paste File Content. Use Read Calls
 
 The single biggest context consumer is pasting file content into the prompt. Instead, reference the file by path:
 
@@ -63,7 +63,7 @@ Read src/auth.ts and identify the token validation function
 
 Claude Code can read files directly from your filesystem. Reserve pasting for small, targeted snippets only.
 
-Fix 2: Scope Skill Invocations Per Session
+## Fix 2: Scope Skill Invocations Per Session
 
 Each skill you invoke adds its definition to context. Invoke only what you need for the current task:
 
@@ -82,7 +82,7 @@ Session 2: /frontend-design. build the UI components
 Session 3: /supermemory. summarize and persist
 ```
 
-Fix 3: Trim Skill Definitions
+## Fix 3: Trim Skill Definitions
 
 Verbose skill files use more tokens. Review your custom skills and cut boilerplate:
 
@@ -102,7 +102,7 @@ Claude Code has a `/compact` command that summarizes conversation history to red
 
 This condenses prior turns into a shorter summary, freeing up context for continued work. Use it after completing a phase of work (e.g., after all tests are written, before starting implementation).
 
-Fix 5: Process Large Files in Chunks
+## Fix 5: Process Large Files in Chunks
 
 The `pdf` and `docx` skills are prone to context overruns when used on large documents. Process one section at a time:
 
@@ -120,7 +120,7 @@ For the `docx` skill, request specific sections by heading:
 From contract.docx, extract only the "Liability" section.
 ```
 
-Fix 6: Configure supermemory Checkpointing
+## Fix 6: Configure supermemory Checkpointing
 
 The `supermemory` skill is designed to persist context across sessions. use it proactively to avoid losing work when a session gets long:
 
@@ -138,7 +138,7 @@ Restore latest checkpoint for this project.
 
 This way you never need to reconstruct context manually after a context window error.
 
-Fix 7: Create Lightweight Skill Aliases
+## Fix 7: Create Lightweight Skill Aliases
 
 If you regularly need a subset of a large skill, create a minimal alias that contains only the instructions you actually use. For example, instead of loading the full MCP skill, create a stripped-down version:
 
@@ -156,7 +156,7 @@ When creating MCP tools:
 
 This alias consumes perhaps 200 tokens instead of 2,000. Review your skills directory for any that you only partially rely on. aliases pay off fast.
 
-Fix 8: Reduce Tool Output Verbosity
+## Fix 8: Reduce Tool Output Verbosity
 
 Tool outputs (Bash results, file reads, grep results) consume context. Ask Claude to summarize tool output rather than showing it raw:
 
@@ -167,7 +167,7 @@ the names of failing tests. Do not show full stack traces.
 
 Stack traces are some of the worst context consumers. With the `tdd` skill, this alone can extend a session 30-50%.
 
-Understanding Token Costs Per Skill
+## Understanding Token Costs Per Skill
 
 Rough token costs to help you budget your sessions:
 
@@ -181,7 +181,7 @@ Rough token costs to help you budget your sessions:
 
 These are added once per session when the skill is invoked, not per use.
 
-Session Architecture for Long Projects
+## Session Architecture for Long Projects
 
 For projects that span multiple sessions, adopt this pattern with the `tdd` skill:
 
@@ -202,7 +202,7 @@ Session N+2: /supermemory restore auth-impl
 
 Each session starts small, uses one or two skills, and ends with a checkpoint.
 
-Which Skill to Use Per Task Phase
+## Which Skill to Use Per Task Phase
 
 Loading skills sequentially rather than simultaneously is the core discipline. Match the skill to the current work phase:
 

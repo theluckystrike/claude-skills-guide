@@ -18,7 +18,7 @@ permalink: /claude-code-verbose-mode-debugging-tips/
 
 This guide covers practical techniques for using Claude Code's verbose mode to troubleshoot skill issues, trace execution flow, and optimize your AI-assisted development process.
 
-Enabling Verbose Mode in Claude Code
+## Enabling Verbose Mode in Claude Code
 
 [Claude Code offers multiple levels of verbosity that reveal different amounts of internal information](/best-claude-code-skills-to-install-first-2026/) The primary flags you can use are `--verbose` and `--debug`, which control the detail level of output.
 
@@ -57,7 +57,7 @@ claude "run the audit skill"
 
 This approach keeps your command invocations clean while ensuring all subprocess calls also inherit the verbose setting.
 
-Understanding What Verbose Mode Actually Shows
+## Understanding What Verbose Mode Actually Shows
 
 Before diving into debugging patterns, it helps to understand the structure of verbose output. When you run with `--verbose`, Claude Code emits labeled blocks that correspond to different phases of execution.
 
@@ -90,7 +90,7 @@ Debug mode adds lower-level details to this picture:
 
 This is the information you need when troubleshooting token limits, slow tool execution, or surprising model decisions based on what was actually in the context window.
 
-Tracing Skill Execution
+## Tracing Skill Execution
 
 When a custom skill behaves unexpectedly, verbose mode helps you trace exactly what the skill is doing. Consider a scenario where you're using the tdd skill to generate tests but receiving unexpected results.
 
@@ -116,7 +116,7 @@ A common pattern is discovering that a skill reads the wrong file. Without verbo
 
 And now you know the skill picked up `auth-legacy.ts` instead of `auth.ts` because the Glob pattern matched both. You can then refine your prompt to specify the exact file, or update the skill's instructions to be more precise.
 
-Debugging Tool Selection Issues
+## Debugging Tool Selection Issues
 
 One common debugging scenario involves skills that select inappropriate tools. For instance, if you're using the pdf skill to process documents but it attempts to use image processing tools instead, verbose mode shows the decision-making process.
 
@@ -141,7 +141,7 @@ A more subtle problem is when the model selects the correct tool but calls it wi
 
 Without visibility into that sequence, you would only see the final (possibly successful) result and miss that the skill silently tried and failed before finding a workaround. That matters because the workaround might be slower, produce slightly different output, or fail in edge cases you have not encountered yet.
 
-Constraining Tool Access for Cleaner Traces
+## Constraining Tool Access for Cleaner Traces
 
 When debugging a specific skill, you can reduce noise by limiting which tools are available. In your Claude Code settings or skill definition, specify allowed tools:
 
@@ -154,7 +154,7 @@ When debugging a specific skill, you can reduce noise by limiting which tools ar
 
 This forces the skill to use only the tools relevant to your debugging scenario, making the verbose trace easier to follow.
 
-Analyzing Conversation Context
+## Analyzing Conversation Context
 
 Verbose mode also exposes how Claude Code maintains conversation context, which helps when debugging issues with multi-turn conversations. This is particularly useful when working with skills like supermemory that manage persistent context across sessions.
 
@@ -185,7 +185,7 @@ claude "apply the same async/await refactor you just applied to parseUser() to p
 
 Verbose mode makes these problems visible so you can design around them.
 
-Working with Frontend Design Skills
+## Working with Frontend Design Skills
 
 Debugging becomes more complex when working with visual skills like frontend-design or canvas-design, where the output is visual rather than textual. Verbose mode helps by showing the intermediate steps:
 
@@ -206,7 +206,7 @@ For example, if the skill generates a layout with the wrong breakpoints, verbose
 
 Knowing that the skill filled in defaults because you did not specify breakpoints tells you exactly what to add to your prompt to get consistent results.
 
-Common Debugging Patterns
+## Common Debugging Patterns
 
 Here are practical patterns for common debugging scenarios:
 
@@ -240,7 +240,7 @@ claude --debug "slow operation" 2>&1 | grep "execution time"
 Identify which tool calls are taking the most time
 ```
 
-Interpreting Verbose Output
+## Interpreting Verbose Output
 
 The verbose and debug outputs can be overwhelming at first. Focus on these key sections:
 
@@ -254,7 +254,7 @@ When debugging skill issues, start with verbose mode (`--verbose`) and escalate 
 
 A useful mental model: verbose mode answers "what did the skill do," while debug mode answers "what did the model actually see and how did the API respond." Most skill problems are in the first category.
 
-Filtering Verbose Output
+## Filtering Verbose Output
 
 Raw debug output from a complex skill can run to thousands of lines. Use filtering to focus on what matters:
 
@@ -274,7 +274,7 @@ claude --debug "task" 2>&1 | grep "execution time"
 
 These one-liners let you extract a specific diagnostic signal from a noisy trace without reading line by line.
 
-Optimizing Your Debug Workflow
+## Optimizing Your Debug Workflow
 
 Rather than running verbose mode constantly, use it strategically:
 
@@ -310,7 +310,7 @@ echo "$OUTPUT" | grep -q "Write complete.*auth.*test" && echo "PASS: tests writt
 
 This kind of lightweight assertion script turns verbose output into an automated quality check during skill development.
 
-Integration with Skill Development
+## Integration with Skill Development
 
 When developing custom skills, verbose mode becomes invaluable for:
 

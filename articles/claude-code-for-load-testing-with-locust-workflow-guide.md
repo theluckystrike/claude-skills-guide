@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Load Testing with Locust Workflow Guide
 
@@ -21,7 +20,7 @@ Load testing is a critical part of building scalable applications. When your ser
 
 This guide walks you through setting up Locust for load testing, integrating it with Claude Code, and building a practical workflow that scales with your project.
 
-Understanding Locust and Claude Code Integration
+## Understanding Locust and Claude Code Integration
 
 Locust allows you to define user behavior using Python code, making it accessible to developers familiar with the language. Unlike traditional point-and-click load testing tools, Locust uses a code-first approach that version controls well and integrates smoothly with CI/CD pipelines. You can simulate millions of concurrent users if needed, though realistic testing usually focuses on carefully modeled user journeys.
 
@@ -29,7 +28,7 @@ Claude Code enhances this workflow by helping you write test scripts faster, deb
 
 The integration works in two ways: Claude Code can help you write Locust test scripts from scratch, or it can analyze your existing application and generate appropriate load tests. This makes it valuable both for teams starting fresh and those maintaining existing test suites.
 
-Setting Up Your Locust Environment
+## Setting Up Your Locust Environment
 
 Before creating tests, ensure your environment is properly configured. Install Locust using pip:
 
@@ -73,7 +72,7 @@ class APIUser(HttpUser):
 
 This script defines a user that browses products three times as often as creating new ones, with random wait times between requests to simulate real user behavior.
 
-Writing Effective Load Tests with Claude Code
+## Writing Effective Load Tests with Claude Code
 
 When building load tests, focus on realistic user journeys rather than just hitting endpoints randomly. Claude Code can help you design test scenarios that match your actual usage patterns. Start by identifying your critical user flows: authentication, searching, purchasing, or data export.
 
@@ -98,7 +97,7 @@ def checkout(self):
 
 Claude Code can also help you add sophisticated behaviors like authentication handling, session management, and data-driven testing. For instance, you can read test data from CSV files and vary request payloads dynamically.
 
-Advanced Locust Testing Patterns
+## Advanced Locust Testing Patterns
 
 As your application grows, your load tests should evolve too. Consider these advanced patterns:
 
@@ -172,7 +171,7 @@ class BrowsingUser(TaskSet):
         self.client.get(f"/api/categories/{category}")
 ```
 
-Integrating Locust with Claude Code Workflow
+## Integrating Locust with Claude Code Workflow
 
 Claude Code becomes particularly valuable when building comprehensive test suites. Use it to:
 
@@ -197,7 +196,7 @@ locust -f locustfile.py
 
 Then feed the results to Claude Code for analysis and recommendations.
 
-Key Metrics to Monitor
+## Key Metrics to Monitor
 
 Claude Code can help you understand and interpret critical performance metrics:
 
@@ -206,7 +205,7 @@ Claude Code can help you understand and interpret critical performance metrics:
 - Failure rate: Indicates error handling under load
 - Average response time: General performance indicator
 
-Automating Your Load Testing Pipeline
+## Automating Your Load Testing Pipeline
 
 For continuous improvement, integrate load testing into your CI/CD pipeline. Create a GitHub Actions workflow:
 
@@ -228,7 +227,7 @@ jobs:
 
 Set meaningful thresholds: response time limits, error rate maximums, or requests per second targets. Fail builds when thresholds are exceeded to catch performance regressions early.
 
-Best Practices for Load Testing Success
+## Best Practices for Load Testing Success
 
 Follow these guidelines for effective load testing:
 
@@ -242,7 +241,7 @@ Follow these guidelines for effective load testing:
 
 Claude Code can help you maintain test documentation, generate run books, and create alerts for performance degradation.
 
-Conclusion
+## Conclusion
 
 Load testing with Locust and Claude Code forms a powerful combination for ensuring application reliability. Locust provides flexible, code-driven testing capabilities, while Claude Code accelerates test creation, analysis, and maintenance. By integrating this workflow into your development process, you gain confidence in your application's performance under load and catch issues before they affect users.
 

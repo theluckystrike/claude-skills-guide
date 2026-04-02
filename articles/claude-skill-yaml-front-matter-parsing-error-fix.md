@@ -16,7 +16,7 @@ permalink: /claude-skill-yaml-front-matter-parsing-error-fix/
 
 A malformed [YAML front matter](/claude-skill-md-format-complete-specification-guide/) block is one of the most common reasons a Claude Code skill silently fails to load. The skill file exists, permissions are correct, but Claude either ignores the invocation or loads the skill without its configured metadata. This guide covers every known cause of YAML front matter parsing errors and gives you the exact fix for each.
 
-What YAML Front Matter Does in a Skill File
+## What YAML Front Matter Does in a Skill File
 
 Skill `.md` files begin with a YAML front matter block delimited by triple dashes:
 
@@ -31,7 +31,7 @@ The rest of the skill instructions go here...
 
 [Claude Code skills recognize only name and description in front matter](/claude-skill-md-format-complete-specification-guide/) If the front matter fails to parse, the skill body may still load but the description will not be available to the skill system.
 
-Error 1: Missing or Mismatched Closing Delimiter
+## Error 1: Missing or Mismatched Closing Delimiter
 
 The most common mistake. YAML front matter requires exactly three dashes on the opening and closing lines.
 
@@ -58,7 +58,7 @@ cat -A ~/.claude/skills/tdd.md | head -10
 Lines ending in $ are clean. Lines ending in  $ have trailing spaces.
 ```
 
-Error 2: Tabs Instead of Spaces
+## Error 2: Tabs Instead of Spaces
 
 YAML does not allow tabs for indentation. This is the single most common source of parse errors in skill files edited in IDEs with smart-tab enabled.
 
@@ -94,7 +94,7 @@ Replace tabs with spaces
 expand -t 2 ~/.claude/skills/tdd.md > /tmp/tdd-fixed.md && mv /tmp/tdd-fixed.md ~/.claude/skills/tdd.md
 ```
 
-Error 3: Unquoted Strings With Colons
+## Error 3: Unquoted Strings With Colons
 
 A colon followed by a space in an unquoted YAML value starts a new key-value pair. This breaks the intended value.
 
@@ -110,7 +110,7 @@ description: "Fix: handle edge cases in auth"
 
 This hits frequently with `description` fields in the `tdd` and `frontend-design` skills when people write descriptions like "Step 1: write test, Step 2: implement".
 
-Error 4: Unquoted Special Characters
+## Error 4: Unquoted Special Characters
 
 Certain characters have special meaning in YAML and must be quoted when used literally:
 
@@ -131,7 +131,7 @@ Safe approach. always quote description values
 description: "Use {curly braces} for templates"
 ```
 
-Error 5: Duplicate Keys
+## Error 5: Duplicate Keys
 
 If the same key appears twice in the front matter block, most YAML parsers use the last value and silently discard the first. Some parsers throw an error. Either way, the behavior is unintended.
 
@@ -155,7 +155,7 @@ print('Keys:', list(data.keys()))
 "
 ```
 
-Validating Your Skill Files
+## Validating Your Skill Files
 
 Quick Python check:
 ```bash
@@ -195,7 +195,7 @@ for path in glob.glob(os.path.expanduser('~/.claude/skills/*.md')):
 EOF
 ```
 
-Using yamllint for Strict Validation
+## Using yamllint for Strict Validation
 
 `yamllint` catches issues Python's `yaml.safe_load` tolerates:
 
@@ -211,7 +211,7 @@ open('/tmp/skill-front.yaml', 'w').write(front)
 yamllint /tmp/skill-front.yaml
 ```
 
-Minimum Valid Front Matter
+## Minimum Valid Front Matter
 
 Claude Code skills recognize two front matter fields: `name` and `description`. This is the complete valid front matter for a skill:
 
@@ -224,7 +224,7 @@ description: "One sentence description of what this skill does"
 
 Fields like `tools`, `version`, `tags`, `permissions`, `auto_invoke`, and `context_files` are not recognized by Claude Code. Do not add them to skill files.
 
-Diagnosing Skills That Load But Behave Incorrectly
+## Diagnosing Skills That Load But Behave Incorrectly
 
 A skill whose front matter parses correctly can still malfunction if the metadata causes the skill system to behave unexpectedly. Two common cases:
 
@@ -273,7 +273,7 @@ for path in glob.glob(f'{skills_dir}/*.md'):
 EOF
 ```
 
-Creating a Pre-Commit Hook for Skill File Validation
+## Creating a Pre-Commit Hook for Skill File Validation
 
 If you manage skill files in a git repository (useful for sharing skills across a team), a pre-commit hook that validates YAML front matter prevents broken skills from being committed.
 

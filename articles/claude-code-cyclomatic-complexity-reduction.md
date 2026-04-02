@@ -13,20 +13,19 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Cyclomatic Complexity Reduction
+## Claude Code Cyclomatic Complexity Reduction
 
 Cyclomatic complexity measures the number of linearly independent paths through your code's control flow. High complexity makes code harder to test, maintain, and debug. This guide focuses specifically on cyclomatic complexity. the formal, measurable count of branching paths. rather than broader complexity concerns like coupling, structural bloat, or cognitive load. (If you are looking for a wider treatment of all complexity types, see the [Code Complexity Reduction Guide](/claude-code-code-complexity-reduction-guide/).)
 
 This guide shows you how to use Claude Code and its ecosystem of skills to systematically reduce cyclomatic complexity in your projects.
 
-Understanding Cyclomatic Complexity
+## Understanding Cyclomatic Complexity
 
 Every function with branching logic, conditionals, loops, switch statements, adds to cyclomatic complexity. A simple function with no branches has complexity of 1. Each additional decision point increases this number. Most teams target functions with complexity below 10, while anything above 20 signals code that needs immediate refactoring.
 
 When you work with Claude Code, you can identify complexity hotspots and systematically address them. The process becomes more manageable when you break it down into discrete steps.
 
-Identifying High-Complexity Code
+## Identifying High-Complexity Code
 
 Before reducing complexity, you need to locate it. Claude Code sessions can analyze your codebase and flag functions that exceed complexity thresholds. Create a simple prompt to scan your project:
 
@@ -43,7 +42,7 @@ radon cc -s ./src
 
 The `-s` flag shows summary statistics, while individual function scores help you prioritize.
 
-Strategies for Complexity Reduction
+## Strategies for Complexity Reduction
 
 1. Extract Conditional Logic
 
@@ -149,7 +148,7 @@ def save_user(user):
     return 'Saved'
 ```
 
-Using Claude Skills for Complexity Reduction
+## Using Claude Skills for Complexity Reduction
 
 Claude's ecosystem includes skills designed to help with code quality and refactoring. The tdd skill guides you through test-driven development, ensuring you write tests before refactoring, this safety net catches regressions when you simplify complex functions.
 
@@ -176,7 +175,7 @@ The pdf skill can generate documentation of your complexity metrics over time, h
 Generate a PDF report showing cyclomatic complexity trends for our codebase over the last month.
 ```
 
-Automating Complexity Checks
+## Automating Complexity Checks
 
 Integrate complexity checks into your development workflow. Add a pre-commit hook that fails if staged files introduce functions exceeding your complexity threshold:
 
@@ -187,7 +186,7 @@ radon cc -m 10 ./src | grep "F" && echo "Complexity too high" && exit 1
 
 This automation ensures complexity doesn't creep back into your codebase.
 
-Measuring Success
+## Measuring Success
 
 Track complexity metrics over time. Aim for:
 
@@ -202,7 +201,7 @@ Use tools like CodeClimate or custom dashboards to visualize progress. The super
 Remember this pattern: When cyclomatic complexity exceeds 15, extract method and use early returns.
 ```
 
-Summary
+## Summary
 
 Reducing cyclomatic complexity improves code maintainability, testability, and reliability. With Claude Code and its skills ecosystem, you have powerful tools to identify, refactor, and prevent complex code. Start by measuring your current complexity, apply extraction and guard clause patterns strategically, and integrate automated checks into your workflow. The result is cleaner code that your team can work with confidently.
 

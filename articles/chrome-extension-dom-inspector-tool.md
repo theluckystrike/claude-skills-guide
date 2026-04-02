@@ -13,14 +13,13 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-
-Building a Chrome Extension DOM Inspector Tool
+## Building a Chrome Extension DOM Inspector Tool
 
 A DOM inspector lets you examine and manipulate the structure of any webpage in real time. While Chrome DevTools provides excellent built-in functionality, building your own extension gives you custom features, tighter workflow integration, and a deeper understanding of how browsers expose the DOM.
 
 This guide walks through creating a functional Chrome extension that inspects DOM elements, displays their properties, and allows real-time attribute editing.
 
-Project Structure
+## Project Structure
 
 A Chrome extension requires a manifest file and at least one background or content script. For a DOM inspector, you'll need:
 
@@ -35,7 +34,7 @@ dom-inspector/
 
 The manifest defines permissions and entry points. The content script runs in the context of web pages, while the popup provides the extension's UI.
 
-Manifest Configuration
+## Manifest Configuration
 
 Your manifest.json defines the extension's capabilities:
 
@@ -61,7 +60,7 @@ Your manifest.json defines the extension's capabilities:
 
 The `activeTab` permission lets you interact with the currently open page. The `scripting` permission enables programmatic script injection when needed.
 
-Content Script: Element Selection
+## Content Script: Element Selection
 
 The content script handles element selection on the page. It listens for messages from the popup and highlights selected elements:
 
@@ -153,7 +152,7 @@ function handleClick(event) {
 
 The script creates a visual overlay that follows hovered elements during inspection mode. When you click an element, it captures that element and reports back to the popup.
 
-Popup Interface
+## Popup Interface
 
 The popup provides buttons to start inspection and displays element information:
 
@@ -210,7 +209,7 @@ The popup provides buttons to start inspection and displays element information:
 </html>
 ```
 
-Popup Logic
+## Popup Logic
 
 The popup script manages the inspection workflow and displays collected element data:
 
@@ -263,7 +262,7 @@ async function displayElementInfo() {
 }
 ```
 
-Loading Your Extension
+## Loading Your Extension
 
 To test the extension:
 
@@ -274,7 +273,7 @@ To test the extension:
 5. Click "Start Inspection" and hover over elements
 6. Click an element to see its properties
 
-Practical Applications
+## Practical Applications
 
 A custom DOM inspector becomes valuable in several scenarios:
 
@@ -286,7 +285,7 @@ Debugging dynamic content. Single-page applications often modify the DOM extensi
 
 Design system verification. Confirm that components render with expected classes and data attributes across different pages.
 
-Extending the Inspector
+## Extending the Inspector
 
 Once the base works, consider adding these features:
 
@@ -298,7 +297,7 @@ Once the base works, consider adding these features:
 
 The Chrome Extensions documentation provides comprehensive details on content scripts, message passing, and storage APIs. Start with the basics, then layer in features as your needs evolve.
 
-Step-by-Step: Building the DOM Inspector
+## Step-by-Step: Building the DOM Inspector
 
 1. Set up Manifest V3 with `activeTab` and `scripting` permissions.
 2. Inject the inspector panel: use `chrome.scripting.executeScript` to inject a fixed-position sidebar div when the user activates the extension.
@@ -307,7 +306,7 @@ Step-by-Step: Building the DOM Inspector
 5. Add CSS path generation: compute the full CSS selector path to the clicked element with a one-click copy button.
 6. Export selected elements: let users export HTML, computed styles, or XPath to a JSON file for automated test use.
 
-Computing a Unique CSS Selector
+## Computing a Unique CSS Selector
 
 ```javascript
 function getCSSSelector(element) {
@@ -337,7 +336,7 @@ function getCSSSelector(element) {
 }
 ```
 
-Comparison with Browser DevTools
+## Comparison with Browser DevTools
 
 | Feature | This extension | Chrome DevTools | Firefox Inspector |
 |---|---|---|---|
@@ -346,7 +345,7 @@ Comparison with Browser DevTools
 | Custom export formats | Yes | Limited | Limited |
 | Mobile Chrome | Yes | Via remote debug | No |
 
-Advanced: Accessibility Audit Overlay
+## Advanced: Accessibility Audit Overlay
 
 ```javascript
 function auditAccessibility() {
@@ -361,7 +360,7 @@ function auditAccessibility() {
 }
 ```
 
-Troubleshooting
+## Troubleshooting
 
 Inspector not injecting on chrome:// URLs: Chrome restricts injection on `chrome://` and extension pages. Show a message in the popup explaining that the inspector only works on regular web pages.
 

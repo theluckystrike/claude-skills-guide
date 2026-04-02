@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Paraphrase Tool for Students: A."
 description: "Learn how to build a Chrome extension for paraphrasing text. Practical code examples, APIs, and implementation patterns for developers building."
@@ -14,25 +13,24 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Chrome Extension Paraphrase Tool for Students: A Developer Guide
 
 Building a Chrome extension that helps students paraphrase text combines browser extension development with natural language processing. This guide provides practical implementation patterns for developers creating student-focused paraphrase tools.
 
-Why Students Need Paraphrase Extensions
+## Why Students Need Paraphrase Extensions
 
 Students regularly encounter situations where they need to restate information in their own words: summarizing research papers, avoiding plagiarism while citing sources, or simplifying complex textbook explanations. A well-designed Chrome extension can make this workflow smooth by providing instant paraphrasing directly in the browser without requiring students to switch between applications.
 
 The key requirements for a student-focused paraphrase tool differ from general-purpose paraphasers. Students need speed, simplicity, and the ability to work across multiple websites, from Google Docs to research databases to learning management systems.
 
-Extension Architecture Overview
+## Extension Architecture Overview
 
 A Chrome extension for paraphrasing operates through three main components. The content script intercepts or receives text from the user on web pages. A background service worker handles API communication with your paraphrase backend. The popup or side panel provides the user interface for controlling the extension.
 
 For a functional paraphrase tool, you need a backend service that processes text. Popular options include OpenAI's GPT API, Anthropic's Claude API, or open-source alternatives like Ollama running locally. This guide focuses on the extension side, the code that makes your tool work within Chrome.
 
-Setting Up the Manifest
+## Setting Up the Manifest
 
 Every Chrome extension begins with the manifest file. For a paraphrase tool targeting students, you'll need manifest version 3 with specific permissions:
 
@@ -66,7 +64,7 @@ Every Chrome extension begins with the manifest file. For a paraphrase tool targ
 
 The `activeTab` permission allows your extension to interact with the current page when the user activates it. The `scripting` permission lets you inject content scripts that can read and modify page content.
 
-Content Script Implementation
+## Content Script Implementation
 
 The content script bridges your extension with web page content. You have two primary approaches: injecting a selection-based tool or providing a side panel for text input.
 
@@ -104,7 +102,7 @@ async function processText(text) {
 
 This script listens for messages from the popup and processes selected text on the page.
 
-Background Worker for API Calls
+## Background Worker for API Calls
 
 The background service worker handles communication with your paraphrase API. This separation keeps sensitive API keys secure and manages request lifecycle:
 
@@ -154,7 +152,7 @@ chrome.storage.sync.get(["apiKey"], (result) => {
 });
 ```
 
-Popup Interface
+## Popup Interface
 
 The popup provides the user interface. For student use, keep it simple and fast:
 
@@ -218,7 +216,7 @@ document.getElementById("paraphraseBtn").addEventListener("click", async () => {
 });
 ```
 
-Advanced Features for Students
+## Advanced Features for Students
 
 Beyond basic paraphrasing, consider adding features that specifically help students:
 
@@ -240,14 +238,13 @@ function paraphraseWithStyle(text, targetStyle) {
 }
 ```
 
-Deployment Considerations
+## Deployment Considerations
 
 When distributing your extension to students, you have two paths: the Chrome Web Store requires a $5 developer fee, while unpacked extensions work for direct distribution. For educational settings, school IT departments often prefer enterprise distribution through managed preferences.
 
 Always include clear privacy policies explaining how user text is processed. Students should know whether their text is stored or merely processed and returned.
 
 Building a paraphrase tool for students is a practical project that teaches core extension development concepts while creating something genuinely useful. Start with the basics, text selection and API integration, then add features based on actual student feedback.
-
 
 Related Reading
 

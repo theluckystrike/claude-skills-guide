@@ -13,17 +13,16 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Wazuh SIEM Workflow Tutorial
 
 Security Information and Event Management (SIEM) systems like Wazuh are essential for modern security operations, but managing alerts, analyzing logs, and responding to threats manually can overwhelm even experienced security teams. This tutorial shows you how to use Claude Code to automate Wazuh SIEM workflows, from alert triage to incident response and reporting.
 
-Setting Up Claude Code with Wazuh
+## Setting Up Claude Code with Wazuh
 
 Before diving into workflows, ensure Claude Code can communicate with your Wazuh deployment. You'll need API access to your Wazuh manager.
 
-Configuring Wazuh API Access
+## Configuring Wazuh API Access
 
 First, create a dedicated API user for Claude Code with read-only permissions initially:
 
@@ -55,7 +54,7 @@ Configure API settings in `/var/ossec/etc/ossec.conf`:
 </ossec_config>
 ```
 
-Creating a Wazuh Skill for Claude
+## Creating a Wazuh Skill for Claude
 
 Create a custom skill that provides Claude with Wazuh-specific capabilities:
 
@@ -85,11 +84,11 @@ Agent Management
 - `/api/v1/agents/<agent_id>/restart` - Restart agent
 ```
 
-Automated Alert Triage Workflow
+## Automated Alert Triage Workflow
 
 One of the most valuable Claude Code integrations is automated alert triage. Instead of manually reviewing every alert, Claude can prioritize and categorize them.
 
-Step 1: Fetch and Categorize Alerts
+## Step 1: Fetch and Categorize Alerts
 
 Create a bash script that fetches recent alerts:
 
@@ -114,7 +113,7 @@ curl -s -k -X GET \
   }' > /tmp/wazuh-alerts.json
 ```
 
-Step 2: Claude Analyzes and Prioritizes
+## Step 2: Claude Analyzes and Prioritizes
 
 Once you have the alerts in JSON format, instruct Claude to analyze them:
 
@@ -135,11 +134,11 @@ For each category, summarize:
 
 Claude will analyze the alerts, identify patterns, and provide actionable summaries. This dramatically reduces the time security analysts spend on initial triage.
 
-Threat Hunting Workflow
+## Threat Hunting Workflow
 
 Proactive threat hunting with Claude Code amplifies your security posture. Claude can help construct queries and analyze results.
 
-Building Hunt Queries
+## Building Hunt Queries
 
 Ask Claude to help build Wazuh queries based on threat intelligence:
 
@@ -167,7 +166,7 @@ Detection Mappings
 - Rule 100053: New service detected
 ```
 
-Automated IOC Extraction
+## Automated IOC Extraction
 
 After hunt results are obtained, ask Claude to extract indicators of compromise:
 
@@ -186,11 +185,11 @@ For each IOC, indicate:
 - Recommended action
 ```
 
-Incident Response Automation
+## Incident Response Automation
 
 When a security incident is confirmed, Claude Code can orchestrate initial response actions.
 
-Automated Containment Workflow
+## Automated Containment Workflow
 
 Create a response playbook:
 
@@ -238,7 +237,7 @@ if __name__ == "__main__":
         collect_forensics(agent_id, ["memory", "processes", "network"])
 ```
 
-Claude-Driven Response
+## Claude-Driven Response
 
 When Claude identifies a critical threat, it can execute the response:
 
@@ -256,11 +255,11 @@ Automated Response Actions:
 Execute the containment using /scripts/incident-response.py
 ```
 
-Building Custom Wazuh Rules
+## Building Custom Wazuh Rules
 
 Claude can also help you create custom detection rules based on your specific environment and threats.
 
-Rule Development Workflow
+## Rule Development Workflow
 
 ```
 Help me create a Wazuh custom rule to detect:
@@ -296,30 +295,30 @@ Claude will generate a rule like:
 </rule>
 ```
 
-Best Practices for Claude-Wazuh Integration
+## Best Practices for Claude-Wazuh Integration
 
-Security Considerations
+## Security Considerations
 
 - Use API keys, not basic auth - Rotate keys regularly
 - Implement least privilege - Create dedicated API users with minimal permissions
 - Log all Claude actions - Maintain audit trail for compliance
 - Review automated decisions - Never fully automate critical responses without human oversight
 
-Performance Optimization
+## Performance Optimization
 
 - Cache frequently queried data - Alert histories don't change
 - Use appropriate time ranges - Don't query more data than needed
 - Implement rate limiting - Respect Wazuh API limits
 - Schedule off-peak queries - Reduce impact on SIEM performance
 
-Continuous Improvement
+## Continuous Improvement
 
 - Tune false positives - Use Claude's analysis to identify recurring false alarms
 - Update threat intelligence - Regularly update IOC feeds
 - Refine response playbooks - Learn from each incident
 - Monitor Claude effectiveness - Track alert reduction and response times
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Wazuh SIEM transforms your security operations from reactive to proactive. By automating alert triage, empowering threat hunting, and orchestrating incident response, your security team can focus on sophisticated threats while Claude handles the repetitive analysis.
 

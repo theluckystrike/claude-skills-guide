@@ -17,13 +17,13 @@ Claude Code Webhook Handler Implementation Workflow Guide
 
 Webhook handlers form the backbone of event-driven architectures. Whether you're processing payments from Stripe, receiving GitHub push notifications, or handling Twilio SMS callbacks, reliable webhook implementation requires careful attention to security, validation, error handling, and idempotency. This guide walks you through implementing webhook handlers using Claude Code, using skills like the tdd skill for test-driven development and the supermemory skill for maintaining context across complex implementations.
 
-Why Claude Code Excels at Webhook Handler Development
+## Why Claude Code Excels at Webhook Handler Development
 
 Claude Code brings several advantages to webhook handler implementation. The ability to read your existing codebase, understand your project conventions, and generate appropriate code patterns makes it particularly effective for this task. Unlike generic code generation, Claude Code can adapt to your specific patterns, whether you follow Express middleware conventions, FastAPI dependencies, or Ruby on Rails controllers.
 
 When implementing webhook handlers, you'll typically work across multiple files: the handler itself, signature verification utilities, event routing logic, and tests. Claude Code maintains context across these files, ensuring consistency and reducing the mental overhead of managing complex implementations.
 
-Setting Up Your Webhook Handler Project
+## Setting Up Your Webhook Handler Project
 
 Before implementing webhook handlers, ensure your project has the right structure. A typical webhook handler project includes:
 
@@ -65,7 +65,7 @@ module.exports = router;
 
 Notice the use of `express.raw()` for the body parser. This is critical, it prevents Express from parsing the body prematurely, which would interfere with signature verification.
 
-Implementing Signature Verification
+## Implementing Signature Verification
 
 Signature verification prevents attackers from spoofing webhook events. Most webhook providers use HMAC signatures with a shared secret. Here's a verification utility:
 
@@ -96,7 +96,7 @@ The `timingSafeEqual` function protects against timing attacks by ensuring the c
 
 When working with Claude Code, you can prompt it to add support for different signature algorithms or adapt the verification logic for providers that use different schemes, like GitHub's format or Twilio's custom headers.
 
-Building the Event Router
+## Building the Event Router
 
 The event router directs incoming events to appropriate handlers based on event type. This pattern keeps your code organized as you add support for more event types:
 
@@ -146,7 +146,7 @@ async function handlePaymentSucceeded(paymentData) {
 }
 ```
 
-Handling Errors and Retries
+## Handling Errors and Retries
 
 Webhook providers typically expect a 2xx response within a reasonable timeframe. If your handler fails, you need a retry strategy. Most providers implement automatic retries with exponential backoff, but you should also implement idempotency in your handlers to prevent duplicate processing.
 
@@ -182,7 +182,7 @@ async function withIdempotency(eventId, handler) {
 
 For production systems, replace the in-memory Map with Redis or a database to maintain idempotency across restarts and across multiple server instances.
 
-Testing Webhook Handlers
+## Testing Webhook Handlers
 
 The tdd skill integrates well with webhook testing. Write tests that cover:
 
@@ -242,7 +242,7 @@ describe('Webhook endpoint', () => {
 });
 ```
 
-Integrating Claude Skills for Enhanced Development
+## Integrating Claude Skills for Enhanced Development
 
 Several Claude skills complement webhook handler development. The pdf skill helps generate API documentation from your handler specifications. When documenting webhook events for team members, you can use the skill to create comprehensive documentation files.
 
@@ -250,7 +250,7 @@ The supermemory skill proves valuable when implementing webhooks for multiple pr
 
 For frontend integration, the frontend-design skill helps build admin dashboards to monitor webhook events, display processing status, and handle retry logic through a user interface.
 
-Invoking Claude Code from Webhook Handlers
+## Invoking Claude Code from Webhook Handlers
 
 To use Claude Code's AI capabilities directly within your webhook flow, invoke it programmatically with context from the incoming payload. This pattern lets Claude analyze events, generate summaries, or suggest actions based on webhook data:
 
@@ -291,25 +291,25 @@ function buildPromptForEvent(type, payload) {
 
 This approach transforms your webhook handler into an AI-powered event processor, enabling natural language analysis of incoming payloads rather than purely rule-based routing.
 
-Practical Use Cases
+## Practical Use Cases
 
-Automated Code Review
+## Automated Code Review
 
 Configure GitHub webhooks to trigger Claude Code review when pull requests are opened. The webhook delivers the diff, and Claude analyzes changes for potential issues, style violations, or security concerns. Pair this with the tdd skill to auto-generate tests for modified functions.
 
-Documentation Updates
+## Documentation Updates
 
 When your documentation repository receives commits, webhooks can notify Claude Code to validate documentation links, check for broken references, or generate updated API documentation using the docx skill.
 
-Incident Response
+## Incident Response
 
 Integrate monitoring tool webhooks (PagerDuty, OpsGenie) with Claude Code to receive incident alerts. Claude analyzes the incident context, gathers relevant information from your supermemory skill, and suggests remediation steps based on historical patterns.
 
-Project Management Automation
+## Project Management Automation
 
 Connect project management webhooks to create tasks, update statuses, or notify team members automatically. Use the internal-comms skill to draft appropriate messages based on the webhook payload, keeping your team informed without manual intervention.
 
-Stripe-Specific Implementation
+## Stripe-Specific Implementation
 
 Stripe uses a timestamp-based signature scheme with replay attack prevention. Parse the `Stripe-Signature` header and validate within a tolerance window:
 
@@ -337,7 +337,7 @@ stripe trigger payment_intent.succeeded
 
 Handle Stripe-specific event types including `payment_intent.succeeded`, `customer.subscription.updated`, and `charge.dispute.created` for chargeback scenarios. Always use test mode API keys in development. never mix test and live keys.
 
-Best Practices Summary
+## Best Practices Summary
 
 Implementing reliable webhook handlers requires attention to several key areas:
 
@@ -351,7 +351,6 @@ Implementing reliable webhook handlers requires attention to several key areas:
 Claude Code streamlines this entire workflow by generating boilerplate, suggesting improvements, and helping you write thorough tests. The context-aware nature of Claude Code means it understands your project structure and can adapt implementations to match your existing patterns.
 
 With this workflow guide, you're equipped to implement webhook handlers that are secure, reliable, and maintainable. The combination of proper architecture, thorough testing, and Claude Code's assistance ensures your webhook integrations stand up to production demands.
-
 
 Related Reading
 

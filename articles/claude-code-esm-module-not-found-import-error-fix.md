@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code ESM Module Not Found Import Error Fix"
 description: "Learn how to resolve ESM module not found and import errors in Claude Code. Practical solutions for CommonJS vs ESM conflicts, package.json."
@@ -14,13 +13,9 @@ score: 7
 permalink: /claude-code-esm-module-not-found-import-error-fix/
 ---
 
-
-
-Claude Code ESM Module Not Found Import Error Fix
-
 If you're working with Claude Code and encounter the dreaded "Module not found" or "Cannot find module" error, you're not alone. This is one of the most common issues developers face when building skills that interact with JavaScript or TypeScript projects. we'll explore the root causes of these errors and provide practical solutions to fix them.
 
-Understanding ESM and CommonJS in Claude Code
+## Understanding ESM and CommonJS in Claude Code
 
 Before diving into fixes, it's essential to understand the difference between ES Modules (ESM) and CommonJS (CJS), as this distinction lies at the heart of most import errors.
 
@@ -28,7 +23,7 @@ ES Modules (`import`/`export` syntax) are the standard JavaScript module system 
 
 When Claude Code interacts with your project, it needs to correctly resolve modules based on your project's configuration. Understanding this helps you diagnose and fix import errors quickly.
 
-ESM vs CommonJS at a Glance
+## ESM vs CommonJS at a Glance
 
 | Feature | CommonJS (CJS) | ES Modules (ESM) |
 |---|---|---|
@@ -43,7 +38,7 @@ ESM vs CommonJS at a Glance
 
 This table matters because the error messages you see differ based on which direction the conflict runs. `ERR_REQUIRE_ESM` means CJS code tried to `require()` an ESM-only package. `ERR_UNKNOWN_FILE_EXTENSION` means Node.js couldn't determine the module type from the file extension. Each has a different fix.
 
-Diagnosing the Error Before Fixing It
+## Diagnosing the Error Before Fixing It
 
 Before applying any fix, identify which error you actually have. Copy the exact error text and match it against this reference:
 
@@ -59,7 +54,7 @@ Before applying any fix, identify which error you actually have. Copy the exact 
 
 Reading the error message carefully saves significant debugging time. The most common mistake is treating all module errors as "just install the package" when the actual problem is a module type mismatch.
 
-Common Causes of Module Not Found Errors
+## Common Causes of Module Not Found Errors
 
 1. Missing Dependencies
 
@@ -257,17 +252,17 @@ export default defineConfig({
 
 Each tool in your chain. TypeScript compiler, test runner, bundler, Node.js runtime. must independently know about your aliases. Fixing one without fixing the others produces errors that appear only in certain contexts.
 
-Troubleshooting Claude Code Specifically
+## Troubleshooting Claude Code Specifically
 
 When working with Claude Code skills, consider these additional factors:
 
-Skill Execution Context
+## Skill Execution Context
 
 Claude Code skills execute within a specific Node.js context. If your skill runs a script, that script inherits your project's module resolution settings. Ensure your skill's working directory has a proper `package.json` with correct dependencies.
 
 If your skill spawns a subprocess (for example, running a Node.js script via `exec` or `spawn`), the subprocess has its own module resolution context based on its `cwd`. Make sure the subprocess runs from a directory that has the required `package.json` and `node_modules`.
 
-Dependency Installation
+## Dependency Installation
 
 Before running any code that imports modules, verify dependencies are installed:
 
@@ -277,7 +272,7 @@ npm install
 
 In monorepo setups, also check that workspace dependencies are installed at the right level. A package in `packages/skill-runner` may need its own `npm install` even if the root has been installed.
 
-Checking Node Version
+## Checking Node Version
 
 ESM support requires Node.js version 14 or higher. Older versions won't recognize ESM syntax:
 
@@ -306,9 +301,9 @@ More specifically, here is the ESM support history by Node.js version:
 
 If you are on Node.js 20 or higher, note that Node.js 22 introduced an experimental flag (`--experimental-require-module`) that allows `require()` to load ESM modules, which may change how some errors behave. Do not rely on this in production until it is stable.
 
-Practical Examples
+## Practical Examples
 
-Example 1: Fixing a Simple Import
+## Example 1: Fixing a Simple Import
 
 Error:
 ```
@@ -330,7 +325,7 @@ import axios from 'axios';
 const axios = require('axios');
 ```
 
-Example 2: Converting CommonJS to ESM
+## Example 2: Converting CommonJS to ESM
 
 Error:
 ```
@@ -379,7 +374,7 @@ Use chalk v4 (last CJS version) instead of v5+ (ESM-only)
 npm install chalk@4
 ```
 
-Example 3: Handling Dual Packages
+## Example 3: Handling Dual Packages
 
 Some packages provide both CommonJS and ESM versions. This causes conflicts:
 
@@ -454,7 +449,7 @@ Or use `import.meta.resolve` in newer Node.js versions:
 const configPath = new URL('./config.json', import.meta.url).pathname;
 ```
 
-Debugging Module Resolution Step by Step
+## Debugging Module Resolution Step by Step
 
 When none of the standard fixes work, use these diagnostic commands to understand exactly what Node.js is doing.
 
@@ -488,7 +483,7 @@ List all versions of a package in your dependency tree (useful for version confl
 npm ls some-package
 ```
 
-Best Practices to Avoid Import Errors
+## Best Practices to Avoid Import Errors
 
 1. Use consistent module syntax: Choose either ESM or CommonJS for your project and stick with it. Mixed projects are harder to maintain and debug.
 
@@ -511,7 +506,7 @@ Best Practices to Avoid Import Errors
 
 8. Use `"exports"` in your own packages: If you are publishing or sharing internal packages, define `"exports"` explicitly rather than relying on implicit file-system access. This prevents accidental use of internal files.
 
-Conclusion
+## Conclusion
 
 ESM module not found errors in Claude Code typically stem from misconfigured package.json settings, missing dependencies, or incorrect import syntax. By understanding how Node.js resolves modules and following the fixes outlined in this guide, you can quickly diagnose and resolve these issues.
 
@@ -520,7 +515,6 @@ Remember to check your dependencies first, verify your `package.json` configurat
 With these practices, you'll spend less time debugging import errors and more time building with Claude Code. Module system problems are entirely avoidable with a consistent project setup and the right understanding of how CJS and ESM interact.
 
 If you continue to experience issues, consider using tools like `npm ls` to inspect your dependency tree or `node --trace-warnings` for detailed resolution debugging.
-
 
 Related Reading
 

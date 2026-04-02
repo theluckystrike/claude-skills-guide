@@ -13,14 +13,13 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-
 {% raw %}
 
-How to Spoof User Agent in Chrome for Development and Testing
+## How to Spoof User Agent in Chrome for Development and Testing
 
 Changing your user agent in Chrome is a common need for web developers testing responsive designs, debugging browser-specific issues, or simulating different devices. This guide covers practical methods to spoof user agent strings in Chrome, from built-in developer tools to automation frameworks.
 
-Understanding the User Agent String
+## Understanding the User Agent String
 
 Every HTTP request includes a User-Agent header that identifies the browser and operating system to servers. Websites use this information to serve appropriate content, but it also enables tracking and can cause issues when you need to test how your site appears to different browsers.
 
@@ -39,11 +38,11 @@ Breaking this down:
 
 When you spoof this string, you can see how servers respond to different browsers without maintaining multiple installations. Servers use the UA string for content negotiation, feature flags, analytics bucketing, and sometimes delivering entirely different page layouts.
 
-Why the UA String Still Matters
+## Why the UA String Still Matters
 
 Despite client hints and feature detection becoming more common, the User-Agent header remains widely used. CDN edge rules, A/B testing platforms, mobile redirect logic, and paywall systems all inspect UA strings. A server might redirect `Mobile Safari` UAs to an `m.` subdomain, serve a different ad network to Chrome vs Firefox, or gate certain features behind specific browser versions. Understanding this is what makes user agent spoofing a genuine debugging tool rather than a curiosity.
 
-Method 1: Chrome DevTools Device Emulation
+## Method 1: Chrome DevTools Device Emulation
 
 The simplest approach uses Chrome's built-in developer tools.
 
@@ -64,7 +63,7 @@ This custom UA persists for the entire DevTools session, across all page navigat
 
 Limitation: DevTools UA spoofing only applies to HTTP requests. JavaScript's `navigator.userAgent` will also reflect the custom value, but some browser fingerprinting APIs (like `navigator.userAgentData`) may still reveal the real browser identity.
 
-Method 2: Chrome Launch Flags for Custom User Agent
+## Method 2: Chrome Launch Flags for Custom User Agent
 
 For more control, launch Chrome with command-line flags to set a specific user agent. This approach applies the UA globally at the process level. every request from that Chrome instance uses the custom string.
 
@@ -74,13 +73,13 @@ macOS
 open -a Google\ Chrome --args --user-agent="Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1"
 ```
 
-Windows
+## Windows
 
 ```bash
 "C:\Program Files\Google\Chrome\Application\chrome.exe" --user-agent="Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
 ```
 
-Linux
+## Linux
 
 ```bash
 google-chrome --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -96,7 +95,7 @@ open -a "Google Chrome Canary" --args --user-agent="Mozilla/5.0 (Linux; Android 
 
 This lets you have one Chrome window with a normal UA and one with a spoofed UA running simultaneously.
 
-Method 3: Chrome Extensions for User Agent Switching
+## Method 3: Chrome Extensions for User Agent Switching
 
 Several extensions provide UI-based user agent switching with no command-line knowledge required:
 
@@ -108,11 +107,11 @@ Install from the Chrome Web Store, then configure your desired user agents throu
 
 Per-domain rules are a feature worth looking for. If you're testing your own site's mobile redirect logic, you want the spoofed UA only on your domain. not everywhere. ModHeader and Requestly both support this; the basic User-Agent Switcher extensions typically do not.
 
-Method 4: Puppeteer and Playwright for Automated Testing
+## Method 4: Puppeteer and Playwright for Automated Testing
 
 For programmatic testing, Puppeteer and Playwright let you set custom user agents in code. This is the right approach for CI/CD pipelines, regression test suites, and any situation where you need reproducible results.
 
-Puppeteer Example
+## Puppeteer Example
 
 ```javascript
 const puppeteer = require('puppeteer');
@@ -132,7 +131,7 @@ async function testWithUserAgent() {
 testWithUserAgent();
 ```
 
-Playwright Example
+## Playwright Example
 
 ```javascript
 const { chromium } = require('playwright');
@@ -153,7 +152,7 @@ async function testWithCustomUA() {
 testWithCustomUA();
 ```
 
-Testing Multiple User Agents in Parallel
+## Testing Multiple User Agents in Parallel
 
 Playwright's context model makes it straightforward to test multiple UAs in the same test run:
 
@@ -201,11 +200,11 @@ runTests();
 
 This pattern is useful for smoke-testing that your mobile redirect logic, bot-specific content, and desktop layout all work correctly. in a single test run.
 
-Method 5: Setting Headers in Network Requests
+## Method 5: Setting Headers in Network Requests
 
 For more advanced scenarios where you need to test specific request headers, use `setExtraHTTPHeaders` in Puppeteer or Playwright's route interception:
 
-Puppeteer: Extra Headers
+## Puppeteer: Extra Headers
 
 ```javascript
 const puppeteer = require('puppeteer');
@@ -224,7 +223,7 @@ async function testWithCustomHeaders() {
 }
 ```
 
-Playwright: Route Interception for Fine-Grained Control
+## Playwright: Route Interception for Fine-Grained Control
 
 ```javascript
 const { chromium } = require('playwright');
@@ -251,7 +250,7 @@ async function testWithRoutedHeaders() {
 
 Route interception is particularly useful when you need the browser's real UA for most requests (so the page renders normally) but want a custom UA for specific API calls your application makes.
 
-Practical Testing Scenarios
+## Practical Testing Scenarios
 
 Here are the most common situations where UA spoofing is genuinely necessary:
 
@@ -265,7 +264,7 @@ Third-party SDKs with UA gates: Analytics platforms, chat widgets, and A/B testi
 
 Rate limiting and bot protection: Some WAF rules trigger differently based on UA. If users report getting blocked unexpectedly, reproducing their UA string in your test environment can help isolate whether the WAF rule is the culprit.
 
-Comparison of Methods
+## Comparison of Methods
 
 | Method | Setup Time | Persistence | Automation Support | Per-Domain Rules |
 |--------|-----------|-------------|-------------------|-----------------|
@@ -274,7 +273,7 @@ Comparison of Methods
 | Extensions (ModHeader, etc.) | Minutes | Persistent | No | Yes |
 | Puppeteer/Playwright | Hours (first time) | In code | Yes | Yes (via routing) |
 
-Verification Techniques
+## Verification Techniques
 
 After setting a custom user agent, verify it actually took effect:
 
@@ -290,7 +289,7 @@ console.log(navigator.userAgent);
 
 4. Server-side logging: Add a log line to your backend that prints `req.headers['user-agent']`. This is the ground truth. it confirms the header arrived at your server, not just that the browser reported it locally.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Navigator.userAgentData is not spoofed: Chrome 90+ introduced the User-Agent Client Hints API (`navigator.userAgentData`). Basic UA spoofing does not affect this API. Detection scripts that call `navigator.userAgentData.getHighEntropyValues()` will still see the real browser. Playwright can override this through `browser.newContext({ userAgentData: ... })` but it requires careful setup.
 
@@ -300,14 +299,13 @@ Cached responses ignore UA changes: If your CDN or server caches responses witho
 
 Extension conflicts: If you have both a UA switcher extension and are also setting a UA via DevTools Network Conditions, the behavior can be unpredictable depending on which one takes effect last. Use one method at a time to avoid confusion.
 
-Conclusion
+## Conclusion
 
 Chrome provides multiple paths to spoof user agent strings, from quick DevTools emulation to programmatic automation with Puppeteer or Playwright. Choose the method matching your needs: quick visual testing, persistent sessions, or automated CI/CD pipelines.
 
 For one-off debugging, the DevTools Network Conditions panel is the fastest option with zero setup. For team workflows where you need consistent test coverage across UA variants, a Playwright test suite that parameterizes over a list of user agents gives you repeatable, reviewable results. For persistent manual testing sessions, an extension like ModHeader with per-domain rules strikes the right balance between convenience and precision.
 
 The key insight is that UA spoofing tests server and delivery logic. it does not substitute for running actual browsers. Use it as part of a broader cross-browser strategy, not as a replacement for it.
-
 
 Related Reading
 

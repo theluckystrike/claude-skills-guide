@@ -18,7 +18,7 @@ Claude Code responds dramatically better to well-structured prompts than to casu
 
 This guide provides practical techniques for writing prompts that get results.
 
-Start with Clear Task Framing
+## Start with Clear Task Framing
 
 The first sentence of your prompt should define what you want Claude to do. Avoid ambiguity in the opening.
 
@@ -48,11 +48,11 @@ Constraints:
 - Keep all existing unit tests passing
 ```
 
-Provide Relevant Context
+## Provide Relevant Context
 
 Claude performs better when it has the right context. Include the information Claude needs to make good decisions.
 
-Include Code Context
+## Include Code Context
 
 When asking Claude to modify code, provide relevant surrounding code:
 
@@ -72,7 +72,7 @@ async function handlePayment(req: Request): Promise<Response> {
 ```
 ```
 
-Set the Environment
+## Set the Environment
 
 Tell Claude about your project structure, dependencies, and constraints:
 
@@ -83,7 +83,7 @@ We use Prisma with PostgreSQL and follow the repository pattern for data access.
 
 This context prevents Claude from suggesting solutions that don't fit your stack.
 
-Break Down Complex Tasks
+## Break Down Complex Tasks
 
 Large, undifferentiated requests produce shallow results. [Break complex tasks into explicit steps](/best-way-to-scope-tasks-for-claude-code-success/):
 
@@ -99,7 +99,7 @@ I need to add user authentication to our API. Please:
 
 The numbered approach gives Claude a clear roadmap and lets you verify progress at each stage.
 
-Use Skills for Domain-Specific Prompts
+## Use Skills for Domain-Specific Prompts
 
 Claude Code's skill system provides specialized knowledge for particular domains. Invoking the right skill dramatically improves output quality:
 
@@ -112,11 +112,11 @@ Claude Code's skill system provides specialized knowledge for particular domains
 
 For complex features, break them into phases with checkpoints. Instead of "build an analytics dashboard," start with the data layer, verify it works, then prompt for the visualization layer. This incremental approach prevents massive code dumps that don't integrate cleanly.
 
-Specify Output Format
+## Specify Output Format
 
 Define exactly what you want the output to look like. This reduces back-and-forth and produces more useful results.
 
-Code Output Examples
+## Code Output Examples
 
 ```
 Generate a React component for displaying a todo list. Output should include:
@@ -126,7 +126,7 @@ Generate a React component for displaying a todo list. Output should include:
 - Export statement as named export
 ```
 
-Structured Text Output
+## Structured Text Output
 
 For non-code outputs, specify the format:
 
@@ -138,7 +138,7 @@ Analyze the API response times from the logs and provide:
 Use bullet points for the recommendations section.
 ```
 
-Use Constraints to Guide Behavior
+## Use Constraints to Guide Behavior
 
 Explicit constraints prevent unwanted behavior and keep Claude focused:
 
@@ -155,7 +155,7 @@ Constraints are especially useful for avoiding common pitfalls:
 - "Preserve all existing comments in the refactored code"
 - "Do not create new files; modify only the ones I specify"
 
-Using Claude Code's Skill System
+## Using Claude Code's Skill System
 
 [Claude Code's skill system lets you package effective prompts into reusable tools](/claude-skill-md-format-complete-specification-guide/). A well-written skill combines all the techniques above into a reusable format.
 

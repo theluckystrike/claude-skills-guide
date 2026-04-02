@@ -15,7 +15,7 @@ Claude Code Kafka Consumer Producer Tutorial Guide
 
 Apache Kafka has become the backbone of modern event-driven architectures. Whether you're building real-time analytics pipelines, microservice communication systems, or streaming applications, understanding how to effectively implement Kafka consumers and producers is essential. This guide walks you through building solid Kafka integrations using Claude Code, with practical examples you can apply immediately to your projects.
 
-Setting Up Your Kafka Environment
+## Setting Up Your Kafka Environment
 
 Before diving into code, ensure you have a working Kafka setup. For local development, the easiest approach is using Docker Compose. Create a `docker-compose.yml` file with Kafka and Zookeeper:
 
@@ -49,7 +49,7 @@ Start your containers with `docker-compose up -d`. Verify Kafka is running by cr
 docker exec kafka kafka-topics --create --topic test-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 ```
 
-Building a Kafka Producer with Claude Code
+## Building a Kafka Producer with Claude Code
 
 A producer publishes messages to Kafka topics. The following example demonstrates a production-ready producer that handles serialization, error handling, and configuration management:
 
@@ -100,7 +100,7 @@ Key producer configurations explained:
 - `retries=3` with `retry_backoff_ms` handles transient network failures
 - `value_serializer` converts Python dictionaries to JSON bytes for transmission
 
-Building a Kafka Consumer with Claude Code
+## Building a Kafka Consumer with Claude Code
 
 Consumers read messages from Kafka topics. A well-designed consumer handles partition assignment, offset management, and error recovery:
 
@@ -159,9 +159,9 @@ Consumer best practices:
 - Implement error handling within the message handler to prevent consumer crashes
 - Use `enable_auto_commit=True` for simple use cases, or manage offsets manually for exactly-once semantics
 
-Advanced Patterns for Production Systems
+## Advanced Patterns for Production Systems
 
-Exactly-Once Semantics
+## Exactly-Once Semantics
 
 For critical applications requiring exactly-once delivery, implement idempotent producers and transactions:
 
@@ -181,7 +181,7 @@ with producer.transaction():
     producer.send('topic2', value={'data': 'B'})
 ```
 
-Consumer Rebalance Handling
+## Consumer Rebalance Handling
 
 When Kafka reassigns partitions, your consumer must handle the transition gracefully:
 
@@ -199,7 +199,7 @@ consumer = KafkaConsumer(
 )
 ```
 
-Message Schema Management
+## Message Schema Management
 
 For solid systems, define message schemas using Avro or Protocol Buffers:
 
@@ -218,7 +218,7 @@ schema = parse_schema({
 })
 ```
 
-Actionable Advice for Claude Code Projects
+## Actionable Advice for Claude Code Projects
 
 1. Use environment variables for configuration: Never hardcode bootstrap servers or credentials. Use `.env` files with libraries like `python-dotenv`.
 
@@ -230,7 +230,7 @@ Actionable Advice for Claude Code Projects
 
 5. Graceful shutdown: Ensure your applications handle SIGTERM properly, committing offsets before exit to prevent message loss.
 
-Conclusion
+## Conclusion
 
 Building reliable Kafka consumers and producers requires attention to error handling, configuration, and monitoring. The patterns and examples in this guide provide a solid foundation for integrating Kafka into your Claude Code projects. Start with the basic producer and consumer implementations, then add exactly-once semantics, schema validation, and comprehensive monitoring as your requirements evolve.
 
@@ -249,7 +249,7 @@ Step 4. Add consumer group offset monitoring. Set up a monitoring dashboard that
 
 Step 5. Implement graceful shutdown for consumers. Kafka consumers killed without committing offsets will reprocess messages from the last committed offset on restart. Claude Code generates the signal handler that calls consumer.close() on SIGTERM and SIGINT, ensuring the consumer commits its current offset before exiting.
 
-Common Pitfalls
+## Common Pitfalls
 
 Committing offsets before processing completes. Auto-commit offsets every 5 seconds (the default) means your consumer might commit an offset before the message has been fully processed. If the consumer crashes after the commit but before the database write, the message is lost. Claude Code generates the manual commit pattern that only commits after the database write is confirmed.
 
@@ -261,7 +261,7 @@ Producing messages without error callbacks. The Kafka producer is asynchronous. 
 
 Not handling deserialization errors. If a producer sends a malformed message, the consumer's deserializer will throw an exception. Without handling this exception, the consumer gets stuck and cannot advance past the bad message. Claude Code generates the deserialization error handler that logs the raw bytes to a dead letter queue and advances the offset.
 
-Best Practices
+## Best Practices
 
 Use idempotent producers for exactly-once delivery. Enable idempotent producers to prevent duplicate messages from network retries. Combined with exactly-once transactions, you can build pipelines where each message is processed exactly once even under failure conditions. Claude Code generates the idempotent producer configuration.
 
@@ -271,7 +271,7 @@ Version your message schemas with backward compatibility. When you need to chang
 
 Test with realistic message rates. A consumer that handles 10 messages per second in a unit test may fail at 10,000 messages per second in production. Claude Code generates the load test script that ramps up message rate and measures consumer lag growth.
 
-Integration Patterns
+## Integration Patterns
 
 Faust stream processing. For Python services that need stream processing capabilities such as windowed aggregations and stateful transformations, Faust provides a higher-level API built on top of Kafka. Claude Code generates the Faust app definition with agents for your consumer topics.
 
@@ -279,16 +279,13 @@ Kafka Connect for database integration. For reading from or writing to databases
 
 Dead letter queue patterns. For messages that fail processing after all retries, a dead letter queue topic captures the failed message with metadata about the failure. Claude Code generates the DLQ producer wrapper and the monitoring alert that notifies your team when DLQ depth exceeds a threshold.
 
-
-Schema Evolution and Compatibility
+## Schema Evolution and Compatibility
 
 As your application evolves, message schemas change. Adding new fields, removing deprecated fields, or changing field types all require careful management to avoid breaking consumers that run on older code versions. The Confluent Schema Registry supports three compatibility modes: backward (new schema can read old messages), forward (old schema can read new messages), and full (both directions).
 
 Claude Code generates the schema evolution test that validates a proposed schema change against your registered compatibility mode before you publish it. The test fetches the current schema from the registry, applies your proposed change, and runs the compatibility check locally without making any registry updates. This prevents accidentally registering an incompatible schema that would break live consumers.
 
 For teams that manage schemas in files rather than through the registry directly, Claude Code generates the CI workflow that registers new schema versions from your schemas directory, enforces your compatibility mode, and fails the CI job if a proposed schema change violates compatibility.
-
-
 
 Related Reading
 

@@ -13,15 +13,11 @@ permalink: /claude-code-wiremock-api-mocking-guide/
 ---
 {% raw %}
 
-
-
-Claude Code WireMock API Mocking Guide
-
 API mocking is an essential skill for developers building integrations, testing edge cases, and working in environments where external services are unavailable or rate-limited. WireMock provides a flexible HTTP mock server that works smoothly within Claude Code workflows, enabling you to stub responses, simulate delays, and verify request patterns without relying on live endpoints.
 
 This guide shows you how to set up WireMock, integrate it with Claude Code, and apply practical patterns for testing your applications.
 
-What WireMock Offers
+## What WireMock Offers
 
 WireMock is an HTTP mock server written in Java that lets you create stubs and mocks for REST APIs, SOAP services, and other HTTP endpoints. It runs as a standalone process or embedded library, exposing a RESTful API for configuration. Key capabilities include:
 
@@ -32,7 +28,7 @@ WireMock is an HTTP mock server written in Java that lets you create stubs and m
 
 For Claude Code users, WireMock becomes especially powerful when combined with bash scripting and file operations, allowing you to programmatically control your mock server from within your development workflow.
 
-Setting Up WireMock
+## Setting Up WireMock
 
 The quickest way to start is using the standalone JAR. Run these commands in your Claude Code terminal:
 
@@ -46,7 +42,7 @@ java -jar wiremock.jar --port 8080
 
 WireMock now listens on `http://localhost:8080`. The admin interface is available at `http://localhost:8080/__admin/`.
 
-Creating Stubs with Claude Code
+## Creating Stubs with Claude Code
 
 You can create stubs by posting JSON to WireMock's admin API. This example demonstrates mocking a fictional payment service:
 
@@ -78,7 +74,7 @@ curl -X POST http://localhost:8080/__admin/mappings \
 
 This stub matches POST requests to `/api/v1/payments` containing an amount field and returns a successful transaction response. The advantage here is that your tests can run against predictable, controlled responses rather than hitting a real payment processor.
 
-Using WireMock with Test-Driven Development
+## Using WireMock with Test-Driven Development
 
 When practicing TDD, you define the expected behavior of external APIs before implementing the integration. WireMock serves as that contract. Consider a scenario where your application fetches user data:
 
@@ -110,7 +106,7 @@ Your code makes the HTTP call, receives this mocked response, and you can assert
 
 The tdd skill provides structured guidance for test-driven development workflows. Pairing TDD with WireMock ensures your mocks accurately represent the contracts your code depends on.
 
-Simulating Error Conditions
+## Simulating Error Conditions
 
 Testing success paths is only half the battle. You need to verify your application handles failures gracefully. WireMock makes this straightforward:
 
@@ -150,7 +146,7 @@ curl -X POST http://localhost:8080/__admin/mappings \
 
 These stubs let you test error handling, retry logic, and timeout configurations in your application without needing cooperation from external services.
 
-Verifying Request History
+## Verifying Request History
 
 WireMock records all requests it receives, enabling you to verify that your application actually called the expected endpoints:
 
@@ -164,7 +160,7 @@ curl "http://localhost:8080/__admin/requests?url=/api/webhooks"
 
 This is invaluable for debugging. If your tests fail, you can inspect exactly what your application sent to the mock server, helping you identify mismatches between expected and actual payloads.
 
-Advanced: Response Templating
+## Advanced: Response Templating
 
 WireMock supports Handlebars-based templating for dynamic responses:
 
@@ -189,7 +185,7 @@ curl -X POST http://localhost:8080/__admin/mappings \
 
 Templates let you echo back request data, generate unique identifiers, and create context-aware responses that mimic real API behavior more closely.
 
-Integration Tips
+## Integration Tips
 
 When combining WireMock with Claude Code, consider these patterns:
 
@@ -199,7 +195,7 @@ When combining WireMock with Claude Code, consider these patterns:
 
 The pdf skill can generate documentation for your API contracts, while frontend-design skills help if you're building a dashboard to manage mock configurations visually.
 
-Stopping WireMock
+## Stopping WireMock
 
 When you're done testing, stop the server:
 
@@ -210,10 +206,9 @@ pkill -f wiremock-standalone
 
 Or press `Ctrl+C` in the terminal where it runs.
 
-Summary
+## Summary
 
 WireMock transforms how you test HTTP-dependent code. By running a local mock server, you gain control over external dependencies, test edge cases including errors and timeouts, and verify that your application sends the right requests. Combined with Claude Code's bash execution and file handling capabilities, you can automate stub creation, integrate mocks into your test suite, and build reliable, maintainable integrations.
-
 
 Related Reading
 

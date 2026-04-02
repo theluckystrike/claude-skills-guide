@@ -13,7 +13,6 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
 {% raw %}
 AI Study Helper Chrome Extension: A Developer's Guide
 
@@ -21,7 +20,7 @@ Chrome extensions have become powerful tools for enhancing productivity, and AI-
 
 This guide covers the technical foundations of building an AI study helper Chrome extension, with practical code examples you can adapt for your own projects.
 
-Core Architecture
+## Core Architecture
 
 An AI study helper extension typically consists of three main components:
 
@@ -51,7 +50,7 @@ Here's a minimal manifest.json structure:
 }
 ```
 
-Content Script Implementation
+## Content Script Implementation
 
 The content script acts as your bridge between the web page and your AI functionality. For a study helper, you'll likely want to extract selected text, article content, or form inputs.
 
@@ -96,7 +95,7 @@ class ContentBridge {
 new ContentBridge();
 ```
 
-Background Worker and AI Integration
+## Background Worker and AI Integration
 
 The background service worker handles API calls to AI providers. This separation keeps your API keys secure and prevents blocking the UI during AI processing.
 
@@ -156,7 +155,7 @@ async function getApiKey() {
 }
 ```
 
-Storage and Settings Management
+## Storage and Settings Management
 
 Users need to configure their AI API keys and preferences. Use Chrome's storage API for persistent settings:
 
@@ -175,7 +174,7 @@ document.getElementById('saveSettings').addEventListener('click', async () => {
 });
 ```
 
-Practical Features for Study Helpers
+## Practical Features for Study Helpers
 
 Beyond basic text analysis, consider implementing these features:
 
@@ -237,7 +236,7 @@ function enableHighlighting() {
 }
 ```
 
-Security Considerations
+## Security Considerations
 
 When building AI study helpers, keep these security practices in mind:
 
@@ -246,7 +245,7 @@ When building AI study helpers, keep these security practices in mind:
 - Respect rate limits - Implement queuing and caching to avoid API throttling
 - Handle PII carefully - Be mindful that users might process sensitive educational materials
 
-Performance Optimization
+## Performance Optimization
 
 For extensions that process large amounts of content:
 
@@ -255,7 +254,7 @@ For extensions that process large amounts of content:
 3. Use web workers - Offload computational tasks from the main thread
 4. Implement debouncing - Prevent excessive API calls during rapid user interactions
 
-Deployment and Distribution
+## Deployment and Distribution
 
 Once your extension is ready:
 
@@ -266,7 +265,6 @@ Once your extension is ready:
 
 Building an AI study helper Chrome extension combines web development skills with AI integration, creating a genuinely useful tool for learners. Start with the basics - text selection and analysis - then iterate based on user feedback.
 
-
 Related Reading
 
 - [Chrome Extension Canvas LMS Helper: A Developer Guide](/chrome-extension-canvas-lms-helper/)
@@ -275,7 +273,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Building the AI Study Helper
+## Step-by-Step: Building the AI Study Helper
 
 1. Set up Manifest V3 with `storage`, `contextMenus`, and `sidePanel` permissions. The side panel keeps the study assistant visible while the student reads.
 2. Implement text selection to flashcard: right-click on selected text and choose "Create flashcard". The background script extracts the term and sends it to the AI API to generate a definition and example sentence.
@@ -284,7 +282,7 @@ Step-by-Step: Building the AI Study Helper
 5. Add quiz mode: in the side panel, show the term and ask the student to recall the definition. Show the answer on button click. Record the result and update the card's next_review.
 6. Export study sets: let students export their flashcards as CSV for import into Anki, Quizlet, or a printable sheet.
 
-Spaced Repetition Implementation
+## Spaced Repetition Implementation
 
 ```javascript
 // SM-2 simplified implementation
@@ -311,7 +309,7 @@ function updateCardSchedule(card, quality) {
 }
 ```
 
-Comparison with Existing Study Tools
+## Comparison with Existing Study Tools
 
 | Tool | Browser integration | AI generation | Spaced repetition | Export | Cost |
 |---|---|---|---|---|---|
@@ -323,7 +321,7 @@ Comparison with Existing Study Tools
 
 The key advantage is zero friction. flashcards are created from any web page without switching context, and the side panel keeps the review queue always accessible.
 
-Advanced: Concept Map Generation
+## Advanced: Concept Map Generation
 
 After a student creates 10+ flashcards from a single page, offer to generate a concept map that shows how the terms relate:
 
@@ -341,7 +339,7 @@ async function generateConceptMap(flashcards) {
 
 Render the concept map as an SVG in the side panel using D3.js bundled with the extension.
 
-Troubleshooting
+## Troubleshooting
 
 Flashcard generation producing incorrect definitions: Add the source text snippet to the AI prompt so it generates the definition in context rather than from general knowledge. A term means different things in different domains. "recursion" in computer science versus linguistics.
 

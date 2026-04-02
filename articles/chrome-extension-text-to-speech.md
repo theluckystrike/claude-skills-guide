@@ -18,7 +18,7 @@ Chrome Extension Text to Speech: A Developer Guide
 
 Text-to-speech functionality in Chrome extensions transforms written content into spoken audio, opening doors for accessibility tools, language learning applications, and productivity boosters. This guide covers the technical implementation, from Web Speech API integration to custom audio solutions, with real-world code patterns you can drop into your own projects.
 
-Understanding Text-to-Speech Options in Chrome
+## Understanding Text-to-Speech Options in Chrome
 
 Chrome provides two primary pathways for text-to-speech: the native Web Speech API and the Chrome ttsEngine API. The Web Speech API offers the quickest implementation path, working directly in content scripts without requiring additional permissions. The ttsEngine API gives you deeper control over speech synthesis, enabling custom voice options and advanced playback control.
 
@@ -36,7 +36,7 @@ Here is a comparison of the main approaches to help you choose:
 
 For most extension projects, the Web Speech API covers the vast majority of use cases. Upgrade to a cloud service when voice quality is a product requirement or when you need languages not supported by the user's OS.
 
-Building Your First Text-to-Speech Extension
+## Building Your First Text-to-Speech Extension
 
 Every Chrome extension begins with a manifest file. For text-to-speech functionality, you'll need manifest V3 with specific permissions:
 
@@ -158,7 +158,7 @@ document.getElementById('pitch').addEventListener('input', (e) => {
 
 This basic implementation reads the entire page content. For more refined control, consider extracting specific elements or providing text selection options.
 
-Implementing Selective Text Reading
+## Implementing Selective Text Reading
 
 Power users often want to read specific paragraphs or selected text rather than entire pages. Modify your content script to handle text selection:
 
@@ -212,7 +212,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
 This pattern allows users to highlight any text and have it read aloud immediately, without opening the popup at all.
 
-Working with Voice Options
+## Working with Voice Options
 
 The Web Speech API provides access to system voices through `speechSynthesis.getVoices()`. Different voices support different languages and have varying quality levels:
 
@@ -264,7 +264,7 @@ chrome.storage.sync.get(['selectedVoice', 'rate', 'pitch'], (result) => {
 });
 ```
 
-Chunking Long Text for Reliable Playback
+## Chunking Long Text for Reliable Playback
 
 One of the most common bugs in TTS extensions is that Chrome's speech synthesis silently stops mid-way through long texts. This is a known Chrome bug where `speechSynthesis` pauses after roughly 15 seconds and never resumes. The fix is to split text into manageable chunks:
 
@@ -314,7 +314,7 @@ function speakInChunks(text, options = {}) {
 
 This chunking approach solves the silent-stop bug and gives users a smoother experience across all OS/Chrome version combinations.
 
-Advanced: Custom Audio Generation
+## Advanced: Custom Audio Generation
 
 When the Web Speech API falls short. due to voice quality, offline requirements, or specific formatting needs. consider integrating external TTS services. Popular options include Google Cloud Text-to-Speech, Amazon Polly, and open-source solutions like Coqui TTS.
 
@@ -371,7 +371,7 @@ chrome.runtime.sendMessage(
 
 This hybrid approach combines the simplicity of Web Speech API for basic needs with the power of external services for advanced requirements.
 
-Testing and Debugging
+## Testing and Debugging
 
 Chrome provides useful debugging tools for TTS extensions. Access the console in your extension's popup or background page to monitor speech synthesis events. The Web Speech API fires events for state changes:
 
@@ -396,7 +396,7 @@ Test across different Chrome versions and platforms, as voice availability varie
 - ChromeOS which has a limited voice set
 - Linux where voice availability depends on installed packages
 
-Performance Considerations
+## Performance Considerations
 
 Text-to-speech can impact page performance if not managed carefully. Always cancel previous utterances before starting new ones:
 
@@ -412,7 +412,7 @@ For long texts, consider splitting content into chunks (see the chunking section
 - If integrating with an external API, debounce API calls to avoid redundant charges when a user selects text but quickly deselects it
 - Clean up `ObjectURL` instances created by `URL.createObjectURL()` after audio finishes playing
 
-Real-World Use Cases
+## Real-World Use Cases
 
 Understanding where TTS extensions actually get used helps you design better ones:
 
@@ -425,7 +425,6 @@ Research and focus. Listening while reading increases retention for many people.
 Content moderation and review pipelines. Internal tools where staff review large volumes of text documents can use TTS to reduce eye fatigue during long review sessions.
 
 Building a Chrome extension with text-to-speech functionality combines straightforward Web Speech API usage with the architectural flexibility Chrome extensions provide. Start with basic page reading, then expand based on user feedback. whether that means adding voice selection, offline support, or integration with external TTS services.
-
 
 Related Reading
 

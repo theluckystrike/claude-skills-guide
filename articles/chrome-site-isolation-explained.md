@@ -17,7 +17,7 @@ score: 8
 
 Chrome site isolation is a security architecture that treats each website as running in its own separate process. This fundamental design change protects users from cross-site scripting attacks, Spectre-like speculative execution vulnerabilities, and other browser-based threats. Understanding how site isolation works helps developers make informed decisions about security-sensitive web applications and debug cross-origin behavior that can otherwise seem arbitrary.
 
-How Site Isolation Works
+## How Site Isolation Works
 
 Chrome traditionally ran all tabs within a single renderer process, sharing memory space across different origins. When you open five websites, they typically share one or two browser processes. Site isolation changes this by enforcing strict process boundaries based on the "site" concept, a combination of scheme and registered domain.
 
@@ -63,11 +63,11 @@ The isolation architecture involves multiple Chrome processes working together:
 
 Each renderer process is sandboxed by the OS, meaning it cannot directly access the filesystem, network stack, or other processes' memory. Communication between the renderer and browser processes happens through a defined IPC channel with strict message validation.
 
-The Security Benefits
+## The Security Benefits
 
 Site isolation provides defense against several attack vectors that plague traditional browser architectures. Each benefit addresses a specific threat model.
 
-Cross-Site Scripting Containment
+## Cross-Site Scripting Containment
 
 Without isolation, an XSS vulnerability on one domain can attempt to steal cookies, tokens, or data from any other open tab via timing attacks or shared memory. Site isolation ensures that malicious code running in one origin cannot access the memory or state of other sites.
 
@@ -88,7 +88,7 @@ Without isolation, an XSS vulnerability on one domain can attempt to steal cooki
 
 This containment is meaningful even when an attacker fully compromises a renderer process. The sandbox prevents the compromised process from reaching beyond its assigned site.
 
-Spectre Mitigation
+## Spectre Mitigation
 
 The Spectre class of vulnerabilities (CVE-2017-5753, CVE-2017-5715) allows attackers to read arbitrary memory locations through timing side channels in speculative execution. JavaScript running in the browser can exploit these CPU-level vulnerabilities to read memory that belongs to other processes, or even to other parts of the same process.
 
@@ -96,7 +96,7 @@ By separating sites into distinct processes, Chrome limits the blast radius of a
 
 This is also why Chrome temporarily disabled high-resolution timers (`performance.now()`) and `SharedArrayBuffer` after Spectre became public in 2018. Those features make Spectre attacks significantly easier by providing precise timing. They were re-enabled later for pages that opt into explicit isolation via COOP and COEP headers (covered below).
 
-Renderer Process Compromise Isolation
+## Renderer Process Compromise Isolation
 
 When a renderer process is compromised through a browser vulnerability (not just JavaScript, sometimes a malformed image or video codec can trigger a renderer bug), process isolation prevents lateral movement. The attacker controls one sandboxed renderer. They cannot:
 
@@ -106,11 +106,11 @@ When a renderer process is compromised through a browser vulnerability (not just
 
 This does not make Chrome invulnerable, there are documented sandbox escapes, but it raises the cost and complexity of a full browser compromise significantly.
 
-Verifying Site Isolation in Your Browser
+## Verifying Site Isolation in Your Browser
 
 Chrome enables site isolation by default for most users since Chrome 67. You can verify its status and observe its behavior through several built-in tools.
 
-Checking via chrome://process-internals
+## Checking via chrome://process-internals
 
 Navigate to `chrome://process-internals` in your browser. This page displays active renderer processes and their assigned sites. You should see different process IDs for different registered domains, and the same process ID for subdomains sharing a registered domain:
 
@@ -128,7 +128,7 @@ Renderer Process 4861: https://widget.third-party.com
 
 The cross-site iframe getting its own process is a key site isolation behavior. Before site isolation, that iframe would share a process with the page embedding it, creating a potential attack surface.
 
-Checking via chrome://flags
+## Checking via chrome://flags
 
 You can inspect and configure isolation settings:
 
@@ -136,7 +136,7 @@ You can inspect and configure isolation settings:
 2. Search for "site isolation" or "site-per-process"
 3. Check `chrome://flags/#enable-site-per-process`. this is enabled by default
 
-Enabling Strict Site Isolation
+## Enabling Strict Site Isolation
 
 Standard site isolation assigns each registered domain its own process. Strict site isolation goes further by isolating frames even when they share a registered domain but differ in subdomain:
 
@@ -146,11 +146,11 @@ Standard site isolation assigns each registered domain its own process. Strict s
 
 With strict isolation, `https://api.example.com` embedded in `https://www.example.com` gets its own renderer process. This provides maximum protection at the cost of slightly higher memory usage, and can expose cross-origin assumption bugs in web applications that relied on subdomain sharing.
 
-Developer Considerations
+## Developer Considerations
 
 Site isolation has real consequences for how cross-origin communication and storage work. Understanding these details prevents debugging time spent on mysterious behavior.
 
-Cross-Origin Communication
+## Cross-Origin Communication
 
 With site isolation, cross-origin frames run in separate processes with no shared memory. Direct property access across origin boundaries is blocked. The `postMessage` API is the standard approach for intentional cross-origin communication:
 
@@ -200,7 +200,7 @@ document.domain = 'example.com'; // No longer grants shared access
 
 Chrome deprecated `document.domain` mutability in Chrome 115. Applications that relied on this pattern need to migrate to `postMessage` or a proper API backend.
 
-Storage Isolation
+## Storage Isolation
 
 Site isolation affects how browser storage is scoped. The rules are consistent but worth knowing explicitly:
 
@@ -215,7 +215,7 @@ Site isolation affects how browser storage is scoped. The rules are consistent b
 
 The `localStorage` behavior surprises many developers. `localStorage` set on `https://api.example.com` is completely invisible to code running on `https://www.example.com`, even though they share the same registered domain. If your application uses `localStorage` for shared state between subdomains, you need to either consolidate to a single subdomain or use cookies with a `Domain=.example.com` flag.
 
-Performance Implications
+## Performance Implications
 
 Site isolation increases memory usage because each site requires a separate OS process with its own heap. A fresh renderer process typically costs 30–80MB of memory before loading any content. This is manageable for users with a few tabs open but becomes noticeable with many tabs across many distinct sites.
 
@@ -227,7 +227,7 @@ Chrome manages this overhead through several strategies:
 
 For developers, the practical impact is that applications with many cross-origin iframes (ads, widgets, analytics, embeds) will consume more memory per page load than they did before site isolation was enforced.
 
-Advanced: Controlling Isolation with COOP and COEP
+## Advanced: Controlling Isolation with COOP and COEP
 
 Developers can opt their pages into stricter isolation using HTTP response headers. This unlocks powerful browser APIs that are disabled by default due to Spectre risk.
 
@@ -263,7 +263,7 @@ Available values:
 | `require-corp` | All cross-origin subresources must opt in via CORP or CORS |
 | `credentialless` | Cross-origin resources load without credentials; no CORP opt-in needed |
 
-Combining COOP and COEP for Cross-Origin Isolation
+## Combining COOP and COEP for Cross-Origin Isolation
 
 When you set both headers to their strictest values, your page achieves "cross-origin isolated" status:
 
@@ -310,7 +310,7 @@ Cross-Origin-Resource-Policy: same-origin
 
 A common pattern: your API server sets `Cross-Origin-Resource-Policy: same-site` on all responses so that pages on subdomains can include the resource while COEP-enabled pages work correctly.
 
-Debugging Site Isolation Issues
+## Debugging Site Isolation Issues
 
 Site isolation introduces behaviors that can look like bugs if you're unfamiliar with the underlying mechanics.
 
@@ -329,12 +329,11 @@ Cause: The third-party resource doesn't include `Cross-Origin-Resource-Policy: c
 Symptom: `document.domain` mutation is ignored or throws.
 Cause: Chrome deprecated `document.domain` mutability. Migrate to `postMessage`.
 
-Summary
+## Summary
 
 Chrome site isolation represents a fundamental shift in browser security architecture. By treating each registered domain as a separate renderer process, Chrome provides meaningful protection against cross-site attacks, speculative execution vulnerabilities, and compromised renderer escalation. For developers, understanding this architecture informs better security decisions, explains storage scoping behavior that can otherwise seem inconsistent, and guides the implementation of proper cross-origin communication patterns.
 
 The default isolation level suits most applications. Developers building performance-sensitive applications that need `SharedArrayBuffer` or high-resolution timers should implement COOP and COEP headers. Developers debugging subdomain state-sharing issues should audit their use of `localStorage` and `document.domain`. Browser vendors continue to refine these protections as new vulnerabilities emerge, making Chrome's process architecture meaningfully more secure with each release.
-
 
 Related Reading
 

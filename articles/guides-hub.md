@@ -18,7 +18,7 @@ This hub is the master index for every general Claude Code guide in the library.
 
 The guides cluster covers depth-first explanations and reference material. If you want step-by-step tutorials, see the [Tutorials Hub](/tutorials-hub/). If you want workflow automation patterns, see the [Workflows Hub](/workflows-hub/).
 
-Table of Contents
+## Table of Contents
 
 1. [MCP Servers and the Model Context Protocol](#mcp-servers-and-the-model-context-protocol)
 2. [Security and Compliance](#security-and-compliance)
@@ -34,7 +34,7 @@ Table of Contents
 
 ---
 
-MCP Servers and the Model Context Protocol
+## MCP Servers and the Model Context Protocol
 
 The Model Context Protocol is the extension layer that lets Claude skills reach outside the conversation and interact with external services. MCP servers act as sandboxed interfaces between Claude and real-world systems: databases, cloud APIs, message queues, search engines, and monitoring tools.
 
@@ -74,7 +74,7 @@ Specific MCP servers:
 
 ---
 
-Security and Compliance
+## Security and Compliance
 
 Security is one of Claude Code's strongest applied domains. Claude understands security patterns at the code level. input validation, credential scanning, CSP headers, OWASP vulnerabilities. and at the compliance level. GDPR data flows, HIPAA safeguards, SOC 2 controls. The guides in this section cover both.
 
@@ -99,7 +99,7 @@ Security is one of Claude Code's strongest applied domains. Claude understands s
 
 ---
 
-Language and Framework Guides
+## Language and Framework Guides
 
 Claude Code adapts to every major programming language and framework. These guides provide language-specific configuration, patterns, and best practices. from React frontends to Rust systems programming to mobile development on Kotlin and Flutter.
 
@@ -150,7 +150,7 @@ Localization and Accessibility
 
 ---
 
-Claude MD Configuration
+## Claude MD Configuration
 
 CLAUDE.md is the project-level configuration file that tells Claude Code how to behave in a specific codebase. It encodes your team's conventions, preferred libraries, naming standards, and architectural decisions. These guides cover everything from initial setup to advanced multi-codebase management.
 
@@ -165,7 +165,7 @@ CLAUDE.md is the project-level configuration file that tells Claude Code how to 
 
 ---
 
-Skill Architecture and Management
+## Skill Architecture and Management
 
 These guides address the structural questions that come up once you have more than a handful of skills: how to organize them, version them, share them, and measure their effectiveness.
 
@@ -208,7 +208,7 @@ These guides address the structural questions that come up once you have more th
 
 ---
 
-Enterprise and Team Adoption
+## Enterprise and Team Adoption
 
 Enterprise Claude Code deployment introduces questions around governance, onboarding, change management, and organizational rollout that solo developer workflows don't face. This section covers them.
 
@@ -235,7 +235,7 @@ Enterprise Claude Code deployment introduces questions around governance, onboar
 
 ---
 
-Performance and Token Optimization
+## Performance and Token Optimization
 
 Token cost is real. These guides focus on extracting maximum value from each Claude interaction by reducing unnecessary token consumption without sacrificing output quality.
 
@@ -257,7 +257,7 @@ Token cost is real. These guides focus on extracting maximum value from each Cla
 
 ---
 
-Productivity and Vibe Coding
+## Productivity and Vibe Coding
 
 Vibe coding represents a workflow shift: generating working code through rapid iteration with AI assistance rather than typing every line from scratch. These guides cover the emerging practices around this workflow and general Claude Code productivity.
 
@@ -277,7 +277,7 @@ Vibe coding represents a workflow shift: generating working code through rapid i
 
 ---
 
-Tools and Comparisons
+## Tools and Comparisons
 
 How does Claude Code compare to alternatives? These guides provide honest, technical comparisons and decision frameworks.
 
@@ -291,7 +291,7 @@ How does Claude Code compare to alternatives? These guides provide honest, techn
 
 ---
 
-Community, Ecosystem, and Roadmap
+## Community, Ecosystem, and Roadmap
 
 - [AI Agent Skills Standardization Efforts 2026](/ai-agent-skills-standardization-efforts-2026/). Industry standardization efforts for AI agent skills
 - [Claude Code Skills Roadmap 2026: What Is Coming](/claude-code-skills-roadmap-2026-what-is-coming/). Upcoming Claude Code skill features
@@ -300,7 +300,7 @@ Community, Ecosystem, and Roadmap
 
 ---
 
-Complete Article Index
+## Complete Article Index
 
 This section lists every article in the guides cluster alphabetically for quick lookup.
 
@@ -487,7 +487,7 @@ This section lists every article in the guides cluster alphabetically for quick 
 
 ---
 
-Related Hubs
+## Related Hubs
 
 - [Getting Started Hub](/getting-started-hub/). Installation, first skill, and interface fundamentals
 - [Tutorials Hub](/tutorials-hub/). Step-by-step tutorials for specific stacks and workflows

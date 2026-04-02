@@ -16,13 +16,13 @@ permalink: /claude-skills-governance-security-audit-checklist/
 
 [As Claude Code adoption grows across development teams, establishing a security audit process for skills becomes essential](/best-claude-code-skills-to-install-first-2026/) Whether you are deploying community skills like `pdf` or `tdd` for document processing and test-driven development, or building internal skills that access sensitive APIs, governance gaps can expose your organization to risk. This checklist provides a systematic approach to auditing Claude skills before production deployment.
 
-Understanding the Security Surface
+## Understanding the Security Surface
 
 Claude skills interact with your system through tools that read files, execute commands, and access network resources. Each skill you install potentially expands your attack surface. The governance challenge lies in understanding what each skill can do, who can invoke it, and what data it can access.
 
 Before auditing individual skills, establish baseline assumptions about skill behavior. By default, skills inherit permissions from the Claude Code instance, but custom skills can define restricted tool sets. Community skills from the Skills MP or GitHub repositories vary significantly in their permission requirements and security posture.
 
-Pre-Installation Audit Checklist
+## Pre-Installation Audit Checklist
 
 1. Source Verification
 
@@ -48,7 +48,7 @@ Examine how the skill invokes tools. Dangerous patterns include:
 
 Skills that wrap shell commands require extra scrutiny. The `tdd` skill, for instance, executes test commands but should do so through controlled interfaces rather than raw shell invocation.
 
-Post-Installation Governance Checks
+## Post-Installation Governance Checks
 
 4. Runtime Permission Verification
 
@@ -75,7 +75,7 @@ The [`supermemory` skill](/claude-supermemory-skill-persistent-context-explained
 
 When multiple skills run in the same session, they share context and may interact in unexpected ways. Document which skills you use together and verify no skill can access data another skill has processed inappropriately.
 
-Ongoing Governance Practices
+## Ongoing Governance Practices
 
 7. Regular Re-Audit Schedule
 
@@ -93,7 +93,7 @@ Define procedures for when a skill behaves unexpectedly. Know how to:
 - Revoke tool permissions for misbehaving skills
 - Audit what data the skill accessed before detection
 
-Practical Example: Auditing a Custom Skill
+## Practical Example: Auditing a Custom Skill
 
 Suppose your team built a custom skill for CI/CD pipeline management. Here is how you would apply this checklist:
 
@@ -107,7 +107,7 @@ Step 3: After installation, run the skill with a test project and verify it only
 
 Step 4: Confirm the skill does not log sensitive pipeline credentials. The `tdd` skill demonstrates good practice here, it runs tests without exposing environment variables in output.
 
-Security Considerations for Specific Skill Categories
+## Security Considerations for Specific Skill Categories
 
 Different skill categories present different risks. Here are category-specific considerations:
 
@@ -119,7 +119,7 @@ Frontend skills (`frontend-design`): These may invoke browser automation or acce
 
 Memory skills (`supermemory`): These store context persistently. Audit what gets stored, implement encryption at rest if required by your compliance framework, and establish retention policies.
 
-Building Your Governance Framework
+## Building Your Governance Framework
 
 This checklist provides a foundation, but adapt it to your organization's risk tolerance and compliance requirements. High-security environments may require additional controls like sandboxed execution environments or mandatory code review for all skill installations.
 

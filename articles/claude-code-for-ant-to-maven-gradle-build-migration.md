@@ -16,13 +16,13 @@ permalink: /claude-code-for-ant-to-maven-gradle-build-migration/
 
 [Migrating legacy Java projects from Ant to Maven or Gradle is a common but error-prone task](/best-claude-code-skills-to-install-first-2026/) The XML-heavy build files, custom targets, and dependency management differences make manual migration risky. Claude Code, combined with its specialized skills, provides a powerful toolkit for automating this transition while maintaining build parity.
 
-Understanding the Migration Challenge
+## Understanding the Migration Challenge
 
 Ant builds rely on explicit task definitions in `build.xml`. Each target specifies exact commands, making dependency management manual and builds difficult to reproduce. Maven introduced convention-over-configuration with standardized project layouts and transitive dependencies. Gradle offers flexibility through DSL-based build scripts with Maven-compatible repositories.
 
 [The migration involves several critical steps: analyzing the Ant build structure, mapping dependencies](/claude-tdd-skill-test-driven-development-workflow/), converting custom tasks to plugins, and validating build outputs. Claude Code can assist at each stage, but using the right skills amplifies productivity.
 
-Analyzing Your Ant Build Structure
+## Analyzing Your Ant Build Structure
 
 Before writing any Maven or Gradle configuration, you need a complete inventory of your Ant build. Use Claude Code with file system access to examine the build.xml and any imported XML files.
 
@@ -42,7 +42,7 @@ For large projects with multiple Ant files, ask Claude Code to create a dependen
 Map all build.xml files in this project showing which files call which targets, output as markdown
 ```
 
-Converting Dependencies to Maven or Gradle Format
+## Converting Dependencies to Maven or Gradle Format
 
 The dependency section in Ant often uses explicit JAR paths or customlib folders. Maven and Gradle use centralized dependency coordinates. Claude Code can parse these and suggest replacements.
 
@@ -61,7 +61,7 @@ Convert the above to Gradle dependencies with implementation and testImplementat
 
 When dealing with dependencies not in public repositories, you have two options: publish to your internal repository or use file dependencies during the transition period. [The supermemory skill helps track these custom dependencies across migration phases](/claude-supermemory-skill-persistent-context-explained/).
 
-Mapping Ant Tasks to Maven Plugins
+## Mapping Ant Tasks to Maven Plugins
 
 Ant allows arbitrary task composition. Maven uses plugins with fixed execution phases. This is where migration complexity increases significantly.
 
@@ -87,7 +87,7 @@ Create a maven-compiler-plugin configuration for Java 17 with source and target 
 Create equivalent Gradle tasks for Java 17 with test using JUnit 5, output as Groovy DSL
 ```
 
-Handling Custom Ant Tasks
+## Handling Custom Ant Tasks
 
 Legacy builds often include custom Java tasks or scripts. Claude Code can help refactor these into Maven plugins or Gradle tasks.
 
@@ -103,7 +103,7 @@ For simple custom tasks, conversion to a Maven plugin or Gradle task may be stra
 Create a maven-antrun-plugin configuration that executes the 'dist' target from the original build.xml
 ```
 
-Preserving Build Properties
+## Preserving Build Properties
 
 Ant builds often use property files for environment-specific configuration. Maven and Gradle handle this through profiles and property injection.
 
@@ -117,7 +117,7 @@ Claude Code can then generate appropriate Maven profiles or Gradle task configur
 Create three Maven profiles for dev, staging, and production environments with the extracted properties
 ```
 
-Validating Build Parity
+## Validating Build Parity
 
 After migration, you must verify that Maven or Gradle produces identical outputs. [The tdd skill helps create validation tests](/claude-tdd-skill-test-driven-development-workflow/), though you might also compare artifacts directly.
 
@@ -133,7 +133,7 @@ For comprehensive validation, compare directory structures:
 Show differences between ant's target/dist directory and gradle's build/libs directory
 ```
 
-Automation Workflow for Large Projects
+## Automation Workflow for Large Projects
 
 For enterprise migrations with multiple modules, a systematic approach prevents errors. Create a migration skill that encapsulates your process:
 
@@ -160,7 +160,7 @@ Run each phase sequentially, validating before proceeding.
 
 Load this as a custom skill to maintain consistency across team members working on migration.
 
-Handling Multi-Module Projects
+## Handling Multi-Module Projects
 
 Large projects often use Ant's subprojects with separate build files. Maven and Gradle handle multi-module builds natively.
 
@@ -174,7 +174,7 @@ Create equivalent Gradle settings.gradle with subprojects api, core, webapp
 
 The frontend-design skill proves useful if your project includes web resources requiring processing during the build.
 
-Gradle vs Maven Decision Factors
+## Gradle vs Maven Decision Factors
 
 The choice between Maven and Gradle affects long-term maintainability. Consider these factors:
 
@@ -196,7 +196,7 @@ Ask Claude Code for a recommendation based on your project characteristics:
 Should I migrate to Maven or Gradle given: 50+ modules, Kotlin and Java, complex CI/CD with conditions, team familiar with both
 ```
 
-Common Migration Pitfalls
+## Common Migration Pitfalls
 
 Several issues frequently cause migration failures:
 
@@ -208,7 +208,7 @@ Custom ANT tasks: Complex custom tasks may require significant refactoring. Cons
 
 Test configuration: Ant test setups vary widely. Maven's surefire and Gradle's test tasks have different conventions, use the pdf skill to extract test configuration from Ant if documentation exists.
 
-Conclusion
+## Conclusion
 
 Migrating from Ant to Maven or Gradle requires careful analysis and systematic conversion. Claude Code accelerates this process through intelligent file parsing, configuration generation, and build comparison. The key is treating migration as a multi-phase project: inventory first, then map, configure, wrap complex tasks, and validate thoroughly.
 

@@ -13,17 +13,16 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Viem Ethereum Workflow Guide
 
 Viem has emerged as one of the most performant and developer-friendly Ethereum libraries for TypeScript applications. When combined with Claude Code, you can dramatically accelerate your smart contract interactions, from initial setup to production deployment. This guide walks you through practical workflows that will make your Ethereum development more efficient.
 
-Setting Up Viem with Claude Code
+## Setting Up Viem with Claude Code
 
 Before diving into workflows, ensure your project is properly configured. Claude Code can help you scaffold the entire setup in minutes.
 
-Project Initialization
+## Project Initialization
 
 Start by creating a new TypeScript project with Viem installed. A typical prompt to Claude Code might be: "Set up a new TypeScript project with Viem, dotenv, and Vitest for testing. Create a proper tsconfig, install dependencies, and scaffold a src/client.ts file with a public client for mainnet using Alchemy as the primary RPC." Claude Code will generate a complete directory structure:
 
@@ -43,7 +42,7 @@ my-eth-project/
 
 Your `viem` client configuration should include proper chain support and transport layers. Claude Code understands Ethereum RPC semantics and can help you configure optimal settings for both development and production environments.
 
-Client Configuration Best Practices
+## Client Configuration Best Practices
 
 A well-configured Viem client is crucial for reliable Ethereum interactions. Here's what you should include:
 
@@ -105,7 +104,7 @@ export function createSigner(privateKey: `0x${string}`) {
 
 The `batch.multicall` option tells Viem to automatically batch `readContract` calls that fire within the same tick into a single `eth_call` via the Multicall3 contract. Claude Code can audit your existing code and identify which patterns benefit from this setting.
 
-Viem vs Ethers.js: Choosing the Right Library
+## Viem vs Ethers.js: Choosing the Right Library
 
 If you are migrating from ethers.js or evaluating options, this comparison table gives you the key differences:
 
@@ -123,9 +122,9 @@ If you are migrating from ethers.js or evaluating options, this comparison table
 
 Viem's ABI type inference is its biggest advantage for TypeScript projects. When you pass a typed ABI, TypeScript knows the exact argument types and return types for every function, eliminating a whole class of runtime errors. Claude Code can generate typed ABI constants from your contract source or a deployed address automatically.
 
-Smart Contract Interaction Workflows
+## Smart Contract Interaction Workflows
 
-Reading Contract Data
+## Reading Contract Data
 
 One of the most common tasks is reading data from smart contracts. Claude Code excels at generating type-safe read operations.
 
@@ -173,7 +172,7 @@ export async function getTokenInfo(address: `0x${string}`) {
 }
 ```
 
-Writing Transactions
+## Writing Transactions
 
 When writing to smart contracts, the workflow becomes more complex due to gas estimation, nonce management, and transaction confirmation. Here's how Claude Code helps:
 
@@ -247,7 +246,7 @@ Claude Code can also help you implement:
 - Event watching and filtering
 - Batch operations for efficiency
 
-Watching Events
+## Watching Events
 
 Event watching is another area where Claude Code dramatically reduces boilerplate. A request like "watch for Transfer events on this ERC-20 contract and call my callback with formatted data" yields:
 
@@ -289,9 +288,9 @@ const unwatch = watchTransfers(
 setTimeout(unwatch, 60_000)
 ```
 
-Error Handling and Debugging
+## Error Handling and Debugging
 
-Common Pitfalls
+## Common Pitfalls
 
 Viem's type system catches many errors at compile time, but runtime issues still occur. Claude Code can help you anticipate and handle common problems:
 
@@ -305,7 +304,7 @@ Contract Errors
 - Insufficient gas estimation
 - Nonce conflicts
 
-Decoding Custom Contract Errors
+## Decoding Custom Contract Errors
 
 One of Viem's strongest debugging features is automatic custom error decoding. When a contract reverts with a custom error, Viem can decode it directly from your ABI. Claude Code can scaffold the error-handling wrapper:
 
@@ -339,7 +338,7 @@ export async function safeContractWrite(writePromise: Promise<`0x${string}`>) {
 }
 ```
 
-Debugging Workflow
+## Debugging Workflow
 
 When something goes wrong, use Claude Code's debugging capabilities:
 
@@ -354,7 +353,7 @@ import { debug } from 'viem'
 
 A practical debugging prompt for Claude Code: "Here is the transaction hash 0xabc... and my contract ABI. The transaction reverted. Use `publicClient.getTransactionReceipt` and `publicClient.call` to replay the call and decode the revert reason." Claude Code will write the diagnostic script, run it, and explain the root cause.
 
-Error Classification Table
+## Error Classification Table
 
 | Error Type | Viem Class | Common Cause | Fix |
 |---|---|---|---|
@@ -365,9 +364,9 @@ Error Classification Table
 | Nonce too low | `NonceTooLowError` | Pending tx queue | Fetch fresh nonce before retry |
 | Invalid ABI | `AbiDecodingError` | ABI mismatch | Verify ABI against deployed bytecode |
 
-Performance Optimization
+## Performance Optimization
 
-Batching and Caching
+## Batching and Caching
 
 For applications reading multiple values, batching requests significantly improves performance:
 
@@ -419,7 +418,7 @@ export async function batchBalances(
 }
 ```
 
-Caching Strategies
+## Caching Strategies
 
 Implement caching for frequently accessed data:
 
@@ -461,9 +460,9 @@ const totalSupply = await cachedReadContract(
 
 For multi-instance deployments, replace the Map with Redis using `ioredis`. Claude Code can generate the Redis adapter with TTL serialization and JSON handling in a single prompt.
 
-Testing Your Viem Code
+## Testing Your Viem Code
 
-Unit Testing with Mock Transport
+## Unit Testing with Mock Transport
 
 Claude Code can help you set up comprehensive tests using Viem's mock transport:
 
@@ -520,7 +519,7 @@ describe('getTokenInfo', () => {
 })
 ```
 
-Integration Testing with Anvil
+## Integration Testing with Anvil
 
 For integration tests, use testnets like Sepolia or Anvil (local development chain):
 
@@ -591,9 +590,9 @@ it('transfers USDC on a mainnet fork', async () => {
 
 This pattern lets you test against real mainnet state without spending ETH, and Claude Code can generate the full suite from a simple description of your desired test scenarios.
 
-Production Considerations
+## Production Considerations
 
-Monitoring and Observability
+## Monitoring and Observability
 
 When deploying to production:
 
@@ -632,7 +631,7 @@ function withInstrumentation(transport: ReturnType<typeof http>) {
 
 Claude Code can extend this into a full OpenTelemetry integration with span propagation across your service boundaries.
 
-Graceful Degradation
+## Graceful Degradation
 
 Implement fallback mechanisms:
 
@@ -650,7 +649,7 @@ const transport = fallback([
 
 Claude Code can generate production-ready configurations with proper retry logic, timeout handling, and circuit breakers.
 
-RPC Provider Comparison for Production
+## RPC Provider Comparison for Production
 
 | Provider | Free Tier (reqs/day) | Websocket | Archive | Best For |
 |---|---|---|---|---|
@@ -662,7 +661,7 @@ RPC Provider Comparison for Production
 
 The `fallback` transport with `rank: true` is the right pattern for any production application. Claude Code can analyze your traffic patterns and recommend the optimal provider configuration for your use case.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Viem creates a powerful development environment for Ethereum applications. The AI assistant handles boilerplate code, ensures type safety, helps debug issues, and optimizes performance, all while you focus on business logic.
 

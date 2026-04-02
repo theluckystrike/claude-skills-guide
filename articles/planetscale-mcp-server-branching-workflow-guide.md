@@ -13,13 +13,9 @@ permalink: /planetscale-mcp-server-branching-workflow-guide/
 ---
 {% raw %}
 
-
-
-Planetscale MCP Server Branching Workflow Guide
-
 Database branching represents one of the most powerful capabilities in modern development workflows. [When combined with the Model Context Protocol (MCP), you can automate schema migrations](/building-your-first-mcp-tool-integration-guide-2026/), validate database states, and synchronize branch environments without manual intervention. This guide walks you through building an efficient Planetscale MCP server branching workflow that fits into your development pipeline.
 
-Understanding Planetscale Branching
+## Understanding Planetscale Branching
 
 [Planetscale offers database branching similar to git branches](/building-your-first-mcp-tool-integration-guide-2026/), each branch is an isolated development environment with its own schema and data. This approach enables teams to:
 
@@ -29,7 +25,7 @@ Understanding Planetscale Branching
 
 The Planetscale MCP server extends these capabilities by exposing database operations as tools that Claude can invoke directly within your skills workflow.
 
-Setting Up Your Planetscale MCP Server
+## Setting Up Your Planetscale MCP Server
 
 First, ensure you have a skill that can interact with the Planetscale API. You'll need to configure the MCP server with your Planetscale credentials:
 
@@ -46,7 +42,7 @@ Use available tools to inspect migration files, generate schema snapshots, and e
 
 The skill body instructs Claude to use Read to inspect migration files, Write to generate schema snapshots, and Bash to execute CLI commands for Planetscale operations.
 
-Automating Branch Creation
+## Automating Branch Creation
 
 When you create a new feature branch in your repository, the corresponding database branch should automatically follow. Here's a workflow pattern that handles this:
 
@@ -80,7 +76,7 @@ def create_database_branch(branch_name: str, base_branch: str = "main"):
 
 This pattern integrates well with the TDD skill, which encourages writing tests before implementing features. Your test suite can include database state assertions that validate the schema after each migration.
 
-Schema Migration Workflow
+## Schema Migration Workflow
 
 The core of a solid branching workflow involves managing schema migrations across branches. Each feature branch needs to apply migrations in order without conflicts.
 
@@ -115,7 +111,7 @@ def get_pending_migrations(branch_name: str):
 
 When combined with the pdf skill, you can automatically generate migration documentation for each schema change, keeping your team informed without manual effort.
 
-Handling Branch Synchronization
+## Handling Branch Synchronization
 
 As your application evolves, schema changes in one branch may conflict with another. The MCP server can detect and resolve these conflicts automatically.
 
@@ -144,7 +140,7 @@ def detect_schema_conflicts(source_branch: str, target_branch: str):
 
 This detection pairs well with the frontend-design skill when building admin dashboards that visualize database relationships and migration status across branches.
 
-CI/CD Integration
+## CI/CD Integration
 
 Automating database branching within your CI/CD pipeline ensures consistency. Here's a GitHub Actions example:
 
@@ -176,7 +172,7 @@ jobs:
 
 The supermemory skill can track which PRs have associated database branches, preventing duplicate branch creation and managing cleanup of old branches automatically.
 
-Best Practices for Branching Workflows
+## Best Practices for Branching Workflows
 
 Adopt these practices to maintain a healthy database branching environment:
 
@@ -190,7 +186,7 @@ Version control migrations. Store all migration files in your repository alongsi
 
 Test migrations in isolation. Each feature branch should apply migrations independently. The MCP server should detect and handle cases where migrations were already applied via another branch.
 
-Cleanup and Maintenance
+## Cleanup and Maintenance
 
 Over time, database branches accumulate. Implement a cleanup workflow:
 
@@ -212,7 +208,7 @@ def cleanup_stale_branches(days_threshold: int = 30):
 
 This automation prevents unnecessary costs and keeps your Planetscale organization manageable. Schedule this as a weekly cron job or integrate it into your MCP server's startup routine.
 
-Conclusion
+## Conclusion
 
 Implementing a structured Planetscale MCP server branching workflow transforms database management from a manual bottleneck into an automated, reliable process. By using MCP tools for branch creation, migration handling, and synchronization, developers can focus on building features while the infrastructure adapts automatically.
 

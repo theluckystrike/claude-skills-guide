@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Versioning and Maintaining Published Claude Code Skills
-
 When you publish a Claude Code skill for others to use, you're not just sharing a prompt, you're establishing a contract with your users. They trust your skill to work reliably, produce consistent results, and not break unexpectedly. Effective versioning and maintenance practices are essential for building that trust and ensuring your skills remain valuable over time.
 
 This guide covers the full lifecycle of a published Claude Code skill: semantic versioning strategy, changelog formats, deprecation patterns, automated testing approaches, distribution mechanics, and monitoring for regressions. Whether you maintain one skill or a library of dozens, the practices here will help you operate with confidence.
 
-Why Versioning Matters for Claude Skills
+## Why Versioning Matters for Claude Skills
 
 Claude Code skills evolve just like any software project. You may discover edge cases, improve instructions based on user feedback, add new capabilities, or refactor for clarity. Without a clear versioning strategy, users have no way to know what's changed between updates or whether it's safe to upgrade.
 
@@ -35,7 +32,7 @@ Versioning also enables:
 
 Without versioning, your skill is a moving target. With it, you give users and tooling something stable to build on.
 
-Semantic Versioning for Skills
+## Semantic Versioning for Skills
 
 Apply [semantic versioning](https://semver.org/) (MAJOR.MINOR.PATCH) to your Claude skills:
 
@@ -45,7 +42,7 @@ Apply [semantic versioning](https://semver.org/) (MAJOR.MINOR.PATCH) to your Cla
 
 For example, if your testing skill originally outputs Jest tests and you change it to output Vitest tests, that's a MAJOR version bump. Adding support for TypeScript test generation would be a MINOR bump. Fixing a typo in your instructions would be a PATCH bump.
 
-Version Decision Table
+## Version Decision Table
 
 The following table helps you decide which version component to increment for common skill changes:
 
@@ -64,7 +61,7 @@ The following table helps you decide which version component to increment for co
 
 When in doubt, increment MINOR rather than PATCH. It is better to signal "something meaningful changed" than to silently slip in a behavioral improvement that users might not expect.
 
-Pre-Release Labels
+## Pre-Release Labels
 
 For skills under active development, use pre-release labels to signal instability:
 
@@ -76,7 +73,7 @@ For skills under active development, use pre-release labels to signal instabilit
 
 These labels tell users and tooling that pinning to this version is risky until a stable release is cut.
 
-Declaring Versions in Skill Front Matter
+## Declaring Versions in Skill Front Matter
 
 Add a `version` field to your skill's front matter to make the version explicitly visible:
 
@@ -104,7 +101,7 @@ The `stability` field communicates the support tier at a glance:
 
 This allows users and tools to identify which version they're using. Claude Code can reference this version when debugging issues or when users report problems.
 
-Documenting Changes with Changelogs
+## Documenting Changes with Changelogs
 
 Every skill that you maintain should include a changelog. You can maintain this in several ways:
 
@@ -133,7 +130,7 @@ changelog: |
 
 Users can quickly see what's changed and decide whether to upgrade.
 
-Changelog Format Standards
+## Changelog Format Standards
 
 Follow the [Keep a Changelog](https://keepachangelog.com/) convention to ensure consistent formatting that tooling and humans can both parse:
 
@@ -173,7 +170,7 @@ Fixed
 
 Structure changelog entries under these standard headings: `Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Security`. Breaking changes get their own `Breaking Changes` heading at the top of the relevant version section.
 
-Handling Breaking Changes
+## Handling Breaking Changes
 
 When you must make breaking changes, follow these practices:
 
@@ -196,7 +193,7 @@ deprecation_notice: |
 ---
 ```
 
-Deprecation Timeline Best Practices
+## Deprecation Timeline Best Practices
 
 | Phase | Duration | Actions |
 |---|---|---|
@@ -207,7 +204,7 @@ Deprecation Timeline Best Practices
 
 This timeline gives users adequate runway to migrate at their own pace. High-traffic or enterprise-oriented skills should consider extending the parallel support phase to 6 months.
 
-Writing a Migration Guide
+## Writing a Migration Guide
 
 A dedicated `MIGRATION.md` reduces support burden and signals professionalism. A good migration guide includes:
 
@@ -243,7 +240,7 @@ Getting Help
 Open an issue at https://github.com/yourorg/skills/issues
 ```
 
-Testing Your Skills
+## Testing Your Skills
 
 Before publishing updates, validate that your skill still works as expected:
 
@@ -266,7 +263,7 @@ Expected: Tests using async/await and proper promise handling
 
 Run these tests regularly to catch regressions before they reach users.
 
-Structured Test Cases
+## Structured Test Cases
 
 For more rigorous validation, maintain a JSON or YAML test manifest that can be run programmatically:
 
@@ -303,7 +300,7 @@ cases:
 
 This manifest can be consumed by a test runner script that invokes Claude Code with each input, captures the output, and validates the assertions. Automating this process means you can run your full test suite in CI before every release.
 
-Regression Testing Across Model Versions
+## Regression Testing Across Model Versions
 
 Claude model updates can subtly change skill output. Include model version in your test runs and compare outputs when you bump `min_claude_version`:
 
@@ -317,11 +314,11 @@ diff tests/TC001-output-golden.txt tests/TC001-output-current.txt
 
 If the diff is non-trivial, investigate whether the output change is a regression or an improvement. Update golden files and increment MINOR version if the change is intentional.
 
-Distribution and Update Strategies
+## Distribution and Update Strategies
 
 When distributing your skills through GitHub or other platforms, consider these approaches:
 
-Version Tags
+## Version Tags
 
 Use Git tags to mark specific versions:
 
@@ -344,7 +341,7 @@ git tag -a v2.1.0 -m "feat: add TypeScript inference and async improvements
 git push origin v2.1.0
 ```
 
-Branch-Based Stability
+## Branch-Based Stability
 
 Maintain branches for different stability levels:
 
@@ -384,7 +381,7 @@ Users who want reproducibility can pin skills by tag in their Claude Code config
 
 Pinning prevents unexpected behavior changes during team onboarding or in CI environments where skill updates could break automated workflows.
 
-Release Notes
+## Release Notes
 
 Create GitHub releases with detailed notes explaining:
 
@@ -423,11 +420,11 @@ Known Issues
   type assertions. Tracked in issue #47.
 ```
 
-Monitoring and Feedback Loops
+## Monitoring and Feedback Loops
 
 Publishing is not the end of the maintenance cycle. Active monitoring helps you catch regressions early and understand how users actually interact with your skill.
 
-Issue Triage Labels
+## Issue Triage Labels
 
 Use consistent GitHub issue labels to track skill health:
 
@@ -441,7 +438,7 @@ Use consistent GitHub issue labels to track skill health:
 
 Separating `model-drift` issues from skill regressions is important: model updates are outside your control, but you still own the user experience. When a model update changes your skill's output, consider whether a PATCH release with adjusted instructions is needed.
 
-Collecting Usage Signals
+## Collecting Usage Signals
 
 If you distribute skills through a managed platform or package registry, set up lightweight telemetry to understand which versions are still in active use. Even simple version download counts help you prioritize:
 
@@ -451,7 +448,7 @@ If you distribute skills through a managed platform or package registry, set up 
 
 Without usage signals, you are maintaining in the dark.
 
-Best Practices Summary
+## Best Practices Summary
 
 1. Always increment version numbers following semantic versioning
 2. Document every change in a changelog
@@ -464,7 +461,7 @@ Best Practices Summary
 9. Automate test cases to catch regressions before release
 10. Monitor model drift and patch skill instructions when model updates affect output quality
 
-Conclusion
+## Conclusion
 
 Versioning and maintaining Claude Code skills requires the same discipline as maintaining any software project. By following semantic versioning, documenting changes, testing thoroughly, and communicating clearly with your users, you build skills that are reliable, trustworthy, and sustainable. Users will appreciate the stability and clarity, and they'll be more confident in building their workflows around your skills.
 

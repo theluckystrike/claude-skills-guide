@@ -15,11 +15,9 @@ tags: [claude-code, claude-skills]
 
 {% raw %}
 
-Claude Code for Terraform Workspace Workflow Guide
-
 Terraform workspaces provide a powerful mechanism for managing infrastructure across multiple environments without duplicating configuration. When combined with Claude Code's AI-assisted development capabilities, you can build solid, maintainable infrastructure workflows that scale with your organization. This guide walks you through practical patterns for integrating Claude Code into your Terraform workspace management.
 
-Understanding Terraform Workspaces
+## Understanding Terraform Workspaces
 
 Terraform workspaces allow you to maintain multiple state files within a single Terraform configuration. Each workspace represents a distinct deployment target, such as development, staging, or production, with its own state management. This separation keeps your infrastructure code DRY while enabling environment-specific configurations.
 
@@ -38,7 +36,7 @@ Switch between workspaces
 terraform workspace select production
 ```
 
-Setting Up Your Project Structure
+## Setting Up Your Project Structure
 
 A well-organized Terraform project structure maximizes the benefits of workspace management. Here's a recommended layout that works well with Claude Code:
 
@@ -74,11 +72,11 @@ mkdir -p terraform/environments/{dev,staging,prod}
 mkdir -p terraform/modules/{networking,compute,database}
 ```
 
-Workspace-Specific Configuration Patterns
+## Workspace-Specific Configuration Patterns
 
 When managing multiple environments, you'll need ways to differentiate configuration without duplicating code. The key patterns include variable files, workspace-based conditionals, and module composition.
 
-Variable File Approach
+## Variable File Approach
 
 Each workspace should have its own `terraform.tfvars` file that overrides defaults:
 
@@ -112,7 +110,7 @@ variable "instance_type" {
 }
 ```
 
-Workspace-Based Resource Configuration
+## Workspace-Based Resource Configuration
 
 For resources that differ fundamentally between environments, use the `terraform.workspace` interpolation:
 
@@ -135,11 +133,11 @@ resource "aws_instance" "app" {
 }
 ```
 
-Integrating Claude Code into Your Workflow
+## Integrating Claude Code into Your Workflow
 
 Claude Code transforms Terraform workspace management through AI-assisted planning, code generation, and troubleshooting. Here's how to incorporate it effectively.
 
-Planning and Review
+## Planning and Review
 
 Before applying changes, use Claude Code to review your plan output:
 
@@ -150,7 +148,7 @@ Before applying changes, use Claude Code to review your plan output:
 
 Claude Code analyzes the plan for common problems: unintended destructive changes, missing safety checks, and cost implications. This becomes especially valuable in production environments where mistakes are costly.
 
-Generating Workspace-Specific Code
+## Generating Workspace-Specific Code
 
 Need to add environment-specific resources? Ask Claude Code:
 
@@ -181,7 +179,7 @@ resource "aws_lambda_function" "api" {
 }
 ```
 
-Troubleshooting Workspace Issues
+## Troubleshooting Workspace Issues
 
 When workspace states become inconsistent or you encounter errors, Claude Code helps diagnose the problem:
 
@@ -191,11 +189,11 @@ When workspace states become inconsistent or you encounter errors, Claude Code h
 
 Claude Code provides step-by-step guidance for state management operations.
 
-State Management Best Practices
+## State Management Best Practices
 
 Workspace management requires careful state handling to prevent drift and ensure isolation.
 
-Remote State with Workspace Isolation
+## Remote State with Workspace Isolation
 
 Configure your backend to maintain workspace isolation:
 
@@ -213,7 +211,7 @@ terraform {
 
 This pattern ensures each workspace's state is stored separately, preventing accidental cross-environment modifications.
 
-State Migration Workflow
+## State Migration Workflow
 
 When restructuring workspaces, follow this workflow with Claude Code assistance:
 
@@ -233,7 +231,7 @@ terraform plan
 
 Ask Claude Code to generate a migration script for complex resource moves.
 
-Automation and CI/CD Integration
+## Automation and CI/CD Integration
 
 For production workflows, integrate Terraform workspaces into your CI/CD pipeline:
 
@@ -271,7 +269,7 @@ jobs:
         run: terraform apply -var-file="environments/${{ matrix.workspace }}/terraform.tfvars" -auto-approve
 ```
 
-Summary
+## Summary
 
 Terraform workspaces combined with Claude Code create a powerful infrastructure management system. The key takeaways include: organize your project with environment-specific directories, use variable files for configuration differences, use workspace interpolation for conditional resources, and integrate AI assistance for planning, generation, and troubleshooting. By implementing these patterns, you'll achieve infrastructure as code that scales across environments while remaining maintainable and secure.
 

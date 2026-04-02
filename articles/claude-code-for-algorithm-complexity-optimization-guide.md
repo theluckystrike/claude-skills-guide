@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Understanding Algorithm Complexity with Claude Code
 
@@ -32,11 +31,11 @@ Before diving into how Claude Code can help, let's establish the fundamentals. A
 
 Understanding where your code falls on this spectrum is crucial for building scalable applications.
 
-How Claude Code Analyzes Complexity
+## How Claude Code Analyzes Complexity
 
 Claude Code can examine your code and identify potential complexity issues through careful analysis. When you share your code with Claude, it can spot patterns that lead to inefficient execution.
 
-Identifying Linear Scans
+## Identifying Linear Scans
 
 One of the most common inefficiency patterns is unnecessary linear scans. Here's an example:
 
@@ -61,9 +60,9 @@ def has_duplicates_fast(items):
 
 When you share code like this with Claude Code, it can identify the nested loop pattern and suggest the set-based approach. The improvement from O(n²) to O(n) can be dramatic as the input size grows.
 
-Practical Complexity Analysis with Claude
+## Practical Complexity Analysis with Claude
 
-Analyzing Nested Loops
+## Analyzing Nested Loops
 
 Nested loops are the most common source of quadratic complexity. Here's how to approach them:
 
@@ -87,7 +86,7 @@ function multiplyMatrices(a, b) {
 
 Claude Code can help you recognize when nested loops are necessary versus when they can be eliminated or reduced. In matrix operations, sometimes you can use library functions that are optimized at the native level, or apply techniques like Strassen's algorithm for large matrices.
 
-Spotting Recursive Inefficiencies
+## Spotting Recursive Inefficiencies
 
 Recursion can be elegant but dangerous for complexity:
 
@@ -110,7 +109,7 @@ def fib_memoized(n, memo={}):
 
 Claude Code can identify recursive patterns and suggest memoization or dynamic programming approaches that dramatically reduce complexity.
 
-Actionable Optimization Strategies
+## Actionable Optimization Strategies
 
 1. Use Appropriate Data Structures
 
@@ -168,7 +167,7 @@ def get_top_items_efficient(items, n):
 
 The heap-based approach is O(n log k) instead of O(n log n), where k is the number of items you need.
 
-Working with Claude Code for Optimization
+## Working with Claude Code for Optimization
 
 When collaborating with Claude Code on algorithm optimization, be specific about:
 
@@ -179,7 +178,7 @@ When collaborating with Claude Code on algorithm optimization, be specific about
 
 Claude Code can then provide targeted recommendations that match your specific requirements.
 
-Measuring Your Improvements
+## Measuring Your Improvements
 
 After implementing optimizations, measure the actual impact:
 
@@ -201,7 +200,7 @@ print(f"Slow: {slow_time*1000:.4f}ms, Fast: {fast_time*1000:.4f}ms")
 
 This data-driven approach ensures your optimizations actually deliver value.
 
-Conclusion
+## Conclusion
 
 Algorithm complexity optimization is both an art and a science. Claude Code serves as an intelligent partner, helping you identify inefficiencies, understand trade-offs, and implement effective solutions. Remember these key principles:
 

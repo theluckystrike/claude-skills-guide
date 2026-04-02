@@ -18,7 +18,7 @@ API versioning stands as one of the most critical decisions when building extens
 
 Choosing the right versioning strategy impacts maintainability, backward compatibility, and developer experience. This guide examines practical versioning approaches with concrete Python examples you can apply directly to your Claude Skills projects.
 
-Why API Versioning Matters for Claude Skills
+## Why API Versioning Matters for Claude Skills
 
 When your skill communicates with external APIs, you're often dealing with services that evolve over time. A payment integration you built last year might break when the provider deprecates v1 endpoints. Similarly, if you expose your own skill as an API for other tools to consume, callers need stability while you add features.
 
@@ -28,7 +28,7 @@ Consider what happens without a versioning strategy: a third-party API silently 
 
 From the consumer side, versioning discipline also makes your skill's dependencies auditable. When you pin to `v2` of a service, another developer reading your code immediately understands which feature set you rely on, without hunting through changelogs to determine when a particular field was introduced.
 
-Comparing the Three Core Strategies
+## Comparing the Three Core Strategies
 
 Before diving into implementation, here is a quick reference for the trade-offs each approach brings:
 
@@ -40,7 +40,7 @@ Before diving into implementation, here is a quick reference for the trade-offs 
 
 None of these is universally best. The right choice depends on who your consumers are, whether you control both sides of the wire, and what caching infrastructure sits between your skill and the API.
 
-URL Path Versioning
+## URL Path Versioning
 
 URL path versioning embeds the version identifier directly in the endpoint path. This approach offers clear visibility: consumers always know which version they're calling.
 
@@ -107,7 +107,7 @@ With this structure, migrating from v1 to v2 is a one-line change in your skill'
 
 A real-world scenario: when GitHub released their REST API v3 and later began moving features to the GraphQL API, skills that used path versioning cleanly (`/v3/repos/{owner}/{repo}`) could be migrated systematically. Skills that had version strings scattered as inline literals required a much broader refactor.
 
-Header-Based Versioning
+## Header-Based Versioning
 
 Header versioning keeps the URL clean while specifying the version through HTTP headers. This approach suits scenarios where the same endpoint URL should behave differently based on client preference.
 
@@ -174,7 +174,7 @@ One practical consideration: when using header versioning, your HTTP cache (Varn
 
 Header versioning also fits naturally with API gateways that route traffic based on header values, letting you run v1 and v2 backends simultaneously behind the same domain without path conflicts.
 
-Query String Versioning
+## Query String Versioning
 
 Query string versioning adds the version as a URL parameter. This approach offers simplicity: callers modify one parameter without changing headers or URL paths.
 
@@ -246,7 +246,7 @@ class QueryVersionedClient:
 
 This pattern is especially useful for skills that pull large datasets and need to iterate across all pages while maintaining version consistency throughout the paginated sequence.
 
-Version Negotiation Patterns
+## Version Negotiation Patterns
 
 Advanced skills often implement automatic version negotiation, where the skill detects available versions and selects the optimal one:
 
@@ -339,7 +339,7 @@ class SmartVersionClient:
 
 This implementation logs warnings when the API signals deprecation through standard headers, giving your skill operators early notice to upgrade before the old version is sunset.
 
-Practical Considerations for Claude Skills
+## Practical Considerations for Claude Skills
 
 When implementing API versioning in your skills, consider these practical guidelines:
 
@@ -401,7 +401,7 @@ def test_payment_endpoint_returns_charge_id(api_version, stripe_test_client):
 
 Running tests across versions surfaces breaking changes before they reach production and gives you confidence when migrating from a deprecated version to its successor.
 
-Handling Versioning Errors Gracefully
+## Handling Versioning Errors Gracefully
 
 When version-related failures occur, a version is removed, a version header is rejected, or a discovery endpoint is unreachable, your skill should produce actionable error messages rather than generic HTTP exceptions.
 
@@ -437,12 +437,11 @@ def safe_versioned_request(client, endpoint, version):
 
 Clear error messages tell the skill operator exactly where to look, the version configuration, rather than leaving them to interpret raw HTTP status codes.
 
-Conclusion
+## Conclusion
 
 API versioning directly impacts how maintainable and extensible your Claude Skills become over time. URL path versioning offers clarity and simplicity. Header-based versioning keeps URLs clean while enabling sophisticated client preferences. Query string versioning provides quick experimentation without header manipulation.
 
 Choose based on your specific use case: external APIs you consume may mandate certain approaches, while your own skill endpoints benefit from thoughtful selection. Regardless of strategy, centralize version configuration, log deprecation warnings, write parametrized tests, and implement fallback logic. The pdf skill for document generation and supermemory for persistent storage both demonstrate how version-aware design prevents integration rot as services evolve. Applied consistently, these practices mean version migrations become deliberate, testable events rather than emergency hotfixes.
-
 
 Related Reading
 

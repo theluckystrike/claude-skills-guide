@@ -28,7 +28,7 @@ Manual PR status checking is time-consuming and prone to oversight. By using Cla
 
 Claude Code's ability to interact with GitHub's API makes it an ideal tool for building these automation workflows.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before building the workflow, ensure Claude Code is installed and authenticated with GitHub:
 
@@ -42,7 +42,7 @@ gh auth status
 
 You need both Claude Code and the GitHub CLI (`gh`) installed. The `gh` CLI handles authentication, while Claude Code orchestrates the workflow logic.
 
-Creating a PR Status Check Skill
+## Creating a PR Status Check Skill
 
 A Claude skill is a reusable prompt that defines behavior for specific tasks. Create a new skill for PR status checking:
 
@@ -76,7 +76,7 @@ Provide responses in this format:
 
 Save this skill to `~/.claude/skills/pr-status-skill.md`.
 
-Practical Example: Checking PR Before Merge
+## Practical Example: Checking PR Before Merge
 
 Here's a practical workflow for checking PR status before merging:
 
@@ -89,7 +89,7 @@ the status checks for any open PRs."
 
 Claude Code will execute the GitHub CLI commands and present a clear status report.
 
-Building an Automated Check Script
+## Building an Automated Check Script
 
 For more advanced automation, create a bash script that combines multiple checks:
 
@@ -133,7 +133,7 @@ chmod +x pr-check-workflow.sh
 ./pr-check-workflow.sh
 ```
 
-Integrating with Claude Code
+## Integrating with Claude Code
 
 You can enhance this script with Claude Code's natural language processing:
 
@@ -149,7 +149,7 @@ script and tell me:
 
 This combines the structured data from GitHub with Claude Code's analysis capabilities.
 
-Monitoring Continuous Integration Status
+## Monitoring Continuous Integration Status
 
 For teams using GitHub Actions or other CI systems, create a monitoring skill:
 
@@ -181,7 +181,7 @@ Status Meanings
 - QUEUED: Waiting for availability
 ```
 
-Advanced: Webhook-Based Automation
+## Advanced: Webhook-Based Automation
 
 For real-time notifications, set up GitHub webhooks that trigger Claude Code:
 
@@ -198,7 +198,7 @@ Check if the PR follows our contribution guidelines and
 provide initial feedback."
 ```
 
-Best Practices
+## Best Practices
 
 - Use descriptive PR titles - Makes status reports more readable
 - Set up required status checks - Ensures merge blocking until checks pass
@@ -206,9 +206,9 @@ Best Practices
 - Cache results - For large repositories, cache check results to reduce API calls
 - Handle rate limits - Be mindful of GitHub API rate limits when checking many PRs
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Authentication Errors
+## Authentication Errors
 
 If you see authentication errors:
 
@@ -220,7 +220,7 @@ Verify permissions
 gh auth status
 ```
 
-Rate Limiting
+## Rate Limiting
 
 When hitting rate limits:
 
@@ -229,7 +229,7 @@ Use GitHub token for higher limits
 export GH_TOKEN=$(gh auth token)
 ```
 
-Missing Check Context
+## Missing Check Context
 
 If status checks don't appear:
 
@@ -238,12 +238,11 @@ Ensure branch protection rules include required checks
 gh rule-check list
 ```
 
-Conclusion
+## Conclusion
 
 Automating PR status checks with Claude Code transforms how you manage pull requests. By combining Claude Code's natural language capabilities with GitHub's API, you can build sophisticated workflows that save time and improve code quality. Start with simple checks and gradually add complexity as your needs evolve.
 
 Remember: The goal is not to replace human review, but to handle repetitive tasks so developers can focus on code quality and innovation.
-
 
 Related Reading
 

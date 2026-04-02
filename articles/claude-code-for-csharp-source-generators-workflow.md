@@ -13,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for C# Source Generators Workflow
 
 C# source generators have transformed how .NET developers write code, enabling compile-time code generation that eliminates boilerplate and enhances productivity. However, developing and debugging source generators can be challenging without the right workflow. This guide shows you how to use Claude Code to streamline your source generator development process, from initial setup through debugging and optimization.
 
-Understanding Source Generators in Your Project
+## Understanding Source Generators in Your Project
 
 Source generators run during compilation and can inspect your code to generate additional source files automatically. They're particularly powerful for reducing boilerplate in scenarios like JSON serialization, dependency injection registration, and API client generation. When working with source generators, Claude Code can help you understand existing implementations, debug generation issues, and implement new generators efficiently.
 
 Before diving into workflow specifics, ensure your development environment includes the .NET SDK and an editor with Roslyn support. Visual Studio Code with the C# extension or JetBrains Rider both provide excellent source generator debugging capabilities. Claude Code interacts with these tools through your terminal, making it compatible with any editor setup.
 
-Setting Up Your Source Generator Project
+## Setting Up Your Source Generator Project
 
 A well-structured source generator project follows specific conventions that Claude Code can help you establish. The typical project structure includes a main library project consuming the generator and a separate generator project referencing Microsoft.CodeAnalysis.CSharp.
 
@@ -44,11 +43,11 @@ A well-structured source generator project follows specific conventions that Cla
 
 When setting up your generator, use the `ISourceGenerator` interface alongside `GeneratorInitializationContext` for registering syntax receivers. Claude Code can generate starter templates for common generator patterns, saving you time on initial setup.
 
-Developing Generators with Claude Code Assistance
+## Developing Generators with Claude Code Assistance
 
 The development workflow benefits significantly from AI-assisted code generation and explanation. When implementing a source generator, you'll work with the Roslyn API to analyze syntax trees, find attributes or patterns, and emit generated code.
 
-Analyzing Syntax Nodes
+## Analyzing Syntax Nodes
 
 Your generator implements the `Execute` method to traverse the compilation's syntax trees. Here's a practical pattern for finding classes with specific attributes:
 
@@ -74,7 +73,7 @@ public void Execute(GeneratorExecutionContext context)
 
 Claude Code helps you understand how to navigate the Roslyn API, explaining the relationship between syntax nodes and semantic symbols. When you encounter compilation errors in generated code, describe the error message and context, Claude Code often identifies common issues like namespace conflicts or missing using statements.
 
-Writing the Generated Code
+## Writing the Generated Code
 
 Generating syntactically correct C# code requires careful string construction or using code generation APIs. The SourceGeneratorPak library simplifies this by providing type-safe code generation through fluent APIs.
 
@@ -96,11 +95,11 @@ public string GenerateCode(INamedTypeSymbol classSymbol)
 
 Claude Code can review your generation logic for potential issues, suggest improvements to reduce code duplication in generated output, and help you implement incremental generation for better performance.
 
-Debugging Source Generator Issues
+## Debugging Source Generator Issues
 
 Debugging source generators requires a different approach than regular debugging since generated code isn't visible in your source files. The debugging workflow involves examining generated output and understanding the generator's execution context.
 
-Viewing Generated Output
+## Viewing Generated Output
 
 Visual Studio provides a "Diagnostic Tools" window showing generated files during compilation. In VS Code, you can inspect generated files in the `obj` folder under `Generated_Sources`. Claude Code can guide you through locating and examining these files when generation produces unexpected results.
 
@@ -116,7 +115,7 @@ context.ReportDiagnostic(Diagnostic.Create(
     classDeclaration.SpanStart));
 ```
 
-Common Pitfalls and Solutions
+## Common Pitfalls and Solutions
 
 Several common issues plague source generator development. Infinite recursion occurs when generated code triggers regeneration, you solve this by using `IncrementalGenerator` APIs that track changes effectively. Missing dependencies happen when generated code references types not yet available during generation, ensure your generator project has all necessary type references.
 
@@ -135,19 +134,19 @@ public void Initialize(IncrementalGeneratorInitializationContext context)
 
 Claude Code helps you identify which pattern applies to your situation and provides implementation guidance specific to your use case.
 
-Optimizing Your Development Workflow
+## Optimizing Your Development Workflow
 
 Beyond core development, several practices improve your source generator workflow efficiency. Version your generated APIs using source anchors to enable proper debugging across generated file boundaries. Write comprehensive tests using snapshot testing frameworks that compare generated output against expected files.
 
 When collaborating with team members, document generator behavior and configuration options clearly. Claude Code can help you generate documentation from your generator's attribute definitions and configuration classes.
 
-Best Practices for Production Generators
+## Best Practices for Production Generators
 
 Moving generators to production requires attention to error handling, diagnostics, and performance. Always provide meaningful diagnostic messages when generation fails. Use incremental generation to maintain fast build times even with complex generators. Test generators against diverse input scenarios including edge cases.
 
 Version your generator following semantic versioning, as breaking changes in generated code affect downstream consumers. Consider providing migration guides when making significant changes to generated output patterns.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your C# source generator workflow accelerates development, improves code quality, and helps navigate the Roslyn API's complexity. By following the practices outlined in this guide, structuring projects properly, using incremental generation, and implementing effective debugging, you'll create solid source generators that enhance your .NET development experience.
 

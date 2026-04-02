@@ -18,7 +18,7 @@ permalink: /best-claude-skills-for-solo-developers-and-freelancers/
 
 The core challenge for solo developers is context switching cost. Every time you move from writing code to drafting a proposal, generating a status report, or re-reading old notes to remember what a client prefers, you lose momentum. Claude Code skills compress that overhead dramatically. you stay in one environment and describe what you need rather than navigating different tools. This guide covers the skills that pay off fastest, with realistic examples drawn from typical freelance workflows.
 
-Streamlined Documentation with the PDF Skill
+## Streamlined Documentation with the PDF Skill
 
 Handling client deliverables, invoices, and technical documentation is part of every freelance project. The [pdf skill](/best-claude-skills-for-data-analysis/) transforms how you process these documents programmatically.
 
@@ -84,7 +84,7 @@ def map_to_django_field(sql_type):
     return mapping.get(sql_type.upper(), 'TextField(') + ')'
 ```
 
-Rapid Visual Prototyping with the Canvas-Design Skill
+## Rapid Visual Prototyping with the Canvas-Design Skill
 
 When you need visual mockups or design assets without opening a full design tool, the canvas-design skill delivers. Describe the visual you need and Claude generates PNG or PDF output directly.
 
@@ -109,7 +109,7 @@ Comparison of approaches for visual prototyping:
 
 For quick client presentations and proposal mockups, canvas-design wins on every practical metric.
 
-Test-Driven Workflows with the TDD Skill
+## Test-Driven Workflows with the TDD Skill
 
 Quality assurance often gets neglected when you're juggling multiple projects. The [tdd skill](/best-claude-skills-for-developers-2026/) enforces testing discipline by guiding you through red-green-refactor cycles and generating meaningful test cases from your existing code.
 
@@ -171,7 +171,7 @@ describe('convertCurrency', () => {
 
 That last test. checking symmetry. is the kind of thing the tdd skill surfaces automatically. It's not obvious, but it catches a common class of rounding errors in financial code.
 
-Knowledge Management with the Supermemory Skill
+## Knowledge Management with the Supermemory Skill
 
 Client projects involve context spread across documentation, code, and previous conversations. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) gives Claude persistent memory across sessions. store key facts once, retrieve them in any future session.
 
@@ -195,7 +195,7 @@ Consider storing not just technical facts but client preferences and history:
 
 When a similar integration question comes up months later, a single supermemory query pulls up the context you need. This is particularly valuable for long-term client relationships where accumulated knowledge is part of your value as a contractor.
 
-Presentation Creation with the PPTX Skill
+## Presentation Creation with the PPTX Skill
 
 Client meetings and project pitches require professional presentations. The pptx skill generates polished slides programmatically, perfect for automated status reports or recurring client updates.
 
@@ -223,7 +223,7 @@ The real use here is templating. Build a slide template once. your logo, color s
 
 For project pitches, the skill lets you generate a first draft from a bullet-point outline, then refine from there. Rather than spending an afternoon formatting slides, you spend twenty minutes on content and another twenty iterating on the output.
 
-Spreadsheet Automation with the XLSX Skill
+## Spreadsheet Automation with the XLSX Skill
 
 From client invoicing to project tracking, spreadsheets remain essential for freelancers. The xlsx skill handles complex spreadsheet operations including formulas, formatting, and data analysis.
 
@@ -279,7 +279,7 @@ def add_time_entry(wb_path, project, hours, rate, description, date):
     wb.save(wb_path)
 ```
 
-Document Creation with the DOCX Skill
+## Document Creation with the DOCX Skill
 
 Formal proposals, contracts, and technical specifications require well-formatted Word documents. The docx skill generates and manipulates these files while preserving professional styling.
 
@@ -313,7 +313,7 @@ The docx skill is particularly useful when proposals follow a repeatable structu
 
 For technical specifications, the skill handles formatting that would be tedious to do manually: consistent heading styles, numbered sections that auto-update when you add a section, code blocks with monospace formatting, tables with proper column widths. The output is a document that looks like someone spent time on it rather than a hastily assembled draft.
 
-Choosing the Right Skills for Your Workflow
+## Choosing the Right Skills for Your Workflow
 
 Start with the skill that addresses your biggest time sink. If client documentation eats your day, `/pdf` and `/docx` pay off immediately. If you keep re-explaining project context, `/supermemory` is the fix. If you ship code with poor test coverage, `/tdd` addresses that.
 
@@ -339,6 +339,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The essential developer skill stack
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). DevOps-specific skill recommendations
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

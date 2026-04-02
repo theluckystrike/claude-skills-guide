@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for License Scanning Workflow Tutorial"
 description: "Learn how to automate software license compliance using Claude Code. This tutorial covers setting up license scanning workflows, integrating tools like."
@@ -15,12 +14,9 @@ score: 8
 ---
 {% raw %}
 
-
-Claude Code for License Scanning Workflow Tutorial
-
 Software license compliance is a critical aspect of modern software development. As projects grow and incorporate open-source dependencies, tracking licensing information becomes increasingly complex. This tutorial demonstrates how to use Claude Code to automate license scanning workflows, identify compliance risks, and maintain a healthy dependency ecosystem.
 
-Why License Scanning Matters
+## Why License Scanning Matters
 
 Before diving into the technical implementation, it's essential to understand why license scanning deserves attention in your development workflow. Open-source software comes with various license types, some permissive like MIT and BSD, others copyleft like GPLv3. Using code under incompatible licenses can lead to legal complications, forced open-sourcing of proprietary code, or mandatory attribution requirements.
 
@@ -28,7 +24,7 @@ Manual license tracking becomes impractical as projects scale. A typical modern 
 
 Beyond legal risk, license compliance also affects enterprise sales. Many large organizations require a Software Composition Analysis (SCA) report before approving vendor software. If your product bundles AGPL code without disclosure, a procurement review can kill a deal entirely.
 
-Understanding License Categories
+## Understanding License Categories
 
 Not all open-source licenses carry the same obligations. Before automating anything, it helps to understand the major categories:
 
@@ -43,7 +39,7 @@ Not all open-source licenses carry the same obligations. Before automating anyth
 
 Claude Code can help you maintain this mapping as a policy file and apply it consistently across scans. The table above is a useful starting point for most teams building commercial software.
 
-Setting Up Your License Scanning Environment
+## Setting Up Your License Scanning Environment
 
 Claude Code can orchestrate license scanning through various tools. Let's start by setting up a scanning environment using two popular open-source tools: ScanCode Toolkit and License Detector.
 
@@ -103,11 +99,11 @@ Python dependencies. Merge the results into a unified report and flag
 anything that isn't on our allowed list.
 ```
 
-Integrating License Scanning into Development Workflow
+## Integrating License Scanning into Development Workflow
 
 With the basic scanning setup in place, Consider how Claude Code can enhance the workflow through intelligent analysis and action planning.
 
-Automated Dependency Analysis
+## Automated Dependency Analysis
 
 Claude Code excels at parsing scan results and extracting actionable insights. Rather than manually reviewing JSON reports, you can instruct Claude to analyze findings and provide clear summaries:
 
@@ -195,7 +191,7 @@ if __name__ == '__main__':
     sys.exit(enforce_policy(categories, 'license-policy.json'))
 ```
 
-Creating a Claude Code Skill for License Management
+## Creating a Claude Code Skill for License Management
 
 For recurring license scanning tasks, creating a custom Claude Code skill streamlines the workflow. Here's how to structure it:
 
@@ -207,11 +203,11 @@ description: Automated software license compliance scanning and analysis
 
 A well-designed skill might also include prompts for specific sub-tasks. When you invoke the skill, you can pass context like the project type and policy file location. Claude Code will then select the right tool, run the scan, parse results, and surface only the findings that need human attention, saving significant time compared to reading raw JSON output.
 
-Handling License Violations
+## Handling License Violations
 
 When scanning reveals problematic licenses, Claude Code can guide you through resolution strategies. Let's examine common scenarios and responses.
 
-Scenario 1: Detecting Copyleft Dependencies
+## Scenario 1: Detecting Copyleft Dependencies
 
 If ScanCode identifies GPL-licensed code in your dependencies, Claude Code can assess the situation and recommend actions:
 
@@ -245,7 +241,7 @@ and maintenance activity.
 
 This turns a compliance alert into an actionable replacement task rather than a vague warning.
 
-Scenario 2: Unknown or Missing Licenses
+## Scenario 2: Unknown or Missing Licenses
 
 For dependencies with unclear licensing, Claude Code can investigate and help resolve:
 
@@ -270,7 +266,7 @@ recommend whether this package is safe to use in a commercial product.
 
 Unknown licenses are often just missing metadata. Many packages are genuinely MIT-licensed but haven't populated the license field in their package manifest. Claude Code can verify this quickly, avoiding unnecessary package replacements.
 
-Scenario 3: License Drift After Upgrades
+## Scenario 3: License Drift After Upgrades
 
 A particularly subtle compliance risk occurs when a package changes its license between versions. A package that was MIT at version 1.x might switch to AGPL at version 2.x. Claude Code can help detect this by comparing scans across version history:
 
@@ -296,7 +292,7 @@ def detect_license_drift(old_scan: str, new_scan: str) -> list:
 
 Storing your scan results in version control lets you run this comparison on every dependency update PR, catching license changes before they merge.
 
-Automating License Scanning in CI/CD
+## Automating License Scanning in CI/CD
 
 To maintain continuous compliance, integrate license scanning into your continuous integration pipeline. Here's a GitHub Actions workflow that Claude Code can help configure:
 
@@ -366,7 +362,7 @@ jobs:
 
 Claude Code can help you write and debug this matrix strategy, especially when services use different language runtimes and need different scanning tools.
 
-Building a License Inventory Dashboard
+## Building a License Inventory Dashboard
 
 Beyond CI gates, a searchable license inventory helps engineering managers and legal teams answer questions quickly. Claude Code can help build a simple HTML report from your JSON scan results:
 
@@ -421,7 +417,7 @@ if __name__ == '__main__':
 
 Uploading this dashboard as a CI artifact gives non-technical stakeholders a readable view without needing to interpret JSON.
 
-Best Practices for License Scanning Workflows
+## Best Practices for License Scanning Workflows
 
 Successfully implementing license scanning requires more than just running tools. Consider these practical recommendations:
 
@@ -474,7 +470,7 @@ Track Transitive Dependencies: Direct dependencies are easy to audit manually. T
 
 Keep Scan Results in Version Control: Committing your `.license-reports/` JSON files means you can diff them across commits, spot license drift on upgrades, and demonstrate a compliance audit trail.
 
-Conclusion
+## Conclusion
 
 License scanning doesn't have to be a manual, error-prone process. By using Claude Code's capabilities to orchestrate scanning tools, analyze results, and guide remediation, you can establish a solid compliance workflow that scales with your project. The key lies in automation, clear policies, and consistent enforcement.
 

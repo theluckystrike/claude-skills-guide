@@ -16,7 +16,7 @@ permalink: /claude-code-crashes-when-loading-skill-debug-steps/
 
 [When Claude Code fails loading a skill, it usually comes down to one of three things](/claude-skill-md-format-complete-specification-guide/): invalid YAML in the skill file, a missing file, or a naming mismatch. Here's a systematic approach to find and fix the problem.
 
-What a Skill File Actually Is
+## What a Skill File Actually Is
 
 Claude Code skills are single [skill.md files](/claude-skill-md-format-complete-specification-guide/). plain Markdown with YAML front matter. There are no companion `.js` files, no compiled assets, no build steps. The entire skill lives in one file:
 
@@ -27,7 +27,7 @@ Claude Code skills are single [skill.md files](/claude-skill-md-format-complete-
 
 If you're expecting a directory structure with `skill.js` or `skill.json`, that's the source of the crash.
 
-Step 1: Check the File Exists
+## Step 1: Check the File Exists
 
 Verify the skill file is where Claude Code expects it:
 
@@ -37,7 +37,7 @@ ls -la ~/.claude/skills/
 
 If the file is missing or misnamed, Claude can't load it. [Skill names are case-sensitive. `TDD.md` and `tdd.md` are different](/claude-skill-md-format-complete-specification-guide/).
 
-Step 2: Validate YAML Front Matter
+## Step 2: Validate YAML Front Matter
 
 [The most common crash cause is malformed YAML at the top of the skill file](/claude-skill-md-format-complete-specification-guide/). The front matter must be valid YAML between `---` delimiters:
 
@@ -83,7 +83,7 @@ pip install yamllint
 yamllint ~/.claude/skills/my-skill.md
 ```
 
-Step 3: Check File Permissions
+## Step 3: Check File Permissions
 
 Claude Code needs read access to skill files:
 
@@ -112,7 +112,7 @@ stat -c "%a %n" ~/.claude/skills/my-skill.md   # Linux
 
 A file with mode `600` (owner-read only) is usually fine if you own it. A file with mode `000` or owned by a different user will cause a silent failure. Claude Code won't crash with a helpful error, it just won't see the skill.
 
-Step 4: Isolate the Problem Skill
+## Step 4: Isolate the Problem Skill
 
 If you have multiple skills and only some are crashing, isolate by temporarily moving others out:
 
@@ -126,7 +126,7 @@ mv ~/.claude/skills.disabled/suspected-bad.md ~/.claude/skills/
 
 Restart Claude Code after each move and test if the crash reproduces.
 
-Step 5: Check for Encoding Issues and Corrupted Files
+## Step 5: Check for Encoding Issues and Corrupted Files
 
 Skills copied from Windows or certain editors sometimes have UTF-16 encoding or Windows line endings (`\r\n`) that break YAML parsing:
 
@@ -164,7 +164,7 @@ sed -i '1s/^\xef\xbb\xbf//' ~/.claude/skills/my-skill.md
 
 The safest fix for a corrupted file is to create a fresh copy using a plain-text editor (not a rich text editor or word processor), paste the content manually, and confirm the encoding with `file` before replacing the original.
 
-Step 6: Check Claude Code Version
+## Step 6: Check Claude Code Version
 
 Outdated Claude Code may have compatibility issues with skill features:
 
@@ -175,7 +175,7 @@ Update via npm
 npm update -g @anthropic-ai/claude-code
 ```
 
-Using Verbose Mode to Diagnose Skill Loading Failures
+## Using Verbose Mode to Diagnose Skill Loading Failures
 
 When the standard debug steps don't surface the problem, verbose output is your next tool. Claude Code exposes additional diagnostic information when you increase logging verbosity, and skill loading errors that are swallowed at normal log levels often appear clearly in verbose output.
 
@@ -210,7 +210,7 @@ grep -m1 "^name:" ~/.claude/skills/my-skill.md
 
 No output from that command means your `name` field is either missing or indented incorrectly (which puts it outside the top-level YAML namespace). Both cause silent registration failures.
 
-Common YAML Front Matter Errors in Skill Files That Cause Crashes
+## Common YAML Front Matter Errors in Skill Files That Cause Crashes
 
 The YAML front matter in a skill file is deceptively easy to get wrong. The YAML spec is strict in ways that aren't obvious to someone who only writes YAML occasionally. These are the patterns that come up most frequently.
 
@@ -275,7 +275,7 @@ Output should show exactly two lines: one near the top, one a few lines down
 
 If you only see one `---`, the closing delimiter is absent. Add it as a standalone line immediately after the last front matter key.
 
-Prevention
+## Prevention
 
 - Store skill files in version control
 - Validate YAML before deploying new skills: `python3 -c "import yaml; yaml.safe_load(open('skill.md').read())"`
@@ -289,7 +289,6 @@ Related Reading
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Complete skill.md format reference
 - [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Step-by-step skill creation guide
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 ---
 

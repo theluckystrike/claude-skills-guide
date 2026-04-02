@@ -17,7 +17,7 @@ tags: [chrome, android, performance]
 
 Chrome on Android can become sluggish over time, especially with heavy tab usage, numerous extensions, and cached data accumulation. This guide provides practical solutions for developers and power users experiencing slow Chrome performance on Android devices. Whether you are seeing slow page loads, laggy scrolling, or the browser freezing on complex sites, these fixes target the most common causes and walk you through both user-facing settings and developer-level tooling.
 
-Understanding Why Chrome Slows Down on Android
+## Understanding Why Chrome Slows Down on Android
 
 Before diving into fixes, it helps to understand the root causes. Chrome's slowness on Android usually falls into one of several categories:
 
@@ -33,7 +33,7 @@ Before diving into fixes, it helps to understand the root causes. Chrome's slown
 
 Modern Android devices allocate memory aggressively across apps. Chrome must compete for RAM with every other running process, which means memory management inside the browser matters far more than it does on desktop.
 
-Clear Browser Data and Cache
+## Clear Browser Data and Cache
 
 One of the most effective solutions for Chrome running slow is clearing accumulated browser data. Over time, cached images, cookies, and browsing history consume significant storage and memory.
 
@@ -69,7 +69,7 @@ How Often Should You Clear Cache?
 
 For daily users, clearing cached images and files every 30 days is a reasonable maintenance interval. Cookies and site data should be cleared more selectively, as removing them logs you out of every site. A targeted approach is to clear cache only, and only remove cookies when you are troubleshooting specific sites behaving strangely.
 
-Disable Hardware Acceleration
+## Disable Hardware Acceleration
 
 Hardware acceleration can sometimes cause performance issues on older Android devices or specific GPU configurations. While Chrome enables this by default to improve rendering, turning it off may resolve stuttering and lag.
 
@@ -96,7 +96,7 @@ Hardware acceleration issues are especially common on:
 
 If disabling hardware acceleration resolves your stuttering, but the resulting software rendering feels slower overall, try a middle-ground approach: leave hardware acceleration enabled but disable GPU rasterization specifically via `chrome://flags/#disable-gpu-rasterization`. This keeps the compositor hardware-accelerated while moving tile rasterization to the CPU, which can eliminate the specific driver bugs that cause visual glitches.
 
-Manage Tabs Efficiently
+## Manage Tabs Efficiently
 
 Having too many open tabs is a common cause of Chrome slow performance on Android. Each tab consumes memory and processing power, even when backgrounded.
 
@@ -139,7 +139,7 @@ adb shell monkey -p com.android.chrome -c android.intent.category.LAUNCHER 1
 echo "Done."
 ```
 
-Update Chrome and Android
+## Update Chrome and Android
 
 Outdated versions of Chrome often contain performance bugs that newer versions have addressed. Similarly, Android system updates include optimizations that can improve browser performance.
 
@@ -170,7 +170,7 @@ adb shell dumpsys package com.android.chrome | grep versionName
 
 This is useful in automated test pipelines where you want to confirm all test devices are running a specific Chrome version before running a performance benchmark.
 
-Disable Unnecessary Extensions
+## Disable Unnecessary Extensions
 
 Chrome on Android supports extensions, but each running extension consumes memory and can impact performance. Review your installed extensions and disable those you don't actively use.
 
@@ -198,7 +198,7 @@ To identify which specific extension is causing slowness, use the following proc
 3. Re-enable extensions one by one, testing after each
 4. The extension that reintroduces slowness is the culprit
 
-Optimize Chrome Flags and Settings
+## Optimize Chrome Flags and Settings
 
 Several hidden settings can improve Chrome's performance on Android. All flags live at `chrome://flags` and are reset when Chrome is updated, so document any flags you rely on.
 
@@ -222,7 +222,7 @@ Chrome runs background processes even when closed. Limit these:
 2. Tap "Privacy"
 3. Disable "Background sync" and "Notifications" for sites you don't need
 
-Additional Flags Worth Testing
+## Additional Flags Worth Testing
 
 | Flag | Path | What It Does |
 |---|---|---|
@@ -233,7 +233,7 @@ Additional Flags Worth Testing
 
 Enable these flags one at a time so you can isolate any that cause instability on your specific device.
 
-Use Lite Mode
+## Use Lite Mode
 
 Chrome's Lite mode (formerly Data Saver) can significantly improve performance on slower connections and older devices by compressing web pages on Google's servers before delivery.
 
@@ -257,7 +257,7 @@ For enterprise deployments, this can be managed via MDM:
 
 Lite mode is not a silver bullet. It does not compress HTTPS-only resources without Google's proxy involvement, and it may break pages that rely on specific Content-Security-Policy headers. Use it as a performance aid on weak connections rather than a permanent solution for capable devices.
 
-Monitor Chrome Memory Usage with ADB
+## Monitor Chrome Memory Usage with ADB
 
 Before and after applying fixes, it is worth measuring Chrome's actual memory footprint. This helps you confirm that a fix is working and gives you a baseline for future troubleshooting.
 
@@ -275,7 +275,7 @@ adb pull /data/local/tmp/chrome_heap.hprof ./chrome_heap.hprof
 
 The output from `dumpsys meminfo` shows PSS (proportional set size) which is the most meaningful real-world memory metric for Android processes. A freshly started Chrome with no tabs should show a PSS under 150 MB on most devices. If you see 400 MB or more with only a few tabs open, cache bloat or extension overhead is likely the cause.
 
-Reinstall Chrome
+## Reinstall Chrome
 
 If all else fails, a fresh installation often resolves persistent performance issues. Uninstalling Chrome removes all corrupted cache files, problematic settings, and conflicting data.
 
@@ -303,7 +303,6 @@ adb shell pm enable com.android.chrome
 These solutions should resolve most Chrome Android slow fix scenarios. Start with clearing cache and managing tabs, then proceed to more advanced solutions like adjusting flags or reinstalling if needed. Regular maintenance, clearing cache monthly and keeping Chrome updated, prevents performance degradation over time.
 
 For developers, building ADB-based monitoring scripts into your CI or device lab workflow lets you catch performance regressions before users do. The combination of `dumpsys meminfo`, targeted cache clearing, and flag-based experimentation gives you precise control over Chrome's behavior on Android in ways that the standard Settings UI simply cannot provide.
-
 
 Related Reading
 

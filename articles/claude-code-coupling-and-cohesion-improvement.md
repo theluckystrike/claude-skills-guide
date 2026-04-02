@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Coupling and Cohesion Improvement
-
 Building Claude Code skills that work well together requires the same software engineering principles you'd apply to any codebase. Coupling and cohesion directly impact how maintainable, extensible, and reliable your skill interactions become. This guide covers practical strategies for improving both in your Claude Code workflows, with concrete examples drawn from real skill compositions.
 
-Understanding Coupling in Claude Code Skills
+## Understanding Coupling in Claude Code Skills
 
 Coupling refers to how dependent one skill is on another. When skills are tightly coupled, changes in one skill cascade into failures in others. Loose coupling keeps skills independent while still enabling collaboration.
 
@@ -33,7 +30,7 @@ Consider a workflow that uses frontend-design to generate components, then passe
 
 Coupling in skill ecosystems differs from coupling in traditional software because skills communicate through natural language and file system artifacts rather than typed function signatures. This makes implicit coupling especially dangerous: two skills can be tightly coupled without either skill author being aware of it.
 
-Types of Coupling to Watch For
+## Types of Coupling to Watch For
 
 Content coupling occurs when one skill reads internal details of another skill's prompt or configuration. If skill B assumes skill A always writes output to `./output/result.json`, that assumption couples B to A's internal implementation.
 
@@ -43,7 +40,7 @@ Data coupling. the least harmful type. occurs when skills share only the data th
 
 Common environment coupling occurs when multiple skills depend on the same environment state: the same working directory, the same environment variables, or the same tool installations. Changes to the environment break all coupled skills simultaneously.
 
-Tight vs Loose Coupling
+## Tight vs Loose Coupling
 
 ```javascript
 // Tight coupling - fragile when output format changes
@@ -99,7 +96,7 @@ function normalizeComponentSpec(rawOutput) {
 }
 ```
 
-Achieving High Cohesion Within Skills
+## Achieving High Cohesion Within Skills
 
 Cohesion measures how closely related the responsibilities of a single skill are. Highly cohesive skills do one thing well. Low cohesion spreads functionality across unrelated areas, making skills harder to maintain and test.
 
@@ -119,7 +116,7 @@ Instead, decompose into focused skills:
 - docgen handles documentation generation
 - frontend-design handles component creation
 
-Measuring Cohesion
+## Measuring Cohesion
 
 You can informally assess a skill's cohesion by writing a one-sentence description of what it does. If you need more than one sentence, or if your description contains "and," the skill probably has low cohesion.
 
@@ -130,7 +127,7 @@ You can informally assess a skill's cohesion by writing a one-sentence descripti
 | "Formats API responses for display" | High |
 | "Handles all API-related operations" | Low. vague and broad |
 
-Practical Cohesion Example
+## Practical Cohesion Example
 
 ```yaml
 Instead of one monolithic skill
@@ -156,7 +153,7 @@ skill: deploy-manager
 
 The decomposed set of skills is more lines of configuration but dramatically easier to reason about. Each skill's behavior is predictable. If the test generation logic needs to change, you modify only `tdd-companion` with no risk to the deployment or documentation behavior.
 
-Strategies for Improvement
+## Strategies for Improvement
 
 1. Use Explicit Interfaces
 
@@ -322,7 +319,7 @@ export function parseSpecification(input, options = {}) {
 }
 ```
 
-Testing Coupled Systems
+## Testing Coupled Systems
 
 Testing skills in isolation differs from testing their interactions. The tdd skill helps write unit tests for individual skill logic, but you also need integration tests for skill chains.
 
@@ -342,7 +339,7 @@ Integration tests for skill chains expose coupling problems that unit tests miss
 
 Use supermemory to maintain test cases and expected behaviors as living documentation. Store example inputs and outputs for each skill. When a skill changes, compare its new output to the stored examples to detect interface changes before they propagate.
 
-Contract Tests
+## Contract Tests
 
 For skills that communicate through defined interfaces, write contract tests that validate both sides of the interface:
 
@@ -365,7 +362,7 @@ test("tdd handles minimum required input fields", async () => {
 
 Contract tests give you confidence that interface changes will be caught before they cause runtime failures. They are faster than full integration tests and can be run on every commit.
 
-Measuring Success
+## Measuring Success
 
 Track these metrics to gauge improvement:
 
@@ -385,7 +382,7 @@ Track change propagation by keeping a log of which skills were modified together
 | Skill interaction test coverage | <30% | 50% | 80%+ |
 | Onboarding time to new skill | Days | Hours | <1 hour |
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Over-modularization creates its own problems. If you split skills too finely, you introduce management overhead and complex invocation chains. Aim for a balance where each skill has clear ownership and reasonable scope. A skill that does five lines of work is probably too small. it adds coordination overhead without adding clarity.
 
@@ -395,7 +392,7 @@ Temporal coupling is a subtle problem worth naming explicitly. Temporal coupling
 
 Finally, do not conflate coupling with communication. Skills must communicate to collaborate. The goal is not zero coupling. it is coupling that is explicit, documented, versioned, and minimal. Well-structured coupling is better than hidden coupling at any intensity level.
 
-Final Recommendations
+## Final Recommendations
 
 Start by auditing your existing skill set. Identify tightly coupled pairs and introduce transformation layers. Look for low-cohesion skills and refactor them into focused components. Use tdd to validate changes without introducing regressions.
 

@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code Not Generating Tests Correctly Fix Guide
 
 Test-driven development (TDD) is a cornerstone of modern software engineering, and Claude Code can be an invaluable assistant for generating comprehensive test suites. However, developers sometimes encounter situations where Claude Code doesn't generate tests correctly, producing incomplete coverage, incorrect assertions, or tests that simply fail to run. This guide provides practical solutions for diagnosing and fixing these common test generation issues.
 
-Common Test Generation Problems
+## Common Test Generation Problems
 
 Before diving into solutions, it's essential to understand the typical issues developers face when Claude Code generates tests incorrectly:
 
@@ -30,9 +27,9 @@ Before diving into solutions, it's essential to understand the typical issues de
 - Flaky tests: Tests that pass sometimes and fail other times without code changes
 - Missing test infrastructure: Tests written for the wrong framework or without proper setup
 
-Diagnosing Test Generation Issues
+## Diagnosing Test Generation Issues
 
-Step 1: Verify Test Framework Compatibility
+## Step 1: Verify Test Framework Compatibility
 
 One of the most common causes of test generation problems is framework mismatch. Claude Code needs clear context about which testing framework you're using.
 
@@ -49,7 +46,7 @@ If you've already generated tests but they're using the wrong framework, you can
 These tests are written for pytest but our project uses Jest. Please rewrite them in Jest.
 ```
 
-Step 2: Check Context Window Limitations
+## Step 2: Check Context Window Limitations
 
 When working with large codebases, Claude Code may not have access to all the context needed to generate accurate tests. The solution is to provide targeted context about the specific function or module you're testing.
 
@@ -69,13 +66,13 @@ Generate tests for the loginUser function in auth.ts. This function:
 - Calls our API endpoint at /api/auth/login
 ```
 
-Fixing Common Test Generation Errors
+## Fixing Common Test Generation Errors
 
-Problem: Tests Don't Match Your Code Structure
+## Problem: Tests Don't Match Your Code Structure
 
 If generated tests reference variables or functions that don't exist in your code, you need to provide more context about your actual implementation.
 
-Solution: Share the actual source code or API contracts
+## Solution: Share the actual source code or API contracts
 
 ```javascript
 // Provide this context to Claude Code
@@ -87,11 +84,11 @@ function calculateShippingCost(weight: number, destination: string): number {
 }
 ```
 
-Problem: Missing Test Setup and Teardown
+## Problem: Missing Test Setup and Teardown
 
 Tests may fail because they lack proper setup (beforeEach, beforeAll) or don't mock external dependencies correctly.
 
-Solution: Specify your testing patterns explicitly
+## Solution: Specify your testing patterns explicitly
 
 ```
 Generate tests for our API client with:
@@ -101,11 +98,11 @@ Generate tests for our API client with:
 - Use describe blocks to organize by endpoint
 ```
 
-Problem: Incorrect Assertion Values
+## Problem: Incorrect Assertion Values
 
 When Claude Code doesn't know the expected behavior, it may generate incorrect assertions.
 
-Solution: Document expected behavior clearly
+## Solution: Document expected behavior clearly
 
 ```python
 Instead of:
@@ -122,9 +119,9 @@ test('returns 0 for empty array', () => {
 });
 ```
 
-Advanced Solutions
+## Advanced Solutions
 
-Using Custom Instructions for Consistent Test Generation
+## Using Custom Instructions for Consistent Test Generation
 
 Create a `.claude/settings.json` or project-specific instructions to establish consistent testing patterns:
 
@@ -143,7 +140,7 @@ Create a `.claude/settings.json` or project-specific instructions to establish c
 }
 ```
 
-Implementing Test Generation Prompts
+## Implementing Test Generation Prompts
 
 Create reusable prompts for your team that Claude Code can reference:
 
@@ -157,7 +154,7 @@ When generating tests for [COMPONENT/TYPE], always:
 4. Use [YOUR ASSERTION STYLE]
 ```
 
-Leveraging Claude Code's Tool Use for Tests
+## Leveraging Claude Code's Tool Use for Tests
 
 Claude Code can execute tests directly. Use this to verify generated tests immediately:
 
@@ -167,9 +164,9 @@ Generate tests for the userService module, then run them to verify they pass.
 
 This allows Claude Code to self-correct if tests fail during execution.
 
-Best Practices for Reliable Test Generation
+## Best Practices for Reliable Test Generation
 
-Provide Comprehensive Context
+## Provide Comprehensive Context
 
 Always include:
 - The exact function signature and parameters
@@ -178,7 +175,7 @@ Always include:
 - Dependencies and their interfaces
 - Any relevant constants or configuration
 
-Review Generated Tests
+## Review Generated Tests
 
 Never blindly accept generated tests. Verify:
 - Assertions match expected behavior
@@ -186,7 +183,7 @@ Never blindly accept generated tests. Verify:
 - Mock setup is correct
 - Test names clearly describe what's being tested
 
-Iterate and Refine
+## Iterate and Refine
 
 If tests aren't correct on the first try, provide feedback:
 
@@ -194,7 +191,7 @@ If tests aren't correct on the first try, provide feedback:
 The tests you generated don't account for the case where the API returns a 429 status code. Please add tests for rate limiting.
 ```
 
-Troubleshooting Checklist
+## Troubleshooting Checklist
 
 When tests aren't generating correctly, work through this checklist:
 
@@ -205,7 +202,7 @@ When tests aren't generating correctly, work through this checklist:
 5. Tests executed?  Run tests to verify they work
 6. Feedback provided?  Tell Claude Code what needs correction
 
-Conclusion
+## Conclusion
 
 Claude Code is a powerful tool for test generation, but it requires clear context and specifications to produce accurate, useful tests. By providing detailed information about your codebase, establishing consistent testing patterns through custom instructions, and iteratively refining generated tests, you can use Claude Code to build comprehensive test suites efficiently.
 

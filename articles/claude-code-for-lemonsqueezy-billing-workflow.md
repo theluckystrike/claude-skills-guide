@@ -18,7 +18,7 @@ Claude Code for LemonSqueezy Billing Workflow: Complete Developer's Guide
 
 LemonSqueezy has emerged as a popular payment processor for digital products, offering a smooth checkout experience, automated tax handling, and solid subscription management. For developers building SaaS applications or selling digital goods, integrating LemonSqueezy's billing system effectively is crucial for revenue operations. This guide demonstrates how Claude Code can streamline your LemonSqueezy billing workflows, from initial integration to advanced automation scenarios.
 
-Setting Up Your LemonSqueezy Integration
+## Setting Up Your LemonSqueezy Integration
 
 Before implementing billing workflows, you need to establish a solid foundation for your LemonSqueezy integration. Claude Code can help you scaffold the entire setup process efficiently, ensuring best practices from the start.
 
@@ -56,7 +56,7 @@ export class BillingService {
 }
 ```
 
-Handling Webhooks for Real-Time Updates
+## Handling Webhooks for Real-Time Updates
 
 One of the most critical aspects of any billing integration is handling webhooks properly. LemonSqueezy sends webhooks for various events including subscription created, subscription updated, subscription cancelled, payment succeeded, and payment failed. Claude Code can help you implement a solid webhook handler that processes these events reliably.
 
@@ -105,7 +105,7 @@ app.post('/webhooks/lemon-squeezy', (req, res) => {
 });
 ```
 
-Managing Subscriptions Effectively
+## Managing Subscriptions Effectively
 
 When building SaaS applications, you'll need to manage subscriptions throughout their lifecycle. Claude Code can help you implement comprehensive subscription management that handles upgrades, downgrades, cancellations, and trial periods.
 
@@ -137,7 +137,7 @@ export class SubscriptionManager {
 }
 ```
 
-Implementing Customer Portal Integration
+## Implementing Customer Portal Integration
 
 LemonSqueezy provides a customer portal URL that allows customers to manage their own subscriptions, including updating payment methods, changing plans, and viewing invoice history. Claude Code can help you integrate this smoothly into your application:
 
@@ -154,7 +154,7 @@ export async function generateCustomerPortalUrl(customerId: string, returnUrl: s
 
 This function generates a secure portal link that you can present to users in your application dashboard, giving them self-service capabilities without requiring you to build complex UI for subscription management.
 
-Handling Failed Payments Gracefully
+## Handling Failed Payments Gracefully
 
 Payment failures are inevitable in any billing system. Whether due to expired cards, insufficient funds, or bank rejections, your system needs to handle these scenarios professionally. Claude Code can help you implement solid error handling and retry logic:
 
@@ -182,7 +182,7 @@ export async function handlePaymentFailure(subscription: any) {
 }
 ```
 
-Testing Your Integration
+## Testing Your Integration
 
 Before deploying to production, thoroughly test your LemonSqueezy integration using the test mode. Claude Code can help you create comprehensive test suites that verify all billing scenarios:
 
@@ -216,7 +216,7 @@ describe('LemonSqueezy Billing', () => {
 });
 ```
 
-Best Practices for Production
+## Best Practices for Production
 
 When deploying your LemonSqueezy billing integration to production, follow these essential best practices that Claude Code can help you implement:
 
@@ -224,7 +224,7 @@ Always verify webhook signatures to prevent spoofing attacks. Store your API key
 
 Additionally, maintain a local cache of subscription status to reduce API calls, but implement a mechanism to sync with LemonSqueezy periodically or via webhooks. This ensures your application remains responsive while staying in sync with the billing platform.
 
-Conclusion
+## Conclusion
 
 Integrating LemonSqueezy billing into your application doesn't have to be complex. By using Claude Code throughout the development process, you can build solid, well-tested billing workflows that handle the full subscription lifecycle. From initial setup to handling edge cases like failed payments, Claude Code helps you implement professional-grade billing integration that scales with your business.
 

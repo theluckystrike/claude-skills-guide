@@ -16,7 +16,7 @@ Embedded systems development presents unique challenges: resource constraints, r
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. They provide standing instructions for specialized tasks without requiring code imports or package installations.
 
-Essential Skills for Embedded Development
+## Essential Skills for Embedded Development
 
 tdd Skill for Firmware Test-Driven Development
 
@@ -53,9 +53,9 @@ Load register_map.xlsx, generate C bitfield structures for each peripheral, crea
 
 This skill processes register definitions, produces type-safe structures matching your MCU's memory layout, and maintains consistency between hardware specifications and firmware code.
 
-Specialized Workflows for Firmware Development
+## Specialized Workflows for Firmware Development
 
-RTOS Configuration and Task Management
+## RTOS Configuration and Task Management
 
 Real-time operating system development involves configuring tasks, semaphores, queues, and interrupt handlers. Claude skills provide templates and validation for FreeRTOS, Zephyr, or Micrium OS projects.
 
@@ -66,7 +66,7 @@ Create FreeRTOS task for sensor polling at 100Hz, implement queue for data passi
 
 This skill generates modular, testable code that handles real-time constraints while maintaining separation between hardware access and application logic. It produces task priority configurations, stack size calculations, and inter-task communication patterns following best practices.
 
-Hardware Abstraction Layer Construction
+## Hardware Abstraction Layer Construction
 
 Building portable firmware requires well-designed HALs that isolate hardware details from application code. Claude skills accelerate HAL development with consistent interfaces.
 
@@ -77,7 +77,7 @@ Build HAL for SPI peripheral on STM32L4 series, include functions for full-duple
 
 The skill generates abstraction layers that work across MCU families, making your code portable while preserving performance. It includes stub implementations for testing without hardware, enabling continuous integration for embedded projects.
 
-Debugging and Trace Analysis
+## Debugging and Trace Analysis
 
 Embedded debugging requires correlating code behavior with hardware state. Claude skills assist with trace analysis, breakpoint placement, and log interpretation.
 
@@ -88,9 +88,9 @@ Create debug module for UART runtime diagnostics, include ring buffer for log st
 
 This skill produces debugging infrastructure that adds minimal overhead, making it suitable for production firmware. It generates code compatible with OpenOCD, Segger J-Link, or ST-Link tools.
 
-Peripheral Driver Development
+## Peripheral Driver Development
 
-I2C and SPI Communication
+## I2C and SPI Communication
 
 Communication protocol implementation consumes significant development time. Claude skills generate verified drivers for common peripherals.
 
@@ -101,7 +101,7 @@ Develop I2C driver for BME280 sensor, include temperature, humidity, and pressur
 
 The skill produces drivers that handle timing constraints, error recovery, and power management, essential for battery-powered IoT devices.
 
-ADC and Sensor Integration
+## ADC and Sensor Integration
 
 Analog sensor integration requires calibration, filtering, and conversion. Claude skills automate these common patterns.
 
@@ -112,7 +112,7 @@ Parse sensor_calibration.csv, generate calibration coefficients, create lookup t
 
 This workflow transforms characterization data into efficient firmware code without manual calculation.
 
-PWM and Motor Control
+## PWM and Motor Control
 
 Motor control applications require precise timing and safety interlocks. Claude skills generate implementations following industry standards.
 
@@ -123,9 +123,9 @@ Create PWM driver for BLDC motor control using six-step commutation, include sta
 
 The skill produces code compatible with motor control ICs and implements protection mechanisms required for safety-critical applications.
 
-IoT-Specific Workflows
+## IoT-Specific Workflows
 
-Firmware Update Mechanisms
+## Firmware Update Mechanisms
 
 Over-the-air updates require careful implementation to prevent bricked devices. Claude skills generate secure update infrastructure.
 
@@ -136,7 +136,7 @@ Build OTA update module for ESP32, include HTTPS firmware download, delta update
 
 This skill generates code following security best practices, including encrypted transfers, authenticated updates, and fail-safe rollback procedures.
 
-Power Management
+## Power Management
 
 IoT devices often run on battery power, requiring aggressive optimization. Claude skills assist with sleep modes, duty cycling, and peripheral power gating.
 
@@ -147,7 +147,7 @@ Implement power management for battery-powered sensor node, include deep sleep w
 
 The skill produces code that maximizes battery life while maintaining required functionality, with configurable parameters for different deployment scenarios.
 
-Connectivity Stack Integration
+## Connectivity Stack Integration
 
 WiFi, BLE, LoRa, and cellular modems each require specific initialization and handling. Claude skills generate portable connectivity code.
 
@@ -158,7 +158,7 @@ Create ESP-NOW peer registration and data transfer module for ESP32, include pee
 
 This skill generates code handling protocol specifics while presenting unified interfaces to your application layer.
 
-Practical Integration
+## Practical Integration
 
 Skills function as collaborative assistants rather than autonomous agents, they respond to your direction while handling implementation details. This approach maintains developer control while accelerating mechanical tasks. For teams that need to scale these patterns across multiple engineers, [Claude skills for enterprise security and compliance](/claude-skills-for-enterprise-security-compliance-guide/) addresses the additional governance requirements that embedded and IoT projects often carry.
 

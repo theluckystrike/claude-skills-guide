@@ -18,7 +18,7 @@ Chrome extensions provide a powerful way to extend browser functionality, and in
 
 This guide covers the technical implementation of ChatGPT integration in Chrome extensions, from basic API calls to building sophisticated AI-powered features.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 A ChatGPT-powered Chrome extension typically consists of three main components:
 
@@ -28,7 +28,7 @@ A ChatGPT-powered Chrome extension typically consists of three main components:
 
 The communication between these components follows Chrome's message-passing architecture, where content scripts send requests to background scripts, which then handle external API calls.
 
-Setting Up Your Extension
+## Setting Up Your Extension
 
 Start by creating the extension manifest. For ChatGPT integration, you'll need Manifest V3:
 
@@ -50,7 +50,7 @@ Start by creating the extension manifest. For ChatGPT integration, you'll need M
 
 The `host_permissions` field is critical, you must explicitly declare access to the OpenAI API endpoint. Without this, your extension cannot communicate with ChatGPT's servers.
 
-Implementing the API Client
+## Implementing the API Client
 
 Your background script handles all communication with OpenAI's API. Here's a practical implementation:
 
@@ -105,7 +105,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This implementation provides error handling, async support, and secure API key storage using Chrome's encrypted storage.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides users a way to interact with ChatGPT directly:
 
@@ -168,9 +168,9 @@ document.getElementById('sendBtn').addEventListener('click', async () => {
 });
 ```
 
-Practical Use Cases for Developers
+## Practical Use Cases for Developers
 
-Code Review Assistant
+## Code Review Assistant
 
 One powerful application is integrating ChatGPT into code review workflows. Create a content script that injects into your codebase hosting platform:
 
@@ -192,7 +192,7 @@ document.addEventListener('mouseup', () => {
 });
 ```
 
-Context-Aware Responses
+## Context-Aware Responses
 
 For power users, consider building context-aware features that read the current page content:
 
@@ -218,7 +218,7 @@ const messages = [
 ];
 ```
 
-Security Considerations
+## Security Considerations
 
 When building ChatGPT-powered extensions, prioritize security:
 
@@ -229,7 +229,7 @@ When building ChatGPT-powered extensions, prioritize security:
 
 For production extensions, consider implementing user-managed API keys through a settings page rather than storing a single developer's key.
 
-Performance Optimization
+## Performance Optimization
 
 ChatGPT API calls introduce latency. Optimize your extension by:
 
@@ -255,12 +255,11 @@ async function callWithCache(prompt) {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Building ChatGPT-powered Chrome extensions requires understanding Chrome's extension architecture, secure API handling, and thoughtful UX design. The examples in this guide provide a foundation, you can expand them with features like conversation history, multiple AI models, or deep integration with specific websites.
 
 Start with the basics, test thoroughly, and iterate based on your specific use case. The combination of Chrome extensions and ChatGPT creates powerful possibilities for enhancing productivity and building AI-assisted workflows.
-
 
 Related Reading
 
@@ -270,7 +269,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Building a ChatGPT-Style Extension
+## Step-by-Step: Building a ChatGPT-Style Extension
 
 1. Obtain an API key: sign up at platform.openai.com, generate an API key, and store it securely in `chrome.storage.sync` via an options page. never bundle it in the extension source.
 2. Set up Manifest V3 with `storage`, `contextMenus`, and `sidePanel` permissions.
@@ -279,7 +278,7 @@ Step-by-Step: Building a ChatGPT-Style Extension
 5. Maintain conversation context: store the message history in `chrome.storage.session` so the conversation persists while the browser is open but clears when it closes. protecting privacy.
 6. Add page context injection: when the user asks about the current page, extract the page text and prepend it as a system message so the assistant has relevant context.
 
-Streaming API Response Rendering
+## Streaming API Response Rendering
 
 ```javascript
 async function streamResponse(messages, onToken) {
@@ -316,7 +315,7 @@ async function streamResponse(messages, onToken) {
 }
 ```
 
-Comparison with Browser AI Assistants
+## Comparison with Browser AI Assistants
 
 | Tool | Model | Page context | Privacy | Offline | Cost |
 |---|---|---|---|---|---|
@@ -328,7 +327,7 @@ Comparison with Browser AI Assistants
 
 Building your own gives full control over the model, context injection strategy, and data handling. You choose which model to use and can switch between providers.
 
-Advanced: Custom Personas and System Prompts
+## Advanced: Custom Personas and System Prompts
 
 Let users configure custom system prompts for different use cases:
 
@@ -342,7 +341,7 @@ const personas = {
 
 Store the selected persona in `chrome.storage.sync` and prepend it as the system message for every conversation.
 
-Troubleshooting
+## Troubleshooting
 
 Rate limit errors (429): Implement exponential backoff. retry after 1 second, then 2, then 4. Store the retry count in the request state and surface a "Rate limited, retrying..." message in the UI so the user knows to wait.
 
