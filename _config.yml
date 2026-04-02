@@ -1,4 +1,4 @@
-title: "Claude Skills Guide"
+title: "Claude Code Guides"
 tagline: "Ship Faster with Claude Code — Tutorials, Workflows & AI Agent Guides"
 description: "Step-by-step Claude Code tutorials, AI agent workflows, and prompt engineering guides. Learn to automate coding tasks, build with Claude AI, and boost developer productivity."
 url: "https://claudecodeguides.com"
@@ -32,6 +32,10 @@ plugins:
 # wrapped in {% raw %} / {% endraw %} to prevent Liquid build errors.
 # PM1 adds these tags where needed. PM2 must NOT strip them.
 defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/og-default.png
   - scope:
       path: "articles"
     values:
