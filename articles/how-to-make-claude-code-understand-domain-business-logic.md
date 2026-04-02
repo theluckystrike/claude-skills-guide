@@ -13,20 +13,17 @@ reviewed: true
 score: 7
 ---
 
-
-How to Make Claude Code Understand Domain Business Logic
-
 Claude Code comes equipped with broad general knowledge, but getting it to understand your specific business domain requires deliberate setup. Whether you're building skills for healthcare compliance, financial services, or e-commerce, teaching Claude about your domain logic unlocks more accurate, context-aware responses.
 
 This guide covers practical methods to inject domain knowledge into Claude Code, from crafting domain-specific skills to configuring knowledge retrieval systems.
 
-Why Domain Context Matters
+## Why Domain Context Matters
 
 General-purpose AI models excel at reasoning but lack awareness of your specific terminology, business rules, and data structures. When you ask Claude to help with a complex order processing workflow, it doesn't know that "pending" means something different in your system than in a typical REST API, or that certain field combinations trigger compliance checks.
 
 By providing structured domain context, you transform Claude from a capable generalist into a specialist that understands your business logic.
 
-Method 1: Domain-Specific Skill Creation
+## Method 1: Domain-Specific Skill Creation
 
 The most direct approach involves creating custom skills that encode your business rules. Skills act as persistent instruction sets that Claude loads when working on specific tasks.
 
@@ -57,7 +54,7 @@ Valid order status transitions:
 
 When you invoke this skill using `/ecommerce-orders`, Claude loads these rules and applies them consistently across conversations.
 
-Method 2: Entity Definition Files
+## Method 2: Entity Definition Files
 
 For complex domains with many specific terms, create dedicated entity definition files that Claude can reference. Store these as markdown files in a consistent location and reference them in your skills.
 
@@ -94,7 +91,7 @@ Load the domain entities from ../domain/finance-entities.md
 and use these definitions when validating transactions or answering customer questions.
 ```
 
-Method 3: Database Schema Integration
+## Method 3: Database Schema Integration
 
 For applications with structured data, provide Claude with schema context. This helps it understand relationships and constraints:
 
@@ -124,7 +121,7 @@ Relationships
 
 This approach pairs well with the tdd skill for generating tests that respect your actual data model.
 
-Method 4: Business Rule Documentation
+## Method 4: Business Rule Documentation
 
 Document your business logic in a format Claude can parse and apply. Use clear conditional structures:
 
@@ -149,7 +146,7 @@ Shipping Calculation
 
 When working with skills like frontend-design or pdf generation, having these rules documented ensures the output reflects your actual business logic rather than generic implementations.
 
-Method 5: Using supermemory for Context
+## Method 5: Using supermemory for Context
 
 The supermemory skill provides persistent memory across sessions. Use it to maintain domain context that persists beyond individual conversations:
 
@@ -164,7 +161,7 @@ Enterprise: unlimited calls, unlimited members, 24/7 support + SLA."
 
 This creates a retrievable knowledge base that Claude queries when working on support-related tasks.
 
-Method 6: Example-Based Learning
+## Method 6: Example-Based Learning
 
 Provide Claude with concrete examples of correct domain behavior:
 
@@ -202,7 +199,7 @@ Expected error:
 
 These examples train Claude on your expected inputs and outputs, reducing hallucinations around domain-specific edge cases.
 
-Combining Methods for Best Results
+## Combining Methods for Best Results
 
 The most effective domain understanding comes from layering multiple approaches:
 

@@ -18,7 +18,7 @@ Claude Code for Medallion Architecture Workflow
 
 Medallion architecture, also known as Bronze, Silver, and Gold, has become a fundamental pattern in modern data engineering. This three-tier approach organizes data pipelines into distinct quality levels, enabling teams to progressively refine raw data into business-ready datasets. Implementing and maintaining medallion architectures requires careful orchestration of ETL processes, solid data quality checks, and clear separation between layers. Claude Code transforms this complexity into a manageable workflow by providing intelligent assistance throughout the development lifecycle.
 
-Understanding the Medallion Architecture
+## Understanding the Medallion Architecture
 
 The medallion architecture divides data processing into three distinct stages, each serving a specific purpose in the data journey. Understanding these layers is essential before implementing any automation.
 
@@ -28,7 +28,7 @@ The Silver layer acts as the curated intermediate layer where data undergoes cle
 
 The Gold layer represents the final refined layer containing business-level aggregates, metrics, and analytics-ready datasets. This layer contains the transformed data that directly fuels dashboards, reports, and ML models. Optimized for query performance, gold tables often employ star schemas or dimensional models.
 
-Setting Up Your Claude Code Environment
+## Setting Up Your Claude Code Environment
 
 Before implementing medallion workflows, ensure your Claude Code environment is properly configured. The key skills to load include those for file operations, bash execution, and any database-specific tools relevant to your stack.
 
@@ -44,7 +44,7 @@ mkdir -p dbt/
 
 This establishes the foundational directory structure that will house your medallion pipeline components. Maintaining clear separation from the outset prevents confusion as transformations grow more complex.
 
-Implementing the Bronze Layer
+## Implementing the Bronze Layer
 
 The bronze layer functions as your system of record for raw data. Claude Code helps generate ingestion scripts that capture data exactly as it arrives, without applying any transformations.
 
@@ -80,7 +80,7 @@ def ingest_source_data(source_file, batch_id):
 
 The ingestion script maintains raw data fidelity and captures essential metadata for auditability and reprocessing. Storing data in Parquet format with timestamp-based partitioning enables efficient time-travel queries and simplifies lifecycle management.
 
-Building the Silver Layer Transformations
+## Building the Silver Layer Transformations
 
 Silver layer processing applies business logic, cleanses data, and establishes relationships. Claude Code excels at generating transformation logic that handles common data quality issues.
 
@@ -120,7 +120,7 @@ def clean_and_enrich_bronze(bronze_path, silver_path):
 
 This transformation pipeline demonstrates essential silver layer practices: standardizing formats, removing duplicates, handling missing values, and creating derived attributes that support downstream analytics.
 
-Creating Gold Layer Aggregations
+## Creating Gold Layer Aggregations
 
 The gold layer produces business-ready aggregates optimized for specific use cases. These transformations typically involve complex joins, window functions, and business-specific calculations.
 
@@ -164,7 +164,7 @@ def build_customer_metrics(silver_path, gold_path):
 
 Gold layer tables should align directly with consumption patterns, dashboard queries, ML feature engineering, or API responses. The partition strategy should reflect the most common access patterns to minimize query latency.
 
-Implementing Data Quality Checks
+## Implementing Data Quality Checks
 
 Maintaining data quality across medallion layers requires automated validation at each stage. Integrate checks that catch issues before they propagate downstream.
 
@@ -191,7 +191,7 @@ models:
 
 These tests catch data anomalies immediately upon pipeline execution rather than allowing defects to reach end users. Implementing quality gates between each medallion layer prevents bad data from contaminating downstream tables.
 
-Orchestrating the Pipeline
+## Orchestrating the Pipeline
 
 Finally, orchestrate your medallion pipeline using tools like Apache Airflow or Prefect. Define dependencies clearly to ensure proper execution order and enable parallel processing where appropriate.
 
@@ -226,7 +226,7 @@ with DAG('medallion_architecture',
     ingest_bronze >> transform_silver >> aggregate_gold
 ```
 
-Best Practices for Medallion with Claude Code
+## Best Practices for Medallion with Claude Code
 
 When implementing medallion architecture with Claude Code, several practices will significantly improve your workflow reliability and maintainability.
 

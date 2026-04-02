@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Mythril Workflow Tutorial
 
@@ -25,7 +24,7 @@ Mythril is a security analysis tool for Ethereum smart contracts that uses symbo
 
 This symbolic execution approach catches bugs that simple pattern matching would miss, but it also means Mythril has a steep learning curve. The tool's output is technical, its flags are numerous, and translating findings into concrete code fixes requires expertise in Solidity security patterns. That is exactly where Claude Code closes the gap, it handles the execution, interprets the results, and generates remediation guidance in a single workflow.
 
-Understanding What Mythril Detects
+## Understanding What Mythril Detects
 
 Before setting up automation, it helps to understand the vulnerability categories Mythril covers:
 
@@ -43,7 +42,7 @@ Before setting up automation, it helps to understand the vulnerability categorie
 
 Knowing these categories helps you configure Mythril to focus on the checks most relevant to your contract type, a simple ERC-20 token needs different analysis priorities than a complex DeFi vault.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before integrating Claude Code with Mythril, ensure you have the necessary tools installed:
 
@@ -95,7 +94,7 @@ You have access to bash commands and file operations. When asked to analyze a sm
 
 This skill will have access to file system and bash operations, which are essential for running Mythril and processing results.
 
-Creating Your First Automated Scan
+## Creating Your First Automated Scan
 
 Start with a deliberately vulnerable contract to verify your setup works end to end. Create a test contract:
 
@@ -141,7 +140,7 @@ For each issue, show the vulnerable code and the corrected version.
 
 Claude Code will produce a structured report explaining that the reentrancy issue in `withdraw()` allows an attacker to recursively call back into the function before the balance is decremented, a pattern responsible for the $60M DAO hack in 2016, and will show the fix using the checks-effects-interactions pattern.
 
-Building an Intelligent Analysis Skill
+## Building an Intelligent Analysis Skill
 
 Create a skill that not only runs Mythril but interprets findings and generates remediation guidance:
 
@@ -179,11 +178,11 @@ Common Remediation Patterns
 
 The skill body instructs Claude on how to handle each finding category with concrete patterns, not just generic advice.
 
-Integrating into Your Development Workflow
+## Integrating into Your Development Workflow
 
 The real power of Claude Code + Mythril comes from integrating security scanning into your daily development process.
 
-Pre-Commit Security Checks
+## Pre-Commit Security Checks
 
 Configure a pre-commit hook that triggers Mythril analysis on any modified Solidity files:
 
@@ -229,7 +228,7 @@ exit 0
 
 This ensures every commit passes through security review before entering your repository. Critical findings block the commit entirely, while lower-severity findings are logged but do not block.
 
-Continuous Integration Pipeline
+## Continuous Integration Pipeline
 
 Add Mythril scanning to your CI/CD pipeline with structured JSON output and PR comment posting:
 
@@ -307,7 +306,7 @@ if by_severity["High"]:
 print("\nBuild passed security scan.")
 ```
 
-Automated Code Review for Pull Requests
+## Automated Code Review for Pull Requests
 
 Combine Mythril output with Claude Code for intelligent PR review comments:
 
@@ -336,9 +335,9 @@ for file in $CHANGED; do
 done
 ```
 
-Handling Common Issues
+## Handling Common Issues
 
-False Positives
+## False Positives
 
 Mythril, like all static analysis tools, can produce false positives. Common sources include:
 
@@ -374,7 +373,7 @@ For confirmed false positives, maintain a suppression file:
 }
 ```
 
-Large Contracts
+## Large Contracts
 
 For contracts that exceed Mythril's default analysis capacity:
 
@@ -396,7 +395,7 @@ Then run myth analyze for each function individually using the --function flag,
 and compile a combined report.
 ```
 
-Version Compatibility
+## Version Compatibility
 
 Mythril requires matching the correct Solidity compiler version to the contract's pragma:
 
@@ -413,7 +412,7 @@ myth analyze contracts/MyToken.sol --solc-version $PRAGMA --json-output > report
 
 Your Claude Code skill can embed this auto-detection logic so you never need to manually specify compiler versions.
 
-Advanced: Custom Security Rules
+## Advanced: Custom Security Rules
 
 For specialized security requirements beyond Mythril's built-in checks, create custom detection modules:
 
@@ -459,7 +458,7 @@ class CustomAccessControlCheck(DetectionModule):
 
 Register this module with your mythril-analyze skill and it will run alongside the standard checks on every scan.
 
-Comparing Mythril with Other Smart Contract Security Tools
+## Comparing Mythril with Other Smart Contract Security Tools
 
 Understanding how Mythril fits into the broader security tooling landscape helps you use it more effectively:
 
@@ -473,7 +472,7 @@ Understanding how Mythril fits into the broader security tooling landscape helps
 
 The recommended workflow is to use all three of Mythril, Slither, and manual review in sequence. Slither is faster and catches a wider class of code quality issues; Mythril goes deeper on specific vulnerability patterns. Claude Code can orchestrate all three tools and merge their findings into a unified report.
 
-Best Practices
+## Best Practices
 
 1. Scan Early, Scan Often: Integrate Mythril into your IDE workflow and CI pipeline. Security bugs are dramatically cheaper to fix during development than after deployment to mainnet.
 
@@ -487,7 +486,7 @@ Best Practices
 
 6. Document Suppressed Findings: Every time you suppress a Mythril warning, require a written justification in the suppression file. This creates an audit trail and forces deliberate decision-making rather than reflexive dismissal.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Mythril transforms smart contract security from a manual, sporadic process into an automated, consistent workflow. By creating specialized skills that not only run analysis but also interpret results and guide remediation, you build a security-conscious development culture that catches vulnerabilities before they reach production.
 

@@ -18,15 +18,15 @@ permalink: /claude-skills-for-solidity-smart-contract-development/
 
 Scope note: This guide is about *using* existing Claude skills. activating `/tdd` for test-driven contract development, `/pdf` for audit-ready documentation, and `/supermemory` for managing multi-contract context. If you want to *build* your own custom Solidity skills (auditing checklists, gas-optimization templates, deployment runbooks), see [Claude Code Skills for Solidity Smart Contracts](/claude-code-skills-for-solidity-smart-contracts/).
 
-Understanding Claude Skills for Blockchain Development
+## Understanding Claude Skills for Blockchain Development
 
 Claude skills are Markdown files stored in `~/.claude/skills/` that enhance Claude's capabilities in specific domains. When working with Solidity, these skills help Claude understand smart contract patterns, security considerations, and deployment workflows specific to the Ethereum ecosystem.
 
 The skill system works by loading custom instructions into your Claude session. You activate a skill by typing its slash command, and Claude immediately adapts its responses to follow the skill's guidelines. For Solidity development, combining multiple skills creates a comprehensive development environment.
 
-Essential Claude Skills for Smart Contracts
+## Essential Claude Skills for Smart Contracts
 
-The TDD Skill for Contract Testing
+## The TDD Skill for Contract Testing
 
 The `/tdd` skill transforms how you approach smart contract development. Instead of writing contracts and then adding tests afterward, TDD encourages you to define behavior through tests first.
 
@@ -43,7 +43,7 @@ contract TokenTest is Test {
 
 When you activate the `/tdd` skill with `/tdd`, Claude will help you structure tests before implementing the contract, ensuring your code meets defined requirements from the start.
 
-The PDF Skill for Documentation
+## The PDF Skill for Documentation
 
 The `/pdf` skill helps generate comprehensive documentation for your smart contracts. Good documentation is critical for audit readiness and team collaboration.
 
@@ -53,7 +53,7 @@ The `/pdf` skill helps generate comprehensive documentation for your smart contr
 
 This skill extracts function signatures, natspec comments, and deployment details to create professional documentation that aligns with Solidity best practices.
 
-The Supercemory Skill for Context Management
+## The Supercemory Skill for Context Management
 
 Smart contract projects involve complex state machines and multiple file interactions. The `/supermemory` skill helps maintain context across your development session:
 
@@ -63,9 +63,9 @@ Smart contract projects involve complex state machines and multiple file interac
 
 This becomes invaluable when working on larger projects with multiple interconnected contracts.
 
-Practical Development Workflow
+## Practical Development Workflow
 
-Writing Your First Contract with Claude
+## Writing Your First Contract with Claude
 
 Start by activating relevant skills for your session:
 
@@ -85,7 +85,7 @@ Then describe your contract requirements:
 
 The `/tdd` skill ensures tests are generated alongside your contract code, while `/frontend-design` helps if you're building related UI components.
 
-Security-First Development
+## Security-First Development
 
 Smart contract security requires constant vigilance. Claude skills can help enforce security patterns:
 
@@ -113,7 +113,7 @@ contract SecureVault {
 }
 ```
 
-Testing Strategies
+## Testing Strategies
 
 The `/tdd` skill excels at generating comprehensive test coverage:
 
@@ -133,7 +133,7 @@ function testFlashLoanExecution() public {
 }
 ```
 
-Additional Skills That Help
+## Additional Skills That Help
 
 While not specifically blockchain-focused, several other Claude skills accelerate smart contract development:
 
@@ -144,7 +144,7 @@ While not specifically blockchain-focused, several other Claude skills accelerat
 
 These skills work together to create a complete development environment. The PDF skill is particularly useful when preparing for security audits, generating documentation that follows Solidity best practices and includes natspec comments extracted from your code.
 
-Deployment Considerations
+## Deployment Considerations
 
 When deploying to mainnet, use the TDD skill to verify all tests pass:
 
@@ -156,16 +156,15 @@ forge coverage
 
 The skill system helps ensure you've covered edge cases, proper access controls, and reentrancy protections before any real value is at stake. Always run your test suite multiple times and consider adding fuzz testing for critical functions.
 
-Why Skills Matter for Smart Contracts
+## Why Skills Matter for Smart Contracts
 
 Smart contract development presents unique challenges that generic coding assistants struggle with. The Ethereum Virtual Machine has specific behaviors around gas consumption, storage layout, and call depth that require specialized knowledge. Claude skills fill this gap by providing targeted guidance for blockchain-specific patterns.
 
 Using skills like /tdd ensures your contracts are battle-tested before they ever touch mainnet. The combination of test-driven development with the security-consciousness that skills bring leads to more dependable decentralized applications.
 
-Conclusion
+## Conclusion
 
 Claude skills significantly enhance Solidity development by providing specialized knowledge in testing, documentation, and security patterns. The `/tdd` skill alone can transform your development workflow by enforcing test-driven practices essential for secure smart contracts. Combined with documentation and context-management skills, you have a comprehensive toolkit for building production-ready Ethereum applications.
-
 
 Related Reading
 

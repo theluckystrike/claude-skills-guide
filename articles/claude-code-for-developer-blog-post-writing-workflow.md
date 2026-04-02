@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Developer Blog Post Writing Workflow
 
@@ -25,7 +24,7 @@ Developer blog posts differ from regular content, they require accurate code exa
 
 The primary benefits include faster drafting with accurate code snippets, consistent formatting across articles, built-in technical accuracy checks, and the ability to maintain your unique voice while improving clarity. Instead of spending hours on formatting and code syntax, you can focus on the core message and technical depth that readers expect from developer content.
 
-Setting Up Your Blog Writing Project
+## Setting Up Your Blog Writing Project
 
 Before diving into writing, organize your project structure for maximum efficiency. A well-structured blog project enables Claude Code to work more effectively across multiple articles.
 
@@ -38,9 +37,9 @@ mkdir -p drafts published assets code-examples
 
 This structure keeps your work organized and allows Claude Code to reference previous articles, maintain consistency in terminology, and understand your overall content strategy.
 
-The Claude Code Blog Writing Workflow
+## The Claude Code Blog Writing Workflow
 
-Phase 1: Outline and Planning
+## Phase 1: Outline and Planning
 
 Start by providing Claude Code with context about your article. A well-crafted prompt establishes scope, target audience, and key points to cover:
 
@@ -54,7 +53,7 @@ context setup, protected routes, and best practices.
 
 Claude Code will generate a detailed outline with estimated word counts for each section, suggested code examples, and potential challenges to address. Review this outline and refine it based on your specific expertise and the points you want to emphasize.
 
-Phase 2: Drafting with Technical Accuracy
+## Phase 2: Drafting with Technical Accuracy
 
 When drafting begins, Claude Code produces clean, accurate code examples that you can directly copy into your article. The key is providing sufficient context about your tech stack and preferences.
 
@@ -69,7 +68,7 @@ For code examples, specify the framework version and any specific patterns you p
 
 This attention to detail results in code snippets that readers can actually use, not just illustrative examples that might not compile. Claude Code also suggests appropriate comments and explains complex logic within code blocks, making your tutorials more accessible.
 
-Phase 3: Technical Review and Refinement
+## Phase 3: Technical Review and Refinement
 
 One of Claude Code's strongest capabilities is its ability to catch technical inaccuracies. After drafting, ask it to review the content for:
 
@@ -81,7 +80,7 @@ One of Claude Code's strongest capabilities is its ability to catch technical in
 
 This review process significantly improves the technical credibility of your blog posts, which is crucial when your readers are fellow developers who will test your code.
 
-Creating Reusable Templates
+## Creating Reusable Templates
 
 Establishing templates for common article types accelerates your workflow. Create template files for different blog post categories:
 
@@ -113,7 +112,7 @@ Conclusion
 
 Using templates ensures consistency across your blog while reducing the mental overhead of starting from scratch each time.
 
-Optimizing for Developer Readers
+## Optimizing for Developer Readers
 
 Developer audiences have specific expectations. They scan for code, appreciate practical examples, and value honesty about trade-offs. Structure your posts to accommodate these reading patterns.
 
@@ -121,7 +120,7 @@ Include code blocks prominently with syntax highlighting. Developers often copy 
 
 Address common pitfalls and edge cases. A blog post that only shows the happy path frustrates readers when they encounter real-world complications. Use experience from debugging and production issues to provide genuine value.
 
-Integrating with Your Publishing Workflow
+## Integrating with Your Publishing Workflow
 
 Connect Claude Code with your blog's build system for smooth publishing. If you're using a static site generator like Jekyll, Hugo, or Gatsby, maintain front matter consistency:
 
@@ -138,7 +137,7 @@ tags: [tag1, tag2]
 
 Claude Code can generate this front matter automatically, ensuring proper SEO metadata, publication dates, and categorization across your entire blog.
 
-Practical Example: Creating a Tutorial Article
+## Practical Example: Creating a Tutorial Article
 
 Let's walk through a real scenario: creating a tutorial about integrating an API. Assume you're writing about processing payments using a Python SDK.
 
@@ -181,13 +180,13 @@ This verification prevents the credibility-destroying situation of publishing co
 
 For cross-platform publishing, the `docx` skill transforms your markdown content into professionally formatted Word documents, allowing you to repurpose blog posts into presentations, whitepapers, or guest contributions with minimal additional effort.
 
-Maintaining Your Voice
+## Maintaining Your Voice
 
 While Claude Code enhances efficiency, your unique perspective remains essential. Provide personal anecdotes, include real-world examples from your projects, and share opinions about trade-offs. The AI assists with technical accuracy and clarity, but your experience and insights create the authentic voice that readers connect with.
 
 Before publishing, review for sections that feel generic. Replace textbook explanations with insights only someone working in the field would know. This differentiation transforms helpful tutorials into memorable blog posts that readers return to repeatedly.
 
-Actionable Takeaways
+## Actionable Takeaways
 
 To implement this workflow effectively:
 

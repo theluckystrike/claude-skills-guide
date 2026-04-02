@@ -18,13 +18,13 @@ When production issues arise, development teams need to move fast. A "war room" 
 
 This guide shows you how to build war room workflows with Claude Code that streamline incident response and reduce time-to-resolution for critical issues.
 
-Understanding War Room Dynamics
+## Understanding War Room Dynamics
 
 Traditional war room sessions often suffer from common problems: duplicated effort where multiple people investigate the same symptoms, scattered notes across different tools, difficulty onboarding new team members joining mid-incident, and unclear action item ownership. Claude Code addresses these challenges by serving as a central coordinator that can query systems, maintain context, and ensure everyone works from the same information.
 
 The key insight is that Claude Code isn't just answering questions, it's executing real work in your environment. It can run diagnostic commands, parse logs, query monitoring systems, and maintain a structured investigation record that persists throughout the incident lifecycle.
 
-Setting Up Your War Room Environment
+## Setting Up Your War Room Environment
 
 Before an incident occurs, prepare your environment so Claude Code can access the tools and information your war room needs. This preparation involves configuring access to your observability stack, defining incident management skills, and establishing secure communication channels.
 
@@ -44,7 +44,7 @@ mkdir -p war-room/{logs,configs,screenshots,notes}
 
 This directory becomes the working space for all war room activities, with subdirectories for different artifact types. When an incident begins, Claude Code can immediately access this structure and begin organizing investigation findings.
 
-Building Your War Room Skill
+## Building Your War Room Skill
 
 A well-designed Claude Skill encapsulates your incident response methodology, making it available whenever war room sessions begin. Create a skill that standardizes how your team approaches critical issues:
 
@@ -82,7 +82,7 @@ Install this skill before incidents occur so it's ready when needed:
 claude /skill install war-room
 ```
 
-Practical War Room Workflow
+## Practical War Room Workflow
 
 When an incident begins, start by establishing the incident context. Use Claude Code to gather initial information and create a living document that tracks the entire investigation:
 
@@ -122,7 +122,7 @@ Find temporal patterns
 grep "$(date -u +%H:%M)" logs/*.txt
 ```
 
-Coordinating Multi-Person War Rooms
+## Coordinating Multi-Person War Rooms
 
 When multiple team members join the incident response, establish clear communication protocols. Claude Code can maintain a shared investigation state that everyone references:
 
@@ -145,7 +145,7 @@ curl -X POST "$INCIDENT_API/update" \
   -d '{"incident_id": "INC-123", "status": "investigating"}'
 ```
 
-Post-Incident Review and Learning
+## Post-Incident Review and Learning
 
 After resolving the incident, Claude Code helps generate comprehensive post-mortem documentation. Aggregate all collected artifacts and create structured learnings:
 
@@ -175,7 +175,7 @@ Lessons Learned
 EOF
 ```
 
-Best Practices for War Room Effectiveness
+## Best Practices for War Room Effectiveness
 
 Effective war room workflows require upfront preparation and disciplined execution. Here are key practices to maximize Claude Code's value during incidents:
 
@@ -188,7 +188,6 @@ Document in real-time: Resist the temptation to take notes externally and transf
 Version everything: Keep all incident artifacts in version control or a shared location that preserves history. This creates an invaluable reference for future incidents and enables systematic improvement of your response procedures.
 
 By integrating Claude Code into your war room workflow, you transform ad-hoc incident response into a structured, repeatable process that accelerates diagnosis, improves team coordination, and builds institutional knowledge from every incident your team faces.
-
 
 Related Reading
 

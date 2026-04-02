@@ -16,7 +16,7 @@ permalink: /how-to-build-saas-mvp-with-claude-code-skills-guide/
 
 Building a SaaS MVP requires speed, reliability, and the right toolchain. Claude Code skills provide specialized capabilities that accelerate every phase of MVP development, from UI design to automated testing and document generation. This guide shows you which skills to use and how to combine them effectively.
 
-Planning Your MVP Architecture
+## Planning Your MVP Architecture
 
 Before writing code, define your core feature set. A typical SaaS MVP needs user authentication, a database, API endpoints, and a frontend interface. Claude Code skills handle the repetitive parts of each layer, letting you focus on business logic.
 
@@ -33,7 +33,7 @@ Store the following MVP requirements:
 
 This creates a persistent context that Claude can reference throughout development sessions.
 
-Frontend Development with the frontend-design Skill
+## Frontend Development with the frontend-design Skill
 
 The `/frontend-design` skill generates UI components, layouts, and responsive designs. For an MVP, you need clean, functional interfaces without spending weeks on design.
 
@@ -53,7 +53,7 @@ The skill outputs production-ready HTML, CSS, and JavaScript. It supports Tailwi
 
 Pair this with the `/canvas-design` skill if you need mockups or promotional graphics. Generate social media images, app screenshots, and feature highlights without leaving your development environment.
 
-Backend and Database Setup
+## Backend and Database Setup
 
 For backend logic, the [`/tdd` skill](/best-claude-skills-for-developers-2026/) proves invaluable. Write your test cases first, then implement the feature:
 
@@ -88,7 +88,7 @@ def test_duplicate_email_raises_error():
         create_user(email="dupe@example.com", plan="free")
 ```
 
-PDF Generation and Document Handling
+## PDF Generation and Document Handling
 
 SaaS products often need PDF functionality: invoices, reports, contracts, or exports. The [`/pdf` skill](/best-claude-skills-for-data-analysis/) handles both reading and creating PDFs:
 
@@ -107,7 +107,7 @@ Save as invoices/INV-2026-001.pdf
 
 For MVPs, automating document workflows eliminates the need for expensive third-party invoice and contract services during early stages.
 
-Testing and Quality Assurance
+## Testing and Quality Assurance
 
 The `/webapp-testing` skill automates browser-based testing. Use it to verify that your MVP flows work end-to-end:
 
@@ -128,7 +128,7 @@ Run these tests before each deployment. The skill captures screenshots and logs,
 
 The `/tdd` skill complements this with unit and integration tests. Together, they provide coverage across all layers of your MVP.
 
-Spreadsheet Data Exports
+## Spreadsheet Data Exports
 
 Many SaaS products need spreadsheet exports for admin dashboards or analytics. The `/xlsx` skill creates and manipulates Excel files:
 
@@ -145,7 +145,7 @@ Save as exports/analytics-march-2026.xlsx
 
 This covers admin data needs in your MVP's early stages without building a custom export system.
 
-Deployment Configuration
+## Deployment Configuration
 
 For infrastructure files, describe your requirements to Claude Code directly:
 
@@ -172,7 +172,7 @@ EXPOSE 3000
 CMD ["node", "server.js"]
 ```
 
-Putting It All Together
+## Putting It All Together
 
 Here is the workflow for building your SaaS MVP with Claude Code skills:
 
@@ -186,7 +186,7 @@ Here is the workflow for building your SaaS MVP with Claude Code skills:
 
 Each skill addresses a specific bottleneck in MVP development. Start with the core loop of design, test, and build, then add skills as your product needs them.
 
-When to Add More Skills
+## When to Add More Skills
 
 As your MVP grows, introduce additional skills:
 
@@ -207,6 +207,5 @@ Related Reading
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) - Top frontend skills with examples
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) - Broader developer skill overview
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) - How skills activate automatically
-
 
 Built by theluckystrike - More at [zovo.one](https://zovo.one)

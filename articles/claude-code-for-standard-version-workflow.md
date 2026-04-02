@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Standard Version Workflow"
 description: "Learn how to use Claude Code to implement standard version workflows including semantic versioning, changelog generation, and automated release management."
@@ -14,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Version management is a critical aspect of software development that often gets overlooked until releases become chaotic. Whether you're maintaining a small library or a large enterprise application, having a standardized version workflow saves time, reduces errors, and keeps your team synchronized. Claude Code offers powerful capabilities to automate and streamline version-related tasks, making it an invaluable tool for developers who want to maintain consistent release processes.
 
 This guide walks you through implementing a standard version workflow using Claude Code, covering semantic versioning, changelog automation, and release management strategies that you can adapt to your project's needs.
 
-Understanding Semantic Versioning Basics
+## Understanding Semantic Versioning Basics
 
 Semantic versioning (SemVer) provides a predictable versioning scheme that communicates the nature of changes between releases. The format follows three numbers: major, minor, and patch (e.g., 2.1.3). Major versions indicate breaking changes, minor versions add functionality in a backward-compatible way, and patch versions address backward-compatible bug fixes.
 
 Claude Code can help you determine the appropriate version bump by analyzing your git commits and diffs. When you describe your changes to Claude Code, it can suggest the appropriate version increment based on conventional commit messages or PR descriptions.
 
-Setting Up Version Workflow with Claude Code
+## Setting Up Version Workflow with Claude Code
 
 To implement a standard version workflow, you'll want to use Claude Code's skills for automation. The key skills to use include the tdd skill for test-driven development alongside version changes, the changelog skill for automatic changelog generation, and the git-workflow skill for managing version-related git operations.
 
@@ -59,7 +57,7 @@ bump_version() {
 
 This script provides the foundation for version management. Claude Code can help you extend it with additional features like git tagging, changelog generation, and npm/pypi publishing automation.
 
-Automating Changelog Generation
+## Automating Changelog Generation
 
 One of the most valuable aspects of a standard version workflow is consistent changelog generation. Rather than scrambling to remember what changed between releases, automated changelogs ensure every update gets documented.
 
@@ -128,7 +126,7 @@ def generate_changelog():
 
 This Python script organizes commits by type, making your changelog readable and professional. Claude Code can help you customize this script to match your project's conventions and integrate it into your CI/CD pipeline.
 
-Implementing Release Automation
+## Implementing Release Automation
 
 Once you have version bumping and changelog generation working, the next step is release automation. Claude Code can help you create a comprehensive release workflow that handles building, testing, tagging, and publishing.
 
@@ -171,7 +169,7 @@ jobs:
 
 This GitHub Actions workflow triggers on every tag matching the pattern v*, ensuring consistent release processes. Claude Code can help you extend this workflow with additional steps like generating release notes, publishing Docker images, or notifying team members through Slack.
 
-Best Practices for Version Workflows
+## Best Practices for Version Workflows
 
 When implementing version workflows with Claude Code, keep these best practices in mind:
 
@@ -183,7 +181,7 @@ Tag Releases: Use git tags to mark release points. Tags make it easy to compare 
 
 Automate Publishing: Reduce manual steps in the release process to minimize errors. Claude Code can help you set up automated publishing to npm, PyPI, Docker Hub, or other package registries.
 
-Practical Example: Library Version Workflow
+## Practical Example: Library Version Workflow
 
 Consider a JavaScript library maintainer who wants to streamline their release process. They can describe their workflow to Claude Code and get personalized guidance:
 
@@ -195,7 +193,7 @@ Consider a JavaScript library maintainer who wants to streamline their release p
 
 Claude Code can walk through each step, provide code examples specific to their project structure, and suggest improvements based on industry best practices.
 
-Conclusion
+## Conclusion
 
 A standard version workflow is essential for maintaining professional software releases. Claude Code simplifies this process by helping you generate changelogs, manage version bumps, and automate publishing. Start with semantic versioning fundamentals, build automation scripts incrementally, and continuously refine your workflow based on your team's needs.
 

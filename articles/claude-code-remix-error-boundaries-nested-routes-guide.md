@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Remix Error Boundaries and Nested Routes: A Practical Guide
 
@@ -21,7 +20,7 @@ Remix's nested routing system is one of its most powerful architectural features
 
 If you're looking for how to use Claude Code to generate and manage error boundaries efficiently, see [Claude Code for Remix Error Boundary Workflow Guide](/claude-code-for-remix-error-boundary-workflow-guide/).
 
-The Basic Error Boundary Contract
+## The Basic Error Boundary Contract
 
 Before diving into nesting, here's the essential pattern: export an `ErrorBoundary` function from any route module, and Remix will render it whenever that route (or a child without its own boundary) throws:
 
@@ -51,7 +50,7 @@ export function ErrorBoundary() {
 
 This component can be exported from any route module to handle errors for that route and its children.
 
-Nested Routes Architecture
+## Nested Routes Architecture
 
 Remix's nested routing system mirrors your URL structure, allowing you to build complex layouts with parent-child route relationships. Each route segment can have its own loader, action, and component, with child routes rendering inside parent's `<Outlet />`.
 
@@ -74,11 +73,11 @@ routes/
 
 The parent route typically renders a shared layout with navigation, while child routes fill the content area.
 
-Combining Error Boundaries with Nested Routes
+## Combining Error Boundaries with Nested Routes
 
 This is where the power emerges. By placing error boundaries at different levels of your route hierarchy, you can control exactly what fails and what continues working when errors occur.
 
-Handling Errors at the Layout Level
+## Handling Errors at the Layout Level
 
 Place an error boundary in a parent route to catch errors from any child route:
 
@@ -115,7 +114,7 @@ export function ErrorBoundary() {
 
 With this setup, an error in either analytics or settings triggers the dashboard error boundary, but your navigation remains visible. Users can still navigate elsewhere from the parent layout.
 
-Granular Error Handling
+## Granular Error Handling
 
 For more precise control, add error boundaries to individual child routes:
 
@@ -153,9 +152,9 @@ export function ErrorBoundary() {
 
 Now if analytics fails, settings continues working independently. The error is contained to that specific feature.
 
-Practical Patterns for Real Applications
+## Practical Patterns for Real Applications
 
-Handling Loader Errors
+## Handling Loader Errors
 
 Loaders run on the server and can fail for various reasons, database issues, API timeouts, authentication problems. Error boundaries handle these gracefully:
 
@@ -181,7 +180,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
 The error boundary receives these responses and can display appropriate messages based on status codes.
 
-Handling Action Errors
+## Handling Action Errors
 
 Form submissions through actions can also fail. Error boundaries capture these too:
 
@@ -206,7 +205,7 @@ export async function action({ request }: ActionFunctionArgs) {
 
 Your error boundary can then display form-specific error messages while keeping the form itself visible.
 
-Resetting Error States
+## Resetting Error States
 
 Sometimes users need a way to recover from errors. Use `useNavigate` to reset:
 
@@ -231,7 +230,7 @@ export function ErrorBoundary() {
 }
 ```
 
-Best Practices
+## Best Practices
 
 Layer your error boundaries appropriately. Place general error handling at high-level layouts for navigation stability, and specific error handling at feature routes for targeted recovery.
 
@@ -252,7 +251,7 @@ export function ErrorBoundary() {
 
 Provide actionable recovery paths. Always give users a way forward, whether retrying, navigating elsewhere, or contacting support.
 
-Conclusion
+## Conclusion
 
 Remix's error boundaries combined with nested routes give you precise control over error handling at every level of your application. By strategically placing boundaries in your route hierarchy, you create resilient applications where failures are contained, user experience remains positive, and debugging information is captured. Start with parent-level boundaries for navigation stability, then add granular boundaries for feature-specific error handling as your application grows.
 {% endraw %}

@@ -13,9 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Plausible Analytics Workflow Guide
-
 Plausible Analytics provides a privacy-focused alternative to Google Analytics, and when combined with Claude Code, it becomes a powerful tool for understanding your website visitors. This guide walks you through setting up an efficient Plausible Analytics workflow using Claude Code, enabling you to automate data collection, generate reports, and derive actionable insights from your analytics data.
 
 Why Combine Claude Code with Plausible Analytics?
@@ -24,7 +21,7 @@ Traditional analytics workflows often require switching between multiple dashboa
 
 The combination works particularly well because Plausible offers a clean API that exposes all your analytics data, while Claude Code provides the intelligent interface to query and manipulate that data. This means you can focus on analyzing insights rather than wrestling with API calls or navigating complex dashboard interfaces.
 
-Setting Up Your Plausible Analytics Connection
+## Setting Up Your Plausible Analytics Connection
 
 Before you can start using Claude Code with Plausible Analytics, you need to configure the connection. First, obtain your Plausible API key from your account settings. Plausible provides both read and write API keys depending on your needs.
 
@@ -39,7 +36,7 @@ export PLAUSIBLE_DOMAIN="your-domain.com"
 
 You should never commit these credentials to version control. Instead, use environment variables or a local configuration that's excluded from your repository's git tracking. Claude Code can read these environment variables when executing commands related to your analytics workflow.
 
-Querying Basic Analytics Metrics
+## Querying Basic Analytics Metrics
 
 Once configured, you can start querying your analytics data directly through Claude Code. The most common use case is retrieving basic metrics like visitor counts, page views, and bounce rates. Here's how you might structure these queries:
 
@@ -47,7 +44,7 @@ For real-time data, you can ask Claude to fetch current visitor information. Thi
 
 Time period comparisons form another essential use case. Rather than manually selecting date ranges in the dashboard, you can instruct Claude to compare this week's performance against last week, or month-over-month trends. This automation saves significant time when regularly reviewing analytics data.
 
-Automating Custom Event Tracking
+## Automating Custom Event Tracking
 
 Custom events in Plausible allow you to track specific user interactions beyond standard page views. These might include button clicks, form submissions, downloads, or any other meaningful action on your site. Claude Code can help you configure and manage these events efficiently.
 
@@ -62,7 +59,7 @@ Claude Code can help you generate appropriate tracking code for different event 
 
 For more complex event tracking, you might need to handle goal conversions and custom properties. Custom properties allow you to attach additional context to events, such as which navigation menu a user clicked or which pricing tier they viewed. Claude can help construct the proper API calls to register and retrieve these enriched data points.
 
-Generating Automated Reports
+## Generating Automated Reports
 
 One of the most valuable applications of Claude Code with Plausible Analytics is automated report generation. Instead of manually checking multiple metrics and exporting data, you can set up Claude to generate comprehensive reports on a schedule or on-demand.
 
@@ -70,7 +67,7 @@ A typical automated report might include several key sections. The overview sect
 
 You can configure Claude Code to output these reports in various formats, plain text for quick review, Markdown for documentation, or even HTML for sharing with stakeholders. The flexibility means you can integrate these reports directly into your existing workflows, whether that's a weekly team digest or a live dashboard update.
 
-Integrating with Your Development Workflow
+## Integrating with Your Development Workflow
 
 Beyond ad-hoc queries, integrating Plausible Analytics into your development workflow provides ongoing value. You can use Claude Code to track the analytics impact of code changes, particularly useful for performance improvements or redesigns.
 
@@ -78,7 +75,7 @@ Consider setting up a workflow where after deploying significant changes, like a
 
 You might also track seasonal trends or campaign performance. When running marketing campaigns, establish baseline metrics before launch, then use Claude to monitor changes in real-time and generate post-campaign analysis. This continuous feedback loop enables rapid optimization based on actual user behavior data.
 
-Best Practices for Your Workflow
+## Best Practices for Your Workflow
 
 To get the most out of combining Claude Code with Plausible Analytics, consider these recommendations. First, establish consistent query patterns for your most common metrics to save time on repetitive tasks. Second, document your custom events thoroughly so team members can understand what each event tracks. Third, schedule automated reports for times when you typically review analytics, whether daily, weekly, or monthly. Fourth, regularly audit your tracking implementation to ensure data accuracy and completeness.
 

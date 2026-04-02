@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Benchmark Regression Workflow Tutorial
 
 Benchmark regression testing is essential for maintaining consistent performance in any software project. When you're iterating quickly, it's easy to accidentally introduce performance regressions that only surface in production. This tutorial shows you how to build an automated benchmark regression workflow using Claude Code that catches these issues early and keeps your team informed.
 
-Why Automated Regression Testing Matters
+## Why Automated Regression Testing Matters
 
 Manual benchmark testing is time-consuming and error-prone. You might run tests before a big release, but consistent tracking across every commit is nearly impossible without automation. A well-structured regression workflow gives you:
 
@@ -29,7 +28,7 @@ Manual benchmark testing is time-consuming and error-prone. You might run tests 
 
 Claude Code can orchestrate this entire workflow, from running benchmarks to analyzing results and alerting your team.
 
-Setting Up Your Benchmark Framework
+## Setting Up Your Benchmark Framework
 
 Before integrating with Claude Code, you need a reliable benchmark suite. The key is ensuring your benchmarks are deterministic and repeatable. Here's a practical example using a simple Python benchmark:
 
@@ -80,7 +79,7 @@ if __name__ == "__main__":
 
 This benchmark framework outputs structured JSON that Claude Code can easily parse and compare against previous runs.
 
-Creating Your Claude Skill for Regression Testing
+## Creating Your Claude Skill for Regression Testing
 
 Now let's create a Claude Skill that automates the regression testing workflow. This skill will run benchmarks, compare results, and take appropriate action based on the findings:
 
@@ -132,7 +131,7 @@ If any benchmark fails, recommend:
 Always offer to update the baseline if the new performance is intentional and acceptable.
 ```
 
-Automating the Workflow
+## Automating the Workflow
 
 The real power comes from automating this workflow to run on every significant change. Here's how to set up a continuous regression check:
 
@@ -162,7 +161,7 @@ else
 fi
 ```
 
-Establishing Baselines and Thresholds
+## Establishing Baselines and Thresholds
 
 Setting appropriate thresholds is crucial for a sustainable workflow. Too strict, and you'll chase false positives. Too lenient, and you'll miss real regressions.
 
@@ -175,7 +174,7 @@ For most projects, consider these threshold guidelines:
 
 Update baselines intentionally after significant refactoring or dependency updates. Document why baseline changes were expected and approved.
 
-Integrating with Code Review
+## Integrating with Code Review
 
 The most effective regression workflows catch issues before they reach main branch. Consider integrating benchmark checks into your PR workflow:
 
@@ -212,7 +211,7 @@ jobs:
             })
 ```
 
-Best Practices for Regression Workflows
+## Best Practices for Regression Workflows
 
 Follow these tips to get the most from your automated regression testing:
 
@@ -226,7 +225,7 @@ Follow these tips to get the most from your automated regression testing:
 
 5. Alert on trends, not just spikes. A 5% regression might be acceptable once, but three consecutive 5% drops indicate a pattern.
 
-Conclusion
+## Conclusion
 
 Building a benchmark regression workflow with Claude Code transforms performance testing from an occasional chore into a continuous, automated process. By combining a deterministic benchmark suite with Claude's analysis capabilities and your existing CI/CD pipeline, you can catch performance issues before they impact users.
 

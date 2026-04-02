@@ -34,7 +34,7 @@ To understand why this is so powerful, consider the math:
 
 Even across a year of daily commits (365 commits), bisect finds the culprit in at most 9 steps. Combined with an automated test script, those 9 steps run unattended in seconds.
 
-Setting Up Git Bisect with Claude Code
+## Setting Up Git Bisect with Claude Code
 
 Start by navigating to your repository in Claude Code and initialize the bisect session:
 
@@ -87,7 +87,7 @@ git bisect reset
 
 This returns your working tree to the state it was in before you started.
 
-Automating the Process with Scripts
+## Automating the Process with Scripts
 
 The real power emerges when you automate the testing step. Git bisect's `run` command accepts any script or command that exits with status 0 (good) or 1-127 (bad). Status 125 is special, it tells bisect to skip the current commit (useful when a commit won't compile).
 
@@ -110,7 +110,7 @@ git bisect run ./test-for-bug.sh
 
 Claude Code can help you craft these test scripts, especially when dealing with complex verification logic. Describe the bug's observable symptoms ("the login endpoint returns 401 even with valid credentials") and ask Claude Code to generate a verification script that checks exactly that condition.
 
-Handling Commits That Won't Build
+## Handling Commits That Won't Build
 
 Sometimes bisect lands on a commit that won't compile or has missing dependencies. Use exit code 125 to skip it:
 
@@ -127,7 +127,7 @@ cargo test test_login_succeeds 2>/dev/null
 
 This prevents bisect from incorrectly classifying a broken-build commit as "bad" when the bug you're hunting is different from the build failure.
 
-Integrating Claude Skills for Enhanced Bisect
+## Integrating Claude Skills for Enhanced Bisect
 
 Several Claude skills complement the git bisect workflow beautifully:
 
@@ -139,11 +139,11 @@ For projects involving visual output, the frontend-design skill helps validate U
 
 The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) can track your bisect sessions across projects, remembering which commits were problematic and what fixes resolved them, building institutional knowledge about recurring issues.
 
-Practical Example: Finding a Login Bug
+## Practical Example: Finding a Login Bug
 
 Imagine users report they cannot log in after your latest release, but this worked in version 2.1.0. Here's the complete workflow from discovery to resolution:
 
-Step 1: Write a verification script
+## Step 1: Write a verification script
 
 ```bash
 #!/bin/bash
@@ -160,7 +160,7 @@ authenticate('test@example.com', 'password')
 " 2>&1
 ```
 
-Step 2: Run automated bisect
+## Step 2: Run automated bisect
 
 ```bash
 chmod +x check-login.sh
@@ -168,7 +168,7 @@ git bisect start HEAD v2.1.0
 git bisect run ./check-login.sh
 ```
 
-Step 3: Review the output
+## Step 3: Review the output
 
 Git will automatically test commits, and within moments you'll see:
 
@@ -176,7 +176,7 @@ Git will automatically test commits, and within moments you'll see:
 bisect: first bad commit: abc1234f: Fix CORS configuration
 ```
 
-Step 4: Understand the change
+## Step 4: Understand the change
 
 Now ask Claude Code to explain what changed in that commit:
 
@@ -186,7 +186,7 @@ Show me the diff for commit abc1234f and explain what change could have broken a
 
 Claude Code reads the diff and identifies that the CORS middleware change accidentally stripped the `Authorization` header from preflight requests.
 
-Step 5: Write the fix and a permanent test
+## Step 5: Write the fix and a permanent test
 
 ```bash
 git bisect reset
@@ -196,7 +196,7 @@ Ask Claude Code: "Write a test that would have caught this CORS header stripping
 
 The result is not just a fix, but a new test that prevents the regression from silently creeping back.
 
-Common Bisect Workflows
+## Common Bisect Workflows
 
 Finding performance regressions: Use a timing script that exits non-zero when execution time exceeds a threshold:
 
@@ -260,7 +260,7 @@ npm ci --silent 2>/dev/null || exit 125
 npm test -- --config jest.integration.config.js 2>/dev/null
 ```
 
-Using Claude Code to Analyze the Bad Commit
+## Using Claude Code to Analyze the Bad Commit
 
 Once bisect identifies the culprit, Claude Code's ability to understand code context accelerates the debugging phase dramatically. Open Claude Code in your project and share the commit hash:
 
@@ -276,7 +276,7 @@ If the bad commit is large (a merge commit or a big refactor), ask Claude Code t
 The bad commit is a 500-line merge commit. Can you identify which specific file or function change is most likely responsible for breaking the Bearer token validation?
 ```
 
-Best Practices
+## Best Practices
 
 Keep your test scripts fast, bisect multiplies execution time by the number of steps (typically 7-10). Prefer unit tests over integration tests. If your full test suite takes 5 minutes, bisect could run for 50 minutes. A targeted 10-second test script finishes the whole search in under 2 minutes.
 
@@ -298,7 +298,7 @@ Replay a session (useful for pair debugging or CI)
 git bisect replay bisect-session.txt
 ```
 
-Troubleshooting Bisect Issues
+## Troubleshooting Bisect Issues
 
 | Problem | Cause | Solution |
 |---|---|---|
@@ -308,7 +308,7 @@ Troubleshooting Bisect Issues
 | Working tree is dirty after bisect | Bisect stopped unexpectedly | Run `git bisect reset` to restore state |
 | First bad commit is a huge merge | Hard to pinpoint the real change | Bisect the feature branch independently |
 
-Why This Matters
+## Why This Matters
 
 Automated bug finding with git bisect and Claude Code dramatically reduces mean time to resolution. What used to take hours of manual testing now takes minutes. The combination uses Git's proven binary search algorithm while using Claude's capabilities to craft better tests and understand the results.
 

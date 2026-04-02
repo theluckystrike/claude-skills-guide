@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code SvelteKit Full Stack Guide
-
 SvelteKit has become a top choice for developers seeking a unified framework that handles both frontend and backend logic. When paired with Claude Code, you gain an AI coding assistant that understands your project structure, generates type-safe code, and helps you navigate the full development lifecycle from scaffolding to deployment.
 
 This guide covers practical workflows for building SvelteKit applications with Claude Code, including skill recommendations, project setup strategies, and patterns for maintaining quality throughout your development process.
 
-Why SvelteKit and Claude Code Work Well Together
+## Why SvelteKit and Claude Code Work Well Together
 
 SvelteKit's file-based conventions give Claude Code strong structural context to work with. When Claude Code reads your `src/routes/` directory, it immediately understands your application's page hierarchy, data loading patterns, and API surface. This makes code generation significantly more accurate than working with frameworks that rely heavily on runtime configuration.
 
@@ -34,7 +31,7 @@ The tight coupling between server and client code in SvelteKit, where `+page.ts`
 | TypeScript by default | Accurate type inference in generated code |
 | Unified SSR/CSR | Fewer context switches during development |
 
-Initializing a SvelteKit Project with Claude Code
+## Initializing a SvelteKit Project with Claude Code
 
 Before invoking Claude Code, ensure your development environment is ready. Create a new SvelteKit project using the official CLI:
 
@@ -74,7 +71,7 @@ Conventions
 
 The more precise your `CLAUDE.md`, the less time you spend correcting generated code that violates your project's conventions.
 
-Essential Claude Skills for SvelteKit Development
+## Essential Claude Skills for SvelteKit Development
 
 Several Claude skills enhance your SvelteKit workflow significantly:
 
@@ -96,7 +93,7 @@ When to activate each skill during a SvelteKit project:
 | Generating docs or changelogs | pdf |
 | Long multi-session features | supermemory |
 
-Building API Routes and Server-Side Logic
+## Building API Routes and Server-Side Logic
 
 SvelteKit's file-based routing extends naturally to API endpoints. Create server-side logic by placing files in `src/routes/api/` directories. Claude Code excels at generating these endpoints with proper TypeScript typing:
 
@@ -186,7 +183,7 @@ export const actions: Actions = {
 };
 ```
 
-Data Loading Patterns
+## Data Loading Patterns
 
 SvelteKit's load functions are where server-side data fetching happens. Claude Code generates both universal and server-only load functions, maintaining the distinction between what's safe to expose to the client and what must stay on the server.
 
@@ -238,7 +235,7 @@ The returned data flows directly into your Svelte component via the `data` prop,
 
 When prompting Claude Code for load functions, specify whether data should be cached, streamed, or invalidated on form submission. These hints produce code that handles SvelteKit's caching behaviors correctly.
 
-Database Integration Patterns
+## Database Integration Patterns
 
 For database operations, pair SvelteKit with Prisma, Drizzle, or another ORM. Claude Code generates type-safe queries and migrations. With Prisma, request schema definitions:
 
@@ -301,7 +298,7 @@ export async function createPost(authorId: string, data: {
 
 With Drizzle as an alternative, Claude Code can generate the schema and query files with equivalent type safety using a different API style. Specify your ORM preference clearly in your `CLAUDE.md` so Claude Code doesn't mix patterns.
 
-Frontend Component Development
+## Frontend Component Development
 
 For component development, combine Svelte's reactivity with TypeScript. Claude Code generates components following established patterns:
 
@@ -428,7 +425,7 @@ When building forms, use SvelteKit's enhanced form handling with `use:enhance`:
 </form>
 ```
 
-Authentication and Session Management
+## Authentication and Session Management
 
 Authentication is one of the more complex full-stack concerns in SvelteKit. Claude Code can generate a complete session-based auth setup using hooks and cookies:
 
@@ -461,7 +458,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 When asking Claude Code to generate auth flows, specify which parts need CSRF protection, rate limiting, and whether you want cookie-based or JWT-based sessions. Being explicit about security requirements produces more complete implementations.
 
-Testing Your Application
+## Testing Your Application
 
 The tdd skill proves valuable for establishing testing workflows. Install it and request test generation for critical paths. SvelteKit supports Vitest for unit testing and Playwright for end-to-end tests:
 
@@ -535,7 +532,7 @@ test('unpublished posts are not visible to anonymous users', async ({ page }) =>
 
 Run tests with `npm test` for unit tests or `npx playwright test` for end-to-end coverage.
 
-Deployment Considerations
+## Deployment Considerations
 
 When deploying to platforms like Vercel, Netlify, or Cloudflare Pages, ensure your `svelte.config.js` adapter matches your target:
 
@@ -579,14 +576,13 @@ import { DATABASE_URL } from '$env/static/private';
 import { PUBLIC_API_BASE_URL } from '$env/static/public';
 ```
 
-Workflow Summary
+## Workflow Summary
 
 Your SvelteKit development with Claude Code follows a consistent pattern: scaffold your project, install relevant skills, generate code with clear specifications, and validate through tests. The combination of SvelteKit's cohesive architecture and Claude Code's contextual understanding creates a productive environment for building full-stack applications.
 
 Work through features in this order: define your data model and Prisma schema first, generate service functions and tests next, build API routes and form actions, then create the Svelte components that consume them. This bottom-up approach gives Claude Code the data types it needs before generating UI code, which results in components with accurate typing from the start.
 
 For documentation needs, the pdf skill generates project documentation directly from your source code and route structure, keeping your docs synchronized with implementation. Use it at the end of each feature cycle to capture the API surface before it gets stale.
-
 
 Related Reading
 

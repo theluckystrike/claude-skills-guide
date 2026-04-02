@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-How to Make Claude Code Write Secure Code Always
-
 Getting Claude Code to consistently produce secure code requires more than just hoping for the best. You need to actively configure your environment, use the right skills, and establish security constraints that the model follows. This guide shows you practical methods to ensure every piece of code Claude generates meets security standards.
 
-Configure Security Constraints in Your System Prompt
+## Configure Security Constraints in Your System Prompt
 
 The foundation of secure code generation starts with how you instruct Claude. Add explicit security requirements to your global instructions or create a dedicated security profile that loads with every session. This tells Claude exactly what security standards to maintain regardless of what you're building.
 
@@ -41,7 +38,7 @@ You are a security-conscious developer. For every code generation task:
 
 When this prompt is active, Claude will automatically add input validation when generating a Python API endpoint, use parameterized queries for database operations, and avoid exposing sensitive data in error messages. The explicit declaration removes ambiguity. Claude does not have to guess your standards.
 
-A Real Example: Insecure vs. Secure Output
+## A Real Example: Insecure vs. Secure Output
 
 Without a security-focused system prompt, Claude might generate this login handler:
 
@@ -78,7 +75,7 @@ def login(username: str, password: str) -> dict:
 
 The difference is dramatic. parameterized queries, bcrypt for password comparison, and a generic error message that prevents username enumeration attacks.
 
-Use the TDD Skill for Test-Driven Security
+## Use the TDD Skill for Test-Driven Security
 
 The TDD skill (Test-Driven Development) proves invaluable when you need secure code. Writing tests before code forces you to consider security requirements as part of your design. When combined with security-focused test cases, the TDD skill ensures your code passes security validation before implementation begins.
 
@@ -122,7 +119,7 @@ class TestUserRegistration:
 
 The TDD skill then guides Claude to write code that passes these security tests. This approach catches vulnerabilities early rather than discovering them after deployment. Security tests also serve as executable documentation that communicates your security requirements to every developer on the team.
 
-Use MCP Skills for Security Validation
+## Use MCP Skills for Security Validation
 
 Model Context Protocol (MCP) skills extend Claude's capabilities in powerful ways. Several MCP skills directly address security concerns:
 
@@ -132,7 +129,7 @@ Model Context Protocol (MCP) skills extend Claude's capabilities in powerful way
 
 Install these MCP skills to add an automated security layer. After Claude generates code, these tools can flag potential issues before you even review the output. This creates a feedback loop where Claude learns from security scans and improves subsequent code generation.
 
-Setting Up a Security Scanning Pipeline
+## Setting Up a Security Scanning Pipeline
 
 The real power comes from chaining these skills. Configure Claude to run this sequence after generating any production code:
 
@@ -142,7 +139,7 @@ The real power comes from chaining these skills. Configure Claude to run this se
 
 When the secret-detection skill flags an issue, Claude receives the output and revises the code. This is faster than a human review cycle and eliminates an entire class of accidental credential exposure that is common in rapid development.
 
-Create Custom Security Skills
+## Create Custom Security Skills
 
 Build a custom skill specifically for security enforcement. This skill contains your organization's security policies, compliance requirements, and coding standards. When activated, it adds a security lens to every code generation task.
 
@@ -190,11 +187,11 @@ Compliance Notes
 
 Call this skill at the start of any security-sensitive task. Claude will reference it throughout the coding session, producing code that aligns with your requirements.
 
-Prevent Common Vulnerabilities
+## Prevent Common Vulnerabilities
 
 Focus on preventing the vulnerabilities that plague most projects. Here is how to configure Claude for each of the OWASP Top 10:
 
-SQL Injection
+## SQL Injection
 
 Always use parameterized queries or ORMs. When using database skills, specify ORM usage explicitly in your prompts. Compare the two approaches:
 
@@ -229,7 +226,7 @@ element.textContent = userInput;
 element.innerHTML = DOMPurify.sanitize(userInput);
 ```
 
-Broken Authentication
+## Broken Authentication
 
 Specify proper session management, token expiration, and rate limiting in your requirements. A secure authentication configuration looks like this:
 
@@ -250,7 +247,7 @@ async def login(request: Request, credentials: LoginSchema):
     ...
 ```
 
-Sensitive Data Exposure
+## Sensitive Data Exposure
 
 Remind Claude to never log sensitive information, use environment variables for secrets, and implement proper encryption at rest and in transit:
 
@@ -272,7 +269,7 @@ class SensitiveDataFilter(logging.Filter):
 
 The supermemory skill helps you track which vulnerabilities you've addressed in past projects, building institutional knowledge about your security requirements.
 
-Implement Code Review Workflows
+## Implement Code Review Workflows
 
 Even with all precautions, automated checks won't catch everything. Pair Claude's code generation with systematic review processes. Use skills that help code review:
 
@@ -297,7 +294,7 @@ Security Checklist
 
 Paste this checklist into your pull-request-skill configuration. Claude will automatically populate it and flag unchecked items before requesting review.
 
-Use Environment-Specific Security Rules
+## Use Environment-Specific Security Rules
 
 Different environments require different security approaches. Configure Claude with environment-specific rules that activate based on context:
 
@@ -337,7 +334,7 @@ config = SECURITY_CONFIG[os.environ.get("APP_ENV", "development")]
 
 Claude detects the environment from your working directory or configuration and applies appropriate security constraints automatically.
 
-Monitor and Iterate
+## Monitor and Iterate
 
 Security isn't a one-time configuration. Review the code Claude produces over time and identify patterns. If you notice repeated security gaps, update your system prompts or custom skills to address them.
 
@@ -356,7 +353,7 @@ A simple tracking approach is to keep a security log in your project notes:
 
 This log becomes the changelog for your security configuration. Each entry tightens the constraints so the same issue never reappears. Claude learns from the corrections, improving its security output over time.
 
-Comparison: Default vs. Configured Claude Code Security Output
+## Comparison: Default vs. Configured Claude Code Security Output
 
 The following table summarizes the difference between running Claude Code without security configuration versus with the full setup described in this guide:
 
@@ -372,7 +369,7 @@ The following table summarizes the difference between running Claude Code withou
 
 The investment in configuration is small compared to the cost of a security incident. Most of the setup described here. system prompt, custom skill, and MCP tools. takes under an hour to configure and applies automatically to every subsequent session.
 
-Conclusion
+## Conclusion
 
 Making Claude Code write secure code consistently requires deliberate setup. Configure security constraints in your system prompts, use the TDD skill for test-driven validation, use MCP skills for automated scanning, and build custom security skills that encode your organization's policies. Combine these approaches with code review workflows and continuous iteration.
 

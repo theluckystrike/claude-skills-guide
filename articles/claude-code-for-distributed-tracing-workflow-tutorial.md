@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Distributed Tracing Workflow Tutorial"
 description: "Learn how to implement distributed tracing workflows using Claude Code. A practical tutorial for developers to debug and monitor microservices effectively."
@@ -14,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Distributed Tracing Workflow Tutorial
 
 Distributed tracing has become essential for debugging and monitoring microservices architectures. When a single user request flows through multiple services, understanding where things fail or slow down requires more than traditional logging. This tutorial shows you how to build an effective distributed tracing workflow using Claude Code, making sense of complex service interactions without drowning in data.
 
-Understanding Distributed Tracing Fundamentals
+## Understanding Distributed Tracing Fundamentals
 
 Before diving into implementation, let's clarify what distributed tracing actually provides. A trace represents an end-to-end journey of a request through your system. Each trace consists of spans, which are individual operations with timing information, parent-child relationships, and metadata.
 
@@ -28,7 +26,7 @@ Consider a typical e-commerce checkout flow: the request might start at the API 
 
 Modern distributed tracing systems like OpenTelemetry, Jaeger, and Zipkin follow a consistent model. Spans include operation name, start/end timestamps, status codes, attributes, and references to parent spans. This standardized approach lets you switch backends without changing your instrumentation code.
 
-Setting Up Your Claude Code Environment
+## Setting Up Your Claude Code Environment
 
 Claude Code provides several approaches to work with distributed tracing. The recommended starting point is using the mcp skill, which gives you access to various MCP servers including observability tools.
 
@@ -65,7 +63,7 @@ tracing:
 
 This configuration establishes the foundation for collecting traces. Adjust the sampling probability based on your traffic volume, development environments typically use higher rates while production might sample only 1-10% of requests.
 
-Implementing Trace Instrumentation
+## Implementing Trace Instrumentation
 
 The real work begins with instrumenting your code. OpenTelemetry provides auto-instrumentation for many languages, but custom instrumentation gives you more control over what gets traced. Here's how to implement this in a Node.js service:
 
@@ -148,7 +146,7 @@ async function processOrder(orderData) {
 
 This pattern demonstrates several key practices: setting meaningful attributes, properly handling errors with span status, and creating child spans for significant operations. The nested spans let you identify exactly which step in the order processing caused issues.
 
-Querying Traces with Claude Code
+## Querying Traces with Claude Code
 
 Once traces flow into your backend, querying them effectively becomes crucial. Claude Code can help you construct queries and analyze results. Here's a practical workflow:
 
@@ -222,7 +220,7 @@ const analyzeTracePatterns = async (traces) => {
 };
 ```
 
-Building Automated Alerting
+## Building Automated Alerting
 
 Proactive alerting prevents issues from becoming incidents. Set up tracing-based alerts that notify your team when patterns indicate problems:
 
@@ -252,7 +250,7 @@ groups:
 
 Deploy these rules alongside your tracing collector to automatically detect and escalate issues.
 
-Setting Up Jaeger Locally
+## Setting Up Jaeger Locally
 
 For teams using Jaeger as their tracing backend, Claude Code can generate a docker-compose setup for local development:
 
@@ -285,7 +283,7 @@ networks:
 
 Access the Jaeger UI at `http://localhost:16686` to visualize traces and debug latency issues.
 
-Sampling Strategies for Production
+## Sampling Strategies for Production
 
 High-throughput systems generate enormous trace volumes. Configure sampling to balance observability with cost:
 
@@ -295,11 +293,11 @@ High-throughput systems generate enormous trace volumes. Configure sampling to b
 
 For production environments, you might sample 5% of requests normally but increase to 50% when error rates spike, and always sample requests with priority headers set to "high".
 
-Debugging with Trace Context
+## Debugging with Trace Context
 
 Once traces flow into your backend, paste trace IDs into Claude Code and ask it to analyze the timing. For example, if a trace shows 3 seconds of total latency but only 80ms of span time, Claude can help identify the missing time. common causes include database locks, connection pool exhaustion, or synchronous calls that could benefit from async processing.
 
-Best Practices for Distributed Tracing
+## Best Practices for Distributed Tracing
 
 Implementing distributed tracing requires thoughtful decisions to avoid common pitfalls:
 
@@ -311,7 +309,7 @@ Include correlation IDs in logs. While traces provide the big picture, logs stil
 
 Test your instrumentation. Bad tracing is worse than no tracing. Verify that spans properly nest, attributes capture correct values, and error conditions set appropriate status codes.
 
-Conclusion
+## Conclusion
 
 Distributed tracing transforms debugging from guessing games into informed investigation. By setting up proper instrumentation with OpenTelemetry, implementing thoughtful span creation in your code, and building queries that surface meaningful patterns, you gain visibility into complex distributed systems.
 

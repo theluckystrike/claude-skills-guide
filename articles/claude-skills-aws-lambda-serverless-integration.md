@@ -13,21 +13,19 @@ permalink: /claude-skills-aws-lambda-serverless-integration/
 ---
 {% raw %}
 
-
-
-Claude Code Skills + AWS Lambda: Serverless Integration
+## Claude Code Skills + AWS Lambda: Serverless Integration
 
 Claude Code skills run locally in your terminal. AWS Lambda runs your code in the cloud. Connecting them means invoking Claude Code. including skill-augmented sessions. from within a Lambda function, then routing the output into your broader AWS infrastructure.
 
 This guide covers practical patterns for this integration: document processing, test generation triggers, and event-driven workflows.
 
-How the Architecture Works
+## How the Architecture Works
 
 Claude Code can run in print mode (`claude -p "..."`) which accepts a prompt, runs the session non-interactively, and returns output to stdout. A Lambda function can shell out to `claude -p` the same way any process can call a subprocess.
 
 The setup requires bundling the Claude Code binary in your Lambda container image. Lambda's managed runtimes do not include Claude Code by default, so a custom Docker image is the practical path.
 
-Building the Container Image
+## Building the Container Image
 
 Create a `Dockerfile` that installs Claude Code alongside your runtime:
 
@@ -57,7 +55,7 @@ docker tag claude-skills-lambda:latest YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.
 docker push YOUR_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/claude-skills-lambda:latest
 ```
 
-Writing the Lambda Handler
+## Writing the Lambda Handler
 
 The handler invokes Claude Code in print mode and returns the output:
 
@@ -65,7 +63,6 @@ The handler invokes Claude Code in print mode and returns the output:
 import json
 import subprocess
 import os
-
 
 def handler(event, context):
     prompt = event.get("prompt", "")
@@ -101,7 +98,7 @@ def handler(event, context):
         return {"statusCode": 500, "body": json.dumps({"error": str(exc)})}
 ```
 
-Practical Pattern 1: Document Processing with /pdf
+## Practical Pattern 1: Document Processing with /pdf
 
 Trigger this Lambda from an S3 `ObjectCreated` event. When a PDF lands in your uploads bucket, the function processes it using the [pdf skill](/best-claude-skills-for-data-analysis/):
 
@@ -166,7 +163,7 @@ Resources:
                     Value: ".pdf"
 ```
 
-Practical Pattern 2: Test Generation in CI/CD
+## Practical Pattern 2: Test Generation in CI/CD
 
 Trigger the [tdd skill](/best-claude-skills-for-developers-2026/) when a developer opens a pull request. A GitHub Actions webhook posts to API Gateway, which invokes Lambda:
 
@@ -213,7 +210,7 @@ def handler(event, context):
     return {"statusCode": 200, "body": "comment posted"}
 ```
 
-Managing State Across Invocations
+## Managing State Across Invocations
 
 Lambda functions are ephemeral. each invocation starts fresh. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) stores context in `~/.claude/`, which does not persist between Lambda invocations by default.
 
@@ -228,7 +225,6 @@ MEMORY_BUCKET = os.environ["MEMORY_BUCKET"]
 MEMORY_KEY = "supermemory-state.tar.gz"
 MEMORY_DIR = "/tmp/.claude"
 
-
 def restore_memory():
     s3 = boto3.client("s3")
     try:
@@ -237,13 +233,11 @@ def restore_memory():
     except s3.exceptions.NoSuchKey:
         os.makedirs(MEMORY_DIR, exist_ok=True)
 
-
 def save_memory():
     subprocess.run(
         ["tar", "-czf", "/tmp/memory.tar.gz", "-C", "/tmp", ".claude"], check=True
     )
     boto3.client("s3").upload_file("/tmp/memory.tar.gz", MEMORY_BUCKET, MEMORY_KEY)
-
 
 def handler(event, context):
     restore_memory()
@@ -251,7 +245,7 @@ def handler(event, context):
     save_memory()
 ```
 
-Deployment Best Practices
+## Deployment Best Practices
 
 API key security: Store your `ANTHROPIC_API_KEY` in AWS Secrets Manager. Reference it in your SAM/CloudFormation template with `{{resolve:secretsmanager:...}}`. Never hard-code it in environment variables directly in source control.
 
@@ -271,10 +265,9 @@ Related Reading
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How Claude decides when to load skills
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep API costs down as you scale
 
-
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Integrating Claude Skills with AWS Lambda
+## Step-by-Step: Integrating Claude Skills with AWS Lambda
 
 1. Create the Lambda function: ask Claude Code to scaffold a Python or Node.js Lambda handler that accepts a Claude skill invocation payload and returns a structured response.
 2. Package the Anthropic SDK: bundle the `anthropic` Python package (or `@anthropic-ai/sdk` for Node.js) with your Lambda deployment package, or use a Lambda Layer to share it across functions.
@@ -283,7 +276,7 @@ Step-by-Step: Integrating Claude Skills with AWS Lambda
 5. Connect the skill: register the Lambda endpoint URL as the skill's action endpoint. Claude will POST the user's request to this URL and render the response.
 6. Add error handling and logging: wrap the handler in a try/catch that returns structured error responses. Use CloudWatch Logs with structured JSON logging so failures are easy to diagnose.
 
-Lambda Handler for Claude Skill
+## Lambda Handler for Claude Skill
 
 ```python
 import json
@@ -320,7 +313,7 @@ def handler(event, context):
         }
 ```
 
-AWS Lambda + Claude Skill Architecture Options
+## AWS Lambda + Claude Skill Architecture Options
 
 | Approach | Latency | Cost | Complexity | Scalability |
 |---|---|---|---|---|
@@ -332,7 +325,7 @@ AWS Lambda + Claude Skill Architecture Options
 
 Lambda + Function URL is the right starting point for most skills. zero infrastructure overhead, automatic scaling, and costs nothing during periods of no usage.
 
-Advanced: Caching Skill Responses with ElastiCache
+## Advanced: Caching Skill Responses with ElastiCache
 
 For skills that call expensive external APIs (database queries, web searches), add Redis caching via ElastiCache to reduce latency and cost:
 
@@ -352,7 +345,7 @@ def cached_claude_call(message, ttl=300):
     return result
 ```
 
-Troubleshooting
+## Troubleshooting
 
 Cold start latency making the skill feel slow: Pre-warm the Lambda function by invoking it on a scheduled EventBridge rule every 5 minutes. This keeps the execution environment warm and eliminates the 1-3 second cold start for Python functions with large dependencies.
 

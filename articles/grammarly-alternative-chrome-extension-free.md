@@ -28,7 +28,7 @@ Grammarly has become synonymous with grammar checking, but it's not the only opt
 
 For developers and technical writers, the calculus shifts even further. You're often writing in Markdown, code comments, or documentation platforms where Grammarly's suggestions can be actively disruptive, flagging technical terminology, variable names, or intentional passive voice as errors.
 
-Top Free Grammarly Alternatives for Chrome
+## Top Free Grammarly Alternatives for Chrome
 
 1. LanguageTool
 
@@ -116,7 +116,7 @@ For developers writing in-browser or on restricted networks, Slick Write's no-ac
 
 Best for: Writers who want a no-nonsense, completely free tool with absolute privacy and no account requirements.
 
-Feature Comparison Table
+## Feature Comparison Table
 
 | Feature | LanguageTool | Hemingway | Ginger | ProWritingAid | Slick Write |
 |---------|--------------|-----------|--------|---------------|-------------|
@@ -132,7 +132,7 @@ Feature Comparison Table
 | Readability Score | No | Yes | No | Yes | Yes |
 | Free Rephrasing | Limited | No | Yes | No | No |
 
-How to Choose the Right Alternative
+## How to Choose the Right Alternative
 
 Consider these factors when selecting your Grammarly alternative:
 
@@ -166,7 +166,7 @@ If privacy is a hard requirement rather than just a preference:
 
 For anyone writing under an NDA or handling confidential client work, self-hosted LanguageTool or offline Hemingway are the only defensible choices.
 
-Installation and Setup Tips
+## Installation and Setup Tips
 
 Most Chrome extensions follow similar installation patterns:
 
@@ -178,7 +178,7 @@ Most Chrome extensions follow similar installation patterns:
 
 One important note on permissions: every grammar extension needs broad page access to read your text. Before installing any of these tools, check the extension's user count and review history in the Chrome Web Store. Tools with millions of users and years of update history are lower risk than obscure extensions with few reviews.
 
-Combining Tools for Better Coverage
+## Combining Tools for Better Coverage
 
 No single free tool does everything Grammarly Premium does. The practical workaround is to stack two tools with complementary strengths:
 
@@ -188,7 +188,7 @@ No single free tool does everything Grammarly Premium does. The practical workar
 
 The catch with stacking tools is context-switching. Rather than checking every document in two tools, pick one as your primary always-on extension and use the other for a final pass on important documents.
 
-Conclusion
+## Conclusion
 
 While Grammarly remains the most recognizable name in browser-based grammar checking, these free alternatives provide excellent grammar and style checking without the premium cost. For most users, LanguageTool or Hemingway will cover all essential needs. The best choice depends on your specific requirements, whether that's multilingual support, readability improvements, complete privacy, or integration with a specific writing platform.
 
@@ -197,7 +197,6 @@ Try a few different extensions to find which fits your workflow best. Many offer
 ---
 
 *Have you tried any of these Grammarly alternatives? Share your experiences in the comments below.*
-
 
 Related Reading
 

@@ -13,14 +13,13 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Chrome Enterprise Kiosk Mode Setup: Complete Implementation Guide
+## Chrome Enterprise Kiosk Mode Setup: Complete Implementation Guide
 
 Chrome Enterprise Kiosk Mode transforms Chrome browsers and ChromeOS devices into dedicated single-application terminals. This configuration is essential for enterprises deploying point-of-sale systems, digital signage, library terminals, corporate check-in kiosks, and restricted employee workstations.
 
 This guide covers the complete setup process using Google Admin Console, Windows Group Policy, and programmatic deployment options for enterprise-scale rollouts.
 
-Understanding Chrome Enterprise Kiosk Mode
+## Understanding Chrome Enterprise Kiosk Mode
 
 Chrome Enterprise supports kiosk functionality across two distinct platforms:
 
@@ -30,7 +29,7 @@ Chrome Browser Kiosk Mode runs on Windows, macOS, or Linux workstations, launchi
 
 Both approaches integrate with Chrome Enterprise policies, but the configuration methods differ significantly. This guide covers both deployment scenarios.
 
-Prerequisites
+## Prerequisites
 
 Before setting up Chrome Enterprise Kiosk Mode, ensure you have:
 
@@ -40,13 +39,13 @@ Before setting up Chrome Enterprise Kiosk Mode, ensure you have:
 - For Chrome Browser: Chrome Browser 72 or later on managed workstations
 - A kiosk application (web app, PWA, or Chrome extension) with its ID or URL ready
 
-Setting Up ChromeOS Kiosk Mode
+## Setting Up ChromeOS Kiosk Mode
 
-Step 1: Access Google Admin Console
+## Step 1: Access Google Admin Console
 
 Navigate to Devices > Chrome > Apps & Extensions > Kiosks in Google Admin Console. This is the central hub for managing all kiosk configurations across your ChromeOS device fleet.
 
-Step 2: Create a Kiosk Configuration
+## Step 2: Create a Kiosk Configuration
 
 Click Add and select your kiosk application. You can choose from:
 
@@ -54,7 +53,7 @@ Click Add and select your kiosk application. You can choose from:
 - Custom web apps - Enter the URL of your internal web application
 - Chrome extensions - Select extensions configured as kiosk-ready
 
-Step 3: Configure Kiosk Settings
+## Step 3: Configure Kiosk Settings
 
 Configure the following settings based on your deployment requirements:
 
@@ -63,15 +62,15 @@ Configure the following settings based on your deployment requirements:
 - User authentication - Configure whether users must authenticate before accessing the kiosk app
 - Oversight mode - Enable additional restrictions for supervised usage
 
-Step 4: Assign to Organizational Units
+## Step 4: Assign to Organizational Units
 
 Assign your kiosk configuration to specific organizational units. Kiosk assignments follow Chrome's hierarchical policy inheritance, so you can create OU-specific configurations for different device locations.
 
-Setting Up Chrome Browser Kiosk Mode on Windows
+## Setting Up Chrome Browser Kiosk Mode on Windows
 
 For organizations running Chrome Browser on Windows workstations, kiosk mode provides a locked-down browsing experience without full ChromeOS deployment.
 
-Using Windows Registry for Single-User Kiosk
+## Using Windows Registry for Single-User Kiosk
 
 You can configure Chrome Browser kiosk mode via Windows Registry for non-domain-joined devices:
 
@@ -92,7 +91,7 @@ Set-ItemProperty -Path $chromeKioskPath -Name "KioskModeAppLaunchUrl" -Value "ht
 
 This configuration enables kiosk mode and specifies the URL that launches automatically. The `KioskModeRetail` setting enables additional retail-specific restrictions when set to 1.
 
-Using Group Policy for Enterprise Deployment
+## Using Group Policy for Enterprise Deployment
 
 For domain-joined Windows workstations, deploy kiosk configuration via Group Policy:
 
@@ -105,7 +104,7 @@ For domain-joined Windows workstations, deploy kiosk configuration via Group Pol
    - Kiosk App Launch URL - Specifies the application URL
    - Kiosk Mode Settings - Configures additional kiosk behavior
 
-PowerShell Deployment Script
+## PowerShell Deployment Script
 
 Here's a comprehensive deployment script for pushing kiosk configuration via Intune or other MDM solutions:
 
@@ -142,11 +141,11 @@ Set-ItemProperty -Path $ChromePolicyPath -Name "KioskDisableDownloads" -Value 1 
 Write-Host "Chrome Kiosk Mode configured successfully for: $KioskAppUrl"
 ```
 
-Programmatic Configuration with Chrome Policy API
+## Programmatic Configuration with Chrome Policy API
 
 For organizations with custom MDM solutions or automated provisioning systems, Chrome Enterprise supports programmatic policy configuration through the Chrome Policy API.
 
-Using the Chrome Policy API
+## Using the Chrome Policy API
 
 ```python
 #!/usr/bin/env python3
@@ -195,9 +194,9 @@ if __name__ == '__main__':
     print("Configure kiosk settings via Google Admin Console or Policy API")
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Kiosk App Not Launching
+## Kiosk App Not Launching
 
 If your kiosk application fails to launch, verify:
 
@@ -206,7 +205,7 @@ If your kiosk application fails to launch, verify:
 - ChromeOS devices have network connectivity to the application host
 - For Chrome Browser kiosks, confirm the registry or Group Policy applied correctly
 
-Device Not Entering Kiosk Mode
+## Device Not Entering Kiosk Mode
 
 For ChromeOS devices:
 
@@ -215,7 +214,7 @@ For ChromeOS devices:
 - Check that the kiosk app is published to your organization or publicly available
 - Review device logs in Google Admin Console for policy application errors
 
-Network Connectivity Issues
+## Network Connectivity Issues
 
 Kiosk devices require network access for:
 
@@ -225,7 +224,7 @@ Kiosk devices require network access for:
 
 Configure static IP addresses and trusted network settings for production kiosk deployments to prevent connectivity-related failures.
 
-Best Practices for Production Deployments
+## Best Practices for Production Deployments
 
 1. Use dedicated kiosk hardware - ChromeOS devices designed for kiosk use offer better longevity than repurposed consumer hardware
 
@@ -240,7 +239,6 @@ Best Practices for Production Deployments
 Chrome Enterprise Kiosk Mode provides a secure, manageable foundation for deploying purpose-built browser experiences across your organization. With proper configuration and monitoring, kiosk deployments can operate reliably for years with minimal maintenance.
 
 ---
-
 
 Related Reading
 

@@ -22,7 +22,7 @@ Ray Serve stands out for LLM deployment due to its flexibility and built-in feat
 
 When you pair Ray Serve with Claude Code, you gain a powerful development environment. Claude Code can help you generate deployment configurations, debug serving issues, optimize performance bottlenecks, and maintain your inference pipelines. The combination accelerates your path from prototype to production.
 
-Setting Up Your Ray Serve Environment
+## Setting Up Your Ray Serve Environment
 
 Before integrating with Claude Code, ensure your Ray Serve environment is properly configured. Install the necessary dependencies:
 
@@ -57,11 +57,11 @@ class LLMServer:
 serve.run(LLMServer.bind(), route_prefix="/")
 ```
 
-Integrating Claude Code into Your Workflow
+## Integrating Claude Code into Your Workflow
 
 Claude Code excels at accelerating Ray Serve development through several key capabilities. It can generate deployment configurations, create API wrappers, optimize batching strategies, and help debug runtime issues.
 
-Generating Deployment Configurations
+## Generating Deployment Configurations
 
 Use Claude Code to create production-ready deployment configurations:
 
@@ -86,7 +86,7 @@ applications:
           target_num_ongoing_requests_per_replica: 10
 ```
 
-Building Multi-Model Inference Pipelines
+## Building Multi-Model Inference Pipelines
 
 Ray Serve excels at composing multiple models. Claude Code can help you design and implement complex inference graphs that chain together preprocessing, LLM calls, and postprocessing:
 
@@ -127,11 +127,11 @@ pipeline = (
 )
 ```
 
-Optimizing Performance with Claude Code
+## Optimizing Performance with Claude Code
 
 Performance optimization is crucial for production LLM serving. Claude Code can analyze your deployment and suggest improvements.
 
-Request Batching Optimization
+## Request Batching Optimization
 
 Ray Serve automatically batches requests, but you can tune this for LLM workloads:
 
@@ -150,7 +150,7 @@ class OptimizedLLM:
         pass
 ```
 
-Caching Strategies
+## Caching Strategies
 
 Implement intelligent caching to reduce LLM inference costs:
 
@@ -172,7 +172,7 @@ class CachedLLM:
         return result
 ```
 
-Debugging Ray Serve Applications
+## Debugging Ray Serve Applications
 
 Claude Code helps identify and resolve common Ray Serve issues. When debugging, check the following areas:
 
@@ -209,7 +209,7 @@ diagnostics = diagnose_deployment("LLMServer")
 print(diagnostics)
 ```
 
-Best Practices for Production
+## Best Practices for Production
 
 Follow these practices when deploying LLM workflows with Ray Serve:
 
@@ -219,7 +219,7 @@ Follow these practices when deploying LLM workflows with Ray Serve:
 4. Configure resource allocation based on model size
 5. Enable request timeout to prevent hung requests
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Ray Serve creates a powerful development environment for building production LLM applications. Claude Code accelerates every phase of the development lifecycle, from initial setup through deployment optimization and debugging. Start with the basic deployment patterns in this guide, then progressively adopt advanced features like multi-model pipelines and intelligent caching as your applications grow.
 

@@ -16,13 +16,13 @@ permalink: /how-to-combine-multiple-claude-skills-in-one-project/
 
 Claude skills excel at specialized tasks, but complex projects often require multiple capabilities working together. Rather than switching between skills manually, you can orchestrate multiple skills within a single project to create powerful automated workflows. This guide covers practical patterns for combining skills effectively.
 
-Why Combine Skills in a Single Project
+## Why Combine Skills in a Single Project
 
 [Each Claude skill brings a focused capability](/claude-skill-md-format-complete-specification-guide/), one might handle test generation, another could manage documentation, and a third might optimize performance. When you combine these skills within one project, you eliminate context switching and create coherent pipelines that handle multi-step processes automatically.
 
 The benefits extend beyond convenience. A combined skill workflow ensures consistency across different aspects of your project. The documentation skill understands what the test skill just generated, and the performance skill knows the refactoring changes made by the optimization skill. This contextual awareness produces better results than using skills in isolation.
 
-Project-Level Skill Architecture
+## Project-Level Skill Architecture
 
 Before combining skills, establish a clear project structure. [Place your skills in the `.claude/skills/` directory at your project root](/best-claude-code-skills-to-install-first-2026/), or use a centralized skills folder if multiple projects share them.
 
@@ -42,7 +42,7 @@ my-project/
 
 This structure keeps skills organized and makes them discoverable by Claude Code. Each skill should have a clear, single responsibility, this makes composition predictable and debugging straightforward.
 
-Pattern 1: Sequential Skill Invocation
+## Pattern 1: Sequential Skill Invocation
 
 The most straightforward approach chains skills in sequence, where each skill completes before the next begins. This works well when one skill's output directly feeds into the next skill's input.
 
@@ -67,7 +67,7 @@ First, use the tdd skill to generate tests for the user authentication module. A
 
 Claude Code maintains context across skill invocations, so each subsequent skill understands what previous skills accomplished.
 
-Pattern 2: Parallel Skill Execution
+## Pattern 2: Parallel Skill Execution
 
 For independent tasks that don't depend on each other's output, run skills simultaneously. This reduces total execution time significantly.
 
@@ -90,7 +90,7 @@ In practice, you can request this from Claude Code directly:
 Run three skills in parallel: the tdd skill on auth.py, the docs skill on api.py, and the lint skill on the entire src directory. Combine the results into a single report.
 ```
 
-Pattern 3: Conditional Skill Routing
+## Pattern 3: Conditional Skill Routing
 
 More advanced workflows route to different skills based on conditions. This pattern handles edge cases and ensures the right skill processes the right input.
 
@@ -120,7 +120,7 @@ Claude Code can handle this through careful prompt engineering:
 Analyze the git diff to identify what types of changes were made. If there are database migrations, use the db-migration skill. If there are new API endpoints, use the api-docs skill. For any security-related changes, invoke the security skill first before proceeding.
 ```
 
-Pattern 4: Skill Composition with Shared Context
+## Pattern 4: Skill Composition with Shared Context
 
 When skills need to share data, use a shared context file or environment variables. This pattern works well for metadata, configuration, or accumulated analysis results.
 
@@ -149,7 +149,7 @@ Reference this context in your skill prompts to maintain continuity:
 Using the workflow context file, continue from where the tdd skill left off. The test coverage is at 82% but we need 85%. Run the coverage tool and identify which modules need additional tests.
 ```
 
-Practical Example: Full-Stack Feature Development
+## Practical Example: Full-Stack Feature Development
 
 Consider adding a new feature to your application. Here's how multiple skills work together:
 
@@ -185,7 +185,7 @@ Perform a security audit on the notification system implementation. Check for in
 
 Each skill builds on the previous work, creating a complete feature development pipeline.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Context overflow. Combining many skills can exhaust the context window. Monitor token usage and break long workflows into smaller chunks. Skills that require full codebase context should load selectively.
 
@@ -193,7 +193,7 @@ Skill conflicts. Different skills might have conflicting instructions. If your t
 
 Implicit dependencies. Don't assume skills understand dependencies implicitly. Always state what previous skills accomplished: "The docs skill generated API documentation for the payment endpoints. Now use the security skill to audit these same endpoints."
 
-Organizing Skills for Multi-Skill Projects
+## Organizing Skills for Multi-Skill Projects
 
 Create a master skill that orchestrates other skills. This "meta-skill" defines which skills to use and in what order:
 
@@ -228,7 +228,7 @@ Usage
 Invoke this skill at the start of any feature development task. The skill will determine which sub-skills to use and in what sequence.
 ```
 
-Conclusion
+## Conclusion
 
 Combining multiple Claude skills in one project transforms Claude Code from a single assistant into a powerful workflow engine. Start with sequential chaining for straightforward pipelines, then explore parallel execution and conditional routing for more complex needs. The key is establishing clear project structure and explicit skill orchestration, your future self will thank you when debugging complex workflows.
 

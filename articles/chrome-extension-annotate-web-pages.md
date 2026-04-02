@@ -13,13 +13,12 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
 {% raw %}
 Chrome Extension Annotate Web Pages: Build Your Own Annotation Tool
 
 Web annotation transforms passive reading into active engagement. Whether you're a researcher collecting evidence, a developer documenting bugs, or a student highlighting study materials, the ability to annotate web pages directly in your browser provides immediate value. Building a Chrome extension for page annotation is a practical project that demonstrates core extension APIs while creating a genuinely useful tool.
 
-Why Build a Web Annotation Extension
+## Why Build a Web Annotation Extension
 
 Browser-based annotations solve several real problems that developers and power users face daily:
 
@@ -30,7 +29,7 @@ Browser-based annotations solve several real problems that developers and power 
 
 The Chrome platform provides all necessary APIs to implement these features without requiring external servers or complex backend infrastructure.
 
-Project Structure
+## Project Structure
 
 A basic annotation extension requires these files:
 
@@ -46,7 +45,7 @@ annotate-pages/
 
 The manifest defines permissions and entry points, background scripts handle extension lifecycle, content scripts interact with page DOM, and popup UI provides the annotation interface.
 
-The Manifest File
+## The Manifest File
 
 Chrome extensions use Manifest V3, which requires declarative permissions and service worker-based background scripts.
 
@@ -81,7 +80,7 @@ Chrome extensions use Manifest V3, which requires declarative permissions and se
 
 This manifest requests storage for saving annotations and scripting permissions for DOM manipulation. The host permission covers all URLs since users may need to annotate any website.
 
-Content Script: Injecting Annotation Features
+## Content Script: Injecting Annotation Features
 
 The content script runs on every page and handles the core annotation functionality, creating highlights and managing annotation data.
 
@@ -167,7 +166,7 @@ The content script runs on every page and handles the core annotation functional
 
 This script maintains an array of annotations, persists them to Chrome's local storage keyed by URL, and renders visual markers on the page. The timestamp enables future features like sorting or filtering by date.
 
-Background Service Worker
+## Background Service Worker
 
 The service worker manages extension state and handles keyboard shortcuts. Since Manifest V3 uses event-driven service workers, we register listeners for extension events.
 
@@ -207,7 +206,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
 The background script registers a keyboard shortcut for quick annotation and adds a context menu option. Users can select text and right-click to annotate, or use the configured keyboard shortcut.
 
-Popup Interface
+## Popup Interface
 
 The popup provides the primary user interface for viewing and managing annotations.
 
@@ -253,7 +252,7 @@ The popup provides the primary user interface for viewing and managing annotatio
 </html>
 ```
 
-Popup Logic
+## Popup Logic
 
 ```javascript
 // popup.js
@@ -304,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Advanced Features to Consider
+## Advanced Features to Consider
 
 Once the basic annotation system works, these enhancements provide additional value:
 
@@ -326,7 +325,7 @@ function exportAnnotations(annotations) {
 
 Annotation search: Implement a global search across all saved annotations using chrome.storage.index or maintain a separate search index.
 
-Loading and Testing
+## Loading and Testing
 
 To test your extension during development:
 
@@ -337,7 +336,7 @@ To test your extension during development:
 
 For continuous development, use Chrome's auto-reload feature by enabling "Allow in incognito" or manually clicking the reload button after making changes.
 
-Production Considerations
+## Production Considerations
 
 Before publishing to the Chrome Web Store, address these requirements:
 
@@ -347,7 +346,6 @@ Before publishing to the Chrome Web Store, address these requirements:
 - Error handling: Wrap storage operations in try-catch blocks to handle quota exceeded or unavailable storage
 
 Building a web annotation extension demonstrates fundamental Chrome extension patterns while creating a genuinely useful tool for daily browser work.
-
 
 Related Reading
 

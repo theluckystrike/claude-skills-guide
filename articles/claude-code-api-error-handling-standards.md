@@ -16,13 +16,13 @@ score: 7
 
 Building reliable integrations with Claude Code API requires thoughtful error handling. This guide covers practical patterns and standards that developers and power users can implement to create resilient API interactions.
 
-Understanding Error Types
+## Understanding Error Types
 
 Claude Code API returns distinct error categories that require different handling strategies. Authentication errors occur when API keys are invalid or expired. Rate limit errors (HTTP 429) happen when you exceed request quotas. Validation errors indicate malformed request payloads. Server errors (5xx) represent temporary service issues. Each category demands a specific response strategy.
 
 When building integrations with skills like the pdf skill for document processing or the frontend-design skill for UI generation, solid error handling prevents workflow interruptions. A single unhandled error can cascade through dependent operations, causing data loss or inconsistent state.
 
-Basic Error Handling Pattern
+## Basic Error Handling Pattern
 
 Implement a structured approach to catching and responding to API errors:
 
@@ -73,7 +73,7 @@ class APIError extends Error {
 
 This pattern implements exponential backoff for rate limits, which is essential when running intensive workflows with the tdd skill or running multiple parallel tasks.
 
-Validation Error Handling
+## Validation Error Handling
 
 Input validation prevents errors before they reach the API. Create validation schemas that catch issues early:
 
@@ -116,7 +116,7 @@ function validateRequest(req: ClaudeRequest): void {
 
 The supermemory skill benefits significantly from validation since it handles persistent context that could become corrupted with invalid data. Proper validation ensures your long-running conversations remain stable.
 
-Graceful Degradation Strategies
+## Graceful Degradation Strategies
 
 When API errors occur, implement fallback behaviors that maintain user experience. Rather than failing completely, provide sensible defaults:
 
@@ -142,7 +142,7 @@ async function generateWithFallback(prompt, context) {
 
 This approach works well with the algorithmic-art skill where generating a placeholder or cached result is preferable to complete failure during high-load periods.
 
-Error Recovery Patterns
+## Error Recovery Patterns
 
 For long-running operations, implement checkpoint systems that preserve progress:
 
@@ -181,7 +181,7 @@ class ClaudeWorkflow:
 
 This pattern is valuable when using the canvas-design skill for generating multiple assets, where losing progress due to an API error would be costly.
 
-Monitoring and Logging
+## Monitoring and Logging
 
 Track error patterns to identify systemic issues:
 
@@ -204,7 +204,7 @@ function logAPICall(params, response, error, duration) {
 
 Integrate with your existing monitoring stack. The xlsx skill can generate error reports from logged data, helping teams analyze failure patterns over time.
 
-Best Practices Summary
+## Best Practices Summary
 
 Implement these core principles across your Claude Code integrations. First, always validate inputs before sending to the API. Second, use exponential backoff for transient errors like rate limits. Third, implement graceful degradation rather than complete failure. Fourth, use checkpoint systems for long-running workflows. Fifth, log errors comprehensively for debugging and analysis.
 
@@ -214,8 +214,7 @@ The key is anticipating failure modes and building systems that recover graceful
 
 ---
 
-
-Step-by-Step Guide: Implementing Production Error Handling
+## Step-by-Step Guide: Implementing Production Error Handling
 
 Here is a concrete approach to adding solid error handling to Claude Code API integrations.
 
@@ -229,7 +228,7 @@ Step 4. Add dead letter queues for async workflows. For workflows that process C
 
 Step 5. Set up error budget tracking. Define an acceptable error rate (for example, 0.5% of API calls allowed to fail) and instrument your code to track actual error rates against this budget. Claude Code generates the instrumentation and a dashboard query for your monitoring platform that fires an alert when you are consuming error budget faster than expected.
 
-Common Pitfalls
+## Common Pitfalls
 
 Catching all exceptions with a bare `except` block. Generic exception handlers mask programming errors like `NameError` and `AttributeError` alongside real API errors, making bugs invisible in production. Always catch specific exception types and let unexpected exceptions propagate to your global error handler where they can be logged and alerted on.
 
@@ -241,7 +240,7 @@ Treating all 4xx errors the same. A 400 Bad Request means your code sent invalid
 
 Not testing error handling paths. Error handling code that is never exercised in tests can accumulate bugs silently. Claude Code generates a test suite using `jest.mock` or `unittest.mock` that injects specific error conditions for each API error type, verifying that your handling code responds correctly to each scenario.
 
-Advanced Error Patterns
+## Advanced Error Patterns
 
 Structured error responses for API consumers. If your service exposes Claude Code capabilities to downstream clients through your own API, surface errors in a consistent structure that includes an error code, human-readable message, retry-after hint for rate limit errors, and a correlation ID for support escalation. Claude Code generates the error response schema and the middleware that translates upstream errors into your API's error format.
 
@@ -249,7 +248,7 @@ Partial failure handling in batch operations. When processing multiple prompts i
 
 Token budget overflow recovery. When a response is truncated due to `max_tokens` being too low, some workflows can recover by requesting a continuation with the truncated response as context. Claude Code generates the continuation logic that detects `stop_reason: max_tokens` and automatically requests completion, up to a configurable maximum number of continuation rounds.
 
-Production Hardening Patterns
+## Production Hardening Patterns
 
 Moving from development to production requires additional error handling patterns that address the full range of failure modes your Claude API integration will encounter at scale.
 
@@ -259,15 +258,13 @@ Streaming response error recovery. When using the streaming API, errors can occu
 
 Multi-region failover. For critical applications requiring high availability beyond what the Claude API SLA guarantees, Claude Code generates the multi-region failover configuration that routes requests to a secondary region endpoint when the primary region returns consecutive errors. The failover includes circuit breaker state synchronization across your application instances using a shared Redis store, preventing thundering herd reconnection when the primary region recovers.
 
-
-Integration Patterns
+## Integration Patterns
 
 Sentry integration. Claude Code generates the Sentry SDK configuration that captures API errors with full context, groups similar errors intelligently, and sets alert thresholds based on error frequency. The integration includes custom fingerprinting rules so rate limit errors do not flood your Sentry issue inbox.
 
 PagerDuty escalation for critical errors. For integrations where API failures have direct business impact (customer-facing features, revenue-critical workflows), Claude Code generates the PagerDuty event rule configuration that escalates P0 errors to on-call engineers immediately while queuing lower-severity errors for business-hours review.
 
 Datadog APM tracing. Claude Code generates OpenTelemetry instrumentation that creates distributed traces spanning your application code and the Claude API calls within it. Error rates, latency percentiles, and token usage metrics all appear in your existing Datadog dashboards alongside your other service metrics.
-
 
 Related Reading
 

@@ -16,7 +16,7 @@ permalink: /claude-md-file-complete-guide-what-it-does/
 
 If you have used Claude Code or explored the Claude skills ecosystem, you have encountered `.md` files. These are not ordinary markdown files. they are the [fundamental building blocks of Claude skills](/claude-skill-md-format-complete-specification-guide/) that define how Claude behaves when performing specific tasks. This guide explains what a Claude MD file does, how it works, and how you can use it to create powerful automations.
 
-What Is a Claude MD File
+## What Is a Claude MD File
 
 [A Claude MD file](/best-claude-code-skills-to-install-first-2026/) is a markdown document that combines human-readable documentation with machine-readable configuration. At its core, it uses YAML front matter. a section at the top of the file delimited by triple dashes. to declare metadata that Claude Code interprets when loading a skill.
 
@@ -35,7 +35,7 @@ My Skill
 Your skill description goes here. This tells Claude how to behave when this skill is invoked.
 ```
 
-How Front Matter Powers Skills
+## How Front Matter Powers Skills
 
 The front matter section is where the magic happens. Every Claude MD file supporting skills uses specific fields to configure behavior:
 
@@ -44,8 +44,6 @@ The `name` field identifies the skill for invocation. When you call a skill, Cla
 The `description` field provides a brief explanation of what the skill does. This appears in skill listings and helps Claude determine when a skill might be relevant to your request.
 
 The `tools` field declares which tools the skill can use. This is critical for security and scope control. A skill tagged with `["Bash", "Write"]` cannot access tools outside that list, even if the skill's instructions ask for them. The [Claude Code permissions model security guide](/claude-code-permissions-model-security-guide-2026/) explains how these boundaries are enforced at runtime.
-
-
 
 Here is a more complete example showing a skill with tool restrictions:
 
@@ -65,7 +63,7 @@ You are a TDD specialist. When given a feature request:
 Always use the testing framework specified in the project.
 ```
 
-What Happens When Claude Loads an MD File
+## What Happens When Claude Loads an MD File
 
 When you invoke a skill, Claude Code performs several operations:
 
@@ -76,11 +74,11 @@ When you invoke a skill, Claude Code performs several operations:
 
 This process happens automatically. You do not need to manually load files or configure anything. the `.md` file contains everything Claude needs.
 
-Practical Examples of Claude MD Files in Action
+## Practical Examples of Claude MD Files in Action
 
 Let us look at how different skills use the MD file format to deliver specialized functionality.
 
-The PDF Skill
+## The PDF Skill
 
 The `pdf` skill demonstrates a straightforward use case. Its MD file declares the necessary tools for document generation:
 
@@ -96,7 +94,7 @@ Convert markdown files to PDF format using the specified output path.
 Use appropriate styling and maintain document structure.
 ```
 
-The SuperMemory Skill
+## The SuperMemory Skill
 
 More complex skills like `supermemory` use additional configuration to manage persistent context:
 
@@ -112,7 +110,7 @@ Store and retrieve information across conversations.
 Remember user preferences and maintain context for future interactions.
 ```
 
-The Frontend-Design Skill
+## The Frontend-Design Skill
 
 The `frontend-design` skill shows how MD files can coordinate multiple tool categories:
 
@@ -133,7 +131,7 @@ Create beautiful, responsive web interfaces using:
 Always check existing project structure before creating new files.
 ```
 
-Why MD Files Work Well for Skills
+## Why MD Files Work Well for Skills
 
 The markdown-based skill format offers several advantages for developers and power users:
 
@@ -145,7 +143,7 @@ Portable: A skill is a single file. You can share it, publish it to a repository
 
 Extensible: Adding new capabilities is as simple as updating the front matter or adding more markdown content.
 
-Creating Your Own Claude MD File
+## Creating Your Own Claude MD File
 
 To create a custom skill, start with the basic structure. If you want to share your skill with others, the [guide to creating a private Claude skill not on GitHub](/how-do-i-create-a-private-claude-skill-not-on-github/) covers distribution options beyond public repositories:
 
@@ -164,7 +162,7 @@ Be clear about the workflow you expect.
 
 Place this file in your project's skills directory or register it with Claude Code. Once loaded, you can invoke it by name.
 
-Summary
+## Summary
 
 A Claude MD file is a skill definition document that combines YAML configuration with markdown instructions. The front matter declares the skill name, description, and permitted tools. The body provides behavioral guidance that Claude follows when the skill is invoked.
 

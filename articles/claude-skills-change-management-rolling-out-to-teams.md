@@ -16,13 +16,13 @@ permalink: /claude-skills-change-management-rolling-out-to-teams/
 
 [When your team grows beyond a single developer using Claude Code, you'll need a strategy for distributing, updating, and governing skills](/best-claude-code-skills-to-install-first-2026/) across the organization. This guide covers the technical and procedural aspects of rolling out Claude skills to teams of any size.
 
-The Challenge of Distributed Skill Management
+## The Challenge of Distributed Skill Management
 
 Individual developers install skills in their local `~/.claude/skills/` directories. When standardizing these installations, the [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) provides a valuable shared knowledge base that benefits the whole team. When multiple team members need access to the same specialized workflows, whether it's the tdd skill for test-driven development or the pdf skill for document processing, you face version drift, inconsistent behavior, and duplicated effort. Change management addresses these problems systematically.
 
 The core issue is that skills are just Markdown files with no built-in distribution mechanism. Unlike npm packages or Docker images, there's no native registry with version tagging. Your team needs to build that layer yourself.
 
-Repository-Based Skill Distribution
+## Repository-Based Skill Distribution
 
 The most practical approach stores skills in a dedicated Git repository that team members clone into their local skills directory. Here's a recommended structure:
 
@@ -45,7 +45,7 @@ claude-skills-org/
 
 Each skill lives in its own subdirectory, matching the invocation structure. When a developer writes `/tdd generate tests for auth module`, Claude Code looks for `skills/tdd/skill.md` in the skills directory.
 
-Version Control for Skills
+## Version Control for Skills
 
 Git provides the change management foundation. Tag releases using semantic versioning:
 
@@ -65,7 +65,7 @@ git checkout v1.2.0
 
 This approach ensures every developer on the team uses identical skill versions during training periods or when debugging issues.
 
-Testing Skills Before Deployment
+## Testing Skills Before Deployment
 
 Skills are difficult to test because they're essentially prompts with metadata. However, you can validate them programmatically using a test harness that simulates Claude Code's loading behavior:
 
@@ -115,7 +115,7 @@ Run these tests in your CI pipeline before merging skill changes:
 pytest tests/ -v --tb=short
 ```
 
-Staged Rollout Strategy
+## Staged Rollout Strategy
 
 For larger teams, implement a phased rollout:
 
@@ -131,7 +131,7 @@ Create a feedback loop using a simple form or Slack integration:
 /skill-feedback [skill-name]: [what worked] | [what broke] | [suggestion]
 ```
 
-Skill Governance Policies
+## Skill Governance Policies
 
 Establish clear guidelines for skill lifecycle management:
 
@@ -163,7 +163,7 @@ for f in $(git diff --name-only HEAD~1); do
 done
 ```
 
-Automating Skill Synchronization
+## Automating Skill Synchronization
 
 For teams that want minimal manual intervention, set up automatic synchronization using a cron job or systemd timer:
 
@@ -205,7 +205,7 @@ git verify-commit HEAD
 echo "Skills synchronized successfully"
 ```
 
-Monitoring Skill Performance
+## Monitoring Skill Performance
 
 After rollout, track how skills perform in production use. The xlsx skill can generate weekly reports on skill usage patterns:
 
@@ -241,7 +241,7 @@ if __name__ == "__main__":
 
 This data helps you make informed decisions about which skills to invest in improving and which to deprecate.
 
-Summary
+## Summary
 
 Effective change management for Claude skills mirrors software engineering best practices: version control your skills repository, test before deployment, implement staged rollouts, establish governance policies, automate synchronization, and monitor usage. The initial setup takes some effort, but the consistency and reliability gains for team collaboration are substantial.
 

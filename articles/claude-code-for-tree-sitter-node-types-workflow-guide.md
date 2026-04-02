@@ -15,7 +15,7 @@ Claude Code for Tree-sitter Node Types Workflow Guide
 
 Tree-sitter has become the backbone of modern code analysis tools, powering everything from syntax highlighting to refactoring engines. But working effectively with Tree-sitter node types requires understanding how to parse, navigate, and transform the Abstract Syntax Tree (AST) efficiently. This guide shows you how to use Claude Code to streamline your Tree-sitter workflow.
 
-Understanding Tree-sitter Node Types
+## Understanding Tree-sitter Node Types
 
 Tree-sitter represents code as a parse tree where each node has a specific type corresponding to the language's grammar. These node types map directly to language constructs: `function_declaration`, `call_expression`, `variable_declarator`, and thousands more depending on the language.
 
@@ -27,11 +27,11 @@ When you parse code with Tree-sitter, you get a tree of nodes where each node co
 
 Understanding this structure is crucial for building reliable Tree-sitter-based tools.
 
-Setting Up Your Claude Code Environment for Tree-sitter
+## Setting Up Your Claude Code Environment for Tree-sitter
 
 Before diving into workflows, ensure your environment is ready. Claude Code can interact with Tree-sitter through several mechanisms:
 
-Installing Tree-sitter CLI
+## Installing Tree-sitter CLI
 
 ```bash
 Install tree-sitter CLI
@@ -41,7 +41,7 @@ Verify installation
 tree-sitter --version
 ```
 
-Creating a Skill for Node Type Analysis
+## Creating a Skill for Node Type Analysis
 
 Create a skill that focuses on Tree-sitter node type workflows. This skill will help you parse and analyze code structures:
 
@@ -59,9 +59,9 @@ You are a Tree-sitter expert. When asked to analyze code:
 4. Suggest how to transform or analyze specific patterns
 ```
 
-Core Workflows for Node Type Operations
+## Core Workflows for Node Type Operations
 
-Workflow 1: Parsing and Inspecting Node Types
+## Workflow 1: Parsing and Inspecting Node Types
 
 The most common workflow is parsing code and inspecting the resulting node types:
 
@@ -84,7 +84,7 @@ Use Claude Code to analyze this output and explain the node structure:
 Explain the node types in this Tree-sitter parse output and identify the main structural elements.
 ```
 
-Workflow 2: Querying Specific Node Patterns
+## Workflow 2: Querying Specific Node Patterns
 
 Tree-sitter's query language lets you match specific node patterns. This is invaluable for finding code constructs:
 
@@ -111,7 +111,7 @@ Run a query against your code
 tree-sitter query my-project.jsx queries/components.scm
 ```
 
-Workflow 3: Transforming Nodes with Claude Code
+## Workflow 3: Transforming Nodes with Claude Code
 
 Combining Tree-sitter with Claude Code enables powerful transformations. Here's a practical pattern:
 
@@ -134,9 +134,9 @@ const data = await fs.promises.readFile('data.txt');
 console.log(data);
 ```
 
-Practical Examples
+## Practical Examples
 
-Example 1: Finding All Function Declarations
+## Example 1: Finding All Function Declarations
 
 Create a query file `queries/functions.scm`:
 
@@ -158,7 +158,7 @@ Claude Code can then help you:
 - Generate transformations for the matched patterns
 - Refactor multiple functions consistently
 
-Example 2: Analyzing Import Statements
+## Example 2: Analyzing Import Statements
 
 For JavaScript/TypeScript, query imports:
 
@@ -176,7 +176,7 @@ This helps you:
 - Find unused imports
 - Track down specific module usages
 
-Example 3: Extracting Type Information
+## Example 3: Extracting Type Information
 
 For TypeScript, query type definitions:
 
@@ -190,7 +190,7 @@ For TypeScript, query type definitions:
         type: (type_reference) @type))))
 ```
 
-Actionable Advice for Node Type Workflows
+## Actionable Advice for Node Type Workflows
 
 1. Start with the Grammar
 
@@ -245,7 +245,7 @@ For complex refactoring tasks that go beyond simple pattern matching:
 3. Feed them to Claude Code with clear transformation instructions
 4. Apply the AI-generated changes
 
-Advanced Pattern: Building Custom Tools
+## Advanced Pattern: Building Custom Tools
 
 You can build custom Tree-sitter tools that integrate with Claude Code:
 
@@ -279,14 +279,13 @@ This pattern extends to building:
 - Code generation tools
 - Documentation generators
 
-Conclusion
+## Conclusion
 
 Mastering Tree-sitter node types transforms how you analyze and manipulate code. By combining Tree-sitter's parsing capabilities with Claude Code's AI-powered assistance, you can build sophisticated code analysis tools and perform complex refactoring with confidence.
 
 Start small: parse a file, run a query, understand the output. Then progressively build more complex workflows. The investment pays off in more reliable tools and deeper understanding of your codebase's structure.
 
 Remember: the key is understanding node types as the building blocks of code structure, then using Claude Code to intelligently work with those blocks for analysis and transformation.
-
 
 Related Reading
 

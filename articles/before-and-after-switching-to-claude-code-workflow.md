@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Before and After: Switching to Claude Code Workflow"
 description: "A practical comparison of developer workflows before and after adopting Claude Code. See real productivity gains, workflow transformations, and how AI."
@@ -14,12 +13,9 @@ categories: [workflows]
 tags: [claude-code, claude-skills]
 ---
 
-
-Before and After: Switching to Claude Code Workflow
-
 The shift from traditional development workflows to AI-assisted coding represents one of the most significant productivity transformations in software engineering. Developers who switch to Claude Code discover a fundamentally different approach to problem-solving, one that replaces repetitive tasks with intelligent automation and transforms how code is written, tested, and maintained.
 
-The Traditional Workflow: Before Claude Code
+## The Traditional Workflow: Before Claude Code
 
 Before adopting Claude Code, most developers follow a workflow that looks familiar across teams:
 
@@ -34,7 +30,7 @@ This workflow works, but it carries hidden costs. A developer might spend 15-20 
 
 The traditional approach treats the IDE as a dumb text editor with syntax highlighting. Every operation, from finding a function definition to generating a getter method, requires manual intervention. The developer's brain becomes a routing system, constantly switching between "what I need to do" and "where is that code located."
 
-Typical Day in the Traditional Workflow
+## Typical Day in the Traditional Workflow
 
 A morning might involve:
 - 10 minutes to find the relevant file in a large codebase
@@ -45,11 +41,11 @@ A morning might involve:
 
 The cumulative effect is fragmentation, your focus constantly breaks because the tools don't connect information across your project.
 
-The Claude Code Workflow: After Switching
+## The Claude Code Workflow: After Switching
 
 After switching to Claude Code, the workflow transforms entirely. Instead of manually navigating and searching, you describe what you need, and the AI handles execution while you maintain control.
 
-Core Workflow Differences
+## Core Workflow Differences
 
 The fundamental shift is from manual navigation to intent-based execution. You express what you want to accomplish, and Claude Code:
 
@@ -70,7 +66,7 @@ Claude Code finds all relevant files, analyzes the flow,
 and presents a clear explanation with code references
 ```
 
-Skill-Enhanced Workflows
+## Skill-Enhanced Workflows
 
 Claude Code becomes dramatically more powerful when combined with specialized skills. These skills extend the AI's capabilities into specific domains:
 
@@ -100,7 +96,7 @@ For knowledge management, the supermemory skill turns your conversations and cod
 Invoke skill: /supermemory "Remember that we chose JWT over sessions for API authentication"
 ```
 
-Practical Example: Adding a New Feature
+## Practical Example: Adding a New Feature
 
 Before Claude Code:
 1. Search for similar features to understand patterns
@@ -110,7 +106,7 @@ Before Claude Code:
 5. Run tests to verify everything works
 6. Manually check for edge cases
 
-Time estimate: 45-60 minutes for a moderate feature
+## Time estimate: 45-60 minutes for a moderate feature
 
 After Claude Code:
 1. Describe the feature you want
@@ -118,15 +114,15 @@ After Claude Code:
 3. Approve or request adjustments
 4. Tests are generated alongside implementation
 
-Time estimate: 10-15 minutes for the same feature
+## Time estimate: 10-15 minutes for the same feature
 
-Context Preservation
+## Context Preservation
 
 One of the most valuable aspects of Claude Code is context retention. The AI remembers your project structure, coding conventions, and previous decisions throughout a session. You don't need to constantly re-explain your architecture or remind the system about your team's patterns.
 
 This contrasts sharply with the traditional workflow where each new terminal session or IDE window starts from scratch. With Claude Code, you're building on a continuous understanding of your project.
 
-Quantifiable Improvements
+## Quantifiable Improvements
 
 Developers who switch to Claude Code report measurable improvements:
 
@@ -137,7 +133,7 @@ Developers who switch to Claude Code report measurable improvements:
 
 The improvements compound over time. What starts as faster code generation becomes a fundamental change in how you approach problem-solving, breaking larger problems into promptable chunks rather than getting lost in implementation details.
 
-Making the Switch
+## Making the Switch
 
 Transitioning to Claude Code doesn't require abandoning your existing tools. The workflow integrates with familiar environments while adding AI-assisted capabilities:
 
@@ -151,7 +147,6 @@ The key adjustment is mental: learning to express intent rather than manually ex
 Start with small tasks, asking Claude Code to explain a piece of code or generate a simple function. Gradually expand to more complex operations as you build trust in the system.
 
 ---
-
 
 Related Reading
 

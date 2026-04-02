@@ -15,7 +15,7 @@ Claude Code for Bruno API Client Workflow Tutorial
 
 Bruno is a fast and git-friendly open-source API client that's rapidly gaining popularity among developers who prefer a lightweight, version-control-friendly alternative to traditional API clients like Postman or Insomnia. Combined with Claude Code, you can create powerful automation workflows that transform how you test and interact with APIs. This tutorial walks you through practical ways to integrate Claude Code into your Bruno API client workflow.
 
-Understanding Bruno and Claude Code Integration
+## Understanding Bruno and Claude Code Integration
 
 Bruno stores API requests as plain text files (using .bru format), which means version control becomes straightforward and natural. When you pair this with Claude Code's ability to understand code, execute commands, and manage files, you get an incredibly flexible development environment for API work.
 
@@ -25,7 +25,7 @@ The integration works in several ways:
 - Claude Code helps organize and refactor your API collections
 - Claude Code can convert existing Postman or OpenAPI specs into Bruno format
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before diving into workflows, ensure your environment is properly configured. First, install Bruno on your system if you haven't already. You can download it from the official website or use a package manager. Then verify your Claude Code installation is working correctly.
 
@@ -45,7 +45,7 @@ bru init
 
 This creates the basic structure for your Bruno project. You'll find a `bru.json` file and a `requests` folder where your API requests will live.
 
-Generating API Requests with Claude Code
+## Generating API Requests with Claude Code
 
 One of the most powerful use cases is having Claude Code generate Bruno requests automatically. This is particularly useful when you're working with new APIs or need to create multiple similar requests quickly.
 
@@ -78,7 +78,7 @@ headers {
 
 Claude Code can help you generate these templates for any API endpoint you need to test. Simply describe the endpoint, parameters, headers, and body format, and Claude Code produces the correct .bru file.
 
-Automating Collection Execution
+## Automating Collection Execution
 
 Beyond creating requests, you can use Claude Code to run your Bruno collections programmatically. Bruno provides a CLI that integrates well with automation scripts.
 
@@ -105,7 +105,7 @@ echo "Test suite complete"
 
 You can ask Claude Code to generate these test scripts based on your collection structure, making it easy to maintain comprehensive API test suites.
 
-Converting Existing API Definitions
+## Converting Existing API Definitions
 
 If you're migrating from Postman or have OpenAPI/Swagger specifications, Claude Code can help convert these into Bruno format. While there are dedicated migration tools, Claude Code offers flexibility for custom conversions.
 
@@ -118,7 +118,7 @@ bru import --openapi petstore.yaml
 
 For more complex migrations, ask Claude Code to parse your existing Postman collection and generate corresponding Bruno files. This works especially well for collections with environment variables and complex authentication setups.
 
-Managing Environment Variables
+## Managing Environment Variables
 
 Environment variables are crucial for API testing across different stages (development, staging, production). Bruno handles this with .env files, and Claude Code can help manage these efficiently.
 
@@ -138,7 +138,7 @@ API_KEY=prod-key-456
 
 Claude Code can generate these files based on your requirements or help you switch between environments programmatically. This is especially helpful when you need to test the same endpoints against different backends.
 
-Building a Complete Testing Workflow
+## Building a Complete Testing Workflow
 
 Let's put everything together into a practical workflow. This example demonstrates a complete API testing pipeline:
 
@@ -164,7 +164,7 @@ test("Response should contain user data", function() {
 
 Ask Claude Code to generate these test scripts based on the API responses you expect. This makes your API testing more solid and catches regressions early.
 
-Best Practices for Bruno and Claude Code Workflow
+## Best Practices for Bruno and Claude Code Workflow
 
 When combining Bruno with Claude Code, keep these recommendations in mind:
 
@@ -174,7 +174,7 @@ When combining Bruno with Claude Code, keep these recommendations in mind:
 - Version control everything: Bruno's flat-file format makes this natural
 - Write comprehensive tests: Use Bru's scripting for assertions beyond simple status checks
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Bruno creates a powerful workflow for API development and testing. From generating request files to automating test execution, Claude Code acts as an intelligent assistant that understands your API structure and helps you work more efficiently. Start with simple request generation, then progressively adopt more advanced automation as your needs grow.
 

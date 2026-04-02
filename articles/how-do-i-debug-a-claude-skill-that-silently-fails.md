@@ -16,7 +16,7 @@ permalink: /how-do-i-debug-a-claude-skill-that-silently-fails/
 
 Claude Code skills are powerful automation tools, but they can fail in frustrating ways. Unlike a crash that screams for attention, a silent failure happens when the skill loads, appears to work, but produces no useful output, or worse, completes without any indication something went wrong. This guide walks you through diagnosing and fixing these invisible breakdowns.
 
-What Silent Failure Actually Means
+## What Silent Failure Actually Means
 
 A silently failing skill is one that executes without throwing an obvious error. You invoke it, Claude acknowledges the request, and then... nothing happens. Or the skill runs to completion but delivers nothing useful. The difference between a silent failure and a crash is subtle but important: a crash stops execution with an error message, while a silent failure continues as if everything is fine.
 
@@ -28,11 +28,11 @@ Silent failures typically manifest in three ways:
 
 Understanding which type you're dealing with determines your debugging approach.
 
-Check the Basics First
+## Check the Basics First
 
 Before diving into complex diagnostics, verify the skill is even loading correctly.
 
-Verify Skill Registration
+## Verify Skill Registration
 
 Run the following to confirm your skill file exists:
 
@@ -42,7 +42,7 @@ ls ~/.claude/skills/
 
 Look for your skill in the output. If it's missing, the problem isn't a silent failure, it's a loading issue. Check your skill.md file exists in the correct directory (typically `~/.claude/skills/` or within your project).
 
-Test with a Minimal Invocation
+## Test with a Minimal Invocation
 
 Create a simple test case that should produce obvious output. For example, if debugging the `pdf` skill, invoke it with a simple extraction request:
 
@@ -52,7 +52,7 @@ Use the pdf skill to extract text from test.pdf and output the first paragraph.
 
 If this fails, you know the problem isn't with your specific use case but with skill invocation itself.
 
-Common Silent Failure Causes
+## Common Silent Failure Causes
 
 1. YAML Front Matter Errors
 
@@ -113,9 +113,9 @@ description: "A skill for building frontend components and designing pages"
 ---
 ```
 
-Debugging Techniques
+## Debugging Techniques
 
-Enable Verbose Logging
+## Enable Verbose Logging
 
 When Claude Code runs with increased verbosity, you can see what tools are being called and what responses are returned. Use the `--verbose` flag:
 
@@ -125,7 +125,7 @@ claude --verbose
 
 This exposes the underlying tool invocations, helping you identify where execution stops.
 
-Isolate the Skill
+## Isolate the Skill
 
 [Create a minimal reproduction of the failing behavior](/claude-code-crashes-when-loading-skill-debug-steps/). Strip away complex prompts and test with the simplest possible invocation:
 
@@ -135,7 +135,7 @@ Use the [skill-name] skill to [minimal action]
 
 If this works, gradually add complexity until the failure reproduces. This pinpoints which specific instruction or context triggers the problem.
 
-Check Tool Output Directly
+## Check Tool Output Directly
 
 Rather than relying on the skill's final output, inspect what individual tools return. Add explicit output requests to your skill:
 
@@ -149,7 +149,7 @@ For skills like `xlsx` that generate files, verify the file was actually created
 ls -la output/
 ```
 
-Examine the Skill File Itself
+## Examine the Skill File Itself
 
 Load and review your skill definition:
 
@@ -159,9 +159,9 @@ cat ~/.claude/skills/your-skill.md
 
 Look for instructions that might be preventing execution, overly restrictive conditions, missing step definitions, or contradictory directives.
 
-Skill-Specific Considerations
+## Skill-Specific Considerations
 
-The frontend-design Skill
+## The frontend-design Skill
 
 This skill frequently fails silently when the target directory doesn't exist or lacks write permissions. Before invoking, ensure your project structure is ready:
 
@@ -169,11 +169,11 @@ This skill frequently fails silently when the target directory doesn't exist or 
 mkdir -p src/components src/pages
 ```
 
-The pdf Skill
+## The pdf Skill
 
 Silent failures often occur with password-protected PDFs or corrupted files. Test with a simple, unprotected PDF first to confirm basic functionality works.
 
-The tdd Skill
+## The tdd Skill
 
 If tests aren't running, the skill may be invoking the wrong test framework. Check which framework is installed and ensure your project uses it consistently:
 
@@ -181,11 +181,11 @@ If tests aren't running, the skill may be invoking the wrong test framework. Che
 npm list --depth=0 | grep -E "jest|vitest|mocha"
 ```
 
-The supermemory Skill
+## The supermemory Skill
 
 This skill can fail silently when the memory database grows too large or becomes corrupted. Try clearing stale entries or rebuilding the memory index.
 
-Prevention Strategies
+## Prevention Strategies
 
 The best debugging happens before problems occur:
 
@@ -194,7 +194,7 @@ The best debugging happens before problems occur:
 3. Use explicit output instructions: Tell skills to always report status, even on success
 4. Keep skills focused: Single-purpose skills are easier to debug than complex multi-step workflows
 
-Summary
+## Summary
 
 Silent failures in Claude skills usually stem from permission issues, YAML syntax errors, missing dependencies, or misconfigured triggers. Start with the basics, verify the skill loads, test with minimal input, and check tool availability. Use verbose mode to expose hidden execution paths, and isolate problems by simplifying your test cases. Most silent failures become obvious once you can see what the skill is actually doing internally.
 

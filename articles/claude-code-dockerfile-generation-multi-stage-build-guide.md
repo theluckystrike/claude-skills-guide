@@ -16,7 +16,7 @@ permalink: /claude-code-dockerfile-generation-multi-stage-build-guide/
 
 Docker multi-stage builds are one of the most effective ways to reduce image size and improve build performance. Claude Code can help you generate optimized, production-ready Dockerfiles that follow industry best practices. we'll explore how to use Claude Code to create efficient multi-stage Dockerfile configurations for various application types.
 
-Why Multi-Stage Builds Matter
+## Why Multi-Stage Builds Matter
 
 Traditional Dockerfiles often result in bloated images that include build dependencies, development tools, and temporary files that aren't needed at runtime. A single-stage build might produce images of 1GB or more, even for simple applications.
 
@@ -30,7 +30,7 @@ Build Performance: Multi-stage builds with proper layer caching can dramatically
 
 Maintainability: Clear stage separation makes Dockerfiles easier to understand and modify. Each stage has a specific purpose, making the file self-documenting.
 
-Understanding the Multi-Stage Pattern
+## Understanding the Multi-Stage Pattern
 
 The basic multi-stage pattern uses multiple FROM statements, with each stage serving a specific purpose. Here's the fundamental structure:
 
@@ -55,7 +55,7 @@ CMD ["node", "dist/index.js"]
 
 In this example, the builder stage compiles the application and installs all dependencies. The runtime stage copies only the compiled output and essential node_modules, resulting in a significantly smaller final image. Build tools like the TypeScript compiler are never included in the final image.
 
-Layer Caching and Optimization Strategies
+## Layer Caching and Optimization Strategies
 
 Effective use of Docker layer caching is essential for fast builds. Docker caches layers based on the Dockerfile instruction and file contents. If nothing has changed, Docker reuses the cached layer instead of rebuilding it.
 
@@ -92,7 +92,7 @@ When you exclude files with .dockerignore, Docker doesn't consider them when cal
 
 Multi-stage Advantages for Caching: Each stage has its own cache context. You can have a build stage that takes 10 minutes to compile, but if you only change the final COPY command in the runtime stage, the builder cache remains valid and your rebuild completes in seconds.
 
-Node.js Multi-Stage Build Example
+## Node.js Multi-Stage Build Example
 
 Here's a production-ready multi-stage Dockerfile for a Node.js application with development and production dependencies:
 
@@ -129,7 +129,7 @@ CMD ["node", "dist/index.js"]
 
 This pattern separates dependency installation from source compilation and creates a prod-dependencies stage to exclude dev dependencies from the final image. The result is a lean, production-ready container.
 
-Python Multi-Stage Build Example
+## Python Multi-Stage Build Example
 
 Python applications benefit equally from multi-stage builds. Here's a pattern for a Python web application:
 
@@ -153,7 +153,7 @@ CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]
 
 This approach installs dependencies into /root/.local during the build stage, then copies only the user-installed packages to the runtime stage. The final image includes only Python runtime and your application code, not pip, setuptools, or other build tools.
 
-How Claude Code Accelerates Dockerfile Generation
+## How Claude Code Accelerates Dockerfile Generation
 
 Claude Code excels at understanding your project structure and requirements, then generating tailored multi-stage Dockerfiles. When you describe your application's dependencies, build process, and runtime needs, Claude Code produces Dockerfiles that:
 
@@ -168,7 +168,7 @@ You can ask Claude Code to generate a Dockerfile, then iteratively refine it. Ne
 
 Claude Code also helps you understand why specific choices were made in a generated Dockerfile, making it easier to maintain and modify the configuration as your application evolves.
 
-Best Practices Summary
+## Best Practices Summary
 
 When generating or reviewing multi-stage Dockerfiles with Claude Code, remember these key principles:
 

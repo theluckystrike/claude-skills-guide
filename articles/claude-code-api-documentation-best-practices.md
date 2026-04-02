@@ -13,18 +13,15 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code API Documentation Best Practices
-
 Creating excellent API documentation is both an art and a science. With Claude Code and its powerful skill ecosystem, you can automate documentation workflows, maintain consistency across your docs, and ensure your APIs are genuinely developer-friendly. This guide explores practical strategies for using Claude Code to streamline your API documentation process.
 
-Understanding the Documentation Challenge
+## Understanding the Documentation Challenge
 
 API documentation often becomes outdated quickly, lacks clarity, or fails to address real developer needs. Claude Code addresses these challenges by integrating documentation directly into your development workflow. Whether you're building REST APIs, GraphQL endpoints, or gRPC services, having well-structured documentation is crucial for developer adoption.
 
 The key is treating documentation as code, version-controlled, automated, and continuously improved. Claude Code makes this approach practical through its skill ecosystem and automation capabilities.
 
-Setting Up Your Documentation Workflow
+## Setting Up Your Documentation Workflow
 
 Before diving into specific techniques, establish a foundation for documentation that scales. Create a dedicated documentation structure within your project:
 
@@ -40,7 +37,7 @@ This separation allows different documentation types to evolve independently. Th
 
 When you integrate this structure with Claude Code, you can invoke specific skills that understand documentation contexts. For instance, the `pdf` skill can generate polished PDF versions of your guides for offline reading, while the `frontend-design` skill helps ensure your interactive API explorer looks professional.
 
-Automating OpenAPI/Swagger Documentation
+## Automating OpenAPI/Swagger Documentation
 
 The foundation of modern API documentation is the OpenAPI specification. Claude Code excels at helping you maintain accurate OpenAPI definitions. Here's a workflow for keeping your spec current:
 
@@ -56,7 +53,7 @@ Integrate these commands into your CI/CD pipeline to catch documentation drift b
 
 For teams using TypeScript, combine Claude Code with the `tdd` skill to write tests that verify your API behavior matches your documentation. This test-driven approach ensures your docs never lie about functionality.
 
-Generating Specs from Code Annotations
+## Generating Specs from Code Annotations
 
 The most practical approach starts with annotations in your code. Modern frameworks like Express, FastAPI, and Spring support decorators that generate OpenAPI specs directly from endpoint implementations:
 
@@ -87,7 +84,7 @@ app.get('/users/:id', getUser);
 
 Claude Code reads these annotations and compiles them into a complete `openapi.yaml` or `openapi.json` file across all route files.
 
-Validating Specs Against Running Code
+## Validating Specs Against Running Code
 
 A common problem with large OpenAPI specs is drift between the specification and actual implementation. Create a validation script that Claude can execute as part of your workflow:
 
@@ -134,7 +131,7 @@ jobs:
         run: npm run test:api-integration
 ```
 
-Documenting Responses with Examples
+## Documenting Responses with Examples
 
 Good API documentation includes realistic response examples. Use a `responses` directory with JSON files representing successful and error cases:
 
@@ -150,7 +147,7 @@ api-docs/
 
 Reference these in your OpenAPI spec to keep documentation DRY and ensure examples stay synchronized with test fixtures.
 
-Pre-Commit Documentation Checks
+## Pre-Commit Documentation Checks
 
 Prevent documentation drift by adding a pre-commit hook that validates completeness:
 
@@ -162,7 +159,7 @@ claude --print "Check that all new API endpoints have corresponding documentatio
 
 This ensures documentation is never forgotten when new endpoints are added.
 
-Automatic Example Generation
+## Automatic Example Generation
 
 Generate working code examples from your API handlers to keep documentation copy-paste ready:
 
@@ -184,7 +181,7 @@ const user = await response.json();
 
 Claude Code can generate these examples for every endpoint by analyzing your route handlers and producing curl commands alongside JavaScript/Python/Ruby equivalents.
 
-Writing Clear, Actionable Guide Content
+## Writing Clear, Actionable Guide Content
 
 Reference documentation tells developers what endpoints exist. Guide content teaches them how to solve problems. Claude Code helps you write both, but excels particularly at crafting tutorial-style content that addresses real developer problems.
 
@@ -205,7 +202,7 @@ objectives:
   - Handle authentication errors gracefully
 ```
 
-Generating SDK Documentation
+## Generating SDK Documentation
 
 Auto-generated SDKs are only as good as their documentation. Claude Code can enhance generated docs with context that raw code comments can't provide.
 
@@ -219,7 +216,7 @@ When documenting SDK methods, always include:
 - Code examples: Complete, runnable snippets in multiple languages
 - Related methods: Links to complementary functionality
 
-Creating Interactive Documentation Experiences
+## Creating Interactive Documentation Experiences
 
 Static documentation frustrates developers who want to test APIs immediately. Claude Code pairs excellently with tools like Swagger UI, Redoc, or Scalar to create interactive experiences.
 
@@ -240,7 +237,7 @@ services:
 
 Deploy this alongside your API to give developers a sandboxed testing environment. The `frontend-design` skill helps you customize the appearance to match your brand while maintaining usability.
 
-Versioning Your Documentation
+## Versioning Your Documentation
 
 APIs evolve, and documentation must evolve with them. Implement a versioning strategy that prevents confusion:
 
@@ -263,7 +260,7 @@ openapi/
 
 Claude Code with the `supermemory` skill tracks version context across sessions, remembering which endpoints changed between versions. When you create a new API version, invoke workflows that update your documentation index, send notifications to consumers, and archive old versions appropriately.
 
-Maintaining Documentation Quality
+## Maintaining Documentation Quality
 
 Documentation rot is real, outdated content erodes trust. Establish practices that maintain quality:
 
@@ -274,14 +271,13 @@ Documentation rot is real, outdated content erodes trust. Establish practices th
 
 The `tdd` skill helps here too, write tests that verify code examples actually work. Nothing damages credibility faster than copy-pasteable code that fails.
 
-Conclusion
+## Conclusion
 
 Excellent API documentation transforms developers from confused users into confident integrators. Claude Code makes this achievable by automating repetitive tasks, maintaining context across your documentation suite, and integrating docs smoothly into your development workflow.
 
 Start with a solid foundation, version-controlled specs, clear guide structure, and automated validation. Then use Claude skills like `pdf` for exportable guides, `frontend-design` for polished interfaces, `tdd` for tested examples, and `supermemory` for institutional knowledge retention.
 
 Your documentation is a product. Invest in it accordingly.
-
 
 Related Reading
 

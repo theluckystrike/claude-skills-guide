@@ -32,7 +32,7 @@ When you add Claude Code to this mix, you gain an AI assistant that understands 
 
 The combination is particularly powerful for teams working on Python backends who want to ship GraphQL APIs faster without sacrificing type safety.
 
-Setting Up Your Strawberry GraphQL Project
+## Setting Up Your Strawberry GraphQL Project
 
 Start by creating a new Python project or navigating to your existing Strawberry project. If you're starting fresh, here's a quick setup:
 
@@ -92,7 +92,7 @@ schema = strawberry.Schema(query=Query)
 
 This schema demonstrates Strawberry's clean type-based approach. Each `@strawberry.type` automatically generates a corresponding GraphQL type. The type hints become the schema definition, no separate SDL needed.
 
-Leveraging Claude Code for Schema Development
+## Leveraging Claude Code for Schema Development
 
 When working on more complex schemas, Claude Code becomes invaluable. You can describe your data models and let Claude help generate the appropriate Strawberry types:
 
@@ -134,7 +134,7 @@ class Order:
 
 Notice how `@strawberry.input` creates input types for mutations, while `@strawberry.type` defines output types. This separation is crucial for building solid APIs.
 
-Implementing Resolvers and Data Access
+## Implementing Resolvers and Data Access
 
 Resolvers in Strawberry can be defined as methods on types or as standalone functions. Here's how to implement proper resolver patterns:
 
@@ -187,7 +187,7 @@ class Query:
 
 The key insight is creating `from_model` class methods that bridge your database models to GraphQL types. This pattern keeps your schema clean and testable.
 
-Real-Time with Subscriptions
+## Real-Time with Subscriptions
 
 Strawberry supports subscriptions for real-time updates. Here's how to implement a subscription that notifies when new posts are published:
 
@@ -220,11 +220,11 @@ async def create_post(self, title: str, content: str, info: strawberry.Info) -> 
 
 Subscriptions require an ASGI server that supports WebSocket connections, such as uvicorn with the proper configuration.
 
-Production Best Practices
+## Production Best Practices
 
 When deploying Strawberry GraphQL to production, consider these practices:
 
-Use DataLoaders to Prevent N+1 Queries
+## Use DataLoaders to Prevent N+1 Queries
 
 ```python
 from strawberry.dataloader import DataLoader
@@ -242,7 +242,7 @@ class Query:
         # Now posts can safely access author without N+1 queries
 ```
 
-Add Query Cost Analysis
+## Add Query Cost Analysis
 
 ```python
 from strawberry.extensions import QueryDepthLimiter
@@ -253,7 +253,7 @@ schema = strawberry.Schema(
 )
 ```
 
-Configure CORS Properly
+## Configure CORS Properly
 
 ```python
 from strawberry import strawberry
@@ -267,7 +267,7 @@ cors_config = CorsConfig(
 app = strawberry.fastapi.router(schema, cors=cors_config)
 ```
 
-Testing Your Strawberry API
+## Testing Your Strawberry API
 
 Claude Code can help you write comprehensive tests. Here's a testing pattern using httpx:
 
@@ -301,7 +301,7 @@ async def test_query_posts(client):
     assert len(data["posts"]) > 0
 ```
 
-Conclusion
+## Conclusion
 
 Strawberry GraphQL combined with Claude Code creates a powerful development workflow for Python developers. The type-safe nature of Strawberry aligns perfectly with Claude Code's ability to understand and generate correct code. By following the patterns in this guide, proper type definitions, async resolvers, data loaders for performance, and comprehensive testing, you'll build production-ready GraphQL APIs efficiently.
 

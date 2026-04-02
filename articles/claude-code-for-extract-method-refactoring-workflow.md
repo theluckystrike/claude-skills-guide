@@ -17,13 +17,13 @@ Claude Code for Extract Method Refactoring Workflow
 
 The extract method refactoring is one of the most fundamental and frequently used techniques in code improvement. It involves taking a chunk of code, extracting it into a separate method, and replacing the original code with a call to that new method. When combined with Claude Code, this workflow becomes significantly more efficient and less error-prone. This guide shows you how to use Claude Code to automate and streamline your extract method refactoring workflow.
 
-Why Use Claude Code for Extract Method Refactoring
+## Why Use Claude Code for Extract Method Refactoring
 
 Manual refactoring is prone to mistakes. You might miss related code that needs updating, forget to update documentation, or introduce subtle bugs during the process. Claude Code acts as an intelligent partner that understands your codebase context, suggests appropriate method names, identifies dependencies, and ensures the refactored code maintains the original behavior.
 
 The key benefits include reduced human error, consistent naming conventions, comprehensive dependency tracking, and faster iteration cycles. Instead of spending time on mechanical changes, you can focus on the design decisions that matter.
 
-Identifying Candidates for Extraction
+## Identifying Candidates for Extraction
 
 The first step in the extract method workflow is identifying good candidates for extraction. Look for code blocks that perform a single distinct task, have moderate complexity, or are reused in multiple places. Claude Code can help you identify these patterns proactively.
 
@@ -39,9 +39,9 @@ I want to extract a method from this code block. Analyze it for:
 
 Claude will analyze the code and provide recommendations on whether extraction makes sense, what the extracted method should focus on, and potential naming suggestions based on the functionality.
 
-The Step-by-Step Workflow
+## The Step-by-Step Workflow
 
-Step 1: Select and Analyze the Code Block
+## Step 1: Select and Analyze the Code Block
 
 Start by identifying the exact code segment you want to extract. This should be a contiguous block that performs a coherent piece of work. Avoid selecting code that has multiple branching conditions or creates too many variables that would need to be passed as parameters.
 
@@ -57,7 +57,7 @@ For each variable used, tell me:
 - What type/role does it serve?
 ```
 
-Step 2: Determine the Method Signature
+## Step 2: Determine the Method Signature
 
 Once you've identified what to extract, the next challenge is designing the method signature. This includes the method name, parameters, and return type. Claude can suggest names following your project's naming conventions and determine which variables should become parameters.
 
@@ -71,7 +71,7 @@ Based on the analysis, suggest a method signature that:
 - Uses primitive types over complex objects where possible
 ```
 
-Step 3: Create the Extracted Method
+## Step 3: Create the Extracted Method
 
 With the signature defined, create the new method. Claude can generate the method body, ensuring all local variables are properly handled:
 
@@ -142,7 +142,7 @@ def _create_user(self, email, password_hash, username):
     )
 ```
 
-Step 4: Replace Original Code with Method Call
+## Step 4: Replace Original Code with Method Call
 
 After creating the extracted method, replace the original code block with a call to the new method. Claude can perform this replacement while ensuring all references are updated correctly:
 
@@ -154,7 +154,7 @@ Ensure:
 - No duplicate code remains
 ```
 
-Step 5: Verify and Test
+## Step 5: Verify and Test
 
 The final step is verification. Run your test suite to ensure the refactored code behaves identically to the original. Ask Claude to help identify relevant tests or create new ones:
 
@@ -164,7 +164,7 @@ Are there existing tests that cover the extracted functionality?
 Should I add new tests for the extracted method?
 ```
 
-Best Practices and Common Pitfalls
+## Best Practices and Common Pitfalls
 
 When using Claude Code for extract method refactoring, keep these practices in mind:
 
@@ -180,16 +180,15 @@ Don't:
 - Extract purely mechanical code without business logic benefit
 - Forget to update documentation or comments after refactoring
 
-Automating the Workflow with Custom Skills
+## Automating the Workflow with Custom Skills
 
 For teams that perform extract method refactoring regularly, consider creating a Claude Skill that encapsulates your preferred workflow. A custom skill can standardize the prompts, maintain consistent documentation, and ensure team members follow the same process.
 
 The skill can include prompts for each step of the workflow, examples from your codebase, and guidelines specific to your language and framework conventions.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms extract method refactoring from a manual, error-prone process into a structured, assisted workflow. By following this systematic approach, identifying candidates, designing signatures, creating methods, replacing code, and verifying with tests, you can refactor with confidence while maintaining code quality. The key is treating Claude as a partner that handles the mechanical aspects while you focus on architectural decisions.
-
 
 Related Reading
 

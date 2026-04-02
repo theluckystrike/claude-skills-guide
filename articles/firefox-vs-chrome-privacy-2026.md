@@ -13,7 +13,6 @@ categories: [comparisons]
 tags: [chrome, claude-skills]
 ---
 
-
 {% raw %}
 Introduction
 
@@ -21,9 +20,9 @@ Privacy in browsers has become a critical consideration for developers and power
 
 Mozilla's Firefox and Google's Chrome represent fundamentally different approaches to browser architecture and data handling. Understanding these differences helps you make informed decisions for personal use or when architecting privacy-focused web applications.
 
-Data Collection and Telemetry
+## Data Collection and Telemetry
 
-Chrome's Data Practices
+## Chrome's Data Practices
 
 Chrome sends significant telemetry to Google servers by default. The browser collects:
 
@@ -49,7 +48,7 @@ const chromeTelemetry = {
 
 Chrome's sync feature, while convenient, transmits encrypted copies of your browsing data to Google's servers. Even with sync disabled, Chrome still sends telemetry that contributes to Google's advertising revenue, Chrome remains Google's primary vehicle for tracking users across the web.
 
-Firefox's Approach
+## Firefox's Approach
 
 Firefox has implemented stricter telemetry controls. The browser offers:
 
@@ -73,11 +72,11 @@ const firefoxPrivacy = {
 
 The Firefox browser collects minimal telemetry and provides clear opt-out mechanisms. Mozilla's non-profit status means their revenue comes primarily from search partnerships rather than advertising data collection.
 
-Fingerprinting Resistance
+## Fingerprinting Resistance
 
 Browser fingerprinting creates persistent identifiers based on your system configuration, fonts, canvas rendering, and WebGL capabilities. Both browsers have implemented protections, but Firefox leads in this area.
 
-Firefox's Fingerprinting Protection
+## Firefox's Fingerprinting Protection
 
 Firefox's `privacy.resistFingerprinting` preference provides comprehensive protection:
 
@@ -93,7 +92,7 @@ Firefox's `privacy.resistFingerprinting` preference provides comprehensive prote
 
 The resistance works by normalizing values that would typically be unique to your system. When enabled, websites see a more generic browser profile that blends with other users.
 
-Chrome's Fingerprinting Mitigation
+## Chrome's Fingerprinting Mitigation
 
 Chrome has introduced some fingerprinting protections but they're less comprehensive:
 
@@ -107,9 +106,9 @@ Chrome has introduced some fingerprinting protections but they're less comprehen
 
 Chrome's approach focuses on the Privacy Sandbox initiative, which replaces traditional tracking with topic-based advertising. Critics argue this still enables user profiling while presenting it as privacy-friendly.
 
-Network-Level Privacy
+## Network-Level Privacy
 
-DNS and HTTPS
+## DNS and HTTPS
 
 Both browsers support DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT), encrypting your DNS queries to prevent ISP-level tracking.
 
@@ -136,18 +135,18 @@ Chrome configuration:
 
 Firefox offers more granular control over DoH behavior and which resolver to use.
 
-Third-Party Cookie Blocking
+## Third-Party Cookie Blocking
 
 As of 2026, both browsers block third-party cookies by default, though implementation differs:
 
 - Firefox: Strict ETP blocks all known trackers
 - Chrome: Privacy Sandbox APIs attempt to balance blocking with advertising functionality
 
-Extension API Privacy
+## Extension API Privacy
 
 Extensions have significant access to your browsing data. Privacy-conscious users should audit extension permissions.
 
-Extension Permission Audit
+## Extension Permission Audit
 
 ```javascript
 // Check extension permissions in both browsers:
@@ -167,9 +166,9 @@ const riskyPermissions = [
 
 Firefox's Extension Workshop provides better transparency about what extensions can access. Chrome's Web Store permissions are sometimes vague, making it harder to understand actual data access.
 
-Practical Recommendations for Developers
+## Practical Recommendations for Developers
 
-Building Privacy-Conscious Applications
+## Building Privacy-Conscious Applications
 
 If you're developing web applications, respect user privacy with these practices:
 
@@ -196,7 +195,7 @@ const cookieConsent = {
 };
 ```
 
-Browser Selection by Use Case
+## Browser Selection by Use Case
 
 Choose Firefox for:
 - Maximum privacy protection
@@ -208,14 +207,13 @@ Choose Chrome for:
 - Performance in certain WebGL applications
 - Enterprise management tools
 
-Conclusion
+## Conclusion
 
 Firefox provides superior privacy protections for users who prioritize data minimization. Its fingerprinting resistance, comprehensive cookie isolation, and transparent telemetry policies make it the stronger choice for privacy-conscious developers and power users.
 
 Chrome's privacy story remains complicated by Google's advertising business model. While the browser offers solid security features, its data collection practices serve Google's primary revenue stream.
 
 Your choice depends on your threat model and use case. For maximum privacy, Firefox with Enhanced Tracking Protection and fingerprinting resistance enabled provides the best protection. For those embedded in Google's ecosystem, Chrome's privacy settings can be hardened, though fundamental data collection remains.
-
 
 Related Reading
 

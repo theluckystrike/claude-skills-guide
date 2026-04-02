@@ -16,15 +16,15 @@ permalink: /claude-code-skills-for-writing-integration-tests/
 
 Integration tests verify that different components of your application work together correctly. Unlike unit tests that isolate individual functions, integration tests exercise real workflows across modules, databases, APIs, and external services. Claude Code offers several skills that accelerate writing and maintaining integration tests, making your test suite more reliable and easier to maintain. For an overview of the testing ecosystem, visit the [tutorials hub](/getting-started-hub/).
 
-Why Integration Tests Matter
+## Why Integration Tests Matter
 
 Integration tests catch bugs that unit tests miss. When your code interacts with databases, third-party APIs, or internal services, unit tests cannot verify these interactions work correctly. Integration tests validate the actual behavior of your system end-to-end, catching issues like incorrect SQL queries, malformed API responses, authentication failures, and timing issues.
 
 However, integration tests present unique challenges. They require realistic test data, proper setup and teardown, and careful management of external dependencies. Claude Code skills help address these challenges by providing structured workflows and best practices.
 
-Key Claude Code Skills for Integration Testing
+## Key Claude Code Skills for Integration Testing
 
-The TDD Skill
+## The TDD Skill
 
 The [TDD skill provides a test-driven development workflow](/claude-tdd-skill-test-driven-development-workflow/) that works well for integration tests. When you activate this skill, Claude guides you through writing tests before implementation, ensuring your code meets requirements from the start.
 
@@ -44,7 +44,7 @@ our PostgreSQL database.
 
 The TDD skill generates test cases covering happy paths and edge cases, organizes test data appropriately, and ensures your tests properly clean up after themselves.
 
-Integration Test Design Principles
+## Integration Test Design Principles
 
 Effective integration tests follow consistent design principles. Use these in your prompts to Claude Code to guide test generation:
 
@@ -53,7 +53,7 @@ Effective integration tests follow consistent design principles. Use these in yo
 - Fast: Integration tests should run quickly enough to execute on every commit
 - Clear: Test names and messages clearly describe what they verify
 
-Reviewing Integration Test Quality
+## Reviewing Integration Test Quality
 
 After writing integration tests, ask Claude Code to review your test code:
 
@@ -85,7 +85,7 @@ import pytest
 import requests
 from unittest.mock import patch
 
-BASE_URL = "http://localhost:8000"
+## BASE_URL = "http://localhost:8000"
 
 class TestCreateUser:
     """Integration tests for user creation endpoint."""

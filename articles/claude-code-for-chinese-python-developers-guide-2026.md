@@ -16,7 +16,7 @@ permalink: /claude-code-for-chinese-python-developers-guide-2026/
 
 [Chinese Python developers are increasingly adopting Claude Code as their primary AI coding assistant](/best-claude-code-skills-to-install-first-2026/) This guide covers practical setup steps, essential Claude skills, and workflow patterns that work well for Python development in 2026.
 
-Claude Code Setup for Python Projects
+## Claude Code Setup for Python Projects
 
 [Claude Code runs locally and integrates with your existing development environment](/claude-skill-md-format-complete-specification-guide/) First, install it via the official Anthropic channels, then configure it for Python development.
 
@@ -45,7 +45,7 @@ All error messages should support both English and Chinese.
 
 When Claude Code reads this file, it understands your project conventions automatically. Keep this file focused. under 500 characters is ideal. Verbose CLAUDE.md files slow down Claude's context processing and can push important details out of focus.
 
-Choosing the Right Python Version
+## Choosing the Right Python Version
 
 Claude Code generates code that matches the Python version you specify. In 2026, most production environments run Python 3.11 or 3.12. When you mention your version in CLAUDE.md, Claude automatically uses compatible syntax:
 
@@ -57,7 +57,7 @@ Claude Code generates code that matches the Python version you specify. In 2026,
 
 Always specify your version. Without it, Claude defaults to broadly compatible code that avoids newer syntax, which may mean missing out on cleaner patterns.
 
-Virtual Environment Integration
+## Virtual Environment Integration
 
 Claude Code respects your virtual environment when you configure it. For projects using `venv`:
 
@@ -77,11 +77,11 @@ interpreter: .venv/bin/python
 
 Claude will use the correct interpreter when running test commands and generating import statements.
 
-Essential Claude Skills for Python Developers
+## Essential Claude Skills for Python Developers
 
 [Claude skills are Markdown files that extend Claude's capabilities](/claude-skill-md-format-complete-specification-guide/). Several skills directly improve Python development workflows.
 
-The TDD Skill
+## The TDD Skill
 
 [The `/tdd` skill transforms how you write Python code](/claude-tdd-skill-test-driven-development-workflow/). Activate it by typing:
 
@@ -100,7 +100,7 @@ Claude generates test cases first using pytest, then implements the module to sa
 
 The key difference from asking Claude to "write code" is that `/tdd` forces a red-green-refactor cycle. The tests appear first, they describe the exact behavior expected, and the implementation is written specifically to make those tests pass. This means the generated code is immediately testable and the tests themselves document the module's intended behavior.
 
-The PDF Skill
+## The PDF Skill
 
 For documentation-heavy Python projects, the `pdf` skill processes existing PDF documents:
 
@@ -115,7 +115,7 @@ Use the pdf skill on ./docs/payment-gateway-api.pdf, then generate a Python clie
 that wraps every documented endpoint with proper type hints and docstrings.
 ```
 
-The Super Memory Skill
+## The Super Memory Skill
 
 [The `supermemory` skill maintains context across sessions](/building-stateful-agents-with-claude-skills-guide/):
 
@@ -133,11 +133,11 @@ Practical things to store in supermemory:
 - Which internal libraries are available for import
 - Team-specific security requirements
 
-Python Code Generation Patterns
+## Python Code Generation Patterns
 
 Claude Code excels at generating Python code that follows best practices. Here are practical patterns for 2026.
 
-FastAPI Endpoint Generation
+## FastAPI Endpoint Generation
 
 Request an endpoint with specific requirements:
 
@@ -183,7 +183,7 @@ async def get_order_history(
     return orders
 ```
 
-Data Processing Pipelines
+## Data Processing Pipelines
 
 For data-heavy applications, describe your pipeline structure:
 
@@ -239,7 +239,7 @@ def process_csv_to_parquet(
     return stats
 ```
 
-Testing with Pytest
+## Testing with Pytest
 
 The tdd skill combined with pytest produces solid test coverage:
 
@@ -269,11 +269,11 @@ class TestCalculateDiscount:
 
 Notice that when you request Chinese-language error messages, the test assertions also verify the Chinese message text. This keeps your tests aligned with what users will actually see.
 
-Integrating Claude Skills into Your Workflow
+## Integrating Claude Skills into Your Workflow
 
 Skills work best when integrated naturally into your development process.
 
-Daily Development Cycle
+## Daily Development Cycle
 
 Start your coding session by loading relevant skills:
 
@@ -289,7 +289,7 @@ The tdd skill keeps you focused on test-driven development while supermemory rec
 4. Implement until tests pass
 5. Ask Claude to review the diff before committing
 
-Code Review Workflow
+## Code Review Workflow
 
 Use the `tdd` skill during code review to verify test coverage:
 
@@ -306,7 +306,7 @@ Claude analyzes your code and identifies gaps in test coverage. For Python proje
 - Chinese date formats in user input parsing
 - GB2312 vs. UTF-8 encoding edge cases in file uploads
 
-Documentation Generation
+## Documentation Generation
 
 Combine skills for documentation:
 
@@ -317,7 +317,7 @@ endpoints in main.py. Write docstrings in both Chinese and English.
 
 This creates consistent documentation that matches your actual API behavior. For codebases shared between Chinese and international teams, bilingual docstrings eliminate a major communication bottleneck.
 
-Chinese Language Support
+## Chinese Language Support
 
 Claude Code handles Chinese naturally in both code and comments. You can write requirements in Chinese:
 
@@ -354,7 +354,7 @@ class UserRegistration(BaseModel):
         return v
 ```
 
-Performance Considerations
+## Performance Considerations
 
 For large Python projects, optimize Claude Code's performance:
 
@@ -367,7 +367,7 @@ When working with large codebases, be explicit about scope. Instead of "refactor
 
 The `frontend-design` skill, while primarily for web development, helps when building Python web apps that need user interfaces. you can generate HTML templates alongside your backend code. For Python developers building admin panels or internal tools, this skill eliminates the context switch between backend logic and frontend templates.
 
-Security Best Practices
+## Security Best Practices
 
 When using AI code generation, follow these security principles:
 
@@ -398,7 +398,6 @@ Assume PCI DSS compliance is required.
 This level of detail produces code that handles the security requirements correctly from the first generation, rather than requiring multiple rounds of review and revision.
 
 ---
-
 
 Related Reading
 

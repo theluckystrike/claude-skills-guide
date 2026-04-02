@@ -16,7 +16,7 @@ Database migrations are one of the most sensitive operations in software develop
 
 The answer is nuanced. Claude Code can significantly accelerate your migration workflow, but using it for production database changes requires understanding both its capabilities and its limitations.
 
-What Claude Code Brings to Migration Tasks
+## What Claude Code Brings to Migration Tasks
 
 Claude Code excels at pattern recognition and boilerplate generation. When you need to create a new migration file, generate rollback scripts, or translate schema changes across different ORMs, AI assistance becomes valuable. The tool can analyze your existing migration patterns and generate consistent, well-structured code that follows your project's conventions.
 
@@ -31,7 +31,7 @@ The AI will produce a migration file matching your project's style, including pr
 
 Beyond simple table creation, Claude Code handles more involved scaffolding tasks well. Ask it to generate a migration that adds a polymorphic association, renames a column while preserving an index, or backfills a new non-nullable column with a safe default, and it will produce code that would take a developer several minutes to look up and write manually. The time savings compound quickly across a large schema with dozens of migrations per sprint.
 
-Where AI Assistance Falls Short
+## Where AI Assistance Falls Short
 
 Despite its strengths, Claude Code has significant limitations for production database work:
 
@@ -45,7 +45,7 @@ It does not understand table size. Adding an index to a 10-row table in developm
 
 Understanding these limits is not a reason to avoid Claude Code, it is a reason to use it intentionally. The pattern that works is treating Claude Code as a skilled junior developer: it can write the code, but a senior engineer reviews and signs off before anything runs in production.
 
-Practical Approach: Use AI for Preparation, Not Execution
+## Practical Approach: Use AI for Preparation, Not Execution
 
 The safest strategy is using Claude Code for the preparation phase of migrations, then applying human oversight before execution.
 
@@ -123,7 +123,7 @@ migration has already been applied to production data."
 
 Review the rollback migration as carefully as the forward migration. The most common oversight is a rollback that drops a column when the column was renamed, or that re-adds a column without a default when existing rows now have non-null values.
 
-A Decision Framework: When to Use AI
+## A Decision Framework: When to Use AI
 
 Use Claude Code for production migrations when:
 
@@ -155,7 +155,7 @@ Here is a quick reference table for common migration types and the appropriate A
 
 The "human only" entries in the rollback column are there because dropping a column or backfilling data are destructive or stateful, AI-generated rollbacks for these cases may look plausible but hide subtle logic errors that only appear with real data.
 
-Skills That Enhance Migration Workflows
+## Skills That Enhance Migration Workflows
 
 Several Claude skills can support your migration process without directly touching production databases:
 
@@ -164,7 +164,7 @@ Several Claude skills can support your migration process without directly touchi
 - xlsx: Generate migration planning spreadsheets that track dependencies, rollback procedures, and approval status.
 - docx: Create formal migration proposals and sign-off documents for team review.
 
-Best Practices for AI-Assisted Migrations
+## Best Practices for AI-Assisted Migrations
 
 Regardless of whether you use Claude Code, follow these production migration standards:
 
@@ -182,7 +182,7 @@ Regardless of whether you use Claude Code, follow these production migration sta
 
 7. Run migrations on a production-sized staging environment. Timing a migration on a staging environment with 1,000 rows tells you nothing about how it will behave on 100 million rows. AI-generated migrations can look correct and still take hours on real data. Test with a production-scale snapshot.
 
-A Real-World Scenario
+## A Real-World Scenario
 
 Suppose your team needs to split a `full_name` column into `first_name` and `last_name` on a users table with 8 million rows. This is exactly the kind of migration where Claude Code helps in some steps and humans must own others.
 
@@ -198,14 +198,13 @@ Claude Code should not own:
 
 When you paste this scenario into Claude Code, the AI will typically generate all three migration files and may even flag the edge cases in a comment. But the decision about how to handle them, what default values to use, whether to fail loudly or silently skip malformed names, is yours. Review Claude Code's output as a starting point, not a final answer.
 
-Conclusion
+## Conclusion
 
 Claude Code is a powerful tool for accelerating database migration workflows, but it works best as an assistant rather than an autonomous executor. Use it to draft migrations, generate documentation, and explore schema options, but always apply human expertise before touching production data.
 
 The key is understanding that AI handles the mechanical parts well while humans handle the contextual decisions. When you respect that boundary, you get the best of both worlds: speed from AI assistance with safety from human oversight.
 
 Build the habit of giving Claude Code full context, table sizes, downstream dependencies, known edge cases, and reviewing its output line-by-line before any migration moves past staging. Treat the generated code as a well-informed first draft from a developer who has never seen your production data.
-
 
 Related Reading
 

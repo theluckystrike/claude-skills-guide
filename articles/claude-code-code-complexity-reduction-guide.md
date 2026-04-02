@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Code Complexity Reduction Guide
-
 Code complexity is one of the primary factors that determines how maintainable, testable, and scalable your software remains over time. High complexity leads to bugs that are harder to find, features that take longer to implement, and developer frustration that compounds with each passing sprint. Complexity is not one thing. it encompasses structural issues, coupling between modules, cognitive load, and control-flow branching. This guide shows you how to use Claude Code and its skill system to reduce complexity across all these dimensions.
 
-Understanding Code Complexity
+## Understanding Code Complexity
 
 Before diving into solutions, it helps to understand what makes code complex. Code complexity comes in several forms, and each requires different reduction strategies.
 
@@ -32,7 +29,7 @@ Control flow complexity. measured formally by cyclomatic complexity. counts the 
 
 The goal is not arbitrary simplification but intentional reduction of accidental complexity while preserving the essential complexity your problem demands. This guide focuses on all four dimensions, not just control flow.
 
-Using Claude Code Skills for Complexity Analysis
+## Using Claude Code Skills for Complexity Analysis
 
 Claude Code's skill system lets you create reusable prompts that guide Claude's analysis and refactoring suggestions. Several skills directly address complexity reduction:
 
@@ -42,7 +39,7 @@ The supermemory skill helps you maintain a project knowledge base, making it eas
 
 The pdf skill enables you to generate complexity reports and documentation that would otherwise require separate tooling.
 
-Practical Complexity Reduction Techniques
+## Practical Complexity Reduction Techniques
 
 1. Extract Complex Conditionals
 
@@ -168,7 +165,7 @@ class OrderProcessor {
 }
 ```
 
-Measuring Complexity Improvements
+## Measuring Complexity Improvements
 
 After refactoring, verify your changes actually reduced complexity. Claude Code can help analyze your code:
 
@@ -182,7 +179,7 @@ The frontend-design skill can also help when complexity stems from component arc
 
 For teams working with generated documentation, the pdf skill can produce complexity reports that stakeholders can review without needing access to your repository or development environment.
 
-Automating Complexity Checks
+## Automating Complexity Checks
 
 Setting up automated complexity checks in your continuous integration pipeline catches regressions before they reach production. Add a complexity threshold to your CI configuration:
 
@@ -196,7 +193,7 @@ Example CI configuration
 
 Integrating these checks with Claude Code creates a feedback loop: Claude analyzes the report, suggests specific refactorings, and you implement them before merging. This prevents complexity debt from accumulating across your codebase.
 
-Building a Complexity-Aware Workflow
+## Building a Complexity-Aware Workflow
 
 Make complexity reduction part of your development routine, addressing all four dimensions. structural, cognitive, coupling, and control-flow:
 
@@ -205,7 +202,7 @@ Make complexity reduction part of your development routine, addressing all four 
 3. After features complete, use complexity analysis to guide refactoring; check for god objects, tight coupling, and deep nesting in parallel
 4. Document patterns using supermemory so your team maintains consistency across codebases
 
-Common Complexity Pitfalls
+## Common Complexity Pitfalls
 
 Watch for these frequent sources of complexity:
 
@@ -216,7 +213,7 @@ Watch for these frequent sources of complexity:
 
 When you spot these, address them immediately. The cost of fixing complexity grows exponentially the longer you wait.
 
-Conclusion
+## Conclusion
 
 Reducing code complexity is not about making everything simple. it is about making complexity intentional and manageable across all its dimensions. Structural complexity, coupling, cognitive load, and control-flow branching each require distinct techniques, and addressing only one while ignoring the others still leaves a difficult codebase.
 

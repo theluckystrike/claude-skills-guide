@@ -13,11 +13,10 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Docker image size directly impacts deployment speed, storage costs, and CI/CD pipeline efficiency. When working with Claude Code and AI-assisted development workflows, optimizing your Docker images becomes essential for maintaining fast, responsive development environments. A bloated image that takes 3 minutes to pull in CI kills developer productivity just as surely as flaky tests. This guide covers practical, battle-tested techniques to reduce Docker image sizes while preserving full functionality.
 
-Why Image Size Matters for Claude Code Workflows
+## Why Image Size Matters for Claude Code Workflows
 
 When you integrate Claude Code into automated pipelines, whether using the supermemory skill for context management or the pdf skill for document processing, each tool adds dependencies that accumulate silently. Node.js runtimes, Python interpreters, native compilation toolchains, and transitive package dependencies compound quickly.
 
@@ -31,7 +30,7 @@ Smaller images deliver concrete benefits at every stage of the development lifec
 
 Consider a typical development environment that includes Node.js, Python, and various CLI tools. A naive Dockerfile might produce an image exceeding 2GB. By applying targeted optimizations, you can reduce this to under 500MB, often under 200MB for pure application containers, without sacrificing essential functionality.
 
-Multi-Stage Builds: The Foundation of Image Reduction
+## Multi-Stage Builds: The Foundation of Image Reduction
 
 Multi-stage builds are the single highest-impact change you can make to most Dockerfiles. The idea is straightforward: use one stage for compilation and one for runtime. Build tools, compilers, test frameworks, and intermediate artifacts never make it into the image that ships to production.
 
@@ -77,7 +76,7 @@ CMD ["/server"]
 
 A Go service built this way can produce a final image under 15MB. The `scratch` base image is literally empty, just your binary and TLS certificates.
 
-Choosing Minimal Base Images
+## Choosing Minimal Base Images
 
 Base image selection sets the floor for your final image size. The standard `ubuntu:latest` or `debian:latest` images include dozens of utilities, documentation, and locale data you almost certainly do not need.
 
@@ -116,7 +115,7 @@ CMD ["python", "app.py"]
 
 The `--no-cache-dir` flag on pip is critical. Without it, pip stores downloaded wheel files inside the image, wasting tens of megabytes on files that serve no runtime purpose.
 
-Layer Optimization Strategies
+## Layer Optimization Strategies
 
 Docker stores each instruction as a separate content-addressed layer. Understanding how layers work lets you optimize both image size and build cache effectiveness.
 
@@ -162,7 +161,7 @@ dist/
 build/
 ```
 
-Reducing Layers with BuildKit
+## Reducing Layers with BuildKit
 
 Docker BuildKit provides advanced features that go beyond what the classic builder supports, including mount-based caching, parallel stage execution, and SSH forwarding for private dependencies.
 
@@ -209,7 +208,7 @@ CMD ["python", "src/app.py"]
 
 The `--prefix=/install` trick installs packages to a custom path so they can be copied cleanly into the final stage without carrying along the pip cache.
 
-Practical Example: Optimizing a Claude Code Integration
+## Practical Example: Optimizing a Claude Code Integration
 
 Suppose you're building a container that runs multiple Claude skills, perhaps calling Claude Code programmatically to process documents and generate reports. Such a container needs Python, the Anthropic SDK, and potentially some native libraries for PDF processing. Here's a fully optimized Dockerfile:
 
@@ -253,7 +252,7 @@ CMD ["python", "src/main.py"]
 
 This approach separates build-time compilation dependencies from runtime, typically reducing image size by 40-60% compared to naive single-stage builds. The final image contains no compiler, no build tools, and no cached package downloads.
 
-Inspecting and Diagnosing Bloated Images
+## Inspecting and Diagnosing Bloated Images
 
 Before optimizing, you need to understand where the size is coming from. Several tools make this straightforward.
 
@@ -288,7 +287,7 @@ docker run --rm your-image:tag find /usr/local/lib/python3.12/site-packages \
     -name "tests" -o -name "test" -o -name "*.dist-info" | head -20
 ```
 
-Automation with Claude Code
+## Automation with Claude Code
 
 Integrate image size checks directly into your Claude Code workflow. When Claude Code generates or modifies Dockerfiles, ask it to validate against size constraints as part of the task:
 
@@ -314,7 +313,7 @@ docker run --rm your-image:tag find /usr -type f -name "*.pyc" | wc -l
 docker run --rm your-image:tag find /usr -type d -name "__pycache__" | wc -l
 ```
 
-Measuring Your Improvements
+## Measuring Your Improvements
 
 Track image size as a first-class metric in your CI/CD pipeline. Set size budgets and fail builds that exceed thresholds before the bloat reaches production:
 
@@ -345,7 +344,7 @@ docker scout compare myapp:$GITHUB_SHA --to myapp:latest
 
 Commit image size benchmarks to your repository so every PR includes a size diff. Regressions caught in review are far less expensive than regressions caught in production.
 
-Common Mistakes and How to Avoid Them
+## Common Mistakes and How to Avoid Them
 
 Deleting files in a separate layer. This is the most common source of phantom bloat:
 
@@ -365,14 +364,13 @@ Forgetting `.dockerignore`. Without it, `COPY . .` copies your entire working di
 
 Using `npm install` instead of `npm ci`. `npm install` can modify `package-lock.json` and includes devDependencies by default. `npm ci --only=production` is deterministic and installs only what you need for production.
 
-Conclusion
+## Conclusion
 
 Docker image size reduction requires a layered approach: multi-stage builds provide the largest single gain, minimal base images set a smaller floor, layer optimization prevents unnecessary bloat, and BuildKit caching accelerates the feedback loop during development.
 
 For Claude Code workflows specifically, evaluate which capabilities your container actually needs. The pdf skill, the tdd skill, and the supermemory skill each carry different dependency footprints. Building separate minimal images per workflow. rather than one large image containing everything. often results in smaller, more focused containers that pull and start faster.
 
 The optimization process is incremental. Start with multi-stage builds. Measure the result. Move to a slimmer base image. Measure again. Add BuildKit caching. Add size checks to CI. Each step compounds, and the cumulative effect across a fleet of services adds up to real money and real time saved.
-
 
 Related Reading
 

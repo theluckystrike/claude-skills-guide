@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for NeMo Framework Workflow Guide"
 description: "Master NeMo Framework development with Claude Code. Learn practical workflows for building, training, and deploying generative AI models using NVIDIA NeMo."
@@ -14,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for NeMo Framework Workflow Guide
 
 NVIDIA NeMo Framework is a powerful platform for building, training, and deploying generative AI models, including large language models, speech AI, and multimodal systems. This guide shows you how to integrate Claude Code into your NeMo development workflow to accelerate prototyping, streamline training configurations, and simplify deployment pipelines.
 
-Understanding NeMo Framework Architecture
+## Understanding NeMo Framework Architecture
 
 NeMo Framework provides a modular architecture for AI development. Before integrating Claude Code, understanding the core components helps you work more effectively:
 
@@ -31,7 +29,7 @@ NeMo Framework provides a modular architecture for AI development. Before integr
 
 Claude Code can help you navigate these components by explaining APIs, generating boilerplate code, and debugging issues across the stack.
 
-Setting Up Your NeMo Development Environment
+## Setting Up Your NeMo Development Environment
 
 Start by configuring a proper development environment. Claude Code can guide you through installation and dependency management:
 
@@ -49,7 +47,7 @@ python -c "import nemo; print(nemo.__version__)"
 
 When you encounter dependency conflicts or CUDA version mismatches, describe the error to Claude Code. It can suggest compatible version combinations or workarounds.
 
-IDE Configuration
+## IDE Configuration
 
 For optimal development, configure your editor to work with NeMo's structure:
 
@@ -65,9 +63,9 @@ For optimal development, configure your editor to work with NeMo's structure:
 }
 ```
 
-Building Models with Claude Code Assistance
+## Building Models with Claude Code Assistance
 
-Model Configuration
+## Model Configuration
 
 NeMo uses configuration files (YAML) to define model architectures. Claude Code can help you create and modify these configurations:
 
@@ -89,7 +87,7 @@ model:
 
 Ask Claude Code to explain configuration parameters or suggest optimal values based on your hardware setup.
 
-Custom Model Implementation
+## Custom Model Implementation
 
 When building custom models, use Claude Code to generate NeMo-compatible classes:
 
@@ -119,9 +117,9 @@ class CustomTransformer(NeuralModule):
 
 Claude Code can also help you implement custom metrics, callbacks, and data loaders compatible with NeMo's training pipeline.
 
-Data Curation and Preprocessing
+## Data Curation and Preprocessing
 
-NeMo Curator Pipelines
+## NeMo Curator Pipelines
 
 NeMo Curator provides scalable data preprocessing. Here's a typical workflow:
 
@@ -144,9 +142,9 @@ balancer = DataBalancer(
 
 Ask Claude Code to optimize these pipelines for your specific data types or to add custom preprocessing steps.
 
-Training Workflow Optimization
+## Training Workflow Optimization
 
-Distributed Training Setup
+## Distributed Training Setup
 
 NeMo supports multi-GPU and multi-node training. Claude Code can help you configure these setups:
 
@@ -158,7 +156,7 @@ Multi-node training
 python train.py trainer.num_nodes=2 trainer.num_gpus=4
 ```
 
-Debugging Training Issues
+## Debugging Training Issues
 
 When training fails, provide the error logs to Claude Code:
 
@@ -170,7 +168,7 @@ Claude Code might suggest:
 - Reducing batch size and using gradient accumulation
 - Optimizing data loader workers
 
-Checkpoint Management
+## Checkpoint Management
 
 Implement smart checkpoint handling:
 
@@ -188,9 +186,9 @@ checkpoint_callback = ModelCheckpoint(
 )
 ```
 
-Deployment and Inference
+## Deployment and Inference
 
-Model Export
+## Model Export
 
 Export trained models for inference:
 
@@ -213,7 +211,7 @@ nemo.export.export_to_onnx(
 
 Claude Code can help you optimize these exports for specific inference targets.
 
-Inference Optimization
+## Inference Optimization
 
 For production inference, consider:
 
@@ -230,11 +228,11 @@ traced_model = torch.jit.trace(model, example_inputs)
 traced_model.save("model.pt")
 ```
 
-Fine-Tuning Workflows with Claude Code
+## Fine-Tuning Workflows with Claude Code
 
 One of the most common NeMo use cases is parameter-efficient fine-tuning of pre-trained LLMs for domain-specific tasks. Claude Code is particularly useful here because fine-tuning configurations involve many interdependent hyperparameters that are easy to misconfigure.
 
-Setting Up LoRA Fine-Tuning
+## Setting Up LoRA Fine-Tuning
 
 Low-Rank Adaptation (LoRA) lets you fine-tune large models with a fraction of the compute by freezing most weights and training small adapter matrices. Here is a representative NeMo configuration:
 
@@ -263,7 +261,7 @@ model:
 
 When you paste this configuration to Claude Code and describe your dataset format, it can flag mismatches immediately, for example, if `max_seq_length` exceeds the base model's positional embedding limit, or if `adapter_dim` is too large relative to the hidden dimension for efficient memory use.
 
-Launching Fine-Tuning Jobs
+## Launching Fine-Tuning Jobs
 
 ```bash
 Single-GPU LoRA fine-tune
@@ -277,11 +275,11 @@ python examples/nlp/language_modeling/tuning/megatron_gpt_peft_tuning.py \
 
 Provide this command to Claude Code along with any error output. It will identify common issues such as missing environment variables (`NEMO_HOME`, `CUDA_VISIBLE_DEVICES`) or incorrect path formats that the framework expects as absolute paths.
 
-Experiment Tracking and Reproducibility
+## Experiment Tracking and Reproducibility
 
 Reproducibility is a persistent challenge in ML engineering. Claude Code can help you establish tracking practices that prevent the common problem of losing the exact configuration that produced your best checkpoint.
 
-Integrating Weights and Biases
+## Integrating Weights and Biases
 
 NeMo's experiment manager supports W&B logging with minimal configuration:
 
@@ -299,7 +297,7 @@ exp_manager:
 
 Ask Claude Code to generate a standard experiment config template for your project. It can produce a base YAML that includes consistent tagging conventions, checkpointing intervals, and logging frequency values tuned to your typical run length.
 
-Automated Config Snapshots
+## Automated Config Snapshots
 
 Beyond W&B, save a copy of the resolved Hydra config at the start of every run so you can reproduce it exactly regardless of any config file edits:
 
@@ -316,11 +314,11 @@ def save_config_snapshot(cfg, output_dir):
 
 Claude Code can integrate this into a custom NeMo callback so the snapshot fires automatically before the first training step, without requiring you to remember to call it manually.
 
-Working with Multimodal NeMo Pipelines
+## Working with Multimodal NeMo Pipelines
 
 NeMo's multimodal capabilities extend beyond text to speech-to-text (Canary, Parakeet), text-to-speech (FastPitch, VITS), and vision-language models. Claude Code handles the complexity of cross-modal pipelines where data preprocessing, tokenization, and model architecture must align precisely.
 
-Speech Recognition Pipeline
+## Speech Recognition Pipeline
 
 A typical automatic speech recognition (ASR) workflow with NeMo requires audio preprocessing before model ingestion:
 
@@ -345,7 +343,7 @@ When adapting a pre-trained ASR model to domain-specific vocabulary (medical, le
 {"audio_filepath": "audio/clip_002.wav", "duration": 3.8, "text": "administered 50 milligrams intravenously"}
 ```
 
-Aligning Tokenization Across Modalities
+## Aligning Tokenization Across Modalities
 
 Multimodal LLM pipelines require consistent tokenizer configuration between the vision encoder and the language model decoder. A mismatch in special token IDs is one of the most common bugs in these pipelines and produces training loss spikes that are hard to diagnose without knowing where to look.
 
@@ -366,7 +364,7 @@ assert img_token_id < embed_table_size, (
 
 Paste this validation check to Claude Code along with your model card and it will adapt the assertion to your specific architecture, including any additional special tokens your pipeline uses.
 
-Practical Tips for NeMo Development
+## Practical Tips for NeMo Development
 
 1. Start Small: Test configurations with smaller models before scaling up
 2. Use Configs as Code: Keep YAML configs version-controlled
@@ -376,7 +374,7 @@ Practical Tips for NeMo Development
 
 Claude Code can help you set up experiment tracking or generate training reports automatically.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your NeMo Framework workflow accelerates development through faster prototyping, intelligent debugging, and automated code generation. Whether you're building LLMs, speech models, or multimodal systems, Claude Code serves as an intelligent development partner throughout the AI development lifecycle.
 

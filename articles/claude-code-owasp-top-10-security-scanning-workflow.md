@@ -16,7 +16,7 @@ permalink: /claude-code-owasp-top-10-security-scanning-workflow/
 
 The OWASP Top 10 remains the definitive guide to web application security risks, but manually checking your code against these vulnerabilities time after time becomes tedious. Claude Code combined with specialized skills transforms security scanning from a periodic chore into an automated workflow that catches issues as you code.
 
-Setting Up Your Security Scanning Environment
+## Setting Up Your Security Scanning Environment
 
 Before building a scanning workflow, you need the right skills installed. The foundation starts with understanding which skills support security analysis:
 
@@ -28,7 +28,7 @@ Place supermemory.md in .claude/ then invoke: /supermemory
 
 The [tdd skill](/best-claude-skills-for-developers-2026/) helps you write security-focused tests, while [supermemory](/claude-skills-token-optimization-reduce-api-costs/) maintains a persistent vulnerability database across sessions. If you're building PDF reports of findings, the pdf skill generates professional documentation.
 
-Building the OWASP Scanning Workflow
+## Building the OWASP Scanning Workflow
 
 The core workflow combines multiple Claude capabilities to scan code against the OWASP Top 10 categories:
 
@@ -173,7 +173,7 @@ if parsed.netloc not in ALLOWED_DOMAINS:
     raise ValidationError("Domain not allowed")
 ```
 
-Automating the Complete Workflow
+## Automating the Complete Workflow
 
 Chain these scanning capabilities together using Claude's skill composition:
 
@@ -202,7 +202,7 @@ For each finding, provide:
 
 Run this command on every pull request to maintain continuous security validation. Store results in supermemory for tracking vulnerability remediation over time, and generate PDF reports using the pdf skill for compliance documentation.
 
-Integrating with Development Workflow
+## Integrating with Development Workflow
 
 The most effective approach embeds security scanning into your existing development process. Add a pre-commit hook:
 
@@ -231,7 +231,7 @@ jobs:
           path: results.json
 ```
 
-Conclusion
+## Conclusion
 
 Building a Claude Code OWASP Top 10 security scanning workflow transforms security from a periodic audit into continuous protection. The key lies in combining Claude's code analysis capabilities with specialized skills like tdd for security testing, supermemory for tracking findings, and pdf for compliance reporting. Pair this workflow with the [security code review checklist automation](/claude-code-security-code-review-checklist-automation/) to cover both OWASP categories and project-specific security standards.
 

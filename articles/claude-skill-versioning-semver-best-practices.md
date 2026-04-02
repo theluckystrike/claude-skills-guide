@@ -18,7 +18,7 @@ permalink: /claude-skill-versioning-semver-best-practices/
 
 Versioning might feel like overhead when you're the only person using a skill. But the moment a second person, or an automated pipeline, depends on your skill, a breaking change with no version signal causes breakage without warning. Semver is the contract you make with your users: "If the major number didn't change, your existing workflow still works."
 
-Understanding Semver Basics
+## Understanding Semver Basics
 
 Semantic Versioning follows the format MAJOR.MINOR.PATCH. Each number carries specific meaning:
 
@@ -30,7 +30,7 @@ For Claude skills, this translates directly to how your skill behaves. A change 
 
 The key discipline is distinguishing between what changed and what broke. Not every change is a breaking change. Adding a new optional parameter is additive, existing callers ignore it. Renaming an existing parameter is breaking, existing callers stop working. Train yourself to ask: "If a user who has never seen this update runs their existing workflow against the new version, does it still work?" If yes, minor or patch. If no, major.
 
-What Counts as a Breaking Change in a Claude Skill
+## What Counts as a Breaking Change in a Claude Skill
 
 Because Claude skills are instruction files rather than compiled libraries, the definition of "breaking" is more behavioral than syntactic. A breaking change is anything that causes a previously correct workflow to produce wrong results, fail, or require user intervention.
 
@@ -52,7 +52,7 @@ Non-breaking changes that warrant only a minor or patch:
 
 When in doubt, bump major. Surprising users with a broken workflow damages trust far more than an "unnecessary" major version increment.
 
-Versioning Claude Skills in Practice
+## Versioning Claude Skills in Practice
 
 When you maintain a skill like frontend-design or tdd, users depend on consistent behavior. Imagine you've built a skill that generates test files, users write automation around its output. If you change how the skill interprets arguments, their scripts break. That's a major version change.
 
@@ -92,7 +92,7 @@ tdd skill version history
 
 Notice that 2.0.0 includes a migration note. Users hitting this version understand exactly what changed and how to adapt.
 
-Applying Semver to Skill Metadata
+## Applying Semver to Skill Metadata
 
 Skill files do not have a `version:` field. Claude Code only recognizes `name` and `description` in skill front matter. Instead, track versions using a changelog section in the skill body itself:
 
@@ -148,7 +148,7 @@ Added
 
 The structured format makes it trivial to write scripts that parse version history or generate release notes automatically.
 
-Common Versioning Mistakes to Avoid
+## Common Versioning Mistakes to Avoid
 
 Several patterns cause confusion in skill versioning:
 
@@ -172,7 +172,7 @@ Some authors keep skills at `0.x.y` indefinitely because the 0.x range technical
 
 If your skill file says `1.2.0` in its changelog comment but the git tag says `v1.1.0`, you have a problem. Automate version management or at minimum run a pre-commit check that the inline version matches your tag.
 
-Best Practices for Multi-Skill Projects
+## Best Practices for Multi-Skill Projects
 
 If you maintain multiple related skills, like a suite of development tools including tdd, frontend-design, and canvas-design, consider version coordination:
 
@@ -193,7 +193,7 @@ However, lock-step versioning is not always practical. Sometimes the `pdf` skill
 
 A matrix like this lets users who cannot upgrade the full suite understand exactly which component versions are safe to combine. It also forces you to think about inter-skill dependencies before releasing.
 
-Version Tags and Distribution
+## Version Tags and Distribution
 
 When distributing skills through git repositories, tag releases:
 
@@ -235,7 +235,7 @@ skills/
 
 This structure lets users pin to an exact version by URL rather than relying on git tag resolution, which is helpful in environments without full git access.
 
-Automating Version Management
+## Automating Version Management
 
 For active projects, consider tools that enforce semver:
 
@@ -273,7 +273,7 @@ feat!: change output format to Markdown tables # → major bump (the ! signals b
 
 If your team already uses Conventional Commits for other projects, adopting the same convention for skill development requires no additional tooling or training.
 
-Handling Pre-release Versions
+## Handling Pre-release Versions
 
 During active development, pre-release versions communicate instability:
 
@@ -305,7 +305,7 @@ git push origin v2.0.0
 
 In your documentation, clearly mark which releases are stable and which are experimental. Users who run automated updates should only receive stable releases by default.
 
-Summary
+## Summary
 
 Semantic Versioning for Claude skills follows established conventions with context-specific interpretation. Major versions signal breaking workflow changes. Minor versions add functionality. Patch versions fix bugs. Tag releases in your git repository, document breaking changes, and maintain consistency across multi-skill projects.
 

@@ -13,17 +13,16 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code Podman Container Workflow Setup Tutorial
 
 Containerization has become essential for modern development workflows, and Podman offers a daemonless, rootless alternative to Docker that integrates perfectly with Claude Code's skill system. This tutorial walks you through setting up Podman container workflows using Claude Code skills, enabling you to automate container management through natural language commands.
 
-Prerequisites and Installation
+## Prerequisites and Installation
 
 Before creating container-focused skills, ensure you have both Podman and Claude Code installed on your system.
 
-Installing Podman
+## Installing Podman
 
 On macOS, Podman is available through Homebrew:
 
@@ -50,7 +49,7 @@ podman --version
 podman info
 ```
 
-Verifying Claude Code
+## Verifying Claude Code
 
 Ensure Claude Code is installed and accessible:
 
@@ -58,11 +57,11 @@ Ensure Claude Code is installed and accessible:
 claude --version
 ```
 
-Creating a Podman Management Skill
+## Creating a Podman Management Skill
 
 Claude Code skills allow you to complex workflows into reusable commands. Let's create a skill for Podman container management.
 
-Skill Structure
+## Skill Structure
 
 A Claude Code skill is a Markdown file with YAML front matter. Create a file named `podman-manager.skill.md`:
 
@@ -89,7 +88,7 @@ Available Commands
 When asked to manage containers, extract the container name or ID from the user's request and execute the appropriate command. Always confirm the action before executing destructive commands.
 ```
 
-Installing the Skill
+## Installing the Skill
 
 Copy the skill file to Claude Code's skills directory:
 
@@ -102,11 +101,11 @@ Copy the skill
 cp podman-manager.skill.md "$CLAUDE_SKILLS_DIR/podman-manager.md"
 ```
 
-Automating Development Container Workflows
+## Automating Development Container Workflows
 
 Beyond basic container management, you can create skills that automate complex development workflows involving containers.
 
-Development Environment Skill
+## Development Environment Skill
 
 Create a skill that sets up development containers for different project types:
 
@@ -162,7 +161,7 @@ podman run -dit --name postgres-dev \
 When users request a development environment, ask which language or service they need, then execute the appropriate container creation command.
 ```
 
-Database Container Skill
+## Database Container Skill
 
 Create a skill specifically for database containers:
 
@@ -193,7 +192,7 @@ Connect: `podman exec -it redis-dev redis-cli`
 When users need a database, suggest the appropriate container and provide connection instructions.
 ```
 
-Advanced: Container Health Monitoring
+## Advanced: Container Health Monitoring
 
 Create a monitoring skill that tracks container health and resource usage:
 
@@ -232,11 +231,11 @@ podman logs --tail=50 <container_name>
 When asked to check container health, run these commands and interpret the results for the user. Flag any containers that are not running or have degraded health.
 ```
 
-Practical Examples
+## Practical Examples
 
 Here are real-world scenarios where these skills shine:
 
-Example 1: Starting a New Python Project
+## Example 1: Starting a New Python Project
 
 ```
 User: "I need to start a new Python web project with Flask"
@@ -249,21 +248,21 @@ podman run -dit --name flask-dev -v "$PWD:/workspace" -w /workspace -p 5000:5000
 podman exec flask-dev pip install flask
 ```
 
-Example 2: Running Tests Against Different Databases
+## Example 2: Running Tests Against Different Databases
 
 ```
 User: "Run my integration tests with PostgreSQL 13, then with PostgreSQL 15"
 Claude: Spins up both database containers, runs tests against each, and reports results
 ```
 
-Example 3: Debugging a Container Issue
+## Example 3: Debugging a Container Issue
 
 ```
 User: "My container keeps crashing, help me debug"
 Claude: Inspects container logs, checks health status, reviews resource usage, and suggests fixes
 ```
 
-Best Practices
+## Best Practices
 
 When working with Podman and Claude Code skills:
 
@@ -273,7 +272,7 @@ When working with Podman and Claude Code skills:
 4. Use named containers: Easier to identify than random container IDs
 5. Health checks: Include health checks in your containers for monitoring
 
-Conclusion
+## Conclusion
 
 By combining Claude Code's natural language capabilities with Podman's flexible container management, you can automate complex development workflows without memorizing dozens of CLI commands. The skill system makes these workflows reusable and shareable across your team.
 

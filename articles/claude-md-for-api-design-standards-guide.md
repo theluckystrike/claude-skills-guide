@@ -13,14 +13,11 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude.md for API Design Standards Guide
-
 API design standards ensure consistency across your codebase, improve developer experience, and reduce friction when multiple teams work together. Without standards, every service invents its own conventions: some use snake_case fields, others use camelCase; some put the API version in the URL, others use headers; error shapes vary from endpoint to endpoint. The result is an ecosystem that feels cobbled together rather than designed.
 
 Using Claude.md alongside Claude Code provides a powerful workflow for creating, documenting, and enforcing these standards automatically. This guide shows you how to integrate API design guidance into your development workflow using Claude's capabilities, from the initial standards document through to automated compliance checking in CI.
 
-What Claude.md Is and Why It Matters
+## What Claude.md Is and Why It Matters
 
 Claude.md (also written as CLAUDE.md) is a Markdown file that Claude Code reads automatically when you start a session in a directory. It provides persistent context that shapes every interaction without requiring you to repeat yourself in each prompt.
 
@@ -33,7 +30,7 @@ The key properties of a good API standards CLAUDE.md:
 - Comprehensive but not exhaustive. Cover the decisions that actually vary across developers. Skip the obvious.
 - Version-aware. Note which standards apply to v1 vs. v2 if your API is versioned.
 
-Setting Up Your API Standards Reference
+## Setting Up Your API Standards Reference
 
 The foundation of using Claude for API design is creating a comprehensive reference document. Place a `CLAUDE.md` file in your project root that outlines your organization's API conventions. This file becomes part of Claude's context for every interaction, ensuring consistent guidance across all development tasks.
 
@@ -105,7 +102,7 @@ Deprecation
 
 When Claude Code reads this file, every code generation task, creating route handlers, writing OpenAPI specs, generating response objects, automatically follows these conventions.
 
-Enforcing Standards Through Conversation
+## Enforcing Standards Through Conversation
 
 With your CLAUDE.md in place, you can reference standards naturally in prompts. Instead of manually checking every endpoint design, ask Claude to generate code that follows your documented conventions:
 
@@ -162,7 +159,7 @@ def create_password_reset(body: PasswordResetRequest, request: Request):
 
 The second version follows your envelope format, uses the correct HTTP method and URL convention, and handles errors with the proper error code structure. This approach works smoothly with other Claude skills too. When you need to generate documentation alongside your API, combine your standards reference with the docx skill for specification documents, or use the pdf skill to export comprehensive API guides.
 
-Automating Standards Validation
+## Automating Standards Validation
 
 Beyond generation, use Claude to audit existing code against your standards. This is especially powerful when inheriting a codebase or onboarding endpoints from another team:
 
@@ -186,7 +183,7 @@ Claude will identify deviations systematically:
 
 This audit capability is valuable during code review. You can paste a diff into Claude and ask specifically whether the new endpoints comply with your standards before merging.
 
-Integrating with Testing Workflows
+## Integrating with Testing Workflows
 
 API design standards gain real teeth when enforced through automated testing. Combine your Claude.md standards with the tdd skill to create comprehensive test suites that validate conformance at the contract level, not just the behavior level:
 
@@ -260,7 +257,7 @@ class TestAPIStandardsCompliance:
 
 Run these tests after any Claude Code session that generates or modifies endpoints. The tdd skill helps you structure comprehensive test coverage that catches standard violations early. ideally in CI before a PR is merged.
 
-Handling Multiple Services with Shared Standards
+## Handling Multiple Services with Shared Standards
 
 In a microservices architecture, you want standards to be consistent across all services. Structure your CLAUDE.md files to inherit from a shared base:
 
@@ -297,7 +294,7 @@ Authentication Endpoints
 
 When working in the user-service directory, Claude reads the service-level CLAUDE.md and uses it in combination with the root standards.
 
-Standards Evolution and Documentation
+## Standards Evolution and Documentation
 
 API standards evolve as platforms mature. Common inflection points: migrating from REST to GraphQL for some endpoints, adopting cursor pagination after offset pagination breaks at scale, or standardizing on OpenAPI 3.1 after years of informal specs.
 
@@ -324,7 +321,7 @@ The `nextCursor` field in meta.pagination replaces `totalPages`.
 
 For larger documentation efforts, use the frontend-design skill to create visual API documentation portals, or generate markdown documentation that team members can reference directly from their editors.
 
-Practical Example: Complete Endpoint Design
+## Practical Example: Complete Endpoint Design
 
 Here is how a complete workflow looks when designing a new API feature with Claude and your standards:
 
@@ -363,7 +360,7 @@ Claude will also generate the corresponding response schemas and error codes if 
 envelope format, including the pagination cursor fields in meta."
 ```
 
-Best Practices for API Standards Documents
+## Best Practices for API Standards Documents
 
 Keep your CLAUDE.md focused and actionable. Concrete examples outperform abstract principles every time. When naming conventions have edge cases, document the decision tree explicitly:
 
@@ -390,14 +387,13 @@ A comparison table helps when teams debate conventions:
 
 Review and update your standards at least quarterly. Remove patterns that have been superseded and add conventions for new capabilities. Since Claude reads the file fresh each session, every update is immediately reflected in future code generation tasks.
 
-Conclusion
+## Conclusion
 
 Using Claude.md for API design standards transforms how teams maintain consistency. Your standards document becomes an active participant in development, guiding every code generation session rather than sitting in a wiki that developers forget to consult.
 
 The workflow compounds in value over time. Early sessions with a thin CLAUDE.md produce mostly compliant endpoints. As you refine the document based on edge cases and team feedback, the quality of generated code improves. After a few months, your CLAUDE.md is a battle-tested specification that reflects hard-won institutional knowledge about what works for your platform.
 
 Start with the essentials: naming conventions, response envelope format, and HTTP status code usage. Those three sections alone eliminate the most common inconsistencies. Add error format standardization, pagination conventions, and versioning strategy as you encounter the problems they solve. Over time, your CLAUDE.md becomes the single source of truth that keeps your entire API ecosystem coherent and maintainable.
-
 
 Related Reading
 

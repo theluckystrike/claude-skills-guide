@@ -16,7 +16,7 @@ permalink: /how-do-i-rollback-a-bad-claude-skill-update-safely/
 
 Claude Code skills periodically receive updates from their maintainers. Sometimes these updates introduce bugs, break compatibility with your workflow, or simply don't work as expected. When this happens, knowing how to [rollback safely](/claude-code-permissions-model-security-guide-2026/) safely is essential for maintaining productivity. This guide walks you through identifying problematic updates, restoring previous versions, and setting up prevention strategies.
 
-Recognizing a Problematic Skill Update
+## Recognizing a Problematic Skill Update
 
 Before rolling back, confirm that the issue stems from the skill update itself. Symptoms of a bad update include:
 
@@ -29,7 +29,7 @@ Before rolling back, confirm that the issue stems from the skill update itself. 
 
 Check the skill's changelog or repository for recent updates. If the timing matches the issues you're experiencing, a rollback is warranted. Document what changed so you can report it to the maintainer if needed.
 
-Common Update Scenarios That Cause Issues
+## Common Update Scenarios That Cause Issues
 
 Several types of updates commonly cause problems:
 
@@ -78,7 +78,7 @@ Test the skill by invoking it:
 
 If the skill works as expected, you're done. Push the revert if the skill is maintained in your own repository.
 
-Method 2: Manual Backup Restoration
+## Method 2: Manual Backup Restoration
 
 For skills installed without git or downloaded as zip files, manual restoration works best.
 
@@ -99,7 +99,7 @@ Ensure the skill files are readable:
 chmod 644 ~/.claude/skills/SKILL_NAME/*.md
 ```
 
-Method 3: Reinstall from Source
+## Method 3: Reinstall from Source
 
 When backups aren't available, reinstalling from an earlier tag or branch works.
 
@@ -114,7 +114,7 @@ git clone --branch v1.2.0 https://github.com/author/skill-name.git ~/.claude/ski
 Step 3: Test the reinstalled version
 Invoke the skill and verify correct behavior.
 
-Using Git Tags for Version Control
+## Using Git Tags for Version Control
 
 Git tags provide stable reference points for rollback:
 
@@ -128,7 +128,7 @@ git checkout tags/v1.2.0 -b my-local-branch
 
 Tags are particularly useful for skills that follow semantic versioning. If the skill uses tags like `v1.0.0`, `v1.1.0`, and `v1.2.0`, you can easily identify which version worked correctly.
 
-Method 4: Using Skill Configuration Files
+## Method 4: Using Skill Configuration Files
 
 Some skills support configuration files that can override problematic behaviors without rolling back the entire skill.
 
@@ -139,7 +139,7 @@ ls -la ~/.claude/skills/SKILL_NAME/
 
 Look for files like `config.json`, `settings.yaml`, or `.env` that might allow you to modify behavior without updating the skill itself. This approach is useful when the issue is a specific feature rather than entire skill functionality.
 
-Detailed Rollback Workflow
+## Detailed Rollback Workflow
 
 A comprehensive rollback involves more than just restoring files:
 
@@ -149,7 +149,7 @@ A comprehensive rollback involves more than just restoring files:
 4. Test thoroughly: Verify all functionality works as expected
 5. Report to maintainers: Help improve the skill by sharing your findings
 
-Testing Checklist After Rollback
+## Testing Checklist After Rollback
 
 Run through this checklist to ensure the rollback was successful:
 
@@ -161,7 +161,7 @@ Run through this checklist to ensure the rollback was successful:
 
 Only when all items pass should you consider the rollback complete.
 
-Preventing Future Update Issues
+## Preventing Future Update Issues
 
 Implement these practices to minimize rollback needs:
 
@@ -182,7 +182,7 @@ git checkout -b my-customizations
 Test updates in isolation:
 Create a test project and invoke the updated skill there before using it in production work.
 
-Handling Skill Dependencies
+## Handling Skill Dependencies
 
 Many skills depend on external tools or libraries. When these dependencies change, the skill may break even if its own code hasn't changed.
 
@@ -209,7 +209,7 @@ npm install dependency_name@1.2.3
 
 The `pdf` skill and other file-processing skills are particularly vulnerable to dependency issues, so pay extra attention when these skills update.
 
-Advanced: Automated Backup System
+## Advanced: Automated Backup System
 
 For power users managing multiple skills, consider setting up automated backups:
 
@@ -230,7 +230,7 @@ echo "Backed up $(ls $BACKUP_DIR | wc -l) skills"
 
 Run this script regularly or before any skill update to maintain a rolling backup history.
 
-When to Seek Additional Help
+## When to Seek Additional Help
 
 If rollback doesn't resolve the issue, consider:
 
@@ -242,7 +242,6 @@ If rollback doesn't resolve the issue, consider:
 The `supermemory` skill can help you track which versions work best for your workflows, creating a personal knowledge base of stable configurations.
 
 ---
-
 
 Related Reading
 

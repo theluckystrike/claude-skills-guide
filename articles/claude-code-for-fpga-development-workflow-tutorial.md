@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for FPGA Development Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline your FPGA development workflow, from project setup to simulation and synthesis."
@@ -16,10 +15,9 @@ score: 7
 
 {% raw %}
 
-
 FPGA development has traditionally been a complex, tool-heavy process requiring specialized knowledge of hardware description languages like Verilog or VHDL, vendor-specific toolchains, and intricate debugging setups. Claude Code brings AI-assisted development capabilities to this domain, helping developers write cleaner HDL code, manage projects more efficiently, and automate repetitive tasks. This tutorial walks you through integrating Claude Code into your FPGA development workflow, from initial project scaffolding through simulation, synthesis, and deployment.
 
-Setting Up Your FPGA Development Environment
+## Setting Up Your FPGA Development Environment
 
 Before integrating Claude Code, ensure your development environment is properly configured. Most FPGA workflows require vendor-specific tools from Intel (Quartus), AMD (Vivado), Lattice, or Microchip. Install your target toolchain and verify it's accessible from the command line.
 
@@ -58,7 +56,7 @@ Initialize a simple project file to help Claude Code understand your setup:
 
 This context file lets Claude Code generate code appropriate to your target device's resource constraints and supported language features. When you open a Claude Code session, you can reference this file directly in your prompt to ensure consistent, device-aware suggestions.
 
-Writing HDL Code with Claude Code Assistance
+## Writing HDL Code with Claude Code Assistance
 
 Claude Code excels at generating HDL code, explaining existing implementations, and suggesting improvements. When writing Verilog or VHDL, describe your intended functionality in natural language and let Claude translate it into synthesizable code.
 
@@ -70,7 +68,7 @@ Useful prompt patterns when working on HDL:
 - "Review this `always` block and identify any unintended latch inference."
 - "Rewrite this code to use a two-process FSM style with separated combinational and sequential logic."
 
-Creating a Simple Finite State Machine
+## Creating a Simple Finite State Machine
 
 Suppose you need a UART receiver state machine. Instead of writing it from scratch, describe the requirements to Claude Code and it will produce synthesizable RTL:
 
@@ -152,11 +150,11 @@ endmodule
 
 Notice the addition of an active-low asynchronous reset (`rst_n`). Ask Claude Code to add this whenever you need your FPGA to reach a known state on power-up without waiting for the first clock edge. This code handles the core UART receive functionality. Claude Code can also help you layer on features like framing error detection, FIFO buffering, or synchronizer chains for clock domain crossings.
 
-Asking Claude Code to Explain Unfamiliar Code
+## Asking Claude Code to Explain Unfamiliar Code
 
 When inheriting legacy RTL, paste the module into Claude Code with a prompt like: "Explain what this Verilog module does, identify any synthesis risks, and suggest improvements." This pattern is especially valuable when working with third-party IP or older codebases written in VHDL-87 style.
 
-Simulation and Testbench Generation
+## Simulation and Testbench Generation
 
 Writing testbenches is often tedious but essential for FPGA verification. Claude Code can generate comprehensive testbenches based on your RTL description. Provide the module interface and the test scenarios you want to cover:
 
@@ -246,7 +244,7 @@ Run the simulation with your vendor's simulator or an open-source alternative:
 
 For open-source projects targeting Lattice parts, the Icarus Verilog + GTKWave pairing is entirely free and widely used. Claude Code can help you write Makefiles that invoke the correct simulator based on your project config file.
 
-Synthesis and Implementation Automation
+## Synthesis and Implementation Automation
 
 Once your design passes simulation, synthesis and implementation follow. The Tcl scripting interface in Vivado and Quartus makes it possible to automate the entire flow without the GUI. Claude Code can generate, review, and debug these scripts efficiently.
 
@@ -348,7 +346,7 @@ clean:
 	rm -rf synth/ sim/tb_out
 ```
 
-Constraint File Authoring with Claude Code
+## Constraint File Authoring with Claude Code
 
 One of the most error-prone parts of FPGA development is writing XDC or SDC timing constraint files. A missing or incorrect constraint can silently cause setup or hold violations that only show up at elevated temperatures or specific data patterns.
 
@@ -379,7 +377,7 @@ set_property IOSTANDARD  LVCMOS33 [get_ports rx]
 
 Prompt Claude Code with: "Generate XDC constraints for a 100 MHz clock on pin E3 and a UART RX input on pin A9 for an Arty A7-35T board." It will produce a working constraint template that you can refine based on your board schematic.
 
-Debugging with Claude Code
+## Debugging with Claude Code
 
 When simulation passes but hardware fails, Claude Code becomes a debugging partner. Describe the symptom in plain English and paste your RTL. Common debugging prompts:
 
@@ -406,7 +404,7 @@ assign data_synchronized = sync_ff2;
 
 Ask Claude Code to scan your RTL for patterns like the first example and suggest appropriate synchronizer insertions.
 
-Best Practices for AI-Assisted FPGA Development
+## Best Practices for AI-Assisted FPGA Development
 
 Verify Before Trusting: Always simulate and verify AI-generated code. LLMs can produce syntactically correct but functionally incorrect implementations, particularly around edge cases like counter overflow or FSM default states.
 
@@ -426,7 +424,7 @@ verilator --lint-only -Wall rtl/uart_rx.v
 
 Document Resource Budgets: For resource-constrained designs, keep a running estimate of your LUT, DSP, BRAM, and I/O usage. Ask Claude Code to help you review usage reports and flag when a new module consumes more resources than expected.
 
-A Complete Iterative Workflow
+## A Complete Iterative Workflow
 
 Putting it all together, the Claude Code-assisted FPGA workflow looks like this:
 
@@ -441,7 +439,7 @@ Putting it all together, the Claude Code-assisted FPGA workflow looks like this:
 
 This loop keeps development velocity high while maintaining the rigor that hardware design demands.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms FPGA development by handling routine tasks, generating boilerplate code, and accelerating the learning curve for developers new to hardware design. The gains are particularly significant for testbench authoring, Tcl script generation, constraint file creation, and debugging sessions where a second perspective on an RTL bug can save hours.
 

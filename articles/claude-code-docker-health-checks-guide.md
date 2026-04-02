@@ -13,17 +13,16 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Docker health checks provide a standardized way to monitor the health status of your containers. When you integrate health checks into your Docker workflow, you gain automatic detection of failing services, better orchestration decisions from Docker Compose and Swarm, and improved debugging capabilities. This guide walks you through implementing Docker health checks effectively, with practical examples you can apply to your projects.
 
-Understanding Docker Health Checks
+## Understanding Docker Health Checks
 
 A health check is a command that Docker runs inside your container to determine whether the container is working correctly. Unlike basic container status, health checks evaluate the actual application state. Docker periodically executes the health check command and tracks the result: starting (initial state), healthy, unhealthy, or starting again after a failure.
 
 Health checks become essential when your application has internal dependencies or complex initialization sequences. For instance, a web application might start its process before database connections are ready. Without health checks, Docker considers the container running immediately after the process starts, even if the application isn't actually functional.
 
-Implementing Health Checks in Your Dockerfile
+## Implementing Health Checks in Your Dockerfile
 
 The HEALTHCHECK instruction defines a command Docker uses to test container health. Here's a practical example for a Node.js application:
 
@@ -79,7 +78,7 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
 CMD ["python", "app.py"]
 ```
 
-HEALTHCHECK Parameter Reference
+## HEALTHCHECK Parameter Reference
 
 Each parameter controls a different aspect of the check behavior:
 
@@ -90,7 +89,7 @@ Each parameter controls a different aspect of the check behavior:
 
 When a healthcheck fails repeatedly, Docker automatically restarts the container in orchestration platforms like Docker Swarm, providing self-healing capabilities for your infrastructure.
 
-Health Checks with Docker Compose
+## Health Checks with Docker Compose
 
 When running multi-container applications with Docker Compose, health checks enable service dependencies to wait for dependencies to become healthy. This prevents race conditions where one service starts before its dependencies are ready.
 
@@ -133,7 +132,7 @@ services:
 
 The key here is the `condition: service_healthy` directive. Docker Compose waits for the postgres container to report healthy status before starting the api service. This eliminates the need for custom wait scripts in your application startup logic.
 
-Monitoring Container Health
+## Monitoring Container Health
 
 Once health checks are in place, you can inspect container status using the Docker CLI:
 
@@ -157,7 +156,7 @@ docker inspect --format='{{range .State.Health.Log}}{{.Output}}{{"\n"}}{{end}}' 
 
 This extracts just the output from health check commands, useful for debugging why checks are failing.
 
-Health Checks for Different Application Types
+## Health Checks for Different Application Types
 
 Different application types require different health check strategies. A REST API typically checks an endpoint that validates database connectivity and critical dependencies. A background worker might check that it can connect to message queues and that processing queues are not growing unbounded.
 
@@ -182,7 +181,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
   CMD /app/scripts/healthcheck.sh
 ```
 
-Best Practices
+## Best Practices
 
 Keep health checks lightweight. They're running continuously, so avoid expensive operations. A simple connectivity test to critical dependencies usually suffices.
 
@@ -194,7 +193,7 @@ Use descriptive exit codes. Exit 0 means healthy, anything else indicates proble
 
 Document your health check endpoints. If your API exposes a `/health` endpoint, document what it validates. Teams using the tdd skill often include health check validation in their test suites, ensuring the health endpoint accurately reflects system state.
 
-Automation with Claude Code
+## Automation with Claude Code
 
 When building Docker-based applications with Claude Code, you can automate health check generation. The supermemory skill stores your project patterns, so health checks for similar services follow consistent patterns. The pdf skill helps generate documentation for your health check configurations. The frontend-design skill ensures any health dashboard you build follows consistent UI patterns.
 

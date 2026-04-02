@@ -14,12 +14,11 @@ score: 7
 ---
 {% raw %}
 
-
 Why Is Claude Code Reading the Wrong Directory Entirely?
 
 One of the most confusing issues when working with Claude Code is discovering that it's reading from or writing to a directory you didn't expect. You asked it to modify a file in your current project, but somehow it's editing a file in an entirely different location. or returning errors claiming a file doesn't exist when you can see it right there in your terminal. This guide explains why this happens and how to fix it reliably.
 
-Understanding Claude Code's Working Directory
+## Understanding Claude Code's Working Directory
 
 When Claude Code operates, it has a working directory. the base location from which relative paths are resolved. This is typically the directory where you started Claude Code or the current working directory (CWD) of your terminal session at the time you invoked it.
 
@@ -36,7 +35,7 @@ Several factors can cause Claude Code to operate from an unexpected location:
 
 Understanding which of these applies to your situation determines the fastest fix.
 
-Common Causes of Directory Misreading
+## Common Causes of Directory Misreading
 
 1. Git Repository Detection
 
@@ -112,11 +111,11 @@ But Claude Code resolves to the real path:
 /Volumes/dev/workspaces/myapp
 ```
 
-How to Diagnose the Issue
+## How to Diagnose the Issue
 
 When you suspect Claude Code is reading the wrong directory, work through these diagnostic steps before attempting fixes.
 
-Step 1: Check the Current Working Directory
+## Step 1: Check the Current Working Directory
 
 Ask Claude Code to report its current working directory:
 
@@ -126,7 +125,7 @@ What is your current working directory?
 
 Claude Code will respond with the absolute path it's using as its base location. Compare this to where you expect it to be. This single check resolves the majority of directory confusion cases because it immediately shows the discrepancy.
 
-Step 2: Run pwd Through the Shell
+## Step 2: Run pwd Through the Shell
 
 For a ground-truth answer, ask Claude Code to run the shell command directly:
 
@@ -137,7 +136,7 @@ command: "pwd"
 
 This executes `pwd` in the shell and returns the real current directory, bypassing any Claude Code interpretation. If this differs from what Claude Code reported in step 1, you have a shell-context mismatch.
 
-Step 3: List the Directory Contents
+## Step 3: List the Directory Contents
 
 Confirm what Claude Code actually sees in its working directory:
 
@@ -148,7 +147,7 @@ command: "ls -la"
 
 Seeing the actual files listed often immediately reveals whether you're in the right place. If you see familiar project files, Claude Code is in the right directory and something else is causing the path confusion. If you see unfamiliar files, the working directory is wrong.
 
-Step 4: Verify File Paths Before Critical Operations
+## Step 4: Verify File Paths Before Critical Operations
 
 Before any destructive or important file operation, explicitly verify the full path:
 
@@ -158,7 +157,7 @@ Can you confirm the full absolute path of the file you're about to edit?
 
 This is especially important before writes, deletes, or refactoring operations. A five-second confirmation prevents minutes of recovery work.
 
-Step 5: Check for Naming Conflicts
+## Step 5: Check for Naming Conflicts
 
 If Claude Code is finding a file but it has unexpected content, check whether a file with the same name exists in multiple locations:
 
@@ -169,9 +168,9 @@ command: "find /Users/mike -name 'config.yaml' 2>/dev/null"
 
 If multiple matches appear, Claude Code may be reading from any one of them depending on which directory it considers current.
 
-Practical Solutions
+## Practical Solutions
 
-Solution 1: Always Use Absolute Paths
+## Solution 1: Always Use Absolute Paths
 
 The simplest and most reliable fix is to use absolute paths for all file operations, especially at the start of a new session:
 
@@ -191,7 +190,7 @@ Please edit /Users/mike/projects/myapp/src/auth/validators.js and add input vali
 
 This approach works regardless of what Claude Code thinks its working directory is.
 
-Solution 2: Set the Working Directory Explicitly at Session Start
+## Solution 2: Set the Working Directory Explicitly at Session Start
 
 Establish the correct context at the very beginning of your session, before any other instructions:
 
@@ -201,7 +200,7 @@ I'm working in /Users/mike/myproject. Please treat this as the root directory fo
 
 The confirmation request is important. it forces Claude Code to execute a real directory listing, which both confirms the path is correct and establishes the context in a concrete way rather than just as a stated assumption.
 
-Solution 3: Use the cd Command
+## Solution 3: Use the cd Command
 
 In interactive sessions, you can change directories explicitly:
 
@@ -217,7 +216,7 @@ cd /Users/mike/myproject && pwd
 
 Chaining `pwd` confirms the change took effect.
 
-Solution 4: Configure MCP Servers Properly
+## Solution 4: Configure MCP Servers Properly
 
 If MCP servers are causing the confusion, update their configuration to point to the correct directory:
 
@@ -234,7 +233,7 @@ If MCP servers are causing the confusion, update their configuration to point to
 
 The last argument specifies the allowed directory for file operations. Update this whenever you switch to a new project. If you work across multiple projects, consider separate MCP configurations or using a parent directory that contains all your projects as the allowed path.
 
-Solution 5: Restart the Session for Project Switches
+## Solution 5: Restart the Session for Project Switches
 
 When switching between unrelated projects, starting a fresh Claude Code session is the cleanest solution. Session state including working directory carries over, and it's easier to start fresh than to untangle accumulated context:
 
@@ -247,7 +246,7 @@ claude
 
 Starting Claude Code from the correct project directory ensures the working context is right from the first interaction.
 
-Solution 6: Resolve Symlinks Before Working
+## Solution 6: Resolve Symlinks Before Working
 
 If you suspect symlinks are causing the mismatch, resolve them before starting:
 
@@ -260,9 +259,9 @@ readlink -f ~/projects/myapp
 
 Use the real path when instructing Claude Code to ensure consistent resolution.
 
-Real-World Examples
+## Real-World Examples
 
-Example 1: Monorepo Subdirectory Confusion
+## Example 1: Monorepo Subdirectory Confusion
 
 Problem: You're working in a monorepo's frontend package and Claude Code keeps finding files in the backend package.
 
@@ -276,7 +275,7 @@ Solution: Establish the correct context explicitly:
 I'm working specifically in /workspace/monorepo/packages/frontend. Please use this as the base directory for all operations, not the repository root.
 ```
 
-Example 2: Stale Session from a Previous Project
+## Example 2: Stale Session from a Previous Project
 
 Problem: You finished working on `old-project` yesterday, started Claude Code fresh today for `new-project`, but Claude Code keeps reading from `old-project`.
 
@@ -294,7 +293,7 @@ cd /Users/mike/new-project && pwd
 
 Verify the output confirms the change, then proceed with your work.
 
-Example 3: MCP Server Scoped to Wrong Directory
+## Example 3: MCP Server Scoped to Wrong Directory
 
 Problem: File reads work fine but file writes always fail with "permission denied" or "file not found" errors.
 
@@ -315,7 +314,7 @@ Solution: Update the MCP server args and restart Claude Code:
 }
 ```
 
-Preventing Future Issues
+## Preventing Future Issues
 
 Building consistent habits around directory management makes these problems rare rather than routine.
 
@@ -331,7 +330,7 @@ Building consistent habits around directory management makes these problems rare
 
 6. After major project switches, verify before writing. Ask Claude Code to list files in the directory before performing any writes. Seeing the actual directory contents is faster and more reliable than reasoning about what the path should resolve to.
 
-Summary
+## Summary
 
 Claude Code reading the wrong directory is usually caused by one of these five root causes:
 
@@ -344,7 +343,6 @@ Claude Code reading the wrong directory is usually caused by one of these five r
 The fix is almost always one of: use absolute paths explicitly, run `cd /path/to/correct/directory` to reset the working context, or update your MCP configuration to point to the right place.
 
 By understanding how Claude Code resolves paths and building the habit of confirming directory context at the start of each session, you can avoid this common pitfall entirely. The cost of a five-second directory check at session start is orders of magnitude less than the cost of discovering you edited the wrong file twenty minutes into a complex refactoring task.
-
 
 Related Reading
 

@@ -18,7 +18,7 @@ Generating client reports manually eats up hours every week. Whether you are tra
 
 This guide walks through building an automated client report pipeline using the [`/pdf`](/best-claude-skills-for-data-analysis/), `/tdd`, and `/supermemory` skills.
 
-Extracting Data from PDF Source Documents
+## Extracting Data from PDF Source Documents
 
 Most client data arrives as PDFs: invoices, contract summaries, or existing reports. The `/pdf` skill can extract this data, feeding it into your report generation pipeline.
 
@@ -45,7 +45,7 @@ Extract the following from each:
 Return each as a separate JSON object.
 ```
 
-Generating Professional PDF Reports
+## Generating Professional PDF Reports
 
 The `/pdf` skill does not just read PDFs. It creates them. Generate polished client reports with proper formatting, sections, and tables by describing the structure you want:
 
@@ -63,7 +63,7 @@ Save as acme-corp-feb-2026.pdf
 
 The skill handles pagination, headers, footers, and document structure.
 
-Validating Reports with the TDD Skill
+## Validating Reports with the TDD Skill
 
 Before delivering reports to clients, validate them using the [`/tdd` skill](/best-claude-skills-for-developers-2026/):
 
@@ -82,7 +82,7 @@ Use Python with pytest and PyPDF2 for PDF reading.
 
 Running these tests catches data errors and formatting issues before clients ever see your reports.
 
-Maintaining Client Context with SuperMemory
+## Maintaining Client Context with SuperMemory
 
 When generating recurring client reports, context matters. The [`/supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) stores and retrieves client preferences across sessions.
 
@@ -106,7 +106,7 @@ Load context before generating a report:
 Load all stored context for Acme Corp, including preferences and previous report notes.
 ```
 
-The Full Reporting Workflow
+## The Full Reporting Workflow
 
 Combine these skills in a structured session:
 
@@ -148,7 +148,7 @@ Store notes for Acme Corp February 2026 report:
 - Client requested velocity trend chart next month
 ```
 
-Handling Multiple Clients at Scale
+## Handling Multiple Clients at Scale
 
 The workflow above works for one client. When you manage five or more clients, you need structure to prevent context bleed and missed deadlines.
 
@@ -177,7 +177,7 @@ List all clients with report deadlines in the next 7 days. Today is March 20, 20
 
 This turns SuperMemory into a lightweight CRM for your reporting obligations.
 
-Writing Prompt Templates for Consistent Report Sections
+## Writing Prompt Templates for Consistent Report Sections
 
 Ad hoc prompts for report generation lead to inconsistent output across months. A client's February report should look structurally identical to their March report, with only the data and narrative changing.
 
@@ -202,7 +202,7 @@ Save as acme-corp-feb-2026.pdf.
 
 The result is a report that matches the previous month's format exactly, which clients notice and appreciate. Structural consistency signals professionalism more reliably than polished prose does.
 
-Automating Report Delivery
+## Automating Report Delivery
 
 Once a report passes validation, you can automate the delivery step inside the same Claude Code session. Write a small script that sends the PDF via email or uploads it to a client portal, then invoke it:
 
@@ -219,7 +219,7 @@ Then run the script.
 
 The `/tdd` skill writes the script, tests it against a dry-run, and then executes delivery. If delivery fails due to an SMTP error, the test output tells you exactly why. This is faster than switching to a separate email client and attaching the file manually, and it creates a delivery log you can reference if a client says they never received the report.
 
-Tracking Report Accuracy Over Time
+## Tracking Report Accuracy Over Time
 
 One common problem with automated reports is that errors compound silently. A calculation that was wrong in February gets copied into March because no one caught it. Build a validation step that compares current data against the previous month's archived output.
 
@@ -243,7 +243,7 @@ Load Acme Corp actuals for the last 3 months. Flag any metric that changed by mo
 
 A 40% jump in hours billed or a sudden drop in uptime is worth investigating before the report goes out. This check takes ten seconds and prevents you from sending a client a report with a data error that damages trust.
 
-Key Takeaways
+## Key Takeaways
 
 The `/pdf` skill handles both extraction and generation. The `/tdd` skill validates output before delivery. The `/supermemory` skill maintains client context across sessions. Start with one client and one report type, validate it works, then expand to your full roster.
 
@@ -254,6 +254,5 @@ Related Reading
 - [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) -- Complete data analysis skill guide
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) -- Keep data workflows cost-efficient
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) -- How skills activate automatically
-
 
 Built by theluckystrike -- More at [zovo.one](https://zovo.one)

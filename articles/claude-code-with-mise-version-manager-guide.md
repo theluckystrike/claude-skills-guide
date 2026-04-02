@@ -17,7 +17,7 @@ score: 7
 
 Managing multiple tool versions across different projects can quickly become a nightmare. Whether you're switching between Node.js versions for legacy projects or juggling Python environments for various machine learning tasks, the friction of manual version management slows down development. This guide shows you how to combine Claude Code with Mise, a modern version manager, to automate tool switching and create intelligent development workflows that adapt to your project context.
 
-Why Combine Claude Code with Mise
+## Why Combine Claude Code with Mise
 
 Mise operates as a polyglot tool version manager similar to asdf, but with faster performance and a simpler configuration approach. It handles runtime versions for Node.js, Python, Ruby, Go, and dozens of other tools through a unified `.mise.toml` configuration file placed in your project root.
 
@@ -25,7 +25,7 @@ Claude Code excels at understanding your project context and executing complex t
 
 This combination proves particularly valuable when working with specialized Claude skills that depend on specific tool versions. Skills like `pdf` for document processing, `tdd` for test-driven development workflows, or `frontend-design` for creating visual artifacts each work more reliably when their required runtimes are properly managed.
 
-Setting Up Mise for Claude Code Integration
+## Setting Up Mise for Claude Code Integration
 
 First, ensure Mise is installed on your system. The recommended installation uses the official installer:
 
@@ -53,7 +53,7 @@ go = "1.21"
 
 When Claude Code analyzes your project and sees this configuration, it understands exactly which versions should be active. The integration becomes powerful when you enable automatic tool activation within your shell sessions.
 
-Configuring Claude Code with Mise Hooks
+## Configuring Claude Code with Mise Hooks
 
 To make Claude Code automatically use the correct Mise-managed tools, you can use shell hooks that activate environments on directory change. Add this to your shell configuration:
 
@@ -75,7 +75,7 @@ echo "Environment activated: $(node --version) $(python --version)"
 
 Make this script executable and call it from Claude Code when working on complex tasks requiring verified tool versions.
 
-Practical Workflows with Claude Skills
+## Practical Workflows with Claude Skills
 
  how this integration enhances specific Claude skills. The `supermemory` skill helps maintain persistent context across sessions. When your projects require different Node versions, Mise ensures the correct runtime loads each time:
 
@@ -113,7 +113,7 @@ python = "3.11"
 
 The `canvas-design` and `algorithmic-art` skills benefit from Node.js version consistency, ensuring that any build tools or dependencies work identically across team environments.
 
-Advanced: Creating Claude Code Plugins with Mise
+## Advanced: Creating Claude Code Plugins with Mise
 
 You can extend Claude Code's capabilities by creating custom plugins that use Mise. Here's an example plugin structure:
 
@@ -157,7 +157,7 @@ export default {
 
 This plugin enables Claude Code to actively monitor your tool versions and recommend updates when needed.
 
-Environment-Specific Configurations
+## Environment-Specific Configurations
 
 Mise supports multiple configuration files for different environments. Create `mise.dev.toml`, `mise.prod.toml`, or `mise.test.toml` for environment-specific tool requirements:
 
@@ -176,7 +176,7 @@ mise env test
 
 Claude Code can detect which environment file to use based on your project structure or explicit instructions, streamlining complex multi-environment workflows.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 When Mise and Claude Code don't integrate smoothly, the issue usually stems from PATH configuration. Verify your PATH includes Mise's shims directory:
 
@@ -194,14 +194,13 @@ mise pin node 20.11.0
 
 This creates a `.tool-versions` file that takes precedence over `.mise.toml`, ensuring Claude Code always uses the exact versions you specify.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Mise transforms how you manage development environments. Rather than manually switching versions or dealing with environment conflicts, you gain an automated system that understands your project requirements and maintains consistent tool availability. This foundation enables more productive workflows across all your Claude skills, from `pdf` document generation to `frontend-design` prototyping and beyond.
 
 The key benefits include automated version switching based on project context, consistent environments across team members, and intelligent tool management that works smoothly with Claude Code's execution model. Start with a simple `.mise.toml` in one project and experience the difference automatic version management makes in your daily development workflow.
 
 ---
-
 
 Related Reading
 

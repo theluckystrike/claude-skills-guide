@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Submariner Multi-Cluster Workflow: A Developer's Guide
 
 Managing Kubernetes clusters across multiple environments has become the norm for modern cloud-native applications. Submariner, the Kubernetes networking project that enables secure cross-cluster communication, offers powerful capabilities but comes with operational complexity. This guide shows you how to use Claude Code to automate Submariner multi-cluster workflows, reducing manual configuration errors and speeding up your deployment pipeline.
 
-Understanding Submariner Multi-Cluster Architecture
+## Understanding Submariner Multi-Cluster Architecture
 
 Before diving into automation, let's establish the core components you'll be working with. Submariner consists of several key components that enable pod-to-pod connectivity across Kubernetes clusters:
 
@@ -30,11 +29,11 @@ Before diving into automation, let's establish the core components you'll be wor
 
 When you're managing multiple clusters, each of these components needs consistent configuration across your environment. This is where Claude Code becomes invaluable.
 
-Setting Up Your Submariner Skill for Multi-Cluster Management
+## Setting Up Your Submariner Skill for Multi-Cluster Management
 
 The first step is creating a Claude Code skill that understands Submariner's architecture and can generate the necessary YAML configurations. Here's a practical approach to building this skill:
 
-Creating the Skill Definition
+## Creating the Skill Definition
 
 Start by creating a dedicated skill for Submariner operations. This skill should understand your cluster topology and generate appropriate configurations:
 
@@ -45,7 +44,7 @@ description: "Automates Submariner multi-cluster configuration and troubleshooti
 
 ```
 
-Generating Broker Configurations
+## Generating Broker Configurations
 
 One of the most error-prone tasks is setting up the Submariner broker. Claude Code can automate this by generating the correct YAML based on your cluster metadata:
 
@@ -59,7 +58,7 @@ The skill should produce a complete broker manifest with:
 - ServiceExport definitions for cross-cluster service discovery
 - Network attachment definitions if using Globalnet
 
-Automating Cluster Join Operations
+## Automating Cluster Join Operations
 
 Once your broker is deployed, each cluster needs to join using the `subctl join` command. This is where automation truly shines. Instead of manually running commands across multiple terminals, create a workflow that:
 
@@ -77,7 +76,7 @@ def generate_join_command(cluster_name, broker_url, secret_name):
             --clusterid={cluster_name} --natt=false"
 ```
 
-Parallel Cluster Deployment
+## Parallel Cluster Deployment
 
 For organizations with many clusters, consider implementing parallel deployment logic. Claude Code can help you generate scripts that deploy to multiple clusters simultaneously:
 
@@ -91,11 +90,11 @@ Wait for all deployments
 wait
 ```
 
-Troubleshooting Cross-Cluster Connectivity
+## Troubleshooting Cross-Cluster Connectivity
 
 When things go wrong, and they will, having automated diagnostics saves hours of manual investigation. Your Claude Code skill should be able to:
 
-Diagnose Tunnel Status
+## Diagnose Tunnel Status
 
 ```bash
 Claude Code can generate comprehensive diagnostics
@@ -108,7 +107,7 @@ This should produce output covering:
 - Global IP allocation if using Globalnet
 - Service import status
 
-Common Issues and Automated Fixes
+## Common Issues and Automated Fixes
 
 Here are typical problems and how Claude Code can help resolve them:
 
@@ -126,7 +125,7 @@ The automation should:
 3. Validate matching labels and ports
 ```
 
-Implementing GitOps for Submariner Configuration
+## Implementing GitOps for Submariner Configuration
 
 Managing Submariner configurations through GitOps ensures consistency and enables proper version control. Here's how to structure your repository:
 
@@ -153,7 +152,7 @@ Validate Submariner configurations before applying
 claude "Validate all Submariner YAML files in the current directory for syntax and best practices"
 ```
 
-Best Practices for Multi-Cluster Submariner Workflows
+## Best Practices for Multi-Cluster Submariner Workflows
 
 Based on real-world implementations, here are actionable recommendations:
 
@@ -186,7 +185,7 @@ Schedule this as a cron job
 claude "Generate a Kubernetes job that tests pod-to-pod connectivity between all paired clusters"
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Submariner multi-cluster management from a manual, error-prone process into an automated, reproducible workflow. By creating specialized skills for Submariner operations, you can:
 

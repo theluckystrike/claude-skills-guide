@@ -13,13 +13,9 @@ permalink: /claude-skills-for-site-reliability-engineers-sre/
 ---
 {% raw %}
 
-
-
-Claude Skills for Site Reliability Engineers SRE
-
 Site reliability engineers need tools that handle incident response, log analysis, [monitoring](/claude-code-sentry-error-tracking-source-maps-workflow/), and system debugging. Claude Code provides skills that integrate with common SRE tooling to accelerate these workflows. This guide covers practical applications for SRE teams.
 
-Incident Response Automation
+## Incident Response Automation
 
 [When a production incident occurs, speed matters](/best-claude-code-skills-to-install-first-2026/) Claude Code helps you build incident response runbooks that execute directly in your terminal. Describe your alerting setup and Claude generates bash scripts for common remediation steps.
 
@@ -48,7 +44,7 @@ fi
 
 Claude can also help you structure incident post-mortems. Paste your incident timeline and ask Claude to format it using the standard industry format: summary, impact, root cause, trigger, resolution, and action items.
 
-Log Analysis and Pattern Detection
+## Log Analysis and Pattern Detection
 
 SREs spend significant time grepping through logs. Claude Code enhances this workflow by helping you construct precise log queries and recognize patterns across multiple log sources.
 
@@ -79,7 +75,7 @@ cat /var/log/app.json | jq -c 'select(.level=="error") | {timestamp, service, me
   jq -s 'group_by(.service) | map({service: .[0].service, count: length})'
 ```
 
-Monitoring Dashboard Construction
+## Monitoring Dashboard Construction
 
 Building Prometheus alerts or Grafana dashboards becomes faster with Claude's assistance. Describe your metrics and desired visualization, and Claude generates the configuration.
 
@@ -109,7 +105,7 @@ groups:
 
 Claude also helps you write Grafana panel JSON by describing your visualization needs. Specify the metric, aggregation, and visual style, and receive ready-to-paste dashboard configurations.
 
-On-Call Workflow Enhancement
+## On-Call Workflow Enhancement
 
 Managing on-call rotations and escalations requires clear runbooks and automation. Claude helps you build scripts that integrate with PagerDuty, OpsGenie, or similar tools.
 
@@ -145,7 +141,7 @@ if [ "$STATUS" == "triggered" ]; then
 fi
 ```
 
-Chaos Engineering and Testing
+## Chaos Engineering and Testing
 
 SRE teams increasingly practice chaos engineering. Claude helps you write chaos scripts that safely inject failures to test system resilience.
 
@@ -178,7 +174,7 @@ while True:
     time.sleep(1800)
 ```
 
-Capacity Planning and Resource Analysis
+## Capacity Planning and Resource Analysis
 
 Claude assists with analyzing resource usage data and generating capacity reports. Feed it your Prometheus metrics and ask for projections:
 
@@ -195,14 +191,13 @@ curl -g 'http://localhost:9090/api/v1/query?query=histogram_quantile(0.95,rate(n
 curl -g 'http://localhost:9090/api/v1/query?query=histogram_quantile(0.99,rate(node_cpu_seconds_total{mode="idle"}[5m]))by(instance)'
 ```
 
-Key Takeaways
+## Key Takeaways
 
 Claude Code skills accelerate SRE workflows across multiple domains: incident response automation, log analysis, monitoring configuration, on-call management, chaos engineering, and capacity planning. The key is describing your infrastructure and goals clearly, then iterating on the generated code.
 
 Start by integrating Claude into your most frequent SRE tasks. Build reusable scripts for common incidents, standardize your log queries, and create templates for monitoring dashboards. Over time, these scripts become institutional knowledge that your entire team can share and build on.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 
 Related Reading
 
@@ -211,7 +206,7 @@ Related Reading
 - [Claude Code Skills for Infrastructure as Code Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/). Manage SRE infrastructure with Terraform using Claude Code skills
 - [Claude Code Best-Of Skills Hub](/best-of-hub/). Discover the top Claude Code skills for infrastructure and reliability work
 
-Step-by-Step: Using Claude Skills for On-Call Workflows
+## Step-by-Step: Using Claude Skills for On-Call Workflows
 
 1. Connect your observability stack: integrate Claude with Datadog, Prometheus, or Grafana. Claude can then query metrics directly during an incident.
 2. Create a runbook skill: convert existing runbooks into a Claude skill. When an alert fires, Claude walks through the runbook steps against live metrics.
@@ -219,13 +214,13 @@ Step-by-Step: Using Claude Skills for On-Call Workflows
 4. Automate postmortem drafts: ask Claude to draft the postmortem from the incident timeline. It populates timeline, impact, root cause, and action items.
 5. Build a change risk scorer: give Claude access to deployment history to score the risk of a proposed change based on time of day, recent incident rate, and affected components.
 
-Error Budget Tracking
+## Error Budget Tracking
 
 Claude can perform SLO and error budget calculations on demand. A 99.9% monthly SLO allows 43.8 minutes of downtime per 30-day month. Ask Claude to calculate the current error budget burn rate given your uptime data and recommend whether a deployment freeze is warranted.
 
 Run this as a daily scheduled skill that posts the error budget status to your team Slack channel.
 
-SRE Task Automation Comparison
+## SRE Task Automation Comparison
 
 | Task | Manual time | With Claude Skills | Time saved |
 |---|---|---|---|
@@ -235,7 +230,7 @@ SRE Task Automation Comparison
 | Runbook review | 1-2 hours | 15-20 min | ~80% |
 | On-call handoff notes | 20-30 min | 5 min | ~83% |
 
-Advanced: Automated Alert Explanations
+## Advanced: Automated Alert Explanations
 
 Connect Claude to your alerting system so it generates a plain-language explanation whenever a P1 or P2 alert fires. Pass the alert description, recent metrics summary, and error log samples. Ask Claude to explain the likely cause, customer impact, and first two diagnostic steps.
 
@@ -252,7 +247,7 @@ async def explain_alert(description, metrics_summary, error_samples):
 
 Post the explanation to the incident Slack channel within seconds of the alert firing.
 
-Troubleshooting
+## Troubleshooting
 
 Inconsistent incident summaries: Instruct Claude to respond with JSON containing `summary`, `impact`, `likely_cause`, and `next_steps` fields. Parse this JSON rather than treating the response as free text.
 

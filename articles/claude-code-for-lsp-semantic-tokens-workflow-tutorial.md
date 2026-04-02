@@ -13,18 +13,15 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for LSP Semantic Tokens Workflow Tutorial
-
 Language Server Protocol (LSP) semantic tokens represent one of the most powerful features in modern IDEs and code editors. When combined with Claude Code's CLI capabilities, you can build sophisticated code analysis tools, custom syntax highlighters, and intelligent development workflows. This tutorial walks you through practical approaches to use LSP semantic tokens with Claude Code.
 
-Understanding LSP Semantic Tokens
+## Understanding LSP Semantic Tokens
 
 Semantic tokens go beyond traditional syntax highlighting by providing semantic information about code elements. Instead of just knowing something is a "keyword" or "string," semantic tokens tell you whether it's a `class`, `function`, `property`, or `variable`. This rich metadata enables intelligent features like accurate symbol navigation, context-aware completions, and advanced refactoring tools.
 
 The LSP specification defines token types including `class`, `interface`, `enum`, `function`, `method`, `property`, `variable`, `parameter`, and many more. Each token can be further modified with qualifiers like `declaration`, `definition`, `readonly`, and `static`.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before diving into workflows, ensure Claude Code is installed and configured with LSP support. Most modern code editors like VS Code, Neovim, and Zed already implement LSP clients that communicate with language servers.
 
@@ -43,9 +40,9 @@ For the most effective semantic token workflows, you'll want a language server t
 - Go: `gopls`
 - C/C++: `clangd`
 
-Building Semantic Token Analysis Workflows
+## Building Semantic Token Analysis Workflows
 
-Analyzing Code Structure
+## Analyzing Code Structure
 
 One powerful workflow uses Claude Code to analyze code structure via semantic tokens. Create a skill that extracts and visualizes the semantic organization of a codebase:
 
@@ -88,7 +85,7 @@ def generate_report(file_path: str) -> str:
 
 This pattern proves invaluable for understanding unfamiliar codebases quickly. Instead of manually scanning files, you get an instant structural overview.
 
-Creating Custom Highlighting Schemes
+## Creating Custom Highlighting Schemes
 
 Semantic tokens enable sophisticated theming beyond syntax highlighting. You can create different visual treatments based on semantic meaning:
 
@@ -106,7 +103,7 @@ Semantic tokens enable sophisticated theming beyond syntax highlighting. You can
 .token.readonly::before { content: " "; color: #959da5; }
 ```
 
-Integrating with Claude Code Skills
+## Integrating with Claude Code Skills
 
 Skills can use semantic token information to provide context-aware assistance. Here's how to build a skill that uses semantic awareness:
 
@@ -132,7 +129,7 @@ When the user asks about code structure, query the semantic tokens and present t
 - Accessibility concerns
 ```
 
-Practical Workflow: Code Review Assistant
+## Practical Workflow: Code Review Assistant
 
 A powerful application combines semantic tokens with Claude Code's analysis capabilities:
 
@@ -143,9 +140,9 @@ claude "Review this code and identify all public methods that lack type annotati
 
 The semantic token data tells Claude Code exactly which methods are public versus private, while the language server's type information reveals missing annotations. This combination produces more accurate and helpful reviews than syntax-only analysis.
 
-Advanced Patterns
+## Advanced Patterns
 
-Tracking Symbol References Across Files
+## Tracking Symbol References Across Files
 
 Semantic tokens enable powerful cross-file analysis. By tracking token positions and comparing them against reference locations, you can build comprehensive symbol usage maps:
 
@@ -165,7 +162,7 @@ def find_references(symbol: str, semantic_db: dict) -> list:
     return references
 ```
 
-Generating Documentation Automatically
+## Generating Documentation Automatically
 
 Semantic tokens provide the perfect foundation for documentation generation:
 
@@ -187,7 +184,7 @@ def generate_docs_from_semantics(file_path: str) -> str:
     return format_as_markdown(docs)
 ```
 
-Actionable Best Practices
+## Actionable Best Practices
 
 When building LSP semantic token workflows with Claude Code, follow these practical guidelines:
 
@@ -201,7 +198,7 @@ When building LSP semantic token workflows with Claude Code, follow these practi
 
 5. Test with real codebases: Semantic token implementations vary between language servers. Test your workflows against actual code to ensure reliability.
 
-Conclusion
+## Conclusion
 
 LSP semantic tokens combined with Claude Code create powerful possibilities for code analysis, tooling, and developer productivity. By understanding how to query and use this rich semantic information, you can build workflows that go far beyond traditional syntax highlighting. Start with simple token analysis and progressively add complexity as you understand your use cases better.
 

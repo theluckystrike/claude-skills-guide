@@ -17,9 +17,9 @@ tags: [chrome, link-safety, security]
 
 Link safety is a critical concern for developers and power users who frequently click URLs in emails, code comments, documentation, and across the web. Chrome provides several built-in mechanisms to help you verify links before visiting them, along with third-party tools that offer deeper analysis. This guide covers practical methods to check link safety in Chrome.
 
-Chrome Built-in Link Safety Features
+## Chrome Built-in Link Safety Features
 
-Safe Browsing Protection
+## Safe Browsing Protection
 
 Chrome's Safe Browsing service runs in the background and checks URLs against Google's constantly updated blocklist of malicious websites. When you attempt to visit a known phishing or malware site, Chrome displays a red warning page.
 
@@ -27,7 +27,7 @@ The Safe Browsing feature operates silently until it detects a threat. You can v
 
 To view Safe Browsing warnings you have ignored, navigate to `chrome://settings/security` and review your browsing protection settings.
 
-Link Hover Preview
+## Link Hover Preview
 
 Before clicking any link, hover over it to inspect the actual destination URL. In Chrome, the hover tooltip displays the full URL at the bottom-left of the browser window. This simple technique reveals whether a link claims to go to one site but actually points elsewhere.
 
@@ -38,9 +38,9 @@ Watch for these warning signs in hover previews:
 - IP addresses: Direct IP addresses instead of domain names
 - Excessive subdomains: Long chains of subdomains designed to obscure the actual destination
 
-Developer Tools for Link Analysis
+## Developer Tools for Link Analysis
 
-Inspect Element
+## Inspect Element
 
 Right-click any link in Chrome and select "Inspect" to open the Developer Tools. The Elements panel shows the anchor tag's full HTML, including the `href` attribute:
 
@@ -60,7 +60,7 @@ const links = Array.from(document.querySelectorAll('a[href]'))
 console.table(links);
 ```
 
-Network Request Preview
+## Network Request Preview
 
 For links that trigger JavaScript redirects, open the Network tab in Developer Tools before clicking. When you click the link, the Network panel records all requests, including any intermediate redirects. Look for:
 
@@ -68,15 +68,15 @@ For links that trigger JavaScript redirects, open the Network tab in Developer T
 - URL parameters that modify the destination dynamically
 - POST requests that submit data before redirecting
 
-Third-Party Link Safety Extensions
+## Third-Party Link Safety Extensions
 
-Linkclick Visual Confirmation
+## Linkclick Visual Confirmation
 
 The Linkclick extension adds a confirmation dialog when you click external links. Before Chrome navigates to a new domain, it displays the destination URL and asks for confirmation. This pauses potentially dangerous navigation and gives you time to evaluate the link.
 
 Install from the Chrome Web Store and configure which domains you consider "external" based on your current website.
 
-VirusTotal Link Checker
+## VirusTotal Link Checker
 
 VirusTotal offers a Chrome extension that checks any clicked link against multiple antivirus engines and URL blacklists. When you attempt to visit a URL, the extension sends it to VirusTotal's API and displays a safety score before navigation proceeds.
 
@@ -86,7 +86,7 @@ Web of Trust (WOT)
 
 WOT provides community-based website ratings. Users rate websites for trustworthiness and child safety, creating a reputation database. The extension displays colored circles (green, yellow, red) next to links and in search results, indicating community consensus about each site's safety.
 
-Command-Line Link Checking
+## Command-Line Link Checking
 
 For developers who prefer terminal-based workflows, several CLI tools verify link safety:
 
@@ -117,9 +117,9 @@ done
 
 This extracts all URLs from documentation or code comments, useful for auditing links in your own projects.
 
-Checking Links in Code and Documentation
+## Checking Links in Code and Documentation
 
-URL Validation in JavaScript
+## URL Validation in JavaScript
 
 Validate URLs in your code before using them:
 
@@ -146,7 +146,7 @@ function validateUrl(urlString) {
 }
 ```
 
-Markdown Link Verification
+## Markdown Link Verification
 
 If you maintain documentation in Markdown, use a link checker as part of your build process:
 
@@ -157,7 +157,7 @@ npx -y markdown-link-check README.md
 
 This tool verifies that all links in your documentation are valid and accessible, preventing dead links from reaching production.
 
-Best Practices for Link Safety
+## Best Practices for Link Safety
 
 1. Verify before clicking: Always hover on desktop and check the preview URL
 2. Use password managers: Legitimate banking and service sites rarely ask you to click links in emails
@@ -165,12 +165,11 @@ Best Practices for Link Safety
 4. Keep Chrome updated: Security fixes ship with each release
 5. Audit your extensions: Malicious extensions can modify link behavior
 
-Conclusion
+## Conclusion
 
 Chrome provides multiple layers of link safety protection, from Safe Browsing to hover previews and Developer Tools. Developers can enhance these capabilities with extensions like VirusTotal and Linkclick, or integrate link checking into their workflows through CLI tools and build scripts. Combine these approaches to create a solid defense against malicious links.
 
 The most effective strategy layers manual inspection with automated tools, hover before clicking, verify with extensions when uncertain, and audit links in your own projects regularly.
-
 
 Related Reading
 

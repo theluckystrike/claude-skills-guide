@@ -13,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Network Firewall Workflow
-
 Network firewall management is a critical yet often tedious task for developers and DevOps engineers. Whether you're configuring iptables rules on Linux servers, setting up AWS Security Groups, or managing Kubernetes NetworkPolicies, the complexity grows quickly as your infrastructure scales. Claude Code offers a powerful workflow for automating firewall configuration, validating rules, and maintaining security compliance. This guide walks you through practical patterns for integrating Claude Code into your firewall management pipeline.
 
-Understanding the Firewall Workflow Challenge
+## Understanding the Firewall Workflow Challenge
 
 Modern applications typically span multiple cloud providers, container orchestrators, and on-premises infrastructure. Each platform has its own firewall syntax:
 
@@ -29,7 +26,7 @@ Modern applications typically span multiple cloud providers, container orchestra
 
 Managing these disparate systems manually leads to configuration drift, security gaps, and time-consuming audits. Claude Code can help by generating configs, validating existing rules, translating between formats, and documenting your firewall architecture.
 
-Setting Up Your Firewall Management Skill
+## Setting Up Your Firewall Management Skill
 
 Create a dedicated skill for firewall operations. This keeps your firewall-related prompts organized and reusable:
 
@@ -42,7 +39,7 @@ description: "Generate, validate, and audit network firewall rules across platfo
 
 This skill has access to file operations for reading configs, bash for running validation commands, and glob for finding relevant rule files in your repository.
 
-Generating Firewall Rules from Specifications
+## Generating Firewall Rules from Specifications
 
 One of Claude Code's strongest capabilities is generating configuration files from natural language specifications. Instead of manually writing iptables rules, describe your requirements and let Claude generate the configuration.
 
@@ -87,7 +84,7 @@ Save rules (Debian/Ubuntu)
 iptables-save > /etc/iptables/rules.v4
 ```
 
-Validating Firewall Configurations
+## Validating Firewall Configurations
 
 Before deploying firewall rules, validation is crucial. A single misconfigured rule can lock you out of production systems. Claude Code can audit your existing configurations for common issues.
 
@@ -110,7 +107,7 @@ Ask Claude to check for these issues:
 
 Claude will read your config files and provide a detailed security assessment with specific recommendations.
 
-Cross-Platform Rule Translation
+## Cross-Platform Rule Translation
 
 A powerful use case for Claude Code is translating firewall rules between platforms. When migrating from on-premises to AWS, you can convert iptables rules to Security Group rules:
 
@@ -137,7 +134,7 @@ Claude will generate the equivalent Security Group rules with proper CIDR notati
 | 22 | 203.0.113.0/24 | SSH from office network |
 | 3306 | 10.0.20.0/24 | MySQL from app tier |
 
-Kubernetes NetworkPolicy Generation
+## Kubernetes NetworkPolicy Generation
 
 For containerized applications, Claude Code excels at generating Kubernetes NetworkPolicies. These policies provide pod-level network isolation:
 
@@ -187,7 +184,7 @@ spec:
           port: 5432
 ```
 
-Automating Rule Documentation
+## Automating Rule Documentation
 
 Security audits require comprehensive documentation of firewall rules. Claude Code can automatically generate documentation from your rule files:
 
@@ -205,7 +202,7 @@ Web Server (prod-web-01)
 
 This documentation stays current by regenerating it whenever rules change, ensuring audit readiness without manual maintenance.
 
-Integrating with CI/CD Pipelines
+## Integrating with CI/CD Pipelines
 
 For production workflows, integrate Claude Code validation into your CI/CD pipeline. Create a script that runs firewall validation before deployment:
 
@@ -232,7 +229,7 @@ fi
 
 This catch misconfigurations before they reach production, providing an automated safety net for your infrastructure.
 
-Best Practices for Firewall Workflows
+## Best Practices for Firewall Workflows
 
 When using Claude Code for firewall management, follow these practices:
 

@@ -16,15 +16,15 @@ score: 7
 
 As AI coding tools become integral to enterprise development workflows, organizations need structured governance policies to balance developer productivity with security, compliance, and operational requirements. This guide provides a practical framework for establishing effective governance policies that work in real-world enterprise environments.
 
-Why Governance Policies Matter
+## Why Governance Policies Matter
 
 AI coding tools like Claude Code, GitHub Copilot, and Cursor offer significant productivity gains, but they also introduce new risks that traditional development policies don't address. Without clear governance, organizations face data leakage, inconsistent code quality, compliance gaps, and legal exposure.
 
 A well-designed governance policy accomplishes three goals: protecting sensitive data, maintaining code quality standards, and enabling teams to adopt AI tools confidently.
 
-Core Components of an Enterprise Governance Policy
+## Core Components of an Enterprise Governance Policy
 
-Data Classification and Handling
+## Data Classification and Handling
 
 Start by classifying the types of data your developers work with and establishing handling rules for each category. Most enterprises have three tiers:
 
@@ -48,7 +48,7 @@ prohibited:
   - personal_health_information
 ```
 
-Skill Management and Approval Workflows
+## Skill Management and Approval Workflows
 
 Claude skills extend AI tool capabilities but require governance oversight. Establish a tiered approval system for skill adoption:
 
@@ -69,7 +69,7 @@ skill_review_checklist:
   - Owner assigned for maintenance
 ```
 
-Environment Segmentation
+## Environment Segmentation
 
 Different environments require different governance levels. Implement controls that adapt AI tool behavior based on context:
 
@@ -79,7 +79,7 @@ Production environments: Restrict AI tools to read-only operations and code revi
 
 Use MCP server configurations to enforce environment-specific restrictions. For example, the `claude-code-permissions-model-security-guide-2026` skill provides patterns for implementing granular permission controls.
 
-Code Quality and Review Standards
+## Code Quality and Review Standards
 
 AI-generated code needs review standards that account for the unique risks these tools introduce:
 
@@ -89,9 +89,9 @@ Test coverage requirements - AI-assisted code should meet or exceed your standar
 
 The `tdd` skill provides frameworks for test-driven development workflows that work well with AI assistance, ensuring generated code has proper test coverage from the start.
 
-Implementing the Governance Framework
+## Implementing the Governance Framework
 
-Policy Documentation
+## Policy Documentation
 
 Create a living document that covers:
 
@@ -102,7 +102,7 @@ Create a living document that covers:
 5. Incident response: How to handle data leaks or security incidents involving AI tools
 6. Training requirements: What onboarding and ongoing education is required
 
-Technical Controls
+## Technical Controls
 
 Implement technical enforcement mechanisms that make governance policies actionable:
 
@@ -130,7 +130,7 @@ Review Requirements
 
 Audit logging: Enable comprehensive logging of AI tool operations, including prompts sent, files accessed, and code generated. This supports both security monitoring and compliance requirements.
 
-Training and Adoption
+## Training and Adoption
 
 Policy effectiveness depends on developer adoption. Implement a phased rollout:
 
@@ -142,9 +142,9 @@ Phase 3 - Rollout: Expand to additional teams with support resources available. 
 
 Phase 4 - Continuous improvement: Review and update policies quarterly based on tool evolution, threat landscape changes, and team feedback.
 
-Specific Enterprise Considerations
+## Specific Enterprise Considerations
 
-Regulatory Compliance
+## Regulatory Compliance
 
 Industries with specific compliance requirements need additional considerations:
 
@@ -156,7 +156,7 @@ GDPR: European operations must ensure data processed by AI tools complies with d
 
 Use the `claude-skills-compliance-soc2-iso27001-guide` skill to integrate compliance requirements into your governance framework.
 
-Vendor Management
+## Vendor Management
 
 If your organization uses AI coding tools from third-party vendors, establish vendor governance:
 
@@ -165,7 +165,7 @@ If your organization uses AI coding tools from third-party vendors, establish ve
 - Contractually require notification of security incidents
 - Include data processing agreements covering AI tool usage
 
-Intellectual Property
+## Intellectual Property
 
 AI tools may generate code similar to training data, raising IP considerations. Your policy should address:
 
@@ -173,7 +173,7 @@ AI tools may generate code similar to training data, raising IP considerations. 
 - Code provenance tracking
 - Review processes for potential IP conflicts
 
-Measuring Policy Effectiveness
+## Measuring Policy Effectiveness
 
 Track these metrics to assess governance policy effectiveness:
 
@@ -183,12 +183,11 @@ Track these metrics to assess governance policy effectiveness:
 - Developer satisfaction: Survey results on tool usability and policy friction
 - Audit findings: Results of periodic policy compliance reviews
 
-Conclusion
+## Conclusion
 
 Effective AI coding tools governance requires balancing developer productivity with security, compliance, and quality requirements. Start with data classification, implement technical controls through configuration and skills, and create clear documentation that enables adoption.
 
 The most successful governance policies are those that developers actually follow. Make policies clear, provide tools that enforce them automatically, and ensure the friction is proportional to the actual risks. With the right framework in place, your organization can confidently embrace AI coding tools while maintaining the security and compliance standards your stakeholders expect.
-
 
 Related guides: [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-tools-security-concerns-enterprise-guide/)
 

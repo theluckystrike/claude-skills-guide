@@ -16,7 +16,7 @@ permalink: /claude-4-skills-improvements-and-new-features/
 
 [Claude 4 brought meaningful improvements to the existing skills system](/best-claude-code-skills-to-install-first-2026/) If you've been using Claude Code skills for development workflows, here's what changed and how to take advantage of it.
 
-Enhanced PDF Processing
+## Enhanced PDF Processing
 
 The [`pdf` skill's](/best-claude-skills-for-data-analysis/) extraction engine improved significantly in Claude 4, particularly for multi-column layouts and scanned documents. Table detection is more reliable, which matters when pulling structured data from technical specifications and financial reports.
 
@@ -36,7 +36,7 @@ For complex layouts that previously produced garbled extraction:
 
 Being explicit about table structure still improves accuracy, but the skill's baseline performance on complex layouts is substantially better.
 
-Smarter TDD Edge Case Detection
+## Smarter TDD Edge Case Detection
 
 The [`tdd` skill](/best-claude-skills-for-developers-2026/) now identifies edge cases more proactively based on code patterns rather than requiring you to specify them.
 
@@ -58,7 +58,7 @@ Framework support expanded to include Vitest and Bun Test alongside pytest and J
 
 Fixture cleanup also improved. The skill now includes teardown logic in generated test suites, which previously had to be added manually.
 
-Supermemory Semantic Search
+## Supermemory Semantic Search
 
 The most significant [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) improvement in Claude 4 is natural language retrieval. Previously, retrieval required exact key names. Now you can query by description:
 
@@ -80,7 +80,7 @@ Team sharing is also new. shared context stores allow multiple developers to acc
 
 New team members can recall the shared store immediately rather than waiting for documentation to be written.
 
-Frontend Design Verification Depth
+## Frontend Design Verification Depth
 
 The `frontend-design` skill now checks more dimensions of design compliance, including layout shift metrics, accessibility violations, and responsive behavior across standard breakpoints.
 
@@ -94,7 +94,7 @@ The `frontend-design` skill now checks more dimensions of design compliance, inc
 
 For teams enforcing a design system, the improved token verification catches violations that previously slipped through manual review.
 
-Webapp Testing: Screenshots and Visual Regression
+## Webapp Testing: Screenshots and Visual Regression
 
 The `webapp-testing` skill added visual regression testing and video recording in Claude 4:
 
@@ -112,7 +112,7 @@ The `webapp-testing` skill added visual regression testing and video recording i
 
 The visual regression capability is the most practically useful addition for frontend teams. catching layout regressions without manual inspection.
 
-Spreadsheet Charts and New Types
+## Spreadsheet Charts and New Types
 
 The `xlsx` skill gained waterfall charts, treemaps, and sparklines in Claude 4:
 
@@ -126,7 +126,7 @@ The `xlsx` skill gained waterfall charts, treemaps, and sparklines in Claude 4:
 
 These chart types were previously difficult to generate programmatically and required manual steps in Excel. The skill handles the chart object configuration directly.
 
-Skill Auto-Invocation Triggers and Hook Configuration
+## Skill Auto-Invocation Triggers and Hook Configuration
 
 Claude 4 introduced configurable auto-invocation triggers. Skills can now activate based on file patterns you define in `~/.claude/settings.json` under the `"hooks"` key.
 
@@ -176,7 +176,7 @@ You can also block dangerous operations by exiting with a non-zero code in a Pre
 
 The `/tdd`, `/pdf`, and other skills still work exactly the same way when invoked manually with `/skill-name`. Auto-invocation via hooks is an optional pattern for teams that want skills to surface contextually without manual invocation.
 
-Getting Started with These Features
+## Getting Started with These Features
 
 All improvements activate automatically when you use the updated skills. no configuration changes required for the core improvements. If you're on an older Claude Code version, update first:
 
@@ -193,7 +193,6 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top skills every developer should know
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Decide when skills beat plain prompts
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 ---
 

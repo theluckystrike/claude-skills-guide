@@ -18,7 +18,7 @@ Every token your Claude skill sends to the model costs money and affects respons
 
 This guide covers practical methods for profiling token consumption in your skills and implementing optimization strategies that actually work.
 
-Understanding Token Sources in Claude Skills
+## Understanding Token Sources in Claude Skills
 
 When you invoke a skill, tokens come from three main sources:
 
@@ -28,9 +28,9 @@ When you invoke a skill, tokens come from three main sources:
 
 The skill body is often the easiest to measure and optimize. Let's start there.
 
-Profiling Your Skill's Token Usage
+## Profiling Your Skill's Token Usage
 
-Measuring Skill Body Tokens
+## Measuring Skill Body Tokens
 
 The simplest way to measure your skill file's token count is by using a simple script. Create a helper skill or use the `bash` skill to count tokens:
 
@@ -49,7 +49,7 @@ with open("skills/your-skill.md", "r") as f:
 
 This gives you a baseline. Most production skills should stay under 2000 tokens for the skill body alone. If you're seeing 5000+ tokens, you have optimization opportunities.
 
-Tracking Real-World Usage
+## Tracking Real-World Usage
 
 For skills you actively use, enable token tracking in your Claude configuration. Add this to your `~/.claude/settings.json`:
 
@@ -62,9 +62,9 @@ For skills you actively use, enable token tracking in your Claude configuration.
 
 This displays token usage after each response, showing you exactly how many tokens were sent and received. Use this data to identify which skills consume the most tokens during typical workflows.
 
-Optimization Strategies That Work
+## Optimization Strategies That Work
 
-Strategy 1: Trim Your System Prompts
+## Strategy 1: Trim Your System Prompts
 
 The most effective optimization is reducing skill body tokens. Review your skill prompts for these common issues:
 
@@ -94,7 +94,7 @@ Never omit the closing brace. Always use double quotes for strings."
 }"
 ```
 
-Strategy 2: Lazy-Load Context
+## Strategy 2: Lazy-Load Context
 
 Skills like `frontend-design` or `canvas-design` often need reference files but don't need everything upfront. Use conditional context loading:
 
@@ -110,7 +110,7 @@ Do not load large asset directories unless explicitly requested.
 
 This prevents the skill from consuming tokens reading files it won't need.
 
-Strategy 3: Template Responses
+## Strategy 3: Template Responses
 
 For skills that produce structured output, like the `xlsx` skill for spreadsheets or the `docx` skill for documents, provide output templates directly in the skill:
 
@@ -215,7 +215,6 @@ Conclusion
 Token optimization isn't about stripping valuable content, it's about removing redundancy and letting Claude's base capabilities handle what they already know. The skills that perform best are often the leanest, because less context means faster responses and clearer guidance.
 
 Start by measuring your current skills, then apply these strategies systematically. You'll likely find that 30-50% token reduction is achievable without any loss in output quality.
-
 
 Related Reading
 

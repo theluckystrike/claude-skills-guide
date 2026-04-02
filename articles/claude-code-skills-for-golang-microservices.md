@@ -16,7 +16,7 @@ permalink: /claude-code-skills-for-golang-microservices/
 
 Building Golang microservices requires handling repetitive patterns, from setting up HTTP handlers to configuring Dockerfiles. Claude Code accelerates these workflows through [built-in skills](/claude-skill-md-format-complete-specification-guide/) that understand Go's idioms and microservice architecture patterns.
 
-Available Skills for Go Development
+## Available Skills for Go Development
 
 Claude Code provides several skills that work well with Golang projects:
 
@@ -28,7 +28,7 @@ Claude Code provides several skills that work well with Golang projects:
 
 For Golang-specific work, you often describe your intent directly since no built-in `/golang` skill exists. The combination of these skills covers most microservice development needs.
 
-Setting Up a Go Microservice Project
+## Setting Up a Go Microservice Project
 
 When starting a new Go microservice, structure your project for scalability. Create a project layout that separates handlers, services, and data access layers:
 
@@ -45,7 +45,7 @@ go get github.com/gin-gonic/gin github.com/jackc/pgx/v5 github.com/redis/go-redi
 
 This baseline structure supports the handler-service-repository pattern common in Go microservices.
 
-Creating HTTP Handlers with Claude Code
+## Creating HTTP Handlers with Claude Code
 
 When you need to create a new HTTP handler, describe the endpoint structure to Claude Code. For example:
 
@@ -108,7 +108,7 @@ func (h *UserHandler) GetUser(c *gin.Context) {
 
 The generated code follows standard Go patterns: context propagation, error handling, and clean separation between layers.
 
-Writing Unit Tests with /tdd Skill
+## Writing Unit Tests with /tdd Skill
 
 The [/tdd skill](/claude-tdd-skill-test-driven-development-workflow/) helps generate comprehensive tests for your Go code. Activate it and describe your test requirements:
 
@@ -188,7 +188,7 @@ Run tests with the standard Go test command:
 go test ./internal/service/... -v -cover
 ```
 
-Docker Container Setup for Go Microservices
+## Docker Container Setup for Go Microservices
 
 For Docker configuration, describe your requirements directly to Claude Code and it will generate optimized configurations:
 
@@ -236,7 +236,7 @@ docker build -t my-go-service .
 docker run -p 8080:8080 my-go-service
 ```
 
-API Testing with /webapp Testing Skill
+## API Testing with /webapp Testing Skill
 
 Test your microservice endpoints using the `/webapp-testing` skill. This skill understands how to validate API responses:
 
@@ -291,7 +291,7 @@ Run these tests against your running container or locally:
 go test -v ./... -run TestCreateUserAPI
 ```
 
-Database Integration
+## Database Integration
 
 Claude Code can set up database connections and write efficient queries using GORM or SQLx. Here is a GORM repository pattern:
 
@@ -323,7 +323,7 @@ func (r *UserRepository) FindByID(ctx context.Context, id string) (*models.User,
 }
 ```
 
-Inter-Service Communication with gRPC
+## Inter-Service Communication with gRPC
 
 Go microservices often communicate via gRPC. Claude Code can set up protobuf schemas and generate the server implementation:
 
@@ -352,7 +352,7 @@ message User {
 
 Claude Code generates the Go code from your proto files and creates the gRPC server implementation. For broader inter-service communication patterns, see [Claude Code Skills Microservices Communication Patterns](/claude-code-skills-microservices-communication-patterns/).
 
-Docker Compose for Local Development
+## Docker Compose for Local Development
 
 Claude Code generates Docker Compose configurations for running your microservices with their dependencies locally:
 
@@ -381,7 +381,7 @@ services:
     image: redis:7-alpine
 ```
 
-Service Layer Patterns
+## Service Layer Patterns
 
 Go microservices benefit from clear service layer separation. Claude Code helps generate service implementations that handle business logic.
 
@@ -434,7 +434,7 @@ func (s *UserService) GetUser(ctx context.Context, id uint64) (*User, error) {
 
 This pattern ensures your microservice handles errors consistently and validates data at the service layer.
 
-Actionable Advice for Claude Code Workflow
+## Actionable Advice for Claude Code Workflow
 
 1. Start with clear prompts: Be specific about requirements. Instead of "Create a handler," say "Create a REST handler for a user service with GET and POST endpoints using the Gin framework."
 
@@ -446,7 +446,7 @@ Actionable Advice for Claude Code Workflow
 
 5. Test-driven approach: Ask Claude Code to generate tests alongside your implementation using the `/tdd` skill. This ensures your code is testable from the start.
 
-Summary
+## Summary
 
 Claude Code skills enhance Golang microservices development by automating handler generation, test creation, Docker configuration, and API testing. The `/tdd` and `/webapp-testing` skills, combined with direct prompting for Docker configuration, cover the full development lifecycle. For Go-specific patterns, describing your requirements directly to Claude Code produces idiomatic code that follows established conventions. Explore more backend patterns in the [use cases hub](/use-cases-hub/).
 

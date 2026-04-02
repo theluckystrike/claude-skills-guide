@@ -16,15 +16,15 @@ permalink: /how-to-write-effective-claude-md-for-your-project/
 
 When you start a conversation with Claude Code in your project directory, [it automatically looks for a `CLAUDE.md` file](/best-claude-code-skills-to-install-first-2026/) This file serves as the instruction manual that shapes how Claude understands and interacts with your codebase. A well-crafted CLAUDE.md can dramatically improve the quality and accuracy of Claude's responses, making your development workflow smoother and more productive.
 
-What CLAUDE.md Does
+## What CLAUDE.md Does
 
 [Claude Code reads your CLAUDE.md file at the start of each conversation](/claude-skill-md-format-complete-specification-guide/) and uses its contents to inform every decision it makes. Think of it as onboarding documentation for an intelligent assistant. Without explicit guidance, Claude makes assumptions about your tech stack, coding style, and project structure. With a proper CLAUDE.md, you eliminate guesswork and establish clear expectations from the first prompt.
 
 The file lives in your project root and persists across sessions. Unlike chat history, which resets, CLAUDE.md provides consistent context that Claude references throughout your working session.
 
-Essential Sections to Include
+## Essential Sections to Include
 
-Project Overview
+## Project Overview
 
 Start with a brief description of what your project does. Include the primary language, framework, and key dependencies. This helps Claude understand the technology stack before addressing specifics.
 
@@ -36,7 +36,7 @@ It provides authentication and user management for a SaaS application.
 The frontend is a React SPA served by the same Express server.
 ```
 
-Coding Conventions
+## Coding Conventions
 
 Define your team's style preferences explicitly. Specify indentation, naming conventions, and architectural patterns you follow. Claude will then generate code that matches your existing codebase.
 
@@ -50,7 +50,7 @@ Coding Conventions
 - REST endpoints follow /api/v1/resource pattern
 ```
 
-Directory Structure
+## Directory Structure
 
 Document your project organization. A clear directory map helps Claude navigate your codebase and place new files in appropriate locations.
 
@@ -68,7 +68,7 @@ Directory Structure
   /integration    # Integration tests
 ```
 
-Using Claude Skills in Your CLAUDE.md
+## Using Claude Skills in Your CLAUDE.md
 
 Claude Code works best when you integrate its specialized skills. The tdd skill enforces test-driven development workflows, generating comprehensive test coverage before any implementation begins. Reference this skill when you want Claude to follow TDD principles.
 
@@ -86,7 +86,7 @@ For frontend components, use frontend-design for suggestions.
 For PDF operations, use the pdf skill commands.
 ```
 
-Project-Specific Instructions
+## Project-Specific Instructions
 
 Beyond general conventions, include instructions unique to your project. This might cover testing requirements, deployment procedures, or specific business logic that Claude should know.
 
@@ -100,7 +100,7 @@ Project-Specific Guidelines
 - Environment variables are documented in .env.example
 ```
 
-Practical Examples
+## Practical Examples
 
 Consider a real-world scenario. You have a React project with TypeScript and you want Claude to generate components correctly. Your CLAUDE.md might include:
 
@@ -123,15 +123,15 @@ Example component structure:
 
 When you then ask Claude to create a new component, it automatically follows these patterns without additional prompting.
 
-Structure Information with the Pyramid Principle
+## Structure Information with the Pyramid Principle
 
 The most effective CLAUDE.md files structure information like an inverted pyramid. lead with the most critical information and progressively add detail. Sections appearing earlier carry more weight in determining overall behavior. Place your project type, framework, and primary language at the very top, followed immediately by your most important conventions. Save detailed architecture explanations for later sections.
 
-Token Budget Strategy
+## Token Budget Strategy
 
 Every token in your CLAUDE.md competes for attention. Treat this as a resource allocation problem. Aim for 800–1200 words as a general maximum. If you find yourself exceeding this, move detailed documentation to separate files and reference them. Claude Code can read additional files when explicitly instructed.
 
-Document Command Aliases and Scripts
+## Document Command Aliases and Scripts
 
 One of the most valuable yet underutilized CLAUDE.md features is documenting your project's npm scripts and custom commands. Many teams have intricate build processes or deployment scripts that Claude cannot discover independently:
 
@@ -146,7 +146,7 @@ Available Commands
 - npm run deploy:staging: Deploy to staging environment
 ```
 
-Legacy Code Guidelines
+## Legacy Code Guidelines
 
 Projects with existing codebases face unique challenges. Explicitly address how Claude should interact with older patterns:
 
@@ -159,7 +159,7 @@ Legacy Code Guidelines
 - Database migrations in src/migrations/ should never be modified after creation
 ```
 
-Common Mistakes to Avoid
+## Common Mistakes to Avoid
 
 Avoid making your CLAUDE.md too verbose. Claude works best with concise, scannable instructions. If your file exceeds 200 lines, consider splitting it into focused files like `CLAUDE.md` for high-level context and `.claude/rules/` for detailed patterns. The [CLAUDE.md best practices for large codebases guide](/claude-md-best-practices-for-large-codebases/) explores this multi-file approach in depth.
 
@@ -167,13 +167,13 @@ Do not include information that Claude can discover by reading your code. Depend
 
 Avoid conflicting instructions. If your CLAUDE.md says "always write tests first" but also says "prioritize shipping features quickly," Claude will be confused about which priority to follow.
 
-Maintaining Your CLAUDE.md
+## Maintaining Your CLAUDE.md
 
 Update your CLAUDE.md when your project evolves. New team members, changing frameworks, or shifted priorities should all trigger a review of your instructions. Treat it as living documentation that grows with your project.
 
 A good practice is to review your CLAUDE.md during sprint retrospectives or when onboarding new developers. Their fresh perspective often reveals unclear or missing instructions. If Claude ever starts ignoring your file, the [troubleshooting guide for Claude ignoring CLAUDE.md instructions](/how-to-fix-claude-code-ignoring-my-claude-md-file/) walks through the most common causes.
 
-Conclusion
+## Conclusion
 
 A well-written CLAUDE.md transforms Claude Code from a generic assistant into a knowledgeable team member that understands your project's unique requirements. By investing time in creating clear, comprehensive instructions, you get more accurate code generation, fewer follow-up questions, and a more efficient development workflow.
 

@@ -21,7 +21,7 @@ Transaction tracing involves tracking the complete lifecycle of a business opera
 
 Logging tells you that an error occurred. Tracing tells you the full chain of events that led to it. which service made a call to which other service, how long each step took, where the operation branched, and exactly where it failed. When you are dealing with a 10-service microservices architecture handling thousands of requests per second, that difference is what separates a 5-minute diagnosis from a 5-hour one.
 
-Tracing vs. Logging vs. Metrics
+## Tracing vs. Logging vs. Metrics
 
 These three observability pillars are complementary, not interchangeable. Understanding when to reach for each helps you instrument effectively.
 
@@ -43,11 +43,11 @@ Claude Code can assist you in several ways:
 
 Beyond generation, Claude Code is useful for reviewing existing instrumentation. Paste a service's tracing code and ask: "Are there gaps in coverage here? Are any spans missing error handling?" You will get specific, actionable feedback rather than generic advice.
 
-Setting Up Your Tracing Infrastructure
+## Setting Up Your Tracing Infrastructure
 
 Before implementing transaction tracing, you need to establish the foundational components. Let's start by setting up a basic tracing system using Python.
 
-Installing Required Dependencies
+## Installing Required Dependencies
 
 First, ensure you have the necessary packages installed:
 
@@ -65,7 +65,7 @@ pip install opentelemetry-instrumentation-sqlalchemy  # Auto-instrumentation for
 
 Auto-instrumentation libraries save significant time. Claude Code can help you identify which instrumentation packages match your stack and how to configure them.
 
-Creating a Basic Tracer Configuration
+## Creating a Basic Tracer Configuration
 
 Here's how to initialize a tracer in your application:
 
@@ -114,11 +114,11 @@ trace.set_tracer_provider(provider)
 
 The `Resource` object is important: it attaches service-level metadata to every span, which makes filtering in your trace backend much more useful. Claude Code will remind you to set this up if you show it a configuration that omits it.
 
-Implementing Transaction Tracing in Your Code
+## Implementing Transaction Tracing in Your Code
 
 Now let's implement actual transaction tracing within your application logic. The key is to wrap meaningful operations in spans.
 
-Tracing a Simple Transaction
+## Tracing a Simple Transaction
 
 Consider a typical e-commerce checkout flow:
 
@@ -154,7 +154,7 @@ def process_order(order_id, payment_info, inventory_items):
 
 Each child span represents one discrete step in the transaction. In your trace backend, you will see a timeline showing these steps side by side, making it immediately obvious if payment validation takes 800ms while the other steps take 20ms each.
 
-Adding Context Propagation
+## Adding Context Propagation
 
 For distributed systems, you need to propagate trace context across service boundaries:
 
@@ -191,11 +191,11 @@ Without context propagation, each service creates its own independent traces and
 
 Claude Code can audit your service boundaries and flag any outbound HTTP calls that are missing the inject step. a common oversight when tracing is added incrementally to an existing codebase.
 
-Using Claude Code to Generate Trace Handlers
+## Using Claude Code to Generate Trace Handlers
 
 Claude Code excels at generating boilerplate code for common tracing patterns. Here's how you can use it:
 
-Generating Custom Span Decorators
+## Generating Custom Span Decorators
 
 Ask Claude to create reusable decorators for your tracing needs:
 
@@ -249,7 +249,7 @@ def send_order_email(order_id, customer_email):
 
 The decorator approach keeps your business logic clean while ensuring consistent tracing across all instrumented functions. When you ask Claude Code to add tracing to an existing module, it will often suggest converting explicit span context managers to decorators precisely because it improves readability at scale.
 
-Async Support
+## Async Support
 
 Modern Python services often use async frameworks. The decorator pattern needs adjustment for async functions:
 
@@ -283,7 +283,7 @@ async def get_user(user_id: str):
 
 Claude Code handles the sync/async distinction well. If you show it a synchronous decorator and ask it to make it work with `async def` functions, it will produce the correct `@functools.wraps` and `await` version without you needing to remember the details.
 
-Best Practices for Transaction Tracing
+## Best Practices for Transaction Tracing
 
 When implementing transaction tracing in your projects, follow these guidelines:
 
@@ -354,11 +354,11 @@ provider = TracerProvider(sampler=sampler, resource=resource)
 
 Claude Code can help you calculate an appropriate sampling rate based on your expected request volume and storage budget.
 
-Analyzing Trace Data
+## Analyzing Trace Data
 
 Once you've implemented tracing, you can use various tools to analyze the data:
 
-Using Jaeger
+## Using Jaeger
 
 Jaeger provides an excellent UI for visualizing traces:
 
@@ -372,7 +372,7 @@ docker run -d --name jaeger \
 
 After starting Jaeger, navigate to `http://localhost:16686`. You can search by service name, operation name, tags, and duration. The trace timeline view shows every span as a horizontal bar, making bottlenecks visually obvious.
 
-Querying Traces Programmatically
+## Querying Traces Programmatically
 
 You can also analyze traces using the OpenTelemetry SDK:
 
@@ -393,7 +393,7 @@ class CustomAnalyticsExporter(SpanProcessor):
 
 A custom processor like this can feed into Prometheus metrics, write slow-span alerts to a Slack webhook, or populate an anomaly-detection pipeline. Claude Code can extend this pattern to whatever alerting infrastructure you already use.
 
-Building a Trace Analysis Script
+## Building a Trace Analysis Script
 
 For periodic analysis of trace data exported to storage, Claude Code can write scripts that aggregate patterns:
 
@@ -454,7 +454,7 @@ if __name__ == '__main__':
 
 This kind of script is straightforward to generate with Claude Code once you tell it the shape of your trace export format. It becomes genuinely useful for weekly performance reviews or for post-incident analysis when you want to look at trace data from before and after a deploy.
 
-Real-World Scenario: Debugging a Slow Checkout
+## Real-World Scenario: Debugging a Slow Checkout
 
 Imagine you are getting customer complaints that checkout is slow. sometimes 8 seconds, usually 2 seconds. You have tracing in place. "Here is a slow trace from our checkout flow. What stands out?"
 
@@ -462,7 +462,7 @@ Claude Code will notice that `reserve_inventory` has a child span called `acquir
 
 This workflow. trace in Jaeger, analyze with Claude Code. compresses a debugging session that might take hours into one that takes minutes. The key is having good spans with meaningful names and attributes so Claude Code has enough context to reason about the problem.
 
-Conclusion
+## Conclusion
 
 Transaction tracing is a powerful technique for understanding and debugging complex applications. By using Claude Code to generate tracing code, create custom handlers, and build analysis tools, you can significantly accelerate your tracing implementation while maintaining best practices.
 
@@ -471,7 +471,6 @@ Start with basic span instrumentation, then gradually add contextual attributes 
 As your system grows, you'll find transaction tracing invaluable for diagnosing issues and optimizing performance. The return on investment compounds over time: every incident where you can answer "which service, which operation, which request" in two minutes rather than two hours is time your team spends improving the product instead of firefighting.
 
 Remember: effective tracing requires balance. Instrument too little, and you won't have enough visibility. Instrument too much, and you'll overwhelm your analysis tools with noise. Start with critical business operations and expand from there. Claude Code is a practical partner for making those judgment calls. ask it to review your current instrumentation coverage and it will point out the gaps that matter most.
-
 
 Related Reading
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for TypeScript Conditional Types Guide
 
 TypeScript conditional types are one of the most powerful yet underutilized features in the type system. They enable you to create type-level logic that adapts based on other types, making your generics more expressive and your APIs more type-safe. This guide shows you how to use Claude Code to understand, write, and debug conditional types effectively.
 
-Understanding Conditional Types Basics
+## Understanding Conditional Types Basics
 
 A conditional type selects one of two types based on a type relationship, using the syntax `T extends U ? X : Y`. This reads as: "If type T can be assigned to type U, use X; otherwise, use Y."
 
@@ -36,9 +35,9 @@ type Test2 = IsString<number>; // false
 
 The `extends` keyword in conditional types means "is assignable to" rather than "inherits from." This distinction matters when working with generics and union types.
 
-Practical Conditional Types for Everyday Use
+## Practical Conditional Types for Everyday Use
 
-Extract and Exclude Patterns
+## Extract and Exclude Patterns
 
 Two of the most useful conditional types are built into TypeScript: `Extract` and `Exclude`. Understanding how they work helps you write similar patterns:
 
@@ -56,7 +55,7 @@ type MyExclude<T, U> = T extends U ? never : T;
 
 Claude Code can help you visualize how these work with union types by showing intermediate steps in the type resolution.
 
-Nullable Types Transformation
+## Nullable Types Transformation
 
 Convert optional types to their required counterparts or handle nullability:
 
@@ -85,7 +84,7 @@ type StrictUser = Required<User>;
 // { id: number; name: string; email: string; }
 ```
 
-Return Type Extraction
+## Return Type Extraction
 
 Extract the return type of a function, which is particularly useful when working with API responses:
 
@@ -105,9 +104,9 @@ type MyReturnType<T extends (...args: any) => any> =
 
 The `infer` keyword is the key to many advanced conditional types, it lets you "extract" a type from within another type.
 
-Advanced Conditional Type Patterns
+## Advanced Conditional Type Patterns
 
-Distributive Conditional Types
+## Distributive Conditional Types
 
 When you use a naked type parameter in a conditional type, TypeScript distributes over union types automatically:
 
@@ -122,7 +121,7 @@ type Result = ToArray<string | number>;
 
 Understanding distribution helps you predict how conditional types behave with unions and avoid surprising results.
 
-Inference with infer
+## Inference with infer
 
 The `infer` keyword lets you extract types from within other types:
 
@@ -140,7 +139,7 @@ type Params = Parameters<(a: string, b: number) => void>;
 // [string, number]
 ```
 
-Conditional Type Chaining
+## Conditional Type Chaining
 
 Chain conditional types to create complex type transformations:
 
@@ -158,9 +157,9 @@ type SimpleFlatten<T> = T extends (infer U)[]
   : T;
 ```
 
-Working with Claude Code on Conditional Types
+## Working with Claude Code on Conditional Types
 
-Debugging Complex Types
+## Debugging Complex Types
 
 When conditional types produce unexpected results, use utility techniques to debug:
 
@@ -176,7 +175,7 @@ type WhatBranch<T, U> = T extends U
 // Ask Claude to explain: "What does WhatBranch<string, string> evaluate to?"
 ```
 
-Refactoring Existing Types
+## Refactoring Existing Types
 
 Claude Code can help you refactor verbose conditional types into cleaner versions:
 
@@ -205,7 +204,7 @@ type Refactored<T> = T extends string
   : UnknownKind;
 ```
 
-Actionable Advice
+## Actionable Advice
 
 1. Start Simple: Don't jump into advanced conditional types. Master `extends`, `?`, and `:` before tackling inference.
 

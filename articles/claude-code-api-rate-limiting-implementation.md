@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code API Rate Limiting Implementation Guide
-
 Rate limiting protects your Claude Code API integrations from abuse, ensures fair resource allocation, and prevents unexpected cost overruns. Whether you're building a skill that orchestrates multiple API calls or a service that handles concurrent requests from multiple users, implementing proper rate limiting is essential for production systems.
 
 This guide covers practical rate limiting patterns you can implement directly in your Claude Code skills and adjacent services.
 
-Understanding Rate Limiting Basics
+## Understanding Rate Limiting Basics
 
 Rate limiting controls how frequently your application makes requests to the Claude API. The three most common strategies are:
 
@@ -32,7 +29,7 @@ Token Bucket allows bursts up to a bucket limit while enforcing an average rate 
 
 For Claude Code API integrations, token bucket is often the best choice because API usage naturally varies based on task complexity.
 
-Setting Up Your Rate Limiting Project
+## Setting Up Your Rate Limiting Project
 
 Before diving into code, ensure your project is properly configured for rate limiting development. Create a dedicated module for rate limiting logic so it remains testable and maintainable.
 
@@ -57,7 +54,7 @@ API_RATE_LIMIT = RateLimitConfig(
 )
 ```
 
-Implementing Token Bucket Rate Limiting
+## Implementing Token Bucket Rate Limiting
 
 Here's a practical implementation you can use in a Python-based MCP server or skill helper:
 
@@ -100,7 +97,7 @@ Allow 10 requests per second, with bursts up to 20
 rate_limiter = TokenBucket(rate=10, capacity=20)
 ```
 
-Using Rate Limiting in Your Skills
+## Using Rate Limiting in Your Skills
 
 When building Claude skills that make API calls, wrap your requests with the rate limiter:
 
@@ -118,7 +115,7 @@ def call_claude_api(messages, rate_limiter):
 
 For skills that coordinate multiple API calls, such as those using the `tdd` skill for test-driven development or `frontend-design` for generating UI components, rate limiting ensures consistent performance without hitting API quotas.
 
-Per-User Rate Limiting
+## Per-User Rate Limiting
 
 In multi-user scenarios, you need isolated rate limiting per user. A `RateLimiter` wrapper manages per-key buckets and exposes rate limit metadata:
 
@@ -162,7 +159,7 @@ def get_user_limiter(user_id):
 
 This pattern works well when building services that expose Claude capabilities to multiple users through the `supermemory` skill or custom MCP tools.
 
-Handling Rate Limit Errors
+## Handling Rate Limit Errors
 
 Even with client-side rate limiting, you should handle API-level rate limit responses gracefully. The Claude API returns a 429 status code when limits are exceeded:
 
@@ -186,7 +183,7 @@ def call_with_retry(messages, max_retries=3):
 
 The `Retry-After` header tells you how long to wait before retrying. Always respect this value rather than implementing aggressive retry logic.
 
-Advanced: Distributed Rate Limiting
+## Advanced: Distributed Rate Limiting
 
 When running multiple instances of your service, you need distributed rate limiting that coordinates across processes. Redis provides a reliable implementation. The Lua script approach ensures atomic check-and-consume operations:
 
@@ -242,7 +239,7 @@ class RedisRateLimiter:
 ```
 {% endraw %}
 
-Integrating with Your API Framework
+## Integrating with Your API Framework
 
 Integrate the rate limiter into your API framework as middleware. Here's an example with FastAPI, but the pattern applies to any framework:
 
@@ -282,7 +279,7 @@ async def rate_limit_middleware(request: Request, call_next):
     return response
 ```
 
-Express.js Middleware Integration
+## Express.js Middleware Integration
 
 For Node.js applications, integrate rate limiting as Express middleware using the same token bucket pattern:
 
@@ -321,7 +318,7 @@ function createRateLimitMiddleware(options: RateLimitOptions) {
 
 Use hierarchical rate limiting. implement limits at global, per-user, and per-endpoint levels for defense in depth.
 
-Graceful Degradation
+## Graceful Degradation
 
 When Redis becomes unavailable, you have two options: fail open (allow requests) or fail closed (deny requests). Fail open risks exceeding limits during outages but prevents service degradation. A `HybridRateLimiter` implements automatic fallback to in-memory limiting:
 
@@ -344,7 +341,7 @@ class HybridRateLimiter:
         return allowed, self.local_limiter.tokens
 ```
 
-Practical Recommendations
+## Practical Recommendations
 
 For most Claude Code skill implementations, start simple. A single in-memory token bucket handling your expected request volume works for months before you need to consider distributed solutions.
 
@@ -354,7 +351,7 @@ Consider implementing circuit breakers alongside rate limiting. When the Claude 
 
 Monitor your rate limiter in production. track hit rates, rejected requests, and any fallback activations. This data informs tuning decisions and helps you understand whether your rate limits align with actual usage patterns.
 
-Testing Your Implementation
+## Testing Your Implementation
 
 Verify your rate limiting works correctly before deploying:
 
@@ -382,10 +379,9 @@ if __name__ == '__main__':
 
 Run these tests as part of your skill's continuous integration pipeline. Key test scenarios also include verifying concurrent requests are handled atomically and that the system degrades gracefully when Redis fails.
 
-Conclusion
+## Conclusion
 
 Rate limiting protects your Claude Code integrations from unexpected costs and ensures reliable performance. Start with a token bucket implementation using a typed config dataclass, add per-user isolation for multi-user scenarios, and graduate to distributed limiting with Redis and Lua atomicity only when running multi-server deployments. Handle rate limit errors gracefully with proper retry logic, implement hybrid fallback for Redis outages, and always test your implementation under load before production deployment.
-
 
 Related Reading
 

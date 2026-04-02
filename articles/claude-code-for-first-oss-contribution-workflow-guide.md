@@ -29,11 +29,11 @@ Claude Code serves as an intelligent pair programmer that understands project st
 
 The key is knowing how to use Claude Code effectively at each stage of the contribution process.
 
-Finding Your First OSS Project
+## Finding Your First OSS Project
 
 Before writing any code, you need to find a project worth contributing to. Here's a practical approach:
 
-Starting Your Search
+## Starting Your Search
 
 1. Choose a project you actually use, Contributing to tools you use daily gives you genuine motivation and real-world testing scenarios.
 
@@ -46,7 +46,7 @@ Search for beginner-friendly Python projects
 gh search repos --language python --label "good first issue" --sort stars --limit 10
 ```
 
-Evaluating a Project Before Contributing
+## Evaluating a Project Before Contributing
 
 Before diving in, assess these factors:
 
@@ -55,11 +55,11 @@ Before diving in, assess these factors:
 - License: Confirm the project has an OSS license that permits contributions
 - Issue Response Time: Check how quickly maintainers respond to new issues
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Once you've chosen a project, proper setup is crucial. Claude Code can guide you through this, but here's what to expect:
 
-Fork and Clone
+## Fork and Clone
 
 ```bash
 Fork the repository on GitHub first, then clone your fork
@@ -69,7 +69,7 @@ Add the original repository as upstream
 git remote add upstream git@github.com:original-owner/PROJECT_NAME.git
 ```
 
-Environment Configuration
+## Environment Configuration
 
 Most projects include setup instructions in README.md or CONTRIBUTING.md. Common steps include:
 
@@ -88,7 +88,7 @@ npm test  # or: pytest, cargo test, etc.
 
 If you encounter setup issues, describe them to Claude Code. It can often identify common problems and suggest solutions specific to the project's tech stack.
 
-Understanding the Contribution Workflow
+## Understanding the Contribution Workflow
 
 The typical OSS contribution follows a structured workflow. Here's how to navigate each stage:
 
@@ -174,18 +174,18 @@ In your PR description, include:
 - Testing: Describe how you tested your changes
 - Screenshots: If applicable, show before/after
 
-Working with Code Reviews
+## Working with Code Reviews
 
 Expect feedback on your first few contributions, this is normal and valuable:
 
-Handling Review Feedback
+## Handling Review Feedback
 
 1. Respond professionally: Thank reviewers for their time
 2. Ask clarifying questions: If feedback is unclear, ask for specifics
 3. Make requested changes: Update your branch and push again
 4. Be patient: Maintainers are often volunteers
 
-Using Claude Code for Reviews
+## Using Claude Code for Reviews
 
 Before requesting review, have Claude Code check your changes:
 
@@ -199,7 +199,7 @@ Claude Code can help identify:
 - Missing tests
 - Unclear variable names
 
-Best Practices for First-Time Contributors
+## Best Practices for First-Time Contributors
 
 Do:
 
@@ -216,14 +216,13 @@ Don't:
 - Get discouraged by rejection or requests for changes
 - Rush to finish, quality matters more than speed
 
-Conclusion
+## Conclusion
 
 Your first OSS contribution is a significant milestone. Using Claude Code as your pairing partner makes the process less daunting and more productive. Remember that every experienced OSS contributor started exactly where you are now. The OSS community welcomes new voices and contributions.
 
 Start small, stay curious, and keep contributing. Each PR makes you more comfortable with the workflow and builds relationships with maintainers. Soon, you'll be helping other newcomers navigate their first contributions.
 
-Good luck with your OSS journey!
-
+## Good luck with your OSS journey!
 
 Related Reading
 

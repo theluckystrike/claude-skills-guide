@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Delta Git Diff Workflow Guide
-
 Git diffs are the daily bread and butter of software development. Whether you're reviewing pull requests, checking your own changes before committing, or investigating bugs, viewing diffs efficiently directly impacts your productivity. Delta (delta.github.io) is a syntax-highlighting pager for git diffs that transforms plain text diffs into beautiful, readable output with side-by-side views, line numbers, and syntax highlighting. Combined with Claude Code, you can create intelligent workflows that not only display diffs beautifully but also analyze them contextually using AI.
 
 This guide shows you how to integrate Delta with Claude Code to build powerful git diff workflows that enhance your code review and development experience.
 
-Installing and Configuring Delta
+## Installing and Configuring Delta
 
 Before integrating with Claude Code, you need Delta installed on your system. The most common installation methods are:
 
@@ -50,7 +47,7 @@ git config --global delta.navigate true
 
 The navigate feature enables keyboard shortcuts to jump between changed sections, extremely useful when reviewing large diffs.
 
-Basic Delta Git Integration with Claude Code
+## Basic Delta Git Integration with Claude Code
 
 The simplest workflow combines Claude Code's file reading and git commands with Delta for display. Here's how to view any diff through Delta:
 
@@ -105,7 +102,7 @@ git diff main..feature-branch | delta
 
 This skill gives you quick access to different diff views. Simply invoke it when you need to review changes.
 
-Creating an Intelligent Diff Review Skill
+## Creating an Intelligent Diff Review Skill
 
 Beyond simple display, you can create a Claude Code skill that analyzes diffs using Claude's AI capabilities. This skill can summarize changes, explain what code does, or identify potential issues:
 
@@ -147,7 +144,7 @@ After viewing the diff in Delta, ask Claude Code to:
 Use `git diff --name-only` to list all changed files, then read specific files for context.
 ```
 
-Advanced Workflow: Delta with Git Hooks
+## Advanced Workflow: Delta with Git Hooks
 
 You can integrate Delta directly into your git workflow using git hooks. This ensures every diff you view automatically uses Delta:
 
@@ -174,7 +171,7 @@ Add to your git config
 
 Delta automatically applies different themes based on file extension, making multi-language code reviews more pleasant.
 
-Combining Claude Code Analysis with Delta Display
+## Combining Claude Code Analysis with Delta Display
 
 Here's a powerful workflow that combines Delta's visual capabilities with Claude Code's analytical power:
 
@@ -188,7 +185,7 @@ Then ask Claude to analyze specific changes
 
 The key insight is that Delta helps you visually parse the changes quickly, while Claude Code helps you understand the intent and implications. This two-step process, visual review followed by AI analysis, significantly improves code review quality.
 
-Delta Features That Enhance Code Review
+## Delta Features That Enhance Code Review
 
 Delta offers several features that make it particularly valuable for code review:
 
@@ -202,7 +199,7 @@ Delta offers several features that make it particularly valuable for code review
 
 Enable navigate mode with `delta --navigate`, then use `n` and `p` to jump to next/previous hunk.
 
-Practical Example: Full Code Review Workflow
+## Practical Example: Full Code Review Workflow
 
 Here's a complete workflow you can use with Claude Code:
 
@@ -222,7 +219,7 @@ git add -p  # Interactive staging with patch
 
 This workflow scales from quick self-reviews to thorough pull request examinations.
 
-Conclusion
+## Conclusion
 
 Integrating Delta with Claude Code creates a powerful combination: Delta handles the visual presentation of git diffs with beautiful syntax highlighting and navigation, while Claude Code provides intelligent analysis and context. Together, they transform git diffs from raw text into actionable insights.
 

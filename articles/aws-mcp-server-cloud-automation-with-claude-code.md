@@ -16,7 +16,7 @@ permalink: /aws-mcp-server-cloud-automation-with-claude-code/
 
 [The Model Context Protocol (MCP) server for AWS enables Claude Code to interact directly with your cloud infrastructure](/building-your-first-mcp-tool-integration-guide-2026/) This integration transforms how developers manage AWS resources, allowing you to provision, configure, and monitor cloud services through natural language commands. This guide covers practical setup and automation patterns for AWS MCP server cloud automation with Claude Code.
 
-Setting Up the AWS MCP Server
+## Setting Up the AWS MCP Server
 
 Before automating AWS resources, [you need to configure the MCP server to authenticate with your AWS account](/mcp-oauth-21-authentication-implementation-guide/) The server supports multiple authentication methods including AWS credentials file, environment variables, and IAM roles.
 
@@ -45,7 +45,7 @@ Create a configuration file at `~/.claude/mcp-servers.json` to define your AWS M
 
 Restart Claude Code to load the MCP server. You can verify the connection by asking Claude to list available AWS resources.
 
-Automating EC2 Instance Management
+## Automating EC2 Instance Management
 
 One of the most common use cases involves managing EC2 instances through natural language. Instead of manually navigating the AWS console or writing CloudFormation templates, you describe what you need and Claude handles the API calls.
 
@@ -65,7 +65,7 @@ Show me all EC2 instances with the tag Environment: Development
 
 This approach reduces the time spent on repetitive infrastructure tasks and minimizes console errors.
 
-Infrastructure as Code Patterns
+## Infrastructure as Code Patterns
 
 The AWS MCP server works well alongside traditional Infrastructure as Code tools. You can generate CloudFormation or Terraform configurations by describing your requirements to Claude.
 
@@ -80,7 +80,7 @@ Example workflow:
 
 This hybrid approach gives you both the speed of conversational interaction and the reproducibility of version-controlled infrastructure code.
 
-Lambda Function Deployment
+## Lambda Function Deployment
 
 Automating Lambda functions represents another powerful use case. You can create, update, and invoke functions without leaving your Claude session.
 
@@ -98,7 +98,7 @@ Update the code for my-function-handler using the files in my-lambda-project/
 
 The MCP server handles the upload and configuration updates. This workflow pairs well with the [frontend-design skill](/best-claude-code-skills-for-frontend-development/) when you need to deploy serverless backends alongside frontend assets.
 
-S3 Bucket Management
+## S3 Bucket Management
 
 Managing S3 buckets and objects becomes straightforward with the AWS MCP server. You can create buckets, set policies, and manage object operations through conversation.
 
@@ -112,7 +112,7 @@ List all objects in s3://my-app-assets-2026/ older than 90 days
 
 For content-heavy workflows, combine this with the [pdf skill](/claude-skills-for-legal-document-automation/) to generate reports about your S3 usage and automatically archive them.
 
-Security and Access Control
+## Security and Access Control
 
 The AWS MCP server respects your IAM permissions. Claude can only perform actions your credentials allow. This security model means you should use scoped credentials for automation tasks.
 
@@ -139,7 +139,7 @@ Create an IAM user with specific permissions for the tasks you want to automate:
 
 Use the [supermemory skill](/claude-code-2026-new-features-skills-and-hooks-roundup/) to document your IAM configurations and track changes over time.
 
-Monitoring and Operations
+## Monitoring and Operations
 
 Beyond resource creation, the AWS MCP server helps with operational tasks. Query CloudWatch metrics, review logs, and manage alerts through conversation.
 
@@ -152,13 +152,13 @@ Tail the last 100 lines of logs from /var/log/nginx/access.log
 
 This conversational interface reduces the learning curve for developers new to AWS monitoring. You don't need to remember specific CloudWatch query syntax, just describe what you want to know.
 
-Combining with Other Claude Skills
+## Combining with Other Claude Skills
 
 The real power emerges when combining AWS automation with other Claude skills. Use the [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) to validate infrastructure changes before applying them. Apply the [frontend-design skill](/best-claude-code-skills-for-frontend-development/) to deploy complete applications with cloud backends.
 
 For documentation, the [pdf skill](/claude-skills-for-legal-document-automation/) generates architecture diagrams and deployment guides. The [supermemory skill](/claude-code-2026-new-features-skills-and-hooks-roundup/) maintains institutional knowledge about your AWS setup.
 
-Best Practices
+## Best Practices
 
 When automating AWS with Claude Code, follow these guidelines:
 
@@ -170,7 +170,7 @@ Version control your infrastructure generated through Claude. Store CloudFormati
 
 Test in non-production first when trying new automation patterns. The AWS free tier provides adequate space for experimentation.
 
-Conclusion
+## Conclusion
 
 The AWS MCP server transforms cloud automation from console clicking or script writing into conversational interaction. By describing what you need in plain language, Claude Code handles the API complexity while maintaining AWS best practices through your IAM permissions.
 

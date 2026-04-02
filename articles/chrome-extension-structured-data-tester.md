@@ -18,7 +18,7 @@ Structured data has become essential for search engine optimization and semantic
 
 This guide examines how to use Chrome extensions for structured data testing, compares practical approaches, shows you how to write correct markup from the start, and explains how to integrate validation into your development workflow from local dev through CI/CD.
 
-Understanding Structured Data in the Browser
+## Understanding Structured Data in the Browser
 
 When you add JSON-LD or Microdata to a webpage, the browser parses this information into a structured format that search engines can consume. Chrome's DevTools expose this data through the Chrome DevTools Protocol, allowing extensions to access and validate it programmatically.
 
@@ -32,7 +32,7 @@ The typical workflow involves adding schema markup to your HTML, then using an e
 
 Chrome extensions eliminate that context switch. They parse the structured data on the currently open tab and display validation results in a panel, letting you iterate markup changes without leaving the browser.
 
-Key Features of Structured Data Testing Extensions
+## Key Features of Structured Data Testing Extensions
 
 Effective Chrome extensions for structured data testing typically provide:
 
@@ -45,11 +45,11 @@ Effective Chrome extensions for structured data testing typically provide:
 
 Some extensions go further by integrating with Google's Rich Results Test API, giving you a server-side assessment that matches what Googlebot actually sees.
 
-Schema Types You'll Test Most Often
+## Schema Types You'll Test Most Often
 
 Understanding which schema types have required properties, and which are commonly misimplemented, helps you use validation tools more effectively.
 
-Article Schema
+## Article Schema
 
 Used for blog posts, news articles, and how-to guides. Common implementation:
 
@@ -84,7 +84,7 @@ Used for blog posts, news articles, and how-to guides. Common implementation:
 
 Validators frequently flag Article markup for a missing `publisher.logo` or using a relative URL instead of an absolute one.
 
-Product Schema
+## Product Schema
 
 Used for e-commerce product pages. The `offers` block has several required fields:
 
@@ -124,7 +124,7 @@ Used for e-commerce product pages. The `offers` block has several required field
 
 The `availability` and `itemCondition` fields must be full schema.org URLs, not shorthand strings like `"InStock"`. Validators catch this immediately; search consoles often don't surface it until weeks later.
 
-FAQ Schema
+## FAQ Schema
 
 One of the highest-impact schema types for organic search because it enables FAQ dropdowns directly in search results:
 
@@ -157,7 +157,7 @@ One of the highest-impact schema types for organic search because it enables FAQ
 
 FAQ schema fails validation when the `acceptedAnswer.text` field contains HTML tags that schema.org's spec doesn't permit, or when `mainEntity` is an object instead of an array.
 
-Practical Testing Workflow
+## Practical Testing Workflow
 
 Here's how to integrate structured data testing into your development process from first implementation through deployment.
 
@@ -261,7 +261,7 @@ When auditing a site that uses structured data across many page types, articles,
 
 This is faster than fixing pages one at a time and catches systemic markup problems.
 
-Comparing Extension Approaches
+## Comparing Extension Approaches
 
 Different extensions offer varying levels of functionality. The right choice depends on your workflow and what kind of validation matters most.
 
@@ -276,11 +276,11 @@ Extensions that integrate with Google's Rich Results Test API tend to be more ac
 
 Consider your workflow: if you primarily need quick syntax validation during coding, a lightweight local extension works best. If you need to verify that your Product schema will actually show a rich snippet, with the price, rating, and image displayed, choose an extension with Google Rich Results preview functionality.
 
-Automating Validation in CI/CD
+## Automating Validation in CI/CD
 
 Chrome extensions handle manual testing, but you should also automate validation as part of your continuous integration pipeline. This catches regressions before they reach production, especially important when structured data is generated from templates or CMS fields.
 
-Node.js Validation with ajv
+## Node.js Validation with ajv
 
 Use `ajv` for JSON Schema validation against a schema you define for your specific markup requirements:
 
@@ -351,7 +351,7 @@ if (!validateProductSchema(productData)) {
 }
 ```
 
-Playwright-Based End-to-End Validation
+## Playwright-Based End-to-End Validation
 
 For a more realistic test that validates what Googlebot would actually see on your production pages, use Playwright to load the page and extract the structured data:
 
@@ -404,7 +404,7 @@ validatePageStructuredData('https://staging.example.com/product/developer-tool-s
 
 Combine manual extension testing during development with automated Playwright validation in your CI pipeline for comprehensive coverage at every stage.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Several issues frequently cause structured data validation failures. Knowing these in advance saves debugging time.
 
@@ -426,7 +426,7 @@ Multiple @type in a single block without arrays: If an entity is both a `Product
 
 Extension validators catch most of these issues before deployment, saving you from Google Search Console errors that surface weeks after a launch.
 
-Validating Breadcrumbs and Navigation Schema
+## Validating Breadcrumbs and Navigation Schema
 
 BreadcrumbList is one of the simplest schemas to implement but also one of the most commonly broken in practice:
 
@@ -461,7 +461,7 @@ BreadcrumbList is one of the simplest schemas to implement but also one of the m
 
 The common failure mode is using `position` values that start at 0 instead of 1, or omitting `item` on the last element. The validator will flag both. Also confirm that `itemListElement` is an array, a single breadcrumb wrapped in an object (not an array) fails validation even though it looks reasonable.
 
-Best Practices for Ongoing Maintenance
+## Best Practices for Ongoing Maintenance
 
 Structured data requires ongoing attention as schemas evolve and your content management system changes.
 
@@ -476,7 +476,6 @@ Test after content migrations: If you migrate from one CMS to another, structure
 Keep a validation baseline: Save the expected structured data output for your key page types and use it as a regression test. If the Product schema on your most important product page changes unexpectedly, you want to know immediately.
 
 Testing structured data with Chrome extensions transforms what could be a frustrating, slow debugging process into a fast, iterative workflow. By validating early in development, automating checks in CI, and maintaining awareness of schema updates, you ensure your markup consistently delivers the search visibility your content deserves.
-
 
 Related Reading
 

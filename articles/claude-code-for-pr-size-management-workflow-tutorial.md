@@ -15,7 +15,7 @@ score: 8
 {% raw %}
 Pull request size is one of the most overlooked factors in developer productivity. Large PRs slow down code reviews, increase the chance of bugs slipping through, and create merge conflicts that waste everyone's time. In this tutorial, you'll learn how to use Claude Code to automate PR size management, enforce team standards, and build healthier code review habits.
 
-Why PR Size Matters
+## Why PR Size Matters
 
 Before diving into the technical implementation, let's establish why managing PR size matters for your team.
 
@@ -23,11 +23,11 @@ Research consistently shows that code review effectiveness decreases dramaticall
 
 Typical team guidelines suggest keeping PRs under 400 lines of code for optimal review quality. Some teams go stricter with a 200-line limit, while others allow up to 500 lines with additional scrutiny. Regardless of your specific threshold, the key is consistency, every PR should meet the same standard.
 
-Setting Up PR Size Checks with Claude Code
+## Setting Up PR Size Checks with Claude Code
 
 Claude Code can integrate PR size checks at multiple points in your workflow: pre-commit, pre-push, or as part of your CI pipeline.  each approach.
 
-Pre-Commit Size Validation
+## Pre-Commit Size Validation
 
 The first line of defense is checking PR size before code leaves your machine. Create a Claude skill that validates your changes against your team's size limits:
 
@@ -79,7 +79,7 @@ Save this script in your project's `.claude/scripts/` directory and invoke it be
 python3 .claude/scripts/pr_size_validator.py
 ```
 
-Git Hook Integration
+## Git Hook Integration
 
 For automatic enforcement, integrate the size check into Git hooks. Create a pre-commit hook that runs Claude Code:
 
@@ -105,18 +105,18 @@ Make sure the hook is executable:
 chmod +x .git/hooks/pre-commit
 ```
 
-Claude Skills for PR Workflow Automation
+## Claude Skills for PR Workflow Automation
 
 Beyond basic size validation, Claude Code offers powerful skills for managing the entire PR lifecycle. The claude-pr-workflow-manager skill provides a comprehensive framework for PR creation, review, and merging.
 
-Installing the PR Workflow Skill
+## Installing the PR Workflow Skill
 
 ```bash
 Add to your .claude/skills directory
 claude skills add pr-workflow-manager
 ```
 
-Using the Skill for Size-Aware PRs
+## Using the Skill for Size-Aware PRs
 
 Once installed, you can invoke the skill to guide you through creating appropriately-sized PRs:
 
@@ -130,7 +130,7 @@ The skill will:
 3. Guide you through creating focused PRs
 4. Validate each PR meets size requirements before submission
 
-CI Pipeline Integration
+## CI Pipeline Integration
 
 For team-wide enforcement, integrate PR size checks into your CI pipeline. Here's a GitHub Actions example:
 
@@ -166,19 +166,19 @@ jobs:
 
 This workflow automatically runs on every PR and blocks merging if size limits are exceeded.
 
-Actionable Advice for Teams
+## Actionable Advice for Teams
 
 Implementing PR size management is as much about culture as tooling. Here are practical tips for making it stick in your team:
 
-Start with Metrics, Not Enforcement
+## Start with Metrics, Not Enforcement
 
 Before implementing strict limits, measure your current PR sizes for two weeks. Use this data to set realistic thresholds that match your team's current patterns. A sudden jump from unlimited sizes to 200-line limits will cause friction, gradual improvement works better.
 
-Create a "Small PR" Recognition System
+## Create a "Small PR" Recognition System
 
 Positive reinforcement works better than punishment. Consider recognizing developers who consistently submit well-sized PRs during team standups or in your Slack channel. Highlight the benefits: faster reviews, quicker feedback, and more shipping.
 
-Use Feature Flags for Large Features
+## Use Feature Flags for Large Features
 
 When working on large features that genuinely require many changes, use feature flags to merge incomplete work without triggering size warnings. This allows continuous integration while keeping individual PRs reviewable:
 
@@ -191,18 +191,17 @@ if (featureFlags.isEnabled('new-payment-flow')) {
 }
 ```
 
-Document Exceptions Process
+## Document Exceptions Process
 
 Sometimes a PR legitimately exceeds limits. Create a clear process for requesting exceptions, perhaps a template that requires justification and additional reviewer sign-off. This prevents hard limits from blocking legitimate work while maintaining accountability.
 
-Conclusion
+## Conclusion
 
 Managing PR size with Claude Code isn't about restricting developers, it's about enabling faster feedback, better code quality, and healthier team dynamics. By automating size validation at multiple workflow points, integrating CI checks, and building a culture that values small, focused changes, your team can dramatically improve its code review process.
 
 Start small: implement pre-commit checks today, measure your PR sizes for a week, then gradually add CI enforcement. The investment pays dividends in reduced review time, fewer bugs, and more predictable shipping cycles.
 
 Remember: the best PR is one that reviewers can understand, test, and approve in a single sitting. Claude Code can help you get there.
-
 
 Related Reading
 

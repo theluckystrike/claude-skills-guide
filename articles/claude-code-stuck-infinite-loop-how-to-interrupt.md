@@ -14,13 +14,13 @@ permalink: /claude-code-stuck-infinite-loop-how-to-interrupt/
 
 When Claude Code appears stuck in an infinite loop, it can interrupt your workflow and consume system resources. This guide covers practical methods to regain control and get your development environment back on track.
 
-Recognizing the Problem
+## Recognizing the Problem
 
 An infinite loop in Claude Code typically manifests as repeated tool calls, continuously regenerating responses, or the interface becoming unresponsive. You might notice the same tool being called repeatedly with identical parameters, or the conversation spinning without making progress. This can happen when complex prompts trigger recursive behavior or when certain skills interact in unexpected ways.
 
 Common scenarios include working with skills like frontend-design or algorithmic-art that generate code iteratively, or when using tdd workflows that attempt to run tests in a tight loop. The key is recognizing the pattern early and knowing how to interrupt gracefully.
 
-Signs You Are Stuck
+## Signs You Are Stuck
 
 Not every slow response is a loop. Here is how to tell the difference:
 
@@ -34,7 +34,7 @@ Not every slow response is a loop. Here is how to tell the difference:
 
 If you see the same file being written repeatedly, or the same command being run over and over in the output, you are in a loop. Do not wait. interrupt as soon as you notice the pattern.
 
-Keyboard Interrupt Methods
+## Keyboard Interrupt Methods
 
 The fastest way to interrupt Claude Code is using keyboard shortcuts:
 
@@ -54,7 +54,7 @@ One thing developers often miss: pressing Ctrl+C once sends SIGINT. The process 
 
 If you are on Windows using PowerShell or CMD, the behavior is slightly different. Ctrl+C still works, but Ctrl+Break (on keyboards that have it) sends a harder termination signal that bypasses graceful shutdown handlers.
 
-Process-Level Termination
+## Process-Level Termination
 
 When keyboard interrupts fail, you will need to terminate the process directly:
 
@@ -82,7 +82,7 @@ pgrep -f claude | xargs kill -9
 
 This approach works when Claude Code becomes completely unresponsive to keyboard interrupts. The `-9` flag sends SIGKILL, which cannot be ignored. it immediately terminates the process.
 
-Finding the Right Process to Kill
+## Finding the Right Process to Kill
 
 Claude Code runs as a Node.js process in most installations. If you are not sure which process to kill, use a more targeted approach:
 
@@ -102,7 +102,7 @@ kill -15 $(ps aux | grep -i "claude-code" | grep -v grep | awk '{print $2}')
 
 Signal `-15` (SIGTERM) is safer than `-9` because it gives the process time to save state. Only escalate to `-9` if `-15` does not work within a few seconds.
 
-When Multiple Claude Processes Are Running
+## When Multiple Claude Processes Are Running
 
 If you are running multiple Claude Code sessions across different terminal tabs (a common pattern with fleet workflows), you need to be precise about which process to kill. Killing the wrong one will disrupt another working session.
 
@@ -114,11 +114,11 @@ Kill only the process from the stuck terminal (use the PID shown in that tab)
 kill -15 <specific-PID>
 ```
 
-Preventing Infinite Loops
+## Preventing Infinite Loops
 
 Prevention is more effective than cure. Structure your interactions to avoid triggers:
 
-Set Clear Iteration Limits
+## Set Clear Iteration Limits
 
 When working with iterative tasks using skills like pdf for document generation or xlsx for spreadsheet automation, specify explicit boundaries:
 
@@ -126,7 +126,7 @@ When working with iterative tasks using skills like pdf for document generation 
 "Generate up to 5 iterations of this report, then stop and show me the results."
 ```
 
-Use Confirmation Prompts
+## Use Confirmation Prompts
 
 Ask Claude Code to confirm before proceeding with potentially recursive operations:
 
@@ -134,7 +134,7 @@ Ask Claude Code to confirm before proceeding with potentially recursive operatio
 "Before running each test cycle, confirm you want to continue."
 ```
 
-Break Complex Tasks
+## Break Complex Tasks
 
 Instead of:
 ```
@@ -146,7 +146,7 @@ Try:
 "Refactor the authentication module first. Wait for my confirmation before proceeding to the next module."
 ```
 
-Structuring Prompts That Avoid Loops
+## Structuring Prompts That Avoid Loops
 
 The most loop-prone prompts share a common structure: they describe an outcome without a stopping condition. Compare these:
 
@@ -172,7 +172,7 @@ Safe prompt:
 
 The pattern is always the same: give Claude Code a finite, bounded task with a clear exit condition. Unbounded instructions like "keep going until done" are the primary cause of loops.
 
-Using CLAUDE.md to Set Behavioral Guardrails
+## Using CLAUDE.md to Set Behavioral Guardrails
 
 If you use a `CLAUDE.md` file in your project root, you can embed session-wide constraints that reduce loop risk:
 
@@ -187,7 +187,7 @@ Behavioral Rules
 
 These rules are loaded at session start and apply throughout the conversation, acting as a persistent safety net even when individual prompts are ambiguous.
 
-Recovering After an Interrupt
+## Recovering After an Interrupt
 
 After interrupting Claude Code, your project may be in an inconsistent state. Here is how to recover:
 
@@ -203,7 +203,7 @@ Discard uncommitted changes if needed
 git checkout -- .
 ```
 
-A Systematic Recovery Checklist
+## A Systematic Recovery Checklist
 
 When you interrupt mid-operation, work through this sequence before continuing:
 
@@ -233,7 +233,7 @@ ps aux | grep node
 
 Step 4 (git stash) is particularly useful because it preserves the changes without committing them. You can review them later and cherry-pick anything useful instead of losing all work from the session.
 
-Working with Specific Skills
+## Working with Specific Skills
 
 Certain skills benefit from additional precautions:
 
@@ -243,7 +243,7 @@ Certain skills benefit from additional precautions:
 
 If you are using canvas-design or algorithmic-art, save your work frequently since these generate multiple output files that could accumulate during a loop.
 
-Skill-Specific Safe Invocation Patterns
+## Skill-Specific Safe Invocation Patterns
 
 Here are explicit prompt templates that reduce loop risk for the most loop-prone skill types:
 
@@ -267,7 +267,7 @@ For algorithmic-art:
 "Generate exactly 3 variations of this design. Stop after 3 regardless of quality."
 ```
 
-Long-Running Command Safeguards
+## Long-Running Command Safeguards
 
 For Claude Code commands that might take time, use timeout wrappers:
 
@@ -290,7 +290,7 @@ timeout 120 claude --print "your prompt" 2>&1 | tee /tmp/claude-session.log
 
 If the session times out, your log file still contains all the output up to that point. You can review it, understand how far the process got, and resume from a safe checkpoint.
 
-When to Force Quit
+## When to Force Quit
 
 If standard interrupts don't work and you're confident the process is genuinely stuck:
 
@@ -301,7 +301,7 @@ If standard interrupts don't work and you're confident the process is genuinely 
 
 After force quitting, restart Claude Code in a new session. Your conversation history should be preserved depending on your configuration.
 
-After a Force Quit: Session State Recovery
+## After a Force Quit: Session State Recovery
 
 Claude Code stores conversation context locally. After a force quit, check these locations for recoverable state:
 
@@ -315,7 +315,7 @@ ls -lt ~/.claude/projects/ | head -10
 
 In most cases, Claude Code will offer to resume from the last checkpoint when you start a new session. If it does not, you can reconstruct context by copying the relevant portion of your conversation history into a new session prompt.
 
-Best Practices Summary
+## Best Practices Summary
 
 - Use Ctrl+C as your first intervention
 - Process termination via `kill` when needed

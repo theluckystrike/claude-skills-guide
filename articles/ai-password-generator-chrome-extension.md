@@ -18,13 +18,13 @@ AI Password Generator Chrome Extension: A Developer Guide
 
 Password security remains one of the most critical aspects of digital security. While traditional password generators create random strings based on configurable rules, AI-powered password generators offer smarter approaches, context-aware password creation, memorability optimization, and intelligent strength analysis. This guide covers how these extensions work, how to build one, and what considerations matter for developers and power users.
 
-How AI Password Generators Differ from Traditional Tools
+## How AI Password Generators Differ from Traditional Tools
 
 Standard password generators use cryptographic random number generators (CSPRNG) to produce strings like `Kj8#mP2$xL9@qR4`. These are cryptographically strong but difficult to remember. AI password generators take a different approach by analyzing patterns, user context, and security requirements to produce passwords that balance strength with usability.
 
 The AI component typically handles three functions: analyzing password strength using machine learning models, generating memorable but secure passphrases based on semantic patterns, and detecting when a password might be vulnerable to specific attack vectors like dictionary attacks or rainbow table attacks.
 
-Core Architecture
+## Core Architecture
 
 An AI password generator Chrome extension follows the Manifest V3 architecture with three main components:
 
@@ -46,9 +46,9 @@ An AI password generator Chrome extension follows the Manifest V3 architecture w
 
 The popup interface provides the user-facing controls, the background script handles AI inference and secure storage, and content scripts can optionally inject password fields into web forms.
 
-Implementation Patterns
+## Implementation Patterns
 
-The Password Generation Logic
+## The Password Generation Logic
 
 The core generation happens in the background script. Here's a practical implementation that combines traditional randomness with AI-style optimization:
 
@@ -112,7 +112,7 @@ class AIPasswordGenerator {
 }
 ```
 
-The Popup Interface
+## The Popup Interface
 
 The popup provides the user controls for generating passwords:
 
@@ -173,7 +173,7 @@ The popup provides the user controls for generating passwords:
 </html>
 ```
 
-Connecting the Popup
+## Connecting the Popup
 
 The popup script communicates with the background worker:
 
@@ -218,7 +218,7 @@ document.getElementById('copy').addEventListener('click', () => {
 });
 ```
 
-Handling Messages in Background
+## Handling Messages in Background
 
 ```javascript
 // background.js - Message handling
@@ -243,18 +243,17 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Security Considerations
+## Security Considerations
 
 When building password generator extensions, several security practices matter. Never store generated passwords in localStorage or unsencrypted files, use chrome.storage with encryption or memory-only handling. API keys for any AI services should remain in chrome.storage.local, never in source code. Always use crypto.getRandomValues() for randomness rather than Math.random(). Consider implementing auto-clear functionality that removes passwords from clipboard after a configurable timeout.
 
-Advanced Features for Power Users
+## Advanced Features for Power Users
 
 Beyond basic generation, consider implementing password history that syncs across devices using chrome.storage.sync, integration with password managers through their APIs, keyboard shortcuts for quick generation, and strength analysis that checks generated passwords against common pattern databases.
 
 The AI component can be extended to analyze password patterns, detect potential compromises through HaveIBeenPwned API integration, suggest improvements based on the specific service's requirements, and provide contextual recommendations based on the current website's password policies.
 
 Building an AI password generator extension gives you complete control over your password security while learning valuable skills in Chrome extension development, cryptographic implementation, and secure coding practices.
-
 
 Related Reading
 
@@ -264,7 +263,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Generating a Password for a New Account
+## Step-by-Step: Generating a Password for a New Account
 
 1. Navigate to a website's registration or password change page
 2. Click the extension icon. the popup detects the current domain
@@ -273,7 +272,7 @@ Step-by-Step: Generating a Password for a New Account
 5. Click "Copy" to send it to your clipboard, or click "Autofill" to inject it directly into the password field
 6. The extension optionally saves an encrypted hint (not the password itself) to `chrome.storage.sync`
 
-Advanced: HaveIBeenPwned Integration
+## Advanced: HaveIBeenPwned Integration
 
 Check generated passwords against known breach databases before use:
 
@@ -305,7 +304,7 @@ async function generateSafePassword(length = 20) {
 }
 ```
 
-Comparison with Password Managers
+## Comparison with Password Managers
 
 | Feature | This Extension | 1Password | Bitwarden |
 |---|---|---|---|
@@ -318,7 +317,7 @@ Comparison with Password Managers
 
 The extension is best as a focused password generation tool, not a full password manager. 1Password and Bitwarden provide the complete ecosystem of vault storage, sync, and autofill that production use requires.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Autofill not working on some sites: Directly dispatching input events is not always enough to trigger React/Vue form validation. Fire both `input` and `change` events and ensure the `nativeInputValueSetter` trick is applied for React-controlled inputs:
 
@@ -346,6 +345,5 @@ function detectPasswordConstraints(field) {
 ```
 
 Building an AI password generator extension gives you complete control over password security while developing practical skills in Chrome extension development, cryptographic implementation, and secure coding practices.
-
 
 {% endraw %}

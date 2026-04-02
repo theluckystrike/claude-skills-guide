@@ -13,10 +13,9 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 Using Claude with Markdown documentation in Rails and Ruby applications transforms how developers approach documentation, testing, and code generation. This guide provides concrete examples of integrating Claude into your Ruby workflow, showing practical patterns you can implement immediately. Whether you are working on a greenfield Rails 7 API or maintaining a decade-old monolith, the patterns here apply directly.
 
-Setting Up Claude for Ruby Projects
+## Setting Up Claude for Ruby Projects
 
 The first step involves configuring your Rails project to work effectively with Claude. Create a `CLAUDE.md` file in your project root. This file acts as persistent project context that Claude reads at the start of every session. It tells Claude about your Rails version, Ruby version, key dependencies, and team conventions. reducing back-and-forth and improving the accuracy of every code suggestion.
 
@@ -72,7 +71,7 @@ end
 
 When Claude understands your stack at session start, it generates more accurate code suggestions and documentation. It will stop recommending gems you do not use and will follow the naming conventions you have defined.
 
-Generating Model Documentation with Claude
+## Generating Model Documentation with Claude
 
 One of the most valuable use cases involves using Claude to document your ActiveRecord models. Instead of manually writing documentation, you can describe your models and let Claude generate comprehensive Markdown files that explain associations, validations, enums, scopes, and business rules.
 
@@ -113,7 +112,7 @@ Claude is also useful for reviewing models against common Rails antipatterns. As
 | Suggest indexes | "What indexes should this table have?" |
 | Review validations | "Are there validations that should also be DB constraints?" |
 
-Test-Driven Development with the TDD Skill
+## Test-Driven Development with the TDD Skill
 
 The tdd skill enhances your testing workflow significantly. When working on a new feature, describe the expected behavior and let Claude generate RSpec examples before you write the implementation. This forces you to think about the interface first and catches edge cases early.
 
@@ -204,7 +203,7 @@ RSpec.describe "Api::V1::Posts", type: :request do
 end
 ```
 
-Creating API Documentation
+## Creating API Documentation
 
 Rails API documentation benefits greatly from Claude's ability to generate OpenAPI specifications from controller code. Describe your endpoints and Claude helps create comprehensive documentation:
 
@@ -257,7 +256,7 @@ end
 
 When you paste this controller into a Claude session and ask for OpenAPI YAML, it produces a spec covering all four endpoints, response schemas, error responses, and authentication requirements. For documentation that goes to stakeholders, use the pdf skill to generate downloadable documentation files or the docx skill to create formatted documentation for non-technical reviewers.
 
-Database Migration Documentation
+## Database Migration Documentation
 
 Documenting migrations helps future developers understand schema evolution. When writing migrations, include descriptive comments that explain the business reason for the change, not just the mechanical operation:
 
@@ -298,7 +297,7 @@ A few migration patterns where Claude adds the most value:
 - Reversibility audit: ask "is this migration safely reversible? What would happen on rollback?"
 - Down method: ask Claude to fill in the `down` method when you have written only `up`
 
-Managing Project Context with Super Memory
+## Managing Project Context with Super Memory
 
 The supermemory skill proves invaluable for maintaining project context across sessions. Store architectural decisions, coding standards, and team conventions so that every Claude session starts with full awareness of how your project is structured:
 
@@ -331,7 +330,7 @@ Background Jobs
 
 This context persists across Claude sessions, ensuring consistent responses aligned with your project standards. When you add a new convention, update the memory and Claude will immediately follow it in the next session.
 
-Frontend Integration Documentation
+## Frontend Integration Documentation
 
 When your Rails application includes JavaScript frontend code, Claude helps maintain consistency across the stack. Document component interactions and ask Claude to review Stimulus controllers against your application's patterns:
 
@@ -374,7 +373,7 @@ export default class extends Controller {
 
 Claude understands Stimulus patterns and can suggest improvements to your frontend architecture. When you paste a Stimulus controller and ask "what could go wrong with this on mobile?" or "how would I add optimistic UI updates here?", the answers are grounded in your actual stack rather than generic JavaScript advice.
 
-Deployment and Environment Documentation
+## Deployment and Environment Documentation
 
 Document your deployment process using Markdown that Claude can reference. When an incident happens at 2am, clear documentation saves time. Claude can help generate runbooks from your Capistrano or Kamal configuration:
 
@@ -409,7 +408,7 @@ end
 
 Paste this into Claude with your deployment steps and ask: "Write a deployment runbook in Markdown covering normal deploys, rollback procedure, and database migration failures." The result is a structured document you can commit to your repo under `docs/deployment.md`.
 
-Practical Workflow: The Full Loop
+## Practical Workflow: The Full Loop
 
 The highest-value workflow combines all of these pieces into a repeatable loop for every new feature:
 
@@ -423,7 +422,7 @@ The highest-value workflow combines all of these pieces into a repeatable loop f
 
 This loop keeps documentation current automatically, because the conventions you add to `CLAUDE.md` during a feature become the context that improves the next feature.
 
-Conclusion
+## Conclusion
 
 Integrating Claude into your Rails and Ruby workflow dramatically improves documentation quality, testing coverage, and code consistency. The key lies in providing rich context through `CLAUDE.md`, maintaining conventions in the supermemory skill, and using specialized skills like tdd for testing, pdf for generated documentation, and supermemory for maintaining project knowledge. Start with one area. perhaps model documentation or test generation. and expand the workflow as your team becomes comfortable. The compound effect of consistent context means every session gets more useful over time.
 

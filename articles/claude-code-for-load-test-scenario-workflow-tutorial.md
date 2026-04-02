@@ -17,17 +17,17 @@ Claude Code for Load Test Scenario Workflow Tutorial
 
 Load testing is critical for ensuring your applications can handle real-world traffic conditions. In this comprehensive tutorial, you'll learn how to use Claude Code to create, manage, and execute load test scenario workflows that integrate smoothly into your development pipeline.
 
-Understanding Load Test Scenarios with Claude Code
+## Understanding Load Test Scenarios with Claude Code
 
 Claude Code isn't just for writing code, it can orchestrate entire load testing workflows. By combining Claude's natural language processing with shell execution capabilities, you can build sophisticated test scenarios that would otherwise require complex scripting or dedicated tools.
 
 The key advantage of using Claude Code for load testing is its ability to understand context, make decisions during test execution, and adapt scenarios based on real-time results. This makes it particularly valuable for exploratory load testing and iterative performance tuning.
 
-Setting Up Your Load Test Environment
+## Setting Up Your Load Test Environment
 
 Before creating workflows, ensure your environment is properly configured. You'll need a load testing tool installed, common options include k6, Apache Bench (ab), wrk, or Locust. Claude Code will orchestrate these tools while providing intelligent oversight.
 
-Installing Required Dependencies
+## Installing Required Dependencies
 
 First, verify your load testing tools are available:
 
@@ -39,7 +39,7 @@ Install k6 if needed (macOS)
 brew install k6
 ```
 
-Creating a Claude Skill for Load Testing
+## Creating a Claude Skill for Load Testing
 
 Create a dedicated skill to encapsulate your load testing workflow. Save this as `skills/load-test-skill.md`:
 
@@ -80,7 +80,7 @@ Execution Steps
 
 Notice the `{{ variable }}` syntax in the skill, this is where the raw tags become essential for preventing Liquid template processing conflicts.
 
-Building the Workflow Script
+## Building the Workflow Script
 
 Create a bash script that Claude Code will execute to run your load tests:
 
@@ -130,7 +130,7 @@ EOF
 echo "Test completed. Results saved to $RESULTS_DIR/results.json"
 ```
 
-Executing Load Tests with Claude
+## Executing Load Tests with Claude
 
 Once your skill and scripts are in place, invoke Claude Code to run load tests:
 
@@ -144,9 +144,9 @@ Claude will:
 3. Monitor the test progress
 4. Analyze results and provide insights
 
-Advanced Workflow Patterns
+## Advanced Workflow Patterns
 
-Sequential Scenario Testing
+## Sequential Scenario Testing
 
 For more complex scenarios, create a workflow that runs multiple test phases:
 
@@ -182,7 +182,7 @@ for PHASE in "${PHASES[@]}"; do
 done
 ```
 
-Real-Time Monitoring
+## Real-Time Monitoring
 
 Integrate real-time monitoring to catch issues as they occur:
 
@@ -198,7 +198,7 @@ while kill -0 $PID 2>/dev/null; do
 done
 ```
 
-Analyzing Results Effectively
+## Analyzing Results Effectively
 
 After test execution, use Claude to analyze the results:
 
@@ -213,7 +213,7 @@ cat results.json | jq -r '
 
 This gives you quick insights into response times, error rates, and throughput metrics.
 
-Actionable Best Practices
+## Actionable Best Practices
 
 1. Start Small: Begin with baseline tests using 10-25 virtual users before scaling up. This helps identify basic issues quickly.
 
@@ -225,14 +225,13 @@ Actionable Best Practices
 
 5. Automate Regression Testing: Integrate load tests into your CI/CD pipeline to catch performance regressions before deployment.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms load testing from a manual, complex process into an accessible, intelligent workflow. By using its orchestration capabilities, you can build repeatable test scenarios, get immediate insights from results, and continuously improve your application's performance.
 
 Start with simple tests, gradually add complexity, and let Claude handle the orchestration overhead. Your applications, and your users, will thank you.
 
-
-Integrating Load Test Results with Claude Code Analysis
+## Integrating Load Test Results with Claude Code Analysis
 
 Raw k6 output gives you numbers; Claude Code turns those numbers into actionable diagnosis. After a test run, pipe the results JSON directly to Claude for contextual analysis rather than manually scanning metric output.
 
@@ -272,7 +271,7 @@ fi
 
 Feed this output to Claude with a prompt like "P95 is 850ms against a 500ms threshold. what are the most likely causes and what should I check first?" Claude can suggest database query profiling, connection pool exhaustion, or slow external API dependencies based on the pattern of the metrics, rather than returning a generic list of possibilities.
 
-Parameterizing Tests for CI/CD Pipelines
+## Parameterizing Tests for CI/CD Pipelines
 
 Integrating load tests into CI/CD requires making tests environment-aware. A load test that runs against localhost during development should reconfigure automatically for staging and production targets without manual edits to test scripts.
 

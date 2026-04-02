@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Kotlin Delegation Pattern Workflow"
 description: "Learn how to use Claude Code to streamline your Kotlin delegation pattern implementation with practical examples, code snippets, and actionable."
@@ -14,17 +13,16 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Kotlin Delegation Pattern Workflow
 
 Kotlin's delegation pattern is a powerful feature that allows you to delegate method calls to another object, promoting composition over inheritance and improving code reusability. When combined with Claude Code, you can efficiently implement, refactor, and maintain delegation patterns in your Kotlin projects. This guide provides practical workflows, code examples, and actionable strategies for using Claude Code in your Kotlin delegation pattern development.
 
-Understanding Kotlin Delegation Basics
+## Understanding Kotlin Delegation Basics
 
 Kotlin provides first-class support for delegation through the `by` keyword. The language offers both built-in delegations like `lazy`, `observable`, and `vetoable`, as well as the ability to implement custom delegators. Understanding these fundamentals is essential before applying Claude Code to assist with your workflow.
 
-Built-in Delegation Properties
+## Built-in Delegation Properties
 
 Kotlin's standard library includes several useful delegation patterns:
 
@@ -48,7 +46,7 @@ var positiveValue by vetoable(0) { _, _, newValue ->
 
 When working with these patterns, Claude Code can help you generate appropriate implementations, explain behavior, and suggest optimal usage scenarios based on your specific requirements.
 
-Setting Up Claude Code for Kotlin Development
+## Setting Up Claude Code for Kotlin Development
 
 Before diving into delegation patterns, ensure Claude Code is properly configured for your Kotlin project. Create a `CLAUDE.md` file in your project root to establish context-aware assistance:
 
@@ -70,11 +68,11 @@ Code Conventions
 
 This configuration helps Claude Code provide more accurate suggestions for delegation pattern implementations specific to your project structure and coding standards.
 
-Implementing Custom Delegation Patterns
+## Implementing Custom Delegation Patterns
 
 Custom delegation allows you to create reusable behavior that can be applied across different classes. Here's a practical workflow for implementing custom delegators with Claude Code assistance.
 
-Step 1: Define the Delegator Interface
+## Step 1: Define the Delegator Interface
 
 Start by asking Claude Code to generate a clean interface for your delegator:
 
@@ -111,7 +109,7 @@ class CachedValue<V>(
 }
 ```
 
-Step 2: Implement the Delegator Class
+## Step 2: Implement the Delegator Class
 
 Ask Claude Code to extend the implementation with thread-safety:
 
@@ -156,11 +154,11 @@ class CachedValue<V>(
 }
 ```
 
-Practical Delegation Patterns for Android Development
+## Practical Delegation Patterns for Android Development
 
 In Android development, delegation patterns are particularly useful for managing lifecycle-aware components, view binding, and dependency injection.
 
-Lifecycle-Aware Delegation
+## Lifecycle-Aware Delegation
 
 Create a delegation pattern that automatically handles lifecycle events:
 
@@ -199,11 +197,11 @@ class MyFragment : Fragment() {
 
 Ask Claude Code for variations: "Create a lifecycle-aware delegate that automatically closes resources when the fragment is destroyed"
 
-Refactoring to Delegation Patterns
+## Refactoring to Delegation Patterns
 
 Claude Code excels at helping you refactor existing code to use delegation patterns. This is particularly valuable when dealing with inheritance hierarchies that should be composition-based.
 
-Common Refactoring Scenario
+## Common Refactoring Scenario
 
 When you have:
 
@@ -252,7 +250,7 @@ class UserRepository(
 }
 ```
 
-Best Practices for Delegation Pattern Workflow
+## Best Practices for Delegation Pattern Workflow
 
 Following these practices ensures maintainable and effective delegation implementations:
 
@@ -316,11 +314,11 @@ class SynchronizedLazyDelegate<T>(
 ) : ReadWriteProperty<Any?, T> { /* implementation */ }
 ```
 
-Troubleshooting Common Delegation Issues
+## Troubleshooting Common Delegation Issues
 
 When working with delegation patterns, you may encounter issues that Claude Code can help diagnose and resolve.
 
-Property Delegate Type Mismatch
+## Property Delegate Type Mismatch
 
 If you see type mismatch errors with delegates, ensure your delegate matches the property type:
 
@@ -335,7 +333,7 @@ val intProperty: Int by lazy { 42 }
 
 Ask Claude Code: "Fix this type mismatch in the delegation" and provide the code for immediate correction.
 
-Delegate Not Found Errors
+## Delegate Not Found Errors
 
 When using custom delegates, ensure proper import statements and interface implementations:
 
@@ -346,7 +344,7 @@ import kotlin.properties.ReadWriteProperty
 class MyDelegate<V> : ReadWriteProperty<Any?, V> { /* ... */ }
 ```
 
-Conclusion
+## Conclusion
 
 Kotlin's delegation patterns, combined with Claude Code's assistance, provide a powerful workflow for building maintainable, reusable code. By using Claude Code's ability to generate, explain, and refactor delegation implementations, you can accelerate development while ensuring best practices. Remember to define clear interfaces, document behavior, and use built-in delegates where appropriate. With these patterns in your toolkit, you'll write more elegant and composable Kotlin code.
 

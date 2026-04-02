@@ -24,7 +24,7 @@ There are several compelling reasons to run Claude Code within Docker containers
 
 Additionally, Docker provides security benefits by containing AI operations within a sandboxed environment. This is particularly valuable when working with unfamiliar code or when Claude Code needs to execute commands that could affect the system.
 
-Setting Up Your Docker Environment for Claude Code
+## Setting Up Your Docker Environment for Claude Code
 
 Before running Claude Code in Docker, you need to create a Dockerfile that includes all necessary dependencies. Here's a practical example:
 
@@ -59,7 +59,7 @@ docker build -t claude-dev .
 docker run -it -v $(pwd):/workspace claude-dev
 ```
 
-Configuring Claude Code Inside the Container
+## Configuring Claude Code Inside the Container
 
 Once your container is running, launch Claude Code with the `--dangerously-skip-permissions` flag to enable full functionality:
 
@@ -78,7 +78,7 @@ Use npm for JavaScript/TypeScript dependencies.
 Run tests with: npm test
 ```
 
-Practical Example: Building a Node.js API
+## Practical Example: Building a Node.js API
 
 Let's walk through a practical example of using Claude Code inside Docker to build a simple REST API. Start your container and ask Claude Code to help you:
 
@@ -99,7 +99,7 @@ curl -X POST http://localhost:3000/todos -H "Content-Type: application/json" -d 
 curl http://localhost:3000/todos
 ```
 
-Working with Docker Volumes and Bind Mounts
+## Working with Docker Volumes and Bind Mounts
 
 To make the most of Claude Code in Docker, use bind mounts to share your project files between the host and container. This allows you to edit files on your host using your preferred IDE while running Claude Code in the container:
 
@@ -112,7 +112,7 @@ docker run -it \
 
 The second volume mount preserves Claude Code's configuration and project memory across container restarts, maintaining continuity in your AI-assisted development sessions.
 
-Integrating with Docker Compose for Complex Projects
+## Integrating with Docker Compose for Complex Projects
 
 For more complex development environments, Docker Compose helps you orchestrate multiple services alongside Claude Code. Here's an example `docker-compose.yml`:
 
@@ -137,11 +137,11 @@ services:
 
 This setup gives you Claude Code working alongside a PostgreSQL database, perfect for developing database-backed applications with AI assistance.
 
-Integrating MCP Servers in Containers
+## Integrating MCP Servers in Containers
 
 MCP (Model Context Protocol) servers extend Claude Code's capabilities by providing specialized tools for various tasks. Running MCP servers inside Docker alongside Claude Code creates a powerful, self-contained development environment.
 
-Containerized MCP Server Example
+## Containerized MCP Server Example
 
 Here's how to run an MCP filesystem server inside its own container:
 
@@ -159,7 +159,7 @@ RUN mkdir -p /workspace/files
 ENTRYPOINT ["npx", "server-filesystem", "/workspace/files"]
 ```
 
-Connecting Claude Code to Containerized MCP Servers
+## Connecting Claude Code to Containerized MCP Servers
 
 Configure Claude Code to communicate with MCP servers running in separate containers:
 
@@ -179,7 +179,7 @@ Configure Claude Code to communicate with MCP servers running in separate contai
 
 This configuration allows Claude Code to interact with filesystem operations running in an isolated container, providing an additional layer of security and isolation.
 
-Running Skills Inside Containers
+## Running Skills Inside Containers
 
 Claude Code skills like `tdd`, `pdf`, `supermemory`, and `frontend-design` work inside containers when properly configured. Mount the skills directory and ensure dependencies are available:
 
@@ -203,13 +203,13 @@ docker run --rm \
 
 This pattern enables reproducible skill execution across developer machines and CI runners.
 
-Best Practices for Docker-Based Claude Code Development
+## Best Practices for Docker-Based Claude Code Development
 
 When using Claude Code inside Docker containers, follow these best practices for optimal results. First, always mount your project directory as a volume to persist changes. Second, set up a `CLAUDE.md` file in each project to provide context about your development environment. Third, use environment variables for sensitive data like API keys rather than hardcoding them in Dockerfiles.
 
 Regularly rebuild your Docker image to get the latest Claude Code features and security updates. Consider creating a custom base image with pre-installed tools specific to your workflow to reduce startup time.
 
-Use Multi-Stage Builds
+## Use Multi-Stage Builds
 
 Keep your final image small by using multi-stage builds:
 
@@ -227,7 +227,7 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY . .
 ```
 
-Add Health Checks
+## Add Health Checks
 
 Monitor Claude Code's availability with container health checks:
 
@@ -242,7 +242,7 @@ services:
       retries: 3
 ```
 
-Advanced Pattern: Claude Code as a CI/CD Worker
+## Advanced Pattern: Claude Code as a CI/CD Worker
 
 One powerful use case is running Claude Code as part of your CI/CD pipeline for automated code review:
 
@@ -258,13 +258,13 @@ claude-review:
 
 This enables automated code review and refactoring suggestions as part of your development workflow.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 If Claude Code doesn't respond as expected inside Docker, check a few common issues. Ensure the container has sufficient memory allocated, as AI operations can be memory-intensive. Verify that network access is available if Claude Code needs to make API calls. Check that file permissions allow read and write access to mounted volumes.
 
 For persistent storage of Claude Code's project memory and settings, use named volumes rather than ephemeral containers. This ensures your AI assistant maintains context across development sessions.
 
-Conclusion
+## Conclusion
 
 Running Claude Code inside Docker containers transforms your development workflow by providing isolated, reproducible, and shareable AI-assisted development environments. Whether you're working on team projects, experimenting with new technologies, or maintaining consistent development setups across machines, Docker + Claude Code offers a powerful combination that enhances productivity while keeping your host system clean and organized.
 

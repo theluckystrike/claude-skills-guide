@@ -16,7 +16,7 @@ score: 7
 
 Creating smooth, performant CSS animations requires a structured approach. This guide walks you through building a CSS animations workflow with Claude Code, covering keyframe animations, transitions, transform properties, and performance optimization techniques that work in production environments.
 
-Setting Up Your Animation Workflow
+## Setting Up Your Animation Workflow
 
 Before diving into animation code, establish a clean workflow. Use the frontend-design skill to generate component mockups and ensure your animations align with your design system. For documentation purposes, the pdf skill helps create animation specification sheets that developers and designers can reference.
 
@@ -33,7 +33,7 @@ Start by creating a dedicated CSS file for animations. This separates your motio
 
 Defining animation tokens upfront ensures consistency across your project. Reference these tokens throughout your CSS to maintain predictable timing across all interactive elements.
 
-Expanding Your Token System
+## Expanding Your Token System
 
 A minimal token set gets you started, but production applications benefit from a more complete design system for motion. Consider capturing timing, easing curves, and common delays:
 
@@ -62,7 +62,7 @@ A minimal token set gets you started, but production applications benefit from a
 
 The `--ease-spring` value uses an overshoot curve that gives elements a slight bounce at the end of their movement. great for playful UI feedback like button presses and card reveals. Reserve it for interfaces where that energy matches the brand.
 
-Understanding Keyframe Animations
+## Understanding Keyframe Animations
 
 Keyframe animations provide precise control over multi-step motion sequences. Unlike simple transitions, keyframes let you define specific states at percentage intervals:
 
@@ -85,7 +85,7 @@ Keyframe animations provide precise control over multi-step motion sequences. Un
 
 The `forwards` fill mode keeps the element in its final state after the animation completes. Combine this with animation delay for staggered effects across multiple elements.
 
-Multi-Step Keyframes and Easing Per-Step
+## Multi-Step Keyframes and Easing Per-Step
 
 Keyframes also let you control timing within each step using the `animation-timing-function` property inside the keyframe block itself:
 
@@ -113,7 +113,7 @@ Keyframes also let you control timing within each step using the `animation-timi
 
 This technique lets the first half of the flip accelerate (ease-in) and the second half decelerate (ease-out), producing a much more natural motion than a uniform curve across the whole animation.
 
-Staggered Entrance Animations
+## Staggered Entrance Animations
 
 Staggering is one of the most effective tools for making list-based UI feel polished. Define delays using CSS custom properties so JavaScript can inject them without touching class names:
 
@@ -133,7 +133,7 @@ document.querySelectorAll('.list-item').forEach((el, i) => {
 
 A delay of 60–80ms per item works well for lists of up to 10 items. For longer lists, cap the maximum delay at around 400ms so late items don't feel abandoned.
 
-Building Interactive Transitions
+## Building Interactive Transitions
 
 Transitions work best for state changes triggered by user interaction. Common use cases include hover effects, focus states, and modal appearances:
 
@@ -158,7 +158,7 @@ Transitions work best for state changes triggered by user interaction. Common us
 
 Chaining multiple properties creates rich interactive feedback. Notice how the transform uses a faster duration than the box-shadow, creating a layered effect that feels natural.
 
-Transitions vs. Keyframe Animations: Choosing the Right Tool
+## Transitions vs. Keyframe Animations: Choosing the Right Tool
 
 Both transitions and keyframe animations animate CSS properties, but they serve different purposes:
 
@@ -174,7 +174,7 @@ Both transitions and keyframe animations animate CSS properties, but they serve 
 
 Transitions are reactive. they respond to a property change. Keyframes are declarative. they run on their own schedule. When in doubt, reach for a transition first; only escalate to keyframes when you need explicit intermediate states or looping.
 
-Focus and Keyboard Navigation
+## Focus and Keyboard Navigation
 
 Animating `:focus-visible` states is often overlooked. A smooth focus ring helps keyboard users track where they are without the jarring snap of an instant outline:
 
@@ -194,7 +194,7 @@ Animating `:focus-visible` states is often overlooked. A smooth focus ring helps
 
 Use `:focus-visible` rather than `:focus` so the ring only appears for keyboard users. mouse users typically do not need the outline.
 
-Transform Properties for Performance
+## Transform Properties for Performance
 
 The `transform` property animates efficiently because it doesn't trigger layout recalculations. GPU acceleration handles transform changes separately from the main rendering thread. Stick to these transform functions for optimal performance:
 
@@ -205,7 +205,7 @@ The `transform` property animates efficiently because it doesn't trigger layout 
 
 Avoid animating properties like `width`, `height`, `margin`, or `padding`. These trigger layout recalculations that cause jank. Instead, use transform and opacity for smooth 60fps animations.
 
-The Compositor-Only Rule Explained
+## The Compositor-Only Rule Explained
 
 Modern browsers render pages using multiple threads. The compositor thread handles `transform` and `opacity` without consulting the main thread. Everything else. `width`, `height`, `left`, `top`, `background-color`, `border-radius`. must involve the main thread, which can be blocked by JavaScript execution.
 
@@ -245,7 +245,7 @@ element.addEventListener('animationend', () => {
 });
 ```
 
-Creating Reusable Animation Classes
+## Creating Reusable Animation Classes
 
 Build a utility class system for common animation patterns. This approach promotes consistency and reduces repetition:
 
@@ -309,7 +309,7 @@ Apply these classes directly to elements in your HTML:
 </div>
 ```
 
-Extending the Utility System with Modifiers
+## Extending the Utility System with Modifiers
 
 Combine base animation classes with modifier classes to vary duration and delay without writing new keyframes:
 
@@ -340,7 +340,7 @@ This gives you a composable system. A skeleton loading screen shimmer becomes:
 <div class="pulse anim-xslow anim-loop skeleton-block"></div>
 ```
 
-Managing Animation State with JavaScript
+## Managing Animation State with JavaScript
 
 For complex animation sequences, combine CSS with JavaScript. Use CSS custom properties to control animation parameters dynamically:
 
@@ -377,7 +377,7 @@ function hideModal() {
 }
 ```
 
-Using the Web Animations API for Programmatic Control
+## Using the Web Animations API for Programmatic Control
 
 The Web Animations API gives you fine-grained JavaScript control over CSS animations without relying on `setTimeout` hacks:
 
@@ -407,7 +407,7 @@ async function closeModal() {
 
 The `anim.finished` promise resolves when the animation completes, removing the need for `animationend` event listeners or guessing at `setTimeout` values. This is far more reliable when animations have variable durations.
 
-Intersection Observer for Scroll-Triggered Animations
+## Intersection Observer for Scroll-Triggered Animations
 
 Scroll-triggered animations that use `IntersectionObserver` are far more performant than `scroll` event listeners:
 
@@ -431,7 +431,7 @@ document.querySelectorAll('.animate-on-scroll').forEach((el) => {
 
 The threshold of `0.15` triggers the animation when 15% of the element is visible. enough to confirm the user has reached it, but early enough that the animation plays before they fully scroll past it.
 
-Testing Animations
+## Testing Animations
 
 The tdd skill supports writing tests that verify animation states and timing. Create visual regression tests using Playwright or similar tools to ensure animations render correctly across browsers.
 
@@ -450,7 +450,7 @@ async function waitForAnimation(element) {
 }
 ```
 
-Testing the prefers-reduced-motion Path
+## Testing the prefers-reduced-motion Path
 
 Your test suite should verify that the reduced-motion experience is also correct. In Playwright, you can emulate the media feature:
 
@@ -470,7 +470,7 @@ test('shows content without animation when reduced motion is preferred', async (
 
 The supermemory skill helps track animation patterns across projects, building a personal library of proven techniques that work in various contexts.
 
-Performance Checklist
+## Performance Checklist
 
 Before deploying animations, verify these performance criteria:
 
@@ -494,7 +494,7 @@ Before deploying animations, verify these performance criteria:
 
 This media query respects user preferences for reduced motion, an important accessibility consideration.
 
-Profiling in DevTools
+## Profiling in DevTools
 
 Chrome DevTools' Performance tab is your main tool for diagnosing animation jank. Record a session while scrolling or interacting, then look for:
 
@@ -504,7 +504,7 @@ Chrome DevTools' Performance tab is your main tool for diagnosing animation jank
 
 The Layers panel shows which elements have been promoted to their own compositor layer. Too many layers waste GPU memory; too few cause expensive repaints. Aim for a layer count that covers actively animating elements without promoting static content.
 
-Quick Reference: CSS Property Animation Cost
+## Quick Reference: CSS Property Animation Cost
 
 | Property | Pipeline Stage | Cost |
 |---|---|---|
@@ -517,12 +517,11 @@ Quick Reference: CSS Property Animation Cost
 | margin / padding | Layout + Paint + Composite | High |
 | top / left / right / bottom | Layout + Paint + Composite | High |
 
-Conclusion
+## Conclusion
 
 Building CSS animations with Claude Code follows a clear workflow: define timing tokens, create keyframe animations for complex sequences, build reusable utility classes, and manage state with JavaScript when needed. Focus on transform and opacity properties for smooth 60fps performance, and always test across devices.
 
 The canvas-design skill can help visualize animation timing and easing curves, while frontend-design provides context for integrating animations into cohesive user interfaces. Document your animation patterns using the docx skill for team reference.
-
 
 Related Reading
 

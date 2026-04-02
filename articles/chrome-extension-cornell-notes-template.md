@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Cornell Notes Template: A Developer Guide"
 description: "Learn how to build a Chrome extension for Cornell Notes with practical code examples and implementation patterns for developers."
@@ -14,23 +13,22 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Chrome extensions provide a powerful way to enhance note-taking workflows directly in your browser. For developers and power users, building a Cornell Notes template extension gives you complete control over how you capture, organize, and review web content. This guide walks you through the architecture, implementation patterns, and practical code examples needed to create a functional Cornell Notes Chrome extension.
 
-Understanding the Cornell Notes System
+## Understanding the Cornell Notes System
 
 The Cornell Notes method divides a page into distinct sections: a cue column for questions and keywords, a notes area for main content, and a summary section for reviewing. When applied to web content, this system becomes particularly valuable for research, study, and information retention.
 
 A well-designed Chrome extension can capture selected text from any webpage, automatically format it into the Cornell layout, and store notes locally or export them for external use. The key challenge lies in creating an intuitive interface that works smoothly across different websites while maintaining the structural integrity of the Cornell format.
 
-Extension Architecture Overview
+## Extension Architecture Overview
 
 Modern Chrome extensions use Manifest V3, which requires a specific structure. Your Cornell Notes extension will need several components working together: a popup interface for quick note capture, a content script for interacting with web pages, a background service worker for data persistence, and storage mechanisms for saving notes.
 
 The fundamental architecture consists of three layers. First, the content script injects into web pages and listens for text selections. Second, the popup provides the primary user interface for creating and viewing notes. Third, the storage system persists notes using Chrome's storage API or IndexedDB for larger datasets.
 
-Core Implementation
+## Core Implementation
 
 Let's build the essential components. First, the manifest file defines your extension's permissions and structure:
 
@@ -160,7 +158,7 @@ document.getElementById("save").addEventListener(() => {
 });
 ```
 
-Advanced Features for Power Users
+## Advanced Features for Power Users
 
 Once the basic structure works, consider adding features that enhance productivity. Export functionality allows users to download notes as Markdown or plain text:
 
@@ -181,7 +179,7 @@ Tagging and search capabilities let users organize notes by topic. Using Chrome'
 
 Integration with note-taking apps through the Web Clipper API or custom protocols extends functionality beyond the browser. Building adapters for services like Obsidian, Notion, or Roam Research transforms your extension into a research powerhouse.
 
-Storage Considerations
+## Storage Considerations
 
 Chrome's storage.local provides 5MB of synchronous storage, sufficient for text-based notes. For users who need more capacity or structured queries, IndexedDB offers a more solid solution. The storage API remains the simplest implementation path:
 
@@ -199,16 +197,15 @@ chrome.storage.local.set({
 });
 ```
 
-Testing and Debugging
+## Testing and Debugging
 
 Load your unpacked extension in Chrome by navigating to chrome://extensions, enabling Developer mode, and clicking "Load unpacked." Use Chrome DevTools to inspect popup HTML, debug content scripts, and monitor background service worker behavior. The console provides immediate feedback on errors and data flow.
 
-Summary
+## Summary
 
 Building a Cornell Notes Chrome extension requires understanding Manifest V3 architecture, content script injection, storage mechanisms, and user interface design. The implementation shown here provides a functional foundation that developers can extend with export features, tagging systems, and third-party integrations. For power users, the ability to capture web content directly into a structured note-taking format transforms research and study workflows.
 
 The Cornell method's separation of cues, notes, and summary encourages active engagement with captured content, a principle that translates well to digital workflows when implemented thoughtfully. Start with the core components outlined above, then iterate based on your specific use cases and user feedback.
-
 
 Related Reading
 

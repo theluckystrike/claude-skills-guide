@@ -18,7 +18,7 @@ Performance benchmarking for Claude Code skills helps you identify bottlenecks, 
 
 This guide covers the essential metrics to track, practical measurement techniques, and real-world optimization strategies using specific skill examples.
 
-Key Performance Metrics
+## Key Performance Metrics
 
 [Before benchmarking, understand the metrics that matter](/best-claude-code-skills-to-install-first-2026/):
 
@@ -30,7 +30,7 @@ Key Performance Metrics
 
 Each metric reveals different performance characteristics. A skill might be fast but consume too many tokens, or efficient with few tool calls but suffer from slow initialization.
 
-Setting Up Measurement
+## Setting Up Measurement
 
 Create a simple benchmark harness to measure skill performance. Place this in your project root:
 
@@ -62,7 +62,7 @@ Instructions
 [Your skill content here]
 ```
 
-Measuring Token Usage
+## Measuring Token Usage
 
 Claude Code does not expose token counts directly in the CLI output, but you can estimate usage through the API or by examining response headers. For skills that call external APIs, track tokens through the provider's dashboard.
 
@@ -81,11 +81,11 @@ def process_chunk(data, chunk_size=1000):
 
 The pdf skill faces similar challenges. Extracting text from multi-page documents loads entire files into context. Benchmark different approaches. some skills extract metadata first, then process pages sequentially.
 
-Comparing Skill Execution Patterns
+## Comparing Skill Execution Patterns
 
 Different skills exhibit distinct performance profiles. Understanding these patterns helps you choose the right skill for your use case.
 
-Single-Task Skills
+## Single-Task Skills
 
 Skills like tdd typically run quickly for simple tasks. When you invoke the tdd skill to generate a single test file, execution completes in seconds with minimal token overhead.
 
@@ -95,7 +95,7 @@ $ time claude -p "/tdd create unit tests for auth.py"
 Expected: 2-5 seconds, ~500-1000 tokens
 ```
 
-Multi-Step Workflows
+## Multi-Step Workflows
 
 Skills that orchestrate multiple steps. like frontend-design combined with tdd. show compounding overhead. Each skill initialization adds startup time, and context accumulates across skill boundaries.
 
@@ -107,7 +107,7 @@ Token usage: 8000-15000 tokens
 
 The supermemory skill introduces persistent context, which can reduce initialization time in long sessions but adds memory overhead. Benchmark both approaches to see which fits your workflow. For a deeper look at how Claude evaluates model outputs and measures quality, see the [LLM evaluation and benchmarking workflow](/claude-code-for-llm-evaluation-workflow-guide/).
 
-Benchmarking Real-World Scenarios
+## Benchmarking Real-World Scenarios
 
 Create reproducible test cases that reflect actual usage. Here is a practical framework:
 
@@ -145,7 +145,7 @@ Run benchmarks across different scenarios:
 - Large file processing
 - Multi-file refactoring
 
-Identifying Performance Bottlenecks
+## Identifying Performance Bottlenecks
 
 After collecting baseline metrics, analyze results to find bottlenecks. If slow initialization keeps showing up, the [skill slow performance speed-up guide](/claude-skills-slow-performance-speed-up-guide/) covers targeted fixes for each symptom type:
 
@@ -158,7 +158,7 @@ After collecting baseline metrics, analyze results to find bottlenecks. If slow 
 
 The claude-code-llm-evaluation-and-benchmarking-workflow skill provides templates for systematic performance analysis. Use it to establish baseline metrics before optimizing.
 
-Optimization Strategies
+## Optimization Strategies
 
 Once you identify bottlenecks, apply targeted fixes:
 
@@ -204,7 +204,7 @@ claude -p "/frontend-design components/" &
 wait
 ```
 
-Continuous Benchmarking
+## Continuous Benchmarking
 
 Integrate performance testing into your CI pipeline. Run skill benchmarks on every commit to catch regressions. The [Claude Skills with GitHub Actions CI/CD Pipeline guide](/claude-skills-with-github-actions-ci-cd-pipeline/) explains how to wire these benchmarks into your existing workflow automation:
 
@@ -225,7 +225,7 @@ jobs:
 
 Track results over time to identify trends and validate optimizations.
 
-Conclusion
+## Conclusion
 
 Benchmarking Claude Code skills requires measuring execution time, token usage, and tool call patterns. Start with simple baseline measurements using the bash timing utilities, then build more sophisticated frameworks as your needs grow.
 

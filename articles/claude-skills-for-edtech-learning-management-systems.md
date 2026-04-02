@@ -18,7 +18,7 @@ Learning management systems (LMS) serve as the backbone of modern digital educat
 
 This guide walks you through practical implementations of Claude skills tailored for educational platforms, with code examples you can adapt for Canvas, Moodle, Blackboard, or custom-built systems.
 
-Understanding Claude Skills Architecture
+## Understanding Claude Skills Architecture
 
 Claude skills are modular AI capabilities that extend Claude's base functionality. Unlike generic AI APIs, skills are designed for specific workflows. Read the [Claude skill .md file format specification](/claude-skill-md-format-complete-specification-guide/) to understand how to structure your EdTech skills. For EdTech applications, you need skills that understand educational context, grading rubrics, and pedagogical best practices.
 
@@ -41,7 +41,7 @@ def sync_claude_grade_to_canvas(course_id, assignment_id, student_id, grade):
     submission.edit(submission={'posted_grade': grade})
 ```
 
-Building an Automated Grading Skill
+## Building an Automated Grading Skill
 
 One of the highest-value applications of Claude in EdTech is automated assessment. A well-designed grading skill can evaluate code submissions, written essays, or quiz responses while maintaining consistency and reducing instructor workload.
 
@@ -51,7 +51,6 @@ Here's how to structure a grading skill:
 grading-rubric.yaml (custom rubric file sent to Claude as context)
 name: code-grader
 description: Evaluates programming submissions against rubrics
-
 
 ```
 
@@ -68,7 +67,7 @@ Rubric:
 [yaml_content]
 ```
 
-Creating Personalized Feedback Generation
+## Creating Personalized Feedback Generation
 
 Students benefit from specific, actionable feedback rather than generic comments. [Claude can generate personalized responses](/build-personal-ai-assistant-with-claude-skills-guide/), previous performance patterns, and learning objectives.
 
@@ -101,7 +100,7 @@ async function generateFeedback(submission, rubric, studentHistory) {
 }
 ```
 
-Adaptive Content Generation
+## Adaptive Content Generation
 
 Claude skills can dynamically generate learning materials tailored to student proficiency levels. This is particularly valuable for prerequisite remediation, extension activities, or personalized study plans.
 
@@ -129,7 +128,7 @@ def generate_practice_set(student_level, topic, count=5):
     return parse_json_response(response)
 ```
 
-Student Support and Tutoring Skills
+## Student Support and Tutoring Skills
 
 Beyond assessment, Claude excels at providing first-line student support. A well-configured tutoring skill can answer FAQs, guide students through platform navigation, and escalate complex issues to human instructors.
 
@@ -169,7 +168,7 @@ def handle_student_message(message, student_data):
     }
 ```
 
-Integration Best Practices
+## Integration Best Practices
 
 When deploying Claude skills in production LMS environments, consider these developer-focused recommendations:
 
@@ -183,7 +182,7 @@ Feedback loops: Collect instructor corrections on Claude outputs to continuously
 
 Security and privacy: Ensure student data handling complies with FERPA, GDPR, or your local regulations. Claude skills should process data within approved boundaries and avoid storing sensitive information unnecessarily.
 
-Measuring Skill Effectiveness
+## Measuring Skill Effectiveness
 
 Track these metrics to evaluate your Claude integrations:
 
@@ -192,12 +191,11 @@ Track these metrics to evaluate your Claude integrations:
 - Support deflection: What percentage of inquiries resolve without human intervention?
 - Time savings: Hours reduced in grading and student support workflows
 
-Conclusion
+## Conclusion
 
 Claude skills transform LMS platforms from static content repositories into intelligent learning partners. By automating routine tasks like grading and FAQ responses, your platform frees instructors to focus on high-impact activities like mentorship and curriculum design.
 
 The implementations above provide starting points. Adapt the code snippets to your specific LMS, grading standards, and pedagogical approach. [The most effective EdTech AI tools feel invisible](/how-do-i-combine-two-claude-skills-in-one-workflow/), handling complexity behind the scenes while students and instructors experience consistent, personalized support.
-
 
 Related Reading
 

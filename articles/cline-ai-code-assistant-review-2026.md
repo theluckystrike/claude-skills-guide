@@ -18,7 +18,7 @@ Cline (formerly Claude Dev) is an open-source VS Code extension that turns any L
 
 This review covers what Cline actually does well, where it falls short, how its pricing model works in practice, and how it compares to Claude Code for developers choosing between the two.
 
-What Cline Is
+## What Cline Is
 
 Cline is a VS Code extension. It is not a standalone CLI, a web app, or a hosted service. You install it, connect it to an LLM provider via API key (Anthropic, OpenAI, Gemini, local models via Ollama, or OpenRouter), and then interact with it through the VS Code sidebar.
 
@@ -26,7 +26,7 @@ The key design choice: Cline makes all its operations visible and requires user 
 
 Cline also supports an "auto-approve" mode where it runs uninterrupted. Most experienced users run auto-approve for routine tasks and switch back to manual approval when the task is risky.
 
-Core Features
+## Core Features
 
 File system operations. Cline can read, write, create, and delete files across your project. It understands directory structure and navigates large codebases by reading relevant files before acting.
 
@@ -40,7 +40,7 @@ Custom instructions. Cline supports a `.clinerules` file at the project root. si
 
 MCP support. Cline integrates with the Model Context Protocol (MCP), which means it can use MCP servers to access external tools and data sources.
 
-What Cline Does Well
+## What Cline Does Well
 
 Editor integration. The VS Code integration is mature. Cline shows diffs inline before applying changes, lets you review each file edit in a familiar interface, and preserves your editor state throughout a session.
 
@@ -52,7 +52,7 @@ Cost control. Because you use your own API keys, you have direct visibility into
 
 Community and extensibility. The open-source codebase is actively maintained. The MCP ecosystem is broad. Community-contributed MCP servers add capabilities like database access, Jira integration, and deployment tooling.
 
-Limitations
+## Limitations
 
 No built-in skills system. Cline does not have a formalized mechanism for creating reusable, invocable skills like Claude Code's `/skill-name` workflow. You can approximate this with `.clinerules` and custom prompts, but there is no equivalent to Claude Code's skill library pattern.
 
@@ -64,7 +64,7 @@ VS Code only. Cline requires VS Code or a compatible fork (Cursor, Windsurf). If
 
 Auto-approve requires judgment. In auto-approve mode, Cline will execute terminal commands without confirmation. On a few well-documented occasions, users have had Cline run destructive commands it inferred were necessary. The approval mode exists for a reason. using auto-approve requires understanding what you are running.
 
-Pricing Model
+## Pricing Model
 
 Cline itself is free and open-source. You pay only for the API calls you make. With Claude 3.5 Sonnet at standard API rates, a typical multi-file refactor task costs $0.05 to $0.30 depending on context size. A complex feature implementation with multiple iterations costs $0.50 to $2.00.
 
@@ -72,7 +72,7 @@ For heavy users, monthly API costs typically fall in the $30 to $150 range depen
 
 There is no Cline-specific subscription or hosted service fee.
 
-Feature Comparison: Cline vs Claude Code
+## Feature Comparison: Cline vs Claude Code
 
 | Feature | Cline | Claude Code |
 |---|---|---|
@@ -89,7 +89,7 @@ Feature Comparison: Cline vs Claude Code
 | Editor requirement | VS Code or fork | None |
 | OS support | VS Code platforms | macOS, Linux, Windows |
 
-Who Should Use Cline
+## Who Should Use Cline
 
 Cline is a strong choice when:
 
@@ -99,7 +99,7 @@ Cline is a strong choice when:
 - You work independently and do not need to share configurations across a team
 - You want open-source tooling you can inspect, fork, and modify
 
-Who Should Use Claude Code
+## Who Should Use Claude Code
 
 Claude Code is a stronger choice when:
 
@@ -109,7 +109,7 @@ Claude Code is a stronger choice when:
 - You work across multiple editors and OS environments
 - You are building multi-agent pipelines that use Claude Code's SDK directly
 
-Honest Assessment
+## Honest Assessment
 
 Cline is a genuinely capable tool. The transparency model is the right call for a tool that modifies your file system and runs terminal commands. The open-source architecture means you can inspect exactly what it is doing under the hood, and the community ecosystem is active.
 

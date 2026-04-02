@@ -13,13 +13,12 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 AI Webpage Summarizer Chrome Extension: A Developer Guide
 
 AI webpage summarizer Chrome extensions transform how we consume web content. Instead of reading entire articles, blog posts, or research papers, these extensions use large language models to extract key points and present concise summaries directly in the browser. For developers and power users, understanding the underlying architecture enables you to build custom solutions tailored to specific workflows.
 
-Core Architecture
+## Core Architecture
 
 A webpage summarizer extension operates through three interconnected components. The content script extracts page content, the background service worker manages API communication, and the popup interface displays results to users. This separation of concerns follows Chrome's Manifest V3 architecture and ensures clean code organization.
 
@@ -94,7 +93,7 @@ class PageExtractor {
 
 This extractor prioritizes semantic HTML elements but gracefully degrades to a tree-walking approach when semantic markup is absent.
 
-API Integration Patterns
+## API Integration Patterns
 
 The background service worker handles communication with AI providers. This separation protects your API keys and manages request lifecycle independently of page content scripts.
 
@@ -160,7 +159,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This implementation uses async message passing, which is essential because AI API calls are inherently asynchronous.
 
-User Interface Implementation
+## User Interface Implementation
 
 The popup interface provides the interaction point for users. Keep it minimal, the summarization itself is the primary value.
 
@@ -242,7 +241,7 @@ document.getElementById('summarizeBtn').addEventListener('click', async () => {
 });
 ```
 
-Advanced Features
+## Advanced Features
 
 For production extensions, consider implementing these enhancements:
 
@@ -272,7 +271,7 @@ async function cacheSummary(url, summary) {
 }
 ```
 
-Security Considerations
+## Security Considerations
 
 When building summarizer extensions, handle user data carefully:
 
@@ -281,12 +280,11 @@ When building summarizer extensions, handle user data carefully:
 - Clear Privacy Policies: Users should understand what data leaves their browser and why.
 - HTTPS Only: All API communications must use HTTPS to prevent interception.
 
-Conclusion
+## Conclusion
 
 AI webpage summarizer Chrome extensions combine browser APIs with large language models to create powerful productivity tools. The architecture described here, content extraction, background API communication, and minimal popup UI, provides a solid foundation for building production-ready extensions.
 
 The key to a successful implementation lies in solid content extraction that handles diverse page structures, efficient API usage through caching and smart prompt design, and a user experience that delivers value without friction.
-
 
 Related Reading
 
@@ -296,7 +294,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Building the AI Summarizer
+## Step-by-Step: Building the AI Summarizer
 
 1. Set up Manifest V3 with `activeTab`, `storage`, and `contextMenus` permissions. No host permissions are required. `activeTab` grants temporary access to the current page when the user interacts with the extension.
 2. Extract page text: in the content script, extract readable text from the page by stripping `<script>`, `<style>`, `<nav>`, and `<footer>` elements, then reading `document.body.innerText`. For article pages, target the main content element (`<article>`, `<main>`, `.content`) to skip navigation and ads.
@@ -305,7 +303,7 @@ Step-by-Step: Building the AI Summarizer
 5. Cache summaries locally: store the summary in `chrome.storage.local` keyed by the page URL. When the user reopens the extension on the same page, show the cached summary instantly without a new API call.
 6. Add reading time estimate: show the original article's estimated reading time alongside the summary so users can decide whether to read in full or just use the summary.
 
-Using the Chrome Built-in Summarizer API
+## Using the Chrome Built-in Summarizer API
 
 Chrome 131+ includes an on-device Summarizer API as an origin trial. This eliminates API costs and latency for eligible users:
 
@@ -327,7 +325,7 @@ if ('ai' in self && 'summarizer' in self.ai) {
 
 Fall back to a cloud API for users on older Chrome versions or when the on-device model is not ready.
 
-Comparison with Existing Summarization Tools
+## Comparison with Existing Summarization Tools
 
 | Tool | Model | Offline support | Privacy | Context limit | Cost |
 |---|---|---|---|---|---|
@@ -339,7 +337,7 @@ Comparison with Existing Summarization Tools
 
 The built-in Chrome AI API gives this extension a unique advantage. zero cost and zero latency for on-device summaries with no data leaving the device.
 
-Advanced: Summary Quality Scoring
+## Advanced: Summary Quality Scoring
 
 After generating a summary, run a quick quality check by asking the model to rate its own output:
 
@@ -356,7 +354,7 @@ async function scoreSummary(originalText, summary) {
 
 Show a quality indicator in the UI. If the score is below 7, offer a "Try again with more detail" button that re-runs with a more specific prompt.
 
-Troubleshooting
+## Troubleshooting
 
 Summarizer producing summaries of navigation menus instead of article content: Use `document.querySelector('article, main, [role="main"], .post-content')` to target the main content area before falling back to `document.body`. Remove sidebar content (`aside`), comment sections, and related article widgets before passing text to the API.
 

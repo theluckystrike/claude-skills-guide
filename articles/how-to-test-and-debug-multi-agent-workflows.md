@@ -13,12 +13,9 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 ---
 
-
-How to Test and Debug Multi Agent Workflows
-
 Multi-agent workflows have become essential for complex development tasks, but testing and debugging them presents unique challenges. When multiple AI agents collaborate, errors can cascade through the system in ways that are difficult to trace. This guide provides practical strategies for testing and debugging multi-agent workflows using Claude Code's built-in features and specialized skills.
 
-Understanding Multi-Agent Workflow Debugging Challenges
+## Understanding Multi-Agent Workflow Debugging Challenges
 
 Debugging multi-agent workflows differs significantly from traditional software debugging. In a Claude Code context, you're often dealing with:
 
@@ -29,7 +26,7 @@ Debugging multi-agent workflows differs significantly from traditional software 
 
 The distributed nature of these systems means a bug in one agent can manifest as unexpected behavior in another, making root cause analysis particularly challenging. A code-review agent that silently truncates its output, for example, can cause a downstream fix-and-commit agent to apply incomplete patches. and the error only surfaces in the final diff, far removed from its source.
 
-How Multi-Agent Bugs Differ from Standard Bugs
+## How Multi-Agent Bugs Differ from Standard Bugs
 
 | Bug Type | Traditional Code | Multi-Agent Workflow |
 |---|---|---|
@@ -41,7 +38,7 @@ How Multi-Agent Bugs Differ from Standard Bugs
 
 Understanding these differences before you start debugging saves hours of frustration. Treat each agent as a black box with a defined input schema and expected output contract. When a workflow fails, your first job is determining which contract was violated.
 
-Key Testing Strategies for Multi-Agent Workflows
+## Key Testing Strategies for Multi-Agent Workflows
 
 1. Enable Verbose Logging
 
@@ -182,7 +179,7 @@ async function agentHandoff(currentAgent, nextAgent, context) {
 }
 ```
 
-Defining Output Schemas for Validation
+## Defining Output Schemas for Validation
 
 The `validateOutput` function above is only as strong as the schema it enforces. Define explicit output schemas for each agent and validate against them at every handoff:
 
@@ -223,15 +220,15 @@ function validateOutput(output, schema) {
 
 Schema-validated handoffs turn vague "something went wrong downstream" failures into precise "agent X returned a response missing the required `severity` field" failures. The debugging effort drops dramatically.
 
-Practical Debugging Workflow
+## Practical Debugging Workflow
 
 When you encounter a bug in your multi-agent workflow, follow this systematic approach:
 
-Step 1: Reproduce the Issue
+## Step 1: Reproduce the Issue
 
 First, ensure you can consistently reproduce the problem. Run the workflow multiple times with identical inputs and document the failure pattern. Is it deterministic or intermittent? Intermittent failures often point to context window limits, rate limiting, or non-deterministic model outputs rather than code bugs.
 
-Step 2: Isolate the Failing Agent
+## Step 2: Isolate the Failing Agent
 
 Use binary search through your checkpoint logs to identify which agent first produced unexpected output. Comment out agents sequentially to narrow down the source.
 
@@ -241,13 +238,13 @@ Set an environment variable to stop the workflow after a specific agent
 MAX_AGENT=3 node run-workflow.js
 ```
 
-Step 3: Examine Context at Failure Point
+## Step 3: Examine Context at Failure Point
 
 Check what context the failing agent received. Was it truncated? Did it contain contradictory instructions from a previous agent? Use verbose logging to see the exact prompt sent to the agent.
 
 Pay special attention to context size. Claude Code has context window limits, and multi-agent workflows that accumulate state across many steps can silently truncate earlier context. If you see the failing agent making decisions that should be informed by early workflow steps, context truncation is a likely culprit.
 
-Step 4: Fix and Re-test
+## Step 4: Fix and Re-test
 
 After identifying the root cause, implement the fix and re-run the workflow. Start with isolated agent testing before running the full workflow again.
 
@@ -265,7 +262,7 @@ function chunkInputForSummarizer(input, maxTokens = 3500) {
 
 Future contributors (including yourself in three months) will thank you.
 
-Using Claude Code Skills for Debugging
+## Using Claude Code Skills for Debugging
 
 Several Claude Code skills are specifically designed to help with multi-agent debugging:
 
@@ -277,7 +274,7 @@ Install and configure these skills before beginning complex multi-agent developm
 
 The tmux session management skill is particularly valuable during active debugging sessions. Splitting your terminal into panes lets you watch the workflow orchestrator, an individual agent's output, and the checkpoint log directory simultaneously. giving you a real-time picture of system state without switching windows.
 
-Monitoring Workflows in Production
+## Monitoring Workflows in Production
 
 Development-time debugging is necessary but not sufficient. Multi-agent workflows running in production need ongoing observability:
 
@@ -306,7 +303,7 @@ logAgentEvent('handoff', 'code-reviewer', {
 
 Structured JSON logs integrate directly with log aggregation services. Query them to find patterns across runs. for example, which agents most frequently produce schema validation errors, or which input types consistently cause the workflow to branch into error-handling paths.
 
-Best Practices for Stable Multi-Agent Workflows
+## Best Practices for Stable Multi-Agent Workflows
 
 1. Design clear agent boundaries - Each agent should have a single, well-defined responsibility
 2. Implement explicit validation - Validate outputs at every agent handoff point
@@ -316,7 +313,7 @@ Best Practices for Stable Multi-Agent Workflows
 6. Version your skill files - Track changes to agent instructions alongside code changes so you can correlate behavioral regressions to specific prompt edits
 7. Test with adversarial inputs - Deliberately pass malformed or edge-case inputs to each agent in isolation to discover failure modes before they appear in production
 
-Conclusion
+## Conclusion
 
 Testing and debugging multi-agent workflows requires a different mindset than traditional debugging. By implementing comprehensive logging, checkpointing, and isolation testing, you can build solid multi-agent systems that are maintainable and debuggable. Defining explicit output schemas at every agent boundary converts vague downstream failures into precise, actionable error messages. Claude Code's skill system and verbose logging provide the observability needed to troubleshoot even the most complex agent orchestration scenarios. Combine these tools with structured production logging and you have a full observability stack that supports both development-time debugging and post-mortem analysis of production incidents.
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Lazy Loading Implementation Workflow
 
 Lazy loading is a performance optimization technique that defers the loading of non-critical resources until they are needed. When working with Claude Code, you can use its intelligent context understanding and code generation capabilities to implement lazy loading patterns efficiently across various languages and frameworks. This guide walks you through a practical workflow for implementing lazy loading using Claude Code as your development assistant.
 
-Understanding Lazy Loading in Modern Development
+## Understanding Lazy Loading in Modern Development
 
 Lazy loading addresses a fundamental problem in web and application development: loading everything upfront creates unnecessary initial load times and consumes bandwidth. By implementing lazy loading, you load resources only when users actually need them, improving perceived performance and reducing initial payload.
 
@@ -32,9 +31,9 @@ There are several types of lazy loading you should consider:
 
 Claude Code can help you identify opportunities for lazy loading in your codebase and implement the appropriate patterns for your technology stack.
 
-The Claude Code Lazy Loading Workflow
+## The Claude Code Lazy Loading Workflow
 
-Step 1: Analyze Your Codebase for Optimization Opportunities
+## Step 1: Analyze Your Codebase for Optimization Opportunities
 
 Before implementing lazy loading, you need to understand what components or resources would benefit most from deferred loading. Claude Code can analyze your project and identify candidates.
 
@@ -50,7 +49,7 @@ Analyze this project and identify large components, modules, or resources that w
 
 Claude Code will examine your project structure, import statements, and component hierarchy to provide recommendations.
 
-Step 2: Implement Component Lazy Loading
+## Step 2: Implement Component Lazy Loading
 
 For React applications, dynamic imports combined with `React.lazy()` provide a straightforward way to implement component lazy loading. Here's how to work with Claude Code to implement this pattern:
 
@@ -89,7 +88,7 @@ Ask Claude Code to implement this transformation:
 Convert the static component imports in this React application to use React.lazy() and Suspense. Identify which components are candidates for lazy loading based on their size and whether they're immediately visible on page load.
 ```
 
-Step 3: Implement Image Lazy Loading
+## Step 3: Implement Image Lazy Loading
 
 Images are often the largest assets on a page. Implementing image lazy loading can dramatically reduce initial page weight.
 
@@ -146,7 +145,7 @@ Ask Claude Code for help:
 Implement image lazy loading for all images in this project. Use the Intersection Observer API for cross-browser support, and add a fade-in effect when images load.
 ```
 
-Step 4: Implement Route-Based Code Splitting
+## Step 4: Implement Route-Based Code Splitting
 
 For single-page applications, route-based code splitting ensures users only download the code needed for the current route:
 
@@ -181,7 +180,7 @@ Claude Code can generate this structure for your existing routes:
 Analyze the routing configuration in this application and implement route-based code splitting using React.lazy() and Suspense. Create a loading component for the fallback.
 ```
 
-Step 5: Verify and Measure Lazy Loading Impact
+## Step 5: Verify and Measure Lazy Loading Impact
 
 After implementing lazy loading, verify that it's working correctly and measure the performance impact.
 
@@ -198,7 +197,7 @@ You can also use browser DevTools to confirm lazy loading is working:
 3. Scroll or navigate to trigger lazy-loaded content
 4. Watch for new network requests appearing
 
-Best Practices for Lazy Loading with Claude Code
+## Best Practices for Lazy Loading with Claude Code
 
 When implementing lazy loading, keep these recommendations in mind:
 
@@ -212,7 +211,7 @@ Preload critical resources: Consider using prefetching for resources that are li
 
 Test across devices and networks: Lazy loading behavior can vary based on device performance and network conditions. Test on slower connections to ensure loading states are acceptable.
 
-Conclusion
+## Conclusion
 
 Claude Code makes implementing lazy loading straightforward by understanding your codebase context and generating appropriate code patterns. The workflow, analyze, implement component lazy loading, implement image lazy loading, implement route-based splitting, and verify, provides a structured approach to performance optimization.
 

@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Streaming LLM Response Workflow
-
 Streaming LLM responses have become essential for building responsive AI applications. Instead of waiting for a complete response, users see text appear in real-time, creating a more natural interaction pattern. This guide shows you how to implement streaming workflows using Claude Code, with practical patterns you can apply to your projects.
 
-Understanding Streaming in LLM Applications
+## Understanding Streaming in LLM Applications
 
 When you send a prompt to an LLM, the traditional approach waits for the entire response before displaying anything. This works for short outputs but creates poor user experience for longer responses. Streaming solves this by sending chunks of text as they're generated, typically token by token or sentence by sentence.
 
@@ -26,7 +23,7 @@ The benefits extend beyond UX. Applications like chatbots, code assistants, and 
 
 Claude Code supports streaming through its API, and you can integrate this capability into custom skills and workflows. The key is understanding how to handle the stream lifecycle, connecting, receiving chunks, handling interruptions, and cleanup.
 
-Setting Up Your Streaming Environment
+## Setting Up Your Streaming Environment
 
 Before implementing streaming, ensure your environment handles asynchronous operations properly. Most streaming implementations use async/await patterns to manage the continuous flow of data.
 
@@ -53,7 +50,7 @@ async def stream_response(prompt):
 
 This basic pattern forms the foundation for more complex workflows. The key is the `stream` method combined with async iteration over the response chunks.
 
-Building a Streaming Skill for Claude Code
+## Building a Streaming Skill for Claude Code
 
 You can create custom Claude Code skills that handle streaming responses. This is particularly useful when you want to process or transform streaming output before presenting it to users.
 

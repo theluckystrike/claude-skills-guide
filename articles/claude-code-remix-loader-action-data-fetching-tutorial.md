@@ -16,7 +16,7 @@ permalink: /claude-code-remix-loader-action-data-fetching-tutorial/
 
 Remix changes how developers approach data fetching in React applications. Using loaders for server-side data retrieval and actions for form submissions, you can build full-stack applications with clean, predictable data flow. This tutorial shows you how to integrate Claude Code with Remix projects to streamline your development workflow.
 
-Understanding Remix Data Flow
+## Understanding Remix Data Flow
 
 Remix introduces a mental model where the server and client work together cleanly. The framework handles the bridge between your backend logic and frontend components, eliminating the need for manual API endpoints in many scenarios. If you're comparing with [React Router v7's approach to loaders and actions](/claude-code-react-router-v7-navigation-guide/), the API is nearly identical since v7 merged Remix concepts.
 
@@ -24,7 +24,7 @@ Loaders run on the server before your component renders. They fetch data needed 
 
 Actions handle form submissions and other mutations. When a user submits a form, the action runs on the server, processes the data, and returns results that Remix uses to update the UI automatically.
 
-Setting Up Your Remix Project with Claude Code
+## Setting Up Your Remix Project with Claude Code
 
 First, create a new Remix project if you haven't already:
 
@@ -41,11 +41,11 @@ npm install -g @anthropic-ai/claude-code
 
 For this tutorial, you'll benefit from having the frontend-design skill loaded in Claude Code. This skill helps you create responsive, accessible component layouts that work cleanly with Remix's data-driven approach. Additionally, the pdf skill proves useful when you need to generate reports from your Remix application's data.
 
-Working with Loaders in Remix
+## Working with Loaders in Remix
 
 Loaders are the backbone of data fetching in Remix. They replace the need for useEffect hooks, manual fetching logic, and complex state management.
 
-Basic Loader Example
+## Basic Loader Example
 
 Create a route that fetches user data:
 
@@ -84,7 +84,7 @@ export default function Dashboard() {
 
 Claude Code can help you generate loader functions that follow best practices. Simply describe your data requirements, and Claude assists with writing the server-side logic, error handling, and type definitions.
 
-Handling Dynamic Parameters
+## Handling Dynamic Parameters
 
 Loaders can access route parameters for dynamic data fetching:
 
@@ -103,7 +103,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
 The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) complements this workflow by helping you write tests for your loader functions, ensuring your data fetching logic behaves correctly across different scenarios.
 
-Parallel Data Loading
+## Parallel Data Loading
 
 Remix automatically parallelizes multiple loader calls:
 
@@ -122,11 +122,11 @@ export async function loader() {
 
 This pattern eliminates waterfall loading and keeps your page load times minimal.
 
-Working with Actions for Data Mutations
+## Working with Actions for Data Mutations
 
 Actions handle all form submissions in Remix, replacing the need for separate API endpoints.
 
-Basic Action Example
+## Basic Action Example
 
 Create a form that submits data to an action:
 
@@ -194,7 +194,7 @@ export default function ContactPage() {
 }
 ```
 
-Optimistic UI Updates
+## Optimistic UI Updates
 
 For better user experience, you can implement optimistic updates that show the expected result immediately:
 
@@ -230,7 +230,7 @@ function LikeButton({ post }) {
 }
 ```
 
-Integrating Claude Code for Enhanced Development
+## Integrating Claude Code for Enhanced Development
 
 Claude Code accelerates Remix development in several ways. The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) helps you maintain context across complex Remix applications, remembering routing conventions and component patterns you've established.
 
@@ -263,7 +263,7 @@ export async function action({ request }: ActionFunctionArgs) {
 }
 ```
 
-Best Practices for Remix Data Fetching
+## Best Practices for Remix Data Fetching
 
 Keep your loaders focused on returning data, not rendering UI. Move complex data transformation to utility functions that both loaders and components can import. This separation keeps your code testable and maintainable. For production deployment, follow the [Vercel deployment workflow for Next.js/Remix projects](/claude-code-vercel-deployment-nextjs-workflow-guide/).
 
@@ -271,7 +271,7 @@ Use TypeScript generics with useLoaderData and useActionData to maintain type sa
 
 Implement error boundaries at appropriate route levels to handle failures gracefully without crashing your entire application.
 
-Conclusion
+## Conclusion
 
 Remix loaders and actions provide a clean, server-first approach to data fetching that eliminates many complexities of traditional React applications. By understanding how to use these patterns effectively, you build applications that are faster, more reliable, and easier to maintain.
 

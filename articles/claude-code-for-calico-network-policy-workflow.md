@@ -13,11 +13,10 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Calico is one of the most popular container networking and security solutions for Kubernetes, providing fine-grained network policies that control traffic flow between pods, services, and external endpoints. Managing Calico network policies effectively requires understanding both Kubernetes networking concepts and Calico's specific CRDs (Custom Resource Definitions). we'll explore how Claude Code can accelerate your Calico network policy workflow, from initial policy design to testing and maintenance.
 
-Understanding Calico Network Policies
+## Understanding Calico Network Policies
 
 Before diving into the Claude Code workflow, it's essential to understand what Calico brings to the table. Calico extends Kubernetes NetworkPolicy with additional features like:
 
@@ -29,7 +28,7 @@ Before diving into the Claude Code workflow, it's essential to understand what C
 
 Calico policies use its own `GlobalNetworkPolicy` and `NetworkPolicy` resources, which provide more capabilities than standard Kubernetes NetworkPolicies.
 
-Setting Up Your Claude Code Environment
+## Setting Up Your Claude Code Environment
 
 To work with Calico network policies, ensure Claude Code has access to your Kubernetes configuration:
 
@@ -50,11 +49,11 @@ Kubernetes Context
 - Kubeconfig: ~/.kube/config
 ```
 
-Generating Calico Network Policies
+## Generating Calico Network Policies
 
 One of the most powerful Claude Code capabilities is generating Kubernetes manifests from natural language descriptions. Here's how to create a comprehensive Calico network policy:
 
-Request Claude Code to Generate a Policy
+## Request Claude Code to Generate a Policy
 
 Provide detailed specifications including:
 - Source and destination workloads
@@ -108,7 +107,7 @@ spec:
           selector: name == 'ingress-controller'
 ```
 
-Policy Validation and Best Practices
+## Policy Validation and Best Practices
 
 Claude Code can analyze your policies for common issues:
 
@@ -121,11 +120,11 @@ Ask Claude Code to audit your policies:
 
 > Review these Calico network policies and identify any security concerns or misconfigurations. Check for overly permissive rules, missing egress policies, and potential connectivity issues.
 
-Automating Policy Testing
+## Automating Policy Testing
 
 Testing Calico policies manually can be time-consuming. Claude Code can help automate verification:
 
-Generating Test Scenarios
+## Generating Test Scenarios
 
 Request test cases for your policies:
 
@@ -167,7 +166,7 @@ spec:
           name: admin
 ```
 
-Network Connectivity Verification
+## Network Connectivity Verification
 
 After deploying test workloads, use Claude Code to guide verification:
 
@@ -190,11 +189,11 @@ kubectl exec -n frontend test-client-frontend -- \
   http://test-server-backend.backend.svc.cluster.local:8080 || echo "Connection refused (expected)"
 ```
 
-Policy Migration and Conversion
+## Policy Migration and Conversion
 
 If you're migrating from standard Kubernetes NetworkPolicies to Calico policies, Claude Code can assist:
 
-Converting Kubernetes NetworkPolicy to Calico
+## Converting Kubernetes NetworkPolicy to Calico
 
 > Convert this Kubernetes NetworkPolicy to a Calico GlobalNetworkPolicy with the same semantics but additional Calico features like tiering and logging.
 
@@ -244,17 +243,17 @@ spec:
   applyOnForward: true
 ```
 
-Managing Policy at Scale
+## Managing Policy at Scale
 
 For large Kubernetes deployments, managing many Calico policies becomes complex. Claude Code can help organize and document:
 
-Generating Policy Documentation
+## Generating Policy Documentation
 
 > Generate a markdown document that documents all Calico network policies in the production namespace. Include policy name, purpose, source/destination workloads, allowed ports, and any dependencies.
 
 Claude Code will parse your policies and create comprehensive documentation.
 
-Policy Backup and Versioning
+## Policy Backup and Versioning
 
 Implement a workflow for policy backup:
 
@@ -266,7 +265,7 @@ kubectl get networkpolicies --all-namespaces -o yaml > calico-np-backup.yaml
 
 Ask Claude Code to create a GitOps workflow for managing Calico policies alongside your application code.
 
-Actionable Best Practices
+## Actionable Best Practices
 
 Based on common patterns and pitfalls, here are actionable recommendations:
 
@@ -277,7 +276,7 @@ Based on common patterns and pitfalls, here are actionable recommendations:
 5. Document policy intent: Add annotations explaining the purpose of each policy
 6. Automate policy reviews: Use Claude Code to regularly audit policies for drift
 
-Conclusion
+## Conclusion
 
 Claude Code significantly streamlines the Calico network policy workflow by generating manifests, validating configurations, creating test scenarios, and assisting with policy documentation. By integrating Claude Code into your Kubernetes networking workflow, you can reduce manual errors, accelerate policy development, and maintain solid security posture.
 

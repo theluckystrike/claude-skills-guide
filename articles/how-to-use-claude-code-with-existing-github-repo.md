@@ -18,7 +18,7 @@ Connecting Claude Code to an existing GitHub repository transforms how you work 
 
 This guide walks you through the process of setting up Claude Code with your existing GitHub repository, covering authentication, [project initialization best practices](/claude-code-project-initialization-best-practices/), and practical workflows that work well with real-world projects.
 
-Prerequisites
+## Prerequisites
 
 Before connecting Claude Code to your GitHub repo, ensure you have:
 
@@ -39,7 +39,7 @@ If not authenticated, run:
 gh auth login
 ```
 
-Cloning Your Repository
+## Cloning Your Repository
 
 Start by cloning your existing repository using SSH (recommended for Claude Code integration):
 
@@ -60,7 +60,7 @@ Navigate into the project directory before initializing Claude Code:
 cd your-repo
 ```
 
-Initializing Claude Code in an Existing Project
+## Initializing Claude Code in an Existing Project
 
 Start Claude Code within your existing repository by running it from the project directory:
 
@@ -83,11 +83,11 @@ ls -la .claude
 
 This directory contains settings that apply specifically to this repository.
 
-Connecting to GitHub Through Claude Code
+## Connecting to GitHub Through Claude Code
 
 While Claude Code doesn't directly "connect" to GitHub as a service, it integrates with your local git workflow. Here are the key integration points:
 
-Authentication Setup
+## Authentication Setup
 
 For Claude Code to interact with GitHub repositories, ensure your SSH keys are configured:
 
@@ -105,7 +105,7 @@ Add the public key to your GitHub account, then test the connection:
 ssh -T git@github.com
 ```
 
-Working with Remote Branches
+## Working with Remote Branches
 
 When Claude Code creates branches for feature work, push them to GitHub:
 
@@ -118,9 +118,9 @@ git push -u origin feature/your-feature-name
 
 This workflow integrates naturally with your existing GitHub workflow, whether you use pull requests, branch protection rules, or direct commits.
 
-Practical Workflows for Existing Repos
+## Practical Workflows for Existing Repos
 
-Understanding Large Codebases
+## Understanding Large Codebases
 
 When first connecting Claude Code to a large existing repository, use the `Read` tool strategically:
 
@@ -137,7 +137,7 @@ Then ask Claude Code to explain specific components:
 Explain the authentication flow in this codebase, focusing on how users log in and session management works.
 ```
 
-Incremental Improvements
+## Incremental Improvements
 
 For existing projects, start with small, focused tasks rather than large refactors:
 
@@ -151,7 +151,7 @@ Example task formulation:
 In src/auth/login.js, the forgot password function throws an unhandled error when the email is not found in the database. Add proper error handling that returns a user-friendly message instead of crashing.
 ```
 
-Respecting Existing Patterns
+## Respecting Existing Patterns
 
 Claude Code works best when you help it understand your project's conventions. Provide context about:
 
@@ -163,7 +163,7 @@ Claude Code works best when you help it understand your project's conventions. P
 This project uses the conventional commits format. When making changes, follow this pattern: feat: add new login button, fix: resolve auth token expiry issue.
 ```
 
-Configuration for GitHub Projects
+## Configuration for GitHub Projects
 
 Customize Claude Code behavior for your repository by editing `.claude/settings.json`:
 
@@ -189,9 +189,9 @@ Customize Claude Code behavior for your repository by editing `.claude/settings.
 
 This configuration ensures Claude Code has appropriate permissions while preventing destructive operations.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Permission Denied Errors
+## Permission Denied Errors
 
 If Claude Code cannot read files in your repository, check file permissions:
 
@@ -200,7 +200,7 @@ chmod -R 755 your-repo
 chmod -R 644 *.json *.yaml *.yml
 ```
 
-Context Window Limits
+## Context Window Limits
 
 Large repositories may exceed Claude Code's context window. Use the `Glob` tool to identify key files rather than loading entire directories:
 
@@ -208,7 +208,7 @@ Large repositories may exceed Claude Code's context window. Use the `Glob` tool 
 Find all files related to user authentication, particularly those handling password reset functionality.
 ```
 
-Git Conflicts
+## Git Conflicts
 
 When Claude Code generates code that conflicts with existing files, review changes carefully:
 
@@ -219,7 +219,7 @@ git diff path/to/file.js
 
 Accept or reject changes based on your project's requirements.
 
-Security Considerations
+## Security Considerations
 
 When using Claude Code with GitHub repositories, follow these security practices:
 
@@ -237,7 +237,7 @@ Your `.gitignore` should include:
 credentials.json
 ```
 
-Summary
+## Summary
 
 Using Claude Code with an existing GitHub repository involves cloning the project, initializing Claude Code within it, and using your established git workflow. The key to success is starting with small, focused tasks and providing context about your project's conventions.
 

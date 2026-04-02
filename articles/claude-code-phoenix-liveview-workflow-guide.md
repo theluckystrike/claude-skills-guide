@@ -13,12 +13,9 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code Phoenix LiveView Workflow Guide
-
 Building real-time web applications with Phoenix LiveView becomes significantly more productive when you use Claude Code effectively. This guide provides practical workflows for developing Phoenix LiveView applications with Claude Code, covering project setup, component development, state management, and testing patterns that work well with AI-assisted development.
 
-Setting Up Your Phoenix LiveView Project
+## Setting Up Your Phoenix LiveView Project
 
 When starting a new Phoenix LiveView project, you can use Claude Code to accelerate the initial setup and configuration. Begin by creating your Phoenix application using the standard generator:
 
@@ -31,7 +28,7 @@ Once your project is initialized, ask Claude Code to review the generated struct
 
 For teams working with multiple environments, Claude Code excels at generating environment-specific configurations. The supermemory skill can track your development patterns across projects, making it easier to maintain consistent setups.
 
-Developing LiveView Components
+## Developing LiveView Components
 
 LiveView's component model requires understanding both the Elixir backend and the template layer. Claude Code can help bridge this gap by explaining how data flows between your LiveView modules and their corresponding HEEx templates.
 
@@ -66,11 +63,11 @@ end
 
 The frontend-design skill can assist with styling your LiveView components, suggesting Tailwind classes or CSS patterns that work well with LiveView's reactive updates.
 
-State Management Patterns
+## State Management Patterns
 
 Phoenix LiveView offers several state management approaches, and choosing the right one impacts your application's maintainability. Claude Code can help you evaluate which pattern fits your use case.
 
-Assigns-Based State
+## Assigns-Based State
 
 For simple components, using socket assigns directly provides the clearest approach:
 
@@ -81,7 +78,7 @@ def handle_event("increment", _params, socket) do
 end
 ```
 
-Agent-Based State
+## Agent-Based State
 
 For complex state that benefits from encapsulation, agents work well:
 
@@ -92,7 +89,7 @@ def mount(_params, _session, socket) do
 end
 ```
 
-ETS for Shared State
+## ETS for Shared State
 
 When multiple LiveViews need to share state, ETS provides a performant solution:
 
@@ -105,7 +102,7 @@ end
 
 The tdd skill proves valuable when developing these state management patterns, helping you write tests that verify state transitions correctly.
 
-Handling Real-Time Updates
+## Handling Real-Time Updates
 
 LiveView's strength lies in its real-time capabilities. Claude Code can help you implement pubsub patterns and handle the various update scenarios efficiently.
 
@@ -137,7 +134,7 @@ def handle_info(%{event: "user_updated", payload: user}, socket) do
 end
 ```
 
-Form Handling and Validation
+## Form Handling and Validation
 
 Working with forms in LiveView requires understanding the `form` struct and proper error handling. Claude Code can generate solid form components with validation:
 
@@ -158,7 +155,7 @@ end
 
 The pdf skill can be useful when generating reports from LiveView data, allowing you to create downloadable PDF documents from your real-time interfaces.
 
-Testing LiveView Applications
+## Testing LiveView Applications
 
 Testing LiveView requires understanding both the controller-style testing and the JavaScript-equivalent browser testing. Claude Code with the tdd skill can help structure your tests effectively.
 
@@ -178,7 +175,7 @@ end
 
 For more comprehensive testing, consider using Wallaby for browser-based tests that verify JavaScript interactions and real-time updates.
 
-Performance Optimization
+## Performance Optimization
 
 As your LiveView application grows, performance considerations become important. Claude Code can analyze your code and suggest optimizations:
 
@@ -208,7 +205,7 @@ def handle_event("toggle", %{"id" => id}, socket) do
 end
 ```
 
-Deployment Considerations
+## Deployment Considerations
 
 When deploying Phoenix LiveView applications, ensure your deployment pipeline accounts for the WebSocket connections. Claude Code can help you generate appropriate Docker configurations and deployment scripts.
 
@@ -218,12 +215,11 @@ Key deployment factors include:
 - Asset compilation and caching strategies
 - Health check endpoints for load balancers
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Phoenix LiveView development by providing intelligent code generation, pattern suggestions, and testing assistance. The key is structuring your prompts with specific requirements rather than broad requests. Combine Claude Code with skills like tdd for testing, frontend-design for styling, and supermemory for context retention to build solid LiveView applications efficiently.
 
 For Elixir developers transitioning from other frameworks, Claude Code helps bridge knowledge gaps by explaining Phoenix-specific patterns and idioms. The combination of real-time capabilities with AI-assisted development creates a powerful workflow for building modern web applications.
-
 
 Related Reading
 

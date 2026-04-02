@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Carvel YTT Workflow Tutorial
 
 If you're working with Kubernetes configurations, you've likely encountered the challenge of managing complex, repetitive YAML files across multiple environments. Carvel ytt (pronounced "white-t") offers a powerful solution for template-based YAML management, but integrating it into your workflow efficiently requires the right tooling. This tutorial shows you how to combine Claude Code with ytt to create a streamlined, AI-assisted configuration management pipeline.
 
-Understanding the YTT Basics
+## Understanding the YTT Basics
 
 Before diving into the Claude Code integration, let's establish what ytt brings to your Kubernetes workflow. Ytt is part of the Carvel tool suite and provides:
 
@@ -30,7 +29,7 @@ Before diving into the Claude Code integration, let's establish what ytt brings 
 
 Ytt processes your templates and outputs plain Kubernetes manifests ready for deployment. Unlike Helm, ytt does not use a separate templating language. the annotations sit directly inside valid YAML, which means your templates can be linted and validated as YAML before any processing happens. This makes them easier to review in pull requests and easier to reason about when things go wrong.
 
-YTT vs Helm: When to Choose YTT
+## YTT vs Helm: When to Choose YTT
 
 The choice between ytt and Helm comes down to how you want to express customization. Helm uses Go templates mixed into YAML. powerful but prone to readability problems as charts grow. Ytt keeps configuration as YAML-first: the `#@` prefix marks executable lines, but everything else is plain YAML.
 
@@ -45,11 +44,11 @@ The choice between ytt and Helm comes down to how you want to express customizat
 
 If your team already uses Helm and has a large chart library, migration is a real cost. But for greenfield projects or teams that have hit the maintainability ceiling with Helm, ytt is worth the investment. especially when Claude can help you navigate the syntax and overlay patterns.
 
-Setting Up Claude Code for YTT Development
+## Setting Up Claude Code for YTT Development
 
 The first step is ensuring Claude Code understands your ytt project structure. Create a dedicated skill that teaches Claude about your ytt templates, data values, and any custom libraries you use.
 
-Creating Your YTT Skill
+## Creating Your YTT Skill
 
 Here's a basic skill structure you can customize:
 
@@ -74,7 +73,7 @@ Available Commands
 
 This skill gives Claude context about your project's layout and common operations, enabling more relevant assistance. Without it, Claude will give you correct ytt syntax but may not know which files to reference, how your team names things, or what your CI commands look like.
 
-Recommended Project Layout
+## Recommended Project Layout
 
 Before writing any templates, establish a directory structure that Claude can navigate predictably:
 
@@ -100,7 +99,7 @@ k8s/
 
 A `Makefile` with named targets is particularly useful when working with Claude. you can describe intent in natural language and ask Claude to generate or update the relevant make target rather than reconstructing the full ytt invocation every time.
 
-Building Your First YTT Template with Claude
+## Building Your First YTT Template with Claude
 
 Let's walk through creating a deployment template that adapts to different environments. Ask Claude Code to help you structure this:
 
@@ -139,7 +138,7 @@ Claude can explain how each `#@` annotation works and suggest improvements to yo
 - `data.values.*` references must have corresponding entries in your schema or values file, or ytt will error. Claude can audit templates against your values schema to catch missing definitions before you run the tool.
 - The `#@ end` keyword closes the function definition. missing it is a common syntax error that Claude immediately recognizes and fixes when you paste the error output.
 
-Defining Your Data Values Schema
+## Defining Your Data Values Schema
 
 A schema file is essential for team projects. It documents expected values and provides type checking:
 
@@ -164,11 +163,11 @@ resources:
 
 Ask Claude to help you write schema files by describing your application's configuration needs in plain language. Claude can also help you add type assertions for fields that must match specific formats, using ytt's `@assert/validate` annotation.
 
-Managing Multiple Environments
+## Managing Multiple Environments
 
 One of ytt's strongest features is its overlay system, which Claude can help you orchestrate effectively. Overlays let you describe the difference between environments rather than duplicating full manifests.
 
-Environment-Specific Overlays
+## Environment-Specific Overlays
 
 Create overlays for each environment. A staging overlay might increase replicas:
 
@@ -204,7 +203,7 @@ spec:
 
 The overlay syntax can become complex quickly, especially when you need to append items to arrays or replace nested objects. Claude is particularly helpful here. describe what you want to achieve and paste your current overlay, and Claude can diagnose match condition issues or suggest the correct `#@overlay/` directive.
 
-Common Overlay Directives
+## Common Overlay Directives
 
 | Directive | Effect |
 |-----------|--------|
@@ -217,11 +216,11 @@ Common Overlay Directives
 
 Ask Claude which directive to use by describing your intent. "I want to add a sidecar container to the existing containers array without replacing the whole array". Claude will tell you to use `#@overlay/append` and show the correct syntax.
 
-Automating YTT Workflows with Claude
+## Automating YTT Workflows with Claude
 
 Beyond template creation, Claude Code can help you build automation scripts that integrate ytt into your CI/CD pipeline. The goal is to make rendering and validation fast enough that developers run them frequently rather than only at deployment time.
 
-Environment Promotion Script
+## Environment Promotion Script
 
 ```bash
 #!/bin/bash
@@ -248,7 +247,7 @@ fi
 
 Claude can extend this script in several useful directions. adding a diff step that shows what changed since the last render, integrating `kapp diff` to preview what the cluster change would look like, or posting a summary comment to a pull request using the GitHub API.
 
-Integrating with GitHub Actions
+## Integrating with GitHub Actions
 
 A CI workflow that validates and renders on every PR gives your team confidence that template changes are correct before merge:
 
@@ -289,7 +288,7 @@ jobs:
 
 Ask Claude to generate the initial workflow YAML by describing your project structure and which environments you need. Claude can also add steps for running `kubeval` or `kube-score` against the rendered output for deeper validation.
 
-Reusable Functions in the lib/ Directory
+## Reusable Functions in the lib/ Directory
 
 As your templates grow, you'll find common patterns that appear in multiple resources. standard labels, resource request structures, health check configurations. The `lib/` directory is where these live.
 
@@ -320,7 +319,7 @@ Reference these functions from your templates using `load`:
 
 Claude can help you identify repetition across your existing templates and extract it into a library. Describe what patterns you see repeating and paste two or three examples. Claude will draft the function signature and implementation, and show you how to wire up the `load` statement.
 
-Best Practices for YTT and Claude Integration
+## Best Practices for YTT and Claude Integration
 
 Keep templates modular: Break your configurations into reusable modules that Claude can understand and help maintain. A 600-line single-file configuration is hard for anyone to reason about. including Claude. Smaller, focused files with clear names let you paste just the relevant section when asking for help.
 
@@ -332,7 +331,7 @@ Store rendered manifests for diffing: Commit the rendered output of each environ
 
 Test rendered output: Always run `ytt --validate` before deploying. Claude can help you create test cases that verify your rendered manifests meet requirements. checking that replica counts fall within expected ranges, that resource limits are set, or that specific labels are present.
 
-Troubleshooting Common YTT Issues
+## Troubleshooting Common YTT Issues
 
 When you encounter problems, Claude can help diagnose and resolve them quickly. The most productive approach is to paste the full error output alongside the template section that triggered it.
 
@@ -358,7 +357,7 @@ Data values not loading: Verify your file paths and check that required values a
 
 Multiple documents in output: If your rendered output contains more documents than expected, check for accidental `---` separators in your templates. Each `---` creates a new YAML document. Overlays can also generate unexpected documents if a match condition is broader than intended.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Carvel ytt creates a powerful workflow for managing Kubernetes configurations. Claude helps you write better templates, understand complex overlays, and automate your deployment pipelines. Start with simple templates, gradually adopt more advanced patterns, and let AI assistance accelerate your configuration management journey.
 

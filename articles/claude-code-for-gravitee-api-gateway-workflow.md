@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Gravitee API Gateway Workflow"
 description: "Learn how to use Claude Code to streamline your Gravitee API Gateway workflow. Practical examples for API configuration, policy management, and."
@@ -14,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Gravitee API Gateway Workflow
 
 Gravitee.io is a powerful open-source API Gateway that provides solid traffic management, security, and analytics capabilities. When combined with Claude Code, you can dramatically accelerate your API gateway configuration, reduce errors, and automate repetitive tasks. This guide walks through practical workflows for integrating Claude Code into your Gravitee API management pipeline.
 
-Understanding the Gravitee Configuration Structure
+## Understanding the Gravitee Configuration Structure
 
 Gravitee API Gateway uses a declarative configuration model centered around API definitions, plans, and policies. These configurations are typically stored as YAML files and can be managed through Gravitee's Management API or deployed directly via their Kubernetes operator.
 
@@ -33,7 +31,7 @@ When working with Gravitee, you'll encounter several key concepts:
 
 Claude Code excels at helping you generate these configurations correctly, explain complex policy chains, and maintain consistency across multiple API definitions.
 
-Generating API Definitions with Claude Code
+## Generating API Definitions with Claude Code
 
 One of the most valuable uses of Claude Code is generating valid Gravitee API definitions. Instead of manually writing YAML configurations, you can describe your API requirements in plain language and let Claude Code produce the correct structure.
 
@@ -78,7 +76,7 @@ api:
 
 Claude Code can help you customize this template for your specific needs, explain what each section does, and validate that your configuration follows Gravitee best practices.
 
-Automating Policy Configuration
+## Automating Policy Configuration
 
 Gravitee's policy engine is one of its most powerful features. Policies can transform requests, enforce security, cache responses, and much more. However, configuring policies correctly requires understanding their configuration schemas.
 
@@ -126,7 +124,7 @@ flows:
 
 This approach saves significant time when configuring complex policy chains and ensures your policies are correctly structured.
 
-Managing APIs Across Environments
+## Managing APIs Across Environments
 
 A common challenge with Graveteer is maintaining consistent configurations across development, staging, and production environments. Claude Code can help you create environment-aware configurations using variable substitution.
 
@@ -174,7 +172,7 @@ export PLAN_STATUS="PUBLISHED"
 
 Claude Code can also help you detect configuration drift between environments and generate the changes needed to bring them into sync.
 
-Integrating with GitOps Workflows
+## Integrating with GitOps Workflows
 
 For teams adopting GitOps with Gravitee's Kubernetes Operator, Claude Code becomes invaluable for managing Custom Resource Definitions (CRDs).
 
@@ -212,7 +210,7 @@ spec:
 
 Claude Code can help you write, validate, and troubleshoot these CRDs, making your GitOps workflow much smoother.
 
-Best Practices for Claude Code with Gravitee
+## Best Practices for Claude Code with Gravitee
 
 To get the most out of using Claude Code with Gravitee, follow these recommendations:
 
@@ -226,7 +224,7 @@ To get the most out of using Claude Code with Gravitee, follow these recommendat
 
 5. Keep configurations DRY: Use YAML anchors and aliases to avoid duplicating policy configurations across multiple APIs.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms how you work with Gravitee API Gateway by automating configuration generation, ensuring correctness, and accelerating your development workflow. Whether you're defining new APIs, configuring complex policy chains, or managing multi-environment deployments, Claude Code serves as an intelligent assistant that understands both your requirements and Gravitee's configuration model.
 

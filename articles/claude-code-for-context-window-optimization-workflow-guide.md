@@ -15,13 +15,13 @@ Claude Code for Context Window Optimization Workflow Guide
 
 Working effectively with Claude Code (the Claude CLI) requires understanding how to optimize your context window. When you're building applications, debugging code, or refactoring large codebases, managing what Claude "sees" can dramatically improve response quality and efficiency. This guide provides practical strategies for developers who want to master context window optimization in their daily workflow.
 
-Understanding Context Window in Claude Code
+## Understanding Context Window in Claude Code
 
 The context window determines how much conversation history, code, and instructions Claude can process at once. When working with large projects, you might hit limits or notice degraded responses when too much irrelevant information fills the context. Think of it as giving Claude a working desk, the more organized and focused the desk, the better Claude can help you.
 
 Claude Code supports different models with varying context capacities. The key is understanding that every token counts, and strategic context management helps you get the most out of each conversation.
 
-Essential Context Optimization Strategies
+## Essential Context Optimization Strategies
 
 1. Use `--resume` for Focused Sessions
 
@@ -65,9 +65,9 @@ Glob "/*test*.py"
 
 Then ask Claude to read specific files from the results. This provides architectural context without consuming excessive tokens.
 
-Practical Code Snippets for Optimization
+## Practical Code Snippets for Optimization
 
-Creating a Context-Aware Workflow Script
+## Creating a Context-Aware Workflow Script
 
 Here's a bash script that helps manage context by tracking task-specific conversations:
 
@@ -90,7 +90,7 @@ Usage:
 
 This isolates context per task, preventing cross-contamination between different work streams.
 
-Efficient Code Review Workflow
+## Efficient Code Review Workflow
 
 When using Claude for code reviews, structure your requests efficiently:
 
@@ -106,9 +106,9 @@ Focus on security vulnerabilities and suggest fixes"
 
 The focused approach produces better results because Claude isn't parsing irrelevant code.
 
-Advanced Optimization Techniques
+## Advanced Optimization Techniques
 
-Using Project Instructions Effectively
+## Using Project Instructions Effectively
 
 Create a `.claude/project-instructions.md` file in your project root:
 
@@ -133,7 +133,7 @@ Important Patterns
 
 This provides persistent context without repeating it in every conversation.
 
-Leveraging Diff Views for Changes
+## Leveraging Diff Views for Changes
 
 When discussing code changes, use diff-friendly formats:
 
@@ -145,7 +145,7 @@ claude "Review these changes: $(cat changes.diff)"
 
 Claude processes diffs more efficiently than full file content, making review conversations more productive.
 
-Actionable Best Practices
+## Actionable Best Practices
 
 1. Start each session focused: Use `--resume none` or new sessions for distinct tasks.
 
@@ -161,7 +161,7 @@ Actionable Best Practices
 
 7. Clear context when needed: Start fresh when switching to unrelated tasks.
 
-Common Mistakes to Avoid
+## Common Mistakes to Avoid
 
 Mistake 1: Pasting Entire Files
 Instead of pasting whole files, identify and read only relevant sections:
@@ -197,7 +197,7 @@ claude "Fix the null pointer exception in user-service.ts:45
 where user.profile is accessed before the null check"
 ```
 
-Conclusion
+## Conclusion
 
 Optimizing context window in Claude Code is about working smarter, not harder. By implementing these strategies, targeted file reading, strategic session management, and structured task isolation, you'll get better responses while staying within context limits. 
 

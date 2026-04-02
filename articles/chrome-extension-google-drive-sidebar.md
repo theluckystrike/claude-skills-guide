@@ -16,13 +16,13 @@ score: 8
 
 A Google Drive sidebar in your Chrome extension opens up powerful productivity possibilities. You can let users browse their Drive files, preview documents, or attach files from Drive without leaving their current tab. This guide walks you through building this functionality from scratch.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 A Chrome extension with a Drive sidebar combines several components. The sidebar panel displays in the host page using a content script or declarative net request. The background service worker handles API communication with Google. OAuth 2.0 authentication grants access to the user's Drive data. The Drive API provides file listing, metadata, and content retrieval.
 
 Chrome's side panel API, introduced in Manifest V3, makes this significantly easier than the old approach of injecting iframes. You can now create a dedicated sidebar that persists across page navigations within a domain.
 
-Setting Up the Manifest
+## Setting Up the Manifest
 
 Your extension needs proper permissions to access Google Drive and display a side panel. Here's a complete manifest configuration:
 
@@ -61,7 +61,7 @@ Your extension needs proper permissions to access Google Drive and display a sid
 
 The `side_panel` key tells Chrome this extension provides a side panel experience. The OAuth 2.0 configuration enables identity verification without exposing credentials.
 
-Implementing OAuth Authentication
+## Implementing OAuth Authentication
 
 Google requires OAuth 2.0 for Drive API access. The Chrome identity API simplifies this process significantly:
 
@@ -97,7 +97,7 @@ async function refreshToken() {
 }
 ```
 
-Querying the Drive API
+## Querying the Drive API
 
 With authentication working, you can fetch files, folders, and metadata. The Drive v3 API uses a RESTful approach with JSON responses:
 
@@ -129,7 +129,7 @@ async function listDriveFiles(token, query = '') {
 
 Filter files by type using MIME types. For folders, use `mimeType = 'application/vnd.google-apps.folder'`. For Google Docs, use `mimeType contains 'vnd.google-apps'`. The API returns native links that you can convert to preview URLs.
 
-Building the Sidebar UI
+## Building the Sidebar UI
 
 The side panel HTML serves as your sidebar interface. Keep it lightweight since it loads in every matching tab:
 
@@ -179,7 +179,7 @@ The side panel HTML serves as your sidebar interface. Keep it lightweight since 
 </html>
 ```
 
-Connecting the Sidebar to Your Logic
+## Connecting the Sidebar to Your Logic
 
 The side panel JavaScript handles user interaction and API communication:
 
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Enabling the Sidebar Toggle
+## Enabling the Sidebar Toggle
 
 Users need a way to open and close your sidebar. The sidePanel API provides this:
 
@@ -272,13 +272,13 @@ chrome.action.onClicked.addListener(async (tab) => {
 
 This opens the sidebar when users click your extension icon. You can also programmatically open it based on page conditions or keyboard shortcuts.
 
-Practical Use Cases
+## Practical Use Cases
 
 A Drive sidebar extension serves multiple workflows. Support teams can pull knowledge base documents while browsing helpdesk tickets. Developers can reference Drive-stored API docs alongside code. Content creators can attach Drive assets to CMS entries without tab switching.
 
 For deeper integration, consider implementing file upload from the sidebar, folder tree navigation, or direct sharing capabilities. Each adds value but increases complexity, start simple and iterate based on user feedback.
 
-Step-by-Step: Building the Drive Sidebar
+## Step-by-Step: Building the Drive Sidebar
 
 1. Request OAuth2 access: add `identity` to your manifest permissions and call `chrome.identity.getAuthToken({ interactive: true })` to get a Google OAuth2 token scoped to `https://www.googleapis.com/auth/drive.readonly` (or `.file` for write access).
 2. List recent files: call `GET https://www.googleapis.com/drive/v3/files?orderBy=modifiedTime desc&pageSize=20&fields=files(id,name,mimeType,webViewLink,modifiedTime)` using the token in the `Authorization` header.
@@ -287,7 +287,7 @@ Step-by-Step: Building the Drive Sidebar
 5. Add search: call `GET https://www.googleapis.com/drive/v3/files?q=name contains 'query'` to search Drive without leaving the current page.
 6. Persist the sidebar state: store whether the sidebar is open or closed in `chrome.storage.sync` so it maintains its state across sessions and devices.
 
-Google Drive API Integration
+## Google Drive API Integration
 
 ```javascript
 async function listRecentFiles(token) {
@@ -308,7 +308,7 @@ async function listRecentFiles(token) {
 
 The `fields` parameter restricts the response to only the properties you need, reducing payload size significantly for users with large Drives.
 
-Comparison with Native Drive Interfaces
+## Comparison with Native Drive Interfaces
 
 | Access method | Speed | Offline | Context switching | Customization |
 |---|---|---|---|---|
@@ -319,7 +319,7 @@ Comparison with Native Drive Interfaces
 
 The extension is most valuable when users need to reference Drive files while working in a third-party web app. It eliminates the tab-switching overhead that interrupts flow.
 
-Advanced: Recent Files Badge
+## Advanced: Recent Files Badge
 
 Show a badge on the extension icon when new files have been shared with the user in the last 24 hours:
 
@@ -340,7 +340,7 @@ async function checkForNewShares(token) {
 
 Run this check on a 30-minute alarm to keep the badge current without hammering the API.
 
-Troubleshooting
+## Troubleshooting
 
 OAuth token expiring mid-session: `chrome.identity.getAuthToken` returns cached tokens that expire after 1 hour. If a Drive API call returns 401, call `chrome.identity.removeCachedAuthToken({ token })` and then `getAuthToken` again to force a token refresh.
 

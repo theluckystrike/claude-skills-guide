@@ -13,20 +13,17 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code TriggerDev Scheduled Cron Job Tutorial
-
 Automation is the backbone of modern software development, and scheduled tasks are essential for maintaining reliable systems. In this tutorial, we'll explore how to use Claude Code alongside TriggerDev to create powerful scheduled cron jobs that streamline your development workflow and automate repetitive tasks.
 
 What is Claude Code?
 
 Claude Code is Anthropic's CLI tool that brings AI-assisted development directly to your terminal. Unlike traditional IDE integrations, Claude Code operates as a standalone CLI that can execute commands, manage files, and importantly, integrate with external services through skills and tools.
 
-Understanding TriggerDev
+## Understanding TriggerDev
 
 TriggerDev is a developer-friendly platform that enables you to create, manage, and monitor scheduled jobs (cron jobs) with ease. It provides a clean API and CLI interface for scheduling tasks that run automatically at specified intervals.
 
-Prerequisites
+## Prerequisites
 
 Before we begin, ensure you have:
 
@@ -35,7 +32,7 @@ Before we begin, ensure you have:
 - Node.js 18+ installed
 - A TriggerDev account (free tier works for learning)
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 First, let's configure both tools. Start Claude Code in your project directory:
 
@@ -51,11 +48,11 @@ triggerdev auth login
 
 Follow the prompts to complete authentication. You'll need your TriggerDev API key, which you can obtain from your dashboard.
 
-Creating Your First Scheduled Job
+## Creating Your First Scheduled Job
 
 Let's build a practical example: a scheduled job that automatically runs database backups. We'll use Claude Code to generate the backup script and TriggerDev to schedule it.
 
-Step 1: Create the Backup Script
+## Step 1: Create the Backup Script
 
 Ask Claude Code to help create a backup script:
 
@@ -89,7 +86,7 @@ Make it executable:
 chmod +x backup.sh
 ```
 
-Step 2: Schedule with TriggerDev
+## Step 2: Schedule with TriggerDev
 
 Now let's create a cron job that runs daily at 2 AM:
 
@@ -103,7 +100,7 @@ triggerdev jobs create \
 
 The cron expression `0 2 * * *` translates to "at 2:00 AM every day."
 
-Step 3: Verify and Monitor
+## Step 3: Verify and Monitor
 
 Check your job status:
 
@@ -112,11 +109,11 @@ triggerdev jobs list
 triggerdev jobs logs daily-db-backup
 ```
 
-Advanced: Claude Code Integration with TriggerDev
+## Advanced: Claude Code Integration with TriggerDev
 
 For more complex automation, you can combine Claude Code's AI capabilities with TriggerDev's scheduling. Let's create a job that uses Claude Code to analyze logs and report issues.
 
-Creating an AI-Powered Log Analyzer
+## Creating an AI-Powered Log Analyzer
 
 ```bash
 triggerdev jobs create \
@@ -128,11 +125,11 @@ triggerdev jobs create \
 
 This example demonstrates how Claude Code can process text and provide insights on a scheduled basis.
 
-Using Claude Code Skills for Complex Tasks
+## Using Claude Code Skills for Complex Tasks
 
 Claude Code skills extend functionality by adding specialized commands. Here's how to create a skill for scheduled tasks:
 
-Creating a TriggerDev Skill
+## Creating a TriggerDev Skill
 
 ```javascript
 // skills/triggerdev.js
@@ -167,7 +164,7 @@ Register the skill in your Claude Code config and you can now manage TriggerDev 
 claude: Create a weekly job that runs my tests every Sunday at midnight
 ```
 
-Best Practices for Scheduled Jobs
+## Best Practices for Scheduled Jobs
 
 1. Use descriptive job names: Makes debugging easier
 2. Set up alerting: Configure notifications for job failures
@@ -175,7 +172,7 @@ Best Practices for Scheduled Jobs
 4. Log everything: Store output for troubleshooting
 5. Test before scheduling: Run commands manually first
 
-Complete CI/CD Pipeline Job
+## Complete CI/CD Pipeline Job
 
 Here's a more sophisticated example combining multiple tools:
 
@@ -190,27 +187,27 @@ triggerdev jobs create \
 
 This creates a job that runs Monday through Friday at 3 AM, with a one-hour timeout.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Jobs Not Running
+## Jobs Not Running
 
 - Verify cron expression syntax
 - Check TriggerDev dashboard for status
 - Ensure authentication hasn't expired
 
-Permission Errors
+## Permission Errors
 
 - Confirm script has execute permissions
 - Check working directory paths
 - Verify API key permissions
 
-Claude Code Integration Problems
+## Claude Code Integration Problems
 
 - Ensure Claude Code is in your PATH
 - Check Claude configuration file syntax
 - Verify command-line flags are correct
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with TriggerDev creates a powerful automation framework for developers. Claude Code handles the intelligent processing and command generation, while TriggerDev provides reliable scheduling and execution.
 

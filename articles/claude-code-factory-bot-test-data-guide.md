@@ -12,17 +12,16 @@ score: 7
 permalink: /claude-code-factory-bot-test-data-guide/
 ---
 
-
 {% raw %}
 Claude Code Factory Bot Test Data Guide
 
 Factory Bot is a Ruby library for building test data fixtures in a flexible and maintainable way. When combined with Claude Code, you can automate factory creation, generate complex test scenarios, and build solid test suites faster than ever.
 
-Understanding Factory Bot Basics
+## Understanding Factory Bot Basics
 
 Factory Bot replaces traditional Rails fixtures with a more expressive, configurable approach to test data. Instead of static YAML files, you define factories as Ruby classes that can generate objects with default values, associations, and dynamic attributes.
 
-Setting Up Factory Bot in Your Project
+## Setting Up Factory Bot in Your Project
 
 First, add Factory Bot to your Gemfile:
 
@@ -41,7 +40,7 @@ RSpec.configure do |config|
 end
 ```
 
-Defining Your First Factory
+## Defining Your First Factory
 
 Create factories in `spec/factories/` with a clear, consistent naming convention:
 
@@ -63,11 +62,11 @@ FactoryBot.define do
 end
 ```
 
-Using Factory Bot with Claude Code
+## Using Factory Bot with Claude Code
 
 When working with Claude Code, you can use its understanding of Factory Bot to generate factories for your existing models and create sophisticated test data scenarios.
 
-Generating Factories from Models
+## Generating Factories from Models
 
 Ask Claude Code to analyze your models and create appropriate factories:
 
@@ -111,7 +110,7 @@ FactoryBot.define do
 end
 ```
 
-Building Complex Test Scenarios
+## Building Complex Test Scenarios
 
 Factory Bot shines when you need to create related records for testing complex associations:
 
@@ -131,9 +130,9 @@ let(:prolific_author) do
 end
 ```
 
-Advanced Factory Bot Patterns
+## Advanced Factory Bot Patterns
 
-Using Transient Attributes
+## Using Transient Attributes
 
 Transient attributes don't map directly to model fields but customize factory behavior:
 
@@ -158,7 +157,7 @@ FactoryBot.define do
 end
 ```
 
-Factory Sequences for Unique Data
+## Factory Sequences for Unique Data
 
 Ensure unique values across test runs with sequences:
 
@@ -172,7 +171,7 @@ FactoryBot.define do
 end
 ```
 
-Inheritance and Aliases
+## Inheritance and Aliases
 
 Create base factories and extend them:
 
@@ -200,9 +199,9 @@ FactoryBot.define do
 end
 ```
 
-Integration with RSpec
+## Integration with RSpec
 
-Factory Bot Methods in Tests
+## Factory Bot Methods in Tests
 
 After configuring the syntax methods, use factories directly in your tests:
 
@@ -229,7 +228,7 @@ RSpec.describe Post do
 end
 ```
 
-Using Factory Traits for Test Variations
+## Using Factory Traits for Test Variations
 
 Organize test data variations with traits:
 
@@ -270,9 +269,9 @@ FactoryBot.define do
 end
 ```
 
-Best Practices for Factory Bot
+## Best Practices for Factory Bot
 
-Keep Factories Fast
+## Keep Factories Fast
 
 Avoid slow operations in factories:
 
@@ -299,7 +298,7 @@ user = build_stubbed(:user)
 expect(user.name).to eq("John Doe")
 ```
 
-Clean Up Between Tests
+## Clean Up Between Tests
 
 Factory Bot handles cleanup automatically, but for performance-critical tests:
 
@@ -312,9 +311,9 @@ RSpec.configure do |config|
 end
 ```
 
-Working with Associations
+## Working with Associations
 
-Handling Dependent Records
+## Handling Dependent Records
 
 ```ruby
 FactoryBot.define do
@@ -335,7 +334,7 @@ FactoryBot.define do
 end
 ```
 
-Self-Referential Associations
+## Self-Referential Associations
 
 ```ruby
 FactoryBot.define do
@@ -354,13 +353,13 @@ FactoryBot.define do
 end
 ```
 
-Conclusion
+## Conclusion
 
 Factory Bot combined with Claude Code creates a powerful testing workflow. Use Claude Code to generate factories from your models, create test data scenarios, and maintain clean, reusable factory definitions. This approach ensures your test suite remains fast, maintainable, and expressive.
 
-Troubleshooting Factory Bot Performance
+## Troubleshooting Factory Bot Performance
 
-Diagnosing Slow Test Suites
+## Diagnosing Slow Test Suites
 
 Factory Bot is often blamed for slow test suites, but the real culprit is usually unnecessary database writes. Profile your factories to find the hot spots:
 
@@ -385,7 +384,7 @@ end
 
 Run with `PROFILE_FACTORIES=1 bundle exec rspec` to identify which factories consistently exceed the threshold.
 
-Replacing create with build_stubbed at Scale
+## Replacing create with build_stubbed at Scale
 
 The single most impactful optimization for pure unit tests is replacing `create` with `build_stubbed`. The stubbed strategy skips the database entirely:
 
@@ -407,9 +406,9 @@ end
 
 Apply this pattern to any test that exercises business logic without querying the database. A test suite that replaces 40% of `create` calls with `build_stubbed` often sees 30-50% overall speed improvement.
 
-Generating Realistic Test Data
+## Generating Realistic Test Data
 
-Using Faker for Realistic Attributes
+## Using Faker for Realistic Attributes
 
 Static factory values like `"John Doe"` can mask bugs that only appear with real-world input variation. Use Faker to generate realistic data:
 
@@ -434,7 +433,7 @@ end
 
 Faker generates unique values on each test run, catching encoding issues, boundary conditions, and display formatting bugs that static fixtures never surface.
 
-Building State-Machine Factories
+## Building State-Machine Factories
 
 Applications with AASM or StateMachines need factories that respect state transitions. Use callbacks to advance through states correctly:
 
@@ -465,7 +464,7 @@ end
 
 This ensures your test objects always arrive in a valid state, preventing the flakiness that comes from manually setting state columns without triggering callbacks.
 
-Using Claude Code to Generate Factories
+## Using Claude Code to Generate Factories
 
 When using Claude Code to generate new factories for your Rails app, include your existing factory conventions in the prompt:
 
@@ -482,7 +481,7 @@ Reference our existing patterns in spec/factories/orders.rb for consistency.
 
 Claude Code reads your existing factories and generates new ones that follow the same patterns: correct trait structure, proper callback placement, and consistent Faker usage across your test suite.
 
-Linting Your Factory Definitions
+## Linting Your Factory Definitions
 
 Use Factory Bot's built-in linter to catch misconfigured factories before they cause mysterious test failures:
 
@@ -498,7 +497,6 @@ end
 The linter instantiates each factory and checks that the resulting object is valid according to your model validations. Run this in your CI pipeline on every push. A factory that fails validation silently in tests can cause hours of debugging.
 
 {% endraw %}
-
 
 Related Reading
 

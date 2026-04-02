@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code Bash Command Not Found in Skill."
 description: "Fix 'command not found' errors when using bash in Claude Code skills. Learn why skills fail to execute shell commands and how to resolve path."
@@ -14,20 +13,17 @@ score: 7
 permalink: /claude-code-bash-command-not-found-in-skill/
 ---
 
-
 {% raw %}
 
-
-
-Claude Code Bash Command Not Found in Skill: Troubleshooting Guide
+## Claude Code Bash Command Not Found in Skill: Troubleshooting Guide
 
 If you've encountered a "command not found" error when using bash within a Claude Code skill, you're not alone. This is one of the most common issues skill authors face when their carefully crafted skill fails to execute shell commands. we'll explore why this happens and how to fix it.
 
-Understanding the Problem
+## Understanding the Problem
 
 When you create a Claude Code skill that uses the `Bash` tool, you might expect it to have access to the same shell environment you have in your terminal. However, skills operate in a slightly different context that can lead to unexpected "command not found" errors. Let's break down the common causes and solutions.
 
-Common Causes of Command Not Found Errors
+## Common Causes of Command Not Found Errors
 
 1. The Bash Tool Is Not Declared in Skill Front Matter
 
@@ -101,9 +97,9 @@ If not in the project root, navigate there:
 Run: cd /path/to/your/project
 ```
 
-Practical Examples
+## Practical Examples
 
-Example 1: Creating a Node.js Build Skill
+## Example 1: Creating a Node.js Build Skill
 
 Here's a properly configured skill that runs Node.js build commands:
 
@@ -124,7 +120,7 @@ This skill builds Node.js projects reliably.
 Always use absolute paths to node and npm to avoid PATH issues.
 ```
 
-Example 2: Python Virtual Environment Skill
+## Example 2: Python Virtual Environment Skill
 
 ```yaml
 ---
@@ -145,7 +141,7 @@ If the virtual environment doesn't exist, create it:
 - pip install -r requirements.txt
 ```
 
-Example 3: Docker Commands in Skills
+## Example 3: Docker Commands in Skills
 
 ```yaml
 ---
@@ -162,7 +158,7 @@ This skill helps manage Docker containers.
 Always use absolute paths to Docker and related tools.
 ```
 
-Debugging Tips
+## Debugging Tips
 
 When you encounter command not found errors, follow this diagnostic process:
 
@@ -172,7 +168,7 @@ When you encounter command not found errors, follow this diagnostic process:
 4. Check the current directory - Run `pwd` to confirm your location
 5. Test environment variables - Run `env` to see available environment variables
 
-Best Practices for Reliable Shell Execution
+## Best Practices for Reliable Shell Execution
 
 To minimize command not found errors in your skills:
 
@@ -182,7 +178,7 @@ To minimize command not found errors in your skills:
 - Include PATH setup commands if your tooling requires specific paths
 - Test your skill after writing it to ensure commands execute correctly
 
-Summary
+## Summary
 
 The "command not found" error in Claude Code skills typically stems from three root causes: missing tool declarations in front matter, unavailable PATH variables, and missing environment configurations. By using absolute paths, declaring the Bash tool, and setting up your environment explicitly within the skill, you can create reliable skills that execute shell commands consistently.
 

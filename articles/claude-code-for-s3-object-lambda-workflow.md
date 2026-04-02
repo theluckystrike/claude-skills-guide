@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for S3 Object Lambda Workflow
 
 S3 Object Lambda lets you add custom code to transform data as it's retrieved from S3, enabling powerful on-the-fly processing without managing infrastructure. When combined with Claude Code, you get an intelligent development partner that can help you design, implement, debug, and optimize your Object Lambda workflows. This guide shows you how to use Claude Code throughout the entire S3 Object Lambda development lifecycle.
 
-Understanding S3 Object Lambda Architecture
+## Understanding S3 Object Lambda Architecture
 
 Before diving into the Claude Code workflow, it's essential to understand the core components. S3 Object Lambda works by intercepting GET requests through a Lambda function that transforms the object before returning it to the requester. This architecture enables use cases like:
 
@@ -30,7 +29,7 @@ Before diving into the Claude Code workflow, it's essential to understand the co
 
 The key components are the S3 bucket, the Object Lambda Access Point, and the Lambda function itself. Claude Code can help you design this architecture and generate the necessary infrastructure code.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Claude Code excels at scaffolding projects and setting up the development environment. Start by creating a project directory and prompting Claude to generate the initial structure:
 
@@ -46,7 +45,7 @@ claude "Create a Node.js project structure for an S3 Object Lambda function with
 
 This approach ensures you have a well-organized project from the start, with proper TypeScript configurations, testing setup, and deployment scripts.
 
-Writing Your Object Lambda Function
+## Writing Your Object Lambda Function
 
 Claude Code can help you write the Lambda function that transforms S3 objects. Here's a practical example of a function that converts CSV to JSON on-the-fly:
 
@@ -91,7 +90,7 @@ function csvToJson(csv: string): Record<string, string>[] {
 
 Claude Code can explain each component, suggest improvements, and help you handle edge cases like large files, error handling, and performance optimization.
 
-Creating Infrastructure as Code
+## Creating Infrastructure as Code
 
 One of Claude Code's strongest capabilities is generating infrastructure as code. For S3 Object Lambda, you'll need CloudFormation or Terraform templates. Here's how to prompt Claude effectively:
 
@@ -155,7 +154,7 @@ Resources:
             FunctionArn: !GetAtt ObjectLambdaFunction.Arn
 ```
 
-Testing Your Implementation
+## Testing Your Implementation
 
 Claude Code can help you write comprehensive tests for your Object Lambda function. Ask it to generate unit tests and integration tests:
 
@@ -173,7 +172,7 @@ For integration testing, Claude can help you set up local testing with tools lik
 claude "Create a local testing setup using SAM CLI local for the Object Lambda function. Include docker-compose.yml for localstack and test scripts"
 ```
 
-Deployment Best Practices
+## Deployment Best Practices
 
 When deploying S3 Object Lambda functions, follow these actionable best practices that Claude Code can help you implement:
 
@@ -223,7 +222,7 @@ aws lambda create-alias \
     --function-version 2
 ```
 
-Debugging Common Issues
+## Debugging Common Issues
 
 Claude Code can help you troubleshoot common S3 Object Lambda problems:
 
@@ -232,7 +231,7 @@ Claude Code can help you troubleshoot common S3 Object Lambda problems:
 - Content-Type mismatch: Ensure your transformation configuration matches the output format.
 - Memory issues: Increase Lambda memory allocation for large file processing.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms S3 Object Lambda development from a complex, infrastructure-heavy task into an intelligent, assisted workflow. By using Claude's capabilities for code generation, testing, infrastructure as code, and debugging, you can build solid Object Lambda solutions faster while following AWS best practices.
 

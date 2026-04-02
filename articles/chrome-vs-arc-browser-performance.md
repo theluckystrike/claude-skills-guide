@@ -14,7 +14,7 @@ reviewed: true
 
 Arc Browser, developed by The Browser Company, has gained significant attention among developers and power users seeking alternatives to traditional browsers. This article provides a technical performance comparison between Chrome and Arc, examining memory usage, startup times, rendering performance, and practical considerations for development workflows.
 
-Architectural Foundations
+## Architectural Foundations
 
 Understanding the performance characteristics requires examining how each browser approaches core architecture.
 
@@ -24,7 +24,7 @@ Arc is built on Chromium but introduces a fundamentally different organizational
 
 The architectural differences manifest in measurable performance variations across different workload types.
 
-Memory Usage Benchmarks
+## Memory Usage Benchmarks
 
 Memory consumption directly impacts system responsiveness, especially when running multiple development tools simultaneously.
 
@@ -51,7 +51,7 @@ Arc demonstrates superior memory efficiency at scale due to its aggressive tab a
 
 However, reactivating archived tabs in Arc incurs a brief delay while content reloads, a trade-off between memory efficiency and instant access.
 
-Startup Performance
+## Startup Performance
 
 Cold startup time matters for developers who frequently restart browsers or work across multiple projects.
 
@@ -65,7 +65,7 @@ Warm Start (launching when already running):
 
 Chrome's simpler startup process gives it an edge in cold start scenarios. Arc's additional initialization for its space management and sidebar systems adds approximately 0.5-0.7 seconds to first launch. The difference becomes negligible for users who keep browsers running continuously.
 
-Rendering and JavaScript Performance
+## Rendering and JavaScript Performance
 
 For web developers, browser rendering speed directly affects development workflow efficiency.
 
@@ -81,7 +81,7 @@ The rendering performance differences are minimal, which is expected since both 
 
 For developers running JavaScript-heavy applications or complex SPAs, both browsers deliver comparable performance.
 
-Extension Ecosystem and Development Tools
+## Extension Ecosystem and Development Tools
 
 Chrome's extension ecosystem is larger and more mature, with extensive options for development workflows:
 
@@ -94,7 +94,7 @@ Arc's extension support exists but with limitations. Arc uses Chromium's extensi
 
 For DevTools access, both browsers expose equivalent functionality since Arc inherits Chrome's developer tools.
 
-Network and Resource Loading
+## Network and Resource Loading
 
 Both browsers support modern protocols and optimization techniques:
 
@@ -117,9 +117,9 @@ chrome://quota-internals/
 ~/Library/Application Support/Arc/Cache/
 ```
 
-Practical Optimization Strategies
+## Practical Optimization Strategies
 
-Chrome Performance Tuning
+## Chrome Performance Tuning
 
 Chrome offers several built-in optimization features:
 
@@ -141,7 +141,7 @@ Launch with specific profile
 google-chrome --profile-directory="Profile 1"
 ```
 
-Arc Optimization
+## Arc Optimization
 
 Arc's optimization is more opinionated but requires less manual configuration:
 
@@ -149,7 +149,7 @@ Arc's optimization is more opinionated but requires less manual configuration:
 - Regularly archive completed projects to free memory
 - Use Arc's built-in picture-in-picture rather than extensions
 
-Development Workflow Considerations
+## Development Workflow Considerations
 
 For developers, specific scenarios favor each browser:
 
@@ -165,7 +165,7 @@ Choose Arc when:
 - You prefer a minimal, focused interface
 - You value automatic tab management over manual control
 
-Code Snippet: Measuring Browser Performance
+## Code Snippet: Measuring Browser Performance
 
 For developers wanting to benchmark browser performance programmatically:
 
@@ -186,7 +186,7 @@ const measurePageLoad = () => {
 window.addEventListener('load', measurePageLoad);
 ```
 
-Network Request Analysis
+## Network Request Analysis
 
 Both browsers provide equivalent network inspection capabilities through DevTools. For analyzing network performance:
 
@@ -201,14 +201,13 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ entryTypes: ['resource', 'navigation'] });
 ```
 
-Conclusion
+## Conclusion
 
 The Chrome vs Arc performance decision ultimately depends on your workflow priorities. Chrome offers a more mature ecosystem, faster cold starts, and granular control, making it ideal for developers who rely heavily on extensions and need predictable behavior. Arc provides better memory efficiency at scale and a unique organizational model that some developers find superior for managing multiple projects.
 
 For most development scenarios, both browsers perform comparably since they share underlying Chromium technology. The practical differences emerge in extension support, memory management philosophy, and startup characteristics rather than core rendering performance.
 
 Test both browsers with your actual development workflow before committing. The performance differences are meaningful but not decisive, your productivity gains from organizational features and ecosystem support likely matter more than raw benchmark numbers.
-
 
 Related Reading
 

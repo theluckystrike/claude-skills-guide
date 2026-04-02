@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Lottie Animation Workflow Tutorial
 
 Lottie animations have revolutionized web animation by allowing developers to embed high-quality, scalable animations without the overhead of traditional video files or complex animation libraries. When combined with Claude Code, you can create a powerful workflow that streamlines animation integration, testing, and optimization. This tutorial walks you through building a complete Lottie animation workflow using Claude Code as your AI-powered development assistant.
 
-Understanding the Lottie Workflow
+## Understanding the Lottie Workflow
 
 Before diving into the Claude Code integration, let's establish the fundamental Lottie workflow. Lottie is a library that parses Adobe After Effects animations exported as JSON files and renders them natively on the web, iOS, and Android. The workflow typically involves a designer creating animations in After Effects, exporting them using the Bodymovin plugin, and a developer integrating them into the application.
 
@@ -27,7 +26,7 @@ The challenge many developers face is the back-and-forth communication between d
 
 A typical project starts with a designer handing off a `.json` file and ends with the developer wondering why the animation flickers in Safari, runs at the wrong speed on mobile, or crashes when rendered inside a modal. Claude Code lets you address all of these problems systematically rather than chasing symptoms individually.
 
-Choosing the Right Renderer
+## Choosing the Right Renderer
 
 One of the first decisions you need to make is which Lottie renderer to use. This choice has a significant impact on performance, compatibility, and file support.
 
@@ -41,7 +40,7 @@ The SVG renderer is the default and handles the widest range of After Effects fe
 
 Ask Claude Code to help you decide: "Given this animation JSON, which renderer will give me the best performance?" Claude can analyze the structure of the JSON. checking for image layers, shape complexity, and blend modes. and make a concrete recommendation.
 
-Setting Up Your Project Environment
+## Setting Up Your Project Environment
 
 Start by creating a new project directory and initializing it with the necessary dependencies. Use Claude Code to guide you through the setup:
 
@@ -99,7 +98,7 @@ export function AnimatedLoader({ size = 80 }) {
 
 React developers often reach for `lottie-react` because it wraps the core library in a declarative API. Claude Code knows both the imperative `lottie-web` API and the React wrapper, so it can help you regardless of which path you take.
 
-Integrating Lottie with Claude Code Assistance
+## Integrating Lottie with Claude Code Assistance
 
 When integrating Lottie animations, Claude Code can help you write clean, maintainable code. Here's a practical example of a Lottie component:
 
@@ -149,7 +148,7 @@ const loader = new LottiePlayer('loader', '/animations/loading.json', {
 
 This class encapsulates the lifecycle management that otherwise ends up scattered across your application. You can extend it further. Claude Code is good at helping you add features like `playSegment` support for state-machine-style animations, or `goToAndStop` for single-frame display.
 
-Handling Animation Events
+## Handling Animation Events
 
 Real-world animations need event handling. A loading animation should stop when data arrives. A success checkmark should play once and hold its final frame. Ask Claude Code to extend the player with event support:
 
@@ -192,7 +191,7 @@ const success = new LottiePlayer('success-icon', '/animations/check.json')
 
 Claude Code is particularly useful here because it understands the full event API surface of `lottie-web`, including less-documented events like `enterFrame` and `segmentStart`.
 
-Automating Animation Testing
+## Automating Animation Testing
 
 One of the most valuable applications of Claude Code is automating animation testing. Create test scripts that verify your animations load correctly and behave as expected:
 
@@ -279,7 +278,7 @@ describe('LottiePlayer', () => {
 });
 ```
 
-Inspecting and Debugging Animation JSON
+## Inspecting and Debugging Animation JSON
 
 Lottie JSON files can be large and opaque. Claude Code can read a raw `.json` file and summarize it for you: which layers are present, whether images are embedded as base64 or referenced externally, the frame rate, and the total duration. This is useful before you start integration so you know what you are working with.
 
@@ -317,7 +316,7 @@ fs.readdirSync(dir)
 
 Run this before deploying and you will catch problems that would otherwise surface as slow page loads in production.
 
-Optimizing Lottie Files
+## Optimizing Lottie Files
 
 Large Lottie JSON files can significantly impact page load times. Claude Code can help you identify optimization opportunities and implement best practices. Here are key strategies:
 
@@ -385,7 +384,7 @@ lottie.loadAnimation({
 });
 ```
 
-Creating a Claude Code Workflow Script
+## Creating a Claude Code Workflow Script
 
 You can create a custom Claude Code skill that encapsulates your Lottie workflow. Here's a workflow script:
 
@@ -412,7 +411,7 @@ workflows:
 
 Beyond YAML workflow definitions, you can use Claude Code interactively as part of a code review process. Before merging a PR that introduces a new animation, paste the relevant component code and ask: "Does this handle the case where the container is removed from the DOM before the animation loads? Are there any memory leaks?" Claude Code will spot the missing `destroy()` call and suggest the fix.
 
-Best Practices for Production
+## Best Practices for Production
 
 When deploying Lottie animations to production, follow these guidelines:
 
@@ -481,7 +480,7 @@ useEffect(() => {
 
 Failing to call `destroy()` is the number one source of memory leaks in Lottie integrations. Claude Code will remind you of this if you ask it to review your component.
 
-Common Problems and How Claude Code Helps Solve Them
+## Common Problems and How Claude Code Helps Solve Them
 
 Animation looks wrong in Safari: Safari's SVG rendering has quirks around blend modes and mask layers. Ask Claude Code: "My animation uses multiply blend mode and it doesn't work in Safari. what are my options?" You will get a concrete answer: switch to the canvas renderer for that specific animation, or ask your designer to avoid unsupported blend modes.
 
@@ -503,7 +502,7 @@ chokidar.watch('./animations/*.json').on('add', (filePath) => {
 });
 ```
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your Lottie animation workflow transforms a potentially fragmented process into a streamlined, automated pipeline. From generating component code to automating tests and optimizing performance, Claude Code serves as an intelligent partner throughout the animation lifecycle. Start implementing these practices today, and you'll notice significant improvements in development speed and animation quality.
 

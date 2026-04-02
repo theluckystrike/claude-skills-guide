@@ -13,19 +13,18 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code Cloudinary Image Transformation Workflow Guide
 
 Cloudinary's image transformation API is a powerhouse for developers who need dynamic image processing without managing infrastructure. When combined with Claude Code's skill system, you can create intelligent workflows that understand image contexts, apply appropriate transformations, and deliver optimized assets automatically. This guide walks you through building Claude Code skills that harness Cloudinary's full transformation capabilities.
 
-Understanding the Cloudinary Integration Pattern
+## Understanding the Cloudinary Integration Pattern
 
 Before diving into skill construction, it's essential to understand how Claude Code interacts with Cloudinary's REST API. The integration typically involves three phases: authentication, asset management, and transformation execution. Each phase can be encapsulated within Claude Code skills to create reusable, context-aware image processing workflows.
 
 Cloudinary uses API keys and secret credentials for authentication. You'll need to store these securely as environment variables, `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET`, that your Claude Code skill can reference. Never hardcode credentials in skill files or commit them to version control.
 
-Building Your First Cloudinary Skill
+## Building Your First Cloudinary Skill
 
 A basic Cloudinary transformation skill needs to handle three core operations: uploading images, specifying transformations, and generating delivery URLs. Here's how to structure a skill that creates optimized thumbnails:
 
@@ -46,11 +45,11 @@ def create_thumbnail(image_url, width=300, height=200):
 
 The skill would provide Claude with context about when to create thumbnails, what dimensions make sense for different use cases, and how to handle aspect ratio preservation. This transforms Claude from a passive text generator into an active image processing assistant.
 
-Advanced Transformation Techniques
+## Advanced Transformation Techniques
 
 Beyond basic resizing, Cloudinary supports over 100 transformation parameters. Your Claude Code skill should understand how to compose these intelligently for different scenarios.
 
-Dynamic Format Selection
+## Dynamic Format Selection
 
 Modern image delivery requires automatic format optimization. The `f_auto` parameter tells Cloudinary to serve WebP, AVIF, or other modern formats based on the requesting browser. Combined with `q_auto` for quality optimization, you get both smaller file sizes and better visual quality:
 
@@ -61,7 +60,7 @@ Results in: sample_image.jpg becomes WebP for Chrome, AVIF for Safari, etc.
 
 Your skill should explain this optimization to users and apply it by default for all transformations unless explicitly overridden.
 
-Responsive Image Generation
+## Responsive Image Generation
 
 Creating responsive images manually is tedious. A well-designed Claude Code skill can generate entire srcset configurations automatically:
 
@@ -80,7 +79,7 @@ def generate_srcset(base_image, widths=[320, 640, 960, 1280, 1920]):
 
 When users describe their responsive image needs, Claude can generate complete HTML picture elements with source tags for different breakpoints.
 
-Background Removal and Overlay Composition
+## Background Removal and Overlay Composition
 
 Cloudinary's AI-powered background removal opens creative possibilities. Your skill can guide users through removing backgrounds and compositing new ones:
 
@@ -95,7 +94,7 @@ def remove_background_and_compose(foreground_image, background_image):
 
 This pattern enables skills that understand image composition contexts, when a user needs product images with transparent backgrounds, or when designing marketing materials with layered graphics.
 
-Creating Context-Aware Image Workflows
+## Creating Context-Aware Image Workflows
 
 The real power of Claude Code skills lies in understanding the context of image requests. Rather than just executing transformations, your skill should understand:
 
@@ -124,13 +123,13 @@ Then provide transformation recommendations with:
 Explain your recommendations so users learn image optimization best practices.
 ```
 
-Integrating with Claude Code's Skill System
+## Integrating with Claude Code's Skill System
 
 To make your Cloudinary workflows truly reusable, encapsulate them within Claude Code's skill format. This allows Claude to invoke your transformation logic automatically when relevant tasks arise.
 
 The skill file should include clear instructions about when to use Cloudinary transformations, what transformation chains are appropriate for different scenarios, and how to handle errors gracefully. Skills can also define custom functions that Claude can call, making the transformation logic executable rather than just descriptive.
 
-Error Handling and Fallbacks
+## Error Handling and Fallbacks
 
 Solid Cloudinary skills must handle common failure scenarios: invalid image URLs, quota limits, network timeouts, and unsupported transformation parameters. Your skill should provide clear guidance when transformations fail and suggest alternatives:
 
@@ -138,7 +137,7 @@ Solid Cloudinary skills must handle common failure scenarios: invalid image URLs
 - If transformations exceed size limits, suggest splitting into multiple images
 - If format is unsupported, default to JPEG or PNG
 
-Best Practices for Production Skills
+## Best Practices for Production Skills
 
 When deploying Cloudinary skills in production environments, follow these guidelines:
 
@@ -147,7 +146,7 @@ When deploying Cloudinary skills in production environments, follow these guidel
 3. Test with real images from your expected content sources, different image types may need different transformation approaches
 4. Monitor Cloudinary usage through their analytics to optimize cost and performance
 
-Conclusion
+## Conclusion
 
 Claude Code skills that understand Cloudinary's transformation API enable powerful image processing workflows without manual intervention. By encoding transformation knowledge into reusable skills, you create assistants that intelligently handle image optimization, format selection, responsive image generation, and complex compositions. Start with basic transformations, then progressively add context-awareness and advanced features as your skills mature.
 

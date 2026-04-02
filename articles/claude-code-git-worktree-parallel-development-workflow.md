@@ -18,7 +18,7 @@ Claude Code Git Worktree Parallel Development Workflow
 
 Managing multiple features, bug fixes, or experiments simultaneously without disrupting your main development environment becomes effortless when you combine Git worktrees with Claude Code. This approach lets you work across several branches in parallel, each with its own working directory, while Claude Code's skill system helps orchestrate your workflow efficiently.
 
-Understanding Git Worktrees
+## Understanding Git Worktrees
 
 Git worktrees allow you to checkout multiple branches of the same repository simultaneously. Instead of stashing changes or maintaining separate clones, you create additional working directories that share the same Git history and objects. Each worktree operates independently, meaning you can have uncommitted changes in one while working on something entirely different in another.
 
@@ -30,7 +30,7 @@ git worktree add /path/to/worktree branch-name
 
 This single command creates a new directory with its own working tree, connected to the same `.git` directory as your main repository. You can list all worktrees with `git worktree list`, and remove them with `git worktree remove worktree-name`.
 
-Setting Up Your First Worktree
+## Setting Up Your First Worktree
 
 Imagine you're developing a feature branch while simultaneously fixing a critical bug on another branch. Rather than context-switching manually, create separate worktrees for each task:
 
@@ -47,7 +47,7 @@ git worktree list
 
 Each directory now contains the exact state of its respective branch. You can open separate terminal windows, run different processes, or use tools like tmux to work across them without ever running `git checkout`.
 
-Integrating Claude Code Skills
+## Integrating Claude Code Skills
 
 Claude Code's skill system enhances this workflow significantly. When you load skills like `frontend-design` or `pdf` for specific tasks, having worktrees set up means you can direct Claude Code's attention to the appropriate directory context immediately.
 
@@ -60,9 +60,9 @@ claude --print "Load the tdd skill and help me write tests for the new dashboard
 
 The `supermemory` skill becomes particularly valuable in parallel development workflows. It maintains context across your different worktree sessions, helping Claude Code understand which project state corresponds to which branch, even as you rapidly switch between contexts.
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Parallel Code Review and Development
+## Parallel Code Review and Development
 
 When reviewing a pull request while developing your own feature, create a dedicated worktree for the review:
 
@@ -77,7 +77,7 @@ cd ../myproject-pr-review
 
 This approach keeps your development state clean. You can annotate code, run the review branch's tests, and examine its behavior without affecting what you're currently building.
 
-Testing Multiple Environment Configurations
+## Testing Multiple Environment Configurations
 
 Worktrees excel when you need to verify behavior across different configuration states. Create worktrees representing different deployment environments or dependency versions:
 
@@ -88,7 +88,7 @@ git worktree add ../myproject-node20 feature-backend
 
 Each worktree can have its own `.nvmrc` or environment configuration. Run your test suites in parallel to catch environment-specific issues before merging.
 
-Experimenting with Refactoring
+## Experimenting with Refactoring
 
 The `skill-creator` skill proves useful when developing custom Claude Code workflows for your worktree management. Before attempting a major refactor, create a worktree to experiment safely:
 
@@ -98,7 +98,7 @@ git worktree add ../myproject-refactor experimental/refactor-database-layer
 
 If the refactor succeeds, merge it. If it doesn't work out, abandon that worktree without any impact on your main development line.
 
-Parallel Feature Development Strategy
+## Parallel Feature Development Strategy
 
 When working on multiple features simultaneously, create separate worktrees branching from main. This lets Claude Code work on one feature while you manually work on another, with zero risk of mixing changes:
 
@@ -111,7 +111,7 @@ git worktree add -b feature/notifications ../project-notifications main
 
 Each worktree has its own independent working directory. You can run Claude Code in each directory to handle different aspects of your project concurrently.
 
-Using a CLAUDE.md File for Worktree Context
+## Using a CLAUDE.md File for Worktree Context
 
 Create a `CLAUDE.md` file in your main repository to define worktree-specific instructions that Claude Code will follow automatically when invoked from each directory:
 
@@ -129,7 +129,7 @@ When working in hotfix worktrees:
 - Verify fix works in main branch context
 ```
 
-Automating Worktree Management
+## Automating Worktree Management
 
 You can create shell aliases or scripts to streamline worktree operations:
 
@@ -169,7 +169,7 @@ esac
 
 You can also combine this with Claude Code's MCP (Model Context Protocol) capabilities. Skills like `internal-comms` can automatically generate status updates about what you're working on in each worktree, keeping your team informed without manual tracking.
 
-Tracking Worktrees with a Manifest
+## Tracking Worktrees with a Manifest
 
 For teams or complex projects, maintain a `WORKTREES.md` file in your repository root that Claude can read and update:
 
@@ -205,7 +205,7 @@ Always maintain a clean WORKTREES.md tracking file showing:
 
 This manifest gives Claude instant context about your parallel work without scanning the filesystem.
 
-Best Practices
+## Best Practices
 
 Organize your worktree parent directory consistently. Many developers use a structure like `~/workspaces/project-name/` with subdirectories for each branch. This keeps related directories grouped and makes navigation intuitive.
 
@@ -223,13 +223,13 @@ git worktree prune
 
 Worktrees share the `.git` directory, so they do not duplicate the entire repository. However, each worktree has its own working files. For large projects, be mindful of disk usage and remove worktrees when no longer needed.
 
-Common Worktree Issues and Solutions
+## Common Worktree Issues and Solutions
 
-Issue: Detached HEAD in Worktree
+## Issue: Detached HEAD in Worktree
 
 When you create a worktree for a branch that does not exist yet, it starts in detached HEAD state. This is normal and expected. Once you make your first commit, the branch will be properly established.
 
-Issue: Moving Files Between Worktrees
+## Issue: Moving Files Between Worktrees
 
 If you need to move files between worktrees, use standard file operations. Git handles the rest:
 
@@ -238,16 +238,15 @@ Copy file from one worktree to another
 cp ../project-feature/src/utils.js ../project-bugfix/src/utils.js
 ```
 
-Issue: Permission Errors
+## Issue: Permission Errors
 
 Worktrees sometimes have permission issues on shared filesystems. Ensure consistent file permissions across all worktree directories.
 
-Conclusion
+## Conclusion
 
 Git worktrees combined with Claude Code create a powerful parallel development environment. You maintain multiple isolated working contexts without the overhead of separate repository clones, while Claude Code's skill system, particularly when using skills like `xlsx` for tracking or `docx` for documentation, amplifies your productivity across all branches simultaneously.
 
 Whether you're managing feature development alongside bug fixes, conducting code reviews, or experimenting with refactoring, this workflow scales from simple two-branch scenarios to complex multi-context projects. The key advantage is eliminating the mental overhead of state management: each worktree simply *is* its branch, requiring no careful stashing or complex git operations to preserve.
-
 
 Related Reading
 

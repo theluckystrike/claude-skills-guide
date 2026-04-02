@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Building Apps with Claude API: Anthropic SDK Python Guide"
 description: "A comprehensive guide to building powerful applications using Claude API and the Anthropic SDK for Python. Includes practical examples, code snippets."
@@ -14,16 +13,13 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Building Apps with Claude API: Anthropic SDK Python Guide
 
 The Anthropic Claude API opens up incredible possibilities for developers who want to integrate advanced AI capabilities into their Python applications. Whether you're building a chatbot, automating content generation, or creating intelligent workflow systems, the Anthropic SDK for Python provides a clean, well-documented interface to use Claude's powerful language model capabilities.
 
 This guide walks you through everything you need to know to start building production-ready applications with the Claude API and Python SDK.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before you can start building, you'll need to install the Anthropic SDK and configure your API credentials. The SDK is available via pip and requires Python 3.7 or later.
 
@@ -46,7 +42,7 @@ client = anthropic.Anthropic()
 
 For production applications, consider using a `.env` file with the `python-dotenv` library to manage your credentials securely without hardcoding them in your source code.
 
-Making Your First API Call
+## Making Your First API Call
 
 The fundamental building block of any Claude-powered application is the messages API. Here's how to send a simple request to Claude:
 
@@ -68,7 +64,7 @@ print(response.content[0].text)
 
 The response object contains your generated text along with useful metadata like token usage statistics. You can access these details through `response.usage` to track costs and optimize your prompts.
 
-Working with Conversation Context
+## Working with Conversation Context
 
 Building conversational applications requires maintaining context across multiple exchanges. The messages API supports this naturally through the messages array:
 
@@ -96,7 +92,7 @@ reply = chat_with_claude(client, conversation)
 
 This pattern scales well for building chatbots, customer support assistants, and interactive AI applications. Simply maintain your conversation history in a list and append new exchanges as they occur.
 
-Implementing Function Calling
+## Implementing Function Calling
 
 One of the most powerful features of the Claude API is function calling (tool use), which allows Claude to request specific actions from your application. This is essential for building agents that can interact with external systems:
 
@@ -142,7 +138,7 @@ if message.stop_reason == "tool_use":
 
 Function calling transforms Claude from a passive text generator into an active agent that can take meaningful actions in your application.
 
-Handling Rate Limits and Errors
+## Handling Rate Limits and Errors
 
 Production applications must handle API errors gracefully. Implement proper error handling to ensure your application remains reliable:
 
@@ -181,7 +177,7 @@ def robust_api_call(client, prompt, max_retries=3):
 
 This pattern protects your application from temporary disruptions and ensures a better experience for your users.
 
-Optimizing for Cost and Performance
+## Optimizing for Cost and Performance
 
 When building applications that scale, being mindful of token usage is crucial. Here are practical optimization strategies:
 
@@ -206,7 +202,7 @@ print(f"Output tokens: {response.usage.output_tokens}")
 
 Consider using the `haiku` model for simpler tasks where speed and cost are priorities, reserving `sonnet` or `opus` for complex reasoning tasks.
 
-Building a Complete Example: AI-Powered Task Manager
+## Building a Complete Example: AI-Powered Task Manager
 
 Here's a practical example that combines these concepts into a useful application, an AI-powered task manager that helps prioritize and break down tasks:
 
@@ -250,7 +246,7 @@ prioritized = assistant.prioritize_tasks()
 print(prioritized)
 ```
 
-Conclusion
+## Conclusion
 
 Building applications with the Claude API and Anthropic SDK for Python is straightforward once you understand the core concepts: the messages API for generating responses, conversation history for context, function calling for tool use, and proper error handling for production reliability.
 

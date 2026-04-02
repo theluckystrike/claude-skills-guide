@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Vonage Voice API Workflow
-
 Building voice applications with Vonage API just got smarter. This guide shows you how to integrate Claude Code into your Vonage Voice API development workflow to automate repetitive tasks, generate boilerplate code, debug NCCO (Nexmo Call Control Objects), and build more reliable voice applications faster.
 
-Understanding the Vonage Voice API Architecture
+## Understanding the Vonage Voice API Architecture
 
 Before diving into the Claude Code integration, let's establish the core components you'll be working with:
 
@@ -26,7 +23,7 @@ The Vonage Voice API operates on a straightforward request-response model where 
 
 Claude Code can automate significant portions of this workflow by generating NCCO configurations, scaffolding webhook handlers, creating test scenarios, and debugging call flows.
 
-Setting Up Claude Code for Vonage Development
+## Setting Up Claude Code for Vonage Development
 
 The first step is ensuring Claude Code has the right context for your Vonage project. Create a skill or use project-specific instructions that define your Vonage environment:
 
@@ -41,7 +38,7 @@ Vonage Project Context
 
 This context helps Claude understand your specific Vonage configuration and generate more accurate code.
 
-Generating NCCO Configurations with Claude
+## Generating NCCO Configurations with Claude
 
 One of Claude Code's strongest value propositions is generating complex JSON structures. NCCO configurations can become intricate when handling multi-step voice flows. Instead of manually writing every action, describe your desired call flow and let Claude generate the NCCO:
 
@@ -108,7 +105,7 @@ app.post('/webhooks/input', (req, res) => {
 
 Claude can generate this complete handler from a simple description like "create a webhook handler that routes callers based on DTMF input: press 1 for sales, press 2 for support, and invalid input plays a goodbye message."
 
-Automating Webhook Testing
+## Automating Webhook Testing
 
 Testing voice applications traditionally requires tools like ngrok for exposing local servers or deploying to staging environments. Claude Code can streamline this by generating test payloads and validating your webhook responses:
 
@@ -138,7 +135,7 @@ console.log(JSON.stringify(testPayloads, null, 2));
 
 Run this generated script to get formatted payloads you can use with Postman, curl, or automated test suites to verify your webhook endpoints respond correctly.
 
-Building Interactive Voice Response (IVR) Systems
+## Building Interactive Voice Response (IVR) Systems
 
 Modern IVR systems benefit significantly from Claude's ability to generate complex conversation flows. Let's walk through a practical example: a customer service IVR that handles multiple intents.
 
@@ -241,7 +238,7 @@ app.post('/webhooks/menu', (req, res) => {
 
 This example demonstrates how quickly you can scaffold a complete IVR system that would otherwise require significant manual coding.
 
-Best Practices for Claude-Vonage Integration
+## Best Practices for Claude-Vonage Integration
 
 When integrating Claude Code into your Vonage workflow, keep these actionable tips in mind:
 
@@ -269,7 +266,7 @@ Use environment variables: Never hardcode API keys or sensitive numbers. Generat
 
 Test edge cases: Ask Claude to generate test cases for unexpected inputs - empty DTMF, malformed JSON, timeout scenarios. These edge cases often cause production issues.
 
-Wrapping Up
+## Wrapping Up
 
 Claude Code transforms Vonage Voice API development from manual JSON crafting to collaborative, descriptive development. By describing your desired call flows in natural language and letting Claude generate the NCCO configurations, webhook handlers, and test cases, you significantly accelerate development while reducing errors.
 

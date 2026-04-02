@@ -13,23 +13,22 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Snyk Container Workflow Guide
 
 Container security is no longer optional in modern software development. As organizations deploy more containerized applications, integrating security scanning into developer workflows becomes essential. This guide shows you how to use Claude Code alongside Snyk to create an automated, efficient container security pipeline that catches vulnerabilities before they reach production.
 
-Understanding the Snyk-Container Integration
+## Understanding the Snyk-Container Integration
 
 Snyk provides powerful container security scanning capabilities that analyze your Docker images for known vulnerabilities, misconfigurations, and compliance issues. When combined with Claude Code's AI-assisted development capabilities, you can automate vulnerability remediation, generate secure container configurations, and maintain continuous security oversight throughout your development lifecycle.
 
 The integration works through Snyk's CLI tool and API, which Claude Code can invoke directly to perform security scans, interpret results, and recommend fixes. This approach shifts security left, catching issues during development rather than in production.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before implementing the workflow, ensure you have the necessary tools installed and authenticated. You'll need Snyk CLI, Docker, and appropriate credentials configured.
 
-Installing and Configuring Snyk CLI
+## Installing and Configuring Snyk CLI
 
 First, install the Snyk CLI using npm or your preferred package manager:
 
@@ -49,7 +48,7 @@ For container-specific scanning, ensure Docker is running and you can build imag
 snyk container test your-image-name:latest
 ```
 
-Configuring Claude Code for Security Tasks
+## Configuring Claude Code for Security Tasks
 
 Create a dedicated security context file to help Claude understand your container security requirements:
 
@@ -64,11 +63,11 @@ Security Context
 
 This context helps Claude provide relevant security recommendations tailored to your project's requirements.
 
-Automated Container Scanning Workflow
+## Automated Container Scanning Workflow
 
 The core workflow involves scanning containers at multiple stages: during local development, in CI/CD pipelines, and continuously in production registries.
 
-Scanning During Development
+## Scanning During Development
 
 Claude Code can initiate container scans and help you interpret results. Here's a practical workflow:
 
@@ -109,7 +108,7 @@ High Issues (5)
 [Additional findings...]
 ```
 
-Generating Remediation Advice
+## Generating Remediation Advice
 
 Claude Code doesn't just find vulnerabilities, it helps fix them. Ask for specific remediation guidance:
 
@@ -123,11 +122,11 @@ For each critical and high vulnerability found, provide:
 
 This generates concrete, actionable steps rather than abstract warnings.
 
-Dockerfile Hardening with AI Assistance
+## Dockerfile Hardening with AI Assistance
 
 Beyond scanning, Claude Code can proactively generate secure Dockerfiles that minimize your attack surface from the start.
 
-Requesting Secure Configurations
+## Requesting Secure Configurations
 
 Ask Claude to create a hardened Dockerfile:
 
@@ -168,7 +167,7 @@ EXPOSE 3000
 ENTRYPOINT ["node", "server.js"]
 ```
 
-Comparing Image Security
+## Comparing Image Security
 
 Request security comparisons between different base images:
 
@@ -182,11 +181,11 @@ Compare the security posture of these base images for a Node.js 20 application:
 Include vulnerability counts, image size, and maintenance considerations.
 ```
 
-CI/CD Pipeline Integration
+## CI/CD Pipeline Integration
 
 Automate container security scanning within your continuous integration pipeline to ensure no vulnerable images reach production.
 
-GitHub Actions Example
+## GitHub Actions Example
 
 Claude can generate complete CI configurations:
 
@@ -231,7 +230,7 @@ jobs:
           fi
 ```
 
-Blocking Deployments Based on Results
+## Blocking Deployments Based on Results
 
 Configure your pipeline to halt deployment when vulnerabilities exceed your threshold:
 
@@ -243,11 +242,11 @@ Set up a Snyk PR check that:
 - Provides fix suggestions in the PR
 ```
 
-Continuous Monitoring and Remediation
+## Continuous Monitoring and Remediation
 
 Beyond initial scanning, implement ongoing monitoring for your container registry.
 
-Registry Monitoring Configuration
+## Registry Monitoring Configuration
 
 Ask Claude to help set up continuous monitoring:
 
@@ -260,7 +259,7 @@ Set up:
 4. Integration with our existing monitoring system
 ```
 
-Creating a Vulnerability Management Process
+## Creating a Vulnerability Management Process
 
 Establish a systematic approach to handling findings:
 
@@ -273,18 +272,18 @@ Create a vulnerability management workflow that:
 5. Generates monthly security metrics for the team
 ```
 
-Practical Example: Complete Secure Deployment
+## Practical Example: Complete Secure Deployment
 
 Here's a full workflow example combining all elements:
 
-Step 1: Development Phase
+## Step 1: Development Phase
 
 ```
 During development, ask Claude to review your Dockerfile before building.
 Provide context about your application's requirements.
 ```
 
-Step 2: Pre-Commit Scanning
+## Step 2: Pre-Commit Scanning
 
 Add pre-commit hooks to scan container configurations:
 
@@ -301,15 +300,15 @@ patch:
         createdAt: '2026-01-15'
 ```
 
-Step 3: CI/CD Gate
+## Step 3: CI/CD Gate
 
 The pipeline enforces security gates before deployment proceeds.
 
-Step 4: Production Monitoring
+## Step 4: Production Monitoring
 
 Continuous scanning catches new vulnerabilities in deployed images.
 
-Best Practices and Actionable Advice
+## Best Practices and Actionable Advice
 
 Implementing container security with Claude Code and Snyk works best when you follow these guidelines:
 
@@ -321,7 +320,7 @@ Implementing container security with Claude Code and Snyk works best when you fo
 - Document exceptions: When accepting risks, document the reasoning and review dates
 - Educate your team: Use these workflows to teach developers about container security
 
-Conclusion
+## Conclusion
 
 Combining Claude Code's AI-assisted development capabilities with Snyk's container security scanning creates a powerful DevSecOps workflow. This integration helps you catch vulnerabilities earlier, remediate them faster, and maintain continuous security oversight throughout your containerized applications.
 

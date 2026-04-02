@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for asdf Version Manager Workflow Guide
-
 Managing multiple runtime versions across different projects can quickly become a developer's biggest headache. Whether you're juggling Node.js versions for legacy projects, Python environments for data science, or Go for microservices, version conflicts are inevitable. This is where asdf comes in, and when combined with Claude Code, you get a powerful workflow that automates version management while letting AI handle the heavy lifting.
 
-What is asdf and Why It Matters
+## What is asdf and Why It Matters
 
 [asdf](https://asdf-vm.com/) is a universal version manager that extends the functionality of tools like nvm, rbenv, and pyenv into a single CLI tool. It supports dozens of runtimes including Node.js, Python, Ruby, Go, Rust, Java, and many more. The key advantage is having a single configuration file (`.tool-versions`) that specifies exactly which versions your project needs.
 
@@ -28,7 +25,7 @@ When Claude Code understands your asdf setup, it can:
 - Help migrate between versions safely
 - Automate installation and configuration tasks
 
-Setting Up asdf with Claude Code
+## Setting Up asdf with Claude Code
 
 Before integrating with Claude Code, ensure asdf is properly installed. The standard installation involves cloning the repository and adding it to your shell:
 
@@ -52,7 +49,7 @@ asdf plugin add ruby
 asdf plugin add go
 ```
 
-Creating a Claude Code Skill for asdf Workflows
+## Creating a Claude Code Skill for asdf Workflows
 
 The most powerful way to integrate Claude Code with asdf is through a custom skill. Create a skill file at `~/.claude/skills/asdf-workflow/skill.md`:
 
@@ -91,9 +88,9 @@ For installing new versions:
 
 This skill gives Claude Code context about asdf commands and how to help with version management.
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Project Setup Automation
+## Project Setup Automation
 
 When starting a new project, Claude Code can automatically set up the correct runtime versions. Here's a typical workflow:
 
@@ -127,7 +124,7 @@ python 3.11.7
 
 Now any developer cloning the project gets the correct versions automatically.
 
-Runtime Migration Assistance
+## Runtime Migration Assistance
 
 Upgrading runtime versions across a project requires careful analysis. Claude Code can help identify what needs to change:
 
@@ -147,7 +144,7 @@ After testing, switch versions
 asdf local nodejs 22.5.0
 ```
 
-Multi-Version Testing
+## Multi-Version Testing
 
 Testing your application against multiple runtime versions is crucial for compatibility. Claude Code can orchestrate this:
 
@@ -168,7 +165,7 @@ strategy:
     node-version: [18.20.0, 20.11.0, 22.5.0]
 ```
 
-Best Practices for asdf and Claude Code Integration
+## Best Practices for asdf and Claude Code Integration
 
 1. Use Project-Local Versions
 
@@ -213,7 +210,7 @@ asdf plugin update nodejs
 
 Claude Code can create a skill that automates this maintenance task.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with asdf transforms version management from a tedious manual task into an automated, intelligent process. By creating a dedicated skill for asdf workflows, you empower Claude to handle runtime configuration, troubleshoot issues, and guide you through migrations, letting you focus on writing code instead of managing environment complexity.
 

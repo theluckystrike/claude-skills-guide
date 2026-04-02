@@ -16,13 +16,13 @@ tags: [claude-code, claude-skills]
 {% raw %}
 Building a chrome extension to block distracting sites gives you granular control over your browsing environment. Unlike generic blockers, a custom solution lets you define exact blocking rules, integrate with your workflow, and extend functionality as needs change. This guide walks through the implementation using Chrome's declarative NetRequest API for Manifest V3 compliance.
 
-Understanding the Blocking Mechanism
+## Understanding the Blocking Mechanism
 
 Chrome extensions can block network requests through the `declarativeNetRequest` API, which replaces the older `webRequest` blocking in Manifest V2. This approach is more performant and privacy-conscious since the blocking logic runs in Chrome's network layer rather than in your extension's background script.
 
 The core concept involves defining rules in a JSON file that specify which requests to block, modify, or redirect. Each rule contains conditions (matching patterns) and actions (what to do when matched).
 
-Project Structure
+## Project Structure
 
 A minimal chrome extension for blocking distracting sites requires four files:
 
@@ -62,7 +62,7 @@ The manifest declares the necessary permissions and declares the rules file:
 
 The `declarativeNetRequest` permission enables the blocking capability, while `storage` allows saving user preferences. The `host_permissions` with `<all_urls>` lets the extension evaluate requests across all domains.
 
-Defining Blocking Rules
+## Defining Blocking Rules
 
 The rules.json file contains the actual blocking logic. Each rule needs a unique ID and specifies conditions and actions:
 
@@ -111,7 +111,7 @@ The rules.json file contains the actual blocking logic. Each rule needs a unique
 
 This configuration blocks Twitter and Reddit entirely while redirecting YouTube to GitHub. The `urlFilter` uses regex patterns, giving you flexibility in matching domains and paths. The `resourceTypes` array specifies which request types to evaluate, `main_frame` targets top-level page loads.
 
-Dynamic Rule Management
+## Dynamic Rule Management
 
 Static rules work for fixed blocklists, but a truly useful extension needs dynamic management. The background script handles updating rules based on user input:
 
@@ -156,7 +156,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 This script initializes blocking rules from stored preferences and listens for messages to update rules in real-time. The rule IDs start at 1000 to avoid conflicts with any static rules defined in rules.json.
 
-User Interface with Popup
+## User Interface with Popup
 
 The popup provides controls for managing the blocklist:
 
@@ -216,9 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Advanced Features
+## Advanced Features
 
-Time-Based Blocking
+## Time-Based Blocking
 
 You can extend functionality to block sites only during certain hours:
 
@@ -245,7 +245,7 @@ function checkSchedule() {
 setInterval(checkSchedule, 60000);
 ```
 
-Whitelist Mode
+## Whitelist Mode
 
 Instead of blocking specific sites, implement an allowlist that only permits certain domains:
 
@@ -272,18 +272,17 @@ allowlistRules.push({
 });
 ```
 
-Testing Your Extension
+## Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Select your extension directory.
 
 Test the blocking by attempting to visit sites in your blocklist. The page should fail to load for blocked domains. Check the extension's service worker logs in the DevTools console for debugging information.
 
-Limitations and Considerations
+## Limitations and Considerations
 
 The declarativeNetRequest API has constraints to be aware of. You can define up to 50,000 dynamic rules, but Chrome evaluates them in priority order. Regex patterns should be specific to avoid performance impacts. Also note that the API doesn't support blocking WebSocket connections or chrome:// URLs.
 
 For users who need more advanced features like password-protected blocking or detailed analytics, consider integrating a backend service or combining with other APIs.
-
 
 Related Reading
 
@@ -293,7 +292,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Building the Distraction Blocker
+## Step-by-Step: Building the Distraction Blocker
 
 1. Set up Manifest V3 with `declarativeNetRequest`, `storage`, and `alarms` permissions.
 2. Build the blocklist UI: create a popup with an input field to add domains. Store the list in `chrome.storage.local` as `{ blocklist: ["reddit.com", "twitter.com", ...] }`.
@@ -302,7 +301,7 @@ Step-by-Step: Building the Distraction Blocker
 5. Track productivity stats: record daily block counts per domain in `chrome.storage.local`. Display a weekly chart in the popup showing which sites consumed the most attempted visit attempts.
 6. Add allowlist for exceptions: let users mark specific subpages as allowed even if the root domain is blocked (e.g., block reddit.com but allow reddit.com/r/learnprogramming).
 
-Dynamic Rule Management
+## Dynamic Rule Management
 
 ```javascript
 // Convert blocklist array to declarativeNetRequest rules
@@ -331,7 +330,7 @@ async function updateBlockRules(domains) {
 }
 ```
 
-Comparison with Distraction Blockers
+## Comparison with Distraction Blockers
 
 | Tool | Scheduling | Stats | Sync | Bypass protection | Cost |
 |---|---|---|---|---|---|
@@ -343,7 +342,7 @@ Comparison with Distraction Blockers
 
 The custom extension is most appropriate for developers who want full control over the blocking logic and no subscription fees. Freedom and Cold Turkey are better for users who need strong bypass protection against their own impulses.
 
-Advanced: Intelligent Block Suggestions
+## Advanced: Intelligent Block Suggestions
 
 After a week of usage, analyze the domains in the browser history with high visit counts and suggest adding them to the blocklist:
 
@@ -367,7 +366,7 @@ async function suggestBlockCandidates() {
 }
 ```
 
-Troubleshooting
+## Troubleshooting
 
 declarativeNetRequest rules not blocking all requests: DNR rules match the `main_frame` resource type for full-page navigations. If the blocked site is loaded in an iframe, add `sub_frame` to the `resourceTypes` array as well.
 

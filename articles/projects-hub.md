@@ -18,7 +18,7 @@ Reading documentation teaches you how Claude skills work. Building projects teac
 
 This hub maps the most valuable project types to the skills and workflows that make them possible. Each section covers what skills are most useful, how they fit together, and where to find the detailed guide.
 
-Table of Contents
+## Table of Contents
 
 1. [SaaS Applications](#saas-applications)
 2. [CLI Tools and Scripts](#cli-tools-and-scripts)
@@ -31,7 +31,7 @@ Table of Contents
 
 ---
 
-SaaS Applications
+## SaaS Applications
 
 Building a SaaS product with Claude skills changes the development pace in a measurable way. What would normally require days of scaffolding, auth setup, database schema, API layer, frontend boilerplate, can be driven through in a single focused session when the right skills are active.
 
@@ -61,7 +61,7 @@ For solo founders and freelancers, this workflow is particularly effective becau
 
 ---
 
-CLI Tools and Scripts
+## CLI Tools and Scripts
 
 Command-line tools are among the most satisfying projects to build with Claude skills because the scope is tightly bounded and the feedback loop is immediate. You run the tool, it produces output, and you know immediately whether it works.
 
@@ -88,7 +88,7 @@ Claude is particularly good at shell tooling because it understands unix convent
 
 ---
 
-REST APIs and Backend Services
+## REST APIs and Backend Services
 
 REST API projects benefit enormously from Claude skills because they involve highly repetitive patterns, endpoint scaffolding, input validation, error handling, authentication middleware, that skills can handle consistently without drift.
 
@@ -113,7 +113,7 @@ For microservices specifically, Claude's multi-agent capabilities become relevan
 
 ---
 
-Frontend Apps and Landing Pages
+## Frontend Apps and Landing Pages
 
 Frontend projects with Claude skills fall into two categories: component-level work (individual UI pieces) and page-level work (complete layouts, landing pages, and application shells). Both are well-supported, but they use different skill configurations.
 
@@ -137,7 +137,7 @@ The Vercel deployment skill and the Next.js workflow guide cover the full develo
 
 ---
 
-Browser Extensions
+## Browser Extensions
 
 Browser extensions are a compact project type with a specific technical envelope: a manifest.json, a background service worker, content scripts, and a popup UI. Claude skills handle all of these layers, but the most important one to get right is the manifest, Chrome's strict validation means any error stops the extension from loading.
 
@@ -158,7 +158,7 @@ The Dart/Flutter guide is worth noting for developers building cross-platform ap
 
 ---
 
-Data Pipelines and Automation
+## Data Pipelines and Automation
 
 Data pipeline projects are where Claude skills and automation integrations converge most powerfully. A skill that understands your data schema, combined with a workflow that runs on a schedule or trigger, creates an AI-powered ETL layer that adapts to schema changes and formats output for downstream consumers.
 
@@ -181,7 +181,7 @@ For Jupyter-based data science workflows, Claude's data science skill set integr
 
 ---
 
-Project Complexity Matrix
+## Project Complexity Matrix
 
 Use this table to estimate what you are getting into before you start a new project with Claude skills.
 
@@ -200,7 +200,7 @@ Use this table to estimate what you are getting into before you start a new proj
 
 ---
 
-Full Article Index
+## Full Article Index
 
 | Article | What You'll Learn |
 |---------|-------------------|

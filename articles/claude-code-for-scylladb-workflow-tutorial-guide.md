@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for ScyllaDB Workflow Tutorial Guide
-
 ScyllaDB is a high-performance NoSQL database compatible with Apache Cassandra, offering exceptional throughput and low latency. When combined with Claude Code's intelligent automation capabilities, you can build powerful database workflows that handle complex data operations efficiently. This guide walks you through integrating Claude Code with ScyllaDB, creating practical workflows, and optimizing your database interactions.
 
-Understanding the ScyllaDB and Claude Code Integration
+## Understanding the ScyllaDB and Claude Code Integration
 
 Claude Code can interact with ScyllaDB through multiple pathways: direct CQL (Cassandra Query Language) command execution, Python driver integration, or REST API calls to ScyllaDB's HTTP interface. The key advantage is Claude Code's ability to understand your data models and generate appropriate queries based on natural language descriptions.
 
@@ -32,7 +29,7 @@ Verify connection with a simple test
 python3 -c "from scylladb import ScyllaConnection; print('Driver installed successfully')"
 ```
 
-Setting Up Your First ScyllaDB Connection
+## Setting Up Your First ScyllaDB Connection
 
 The foundation of any ScyllaDB workflow is establishing a reliable database connection. Claude Code can help you configure this connection with proper retry logic and timeout handling.
 
@@ -67,11 +64,11 @@ class ScyllaDBClient:
 
 This reusable client pattern allows Claude Code to focus on query construction rather than connection management.
 
-Building Your First Data Workflow
+## Building Your First Data Workflow
 
 With the connection established, you can now build workflows that perform common database operations. Let's create a practical example: a user profile management workflow.
 
-Creating Tables and Data Models
+## Creating Tables and Data Models
 
 Claude Code excels at translating your requirements into proper CQL statements. Describe your data needs, and let Claude Code generate the appropriate schema:
 
@@ -102,7 +99,7 @@ CREATE TABLE IF NOT EXISTS user_activity_log (
 """
 ```
 
-Implementing CRUD Operations
+## Implementing CRUD Operations
 
 The workflow should handle Create, Read, Update, and Delete operations efficiently:
 
@@ -131,11 +128,11 @@ def get_user_profile(client, user_id):
     return result.one() if result else None
 ```
 
-Advanced Workflow Patterns
+## Advanced Workflow Patterns
 
 Once you've mastered the basics, Claude Code can help you implement more sophisticated patterns.
 
-Batch Operations for High Throughput
+## Batch Operations for High Throughput
 
 When dealing with large datasets, batch operations significantly improve performance:
 
@@ -155,7 +152,7 @@ def bulk_import_users(client, users_list):
     return client.session.execute(batch)
 ```
 
-Asynchronous Queries for Concurrent Operations
+## Asynchronous Queries for Concurrent Operations
 
 For workflows requiring multiple simultaneous queries, asynchronous execution reduces overall latency:
 
@@ -183,7 +180,7 @@ async def fetch_user_with_activities(client, user_id):
     }
 ```
 
-Best Practices for ScyllaDB Workflows
+## Best Practices for ScyllaDB Workflows
 
 Follow these guidelines to ensure your Claude Code workflows perform optimally:
 
@@ -221,11 +218,11 @@ TRACING ON
 SELECT * FROM user_profiles WHERE user_id = 123e4567-e89b-12d3-a456-426614174000;
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms ScyllaDB database management from manual query construction to intelligent automation. By establishing proper connection patterns, implementing solid CRUD operations, and following best practices for performance, you can build reliable workflows that scale with your application needs. Start with the examples in this guide, then customize them to match your specific data models and business requirements.
 
-Step-by-Step Guide: Building a Production ScyllaDB Workflow
+## Step-by-Step Guide: Building a Production ScyllaDB Workflow
 
 Here is a concrete approach to standing up a reliable ScyllaDB integration with Claude Code.
 
@@ -239,7 +236,7 @@ Step 4. Generate prepared statements for all queries. Prepared statements in Scy
 
 Step 5. Add token-aware load balancing. Configure your driver's load balancing policy to be token-aware, so queries are routed directly to the coordinator node that owns the data rather than making an extra network hop. Claude Code generates the driver configuration with token-aware routing enabled and a local datacenter preference for multi-datacenter deployments.
 
-Common Pitfalls
+## Common Pitfalls
 
 Using ALLOW FILTERING without understanding the cost. ALLOW FILTERING executes a full table scan, which is catastrophic at scale. It works fine in development with small datasets but causes multi-second query times in production. Claude Code flags every query that requires ALLOW FILTERING and generates alternative table designs or materialized views that serve the same query without the scan.
 
@@ -251,7 +248,7 @@ Not setting TTLs on ephemeral data. Session tokens, cache entries, and temporary
 
 Ignoring tombstones. When data is deleted in ScyllaDB, deletion markers called tombstones are written and accumulate until compaction. Heavy delete workloads can slow reads significantly as ScyllaDB scans through tombstones before finding live data. Claude Code recommends TTL-based expiration over explicit deletes for high-deletion workloads and generates compaction strategy tuning for tables with expected deletion patterns.
 
-Best Practices
+## Best Practices
 
 Use lightweight transactions sparingly. IF NOT EXISTS and conditional updates use Paxos consensus, which requires multiple round trips and is 5-10x slower than regular writes. Reserve them for truly idempotent operations like ensuring a user ID is unique. Claude Code generates idempotent alternatives using application-level deduplication for cases where lightweight transactions are not strictly necessary.
 
@@ -261,7 +258,7 @@ Use client-side batching for related writes, not server-side batching. Server-si
 
 Test failover with chaos engineering. Stop individual nodes in your test cluster and verify your application continues to read and write with acceptable latency degradation. Claude Code generates the chaos test script that kills nodes, measures latency during recovery, and verifies data consistency after the node rejoins.
 
-Schema Design Validation
+## Schema Design Validation
 
 Getting ScyllaDB schema design right before writing production data prevents costly migrations later. Claude Code generates the validation tooling that catches schema anti-patterns before they become performance problems.
 
@@ -271,15 +268,13 @@ Partition key cardinality analysis. Low-cardinality partition keys cause data to
 
 Tombstone accumulation prediction. Frequent deletes or TTL expirations create tombstones that degrade read performance until compaction removes them. Claude Code generates the tombstone analysis query that estimates tombstone accumulation rate based on your delete frequency and compaction strategy configuration, recommending TWCS for time-series workloads with TTLs and STCS for workloads with infrequent deletes.
 
-
-Integration Patterns
+## Integration Patterns
 
 Django with the ScyllaDB Django backend. A Django ORM backend exists for ScyllaDB. Claude Code generates the Django settings configuration, model definitions with proper partition key declarations, and the migration workflow that creates tables without the standard makemigrations and migrate flow.
 
 FastAPI background tasks. For FastAPI applications that need to log events to ScyllaDB without adding latency to API responses, Claude Code generates the background task pattern using FastAPI's BackgroundTasks with a connection pool that is shared across requests without blocking the event loop.
 
 Kafka consumer persistence. For Kafka consumers that need to persist processed events to ScyllaDB, Claude Code generates the idempotent write pattern that uses the Kafka message offset as part of the ScyllaDB partition key, ensuring that replayed messages do not create duplicate records.
-
 
 Related Reading
 

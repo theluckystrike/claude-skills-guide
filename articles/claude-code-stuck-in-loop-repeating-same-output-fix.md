@@ -16,13 +16,13 @@ tags: [claude-code, claude-skills]
 
 When Claude Code gets stuck in a loop repeating the same output, it disrupts your workflow and wastes tokens. This issue commonly occurs when the model receives ambiguous prompts, conflicting instructions, or when it cannot find a satisfactory solution path. This guide provides practical fixes for developers and power users experiencing this frustrating behavior.
 
-Understanding the Repetition Loop Problem
+## Understanding the Repetition Loop Problem
 
 Claude Code enters repetition loops when its output becomes trapped in a pattern. Instead of progressing toward a solution, it generates the same text, similar variations, or cycles through identical approaches repeatedly. The root causes typically stem from prompt ambiguity, missing context, overly broad requests, or unintended skill conflicts.
 
 When using specialized skills like `pdf` for document generation or `frontend-design` for UI work, loops often appear when the skill receives unclear constraints. Similarly, when working with the [`tdd` skill for test-driven development](/claude-tdd-skill-test-driven-development-workflow/), repetition can occur when test requirements are contradictory or incomplete.
 
-Primary Fix: Interrupt and Reframe
+## Primary Fix: Interrupt and Reframe
 
 The most effective solution involves interrupting the loop and providing a more specific prompt. When you notice repetition, stop the current execution and reformulate your request with explicit boundaries.
 
@@ -41,7 +41,7 @@ Do not modify the registration function. Use the existing error handling pattern
 
 The second prompt provides concrete constraints that prevent the model from exploring unlimited solutions. When using skills like `xlsx` for spreadsheet automation, specificity is equally important, specify exactly which cells, formulas, or sheets need modification.
 
-Second Fix: Add Output Constraints
+## Second Fix: Add Output Constraints
 
 If refactoring your prompt does not work, add explicit output constraints to your request. These constraints tell Claude Code exactly how to format its response, limiting exploration that leads to loops.
 
@@ -56,7 +56,7 @@ Do not suggest alternative approaches.
 
 This technique works well with the [`supermemory` skill](/claude-supermemory-skill-persistent-context-explained/) when managing persistent context. By constraining output format, you prevent the model from cycling through multiple explanations it considers but cannot settle on.
 
-Third Fix: Reset Conversation Context
+## Third Fix: Reset Conversation Context
 
 Long conversations accumulate context that can confuse Claude Code. When repetition occurs, start a fresh session and provide essential context upfront.
 
@@ -73,11 +73,11 @@ Please implement the login component.
 
 This approach works particularly well when using multiple skills together, such as combining `tdd` for testing with `pdf` for generating test documentation. Fresh context prevents the model from carrying forward conflicting requirements from previous exchanges.
 
-Fourth Fix: Skill-Specific Adjustments
+## Fourth Fix: Skill-Specific Adjustments
 
 Different skills have unique requirements that prevent loops when properly configured.
 
-When Using the TDD Skill
+## When Using the TDD Skill
 
 Repetition often occurs when test specifications are ambiguous. Structure your requests with explicit test cases:
 
@@ -89,7 +89,7 @@ Create unit tests for UserService.validateCredentials():
 Use Jest describe/it syntax, maximum 15 lines per test.
 ```
 
-When Using the PDF Skill
+## When Using the PDF Skill
 
 The `pdf` skill may loop when page layout requirements conflict. Provide exact specifications:
 
@@ -100,7 +100,7 @@ Generate a 2-page PDF invoice:
 Use A4 format, 12pt font, do not include footer.
 ```
 
-When Using the Supermemory Skill
+## When Using the Supermemory Skill
 
 With `supermemory` managing persistent context, repetition occurs when context becomes contradictory. Review stored memories before starting complex tasks:
 
@@ -109,7 +109,7 @@ Before starting: List current project constraints from supermemory
 Then: Create a new React component following those constraints
 ```
 
-Fifth Fix: Use Negative Constraints
+## Fifth Fix: Use Negative Constraints
 
 Explicitly stating what you do not want eliminates unnecessary exploration that causes loops.
 
@@ -122,7 +122,7 @@ Return only the function code, no explanations.
 
 Negative constraints are particularly useful when working on generative visual projects with the canvas-design skill. Tell Claude what to avoid (specific colors, patterns, or file sizes) alongside what you want.
 
-Sixth Fix: Limit Iteration Attempts
+## Sixth Fix: Limit Iteration Attempts
 
 For tasks where Claude Code attempts multiple approaches, explicitly limit iterations:
 
@@ -133,7 +133,7 @@ After 2 attempts, stop and report what you tried.
 
 This prevents the model from cycling through variations indefinitely. The `webapp-testing` skill benefits from this approach when debugging frontend issues, specify a maximum number of test variations before reporting results.
 
-Prevention Strategies
+## Prevention Strategies
 
 Beyond fixing active loops, implement these practices to prevent repetition:
 
@@ -147,7 +147,7 @@ Beyond fixing active loops, implement these practices to prevent repetition:
 
 5. Set explicit success criteria. Define what completion looks like: "Stop after creating three test files" or "Continue until the build passes."
 
-Advanced: Debugging Persistent Loops
+## Advanced: Debugging Persistent Loops
 
 If loops persist despite these fixes, examine your project's configuration. Conflicting skill instructions are a common hidden cause, see the guide on [scoping tasks for Claude Code success](/best-way-to-scope-tasks-for-claude-code-success/) for structured approaches.
 
@@ -158,12 +158,11 @@ If loops persist despite these fixes, examine your project's configuration. Conf
 
 The `mcp-builder` skill can help diagnose skill configuration issues that cause unexpected behavior.
 
-Conclusion
+## Conclusion
 
 Claude Code loops typically stem from ambiguous prompts, missing context, or overly broad requests. By providing specific constraints, limiting output formats, resetting conversation context, and using skill-appropriate configurations, you can prevent and resolve repetition issues effectively.
 
 For persistent problems, examine your project configuration and skill definitions for hidden conflicts. With proper scoping and clear requirements, Claude Code produces focused, accurate outputs without getting trapped in repetitive cycles.
-
 
 Related Reading
 

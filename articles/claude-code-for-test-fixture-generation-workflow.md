@@ -19,7 +19,7 @@ Test fixture generation is one of the most time-consuming aspects of software te
 
 This guide explores practical approaches to using Claude Code for test fixture generation, complete with code examples and actionable strategies you can implement immediately.
 
-Understanding the Fixture Generation Challenge
+## Understanding the Fixture Generation Challenge
 
 Before diving into solutions, it's worth understanding why fixture generation becomes problematic. In most projects, you'll encounter several common scenarios:
 
@@ -31,7 +31,7 @@ Before diving into solutions, it's worth understanding why fixture generation be
 
 Traditional approaches often involve either hardcoding fixtures (which becomes brittle over time) or using factory libraries (which require maintaining additional code). Claude Code offers a third path: AI-assisted fixture generation that understands your domain and generates appropriate test data dynamically.
 
-Comparing Fixture Strategies
+## Comparing Fixture Strategies
 
 Before adopting any approach, it helps to understand the tradeoffs between common strategies:
 
@@ -44,7 +44,7 @@ Before adopting any approach, it helps to understand the tradeoffs between commo
 
 The AI-assisted approach shines especially for edge cases and complex relational data. It understands your business domain rather than just generating random values.
 
-Setting Up Claude Code for Fixture Generation
+## Setting Up Claude Code for Fixture Generation
 
 The first step is configuring Claude Code to understand your project structure and testing framework. Create a dedicated Claude configuration for test assistance:
 
@@ -79,7 +79,7 @@ Business Rules
 
 With this context in place, Claude Code can generate fixtures that respect your actual business rules rather than producing arbitrary test data.
 
-Generating Basic Fixtures
+## Generating Basic Fixtures
 
 Once configured, you can generate simple fixtures by describing what you need. For example, with a User entity:
 
@@ -162,7 +162,7 @@ export const fixtures = {
 
 The factory function pattern is particularly useful because it lets individual tests override only the fields they care about, while keeping sane defaults for everything else.
 
-Creating Complex Related Fixtures
+## Creating Complex Related Fixtures
 
 The real power of Claude Code emerges when generating interconnected fixtures. For example, an e-commerce order that depends on users, products, and payment methods:
 
@@ -291,7 +291,7 @@ FactoryBot.define do
 end
 ```
 
-Generating Edge Cases and Boundary Conditions
+## Generating Edge Cases and Boundary Conditions
 
 One of Claude Code's strengths is generating realistic edge cases that developers often overlook. Ask for specific scenarios:
 
@@ -370,7 +370,7 @@ module.exports = {
 
 This kind of coverage is difficult to achieve manually because developers tend to focus on happy-path scenarios. Claude Code, given a clear description of the domain rules, naturally generates fixtures that probe the boundaries of those rules.
 
-Prompt Patterns for Better Edge Cases
+## Prompt Patterns for Better Edge Cases
 
 The quality of edge case fixtures depends heavily on how you frame your request. Here are prompt patterns that produce the most useful results:
 
@@ -382,7 +382,7 @@ The quality of edge case fixtures depends heavily on how you frame your request.
 | Null/empty values | "Generate fixtures with optional fields missing" | Tests defensive coding |
 | Large collections | "Generate fixture with 1000 related items" | Tests pagination and performance |
 
-Using Claude Code to Infer Fixtures from Existing Code
+## Using Claude Code to Infer Fixtures from Existing Code
 
 Rather than describing your domain from scratch, you can point Claude Code at your existing code and ask it to infer fixtures:
 
@@ -464,7 +464,7 @@ module.exports = {
 
 This inference-from-code approach is especially effective because it guarantees that fixtures match the actual types defined in your codebase. If you later change the interface, you can re-run the prompt to regenerate fresh fixtures.
 
-Automating Fixture Generation in CI/CD
+## Automating Fixture Generation in CI/CD
 
 To truly use Claude Code for fixture generation, integrate it into your development workflow. Create a script that generates fixtures before running tests:
 
@@ -504,7 +504,7 @@ test-ci:
 
 A common pattern is to generate fixtures locally during development, review and commit them, and then skip regeneration in CI. This gives you the speed of AI-generated fixtures without adding an API dependency to your CI pipeline.
 
-Validating Generated Fixtures Against Your Schema
+## Validating Generated Fixtures Against Your Schema
 
 Generated fixtures are only useful if they pass your application's validation. Always add a validation step after generation:
 
@@ -539,7 +539,7 @@ You can also ask Claude Code to generate the validation script alongside the fix
 Generate both the Jest fixtures AND the Joi validation script for a User object, ensuring the fixtures all pass validation before export.
 ```
 
-Best Practices for AI-Assisted Fixture Generation
+## Best Practices for AI-Assisted Fixture Generation
 
 To get the most out of Claude Code for fixture generation, follow these practical guidelines:
 
@@ -559,7 +559,7 @@ To get the most out of Claude Code for fixture generation, follow these practica
 
 8. Document Fixture Intent: Ask Claude Code to add comments explaining what scenario each fixture represents. A fixture named `userWithExpiredSubscriptionInGracePeriod` is self-documenting; a fixture named `user3` is not.
 
-When to Regenerate vs. When to Maintain
+## When to Regenerate vs. When to Maintain
 
 | Scenario | Recommendation |
 |---|---|
@@ -569,7 +569,7 @@ When to Regenerate vs. When to Maintain
 | New edge case discovered in production | Add to prompt and regenerate edge case fixtures |
 | Fixtures are working well | Leave them alone; regenerating introduces unnecessary churn |
 
-Conclusion
+## Conclusion
 
 Claude Code transforms test fixture generation from a tedious manual task into an efficient, AI-assisted workflow. By understanding your domain and generating contextually appropriate data, it helps create more comprehensive test coverage while saving significant development time.
 
@@ -578,7 +578,6 @@ The most effective pattern is to treat fixture generation as a conversation: giv
 Start small with basic fixtures, then gradually incorporate more complex scenarios as you become comfortable with the workflow. Pay particular attention to edge cases: Claude Code's ability to systematically generate boundary conditions and invalid states is where it provides the most value over manually written fixtures.
 
 The key is treating Claude Code as a collaborative partner in your testing process, describe your needs clearly, review the output, and iteratively refine the results to match your project's specific requirements.
-
 
 Related Reading
 

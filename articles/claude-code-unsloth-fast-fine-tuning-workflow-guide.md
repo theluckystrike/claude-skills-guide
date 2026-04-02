@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code + Unsloth: Fast Fine-Tuning Workflow Guide
 
@@ -30,7 +29,7 @@ Unsloth is a drop-in replacement for Hugging Face's Transformers training that o
 
 This guide shows you how to integrate Claude Code into your Unsloth fine-tuning workflow for better project management, automation, and reproducibility.
 
-Unsloth vs. Standard Transformers Training
+## Unsloth vs. Standard Transformers Training
 
 To understand why this combination matters, consider what you give up with vanilla Hugging Face training on a 24GB GPU when fine-tuning a 7B parameter model:
 
@@ -44,7 +43,7 @@ To understand why this combination matters, consider what you give up with vanil
 
 The memory reduction is the more impactful number. Dropping from 22GB to 9GB means you can fit a 7B model fine-tune on a single consumer RTX 3090 or 4090, making serious fine-tuning accessible without renting cloud GPUs. More importantly, it means you can increase batch size or sequence length within the same VRAM budget, which often translates directly to better training stability and model quality.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Claude Code excels at environment setup and dependency management. Use it to scaffold your fine-tuning project with proper structure:
 
@@ -76,7 +75,7 @@ Training Configuration
 
 The CLAUDE.md file serves a dual purpose: it documents your project's conventions for human collaborators, and it gives Claude Code the context it needs to make sensible suggestions. When Claude Code understands that you're using LoRA rank 16, it won't suggest changes to rank that conflict with your GPU budget. When it knows your target base model, it can pull in model-specific tokenizer quirks without you having to re-explain them in every session.
 
-Installing Unsloth
+## Installing Unsloth
 
 Unsloth installation depends on your CUDA version. Claude Code can detect this automatically:
 
@@ -97,7 +96,7 @@ pip install datasets transformers accelerate peft trl
 
 If you run into installation issues with Flash Attention (common on Windows or older CUDA), Unsloth falls back gracefully to standard attention. you lose some speed but training still works. Claude Code can help diagnose installation errors by reading logs and suggesting corrective steps.
 
-Data Preparation with Claude Code
+## Data Preparation with Claude Code
 
 Claude Code can help preprocess your training data into formats compatible with Unsloth's training pipeline. Create a data preparation script:
 
@@ -127,7 +126,7 @@ Claude Code can also help validate your dataset quality:
 - Identify potential data leakage
 - Ensure proper tokenization
 
-Understanding Data Format Requirements
+## Understanding Data Format Requirements
 
 Unsloth works with several standard conversation formats. The most reliable is ShareGPT, which uses a list of turns with `from` and `value` keys:
 
@@ -192,7 +191,7 @@ def validate_dataset(data, format="sharegpt"):
 
 Running this before training saves hours of wasted compute on corrupted or malformed datasets.
 
-Building the Training Pipeline
+## Building the Training Pipeline
 
 Here's a complete fine-tuning script using Unsloth's capabilities:
 
@@ -252,7 +251,7 @@ Start training
 trainer.train()
 ```
 
-Choosing LoRA Rank and Alpha
+## Choosing LoRA Rank and Alpha
 
 The `r` (rank) and `lora_alpha` parameters are the most consequential choices in your LoRA configuration. The rule of thumb is that `lora_alpha` should be 2x your rank, which is why `r=16, alpha=32` appears so often.
 
@@ -263,7 +262,7 @@ The `r` (rank) and `lora_alpha` parameters are the most consequential choices in
 
 The `target_modules` list controls which layers get LoRA adapters. The attention projections (`q_proj`, `k_proj`, `v_proj`, `o_proj`) are almost always included. Adding `gate_proj` and `up_proj` (the MLP layers) increases parameters but often improves instruction following on complex tasks.
 
-Automating with Claude Code Skills
+## Automating with Claude Code Skills
 
 Create a Claude Code skill to automate repetitive fine-tuning tasks:
 
@@ -282,7 +281,7 @@ Beyond a simple skill stub, Claude Code's real value in this workflow is as an o
 
 A practical use pattern: keep a `runs/` directory where each experiment gets a subdirectory with its config, logs, and evaluation results. Ask Claude Code to read across those directories and identify which hyperparameter changes correlated with lower evaluation loss. This kind of multi-file analysis is where Claude Code's context window pays off.
 
-Model Evaluation and Testing
+## Model Evaluation and Testing
 
 After training, Claude Code can help you systematically evaluate your fine-tuned model:
 
@@ -325,7 +324,7 @@ def evaluate_model(model_path, test_cases):
     return results
 ```
 
-Writing Meaningful Evaluation Sets
+## Writing Meaningful Evaluation Sets
 
 The match-based evaluation above is a starting point, but for production use you want more nuanced evaluation. A few patterns that work well:
 
@@ -355,7 +354,7 @@ def semantic_match(expected, actual, threshold=0.85):
 
 Regression checks: Before deploying a new checkpoint, run it against the previous checkpoint's outputs on a fixed prompt set. If quality drops on more than 10% of prompts, investigate before shipping.
 
-Deployment and Export
+## Deployment and Export
 
 Claude Code can orchestrate the export process to various deployment formats:
 
@@ -370,7 +369,7 @@ Create an API server
 python -m unsloth serve --model outputs/final --port 8000
 ```
 
-Picking the Right Export Format
+## Picking the Right Export Format
 
 The export format decision depends on where and how the model runs:
 
@@ -410,7 +409,7 @@ def export_model(checkpoint_dir, model_name, hf_token=None):
     print(f"Export complete. Files in exports/")
 ```
 
-Best Practices
+## Best Practices
 
 When combining Claude Code with Unsloth:
 
@@ -426,7 +425,7 @@ Checkpoint management: Unsloth saves a checkpoint per epoch by default, which ad
 
 Experiment naming: Name your output directories with enough metadata to reconstruct the experiment without reading the config. `outputs/llama31-8b_r16_lr2e4_3ep_2026-03-14` tells you everything at a glance. Claude Code can generate these names automatically from your training config.
 
-Common Issues and Solutions
+## Common Issues and Solutions
 
 Claude Code can help diagnose and resolve common fine-tuning problems:
 
@@ -435,7 +434,7 @@ Claude Code can help diagnose and resolve common fine-tuning problems:
 - Poor model quality: Increase training data, adjust LoRA rank, try different base models
 - Overfitting: Add regularization, increase dropout, reduce training epochs
 
-Diagnosing Loss Curves
+## Diagnosing Loss Curves
 
 A healthy training run has a loss that decreases smoothly and begins to plateau by the final epoch. Common pathological patterns:
 
@@ -446,7 +445,7 @@ A healthy training run has a loss that decreases smoothly and begins to plateau 
 
 Claude Code is particularly useful here because you can paste your loss log directly into the conversation and get a diagnosis without switching contexts.
 
-Conclusion
+## Conclusion
 
 The combination of Claude Code's CLI automation and Unsloth's optimized fine-tuning creates a powerful workflow for customizing language models. Claude Code handles project management, automation, and reproducibility while Unsloth delivers the speed and memory efficiency needed for production fine-tuning.
 
@@ -456,7 +455,6 @@ The most underrated aspect of this combination is debugging velocity. Fine-tunin
 
 Remember to document your experiments, version your data, and always validate your fine-tuned model on held-out test sets before deployment. With this workflow, you're equipped to build production-quality fine-tuned models efficiently and reliably.
 {% endraw %}
-
 
 Related Reading
 

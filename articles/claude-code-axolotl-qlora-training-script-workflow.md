@@ -13,7 +13,6 @@ score: 7
 permalink: /claude-code-axolotl-qlora-training-script-workflow/
 ---
 
-
 {% raw %}
 Claude Code Axolotl QLoRA Training Script Workflow
 
@@ -21,7 +20,7 @@ Fine-tuning large language models with QLoRA (Quantized Low-Rank Adaptation) has
 
 This guide walks you through building an efficient Axolotl QLoRA training workflow powered by Claude Code skills, with practical examples you can adapt for your own projects.
 
-Understanding the Axolotl QLoRA Workflow
+## Understanding the Axolotl QLoRA Workflow
 
 Before diving into Claude Code integration, let's establish what a typical Axolotl QLoRA training workflow looks like. The standard process involves:
 
@@ -33,7 +32,7 @@ Before diving into Claude Code integration, let's establish what a typical Axolo
 
 Each of these steps presents opportunities for Claude Code skills to reduce friction and automate repetitive tasks.
 
-QLoRA vs Full Fine-Tuning: When to Choose Which
+## QLoRA vs Full Fine-Tuning: When to Choose Which
 
 Before configuring anything, it helps to understand when QLoRA is the right tool compared to full fine-tuning or other PEFT methods.
 
@@ -47,7 +46,7 @@ Before configuring anything, it helps to understand when QLoRA is the right tool
 
 QLoRA hits the sweet spot for most practitioners: you can fine-tune a 7B or 13B model on a single RTX 3090 or 4090, with quality that rivals full fine-tuning on most downstream tasks.
 
-Setting Up Your Claude Code Environment
+## Setting Up Your Claude Code Environment
 
 The first step is ensuring Claude Code is installed and configured with relevant skills. You can verify your installation:
 
@@ -59,7 +58,7 @@ To see which skills are available, check your `.claude/skills/` directory where 
 
 For Axolotl workflows, you'll want skills that provide expertise in YAML configuration, shell scripting, and Python training scripts. If you don't have an Axolotl-specific skill, you can create one or use the general-purpose coding skills that already ship with Claude Code.
 
-Creating an Axolotl-Specific Claude Code Skill
+## Creating an Axolotl-Specific Claude Code Skill
 
 A dedicated skill file gives Claude Code persistent context about your training environment, conventions, and hardware. Create `.claude/skills/axolotl-trainer.md`:
 
@@ -91,7 +90,7 @@ Common Issues
 
 With this skill loaded, Claude Code understands your hardware constraints and project conventions without you restating them every session.
 
-Creating Your QLoRA Configuration
+## Creating Your QLoRA Configuration
 
 The heart of any Axolotl training run is its YAML configuration file. Claude Code can help you generate and validate these configurations, ensuring all required fields are present and values are appropriate for your hardware.
 
@@ -169,7 +168,7 @@ special_tokens:
 
 When you describe your training goals to Claude Code, specifying the base model, dataset location, and desired QLoRA parameters, it can generate a complete configuration file tailored to your setup. This includes critical parameters like `lora_r`, `lora_alpha`, `lora_dropout`, and target modules that determine how aggressively the model adapts.
 
-Understanding Key QLoRA Parameters
+## Understanding Key QLoRA Parameters
 
 Claude Code can explain what each parameter controls and help you choose appropriate values:
 
@@ -185,7 +184,7 @@ Claude Code can explain what each parameter controls and help you choose appropr
 
 Claude Code validates your configuration against common pitfalls: incompatible model architectures, mismatched sequence lengths, memory-insufficient batch sizes, and incorrect learning rate schedules. This validation happens before you waste hours on a failed training run.
 
-Managing Training Scripts and Arguments
+## Managing Training Scripts and Arguments
 
 Beyond the YAML configuration, Axolotl training often requires custom scripts or wrapper commands. Claude Code excels at generating these scripts with proper error handling, logging, and checkpoint management.
 
@@ -241,7 +240,7 @@ fi
 
 Claude Code can generate this script, explain each parameter's purpose, and even adapt it for different hardware configurations, from single RTX 3090 setups to multi-GPU clusters.
 
-Multi-GPU Training with Accelerate
+## Multi-GPU Training with Accelerate
 
 Scaling to multiple GPUs requires an accelerate config. Claude Code can generate this file for your specific hardware:
 
@@ -264,13 +263,13 @@ tpu_use_sudo: false
 use_cpu: false
 ```
 
-Dataset Preparation and Formatting
+## Dataset Preparation and Formatting
 
 One of the most time-consuming aspects of fine-tuning is preparing your training data. Claude Code skills can assist with converting datasets between formats, validating JSONL structure, and splitting data into train/validation sets.
 
 If you're working with conversational data, Claude Code understands the chat template formats that Axolotl supports, including ChatML, Alpaca, and Vicuna formats. You simply describe your data source, and Claude Code can transform it into the exact format your configuration expects.
 
-Converting CSV to ChatML JSONL
+## Converting CSV to ChatML JSONL
 
 For instance, if you have a CSV file of instruction-response pairs, Claude Code can generate a Python script to convert it to the required JSONL format:
 
@@ -330,7 +329,7 @@ if __name__ == '__main__':
     convert_csv_to_jsonl(sys.argv[1], sys.argv[2])
 ```
 
-Validating Dataset Quality Before Training
+## Validating Dataset Quality Before Training
 
 Poor data quality is the most common cause of disappointing fine-tune results. Claude Code can help you build a validation script that catches problems before they waste GPU time:
 
@@ -405,13 +404,13 @@ if __name__ == '__main__':
     sys.exit(0 if valid else 1)
 ```
 
-Monitoring and Debugging Training Runs
+## Monitoring and Debugging Training Runs
 
 Training runs can fail for myriad reasons, OOM errors, gradient explosion, data loading issues. Claude Code helps you interpret error messages, identify root causes, and adjust parameters accordingly.
 
 When training stalls or produces unexpected results, you can paste error logs or metric outputs into Claude Code, which analyzes the patterns and suggests specific configuration changes. For QLoRA training specifically, common adjustments include reducing `per_device_train_batch_size`, increasing `gradient_accumulation_steps`, or tweaking `lora_r` values.
 
-Common Error Patterns and Fixes
+## Common Error Patterns and Fixes
 
 Claude Code recognizes these frequent failure patterns and knows their remedies:
 
@@ -424,7 +423,7 @@ Claude Code recognizes these frequent failure patterns and knows their remedies:
 | `tokenizer has no padding token` | Missing pad token | Add `pad_token: eos_token` in special_tokens |
 | `Checkpoint resume mismatch` | Config changed mid-run | Clear cache dir, restart from scratch |
 
-Setting Up Weights & Biases Monitoring
+## Setting Up Weights & Biases Monitoring
 
 Claude Code helps configure experiment tracking that persists across runs:
 
@@ -468,11 +467,11 @@ nvidia-smi --query-gpu=name,memory.used,memory.total,utilization.gpu \
 
 Claude Code also helps you set up proper monitoring by creating skills that understand Axolotl's log output, parse metrics from TensorBoard or Weights & Biases, and alert you when training deviates from expected behavior.
 
-Post-Training: Model Conversion and Testing
+## Post-Training: Model Conversion and Testing
 
 Once training completes, you need to merge the QLoRA adapters with the base model for deployment. Claude Code guides you through this process, generating the appropriate merge commands and helping you test the resulting model.
 
-Merging QLoRA Adapters
+## Merging QLoRA Adapters
 
 ```python
 #!/usr/bin/env python3
@@ -526,7 +525,7 @@ if __name__ == "__main__":
     merge_qlora_adapter(args.adapter, args.output, args.base_model)
 ```
 
-Automated Inference Testing
+## Automated Inference Testing
 
 Testing involves running inference with sample prompts and comparing outputs against baseline expectations. Claude Code can automate this validation, running a suite of test cases and reporting whether the fine-tuned model exhibits the desired behaviors.
 
@@ -580,7 +579,7 @@ def run_inference_tests(model_path, test_file, max_new_tokens=512):
     return results
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Axolotl QLoRA training from a manual, error-prone process into a streamlined workflow where configuration generation, script creation, debugging, and monitoring all receive intelligent assistance. By using Claude Code skills throughout your training pipeline, you spend less time wrestling with configuration files and more time iterating on your model.
 
@@ -588,7 +587,6 @@ The key is treating Claude Code not just as a chat interface, but as an integrat
 
 Start with a single working configuration, build your dataset validation and launch scripts, and progressively add monitoring and post-training automation as your pipeline matures. Each component you automate with Claude Code's help is one less distraction from the core work: building models that actually solve real problems.
 {% endraw %}
-
 
 Related Reading
 

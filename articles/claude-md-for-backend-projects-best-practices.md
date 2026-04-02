@@ -16,13 +16,13 @@ permalink: /claude-md-for-backend-projects-best-practices/
 
 [Claude Code's Markdown-based skill system transforms how developers approach backend development](/claude-skill-md-format-complete-specification-guide/) Rather than relying on rigid templates or generic prompts, you can create specialized `.md` skill files that encode your team's conventions, coding standards, and preferred workflows. This guide covers practical patterns for using Claude.md in backend projects.
 
-Understanding Claude.md Skills
+## Understanding Claude.md Skills
 
 [A Claude skill is simply a Markdown file placed in `~/.claude/skills/` directory](/best-claude-code-skills-to-install-first-2026/) When activated via the `/` command, Claude reads the file and adjusts its behavior accordingly. For backend projects, this means you can define patterns for API responses, database schema management, error handling conventions, and testing strategies.
 
 The power lies in specificity. A well-crafted backend skill captures your team's architectural decisions in a reusable format. Unlike configuration files that require parsing, Markdown skills read like documentation that Claude actually follows.
 
-Creating a Backend Project Skill
+## Creating a Backend Project Skill
 
 Start by creating a skill file tailored to your backend stack. For a Node.js project using Express and PostgreSQL, your skill might look like:
 
@@ -52,7 +52,7 @@ Database Patterns
 
 When you type `/backend` in a Claude session, these conventions guide every code snippet and explanation. This ensures consistency across your entire team without manual enforcement.
 
-API Design Patterns
+## API Design Patterns
 
 Backend projects benefit enormously from structured skill files that encode REST conventions. Consider creating separate skills for different aspects of your API:
 
@@ -82,7 +82,7 @@ Always use this error structure:
 Avoid exposing internal error names to clients.
 ```
 
-Database and Migration Workflows
+## Database and Migration Workflows
 
 Backend projects frequently involve database changes that require careful coordination. A dedicated migration skill helps Claude generate safe, reversible migrations:
 
@@ -105,7 +105,7 @@ For PostgreSQL:
 
 Pair this with a schema skill that defines your naming conventions: lowercase snake_case for tables and columns, singular table names, foreign keys as `{table}_id`, and so forth.
 
-Testing Integration
+## Testing Integration
 
 The tdd skill works exceptionally well for backend testing. Configure it to prioritize test patterns common in your stack:
 
@@ -128,7 +128,7 @@ For API endpoints:
 
 This skill integrates naturally with your existing test framework, whether Jest for Node.js, pytest for Python, or RSpec for Ruby.
 
-Documentation Generation
+## Documentation Generation
 
 Backend projects often suffer from outdated documentation. The pdf skill can generate API documentation automatically from your code, while a custom docs skill ensures consistency:
 
@@ -160,7 +160,7 @@ Errors
 
 This ensures every endpoint gets comprehensive documentation without manual effort.
 
-Memory and Context Management
+## Memory and Context Management
 
 For long-running backend projects, the supermemory skill helps maintain context across sessions. Configure it to track architectural decisions, pending migrations, and outstanding bugs:
 
@@ -179,7 +179,7 @@ When discussing architecture, reference these stored facts.
 
 This prevents the common problem of starting each Claude session from scratch.
 
-Workflow Integration
+## Workflow Integration
 
 Combine multiple skills for complex backend tasks. When refactoring an endpoint, you might activate:
 
@@ -190,7 +190,7 @@ Combine multiple skills for complex backend tasks. When refactoring an endpoint,
 
 Claude loads each skill sequentially, applying all relevant conventions to your task. This layered approach keeps each skill focused while enabling powerful combinations.
 
-Practical Example: Adding a New Endpoint
+## Practical Example: Adding a New Endpoint
 
 Suppose you need to add a user profile endpoint. With proper skills configured, you'd simply describe your requirements:
 
@@ -232,7 +232,7 @@ router.patch('/:id/profile', authenticate, async (req, res) => {
 
 The response structure, error handling, and validation rules all come from your configured skills, no additional prompting required.
 
-Conclusion
+## Conclusion
 
 Claude.md skills change how backend development teams encode their conventions. By encoding your team's conventions in Markdown files, you create a scalable knowledge base that Claude applies consistently across every session. Start with a general backend skill, then add specialized skills for APIs, databases, testing, and documentation as your project matures.
 

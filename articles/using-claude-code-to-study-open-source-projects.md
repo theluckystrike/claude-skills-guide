@@ -15,11 +15,11 @@ score: 8
 
 {% raw %}
 
-Using Claude Code to Study Open Source Projects: A Practical Guide
+## Using Claude Code to Study Open Source Projects: A Practical Guide
 
 Open source projects can be intimidating to study. Large codebases, unfamiliar patterns, and complex architectures often make it challenging to understand how everything fits together. Fortunately, Claude Code and its skill system provide powerful tools that can dramatically accelerate your learning process. This guide shows you practical techniques for using Claude Code to explore, understand, and learn from open source projects.
 
-Getting Started with Claude Code for Codebase Analysis
+## Getting Started with Claude Code for Codebase Analysis
 
 Before diving into specific techniques, ensure you have Claude Code installed and configured with essential skills. The `read_file` tool is your primary gateway into any repository, while bash skills let you navigate directories and execute git commands. These foundational capabilities form the backbone of effective codebase exploration.
 
@@ -32,7 +32,7 @@ cd someproject
 
 Once you have the code locally, you can begin systematic exploration. The key insight here is that Claude Code doesn't just read files, it understands context, relationships, and patterns across your entire codebase.
 
-Strategic File Navigation Techniques
+## Strategic File Navigation Techniques
 
 When studying a new project, resist the temptation to read files randomly. Instead, adopt a strategic approach:
 
@@ -48,7 +48,7 @@ find . -type f -name "*.py" | head -30
 
 This helps you understand the project's organization before diving into specific files.
 
-Using Claude Code's Context Understanding
+## Using Claude Code's Context Understanding
 
 One of Claude Code's most powerful features is its ability to maintain context across multiple file reads. This means you can:
 
@@ -58,7 +58,7 @@ Ask follow-up questions. Don't just read files passively. After examining a modu
 
 Trace data flow. Understanding how data moves through a system is crucial for any substantial project. Ask Claude Code to trace a specific piece of data, from user input through processing to storage. This reveals the complete picture of how your target project operates.
 
-Practical Example: Exploring a React Component Library
+## Practical Example: Exploring a React Component Library
 
 Let's walk through a practical example. Suppose you want to understand how a React component library handles button variants. Here's how you'd approach this with Claude Code:
 
@@ -76,7 +76,7 @@ Once you find the component file, read it and ask specific questions:
 
 Claude Code can then explain not just what the code does, but why certain implementation choices were made. This deeper understanding is what transforms code reading from mechanical parsing into genuine learning.
 
-Code Analysis Skills and Techniques
+## Code Analysis Skills and Techniques
 
 Beyond basic file reading, Claude Code supports sophisticated code analysis:
 
@@ -96,7 +96,7 @@ Dependency analysis. Understanding imports and exports is crucial. Ask Claude Co
 
 Pattern identification. Good open source projects often use consistent patterns. Request that Claude Code identify these patterns: "Show me how error handling is done across this project" or "What naming conventions are used for React hooks?"
 
-Learning Project Architecture
+## Learning Project Architecture
 
 Understanding architectural patterns is perhaps the most valuable skill when studying open source projects. Claude Code can help you:
 
@@ -106,7 +106,7 @@ Understand data models. Ask about database schemas, entity relationships, and da
 
 Analyze API layers. If the project exposes an API, trace how requests are routed, validated, processed, and responded to. This reveals the system's logical layers and their responsibilities.
 
-Best Practices for Effective Learning
+## Best Practices for Effective Learning
 
 To get the most out of Claude Code when studying open source projects:
 
@@ -118,7 +118,7 @@ Teach what you learn. Explain concepts back to Claude Code or write documentatio
 
 Connect to your goals. Always tie what you're learning to your specific objectives. Are you learning to contribute? Building something similar? Understanding a concept? Your goals shape what you focus on.
 
-Advanced Techniques for Detailed look
+## Advanced Techniques for Detailed look
 
 For complex projects, consider these advanced approaches:
 
@@ -128,7 +128,7 @@ Compare implementations. If you're choosing between approaches, ask Claude Code 
 
 Build reference documentation. As you learn, create your own documentation. This serves as both a learning tool and a reference for future work.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms open source project study from overwhelming exploration into structured learning. By using its context-aware analysis, pattern recognition, and interactive exploration capabilities, you can efficiently understand even complex codebases.
 
@@ -137,7 +137,6 @@ Remember that effective learning requires active engagement, ask questions, expe
 Start with a small project, apply these techniques, and gradually scale up to larger codebases. You'll find that understanding complex systems becomes not just possible, but genuinely enjoyable.
 
 {% endraw %}
-
 
 Related Reading
 

@@ -13,14 +13,11 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
-
-Claude MD Example for .NET ASPNET Core Project
 
 Creating effective Claude skill files for .NET ASP.NET Core projects requires understanding both the skill format and how Claude Code processes .NET-specific workflows. This guide provides practical examples you can adapt immediately.
 
-The Claude Skill Format
+## The Claude Skill Format
 
 Claude skills are Markdown files with a specific structure that Claude reads when you invoke them. For .NET projects, these skills help Claude understand your tooling, conventions, and preferred patterns.
 
@@ -42,7 +39,7 @@ Guidelines
 
 The skill loads when you type `/skillname` in Claude Code, making these instructions part of the AI's context for your session.
 
-ASP.NET Core API Skill
+## ASP.NET Core API Skill
 
 For an ASP.NET Core Web API project, create a skill that guides Claude through your preferred patterns. Save this as `~/.claude/skills/dotnet-api.md`:
 
@@ -84,7 +81,7 @@ Testing
 
 To use this skill, type `/dotnet-api` in your Claude session, then describe what you need. Claude will apply your conventions throughout the task.
 
-Entity Framework Core Skill
+## Entity Framework Core Skill
 
 Database interactions deserve their own skill. Create `~/.claude/skills/efcore.md`:
 
@@ -121,7 +118,7 @@ Performance
 
 Combine this with the tdd skill by typing `/tdd` followed by `/efcore` to get test-first guidance with database-specific optimizations.
 
-Blazor Skill
+## Blazor Skill
 
 For Blazor projects, create a skill that addresses component patterns:
 
@@ -151,7 +148,7 @@ State Management
 - Consider Fluxor or similar for complex state
 ```
 
-Combining Multiple Skills
+## Combining Multiple Skills
 
 One of Claude's powerful features is combining skills. For a full-stack feature implementation:
 
@@ -163,7 +160,7 @@ One of Claude's powerful features is combining skills. For a full-stack feature 
 
 This gives you test-driven development, .NET API conventions, and frontend design patterns in a single session. The tdd skill ensures you write tests first, while dotnet-api applies your backend conventions, and frontend-design helps with UI implementation.
 
-Project-Specific Skills
+## Project-Specific Skills
 
 Beyond general skills, create project-specific ones for your codebase:
 
@@ -192,16 +189,15 @@ Response Format
 - Include correlation IDs for tracing
 ```
 
-Testing Your Skills
+## Testing Your Skills
 
 After creating a skill, test it by invoking it and asking Claude to perform a task. If the results don't match your expectations, refine the guidelines. Skills are iterative, start simple and add complexity as you discover edge cases.
 
 You can view your loaded skills at any time using the skills list command, and skills persist across sessions until you modify or remove them.
 
-Integration with Other Skills
+## Integration with Other Skills
 
 The .NET skills work well with other Claude skills. The pdf skill helps generate documentation from your API specs. The supermemory skill maintains context across sessions about your project decisions. The canvas-design skill assists with architecture diagrams and flowcharts.
-
 
 Related Reading
 
@@ -211,8 +207,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-
-Building a Complete CLAUDE.md for ASP.NET Core
+## Building a Complete CLAUDE.md for ASP.NET Core
 
 A project-level `CLAUDE.md` at the repository root gives Claude Code persistent context about your codebase without requiring skill invocations. Here is a production-ready example for an ASP.NET Core API project:
 
@@ -263,9 +258,9 @@ What NOT to Do
 - Do not use AutoMapper. write explicit mapping methods
 ```
 
-Workflow Tips for .NET Projects
+## Workflow Tips for .NET Projects
 
-Using Claude Code for Migrations
+## Using Claude Code for Migrations
 
 When you add a new property to a domain entity, describe the change to Claude Code and ask it to generate both the migration and update any affected queries:
 
@@ -280,7 +275,7 @@ Generate:
 
 Claude Code reads your existing code structure and generates components that match your conventions. including the correct namespace, FluentValidation placement, and Result<T> return patterns.
 
-Debugging Integration Tests
+## Debugging Integration Tests
 
 ASP.NET Core integration tests using `WebApplicationFactory` often fail in subtle ways. Describe the failure to Claude Code with the full stack trace and test setup:
 
@@ -292,7 +287,7 @@ Here is the test setup and the error: [paste error]
 
 Common issues Claude Code surfaces quickly: missing service registrations in test configuration, EF Core not seeding required lookup data, JWT authentication not bypassed for test requests, and response body deserialization failing due to JSON naming policy mismatches.
 
-Combining Skills for Full-Stack .NET Development
+## Combining Skills for Full-Stack .NET Development
 
 When building features that span backend API and Blazor frontend, invoke skills in sequence:
 

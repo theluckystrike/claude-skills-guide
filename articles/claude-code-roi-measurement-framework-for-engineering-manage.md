@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code ROI Measurement Framework for Engineering."
 description: "A practical framework for engineering managers to measure and track the return on investment of Claude Code in their teams. Includes metrics, formulas."
@@ -14,18 +13,17 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code ROI Measurement Framework for Engineering Managers
+## Claude Code ROI Measurement Framework for Engineering Managers
 
 As AI coding assistants become standard tools in engineering organizations, managers face a critical question: how do we actually measure whether Claude Code is delivering value? Unlike traditional software investments, AI tools impact productivity in nuanced ways that require a structured measurement framework. This guide provides engineering managers with a practical approach to tracking, calculating, and optimizing the ROI of Claude Code across their teams.
 
-Why Traditional ROI Metrics Fall Short
+## Why Traditional ROI Metrics Fall Short
 
 Most engineering managers make the mistake of treating Claude Code ROI like any other tool investment. They look at subscription costs versus perceived productivity gains and call it a day. This approach misses the real value drivers and hidden costs that make or break an AI coding assistant deployment.
 
 Claude Code affects multiple dimensions of engineering work: code generation speed, code quality, developer onboarding time, code review efficiency, and reduced bug rates. Each dimension requires different measurement approaches. A comprehensive framework must capture all of these while remaining simple enough for teams to actually use.
 
-The Core ROI Framework
+## The Core ROI Framework
 
 The fundamental ROI formula for Claude Code follows standard accounting principles but with adapted variables:
 
@@ -33,7 +31,7 @@ The fundamental ROI formula for Claude Code follows standard accounting principl
 Claude Code ROI = (Total Value Generated - Total Investment) / Total Investment × 100%
 ```
 
-Defining Total Investment
+## Defining Total Investment
 
 Your total investment includes direct costs and indirect costs:
 
@@ -48,7 +46,7 @@ Indirect Costs:
 - Integration setup with existing workflows
 - Time spent debugging AI-generated code issues
 
-Defining Total Value Generated
+## Defining Total Value Generated
 
 Value generation comes from multiple sources that require individual tracking:
 
@@ -60,7 +58,7 @@ Bug Reduction: Compare defect rates before and after Claude Code adoption. Studi
 
 Onboarding Acceleration: Measure time-to-productivity for new hires using Claude Code versus historical baselines.
 
-Key Metrics to Track
+## Key Metrics to Track
 
 Primary Metrics (Track Weekly)
 
@@ -127,9 +125,9 @@ def calculate_quarterly_roi(
     return roi_percentage
 ```
 
-Practical Implementation Steps
+## Practical Implementation Steps
 
-Step 1: Establish Your Baseline
+## Step 1: Establish Your Baseline
 
 Before measuring ROI, capture your pre-Claude Code metrics. This requires looking back at historical data:
 
@@ -138,7 +136,7 @@ Before measuring ROI, capture your pre-Claude Code metrics. This requires lookin
 - Average onboarding time for junior and senior developers
 - Code review turnaround times
 
-Step 2: Implement Tracking Mechanisms
+## Step 2: Implement Tracking Mechanisms
 
 Create lightweight tracking that doesn't burden developers:
 
@@ -159,7 +157,7 @@ Metrics
 
 ```
 
-Step 3: Calculate and Report
+## Step 3: Calculate and Report
 
 Run quarterly calculations using your tracked data. Present findings with this structure:
 
@@ -181,7 +179,7 @@ ROI Calculation
 ROI = ([value] - [investment]) / [investment] × 100 = [X]%
 ```
 
-Real-World Example
+## Real-World Example
 
 Consider a mid-sized engineering team with 10 developers:
 
@@ -200,7 +198,7 @@ ROI = ($77,750 - $2,750) / $2,750 × 100 = 2,727%
 
 Even with aggressive discounting of these numbers, ROI typically exceeds 500% in the first year. As teams become more proficient with Claude Code, these numbers typically improve by 20-30%.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Overcounting Time Savings: Don't assume all AI-generated code is pure time savings. Developers still need to review, understand, and maintain that code. Track only verified time savings.
 
@@ -210,7 +208,7 @@ Missing Hidden Costs: Integration time, custom skill development, and workflow a
 
 Comparing Incommensurables: Don't compare Claude Code-assisted work against pristine manual work. Compare realistic scenarios: what would actually happen without AI assistance?
 
-Actionable Recommendations
+## Actionable Recommendations
 
 1. Start tracking immediately: Even before a formal ROI study, maintain a simple usage log. You'll need this data later.
 

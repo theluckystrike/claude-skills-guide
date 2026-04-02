@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code Statsig A/B Test Experiment Setup Guide"
 description: "Learn how to set up and configure A/B tests and experiments using Statsig with Claude Code CLI. Practical examples for implementing experiment workflows."
@@ -14,17 +13,16 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 A/B testing and experimentation are critical for data-driven product development, and Statsig has emerged as a powerful platform for running experiments. When combined with Claude Code, you can automate experiment setup, generate exposure code, and streamline analysis workflows. This comprehensive guide walks you through setting up Statsig A/B tests using Claude Code CLI.
 
-Understanding Statsig Experimentation Platform
+## Understanding Statsig Experimentation Platform
 
 Statsig provides a complete experimentation suite that includes feature gates, A/B tests, and analytics. The platform offers SDKs for multiple languages and integrates smoothly with modern applications. Claude Code can help you implement Statsig integration by generating client and server code, setting up experiment configurations, and creating helper utilities.
 
 Before diving into implementation, ensure you have a Statsig account and API key. You can obtain these by signing up at statsig.com and creating a project. Once you have your keys, you can begin integrating Statsig into your application with Claude Code's assistance.
 
-Setting Up Statsig with Claude Code
+## Setting Up Statsig with Claude Code
 
 The first step is installing the Statsig SDK for your language of choice. Claude Code can help scaffold the integration. For a Node.js project, you'll want to install the Statsig package:
 
@@ -55,7 +53,7 @@ await StatsigServer.initialize('your-server-secret-key', {
 });
 ```
 
-Creating Your First A/B Test
+## Creating Your First A/B Test
 
 Once Statsig is integrated, creating an A/B test involves defining the experiment in the Statsig console and then implementing the exposure check in your code. Claude Code can help you generate both parts efficiently.
 
@@ -82,7 +80,7 @@ function getCheckoutExperience(userId) {
 }
 ```
 
-Leveraging Claude Code Skills for Experiment Automation
+## Leveraging Claude Code Skills for Experiment Automation
 
 Claude Code skills can significantly accelerate your experimentation workflow. Several approaches make this integration powerful.
 
@@ -110,7 +108,7 @@ async function logExperimentExposure(userId, experimentName, params) {
 
 Third, Claude Code can help you implement dynamic parameter experiments. Rather than simple A/B tests with fixed variants, dynamic parameters allow for more sophisticated targeting. Claude can generate code that handles parameter overrides based on user attributes.
 
-Analyzing Experiment Results
+## Analyzing Experiment Results
 
 After running an experiment, analysis becomes critical. Statsig provides built-in analytics, but Claude Code can help you generate custom analysis queries and dashboards.
 
@@ -140,7 +138,7 @@ function calculateSignificance(controlVisitors, controlConversions,
 
 Claude Code can also help you generate analysis scripts that pull experiment data from Statsig's API and create visualizations for stakeholder reviews.
 
-Best Practices for Experiment Setup
+## Best Practices for Experiment Setup
 
 Following established best practices ensures your experiments produce valid results. Claude Code can help enforce these patterns across your codebase.
 
@@ -158,7 +156,7 @@ function getProductionFeature(userId, featureName) {
 
 Use layered experiments carefully. Running multiple experiments simultaneously requires understanding interaction effects. Document experiment dependencies and use Claude Code to generate warnings when experiments might conflict.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Several common issues arise when implementing A/B tests with Statsig. Claude Code can help diagnose and resolve these problems.
 
@@ -186,7 +184,7 @@ function calculateRequiredSampleSize(baselineRate, minimumDetectableEffect) {
 }
 ```
 
-Integrating with CI/CD Pipelines
+## Integrating with CI/CD Pipelines
 
 For teams practicing continuous deployment, automating experiment management is essential. Claude Code can help generate GitHub Actions workflows that handle experiment lifecycle:
 
@@ -197,7 +195,7 @@ For teams practicing continuous deployment, automating experiment management is 
 
 You can create Claude Code skills that understand your deployment pipeline and generate appropriate experiment promotion or rollback commands.
 
-Conclusion
+## Conclusion
 
 Setting up A/B tests with Statsig and Claude Code creates a powerful experimentation workflow. Claude Code accelerates implementation by generating consistent code, creating analysis helpers, and enforcing best practices. The combination enables teams to ship experiments faster while maintaining code quality and analytical rigor.
 

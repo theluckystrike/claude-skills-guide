@@ -19,7 +19,7 @@ Building a Chrome extension that downloads multiple images from a webpage automa
 
 This guide covers the technical implementation of batch image downloading in Chrome extensions, from manifest configuration to handling complex scenarios like lazy-loaded images and cross-origin resources.
 
-Understanding the Core Components
+## Understanding the Core Components
 
 A batch image download extension operates through three main Chrome extension APIs: the Content Script API for DOM interaction, the chrome.downloads API for file saving, and the chrome.runtime API for communication between extension components.
 
@@ -46,7 +46,7 @@ The manifest file defines the extension's capabilities. For batch image download
 
 The `activeTab` permission ensures your extension can access only the currently active tab, maintaining user privacy. The `scripting` permission allows executing JavaScript to extract image URLs from the page.
 
-Extracting Image URLs from Webpages
+## Extracting Image URLs from Webpages
 
 The core challenge is identifying which elements on a page contain images worth downloading. You need a content script that scans the DOM and collects image sources. Here's a practical implementation:
 
@@ -107,7 +107,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 This script handles several real-world scenarios: standard img tags, lazy-loaded images with data attributes, and filtering based on image dimensions. The dimension check is particularly useful because many pages embed tiny tracking images or icons that you probably don't want.
 
-Handling Cross-Origin Images
+## Handling Cross-Origin Images
 
 A significant challenge arises when images are hosted on different domains than the page itself. Chrome's security model prevents content scripts from reading responses from cross-origin URLs directly. You have two primary approaches to solve this.
 
@@ -161,7 +161,7 @@ async function downloadImages(urls, folderName) {
 
 The second approach uses the fact that the Downloads API can accept blob URLs. However, this requires converting images to blobs first, which adds complexity.
 
-Building the User Interface
+## Building the User Interface
 
 Your popup interface should give users control over which images to download. Here's a practical popup implementation:
 
@@ -245,7 +245,7 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
 });
 ```
 
-Advanced Considerations
+## Advanced Considerations
 
 Several edge cases require additional handling for production-ready extensions.
 
@@ -282,7 +282,7 @@ async function downloadWithDelay(urls, delayMs = 500) {
 }
 ```
 
-Testing Your Extension
+## Testing Your Extension
 
 Before distributing your extension, test it across different types of websites. Pay particular attention to:
 
@@ -294,7 +294,6 @@ Before distributing your extension, test it across different types of websites. 
 Chrome's developer tools make debugging straightforward. Use chrome://extensions, enable "Developer mode," and click "Load unpacked" to test your extension during development.
 
 Building a solid batch image download extension requires handling many real-world edge cases, but the core patterns covered here provide a solid foundation. With these components in place, you can extend functionality to support downloading videos, documents, or any other file type by adapting the content script selectors and download logic.
-
 
 Related Reading
 

@@ -14,12 +14,11 @@ score: 8
 ---
 {% raw %}
 
-
 Code complexity analysis is one of the most valuable yet underutilized practices in software development. High cyclomatic complexity, deep nesting, and excessive function lengths are reliable predictors of bugs, maintenance nightmares, and developer frustration. Yet many teams avoid complexity analysis because traditional tools feel disconnected from their actual workflow. Claude Code changes this equation by embedding complexity analysis directly into your development process.
 
 This guide shows you how to set up Claude Code for code complexity analysis, interpret the metrics that matter, and integrate complexity checks into your daily workflow.
 
-Why Code Complexity Analysis Matters
+## Why Code Complexity Analysis Matters
 
 Before diving into the workflow, it's worth understanding what makes complexity analysis valuable. Complexity metrics like cyclomatic complexity, cognitive complexity, and maintainability index help you identify code that needs attention before it becomes a problem.
 
@@ -27,7 +26,7 @@ Cyclomatic complexity measures the number of linearly independent paths through 
 
 The claude-code-complexity-analysis-skill skill provides a comprehensive framework for running these analyses automatically. It surfaces the metrics that matter most and explains them in developer-friendly terms.
 
-Setting Up Complexity Analysis with Claude Code
+## Setting Up Complexity Analysis with Claude Code
 
 The first step is enabling complexity analysis in your Claude Code setup. If you haven't already, create a `.claude` directory in your project and add the complexity analysis skill:
 
@@ -44,7 +43,7 @@ The skill works by analyzing your codebase and generating detailed complexity re
 
 This runs complexity analysis on your source files, flagging any function that exceeds the specified threshold. The default threshold of 10 is a good starting point, functions exceeding this have statistically higher defect rates.
 
-Understanding the Key Metrics
+## Understanding the Key Metrics
 
 Claude Code's complexity analysis outputs several important metrics. Understanding what each means helps you prioritize your refactoring efforts.
 
@@ -82,7 +81,7 @@ A typical analysis output looks like:
 
 This tells you that `processPayment` needs attention, its maintainability index is below the healthy range, and both complexity metrics are elevated.
 
-Creating a Pre-Commit Complexity Check
+## Creating a Pre-Commit Complexity Check
 
 The best time to catch complexity issues is before they enter your codebase. A pre-commit hook that runs complexity analysis prevents complex code from being committed in the first place.
 
@@ -108,7 +107,7 @@ chmod +x .git/hooks/pre-commit
 
 Now every commit triggers a complexity check. Developers get immediate feedback when they're about to add complex code, making refactoring part of the natural workflow rather than a later cleanup task.
 
-Integrating with CI/CD Pipelines
+## Integrating with CI/CD Pipelines
 
 While pre-commit hooks catch issues during development, CI pipelines provide a safety net for code that slips through. The claude-skills-with-github-actions-ci-cd-pipeline skill includes templates for complexity analysis in continuous integration.
 
@@ -139,7 +138,7 @@ jobs:
 
 This workflow runs on every pull request, blocking merges when complexity exceeds acceptable thresholds. Configure the thresholds based on your team's standards and tolerance for risk.
 
-Using Complexity Analysis for Code Reviews
+## Using Complexity Analysis for Code Reviews
 
 Code reviews are another natural fit for complexity analysis. The claude-code-for-code-review-automation skill combines review and complexity checking into a single workflow.
 
@@ -166,7 +165,7 @@ Prioritize functions that have both high complexity AND are frequently modified.
 
 This focuses the analysis on actionable improvements rather than just numbers.
 
-Establishing Team Complexity Standards
+## Establishing Team Complexity Standards
 
 Metrics only help when everyone agrees on what they mean. Work with your team to establish complexity thresholds that match your codebase and risk tolerance.
 
@@ -179,7 +178,7 @@ A practical starting point:
 
 Document these standards in your project's `CLAUDE.md` or a dedicated `COMPLEXITY.md` file. Reference them when making architectural decisions and include them in onboarding new team members.
 
-Prioritizing Refactoring Efforts
+## Prioritizing Refactoring Efforts
 
 Not all complex code needs immediate attention. Use complexity analysis to prioritize your refactoring queue intelligently.
 
@@ -207,7 +206,7 @@ Low
 
 Focus refactoring efforts where they'll have the biggest impact.
 
-Automating Complexity Monitoring
+## Automating Complexity Monitoring
 
 Beyond individual checks, consider setting up ongoing monitoring. Complexity tends to creep over time, small additions that seem harmless accumulate into tangled messes.
 
@@ -248,7 +247,7 @@ jobs:
 
 Weekly reports keep complexity visible without requiring developers to manually run analysis.
 
-Building Sustainable Practices
+## Building Sustainable Practices
 
 Complexity analysis works best when it becomes invisible, part of how your team naturally works rather than an extra burden. The goal is catching issues early enough that they never become problems.
 

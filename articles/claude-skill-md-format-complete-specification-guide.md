@@ -31,7 +31,7 @@ description: Does something useful
 You are a specialized assistant. When invoked, you will...
 ```
 
-Front Matter Fields
+## Front Matter Fields
 
 name (required): The canonical identifier. Used for manual invocation via `/skill-name`. Rules: lowercase, hyphens only, no spaces.
 
@@ -48,7 +48,7 @@ triggers:
 
 Matching is semantic. "Can you design the login screen?" matches `design the UI for`.
 
-The Skill Body
+## The Skill Body
 
 Everything after the closing `---` is the skill body. This becomes the system prompt Claude receives when the skill is invoked.
 
@@ -74,7 +74,7 @@ Never write implementation before tests.
 Output: test file(s), then implementation, then brief explanation.
 ```
 
-Injecting Project Context
+## Injecting Project Context
 
 Instruct the skill body to read specific files for project-specific context:
 
@@ -91,7 +91,7 @@ At the start of every invocation, read:
 Build all components following the established patterns.
 ```
 
-File Placement and Loading Order
+## File Placement and Loading Order
 
 1. Built-in skills bundled with Claude Code
 2. Global skills: `~/.claude/skills/*.md`
@@ -99,7 +99,7 @@ File Placement and Loading Order
 
 Later-loaded skills win on name conflicts. Project skills always override global skills with the same name.
 
-Optional Front Matter Fields
+## Optional Front Matter Fields
 
 Beyond the required `name` and `description`, skill files support additional metadata:
 
@@ -113,7 +113,7 @@ model (optional): Override the default model for this skill if you want a faster
 
 temperature (optional): Control response randomness. Lower values (0.0–0.3) produce more consistent, predictable output; higher values (0.7–1.0) allow more creativity.
 
-Writing Effective Skill Bodies
+## Writing Effective Skill Bodies
 
 A few principles make skill bodies more effective:
 
@@ -122,7 +122,7 @@ A few principles make skill bodies more effective:
 - Define scope boundaries. What should the skill NOT do? A code-review skill that also rewrites your code is often unwanted. Add explicit "do not" constraints.
 - Reference files by convention. If your skill depends on project-specific files, instruct Claude to read them at the start of every invocation rather than hardcoding their content.
 
-Common Mistakes
+## Common Mistakes
 
 Missing triggers: Without triggers, users must invoke manually.
 
@@ -130,7 +130,7 @@ Overly broad trigger phrases: `- phrase: help me` matches almost everything.
 
 Wrong directory: Files must be in `.claude/skills/` (not `.claude/skill/`).
 
-Trigger Phrase Design: Getting Auto-Invocation Right
+## Trigger Phrase Design: Getting Auto-Invocation Right
 
 Trigger phrases are the most misunderstood part of the format. Claude does semantic matching, not substring matching. That means you do not need to predict the exact words a user will type. you need to describe the intent.
 
@@ -167,9 +167,9 @@ triggers:
   - phrase: code review
 ```
 
-Complete Real-World Skill Examples
+## Complete Real-World Skill Examples
 
-Code Review Skill
+## Code Review Skill
 
 ```
 ---
@@ -197,7 +197,7 @@ Output format:
 If there are no issues, say so directly. Do not invent problems.
 ```
 
-Database Migration Skill
+## Database Migration Skill
 
 ```
 ---
@@ -223,7 +223,7 @@ Constraints:
 - Do not modify existing migration files.
 ```
 
-Commit Message Skill
+## Commit Message Skill
 
 ```
 ---
@@ -250,7 +250,7 @@ Do not include "Co-Authored-By" lines unless the user asks.
 Output: just the commit message, ready to paste.
 ```
 
-Advanced Front Matter: Tools and Model Control
+## Advanced Front Matter: Tools and Model Control
 
 The `tools` field limits which Claude Code tools the skill can access. This matters for two reasons: security (a documentation skill has no reason to run Bash) and predictability (scoping tools reduces unexpected behavior).
 
@@ -288,7 +288,7 @@ For skills that write prose, brainstorm names, or generate creative content, a h
 temperature: 0.8
 ```
 
-Injecting Dynamic Context at Invocation Time
+## Injecting Dynamic Context at Invocation Time
 
 The skill body is a static document, but you can instruct it to pull fresh context on every run. This is how you keep skills project-aware without hardcoding project details into the skill file itself.
 
@@ -312,7 +312,7 @@ Ask the user for: HTTP method, path, and what the endpoint should do.
 
 This pattern is far more resilient than embedding project knowledge directly in the skill body. When conventions change, developers update one source-of-truth file, not the skill.
 
-Validating Your Skill
+## Validating Your Skill
 
 Invoke directly to test:
 
@@ -328,7 +328,7 @@ Silent non-invocation usually means a trigger phrase is too narrow or the file i
 
 Unexpected tool use (or refusal to use a tool) is typically a `tools` field mismatch. If you scoped tools and the skill needs one you excluded, it will fail silently. If you see the skill reaching for a tool you did not expect, add an explicit "do not use X" line in the body.
 
-Skill Naming Conventions Worth Adopting
+## Skill Naming Conventions Worth Adopting
 
 A consistent naming scheme across a project or team makes skills easier to discover and less likely to conflict:
 

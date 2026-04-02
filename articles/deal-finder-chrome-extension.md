@@ -16,7 +16,7 @@ A deal finder chrome extension can transform how users discover online discounts
 
 This guide walks through the core components of building a deal finder chrome extension, with practical code examples you can adapt for your own projects. Whether you are building a simple price comparison tool or a full-featured deal aggregation system, the patterns covered here provide a solid foundation.
 
-Extension Architecture Overview
+## Extension Architecture Overview
 
 A deal finder chrome extension typically consists of three main components: a content script that runs on retail pages, a background service worker for data processing and storage, and a popup interface for user interaction. Modern extensions use Manifest V3, which imposes certain constraints on how background scripts operate.
 
@@ -24,7 +24,7 @@ The content script extracts product information from web pages using DOM parsing
 
 For data persistence, extensions can use chrome.storage.local for simple key-value storage, or IndexedDB for more complex relational data. If your extension requires cross-device sync, consider using the chrome.storage.sync API combined with a backend service.
 
-Extracting Product Data from Web Pages
+## Extracting Product Data from Web Pages
 
 The foundation of any deal finder chrome extension is reliable product data extraction. Different retailers use varying page structures, so you need flexible selectors that can adapt to common patterns.
 
@@ -92,7 +92,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This extraction logic uses an array of potential selectors to handle different page layouts. In production, you would want to expand these selectors significantly and potentially use machine learning for more reliable extraction on diverse sites.
 
-Managing Product Tracking with Background Service Worker
+## Managing Product Tracking with Background Service Worker
 
 The background service worker coordinates price tracking across multiple retailers. With Manifest V3, background workers are event-driven and cannot run continuously, so you must design around this constraint.
 
@@ -190,7 +190,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 ```
 
-Implementing the Popup Interface
+## Implementing the Popup Interface
 
 The popup provides users with quick access to tracked products and deal alerts. Keep the interface lightweight since popups have limited rendering time.
 
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 </html>
 ```
 
-Handling Cross-Origin Requests
+## Handling Cross-Origin Requests
 
 One of the biggest challenges for deal finder extensions is making HTTP requests to retailer websites. Browsers enforce CORS policies that prevent direct cross-origin requests from content scripts.
 
@@ -271,7 +271,7 @@ There are several approaches to solve this:
 
 For a production extension, a backend proxy is typically the most reliable solution. Your extension sends requests to your server, which fetches the target retailer page and returns the content to your extension for parsing.
 
-Extension Manifest Configuration
+## Extension Manifest Configuration
 
 Your manifest.json ties all components together:
 
@@ -314,7 +314,7 @@ Your manifest.json ties all components together:
 }
 ```
 
-Key Implementation Considerations
+## Key Implementation Considerations
 
 When building a deal finder chrome extension, consider these practical aspects:
 
@@ -327,7 +327,6 @@ Storage Limits: Chrome storage has quotas. For extensive product databases, impl
 User Privacy: Be transparent about what data you collect. Avoid storing unnecessary personal information and provide clear privacy controls.
 
 Building a deal finder chrome extension requires careful attention to web scraping challenges, browser extension constraints, and user experience. Start with a minimal viable product that tracks prices on a few major retailers, then expand functionality based on user feedback.
-
 
 Related Reading
 

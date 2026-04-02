@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Librewolf vs Chrome Privacy: A Developer and Power User."
 description: "A technical comparison of Librewolf and Chrome privacy features. Learn about hardening techniques, fingerprinting defense, data collection differences."
@@ -14,22 +13,21 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 
-Librewolf vs Chrome Privacy: A Developer and Power User Guide
+## Librewolf vs Chrome Privacy: A Developer and Power User Guide
 
 Privacy in web browsing has evolved significantly, and for developers and power users, the choice between browsers extends beyond UI preferences to fundamental questions about data control and attack surface. This guide compares Librewolf and Chrome from a technical privacy perspective, with practical configuration examples you can implement today.
 
-Understanding the Browser ecosystem
+## Understanding the Browser ecosystem
 
 Chrome, built by Google, dominates the browser market with approximately 65% global usage. Its business model relies on advertising, which inherently creates tension with user privacy. Librewolf, a hardened fork of Firefox, explicitly prioritizes privacy and comes pre-configured with numerous privacy enhancements.
 
 The key differences emerge when examining data collection practices, default security settings, fingerprinting resistance, and extension ecosystems.
 
-Data Collection and Telemetry
+## Data Collection and Telemetry
 
-Chrome's Data Practices
+## Chrome's Data Practices
 
 Chrome sends substantial telemetry to Google's servers. While you can reduce this, some data collection remains baked into the browser architecture.
 
@@ -49,7 +47,7 @@ google-chrome \
   --disable-extensions
 ```
 
-Librewolf's Privacy-First Approach
+## Librewolf's Privacy-First Approach
 
 Librewolf ships with telemetry completely disabled. The project maintains a strict no-telemetry policy, and you can verify this in the source code. The browser also includes BetterWeb, a system that automatically removes tracking parameters from URLs, a feature you'd need to manually configure in Chrome using extensions.
 
@@ -66,11 +64,11 @@ Librewolf's URL cleaning works transparently:
 // without requiring user intervention or extensions
 ```
 
-Fingerprinting Resistance
+## Fingerprinting Resistance
 
 Fingerprinting represents a sophisticated tracking method that identifies users based on browser configuration rather than cookies. Chrome provides minimal built-in protection against fingerprinting.
 
-Chrome Fingerprinting Vulnerabilities
+## Chrome Fingerprinting Vulnerabilities
 
 Chrome's Canvas API returns consistent, identifiable data across sessions. A simple fingerprinting test reveals this:
 
@@ -92,7 +90,7 @@ ctx.fillText("Hello World", 4, 17);
 console.log(canvas.toDataURL());
 ```
 
-Librewolf's Fingerprinting Defenses
+## Librewolf's Fingerprinting Defenses
 
 Librewolf includes multiple fingerprinting protections out of the box:
 
@@ -112,9 +110,9 @@ privacy.resistFingerprinting.randomDataLength = 256
 webgl.disabled = true  // for extreme protection
 ```
 
-Extension Ecosystem and Security
+## Extension Ecosystem and Security
 
-Chrome's WebStore Model
+## Chrome's WebStore Model
 
 Chrome's extension marketplace is vast but presents risks. Extensions have broad permissions, and malicious extensions periodically appear in the store. Google's review process, while improved, cannot catch all privacy-violating extensions.
 
@@ -130,7 +128,7 @@ Look for: tabs, cookies, history, webRequest, debugging
 
 The Privacy Sandbox extensions introduced in Chrome 2026 attempt to address some concerns but introduce new tracking mechanisms.
 
-Librewolf's Add-on Approach
+## Librewolf's Add-on Approach
 
 Librewolf includes uBlock Origin pre-installed, a significant advantage. The browser also restricts extension APIs that could leak information:
 
@@ -144,9 +142,9 @@ Librewolf includes uBlock Origin pre-installed, a significant advantage. The bro
 
 Librewolf also maintains its own extension recommendations optimized for privacy, available in the project wiki.
 
-Network-Level Privacy
+## Network-Level Privacy
 
-DNS and Encrypted DNS
+## DNS and Encrypted DNS
 
 Chrome supports DNS-over-HTTPS (DoH) but defaults to system DNS settings. Librewolf uses DNS-over-HTTPS with a privacy-respecting provider by default:
 
@@ -165,13 +163,13 @@ Visit chrome://flags#enable-encrypted-dns
 Set to "Enabled with default provider" or custom provider
 ```
 
-Certificate Transparency
+## Certificate Transparency
 
 Librewolf includes Certificate Transparency logs monitoring, alerting you to suspicious certificate issuances. Chrome implements similar features but ties them to Google's log servers, creating potential privacy concerns.
 
-Practical Configuration Recommendations
+## Practical Configuration Recommendations
 
-Chrome Hardening Checklist
+## Chrome Hardening Checklist
 
 If you must use Chrome, implement these settings:
 
@@ -185,7 +183,7 @@ Create a Chrome privacy shortcut with these flags:
 "--disable-image-animation"
 ```
 
-Librewolf Optimizations
+## Librewolf Optimizations
 
 Librewolf requires minimal hardening by default, but power users can customize further:
 
@@ -204,13 +202,13 @@ privacy.firstparty.isolate = true
 browser.contentblocking.category = "strict"
 ```
 
-Performance Considerations
+## Performance Considerations
 
 Privacy enhancements in Librewolf can impact performance slightly, particularly the fingerprinting randomization and aggressive tracking blocking. However, the pre-installed uBlock Origin often improves page load times by blocking tracking scripts before they execute.
 
 Chrome's optimization for speed remains its strength, but at the cost of privacy. For development workflows requiring consistent browser behavior across sessions, Librewolf's fingerprinting protection may require adjustment to test environments.
 
-Making the Choice
+## Making the Choice
 
 Choose Librewolf if:
 
@@ -233,7 +231,6 @@ For developers working with web platforms, having both browsers installed serves
 ---
 
 {% endraw %}
-
 
 Related Reading
 

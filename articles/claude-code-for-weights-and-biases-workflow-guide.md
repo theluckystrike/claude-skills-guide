@@ -13,19 +13,18 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Weights & Biases Workflow Guide
 
 Integrating Claude Code with Weights & Biases (W&B) transforms your machine learning development workflow by combining powerful experiment tracking with intelligent code assistance. This guide shows you how to set up, configure, and optimize this integration for productive ML experimentation.
 
-Understanding the Weights & Biases Integration
+## Understanding the Weights & Biases Integration
 
 Weights & Biases is a platform for tracking machine learning experiments, visualizing results, and managing model versions. When combined with Claude Code, you get an AI-powered assistant that understands your experiment history, suggests hyperparameter improvements, and helps you navigate complex training workflows.
 
 The integration works through W&B's Python API, which Claude Code can invoke to read experiment data, log metrics, and manage runs. This creates a smooth workflow where Claude understands context from your past experiments and helps make data-driven decisions.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before integrating Claude Code with W&B, ensure you have the required packages installed:
 
@@ -45,7 +44,7 @@ This authenticates your sessions and links all experiments to your W&B project. 
 export WANDB_API_KEY=your_api_key_here
 ```
 
-Creating a Claude Skill for W&B Workflows
+## Creating a Claude Skill for W&B Workflows
 
 A dedicated Claude skill for Weights & Biases streamlines common ML workflow tasks. Here's a skill that provides experiment tracking capabilities:
 
@@ -79,7 +78,7 @@ To compare experiments:
 3. Identify patterns in successful experiments
 ```
 
-Practical Example: Training with W&B Integration
+## Practical Example: Training with W&B Integration
 
 Here's a complete example showing how Claude Code assists with a W&B-integrated training workflow:
 
@@ -145,7 +144,7 @@ wandb.log_artifact(model.state_dict(), name="final-model", type="model")
 wandb.finish()
 ```
 
-Querying Experiment History with Claude
+## Querying Experiment History with Claude
 
 Claude Code can help you analyze past experiments by querying W&B's API. Here's how to fetch and analyze runs:
 
@@ -171,7 +170,7 @@ for run in best_runs:
     print(f"  Batch Size: {run.config.get('batch_size')}")
 ```
 
-Best Practices for W&B + Claude Code Workflows
+## Best Practices for W&B + Claude Code Workflows
 
 When integrating Claude Code with Weights & Biases, follow these practices for maximum productivity:
 
@@ -191,7 +190,7 @@ Store model checkpoints and datasets as W&B artifacts. This enables reproducibil
 
 Add notes and tags to your W&B runs. Claude uses this context to provide more relevant suggestions based on your experimental history.
 
-Advanced: Custom W&B Skills for Specific Use Cases
+## Advanced: Custom W&B Skills for Specific Use Cases
 
 You can create specialized Claude skills for particular ML domains. For example, a skill focused on hyperparameter tuning:
 
@@ -236,7 +235,7 @@ parameters:
 
 Run the sweep controller from your terminal within Claude Code, then monitor results in the W&B dashboard while Claude assists with code modifications between runs.
 
-Integrating Claude Skills with Your W&B Workflow
+## Integrating Claude Skills with Your W&B Workflow
 
 Several Claude skills enhance W&B workflows beyond the core W&B skill itself.
 
@@ -260,7 +259,7 @@ The supermemory skill complements W&B by tracking context across sessions. When 
 
 This creates a persistent knowledge base that connects your Claude sessions with your W&B experiment history. The docx skill helps when documenting workflows for team distribution, generating status reports that reference specific W&B run IDs.
 
-Project Structure for Claude Code and W&B
+## Project Structure for Claude Code and W&B
 
 Organize your ML projects to use both tools effectively:
 
@@ -275,7 +274,7 @@ When starting a new ML project in Claude Code, create a `wandb.env` file contain
 source wandb.env
 ```
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Weights & Biases creates a powerful development environment for machine learning. Claude understands your experiment history, helps you log relevant metrics, and assists with analyzing results. This combination enables data-driven decision-making while maintaining the productivity benefits of AI-assisted coding.
 

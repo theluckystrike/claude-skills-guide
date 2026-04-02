@@ -18,13 +18,13 @@ When working with large codebases, Claude Code's skill system becomes a powerful
 
 This guide covers practical patterns for writing Claude MD files that work well in large, complex projects.
 
-How Claude MD Files Work
+## How Claude MD Files Work
 
 [Every skill in Claude Code is a Markdown file stored in `~/.claude/skills/`](/best-claude-code-skills-to-install-first-2026/) When you invoke a skill with `/skillname` or through auto-invocation, Claude loads that file's content and uses it to guide its responses. The file can contain instructions, examples, code snippets, and context that Claude references throughout your session.
 
 For large codebases, the challenge shifts from "what does this skill do?" to "how does this skill handle complexity, multiple environments, and team-wide conventions?"
 
-Directory Structure for Multi-Skill Projects
+## Directory Structure for Multi-Skill Projects
 
 Large projects benefit from organizing skills into logical groups. Instead of a flat list of skill files, consider a hierarchical structure:
 
@@ -45,7 +45,7 @@ Large projects benefit from organizing skills into logical groups. Instead of a 
 
 This structure lets you invoke related skills together. For example, `/project/api-standards` loads your API conventions while `/testing/tdd` activates your test-driven development workflow.
 
-Defining Context for Large Codebases
+## Defining Context for Large Codebases
 
 A common mistake in Claude MD files for large projects is providing too little context. Claude needs to understand your project's architecture to give useful responses.
 
@@ -64,7 +64,7 @@ Always identify which package a file belongs to before making changes.
 
 This context helps Claude make informed decisions about imports, dependencies, and project-specific conventions.
 
-Pattern: Conditional Instructions
+## Pattern: Conditional Instructions
 
 Large codebases often have different rules for different contexts. Use conditional logic in your skill instructions to handle this:
 
@@ -84,7 +84,7 @@ For any deployment, verify:
 
 This pattern keeps your skill file concise while handling multiple scenarios intelligently.
 
-Integration with Other Skills
+## Integration with Other Skills
 
 The real power of Claude MD files emerges when skills work together. A large codebase typically uses several skills in combination:
 
@@ -102,7 +102,7 @@ Always run the full test suite before marking a feature complete.
 
 This approach creates a consistent workflow without duplicating instructions across skills. Each skill remains focused on its domain while the workflow skill orchestrates their use.
 
-Code Snippet Examples
+## Code Snippet Examples
 
 Include realistic code examples in your skill files. Claude uses these as reference when generating code:
 
@@ -133,7 +133,7 @@ All API responses must follow this structure:
 
 The more complete your examples, the more accurate Claude's output becomes.
 
-Handling Team Conventions
+## Handling Team Conventions
 
 For teams, store shared conventions in a central skill and reference it:
 
@@ -151,7 +151,7 @@ Before submitting a PR, verify these standards are met.
 
 Team leads can update the central `/team/standards` skill, and all developers benefit from consistent enforcement.
 
-Performance Considerations for Large Codebases
+## Performance Considerations for Large Codebases
 
 When your codebase grows, some operations become slow. Include performance guidance in your skills:
 
@@ -169,7 +169,7 @@ Don't optimize code that isn't measured as slow.
 
 This prevents premature optimization while ensuring real performance issues get addressed.
 
-Using supermemory with Skills
+## Using supermemory with Skills
 
 The supermemory skill works alongside your custom skills to persist project-specific knowledge:
 
@@ -187,7 +187,7 @@ Always personalize the onboarding experience.
 
 Skills provide the framework; supermemory provides the data. Together they create a personalized experience across sessions.
 
-Testing Your Claude MD Files
+## Testing Your Claude MD Files
 
 After writing a skill file, test it in practice:
 
@@ -198,7 +198,7 @@ After writing a skill file, test it in practice:
 
 Iterate until Claude consistently follows your conventions.
 
-Conclusion
+## Conclusion
 
 Writing effective Claude MD files for large codebases requires thoughtful structure, contextual awareness, and integration with other skills. Use conditional instructions to handle complexity, include realistic code examples, and organize skills logically. Test your skills regularly and refine them based on actual usage patterns.
 

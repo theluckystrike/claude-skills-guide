@@ -14,17 +14,17 @@ tags: [claude-code, claude-skills, output-formatting]
 {% raw %}
 One of the most common frustrations developers face when working with Claude Code is its tendency to wrap code in markdown code blocks. While this is useful for readability in chat interfaces, it becomes cumbersome when you need to copy and paste code directly into your files. This guide provides practical solutions to stop Claude Code from adding markdown formatting to code output.
 
-Understanding Why Claude Code Adds Markdown
+## Understanding Why Claude Code Adds Markdown
 
 Claude Code automatically wraps code in triple backticks (```) because its primary design is for conversational interaction. The markdown formatting helps users distinguish code from regular text in the chat interface. However, this behavior can interfere with workflows where you want immediate, paste-ready code output.
 
 The good news is that you can control this behavior through various methods, from simple prompt modifications to skill-level configurations.
 
-Method 1: Direct Prompt Instructions
+## Method 1: Direct Prompt Instructions
 
 The simplest approach is to explicitly tell Claude Code not to use markdown code blocks in your prompts.
 
-Basic Prompt Modification
+## Basic Prompt Modification
 
 Instead of:
 ```markdown
@@ -38,7 +38,7 @@ Write a function to sort an array in JavaScript. Output the code without markdow
 
 This approach works well for single interactions but requires repetitive instruction for every code request.
 
-Using CLAUDE.md for Persistent Instructions
+## Using CLAUDE.md for Persistent Instructions
 
 Create a CLAUDE.md file in your project root with explicit instructions about code output formatting:
 
@@ -53,11 +53,11 @@ Code Output Preferences
 
 This file acts as persistent instructions that Claude Code will follow across all sessions in that project.
 
-Method 2: Creating a Custom Skill
+## Method 2: Creating a Custom Skill
 
 For more control, create a custom skill that handles code output without markdown formatting.
 
-Skill Definition Structure
+## Skill Definition Structure
 
 Create a skill file (e.g., `skills/plain-code.md`) with the following structure:
 
@@ -93,7 +93,7 @@ function hello() {
 }
 ```
 
-Loading the Skill
+## Loading the Skill
 
 Reference the skill in your project's CLAUDE.md:
 
@@ -102,11 +102,11 @@ Active Skills
 - ./skills/plain-code.md
 ```
 
-Method 3: Using the Edit Tool Strategically
+## Method 3: Using the Edit Tool Strategically
 
 Claude Code's edit tool can sometimes bypass markdown formatting. When you use the `edit_file` tool directly, the code is written to files without markdown wrappers.
 
-Direct File Editing Workflow
+## Direct File Editing Workflow
 
 Instead of asking Claude to output code that you then copy:
 
@@ -119,7 +119,7 @@ Example prompt:
 Create a new file called 'utils.js' with a function that sorts arrays. Use the write_file tool to create the file directly - don't output the code in markdown blocks.
 ```
 
-Method 4: Configuring Claude.md for Code-First Projects
+## Method 4: Configuring Claude.md for Code-First Projects
 
 For projects where you frequently work with code, enhance your CLAUDE.md with detailed formatting instructions:
 
@@ -138,11 +138,11 @@ Preferred Workflows
 3. Use bash tools to execute code and verify functionality
 ```
 
-Method 5: Post-Processing Code Output
+## Method 5: Post-Processing Code Output
 
 If you receive code with markdown formatting, you can quickly clean it up:
 
-Using Command Line Tools
+## Using Command Line Tools
 
 Strip markdown code blocks from Claude's output:
 
@@ -154,7 +154,7 @@ Remove single backticks around inline code
 sed -i '' 's/`//g' output.txt
 ```
 
-Using a Simple Script
+## Using a Simple Script
 
 Create a helper script in your project:
 
@@ -179,7 +179,7 @@ if (args[0]) {
 
 Run it with: `node strip-markdown.js input.txt`
 
-Handling Jekyll and Template Syntax
+## Handling Jekyll and Template Syntax
 
 If you work with Jekyll sites, GitHub Pages, or any content containing `{{` or `{%` patterns, markdown backtick issues become more complex. These characters trigger Liquid template processing, so Claude Code sometimes over-escapes or double-wraps code blocks to protect them.
 
@@ -202,7 +202,7 @@ Code Block Guidelines
 
 This proactive approach prevents the most common backtick formatting failures in static site workflows.
 
-Best Practices for Markdown-Free Workflows
+## Best Practices for Markdown-Free Workflows
 
 1. Establish Conventions Early
 
@@ -223,34 +223,33 @@ Please don't use markdown code blocks. Just output the plain code.
 
 For team projects, create and share skills that enforce your preferred code output format.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Issue: Claude Code Forgets Instructions
+## Issue: Claude Code Forgets Instructions
 
 If Claude Code reverts to markdown formatting:
 - Re-state the instruction explicitly
 - Check if your CLAUDE.md file is properly formatted
 - Verify the skill is correctly loaded
 
-Issue: Some Code Still Gets Formatted
+## Issue: Some Code Still Gets Formatted
 
 Complex outputs with explanations may still include formatted code. Minimize this by requesting specific file operations rather than code display.
 
-Issue: Mixed Output
+## Issue: Mixed Output
 
 When you need both explanation and code:
 ```markdown
 Explain what this code does, then create the file without markdown formatting.
 ```
 
-Conclusion
+## Conclusion
 
 Preventing Claude Code from adding markdown to code output is achievable through a combination of prompt engineering, skill configuration, and workflow optimization. Start with simple prompt modifications for quick results, then establish persistent configurations through CLAUDE.md files and custom skills for long-term solutions.
 
 The key is to shift Claude Code's behavior from "chat partner" to "direct file operator" whenever possible. By favoring direct file operations and establishing clear preferences, you can significantly reduce the friction of dealing with markdown-wrapped code output.
 
 Remember that these methods work best when combined - use explicit instructions for important tasks while maintaining persistent configurations for consistent behavior across all your development sessions.
-
 
 Related Reading
 

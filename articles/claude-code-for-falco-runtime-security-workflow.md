@@ -13,11 +13,10 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Runtime security is critical for modern cloud-native applications, and Falco provides powerful threat detection capabilities for Kubernetes and Linux environments. By integrating Claude Code with Falco, you can create intelligent automated responses to security events, streamline incident investigation, and build proactive security workflows. This guide walks through architecture decisions, practical integration code, alert triage patterns, and production deployment considerations.
 
-Understanding Falco's Architecture
+## Understanding Falco's Architecture
 
 Falco operates by monitoring system calls through a kernel module or eBPF probe, comparing them against predefined rules to detect suspicious activity. When a rule triggers, Falco generates an alert that can be forwarded to various outputs including stdout, webhooks, and cloud-native tooling.
 
@@ -31,7 +30,7 @@ Understanding this architecture helps you design effective Claude Code integrati
 
 A critical design point: Falco generates alerts at the kernel level, which means alert volume can be extremely high in busy clusters. A production integration must handle deduplication and rate limiting before events ever reach Claude Code. Sending every raw syscall alert to an LLM would exhaust API quotas within minutes on any non-trivial workload.
 
-Alert Priority Levels and Response Strategy
+## Alert Priority Levels and Response Strategy
 
 Falco assigns each alert a priority level, and your integration should route them differently:
 
@@ -48,7 +47,7 @@ Falco assigns each alert a priority level, and your integration should route the
 
 Only invoke Claude Code for WARNING and above. For NOTICE and below, write to a log aggregator instead. This alone can reduce Claude API calls by 80-90% in a typical cluster.
 
-Setting Up the Integration
+## Setting Up the Integration
 
 To connect Claude Code with Falco, you'll need to configure a webhook receiver that Claude Code can poll or receive notifications from. Here's a practical setup using a simple HTTP server:
 
@@ -136,7 +135,7 @@ webhook:
     Authorization: "Bearer your-internal-token"
 ```
 
-Creating Claude Code Prompts for Security Response
+## Creating Claude Code Prompts for Security Response
 
 Effective security automation requires well-crafted prompts that give Claude Code context about the alert and desired response actions. Generic prompts like "investigate this alert" produce generic responses. Structured prompts with specific context fields produce actionable analysis.
 
@@ -176,7 +175,7 @@ Assess severity and recommend whether to terminate the pod immediately."
 
 These prompts enable Claude Code to make informed decisions based on the specific context of each alert. The key principle is providing enough metadata that Claude can distinguish legitimate activity from genuine threats, process ancestry, container image, namespace, and network context all matter.
 
-Building Automated Response Workflows
+## Building Automated Response Workflows
 
 Beyond investigation, you can automate entire response sequences. Here's a workflow that handles several common Falco alert categories:
 
@@ -238,7 +237,7 @@ case "$RULE" in
 esac
 ```
 
-Enriching Alerts with Kubernetes Context
+## Enriching Alerts with Kubernetes Context
 
 Raw Falco alerts contain syscall-level data but lack application context. Enriching alerts before sending them to Claude Code significantly improves the quality of analysis:
 
@@ -277,7 +276,7 @@ def enrich_alert(alert: dict) -> dict:
 
 With this enrichment, Claude Code knows whether the pod is part of a Deployment or DaemonSet, what service account it uses, how many times it's restarted recently, and what image tag is running. That context is the difference between "this might be suspicious" and "this pod is running an image tagged `latest` that was pushed 3 hours ago and has restarted 12 times, likely a compromised build."
 
-Best Practices for Production Deployments
+## Best Practices for Production Deployments
 
 When deploying Claude Code with Falco in production environments, consider these recommendations:
 
@@ -293,7 +292,7 @@ Audit Logging: Every action Claude Code recommends and every automated containme
 
 Fallback Behavior: Define what happens when Claude Code is unavailable (API outage, rate limit, timeout). For CRITICAL and EMERGENCY alerts, your integration should fall back to a predefined runbook action rather than silently dropping the alert.
 
-Troubleshooting Common Integration Issues
+## Troubleshooting Common Integration Issues
 
 When your Falco-Claude Code integration isn't working as expected, check these common issues:
 
@@ -312,7 +311,7 @@ Third, validate JSON parsing in your webhook handler. Malformed alerts can cause
 
 Finally, monitor Claude Code's response times. Complex investigations may require timeout adjustments to prevent queue buildup during high-volume alert periods. Set a hard timeout of 60-90 seconds per Claude invocation and log any timeouts as a separate metric. If you're seeing more than 5% timeout rate, your prompts are too complex or your alert volume is too high.
 
-Measuring Integration Effectiveness
+## Measuring Integration Effectiveness
 
 Track these metrics to evaluate whether your Falco-Claude Code integration is delivering value:
 
@@ -321,7 +320,7 @@ Track these metrics to evaluate whether your Falco-Claude Code integration is de
 - Containment accuracy: For auto-remediation actions, what percentage were confirmed correct in post-incident review?
 - Claude API cost per incident: Total API spend divided by confirmed true positives. This tells you whether the automation is cost-effective.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Falco transforms raw security alerts into intelligent, actionable responses. By using Claude Code's reasoning capabilities, you can automate incident investigation, reduce response times, and build a more resilient security posture for your containerized workloads.
 

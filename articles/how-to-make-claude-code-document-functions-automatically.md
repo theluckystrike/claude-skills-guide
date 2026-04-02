@@ -14,7 +14,7 @@ tags: [claude-code, claude-skills]
 
 Maintaining up-to-date function documentation is a persistent challenge in software development. Claude Code can automatically generate comprehensive documentation for your functions, saving hours of manual work while keeping your codebase accessible. This guide shows you practical methods to make Claude Code document functions automatically.
 
-Why Automated Function Documentation Matters
+## Why Automated Function Documentation Matters
 
 Every developer knows the pain of reading poorly documented code. Function signatures alone rarely convey the full picture. what a function does, its side effects, edge cases, and return values. Manual documentation quickly becomes stale as code evolves. By automating function documentation with Claude Code, you ensure your docs stay current without additional effort.
 
@@ -22,11 +22,11 @@ The problem compounds over time. A function that was perfectly clear to the deve
 
 Claude Code is particularly well-suited for this task because it can infer intent from implementation. It reads the actual logic, not just the signature, which means it can document what a function actually does rather than what its name implies it should do.
 
-Using Claude Code's Built-in Documentation Generation
+## Using Claude Code's Built-in Documentation Generation
 
 Claude Code has native capabilities for analyzing and documenting functions. When you provide it with code, you can request structured documentation that follows common conventions.
 
-Basic Documentation Prompt
+## Basic Documentation Prompt
 
 ```javascript
 /
@@ -40,7 +40,7 @@ function processUserData(userId, options = {}) {
 
 Simply provide the function and ask Claude Code to add comprehensive documentation. It analyzes the implementation and generates accurate docs that reflect actual behavior.
 
-Targeting Specific Documentation Elements
+## Targeting Specific Documentation Elements
 
 Generic prompts produce generic results. More specific requests produce documentation that is actually useful:
 
@@ -86,11 +86,11 @@ Specific prompt result:
 
 The second version is what actually gets used during code review and onboarding. Getting there requires a prompt that asks for it explicitly.
 
-Using Claude Skills for Enhanced Documentation
+## Using Claude Skills for Enhanced Documentation
 
 Several Claude skills improve documentation generation. The frontend-design skill helps document React components and hooks with proper prop types and usage examples. For Python projects, combine Claude Code with the pdf skill to generate formatted documentation PDFs.
 
-Documenting API Endpoints
+## Documenting API Endpoints
 
 When documenting API functions, use the mcp-builder skill to understand MCP server patterns. This helps generate accurate endpoint documentation including request/response schemas.
 
@@ -112,7 +112,7 @@ def calculate_order_total(items, tax_rate=0.08, shipping=0):
     """
 ```
 
-Documentation Formats by Language
+## Documentation Formats by Language
 
 Claude Code adapts to any documentation format. Here is a reference for the most common ones:
 
@@ -127,11 +127,11 @@ Claude Code adapts to any documentation format. Here is a reference for the most
 
 When starting a new project or documentation pass, tell Claude Code which format you want: "Use Google-style Python docstrings for all functions." It will apply that format consistently across the entire session.
 
-Creating a Documentation Workflow
+## Creating a Documentation Workflow
 
 Establish a systematic workflow for automatic documentation generation.
 
-Step 1: Set Documentation Standards
+## Step 1: Set Documentation Standards
 
 Define your documentation format before generation. Common standards include JSDoc for JavaScript, Docstrings for Python, and Go doc comments. Claude Code adapts to any format you specify.
 
@@ -149,7 +149,7 @@ Documentation Standards
 
 With this file in place, every Claude Code session in this project automatically applies these rules without you having to re-specify them each time.
 
-Step 2: Batch Process Multiple Functions
+## Step 2: Batch Process Multiple Functions
 
 Generate documentation for entire files or modules at once:
 
@@ -178,7 +178,7 @@ done
 
 This script adds a review step before applying each file's changes. a sensible safeguard when running automated documentation at scale.
 
-Step 3: Review and Refine
+## Step 3: Review and Refine
 
 Automated documentation requires human review. Verify accuracy, add context-specific details, and ensure the docs match your project's style.
 
@@ -188,7 +188,7 @@ The most common issues to catch during review:
 - Missing business context: Claude Code can document what code does, but it cannot know *why* a specific threshold was chosen or what business rule a condition implements. Add those notes manually.
 - Stale examples: Generated examples use placeholder values. Replace them with realistic data from your actual test fixtures.
 
-Using the TDD Skill for Documentation-First Development
+## Using the TDD Skill for Documentation-First Development
 
 The tdd skill promotes writing documentation before implementation. This approach ensures every function has clear specifications from the start. Document the expected behavior, then implement to match.
 
@@ -219,11 +219,11 @@ Use Claude Code to draft documentation-first stubs:
 
 This is an excellent practice for API design work, where the contract matters more than the initial implementation.
 
-Advanced: Generating Markdown Documentation Files
+## Advanced: Generating Markdown Documentation Files
 
 Create separate documentation files for larger projects using Claude Code. The docx skill helps generate formatted documentation reports, while the internal-comms skill assists in creating documentation guidelines for teams.
 
-Example Documentation File
+## Example Documentation File
 
 ```markdown
 UserService
@@ -243,7 +243,7 @@ Errors:
 - `ValidationError`: If required fields are missing
 ```
 
-Generating a Full Module Reference
+## Generating a Full Module Reference
 
 For larger projects, a single prompt can generate a complete API reference page:
 
@@ -253,11 +253,11 @@ For larger projects, a single prompt can generate a complete API reference page:
 
 This is especially valuable when onboarding contractors or new hires who need to understand a service quickly without reading implementation code.
 
-Maintaining Documentation Automatically
+## Maintaining Documentation Automatically
 
 The key to sustainable automated documentation is integrating it into your development workflow.
 
-Pre-Commit Documentation Checks
+## Pre-Commit Documentation Checks
 
 Add documentation generation to your pre-commit hooks:
 
@@ -294,7 +294,7 @@ done
 
 This hook blocks commits when public functions are undocumented, enforcing the standard at the point where it is cheapest to fix.
 
-Documentation CI/CD Pipeline
+## Documentation CI/CD Pipeline
 
 Integrate documentation checks into your continuous integration:
 
@@ -316,7 +316,7 @@ A GitHub Actions workflow fragment that adds automated documentation review:
     fi
 ```
 
-Practical Tips for Better Results
+## Practical Tips for Better Results
 
 Provide context to Claude Code for better documentation. Include usage examples from your test files. Claude Code extracts parameter combinations and edge cases from tests.
 
@@ -339,12 +339,11 @@ For a legacy codebase audit:
 "Read services/payments.js. List every public function. For each, indicate: (1) whether it has documentation, (2) whether the existing documentation appears accurate, and (3) a one-line description of what it actually does."
 ```
 
-Conclusion
+## Conclusion
 
 Automating function documentation with Claude Code transforms documentation from a tedious chore into a smooth part of development. Start with basic documentation prompts, establish standards, and integrate generation into your workflow. Combined with skills like tdd and frontend-design, Claude Code becomes an invaluable tool for maintaining comprehensive, accurate documentation.
 
 The initial setup requires some effort, but the time savings compound quickly. Your future self. and your teammates. will thank you for well-documented code that is easy to understand and maintain.
-
 
 Related Reading
 

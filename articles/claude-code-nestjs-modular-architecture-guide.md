@@ -13,12 +13,9 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code NestJS Modular Architecture Guide
-
 Building scalable NestJS applications requires more than just functional code. The modular architecture you choose directly impacts how easily your codebase evolves, how quickly new developers can contribute, and how reliably your application handles growing complexity. This guide walks you through practical patterns for structuring NestJS projects that work smoothly with Claude Code workflows.
 
-Understanding Modular Architecture in NestJS
+## Understanding Modular Architecture in NestJS
 
 NestJS provides an opinionated structure out of the box, but the framework gives you flexibility in how you organize modules. A well-designed modular architecture separates concerns across multiple dimensions: domain boundaries, technical layers, and deployment requirements.
 
@@ -26,7 +23,7 @@ The core principle is simple: group related functionality together and expose cl
 
 Consider a typical e-commerce application. Instead of organizing files by type (controllers, services, entities), you organize by feature domains. The product module contains everything related to products, the order module handles ordering logic, and the user module manages authentication and profile data. This approach, often called domain-driven design, scales naturally as your application grows.
 
-Project Structure for Scalable NestJS Applications
+## Project Structure for Scalable NestJS Applications
 
 The folder structure sets the foundation for maintainability. Here's a structure that works well for mid-to-large NestJS applications:
 
@@ -63,7 +60,7 @@ src/
 
 Each module folder contains its own controllers, services, DTOs, entities, and any module-specific decorators or guards. The shared folder holds cross-cutting concerns used across multiple modules.
 
-Implementing Clean Module Boundaries
+## Implementing Clean Module Boundaries
 
 Module boundaries define how data flows between parts of your application. Strong boundaries mean modules can be modified without cascading changes throughout the codebase.
 
@@ -93,7 +90,7 @@ export class ProductResponseDto {
 
 By maintaining separate DTOs for input and response, you control exactly what gets exposed. The internal entity might have additional fields like `internalSku` or `costBasis` that never reach the API.
 
-Leveraging Claude Code Skills for Development Workflow
+## Leveraging Claude Code Skills for Development Workflow
 
 Several Claude skills accelerate NestJS development. The tdd skill helps you write tests before implementation, ensuring your modular design actually works in practice. When you're building new features, running tests first reveals whether your module boundaries are too tight or too loose.
 
@@ -105,7 +102,7 @@ When working on frontend integrations, the frontend-design skill provides guidan
 
 For maintaining developer knowledge bases, supermemory stores architectural decisions and rationale. When someone asks why a particular module structure was chosen, the answer is searchable and preserved.
 
-Practical Example: Building an Auth Module
+## Practical Example: Building an Auth Module
 
 Let me walk through creating a modular auth component that demonstrates these principles in action.
 
@@ -172,7 +169,7 @@ export class AuthController {
 
 Notice how the controller is thin. It handles HTTP-specific tasks (status codes, request parsing) but delegates business logic to the service. This makes testing straightforward, you can test the service with plain TypeScript objects without HTTP overhead.
 
-Cross-Module Communication Patterns
+## Cross-Module Communication Patterns
 
 Modules need to communicate. The most common pattern is importing one module into another, as shown with UsersModule in AuthModule. For more complex scenarios, NestJS provides several tools.
 
@@ -180,18 +177,17 @@ The event emitter pattern works well for loosely coupled modules. When an order 
 
 For synchronous calls where one module needs data from another, use dependency injection. The requesting module imports the providing module and injects the service. This creates a clear dependency graph that's visible in the module imports.
 
-Testing Modular Architectures
+## Testing Modular Architectures
 
 Testing becomes significantly easier with proper modularization. Each module can be tested in isolation with its dependencies mocked. Integration tests verify that modules work together correctly.
 
 The tdd skill guides you toward testable designs. It suggests patterns like dependency injection and interface-based services that naturally improve testability. When you can easily mock dependencies, unit tests become fast and reliable.
 
-Conclusion
+## Conclusion
 
 Modular architecture in NestJS isn't about following rigid rules, it's about making intentional decisions that pay off as your application evolves. Group code by domain, maintain clear boundaries through DTOs, and use tools like Claude Code skills to accelerate development.
 
 The patterns shown here scale from small projects to enterprise applications. Start with clean modules from day one, and refactor when the domain reveals better boundaries. Your future self, and your teammates, will thank you.
-
 
 Related Reading
 

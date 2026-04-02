@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Qwik Store Reactive State Management Guide
-
 Qwik's unique approach to reactivity sets it apart from traditional JavaScript frameworks. Instead of hydrating entire applications on the client, Qwik uses resumability, serializing state into the HTML and resuming execution where the server left off. Understanding how to manage this reactive state is essential for building performant Qwik applications.
 
 This guide covers Qwik's core state management primitives: `useStore` for reactive objects and `useSignal` for primitive values, along with patterns for building scalable state management in your Qwik projects. We'll go deep on the internals, compare approaches to other frameworks, and show you how to use Claude Code effectively when building Qwik state logic.
 
-Understanding Qwik's Reactivity Model
+## Understanding Qwik's Reactivity Model
 
 Unlike React's virtual DOM diffing or Vue's proxy-based reactivity, Qwik uses a fine-grained reactive system that tracks dependencies at the component level. When you modify reactive state, Qwik only updates the specific DOM nodes that depend on that changed value.
 
@@ -60,7 +57,7 @@ export default component$(() => {
 });
 ```
 
-How Resumability Differs from Hydration
+## How Resumability Differs from Hydration
 
 The key reason Qwik state management works the way it does comes down to resumability. In React or Vue, when a server-rendered page loads in the browser, the framework re-executes all component code to build up an event listener map and reconcile the virtual DOM. This is hydration, and it happens even if no user interaction has occurred yet.
 
@@ -74,7 +71,7 @@ This has direct consequences for state design:
 
 Understanding this context helps you write better state logic and avoid subtle bugs when working with Claude Code on Qwik projects.
 
-Qwik vs React vs Vue: Reactivity Comparison
+## Qwik vs React vs Vue: Reactivity Comparison
 
 | Feature | Qwik | React | Vue 3 |
 |---|---|---|---|
@@ -93,7 +90,7 @@ useStore Detailed look
 
 The `useStore` hook creates a reactive object that Qwik tracks at a fine-grained level. The second argument lets you configure reactivity options.
 
-Basic Store Usage
+## Basic Store Usage
 
 ```typescript
 interface Todo {
@@ -136,7 +133,7 @@ export const TodoList = component$(() => {
 });
 ```
 
-Adding Items to a Store Array
+## Adding Items to a Store Array
 
 One common source of confusion is array mutation. Qwik tracks array length and index access, but you need to be careful with methods like `push`, `splice`, and `filter`. Direct mutations work, but reassigning the array reference also works cleanly:
 
@@ -198,7 +195,7 @@ export const TodoManager = component$(() => {
 });
 ```
 
-Nested Reactivity with useStore
+## Nested Reactivity with useStore
 
 One of Qwik's powerful features is deep reactivity. By default, changes to nested properties trigger updates:
 
@@ -235,7 +232,7 @@ const flatStore = useStore({
 }, { reactive: false });
 ```
 
-When to Use reactive: false
+## When to Use reactive: false
 
 The `reactive: false` option is a performance optimization for stores where you know you will replace the whole value rather than mutate individual properties. A common use case is a pagination store where the entire page data refreshes on each request:
 
@@ -297,7 +294,7 @@ export const SignalCounter = component$(() => {
 });
 ```
 
-Signals for DOM References
+## Signals for DOM References
 
 `useSignal` doubles as Qwik's ref mechanism. When you assign a signal to a JSX element's `ref` attribute, Qwik populates the signal's value with the DOM element after mount:
 
@@ -335,7 +332,7 @@ useSignal vs useStore: Decision Guide
 | Flat key-value config replaced wholesale | `useStore` with `reactive: false` |
 | Shared global state | `useStore` + context |
 
-Computed State with useComputed$
+## Computed State with useComputed$
 
 `useComputed$` creates a derived signal that automatically recalculates when its reactive dependencies change. The result is cached until a dependency changes, so you never run expensive derivations on every render.
 
@@ -374,11 +371,11 @@ export const FilteredList = component$(() => {
 
 A key rule: `useComputed$` is read-only. You cannot assign to `filtered.value`. If you need bidirectional derived state, use a store with explicit setter logic instead.
 
-Sharing State Across Components
+## Sharing State Across Components
 
 Qwik provides several patterns for sharing state between components.
 
-Props Drilling with Signals
+## Props Drilling with Signals
 
 Pass signals down as props for parent-child communication:
 
@@ -412,7 +409,7 @@ export const Child = component$<Props>(({ count }) => {
 });
 ```
 
-Using Context for Global State
+## Using Context for Global State
 
 For truly global state, use Qwik's context API:
 
@@ -451,7 +448,7 @@ export const ThemedComponent = component$(() => {
 });
 ```
 
-Real-World Context: Auth State
+## Real-World Context: Auth State
 
 Here is a more complete example showing a global auth context with typed actions:
 
@@ -529,7 +526,7 @@ export const LoginButton = component$(() => {
 
 This pattern shows how to handle async state transitions, loading, error, and success, entirely within Qwik's reactive primitives.
 
-Using Claude Code to Build Qwik State Logic
+## Using Claude Code to Build Qwik State Logic
 
 Claude Code is particularly effective for scaffolding Qwik stores because the patterns are structured and repetitive. Here are prompts that get good results:
 
@@ -564,7 +561,7 @@ Explain why and show me the fix.
 
 Claude Code works best with Qwik when you are explicit about which primitive to use and whether the state is serializable. If you describe a state shape that includes functions or class instances, ask Claude Code to flag the serialization issue and suggest an alternative.
 
-State Serialization Rules and Common Pitfalls
+## State Serialization Rules and Common Pitfalls
 
 Because Qwik serializes state into HTML, certain values cannot be stored in `useStore` or `useSignal`:
 
@@ -597,7 +594,7 @@ const store = useStore({ user: { name: 'Alice' } });
 const greeting = useComputed$(() => `Hello ${store.user.name}`);
 ```
 
-Best Practices for Qwik State Management
+## Best Practices for Qwik State Management
 
 Follow these practices to build maintainable Qwik applications:
 
@@ -625,9 +622,9 @@ const fullName = useComputed$(() =>
 // const fullName = user.value.firstName + ' ' + user.value.lastName;
 ```
 
-Practical Anti-Patterns to Avoid
+## Practical Anti-Patterns to Avoid
 
-Anti-pattern: Storing derived state in a store instead of computing it
+## Anti-pattern: Storing derived state in a store instead of computing it
 
 ```typescript
 // AVOID: keeping a computed value in the store causes sync issues
@@ -642,7 +639,7 @@ const store = useStore({ firstName: 'Alice', lastName: 'Smith' });
 const fullName = useComputed$(() => `${store.firstName} ${store.lastName}`);
 ```
 
-Anti-pattern: Using multiple signals when a single store is cleaner
+## Anti-pattern: Using multiple signals when a single store is cleaner
 
 ```typescript
 // AVOID when fields are closely related
@@ -660,7 +657,7 @@ const form = useStore({
 });
 ```
 
-Anti-pattern: Triggering fetches in computed values
+## Anti-pattern: Triggering fetches in computed values
 
 ```typescript
 // AVOID: side effects in useComputed$ lead to unpredictable behavior
@@ -677,7 +674,7 @@ useTask$(async ({ track }) => {
 });
 ```
 
-Conclusion
+## Conclusion
 
 Qwik's reactive state management offers a fresh perspective on building web applications. By understanding when to use `useSignal` versus `useStore`, using context for global state, and following best practices for reactivity, you can build applications that are both highly performant and easy to maintain.
 

@@ -16,7 +16,7 @@ permalink: /claude-code-database-seeding-automation/
 
 Database seeding is a critical part of development workflows, yet it remains repetitive and error-prone. Claude Code offers powerful ways to automate seeding through its skill system, allowing you to generate seed files, manage test data, and maintain consistency across environments. This guide covers practical approaches to database seeding automation using Claude Code skills.
 
-Understanding Claude Skills for Database Tasks
+## Understanding Claude Skills for Database Tasks
 
 Claude Code skills are Markdown files stored in `~/.claude/skills/` that customize Claude's behavior during sessions. Several skills help with database-related tasks:
 
@@ -33,7 +33,7 @@ To use a skill, simply type its slash command in your Claude Code session:
 
 Skills can be combined. Activate `/sql-mcp` to connect to your database, then use `/tdd` to generate appropriate test data for your schema.
 
-Creating Seed Files with Claude
+## Creating Seed Files with Claude
 
 When starting a new project, generate seed files by describing your schema to Claude. Suppose you have a PostgreSQL database with users, products, and orders tables:
 
@@ -103,7 +103,7 @@ INSERT INTO orders (user_id, product_id, quantity, total) VALUES
 (4, 5, 1, 59.99);
 ```
 
-Automating Seed Generation with Scripts
+## Automating Seed Generation with Scripts
 
 For repeatable seeding, create a Claude skill that generates seeds on demand. Store this as `~/.claude/skills/seed-gen.md`:
 
@@ -145,11 +145,11 @@ Claude produces bulk seed data efficiently. For JSON output:
 ]
 ```
 
-Seeding Different Database Types
+## Seeding Different Database Types
 
 Claude adapts to various database systems. Here are patterns for common databases:
 
-PostgreSQL
+## PostgreSQL
 
 ```sql
 -- Use generate_series for bulk data
@@ -161,7 +161,7 @@ SELECT
 FROM generate_series(1, 1000) AS i;
 ```
 
-MongoDB
+## MongoDB
 
 For MongoDB with the sql-mcp skill or native driver:
 
@@ -177,7 +177,7 @@ db.users.insertMany(
 );
 ```
 
-SQLite
+## SQLite
 
 ```sql
 -- SQLite seeding with transactions
@@ -189,7 +189,7 @@ INSERT INTO products (name, price, stock) VALUES
 COMMIT;
 ```
 
-Integrating with Project Workflows
+## Integrating with Project Workflows
 
 Combine seeding with other Claude skills for complete workflow automation:
 
@@ -210,7 +210,7 @@ Generate seed data for both models with 50 users and 200 orders
 Write tests that verify the order total calculation works correctly
 ```
 
-Seeding Best Practices
+## Seeding Best Practices
 
 Follow these practices for maintainable seed files:
 
@@ -234,7 +234,7 @@ SELECT make_user('alice');
 SELECT make_user('bob');
 ```
 
-CI/CD Integration
+## CI/CD Integration
 
 Seed your test database in CI pipelines:
 
@@ -268,7 +268,7 @@ jobs:
         run: npm test
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms database seeding from manual work into an automated process. By creating reusable skills, generating appropriate test data, and integrating with your existing tooling, you maintain consistent development environments and accelerate iteration cycles. The combination of `/sql-mcp`, `/tdd`, `/supermemory`, and custom seed generation skills provides a complete solution for managing database state in any project.
 

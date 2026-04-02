@@ -20,7 +20,7 @@ Chrome extensions enhance your browsing experience, but every added extension co
 
 This guide walks you through diagnosing Chrome performance issues caused by extensions, identifying the culprits, and implementing practical solutions.
 
-How Extensions Impact Chrome Performance
+## How Extensions Impact Chrome Performance
 
 Each Chrome extension runs as a separate process or thread within the browser's architecture. When you install an extension, it can affect performance in several ways:
 
@@ -32,11 +32,11 @@ I/O Operations: Extensions that sync data, fetch API responses, or monitor clipb
 
 DOM Injection: Content scripts modify the page DOM, adding event listeners and observers. Too many scripts competing for DOM access can slow down page rendering noticeably.
 
-Identifying Problematic Extensions
+## Identifying Problematic Extensions
 
 Chrome provides built-in tools for diagnosing extension-related performance issues. Here's how to identify which extensions are causing problems.
 
-Using Chrome Task Manager
+## Using Chrome Task Manager
 
 Press Shift + Esc to open Chrome's built-in Task Manager. This differs from the system Task Manager and provides per-extension CPU and memory statistics.
 
@@ -45,7 +45,7 @@ Look for extensions showing:
 - CPU usage above 0% when you're not interacting with the extension
 - Network activity when the extension shouldn't be active
 
-Measuring Extension Impact with Chrome DevTools
+## Measuring Extension Impact with Chrome DevTools
 
 Disable all extensions temporarily to establish a performance baseline, then re-enable them systematically. For a more direct approach, use the Performance tab in DevTools:
 
@@ -56,7 +56,7 @@ Disable all extensions temporarily to establish a performance baseline, then re-
 
 Extensions appear as separate entries in the performance timeline, showing their contribution to scripting time, rendering, and painting.
 
-Analyzing Network Traffic
+## Analyzing Network Traffic
 
 Install Chrome's built-in network logging or use the Network tab in DevTools with the Preserve log option enabled. Look for requests from extension backgrounds:
 
@@ -64,11 +64,11 @@ Install Chrome's built-in network logging or use the Network tab in DevTools wit
 - Identify extensions making excessive requests
 - Note patterns like polling intervals that keep the extension active
 
-Practical Solutions and Optimizations
+## Practical Solutions and Optimizations
 
 Once you've identified problematic extensions, implement these solutions to restore Chrome's performance.
 
-Extension Management Strategies
+## Extension Management Strategies
 
 Disable, Don't Uninstall: Many extensions remain useful but don't need to run constantly. Right-click the extension icon and select "Manage extension," then toggle it off when not in use. This prevents the extension from loading while preserving your settings.
 
@@ -83,7 +83,7 @@ chrome.management.setEnabled(extensionId, false, () => {
 });
 ```
 
-Remove Redundant Extensions
+## Remove Redundant Extensions
 
 Audit your installed extensions regularly. Look for:
 
@@ -91,7 +91,7 @@ Audit your installed extensions regularly. Look for:
 - Abandoned Extensions: Extensions not updated in over a year may have memory leaks or compatibility issues
 - Feature Creep: Extensions you installed for one feature but never use other capabilities
 
-Use Lightweight Alternatives
+## Use Lightweight Alternatives
 
 Many popular extensions have lighter alternatives. For instance:
 
@@ -99,7 +99,7 @@ Many popular extensions have lighter alternatives. For instance:
 - Use uBlock Origin instead of multiple ad-blocking extensions
 - Choose minimalistic tab managers over feature-heavy alternatives
 
-Optimize Extension Settings
+## Optimize Extension Settings
 
 Many extensions have settings that reduce their resource consumption:
 
@@ -108,11 +108,11 @@ Many extensions have settings that reduce their resource consumption:
 - Disable unnecessary notifications to reduce event listener overhead
 - Limit extension access to specific sites rather than "all sites"
 
-Advanced: Building Extension Performance into Your Workflow
+## Advanced: Building Extension Performance into Your Workflow
 
 For developers working with Chrome extensions, whether building them or debugging them, performance considerations should influence your approach.
 
-Extension Development Best Practices
+## Extension Development Best Practices
 
 If you develop Chrome extensions, follow these practices to minimize performance impact on users:
 
@@ -145,7 +145,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 - Use declarative net requests instead of programmatic request interception when possible
 - Test your extension with Chrome's performance profiler
 
-Debugging Extension Conflicts
+## Debugging Extension Conflicts
 
 When multiple extensions interact poorly, use Chrome's extension debugging features:
 
@@ -154,14 +154,13 @@ When multiple extensions interact poorly, use Chrome's extension debugging featu
 3. Click service worker links to open DevTools for background scripts
 4. Monitor console output for errors and performance warnings
 
-Conclusion
+## Conclusion
 
 Chrome slowdown from extensions is a common issue that affects developers and power users who rely on browser extensions for productivity. By understanding how extensions consume resources, identifying problematic ones through Chrome's built-in tools, and implementing practical solutions like selective disabling and lightweight alternatives, you can maintain both functionality and performance.
 
 Regular extension audits, thoughtful management of enabled extensions, and attention to resource usage patterns will keep Chrome responsive without sacrificing the tools that make your workflow efficient.
 
 The key is balance, keeping the extensions you need while eliminating those that drain resources without providing proportional value. Your browser should work for you, not against you.
-
 
 Related Reading
 

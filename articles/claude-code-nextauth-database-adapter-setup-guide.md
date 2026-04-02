@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code NextAuth Database Adapter Setup Guide
 
 NextAuth.js (now Auth.js) provides a flexible authentication system for Next.js applications, and one of its most powerful features is the database adapter system. This guide walks you through setting up NextAuth with various database adapters using Claude Code, demonstrating how Claude Code can accelerate your authentication infrastructure setup.
 
-Understanding NextAuth Database Adapters
+## Understanding NextAuth Database Adapters
 
 Database adapters in NextAuth allow you to persist user sessions, accounts, and verification tokens in your own database instead of relying solely on JWT-based authentication. This is essential for applications requiring:
 
@@ -29,7 +28,7 @@ Database adapters in NextAuth allow you to persist user sessions, accounts, and 
 - Multi-device session management
 - Compliance with data residency requirements
 
-Supported Database Adapters
+## Supported Database Adapters
 
 NextAuth supports multiple database backends through its adapter ecosystem:
 
@@ -39,16 +38,16 @@ NextAuth supports multiple database backends through its adapter ecosystem:
 - PostgreSQL/MySQL - Direct SQL connections
 - Redis - For session caching
 
-Setting Up NextAuth with Prisma Adapter
+## Setting Up NextAuth with Prisma Adapter
 
-Prisma is the most commonly used adapter. Install Dependencies
+## Prisma is the most commonly used adapter. Install Dependencies
 
 ```bash
 npm install @next-auth/prisma-adapter prisma @prisma/client
 npm install next-auth
 ```
 
-Step 2: Configure Prisma Schema
+## Step 2: Configure Prisma Schema
 
 Ask Claude Code to generate your Prisma schema with NextAuth models:
 
@@ -109,7 +108,7 @@ model VerificationToken {
 }
 ```
 
-Step 3: Create the NextAuth Configuration
+## Step 3: Create the NextAuth Configuration
 
 Here's a practical NextAuth configuration with Prisma adapter:
 
@@ -149,7 +148,7 @@ export const authOptions = {
 }
 ```
 
-Using Drizzle ORM Adapter
+## Using Drizzle ORM Adapter
 
 Drizzle offers a lightweight alternative with better performance. uuid('id').defaultRandom().primaryKey(),
   name: text('name'),

@@ -16,13 +16,13 @@ permalink: /claude-md-example-for-machine-learning-project/
 
 Markdown files are the backbone of effective communication with Claude Code in machine learning workflows. Whether you are documenting datasets, writing model specifications, or creating training pipelines, structuring your prompts as well-organized markdown unlocks Claude's full potential. This guide provides practical examples of using .md files for ML projects, showing you how to use Claude skills and build reproducible workflows.
 
-Why Markdown Files Work Well with Claude
+## Why Markdown Files Work Well with Claude
 
 Machine learning projects involve complex specifications, data transformations, and model configurations that benefit from structured documentation. Markdown files provide a clean, readable format that Claude can parse and understand precisely. Unlike free-form conversation, markdown prompts allow you to define clear sections, code blocks, and hierarchical instructions that guide Claude's responses.
 
 When you work on ML projects, you typically deal with multiple stakeholders, varying environments, and complex dependencies. Using .md files as prompt templates ensures consistency across sessions and team members. You can version control your prompts alongside your code, making experiments reproducible and debuggable.
 
-Structuring ML Project Prompts
+## Structuring ML Project Prompts
 
 A well-structured ML project prompt includes several key sections that help Claude understand your context and requirements. Consider this practical example:
 
@@ -63,7 +63,7 @@ Provide complete training script with:
 
 This structured approach gives Claude clear boundaries and expectations, resulting in more usable output. The sections break down complex requirements into digestible components that Claude processes systematically.
 
-Using Claude Skills in ML Workflows
+## Using Claude Skills in ML Workflows
 
 Claude's ecosystem includes specialized skills that enhance ML workflows. When working with machine learning projects, several skills prove particularly valuable:
 
@@ -95,7 +95,7 @@ The xlsx skill helps you analyze experiment results stored in spreadsheets. When
 
 The supermemory skill provides persistent context across sessions. For long-running ML projects, you can maintain project memory that includes architectural decisions, failed experiments, and lessons learned. This helps maintain consistency when you return to a project after weeks or months.
 
-Documenting ML Projects with Markdown
+## Documenting ML Projects with Markdown
 
 Beyond prompts, markdown serves as an excellent format for ML project documentation. A comprehensive project README guides both human collaborators and Claude when working on the project:
 
@@ -136,7 +136,7 @@ Known Limitations
 - Requires GPU for acceptable inference speed
 ```
 
-Automating ML Pipelines with Claude
+## Automating ML Pipelines with Claude
 
 You can create reusable markdown templates for common ML tasks. These templates accelerate your workflow and ensure consistency:
 
@@ -176,14 +176,13 @@ Expected Runtime
 - Evaluation: [estimated time]
 ```
 
-Version Control for ML Prompts
+## Version Control for ML Prompts
 
 Treating your prompts as code offers significant advantages. Store prompt templates in your repository alongside your ML code. This practice enables you to track how your interactions with Claude evolve over time, compare prompt effectiveness, and share successful patterns with your team.
 
 When you find a prompt that produces excellent results, document why it works. Include the prompt version in your experiment tracking. This creates a feedback loop where your ML development process continuously improves.
 
 Using Claude with well-structured markdown files transforms how you develop machine learning projects. The combination of clear prompts, appropriate skills, and comprehensive documentation creates a powerful workflow that scales with your project complexity.
-
 
 Related Reading
 

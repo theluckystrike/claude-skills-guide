@@ -18,7 +18,7 @@ Managing Kubernetes clusters at scale presents significant challenges for develo
 
 This guide covers practical approaches to integrating MCP servers with Kubernetes, with code examples you can apply immediately to your own infrastructure.
 
-Why MCP Servers Change Kubernetes Operations
+## Why MCP Servers Change Kubernetes Operations
 
 Before MCP, working with Kubernetes meant context-switching between terminal windows, dashboards, runbooks, and chat tools. An incident at 2 AM required an engineer to pull up several kubectl commands from memory, cross-reference log output manually, and write a summary to post in Slack. Every step was manual and error-prone under pressure.
 
@@ -26,7 +26,7 @@ MCP servers collapse that workflow into a single conversational interface. You d
 
 This is not just a convenience feature. Consistent, templated operations reduce the chance of operator error during high-stress incidents. Teams that standardize around MCP-driven runbooks report fewer mistyped namespace flags and forgotten `--dry-run` arguments during production changes.
 
-Setting Up Your First Kubernetes MCP Server Connection
+## Setting Up Your First Kubernetes MCP Server Connection
 
 [Establishing a secure connection between Claude and your Kubernetes cluster](/securing-mcp-servers-in-production-environments/) is the first step. Most teams use the official Kubernetes MCP server, which authenticates using your existing `~/.kube/config` context.
 
@@ -54,7 +54,7 @@ After installation, configure Claude Code to use this server by adding it to you
 
 This configuration grants Claude the ability to query cluster state, inspect resources, and execute management operations directly through natural language prompts.
 
-Multi-Context Configuration
+## Multi-Context Configuration
 
 Production teams typically manage multiple clusters: development, staging, and production at minimum. You can expose all of them through a single MCP server configuration with context switching:
 
@@ -83,7 +83,7 @@ Production teams typically manage multiple clusters: development, staging, and p
 
 With separate MCP server entries per cluster, you can ask Claude to compare state between environments: "Show me the deployment versions in staging and production side by side." That kind of cross-cluster visibility would previously require running separate kubectl commands and diffing the output manually.
 
-Practical Cluster Management Tasks
+## Practical Cluster Management Tasks
 
 Once your MCP server connects, you can perform common operational tasks without switching between tools. Here are three high-value use cases with concrete examples.
 
@@ -164,7 +164,7 @@ A cleanup workflow that teams find useful is a weekly audit session where Claude
 
 This step-by-step approach gives you full visibility before anything is deleted. The intermediate step of generating commands without executing them is especially useful for training junior engineers on what a cleanup operation actually does.
 
-Integrating Multiple MCP Servers
+## Integrating Multiple MCP Servers
 
 For comprehensive cluster management, combining multiple MCP servers delivers the best results. Pair the Kubernetes server with specialized tools:
 
@@ -176,7 +176,7 @@ This combination lets you document issues, generate reports, and test infrastruc
 
 A powerful pattern is to use the `supermemory` skill alongside Kubernetes MCP to build a living runbook. Every time you diagnose a new class of issue through Claude, save the successful diagnostic prompt chain and the resolution steps. Over time, this becomes a searchable knowledge base that new team members can query directly.
 
-Combining Kubernetes MCP with Prometheus
+## Combining Kubernetes MCP with Prometheus
 
 Kubernetes MCP surfaces resource state, but performance trends require metrics. Pairing it with a Prometheus MCP server gives you both:
 
@@ -200,7 +200,7 @@ Kubernetes MCP surfaces resource state, but performance trends require metrics. 
 
 With both servers active, you can ask questions that span cluster state and metrics: "Which pods are consuming more CPU than their requests specify, and what does their CPU trend look like over the past 24 hours?" This type of cross-source analysis would normally require jumping between the Kubernetes dashboard and Grafana.
 
-Security Considerations
+## Security Considerations
 
 When granting Claude cluster access through MCP, follow the principle of least privilege. Create a dedicated service account with minimal permissions:
 
@@ -238,7 +238,7 @@ roleRef:
 
 This configuration restricts Claude to read-only operations except where write access is explicitly required.
 
-Environment-Specific Permissions
+## Environment-Specific Permissions
 
 A common pattern is to give Claude broader permissions in development clusters and restrict it more tightly in production. This lets development teams iterate freely while enforcing safety boundaries where it matters most:
 
@@ -279,7 +279,7 @@ spec:
             - containerPort: 3000
 ```
 
-Advanced Patterns for Production Teams
+## Advanced Patterns for Production Teams
 
 Mature teams extend their MCP workflows with custom scripts. For example, create automated runbooks that Claude executes when triggered:
 
@@ -302,7 +302,7 @@ This pattern enables Claude to perform consistent health checks across multiple 
 
 For frontend development teams working on Kubernetes-native applications, combining the frontend-design skill with cluster management creates consistent developer experiences. You can preview changes against running services while simultaneously monitoring deployment status.
 
-Automated Incident Triage
+## Automated Incident Triage
 
 One of the highest-value applications of Kubernetes MCP in production is automated incident triage. When an alert fires, Claude can execute a standard first-response checklist automatically:
 
@@ -332,7 +332,7 @@ export async function triageIncident(namespace, service) {
 
 Feeding this structured output to Claude gives you a complete incident brief in seconds rather than the five to ten minutes it typically takes an engineer to gather the same information manually. The triage report can be piped directly to the `pdf` skill to generate a formatted incident summary for stakeholders.
 
-Deployment Safety Gates
+## Deployment Safety Gates
 
 Rather than preventing Claude from touching production deployments entirely, some teams implement a safety gate pattern. Claude proposes the change, generates the deployment YAML, runs a diff, and requires an explicit human approval string before applying:
 
@@ -351,7 +351,7 @@ Type CONFIRM to proceed, or describe any changes needed.
 
 This pattern gives engineers the analysis and planning work for free while keeping the final decision and confirmation firmly in human hands.
 
-Conclusion
+## Conclusion
 
 Kubernetes MCP server integration transforms cluster management from a series of manual kubectl commands into conversational workflows. Start with read-only operations, establish security boundaries, then gradually add automation for routine tasks.
 

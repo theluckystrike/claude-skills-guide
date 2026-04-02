@@ -22,7 +22,7 @@ Manually staging files, crafting commit messages, and pushing to remote reposito
 
 The key advantage is consistency. Every end-of-day commit follows the same quality standards, whether you wrote it at 9 AM or 5 PM. Claude can enforce your team's commit conventions, check for sensitive data, and even run quick tests before pushing.
 
-Reviewing Your Changes Before Committing
+## Reviewing Your Changes Before Committing
 
 The end-of-day commit workflow is also the right time for a quick self-review. Committing without reviewing what you're about to push is one of the most common sources of embarrassing commits, debug logs, console.log statements, commented-out code blocks, and unfinished work-in-progress that shouldn't be in the commit.
 
@@ -53,7 +53,7 @@ Pre-commit Checks
 
 Claude Code reads these rules from CLAUDE.md and applies them automatically in every session.
 
-Setting Up Your Commit Workflow Skill
+## Setting Up Your Commit Workflow Skill
 
 Create a dedicated skill for your end-of-day commit workflow. This skill should live in your project or your global Claude skills directory.
 
@@ -64,9 +64,7 @@ description: "Automates the end-of-day commit workflow including staging, testin
 
 Automatic Triggers
 
-
 Workflow Steps
-
 
 Guidelines
 
@@ -74,7 +72,7 @@ Guidelines
 
 This skill serves as a template you can customize for your specific needs.
 
-Practical Example: Running the Workflow
+## Practical Example: Running the Workflow
 
 When you're ready to wrap up, ask Claude Code to handle your commit:
 
@@ -95,7 +93,7 @@ Claude: Running end-of-day commit workflow...
 
 Claude shows you exactly what changed. You can review and confirm before anything gets pushed.
 
-Enhancing the Workflow with Other Skills
+## Enhancing the Workflow with Other Skills
 
 The real power comes from combining your commit workflow with other Claude skills. Here are some powerful combinations:
 
@@ -119,7 +117,7 @@ Use the supermemory skill for context:
 
 The `supermemory` skill maintains context across sessions. It can remember what you worked on each day, making your commit messages more meaningful and consistent over time. When you ask for an end-of-day commit, supermemory can include context about your task progression.
 
-Advanced: Adding Pre-Commit Checks
+## Advanced: Adding Pre-Commit Checks
 
 For teams with specific quality requirements, add pre-commit checks to your workflow:
 
@@ -149,7 +147,7 @@ echo "Checks complete."
 
 Integrate this into your Claude skill by having Claude run the script and report results. This keeps your commit quality high without manual effort.
 
-Handling Multiple Projects
+## Handling Multiple Projects
 
 If you work across multiple repositories, create a wrapper skill that determines which project you're in and runs the appropriate commit workflow:
 
@@ -164,7 +162,7 @@ Workflow
 
 This approach scales well for developers managing several projects simultaneously.
 
-Common Issues and Solutions
+## Common Issues and Solutions
 
 Problem: Claude stages files you didn't want to commit.
 
@@ -178,7 +176,7 @@ Problem: Commit messages aren't descriptive enough.
 
 Solution: Include a step in your workflow where Claude analyzes your changes using `git diff --stat` and generates a message based on the actual file modifications. For even better results, integrate with the `supermemory` skill to include task context.
 
-Writing Meaningful Commit Messages with Claude
+## Writing Meaningful Commit Messages with Claude
 
 The most consistent way to improve your commit history is having Claude analyze your diff before writing the message. Instead of rushing through a generic "WIP" or "fix stuff" commit at the end of a long day, describe what you changed in plain language and let Claude produce a conventional commit message.
 
@@ -218,7 +216,7 @@ Scopes: auth|api|frontend|database|infra|deps
 
 Claude Code will follow these conventions consistently across every session, removing the need to mentally switch into "commit message writing mode" at the end of your workday.
 
-Handling Sensitive Files and Accidental Staging
+## Handling Sensitive Files and Accidental Staging
 
 One of the real risks of automated commit workflows is accidentally including files that shouldn't be committed: `.env` files, credential files, or debug logs. Build an explicit check into your workflow before staging anything.
 
@@ -238,7 +236,7 @@ This prevents the common mistake of committing local configuration or accidental
 
 For projects with strict data handling requirements, add your sensitive data patterns to CLAUDE.md so Claude checks them on every commit automatically.
 
-Conclusion
+## Conclusion
 
 Automating your end-of-day commit workflow with Claude Code removes friction from your development process. What used to take several minutes of manual git commands now happens in seconds, with consistent quality and fewer mistakes. Start with a simple workflow and add complexity as needed, pre-commit checks, test validation, and documentation verification can all be incorporated over time.
 

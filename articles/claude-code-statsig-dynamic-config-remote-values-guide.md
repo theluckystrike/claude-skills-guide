@@ -27,7 +27,7 @@ Claude Code excels at understanding your codebase structure and generating consi
 
 The combination lets you move fast while maintaining code quality. Instead of manually writing configuration loading code, you can delegate this to Claude Code with clear specifications.
 
-Setting Up Statsig in Your Project
+## Setting Up Statsig in Your Project
 
 First, install the Statsig SDK for your language. For a Node.js project:
 
@@ -65,7 +65,7 @@ await statsig.initialize(process.env.STATSIG_SERVER_SECRET, {
 
 Claude Code can generate this initialization code and help you organize configurations logically. Describe your desired flag structure, and Claude Code produces the implementation.
 
-Creating Configuration Reader Abstractions
+## Creating Configuration Reader Abstractions
 
 Rather than calling Statsig directly throughout your codebase, create an abstraction layer. Claude Code can generate clean, type-safe wrappers:
 
@@ -123,7 +123,7 @@ export const config = ConfigReader.getInstance();
 
 This pattern centralizes configuration access, making it easy to mock in tests and maintain consistent behavior. Claude Code generates these wrappers with proper TypeScript types once you describe your configuration structure.
 
-Using Remote Values in Your Application
+## Using Remote Values in Your Application
 
 With the abstraction in place, using remote values becomes straightforward. Here's how you might use configuration in your application:
 
@@ -157,7 +157,7 @@ function getRecommendedItems(): Item[] {
 
 Claude Code helps you refactor existing code to use these abstractions, ensuring consistent configuration access throughout your project.
 
-Handling Configuration Changes
+## Handling Configuration Changes
 
 When remote values change, your application should respond appropriately. Statsig supports both pull and push models. For real-time updates, use the update API:
 
@@ -213,7 +213,7 @@ function PricingPage() {
 }
 ```
 
-Testing Configuration Behavior
+## Testing Configuration Behavior
 
 Automated testing ensures your configuration logic works correctly. Claude Code can generate comprehensive tests:
 
@@ -267,7 +267,7 @@ describe('Dynamic Config', () => {
 });
 ```
 
-Best Practices for Remote Configuration
+## Best Practices for Remote Configuration
 
 When using Statsig with Claude Code, follow these guidelines:
 
@@ -300,7 +300,7 @@ Add comments explaining why each flag or config exists:
 
 Claude Code can help maintain this documentation and generate flag audit reports.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Statsig creates a powerful workflow for managing dynamic configuration. Claude Code handles the boilerplate, generates type-safe wrappers, and helps you implement consistent patterns. Statsig provides the remote configuration infrastructure.
 

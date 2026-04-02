@@ -18,7 +18,7 @@ GraphQL development has become standard practice for modern APIs, but maintainin
 
 > Scope of this guide: This article focuses on client-side GraphQL codegen, generating TypeScript types, React hooks, and Apollo Client integration code from your GraphQL schema and query files. If you need to generate server-side schema artifacts and resolver scaffolding from TypeScript models, see the [GraphQL Code Generation Workflow guide](/claude-code-for-graphql-code-generation-workflow/). If you need to configure and automate the `graphql-codegen` CLI tool itself, see the [GraphQL Codegen Workflow Tutorial](/claude-code-for-graphql-codegen-workflow-tutorial/).
 
-Why Automate GraphQL Codegen with Claude
+## Why Automate GraphQL Codegen with Claude
 
 Manual GraphQL type management creates several problems. When your schema updates, you must regenerate types, update queries, and verify everything compiles. This cycle repeats frequently in active projects. The tdd skill can help you write tests that validate your GraphQL integration, but you still need accurate types to test against.
 
@@ -26,7 +26,7 @@ Claude Code skills approach codegen differently than standalone tools like Graph
 
 The workflow works particularly well with TypeScript projects using Apollo Client or urql, but applies equally to any GraphQL setup where type safety matters.
 
-Setting Up GraphQL Codegen Skills
+## Setting Up GraphQL Codegen Skills
 
 Before automating codegen, ensure your project has proper GraphQL tooling. You'll need a configured GraphQL schema (either a local file or a remote endpoint) and a client library ready to use the generated types.
 
@@ -55,7 +55,7 @@ skill:
 
 This skill activates automatically when you work with GraphQL files or explicitly invoke it during development sessions.
 
-Practical Codegen Workflow
+## Practical Codegen Workflow
 
 With your skill configured, here's how the workflow operates in practice. Suppose you're adding a new feature that requires fetching user data:
 
@@ -103,7 +103,7 @@ export function useGetUserProfileQuery(baseOptions: Apollo.QueryHookOptions<GetU
 
 This automatic hook generation eliminates the manual step of importing generated types and passing them to query definitions, a common source of errors in GraphQL TypeScript projects.
 
-Handling Schema Changes
+## Handling Schema Changes
 
 Schema evolution causes the most pain in GraphQL projects. A field type change or removal breaks client code, often at runtime rather than compile time if types aren't properly maintained.
 
@@ -131,7 +131,7 @@ export interface Image {
 
 This proactive approach prevents runtime errors and ensures your frontend stays synchronized with backend changes.
 
-Integrating with Frontend Design Workflows
+## Integrating with Frontend Design Workflows
 
 The frontend-design skill complements GraphQL development nicely. After generating types and hooks, you often need to build UI components that display the data. The frontend-design skill understands component patterns and can generate proper TypeScript interfaces alongside your GraphQL types.
 
@@ -143,7 +143,7 @@ Generate the GraphQL types for my new dashboard queries, then create the React c
 
 Claude processes both requests, generating GraphQL types first, then creating components that import and use those types correctly. This end-to-end typing eliminates the common "any" types that plague GraphQL React projects.
 
-Advanced: Custom Codegen Configurations
+## Advanced: Custom Codegen Configurations
 
 For complex projects, you might need custom codegen configurations that go beyond default settings. The skill can maintain multiple codegen configurations for different use cases:
 
@@ -168,7 +168,7 @@ Run codegen using the staging configuration and verify all queries work with the
 
 This flexibility supports multi-environment setups where development, staging, and production schemas might differ slightly.
 
-Best Practices for Claude GraphQL Workflows
+## Best Practices for Claude GraphQL Workflows
 
 Keep your GraphQL operations organized to get the best results from automated codegen. Use a consistent directory structure for your `.graphql` files, typically grouping by feature rather than by type. This organization makes it easier for Claude to understand context and generate appropriate code.
 
@@ -176,12 +176,11 @@ Another valuable practice involves running codegen as part of your CI pipeline. 
 
 Finally, document your GraphQL conventions in the skill instructions. If you prefer custom hooks over generated ones, or have specific naming conventions for auto-generated files, include these preferences. The more context Claude has about your project conventions, the more accurate the generated code.
 
-Conclusion
+## Conclusion
 
 Claude Code skills transform GraphQL client codegen from a manual, error-prone process into an automated workflow that maintains type safety automatically. By configuring a graphql-codegen skill that understands your project structure, you eliminate the tedious work of keeping frontend types synchronized with backend schemas. Combined with skills like frontend-design and tdd, you build a comprehensive development environment where GraphQL types flow smoothly from schema to component.
 
 The key lies in proper skill configuration and consistent project organization. Once established, this workflow scales with your project and reduces the friction that often makes developers hesitate with GraphQL adoption.
-
 
 Related Reading
 

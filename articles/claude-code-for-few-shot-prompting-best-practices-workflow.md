@@ -13,11 +13,9 @@ tags: [claude-code, claude-skills, prompting, ai-productivity]
 
 {% raw %}
 
-Claude Code for Few-Shot Prompting Best Practices Workflow
-
 Few-shot prompting is one of the most powerful techniques for getting high-quality, consistent outputs from Claude Code. By providing carefully chosen examples within your prompts, you teach the model exactly what format, tone, and approach you expect. This guide walks you through a practical workflow for implementing few-shot prompting with Claude Code, complete with real examples and actionable advice you can apply immediately to your projects.
 
-Understanding Few-Shot Prompting Fundamentals
+## Understanding Few-Shot Prompting Fundamentals
 
 Few-shot prompting works by showing Claude Code a small number of input-output examples (typically 2-5) that demonstrate your desired behavior. The model learns from these examples and applies the same pattern to new inputs. This approach dramatically outperforms zero-shot prompting (no examples) for tasks requiring specific formats, specialized terminology, or consistent decision-making patterns.
 
@@ -49,11 +47,11 @@ feat: implement API rate limiting
 
 The second example demonstrates both format and content expectations. Claude Code immediately understands you want conventional commits with type, scope, and description, without explicitly stating those requirements.
 
-Building Your Few-Shot Prompting Workflow
+## Building Your Few-Shot Prompting Workflow
 
 A solid few-shot prompting workflow with Claude Code involves four stages: task analysis, example selection, prompt construction, and iteration. Let's walk through each stage with practical guidance.
 
-Stage 1: Task Analysis
+## Stage 1: Task Analysis
 
 Before writing any prompt, identify what makes your task challenging. Ask yourself three questions:
 
@@ -63,7 +61,7 @@ Before writing any prompt, identify what makes your task challenging. Ask yourse
 
 For instance, if you're prompting Claude Code to review pull requests, your analysis might reveal: you need structured JSON output with severity ratings, the model must identify security issues and code smells, and good responses include specific line numbers and remediation suggestions.
 
-Stage 2: Example Selection
+## Stage 2: Example Selection
 
 Choose 3-5 representative examples that demonstrate the full range of your task's complexity. Quality matters more than quantity. Each example should:
 
@@ -74,7 +72,7 @@ Choose 3-5 representative examples that demonstrate the full range of your task'
 
 Avoid examples that are too simple or perfectly straightforward. Real-world usage will present complications, so your examples should prepare Claude Code to handle them.
 
-Stage 3: Prompt Construction
+## Stage 3: Prompt Construction
 
 Structure your prompt with clear sections:
 
@@ -88,13 +86,13 @@ Structure your prompt with clear sections:
 
 This structure keeps instructions separate from examples, making it easy to update either component independently.
 
-Stage 4: Iteration and Refinement
+## Stage 4: Iteration and Refinement
 
 Test your prompt with real inputs, not just hypothetical ones. Track which inputs produce unexpected outputs and adjust your examples accordingly. Few-shot prompting is an iterative process, your first version will rarely be perfect.
 
-Practical Code Examples for Common Tasks
+## Practical Code Examples for Common Tasks
 
-Example 1: Generating Database Schemas
+## Example 1: Generating Database Schemas
 
 Here's a few-shot prompt for generating SQLAlchemy models:
 
@@ -147,7 +145,7 @@ Table: comments
 - created_at (datetime, default now)
 ```
 
-Example 2: Creating API Response Validators
+## Example 2: Creating API Response Validators
 
 Few-shot prompting excels at generating consistent validation code:
 
@@ -192,9 +190,9 @@ Now create validators for this response:
 {"order_id": "ORD-456", "items": [{"product_id": 1, "quantity": 2, "price": 29.99}], "total": 59.98, "status": "pending"}
 ```
 
-Advanced Techniques for Better Results
+## Advanced Techniques for Better Results
 
-Variable Placeholders
+## Variable Placeholders
 
 Use consistent placeholder patterns in your examples so Claude Code recognizes where to apply the pattern:
 
@@ -202,7 +200,7 @@ Use consistent placeholder patterns in your examples so Claude Code recognizes w
 - `...` indicates omitted content in longer examples
 - `[YOUR_CONTEXT]` marks optional context variables
 
-Chain-of-Thought Examples
+## Chain-of-Thought Examples
 
 For complex reasoning tasks, include examples that show the thinking process:
 
@@ -220,7 +218,7 @@ Now solve:
 Input: "API returns 504 errors intermittently under high load"
 ```
 
-Negative Examples
+## Negative Examples
 
 Sometimes showing what you don't want is as valuable as showing what you do want:
 
@@ -250,7 +248,7 @@ def get_active_users(users: list[dict]) -> list[dict]:
 Now write a function that processes order data and calculates totals.
 ```
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Too many examples: More than 5 examples rarely improves performance and increases token usage. Quality trumps quantity.
 
@@ -262,7 +260,7 @@ Ignoring edge cases: Include at least one example showing how to handle unusual 
 
 Not testing with real data: Always validate your prompts with actual inputs, not just hypothetical scenarios. What works in theory often fails in practice.
 
-Integrating Few-Shot Prompts with Claude Code Skills
+## Integrating Few-Shot Prompts with Claude Code Skills
 
 For maximum effectiveness, embed your few-shot prompts within Claude Code skills. This creates reusable, version-controlled prompt templates that your entire team can use:
 
@@ -284,7 +282,6 @@ Review the following code diff using these examples as reference:
 This approach combines the consistency of few-shot prompting with Claude Code's skill-based workflow system, giving you reproducible results across your entire development process.
 
 Start implementing few-shot prompting in your Claude Code workflows today, the improvements in output quality and consistency will be immediately noticeable.
-
 
 Related Reading
 

@@ -18,7 +18,7 @@ Managing Time-based One-Time Passwords (TOTP) efficiently is crucial for develop
 
 This guide evaluates the best authenticator Chrome extensions available, focusing on features that matter to developers: security, import/export capabilities, open-source transparency, and developer-friendly integrations. It also covers how to implement TOTP verification in your own applications, since many developers need both sides of the equation.
 
-What Makes a Great Chrome Authenticator Extension
+## What Makes a Great Chrome Authenticator Extension
 
 Before diving into specific options, understand the key criteria that separate useful Chrome authenticator extensions from ones that will frustrate you:
 
@@ -29,7 +29,7 @@ Before diving into specific options, understand the key criteria that separate u
 - Multi-account management: If you're managing 2FA for dozens of services, can you search, organize, or label accounts? The extensions that work fine for 5 accounts become unusable at 50.
 - Browser compatibility: Does it work reliably across Chrome, Chromium-based browsers like Edge and Brave, and potentially Firefox?
 
-Top Authenticator Chrome Extensions
+## Top Authenticator Chrome Extensions
 
 1. Authenticator (by Eliseo)
 
@@ -111,7 +111,7 @@ Worth mentioning for developers who already use 1Password as their password mana
 
 This integration eliminates the need for a separate authenticator extension entirely. The tradeoff is that you're combining your password manager and your second factor into one system. which undermines the multi-factor principle if 1Password itself is compromised. Security practitioners debate whether this is acceptable; the consensus is that it's a reasonable tradeoff for personal use but potentially inadvisable for protecting critical production infrastructure.
 
-Comparing Security Models
+## Comparing Security Models
 
 When evaluating authenticator extensions, understand where your TOTP secrets are stored and what protects them:
 
@@ -126,7 +126,7 @@ For maximum security, consider extensions that store secrets locally and allow y
 
 A practical approach: use Authy or 1Password for personal accounts and SaaS services, and use GAuth or Authenticator (Eliseo) for production cloud credentials, server access, and anything where a breach would have serious business impact.
 
-Implementing TOTP Verification in Your Own Applications
+## Implementing TOTP Verification in Your Own Applications
 
 As a developer, you might need to implement TOTP verification in your applications. The standard algorithm is defined in RFC 6238. Here's a Python example using the `pyotp` library:
 
@@ -255,7 +255,7 @@ function verifyToken(base32Secret, userToken) {
 }
 ```
 
-Handling TOTP in CI/CD and Automated Environments
+## Handling TOTP in CI/CD and Automated Environments
 
 One scenario that trips up many developers: automated systems that need to interact with TOTP-protected services. You can't hand a 30-second code to a CI/CD pipeline interactively.
 
@@ -283,7 +283,7 @@ Store the secret in your CI/CD secrets management (GitHub Actions Secrets, AWS S
 
 TOTP bypass for test environments: Configure test environments to accept a fixed test token or bypass 2FA entirely. This is safer than embedding real TOTP secrets in test infrastructure and avoids clock-synchronization issues in isolated test environments.
 
-Best Practices for Managing Authenticator Extensions
+## Best Practices for Managing Authenticator Extensions
 
 Regardless of which extension you choose, follow these security practices:
 
@@ -299,7 +299,7 @@ Consider hardware security keys for critical accounts: For accounts that protect
 
 Audit your 2FA coverage periodically: Periodically review which accounts have 2FA enabled. Services you signed up for years ago may have added 2FA support. New services you've enrolled in may not have had 2FA enabled during signup. A quarterly audit takes 20 minutes and meaningfully reduces your exposure.
 
-Conclusion
+## Conclusion
 
 For most developers, GAuth Authenticator offers the best balance of features, transparency, and portability. Its open-source nature allows security verification, while the import/export capabilities ensure you're not locked into a single solution. The lack of cloud sync is a feature for security-focused developers, not a limitation.
 
@@ -310,7 +310,6 @@ Developers who already use 1Password can simplify their tooling by using its bui
 Whatever you choose, the non-negotiable requirements are: backup your secrets, test the complete login flow during setup, and use hardware keys for your most critical accounts. The best authenticator is one you'll actually use consistently and maintain properly. Evaluate based on your specific needs, maintain proper backups, and stay secure.
 
 ---
-
 
 Related Reading
 

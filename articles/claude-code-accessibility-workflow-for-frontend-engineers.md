@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Accessibility Workflow for Frontend Engineers
-
 Building accessible websites isn't just a legal requirement or ethical choice, it's good engineering. Sites with proper accessibility rank better in search engines, work across more devices, and reach a broader audience. Claude Code provides a powerful workflow for frontend engineers to integrate accessibility testing and remediation into every stage of development.
 
-Why Accessibility Matters for Engineers
+## Why Accessibility Matters for Engineers
 
 The business and legal case for accessibility is well established. The ADA, Section 508, and the European Accessibility Act impose real obligations on many organizations. But the engineering case is equally strong: accessible code is clean code. When you force yourself to write semantic HTML, manage focus properly, and label interactive elements clearly, you end up with a more maintainable, more testable, and more interoperable codebase.
 
@@ -26,7 +23,7 @@ Screen readers, keyboard-only users, voice control users, and switch-access user
 
 Claude Code helps by acting as a persistent accessibility reviewer that catches issues you might miss during normal development. It knows the WCAG 2.2 criteria, the ARIA authoring practices guide, and the common failure patterns in React, Vue, and plain HTML.
 
-Setting Up Your Accessibility Toolkit
+## Setting Up Your Accessibility Toolkit
 
 Before diving into workflows, ensure your Claude Code environment has the right tools for accessibility work. The core tools you'll need are already built into Claude Code: the ability to read files, run commands, and analyze code structure. For specialized accessibility testing, you can create custom skills or use existing npm packages.
 
@@ -54,7 +51,7 @@ For React projects, add the ESLint plugin to your configuration to catch issues 
 
 This gives you immediate feedback in your editor as you write components, catching obvious issues like missing `alt` attributes and incorrect ARIA roles.
 
-Creating an Accessibility Testing Skill
+## Creating an Accessibility Testing Skill
 
 A well-designed Claude Code skill can automate much of your accessibility workflow. Here's a skill that runs accessibility audits on your components:
 
@@ -82,7 +79,7 @@ Report issues by WCAG criterion (1.1.1, 2.1.1, etc.) and suggest specific code f
 
 This structured prompt produces actionable output that maps directly to compliance criteria, which is useful when you need to document remediation for legal or audit purposes.
 
-Semantic HTML First Approach
+## Semantic HTML First Approach
 
 The foundation of accessibility is writing semantic HTML. Claude Code excels at analyzing your templates and suggesting improvements. When building components, ask Claude to review your HTML structure:
 
@@ -120,7 +117,7 @@ Here is a broader reference for common semantic HTML decisions:
 
 Landmark regions are particularly important. A user navigating by landmarks (a common screen reader pattern) expects to jump directly to `<nav>`, `<main>`, and `<footer>`. If your page has no landmarks, they have to read every element from the top.
 
-Implementing ARIA Correctly
+## Implementing ARIA Correctly
 
 When semantic HTML isn't enough, ARIA (Accessible Rich Internet Applications) provides additional context. However, ARIA is powerful but dangerous, incorrect usage creates more problems than it solves. The first rule of ARIA: don't use ARIA if native HTML will work.
 
@@ -190,7 +187,7 @@ Here is a summary of the most important ARIA attributes and when to apply them:
 | `aria-invalid` | Mark fields with validation errors | `<input aria-invalid="true">` |
 | `role="alert"` | Immediately announce error messages | `<div role="alert">{errorMessage}</div>` |
 
-Keyboard Navigation Testing
+## Keyboard Navigation Testing
 
 Accessibility isn't just about screen readers, keyboard users must be able to navigate your entire interface. Claude Code can help you test and implement proper keyboard navigation:
 
@@ -289,7 +286,7 @@ Manual keyboard testing checklist to run through on every interactive component:
 - Exit the component using Tab or Escape, confirming focus lands in a logical location
 - Verify there are no keyboard traps (elements you can enter but not exit)
 
-Integrating Accessibility into CI/CD
+## Integrating Accessibility into CI/CD
 
 The best accessibility workflow catches issues before they reach production. Integrate accessibility testing into your continuous integration pipeline using Claude Code skills or direct test integration:
 
@@ -356,7 +353,7 @@ Run this test in your CI pipeline. When it fails, Claude Code can analyze the vi
 
 Adding accessibility tests to CI does not guarantee full compliance. automated tools catch roughly 30-40% of WCAG failures. Manual testing with a real screen reader (NVDA on Windows, VoiceOver on macOS/iOS) is still required for production-quality accessibility.
 
-Color Contrast and Visual Accessibility
+## Color Contrast and Visual Accessibility
 
 Many accessibility issues aren't code-related but visual. Ensure your design meets WCAG contrast ratios (4.5:1 for normal text, 3:1 for large text). Claude Code can't directly analyze your design files, but you can describe your color palette:
 
@@ -393,7 +390,7 @@ Beyond color contrast, address these visual accessibility patterns:
 }
 ```
 
-Handling Dynamic Content and Live Regions
+## Handling Dynamic Content and Live Regions
 
 Single-page applications frequently update content without a page reload. Screen reader users can miss these changes entirely unless you use ARIA live regions to announce them:
 
@@ -446,7 +443,7 @@ function RouteAnnouncer() {
 }
 ```
 
-Continuous Accessibility with Claude Code
+## Continuous Accessibility with Claude Code
 
 The key to sustainable accessibility is making it part of your daily workflow:
 

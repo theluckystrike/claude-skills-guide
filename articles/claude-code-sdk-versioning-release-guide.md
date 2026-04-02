@@ -16,7 +16,7 @@ score: 7
 
 Building custom Claude skills is only part of the equation. When you distribute skills to teams or publish them for others to use, proper versioning becomes critical. This guide covers strategies for versioning your custom skills, managing release cycles, and maintaining backward compatibility, all essential knowledge for developers building production-ready Claude Code extensions.
 
-Understanding Skill Versioning Basics
+## Understanding Skill Versioning Basics
 
 Skills follow a standard two-field front matter: `name:` and `description:`. Version tracking happens at the Git repository level rather than inside the skill file itself. The standard approach uses Semantic Versioning (SemVer) for Git tags, which communicates changes clearly to users:
 
@@ -31,7 +31,7 @@ The version tag follows the pattern `MAJOR.MINOR.PATCH`. Increment the MAJOR ver
 
 When you update skills used by the pdf skill for document processing or the tdd skill for test-driven development workflows, Git version tags help users understand exactly what changed without reading every commit.
 
-SemVer Decision Table
+## SemVer Decision Table
 
 Choosing the right version increment matters. Getting it wrong erodes user trust, a PATCH bump that actually breaks something forces users to scramble. Use this table when deciding:
 
@@ -47,7 +47,7 @@ Choosing the right version increment matters. Getting it wrong erodes user trust
 
 Pre-release versions (alpha, beta, RC) can be tagged as `v2.0.0-beta.1` and `v2.0.0-rc.1`. These signal to users that the version is not yet stable and should not be used in production workflows.
 
-Combining Skills for Workflows
+## Combining Skills for Workflows
 
 Skills work together when invoked in sequence within a session. Rather than declaring hard dependencies in front matter (which is not supported), document in each skill's body which other skills it is designed to complement:
 
@@ -62,7 +62,7 @@ This documents the intended workflow for users who install your skill. Clear des
 
 For skills built on the frontend-design skill or the canvas-design skill, documenting complementary skills in the description becomes especially important since these often integrate with multiple external services and tools.
 
-Documenting Skill Relationships in the Body
+## Documenting Skill Relationships in the Body
 
 Beyond the description field, use the skill body to document integration points explicitly. A pattern that works well is a short "Works With" section near the top of the skill:
 
@@ -82,11 +82,11 @@ Usage
 
 This is purely documentation, Claude reads it and can reason about which other skills to invoke. Users scanning your skill library also immediately understand the ecosystem it belongs to.
 
-Managing Breaking Changes
+## Managing Breaking Changes
 
 Breaking changes are inevitable in any evolving SDK. The key is communicating them clearly and providing migration paths. Here are proven patterns:
 
-Version Branches
+## Version Branches
 
 Create separate branches for major versions:
 
@@ -98,7 +98,7 @@ main (latest: 2.x)
 
 This approach lets users on older versions continue receiving critical updates while others migrate to new releases.
 
-Deprecation Notices
+## Deprecation Notices
 
 Include deprecation warnings in your skill documentation when removing features:
 
@@ -111,7 +111,7 @@ description: "Data processor (deprecated. use enhanced-data-processor for better
 
 Use the description field and README to communicate that a skill is deprecated and point users to the replacement.
 
-Providing a Migration Guide
+## Providing a Migration Guide
 
 A MIGRATION.md file in your repository is the most user-friendly way to document breaking changes. Structure each major version's migration notes as a checklist:
 
@@ -134,7 +134,7 @@ New Features in v2
 
 A migration guide costs you one hour to write and saves every upgrading user hours of debugging. It also reduces the support burden on your repository's issue tracker.
 
-Release Workflow Best Practices
+## Release Workflow Best Practices
 
 A disciplined release process prevents confusion and helps users trust your skills. Consider this workflow:
 
@@ -205,11 +205,11 @@ echo "Released v$VERSION"
 
 Run it as `./release.sh 1.4.0` and the script verifies the changelog entry exists before pushing the tag. This prevents tagging a release that has no documented changes.
 
-Handling Configuration Drift
+## Handling Configuration Drift
 
 When users customize skill behavior through configuration, upgrades can break their setups. Use configuration migration strategies:
 
-Migration Files
+## Migration Files
 
 Include migration scripts for major version changes:
 
@@ -228,7 +228,7 @@ migration:
 
 This approach, used by the xlsx skill for spreadsheet operations, automatically transforms old configurations when users upgrade.
 
-Backward-Compatible Defaults
+## Backward-Compatible Defaults
 
 When you add new configuration keys, always provide a sensible default so existing users are unaffected:
 
@@ -244,7 +244,7 @@ Configuration
 
 A configuration key with a well-chosen default is invisible to existing users and immediately useful to new ones. Only omit a default when the key is truly required, and when it is required, it belongs in the MAJOR version bump category.
 
-Distributing Versioned Skills
+## Distributing Versioned Skills
 
 When sharing skills with others, provide clear installation instructions that specify versions:
 
@@ -252,7 +252,7 @@ Provide versioned releases by tagging your repository commits with semantic vers
 
 Track skill versions in your changelog so users know which version to use.
 
-Pinning Versions in Team Environments
+## Pinning Versions in Team Environments
 
 In team setups where multiple developers share a skill library, pinning to a specific tag prevents surprises when someone updates the shared repository:
 
@@ -266,7 +266,7 @@ cp skills-v1.4.0/*.md ~/.claude/
 
 Document the pinned version in your team's onboarding guide so new members install the same version everyone else is using. When the team is ready to upgrade, update the guide and the pinned reference together.
 
-Monitoring and Rollback
+## Monitoring and Rollback
 
 Even with thorough testing, issues sometimes surface in production. Implement monitoring:
 
@@ -276,7 +276,7 @@ Even with thorough testing, issues sometimes surface in production. Implement mo
 
 The internal-comms skill provides patterns for communicating issues to users quickly when problems arise.
 
-Rollback Procedure
+## Rollback Procedure
 
 When a release introduces a critical regression, roll back quickly:
 
@@ -292,14 +292,13 @@ git push origin main --tags
 
 Communicate the rollback in your changelog immediately, note the affected version range, and create an issue to track the root cause before re-releasing.
 
-Conclusion
+## Conclusion
 
 Effective SDK versioning for Claude skills balances backward compatibility with the freedom to improve and evolve. Use Semantic Versioning to communicate change severity clearly, declare dependencies to prevent runtime errors, and maintain clear migration paths for users when breaking changes become necessary.
 
 The practical habits that separate reliable skill authors from unreliable ones are consistent: bumping versions correctly every time, writing a changelog entry for every release, providing a migration guide for every major bump, and maintaining a rollback path for critical regressions. None of these take long individually, but together they build the kind of trust that keeps users on your skills instead of forking them.
 
 By following these practices, you build skills that users trust, skills they can depend on for critical workflows whether they're automating document generation with the pdf skill, designing interfaces with the frontend-design skill, or managing complex development tasks with the tdd skill.
-
 
 Related Reading
 

@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 
 Retool has transformed how teams build internal tools, but integrating AI assistance into your Retool workflow can speed up your development velocity. This guide shows you how to use Claude Code to accelerate every phase of Retool internal tools development, from initial prototyping to complex API integrations and query optimization.
@@ -30,7 +29,7 @@ Retool's visual interface makes building internal tools fast, but you often need
 
 The combination works particularly well because Claude Code understands both general programming patterns and can learn about your specific Retool setup through context files.
 
-Setting Up Claude Code for Retool Projects
+## Setting Up Claude Code for Retool Projects
 
 Before diving into specific workflows, ensure Claude Code understands your Retool environment. Create a `CLAUDE.md` file in your project directory with relevant context:
 
@@ -54,11 +53,11 @@ Common Patterns
 
 This context helps Claude Code provide more relevant suggestions when working on Retool-specific challenges.
 
-Building JavaScript Transformers
+## Building JavaScript Transformers
 
 Retool's JavaScript transformers become significantly more powerful with Claude Code assistance. Rather than struggling with complex logic in Retool's limited code editor, use Claude Code to generate and refine transformers.
 
-Data Transformation Pipeline
+## Data Transformation Pipeline
 
 Suppose you need to transform raw API data into a format suitable for a Retool table. Describe your requirements to Claude Code:
 
@@ -103,11 +102,11 @@ return result;
 
 This approach saves significant time compared to writing complex transformations directly in Retool's editor.
 
-Generating Optimized SQL Queries
+## Generating Optimized SQL Queries
 
 Database queries are the backbone of most internal tools. Claude Code excels at generating efficient, secure SQL that works with Retool's query system.
 
-Parameterized Queries for Security
+## Parameterized Queries for Security
 
 Always use parameterized queries in Retool to prevent SQL injection. Claude Code understands this and will generate safe patterns:
 
@@ -137,11 +136,11 @@ ORDER BY total_spend DESC
 LIMIT 100;
 ```
 
-Automating API Integrations
+## Automating API Integrations
 
 Connecting Retool to external APIs often requires understanding authentication flows, rate limits, and response structures. Claude Code can generate the boilerplate code you need.
 
-Custom REST API Integration
+## Custom REST API Integration
 
 When building integrations with APIs that Retool doesn't have pre-built connectors for, use Claude Code to generate the integration logic:
 
@@ -187,20 +186,20 @@ return {
 };
 ```
 
-Debugging Retool Applications
+## Debugging Retool Applications
 
 When things break in Retool, Claude Code helps diagnose issues faster. Share error messages or unexpected behaviors, and Claude Code can suggest causes and solutions.
 
-Common Debugging Scenarios
+## Common Debugging Scenarios
 
-Issue: Query returns empty results unexpectedly
+## Issue: Query returns empty results unexpectedly
 
 Claude Code might suggest checking:
 - Parameter binding issues (are {{ }} references correct?)
 - Data type mismatches (are you comparing strings to numbers?)
 - Timing issues (is the query running before data loads?)
 
-Issue: Transformer throws "undefined is not an object"
+## Issue: Transformer throws "undefined is not an object"
 
 This typically means you're accessing properties that don't exist. Claude Code suggests adding null checks:
 
@@ -212,7 +211,7 @@ return data.user.profile.settings.theme;
 return data?.user?.profile?.settings?.theme || 'default';
 ```
 
-Best Practices for Claude Code + Retool Workflows
+## Best Practices for Claude Code + Retool Workflows
 
 1. Maintain a project-specific CLAUDE.md with your database schemas, API endpoints, and coding conventions
 
@@ -224,7 +223,7 @@ Best Practices for Claude Code + Retool Workflows
 
 5. Document custom transformers so team members understand complex logic
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your Retool development workflow transforms internal tool building from a manual process to a collaborative AI-assisted workflow. By offloading complex JavaScript, SQL, and API integration tasks to Claude Code, your team can ship internal tools faster while maintaining code quality and security.
 

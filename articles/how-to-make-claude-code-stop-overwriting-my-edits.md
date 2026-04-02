@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-How to Make Claude Code Stop Overwriting Your Edits
-
 One of the most frustrating experiences when working with Claude Code is watching it accidentally overwrite your manual edits. You've carefully modified a file, only to have Claude rewrite it with its own version, losing your changes in the process. This guide shows you exactly how to prevent this common issue and maintain full control over your codebase.
 
-Why Claude Code Sometimes Overwrites Edits
+## Why Claude Code Sometimes Overwrites Edits
 
 Before diving into solutions, it's helpful to understand why this happens. Claude Code operates by reading your files, understanding the codebase, and making modifications based on its understanding of your intent. When it doesn't have visibility into recent changes you've made outside of the conversation, it may generate new content that conflicts with your local edits.
 
@@ -30,7 +27,7 @@ This typically occurs in these scenarios:
 
 The good news is that with the right patterns and practices, you can completely prevent this behavior.
 
-The Read-Before-Edit Pattern
+## The Read-Before-Edit Pattern
 
 The single most effective technique for preventing overwritten edits is the Read-before-edit pattern. Before Claude Code makes any edits to a file, it should always read the current state of that file first.
 
@@ -42,11 +39,11 @@ When you ask Claude Code to edit a file, always ensure it has read the most rece
 
 This simple habit ensures Claude Code works with the latest version of your code rather than a stale cached version.
 
-Using the edit_file Tool Correctly
+## Using the edit_file Tool Correctly
 
 Claude Code provides the edit_file tool as the primary method for making targeted changes to files. Understanding how to use this tool effectively is crucial for preventing unintended overwrites.
 
-Be Specific About What You're Changing
+## Be Specific About What You're Changing
 
 Instead of vague instructions like "Fix the authentication code," provide precise guidance:
 
@@ -61,7 +58,7 @@ The more context you provide about:
 
 ...the more accurate Claude Code's edits will be.
 
-Use Diff-Style Edits
+## Use Diff-Style Edits
 
 When possible, provide the exact before-and-after for the changes. This is sometimes called a "diff-style" or "side-by-side" edit:
 
@@ -172,7 +169,6 @@ Claude Code is a powerful tool, but like any powerful tool, it requires thoughtf
 Remember: the key is ensuring Claude Code always has visibility into the current state of your files before it makes modifications. With these practices in place, you'll maintain full control over your codebase while still benefiting from Claude Code's assistance.
 
 Start applying these techniques today, and you'll never have to recover overwritten edits again.
-
 
 Related Reading
 

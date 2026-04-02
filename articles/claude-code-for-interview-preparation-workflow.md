@@ -18,7 +18,7 @@ Technical interviews demand structured practice, targeted feedback, and efficien
 
 > Scope of this guide: This article is a hands-on skills-integration workflow. how to combine the `tdd`, `supermemory`, `pdf`, and `docx` skills into a cohesive daily practice system. If you're looking for preparation strategy, study scheduling, and mock interview habits see [Mastering Coding Interviews with Claude Code](/claude-code-for-coding-interview-preparation-workflow/).
 
-Structuring Your Practice Session
+## Structuring Your Practice Session
 
 A solid interview prep workflow starts with proper project organization. Create a dedicated directory for your practice sessions that Claude Code can understand and work with effectively:
 
@@ -39,7 +39,7 @@ pip install pytest
 
 When you start a Claude Code session in this directory, it understands your testing framework and can provide contextually relevant assistance. This matters because interview preparation isn't just about solving problems, it's about solving them in the way companies expect.
 
-Generating Targeted Practice Problems
+## Generating Targeted Practice Problems
 
 Rather than randomly selecting problems, use Claude Code to generate problems matching your current skill level and target companies. Create a simple prompt structure:
 
@@ -55,7 +55,7 @@ Generate 5 sliding window problems with increasing difficulty. Include brute for
 
 This targeted approach ensures you're spending time on high-value problems rather than randomly working through lists.
 
-Implementing with Test-Driven Development
+## Implementing with Test-Driven Development
 
 The `tdd` skill enforces a test-first workflow that aligns perfectly with interview expectations. When you load this skill, Claude Code guides you through writing tests before implementation, a practice that demonstrates professional software development habits to interviewers.
 
@@ -70,7 +70,7 @@ Given an array of integers nums and an integer target, return indices of the two
 
 The skill will prompt you to write test cases first, then implement the solution. This workflow builds good habits while reinforcing problem-solving skills.
 
-Using the Supermemory Skill for Concept Review
+## Using the Supermemory Skill for Concept Review
 
 Interview success requires more than just problem-solving practice, you need solid fundamentals. The `supermemory` skill maintains persistent context across sessions, allowing you to build a personal knowledge base of concepts, patterns, and solutions you've encountered.
 
@@ -91,7 +91,7 @@ This creates a searchable reference that persists between sessions. When prepari
 What sliding window patterns have I stored? Show me the variations.
 ```
 
-Simulating Real Interview Conditions
+## Simulating Real Interview Conditions
 
 Practice under realistic conditions by setting time limits and explaining your thinking. Use Claude Code's session context to simulate the interview pressure:
 
@@ -107,7 +107,7 @@ Review my approach: I started with a brute force O(n²) solution, then optimized
 
 This builds the communication skills that separate candidates who solve problems from those who demonstrate they can work on a team.
 
-Handling System Design Questions
+## Handling System Design Questions
 
 For senior roles, system design questions require a different preparation approach. Create a dedicated workflow for these:
 
@@ -131,7 +131,7 @@ Extract the key points from "System Design Interview" chapter on database shardi
 
 This integrates study materials directly into your practice workflow.
 
-Documenting and Reviewing Your Progress
+## Documenting and Reviewing Your Progress
 
 Track your practice sessions with structured notes that Claude Code can reference:
 
@@ -152,7 +152,7 @@ Review this log before each practice session to identify weak areas. The `docx` 
 Create a weekly progress report from my practice logs showing: problems by difficulty, time spent, improvement areas, and next week targets.
 ```
 
-Combining Skills for Complete Preparation
+## Combining Skills for Complete Preparation
 
 The most effective workflow combines multiple skills into a cohesive system:
 
@@ -173,7 +173,7 @@ Review: Add any new patterns to memory store
 
 This approach maximizes practice efficiency while building the habits that interviewers notice.
 
-Adapting to Different Interview Formats
+## Adapting to Different Interview Formats
 
 Your workflow should adapt to different interview types:
 
@@ -190,7 +190,6 @@ This take-home requires building a REST API with authentication. Help me plan th
 Build your workflow around the specific format you'll encounter, and practice under those conditions.
 
 A well-structured Claude Code workflow transforms interview preparation from passive studying into active, feedback-driven practice. By integrating problem generation, test-driven implementation, concept storage, and progress tracking into a single workflow, you maximize both efficiency and effectiveness.
-
 
 Related Reading
 

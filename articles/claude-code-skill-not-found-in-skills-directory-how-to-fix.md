@@ -16,15 +16,15 @@ permalink: /claude-code-skill-not-found-in-skills-directory-how-to-fix/
 
 You've just installed a new Claude Code skill, perhaps the pdf skill for document processing, the tdd skill for test-driven development, or the frontend-design skill for UI prototyping. You type `/skill-name` expecting it to work, but instead you see an error message indicating the skill wasn't found in the [skills directory](/claude-skill-md-format-complete-specification-guide/). This happens more often than you'd think, and the fix is usually straightforward.
 
-Understanding the "Skill Not Found" Error
+## Understanding the "Skill Not Found" Error
 
 When Claude Code cannot locate a skill you've referenced, it reports that the skill directory cannot be found. This isn't a bug in Claude Code itself, it's almost always a configuration or placement issue. Skills in Claude Code are Markdown files that live in a specific directory, and Claude needs to know where to look.
 
 Before diving into fixes, verify what directory Claude Code is actually using for skills. The default location is `~/.claude/skills/`, but custom configurations can point elsewhere. If you've modified your Claude configuration or are using a project-specific skills setup, the path may differ from the standard location.
 
-Common Causes and Their Solutions
+## Common Causes and Their Solutions
 
-Cause 1: Skills Installed in the Wrong Location
+## Cause 1: Skills Installed in the Wrong Location
 
 The most frequent reason for the "skill not found" error is simple: the [skill file](/claude-skill-metadata-header-vs-full-body-loading/) ended up in the wrong directory. Claude Code expects skills to be in `~/.claude/skills/` as individual Markdown files with the `.md` extension.
 
@@ -43,7 +43,7 @@ mv /path/to/your-skill.md ~/.claude/skills/your-skill.md
 
 For example, if you downloaded the xlsx skill for spreadsheet manipulation, ensure the file exists as `~/.claude/skills/xlsx.md` and not in a subdirectory like `~/.claude/skills/xlsx/xlsx.md`.
 
-Cause 2: Incorrect Filename or Invocation Name
+## Cause 2: Incorrect Filename or Invocation Name
 
 Skill invocation depends on the filename without its extension. If your skill file is named `my-custom-skill.md`, you invoke it as `/my-custom-skill`, not `/my custom skill` or `/my-custom-skill.md`.
 
@@ -62,7 +62,7 @@ Example of correct invocation:
 /supermemory What do you have in the meeting notes about Q4?
 ```
 
-Cause 3: Missing Skill File Extension
+## Cause 3: Missing Skill File Extension
 
 Every skill must be a Markdown file with the `.md` extension. If you've renamed a file or saved it as plain text, Claude Code won't recognize it. Verify the file has the correct extension:
 
@@ -74,7 +74,7 @@ If you have a file without .md extension, rename it
 mv ~/.claude/skills/xlsx ~/.claude/skills/xlsx.md
 ```
 
-Cause 4: Empty or Corrupted Skill File
+## Cause 4: Empty or Corrupted Skill File
 
 A skill file must contain at least some content to be recognized. If you created an empty file or the download was corrupted, Claude Code may still find the file but fail to load it properly.
 
@@ -90,7 +90,7 @@ head -n 10 ~/.claude/skills/skill-name.md
 
 A valid skill file should have meaningful content. If you downloaded the skill from a community repository, try re-downloading it.
 
-Cause 5: Syntax Errors in Skill Definition
+## Cause 5: Syntax Errors in Skill Definition
 
 Skills use YAML front matter for metadata. If this section is malformed, Claude Code may fail to parse the skill correctly. A properly formatted skill file starts with:
 
@@ -121,7 +121,7 @@ If you copied skill content from a PDF or a rich text editor, invisible non-UTF-
 
 Use a YAML validator to check your skill's front matter if you suspect syntax issues.
 
-Cause 6: Claude Code Using a Custom Skills Path
+## Cause 6: Claude Code Using a Custom Skills Path
 
 Some users configure Claude Code to use a different skills directory via environment variables or configuration files. This is common in enterprise setups or when managing project-specific skills.
 
@@ -137,7 +137,7 @@ cat ~/.claude/settings.json | grep -i skill
 
 If a custom path is set, either update it or move your skills to the configured location.
 
-Skills That Commonly Cause This Issue
+## Skills That Commonly Cause This Issue
 
 Certain skills are more prone to installation issues because of their complexity or because users frequently download them from different sources:
 
@@ -149,11 +149,11 @@ Certain skills are more prone to installation issues because of their complexity
 
 When installing these skills, pay extra attention to any README or setup instructions that come with them.
 
-Note on Built-in Skills
+## Note on Built-in Skills
 
 The built-in skills. `/pdf`, `/tdd`, `/docx`, `/xlsx`, `/pptx`, `/frontend-design`, `/canvas-design`, `/supermemory`, `/webapp-testing`, `/skill-creator`. do not require external API keys or additional installations. If one of these built-in skills isn't responding, the issue is likely a Claude Code version problem rather than a directory placement issue.
 
-Quick Diagnostic Checklist
+## Quick Diagnostic Checklist
 
 When you encounter the "skill not found" error, work through this checklist:
 
@@ -174,7 +174,7 @@ If you've exhausted these solutions, consider these additional steps:
 - Test with a minimal skill. create a simple test skill to verify the system works
 - Reinstall Claude Code. corruption in the installation can cause unexpected behavior
 
-Prevention Going Forward
+## Prevention Going Forward
 
 To avoid skill directory issues in the future:
 

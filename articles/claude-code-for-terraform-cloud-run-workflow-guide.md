@@ -13,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Terraform Cloud Run Workflow Guide
-
 Deploying applications to Google Cloud Run with Terraform can be complex, involving multiple resources, IAM configurations, and networking setups. Claude Code transforms this workflow by helping you write, review, and maintain Terraform configurations more efficiently. This guide shows you practical patterns for using Claude Code with your Terraform Cloud Run projects.
 
-Setting Up Your Terraform Cloud Run Project
+## Setting Up Your Terraform Cloud Run Project
 
 Before diving into Claude Code integration, ensure your project structure supports efficient collaboration. A well-organized Terraform project makes Claude Code more effective at understanding your infrastructure intent.
 
@@ -43,11 +40,11 @@ cloud-run-project/
 
 This structure allows Claude Code to navigate your infrastructure code systematically. When working with Claude Code, you can ask it to modify specific modules without affecting your entire configuration.
 
-Writing Cloud Run Terraform Configurations
+## Writing Cloud Run Terraform Configurations
 
 Claude Code excels at generating Terraform configurations from natural language descriptions. Here's how to use this capability for Cloud Run deployments.
 
-Basic Cloud Run Service Configuration
+## Basic Cloud Run Service Configuration
 
 When you need a basic Cloud Run service, describe your requirements to Claude Code:
 
@@ -87,7 +84,7 @@ resource "google_cloud_run_service_iam_member" "api_service_allUsers" {
 }
 ```
 
-Adding Environment Variables and Secrets
+## Adding Environment Variables and Secrets
 
 Cloud Run services typically require environment variables and secret references. Ask Claude Code to extend your configuration:
 
@@ -130,11 +127,11 @@ resource "google_cloud_run_service" "api_service" {
 
 Claude Code understands Cloud Run's resource constraints and can recommend appropriate CPU and memory allocations based on your service requirements.
 
-Managing IAM and Security
+## Managing IAM and Security
 
 IAM configuration is critical for Cloud Run services. Claude Code helps you set up proper access controls without over-permissioning.
 
-Service-to-Service Authentication
+## Service-to-Service Authentication
 
 For services that need to communicate with each other, Claude Code can generate fine-grained IAM policies:
 
@@ -156,7 +153,7 @@ resource "google_cloud_run_service_iam_member" "cloudbuild_invoker" {
 }
 ```
 
-VPC Connector Configuration
+## VPC Connector Configuration
 
 If your Cloud Run service needs VPC access, describe this requirement to Claude Code:
 
@@ -182,11 +179,11 @@ resource "google_cloud_run_service" "api_service" {
 }
 ```
 
-Implementing GitOps Workflows
+## Implementing GitOps Workflows
 
 Claude Code enhances your GitOps workflow by automating Terraform plan reviews and suggesting improvements before apply.
 
-Pre-Commit Validation
+## Pre-Commit Validation
 
 Ask Claude Code to review your Terraform changes:
 
@@ -200,7 +197,7 @@ Review the changes in this pull request. Check for:
 
 Claude Code analyzes your modifications and provides actionable feedback, helping you catch issues before they reach production.
 
-Drift Detection and Reconciliation
+## Drift Detection and Reconciliation
 
 After deployment, Claude Code can help identify and resolve configuration drift:
 
@@ -211,7 +208,7 @@ terraform plan -out=tfplan
 
 Then ask Claude Code to explain any changes and suggest remediation steps.
 
-Automating with Terragrunt
+## Automating with Terragrunt
 
 For larger deployments, Terragrunt provides orchestration capabilities. Claude Code can help you write Terragrunt configurations that keep your code DRY:
 
@@ -246,27 +243,27 @@ Create Terragrunt configurations for dev, staging, and production environments.
 Each should have appropriate instance limits and region settings.
 ```
 
-Best Practices for Claude Code with Terraform
+## Best Practices for Claude Code with Terraform
 
 Maximize your productivity by following these patterns when using Claude Code with Terraform Cloud Run projects.
 
-Write Clear, Specific Prompts
+## Write Clear, Specific Prompts
 
 Claude Code performs best when given precise instructions. Instead of vague requests like "set up Cloud Run," provide specific details about resources, regions, and requirements. Include constraints like budget limits or compliance requirements in your initial prompt.
 
-Use Modules for Reusability
+## Use Modules for Reusability
 
 Create reusable modules for common Cloud Run patterns. Claude Code can then help you compose these modules into different environments without duplicating configuration. This approach also makes your infrastructure code more testable.
 
-Document Your Infrastructure as Code
+## Document Your Infrastructure as Code
 
 Add comments explaining business requirements behind configuration choices. When Claude Code understands the context, it provides more relevant suggestions and catches potential issues that might violate your architectural decisions.
 
-Implement Policy as Code
+## Implement Policy as Code
 
 Combine Claude Code with Sentinel or OPA policies for governance. Ask Claude Code to generate policy checks that validate your Terraform configurations before deployment.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Terraform Cloud Run workflows from manual, error-prone processes into collaborative, assisted development experiences. By writing clear prompts, maintaining modular configurations, and using Claude Code's understanding of Terraform patterns, you can deploy Cloud Run services faster while maintaining high standards for security and reliability.
 

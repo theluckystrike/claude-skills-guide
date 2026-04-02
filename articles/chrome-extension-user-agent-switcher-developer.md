@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension User Agent Switcher: A Developer's Guide"
 description: "Learn how to build a Chrome extension that switches user agents programmatically. Practical code examples and implementation patterns for developers."
@@ -14,12 +13,10 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-
 {% raw %}
 Building a Chrome extension to switch user agents is a practical project that demonstrates how to interact with browser network requests and modify extension behavior dynamically. This guide walks you through the implementation, from manifest configuration to runtime message handling.
 
-Understanding the User Agent Challenge
+## Understanding the User Agent Challenge
 
 The User-Agent header identifies your browser to web servers. Developers often need to switch this header for testing responsive designs, debugging server-side rendering issues, or accessing region-locked content. Chrome extensions provide several approaches to modify the User-Agent, each with different trade-offs.
 
@@ -76,7 +73,7 @@ rules.json Definition
 
 This configuration applies the iPhone User-Agent to all main frame requests. The extension intercepts network requests before they reach the server.
 
-Method 2: Programmatic User Agent Switching
+## Method 2: Programmatic User Agent Switching
 
 For dynamic switching based on user preferences, use runtime messaging with the declarativeNetRequest API.
 
@@ -165,7 +162,7 @@ document.getElementById('applyBtn').addEventListener('click', () => {
 });
 ```
 
-Method 3: Content Script Injection
+## Method 3: Content Script Injection
 
 For per-tab switching without affecting the entire browser, inject a content script that overrides navigator.userAgent.
 
@@ -195,11 +192,11 @@ Object.defineProperty(navigator, 'userAgent', {
 
 This method works for JavaScript-accessible user agent values but does not change the actual HTTP header sent with requests.
 
-Handling Edge Cases
+## Handling Edge Cases
 
 Several scenarios require additional consideration when building user agent switchers.
 
-Extension Update Conflicts
+## Extension Update Conflicts
 
 When updating rules dynamically, ensure previous rules are properly removed to prevent conflicts:
 
@@ -225,7 +222,7 @@ async function setUserAgent(ua) {
 }
 ```
 
-Manifest V2 Legacy Support
+## Manifest V2 Legacy Support
 
 If supporting older extensions, use the webRequest API:
 
@@ -247,7 +244,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 
 Note that Manifest V2 requires the "webRequest" and "webRequestBlocking" permissions.
 
-Best Practices
+## Best Practices
 
 Store user preferences using chrome.storage.sync for persistence across devices:
 
@@ -267,10 +264,9 @@ chrome.storage.sync.get(['userAgent'], (result) => {
 
 Test your extension against multiple websites to verify compatibility. Some sites use additional headers or JavaScript checks beyond the User-Agent string.
 
-Conclusion
+## Conclusion
 
 Building a user agent switcher in Chrome extensions requires understanding the Declarative Net Request API and its limitations. Choose the method that matches your use case: declarative rules for simple global switching, runtime messaging for dynamic control, or content script injection for per-tab customization. The Manifest V3 approach provides the most reliable results for HTTP header modification.
-
 
 Related Reading
 
@@ -280,7 +276,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step Guide: Loading the Extension
+## Step-by-Step Guide: Loading the Extension
 
 1. Create a directory `user-agent-switcher/` with the files described above
 2. Navigate to `chrome://extensions/` in Chrome
@@ -290,7 +286,7 @@ Step-by-Step Guide: Loading the Extension
 6. Click it, select a user agent preset, and click Apply
 7. Visit `https://httpbin.org/headers` to confirm the `User-Agent` field in the response JSON reflects your change
 
-Practical Use Cases for Developers
+## Practical Use Cases for Developers
 
 Testing responsive designs without device emulation: Some servers send different HTML based on UA strings, which Chrome DevTools device emulation does not always replicate accurately. Switching to a mobile UA reveals actual server-side differences.
 
@@ -298,7 +294,7 @@ Debugging SSR differences: If your SSR layer serves different content to Googleb
 
 Verifying CDN behavior: Some CDNs use the UA string to determine which assets to serve. Switching UAs confirms your CDN configuration is routing correctly.
 
-Comparison with DevTools Device Emulation
+## Comparison with DevTools Device Emulation
 
 | Feature | This Extension | Chrome DevTools Device Mode |
 |---|---|---|
@@ -310,7 +306,7 @@ Comparison with DevTools Device Emulation
 
 The extension wins for workflows where you want a persistent UA change across all tabs or across a full browser session.
 
-Advanced: Per-Domain UA Switching
+## Advanced: Per-Domain UA Switching
 
 For power users who need different UAs on different sites, extend the dynamic rules system:
 
@@ -337,7 +333,7 @@ async function setDomainUA(domain, userAgent, ruleId) {
 
 Store domain-to-UA mappings in `chrome.storage.sync` so preferences follow the user across devices.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 UA header not changing for subframe requests: Add `sub_frame` and `xmlhttprequest` to the `resourceTypes` array in your declarativeNetRequest rule condition.
 
@@ -348,6 +344,5 @@ UA not persisting after browser restart: Dynamic rules created via `updateDynami
 Testing on localhost: The `urlFilter: "*"` may not match `localhost` in all Chrome versions. Add an explicit rule for `http://localhost/*` when testing against local dev servers.
 
 Building a user agent switcher requires understanding the Declarative Net Request API and its trade-offs. Choose the method that matches your use case: declarative rules for global switching, runtime messaging for dynamic control, or content script injection for per-tab JavaScript-level overrides.
-
 
 {% endraw %}

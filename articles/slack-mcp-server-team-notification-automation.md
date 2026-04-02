@@ -30,7 +30,7 @@ Key capabilities include:
 - Reacting to messages programmatically (for lightweight acknowledgment flows)
 - Looking up users and channels by name or ID
 
-MCP vs. Traditional Slack Bots
+## MCP vs. Traditional Slack Bots
 
 | Feature | Traditional Slack Bot | Slack MCP Server |
 |---|---|---|
@@ -43,7 +43,7 @@ MCP vs. Traditional Slack Bots
 
 The MCP approach wins when your notifications are Claude-initiated: after a test run, a deploy, a code review, or any workflow Claude is already driving. If you need a bot that responds to user messages or listens for events in real-time, a traditional bot is still appropriate. but for outbound automation, MCP is far simpler.
 
-Setting Up the Slack MCP Server
+## Setting Up the Slack MCP Server
 
 Before building notification automations, you need to configure the MCP server connection. Create a Slack app with the necessary scopes:
 
@@ -98,11 +98,11 @@ Use the slack MCP tool to send a test message to #general saying "Slack MCP conn
 
 If the message appears in Slack, your setup is complete.
 
-Building Automated Notification Workflows
+## Building Automated Notification Workflows
 
 With the MCP server configured, you can now build notification workflows. The most common pattern connects CI/CD pipelines to Slack channels.
 
-Deployment Notification Example
+## Deployment Notification Example
 
 When your deployment pipeline completes, notify the team automatically:
 
@@ -144,7 +144,7 @@ Rollback: git revert a3f92bc && ./deploy.sh production
 
 Teams that receive this level of detail can immediately assess the deployment status, verify test coverage, and know exactly how to roll back if needed.
 
-Multi-Service Monitoring Workflows
+## Multi-Service Monitoring Workflows
 
 For complex systems, coordinate notifications across services using the Slack MCP server:
 
@@ -186,7 +186,7 @@ done
 
 Claude reads this output, identifies failures, and sends a structured alert to Slack with the precise services affected and their response codes.
 
-Pull Request Review Notifications
+## Pull Request Review Notifications
 
 Beyond deployments and monitoring, the Slack MCP server is useful for code review workflows. When Claude finishes reviewing a pull request, it can automatically notify reviewers:
 
@@ -197,9 +197,9 @@ including: PR title, author, files changed, key findings, and a recommendation (
 
 This turns Claude's code review output into a structured team notification, surfacing important context without requiring reviewers to dig into the PR diff themselves before triaging.
 
-Advanced Notification Patterns
+## Advanced Notification Patterns
 
-Thread-Based Updates
+## Thread-Based Updates
 
 For ongoing incidents or long-running processes, use Slack threads to keep context organized:
 
@@ -232,7 +232,7 @@ await slack.send_message({
 
 Thread-based updates are critical for incident management. Without threads, a busy #incidents channel becomes unusable because multiple concurrent incidents interleave their messages. Threading groups all updates for an incident into a single conversation, making it trivial to follow each incident independently.
 
-Scheduled Report Delivery
+## Scheduled Report Delivery
 
 Combine with the `pdf` skill to generate and send scheduled reports:
 
@@ -274,7 +274,7 @@ and post a 3-sentence text summary in the same channel.
 "
 ```
 
-Conditional Alert Routing
+## Conditional Alert Routing
 
 Different types of alerts belong in different channels. Rather than sending everything to one place, use conditional routing:
 
@@ -297,7 +297,7 @@ If deployment fails after tests pass:
 
 This kind of routing logic is easy to encode in a Claude skill definition and produces a much cleaner notification experience than a single firehose channel.
 
-File and Artifact Uploads
+## File and Artifact Uploads
 
 After generating test coverage reports, build artifacts, or analysis outputs, upload them directly to Slack:
 
@@ -312,7 +312,7 @@ with the message 'Test coverage report for commit $(git rev-parse --short HEAD)'
 
 Teams can view coverage reports without needing access to your CI system, making it easier for non-engineers to stay informed about quality trends.
 
-Notification Message Design
+## Notification Message Design
 
 Well-designed notifications get acted on. Poorly designed ones get muted. A few principles:
 
@@ -334,7 +334,7 @@ Limit noise. Success notifications for routine events train teams to ignore all 
 | Weekly report | #team | None | No |
 | PR review complete | #code-review | PR author | No |
 
-Best Practices for Team Notifications
+## Best Practices for Team Notifications
 
 1. Use thread replies for ongoing events rather than flooding channels with new messages
 
@@ -352,7 +352,7 @@ Best Practices for Team Notifications
 
 8. Version your skill definitions. store notification skill files in your repo so you can track changes and roll back formatting updates
 
-Security Considerations
+## Security Considerations
 
 When building notification automations:
 
@@ -363,7 +363,7 @@ When building notification automations:
 - Do not include sensitive data in notifications (passwords, API keys, PII) even in private channels. prefer links to secure dashboards
 - Consider a separate bot token for CI/CD automation vs. interactive use so you can revoke one without disrupting the other
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Bot is not posting to a channel: The bot must be a member of the channel. Run `/invite @your-bot-name` in that channel.
 
@@ -375,7 +375,7 @@ MCP server not connecting: Run `npx @modelcontextprotocol/server-slack` directly
 
 Messages appear but without formatting: Ensure you're using Slack's Block Kit or `mrkdwn` field for formatted text. Plain `text` fields do not render markdown.
 
-Conclusion
+## Conclusion
 
 The Slack MCP server enables powerful team notification automation within Claude Code. Whether you're alerting on deployments, monitoring service health, delivering scheduled reports, or routing PR reviews, the integration brings contextual AI capabilities to your team's communication workflow. Because Claude drives the notifications directly from within its own workflow. no glue code, no separate bot server. the integration stays simple to maintain and easy to extend.
 

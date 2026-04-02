@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for EKS IRSA Workflow
 
 Managing IAM roles for Kubernetes service accounts in Amazon EKS can be complex. Manual configuration of OIDC providers, IAM policies, and Kubernetes service accounts often leads to errors and security misconfigurations. This guide shows how to use Claude Code to automate and simplify your EKS IRSA workflow, making it reproducible, secure, and maintainable.
 
-Understanding EKS IRSA Architecture
+## Understanding EKS IRSA Architecture
 
 Before diving into the Claude Code workflow, let's briefly review how EKS IRSA works. When you configure IRSA, you create an IAM role with a trust policy that allows the Kubernetes service account to assume it. The EKS cluster's OIDC provider mediates this trust relationship, enabling pods to use AWS credentials without storing long-lived secrets.
 
@@ -32,7 +31,7 @@ The key components are:
 
 Understanding the request flow helps when debugging: a pod starts, the Kubernetes mutating webhook injects a projected service account token volume into the pod spec, the AWS SDK reads that token, calls `sts:AssumeRoleWithWebIdentity`, and receives temporary credentials. This entire chain depends on each component being configured correctly. which is exactly where manual setups break down and Claude Code's automation pays off.
 
-IRSA vs. Other AWS Credential Patterns
+## IRSA vs. Other AWS Credential Patterns
 
 Before committing to IRSA, it helps to understand why it is preferred over the alternatives:
 
@@ -45,7 +44,7 @@ Before committing to IRSA, it helps to understand why it is preferred over the a
 
 IRSA is the recommended pattern for EKS workloads because credentials are short-lived (1 hour by default), scoped to a single service account, and never stored in Kubernetes Secrets.
 
-Setting Up Claude Code for IRSA Automation
+## Setting Up Claude Code for IRSA Automation
 
 To automate IRSA workflows with Claude Code, you'll want to create a specialized skill. This skill will help generate the necessary configurations and validate your setup. Here's a skill definition that handles IRSA operations:
 
@@ -76,7 +75,7 @@ Required permissions: read/write to S3 bucket "payments-receipts-prod",
 
 Claude will respond with the complete OIDC verification steps, IAM policy JSON, trust policy JSON, Kubernetes manifest, and apply commands in the correct order.
 
-Automating OIDC Provider Configuration
+## Automating OIDC Provider Configuration
 
 The first step in any IRSA setup is ensuring your EKS cluster has an OIDC provider. Claude Code can check this and guide you through the configuration. Here's a practical workflow:
 
@@ -136,7 +135,7 @@ aws iam create-open-id-connect-provider \
 
 Claude Code can generate this entire sequence for you and adapt it to your specific cluster configuration.
 
-Generating IAM Role Trust Policies
+## Generating IAM Role Trust Policies
 
 The trust policy is critical for security. It determines which service account can assume the role. Claude Code can generate this policy dynamically based on your inputs:
 
@@ -196,7 +195,7 @@ aws iam create-role \
 
 Note the addition of the `aud` condition (`sts.amazonaws.com`). This is a security hardening measure that restricts the token's audience and is recommended by AWS as of 2024.
 
-Creating IAM Permission Policies
+## Creating IAM Permission Policies
 
 The trust policy controls who can assume the role; the permission policy controls what they can do once they have assumed it. For the payments service example:
 
@@ -250,7 +249,7 @@ aws iam put-role-policy \
   --policy-document file://permission-policy.json
 ```
 
-Creating Kubernetes Service Account Manifests
+## Creating Kubernetes Service Account Manifests
 
 Once the IAM role exists, you need to create the Kubernetes service account with the correct annotation. Claude Code can generate this manifest:
 
@@ -294,7 +293,7 @@ kubectl get serviceaccount payment-processor \
   -o jsonpath='{.metadata.annotations}'
 ```
 
-End-to-End Workflow with Claude Code
+## End-to-End Workflow with Claude Code
 
 Here's a practical end-to-end workflow you can execute with Claude:
 
@@ -350,7 +349,7 @@ Clean up the test pod
 kubectl delete pod test-irsa -n payments
 ```
 
-Using Claude Code to Audit Existing IRSA Configurations
+## Using Claude Code to Audit Existing IRSA Configurations
 
 One of the most valuable uses of Claude Code is auditing existing IRSA setups across a cluster. Over time, applications accumulate roles with stale permissions or misconfigured trust policies. Claude can help you systematically review them:
 
@@ -363,7 +362,7 @@ kubectl get serviceaccounts --all-namespaces \
 
 Feed this output to Claude and ask it to cross-reference each role ARN against your IAM roles, check that the trust policies are correctly scoped, and flag any roles that grant permissions beyond what the service account likely needs. This kind of audit is tedious to do manually but straightforward for Claude to reason through systematically.
 
-Best Practices for IRSA with Claude Code
+## Best Practices for IRSA with Claude Code
 
 When automating IRSA workflows, follow these actionable best practices:
 
@@ -391,7 +390,7 @@ aws iam tag-role \
 
 Audit your IRSA usage - Regularly review which service accounts have IAM role annotations and whether those roles still match the principle of least privilege. Use AWS CloudTrail to see which roles are actively being assumed and remove roles for decommissioned services.
 
-Troubleshooting Common IRSA Issues
+## Troubleshooting Common IRSA Issues
 
 Even with automation, issues can arise. Here are common problems and how Claude Code can help diagnose them:
 
@@ -422,7 +421,7 @@ kubectl exec -n payments my-pod -- \
   ls /var/run/secrets/eks.amazonaws.com/serviceaccount/
 ```
 
-Comparing IRSA Setup Approaches
+## Comparing IRSA Setup Approaches
 
 | Approach | Setup Time | Error Risk | Repeatability | Claude Code Benefit |
 |----------|-----------|------------|---------------|---------------------|
@@ -433,7 +432,7 @@ Comparing IRSA Setup Approaches
 
 Claude Code is particularly valuable for the initial setup of new services where you need to create all components from scratch. For infrastructure managed at scale with Terraform or CDK, Claude Code is better used as a reviewer and debugger of existing IaC rather than as the primary generator.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms EKS IRSA from a manual, error-prone process into a repeatable, secure workflow. By generating correct IAM policies, validating trust relationships, and creating proper Kubernetes manifests, Claude helps you implement IRSA correctly on the first try.
 

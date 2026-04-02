@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for PostgreSQL Full-Text Search Workflow
-
 PostgreSQL's built-in full-text search capabilities provide a powerful alternative to external search engines like Elasticsearch. When combined with Claude Code, you can efficiently design, implement, and optimize search workflows without leaving your development environment. This guide walks you through building a complete full-text search pipeline using PostgreSQL and Claude Code assistance.
 
-Understanding PostgreSQL Full-Text Search Basics
+## Understanding PostgreSQL Full-Text Search Basics
 
 PostgreSQL's full-text search operates on two core concepts: tsvector for document representation and tsquery for search patterns. A tsvector converts text into a searchable format by parsing, normalizing, and weighting terms. The tsquery type then matches against this optimized structure.
 
@@ -26,7 +23,7 @@ The fundamental workflow involves creating a tsvector column (either generated o
 
 Claude Code can help you generate the exact SQL needed for your specific data structure. Describe your table schema and search requirements, and Claude can produce the appropriate tsvector configurations, index statements, and query formulations.
 
-Setting Up Your Search Infrastructure
+## Setting Up Your Search Infrastructure
 
 The first step involves preparing your database schema for full-text search. You'll need to identify which columns contain searchable text and create appropriate index structures. Here's a practical example of enabling full-text search on a posts table:
 
@@ -53,7 +50,7 @@ ORDER BY ts_rank(to_tsvector('english', title || ' ' || body),
 
 This pattern suits scenarios where search requirements vary frequently or storage space is at a premium.
 
-Building Search Queries with Claude Code
+## Building Search Queries with Claude Code
 
 Crafting effective full-text search queries requires understanding PostgreSQL's query syntax and ranking functions. Claude Code excels at translating natural language requirements into precise SQL. You can describe what you want to find, and Claude generates the corresponding tsquery expression.
 
@@ -79,7 +76,7 @@ WHERE search_vector @@ to_tsquery('english', 'claude & (code | ai)');
 
 Claude Code can help you build these queries incrementally. Start with a basic search, describe what results you're missing or what's being incorrectly included, and Claude can refine the query syntax to improve precision.
 
-Optimizing Search Performance
+## Optimizing Search Performance
 
 Performance tuning for PostgreSQL full-text search involves several strategies. Index selection is the primary consideration, GIN indexes excel at read-heavy workloads but add overhead to writes. For write-heavy applications, consider GIST indexes or materialized approaches that balance query speed against update complexity.
 
@@ -97,7 +94,7 @@ Look for sequential scans on large tables, which indicate missing or ineffective
 
 Partitioning becomes valuable for very large datasets. You can partition by date, category, or another logical division that matches your query patterns. Claude Code can help design a partitioning strategy aligned with your access patterns.
 
-Implementing Advanced Search Features
+## Implementing Advanced Search Features
 
 Beyond basic keyword matching, PostgreSQL supports sophisticated search capabilities. Highlighting shows users where matches occur within retrieved text:
 
@@ -129,7 +126,7 @@ GENERATED ALWAYS AS (
 
 This configuration ensures title matches rank higher than body content matches, improving result relevance for users.
 
-Integrating Search with Your Application
+## Integrating Search with Your Application
 
 Connecting PostgreSQL full-text search to your application typically involves simple SQL queries from your preferred ORM or database driver. Most ORMs support the necessary operators, though you may need to use raw queries for complex tsquery constructions.
 
@@ -137,7 +134,7 @@ For web applications, consider implementing search-as-you-type functionality usi
 
 If your search volume exceeds single-database capacity, consider read replicas with search-specific configurations or external solutions like Elasticsearch for horizontal scaling. Claude Code can help architect these transitions when your PostgreSQL-based solution reaches its limits.
 
-Practical Implementation Tips
+## Practical Implementation Tips
 
 Start with the simplest approach that meets your requirements. A single tsvector column combining relevant fields with a GIN index handles most use cases effectively. Only add complexity, partitioning, custom dictionaries, or external search engines, when measurements indicate necessary.
 

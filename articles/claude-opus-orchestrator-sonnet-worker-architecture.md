@@ -16,19 +16,19 @@ permalink: /claude-opus-orchestrator-sonnet-worker-architecture/
 
 The [orchestrator-worker pattern](/claude-code-multi-agent-orchestration-patterns-guide/) ways to structure complex AI agent systems. By combining Claude Opus as the central orchestrator with specialized Sonnet workers handling discrete subtasks, developers can build systems that balance reasoning capability with cost efficiency and task specialization.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 At its core, an orchestrator-sonnet-worker architecture consists of three layers working in concert. The orchestrator (typically Claude Opus) handles high-level planning, context management, and coordinating multiple specialized workers. Each worker runs a Claude Sonnet instance focused on a specific domain, code review, documentation generation, test writing, or file operations. The architecture creates a hierarchy where Opus provides the "big picture" thinking while Sonnet workers execute focused tasks.
 
 This separation works because [Opus excels at complex reasoning](/parallel-subagents-claude-code-best-practices-2026/), and understanding ambiguous requirements. Sonnet, being faster and more cost-effective, handles the heavy lifting of repetitive or narrowly scoped tasks. The orchestrator maintains the overall state and delegates appropriately.
 
-When to Use This Pattern
+## When to Use This Pattern
 
 You should consider this architecture when building systems that require multiple distinct skill domains. A single AI model attempting to handle frontend design, backend logic, database schema, and API integration often produces inconsistent results. By assigning each domain to a specialized Sonnet worker, you get consistent, predictable outputs.
 
 For example, if you need a system that can generate frontend code, write unit tests, create PDF documentation, and manage a memory layer, an orchestrator coordinating four specialized Sonnet workers will outperform a single model trying to do everything.
 
-Building the Orchestrator
+## Building the Orchestrator
 
 The orchestrator serves as the system's brain. It receives the user's request, decomposes it into subtasks, selects appropriate workers, aggregates results, and presents the final output. Here's a conceptual implementation:
 
@@ -53,7 +53,7 @@ class ClaudeOrchestrator:
 
 The orchestrator uses Opus to understand the request's intent and map it to worker capabilities. This is where Claude Code's native tool use shines, the orchestrator can read files, execute bash commands, and manage the overall workflow without needing explicit programming for each edge case.
 
-Defining Worker Specializations
+## Defining Worker Specializations
 
 Each Sonnet worker needs a clear domain and well-defined boundaries. The skill definition becomes the worker's "persona" and capability boundary. Consider these common worker types:
 
@@ -65,7 +65,7 @@ Documentation Worker. Handles API docs, README files, and technical writing. Usi
 
 Memory and Context Worker. Manages persistent context across sessions. The [supermemory skill enables this worker](/building-stateful-agents-with-claude-skills-guide/) relevant information, maintaining continuity across complex multi-step projects.
 
-Implementing Worker Communication
+## Implementing Worker Communication
 
 Workers communicate through structured messages. The orchestrator passes context to each worker and collects results. Here's how this might work in practice:
 
@@ -88,7 +88,7 @@ def execute_with_worker(worker, task_context):
 
 The key principle: each worker should receive enough context to complete its task but not so much that it becomes confused by irrelevant details. This is where prompt engineering becomes critical, the orchestrator must filter and structure context for each worker appropriately.
 
-Cost and Performance Considerations
+## Cost and Performance Considerations
 
 Using Sonnet workers instead of Opus throughout offers significant cost advantages. Sonnet operates at roughly one-fifth the cost of Opus while maintaining strong performance on narrow tasks. A complex project that might cost $50 with pure Opus might cost $15-20 with an orchestrator-worker pattern.
 
@@ -96,7 +96,7 @@ Response times also improve. Sonnet workers typically respond faster than Opus f
 
 However, this architecture introduces overhead. The orchestrator needs to manage worker lifecycle, handle failures, and synthesize results. For simple, single-domain tasks, a direct Sonnet call will be more efficient. Reserve the orchestrator pattern [genuinely complex projects requiring multiple skill domains](/advanced-hub/).
 
-Error Handling and Recovery
+## Error Handling and Recovery
 
 Well-designed systems must handle worker failures gracefully. If one worker fails, the orchestrator should retry with adjusted parameters or skip the failed subtask and continue. Here's a pattern:
 
@@ -114,7 +114,7 @@ def execute_with_retry(worker, task, max_retries=2):
 
 The orchestrator should maintain a task queue with dependencies tracked, allowing partial completion and intelligent resumption when issues occur.
 
-Practical Application Example
+## Practical Application Example
 
 Imagine building a feature that requires adding user authentication to an existing application. The orchestrator would:
 
@@ -127,7 +127,7 @@ Imagine building a feature that requires adding user authentication to an existi
 
 Each worker operates independently on its domain, returning results to the orchestrator. Opus then integrates these pieces, ensuring consistency and handling any conflicts between worker outputs.
 
-Conclusion
+## Conclusion
 
 The orchestrator-sonnet-worker pattern provides a powerful framework for building sophisticated AI agent systems. By combining Opus's reasoning capabilities with specialized Sonnet workers, you get cost-effective, focused execution across multiple domains. The key is defining clear worker boundaries, implementing clear communication protocols, and designing graceful error handling.
 

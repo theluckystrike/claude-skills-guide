@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Auto Assign Reviewer Workflow Tutorial"
 description: "Learn how to automate your pull request reviewer assignment process using Claude Code. This tutorial covers practical workflows, code examples, and."
@@ -14,12 +13,11 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 
 Manual PR reviewer assignment is time-consuming and often inconsistent. Teams waste valuable developer hours playing the assignment game, and new team members have no visibility into who should review what. This tutorial shows you how to build an automated reviewer assignment system using Claude Code that scales with your team and enforces consistent review policies.
 
-Understanding the Auto-Assign Reviewer Problem
+## Understanding the Auto-Assign Reviewer Problem
 
 Before diving into code, let's identify what makes reviewer assignment challenging. Every development team faces these common problems:
 
@@ -32,7 +30,7 @@ Before diving into code, let's identify what makes reviewer assignment challengi
 
 An automated system solves these by applying consistent rules, considering real-time availability, and distributing load evenly across your team. The goal is not to remove human judgment entirely, but to remove the mental overhead of routine assignments so engineers can focus on actual code review quality.
 
-Comparing Manual vs Automated Assignment
+## Comparing Manual vs Automated Assignment
 
 | Factor | Manual Assignment | Automated Assignment |
 |---|---|---|
@@ -45,7 +43,7 @@ Comparing Manual vs Automated Assignment
 
 Most teams that adopt automated assignment report faster time-to-first-review and fewer cases of PRs sitting unreviewed for days because the author forgot to assign someone.
 
-Setting Up Your Claude Code Skill
+## Setting Up Your Claude Code Skill
 
 The foundation of your auto-assign workflow is a custom Claude Code skill. Create a new skill file in your project's `.claude/` directory:
 
@@ -64,7 +62,7 @@ Before writing the skill logic, you also need to decide on your data source for 
 
 This tutorial covers the hybrid approach, which gives you the best balance of flexibility and accuracy.
 
-Building the Reviewer Selection Logic
+## Building the Reviewer Selection Logic
 
 Your auto-assign skill needs a structured approach. Here's a practical implementation that handles expertise matching and load balancing:
 
@@ -100,7 +98,7 @@ function selectReviewer(changes, reviewers, currentLoad) {
 
 This basic algorithm considers two key factors: current workload and file expertise matching. The scoring system is intentionally simple. expertise matches are worth two points each, and having a lighter workload contributes additional points. You can tune these weights as you learn more about your team's patterns.
 
-Fetching Live Review Load from GitHub
+## Fetching Live Review Load from GitHub
 
 Rather than maintaining load counts manually, pull them from the GitHub API at runtime:
 
@@ -129,7 +127,7 @@ async function getReviewerLoad(owner, repo, reviewerLogin) {
 
 Call this for each candidate before scoring. This keeps your load data accurate without any manual tracking.
 
-Integrating with GitHub's API
+## Integrating with GitHub's API
 
 To actually assign reviewers automatically, you need to interact with GitHub's API. Here's how to wire this into your Claude Code skill:
 
@@ -181,7 +179,7 @@ async function assignTeamReviewer(owner, repo, prNumber, teamSlug) {
 
 Always add error handling around these API calls. GitHub's API returns 422 errors when you try to assign the PR author as a reviewer, or when a requested user doesn't have write access to the repo. Your skill should catch these and fall back gracefully to the next candidate.
 
-Respecting the CODEOWNERS File
+## Respecting the CODEOWNERS File
 
 Many teams use a CODEOWNERS file to mandate who must review changes to critical paths. Your auto-assign skill should read and respect this file before doing any other selection:
 
@@ -213,7 +211,7 @@ function getRequiredReviewers(filepath, rules) {
 
 When a PR touches files covered by CODEOWNERS, add those owners as mandatory reviewers first, then use the load-balanced selection for any additional reviewers your policy requires.
 
-Creating the Claude Code Skill Definition
+## Creating the Claude Code Skill Definition
 
 Now wrap this logic in a proper Claude Code skill file that Claude Code will invoke:
 
@@ -250,7 +248,7 @@ How It Works
 6. Assigns via GitHub API with fallback handling
 ```
 
-Automating with GitHub Actions
+## Automating with GitHub Actions
 
 For true automation, trigger your reviewer assignment automatically when PRs are created or updated:
 
@@ -301,7 +299,7 @@ jobs:
 
 This workflow runs on every PR event and automatically invokes Claude Code to assign reviewers. The `permissions` block is important. without `pull-requests: write`, the workflow can read PR data but cannot assign reviewers.
 
-Preventing Double-Assignment on Synchronize Events
+## Preventing Double-Assignment on Synchronize Events
 
 When a PR is updated (synchronize event), you don't want to reassign reviewers who are already in the middle of reviewing. Add a guard in your script:
 
@@ -333,7 +331,7 @@ async function run() {
 }
 ```
 
-Advanced: Round-Robin with Expertise Fallback
+## Advanced: Round-Robin with Expertise Fallback
 
 A more sophisticated approach combines multiple strategies to handle varied situations:
 
@@ -379,7 +377,7 @@ function matchByExpertise(changes, candidates) {
 
 This lets you configure different strategies per repository or per branch. For example, security-sensitive branches might always use `expertise-first`, while feature branches default to the hybrid strategy.
 
-Strategy Comparison Table
+## Strategy Comparison Table
 
 | Strategy | Best For | Risk |
 |---|---|---|
@@ -388,7 +386,7 @@ Strategy Comparison Table
 | Hybrid | Most teams | Requires well-maintained expertise data |
 | CODEOWNERS-only | Compliance-heavy projects | Can cause bottlenecks when owners are busy |
 
-Adding an Availability Window System
+## Adding an Availability Window System
 
 The most mature auto-assign implementations support reviewer availability flags. This prevents routing reviews to someone on vacation:
 
@@ -423,7 +421,7 @@ function filterAvailable(reviewers) {
 
 You can update the config file as a simple "out of office" mechanism, or integrate with your calendar system for fully automatic availability detection.
 
-Best Practices for Implementation
+## Best Practices for Implementation
 
 When deploying your auto-assign system, keep these recommendations in mind:
 
@@ -441,7 +439,7 @@ When deploying your auto-assign system, keep these recommendations in mind:
 
 7. Document your config: Add a comment header to your reviewer config file explaining how to update it. Without documentation, team members won't know they can add themselves as experts for new areas.
 
-Measuring Success
+## Measuring Success
 
 Once your system is live, track these metrics to quantify the improvement:
 
@@ -452,7 +450,7 @@ Once your system is live, track these metrics to quantify the improvement:
 
 A well-tuned system should reduce time to first review by 30-60% for most teams, simply by eliminating the "who should I ask?" decision from the PR author's workflow.
 
-Reading CODEOWNERS for Required Reviewers
+## Reading CODEOWNERS for Required Reviewers
 
 Most mature repositories use a `CODEOWNERS` file to designate required reviewers for specific paths. Your auto-assign system should respect these requirements rather than bypassing them, overriding code owners creates friction with your security and compliance workflows.
 
@@ -519,7 +517,7 @@ function selectReviewers(changes, reviewers, config) {
 
 This ensures code owners are always notified for their sections while still distributing load for files that don't have required reviewers.
 
-Handling PR Size and Complexity
+## Handling PR Size and Complexity
 
 Large pull requests are harder to review thoroughly regardless of who reviews them. Your auto-assign system can factor in PR size and nudge authors toward splitting large changes before assigning reviewers.
 
@@ -558,7 +556,7 @@ async function handleAssignment(pr, changes, reviewers, config) {
 
 This gives authors actionable feedback while still unblocking them. the assignment happens immediately, but the size signal encourages better PR hygiene over time.
 
-Wrapping Up
+## Wrapping Up
 
 Automating reviewer assignment with Claude Code transforms a tedious manual task into a consistent, efficient process. Start simple with basic load balancing, then add sophistication as your team learns the patterns.
 

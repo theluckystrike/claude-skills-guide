@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for NGINX Ingress Workflow Tutorial
 
 NGINX Ingress Controller is the go-to solution for managing external access to Kubernetes services. Yet configuring ingress resources, managing SSL certificates, and handling routing rules can become tedious and error-prone. This tutorial shows you how to use Claude Code to automate and accelerate your NGINX Ingress workflow from configuration to deployment.
 
-Prerequisites
+## Prerequisites
 
 Before diving in, ensure you have the following in place:
 
@@ -28,7 +27,7 @@ Before diving in, ensure you have the following in place:
 - `kubectl` configured with cluster access
 - Basic familiarity with ingress concepts
 
-Setting Up Your Project
+## Setting Up Your Project
 
 Create a dedicated directory for your ingress configurations. This keeps things organized and gives Claude Code context about your setup.
 
@@ -50,11 +49,11 @@ claude "List all existing ingress resources in the default namespace and summari
 
 Claude Code will query your cluster and present a clear summary of current routing rules, which helps identify gaps or misconfigurations.
 
-Creating Ingress Resources with Claude Code
+## Creating Ingress Resources with Claude Code
 
 Writing ingress YAML by hand is prone to typos and omissions. Let Claude Code generate them based on your requirements.
 
-Basic Ingress Configuration
+## Basic Ingress Configuration
 
 Ask Claude Code to create an ingress resource:
 
@@ -97,7 +96,7 @@ Review the output, modify as needed, and apply:
 kubectl apply -f ingress/api-ingress.yaml
 ```
 
-Advanced Routing Patterns
+## Advanced Routing Patterns
 
 For complex routing, describe your requirements to Claude Code:
 
@@ -145,11 +144,11 @@ spec:
               number: 3000
 ```
 
-Managing SSL/TLS Certificates
+## Managing SSL/TLS Certificates
 
 Secure your services with TLS. Claude Code can help generate self-signed certificates for development or configure cert-manager integration.
 
-Generating Self-Signed Certificates
+## Generating Self-Signed Certificates
 
 ```bash
 claude "Generate a self-signed TLS certificate for host api.example.com and save the certificate and key to certs/ directory"
@@ -173,7 +172,7 @@ kubectl create secret tls api-tls-secret \
   --key=certs/api-tls.key
 ```
 
-Setting Up Cert-Manager Integration
+## Setting Up Cert-Manager Integration
 
 For production, use cert-manager with Let's Encrypt. Ask Claude Code:
 
@@ -195,7 +194,7 @@ spec:
     secretName: api-letsencrypt-secret
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Claude Code excels at diagnosing ingress problems. When traffic isn't routing correctly, ask:
 
@@ -210,13 +209,13 @@ Claude Code analyzes logs and common misconfigurations, explaining:
 - Path matching issues (Prefix vs Exact vs ImplementationSpecific)
 - Annotation typos
 
-Checking Ingress Controller Status
+## Checking Ingress Controller Status
 
 ```bash
 claude "Get the status of the NGINX Ingress controller pods and report their health and recent events"
 ```
 
-Automating Deployments
+## Automating Deployments
 
 Create scripts that combine multiple steps. Ask Claude Code:
 
@@ -256,7 +255,7 @@ chmod +x deploy-ingress.sh
 ./deploy-ingress.sh
 ```
 
-Best Practices
+## Best Practices
 
 Follow these recommendations when working with NGINX Ingress and Claude Code:
 
@@ -266,7 +265,7 @@ Follow these recommendations when working with NGINX Ingress and Claude Code:
 4. Enable access logging, Use annotations like `nginx.ingress.kubernetes.io/log-format-upstream` for detailed debugging
 5. Version your configurations, Keep ingress YAML in version control
 
-Conclusion
+## Conclusion
 
 Claude Code transforms NGINX Ingress management from manual YAML editing to an interactive, intelligent workflow. By describing your requirements in natural language, you generate accurate configurations faster while reducing errors. The key is providing clear context, cluster state, service details, and routing requirements, and iterating on Claude Code's suggestions.
 

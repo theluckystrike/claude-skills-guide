@@ -17,7 +17,7 @@ Chrome Extension Video Downloader: A Developer Guide
 
 Building a Chrome extension that downloads videos from websites requires understanding browser extension architecture, network request interception, and media handling. This guide covers the technical implementation for developers and power users who want to understand how video downloaders work or build their own.
 
-How Video Downloader Extensions Work
+## How Video Downloader Extensions Work
 
 Video downloader extensions operate by intercepting network requests, identifying media URLs, and providing a mechanism to save content locally. The core challenge lies in the diversity of video delivery methods across websites, some serve direct MP4 files, others use HLS streams, and many employ adaptive bitrate streaming with fragmented media segments.
 
@@ -29,7 +29,7 @@ Most Chrome extensions approach this problem in one of three ways:
 
 Each approach has trade-offs in reliability, performance, and compatibility.
 
-Setting Up the Extension
+## Setting Up the Extension
 
 Every Chrome extension starts with a manifest file. For a video downloader, you'll need specific permissions:
 
@@ -64,7 +64,7 @@ Every Chrome extension starts with a manifest file. For a video downloader, you'
 
 The critical permissions here are `webRequest` for intercepting network traffic and `scripting` for DOM manipulation. Note that `webRequest` requires host permissions for the domains you want to monitor.
 
-Implementing Network Request Interception
+## Implementing Network Request Interception
 
 The most reliable method for capturing video URLs involves monitoring network requests. Here's how to implement this in your background service worker:
 
@@ -117,7 +117,7 @@ chrome.tabs.onRemoved.addListener((tabId) => {
 
 This approach captures completed network requests and filters them based on URL patterns and MIME types. It works well for direct video files but requires additional handling for streaming formats.
 
-DOM-Based Video Detection
+## DOM-Based Video Detection
 
 For websites that serve videos through player interfaces rather than direct URLs, DOM scanning provides a complementary approach:
 
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 This content script scans the page for video elements and monitors changes, capturing both direct video URLs and embedded player sources.
 
-Handling HLS Streams
+## Handling HLS Streams
 
 Many modern websites use HLS (HTTP Live Streaming) for video delivery. Downloading HLS streams requires fetching the manifest and combining segments:
 
@@ -278,7 +278,7 @@ class HLSDownloader {
 
 This implementation fetches the HLS manifest, downloads each segment, and combines them into a single file. For production use, you'd want to add error handling and retry logic.
 
-Building the Download Interface
+## Building the Download Interface
 
 The popup interface provides users with controls to manage downloads:
 
@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Requesting Videos from Content Scripts
+## Requesting Videos from Content Scripts
 
 To connect your popup with content script detection, add this messaging pattern:
 
@@ -393,7 +393,7 @@ chrome.runtime.sendMessage({ action: 'getVideos' }, (response) => {
 
 Add corresponding handling in your content script to respond with detected videos.
 
-Legal and Ethical Considerations
+## Legal and Ethical Considerations
 
 When building video downloader extensions, consider the following:
 
@@ -404,7 +404,7 @@ When building video downloader extensions, consider the following:
 
 Build tools that help users save their own content from services they legitimately access, and avoid facilitating unauthorized content distribution.
 
-Testing Your Extension
+## Testing Your Extension
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Test on various websites:
 
@@ -415,7 +415,7 @@ Load your extension in Chrome by navigating to `chrome://extensions/`, enabling 
 
 Check the Network tab in DevTools to see what requests your extension captures and refine your patterns accordingly.
 
-Conclusion
+## Conclusion
 
 Building a Chrome video downloader extension requires combining multiple techniques: network request monitoring, DOM scanning, and stream handling. The implementations shown here provide a foundation that you can extend based on specific use cases.
 
@@ -424,7 +424,6 @@ Start with the network interception approach for direct video files, add DOM sca
 Focus on creating a reliable, user-friendly tool that respects legal boundaries and serves legitimate personal use cases.
 
 ---
-
 
 Related Reading
 

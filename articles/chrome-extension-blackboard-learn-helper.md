@@ -19,13 +19,13 @@ Blackboard Learn remains one of the most widely deployed learning management sys
 
 This guide covers the technical implementation of a Blackboard Learn helper extension, focusing on practical features that solve real problems rather than superficial modifications. By the end you will have working code for deadline extraction, keyboard shortcuts, content export, grade tracking, and a persistent settings layer that ties it all together.
 
-Understanding the Blackboard Learn Interface
+## Understanding the Blackboard Learn Interface
 
 Blackboard Learn uses a DOM structure that has evolved over multiple versions. The modern Ultra experience presents a different structure than the Original experience, so your extension needs to handle both interfaces. The platform loads content dynamically via AJAX calls, which means your content script must account for single-page application behavior.
 
 The key challenge with Blackboard Learn is that it does not offer a public API for extension developers. All interactions must occur through DOM manipulation and simulated user actions. This approach requires careful selectors and solid error handling, as Blackboard may change its internal structure without notice.
 
-Ultra vs. Original Experience
+## Ultra vs. Original Experience
 
 Before writing a single line of code, decide which interface variant you are targeting. The two experiences differ significantly:
 
@@ -54,7 +54,7 @@ const BB_VERSION = detectBBVersion();
 
 Centralizing this detection in a single constant lets every feature module branch cleanly without repeating selector logic.
 
-Project Structure
+## Project Structure
 
 A maintainable helper extension separates concerns across several files:
 
@@ -80,7 +80,7 @@ blackboard-helper/
 
 Each module in `modules/` handles one feature area. `content.js` imports and initializes them, passing the detected BB version so each module can use the right selectors.
 
-Manifest Configuration
+## Manifest Configuration
 
 Your extension needs specific permissions to function with Blackboard Learn:
 
@@ -151,11 +151,11 @@ The `alarms` permission enables deadline reminders that fire even when Blackboar
 
 The `run_at: "document_idle"` setting ensures your content script runs after the page has fully loaded, which is essential for Blackboard's dynamic content.
 
-Core Features for a Helper Extension
+## Core Features for a Helper Extension
 
 Effective Blackboard Learn extensions typically address three categories of improvements: notification enhancements, navigation shortcuts, and content extraction. Each category provides distinct value to different user groups.
 
-Notification Improvements
+## Notification Improvements
 
 Blackboard's native notification system often buries important deadlines and announcements. A well-designed extension can parse the activity stream and surface high-priority items:
 
@@ -228,7 +228,7 @@ function injectDeadlineBanner(deadlines) {
 
 This function scans the page for deadline indicators and returns a sorted list. Your extension displays these in a dedicated popup or injects a visible countdown banner at the top of the page.
 
-Scheduling Alarm-Based Reminders
+## Scheduling Alarm-Based Reminders
 
 Because the Blackboard tab may not be open when a deadline approaches, use the `alarms` API to trigger browser notifications:
 
@@ -262,7 +262,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 ```
 
-Navigation Shortcuts
+## Navigation Shortcuts
 
 The nested course structure in Blackboard often requires multiple clicks to reach frequently used areas. A keyboard shortcut system provides rapid navigation:
 
@@ -320,7 +320,7 @@ chrome.runtime.onMessage.addListener((message) => {
 });
 ```
 
-Content Extraction
+## Content Extraction
 
 Instructors frequently need to export course materials, assignment descriptions, or student submissions. While Blackboard provides some export functionality, a custom extractor offers more flexibility:
 
@@ -383,7 +383,7 @@ function downloadExtraction(data) {
 }
 ```
 
-Grade Tracking Dashboard
+## Grade Tracking Dashboard
 
 One of the highest-value features you can add is a persistent grade summary that does not require navigating to the gradebook. The popup can display a cached grade snapshot:
 
@@ -453,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Handling Authentication State
+## Handling Authentication State
 
 Blackboard Learn uses session-based authentication with institutional Single Sign-On systems. Your extension must handle authentication gracefully:
 
@@ -504,7 +504,7 @@ chrome.runtime.onMessage.addListener((message) => {
 
 If the user is not authenticated, your extension should display a helpful message rather than attempting to perform actions that will fail.
 
-Persistent Settings with chrome.storage
+## Persistent Settings with chrome.storage
 
 Give users control over which features are active:
 
@@ -535,7 +535,7 @@ async function saveSettings(updates) {
 
 Using `chrome.storage.sync` (rather than `local`) means settings follow the user across devices if they are signed into Chrome. For institutional computers where profile sync is disabled, fall back to `chrome.storage.local` by catching the sync error.
 
-Handling Dynamic Content with MutationObserver
+## Handling Dynamic Content with MutationObserver
 
 Blackboard Ultra's React frontend replaces DOM nodes on navigation without a full page reload. A simple content script that runs once at `document_idle` will miss these changes. Use `MutationObserver` to re-run feature initialization when new content appears:
 
@@ -565,7 +565,7 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 This pattern keeps your extension responsive to navigation events without needing to listen for proprietary Blackboard router events, which are not stable across versions.
 
-Best Practices and Considerations
+## Best Practices and Considerations
 
 When building extensions for educational platforms, certain practices ensure reliability and user trust.
 
@@ -589,7 +589,7 @@ Provide graceful degradation. If a feature cannot load because Blackboard change
 
 Document your selector rationale. When you choose a selector like `[data-bb-handler]`, add a comment explaining which Blackboard version it targets and when it was last verified. This saves significant debugging time when Blackboard updates.
 
-Adding Calendar Integration
+## Adding Calendar Integration
 
 One of the most requested features in Blackboard helper extensions is calendar synchronization. Exporting assignment deadlines to Google Calendar or Outlook eliminates the need to manually enter due dates, which is error-prone and time-consuming.
 
@@ -640,7 +640,7 @@ function downloadCalendar(deadlines) {
 
 Trigger this function from your extension popup with a "Export to Calendar" button. Users can import the resulting `.ics` file into any standards-compliant calendar application. For teams building more smooth integrations, the Google Calendar API and Microsoft Graph API both accept iCalendar data directly, enabling one-click sync without the download step.
 
-Extending Functionality
+## Extending Functionality
 
 Once you have established the core features, several high-value additions become straightforward given the foundation described above.
 
@@ -654,8 +654,7 @@ Dark mode: Inject a CSS stylesheet that overrides Blackboard's default white bac
 
 The Blackboard Learn platform will continue evolving, and maintaining a helper extension requires ongoing attention to DOM changes and API updates. Focus on solid, adaptable implementations that can withstand structural modifications to the underlying platform. Pinning your selector logic behind the `detectBBVersion` abstraction means you can update one function to handle a new interface variant without rewriting every feature module.
 
-
-Distributing to Your Institution
+## Distributing to Your Institution
 
 Unlike public Chrome extensions, Blackboard helpers are often institution-specific tools that would violate the Web Store's guidelines if published publicly (they rely on Blackboard's non-public DOM structure and may scrape session data). Three distribution approaches work for institutional use:
 

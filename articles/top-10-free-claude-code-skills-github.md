@@ -16,7 +16,7 @@ permalink: /top-10-free-claude-code-skills-github/
 
 Claude Code skills are `.md` files stored in `~/.claude/skills/`. You invoke them with a slash command inside a Claude Code session. This list covers ten skills that add genuine value to GitHub-based development workflows. each one free to use.
 
-How to Invoke Skills
+## How to Invoke Skills
 
 Every skill on this list is invoked the same way: type `/skill-name` in your Claude Code session to activate it, then continue with your request.
 
@@ -202,7 +202,7 @@ Useful for generating social media assets, marketing banners, and UI mockups wit
 
 ---
 
-Combining Skills for Complex GitHub Workflows
+## Combining Skills for Complex GitHub Workflows
 
 The real power emerges when you chain multiple skills together in a single development session. A common pattern for API-driven projects:
 
@@ -231,7 +231,7 @@ Report any failures as JSON"
 
 The `--print` flag tells Claude Code to output results to stdout, making it easy to capture skill output in CI logs and artifact storage.
 
-Installing and Managing Skills
+## Installing and Managing Skills
 
 Skills live in `~/.claude/skills/` as plain `.md` files. The directory structure is simple:
 
@@ -262,7 +262,7 @@ Claude Code reads this directory at session start and makes every `.md` file ava
 
 To update a skill, replace the `.md` file. Changes take effect at the next session start. Skills can also be scoped to a project by placing them in `.claude/skills/` inside the repository root. these override user-level skills with the same name, allowing project-specific behavior.
 
-Choosing Skills for Your Workflow
+## Choosing Skills for Your Workflow
 
 | Project type | Start with |
 |---|---|
@@ -276,7 +276,7 @@ Most developers find three to five skills covers the majority of daily work. Ins
 
 ---
 
-Building Custom Skills
+## Building Custom Skills
 
 The ten skills in this list cover common workflows, but the real extensibility comes from writing your own. A custom skill is just a `.md` file that describes a specialized behavior or persona. Because Claude reads the file at session start, the instructions take effect immediately without any configuration overhead.
 

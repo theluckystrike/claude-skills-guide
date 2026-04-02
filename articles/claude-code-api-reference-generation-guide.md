@@ -16,7 +16,7 @@ permalink: /claude-code-api-reference-generation-guide/
 
 API reference documentation is critical for any library or service, yet manually maintaining it drains developer time. Claude Code skills provide a practical solution for generating accurate, up-to-date API references directly from your codebase. This guide walks through building an automated API reference generation workflow.
 
-What You Need
+## What You Need
 
 Before starting, ensure you have:
 
@@ -28,7 +28,7 @@ Before starting, ensure you have:
 
 You do not need additional tooling or paid services. The workflow uses skills that load directly into Claude Code.
 
-Step 1: Set Up Your Documentation Structure
+## Step 1: Set Up Your Documentation Structure
 
 Create a dedicated folder for API documentation in your project:
 
@@ -61,7 +61,7 @@ async function getUser(userId, options = {}) {
 }
 ```
 
-Step 2: Configure Claude for API Documentation
+## Step 2: Configure Claude for API Documentation
 
 Create a skill configuration for API reference generation. The `pdf` skill handles output formatting, while `supermemory` tracks which endpoints have been documented.
 
@@ -82,7 +82,7 @@ examples, and any thrown errors.
 Output to docs/api-reference/
 ```
 
-Step 3: Generate the Initial Reference
+## Step 3: Generate the Initial Reference
 
 Claude scans your source files and extracts documentation comments. The output depends on your comment quality.
 
@@ -101,7 +101,7 @@ Processing: src/api/orders.js
 
 Review the output and fill gaps in your source comments. The `tdd` skill helps here, it ensures your documentation matches actual behavior by cross-referencing tests with implementation.
 
-Step 4: Format and Style the Output
+## Step 4: Format and Style the Output
 
 The `frontend-design` skill improves visual presentation. Apply consistent styling:
 
@@ -121,7 +121,7 @@ API-Reference.pdf file with table of contents, page numbers,
 and consistent formatting.
 ```
 
-Step 5: Automate Updates
+## Step 5: Automate Updates
 
 Keep references in sync with code changes using a simple update workflow:
 
@@ -141,7 +141,7 @@ Remember: our API reference uses the following conventions:
 
 This ensures consistency across regeneration cycles.
 
-Complete Workflow
+## Complete Workflow
 
 A practical session with Claude Code:
 
@@ -168,7 +168,7 @@ Claude processes each module:
   Output: docs/api-reference-v2.0.pdf
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Missing parameter documentation: Add JSDoc comments directly in source. Claude cannot document what is not there.
 
@@ -178,7 +178,7 @@ Formatting inconsistencies: Define a documentation style guide in `supermemory` 
 
 Large APIs timeout: Process modules individually, then merge. The `pdf` skill combines multiple files into a single document at the end.
 
-Extending the Workflow
+## Extending the Workflow
 
 Once the basic workflow is solid, extend it with additional skills:
 
@@ -188,7 +188,7 @@ Once the basic workflow is solid, extend it with additional skills:
 
 The `pdf` skill handles final output, while source comments remain the single source of truth for your API surface.
 
-Handling Multi-Language Codebases
+## Handling Multi-Language Codebases
 
 Many production APIs span multiple languages. A Node.js service might expose endpoints alongside a Python data layer or a Go gRPC service. Claude handles this well, but you need to set explicit scope on each run.
 
@@ -216,7 +216,7 @@ Remember: all API parameters are documented as:
 This applies to JS, Python, and Go modules equally.
 ```
 
-Versioning Your API Reference
+## Versioning Your API Reference
 
 Keeping documentation aligned with API versions is one of the hardest parts of maintaining references long-term. Engineers update endpoints, change parameter names, or deprecate methods. and the docs lag behind.
 
@@ -244,7 +244,7 @@ This gives you an audit trail without manual bookkeeping. The `supermemory` skil
 
 Use semantic version badges in your output. The `frontend-design` skill can apply color-coded badges to each entry. green for stable, yellow for beta, red for deprecated. This visual layer helps API consumers understand stability at a glance without reading footnotes.
 
-REST vs GraphQL vs gRPC Reference Generation
+## REST vs GraphQL vs gRPC Reference Generation
 
 The generation workflow differs depending on your API style.
 
@@ -296,7 +296,7 @@ Note streaming methods separately (server-stream, client-stream, bidirectional).
 
 The core advantage here is that Claude does not need a running service to generate the reference. Everything comes from the schema or proto file, which means you can generate documentation before the implementation is even deployed.
 
-Integrating Reference Generation into CI/CD
+## Integrating Reference Generation into CI/CD
 
 Manual documentation runs work for initial setup, but sustainable workflows need automation. The goal is to make documentation updates a side effect of merging code, not a separate task.
 
@@ -324,7 +324,6 @@ This does not force engineers to update docs manually. it just surfaces the gap 
 The `tdd` skill adds another layer here: it can verify that documented examples actually match the current implementation by running them as integration tests before the documentation is merged.
 
 ---
-
 
 Related Reading
 

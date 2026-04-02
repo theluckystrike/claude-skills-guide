@@ -16,13 +16,13 @@ permalink: /claude-code-api-mocking-development-guide/
 
 API mocking is a fundamental technique for developers who need to test code without relying on external services. Whether you are building integrations with third-party APIs, testing error handling logic, or working in an environment with limited network access, mocking lets you control exactly how your application responds to HTTP requests. This guide shows you how to incorporate API mocking into your Claude Code workflow using practical patterns and tools that integrate smoothly with your development process.
 
-Why API Mocking Matters
+## Why API Mocking Matters
 
 When your application depends on external APIs, testing becomes complicated. External services may be unavailable, rate-limited, or return inconsistent data during development. You might also need to test specific error conditions that are difficult to reproduce with real services, such as 500 errors, timeouts, or malformed responses.
 
 Mocking solves these problems by letting you define expected responses on your own terms. Instead of waiting for a payment gateway to return a specific error code or hoping a third-party service experiences a outage, you create stubs that behave exactly as you need. This approach accelerates development cycles and makes your tests more reliable and repeatable.
 
-Setting Up a Local Mock Server
+## Setting Up a Local Mock Server
 
 The simplest way to mock APIs in your Claude Code workflow is to run a local mock server. Several tools work well for this purpose, but a common choice is a lightweight HTTP server that responds to configured routes.
 
@@ -89,7 +89,7 @@ node mock-server.js
 
 Your mock server now listens on port 3000, returning predefined responses for different endpoints. You can add more routes as needed, configuring them to match your application's actual API calls.
 
-Integrating Mocks with Your Application
+## Integrating Mocks with Your Application
 
 Once your mock server runs, point your application to it instead of the production API. The method depends on your tech stack, but environment variables are the most common approach.
 
@@ -112,7 +112,7 @@ export API_BASE=http://localhost:3000
 
 Your application now talks to the mock server, returning controlled responses without making any external network calls.
 
-Alternative: Python Flask Mock Server
+## Alternative: Python Flask Mock Server
 
 For Python-based workflows, Flask provides a lightweight mock server alternative:
 
@@ -138,7 +138,7 @@ if __name__ == "__main__":
 
 Run this alongside your Claude Code session and point API clients to `http://localhost:3000`. The skill code remains unchanged, only the endpoint configuration changes.
 
-Alternative: Python Flask Mock Server
+## Alternative: Python Flask Mock Server
 
 For Python-based projects, Flask provides a lightweight mock server alternative:
 
@@ -164,7 +164,7 @@ if __name__ == "__main__":
 
 Run this alongside your Claude Code session and configure your API client to point to `http://localhost:3000` instead of the production URL.
 
-Testing Error Scenarios
+## Testing Error Scenarios
 
 One of the most valuable aspects of mocking is the ability to test error conditions that are otherwise difficult to trigger. Your mock server can simulate various HTTP status codes, network timeouts, and malformed responses.
 
@@ -194,7 +194,7 @@ app.get('/api/malformed', (req, res) => {
 
 With these endpoints, you can verify that your application handles failures gracefully. Check that error messages display correctly, that retry logic activates when appropriate, and that your logging captures the necessary information for debugging.
 
-Automating Mock Configuration
+## Automating Mock Configuration
 
 Claude Code excels at automating repetitive tasks, and mock server configuration is no exception. You can create a skill that generates mock configurations based on your API specifications, then applies them to your mock server automatically.
 
@@ -202,7 +202,7 @@ For example, if you document your API responses in a JSON schema or OpenAPI spec
 
 Combine this with the tdd skill to run your tests against the mock server, verifying that your code handles both successful and error responses correctly. The pdf skill can also help by extracting API documentation from existing PDF files and generating mock configurations from documented endpoint specifications.
 
-Using Claude Skills for Enhanced Mocking
+## Using Claude Skills for Enhanced Mocking
 
 Several Claude skills improve your API mocking workflow. The supermemory skill helps you maintain context across development sessions, remembering which mock configurations you have used for different test scenarios. This is particularly useful when working on complex integrations that require multiple mock setups.
 
@@ -210,7 +210,7 @@ The frontend-design skill benefits from mocking when testing UI components that 
 
 For projects using the nock library directly in Node.js tests, you can generate nock configurations programmatically. This approach lets you define mocks alongside your test files without running a separate server.
 
-Cleaning Up and Best Practices
+## Cleaning Up and Best Practices
 
 When you finish testing, stop your mock server to free up resources:
 
@@ -226,7 +226,7 @@ Follow these best practices for effective API mocking:
 - Document mock behavior. Clearly note what each mock endpoint returns and under what conditions
 - Use mock servers for development. They provide faster feedback than waiting for external services
 
-Summary
+## Summary
 
 API mocking transforms how you develop and test applications that depend on external services. By running a local mock server, you gain control over HTTP responses, can test edge cases including errors and timeouts, and reduce reliance on network connectivity. Claude Code's bash execution and file handling capabilities make it straightforward to start, configure, and manage mock servers as part of your regular workflow.
 

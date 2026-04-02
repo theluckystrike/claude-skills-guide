@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Stencil Web Components Workflow
 
 Stencil has become one of the most popular tools for building design system components that work across multiple frameworks. When combined with Claude Code, the CLI version of Anthropic's AI assistant, you have a powerful workflow that can dramatically accelerate your component development. This guide walks you through integrating Claude Code into your Stencil projects effectively.
 
-Setting Up Claude Code with Your Stencil Project
+## Setting Up Claude Code with Your Stencil Project
 
 Before diving into the workflow, ensure you have Claude Code installed and your Stencil project ready. The integration is straightforward but requires proper configuration to maximize productivity.
 
@@ -38,11 +37,11 @@ touch CLAUDE.md
 
 Edit `CLAUDE.md` with project-specific instructions for Claude Code. For Stencil projects, add guidelines about your component structure, naming conventions, and testing requirements.
 
-Component Generation Workflow
+## Component Generation Workflow
 
 One of the most valuable uses of Claude Code in Stencil development is accelerating component generation. Rather than manually creating multiple files for each component, you can describe what you need and let Claude scaffold it.
 
-Creating a New Component
+## Creating a New Component
 
 When you need a new component, describe it to Claude in natural language:
 
@@ -56,7 +55,7 @@ Create a new Stencil component called `my-button` with the following props:
 
 Claude will generate the complete component structure including the TypeScript file, CSS/SCSS, and tests. This approach saves significant time, especially when building larger design systems with dozens of components.
 
-Generating Props and Types
+## Generating Props and Types
 
 Stencil's prop definitions can become complex. Use Claude to help generate proper TypeScript interfaces and ensure type safety:
 
@@ -74,11 +73,11 @@ export interface ButtonProps {
 }
 ```
 
-Implementing Complex Features
+## Implementing Complex Features
 
 Stencil components often require advanced features like reactive properties, lifecycle methods, and state management. Claude excels at helping implement these patterns correctly.
 
-State Management Patterns
+## State Management Patterns
 
 For components that need internal state beyond simple props, Claude can suggest appropriate patterns:
 
@@ -98,7 +97,7 @@ export class MyComponent {
 
 Ask Claude to explain when to use `@State` versus `@Prop`, and it will guide you through the decision-making process with concrete examples from your specific component context.
 
-Event Handling and Emission
+## Event Handling and Emission
 
 Proper event handling is crucial for reusable web components. Claude helps you implement the Event emitter pattern correctly:
 
@@ -116,11 +115,11 @@ export class FormInput {
 }
 ```
 
-Testing and Documentation
+## Testing and Documentation
 
 Quality components require comprehensive tests and documentation. Claude Code significantly speeds up both processes.
 
-Writing Unit Tests
+## Writing Unit Tests
 
 Stencil provides testing utilities that can be challenging to master. Ask Claude to generate test cases:
 
@@ -134,7 +133,7 @@ Write unit tests for my-button component covering:
 
 Claude will generate Jest test cases using Stencil's testing framework, ensuring proper async handling and DOM simulation.
 
-Auto-Generating Documentation
+## Auto-Generating Documentation
 
 Stencil can generate documentation from JSDoc comments. Claude helps you write comprehensive documentation that feeds into your design system:
 
@@ -153,11 +152,11 @@ Stencil can generate documentation from JSDoc comments. Claude helps you write c
  */
 ```
 
-Performance Optimization Tips
+## Performance Optimization Tips
 
 Claude can analyze your components and suggest performance improvements specific to Stencil's architecture.
 
-Lazy Loading Components
+## Lazy Loading Components
 
 Ensure your components are properly lazy-loaded by using the `lazy` option in component decorators:
 
@@ -173,7 +172,7 @@ export class MyComponent { }
 
 Ask Claude to review your component bundle and identify opportunities for code splitting and lazy loading.
 
-Memory Leak Prevention
+## Memory Leak Prevention
 
 Web components can suffer from memory leaks if event listeners aren't properly removed. Claude helps identify potential issues:
 
@@ -196,7 +195,7 @@ export class MyComponent implements OnDisconnect {
 }
 ```
 
-Best Practices for Claude-Assisted Development
+## Best Practices for Claude-Assisted Development
 
 To get the most out of Claude in your Stencil workflow, follow these actionable guidelines.
 
@@ -208,7 +207,7 @@ Iterate Gradually: Instead of asking for an entire complex component at once, bu
 
 Maintain Consistent Patterns: Use Claude to enforce consistency across your component library by asking it to follow your established patterns and conventions.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your Stencil web components workflow transforms component development from a manual, time-consuming process into an efficient, AI-assisted workflow. From scaffolding new components to writing tests and optimizing performance, Claude acts as an intelligent pair programmer that understands both general development patterns and Stencil-specific conventions.
 

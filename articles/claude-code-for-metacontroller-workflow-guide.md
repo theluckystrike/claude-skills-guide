@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Metacontroller Workflow Guide"
 description: "A practical guide for developers to use Claude Code when building and managing Metacontroller workflows in Kubernetes. Learn how to use AI."
@@ -14,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Metacontroller Workflow Guide
-
 Metacontroller is a powerful Kubernetes add-on that enables you to build custom controllers using declarative logic. When combined with Claude Code, you can accelerate the development of composite controllers, synchronize state across resources, and implement complex webhook-based workflows. This guide shows you how to integrate Claude Code into your Metacontroller development workflow for faster iteration and better code quality.
 
-Understanding Metacontroller Fundamentals
+## Understanding Metacontroller Fundamentals
 
 Metacontroller operates through three main abstraction types: Composite Controllers (CompositeController), Leaf Controllers (ControllerRevision), and Webhooks. Before diving into AI-assisted development, ensure you understand how these components interact within the Kubernetes control plane.
 
@@ -27,7 +23,7 @@ A composite controller watches one API (the parent) and manages one or more chil
 
 When working with Claude Code, you can use its Kubernetes and Go expertise to generate boilerplate code, explain existing implementations, and debug sync logic. The key is knowing how to prompt Claude effectively for each phase of Metacontroller development.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Start by ensuring your local environment has the necessary tools. You'll need `kubectl` configured with cluster access, the Metacontroller manifests installed, and your preferred language runtime (typically Go or JavaScript).
 
@@ -80,7 +76,7 @@ function reconcile(desiredState) {
 }
 ```
 
-Writing Effective Sync Functions
+## Writing Effective Sync Functions
 
 The sync function is the heart of any Metacontroller composite controller. Claude Code excels at helping you write solid sync logic that handles edge cases, implements proper error handling, and follows best practices.
 
@@ -144,7 +140,7 @@ function reconcile(desiredState) {
 }
 ```
 
-Implementing Webhook Callbacks
+## Implementing Webhook Callbacks
 
 Metacontroller supports admission webhooks through the `WebhookServer` pattern. These webhooks enable dynamic validation, mutation, and orchestration logic that runs at admission time.
 
@@ -195,7 +191,7 @@ func (h *webhookHandler) applyDefaults(spec map[string]interface{}) {
 }
 ```
 
-Debugging and Troubleshooting
+## Debugging and Troubleshooting
 
 When your Metacontroller isn't behaving as expected, Claude Code becomes invaluable for diagnosing issues. Start by checking controller logs and events:
 
@@ -209,7 +205,7 @@ kubectl get events --field-selector involvedObject.name=your-resource
 
 Common issues include sync script timeouts, incorrect JSONPath expressions, and missing required fields. When debugging, provide Claude with your sync script, the observed behavior, and relevant log excerpts. It can help identify logic errors, suggest improvements, and explain Kubernetes API interactions.
 
-Best Practices for AI-Assisted Development
+## Best Practices for AI-Assisted Development
 
 Maintain a clear separation between sync logic and business logic in your scripts. Use descriptive variable names and add comments explaining complex reconciliation decisions. When Claude generates code, review it for correctness before deploying to production.
 

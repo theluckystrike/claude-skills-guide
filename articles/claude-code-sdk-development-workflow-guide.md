@@ -16,7 +16,7 @@ tags: [claude-code, claude-skills]
 
 The Claude Code SDK opens up powerful possibilities for developers who want to build AI-powered applications, automation tools, and custom integrations. This guide walks through practical development workflows, skill composition patterns, and real-world implementation strategies that work in 2026.
 
-Understanding the SDK Architecture
+## Understanding the SDK Architecture
 
 Claude Code SDK provides a programmatic interface to interact with Claude's capabilities outside of the conversational interface. The SDK supports multiple programming languages and gives you fine-grained control over conversation context, tool execution, and skill loading.
 
@@ -48,7 +48,7 @@ Understanding how the three core concepts interact helps you make better archite
 
 Sessions are the container. Skills configure the behavior within that container. Tools extend what Claude can actually do by giving it access to external systems, file systems, or APIs. A well-designed SDK integration composes all three layers thoughtfully.
 
-Skill Composition Strategies
+## Skill Composition Strategies
 
 One of the SDK's most powerful features is the ability to compose multiple skills for complex workflows. Skills like `frontend-design`, `pdf`, `tdd`, and `supermemory` each bring specialized capabilities to your sessions.
 
@@ -81,11 +81,11 @@ Skill composition comparison:
 | Three or more skills | Broad capability | Token cost, potential conflicts |
 | Dynamic swapping | Optimal per-phase | Added code complexity |
 
-Development Workflow Patterns
+## Development Workflow Patterns
 
 A practical development workflow with the SDK typically follows these phases:
 
-Phase 1: Requirements and Planning
+## Phase 1: Requirements and Planning
 
 Start by loading the `supermemory` skill to maintain context across long sessions. This skill helps Claude track project state, decisions, and accumulated knowledge.
 
@@ -106,7 +106,7 @@ session.prompt("""
 """)
 ```
 
-Phase 2: Implementation with TDD
+## Phase 2: Implementation with TDD
 
 Switch to TDD mode for implementation:
 
@@ -135,7 +135,7 @@ session.prompt("""
 """)
 ```
 
-Phase 3: Documentation Generation
+## Phase 3: Documentation Generation
 
 After implementation, use the pdf skill to generate documentation:
 
@@ -148,7 +148,7 @@ This workflow maintains clear boundaries between phases while letting Claude han
 
 Consider generating multiple documentation artifacts in this phase: an API reference for engineers integrating with your endpoints, a data dictionary for the database schema, and a user-facing guide if the feature has a UI component. Claude can produce all three from the same session with targeted prompts.
 
-Phase 4: Code Review and Hardening
+## Phase 4: Code Review and Hardening
 
 A fourth phase that many SDK workflows skip is dedicated hardening. After tests pass, load a security-focused prompt configuration and ask Claude to audit the implementation:
 
@@ -165,7 +165,7 @@ session.prompt("""
 
 This structured review catches issues that test-driven development alone does not surface.
 
-Working with Tool Definitions
+## Working with Tool Definitions
 
 The SDK allows you to register custom tools that Claude can invoke during reasoning. This creates powerful automation possibilities.
 
@@ -219,7 +219,7 @@ Tool design principles:
 - Include error messages in return values so Claude can adapt its strategy
 - Avoid tools with irreversible side effects unless you add explicit confirmation steps
 
-Integration with Existing Projects
+## Integration with Existing Projects
 
 Bringing Claude Code SDK into an existing project requires careful consideration of authentication, environment setup, and security.
 
@@ -267,7 +267,7 @@ session = ClaudeSession(api_key=config.api_key, model=config.model)
 
 This pattern prevents accidental execution of shell commands in production while keeping the full tool set available locally.
 
-Error Handling and Debugging
+## Error Handling and Debugging
 
 Reliable SDK applications need comprehensive error handling. The SDK raises specific exceptions for different failure modes:
 
@@ -322,7 +322,7 @@ session = ClaudeSession(
 
 When debugging quality issues, where Claude produces correct code that still fails your tests, inspect the full conversation history rather than just the final response. Often the root cause is a misunderstanding in an earlier turn that cascades forward.
 
-Performance Optimization
+## Performance Optimization
 
 Large-scale SDK deployments benefit from several optimization strategies:
 
@@ -376,7 +376,7 @@ Performance comparison for common patterns:
 | Concurrent sessions | Throughput gain | Higher | Batch processing |
 | Context summarization | No impact | Reduced long-term | Extended conversations |
 
-Real-World Application Example
+## Real-World Application Example
 
 Consider building an automated code review system:
 
@@ -444,7 +444,7 @@ def github_webhook():
 
 This gives every pull request an automated first-pass review before human reviewers see it, catching obvious issues and freeing engineers to focus on higher-level concerns.
 
-Building an Agentic Pipeline
+## Building an Agentic Pipeline
 
 The most advanced SDK use case is building fully agentic pipelines where Claude drives a multi-step process autonomously. Instead of calling Claude once and processing the response, you let Claude decide the next action based on tool output:
 
@@ -474,12 +474,11 @@ def run_agent(task: str, max_steps: int = 20):
 
 Agentic pipelines require careful guardrails: maximum step limits prevent infinite loops, tool allowlists restrict what Claude can affect, and audit logging captures every action taken. Start with read-only tools before granting write access to production systems.
 
-Conclusion
+## Conclusion
 
 The Claude Code SDK transforms how developers build AI-powered features. By understanding skill composition, tool definitions, and workflow patterns, you can create sophisticated applications that use Claude's reasoning capabilities effectively.
 
 Start with simple integrations and progressively adopt more advanced patterns as your requirements grow. The SDK's design supports both rapid prototyping and production-grade deployments. Use the phased workflow pattern, plan, implement, document, harden, as your foundation, and layer in concurrent processing, caching, and agentic capabilities as your scale demands them.
-
 
 Related Reading
 

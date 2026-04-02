@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code ISO 27001 Evidence Collection Workflow
 
 ISO 27001 certification requires organizations to demonstrate systematic evidence collection across 93 security controls. For many teams, this means manually gathering screenshots, configuration dumps, and audit logs, a time-consuming process prone to gaps and inconsistencies. Claude Code transforms this workflow by enabling automated, reproducible evidence collection that integrates directly into your development and operations pipelines.
 
-Understanding the Evidence Collection Challenge
+## Understanding the Evidence Collection Challenge
 
 ISO 27001 evidence falls into several categories that Claude Code can help automate:
 
@@ -30,7 +29,7 @@ ISO 27001 evidence falls into several categories that Claude Code can help autom
 
 Traditional approaches require manual documentation or expensive GRC platforms. Claude Code offers a middle ground, lightweight automation that captures evidence during normal development operations.
 
-Manual vs. Automated Evidence Collection
+## Manual vs. Automated Evidence Collection
 
 Before committing to an automation approach, it helps to understand exactly where manual workflows break down:
 
@@ -46,7 +45,7 @@ Before committing to an automation approach, it helps to understand exactly wher
 
 For organizations with fewer than 200 employees or those in an early compliance maturity phase, the Claude Code approach delivers most of the automation benefit at a fraction of the GRC platform cost.
 
-Core Claude Code Skills for Evidence Collection
+## Core Claude Code Skills for Evidence Collection
 
 1. File Operations Skill for Documenting Configurations
 
@@ -81,11 +80,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
-
 def get_audit_timestamp() -> str:
     """Return ISO 8601 UTC timestamp suitable for audit records."""
     return datetime.now(timezone.utc).isoformat()
-
 
 def calculate_file_hash(path: Path) -> str:
     """Calculate SHA-256 hash of file contents."""
@@ -94,7 +91,6 @@ def calculate_file_hash(path: Path) -> str:
         for chunk in iter(lambda: f.read(8192), b''):
             sha256.update(chunk)
     return sha256.hexdigest()
-
 
 def collect_configuration_evidence(
     config_paths: list[str],
@@ -221,7 +217,6 @@ from datetime import datetime, timezone
 import hashlib
 from pathlib import Path
 
-
 def capture_compliance_dashboard(
     dashboard_url: str,
     output_dir: str,
@@ -272,9 +267,9 @@ def capture_compliance_dashboard(
     }
 ```
 
-Building the Evidence Collection Workflow
+## Building the Evidence Collection Workflow
 
-Step 1: Define Your Control Mapping
+## Step 1: Define Your Control Mapping
 
 Map each ISO 27001 control to evidence types:
 
@@ -297,7 +292,7 @@ Extending this mapping to the full ISO 27001:2022 control set gives you a comple
 
 Claude Code is most impactful for Technological controls (8.x) since those are the most automatable. Organizational and People controls still require human process validation but can use Claude Code to draft policy documents and track acknowledgments.
 
-Step 2: Create Evidence Collection Skills
+## Step 2: Create Evidence Collection Skills
 
 Build custom Claude Code skills that wrap evidence collection logic:
 
@@ -326,7 +321,6 @@ import json
 from dataclasses import dataclass, field
 from typing import Callable
 
-
 @dataclass
 class EvidenceRecord:
     control_id: str
@@ -335,7 +329,6 @@ class EvidenceRecord:
     timestamp: str
     collector: str
     errors: list[str] = field(default_factory=list)
-
 
 class ISO27001EvidenceSkill:
     """
@@ -460,7 +453,7 @@ class ISO27001EvidenceSkill:
             return {'success': False, 'error': f'Failed to parse AWS CLI output: {e}'}
 ```
 
-Step 3: Schedule Automated Collection
+## Step 3: Schedule Automated Collection
 
 Use cron or CI/CD pipelines to trigger evidence collection:
 
@@ -538,7 +531,7 @@ jobs:
           echo "Evidence archived: s3://myorg-iso27001-evidence/$(date +%Y/%m/%d)/" >> $GITHUB_STEP_SUMMARY
 ```
 
-Step 4: Generate Compliance Reports
+## Step 4: Generate Compliance Reports
 
 Claude Code can compile evidence into audit-ready reports:
 
@@ -573,7 +566,6 @@ from datetime import datetime, timezone
 import hashlib
 import json
 
-
 def calculate_directory_hash(directory: str) -> str:
     """Calculate a reproducible SHA-256 hash of all files in a directory."""
     dir_path = Path(directory)
@@ -585,7 +577,6 @@ def calculate_directory_hash(directory: str) -> str:
             sha256.update(file_path.read_bytes())
 
     return sha256.hexdigest()
-
 
 def assess_control_status(evidence_files: list[Path]) -> str:
     """
@@ -610,7 +601,6 @@ def assess_control_status(evidence_files: list[Path]) -> str:
         return "PARTIALLY_COMPLIANT"
 
     return "COMPLIANT"
-
 
 def generate_compliance_report(
     control_id: str,
@@ -669,7 +659,7 @@ def generate_compliance_report(
     return "\n".join(report_lines)
 ```
 
-Practical Example: Access Control Evidence
+## Practical Example: Access Control Evidence
 
 Let's walk through a complete example for ISO 27001 control A.9 (Access Control):
 
@@ -694,7 +684,7 @@ def collect_access_control_evidence():
     return evidence
 ```
 
-Detecting Access Control Weaknesses During Collection
+## Detecting Access Control Weaknesses During Collection
 
 Evidence collection is more valuable when it flags problems automatically. Augment the basic collection with policy analysis:
 
@@ -753,7 +743,7 @@ def analyze_iam_evidence(iam_data: dict) -> dict:
     }
 ```
 
-Best Practices for Automated Evidence Collection
+## Best Practices for Automated Evidence Collection
 
 1. Immutability: Store evidence in append-only storage (S3 with bucket policies, Git with branch protection)
 2. Integrity: Generate cryptographic hashes for all evidence files
@@ -761,7 +751,7 @@ Best Practices for Automated Evidence Collection
 4. Audit trails: Log all evidence collection actions with attribution
 5. Retention: Define evidence retention policies aligned with ISO 27001 requirements (typically 3+ years)
 
-Evidence Storage Architecture
+## Evidence Storage Architecture
 
 Choosing the right storage architecture determines whether auditors trust your evidence. Here is a comparison of common approaches:
 
@@ -775,12 +765,11 @@ Choosing the right storage architecture determines whether auditors trust your e
 
 For most organizations using Claude Code automation, S3 with Object Lock in Governance mode is the ideal backend. It prevents deletion and modification during the retention period while still allowing authorized administrators to clean up mistakes.
 
-Implementing S3 WORM Storage for Evidence
+## Implementing S3 WORM Storage for Evidence
 
 ```python
 import boto3
 from datetime import datetime, timezone, timedelta
-
 
 def archive_evidence_to_s3_worm(
     evidence_dir: str,
@@ -819,7 +808,7 @@ def archive_evidence_to_s3_worm(
     return uploaded
 ```
 
-Integration with Existing Workflows
+## Integration with Existing Workflows
 
 Claude Code evidence collection integrates naturally with:
 
@@ -828,7 +817,7 @@ Claude Code evidence collection integrates naturally with:
 - Security scanning: Automated tool outputs become compliance evidence
 - Incident response: Post-incident documentation automatically captured
 
-Connecting to Common Security Tooling
+## Connecting to Common Security Tooling
 
 Most security teams already have scanning tools. Claude Code can translate their outputs into ISO 27001 evidence:
 
@@ -844,7 +833,7 @@ Most security teams already have scanning tools. Claude Code can translate their
 
 The integration pattern is consistent: query the tool's API, save the output as a timestamped JSON file, calculate its hash, and include it in the evidence package.
 
-CLAUDE.md for Compliance Projects
+## CLAUDE.md for Compliance Projects
 
 Document your evidence collection setup in a project-level `CLAUDE.md` so any session can pick up where the last one left off:
 
@@ -872,7 +861,7 @@ Archived to: s3://myorg-iso27001-evidence/
 Retention: 3 years (Object Lock Governance mode)
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms ISO 27001 evidence collection from a manual, periodic burden into an automated, continuous process. By integrating evidence collection into development workflows, organizations maintain audit-ready documentation without additional overhead. The key is starting with high-value controls, privileged access, logging, vulnerability management, and gradually expanding coverage as your evidence collection matures.
 
@@ -880,7 +869,6 @@ The workflow demonstrated here provides a foundation. Customize the evidence typ
 
 The most important shift is cultural: once evidence collection is automated and continuous, your team stops thinking about compliance as a periodic event and starts treating it as a live, always-current view of your security posture.
 {% endraw %}
-
 
 Related Reading
 

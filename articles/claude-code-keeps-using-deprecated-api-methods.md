@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Keeps Using Deprecated API Methods
-
 > Note: This article addresses Claude Code *generating* deprecated third-party library methods in the code it writes for you (urllib, numpy, old JavaScript patterns, etc.). If you are looking to fix deprecated Anthropic API calls in your own integration code. such as migrating from `/v1/completions` to `/v1/messages`. see [Fixing Claude Code Deprecated API Methods](/claude-code-uses-deprecated-api-methods-fix/) instead.
 
 One of the most common frustrations developers encounter when working with Claude Code is that it consistently generates code using deprecated API methods. Whether it's an outdated JavaScript method, a legacy Python function, or an old library version, Claude Code sometimes gravitates toward patterns it's seen more frequently in its training data, often older ones. This guide explains why this happens and provides concrete strategies to get Claude Code to use modern, non-deprecated APIs.
 
-Why Claude Code Defaults to Deprecated Methods
+## Why Claude Code Defaults to Deprecated Methods
 
 Claude Code's training data includes millions of code repositories spanning many years. Older patterns stick in the model's weights because they appeared frequently in the training corpus. When you ask for code without specifying version constraints, Claude Code often defaults to what it knows best, which may be outdated.
 
@@ -28,7 +25,7 @@ Several factors contribute to this behavior. First, the model doesn't inherently
 
 For example, you might ask Claude Code to write a simple HTTP request and receive code using `urllib.request.urlopen()` instead of `requests.get()`, or `http.client` instead of `httpx`. The model isn't being difficult, it genuinely doesn't know which library you prefer unless you tell it.
 
-Solution 1: Specify Your Dependency Versions Explicitly
+## Solution 1: Specify Your Dependency Versions Explicitly
 
 The most effective fix is providing context about your project's technology stack. Include your dependency versions in the project context or CLAUDE.md file.
 
@@ -52,7 +49,7 @@ API Style
 
 When you provide this context, Claude Code becomes significantly more accurate about choosing appropriate APIs. The model responds well to explicit constraints and will follow version specifications when they're clearly stated.
 
-Solution 2: Define a Deprecated Methods Rejection List
+## Solution 2: Define a Deprecated Methods Rejection List
 
 Create a skill or include a section in your CLAUDE.md that explicitly lists deprecated methods Claude Code should never use. This creates a persistent memory that carries across conversations.
 
@@ -78,7 +75,7 @@ JavaScript/TypeScript
 
 This approach works because Claude Code processes the CLAUDE.md file at the start of each conversation and treats the instructions as high-priority constraints.
 
-Solution 3: Use Correction Prompts With Modern Alternatives
+## Solution 3: Use Correction Prompts With Modern Alternatives
 
 When Claude Code uses a deprecated method, correct it immediately with the specific modern alternative. The key is being explicit about what to use instead.
 
@@ -112,7 +109,7 @@ description: Reviews code for deprecated API usage and suggests modern alternati
 trigger: always
 ---
 
-API Modernizer Review
+## API Modernizer Review
 
 Before outputting any code, check for these common deprecated patterns and replace them:
 
@@ -214,7 +211,6 @@ Conclusion
 Claude Code's tendency to use deprecated API methods stems from training data patterns and lack of explicit version context. By providing clear dependency information, creating rejection lists, using specific correction prompts, employing code review skills, and automating enforcement with pre-commit hooks, you can dramatically reduce this issue.
 
 The most important takeaway: Claude Code needs explicit context about your project's modern stack. Without it, the model defaults to what it knows best, often older, more prevalent patterns in its training data. Help Claude Code help you by making your technology choices clear from the start.
-
 
 Related Reading
 

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Human in the Loop Multi Agent Patterns Guide"
 description: "Master human in the loop multi agent patterns with Claude Code. Learn practical techniques for integrating human oversight into agentic workflows."
@@ -14,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Human in the Loop Multi Agent Patterns Guide
 
 Human-in-the-loop (HITL) patterns represent a critical design consideration for building solid AI agent systems. While autonomous agents excel at executing tasks quickly and consistently, certain decisions require human judgment, oversight, or approval. Claude Code provides several mechanisms for integrating human oversight into multi-agent workflows, ensuring that critical decisions remain under human control while maintaining agent productivity.
 
-Why Human Oversight Matters in Agentic Systems
+## Why Human Oversight Matters in Agentic Systems
 
 Autonomous agents can process information rapidly, execute repetitive tasks efficiently, and maintain consistent output quality. However, they lack contextual understanding of business requirements, ethical considerations, and domain-specific expertise that humans provide. Multi-agent systems benefit from human oversight in several key scenarios: approving high-stakes decisions, validating complex outputs, handling edge cases, and providing feedback for continuous improvement.
 
 Claude Code's architecture supports human-in-the-loop patterns through conversation-based interactions, tool-based approval workflows, and skill-based agent configurations. Understanding how to use these features effectively enables you to build agent systems that combine the best of autonomous execution and human intelligence.
 
-Core Patterns for Human Oversight
+## Core Patterns for Human Oversight
 
 1. Approval Gates
 
@@ -104,9 +102,9 @@ workflow:
       message: "There are multiple approaches - which do you prefer?"
 ```
 
-Implementing Multi-Agent Human Oversight
+## Implementing Multi-Agent Human Oversight
 
-Orchestrator with Human Routing
+## Orchestrator with Human Routing
 
 A common pattern involves an orchestrator agent that decides when to route tasks to human reviewers. Claude Code supports this through skill-based agent configurations where different agents handle different decision types.
 
@@ -131,7 +129,7 @@ class HumanInTheLoopOrchestrator:
         return result
 ```
 
-Feedback Loops for Learning
+## Feedback Loops for Learning
 
 Human feedback provides valuable training signal for improving agent behavior. Claude Code supports capturing and applying human feedback through structured data collection.
 
@@ -149,7 +147,7 @@ Human feedback provides valuable training signal for improving agent behavior. C
 
 This feedback can inform future agent decisions, improving accuracy over time through pattern recognition.
 
-Best Practices for Human-in-the-Loop Design
+## Best Practices for Human-in-the-Loop Design
 
 1. Define Clear Escalation Criteria
 
@@ -171,7 +169,7 @@ Start with more human oversight and gradually reduce involvement as agents demon
 
 Human-in-the-loop systems should maintain clear records of human decisions and the context provided. This supports accountability, debugging, and continuous improvement.
 
-Practical Example: Code Review Workflow
+## Practical Example: Code Review Workflow
 
 Consider a multi-agent code review system with human oversight:
 
@@ -199,7 +197,7 @@ def route_review_issues(issues: list, config: dict) -> dict:
 
 This pattern ensures human expertise focuses on the most consequential issues while agents handle routine improvements efficiently.
 
-Conclusion
+## Conclusion
 
 Human-in-the-loop multi-agent patterns are essential for building reliable, trustworthy AI systems. Claude Code's conversational architecture, tool-based interactions, and skill system provide solid foundations for implementing these patterns. By thoughtfully combining autonomous agent capabilities with human judgment, you can create systems that use the strengths of both artificial and human intelligence.
 

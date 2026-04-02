@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Release Rollback Workflow Tutorial"
 description: "Learn how to implement automated release rollback workflows using Claude Code. Practical examples, code snippets, and actionable advice for developers."
@@ -18,13 +17,13 @@ score: 8
 
 Release rollbacks are critical operations in modern software deployment. When a production deployment goes wrong, the difference between a five-minute recovery and a five-hour outage can depend on having the right automation in place. This tutorial shows you how to build a solid release rollback workflow using Claude Code, enabling your team to detect issues quickly and recover safely.
 
-Understanding Release Rollback Patterns
+## Understanding Release Rollback Patterns
 
 Before diving into implementation, let's establish the core patterns you'll need. A release rollback workflow typically involves three stages: detection, decision, and execution. Detection identifies that something went wrong, whether through automated monitoring or manual observation. Decision determines whether to rollback, fix forward, or investigate further. Execution performs the actual reversal of changes.
 
 Claude Code excels at this because it can interact with your git repository, deployment tooling, and monitoring systems through natural language commands. You don't need to manually run complex scripts; instead, you describe what you want to happen, and Claude Code orchestrates the execution.
 
-Setting Up Your Rollback Skill
+## Setting Up Your Rollback Skill
 
 The first step is creating a Claude Code skill that encapsulates your rollback procedures. This skill should be version-controlled alongside your application code so that rollback logic evolves with your deployment process.
 
@@ -55,7 +54,7 @@ Remember: Always confirm with a human before proceeding with production rollback
 
 This skill serves as both documentation and executable workflow. When issues arise, invoke it with `/rollback-workflow` and Claude Code will guide you through each step.
 
-Detecting When to Rollback
+## Detecting When to Rollback
 
 Automated detection is crucial for fast response times. Your rollback workflow should integrate with your monitoring stack to either trigger automatically or provide clear recommendations. Here's how to structure detection logic:
 
@@ -81,7 +80,7 @@ triggers:
 
 The key principle here is never auto-rollback without human approval. Even when automation detects problems, unexpected issues can cause more harm than good. Claude Code should recommend and prepare rollback actions while leaving the final decision to your team.
 
-Implementing the Rollback Execution
+## Implementing the Rollback Execution
 
 Once you've decided to rollback, execution needs to be reliable and reproducible. Here's a practical implementation:
 
@@ -123,7 +122,7 @@ echo "Rollback completed successfully"
 
 Store this script in your repository and invoke it through Claude Code. The script handles the actual deployment reversal while Claude Code manages the workflow coordination.
 
-Creating Claude Code Integration
+## Creating Claude Code Integration
 
 Now let's create a more sophisticated Claude Code skill that combines detection, decision support, and execution:
 
@@ -177,7 +176,7 @@ Important Notes
 - Never rollback without understanding the root cause first
 ```
 
-Selective Rollback and Canary Deployments
+## Selective Rollback and Canary Deployments
 
 Not all rollbacks need to be complete system restores. Sometimes you only need to revert specific components. Structure your rollback config to support selective rollback by component type:
 
@@ -210,9 +209,9 @@ deployment_strategy:
   auto_rollback_on_error_rate: 5
 ```
 
-Common Rollback Scenarios
+## Common Rollback Scenarios
 
-Database Schema Changes
+## Database Schema Changes
 
 When rolling back schema changes, ensure you always write reversible migrations:
 
@@ -224,7 +223,7 @@ ALTER TABLE users ADD COLUMN status VARCHAR(20) DEFAULT 'active';
 ALTER TABLE users DROP COLUMN status;
 ```
 
-Configuration Errors
+## Configuration Errors
 
 Configuration rollbacks should use version-controlled config files:
 
@@ -236,7 +235,7 @@ Or restore a specific tagged version
 git checkout v1.2.3 config/production.yaml
 ```
 
-Failed Feature Deployments
+## Failed Feature Deployments
 
 For feature flags that don't work as expected, disable immediately and document:
 
@@ -250,7 +249,7 @@ const features = {
 };
 ```
 
-Best Practices for Rollback Workflows
+## Best Practices for Rollback Workflows
 
 When implementing rollback automation with Claude Code, follow these proven practices:
 
@@ -276,7 +275,7 @@ notifications:
     summary: "Automated rollback executed for {{ app_name }}"
 ```
 
-Conclusion
+## Conclusion
 
 Building a solid release rollback workflow with Claude Code transforms how your team handles production incidents. By combining clear detection logic, human-in-the-loop decision making, and reliable execution automation, you can achieve fast, safe recoveries when things go wrong.
 

@@ -31,11 +31,11 @@ Chrome extensions that function as diff checkers operate in several ways:
 - Visual diff: Compare rendered web pages or screenshots
 - API response comparison: Diff JSON responses from different API versions
 
-Popular Chrome Extension Diff Checkers
+## Popular Chrome Extension Diff Checkers
 
 Several established extensions handle diff checking well. Understanding what each offers helps you choose the right tool or inspires features for your own implementation.
 
-Diff Checkers Worth Knowing
+## Diff Checkers Worth Knowing
 
 GitHub's built-in diff viewer works directly in the browser when viewing pull requests and commits. It supports syntax highlighting, collapsible sections, and keyboard navigation. The `?w=1` parameter removes whitespace-only changes, and `?diff=split` gives you a side-by-side view.
 
@@ -43,11 +43,11 @@ Chrome DevTools includes a native diff feature. Open DevTools (F12), go to the C
 
 Online diff tools with browser extensions like Diffchecker and Draftable offer one-click comparison of selected text, clipboard contents, or file comparisons directly from the browser context menu.
 
-Building a Custom Diff Checker Extension
+## Building a Custom Diff Checker Extension
 
 When existing tools don't fit your workflow, building a custom Chrome extension gives you complete control. Here's how to implement a functional diff checker extension from scratch.
 
-Project Structure
+## Project Structure
 
 Create a directory with these files:
 
@@ -63,7 +63,7 @@ diff-checker/
      icon128.png
 ```
 
-Manifest Configuration
+## Manifest Configuration
 
 Your manifest.json defines the extension's capabilities:
 
@@ -94,7 +94,7 @@ Your manifest.json defines the extension's capabilities:
 }
 ```
 
-Popup Interface
+## Popup Interface
 
 The popup provides your user interface:
 
@@ -131,7 +131,7 @@ The popup provides your user interface:
 </html>
 ```
 
-Core Diff Logic
+## Core Diff Logic
 
 The popup.js handles the comparison using the Myers diff algorithm or a library:
 
@@ -209,7 +209,7 @@ function escapeHtml(text) {
 }
 ```
 
-Loading Your Extension
+## Loading Your Extension
 
 To test your extension:
 
@@ -218,7 +218,7 @@ To test your extension:
 3. Click "Load unpacked" and select your diff-checker directory
 4. Pin the extension to your toolbar and click to test
 
-Advanced Diff Techniques
+## Advanced Diff Techniques
 
 For production-grade diff checking, consider these enhancements:
 
@@ -228,7 +228,7 @@ Unified versus side-by-side views serve different needs. Unified views (like Git
 
 Three-way merge handles conflict resolution when comparing a common ancestor to two different versions. This is essential for git merge conflict handling within your extension.
 
-Practical Use Cases
+## Practical Use Cases
 
 Diff checker extensions shine in specific scenarios:
 
@@ -238,7 +238,7 @@ Diff checker extensions shine in specific scenarios:
 - API testing: Diff JSON responses between API versions to identify breaking changes
 - Student/learning: Compare your solution to reference implementations
 
-Key Takeaways
+## Key Takeaways
 
 Chrome extension diff checkers bring version comparison directly into your browser workflow. Existing extensions handle most common cases, but building a custom solution gives you tailored functionality. The implementation requires understanding Chrome's extension APIs, diff algorithms, and user interface design for displaying changes clearly.
 
@@ -247,7 +247,6 @@ The foundation you build here, manifest configuration, popup interfaces, and dif
 Start with the simple implementation above, test it with real code, then progressively add features like keyboard shortcuts, export options, and integration with your development tools.
 
 ---
-
 
 Related Reading
 

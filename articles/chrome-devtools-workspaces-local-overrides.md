@@ -13,12 +13,11 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
-Chrome DevTools Workspaces and Local Overrides: A Practical Guide
+## Chrome DevTools Workspaces and Local Overrides: A Practical Guide
 
 Chrome DevTools offers two powerful features for developers who want to edit code directly in the browser while keeping changes synced to their local filesystems: Workspaces and Local Overrides. Both features eliminate the traditional workflow of making changes in an editor, saving, switching to the browser, and refreshing. Understanding when and how to use each feature will significantly speed up your frontend development workflow.
 
-Understanding the Difference Between Workspaces and Local Overrides
+## Understanding the Difference Between Workspaces and Local Overrides
 
 Before diving into setup, it helps to understand what each feature does.
 
@@ -28,7 +27,7 @@ Local Overrides work differently. They intercept network requests and serve your
 
 Workspaces are ideal for active development on your own projects. Local Overrides are better for debugging third-party websites, testing changes to external scripts, or prototyping without modifying the actual remote source.
 
-Setting Up Workspaces in Chrome DevTools
+## Setting Up Workspaces in Chrome DevTools
 
 Workspaces require a few straightforward steps to get running.
 
@@ -40,7 +39,7 @@ Workspaces require a few straightforward steps to get running.
 
 Once added, you'll see a green dot next to files that DevTools has mapped to your local filesystem. Any changes you make in the editor panel will automatically save to disk.
 
-A Practical Workspaces Example
+## A Practical Workspaces Example
 
 Imagine you're working on a React application with this file structure:
 
@@ -68,7 +67,7 @@ Save the file in DevTools (`Cmd+S` or `Ctrl+S`). Check your editor, you'll see t
 
 Workspaces also support source maps automatically. If your project uses Webpack, Vite, or another bundler with source maps enabled, DevTools shows your original source files, not the compiled output.
 
-Setting Up Local Overrides
+## Setting Up Local Overrides
 
 Local Overrides follow a similar setup but offer more flexibility since they don't require a direct mapping to a development server.
 
@@ -80,7 +79,7 @@ Local Overrides follow a similar setup but offer more flexibility since they don
 
 Now you're ready to override files.
 
-A Practical Local Overrides Example
+## A Practical Local Overrides Example
 
 Suppose you want to modify how a third-party analytics script behaves on a production website without actually changing the remote file.
 
@@ -108,7 +107,7 @@ Save the file and refresh the page. Chrome serves your modified version instead 
 
 You can also override CSS and HTML files this way. It's particularly useful for debugging layout issues on production sites or testing design changes without deploying.
 
-Key Limitations to Keep in Mind
+## Key Limitations to Keep in Mind
 
 Neither feature is perfect. Understanding their limits prevents frustration.
 
@@ -118,7 +117,7 @@ Local Overrides persist indefinitely until you disable them or delete the overri
 
 Both features work with JavaScript source maps, but the experience varies by bundler. Some setups may require you to disable caching in the Network tab or adjust DevTools settings to ensure you're editing the right file.
 
-Tips for Effective Use
+## Tips for Effective Use
 
 Here are a few practical tips that improve the day-to-day experience:
 
@@ -134,7 +133,6 @@ Choose Workspaces when you're developing a project locally and want smooth editi
 Choose Local Overrides when you need to modify files from websites you don't control, test production builds, or experiment without affecting the remote source.
 
 Both features eliminate the tedious manual sync process that used to plague browser-based development. Once you set them up and understand their strengths, you'll wonder how you ever worked without them.
-
 
 Related Reading
 

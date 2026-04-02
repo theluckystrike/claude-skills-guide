@@ -13,10 +13,9 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 Building a Chrome extension to adjust webcam settings opens up powerful possibilities for developers and power users who need fine-grained control over their camera inputs. While modern video conferencing platforms provide basic settings, they rarely offer the depth of control that professionals require. This guide walks you through creating a functional webcam settings adjuster extension using the MediaDevices API and Chrome's extension capabilities.
 
-Understanding the Webcam Access API
+## Understanding the Webcam Access API
 
 Chrome provides access to webcam and microphone through the MediaDevices API, part of the WebRTC specification. Before building your extension, you need to understand how to enumerate devices and request media streams with specific constraints.
 
@@ -46,7 +45,7 @@ The `getUserMedia()` call returns a `MediaStream` object. You can pass this dire
 
 One subtlety worth noting: calling `getUserMedia()` a second time with different constraints does not modify the existing stream. It creates an entirely new stream and triggers another browser permission prompt if the previous session was closed. For a settings adjuster that needs to change parameters on the fly, you should keep a reference to the original stream and modify the track directly using `applyConstraints()`.
 
-Enumerating Available Devices
+## Enumerating Available Devices
 
 Before adjusting settings, your extension should discover all available video input devices. The `navigator.mediaDevices.enumerateDevices()` method returns an array of MediaDeviceInfo objects.
 
@@ -83,7 +82,7 @@ async function initDeviceList() {
 
 The pattern of requesting then immediately stopping a stream to unlock device labels is a common workaround. Once the browser has granted camera permission for the current origin, subsequent calls to `enumerateDevices()` will include labels for the rest of the session.
 
-Implementing Real-Time Settings Adjustment
+## Implementing Real-Time Settings Adjustment
 
 The MediaStreamTrack object exposes `applyConstraints()` method, which allows dynamic adjustment of video properties without restarting the stream. This is the foundation of your settings adjuster.
 
@@ -128,7 +127,7 @@ async function changeResolution(track, width, height) {
 
 Using `exact` constraints throws an `OverconstrainedError` if the device cannot satisfy the request, which is why the fallback to `ideal` is important. The `ideal` keyword instructs the browser to get as close as possible to the specified value without failing.
 
-What CSS Filters Can and Cannot Do
+## What CSS Filters Can and Cannot Do
 
 CSS filters operate on the rendered video frame after the browser has decoded it from the camera stream. This means they have no effect on what the receiving end of a video call sees. they only change the local preview display. For a standalone viewer or recording application this is fine, but if your goal is to visually process the stream before it reaches a WebRTC peer connection, you need to use the Canvas API to capture frames and re-stream the processed output.
 
@@ -145,7 +144,7 @@ The full set of CSS filter functions useful for a webcam adjuster:
 
 Combining multiple filters in a single `filter` string is more efficient than applying them separately, since the browser composes them in a single GPU pass.
 
-Building the Extension Popup UI
+## Building the Extension Popup UI
 
 Your extension needs a popup interface for users to adjust settings. Create a popup.html with sliders for various parameters:
 
@@ -239,7 +238,7 @@ function updateFilters() {
 init();
 ```
 
-Managing Background Processing
+## Managing Background Processing
 
 For a truly useful extension, consider implementing a background script that can apply settings to any page using the webcam. This requires the `activeTab` and `scripting` permissions in your manifest.
 
@@ -277,7 +276,7 @@ This approach works well for pages like Google Meet, Zoom Web, or any video conf
 
 One limitation to be aware of: some conference platforms render video inside Shadow DOM or iframes. The content script cannot easily reach into cross-origin iframes. In that case, you may need to inject the script at the iframe level using the `all_frames: true` option in the manifest's content script declaration.
 
-Extension Manifest Configuration
+## Extension Manifest Configuration
 
 Your manifest.json needs appropriate permissions to access the webcam and inject scripts:
 
@@ -338,7 +337,7 @@ For Manifest V3, note that `"navigator.mediaDevices"` is not a valid permission 
 
 Camera permission is requested at runtime via `getUserMedia()`. you do not declare it in the manifest. Chrome's permission system handles it automatically and presents the user with the standard camera prompt the first time the popup calls `getUserMedia()`.
 
-Handling Device Changes
+## Handling Device Changes
 
 Users frequently connect and disconnect webcams. Your extension should listen for device change events to maintain functionality:
 
@@ -369,7 +368,7 @@ function watchTrackHealth(track, onEnded) {
 
 Handling this gracefully means showing a notification in the popup UI and automatically re-enumerating available devices so the user can switch to another camera without reopening the extension.
 
-Saving and Restoring Settings
+## Saving and Restoring Settings
 
 A useful quality-of-life feature is persisting settings across browser sessions. Chrome extensions can use `chrome.storage.sync` to save preferences that follow the user across devices:
 
@@ -388,7 +387,7 @@ async function loadSettings() {
 
 Initialize the popup sliders from stored values before acquiring the camera stream to avoid a brief flash of default values. This small detail makes the extension feel polished and professional.
 
-Limitations and Browser Support
+## Limitations and Browser Support
 
 Not all webcam settings can be controlled programmatically. Most consumer webcams support resolution and frame rate adjustments through constraints, but advanced features like manual focus, white balance, and exposure compensation vary significantly between devices. The CSS filter approach for brightness and contrast provides consistent results across all browsers since it processes the rendered video output rather than the raw camera stream.
 
@@ -407,7 +406,6 @@ The following table summarizes what each control method can achieve and where it
 | White balance | `applyConstraints` | Device-dependent | No | Yes |
 
 Building a webcam settings adjuster demonstrates the intersection of extension development and web APIs. The techniques covered here. MediaDevices enumeration, constraint application, CSS video filtering, and cross-context messaging. apply broadly to other camera-related projects. Once you understand how tracks, constraints, and cross-context message passing work together, you have the foundation to build screen recorders, virtual background processors, or even real-time video effects pipelines entirely within a Chrome extension.
-
 
 Related Reading
 

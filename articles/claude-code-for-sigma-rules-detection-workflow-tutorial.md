@@ -15,13 +15,13 @@ Claude Code for Sigma Rules Detection Workflow Tutorial
 
 Sigma rules are the backbone of modern threat detection. They provide a vendor-neutral format for writing detection logic that can be converted to multiple SIEM platforms like Splunk, Elastic, Microsoft Sentinel, and QRadar. However, creating solid Sigma rules requires understanding both the threat landscape and the Sigma syntax itself. This tutorial shows you how to use Claude Code to streamline the entire Sigma rules detection workflow, from initial concept to production deployment.
 
-Why Use Claude Code for Sigma Rules Development
+## Why Use Claude Code for Sigma Rules Development
 
 Writing Sigma rules manually can be time-consuming and error-prone. You need to understand log sources, map fields correctly, and ensure the rule logic catches actual threats without generating excessive false positives. Claude Code accelerates this process by helping you generate rules from natural language descriptions, validate syntax, suggest improvements, and even convert existing detection logic into Sigma format.
 
 The workflow integration works particularly well because Claude Code can interact with your local files, execute validation tools, and maintain documentation, all essential for a mature detection engineering practice.
 
-Setting Up Your Sigma Rules Development Environment
+## Setting Up Your Sigma Rules Development Environment
 
 Before diving into the workflow, set up a proper development environment for Sigma rules. Create a dedicated directory structure:
 
@@ -41,7 +41,7 @@ pip install sigma-core sigmac pyyaml
 
 The `sigma-core` package provides the core library for Sigma rule processing, while `sigmac` converts Sigma rules to SIEM-specific queries. This tooling forms the foundation for your Claude Code enhanced workflow.
 
-Creating Sigma Rules with Claude Code
+## Creating Sigma Rules with Claude Code
 
 Claude Code excels at translating your detection concepts into properly formatted Sigma rules. Provide a clear description of the threat you want to detect, and Claude generates the YAML-based rule structure. Here's how to structure your prompt:
 
@@ -75,7 +75,7 @@ level: high
 
 Review the generated rule carefully. Claude provides a solid starting point, but you should validate that the detection logic aligns with your specific environment's log sources and normal activity patterns.
 
-Validating and Testing Sigma Rules
+## Validating and Testing Sigma Rules
 
 After generating a rule, validate its syntax and test it against sample logs. Claude Code can help you create test cases and run validation:
 
@@ -104,7 +104,7 @@ sigma backends splunk rules/suspicious_lsass_access.yaml
 
 This outputs the Splunk SPL query equivalent, which you can then test directly in your SIEM environment. Claude Code can explain the generated query and suggest optimizations based on your platform's performance characteristics.
 
-Converting and Deploying Rules
+## Converting and Deploying Rules
 
 Different SIEM platforms require different query formats. Sigma's strength is providing a single source of truth that converts to multiple backends. Use Claude Code to handle platform-specific conversions:
 
@@ -121,7 +121,7 @@ sigma convert -t kusto rules/suspicious_lsass_access.yaml
 
 For teams managing multiple SIEM environments, create a deployment pipeline that automatically converts rules to each platform's format. Store the source Sigma rules in version control and use CI/CD to validate and deploy to respective environments.
 
-Managing Rule Collections
+## Managing Rule Collections
 
 As your detection library grows, organization becomes critical. Use Claude Code to help maintain a well-structured rules repository:
 
@@ -139,7 +139,7 @@ sigma docgen rules/ --output documentation/rules_index.md
 
 This creates an searchable index of all your detection rules, essential for SOC onboarding and audit compliance.
 
-Integrating with Detection Engineering Pipelines
+## Integrating with Detection Engineering Pipelines
 
 Mature security teams integrate Sigma rules into automated detection pipelines. You can use Claude Code skills to build custom workflows that:
 
@@ -150,7 +150,7 @@ Mature security teams integrate Sigma rules into automated detection pipelines. 
 
 The integration typically involves writing custom Python scripts that use the Sigma library, with Claude Code assisting in script development and debugging.
 
-Best Practices for Claude Code Enhanced Detection Development
+## Best Practices for Claude Code Enhanced Detection Development
 
 Follow these guidelines to maximize your detection engineering productivity:
 
@@ -162,7 +162,7 @@ Follow these guidelines to maximize your detection engineering productivity:
 
 Claude Code accelerates each phase of this workflow, but human oversight remains essential for quality detection rules.
 
-Conclusion
+## Conclusion
 
 Using Claude Code for Sigma rules development transforms a traditionally manual process into an efficient, automated workflow. From initial rule generation through validation, conversion, and deployment, Claude Code serves as an intelligent assistant that understands both Sigma syntax and security concepts. Start by setting up your development environment, then gradually incorporate Claude Code into each phase of your detection engineering practice.
 

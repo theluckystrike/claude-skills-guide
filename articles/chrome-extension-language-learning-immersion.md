@@ -13,12 +13,11 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 Language learning through immersion is one of the most effective methods for acquiring fluency. By surrounding yourself with target language content, you naturally absorb vocabulary, grammar patterns, and cultural nuances. Chrome extensions provide a powerful way to bring immersion directly into your daily browsing experience, transforming any website into a learning opportunity.
 
 This guide covers the technical architecture, implementation patterns, and practical considerations for building Chrome extensions that enhance language learning through web content immersion. By the end you will have a clear picture of how every piece fits together and enough working code to build a functional prototype.
 
-Understanding the Immersion Approach
+## Understanding the Immersion Approach
 
 Traditional language learning often focuses on isolated study, vocabulary flashcards, grammar exercises, and scripted conversations. Immersion flips this paradigm by placing the learner within an environment where the target language is the primary medium of interaction. The challenge with web-based immersion is that most content exists in languages you may not yet understand, creating a barrier that feels insurmountable.
 
@@ -26,7 +25,7 @@ Chrome extensions solve this problem by providing contextual support: instant tr
 
 This balance, sometimes called "assisted immersion" or "comprehensible input plus one (i+1)" in second language acquisition literature, is the design target for any serious immersion tool. The extension should lower barriers just enough that the learner can keep reading, not so much that they stop engaging with the foreign text at all.
 
-Immersion Extension Features by Difficulty Level
+## Immersion Extension Features by Difficulty Level
 
 Before writing a single line of code, map out how your extension should behave at different learner stages:
 
@@ -39,7 +38,7 @@ Before writing a single line of code, map out how your extension should behave a
 
 Designing this progression up front keeps the codebase clean because each level maps to a distinct set of DOM mutations and API calls rather than a tangle of conditionals.
 
-Core Extension Architecture
+## Core Extension Architecture
 
 A language learning immersion extension typically consists of three main components:
 
@@ -213,9 +212,9 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
 });
 ```
 
-Key Implementation Patterns
+## Key Implementation Patterns
 
-Dynamic Content Handling
+## Dynamic Content Handling
 
 Single-page applications and dynamically loaded content require additional handling:
 
@@ -256,7 +255,7 @@ const observer = new MutationObserver((mutations) => {
 });
 ```
 
-Context Menu Integration
+## Context Menu Integration
 
 Adding right-click options for quick lookups:
 
@@ -280,7 +279,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 });
 ```
 
-Tooltip Definition Display
+## Tooltip Definition Display
 
 When the background worker returns a definition, the content script needs to display it without disrupting the reading flow. A fixed-position tooltip anchored to the selected word works well:
 
@@ -318,7 +317,7 @@ function showDefinitionTooltip(word, definition, anchorRect) {
 }
 ```
 
-Privacy and Performance Considerations
+## Privacy and Performance Considerations
 
 When building immersion extensions, consider these important factors:
 
@@ -356,7 +355,7 @@ Content Script Optimization: Inject content scripts only where needed using matc
 
 Using `document_idle` rather than `document_start` means the script runs after the DOM is ready, which avoids competing with page rendering. If your extension does not need to intercept very early page events, always prefer `document_idle`.
 
-Manifest V3 Permissions to Request
+## Manifest V3 Permissions to Request
 
 A minimal but functional immersion extension needs the following permissions:
 
@@ -384,7 +383,7 @@ A minimal but functional immersion extension needs the following permissions:
 
 Request only what you need. Extensions that ask for broad host permissions during Chrome Web Store review face additional scrutiny and slower approval times.
 
-Practical Applications
+## Practical Applications
 
 Beyond basic vocabulary highlighting, immersion extensions can provide:
 
@@ -441,7 +440,7 @@ function recordEncounter(word, language, sentence) {
 
 Feeding this encounter log into a spaced repetition algorithm gives you a review schedule grounded in your real reading history rather than arbitrary frequency lists.
 
-Comparing Existing Tools vs. Building Your Own
+## Comparing Existing Tools vs. Building Your Own
 
 If you are evaluating whether to build versus use an existing extension, here is a quick comparison:
 
@@ -454,14 +453,13 @@ If you are evaluating whether to build versus use an existing extension, here is
 
 Building your own makes the most sense when you are targeting a language pair or learning workflow that existing tools do not support, or when you need tight control over how your vocabulary data is stored and synced.
 
-Conclusion
+## Conclusion
 
 Chrome extensions offer a unique opportunity to transform your web browsing into a continuous language learning session. The key is building tools that provide support without breaking immersion, offering assistance that fades into the background until needed.
 
 Start with simple vocabulary highlighting, then progressively add features based on your learning needs. Wire up a MutationObserver early so your extension handles SPAs correctly from the start, retrofitting that later is more painful than doing it upfront. Use IndexedDB for vocabulary storage rather than `chrome.storage.sync` so you are not fighting quota limits as your word list grows.
 
 The most effective immersion tools are those you will actually use, so prioritize reliability and minimal disruption to your browsing flow. A tooltip that appears in under 100 milliseconds on hover will be used constantly; one that takes 800 milliseconds will be ignored after the first week.
-
 
 Related Reading
 

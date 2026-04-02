@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Building TypeScript APIs with Claude Code and Hono Framework
 
@@ -32,7 +31,7 @@ Hono has gained significant traction in the TypeScript community for several com
 
 When you add Claude Code to this mix, you gain an AI partner that understands your API's context and can generate boilerplate, debug issues, and refactor code in real-time.
 
-Setting Up Your Hono Project with Claude Code
+## Setting Up Your Hono Project with Claude Code
 
 Let's walk through creating a production-ready Hono API with Claude Code's assistance. First, initialize your project:
 
@@ -57,7 +56,7 @@ claude "Create a new Hono TypeScript project with the following structure:
 
 Claude Code analyzes your request and generates appropriate TypeScript code with full type inference.
 
-Building REST Endpoints with Claude Code
+## Building REST Endpoints with Claude Code
 
 Here's how Claude Code helps you create a complete REST API. Starting with the type definitions:
 
@@ -102,7 +101,7 @@ Claude Code can generate these handlers while following best practices:
 - Middleware: Adds logging, CORS, and rate limiting
 - Documentation: Generates OpenAPI specs from your routes
 
-Leveraging Claude Code's MCP Integration
+## Leveraging Claude Code's MCP Integration
 
 Claude Code's Model Context Protocol (MCP) enables powerful integrations with your development tools. For Hono development, you can connect to:
 
@@ -133,7 +132,7 @@ app.get('/api/users', async (c) => {
 });
 ```
 
-Advanced Patterns: Middleware and Validation
+## Advanced Patterns: Middleware and Validation
 
 Claude Code excels at implementing advanced Hono patterns. Here's middleware for request validation:
 
@@ -185,7 +184,7 @@ todoRouter.post('/', validate(createTodoSchema), async (c) => {
 });
 ```
 
-Testing Your API with Claude Code
+## Testing Your API with Claude Code
 
 Claude Code transforms testing from a chore into a streamlined process. You can generate comprehensive tests:
 
@@ -228,7 +227,7 @@ describe('Todo API', () => {
 });
 ```
 
-Deployment Workflow
+## Deployment Workflow
 
 With Claude Code, deploying your Hono API becomes straightforward:
 
@@ -250,11 +249,11 @@ database_name = "hono-api-db"
 claude "Deploy this Hono API to Cloudflare Workers and create the D1 database if it doesn't exist"
 ```
 
-Optimizing for Edge Performance
+## Optimizing for Edge Performance
 
 Edge functions run close to users, but memory and CPU are constrained. Apply these patterns to keep your Hono API fast:
 
-Lazy Load Heavy Dependencies
+## Lazy Load Heavy Dependencies
 
 Import expensive modules only when needed to reduce cold start times:
 
@@ -265,7 +264,7 @@ app.post('/api/generate-pdf', async (c) => {
 })
 ```
 
-Use Durable Objects for State
+## Use Durable Objects for State
 
 For stateful edge functions on Cloudflare, use Durable Objects instead of external databases:
 
@@ -280,7 +279,7 @@ export class Counter implements DurableObject {
 }
 ```
 
-Cache Responses with the Cache API
+## Cache Responses with the Cache API
 
 Implement response caching directly at the edge:
 
@@ -297,7 +296,7 @@ app.get('/api/data', async (c) => {
 })
 ```
 
-Detect Runtime Environment
+## Detect Runtime Environment
 
 Use `getRuntimeKey()` to adapt behavior across different edge runtimes:
 
@@ -309,7 +308,7 @@ app.get('/runtime', (c) => {
 })
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code revolutionizes Hono development by bringing AI-assisted coding to every step of your workflow. From initial project setup through deployment, Claude understands your API's context and generates type-safe, production-ready TypeScript code.
 
@@ -324,7 +323,6 @@ As TypeScript continues to dominate web development, the combination of Claude C
 
 Start experimenting today, your next production-ready API is just a prompt away.
 {% endraw %}
-
 
 Related Reading
 

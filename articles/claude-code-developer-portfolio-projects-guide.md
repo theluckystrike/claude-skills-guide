@@ -13,14 +13,13 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 
 Building a developer portfolio that actually lands interviews requires more than just listing projects. You need to demonstrate technical depth, show breadth across different technologies, and present your work in a way that resonates with hiring managers. Claude Code accelerates this process significantly by handling repetitive tasks while you focus on architectural decisions and code quality.
 
 This guide walks through building a portfolio that showcases your skills effectively, using Claude Code workflows that professional developers employ daily.
 
-Why Claude Code Changes Portfolio Development
+## Why Claude Code Changes Portfolio Development
 
 Traditional portfolio creation involves writing boilerplate code, setting up project structures, and spending hours on configuration. Claude Code eliminates this friction through intelligent skill systems. When you use the frontend-design skill, you get access to design patterns optimized for modern portfolios. The pdf skill helps generate polished documentation. The tdd skill ensures your projects maintain test coverage from day one.
 
@@ -28,7 +27,7 @@ These skills work together. A typical portfolio project might use frontend-desig
 
 Beyond raw speed, Claude Code changes the economics of portfolio work. When you can scaffold a project in minutes rather than hours, you can afford to start over if an architectural decision turns out to be wrong. You can try a different state management library just to see how it feels. You can add features that showcase depth without worrying about the time cost. This freedom to experiment produces better portfolio projects than the guarded, play-it-safe approach that most developers take when time is scarce.
 
-What Hiring Managers Actually Look For
+## What Hiring Managers Actually Look For
 
 Before deciding which projects to build, understand what reviewers prioritize at different career stages:
 
@@ -47,7 +46,7 @@ The commit history tells a story. Reviewers at serious companies check whether y
 Write a conventional commit message for changes that add optimistic UI updates to the task creation flow, handle rollback on API failure, and add tests for both happy path and error states.
 ```
 
-Project Structure for Maximum Impact
+## Project Structure for Maximum Impact
 
 Each portfolio project should follow a consistent structure that demonstrates professionalism:
 
@@ -79,7 +78,7 @@ Ask Claude Code to audit your README:
 Review this README for a portfolio project. Identify sections that are too thin, missing entirely, or that could be improved to better communicate technical decision-making to a senior engineer evaluating the project.
 ```
 
-Essential Portfolio Projects
+## Essential Portfolio Projects
 
 1. Interactive Project Tracker
 
@@ -161,7 +160,7 @@ CLI design has its own quality signals: Does the tool provide helpful error mess
 claude "using the tdd skill, generate tests for a CLI tool that validates all error messages include the invalid input value, the expected format, and a suggestion for how to fix it"
 ```
 
-Leveraging Claude Skills Effectively
+## Leveraging Claude Skills Effectively
 
 The supermemory skill proves invaluable for portfolio development. It helps you organize research, track learning resources, and maintain notes across all your projects. When building multiple portfolio projects, staying organized becomes critical.
 
@@ -195,7 +194,7 @@ claude "using the tdd skill, run all tests in watch mode"
 
 The supermemory skill is particularly useful for tracking decisions across projects. When you evaluate three state management libraries and choose one, save that research. When a reviewer asks why you used Zustand instead of Redux, you want a specific answer, "I evaluated Redux, MobX, and Zustand. Redux added too much boilerplate for a project this size. MobX was appealing but the reactive model made testing harder. Zustand gave me simple API, minimal boilerplate, and first-class TypeScript support", rather than "it seemed simpler."
 
-Code Quality Standards
+## Code Quality Standards
 
 Your portfolio code should reflect professional standards even in demonstration projects:
 
@@ -228,7 +227,7 @@ Generate TypeScript interfaces for a project tracker application. Include Projec
 
 Linting and formatting: Add ESLint and Prettier to every project and configure them before writing a single line of business logic. Commit the configuration files. This signals that you do not let code style debates become a team problem, you automate the answer.
 
-Presentation Matters
+## Presentation Matters
 
 Technical excellence matters, but presentation determines whether reviewers engage with your work. Use the theme-factory skill to apply consistent styling across your portfolio. A cohesive visual identity signals attention to detail.
 
@@ -243,7 +242,7 @@ The live demo link deserves special attention. A portfolio project that works in
 
 One underused technique: a short screen recording (90 seconds or less) showing the project in use. Embed it in your README as an animated GIF or link to a Loom recording. This lets reviewers evaluate the UX without clicking through to a live deployment, and it ensures they see the features you are most proud of rather than stumbling around confused.
 
-Workflow for Rapid Development
+## Workflow for Rapid Development
 
 Here's a practical workflow using Claude Code skills:
 
@@ -257,7 +256,7 @@ This approach produces portfolio projects that demonstrate not just coding abili
 
 A concrete time budget that works well: spend 20% of project time on planning and specification, 50% on implementation with TDD, and 30% on documentation, deployment, and the presentation layer (README, screenshots, demo). Most developers invert this, spending 80% on implementation and rushing everything else. The projects that get the most attention in portfolio reviews are the ones where the non-implementation work is clearly done with care.
 
-Avoiding Common Portfolio Mistakes
+## Avoiding Common Portfolio Mistakes
 
 Most portfolio advice focuses on what to add. Equally important is what to avoid:
 
@@ -269,14 +268,13 @@ No error states: Applications that only work when everything goes right look unf
 
 Stale dependencies: Run `npm audit` and address vulnerabilities before sending your portfolio anywhere. Having ten high-severity vulnerabilities in a security-related project undercuts your credibility.
 
-Final Recommendations
+## Final Recommendations
 
 Your portfolio needs three to five substantial projects, each taking eight to twenty hours to complete properly. Quality trumps quantity, two excellent projects beat five half-finished ones. Focus on projects that demonstrate skills relevant to your target roles, and ensure each project tells a coherent story about your capabilities as a developer.
 
 A useful framing: each project should answer a different question. One project demonstrates that you can build clean frontend architecture. One demonstrates that you can design and implement a backend system. One demonstrates that you care about testing and quality. One, optionally, demonstrates domain knowledge relevant to the types of companies you are targeting.
 
 Claude Code accelerates every phase of portfolio development, but the architectural decisions and code quality remain your responsibility. Use the skills as force multipliers for your expertise, not replacements for genuine skill development. The best portfolio projects make it obvious that a thoughtful developer made deliberate choices at every step, Claude Code helps you move fast enough to make those choices carefully rather than rushing past them.
-
 
 Related Reading
 

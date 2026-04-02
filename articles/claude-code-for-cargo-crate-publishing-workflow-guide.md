@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Cargo Crate Publishing Workflow Guide
 
@@ -29,11 +28,11 @@ Consider what happens without automation on a busy maintenance week: you fix thr
 
 The other benefit is institutional knowledge preservation. When the engineer who built your release process leaves, the runbook goes with them unless it is encoded in scripts. Claude Code helps you translate tribal knowledge into executable workflows that any team member can run.
 
-Setting Up Your Crate for Publishing
+## Setting Up Your Crate for Publishing
 
 Before publishing, ensure your crate is properly configured. Claude Code can help audit your Cargo.toml for common issues.
 
-Essential Cargo.toml Configuration
+## Essential Cargo.toml Configuration
 
 Your crate's Cargo.toml needs several elements for successful publishing:
 
@@ -59,7 +58,7 @@ Test dependencies
 
 Claude Code can review your Cargo.toml and suggest improvements. Ask it to check for missing fields that crates.io requires, such as description, license, and repository URLs.
 
-Common Cargo.toml Mistakes Claude Code Catches
+## Common Cargo.toml Mistakes Claude Code Catches
 
 Claude Code is particularly useful for catching subtle configuration issues that cause publish failures or poor discoverability:
 
@@ -95,11 +94,11 @@ description = "The A component"
 
 This ensures version numbers stay synchronized across all workspace members. a common source of confusion when publishing related crates.
 
-Pre-Publish Checklist Workflow
+## Pre-Publish Checklist Workflow
 
 Create a systematic pre-publish checklist that Claude Code can execute. This ensures nothing is missed before publication.
 
-Step 1: Update Version and Changelog
+## Step 1: Update Version and Changelog
 
 Always document your changes before publishing:
 
@@ -146,7 +145,7 @@ cargo generate-lockfile
 echo "All crates updated to $NEW_VERSION"
 ```
 
-Step 2: Run Comprehensive Tests
+## Step 2: Run Comprehensive Tests
 
 Before publishing, run the full test suite:
 
@@ -177,7 +176,7 @@ cargo check --no-default-features --target thumbv7m-none-eabi
 
 Ask Claude Code to generate a comprehensive check script based on your crate's feature flags and supported targets. It can also read your existing CI configuration and ensure the local pre-publish checks match what CI will run, eliminating "passes locally, fails in CI" surprises.
 
-Step 3: Build Documentation
+## Step 3: Build Documentation
 
 Good documentation is essential for crate adoption. Build and verify your documentation:
 
@@ -209,11 +208,11 @@ RUSTDOCFLAGS="-D warnings" cargo doc --all-features --no-deps
 
 Claude Code can help you add documentation to all public items that are currently undocumented. Give it the output of `cargo doc 2>&1 | grep "warning: missing documentation"` and ask it to generate appropriate doc comments for each item.
 
-Publishing Process with Claude Code
+## Publishing Process with Claude Code
 
 With checks complete, you're ready to publish. Claude Code can guide you through the process and handle common issues.
 
-Initial Publish
+## Initial Publish
 
 To publish a new crate:
 
@@ -229,7 +228,7 @@ cargo login your_api_token
 
 You can obtain your API token from https://crates.io/settings/tokens.
 
-Dry Run Before Publishing
+## Dry Run Before Publishing
 
 Always do a dry run first to catch packaging issues without actually publishing:
 
@@ -269,7 +268,7 @@ include = [
 ]
 ```
 
-Publishing Updates
+## Publishing Updates
 
 For subsequent releases, follow your version bump process:
 
@@ -282,11 +281,11 @@ Claude Code can warn you if you're about to publish a version that already exist
 
 When publishing a patch release to fix a critical bug in an older major version, Claude Code can help you manage the git branching correctly. For example, if you are on 2.x and need to backport a fix to a 1.x release line, it will walk you through cherry-picking the commit, bumping the 1.x patch version, and publishing from the 1.x branch while leaving the 2.x development branch untouched.
 
-Post-Publish Tasks
+## Post-Publish Tasks
 
 After successful publishing, several follow-up tasks help maintain your crate:
 
-GitHub Release Creation
+## GitHub Release Creation
 
 Create a GitHub release to accompany your crates.io publication:
 
@@ -307,7 +306,7 @@ gh release create v0.1.0 \
   --latest
 ```
 
-Verify Publication
+## Verify Publication
 
 Confirm your crate is live:
 
@@ -328,7 +327,7 @@ rustdoc-args = ["--cfg", "docsrs"]
 targets = ["x86_64-unknown-linux-gnu", "x86_64-pc-windows-msvc"]
 ```
 
-Creating a Publishing Script
+## Creating a Publishing Script
 
 For repeated use, create a reusable publishing script that Claude Code can execute:
 
@@ -405,11 +404,11 @@ echo "Docs at: https://docs.rs/$CRATE_NAME/$VERSION"
 
 Claude Code can help you adapt this script to your workspace structure, adding loops to publish multiple workspace member crates in dependency order.
 
-Best Practices for Crate Publishing
+## Best Practices for Crate Publishing
 
 Follow these recommendations for successful crate maintenance:
 
-Semantic Versioning
+## Semantic Versioning
 
 Adhere to Semantic Versioning (SemVer) for version numbers. Use major versions for breaking changes, minor for new features, and patch for bug fixes. Claude Code can help you determine which version bump is appropriate based on your changes.
 
@@ -424,7 +423,7 @@ cargo semver-checks check-release --baseline-rev v1.0.0
 
 Ask Claude Code to integrate this into your pre-publish script so that accidental breaking changes are always caught before publication.
 
-Minimal Dependencies
+## Minimal Dependencies
 
 Only add dependencies you truly need. Each dependency increases your crate's build time and introduces potential maintenance burden. Review your dependencies regularly and remove unused ones.
 
@@ -450,7 +449,7 @@ tokio = { version = "1", optional = true, features = ["rt-multi-thread"] }
 
 Claude Code can audit your dependency tree and suggest which dependencies should be optional, which can be replaced with lighter alternatives, and which features of heavy crates you are actually using.
 
-Platform-Specific Code
+## Platform-Specific Code
 
 If your crate includes platform-specific code, use Cargo's target-specific dependencies to keep the main crate lean:
 
@@ -462,7 +461,7 @@ windows-api = "0.1"
 unix-api = "0.1"
 ```
 
-Continuous Integration
+## Continuous Integration
 
 Set up CI to run tests on multiple platforms and Rust versions. GitHub Actions works well with Cargo projects:
 
@@ -554,7 +553,7 @@ jobs:
 
 The `publish-dry-run` job catches packaging problems on every pull request, long before you are ready to release. Claude Code can extend this to also run `cargo semver-checks` on pull requests targeting main, ensuring that breaking changes are never accidentally merged without a major version bump.
 
-Conclusion
+## Conclusion
 
 Claude Code significantly improves your cargo crate publishing workflow by automating repetitive tasks, catching errors before publication, and providing guidance throughout the process. By establishing consistent checklists and using Claude's capabilities, you can publish crates with confidence while spending less time on mechanical details.
 

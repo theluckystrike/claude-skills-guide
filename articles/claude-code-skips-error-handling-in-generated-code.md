@@ -16,7 +16,7 @@ tags: [claude-code, claude-skills]
 
 When working with Claude Code to generate code, you may have noticed that sometimes the output lacks proper error handling. This behavior can catch developers off guard, especially when building production applications that require solid exception handling and graceful failure modes. Understanding why this happens and how to address it will make you more effective at using Claude Code for real-world development tasks.
 
-Why Claude Code Sometimes Omits Error Handling
+## Why Claude Code Sometimes Omits Error Handling
 
 Claude Code generates code based on the context of your conversation and the specific instructions you provide. When you ask for a quick script or a prototype, the model often prioritizes getting functional code working over adding comprehensive error handling. This stems from the training data that emphasizes readability and simplicity for educational and exploratory purposes.
 
@@ -24,7 +24,7 @@ The behavior also depends heavily on how you frame your request. If you ask Clau
 
 This is not a bug. it is a context-sensitivity feature working as intended. Claude is trying to match the complexity of its output to the perceived scope of your request. A short, casual prompt signals "give me something I can understand quickly." A detailed prompt with explicit requirements signals "this is going into production." Learning to exploit this distinction is the core skill for getting consistently solid generated code.
 
-How Prompt Phrasing Changes the Output
+## How Prompt Phrasing Changes the Output
 
 The difference between these two prompts is significant:
 
@@ -37,7 +37,7 @@ The difference between these two prompts is significant:
 
 The fourth approach. providing a concrete example. is the most reliable. Claude is better at matching a pattern it can see than at inferring your preferences from adjectives like "production-ready."
 
-Common Scenarios Where Error Handling Gets Skipped
+## Common Scenarios Where Error Handling Gets Skipped
 
 Several typical situations trigger this behavior in Claude Code sessions.
 
@@ -51,7 +51,7 @@ Incremental code additions are another trigger. When you ask Claude to "add a fe
 
 Long context windows can also degrade error handling quality. When the conversation is very long and contains many code snippets, Claude sometimes "forgets" early instructions about error handling conventions. This is a practical limitation worth knowing about: if you notice quality degrading mid-session, re-state your requirements.
 
-Practical Examples
+## Practical Examples
 
 Here's what Claude Code typically generates when you don't specify error handling requirements:
 
@@ -86,7 +86,7 @@ def fetch_user_data(user_id):
 
 The difference is substantial. The second version handles timeouts, connection failures, HTTP errors, and malformed responses.
 
-JavaScript: The Same Pattern Applies
+## JavaScript: The Same Pattern Applies
 
 The problem is not Python-specific. Here is the same gap in JavaScript:
 
@@ -133,7 +133,7 @@ async function fetchUserData(userId) {
 
 Asking Claude to "write this with production error handling, matching the custom APIError class pattern we are using" produces the second version without further iteration.
 
-How to Get Better Error Handling in Generated Code
+## How to Get Better Error Handling in Generated Code
 
 The most effective approach is to explicitly state your requirements. Include phrases like "with proper error handling," "production-ready code," or "defensive programming" in your prompts. Be specific about what types of errors you anticipate.
 
@@ -145,7 +145,7 @@ Write a function that processes uploaded files with comprehensive error handling
 
 The tdd skill will then generate both the implementation and test cases that validate the error handling logic.
 
-The Five-Point Error Handling Checklist
+## The Five-Point Error Handling Checklist
 
 When reviewing Claude-generated code, check for these five categories. If any are missing, ask Claude to add them in a follow-up:
 
@@ -159,7 +159,7 @@ When reviewing Claude-generated code, check for these five categories. If any ar
 
 5. Caller-appropriate responses. Internal functions can raise exceptions. API handlers should catch them and return structured error responses. Claude sometimes raises exceptions from route handlers, which produces unformatted 500 errors.
 
-Pattern-Based Solutions
+## Pattern-Based Solutions
 
 You can establish consistent error handling patterns by providing Claude with templates. When you start a session, establish your expectations:
 
@@ -174,7 +174,7 @@ For this session, always include:
 
 This preamble sets the context for all subsequent code generation.
 
-Using a Session Preamble Effectively
+## Using a Session Preamble Effectively
 
 A preamble works best when it is specific and includes concrete examples. Compare these two approaches:
 
@@ -206,7 +206,7 @@ except sqlalchemy.exc.OperationalError as e:
 
 The second preamble gives Claude a concrete template to match. It will apply this pattern consistently throughout the session even without further reminders.
 
-Saving Patterns as Skill Files
+## Saving Patterns as Skill Files
 
 If you use the same error handling conventions across projects, encode them in a skill file:
 
@@ -235,7 +235,7 @@ Rules
 
 Load this skill at the start of any session where you are writing backend code, and Claude will apply these conventions without requiring per-prompt reminders.
 
-Working With Skills That Generate Code
+## Working With Skills That Generate Code
 
 Several Claude skills generate code as part of their functionality. Understanding their error handling defaults helps you compensate.
 
@@ -245,7 +245,7 @@ The tdd skill focuses on test coverage but can be directed to emphasize error ca
 
 The canvas-design skill generates visual output code with minimal error handling, as it targets design exploration rather than production systems. Adjust your expectations accordingly.
 
-Error Handling Defaults by Skill Type
+## Error Handling Defaults by Skill Type
 
 Different skill categories have different defaults. Knowing these helps you know where to be vigilant:
 
@@ -261,7 +261,7 @@ Different skill categories have different defaults. Knowing these helps you know
 
 For any skill in the API integration or database categories, treat the first output as a draft and immediately ask for error handling additions.
 
-Building Solid Applications With Claude Code
+## Building Solid Applications With Claude Code
 
 The key to success is understanding that Claude Code optimizes for the implicit context of your request. By making your expectations explicit, you get code that matches your needs. For production systems, always review generated code for error handling gaps, especially around external API calls, file operations, and user input processing.
 
@@ -275,7 +275,7 @@ Refactor this code to add proper error handling: handle network failures, valida
 
 This approach gives you the best of both worlds. quick initial generation for exploration, followed by production-ready refinement.
 
-A Practical Review Workflow
+## A Practical Review Workflow
 
 The most efficient workflow is a two-step generation process rather than trying to get perfect code in one shot:
 

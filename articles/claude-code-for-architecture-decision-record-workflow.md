@@ -13,11 +13,9 @@ reviewed: true
 ---
 {% raw %}
 
-Claude Code for Architecture Decision Record Workflow
-
 Architecture Decision Records (ADRs) are a crucial part of sustainable software development. They document the "why" behind technical choices, making your project's architectural evolution traceable and understandable. Claude Code can significantly accelerate your ADR workflow, from initial drafting to ongoing maintenance. This guide shows you how to use Claude Code effectively for creating and managing ADRs.
 
-Why Use Claude Code for ADRs
+## Why Use Claude Code for ADRs
 
 Writing ADRs manually is time-consuming. You need to structure decisions consistently, consider alternatives, and articulate consequences clearly. Claude Code excels at this because it understands software architecture patterns and can generate well-structured documents in minutes rather than hours.
 
@@ -25,7 +23,7 @@ The key benefits include faster drafting, consistent formatting across your team
 
 When teams rely only on memory or tribal knowledge, new engineers spend weeks inferring "why" from the code itself. ADRs cut that onboarding cost dramatically. Claude Code makes producing them cheap enough that there is no longer a good excuse to skip them.
 
-Claude Code vs. Manual ADR Writing: What Changes
+## Claude Code vs. Manual ADR Writing: What Changes
 
 | Task | Manual Effort | With Claude Code |
 |---|---|---|
@@ -38,7 +36,7 @@ Claude Code vs. Manual ADR Writing: What Changes
 
 The table above reflects real patterns teams encounter. The alternative-evaluation problem is particularly worth noting. Engineers writing their own ADR for a decision they have already made tend to undersell the rejected options. Claude Code has no stake in the outcome, so it evaluates alternatives more neutrally.
 
-ADR Formats: Choosing the Right One
+## ADR Formats: Choosing the Right One
 
 Before you start generating ADRs with Claude Code, agree on a format with your team. The format you choose affects what context you need to provide in prompts. The three most common formats are compared below.
 
@@ -51,7 +49,7 @@ Before you start generating ADRs with Claude Code, agree on a format with your t
 
 Claude Code can produce any of these. In your prompts, always name the format explicitly. Saying "write an ADR" without specifying a format will produce a reasonable default, but your team's existing ADRs may follow different conventions and inconsistency undermines the index.
 
-Starting a New ADR
+## Starting a New ADR
 
 When you need to document a new architectural decision, provide Claude Code with context about your system and the decision at hand. Here's a practical prompt structure:
 
@@ -63,7 +61,7 @@ MADR format with at least 3 alternatives considered.
 
 Claude Code will generate a comprehensive ADR that includes the title, status, context, decision, consequences, and alternatives. You can then refine it based on your specific requirements.
 
-A Worked Example: Choosing a Message Queue
+## A Worked Example: Choosing a Message Queue
 
 Here is what a full Claude Code prompt looks like for a real architectural decision, and what the output structure should contain.
 
@@ -141,7 +139,7 @@ Negative:
 
 This level of detail is what Claude Code can produce in a single prompt when given sufficient context. The key is that you provide the system constraints and the candidate options; Claude Code handles the analysis structure.
 
-ADR Templates and Structure
+## ADR Templates and Structure
 
 A well-structured ADR follows a consistent format. Here's a template you can use with Claude Code:
 
@@ -175,7 +173,7 @@ implementation complexity, and three alternatives: SAML, session-based
 auth, and the chosen option.
 ```
 
-Storing the Template in Your Repo
+## Storing the Template in Your Repo
 
 One practical pattern is storing your team's canonical ADR template as a file that Claude Code can read during the session. When you run Claude Code from your repository root, you can reference it directly:
 
@@ -188,7 +186,7 @@ type safety improvements, and raw query support.
 
 This approach keeps your ADR format locked to whatever your team maintains in the template file rather than relying on Claude Code's default interpretation.
 
-Bulk ADR Generation
+## Bulk ADR Generation
 
 For larger projects with multiple related decisions, you can generate several ADRs in one session. This is particularly useful during major refactoring or when adopting new technology stacks:
 
@@ -203,7 +201,7 @@ Generate 5 ADRs for migrating our monolithic application to microservices:
 
 Claude Code will create interconnected ADRs with proper cross-references, ensuring your architectural documentation remains coherent.
 
-Cross-Referencing Related ADRs
+## Cross-Referencing Related ADRs
 
 When decisions are interdependent, your ADRs should reference each other explicitly. Ask Claude Code to wire them together:
 
@@ -216,7 +214,7 @@ and add those cross-references in the Consequences section.
 
 This kind of cross-linking turns a flat list of ADR files into a navigable decision graph. Future engineers can trace why a decision was made by following the reference chain.
 
-Reviewing and Improving Existing ADRs
+## Reviewing and Improving Existing ADRs
 
 Claude Code is not just for creating new ADRs, it excels at improving existing ones. Use it to identify gaps, strengthen arguments, and ensure consistency:
 
@@ -232,7 +230,7 @@ Review this ADR for completeness and suggest improvements. Check if:
 
 This approach helps catch omissions before your ADRs become historical records that future developers will rely on.
 
-A Review Checklist to Use in Prompts
+## A Review Checklist to Use in Prompts
 
 Rather than a generic review request, a structured checklist prompt produces more actionable feedback:
 
@@ -255,7 +253,7 @@ as Pass, Partial, or Fail with a one-line explanation:
 
 The score format forces a concrete verdict on each dimension rather than vague impressions, and it gives you a prioritized list of what to fix.
 
-Converting Legacy Decisions to ADRs
+## Converting Legacy Decisions to ADRs
 
 Many teams have architectural decisions buried in Slack threads, meeting notes, or implicit knowledge. Claude Code can help formalize these:
 
@@ -269,7 +267,7 @@ considered but rejected, with brief reasoning.
 
 This transforms scattered knowledge into actionable documentation.
 
-Reconstructing Decisions from Code
+## Reconstructing Decisions from Code
 
 Sometimes there are no meeting notes, just code that reflects a decision no one wrote down. Claude Code can help reconstruct the ADR by reasoning from the implementation:
 
@@ -285,7 +283,7 @@ visible in the code.
 
 The resulting draft will need validation from someone who was in the room, but it gives reviewers a concrete document to react to rather than starting from nothing. That alone cuts the meeting time needed to reconstruct the context.
 
-Integration with Version Control
+## Integration with Version Control
 
 For optimal ADR management, store ADRs in your repository with a clear naming convention. Claude Code can help you maintain this organization:
 
@@ -297,7 +295,7 @@ and propose where in our repo structure this should live.
 
 Common patterns include `docs/adr/` or `architecture/adr/` directories at your repository root.
 
-Maintaining an ADR Index
+## Maintaining an ADR Index
 
 A single index file makes your ADR collection navigable. Claude Code can generate and update this index from your existing files:
 
@@ -315,7 +313,7 @@ ADR-005: Authentication approach (Accepted, 2024-06)
 
 Run this prompt whenever you add or change ADRs, and commit the updated index alongside the ADR file itself.
 
-Automating ADR Reviews in CI
+## Automating ADR Reviews in CI
 
 You can set up Claude Code to review ADRs as part of your pull request process. Create a simple script that invokes Claude Code on new or modified ADR files:
 
@@ -341,7 +339,7 @@ done
 
 Wire this into your CI pipeline as a non-blocking check that posts results to the PR. You can make it blocking for ADRs in `Accepted` status while keeping it advisory for `Proposed` ones.
 
-GitHub Actions Integration
+## GitHub Actions Integration
 
 Here is a minimal GitHub Actions workflow that runs the ADR review script on pull requests:
 
@@ -372,7 +370,7 @@ jobs:
 
 This does not replace human review of ADRs, but it catches structural problems before a human reviewer has to point them out. Reviewers can then focus on the substance of the decision rather than formatting issues or missing sections.
 
-Handling ADR Status Transitions
+## Handling ADR Status Transitions
 
 ADRs move through states over the life of a project. Claude Code can help manage the transitions cleanly.
 
@@ -399,7 +397,7 @@ reasons. Please:
 
 Doing both in the same session ensures the cross-references are correct and consistent.
 
-Best Practices for Claude Code ADR Workflows
+## Best Practices for Claude Code ADR Workflows
 
 When using Claude Code for ADRs, keep these tips in mind:
 
@@ -419,14 +417,13 @@ Assign ADR numbers sequentially and do not reuse them. Rejected or superseded AD
 
 Tag ADRs with the components they affect. This makes it possible to answer "what decisions govern the authentication subsystem?" without reading every ADR. Claude Code can help you generate consistent tags based on the decision content.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms ADR creation from a tedious chore into a streamlined workflow. By generating well-structured drafts, identifying gaps in existing documents, and helping maintain consistency, it lets your team focus on the technical decisions themselves rather than the documentation overhead.
 
 The practical gains are real: drafts in minutes instead of hours, more thorough alternatives analysis, and a lower activation energy barrier that means more decisions actually get documented. Over the life of a project, the compounding value of a complete ADR history, one that new engineers can actually navigate, is significant.
 
 Start by using Claude Code for your next architectural decision. You will be surprised how much time you save while producing better documentation that your future self will thank you for.
-
 
 Related Reading
 

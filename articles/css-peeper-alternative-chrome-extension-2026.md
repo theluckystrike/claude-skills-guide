@@ -25,7 +25,7 @@ The extension landscape has also matured significantly. What was once a niche ma
 
 There are also practical gaps in CSS Peeper worth acknowledging. It does not surface CSS custom properties (variables) declared with the `--` prefix in a meaningful way, it has limited support for identifying which stylesheet a rule originates from, and its export capabilities are minimal compared to newer competitors. These limitations matter more as design systems and token-based theming have become the norm in professional frontend development.
 
-Understanding What You Actually Need
+## Understanding What You Actually Need
 
 Before evaluating alternatives, it helps to identify your primary use cases. CSS inspection work generally falls into a few categories:
 
@@ -41,7 +41,7 @@ Workflow speed. You're doing repetitive inspection tasks throughout the day and 
 
 Each tool below excels in one or more of these categories. Knowing your primary use case guides the decision considerably.
 
-Top CSS Peeper Alternative Chrome Extensions
+## Top CSS Peeper Alternative Chrome Extensions
 
 1. Pesticide
 
@@ -309,7 +309,7 @@ Stylebot's inspect-and-edit model is useful for prototyping CSS changes on produ
 }
 ```
 
-Comparing Performance
+## Comparing Performance
 
 Performance varies significantly across extensions. Here's a comparison of load times on a complex page with 500+ elements:
 
@@ -325,7 +325,7 @@ Performance varies significantly across extensions. Here's a comparison of load 
 
 Memory usage matters on developer machines running multiple tabs, other DevTools extensions, and local development servers simultaneously. The lightest-weight options (Pesticide and InspectCSS) have the smallest footprint, making them safe to leave enabled throughout a work session without noticeable impact on browser performance.
 
-CSS Custom Properties and Design Token Workflows
+## CSS Custom Properties and Design Token Workflows
 
 One area where most CSS Peeper alternatives have improved significantly is handling CSS custom properties. Modern design systems use tokens like `--color-primary` and `--spacing-md` extensively. A good inspector needs to surface both the computed value and the token name.
 
@@ -351,7 +351,7 @@ One area where most CSS Peeper alternatives have improved significantly is handl
 
 When CSSViewer or InspectCSS displays this button's styles, you want to see `--color-primary: #3b82f6` alongside the computed `background-color: rgb(59, 130, 246)`. Extensions that show both give you the token name for code consistency and the resolved value for visual verification.
 
-Building Your Own CSS Inspector
+## Building Your Own CSS Inspector
 
 For developers who need complete control, building a custom inspector using Chrome's debugger protocol provides maximum flexibility. Here's a basic example:
 
@@ -401,7 +401,7 @@ async function getCascade(tabId, nodeId) {
 }
 ```
 
-Integration with DevTools and Clipboard Workflows
+## Integration with DevTools and Clipboard Workflows
 
 Getting values out of these extensions and into your editor quickly requires intentional workflow design. The friction points are copying multi-value properties, exporting sets of related values, and transferring information to design tools.
 
@@ -423,7 +423,7 @@ javascript:(function(){
 
 This bookmarklet complements your extension of choice, use the extension to identify and click an element, then run the bookmarklet to dump a selected set of properties to your clipboard in one operation.
 
-Best Practices for CSS Inspection
+## Best Practices for CSS Inspection
 
 Regardless of which extension you choose, these practices improve your workflow:
 
@@ -437,7 +437,7 @@ Cross-reference with DevTools. Extensions accelerate routine tasks but DevTools 
 
 Document what you extract. When reverse-engineering a design for a client project, use CSS Stack or ColorZilla's analyzer to produce documented exports that get committed to the project. This creates a record of what the design was using at the time you implemented it.
 
-Choosing the Right Extension
+## Choosing the Right Extension
 
 Your choice depends on your specific needs:
 
@@ -451,14 +451,13 @@ Your choice depends on your specific needs:
 | Computed values | CSSViewer | Hover-based, shows all inherited properties |
 | Prototyping changes | Stylebot | Edit CSS on any live page, changes persist |
 
-Conclusion
+## Conclusion
 
 While CSS Peeper remains a solid choice, the Chrome Web Store offers numerous alternatives that excel in specific areas. Pesticide provides the fastest visual feedback for layout debugging, StyleMap clarifies cascade complexity that stumps even experienced developers, ColorZilla handles color extraction and generation masterfully, and CSS Stack fills the gap for design system documentation tasks that no other tool handles as cleanly.
 
 The extensions available in 2026 have collectively addressed most of CSS Peeper's limitations. CSS custom property support has improved across the board, performance on complex single-page applications is substantially better than even two years ago, and the integration between inspection results and clipboard-ready code output has gotten significantly faster.
 
 Many developers end up using multiple extensions for different tasks, a lightweight option like InspectCSS for quick checks throughout the day and a more feature-rich tool like CSS Stack for comprehensive analysis sessions. Experiment with several to find your optimal combination. The most important criterion is the one that reduces friction in your most frequent workflow; the tool you actually use consistently is more valuable than the theoretically superior one you rarely open.
-
 
 Related Reading
 

@@ -18,7 +18,7 @@ Claude Code for Workbox Service Worker Workflow Guide
 
 Workbox has become the go-to solution for implementing service workers in modern web applications. When paired with Claude Code, you can dramatically accelerate the development of solid offline-capable PWAs while maintaining code quality and following best practices. This guide shows you how to use Claude Code effectively within your Workbox service worker workflow. For a zero-dependency approach using the raw Cache API directly, see the [Service Worker Caching Workflow](/claude-code-for-service-worker-caching-workflow/).
 
-Why Workbox Matters for Modern Web Development
+## Why Workbox Matters for Modern Web Development
 
 Workbox is Google's library for simplifying service worker implementation. It abstracts away the complex boilerplate traditionally required for caching strategies, background sync, and offline functionality. However, setting up Workbox correctly still requires understanding its various modules and configuration options.
 
@@ -29,11 +29,11 @@ Claude Code excels at helping developers navigate Workbox's ecosystem by:
 - Debugging service worker issues when they arise
 - Suggesting optimizations for your specific use case
 
-Setting Up Your Workbox Project with Claude Code
+## Setting Up Your Workbox Project with Claude Code
 
 Before diving into implementation, ensure your project environment is properly configured. Here's how to get started:
 
-Project Initialization
+## Project Initialization
 
 First, set up a basic project structure that supports Workbox:
 
@@ -53,7 +53,7 @@ When working with Claude Code, provide clear context about your requirements:
 
 Claude Code will generate the appropriate configuration files and service worker code tailored to your specifications.
 
-Configuring Vite PWA Plugin
+## Configuring Vite PWA Plugin
 
 The vite-plugin-pwa simplifies Workbox integration for Vite-based projects. Here's a typical configuration Claude Code might help you create:
 
@@ -99,11 +99,11 @@ export default defineConfig({
 })
 ```
 
-Implementing Caching Strategies
+## Implementing Caching Strategies
 
 Workbox provides several caching strategies that Claude Code can help you implement correctly.
 
-Cache-First Strategy for Static Assets
+## Cache-First Strategy for Static Assets
 
 For static assets like images, fonts, and JavaScript files, a cache-first approach ensures fast loading on repeat visits:
 
@@ -130,7 +130,7 @@ registerRoute(
 )
 ```
 
-Network-First Strategy for Dynamic Content
+## Network-First Strategy for Dynamic Content
 
 For API responses that need to stay relatively fresh, network-first is often the best choice:
 
@@ -153,7 +153,7 @@ registerRoute(
 )
 ```
 
-Stale-While-Revalidate for Mixed Content
+## Stale-While-Revalidate for Mixed Content
 
 This strategy serves content from cache immediately while fetching updates in the background:
 
@@ -169,9 +169,9 @@ registerRoute(
 )
 ```
 
-Advanced Workbox Patterns with Claude Code
+## Advanced Workbox Patterns with Claude Code
 
-Handling Offline Fallbacks
+## Handling Offline Fallbacks
 
 Claude Code can help you implement graceful degradation when users go offline:
 
@@ -194,7 +194,7 @@ setCatchHandler(async ({ event }) => {
 })
 ```
 
-Background Sync for Offline Writes
+## Background Sync for Offline Writes
 
 For applications that need to handle user actions while offline, Workbox's background sync is invaluable:
 
@@ -217,7 +217,7 @@ registerRoute(
 )
 ```
 
-Precaching for Critical Assets
+## Precaching for Critical Assets
 
 Precaching ensures essential assets are available immediately when the service worker installs:
 
@@ -232,11 +232,11 @@ precacheAndRoute([
 ])
 ```
 
-Debugging Service Worker Issues
+## Debugging Service Worker Issues
 
 Service workers can be challenging to debug. Claude Code can help diagnose common problems:
 
-Issue: Cache not updating
+## Issue: Cache not updating
 
 > "My service worker caches files but users don't see updates."
 
@@ -257,7 +257,7 @@ generateSW({
 })
 ```
 
-Best Practices for Workbox Workflow
+## Best Practices for Workbox Workflow
 
 When working with Claude Code on Workbox projects, keep these recommendations in mind:
 
@@ -271,7 +271,7 @@ When working with Claude Code on Workbox projects, keep these recommendations in
 
 5. Document Your Strategy: Claude Code can help you maintain documentation explaining your caching decisions for future maintainers.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Workbox creates a powerful workflow for building offline-capable PWAs. By using Claude Code's ability to generate contextually appropriate code and explain complex patterns, you can implement professional-grade service worker functionality without becoming a service worker expert. Remember to test thoroughly in production-like environments and keep your caching strategies aligned with your users' needs.
 

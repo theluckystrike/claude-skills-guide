@@ -13,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Dockerfile Generation Best Practices 2026
 
 Dockerfile generation has evolved significantly with AI-powered tools, and Claude Code leads this transformation in 2026. This guide explores how to use Claude Code's capabilities to create efficient, secure, and production-ready Dockerfiles while understanding the best practices that make containerized applications shine. Whether you are containerizing a Python microservice, a Node.js API, or a compiled Go binary, the patterns here apply directly and the companion Claude Code skills turn them into repeatable workflow steps.
 
-Understanding Claude Code's Role in Dockerfile Generation
+## Understanding Claude Code's Role in Dockerfile Generation
 
 Claude Code isn't just another CLI tool, it's an AI assistant that understands containerization patterns, security scanning, and deployment workflows. When you ask Claude Code to generate a Dockerfile, it draws from years of best practices across programming languages, base images, and security standards.
 
 The key advantage is contextual understanding. Unlike simple template generators, Claude Code analyzes your project structure, dependencies, and requirements to produce Dockerfiles tailored to your specific needs. Point it at a `requirements.txt` with GPU-heavy ML packages and it will suggest a CUDA-capable base image. Show it a Go module that compiles to a single binary and it will recommend a distroless runtime. This contextual reasoning is what separates Claude Code from a static Dockerfile template library.
 
-Essential Skills for Dockerfile Work
+## Essential Skills for Dockerfile Work
 
 Claude Code's effectiveness comes from its skill ecosystem. These skills extend its capabilities for specialized tasks:
 
@@ -37,7 +36,7 @@ Security Scanner Integration, Embeds security best practices directly into your 
 
 Base Image Advisor, Compares candidate base images by size, CVE count, and update frequency. When you ask "should I use `python:3.11-slim` or `python:3.11-alpine`?", this skill gives a concrete answer with tradeoff analysis rather than a generic recommendation.
 
-Choosing the Right Base Image
+## Choosing the Right Base Image
 
 The base image choice is the single most consequential Dockerfile decision. It determines your attack surface, image size, and the system packages available at runtime. The table below summarizes the main options across the most common stacks:
 
@@ -56,7 +55,7 @@ The base image choice is the single most consequential Dockerfile decision. It d
 
 Alpine images use musl libc instead of glibc. This matters for Python packages with C extensions, `numpy`, `cryptography`, and `psycopg2` may fail to install on Alpine because their pre-built wheels target glibc. You either need to compile them from source (slower builds) or use a slim Debian-based image instead. Claude Code accounts for this when it sees C-extension packages in your `requirements.txt`.
 
-Best Practices for AI-Generated Dockerfiles
+## Best Practices for AI-Generated Dockerfiles
 
 1. Start with Appropriate Base Images
 
@@ -286,7 +285,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 Claude Code's Base Image Advisor skill tracks CVE advisories and can alert you when a pinned version has known vulnerabilities, prompting a deliberate upgrade rather than silent drift.
 
-Practical Workflow: Generating a Production Dockerfile
+## Practical Workflow: Generating a Production Dockerfile
 
 Here's how to work effectively with Claude Code for Dockerfile generation:
 
@@ -319,7 +318,7 @@ Claude Code: [explains BuildKit --platform flag, updates RUN commands to
 
 This iterative conversation produces a Dockerfile that is far more complete than what a static template would generate.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Even with AI assistance, certain mistakes persist:
 
@@ -357,7 +356,7 @@ docker build \
   -t myapp:1.4.2 .
 ```
 
-Dockerfile Anti-Patterns vs. Recommended Patterns
+## Dockerfile Anti-Patterns vs. Recommended Patterns
 
 The table below captures the most impactful before/after comparisons Claude Code applies when analyzing an existing Dockerfile:
 
@@ -373,7 +372,7 @@ The table below captures the most impactful before/after comparisons Claude Code
 | Single fat stage | Dev tools in production image | Multi-stage: build stage + lean runtime stage |
 | No `.dockerignore` | `.git`, `.env`, tests copied in | Add `.dockerignore` excluding non-production files |
 
-Advanced: Custom Skills for Organization Standards
+## Advanced: Custom Skills for Organization Standards
 
 If your team has specific Dockerfile standards, create a custom skill:
 
@@ -421,7 +420,7 @@ Replace public base images with internal mirrors:
 
 When a new developer joins and runs `/corporate-dockerfile`, they get a compliant output without needing to read through a 20-page internal standard document.
 
-Validating and Testing Generated Dockerfiles
+## Validating and Testing Generated Dockerfiles
 
 Never ship a generated Dockerfile without local validation. The minimal verification loop is:
 
@@ -456,7 +455,7 @@ For teams using GitHub Actions, add a Dockerfile lint step with Hadolint before 
 
 Hadolint checks for the same issues Claude Code's Dockerfile Analyzer catches, running as root, missing `--no-install-recommends`, using `apt-get update` without `apt-get install` in the same layer, and so on. Running both gives you defense in depth: Claude Code catches issues during generation, Hadolint catches issues during CI.
 
-Looking Ahead: 2026 and Beyond
+## Looking Ahead: 2026 and Beyond
 
 Dockerfile generation continues evolving. In 2026, we see emerging trends:
 
@@ -480,7 +479,7 @@ COPY . .
 
 With this pattern, the pip cache persists on the build host between runs. A full cold install that takes 90 seconds drops to under 10 seconds on subsequent builds when dependencies have not changed.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Dockerfile generation from a tedious task into a collaborative, intelligent process. By using its understanding of security, optimization, and modern deployment patterns, you can generate production-ready Dockerfiles that follow best practices automatically. Start with the essential skills, iterate on the output, and build confidence in your containerized deployments.
 

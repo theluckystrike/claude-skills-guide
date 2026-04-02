@@ -16,7 +16,7 @@ tags: [claude-code, claude-skills]
 
 Building a TypeScript client for interacting with Claude Code opens up powerful automation possibilities. Whether you're integrating Claude into your CI/CD pipeline, building a custom dashboard, or composing multiple skills programmatically, understanding the API client patterns in TypeScript will accelerate your development workflow.
 
-Setting Up Your TypeScript Project
+## Setting Up Your TypeScript Project
 
 Before diving into API interactions, set up a TypeScript project with proper dependencies. You'll need the Anthropic SDK and type definitions:
 
@@ -42,11 +42,11 @@ export default client;
 
 This basic setup gives you access to the Claude Messages API, which serves as the foundation for all skill interactions.
 
-Working with Claude Skills in TypeScript
+## Working with Claude Skills in TypeScript
 
 Claude skills extend the base API with specialized prompts and tool configurations. When building a TypeScript client, you can invoke skills directly or compose multiple skills for complex workflows.
 
-Invoking a Single Skill
+## Invoking a Single Skill
 
 The Messages API accepts a `system` parameter where you can inject skill content:
 
@@ -67,7 +67,7 @@ async function invokeSkill(skillContent: string, userMessage: string) {
 
 This pattern works well for skills like the pdf skill when you need to process documents programmatically, or the tdd skill for generating test suites from your TypeScript code.
 
-Composing Multiple Skills
+## Composing Multiple Skills
 
 For more complex workflows, chain multiple skill invocations:
 
@@ -86,7 +86,7 @@ async function composeWorkflow(skills: string[], input: string) {
 
 This approach shines when combining the frontend-design skill for UI generation with the pdf skill for documentation, or using supermemory to retrieve context before processing.
 
-Authentication and Environment Configuration
+## Authentication and Environment Configuration
 
 Production implementations require secure authentication handling. Never hardcode API keys in your source code. Instead, use environment variables with validation:
 
@@ -114,7 +114,7 @@ export const config = loadConfig();
 
 This validation prevents runtime errors from missing configuration and provides clear error messages during development.
 
-Handling Tool Calls and Responses
+## Handling Tool Calls and Responses
 
 Claude skills often involve tool use. Your TypeScript client needs to handle the message deltas that include tool invocations:
 
@@ -153,7 +153,7 @@ async function executeWithTools(
 
 The mcp-builder skill provides excellent patterns for creating custom MCP servers that your TypeScript client can interact with, extending Claude's capabilities beyond built-in tools.
 
-Error Handling and Retry Logic
+## Error Handling and Retry Logic
 
 Network failures and rate limits require solid error handling. Implement exponential backoff for reliability:
 
@@ -180,7 +180,7 @@ async function withRetry<T>(
 
 This retry logic handles transient failures gracefully, which is essential when integrating with Claude's API in production environments.
 
-Type-Safe Skill Definitions
+## Type-Safe Skill Definitions
 
 Use TypeScript's type system to create type-safe skill definitions:
 
@@ -208,7 +208,7 @@ async function runTdd(input: string): Promise<string[]> {
 
 This pattern ensures type safety across your skill invocations and makes refactoring straightforward when skill prompts change.
 
-Real-World Integration Example
+## Real-World Integration Example
 
 Putting it all together, here's a practical workflow that uses multiple skills:
 
@@ -234,7 +234,7 @@ This workflow demonstrates how TypeScript clients can orchestrate multiple Claud
 
 Building a TypeScript API client for Claude Code gives you programmatic control over AI-powered workflows. The patterns covered here, authentication, skill composition, tool handling, and error recovery, provide a solid foundation for both simple integrations and complex production systems.
 
-Step-by-Step Guide: Building a Production TypeScript Client
+## Step-by-Step Guide: Building a Production TypeScript Client
 
 Here is a concrete workflow for taking a TypeScript API client from prototype to production-ready integration.
 
@@ -248,7 +248,7 @@ Step 4. Add request/response logging middleware. Wrap the Anthropic client with 
 
 Step 5. Implement integration tests with recorded fixtures. Record real API responses using `nock` or `msw` and use them as fixtures in your test suite. Claude Code generates the fixture recording script and the test harness, so your CI pipeline runs without hitting the live API while still testing real response shapes.
 
-Common Pitfalls
+## Common Pitfalls
 
 Not handling streaming responses correctly. When using `client.messages.stream()`, you must handle the async iterator properly. Forgetting to await the stream completion or not handling backpressure causes incomplete responses. Claude Code generates stream handlers with proper error boundaries and cancellation support.
 
@@ -260,7 +260,7 @@ Ignoring the `stop_reason` field. When `stop_reason` is `max_tokens`, the respon
 
 Not implementing circuit breakers for downstream failures. If your TypeScript client is part of a larger service, unhandled API failures cascade into upstream timeouts. Claude Code generates a circuit breaker wrapper using the half-open pattern that stops sending requests when the API is degraded and resumes automatically when health is restored.
 
-Best Practices
+## Best Practices
 
 Version your skill definitions alongside your API version. When Anthropic releases a new model, your skill system prompts may need tuning. Keep skill definitions in a versioned directory structure (`skills/v1/`, `skills/v2/`) and use feature flags to control which version your client loads. Claude Code generates the versioning scaffold and the feature flag integration.
 
@@ -270,7 +270,7 @@ Cache system prompts, not completions. Skill system prompts are static text that
 
 Test with realistic token budgets. Development testing with generous `max_tokens` values hides truncation bugs that surface in production when cost controls reduce the budget. Claude Code generates parameterized test suites that run the same prompts against multiple token budget configurations.
 
-Integration Patterns
+## Integration Patterns
 
 Next.js API routes. Expose your TypeScript Claude client through Next.js API routes with proper streaming support. Claude Code generates the route handler using `Response.stream()` with the Vercel AI SDK's streaming helpers, enabling real-time token streaming to browser clients without buffering the full response server-side.
 
@@ -278,8 +278,7 @@ Nx monorepo shared libraries. In a monorepo, extract your Claude client into a s
 
 OpenTelemetry tracing. Instrument your client with OpenTelemetry spans to track API latency, token usage, and error rates alongside your other services. Claude Code generates the instrumentation wrapper that creates spans for each API call and propagates trace context through the `x-request-id` header.
 
-
-Advanced Patterns: Streaming and Long-Running Operations
+## Advanced Patterns: Streaming and Long-Running Operations
 
 For operations that take more than a few seconds, the synchronous request-response pattern produces a poor user experience. Streaming responses let you display partial results as they arrive rather than waiting for the complete response.
 
@@ -287,9 +286,7 @@ Claude Code generates the streaming client method using `client.messages.stream(
 
 For background jobs that run for minutes or hours, Claude Code generates the polling helper that initiates the job, stores the job ID, and polls a status endpoint with exponential backoff until the job completes or fails. The helper returns a typed result object and surfaces progress updates through a callback, giving users visibility into long-running operations without blocking the main thread.
 
-
 ---
-
 
 Related Reading
 

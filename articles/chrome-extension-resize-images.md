@@ -20,17 +20,17 @@ Image resizing is one of the most common tasks when working with web content. Wh
 
 This guide explores how Chrome extensions handle image resizing, the APIs involved, and how you can build your own extension for this purpose.
 
-How Chrome Extensions Resize Images
+## How Chrome Extensions Resize Images
 
 Chrome extensions can resize images through several approaches. The most common methods use the HTML5 Canvas API for client-side processing, the Chrome Downloads API for saving files, and the File System Access API for handling user files.
 
 When a user selects an image in the browser or uploads one through the extension interface, the extension loads the image into a Canvas element. The Canvas API provides the `drawImage()` method, which accepts source dimensions for cropping and destination dimensions for resizing. After drawing the resized image to the canvas, you can export it as a Blob or data URL using the `toBlob()` or `toDataURL()` methods.
 
-Building a Basic Image Resizer Extension
+## Building a Basic Image Resizer Extension
 
 Creating a Chrome extension for image resizing requires three core files: the manifest, a popup HTML file, and a JavaScript file for the logic. Below is a complete implementation structure.
 
-The Manifest File
+## The Manifest File
 
 Your extension begins with the manifest.json file that declares permissions and defines the extension structure:
 
@@ -50,7 +50,7 @@ Your extension begins with the manifest.json file that declares permissions and 
 
 The `activeTab` permission allows your extension to interact with the current page, while `downloads` enables saving the resized image to the user's filesystem.
 
-The Popup Interface
+## The Popup Interface
 
 The popup.html provides the user interface where users input their desired dimensions:
 
@@ -88,7 +88,7 @@ The popup.html provides the user interface where users input their desired dimen
 </html>
 ```
 
-The Resize Logic
+## The Resize Logic
 
 The popup.js script handles the actual image processing. This script runs when the user clicks the resize button:
 
@@ -142,7 +142,7 @@ document.getElementById('resizeBtn').addEventListener('click', async () => {
 });
 ```
 
-Advanced Features for Power Users
+## Advanced Features for Power Users
 
 Beyond basic resizing, several enhancements can make your extension more useful for developers and power users.
 
@@ -158,7 +158,7 @@ canvas.toBlob((blob) => {
 
 Preset dimensions provide quick access to common sizes. You can add buttons or a dropdown for standard sizes like 1920x1080 for full HD, 1280x720 for HD, or 1200x630 for social mediaog images.
 
-Practical Use Cases
+## Practical Use Cases
 
 Chrome extension image resizing serves various real-world scenarios:
 
@@ -168,7 +168,7 @@ Content creators preparing images for blogs or social media benefit from quick r
 
 E-commerce sellers listing products on multiple platforms need consistent image dimensions. An extension with batch processing capabilities can resize an entire product photo folder in minutes.
 
-Extension Distribution and Testing
+## Extension Distribution and Testing
 
 When your extension is ready, you can load it locally for testing through Chrome's developer mode. Navigate to `chrome://extensions/`, enable Developer mode, and click "Load unpacked" to select your extension folder.
 
@@ -177,7 +177,6 @@ For broader distribution, you submit your extension through the Chrome Web Store
 Testing your extension thoroughly across different image types and sizes ensures reliable performance. Pay special attention to very large images, as client-side processing has memory limits that vary by device.
 
 ---
-
 
 Related Reading
 

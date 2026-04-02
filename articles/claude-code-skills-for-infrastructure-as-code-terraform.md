@@ -18,7 +18,7 @@ Infrastructure as code has become essential for managing cloud resources reprodu
 
 This article covers Claude skills across general Terraform workflows: a survey of the core skills (`/tdd`, `/supermemory`, `/pdf`, `git-workflow`), multi-workspace scripting, terraform-docs integration, and Infracost cost estimation. It applies to any cloud provider. If you are working specifically with AWS and need detail on `assume_role`, provider aliases, multi-region configuration, or AWS-specific authentication patterns, see the companion article [Claude Code Terraform AWS Provider Guide](/claude-code-terraform-aws-provider-guide/).
 
-Prerequisites
+## Prerequisites
 
 Before integrating Claude Code with Terraform, ensure you have:
 
@@ -35,7 +35,7 @@ terraform version
 terraform -help
 ```
 
-Setting Up Your Terraform Workflow
+## Setting Up Your Terraform Workflow
 
 Before diving into specific skills, ensure your Claude Code environment is properly configured. The skill system works best when you have a clear project structure:
 
@@ -53,9 +53,9 @@ your-terraform-repo/
 
 Organizing your code into modules improves reusability and makes Claude's assistance more effective. Each module should have a focused responsibility.
 
-Essential Skills for Infrastructure Work
+## Essential Skills for Infrastructure Work
 
-Claude Code for Terraform Commands
+## Claude Code for Terraform Commands
 
 [Claude Code has deep knowledge of command-line operations](/best-claude-code-skills-to-install-first-2026/), which is critical when running Terraform plans and applies. This helps you construct complex shell commands for iterating over multiple environments or parsing Terraform output.
 
@@ -125,9 +125,9 @@ Supermemory stores and retrieves relevant information about your infrastructure:
 
 This becomes invaluable when returning to a project after several weeks or when onboarding new team members.
 
-Practical Examples
+## Practical Examples
 
-Generating Terraform Configuration
+## Generating Terraform Configuration
 
 When starting a new module, describe your requirements to Claude and it generates appropriate configuration. For a basic AWS web server setup:
 
@@ -220,7 +220,7 @@ resource "aws_s3_bucket_public_access_block" "website" {
 
 Claude can generate this structure based on your description, then use the tdd skill to add appropriate validations.
 
-Validating Infrastructure Changes
+## Validating Infrastructure Changes
 
 Before applying changes, ask Claude Code to run validation checks:
 
@@ -238,9 +238,9 @@ terraform show -json tfplan | jq -r '.resource_changes[] | select(.change.action
 
 These checks catch issues before they reach your shared infrastructure.
 
-Optimizing Your Workflow
+## Optimizing Your Workflow
 
-State Management
+## State Management
 
 Store your state files remotely using S3 with DynamoDB locking to enable team collaboration and prevent concurrent modifications:
 
@@ -264,7 +264,7 @@ For state management, consider these practices:
 - Implement state file encryption for sensitive environments
 - Use workspaces carefully to avoid confusion
 
-Documentation Generation
+## Documentation Generation
 
 [Infrastructure documentation often lags behind implementation](/automated-code-documentation-workflow-with-claude-skills/). Use a `.terraform-docs.yml` configuration to auto-generate documentation from your modules:
 
@@ -296,7 +296,7 @@ output "bucket_arn" {
 
 With proper outputs defined, you can generate comprehensive documentation automatically using Claude's text generation capabilities.
 
-Advanced Integration Patterns
+## Advanced Integration Patterns
 
 For production environments, implement GitOps workflows using Terraform Cloud or AWS CodePipeline. Store your Terraform configurations in version control and trigger plan/apply operations automatically on pull request merges.
 
@@ -309,13 +309,13 @@ infracost diff --tfplan tfplan
 
 This helps teams understand the financial impact of infrastructure changes before applying them.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 One frequent issue is running Terraform without understanding dependencies. The supermemory skill helps track these relationships over time. Another common mistake is committing sensitive data to version control, always use appropriate secret management solutions.
 
 When working with modules, avoid creating overly complex variable structures. Instead, focus on clear, composable interfaces that other teams can easily consume.
 
-Conclusion
+## Conclusion
 
 [Combining Claude Code skills transforms Terraform workflows](/use-cases-hub/) from manual operations into streamlined, automated processes. Claude Code handles command execution, /tdd ensures testing, and /supermemory maintains project context. Together, these skills reduce errors and accelerate infrastructure delivery.
 
@@ -331,6 +331,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The essential developer skill stack
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). DevOps-specific skill recommendations
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,18 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
-How to Coordinate Multiple AI Agents in Pipeline
-
 Coordinating multiple AI agents in a pipeline is one of the most powerful patterns for handling complex, multi-stage workflows. Whether you're building a CI/CD pipeline, orchestrating data processing tasks, or managing a complex development workflow, understanding how to effectively coordinate agents can dramatically improve your productivity and reliability.
 
-Why Multi-Agent Pipeline Coordination Matters
+## Why Multi-Agent Pipeline Coordination Matters
 
 Modern software projects often require multiple specialized tasks to be executed in sequence or parallel. A typical pipeline might include code linting, testing, building, deploying, and monitoring. While Claude Code excels at handling individual tasks, coordinating multiple specialized agents across these stages requires deliberate design patterns and techniques.
 
 The challenge lies not just in executing each stage, but in ensuring proper handoffs, maintaining context between stages, handling failures gracefully, and providing visibility into the overall pipeline progress.
 
-Core Patterns for Agent Pipeline Coordination
+## Core Patterns for Agent Pipeline Coordination
 
 1. Sequential Agent Handoffs
 
@@ -96,9 +93,9 @@ Agent 2 reads the status and proceeds accordingly
 "Read /tmp/pipeline/build.status and determine next steps"
 ```
 
-Practical Pipeline Examples
+## Practical Pipeline Examples
 
-Example 1: Code Review Pipeline
+## Example 1: Code Review Pipeline
 
 A multi-stage code review pipeline can coordinate agents for different aspects of review:
 
@@ -109,7 +106,7 @@ A multi-stage code review pipeline can coordinate agents for different aspects o
 
 Each agent focuses on its specialty, and findings are aggregated at the end. This specialization allows each agent to be more thorough in its specific domain.
 
-Example 2: Data Processing Pipeline
+## Example 2: Data Processing Pipeline
 
 For ETL (Extract, Transform, Load) workflows:
 
@@ -120,7 +117,7 @@ For ETL (Extract, Transform, Load) workflows:
 
 The transform agent can reference the extract agent's output files, and the validate agent can check both transformation quality and data integrity before the load stage begins.
 
-Example 3: Deployment Pipeline
+## Example 3: Deployment Pipeline
 
 A deployment coordination pipeline might include:
 
@@ -132,25 +129,25 @@ A deployment coordination pipeline might include:
 
 Each stage can be conditionally skipped based on previous results, and failure at any stage halts the pipeline.
 
-Best Practices for Pipeline Coordination
+## Best Practices for Pipeline Coordination
 
-Always Include Rollback Plans
+## Always Include Rollback Plans
 
 Before executing pipeline stages that make changes, ensure you have clear rollback procedures. Claude Code can help generate rollback scripts as part of the pipeline definition.
 
-Use Explicit State Management
+## Use Explicit State Management
 
 Don't rely on implicit context for critical pipeline state. Use explicit checkpointing through `record_note` or file-based mechanisms to ensure continuity even if a session is interrupted.
 
-Implement Proper Error Handling
+## Implement Proper Error Handling
 
 Each pipeline stage should handle potential failures gracefully. Define clear error states and ensure downstream agents can respond appropriately to failures.
 
-Maintain Audit Trails
+## Maintain Audit Trails
 
 Keep detailed logs of what each agent did. This helps with debugging and provides an audit trail for compliance requirements.
 
-Structure Prompts for Pipeline Context
+## Structure Prompts for Pipeline Context
 
 When handing off between agents, include explicit context summaries:
 
@@ -163,21 +160,21 @@ Previous context:
 Your task: Validate the cleaned data and prepare for Stage 3
 ```
 
-Advanced Techniques
+## Advanced Techniques
 
-Dynamic Pipeline Branching
+## Dynamic Pipeline Branching
 
 Based on output from one agent, you can dynamically decide which path the pipeline takes. Claude Code can evaluate conditions and either continue with the next stage or branch to alternative handling.
 
-Pipeline Templates
+## Pipeline Templates
 
 For recurring pipeline patterns, create templates that can be reused across projects. Document the expected inputs, outputs, and failure modes for each stage.
 
-Monitoring and Observability
+## Monitoring and Observability
 
 Integrate logging at each stage to track pipeline health. Claude Code can write to monitoring systems or update status dashboards as it progresses through stages.
 
-Conclusion
+## Conclusion
 
 Coordinating multiple AI agents in pipeline workflows unlocks powerful automation capabilities. By using Claude Code's context management, tool usage, and checkpoint features, you can build solid pipelines that handle complex multi-stage workflows reliably. Start with simple sequential patterns and gradually incorporate parallel execution and advanced coordination as your needs evolve.
 

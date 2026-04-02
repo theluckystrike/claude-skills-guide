@@ -16,7 +16,7 @@ score: 8
 
 Chrome autofill should be instantaneous, tapping a field and seeing your saved information appear in milliseconds. When it slows down, every form becomes a friction point in your workflow. This guide breaks down why Chrome autofill slows down and what you can do about it, whether you're a developer building forms or a power user who wants snappy credentials everywhere.
 
-Understanding Chrome Autofill Architecture
+## Understanding Chrome Autofill Architecture
 
 Chrome's autofill system relies on several interconnected components: the Password Manager, payment methods, address profiles, and the autofill service that matches form fields to saved data. When any of these components encounter issues, the entire autofill experience degrades.
 
@@ -32,7 +32,7 @@ When Chrome encounters a form field, it goes through roughly this sequence:
 
 If any step in that pipeline stalls, a slow disk read on the AutofillDatabase, a sync operation blocking the browser process, or a rendering conflict on the compositing layer, you notice a delay. Most users experience this as a half-second or longer hesitation before the suggestions appear.
 
-Diagnosing the Bottleneck
+## Diagnosing the Bottleneck
 
 Before throwing solutions at the problem, spend two minutes diagnosing where the slowness actually lives.
 
@@ -42,7 +42,7 @@ Compare incognito vs. normal window. Incognito disables most extensions and uses
 
 Check the Autofill internals page. Navigate to `chrome://autofill-internals/` and reproduce the slow autofill while watching the log. You'll see timestamped events for each step of the autofill pipeline. Look for gaps longer than 100ms between events, that's where the stall is occurring.
 
-Common Causes of Slow Autofill
+## Common Causes of Slow Autofill
 
 1. Sync and Storage Overload
 
@@ -121,11 +121,11 @@ This one is often overlooked. If a page's JavaScript attaches `input`, `keydown`
 
 You can test this hypothesis in DevTools. Open the Performance tab, start recording, trigger autofill, and stop recording. Look for long JavaScript tasks on the main thread that fire immediately after the autofill event. If you see them, the page's own scripts are causing the perceived lag.
 
-Developer Solutions: Optimizing Forms for Fast Autofill
+## Developer Solutions: Optimizing Forms for Fast Autofill
 
 If you're building web forms and users report slow autofill experiences, the issue often lies in form structure rather than Chrome itself.
 
-Proper Autocomplete Attributes
+## Proper Autocomplete Attributes
 
 Modern browsers use the `autocomplete` attribute to match form fields with saved profiles. Using correct values dramatically improves autofill speed by reducing the matching ambiguity.
 
@@ -178,7 +178,7 @@ Here is a quick reference for the most frequently needed values:
 
 Omitting these attributes forces Chrome to guess field intent by inspecting `name`, `id`, `placeholder`, and nearby label text. Guessing is slower and less accurate than an explicit declaration.
 
-Avoiding Dynamic Form Issues
+## Avoiding Dynamic Form Issues
 
 Single-page applications that dynamically inject form fields can confuse Chrome's autofill scanner. If fields load after the page initially renders, Chrome may not detect them for autofill.
 
@@ -213,13 +213,13 @@ function showAddressFormBad() {
 }
 ```
 
-Minimizing Competing Autofill Sources
+## Minimizing Competing Autofill Sources
 
 When multiple password managers compete to fill credentials, users experience confusion and delays. Specify `autocomplete="off"` only when truly necessary, overusing it forces users to manually enter data that Chrome could autofill instantly.
 
 The legitimate cases for `autocomplete="off"` are narrow: one-time codes (OTPs), admin fields that should never pre-populate for security reasons, and fields whose values are generated at runtime rather than typed. Everything else should have a valid autocomplete value or no attribute at all.
 
-Testing Your Form's Autofill Behavior
+## Testing Your Form's Autofill Behavior
 
 Before shipping a form, test it explicitly for autofill behavior:
 
@@ -230,7 +230,7 @@ Before shipping a form, test it explicitly for autofill behavior:
 
 If step 3 takes more than 200ms or step 4 leaves fields blank, check your autocomplete attribute values against the table above.
 
-Quick Fixes for End Users
+## Quick Fixes for End Users
 
 If you're experiencing slow autofill as a user, try these immediate solutions:
 
@@ -246,7 +246,7 @@ Update Chrome: Newer versions include performance improvements for autofill. Run
 
 Reset the Web Data database: If all else fails, the nuclear option is resetting the autofill database as described in the corruption section above. You'll need to re-enter your saved addresses and payment methods, but in severe cases this is faster than continuing to debug a deeply corrupted profile.
 
-When to Report a Bug
+## When to Report a Bug
 
 If you've exhausted these solutions and autofill remains slow, you may have encountered a Chrome bug. Before reporting:
 
@@ -258,7 +258,6 @@ If you've exhausted these solutions and autofill remains slow, you may have enco
 Provide detailed information including Chrome version, OS, any extension conflicts, and whether hardware acceleration is enabled. The autofill internals log from `chrome://autofill-internals/` is especially valuable in a bug report because it gives Chrome engineers the exact event sequence and timestamps without requiring them to reproduce the issue from scratch.
 
 ---
-
 
 Related Reading
 

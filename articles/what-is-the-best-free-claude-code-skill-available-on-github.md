@@ -16,13 +16,13 @@ permalink: /what-is-the-best-free-claude-code-skill-available-on-github/
 
 If you are using Claude Code (claude.ai/code) as part of your daily development workflow, you have probably wondered which skill can give you the biggest productivity boost without spending a dime. The answer depends on your use case, but several free Claude skills available on GitHub stand out for their quality, maintenance, and real-world utility.
 
-Understanding Claude Skills
+## Understanding Claude Skills
 
 [Claude skills are modular extensions that add specialized capabilities to Claude Code](/best-claude-code-skills-to-install-first-2026/) They work by providing additional context, tools, and workflows that Claude can invoke when needed. Most skills are open source and hosted on GitHub, making them freely available for anyone to install and use.
 
 The best skill for you depends on what you build. A frontend developer will benefit most from skills focused on UI implementation, while a backend engineer might prefer skills that handle testing, database schema design, or API integration. Below is a practical breakdown of the top free skills across different categories.
 
-Top Free Claude Skills on GitHub
+## Top Free Claude Skills on GitHub
 
 1. frontend-design Skill
 
@@ -135,7 +135,7 @@ def createSalesReport(data, output_path):
     wb.save(output_path)
 ```
 
-How to Install and Use These Skills
+## How to Install and Use These Skills
 
 Most Claude skills are installed through the Claude Code CLI. You can find installation instructions in each skill's GitHub repository. Typically, the process involves cloning the repository and registering the skill with Claude.
 
@@ -148,13 +148,13 @@ Follow specific installation instructions in README
 
 Before installing any skill, check the repository for recent commits, issue activity, and documentation quality. Well-maintained skills receive regular updates and respond quickly to bug reports.
 
-Choosing the Right Skill for Your Needs
+## Choosing the Right Skill for Your Needs
 
 The best free Claude Code skill depends entirely on your workflow. If you build web applications regularly, the frontend-design skill will provide the most immediate value. If you work with documentation or data extraction, the pdf and xlsx skills are more relevant. For long-running projects where memory matters, supermemory fills a critical gap.
 
 Many developers install multiple skills and let Claude determine which one applies to the current task through [auto-invocation](/claude-skills-auto-invocation-how-it-works/). This approach works well because Claude automatically selects the most appropriate skill based on your prompts and the context of your request.
 
-Conclusion
+## Conclusion
 
 Claude skills represent a powerful way to extend Claude Code's capabilities without additional cost. The skills mentioned above represent the most practical and well-maintained options available on GitHub. Start with the skill that aligns closest to your primary work, and expand from there as your needs evolve.
 

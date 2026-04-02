@@ -17,7 +17,7 @@ Chrome Extension Webcam Overlay Recording: A Practical Guide
 
 Recording your screen with a webcam overlay has become essential for tutorials, documentation, and content creation. Chrome extensions provide a powerful way to capture your screen while embedding your camera feed directly into the recording. This guide walks you through building a Chrome extension that handles webcam overlay recording using the MediaStream Recording API and canvas manipulation. By the end, you will have a working extension capable of producing broadcast-quality recordings with a fully configurable picture-in-picture webcam feed.
 
-Understanding the Core APIs
+## Understanding the Core APIs
 
 Chrome extensions can use several browser APIs to achieve webcam overlay recording. The primary components you need are:
 
@@ -30,7 +30,7 @@ Chrome extensions can use several browser APIs to achieve webcam overlay recordi
 
 Before implementing, ensure your extension requests the appropriate permissions in the manifest. You will need `scripting` permission and host permissions for any pages where the overlay recording will be active.
 
-API Compatibility Overview
+## API Compatibility Overview
 
 | API | Chrome Version | Notes |
 |---|---|---|
@@ -42,9 +42,9 @@ API Compatibility Overview
 
 All modern Chrome versions (100+) support every API this guide uses. If you need to support older browsers or other Chromium-based browsers like Edge or Brave, the same APIs apply.
 
-Building the Extension
+## Building the Extension
 
-Manifest Configuration
+## Manifest Configuration
 
 Your extension's manifest must declare the necessary permissions. Here is a complete Manifest V3 configuration that covers everything this guide uses:
 
@@ -86,7 +86,7 @@ Your extension's manifest must declare the necessary permissions. Here is a comp
 
 The `activeTab` permission allows your extension to inject scripts into the current tab when the user activates it, while `<all_urls>` ensures compatibility across different web applications. The `storage` permission enables saving user preferences like overlay position and size between sessions.
 
-Project File Structure
+## Project File Structure
 
 A clean file structure makes the extension easier to maintain:
 
@@ -109,7 +109,7 @@ webcam-overlay-recorder/
 
 Separating the recording logic (`recorder.js`) from the overlay dragging controls (`overlay-controls.js`) keeps each file focused on a single responsibility.
 
-Content Script Implementation
+## Content Script Implementation
 
 The content script handles the actual recording logic. This script creates a hidden video element for the webcam, another for the screen capture, and a canvas to composite them. The version below adds proper cleanup, error handling, and a configurable overlay position:
 
@@ -340,7 +340,7 @@ function stopRecording() {
 
 This implementation captures both screen and webcam simultaneously, composites them on a canvas element with rounded corners, mixes audio from both sources, and records the result at 30 frames per second.
 
-Background Script and Popup
+## Background Script and Popup
 
 The background service worker relays messages between the popup UI and the active tab:
 
@@ -447,11 +447,11 @@ stopBtn.addEventListener('click', () => {
 });
 ```
 
-Handling Permissions and Edge Cases
+## Handling Permissions and Edge Cases
 
 Webcam overlay recording requires careful permission handling. The `getDisplayMedia` prompt displays to users which screen area is being captured, while `getUserMedia` requests camera access. Both permissions must be granted for the recording to function.
 
-Permission Error Reference
+## Permission Error Reference
 
 | Error Name | Cause | Resolution |
 |---|---|---|
@@ -461,7 +461,7 @@ Permission Error Reference
 | `OverconstrainedError` | Requested resolution not supported | Relax constraints or use `ideal` instead of `exact` |
 | `AbortError` | User closed the picker dialog | Silently reset the UI to idle state |
 
-Stream Lifecycle Management
+## Stream Lifecycle Management
 
 One common bug is forgetting to stop tracks when recording ends. Orphaned tracks keep the camera indicator light on and waste resources:
 
@@ -479,7 +479,7 @@ function releaseAllMedia(streams) {
 
 Register this cleanup in three places: when the user clicks Stop, when `screenTrack.onended` fires, and in a `window.addEventListener('beforeunload', ...)` handler as a safety net.
 
-Tab Focus and Background Throttling
+## Tab Focus and Background Throttling
 
 Chrome throttles `requestAnimationFrame` in background tabs to 1 fps to save resources. Since the extension's canvas rendering runs in the content script context of the active tab, this is usually not a problem during recording. However, if you implement a preview overlay visible to the user, use `requestVideoFrameCallback` instead:
 
@@ -497,9 +497,9 @@ function drawFrameVFC() {
 
 `requestVideoFrameCallback` only fires when a new video frame is actually available, reducing wasted draw calls and CPU usage by 20-40% compared to `requestAnimationFrame` at 60 fps.
 
-Optimizing for Different Use Cases
+## Optimizing for Different Use Cases
 
-Overlay Position Comparison
+## Overlay Position Comparison
 
 | Position | Best For | Avoid When |
 |---|---|---|
@@ -554,7 +554,7 @@ function makeDraggable(overlayElement, onPositionChange) {
 
 Pass a callback to `onPositionChange` that saves the position to `chrome.storage.local` so the user's preferred position persists across recording sessions.
 
-Resizable Webcam Overlay
+## Resizable Webcam Overlay
 
 Let users resize the webcam frame before recording starts:
 
@@ -597,7 +597,7 @@ function addResizeHandle(overlayElement, onResize) {
 }
 ```
 
-Recording Audio
+## Recording Audio
 
 The example above mixes audio from both sources using the Web Audio API. Understanding the three common audio scenarios helps you decide which approach to use:
 
@@ -642,11 +642,11 @@ dest.stream.getAudioTracks().forEach(t => canvasStream.addTrack(t));
 
 Note that system audio capture behavior varies across operating systems. macOS users may need to install a virtual audio driver or use the built-in screen recording in System Preferences first. Windows generally supports system audio capture without extra drivers.
 
-Export and Post-Processing
+## Export and Post-Processing
 
 The recorded output uses WebM format with VP9 or VP8 codec. This works well for web playback but may need conversion for other uses.
 
-Format Comparison
+## Format Comparison
 
 | Format | Codec | File Size | Compatibility | Best For |
 |---|---|---|---|---|
@@ -698,7 +698,7 @@ function convertToMp4(inputPath, outputPath) {
 }
 ```
 
-Performance Benchmarks and Tuning
+## Performance Benchmarks and Tuning
 
 Canvas compositing performance depends heavily on resolution and frame rate. Here are observed CPU usage figures on a modern laptop:
 
@@ -723,14 +723,13 @@ canvas.height = Math.round(settings.height * scale);
 
 This approach dramatically reduces CPU load with minimal visible quality difference for most tutorial recordings.
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for webcam overlay recording combines screen capture, webcam access, and real-time canvas compositing. The approach outlined here gives you a production-ready foundation that can be customized for specific recording needs. With the MediaStream Recording API, the Web Audio API for proper audio mixing, and canvas manipulation, you have full control over how the final recording appears.
 
 Start with the basic implementation and incrementally add the features your use case demands: custom overlay positioning with drag support, resizable webcam frames, format selection, and audio mixing controls. Each addition is self-contained and can be tested independently before integrating into the full extension.
 
 The most important production considerations are proper stream lifecycle management (always stop tracks on cleanup), graceful permission error handling with clear user messaging, and codec detection using `MediaRecorder.isTypeSupported` to ensure the recording starts on every user's machine regardless of their Chrome version.
-
 
 Related Reading
 

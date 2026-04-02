@@ -15,13 +15,13 @@ Claude Code for Wiki Analytics Workflow Tutorial Guide
 
 Wiki platforms contain treasure troves of valuable data, from documentation to team knowledge bases. Analyzing this data effectively can unlock insights about content quality, user engagement, and knowledge gaps. you'll learn how to use Claude Code to build powerful wiki analytics workflows that automate data extraction, processing, and visualization.
 
-Understanding Wiki Analytics with Claude Code
+## Understanding Wiki Analytics with Claude Code
 
 Claude Code excels at working with structured and unstructured text data, making it ideal for wiki analytics. Whether you're analyzing MediaWiki instances, Confluence spaces, or GitHub wikis, Claude Code can help you extract meaningful patterns from your content.
 
 The key advantage is that Claude Code combines natural language understanding with tool execution capabilities. This means you can describe what insights you want in plain English, and Claude Code will execute the necessary operations to gather and analyze your wiki data.
 
-Setting Up Your Wiki Analytics Environment
+## Setting Up Your Wiki Analytics Environment
 
 Before building analytics workflows, ensure you have the right tools configured. First, initialize a Claude Code project with the necessary permissions and dependencies:
 
@@ -49,7 +49,7 @@ Create a `.claude/settings.json` file to configure wiki connections:
 }
 ```
 
-Building Your First Wiki Analytics Script
+## Building Your First Wiki Analytics Script
 
 Let's create a practical analytics script that extracts page statistics and content metrics. This example demonstrates how to combine file operations with API calls to build comprehensive reports.
 
@@ -119,11 +119,11 @@ if __name__ == "__main__":
     print(f"Page Stats: {stats}")
 ```
 
-Automating Content Quality Analysis
+## Automating Content Quality Analysis
 
 One of the most valuable applications of wiki analytics is assessing content quality. You can use Claude Code to build workflows that evaluate wiki pages based on multiple quality indicators.
 
-Key Metrics to Track
+## Key Metrics to Track
 
 - Content Completeness: Ratio of headings to total content length
 - Link Density: Internal and external links per paragraph
@@ -174,7 +174,7 @@ class ContentQualityAnalyzer:
         }
 ```
 
-Integrating with Claude Code for Natural Language Queries
+## Integrating with Claude Code for Natural Language Queries
 
 The real power of Claude Code comes from combining these scripts with natural language processing. You can describe what insights you want, and Claude Code will generate the appropriate queries and analyses.
 
@@ -185,7 +185,7 @@ For example, you might say: "Show me which documentation pages haven't been upda
 3. Filter and rank based on your criteria
 4. Present the results in an actionable format
 
-Creating Automated Reporting Workflows
+## Creating Automated Reporting Workflows
 
 Set up scheduled analytics reports that run automatically. Create a Claude Code agent that generates weekly summaries:
 
@@ -213,7 +213,7 @@ tools:
   - write_file
 ```
 
-Best Practices for Wiki Analytics Workflows
+## Best Practices for Wiki Analytics Workflows
 
 When building wiki analytics with Claude Code, consider these best practices:
 
@@ -227,7 +227,7 @@ Incremental Analysis: For large wikis, process pages incrementally rather than a
 
 Version Control: Store your analytics scripts in version control and document changes to ensure reproducibility.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms wiki analytics from manual, time-consuming tasks into automated, intelligent workflows. By combining API interactions with natural language processing, you can build systems that not only extract data but provide actionable insights about your wiki's content quality and usage patterns.
 

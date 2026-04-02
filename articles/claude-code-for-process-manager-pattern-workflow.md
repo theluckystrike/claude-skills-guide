@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Process Manager Pattern Workflow"
 description: "Learn how to implement the Process Manager pattern using Claude Code. Master workflow orchestration, state management, and compensation strategies for."
@@ -14,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code for Process Manager Pattern Workflow
 
 The Process Manager pattern (also known as Saga Coordinator or Workflow Orchestrator) is a powerful architectural pattern for coordinating complex multi-step business processes across distributed services. When implemented correctly, it enables reliable execution of long-running workflows while handling failures gracefully through compensation mechanisms. This guide shows you how to use Claude Code to implement solid Process Manager workflows efficiently.
 
-Understanding the Process Manager Pattern
+## Understanding the Process Manager Pattern
 
 The Process Manager pattern serves as the central coordinator for complex business transactions that span multiple services. Unlike simple request-response patterns, Process Managers maintain workflow state, orchestrate sequential or parallel steps, and handle failures through compensating actions.
 
@@ -29,7 +25,7 @@ Consider an e-commerce order fulfillment process: when a customer places an orde
 
 The key characteristics of an effective Process Manager include persistent state tracking, retry logic with exponential backoff, timeout handling, and compensation workflows for rollback scenarios.
 
-Setting Up Your Project for Process Manager Development
+## Setting Up Your Project for Process Manager Development
 
 Before implementing a Process Manager, establish a project structure that separates workflow logic from business operations. Claude Code can help scaffold this architecture quickly.
 
@@ -61,7 +57,7 @@ interface WorkflowContext {
 
 This structure separates the workflow definition from the actual business logic, making your code more testable and maintainable. Claude Code can generate the boilerplate for different workflow types and help you implement the orchestration logic.
 
-Implementing the Core Process Manager
+## Implementing the Core Process Manager
 
 The Process Manager acts as the state machine that coordinates your workflow steps. Here's how to implement one:
 
@@ -150,7 +146,7 @@ class ProcessManager<T extends WorkflowContext> {
 
 This implementation provides the foundation for reliable workflow execution with automatic rollback on failure. The retry policy allows you to define custom retry logic for transient failures, while the compensation mechanism ensures your system remains consistent even when errors occur.
 
-Defining Workflow Steps with Compensation
+## Defining Workflow Steps with Compensation
 
 Each workflow step should include both the forward action and the compensation action. Here's a practical example:
 
@@ -211,7 +207,7 @@ const orderFulfillmentWorkflow = new ProcessManager(context)
 
 This step-by-step approach ensures each operation can be rolled back independently, maintaining system consistency throughout the workflow.
 
-Handling Long-Running Workflows with Persistence
+## Handling Long-Running Workflows with Persistence
 
 Production Process Managers must persist their state to survive application restarts. Implement state persistence:
 
@@ -252,7 +248,7 @@ class PersistedProcessManager extends ProcessManager<WorkflowContext> {
 
 Persisting workflow state enables recovery after failures and supports distributed architectures where workflows may be processed by different instances.
 
-Best Practices for Process Manager Implementations
+## Best Practices for Process Manager Implementations
 
 When implementing Process Managers with Claude Code, follow these best practices:
 
@@ -266,7 +262,7 @@ Use correlation IDs to track related operations across services. Pass the workfl
 
 Test compensation paths thoroughly by deliberately failing workflows at various points and verifying rollback behavior. This testing reveals gaps in your compensation logic before they cause production issues.
 
-Conclusion
+## Conclusion
 
 The Process Manager pattern provides a solid foundation for building reliable distributed workflows. By implementing proper state management, retry logic, and compensation mechanisms, you can coordinate complex multi-service transactions with confidence. Claude Code accelerates the development of these patterns by generating boilerplate, suggesting improvements, and helping you implement best practices from the start.
 

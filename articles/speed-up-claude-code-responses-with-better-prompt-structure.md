@@ -20,13 +20,13 @@ This guide covers practical techniques for structuring prompts that produce fast
 
 Scope note: This article focuses specifically on response speed and token efficiency. how to phrase and structure prompts so Claude executes faster, uses fewer tokens, and requires fewer correction cycles. If you are trying to improve the correctness and quality of Claude's output rather than its speed, see [How to Optimize Claude Skill Prompts for Accuracy](/how-to-optimize-claude-skill-prompts-for-accuracy/).
 
-Why Prompt Structure Matters for Response Speed
+## Why Prompt Structure Matters for Response Speed
 
 Claude Code processes your entire conversation context with each turn. When your prompts are vague, ambiguous, or missing context, Claude spends cycles guessing your intent rather than executing. Clear structure eliminates this overhead.
 
 The difference between a five-minute debugging session and a thirty-second fix often comes down to how you frame your initial prompt. Structure signals intent clearly, reducing the mental workload on both you and Claude.
 
-Technique One: Lead with the Action
+## Technique One: Lead with the Action
 
 Start every prompt with a clear verb. Tell Claude what you want it to do before explaining the details. This activates the right reasoning mode immediately.
 
@@ -44,7 +44,7 @@ The strong version leads with "Fix," establishing action immediately. Claude kno
 
 When using skills like tdd, this becomes even more important. A prompt like "Write failing tests for this user authentication module using the /tdd workflow" gives Claude immediate direction compared to "I need to test my auth code somehow."
 
-Technique Two: Provide Scope Boundaries
+## Technique Two: Provide Scope Boundaries
 
 Specify exactly what Claude should focus on. Unbounded requests force Claude to explore multiple angles, consuming time and often generating irrelevant output.
 
@@ -62,7 +62,7 @@ The strong version defines scope precisely: one file, one function, one metric. 
 
 For pdf-related work with the pdf skill, specifying scope might look like: "Extract only the table data from pages 3-5 of this document, ignoring all other content."
 
-Technique Three: Use Structured Format for Complex Requests
+## Technique Three: Use Structured Format for Complex Requests
 
 When asking Claude to handle multiple tasks, present them in a structured format. This parallelizes Claude's processing rather than forcing sequential reasoning.
 
@@ -86,7 +86,7 @@ Then:
 
 This format works because each item has clear boundaries. Claude can execute them efficiently without constantly re-reading your intent.
 
-Technique Four: Include Failure Context
+## Technique Four: Include Failure Context
 
 When something isn't working, provide the specific failure context. Claude responds faster when you eliminate guesswork about what's wrong.
 
@@ -104,7 +104,7 @@ The strong version includes the actual behavior, expected behavior, input, and p
 
 When debugging with tdd, include the exact test failure output and what the test expects. When using supermemory for context recall, include the specific query that returned wrong results.
 
-Technique Five: Chain Context Explicitly
+## Technique Five: Chain Context Explicitly
 
 Reference previous conversation points explicitly rather than relying on implicit context. Claude processes references faster when they're direct.
 
@@ -120,7 +120,7 @@ Regarding the API version we discussed (v2 from our last conversation), should I
 
 This technique becomes powerful in longer sessions. When building with skills like canvas-design or algorithmic-art, referencing specific design requirements from earlier in the conversation keeps Claude aligned without restating everything.
 
-Technique Six: Pre-format Expected Output
+## Technique Six: Pre-format Expected Output
 
 When you need output in a specific format, state it upfront. This prevents back-and-forth corrections.
 
@@ -136,7 +136,7 @@ Show the database schema as PostgreSQL CREATE TABLE statements, one table per bl
 
 For the docx skill, you might say: "Generate the meeting notes as Markdown, using H2 for headers and bullet points for action items." For xlsx work: "Output the data as a three-column table with headers: Date, Amount, Category."
 
-Practical Example: Full Prompt Optimization
+## Practical Example: Full Prompt Optimization
 
 Here's a before-and-after transformation showing multiple techniques together:
 
@@ -163,7 +163,7 @@ Expected completion: all files created and syntactically valid
 
 The optimized version eliminates ambiguity entirely. Claude knows exactly what to build, what to ignore, and what format to deliver.
 
-Quick Reference Checklist
+## Quick Reference Checklist
 
 Use this checklist before sending prompts:
 
@@ -174,12 +174,11 @@ Use this checklist before sending prompts:
 - Are previous conversation points referenced explicitly?
 - Is the expected output format stated clearly?
 
-Conclusion
+## Conclusion
 
 Better prompt structure doesn't just speed up responses, it makes them more accurate. Each technique here reduces the cognitive load on Claude, allowing faster execution and fewer correction cycles. Start applying these to your next Claude Code session and notice the difference immediately.
 
 For developers using specialized skills like tdd for test-driven development or pdf for document processing, these structural principles amplify effectiveness. The time invested in writing better prompts pays back multiplied through faster, more precise responses.
-
 
 Related Reading
 

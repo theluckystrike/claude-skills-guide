@@ -16,7 +16,7 @@ permalink: /why-does-claude-code-not-recognize-my-custom-skill-name/
 
 [You've created a custom skill, placed it in the right directory, but when you try to invoke it with /skill-name, Claude Code gives you a confused response](/claude-skill-md-format-complete-specification-guide/). Your skill isn't loading. This is a common issue with several potential causes. Let's walk through why this happens and how to fix it.
 
-Where Claude Looks for Skills
+## Where Claude Looks for Skills
 
 Claude Code searches for skills in specific locations depending on your setup. The most common locations are:
 
@@ -25,7 +25,7 @@ Claude Code searches for skills in specific locations depending on your setup. T
 
 If your skill file isn't in one of these locations, Claude simply won't find it. The skill must also be in a directory that Claude is configured to scan.
 
-File Naming Matters
+## File Naming Matters
 
 The skill filename directly determines the skill name Claude recognizes. If your file is named `my-custom-skill.md`, you invoke it with `/my-custom-skill`. However, there are nuances:
 
@@ -33,7 +33,7 @@ The skill filename directly determines the skill name Claude recognizes. If your
 - Case sensitivity: While some systems are case-insensitive, it's safest to use lowercase for skill names.
 - File extension: Only `.md` files are recognized as skills. `.txt`, `.markdown`, or other extensions won't work.
 
-The YAML Front Matter Requirement
+## The YAML Front Matter Requirement
 
 Every skill file must begin with valid YAML front matter. This metadata tells Claude Code how to handle your skill. Without it, the skill won't load:
 
@@ -50,7 +50,7 @@ If your front matter is malformed, missing dashes, incorrect indentation, or inv
 - Leaving colons without values
 - Including unsupported characters in the metadata
 
-Directory Structure Problems
+## Directory Structure Problems
 
 Claude expects a flat directory structure or a specific organizational pattern. Common issues include:
 
@@ -58,7 +58,7 @@ Nested directories: If you place your skill in `~/.claude/skills/categories/fron
 
 Wrong parent directory: Skills must be in the root of the skills directory, not in subfolders (unless your specific setup uses a different configuration).
 
-Skill Name Conflicts
+## Skill Name Conflicts
 
 Sometimes your skill exists but gets overshadowed by a built-in skill or another custom skill with the same name. Built-in skills like `pdf`, `pptx`, `docx`, `xlsx`, [`tdd`](/claude-tdd-skill-test-driven-development-workflow/), and `supermemory` take precedence. If you create a skill named `pdf` expecting it to override the built-in, you may encounter unexpected behavior.
 
@@ -70,7 +70,7 @@ ls -la ~/.claude/skills/
 
 If you see duplicate names, rename one of them.
 
-Cache and Refresh Issues
+## Cache and Refresh Issues
 
 Claude Code caches skill metadata. After creating a new skill or making changes, you may need to restart your Claude session or explicitly trigger a refresh. The exact refresh mechanism depends on your interface:
 
@@ -80,7 +80,7 @@ Claude Code caches skill metadata. After creating a new skill or making changes,
 
 Simply editing the skill file isn't always enough, Claude needs to re-scan the directory.
 
-Checking for Syntax Errors in Your Skill
+## Checking for Syntax Errors in Your Skill
 
 Even if the skill loads, syntax errors in the skill body can prevent proper execution. A skill file is essentially a system prompt, so any confusing instructions or broken formatting can cause Claude to ignore or misinterpret the skill.
 
@@ -90,7 +90,7 @@ Validate your skill by:
 2. Avoiding nested bullet points that break YAML parsing
 3. Using consistent formatting throughout
 
-Fixing a Skill That Won't Load
+## Fixing a Skill That Won't Load
 
 Let's say you created `~/.claude/skills/frontend-design.md` but `/frontend-design` doesn't work. Here's how to troubleshoot:
 
@@ -117,11 +117,11 @@ You are a frontend design expert. When asked about UI components:
 Always consider performance and browser compatibility.
 ```
 
-Special Characters and Encoding
+## Special Characters and Encoding
 
 Avoid special characters in skill names. Stick to alphanumeric characters and hyphens. Characters like underscores, ampersands, or parentheses can cause recognition issues in certain environments.
 
-How Claude Loads Skills: Progressive Disclosure
+## How Claude Loads Skills: Progressive Disclosure
 
 Understanding the loading model helps explain why a skill that "exists" still won't work. Claude Code uses a three-level progressive disclosure approach:
 
@@ -131,7 +131,7 @@ Understanding the loading model helps explain why a skill that "exists" still wo
 
 This design keeps startup fast while allowing complex, resource-heavy skills to load on demand.
 
-Not Explicitly Calling the Skill
+## Not Explicitly Calling the Skill
 
 A common misunderstanding: having a skill file in the right place does not automatically activate it for relevant tasks. You must explicitly invoke it:
 
@@ -150,7 +150,7 @@ get_skill("data-processing")
 Now can you help me clean this dataset?
 ```
 
-Best Practices for Reliable Skills
+## Best Practices for Reliable Skills
 
 Write specific descriptions. The Level 1 description is what Claude Code uses to decide whether a skill is relevant. "Helps with programming" is too broad. "Creates and edits Python scripts for data analysis, including pandas operations and matplotlib visualizations" is specific enough to be useful.
 
@@ -164,7 +164,7 @@ Test after creating. After writing a skill:
 2. Ask a question relevant to the skill
 3. Verify you get the expected guidance
 
-Additional Debugging Checks
+## Additional Debugging Checks
 
 If the steps above haven't resolved the issue, also check:
 
@@ -172,7 +172,7 @@ If the steps above haven't resolved the issue, also check:
 - Logs: Some loading failures are logged with helpful error messages, check your terminal output or the extension's output panel.
 - Typos in the skill name: Skill names are case-sensitive when passed to `get_skill()`.
 
-Conclusion
+## Conclusion
 
 If Claude Code doesn't recognize your custom skill name, systematically check: file location, filename format, front matter validity, directory structure, and potential name conflicts. Most issues stem from these common pitfalls rather than complex configuration problems.
 

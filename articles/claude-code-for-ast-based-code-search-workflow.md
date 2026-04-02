@@ -18,7 +18,7 @@ AST-based code search transforms how developers find and modify code. Unlike sim
 
 This guide walks you through building an effective AST-based code search workflow using Claude Code, with practical examples you can apply immediately to your projects.
 
-Understanding AST-Based Search vs Text Search
+## Understanding AST-Based Search vs Text Search
 
 Traditional text search looks for literal string matches. Search for `function foo()` and you miss `function bar()` or `const foo = () => {}`. AST search understands that all three are function declarations, it searches by code structure, not just characters.
 
@@ -26,7 +26,7 @@ Consider a common scenario: finding all React components that use `useState` but
 
 Claude Code can help you construct AST queries, interpret results, and even generate refactoring scripts based on findings. This is invaluable for large-scale code changes like upgrading dependencies, enforcing patterns, or identifying technical debt.
 
-Setting Up Your AST Search Environment
+## Setting Up Your AST Search Environment
 
 Before diving into workflows, ensure your environment supports AST parsing. Most modern languages have established tools:
 
@@ -86,7 +86,7 @@ export function findFunctionsWithoutTypes(code) {
 
 This setup gives you reusable functions for common search patterns. Save this as a skill that Claude Code can invoke during your workflow.
 
-Building Search Queries That Matter
+## Building Search Queries That Matter
 
 Effective AST queries require understanding what you actually want to find. Start with specific, actionable questions:
 
@@ -128,7 +128,7 @@ Finding dead code, functions never called elsewhere:
 
 The key is building a library of queries for your specific needs. As your codebase evolves, add new patterns to catch emerging issues.
 
-Integrating with Claude Code Workflows
+## Integrating with Claude Code Workflows
 
 Now integrate these search capabilities into Claude Code's conversational interface. Create a skill file that defines your search commands:
 
@@ -151,7 +151,7 @@ commands:
 
 When you invoke these commands, Claude Code executes the corresponding AST queries and presents results in a readable format. You can then ask follow-up questions like "Which of these are in production code?" or "Generate a refactoring script to remove these."
 
-Practical Workflow Example: Component Audit
+## Practical Workflow Example: Component Audit
 
 Let's walk through a real workflow: auditing a React codebase for performance issues. You want to find all class components that should be converted to functional components.
 
@@ -174,7 +174,7 @@ traverse(ast, {
 
 4. Generate action items: Export results to a task list or directly create refactoring branches.
 
-Advanced Patterns: Cross-File Analysis
+## Advanced Patterns: Cross-File Analysis
 
 Single-file AST search is powerful, but cross-file analysis reveals patterns invisible to isolated analysis. Build workflows that:
 
@@ -212,7 +212,7 @@ for (const file of sourceFiles) {
 
 With this index, you can answer complex questions: "Which files import the deprecated utility?" or "What components depend on this context?"
 
-Actionable Advice for Getting Started
+## Actionable Advice for Getting Started
 
 Start simple. Pick one recurring code quality issue in your project and build an AST query for it. Test it on a sample of files. Refine until it catches what you need without false positives.
 
@@ -223,7 +223,6 @@ Integrate AST search into your CI pipeline for automated enforcement. Run querie
 Finally, combine AST search with Claude Code's AI capabilities. Use natural language to refine queries, explain results, and generate fixes. The combination of structural search and AI understanding creates a workflow that's greater than either approach alone.
 
 Start with one query, refine it, and expand from there. Your future self will thank you when the next major refactoring takes hours instead of weeks.
-
 
 Related Reading
 

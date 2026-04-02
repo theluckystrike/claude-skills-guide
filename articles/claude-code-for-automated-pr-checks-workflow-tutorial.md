@@ -13,23 +13,22 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Automated PR Checks Workflow Tutorial
 
 Pull request checks are the gatekeepers of code quality in any modern development workflow. Manual code reviews are time-consuming and inconsistent, while traditional automated checks lack contextual understanding. Claude Code bridges this gap by bringing AI-powered analysis to your PR workflow, understanding context, catching subtle issues, and providing actionable feedback. This tutorial walks you through building automated PR check workflows that integrate smoothly with your existing CI/CD pipeline.
 
-Understanding PR Check Workflows
+## Understanding PR Check Workflows
 
 A PR check workflow runs automated validation whenever a pull request is opened or updated. Traditional workflows typically include static analysis tools, unit tests, and linting. These tools excel at catching syntax errors and style violations but struggle with semantic issues, architectural problems, or logic bugs that require understanding the codebase holistically.
 
 Claude Code enhances traditional PR checks by analyzing code in context, understanding what the code attempts to do, identifying potential edge cases, and suggesting improvements based on domain knowledge. The key advantage is contextual awareness: Claude sees the diff, understands the surrounding code, and can provide feedback that goes beyond pattern matching.
 
-Components of an Automated PR Check System
+## Components of an Automated PR Check System
 
 An effective automated PR check system comprises several layers. The first layer handles trigger events, detecting when a PR is opened, updated, or receives new commits. The second layer executes validation checks in isolation, running tests, linters, and security scans. The third layer integrates AI analysis through Claude Code, providing intelligent feedback. Finally, the reporting layer aggregates results and communicates them to developers through comments, status checks, or notifications.
 
-Setting Up Claude Code for PR Analysis
+## Setting Up Claude Code for PR Analysis
 
 Before building the workflow, ensure Claude Code is installed and configured in your development environment. You'll also need a skill designed for code review tasks. Create a skill that specializes in PR analysis with clear instructions for evaluating code quality:
 
@@ -59,7 +58,7 @@ Provide feedback in a constructive, actionable format.
 
 This skill declaration restricts tool access to file reading and bash execution, ensuring the review process stays focused and secure.
 
-Building the GitHub Actions Workflow
+## Building the GitHub Actions Workflow
 
 Integrate Claude Code with GitHub Actions to automate PR reviews on every push. Create a workflow file in your repository:
 
@@ -101,7 +100,7 @@ jobs:
 
 This workflow triggers on every PR update, fetches the diff, runs Claude analysis, and posts results as a comment. The `review-prompt.md` file contains specific instructions for the review.
 
-Creating Effective Review Prompts
+## Creating Effective Review Prompts
 
 The quality of Claude's PR feedback depends heavily on your prompt. Structure your review prompts to extract maximum value:
 
@@ -133,7 +132,7 @@ Keep feedback constructive and actionable. When suggesting code changes, provide
 
 This prompt establishes context, defines focus areas, and specifies output format for consistent, useful results.
 
-Implementing Branch Protection Rules
+## Implementing Branch Protection Rules
 
 Automated checks are only valuable when enforced. Configure branch protection rules to require passing checks before merging:
 
@@ -141,15 +140,15 @@ Navigate to your repository settings, select "Branches," and add a protection ru
 
 This combination ensures AI analysis runs automatically while maintaining human review authority for complex decisions.
 
-Advanced Patterns: Multi-Layer Validation
+## Advanced Patterns: Multi-Layer Validation
 
 For larger projects, implement a multi-layer validation approach that progressively increases scrutiny:
 
-Layer 1: Fast Initial Checks
+## Layer 1: Fast Initial Checks
 
 Run quick validations on every commit, syntax checking, formatting compliance, and basic security scans. These complete in seconds and catch obvious issues immediately.
 
-Layer 2: Comprehensive Analysis
+## Layer 2: Comprehensive Analysis
 
 Trigger deeper analysis when changes exceed certain thresholds: large diffs, modifications to critical components, or changes in sensitive areas. This layer runs Claude Code with full context:
 
@@ -169,7 +168,7 @@ for file in $CHANGED_FILES; do
 done
 ```
 
-Layer 3: Manual Review Triggers
+## Layer 3: Manual Review Triggers
 
 Allow developers to request intensive AI review for complex changes. Add a label or comment trigger that activates deeper analysis:
 
@@ -193,7 +192,7 @@ jobs:
           claude --print "Review this PR thoroughly with full codebase context" < intensive-review.md
 ```
 
-Best Practices for PR Check Automation
+## Best Practices for PR Check Automation
 
 When implementing Claude-powered PR checks, follow these principles for optimal results:
 
@@ -205,7 +204,7 @@ Balance automation and human judgment. Claude handles repetitive issues consiste
 
 Monitor and measure. Track metrics like issue detection rate, false positive frequency, and developer feedback. Use these insights to refine thresholds and prompts.
 
-Conclusion
+## Conclusion
 
 Automated PR checks with Claude Code transform code review from a bottleneck into a scalable, consistent process. By integrating AI analysis into your CI/CD pipeline, you catch issues earlier, provide developers with actionable feedback, and maintain higher code quality with less effort. Start with simple implementations, iterate on your prompts, and progressively adopt advanced patterns as your workflow matures.
 

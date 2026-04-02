@@ -18,7 +18,7 @@ When working with Claude Code and its skill system, knowing which skill is [curr
 
 This guide covers practical methods to identify the active skill during your Claude Code sessions.
 
-Understanding Claude Skills Context
+## Understanding Claude Skills Context
 
 [Claude skills are Markdown files stored in ~/.claude/skills/ that contain instructions Claude follows](/claude-skill-md-format-complete-specification-guide/) when processing your requests. When you invoke a skill using its slash command (like `/pdf` or `/tdd`), Claude loads those instructions and applies them to your current conversation. Without an active skill, Claude uses its default behavior.
 
@@ -28,9 +28,9 @@ The skill context affects how Claude:
 - Handles file operations and git commands
 - Approaches problem-solving and debugging
 
-Methods to Identify the Active Skill
+## Methods to Identify the Active Skill
 
-Check the Conversation Header
+## Check the Conversation Header
 
 When you start Claude Code, the initial system message displays loaded skills. Look at the first few messages in your session, the system typically announces which skills are active.
 
@@ -43,7 +43,7 @@ Loaded skills: tdd, frontend-design
 
 If you see skill names listed after "Loaded skills," those are currently active.
 
-Ask Claude About Active Skills
+## Ask Claude About Active Skills
 
 You can ask Claude directly about its current context and which skills are active:
 
@@ -53,7 +53,7 @@ Which skill are you currently using?
 
 Claude will respond with the name of the active skill if one was invoked in the session. You can also verify what skills are installed by checking the skills directory.
 
-Inspect the Current Context
+## Inspect the Current Context
 
 You can ask Claude to confirm its current instructions:
 
@@ -63,7 +63,7 @@ What instructions are currently guiding your behavior?
 
 Claude will describe the active skill context if one is loaded. This method works well when you want a quick confirmation without navigating away from your task.
 
-Check Skill File Presence
+## Check Skill File Presence
 
 When a skill is active, certain behaviors change based on the skill's instructions. You can also verify skills by checking which files exist in your skills directory:
 
@@ -73,11 +73,11 @@ ls ~/.claude/skills/
 
 This shows all installed skills. The presence of a skill file doesn't guarantee it's active, but knowing which skills you have installed helps you recognize when behavior changes.
 
-Common Skill Indicators
+## Common Skill Indicators
 
 Different skills produce recognizable patterns in Claude's responses:
 
-The TDD Skill
+## The TDD Skill
 
 When the tdd skill is active, Claude structures responses around test cases. You'll notice:
 - Requests to write tests before implementation
@@ -91,7 +91,7 @@ Write a function that validates email addresses
 
 Claude responds with test cases first, then implementation.
 
-The PDF Skill
+## The PDF Skill
 
 With the pdf skill loaded, Claude becomes proficient in PDF operations:
 - Extract text and tables from PDF files
@@ -100,7 +100,7 @@ With the pdf skill loaded, Claude becomes proficient in PDF operations:
 
 The skill activates PDF-specific capabilities in file operations.
 
-The Frontend-Design Skill
+## The Frontend-Design Skill
 
 The frontend-design skill changes how Claude approaches UI work:
 - Emphasizes component structure and accessibility
@@ -109,7 +109,7 @@ The frontend-design skill changes how Claude approaches UI work:
 
 You'll see different questions about design requirements before generating code.
 
-The Super Memory Skill
+## The Super Memory Skill
 
 When supermemory is active, Claude:
 - Maintains context across longer conversations
@@ -118,9 +118,9 @@ When supermemory is active, Claude:
 
 This skill changes Claude's memory management approach.
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Confirming Skill Before Complex Tasks
+## Confirming Skill Before Complex Tasks
 
 Before refactoring critical code, verify your active skill by asking Claude:
 
@@ -135,7 +135,7 @@ If you're about to write tests but haven't invoked the tdd skill yet, switch to 
 Now let's refactor the authentication module
 ```
 
-Switching Skills Mid-Session
+## Switching Skills Mid-Session
 
 You can change skills at any time:
 
@@ -153,7 +153,7 @@ Now write tests for the parsing logic
 
 Each skill command replaces the previous context.
 
-Combining Skills Effectively
+## Combining Skills Effectively
 
 Some workflows benefit from skill combinations. After extracting data with `/pdf`, switch to `/tdd` to test your parsing code:
 
@@ -167,7 +167,7 @@ Write tests for the extracted data parser
 
 The transition preserves context from the previous skill's work.
 
-Troubleshooting Skill Confusion
+## Troubleshooting Skill Confusion
 
 If Claude's responses seem misaligned with your expectations:
 
@@ -178,7 +178,7 @@ If Claude's responses seem misaligned with your expectations:
 
 Remember that skills only affect Claude's behavior within your current session. Each new Claude Code invocation starts fresh unless you restore a previous session.
 
-Best Practices
+## Best Practices
 
 - Verify before critical operations: Ask Claude which skill is active before major code changes
 - Use explicit skill commands: Rather than assuming a skill is active, invoke it directly
@@ -186,7 +186,6 @@ Best Practices
 - Keep skill files organized: Regular maintenance of `~/.claude/skills/` prevents confusion
 
 Understanding your active skill context transforms Claude Code from a general-purpose AI assistant into a specialized tool that adapts to your specific needs. Whether you're writing tests with the tdd skill, handling documents with the pdf skill, or building interfaces with frontend-design, knowing which skill is active puts you in control of your workflow.
-
 
 Related Reading
 

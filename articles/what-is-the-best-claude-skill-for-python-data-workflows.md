@@ -18,15 +18,15 @@ permalink: /what-is-the-best-claude-skill-for-python-data-workflows/
 
 But with dozens of skills available, which one actually delivers the most value for Python data work?
 
-The Short Answer: xlsx Skill
+## The Short Answer: xlsx Skill
 
 The xlsx skill stands out as the most versatile choice for [Python data workflows](/best-claude-skills-for-code-review-automation/). It handles spreadsheet operations, data analysis, and visualization tasks with native support for Excel files, CSV processing, and formula management. For most data practitioners, this skill alone covers 80% of daily tasks.
 
 However, the "best" skill depends heavily on your specific workflow. Let me break down the options by use case.
 
-Skill Breakdown by Workflow Type
+## Skill Breakdown by Workflow Type
 
-Spreadsheet Automation and Reporting
+## Spreadsheet Automation and Reporting
 
 If your Python data work involves generating reports, the xlsx skill is unmatched. It creates formatted spreadsheets with formulas, charts, and conditional formatting directly from your data.
 
@@ -47,7 +47,7 @@ The xlsx skill can now:
 
 This skill integrates well with pandas DataFrames, meaning you don't need to rewrite existing code. The skill acts as a layer on top of your current workflow.
 
-Document Generation and PDF Output
+## Document Generation and PDF Output
 
 For turning Python analysis into shareable documents, the pdf skill handles extraction, creation, and modification of PDF files. Combine it with matplotlib for charts, and you have a complete reporting pipeline:
 
@@ -60,7 +60,7 @@ Generate PDF reports from Python analysis
 
 This combination works exceptionally well for automated client reports, audit documents, and executive summaries.
 
-Test-Driven Development for Data Pipelines
+## Test-Driven Development for Data Pipelines
 
 The tdd skill brings test-driven development to your Python data workflows. For data engineers building production pipelines, this skill generates unit tests, validates data quality, and ensures your transformations behave correctly.
 
@@ -74,7 +74,7 @@ With tdd skill, you can:
 
 This skill shines when you're building reusable data transformation functions that others will consume.
 
-Frontend Visualization from Python Data
+## Frontend Visualization from Python Data
 
 The frontend-design skill bridges your Python data and web-based visualizations. When you need to create interactive dashboards or web interfaces displaying your analysis, this skill generates the necessary HTML, CSS, and JavaScript:
 
@@ -86,7 +86,7 @@ The frontend-design skill creates:
 - Integration points for Chart.js or D3.js
 ```
 
-Memory and Context for Long-Running Analysis
+## Memory and Context for Long-Running Analysis
 
 For complex multi-session data projects, the supermemory skill maintains context across conversations. When you're exploring a large dataset over several sessions, this skill remembers your findings, hypotheses, and intermediate results:
 
@@ -100,11 +100,11 @@ supermemory tracks:
 
 This proves invaluable when switching between different data projects or when returning to analysis after other tasks.
 
-Decision Framework: Choosing Your Skill
+## Decision Framework: Choosing Your Skill
 
 Consider these factors when selecting:
 
-Primary Use Case
+## Primary Use Case
 
 - Spreadsheets and reporting → xlsx
 - PDF generation → pdf
@@ -112,15 +112,15 @@ Primary Use Case
 - Web visualizations → frontend-design
 - Long-term context → supermemory
 
-Integration Points
+## Integration Points
 
 The best skill often depends on what tools already exist in your pipeline. If you primarily work with Jupyter notebooks, the xlsx skill adds immediate value. If you're building CI/CD pipelines for data, tdd provides the testing infrastructure you need.
 
-Workflow Complexity
+## Workflow Complexity
 
 Simple, repeated tasks benefit from single-purpose skills. Complex projects with multiple phases often work best with a combination. Many developers install xlsx as their primary skill, then add others as specific needs arise.
 
-Practical Recommendations
+## Practical Recommendations
 
 For most Python developers working with data, I recommend starting with the xlsx skill as your foundation. It addresses the most common daily tasks, reading, writing, and formatting data in spreadsheets, without requiring significant workflow changes.
 
@@ -139,7 +139,7 @@ You might wonder how Claude skills compare to MCP (Model Context Protocol) serve
 
 The skills mentioned above work independently of any specific MCP server, giving you flexibility to connect whatever data sources your project requires.
 
-Conclusion
+## Conclusion
 
 For Python data workflows, the xlsx skill offers the best starting point due to its versatility and direct integration with pandas workflows. However, the optimal choice depends entirely on your specific use case. Evaluate your most frequent tasks, consider the skills that address those needs, and build your toolkit accordingly.
 

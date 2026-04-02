@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Design Token Automation from Figma Variables
 
@@ -25,7 +24,7 @@ Figma Variables (formerly Design Tokens) allow designers to define semantic valu
 
 Variables in Figma are organized into collections and can hold four types of values: color, number, string, and boolean. You can define multiple modes per collection. for example, a "Theme" collection with a "light" mode and a "dark" mode. When exported as JSON, these map cleanly to token structures that your build tools can consume.
 
-Token Naming Conventions Matter
+## Token Naming Conventions Matter
 
 Before you export anything, naming consistency in Figma is the most important investment you can make. Token names become CSS variable names and TypeScript identifiers, so ambiguous or inconsistent names in Figma become ambiguous or inconsistent code.
 
@@ -51,9 +50,9 @@ Claude Code excels at:
 
 Beyond those raw capabilities, the real value of using Claude Code in a token pipeline is the ability to handle edge cases in natural language. When Token Studio exports a malformed JSON structure because a designer renamed a collection mid-sprint, you can describe the problem to Claude Code and get a corrected transform script without hunting through documentation. Claude Code becomes the glue between your design tooling and your build system.
 
-Setting Up the Workflow
+## Setting Up the Workflow
 
-Step 1: Export Figma Variables
+## Step 1: Export Figma Variables
 
 First, install the Token Studio plugin in Figma to export your variables:
 
@@ -94,7 +93,7 @@ The exported JSON follows the W3C Design Token Community Group (DTCG) spec forma
 
 Save this file as `tokens/design-tokens.json` in your project.
 
-Step 2: Create the Claude Code Project
+## Step 2: Create the Claude Code Project
 
 Set up your project structure:
 
@@ -106,7 +105,7 @@ mkdir -p tokens scripts output
 
 Your `output` directory will hold the generated artifacts: CSS custom properties, JavaScript constants, TypeScript definitions, and optionally Tailwind config extensions. You commit the `tokens/` directory (the source of truth from Figma) and also commit `output/` (the generated artifacts), so your application code can import from `output/` directly without running the build step at runtime.
 
-Step 3: Write the Token Processor Script
+## Step 3: Write the Token Processor Script
 
 Create a Python script that transforms Figma tokens into usable code:
 
@@ -176,7 +175,7 @@ if __name__ == "__main__":
 
 The key improvement over a naive transformer is the `dimension` type handling. Without it, spacing values like `16` become `--spacing-md: 16;` which is invalid CSS. The script checks the token type and appends `px` for raw numeric dimension values.
 
-Step 4: Create the Claude Code Automation Script
+## Step 4: Create the Claude Code Automation Script
 
 Now create a script that Claude Code can run:
 
@@ -220,7 +219,7 @@ else
 fi
 ```
 
-Step 5: Set Up File Watching
+## Step 5: Set Up File Watching
 
 Use Claude Code's ability to monitor file changes:
 
@@ -247,7 +246,7 @@ fswatch -o tokens/design-tokens.json | while read; do
 done
 ```
 
-Advanced: Type-Safe Token Generation
+## Advanced: Type-Safe Token Generation
 
 For TypeScript projects, generate type definitions:
 
@@ -289,7 +288,7 @@ writeFileSync('output/tokens.ts', typeDefs);
 
 The generated `tokens.ts` file gives you autocomplete in your editor for every token path. When a designer removes a token from Figma, TypeScript will flag every usage site that breaks. your build fails loudly instead of silently shipping a missing CSS variable.
 
-Advanced: Generating a Tailwind Config Extension
+## Advanced: Generating a Tailwind Config Extension
 
 If your project uses Tailwind CSS, you can generate a `tailwind.config.js` extension directly from your tokens:
 
@@ -352,7 +351,7 @@ module.exports = {
 
 Now `text-brand-primary` and `bg-color-text-inverse` are real Tailwind classes, derived directly from your Figma file.
 
-Integrating into CI/CD
+## Integrating into CI/CD
 
 The full power of this pipeline emerges when you automate it in CI. Add a GitHub Actions workflow that runs on every PR:
 
@@ -382,7 +381,7 @@ jobs:
 
 This workflow fails the PR if a designer exports new tokens from Figma and opens a PR without also running the transform script. It enforces the invariant that `output/` always reflects `tokens/` exactly.
 
-Best Practices
+## Best Practices
 
 1. Version Control Tokens: Store your raw Figma exports in Git alongside the generated output. This gives you a clear history of every design decision and lets you `git diff` to see what changed when a designer exports a new version.
 2. Semantic Naming: Use meaningful names like `color-primary-500` instead of `blue-5`. The semantic name survives a rebrand; `blue-5` does not.
@@ -390,7 +389,7 @@ Best Practices
 4. Document Changes: Keep a CHANGELOG for token updates, especially breaking changes like token renames that require a find-and-replace across your component library.
 5. Separate raw values from semantic aliases: Define raw values (`color-blue-500: #0066CC`) separately from semantic uses (`color-brand-primary: {color.blue.500}`). This makes rebrand changes a single-line edit.
 
-Conclusion
+## Conclusion
 
 By combining Claude Code's automation capabilities with Figma Variables, you create a powerful design-to-code pipeline that reduces manual work and ensures consistency. The key is establishing clear workflows and using tools that bridge the design-development gap effectively.
 
@@ -398,7 +397,6 @@ Start small with basic color and typography tokens, then expand to spacing, shad
 
 The naming convention investment at the start of the project pays off every time you add a new token category. A well-named, consistently structured token file makes every downstream transform. CSS, TypeScript, Tailwind, iOS, Android. a simple traversal rather than a bespoke parsing problem.
 {% endraw %}
-
 
 Related Reading
 

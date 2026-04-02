@@ -13,18 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Screen Reader Testing Workflow
-
 Building accessible web applications requires more than just following WCAG guidelines. You need to verify that your content actually works with assistive technologies. Screen reader testing is a critical part of this process, and Claude Code can help streamline your workflow.
 
-Why Screen Reader Testing Matters
+## Why Screen Reader Testing Matters
 
 Automated accessibility tools catch about 30-40% of accessibility issues. The remaining issues, like confusing heading structures, unclear link text, or missing form labels, require human testing with actual screen readers. Popular options include NVDA (Windows), VoiceOver (macOS), and JAWS (Windows).
 
 Testing manually is time-consuming. Integrating screen reader testing into your regular development workflow helps catch issues early and reduces the effort required for remediation.
 
-Setting Up Your Testing Environment
+## Setting Up Your Testing Environment
 
 Before automating, establish a consistent testing environment. Here's a practical setup for macOS developers:
 
@@ -37,7 +34,7 @@ Or use the keyboard shortcut: Cmd + F5
 
 For cross-platform testing, consider using virtual machines with Windows and NVDA installed. Tools like VirtualBox or Parallels make this manageable.
 
-Configuring NVDA for Consistent Results
+## Configuring NVDA for Consistent Results
 
 When testing with NVDA on Windows, use these settings for repeatable test outcomes:
 
@@ -48,7 +45,7 @@ When testing with NVDA on Windows, use these settings for repeatable test outcom
 
 Key NVDA navigation commands to document alongside your test cases: Tab/Shift+Tab for form fields, arrow keys for content, Enter to activate links and buttons, Escape to close dialogs.
 
-Automating Screen Reader Checks with Claude
+## Automating Screen Reader Checks with Claude
 
 While you cannot fully automate screen reader testing (human judgment is still required), Claude Code can help in several ways:
 
@@ -85,11 +82,11 @@ The frontend-design skill includes accessibility patterns. When working on compl
 
 Then describe your component. The skill helps ensure proper ARIA roles, states, and properties are implemented correctly.
 
-Practical Workflow Integration
+## Practical Workflow Integration
 
 Here's how to integrate screen reader testing into your development process:
 
-Step 1: Code Review Phase
+## Step 1: Code Review Phase
 
 When reviewing pull requests, use the tdd skill to ensure tests include accessibility cases:
 
@@ -106,7 +103,7 @@ Generate test cases for this form component that include:
 - Focus management
 ```
 
-Step 2: Pre-Commit Validation
+## Step 2: Pre-Commit Validation
 
 Add a simple pre-commit check using html-validate or axe-cli:
 
@@ -136,7 +133,7 @@ jobs:
         run: npm run test:a11y-html
 ```
 
-Step 3: Document Findings
+## Step 3: Document Findings
 
 Use the supermemory skill to track accessibility issues across your project:
 
@@ -155,7 +152,7 @@ Actual: Silence
 Priority: High
 ```
 
-Common Screen Reader Issues to Check
+## Common Screen Reader Issues to Check
 
 Focus on these high-impact areas during testing:
 
@@ -192,9 +189,9 @@ function trapFocus(element) {
 
 For NVDA-specific test scenarios, verify that announcements match expectations. for example, a login form should announce "Username, edit, required" when tabbing to the first field, "Password, password edit, required" for the password field, and "Sign in, button" for the submit button.
 
-Testing Specific Components
+## Testing Specific Components
 
-Modal Dialogs
+## Modal Dialogs
 
 ```html
 <!-- Test this pattern -->
@@ -208,7 +205,7 @@ Modal Dialogs
 
 Check: Focus moves into modal on open, trapped within modal, returns to trigger on close.
 
-Form Validation
+## Form Validation
 
 ```html
 <input 
@@ -222,7 +219,7 @@ Form Validation
 
 Check: Error announced when field loses focus, error message read, input state communicated.
 
-Dynamic Lists
+## Dynamic Lists
 
 ```html
 <ul aria-live="polite" aria-atomic="false">
@@ -232,7 +229,7 @@ Dynamic Lists
 
 Check: New items announced, count communicated, updates don't interrupt unexpectedly.
 
-Tools That Complement Manual Testing
+## Tools That Complement Manual Testing
 
 Beyond direct screen reader testing, these tools support your workflow:
 
@@ -243,7 +240,7 @@ Beyond direct screen reader testing, these tools support your workflow:
 
 The pdf skill can help if you're documenting accessibility reports, generate properly formatted PDFs of your testing results.
 
-Measuring Progress
+## Measuring Progress
 
 Track accessibility improvements over time:
 
@@ -254,12 +251,11 @@ Track accessibility improvements over time:
 
 This data helps justify accessibility investment to stakeholders and identifies training needs.
 
-Conclusion
+## Conclusion
 
 Screen reader testing requires human involvement, but Claude Code reduces friction throughout the process. Use it to generate testing scripts, analyze markup, validate ARIA patterns, and document findings. Combined with automated tools and a structured workflow, you can achieve solid accessibility without slowing development.
 
 The key is consistency, test regularly, document findings, and iterate. Each cycle improves both your product and your team's accessibility expertise.
-
 
 Related Reading
 

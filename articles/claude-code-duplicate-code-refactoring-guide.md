@@ -16,7 +16,7 @@ permalink: /claude-code-duplicate-code-refactoring-guide/
 
 Duplicate code is one of the most common code smells that quietly undermines software maintainability. When the same logic appears in multiple places, you create maintenance nightmares: bug fixes require identical changes in several locations, and developers spend time understanding which version is the "correct" one. This guide shows you how to use Claude Code and its skill ecosystem to identify, analyze, and eliminate duplicate code systematically.
 
-Understanding Duplicate Code Patterns
+## Understanding Duplicate Code Patterns
 
 Duplicate code manifests in several forms. The most obvious is exact duplication, identical blocks of code copied and pasted across files. More insidious are structural duplicates: different code that performs the same logical operation, or similar algorithms with minor variations. Both types create technical debt.
 
@@ -33,11 +33,11 @@ Before refactoring, you need visibility into what you're dealing with. Claude Co
 
 A common mistake is treating duplicate code purely as a text-matching problem. Two functions with different variable names and a swapped condition can still represent complete duplicates at the business logic level. Claude Code excels at this semantic layer because it reads intent, not just syntax.
 
-Using Claude Code Skills for Detection
+## Using Claude Code Skills for Detection
 
 Claude Code's skill system extends its capabilities for specific tasks. When working with duplicate detection, you can invoke skills directly within your development workflow.
 
-Pattern Analysis with Code Search
+## Pattern Analysis with Code Search
 
 The frontend-design skill includes utilities for component pattern analysis. While primarily focused on UI development, its pattern-matching capabilities extend to identifying repeated component logic:
 
@@ -59,7 +59,7 @@ claude -p "Read every file in src/utils/ and identify any functions that perform
 
 This approach works well for medium-sized codebases. For very large codebases, narrow the scope to a subsystem first, then expand.
 
-Semantic Duplicate Detection
+## Semantic Duplicate Detection
 
 True duplicate detection goes beyond text matching. The tdd skill can help by analyzing test coverage patterns, if the same test logic appears across multiple test files, the code under test likely has duplication issues:
 
@@ -73,7 +73,7 @@ Another effective angle is prompting Claude Code to look for functions that are 
 claude -p "Look at src/api/ and identify any response-formatting functions that take similar inputs and produce similar outputs. Show me which pairs could be merged into a single parameterized function."
 ```
 
-Using the MEMORY Skill for Cross-Session Detection
+## Using the MEMORY Skill for Cross-Session Detection
 
 If your refactoring spans multiple sessions, the supermemory skill lets you persist findings:
 
@@ -89,11 +89,11 @@ On your next session, you can retrieve the context:
 
 This is especially valuable on team projects where refactoring spans multiple days and you need continuity between Claude Code sessions.
 
-Refactoring Strategies
+## Refactoring Strategies
 
 Once you've identified duplicates, the refactoring approach depends on the duplication type and code context.
 
-Extract Method Pattern
+## Extract Method Pattern
 
 The most common refactoring technique involves extracting repeated logic into a shared function:
 
@@ -136,7 +136,7 @@ Note the second extraction: the tax and shipping logic is now also parameterized
 claude -p "Review the extracted apply_tax_and_shipping function. Are there any hardcoded values that should be parameters to make this function more reusable?"
 ```
 
-Template Method Pattern
+## Template Method Pattern
 
 When duplicate code follows similar steps with variations, use the template method pattern:
 
@@ -186,7 +186,7 @@ function validateUserProfile(data) {
 
 This pattern has an added benefit: you can now write a single test suite for `runValidators` and trust that both registration and profile validation share the same plumbing. Future validators (phone number, postal code, etc.) slot in without duplicating the validation loop.
 
-Extract Class Pattern for Stateful Duplication
+## Extract Class Pattern for Stateful Duplication
 
 Duplication isn't limited to functions. When you see two classes or modules that maintain similar state and expose similar methods, the Extract Class pattern applies:
 
@@ -251,7 +251,7 @@ When you find this pattern in a large codebase, ask Claude Code to find all simi
 claude -p "Search src/api/ for any class that has get() and list() methods calling fetch(). List them with file paths and line numbers so I can evaluate which ones should extend a shared base class."
 ```
 
-Consolidating Duplicate React Components
+## Consolidating Duplicate React Components
 
 Frontend codebases are especially prone to near-duplicate components. Two card components that render the same structure with different titles and colors are a clear Extract pattern target:
 
@@ -307,11 +307,11 @@ The frontend-design skill can suggest this pattern automatically when you descri
 /frontend-design I have ProductCard and ServiceCard that share the same HTML structure. Suggest how to consolidate them into a single configurable component while preserving the existing API.
 ```
 
-Automating the Workflow
+## Automating the Workflow
 
 The real power comes from integrating duplicate detection into your development workflow. Here's a practical approach:
 
-Pre-Commit Checks
+## Pre-Commit Checks
 
 Create a workflow that runs before commits to catch duplication before it gets merged:
 
@@ -333,7 +333,7 @@ $CHANGED
 For each file, check whether any functions or logic blocks duplicate something already present in the codebase. Output a summary with: file path, duplicate description, suggested fix."
 ```
 
-Documentation Generation
+## Documentation Generation
 
 After refactoring, use the pdf skill to generate documentation of changes:
 
@@ -343,7 +343,7 @@ After refactoring, use the pdf skill to generate documentation of changes:
 
 This creates an audit trail for future maintainers. The report is especially useful when onboarding new developers who need to understand why a shared utility exists and which previously separate functions it replaced.
 
-Knowledge Management
+## Knowledge Management
 
 The supermemory skill helps maintain institutional knowledge about refactoring decisions:
 
@@ -353,7 +353,7 @@ The supermemory skill helps maintain institutional knowledge about refactoring d
 
 This ensures team members understand why refactoring occurred. Without this context, future developers sometimes re-introduce duplication because they don't realize the shared utility exists.
 
-Generating a Refactoring Checklist
+## Generating a Refactoring Checklist
 
 Use the docx skill to maintain a living refactoring checklist for the project:
 
@@ -361,7 +361,7 @@ Use the docx skill to maintain a living refactoring checklist for the project:
 /docx create refactoring decision log with sections: identified duplicates, extraction plan, files affected, test status, completion date
 ```
 
-Comparing Approaches: When to Refactor vs. Accept Duplication
+## Comparing Approaches: When to Refactor vs. Accept Duplication
 
 Not all duplication should be eliminated. The rule of three is a useful heuristic: tolerate the first copy, note the second, remove the third. But context matters:
 
@@ -382,7 +382,7 @@ claude -p "I have two functions that look similar: [paste both]. Evaluate whethe
 
 Claude Code is particularly good at this kind of nuanced evaluation because it can reason about the business context embedded in variable names, comments, and surrounding code.
 
-Measuring Success
+## Measuring Success
 
 Track your refactoring progress with concrete metrics:
 
@@ -400,7 +400,7 @@ The xlsx skill can generate tracking spreadsheets:
 
 Review this tracker weekly during active cleanup phases. A visual drop in "lines duplicated" is satisfying and keeps the effort visible to stakeholders who might otherwise see refactoring as invisible work.
 
-Best Practices
+## Best Practices
 
 1. Start small: Focus on obvious duplicates first before tackling semantic duplicates. A 10-line exact duplicate is a quick win; a subtle structural duplicate across three services takes careful analysis.
 
@@ -424,7 +424,7 @@ Best Practices
     claude -p "Here is a function I just extracted from duplicate code: [paste function]. Is it doing too much? Could it be split further? Are there any remaining hardcoded values that should be parameters?"
     ```
 
-Conclusion
+## Conclusion
 
 Duplicate code doesn't have to be a maintenance burden. By using Claude Code's skill ecosystem, combining detection capabilities with systematic refactoring, you can progressively improve code quality. The key is building detection into your workflow, choosing the right refactoring pattern for the type of duplication you're dealing with, and documenting decisions so future maintainers understand the intent behind every shared utility.
 

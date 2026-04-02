@@ -16,7 +16,7 @@ permalink: /using-claude-code-with-bun-runtime-javascript-projects/
 
 Bun has emerged as a compelling alternative to Node.js, offering a unified JavaScript runtime that handles scripts, servers, and testing with remarkable speed. When paired with Claude Code, you get an AI-assisted development environment that uses Bun's fast startup times and native TypeScript support. This combination streamlines everything from quick prototypes to production applications.
 
-Why Bun and Claude Code Work Well Together
+## Why Bun and Claude Code Work Well Together
 
 Bun's design philosophy aligns naturally with Claude Code workflows. The runtime starts in milliseconds, executes JavaScript and TypeScript without separate compilation steps, and includes built-in package management. These characteristics reduce the friction between asking Claude to write code and seeing it run.
 
@@ -37,7 +37,7 @@ bun test
 
 Claude Code can run these commands in its bash tool and immediately report results, letting you validate AI-generated code without context-switching between tools.
 
-Setting Up Claude Code for Bun Projects
+## Setting Up Claude Code for Bun Projects
 
 The setup process requires minimal configuration. Ensure Bun is installed on your system, then initialize your project as you normally would:
 
@@ -68,9 +68,9 @@ const getUser = async (id: string): Promise<User> => {
 
 This code runs without configuration, transpilation, or type declarations. Claude Code understands this capability and writes code that exploits Bun's native features when appropriate.
 
-Practical Development Workflows
+## Practical Development Workflows
 
-Building REST APIs
+## Building REST APIs
 
 Bun serves HTTP requests with its built-in `Bun.serve()` function. Claude Code can generate complete API implementations that use this capability:
 
@@ -93,7 +93,7 @@ console.log(`Server running at http://localhost:${server.port}`);
 
 When working on API projects, pairing Claude Code with the [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) enhances test-driven development. The tdd skill guides Claude to write tests before implementation, and Bun's fast test runner (powered by Jest-compatible APIs) executes those tests quickly.
 
-Working with Databases
+## Working with Databases
 
 Bun integrates natively with SQLite through `bun:sqlite`. This eliminates external dependencies for local development and prototyping. Claude Code can generate database schemas and queries:
 
@@ -118,7 +118,7 @@ const insert = db.prepare(
 
 For more complex data workflows, the [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) helps Claude maintain context across sessions, useful when working with evolving database schemas.
 
-Frontend Development
+## Frontend Development
 
 While Bun handles backend JavaScript excellently, frontend projects benefit from its package management and build tools. The frontend-design skill works alongside Bun to scaffold UI components:
 
@@ -132,7 +132,7 @@ bun dev
 
 The frontend-design skill provides structured guidance for component architecture, styling decisions, and accessibility considerations. Combined with Bun's fast installation times, you iterate rapidly on UI implementations.
 
-Integrating Claude Skills with Bun Projects
+## Integrating Claude Skills with Bun Projects
 
 Claude's skill system extends its capabilities in Bun environments. Several skills pair particularly well:
 
@@ -143,7 +143,7 @@ Claude's skill system extends its capabilities in Bun environments. Several skil
 
 These skills work through Claude's tool-calling system, which remains fully functional within Bun projects. The skills execute as subprocesses, so runtime differences between Bun and Node.js don't affect their operation.
 
-Performance Considerations
+## Performance Considerations
 
 Bun's speed advantage becomes evident in specific scenarios:
 
@@ -154,7 +154,7 @@ Bun's speed advantage becomes evident in specific scenarios:
 
 These characteristics matter when Claude Code operates in tight loops, generating code, running tests, and refining based on results. Each cycle completes faster, accumulating significant time savings over extended sessions.
 
-Limitations and Workarounds
+## Limitations and Workarounds
 
 Bun's ecosystem, while growing rapidly, doesn't match Node.js in library availability. Some npm packages contain native bindings that Bun doesn't support. When Claude Code encounters these limitations, it typically suggests alternatives or polyfills.
 
@@ -169,12 +169,11 @@ import { readFile } from "bun:fs";
 
 The native `bun:fs` API performs better, so Claude Code defaults to it unless compatibility becomes necessary.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Bun runtime creates an efficient development environment for JavaScript projects. Bun's fast execution, native TypeScript support, and built-in tooling reduce the overhead between AI-generated code and working software. The workflow proves especially valuable for API development, rapid prototyping, and test-driven workflows where quick feedback cycles matter.
 
 Experiment with this combination in your next project. The tight feedback loop between asking Claude for code and executing it changes how you approach development, faster iterations, more experiments, and ultimately better software.
-
 
 Related Reading
 

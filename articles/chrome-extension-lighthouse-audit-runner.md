@@ -17,7 +17,7 @@ Chrome Extension Lighthouse Audit Runner: A Developer Guide
 
 Running Lighthouse audits directly from your Chrome extension unlocks powerful possibilities for automated performance monitoring, continuous quality checks, and real-time developer feedback. This guide shows you how to build an extension that executes Lighthouse audits programmatically and integrates the results into your development workflow.
 
-Why Build a Lighthouse Audit Runner Extension
+## Why Build a Lighthouse Audit Runner Extension
 
 Google Lighthouse provides comprehensive audits for performance, accessibility, progressive web app compliance, SEO, and best practices. While you can run Lighthouse from Chrome DevTools or the command line, embedding audit capabilities directly into a Chrome extension offers several advantages:
 
@@ -28,7 +28,7 @@ Google Lighthouse provides comprehensive audits for performance, accessibility, 
 
 For teams building web applications, a custom Lighthouse runner extension becomes a practical tool for catching performance regressions before they reach production.
 
-Core Architecture
+## Core Architecture
 
 A Lighthouse audit runner extension operates through three main components:
 
@@ -38,7 +38,7 @@ A Lighthouse audit runner extension operates through three main components:
 
 The extension communicates with Lighthouse through Chrome's `chrome.debugger` API or by injecting the Lighthouse library directly into page context. The former provides more accurate results by using Chrome's debugging protocol, while the latter offers simpler implementation but may have slight measurement differences.
 
-Setting Up the Manifest
+## Setting Up the Manifest
 
 Every Chrome extension starts with the manifest file. For a Lighthouse audit runner, you need manifest version 3 with specific permissions:
 
@@ -70,7 +70,7 @@ Every Chrome extension starts with the manifest file. For a Lighthouse audit run
 
 The `debugger` permission is essential for accurate Lighthouse measurements. Note that when using the debugger API, Chrome displays a banner indicating that a debugger is attached, this is expected behavior.
 
-Implementing the Background Service Worker
+## Implementing the Background Service Worker
 
 The background service worker orchestrates the audit process. It receives messages from the popup, launches the audit, and returns results:
 
@@ -176,7 +176,7 @@ async function pollForResults(tabId, resolve, reject) {
 
 This implementation uses the Chrome Debugger API to interface directly with Lighthouse. The polling mechanism waits for the audit to complete, with a timeout safeguard.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides the user interface for triggering audits and viewing results:
 
@@ -270,7 +270,7 @@ function displayResults(lhr) {
 }
 ```
 
-Practical Extensions and Enhancements
+## Practical Extensions and Enhancements
 
 Once you have the basic audit runner working, consider these enhancements:
 
@@ -282,7 +282,7 @@ Custom Throttling Profiles: Add UI controls for different network conditions (fa
 
 Export Functionality: Export results as JSON, CSV, or generate shareable HTML reports for team communication.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Several issues commonly arise when building Lighthouse extensions:
 
@@ -292,10 +292,9 @@ Some pages block audit scripts through Content Security Policy. You may need to 
 
 Memory limits in background service workers can cause timeouts on complex pages. Consider breaking audits into smaller chunks or using dedicated audit workers.
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for running Lighthouse audits transforms your browser into a powerful performance testing tool. The architecture shown here, using the debugger API for accurate measurements, a service worker for orchestration, and a popup for user interaction, provides a solid foundation for custom audit workflows. Extend this base with automation, reporting, and integration features that match your specific development needs.
-
 
 Related Reading
 

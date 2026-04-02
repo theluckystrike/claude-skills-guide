@@ -13,9 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
-Chrome Managed Browser vs Unmanaged: A Technical Comparison
-
 When you install Chrome from google.com/chrome, you get an unmanaged browser. Your settings sync to your Google Account, extensions install freely, and you control everything locally. But organizations often deploy Chrome differently. through managed browsers that enforce policies, restrict capabilities, and centralize control. Understanding these differences matters if you're building browser-based applications, managing development environments, or working in enterprise IT.
 
 This article breaks down the technical distinctions between managed and unmanaged Chrome browsers, with practical examples for developers and power users.
@@ -56,9 +53,9 @@ When Chrome is managed, it connects to a management entity that defines policies
 
 This JSON represents policy values that organizations can push to managed Chrome browsers. The behavior changes immediately upon policy application.
 
-Key Differences Between Managed and Unmanaged Chrome
+## Key Differences Between Managed and Unmanaged Chrome
 
-Extension Management
+## Extension Management
 
 In an unmanaged browser, you freely install extensions from the Chrome Web Store. In managed environments, administrators can:
 
@@ -68,7 +65,7 @@ In an unmanaged browser, you freely install extensions from the Chrome Web Store
 
 If you're building a Chrome extension and testing in a managed environment, you might encounter unexpected behavior. Extensions that work perfectly in your unmanaged browser may fail to load or function differently when policies restrict them.
 
-Policy Enforcement
+## Policy Enforcement
 
 Managed browsers respect enterprise policies that take precedence over user settings. Consider the `ProxySettings` policy:
 
@@ -85,7 +82,7 @@ Managed browsers respect enterprise policies that take precedence over user sett
 
 When this policy is applied, the proxy setting appears grayed out in Chrome settings, and users cannot modify it. The browser enforces the organizational proxy for all traffic.
 
-Sync Behavior
+## Sync Behavior
 
 Unmanaged Chrome syncs data to your Google Account by default. Managed browsers can disable sync or redirect it to a managed Google Workspace account:
 
@@ -98,7 +95,7 @@ Unmanaged Chrome syncs data to your Google Account by default. Managed browsers 
 
 The `SyncDisabled` policy prevents any data from syncing to personal accounts, which is critical for security-sensitive environments. Developers testing sync-dependent features should test against both synced and non-synced configurations.
 
-Developer Tools Access
+## Developer Tools Access
 
 Perhaps the most relevant difference for developers: managed browsers can disable DevTools entirely. The policy `DisableDeveloperTools` set to `true` prevents:
 
@@ -109,7 +106,7 @@ Perhaps the most relevant difference for developers: managed browsers can disabl
 
 This creates challenges when debugging browser-based applications in enterprise environments. If your users work in managed Chrome, your application must account for limited debugging capabilities.
 
-Network and Security Policies
+## Network and Security Policies
 
 Managed browsers often enforce additional security policies:
 
@@ -131,11 +128,11 @@ The `IncognitoModeAvailability` policy controls whether users can use incognito 
 }
 ```
 
-Practical Implications for Developers
+## Practical Implications for Developers
 
 When developing browser-based applications, consider how your target users access your application:
 
-Testing in Managed Environments
+## Testing in Managed Environments
 
 If your application targets enterprise users, test in a managed Chrome environment. You can simulate managed policies locally using the Chromium policy templates:
 
@@ -150,7 +147,7 @@ On Windows (via Group Policy):
 - Use the Chrome Administrative Template (ADMX) files
 - Configure policies in gpedit.msc under Computer Configuration → Administrative Templates → Google Chrome
 
-Building Extensions for Managed Chrome
+## Building Extensions for Managed Chrome
 
 Chrome extensions in managed environments face additional constraints:
 
@@ -174,7 +171,7 @@ Chrome extensions in managed environments face additional constraints:
 
 This minimal manifest has a better chance of working in restricted managed environments than one with broad permissions.
 
-Handling Restricted DevTools
+## Handling Restricted DevTools
 
 If your users have restricted DevTools, implement alternative debugging:
 
@@ -182,7 +179,7 @@ If your users have restricted DevTools, implement alternative debugging:
 - Implement verbose logging that users can export
 - Provide test modes that expose internal state through the UI
 
-When to Choose Each Type
+## When to Choose Each Type
 
 Use unmanaged Chrome for:
 
@@ -196,12 +193,11 @@ Use managed Chrome when:
 - Deploying to managed workstation environments
 - Requiring consistent browser behavior across a fleet of machines
 
-Summary
+## Summary
 
 The distinction between managed and unmanaged Chrome browsers comes down to control. Unmanaged browsers give users full control over settings, extensions, and sync behavior. Managed browsers transfer that control to administrators through policies that enforce organizational requirements.
 
 For developers, understanding these differences ensures your applications work across both environments. Test early, design for restrictions, and remember that enterprise users often operate under constraints that personal browsers don't impose.
-
 
 Related Reading
 

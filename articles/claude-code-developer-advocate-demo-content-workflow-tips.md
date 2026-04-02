@@ -13,18 +13,15 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code Developer Advocate Demo Content Workflow Tips
-
 As a developer advocate, your effectiveness hinges on your ability to create compelling demos, tutorials, and technical content that resonates with developers. Claude Code offers a powerful toolkit that can transform how you prepare and deliver your advocacy content. I'll share practical workflow tips that will help you create better demos and content faster.
 
-Understanding Claude Code for Advocacy Work
+## Understanding Claude Code for Advocacy Work
 
 Claude Code isn't just another CLI tool, it's a comprehensive development companion that understands context, maintains conversation history, and can execute complex tasks. For developer advocates, this means you can build demos iteratively, get real-time feedback on your code, and generate documentation alongside your implementation.
 
 The key difference between Claude Code and traditional development workflows lies in its ability to work with you as a collaborative partner. It can review your demo code, suggest improvements, and even help you anticipate questions your audience might ask.
 
-Building Demos Incrementally
+## Building Demos Incrementally
 
 One of the most valuable workflows for demo preparation is the incremental build approach. Instead of creating your entire demo in one go, use Claude Code to build it piece by piece while explaining your decisions aloud.
 
@@ -38,7 +35,7 @@ Start by describing the problem your demo solves. Then work through the implemen
 
 This approach mirrors how you'd actually present the demo to an audience, making your final delivery feel more natural and rehearsed.
 
-Creating Documentation in Parallel
+## Creating Documentation in Parallel
 
 Documentation is often the bottleneck in demo preparation. With Claude Code, you can generate documentation while you build. The trick is to use the right prompts at the right time.
 
@@ -52,7 +49,7 @@ For README files, provide a template and let Claude Code fill in the details bas
 
 The real power comes from maintaining a documentation-first mindset. When you start each feature by describing what it does in plain English, Claude Code can help translate that into both working code and accurate documentation simultaneously.
 
-Streamlining Live Coding Sessions
+## Streamlining Live Coding Sessions
 
 Live coding sessions are high-risk, high-reward demonstrations. Claude Code can help reduce your risk while maintaining the spontaneity that makes live demos engaging.
 
@@ -71,7 +68,7 @@ async function fetchData(url) {
 
 During preparation, practice the transitions between TODO sections. Ask Claude Code to review your planned changes and suggest simplifications that reduce cognitive load during the live demo.
 
-Managing Multiple Demo Variations
+## Managing Multiple Demo Variations
 
 Developer advocates often need variations of the same demo for different audiences, beginner workshops, advanced talks, blog posts, and video tutorials. Claude Code makes managing these variations efficient.
 
@@ -87,7 +84,7 @@ claude --print "Refactor this demo to use async/await patterns, add error bounda
 
 This approach keeps your core demo clean while allowing you to quickly generate audience-appropriate variations.
 
-Automating Content Generation
+## Automating Content Generation
 
 Beyond code demos, Claude Code can help generate supporting content. After completing a demo, ask for related materials:
 
@@ -98,7 +95,7 @@ Beyond code demos, Claude Code can help generate supporting content. After compl
 
 The key is providing enough context about your target audience. A demo for a security-focused conference needs different supporting content than one for a general developer meetup.
 
-Testing Your Demos Thoroughly
+## Testing Your Demos Thoroughly
 
 Nothing undermines a demo like live failure. Use Claude Code to stress-test your demonstrations before going live:
 
@@ -109,7 +106,7 @@ Nothing undermines a demo like live failure. Use Claude Code to stress-test your
 
 Create a pre-demo checklist that includes running through your entire demo from scratch on a clean environment. Claude Code can generate this checklist based on your specific demo dependencies and setup requirements.
 
-Maintaining Your Demo Library
+## Maintaining Your Demo Library
 
 Over time, you'll accumulate dozens of demos. Claude Code can help you organize, update, and maintain them:
 
@@ -120,7 +117,7 @@ Over time, you'll accumulate dozens of demos. Claude Code can help you organize,
 
 Set up a regular maintenance schedule, perhaps monthly, where you review your demo library with Claude Code's assistance, updating dependencies and ensuring everything still works.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms demo preparation from a solitary scramble into a collaborative process. By building incrementally, documenting in parallel, and automating repetitive tasks, you can create higher-quality content with less stress. The key is to treat Claude Code not as a replacement for your expertise, but as an intelligent assistant that amplifies your advocacy work.
 

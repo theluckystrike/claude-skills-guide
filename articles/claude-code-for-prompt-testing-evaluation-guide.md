@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Prompt Testing Evaluation Guide
 
 Prompt engineering has evolved from an art to a science. As developers increasingly rely on AI-powered tools like Claude Code for building applications, the need for systematic prompt testing and evaluation becomes critical. This guide provides practical strategies, code examples, and actionable advice for building solid prompt testing pipelines.
 
-Why Prompt Testing Matters
+## Why Prompt Testing Matters
 
 Without proper testing, prompts can produce inconsistent, biased, or unhelpful outputs. A well-tested prompt ensures:
 - Consistency: Same input produces same output category
@@ -27,7 +26,7 @@ Without proper testing, prompts can produce inconsistent, biased, or unhelpful o
 - Quality: Outputs meet your application standards
 - Debugging: Issues are caught before production deployment
 
-Setting Up Your Testing Environment
+## Setting Up Your Testing Environment
 
 Before writing tests, configure Claude Code for structured testing. Create a dedicated test configuration:
 
@@ -38,7 +37,7 @@ mkdir -p tests/fixtures
 mkdir -p tests/outputs
 ```
 
-Basic Test Structure
+## Basic Test Structure
 
 Organize your tests logically. Each prompt should have corresponding test files:
 
@@ -52,11 +51,11 @@ tests/
  outputs/
 ```
 
-Writing Effective Test Cases
+## Writing Effective Test Cases
 
 Effective test cases cover three categories: happy paths, edge cases, and failure scenarios.
 
-Defining Test Cases
+## Defining Test Cases
 
 Create a test fixture with diverse input scenarios:
 
@@ -84,7 +83,7 @@ Create a test fixture with diverse input scenarios:
 }
 ```
 
-Implementing Test Automation
+## Implementing Test Automation
 
 Use Claude Code's tool calling capabilities to automate prompt testing:
 
@@ -137,11 +136,11 @@ function validateOutput(output: string, rules: ValidationRules): boolean {
 }
 ```
 
-Evaluating Output Quality
+## Evaluating Output Quality
 
 Beyond pass/fail tests, evaluate prompt output quality using multiple metrics.
 
-Semantic Similarity Testing
+## Semantic Similarity Testing
 
 Compare outputs against reference answers using embedding similarity:
 
@@ -185,7 +184,7 @@ def evaluate_prompt(prompt: str, test_cases: list) -> dict:
     }
 ```
 
-Response Format Validation
+## Response Format Validation
 
 Ensure outputs follow expected JSON or structured formats:
 
@@ -201,7 +200,7 @@ function validateJSONOutput(output: string): boolean {
 }
 ```
 
-Best Practices for Prompt Testing
+## Best Practices for Prompt Testing
 
 Follow these guidelines to build maintainable prompt test suites:
 
@@ -286,7 +285,7 @@ def ab_test_prompts(prompt_a: str, prompt_b: str, test_cases: list,
     }
 ```
 
-Continuous Integration for Proments
+## Continuous Integration for Proments
 
 Integrate prompt testing into your CI/CD pipeline:
 
@@ -309,15 +308,15 @@ jobs:
           path: tests/outputs/
 ```
 
-Conclusion
+## Conclusion
 
 Prompt testing is essential for building reliable AI applications. By implementing systematic testing with diverse test cases, automated validation, and continuous integration, you can confidently iterate on prompts and deliver consistent, high-quality AI interactions.
 
 Start with simple tests and gradually add complexity as your prompt engineering matures. Remember: well-tested prompts lead to predictable, trustworthy AI behavior that your users will appreciate.
 
-Advanced Evaluation Techniques
+## Advanced Evaluation Techniques
 
-LLM-as-Judge Evaluation
+## LLM-as-Judge Evaluation
 
 One powerful pattern is using a second Claude call to evaluate the first output. This works well for subjective quality metrics where rule-based validation falls short:
 
@@ -362,7 +361,7 @@ evaluation = judge_response(
 print(f"Overall score: {evaluation['overall']}")
 ```
 
-Regression Testing with Golden Datasets
+## Regression Testing with Golden Datasets
 
 Build a golden dataset of inputs and known-good responses to catch prompt regressions before deployment:
 
@@ -405,9 +404,9 @@ def run_regression_suite(prompt: str, golden_cases: list[GoldenCase]) -> dict:
 
 Store your golden dataset in version control alongside your prompts. When you modify a prompt, run the regression suite and review cases that drop below threshold.
 
-Prompt Versioning and Rollback
+## Prompt Versioning and Rollback
 
-Tracking Prompt Versions in Production
+## Tracking Prompt Versions in Production
 
 When multiple prompt versions run in production simultaneously (for A/B tests or gradual rollouts), tracking which version generated which response is critical for debugging:
 
@@ -447,7 +446,7 @@ class PromptVersionManager {
 }
 ```
 
-Automated Rollback Triggers
+## Automated Rollback Triggers
 
 Configure automatic rollback when quality metrics drop:
 
@@ -481,9 +480,9 @@ if not gate_passed:
     rollback_to_previous_version()
 ```
 
-Integration with Observability Tools
+## Integration with Observability Tools
 
-Sending Test Results to Datadog
+## Sending Test Results to Datadog
 
 Pipe prompt test metrics into your existing observability stack to track quality trends alongside system health:
 
@@ -511,7 +510,7 @@ def emit_prompt_metrics(test_results: dict, prompt_version: str) -> None:
 
 This gives you a Datadog dashboard showing prompt quality trends over time, correlated with deployments, traffic spikes, and model updates. critical for catching subtle regressions that only appear at scale.
 
-Best Practices Summary
+## Best Practices Summary
 
 Building solid prompt testing infrastructure pays dividends as your AI features scale. The key principles are:
 

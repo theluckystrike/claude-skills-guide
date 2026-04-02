@@ -15,7 +15,7 @@ score: 8
 
 When you're working on a MacBook, browser choice directly impacts how long you can code before reaching for the charger. For developers running local servers, debugging tools, and multiple tabs, understanding the battery implications of Chrome versus Safari becomes essential for mobile workflows.
 
-Why Battery Life Differs Between Browsers
+## Why Battery Life Differs Between Browsers
 
 Safari runs on WebKit, Apple's rendering engine optimized specifically for Apple Silicon and Intel Macs. This tight integration means Safari can use hardware-accelerated video decoding, efficient memory management, and system-level power gating that Chrome cannot match.
 
@@ -25,7 +25,7 @@ The fundamental difference lies in process isolation. Chrome spawns separate pro
 
 Apple Silicon Macs have made this gap even more pronounced. Safari is compiled with specific optimizations for the M1/M2/M3 chip's efficiency cores. When you browse in Safari, the OS can delegate rendering work to those low-power cores, preserving the performance cores for your actual dev tools. Chrome has improved its Apple Silicon support significantly, but it still cannot reach the same depth of hardware integration.
 
-Measuring Battery Impact
+## Measuring Battery Impact
 
 You can measure browser power consumption directly on your Mac. The `powermetrics` command provides detailed energy usage data:
 
@@ -60,7 +60,7 @@ Chrome's energy impact is typically 2-3x higher than Safari for equivalent workl
 
 You can also compare CPU time over a timed session using the `time` command alongside a browser script trigger, or use third-party tools like iStatMenus to chart power draw in real time. The key metric to watch is the "12h Power" column in Activity Monitor's Energy tab. it reflects a rolling average that smooths out short bursts and gives you a more honest picture.
 
-Detailed Workload Comparison
+## Detailed Workload Comparison
 
 The gap between browsers is not uniform across all tasks. Here is how the two browsers compare across common developer activities:
 
@@ -77,9 +77,9 @@ WebGL/Canvas rendering    | Medium (25)   | High (35-50)  | Safari
 
 Video is the area where Safari wins most decisively. Apple Silicon has dedicated media decode hardware that Safari accesses natively. Chrome's hardware acceleration has improved but still falls short of Safari's codec-level integration, especially for H.264 and HEVC streams.
 
-Real-World Developer Scenarios
+## Real-World Developer Scenarios
 
-Local Development Server Testing
+## Local Development Server Testing
 
 When running local development servers, Chrome DevTools provides superior debugging capabilities. However, leaving Chrome open while your server runs in the background drains battery significantly.
 
@@ -116,7 +116,7 @@ debug_test() {
 
 This way Chrome never runs unless you explicitly call the debug function.
 
-Multiple Browser Instances
+## Multiple Browser Instances
 
 Developers often need to test across browsers. Opening Chrome alongside Safari for cross-browser testing multiplies your energy consumption. Here's a practical approach:
 
@@ -138,7 +138,7 @@ npx playwright test --workers=1 --project=webkit
 
 Sequential runs take longer but consume far less power than spinning up three browser instances at once.
 
-Extension Overhead
+## Extension Overhead
 
 Chrome extensions run as separate processes, each consuming power even when idle. Audit your extensions:
 
@@ -152,7 +152,7 @@ A typical developer Chrome install with 10-15 extensions can easily have 5-8 bac
 
 Safari extensions run more tightly integrated and typically consume less background energy.
 
-Optimizing Chrome for Battery Life
+## Optimizing Chrome for Battery Life
 
 If you cannot switch to Safari, several Chrome settings reduce power consumption:
 
@@ -212,7 +212,7 @@ Where Safari still lags behind Chrome DevTools:
 
 For a hybrid workflow, use Safari for browser testing during development but switch to Chrome specifically when you need Lighthouse scores or deep performance profiling.
 
-When Safari Makes Sense
+## When Safari Makes Sense
 
 Safari becomes the clear choice in these scenarios:
 
@@ -222,7 +222,7 @@ Safari becomes the clear choice in these scenarios:
 - Battery-critical situations: When you need every percentage point
 - Zoom or video calls while coding: Running a meeting tab in Safari while working in your IDE keeps that tab's energy footprint much lower
 
-When Chrome Is Necessary
+## When Chrome Is Necessary
 
 Keep Chrome for:
 
@@ -232,7 +232,7 @@ Keep Chrome for:
 - Progressive Web App development: Chrome's PWA support is more mature
 - Lighthouse audits and Core Web Vitals testing: Chrome's built-in tools are the standard here
 
-Practical Battery Optimization Workflow
+## Practical Battery Optimization Workflow
 
 Here's a hybrid approach that balances developer needs with battery life:
 
@@ -282,14 +282,13 @@ alias so='smart_open'
 
 This sends all localhost debugging to Chrome automatically while routing everything else to Safari.
 
-Summary
+## Summary
 
 For Mac users concerned with battery life, Safari provides 2-3x better efficiency than Chrome for equivalent tasks. Chrome's flexibility and developer tooling come with power costs that matter when working away from power outlets.
 
 The optimal strategy depends on your workflow: use Safari for research, documentation, and battery-critical situations. Reserve Chrome for active development and debugging sessions, then close it when finished. This hybrid approach maximizes both productivity and battery life.
 
 The shell aliases and workflow scripts above make switching automatic rather than a conscious decision you have to make each time. Build the habit of treating Chrome as a specialized debugging tool rather than a default browser, and you will notice meaningful improvements in how long your MacBook lasts between charges.
-
 
 Related Reading
 

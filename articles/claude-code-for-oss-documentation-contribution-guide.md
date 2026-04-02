@@ -19,7 +19,7 @@ Contributing documentation to open source projects is one of the most valuable w
 
 This guide shows you how to use Claude Code effectively for OSS documentation contributions.
 
-Why Use Claude Code for Documentation
+## Why Use Claude Code for Documentation
 
 Open source documentation often suffers from inconsistencies, outdated examples, and unclear explanations. Claude Code helps you navigate these challenges by:
 
@@ -30,7 +30,7 @@ Open source documentation often suffers from inconsistencies, outdated examples,
 
 Unlike code contributions, documentation requires clear communication with human readers. Claude Code acts as a collaborative writing partner, helping you refine your explanations while you focus on technical accuracy.
 
-Setting Up Your Documentation Workflow
+## Setting Up Your Documentation Workflow
 
 Before diving into contributions, establish a productive workflow with Claude Code:
 
@@ -67,11 +67,11 @@ Review the CONTRIBUTING.md file and summarize:
 
 This preparation ensures your contributions align with project expectations from the start.
 
-Practical Documentation Tasks
+## Practical Documentation Tasks
 
 Claude Code excels at various documentation tasks. Here are examples:
 
-Improving Existing Documentation
+## Improving Existing Documentation
 
 When you find unclear or outdated documentation, Claude Code helps you improve it:
 
@@ -88,7 +88,7 @@ Please:
 
 Claude Code will analyze the codebase, compare it with the documentation, and propose improvements.
 
-Writing API Documentation
+## Writing API Documentation
 
 API documentation requires precision and completeness. Here's how to collaborate with Claude Code:
 
@@ -107,7 +107,7 @@ Include:
 5. Common pitfalls to avoid
 ```
 
-Creating Tutorial Content
+## Creating Tutorial Content
 
 Tutorials help new users get started. Claude Code helps structure and write them:
 
@@ -120,11 +120,11 @@ Write a beginner tutorial for this library that:
 - Explains each step clearly
 ```
 
-Code Example Best Practices
+## Code Example Best Practices
 
 Quality code examples are crucial for documentation. Follow these guidelines when working with Claude Code:
 
-Always Verify Generated Code
+## Always Verify Generated Code
 
 Claude Code generates code based on patterns it sees, but always verify accuracy:
 
@@ -135,7 +135,7 @@ const result = await myFunction(param1, param2);
 console.log(result); // Check output matches documentation
 ```
 
-Match Project Style
+## Match Project Style
 
 Request that Claude Code match the project's coding conventions:
 
@@ -146,7 +146,7 @@ Generate examples using:
 - Comments style from surrounding code
 ```
 
-Include Complete, Runnable Examples
+## Include Complete, Runnable Examples
 
 Documentation examples should work out of the box:
 
@@ -158,11 +158,11 @@ Include necessary imports
 const { MyClass } = require('my-library');
 ```
 
-Finding Documentation Opportunities
+## Finding Documentation Opportunities
 
 Not sure where to contribute? Use Claude Code to identify gaps:
 
-Analyze Documentation Coverage
+## Analyze Documentation Coverage
 
 Ask Claude Code to scan for incomplete areas:
 
@@ -175,7 +175,7 @@ Search the documentation for these patterns and identify gaps:
 - Comments in code that explain features but aren't in docs
 ```
 
-Review Issue Tracker
+## Review Issue Tracker
 
 Many documentation issues live in the GitHub issue tracker:
 
@@ -187,11 +187,11 @@ Search the issue tracker for:
 - "good first issue" labels for docs
 ```
 
-Submitting Quality Contributions
+## Submitting Quality Contributions
 
 When your documentation is ready, ensure it meets quality standards:
 
-Self-Review Checklist
+## Self-Review Checklist
 
 Before submitting, verify with Claude Code:
 
@@ -204,7 +204,7 @@ Review my documentation contribution for:
 5. Spelling and grammar
 ```
 
-Writing Effective Commit Messages
+## Writing Effective Commit Messages
 
 Clear commits help maintainers review changes:
 
@@ -220,30 +220,29 @@ Typical good commit messages:
 - `docs(api): fix example for POST /users endpoint`
 - `docs: add troubleshooting section for common errors`
 
-Building Long-Term Documentation Skills
+## Building Long-Term Documentation Skills
 
 Documentation contribution improves with practice. Here's how to develop expertise:
 
-Learn Project Domains
+## Learn Project Domains
 
 Each OSS project teaches you about its domain. When contributing to a database project, you learn database concepts while explaining them to others.
 
-Build a Portfolio
+## Build a Portfolio
 
 Documentation contributions are visible proof of your communication skills, a valuable asset for any developer.
 
-Engage with Communities
+## Engage with Communities
 
 Most OSS projects welcome documentation contributors. Join Discord channels, forums, or GitHub discussions to understand what users find confusing.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms documentation contribution from an intimidating task into an achievable goal. By using its ability to understand code, generate consistent examples, and identify gaps, you can make meaningful contributions to open source projects while developing valuable communication skills.
 
 Start small: find a typo to fix, clarify a confusing sentence, or add an example to an API endpoint. Each contribution makes open source more accessible to everyone.
 
 Ready to begin? Clone a repository you've been meaning to explore, ask Claude Code to analyze its documentation needs, and make your first contribution today.
-
 
 Related Reading
 

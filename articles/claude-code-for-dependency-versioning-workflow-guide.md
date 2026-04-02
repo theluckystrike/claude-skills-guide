@@ -17,13 +17,13 @@ Claude Code for Dependency Versioning Workflow Guide
 
 Dependency versioning is the backbone of reproducible software development. Whether you're managing a Node.js monorepo, a Python data science project, or a multi-language system, keeping dependencies aligned across environments prevents the dreaded "works on my machine" syndrome. Claude Code transforms version management from a tedious manual process into an automated, reliable workflow.
 
-Why Dependency Versioning Matters
+## Why Dependency Versioning Matters
 
 Every development team has horror stories: a teammate updates a package locally, the app breaks in production, or an automated pipeline fails because of a subtle version mismatch. Semantic versioning (SemVer) provides a contract, `^1.2.3` means "compatible with 1.2.3 through 2.0.0", but enforcing this contract across teams and environments requires systematic workflows.
 
 Claude Code excels at version management because it understands your entire project context. It can read lockfiles, parse version constraints, compare across packages, and generate the appropriate commands to update dependencies while respecting compatibility rules.
 
-Setting Up Your Versioning Workflow
+## Setting Up Your Versioning Workflow
 
 Before automating, establish clear version policies. Create a CLAUDE.md file in your project root that defines your versioning strategy:
 
@@ -37,7 +37,7 @@ Dependency Version Policy
 
 This configuration gives Claude Code the context it needs to make intelligent versioning decisions.
 
-Automated Version Analysis
+## Automated Version Analysis
 
 The first step in any versioning workflow is understanding your current state. Claude Code can audit all dependencies and identify issues:
 
@@ -67,7 +67,7 @@ Generate a markdown report with:
 
 When you invoke this skill, Claude Code reads your manifest files, runs version checks, and produces actionable recommendations. The key advantage over manual checking: Claude Code understands your entire project and can identify cascading impacts.
 
-Smart Version Updates
+## Smart Version Updates
 
 Updating dependencies requires more than running `npm update`. You need to verify compatibility, run tests, and ensure the update doesn't introduce regressions. Here's a workflow for safe version updates:
 
@@ -94,7 +94,7 @@ Constraints
 
 This skill demonstrates Claude Code's strength: it doesn't just run commands, it applies judgment. It checks changelogs, respects your constraints about major version updates, and ensures tests pass before finalizing changes.
 
-Monorepo Version Coordination
+## Monorepo Version Coordination
 
 Managing versions across a monorepo presents unique challenges. Multiple packages depend on each other, and updating one package's version requires updating all dependents. Claude Code can orchestrate this complexity:
 
@@ -118,7 +118,7 @@ Commands to run in sequence, with verification steps between each
 
 For example, if you're using pnpm workspaces or npm workspaces, updating `@company/ui-components` from `1.2.0` to `1.3.0` requires updating `@company/dashboard` which depends on it. Claude Code traces these dependency graphs and generates the correct update sequence.
 
-Lockfile Best Practices
+## Lockfile Best Practices
 
 Lockfiles ensure reproducibility but require proper handling:
 
@@ -136,7 +136,7 @@ Lockfile Guidelines
 
 Claude Code can be configured to flag unexpected lockfile changes, helping you catch transitive dependency updates you might have missed.
 
-Handling Breaking Changes
+## Handling Breaking Changes
 
 Major version bumps often signal breaking changes. Claude Code can help you navigate these:
 
@@ -159,7 +159,7 @@ Steps
 
 This proactive approach prevents the common pattern of ignoring major updates until they become urgent security concerns.
 
-Automated Update Schedules
+## Automated Update Schedules
 
 Beyond reactive updates, consider scheduling regular dependency maintenance:
 
@@ -169,7 +169,7 @@ Beyond reactive updates, consider scheduling regular dependency maintenance:
 
 Set up reminders or create a recurring task that invokes your dependency analysis skill. Claude Code can maintain an ongoing dependency health report that you review during team meetings.
 
-Practical Example: Full Workflow
+## Practical Example: Full Workflow
 
 Here's how a complete dependency versioning workflow looks with Claude Code:
 
@@ -189,7 +189,7 @@ Claude Code compares lockfiles and generates a summary
 
 Each command uses Claude Code's understanding of your project to provide relevant, safe recommendations.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 - Ignoring devDependencies - These can introduce vulnerabilities too
 - Skipping lockfile commits - Leads to non-reproducible builds
@@ -197,12 +197,11 @@ Common Pitfalls to Avoid
 - Mixing version strategies - Be consistent across your team
 - Delaying updates - Technical debt compounds quickly
 
-Conclusion
+## Conclusion
 
 Claude Code transforms dependency versioning from a chore into a systematic workflow. By defining clear policies, creating reusable skills, and automating analysis, you maintain healthy dependencies without constant manual attention. Start with the analysis skill, add update capabilities as you gain confidence, and build toward a fully automated versioning system that keeps your projects secure and maintainable.
 
 The investment in setting up these workflows pays dividends in reduced debugging time, fewer production incidents, and a more confident team that trusts their dependency management.
-
 
 Related Reading
 

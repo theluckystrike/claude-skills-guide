@@ -17,7 +17,7 @@ tags: [claude-code, claude-skills]
 
 JWT (JSON Web Token) authentication has become the standard for modern web applications, but implementing secure token refresh workflows remains a common challenge for developers. This guide walks you through building solid JWT refresh token workflows using Claude Code, with practical patterns you can apply to your projects immediately.
 
-Understanding JWT Refresh Token Fundamentals
+## Understanding JWT Refresh Token Fundamentals
 
 Before diving into implementation, it's essential to understand the moving parts of a secure JWT refresh workflow. When a user authenticates, your server issues two tokens: an access token with a short expiration (typically 15-60 minutes) and a refresh token with a longer lifetime (days or weeks).
 
@@ -25,7 +25,7 @@ The access token grants immediate authorization for API requests, while the refr
 
 Claude Code can assist you in implementing this entire workflow, from generating tokens to validating them on each request. The key is structuring your prompts to handle the nuanced logic around token expiration, rotation, and storage securely.
 
-Implementing the Token Generation Workflow
+## Implementing the Token Generation Workflow
 
 When working with Claude Code to generate JWT tokens, you'll want to create a clear workflow that handles both access and refresh tokens together. Here's a practical approach to structuring this implementation:
 
@@ -59,7 +59,7 @@ function generateTokenPair(userId, userRoles) {
 
 Notice the critical security practice: we store only a hash of the refresh token in the database, not the plain token. This ensures that even if your database is compromised, attackers cannot use the stolen refresh tokens. Claude Code can help you identify similar security considerations throughout your implementation.
 
-Building the Token Refresh Endpoint
+## Building the Token Refresh Endpoint
 
 The refresh endpoint is where most security vulnerabilities appear. Claude Code can guide you through implementing proper validation, rotation, and expiration handling. Here's a solid implementation pattern:
 
@@ -105,7 +105,7 @@ app.post('/auth/refresh', async (req, res) => {
 
 This implementation demonstrates token rotation, each refresh invalidates the old token and issues a new one. This practice limits the window of opportunity for token theft attacks. When prompting Claude Code to help with similar endpoints, explicitly request security best practices like this.
 
-Handling Token Expiration Gracefully
+## Handling Token Expiration Gracefully
 
 Client-side token handling determines the user experience during token expiration. Your frontend needs to detect 401 responses and automatically attempt refresh before retrying the original request. Here's a practical approach:
 
@@ -144,7 +144,7 @@ async function authenticatedFetch(url, options, tokenManager) {
 
 Claude Code can help you integrate this pattern into your specific frontend framework, whether you're using React, Vue, or vanilla JavaScript. The key principle is automatic refresh with clear fallback behavior when refresh fails.
 
-Implementing Secure Logout
+## Implementing Secure Logout
 
 Logout functionality often gets overlooked but remains crucial for security. A complete logout should invalidate the refresh token server-side:
 
@@ -170,7 +170,7 @@ app.post('/auth/logout', authenticateToken, async (req, res) => {
 
 You might also want to implement a "logout everywhere" feature that invalidates all refresh tokens for a user, essential for security-sensitive applications when users change passwords or suspect account compromise.
 
-Best Practices for Claude Code JWT Implementation
+## Best Practices for Claude Code JWT Implementation
 
 When working with Claude Code on JWT refresh workflows, keep these actionable recommendations in mind:
 
@@ -184,12 +184,11 @@ Fourth, test your token workflow thoroughly. Include tests for normal refresh, c
 
 Finally, document your token lifecycle clearly. Understanding when tokens are issued, refreshed, and invalidated helps debugging and security audits significantly.
 
-Conclusion
+## Conclusion
 
 Implementing secure JWT refresh token workflows requires attention to detail across multiple components: token generation, storage, validation, rotation, and client-side handling. Claude Code serves as an excellent pair programmer for this task, helping you implement these patterns correctly while explaining the security rationale behind each decision.
 
 The key takeaways are straightforward: rotate tokens on refresh, store only hashed tokens, handle expiration gracefully on the client, and test thoroughly. By following these patterns, you'll build authentication systems that balance security with excellent user experience.
-
 
 Related Reading
 

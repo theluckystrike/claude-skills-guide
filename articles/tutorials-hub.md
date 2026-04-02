@@ -18,7 +18,7 @@ This hub indexes all 124 step-by-step tutorials in the Claude Code library. Wher
 
 The collection covers MCP server integrations, framework-specific development, skill file writing, testing workflows, language-specific patterns, CI/CD automation, deployment targets, and skill management practices.
 
-Table of Contents
+## Table of Contents
 
 1. [MCP Server Tutorials](#mcp-server-tutorials)
 2. [Framework and Language Tutorials](#framework-and-language-tutorials)
@@ -32,7 +32,7 @@ Table of Contents
 
 ---
 
-MCP Server Tutorials
+## MCP Server Tutorials
 
 Model Context Protocol servers connect Claude Code to external systems. These tutorials walk through setting up specific MCP servers from scratch: authentication, connection, permissions, and testing the integration with Claude.
 
@@ -65,7 +65,7 @@ Authentication and Security MCP Tutorials
 
 ---
 
-Framework and Language Tutorials
+## Framework and Language Tutorials
 
 These tutorials are framework-specific and language-specific. Each one teaches Claude Code patterns that are idiomatic to the framework in question.
 
@@ -122,7 +122,7 @@ Specialized and Niche
 
 ---
 
-Skill Writing and Management
+## Skill Writing and Management
 
 These tutorials cover the mechanics of creating, managing, and distributing Claude skills. from writing your first skill.md file to rolling out shared skills to an entire organization.
 
@@ -151,7 +151,7 @@ These tutorials cover the mechanics of creating, managing, and distributing Clau
 
 ---
 
-Testing and Quality Assurance
+## Testing and Quality Assurance
 
 Testing is one of Claude Code's most reliable applied domains. The `/tdd` skill enforces red-green-refactor cycles. The `/webapp-testing` skill drives Playwright end-to-end and visual regression suites. These tutorials take you from zero to a working test pipeline.
 
@@ -171,7 +171,7 @@ Testing is one of Claude Code's most reliable applied domains. The `/tdd` skill 
 
 ---
 
-CI/CD and Deployment
+## CI/CD and Deployment
 
 CI/CD tutorials walk through integrating Claude Code into GitHub Actions, GitLab CI, and other pipeline tools. making Claude an active participant in your release process rather than just a local coding assistant.
 
@@ -185,7 +185,7 @@ CI/CD tutorials walk through integrating Claude Code into GitHub Actions, GitLab
 
 ---
 
-Vibe Coding and Workflow Patterns
+## Vibe Coding and Workflow Patterns
 
 Vibe coding is the practice of generating working code through rapid AI-assisted iteration. These tutorials teach the patterns and project structures that make vibe coding sessions productive rather than chaotic.
 
@@ -196,7 +196,7 @@ Vibe coding is the practice of generating working code through rapid AI-assisted
 
 ---
 
-Multi-Agent and Subagent Patterns
+## Multi-Agent and Subagent Patterns
 
 Multi-agent Claude Code workflows distribute work across parallel agent instances, each specialized for a part of the task. These tutorials cover the coordination patterns, communication channels, and error handling strategies that make multi-agent workflows reliable.
 
@@ -206,7 +206,7 @@ Multi-agent Claude Code workflows distribute work across parallel agent instance
 
 ---
 
-Skill Questions and How-Tos
+## Skill Questions and How-Tos
 
 Short, focused tutorials answering specific "how do I" questions about Claude Code skills.
 
@@ -234,7 +234,7 @@ Getting Started Tutorials:
 
 ---
 
-Complete Tutorial Index
+## Complete Tutorial Index
 
 | Tutorial | Category |
 |---------|---------|
@@ -364,7 +364,7 @@ Complete Tutorial Index
 
 ---
 
-Related Hubs
+## Related Hubs
 
 - [Getting Started Hub](/getting-started-hub/). Install Claude Code and run your first skill
 - [Guides Hub](/guides-hub/). Deep reference guides for every Claude Code topic

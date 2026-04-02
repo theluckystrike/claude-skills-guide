@@ -14,21 +14,17 @@ score: 7
 ---
 {% raw %}
 
-
-
-Claude Code Dependency Injection Refactoring
-
 Dependency injection isn't just for traditional software development, it transforms how you build and maintain Claude skills. When your skills grow beyond simple prompts into complex workflows, applying dependency injection principles makes them testable, reusable, and easier to evolve.
 
-What Dependency Injection Means for Claude Skills
+## What Dependency Injection Means for Claude Skills
 
 In traditional software, dependency injection involves passing dependencies into a class rather than having the class create them. For Claude skills, the equivalent concept applies to how you structure skill relationships, tool access, and data flow between components.
 
 Consider a skill that generates PDFs using the pdf skill while also managing document metadata. Instead of hardcoding both capabilities into one skill file, you can create separate skills that inject their capabilities into a coordinator skill.
 
-Refactoring Patterns That Work
+## Refactoring Patterns That Work
 
-Pattern 1: Parameterized Skill Composition
+## Pattern 1: Parameterized Skill Composition
 
 Rather than creating monolithic skills, break them into smaller units that accept parameters:
 
@@ -43,7 +39,7 @@ tools: [pdf, read_file, write_file]
 
 The parameterized version lets different workflows reuse the same core logic. A skill using the tdd skill can invoke this with different parameters than one using the frontend-design skill.
 
-Pattern 2: Tool Abstraction Layers
+## Pattern 2: Tool Abstraction Layers
 
 When multiple skills need similar tool capabilities, create abstraction skills that wrap tool interactions:
 
@@ -68,7 +64,7 @@ Read Operation
 
 Skills like supermemory can then inject this abstraction rather than directly calling file operations, making your skill suite easier to test and modify.
 
-Pattern 3: Configuration Injection Through Front Matter
+## Pattern 3: Configuration Injection Through Front Matter
 
 The skill front matter itself serves as an injection mechanism. Use it to configure behavior without modifying skill logic:
 
@@ -83,7 +79,7 @@ name: api-client
 
 This approach keeps sensitive configuration out of skill code and allows different environments to inject different values.
 
-Practical Example: Building a Document Pipeline
+## Practical Example: Building a Document Pipeline
 
 Imagine you need a skill that generates reports from data, creates PDFs, and stores them. Here's how dependency injection improves the architecture:
 
@@ -109,7 +105,7 @@ Coordinator Skill
 
 This separation means you can test each skill independently. The tdd skill becomes valuable here, you can write tests for the data transformer without involving PDF generation at all.
 
-When to Apply These Patterns
+## When to Apply These Patterns
 
 Not every skill needs dependency injection. Apply these patterns when:
 
@@ -120,21 +116,21 @@ Not every skill needs dependency injection. Apply these patterns when:
 
 The canvas-design skill demonstrates this well. It can work with local file output, cloud storage, or clipboard operations depending on what gets injected at runtime.
 
-Common Refactoring Mistakes
+## Common Refactoring Mistakes
 
-Mistake 1: Over-Engineering Parameterization
+## Mistake 1: Over-Engineering Parameterization
 
 Not every variation needs a parameter. If a skill has only one valid configuration, keep it simple. The goal is flexibility where it matters, not abstract everything.
 
-Mistake 2: Forgetting Tool Dependencies
+## Mistake 2: Forgetting Tool Dependencies
 
 When you extract a skill, ensure its tool requirements are clearly documented. A skill expecting to inject file operations into another skill needs those tools declared in its front matter.
 
-Mistake 3: Circular Dependencies
+## Mistake 3: Circular Dependencies
 
 Skills should form directed acyclic graphs, not cycles. If skill A needs skill B and skill B needs skill A, refactor to a common dependency or coordinator.
 
-Testing Refactored Skills
+## Testing Refactored Skills
 
 After refactoring, validate your changes:
 
@@ -145,7 +141,7 @@ After refactoring, validate your changes:
 
 The tdd skill pairs well here, write tests that exercise your skill interactions before and after refactoring to catch regressions.
 
-Building Maintainable Skill Suites
+## Building Maintainable Skill Suites
 
 Dependency injection transforms Claude skill development from crafting individual prompts to building systems. As your skill library grows, these patterns prevent the spaghetti logic that emerges from tightly coupled implementations.
 
@@ -153,7 +149,7 @@ Skills like supermemory benefit from clear separation between memory operations 
 
 Start with one skill pair that would benefit from separation, apply the patterns shown here, and expand from there. Your skill suite will become more maintainable with each refactoring iteration.
 
-Dependency Injection vs. Dependency Inversion: Know the Difference
+## Dependency Injection vs. Dependency Inversion: Know the Difference
 
 These terms are related but not interchangeable. Understanding the distinction helps you apply each correctly.
 

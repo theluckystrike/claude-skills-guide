@@ -15,13 +15,13 @@ score: 8
 {% raw %}
 Working with multiple repositories is a common scenario for modern development teams. Whether you're maintaining a monorepo, managing microservices, or contributing across several projects, finding code across repositories efficiently can significantly impact your productivity. This guide shows you how to use Claude Code to build an effective cross-repo code search workflow that saves time and reduces context switching fatigue.
 
-Why Cross-Repo Search Matters
+## Why Cross-Repo Search Matters
 
 Developers often work across 5-10+ repositories simultaneously. Searching for utility functions, understanding shared libraries, or finding where specific patterns are implemented becomes tedious when you need to manually switch between repositories. A well-configured Claude Code workflow can aggregate search results across all your projects in seconds.
 
 The challenge is that each repository has its own context, and naive grep searches across directories don't capture the semantic understanding that Claude Code provides. This guide walks you through building a search infrastructure that combines the power of traditional tools with Claude's contextual understanding.
 
-Setting Up Your Cross-Repo Search Infrastructure
+## Setting Up Your Cross-Repo Search Infrastructure
 
 The foundation of effective cross-repo search requires proper directory structure and configuration. Create a dedicated workspace that Claude Code can access:
 
@@ -58,7 +58,7 @@ Configure Claude Code to recognize this structure by adding it to your configura
 }
 ```
 
-Building a Cross-Repo Search Skill
+## Building a Cross-Repo Search Skill
 
 Create a dedicated Claude Skill that handles multi-repository searches. This skill will accept search queries and return results from all configured repositories:
 
@@ -91,9 +91,9 @@ instructions: |
   highlight shared utility usage.
 ```
 
-Practical Search Patterns
+## Practical Search Patterns
 
-Finding Function Implementations
+## Finding Function Implementations
 
 When you need to find where a function is defined or used:
 
@@ -113,7 +113,7 @@ Claude will search for:
 - Logging statements for auth failures
 - Error response formatting for auth scenarios
 
-Semantic Pattern Matching
+## Semantic Pattern Matching
 
 Beyond literal text matching, use Claude's understanding to find conceptually related code:
 
@@ -128,11 +128,11 @@ Claude will find:
 
 The semantic approach catches variations that grep would miss, such as differently named but functionally equivalent implementations.
 
-Automating Cross-Repo Analysis
+## Automating Cross-Repo Analysis
 
 Create workflows that run comprehensive analysis automatically:
 
-Dependency Analysis
+## Dependency Analysis
 
 ```yaml
 name: cross-repo-dependency-analysis
@@ -154,7 +154,7 @@ instructions: |
      - Identify potential conflicts
 ```
 
-Consolidated Code Health Checks
+## Consolidated Code Health Checks
 
 Run security scans, linting, and health checks across all repositories:
 
@@ -169,7 +169,7 @@ Find TODO comments needing attention
 rg -g '!node_modules' 'TODO|FIXME|HACK' ~/code/ --type-add 'config:*.{json,yaml,yml}'
 ```
 
-Best Practices for Multi-Repo Workflows
+## Best Practices for Multi-Repo Workflows
 
 1. Maintain a Centralized Index
 
@@ -215,7 +215,7 @@ Data Consistency
 - Compensation logic for failed transactions
 ```
 
-Advanced: Context-Aware Search Results
+## Advanced: Context-Aware Search Results
 
 Enhance your search workflow to provide richer context:
 
@@ -240,9 +240,9 @@ When Claude Code returns results, it can include:
 - How this code relates to other repositories
 - Suggested follow-up searches
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Search Returns Too Many Results
+## Search Returns Too Many Results
 
 Refine with more specific patterns:
 ```bash
@@ -250,7 +250,7 @@ Instead of searching for "handle"
 rg "handle.*error" -t typescript --context 2
 ```
 
-Missing Context in Results
+## Missing Context in Results
 
 Ensure your Claude configuration includes all relevant directories:
 ```json
@@ -262,7 +262,7 @@ Ensure your Claude configuration includes all relevant directories:
 }
 ```
 
-Inconsistent Results Across Repos
+## Inconsistent Results Across Repos
 
 Standardize file structures where possible. Create a template:
 ```
@@ -273,14 +273,13 @@ repository/
  README.md
 ```
 
-Conclusion
+## Conclusion
 
 Building an effective cross-repo search workflow with Claude Code transforms how you navigate complex codebases. By combining traditional search tools with Claude's semantic understanding, you can quickly find relevant code across dozens of repositories, understand dependencies, and maintain awareness of shared patterns.
 
 Start with the basic setup described in this guide, then customize the workflows to match your specific architecture and team conventions. The initial investment in configuration pays dividends in developer productivity and code understanding.
 
 ---
-
 
 Related Reading
 

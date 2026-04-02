@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Vite Bundle Optimization Workflow"
 description: "Learn how to use Claude Code to automate Vite bundle optimization, reduce bundle size, and improve build performance with practical workflows and."
@@ -20,7 +19,7 @@ Vite has transformed how developers build modern web applications with its light
 
 This guide presents a practical workflow for using Claude Code to analyze, optimize, and maintain your Vite bundle configuration. By the end, you will have a repeatable, measurable process for driving bundle size down and keeping it there.
 
-Understanding Your Current Bundle Profile
+## Understanding Your Current Bundle Profile
 
 Before making any optimizations, you need a clear picture of what's in your bundle. Claude Code can help you generate and interpret bundle analysis reports, making the process much less intimidating.
 
@@ -32,7 +31,7 @@ Analyze my vite.config.ts and explain the current build optimization settings. I
 
 Claude will examine your configuration and provide actionable feedback. For example, it might notice you're not using code splitting effectively or that your build target could be more specific.
 
-Generating Bundle Analysis Reports
+## Generating Bundle Analysis Reports
 
 To see exactly what's contributing to your bundle size, add the `rollup-plugin-visualizer` to your project:
 
@@ -60,7 +59,7 @@ export default defineConfig({
 
 Run your production build and open the generated HTML file. You'll see a visual representation of your bundle, showing which modules contribute the most to size.
 
-Interpreting the Visualizer Output
+## Interpreting the Visualizer Output
 
 The treemap visualization uses area to represent relative byte size. Patterns Claude Code can help you recognize:
 
@@ -74,11 +73,11 @@ Ask Claude to interpret a screenshot or the raw `stats.json` output:
 I've attached my rollup-plugin-visualizer stats.html. Walk me through the top 5 largest modules and suggest whether each should be code-split, externalized, or replaced with a lighter alternative.
 ```
 
-Automating Common Optimizations
+## Automating Common Optimizations
 
 Claude Code excels at applying systematic optimizations. Here are key areas where it provides immediate value:
 
-Tree Shaking Configuration
+## Tree Shaking Configuration
 
 Modern JavaScript allows for aggressive tree shaking, but only when your code and dependencies are properly configured. Ask Claude to audit your code:
 
@@ -115,7 +114,7 @@ import debounce from 'lodash/debounce'
 
 Ask Claude which approach is correct for each dependency in your project, the answer differs per library.
 
-Dynamic Imports for Code Splitting
+## Dynamic Imports for Code Splitting
 
 Large applications benefit from splitting code into smaller chunks that load on demand. Claude can identify opportunities for dynamic imports:
 
@@ -191,9 +190,9 @@ export default defineConfig({
 
 With this configuration, upgrading your charting library only invalidates the `vendor-charts` chunk. React, dates, and forms chunks stay cached in the browser. Claude can audit your `package.json` and suggest an appropriate `manualChunks` grouping tailored to your dependency update frequency.
 
-Optimizing Dependencies and Build Settings
+## Optimizing Dependencies and Build Settings
 
-External Dependencies Strategy
+## External Dependencies Strategy
 
 For large dependencies that rarely change, consider externalizing them in development to speed up builds:
 
@@ -244,7 +243,7 @@ The trade-off is worth understanding before committing:
 
 For most production applications, `manualChunks` gives the best balance without introducing CDN dependency risk.
 
-Target and Polyfill Configuration
+## Target and Polyfill Configuration
 
 Setting a specific browser target reduces polyfill bloat:
 
@@ -276,7 +275,7 @@ export default defineConfig({
 
 This eliminates optional chaining polyfills, nullish coalescing transforms, and several CSS compatibility shims, often saving 15–30 KB in output for a typical React app.
 
-Image and Asset Optimization
+## Image and Asset Optimization
 
 Vite handles static assets, but Claude can help you configure thresholds intelligently:
 
@@ -323,11 +322,11 @@ import heroImage from './hero.jpg?w=800&format=webp&quality=75'
 
 Vite transforms the import at build time, generating an optimized WebP variant. Claude can suggest appropriate width and quality values based on where the image appears in your layout.
 
-Creating an Optimization Workflow
+## Creating an Optimization Workflow
 
 The real power of Claude Code comes from creating repeatable workflows. Here's a structured approach:
 
-Step 1: Baseline Measurement
+## Step 1: Baseline Measurement
 
 Before any changes, measure your current bundle:
 
@@ -354,7 +353,7 @@ Store this in a file called `bundle-baseline.json`:
 }
 ```
 
-Step 2: Claude-Powered Analysis
+## Step 2: Claude-Powered Analysis
 
 Ask Claude to generate a comprehensive optimization report:
 
@@ -367,7 +366,7 @@ Create a detailed optimization report for my Vite project. Include:
 5. Estimated size savings for each change
 ```
 
-Step 3: Incremental Changes
+## Step 3: Incremental Changes
 
 Implement changes one at a time, measuring the impact of each:
 
@@ -379,7 +378,7 @@ Implement changes one at a time, measuring the impact of each:
 
 Measure after each step. If a change makes things worse, revert it before continuing. Claude can help you interpret whether a size increase is acceptable (for example, adding a new feature) or a regression.
 
-Step 4: Continuous Monitoring
+## Step 4: Continuous Monitoring
 
 Add bundle size checks to your CI pipeline to prevent regression:
 
@@ -426,9 +425,9 @@ Ask Claude to suggest appropriate size budgets based on your baseline measuremen
 Given my current bundle baseline of 312 KB gzip total and a target of under 200 KB, suggest bundlesize limits for each chunk in my Vite build.
 ```
 
-Advanced Configuration Patterns
+## Advanced Configuration Patterns
 
-Environment-Specific Builds
+## Environment-Specific Builds
 
 Different deployment environments have different needs. Production should be as small as possible; staging benefits from source maps:
 
@@ -456,7 +455,7 @@ export default defineConfig(({ mode }) => {
 
 Terser produces slightly smaller output than the default esbuild minifier but takes longer to run. Reserve it for production builds where build time is less critical than output size.
 
-Preloading Critical Chunks
+## Preloading Critical Chunks
 
 You can instruct Vite to inject `<link rel="modulepreload">` hints for chunks the user will likely need soon:
 
@@ -476,7 +475,7 @@ export default defineConfig({
 
 Ask Claude to audit your application entry points and identify which secondary chunks should be preloaded for the most common navigation paths.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Through experience with many Vite projects, Claude can warn you about common mistakes:
 
@@ -487,7 +486,7 @@ Through experience with many Vite projects, Claude can warn you about common mis
 5. Mixing ESM and CJS: If a dependency ships only CJS, Vite pre-bundles it with esbuild but cannot tree-shake it. Ask Claude to find ESM alternatives or wrappers.
 6. Skipping the visualizer after changes: Always re-run the visualizer after optimizations to confirm the change had the expected effect. Assumptions fail; measurements don't.
 
-Quick Reference: Claude Prompts for Common Optimization Tasks
+## Quick Reference: Claude Prompts for Common Optimization Tasks
 
 | Task | Claude prompt |
 |---|---|
@@ -498,7 +497,7 @@ Quick Reference: Claude Prompts for Common Optimization Tasks
 | Size budget calculation | "My gzip target is 150 KB total. Given my current chunks, suggest per-chunk budgets" |
 | Vendor chunk strategy | "Group my dependencies into manualChunks based on how often they update" |
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Vite bundle optimization from a complex, trial-and-error process into a systematic workflow. By using its ability to analyze code, suggest changes, and explain trade-offs, you can achieve optimal bundle sizes without becoming a Vite internals expert.
 

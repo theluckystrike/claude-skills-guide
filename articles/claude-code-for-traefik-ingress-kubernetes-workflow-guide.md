@@ -15,7 +15,7 @@ Claude Code for Traefik Ingress Kubernetes Workflow Guide
 
 Traefik is a powerful reverse proxy and load balancer that has become the go-to choice for Kubernetes ingress routing. When combined with Claude Code, you can automate and streamline your entire Kubernetes ingress workflow, from initial setup to ongoing management. This guide walks you through practical patterns for using Claude Code to manage Traefik ingress resources efficiently.
 
-Setting Up Claude Code for Kubernetes Operations
+## Setting Up Claude Code for Kubernetes Operations
 
 Before diving into ingress-specific workflows, ensure your Claude Code environment is configured to interact with your Kubernetes cluster. The foundational requirement is having `kubectl` properly configured with cluster access.
 
@@ -27,7 +27,7 @@ kubectl cluster-info
 
 Once your cluster access is verified, create a skill specifically for Kubernetes and Traefik operations. This skill should include context about your typical deployment patterns and any organizational conventions for ingress resources.
 
-Deploying Traefik in Your Kubernetes Cluster
+## Deploying Traefik in Your Kubernetes Cluster
 
 The first step is getting Traefik deployed. While you can use Helm charts, understanding the manual deployment gives you more control. Here's how Claude Code can help you set up Traefik:
 
@@ -71,7 +71,7 @@ spec:
 
 Claude Code can generate this configuration based on your requirements. Simply describe your needs, such as the number of replicas, entry points, and any middleware requirements, and let Claude Code draft the manifests.
 
-Creating Ingress Resources with Claude Code Assistance
+## Creating Ingress Resources with Claude Code Assistance
 
 The core of Traefik ingress management involves creating Ingress resources. These resources define how external traffic routes to your services. Here's a practical example:
 
@@ -100,7 +100,7 @@ spec:
 
 When you need to create ingress resources, describe your application architecture to Claude Code. Include details like the service name, namespace, host domain, and desired path patterns. Claude Code will generate the appropriate YAML, ensuring proper syntax and following Kubernetes conventions.
 
-Configuring Middleware for Advanced Routing
+## Configuring Middleware for Advanced Routing
 
 Traefik's power lies in its middleware system, which lets you modify requests before they reach your services. Common middleware include authentication, rate limiting, redirects, and path rewriting.
 
@@ -135,7 +135,7 @@ metadata:
 
 Claude Code can help you construct complex middleware chains. Describe what you need, perhaps "add basic authentication to /admin paths" or "redirect all HTTP traffic to HTTPS", and Claude Code will generate the appropriate middleware and Ingress configurations.
 
-Managing TLS Certificates with Traefik
+## Managing TLS Certificates with Traefik
 
 Securing your ingress routes with TLS is essential. Traefik integrates with Let's Encrypt for automatic certificate provisioning. Configure the TLS options in your Ingress:
 
@@ -185,7 +185,7 @@ spec:
             class: traefik
 ```
 
-Practical Workflow: From Request to Deployment
+## Practical Workflow: From Request to Deployment
 
 Here's a typical workflow for adding a new service behind Traefik using Claude Code:
 
@@ -210,7 +210,7 @@ Here's a typical workflow for adding a new service behind Traefik using Claude C
    kubectl logs -n traefik deployment/traefik
    ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 When Traefik ingress isn't working as expected, several common issues are typically at fault. Claude Code can help diagnose these quickly.
 
@@ -222,7 +222,7 @@ Third, validate your DNS is pointing to your Traefik load balancer's external IP
 
 Finally, ensure your firewall rules allow traffic on ports 80 and 443 to your worker nodes.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Kubernetes Traefik ingress management from manual YAML editing to a conversational workflow. By describing your requirements in natural language, you can rapidly generate, deploy, and manage ingress resources. The key is establishing a well-configured skill that understands your cluster's topology and organizational conventions.
 

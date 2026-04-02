@@ -16,7 +16,7 @@ permalink: /claude-skills-with-linear-project-management-tutorial/
 
 Linear is a project management tool built for engineering teams, known for its speed and clean keyboard-driven interface. Integrating Claude skills with Linear lets you automate issue triage, generate technical specifications, analyze sprint data, and write issue descriptions that actually help developers. This tutorial covers Claude skills with Linear project management from API setup to automated workflows.
 
-What You Can Automate
+## What You Can Automate
 
 - Issue triage: Incoming bug reports run through [`tdd` skill](/best-claude-skills-for-developers-2026/) to assess test impact and suggest repro steps
 - Spec generation: Feature requests sent to Claude return structured technical specs ready to paste into Linear
@@ -24,20 +24,20 @@ What You Can Automate
 - PR-to-issue linking: GitHub PR descriptions processed to auto-update Linear issue status and add review notes
 - Supermemory context: [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) tracks patterns across sprint cycles
 
-Prerequisites
+## Prerequisites
 
 - Linear workspace with API access
 - Linear API key (Personal API Keys in Linear settings)
 - Claude API key from console.anthropic.com
 - Node.js 18+
 
-Step 1: Get Your Linear API Key
+## Step 1: Get Your Linear API Key
 
 1. Open Linear → Settings → API
 2. Under Personal API keys, create a new key with label "Claude Skills Bot"
 3. Copy the key. it starts with `lin_api_`
 
-Step 2: Install Dependencies
+## Step 2: Install Dependencies
 
 ```bash
 mkdir claude-linear-bot && cd claude-linear-bot
@@ -53,7 +53,7 @@ LINEAR_TEAM_ID=your_team_id
 
 Find your team ID from the Linear URL or API: `https://linear.app/{workspace}/team/{team_id}/`
 
-Step 3: Initialize Clients
+## Step 3: Initialize Clients
 
 ```javascript
 require('dotenv').config();
@@ -64,7 +64,7 @@ const linear = new LinearClient({ apiKey: process.env.LINEAR_API_KEY });
 const claude = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 ```
 
-Step 4: Fetch Issues and Run Claude Analysis
+## Step 4: Fetch Issues and Run Claude Analysis
 
 ```javascript
 async function getRecentIssues(teamId, limit = 20) {
@@ -112,7 +112,7 @@ Return JSON: { "test_suggestions": [], "affected_areas": [], "repro_steps": [], 
 }
 ```
 
-Step 5: Update Linear Issues with Claude Analysis
+## Step 5: Update Linear Issues with Claude Analysis
 
 ```javascript
 async function addTriageComment(issueId, analysis) {
@@ -141,7 +141,7 @@ ${analysis.triage_notes || ''}
 }
 ```
 
-Step 6: Generate Technical Specs from Feature Requests
+## Step 6: Generate Technical Specs from Feature Requests
 
 ```javascript
 async function generateTechSpec(featureRequest) {
@@ -174,7 +174,7 @@ async function createSpecIssue(teamId, title, spec) {
 }
 ```
 
-Step 7: Sprint Summary with Supermemory Tracking
+## Step 7: Sprint Summary with Supermemory Tracking
 
 ```javascript
 async function generateSprintSummary(teamId) {
@@ -207,7 +207,7 @@ async function generateSprintSummary(teamId) {
 }
 ```
 
-Step 8: Set Up a Webhook for Real-Time Triage
+## Step 8: Set Up a Webhook for Real-Time Triage
 
 Linear supports webhooks for real-time events. Create an Express server to receive them:
 
@@ -245,7 +245,7 @@ app.post('/webhook/linear', async (req, res) => {
 app.listen(3000, () => console.log('Linear webhook server running on :3000'));
 ```
 
-Step 9: Batch Triage Existing Issues
+## Step 9: Batch Triage Existing Issues
 
 Run this once to triage your backlog:
 
@@ -268,13 +268,13 @@ async function triageBacklog(teamId) {
 triageBacklog(process.env.LINEAR_TEAM_ID);
 ```
 
-Conclusion
+## Conclusion
 
 Claude skills with Linear project management transforms routine PM work into automated intelligence. The `tdd` skill makes triage actionable, `supermemory` tracks patterns across sprints, and spec generation saves hours per feature. Start with the webhook-based real-time triage and add batch processing for your existing backlog.
 
 ---
 
-Advanced: Automated Sprint Review Summaries
+## Advanced: Automated Sprint Review Summaries
 
 Automate sprint review generation by combining the Linear API with Claude:
 
@@ -295,7 +295,7 @@ async function generateSprintSummary(cycleId) {
 }
 ```
 
-Comparison with Native Linear Automation
+## Comparison with Native Linear Automation
 
 | Feature | Claude Skills + Linear | Linear Workflow Automations | GitHub Actions |
 |---|---|---|---|
@@ -304,7 +304,7 @@ Comparison with Native Linear Automation
 | Custom logic | Full | Rule-based only | Full (YAML) |
 | Setup complexity | Medium | Low | Medium |
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 API key not authorized for specific team: Ensure the API key has read/write access to the target team's workspace. Linear uses team-specific permissions.
 
@@ -315,7 +315,6 @@ Webhook timing out: Claude Code responses can take 5-10 seconds. Use a backgroun
 Duplicate triage comments on retries: Check for existing triage comments before adding a new one by filtering issue comments for your triage marker.
 
 Claude skills with Linear transforms routine PM work into automated intelligence. The `tdd` skill makes triage actionable, `supermemory` tracks patterns across sprints, and spec generation saves hours per feature.
-
 
 Related Reading
 

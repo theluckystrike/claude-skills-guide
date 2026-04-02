@@ -18,7 +18,7 @@ Building a Chrome extension specifically designed for thesis writing addresses t
 
 Thesis writers spend enormous time context-switching between their writing environment, citation managers, reference databases, and drafts. A well-built Chrome extension can eliminate most of that friction by bringing those tools into the browser itself, right where the writing happens.
 
-Extension Architecture Overview
+## Extension Architecture Overview
 
 A thesis writing helper extension consists of three core components working together. The popup interface provides quick access to common tasks like word counting and citation insertion. Content scripts inject functionality directly into academic websites and word processors. Background scripts handle data persistence and cross-tab synchronization.
 
@@ -34,7 +34,7 @@ Here is a quick comparison of how the three components divide responsibilities:
 
 Understanding this split is important before writing a single line of code. A common mistake is putting storage logic inside the content script, which can cause data loss when tabs unload.
 
-Project Setup
+## Project Setup
 
 Create your extension structure:
 
@@ -89,9 +89,9 @@ The manifest.json file defines your extension's capabilities:
 
 Note the addition of the `alarms` permission. This is important for scheduling reliable auto-saves using `chrome.alarms` instead of `setInterval`, which the Manifest V3 service worker will terminate during idle periods.
 
-Core Feature Implementation
+## Core Feature Implementation
 
-Auto-Save and Draft Management
+## Auto-Save and Draft Management
 
 The most critical feature for thesis writers is automatic draft saving. Use Chrome's storage API to persist content periodically:
 
@@ -157,7 +157,7 @@ async function saveDraft(payload) {
 }
 ```
 
-Word Count and Progress Tracking
+## Word Count and Progress Tracking
 
 Thesis writing requires careful progress monitoring. Create a content script that analyzes text areas and displays live statistics:
 
@@ -238,7 +238,7 @@ function createMetricsPanel() {
 }
 ```
 
-Citation Management
+## Citation Management
 
 Integrate citation insertion using a structured format. Store citation templates that users can customize:
 
@@ -273,7 +273,7 @@ Here is how the three main citation styles differ for the same source so you can
 
 A popup form that captures author, year, title, and source fields lets users generate any of these on demand without memorizing format rules.
 
-Reference Library Integration
+## Reference Library Integration
 
 Build a reference manager that stores and organizes sources. Use Chrome's storage to maintain a searchable database:
 
@@ -326,7 +326,7 @@ async update(id, changes) {
 }
 ```
 
-Detecting the Active Writing Area
+## Detecting the Active Writing Area
 
 One practical challenge is detecting which text element the user is actually typing in. Academic writing happens in a wide range of interfaces: Google Docs, Notion, Overleaf, institutional CMS platforms, and plain textarea elements. A heuristic approach works well:
 
@@ -369,7 +369,7 @@ function findActiveEditor() {
 
 This detection logic should run on every `focusin` and `input` event so the metrics panel always reflects the right element.
 
-Loading and Testing Your Extension
+## Loading and Testing Your Extension
 
 To test your extension in Chrome:
 
@@ -394,7 +394,7 @@ dbg('Content script loaded on', window.location.href);
 
 Set `__DEBUG__ = false` before publishing to the Chrome Web Store.
 
-Storage Limits and What to Watch For
+## Storage Limits and What to Watch For
 
 Chrome's `storage.local` allows up to 10 MB by default, which is plenty for citations and short drafts but can fill up if you store full thesis chapters. Keep individual draft saves to summarized snapshots rather than the full document text when possible. The `chrome.storage.sync` API has much tighter limits (100 KB total) but syncs across the user's devices, making it good for preferences and the reference library index but not raw draft content.
 
@@ -406,8 +406,7 @@ Chrome's `storage.local` allows up to 10 MB by default, which is plenty for cita
 
 If users write long theses and save frequently, consider compressing content before storing it using the CompressionStream API available in modern Chrome versions.
 
-
-Advanced: Cross-Tab Draft Synchronization
+## Advanced: Cross-Tab Draft Synchronization
 
 Researchers often work across multiple tabs simultaneously. Keep drafts in sync using the `chrome.storage.onChanged` event:
 
@@ -425,7 +424,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
 });
 ```
 
-Comparison with Standalone Writing Tools
+## Comparison with Standalone Writing Tools
 
 | Feature | This Extension | Scrivener | Microsoft Word |
 |---|---|---|---|
@@ -437,7 +436,7 @@ Comparison with Standalone Writing Tools
 
 The extension approach is most powerful for researchers who write in browser-based editors like Google Docs, Overleaf, or Notion. it extends these platforms without requiring a separate application.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Content script not injecting into Google Docs: Google Docs renders inside an iframe. Add `all_frames: true` to your content script declaration and ensure the `matches` pattern includes `https://docs.google.com/*`.
 
@@ -472,7 +471,7 @@ document.addEventListener('mouseup', () => {
 });
 ```
 
-Extension Best Practices
+## Extension Best Practices
 
 When building thesis writing tools, prioritize data reliability above all else. Implement conflict resolution for auto-saved drafts to prevent data loss when users work across multiple devices. Use encryption for sensitive research notes stored in Chrome's sync storage.
 
@@ -494,7 +493,6 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 This pattern ensures the cleanup runs even if the user leaves the browser idle for hours, which is common during long writing sessions where the researcher steps away from the desk.
 
 ---
-
 
 Related Reading
 

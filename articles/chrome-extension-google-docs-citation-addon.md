@@ -16,7 +16,7 @@ score: 8
 {% raw %}
 Chrome extension Google Docs citation addons represent a powerful category of browser extensions that streamline academic writing, research documentation, and scholarly work. For developers and power users, understanding how these extensions integrate with Google Docs opens up possibilities for building custom citation workflows, automating bibliography generation, and creating tailored research tools.
 
-How Citation Extensions Integrate with Google Docs
+## How Citation Extensions Integrate with Google Docs
 
 Chrome extension Google Docs citation addons operate within the constraints of Google's extension ecosystem. Unlike traditional Google Docs add-ons that live inside the Docs interface, Chrome extensions provide broader browser integration, allowing citation capture from any webpage, PDF, or online resource.
 
@@ -54,7 +54,7 @@ Here's a basic manifest configuration for a citation extension:
 
 The host_permissions array is critical, it defines which websites the extension can access for citation extraction. Academic databases, journal sites, and library portals are common targets.
 
-Building a Citation Capture System
+## Building a Citation Capture System
 
 Creating a functional citation extension requires extracting metadata from web pages. The most reliable approach involves reading structured data, HTML meta tags, and semantic markup.
 
@@ -124,7 +124,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This script handles multiple citation formats commonly used by academic publishers. JSON-LD provides the most structured data, but the fallback to meta tags ensures compatibility with a wider range of websites.
 
-Formatting Citations for Google Docs
+## Formatting Citations for Google Docs
 
 Once you've captured citation data, you need to format it according to various citation styles (APA, MLA, Chicago, Harvard, etc.). Here's a formatting utility:
 
@@ -169,7 +169,7 @@ function formatCitation(metadata, style = 'apa') {
 }
 ```
 
-Inserting Citations into Google Docs
+## Inserting Citations into Google Docs
 
 The final piece involves inserting formatted citations into the Google Docs document. Since Chrome extensions cannot directly manipulate Google Docs content without user interaction, we use the Google Docs API or the Apps Script approach:
 
@@ -216,7 +216,7 @@ function copyToClipboard(text) {
 
 The API approach requires OAuth authentication but provides precise control. The clipboard approach is simpler but requires manual pasting.
 
-Building a Bibliography Manager
+## Building a Bibliography Manager
 
 For a complete solution, consider implementing a local bibliography storage system:
 
@@ -265,7 +265,7 @@ class BibliographyManager {
 }
 ```
 
-Practical Use Cases
+## Practical Use Cases
 
 Citation extensions prove invaluable in several scenarios. Researchers gathering sources from multiple databases can capture metadata with a single click. Students building bibliographies for assignments can accumulate sources throughout their research process. Writers working on collaborative documents can maintain a centralized citation library accessible across devices.
 
@@ -286,7 +286,7 @@ function exportToBibTeX(metadata) {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Chrome extension Google Docs citation addons bridge the gap between web research and document creation. For developers, the Chrome Extension Manifest V3 architecture provides a solid foundation for building sophisticated citation tools. For power users, these extensions streamline academic writing workflows and reduce the tedium of manual citation formatting.
 

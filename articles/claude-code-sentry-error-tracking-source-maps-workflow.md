@@ -13,17 +13,15 @@ permalink: /claude-code-sentry-error-tracking-source-maps-workflow/
 ---
 {% raw %}
 
-Claude Code Sentry Error Tracking Source Maps Workflow
-
 Modern JavaScript applications bundle code into minified files, making production errors nearly impossible to read without proper source map infrastructure. This guide walks through connecting Claude Code with Sentry to create an automated error tracking and debugging workflow that transforms cryptic stack traces into actionable insights.
 
-Why Source Maps Matter for Error Tracking
+## Why Source Maps Matter for Error Tracking
 
 When your React application throws an error in production, the stack trace points to `bundle.js:1:15342`. a meaningless location in a minified file. Source maps bridge this gap by mapping minified code back to your original TypeScript or ES6 source files. Sentry automatically processes these maps, but the workflow still requires configuration, uploading, and verification.
 
 Claude Code accelerates this process significantly. By combining the tdd skill for test-driven debugging with Sentry's API, you can automate the entire error-to-fix cycle.
 
-Setting Up Sentry with Source Maps
+## Setting Up Sentry with Source Maps
 
 First, ensure your project generates [source maps](/claude-code-websocket-implementation-real-time-events-guide/) during the build process. In your `package.json`, modify the build script:
 
@@ -57,7 +55,7 @@ url=https://sentry.io
 token=your_auth_token
 ```
 
-Automating Source Map Uploads
+## Automating Source Map Uploads
 
 The critical step is uploading source maps after each deployment. Add a post-build script to your `package.json`:
 
@@ -79,7 +77,7 @@ npm run sentry-upload
 
 This automation ensures every deployment includes the corresponding source maps in Sentry.
 
-Connecting Claude Code to Sentry
+## Connecting Claude Code to Sentry
 
 While there's no dedicated Sentry skill for Claude Code, you can use the tdd skill to create a debugging workflow. The tdd skill provides structured test-driven development patterns that integrate well with error tracking [workflows](/workflows-hub/).
 
@@ -106,7 +104,7 @@ Error: TypeError: Cannot read property 'map' of undefined
 
 The tdd skill will guide you through reproducing the error, writing a failing test, and implementing the fix.
 
-Advanced: Real-Time Error Notification Workflow
+## Advanced: Real-Time Error Notification Workflow
 
 For teams wanting immediate feedback, set up a webhook integration:
 
@@ -120,7 +118,7 @@ You can combine this with the frontend-design skill to not only fix the error bu
 /frontend-design suggest patterns to prevent undefined property errors in React components
 ```
 
-Verifying Source Map Configuration
+## Verifying Source Map Configuration
 
 After deployment, verify source maps are working in Sentry:
 
@@ -135,7 +133,7 @@ If source maps aren't resolving, common causes include:
 - Incorrect `--url-prefix` in upload command
 - Source map files not included in deployment artifact
 
-Practical Example: Fixing a Production Bug
+## Practical Example: Fixing a Production Bug
 
 Consider this scenario: Sentry reports a `TypeError` in your checkout flow. Here's the workflow:
 
@@ -162,7 +160,7 @@ Claude will generate a test case and recommend adding null checks or default val
 const total = cart?.reduce((sum, item) => sum + item.price, 0) ?? 0;
 ```
 
-Multi-Language SDK Setup
+## Multi-Language SDK Setup
 
 Sentry supports every major backend language. For Python projects:
 
@@ -195,7 +193,7 @@ func init() {
 
 You can also build a Sentry query tool that lets Claude Code search issues directly via the API, and set up webhook handlers that trigger automated Claude analysis whenever Sentry detects a new critical error.
 
-Integrating Sentry with GitHub Actions
+## Integrating Sentry with GitHub Actions
 
 Automating source map uploads inside your CI/CD pipeline eliminates the risk of deploying without corresponding map files. Here is a complete GitHub Actions workflow that builds, uploads source maps, and creates a Sentry release on every merge to main:
 
@@ -240,7 +238,7 @@ jobs:
 
 Store your Sentry credentials as GitHub Actions secrets rather than committing them to the repository. The `--rewrite` flag strips source map references from the uploaded files, preventing browsers from accessing your source code while still letting Sentry use the maps server-side.
 
-Using Claude Code to Write Sentry Alert Rules
+## Using Claude Code to Write Sentry Alert Rules
 
 Sentry's alert rule DSL is powerful but verbose. Claude Code can generate alert configurations from plain descriptions, saving time when onboarding new error types or microservices.
 
@@ -260,7 +258,7 @@ Claude will produce the full alert configuration objects you can paste directly 
 
 For teams using Claude Code's file operations, you can maintain alert rules as checked-in JSON files and apply them through a deployment script, keeping your observability configuration in version control alongside your application code.
 
-Key Takeaways
+## Key Takeaways
 
 - Generate source maps with `--devtool=source-map` in your build process
 - Automate uploads with Sentry CLI after each deployment
@@ -270,7 +268,7 @@ Key Takeaways
 
 This workflow transforms production errors from frustrating debugging sessions into structured, reproducible issues that Claude Code can help resolve quickly.
 
-Triaging Errors by Severity in Claude Code
+## Triaging Errors by Severity in Claude Code
 
 Once Sentry is feeding your team real error data, the volume can become overwhelming. Not every error warrants immediate attention. Use Claude Code to build a triage layer that classifies incoming Sentry issues by severity and routes them appropriately.
 

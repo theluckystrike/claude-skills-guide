@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Varnish Cache Workflow Tutorial
 
 Varnish Cache is a powerful HTTP reverse proxy and caching server used by thousands of websites to accelerate content delivery. Managing Varnish configurations, testing cache behavior, and deploying updates can be complex tasks. This tutorial shows how Claude Code CLI can streamline your Varnish workflows with intelligent automation and practical examples.
 
-Setting Up Claude Code for Varnish Projects
+## Setting Up Claude Code for Varnish Projects
 
 Before diving into workflows, ensure Claude Code is installed and configured for your Varnish project. Create a project directory with your Varnish configuration files:
 
@@ -41,7 +40,7 @@ The typical Varnish project structure includes:
 - templates/. Variable-driven VCL templates
 - tests/. Integration and unit tests
 
-Creating Varnish Configuration Skills
+## Creating Varnish Configuration Skills
 
 Claude Code works best when you create custom skills for your Varnish workflows. Create a skill file (`varnish-workflow.md`) in your project's `.claude/skills` directory:
 
@@ -82,7 +81,7 @@ sub vcl_backend_response {
 }
 ```
 
-Automated VCL Validation Workflow
+## Automated VCL Validation Workflow
 
 One of the most practical workflows is automated VCL validation. Create a validation script that Claude Code can use:
 
@@ -110,7 +109,7 @@ chmod +x validate-vcl.sh
 
 Claude Code can then validate any VCL file by running this script, catching syntax errors before deployment.
 
-Testing Cache Behavior
+## Testing Cache Behavior
 
 Testing Varnish cache behavior requires making HTTP requests and inspecting headers. Create a test helper script:
 
@@ -138,11 +137,11 @@ fi
 
 This script helps verify that Varnish is properly caching responses.
 
-Practical Workflow: Adding Cache Rules
+## Practical Workflow: Adding Cache Rules
 
 Here's a typical workflow for adding new cache rules using Claude Code:
 
-Step 1: Analyze Existing Configuration
+## Step 1: Analyze Existing Configuration
 
 Ask Claude to review your current VCL:
 
@@ -150,7 +149,7 @@ Ask Claude to review your current VCL:
 
 Claude will read your VCL files and provide insights about current caching policies.
 
-Step 2: Propose Changes
+## Step 2: Propose Changes
 
 Based on the analysis, ask Claude to generate new rules:
 
@@ -169,7 +168,7 @@ sub vcl_backend_response {
 }
 ```
 
-Step 3: Validate and Test
+## Step 3: Validate and Test
 
 Run validation:
 
@@ -177,7 +176,7 @@ Run validation:
 ./validate-vcl.sh new-rules.vcl
 ```
 
-Step 4: Deploy
+## Step 4: Deploy
 
 Apply the configuration (on your Varnish server):
 
@@ -186,7 +185,7 @@ varnishadm -T localhost:6082 vcl.load new_config /path/to/new-rules.vcl
 varnishadm -T localhost:6082 vcl.use new_config
 ```
 
-Managing Multiple Environments
+## Managing Multiple Environments
 
 For projects with development, staging, and production environments, create environment-specific configurations:
 
@@ -216,7 +215,7 @@ Replace placeholders during deployment:
 envsubst < templates/backend.vcl > configs/prod.vcl
 ```
 
-Cache Purging Workflows
+## Cache Purging Workflows
 
 Implementing cache purging is essential for content updates. Here's a complete purge ACL and procedure:
 
@@ -252,7 +251,7 @@ curl -XPURGE "$URL" -H "Host: example.com"
 echo "Purge requested for: $URL"
 ```
 
-Monitoring and Debugging
+## Monitoring and Debugging
 
 Varnish provides valuable debugging headers. Enable them in your VCL:
 
@@ -284,7 +283,7 @@ for endpoint in "${ENDPOINTS[@]}"; do
 done
 ```
 
-Actionable Tips for Varnish Workflows
+## Actionable Tips for Varnish Workflows
 
 1. Modularize Your VCL: Break configurations into reusable snippets (backends.vcl, cache.vcl, purging.vcl) and include them using VCL's `include` directive.
 
@@ -298,7 +297,7 @@ Actionable Tips for Varnish Workflows
 
 6. Document Your Policies: Add comments in VCL explaining why certain TTLs or caching decisions were made.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Varnish Cache management from manual, error-prone processes into automated, reliable workflows. By creating custom skills, validation scripts, and test helpers, you can use Claude's capabilities to handle configuration generation, syntax validation, testing, and deployment tasks efficiently.
 

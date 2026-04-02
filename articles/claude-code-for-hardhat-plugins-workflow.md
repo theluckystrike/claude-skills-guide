@@ -13,14 +13,11 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Hardhat Plugins Workflow
-
 Hardhat is the go-to development environment for Ethereum developers, and its plugin ecosystem is one of its strongest features. Whether you're deploying contracts, running tests, or verifying source code on Etherscan, Hardhat plugins automate repetitive tasks. Claude Code can help you discover, configure, debug, and even build custom Hardhat plugins faster than ever.
 
 This guide shows you how to integrate Claude Code into your Hardhat workflow for maximum productivity.
 
-Setting Up Hardhat with Claude Code
+## Setting Up Hardhat with Claude Code
 
 Before diving into plugin workflows, ensure your Hardhat project is ready for Claude Code assistance. Initialize a new project if needed:
 
@@ -37,9 +34,9 @@ For example, you might say:
 
 Claude Code will then reference your configuration and guide you through the setup process.
 
-Common Hardhat Plugins and How Claude Code Helps
+## Common Hardhat Plugins and How Claude Code Helps
 
-Hardhat-Etherscan for Contract Verification
+## Hardhat-Etherscan for Contract Verification
 
 The hardhat-etherscan plugin automates source code verification on Etherscan. Here's a typical workflow where Claude Code assists:
 
@@ -69,7 +66,7 @@ async function main() {
 
 Ask Claude Code to generate this pattern for you, or explain how to structure your deployment files for automatic verification across networks.
 
-Hardhat-Gas-Reporter for Cost Optimization
+## Hardhat-Gas-Reporter for Cost Optimization
 
 The hardhat-gas-reporter plugin tracks gas usage across contract function calls. After installation:
 
@@ -91,7 +88,7 @@ gasReporter: {
 
 When you run tests with `npx hardhat test`, you'll see gas reports. Claude Code can help you interpret these reports, identify functions with unexpectedly high gas costs, and suggest optimization strategies.
 
-Hardhat-Coverage for Test Coverage
+## Hardhat-Coverage for Test Coverage
 
 Test coverage is critical for smart contract security. The hardhat-coverage plugin integrates with your existing test suite:
 
@@ -107,11 +104,11 @@ npx hardhat coverage
 
 Claude Code can help you analyze coverage reports, identify untested code paths, and generate additional test cases to improve coverage.
 
-Building Custom Hardhat Plugins
+## Building Custom Hardhat Plugins
 
 When existing plugins don't meet your needs, you can build custom Hardhat plugins. Claude Code is excellent for this task.
 
-Plugin Structure
+## Plugin Structure
 
 A basic Hardhat plugin follows this structure:
 
@@ -132,7 +129,7 @@ task("my-custom-task", "Description of what the task does")
   });
 ```
 
-Ask Claude Code for Help
+## Ask Claude Code for Help
 
 When building custom plugins, describe what you need:
 
@@ -140,7 +137,7 @@ When building custom plugins, describe what you need:
 
 Claude Code can generate the plugin structure, implement the parallel deployment logic, and handle error cases.
 
-Testing Hardhat Plugins
+## Testing Hardhat Plugins
 
 Proper testing ensures your plugins work correctly. Hardhat provides a testing environment through `hardhat-runtime-environment`.
 
@@ -159,7 +156,7 @@ describe("Custom Plugin", function () {
 
 Claude Code can help you write comprehensive tests for your plugins, including edge cases and error conditions.
 
-Debugging Hardhat Issues
+## Debugging Hardhat Issues
 
 When Hardhat tasks fail, debugging can be challenging. Here's how Claude Code helps:
 
@@ -173,7 +170,7 @@ Example debugging session:
 
 Claude Code can help you identify common issues like gas estimation failures, constructor argument mismatches, and network configuration problems.
 
-Automating Repetitive Tasks
+## Automating Repetitive Tasks
 
 Many Hardhat workflows involve repetitive steps. Claude Code can help you create task chains or scripts.
 
@@ -197,7 +194,7 @@ task("full-deploy", "Compile, test, deploy, and verify")
   });
 ```
 
-Best Practices for Claude Code with Hardhat
+## Best Practices for Claude Code with Hardhat
 
 1. Share your configuration: Always share your `hardhat.config.js` for relevant context
 2. Specify network details: Mention which networks you're working with (mainnet, testnets, local)
@@ -221,7 +218,7 @@ Common Tasks
 
 This ensures Claude Code always has context about your Hardhat setup.
 
-Conclusion
+## Conclusion
 
 Claude Code significantly enhances your Hardhat development workflow. From configuring popular plugins like etherscan and gas-reporter to building custom plugins and debugging issues, Claude Code serves as an intelligent assistant throughout the process. By sharing your project configuration and following the practices outlined in this guide, you can automate repetitive tasks, write better tests, and deploy more reliable smart contracts.
 

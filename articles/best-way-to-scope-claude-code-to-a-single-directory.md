@@ -31,7 +31,7 @@ The performance point deserves more attention than it usually gets. When Claude 
 
 The security angle matters in shared or CI environments. In a CI pipeline running as a service account, Claude's file access should be constrained to the build workspace. not because Claude behaves maliciously, but because least-privilege access is sound engineering regardless of the tool involved.
 
-Understanding How Claude Code Determines Its Working Context
+## Understanding How Claude Code Determines Its Working Context
 
 Before looking at the specific methods, it helps to understand what Claude Code actually does with directory scope. Claude Code's file tools (Read, Write, Edit, Glob, Grep) resolve paths relative to the working directory established at session start. If you start in `/home/user/projects/myapp`, a relative path like `src/index.ts` resolves to `/home/user/projects/myapp/src/index.ts`.
 
@@ -57,7 +57,7 @@ cd /path/to/your/project && claude
 
 Both achieve the same result. The `--dir` form is slightly preferable in scripts and shell aliases because it keeps the intent explicit and does not modify your shell's working directory.
 
-Shell Alias Pattern
+## Shell Alias Pattern
 
 If you regularly work on multiple projects and want quick scoped sessions, shell aliases are useful:
 
@@ -72,11 +72,11 @@ With these aliases, `cl-frontend` drops you into a Claude session already scoped
 
 The `--dir` method is ideal for quick sessions where you want immediate isolation without configuration changes.
 
-Method 2: Using Allowed Directories in Settings
+## Method 2: Using Allowed Directories in Settings
 
 Claude Code supports an `allowedDirectories` setting in its configuration file. This provides persistent directory scoping that applies to all sessions.
 
-Global Configuration
+## Global Configuration
 
 Edit your Claude Code settings file (typically located at `~/.claude/settings.json`):
 
@@ -89,7 +89,7 @@ Edit your Claude Code settings file (typically located at `~/.claude/settings.js
 }
 ```
 
-Project-Specific Configuration
+## Project-Specific Configuration
 
 For project-level scoping, create a `.claude/settings.json` file in your project root:
 
@@ -115,7 +115,7 @@ You can also specify multiple directories for projects that span multiple locati
 }
 ```
 
-Monorepo Configuration
+## Monorepo Configuration
 
 In a monorepo, you may want to scope Claude to a specific service while still allowing access to a shared package directory:
 
@@ -131,7 +131,7 @@ In a monorepo, you may want to scope Claude to a specific service while still al
 
 This lets Claude read and write within the auth service and the shared packages it depends on, but prevents it from touching other services.
 
-Configuration Hierarchy
+## Configuration Hierarchy
 
 Claude Code reads settings from multiple locations and merges them, with more specific settings taking precedence:
 
@@ -141,7 +141,7 @@ Claude Code reads settings from multiple locations and merges them, with more sp
 
 For team projects, committing `.claude/settings.json` to your repository ensures every team member and every CI run has the same scoping configuration. This is the recommended approach for projects where consistent boundaries matter.
 
-Method 3: Using .claudeignore for File Filtering
+## Method 3: Using .claudeignore for File Filtering
 
 While not strictly directory scoping, the `.claudeignore` file helps maintain focus by excluding specific files and directories from Claude's context. Create this file in your project root:
 
@@ -201,7 +201,7 @@ A well-tuned `.claudeignore` file can dramatically improve the relevance of Clau
 
 Use both together for the best result: `allowedDirectories` for hard access boundaries, `.claudeignore` for refining the file search context within those boundaries.
 
-Method 4: Using Project Initialization with Scope
+## Method 4: Using Project Initialization with Scope
 
 When initializing a new Claude Code project, you can establish directory scope from the start:
 
@@ -219,7 +219,7 @@ claude --add-dir /path/to/project --dir /path/to/project
 
 The first flag configures the project, the second sets the working directory for the current session.
 
-Method 5: Environment-Based Scoping
+## Method 5: Environment-Based Scoping
 
 For CI/CD pipelines or automated workflows, you can combine directory scoping with other techniques:
 
@@ -229,7 +229,7 @@ CLAUDE_DIR=/workspace/myapp claude --print < prompt.txt
 
 This approach works well for scripted workflows where you want directory isolation without interactive prompts.
 
-CI/CD Integration
+## CI/CD Integration
 
 In a GitHub Actions workflow, you might scope Claude to a specific subdirectory for a code review or generation step:
 
@@ -259,7 +259,7 @@ docker run --rm \
 
 Combining container isolation with `allowedDirectories` gives you two independent layers of access control.
 
-Comparing the Methods
+## Comparing the Methods
 
 | Method | Persistence | Team-shareable | Best for |
 |---|---|---|---|
@@ -272,15 +272,15 @@ Comparing the Methods
 
 For most projects, the right combination is `.claude/settings.json` with `allowedDirectories` committed to the repo, plus a `.claudeignore` file for filtering. This gives every team member and every CI run the same boundaries with no manual setup.
 
-Best Practices for Effective Directory Scoping
+## Best Practices for Effective Directory Scoping
 
-Start Broad, Then Narrow
+## Start Broad, Then Narrow
 
 When beginning a new project, start with a slightly broader scope, then narrow it as you understand what files are relevant. This prevents accidentally excluding needed resources.
 
 It is common to start with the entire project root (`"./"`) and add `.claudeignore` entries as you discover directories that add noise without adding value. Reverse-engineering a too-narrow scope is more frustrating than refining a broad one.
 
-Combine Methods for Maximum Isolation
+## Combine Methods for Maximum Isolation
 
 For sensitive projects, layer multiple scoping methods:
 
@@ -290,7 +290,7 @@ For sensitive projects, layer multiple scoping methods:
 
 This defense-in-depth approach ensures consistent boundaries. If one layer has a misconfiguration, the others still apply.
 
-Scope to What Claude Actually Needs to Write
+## Scope to What Claude Actually Needs to Write
 
 A common mistake is scoping too broadly for write access. It is often appropriate to give Claude broad read access (so it can understand the codebase) while restricting writes to the specific directory being modified.
 
@@ -302,7 +302,7 @@ claude --dir /projects/myapp \
        suggest improvements. Write any changes only to packages/auth-service/src."
 ```
 
-Document Your Scope Choices
+## Document Your Scope Choices
 
 Include a brief note in your project's `CLAUDE.md` or `CONTRIBUTING` file about the directory scope you've configured. This helps team members understand Claude's boundaries:
 
@@ -316,42 +316,41 @@ datasets not relevant to code changes.
 To start a scoped session: `claude --dir .`
 ```
 
-Test Your Scoping
+## Test Your Scoping
 
 After configuring directory restrictions, verify they work correctly by asking Claude to access a file outside the configured scope. Claude should either refuse the request or indicate it cannot access files outside its allowed directories.
 
 This is especially important before onboarding a new team member or setting up a CI pipeline. a quick test up front avoids surprises in production.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Claude Still Accessing Files Outside Scope
+## Claude Still Accessing Files Outside Scope
 
 If Claude appears to be accessing files it should not, verify your settings file is valid JSON. Malformed JSON silently fails to load. Run the file through a JSON validator (`python3 -m json.tool .claude/settings.json`) to confirm it parses correctly.
 
 Also confirm that the settings file is in the location Claude is actually reading. Global settings live in `~/.claude/settings.json`; project settings live in `.claude/settings.json` relative to the directory you started Claude from.
 
-Scope Too Restrictive
+## Scope Too Restrictive
 
 If Claude cannot find necessary files, your scope might be too narrow. Expand your `allowedDirectories` to include parent directories or additional project folders.
 
 A common cause is a project that imports from a shared library in a sibling directory. If `allowedDirectories` only includes `./packages/my-service` but the service imports from `./packages/shared`, Claude will not be able to read the shared package and will produce suggestions without that context.
 
-Settings Not Applying
+## Settings Not Applying
 
 Ensure your `.claude/settings.json` is in the correct location (project root or home directory) and restart your Claude Code session for changes to take effect. Changes to settings files do not apply to already-running sessions.
 
-Performance Issues Despite Scoping
+## Performance Issues Despite Scoping
 
 If Claude's file searches are still slow after scoping, check your `.claudeignore` file. Large directories like `node_modules`, `venv`, `.git`, and `build` outputs should always be listed. A missing `node_modules/` entry in `.claudeignore` is the single most common cause of slow context loading in JavaScript and TypeScript projects.
 
-Conclusion
+## Conclusion
 
 Scoping Claude Code to a single directory is straightforward with the right techniques. Whether you prefer command-line flags for quick sessions or persistent configuration for project isolation, there is an approach that fits your workflow. Start with the `--dir` flag for immediate results, then graduate to configuration-based scoping for permanent solutions. Combined with `.claudeignore`, you can create precise boundaries that keep Claude focused and your files protected.
 
 The key is choosing the method that matches your use case: temporary sessions benefit from flags, while team projects benefit from configuration files that can be committed to version control. For CI/CD pipelines, environment-based scoping integrates cleanly with existing workflow tools without requiring interactive configuration.
 
 With these tools at your disposal, you have complete control over where Claude Code can operate. The effort to set up proper scoping is small and the payoff. faster, more accurate file operations and a reduced risk of accidental modifications. is immediate.
-
 
 Related Reading
 

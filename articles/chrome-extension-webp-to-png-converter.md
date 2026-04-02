@@ -17,11 +17,11 @@ PNG format remains the standard for lossless image quality and transparency supp
 
 The primary use cases for a WebP to PNG converter extension include preparing images for clients who request specific formats, working with legacy content management systems, or batch processing images for various platforms.
 
-Building Your Own Chrome Extension
+## Building Your Own Chrome Extension
 
 Creating a Chrome extension to handle WebP to PNG conversion is straightforward. The extension uses the Canvas API to render WebP images and export them as PNG files.
 
-Manifest Configuration
+## Manifest Configuration
 
 Every Chrome extension requires a manifest file. Here's the basic structure:
 
@@ -41,7 +41,7 @@ Every Chrome extension requires a manifest file. Here's the basic structure:
 
 The manifest defines the extension's permissions and behavior. Version 3 is the current standard for Chrome extensions, offering improved security and performance.
 
-Content Script for Conversion
+## Content Script for Conversion
 
 The core conversion logic uses JavaScript and the Canvas API:
 
@@ -72,7 +72,7 @@ function convertWebPtoPNG(imageUrl) {
 
 This function loads a WebP image onto a canvas element and exports it as PNG format. The Canvas API handles the conversion natively within the browser.
 
-Handling Multiple Images
+## Handling Multiple Images
 
 For bulk conversion, you can iterate through all images on a page:
 
@@ -86,41 +86,41 @@ document.querySelectorAll('img[src$=".webp"]').forEach(async (img) => {
 
 This approach scans the current page for all WebP images and converts them sequentially.
 
-Using Existing Extensions
+## Using Existing Extensions
 
 If you prefer not to build your own extension, several reliable options exist in the Chrome Web Store. These extensions typically offer additional features like batch processing, format options, and quality controls.
 
 When choosing an extension, look for those that support right-click context menu conversion, drag-and-drop functionality, and batch processing capabilities. Reading recent reviews helps ensure the extension works with current Chrome versions.
 
-Technical Considerations
+## Technical Considerations
 
-Performance Factors
+## Performance Factors
 
 Converting images client-side does consume browser resources. For single images or small batches, the performance impact is negligible. However, processing dozens of high-resolution images simultaneously may cause temporary browser slowdowns. Consider converting images in smaller batches for large projects.
 
-Quality Preservation
+## Quality Preservation
 
 The Canvas API conversion maintains image quality at the original resolution. Unlike format conversions that involve compression, PNG output from this process retains all pixel data from the source WebP image. This makes the method suitable for professional work where image fidelity matters.
 
-Privacy and Security
+## Privacy and Security
 
 Running conversion locally in your browser means images aren't uploaded to external servers. This provides advantages for working with sensitive images or proprietary content. The Canvas API processes everything client-side, ensuring your images remain private.
 
-Practical Applications
+## Practical Applications
 
-Web Development Workflows
+## Web Development Workflows
 
 When extracting images from websites or converting assets for legacy projects, having quick conversion capabilities streamlines development. You can inspect any WebP image, copy its URL, and convert it without leaving your development environment.
 
-Design Work
+## Design Work
 
 Graphic designers often receive WebP assets from clients or need to prepare images for platforms requiring PNG format. A browser-based converter eliminates the need for separate image editing software for simple format changes.
 
-Content Management
+## Content Management
 
 Bloggers and content creators frequently need to reformat images for different platforms. Converting WebP to PNG directly in Chrome provides a fast workflow without uploading to third-party conversion services.
 
-Summary
+## Summary
 
 Chrome extensions that convert WebP to PNG offer a practical solution for developers and power users who need quick, private image format conversions. Whether you build your own extension using the Canvas API or use an existing solution, the browser provides a capable environment for handling image format conversions efficiently.
 

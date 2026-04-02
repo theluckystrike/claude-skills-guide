@@ -18,7 +18,7 @@ A Claude skill by itself is powerful. A Claude skill wired into your actual infr
 
 This hub covers every major integration category, with a practical breakdown of what Claude skills can do in each context and links to the complete setup guides.
 
-Table of Contents
+## Table of Contents
 
 1. [CI/CD and Version Control](#cicd-and-version-control)
 2. [Automation Platforms](#automation-platforms)
@@ -34,7 +34,7 @@ Table of Contents
 
 ---
 
-CI/CD and Version Control
+## CI/CD and Version Control
 
 GitHub Actions and GitLab CI are the natural home for skills that work on code. Because every push, pull request, and merge triggers a pipeline event, you can attach Claude skill execution to any of those moments with a few lines of YAML.
 
@@ -56,7 +56,7 @@ GitLab CI follows the same pattern. Claude Code can run as a CI job, with the sk
 
 ---
 
-Automation Platforms
+## Automation Platforms
 
 n8n and Zapier are the connective tissue of modern software stacks. Both platforms let you build multi-step automation flows that trigger on events from hundreds of services. Adding Claude skills to these flows gives your automations the ability to understand, summarize, classify, and generate content, not just route data.
 
@@ -77,7 +77,7 @@ Zapier is the faster path for non-developers and for prototyping. The Claude int
 
 ---
 
-Project Management and CRM
+## Project Management and CRM
 
 Connecting Claude skills to project management and CRM tools closes the loop between where work is tracked and where AI assistance is most useful. The primary integration targets in the developer ecosystem are Notion, Linear, Jira, and ClickUp.
 
@@ -102,7 +102,7 @@ ClickUp offers a flexible project management API. Claude skills can create tasks
 
 ---
 
-Backend and Databases
+## Backend and Databases
 
 Claude skills become significantly more powerful when they can read from and write to real data stores. Two integration patterns dominate here: direct database access through a skill-managed connection, and indirect access through an MCP server that abstracts the database layer.
 
@@ -119,7 +119,7 @@ AWS Lambda and serverless functions are another integration layer. Claude skills
 
 ---
 
-Communication and Email
+## Communication and Email
 
 Slack is the primary communication integration for Claude skills in team environments. The pattern is bidirectional: Slack events (messages, reactions, mentions) can trigger Claude skill execution, and skill output can be posted back to Slack channels or DMs.
 
@@ -147,7 +147,7 @@ Video conferencing integration via Zoom MCP server allows Claude to process meet
 
 ---
 
-Cloud Platforms
+## Cloud Platforms
 
 Major cloud platforms are integration targets for skills that manage infrastructure, deployments, and cloud resources. Three platforms see the most Claude Code activity: AWS, GCP, and Vercel.
 
@@ -165,7 +165,7 @@ Vercel is the standard deployment target for Next.js applications. Claude skills
 
 ---
 
-Monitoring and Observability
+## Monitoring and Observability
 
 Monitoring integrations give Claude real-time visibility into production system health. Datadog is the most common observability platform in Claude Code integrations. its MCP server allows Claude to query metrics, read dashboards, and correlate error spikes with recent deployments.
 
@@ -182,7 +182,7 @@ Trigger.dev is a developer-first workflow automation platform that runs backgrou
 
 ---
 
-Web Automation and Research
+## Web Automation and Research
 
 Web automation integrations give Claude the ability to browse, extract, and process web content at scale.
 
@@ -195,7 +195,7 @@ Tavily provides a research-grade search API optimized for AI applications. Claud
 
 ---
 
-Content and Publishing
+## Content and Publishing
 
 Publishing platform integrations let Claude participate directly in the content creation and publishing workflow.
 
@@ -207,7 +207,7 @@ Ghost is a popular open-source publishing platform with a well-documented API. T
 
 ---
 
-Integration Quick-Reference Table
+## Integration Quick-Reference Table
 
 | Platform | What Claude Skills Can Do | Guide |
 |----------|--------------------------|-------|
@@ -236,7 +236,7 @@ Integration Quick-Reference Table
 
 ---
 
-Full Article Index
+## Full Article Index
 
 | Article | What You'll Learn |
 |---------|-------------------|

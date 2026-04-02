@@ -34,7 +34,7 @@ Multi-page contracts with complex clause structures benefit from more targeted p
 
 For high-volume submissions, consider writing a short wrapper prompt template that your team reuses. Store it in a shared note or your CMS so every intake review uses the same extraction schema. consistent field names make downstream database imports reliable.
 
-Editorial Review with the DOCX Skill
+## Editorial Review with the DOCX Skill
 
 Word documents remain the standard exchange format for manuscripts. The docx skill gives Claude context for working with `.docx` files: heading structures, tracked changes, formatting consistency, and comment threads.
 
@@ -52,7 +52,7 @@ You can also use the docx skill to compare author drafts across revisions. Point
 
 For style guides, the skill can check compliance against your house rules. If your imprint requires Oxford commas, specific capitalization for genre terms, or consistent handling of series titles, describe those rules once and run the check as part of your standard pre-submission intake.
 
-Spreadsheet Reports with the XLSX Skill
+## Spreadsheet Reports with the XLSX Skill
 
 The xlsx skill handles royalty statements, catalog spreadsheets, and inventory reports. It can create new workbooks, add formulas, and apply formatting.
 
@@ -64,7 +64,7 @@ For recurring reports, describe your template once and reuse the prompt.
 
 Royalty statement reconciliation is one of the better use cases here. Distributors send statements in varying formats. some by ISBN, some by title, some with different column orders. The xlsx skill can normalize incoming data across sources and produce a unified statement your authors can actually read. This eliminates most of the manual reformatting that typically falls on rights assistants at the end of each reporting period.
 
-Presentation Generation with the PPTX Skill
+## Presentation Generation with the PPTX Skill
 
 Rights fairs and sales meetings require slide decks. The pptx skill generates structured presentations from your data.
 
@@ -74,7 +74,7 @@ Rights fairs and sales meetings require slide decks. The pptx skill generates st
 
 Generating from a consistent template ensures brand alignment across your catalog pitches.
 
-Knowledge Management with Supermemory
+## Knowledge Management with Supermemory
 
 The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) lets Claude remember project context across sessions. For ongoing series, author relationships, or multi-year contracts, you can store key facts:
 
@@ -88,7 +88,7 @@ Then retrieve it in any future session:
 /supermemory What do you know about Jane Smith's contract terms?
 ```
 
-Browser Testing with Webapp-Testing
+## Browser Testing with Webapp-Testing
 
 For publishers with digital platforms. e-book previews, reader portals, or CMS systems. the webapp-testing skill provides Playwright-based browser testing:
 
@@ -96,7 +96,7 @@ For publishers with digital platforms. e-book previews, reader portals, or CMS s
 /webapp-testing verify the e-book preview page at https://publisher.com/preview/9781234567890: confirm the .chapter-title element is visible, then screenshot the result to previews/chapter-one.png
 ```
 
-Skill Documentation Best Practices for Publishers
+## Skill Documentation Best Practices for Publishers
 
 Good skill prompts are documentation. Whether you're a solo editorial assistant or managing a team of five, writing your prompts down in a shared location pays off quickly. When a colleague covers for you, they can pick up your workflow immediately. When you revisit a project after six months, you don't have to rediscover what worked.
 
@@ -104,7 +104,7 @@ For each workflow you automate with a skill, capture three things: the skill inv
 
 Prompt templates also version well. If you refine a manuscript intake prompt over several months. adjusting field names, adding a word count threshold, removing an unnecessary step. keeping a changelog helps you understand why the current version looks the way it does. This matters especially for contract-related prompts where precision is non-negotiable.
 
-Versioning and Updating Your Skill Workflows
+## Versioning and Updating Your Skill Workflows
 
 Skills themselves receive updates, and prompt patterns that worked well in one version may produce different output after an update. Build a lightweight check into your process: when a skill update is released, run your standard prompts against a known test document and compare output to your saved sample. This takes five minutes and catches regressions before they affect live work.
 
@@ -112,7 +112,7 @@ For your own prompt library, treat it like a config file. Use version numbers or
 
 If you're running skills across multiple imprints or departments, consider whether shared prompt libraries need access controls. Prompts that reference specific contract clause language or author-specific terms may be sensitive. Keep them in the same access-controlled environment as your contract templates.
 
-Getting Visibility and Downloads for Published Skills
+## Getting Visibility and Downloads for Published Skills
 
 If you've built a custom skill for your publishing workflow and want to share it with the community. or distribute it within your organization. a few practices improve adoption significantly.
 
@@ -124,7 +124,7 @@ Categorize accurately. A skill that primarily handles contracts belongs under le
 
 For internal distribution within a publishing house, the path to adoption is a working demo during a team meeting, not documentation. Show it working on a real document your colleagues recognize. Answer the first five objections live. Documentation supports adoption after that initial demonstration. it rarely drives it on its own.
 
-Getting Started
+## Getting Started
 
 Start with the skill that addresses your largest manual workload. If you process dozens of PDF submissions weekly, `/pdf` pays off immediately. If contract review takes hours per deal, `/docx` and `/pdf` together reduce that significantly.
 
@@ -139,7 +139,6 @@ Related Reading
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Top frontend skills with examples
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Broader developer skill overview
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 ---
 

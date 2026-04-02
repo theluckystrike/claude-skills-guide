@@ -16,7 +16,7 @@ permalink: /claude-skills-directory-where-to-find-skills/
 
 Claude Code skills are `.md` files stored locally at `~/.claude/skills/`. When you invoke `/skill-name`, Claude Code reads that file and gains specialized context for the task. Here's where to find skills and how to install them.
 
-Built-in Skills
+## Built-in Skills
 
 Claude Code ships with a set of official skills that cover common development tasks. These are available by default and don't require manual installation. The primary built-in skills include:
 
@@ -61,7 +61,7 @@ To load a skill's full guidance, invoke it with a slash command:
 
 You can also verify that a skill loaded correctly by asking Claude to summarize what the skill does immediately after invoking it. If the skill file is malformed or empty, Claude will tell you it found no instructions.
 
-Community Skills
+## Community Skills
 
 The community maintains additional skills in public GitHub repositories. The best place to find community Claude Code skills:
 
@@ -71,7 +71,7 @@ The community maintains additional skills in public GitHub repositories. The bes
 
 Community skills are `.md` files you clone or download and place in `~/.claude/skills/`.
 
-GitHub Search Tips
+## GitHub Search Tips
 
 GitHub's search is powerful if you know the right queries. A few searches that surface real skill files:
 
@@ -83,7 +83,7 @@ When browsing search results, filter by Recently updated rather than Best match.
 
 It also helps to follow active Claude Code community members on GitHub directly. Contributors who publish useful MCP servers often publish companion skill files in the same repository.
 
-Installing a Community Skill
+## Installing a Community Skill
 
 ```bash
 installing a skill from a GitHub repo
@@ -97,7 +97,7 @@ cp /tmp/claude-skills/*.md ~/.claude/skills/
 
 After installing, restart your Claude Code session and invoke the skill with `/skill-name`.
 
-Finding Skills by Use Case
+## Finding Skills by Use Case
 
 | Need | Skill |
 |------|-------|
@@ -112,7 +112,7 @@ Finding Skills by Use Case
 | Browser automation testing | `/webapp-testing` |
 | Build custom MCP servers | `/skill-creator` |
 
-Evaluating Skill Quality
+## Evaluating Skill Quality
 
 Before adding a community skill:
 
@@ -123,7 +123,7 @@ Before adding a community skill:
 
 Official skills from Anthropic are tested and maintained. Community skills vary in quality. reading the `.md` file directly is the fastest way to evaluate one.
 
-What Makes a Good Skill File
+## What Makes a Good Skill File
 
 Not all `.md` files labeled as skills are equally useful. A well-crafted skill file has a few consistent qualities.
 
@@ -139,7 +139,7 @@ Maintained alongside a changelog. Repos where the skill file has its own version
 
 A quick way to assess a skill file before installing it is to paste its contents into a Claude session and ask: "Does this skill file contain any contradictions or ambiguous instructions?" Claude will surface problems that might not be obvious on a quick read.
 
-Organizing Your Local Skills Directory
+## Organizing Your Local Skills Directory
 
 As your skills collection grows, a flat directory of `.md` files becomes hard to navigate. A few organizational approaches that work well.
 
@@ -165,7 +165,7 @@ mkdir -p ~/.claude/skills/archive
 mv ~/.claude/skills/old-skill.md ~/.claude/skills/archive/
 ```
 
-Keeping Skills Updated
+## Keeping Skills Updated
 
 For official skills, update Claude Code:
 
@@ -208,7 +208,6 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top skills every developer should know
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Decide when skills beat plain prompts
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 ---
 

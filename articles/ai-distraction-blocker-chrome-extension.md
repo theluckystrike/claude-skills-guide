@@ -17,7 +17,7 @@ AI distraction blocker Chrome extensions represent a powerful solution for devel
 
 Building one from scratch teaches you Manifest V3 architecture, Chrome Extension APIs, local model inference, and event-driven content scripts. skills that transfer directly to any browser extension project.
 
-Understanding the Core Architecture
+## Understanding the Core Architecture
 
 The foundation of an effective AI distraction blocker lies in its ability to understand page content and user intent. These extensions typically operate through three interconnected layers: a content analysis engine, a rules engine, and a user interface for configuration.
 
@@ -35,7 +35,7 @@ In Manifest V3, these three layers map to specific extension components:
 
 Understanding which layer handles which concern prevents the most common architectural mistakes, like trying to intercept network requests from a content script or manipulating the DOM from a service worker.
 
-Building a Basic Implementation
+## Building a Basic Implementation
 
 Here's a minimal Manifest V3 structure for a distraction blocker:
 
@@ -105,7 +105,7 @@ blockDistractions();
 
 Without the observer, Twitter's recommendation sidebar reappears every time you scroll because the site continuously injects new DOM nodes.
 
-Adding AI-Powered Analysis
+## Adding AI-Powered Analysis
 
 Static selectors work for known platforms, but true AI-powered blocking requires content understanding. You can integrate with APIs or run lightweight models in the extension context:
 
@@ -159,7 +159,7 @@ async function scorePage() {
 }
 ```
 
-Context-Aware Blocking Strategies
+## Context-Aware Blocking Strategies
 
 Effective distraction blocking adapts to your current context. A developer working on code needs different protection than someone reading news. Implement context awareness through:
 
@@ -213,7 +213,7 @@ function startFocusSession(minutes = 90) {
 
 During a focus session, the extension applies its most aggressive blocking profile. When the session expires, it reverts to standard rules automatically.
 
-Chrome Extension API Integration
+## Chrome Extension API Integration
 
 For deeper integration, use Chrome's Extension APIs to create sophisticated blocking rules:
 
@@ -277,7 +277,7 @@ fetch(chrome.runtime.getURL('rules.json'))
 
 Storing rules in a JSON file rather than hardcoding them in `background.js` makes it easy to add rules without touching JavaScript logic.
 
-Performance Considerations
+## Performance Considerations
 
 Running AI analysis on every page requires careful performance management. Key optimizations include:
 
@@ -340,7 +340,7 @@ worker.onmessage = ({ data }) => {
 };
 ```
 
-Customization for Power Users
+## Customization for Power Users
 
 Beyond basic blocking, power users benefit from granular controls. Consider adding:
 
@@ -371,7 +371,7 @@ function replaceWithReminder(element, message = 'Blocked for focus') {
 
 This is less jarring than blank spaces and serves as a gentle reminder of your focus goal rather than an invisible removal.
 
-Advanced Features for Developer Workflows
+## Advanced Features for Developer Workflows
 
 Developers have unique needs when it comes to distraction blocking. IDE integrations, documentation browsing, and code research require careful handling to avoid accidentally blocking essential resources. Consider implementing developer-specific features:
 
@@ -416,7 +416,7 @@ function isResearchContext() {
 
 You can also add a "quick lookup" mode that temporarily relaxes blocking when the user opens a new tab directly from a developer tool (detected via the referrer header or tab opener API).
 
-Privacy and Data Handling
+## Privacy and Data Handling
 
 When building AI-powered blocking features, consider privacy implications. Local processing keeps all data on the user's machine, while API-based analysis sends content externally. For maximum privacy, run lightweight models client-side using WebAssembly or TensorFlow.js:
 
@@ -470,7 +470,7 @@ async function classifyWithModel(text, model) {
 
 Bundle pre-trained models into the extension package. A quantized MobileNet-derived text classifier can run in under 5MB, acceptable for an extension package size.
 
-Testing Your Extension
+## Testing Your Extension
 
 Comprehensive testing ensures your blocker works across different scenarios. Use Chrome's built-in testing capabilities:
 
@@ -527,7 +527,7 @@ async function testExtension() {
 
 This lets you run regression tests against live pages whenever you modify blocking rules, catching unintended side effects before shipping.
 
-Options Page and User Configuration
+## Options Page and User Configuration
 
 A well-built extension needs a configuration interface. The options page stores user preferences in `chrome.storage.sync` so settings persist across devices:
 
@@ -563,12 +563,11 @@ document.getElementById('save').addEventListener('click', () => {
 
 Use `chrome.storage.sync` (not `localStorage`) so settings carry over when the user logs into Chrome on a different machine.
 
-Conclusion
+## Conclusion
 
 Building an AI distraction blocker Chrome extension combines web development skills with behavioral understanding. Start with simple selector-based blocking, then layer in AI analysis as you refine your understanding of what constitutes distraction in your workflow. The key is creating a system that disappears into the background while protecting your attention when you need it most.
 
 The progression from static selectors to heuristic scoring to local model inference maps naturally to increasing levels of sophistication. You can ship a useful v1 in an afternoon with CSS hiding and `declarativeNetRequest` rules, then iterate toward context-aware intelligence over time. Focus on your own workflow first. block the specific sites and UI patterns that pull you away from flow state. and generalize from there.
-
 
 Related Reading
 

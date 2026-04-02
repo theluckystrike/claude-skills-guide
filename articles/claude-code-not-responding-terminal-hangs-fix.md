@@ -13,18 +13,17 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Not Responding: Terminal Hangs Fix
+## Claude Code Not Responding: Terminal Hangs Fix
 
 When Claude Code freezes mid-conversation or your terminal stops responding, productivity comes to a halt. This guide covers practical solutions for diagnosing and fixing these issues, whether you're running a simple query or using advanced skills like the tdd skill for test-driven development.
 
-Identifying the Problem
+## Identifying the Problem
 
 Terminal hangs with Claude Code typically manifest in three ways. First, you might see a spinner that never completes, the cursor spins indefinitely with no response. Second, output may truncate mid-stream, leaving you with partial results and no way to continue. Third, the entire terminal session becomes unresponsive, accepting no keyboard input.
 
 Before applying fixes, identify which scenario matches your situation. Different symptoms require different solutions.
 
-Quick Recovery Commands
+## Quick Recovery Commands
 
 The fastest way to recover from a frozen Claude Code session depends on your terminal and operating system.
 
@@ -53,11 +52,11 @@ ps aux | grep claude
 kill -9 <PID>
 ```
 
-Diagnosing Root Causes
+## Diagnosing Root Causes
 
 If hangs recur frequently, diagnose the underlying cause. Common culprits include network connectivity issues, skill configuration problems, and resource constraints.
 
-Network Issues
+## Network Issues
 
 Claude Code communicates with Anthropic's API servers. Network problems manifest as hangs during the "Thinking..." phase. Test your connection:
 
@@ -67,7 +66,7 @@ curl -s https://api.anthropic.com/health | head
 
 If this fails, check your firewall settings, VPN connection, or proxy configuration. Corporate networks often block API endpoints.
 
-Skill Configuration Problems
+## Skill Configuration Problems
 
 Skills like pdf, xlsx, or frontend-design load additional instructions that can occasionally cause conflicts. Check your skill files for syntax errors:
 
@@ -77,7 +76,7 @@ ls -la ~/.claude/skills/
 
 Review recent modifications to your skill files. A malformed skill can cause Claude to enter an infinite reasoning loop.
 
-Resource Constraints
+## Resource Constraints
 
 Low memory or CPU throttling can cause Claude Code to appear frozen. Monitor system resources:
 
@@ -91,11 +90,11 @@ free -h && uptime
 
 If memory is exhausted, close other applications or restart your terminal entirely.
 
-Preventing Future Hangs
+## Preventing Future Hangs
 
 Prevention strategies reduce the frequency of frozen sessions.
 
-Use Explicit Context Boundaries
+## Use Explicit Context Boundaries
 
 When working with large codebases or long conversations, explicitly set context boundaries. Instead of letting a session run indefinitely, break work into smaller chunks:
 
@@ -105,7 +104,7 @@ When working with large codebases or long conversations, explicitly set context 
 
 This clears conversation history and starts fresh, reducing memory usage and the chance of hangs.
 
-Configure Skill Timeouts
+## Configure Skill Timeouts
 
 If you use skills that perform file operations, such as the tdd skill for test-driven development or the xlsx skill for spreadsheet manipulation, add timeout configurations to your `~/.claude/settings.json`:
 
@@ -118,7 +117,7 @@ If you use skills that perform file operations, such as the tdd skill for test-d
 }
 ```
 
-Optimize Prompt Complexity
+## Optimize Prompt Complexity
 
 Complex prompts with multiple instructions can trigger hangs. Break complex requests into sequential steps. Instead of:
 
@@ -134,7 +133,7 @@ First, create the database models for user authentication
 
 Then follow up with subsequent requests for each component.
 
-Recovery Workflow
+## Recovery Workflow
 
 When you encounter a hang, follow this systematic recovery workflow:
 
@@ -148,11 +147,11 @@ When you encounter a hang, follow this systematic recovery workflow:
 
 5. Restart Claude Code: After recovery, verify functionality with a simple query like "Hello, respond with OK."
 
-Advanced Techniques
+## Advanced Techniques
 
 For power users running Claude Code in specialized environments, additional techniques apply.
 
-Container Environments
+## Container Environments
 
 When running Claude Code inside Docker containers, ensure proper signal handling. Add a `ENTRYPOINT` that properly forwards signals:
 
@@ -172,7 +171,7 @@ bind-key C-z send-keys C-z
 
 This ensures interrupt signals reach Claude Code even when running in detached sessions.
 
-Log Analysis
+## Log Analysis
 
 Enable debug logging to diagnose recurring issues. Set the `CLAUDE_DEBUG` environment variable:
 
@@ -183,7 +182,7 @@ claude
 
 Debug logs reveal where Claude Code stalls, helping identify whether the issue is network-related, skill-related, or a code execution problem.
 
-When to Reinstall
+## When to Reinstall
 
 If issues persist despite troubleshooting, a clean reinstallation often resolves underlying corruption:
 
@@ -200,7 +199,7 @@ brew install claude
 
 Reinstallation takes minutes and eliminates configuration conflicts that troubleshooting cannot fix.
 
-Conclusion
+## Conclusion
 
 Terminal hangs with Claude Code frustrate developers, especially when using powerful skills like tdd for test-driven development or pdf for document processing. Most hangs resolve with simple interrupt signals, while persistent issues often stem from network connectivity, skill configuration, or system resource constraints.
 

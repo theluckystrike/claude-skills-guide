@@ -116,7 +116,7 @@ This skill generates:
 
 [Many .NET developers use this to build custom integrations](/claude-code-skills-for-backend-developers-node-and-python/) between Claude Code and internal systems.
 
-Consistent Styling for Applications
+## Consistent Styling for Applications
 
 Claude Code helps apply consistent visual themes across your documentation and presentations. Describe your brand requirements and Claude will apply them to generated artifacts.
 
@@ -127,7 +127,7 @@ Apply a theme to match your application
 
 For .NET developers building enterprise applications, this approach ensures consistency between documentation, presentations, and UI mockups.
 
-Project Documentation and Updates
+## Project Documentation and Updates
 
 Claude Code helps generate status reports, sprint updates, and technical documentation through direct prompting.
 
@@ -142,7 +142,7 @@ This produces:
 - Incident reports
 - Project updates for stakeholders
 
-Combining Skills in .NET Workflows
+## Combining Skills in .NET Workflows
 
 The real productivity gains appear when chaining skills together. Here is a practical workflow:
 
@@ -157,7 +157,7 @@ The real productivity gains appear when chaining skills together. Here is a prac
 // All within Claude Code, no IDE switching required
 ```
 
-Practical Example: Building a Feature End-to-End
+## Practical Example: Building a Feature End-to-End
 
 Consider adding a new payment processing module to your .NET application:
 
@@ -177,7 +177,7 @@ Step 4: Generate test reports
 
 Each step stays within Claude Code, maintaining your development flow without jumping between tools.
 
-Choosing Skills Based on Your .NET Role
+## Choosing Skills Based on Your .NET Role
 
 Different developer roles benefit from different skill combinations:
 
@@ -188,7 +188,7 @@ Different developer roles benefit from different skill combinations:
 
 Start with skills matching your most frequent tasks. As your workflow matures, add skills that address new problems.
 
-Summary
+## Summary
 
 Claude Code skills for .NET development focus on automation, documentation, and testing. The xlsx skill handles spreadsheet operations, docx and pdf generate documentation, webapp-testing verifies application behavior, and mcp-builder creates custom integrations. Combine these skills to reduce repetitive tasks and maintain focus on solving domain problems.
 
@@ -251,7 +251,7 @@ public class OrderCalculatorTests
 
 These tests define the `OrderCalculator` interface before it exists. The test class specifies the constructor signature (dependency injection via `ITaxService`), the method signature (`Calculate(items, taxRegion)`), and the return type structure (`Subtotal`, `TaxAmount`, `Total`). Implementing the class to satisfy these tests produces code that is already injectable and testable by design.
 
-Managing NuGet Dependencies with Claude Code
+## Managing NuGet Dependencies with Claude Code
 
 .NET projects accumulate NuGet dependencies quickly, and keeping them current without introducing breaking changes is time-consuming to do manually. Claude Code can scan your `.csproj` files and identify outdated packages, packages with known vulnerabilities, and packages that can be consolidated when multiple packages serve the same purpose.
 

@@ -17,19 +17,19 @@ Claude Code for Pact Contract Testing Workflow Guide
 
 Contract testing has become an essential practice in microservices architectures, ensuring that APIs between services remain compatible throughout development. Pact, a leading contract testing framework, enables teams to verify service interactions without deploying full integration environments. This guide explores how to use Claude Code effectively within your Pact contract testing workflow, from initial setup through continuous maintenance.
 
-Understanding Pact Contract Testing Basics
+## Understanding Pact Contract Testing Basics
 
 Before diving into the Claude Code integration, let's establish the core concepts that drive successful Pact implementations. Contract testing operates on a simple premise: instead of testing services in isolation or through end-to-end integration tests, you verify that the contracts, the specific requests and responses expected between services, remain valid.
 
 Pact follows a consumer-driven contract pattern where the service that consumes an API defines what it expects from the provider. This approach shifts testing left, catching integration issues early in development when they're least expensive to fix.
 
-The Pact Workflow Overview
+## The Pact Workflow Overview
 
 The standard Pact workflow involves three primary phases: writing contract tests, publishing contracts to a broker, and verifying contracts against providers. Each phase presents opportunities for Claude Code to enhance productivity and reduce manual effort.
 
 In the consumer phase, you write tests that define expected API interactions. These tests generate pact files, JSON documents describing the request-response pairs your consumer expects. The provider phase involves verifying that the actual provider implementation matches these expectations.
 
-Integrating Claude Code into Your Pact Workflow
+## Integrating Claude Code into Your Pact Workflow
 
 Claude Code excels at accelerating Pact adoption through intelligent code generation, test maintenance, and documentation. Here's how to incorporate it effectively:
 
@@ -128,9 +128,9 @@ pacts/
      v1.0.0.json
 ```
 
-Practical Strategies for Contract Maintenance
+## Practical Strategies for Contract Maintenance
 
-Handling API Evolution
+## Handling API Evolution
 
 APIs change over time, and contract tests must evolve accordingly. Claude Code can assist by analyzing the differences between contract versions and identifying necessary updates to your tests.
 
@@ -142,7 +142,7 @@ in the user profile response. The field should be optional and contain
 an object with 'theme' (string) and 'notifications' (boolean) properties."
 ```
 
-Troubleshooting Verification Failures
+## Troubleshooting Verification Failures
 
 Verification failures often stem from three common issues: missing endpoints, incorrect response formats, or state management problems. When debugging, provide Claude Code with the full verification output and ask for systematic analysis:
 
@@ -162,7 +162,7 @@ pact-broker can-i-deploy \
   --provider-version-number=2.1.0
 ```
 
-Automating Contract Publishing
+## Automating Contract Publishing
 
 Integrate pact publishing into your CI/CD pipeline to ensure contracts are always current. Claude Code can help generate appropriate CI configuration:
 
@@ -190,7 +190,7 @@ jobs:
             --broker-token=${{ secrets.PACT_BROKER_TOKEN }}
 ```
 
-Best Practices for Claude Code + Pact
+## Best Practices for Claude Code + Pact
 
 Document your contract testing strategy: Maintain a living document describing your testing philosophy, naming conventions, and troubleshooting procedures. Claude Code can help keep this documentation current.
 
@@ -200,19 +200,17 @@ Run contract tests frequently: Integrate contract verification into your develop
 
 Use the Pact Broker: Use a centralized broker to share contracts between teams, track version relationships, and enable can-i-deploy checks before releasing.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Pact contract testing from a manual, error-prone process into an efficient, developer-friendly workflow. By using its code generation capabilities, debugging assistance, and documentation support, teams can establish solid contract testing practices that scale with their microservices architecture. Start small with your most critical service integrations, establish patterns that work for your team, and progressively expand coverage as your confidence grows.
 
 The combination of Claude Code's productivity enhancements and Pact's contract testing methodology creates a powerful foundation for building reliable, maintainable distributed systems.
-
 
 Related Reading
 
 - [Claude Code Contract Testing with Pact Guide](/claude-code-contract-testing-pact-guide/)
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

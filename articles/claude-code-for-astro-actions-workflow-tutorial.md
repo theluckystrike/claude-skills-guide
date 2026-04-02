@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Astro Actions Workflow Tutorial
 
 Astro Actions is a powerful feature that enables developers to build type-safe backend functionality directly within their Astro projects. When combined with Claude Code, you can automate repetitive tasks, generate boilerplate code, and create intelligent workflows that significantly accelerate your development process. This tutorial will guide you through integrating Claude Code into your Astro Actions workflow.
 
-Understanding Astro Actions
+## Understanding Astro Actions
 
 Astro Actions provides a smooth way to define server-side functions that can be called from your frontend code. These actions live in your Astro project's `src/actions` directory and automatically generate type-safe API endpoints. The beauty of Astro Actions lies in their type safety, you get full TypeScript support out of the box without additional configuration.
 
@@ -33,11 +32,11 @@ Claude Code brings AI-powered assistance directly into your development workflow
 - Write integration tests for your actions
 - Document your API endpoints automatically
 
-Setting Up Claude Code for Astro
+## Setting Up Claude Code for Astro
 
 Before diving into workflows, ensure you have Claude Code installed and configured for your Astro project. The setup process is straightforward and takes only a few minutes.
 
-Installation and Configuration
+## Installation and Configuration
 
 First, install the Astro CLI adapter if you haven't already:
 
@@ -60,11 +59,11 @@ Next, configure Claude Code to recognize your Astro project structure. Create a 
 
 Claude Code will now understand your Astro project's structure and provide context-aware suggestions when working with Actions.
 
-Creating Actions with Claude Code
+## Creating Actions with Claude Code
 
 One of the most powerful use cases is generating Astro Actions from natural language descriptions. Instead of manually creating action files, you can describe what you need and let Claude Code do the heavy lifting.
 
-User Authentication Actions
+## User Authentication Actions
 
 Suppose you need to create user authentication actions. Instead of writing everything from scratch, you can ask Claude Code to generate the complete implementation:
 
@@ -100,11 +99,11 @@ export const loginUser = defineAction({
 
 Claude Code can generate this entire file from a simple description like "Create user registration and login actions with email and password validation."
 
-Automating Workflows
+## Automating Workflows
 
 Beyond code generation, Claude Code excels at automating complex workflows involving Astro Actions. Here are practical examples of how to streamline your development process.
 
-Workflow 1: CRUD Operation Generator
+## Workflow 1: CRUD Operation Generator
 
 When building content management systems, you often need Create, Read, Update, and Delete operations for each entity. Instead of writing these manually, use Claude Code to generate them:
 
@@ -161,7 +160,7 @@ export const deletePost = defineAction({
 });
 ```
 
-Workflow 2: Testing Automation
+## Workflow 2: Testing Automation
 
 Claude Code can generate comprehensive test suites for your Astro Actions. This ensures your backend logic works correctly before integrating with your frontend:
 
@@ -192,7 +191,7 @@ describe('Blog Actions', () => {
 });
 ```
 
-Best Practices and Actionable Advice
+## Best Practices and Actionable Advice
 
 To get the most out of Claude Code with Astro Actions, follow these proven strategies.
 
@@ -266,7 +265,7 @@ export const fetchData = defineAction({
 });
 ```
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Astro Actions transforms your development workflow from manual coding to intelligent automation. By using AI-assisted code generation, testing, and documentation, you can build solid backend functionality faster while maintaining high code quality.
 

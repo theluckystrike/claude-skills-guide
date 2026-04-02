@@ -16,7 +16,7 @@ permalink: /claude-code-skill-output-streaming-optimization/
 
 [Claude Code streams its responses token by token by default](/best-claude-code-skills-to-install-first-2026/) When working with skills like `/pdf`, `/tdd`, or `/frontend-design`, the output appears progressively in your terminal as Claude generates it. This guide covers how to work effectively with streaming output and optimize your skill workflows for faster perceived response times.
 
-How Streaming Works in Claude Code
+## How Streaming Works in Claude Code
 
 Claude Code connects to the Claude API using streaming mode. As the model generates tokens, they appear in your terminal immediately rather than waiting for the full response. This is handled automatically. you do not need to configure streaming or modify skill files to enable it.
 
@@ -24,7 +24,7 @@ Claude Code connects to the Claude API using streaming mode. As the model genera
 
 What you can control is the shape of work Claude is asked to do. Long monolithic tasks produce long monolithic streams. Decomposed tasks produce fast, incremental output that gives you something useful within seconds rather than minutes.
 
-Structuring Skill Invocations for Faster Results
+## Structuring Skill Invocations for Faster Results
 
 The main lever you control is how you phrase your skill requests. Well-structured prompts get to useful output faster.
 
@@ -58,7 +58,7 @@ Do not generate tests for other modules.
 
 Scoped requests complete and stream faster than broad requests covering an entire codebase.
 
-Writing Skill Files That Encourage Fast Output
+## Writing Skill Files That Encourage Fast Output
 
 The instructions inside your skill files directly shape how Claude structures its responses. A poorly written skill file causes Claude to front-load reasoning, produce lengthy preambles, or defer actual output until the very end of generation. all of which hurt perceived streaming speed.
 
@@ -94,7 +94,7 @@ Produce the requested content directly.
 
 This cuts 100-200 tokens of preamble per invocation. tokens that appear slowly at the start of the stream when you most want to see useful content.
 
-Using /supermemory to Reduce Repeated Work
+## Using /supermemory to Reduce Repeated Work
 
 Repeated context-setting at the start of each session adds latency before useful output begins. Use `/supermemory` to store project context once:
 
@@ -118,7 +118,7 @@ You can also cache expensive intermediate results. After `/pdf` processes a leng
 
 Next session, `/tdd` can use this cached summary rather than reprocessing the original document.
 
-Handling Large Output from /pdf and /docx
+## Handling Large Output from /pdf and /docx
 
 For large documents, the `/pdf` skill generates substantial output that can feel slow. Break the work into sections to get usable output faster:
 
@@ -144,7 +144,7 @@ Extract all monetary figures from this contract. Output as a simple list:
 Start extracting immediately. Do not preface with analysis.
 ```
 
-Running Multiple Skills in Sequence
+## Running Multiple Skills in Sequence
 
 When your workflow requires multiple skills, ordering them efficiently reduces total wait time. Start with lightweight retrieval before heavy generation:
 
@@ -171,7 +171,7 @@ Write unit tests for src/payments/ module.
 
 Both streams run in parallel. Total wall-clock time is cut roughly in half for independent tasks.
 
-Managing Terminal Output for Long Streams
+## Managing Terminal Output for Long Streams
 
 When a skill produces thousands of lines of output, the terminal becomes hard to work with. A few practical habits help.
 
@@ -198,7 +198,7 @@ Then stop.
 
 Without a clear stopping signal, Claude may continue generating wrapper code or commentary after the core output is done. The explicit termination marker tells you immediately when the useful work is finished.
 
-Diagnosing Slow Streams
+## Diagnosing Slow Streams
 
 If skill output feels slow, the cause is almost always one of three things:
 
@@ -214,7 +214,7 @@ The conversation context is too large. Every token in conversation history is pr
 
 The skill file itself is too long. Skill files with extensive preamble, multiple decision trees, and complex conditional instructions increase the instruction-processing overhead. Keep skill files focused. If a skill is doing too many things, split it into two skills with narrower scopes.
 
-Practical Tips
+## Practical Tips
 
 - Keep sessions short: Long sessions accumulate conversation context, increasing processing time for each subsequent response.
 - Restart for heavy operations: A fresh session before a large `/pdf` or `/tdd` invocation avoids overhead from prior history.

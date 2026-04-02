@@ -16,7 +16,7 @@ GitHub Actions matrix builds are one of the most powerful features for modern CI
 
 If you've been manually creating duplicate workflows or manually testing across environments, you're missing out on efficiency gains that can save hours of development time. This guide shows you how to use Claude Code to generate, understand, and optimize GitHub Actions matrix builds.
 
-What Are Matrix Builds and Why They Matter
+## What Are Matrix Builds and Why They Matter
 
 A matrix build is a GitHub Actions feature that runs your workflow across multiple configurations simultaneously. The key benefit is parallelization: instead of testing Node 16, then Node 18, then Node 20 sequentially, you test all three at the same time.
 
@@ -30,7 +30,7 @@ Matrix builds solve three problems:
 
 Without matrix builds, you might have separate workflow files for `.github/workflows/test-node-16.yml`, `.github/workflows/test-node-18.yml`, and `.github/workflows/test-node-20.yml`. With matrix builds, one file handles all three.
 
-Basic Matrix Configuration
+## Basic Matrix Configuration
 
 The simplest matrix build defines a `strategy.matrix` in your workflow YAML. Here's a foundational example that Claude Code can help you generate:
 
@@ -59,7 +59,7 @@ This simple configuration creates three parallel jobs, each running with a diffe
 
 When you use Claude Code with a prompt like "Create a GitHub Actions matrix build that tests Node versions 16, 18, and 20," Claude generates exactly this structure. The model understands the YAML syntax, the GitHub Actions context variables, and the correct indentation, saving you from syntax errors and manual typing.
 
-Multi-OS and Multi-Version Matrices
+## Multi-OS and Multi-Version Matrices
 
 Real-world projects often need to test across operating systems and multiple versions simultaneously. This is where matrix builds shine. Here's a multi-dimensional matrix:
 
@@ -89,7 +89,7 @@ This configuration creates 9 parallel jobs: 3 operating systems × 3 Node versio
 
 The `runs-on` field uses the matrix variable `${{ matrix.os }}` to dynamically select the runner. Claude Code is particularly helpful here because it knows which runner names GitHub Actions supports and can instantly format them correctly.
 
-Optimizing with Fail-Fast and Max-Parallel
+## Optimizing with Fail-Fast and Max-Parallel
 
 By default, GitHub Actions runs all matrix jobs in parallel (up to your account limits). You can optimize this behavior using `fail-fast` and `max-parallel`:
 
@@ -123,7 +123,7 @@ The `max-parallel: 4` setting limits concurrent jobs to 4, which can help if you
 
 Claude Code can suggest these optimizations based on your project's CI/CD constraints. Simply ask "optimize my GitHub Actions matrix to use at most 4 parallel jobs" and Claude will add the appropriate settings.
 
-Dynamic Matrices
+## Dynamic Matrices
 
 For advanced scenarios, you might need to generate matrix values dynamically, for example, testing against all minor versions of a package or running different steps based on OS:
 
@@ -165,7 +165,7 @@ The `include` key lets you define specific combinations that should be tested. T
 
 Claude Code excels at generating these complex configurations. Tell it "only test Node 16 on macOS, but test all three versions on Ubuntu" and Claude will structure the matrix correctly with appropriate conditionals.
 
-How Claude Code Generates Matrix Builds
+## How Claude Code Generates Matrix Builds
 
 Claude Code reduces friction when creating and modifying matrix builds through several mechanisms:
 

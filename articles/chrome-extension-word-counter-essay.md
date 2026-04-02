@@ -18,7 +18,7 @@ Chrome Extension Word Counter for Essay Writing: A Developer Guide
 
 When you need to track word count while writing essays, blog posts, or any lengthy document, a well-built Chrome extension becomes an indispensable tool. This guide shows you how to create a word counter extension tailored for essay writing, with real-time counting, character tracking, and reading time estimates.
 
-Why Build a Custom Word Counter Extension
+## Why Build a Custom Word Counter Extension
 
 Most writing platforms include basic word counting, but they often fall short for essay writers who need additional metrics. A custom extension gives you control over:
 
@@ -29,7 +29,7 @@ Most writing platforms include basic word counting, but they often fall short fo
 
 The Chrome extension API provides everything you need to monitor user input across different input types.
 
-Project Structure
+## Project Structure
 
 A Chrome extension requires a specific directory structure. For a word counter, you'll need:
 
@@ -48,7 +48,7 @@ word-counter-extension/
 
 The manifest defines your extension's capabilities and permissions. For a word counter targeting essay writing sites, you'll need permissions to access the active tab and inject content scripts.
 
-Creating the Manifest
+## Creating the Manifest
 
 Your extension's manifest.json defines its behavior and permissions:
 
@@ -77,7 +77,7 @@ Your extension's manifest.json defines its behavior and permissions:
 
 The content_scripts section injects your counting logic into every page, enabling word counting on any writing platform.
 
-Content Script: Counting Words in Real Time
+## Content Script: Counting Words in Real Time
 
 The content script runs in the context of the page and monitors user input. Here's a solid implementation:
 
@@ -196,7 +196,7 @@ new WordCounter();
 
 This implementation handles multiple input types, dynamically added elements, and provides comprehensive statistics.
 
-The Popup Interface
+## The Popup Interface
 
 The popup displays your word count when clicking the extension icon:
 
@@ -275,7 +275,7 @@ The popup displays your word count when clicking the extension icon:
 
 The popup receives updates from the content script via Chrome's messaging system.
 
-Handling Reading Time Calculations
+## Handling Reading Time Calculations
 
 For essay writing, accurate reading time matters. Different formulas apply:
 
@@ -286,7 +286,7 @@ For essay writing, accurate reading time matters. Different formulas apply:
 
 You can make this configurable in your extension, allowing users to choose their preferred baseline.
 
-Advanced Features to Consider
+## Advanced Features to Consider
 
 Once the basics work, consider adding these features:
 
@@ -298,7 +298,7 @@ Export functionality: Allow users to export their writing statistics as JSON or 
 
 Platform-specific handling: Different platforms like Google Docs, Medium, and WordPress have unique DOM structures. Add specific selectors for popular writing platforms.
 
-Testing Your Extension
+## Testing Your Extension
 
 Before publishing, test thoroughly across different scenarios:
 
@@ -308,12 +308,11 @@ Before publishing, test thoroughly across different scenarios:
 4. Check that dynamically added editors get tracked
 5. Test with various text formats including markdown
 
-Conclusion
+## Conclusion
 
 Building a word counter Chrome extension for essay writing combines straightforward DOM manipulation with Chrome's extension APIs. The key is handling diverse input types gracefully and providing the statistics that matter to writers, word count, character count, and reading time.
 
 With this foundation, you can expand into more sophisticated features like grammar checking, style analysis, or integration with writing goals. The extension architecture gives you flexibility to add whatever features serve your target users best.
-
 
 Related Reading
 

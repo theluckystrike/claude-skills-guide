@@ -24,7 +24,7 @@ When a user visits websites, Chrome periodically calculates topic assignments ba
 
 The Topics API sits within Google's broader Privacy Sandbox initiative, which aims to deprecate third-party cookies and replace them with purpose-built APIs that limit data exposure while still supporting advertising use cases. Unlike previous proposals like FLoC (Federated Learning of Cohorts), which grouped users into cohorts that could theoretically be used for fingerprinting, Topics assigns individuals to coarse interest categories from a fixed, public taxonomy. This design choice makes it significantly harder to build persistent cross-site identifiers.
 
-How the Topics API Works
+## How the Topics API Works
 
 The API operates on a simple three-step model that balances personalization with privacy:
 
@@ -34,7 +34,7 @@ The API operates on a simple three-step model that balances personalization with
 
 3. Topic Filtering: Users can view and remove topics in Chrome settings. The browser never shares topics from sensitive categories like health, politics, or ethnicity. Users can also disable the API entirely.
 
-The Taxonomy in Depth
+## The Taxonomy in Depth
 
 The Topics API taxonomy currently covers around 350 categories organized into a hierarchical structure. Top-level categories include Arts and Entertainment, Autos and Vehicles, Beauty and Fitness, Books and Literature, Business and Industrial, and many more. Within each top-level category sit subcategories: under Technology you might find categories like Mobile Phones, Software, or Computer Security.
 
@@ -46,7 +46,7 @@ Sec-Browsing-Topics: (103)
 
 The number `103` corresponds to a topic ID from the public taxonomy. Publishers who know their content aligns with a specific interest can declare it directly, improving classification accuracy for their domain.
 
-Implementing the Topics API
+## Implementing the Topics API
 
 To access topic data, add the Permissions-Policy header and use the JavaScript API:
 
@@ -86,7 +86,7 @@ On the server side, include the Topics API in your Permissions-Policy header:
 Permissions-Policy: browsing-topics=(self)
 ```
 
-Fetch Header Integration
+## Fetch Header Integration
 
 A second method for accessing topics uses the `browsingTopics: true` option in the Fetch API. When you make a fetch request with this option, Chrome attaches the user's topics as a `Sec-Browsing-Topics` request header, which your server can read directly:
 
@@ -128,7 +128,7 @@ When implementing Topics in a third-party ad iframe, the parent page must explic
 
 Without the `allow` attribute, the iframe context will not have access to topics even if the Permissions-Policy header is set. This is a common source of confusion when migrating from cookie-based ad integrations.
 
-Privacy Protections Built Into the API
+## Privacy Protections Built Into the API
 
 The Topics API includes several mechanisms that make privacy a core feature rather than an afterthought:
 
@@ -144,7 +144,7 @@ Frequency Limits: Topics are recalculated weekly and only the top five are share
 
 Noise Injection: The API intentionally introduces a small amount of randomness by occasionally returning a random topic instead of a real one. This provides plausible deniability for users and makes it harder for sites to build profiles through repeated queries. Approximately 5% of topic responses are random.
 
-Comparing Topics API to Third-Party Cookies
+## Comparing Topics API to Third-Party Cookies
 
 | Feature | Third-Party Cookies | Topics API |
 |---|---|---|
@@ -158,7 +158,7 @@ Comparing Topics API to Third-Party Cookies
 
 The comparison makes clear that Topics represents a meaningful privacy improvement, though it comes with the trade-off of reduced targeting precision and limited browser support.
 
-Practical Use Cases for Developers
+## Practical Use Cases for Developers
 
 The Topics API opens several possibilities for web developers and advertisers:
 
@@ -192,7 +192,7 @@ async function selectRelevantAd(ads) {
 }
 ```
 
-Real-World Scenario: Publisher Ad Stack Migration
+## Real-World Scenario: Publisher Ad Stack Migration
 
 Consider a news publisher that currently relies on a third-party data management platform (DMP) passing segment IDs via cookies. To migrate toward Topics:
 
@@ -242,7 +242,7 @@ async function buildAudienceSignal() {
 
 This pattern lets you ship the migration incrementally rather than as a hard cutover.
 
-Browser Support and Considerations
+## Browser Support and Considerations
 
 The Topics API is available in Chrome and Chromium-based browsers starting around version 110. Other browsers have not adopted the API, so implement feature detection and provide fallback experiences:
 
@@ -260,7 +260,7 @@ if (!isTopicsAPIAvailable()) {
 
 Remember that the Privacy Sandbox is an evolving specification. The API surface, topic taxonomy, and behavior may change as the feature matures. Test thoroughly and monitor Google's developer documentation for updates.
 
-Testing in Development
+## Testing in Development
 
 Manually testing the Topics API in development is non-trivial because it requires actual browsing history to generate meaningful topics. Chrome provides an override mechanism for testing:
 
@@ -280,7 +280,7 @@ google-chrome \
 
 For CI environments, you can use the `chrome://flags/#privacy-sandbox-enrollment-overrides` flag to whitelist test domains without going through the enrollment process.
 
-The Enrollment Requirement
+## The Enrollment Requirement
 
 As of late 2023, accessing the Topics API (along with other Privacy Sandbox APIs) requires enrolling your origin with Google's Privacy Sandbox enrollment service. This is a one-time process that verifies your use case and grants access:
 
@@ -290,7 +290,7 @@ As of late 2023, accessing the Topics API (along with other Privacy Sandbox APIs
 
 Development and testing environments can bypass this requirement using the override flags mentioned above.
 
-Topics API vs. Other Privacy Sandbox APIs
+## Topics API vs. Other Privacy Sandbox APIs
 
 The Topics API is not the only tool in the Privacy Sandbox. Understanding where it fits relative to other APIs helps you choose the right one for your use case:
 
@@ -304,7 +304,7 @@ The Topics API is not the only tool in the Privacy Sandbox. Understanding where 
 
 A mature advertising stack in the post-cookie web will likely use all of these APIs in combination. Topics handles the prospecting use case. reaching new users with relevant interests. while Protected Audience handles remarketing to users who have already visited your site or landing page.
 
-The Future of Privacy-First Advertising
+## The Future of Privacy-First Advertising
 
 The Topics API represents a shift toward advertising models that respect user privacy while still enabling relevant content delivery. For developers, this means learning new APIs and thinking differently about how personalization works. The days of opaque tracking scripts and persistent third-party cookies are fading, replaced by browser-level controls that give users the final say.
 
@@ -319,7 +319,6 @@ Programmatic integration: Major SSPs and DSPs are building Topics support into t
 Regulatory landscape: European regulators have raised questions about whether Topics constitutes personal data processing under GDPR. The outcome of these deliberations will determine whether the API can be used without explicit consent in EU markets.
 
 Building with the Topics API today positions your projects for a web where privacy is a feature, not a compromise. The API provides enough signal for effective advertising while keeping user data where it belongs: on the user's device, under the user's control.
-
 
 Related Reading
 

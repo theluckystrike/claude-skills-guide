@@ -18,19 +18,19 @@ Why Is Claude Code Changing Files I Did Not Mention?
 
 You've asked Claude Code to modify one specific file, but you notice other files have been changed. Maybe a configuration file was updated, tests were modified, or a related module was altered. This behavior can be surprising, but it usually has understandable reasons.  why Claude Code sometimes changes files you didn't explicitly mention.
 
-Understanding Claude Code's File Awareness
+## Understanding Claude Code's File Awareness
 
 Claude Code has access to your entire project directory by default. When you ask it to make changes, it doesn't just see the single file you mentioned, it sees the broader context of your codebase. This contextual awareness is both a feature and sometimes a source of confusion.
 
 The model reasons about your project as a system of interconnected parts. When you request a change, Claude Code often identifies related files that would need corresponding updates to maintain consistency. This behavior stems from the model's training on real-world codebases where changes in one file typically require changes in others.
 
-Skill Auto-Invocation: A Common Cause
+## Skill Auto-Invocation: A Common Cause
 
 One of the most frequent reasons for unexpected file changes is skill auto-invocation. When you load Claude Skills into your project, these skills can automatically trigger based on patterns they detect in your code or instructions.
 
 For example, a code quality skill might automatically run and suggest improvements whenever it detects certain code patterns. A testing skill might automatically generate or update test files when it sees new functions being created. These auto-invocations happen even when you didn't explicitly ask for them.
 
-Practical Example: Auto-Formatting Skills
+## Practical Example: Auto-Formatting Skills
 
 Imagine you have a Prettier or ESLint skill installed. When you ask Claude Code to modify a JavaScript file:
 
@@ -46,11 +46,11 @@ The skill might auto-invoke because it detects code changes, then:
 
 None of these were explicitly requested, but the skill decided they were necessary.
 
-How to Control Skill Auto-Invocation
+## How to Control Skill Auto-Invocation
 
 You can manage which skills can auto-invoke and when:
 
-Method 1: Disable Auto-Invocation in Skill Configuration
+## Method 1: Disable Auto-Invocation in Skill Configuration
 
 Check your skill's configuration file for auto-invocation settings:
 
@@ -60,7 +60,7 @@ name: my-code-quality-skill
 description: "Code quality skill"
 ```
 
-Method 2: Use Explicit Instructions
+## Method 2: Use Explicit Instructions
 
 Be explicit about what you want and don't want:
 
@@ -68,7 +68,7 @@ Be explicit about what you want and don't want:
 "Add a new function to handle user authentication. Do not run any auto-formatting or update any other files."
 ```
 
-Method 3: Review Active Skills
+## Method 3: Review Active Skills
 
 Before starting work, check which skills are loaded:
 
@@ -78,11 +78,11 @@ Before starting work, check which skills are loaded:
 
 This shows all active skills that might be affecting file changes.
 
-Implicit Context and Related Files
+## Implicit Context and Related Files
 
 Claude Code understands that software projects are interconnected. When you modify a core module, it often assumes you want related files updated for consistency.
 
-Common Scenarios
+## Common Scenarios
 
 Import Statements: When you rename a function or move code, Claude Code often updates import statements across multiple files.
 
@@ -92,7 +92,7 @@ Configuration Files: Adding a new dependency often triggers package.json updates
 
 Tests: Modifying source code sometimes requires corresponding test updates to maintain test coverage.
 
-Practical Example: Database Schema Changes
+## Practical Example: Database Schema Changes
 
 ```
 User: "Add a new column to the users table"
@@ -109,11 +109,11 @@ Claude Code might update:
 
 All these changes support the single requested modification.
 
-How to Limit File Modifications
+## How to Limit File Modifications
 
 If you want Claude Code to modify only specific files, use these strategies:
 
-Strategy 1: Explicit File Lists
+## Strategy 1: Explicit File Lists
 
 Clearly specify exactly which files to modify:
 
@@ -121,11 +121,11 @@ Clearly specify exactly which files to modify:
 "Only modify src/auth/login.js and do not touch any other files."
 ```
 
-Strategy 2: Use File Restrictions
+## Strategy 2: Use File Restrictions
 
 Some Claude Code configurations allow file-level restrictions. Check your CLAUDE.md or project configuration for allowed directories.
 
-Strategy 3: Disable Related Skills Temporarily
+## Strategy 3: Disable Related Skills Temporarily
 
 If certain skills are causing unwanted changes:
 
@@ -135,7 +135,7 @@ If certain skills are causing unwanted changes:
 
 Then make your changes, then reload if needed.
 
-Strategy 4: Review Before Applying
+## Strategy 4: Review Before Applying
 
 Always review proposed changes before accepting them:
 
@@ -145,7 +145,7 @@ Claude: "I need to make changes to the following files: [list]. Should I proceed
 
 This gives you a chance to approve or reject modifications.
 
-Understanding the "Edit File" Tool Behavior
+## Understanding the "Edit File" Tool Behavior
 
 The Edit tool in Claude Code has built-in awareness of file relationships. When you use the edit tool, it's designed to make coherent changes, which often means updating multiple locations.
 
@@ -158,7 +158,7 @@ The model might:
 
 This behavior is intentional, it helps maintain code consistency but can surprise users who expected a single-file change.
 
-Best Practices for Predictable Results
+## Best Practices for Predictable Results
 
 1. Start with Clear Scope
 
@@ -195,7 +195,7 @@ Always work within git so you can easily revert unintended changes:
 git checkout -- unwanted-file.js
 ```
 
-When Unexpected Changes Are Actually Helpful
+## When Unexpected Changes Are Actually Helpful
 
 Sometimes Claude Code changing unmentioned files is beneficial:
 
@@ -206,7 +206,7 @@ Sometimes Claude Code changing unmentioned files is beneficial:
 
 The key is understanding when this behavior helps versus when it interferes with your workflow.
 
-Conclusion
+## Conclusion
 
 Claude Code changing files you didn't mention usually happens for good reasons, skill auto-invocation, project context awareness, or maintaining code consistency. While sometimes surprising, this behavior generally aims to produce working, coherent code.
 
@@ -214,7 +214,6 @@ The solution isn't necessarily to prevent all automatic changes, but to understa
 
 With practice, you'll learn to work with Claude Code's file awareness rather than against it, getting the benefits of automated consistency while maintaining control over your project's evolution.
 {% endraw %}
-
 
 Related Reading
 

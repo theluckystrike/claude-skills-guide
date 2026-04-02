@@ -14,12 +14,11 @@ score: 7
 ---
 {% raw %}
 
-
-Git LFS with Claude Code: Managing Large Files Effectively
+## Git LFS with Claude Code: Managing Large Files Effectively
 
 Working with large binary files in Git repositories can quickly become a nightmare without proper tooling. Git LFS (Large File Storage) provides an elegant solution, and when combined with Claude Code, creates a powerful workflow for managing assets, documentation, and data files in your projects.
 
-Understanding the Git LFS Problem
+## Understanding the Git LFS Problem
 
 Standard Git repositories store every version of every file. When you commit a 50MB asset file, Git keeps that entire file in your repository history. Over time, this balloons your repository size, slows down clones, and eats up bandwidth. Git LFS solves this by storing large files externally while maintaining Git-like workflow semantics.
 
@@ -37,7 +36,7 @@ Common scenarios where developers encounter large files include:
 
 Here is a concrete illustration of the cost. Say your team commits a single 30MB compressed model file ten times a day for a month. Without LFS, your repository has absorbed roughly 9GB of binary data that must be cloned by every new contributor. With LFS, the repository holds only a text pointer file for each version, typically under 200 bytes, while the actual content lives in LFS object storage and is fetched on demand.
 
-Git LFS vs. Alternatives
+## Git LFS vs. Alternatives
 
 Before adopting LFS, it helps to understand how it compares to other strategies for handling large files.
 
@@ -51,7 +50,7 @@ Before adopting LFS, it helps to understand how it compares to other strategies 
 
 Git LFS wins for most teams because it preserves the familiar Git workflow. You still use `git add`, `git commit`, and `git push`. LFS intercepts the large files transparently through Git's smudge and clean filter hooks.
 
-Setting Up Git LFS in Your Project
+## Setting Up Git LFS in Your Project
 
 Before integrating with Claude Code, you need LFS properly configured in your repository. Install Git LFS first, then initialize it in your project:
 
@@ -87,7 +86,7 @@ The `-text` flag is important. It tells Git not to perform line-ending normaliza
 
 Now when you add and commit these files, Git LFS automatically handles them differently, storing pointers in your repository while keeping the actual content in LFS storage.
 
-Verifying Your LFS Setup
+## Verifying Your LFS Setup
 
 After configuration, verify that LFS is intercepting files correctly:
 
@@ -112,7 +111,7 @@ size 12345678
 
 If you see the actual binary content instead of this pointer format, LFS is not intercepting the file correctly. Double-check your `.gitattributes` and run `git lfs install` again.
 
-Setting Size-Based Tracking
+## Setting Size-Based Tracking
 
 Rather than tracking by extension, you can set up a pre-commit hook that warns when files exceed a size threshold:
 
@@ -139,13 +138,13 @@ exit 0
 
 Make the hook executable with `chmod +x .git/hooks/pre-commit`. This will warn you before a large file slips into a commit without LFS tracking.
 
-Integrating Git LFS with Claude Code Workflows
+## Integrating Git LFS with Claude Code Workflows
 
 Claude Code works smoothly with Git LFS once properly configured. The key is ensuring your LFS hooks are in place before you start development. When Claude Code runs git commands, it will automatically interact with LFS-tracked files correctly.
 
 For projects using the supermemory skill for persistent context, you can maintain LFS tracking patterns in your project notes. Similarly, when using the tdd skill for test-driven development, ensure your test fixtures don't inadvertently bypass LFS handling.
 
-Creating a CLAUDE.md with LFS Instructions
+## Creating a CLAUDE.md with LFS Instructions
 
 A practical approach involves creating a Claude.md file in your project root:
 
@@ -175,7 +174,7 @@ Run `git lfs status` to see pending LFS changes.
 
 This guides Claude Code to handle large files appropriately during development sessions. When you ask Claude Code to commit changes, it will read the CLAUDE.md context and know to check LFS status before committing.
 
-Practical Session Example
+## Practical Session Example
 
 Here is how a typical session with Claude Code and LFS looks in practice:
 
@@ -196,7 +195,7 @@ The file type .h5 is already tracked by LFS. I'll stage and commit it.
 
 Claude Code automatically runs the verification steps because they are documented in CLAUDE.md. Without that context, it might attempt a plain `git add` and `git commit` without confirming LFS handling.
 
-LFS in CI/CD Pipelines
+## LFS in CI/CD Pipelines
 
 When Claude Code helps you set up CI/CD workflows, LFS requires specific handling. Here is a GitHub Actions example:
 
@@ -231,11 +230,11 @@ jobs:
 
 The `lfs: true` flag on the checkout action automatically runs `git lfs pull` after cloning. The caching step avoids re-downloading LFS content on every run, which saves both time and bandwidth.
 
-Handling Common Git LFS Pitfalls
+## Handling Common Git LFS Pitfalls
 
 Even with proper setup, developers encounter issues. Here are solutions for the most common problems.
 
-Forgotten LFS Tracking
+## Forgotten LFS Tracking
 
 If you've already committed large files without LFS, you need to migrate them. The process involves converting existing large files to LFS pointers:
 
@@ -260,7 +259,7 @@ git pull
 git lfs pull
 ```
 
-Diagnosing Files That Should Be in LFS
+## Diagnosing Files That Should Be in LFS
 
 To find large files already in your repository that are not LFS-tracked:
 
@@ -276,7 +275,7 @@ git rev-list --objects --all |
 
 This command reveals which files are bloating your repository. Any file over a few megabytes that appears in this list is a candidate for LFS migration.
 
-Storage Limits and Costs
+## Storage Limits and Costs
 
 Git LFS provides generous free tiers, but large teams may hit limits. Monitor your usage with:
 
@@ -299,7 +298,7 @@ Here is a comparison of LFS storage options across major Git hosting providers:
 
 For teams exceeding free tiers, self-hosted LFS servers using tools like `lfs-test-server` or third-party solutions like Nexus Repository or Artifactory can provide more economical large-scale storage.
 
-Clone and Fetch Performance
+## Clone and Fetch Performance
 
 When cloning repositories with LFS files, use `--filter` to control what downloads:
 
@@ -323,7 +322,7 @@ Prune locally cached LFS files not referenced by recent commits
 git lfs prune
 ```
 
-LFS Locking for Binary Files
+## LFS Locking for Binary Files
 
 One limitation of Git LFS is that binary files cannot be merged. If two developers edit the same PSD or model file simultaneously, you end up with a conflict that has no good resolution. Git LFS provides a file locking mechanism to prevent this:
 
@@ -347,7 +346,7 @@ File locking requires your Git server to support it (GitHub and GitLab do). Add 
 
 With `lockable` set, Git will make the files read-only locally until you explicitly lock them, giving you a hard reminder to acquire a lock before editing.
 
-Best Practices for Claude Code Projects
+## Best Practices for Claude Code Projects
 
 When combining Claude Code with Git LFS, consider these workflow optimizations.
 
@@ -370,7 +369,7 @@ Keep .gitattributes in Sync: When onboarding contributors, the first thing they 
 
 Audit LFS Usage Regularly: Schedule periodic audits of your LFS storage. Use `git lfs ls-files --size` to see how much space each tracked file is consuming. Files that are no longer needed but remain in history can be pruned with `git lfs prune` after removing references in your branch history.
 
-Advanced LFS Configuration
+## Advanced LFS Configuration
 
 For teams with specific requirements, Git LFS offers advanced configuration options.
 
@@ -426,7 +425,7 @@ git lfs pull --include="src/"
 
 This approach is particularly useful on large monorepos where most contributors only work in a fraction of the codebase.
 
-Configuring LFS for Different Environments
+## Configuring LFS for Different Environments
 
 Development, staging, and production environments often have different needs for LFS content. Here is a pattern for handling this:
 
@@ -449,7 +448,7 @@ Selectively fetch only what this job needs
 git lfs pull --include="models/production/*.onnx"
 ```
 
-Conclusion
+## Conclusion
 
 Git LFS combined with Claude Code creates a solid workflow for managing large files in development projects. By properly tracking binary assets, documenting requirements, and following best practices, you keep repository sizes manageable while maintaining full functionality.
 

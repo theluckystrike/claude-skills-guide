@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Using Claude Code as a Backend Engine for Dev Tools
 
@@ -33,7 +32,7 @@ Unlike traditional CLI tools that perform fixed operations, Claude Code brings A
 
 The last point is the most underrated. The `--print` flag turns Claude Code from an interactive REPL into a composable Unix-style tool. Any process that can invoke a subprocess and read stdout can drive Claude Code as a backend.
 
-Comparing Claude Code to Traditional Automation Approaches
+## Comparing Claude Code to Traditional Automation Approaches
 
 | Approach | Handles ambiguity | Needs rigid schema | Reusable logic | Learns from context |
 |---|---|---|---|---|
@@ -45,7 +44,7 @@ Comparing Claude Code to Traditional Automation Approaches
 
 The key column is "handles ambiguity." Code review, documentation generation, and bug triage all involve judgment calls that rule-based tools handle poorly. Claude Code fills that gap without requiring you to build a full LLM integration from scratch.
 
-Building a Code Review Tool with Claude Code Skills
+## Building a Code Review Tool with Claude Code Skills
 
 One practical application is creating a dedicated code review skill. Here's how to structure it:
 
@@ -102,7 +101,7 @@ exit 0
 
 Make it executable with `chmod +x .git/hooks/pre-commit`. Now every commit automatically runs through your skill before it goes through. This pattern requires no external service, no API key management in CI, and runs in under 10 seconds for typical diffs.
 
-Automating Documentation Generation
+## Automating Documentation Generation
 
 Claude Code can serve as the engine for automatic documentation tools. Here's a practical example that scans your codebase and generates API documentation:
 
@@ -145,7 +144,7 @@ if __name__ == "__main__":
     generate_docs("./src", "./docs/README.md")
 ```
 
-Getting Structured JSON Output
+## Getting Structured JSON Output
 
 One challenge with LLM backends is parsing free-form text responses. The solution is to ask explicitly for JSON and then validate the output before processing it:
 
@@ -192,7 +191,7 @@ File: {filepath}
 
 This pattern is reliable for files under a few hundred lines. For larger files, split them into logical sections and aggregate the results.
 
-Creating a Database Query Assistant
+## Creating a Database Query Assistant
 
 Using MCP, you can connect Claude Code to databases and create a natural language query interface:
 
@@ -244,7 +243,7 @@ To register this MCP server with Claude Code, add it to your `~/.claude/settings
 
 The server starts automatically when Claude Code launches, and the `query_database` tool becomes available in any session. This is significantly cleaner than building a separate query interface, you get natural language understanding for free, and the only code you need to maintain is the thin MCP wrapper around your existing database connection.
 
-Building a CI/CD Pipeline Assistant
+## Building a CI/CD Pipeline Assistant
 
 Claude Code can integrate with your CI/CD workflows to provide intelligent pipeline management:
 
@@ -275,7 +274,7 @@ jobs:
 
 In this pattern, Claude Code runs as a stateless analysis step in your pipeline. It reads the diff, applies judgment, and emits structured output that downstream steps can act on, failing the build, posting a PR comment, or tagging the PR with labels.
 
-Best Practices for Claude Code Backend Integration
+## Best Practices for Claude Code Backend Integration
 
 When building tools on top of Claude Code, follow these best practices:
 
@@ -313,7 +312,7 @@ Start with simple tasks and gradually add complexity. Claude Code's behavior can
 6. Pin Your Model Version
 When building production tooling, specify the model version explicitly with `--model` to prevent behavior changes when the default model updates. A tool that works perfectly today may behave differently after a model upgrade.
 
-Advanced: Creating Multi-Tool Workflows
+## Advanced: Creating Multi-Tool Workflows
 
 For complex dev tools, you can chain multiple skills together. The most solid approach uses a shell script as an orchestrator:
 
@@ -353,7 +352,7 @@ echo "Analysis complete. Report at $REPORT_DIR/FINAL_REPORT.md"
 
 This approach passes outputs between steps using files rather than in-memory variables, which makes debugging easier, you can inspect the intermediate JSON files if the final report looks wrong. Each Claude Code invocation is independent, keeping memory usage predictable.
 
-When Not to Use Claude Code as a Backend
+## When Not to Use Claude Code as a Backend
 
 Claude Code is not always the right tool. Some situations where a different approach is better:
 
@@ -363,7 +362,7 @@ Claude Code is not always the right tool. Some situations where a different appr
 
 Use Claude Code as a backend for batch jobs, async workflows, and tasks where judgment and context-awareness matter more than raw speed.
 
-Conclusion
+## Conclusion
 
 Claude Code's combination of AI reasoning, tool execution, and extensibility makes it an excellent backend engine for development tools. Whether you're building code review assistants, documentation generators, or database query tools, Claude Code provides the flexibility and power needed to automate complex development workflows.
 

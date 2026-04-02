@@ -16,13 +16,13 @@ permalink: /claude-skills-for-unity-game-development-workflow/
 
 Game development in Unity involves repetitive tasks that drain productivity, manual builds, boilerplate script generation, documentation updates, and asset pipeline management. Claude skills transform these workflows into automated processes that run with a single command. This guide shows you how to build and apply Claude skills specifically designed for Unity game development.
 
-Why Claude Skills Fit Unity Development
+## Why Claude Skills Fit Unity Development
 
 Unity projects follow predictable patterns: scene setup, component creation, build configuration, and deployment. Claude skills excel here because they can execute bash commands, read and write files, and chain multiple operations together, all essential for interacting with Unity's command-line tools and file structure.
 
 A well-crafted Claude skill for Unity acts as your build engineer, documentation generator, and code scaffolding tool combined. You invoke it with `/skill-name`, and Claude executes the entire workflow without further prompts. Understanding [how to write a skill .md file for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) is the essential prerequisite before building any of the skills described here.
 
-Core Skills Every Unity Developer Needs
+## Core Skills Every Unity Developer Needs
 
 1. Build Automation Skill
 
@@ -100,7 +100,7 @@ The skill:
 - Identifies unused assets
 - Suggests folder structure improvements
 
-Practical Example: Complete Feature Workflow
+## Practical Example: Complete Feature Workflow
 
 When adding a new game feature, chain multiple skills together:
 
@@ -111,7 +111,7 @@ When adding a new game feature, chain multiple skills together:
 
 This workflow transforms a multi-hour task into a sequence of three commands. The `pdf` skill can export your documentation to PDF for team distribution.
 
-Advanced Integration: CI/CD Pipelines
+## Advanced Integration: CI/CD Pipelines
 
 Combine Claude skills with GitHub Actions for fully automated pipelines. The [Claude skills with GitHub Actions CI/CD guide](/claude-skills-with-github-actions-ci-cd-pipeline/) covers the general pattern in depth, and Unity projects follow the same conventions:
 
@@ -135,7 +135,7 @@ jobs:
 
 The skill integrates with the `mcp-builder` skill if you need custom MCP servers that connect to Unity's Cloud Build API or analytics platforms.
 
-Best Practices for Unity Skills
+## Best Practices for Unity Skills
 
 Keep skills focused. Each skill should handle one workflow, building, generating, or documenting. Chaining skills provides flexibility without complexity.
 
@@ -145,7 +145,7 @@ Handle platform differences. WebGL, Android, and iOS builds require different to
 
 Cache common operations. If your skill repeatedly scans the same directories, implement caching to reduce execution time on subsequent runs.
 
-Extending Your Workflow
+## Extending Your Workflow
 
 The Unity development ecosystem benefits from Claude's skill system in several additional ways. Developers building cross-platform games may also find [Claude Code's Dart/Flutter guide](/claude-code-dart-flutter-cross-platform-development-guide/) useful for mobile-targeting workflows that share similar asset pipeline concerns:
 
@@ -154,7 +154,7 @@ The Unity development ecosystem benefits from Claude's skill system in several a
 - Use `xlsx` for tracking sprint progress, bug counts, and build metrics
 - The `canvas-design` skill helps mock up game UI before implementing in Unity
 
-Conclusion
+## Conclusion
 
 Claude skills transform Unity development from manual repetitive work into automated workflows. Start with build automation and script generation, these provide immediate productivity gains. Add documentation and asset pipeline skills as your project matures. The key is identifying any workflow you perform more than twice and converting it to a skill.
 

@@ -18,7 +18,7 @@ Claude Code Pulumi Python Infrastructure Guide
 
 Infrastructure as Code has become essential for modern cloud deployments, and combining Claude Code with Pulumi Python creates a powerful automation workflow. This guide shows developers and power users how to use Claude Code's capabilities alongside Pulumi's infrastructure management to build, test, and deploy cloud resources efficiently. Whether you're provisioning a single S3 bucket or orchestrating dozens of interdependent services across multiple AWS accounts, the Claude Code and Pulumi combination accelerates every stage of the development cycle.
 
-Why Pulumi Python Over Other IaC Tools
+## Why Pulumi Python Over Other IaC Tools
 
 Before diving into Claude Code integration, it helps to understand why Pulumi Python stands out among infrastructure-as-code options.
 
@@ -31,7 +31,7 @@ Before diving into Claude Code integration, it helps to understand why Pulumi Py
 
 Pulumi's key advantage is using real programming languages. This means you get loops, conditionals, classes, imports, and proper unit testing. all things that HCL and YAML cannot offer. When Claude Code assists with your infrastructure, it works in the same Python context it already understands deeply, producing more accurate and idiomatic code.
 
-Setting Up Your Pulumi Python Project
+## Setting Up Your Pulumi Python Project
 
 Before integrating Claude Code, initialize a Pulumi Python project:
 
@@ -72,7 +72,7 @@ my-infra/
 
 Splitting resources into component modules keeps your `__main__.py` clean and makes it easier for Claude Code to work on individual sections without context overflow.
 
-How Claude Code Enhances Pulumi Workflows
+## How Claude Code Enhances Pulumi Workflows
 
 Claude Code brings intelligent assistance to infrastructure projects through natural language interaction. When working with Pulumi Python, you can use several capabilities that accelerate development.
 
@@ -103,11 +103,11 @@ Documentation Generation: Use the doc skill to automatically generate documentat
 
 Refactoring Legacy Stacks: If you have an existing Pulumi project that grew organically, Claude Code can help you refactor it into proper component resources without changing the underlying infrastructure. Describe what you want the final structure to look like, and Claude Code produces the refactored code while preserving resource logical names to avoid accidental replacements.
 
-Creating Reusable Infrastructure Components
+## Creating Reusable Infrastructure Components
 
 One of Pulumi's strengths is creating reusable components. Claude Code can help you design and implement component resources that encapsulate common infrastructure patterns.
 
-Web Server Component
+## Web Server Component
 
 Here's a reusable component that provisions a web server with security groups:
 
@@ -168,7 +168,7 @@ web_server = WebServer(
 )
 ```
 
-Extending Components with Outputs
+## Extending Components with Outputs
 
 A common pattern is exposing resource outputs so other stacks or resources can depend on them:
 
@@ -180,7 +180,7 @@ pulumi.export("security_group_id", web_server.security_group.id)
 
 Claude Code is particularly helpful here because it understands Pulumi's `Output[T]` type system and correctly applies `.apply()` when you need to transform values before passing them to other resources.
 
-Testing Infrastructure with the TDD Skill
+## Testing Infrastructure with the TDD Skill
 
 The tdd skill works well with infrastructure code to implement test-driven development patterns. Before deploying resources, write tests that verify expected behavior:
 
@@ -223,7 +223,7 @@ def test_bucket_has_encryption():
 
 This approach catches configuration errors before they reach production. When you ask Claude Code to add a new resource to your stack, ask it to write the test first. this surfaces edge cases in the resource configuration before any real infrastructure changes occur.
 
-Managing Multi-Environment Deployments
+## Managing Multi-Environment Deployments
 
 For teams managing multiple environments, Claude Code helps create consistent deployment patterns across staging, production, and development environments.
 
@@ -243,7 +243,7 @@ web_server = WebServer(
 )
 ```
 
-Environment-Specific Configuration
+## Environment-Specific Configuration
 
 Pulumi stack config files let you vary resource sizes and settings per environment without changing code:
 
@@ -275,7 +275,7 @@ enable_deletion_protection = config.get_bool("enable_deletion_protection") or Fa
 
 Claude Code can help you audit your stacks to ensure production-only guard rails (deletion protection, backup retention, encryption) are enforced through config rather than hardcoded. The supermemory skill can help track environment-specific configurations and maintain context across deployments.
 
-CI/CD Integration Patterns
+## CI/CD Integration Patterns
 
 Integrating Pulumi Python with CI/CD pipelines requires careful handling of secrets and state. Claude Code can assist with setting up GitHub Actions workflows:
 
@@ -318,7 +318,7 @@ For production deployments, add a manual approval gate between preview and apply
 
 When the preview output shows unexpected resource replacements, Claude Code can analyze the diff and explain why. often it is a change to a resource property that forces replacement (like an RDS `identifier`) versus an in-place update, and Claude Code will suggest alternatives that avoid downtime.
 
-Best Practices for Claude Code + Pulumi
+## Best Practices for Claude Code + Pulumi
 
 Follow these practices for effective infrastructure development:
 
@@ -352,14 +352,13 @@ pulumi-aws>=6.0.0,<7.0.0
 
 Separate concerns by component: Keep networking, compute, and data resources in separate component files. This makes it easier to ask Claude Code to work on one layer at a time without accidentally introducing cross-cutting changes.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Pulumi Python creates a powerful workflow for infrastructure automation. Claude Code handles code generation, error resolution, and documentation while Pulumi manages the actual resource provisioning. This combination reduces manual work and helps teams maintain consistent, testable infrastructure code.
 
 The real productivity gains come from Claude Code's ability to hold complex infrastructure context. resource dependencies, output types, provider quirks. and translate natural language requirements into correct Pulumi Python. Instead of hunting through provider documentation for the exact argument shape, you describe what you want and iterate on the generated code.
 
 For teams working with complex deployments, integrate the tdd skill for testing infrastructure before it reaches production, and use supermemory for maintaining deployment context across sessions. As your Pulumi codebase grows, Claude Code's ability to analyze and refactor existing stacks becomes increasingly valuable, keeping your infrastructure code clean and maintainable.
-
 
 Related Reading
 

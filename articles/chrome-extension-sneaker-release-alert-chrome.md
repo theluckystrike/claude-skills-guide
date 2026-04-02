@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Sneaker Release Alert: A Developer Guide"
 description: "Learn how to build and configure Chrome extensions for sneaker release alerts. Technical implementation guide for developers and power users."
@@ -14,18 +13,17 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
 {% raw %}
 
 Sneaker release alerts have become essential tools for collectors, resellers, and enthusiasts who need real-time notifications when limited editions drop. Building a Chrome extension for sneaker release alerts requires understanding browser extension architecture, web scraping fundamentals, and notification systems. This guide walks through the technical implementation for developers and power users.
 
-Core Architecture
+## Core Architecture
 
 A sneaker release alert Chrome extension operates through three primary components: a background service worker for continuous monitoring, content scripts for parsing retail sites, and a notification system for alerting users.
 
 The extension architecture follows Chrome's Manifest V3 specifications, which require asynchronous operations and use service workers instead of persistent background pages.
 
-Manifest Configuration
+## Manifest Configuration
 
 Your extension begins with the manifest file that defines permissions and capabilities:
 
@@ -58,7 +56,7 @@ Your extension begins with the manifest file that defines permissions and capabi
 
 The host permissions array specifies which retail domains your extension can access for monitoring.
 
-Implementing the Monitoring Service
+## Implementing the Monitoring Service
 
 The background service worker handles periodic checks against configured retailer endpoints. You need to implement rate limiting and respect each site's terms of service.
 
@@ -129,7 +127,7 @@ async function sendNotifications(releases) {
 setInterval(checkReleases, CHECK_INTERVAL);
 ```
 
-User Interface Implementation
+## User Interface Implementation
 
 The popup interface allows users to configure their alert preferences and view tracked releases:
 
@@ -219,7 +217,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Advanced Features
+## Advanced Features
 
 For production extensions, implement these advanced patterns:
 
@@ -270,14 +268,13 @@ async function getReleaseHistory(sneakerId) {
 }
 ```
 
-Deployment Considerations
+## Deployment Considerations
 
 When publishing to the Chrome Web Store, ensure your extension complies with store policies. Sneaker automation tools often face scrutiny, so frame your extension as a notification utility rather than an automated purchase tool.
 
 Include clear privacy policies explaining data usage, implement proper CORS handling for cross-origin requests, and test thoroughly across different retailer site changes since these sites frequently update their DOM structures.
 
 The implementation above provides a foundation that you can customize based on specific retailer targets and feature requirements. Focus on reliability and respect for retailer terms of service when building release monitoring tools.
-
 
 Related Reading
 
@@ -287,7 +284,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Setting Up Your First Alert
+## Step-by-Step: Setting Up Your First Alert
 
 1. Load the extension via `chrome://extensions` > "Load unpacked"
 2. Click the extension icon and check the retailers you want to monitor
@@ -296,7 +293,7 @@ Step-by-Step: Setting Up Your First Alert
 5. When a new release appears, a Chrome notification fires with name, price, and release date
 6. Click the notification to open the product page directly
 
-Common Use Cases
+## Common Use Cases
 
 Jordan Retro drops: Nike.com's `/launch` URL surfaces upcoming releases before the SNKRS queue opens. Monitoring it provides advance visibility.
 
@@ -304,7 +301,7 @@ Yeezy restocks: Adidas restocks appear briefly before selling out. A 1-minute ch
 
 Footlocker exclusive colorways: Chain retailer exclusives often go live with minimal marketing. Monitoring multiple retailer domains catches drops that filter-based tools miss.
 
-Comparison with Existing Alert Tools
+## Comparison with Existing Alert Tools
 
 | Tool | Retailers | Setup | Alert speed | Cost |
 |---|---|---|---|---|
@@ -314,7 +311,7 @@ Comparison with Existing Alert Tools
 
 The extension is unique in that you control the check interval, selector logic, and notification format. Discord bots are faster for hyped releases but require community infrastructure you do not control.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Selector no longer matching: Build fallback selectors and log misses for debugging:
 
@@ -342,6 +339,5 @@ chrome.permissions.request({ permissions: ['notifications'] }, (granted) => {
 ```
 
 When publishing to the Chrome Web Store, frame your extension as a notification utility rather than an automated purchase tool. the latter violates store policies and retailer terms. Include a clear privacy policy and test thoroughly across each target retailer.
-
 
 {% endraw %}

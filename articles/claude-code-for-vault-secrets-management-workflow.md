@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Vault Secrets Management Workflow
 
@@ -21,7 +20,7 @@ Managing secrets securely is one of the most critical aspects of modern applicat
 
 This guide walks you through practical workflows for managing Vault secrets using Claude Code, with actionable examples you can implement immediately.
 
-Understanding the Vault and Claude Code Integration
+## Understanding the Vault and Claude Code Integration
 
 Claude Code can interact with Vault through multiple approaches: direct CLI commands, the Vault API, or custom skills designed specifically for secrets management. The key advantage is that Claude can understand your intent, such as "create a new API key for staging", and handle the underlying Vault operations automatically.
 
@@ -33,9 +32,9 @@ Before integrating Claude with Vault, ensure you have:
 
 The most common integration method uses the Vault CLI, which Claude can invoke through bash commands. For more complex scenarios, you might use the Vault API directly or create a dedicated Claude skill.
 
-Setting Up Your Vault Workflow
+## Setting Up Your Vault Workflow
 
-Initial Configuration
+## Initial Configuration
 
 Start by ensuring your environment variables are properly configured. Create a simple setup that Claude can reference:
 
@@ -60,7 +59,7 @@ vault write auth/kubernetes/role/demo \
     ttl=1h
 ```
 
-Creating a Claude Skill for Vault Operations
+## Creating a Claude Skill for Vault Operations
 
 A dedicated Claude skill streamlines common Vault operations. Here's a practical skill definition:
 
@@ -91,9 +90,9 @@ To write a secret: "store API_KEY=xyz at secret/data/api_keys"
 
 This skill provides Claude with context about Vault operations while restricting tool access for security.
 
-Practical Vault Workflows with Claude
+## Practical Vault Workflows with Claude
 
-Reading and Listing Secrets
+## Reading and Listing Secrets
 
 One of the most common operations is reading secrets. Claude can handle this naturally:
 
@@ -110,7 +109,7 @@ vault kv get -field=password secret/data/myapp/database
 
 When working with Claude, you can simply ask: "What secrets do we have for the payment service?" Claude will translate this into the appropriate Vault commands and present the results clearly.
 
-Writing and Updating Secrets
+## Writing and Updating Secrets
 
 Managing secrets through Claude reduces errors and ensures consistency. Here's how to write secrets properly:
 
@@ -136,7 +135,7 @@ For sensitive values, consider using the `-` flag to read from stdin, preventing
 vault kv put secret/data/myapp/api-key key=- <<< "your-secret-value"
 ```
 
-Dynamic Secrets for Enhanced Security
+## Dynamic Secrets for Enhanced Security
 
 Vault's dynamic secrets provide additional security by generating short-lived credentials. Claude can help manage these:
 
@@ -158,7 +157,7 @@ A practical workflow with Claude might look like this:
 3. Claude presents the credentials with expiration time
 4. Claude can automatically rotate or clean up when done
 
-Automating Secret Rotation
+## Automating Secret Rotation
 
 Secret rotation is crucial for security. Claude can help automate this process:
 
@@ -187,9 +186,9 @@ Rotate credentials for a specific role
 vault write -force database/rotate-role/myapp-role
 ```
 
-Best Practices for Claude and Vault Integration
+## Best Practices for Claude and Vault Integration
 
-Security Considerations
+## Security Considerations
 
 1. Never log secrets: When working with Claude, avoid commands that output secrets to logs. Use `vault kv get -field=xxx` instead of dumping entire secrets.
 
@@ -212,13 +211,13 @@ path "secret/data/myapp/deploy/*" {
 vault audit enable file file_path=/var/log/vault/audit.log
 ```
 
-Workflow Optimization
+## Workflow Optimization
 
 1. Use consistent secret paths: Establish a naming convention like `secret/data/{environment}/{service}/{key}`
 2. Use namespaces: For multi-team environments, use Vault namespaces for isolation
 3. Implement secret expiration: Set appropriate TTLs and implement renewal processes
 
-Claude Skill Patterns
+## Claude Skill Patterns
 
 Create separate skills for different secret types:
 
@@ -229,7 +228,7 @@ Create separate skills for different secret types:
 
 This separation keeps each skill focused and reduces the attack surface.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with HashiCorp Vault transforms secrets management from a manual, error-prone process into an automated, secure workflow. By using Claude's natural language understanding, developers can perform complex Vault operations without memorizing every CLI command or API endpoint.
 

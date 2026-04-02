@@ -13,17 +13,16 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for OpenObserve Workflow Tutorial
 
 OpenObserve is a powerful open-source observability platform that provides log, metrics, and trace collection with a user-friendly interface. When combined with Claude Code, you can automate repetitive monitoring tasks, build custom dashboards, and create intelligent alerting workflows that would otherwise require significant manual effort. This tutorial walks you through practical ways to integrate Claude Code into your OpenObserve daily operations.
 
-Setting Up OpenObserve Access for Claude Code
+## Setting Up OpenObserve Access for Claude Code
 
 Before creating workflows, ensure Claude Code can interact with your OpenObserve instance. You'll need the API endpoint and authentication credentials.
 
-Configuration Steps
+## Configuration Steps
 
 Create a `.env` file in your project to store OpenObserve credentials:
 
@@ -44,11 +43,11 @@ OpenObserve Integration
 - Format log queries using the OpenObserve query syntax
 ```
 
-Querying Logs with Claude Code
+## Querying Logs with Claude Code
 
 One of the most valuable workflows is using Claude Code to query and analyze logs. Instead of manually navigating the OpenObserve UI, you can ask Claude to fetch specific log data.
 
-Basic Log Query Example
+## Basic Log Query Example
 
 When you need to find error logs within a specific time window, provide Claude with the details:
 
@@ -63,7 +62,7 @@ Claude Code can then use the OpenObserve API to construct and execute the approp
 3. Parsing and analyzing the results
 4. Presenting findings in a readable format
 
-Advanced Log Analysis Patterns
+## Advanced Log Analysis Patterns
 
 For more complex analysis, create a reusable skill that handles common log patterns. Here's a skill structure for error analysis:
 
@@ -88,11 +87,11 @@ Perform the following steps:
 Always format output as a structured report with severity levels.
 ```
 
-Building Dashboards Programmatically
+## Building Dashboards Programmatically
 
 Claude Code excels at generating dashboard configurations that you can then import into OpenObserve. This approach ensures consistency across teams and speeds up dashboard creation.
 
-Dashboard Definition Example
+## Dashboard Definition Example
 
 You can describe the dashboard you need, and Claude will generate the JSON configuration:
 
@@ -111,11 +110,11 @@ Claude will generate a complete dashboard JSON that you can import via the OpenO
 - Visualization preferences
 - Layout positioning
 
-Creating Intelligent Alert Rules
+## Creating Intelligent Alert Rules
 
 OpenObserve alerting becomes much more powerful when combined with Claude Code's ability to generate complex alert conditions based on your requirements.
 
-Alert Workflow Automation
+## Alert Workflow Automation
 
 Create a skill that translates natural language alert requirements into OpenObserve alert configurations:
 
@@ -139,7 +138,7 @@ Example alert patterns to support:
 - Custom metric conditions
 ```
 
-Practical Alert Example
+## Practical Alert Example
 
 Ask Claude to create an alert:
 
@@ -152,11 +151,11 @@ Create a high-severity alert for the checkout service that triggers when:
 
 Claude will generate the complete alert configuration ready for deployment.
 
-Automating Report Generation
+## Automating Report Generation
 
 Regular observability reports consume significant time. Claude Code can automate this workflow by querying OpenObserve and generating formatted reports.
 
-Weekly Report Skill
+## Weekly Report Skill
 
 Build a skill that produces consistent weekly reports:
 
@@ -177,11 +176,11 @@ Use the previous 7 days as the reporting window.
 Format output as Markdown suitable for team distribution.
 ```
 
-Integrating with Existing Monitoring Tools
+## Integrating with Existing Monitoring Tools
 
 Claude Code can bridge OpenObserve with your other monitoring tools, creating unified workflows that span multiple platforms.
 
-Cross-Platform Alert Routing
+## Cross-Platform Alert Routing
 
 When an alert fires in OpenObserve, you might need to:
 
@@ -191,9 +190,9 @@ When an alert fires in OpenObserve, you might need to:
 
 Claude Code can handle this by reading alert payloads and executing multi-step workflows that would otherwise require manual coordination.
 
-Best Practices for OpenObserve Workflows
+## Best Practices for OpenObserve Workflows
 
-Error Handling
+## Error Handling
 
 Always validate API responses from OpenObserve. If a query fails, Claude should:
 
@@ -201,7 +200,7 @@ Always validate API responses from OpenObserve. If a query fails, Claude should:
 - Suggest potential causes (authentication, query syntax, network issues)
 - Offer to reformulate the query
 
-Query Optimization
+## Query Optimization
 
 Long-running queries impact both performance and cost. In your workflows:
 
@@ -209,7 +208,7 @@ Long-running queries impact both performance and cost. In your workflows:
 - Filter by service or namespace when possible
 - Use appropriate aggregation functions to reduce result volume
 
-Security Considerations
+## Security Considerations
 
 When using Claude Code with OpenObserve:
 
@@ -218,7 +217,7 @@ When using Claude Code with OpenObserve:
 - Limit API token scope to necessary permissions only
 - Review generated alert conditions before deployment
 
-Getting Started Today
+## Getting Started Today
 
 The workflows in this tutorial represent just the beginning of what's possible. Start with one simple use case like log querying, then gradually expand to dashboard creation and alerting as your confidence grows.
 

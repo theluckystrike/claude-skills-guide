@@ -15,7 +15,7 @@ score: 8
 {% raw %}
 Amazon Prime Day creates massive demand, and finding genuine deals among the noise takes effort. A well-built Chrome extension can automate deal discovery, filter by categories, and alert you to price drops. This guide walks through building a functional Prime Day deal finder extension from scratch.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 A deal finder extension relies on three core components:
 
@@ -25,7 +25,7 @@ A deal finder extension relies on three core components:
 
 The extension intercepts deal data from Amazon pages, stores it locally, and provides filtering capabilities that Amazon's native search doesn't offer.
 
-Setting Up the Project Structure
+## Setting Up the Project Structure
 
 Create a new directory with this structure:
 
@@ -46,7 +46,7 @@ prime-day-deal-finder/
      icon128.png
 ```
 
-Writing the Manifest
+## Writing the Manifest
 
 The manifest defines permissions and declares your extension's capabilities:
 
@@ -82,7 +82,7 @@ The manifest defines permissions and declares your extension's capabilities:
 }
 ```
 
-Building the Content Script
+## Building the Content Script
 
 The content script extracts deal information from Amazon product pages. This runs on Amazon URLs and pulls relevant data:
 
@@ -124,7 +124,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Creating the Popup Interface
+## Creating the Popup Interface
 
 The popup provides a quick-view interface for saved deals:
 
@@ -165,7 +165,7 @@ The popup provides a quick-view interface for saved deals:
 </html>
 ```
 
-Implementing Popup Logic
+## Implementing Popup Logic
 
 The popup script handles user interactions and displays stored deals:
 
@@ -251,7 +251,7 @@ function filterDeals() {
 }
 ```
 
-Adding Background Processing
+## Adding Background Processing
 
 For more advanced features like price tracking over time, use the background script:
 
@@ -284,7 +284,7 @@ async function checkStoredDeals() {
 }
 ```
 
-Testing Your Extension
+## Testing Your Extension
 
 Load your extension in Chrome:
 
@@ -295,7 +295,7 @@ Load your extension in Chrome:
 
 Test on Amazon product pages and Prime Day deal pages. The extension should capture product data when you click the scan button.
 
-Key Considerations for Production
+## Key Considerations for Production
 
 When scaling beyond a personal tool, consider these factors:
 
@@ -304,10 +304,9 @@ When scaling beyond a personal tool, consider these factors:
 - Storage limits mean large deal collections need IndexedDB
 - Cross-origin requests require careful permission handling
 
-Conclusion
+## Conclusion
 
 A custom Chrome extension gives you control over deal discovery that generic shopping tools cannot match. By understanding content scripts, popup interfaces, and storage APIs, developers can build sophisticated filtering and alerting systems. The foundation above provides a starting point, extend it with price history tracking, deal sharing, or category-based alerts based on your specific needs.
-
 
 Related Reading
 
@@ -317,7 +316,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Advanced: Category-Aware Scanning
+## Advanced: Category-Aware Scanning
 
 Prime Day surfaces deals across dozens of categories simultaneously. Prioritize categories with a config-driven scanner:
 
@@ -341,7 +340,7 @@ async function scanCategoryDeals(category) {
 
 Combine scans using `Promise.all` to check multiple departments simultaneously during the Prime Day window.
 
-Best Practices for Prime Day Usage
+## Best Practices for Prime Day Usage
 
 Build in courteous rate limiting to avoid hammering Amazon's infrastructure:
 
@@ -350,7 +349,7 @@ Build in courteous rate limiting to avoid hammering Amazon's infrastructure:
 - Cache results in `chrome.storage.local` to avoid redundant fetches
 - Disable or reduce check frequency outside Prime Day windows
 
-Comparison with Amazon's Built-In Tools
+## Comparison with Amazon's Built-In Tools
 
 | Feature | This Extension | Amazon Wish List | Amazon Deal Notifications |
 |---|---|---|---|
@@ -362,7 +361,7 @@ Comparison with Amazon's Built-In Tools
 
 The extension is most valuable during Prime Day because you can combine multiple filters simultaneously. minimum discount percentage, minimum rating, specific category. that Amazon's native interface does not support together.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Deal data missing after page load: Amazon renders deal data asynchronously. Wait for the DOM to stabilize using a `MutationObserver`:
 
@@ -398,6 +397,5 @@ async function trimDeals() {
 ```
 
 A custom Chrome extension gives you control over deal discovery during Prime Day that generic shopping tools cannot match. Start with the foundation above and extend it with price history tracking or category-based alerts based on your needs.
-
 
 {% endraw %}

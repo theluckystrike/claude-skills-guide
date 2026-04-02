@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code Profiler Integration Guide"
 description: "A practical guide to integrating code profilers with Claude Code. Learn to measure execution time, memory usage, and identify performance bottlenecks."
@@ -14,13 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-
-Claude Code Profiler Integration Guide
-
 Modern software development demands attention to performance from the start. Integrating code profilers with Claude Code transforms how you identify bottlenecks, measure execution time, and optimize memory usage. This guide shows practical approaches to combining Claude Code with profiling tools across different languages and frameworks.
 
-Why Combine Claude Code with Profilers
+## Why Combine Claude Code with Profilers
 
 Claude Code excels at understanding code structure, reading large codebases, and suggesting improvements. Profilers provide quantitative data about runtime behavior. Together, they create a powerful workflow: Claude analyzes your code and suggests where to investigate, then you use profiler output to validate and refine those suggestions.
 
@@ -28,7 +23,7 @@ The combination works particularly well when working with unfamiliar codebases. 
 
 A useful mental model: treat Claude as the detective who reads the evidence and forms hypotheses, and the profiler as the forensics lab that proves or disproves them. You run Claude first to get a short list of suspects, then run the profiler to find out which one is actually guilty.
 
-Setting Up Python Profiling with Claude Code
+## Setting Up Python Profiling with Claude Code
 
 Python developers have several profiling options. The built-in `cProfile` module requires no external dependencies:
 
@@ -70,7 +65,7 @@ The SVG output from `py-spy` is especially useful because you can paste the raw 
 
 When using the tdd skill with Claude Code, you can incorporate profiling into your test-driven workflow. Run your test suite with profiling enabled, then ask Claude to analyze the output alongside your test results.
 
-JavaScript and TypeScript Performance Profiling
+## JavaScript and TypeScript Performance Profiling
 
 Node.js applications benefit from the built-in inspector:
 
@@ -112,7 +107,7 @@ For TypeScript projects, keep your `tsconfig.json` source maps enabled during pr
 
 This matters because Claude will misread profiler output if the function names reference mangled or transpiled identifiers that don't match your source.
 
-Memory Profiling Strategies
+## Memory Profiling Strategies
 
 Memory leaks often cause gradual performance degradation. Different languages offer specific tools:
 
@@ -156,7 +151,7 @@ go tool pprof -text mem.prof
 
 That text output is well-structured for Claude to parse. Ask it to identify which allocations account for the top 80% of heap usage and whether any of them look like accumulation rather than steady-state allocation.
 
-Integrating with Claude Code Workflows
+## Integrating with Claude Code Workflows
 
 The most effective approach combines profiling with Claude's contextual understanding. Here's a practical workflow:
 
@@ -172,7 +167,7 @@ The most effective approach combines profiling with Claude's contextual understa
 
 A concrete example of this workflow in practice: a Python data pipeline was taking 45 seconds to process a 10,000-row CSV. Claude reviewed the code and noted heavy use of `pandas.DataFrame.iterrows()`, which it flagged as known to be slow. The profiler confirmed that 38 of the 45 seconds were spent inside that loop. Claude suggested vectorizing with `apply()` or a numpy operation instead. After the change, runtime dropped to 4 seconds. The profiler confirmed it.
 
-Command-Line Profiling Tools Worth Knowing
+## Command-Line Profiling Tools Worth Knowing
 
 Beyond language-specific profilers, several cross-platform tools integrate well with Claude Code workflows:
 
@@ -187,7 +182,7 @@ Beyond language-specific profilers, several cross-platform tools integrate well 
 
 The pdf skill becomes valuable when generating performance reports. Export profiler data to PDF for team documentation and historical tracking. This is especially useful when you need to present findings to stakeholders who are not going to read raw profiler output.
 
-Common Profiling Patterns
+## Common Profiling Patterns
 
 When working with Claude Code, frame your profiling requests effectively:
 
@@ -197,7 +192,7 @@ For database-heavy applications, combine query profiling with code profiling. Us
 
 Another effective pattern is differential profiling. Profile the same workload before and after a change. Show Claude both profiles and ask "what changed between these two profiles and is the change consistent with the optimization I made?" This catches cases where an optimization improves one path but degrades another.
 
-Automation with Claude Code Skills
+## Automation with Claude Code Skills
 
 Create custom skills that automate common profiling tasks:
 
@@ -218,7 +213,7 @@ Available Tools
 
 This approach standardizes your performance workflow across projects. Once the skill exists, any team member can invoke it with a consistent interface rather than remembering which profiler flags apply to which language. Over time, you can expand the skill's instructions to include your team's specific profiling conventions, such as always using production-scale data or always sorting by cumulative time.
 
-Measuring Improvement Over Time
+## Measuring Improvement Over Time
 
 Track profiling metrics systematically. Create baseline profiles before major changes, then compare subsequent profiles to quantify improvements. Store these alongside your code in version control.
 

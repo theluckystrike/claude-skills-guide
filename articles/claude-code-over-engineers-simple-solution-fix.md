@@ -18,7 +18,7 @@ When developers encounter issues with Claude Code, the instinct is often to dig 
 
 The pattern that emerges from most Claude Code issues is this: the problem is almost always environmental or behavioral, not fundamental. A misconfigured PATH, a vague prompt, a missing API key, or an oversized context window explains the overwhelming majority of reported failures. Working through a short checklist resolves most of them in under five minutes.
 
-Quick Fixes for Claude Code Installation Issues
+## Quick Fixes for Claude Code Installation Issues
 
 One of the most frequent problems developers face is Claude Code failing to initialize or throwing authentication errors. Before assuming something is broken, verify your installation:
 
@@ -72,7 +72,7 @@ echo $ANTHROPIC_API_KEY | cut -c1-10
 
 If step 1 fails, reinstall Claude Code. If step 2 fails, fix your PATH. If step 3 shows empty output, set your API key. If step 4 succeeds but step the basic `claude` command fails, you have a PATH issue only.
 
-Resolving Context Window Limitations
+## Resolving Context Window Limitations
 
 Developers working with large codebases often hit context window limits. The simple solution isn't upgrading hardware, it's optimizing how you interact with Claude Code. Break your queries into smaller chunks:
 
@@ -96,7 +96,7 @@ Reference specific files explicitly. Instead of asking Claude Code to "look at t
 
 Summarize previous context at the start of long sessions. If you've been working for a while and notice response quality degrading, paste a brief summary at the top of your next message: "We've established that the bug is in the cache invalidation logic in services/cache.ts. Continue from there."
 
-Fixing Skill Loading Errors
+## Fixing Skill Loading Errors
 
 Claude Code's skill system powers specialized tasks through modules like `frontend-design`, `pdf`, `tdd`, and `supermemory`. When skills fail to load, the issue is usually straightforward:
 
@@ -141,7 +141,7 @@ Common skill errors and their fixes:
 | Skill conflicts with another | Duplicate `name:` values | Rename one skill's `name:` field |
 | Skill works locally, not in CI | Skills directory not present | Copy skills to CI environment or skip skill usage in automated runs |
 
-Handling Rate Limits and API Errors
+## Handling Rate Limits and API Errors
 
 Rate limiting can interrupt workflow when processing multiple files. The simple fix involves adjusting your approach rather than waiting for limit resets:
 
@@ -161,7 +161,7 @@ Rate limit errors typically show up as HTTP 429 responses. The three causes are:
 
 When working on batch operations (analyzing multiple files, generating tests for a whole module), space your requests out and prefer long interactive sessions over many short CLI invocations. A single session that processes ten files sequentially uses fewer API round-trips than ten separate `claude` commands.
 
-Fixing Response Quality Issues
+## Fixing Response Quality Issues
 
 When Claude Code responses seem off-topic or low quality, the problem often lies in prompt structure rather than the tool itself. Refine your prompts:
 
@@ -198,7 +198,7 @@ The specific version gives Claude Code a file path, a function name, a descripti
 
 When Claude Code's responses go off-track during a long session, a fresh start often helps more than repeated corrections. Copy the essential context from your current session, start a new one, and paste only what's relevant. Long sessions accumulate noise that degrades response quality.
 
-Automating Repetitive Tasks with Skills
+## Automating Repetitive Tasks with Skills
 
 The `frontend-design` skill streamlines UI development without requiring designer collaboration:
 
@@ -236,7 +236,7 @@ When asked to create a new service:
 
 Save this to `~/.claude/skills/new-service.md` and invoke it as `/new-service create an email notification service`. Claude Code executes the multi-step workflow as a single command.
 
-Troubleshooting Network and Proxy Issues
+## Troubleshooting Network and Proxy Issues
 
 Corporate networks and proxies often cause connection problems. Configure Claude Code to use your proxy:
 
@@ -259,7 +259,7 @@ export NODE_EXTRA_CA_CERTS=/path/to/corporate-root-ca.pem
 
 If you're on a VPN that routes all traffic through a corporate proxy, test with the VPN disconnected first. If Claude Code works without the VPN but not with it, the issue is proxy configuration, not Claude Code itself.
 
-Diagnosing Slow Response Times
+## Diagnosing Slow Response Times
 
 Occasionally Claude Code responses take significantly longer than expected. Before assuming a service outage, check these factors:
 
@@ -277,7 +277,7 @@ curl -o /dev/null -s -w "%{time_total}\n" https://api.anthropic.com
 
 Response times above 2 seconds for this basic request suggest a network issue between your machine and the API.
 
-Simple Solutions Beat Complex Engineering
+## Simple Solutions Beat Complex Engineering
 
 Most Claude Code issues have simple fixes. Before considering external help or expensive solutions, work through this checklist:
 
@@ -293,7 +293,6 @@ The `canvas-design` skill can help you visualize project architectures when debu
 When the same issue recurs across your team, document the fix. A short internal wiki page with the symptom, cause, and one-line fix eliminates the need for every developer to rediscover the solution. Claude Code can help you write that documentation: describe the problem and its fix in a session, then ask Claude to format it as a concise troubleshooting entry.
 
 Remember: the simplest solution is often correct. Most Claude Code problems stem from configuration issues, prompt quality, or environment settings, not fundamental tool failures. Resist the urge to escalate until you've ruled out the basics.
-
 
 Related Reading
 

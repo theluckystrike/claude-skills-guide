@@ -18,7 +18,7 @@ AI Content Repurposer Chrome Extension: A Developer Guide
 
 Content repurposing has become essential for developers and content creators who need to distribute their work across multiple platforms. A Chrome extension that uses AI to automate this process can save hours of manual work while maintaining content quality. This guide walks you through building a functional AI content repurposer extension from scratch.
 
-Understanding the Core Architecture
+## Understanding the Core Architecture
 
 An AI content repurposer extension operates through a multi-layered architecture. The content script extracts content from the active browser tab, sends it to an AI service for transformation, and then provides multiple output formats for different platforms.
 
@@ -30,7 +30,7 @@ The key components include:
 
 This architecture allows the extension to work with any web page while providing flexible output options.
 
-Setting Up the Manifest
+## Setting Up the Manifest
 
 Every Chrome extension requires a manifest file. For an AI content repurposer, you'll need version 3 of the manifest with specific permissions:
 
@@ -59,7 +59,7 @@ Every Chrome extension requires a manifest file. For an AI content repurposer, y
 
 The `activeTab` permission allows your extension to access the currently active tab when the user invokes it, while `scripting` enables content script injection for extraction.
 
-Building the Content Extractor
+## Building the Content Extractor
 
 The content script runs in the context of the web page and extracts the main content. You'll want to target the primary content area while avoiding navigation, ads, and other peripheral elements:
 
@@ -105,7 +105,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This extractor prioritizes semantic HTML elements but includes a fallback for pages that don't follow best practices.
 
-Implementing the Popup Interface
+## Implementing the Popup Interface
 
 The popup provides the user interface for configuring the repurposing options:
 
@@ -141,7 +141,7 @@ The popup provides the user interface for configuring the repurposing options:
 </html>
 ```
 
-Connecting to AI Services
+## Connecting to AI Services
 
 The background script handles communication with AI APIs. This example uses OpenAI's API, but you can adapt it for other providers:
 
@@ -193,7 +193,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Wiring the Popup Logic
+## Wiring the Popup Logic
 
 The popup script connects the UI to the background processing:
 
@@ -234,7 +234,7 @@ document.getElementById('repurpose').addEventListener('click', async () => {
 });
 ```
 
-Extension Manifest Requirements
+## Extension Manifest Requirements
 
 For the content script to work, you need to declare it in the manifest:
 
@@ -251,7 +251,7 @@ For the content script to work, you need to declare it in the manifest:
 
 This injects your content script into every page, enabling content extraction regardless of the site being visited.
 
-Security Considerations
+## Security Considerations
 
 When building production extensions, follow these security practices:
 
@@ -260,7 +260,7 @@ When building production extensions, follow these security practices:
 3. Implement rate limiting: Prevent abuse of AI API quotas
 4. Handle errors gracefully: Provide useful error messages to users when extraction or processing fails
 
-Practical Use Cases
+## Practical Use Cases
 
 Once built, your extension can handle various content repurposing scenarios:
 
@@ -272,7 +272,6 @@ Once built, your extension can handle various content repurposing scenarios:
 The extension approach works particularly well because it operates directly in the browser, eliminating the need to copy-paste between applications.
 
 Building an AI content repurposer Chrome extension combines web development skills with AI integration, creating a practical tool that automates repetitive content tasks. The architecture shown here provides a solid foundation that you can extend with additional features like custom templates, saved presets, or integration with specific platforms.
-
 
 Related Reading
 

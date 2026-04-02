@@ -16,7 +16,7 @@ permalink: /mcp-server-permission-auditing-best-practices/
 
 When building AI agents with Claude and the Model Context Protocol (MCP), server permissions determine what resources your agent can access and modify. Poorly configured permissions expose your systems to unintended data exposure or unauthorized actions. This guide covers practical strategies for auditing and maintaining secure MCP server configurations.
 
-Understanding MCP Server Permission Models
+## Understanding MCP Server Permission Models
 
 MCP servers expose capabilities through tools that Claude can invoke. Each tool may require different permission levels, some read data, others modify files or execute commands. Before auditing, you need to understand what each server in your configuration actually does.
 
@@ -29,7 +29,7 @@ cat ~/.claude/settings.json | grep -A 20 '"mcpServers"'
 
 This reveals every MCP server active in your environment. Common servers include filesystem access, database connectors, and integration endpoints. Each represents a potential permission boundary you need to evaluate.
 
-Using Built-in MCP Inspection Tools
+## Using Built-in MCP Inspection Tools
 
 Claude Code provides a native command for reviewing MCP server status. Type `/mcp` in the chat interface to see a list of all configured servers, their running status, and available tools.
 
@@ -41,7 +41,7 @@ claude --printMcpServers
 
 This outputs a structured list of servers and the tools each provides. Use this output to verify that only intended servers are running.
 
-Permission Compartmentalization
+## Permission Compartmentalization
 
 Instead of granting broad filesystem access, create separate server instances with different scopes. For example, a frontend-design workflow might need access to a specific project directory only:
 
@@ -57,7 +57,7 @@ Instead of granting broad filesystem access, create separate server instances wi
 
 This limits the blast radius if a server gets compromised. Each server instance sees only the directories it needs.
 
-Responding to Permission Issues
+## Responding to Permission Issues
 
 If you discover unexpected servers or overly broad permissions, take immediate action:
 
@@ -66,7 +66,7 @@ If you discover unexpected servers or overly broad permissions, take immediate a
 3. Re-enable with corrected permissions after reviewing the configuration
 4. Rotate credentials for any server with unexpected access
 
-Audit Checklist: Four Key Areas
+## Audit Checklist: Four Key Areas
 
 1. Scope Minimization
 

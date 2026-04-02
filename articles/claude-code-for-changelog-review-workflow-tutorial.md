@@ -27,7 +27,7 @@ The skill we'll build today can:
 - Check for missing or duplicate entries
 - Suggest improvements for clarity and completeness
 
-Setting Up Your Changelog Review Skill
+## Setting Up Your Changelog Review Skill
 
 Create a new skill file at `~/.claude/skills/claude-code-skill-changelog-review/skill.md`. This skill will analyze CHANGELOG files and provide structured feedback.
 
@@ -50,7 +50,7 @@ You are an expert at reviewing CHANGELOG files. Analyze the CHANGELOG and provid
 
 This basic skill structure gives you a foundation to build upon. Let's enhance it with specific validation rules.
 
-Parsing and Validating Changelog Entries
+## Parsing and Validating Changelog Entries
 
 The core of an effective changelog review skill is solid parsing. Let's add patterns to extract and validate version entries:
 
@@ -81,7 +81,7 @@ def parse_changelog(content):
 
 This parser extracts version numbers and dates from standard changelog formats. Integrate this logic into your skill by creating a helper script that the skill calls via `bash`.
 
-Building the Complete Skill
+## Building the Complete Skill
 
 Here's a more complete skill that combines parsing, validation, and feedback generation:
 
@@ -118,7 +118,7 @@ Common Issues to Flag
 - "TODO" or "TBD" entries not yet completed
 ```
 
-Practical Example: Reviewing a Sample Changelog
+## Practical Example: Reviewing a Sample Changelog
 
 Consider this sample CHANGELOG.md:
 
@@ -150,7 +150,7 @@ When this skill reviews this file, it should identify these issues:
 
 The skill provides specific, actionable feedback that developers can immediately act upon.
 
-Advanced: Adding Auto-Fix Capabilities
+## Advanced: Adding Auto-Fix Capabilities
 
 For a more powerful workflow, extend your skill to auto-fix common issues. Add a `write_file` tool and create a fix function:
 
@@ -176,11 +176,11 @@ def auto_fix_changelog(content):
     return content, fixes_applied
 ```
 
-Integrating with Your Development Workflow
+## Integrating with Your Development Workflow
 
 To get maximum value from your changelog review skill, integrate it into your development process:
 
-Pre-commit Hook Integration
+## Pre-commit Hook Integration
 
 Add the skill to your pre-commit workflow to review changelogs before commits:
 
@@ -189,7 +189,7 @@ Add the skill to your pre-commit workflow to review changelogs before commits:
 claude -s changelog-review --path CHANGELOG.md
 ```
 
-CI/CD Pipeline
+## CI/CD Pipeline
 
 Include changelog reviews in your continuous integration:
 
@@ -206,7 +206,7 @@ jobs:
         run: claude -s changelog-review --path CHANGELOG.md
 ```
 
-Best Practices for Changelog Skills
+## Best Practices for Changelog Skills
 
 When building and maintaining your changelog review skill, keep these tips in mind:
 
@@ -216,12 +216,11 @@ When building and maintaining your changelog review skill, keep these tips in mi
 4. Allow overrides - Some rules may need exceptions; make the skill flexible
 5. Test with real changelogs - Validate your skill against actual projects
 
-Conclusion
+## Conclusion
 
 Automating changelog reviews with Claude Code skills saves time and ensures consistency across your project. Start with the basic skill structure in this tutorial, then customize it to match your team's conventions. The investment in setting up a solid changelog review workflow pays dividends in code quality and documentation accuracy.
 
 Remember: A well-maintained changelog is a gift to future developers (including yourself) who need to understand how your project evolved. Automating its review ensures it stays accurate and useful.
-
 
 Related Reading
 

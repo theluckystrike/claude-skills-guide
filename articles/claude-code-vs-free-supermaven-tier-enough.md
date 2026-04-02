@@ -19,13 +19,13 @@ Claude Code vs Free Supermaven Tier: Is the Free Version Enough?
 
 If you're evaluating AI coding assistants in 2026, you've likely encountered Supermaven, a fast AI code completion tool that offers both free and paid tiers. The question many developers ask is whether the free Supermaven tier provides enough value compared to Claude Code's more comprehensive capabilities. we'll explore this comparison with a focus on Claude Code's unique skills system and how it outperforms the free tier of Supermaven for most development workflows.
 
-Understanding What Each Tool Offers
+## Understanding What Each Tool Offers
 
 Supermaven positions itself as one of the fastest AI code completion tools available. Their free tier provides basic code completion features, making it attractive for developers who want a taste of AI-assisted coding without spending money. The free version offers reasonable autocomplete suggestions and works with popular IDEs.
 
 Claude Code, developed by Anthropic, takes a different approach. It's a CLI-based AI assistant that goes far beyond simple code completion. Claude Code features a unique skills system that allows developers to create reusable, specialized prompts that automate complex tasks, handle multi-file refactoring, and provide context-aware assistance throughout the development lifecycle.
 
-Claude Code Skills: The Key Differentiator
+## Claude Code Skills: The Key Differentiator
 
 What sets Claude Code apart is its powerful skills system. Skills are essentially specialized prompt templates that can be invoked automatically based on file types, project context, or explicit commands. This makes Claude Code incredibly adaptable to different workflows and project requirements.
 
@@ -54,9 +54,9 @@ Provide findings in this structure:
 
 This skill can be invoked automatically whenever you're working on code reviews, providing consistent, thorough analysis that the free tier of Supermaven simply cannot match.
 
-Practical Examples: Where Claude Code Excels
+## Practical Examples: Where Claude Code Excels
 
-Multi-File Refactoring
+## Multi-File Refactoring
 
 When you need to refactor across multiple files, Claude Code shines. Suppose you want to rename a function throughout your entire codebase and update all its call sites:
 
@@ -66,7 +66,7 @@ Claude, use the rename-function skill to rename 'getUserData' to 'fetchUserProfi
 
 Claude Code will analyze your codebase, identify all occurrences, and make the changes systematically, something that basic autocomplete tools like free Supermaven cannot do.
 
-Context-Aware Documentation Generation
+## Context-Aware Documentation Generation
 
 Claude Code skills can automatically generate documentation based on your code:
 
@@ -86,7 +86,7 @@ Process
 
 This level of automated documentation is impossible with Supermaven's free tier, which focuses solely on completion suggestions.
 
-Test Generation
+## Test Generation
 
 Claude Code can generate comprehensive tests using skills:
 
@@ -100,7 +100,7 @@ Claude, use the test-generation skill to create unit tests for the new payment m
 
 The skill will create properly structured test files with appropriate assertions, far beyond what autocomplete can provide.
 
-When the Free Supermaven Tier Might Be Enough
+## When the Free Supermaven Tier Might Be Enough
 
 To be fair, the free Supermaven tier has its place. It works well for:
 
@@ -111,7 +111,7 @@ To be fair, the free Supermaven tier has its place. It works well for:
 
 However, even for these use cases, Claude Code's free tier (which uses Claude 3.5 Sonnet) provides substantially more capability than Supermaven's free offering.
 
-The Real Cost Comparison
+## The Real Cost Comparison
 
 When evaluating cost, consider what you're actually getting:
 
@@ -125,7 +125,7 @@ When evaluating cost, consider what you're actually getting:
 | Custom workflows | No | Yes (skills system) |
 | CLI-based workflow | No | Yes |
 
-Getting Started with Claude Code Skills
+## Getting Started with Claude Code Skills
 
 If you're convinced Claude Code is the right choice, here's how to use its skills system:
 
@@ -159,7 +159,7 @@ components/
     index.ts
 ```
 
-Conclusion
+## Conclusion
 
 While Supermaven's free tier serves a purpose for basic code completion, Claude Code's skills system provides a fundamentally more powerful development experience. The ability to create reusable, specialized workflows for testing, documentation, refactoring, and code review makes Claude Code valuable even on its free tier.
 

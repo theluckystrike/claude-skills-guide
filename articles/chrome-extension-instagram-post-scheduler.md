@@ -18,7 +18,7 @@ Scheduling Instagram posts directly from a Chrome extension offers a powerful wa
 
 This guide explores the technical landscape of Chrome extension-based Instagram post scheduling, covering implementation approaches, API limitations, and practical code patterns you can adapt for your own projects.
 
-Understanding Instagram's Platform Restrictions
+## Understanding Instagram's Platform Restrictions
 
 Before diving into implementation, you must understand Instagram's platform policies. As of 2026, Instagram's official API imposes strict limitations on post scheduling:
 
@@ -29,11 +29,11 @@ Before diving into implementation, you must understand Instagram's platform poli
 
 These constraints shape how Chrome extensions handle scheduling. Rather than directly posting through Instagram's API, most extensions work as management dashboards that notify users when it's time to post manually, or integrate with third-party services that have official API access.
 
-Core Architecture Patterns
+## Core Architecture Patterns
 
 A Chrome extension for Instagram scheduling typically follows one of three architectural patterns:
 
-Pattern 1: Local Storage with Reminders
+## Pattern 1: Local Storage with Reminders
 
 The simplest approach stores scheduled posts in Chrome's local storage and triggers browser notifications when it's time to post:
 
@@ -62,7 +62,7 @@ function notifyUser(post) {
 
 This pattern gives users full control and avoids API complications. The extension essentially acts as a sophisticated calendar and reminder system.
 
-Pattern 2: Background Sync with Webhook Integration
+## Pattern 2: Background Sync with Webhook Integration
 
 For integrations with services that have official API access, extensions can handle authentication and coordinate posting through webhooks:
 
@@ -83,7 +83,7 @@ For integrations with services that have official API access, extensions can han
 
 The extension maintains the scheduled queue locally while delegating actual posting to a backend service with proper Instagram API credentials.
 
-Pattern 3: Content Script Injection
+## Pattern 3: Content Script Injection
 
 Some extensions inject content scripts directly into Instagram's web interface to automate parts of the posting process:
 
@@ -116,7 +116,7 @@ function preparePost(postData) {
 
 This approach is technically complex and often violates Instagram's Terms of Service. Use it only for personal automation with full awareness of the risks.
 
-Building the Scheduling UI
+## Building the Scheduling UI
 
 The popup or options page serves as the primary interface for managing scheduled posts. Here's a practical React-based component structure:
 
@@ -175,7 +175,7 @@ function Scheduler() {
 }
 ```
 
-Handling Authentication Securely
+## Handling Authentication Securely
 
 When your extension needs to authenticate with backend services, implement OAuth 2.0 flow through a popup or options page:
 
@@ -217,7 +217,7 @@ class AuthManager {
 
 Never store tokens in localStorage or plain text. Use Chrome's secure storage when available, and implement token refresh logic.
 
-Practical Considerations for Production
+## Practical Considerations for Production
 
 When building or selecting a Chrome extension for Instagram scheduling, consider these factors:
 
@@ -237,7 +237,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 Extension Updates: Instagram frequently changes their DOM structure. Design content scripts to be resilient to UI changes by using semantic selectors when possible.
 
-Alternatives and Complementary Approaches
+## Alternatives and Complementary Approaches
 
 If direct scheduling proves too challenging, consider these alternatives:
 
@@ -248,7 +248,6 @@ If direct scheduling proves too challenging, consider these alternatives:
 For developers building custom solutions, combining a Chrome extension with a lightweight backend service provides the most flexibility while respecting platform constraints.
 
 ---
-
 
 Related Reading
 

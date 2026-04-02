@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Halmos Symbolic Workflow Guide
 
@@ -21,7 +20,7 @@ Symbolic testing has emerged as one of the most powerful techniques for discover
 
 This guide walks you through integrating Claude Code with Halmos, setting up automated symbolic testing workflows, and extracting maximum value from this combination.
 
-Understanding Halmos and Symbolic Testing
+## Understanding Halmos and Symbolic Testing
 
 Before diving into the integration, let's briefly cover what makes Halmos special. Unlike conventional testing where you provide concrete inputs, symbolic testing treats inputs as symbolic variables and explores all possible execution paths through your code.
 
@@ -33,7 +32,7 @@ Halmos works by:
 
 This approach catches bugs that would only manifest with specific inputs you'd likely never think to test manually.
 
-Setting Up Halmos with Claude Code
+## Setting Up Halmos with Claude Code
 
 The first step is installing Halmos and configuring your project for symbolic testing:
 
@@ -64,7 +63,7 @@ def calculate_discount(price: float, discount_percent: float) -> float:
     return price * (1 - discount_percent / 100)
 ```
 
-Creating a Claude Skill for Halmos Workflows
+## Creating a Claude Skill for Halmos Workflows
 
 Now let's create a Claude skill that encapsulates Halmos workflow patterns. This skill will help you:
 
@@ -111,7 +110,7 @@ When Halmos reports findings:
 
 This skill becomes your interface for all Halmos-related interactions with Claude.
 
-Practical Example: Testing a Payment Processor
+## Practical Example: Testing a Payment Processor
 
 Let's walk through a realistic example of using Claude Code with Halmos. Consider a payment processing module:
 
@@ -154,11 +153,11 @@ Path 8: base_amount=50, tax_rate=-0.5, discount=0
 
 This reveals that while we handle negative discounts, the interaction with zero base amounts might need attention.
 
-Automating Halmos Workflows
+## Automating Halmos Workflows
 
 One of Claude Code's strengths is automating repetitive tasks. Create patterns for common workflows:
 
-Continuous Integration Pattern
+## Continuous Integration Pattern
 
 Add a script that runs Halmos on changed code:
 
@@ -183,7 +182,7 @@ else
 fi
 ```
 
-Pre-commit Integration
+## Pre-commit Integration
 
 Configure Halmos to run before commits:
 
@@ -201,7 +200,7 @@ repos:
         args: ["payment"]  # Adjust per project
 ```
 
-Best Practices for Claude + Halmos Workflows
+## Best Practices for Claude + Halmos Workflows
 
 When combining Claude Code with Halmos, keep these tips in mind:
 
@@ -222,7 +221,7 @@ def process_order(items: list[dict], tax_rate: float) -> float:
 
 5. Document discovered invariants: When Halmos reveals patterns (like "this function never returns negative"), document them as contracts for future maintainers.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Halmos transforms symbolic testing from an advanced technique into an accessible daily practice. Claude acts as your interface, translating natural language requests into precise Halmos commands, interpreting complex output, and guiding you through fixing discovered issues. Together, they form a powerful debugging and verification workflow that catches bugs before they reach production.
 

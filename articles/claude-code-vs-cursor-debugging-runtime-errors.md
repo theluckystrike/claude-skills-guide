@@ -13,23 +13,22 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code vs Cursor: Debugging Runtime Errors
 
 Debugging runtime errors remains one of the most time-consuming tasks in software development. When your application crashes, throws unexpected exceptions, or produces incorrect output, you need tools that help you quickly identify the root cause. This article compares how Claude Code and Cursor approach runtime error debugging, highlighting their strengths and practical techniques you can use today.
 
-Understanding the Debugging Landscape
+## Understanding the Debugging Landscape
 
 Before diving into specific tools, let's establish what makes debugging runtime errors challenging. Unlike syntax errors (caught before execution), runtime errors occur during program execution, null pointer exceptions, type mismatches, boundary violations, async timing issues, and logic errors that slip past type checkers. These errors often require understanding program state at the moment of failure, tracing execution flow, and reproducing conditions that caused the bug.
 
 Both Claude Code and Cursor use AI to accelerate this process, but they take different approaches to error detection, diagnosis, and resolution.
 
-Claude Code: Agent-Driven Debugging
+## Claude Code: Agent-Driven Debugging
 
 Claude Code treats debugging as a collaborative conversation. When you encounter a runtime error, you can describe the problem in natural language, and Claude Code will analyze your codebase to identify potential causes.
 
-Practical Example: Debugging a Null Reference
+## Practical Example: Debugging a Null Reference
 
 Consider this JavaScript function that processes user orders:
 
@@ -60,7 +59,7 @@ function calculateTotal(order) {
 }
 ```
 
-Claude Code's Strengths in Runtime Debugging
+## Claude Code's Strengths in Runtime Debugging
 
 Whole-codebase context: Claude Code reads your entire project, understanding how components interact. This matters for debugging errors that span multiple files, authentication failures, API misconfigurations, or state management bugs.
 
@@ -68,7 +67,7 @@ Iterative investigation: You can ask follow-up questions: "Why would order be nu
 
 Fix suggestion with explanation: Rather than just fixing the error, Claude Code explains the root cause and suggests patterns to prevent similar issues.
 
-Using the Debug Skill
+## Using the Debug Skill
 
 Claude Code's specialized debugging skill provides structured prompts for common scenarios:
 
@@ -77,11 +76,11 @@ Claude Code's specialized debugging skill provides structured prompts for common
 - Reproduction steps: Get help creating minimal test cases
 - Fix verification: After applying fixes, ask Claude Code to review the changes
 
-Cursor: IDE-Integrated Debugging
+## Cursor: IDE-Integrated Debugging
 
 Cursor integrates debugging directly into VS Code, combining traditional breakpoint-based debugging with AI assistance. This approach feels familiar if you've used traditional debuggers but adds AI-powered insights.
 
-Practical Example: Using Cursor's Debug Panel
+## Practical Example: Using Cursor's Debug Panel
 
 Using the same `calculateTotal` function:
 
@@ -92,7 +91,7 @@ Using the same `calculateTotal` function:
 
 Cursor's advantage is immediacy, you see actual variable values at crash time, not just predictions.
 
-Cursor's Strengths in Runtime Debugging
+## Cursor's Strengths in Runtime Debugging
 
 Live variable inspection: Watch actual values change during execution. For complex objects, expand nested properties to see exactly what data caused the failure.
 
@@ -114,7 +113,7 @@ Debug console: Execute JavaScript in the context of the paused program to test h
 < "undefined"
 ```
 
-Comparing Approaches
+## Comparing Approaches
 
 | Aspect | Claude Code | Cursor |
 |--------|-------------|--------|
@@ -124,7 +123,7 @@ Comparing Approaches
 | Learning | Explains why errors occur | Shows what went wrong |
 | Complexity | Handles multi-file issues | Best for single-file tracing |
 
-When to Use Each Tool
+## When to Use Each Tool
 
 Choose Claude Code when:
 - You're stuck and don't know where to start
@@ -138,7 +137,7 @@ Choose Cursor when:
 - You're comfortable with traditional debugging workflows
 - The bug requires understanding exact execution flow
 
-Hybrid Approach: Best of Both Worlds
+## Hybrid Approach: Best of Both Worlds
 
 Many developers use both tools together:
 
@@ -148,7 +147,7 @@ Many developers use both tools together:
 
 This combination uses Claude Code's breadth of understanding and Cursor's depth of inspection.
 
-Key Takeaways
+## Key Takeaways
 
 Runtime error debugging doesn't have to be a solitary struggle. Both Claude Code and Cursor offer powerful AI-assisted approaches:
 

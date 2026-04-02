@@ -18,7 +18,7 @@ Claude Code Grafana Dashboard Configuration Workflow Tips
 
 Configuring Grafana dashboards efficiently can significantly impact your monitoring capabilities and team productivity. Claude Code provides powerful capabilities to streamline this process, from generating JSON configurations to automating provisioning workflows. This guide covers practical tips for integrating Claude Code into your Grafana dashboard configuration pipeline.
 
-Understanding the Grafana JSON Structure
+## Understanding the Grafana JSON Structure
 
 Grafana dashboards are fundamentally JSON documents. This design decision makes them ideal for programmatic generation and modification. A typical Grafana dashboard JSON contains several key sections: the dashboard metadata, panel definitions, template variables, and annotations.
 
@@ -26,7 +26,7 @@ When working with Claude Code, understanding this structure helps you communicat
 
 For instance, when you need a service health dashboard, describe it as: "Generate a Grafana dashboard JSON with three graph panels showing request rate, error rate, and latency percentiles, using Prometheus as the data source, with a service template variable." This specificity produces more accurate results.
 
-Using Claude Skills for Dashboard Generation
+## Using Claude Skills for Dashboard Generation
 
 Several Claude skills can enhance your Grafana workflow. The pdf skill helps you extract monitoring requirements from existing documentation. The tdd skill assists in creating testable dashboard configurations. For documentation purposes, the docx skill can generate reports about your monitoring setup.
 
@@ -53,7 +53,7 @@ Refresh Intervals
 
 This context helps Claude generate consistent dashboards across your organization.
 
-Automating Dashboard Provisioning
+## Automating Dashboard Provisioning
 
 The most powerful workflow combines Claude Code with Grafana's provisioning system. Provisioning allows you to store dashboard definitions as code in version control, eliminating manual dashboard creation through the UI.
 
@@ -74,7 +74,7 @@ providers:
 
 When you need a new service dashboard, invoke Claude with a structured prompt that includes your service name, key metrics, and any specific thresholds. Claude generates the JSON file and places it in the correct provisioning directory.
 
-Generating Dashboards from Specifications
+## Generating Dashboards from Specifications
 
 A structured specification-to-JSON workflow makes dashboard generation reproducible. Define monitoring requirements in a human-readable YAML file, then let Claude generate the complex Grafana JSON from it:
 
@@ -126,7 +126,7 @@ services:
 
 Claude can iterate through this configuration and generate individual dashboard JSON files for each service, plus an aggregate overview dashboard. Store specification files alongside service code so dashboard changes flow through the same code review process.
 
-Template Variables for Dynamic Dashboards
+## Template Variables for Dynamic Dashboards
 
 Template variables transform static dashboards into dynamic monitoring tools. Claude excels at generating the variable definitions that make your dashboards reusable across multiple services or environments.
 
@@ -156,7 +156,7 @@ A well-structured variable configuration looks like:
 
 When working with template variables, communicate the data source and label names to Claude. Specify whether variables should be dependent on other variables, which affects the query order in the generated JSON.
 
-Panel Library Workflow
+## Panel Library Workflow
 
 Building a panel library accelerates dashboard creation significantly. Store reusable panel configurations as JSON snippets that Claude can assemble into complete dashboards.
 
@@ -188,7 +188,7 @@ A panel snippet for a latency histogram might include:
 
 Claude can combine multiple panel snippets, adjust the queries for your specific metrics, and generate a complete dashboard in seconds.
 
-Handling Multi-Environment Configurations
+## Handling Multi-Environment Configurations
 
 Production environments often require different dashboard configurations than staging or development. Claude can generate environment-specific overrides while maintaining a common base structure.
 
@@ -200,7 +200,7 @@ The recommended approach uses dashboard folders in Grafana and variable substitu
 
 Claude can analyze your existing dashboards, identify environment-specific elements, and propose a consolidated structure that reduces maintenance overhead.
 
-Validating Dashboard JSON
+## Validating Dashboard JSON
 
 Before deploying dashboard configurations, validate the JSON structure. Claude can review generated dashboards for common issues:
 
@@ -218,7 +218,7 @@ jq empty dashboards/service-monitor.json && echo "Valid JSON"
 
 For deeper validation, integrate with Grafana's API to test dashboard imports before deployment.
 
-Integrating Alerts with Dashboard Generation
+## Integrating Alerts with Dashboard Generation
 
 Dashboard automation becomes more powerful when alert configuration is generated from the same specification. Define both the visualization and alerting rules together:
 
@@ -240,7 +240,7 @@ dashboard_with_alerts:
 
 Claude generates both the Grafana dashboard JSON and the Prometheus alerting rules from this specification, ensuring your visualizations and alerts stay synchronized as the service evolves.
 
-Best Practices for Dashboard as Code
+## Best Practices for Dashboard as Code
 
 Treat your dashboard configurations with the same care as application code. Version control enables history tracking, code review for monitoring changes, and easy rollback when issues arise.
 
@@ -254,7 +254,7 @@ git push origin main
 
 This approach, combined with Claude's code generation capabilities, creates a sustainable monitoring infrastructure that evolves with your services.
 
-Workflow Summary
+## Workflow Summary
 
 The most effective Claude Code Grafana workflow follows these steps:
 
@@ -268,7 +268,6 @@ The most effective Claude Code Grafana workflow follows these steps:
 8. Review generated dashboards for accuracy
 
 By integrating Claude Code into your Grafana workflow, you reduce manual configuration time, ensure consistency across dashboards, and maintain a sustainable monitoring infrastructure. The key is providing Claude with specific requirements and maintaining organized panel libraries for reuse.
-
 
 Related Reading
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Service Worker Caching Workflow
 
 Service workers have become essential for building Progressive Web Apps (PWAs) that deliver fast, reliable experiences. When combined with Claude Code, you can automate the creation, testing, and optimization of service worker caching strategies that would otherwise require significant manual effort. This guide walks you through using Claude Code to implement professional-grade caching workflows using the raw Cache API with no external dependencies. For a library-based approach using Google's Workbox, see the [Workbox Service Worker Workflow Guide](/claude-code-for-workbox-service-worker-workflow-guide/).
 
-Understanding Service Worker Caching Basics
+## Understanding Service Worker Caching Basics
 
 Before diving into the workflow, let's establish the core concepts. Service workers act as a programmable network proxy between your web app and the network, intercepting requests and deciding whether to serve cached responses or fetch fresh data.
 
@@ -30,7 +29,7 @@ Claude Code can help you generate these caching strategies by understanding your
 - Stale-While-Revalidate: Serve cached content while updating in background
 - Cache Only: Only serve from cache, useful for offline-first assets
 
-Setting Up Your Project with Claude Code
+## Setting Up Your Project with Claude Code
 
 Start by initializing your PWA project with Claude Code. This establishes the foundation for all subsequent caching logic:
 
@@ -47,7 +46,7 @@ When working with Claude Code, describe your caching requirements clearly. For e
 
 Claude Code will generate the appropriate Vite PWA configuration, which abstracts much of the service worker boilerplate.
 
-Implementing Cache-First for Static Assets
+## Implementing Cache-First for Static Assets
 
 Static assets, JavaScript bundles, CSS files, fonts, and images, rarely change and should be cached aggressively. Here's how Claude Code helps you implement a cache-first strategy:
 
@@ -111,7 +110,7 @@ self.addEventListener('fetch', (event) => {
 
 The key insight here is returning the cached response immediately while asynchronously updating the cache in the background. This provides instant load times while ensuring users eventually receive fresh content.
 
-Implementing Stale-While-Revalidate for Dynamic Content
+## Implementing Stale-While-Revalidate for Dynamic Content
 
 For dynamic content like API responses, the stale-while-revalidate strategy offers the best balance between freshness and speed. Claude Code can generate this pattern automatically:
 
@@ -146,7 +145,7 @@ self.addEventListener('fetch', (event) => {
 
 This approach serves cached data instantly, dramatically improving perceived performance while keeping content reasonably fresh.
 
-Advanced: Versioned Caching with Claude Code
+## Advanced: Versioned Caching with Claude Code
 
 Production apps require careful cache versioning to prevent users from receiving stale JavaScript or CSS. Claude Code can generate sophisticated versioning strategies:
 
@@ -179,7 +178,7 @@ self.addEventListener('activate', (event) => {
 
 When using build tools like Vite or Webpack, configure them to output content-hashed filenames. Claude Code can then help you generate the service worker that reads these hashes from your manifest.
 
-Testing Your Service Worker
+## Testing Your Service Worker
 
 Claude Code accelerates testing by generating test cases and debugging strategies. Here's a practical testing workflow:
 
@@ -207,7 +206,7 @@ describe('Service Worker Caching', () => {
 });
 ```
 
-Actionable Best Practices
+## Actionable Best Practices
 
 Based on working with Claude Code on numerous PWA projects, here are recommendations:
 
@@ -217,7 +216,7 @@ Based on working with Claude Code on numerous PWA projects, here are recommendat
 4. Handle Updates Gracefully: Use skipWaiting and clients.claim to activate new service workers immediately
 5. Monitor Cache Usage: Add analytics to track cache hit rates and adjust strategies
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Claude Code can help you recognize and fix these frequent issues:
 
@@ -226,7 +225,7 @@ Claude Code can help you recognize and fix these frequent issues:
 - Forgetting to update cache versions: Always increment cache names when content changes
 - Not handling fetch failures: Always have a fallback when both cache and network fail
 
-Conclusion
+## Conclusion
 
 Building solid service worker caching doesn't require starting from scratch. By using Claude Code to generate, test, and refine your caching strategies, you can implement professional-grade offline capabilities in a fraction of the time. Start with the patterns in this guide, adapt them to your specific use cases, and continuously monitor performance to optimize the experience for your users.
 

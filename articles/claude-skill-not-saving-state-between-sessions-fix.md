@@ -16,7 +16,7 @@ permalink: /claude-skill-not-saving-state-between-sessions-fix/
 
 Every Claude Code session starts fresh. When you close a session. or it times out. everything Claude knew from that conversation is gone. Skills like [`tdd` skill](/best-claude-skills-for-developers-2026/), `pdf`, `frontend-design`, and even `supermemory` do not automatically remember what happened in the previous session unless you have explicitly configured persistence. This guide explains the mechanics and gives you practical fixes.
 
-Why Claude Skills Are Stateless
+## Why Claude Skills Are Stateless
 
 A Claude Code skill is a `.md` file stored in `~/.claude/skills/`. When you invoke `/tdd`, Claude reads that file and uses its instructions to shape behavior for the current session. The file is read-only instructions. it does not accumulate state, write logs, or remember previous sessions.
 
@@ -48,7 +48,7 @@ Load all notes tagged [project:myapp]. Summarize current state.
 
 `supermemory` only works if you invoke it explicitly. It does not auto-save. Build the habit of ending every significant session with a save command.
 
-Ensure the storage path is writable
+## Ensure the storage path is writable
 
 By default `supermemory` writes to a path relative to your home directory. If that path ends up on a read-only or synced volume, saves will fail. Run this to verify:
 
@@ -93,7 +93,7 @@ Any skill you invoke during the session will have this context automatically. Th
 
 Keep `CLAUDE.md` updated manually. It is a living document, not auto-updated. After each significant session, add new decisions to it.
 
-Fix 3: Use File-Based State for In-Progress Tasks
+## Fix 3: Use File-Based State for In-Progress Tasks
 
 For tasks that span multiple sessions. implementing a feature, writing a test suite, building a component library. instruct Claude to write progress to a dedicated file:
 
@@ -149,7 +149,7 @@ Session end:
 2. Update CLAUDE.md manually if a project-wide decision was made
 ```
 
-Fix 5: Automate Session-End Saves With a Hook
+## Fix 5: Automate Session-End Saves With a Hook
 
 Claude Code supports hooks that run at session end. You can use a hook to automatically prompt for a `supermemory` save:
 
@@ -173,7 +173,7 @@ Claude Code supports hooks that run at session end. You can use a hook to automa
 
 This is a reminder, not an automated save. Claude still needs to be given a save command before the session closes.
 
-Common Pitfalls
+## Common Pitfalls
 
 Expecting skills to auto-save. No Claude Code skill auto-saves state. You must explicitly instruct Claude to write to a file or call `supermemory` before the session ends.
 
@@ -183,7 +183,7 @@ Closing the session before saving. If you close the terminal window or the sessi
 
 Outdated `CLAUDE.md` causing confusion. If `CLAUDE.md` says "PR #142 is in review" but it merged months ago, Claude gets incorrect context. Keep the file current.
 
-Choosing the Right Approach
+## Choosing the Right Approach
 
 | What you want to persist | Use |
 |---|---|

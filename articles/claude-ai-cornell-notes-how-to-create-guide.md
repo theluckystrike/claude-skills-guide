@@ -16,7 +16,7 @@ permalink: /claude-ai-cornell-notes-how-to-create-guide/
 
 Cornell Notes are one of the most effective study formats ever developed, and Claude AI turns what used to be a slow manual process into something you can do in under a minute. I use this method regularly when processing lecture material, research papers, and technical documentation. This guide walks you through the exact process, with prompts you can copy and start using immediately.
 
-What Are Cornell Notes
+## What Are Cornell Notes
 
 The Cornell Note-Taking System was developed at Cornell University in the 1950s by Professor Walter Pauk. It divides a page into three sections:
 
@@ -26,19 +26,19 @@ The Cornell Note-Taking System was developed at Cornell University in the 1950s 
 
 This structure forces active engagement with the material. Instead of passively transcribing, you are constantly asking "what is the key question here?" and "how would I summarize this?" That is what makes Cornell Notes more effective than linear note-taking for long-term retention.
 
-Why Use Claude AI for Cornell Notes
+## Why Use Claude AI for Cornell Notes
 
 Creating Cornell Notes by hand is time-consuming. You need to read the source material, identify the key concepts, formulate questions for the cue column, organize the notes, and write a summary. Claude AI handles all of these steps in a single interaction.
 
 There are three practical advantages. First, Claude processes large volumes of material quickly. A 20-page research paper that might take an hour to convert into Cornell Notes by hand takes seconds. Second, Claude generates high-quality cue questions that target the most important concepts, which improves your review sessions. Third, you can iterate. If the notes are too detailed or too sparse, you adjust the prompt and regenerate.
 
-Step-by-Step: Creating Cornell Notes with Claude
+## Step-by-Step: Creating Cornell Notes with Claude
 
-Step 1. Gather Your Source Material
+## Step 1. Gather Your Source Material
 
 Start with the content you want to convert. This can be text from a lecture transcript, a chapter from a textbook, notes you already have, or a research paper. Copy the relevant text or have the document ready to paste.
 
-Step 2. Use a Basic Cornell Notes Prompt
+## Step 2. Use a Basic Cornell Notes Prompt
 
 Open Claude and paste the following prompt along with your source material:
 
@@ -56,7 +56,7 @@ Source material:
 
 This prompt works well for most content. Claude will return a clearly structured set of notes with the three-section format.
 
-Step 3. Use a Detailed Prompt for Better Results
+## Step 3. Use a Detailed Prompt for Better Results
 
 For longer or more complex material, I use a more specific prompt that gives Claude additional constraints. This produces tighter, more useful notes:
 
@@ -77,7 +77,7 @@ Source material:
 
 The constraint on question count prevents Claude from producing an overwhelming wall of notes. The instruction about jargon keeps the output accessible during later review.
 
-Step 4. Review and Refine
+## Step 4. Review and Refine
 
 Claude will return your Cornell Notes in a clean format. Read through them and check two things: do the cue questions actually test understanding (not just vocabulary), and does the summary capture the core idea? If something is off, tell Claude what to adjust:
 
@@ -89,7 +89,7 @@ Also make the summary more specific about the practical applications.
 
 This iterative refinement is where [strong prompting technique](/how-to-write-effective-prompts-for-claude-code/) makes the biggest difference. Specific feedback produces specific improvements.
 
-A Complete Prompt Template
+## A Complete Prompt Template
 
 Here is the full template I use for most of my Cornell Notes work. It handles edge cases like technical content, multiple topics within one source, and varying levels of detail:
 
@@ -125,7 +125,7 @@ SOURCE MATERIAL:
 
 This template works for textbook chapters, lecture recordings (paste the transcript), journal articles, and technical documentation. I have used it across subjects from biology to software architecture with consistently good results.
 
-Tips for Better Cornell Notes from Claude
+## Tips for Better Cornell Notes from Claude
 
 Be specific about your audience level. If you are an undergraduate studying introductory biology, tell Claude that. If you are a graduate researcher, say so. Claude adjusts the depth and vocabulary accordingly. Adding "I am a second-year medical student" to the prompt changes the output significantly.
 
@@ -137,7 +137,7 @@ Process one topic at a time. A 50-page document covering five distinct topics sh
 
 Use your Cornell Notes for active recall. The entire point of the cue column is to cover the notes column and test yourself. If you are just reading through your notes passively, you are missing the primary benefit of the format. Consider pairing your Cornell Notes with [flashcard tools](/ai-flashcard-maker-chrome-extension/) for spaced repetition review.
 
-Example Output
+## Example Output
 
 Here is what Claude produces when I feed it a paragraph about photosynthesis from an introductory biology textbook:
 
@@ -153,7 +153,7 @@ Summary: Photosynthesis converts light energy into chemical energy through two l
 
 The output is clean, testable, and ready for review.
 
-Going Further
+## Going Further
 
 Cornell Notes are one application of using AI for structured learning. If you are building study workflows, you may also find value in [AI-powered study helper tools](/ai-study-helper-chrome-extension/) or [browser-based Cornell Notes templates](/chrome-extension-cornell-notes-template/) that let you capture notes while browsing. For more on getting the most out of Claude, the [beginner's guide to Claude Code](/claude-code-for-beginners-complete-getting-started-2026/) covers setup and core concepts.
 

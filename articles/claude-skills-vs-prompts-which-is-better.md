@@ -43,7 +43,7 @@ tools:
 
 When you invoke this skill, either explicitly with `/api-docs` or implicitly when Claude detects you're working on API documentation, it loads this context automatically. You skip the setup conversation entirely.
 
-Traditional Prompts: The Default Approach
+## Traditional Prompts: The Default Approach
 
 Prompts have been the primary way to interact with Claude. You describe what you want, provide context, and Claude responds. For example:
 
@@ -58,7 +58,7 @@ This works well for one-off tasks. You explain the requirements, Claude understa
 
 The downside becomes apparent when you do this kind of task repeatedly. You end up copy-pasting long context blocks into every conversation, or re-explaining the same conventions session after session. That repetitive overhead adds up quickly.
 
-When Prompts Work Best
+## When Prompts Work Best
 
 Prompts shine in several scenarios:
 
@@ -72,7 +72,7 @@ Quick questions should stay as prompts. "What's the time complexity of a balance
 
 Here's a useful mental test: if you would not bother creating a shell alias for a terminal command because you only run it once a year, don't create a skill for it either.
 
-The Case for Claude Skills
+## The Case for Claude Skills
 
 Skills become valuable when you perform tasks repeatedly with consistent requirements. Consider the tdd skill, if you practice test-driven development regularly, the skill encapsulates your preferred patterns, testing frameworks, and workflows. Instead of explaining your TDD process each time, you simply invoke the skill and start coding. For the full developer skill stack built around tdd, see [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/).
 
@@ -82,7 +82,7 @@ Supermemory represents another category, skills that connect Claude to external 
 
 Skills also enforce consistency across a team. When every developer on a project uses the same api-docs or tdd skill, the output follows the same conventions without anyone having to coordinate. That's a significant advantage in collaborative environments.
 
-Comparing Performance: A Direct Breakdown
+## Comparing Performance: A Direct Breakdown
 
 The choice often comes down to several concrete dimensions. Here's how skills and prompts compare across the factors that matter most:
 
@@ -99,11 +99,11 @@ The choice often comes down to several concrete dimensions. Here's how skills an
 
 For teams or for heavy personal use, the token cost difference becomes significant. A 500-token context block sent in every prompt across 50 sessions costs the same as 25,000 tokens of wasted context. A skill eliminates most of that overhead.
 
-Practical Side-by-Side Examples
+## Practical Side-by-Side Examples
 
 The abstract comparison becomes clearer with concrete scenarios.
 
-Scenario 1: One-off data conversion
+## Scenario 1: One-off data conversion
 
 You receive a CSV with inconsistent date formats and need to normalize it once. A prompt is the right tool:
 
@@ -115,7 +115,7 @@ Print the first 5 rows before and after.
 
 Done. You'll never need this exact task again. No skill needed.
 
-Scenario 2: Weekly sprint retrospective notes
+## Scenario 2: Weekly sprint retrospective notes
 
 You run sprint retros every two weeks and always document them the same way, action items, kudos, blockers, and a mood score. A skill makes sense here:
 
@@ -133,7 +133,7 @@ instructions: |
 
 Now every retro follows the same structure without you re-explaining the format. Two weeks later you type `/retro` and start dictating notes.
 
-Scenario 3: Test-driven development
+## Scenario 3: Test-driven development
 
 Using the tdd skill while building a new feature means Claude already knows your test runner (pytest, Jest, or otherwise), your preferred assertion style, and your coverage requirements. You skip the five lines of context-setting you'd otherwise include in every prompt:
 
@@ -151,7 +151,7 @@ Add tests for this new payment processing function.
 
 The skill carries the convention context invisibly.
 
-Context Management: The Core Tradeoff
+## Context Management: The Core Tradeoff
 
 In practice, the deepest difference between skills and prompts is context management. Prompts require you to include all relevant context in every message. Skills maintain context across sessions, reducing repetition and improving consistency.
 
@@ -161,7 +161,7 @@ This matters more than it might seem. Mid-size development projects routinely in
 
 Code quality often improves with skills too. A well-designed skill enforces best practices automatically. The canvas-design skill, for example, understands visual design patterns and can produce high-quality output without extensive prompting.
 
-Hybrid Approaches Work Best
+## Hybrid Approaches Work Best
 
 You don't have to choose exclusively between skills and prompts. Most experienced Claude users run both simultaneously.
 
@@ -181,7 +181,7 @@ Write tests for the new UserAuthService class in src/auth/user_auth.py
 
 This combination gives you both the efficiency of skills and the flexibility of prompts.
 
-Making the Decision
+## Making the Decision
 
 Ask yourself these questions when deciding which approach to use:
 
@@ -194,7 +194,7 @@ Ask yourself these questions when deciding which approach to use:
 
 The reality is that prompts remain essential for flexibility and quick interactions. Skills provide structure and efficiency for repeated workflows. Most power users benefit from both, prompts for exploration, skills for production work.
 
-Getting Started with Your First Skill
+## Getting Started with Your First Skill
 
 If you're ready to try skills, start with one that matches a frequent workflow. The pdf skill is straightforward for document processing tasks, see how it fits into full data pipelines in [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). The xlsx skill handles common spreadsheet operations. The canvas-design skill creates visual assets without design tools.
 

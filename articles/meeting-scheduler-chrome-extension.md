@@ -16,7 +16,7 @@ score: 8
 
 Chrome extensions that handle meeting scheduling have become essential tools for developers and professionals who manage multiple calendars. Rather than switching between your browser and separate calendar applications, these extensions bring scheduling capabilities directly into your workflow. This guide explores how meeting scheduler Chrome extensions work, how to build one from scratch, and which integration patterns work best for different team scenarios.
 
-What Makes a Meeting Scheduler Extension Useful
+## What Makes a Meeting Scheduler Extension Useful
 
 A well-designed meeting scheduler extension solves several problems that developers face daily. First, it eliminates context switching between your current task and your calendar application. Instead of opening a new tab, searching your calendar, and navigating back, you can view and create meetings without leaving your current context. For developers deep in a debugging session or code review, this difference matters.
 
@@ -26,7 +26,7 @@ Third, browser extensions have access to the current page context in ways standa
 
 The most useful extensions integrate with popular calendar providers through their APIs. Google Calendar remains the most common integration, but many extensions also support Microsoft Outlook (via the Graph API), Fastmail, and self-hosted solutions like Radicale or Baikal. For teams with custom internal calendar systems, building your own extension is often the only practical option.
 
-Core Features to Implement
+## Core Features to Implement
 
 When building or choosing a meeting scheduler extension, evaluate it against these essential capabilities:
 
@@ -49,7 +49,7 @@ Calendar Switching: Support for multiple calendars allows you to check availabil
 
 Meeting Links: Automatic generation of conference links for services like Google Meet, Zoom, or Jitsi. Many teams use this to standardize meeting formats and ensure every meeting has a video link by default.
 
-Building a Basic Meeting Scheduler Extension
+## Building a Basic Meeting Scheduler Extension
 
 Creating a Chrome extension for meeting scheduling requires understanding the Chrome extension API and a calendar provider's API. Here is a practical example using the Google Calendar API with Manifest V3.
 
@@ -288,7 +288,7 @@ document.getElementById('createMeeting').addEventListener('click', async () => {
 });
 ```
 
-Handling OAuth Authentication
+## Handling OAuth Authentication
 
 The identity API handles OAuth without requiring you to manage tokens manually, but there are a few important details. The `getAuthToken` call will show a Chrome sign-in dialog the first time. On subsequent calls it returns the cached token silently.
 
@@ -324,9 +324,9 @@ async function fetchWithAuth(url, options = {}) {
 }
 ```
 
-Advanced Integration Patterns
+## Advanced Integration Patterns
 
-Context Menu Integration
+## Context Menu Integration
 
 Add scheduling options to right-click menus so users can turn any selected text into a meeting title:
 
@@ -362,7 +362,7 @@ chrome.storage.session.get('pendingMeetingTitle', ({ pendingMeetingTitle }) => {
 });
 ```
 
-Alarm-Based Badge Updates
+## Alarm-Based Badge Updates
 
 Show a badge on the extension icon indicating upcoming meetings within the next 30 minutes:
 
@@ -399,7 +399,7 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
 });
 ```
 
-Keyboard Command Handling
+## Keyboard Command Handling
 
 Handle the keyboard shortcut to open the popup and optionally pre-fill based on the current page:
 
@@ -419,7 +419,7 @@ chrome.commands.onCommand.addListener(async (command) => {
 });
 ```
 
-Meeting Templates
+## Meeting Templates
 
 For teams that run the same recurring meeting types, templates eliminate repetitive setup:
 
@@ -459,7 +459,7 @@ const standupTemplate = {
 
 Using `chrome.storage.sync` instead of `chrome.storage.local` for templates means they sync across the user's Chrome profile on different machines. a detail that matters for developers who work on multiple computers.
 
-Using Existing Extensions Effectively
+## Using Existing Extensions Effectively
 
 If you are evaluating existing extensions rather than building your own, these productivity practices apply broadly:
 
@@ -473,7 +473,7 @@ Multi-account configuration: If you manage multiple Google accounts (personal + 
 
 Review OAuth scopes granted: Before installing any third-party scheduling extension, check what OAuth scopes it requests. An extension that requests `https://www.googleapis.com/auth/calendar` (full access) when it only needs to create events is a red flag. The read-only scope `https://www.googleapis.com/auth/calendar.readonly` or the events-only scope `https://www.googleapis.com/auth/calendar.events` are more appropriate for most use cases.
 
-Security Considerations
+## Security Considerations
 
 Calendar data is sensitive: it reveals your schedule, your contacts, your working patterns, and sometimes meeting content through event titles or descriptions. Building or choosing a scheduling extension warrants careful security evaluation.
 
@@ -498,7 +498,7 @@ Data minimization: Avoid logging or storing meeting titles, attendee lists, or e
 
 Third-party extension auditing: Before installing a scheduling extension from the Chrome Web Store, review the requested permissions against what the extension claims to do. Check the privacy policy for data collection disclosures. Look at the number of users and reviews as a rough proxy for trustworthiness. For high-trust environments (enterprise, legal, healthcare), consider building your own extension instead.
 
-Comparison: Extension vs. Standalone Scheduling Tools
+## Comparison: Extension vs. Standalone Scheduling Tools
 
 | Factor | Chrome Extension | Calendly / Cal.com | Native Calendar App |
 |---|---|---|---|
@@ -512,12 +512,11 @@ Comparison: Extension vs. Standalone Scheduling Tools
 
 Browser extensions excel at internal scheduling and quick ad-hoc meeting creation. Standalone tools like Calendly work better when external parties need to book time on your calendar without back-and-forth emails. The two approaches are complementary: use an extension for internal meetings and a booking link service for external ones.
 
-Conclusion
+## Conclusion
 
 A well-built meeting scheduler Chrome extension reduces the friction between the work you are doing and the coordination required to do it with others. The core implementation. OAuth via `chrome.identity`, the Calendar API for event creation, and free/busy queries for availability. is straightforward once you understand the patterns. The enhancements (badge counts, context menus, templates, keyboard shortcuts) compound the value significantly.
 
 For developers who build their own extension, the Manifest V3 patterns above provide a complete foundation. For those evaluating existing extensions, the security checklist and feature comparison tables provide a framework for making an informed choice. Either way, the goal is the same: keep scheduling friction low enough that you actually do it correctly, every time.
-
 
 Related Reading
 

@@ -24,11 +24,11 @@ Traditional threat hunting often requires manual analysis of vast amounts of log
 - Generating detection rules based on suspicious patterns
 - Accelerating incident investigation with natural language querying
 
-Setting Up Your Threat Hunting Environment
+## Setting Up Your Threat Hunting Environment
 
 Before diving into threat hunting techniques, ensure your Claude Code environment is properly configured. You'll need access to log files, network captures, and security tooling.
 
-Required Tools and Permissions
+## Required Tools and Permissions
 
 Your Claude Code session needs specific tools for effective threat hunting:
 
@@ -46,7 +46,7 @@ The essential tools include:
 - Bash: Execute grep, awk, and other CLI security tools
 - Glob: Find specific file types across your environment
 
-Core Threat Hunting Techniques
+## Core Threat Hunting Techniques
 
 1. Log Analysis and Pattern Matching
 
@@ -107,9 +107,9 @@ volatility -f memory.dmp --profile=Win10x64_19041 netscan
 
 Claude Code can interpret these outputs, explain what each command reveals, and help you identify anomalies that warrant further investigation.
 
-Building Automated Hunting Workflows
+## Building Automated Hunting Workflows
 
-Creating a Reusable Threat Hunting Skill
+## Creating a Reusable Threat Hunting Skill
 
 You can create Claude Skills that encapsulate your hunting workflows for consistent reuse:
 
@@ -147,7 +147,7 @@ When I invoke this skill, I will:
 4. Present findings with severity ratings
 ```
 
-Integrating with SIEM and SOAR Platforms
+## Integrating with SIEM and SOAR Platforms
 
 For enterprise environments, integrate your Claude Code hunting workflows with SIEM solutions:
 
@@ -160,11 +160,11 @@ az monitor log-analytics query --workspace $WORKSPACE_ID \
   --query 'SecurityEvent | where TimeGenerated > ago(1h) | where AccountType == "User" | summarize count() by Account'
 ```
 
-Practical Example: Detecting Lateral Movement
+## Practical Example: Detecting Lateral Movement
 
 Lateral movement detection is a critical threat hunting use case. Here's how Claude Code can help:
 
-Step 1: Identify Suspicious Remote Execution
+## Step 1: Identify Suspicious Remote Execution
 
 ```bash
 Search for PowerShell remoting activity
@@ -172,14 +172,14 @@ grep -r "New-PSSession\|Invoke-Command" /var/log/*.log 2>/dev/null | \
   head -50
 ```
 
-Step 2: Correlate with Network Connections
+## Step 2: Correlate with Network Connections
 
 ```bash
 Find established connections from systems with PSRemoting
 netstat -antp | grep ESTABLISHED | awk '{print $4, $5, $6}' | sort | uniq
 ```
 
-Step 3: Analyze Account Activity
+## Step 3: Analyze Account Activity
 
 ```bash
 Check for unusual account logon patterns
@@ -188,7 +188,7 @@ lastlog | grep -v "Never logged in"
 
 Claude Code can explain these findings, correlate the data, and help you determine whether the activity represents legitimate administrative action or a potential compromise.
 
-Actionable Advice for Effective Threat Hunting
+## Actionable Advice for Effective Threat Hunting
 
 1. Start with high-fidelity alerts: Focus on techniques with low false positive rates before expanding coverage
 2. Document your hypotheses: Every hunt should start with a clear question or theory
@@ -196,7 +196,7 @@ Actionable Advice for Effective Threat Hunting
 4. Use threat intelligence: Integrate external feeds to prioritize known bad indicators
 5. Continuously refine: Track which hunts produce results and optimize accordingly
 
-Conclusion
+## Conclusion
 
 Claude Code transforms threat hunting from a purely manual, expertise-dependent practice into an accessible, automated workflow. By using Claude's natural language understanding and code execution capabilities, security teams can scale their hunting operations, reduce investigation time, and focus human expertise on complex threat analysis.
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Kestra Workflow Orchestration Guide
 
 Kestra is a powerful open-source workflow orchestration platform that enables developers to build complex data pipelines, automate business processes, and coordinate distributed systems. When combined with Claude Code, you gain an intelligent assistant that can help you design, debug, and optimize your Kestra workflows efficiently. This guide provides practical examples and actionable advice for integrating Claude Code into your Kestra workflow development process.
 
-Understanding Kestra Fundamentals
+## Understanding Kestra Fundamentals
 
 Kestra uses a declarative approach to workflow definition, where each workflow is defined in a YAML file that describes tasks, dependencies, and execution flow. The platform supports multiple trigger types, conditional logic, and parallel execution, making it suitable for scenarios ranging from simple batch jobs to complex event-driven architectures.
 
@@ -32,7 +31,7 @@ At its core, a Kestra workflow consists of:
 
 Claude Code can assist you in understanding these concepts, generating boilerplate code, and helping you troubleshoot issues in your workflows.
 
-Setting Up Claude Code for Kestra Development
+## Setting Up Claude Code for Kestra Development
 
 Before integrating Claude Code with Kestra, ensure you have both tools properly configured. Kestra can run either as a standalone application or within a Docker container, while Claude Code operates as a command-line assistant accessible through your terminal.
 
@@ -63,9 +62,9 @@ tasks:
       - {{ taskrun.id }}
 ```
 
-Practical Examples: Building Workflows with Claude Code
+## Practical Examples: Building Workflows with Claude Code
 
-Example 1: Data ETL Pipeline
+## Example 1: Data ETL Pipeline
 
 Let's walk through creating a complete ETL (Extract, Transform, Load) pipeline using Claude Code assistance. When you describe your requirements to Claude Code, it can generate the appropriate YAML structure:
 
@@ -114,7 +113,7 @@ tasks:
 
 Claude Code can help you customize this template for your specific data sources, add error handling, and optimize the execution flow.
 
-Example 2: Event-Driven Workflow
+## Example 2: Event-Driven Workflow
 
 Kestra excels at handling event-driven architectures. Here's how Claude Code might help you set up a workflow triggered by file changes:
 
@@ -154,7 +153,7 @@ tasks:
       - {{ taskrun.id }}
 ```
 
-Actionable Advice for Kestra Development
+## Actionable Advice for Kestra Development
 
 1. Use Descriptive Task IDs
 
@@ -212,7 +211,7 @@ namespace: company.team.project
 
 This helps with permission management and keeps related workflows together.
 
-Debugging Kestra Workflows with Claude Code
+## Debugging Kestra Workflows with Claude Code
 
 When your workflows fail, Claude Code can help you diagnose issues by:
 
@@ -223,7 +222,7 @@ When your workflows fail, Claude Code can help you diagnose issues by:
 
 Provide Claude Code with the error details and relevant workflow sections, and it can guide you through the debugging process step by step.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Kestra workflow orchestration dramatically improves your development productivity. By using Claude Code's understanding of Kestra's architecture and best practices, you can create solid, efficient, and maintainable workflows faster than ever. Start by defining your workflow requirements clearly, use the practical examples in this guide as templates, and apply the actionable advice to optimize your Kestra implementations.
 

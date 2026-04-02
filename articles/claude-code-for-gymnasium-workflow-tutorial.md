@@ -13,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Gymnasium Workflow Tutorial
-
 Gymnasium has become the standard Python interface for reinforcement learning (RL) environments, offering a unified API for training agents across diverse tasks. Whether you're building your first RL agent or scaling up complex multi-environment training, Claude Code can significantly streamline your development workflow. This tutorial covers practical patterns for integrating Claude Code into your Gymnasium projects, from initial setup through deployment, debugging, and long-term maintenance.
 
-Setting Up Gymnasium with Claude Code
+## Setting Up Gymnasium with Claude Code
 
 Getting started with Gymnasium is straightforward, but Claude Code can help you set up the entire environment with best practices from day one. Start by asking Claude to scaffold your RL project structure:
 
@@ -57,7 +54,7 @@ Add requirements.txt with gymnasium, stable-baselines3, numpy, and torch. Use sp
 
 This ensures all your dependencies work together without conflicts. a common problem in RL projects where library version mismatches can cause frustrating runtime errors. Claude will typically pin versions and add a note explaining why each version was chosen, which helps when you need to reproduce results or onboard new team members.
 
-Python Environment Setup
+## Python Environment Setup
 
 Before installing packages, ask Claude to set up a proper virtual environment workflow:
 
@@ -75,7 +72,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 Claude Code can also help you write a `setup.py` or `pyproject.toml` if you want to package your environments and agents as installable modules. useful for larger projects shared across a team.
 
-Creating Your First Training Loop
+## Creating Your First Training Loop
 
 The core of any RL project is the training loop. Claude Code can help you write efficient, well-structured training code that follows best practices. Here's a practical pattern for a basic training workflow:
 
@@ -155,7 +152,7 @@ if __name__ == "__main__":
 
 The key difference here is the use of `SubprocVecEnv`, which runs each environment in a separate process for true parallelism. critical when environments have heavy computation like physics simulations or custom rendering.
 
-Building Custom Gymnasium Environments
+## Building Custom Gymnasium Environments
 
 Creating custom environments is where Claude Code truly shines. The Gymnasium API requires implementing specific methods, and Claude can guide you through the process while catching common mistakes.
 
@@ -247,7 +244,7 @@ For more complex environments, ask Claude to add specific features:
 Add hierarchical actions to the grid environment where the agent can move north/south/east/west. Include a step penalty and goal reward of 100. Add obstacle collision detection.
 ```
 
-Registering Custom Environments
+## Registering Custom Environments
 
 Once your environment is built, you need to register it so you can use `gym.make()`:
 
@@ -263,11 +260,11 @@ register(
 
 Ask Claude to generate this registration code along with the environment, and include it in your package's `__init__.py` for automatic registration on import.
 
-Integrating with Stable-Baselines3
+## Integrating with Stable-Baselines3
 
 Stable-Baselines3 (SB3) provides reliable implementations of popular RL algorithms. Claude Code can help you switch between algorithms and optimize their hyperparameters.
 
-Algorithm Comparison Table
+## Algorithm Comparison Table
 
 | Algorithm | Action Space | Best For | Sample Efficiency |
 |-----------|-------------|----------|-------------------|
@@ -309,9 +306,9 @@ ppo:
     net_arch: [64, 64]
 ```
 
-Advanced Training Patterns
+## Advanced Training Patterns
 
-Vectorized Environments
+## Vectorized Environments
 
 For faster training, use multiple environments in parallel. Claude can help set this up:
 
@@ -333,7 +330,7 @@ subproc_env = SubprocVecEnv([make_env(env_id, i) for i in range(8)])
 
 Ask Claude to add `VecNormalize` for observation and reward normalization. a technique that can significantly improve learning stability on environments with large or varied observation scales.
 
-Custom Callbacks
+## Custom Callbacks
 
 Track training progress with custom callbacks:
 
@@ -368,7 +365,7 @@ class WandBCallback(BaseCallback):
         return True
 ```
 
-Hyperparameter Optimization
+## Hyperparameter Optimization
 
 For systematic hyperparameter tuning, Claude can set up Optuna integration:
 
@@ -407,7 +404,7 @@ study.optimize(objective, n_trials=20)
 print("Best params:", study.best_params)
 ```
 
-Debugging RL Agents
+## Debugging RL Agents
 
 When your agent isn't learning, Claude Code helps diagnose common issues:
 
@@ -423,7 +420,7 @@ Typical issues Claude will identify:
 - Exploration. entropy coefficient might be too low, causing premature convergence
 - Environment bugs. rewards or transitions may be incorrect in custom environments
 
-Debugging Custom Environments
+## Debugging Custom Environments
 
 For custom environments, ask Claude to write a validation script:
 
@@ -454,7 +451,7 @@ for _ in range(100):
 print("Environment validation passed.")
 ```
 
-Training Diagnostics
+## Training Diagnostics
 
 Claude Code can also help you instrument training to catch problems early:
 
@@ -464,7 +461,7 @@ Add diagnostic logging to my training loop that tracks value loss, policy loss, 
 
 Monitoring `explained_variance` is particularly useful. if it drops below 0.8 during training, your value function is struggling, which usually causes policy degradation.
 
-Deployment and Inference
+## Deployment and Inference
 
 Once trained, deploy your model for inference:
 
@@ -503,7 +500,7 @@ For higher-throughput scenarios, ask Claude to convert to a batched inference en
 Create a Dockerfile for this Flask inference server. Use a slim Python base image and copy only the model file and application code.
 ```
 
-Exporting to ONNX
+## Exporting to ONNX
 
 For deployment in non-Python environments, ask Claude to add ONNX export:
 
@@ -513,7 +510,7 @@ Add a script to export the trained SB3 policy network to ONNX format for deploym
 
 ONNX export allows you to run the policy in environments without Python or PyTorch, useful for edge deployments or integration with game engines.
 
-Best Practices for RL Development with Claude
+## Best Practices for RL Development with Claude
 
 Start Simple: Begin with basic environments like CartPole before moving to complex custom environments. This helps you verify your training pipeline works end-to-end before introducing the complexity of custom reward functions and state spaces.
 

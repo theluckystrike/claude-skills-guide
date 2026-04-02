@@ -18,7 +18,7 @@ Using Claude Code for Kubernetes Priority Class Workflow
 
 Kubernetes PriorityClasses are a powerful mechanism for controlling pod scheduling order when cluster resources are constrained. When your cluster faces resource pressure, pods with higher priority are scheduled first, while lower-priority pods may be preempted or pending. This article explores how Claude Code can help you automate, manage, and optimize PriorityClass workflows in your Kubernetes clusters.
 
-Understanding Kubernetes Priority Classes
+## Understanding Kubernetes Priority Classes
 
 Before diving into automation, let's establish what PriorityClasses do in Kubernetes. A PriorityClass is a non-namespaced object that defines a mapping from a priority class name to the integer priority value. Higher values indicate greater priority.
 
@@ -46,7 +46,7 @@ Manual PriorityClass management becomes error-prone as your cluster grows. Commo
 
 Claude Code can help address these challenges by generating consistent configurations, documenting decisions, and maintaining audit trails.
 
-Setting Up Claude Code for Kubernetes Work
+## Setting Up Claude Code for Kubernetes Work
 
 First, ensure you have Claude Code installed and configured with kubectl access to your cluster. You'll also want the Kubernetes context properly set:
 
@@ -61,11 +61,11 @@ List existing PriorityClasses
 kubectl get priorityclasses.scheduling.k8s.io
 ```
 
-Creating PriorityClass Configurations with Claude Code
+## Creating PriorityClass Configurations with Claude Code
 
 Claude Code excels at generating consistent, well-documented Kubernetes manifests. Here's how to use it for PriorityClass creation:
 
-Generating a PriorityClass Template
+## Generating a PriorityClass Template
 
 Ask Claude Code to create a PriorityClass for your specific use case:
 
@@ -90,7 +90,7 @@ globalDefault: false
 description: "Batch processing jobs - can be preempted by interactive workloads"
 ```
 
-Building a PriorityClass Hierarchy
+## Building a PriorityClass Hierarchy
 
 A well-structured priority hierarchy is essential. Here's an example approach Claude Code can help design:
 
@@ -109,7 +109,7 @@ Generate a PriorityClass hierarchy with 5 levels for a typical production
 cluster, including all YAML manifests with proper descriptions.
 ```
 
-Automating PriorityClass Assignments in Pod Specs
+## Automating PriorityClass Assignments in Pod Specs
 
 Once you have your PriorityClasses defined, you need to assign them to pods. Claude Code can help generate pod specs with the correct priorityClassName:
 
@@ -135,7 +135,7 @@ spec:
   restartPolicy: Always
 ```
 
-Bulk Assignment Strategies
+## Bulk Assignment Strategies
 
 For managing priority assignments across many workloads, Claude Code can help you:
 
@@ -148,11 +148,11 @@ Review all Deployments in the production namespace and suggest
 priorityClassName assignments based on their resource requests and labels.
 ```
 
-Implementing Validation and Governance
+## Implementing Validation and Governance
 
 Claude Code can help enforce PriorityClass governance policies. Here's how to set up validation:
 
-Pre-deployment Validation
+## Pre-deployment Validation
 
 Create a script that validates PriorityClass usage before deployment:
 
@@ -183,7 +183,7 @@ echo "Validation passed for $MANIFEST"
 
 Ask Claude Code to generate this validation script tailored to your organization's policies.
 
-Policy Enforcement with OPA
+## Policy Enforcement with OPA
 
 For enterprise environments, consider using Open Policy Agent (OPA) to enforce PriorityClass rules:
 
@@ -205,7 +205,7 @@ deny[msg] {
 }
 ```
 
-Managing PriorityClass Changes Safely
+## Managing PriorityClass Changes Safely
 
 PriorityClass changes can impact pod scheduling significantly. Follow these best practices:
 
@@ -249,11 +249,11 @@ Key metrics to monitor:
 - `scheduler_preempted_pods` - preempted pods count
 - `priority_class_usage` - distribution across priority levels
 
-Practical Example: Multi-team Priority Management
+## Practical Example: Multi-team Priority Management
 
 Here's a complete workflow for managing priorities across multiple teams:
 
-Step 1: Define Team-specific PriorityClasses
+## Step 1: Define Team-specific PriorityClasses
 
 ```yaml
 team-platform.yaml
@@ -276,7 +276,7 @@ metadata:
 value: 50000
 ```
 
-Step 2: Create Team Ownership Labels
+## Step 2: Create Team Ownership Labels
 
 Ask Claude Code to generate RBAC policies:
 
@@ -285,7 +285,7 @@ Generate RBAC policies that allow each team to only modify their
 own PriorityClasses, with cluster-admin oversight for global defaults.
 ```
 
-Step 3: Implement Quotas
+## Step 3: Implement Quotas
 
 Prevent priority hoarding with ResourceQuotas that limit high-priority usage:
 
@@ -300,7 +300,7 @@ spec:
     priorityclass.scheduling.k8s.io/team-platform-critical: "20"
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code dramatically simplifies Kubernetes PriorityClass management by automating configuration generation, enforcing policies, and providing validation workflows. The key benefits include:
 

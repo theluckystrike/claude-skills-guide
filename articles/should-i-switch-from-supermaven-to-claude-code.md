@@ -13,12 +13,11 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-
 Should I Switch from Supermaven to Claude Code?
 
 If you're currently using Supermaven for AI-assisted coding, you might be wondering whether Claude Code is worth the switch. Both tools promise to accelerate your development workflow, but they take fundamentally different approaches. This guide will help you understand the key differences and determine which tool best suits your needs.
 
-Understanding the Core Difference
+## Understanding the Core Difference
 
 Supermaven operates as a traditional copilot-style code completion tool. It excels at inline completions, suggesting the next few lines of code as you type. It's fast, lightweight, and integrates smoothly with your IDE without requiring much configuration.
 
@@ -26,7 +25,7 @@ Claude Code, on the other hand, represents a more comprehensive approach to AI-a
 
 The fundamental question isn't simply about completion speed, it's about what kind of AI assistance you want in your development workflow.
 
-Claude Code Skills: A Game-Changing Feature
+## Claude Code Skills: A Game-Changing Feature
 
 The standout feature that might convince you to switch is Claude Code's skills system. Skills are reusable prompt templates that encapsulate specific workflows and expertise. Once installed, these skills become available whenever you're working with Claude Code.
 
@@ -42,7 +41,7 @@ This skill would understand your review preferences, apply consistent criteria, 
 
 You can browse and install skills from the Claude Skills Registry, or create your own custom skills tailored to your team's specific needs.
 
-Tool Use and Execution
+## Tool Use and Execution
 
 Another significant advantage of Claude Code is its tool use capability. While Supermaven suggests code, Claude Code can actually execute actions in your development environment:
 
@@ -68,13 +67,13 @@ Claude Code:
 
 Supermaven would simply suggest the next lines of code in your current file, useful, but far less powerful.
 
-Context and Understanding
+## Context and Understanding
 
 Claude Code demonstrates superior contextual understanding of your entire project. It maintains awareness of your codebase structure, dependencies, and existing patterns. When you ask about a specific function, it understands not just that function, but how it fits into the broader architecture.
 
 Supermaven's context is typically limited to the current file or a small window of recent code. While this makes it faster for simple completions, it struggles with tasks requiring broader project awareness.
 
-When to Stick with Supermaven
+## When to Stick with Supermaven
 
 Despite the advantages of Claude Code, Supermaven remains a solid choice in certain scenarios:
 
@@ -83,7 +82,7 @@ Despite the advantages of Claude Code, Supermaven remains a solid choice in cert
 - Resource-constrained machines: Claude Code's more extensive features require more system resources
 - Simple completion needs: If you primarily want fast inline completions without the overhead of an interactive agent
 
-When to Switch to Claude Code
+## When to Switch to Claude Code
 
 Claude Code becomes the clear winner in these situations:
 
@@ -94,7 +93,7 @@ Claude Code becomes the clear winner in these situations:
 - Code review at scale: Get comprehensive reviews of entire PRs with security and performance analysis
 - Multi-file operations: Create new features that span multiple files with consistent patterns
 
-Using Both Tools Together
+## Using Both Tools Together
 
 Many developers use Supermaven and Claude Code side by side. Supermaven handles routine inline completions while Claude Code tackles complex tasks. Here are effective combined workflow patterns:
 
@@ -104,7 +103,7 @@ Refactoring workflow: Invoke Claude Code to understand the code, plan refactorin
 
 Learning new codebases: Start with Claude Code for an architectural overview, navigate files while Supermaven provides context-aware completions, ask Claude Code for explanations of complex logic, then apply what you learned with Supermaven's help.
 
-Configuring Supermaven for Combined Use
+## Configuring Supermaven for Combined Use
 
 In VS Code, tune Supermaven's suggestion aggressiveness:
 
@@ -120,7 +119,7 @@ In VS Code, tune Supermaven's suggestion aggressiveness:
 
 Lower `probaThreshold` values produce more suggestions; higher values show only high-confidence completions. For Neovim, add Supermaven as an nvim-cmp source in your completion configuration.
 
-Making the Switch
+## Making the Switch
 
 If you decide to try Claude Code, here's how to get started:
 
@@ -132,7 +131,7 @@ If you decide to try Claude Code, here's how to get started:
 
 The transition doesn't have to be all-or-nothing. Many developers use both tools: Supermaven for quick inline completions during fast typing sessions, and Claude Code for complex tasks requiring deeper analysis and execution.
 
-Conclusion
+## Conclusion
 
 The decision between Supermaven and Claude Code ultimately depends on your workflow priorities. If you value speed and simplicity for inline completions, Supermaven serves you well. If you want a more powerful, capable AI assistant that can execute complex tasks and adapt to your project's specific needs, Claude Code's skills system and tool use capabilities make it worth the switch.
 

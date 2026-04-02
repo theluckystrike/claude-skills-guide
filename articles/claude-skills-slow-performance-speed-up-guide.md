@@ -16,7 +16,7 @@ permalink: /claude-skills-slow-performance-speed-up-guide/
 
 If your Claude Code skill workflows feel sluggish. long waits between tool calls, slow response generation, or sessions that drag on far longer than they should. the cause is almost always one of four things: too many tokens in context, unneeded tool round-trips, overly verbose skill definitions, or poor session scoping. This guide covers each one with actionable fixes.
 
-Why Claude Skills Can Be Slow
+## Why Claude Skills Can Be Slow
 
 Claude Code skill performance has two distinct components:
 
@@ -25,7 +25,7 @@ Claude Code skill performance has two distinct components:
 
 Both can make a skill feel slow, but the fixes are different. Most developers focus on tool execution when the real bottleneck is context size.
 
-Fix 1: Trim Your Skill Definitions
+## Fix 1: Trim Your Skill Definitions
 
 Every word in a skill file is loaded into context every time you invoke the skill. A 1,500-word skill definition adds ~2,000 tokens to every request. With three active skills in a session, that is 6,000 tokens of static overhead before you write a single character.
 
@@ -59,7 +59,7 @@ Write the failing test first. Then write the minimum implementation to make it p
 Then refactor. Use Jest for JavaScript, pytest for Python.
 ```
 
-Fix 2: Reduce Tool Call Round-Trips
+## Fix 2: Reduce Tool Call Round-Trips
 
 Each tool call (Bash execution, file read, file write) requires a separate API request. If your skill results in 20 sequential tool calls to accomplish something that could be done in 5, you are paying for 15 extra round-trips.
 
@@ -100,7 +100,7 @@ Now run /tdd and implement the AuthService tests.
 
 For the `frontend-design` skill, compact after completing each component. not at the end of the whole session.
 
-Fix 4: Scope Each Session Tightly
+## Fix 4: Scope Each Session Tightly
 
 The more prior conversation history in a session, the longer each new response takes to generate. For complex tasks, structure work into focused sessions rather than one marathon session:
 
@@ -137,7 +137,7 @@ Delete all entries older than 60 days.
 
 Regularly trimming the memory store keeps `supermemory` fast on session restore.
 
-Fix 6: Avoid Verbose Tool Output
+## Fix 6: Avoid Verbose Tool Output
 
 Tool outputs become part of the context window. A Bash command that dumps 500 lines of log output adds thousands of tokens to the session and slows every subsequent response.
 
@@ -161,7 +161,7 @@ When running tests, use summary output only. Run: `npm test --silent`
 For build errors, show only the first 20 lines: `npm run build 2>&1 | head -20`
 ```
 
-Fix 7: Scope Skill Instructions Precisely
+## Fix 7: Scope Skill Instructions Precisely
 
 The more specific your skill instructions, the faster Claude produces focused output. Remove unnecessary guidance from skill files that covers cases your use case never triggers:
 
@@ -194,7 +194,7 @@ Extract the executive summary from pages 1-5 of Q4-report.pdf only.
 
 Process sections in separate focused sessions rather than the entire document in one session.
 
-Fix 9: Profile With Session Timing
+## Fix 9: Profile With Session Timing
 
 To identify which specific part of your skill workflow is slow, time individual steps:
 
@@ -205,7 +205,7 @@ time npm run build 2>&1 | tail -5
 
 Then compare whether the slow phase is the tool execution (the `time` output shows it) or the Claude response generation (the pause before Claude shows its analysis). If tool execution is slow, optimize the command. If response generation is slow, reduce context.
 
-Benchmark: What "Fast" Looks Like
+## Benchmark: What "Fast" Looks Like
 
 For reference, a well-tuned Claude Code skill session should feel like:
 

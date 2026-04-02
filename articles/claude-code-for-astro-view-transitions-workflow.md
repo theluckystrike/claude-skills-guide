@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Astro View Transitions Workflow"
 description: "Learn how to use Claude Code skills to build smooth page transitions in Astro. Master the View Transitions API with practical examples and actionable."
@@ -14,17 +13,16 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Astro View Transitions Workflow
 
 Astro's View Transitions API provides a powerful way to create smooth, app-like page transitions without the complexity of a full SPA. When combined with Claude Code's skill system, you can automate the implementation of transition patterns, create reusable transition components, and build sophisticated animation workflows. This guide shows you how to use Claude Code to streamline your Astro view transitions development.
 
-Understanding Astro View Transitions
+## Understanding Astro View Transitions
 
 View Transitions in Astro allow you to create smooth navigation between pages while maintaining the benefits of static site generation. The API uses the browser's native View Transition API, which means excellent performance without heavy JavaScript bundles. Claude Code can help you understand, implement, and optimize these transitions for your specific use case.
 
-Why Use View Transitions
+## Why Use View Transitions
 
 Traditional page navigation feels abrupt and disjointed. View Transitions solve this by providing:
 
@@ -33,7 +31,7 @@ Traditional page navigation feels abrupt and disjointed. View Transitions solve 
 - Improved user perception of application speed
 - Zero JavaScript overhead when using the CSS-only approach
 
-Getting Started with View Transitions
+## Getting Started with View Transitions
 
 First, enable view transitions in your Astro project:
 
@@ -55,7 +53,7 @@ import { ViewTransitions } from 'astro:transitions';
 
 Claude Code can generate this setup automatically and explain each component's role in your workflow.
 
-Building Transition Components with Claude Code
+## Building Transition Components with Claude Code
 
 Creating reusable transition components accelerates your development significantly. string;
   easing?: string;

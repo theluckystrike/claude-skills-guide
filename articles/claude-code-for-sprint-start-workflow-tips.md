@@ -18,7 +18,7 @@ Starting a new sprint with the right workflow can set the tone for your entire d
 
 This guide covers practical patterns for using Claude Code at sprint start, backlog grooming, estimation sessions, test scaffolding, and standup preparation, while using specific Claude skills to streamline each workflow step.
 
-Preparing Your Backlog Before the Sprint Begins
+## Preparing Your Backlog Before the Sprint Begins
 
 Before your sprint planning meeting, spend time ensuring your backlog is ready for prioritization. Claude Code can accelerate this preparation significantly when you invoke the right skills.
 
@@ -35,11 +35,11 @@ Invoke a sprint-prep skill with your backlog context
 claude --print "Review these 12 tickets for the upcoming sprint and identify any blocking dependencies or unclear requirements"
 ```
 
-Streamlining Sprint Planning Sessions
+## Streamlining Sprint Planning Sessions
 
 During sprint planning, speed matters. You need quick turnarounds on estimation questions, architecture concerns, and technical approach decisions. Claude Code excels at rapid context analysis when you provide the right information upfront.
 
-Estimation Assistance
+## Estimation Assistance
 
 When story points feel ambiguous, ask Claude to break down complexity:
 
@@ -50,7 +50,7 @@ What are the likely complexity factors we should consider for estimation?"
 
 Claude can identify hidden complexities that often cause scope creep, database migrations, API rate limiting, error handling requirements, and testing overhead. This leads to more accurate sprint commitments.
 
-Technical Approach Validation
+## Technical Approach Validation
 
 Before committing to a technical approach during planning, use Claude to surface potential issues:
 
@@ -66,11 +66,11 @@ claude --print "Using the tdd skill, generate test scenarios for this login feat
 
 This immediate test generation during planning ensures your estimates account for verification effort.
 
-Test Setup Automation at Sprint Start
+## Test Setup Automation at Sprint Start
 
 One of the most time-consuming aspects of beginning new work is scaffolding tests and project structures. Claude Code dramatically accelerates this when you establish proper patterns.
 
-Project Initialization
+## Project Initialization
 
 Invoke the pdf skill early if your sprint involves documentation requirements. Many teams wait until sprint end to generate documentation, but starting earlier improves quality:
 
@@ -78,7 +78,7 @@ Invoke the pdf skill early if your sprint involves documentation requirements. M
 - User guides written alongside code
 - Architecture decision records created proactively
 
-Component Scaffolding
+## Component Scaffolding
 
 For frontend work beginning in the sprint, the frontend-design skill helps establish component patterns before development starts. Provide your design system tokens and existing component patterns:
 
@@ -88,7 +88,7 @@ claude --print "Using the frontend-design skill, generate a component pattern fo
 
 This generates reusable patterns that developers can immediately implement, reducing setup time significantly.
 
-Test Data Preparation
+## Test Data Preparation
 
 The [supermemory skill becomes valuable](/claude-supermemory-skill-persistent-context-explained/) when your sprint involves data-dependent features. If you've documented previous sprint data patterns, Claude can:
 
@@ -96,11 +96,11 @@ The [supermemory skill becomes valuable](/claude-supermemory-skill-persistent-co
 - Identify data edge cases from historical issues
 - Suggest fixture structures based on existing tests
 
-Daily Standup Preparation Workflows
+## Daily Standup Preparation Workflows
 
 Claude Code transforms standup preparation from a rushed morning chore into a structured reflection exercise. Several patterns work well:
 
-Yesterday-Today Blocker Format
+## Yesterday-Today Blocker Format
 
 Ask Claude to structure your updates before standup:
 
@@ -113,7 +113,7 @@ Blockers: Need API spec from backend team"
 
 This ensures clear, actionable communication without morning scrambling.
 
-Context Switching Reduction
+## Context Switching Reduction
 
 When working across multiple features or tickets, use Claude to maintain context:
 
@@ -123,7 +123,7 @@ When working across multiple features or tickets, use Claude to maintain context
 
 The xlsx skill can help teams track and visualize sprint progress through burndown charts and velocity graphs when invoked with appropriate data.
 
-Integrating Claude Skills Into Your Sprint Workflow
+## Integrating Claude Skills Into Your Sprint Workflow
 
 Building these patterns into your team's workflow requires consistency. Consider creating a sprint-specific skill that combines your team's conventions:
 
@@ -134,7 +134,7 @@ Building these patterns into your team's workflow requires consistency. Consider
 
 This creates a team-specific assistant that understands your context without requiring repetitive setup each sprint.
 
-Remote and Async Sprint Planning
+## Remote and Async Sprint Planning
 
 For distributed teams, Claude Code fills the async collaboration gap. Use it to:
 
@@ -144,7 +144,7 @@ For distributed teams, Claude Code fills the async collaboration gap. Use it to:
 
 The docx skill helps when your team maintains sprint documentation in Word format, generate formatted summaries directly from your planning notes.
 
-Measuring Sprint Workflow Improvements
+## Measuring Sprint Workflow Improvements
 
 Track these metrics to validate your Claude Code integration:
 
@@ -155,7 +155,7 @@ Track these metrics to validate your Claude Code integration:
 
 Most teams report 20-30% reductions in planning time after establishing Claude Code workflows, primarily from faster estimation and reduced scope ambiguity.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms sprint start from a chaotic meeting into a structured, AI-assisted workflow. By preparing backlogs with custom skills, automating test scaffolding, and streamlining standup preparation, development teams gain significant productivity improvements.
 

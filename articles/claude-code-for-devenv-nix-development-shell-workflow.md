@@ -13,18 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Devenv Nix Development Shell Workflow
-
 Modern development environments can quickly become complex, with multiple tools, languages, and configurations needed across different projects. Devenv, built on top of Nix, provides a declarative approach to managing development shells. Combined with Claude Code, you get an AI-powered assistant that understands your environment and helps you work more efficiently. This guide walks you through setting up and using Claude Code within a devenv Nix workflow.
 
-What Is Devenv and Why Use It
+## What Is Devenv and Why Use It
 
 Devenv is a modern development environment manager that uses Nix to create reproducible, declarative development environments. Unlike traditional approaches where you manually install tools and manage versions, devenv lets you define your entire development environment in code. This means every team member, and every CI pipeline, gets the exact same setup.
 
 The key benefits include consistent environments across machines, automatic setup when entering a project, and the ability to version control your entire development environment alongside your code. When you pair this with Claude Code, you gain an AI assistant that can read your devenv configuration, understand what tools are available, and help you work more effectively within that environment.
 
-Setting Up Devenv with Claude Code
+## Setting Up Devenv with Claude Code
 
 Before integrating Claude Code, ensure you have Nix installed with flakes enabled. Devenv requires the experimental flakes feature to function properly. Once Nix is ready, you can set up devenv in your project.
 
@@ -60,7 +57,7 @@ pre-commit:
 
 This configuration sets up Node.js 20.11.0 and Python 3.11, along with pre-commit hooks for code formatting. When you run `devenv shell`, Nix will build an environment with exactly these versions, no more "works on my machine" issues.
 
-Integrating Claude Code into Your Devenv Shell
+## Integrating Claude Code into Your Devenv Shell
 
 Once your devenv environment is configured, you can enhance it with Claude Code. The integration works by ensuring Claude Code has access to your environment's tools and can understand the context of your setup.
 
@@ -91,9 +88,9 @@ consistent environment.
 
 This file serves as instructions that Claude Code reads when working in your project. It helps the AI understand what tools are available and how to interact with your development environment.
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Automated Setup with Claude Code
+## Automated Setup with Claude Code
 
 When onboarding to a new project that uses devenv, Claude Code can guide you through the setup process. Simply ask:
 
@@ -103,7 +100,7 @@ Help me set up this project's development environment using devenv
 
 Claude Code will examine your `devenv.yaml`, `devenv.nix`, and other configuration files, then provide step-by-step instructions or even execute the setup for you.
 
-Working Within the Devenv Shell
+## Working Within the Devenv Shell
 
 To work effectively with Claude Code in your devenv environment, always enter the shell first:
 
@@ -119,7 +116,7 @@ Within this shell, Claude Code has access to all the tools defined in your confi
 - Generating boilerplate code
 - Refactoring while maintaining functionality
 
-Adding Dependencies Through Claude Code
+## Adding Dependencies Through Claude Code
 
 Need to add a new package to your environment? Ask Claude Code:
 
@@ -129,7 +126,7 @@ Add the 'requests' Python package to our devenv configuration
 
 Claude Code will update your `devenv.yaml` or `devenv.nix` appropriately. After the update, simply exit and re-enter the shell, or run `devenv update` to apply the changes.
 
-Advanced: Customizing Your Devenv for Claude Code
+## Advanced: Customizing Your Devenv for Claude Code
 
 For more advanced setups, you can extend your devenv configuration to include Claude Code-specific tooling. Add this to your `devenv.nix`:
 
@@ -161,7 +158,7 @@ For more advanced setups, you can extend your devenv configuration to include Cl
 
 This configuration ensures specific tools are available whenever you enter the development shell. The `enterShell` attribute lets you run commands automatically each time you activate the environment.
 
-Best Practices for Devenv and Claude Code Workflows
+## Best Practices for Devenv and Claude Code Workflows
 
 Keep your devenv configuration in version control alongside your code. This ensures every developer, and every CI pipeline, uses identical environments. When Claude Code makes changes to your configuration files, review them carefully before committing.
 
@@ -169,7 +166,7 @@ Use the CLAUDE.md file to document project-specific context that helps Claude Co
 
 When adding dependencies through Claude Code, verify that the changes make sense for your project. The AI might suggest packages that are helpful but not essential. Review each addition to keep your environment lean.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 If Claude Code cannot find a tool in your environment, make sure you're running commands from within an active devenv shell. The shell injects your configured tools into the PATH, making them available to Claude Code.
 
@@ -184,7 +181,7 @@ devenv shell
 
 This pulls the latest configurations and rebuilds your environment with any changes.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with devenv creates a powerful workflow for development environment management. Devenv provides reproducible, declarative environments that eliminate "works on my machine" problems, while Claude Code acts as an intelligent assistant that understands your setup and helps you work more efficiently. Start with a basic configuration, add your tools incrementally, and let Claude Code help you manage and extend your environment as your project grows.
 

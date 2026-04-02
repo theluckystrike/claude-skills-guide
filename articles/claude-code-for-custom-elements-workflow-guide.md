@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Custom Elements Workflow Guide
 
 Custom elements extend Claude Code's capabilities by creating reusable tools, skills, and function-calling patterns tailored to your specific development needs. This guide walks you through the workflow of building, integrating, and maintaining custom elements that streamline your AI-assisted development process.
 
-Understanding Custom Elements in Claude Code
+## Understanding Custom Elements in Claude Code
 
 Custom elements in Claude Code refer to user-defined components that add specialized functionality beyond the default toolset. These include:
 
@@ -32,7 +31,7 @@ The key advantage of custom elements is that they transform Claude from a genera
 
 This is particularly powerful for teams. When a new developer joins your project, they can load the same custom elements and instantly have Claude operating with team-specific knowledge. understanding your branching conventions, your database schema, your preferred patterns for error handling, and the tools specific to your stack.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before creating custom elements, ensure your environment is properly configured:
 
@@ -60,7 +59,7 @@ git add README.md
 git commit -m "Initial commit"
 ```
 
-Directory Layout That Scales
+## Directory Layout That Scales
 
 A well-organized directory layout makes it easy to find and maintain elements as your library grows:
 
@@ -82,11 +81,11 @@ A well-organized directory layout makes it easy to find and maintain elements as
      prod.yaml
 ```
 
-Creating Custom MCP Tools
+## Creating Custom MCP Tools
 
 Custom MCP tools enable Claude to interact with external services, databases, or APIs. Here's the workflow for creating one:
 
-Step 1: Define the Tool Specification
+## Step 1: Define the Tool Specification
 
 Create a JSON specification for your tool:
 
@@ -109,7 +108,7 @@ Create a JSON specification for your tool:
 
 Spending time on the description is not optional. it is the primary signal Claude uses when deciding whether to invoke this tool. A vague description like "does database things" will result in Claude under-utilizing or mis-using the tool. Be specific: describe what the tool does, what kinds of inputs it expects, and what it returns.
 
-Step 2: Implement the Tool Handler
+## Step 2: Implement the Tool Handler
 
 Create the execution logic:
 
@@ -170,7 +169,7 @@ def execute(query: str, limit: Optional[int] = None) -> str:
         return json.dumps({"error": f"Query failed: {str(e)}"})
 ```
 
-Step 3: Register the Tool
+## Step 3: Register the Tool
 
 Add the tool to your Claude Code configuration:
 
@@ -184,7 +183,7 @@ mcp_servers:
       - database-query
 ```
 
-Step 4: Verify Registration
+## Step 4: Verify Registration
 
 After restarting Claude Code, verify the tool is recognized:
 
@@ -194,11 +193,11 @@ In your Claude Code session, ask Claude:
 Claude should list database-query among its available tools.
 ```
 
-Building Reusable Skill Components
+## Building Reusable Skill Components
 
 Skill components allow you to package complex workflows into reusable units. The difference between a tool and a skill is scope: a tool performs a discrete action, while a skill encodes an entire working style or domain of knowledge.
 
-Structure Your Skill
+## Structure Your Skill
 
 ```
 my-skill/
@@ -208,7 +207,7 @@ my-skill/
  config.yaml       # Skill configuration
 ```
 
-Example Skill Definition
+## Example Skill Definition
 
 ```yaml
 ---
@@ -234,7 +233,7 @@ Generation Workflow
 4. Create basic CRUD endpoints
 ```
 
-A More Detailed Skill: Code Reviewer
+## A More Detailed Skill: Code Reviewer
 
 Here is an example of a richer skill that encodes team-specific review criteria:
 
@@ -277,7 +276,7 @@ For each issue found, output:
 
 When you invoke this skill via `/code-reviewer`, Claude loads all of that institutional knowledge and applies it without you needing to re-state it.
 
-Implementing Function-Calling Patterns
+## Implementing Function-Calling Patterns
 
 Custom function templates standardize how Claude calls external code:
 
@@ -311,7 +310,7 @@ class FunctionCaller {
 }
 ```
 
-Async Wrapper Pattern
+## Async Wrapper Pattern
 
 For tools that interact with external APIs, an async wrapper with retry logic prevents transient failures from derailing long sessions:
 
@@ -346,7 +345,7 @@ async def call_external_api(endpoint: str, payload: dict) -> str:
     pass
 ```
 
-Comparing Custom Element Approaches
+## Comparing Custom Element Approaches
 
 Choosing the right type of custom element depends on your use case. This comparison table helps clarify when to reach for each type:
 
@@ -359,7 +358,7 @@ Choosing the right type of custom element depends on your use case. This compari
 
 For most projects, skills provide the highest return on investment: they are easy to write, require no runtime infrastructure, and immediately make Claude more useful for your domain.
 
-Best Practices for Custom Elements
+## Best Practices for Custom Elements
 
 1. Keep Elements Focused
 
@@ -480,7 +479,7 @@ mcp_servers:
       PROJECT_DB_PATH: "/var/data/myproject.db"
 ```
 
-Integrating Custom Elements into Your Workflow
+## Integrating Custom Elements into Your Workflow
 
 Once created, integrate custom elements smoothly:
 
@@ -499,9 +498,9 @@ Update to latest version
 pip install --upgrade myteam-claude-elements
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Tool Not Found
+## Tool Not Found
 
 Verify the tool is properly registered in your configuration:
 
@@ -511,7 +510,7 @@ ls ~/.claude/skills/ | grep <skill-name>
 
 Also check that Claude Code was restarted after updating the configuration. Changes to `mcp-config.yaml` do not take effect in running sessions.
 
-Permission Errors
+## Permission Errors
 
 Check file permissions on your custom element scripts:
 
@@ -521,7 +520,7 @@ chmod +x ~/claude-custom-elements/tools/*.py
 
 If you are running tool handlers as a different user than the Claude Code process, ensure both users have read access to the script and any data files it references.
 
-Version Conflicts
+## Version Conflicts
 
 Ensure dependencies match between your elements and Claude Code version:
 
@@ -536,7 +535,7 @@ Create a `requirements.txt` in your tools directory and verify it is satisfied:
 pip install -r ~/claude-custom-elements/tools/requirements.txt
 ```
 
-Tool Invoked with Wrong Arguments
+## Tool Invoked with Wrong Arguments
 
 If Claude is consistently calling your tool with malformed arguments, the issue is usually in the tool description or `input_schema`. Revisit the schema and make the field descriptions as specific as possible. Adding an `examples` array to the schema (even though it is not part of the JSON Schema standard, Claude reads it) can dramatically improve invocation accuracy.
 
@@ -558,7 +557,7 @@ If Claude is consistently calling your tool with malformed arguments, the issue 
 }
 ```
 
-Real-World Scenario: Building a Project-Specific Element Library
+## Real-World Scenario: Building a Project-Specific Element Library
 
 Consider a team building a SaaS product with a PostgreSQL database, a REST API, and a React frontend. Their custom element library might look like this:
 
@@ -572,7 +571,7 @@ Consider a team building a SaaS product with a PostgreSQL database, a REST API, 
 
 With this library in place, a developer can ask Claude to "review the new UserProfile component" and Claude will automatically load the `react-reviewer` skill and apply the team's standards. without the developer needing to paste in the style guide every time.
 
-Conclusion
+## Conclusion
 
 Custom elements transform Claude Code into a powerful, customized development assistant. By following this workflow guide, you can create reliable, maintainable tools that handle your specific development needs. Start small, iterate quickly, and build up a library of custom elements that make your development workflow more efficient.
 

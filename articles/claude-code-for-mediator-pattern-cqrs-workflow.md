@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Mediator Pattern and CQRS Workflow
 
 Modern software architecture increasingly relies on patterns that separate concerns, improve testability, and make systems more maintainable. The mediator pattern and CQRS (Command Query Responsibility Segregation) are two powerful architectural approaches that work exceptionally well together. When implemented in Claude Code skills, they enable you to build more solid and scalable AI-powered workflows.
 
-Understanding the Mediator Pattern
+## Understanding the Mediator Pattern
 
 The mediator pattern is a behavioral design pattern that promotes loose coupling by encapsulating how objects interact. Instead of objects communicating directly with each other, they communicate through a central mediator object. This pattern is particularly valuable in Claude Code skills where multiple components need to coordinate without creating tight dependencies.
 
@@ -35,7 +34,7 @@ Commands represent write operations, actions that modify state. Queries represen
 
 In Claude Code skills, CQRS manifests naturally when you think about the different types of requests your skill might handle. Some requests ask the AI to perform actions (execute code, create files, send notifications), while others ask for information (explain code, analyze patterns, provide recommendations). Treating these as distinct operations with separate handlers leads to cleaner, more maintainable code.
 
-Implementing the Mediator Pattern in Claude Code Skills
+## Implementing the Mediator Pattern in Claude Code Skills
 
 The implementation begins with defining a clear structure for your skill. Create separate handler files for each type of operation, then build a mediator that routes requests appropriately. Here's a practical approach to structuring your Claude Code skill:
 
@@ -43,7 +42,7 @@ First, organize your skill directory to separate concerns. Create folders for co
 
 The mediator pattern shines when you need to compose multiple handlers. A single user request might require validation, transformation, execution, and notification. Rather than embedding all this logic in one place, each handler performs its specific task, and the mediator coordinates the sequence. This separation makes it easy to modify individual behaviors without affecting other parts of the system.
 
-Building a CQRS Workflow
+## Building a CQRS Workflow
 
 When implementing CQRS in your Claude Code skills, start by clearly distinguishing between commands and queries in your design. Commands should return a result that indicates success or failure, along with any relevant state changes. Queries should return formatted data optimized for consumption.
 
@@ -53,7 +52,7 @@ For queries, focus on data shaping and presentation. The query handler should tr
 
 The key to successful CQRS implementation is maintaining this separation consistently throughout your skill. Resist the temptation to mix command and query logic in the same handler, even if it seems convenient at the time. The long-term benefits of clean separation far outweigh the short-term convenience.
 
-Practical Example: Request Processing Pipeline
+## Practical Example: Request Processing Pipeline
 
 Let's examine how these patterns work together in practice. Imagine a Claude Code skill that helps developers manage tasks. The skill needs to handle various requests: creating tasks, listing tasks, updating task status, and generating task reports.
 
@@ -61,7 +60,7 @@ With the mediator pattern and CQRS, you'd structure this skill with distinct com
 
 The mediator receives the incoming request, determines whether it's a command or query, and dispatches it to the corresponding handler. The handler then processes the request and returns a result. This flow ensures that every request goes through a consistent pipeline while maintaining the flexibility to handle different types of operations.
 
-Best Practices and Actionable Advice
+## Best Practices and Actionable Advice
 
 When implementing these patterns in your Claude Code skills, start simple. Don't introduce the mediator pattern or CQRS unless you have a genuine need for the separation they provide. For smaller skills, a straightforward approach often works better than over-engineering with multiple layers of abstraction.
 
@@ -71,7 +70,7 @@ Document your handlers clearly. Since the mediator pattern creates a layer of in
 
 Finally, test each handler in isolation. The separation these patterns provide makes unit testing much easier. You can test command validation independently from query formatting, and you can test the mediator's routing logic separately from the handler logic.
 
-Conclusion
+## Conclusion
 
 The mediator pattern and CQRS workflow provide a solid foundation for building maintainable Claude Code skills. By separating concerns, creating clear boundaries between operations, and centralizing request routing, you create skills that are easier to understand, test, and extend. Start with simple implementations, and progressively add complexity as your needs grow. The patterns scale well, but they work equally well for smaller projects when applied thoughtfully.
 {% endraw %}

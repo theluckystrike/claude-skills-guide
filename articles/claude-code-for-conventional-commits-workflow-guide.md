@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Conventional Commits Workflow Guide
 
@@ -21,7 +20,7 @@ Conventional Commits provide a standardized format for commit messages that make
 
 This guide focuses on interactive, day-to-day workflows for writing Conventional Commits with Claude Code. For tooling enforcement. Husky, commitlint, CI/CD pipelines, and automated versioning. see the companion guide: [Claude Code Conventional Commits Enforcement Workflow](/claude-code-conventional-commits-enforcement-workflow/).
 
-Understanding Conventional Commits Basics
+## Understanding Conventional Commits Basics
 
 The Conventional Commits specification defines a structured format:
 
@@ -35,7 +34,7 @@ The Conventional Commits specification defines a structured format:
 
 The type categories include `feat` for new features, `fix` for bug fixes, `docs` for documentation, `style` for formatting, `refactor` for code restructuring, `test` for adding tests, and `chore` for maintenance tasks. This structured approach enables semantic versioning, automated changelog generation, and clearer project history.
 
-Setting Up Claude Code for Commit Assistance
+## Setting Up Claude Code for Commit Assistance
 
 To get started, create a dedicated Claude skill for conventional commits. This skill will guide you through crafting proper commit messages based on your staged changes.
 
@@ -57,9 +56,9 @@ Body: Explain what and why (not how)
 Footer: Breakage notices, issue references
 ```
 
-Practical Claude Code Workflows
+## Practical Claude Code Workflows
 
-Workflow 1: Interactive Commit Message Generation
+## Workflow 1: Interactive Commit Message Generation
 
 When you have staged changes and need help crafting a conventional commit, describe your changes to Claude Code:
 
@@ -79,7 +78,7 @@ feat(auth): add user login with email and password
 Closes #123
 ```
 
-Workflow 2: Batch Commit Organization
+## Workflow 2: Batch Commit Organization
 
 When working on multiple features, ask Claude Code to organize commits:
 
@@ -93,7 +92,7 @@ Claude Code will examine each file and recommend a grouping strategy, perhaps su
 - `tests: add unit tests for auth module` for test files
 - `docs: update API documentation` for documentation changes
 
-Workflow 3: Fix Commit Templates
+## Workflow 3: Fix Commit Templates
 
 Common fix patterns deserve quick templates. Teach Claude Code your organization's conventions:
 
@@ -124,21 +123,21 @@ charged the user twice. Added idempotency key checking.
 Fixes PROJ-456
 ```
 
-Actionable Tips for Daily Use
+## Actionable Tips for Daily Use
 
-Tip 1: Use Scopes Consistently
+## Tip 1: Use Scopes Consistently
 
 Scopes add context but only help when consistent. Common scopes include module names (auth, api, ui), file patterns (components, utils), or feature names. Document your project's scope list and share it with Claude Code.
 
-Tip 2: Keep Subject Lines Under 50 Characters
+## Tip 2: Keep Subject Lines Under 50 Characters
 
 Claude Code can help you truncate and rephrase to meet this standard. A good test: if your subject line doesn't fit in the git log on a narrow terminal, it's too long.
 
-Tip 3: Use Body for Context, Not Implementation
+## Tip 3: Use Body for Context, Not Implementation
 
 The commit body should explain what changed and why, not how. Implementation details belong in code comments. Ask Claude Code to rephrase technical descriptions into motivational explanations.
 
-Tip 4: Reference Issues in Footers
+## Tip 4: Reference Issues in Footers
 
 Always link to tracking systems. Claude Code can extract issue numbers from your branch names:
 
@@ -148,7 +147,7 @@ Branch: "feature/USER-123-add-login"
 Claude suggests: "Closes #123" or "USER-123"
 ```
 
-Automating Commit Validation
+## Automating Commit Validation
 
 Add a pre-commit hook to validate conventional format:
 
@@ -168,7 +167,7 @@ fi
 
 Make it executable and Claude Code will help you fix any rejected messages.
 
-Common Mistakes and Corrections
+## Common Mistakes and Corrections
 
 Reference this table when reviewing commit messages:
 
@@ -180,7 +179,7 @@ Reference this table when reviewing commit messages:
 | `changes` | `refactor(core): extract validation logic into separate module` |
 | `test` | `test(auth): add integration tests for OAuth2 flow` |
 
-Semantic-Release Integration
+## Semantic-Release Integration
 
 For automated versioning based on conventional commits, configure `.releaserc.yml`:
 
@@ -199,7 +198,7 @@ plugins:
 
 This automatically determines version bumps from commit types: `fix:` triggers a patch, `feat:` triggers a minor, and `BREAKING CHANGE:` triggers a major release.
 
-Measuring Commit Quality
+## Measuring Commit Quality
 
 Track these metrics to improve your team's commit practices:
 
@@ -216,7 +215,7 @@ User: "Analyze my last 20 commits for conventional commit compliance"
 
 It will review each message and provide actionable feedback for improvement.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms conventional commits from a chore into a conversation. By using AI assistance for message crafting, organization, and validation, you maintain commit standards without sacrificing productivity. Start with one workflow, interactive message generation, and expand as your team matures. Your future self will thank you when browsing the git history.
 {% endraw %}

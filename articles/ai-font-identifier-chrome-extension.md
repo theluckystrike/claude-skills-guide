@@ -18,7 +18,7 @@ Identifying fonts on websites has traditionally been a manual process of inspect
 
 For developers, these tools are not just a curiosity, they are practical time-savers during design reviews, competitive analysis, debugging CSS regressions, and building design systems. Understanding how they work under the hood lets you use them more effectively, work around their limitations, and even build custom font identification pipelines for your own projects.
 
-How AI Font Identification Works
+## How AI Font Identification Works
 
 The core technology behind these extensions combines computer vision with font matching algorithms. When you activate an AI font identifier on a web page, the extension captures the visual rendering of text elements and compares them against extensive font databases.
 
@@ -30,7 +30,7 @@ Modern implementations use several technical approaches:
 
 The AI component improves accuracy by handling ambiguous cases where multiple fonts share similar characteristics. Machine learning models trained on thousands of font specimens can distinguish between similar typefaces that would confuse traditional matching algorithms.
 
-The CSS-First vs. Vision-First Distinction
+## The CSS-First vs. Vision-First Distinction
 
 There is an important architectural split in how extensions approach identification. Understanding it helps you choose the right tool for each situation.
 
@@ -40,7 +40,7 @@ Vision-first extensions capture a screenshot of a text region, run it through a 
 
 Hybrid extensions use CSS inspection as the primary path and fall back to visual matching when CSS data is absent or ambiguous. This gives the best practical coverage.
 
-Popular AI Font Identifier Extensions
+## Popular AI Font Identifier Extensions
 
 Several extensions offer this functionality with varying levels of accuracy and features:
 
@@ -54,7 +54,7 @@ Fonts Ninja bridges the gap between identification and procurement. It identifie
 
 For true AI-powered identification, developers often combine extensions with dedicated tools like WhatTheFont (myfonts.com) or Adobe Fonts' matching service, though these require uploading images rather than working directly in the browser.
 
-Extension Comparison Table
+## Extension Comparison Table
 
 | Extension | Method | Image Text | Variable Fonts | Purchase Links | Best For |
 |---|---|---|---|---|---|
@@ -64,11 +64,11 @@ Extension Comparison Table
 | Type Sample | CSS + library | No | Partial | No | Building reference collections |
 | WhatTheFont (web) | Vision AI | Yes | Partial | Yes | Image-based identification |
 
-Technical Implementation Patterns
+## Technical Implementation Patterns
 
 Understanding how these extensions work helps developers integrate font identification into custom workflows. The typical implementation involves several key components:
 
-DOM Analysis
+## DOM Analysis
 
 ```javascript
 // Extract computed font properties from any element
@@ -87,7 +87,7 @@ function getFontProperties(element) {
 
 This basic approach identifies fonts declared via CSS but fails for fonts rendered through images, canvas elements, or web fonts loaded dynamically.
 
-Enumerating All Fonts on a Page
+## Enumerating All Fonts on a Page
 
 For auditing purposes, you often want every unique font in use across a page, not just the one you clicked on. This expanded version walks the entire DOM:
 
@@ -142,7 +142,7 @@ console.table(auditPageFonts().map(f => ({
 
 Running this as a bookmarklet or in the DevTools console gives you an instant typography audit of any page.
 
-Visual Font Fingerprinting
+## Visual Font Fingerprinting
 
 Advanced extensions capture a visual representation of the text:
 
@@ -167,7 +167,7 @@ function captureFontSnapshot(element) {
 }
 ```
 
-Font Comparison Algorithm
+## Font Comparison Algorithm
 
 The matching algorithm typically uses a weighted scoring system:
 
@@ -193,7 +193,7 @@ function calculateFontSimilarity(knownFont, unknownMetrics) {
 }
 ```
 
-Detecting Web Font Loading
+## Detecting Web Font Loading
 
 A common source of incorrect identification is querying font properties before the web font has finished loading. The `document.fonts` API lets you wait for fonts to be ready:
 
@@ -226,7 +226,7 @@ async function getFontPropertiesAfterLoad(element) {
 
 This pattern is valuable when debugging fallback font chains, you can see exactly which font faces loaded successfully versus which ones fell back to system fonts.
 
-Building Custom Font Identification Workflows
+## Building Custom Font Identification Workflows
 
 For developers seeking more control, creating custom font identification scripts provides flexibility beyond what extensions offer. Here's a practical approach using the Page Weight API or custom bookmarklets:
 
@@ -250,7 +250,7 @@ javascript:(function(){
 
 This simple script surfaces all unique font families used on a page, organized by the elements using them.
 
-Building a Font Audit CLI with Puppeteer
+## Building a Font Audit CLI with Puppeteer
 
 For systematic auditing across multiple pages, a Puppeteer-based script is more practical than clicking through browser extensions manually:
 
@@ -297,7 +297,7 @@ for (const url of pages) {
 
 This script can be integrated into a CI pipeline to flag font regressions, if a new deployment introduces an unexpected font family, the audit report will surface it.
 
-Limitations and Workarounds
+## Limitations and Workarounds
 
 AI font identifiers face several technical constraints that developers should understand:
 
@@ -309,7 +309,7 @@ Image-based text: Text rendered entirely within images (PNG, JPEG, SVG) requires
 
 Variable fonts: Modern variable fonts present challenges because they can render with thousands of weight combinations. Extensions may identify the font family but struggle with specific axis values.
 
-Working Around Variable Font Limitations
+## Working Around Variable Font Limitations
 
 Variable fonts expose their current axis values through CSS custom properties and the `font-variation-settings` property. Extensions that only read `font-family` miss this critical information:
 
@@ -338,7 +338,7 @@ function getVariableFontDetails(element) {
 
 When inspecting variable fonts, always check `fontVariationSettings` alongside `fontFamily`. The extension might correctly identify the family as "Inter" but not tell you that the current render is using weight 375 with a -3 degree slant, information that matters for replicating the design precisely.
 
-Practical Use Cases
+## Practical Use Cases
 
 For developers, AI font identification extensions serve several practical purposes:
 
@@ -350,7 +350,7 @@ Design system documentation: Capture font usage patterns across web properties t
 
 Inspiration gathering: When browsing the web, instantly capture interesting typography choices for later reference.
 
-Real-World Scenario: Catching a Font Regression in Production
+## Real-World Scenario: Catching a Font Regression in Production
 
 Consider a scenario where a CSS bundle update accidentally removes a `@font-face` declaration. Users start seeing a fallback system font instead of the intended brand typeface, but the visual difference is subtle enough that it is not immediately obvious.
 
@@ -381,7 +381,7 @@ test('homepage uses correct brand fonts', async () => {
 
 This kind of test, run against a preview deployment, gives you automated coverage for font regressions, something no Chrome extension can do, but which is trivially buildable once you understand the underlying APIs.
 
-Extending Functionality
+## Extending Functionality
 
 Developers can enhance basic font identification by combining multiple tools:
 
@@ -411,7 +411,7 @@ function detectTypographyVariables() {
 }
 ```
 
-Querying Google Fonts API for Identified Fonts
+## Querying Google Fonts API for Identified Fonts
 
 Once you have a font family name, the Google Fonts API lets you verify availability and retrieve font metadata programmatically:
 
@@ -442,12 +442,11 @@ async function lookupGoogleFont(fontFamily) {
 
 Combining font identification from the browser with this lookup creates a complete workflow: identify on the page, verify it is available on Google Fonts, retrieve all available weights and variants, and generate the correct `@import` URL for your own project.
 
-Conclusion
+## Conclusion
 
 AI font identifier Chrome extensions have evolved from simple utilities to sophisticated tools that use machine learning for accurate font recognition. For developers and power users, understanding their underlying technology enables more effective use and integration into custom workflows. While limitations exist around web font loading and image-based text, these tools significantly streamline the process of identifying and documenting typography across the web.
 
 The real use comes from going beyond the extension itself. The same font inspection APIs that power these tools are fully accessible in your own JavaScript, Puppeteer scripts, and CI pipelines. Building font auditing into automated test suites, design system documentation generators, and deployment validation workflows gives you coverage no manual extension workflow can match, and ensures that the typography your team spends time choosing actually reaches your users as intended.
-
 
 Related Reading
 

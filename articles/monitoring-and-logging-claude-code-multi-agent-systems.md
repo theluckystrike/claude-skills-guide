@@ -15,13 +15,13 @@ permalink: /monitoring-and-logging-claude-code-multi-agent-systems/
 
 Building multi-agent systems with Claude Code requires visibility into agent behavior, message flows, and error conditions. Without proper monitoring, debugging distributed agent workflows becomes nearly impossible. This guide covers practical patterns for observability in Claude Code-based multi-agent architectures. For coordinating the agents you will monitor, see [Claude Code agent swarm coordination strategies](/claude-code-agent-swarm-coordination-strategies/).
 
-Why Multi-Agent Monitoring Matters
+## Why Multi-Agent Monitoring Matters
 
 [When you orchestrate multiple Claude agents to handle different aspects of a task](/best-claude-code-skills-to-install-first-2026/), such as one agent for code review, another for testing, and a third for deployment, each agent generates logs, state changes, and potential errors. A production-grade system needs centralized logging to trace requests across agents, measure latency, and detect failures early.
 
 The challenge: Claude Code doesn't provide built-in observability for multi-agent orchestration. You need to implement it yourself using available tools like bash commands, file operations, and external logging services.
 
-Structured Logging Pattern
+## Structured Logging Pattern
 
 The foundation of monitoring is structured logging. Instead of scattered print statements, emit JSON-formatted log entries that external tools can parse and aggregate.
 
@@ -65,7 +65,7 @@ log_agent_event(
 )
 ```
 
-Centralized Log Aggregation
+## Centralized Log Aggregation
 
 For multi-agent systems, aggregate logs from all agents into a single location. A simple approach uses a shared log file or directory:
 
@@ -86,7 +86,7 @@ For more sophisticated setups, integrate with log aggregation services:
 
 The skill `super-memory` can help you recall patterns from previous debugging sessions, making it easier to identify recurring issues across agent runs.
 
-Health Checks and Metrics
+## Health Checks and Metrics
 
 Implement health checks to verify each agent's operational status:
 
@@ -117,7 +117,7 @@ while true; do
 done
 ```
 
-Distributed Tracing
+## Distributed Tracing
 
 When agents communicate through message queues or HTTP APIs, implement distributed tracing to follow requests end-to-end:
 
@@ -144,7 +144,7 @@ def trace_agent_call(trace_id: str, from_agent: str, to_agent: str, payload: dic
 
 This pattern enables you to reconstruct the full flow when something goes wrong. The `tdd` skill complements this by letting you write tests that verify agent communication contracts.
 
-Error Tracking and Alerting
+## Error Tracking and Alerting
 
 Capture errors with enough context for debugging:
 
@@ -173,7 +173,7 @@ def log_error(agent_id: str, error: Exception, context: dict):
         ])
 ```
 
-Monitoring Dashboard
+## Monitoring Dashboard
 
 Build a simple monitoring dashboard using available skills:
 
@@ -188,7 +188,7 @@ A minimal dashboard might display:
 - Average task completion time per agent type
 - Success/failure rates
 
-Alerting and Auto-Remediation
+## Alerting and Auto-Remediation
 
 Transform monitoring data into actionable notifications by routing alerts based on severity. Critical alerts go to phone/SMS and Slack urgent channels; warnings go to regular Slack channels and email; informational events update the dashboard only. Use the `supermemory` skill to find similar past incidents and include relevant historical context in every alert.
 
@@ -196,7 +196,7 @@ For common issues, automated runbooks can handle remediation before escalating t
 
 Use the `pdf` skill to generate periodic status reports with uptime percentages and recurring issue summaries, and the `frontend-design` skill to create real-time HTML dashboards that visualize system health across all monitored agents.
 
-Best Practices Summary
+## Best Practices Summary
 
 1. Emit structured JSON logs from every agent for parseable output
 2. Use trace IDs to correlate events across agent boundaries
@@ -208,7 +208,6 @@ Best Practices Summary
 The `frontend-design` skill can help you build monitoring interfaces if you need a visual component. The `pdf` skill enables generating automated status reports. For alerting, you'll primarily work with webhook integrations and custom shell scripts.
 
 Monitoring multi-agent Claude Code systems requires deliberate architecture. Start with structured logging, add health checks, and progressively build toward comprehensive observability as your system grows.
-
 
 Related Reading
 

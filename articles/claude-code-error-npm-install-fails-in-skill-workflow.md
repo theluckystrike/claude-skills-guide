@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Error: npm install Fails in Skill Workflow
-
 When working with Claude Code skills that require Node.js dependencies, you may encounter npm install failures that block your workflow. This guide covers the most common causes and proven solutions for developers encountering this issue, with specific attention to the skills most likely to trigger these errors.
 
-Understanding the Problem
+## Understanding the Problem
 
 Claude Code skills work by loading Markdown files from your `~/.claude/skills/` directory. Some community skills, particularly those that wrap external tools or libraries, require npm packages to function properly. The pdf skill, xlsx skill, frontend-design skill, and tdd skill often fall into this category.
 
@@ -34,11 +31,11 @@ When these skills attempt to install or use npm packages, you might see errors l
 
 These failures typically stem from four root causes: missing Node.js or npm, incorrect permissions, network issues, or corrupted package caches. The error code in the output is your fastest diagnostic signal. EACCES means permissions, ENOENT means something is missing from disk, and network codes mean your connection or registry is the culprit.
 
-Why Skills Trigger npm Errors More Than Regular Projects
+## Why Skills Trigger npm Errors More Than Regular Projects
 
 Skills run in the context of Claude Code's shell environment, which may differ from your interactive terminal in important ways. Your shell's PATH, npm prefix settings, and environment variables may not all be inherited consistently. This means a package that installs fine when you run `npm install` directly in a terminal window might fail when a skill triggers the same command through Claude Code's execution pipeline.
 
-Quick Diagnostic Checklist
+## Quick Diagnostic Checklist
 
 Before diving into individual solutions, run through this checklist to identify your error category:
 
@@ -51,7 +48,7 @@ Before diving into individual solutions, run through this checklist to identify 
 | Works in terminal, fails in skill | PATH or environment difference | Solution 1 |
 | Fails on specific package only | Peer dependency conflict | Solution 5 or 6 |
 
-Solution 1: Verify Node.js and npm Installation
+## Solution 1: Verify Node.js and npm Installation
 
 Before troubleshooting skill-specific issues, confirm Node.js and npm are properly installed and that your environment resolves them correctly:
 
@@ -124,7 +121,7 @@ On macOS with Apple Silicon, Homebrew installs Node.js to `/opt/homebrew/bin` ra
 
 Never use `sudo npm install` as a workaround for permission errors. It creates files owned by root inside your project, which causes further permission problems down the line and can be a security risk for globally installed packages.
 
-Solution 3: Clear npm Cache and Rebuild
+## Solution 3: Clear npm Cache and Rebuild
 
 Corrupted npm caches cause intermittent installation failures that are difficult to diagnose because they may succeed on one run and fail on another. The cache can become corrupted by interrupted downloads, disk errors, or npm version upgrades.
 
@@ -149,11 +146,11 @@ This forces a clean installation of all dependencies and regenerates the lockfil
 
 If your skill directory does not have a `package.json` at all, the skill may not be structured to use npm directly. In that case, the npm calls may be happening inside Claude Code's tool execution environment rather than inside the skill folder. Check whether the skill's documentation describes a separate installation step.
 
-Solution 4: Handle Network Issues
+## Solution 4: Handle Network Issues
 
 Network timeouts manifest as `ETIMEDOUT` or `ECONNRESET` errors. These are especially common in corporate networks with proxy servers, strict firewalls, or high-latency connections.
 
-Switch or Verify the Registry
+## Switch or Verify the Registry
 
 First confirm which registry npm is using:
 
@@ -173,7 +170,7 @@ For users in China or regions with restricted access to the main registry, mirro
 npm config set registry https://mirrors.cloud.tencent.com/npm/
 ```
 
-Increase Timeout Values
+## Increase Timeout Values
 
 For slow or unreliable connections, increase the timeout and retry settings:
 
@@ -186,7 +183,7 @@ npm config set fetch-retry-maxtimeout 120000
 
 These settings give npm more time and more attempts before giving up, which is especially important when installing large packages like Puppeteer (which downloads a Chromium binary) or packages with many nested dependencies.
 
-Configure Proxy Settings
+## Configure Proxy Settings
 
 If you are on a corporate network with a proxy:
 
@@ -195,7 +192,7 @@ npm config set proxy http://proxy.company.com:8080
 npm config set https-proxy http://proxy.company.com:8080
 ```
 
-Use Yarn as an Alternative
+## Use Yarn as an Alternative
 
 Some skills work better with Yarn, which has a different network stack and caching behavior. Install it alongside npm:
 
@@ -212,11 +209,11 @@ yarn install
 
 Yarn's parallel download behavior often succeeds where npm's sequential approach fails on flaky connections.
 
-Solution 5: Skill-Specific Dependency Fixes
+## Solution 5: Skill-Specific Dependency Fixes
 
 Different skills have unique dependency requirements. Installing the wrong version or missing peer dependencies produces errors that do not clearly explain the root cause.
 
-The tdd Skill
+## The tdd Skill
 
 The tdd skill typically requires Jest and related testing packages. Check whether a `package.json` exists and whether it specifies the testing framework correctly:
 
@@ -228,7 +225,7 @@ npm install jest @testing-library/react @testing-library/jest-dom --save-dev
 
 If your project uses Vitest instead of Jest, the tdd skill may need adjustment. Create or edit the skill's configuration to reference the correct test runner for your project.
 
-The pdf Skill
+## The pdf Skill
 
 The pdf skill typically depends on `pdf-lib` for creation and manipulation, and sometimes `pdfjs-dist` for reading. Puppeteer may be required for rendering HTML to PDF:
 
@@ -246,7 +243,7 @@ Install full puppeteer if you want the bundled browser
 npm install puppeteer
 ```
 
-The xlsx Skill
+## The xlsx Skill
 
 The xlsx skill uses the SheetJS library (`xlsx` package). Occasional failures occur due to the package's dual licensing change. Install the community version explicitly:
 
@@ -256,7 +253,7 @@ npm install xlsx
 If the above fails, try the SheetJS CDN build or the community fork
 ```
 
-The supermemory Skill
+## The supermemory Skill
 
 The supermemory skill often requires HTTP client libraries and environment variable handling. Check for missing peer dependencies:
 
@@ -269,7 +266,7 @@ npm install @supermemory/client
 
 Make sure your `.env` file or environment variables contain any required API keys before the skill runs.
 
-The frontend-design Skill
+## The frontend-design Skill
 
 This skill sometimes requires build tools or CSS processing libraries depending on its version:
 
@@ -280,7 +277,7 @@ Or for component scaffolding tools:
 npm install plop handlebars
 ```
 
-Solution 6: Debug Mode for Complex Issues
+## Solution 6: Debug Mode for Complex Issues
 
 When standard solutions fail, enable verbose logging to identify the exact failure point before the error message is printed:
 
@@ -308,7 +305,7 @@ npm install --legacy-peer-deps
 
 If this succeeds, you have a peer dependency conflict. Use `npm ls` to map the dependency tree and identify which packages are conflicting, then update the skill's `package.json` to specify compatible versions.
 
-Prevention Strategies
+## Prevention Strategies
 
 Recurring npm failures in skill workflows are usually avoidable with a few habits:
 
@@ -324,7 +321,7 @@ Recurring npm failures in skill workflows are usually avoidable with a few habit
 
 6. Test skill installs in isolation. After setting up a new skill, run `npm install` inside its directory manually before expecting Claude Code to use it, so you catch installation problems in a context where you can read the full output.
 
-Package Manager Comparison
+## Package Manager Comparison
 
 If you keep running into npm-specific problems, it is worth knowing how the alternatives compare for skill workflows:
 
@@ -337,7 +334,7 @@ If you keep running into npm-specific problems, it is worth knowing how the alte
 
 For most skill workflows, npm is fine. If you regularly hit network timeouts, try Yarn. If disk space is limited (common on developer laptops with many projects), pnpm's hard-link approach uses significantly less space.
 
-When All Else Fails
+## When All Else Fails
 
 If you have tried all solutions and npm install still fails, these final options often resolve edge cases:
 

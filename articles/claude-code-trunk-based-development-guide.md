@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Trunk Based Development Guide
-
 Trunk based development has become the standard for high-velocity engineering teams. When combined with Claude Code, developers can maintain rapid iteration cycles while keeping AI-assisted code quality high. This guide covers practical workflows for integrating Claude Code into trunk based development practices.
 
-Understanding Trunk Based Development with Claude Code
+## Understanding Trunk Based Development with Claude Code
 
 Trunk based development involves working directly on the main branch or using short-lived feature branches that live for hours or days, not weeks. The approach minimizes merge conflicts and enables continuous integration. However, it requires discipline and strong test coverage.
 
@@ -26,7 +23,7 @@ Claude Code fits naturally into this workflow because it excels at understanding
 
 The key is structuring your interactions to match the trunk based development rhythm. Instead of asking Claude Code to implement large features, break requests into smaller units that align with your branch lifespan.
 
-Setting Up Your Claude Code Environment
+## Setting Up Your Claude Code Environment
 
 Before integrating Claude Code into trunk based development, ensure your environment supports the workflow:
 
@@ -58,7 +55,7 @@ Working with Claude Code
 - Keep changes focused under 200 lines per PR
 ```
 
-Using the TDD Skill for Test First Development
+## Using the TDD Skill for Test First Development
 
 The tdd skill is particularly valuable in trunk based development contexts. It enforces test-first workflows that protect your main branch from regressions. When working on short-lived branches, the tdd skill helps maintain quality without slowing down iteration speed.
 
@@ -92,7 +89,7 @@ describe('User Authentication', () => {
 
 After writing this test, Claude Code implements the authentication logic to make the tests pass. The tdd skill ensures you never write code without corresponding test coverage.
 
-Managing Context in Short-Lived Branches
+## Managing Context in Short-Lived Branches
 
 One challenge with trunk based development is maintaining context across rapid iterations. The supermemory skill addresses this by persisting project knowledge between sessions.
 
@@ -115,7 +112,7 @@ Activate frontend design guidelines
 
 This ensures your UI components follow established patterns even when different developers (or AI assistants) implement features at speed.
 
-Practical Workflow Example
+## Practical Workflow Example
 
 Here's a complete trunk based development session with Claude Code:
 
@@ -153,7 +150,7 @@ test('should add valid payment method', async () => {
 });
 ```
 
-Handling Merge Conflicts with Claude Code
+## Handling Merge Conflicts with Claude Code
 
 When working in trunk based development, merge conflicts are inevitable. Claude Code helps resolve them efficiently:
 
@@ -168,7 +165,7 @@ claude "resolve the merge conflicts in src/auth.js - our changes add password re
 
 Claude Code analyzes both versions and suggests a resolution that preserves all functionality. Always review the suggested merge carefully before accepting.
 
-Best Practices for AI-Assisted Trunk Based Development
+## Best Practices for AI-Assisted Trunk Based Development
 
 Keep your trunk based development workflow healthy while using Claude Code:
 
@@ -178,7 +175,7 @@ Keep your trunk based development workflow healthy while using Claude Code:
 - Use skills for consistency: The frontend-design, pdf, and other skills maintain project standards
 - Maintain context with supermemory: Project knowledge persists across sessions and branches
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Don't treat Claude Code as a replacement for understanding your code. The most successful trunk based development teams using Claude Code still:
 

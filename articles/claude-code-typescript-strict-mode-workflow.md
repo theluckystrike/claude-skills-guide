@@ -13,18 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code TypeScript Strict Mode Workflow
-
 TypeScript's strict mode catches more errors at compile time, reducing runtime bugs and improving code maintainability. When combined with Claude Code's AI capabilities, you can establish a powerful workflow that catches type errors before they reach production. This guide covers setting up strict mode, integrating it with Claude Code sessions, and building a practical development workflow.
 
-Understanding TypeScript Strict Mode
+## Understanding TypeScript Strict Mode
 
 TypeScript's strict mode is not a single flag, it's a collection of type-checking options that enforce stricter type safety. When you enable `strict: true` in your `tsconfig.json`, you activate several individual checks including `strictNullChecks`, `strictPropertyInitialization`, `noImplicitAny`, and `noImplicitReturns`.
 
 Most new projects should start with strict mode enabled. The upfront investment in properly typing your code pays dividends through better editor support, clearer API contracts, and fewer runtime errors. However, migrating existing codebases to strict mode requires a methodical approach.
 
-Configuring Strict Mode
+## Configuring Strict Mode
 
 Create or update your `tsconfig.json` to enable strict mode:
 
@@ -56,7 +53,7 @@ For projects migrating from looser TypeScript configurations, you can enable str
 
 Gradually enable additional checks as you fix type errors. This approach prevents overwhelming your build pipeline while progressively improving type safety.
 
-Integrating with Claude Code Workflow
+## Integrating with Claude Code Workflow
 
 Claude Code works exceptionally well with TypeScript strict mode. When you're working on a project with strict type checking enabled, Claude can use type information to provide more accurate suggestions and catch potential issues before you run the code.
 
@@ -68,7 +65,7 @@ cat tsconfig.json | grep -A5 '"compilerOptions"'
 
 This verification ensures both you and Claude understand the type-checking constraints in place.
 
-Using Claude Skills with TypeScript
+## Using Claude Skills with TypeScript
 
 Several Claude skills enhance TypeScript development. The `tdd` skill helps you write tests before implementation, which naturally leads to better-typed code. When you describe what you want to build, the tdd skill prompts Claude to consider type contracts from the start.
 
@@ -76,7 +73,7 @@ For frontend projects using strict mode, combine TypeScript with the `frontend-d
 
 The `pdf` skill can help you generate type documentation from your TypeScript definitions, creating static reference documents for your team's TypeScript interfaces and types.
 
-Practical Workflow Example
+## Practical Workflow Example
 
 Here's a practical workflow for developing a new feature with strict TypeScript:
 
@@ -109,7 +106,7 @@ declare module 'legacy-library' {
 
 Then refine these declarations as you use the library, gradually improving type coverage.
 
-Running Type Checking in Your Workflow
+## Running Type Checking in Your Workflow
 
 Integrate TypeScript type checking into your development process. Run type checking separately from your build to get fast feedback:
 
@@ -125,7 +122,7 @@ npx tsc --noEmit --watch
 
 When Claude Code suggests code changes, run type checking afterward to verify the suggestions maintain type safety. This feedback loop helps Claude learn your project's type constraints.
 
-Common Strict Mode Issues and Solutions
+## Common Strict Mode Issues and Solutions
 
 Strict mode often reveals issues that loose mode silently allows. Here are common patterns and solutions:
 
@@ -167,7 +164,7 @@ class Config {
 }
 ```
 
-Automating Type Checking with Claude
+## Automating Type Checking with Claude
 
 You can create a custom Claude skill to automate type checking responses. A skill that runs `tsc --noEmit` after generating code provides immediate feedback on type safety:
 
@@ -182,7 +179,7 @@ After generating TypeScript code, run:
 
 This pattern works well with the `tdd` skill, run tests and type checks together to ensure new code passes both validation layers.
 
-Building Your Strict Mode Practice
+## Building Your Strict Mode Practice
 
 Adopting TypeScript strict mode is a journey, not a destination. Start new projects with strict mode from day one. For existing projects, allocate time each sprint to address strict mode errors. The investment compounds, each fix prevents potential bugs and improves code documentation through types.
 

@@ -16,7 +16,7 @@ permalink: /claude-code-skill-timeout-error-how-to-increase-the-limit/
 
 When working with Claude Code skills like `frontend-design`, `pdf`, `tdd`, or `supermemory`, you may encounter timeout errors that interrupt your workflow. This guide explains what causes them and how to work around them.
 
-Understanding Timeout Errors in Claude Code Skills
+## Understanding Timeout Errors in Claude Code Skills
 
 [Timeouts in Claude Code occur](/claude-code-skill-memory-limit-exceeded-process-killed-fix/) to generate. This can happen when:
 
@@ -27,7 +27,7 @@ Understanding Timeout Errors in Claude Code Skills
 
 There is no `--timeout` flag for the `claude` CLI, no `skillDefaults` configuration in `settings.json`, and no `CLAUDE_SKILL_TIMEOUT` environment variable. [governed by the Anthropic API's response limits](/troubleshooting-hub/), not configurable through skill files or CLI flags.
 
-What Actually Causes a Timeout
+## What Actually Causes a Timeout
 
 Timeout errors are not random. They trace back to specific bottlenecks in the request pipeline. Understanding each one makes it much easier to target the fix.
 
@@ -41,11 +41,11 @@ Output length proportional to input complexity. Some skills are inherently gener
 
 Concurrent skill invocations. If you are running multiple Claude Code sessions or skills simultaneously, they share the same API rate limits and server-side resources. Contention can push individual requests closer to the edge of their time budget.
 
-Diagnosing Which Step Is Timing Out
+## Diagnosing Which Step Is Timing Out
 
 Before applying a fix, it helps to identify where in the pipeline the timeout is actually occurring. The error message and timing give you enough signal to narrow it down.
 
-Timeout immediately on invocation
+## Timeout immediately on invocation
 
 If Claude Code times out within the first few seconds of running a skill, the problem is almost always with an MCP server or external tool call, not with the model generation itself. The skill has triggered a tool action and that action has not returned.
 
@@ -54,13 +54,13 @@ Steps to check:
 - Try running the same skill with a minimal input. if it still times out instantly, the tool layer is the issue
 - Check whether the MCP server process is running and healthy if it is self-hosted
 
-Timeout mid-generation
+## Timeout mid-generation
 
 If you see partial output followed by a cutoff, the model started generating but ran out of time before finishing. This is a pure output-length problem. The fix is always scoping the request down. there is no other lever available.
 
 You can confirm this pattern by reducing the input size. If a smaller version of the same request completes successfully, the original scope was simply too large.
 
-Timeout only on specific file types or sizes
+## Timeout only on specific file types or sizes
 
 If timeouts happen with one particular file but not others of similar apparent size, check:
 - Whether the file has an unusually complex internal structure (deeply nested JSON, a PDF with hundreds of embedded images)
@@ -77,7 +77,7 @@ claude --verbose /tdd Write tests for the payment service
 
 Look for tool calls that appear to hang or appear right before the timeout. That is the step to investigate.
 
-Checking MCP server health directly
+## Checking MCP server health directly
 
 If a skill uses a custom MCP server, you can test it independently:
 
@@ -88,11 +88,11 @@ curl -s http://localhost:3100/health
 
 A slow or non-responsive health endpoint confirms the MCP layer is the bottleneck, not the model.
 
-How to Reduce Timeout Frequency
+## How to Reduce Timeout Frequency
 
 The [break large tasks into smaller pieces](/claude-md-too-long-context-window-optimization/) into smaller pieces so each individual request completes faster.
 
-Break Large Documents Into Sections
+## Break Large Documents Into Sections
 
 Instead of asking `/pdf` to process an entire large document at once:
 
@@ -109,7 +109,7 @@ Continue with pages 31 through 60.
 
 This keeps each request within a size that completes reliably.
 
-Scope /tdd Requests to Single Modules
+## Scope /tdd Requests to Single Modules
 
 Instead of generating tests for an entire codebase:
 
@@ -121,7 +121,7 @@ Do not generate tests for other directories.
 
 Follow up with additional modules once the first completes.
 
-Use /supermemory to Avoid Re-Running Expensive Operations
+## Use /supermemory to Avoid Re-Running Expensive Operations
 
 If you need results from a large `/pdf` operation across multiple sessions, store the output:
 
@@ -135,7 +135,7 @@ Future sessions retrieve this without re-processing the document:
 /supermemory What were the Q4 report key findings?
 ```
 
-Split /pptx and /docx Requests
+## Split /pptx and /docx Requests
 
 For large presentation or document generation tasks:
 
@@ -147,11 +147,11 @@ Stop after slide 10.
 
 Then request the next batch.
 
-Optimizing Skills to Avoid Timeouts
+## Optimizing Skills to Avoid Timeouts
 
 If you write or maintain custom skills, there are structural choices that make timeouts far less likely. These apply whether you are building a skill from scratch or refining an existing one.
 
-Limit file reads to what the skill actually needs
+## Limit file reads to what the skill actually needs
 
 Skills that read entire files when they only need a portion are a common source of unnecessary context bloat. If a skill only needs function signatures to generate tests, instruct it to use the Grep or Glob tools rather than reading full source files:
 
@@ -163,7 +163,7 @@ Do NOT read entire source files. extract only the function names and type signat
 
 This can reduce the tokens consumed by a `/tdd`-style skill by an order of magnitude on large codebases.
 
-Batch file operations instead of reading one file at a time
+## Batch file operations instead of reading one file at a time
 
 A skill that issues 40 separate single-file reads in a loop is slower and more fragile than one that batches reads intelligently. If your skill's prompt instructs Claude Code to process multiple files, structure it to handle groups:
 
@@ -175,7 +175,7 @@ Do not attempt to read all files in a single step.
 
 This keeps individual tool call chains shorter and reduces the chance that a single slow read cascades into a timeout.
 
-Cache expensive intermediate results with /supermemory
+## Cache expensive intermediate results with /supermemory
 
 If a skill repeatedly needs the same extracted data. a parsed schema, a summarized specification, a list of API endpoints. store it once and retrieve it in future sessions rather than regenerating it:
 
@@ -191,7 +191,7 @@ In subsequent sessions:
 
 This is especially valuable for skills that run against large or slow-loading data sources.
 
-Add explicit scope constraints to skill prompts
+## Add explicit scope constraints to skill prompts
 
 Skill files that leave scope open-ended invite Claude to interpret "complete" as "exhaustive." Tightening the scope in the skill's instruction set prevents runaway generation:
 
@@ -203,7 +203,7 @@ If the task requires more output, stop at 200 lines and ask the user whether to 
 
 This acts as a built-in safeguard against the skill trying to produce more than the API window allows.
 
-Avoid chaining multiple slow tool calls sequentially
+## Avoid chaining multiple slow tool calls sequentially
 
 If your skill needs to call several MCP tools in sequence, consider whether any of them can be parallelized or deferred. Claude Code can invoke multiple tools in a single turn when the prompt permits it. Structuring skill instructions to allow parallel tool calls reduces total elapsed time:
 
@@ -214,7 +214,7 @@ When gathering context, use multiple Read tool calls in the same turn rather tha
 
 Sequential chains of slow tool calls are one of the most common reasons a task that looks small on paper still times out.
 
-When Timeouts Persist
+## When Timeouts Persist
 
 If you consistently hit timeouts on a particular task, the task may simply require more content than a single API call can generate. In this case:
 
@@ -230,7 +230,7 @@ For example, instead of asking `/tdd` to analyze a 10,000-line codebase:
 
 This approach produces better-focused tests and avoids timeout issues.
 
-Summary
+## Summary
 
 [Timeout errors reflect the size of the request](/claude-skills-token-optimization-reduce-api-costs/), not a configurable limit. The practical solution is:
 

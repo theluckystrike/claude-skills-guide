@@ -13,19 +13,15 @@ permalink: /railway-mcp-server-deployment-automation-guide/
 ---
 {% raw %}
 
-
-
-Railway MCP Server Deployment Automation Guide
-
 Deploying MCP servers to Railway provides a reliable, scalable way to expose Claude Code integrations as networked services. This guide covers deployment patterns, environment configuration, and automation strategies that work with production workloads.
 
-Why Railway for MCP Servers
+## Why Railway for MCP Servers
 
 Railway offers several advantages for hosting MCP servers. The platform handles infrastructure provisioning, automatic scaling, and deployment workflows out of the box. You get HTTPS endpoints, environment variable management, and native Docker support without configuring cloud resources manually.
 
 MCP servers running on Railway can be consumed by Claude Code installations anywhere, making it possible to create shared tools that team members access without local setup. This approach works particularly well when the underlying service requires database connections, API keys, or compute resources that shouldn't live on individual developer machines. See the guide on [MCP credential management and secrets handling](/mcp-credential-management-and-secrets-handling/) for keeping sensitive values secure across environments.
 
-Basic Railway Deployment
+## Basic Railway Deployment
 
 The simplest path to deploying an MCP server on Railway uses the official Railway CLI. First, ensure you have the CLI installed:
 
@@ -53,7 +49,7 @@ Most MCP servers are Node.js applications. Create a `railway.json` configuration
 
 The `numReplicas` setting controls how many instances run concurrently. For MCP servers handling intermittent requests, a single replica typically suffices. Increase this value when expecting high concurrency or when the server maintains stateful connections.
 
-Environment Configuration
+## Environment Configuration
 
 MCP servers typically require API keys, database URLs, or other sensitive values. Railway's environment variable system handles these securely. Set variables through the Railway dashboard or CLI:
 
@@ -77,7 +73,7 @@ railway environment init staging
 railway link --environment staging
 ```
 
-Docker-Based Deployments
+## Docker-Based Deployments
 
 Some MCP servers require specific runtime dependencies or use languages other than Node.js. Railway's Docker support handles these cases. The [Claude Code Dockerfile generation guide](/claude-code-dockerfile-generation-multi-stage-build-guide/) covers multi-stage build patterns that keep image sizes small. Create a `Dockerfile` in your project:
 
@@ -110,7 +106,7 @@ Update `railway.json` to use this Dockerfile:
 
 The `deploy.port` value must match the port your MCP server listens on. Railway routes incoming requests to this port automatically.
 
-Continuous Deployment Automation
+## Continuous Deployment Automation
 
 Automating deployments ensures your MCP server stays current without manual intervention. GitHub Actions provides a straightforward integration with Railway. the [Claude Skills with GitHub Actions CI/CD pipeline guide](/claude-skills-with-github-actions-ci-cd-pipeline/) explains how to extend these workflows with Claude-powered quality gates.
 
@@ -151,7 +147,7 @@ Generate a Railway token from your account settings and store it as a GitHub sec
 
 This workflow triggers on every push to the main branch. For more control, add branch conditions or manual approval steps before deployment.
 
-Health Checks and Monitoring
+## Health Checks and Monitoring
 
 Railway automatically monitors deployed services, but configuring explicit health checks improves reliability. Most MCP servers expose an HTTP endpoint for health verification:
 
@@ -186,7 +182,7 @@ Railway uses these values to verify your service remains responsive. If the heal
 
 For deeper monitoring, integrate services like Sentry for error tracking or DataDog for metrics collection. The [Sentry error tracking and source maps workflow](/claude-code-sentry-error-tracking-source-maps-workflow/) covers how Claude Code can help triage errors automatically. Both tools work well with Railway's containerized environment and provide insights into MCP server performance.
 
-Connecting Claude Code to Your Railway MCP Server
+## Connecting Claude Code to Your Railway MCP Server
 
 Once deployed, your Railway URL becomes the endpoint for Claude Code to connect. The URL follows this pattern:
 
@@ -198,7 +194,7 @@ Configure Claude Code to use this server by adding it to your MCP settings. The 
 
 For teams using multiple MCP servers, the supermemory skill can help track which services are deployed where and maintain documentation about each server's purpose and configuration.
 
-Scaling Considerations
+## Scaling Considerations
 
 As usage grows, you may need to adjust Railway's scaling settings. The platform supports horizontal scaling through the `numReplicas` configuration. For stateless MCP servers, increasing replicas improves throughput and provides redundancy.
 
@@ -206,7 +202,7 @@ Stateful servers require additional consideration. If your MCP server caches dat
 
 Railway's pricing scales with usage. Review the platform's resource allocation to optimize costs while maintaining performance.
 
-Summary
+## Summary
 
 Railway provides a production-ready deployment target for MCP servers. The workflow involves configuring environment variables, optionally using Docker for complex runtimes, and setting up CI/CD automation for continuous delivery. Health checks ensure reliability, while Railway's scaling options handle growth.
 

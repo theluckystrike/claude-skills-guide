@@ -16,13 +16,13 @@ permalink: /claude-code-agent-swarm-coordination-strategies/
 
 [Running multiple Claude Code agents simultaneously](/parallel-subagents-claude-code-best-practices-2026/) transforms your development workflow from sequential task execution into parallel processing. This guide covers practical strategies for coordinating agent swarms, managing shared state, and building reliable multi-agent pipelines.
 
-The Case for Agent Swarms
+## The Case for Agent Swarms
 
 [Single-agent workflows handle individual tasks well](/best-claude-code-skills-to-install-first-2026/), but production scenarios often require parallel execution. Processing hundreds of PDF documents, running test suites across multiple modules, or generating documentation for a large codebase benefits from concurrent agent execution. The tdd skill demonstrates this naturally, when you run test generation across twenty files, coordinating multiple agents reduces completion time from minutes to seconds.
 
 Claude Code supports spawning multiple subagents within a single session via structured tool calls. Understanding how to coordinate these agents effectively separates basic usage from professional-grade automation.
 
-Strategy One: Fan-Out/Fan-In Pattern
+## Strategy One: Fan-Out/Fan-In Pattern
 
 [The fan-out/fan-in pattern spawns multiple agents](/fan-out-fan-in-pattern-claude-code-subagents/) to handle independent tasks, then aggregates results. This works when tasks share no dependencies and can execute in any order.
 
@@ -46,7 +46,7 @@ Spawn two subagents:
 - Subagent 2: Process invoices/invoice-011.pdf through invoice-020.pdf using /pdf
 ```
 
-Strategy Two: Hierarchical Agent Trees
+## Strategy Two: Hierarchical Agent Trees
 
 Rather than flat parallelism, structure agents in a tree hierarchy. Parent agents delegate work to children and handle result aggregation. This reduces the coordination burden on any single agent.
 
@@ -62,7 +62,7 @@ Root Agent (coordinator)
 
 The root agent maintains context about what each child does, enabling intelligent task distribution. When the xlsx skill generates a spreadsheet report, the parent knows the output format and can route it appropriately without explicit hand-coding.
 
-Strategy Three: Message Passing via Shared Memory
+## Strategy Three: Message Passing via Shared Memory
 
 Agents need a communication channel beyond direct spawning. Shared memory files or a dedicated coordination skill enables message passing between agents.
 
@@ -86,7 +86,7 @@ Agent 2 retrieves progress
 /supermemory What are the current statuses of all agents?
 ```
 
-Strategy Four: Event-Driven Coordination
+## Strategy Four: Event-Driven Coordination
 
 Trigger agent spawns based on file system events or message queue updates. This pattern works well for watch folders or continuous integration pipelines.
 
@@ -99,7 +99,7 @@ Spawn a subagent to use /pdf to extract metadata from {new_file} and update inde
 
 The pdf skill integrates cleanly here since it handles single-file and batch operations equally well. Combine with a file watcher, and you have an automated document processing pipeline.
 
-Strategy Five: Checkpointing and Recovery
+## Strategy Five: Checkpointing and Recovery
 
 [Long-running agent swarms need fault tolerance](/claude-code-multi-agent-error-recovery-strategies/). Implement checkpoint logic so failed agents can resume without restarting the entire pipeline.
 
@@ -120,7 +120,7 @@ Subagent 3 failed on document-003.pdf at step 2.
 Spawn a replacement subagent to resume processing document-003.pdf starting from step 2.
 ```
 
-Practical Example: Documentation Pipeline
+## Practical Example: Documentation Pipeline
 
 Consider generating documentation for a monorepo with multiple packages. Each package requires different handling:
 
@@ -139,7 +139,7 @@ Coordinate documentation generation across 5 packages:
 
 Each specialized agent operates independently, then the coordinator aggregates outputs into a unified documentation site.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Over-spawning creates resource contention. Start with two to four agents and scale based on observed performance. Claude Code agents consume memory and CPU; more isn't always faster.
 
@@ -153,7 +153,7 @@ Include explicit timeout instructions in your subagent prompts:
 Process this file. If you cannot complete within 60 seconds, report failure and stop.
 ```
 
-Skill Recommendations for Coordination
+## Skill Recommendations for Coordination
 
 Several skills enhance multi-agent workflows:
 
@@ -165,10 +165,9 @@ Several skills enhance multi-agent workflows:
 
 The docx skill also proves valuable when generating coordination reports or status documents that agents share during execution.
 
-Conclusion
+## Conclusion
 
 Agent swarm coordination transforms Claude Code from a single assistant into a parallel processing platform. Start with the fan-out/fan-in pattern for independent tasks, scale to hierarchical trees for complex projects, and implement checkpointing for production reliability. The key insight: treat agents as disposable workers that communicate through structured channels, and your automation pipelines will scale horizontally with minimal overhead.
-
 
 Related Reading
 

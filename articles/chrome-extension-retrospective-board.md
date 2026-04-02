@@ -19,7 +19,7 @@ Retrospective meetings are the heartbeat of agile development. They help teams i
 
 This guide explores the best Chrome extension retrospective board options, their features, and how to implement them effectively in your development workflow. It also covers how to build a custom solution when off-the-shelf tools fall short.
 
-Why Use a Chrome Extension for Retrospectives
+## Why Use a Chrome Extension for Retrospectives
 
 Chrome extension retrospective boards offer several advantages over traditional tools. They live in your browser, meaning no additional software installation is required. Team members can join sessions directly from their browsers without creating accounts on external platforms. The integrations with existing workflows, calendar apps, chat tools, and documentation systems, make these extensions particularly appealing for distributed teams.
 
@@ -29,7 +29,7 @@ Beyond convenience, there is a psychological benefit to keeping tools lightweigh
 
 Distributed teams benefit most from browser-based tools because they eliminate the "it works on my machine" problem. There is no client software to keep in sync across operating systems, no VPN requirements to access internal tooling, and no version mismatches to troubleshoot before a meeting can begin.
 
-Retrospective Formats Supported by Chrome Extensions
+## Retrospective Formats Supported by Chrome Extensions
 
 Most Chrome extension retrospective boards support multiple retrospective formats. Understanding which format fits your team's current situation helps you get the most value from each session.
 
@@ -43,9 +43,9 @@ DAKI (Drop, Add, Keep, Improve) works well for teams coming off a major release 
 
 When evaluating Chrome extension retrospective boards, check which formats are included and whether custom formats are configurable. Teams that rotate formats to keep sessions fresh benefit most from tools with broad format libraries.
 
-Top Chrome Extension Retrospective Board Options
+## Top Chrome Extension Retrospective Board Options
 
-TeamRetro
+## TeamRetro
 
 TeamRetro offers one of the most comprehensive Chrome extension retrospective experiences. The extension integrates with Slack, Microsoft Teams, and Jira, automatically pulling in sprint data to provide context for discussions. Teams can create anonymous feedback sessions, which often leads to more honest input from quieter team members.
 
@@ -60,7 +60,7 @@ Key features include:
 
 TeamRetro is best suited for teams of 5 to 50 who need enterprise-level features without enterprise pricing. The dashboard view shows aggregate team health over time, surfacing patterns that individual retrospectives might obscure.
 
-Restro
+## Restro
 
 Restro provides a streamlined approach to retrospective meetings with a focus on simplicity. The Chrome extension launches quickly and presents a clean interface for capturing feedback across common retrospective formats: start-stop-continue, mad-sad-glad, and 4Ls (liked, learned, lacked, longed for).
 
@@ -68,7 +68,7 @@ The real-time collaboration works well for remote teams, with updates appearing 
 
 For teams new to structured retrospectives, Restro's minimalism is an asset. There is less to learn, fewer settings to configure, and the core workflow, add items, vote, discuss, create actions, is immediately clear to first-time participants.
 
-Parabol
+## Parabol
 
 Parabol takes retrospective meetings to a higher level with integrated meeting facilitation. The Chrome extension supports multiple retrospective formats and includes icebreakers to help teams warm up before diving into serious discussion topics.
 
@@ -78,7 +78,7 @@ Enterprise features include SSO integration, advanced permissions, and detailed 
 
 Parabol shines for facilitation-heavy organizations where meeting quality variance is a real problem. The structured phases, check-in, reflect, group, vote, discuss, wrap-up, guide facilitators through a complete retrospective without missing steps.
 
-Comparison Table
+## Comparison Table
 
 | Tool | Free Tier | Anonymous Voting | AI Insights | Jira Integration | Custom Formats |
 |------|-----------|-----------------|-------------|-----------------|----------------|
@@ -88,7 +88,7 @@ Comparison Table
 
 This comparison shows that the right choice depends heavily on team size and integration requirements. Parabol wins on features but requires more setup investment. Restro wins on zero-friction adoption. TeamRetro sits in the middle, offering strong integrations without Parabol's facilitation complexity.
 
-Building Custom Retrospective Boards with Chrome Extensions
+## Building Custom Retrospective Boards with Chrome Extensions
 
 For teams with specific requirements, building a custom retrospective board using Chrome extension development is straightforward. The Chrome Web Storage API provides reliable data persistence, while the chrome.identity API enables team authentication.
 
@@ -149,7 +149,7 @@ class RetrospectiveBoard {
 
 This foundation can be extended with real-time sync using Firebase or Supabase, allowing team members to see updates instantly during meetings.
 
-Adding Real-Time Collaboration
+## Adding Real-Time Collaboration
 
 Local storage works for single-user drafting but breaks down for real-time team sessions. The following pattern uses Supabase's real-time subscriptions to push updates to all participants instantly:
 
@@ -217,7 +217,7 @@ class RealtimeRetrospectiveBoard extends RetrospectiveBoard {
 
 This pattern enables a shared retrospective board where all participants see changes without refreshing. The session ID can be shared via a URL parameter, making it easy to invite team members to the active session.
 
-Anonymous Voting Implementation
+## Anonymous Voting Implementation
 
 Anonymous voting reduces social pressure and produces more honest prioritization. Here is how to implement it in a custom extension:
 
@@ -263,7 +263,7 @@ function renderVoteButton(item, votedIds) {
 
 The vote is stored locally to prevent the same browser from voting twice, but the backend receives no user identifier, preserving anonymity from the server's perspective.
 
-Best Practices for Effective Retrospective Meetings
+## Best Practices for Effective Retrospective Meetings
 
 Regardless of which Chrome extension you choose, certain practices make retrospective meetings more productive.
 
@@ -281,7 +281,7 @@ Time-box phases. For a one-hour retrospective, allocate roughly 10 minutes for r
 
 Vary the format. Using the same retrospective format every sprint leads to repetitive feedback. Rotate between start-stop-continue, 4Ls, and DAKI to surface different dimensions of team experience.
 
-Common Anti-Patterns to Avoid
+## Common Anti-Patterns to Avoid
 
 Several common mistakes undermine retrospective effectiveness regardless of tooling:
 
@@ -295,7 +295,7 @@ Skipping the retrospective after bad sprints. Teams most need structured reflect
 
 Treating retrospectives as performance reviews. When team members fear that retrospective feedback will be used for evaluation, honest participation stops. The retrospective is a team tool, not a management surveillance mechanism.
 
-Integration Considerations
+## Integration Considerations
 
 Most Chrome extension retrospective boards integrate with common development tools. Jira integration allows teams to link action items directly to tickets. Slack integration sends meeting summaries to channels and creates follow-up threads. Confluence or Notion integration archives retrospective data for future reference.
 
@@ -308,7 +308,7 @@ When evaluating extensions, check:
 
 Data residency matters more than teams often realize. If your organization operates under strict compliance requirements, verify that the extension stores data in approved regions. Several tools offer self-hosted options that give you complete control over where retrospective data lives.
 
-Choosing the Right Tool for Your Team
+## Choosing the Right Tool for Your Team
 
 The best Chrome extension retrospective board depends on your team's size, workflow, and specific needs.
 
@@ -323,7 +323,6 @@ Teams with security or compliance requirements should evaluate self-hosted PostH
 Consider starting with a free tier to validate the tool works for your team before committing to paid plans. Most providers offer generous free versions suitable for evaluating core functionality. Running two or three retrospectives on a free tier gives you enough signal to evaluate fit without a financial commitment.
 
 Effective retrospectives transform team performance over time. The right Chrome extension makes these meetings smooth, accessible, and integrated into your daily workflow, helping your team continuously improve without adding administrative burden.
-
 
 Related Reading
 

@@ -16,7 +16,7 @@ permalink: /how-to-contribute-claude-skills-to-open-source/
 
 Claude Code skills are `.md` files. plain Markdown with YAML front matter. This makes them easy to version-control, review, and share. Contributing a skill to open source means writing a clean `.md` file, documenting it well, and submitting a pull request.
 
-Understanding Claude Skills Architecture
+## Understanding Claude Skills Architecture
 
 A Claude skill is a single Markdown file. Claude reads it when you invoke `/skill-name` and follows the instructions inside. There's no build step, no compiled code, and no special runtime. just the `.md` file. The skill.md format is central to this, for a complete walkthrough of how it works, see [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/).
 
@@ -42,7 +42,7 @@ Example
 
 That's a complete, valid skill file.
 
-Preparing Your Skill for Open Source
+## Preparing Your Skill for Open Source
 
 Before submitting, do these checks:
 
@@ -54,7 +54,7 @@ Test in isolation: Load your skill in a fresh Claude Code session. Verify it pro
 
 Write a clear description: The `description` field is what users see when browsing skills. Make it specific: "Add text watermarks to PDF documents" beats "PDF helper".
 
-Adding a README
+## Adding a README
 
 If you are contributing a skill to a standalone repository rather than a PR to an existing collection, include a `README.md` alongside your skill file. The README is the first thing a potential user or maintainer reads, so treat it as your pitch. Cover the following:
 
@@ -89,7 +89,7 @@ Limitations
 - Image-based (scanned) PDFs are not supported
 ```
 
-Choosing a LICENSE
+## Choosing a LICENSE
 
 Open-source contributions require an explicit license. Without one, the default is "all rights reserved," which prevents other developers from legally reusing or modifying your skill. For skill files, the most common choices are:
 
@@ -99,13 +99,13 @@ Open-source contributions require an explicit license. Without one, the default 
 
 Include a `LICENSE` file in the repository root. If you are submitting a PR to an existing collection, that repository's license already governs your contribution. check before assuming.
 
-Providing Example Files
+## Providing Example Files
 
 For skills that operate on specific file types (PDFs, spreadsheets, CSVs), include a small sample input file in an `examples/` directory. This serves two purposes: maintainers can reproduce your tests quickly, and new users have a file to practice with immediately. Keep example files small. a one-page PDF or a ten-row CSV is enough.
 
 For guidance on writing the actual skill.md file, see [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/).
 
-GitHub Repository Structure for Shared Skills
+## GitHub Repository Structure for Shared Skills
 
 If you are publishing a skill as its own repository. rather than contributing to an existing collection. use a layout that is immediately recognizable to other developers:
 
@@ -137,7 +137,7 @@ Contributing
 
 A `CHANGELOG.md` helps users who pin a specific version of a skill know whether upgrading is worth the effort. Use the [Keep a Changelog](https://keepachangelog.com) format for consistency with the wider open-source ecosystem.
 
-Choosing the Right Repository
+## Choosing the Right Repository
 
 Research repositories before opening a PR. Look for:
 - An existing skills collection that matches your skill's category
@@ -152,7 +152,7 @@ cd claude-skills-collection
 git checkout -b add-watermark-pdf-skill
 ```
 
-Writing Effective Skill Files
+## Writing Effective Skill Files
 
 Structure your skill's Markdown body to answer the questions users have:
 
@@ -163,7 +163,7 @@ Structure your skill's Markdown body to answer the questions users have:
 
 Keep instructions concrete. Instead of "handle errors appropriately," write "if the PDF is encrypted, Claude will prompt you for a password before proceeding."
 
-Tips for Writing Good Skill Documentation
+## Tips for Writing Good Skill Documentation
 
 Good skill documentation is the difference between a skill that gets adopted and one that sits uninstalled. Apply these principles:
 
@@ -187,7 +187,7 @@ Version your examples to your dependencies. If your skill generates code that us
 
 For a practical look at what the pdf skill can do that your contribution might build on, see [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/).
 
-Submitting Your Contribution
+## Submitting Your Contribution
 
 Write a PR title that matches what the skill does:
 
@@ -231,7 +231,7 @@ Respond to reviewer feedback promptly. Maintainers may ask for clearer wording, 
 
 It also helps to understand the difference between official and community skill expectations before you submit. see [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/) to calibrate the quality bar appropriately.
 
-Maintaining Your Contribution
+## Maintaining Your Contribution
 
 After merge, watch for issues. Users often find edge cases you didn't test. A skill that handles `.pdf` but not password-protected PDFs will get bug reports. Update the skill file to document known limitations if you can't fix them immediately.
 

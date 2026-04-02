@@ -18,7 +18,7 @@ Agencies and consultancies face unique cost considerations when adopting Claude 
 
 The question is rarely whether AI-assisted development saves time, it does. The harder question is whether the cost structure of Claude Code fits how agencies actually work: variable project loads, multiple concurrent client contexts, billable hours tracking, and the need to demonstrate clear returns to principals who may be skeptical of new tooling costs.
 
-Understanding Claude Code Pricing Tiers
+## Understanding Claude Code Pricing Tiers
 
 Claude Code operates on a tiered pricing model that scales with your usage. The key components affecting agency costs are:
 
@@ -30,7 +30,7 @@ For agencies, the primary cost driver is API consumption during development sess
 
 Understanding token consumption patterns helps you forecast costs accurately. A Claude Code session that writes a new feature from scratch might consume 20,000-50,000 tokens. A session that reviews and refactors an existing codebase can use significantly more, especially if large files are in context. Code generation tends to be output-heavy (expensive) while code review tends to be input-heavy (cheaper per token, but volumes are higher).
 
-Token Cost Reference for Agency Budgeting
+## Token Cost Reference for Agency Budgeting
 
 As of early 2026, Claude API pricing for the models used by Claude Code follows this general structure (verify current pricing at anthropic.com as rates change):
 
@@ -42,7 +42,7 @@ As of early 2026, Claude API pricing for the models used by Claude Code follows 
 
 For most agency use cases, Sonnet provides the best quality-to-cost ratio. Reserve Opus for genuinely complex architectural decisions or when a client project requires the highest possible output quality.
 
-Real-World Cost Examples for Agencies
+## Real-World Cost Examples for Agencies
 
 Small Agency (2-5 Developers)
 
@@ -80,7 +80,7 @@ At this scale, the conversation shifts from "can we afford it?" to "how do we op
 
 Enterprise-scale operations should also budget for a dedicated AI tooling role or working group. Someone needs to monitor token consumption across teams, identify wasteful patterns (like developers leaving large files in context unnecessarily), and maintain the shared skill library. This typically represents 0.25-0.5 of one FTE's time but directly influences whether your $10,000/month investment returns 2x or 5x.
 
-Cost Optimization Strategies for Agencies
+## Cost Optimization Strategies for Agencies
 
 1. Implement Skill Standardization
 
@@ -202,7 +202,7 @@ function claude-tracked() {
 
 At the end of each month, parse the log against your API usage dashboard to approximate per-client costs.
 
-Calculating Your Agency ROI
+## Calculating Your Agency ROI
 
 To determine if Claude Code makes financial sense for your agency, use this formula:
 
@@ -228,7 +228,7 @@ Knowledge transfer savings: When a senior developer leaves or moves to a differe
 
 Pitch and proposal quality: Some agencies use Claude Code to accelerate technical proposal writing, drafting architecture diagrams, writing technical specifications, and estimating project complexity. This is difficult to quantify but reduces the non-billable time invested in winning new business.
 
-Client Project Isolation Best Practices
+## Client Project Isolation Best Practices
 
 Agencies must maintain strict boundaries between client projects. Here is a practical approach:
 
@@ -264,7 +264,7 @@ Keep API keys separate for enterprise clients. For clients with strict data hand
 ANTHROPIC_API_KEY=sk-ant-client-financial-corp-dedicated-key
 ```
 
-Skills That Maximize Agency Value
+## Skills That Maximize Agency Value
 
 Certain skills provide outsized value for agencies:
 
@@ -279,7 +279,7 @@ Certain skills provide outsized value for agencies:
 
 Beyond using existing skills, consider building agency-specific skills for your most common deliverables. If you frequently deliver the same types of applications, Shopify storefronts, SaaS dashboards, REST APIs with a specific stack, a custom skill that encodes your exact patterns, file naming conventions, and code style can save 2-3 hours on every new project of that type.
 
-Handling Client Conversations About AI Usage
+## Handling Client Conversations About AI Usage
 
 A growing number of agency clients are asking directly whether AI tools are being used on their projects. This is a conversation worth preparing for rather than being caught off guard.
 
@@ -293,7 +293,7 @@ AI-cautious clients may have concerns about intellectual property, data privacy,
 
 Having a one-page internal policy document on AI tool usage that you can share with clients makes this conversation much easier.
 
-Making the Case to Stakeholders
+## Making the Case to Stakeholders
 
 When presenting Claude Code costs to agency leadership, focus on:
 
@@ -312,14 +312,13 @@ For internal stakeholder presentations, build a simple dashboard that tracks thr
 
 If Claude Code is working, all three metrics should improve within 60-90 days of consistent adoption. If they do not, the bottleneck is likely adoption quality rather than the tool itself, teams using Claude Code sporadically or without good CLAUDE.md context will see minimal improvement.
 
-Conclusion
+## Conclusion
 
 For agencies and consultancies, Claude Code represents a practical investment that typically pays for itself within 2-3 months. The key is implementing proper usage patterns, standardizing skills across your team, and maintaining clear project boundaries. Start with a small pilot team, measure your results, and scale based on demonstrated ROI.
 
 The agencies seeing the best returns are not just using Claude Code, they have built systems around it that maximize value while controlling costs. That means project-specific CLAUDE.md files created at kickoff, shared skill libraries updated as teams discover better patterns, disciplined context management to control token spend, and clear internal policies on client communication and data handling. The tool is the easy part; the systems are what determine whether you get a modest productivity bump or a genuine competitive advantage.
 
 ---
-
 
 Related Reading
 

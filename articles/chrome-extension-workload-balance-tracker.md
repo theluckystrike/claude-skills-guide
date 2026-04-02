@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Workload Balance Tracker: A Developer Guide"
 description: "Learn how to build and use chrome extension workload balance trackers to manage tasks, time, and productivity across projects."
@@ -14,11 +13,10 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Chrome extension workload balance trackers are specialized browser tools that help developers and power users monitor, distribute, and optimize their work across multiple projects and time blocks. These extensions bridge the gap between simple task lists and comprehensive project management, offering real-time insights into how you allocate your time and mental energy.
 
-Understanding Workload Balance in Browser Contexts
+## Understanding Workload Balance in Browser Contexts
 
 The challenge with traditional time tracking is that it often feels disconnected from actual work. You might track that you spent three hours on Project A, but you have no insight into cognitive load, context switching costs, or energy levels throughout the day. A workload balance tracker addresses these gaps by capturing richer data about your working patterns.
 
@@ -28,7 +26,7 @@ Context switching is particularly costly for developers. Research consistently s
 
 The browser is the ideal place to do this tracking because it's where most knowledge work happens. Whether you're writing code in a web-based IDE, managing tasks in Notion, attending video calls, or reviewing pull requests in GitHub, your browser tab activity is a faithful proxy for where your attention goes throughout the day.
 
-Core Features of a Workload Balance Tracker
+## Core Features of a Workload Balance Tracker
 
 A well-designed workload balance tracker includes several essential capabilities:
 
@@ -44,7 +42,7 @@ Focus Session Support: The ability to lock into a single project context for a d
 
 Export and Reporting: Data export to CSV or JSON for use in invoicing, retrospectives, or external reporting tools.
 
-Building a Basic Workload Balance Tracker
+## Building a Basic Workload Balance Tracker
 
 Here's a foundation for building your own workload balance tracker using Chrome's Manifest V3 architecture:
 
@@ -127,7 +125,7 @@ async function loadProgress() {
 loadProgress();
 ```
 
-Advanced Implementation Patterns
+## Advanced Implementation Patterns
 
 For a more sophisticated tracker, consider adding these features:
 
@@ -219,7 +217,7 @@ function recordSwitch(fromProject, toProject) {
 }
 ```
 
-Building the Popup UI
+## Building the Popup UI
 
 The popup is where users interact with their data. A clear, minimal popup is more useful than an elaborate dashboard that takes time to parse at a glance:
 
@@ -276,7 +274,7 @@ async function renderData() {
 renderData();
 ```
 
-Practical Use Cases for Developers
+## Practical Use Cases for Developers
 
 For developers specifically, workload balance trackers solve several common problems:
 
@@ -290,7 +288,7 @@ Burnout Prevention: When you see eight hours straight in code review, an alert p
 
 Sprint Retrospectives: Export a week's worth of project time data and bring it to your retrospective. The breakdown between planned work, unplanned interruptions, and meetings often reveals systemic workflow problems that no one could articulate before seeing the numbers.
 
-Comparing Approaches: Build vs. Buy
+## Comparing Approaches: Build vs. Buy
 
 If you're evaluating whether to build a custom tracker or use an existing extension, here's how the options compare:
 
@@ -305,7 +303,7 @@ If you're evaluating whether to build a custom tracker or use an existing extens
 
 For individual developers prioritizing privacy and customization, a self-built extension is worth the investment. For teams that need shared dashboards and integrations with HR or billing systems, established tools with APIs may deliver more value faster.
 
-Integration Strategies
+## Integration Strategies
 
 Extend your workload tracker with additional data sources:
 
@@ -337,7 +335,7 @@ function exportToCsv() {
 }
 ```
 
-Choosing or Building Your Solution
+## Choosing or Building Your Solution
 
 If you prefer existing solutions, several chrome extensions provide workload tracking with varying feature sets. Look for ones that support custom project rules, provide exportable data, and integrate with your existing workflow.
 
@@ -346,7 +344,6 @@ For developers comfortable with JavaScript, building a custom tracker offers sev
 The most effective approach starts simple. track basic time allocation, review the data after a week, and add complexity as you understand what metrics actually influence your productivity. Begin with just three or four project categories mapped to the domains you visit most. Once you have a week of data, patterns emerge quickly: the communication sink that consumes your mornings, the learning time you keep deferring, the project that always runs over its intended time budget. From there, the right features to add become obvious rather than speculative.
 
 Start with a one-file prototype in 50 lines of JavaScript, run it for a week, and let the data tell you what to build next. That discipline. measure first, optimize second. is what separates useful productivity tools from abandoned experiments.
-
 
 Related Reading
 

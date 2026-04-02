@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Dual Pane Reader: Building Split-Screen."
 description: "Learn how to build a Chrome extension dual pane reader for comparing content side-by-side. Practical implementation guide with code examples for."
@@ -14,19 +13,18 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Chrome Extension Dual Pane Reader: Building Split-Screen Reading Tools
 
 A Chrome extension dual pane reader transforms your browser into a powerful comparison and reading workstation. Whether you're researching topics, translating documents, or reviewing code changes, the ability to view two web pages side by side within a single browser window dramatically improves productivity. This guide walks you through building a functional dual pane reader extension from scratch.
 
-Why Build a Dual Pane Reader
+## Why Build a Dual Pane Reader
 
 The traditional approach of opening multiple browser windows and manually arranging them creates friction. A dedicated dual pane reader Chrome extension provides several advantages: synchronized scrolling between panes, unified controls, persistent layouts, and the ability to load content without leaving your current tab. Developers use these extensions to compare API documentation with implementation guides. Researchers compare source articles. Translators work with original and translated text simultaneously.
 
 The core challenge lies in managing two independent document views while maintaining intuitive user controls. You need to handle URL loading, content extraction, scrolling synchronization, and responsive layout management, all while staying within Chrome's extension architecture constraints.
 
-Extension Architecture Overview
+## Extension Architecture Overview
 
 A dual pane reader extension consists of three main components working together. The popup interface provides the user controls for loading URLs into each pane. The content script runs within each pane to extract readable content and manage scroll synchronization. The background service worker coordinates communication between the popup and content scripts.
 
@@ -51,7 +49,7 @@ For the extension to function properly, you need the `activeTab` permission to a
 }
 ```
 
-Implementing the Popup Interface
+## Implementing the Popup Interface
 
 The popup serves as the control center for your dual pane reader. Users need input fields for two URLs, a button to activate the split view, and controls for synchronization options. This HTML structure provides the foundation:
 
@@ -90,7 +88,7 @@ The popup serves as the control center for your dual pane reader. Users need inp
 
 When users click the activate button, the popup sends a message to the currently active tab instructing it to transform into split-view mode. The content script receives this message ands the page.
 
-Content Script: The Core Reader Logic
+## Content Script: The Core Reader Logic
 
 The content script handles the heavy lifting of actually creating and managing the dual pane display. It must create two scrollable containers, inject content from the specified URLs, and handle scroll synchronization.
 
@@ -174,7 +172,7 @@ function setupScrollSync() {
 
 This implementation uses iframes to load both URLs within a single page. The scroll synchronization works by calculating a scroll ratio, the current scroll position divided by the maximum scrollable distance, and applying that ratio to the other pane.
 
-Handling Content Extraction
+## Handling Content Extraction
 
 Loading raw web pages in iframes often results in cluttered displays with navigation, ads, and sidebars. A more sophisticated dual pane reader extracts only the main content using DOM manipulation. Here's how to enhance the content script:
 
@@ -202,7 +200,7 @@ function extractMainContent(doc) {
 
 You can apply this extraction before injecting content into the panes, creating a cleaner reading experience focused on actual article content rather than page chrome.
 
-Advanced Features for Power Users
+## Advanced Features for Power Users
 
 Beyond basic split-screen viewing, consider implementing these features for a more capable dual pane reader:
 
@@ -229,12 +227,11 @@ async function saveConfiguration(leftUrl, rightUrl) {
 }
 ```
 
-Performance Considerations
+## Performance Considerations
 
 Loading two full web pages simultaneously places significant memory demands on the browser. Optimize performance by implementing lazy loading, only load iframe content when the user specifically requests each pane. Use Chrome's `chrome.tabs` API to retrieve tab information before creating iframes, and consider implementing a virtual scrolling approach for very long documents.
 
 The dual pane reader pattern demonstrates how Chrome extensions can fundamentally transform browser behavior to serve specific workflows. By understanding the messaging system between extension components and the DOM manipulation techniques available in content scripts, you can build powerful productivity tools that rival standalone applications.
-
 
 Related Reading
 

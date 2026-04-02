@@ -13,12 +13,11 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 Chrome extensions power productivity across organizations, but distributing them securely within an enterprise requires more than the public Chrome Web Store. A self-hosted extension store gives IT administrators complete control over which extensions are available, when they're updated, and who can access them.
 
 This guide walks through setting up a private Chrome extension repository for enterprise environments. You'll learn the technical requirements, configuration steps, and practical considerations for managing internal extensions at scale.
 
-Why Self-Hosted Extension Stores Matter
+## Why Self-Hosted Extension Stores Matter
 
 Enterprise environments often operate under strict security policies. Many organizations restrict internet access, require air-gapped networks, or need compliance with specific data handling regulations. The public Chrome Web Store becomes inaccessible in these scenarios.
 
@@ -33,7 +32,7 @@ Beyond network restrictions, self-hosted stores provide:
 - Forced installations: Push required extensions to all managed devices automatically
 - Update control: Choose when updates deploy rather than accepting Google's schedule
 
-Self-Hosted vs. Chrome Web Store: Comparison
+## Self-Hosted vs. Chrome Web Store: Comparison
 
 | Feature | Chrome Web Store | Self-Hosted Store |
 |---|---|---|
@@ -47,7 +46,7 @@ Self-Hosted vs. Chrome Web Store: Comparison
 
 For small teams or consumer use cases the Web Store is sufficient. For organizations with security requirements, compliance obligations, or internal-only tools, self-hosting is the correct approach.
 
-Planning Your Extension Infrastructure
+## Planning Your Extension Infrastructure
 
 Before writing any configuration, decide on your hosting topology. There are three common architectures:
 
@@ -59,11 +58,11 @@ Object storage: Host CRX files in an S3-compatible bucket or Azure Blob Storage 
 
 For most enterprise deployments, a single server behind an internal load balancer hits the right balance of simplicity and reliability. The rest of this guide uses that model.
 
-Setting Up Your Extension Repository
+## Setting Up Your Extension Repository
 
 A self-hosted Chrome extension store is fundamentally a web server serving CRX files with proper headers. You don't need specialized software, a basic web server handles the job.
 
-Directory Structure
+## Directory Structure
 
 Organize your extension repository with a clear structure:
 
@@ -114,7 +113,7 @@ Create a manifest that describes your extension catalog:
 
 The extension ID is critical. Chrome uses the ID to track installations and updates. Generate IDs using the official extension packaging process in Chrome.
 
-Chrome's Update XML Format
+## Chrome's Update XML Format
 
 For automatic update detection, Chrome also supports an XML update manifest format. This is the format used by the `update_url` field inside an extension's own manifest. Create an `update.xml` file alongside your JSON manifest:
 
@@ -136,7 +135,7 @@ For automatic update detection, Chrome also supports an XML update manifest form
 
 Chrome fetches this XML when the extension's `update_url` is called. The `appid` must exactly match the extension ID, and the `version` triggers updates only when it is higher than what is installed.
 
-Required Server Configuration
+## Required Server Configuration
 
 Your web server must serve CRX files with specific CORS headers. Without these headers, Chrome blocks the installation.
 
@@ -194,11 +193,11 @@ For Apache, use mod_headers in your .htaccess or server configuration:
 
 Cache headers on the manifest and XML files are just as important as on the CRX files. If your update manifest is cached, Chrome will not pick up new versions until the cache expires.
 
-Configuring Chrome to Use Your Store
+## Configuring Chrome to Use Your Store
 
 Chrome Enterprise policies control which extension sources Chrome uses. Configure these through Group Policy on Windows, configuration profile on macOS, or JSON policies on Linux.
 
-Windows Group Policy
+## Windows Group Policy
 
 Deploy this policy through Group Policy Management:
 
@@ -269,7 +268,7 @@ The `ExtensionInstallForcelist` policy forces specific extensions onto managed d
 
 Adding `ExtensionInstallBlocklist` with a wildcard `*` combined with an allowlist creates a whitelist-only environment. Users cannot install any extension not explicitly permitted by IT.
 
-Policy Deployment Verification
+## Policy Deployment Verification
 
 After deploying policies, verify they applied correctly on a test device:
 
@@ -279,7 +278,7 @@ After deploying policies, verify they applied correctly on a test device:
 
 If policies do not appear, check file permissions on the policy JSON file. Chrome requires the file to be owned by root and not world-writable.
 
-Managing Updates
+## Managing Updates
 
 Self-hosted extensions require manual update management. Chrome checks for updates based on the `update_url` in the extension manifest. For internally hosted extensions, point this to your update.xml.
 
@@ -344,9 +343,9 @@ echo "Deployed internal-tool version ${NEW_VERSION}"
 
 Store the private key (`internal-tool.pem`) in a secrets manager or hardware security module. Losing this key means you cannot issue signed updates, you would need to redistribute the extension as a new ID.
 
-Security Considerations
+## Security Considerations
 
-HTTPS Is Mandatory
+## HTTPS Is Mandatory
 
 Host your extension repository over HTTPS. Chrome blocks extensions loaded over insecure HTTP connections in modern versions. Use a certificate from your internal PKI if your devices trust it, or a public CA if you prefer not to manage certificate distribution.
 
@@ -360,7 +359,7 @@ Self-signed certificates work only if you distribute the CA certificate to all m
 
 The value is the base64-encoded DER certificate. Managed via the `CACertificates` Chrome policy or through your MDM's certificate profile.
 
-Network Access Controls
+## Network Access Controls
 
 Restrict access to your extension server using network ACLs or firewall rules. Only devices on your corporate network or connected via VPN should reach the extension endpoints. A simple approach on Linux with iptables:
 
@@ -379,7 +378,7 @@ location /extensions/ {
 }
 ```
 
-CRX Signing and Verification
+## CRX Signing and Verification
 
 Chrome validates the CRX file signature during installation. When you package an extension using Chrome's built-in packager or the `crx` command-line tool, it signs the file with your private key. If someone replaces a CRX file on your server with a malicious file, the signature check fails and Chrome refuses to install it.
 
@@ -391,7 +390,7 @@ sha256sum internal-tool-1.2.2.crx > internal-tool-1.2.2.crx.sha256
 
 Your deployment automation can verify checksums before updating the manifest, preventing a corrupted upload from reaching end users.
 
-Common Pitfalls
+## Common Pitfalls
 
 Extension IDs change when repackaged without the original key. If you generate a new CRX file without preserving the original private key, Chrome treats it as a different extension. Users lose their settings and the old extension remains installed alongside the new one. Keep your private keys in source-controlled secret storage (HashiCorp Vault, AWS Secrets Manager, etc.) and back them up.
 
@@ -403,7 +402,7 @@ Testing in incognito mode reveals permission issues. Extensions that work in reg
 
 Manifest version mismatches cause silent failures. If your extension targets Manifest V3 but your update XML references a Manifest V2 package, Chrome may refuse to install the update. Always package and test extensions against the manifest version you intend to ship.
 
-Rolling Out to a Subset of Devices
+## Rolling Out to a Subset of Devices
 
 Rather than pushing updates to your entire fleet at once, use organizational units (OUs) in your directory service or MDM device groups to stage rollouts:
 
@@ -413,7 +412,7 @@ Rather than pushing updates to your entire fleet at once, use organizational uni
 
 This pattern catches permission regressions or compatibility issues before they affect all users.
 
-Monitoring and Audit
+## Monitoring and Audit
 
 Chrome Browser Cloud Management (free for basic use) provides a dashboard showing which extensions are installed across your managed fleet. For organizations not using Chrome Browser Cloud Management, build your own audit by scraping Chrome's reporting endpoint or parsing extension installation logs:
 
@@ -424,12 +423,11 @@ journalctl -u chrome --since "1 hour ago" | grep -i extension
 
 Combine this with a nightly cron job that checks each managed device's installed extension list against your approved list and alerts on deviations.
 
-Wrap-Up
+## Wrap-Up
 
 A self-hosted Chrome extension store provides the control enterprises need for secure extension distribution. The setup requires basic web hosting, proper CORS and cache configuration, signed CRX files, and Chrome Enterprise policies for deployment.
 
 Start small, host a single internal tool, verify the update cycle works end-to-end, then expand. Pay particular attention to key management and cache headers; those two areas cause the majority of real-world deployment failures. The investment pays off in security, compliance, and operational control over every extension running on your managed fleet.
-
 
 Related Reading
 

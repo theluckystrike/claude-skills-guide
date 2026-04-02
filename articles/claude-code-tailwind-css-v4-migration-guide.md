@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Tailwind CSS V4 Migration Guide
 
 Tailwind CSS v4 represents a significant evolution in the utility-first CSS framework, introducing a new engine, improved performance, and simplified configuration. If you're working on existing projects, migrating to v4 requires careful planning and execution. This guide shows you how to use Claude Code and related skills to automate and streamline your migration workflow.
 
-What's New in Tailwind CSS v4
+## What's New in Tailwind CSS v4
 
 Tailwind CSS v4 brings several breaking changes and new features that justify the upgrade:
 
@@ -29,7 +28,7 @@ Tailwind CSS v4 brings several breaking changes and new features that justify th
 - Simplified Utilities: Some utility classes have been consolidated or renamed
 - Better TypeScript Support: Improved type definitions out of the box
 
-Preparing Your Project for Migration
+## Preparing Your Project for Migration
 
 Before running the migration, ensure your project meets the basic requirements:
 
@@ -43,11 +42,11 @@ Use the `frontend-design` skill to analyze your current Tailwind setup:
 Use the frontend-design skill to audit your current CSS architecture and identify potential migration issues.
 ```
 
-Automated Migration with Claude Code
+## Automated Migration with Claude Code
 
 Claude Code can handle much of the migration work automatically. Here's a practical workflow:
 
-Step 1: Analyze Current Dependencies
+## Step 1: Analyze Current Dependencies
 
 Ask Claude to examine your package.json and identify Tailwind-related dependencies:
 
@@ -55,7 +54,7 @@ Ask Claude to examine your package.json and identify Tailwind-related dependenci
 grep -E "tailwind|postcss|autoprefixer" package.json
 ```
 
-Step 2: Update Package Dependencies
+## Step 2: Update Package Dependencies
 
 Replace your Tailwind dependencies with v4 packages:
 
@@ -69,7 +68,7 @@ If you're using PostCSS:
 npm install tailwindcss@latest @tailwindcss/postcss@latest
 ```
 
-Step 3: Update Configuration Files
+## Step 3: Update Configuration Files
 
 Tailwind v4 simplifies configuration significantly. Your old `tailwind.config.js` might look like:
 
@@ -96,7 +95,7 @@ This can be replaced with CSS-native configuration:
 }
 ```
 
-Step 4: Update Import Statements
+## Step 4: Update Import Statements
 
 Replace the old `@tailwind` directives with the new `@import`:
 
@@ -110,9 +109,9 @@ Replace the old `@tailwind` directives with the new `@import`:
 @import "tailwindcss";
 ```
 
-Handling Common Migration Issues
+## Handling Common Migration Issues
 
-Renamed Utilities
+## Renamed Utilities
 
 Some utility classes have been renamed in v4. Use Claude to search and replace common patterns:
 
@@ -122,7 +121,7 @@ Some utility classes have been renamed in v4. Use Claude to search and replace c
 | `divide-y-1` | Use `gap` on parent instead |
 | `text-opacity-50` | Use `text-black/50` syntax |
 
-Plugin Migration
+## Plugin Migration
 
 If you're using Tailwind plugins, update them to v4-compatible versions:
 
@@ -130,7 +129,7 @@ If you're using Tailwind plugins, update them to v4-compatible versions:
 npm install @tailwindcss/forms@latest @tailwindcss/typography@latest
 ```
 
-Custom Fonts and Theme Values
+## Custom Fonts and Theme Values
 
 Move custom theme values to your CSS:
 
@@ -143,7 +142,7 @@ Move custom theme values to your CSS:
 }
 ```
 
-Using Claude Skills for Migration Assistance
+## Using Claude Skills for Migration Assistance
 
 Several Claude skills can assist during the migration:
 
@@ -152,7 +151,7 @@ Several Claude skills can assist during the migration:
 - tdd: Create test suites to verify your UI remains consistent after migration
 - supermemory: Store migration notes and lessons learned for your team
 
-Verifying Your Migration
+## Verifying Your Migration
 
 After completing the migration steps, verify everything works:
 
@@ -161,7 +160,7 @@ After completing the migration steps, verify everything works:
 3. Visual regression testing: Use the `tdd` skill to create visual tests
 4. Build production bundle: `npm run build` to ensure no build errors
 
-Performance Benefits After Migration
+## Performance Benefits After Migration
 
 Once migrated to v4, you'll notice improvements:
 
@@ -170,11 +169,11 @@ Once migrated to v4, you'll notice improvements:
 - Hot Module Replacement: Faster updates during development
 - Simpler configuration: Less boilerplate code to maintain
 
-Migrating Complex Projects
+## Migrating Complex Projects
 
 For larger projects with multiple teams or extensive Tailwind usage, consider a phased approach:
 
-Phase 1: Assessment
+## Phase 1: Assessment
 
 Use Claude to scan your codebase and generate a migration report:
 
@@ -186,7 +185,7 @@ Analyze our Tailwind CSS usage and create a migration report. Identify:
 4. Components that may break with v4
 ```
 
-Phase 2: Preparation
+## Phase 2: Preparation
 
 Create a v4-compatible component library in parallel:
 
@@ -200,7 +199,7 @@ Create a v4-compatible component library in parallel:
 }
 ```
 
-Phase 3: Incremental Migration
+## Phase 3: Incremental Migration
 
 Migrate one feature or component at a time:
 
@@ -210,11 +209,11 @@ Migrate one feature or component at a time:
 4. Merge and deploy
 5. Repeat for the next feature
 
-Working with CSS Variables
+## Working with CSS Variables
 
 Tailwind v4 embraces CSS variables more fully. Here's how to use them:
 
-Converting Theme Values
+## Converting Theme Values
 
 Old `tailwind.config.js`:
 
@@ -253,7 +252,7 @@ New CSS-native approach:
 }
 ```
 
-Using CSS Variables in Components
+## Using CSS Variables in Components
 
 Access theme values directly in your components:
 
@@ -263,11 +262,11 @@ Access theme values directly in your components:
 </div>
 ```
 
-Handling Third-Party Libraries
+## Handling Third-Party Libraries
 
 Many UI libraries still use the old Tailwind syntax. Here's how to handle compatibility:
 
-Wrapping External Components
+## Wrapping External Components
 
 ```css
 /* Fix compatibility for third-party components */
@@ -278,7 +277,7 @@ Wrapping External Components
 }
 ```
 
-Using the Compatibility Layer
+## Using the Compatibility Layer
 
 For a smooth transition, create a compatibility CSS file:
 
@@ -291,7 +290,7 @@ For a smooth transition, create a compatibility CSS file:
 }
 ```
 
-Best Practices for Future-Proofing
+## Best Practices for Future-Proofing
 
 After migrating, follow these practices to stay current:
 
@@ -300,7 +299,7 @@ After migrating, follow these practices to stay current:
 3. Keep dependencies updated: Subscribe to Tailwind release notes
 4. Document custom patterns: Use the `supermemory` skill to maintain team knowledge
 
-Conclusion
+## Conclusion
 
 Migrating to Tailwind CSS v4 doesn't have to be painful. By using Claude Code and following a systematic approach, you can upgrade your projects efficiently while maintaining code quality. The initial investment pays off through better performance, simpler configuration, and access to the latest CSS features.
 
@@ -309,7 +308,6 @@ Start with a small project or a feature branch to validate your migration proces
 With proper planning and the right tools, your team can complete the migration with minimal disruption while positioning your projects for long-term maintainability and performance.
 
 ---
-
 
 Related Reading
 

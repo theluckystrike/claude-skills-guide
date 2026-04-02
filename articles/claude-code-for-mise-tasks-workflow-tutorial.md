@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Mise Tasks Workflow Tutorial
-
 If you've been searching for a way to combine the intelligent automation of Claude Code with the flexible task management of Mise, you've found the right tutorial. Mise isn't just a version manager, its task runner capabilities combined with Claude Code create a powerful workflow automation system that can transform how you approach daily development tasks.
 
 This tutorial walks you through practical examples of integrating Claude Code with Mise tasks, showing you real patterns you can apply immediately to your projects.
 
-Understanding Mise Tasks
+## Understanding Mise Tasks
 
 Mise tasks extend beyond version management into a full-fledged task runner territory. The `[tasks]` section in your `.mise.toml` file defines commands that Mise can execute, similar to npm scripts but with the advantage of knowing your tool versions automatically.
 
@@ -36,7 +33,7 @@ dev = "npm run dev"
 
 What makes this powerful is that when you run `mise run lint`, Mise ensures the correct Node.js version is active before executing your linter. This automatic environment activation becomes even more valuable when Claude Code orchestrates these tasks.
 
-Setting Up Claude Code with Mise Tasks
+## Setting Up Claude Code with Mise Tasks
 
 First, ensure you have Mise installed with task support:
 
@@ -67,7 +64,7 @@ ci = "mise run lint && mise run typecheck && mise run test"
 
 This configuration gives you a standardized task interface that Claude Code can invoke intelligently.
 
-Creating Claude Code Skills for Mise Tasks
+## Creating Claude Code Skills for Mise Tasks
 
 The real power emerges when you create Claude Code skills that understand your Mise tasks. Create a skill that can execute the right Mise task based on context:
 
@@ -100,9 +97,9 @@ skills:
 
 This skill enables Claude Code to respond to requests like "Run the tests" or "Start the dev server" by invoking the appropriate Mise task.
 
-Practical Workflow Patterns
+## Practical Workflow Patterns
 
-Pattern 1: Context-Aware Task Selection
+## Pattern 1: Context-Aware Task Selection
 
 Create a skill that selects the appropriate Mise task based on what you're working on:
 
@@ -123,7 +120,7 @@ skills:
         description: "Running tests after file changes"
 ```
 
-Pattern 2: Sequential Task Chaining
+## Pattern 2: Sequential Task Chaining
 
 Chain multiple Mise tasks for complex workflows:
 
@@ -145,7 +142,7 @@ skills:
         description: "Running full initialization"
 ```
 
-Pattern 3: Environment-Specific Tasks
+## Pattern 3: Environment-Specific Tasks
 
 Define tasks that adapt to different environments:
 
@@ -167,7 +164,7 @@ skills:
         description: "Starting in development mode"
 ```
 
-Advanced Integration: Claude Code as Task Orchestrator
+## Advanced Integration: Claude Code as Task Orchestrator
 
 For more complex scenarios, use Claude Code as an intelligent orchestrator that decides which Mise tasks to run:
 
@@ -193,7 +190,7 @@ skills:
         description: "Building for production"
 ```
 
-Actionable Tips for Mise Tasks with Claude Code
+## Actionable Tips for Mise Tasks with Claude Code
 
 1. Keep tasks focused: Each Mise task should do one thing well. This makes it easier for Claude Code to select the right task.
 
@@ -218,7 +215,7 @@ help = "echo 'Available: lint, test, build, dev, ci'"
 
 Then ask Claude Code to "run the help task" to see what's available.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 If Claude Code can't find your Mise tasks, verify your configuration:
 
@@ -236,7 +233,7 @@ Make sure your `.mise.toml` is in the project root where Claude Code is working.
 mise -c path/to/.mise.toml run test
 ```
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Mise tasks creates a powerful automation layer for your development workflow. The key is defining clear, focused tasks in your `.mise.toml` and creating Claude Code skills that can intelligently invoke them based on your development context.
 

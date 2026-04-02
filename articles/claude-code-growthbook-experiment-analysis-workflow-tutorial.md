@@ -16,7 +16,7 @@ tags: [claude-code, growthbook, experimentation, a-b-testing, data-analysis]
 
 Analyzing experiment results effectively is crucial for making data-driven product decisions. GrowthBook provides powerful A/B testing and feature flagging capabilities, but turning raw experiment data into actionable insights requires the right workflow. This tutorial demonstrates how to use Claude Code to streamline your GrowthBook experiment analysis process, from data extraction to interpretation and reporting.
 
-Prerequisites
+## Prerequisites
 
 Before diving into this tutorial, ensure you have:
 
@@ -25,7 +25,7 @@ Before diving into this tutorial, ensure you have:
 - Basic understanding of A/B testing concepts
 - API keys or credentials for your GrowthBook deployment
 
-Setting Up Your Analysis Environment
+## Setting Up Your Analysis Environment
 
 The first step involves configuring Claude Code to interact with your GrowthBook instance. You'll want to create a dedicated skill or configuration that understands your GrowthBook API structure and can help navigate experiment data.
 
@@ -47,7 +47,7 @@ This project analyzes GrowthBook experiment results. When examining experiments:
 4. Document any anomalies or unexpected results
 ```
 
-Retrieving Experiment Data
+## Retrieving Experiment Data
 
 Claude Code can help you fetch and organize experiment data from GrowthBook. Here's a practical workflow for extracting the information you need:
 
@@ -65,11 +65,11 @@ For organizations with multiple projects, specify the project context clearly:
 Focus on the "mobile-app" project in GrowthBook. Get all A/B tests that have been running for at least 7 days with a minimum of 1000 users per variant.
 ```
 
-Statistical Analysis Best Practices
+## Statistical Analysis Best Practices
 
 When analyzing experiment results, Claude Code can help you apply proper statistical rigor. Here's what to look for:
 
-Sample Size Verification
+## Sample Size Verification
 
 Always verify that your experiment has sufficient sample size before trusting the results. Claude Code can help you calculate required sample sizes or verify that your achieved sample size meets statistical power requirements.
 
@@ -77,7 +77,7 @@ Always verify that your experiment has sufficient sample size before trusting th
 What is the minimum sample size needed to detect a 5% relative change in conversion rate with 80% power and 95% confidence, given our baseline conversion rate of 3%?
 ```
 
-Understanding Statistical Significance
+## Understanding Statistical Significance
 
 Claude Code can help explain statistical concepts in context. When reviewing experiment results:
 
@@ -89,11 +89,11 @@ Claude Code can help explain statistical concepts in context. When reviewing exp
 Explain whether the results for our checkout-flow experiment show statistical significance. The treatment conversion rate is 4.2% vs control at 3.8%, with a p-value of 0.03 and sample size of 50,000 per variant.
 ```
 
-Interpreting Complex Results
+## Interpreting Complex Results
 
 Real-world experiments often involve multiple metrics and segments. Claude Code can help you navigate this complexity:
 
-Multi-Metric Analysis
+## Multi-Metric Analysis
 
 When experiments have primary and secondary metrics, analyze them together:
 
@@ -103,7 +103,7 @@ Our signup experiment has three metrics: signups (primary), onboarding completio
 
 Claude Code will help you understand whether the secondary metric changes are concerning, neutral, or potentially explained by other factors.
 
-Segment Analysis
+## Segment Analysis
 
 Understanding how experiments perform across different user segments is crucial:
 
@@ -111,7 +111,7 @@ Understanding how experiments perform across different user segments is crucial:
 Break down the experiment results by these segments: new vs returning users, mobile vs desktop, and users from different acquisition channels. Look for any significant differences in treatment effect.
 ```
 
-Creating Analysis Reports
+## Creating Analysis Reports
 
 Claude Code excels at generating clear, actionable reports from raw experiment data. Here's a template you can use:
 
@@ -138,7 +138,7 @@ Recommendations
 [Clear action items based on results]
 ```
 
-Automating Recurring Analysis
+## Automating Recurring Analysis
 
 For teams running regular experiments, consider setting up automated analysis workflows with Claude Code. Create a skill that:
 
@@ -149,7 +149,7 @@ For teams running regular experiments, consider setting up automated analysis wo
 
 This automation ensures consistent analysis quality and helps catch significant results quickly.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 As you develop your experiment analysis workflow, watch out for these common mistakes:
 
@@ -161,7 +161,7 @@ Overlooking practical significance: Statistical significance doesn't always equa
 
 Segment-specific findings: Be cautious about rolling out based on segment analysis alone unless the segments were pre-registered.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms GrowthBook experiment analysis from a manual, error-prone process into a structured, reproducible workflow. By using Claude's capabilities for data retrieval, statistical interpretation, and report generation, you can make more confident, data-driven product decisions.
 

@@ -18,7 +18,7 @@ Publishing consistent blog content takes time because the work spans multiple to
 
 This tutorial builds a practical blog publishing pipeline using Claude's built-in skills. By the end, you will have a repeatable system that takes a topic idea from zero to committed Markdown in a single terminal session, with each step handled by a focused skill or script rather than a scattered collection of browser tabs and apps.
 
-Why Build an Automated Blog Workflow
+## Why Build an Automated Blog Workflow
 
 Manual blog workflows have a hidden tax. You open a text editor, switch to a browser for research, tab to a design tool for the featured image, jump to an SEO plugin to check keyword density, then manually copy files around before committing. Each context switch costs time and breaks focus.
 
@@ -26,7 +26,7 @@ A skill-based workflow in Claude Code removes most of those switches. Your draft
 
 This approach also makes the workflow scriptable. Once you understand what each phase does, you can chain phases together with shell scripts and run a near-automated end-to-end pipeline for routine posts.
 
-The Skills Involved
+## The Skills Involved
 
 Before getting into the workflow, here is what each relevant skill actually does:
 
@@ -38,7 +38,7 @@ Before getting into the workflow, here is what each relevant skill actually does
 
 Skills are plain Markdown files stored in `~/.claude/skills/`. You invoke them with a `/skill-name` slash command at the start of a message in Claude Code. There are no install commands. you place the `.md` file in the skills directory and the slash command becomes available.
 
-Skills vs. Shell Scripts: When to Use Each
+## Skills vs. Shell Scripts: When to Use Each
 
 A useful mental model: skills handle content generation and tool-specific transformations, while shell scripts handle file operations, directory management, and Git operations. The two complement each other cleanly.
 
@@ -55,7 +55,7 @@ A useful mental model: skills handle content generation and tool-specific transf
 
 Knowing which layer handles each task prevents you from trying to do file management through Claude prompts or asking shell scripts to generate creative content.
 
-Phase 1: Research and Outline
+## Phase 1: Research and Outline
 
 Start a Claude Code session and use `/supermemory` to pull up context from previous posts:
 
@@ -80,7 +80,7 @@ claude -p "Outline a 1200-word post about Claude Code for code review automation
 Include intro, three H2 sections, and conclusion." > drafts/code-review-outline.md
 ```
 
-Building a Topic Backlog with /supermemory
+## Building a Topic Backlog with /supermemory
 
 A common problem for bloggers is running out of topics or forgetting ideas. Use `/supermemory` as a persistent backlog:
 
@@ -101,7 +101,7 @@ Show me my current topic backlog. Which post would best complement my existing c
 
 This keeps ideas organized without a separate notes app. The persistent memory means you can reference your backlog weeks later without hunting through old notes.
 
-Researching Competitive Content
+## Researching Competitive Content
 
 Before drafting, ask Claude to help you understand what already exists on your topic:
 
@@ -113,7 +113,7 @@ What could a post offer that goes beyond the typical "here are the features" ove
 
 This produces a differentiated angle before you write a single sentence of the actual post. A post that addresses a specific developer frustration or workflow gap performs better than a generic feature walkthrough.
 
-Phase 2: Draft the Post
+## Phase 2: Draft the Post
 
 Open Claude Code interactively and write section by section:
 
@@ -125,7 +125,7 @@ Avoid filler phrases.
 
 Iterate section by section. Keep each prompt focused on one part of the post. This produces tighter output than asking for the full article at once.
 
-Section-by-Section Drafting Strategy
+## Section-by-Section Drafting Strategy
 
 Writing section by section gives you control over each piece before moving on. A practical approach:
 
@@ -154,7 +154,7 @@ Convert my draft in drafts/code-review-post.md to a Word document with proper
 heading styles (H1 for title, H2 for sections) and save it as drafts/code-review-post.docx
 ```
 
-Handling Code Examples
+## Handling Code Examples
 
 Code examples are often the difference between a post that gets bookmarked and one that gets skipped. Ask Claude to generate working code examples tied to your topic:
 
@@ -171,7 +171,7 @@ In the code example you just wrote, what assumptions does the reader need to mee
 for this to work? List them as a bullet list I can add as a "Prerequisites" note.
 ```
 
-Phase 3: SEO Front Matter
+## Phase 3: SEO Front Matter
 
 Every post needs accurate front matter. Ask Claude to generate it:
 
@@ -197,7 +197,7 @@ cat "$FRONT_MATTER" "$DRAFT" > "$OUTPUT"
 echo "Created $OUTPUT"
 ```
 
-SEO Checks Beyond Front Matter
+## SEO Checks Beyond Front Matter
 
 Front matter is the minimum. Ask Claude to check keyword distribution throughout the draft:
 
@@ -223,7 +223,7 @@ code review automation. Suggest 3 natural internal link opportunities for posts 
 Format each suggestion as: [anchor text] -> [suggested topic to link to]
 ```
 
-Generating Schema Markup
+## Generating Schema Markup
 
 For posts that benefit from structured data, ask Claude to generate appropriate JSON-LD:
 
@@ -238,7 +238,7 @@ Generate JSON-LD schema markup for a blog post:
 Format it as a script tag I can include in the post's front matter or layout.
 ```
 
-Phase 4: Featured Image with /canvas-design
+## Phase 4: Featured Image with /canvas-design
 
 Generate a featured image that fits your blog's style:
 
@@ -251,7 +251,7 @@ highlighted diff output.
 
 The `/canvas-design` skill generates the image and describes how to reproduce it or provides the file directly, depending on your setup. Save the output to your `assets/images/` directory.
 
-Building a Consistent Visual Style
+## Building a Consistent Visual Style
 
 After your first successful featured image, store the style parameters with `/supermemory`:
 
@@ -276,7 +276,7 @@ Git hooks and pre-commit automation. Show a pre-commit hook catching an error.
 
 Consistent visual style across posts builds brand recognition and looks professional without requiring a separate design process for each article.
 
-Creating Supplementary Diagrams
+## Creating Supplementary Diagrams
 
 For posts that explain processes or architectures, a flow diagram adds clarity that code examples alone cannot provide:
 
@@ -290,7 +290,7 @@ Width: 800px, Height: 200px
 
 Embed the diagram inline in the post to illustrate the workflow phases without the reader having to parse a long list.
 
-Phase 5: Store Style Guidelines with /supermemory
+## Phase 5: Store Style Guidelines with /supermemory
 
 After finalizing a post, record what worked:
 
@@ -309,7 +309,7 @@ What are my blog writing guidelines?
 
 This keeps your voice consistent without pasting a style guide into every prompt.
 
-Tracking Post Performance Notes
+## Tracking Post Performance Notes
 
 Use `/supermemory` to log performance observations alongside style notes:
 
@@ -322,7 +322,7 @@ get more clicks than pure concept posts. Prioritize tutorial-style posts.
 
 Over time, this builds a personal editorial intelligence layer. Your memory entries become a compounding record of what works, making each new post informed by the outcomes of previous ones.
 
-Phase 6: Publish to Git
+## Phase 6: Publish to Git
 
 Once the post is ready, publish it:
 
@@ -352,7 +352,7 @@ Run it with:
 
 Your CI/CD pipeline (GitHub Actions, Netlify, Cloudflare Pages) picks up the push and deploys automatically.
 
-Extended Publish Script with Validation
+## Extended Publish Script with Validation
 
 A more solid publish script validates the file before committing:
 
@@ -404,7 +404,7 @@ echo "Published: $TITLE -> $DEST"
 
 The validation catches missing front matter fields before they cause a build failure on your static site generator.
 
-Checking Quality Before Publishing
+## Checking Quality Before Publishing
 
 Before committing, run a quick self-check inside Claude Code:
 
@@ -420,7 +420,7 @@ Report each issue on its own line.
 
 This catches common mistakes. mismatched titles, missing keywords, formatting errors. before they reach production.
 
-Extended Quality Checklist
+## Extended Quality Checklist
 
 For a thorough pre-publish review, expand the checklist:
 
@@ -448,7 +448,7 @@ Report each failure with the section name and a brief fix suggestion.
 
 Running this full checklist adds two minutes to your workflow and prevents publishing issues that are tedious to fix after deployment.
 
-Putting It Together
+## Putting It Together
 
 The complete workflow looks like this:
 
@@ -463,7 +463,7 @@ The complete workflow looks like this:
 
 Each step is a focused Claude Code interaction or a small shell script. Nothing requires external platforms or special installs beyond having Claude Code and the built-in skills available.
 
-Adapting the Pipeline for Your Publishing Frequency
+## Adapting the Pipeline for Your Publishing Frequency
 
 For high-frequency publishing (daily or several times per week), automate the repetitive steps further:
 
@@ -503,6 +503,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Automate deployments with Claude skills
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

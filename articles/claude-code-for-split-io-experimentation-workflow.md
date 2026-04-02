@@ -13,22 +13,19 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Split.io Experimentation Workflow
-
 Feature flags and experimentation platforms have become essential tools for modern software development. Split.io is a popular choice that enables teams to safely roll out features, conduct A/B tests, and make data-driven decisions. When combined with Claude Code, you can dramatically accelerate your experimentation workflow, from initial flag setup to analyzing experiment results.
 
-Understanding Split.io Integration with Claude Code
+## Understanding Split.io Integration with Claude Code
 
 Claude Code can help you at every stage of the Split.io experimentation lifecycle. The key is understanding how to prompt Claude effectively for each specific task, whether you're configuring flags, writing split traffic logic, or analyzing outcome data.
 
 Before diving in, ensure you have the Split.io SDK installed for your language of choice. Claude can help scaffold this setup quickly.
 
-Setting Up Feature Flags with Claude Code
+## Setting Up Feature Flags with Claude Code
 
 The first step in any experimentation workflow is defining your feature flags. Claude Code can help you generate the initial Split.io configuration and ensure consistency across your codebase.
 
-Creating a Basic Feature Flag
+## Creating a Basic Feature Flag
 
 When working with Claude, provide clear context about your flagging requirements:
 
@@ -54,7 +51,7 @@ const treatment = splitClient.client().getTreatment(
 
 Claude can generate these patterns while following your existing code conventions. Provide your project's style guide and existing patterns to ensure consistency.
 
-Managing Flag Dependencies
+## Managing Flag Dependencies
 
 Complex experiments often involve dependent flags. You can ask Claude to help structure these relationships:
 
@@ -73,11 +70,11 @@ const getTreatment = (userId, attributes) => {
 };
 ```
 
-Implementing A/B Tests with Split.io
+## Implementing A/B Tests with Split.io
 
 A/B testing requires careful implementation to ensure valid results. Claude Code can help you structure tests correctly from the start.
 
-Defining Test Parameters
+## Defining Test Parameters
 
 Work with Claude to clearly define your experiment parameters before implementation:
 
@@ -86,7 +83,7 @@ Work with Claude to clearly define your experiment parameters before implementat
 3. Metrics - What outcomes you'll measure
 4. Duration - How long the test should run
 
-Implementing Metrics Tracking
+## Implementing Metrics Tracking
 
 Proper metrics implementation is crucial for experiment analysis. Claude can help you set up tracking that Split.io can consume:
 
@@ -110,7 +107,7 @@ const trackExperimentMetrics = (userId, experimentName, treatment, event) => {
 };
 ```
 
-Avoiding Common Pitfalls
+## Avoiding Common Pitfalls
 
 Claude can help you avoid frequent experimentation mistakes:
 
@@ -119,11 +116,11 @@ Claude can help you avoid frequent experimentation mistakes:
 - Interaction effects - Managing overlapping experiments
 - Early termination - Setting proper statistical thresholds before stopping
 
-Analyzing Experiment Results
+## Analyzing Experiment Results
 
 Once your experiment is running, Claude Code can assist with analysis and interpretation.
 
-Querying Split.io Data
+## Querying Split.io Data
 
 Use Claude to help write queries for your experiment data:
 
@@ -148,7 +145,7 @@ ORDER BY treatment;
 """
 ```
 
-Statistical Analysis Support
+## Statistical Analysis Support
 
 Claude can help interpret results and calculate statistical significance:
 
@@ -175,7 +172,7 @@ const calculateSignificance = (control, treatment) => {
 };
 ```
 
-Best Practices for Claude-Split.io Workflow
+## Best Practices for Claude-Split.io Workflow
 
 1. Document Your Experiments
 
@@ -226,9 +223,9 @@ Use Claude to create reusable patterns for common Split.io operations:
 - Creating baseline implementations for new experiments
 - Building analytics dashboards for experiment monitoring
 
-Advanced Integration Patterns
+## Advanced Integration Patterns
 
-Dynamic Configuration
+## Dynamic Configuration
 
 For more sophisticated setups, Claude can help implement dynamic configuration that responds to experiment results in real-time:
 
@@ -247,7 +244,7 @@ const smartAllocation = async (userId, experiment, attributes) => {
 };
 ```
 
-Multi-Armed Bandit Implementation
+## Multi-Armed Bandit Implementation
 
 For experiments that need to optimize during runtime, Claude can help implement bandit algorithms that automatically allocate traffic to better-performing variants:
 
@@ -286,7 +283,7 @@ class ExperimentBandit {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code significantly enhances your Split.io experimentation workflow by accelerating flag setup, ensuring proper implementation patterns, and helping analyze results. The key is providing clear context about your experiment goals and existing codebase conventions.
 

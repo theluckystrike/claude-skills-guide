@@ -13,11 +13,9 @@ permalink: /claude-frontend-design-skill-review-and-tutorial/
 ---
 {% raw %}
 
-Claude Frontend Design Skill Review and Tutorial
-
 Building user interfaces efficiently requires the right tools and workflows. The frontend-design skill in Claude Code transforms how developers approach UI implementation by translating design concepts into production-ready code. This review covers practical usage, real examples, and integration strategies for frontend teams.
 
-What the Frontend-Design Skill Provides
+## What the Frontend-Design Skill Provides
 
 The frontend-design skill specializes in converting visual descriptions, mockups, and design specifications into functional code. Unlike generic code generation, this skill understands design patterns, component composition, and responsive design principles.
 
@@ -31,7 +29,7 @@ Key capabilities include:
 
 What separates the frontend-design skill from simply asking Claude to "write a button component" is context awareness. The skill carries knowledge of current best practices, semantic HTML, WCAG 2.2 guidelines, CSS custom property patterns, and modern layout techniques like CSS Grid and container queries. When you invoke it, Claude shifts into a mode that prioritizes these concerns without you needing to specify them every time.
 
-Setting Up the Skill
+## Setting Up the Skill
 
 Before using the frontend-design skill, ensure your Claude Code environment is configured. Skills are plain Markdown files. no installation command is needed. To see available skills, run `ls ~/.claude/skills/`. The frontend-design skill ships as a built-in skill with Claude Code.
 
@@ -41,9 +39,9 @@ Once active, the skill applies naturally in conversations. It activates when you
 
 You can also confirm the skill is active by checking the session context. If you have multiple skills in play, explicitly invoking `/frontend-design` at the start of a UI-heavy session keeps Claude focused on design concerns rather than drifting into general coding mode.
 
-Practical Examples
+## Practical Examples
 
-Building a Navigation Component
+## Building a Navigation Component
 
 Request a responsive navigation bar with this prompt:
 
@@ -156,7 +154,7 @@ The accompanying CSS module would look like this:
 }
 ```
 
-Creating a Card Component with Variants
+## Creating a Card Component with Variants
 
 ```
 Build a product card component that accepts image, title, description, price,
@@ -200,7 +198,7 @@ export default function ProductCard({
 
 The `variant` pattern is idiomatic. the skill applies the variant name as a CSS class, letting you define visual differences in the stylesheet without adding conditional logic to the component. This keeps the JSX clean and makes it easy to add new variants by editing CSS only.
 
-Building an Accessible Form
+## Building an Accessible Form
 
 Forms are notoriously easy to get wrong from an accessibility standpoint. This prompt exercises the skill's accessibility knowledge:
 
@@ -324,7 +322,7 @@ export default function ContactForm({ onSubmit }) {
 
 The `role="alert"` on error messages and `aria-live="polite"` on the success state ensure screen reader users receive feedback without focus being unexpectedly moved. The `aria-invalid` and `aria-describedby` attributes connect each input to its error message. this is what separates accessible forms from visually accessible forms.
 
-Framework Comparison
+## Framework Comparison
 
 The frontend-design skill works across multiple frameworks. Here is how the same card component request translates across stacks:
 
@@ -339,7 +337,7 @@ The frontend-design skill works across multiple frameworks. Here is how the same
 
 For new projects without existing framework constraints, the skill's React output is typically the most complete and idiomatic. Vue output handles the Options API and Composition API equally well. Svelte output is concise but occasionally needs adjustment for more complex reactivity patterns.
 
-Vue 3 Equivalent
+## Vue 3 Equivalent
 
 ```vue
 <!-- ProductCard.vue -->
@@ -375,11 +373,11 @@ defineEmits(['add-to-cart']);
 </script>
 ```
 
-Integrating with Other Skills
+## Integrating with Other Skills
 
 The frontend-design skill becomes powerful when combined with other Claude skills in your workflow.
 
-Test-Driven Development with tdd
+## Test-Driven Development with tdd
 
 Use the [tdd skill](/best-claude-skills-for-developers-2026/) alongside frontend-design:
 
@@ -436,7 +434,7 @@ describe('ContactForm', () => {
 });
 ```
 
-Documentation with pdf
+## Documentation with pdf
 
 The [pdf skill](/best-claude-skills-for-data-analysis/) generates component documentation:
 
@@ -445,7 +443,7 @@ Create a PDF style guide from these component specifications including
 props tables, usage examples, and accessibility notes.
 ```
 
-Design Systems with canvas-design
+## Design Systems with canvas-design
 
 The canvas-design skill generates visual assets that complement your coded components:
 
@@ -453,9 +451,9 @@ The canvas-design skill generates visual assets that complement your coded compo
 Generate a set of 24px icons matching this card component's visual style.
 ```
 
-Advanced Usage Patterns
+## Advanced Usage Patterns
 
-Working with Design Tokens
+## Working with Design Tokens
 
 Provide design tokens and the skill incorporates them:
 
@@ -532,7 +530,7 @@ export default function Button({
 }
 ```
 
-Responsive Breakpoint Strategies
+## Responsive Breakpoint Strategies
 
 Ask for specific breakpoint handling:
 
@@ -584,7 +582,7 @@ The skill generates appropriate responsive transformations. For container-query-
 
 Container queries are preferable to media queries for reusable components because the component responds to its own container width, not the full viewport. This matters when the same component is used in a sidebar (narrow) and a main content area (wide) on the same page.
 
-State Management Integration
+## State Management Integration
 
 Request components with specific state approaches:
 
@@ -693,7 +691,7 @@ export default function TodoList() {
 }
 ```
 
-Common Pitfalls and Solutions
+## Common Pitfalls and Solutions
 
 Overly vague descriptions produce generic results. Be specific about:
 - Exact styling behavior
@@ -729,7 +727,7 @@ export interface ButtonProps {
 
 Skipping the CSS is a common shortcut that leads to unstyled components. Always ask for the full file set. component, styles, and if appropriate, the types file.
 
-Performance Considerations
+## Performance Considerations
 
 The frontend-design skill generates performant code by default, but you can optimize further:
 
@@ -775,7 +773,7 @@ function ProductGrid({ products }) {
 
 For image-heavy components, request lazy loading and blur-up placeholder patterns. the skill generates `loading="lazy"` with intrinsic size attributes to prevent layout shift, which directly improves Core Web Vitals scores.
 
-Prompt Quality Reference
+## Prompt Quality Reference
 
 The quality of skill output scales directly with prompt specificity. Here is a practical reference:
 
@@ -788,7 +786,7 @@ The quality of skill output scales directly with prompt specificity. Here is a p
 
 The jump from "good" to "excellent" prompt quality is where the frontend-design skill delivers the most value. A generic AI model would produce similar output for the "minimal" case; it is the complex multi-constraint prompts where the skill's built-in knowledge of design systems and accessibility pays off.
 
-Summary
+## Summary
 
 The frontend-design skill accelerates UI development by converting descriptions into production-ready components. Its understanding of accessibility, responsive design, and modern framework patterns makes it valuable for frontend teams. Pair it with tdd for testable code, pdf for documentation, and supermemory for design system consistency. The skill handles React, Vue, Svelte, and vanilla approaches, giving you flexibility in your tech stack.
 
@@ -801,7 +799,6 @@ Related Reading
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Top frontend skills with examples
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Broader developer skill overview
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 ---
 

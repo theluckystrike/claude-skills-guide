@@ -18,7 +18,7 @@ Claude Code for Android DataStore Workflow Guide
 
 Android Jetpack DataStore is Google's recommended solution for persistent key-value storage and protocol buffer-based data storage in Android applications. When combined with Claude Code, developers can dramatically accelerate DataStore implementation, migration from SharedPreferences, and data layer architecture. This guide provides practical workflows, code examples, and strategies for integrating DataStore effectively with Claude Code assistance.
 
-Understanding DataStore Options
+## Understanding DataStore Options
 
 Before diving into workflows, it's essential to understand the two DataStore implementations available:
 
@@ -30,7 +30,7 @@ Requires Protocol Buffers schema definition but offers type-safe data storage wi
 
 When working with Claude Code, clearly specify which DataStore type you need implementation for, as the code patterns differ significantly.
 
-Setting Up DataStore Dependencies
+## Setting Up DataStore Dependencies
 
 Claude Code can help you configure DataStore in your Android project. Here's the dependency setup workflow:
 
@@ -50,11 +50,11 @@ dependencies {
 
 When prompting Claude Code, specify your Gradle version and Kotlin version to ensure compatibility. For example: "Add Preferences DataStore to an Android project with Gradle 8.2 and Kotlin 1.9.22."
 
-Creating DataStore Manager Classes
+## Creating DataStore Manager Classes
 
 One of the most valuable workflows is having Claude Code generate clean, production-ready DataStore manager classes. A well-structured manager provides a clean API for your data layer.
 
-Preferences DataStore Example
+## Preferences DataStore Example
 
 Request Claude Code to create a preferences manager with this prompt pattern:
 
@@ -101,11 +101,11 @@ class UserPreferencesManager(
 
 When working with Claude Code, provide the data class structure you need, and it can generate the complete manager with proper key definitions, flow mappings, and update functions.
 
-Implementing Proto DataStore
+## Implementing Proto DataStore
 
 For more complex data storage needs, Proto DataStore offers type safety through Protocol Buffers. Here's how to structure your workflow with Claude Code:
 
-Step 1: Define Your Schema
+## Step 1: Define Your Schema
 
 Create a .proto file in your project:
 
@@ -130,7 +130,7 @@ enum AppTheme {
 }
 ```
 
-Step 2: Generate the Serializer
+## Step 2: Generate the Serializer
 
 Claude Code can help create the serializer implementation:
 
@@ -152,7 +152,7 @@ object UserSettingsSerializer : Serializer<UserSettings> {
 }
 ```
 
-Step 3: Create the DataStore Repository
+## Step 3: Create the DataStore Repository
 
 ```kotlin
 class UserSettingsRepository(
@@ -192,11 +192,11 @@ class UserSettingsRepository(
 }
 ```
 
-Migrating from SharedPreferences
+## Migrating from SharedPreferences
 
 A common workflow is migrating legacy SharedPreferences code to DataStore. Claude Code can automate this migration:
 
-Migration Strategy
+## Migration Strategy
 
 1. Audit existing SharedPreferences usage - List all keys and their data types
 2. Create parallel DataStore implementation - Run both storage solutions during transition
@@ -237,7 +237,7 @@ class SharedPreferencesMigration(
 }
 ```
 
-Testing DataStore Implementations
+## Testing DataStore Implementations
 
 Testing is crucial for data persistence layers. Claude Code can help generate comprehensive test cases:
 
@@ -264,9 +264,9 @@ fun testPreferencesDataStore_updatesUsername() = runTest {
 
 When requesting tests from Claude Code, specify your testing framework (JUnit4, JUnit5, Kotlin Test) and any mocking preferences.
 
-Best Practices for DataStore with Claude Code
+## Best Practices for DataStore with Claude Code
 
-Provide Context in Your Prompts
+## Provide Context in Your Prompts
 
 When working with Claude Code on DataStore tasks, include:
 - Your current Kotlin version
@@ -275,7 +275,7 @@ When working with Claude Code on DataStore tasks, include:
 - Any existing architecture patterns (MVVM, Clean Architecture)
 - If migrating from SharedPreferences, list the existing keys
 
-Handle Errors Gracefully
+## Handle Errors Gracefully
 
 DataStore operations can fail. Ensure your Claude Code prompts request proper error handling:
 
@@ -295,14 +295,14 @@ class UserPreferencesRepository(/* ... */) {
 }
 ```
 
-Consider Coroutine Context
+## Consider Coroutine Context
 
 DataStore operations are asynchronous. When working with Claude Code, specify whether you need:
 - Standard coroutine Flow support
 - RxJava3 integration
 - Kotlin Flow with specific dispatchers
 
-Conclusion
+## Conclusion
 
 Claude Code significantly accelerates Android DataStore implementation by generating clean, type-safe code patterns, handling migrations from legacy storage solutions, and creating comprehensive test coverage. The key to success is providing clear context about your project configuration, specifying whether you need Preferences or Proto DataStore, and clearly describing your data model requirements.
 

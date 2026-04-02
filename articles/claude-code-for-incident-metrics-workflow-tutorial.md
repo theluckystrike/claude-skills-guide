@@ -21,18 +21,18 @@ What is Claude Code?
 
 Claude Code is an AI-powered coding assistant that can interact with your development environment through a Model Context Protocol (MCP) server. It can execute commands, read and write files, and integrate with various tools in your workflow. For incident metrics, Claude Code can help you collect data, generate reports, and even trigger automated responses based on your metrics.
 
-Setting Up Your Incident Metrics Environment
+## Setting Up Your Incident Metrics Environment
 
 Before diving into the workflow, you need to set up your environment. Claude Code needs access to your incident management tools and metrics storage.
 
-Prerequisites
+## Prerequisites
 
 - Claude Code installed and configured
 - Access to your incident management system (PagerDuty, OpsGenie, etc.)
 - Metrics storage (Prometheus, Datadog, or a custom solution)
 - Basic understanding of your incident data structure
 
-Configuration Steps
+## Configuration Steps
 
 First, create a configuration file for your incident metrics:
 
@@ -57,11 +57,11 @@ METRICS_CONFIG = {
 }
 ```
 
-Building the Incident Metrics Collector
+## Building the Incident Metrics Collector
 
 The core of your workflow is an incident metrics collector. This script gathers data from your incident management tools and computes key metrics.
 
-Creating the Collector Script
+## Creating the Collector Script
 
 ```python
 #!/usr/bin/env python3
@@ -143,11 +143,11 @@ class IncidentMetricsCollector:
         return breakdown
 ```
 
-Automating Metrics Collection with Claude Code
+## Automating Metrics Collection with Claude Code
 
 Now that you have the collector, let's integrate it with Claude Code to create an automated workflow.
 
-Using Claude Code for Daily Metrics
+## Using Claude Code for Daily Metrics
 
 You can create a Claude Code skill that runs your metrics collection on a schedule:
 
@@ -173,7 +173,7 @@ Alert Conditions
 - Critical incidents increase by >20% from previous week
 ```
 
-Running Metrics Analysis
+## Running Metrics Analysis
 
 To run your metrics collection with Claude Code:
 
@@ -183,9 +183,9 @@ claude --dangerously-skip-permissions \
   "Run the incident metrics collector and generate today's report"
 ```
 
-Practical Examples and Use Cases
+## Practical Examples and Use Cases
 
-Example 1: Weekly Incident Review
+## Example 1: Weekly Incident Review
 
 Here's how to set up a weekly incident review workflow:
 
@@ -218,7 +218,7 @@ def weekly_review_workflow():
     return formatted
 ```
 
-Example 2: Post-Incident Analysis
+## Example 2: Post-Incident Analysis
 
 After each major incident, use Claude Code to perform a quick analysis:
 
@@ -248,9 +248,9 @@ def post_incident_analysis(incident_id: str):
     return analysis, improvements
 ```
 
-Actionable Advice for Implementation
+## Actionable Advice for Implementation
 
-Start Small and Iterate
+## Start Small and Iterate
 
 Begin with simple metrics like total incident count and MTTR. As your workflow matures, add more sophisticated metrics like:
 - Time to first response
@@ -258,7 +258,7 @@ Begin with simple metrics like total incident count and MTTR. As your workflow m
 - Incident recurrence rate
 - Customer impact duration
 
-Automate Gradually
+## Automate Gradually
 
 Don't try to automate everything at once. Start with:
 1. Automated data collection
@@ -266,7 +266,7 @@ Don't try to automate everything at once. Start with:
 3. Threshold-based alerts
 4. Advanced analytics
 
-Integrate with Your Existing Tools
+## Integrate with Your Existing Tools
 
 Claude Code works best when integrated with your existing workflow:
 
@@ -275,7 +275,7 @@ Claude Code works best when integrated with your existing workflow:
 - PagerDuty: Enrich incidents with metrics context
 - Grafana: Push metrics to existing dashboards
 
-Set Meaningful Targets
+## Set Meaningful Targets
 
 Define realistic targets based on your team's historical performance:
 
@@ -294,7 +294,7 @@ SLA_TARGETS = {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code can significantly streamline your incident metrics workflow by automating data collection, analysis, and reporting. Start with the basic collector script, integrate it with your incident management tools, and gradually add more automation as you see value.
 
@@ -308,8 +308,7 @@ Next Steps:
 - Integrate with your team's communication tools
 - Review and act on the insights generated
 
-Happy incident managing!
-
+## Happy incident managing!
 
 Related Reading
 

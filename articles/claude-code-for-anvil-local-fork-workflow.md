@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Anvil Local Fork Workflow
 
@@ -21,7 +20,7 @@ When developing Ethereum smart contracts, having a reliable local testing enviro
 
 This guide walks you through setting up and maximizing Claude Code for Anvil local fork development.
 
-Understanding Anvil Local Fork
+## Understanding Anvil Local Fork
 
 Anvil is Foundry's local Ethereum development node. Its fork functionality lets you spin up a local chain that simulates the mainnet state by forking from a remote RPC endpoint. This means you can:
 
@@ -38,7 +37,7 @@ anvil --fork-url https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 However, working effectively with Anvil requires more than just starting the node. This is where Claude Code adds significant value.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before integrating Claude Code with Anvil, ensure your environment is properly configured. First, install Foundry if you haven't already:
 
@@ -63,11 +62,11 @@ ETHEREUM_SEPOLIA_RPC="https://eth-sepolia.alchemyapi.io/v2/your-api-key"
 
 Now you're ready to integrate Claude Code.
 
-Integrating Claude Code with Anvil
+## Integrating Claude Code with Anvil
 
 Claude Code excels at automating repetitive tasks, generating test cases, and helping debug complex interactions. Here's how to make them work together effectively.
 
-Starting Anvil with Claude Code Assistance
+## Starting Anvil with Claude Code Assistance
 
 You can use Claude Code to manage your Anvil process lifecycle. Create a simple management script:
 
@@ -88,7 +87,7 @@ echo "Anvil started with PID $(cat anvil.pid)"
 
 Ask Claude Code to create this script and explain how to customize the fork parameters for different networks.
 
-Automated Contract Interaction
+## Automated Contract Interaction
 
 One of Claude Code's strongest capabilities is generating and executing code. When working with forked environments, you often need to:
 
@@ -108,11 +107,11 @@ cast call 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 \
 
 Claude Code can generate these commands for you, explain the results, and help construct more complex multi-step interactions.
 
-Practical Development Workflow
+## Practical Development Workflow
 
 Here's a realistic workflow combining Claude Code with Anvil for smart contract development.
 
-Step 1: Define Your Testing Scenario
+## Step 1: Define Your Testing Scenario
 
 Tell Claude Code what you're trying to accomplish. For example:
 
@@ -123,7 +122,7 @@ Claude Code will guide you through:
 - Identifying relevant contract addresses on mainnet
 - Generating the necessary cast commands
 
-Step 2: Execute and Verify
+## Step 2: Execute and Verify
 
 Use Claude Code to run your test scenarios:
 
@@ -137,7 +136,7 @@ cast send 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 \
   --private-key 0xyour-private-key
 ```
 
-Step 3: Debug Failed Transactions
+## Step 3: Debug Failed Transactions
 
 When transactions fail, Claude Code can help analyze the revert reason:
 
@@ -148,9 +147,9 @@ cast call --rpc-url http://localhost:8545 \
 
 Ask Claude Code to interpret the returned data or trace output and suggest fixes.
 
-Advanced Tips and Best Practices
+## Advanced Tips and Best Practices
 
-Managing Multiple Fork Instances
+## Managing Multiple Fork Instances
 
 For complex projects, you might need multiple fork environments (mainnet fork, Sepolia testnet). Create separate scripts for each:
 
@@ -174,7 +173,7 @@ Anvil provides several features that enhance your workflow:
 
 Claude Code can generate the appropriate anvil commands and help you integrate these features into your testing strategy.
 
-Scripting Complex Interactions
+## Scripting Complex Interactions
 
 For repeated test scenarios, create cast scripts:
 
@@ -187,7 +186,7 @@ cast multicall \
 
 Claude Code can help build these scripts from your requirements.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 When combining Claude Code with Anvil, watch for these issues:
 
@@ -204,7 +203,7 @@ anvil --fork-url $ETHEREUM_MAINNET_RPC \
 
 4. Private key security: Never commit private keys to version control. Use environment variables and `.env` files.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Anvil's local fork workflow gives you a powerful development environment for Ethereum smart contracts. Claude Code acts as an intelligent assistant, generating commands, explaining results, debugging issues, and automating repetitive tasks.
 

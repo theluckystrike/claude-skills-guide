@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Rook Ceph Storage Workflow Guide
 
 Rook Ceph has become the de facto solution for running Ceph storage clusters on Kubernetes. When combined with Claude Code, developers can automate complex storage workflows, manage persistent volumes, and handle disaster recovery scenarios with unprecedented efficiency. This guide walks you through practical applications of Claude Code in managing Rook Ceph storage operations.
 
-Understanding the Rook Ceph Architecture
+## Understanding the Rook Ceph Architecture
 
 Before diving into automation, it's essential to understand how Rook Ceph integrates with Kubernetes. Rook acts as a storage orchestrator that transforms Ceph, a distributed storage system, into a self-managing, self-scaling storage layer native to Kubernetes.
 
@@ -27,7 +26,7 @@ The architecture consists of three primary components: the Rook operator (which 
 
 Claude Code can interact with all these layers through kubectl commands, custom resources, and the Rook operator's API endpoints. By writing Claude Code scripts, you can orchestrate complex multi-step operations that would otherwise require extensive manual intervention.
 
-Setting Up Claude Code for Ceph Management
+## Setting Up Claude Code for Ceph Management
 
 First, ensure your environment is properly configured. You'll need:
 
@@ -57,7 +56,7 @@ kubectl get storageclass | grep ceph
 
 This script forms the foundation for more complex automation. Run this before executing any storage operations to ensure your cluster is healthy.
 
-Automating Storage Pool Creation
+## Automating Storage Pool Creation
 
 One of the most common tasks in Ceph management is creating new storage pools. Claude Code can automate this process with a reusable function:
 
@@ -109,7 +108,7 @@ def create_ceph_pool(pool_name: str, replica_count: int = 3) -> dict:
 
 This function creates a manifest and applies it to your cluster. You can extend it to automatically create corresponding StorageClass objects, making the pool immediately available to developers.
 
-Managing Persistent Volumes with Dynamic Provisioning
+## Managing Persistent Volumes with Dynamic Provisioning
 
 Dynamic volume provisioning eliminates the need for pre-provisioned storage. When a PersistentVolumeClaim (PVC) is created, Rook's CSI driver automatically provisions the underlying storage. Here's how to optimize this workflow:
 
@@ -153,7 +152,7 @@ def generate_pvc_manifest(workload_name: str, size_gb: int, storage_class: str =
     return manifest
 ```
 
-Implementing Disaster Recovery Workflows
+## Implementing Disaster Recovery Workflows
 
 Rook Ceph provides solid mechanisms for data protection, but orchestrating disaster recovery requires careful planning. Claude Code can automate snapshot creation, backup verification, and restoration procedures.
 
@@ -202,7 +201,7 @@ kubectl get volumesnapshot "${SNAPSHOT_NAME}"
 
 This script creates on-demand snapshots that serve as the foundation for your backup strategy. For production environments, extend this to include offsite replication and regular automated testing of restoration procedures.
 
-Monitoring Ceph Cluster Health
+## Monitoring Ceph Cluster Health
 
 Proactive monitoring prevents data loss and performance degradation. Claude Code can aggregate health metrics and alert on critical conditions:
 
@@ -242,7 +241,7 @@ def alert_on_degraded_health(health_status: dict):
         # Add PagerDuty, Slack, or email integration here
 ```
 
-Best Practices and Actionable Advice
+## Best Practices and Actionable Advice
 
 When working with Rook Ceph and Claude Code, follow these proven patterns:
 
@@ -256,7 +255,7 @@ Test disaster recovery procedures regularly. Automate your DR testing with Claud
 
 Use the Rook toolbox for debugging. The toolbox pod provides direct Ceph commands for troubleshooting. Claude Code can generate diagnostic reports automatically when issues arise.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Rook Ceph management from manual operations into automated, repeatable workflows. By investing time in building comprehensive scripts for common tasks, pool creation, volume provisioning, snapshots, and monitoring, you'll reduce operational overhead and improve reliability.
 

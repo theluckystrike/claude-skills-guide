@@ -1,8 +1,5 @@
 ---
 
-
-
-
 layout: default
 title: "Claude Code for Traceloop LLM Observability Guide"
 description: "Learn how to integrate Claude Code with Traceloop for comprehensive LLM observability, monitoring, and debugging of AI applications with practical."
@@ -20,7 +17,7 @@ score: 7
 
 Building production-grade LLM applications requires solid observability to understand how your AI models behave, identify performance bottlenecks, and debug issues when they arise. Traceloop provides a powerful platform for tracing and monitoring LLM applications, and when combined with Claude Code, you can automate observability setup, create custom monitoring skills, and streamline debugging workflows. This guide walks you through integrating Claude Code with Traceloop for comprehensive LLM observability.
 
-Understanding Traceloop and LLM Observability
+## Understanding Traceloop and LLM Observability
 
 Traceloop is an observability platform designed specifically for LLM-powered applications. It provides:
 
@@ -31,7 +28,7 @@ Traceloop is an observability platform designed specifically for LLM-powered app
 
 Before integrating with Claude Code, ensure you have a Traceloop account and API key. You can sign up at traceloop.com and create an API key from your dashboard.
 
-Setting Up the Traceloop SDK
+## Setting Up the Traceloop SDK
 
 The first step is installing the Traceloop SDK in your project. Traceloop supports multiple languages, but Python is most common for LLM applications:
 
@@ -62,7 +59,7 @@ langchain_instrumentation.patch()
 openai_instrumentation.patch()
 ```
 
-Creating Claude Code Skills for Traceloop Integration
+## Creating Claude Code Skills for Traceloop Integration
 
 Claude Code skills can automate many Traceloop-related tasks. Here's a skill that helps you set up Traceloop in a new project:
 
@@ -113,7 +110,7 @@ Traceloop.init(
     disable_batch=False
 )
 
-Auto-instrument your framework
+## Auto-instrument your framework
 
 {% if framework == "langchain" %}
 from traceloop.sdk.instrumentation import langchain
@@ -129,7 +126,7 @@ openai.patch()
 ```
 ```
 
-Monitoring LLM Metrics with Claude Code
+## Monitoring LLM Metrics with Claude Code
 
 A key benefit of Traceloop is comprehensive metrics collection. Here's a skill that queries and analyzes your Traceloop metrics:
 
@@ -201,7 +198,7 @@ Focus on these key metrics:
 5. Token Efficiency: Tokens per second processing speed
 ```
 
-Debugging with Traceloop and Claude Code
+## Debugging with Traceloop and Claude Code
 
 When issues occur in production, quick debugging is essential. Here's a skill for analyzing failed requests:
 
@@ -248,7 +245,7 @@ When analyzing traces, look for these common issues:
 - Model overload: Consider using alternative models or retry logic
 ```
 
-Best Practices for LLM Observability
+## Best Practices for LLM Observability
 
 To get the most out of Traceloop with Claude Code, follow these practices:
 
@@ -297,7 +294,7 @@ if avg_latency > 5000:  # 5 second latency
 
 Schedule weekly reviews of your Traceloop metrics to identify trends and optimization opportunities.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Traceloop creates a powerful observability stack for your LLM applications. By automating setup, monitoring, and debugging workflows, you can maintain production-grade reliability while moving quickly. Start with the skills outlined in this guide and customize them to your specific use cases.
 

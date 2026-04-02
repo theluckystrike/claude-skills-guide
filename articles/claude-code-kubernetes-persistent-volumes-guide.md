@@ -16,13 +16,13 @@ score: 8
 
 Persistent volumes in Kubernetes solve a fundamental challenge: containers are ephemeral by design, but many applications need durable storage that survives pod restarts and rescheduling. This guide demonstrates how to work with PersistentVolumes (PVs) and PersistentVolumeClaims (PVCs) using Claude Code and complementary skills.
 
-Understanding Persistent Volumes in Kubernetes
+## Understanding Persistent Volumes in Kubernetes
 
 A PersistentVolume represents a piece of storage in the cluster that exists independently of any individual pod. When a pod needs persistent storage, it requests storage through a PersistentVolumeClaim. This separation allows storage to be managed separately from pod lifecycle.
 
 There are two main approaches to provisioning persistent storage: static and dynamic. Static provisioning involves creating PVs manually, while dynamic provisioning uses StorageClasses to create storage on-demand. Most modern deployments rely on dynamic provisioning through the cloud-provider's native storage solutions.
 
-Creating a PersistentVolumeClaim
+## Creating a PersistentVolumeClaim
 
 A PersistentVolumeClaim requests a specific amount of storage with optional access modes. Here's a basic PVC definition:
 
@@ -62,7 +62,7 @@ spec:
       claimName: app-data-pvc
 ```
 
-Using StorageClasses for Dynamic Provisioning
+## Using StorageClasses for Dynamic Provisioning
 
 StorageClasses enable dynamic volume provisioning, eliminating the need to pre-create PersistentVolumes. Each StorageClass defines a provisioner and parameters for the underlying storage system.
 
@@ -104,7 +104,7 @@ volumeBindingMode: WaitForFirstConsumer
 
 The `WaitForFirstConsumer` binding mode delays volume binding until a pod using the PVC is scheduled, allowing the scheduler to choose an optimal node based on the pod's requirements.
 
-Managing Persistent Volumes with Claude Code
+## Managing Persistent Volumes with Claude Code
 
 Claude Code can generate Kubernetes manifests efficiently. When working on storage-heavy applications, combine Claude Code with the `pdf` skill to document your storage architecture, or use the `tdd` skill to write tests that verify data persistence across pod restarts.
 
@@ -143,7 +143,7 @@ spec:
           storage: 20Gi
 ```
 
-Resizing Persistent Volumes
+## Resizing Persistent Volumes
 
 Kubernetes supports volume expansion for most cloud-provider storage types. To enable resizing, the StorageClass must have `allowVolumeExpansion` set to true:
 
@@ -171,7 +171,7 @@ spec:
 
 The expansion happens automatically for CSI-based provisioners. For older provisioners, you may need to delete and recreate the pod after the resize.
 
-Data Backup Strategies
+## Data Backup Strategies
 
 Persistent volumes contain your application state, making backup critical. Common approaches include:
 
@@ -190,7 +190,7 @@ spec:
 
 For application-level backups, consider scheduling jobs that export data to object storage. Tools like Velero provide cluster-level disaster recovery, including persistent volume snapshots.
 
-Access Modes in Practice
+## Access Modes in Practice
 
 Choosing the wrong access mode is one of the most common sources of confusion with persistent volumes. Kubernetes defines three modes, but not all storage backends support all three.
 
@@ -230,7 +230,7 @@ parameters:
   directoryPerms: "700"
 ```
 
-StatefulSet Volume Lifecycle
+## StatefulSet Volume Lifecycle
 
 StatefulSets handle volumes differently from Deployments. Each replica in a StatefulSet gets its own PVC created from the `volumeClaimTemplates` section. Critically, these PVCs are not deleted when the StatefulSet is scaled down or deleted, this is intentional. The data survives the workload.
 
@@ -246,7 +246,7 @@ kubectl delete pvc postgres-data-postgres-statefulset-2
 
 For production teardowns, verify there is no data you need before deleting these claims. The `kubectl get pv` output will show volumes in Released state after their PVC is deleted; the Reclaim Policy on the PV determines whether the underlying disk is deleted or retained.
 
-Reclaim Policies
+## Reclaim Policies
 
 The Reclaim Policy controls what happens to the underlying storage resource when a PVC is deleted:
 
@@ -270,7 +270,7 @@ parameters:
 
 For critical production databases, prefer `Retain`. A bug in a deployment pipeline that accidentally deletes a StatefulSet should not cascade into data loss. With `Retain`, the disk sits in Released state waiting for manual intervention. You can create a new PV referencing the same disk and bind it to a new PVC to recover.
 
-Using Claude Code to Audit Volume Configuration
+## Using Claude Code to Audit Volume Configuration
 
 Claude Code is well-suited for analyzing existing Kubernetes manifests and identifying configuration gaps. Feed it your current YAML files with a prompt like: "Review these StatefulSet and StorageClass definitions. Identify any missing reclaim policies, volumes without resource limits, or PVCs that use the default StorageClass where a named class would be more appropriate."
 
@@ -282,7 +282,7 @@ Claude will cross-reference the manifests and flag issues like:
 
 Combine Claude Code with the `tdd` skill to write integration tests that verify storage behavior. A practical test suite for a stateful application should include: a test that writes data to the mounted volume, deletes the pod, waits for it to reschedule, and confirms the data persists.
 
-Common Pitfalls and Solutions
+## Common Pitfalls and Solutions
 
 One frequent issue is PVCs stuck in Pending state. This typically occurs when no available PV matches the claim requirements or the StorageClass provisioner is misconfigured. Check events on the PVC to identify the root cause:
 
@@ -302,10 +302,9 @@ A PVC in `Bound` state with a pod still failing to start usually points to a mou
 
 For production workloads, always set appropriate resource requests and limits on your storage. Use the `supermemory` skill to maintain documentation of your storage architecture decisions and the reasoning behind storage class selections.
 
-Summary
+## Summary
 
 Persistent volumes provide essential durability for stateful applications in Kubernetes. Master the PVC workflow: request storage through claims, select appropriate StorageClasses for your performance needs, and implement backup strategies before deploying to production. Claude Code accelerates this process by generating correct manifests and identifying potential issues in your configuration.
-
 
 Related Reading
 

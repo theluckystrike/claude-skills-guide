@@ -16,7 +16,7 @@ permalink: /claude-code-skills-roadmap-2026-what-is-coming/
 
 [The Claude Code ecosystem is evolving rapidly](/best-claude-code-skills-to-install-first-2026/) If you have been using skills like `pdf` for document automation, `xlsx` for spreadsheet manipulation, or `tdd` for test-driven development, you have seen how much power these extensions provide. The roadmap for 2026 shows significant expansion in skill capabilities, cross-tool integration, and new categories that will reshape how developers work with AI assistants.
 
-Native Skills Are Getting Deeper
+## Native Skills Are Getting Deeper
 
 Claude's native skills are receiving substantial upgrades. The `frontend-design` skill, already powerful for generating UI components, will gain real-time preview capabilities and direct integration with design tokens from Figma and Tailwind configuration files. This means you will be able to describe a component in plain language and receive working code that matches your existing design system immediately.
 
@@ -28,7 +28,7 @@ The `pdf` skill is expanding beyond extraction and form filling. By mid-2026, ex
 
 The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) is becoming context-aware. Instead of generating tests in isolation, it will analyze your entire codebase structure, understand module dependencies, and create test suites that match your architectural patterns. This reduces the friction of adopting test-driven development on existing projects.
 
-Community Skills Expanding into New Domains
+## Community Skills Expanding into New Domains
 
 Community-driven skills are filling gaps that native skills do not yet cover. The `supermemory` skill, which helps you organize and retrieve information from your projects, is evolving into a cross-session knowledge system. By 2026, it will maintain context across different Claude sessions, learning your coding preferences and automatically suggesting relevant documentation when you start new tasks.
 
@@ -40,7 +40,7 @@ The `xlsx` skill continues to improve with better formula support and data visua
 /xlsx create dashboard from analytics.sql --type pivot --output quarterly-report.xlsx
 ```
 
-Model Context Protocol Integration
+## Model Context Protocol Integration
 
 The Model Context Protocol (MCP) is becoming the standard for connecting Claude Code to external tools. The 2026 roadmap shows deeper MCP integration where skills can define their own tool schemas and expose them to Claude automatically. This creates a self-documenting system where every skill advertises its capabilities without manual configuration.
 
@@ -59,7 +59,7 @@ Use these tools to help users analyze database performance.
 
 This declarative approach reduces the boilerplate needed to create powerful skills. You no longer need separate configuration files or complex setup scripts.
 
-Skill Chaining and Composable Workflows
+## Skill Chaining and Composable Workflows
 
 One of the most significant developments in the 2026 roadmap is skill chaining. You will be able to combine multiple skills in a single prompt, letting Claude orchestrate complex workflows that span different domains. For example, you could process a raw data export, generate analysis in a spreadsheet, create a PDF report, and email it to stakeholders, all in one conversation:
 
@@ -69,7 +69,7 @@ Process the orders from orders.db, generate an xlsx analysis, create a PDF repor
 
 The `automations` skill, expected to launch in Q2 2026, will let you define reusable workflows that combine skills with conditional logic. These automations persist across sessions and can be triggered by external events through webhook integrations.
 
-Preparing Your Workflow for 2026
+## Preparing Your Workflow for 2026
 
 To get the most from these upcoming changes, organize your existing skills now. Review the skills in your `~/.claude/skills/` directory and ensure they are well-documented with clear instructions. As skill chaining becomes more prevalent, well-structured skills will work better together.
 
@@ -77,7 +77,7 @@ If you build custom skills, adopt the emerging tool definition pattern. The skil
 
 The `docx` skill for document creation and the `pptx` skill for presentations are also on the roadmap for enhanced capabilities. Expect better formatting control, template management, and cross-referencing between documents.
 
-New Skill Categories on the Horizon
+## New Skill Categories on the Horizon
 
 Beyond upgrades to existing skills, entirely new categories are emerging to address gaps in the current ecosystem. Three categories worth watching in 2026:
 
@@ -87,7 +87,7 @@ Database migration skills: Generating and reviewing schema migrations has always
 
 Security skills specialized by domain: Generic security scanning exists today, but specialized skills for cloud-specific issues (IAM misconfiguration, S3 bucket exposure, Kubernetes RBAC gaps) are coming. These skills will understand the security model of specific platforms rather than applying generic OWASP rules, producing more actionable findings with less false-positive noise.
 
-Preparing Your Workflow Now
+## Preparing Your Workflow Now
 
 Getting ready for 2026's skill capabilities means building good habits with the tools available today. Three practices that will transfer directly to the upgraded ecosystem:
 
@@ -97,7 +97,7 @@ Maintain a `CLAUDE.md` file in each project repository. This file establishes pr
 
 Experiment with writing simple custom skills now. The skill format is stable, and the habit of encoding team knowledge in skill files pays off both immediately and as an investment in the richer skill chaining capabilities arriving later in 2026.
 
-What This Means for Developers
+## What This Means for Developers
 
 The direction of Claude Code skills points toward a future where AI assistance is more contextual, more composable, and more integrated with your existing toolchain. Rather than switching between different tools for different tasks, you will describe outcomes at a higher level and let Claude coordinate the appropriate skills.
 
@@ -105,7 +105,7 @@ For power users, this means learning the skill invocation patterns now. Understa
 
 The skills ecosystem is moving toward less manual configuration and more automatic capability discovery. Skills will become self-describing, self-chaining, and more intelligent about when to apply themselves. Stay current with the skill repository and experiment with new skills as they become available.
 
-Skills for Non-Developer Roles
+## Skills for Non-Developer Roles
 
 One underappreciated aspect of the 2026 roadmap is the expansion of skills designed for non-developer team members. Product managers, designers, and technical writers increasingly participate in development workflows, and skills tailored to their tasks reduce friction at the handoff points between roles.
 

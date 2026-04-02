@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for WindSurf Cascade Workflow Guide"
 description: "Master the integration of Claude Code with WindSurf Cascade workflow. Learn practical techniques to enhance your AI-assisted development with powerful."
@@ -14,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for WindSurf Cascade Workflow Guide
-
 WindSurf Cascade represents a powerful paradigm in AI-assisted development, combining the sophisticated reasoning capabilities of Claude Code with an intuitive, flow-based coding environment. This guide explores how to use Claude Code effectively within the WindSurf Cascade workflow to accelerate your development process while maintaining code quality and developer control.
 
-Understanding WindSurf Cascade Architecture
+## Understanding WindSurf Cascade Architecture
 
 WindSurf Cascade operates on a multi-agent architecture that differentiates between planning, execution, and verification phases. Unlike traditional IDE integrations that provide reactive autocomplete suggestions, Cascade implements a proactive agentic workflow where AI components collaborate on solving complex coding challenges.
 
@@ -27,7 +23,7 @@ The core components include the Planner Agent that analyzes requirements and bre
 
 When you initiate a Cascade session, the system creates a context window that encompasses your project files, recent changes, and conversation history. This rich context enables Claude Code to make informed decisions about code modifications while respecting your project's established patterns and conventions.
 
-Setting Up Claude Code with WindSurf
+## Setting Up Claude Code with WindSurf
 
 To integrate Claude Code with your WindSurf environment, ensure you have both applications installed and authenticated. The integration typically uses Claude Code's ability to execute shell commands and file operations, which Cascade then orchestrates within its workflow management system.
 
@@ -50,9 +46,9 @@ Next, configure WindSurf to recognize Claude Code as your preferred AI assistant
 
 This configuration ensures that Cascade utilizes Claude Code's advanced reasoning capabilities while maintaining appropriate output parameters for code generation tasks.
 
-Core Workflow Patterns
+## Core Workflow Patterns
 
-The Multi-Pass Development Cycle
+## The Multi-Pass Development Cycle
 
 Effective use of Claude Code within Cascade follows a deliberate multi-pass approach. Rather than attempting to generate entire features in a single interaction, break your work into discrete passes that build upon each other.
 
@@ -69,7 +65,7 @@ Request initial implementation that establishes the structure without filling in
 Pass 3: Refinement and Integration
 Iterate on the scaffolded code, adding error handling, edge cases, and integration with existing systems.
 
-Context Management Techniques
+## Context Management Techniques
 
 One of the most valuable aspects of using Claude Code with Cascade is effective context management. The system maintains conversation history, but you should explicitly reinforce important context when starting new tasks.
 
@@ -85,9 +81,9 @@ We're working on a TypeScript Node.js API with Express.
 
 This context helps Claude Code generate code that fits your existing patterns rather than generic implementations.
 
-Practical Examples
+## Practical Examples
 
-Example 1: Building a New API Endpoint
+## Example 1: Building a New API Endpoint
 
 When you need to add a new API endpoint, start by describing the requirement to Claude Code within Cascade:
 
@@ -106,7 +102,7 @@ Claude Code will then:
 3. Generate endpoint code following your project's conventions
 4. Add appropriate validation and error handling
 
-Example 2: Refactoring Legacy Code
+## Example 2: Refactoring Legacy Code
 
 Cascade excels at guided refactoring. When modernizing legacy code, provide explicit constraints:
 
@@ -120,7 +116,7 @@ Refactor the legacy user service to async/await patterns:
 
 Claude Code will analyze the existing implementation, identify necessary changes, and generate refactored code while maintaining functional equivalence.
 
-Example 3: Writing Tests
+## Example 3: Writing Tests
 
 Generate comprehensive tests by providing clear specifications:
 
@@ -135,7 +131,7 @@ Write unit tests for the payment processor:
 
 The integration will generate tests that follow your project's testing conventions and cover the specified scenarios.
 
-Best Practices for WindSurf Cascade Workflow
+## Best Practices for WindSurf Cascade Workflow
 
 1. Explicitly Define Scope
 
@@ -181,7 +177,7 @@ But retain decision-making authority over:
 - Third-party integrations
 - Performance requirements
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 When Claude Code within Cascade doesn't produce expected results, consider these common scenarios:
 
@@ -191,7 +187,7 @@ Over-Generalization: If generated code is too generic, explicitly mention the pa
 
 Incomplete Implementations: If Claude Code provides incomplete solutions, it may need more specific requirements. Break down complex tasks into smaller, more explicit steps.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with WindSurf Cascade workflow significantly enhances your development productivity while maintaining code quality and developer control. The key lies in understanding how to effectively communicate with the AI, providing clear context and requirements, and using the multi-pass workflow to iterate toward optimal solutions.
 

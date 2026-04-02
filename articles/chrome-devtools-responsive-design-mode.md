@@ -15,7 +15,7 @@ tags: [chrome-devtools, responsive-design, web-development]
 
 Chrome DevTools responsive design mode is a powerful built-in tool that lets you test how your website renders across different screen sizes without leaving your browser. Instead of resizing your browser window manually or switching between devices, you can emulate dozens of device viewports directly in Chrome.
 
-Opening Responsive Design Mode
+## Opening Responsive Design Mode
 
 Access responsive design mode through multiple methods:
 
@@ -25,7 +25,7 @@ Access responsive design mode through multiple methods:
 
 The viewport displays with a toolbar showing current dimensions, device selection dropdown, and zoom controls.
 
-Selecting Devices and Custom Viewports
+## Selecting Devices and Custom Viewports
 
 The device dropdown includes popular devices like iPhone, iPad, Samsung Galaxy, and Pixel phones. Each preset applies the correct viewport width, height, device pixel ratio, and user agent string.
 
@@ -49,7 +49,7 @@ const breakpoints = {
 };
 ```
 
-Testing Touch Interactions
+## Testing Touch Interactions
 
 Enable touch emulation to simulate touch events on devices with touchscreens. When active, mouse events translate to touch events, and you can test:
 
@@ -60,7 +60,7 @@ Enable touch emulation to simulate touch events on devices with touchscreens. Wh
 
 Toggle touch emulation from the toolbar or use `Shift` while dragging to simulate a two-finger gesture.
 
-Inspecting Responsive Breakpoints
+## Inspecting Responsive Breakpoints
 
 While in responsive mode, use the Media Queries panel to visualize all CSS media queries defined in your stylesheets. This panel appears at the top of the viewport as colored bars:
 
@@ -70,7 +70,7 @@ While in responsive mode, use the Media Queries panel to visualize all CSS media
 
 Click any bar to resize the viewport to that breakpoint. This helps identify exactly where your layout breaks or changes.
 
-Network Throttling for Realistic Testing
+## Network Throttling for Realistic Testing
 
 Combine responsive design mode with network throttling to test how your responsive design performs on slower connections:
 
@@ -80,9 +80,9 @@ Combine responsive design mode with network throttling to test how your responsi
 
 This reveals whether your responsive images load appropriately and whether lazy loading triggers correctly at different viewport sizes.
 
-Debugging Common Responsive Issues
+## Debugging Common Responsive Issues
 
-Missing Viewport Meta Tag
+## Missing Viewport Meta Tag
 
 Without the viewport meta tag, mobile browsers render pages at desktop width and scale down:
 
@@ -90,7 +90,7 @@ Without the viewport meta tag, mobile browsers render pages at desktop width and
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-Images Overflowing Containers
+## Images Overflowing Containers
 
 Use `max-width: 100%` and `height: auto` for responsive images:
 
@@ -102,7 +102,7 @@ img {
 }
 ```
 
-Touch Targets Too Small
+## Touch Targets Too Small
 
 Ensure interactive elements meet minimum touch target sizes:
 
@@ -115,7 +115,7 @@ button, a {
 }
 ```
 
-Font Sizes Too Small on Mobile
+## Font Sizes Too Small on Mobile
 
 Use relative units and ensure minimum readable sizes:
 
@@ -132,7 +132,7 @@ body {
 }
 ```
 
-Keyboard Shortcuts Reference
+## Keyboard Shortcuts Reference
 
 Master these shortcuts for efficient responsive testing:
 
@@ -144,7 +144,7 @@ Master these shortcuts for efficient responsive testing:
 | Zoom out | `Cmd+-` | `Ctrl+-` |
 | Reset zoom | `Cmd+0` | `Ctrl+0` |
 
-Advanced: JavaScript Detection for Testing
+## Advanced: JavaScript Detection for Testing
 
 Test your responsive JavaScript detection:
 
@@ -180,7 +180,7 @@ function debounce(func, wait) {
 }
 ```
 
-Practical Workflow
+## Practical Workflow
 
 Follow this workflow for comprehensive responsive testing:
 
@@ -193,7 +193,7 @@ Follow this workflow for comprehensive responsive testing:
 
 Chrome DevTools responsive design mode streamlines the testing process by consolidating device emulation, network throttling, and debugging into a single interface. Use it alongside real device testing for the most comprehensive responsive design validation.
 
-Adding and Editing Custom Device Profiles
+## Adding and Editing Custom Device Profiles
 
 The built-in device list covers the most common targets, but your project may require custom profiles. a specific kiosk resolution, an older Android device, or a tablet model not in the default list. You can create these once and reuse them across sessions.
 
@@ -209,7 +209,7 @@ For a concrete example, if you are building a dashboard targeting Surface Pro 7 
 
 Custom devices persist in your Chrome profile, so you build this list once and it follows you across projects. Export your DevTools settings via Settings → Sync → Export if you want to share the profile with teammates or preserve it when switching machines.
 
-Using the Rendering Panel for Visual Debugging
+## Using the Rendering Panel for Visual Debugging
 
 The Rendering panel (accessible via the DevTools command palette or the three-dot menu under More tools) exposes several options that complement responsive testing beyond simple viewport resizing.
 
@@ -228,7 +228,7 @@ Paint flashing highlights elements that are being repainted in green. On a mobil
 
 Layer borders draws orange lines around composited layers. On mobile viewports, having too many layers increases GPU memory consumption. On the other hand, promoting key animated elements to their own layer using `will-change: transform` reduces paint work and produces smoother animations. The layer borders view helps you confirm that `will-change` is actually being respected by the browser.
 
-Capturing Screenshots and Recording Sessions
+## Capturing Screenshots and Recording Sessions
 
 Responsive design mode includes a screenshot tool in the device toolbar. The Capture screenshot button (camera icon) saves a PNG of exactly what the emulated viewport shows, at the emulated device pixel ratio. This is useful for documentation, design reviews, and bug reports where you need to show layout behavior at a specific viewport size.
 
@@ -236,7 +236,7 @@ For multi-page flows. login sequences, checkout funnels, form validation. use Ca
 
 If you need to capture how a layout transitions across breakpoints, use the DevTools Recorder panel (available in Chrome 97 and later). Record a session that drags the viewport from 320px to 1440px, then replay it as a performance trace or export it as a Puppeteer script. This approach turns your manual responsive testing workflow into a repeatable automated test.
 
-Identifying Layout Shift Problems
+## Identifying Layout Shift Problems
 
 Cumulative Layout Shift (CLS) is a Core Web Vital that penalizes pages where elements move around after the initial render. Mobile viewports are particularly vulnerable because images without explicit dimensions, late-loading fonts, and dynamically injected ads all shift content more aggressively on narrow screens.
 
@@ -267,7 +267,7 @@ img {
 
 For fonts, add `font-display: swap` to your `@font-face` declarations and preload critical fonts in the document head. This reduces the window during which a font swap can shift surrounding text.
 
-Testing Foldable and Non-Standard Viewports
+## Testing Foldable and Non-Standard Viewports
 
 Foldable devices like the Samsung Galaxy Z Fold and Microsoft Surface Duo introduce viewport scenarios that standard responsive testing does not cover. Chrome DevTools includes experimental support for these through the Device Posture API emulation.
 

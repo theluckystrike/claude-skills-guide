@@ -68,7 +68,7 @@ Build a price monitoring system that:
 
 This is fundamentally different from a skill like `pdf` or `tdd` that produces a specific output. The agent skill structures a system that runs, monitors, and acts over time.
 
-Key Differences at a Glance
+## Key Differences at a Glance
 
 The distinction comes down to autonomy and scope:
 
@@ -77,9 +77,9 @@ The distinction comes down to autonomy and scope:
 
 Another way to think about it: an assistant is a conversation partner. An agent is a contractor.
 
-Practical Examples with Claude Code
+## Practical Examples with Claude Code
 
-Assistant Example: Document Processing
+## Assistant Example: Document Processing
 
 You have a PDF invoice and need to extract data. Using Claude Code as an assistant:
 
@@ -90,7 +90,7 @@ Extract the invoice number, date, line items, and total from this document: invo
 
 You invoke the skill, provide the file, and Claude extracts the data. You can then ask follow-up questions, request a different format, or move on to something else. The interaction is bounded and driven by you.
 
-Agent Example: Automated Code Review
+## Agent Example: Automated Code Review
 
 You want Claude Code to review every pull request in your repository automatically. Using agentic patterns:
 
@@ -105,7 +105,7 @@ Set up an automated code review workflow:
 
 Claude Code can set this up as a scheduled workflow or webhook-triggered system. It plans the implementation, writes the scripts, configures the hooks, and produces a working system. You define the outcome; Claude Code handles the execution.
 
-Hybrid Example: Stateful Agent with Memory
+## Hybrid Example: Stateful Agent with Memory
 
 Claude Code can bridge both models. The `supermemory` skill provides persistent context, while agentic skills allow autonomous execution. Consider:
 
@@ -128,7 +128,7 @@ For each file changed in this PR, verify:
 
 This combines the personalized context of an assistant with the autonomous execution of an agent.
 
-When to Use Which Model
+## When to Use Which Model
 
 Use Claude Code as an assistant when:
 
@@ -146,7 +146,7 @@ Use Claude Code as an agent when:
 
 Claude Code's skills system supports both patterns. Skills like `pdf`, `tdd`, and `xlsx` are inherently assistant-like. they produce outputs on demand. Skills like `agent`, `supermemory`, and `mcp` can enable more autonomous workflows.
 
-Conclusion
+## Conclusion
 
 The difference between an AI agent and an AI assistant comes down to autonomy. An assistant responds when prompted; an agent acts to achieve goals. Claude Code serves both roles: you can use it as a reactive tool through basic interactions and skills, or you can use its agentic capabilities to build autonomous systems that execute complex workflows on your behalf.
 

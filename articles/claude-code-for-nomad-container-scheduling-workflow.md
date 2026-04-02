@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Nomad Container Scheduling Workflow
 
 HashiCorp Nomad is a powerful container orchestrator that simplifies workload deployment across distributed systems. When combined with Claude Code's skill system, you can create intelligent automation workflows that handle everything from job specification generation to deployment monitoring. This guide walks you through building Claude skills specifically designed for Nomad container scheduling workflows.
 
-Understanding Nomad Container Scheduling
+## Understanding Nomad Container Scheduling
 
 Nomad uses a declarative job specification format (HCL) to define how containers should be deployed, scaled, and managed across your infrastructure. Traditional Nomad workflows require manual job file editing, CLI command execution, and constant monitoring through the UI or API. By integrating Claude Code into this workflow, you can describe your desired deployment in natural language and let Claude handle the complexity.
 
@@ -27,7 +26,7 @@ Claude Code skills for Nomad work by understanding your infrastructure requireme
 
 Unlike Kubernetes, which requires YAML manifests with extensive boilerplate, Nomad's HCL format is more concise and readable. However, even a well-structured HCL file has enough moving parts, task drivers, resource constraints, update strategies, service checks, that generating one correctly from scratch is error-prone without tooling. Claude Code fills that gap by understanding your intent and translating it into valid, idiomatic HCL.
 
-Setting Up Your Nomad Skill Environment
+## Setting Up Your Nomad Skill Environment
 
 Before creating your skill, ensure you have the necessary tools configured. Your Claude Code environment should have access to the Nomad CLI, and ideally, a properly configured Nomad environment with valid API credentials. Here's how to structure a basic Nomad skill:
 
@@ -57,7 +56,7 @@ nomad server members
 
 With connectivity confirmed, your skill is ready to accept job management requests.
 
-Creating Nomad Job Specifications
+## Creating Nomad Job Specifications
 
 One of the most valuable applications of Claude Code for Nomad is generating job specifications from your requirements. Instead of manually writing HCL, you describe what you need, and Claude generates the appropriate specification.
 
@@ -165,7 +164,7 @@ job "postgres" {
 
 Notice the Vault template block for secrets injection, this is a common Nomad pattern that Claude Code can recognize and generate correctly when you specify that the service needs secret credentials.
 
-Automating Deployment Workflows
+## Automating Deployment Workflows
 
 Beyond specification generation, Claude Code skills can orchestrate entire deployment workflows. This includes validating job specifications, submitting them to Nomad, monitoring initial deployment status, and handling rollback scenarios if issues arise.
 
@@ -235,7 +234,7 @@ exit 1
 
 Claude Code can generate, customize, and invoke this script as part of a skill, adapting the timeout and polling interval based on the service type.
 
-Managing Updates and Scaling
+## Managing Updates and Scaling
 
 Nomad's strength lies in its simple update mechanisms. Claude Code can help you manage rolling updates, scaling operations, and configuration changes. When you need to scale a service, simply tell Claude:
 
@@ -271,7 +270,7 @@ update {
 
 With `canary = 1`, Nomad deploys one new instance first and waits for it to become healthy before proceeding with the rest of the rolling update. `auto_revert = true` means Nomad automatically rolls back to the previous version if any allocation fails to become healthy within `healthy_deadline`. This is the safest default for production services, and Claude Code can explain each parameter and recommend values based on your service's expected startup time.
 
-Comparison: Kubernetes vs. Nomad Scheduling Concepts
+## Comparison: Kubernetes vs. Nomad Scheduling Concepts
 
 Teams migrating from Kubernetes sometimes find Nomad's terminology unfamiliar. Here is a quick conceptual mapping:
 
@@ -290,7 +289,7 @@ Teams migrating from Kubernetes sometimes find Nomad's terminology unfamiliar. H
 
 This mapping helps teams transfer existing knowledge and makes it easier to describe desired behavior to Claude Code using familiar Kubernetes terminology.
 
-Troubleshooting and Monitoring
+## Troubleshooting and Monitoring
 
 When issues arise, Claude Code skills can dramatically speed up debugging. The skill can collect relevant logs, analyze job status, and suggest remediation steps:
 
@@ -338,7 +337,7 @@ echo "Bundle ready: $OUTDIR/"
 
 Claude Code can run this script, read the collected files, and provide a structured analysis of what is wrong, failed health checks, out-of-memory kills, image pull failures, or resource exhaustion on a specific node.
 
-Best Practices for Nomad Skills
+## Best Practices for Nomad Skills
 
 When building Claude Code skills for Nomad, consider these recommendations:
 
@@ -354,7 +353,7 @@ Pin image versions. Never deploy with a `latest` tag in production. Claude Code 
 
 Use the modify-index guard. Always pass `-modify-index` when running job updates to prevent accidental overwrites from concurrent operators. Claude Code can fetch the current index before generating the run command.
 
-Periodic and Batch Jobs
+## Periodic and Batch Jobs
 
 Nomad supports two special job types that Claude Code is well-suited to generate: periodic jobs (cron-like) and batch jobs (run-to-completion). Here is an example periodic job that runs a database backup nightly:
 
@@ -402,7 +401,7 @@ job "db-backup" {
 
 Describe the backup schedule and target in plain English, and Claude Code generates this specification correctly, including the Vault template for the database URL and the `prohibit_overlap` flag to prevent concurrent backup runs.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Nomad container scheduling from manual CLI operations into conversational workflows. By creating skills that understand your infrastructure patterns and requirements, you can deploy, scale, and manage containers through natural language commands. Start with basic job generation, then expand into comprehensive deployment automation as your skill matures.
 

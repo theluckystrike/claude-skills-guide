@@ -16,7 +16,7 @@ permalink: /claude-code-mcp-server-soc2-compliance-guide/
 
 [Building MCP (Model Context Protocol) servers that meet SOC 2 compliance requirements](/building-your-first-mcp-tool-integration-guide-2026/) is essential for enterprises deploying AI assistants in regulated environments. This guide walks you through the technical implementation of security controls, audit trails, and access management patterns that satisfy SOC 2 Trust Service Criteria.
 
-Understanding SOC 2 Requirements for MCP Servers
+## Understanding SOC 2 Requirements for MCP Servers
 
 SOC 2 compliance centers on five trust service criteria: security, availability, processing integrity, confidentiality, and privacy. When your MCP server handles sensitive data or interacts with protected systems, you need controls addressing all five areas.
 
@@ -24,7 +24,7 @@ The security criterion is your primary concern. [MCP servers must implement auth
 
 Your MCP server likely processes data that falls under confidentiality requirements. Customer data, business logic, and API credentials demand protection through [proper secrets management](/mcp-credential-management-and-secrets-handling/) both in transit and at rest.
 
-Implementing Authentication and Authorization
+## Implementing Authentication and Authorization
 
 Every MCP server needs strong authentication. For production deployments, implement token-based authentication using JWTs or API keys with appropriate expiration policies.
 
@@ -94,7 +94,7 @@ mcpServer.registerTool('read_customer_data', {
 });
 ```
 
-Audit Logging for SOC 2 Compliance
+## Audit Logging for SOC 2 Compliance
 
 SOC 2 requires detailed audit trails. Your MCP server must log all security-relevant events: authentication attempts, authorization decisions, data access, and configuration changes.
 
@@ -159,7 +159,7 @@ audit.log_event(
 
 Your logs should capture who did what, when, and the result. Include sufficient context for reconstructing events during audits.
 
-Data Encryption Requirements
+## Data Encryption Requirements
 
 Encrypt all sensitive data in transit using TLS 1.2 or higher. For data at rest, use AES-256 encryption for stored credentials, API keys, and sensitive payloads.
 
@@ -188,13 +188,13 @@ Store key in secure vault (HashiCorp Vault, AWS Secrets Manager, etc.)
 
 Never hardcode secrets. Use environment variables or secrets management services. Your MCP server configuration should load credentials at runtime from secure storage, following [least privilege configuration principles](/claude-code-mcp-server-least-privilege-configuration/).
 
-Integrating with Claude Code Skills
+## Integrating with Claude Code Skills
 
 When building MCP servers for Claude Code environments, consider how they interact with existing skills. The frontend-design skill can validate your server's API responses against expected schemas. Use the pdf skill to generate compliance documentation automatically. The tdd skill helps you write tests for security controls before implementation.
 
 For knowledge management, the supermemory skill can index your compliance documentation, making it searchable through natural language queries. This accelerates incident response and audit preparation.
 
-Monitoring and Incident Response
+## Monitoring and Incident Response
 
 SOC 2 requires monitoring for security events and documented [incident response procedures](/claude-code-mcp-server-incident-response-guide/). Implement health checks that verify:
 
@@ -220,13 +220,13 @@ def health_check():
 
 Set up alerts for security-relevant events: multiple failed authentication attempts, unusual data access patterns, or audit log failures.
 
-Deployment Considerations
+## Deployment Considerations
 
 Deploy your SOC 2-compliant MCP server in isolated network segments. Use containers with minimal base images to reduce attack surface. Implement network policies that restrict communication to necessary paths only.
 
 Regularly rotate credentials and keys. Automate this process to avoid manual errors. Your deployment pipeline should support secret rotation without service interruption.
 
-Conclusion
+## Conclusion
 
 Building a SOC 2-compliant MCP server requires attention to authentication, authorization, encryption, and audit logging. Implement these controls from the start rather than retrofitting them later. Use the patterns shown here as a foundation, then adapt them to your specific compliance scope.
 

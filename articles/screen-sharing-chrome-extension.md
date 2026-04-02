@@ -14,7 +14,7 @@ score: 8
 
 Building a screen sharing Chrome extension requires understanding Chrome's desktop capture APIs, permission models, and the constraints imposed by Manifest V3. This guide covers the technical implementation for developers and power users who want to integrate screen sharing into their browser-based workflows. from basic capture setup through production-ready architectures with recording, streaming, and annotation capabilities.
 
-Understanding Chrome's Desktop Capture API
+## Understanding Chrome's Desktop Capture API
 
 Chrome provides the `chrome.desktopCapture` API for capturing screen, windows, and tabs. This API powers built-in features like Google Meet screen sharing and is the foundation for any screen sharing extension.
 
@@ -42,7 +42,7 @@ The `getDesktopSources()` method returns an array of `DesktopCaptureSource` obje
 
 It is worth understanding the difference between the two main capture paths before writing any code. The `chrome.desktopCapture` API is available only in extension contexts and requires the `desktopCapture` permission in your manifest. The `getDisplayMedia()` API from the Screen Capture specification is available in regular web pages and does not require an extension at all. but it shows a browser-native picker that you cannot customize. Extensions that need custom source selection UI, silent background recording, or programmatic source selection must use the extension API path.
 
-Manifest V3 Permission Requirements
+## Manifest V3 Permission Requirements
 
 Manifest V3 requires declaring specific permissions in your extension manifest:
 
@@ -72,7 +72,7 @@ Note that `desktopCapture` is a permission, not a host permission. However, if y
 
 One important Manifest V3 constraint: background service workers are ephemeral and can be terminated by Chrome at any time. For long-running capture sessions, you must use the service worker keep-alive pattern or move stream management to a content script that persists as long as the tab is open.
 
-Building the Capture Flow
+## Building the Capture Flow
 
 The typical screen sharing workflow involves requesting sources, obtaining a media stream, and processing or transmitting it:
 
@@ -152,7 +152,7 @@ async function beginCapture(sourceId) {
 }
 ```
 
-Handling Stream Constraints
+## Handling Stream Constraints
 
 Developers should understand the constraints available for different capture types:
 
@@ -191,7 +191,7 @@ Here is how constraint choices affect practical outcomes:
 
 The `ideal` constraint modifier tells the browser to try for the specified value but accept alternatives. Use `exact` when you need a specific resolution and are prepared to handle the failure case if the source cannot meet it.
 
-Security Considerations
+## Security Considerations
 
 Screen sharing extensions handle sensitive data, so security is critical:
 
@@ -219,9 +219,9 @@ Credential Exposure: Frame analysis for bug reporting or documentation generatio
 
 Content Security Policy: Your extension's CSP should be as restrictive as possible. Avoid `unsafe-inline` and `unsafe-eval` in your manifest CSP declaration. This protects against injected scripts that might try to exfiltrate captured streams.
 
-Common Implementation Patterns
+## Common Implementation Patterns
 
-Recording to Local File
+## Recording to Local File
 
 ```javascript
 async function startRecording(stream) {
@@ -252,7 +252,7 @@ Requesting data every second via the `timeslice` argument to `start()` is import
 
 MIME type availability varies by platform. VP9 in WebM is broadly supported on Chrome across platforms. VP8 is a reliable fallback. For users who need MP4 output, you will need server-side transcoding or a WASM-based tool like ffmpeg.wasm, since Chrome's MediaRecorder does not natively support H.264 in MP4 containers on all platforms.
 
-Streaming to WebRTC
+## Streaming to WebRTC
 
 For real-time screen sharing to a remote server:
 
@@ -269,7 +269,7 @@ async function streamToPeerConnection(stream, peerConnection) {
 }
 ```
 
-Handling Stream Termination
+## Handling Stream Termination
 
 Users can stop sharing at any time from the browser's built-in UI. the notification bar that appears when capture is active. Your extension must handle this gracefully:
 
@@ -288,7 +288,7 @@ function attachTerminationHandlers(stream, onStop) {
 
 Without this handler, your extension may continue running recording logic against a dead stream, producing empty or corrupted output files.
 
-Extension Architecture Recommendations
+## Extension Architecture Recommendations
 
 For production screen sharing extensions, structure your code with clear separation:
 
@@ -342,7 +342,7 @@ chrome.runtime.sendMessage({
 });
 ```
 
-Testing and Debugging
+## Testing and Debugging
 
 Debug screen sharing extensions using Chrome DevTools:
 
@@ -364,7 +364,7 @@ A systematic approach to debugging capture failures:
 | `NotSupportedError` | MIME type unavailable | Use `MediaRecorder.isTypeSupported()` |
 | Stream tracks end immediately | Tab closed during capture | Check track state before recording |
 
-Use Cases for Developers
+## Use Cases for Developers
 
 Screen sharing extensions serve various developer workflows:
 
@@ -379,7 +379,6 @@ Screen sharing extensions serve various developer workflows:
 Building your own extension gives you control over the capture experience, storage options, and integration points that off-the-shelf solutions may not provide. The investment in understanding Chrome's capture APIs pays off whenever you need capture behavior that generic meeting tools or screen recorder products do not support. custom source selection, programmatic trigger points, silent background recording, or deep integration with your existing developer toolchain.
 
 ---
-
 
 Related Reading
 

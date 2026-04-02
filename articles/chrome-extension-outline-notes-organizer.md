@@ -18,13 +18,13 @@ Chrome Extension Outline Notes Organizer: A Developer Guide
 
 Creating a Chrome extension for organizing outlines and notes transforms how you capture and structure information across the web. Whether you're researching topics, collecting resources, or organizing project ideas, a well-built extension becomes an essential productivity tool. This guide walks you through building a functional outline notes organizer extension from scratch.
 
-Why Build a Notes Organizer Extension
+## Why Build a Notes Organizer Extension
 
 Browser-based note-taking has evolved beyond simple text capture. Modern users need structured data, hierarchical outlines, tagged categories, and cross-page linking. A dedicated Chrome extension gives you direct access to page content, selection APIs, and persistent storage without the overhead of web-based tools.
 
 The core advantage lies in integration. When you're reading documentation, researching a topic, or browsing a developer's blog, you can instantly capture structured notes without switching contexts. Your extension becomes a personal knowledge management layer sitting on top of any website.
 
-Core Architecture
+## Core Architecture
 
 A functional outline notes organizer extension requires several moving parts working together. Understanding these components upfront prevents architectural mistakes that become expensive to fix later.
 
@@ -56,7 +56,7 @@ The manifest file defines your extension's capabilities:
 
 This configuration grants three essential capabilities. The `activeTab` permission lets you access the current page when the user invokes your extension. Storage provides persistent data retention across browser sessions. Scripting allows content script injection for extracting selected text and page metadata.
 
-Data Model Design
+## Data Model Design
 
 Your notes structure determines how users interact with the extension later. A flat list quickly becomes unmanageable. A hierarchical model supports the outline concept naturally.
 
@@ -139,7 +139,7 @@ class NotesStore {
 
 This model supports nested outlines through recursive parent-child relationships. Each outline item stores its hierarchy level, enabling proper indentation and collapsible sections in your UI.
 
-Content Script Integration
+## Content Script Integration
 
 The magic happens when users select content on a page. Your content script captures that selection and sends it to your extension for processing.
 
@@ -185,7 +185,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This script avoids automatic execution, which improves performance and respects user privacy. It only activates when your popup requests the current selection.
 
-Popup Interface Design
+## Popup Interface Design
 
 The popup serves as the primary interaction point. Keep it lightweight, users want quick capture, not a full-featured editor.
 
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Advanced Features to Consider
+## Advanced Features to Consider
 
 Once you have the core functionality working, several enhancements significantly improve the user experience.
 
@@ -297,7 +297,7 @@ Export capabilities make your notes portable. Generate markdown, JSON, or HTML e
 
 Cloud sync via Chrome's sync storage (`chrome.storage.sync`) keeps notes available across devices. The sync storage has quota limits but works well for text-based notes.
 
-Implementation Priorities
+## Implementation Priorities
 
 When building your extension, focus on these elements in order:
 
@@ -310,7 +310,6 @@ When building your extension, focus on these elements in order:
 Building a functional outline notes organizer extension requires balancing feature complexity with performance. Start with reliable capture and storage, then layer on organization features as the foundation stabilizes.
 
 ---
-
 
 Related Reading
 

@@ -18,13 +18,13 @@ Claude skills transform how you work by packaging specialized capabilities into 
 
 This guide shows you practical patterns for combining Claude skills, with real examples you can adapt to your projects.
 
-Understanding Skill Composition
+## Understanding Skill Composition
 
 [Each Claude skill operates as a self-contained prompt](/claude-skill-md-format-complete-specification-guide/) that defines behavior, examples, and tool usage guidelines. When you combine skills, you're essentially creating a pipeline where the output of one skill feeds into the next. This works because Claude maintains conversation context across skill invocations.
 
 The key insight is that skills aren't limited to isolated use. You can invoke one skill, complete its task, then invoke another skill that builds on the results. This composition model mirrors how you might chain CLI tools in a bash pipeline.
 
-Basic Sequential Chaining
+## Basic Sequential Chaining
 
 The simplest approach involves invoking skills one after another, with each skill receiving context from the previous operation. Here's a practical scenario:
 
@@ -45,7 +45,7 @@ You: Now use pdf to create API documentation from these test specifications
 
 This sequential pattern works well when each skill produces discrete output that the next skill can consume.
 
-Context Building with Progressive Disclosure
+## Context Building with Progressive Disclosure
 
 For complex workflows, build context progressively by invoking skills in stages. This pattern works particularly well when you need to gather information from multiple sources before processing.
 
@@ -66,7 +66,7 @@ After gathering all necessary data, invoke processing skills that operate on the
 
 This approach ensures each downstream skill has full context from every source, rather than operating on partial information.
 
-Parallel Skill Execution
+## Parallel Skill Execution
 
 Some workflows benefit from running multiple skills simultaneously, then combining their results. The frontend-design skill can work in parallel with backend-focused skills when building full-stack features.
 
@@ -79,9 +79,9 @@ and tdd to generate backend endpoint tests in parallel
 
 Claude can coordinate these parallel tasks, collecting outputs from both skills and integrating them into a cohesive result.
 
-Real-World Workflow Examples
+## Real-World Workflow Examples
 
-Documentation Pipeline
+## Documentation Pipeline
 
 Combine pdf, docx, and supermemory for comprehensive documentation:
 
@@ -91,7 +91,7 @@ Combine pdf, docx, and supermemory for comprehensive documentation:
 
 This three-skill pipeline produces both technical and user documentation while maintaining institutional knowledge.
 
-Code Review and Refactoring
+## Code Review and Refactoring
 
 Chain tdd with pdf to combine test generation with documentation:
 
@@ -100,7 +100,7 @@ Chain tdd with pdf to combine test generation with documentation:
 
 The combination produces both executable tests and documentation suitable for sharing with stakeholders.
 
-Multi-Format Content Creation
+## Multi-Format Content Creation
 
 For content projects requiring multiple output formats:
 
@@ -110,7 +110,7 @@ For content projects requiring multiple output formats:
 
 Each skill contributes its specialized formatting capabilities to produce a complete content package.
 
-Advanced: Conditional Skill Routing
+## Advanced: Conditional Skill Routing
 
 More sophisticated workflows involve conditional logic, choosing which skill to invoke based on context. You can embed this logic in your skill descriptions:
 
@@ -123,7 +123,7 @@ When the user asks for performance optimization:
 
 This pattern lets a single skill act as a router, selecting the next skill based on task characteristics.
 
-Best Practices for Skill Chaining
+## Best Practices for Skill Chaining
 
 Maintain clear context boundaries. When chaining skills, explicitly state what information should transfer to the next skill. Claude preserves conversation history, but explicit summaries help maintain clarity:
 
@@ -140,13 +140,13 @@ Use skill-specific outputs strategically. Each skill produces output optimized f
 
 Test your chains incrementally. Verify each skill works correctly in isolation before chaining. Debugging a three-skill pipeline is harder than debugging individual skills.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Don't assume skills share implicit context. Each skill has its own focus and may not remember details from a previous skill unless you explicitly restate them. Always provide relevant context when invoking a new skill in a chain.
 
 Avoid over-chaining. If you find yourself invoking five or more skills in sequence, consider whether a single comprehensive prompt might be more efficient. Skill chaining works best for natural breakpoints in work.
 
-Advanced Technique: Skill Composition
+## Advanced Technique: Skill Composition
 
 For frequently used combinations, consider creating composite skills that invoke multiple underlying skills. Write a skill file that sequences the invocations:
 
@@ -163,7 +163,7 @@ Use this for recurring reporting tasks.
 
 Users then invoke the single composite skill instead of remembering the full sequence. This approach transforms complex multi-step pipelines into a single command that any team member can use consistently.
 
-Building Your Own Workflows
+## Building Your Own Workflows
 
 Start by identifying tasks you repeat frequently. Look for patterns where you perform similar steps in a fixed order. These sequences are candidates for skill chaining.
 
@@ -174,7 +174,6 @@ The [combination possibilities are nearly endless](/workflows-hub/), pdf for doc
 Experiment with different combinations. The workflow that solves your specific challenges often emerges from trying unexpected skill pairings.
 
 ---
-
 
 Related Reading
 

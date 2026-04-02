@@ -23,9 +23,9 @@ Chrome extensions make this process smooth because they inject analysis directly
 
 The data behind headline analysis is well-established. Studies from CoSchedule, Buzzsumo, and Upworthy consistently show that certain structural patterns, specific word counts, emotional language, and numbered lists, correlate with higher click-through rates. A good analyzer encodes that research into instant feedback.
 
-Key Metrics to Measure
+## Key Metrics to Measure
 
-Sentiment Analysis
+## Sentiment Analysis
 
 Sentiment measures the emotional tone of your headline. Positive headlines tend to perform better for lifestyle and product content, while negative or controversial headlines drive engagement for news and opinion pieces. A basic sentiment scorer uses a dictionary of positive and negative words:
 
@@ -66,7 +66,7 @@ function weightedSentimentScore(headline) {
 }
 ```
 
-Readability Scores
+## Readability Scores
 
 Readability matters for accessibility and engagement. The Flesch-Kincaid grade level formula works well for headlines:
 
@@ -100,7 +100,7 @@ Aim for a grade level between 6 and 10 for most web content. Headlines that scor
 
 Readability is particularly important for SEO. Search engines favor headlines that match how people naturally search. A headline written at a 12th grade reading level may technically be correct but fail to match the plain-language search queries most users actually type.
 
-Power Words and Emotional Triggers
+## Power Words and Emotional Triggers
 
 Power words evoke emotional responses and drive action. Categories include:
 
@@ -128,7 +128,7 @@ function countPowerWords(headline) {
 
 Research suggests that headlines with one or two power words outperform those with zero, but headlines stuffed with five or more power words can feel spammy and reduce credibility. Your scorer should reflect this nuance, awarding points for one to two power words but flagging or penalizing excessive use.
 
-Word Count and Character Length
+## Word Count and Character Length
 
 Optimal headline length depends on context, but general guidelines are consistent across research:
 
@@ -153,7 +153,7 @@ function startsWithNumber(headline) {
 }
 ```
 
-Question Headlines
+## Question Headlines
 
 Headlines phrased as questions generate curiosity and pull readers in. Detecting a question is simple but worth including:
 
@@ -167,7 +167,7 @@ function isQuestion(headline) {
 }
 ```
 
-Building Your Own Chrome Extension
+## Building Your Own Chrome Extension
 
 A basic chrome extension requires three files: manifest.json, popup.html, and popup.js. Manifest Version 3 is the current standard, Manifest V2 extensions are being phased out and will stop running in Chrome.
 
@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', injectAnalyzer);
 document.addEventListener('focusin', injectAnalyzer); // catch dynamically added inputs
 ```
 
-Scoring Logic Explained
+## Scoring Logic Explained
 
 The scoring weights above reflect research on headline performance, but they are starting points. Here is a summary of the default weighting and why each factor matters:
 
@@ -382,7 +382,7 @@ The scoring weights above reflect research on headline performance, but they are
 
 Starting base is 50 so that even a completely empty analysis does not show a 0, which would discourage use. Adjust the base and weights to match your audience and platform data over time.
 
-Practical Usage Tips
+## Practical Usage Tips
 
 When using a headline analyzer, treat the score as guidance rather than gospel. A score of 60 does not mean your headline will fail, it means room exists for improvement. Some of the most viral headlines in history would score poorly by algorithmic measures because they break expected patterns in interesting ways.
 
@@ -394,7 +394,7 @@ Keep a swipe file. When you write a headline that your analyzer scores highly AN
 
 Avoid over-optimizing. If you spend 20 minutes trying to reach a score of 90, you may produce a headline that sounds engineered rather than natural. Readers sense that. A score of 75 with authentic language usually outperforms a score of 90 that feels mechanical.
 
-Extending the Analyzer
+## Extending the Analyzer
 
 Once you have the basics working, consider adding these features:
 
@@ -422,7 +422,6 @@ Platform-aware mode: Detect which site the user is on and switch scoring profile
 Building your own chrome extension headline analyzer gives you full control over the metrics that matter for your content strategy. Start with the fundamentals, word count, sentiment, readability, and expand based on what you learn from your own data. The investment in tooling pays back every time you publish content, because better headlines mean more readers for the same amount of writing effort.
 
 ---
-
 
 Related Reading
 

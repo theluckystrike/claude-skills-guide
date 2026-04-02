@@ -16,7 +16,7 @@ score: 8
 {% raw %}
 Chrome extension gift card balance checkers are specialized browser tools that help users retrieve remaining balances on gift cards from various retailers. For developers interested in building such extensions, understanding the underlying mechanisms, API interactions, and practical implementation patterns is essential. This guide covers the technical aspects of creating gift card balance checker extensions.
 
-How Gift Card Balance Checking Works
+## How Gift Card Balance Checking Works
 
 Gift card balance checking typically involves sending a request to a retailer's gift card API or web service with the card number and PIN. The service returns the current balance. The challenge for extension developers lies in handling the variety of authentication methods, API endpoints, and security measures implemented by different retailers.
 
@@ -28,7 +28,7 @@ Most gift card balance checkers operate through one of these methods:
 
 The implementation approach depends on whether the retailer provides public APIs, requires authentication, or offers simple web-based balance checks.
 
-Building a Basic Gift Card Balance Checker Extension
+## Building a Basic Gift Card Balance Checker Extension
 
 Creating a functional gift card balance checker requires understanding Chrome Extension Manifest V3 architecture. Here's a basic implementation structure:
 
@@ -97,7 +97,7 @@ function parseBalanceFromHTML(html, retailer) {
 }
 ```
 
-Handling Multiple Retailers
+## Handling Multiple Retailers
 
 A practical gift card balance checker extension needs to support multiple retailers. Store retailer configurations separately to make the extension maintainable:
 
@@ -137,7 +137,7 @@ export const retailers = {
 
 This configuration approach allows users to add support for new retailers by updating the configuration without modifying core logic.
 
-Building the User Interface
+## Building the User Interface
 
 The popup interface provides the primary user interaction point:
 
@@ -237,7 +237,7 @@ function showResult(message, type) {
 }
 ```
 
-Security Considerations
+## Security Considerations
 
 When building gift card balance checker extensions, security should be a primary concern:
 
@@ -258,7 +258,7 @@ API Security: Always use HTTPS for API communications. Implement certificate pin
 
 User Privacy: Clearly explain what data your extension collects and how it uses it. Consider adding a privacy mode that processes everything locally without sending card numbers anywhere.
 
-Practical Use Cases
+## Practical Use Cases
 
 Gift card balance checker extensions serve several practical purposes:
 
@@ -266,16 +266,15 @@ Gift card balance checker extensions serve several practical purposes:
 - Power users with multiple gift cards who want quick balance checks
 - Developers building related tools or integrating gift card APIs
 
-Alternative Approaches
+## Alternative Approaches
 
 Some developers prefer using dedicated balance checking websites rather than building their own extensions. Services like GiftCard Granny, Cardpool, and Raise provide APIs or browser-based checking. For developers wanting to integrate without building from scratch, these services offer SDKs and partner programs.
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for gift card balance checking requires understanding web form automation, API integration, and secure data handling. The Manifest V3 architecture provides a solid foundation for creating extensions that interact with retailer's balance checking systems.
 
 Start with a simple implementation supporting one or two retailers, then expand based on user demand. Focus on accurate balance parsing, clear error messages, and secure handling of sensitive card data.
-
 
 Related Reading
 

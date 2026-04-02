@@ -16,7 +16,7 @@ score: 7
 
 Documentation that lives alongside your code instead of drifting away from it is one of the most practical improvements you can make to a development project. MkDocs combined with Claude Code creates a workflow where your documentation updates happen as part of your development process rather than as a separate, often-neglected task. This guide shows you how to set up that workflow from scratch.
 
-What Makes This Workflow Work
+## What Makes This Workflow Work
 
 MkDocs builds static documentation sites from Markdown files. Claude Code reads your codebase, understands structure and purpose, and generates the Markdown content you need. The connection between them is simple: Claude writes or updates `.md` files in your `docs/` folder, and MkDocs builds those into a browsable site.
 
@@ -28,7 +28,7 @@ You need three things to get started:
 
 Optional but recommended skills accelerate specific parts: the `pdf` skill generates downloadable documentation exports, the `supermemory` skill remembers documentation decisions across sessions, and the `tdd` skill helps keep your docs in sync with test coverage.
 
-Setting Up Your MkDocs Foundation
+## Setting Up Your MkDocs Foundation
 
 Create your documentation directory structure first. In your project root:
 
@@ -56,7 +56,7 @@ nav:
 
 Run `mkdocs serve` to preview locally. The site builds at `http://127.0.0.1:8000` and updates as you modify files.
 
-Generating API Documentation with Claude
+## Generating API Documentation with Claude
 
 The most valuable documentation is accurate API reference. Claude reads your source files and generates this automatically. Create a prompt file or session instruction:
 
@@ -97,7 +97,7 @@ if authenticate_user("dev", "password123"):
 ```
 ```
 
-Automating Documentation Updates
+## Automating Documentation Updates
 
 Manual updates still require remembering to run them. Connect documentation generation to your development workflow using git hooks or Claude's native prompt system.
 
@@ -123,7 +123,7 @@ docs:
 
 Run `make docs` whenever you want a full documentation refresh.
 
-Adding Guided Content
+## Adding Guided Content
 
 API reference is mechanical. Guides and tutorials are where you add context that code alone cannot convey. Use Claude to draft these, then refine them yourself.
 
@@ -143,7 +143,7 @@ Write in a friendly, tutorial style with code blocks for every step.
 
 Claude generates a first draft. Review it, add your project-specific details, and save. The `frontend-design` skill helps if you want to add visual elements or structured layouts to your guides.
 
-Preserving Context Across Sessions
+## Preserving Context Across Sessions
 
 Documentation projects span multiple sessions. The `supermemory` skill stores decisions, style preferences, and architectural notes so you do not repeat yourself.
 
@@ -167,7 +167,7 @@ claude /supermemory "Retrieve project documentation context"
 
 This keeps your documentation consistent without re-explaining your conventions every time.
 
-Exporting to PDF
+## Exporting to PDF
 
 Some audiences need downloadable documentation. The `pdf` skill converts your MkDocs site to PDF:
 
@@ -177,7 +177,7 @@ claude /pdf "Convert docs/ to docs/project-docs.pdf"
 
 This is useful for offline distribution, client deliverables, or archived versions of your documentation.
 
-Workflow Summary
+## Workflow Summary
 
 The complete workflow looks like this:
 
@@ -190,7 +190,7 @@ The complete workflow looks like this:
 
 This keeps documentation current without requiring you to write it manually after every code change. The gap between code and docs shrinks to minutes rather than months.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Claude misses some functions: Add more specific prompts that enumerate the files you want scanned. Use glob patterns explicitly.
 
@@ -200,7 +200,7 @@ Navigation does not update: MkDocs requires explicit `nav` configuration. Update
 
 Documentation is inaccurate: Claude generates from code but cannot always infer intent. Always review generated docs before committing, especially for public APIs.
 
-Extending the Workflow
+## Extending the Workflow
 
 Once the basics work, layer in additional capabilities:
 
@@ -212,7 +212,6 @@ Once the basics work, layer in additional capabilities:
 Each extension adds a small piece of functionality without disrupting the core workflow.
 
 This approach scales from small personal projects to larger team documentation. The key insight is that documentation generation and code development happen in the same environment, using the same tools, driven by Claude's understanding of your codebase.
-
 
 Related Reading
 

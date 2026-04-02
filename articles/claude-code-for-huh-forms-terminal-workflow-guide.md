@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Huh Forms Terminal Workflow Guide
-
 Building interactive command-line applications often requires handling user input through forms, prompts, and guided workflows. The `huh` library in Go provides a powerful way to create terminal forms, and when combined with Claude Code, you can create intelligent, AI-assisted CLI experiences that guide users through complex tasks. This guide shows you how to use Claude Code for building sophisticated terminal workflows using huh forms.
 
-Understanding Huh Forms and Claude Code Integration
+## Understanding Huh Forms and Claude Code Integration
 
 The [huh library](https://github.com/charmbracelet/huh) is a Go-based terminal form library that enables developers to create interactive, accessible, and beautiful CLI forms. These forms can include text inputs, selections, confirmations, and multi-step wizards. When you integrate Claude Code into this workflow, you get AI assistance that can:
 
@@ -29,7 +26,7 @@ The [huh library](https://github.com/charmbracelet/huh) is a Go-based terminal f
 
 This combination is particularly powerful for DevOps workflows, configuration setups, project scaffolding, and any CLI tool that requires user guidance.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before building integrated workflows, ensure you have the necessary tools installed:
 
@@ -48,7 +45,7 @@ go get github.com/charmbracelet/huh
 
 With these tools in place, you can start building forms that use Claude Code's capabilities.
 
-Building Interactive Forms with Huh
+## Building Interactive Forms with Huh
 
 Creating a basic huh form is straightforward. Here's a simple example that collects user information:
 
@@ -90,11 +87,11 @@ func main() {
 
 This basic form demonstrates huh's declarative approach. Now let's enhance it with Claude Code integration.
 
-Integrating Claude Code for Intelligent Form Handling
+## Integrating Claude Code for Intelligent Form Handling
 
 The real power emerges when you combine huh forms with Claude Code's AI capabilities. You can create skills that analyze user intent and dynamically generate appropriate form configurations.
 
-Creating a Claude Skill for Form Assistance
+## Creating a Claude Skill for Form Assistance
 
 Here's how to create a skill that helps users fill out forms intelligently:
 
@@ -115,7 +112,7 @@ When users need help filling out forms, analyze their context and provide intell
 Provide concise, actionable suggestions that speed up form completion.
 ```
 
-Using Claude Code to Pre-fill Form Values
+## Using Claude Code to Pre-fill Form Values
 
 For complex configurations, you can use Claude Code to inspect the project environment and pre-populate form values:
 
@@ -144,7 +141,7 @@ func main() {
 }
 ```
 
-Building Multi-Step Workflow Wizards
+## Building Multi-Step Workflow Wizards
 
 Complex CLI tools often require multi-step wizards. Huh supports this pattern natively, and Claude Code can guide users through each step intelligently.
 
@@ -212,7 +209,7 @@ func runProjectSetupWizard() {
 }
 ```
 
-Automating Form Filling with Claude Code
+## Automating Form Filling with Claude Code
 
 One of the most powerful use cases is using Claude Code to automate repetitive form-filling tasks. This is particularly useful for:
 
@@ -261,7 +258,7 @@ func main() {
 }
 ```
 
-Best Practices for Claude-Huh Integration
+## Best Practices for Claude-Huh Integration
 
 When building integrated CLI workflows, follow these best practices:
 
@@ -275,7 +272,7 @@ When building integrated CLI workflows, follow these best practices:
 
 5. Cache When Appropriate: If you're calling Claude Code repeatedly for similar suggestions, implement caching to reduce latency and API calls.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with huh forms opens up powerful possibilities for building intelligent CLI tools. Whether you're creating guided wizards, automating configuration tasks, or building interactive development environments, this integration helps you create more helpful and efficient terminal experiences. Start small with basic form assistance, then progressively add more sophisticated AI capabilities as your workflows mature.
 

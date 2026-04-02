@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Browser Automation Workflow Guide
-
 Browser automation has become an essential skill for developers, enabling automated testing, web scraping, form submission, and end-to-end workflow validation. Claude Code, combined with the Playwright Model Context Protocol (MCP) server, provides a powerful framework for building reliable browser automation workflows. This guide walks you through setting up browser automation, creating reusable skills, and implementing best practices for production-ready automation.
 
-Setting Up Your Browser Automation Environment
+## Setting Up Your Browser Automation Environment
 
 Before building automation workflows, you need to configure Claude Code with the Playwright MCP server. This integration gives Claude direct control over headless browsers for various automation tasks.
 
@@ -43,7 +40,7 @@ Next, configure your Claude Code settings to include the Playwright MCP server. 
 
 Once configured, Claude Code gains access to browser automation tools including `playwright_navigate`, `playwright_screenshot`, `playwright_click`, `playwright_fill`, and `playwright_evaluate`. These tools form the foundation of your automation workflows.
 
-Creating a Reusable Browser Automation Skill
+## Creating a Reusable Browser Automation Skill
 
 The power of Claude Code lies in creating reusable skills that encapsulate browser automation patterns. A well-designed skill should handle initialization, common operations, and cleanup while exposing clear interfaces for specific tasks.
 
@@ -79,11 +76,11 @@ For complex pages requiring interaction:
 
 This skill structure demonstrates the key principles: clear tool declaration, documented actions, and practical usage examples that help Claude understand when and how to apply the skill.
 
-Building Common Automation Workflows
+## Building Common Automation Workflows
 
 Browser automation tasks typically follow patterns that can be abstracted into reusable workflows.  three common scenarios and how to implement them effectively with Claude Code.
 
-Form Submission Automation
+## Form Submission Automation
 
 Form automation requires careful sequencing of actions: navigation, waiting for form load, filling fields, and submitting. The key challenge is handling dynamic content and validation:
 
@@ -118,7 +115,7 @@ async function fillAndSubmitForm(page, formConfig) {
 
 When working with Claude Code, you can describe this workflow naturally: "Fill out the contact form on example.com/contact using the data from my contacts.json file, then verify the confirmation message appears."
 
-Web Scraping with Dynamic Content
+## Web Scraping with Dynamic Content
 
 Modern web applications load content dynamically via JavaScript, requiring waiting strategies rather than simple navigation. Claude Code's `playwright_evaluate` tool executes custom JavaScript in the browser context, enabling sophisticated data extraction:
 
@@ -136,7 +133,7 @@ const productData = await page.evaluate(() => {
 
 For scraping tasks, provide Claude with clear extraction patterns: "Extract all job listings from the results table on example.com/jobs, including title, company, location, and date posted."
 
-End-to-End Testing Workflows
+## End-to-End Testing Workflows
 
 Browser automation excels at testing complex user flows. Create skills that encapsulate testing logic:
 
@@ -163,7 +160,7 @@ Validation Examples
 - "Verify the login flow: enter credentials, submit, and confirm dashboard loads with user name displayed"
 ```
 
-Best Practices for Production Automation
+## Best Practices for Production Automation
 
 Building reliable browser automation requires addressing common failure modes and implementing solid error handling.
 
@@ -218,7 +215,7 @@ try {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Browser automation with Claude Code combines natural language processing with powerful browser control, enabling developers to automate complex web interactions through descriptive commands. By setting up the Playwright MCP server, creating reusable skills, implementing solid workflows, and following production best practices, you can build reliable automation that handles real-world web scenarios effectively.
 

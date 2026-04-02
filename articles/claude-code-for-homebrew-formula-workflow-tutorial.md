@@ -14,10 +14,9 @@ tags: [claude-code, claude-skills]
 ---
 {% raw %}
 
-
 Homebrew is the go-to package manager for macOS and Linux developers, making it essential for anyone distributing command-line tools. However, creating and maintaining a Homebrew formula can be tricky, ensuring the formula passes all checks, follows best practices, and integrates smoothly with your release process takes attention to detail. This tutorial shows you how to use Claude Code to automate and simplify your Homebrew formula workflow, from initial creation to ongoing maintenance.
 
-Understanding the Homebrew Formula Workflow
+## Understanding the Homebrew Formula Workflow
 
 Before diving into automation, let's establish what a typical Homebrew formula workflow involves. At its core, you need to:
 
@@ -28,7 +27,7 @@ Before diving into automation, let's establish what a typical Homebrew formula w
 
 Each step has specific requirements and edge cases. Claude Code can assist at every stage, reducing manual effort and catching errors before they cause problems.
 
-Setting Up Claude Code for Homebrew
+## Setting Up Claude Code for Homebrew
 
 The first step is ensuring Claude Code has context about Homebrew best practices. While Claude Code has general knowledge about Homebrew, you can enhance its effectiveness by providing specific guidance.
 
@@ -51,7 +50,7 @@ Testing Requirements
 
 With this context, Claude Code will automatically apply these principles when helping with your formula.
 
-Creating a New Formula with Claude Code
+## Creating a New Formula with Claude Code
 
 When you need to create a new formula, Claude Code can generate the initial structure based on your project's current release. Here's a practical example:
 
@@ -91,7 +90,7 @@ end
 
 Review the generated formula carefully, Claude Code makes informed guesses, but you know your project's specific build requirements best.
 
-Automating Formula Updates
+## Automating Formula Updates
 
 One of the most valuable workflows is automating formula updates for new releases. Instead of manually regenerating the URL and SHA256 each time, you can use Claude Code to handle this process.
 
@@ -115,23 +114,23 @@ puts "Tarball: #{tarball}"
 
 Ask Claude Code to run this, then update your formula with the new version and URL. This approach keeps your tap or personal formula current with upstream releases.
 
-Testing and Validation Workflows
+## Testing and Validation Workflows
 
 Before submitting a formula to Homebrew/core, thorough testing is essential. Claude Code can guide you through a comprehensive validation process:
 
-Step 1: Install from source
+## Step 1: Install from source
 
 ```bash
 brew install --build-from-source ./Formula/mytool.rb
 ```
 
-Step 2: Run the audit
+## Step 2: Run the audit
 
 ```bash
 brew audit --strict ./Formula/mytool.rb
 ```
 
-Step 3: Verify the installation
+## Step 3: Verify the installation
 
 ```bash
 mytool --version
@@ -140,7 +139,7 @@ which mytool
 
 If any step fails, ask Claude Code to diagnose the issue. It can help interpret error messages and suggest fixes, whether it's a missing dependency, incorrect SHA256, or test failure.
 
-Maintaining Multiple Formulas
+## Maintaining Multiple Formulas
 
 For projects that ship multiple tools or maintain different versions, Claude Code helps manage complexity. You can create aCLAUDE.md that tracks all your formulas and their current versions:
 
@@ -159,7 +158,7 @@ Update Schedule
 
 This tracking helps ensure no formula falls out of date.
 
-Submitting to Homebrew Core
+## Submitting to Homebrew Core
 
 When your formula is ready for Homebrew/core submission, Claude Code can help you craft the pull request. The key requirements are:
 
@@ -169,7 +168,7 @@ When your formula is ready for Homebrew/core submission, Claude Code can help yo
 
 Claude Code can review your formula one final time against these requirements before you submit.
 
-Best Practices for Homebrew Formula Management
+## Best Practices for Homebrew Formula Management
 
 To get the most out of Claude Code in your workflow, keep these practices in mind:
 
@@ -181,7 +180,7 @@ Keep dependencies minimal, Each dependency increases the chance of installation 
 
 Write meaningful tests, The `test` block in your formula is crucial. Include tests that verify core functionality, not just version output.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Homebrew formula management from a manual, error-prone process into a streamlined workflow. By providing context about your project's needs, generating initial formula structures, and guiding you through testing and validation, Claude Code helps you create reliable packages that serve your users well. Start with the basics, creating and testing a single formula, and expand from there as you become comfortable with the workflow.
 

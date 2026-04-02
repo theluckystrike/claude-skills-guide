@@ -13,10 +13,9 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
 The Chrome Enterprise Extension Management API provides administrators with powerful programmatic controls for managing browser extensions across their organization. This API, part of Google's Chrome Browser Cloud Management suite, enables IT teams to install, configure, and remove extensions across managed devices without requiring manual intervention on each workstation.
 
-Understanding the Extension Management API
+## Understanding the Extension Management API
 
 The Chrome Enterprise Extension Management API operates through the Google Admin SDK and allows administrators to manage extensions at the organizational unit (OU) level. This means you can apply consistent policies across departments or teams while maintaining flexibility for different groups within your enterprise.
 
@@ -39,7 +38,7 @@ It helps to understand where the Extension Management API fits within the broade
 
 The API is the right choice when you need automation at scale, when manually clicking through the Admin Console for dozens of extensions across hundreds of OUs becomes impractical.
 
-Getting Started with the API
+## Getting Started with the API
 
 First, you'll need to configure your environment to make API calls. Here's how to set up authentication using Python:
 
@@ -103,7 +102,7 @@ def build_chrome_service(service_account_path: str, delegated_admin: str):
 
 Domain delegation is required when your service account needs to act on behalf of a user who has Chrome management privileges. Without this, calls to org unit-scoped endpoints will return 403 errors even if the service account is correctly configured in your GCP project.
 
-Listing Installed Extensions
+## Listing Installed Extensions
 
 One of the most common use cases for this API is auditing which extensions are installed across your organization. You can retrieve extensions installed by specific users or across entire organizational units.
 
@@ -191,7 +190,7 @@ def export_extensions_report(service, customer_id, output_path):
 
 Running this report weekly and diffing against a known-good baseline is a lightweight but effective way to detect unauthorized extension installations.
 
-Installing Extensions Programmatically
+## Installing Extensions Programmatically
 
 The API allows you to push extensions to users or organizational units. This is particularly valuable for deploying corporate-required extensions such as password managers, VPN clients, or internal tools.
 
@@ -226,7 +225,7 @@ The `installationType` field supports several values with meaningfully different
 
 Choosing the right installation type matters. If every extension is `FORCE_INSTALLED`, users lose agency and may work around restrictions by using non-managed browsers. Reserve forced installs for extensions that truly need to be present for compliance or security reasons.
 
-Configuring Extension Settings
+## Configuring Extension Settings
 
 Beyond simple installation, you can configure extension-specific settings through the API. Different extensions expose different configuration options, but the pattern remains consistent:
 
@@ -285,7 +284,7 @@ def set_managed_storage_policy(service, customer_id, org_unit_id, extension_id, 
 
 This is particularly useful for internal extensions that need environment-specific settings (API endpoints, tenant IDs, feature flags) that should differ between production and development OUs.
 
-Removing Extensions from Managed Devices
+## Removing Extensions from Managed Devices
 
 When an extension is no longer needed or poses a security risk, you can remove it programmatically:
 
@@ -333,7 +332,7 @@ def uninstall_from_all_org_units(service, customer_id, extension_id):
     return removed_from
 ```
 
-Monitoring Extension Usage
+## Monitoring Extension Usage
 
 Understanding how extensions are being used helps with capacity planning and security monitoring. The API provides usage analytics:
 
@@ -386,7 +385,7 @@ def audit_extension_permissions(service, customer_id):
 
 Feeding this output into a dashboard or weekly report gives your security team visibility into which extensions have broad access to user browsing data, independent of whether those extensions are currently causing problems.
 
-Best Practices for Implementation
+## Best Practices for Implementation
 
 When implementing extension management at scale, consider establishing a review workflow before pushing new extensions organization-wide. Test extensions in a pilot group first, then gradually expand deployment based on user feedback and usage data.
 
@@ -415,7 +414,6 @@ org_units:
 Finally, establish automated policies that trigger extension reviews when new permissions are requested. Extensions frequently update and request additional permissions, so continuous monitoring is essential for maintaining security. Pair this with webhook notifications to your security team whenever the audit script detects a new high-risk permission appearing in an extension that was previously clean.
 
 The Chrome Enterprise Extension Management API transforms browser extension administration from a manual, time-consuming process into a scalable, automated workflow. By integrating these capabilities into your IT operations, you gain precise control over the browser environment while reducing administrative overhead, and you build the kind of institutional knowledge and tooling that makes the next security incident a manageable operational task rather than a scramble.
-
 
 Related Reading
 

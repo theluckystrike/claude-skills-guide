@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Container Environment Variables Management
 
 Environment variables are the backbone of flexible, secure container configurations in Claude Code. Whether you're managing API keys, database connections, or feature flags, understanding how to properly handle environment variables in containerized Claude Code environments is essential for building solid, production-ready applications.
 
-Why Environment Variables Matter in Containers
+## Why Environment Variables Matter in Containers
 
 Container environments present unique challenges for configuration management. Unlike traditional servers where you might directly edit configuration files, containers are designed to be immutable and portable. Environment variables solve this by externalizing configuration from your application code while maintaining security and flexibility.
 
@@ -32,11 +31,11 @@ In Claude Code, environment variables serve multiple critical purposes:
 
 The twelve-factor app methodology, which has become the gold standard for building cloud-native applications, explicitly calls out environment variables as the correct mechanism for storing configuration that varies between deployments. When you adopt this principle in your Claude Code container workflows, you gain portability across development, staging, and production environments without any code changes.
 
-Setting Environment Variables in Docker Containers
+## Setting Environment Variables in Docker Containers
 
 There are several approaches to setting environment variables in Docker containers, each with different use cases and security implications.
 
-Using the ENV Instruction in Dockerfile
+## Using the ENV Instruction in Dockerfile
 
 The most straightforward method is using the `ENV` instruction in your Dockerfile:
 
@@ -57,7 +56,7 @@ CMD ["node", "index.js"]
 
 This approach embeds the values directly into the image, making them available to all containers running from that image. It is appropriate for non-sensitive default values that rarely change, such as a default listening port or a timezone setting. Avoid using this approach for secrets, because the values are baked into every image layer and visible in the image history.
 
-Using docker run -e Flag
+## Using docker run -e Flag
 
 For runtime variables, especially secrets, use the `-e` flag:
 
@@ -73,7 +72,7 @@ docker run -e API_KEY -e DB_PASSWORD my-container
 
 This reads from the host's environment, keeping secrets out of command history. This pattern works well for one-off container invocations or when the values are already loaded in the shell environment via a secrets manager or CI/CD injection.
 
-Using Docker Compose
+## Using Docker Compose
 
 Docker Compose simplifies environment variable management with its `environment` and `env_file` options:
 
@@ -101,7 +100,7 @@ services:
       - .env.production  # Production overrides
 ```
 
-Environment Variable Interpolation in Compose Files
+## Environment Variable Interpolation in Compose Files
 
 Docker Compose also supports variable interpolation within the compose file itself, drawing values from the shell environment or a `.env` file in the project directory:
 
@@ -116,11 +115,11 @@ services:
 
 The `:-` syntax provides a default value when the variable is not set. This makes your compose files self-documenting. a reader can immediately see which values are configurable and what their defaults are.
 
-Accessing Environment Variables in Claude Code
+## Accessing Environment Variables in Claude Code
 
 Claude Code provides multiple ways to access and work with environment variables throughout your workflow.
 
-Reading Variables in Shell Scripts
+## Reading Variables in Shell Scripts
 
 Your shell scripts can access environment variables using standard syntax:
 
@@ -141,7 +140,7 @@ export API_ENDPOINT="https://api.example.com"
 
 The `${VAR:-default}` pattern is essential for defensive scripting inside containers. It ensures that a missing variable does not silently cause unexpected behavior.
 
-Using .env Files for Local Development
+## Using .env Files for Local Development
 
 For local development, create a `.env` file (add it to `.gitignore`):
 
@@ -178,7 +177,7 @@ if not api_key:
     raise RuntimeError("API_KEY environment variable is required")
 ```
 
-Accessing Variables in Different Languages
+## Accessing Variables in Different Languages
 
 Each language ecosystem has its own conventions for environment variable access. Here is a quick reference:
 
@@ -192,7 +191,7 @@ Each language ecosystem has its own conventions for environment variable access.
 
 Understanding these patterns ensures that your application code behaves consistently regardless of which container environment it runs in.
 
-Best Practices for Secure Variable Management
+## Best Practices for Secure Variable Management
 
 1. Never Hardcode Secrets
 
@@ -307,11 +306,11 @@ Environment variable files
 .env.production
 ```
 
-Claude Code Specific Patterns
+## Claude Code Specific Patterns
 
 When working with Claude Code in containerized environments, consider these specialized patterns:
 
-Skill Configuration Through Environment
+## Skill Configuration Through Environment
 
 Skills can read environment variables to adjust their behavior:
 
@@ -325,7 +324,7 @@ environment:
 
 This approach lets operators change skill behavior for different deployment contexts without modifying skill code. A skill running in a restricted CI environment might have a smaller tool allowlist, while one running in a developer sandbox can have the full set.
 
-Container Orchestration Integration
+## Container Orchestration Integration
 
 When running Claude Code in Kubernetes or other orchestrators, use their native environment variable management:
 
@@ -395,7 +394,7 @@ spec:
 
 Using `envFrom` rather than individually mapping each variable keeps the deployment manifest clean and automatically picks up any new keys added to the ConfigMap or Secret.
 
-Docker Build Arguments vs Environment Variables
+## Docker Build Arguments vs Environment Variables
 
 Understand when to use `ARG` versus `ENV`:
 
@@ -423,7 +422,7 @@ ENV LOG_FORMAT=json
 
 One important nuance: if you set an `ARG` before the `FROM` instruction and then set an `ENV` with the same name inside the build, the `ENV` value takes over for subsequent layers. This is useful for pinning a version during build but still exposing it to the running process for diagnostics.
 
-Environment Variable Namespacing and Organization
+## Environment Variable Namespacing and Organization
 
 In complex applications with many services, namespacing your environment variables prevents collisions and makes the configuration easier to reason about:
 
@@ -453,9 +452,9 @@ SENDGRID_API_KEY=SG.xxx
 
 A consistent prefix for each service makes it easy to grep for all variables related to a particular dependency and simplifies documentation.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Variables Not Visible in Container
+## Variables Not Visible in Container
 
 If your environment variables aren't available:
 
@@ -465,7 +464,7 @@ If your environment variables aren't available:
 4. For Docker Compose, ensure no typos in service names
 5. Use `docker exec -it <container_id> env` to list all variables visible inside a running container
 
-Secret Values Appearing in Logs
+## Secret Values Appearing in Logs
 
 To prevent environment variable leakage:
 
@@ -488,7 +487,7 @@ logger.info('Application starting', {
 });
 ```
 
-Variables Empty in Docker Compose
+## Variables Empty in Docker Compose
 
 Docker Compose variable substitution can fail silently. Use explicit values or `.env` files:
 
@@ -499,7 +498,7 @@ echo "DATABASE_URL=postgres://user:pass@localhost:5432/mydb" > .env
 
 You can debug Docker Compose variable substitution with `docker compose config`, which prints the fully-resolved compose file with all substitutions applied. This makes it easy to spot missing or incorrectly named variables before starting your services.
 
-Avoiding Variable Precedence Confusion
+## Avoiding Variable Precedence Confusion
 
 Docker and Docker Compose apply environment variables in a specific precedence order. From highest to lowest priority:
 
@@ -511,7 +510,7 @@ Docker and Docker Compose apply environment variables in a specific precedence o
 
 Understanding this order helps you predict which value wins when the same variable is defined in multiple places, which is a common source of confusing behavior in multi-stage or multi-environment setups.
 
-Conclusion
+## Conclusion
 
 Mastering environment variable management in Claude Code containers is fundamental to building secure, maintainable applications. By following these patterns, using environment variables for configuration, implementing proper secret management, validating variables at startup, and organizing them with consistent namespacing, you'll create containerized applications that are both flexible and secure.
 

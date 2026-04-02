@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Algolia GeoSearch Filtering Workflow Tutorial
-
 Location-based search is a fundamental feature for modern applications, from finding nearby restaurants to locating available delivery drivers. Algolia's GeoSearch capabilities combined with Claude Code's intelligent workflow automation make building these features straightforward and powerful. This tutorial walks you through creating a complete GeoSearch filtering workflow using Claude Code, covering everything from initial index configuration to advanced adaptive radius strategies and production-ready error handling.
 
-Understanding GeoSearch Fundamentals
+## Understanding GeoSearch Fundamentals
 
 Algolia's GeoSearch allows you to search records based on geographic coordinates. The core concept involves storing latitude and longitude values with your records and then querying around a central point with a specified radius. What makes this powerful is the ability to combine geographic filtering with traditional text search and faceted filtering.
 
@@ -35,7 +32,7 @@ Before diving into code, it helps to understand the three primary GeoSearch quer
 
 For most store-finder and proximity-search use cases, `aroundLatLng` with `aroundRadius` is the right starting point. Bounding-box searches become important when you are syncing search results with a visible map, users expect search results to match what they can see on screen, not an arbitrary circle centered off-screen.
 
-Setting Up Your Algolia Index for GeoSearch
+## Setting Up Your Algolia Index for GeoSearch
 
 Before implementing the filtering workflow, your Algolia index needs proper configuration. Records must include `_geoloc` attributes containing latitude and longitude values. Here's an example record structure for a store finder:
 
@@ -114,7 +111,7 @@ The next step involves configuring searchable attributes and facets. Your catego
 
 The `filterOnly()` wrapper on `openHour` and `closeHour` tells Algolia to index these as filter-only facets, which avoids unnecessarily bloating the facet response with numeric ranges that users will never browse directly.
 
-Building the Claude Code Skill
+## Building the Claude Code Skill
 
 Creating a Claude Code skill for Algolia GeoSearch involves defining clear instructions for constructing queries and handling responses. The skill should understand the relationship between geographic coordinates, search radius, and filtering parameters.
 
@@ -161,7 +158,7 @@ const searchQuery = {
 
 This small addition makes a meaningful difference in result quality for category-driven searches.
 
-Implementing the Filtering Workflow
+## Implementing the Filtering Workflow
 
 The real power of GeoSearch emerges when you combine it with additional filters. A practical workflow might involve finding coffee shops within 5km that are currently open and have outdoor seating. Claude Code can help you construct these compound queries:
 
@@ -216,7 +213,7 @@ Here is a comparison of the main filter operators you will use when building Geo
 | Grouping | `(A OR B) AND C` | Complex logic grouping |
 | Numeric range | `rating:3 TO 5` | Filter within a range |
 
-Geolocation from the Browser
+## Geolocation from the Browser
 
 Before you can run a GeoSearch query, you need the user's coordinates. The browser Geolocation API is the standard approach for client-side applications:
 
@@ -274,7 +271,7 @@ async function searchNearMe(query, filters) {
 
 Always plan for the permission-denied path. Users who decline location access should still be able to search, prompt them to enter a city or zip code and geocode that string to coordinates.
 
-Handling Results and User Experience
+## Handling Results and User Experience
 
 Once you execute the search, handling results properly is crucial for good user experience. Claude Code can guide you through parsing the response and extracting relevant information:
 
@@ -352,7 +349,7 @@ aa('clickedObjectIDsAfterSearch', {
 });
 ```
 
-Advanced: Dynamic Radius and Multi-Location Search
+## Advanced: Dynamic Radius and Multi-Location Search
 
 As your application grows, you might need more sophisticated approaches. Dynamic radius adjustment based on result count improves user experience, when initial searches return few results, automatically expanding the radius helps users find what they need.
 
@@ -436,7 +433,7 @@ const debouncedSearch = debounce(async (bounds) => {
 map.on('moveend', () => debouncedSearch(map.getBounds()));
 ```
 
-Error Handling and Resilience
+## Error Handling and Resilience
 
 Production GeoSearch implementations need solid error handling. Algolia's JavaScript client throws on network failures and surfaces API errors through a structured error object:
 
@@ -469,7 +466,7 @@ async function safeGeoSearch(params) {
 
 Rate limiting is rarely a concern for search traffic, but write operations (index updates) are subject to per-second limits. If you are batching record updates alongside your search workflow, use Algolia's `chunkedBatch` helper to stay within limits.
 
-Best Practices and Optimization
+## Best Practices and Optimization
 
 Claude Code skills for GeoSearch should emphasize several key optimization practices. First, always specify `attributesToRetrieve` to minimize data transfer, only fetch what you display. Second, use `aroundPrecision` to group results by approximate distance intervals, which reduces client-side processing.
 
@@ -497,7 +494,7 @@ const searchClient = algoliasearch('YOUR_APP_ID', 'YOUR_SEARCH_ONLY_KEY');
 const adminClient = algoliasearch('YOUR_APP_ID', process.env.ALGOLIA_ADMIN_KEY);
 ```
 
-Testing Your GeoSearch Implementation
+## Testing Your GeoSearch Implementation
 
 Before shipping to production, validate your GeoSearch workflow with a set of structured test cases. Claude Code can generate these test cases for you given a description of your use case:
 
@@ -563,7 +560,7 @@ describe('adaptiveGeoSearch', () => {
 });
 ```
 
-Conclusion
+## Conclusion
 
 Building GeoSearch filtering workflows with Claude Code and Algolia combines powerful location-based search capabilities with intelligent automation. The skill-based approach ensures consistent query construction, proper error handling, and optimized results. Start with basic radius searches, then layer on faceted filters and adaptive radius logic as your requirements evolve.
 

@@ -17,7 +17,7 @@ Claude Code for Arabic Speaking Developer Teams
 
 Arabic speaking developer teams are increasingly adopting Claude Code as their AI coding assistant, using its powerful skills system and flexible configuration to build high-quality software. This guide covers practical setup steps, essential Claude skills, and workflow patterns that work well for Arabic development teams in 2026.
 
-Claude Code Setup for Arabic Projects
+## Claude Code Setup for Arabic Projects
 
 Claude Code runs locally and integrates with your existing development environment. First, install it via the official Anthropic channels, then configure it for your development needs.
 
@@ -48,7 +48,7 @@ Always use UTF-8 encoding for all file operations.
 
 When Claude Code reads this file at startup, it applies these conventions automatically across every task in your session. The `CLAUDE.md` file is the single most effective tool for aligning Claude Code with your team's expectations. invest time in keeping it accurate and up to date.
 
-What to Put in CLAUDE.md for Arabic Projects
+## What to Put in CLAUDE.md for Arabic Projects
 
 The more specific your `CLAUDE.md`, the more consistently Claude Code performs. For Arabic projects, consider including:
 
@@ -60,11 +60,11 @@ The more specific your `CLAUDE.md`, the more consistently Claude Code performs. 
 
 A well-written `CLAUDE.md` removes the need to re-explain context in every prompt.
 
-Essential Claude Skills for Arabic Development Teams
+## Essential Claude Skills for Arabic Development Teams
 
 Claude skills are Markdown files that extend Claude's capabilities. Several skills directly improve Arabic development workflows.
 
-The i18n Skill
+## The i18n Skill
 
 The localization skill helps manage translations and RTL support:
 
@@ -74,7 +74,7 @@ The localization skill helps manage translations and RTL support:
 
 This skill automates extracting translatable strings, managing translation files, and ensuring proper RTL (right-to-left) support in your UI components. When paired with Django's built-in i18n toolchain or React's `react-i18next` library, the workflow becomes end-to-end: Claude can extract strings, write `.po` or JSON locale files, and flag any UI components that are missing translation wrappers.
 
-The Documentation Skill
+## The Documentation Skill
 
 For teams that need Arabic documentation:
 
@@ -84,7 +84,7 @@ For teams that need Arabic documentation:
 
 This helps generate bilingual documentation and maintains consistency between Arabic and English content. A common pattern is to write the technical specification in English first, then use this skill to produce an Arabic equivalent. Claude Code handles the structural consistency so your documentation team focuses on editorial quality rather than reformatting.
 
-The API Development Skill
+## The API Development Skill
 
 Building APIs that serve Arabic content requires specific handling:
 
@@ -94,11 +94,11 @@ Building APIs that serve Arabic content requires specific handling:
 
 This skill ensures proper Unicode handling, right-to-left text processing, and internationalization best practices. It also prompts Claude to generate input validation that accounts for Arabic character ranges (`\u0600-\u06FF` for basic Arabic, `\u0750-\u077F` for Arabic supplement), which is easy to miss in boilerplate validators.
 
-Working with Arabic Localization
+## Working with Arabic Localization
 
 Arabic localization presents unique challenges that Claude Code can help address systematically.
 
-RTL Layout Considerations
+## RTL Layout Considerations
 
 When building Arabic applications, always consider:
 
@@ -114,7 +114,7 @@ Review this React component and refactor all CSS to use CSS logical properties
 (inline-start/inline-end instead of left/right) to support RTL layout switching.
 ```
 
-Comparing RTL CSS Approaches
+## Comparing RTL CSS Approaches
 
 | Approach | Pros | Cons |
 |---|---|---|
@@ -125,7 +125,7 @@ Comparing RTL CSS Approaches
 
 For new projects in 2026, CSS logical properties (`padding-inline-start`, `border-inline-end`, etc.) offer the best balance of control and maintainability. They are supported in all modern browsers and Claude Code generates them correctly when you specify this in your `CLAUDE.md`.
 
-Unicode and Encoding
+## Unicode and Encoding
 
 Ensure your projects use UTF-8 encoding consistently. Add to your Django project configuration:
 
@@ -156,7 +156,7 @@ app.use(express.json({ type: 'application/json; charset=utf-8' }));
 app.use(express.urlencoded({ extended: true }));
 ```
 
-Translation Management
+## Translation Management
 
 For bilingual teams, consider these patterns:
 
@@ -191,11 +191,11 @@ msgstr[5] "يوجد %d عنصر"
 
 Claude Code can generate these pluralization forms when given the English source strings, saving significant manual translation overhead.
 
-Team Collaboration Patterns
+## Team Collaboration Patterns
 
 Arabic speaking developer teams can benefit from several collaboration approaches when using Claude Code.
 
-Shared Skills Repository
+## Shared Skills Repository
 
 Create a team skills directory that lives in version control:
 
@@ -216,7 +216,7 @@ Reference these in your `CLAUDE.md`:
 
 This pattern ensures every developer on the team. whether they primarily work in Arabic or English. gets the same guidance from Claude Code without needing to remember individual conventions. When your naming conventions evolve, update one file and all team members benefit immediately.
 
-Code Review with Claude
+## Code Review with Claude
 
 Use Claude Code to prepare for code reviews:
 
@@ -237,7 +237,7 @@ Review this PR for:
 
 This helps ensure all Arabic localization requirements are met before the review session, making review comments more focused on logic and architecture rather than missing i18n boilerplate.
 
-Documentation Standards
+## Documentation Standards
 
 Maintain bilingual documentation by generating both Arabic and English versions from single source files:
 
@@ -247,11 +247,11 @@ Maintain bilingual documentation by generating both Arabic and English versions 
 
 One effective approach: write documentation in English as the canonical version, then use Claude Code to generate a structured Arabic translation. Store both in your repository under `docs/en/` and `docs/ar/`. When the English version changes, regenerate the Arabic version with Claude Code, then have a native speaker review the diff rather than rewriting from scratch.
 
-Best Practices for Arabic Development
+## Best Practices for Arabic Development
 
 Follow these guidelines for successful Arabic projects with Claude Code.
 
-Naming Conventions
+## Naming Conventions
 
 Use clear, descriptive variable names in English with Arabic comments for context:
 
@@ -269,7 +269,7 @@ x = "أحمد"
 
 The tradeoff between Arabic and English identifiers is a real team decision. English identifiers work better with most tooling (linters, code search, external libraries), while Arabic identifiers can improve readability for domain experts who are not primarily English speakers. Document your team's choice explicitly in `CLAUDE.md` so Claude Code is consistent.
 
-Date and Number Formatting
+## Date and Number Formatting
 
 Handle Arabic-specific formatting with a proper locale library:
 
@@ -299,7 +299,7 @@ console.log(dateFormatter.format(new Date()));
 // "٢٠ مارس ٢٠٢٦"
 ```
 
-Testing Arabic Content
+## Testing Arabic Content
 
 Always test with real Arabic content, not placeholder text:
 
@@ -328,11 +328,11 @@ def test_arabic_form_validation():
 
 Run tests with multiple Arabic locale variants (ar-SA, ar-EG, ar-AE) if your application supports them. locale differences can produce unexpected rendering variations.
 
-Advanced Workflows
+## Advanced Workflows
 
 For mature teams, consider these advanced patterns.
 
-Automated Translation Pipelines
+## Automated Translation Pipelines
 
 Set up CI/CD pipelines that handle the full translation lifecycle:
 
@@ -386,7 +386,7 @@ if coverage < args.threshold:
     sys.exit(1)
 ```
 
-Claude Code with Arabic Codebases
+## Claude Code with Arabic Codebases
 
 When working with existing Arabic codebases inherited from another team:
 
@@ -395,7 +395,7 @@ When working with existing Arabic codebases inherited from another team:
 - Test RTL behavior thoroughly using both mobile and desktop browser rendering
 - Maintain Arabic comments and documentation. do not let Claude Code replace them with English equivalents without team consensus
 
-Monitoring and Analytics
+## Monitoring and Analytics
 
 Track localization progress across your project with a simple metrics module:
 
@@ -430,7 +430,7 @@ if __name__ == "__main__":
 
 Run this in your CI pipeline and post the results as a PR comment so the team always knows the current translation health at a glance.
 
-Conclusion
+## Conclusion
 
 Claude Code provides powerful capabilities for Arabic speaking developer teams. By using skills, proper project configuration, and team collaboration patterns, your team can build high-quality Arabic localized applications efficiently.
 
@@ -446,8 +446,6 @@ Next Steps:
 - Install the i18n workflow skill
 - Set up team skills repository for shared conventions
 - Start with small tasks and iterate
-
-
 
 Related Reading
 

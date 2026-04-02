@@ -18,7 +18,7 @@ gRPC sits in a peculiar spot: it is significantly more productive than REST for 
 
 This guide covers the full development loop: protobuf design, server implementation in Node.js and Python, testing, and debugging.
 
-Why gRPC and Where Claude Helps Most
+## Why gRPC and Where Claude Helps Most
 
 gRPC gives you strongly-typed contracts, bidirectional streaming, and HTTP/2 multiplexing out of the box. The friction points are:
 
@@ -29,7 +29,7 @@ gRPC gives you strongly-typed contracts, bidirectional streaming, and HTTP/2 mul
 
 Claude Code accelerates every one of these. The key is giving it precise context: your existing proto files, your language runtime, and exactly what the service needs to do.
 
-Designing a .proto File with Claude
+## Designing a .proto File with Claude
 
 Start by describing your service contract in plain language. Do not just say "generate a proto file". give Claude the business logic.
 
@@ -103,7 +103,7 @@ enum OrderStatus {
 
 Review it carefully. Common issues to catch: missing zero-value enum entries (required in proto3), wrong field number reuse if you are evolving an existing schema, and mismatched streaming direction.
 
-Generating Stubs
+## Generating Stubs
 
 For Node.js, the standard toolchain uses `grpc-tools` and `grpc_tools_node_protoc_ts` for TypeScript types:
 
@@ -133,7 +133,7 @@ python -m grpc_tools.protoc \
 
 Ask Claude to generate the compilation script for your project: "Write a Makefile target that compiles all .proto files in ./proto/ and outputs to ./src/generated/ for Node.js with TypeScript."
 
-Implementing a gRPC Server in Node.js
+## Implementing a gRPC Server in Node.js
 
 With stubs generated, ask Claude to implement the server handler. Be specific about your business logic dependencies.
 
@@ -203,7 +203,7 @@ server.bindAsync("0.0.0.0:50051", grpc.ServerCredentials.createInsecure(), () =>
 });
 ```
 
-Implementing a gRPC Server in Python
+## Implementing a gRPC Server in Python
 
 ```python
 import grpc
@@ -255,7 +255,7 @@ if __name__ == "__main__":
     serve()
 ```
 
-Testing gRPC Services
+## Testing gRPC Services
 
 Unit testing with mocked stubs (Node.js)
 
@@ -281,7 +281,7 @@ test("createOrder returns pending status", async () => {
 });
 ```
 
-Integration testing with grpcurl
+## Integration testing with grpcurl
 
 `grpcurl` is the `curl` equivalent for gRPC. Use it to hit your running server from the terminal:
 
@@ -300,7 +300,7 @@ grpcurl -plaintext -d '{"order_id": "order-123"}' \
 
 Ask Claude: "Add a gRPC reflection endpoint to my Node.js server so grpcurl works without a proto file." It will add the `@grpc/reflection` package and wire it in two lines.
 
-Debugging Common gRPC Errors
+## Debugging Common gRPC Errors
 
 When you hit an error, paste the full status code and message into Claude along with the relevant handler code. The most common issues:
 

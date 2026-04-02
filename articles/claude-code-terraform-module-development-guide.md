@@ -18,13 +18,13 @@ Terraform module development is a skill that pays dividends across your entire i
 
 This guide covers practical workflows for developing Terraform modules using Claude Code, with emphasis on structure, testing, and documentation patterns that work in real production environments.
 
-Why Modules Matter for Infrastructure as Code
+## Why Modules Matter for Infrastructure as Code
 
 Reusable Terraform modules solve three persistent problems in infrastructure management. First, they eliminate duplication by encapsulating standard patterns into versioned components. Second, they improve reliability by codifying battle-tested configurations that have been validated across environments. Third, they accelerate onboarding by providing teams with pre-configured resources that follow organizational standards.
 
 When you develop modules with Claude Code, you get an AI partner that understands Terraform's patterns and can suggest improvements, catch common mistakes, and generate the boilerplate that makes modules production-ready.
 
-Setting Up Your Module Structure
+## Setting Up Your Module Structure
 
 A well-structured Terraform module follows consistent conventions that Claude Code can help you maintain. Start with the standard directory layout:
 
@@ -48,7 +48,7 @@ Create a Terraform module structure for an AWS S3 bucket with versioning, encryp
 
 Claude will generate the appropriate files with sensible defaults and proper variable types.
 
-Defining Variables That Actually Work
+## Defining Variables That Actually Work
 
 Variable design makes or breaks a module's usability. Poor variable choices force users to work around the module or abandon it entirely. Follow these principles when designing module variables:
 
@@ -91,7 +91,7 @@ variable "bucket_name" {
 
 Claude Code can review your variable definitions and suggest improvements for usability and type safety.
 
-Writing Effective Outputs
+## Writing Effective Outputs
 
 Output values determine what information consumers of your module can access. Good outputs enable composition, other modules and configurations can reference your module's outputs to establish dependencies and share data.
 
@@ -124,7 +124,7 @@ output "api_key" {
 }
 ```
 
-Implementing Testing Patterns
+## Implementing Testing Patterns
 
 Testing Terraform modules requires a different approach than application code, but Claude Code can help you set up effective validation. The most common testing strategies are:
 
@@ -175,7 +175,7 @@ func TestS3BucketModule(t *testing.T) {
 
 For quick validation without cloud resources, consider using the tdd skill to develop test-driven patterns before writing module code.
 
-Documenting Your Module
+## Documenting Your Module
 
 Documentation determines whether your module gets adopted. The Terraform registry requires a README.md in the module root, but good documentation goes beyond minimum requirements.
 
@@ -203,7 +203,7 @@ content: |
   {{ .Outputs }}
 ```
 
-Versioning and Publishing
+## Versioning and Publishing
 
 Semantic versioning provides a contract with module consumers. Follow semver principles: patch versions for bug fixes, minor versions for new features (backward compatible), and major versions for breaking changes.
 
@@ -214,12 +214,11 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-Conclusion
+## Conclusion
 
 Developing Terraform modules with Claude Code transforms infrastructure from configuration files into reusable, professional-grade components. The key is starting with good structure, defining variables that provide flexibility without complexity, and maintaining comprehensive documentation.
 
 Invest time in building modules that follow these patterns, and your team will reap the benefits through consistent, reliable, and maintainable infrastructure for every project.
-
 
 Related Reading
 

@@ -13,18 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Chalk Feature Workflow Tutorial
-
 Chalk has become the de facto standard for terminal string styling in Node.js projects. Whether you're building CLI tools, developer utilities, or interactive terminal applications, Chalk provides a clean API for adding color, styling, and formatting to your output. This tutorial shows you how to use Claude Code to accelerate your Chalk feature development workflow from initial implementation through testing and documentation.
 
-Why Use Claude Code with Chalk
+## Why Use Claude Code with Chalk
 
 Traditional Chalk development involves repetitive cycles: writing code, running tests, checking output, and iterating. Claude Code transforms this workflow by understanding your project context, suggesting implementations based on your goals, and handling boilerplate automatically. Instead of manually checking Chalk's API for every styling requirement, you can describe what you want to achieve and let Claude Code guide the implementation.
 
 This approach is particularly valuable when working with Chalk because the library offers extensive options, text colors, background colors, modifiers (bold, italic, underline), nested styles, and custom themes. Claude Code helps you navigate these choices efficiently while maintaining consistent styling across your project.
 
-Setting Up Your Chalk Project
+## Setting Up Your Chalk Project
 
 Before diving into feature development, ensure your project has Chalk properly installed and configured. Claude Code can help you set this up from scratch or verify an existing configuration.
 
@@ -42,7 +39,7 @@ npm install --save-dev @types/chalk
 
 Claude Code can generate a basic Chalk configuration file that establishes consistent styling conventions across your application. This is especially useful when multiple team members are working on the same codebase.
 
-Implementing Features with Claude Code Guidance
+## Implementing Features with Claude Code Guidance
 
 When implementing Chalk features, start by describing your goal to Claude Code. Instead of asking "how do I make text red?", describe the outcome you need: "Create a warning message function that displays yellow text with bold formatting." Claude Code understands the context and provides implementation suggestions tailored to your existing code style.
 
@@ -67,11 +64,11 @@ export const logger = {
 
 The beauty of this workflow is that Claude Code adapts to your existing code. If you're using TypeScript, it provides type definitions. If you follow specific coding conventions, it matches them.
 
-Advanced Chalk Patterns
+## Advanced Chalk Patterns
 
 Once you've established basic styling, Claude Code can help you implement more sophisticated patterns. Here are common scenarios where Claude Code accelerates development:
 
-Dynamic Styling Based on Conditions
+## Dynamic Styling Based on Conditions
 
 You often need to apply different styles based on runtime conditions, success or failure states, log levels, or user preferences. Describe the condition to Claude Code:
 
@@ -89,7 +86,7 @@ const formatStatus = (success, message) => {
 };
 ```
 
-Theme Systems
+## Theme Systems
 
 Larger applications benefit from centralized theme configuration. Claude Code can help you create a theme object that standardizes styling across your entire project:
 
@@ -107,7 +104,7 @@ export const theme = {
 
 This approach makes it easy to update styling globally without hunting through dozens of files.
 
-Composing Multiple Styles
+## Composing Multiple Styles
 
 Chalk supports chaining multiple modifiers and colors. Claude Code helps you compose these correctly:
 
@@ -117,7 +114,7 @@ const muted = chalk.dim.gray;
 const header = chalk.bgBlue.white.bold;
 ```
 
-Testing Chalk Output
+## Testing Chalk Output
 
 Testing terminal output presents unique challenges since it's inherently visual. Claude Code helps you implement testing strategies that verify your Chalk-styled output without manual inspection.
 
@@ -134,7 +131,7 @@ test('warning message format', () => {
 
 Claude Code can set up the testing infrastructure and create helper functions for capturing and validating styled output.
 
-Documenting Chalk Features
+## Documenting Chalk Features
 
 Well-documented Chalk usage helps future developers understand your styling conventions. Claude Code can generate documentation from your implementation:
 
@@ -152,7 +149,7 @@ This produces documentation that clearly explains both the API and the visual re
 info: (message) => console.log(chalk.blue('ℹ '), message),
 ```
 
-Actionable Workflow Summary
+## Actionable Workflow Summary
 
 To maximize Claude Code's effectiveness in your Chalk development workflow:
 

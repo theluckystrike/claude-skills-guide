@@ -13,16 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
 Asynchronous programming has become a cornerstone of modern Python development, especially with the rise of async frameworks like FastAPI, aiohttp, and asyncio-based libraries. Testing these async applications requires a different approach than traditional synchronous tests. This guide walks you through setting up and writing effective async tests using pytest and pytest-asyncio, with practical examples you can apply immediately to your projects.
 
-Understanding Async Testing Fundamentals
+## Understanding Async Testing Fundamentals
 
 Before diving into code, it's essential to understand why async testing requires special handling. When you write async code using `async def`, you're working with coroutines and event loops. Traditional pytest runs synchronously, which means it can't directly await your async functions. That's where pytest-asyncio comes in, it extends pytest to understand and execute async functions properly.
 
 The pytest-asyncio plugin provides the `@pytest.mark.asyncio` decorator that tells pytest to run your async test functions within an event loop. Without this decorator, pytest would simply see an async function and fail to execute it correctly.
 
-Installing pytest-asyncio
+## Installing pytest-asyncio
 
 Getting started is straightforward. Install pytest-asyncio alongside pytest:
 
@@ -37,7 +36,7 @@ pytest>=7.0.0
 pytest-asyncio>=0.21.0
 ```
 
-Writing Your First Async Test
+## Writing Your First Async Test
 
 Now let's write a basic async test to understand the pattern:
 
@@ -61,7 +60,7 @@ async def test_fetch_user_data():
 
 This simple example demonstrates the core pattern: mark your test with `@pytest.mark.asyncio`, define it with `async def`, and use `await` freely within the test body. The plugin handles creating and managing the event loop for you.
 
-Working with Fixtures in Async Tests
+## Working with Fixtures in Async Tests
 
 One of pytest's most powerful features is fixtures, and they work smoothly with async tests. You can create async fixtures that set up resources your tests need:
 
@@ -88,7 +87,7 @@ async def test_api_call_with_session(client_session):
 
 The key insight here is that fixtures can also be async. When pytest-asyncio sees an async fixture, it automatically awaits it properly. The `async with` context manager ensures resources are cleaned up correctly after each test.
 
-Configuring pytest-asyncio
+## Configuring pytest-asyncio
 
 For larger projects, you'll want to configure pytest-asyncio to match your testing requirements. Create a `pytest.ini` or `pyproject.toml` configuration:
 
@@ -101,7 +100,7 @@ asyncio_default_fixture_loop_scope = function
 
 The `asyncio_mode = auto` setting automatically applies the asyncio marker to any async test function, so you don't need to manually add `@pytest.mark.asyncio` to every test. The `asyncio_default_fixture_loop_scope` determines the lifetime of the event loop, `function` creates a new loop for each test, while `session` shares one loop across all tests.
 
-Handling Concurrent Async Tests
+## Handling Concurrent Async Tests
 
 A common challenge arises when you need to run multiple async tests that each require their own event loop. By default, pytest-asyncio runs each async test in the same event loop, which can cause issues if tests modify global state or create tasks that persist beyond their test scope.
 
@@ -137,7 +136,7 @@ async def isolated_event_loop():
     loop.close()
 ```
 
-Testing Async Generators and Context Managers
+## Testing Async Generators and Context Managers
 
 Async code often uses async generators and context managers. Here's how to test them properly:
 
@@ -182,7 +181,7 @@ async def test_async_resource():
     # Cleanup happens automatically after this
 ```
 
-Common Pitfalls and How to Avoid Them
+## Common Pitfalls and How to Avoid Them
 
 Several issues frequently trip up developers new to async testing. Understanding these pitfalls will save you debugging time.
 
@@ -203,7 +202,7 @@ async def test_something():
 
 Mixing sync and async code: If you're testing a function that internally makes blocking calls, either refactor it to be truly async or test it synchronously. Don't try to force sync functions into async tests.
 
-Integrating with Real Async Frameworks
+## Integrating with Real Async Frameworks
 
 When testing FastAPI applications or similar frameworks, you often need to test async endpoints:
 
@@ -226,7 +225,7 @@ async def test_fastapi_endpoint():
 
 This pattern works smoothly with any ASGI-based framework, including FastAPI, Starlette, and Quart.
 
-Best Practices for Async Test Workflow
+## Best Practices for Async Test Workflow
 
 Follow these practices to maintain reliable and maintainable async tests:
 
@@ -240,7 +239,7 @@ Follow these practices to maintain reliable and maintainable async tests:
 
 5. Run tests in isolation: Ensure each async test can run independently without depending on execution order.
 
-Conclusion
+## Conclusion
 
 Async testing with pytest and pytest-asyncio follows clear patterns once you understand the fundamentals. The key is remembering that async code requires proper awaiting through the event loop, which pytest-asyncio manages for you. Start with simple async tests, use fixtures for resource management, and gradually incorporate more complex patterns like concurrent testing and async context managers.
 

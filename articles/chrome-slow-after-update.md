@@ -16,7 +16,7 @@ score: 8
 
 Chrome updates bring new features, security patches, and sometimes unexpected performance regressions. If your browser feels sluggish after an update, you're not alone. This guide walks through the most common causes and provides actionable fixes for developers and power users. We'll go deep enough that you can diagnose any post-update issue, not just follow a checklist and hope for the best.
 
-Why Chrome Updates Break Performance
+## Why Chrome Updates Break Performance
 
 Before diving into fixes, it helps to understand why updates cause slowdowns in the first place. Chrome ships roughly every four weeks. Each release modifies the rendering engine, JavaScript V8, networking stack, and security sandbox. Any of these can interact badly with your specific hardware, OS version, or extension set.
 
@@ -26,7 +26,7 @@ A second failure mode is extension breakage. Chrome's Manifest V3 migration has 
 
 The third category is hardware-specific: updated GPU drivers on the host OS can interact badly with Chrome's GPU process, particularly on machines with older integrated graphics or unusual multi-monitor setups.
 
-Common Causes of Post-Update Slowdown
+## Common Causes of Post-Update Slowdown
 
 Chrome updates modify core browser components, extensions, and cached data. Several factors typically contribute to degraded performance after an update:
 
@@ -37,11 +37,11 @@ Chrome updates modify core browser components, extensions, and cached data. Seve
 - Background service workers. Extensions using Manifest V3 service workers that crash and restart in a tight loop
 - Memory pressure from new features. New features like tab preloading or energy saver mode may be enabled by default after an update
 
-Diagnosing the Problem
+## Diagnosing the Problem
 
 Before applying fixes, identify what's causing the slowdown. Chrome provides several built-in tools for this.
 
-Check the Task Manager
+## Check the Task Manager
 
 Chrome's built-in Task Manager shows per-tab and per-extension resource usage:
 
@@ -53,7 +53,7 @@ Look for extensions consuming excessive CPU or memory. High memory usage from a 
 
 For tabs, compare memory footprints. A typical news article tab should use under 200 MB. If you see tabs consuming 1 GB+, the site is likely running heavy JavaScript that Chrome's new JIT behavior handles differently.
 
-Review Performance Logs
+## Review Performance Logs
 
 Chrome logs performance data that can help identify bottlenecks. Access the performance trace:
 
@@ -72,7 +72,7 @@ For a quicker read, use Chrome DevTools' Performance panel on a specific page th
 4. Reload the page
 5. Stop the recording and look for long tasks marked in red
 
-Use chrome://net-internals for Network Issues
+## Use chrome://net-internals for Network Issues
 
 If pages load slowly but the browser UI itself feels fine, the issue might be network-related rather than rendering-related:
 
@@ -82,7 +82,7 @@ chrome://net-internals/#events
 
 Filter by "SOCKET" or "HTTP2_SESSION" to see connection establishment times. Post-update Chrome sometimes resets connection pools, causing a one-time penalty as connections are rebuilt. This typically resolves itself within a few minutes of normal browsing.
 
-Test in Incognito Mode
+## Test in Incognito Mode
 
 Incognito mode disables extensions and uses a fresh profile. If performance improves in Incognito, an extension or profile issue is the culprit:
 
@@ -92,7 +92,7 @@ Cmd + Shift + N (Mac) or Ctrl + Shift + N (Linux/Windows)
 
 If Incognito is fast but your normal window is slow, you've narrowed the problem to either extensions or profile data. If Incognito is also slow, the issue is at the browser or OS level. hardware acceleration, GPU drivers, or the Chrome binary itself.
 
-Compare Chrome Versions with Rollback
+## Compare Chrome Versions with Rollback
 
 If you need to confirm that the update itself caused the regression, you can temporarily run an older Chrome version alongside the current one using Chrome's profile isolation. Download a previous stable release from `https://chromium.cypress.io/` and run it with a separate `--user-data-dir` flag:
 
@@ -105,7 +105,7 @@ macOS. run older Chrome with isolated profile
 
 If the older version performs significantly better on the same hardware and network, you have a confirmed regression to report.
 
-Practical Solutions
+## Practical Solutions
 
 1. Clear Cache and Browsing Data
 
@@ -241,7 +241,7 @@ rm -rf ~/Library/Application\ Support/Google/Chrome/ShaderCache
 
 After clearing and restarting, Chrome will compile shaders fresh. The first few minutes of GPU-accelerated content (videos, WebGL, Canvas) may feel slightly slower while the cache rebuilds, but subsequent performance should be better than with a corrupted cache.
 
-Preventing Future Issues
+## Preventing Future Issues
 
 After resolving current performance problems, establish practices to minimize future issues:
 
@@ -254,7 +254,7 @@ After resolving current performance problems, establish practices to minimize fu
 
 For teams where browser stability is critical. QA teams, automated testing environments, developers using Chrome for DevTools debugging. consider pinning to a specific Chrome version using enterprise policy and only updating after internal testing. Google provides an MSI installer and macOS pkg that can be managed with standard deployment tools.
 
-When to Report a Bug
+## When to Report a Bug
 
 If you've tried all solutions and Chrome remains slow after an update, you may have discovered a genuine bug. Report it:
 
@@ -271,7 +271,7 @@ When searching for existing reports, use the Chrome version number as a search t
 
 Before filing, check `chrome://conflicts` for any third-party modules injected into the Chrome process. On Windows especially, antivirus and screen recording software sometimes inject DLLs into Chrome that cause instability after updates when the injected code is no longer compatible.
 
-Quick Reference: Diagnosis Flow
+## Quick Reference: Diagnosis Flow
 
 When Chrome slows after an update, work through this sequence:
 
@@ -283,10 +283,9 @@ When Chrome slows after an update, work through this sequence:
 6. If still slow: disable hardware acceleration and check `chrome://gpu`
 7. If all else fails: rebuild the profile or roll back to a previous Chrome version
 
-Summary
+## Summary
 
 Chrome slow after an update usually stems from cache incompatibilities, extension conflicts, or profile corruption. Start by testing in Incognito mode to isolate the cause, then work through clearing cache, disabling hardware acceleration, updating extensions, and rebuilding the profile if needed. For development teams, maintaining clean profiles and staying on top of extension updates prevents most regressions. When you encounter a genuine regression that survives all fixes, reporting it with a performance trace helps the Chrome team prioritize the fix for everyone.
-
 
 Related Reading
 

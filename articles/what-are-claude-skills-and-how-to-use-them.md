@@ -14,8 +14,6 @@ tags: [claude-code, claude-skills, beginner, getting-started]
 
 {% raw %}
 
-What Are Claude Skills and How to Use Them
-
 Claude skills are reusable instruction sets that tell Claude Code how to handle specific types of tasks. Instead of repeating the same context and instructions every time you start a conversation, skills let you define your preferences, workflows, and domain knowledge once and have Claude apply them automatically.
 
 This guide covers what skills are, how they work under the hood, and practical steps for using them in your projects.
@@ -33,7 +31,7 @@ Each skill typically includes:
 
 Skills live in your project's `.claude/` directory and are automatically loaded when Claude Code starts a session in that project.
 
-How Claude Skills Work
+## How Claude Skills Work
 
 When you invoke Claude Code in a project directory, it scans for skill files in several locations:
 
@@ -43,7 +41,7 @@ When you invoke Claude Code in a project directory, it scans for skill files in 
 
 Claude reads these files and incorporates their instructions into its context. When a task matches a skill's activation conditions, Claude applies the skill's rules automatically.
 
-Skill File Structure
+## Skill File Structure
 
 A basic skill file looks like this:
 
@@ -66,11 +64,11 @@ Style
 - Provide corrected code snippets, not just descriptions of problems
 ```
 
-Using Built-In Skills
+## Using Built-In Skills
 
 Claude Code ships with several built-in skills that handle common development tasks. These are available immediately without any setup.
 
-The Commit Skill
+## The Commit Skill
 
 The `/commit` skill analyzes your staged changes and generates a meaningful commit message:
 
@@ -84,7 +82,7 @@ claude /commit
 
 Claude examines the diff, understands the nature of the changes, and creates a commit message that accurately describes what changed and why.
 
-The Review PR Skill
+## The Review PR Skill
 
 The `/review-pr` skill provides a thorough code review of a pull request:
 
@@ -95,17 +93,17 @@ claude /review-pr 142
 
 This skill fetches the PR diff, analyzes the changes across all files, and provides feedback organized by severity.
 
-Creating Custom Skills
+## Creating Custom Skills
 
 Custom skills are where Claude Code becomes truly powerful. You define exactly how Claude should handle tasks specific to your project.
 
-Step 1: Create the Skills Directory
+## Step 1: Create the Skills Directory
 
 ```bash
 mkdir -p .claude/skills
 ```
 
-Step 2: Write Your Skill File
+## Step 2: Write Your Skill File
 
 Create a markdown file in `.claude/skills/`. The filename should describe the skill's purpose:
 
@@ -113,7 +111,7 @@ Create a markdown file in `.claude/skills/`. The filename should describe the sk
 touch .claude/skills/api-endpoint-builder.md
 ```
 
-Step 3: Define the Skill
+## Step 3: Define the Skill
 
 ```markdown
 API Endpoint Builder
@@ -144,11 +142,11 @@ When asked "create an endpoint for user registration":
 5. Add POST /users/register to OpenAPI spec
 ```
 
-Step 4: Test Your Skill
+## Step 4: Test Your Skill
 
 Start a new Claude Code session and make a request that matches your skill's activation conditions. Claude will automatically apply the skill's instructions.
 
-Combining Multiple Skills
+## Combining Multiple Skills
 
 Projects often benefit from multiple skills working together. For example, a web application might use:
 
@@ -159,7 +157,7 @@ Projects often benefit from multiple skills working together. For example, a web
 
 Claude intelligently combines relevant skills based on the task at hand. If you ask it to build a feature that spans the frontend and backend, it applies both skills simultaneously.
 
-Sharing Skills with Your Team
+## Sharing Skills with Your Team
 
 Skills can be committed to your repository so every team member benefits:
 
@@ -172,9 +170,9 @@ git push
 
 When teammates pull the repository, Claude Code automatically picks up the shared skills. This ensures consistent AI-assisted development across the team.
 
-Common Patterns and Tips
+## Common Patterns and Tips
 
-Be Specific Over General
+## Be Specific Over General
 
 Skills work best when they contain concrete, actionable instructions rather than vague guidelines. Instead of "write clean code," specify exactly what clean code means in your project:
 
@@ -186,7 +184,7 @@ Code Style Rules
 - Extract complex conditionals into named boolean variables
 ```
 
-Include Negative Examples
+## Include Negative Examples
 
 Telling Claude what NOT to do is just as important as telling it what to do:
 
@@ -198,17 +196,17 @@ Do Not
 - Never disable ESLint rules inline without a comment explaining why
 ```
 
-Keep Skills Focused
+## Keep Skills Focused
 
 Each skill should cover one area of responsibility. A skill that tries to cover everything becomes too broad to be effective. Split large skills into focused, composable pieces.
 
-Update Skills as Your Project Evolves
+## Update Skills as Your Project Evolves
 
 Skills should grow with your codebase. When you establish new conventions, update your skills to reflect them. When patterns change, revise the skill instructions accordingly.
 
-Troubleshooting
+## Troubleshooting
 
-Skills Not Activating
+## Skills Not Activating
 
 If a skill is not being applied:
 
@@ -217,7 +215,7 @@ If a skill is not being applied:
 - Ensure the "When to Use" section matches your request
 - Try explicitly mentioning the skill's domain in your prompt
 
-Conflicting Skills
+## Conflicting Skills
 
 If two skills give contradictory instructions:
 
@@ -225,7 +223,7 @@ If two skills give contradictory instructions:
 - Add priority hints in the skill file
 - Consolidate overlapping skills into a single file
 
-Skills Producing Unexpected Results
+## Skills Producing Unexpected Results
 
 If Claude follows a skill but produces wrong output:
 
@@ -234,7 +232,7 @@ If Claude follows a skill but produces wrong output:
 - Remove ambiguous language
 - Test with simple cases before complex ones
 
-Conclusion
+## Conclusion
 
 Claude skills transform Claude Code from a general-purpose assistant into a specialized tool that understands your project's conventions, patterns, and requirements. By investing time in writing good skills, you get consistently better results and reduce the need to repeat instructions across conversations.
 

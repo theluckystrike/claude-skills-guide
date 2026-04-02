@@ -16,7 +16,7 @@ permalink: /claude-code-spring-boot-microservices-guide/
 
 Building microservices with Spring Boot has become a standard approach for modern Java development. When you combine this with Claude Code's AI-assisted development capabilities, you can accelerate your development workflow significantly. This guide shows you practical ways to use Claude Code for creating, testing, and maintaining Spring Boot microservices.
 
-Setting Up Your Spring Boot Microservice Project
+## Setting Up Your Spring Boot Microservice Project
 
 Claude Code can help you scaffold a new Spring Boot microservice project quickly. Instead of manually configuring your project structure, you can describe your requirements and let Claude Code generate the foundation.
 
@@ -49,7 +49,7 @@ public class UserController {
 
 Claude Code understands Spring Boot conventions and can generate these structures based on your descriptions. It recognizes annotations like `@RestController`, `@GetMapping`, and understands dependency injection patterns.
 
-Leveraging Claude Skills for Microservice Development
+## Leveraging Claude Skills for Microservice Development
 
 Several Claude skills enhance your microservices development workflow. The tdd skill helps you write tests before implementation, following test-driven development principles. When building microservices, this approach ensures your services are testable from the start.
 
@@ -59,7 +59,7 @@ For frontend integration with your microservices, the frontend-design skill help
 
 The supermemory skill allows you to maintain context across multiple development sessions. When working on complex microservice architectures with many services, this helps Claude Code remember your architectural decisions and patterns.
 
-Implementing Service Communication
+## Implementing Service Communication
 
 Spring Boot microservices typically communicate through REST APIs or message queues. Claude Code can help you implement both approaches.
 
@@ -125,7 +125,7 @@ public class NotificationService {
 
 Claude Code understands these Spring Cloud patterns and can suggest appropriate configurations for load balancing, circuit breakers, and retry mechanisms.
 
-Database Integration with Spring Data
+## Database Integration with Spring Data
 
 Spring Data makes database operations straightforward, and Claude Code helps you define repositories and entities correctly:
 
@@ -157,7 +157,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 The xlsx skill can help you import or export data from spreadsheets when you need to migrate data or create reports from your microservice data.
 
-Configuration Management
+## Configuration Management
 
 Microservices require careful configuration management. Spring Boot's configuration properties work well with Claude Code's assistance:
 
@@ -185,7 +185,7 @@ eureka:
 
 Claude Code can help you structure your configuration for different environments and suggest proper secret management approaches using tools like Vault or Spring Cloud Config.
 
-Testing Your Microservices
+## Testing Your Microservices
 
 Testing is crucial for microservices reliability. Claude Code with the tdd skill guides you through writing comprehensive tests at multiple layers:
 
@@ -225,7 +225,7 @@ class UserControllerTest {
 }
 ```
 
-Integration Testing with Testcontainers
+## Integration Testing with Testcontainers
 
 Testcontainers lets you run real database instances inside Docker containers during tests, eliminating the need for embedded in-memory databases that behave differently from production:
 
@@ -262,7 +262,7 @@ class UserRepositoryIntegrationTest {
 }
 ```
 
-Contract Testing with Spring Cloud Contract
+## Contract Testing with Spring Cloud Contract
 
 Contract tests prevent breaking changes when services evolve. The producer defines a contract and the framework generates stubs that consumers use in their own tests:
 
@@ -313,7 +313,7 @@ Claude Code can generate both the contract definitions and the corresponding tes
 
 Integration tests ensure your microservices work correctly when deployed. Claude Code can generate test cases that cover various scenarios including error handling, edge cases, and concurrent requests.
 
-Docker Containerization
+## Docker Containerization
 
 Packaging your microservice in Docker containers is standard practice. A multi-stage build keeps your final image lean by separating the build environment from the runtime environment:
 
@@ -335,7 +335,7 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 Docker Compose helps you run multiple microservices together for local development. Claude Code can generate appropriate compose files that define service dependencies, networking, and environment variables.
 
-Monitoring and Observability
+## Monitoring and Observability
 
 Production microservices require proper monitoring. Spring Boot Actuator provides basic metrics:
 
@@ -354,7 +354,7 @@ For distributed tracing across microservices, integrate with tools like Zipkin o
 
 The pdf skill can generate daily health reports that summarize service availability and performance metrics, useful for sharing with operations teams.
 
-Deployment Considerations
+## Deployment Considerations
 
 When deploying to Kubernetes or cloud platforms, ensure your microservices are production-ready:
 
@@ -381,7 +381,7 @@ readinessProbe:
 
 Claude Code can generate Kubernetes manifests and Helm chart templates tailored to your service's resource requirements and scaling policies.
 
-Best Practices for AI-Assisted Microservice Development
+## Best Practices for AI-Assisted Microservice Development
 
 When using Claude Code for microservice development, provide clear context about your architecture. Describe your existing services, communication patterns, and coding conventions. This helps Claude Code generate code that fits your project.
 
@@ -391,12 +391,11 @@ Use version control effectively. Claude Code works well with Git, so maintain cl
 
 Document your microservice APIs using OpenAPI specifications. Claude Code can help you define these specifications, and tools like Swagger UI can generate interactive documentation from them.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Spring Boot microservices development from manual coding to collaborative AI-assisted creation. By understanding Spring Boot patterns and using specialized skills like tdd, pdf, frontend-design, and supermemory, you can build solid microservices faster while maintaining code quality.
 
 The key is providing clear requirements, reviewing generated code, and maintaining good development practices. Claude Code amplifies your capabilities but works best when you guide it with your architectural vision and domain expertise.
-
 
 Related Reading
 

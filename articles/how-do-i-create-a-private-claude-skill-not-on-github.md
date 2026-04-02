@@ -16,7 +16,7 @@ permalink: /how-do-i-create-a-private-claude-skill-not-on-github/
 
 Private Claude skills let you build custom workflows that stay completely local. Whether you're working with proprietary code, sensitive business logic, or just want to experiment without sharing your work publicly, keeping skills off GitHub is straightforward. This guide walks you through creating private skills that Claude Code can still discover and use. For best practices on the `.md` format these skills use, see the [Claude skill .md file format specification guide](/claude-skill-md-format-complete-specification-guide/).
 
-Understanding Private vs Public Skills
+## Understanding Private vs Public Skills
 
 Claude Code skills live in a designated skills directory, typically `~/.claude/skills/` on Linux and macOS, or `%USERPROFILE%\.claude\skills\` on Windows. When you install a skill from GitHub using `cp skill.md ~/.claude/skills/`, it clones the repository into this folder. However, you can create skills manually in this directory without any GitHub involvement.
 
@@ -24,7 +24,7 @@ Claude Code skills live in a designated skills directory, typically `~/.claude/s
 
 The key difference is simply where the skill file lives. Public skills have remote repositories. Private skills exist only in your local skills directory.
 
-Setting Up Your Local Skills Directory
+## Setting Up Your Local Skills Directory
 
 Before creating your first private skill, ensure your skills directory exists and Claude Code can find it. The default location works for most users, but you can customize this in your Claude Code settings.
 
@@ -36,7 +36,7 @@ mkdir -p ~/.claude/skills
 
 Each skill is a single `.md` file placed directly in `~/.claude/skills/`. For example, a skill called `company-workflow` lives at `~/.claude/skills/company-workflow.md`.
 
-Creating Your First Private Skill
+## Creating Your First Private Skill
 
 A private skill follows the same format as public skills. You need a `skill.md` file with proper front matter and content. Let's create a practical example: a skill that formats API responses consistently.
 

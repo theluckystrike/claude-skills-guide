@@ -18,7 +18,7 @@ Claude MD files, the plain Markdown files that define Claude skills, become espe
 
 This guide covers practical patterns for using Claude MD files specifically in frontend development workflows.
 
-Why Frontend Projects Need Custom Skills
+## Why Frontend Projects Need Custom Skills
 
 Frontend development involves many repetitive decisions: component structure, styling conventions, prop naming, testing approaches. A well-crafted Claude MD skill encodes these decisions once and applies them across every session.
 
@@ -26,7 +26,7 @@ Consider a typical React project. Without a skill, you might repeatedly explain 
 
 The skill does not modify your project files or install dependencies. It guides Claude's behavior during your session, generating code that matches your standards, suggesting improvements aligned with your patterns, and answering questions within your project's context.
 
-Creating a Frontend Project Skill
+## Creating a Frontend Project Skill
 
 A practical frontend skill lives in `~/.claude/skills/frontend.md` and contains clear instructions about your stack and conventions. Here is a working example:
 
@@ -74,7 +74,7 @@ To activate this skill in Claude Code, type:
 
 Claude then applies these guidelines to every code generation task, review request, or refactoring operation.
 
-Combining Skills for Frontend Workflows
+## Combining Skills for Frontend Workflows
 
 One of the most powerful patterns is stacking multiple skills for specific workflows. Frontend projects often require several skill contexts simultaneously.
 
@@ -98,7 +98,7 @@ Generate API documentation for our component library.
 
 The `pdf` skill produces formatted documentation from your component props and JSDoc comments, while the frontend skill maintains consistency in how components are documented.
 
-Project-Specific Skills
+## Project-Specific Skills
 
 Beyond personal conventions, create project-specific skills for individual repositories. This is especially valuable in team environments where multiple developers share the same codebase.
 
@@ -131,7 +131,7 @@ Component Library
 
 Save this as `~/.claude/skills/ourproject.md` and reference it when working on that specific repository. Claude retains context across sessions, so you do not need to reload the skill every time, simply activate it at the start of each project session.
 
-Using the Frontend-Design Skill
+## Using the Frontend-Design Skill
 
 Claude includes a dedicated `frontend-design` skill that helps with UI implementation. When you need design assistance:
 
@@ -150,7 +150,7 @@ Build a settings page with form inputs for user profile information.
 
 Your frontend skill ensures the output matches your project structure, while the design skill handles the UI implementation details.
 
-Optimizing Skills for Frontend Token Usage
+## Optimizing Skills for Frontend Token Usage
 
 Frontend projects can generate substantial code, which affects token usage. The `supermemory` skill helps manage this by storing project context across sessions:
 
@@ -161,7 +161,7 @@ Remember: Our design system uses 8px spacing units, 4px border radius for small 
 
 This approach reduces the need to repeat configuration details in every session. Store spacing scales, color palettes, and component API summaries in supermemory, then reference them with your frontend skill.
 
-Practical Examples
+## Practical Examples
 
 Here are concrete scenarios where frontend skills improve your Claude workflow:
 
@@ -192,7 +192,7 @@ Why is this flexbox layout not centering vertically? The container has display: 
 
 Claude applies your understanding of your styling system to diagnose the issue.
 
-Maintenance and Iteration
+## Maintenance and Iteration
 
 Skills are not static. Review and update them as your project evolves:
 
@@ -203,12 +203,11 @@ Skills are not static. Review and update them as your project evolves:
 
 The skill file is plain Markdown, edit it like any other text file. Version control your skill files if you want to track changes over time.
 
-Summary
+## Summary
 
 Custom Claude MD files for frontend projects transform how you work with AI coding assistants. By encoding your stack conventions, component patterns, and project-specific rules, you create a personalized development environment that produces consistent, maintainable code.
 
 Start with a basic skill containing your core conventions, then layer in specialized skills like `tdd`, `frontend-design`, and `supermemory` as your workflow matures. The investment in crafting your skill files pays returns in every subsequent coding session.
-
 
 Related Reading
 

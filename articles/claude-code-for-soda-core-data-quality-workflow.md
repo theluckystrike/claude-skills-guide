@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Soda Core Data Quality Workflow
 
@@ -21,7 +20,7 @@ Data quality is the backbone of reliable analytics and machine learning pipeline
 
 This guide shows you how to build a practical data quality workflow using Claude Code and Soda Core, with actionable patterns you can apply to your own projects.
 
-Understanding the Integration
+## Understanding the Integration
 
 Soda Core is an open-source data quality tool that uses SQL-based checks to validate your data. It connects to your data sources (PostgreSQL, Snowflake, BigQuery, Spark, and more) and runs predefined checks on your datasets. Claude Code complements this by automating the creation of checks, interpreting results, and triggering remediation workflows.
 
@@ -31,7 +30,7 @@ The integration works through Claude Code's ability to:
 3. Create actionable alerts and remediation steps
 4. Maintain check configurations as code evolves
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before building the workflow, ensure you have the necessary tools installed:
 
@@ -45,7 +44,7 @@ soda --version
 
 You'll also need Claude Code installed and configured with access to your data source. For this guide, we'll assume a PostgreSQL database, but the patterns apply to other connectors as well.
 
-Creating a Claude Skill for Soda Core
+## Creating a Claude Skill for Soda Core
 
 The most effective approach is creating a dedicated Claude skill that understands Soda Core configuration and can generate appropriate checks. Here's how to structure this skill:
 
@@ -66,7 +65,7 @@ Available Commands
 - "Review last results" - Analyzes check output and suggests fixes
 ```
 
-Generating Quality Checks Automatically
+## Generating Quality Checks Automatically
 
 One of the most powerful patterns is having Claude Code analyze your database schema and generate appropriate quality checks. Here's a practical example:
 
@@ -139,7 +138,7 @@ checks for orders:
         select count(*) - count(distinct id) from orders
 ```
 
-Running Checks and Interpreting Results
+## Running Checks and Interpreting Results
 
 Execute Soda Core checks from Claude Code and capture the output for analysis:
 
@@ -204,7 +203,7 @@ def get_recommendation(check_name, details):
     return recommendations.get(check_name, "Review data source for issues")
 ```
 
-Building Automated Workflows
+## Building Automated Workflows
 
 The real power emerges when you integrate this into your data pipeline. Here's a practical CI/CD pattern:
 
@@ -237,7 +236,7 @@ jobs:
           message: "Data quality checks failed! Review results in CI logs."
 ```
 
-Best Practices for Production
+## Best Practices for Production
 
 When deploying this workflow in production, consider these patterns:
 
@@ -251,7 +250,7 @@ When deploying this workflow in production, consider these patterns:
 
 5. Create ownership mapping: Include metadata in your check configurations that identifies who owns each dataset and should be notified of failures.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Soda Core transforms data quality from a manual, reactive process into an automated, proactive workflow. Claude Code handles the cognitive work, generating appropriate checks, interpreting results, and recommending fixes, while Soda Core provides the reliable execution engine for running validations at scale.
 

@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code MCP Server Incident Response Guide
-
 When your MCP server stops responding or throws errors during a Claude Code session, productivity comes to a halt. This guide provides a systematic approach to diagnosing, troubleshooting, and recovering from MCP server incidents using practical commands and recovery procedures. Whether you are running a single local filesystem server or a multi-server production setup, the same structured process applies.
 
-Understanding MCP Server Architecture
+## Understanding MCP Server Architecture
 
 Before troubleshooting, it helps to understand how MCP servers fit into Claude Code's runtime. Claude Code launches MCP servers as child processes and communicates with them over standard input/output (stdio) or a local TCP socket, depending on the server's transport type. Each server registers a set of tools that Claude can invoke during a session.
 
@@ -31,7 +28,7 @@ This architecture has several failure points:
 
 Knowing which failure point you are dealing with determines which recovery path to take.
 
-Identifying MCP Server Failures
+## Identifying MCP Server Failures
 
 MCP (Model Context Protocol) servers extend Claude Code's capabilities by connecting to external tools and services. Common failure indicators include:
 
@@ -49,7 +46,7 @@ claude --verbose
 
 Look for error messages containing "MCP" or the specific server name. The verbose output shows connection attempts and helps narrow down whether the failure occurs at startup or during runtime.
 
-Reading Verbose Output
+## Reading Verbose Output
 
 The verbose output is dense but structured. Focus on these sections:
 
@@ -67,9 +64,9 @@ The verbose output is dense but structured. Focus on these sections:
 
 Here the server started fine but the tool call was refused by the OS due to permissions. Two very different problems, two very different fixes.
 
-Initial Diagnostic Steps
+## Initial Diagnostic Steps
 
-Check Server Status
+## Check Server Status
 
 The first step is verifying which MCP servers are currently registered and their status. Claude Code stores server configurations in your user directory. Check the configuration file:
 
@@ -87,7 +84,7 @@ python3 -c "import json,sys; d=json.load(open('$HOME/.claude/settings.json')); p
 
 This prints just the MCP server entries with proper formatting, making it easy to spot missing or malformed entries.
 
-Review Server Logs
+## Review Server Logs
 
 MCP servers typically write logs to standard error output. When starting Claude Code, capture stderr to a file for analysis:
 
@@ -103,7 +100,7 @@ grep -i "error\|exception\|timeout" mcp-debug.log
 
 Most MCP servers follow predictable error patterns. Connection timeouts usually indicate network issues or server unavailability, while authentication errors point to credential problems.
 
-Test the Server in Isolation
+## Test the Server in Isolation
 
 Before assuming Claude Code is the problem, run the MCP server directly to confirm it starts successfully:
 
@@ -117,9 +114,9 @@ node /path/to/my-mcp-server/index.js
 
 If the server prints a ready message or stays running without error, the server itself is fine and the issue is in how Claude Code is launching it (path, arguments, or environment variables). If it crashes immediately, you have a server-level problem to fix first.
 
-Common Incident Types and Solutions
+## Common Incident Types and Solutions
 
-Connection Timeout Issues
+## Connection Timeout Issues
 
 If an MCP server fails to connect within the expected timeout window, the server may be unreachable or overloaded. For instance, if you're using the filesystem MCP server and it times out, try restarting it:
 
@@ -151,7 +148,7 @@ If the server consistently times out only on large directories, add a path scope
 
 Scoping to a single repo rather than your entire home directory significantly reduces startup time.
 
-Authentication Failures
+## Authentication Failures
 
 Many MCP servers require API keys or tokens. If authentication fails, check your environment variables:
 
@@ -173,7 +170,7 @@ A common mistake is setting environment variables in `.bashrc` or `.zshrc` but l
 
 For the GitHub MCP server specifically, check that your token has the right scopes. A fine-grained personal access token that lacks `repo` scope will authenticate successfully but fail when trying to read private repositories, producing a confusing partial-failure state.
 
-Server Process Crashes
+## Server Process Crashes
 
 When an MCP server process crashes unexpectedly, it often leaves orphaned processes. Clean up before restarting:
 
@@ -200,7 +197,7 @@ For Node.js-based MCP servers that crash on out-of-memory errors, increase the h
 }
 ```
 
-Version Incompatibilities
+## Version Incompatibilities
 
 MCP server packages update independently of Claude Code. A mismatch between the MCP protocol version that Claude Code expects and the version a server implements can cause silent failures where the server starts but tools never appear. Check the server package version:
 
@@ -216,9 +213,9 @@ npm update -g @modelcontextprotocol/server-filesystem
 
 For project-local servers, update `package.json` and run `npm install`.
 
-Advanced Recovery Procedures
+## Advanced Recovery Procedures
 
-Configuration Reset
+## Configuration Reset
 
 If diagnostics reveal configuration corruption, reset the MCP settings:
 
@@ -234,7 +231,7 @@ After resetting, restart Claude Code with verbose logging to capture the fresh c
 
 A targeted reset that preserves other settings is safer than deleting the entire file. Open `~/.claude/settings.json` in your editor, remove only the `mcpServers` key, save, then restart Claude Code. The MCP servers will be gone from the session but all other settings remain intact.
 
-Skill Dependency Verification
+## Skill Dependency Verification
 
 Some skills depend on specific MCP servers. The `supermemory` skill requires memory server connectivity, while database skills need their respective MCP servers running. Verify skill requirements:
 
@@ -248,7 +245,7 @@ cat ~/.claude/skills/skill-name.md | grep -i "requires\|mcp"
 
 When troubleshooting, disable non-essential skills temporarily to isolate the problematic server. Re-enable them one at a time after recovery.
 
-Port Conflicts
+## Port Conflicts
 
 MCP servers bind to specific ports. Port conflicts cause immediate startup failures. Check for existing listeners:
 
@@ -270,7 +267,7 @@ kill $(lsof -ti :3000)
 
 If the conflicting process is a development server you need to keep running, reconfigure the MCP server to use an alternate port by passing it as an argument or environment variable, check the server's documentation for the right flag.
 
-Rebuilding a Corrupted Node Modules Tree
+## Rebuilding a Corrupted Node Modules Tree
 
 For locally cloned MCP servers, a corrupted or incomplete `node_modules` directory is a frequent culprit. The server may start and immediately crash with a module-not-found error:
 
@@ -282,7 +279,7 @@ npm install
 
 After reinstalling, confirm the server starts cleanly in isolation before adding it back to Claude Code.
 
-Incident Response Decision Tree
+## Incident Response Decision Tree
 
 Use this flow when an MCP server is not working:
 
@@ -307,9 +304,9 @@ Use this flow when an MCP server is not working:
 
 Working through this tree systematically prevents you from spending time on authentication issues when the real problem is a missing executable, or vice versa.
 
-Prevention Strategies
+## Prevention Strategies
 
-Health Check Scripts
+## Health Check Scripts
 
 Implement a startup health check that verifies MCP server availability before launching Claude Code:
 
@@ -358,7 +355,7 @@ done
 echo "=== End Health Check ==="
 ```
 
-Configuration Versioning
+## Configuration Versioning
 
 Track MCP configuration changes in git. Add your settings to version control:
 
@@ -379,7 +376,7 @@ Later, to restore:
 git checkout stable-mcp-config-2026-03 -- settings.json
 ```
 
-Monitoring and Alerts
+## Monitoring and Alerts
 
 For teams running MCP servers in production environments, implement monitoring. The `algorithmic-art` skill and similar creative tools benefit from uptime monitoring when integrated into production pipelines.
 
@@ -392,7 +389,7 @@ Add to crontab: crontab -e
 
 For Linux environments, replace the `osascript` line with a desktop notification command or a webhook call to your team's alert channel.
 
-Documenting Your MCP Setup for the Team
+## Documenting Your MCP Setup for the Team
 
 When multiple developers use Claude Code with shared MCP server configurations, undocumented setups cause repeated incident response cycles. Maintain a short setup document that includes:
 
@@ -403,12 +400,11 @@ When multiple developers use Claude Code with shared MCP server configurations, 
 
 This is particularly important for teams where one person set up the MCP configuration and others are expected to replicate it. The health check script above makes an excellent addition to the project's `scripts/` directory so it is automatically available to every developer who clones the repo.
 
-Summary
+## Summary
 
 MCP server incidents disrupt Claude Code workflows but follow recognizable patterns. Start with verbose logging to identify the failure type, then apply the appropriate recovery procedure. Connection issues yield to restart and network checks, while authentication problems require credential verification. Version mismatches require package updates. For complex issues, configuration reset combined with health check scripts provides a reliable recovery path.
 
 Regular maintenance, including configuration versioning, health checks, and monitoring, prevents incidents before they impact productivity. Keep your MCP servers running smoothly and maintain uninterrupted development sessions. The investment in a solid diagnostic process pays off quickly: once you have resolved a particular failure type once and documented the fix, you can recover from the same incident in under two minutes on every future occurrence.
-
 
 Related Reading
 

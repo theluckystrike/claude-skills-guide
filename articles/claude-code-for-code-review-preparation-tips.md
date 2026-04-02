@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Code Review Preparation Tips"
 description: "Master code review preparation with Claude Code. Practical tips, skill combinations, and workflows to streamline your review process efficiently."
@@ -14,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Code Review Preparation Tips
-
 Code review preparation often consumes valuable development time. You scan through diffs, check for potential bugs, verify test coverage, and ensure the code aligns with project standards. This process becomes repetitive across large teams and frequent PRs. Claude Code transforms this workflow through targeted skill combinations that handle the mechanical aspects while you focus on architecture and logic decisions.
 
 This guide covers practical techniques to prepare for code reviews efficiently using Claude Code skills and structured prompts.
 
-Loading Your Review Context
+## Loading Your Review Context
 
 Every effective review starts with context. Before examining any diff, load your team's coding standards, architectural guidelines, and past review decisions. The `supermemory` skill excels at this, it stores persistent information about your team's conventions that Claude Code references throughout the session.
 
@@ -33,7 +29,7 @@ This command pulls in your stored conventions: naming patterns, error handling r
 
 For teams using multiple coding standards across projects, create separate memory entries. Reference the appropriate context before starting review sessions on different codebases.
 
-Automated Pre-Flight Checks
+## Automated Pre-Flight Checks
 
 After loading context, run automated checks that would otherwise consume significant time. The `tdd` skill generates test cases targeting the changed code paths. Even if tests already exist, asking Claude Code to suggest edge cases often reveals gaps in coverage.
 
@@ -45,7 +41,7 @@ This approach works particularly well for security-sensitive code. Request speci
 
 The `frontend-design` skill assists when reviewing UI changes. It checks component implementations against accessibility standards, verifies responsive behavior considerations, and ensures design system compliance. This proves valuable when frontend expertise is limited on your review team.
 
-Analyzing Complex Diff Sections
+## Analyzing Complex Diff Sections
 
 Large diffs overwhelm manual review. Break them into logical chunks and ask Claude Code to explain the intent and potential issues in each section.
 
@@ -57,7 +53,7 @@ Claude Code examines the code within the current context, flagging patterns that
 
 For API changes specifically, the `api-design` consideration helps verify REST conventions, proper HTTP method usage, and appropriate status codes. While not a dedicated skill, prompting Claude Code to review API implementations against your established patterns catches structural issues early.
 
-Documenting Review Findings
+## Documenting Review Findings
 
 After completing your analysis, document findings efficiently. Claude Code formats observations into clear, actionable feedback. Instead of typing individual comments, generate a structured summary:
 
@@ -70,7 +66,7 @@ Format my review notes into a PR comment with:
 
 This produces consistent, well-organized feedback that helps authors understand priority levels and address issues systematically.
 
-Combining Skills for Comprehensive Reviews
+## Combining Skills for Comprehensive Reviews
 
 The most effective preparation combines multiple skills. A typical workflow:
 
@@ -81,7 +77,7 @@ The most effective preparation combines multiple skills. A typical workflow:
 
 For specific domains, additional skills enhance preparation. The `pdf` skill helps when reviewing documentation changes or generated reports. Database schema modifications benefit from explicit schema review requests.
 
-Practical Example Workflow
+## Practical Example Workflow
 
 Consider a PR adding user authentication. Your preparation workflow:
 
@@ -107,7 +103,7 @@ Summarize my review into a structured PR comment with severity levels
 
 This sequence completes in minutes rather than the hours manual review typically requires, while maintaining thoroughness.
 
-Refining Your Review Prompts
+## Refining Your Review Prompts
 
 Claude Code improves at review tasks through iteration. Save effective prompt patterns that work for your team. Common patterns include:
 
@@ -118,7 +114,7 @@ Claude Code improves at review tasks through iteration. Save effective prompt pa
 
 Store these patterns in your project documentation or `supermemory` for quick access. Consistent prompting produces consistent results and trains your workflow expectations.
 
-Validating Against Specifications
+## Validating Against Specifications
 
 When the code implements a feature from a requirements document, verify compliance before the review meeting. The `pdf` skill extracts text from PDF specifications so you can cross-reference against the implementation:
 
@@ -134,7 +130,7 @@ Once extracted, compare each requirement against the relevant code:
 
 This catches implementation drift, cases where code evolved away from original requirements across multiple iterations. For design documents in Word format, the `docx` skill provides the same extraction capability.
 
-Building Institutional Memory
+## Building Institutional Memory
 
 Each review produces decisions worth remembering. Use `supermemory` to capture them:
 
@@ -150,7 +146,7 @@ Over time, this creates a searchable knowledge base of review decisions. When si
 
 Teams using this approach report faster review cycles and fewer repeated discussions.
 
-Avoiding Common Pitfalls
+## Avoiding Common Pitfalls
 
 Several patterns reduce review effectiveness. Avoid reviewing entire PRs in one session, cognitive fatigue misses issues. Break large changes into multiple review passes with breaks between.
 
@@ -158,12 +154,11 @@ Do not skip automated checks even when time pressures exist. The `tdd` skill and
 
 Finally, resist the temptation to approve quickly on familiar code. Familiarity breeds assumption. Apply the same scrutiny to known code paths as unfamiliar ones, issues often hide in sections developers believe they understand.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms code review preparation from a time-consuming chore into an efficient, thorough process. The combination of persistent context via `supermemory`, targeted testing through `tdd`, and systematic analysis prompts handles mechanical aspects while you focus on architecture and logic.
 
 Start with context loading, add automated checks for your specific domain needs, analyze complex sections with targeted prompts, and document findings systematically. This workflow scales across teams and maintains consistency even as personnel change.
-
 
 Related Reading
 

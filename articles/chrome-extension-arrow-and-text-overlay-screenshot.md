@@ -17,7 +17,7 @@ tags: [chrome-extension, javascript, screenshot-api]
 
 Screenshot annotations have become essential for documentation, bug reporting, and communication. Building a Chrome extension that captures screenshots and allows users to add arrows and text overlays gives you full control over visual communication without relying on third-party services. This guide walks through the implementation, from browser permissions to canvas-based rendering.
 
-Understanding the Chrome Screenshot API
+## Understanding the Chrome Screenshot API
 
 Chrome provides the `chrome.tabs.captureVisibleTab()` API for capturing screenshots of the current tab. This method returns a PNG data URL that you can manipulate using the HTML5 Canvas API. The key advantage is that users can capture exactly what they see, including dynamically rendered content.
 
@@ -42,7 +42,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This basic capture gives you the foundation. Next, you need to build the overlay system that lets users draw arrows and add text.
 
-Project Structure
+## Project Structure
 
 A well-organized extension structure keeps your code maintainable:
 
@@ -76,7 +76,7 @@ The manifest.json declares the necessary permissions:
 }
 ```
 
-Building the Annotation Editor
+## Building the Annotation Editor
 
 The core of your extension is the canvas-based editor. This allows users to draw arrows and place text on top of the captured screenshot.
 
@@ -227,7 +227,7 @@ function redrawCanvas() {
 }
 ```
 
-Handling the Extension Workflow
+## Handling the Extension Workflow
 
 The popup serves as the entry point, triggering the capture and opening the editor:
 
@@ -262,7 +262,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-Advanced Features for Power Users
+## Advanced Features for Power Users
 
 Consider implementing these enhancements for a more solid tool:
 
@@ -283,8 +283,7 @@ function copyToClipboard(canvas) {
 }
 ```
 
-
-Step-by-Step: From Capture to Export
+## Step-by-Step: From Capture to Export
 
 1. Navigate to the page you want to capture
 2. Click the extension icon in the toolbar
@@ -296,7 +295,7 @@ Step-by-Step: From Capture to Export
 8. Use the color picker to change annotation colors
 9. Click "Save" to download the annotated PNG, or "Copy" to send directly to clipboard
 
-Advanced: Blur Tool for Sensitive Data
+## Advanced: Blur Tool for Sensitive Data
 
 Screenshots for documentation often contain passwords or PII. Add a pixelate-to-blur region tool:
 
@@ -323,7 +322,7 @@ function blurRegion(x, y, width, height, blockSize = 10) {
 }
 ```
 
-Advanced: Undo / Redo Stack
+## Advanced: Undo / Redo Stack
 
 Implement an undo stack using annotation history:
 
@@ -359,7 +358,7 @@ document.addEventListener('keydown', (e) => {
 
 Call `pushHistory()` in `stopDrawing` after each annotation is committed.
 
-Comparison with Desktop Annotation Tools
+## Comparison with Desktop Annotation Tools
 
 | Tool | Setup | Blur tool | Clipboard export | Cost |
 |---|---|---|---|---|
@@ -370,7 +369,7 @@ Comparison with Desktop Annotation Tools
 
 The extension wins on zero install friction. no desktop app required, works across all operating systems inside Chrome.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 `captureVisibleTab` returning a blank image: Try `{ format: 'jpeg', quality: 90 }` as a fallback if the PNG capture returns blank on hardware-accelerated pages.
 
@@ -393,13 +392,12 @@ Editor page not opening: Register the editor as an options page or open it expli
 chrome.tabs.create({ url: chrome.runtime.getURL('editor.html') });
 ```
 
-Security and Performance Considerations
+## Security and Performance Considerations
 
 - Request only the minimum necessary permissions (`activeTab` and `tabCapture` are sufficient for basic capture)
 - Process heavy image operations in a background offscreen document using `chrome.offscreen` to avoid freezing the popup UI
 - For extensions that handle sensitive documentation screenshots, add an auto-clear feature that removes the image from storage after a configurable timeout
 - The blur tool is essential before sharing screenshots in public bug trackers or documentation systems
-
 
 Related Reading
 

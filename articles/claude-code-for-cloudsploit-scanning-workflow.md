@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for CloudSploit Scanning Workflow"
 description: "Learn how to integrate Claude Code with CloudSploit to automate cloud security scanning, identify misconfigurations, and strengthen your cloud security."
@@ -33,7 +32,7 @@ The tool runs collection scripts against cloud APIs, then executes plugins that 
 
 CloudSploit organizes findings into four severity tiers: CRITICAL, HIGH, MEDIUM, and LOW. Critical findings represent immediate threats, publicly exposed databases, S3 buckets with no access controls, or IAM root access keys in active use. High findings are serious issues that should be resolved within days, not weeks. Medium and Low findings provide a long-term hardening backlog. Understanding this structure is essential to building a workflow that reacts proportionally to each category.
 
-Setting Up CloudSploit with Claude Code
+## Setting Up CloudSploit with Claude Code
 
 Before integrating with Claude Code, ensure CloudSploit is installed in your environment:
 
@@ -65,7 +64,7 @@ For production use, you should never hardcode credentials in environment variabl
 
 Claude Code can then manage the entire scanning workflow through custom skills. Create a skill that encapsulates CloudSploit execution, result parsing, and reporting.
 
-Creating a CloudSploit Scanning Skill
+## Creating a CloudSploit Scanning Skill
 
 A well-designed Claude Code skill for CloudSploit should handle several key functions:
 
@@ -116,7 +115,7 @@ module.exports = { runScan, parseScanResults };
 
 This basic structure provides the foundation for more sophisticated automation. The skill should accept parameters like provider selection, scan scope, and output preferences.
 
-Automating Scan Execution
+## Automating Scan Execution
 
 One of Claude Code's strengths is orchestrating complex workflows. For CloudSploit, this means:
 
@@ -181,9 +180,9 @@ orchestrate({
 });
 ```
 
-Practical Integration Examples
+## Practical Integration Examples
 
-CI/CD Pipeline Integration
+## CI/CD Pipeline Integration
 
 Integrate CloudSploit scanning into your CI/CD pipeline to catch misconfigurations before deployment:
 
@@ -250,7 +249,7 @@ jobs:
 
 Using OIDC-based authentication (shown above) instead of long-lived access keys is a security best practice. The scan role should have read-only permissions across the services CloudSploit checks.
 
-Scheduled Security Audits
+## Scheduled Security Audits
 
 Use Claude Code to schedule regular scans and send alerts:
 
@@ -278,7 +277,7 @@ cron.schedule('0 2 * * *', async () => {
 
 For teams with multi-account AWS setups, you can extend this scheduler to loop over a list of account IDs, assume a cross-account role in each, run the scan, and aggregate results into a central reporting bucket. Claude Code can manage this iteration logic and handle failures in individual accounts without aborting the entire run.
 
-Comparison: Manual vs. Claude Code-Orchestrated Workflow
+## Comparison: Manual vs. Claude Code-Orchestrated Workflow
 
 | Task | Manual Approach | Claude Code Workflow |
 |---|---|---|
@@ -291,7 +290,7 @@ Comparison: Manual vs. Claude Code-Orchestrated Workflow
 
 The manual approach is fine for occasional audits. For teams running more than one cloud account or deploying multiple times per week, the overhead of manual triage makes automation essential.
 
-Best Practices for CloudSploit Workflows
+## Best Practices for CloudSploit Workflows
 
 1. Scan Scope Management
 
@@ -372,7 +371,7 @@ Example IAM policy for AWS scanning:
 
 CloudSploit's documentation lists the exact permissions each plugin requires, making it easy to tighten this policy further.
 
-Advanced: Custom CloudSploit Plugins
+## Advanced: Custom CloudSploit Plugins
 
 CloudSploit's plugin architecture allows you to write custom checks for organization-specific policies:
 
@@ -412,7 +411,7 @@ Integrate custom plugins into your Claude Code workflow to enforce organization-
 
 A practical extension is a plugin that verifies your organization's approved AMI list. If an EC2 instance is running an AMI not on the approved list, it flags the instance for review. Claude Code can maintain the approved list as a config file, compare it against the scan output, and open tickets for any violations.
 
-Generating Executive Reports
+## Generating Executive Reports
 
 Security teams often need to present findings to non-technical stakeholders. Claude Code can transform raw CloudSploit JSON into a clean HTML or PDF summary report:
 
@@ -458,7 +457,7 @@ console.log('Report written to security-report.html');
 
 This report can be emailed automatically after each scheduled scan, attached to Jira tickets, or hosted in an internal wiki.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms CloudSploit from a manual security tool into an automated, intelligent scanning workflow. By creating reusable skills, integrating with CI/CD pipelines, and implementing proper result handling, you can establish continuous cloud security scanning that catches misconfigurations early and tracks remediation effectively.
 

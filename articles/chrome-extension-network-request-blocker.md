@@ -19,7 +19,7 @@ Chrome extensions have powerful capabilities when it comes to modifying network 
 
 This guide covers the modern approach to blocking network requests in Chrome extensions using the `declarativeNetRequest` API, with practical examples developers can implement immediately. including dynamic user-configurable rules, header modification, and testing strategies.
 
-Understanding the declarativeNetRequest API
+## Understanding the declarativeNetRequest API
 
 The `declarativeNetRequest` API is Chrome's recommended way to block or modify network requests. Unlike the older `webRequest` API, `declarativeNetRequest` operates declaratively, which means you define rules upfront rather than intercepting each request in real-time. This approach offers better performance and privacy since extension code doesn't need to analyze every single network request.
 
@@ -55,7 +55,7 @@ To use this API, your extension needs the appropriate permissions in the manifes
 
 The `host_permissions` field specifies which URLs your rules can match. Using `<all_urls>` gives your extension global reach, but you can restrict it to specific domains for more targeted blocking. The `declarativeNetRequestFeedback` permission is optional but required if you want to use `testMatchOutcome` or retrieve matched rule details during debugging.
 
-Creating Blocking Rules
+## Creating Blocking Rules
 
 Rules are defined in a JSON file within your extension's root directory. Here's a basic example that blocks requests to a specific domain:
 
@@ -105,7 +105,7 @@ To load these rules, update your manifest:
 
 You can define multiple rulesets and enable or disable them at runtime using `chrome.declarativeNetRequest.updateEnabledRulesets()`. This is useful for building extensions with toggleable feature modules. for example, enabling an "aggressive tracking protection" ruleset only when the user opts in.
 
-Practical Implementation Example
+## Practical Implementation Example
 
 Here is a complete rules file targeting common tracking and ad domains. This is the kind of file you would ship with a privacy-focused extension:
 
@@ -161,7 +161,7 @@ Here is a complete rules file targeting common tracking and ad domains. This is 
 
 Rule 5 shows an important pattern: using an `allow` rule with higher priority to whitelist your own analytics while blocking third-party equivalents. Priority values are integers where higher numbers win. When multiple rules match a request, Chrome applies the one with the highest priority. If priorities are equal, `allow` beats `block`.
 
-Advanced: Modifying Requests Instead of Blocking
+## Advanced: Modifying Requests Instead of Blocking
 
 Sometimes you want to modify requests rather than block them entirely. The `declarativeNetRequest` API supports several action types:
 
@@ -221,7 +221,7 @@ Header modification is equally powerful. Here is a rule that strips the `Referer
 
 You can also add headers. useful for developer tools that need to inject an API key or debug flag into every request to a specific domain without modifying page code.
 
-Dynamic Rules for User Configuration
+## Dynamic Rules for User Configuration
 
 For extensions that allow users to manage their own blocklist, you need dynamic rules. Unlike static rules defined in the manifest, dynamic rules can be added or removed at runtime:
 
@@ -286,7 +286,7 @@ chrome.runtime.onInstalled.addListener(async () => {
 
 Chrome limits dynamic rules to 5,000 per extension. Check your current allocation with `chrome.declarativeNetRequest.getAvailableStaticRuleCount()` and keep track of IDs to avoid collisions.
 
-Testing Your Extension
+## Testing Your Extension
 
 When developing network blocking extensions, testing requires attention to detail. Use Chrome's extension management page to reload your extension after each change. For debugging, the `chrome.declarativeNetRequest` API provides helpful methods:
 
@@ -317,7 +317,7 @@ The `testMatchOutcome` method is particularly useful for verifying your rules ma
 
 For integration testing, load your extension in a Chrome instance with `--load-extension=./path/to/extension`, navigate to a page with known third-party requests, and verify in the Network tab that the expected requests show as blocked (they appear with a red circle icon and status "blocked:extension").
 
-Performance Considerations
+## Performance Considerations
 
 The `declarativeNetRequest` API is optimized for performance, but following best practices ensures your extension remains efficient:
 
@@ -327,7 +327,7 @@ The `declarativeNetRequest` API is optimized for performance, but following best
 - Avoid overly broad regex: A pattern like `.*` matching every URL runs against every request in the browser. Narrow your `urlFilter` as much as possible to reduce the matching surface.
 - Batch rule updates: When adding or removing multiple dynamic rules, pass all changes in a single `updateDynamicRules` call rather than looping with individual calls. Chrome processes the batch atomically and more efficiently.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Many developers encounter issues when first implementing network blocking. The most frequent problems include:
 
@@ -339,7 +339,7 @@ Many developers encounter issues when first implementing network blocking. The m
 
 Always test thoroughly across different websites since network request patterns vary significantly. A rule targeting `analytics.js` by filename may inadvertently block a legitimate resource on a site that happens to name its own script the same way.
 
-Building a Complete Extension
+## Building a Complete Extension
 
 Putting it all together, a production-quality network request blocker extension has this structure:
 
@@ -358,7 +358,6 @@ my-blocker/
 The popup lets users type a domain and click "Block" or "Unblock". The background script handles `chrome.declarativeNetRequest.updateDynamicRules` and persists the list to `chrome.storage.local`. The static `rules.json` covers well-known tracking domains that apply for all users without any configuration.
 
 Building a network request blocker is a straightforward process once you understand the `declarativeNetRequest` API. Whether you're creating a privacy tool, debugging API calls, or developing developer utilities, the declarative approach provides the performance and flexibility needed for production-quality extensions that pass Chrome Web Store review.
-
 
 Related Reading
 

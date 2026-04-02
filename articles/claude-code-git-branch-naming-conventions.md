@@ -13,14 +13,11 @@ score: 7
 permalink: /claude-code-git-branch-naming-conventions/
 ---
 
-
-Claude Code Git Branch Naming Conventions
-
 Git branch naming is one of those topics that seems simple until your repository becomes a chaotic mess of branches named "fix", "update2", or "asdfasdf". When working with Claude Code, well-structured branch names become even more valuable, the AI assistant can parse your branch structure, understand your workflow intent, and provide better assistance throughout the development cycle.
 
 This guide covers practical branch naming conventions that work with Claude Code, helping you maintain a clean repository while using AI-assisted development.
 
-The Case for Structured Branch Names
+## The Case for Structured Branch Names
 
 Claude Code reads your git history and branch structure to understand what you're working on. A branch named `feature/user-authentication` immediately tells the AI that this branch handles user authentication features. A branch named `fix-bug` provides much less context.
 
@@ -44,11 +41,11 @@ Compare these two scenarios:
 
 The information density of a well-named branch is significant, and Claude Code uses it at the start of every session.
 
-Standard Branch Prefix Conventions
+## Standard Branch Prefix Conventions
 
 Most teams benefit from a consistent set of prefixes that categorize branches by purpose. Here are the most common conventions:
 
-Feature Branches
+## Feature Branches
 
 Feature branches handle new functionality:
 
@@ -72,7 +69,7 @@ feature/design-checkout-flow
 feature/design-mobile-navigation
 ```
 
-Bugfix Branches
+## Bugfix Branches
 
 Bugfix branches address specific issues:
 
@@ -89,7 +86,7 @@ bugfix/JIRA-1234-payment-failure
 bugfix/GH-567-fix-sidebar-overflow
 ```
 
-Hotfix Branches
+## Hotfix Branches
 
 Hotfix branches address production issues requiring immediate attention:
 
@@ -101,7 +98,7 @@ hotfix/production-crash-on-startup
 
 Hotfixes should almost always branch from `main` (or whatever your production branch is called), not from `develop`. When you tell Claude Code you are on a hotfix branch, it will understand the urgency and avoid suggesting non-essential changes that would bloat the diff.
 
-Refactor Branches
+## Refactor Branches
 
 Refactor branches handle code improvements without behavior changes:
 
@@ -118,7 +115,7 @@ refactor/superMemory-user-context-cleanup
 refactor/superMemory-reduce-token-usage
 ```
 
-Release Branches
+## Release Branches
 
 If your team uses Gitflow or a variation of it, release branches follow a versioning pattern:
 
@@ -130,7 +127,7 @@ release/v2-beta
 
 Release branches are typically cut from `develop` and merged into both `main` and back into `develop` once finalized. Claude Code recognizes the `release/` prefix and understands you are likely doing stabilization work rather than adding features.
 
-Documentation and Test Branches
+## Documentation and Test Branches
 
 Two additional prefixes that are often overlooked but worth standardizing:
 
@@ -143,11 +140,11 @@ test/integration-payment-flow
 
 Separating documentation work and test additions from feature work makes your git log much cleaner. It also helps when doing code reviews, a reviewer knows at a glance that a `docs/` branch should not contain application logic changes.
 
-Practical Naming Patterns
+## Practical Naming Patterns
 
 Beyond prefixes, certain patterns make branches more useful:
 
-Include Ticket Numbers
+## Include Ticket Numbers
 
 When working with project management tools, include identifiers:
 
@@ -165,7 +162,7 @@ bugfix/GH-89-fix-null-avatar
 feature/GH-102-dark-mode-support
 ```
 
-Use Hyphenated Lowercase
+## Use Hyphenated Lowercase
 
 Stick to lowercase letters, numbers, and hyphens:
 
@@ -176,7 +173,7 @@ bugfix/fix-api-timeout-handling
 
 Avoid: camelCase, spaces, underscores, or special characters. Some operating systems and tools handle mixed-case branch names inconsistently, and underscores are harder to double-click to select in terminals. Hyphens are universally safe.
 
-Keep It Descriptive but Concise
+## Keep It Descriptive but Concise
 
 Aim for clarity without verbosity:
 
@@ -188,7 +185,7 @@ feature/user-edit                  # Might be too vague
 
 A good heuristic: if a new team member read the branch name in isolation, would they know roughly what this branch does? If yes, the name is good enough.
 
-Use Verb-Noun or Noun-Only Formats
+## Use Verb-Noun or Noun-Only Formats
 
 ```
 feature/add-search                  # Verb-noun
@@ -199,11 +196,11 @@ bugfix/login-redirect-error         # More specific
 
 Verb-noun tends to work better for features (`add-`, `implement-`, `build-`) while noun-only or adjective-noun works better for bugfixes and refactors (`memory-leak`, `broken-redirect`, `slow-query`).
 
-Branch Naming with Claude Code Skills
+## Branch Naming with Claude Code Skills
 
 Several Claude skills integrate well with branch-based workflows:
 
-The tdd Skill
+## The tdd Skill
 
 When using test-driven development, create branches that signal TDD intent:
 
@@ -214,7 +211,7 @@ feature/tdd-api-validation-rules
 
 This helps you maintain a test-first mindset throughout development. When you open Claude Code on a `tdd/` or `feature/tdd-*` branch, it is a useful cue to yourself (and any collaborators) that tests should be written before implementation code in that branch.
 
-The pdf Skill
+## The pdf Skill
 
 For documentation branches:
 
@@ -225,7 +222,7 @@ docs/user-guide-payment-section
 
 The pdf skill can generate documentation from your markdown files, making docs branches particularly useful.
 
-The git Skill
+## The git Skill
 
 The git skill understands branch operations natively. A well-named branch makes commands like `git switch` and `git merge` more intuitive:
 
@@ -236,11 +233,11 @@ git merge main feature/new-checkout-flow
 
 When the git skill creates branches for you based on a task description, it will use the prefixes you have established in your project. If you consistently use `bugfix/` in your repository, the skill will pick that up from context and follow the same pattern.
 
-Team Conventions and Enforcement
+## Team Conventions and Enforcement
 
 Naming conventions only work when the whole team follows them. The most effective approach is to document the convention once and enforce it automatically.
 
-Git Hooks for Branch Name Validation
+## Git Hooks for Branch Name Validation
 
 You can add a `pre-push` or `commit-msg` hook that rejects branches not matching your pattern. Here is a simple `pre-push` hook:
 
@@ -266,11 +263,11 @@ chmod +x .git/hooks/pre-push
 
 For teams, distribute hooks via a `scripts/` directory and reference them in your onboarding docs, or use a tool like `husky` to manage hooks in your package.json.
 
-GitHub Branch Protection Rules
+## GitHub Branch Protection Rules
 
 GitHub lets you restrict branch creation to patterns matching a regex. Under repository Settings → Branches → Branch protection rules, you can require that any branch merging into `main` or `develop` starts with an allowed prefix. This is a harder guardrail than hooks because it is enforced server-side regardless of local configuration.
 
-Example Workflow
+## Example Workflow
 
 Here is a practical workflow demonstrating branch naming with Claude Code:
 
@@ -303,7 +300,7 @@ Here is a practical workflow demonstrating branch naming with Claude Code:
 
 This sub-branch pattern is particularly useful for larger features where you want to review email and SMS changes independently before merging the complete feature. It also makes it easier to abandon one sub-feature without losing the other.
 
-Branch Naming Across Different Git Workflows
+## Branch Naming Across Different Git Workflows
 
 Different branching strategies impose different conventions:
 
@@ -316,7 +313,7 @@ Different branching strategies impose different conventions:
 
 If your team uses Gitflow, your branch names already carry structural meaning because the workflow requires specific prefixes. If your team uses GitHub Flow (simpler, just `main` plus short-lived branches), the conventions in this guide are entirely up to you to define, which makes standardization even more important.
 
-Common Mistakes to Avoid
+## Common Mistakes to Avoid
 
 - Using dates in branch names: `feature/2024-01-15-user-settings` becomes meaningless quickly
 - Vague names: `feature/stuff`, `fix/something`, `update`
@@ -326,7 +323,7 @@ Common Mistakes to Avoid
 - Encoding who owns it: Branches belong to the team, not to an individual. If Mike leaves the company, his branches become orphans no one wants to touch
 - Reusing old branch names: After merging and deleting `feature/search`, do not reuse the name later. Create `feature/search-v2` or something distinct to avoid confusion in the git log
 
-Quick Reference
+## Quick Reference
 
 ```
 feature/          New functionality

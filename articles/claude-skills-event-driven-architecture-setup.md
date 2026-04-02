@@ -16,7 +16,7 @@ permalink: /claude-skills-event-driven-architecture-setup/
 
 Event-driven architecture transforms how Claude Skills interact with your projects. Instead of manual skill invocation, your skills respond automatically to file changes, git events, or custom triggers. This guide walks you through building an event-driven setup that reacts to development activities in real time. For related architectural patterns, see the [advanced hub](/advanced-hub/). You may also find the [Claude Code hooks system guide](/understanding-claude-code-hooks-system-complete-guide/) useful as a companion reference.
 
-What Is Event-Driven Architecture in Claude Skills
+## What Is Event-Driven Architecture in Claude Skills
 
 Claude Skills operate within a reactive environment where they can monitor and respond to system events. The event-driven model shifts from a pull-based approach, where you explicitly invoke skills, to a push-based model where skills activate automatically when specific conditions occur.
 
@@ -28,7 +28,7 @@ The core components include:
 
 This architecture decouples your automation logic from invocation patterns, making your workflows more maintainable and scalable.
 
-Setting Up File Watch Events
+## Setting Up File Watch Events
 
 The foundation of event-driven Claude Skills starts with file system monitoring. You configure your environment to watch for changes and trigger skills accordingly. Understanding [how hooks work](/understanding-claude-code-hooks-system-complete-guide/) is essential to this setup.
 
@@ -52,7 +52,7 @@ Use the project's existing tooling. Do not modify files automatically unless exp
 
 The skill metadata declares which event types it handles. Claude Code's event system matches file changes against skill patterns and invokes matching skills automatically.
 
-Git Hook Integration
+## Git Hook Integration
 
 Git hooks provide another powerful event source. Configure skills to respond to commit events, branch operations, or pull request activities. For a detailed git workflow example, see [how to automate pull request review with Claude skills](/best-claude-skills-for-code-review-automation/).
 
@@ -84,7 +84,7 @@ CLAUDE_MSG=$(cat "$1")
 claude -p "Validate this commit message: $CLAUDE_MSG"
 ```
 
-Building an Event Router
+## Building an Event Router
 
 For complex setups, create a central event router skill that dispatches to specialized handlers. This pattern mirrors the mediator pattern in software architecture.
 
@@ -117,7 +117,7 @@ Custom Events
 Route the event to the appropriate handler skill based on the event type and payload. Maintain context throughout the routing.
 ```
 
-Webhook Event Handling
+## Webhook Event Handling
 
 External services can trigger Claude Skills through webhooks. Set up a webhook receiver that processes incoming events from GitHub, Slack, or custom services.
 
@@ -156,7 +156,7 @@ Or use a hosted solution with ngrok
 ngrok http 3000
 ```
 
-Event-Driven Testing Workflow
+## Event-Driven Testing Workflow
 
 Implement an event-driven testing setup that responds to code changes. the [automated testing pipeline guide](/claude-tdd-skill-test-driven-development-workflow/) covers complementary patterns for test-driven workflows:
 
@@ -182,7 +182,7 @@ Use --watch mode for appropriate test runners. Prioritize speed by running only 
 
 The debounce parameter prevents rapid-fire invocations during active editing sessions.
 
-Error Handling and Recovery
+## Error Handling and Recovery
 
 Event-driven systems require reliable error handling. Configure retry logic and fallback behaviors:
 
@@ -209,7 +209,7 @@ Fallback Actions
 - Create a tracking issue for manual review
 ```
 
-Best Practices
+## Best Practices
 
 Keep your event-driven architecture manageable with these principles:
 
@@ -223,7 +223,7 @@ Monitor event flow. Track which events fire, how skills respond, and where bottl
 
 [Decouple handlers](/how-do-i-combine-two-claude-skills-in-one-workflow/). Each skill should handle one event type effectively. Complex logic belongs in specialized skills, not the router.
 
-Conclusion
+## Conclusion
 
 Event-driven architecture unlocks powerful automation possibilities with Claude Skills. By configuring file watchers, git hooks, and webhook handlers, you create a reactive system that responds to development activities without manual intervention. Start with simple event sources, build routing logic as needs grow, and maintain reliable error handling throughout. For patterns that complement event-driven design, see [Building Stateful Agents with Claude Skills Guide](/building-stateful-agents-with-claude-skills-guide/).
 

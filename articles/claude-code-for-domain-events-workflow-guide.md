@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Domain Events Workflow Guide
 
 Domain events are a powerful architectural pattern that enables loose coupling, scalability, and traceability in modern applications. When something significant happens in your domain, like a user registering, an order being placed, or a payment being processed, domain events capture these occurrences as first-class objects that other parts of your system can react to. This guide shows you how to use Claude Code to design, implement, and maintain solid domain event workflows.
 
-Understanding Domain Events in Modern Architecture
+## Understanding Domain Events in Modern Architecture
 
 Domain events represent state changes within your business domain. Unlike technical events (like "HTTP request received" or "database connection established"), domain events carry business meaning. When a customer places an order, the "OrderPlaced" event contains all the information needed for other services to react, customer details, items purchased, shipping address, and total amount.
 
@@ -27,9 +26,9 @@ The key advantage of domain events is decoupling. The service that places the or
 
 Claude Code can help you identify where domain events make sense in your architecture. When you're discussing a feature, mention the domain event pattern: "Use domain events for this checkout flow so we can add notification and analytics handlers later without modifying the core order service."
 
-Implementing Domain Events with Claude Code
+## Implementing Domain Events with Claude Code
 
-Event Definition Best Practices
+## Event Definition Best Practices
 
 Well-designed domain events are:
 
@@ -61,7 +60,7 @@ interface OrderPlacedEvent extends DomainEvent {
 
 To get Claude Code to generate these patterns, use a prompt like: "Create domain event classes for an e-commerce system following DDD conventions. Include base Event interface, OrderPlacedEvent, PaymentProcessedEvent, and OrderShippedEvent."
 
-Event Handler Patterns
+## Event Handler Patterns
 
 Event handlers respond to domain events. Claude Code can help you implement various handler patterns:
 
@@ -88,11 +87,11 @@ class EventHandler:
                 await asyncio.sleep(2  attempt)  # Exponential backoff
 ```
 
-Building Event Sourcing Workflows
+## Building Event Sourcing Workflows
 
 Event sourcing takes domain events further by storing the complete sequence of state changes as events rather than just the current state. This provides complete audit trails and enables powerful features like temporal queries.
 
-Setting Up Event Store
+## Setting Up Event Store
 
 Your event store is the persistence layer for domain events. Claude Code can help you implement an event store that supports:
 
@@ -115,7 +114,7 @@ CREATE INDEX idx_events_type ON events(event_type);
 
 Ask Claude Code: "Create an event store implementation using PostgreSQL with JSONB for event storage. Include methods for appending events, retrieving aggregate history, and handling concurrent writes with optimistic locking."
 
-Projections and Read Models
+## Projections and Read Models
 
 Event sourcing separates write models (events) from read models (projections). Projections transform event streams into views optimized for specific queries:
 
@@ -148,11 +147,11 @@ class CustomerOrderProjection {
 }
 ```
 
-Domain Events with Message Queues
+## Domain Events with Message Queues
 
 For distributed systems, domain events often travel through message queues like RabbitMQ, Kafka, or cloud-native alternatives. Claude Code can help you integrate event publishing and consuming with these systems.
 
-Publishing Events
+## Publishing Events
 
 ```javascript
 // Event publisher using RabbitMQ
@@ -178,7 +177,7 @@ class EventPublisher {
 }
 ```
 
-Consuming Events
+## Consuming Events
 
 ```javascript
 // Event consumer with error handling
@@ -215,7 +214,7 @@ class EventConsumer {
 }
 ```
 
-Testing Domain Event Workflows
+## Testing Domain Event Workflows
 
 Claude Code excels at generating comprehensive tests for your event workflows. Here's a testing strategy:
 
@@ -248,7 +247,7 @@ describe('Order Placement Workflow', () => {
 });
 ```
 
-Actionable Tips for Domain Events with Claude Code
+## Actionable Tips for Domain Events with Claude Code
 
 1. Start with clear event definitions: Before writing code, define your events with business stakeholders. Use past-tense naming and ensure each event represents a meaningful business occurrence.
 
@@ -264,7 +263,7 @@ Actionable Tips for Domain Events with Claude Code
 
 7. Document event schemas: Maintain clear documentation of each event's structure, including all fields and their types. Claude Code can generate this from your TypeScript interfaces or Python dataclasses.
 
-Conclusion
+## Conclusion
 
 Domain events provide a foundation for building scalable, maintainable systems that can evolve over time. By using Claude Code to implement these patterns, you can rapidly develop solid event-driven architectures while following industry best practices. The key is to start with well-designed events, implement proper handling patterns, and build comprehensive testing strategies from the beginning.
 

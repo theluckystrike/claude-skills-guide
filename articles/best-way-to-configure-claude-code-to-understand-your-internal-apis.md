@@ -27,7 +27,7 @@ Claude Code, like other AI coding assistants, performs significantly better when
 
 Proper configuration transforms Claude from a generic coding assistant into an API-aware partner that understands your specific endpoints, data models, and business logic.
 
-Method 1: Using CLAUDE.md Files for API Context
+## Method 1: Using CLAUDE.md Files for API Context
 
 The most foundational approach is creating a CLAUDE.md file that documents your key APIs:
 
@@ -67,7 +67,7 @@ Rate Limits
 
 This approach works well for small to medium APIs but becomes unwieldy for large API surfaces.
 
-Method 2: Leveraging OpenAPI Specifications
+## Method 2: Leveraging OpenAPI Specifications
 
 For larger APIs, point Claude Code directly to your OpenAPI specification:
 
@@ -82,7 +82,7 @@ Claude can analyze OpenAPI specs to understand:
 - Authentication requirements
 - Example payloads
 
-Generating OpenAPI Specs from Code
+## Generating OpenAPI Specs from Code
 
 If you don't have OpenAPI specs, generate them:
 
@@ -95,7 +95,7 @@ For Node.js/Express
 npm install @apidevtools/swagger-parser
 ```
 
-Creating a CLAUDE.md that References OpenAPI
+## Creating a CLAUDE.md that References OpenAPI
 
 ```markdown
 API Reference
@@ -112,7 +112,7 @@ Key endpoints for this project:
 Always check the OpenAPI spec for complete parameter definitions.
 ```
 
-Method 3: Using Model Context Protocol (MCP) for Live API Access
+## Method 3: Using Model Context Protocol (MCP) for Live API Access
 
 MCP servers can provide Claude with real-time API information:
 
@@ -138,7 +138,7 @@ const server = {
 };
 ```
 
-Setting Up MCP for Your APIs
+## Setting Up MCP for Your APIs
 
 1. Create an MCP server that wraps your API documentation
 2. Configure Claude Code to use the MCP server
@@ -162,7 +162,7 @@ export const apiServer = {
 };
 ```
 
-Method 4: Creating API-Specific Claude Skills
+## Method 4: Creating API-Specific Claude Skills
 
 Claude Skills allow you to package API knowledge into reusable units:
 
@@ -211,13 +211,13 @@ Use the staging environment for all testing:
 - Test tokens available in 1Password "API Test Accounts"
 ```
 
-Installing API Skills
+## Installing API Skills
 
 ```bash
 claude config add-skill ./skills/api-helper.claude
 ```
 
-Method 5: Environment-Specific Configuration
+## Method 5: Environment-Specific Configuration
 
 Create separate configurations for different environments:
 
@@ -244,7 +244,7 @@ Environment Configuration
 - Production: Tokens provided by CI/CD environment
 ```
 
-Best Practices for API-Aware Claude Configuration
+## Best Practices for API-Aware Claude Configuration
 
 1. Keep Documentation Live
 
@@ -301,7 +301,7 @@ In project structure
  api-v3.md      # Beta/new endpoints
 ```
 
-Putting It All Together
+## Putting It All Together
 
 A comprehensive setup combines all methods:
 
@@ -337,12 +337,11 @@ Common Patterns
 See `docs/api/patterns.md` for retry logic, error handling, and pagination conventions.
 ```
 
-Conclusion
+## Conclusion
 
 Configuring Claude Code for internal APIs is an investment that pays dividends in developer productivity, code quality, and reduced debugging time. Start with CLAUDE.md documentation, graduate to OpenAPI integration for larger APIs, and consider MCP servers for the most dynamic API surfaces. The key is keeping your configuration as current as your actual API.
 
 Remember: Claude Code is only as effective as the context you provide. Invest in your API configuration, and Claude will become an expert in your API ecosystem.
-
 
 Related Reading
 

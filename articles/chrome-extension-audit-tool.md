@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Audit Tool: A Developer's Guide"
 description: "Learn how to audit Chrome extensions for security, performance, and code quality. Practical tools and techniques for developers and power users."
@@ -14,7 +13,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Chrome Extension Audit Tool: A Developer's Guide
 
@@ -22,7 +20,7 @@ Chrome extensions add powerful functionality to your browser, but they also intr
 
 This guide covers practical approaches to auditing Chrome extensions, from built-in browser tools to custom scripts you can build yourself.
 
-Why Audit Chrome Extensions
+## Why Audit Chrome Extensions
 
 Chrome extensions run with significant permissions. A malicious or poorly-written extension can:
 
@@ -34,11 +32,11 @@ Chrome extensions run with significant permissions. A malicious or poorly-writte
 
 Even legitimate extensions can become security liabilities when developers abandon them or when dependencies contain vulnerabilities. Regular audits help you maintain control over your browser environment.
 
-Built-in Chrome Auditing Features
+## Built-in Chrome Auditing Features
 
 Chrome provides several native tools for examining extensions without installing additional software.
 
-Extension Manager
+## Extension Manager
 
 Access `chrome://extensions` to view all installed extensions. Enable Developer mode to see additional details including:
 
@@ -48,19 +46,19 @@ Access `chrome://extensions` to view all installed extensions. Enable Developer 
 - Site access settings
 - Service worker status
 
-Chrome DevTools Security Panel
+## Chrome DevTools Security Panel
 
 For extensions that inject content scripts, open DevTools (F12) and navigate to the Security panel. This shows whether pages are served over HTTPS and identifies potential security issues with loaded resources.
 
-Lighthouse Audits
+## Lighthouse Audits
 
 The Lighthouse tool built into Chrome DevTools includes an extension audit category. Run these audits on pages where extensions are active to detect performance impacts and security concerns.
 
-Auditing Extension Permissions
+## Auditing Extension Permissions
 
 The permissions an extension requests directly correlate with its potential attack surface. Review permissions systematically before installing any extension.
 
-Common Permission Categories
+## Common Permission Categories
 
 | Permission | Risk Level | Description |
 |------------|------------|-------------|
@@ -73,7 +71,7 @@ Common Permission Categories
 
 Extensions requesting `tabs`, `history`, or `webRequest` permissions warrant extra scrutiny. Ask yourself whether the extension's functionality genuinely requires this access level.
 
-Building a Custom Audit Script
+## Building a Custom Audit Script
 
 For automated auditing across multiple extensions or for CI/CD integration, build a custom Node.js script that analyzes extension manifests and source files.
 
@@ -128,11 +126,11 @@ console.log(JSON.stringify(result, null, 2));
 
 This script identifies common issues in extension manifests. Extend it to check for specific patterns in content scripts, background service workers, and external connections.
 
-Analyzing Extension Source Code
+## Analyzing Extension Source Code
 
 Beyond the manifest, examine the actual JavaScript files for potential security issues.
 
-Static Analysis Patterns
+## Static Analysis Patterns
 
 Create a simple scanner that flags concerning code patterns:
 
@@ -164,7 +162,7 @@ function scanForIssues(sourceDir) {
 }
 ```
 
-Dependency Checking
+## Dependency Checking
 
 Extensions often rely on third-party libraries. Audit these dependencies by:
 
@@ -173,11 +171,11 @@ Extensions often rely on third-party libraries. Audit these dependencies by:
 3. Running `npm audit` if package.json exists
 4. Checking known vulnerabilities in dependency databases
 
-Performance Auditing
+## Performance Auditing
 
 Extensions can significantly impact browser performance through content scripts, service workers, and background processes.
 
-Measuring Performance Impact
+## Measuring Performance Impact
 
 Use the Chrome Task Manager to see CPU and memory usage per extension:
 
@@ -185,7 +183,7 @@ Use the Chrome Task Manager to see CPU and memory usage per extension:
 2. Sort by CPU or memory to identify resource-heavy extensions
 3. Look for extensions running continuously versus only when needed
 
-Service Worker Analysis
+## Service Worker Analysis
 
 Manifest V3 extensions use service workers instead of background pages. Check service worker behavior:
 
@@ -196,11 +194,11 @@ chrome.runtime.getManifest().background.service_worker
 
 Monitor service worker lifecycle in DevTools under the Background Services section. Excessive wake-ups indicate potential performance issues.
 
-Automating Extension Audits
+## Automating Extension Audits
 
 For organizations managing Chrome extensions at scale, automation is crucial.
 
-CI/CD Integration
+## CI/CD Integration
 
 Incorporate extension auditing into your build pipeline:
 
@@ -212,7 +210,7 @@ Example GitHub Actions workflow
     scan-extensions ./dist --fail-on-high
 ```
 
-Policy-Based Enforcement
+## Policy-Based Enforcement
 
 Chrome Enterprise policies allow organizations to whitelist approved extensions and block others. Configure these policies through:
 
@@ -220,7 +218,7 @@ Chrome Enterprise policies allow organizations to whitelist approved extensions 
 - Windows Group Policy for Windows deployments
 - macOS Configuration Profiles for Apple devices
 
-Best Practices for Extension Security
+## Best Practices for Extension Security
 
 Follow these guidelines when developing or selecting extensions:
 
@@ -232,7 +230,7 @@ Source verification: Install extensions only from the Chrome Web Store, or verif
 
 Periodic review: Schedule quarterly audits of all installed extensions. Remove unused tools.
 
-Conclusion
+## Conclusion
 
 Chrome extension auditing is a critical security practice for developers and power users. Start with the built-in tools in Chrome to understand what permissions your extensions request, then build custom scripts for automated, repeatable audits. The investment in auditing pays dividends through improved security posture, better performance, and reduced attack surface.
 

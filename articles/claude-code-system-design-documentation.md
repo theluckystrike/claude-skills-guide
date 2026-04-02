@@ -14,7 +14,7 @@ tags: [claude-code, claude-skills]
 
 Creating clear system design documentation is essential for maintaining complex software projects. Claude Code provides powerful capabilities to generate, maintain, and evolve system design documentation that keeps pace with your architecture. Whether you are onboarding new engineers, preparing for a technical audit, or scaling a monolith into microservices, having accurate and up-to-date documentation is the difference between a team that moves fast and one that spends half its time reconstructing context.
 
-Understanding System Design Documentation Requirements
+## Understanding System Design Documentation Requirements
 
 System design documentation must capture multiple dimensions of your architecture: component relationships, data flows, API contracts, deployment topology, and decision rationale. Traditional documentation often becomes outdated within weeks of creation because it lives separately from the code. Developers update the implementation but not the docs, and soon the docs become actively misleading.
 
@@ -30,7 +30,7 @@ When documenting system architecture, you need to address several distinct conce
 
 Claude Code can analyze your codebase and produce diagrams, API specifications, and architectural decision records that stay synchronized with your implementation. When you run it against the same codebase each sprint, you get a living document rather than a snapshot that decays.
 
-Generating Architecture Overviews with Claude Code
+## Generating Architecture Overviews with Claude Code
 
 Claude Code can analyze your project structure and generate comprehensive architecture documentation. By examining your codebase, it identifies key components, their responsibilities, and interaction patterns.
 
@@ -46,7 +46,7 @@ Format the output as markdown."
 
 Claude Code will traverse your directory structure, read configuration files, examine import graphs, and produce a component map. For large repositories this can surface dependencies that even senior engineers have lost track of.
 
-Documenting Component Relationships
+## Documenting Component Relationships
 
 The YAML format below is a useful starting point for capturing service topology. Claude Code can generate this from your Docker Compose files, Kubernetes manifests, or service configuration directories:
 
@@ -91,7 +91,7 @@ services:
 
 Claude Code can transform such architecture definitions into professional documentation suitable for stakeholder review. It can also invert this process. reading your existing configuration files and generating the YAML overview from them, which is useful when you are documenting a system that was never formally described.
 
-Generating Sequence Diagrams
+## Generating Sequence Diagrams
 
 Beyond static component maps, Claude Code can generate Mermaid sequence diagrams that capture how services interact during key workflows:
 
@@ -118,7 +118,7 @@ sequenceDiagram
 
 Embedding these diagrams in your documentation gives readers a concrete mental model of how a user action flows through the system.
 
-API Documentation Generation
+## API Documentation Generation
 
 API documentation forms the contract between services and consumers. Claude Code excels at generating OpenAPI specifications from implementation code, ensuring your documentation accurately reflects actual behavior.
 
@@ -177,7 +177,7 @@ paths:
 
 The `frontend-design` skill complements API documentation by generating frontend integration examples showing how clients should consume your APIs. This end-to-end documentation approach reduces integration friction significantly. instead of handing a frontend team a raw OpenAPI spec, you can provide fully worked TypeScript client code alongside the spec.
 
-Database Schema Documentation
+## Database Schema Documentation
 
 Database schema documentation often lags behind implementation in traditional projects. Claude Code can reverse-engineer your existing databases and generate comprehensive data dictionaries, relationship diagrams, and migration guides.
 
@@ -216,7 +216,7 @@ For a Prisma schema, Claude Code can produce a data dictionary like this:
 
 This kind of table is far more useful to a new engineer than the raw schema file because it captures intent, not just structure.
 
-Using Claude Skills for Documentation Workflows
+## Using Claude Skills for Documentation Workflows
 
 Several Claude skills enhance system design documentation workflows. The `tdd` skill helps document test strategies alongside your architecture, ensuring your documentation explains not just what the system does but how it's verified. Rather than a separate "testing guide" document, the test strategy becomes integrated with the component documentation. readers can see what test coverage exists for each service boundary.
 
@@ -226,7 +226,7 @@ The `pdf` skill enables generation of polished documentation packages suitable f
 
 The `xlsx` skill is useful for documentation matrices. tracking which services have ADRs, which endpoints have OpenAPI coverage, and which database tables have data dictionary entries. A coverage matrix makes gaps immediately visible and helps teams prioritize documentation work.
 
-Documenting Design Decisions
+## Documenting Design Decisions
 
 Architecture Decision Records (ADRs) capture the reasoning behind technical choices. Without them, the reasons behind major architectural decisions evaporate when the people who made them leave the team. Claude Code can generate ADRs in a standardized format, making it easy to maintain a searchable archive of design decisions.
 
@@ -274,7 +274,7 @@ Consequences
 
 Storing ADRs as markdown files in the repository means they are version-controlled alongside the code they describe. When a new engineer reads the codebase, they can read the ADRs in chronological order and understand how the architecture evolved. which is often more valuable than a static architecture diagram.
 
-Automation Strategies
+## Automation Strategies
 
 Automating documentation updates keeps your docs current without manual effort. Claude Code can run as part of your CI pipeline, generating fresh documentation with each build and flagging any components lacking adequate documentation.
 
@@ -299,7 +299,7 @@ Running these checks in CI creates a documentation quality gate. A pull request 
 
 The `xlsx` skill can also help by generating documentation matrices tracking coverage across components. A spreadsheet that maps services to their documentation artifacts. ADR, sequence diagram, OpenAPI spec, runbook. gives engineering managers visibility into documentation health without reading every file.
 
-Comparing Documentation Approaches
+## Comparing Documentation Approaches
 
 | Approach | Accuracy | Maintenance Effort | Stakeholder Readability |
 |----------|----------|--------------------|------------------------|
@@ -311,7 +311,7 @@ Comparing Documentation Approaches
 
 The Claude Code approach occupies the best position: it reads the actual source of truth (your code) and produces human-readable documentation without requiring you to annotate every file manually. The CI pipeline integration pushes this further by removing the manual trigger entirely.
 
-Best Practices for System Design Documentation
+## Best Practices for System Design Documentation
 
 Keep documentation modular and version-controlled alongside your code. A single monolithic architecture document becomes unwieldy and prone to merge conflicts. Instead, maintain separate files for each major concern: component overview, API reference, data dictionary, ADR archive, and operational runbooks.
 
@@ -324,7 +324,6 @@ Document not just the happy path but also failure modes, recovery procedures, an
 Review documentation during code reviews. Treat inadequate documentation the same as code quality issues. With Claude Code's assistance, generating initial documentation takes minutes rather than hours, making comprehensive documentation achievable for every project. The barrier to good documentation is no longer the time it takes to write. it is simply remembering to ask Claude Code to generate it.
 
 ---
-
 
 Related Reading
 

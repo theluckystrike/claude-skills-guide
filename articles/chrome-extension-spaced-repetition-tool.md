@@ -16,13 +16,13 @@ score: 7
 
 Spaced repetition remains one of the most effective learning techniques available. When applied to developer learning, whether memorizing API parameters, syntax rules, or design patterns, a well-built Chrome extension spaced repetition tool can dramatically accelerate your technical knowledge retention. This guide walks you through building one from scratch.
 
-Why Developers Need Spaced Repetition
+## Why Developers Need Spaced Repetition
 
 Programming requires memorizing vast amounts of information: command-line flags, library APIs, regex patterns, keyboard shortcuts. Traditional study sessions lead to rapid forgetting. Spaced repetition combats this by presenting information at increasing intervals, strengthening neural pathways through repeated retrieval practice.
 
 A Chrome extension offers advantages over standalone apps. It can capture content directly from documentation pages, Stack Overflow answers, and tutorial sites. The learning happens where you already work, your browser, rather than requiring context switching to a separate application.
 
-Core Architecture
+## Core Architecture
 
 A Chrome extension spaced repetition system consists of three primary components:
 
@@ -32,7 +32,7 @@ A Chrome extension spaced repetition system consists of three primary components
 
 The SM-2 algorithm (used by Anki) calculates optimal review intervals. Each card stores a difficulty rating, and after each review, the algorithm adjusts when you should see that card again.
 
-Implementing the Storage Layer
+## Implementing the Storage Layer
 
 IndexedDB provides better performance and capacity than chrome.storage for large card collections. Here is a basic schema:
 
@@ -80,7 +80,7 @@ export async function addCard(deck, front, back) {
 }
 ```
 
-Building the Content Script
+## Building the Content Script
 
 The content script handles two responsibilities: capturing selected text to create cards and displaying review prompts when triggered.
 
@@ -136,7 +136,7 @@ chrome.runtime.onMessage.addListener((message) => {
 });
 ```
 
-Implementing the SM-2 Algorithm
+## Implementing the SM-2 Algorithm
 
 The background script manages the review schedule using a JavaScript implementation of SuperMemo-2:
 
@@ -184,7 +184,7 @@ async function getCardsForReview() {
 }
 ```
 
-Creating Cards from Browser Content
+## Creating Cards from Browser Content
 
 One powerful feature is capturing content directly from web pages:
 
@@ -211,7 +211,7 @@ chrome.contextMenus?.onClicked.addListener(async (info, tab) => {
 });
 ```
 
-Practical Usage Patterns
+## Practical Usage Patterns
 
 When using your spaced repetition tool effectively, organize cards into focused decks. For developers, useful deck categories include:
 
@@ -223,7 +223,7 @@ When using your spaced repetition tool effectively, organize cards into focused 
 
 Review during natural breaks, after completing a task, while waiting for builds, or at scheduled intervals. The key is consistency over duration. Fifteen minutes daily outperforms occasional hour-long cram sessions.
 
-Extension Manifest Requirements
+## Extension Manifest Requirements
 
 Your manifest.json must declare appropriate permissions:
 
@@ -250,13 +250,13 @@ Your manifest.json must declare appropriate permissions:
 }
 ```
 
-Next Steps
+## Next Steps
 
 This foundation supports numerous enhancements: sync across devices using a backend, import/export card decks, track learning statistics, integrate with Obsidian or Notion for bidirectional linking, or add image support for visual memorization.
 
 Building your own Chrome extension spaced repetition tool gives you full control over your learning system. Tailor card formats, review algorithms, and interface interactions to match your workflow precisely. The investment in setup pays dividends as you systematically consolidate technical knowledge over time.
 
-Step-by-Step Guide: Shipping a Spaced Repetition Extension
+## Step-by-Step Guide: Shipping a Spaced Repetition Extension
 
 Here is a concrete approach to taking a spaced repetition extension from prototype to published Chrome extension.
 
@@ -270,7 +270,7 @@ Step 4. Implement the review session. The review session is the core experience.
 
 Step 5. Add a daily reminder notification. Chrome extensions can send desktop notifications to remind users to complete their daily reviews. Claude Code generates the alarm-based reminder that fires at the user's configured daily review time, checks the number of cards due, and sends a notification with the due count.
 
-Common Pitfalls
+## Common Pitfalls
 
 Using Manifest V2 APIs in a Manifest V3 extension. Chrome has sunset Manifest V2 and will reject new V2 extensions from the Web Store. The most common V2 APIs used accidentally are chrome.extension.getBackgroundPage() (replaced by service workers) and persistent background pages. Claude Code reviews your extension code and flags any V2 API usage.
 
@@ -282,7 +282,7 @@ Not requesting permissions narrowly. The Chrome Web Store review process rejects
 
 Testing only in Chrome. If you plan to publish to the Firefox Add-ons store or Edge Add-ons, test in those browsers early. Manifest V3 support differs across browsers. Claude Code generates a compatibility notes file that documents known differences between Chrome, Firefox, and Edge for the APIs your extension uses.
 
-Best Practices
+## Best Practices
 
 Separate content script logic from background logic clearly. Content scripts run in the context of web pages and have access to the DOM. Background service workers run in a separate context with access to extension APIs. Communication between them uses chrome.runtime.sendMessage. Claude Code generates the message protocol type definitions that make the communication contract explicit and type-safe.
 
@@ -292,7 +292,7 @@ Add keyboard shortcuts for review ratings. Power users rate cards much faster wi
 
 Implement undo for rating mistakes. Accidentally rating a card incorrectly changes its schedule significantly. An undo stack that remembers the last few rating actions lets users correct mistakes. Claude Code generates the undo system with a keyboard shortcut and an undo button in the review UI.
 
-Study Algorithm Customization
+## Study Algorithm Customization
 
 The SM-2 algorithm that powers most spaced repetition systems was designed in the 1980s for flashcard memorization. Modern research suggests several improvements that Claude Code can generate for your extension.
 
@@ -304,16 +304,13 @@ Contextual review sessions. Some knowledge is easier to recall in the context wh
 
 Adaptive daily limits. Fixed daily review limits cause card backlogs after missed days. Claude Code generates the adaptive limit algorithm that increases the daily review target after missed days (catching up gradually) and decreases it when your retention rate drops below a threshold (preventing overwhelm), keeping your review load sustainable without manual adjustment.
 
-
-Integration Patterns
+## Integration Patterns
 
 Obsidian plugin integration. Claude Code generates a companion Obsidian plugin that reads flashcard definitions from your vault's markdown files and syncs them to your Chrome extension's IndexedDB through a local API. This lets you manage cards in Obsidian and review them in the browser.
 
 GitHub Gist sync. For users who want to back up their card decks without setting up a server, Claude Code generates the GitHub Gist sync module that exports your card decks as JSON, stores them in a private Gist, and imports them back on a new device.
 
 Anki-compatible export. Claude Code generates the Anki deck export function that converts your IndexedDB cards into an Anki-compatible format. Users who want to move to Anki or share their decks with Anki users can export with one click from the extension popup.
-
-
 
 Related Reading
 

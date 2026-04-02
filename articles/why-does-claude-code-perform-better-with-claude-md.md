@@ -13,12 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 Why Does Claude Code Perform Better with Claude MD?
 
 If you have used Claude Code for any significant development work, you have likely noticed that its performance improves dramatically when you provide structured guidance through Claude MD files. This is not a placebo effect or coincidence. The improvement stems from fundamental architectural reasons related to how Claude Code processes context and interprets instructions.
 
-Understanding Claude MD Files
+## Understanding Claude MD Files
 
 Claude MD files are Markdown documents that contain instructions, conventions, examples, and context that Claude Code loads when working on your project. Unlike ephemeral chat messages that disappear after each session, Claude MD files persist across sessions and provide consistent, reliable guidance.
 
@@ -26,7 +25,7 @@ When Claude Code reads a `CLAUDE.md` file in your project root, it treats the co
 
 The file acts as a first-class citizen in Claude Code's context window. Before Claude Code reads a single line of your source files or processes your first prompt, it has already internalized your project's rules, patterns, and constraints. This front-loaded context loading is fundamentally different from relying on in-session instructions that must be repeated or inferred from code analysis.
 
-The Context Problem Without Claude MD
+## The Context Problem Without Claude MD
 
 Without Claude MD files, Claude Code must infer your project's conventions, coding standards, and preferences from the existing code and your conversational instructions. This inference process introduces several problems:
 
@@ -40,15 +39,15 @@ Pattern drift: Without anchored conventions, Claude Code may gradually drift tow
 
 Hallucinated dependencies: Without knowing what libraries your project uses, Claude Code may import packages you do not have installed, reference internal utilities that do not exist, or suggest approaches that conflict with your existing architecture.
 
-The Inference Tax
+## The Inference Tax
 
 Every time Claude Code lacks explicit instructions, it pays an inference tax. it must deduce the correct approach from limited signals. If your codebase has inconsistencies (most real codebases do), Claude Code receives contradictory signals and must make an arbitrary choice. A Claude MD file eliminates this tax entirely for the patterns it covers.
 
-How Claude MD Solves These Issues
+## How Claude MD Solves These Issues
 
 When you create a well-structured Claude MD file, you provide Claude Code with persistent context that transforms its output quality.
 
-Project-Specific Conventions
+## Project-Specific Conventions
 
 A Claude MD file tells Claude Code exactly how your project handles things:
 
@@ -71,7 +70,7 @@ Testing
 
 With these instructions, Claude Code immediately produces code that matches your standards without needing to analyze your entire codebase first.
 
-Domain-Specific Knowledge
+## Domain-Specific Knowledge
 
 Claude MD files can include domain knowledge specific to your project:
 
@@ -91,7 +90,7 @@ Transaction Flow
 
 When working on payment-related features, Claude Code now understands your specific flow and produces more accurate implementations.
 
-Tool and Skill Integration
+## Tool and Skill Integration
 
 Claude MD files can reference which skills Claude Code should use for different tasks:
 
@@ -106,7 +105,7 @@ Skills to Use
 
 This creates a powerful combination where Claude Code knows both what you want and which specialized tools to employ.
 
-Prohibited Patterns and Anti-Patterns
+## Prohibited Patterns and Anti-Patterns
 
 One of the most underutilized applications of Claude MD is documenting what you do NOT want. Every codebase has learned lessons. patterns tried and abandoned, libraries that caused problems, approaches that do not scale. Documenting these saves Claude Code from recommending already-rejected solutions:
 
@@ -127,9 +126,9 @@ Patterns
 
 This negative specification is as valuable as positive convention documentation. Without it, Claude Code may confidently generate technically correct code using patterns your team has deliberately moved away from.
 
-Practical Examples
+## Practical Examples
 
-Before Claude MD
+## Before Claude MD
 
 Without a Claude MD file, asking Claude Code to create a new API endpoint might produce:
 
@@ -143,7 +142,7 @@ app.post('/api/users', async (req, res) => {
 
 This code technically works but lacks validation, error handling, authentication, and logging. things your project likely requires.
 
-After Claude MD
+## After Claude MD
 
 With proper Claude MD instructions:
 
@@ -171,7 +170,7 @@ const createUser = async (req, res, next) => {
 
 The difference is dramatic and immediate.
 
-Deeper Example: Database Query Patterns
+## Deeper Example: Database Query Patterns
 
 Consider a more complex scenario where your team has established specific database query conventions. Without Claude MD, you might get generic Prisma code:
 
@@ -230,7 +229,7 @@ export class UserRepository extends BaseRepository {
 
 This output is not just better code. it is code that fits directly into your architecture without modification.
 
-Claude MD vs. In-Session Instructions: A Comparison
+## Claude MD vs. In-Session Instructions: A Comparison
 
 Understanding the difference between Claude MD instructions and conversational instructions helps you decide what belongs in each place.
 
@@ -247,7 +246,7 @@ Understanding the difference between Claude MD instructions and conversational i
 
 The key insight is that Claude MD handles the structural, stable aspects of your project, while in-session instructions handle dynamic, task-specific context. Use both layers together rather than treating them as alternatives.
 
-Multi-File Claude MD Strategy
+## Multi-File Claude MD Strategy
 
 For larger projects, you can use multiple Claude MD files to organize different aspects of your guidance:
 
@@ -258,7 +257,7 @@ For larger projects, you can use multiple Claude MD files to organize different 
 
 Claude Code reads all matching files, combining their guidance for comprehensive context.
 
-Directory-Level Claude MD Files
+## Directory-Level Claude MD Files
 
 You can also place Claude MD files in subdirectories. A `CLAUDE.md` inside `src/api/` applies only when Claude Code is working within that directory tree. This enables highly targeted guidance without polluting the global project context:
 
@@ -278,7 +277,7 @@ project/
 
 This hierarchical approach keeps each Claude MD file focused and easy to maintain. When Claude Code works on a file in `src/api/`, it merges the global project instructions with the API-specific instructions for maximum relevance.
 
-What Goes in Each Level
+## What Goes in Each Level
 
 | Level | Content |
 |---|---|
@@ -287,7 +286,7 @@ What Goes in Each Level
 | Test directory `CLAUDE.md` | Test framework config, mock conventions, fixture patterns |
 | Infrastructure `CLAUDE.md` | Cloud provider specifics, deployment commands, environment variables |
 
-Measuring the Improvement
+## Measuring the Improvement
 
 You can verify the improvement by tracking these metrics:
 
@@ -297,7 +296,7 @@ You can verify the improvement by tracking these metrics:
 
 3. Time to completion: Measure how long it takes to get working code from initial request to merged PR.
 
-A Realistic Improvement Breakdown
+## A Realistic Improvement Breakdown
 
 Based on the types of friction that Claude MD eliminates, you can expect improvement across several dimensions:
 
@@ -313,7 +312,7 @@ Based on the types of friction that Claude MD eliminates, you can expect improve
 
 The cumulative effect of eliminating these issues is a measurably shorter feedback loop. Code that previously required three rounds of revision to meet standards often lands correctly on the first attempt.
 
-Best Practices for Claude MD
+## Best Practices for Claude MD
 
 Keep your Claude MD files focused and maintainable:
 
@@ -325,7 +324,7 @@ Use examples: Show Claude Code exactly what you expect rather than describing it
 
 Test and iterate: If Claude Code produces unexpected results, refine your Claude MD instructions.
 
-Writing Effective Instructions
+## Writing Effective Instructions
 
 The quality of your Claude MD instructions directly determines the quality of Claude Code's output. Here are patterns that work versus patterns that do not:
 
@@ -360,11 +359,11 @@ Specific instruction (strong):
 
 The difference is actionable specificity. Claude Code cannot guess what "good error handling" means in your codebase, but it can follow an explicit list of requirements precisely.
 
-Version-Controlling Your Claude MD
+## Version-Controlling Your Claude MD
 
 Treat your Claude MD files as first-class project assets. Commit them to version control, include them in onboarding documentation, and review changes to them in pull requests just as you would review changes to source code. When a new team member joins, a well-written Claude MD file means their first day with Claude Code produces output that already matches team standards. no gradual calibration period required.
 
-Common Claude MD Mistakes to Avoid
+## Common Claude MD Mistakes to Avoid
 
 Mistake 1: One massive file
 A single 500-line Claude MD file is hard to maintain and causes context bloat. Split it into focused files.

@@ -16,7 +16,7 @@ score: 8
 
 Java developers working with Mockito often spend significant time writing test doubles, configuring stubs, and verifying interactions. Claude Code accelerates this workflow by generating boilerplate, suggesting edge cases, and helping structure tests that follow best practices. This guide shows practical approaches for combining Claude Code with your Mockito-based testing, from project setup through advanced mocking techniques and CI integration.
 
-Setting Up Mockito with Claude Code
+## Setting Up Mockito with Claude Code
 
 When working on a Java project with Mockito, start by ensuring your dependencies are correctly configured. Claude Code can verify your `pom.xml` or `build.gradle` includes the right testing dependencies.
 
@@ -64,7 +64,7 @@ class OrderServiceTest {
 
 Ask Claude to verify your setup by pasting your `pom.xml` or build file and requesting a compatibility check. Claude will identify version conflicts, missing transitive dependencies, or outdated artifact coordinates.
 
-Generating Test Classes with Claude Code
+## Generating Test Classes with Claude Code
 
 Claude Code excels at generating test classes quickly. When you need a new test for a service class, provide the source class and request a complete test file. For example, if you have an `OrderService` that depends on `PaymentGateway`, ask Claude to create a test that mocks the dependency:
 
@@ -147,7 +147,7 @@ class OrderServiceTest {
 
 Notice how Claude adds the third test for rollback behavior, a common edge case developers overlook. When you paste your production class and ask for tests, Claude reads the method signatures, infers expected behavior from names and parameter types, and fills in plausible assertions. You review and adjust, but the scaffolding is already 80% complete.
 
-Working with Argument Matchers
+## Working with Argument Matchers
 
 Mockito's argument matchers can be tricky. Claude Code helps construct proper matchers and avoids common pitfalls like mixing raw values with matchers in the same call, a mistake that throws `InvalidUseOfMatchersException` at runtime.
 
@@ -178,7 +178,7 @@ assertNotNull(capturedOrder.getCreatedAt());
 
 `ArgumentCaptor` is particularly useful when you want to verify the exact object your code passed to a dependency, not just that the method was called, but that the data was constructed correctly before being handed off.
 
-Testing Private Methods and Legacy Code
+## Testing Private Methods and Legacy Code
 
 When testing legacy code or private methods, you have several strategies. Claude Code can recommend the best approach based on your situation:
 
@@ -221,7 +221,7 @@ void shouldHandleStaticDependency() {
 
 The try-with-resources pattern ensures the static mock is closed after the test, preventing interference with other tests in the suite.
 
-Stubbing Exceptions and Complex Return Sequences
+## Stubbing Exceptions and Complex Return Sequences
 
 Real-world services often need to handle retries, partial failures, and error propagation. Mockito's chained stubbing handles these scenarios cleanly:
 
@@ -251,7 +251,7 @@ void shouldThrowSpecificExceptionOnPermanentFailure() {
 
 Ask Claude to generate tests that cover retry boundaries, such as exhausting all retry attempts, which are among the most commonly missed test cases in service layer code.
 
-Using the TDD Skill for Test-First Development
+## Using the TDD Skill for Test-First Development
 
 Activate the built-in `tdd` skill to guide Claude toward test-first development:
 
@@ -273,7 +273,7 @@ A typical TDD prompt session might look like:
 
 Claude writes the test with a mocked `EmailClient`, including a `verify` call that confirms the email was sent with the correct order details. You implement `NotificationService`, run the test, and it passes. The mock ensures you never hit a real email server during development.
 
-Managing Test Data with Fixtures
+## Managing Test Data with Fixtures
 
 Create reusable test fixtures to keep tests clean:
 
@@ -344,7 +344,7 @@ void shouldNotApplyDiscountForStandardCustomers() {
 
 Fixtures remove duplicated builder calls from individual tests, making them more readable and easier to update when your domain model changes. Ask Claude to generate a `TestFixtures` class from your entity definitions, it will scan your builder methods and produce sensible defaults for each field.
 
-Mockito vs. Other Java Mocking Approaches
+## Mockito vs. Other Java Mocking Approaches
 
 Understanding when to use Mockito versus alternatives helps you pick the right tool. Claude can explain these trade-offs in the context of your project:
 
@@ -365,7 +365,7 @@ Mockito 5.x added built-in support for mocking final classes without PowerMock, 
 private FinalDependency finalDep; // Works out of the box
 ```
 
-Integrating with CI/CD Pipelines
+## Integrating with CI/CD Pipelines
 
 Run your Mockito tests as part of your continuous integration:
 
@@ -413,7 +413,7 @@ jobs:
 
 Ask Claude to extend this workflow with parallel test execution, test result summaries posted to pull requests, or Slack notifications on failure.
 
-Common Mockito Patterns
+## Common Mockito Patterns
 
 Several patterns appear frequently in Mockito-based testing:
 
@@ -472,7 +472,7 @@ doAnswer(invocation -> {
 }).when(fileStorage).save(any());
 ```
 
-Leveraging Claude Skills for Testing
+## Leveraging Claude Skills for Testing
 
 Beyond the tdd skill, several other skills enhance Java testing workflows:
 
@@ -482,7 +482,7 @@ Beyond the tdd skill, several other skills enhance Java testing workflows:
 
 Configure these skills in your project's CLAUDE.md to establish consistent testing practices. A well-configured CLAUDE.md file might specify preferred assertion libraries (AssertJ vs JUnit assertions), fixture naming patterns, and which classes are considered infrastructure and should always be mocked.
 
-Debugging Mock Behavior
+## Debugging Mock Behavior
 
 When tests fail unexpectedly, check your mock configuration:
 
@@ -511,10 +511,9 @@ For hard-to-diagnose failures, ask Claude to explain a specific stack trace. Pas
 
 Claude can also suggest adding `@MockitoSettings(strictness = Strictness.LENIENT)` as a temporary diagnostic step, then help you fix the underlying issue properly rather than suppressing the warning permanently.
 
-Summary
+## Summary
 
 Claude Code transforms your Mockito testing workflow by generating boilerplate, suggesting edge cases, and helping structure maintainable tests. Focus on writing clear tests that verify behavior rather than implementation details. Use the `tdd` skill for test-first development, create reusable fixtures to reduce duplication, use `ArgumentCaptor` for detailed interaction verification, and integrate testing into your CI pipeline for consistent confidence in your codebase. The combination of Claude's code generation and Mockito's expressive API means you spend more time thinking about what your code should do and less time on the mechanics of writing the tests themselves.
-
 
 Related Reading
 

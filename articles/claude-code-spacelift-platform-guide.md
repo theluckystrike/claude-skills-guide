@@ -13,12 +13,9 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code Spacelift Platform Guide
-
 Infrastructure as Code (IaC) has evolved significantly, and combining Claude Code with Spacelift creates a powerful workflow for managing cloud resources intelligently. This guide shows developers how to use Claude Code's natural language capabilities with Spacelift's policy engine to build smarter, more compliant infrastructure automation.
 
-Understanding the Spacelift Integration
+## Understanding the Spacelift Integration
 
 Spacelift is a sophisticated IaC management platform that brings policy-as-code, workflow automation, and collaborative infrastructure management to Terraform, Pulumi, and CloudFormation stacks. When you add Claude Code to this mix, you gain an intelligent partner that can interpret requirements, generate configuration, explain errors, and suggest optimizations.
 
@@ -32,7 +29,7 @@ The integration works through Spacelift's exposed APIs and webhook system. Claud
 
 Where Spacelift provides the enforcement layer, Claude Code provides the intelligence layer, translating business requirements into infrastructure code, and infrastructure errors into actionable fixes.
 
-Setting Up the Connection
+## Setting Up the Connection
 
 Before connecting Claude Code to Spacelift, ensure you have appropriate API credentials. Spacelift provides service accounts with scoped permissions for exactly this purpose.
 
@@ -56,9 +53,9 @@ curl -X POST \
 
 Once connectivity is confirmed, Claude Code can use this API surface to query stack states, trigger runs, and retrieve run logs for analysis.
 
-Practical Examples
+## Practical Examples
 
-Generating Infrastructure Configurations
+## Generating Infrastructure Configurations
 
 Suppose you need to set up a new AWS ECS cluster with specific requirements. Instead of writing Terraform from scratch, describe your needs to Claude Code:
 
@@ -108,7 +105,7 @@ module "ecs_cluster" {
 
 After generation, ask Claude Code to explain the configuration choices and flag anything that needs to be customized for your environment. This is more educational than copy-pasting from examples, because you end up understanding what you've deployed.
 
-Policy Review Workflows
+## Policy Review Workflows
 
 Spacelift's policy engine uses Open Policy Agent (OPA) Rego language. Writing these policies can be challenging. Claude Code's understanding of Rego lets you generate policies from natural language compliance requirements rather than writing raw Rego from scratch.
 
@@ -151,7 +148,7 @@ deny[msg] {
 
 A useful workflow is to write your compliance requirement in plain English, paste it to Claude Code, and ask it to produce the Rego policy. Then ask Claude Code to write test cases for the policy using OPA's built-in testing framework, this catches edge cases before the policy reaches production.
 
-Troubleshooting Failed Deployments
+## Troubleshooting Failed Deployments
 
 When Spacelift runs fail, the error messages aren't always intuitive. Claude Code can analyze the run logs and suggest fixes:
 
@@ -174,7 +171,7 @@ What's wrong and what's the fix?
 
 Claude Code interprets these errors in context, considering your existing infrastructure, recent changes, and known constraints, to provide actionable solutions rather than generic error messages. Common Spacelift failure patterns it handles well include state lock conflicts, provider version mismatches, and IAM permission errors that produce misleading error text.
 
-Writing Spacelift Stack Configurations
+## Writing Spacelift Stack Configurations
 
 Beyond Terraform, Claude Code can help write Spacelift's own configuration files. The `.spacelift/config.yml` file controls stack behavior:
 
@@ -200,9 +197,9 @@ stacks:
 
 Ask Claude Code to generate this configuration from a description of your stack's requirements, then refine it through dialogue to add the specific hooks and policies your organization requires.
 
-Advanced Workflow Patterns
+## Advanced Workflow Patterns
 
-Automated Pull Request Reviews
+## Automated Pull Request Reviews
 
 Set up a workflow where Claude Code reviews every infrastructure change before it reaches Spacelift:
 
@@ -213,7 +210,7 @@ Set up a workflow where Claude Code reviews every infrastructure change before i
 
 This creates an intelligent gate that catches configuration issues before they reach production. The review Claude Code produces is more useful than raw `terraform plan` output because it explains the *impact* of changes in plain language, "this change adds a public-facing security group rule allowing all inbound traffic on port 22" is more actionable than the raw plan diff.
 
-Drift Detection and Remediation
+## Drift Detection and Remediation
 
 Spacelift can detect configuration drift, when live infrastructure diverges from the Terraform state. Claude Code adds intelligence to this process:
 
@@ -228,7 +225,7 @@ curl -X POST \
 
 When drift is detected, paste the results to Claude Code and ask it to analyze whether the drift is expected (a manual hotfix that needs to be codified) or unexpected (a change that needs to be reverted). This distinction matters enormously, blindly running `terraform apply` to remediate drift can overwrite legitimate emergency changes.
 
-Multi-Cloud Orchestration
+## Multi-Cloud Orchestration
 
 For organizations using multiple cloud providers, Claude Code can manage complex dependencies across AWS, GCP, and Azure. When resources in one cloud depend on resources in another, the dependency graph becomes difficult to reason about manually.
 
@@ -263,7 +260,7 @@ resource "google_compute_firewall" "allow_aws" {
 }
 ```
 
-Security Considerations
+## Security Considerations
 
 When integrating Claude Code with Spacelift, follow these security practices:
 
@@ -275,7 +272,7 @@ When integrating Claude Code with Spacelift, follow these security practices:
 
 A useful pattern is to have Claude Code generate the change, have Spacelift run a plan, and require a human to approve before apply. The AI accelerates the generation and analysis steps; the human remains responsible for final authorization.
 
-Spacelift Feature Support Comparison
+## Spacelift Feature Support Comparison
 
 | Feature | Manual Workflow | With Claude Code |
 |---------|----------------|-----------------|
@@ -286,7 +283,7 @@ Spacelift Feature Support Comparison
 | PR review | Read raw plan diff | Plain-language impact summary |
 | Multi-cloud deps | Manual dependency mapping | Generated with explanations |
 
-Best Practices
+## Best Practices
 
 Start small with non-critical stacks to build confidence in the workflow. Document your infrastructure patterns so Claude Code can generate consistent configurations, a short description of your naming conventions, tagging standards, and module preferences gives Claude Code the context to produce configurations that fit your codebase rather than generic examples.
 

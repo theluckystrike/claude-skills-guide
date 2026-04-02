@@ -18,13 +18,13 @@ Developers and power users increasingly seek alternatives to Excel for financial
 
 This guide explores how Claude skills transform financial modeling from point-and-click operations into automated, version-controlled pipelines.
 
-Why Move Beyond Excel for Financial Modeling
+## Why Move Beyond Excel for Financial Modeling
 
 Excel remains ubiquitous in finance, but it presents real challenges for technical users. Formula dependencies become impossible to trace across large workbooks. Collaboration requires careful merge handling. Testing financial logic requires manual verification or expensive add-ins.
 
 Programmatic alternatives using Python or JavaScript provide structured approaches. You can version control models with Git, write tests for financial calculations, and automate entire reporting pipelines. The learning curve exists, but Claude skills bridge the gap by generating appropriate code and explaining financial logic in context.
 
-The xlsx Skill: Spreadsheets Without the Fragility
+## The xlsx Skill: Spreadsheets Without the Fragility
 
 The xlsx skill serves as your primary tool for spreadsheet automation. It understands openpyxl, pandas, and xlsx.js patterns, helping you generate working code for complex spreadsheet operations.
 
@@ -75,7 +75,7 @@ that handles edge cases: zero revenue, negative values,
 and missing data. Use pytest.
 ```
 
-PDF Skill: Professional Report Generation
+## PDF Skill: Professional Report Generation
 
 Financial models require stakeholder-facing outputs. The pdf skill generates professional reports from your Python calculations, replacing manual Excel-to-PowerPoint workflows.
 
@@ -122,7 +122,7 @@ def generate_financial_report(model_results, output_path):
 
 The pdf skill guides you through more complex layouts, multi-page reports, and chart integration using libraries like matplotlib or reportlab's graphics modules.
 
-Scenario Analysis with Claude Skills
+## Scenario Analysis with Claude Skills
 
 Financial modeling requires exploring multiple scenarios. Claude skills enable systematic scenario generation without manual spreadsheet copying.
 
@@ -171,7 +171,7 @@ class ScenarioManager:
         return results
 ```
 
-Automation Workflows with Skills
+## Automation Workflows with Skills
 
 Combine skills for end-to-end financial workflows. Use the automated-blog-post skill pattern to trigger model updates and report generation on schedules:
 
@@ -208,7 +208,7 @@ subprocess.run(['git', 'add', 'outputs/', 'reports/'])
 subprocess.run(['git', 'commit', '-m', 'Weekly model refresh'])
 ```
 
-Integration with Data Sources
+## Integration with Data Sources
 
 Financial models require external data. The mcp-servers-vs-claude-skills concept applies here, use MCP servers for real-time market data, then process through your Claude-generated Python logic:
 
@@ -222,7 +222,7 @@ and calculates rolling averages and year-over-year
 growth rates.
 ```
 
-Choosing the Right Approach
+## Choosing the Right Approach
 
 Not every financial task needs full Python automation. Use this decision framework:
 
@@ -233,7 +233,7 @@ Not every financial task needs full Python automation. Use this decision framewo
 
 The skill-creator skill lets you build custom skills for domain-specific financial calculations, encapsulating your team's methodologies for reuse across projects.
 
-Getting Started
+## Getting Started
 
 Begin with simple automations and expand incrementally:
 
@@ -244,7 +244,6 @@ Begin with simple automations and expand incrementally:
 5. Schedule automated refreshes
 
 Claude skills handle the code generation heavy lifting. Your expertise in financial modeling directs the logic. The combination replaces Excel's manual workflows with sustainable, testable, automatable pipelines.
-
 
 Related Reading
 

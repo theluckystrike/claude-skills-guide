@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Resilience4j Circuit Breaker Guide
 
@@ -21,7 +20,7 @@ Building resilient distributed systems requires defensive programming patterns t
 
 This guide walks you through implementing Resilience4j circuit breakers with practical examples you can apply to your projects today, from basic setup through advanced patterns like bulkheads, rate limiters, and time-limited calls.
 
-Understanding Circuit Breaker Fundamentals
+## Understanding Circuit Breaker Fundamentals
 
 A circuit breaker acts as a proxy that monitors calls to remote services. It has three distinct states that determine how it handles requests:
 
@@ -46,7 +45,7 @@ Here is a quick comparison to put Resilience4j in context:
 
 The sliding window flexibility is one of Resilience4j's most practical advantages. you can evaluate failures over the last N calls (count-based) or the last N seconds (time-based), making it suitable for both high-throughput and bursty traffic patterns.
 
-Setting Up Resilience4j Dependencies
+## Setting Up Resilience4j Dependencies
 
 First, add the required dependencies to your Maven project:
 
@@ -85,7 +84,7 @@ The AOP starter is required since Resilience4j uses AspectJ to intercept method 
 
 Claude Code is useful at this stage for checking your dependency tree. You can ask "are there any version conflicts between resilience4j-spring-boot3 2.2.0 and my current Spring Boot version?" and Claude Code will parse your pom.xml or build.gradle to identify compatibility issues before they cause runtime errors.
 
-Configuring Circuit Breaker with Code
+## Configuring Circuit Breaker with Code
 
 While you can configure circuit breakers through application.yml, defining them in code gives you more flexibility and type safety. Here's how to create a custom circuit breaker configuration:
 
@@ -116,7 +115,7 @@ This configuration opens the circuit when 50% of calls fail within a sliding win
 
 Claude Code can generate these configurations from a plain-English description. You might say "create a circuit breaker for a payment processing service that should open if more than 30% of calls fail or take longer than 3 seconds, and stay open for 60 seconds before trying again". Claude Code will translate that directly into the appropriate `CircuitBreakerConfig` builder chain.
 
-Applying Circuit Breaker with Annotations
+## Applying Circuit Breaker with Annotations
 
 The simplest way to add circuit breaker protection is through annotations. Here's a practical service class:
 
@@ -160,7 +159,7 @@ The fallback method executes when the circuit is open or an exception occurs. Al
 
 A common mistake is writing a fallback that also makes a network call. If the fallback itself can fail, wrap it separately or use only local state (caches, defaults). Claude Code will flag this pattern when reviewing your service code and suggest keeping fallbacks dependency-free.
 
-Using Circuit Breakers with Reactive Streams
+## Using Circuit Breakers with Reactive Streams
 
 If your application uses Spring WebFlux, Resilience4j provides reactive decorators:
 
@@ -195,7 +194,7 @@ public class ReactiveProductService {
 
 The `transformDeferred` operator applies the circuit breaker to the entire reactive pipeline. This is the correct approach for WebFlux. do not use `@CircuitBreaker` annotations on reactive methods, as they interact unpredictably with reactive scheduling.
 
-Customizing Configuration with YAML
+## Customizing Configuration with YAML
 
 For environment-specific settings, configure circuit breakers in your application.yml:
 
@@ -235,7 +234,7 @@ A few important YAML settings to understand:
 
 Claude Code is effective at generating environment-specific YAML overrides. You can have a conservative configuration in your base `application.yml` and ask Claude Code to generate looser `application-staging.yml` settings for testing, or stricter `application-prod.yml` settings for critical services.
 
-Combining Circuit Breakers with Retry
+## Combining Circuit Breakers with Retry
 
 Resilience4j provides a `@Retry` annotation that pairs well with circuit breakers. The important rule is to place the retry decorator inside (below) the circuit breaker so retries count against the circuit's failure window:
 
@@ -277,7 +276,7 @@ resilience4j:
 
 With exponential backoff, the retry attempts at 500ms, 1000ms, and 2000ms before giving up. This totals about 3.5 seconds of retry time per call, which the circuit breaker will count as a single slow call if your `slowCallDurationThreshold` is set below that.
 
-Monitoring Circuit Breaker State
+## Monitoring Circuit Breaker State
 
 Production systems require visibility into circuit breaker behavior. Resilience4j integrates with Micrometer for metrics:
 
@@ -356,7 +355,7 @@ management:
 
 This adds circuit breaker state to `/actuator/health`, which load balancers and Kubernetes readiness probes can use to route traffic away from unhealthy instances.
 
-Best Practices for Production Systems
+## Best Practices for Production Systems
 
 When implementing circuit breakers in production environments, follow these guidelines:
 
@@ -372,7 +371,7 @@ Test your failure scenarios. Use tools like Chaos Monkey for Spring Boot (`sprin
 
 Differentiate expected from unexpected failures. Use `ignoreExceptions` to exclude business exceptions (HTTP 404, validation errors) from the failure rate calculation. Only infrastructure failures. timeouts, connection resets, HTTP 5xx. should influence circuit state.
 
-Integrating with Spring Boot Applications
+## Integrating with Spring Boot Applications
 
 Spring Boot integration makes Resilience4j even more powerful. The auto-configuration handles most setup automatically:
 
@@ -401,7 +400,7 @@ With proper configuration, Resilience4j automatically applies circuit breaker lo
 
 For microservice architectures with many downstream dependencies, Claude Code can help you generate a complete Resilience4j configuration matrix. Describe your service topology. which services call which, their expected SLAs, and their criticality. and Claude Code will generate a full `application.yml` with appropriate circuit breaker, retry, and timeout settings for each dependency. This is significantly faster than hand-tuning each configuration and produces a consistent starting point for further refinement.
 
-Writing Tests for Circuit Breaker Behavior
+## Writing Tests for Circuit Breaker Behavior
 
 Testing circuit breaker behavior requires forcing the breaker into specific states. Resilience4j provides a `CircuitBreakerRegistry` that makes this straightforward in unit and integration tests:
 
@@ -450,7 +449,7 @@ class ProductServiceCircuitBreakerTest {
 
 Claude Code is effective at generating these test cases from your service implementation. Paste in your service class and ask "generate unit tests that verify circuit breaker open, half-open transition, and fallback behavior". Claude Code will produce a complete test class covering the key state transitions.
 
-Conclusion
+## Conclusion
 
 Resilience4j provides a solid, lightweight solution for implementing circuit breaker patterns in Java applications. By combining it with Claude Code's AI-assisted development, you can rapidly prototype, test, and deploy fault-tolerant systems. Start with simple configurations, monitor your metrics, and progressively tune your circuit breakers based on real-world traffic patterns.
 

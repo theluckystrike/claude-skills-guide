@@ -15,11 +15,9 @@ score: 7
 
 {% raw %}
 
-Claude Code for Apache Flink Workflow Tutorial
-
 Apache Flink has emerged as the leading framework for real-time stream processing, enabling developers to build sophisticated event-driven applications that process millions of events per second. This comprehensive tutorial demonstrates how to use Claude Code to accelerate your Flink development workflow, from initial setup to production deployment.
 
-Setting Up Your Flink Development Environment
+## Setting Up Your Flink Development Environment
 
 Before building Flink applications, establishing a proper development environment is crucial. Claude Code can guide you through the entire setup process, ensuring you have all necessary dependencies configured correctly.
 
@@ -43,11 +41,11 @@ Create a dedicated project structure for your Flink applications. Use Maven or G
 
 When working with Claude Code, provide context about your Flink version and cluster setup. This enables more accurate code suggestions and debugging assistance throughout your development workflow.
 
-Building Your First Flink Streaming Job
+## Building Your First Flink Streaming Job
 
 Flink's event-driven architecture requires a different mindset compared to batch processing. Claude Code can help you transition from traditional ETL thinking to stream-native application design.
 
-Processing Streaming Data
+## Processing Streaming Data
 
 The core of any Flink application is the DataStream API. Here's how to create a basic streaming job that processes events in real-time:
 
@@ -77,11 +75,11 @@ public class EventProcessor {
 
 Claude Code excels at explaining complex operators and helping you choose the right transformation functions for your specific use case. When you encounter issues, describe your problem and the AI assistant can suggest debugging strategies.
 
-Implementing Window Operations
+## Implementing Window Operations
 
 Windowing is essential for aggregations over streaming data. Flink provides several window types, and Claude Code can help you select and implement the appropriate one for your requirements.
 
-Time Windows
+## Time Windows
 
 Time-based windows aggregate events within specific time intervals. Tumbling windows create non-overlapping fixed-size windows, while sliding windows allow overlapping windows for moving averages:
 
@@ -101,11 +99,11 @@ DataStream<Aggregation> slidingWindow = input
 
 When implementing windows, pay attention to watermark strategies for handling late-arriving events. Claude Code can explain the trade-offs between processing time and event time semantics.
 
-State Management and Fault Tolerance
+## State Management and Fault Tolerance
 
 One of Flink's most powerful features is its stateful processing capabilities. Understanding state management is crucial for building reliable streaming applications.
 
-Using Managed State
+## Using Managed State
 
 Flink provides managed state through Keyed State and Operator State. For keyed streams, you can maintain state per key efficiently:
 
@@ -142,11 +140,11 @@ Claude Code can help you implement complex stateful patterns, including:
 - Incremental checkpoints for large states
 - Broadcast state for routing events to all parallel instances
 
-Handling Event Time and Watermarks
+## Handling Event Time and Watermarks
 
 Processing events in event time requires careful handling of watermarks to ensure correctness. Claude Code can guide you through watermark strategies that balance latency and completeness.
 
-Defining Watermark Strategies
+## Defining Watermark Strategies
 
 Watermarks declare how far event time has progressed. A watermark of time T indicates that no events with timestamp earlier than T will arrive:
 
@@ -162,11 +160,11 @@ DataStream<Event> events = env
 
 The out-of-orderness parameter depends on your data characteristics. Claude Code can help you analyze event patterns and determine appropriate values for your specific use case.
 
-Connecting to External Systems
+## Connecting to External Systems
 
 Flink jobs rarely exist in isolation. They consume from and produce to various external systems. Understanding these connectors is essential for production deployments.
 
-Kafka Integration
+## Kafka Integration
 
 Kafka is the most common source and sink for Flink applications. Use the Kafka connector for reliable exactly-once processing:
 
@@ -197,11 +195,11 @@ Claude Code can assist with other connectors including:
 - Elasticsearch for search and analytics
 - Custom sinks for proprietary systems
 
-Debugging and Optimization
+## Debugging and Optimization
 
 Production Flink applications require careful monitoring and optimization. Claude Code provides valuable assistance in identifying performance bottlenecks and resolving issues.
 
-Common Performance Issues
+## Common Performance Issues
 
 Watch for these common problems in Flink applications:
 
@@ -216,7 +214,7 @@ When debugging, provide Claude Code with:
 - Code snippets of the problematic operators
 - Expected vs actual behavior
 
-Best Practices for Production Deployments
+## Best Practices for Production Deployments
 
 Follow these recommendations for production-ready Flink applications:
 
@@ -228,7 +226,7 @@ Follow these recommendations for production-ready Flink applications:
 
 Claude Code can help you implement these practices and create deployment configurations for standalone clusters, Kubernetes, or managed services like Amazon Kinesis Data Analytics.
 
-Conclusion
+## Conclusion
 
 Apache Flink enables powerful real-time processing capabilities, and Claude Code serves as an invaluable development companion. From initial setup through production deployment, the AI assistant helps navigate complex APIs, debug issues, and implement best practices. As you build more sophisticated streaming applications, this collaboration accelerates development while improving code quality and reliability.
 

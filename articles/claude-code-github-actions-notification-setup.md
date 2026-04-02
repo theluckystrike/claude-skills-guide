@@ -13,12 +13,9 @@ permalink: /claude-code-github-actions-notification-setup/
 ---
 {% raw %}
 
-
-Claude Code GitHub Actions Notification Setup
-
 [Setting up notifications for GitHub Actions when working with Claude Code](/building-your-first-mcp-tool-integration-guide-2026/) ensures you stay informed about workflow status, test results, and deployment outcomes. This guide walks you through configuring notifications across multiple channels.
 
-Why Configure GitHub Actions Notifications
+## Why Configure GitHub Actions Notifications
 
 [When Claude Code executes workflows through skills like the TDD skill or automation pipelines, you need visibility](/claude-tdd-skill-test-driven-development-workflow/) into what happens in your CI/CD environment. Without proper notifications, you might miss failed builds, broken tests, or successful deployments that require your attention.
 
@@ -26,7 +23,7 @@ GitHub Actions provides native notification mechanisms, but extending these to S
 
 Notification strategy also scales with team size. A solo developer might only need GitHub's built-in email alerts, but a team of fifteen engineers shipping to production multiple times per day needs structured routing: failures go to an on-call channel, deploy confirmations go to a product channel, and weekly summaries get emailed to stakeholders. Claude Code workflows add another dimension because automated AI-driven tasks may run outside business hours, making async notification delivery even more important.
 
-Notification Channel Comparison
+## Notification Channel Comparison
 
 Before writing a single line of YAML, choose your notification target based on your team's actual workflow:
 
@@ -41,7 +38,7 @@ Before writing a single line of YAML, choose your notification target based on y
 
 For most Claude Code users running automated pipelines, Slack or Discord gives the best signal-to-noise ratio with minimal configuration overhead.
 
-Basic GitHub Actions Notification Workflow
+## Basic GitHub Actions Notification Workflow
 
 The foundation of notification setup starts with your workflow file. Here's a basic configuration that triggers on workflow completion:
 
@@ -78,7 +75,7 @@ jobs:
 
 The `if: always()` condition ensures artifacts upload regardless of success or failure, which is critical for debugging.
 
-Understanding Job-Level vs Step-Level Notifications
+## Understanding Job-Level vs Step-Level Notifications
 
 A common mistake is placing notification steps only at the job level and losing granularity. Consider this expanded structure that gives you step-level insight:
 
@@ -125,7 +122,7 @@ jobs:
 
 Exposing step-level outcomes via `outputs` and `steps.<id>.outcome` means your notification payload carries actionable detail rather than just pass or fail.
 
-Slack Notification Configuration
+## Slack Notification Configuration
 
 Slack remains popular for team notifications. Create an incoming webhook in your Slack workspace, then add a notification step:
 
@@ -152,7 +149,7 @@ For more detailed notifications, customize message formatting with a raw curl ca
     ${{ secrets.SLACK_WEBHOOK_URL }}
 ```
 
-Advanced Slack Block Kit Formatting
+## Advanced Slack Block Kit Formatting
 
 Slack's Block Kit format lets you build visually structured notifications with buttons, dividers, and context sections. This level of detail is especially valuable for Claude Code pipelines that run multi-step AI tasks:
 
@@ -201,7 +198,7 @@ Slack's Block Kit format lets you build visually structured notifications with b
 
 If you use the Slack MCP server with Claude Code, you can further automate response handling when notifications arrive, enabling you to trigger Claude Code actions directly from Slack messages.
 
-Discord Webhook Notifications
+## Discord Webhook Notifications
 
 Discord offers similar functionality with its webhook system:
 
@@ -226,7 +223,7 @@ Discord offers similar functionality with its webhook system:
     ${{ secrets.DISCORD_WEBHOOK_URL }}
 ```
 
-Discord Color Reference
+## Discord Color Reference
 
 Discord embeds use decimal integer color codes. Here are the most useful values for CI status notifications:
 
@@ -240,7 +237,7 @@ Discord embeds use decimal integer color codes. Here are the most useful values 
 
 Using consistent colors across your Discord server makes it easy to scan notification history at a glance.
 
-Email Notifications with GitHub
+## Email Notifications with GitHub
 
 For teams preferring email, GitHub's native notification system works well. Configure branch protection rules to require status checks, then subscribe to workflow run notifications:
 
@@ -271,7 +268,7 @@ For custom email handling with templates, use a GitHub App or action:
     from: "CI Notification <notifications@example.com>"
 ```
 
-HTML Email Templates for Richer Context
+## HTML Email Templates for Richer Context
 
 Plain text emails work but miss an opportunity to pack in structured information. The `dawidd6/action-send-mail` action supports HTML bodies, letting you send a miniature status dashboard on every failure:
 
@@ -320,7 +317,7 @@ Plain text emails work but miss an opportunity to pack in structured information
     from: "CI Notifications <ci@example.com>"
 ```
 
-Conditional Notifications Based on Changes
+## Conditional Notifications Based on Changes
 
 You can reduce notification noise by filtering based on file changes or authors:
 
@@ -357,7 +354,7 @@ jobs:
           echo "Source code changed - notifying team"
 ```
 
-Environment-Specific Routing
+## Environment-Specific Routing
 
 Production deploys warrant louder notifications than staging pushes. Use environment conditions to route to different channels:
 
@@ -395,7 +392,7 @@ jobs:
 
 The `<!channel>` mention in Slack triggers a channel-wide notification, which is appropriate for production failures and should never appear in staging notifications.
 
-Storing and Managing Secrets Properly
+## Storing and Managing Secrets Properly
 
 Every notification channel requires a credential: a webhook URL, SMTP password, or API token. Mismanaging these is a common source of broken notifications and security exposure.
 
@@ -417,7 +414,7 @@ run: echo "Webhook is ${{ secrets.SLACK_WEBHOOK_URL }}"
 
 To audit which secrets a workflow uses, scan your YAML for `secrets.` references and verify each one exists in your repository settings before the first run.
 
-Integrating with Claude Code Skills
+## Integrating with Claude Code Skills
 
 Several Claude skills enhance notification workflows. The supermemory skill can track notification history and patterns, helping you understand which types of failures require immediate attention versus those that can wait.
 
@@ -446,7 +443,7 @@ The pdf skill can attach test reports to notifications. After generating test re
     path: report.pdf
 ```
 
-Full Reusable Notification Workflow
+## Full Reusable Notification Workflow
 
 If your repository contains multiple workflows, each one would otherwise need its own copy-pasted notification steps. Instead, create a reusable notification workflow once and call it from every consumer:
 
@@ -517,7 +514,7 @@ jobs:
 
 This pattern keeps notification logic in one place and makes it easy to change your channel or message format across the entire repository.
 
-Best Practices
+## Best Practices
 
 1. Use status-specific channels: Send failures to a high-priority channel and successes to a lower-priority one.
 
@@ -535,7 +532,7 @@ Best Practices
 
 8. Cache run metadata early: Steps that compute URLs or format commit messages can fail if they depend on context that's unavailable in certain trigger types. Set up a dedicated step at the top of the job to export all variables you'll use in notifications.
 
-Troubleshooting Notification Issues
+## Troubleshooting Notification Issues
 
 If notifications aren't arriving, verify these common issues:
 
@@ -546,7 +543,7 @@ If notifications aren't arriving, verify these common issues:
 
 For Slack, use the Slack API's test endpoint to confirm connectivity. For Discord, the developer portal provides webhook testing tools.
 
-Diagnosing Silent Failures
+## Diagnosing Silent Failures
 
 Notification steps themselves can silently fail if the curl exit code is non-zero but the step has no error handling. Add explicit error handling to detect and surface these failures:
 

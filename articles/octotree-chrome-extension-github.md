@@ -13,24 +13,23 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-
-Octotree Chrome Extension GitHub. A Developer's Navigation Guide
+## Octotree Chrome Extension GitHub. A Developer's Navigation Guide
 
 If you spend significant time browsing GitHub repositories, you've likely experienced the frustration of clicking through multiple directory levels just to find a single file. Octotree solves this problem by adding a collapsible file tree sidebar to every GitHub repository you visit, transforming how you navigate codebases in the browser.
 
-What Octotree Does
+## What Octotree Does
 
 Octotree is a Chrome extension that displays a VS Code-style file tree navigation panel on the left side of any GitHub repository page. Instead of repeatedly clicking ".." to navigate up and down directory hierarchies, you get a persistent hierarchical view of the entire repository structure.
 
 The extension works entirely client-side, requiring no authentication or configuration to display public repositories. For private repositories, you can optionally authenticate with GitHub to access those as well.
 
-Installation and Initial Setup
+## Installation and Initial Setup
 
 Install Octotree from the Chrome Web Store or visit the GitHub repository at buunguyen/octotree. After installation, you'll immediately see a sidebar appear on any GitHub repository page.
 
 The sidebar defaults to a collapsed state. Click the Octotree icon (or press the keyboard shortcut) to expand it. The first time you load a repository, Octotree fetches the file structure in the background, subsequent visits to the same repository load instantly from cache.
 
-Essential Keyboard Shortcuts
+## Essential Keyboard Shortcuts
 
 Octotree provides several keyboard shortcuts for power users:
 
@@ -42,9 +41,9 @@ Octotree provides several keyboard shortcuts for power users:
 | `j` / `k` | Move selection down/up |
 | `h` / `l` | Collapse/expand directory |
 
-Practical Usage Patterns
+## Practical Usage Patterns
 
-Navigating Large Codebases
+## Navigating Large Codebases
 
 Consider a typical open-source project like a React application with this structure:
 
@@ -67,7 +66,7 @@ src/
 
 Without Octotree, reaching `SidebarItem.jsx` requires four clicks: into `components`, into `Sidebar`, find the file. With Octotree visible, you see the entire tree and click directly to your target, typically one or two clicks regardless of nesting depth.
 
-Code Review Workflow
+## Code Review Workflow
 
 When reviewing pull requests, Octotree becomes particularly valuable. You can:
 
@@ -77,15 +76,15 @@ When reviewing pull requests, Octotree becomes particularly valuable. You can:
 
 The extension highlights files that were modified in the current PR, making it easy to identify changed files within larger repositories.
 
-Finding Configuration Files
+## Finding Configuration Files
 
 Every developer knows the pain of locating `.gitignore`, `package.json`, or `tsconfig.json` in unfamiliar repositories. With Octotree's search feature (`Cmd/Ctrl + f` when focused on the sidebar), you can instantly filter and locate these files.
 
-Configuration Options
+## Configuration Options
 
 Access Octotree settings by right-clicking the extension icon and selecting "Options" or visiting `chrome://extensions` and clicking the extension's "Options" link.
 
-Key Settings
+## Key Settings
 
 Theme Selection: Choose between light, dark, or system-default themes. The dark theme matches GitHub's dark mode for consistent aesthetics.
 
@@ -105,13 +104,13 @@ For accessing private repositories, you'll need to configure a GitHub Personal A
 
 The token is stored locally in your Chrome profile, never transmitted anywhere except to GitHub's API for authentication.
 
-Performance Considerations
+## Performance Considerations
 
 Octotree caches repository structures locally, so navigating between branches or commits in the same repo loads instantly. However, very large repositories (thousands of files) may experience initial load delays.
 
 For monorepos exceeding 10,000 files, consider enabling "Show only relevant files" in settings if available, or loading specific subdirectories instead of the full tree.
 
-Comparison with Alternatives
+## Comparison with Alternatives
 
 GitHub's native file navigation has improved in recent years, but Octotree offers distinct advantages:
 
@@ -122,21 +121,21 @@ GitHub's native file navigation has improved in recent years, but Octotree offer
 
 For developers who prefer keyboard-driven workflows or regularly navigate large repositories, Octotree remains the superior choice despite GitHub's native improvements.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Sidebar Not Appearing
+## Sidebar Not Appearing
 
 Some GitHub pages exclude the sidebar by design, file diff views, pull request conversations, and issue pages don't benefit from directory trees. Navigate to the main "Code" tab of any repository.
 
-Stale Cache
+## Stale Cache
 
 If repository structure seems outdated, right-click the Octotree icon and select "Clear Cache" to force a fresh fetch on your next visit.
 
-Conflicting Extensions
+## Conflicting Extensions
 
 Other extensions modifying GitHub's DOM can sometimes interfere with Octotree. Disable other GitHub-related extensions temporarily to diagnose conflicts.
 
-Octotree Pro Features for Enterprise Teams
+## Octotree Pro Features for Enterprise Teams
 
 Octotree Pro adds several features that benefit development teams working in private repositories at scale.
 
@@ -150,14 +149,13 @@ Dark mode consistency: While the free version supports dark mode for the sidebar
 
 For teams evaluating Pro, the multiple-account support alone pays back the subscription cost in time saved per week. Context-switching between accounts through GitHub's native interface involves signing out, signing in, and losing your place. Octotree Pro eliminates this entirely for common multi-account workflows.
 
-Conclusion
+## Conclusion
 
 Octotree transforms GitHub from a flat file list into a navigable directory tree, saving developers countless clicks and maintaining spatial awareness of codebase structure. Whether you're exploring unfamiliar repositories, reviewing pull requests, or traversing your own large projects, the sidebar becomes an essential part of your GitHub workflow.
 
 The extension requires no configuration to get started with public repositories, making it immediately useful. Optional authentication unlocks private repository support for enterprise users.
 
-
-Using Octotree with GitHub Enterprise Server
+## Using Octotree with GitHub Enterprise Server
 
 Public GitHub users get the full Octotree experience without any configuration. the extension works immediately on github.com. Enterprise teams on self-hosted infrastructure need two additional steps. Organizations running GitHub Enterprise Server (GHES) on-premises can use Octotree with their private instance by providing the domain and an authentication token. The configuration is straightforward but requires two steps that public repository users skip entirely.
 

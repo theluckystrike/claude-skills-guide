@@ -16,7 +16,7 @@ permalink: /claude-supermemory-skill-persistent-context-explained/
 
 The SuperMemory skill provides persistent context across Claude Code sessions. Where a standard session starts fresh each time, SuperMemory maintains a knowledge base. project preferences, architecture decisions, coding conventions. that Claude loads automatically at the start of subsequent sessions.
 
-The Context Persistence Problem
+## The Context Persistence Problem
 
 When you start a new Claude session, Claude has no memory of previous conversations. For isolated tasks this is fine, but for multi-day projects it creates friction: you re-explain your stack, remind Claude of your conventions, and rebuild shared understanding every time.
 
@@ -26,7 +26,7 @@ Claude Code ships with a built-in partial solution: the `CLAUDE.md` file at the 
 
 The distinction matters. `CLAUDE.md` is a document you maintain intentionally, with a text editor, in version control. SuperMemory is a live scratchpad you update during sessions, from inside Claude, without leaving your workflow.
 
-How Skills Work in Claude Code
+## How Skills Work in Claude Code
 
 Before diving into SuperMemory specifically, it helps to understand the skill system. Skills in Claude Code are Markdown files stored in `~/.claude/skills/`. Each skill file contains a description of its purpose, instructions for Claude on how to behave, and sometimes configuration metadata in its front matter.
 
@@ -34,7 +34,7 @@ When you invoke a skill with a slash command, Claude loads the skill file as add
 
 SuperMemory takes advantage of this to create a simple but effective persistence layer: it writes notes to a file between sessions and reads that file at the start of each new session.
 
-Invoking SuperMemory
+## Invoking SuperMemory
 
 You invoke SuperMemory with its slash command:
 
@@ -46,7 +46,7 @@ Once the skill is active, you interact with it through natural-language instruct
 
 After invoking, you can immediately start issuing memory commands. Claude will confirm what it has stored and can show you a summary of existing entries on request.
 
-Storing Context
+## Storing Context
 
 After invoking the skill, tell Claude what to remember:
 
@@ -62,7 +62,7 @@ Remember for this project:
 
 The skill stores this in a local file (typically within `~/.claude/memory/` or a project-scoped location defined in the skill's own front matter). The exact storage path depends on how the skill author configured it. check the skill's own `README` or front matter if you need the precise location.
 
-What to Store
+## What to Store
 
 Not everything deserves a SuperMemory entry. Good candidates are facts that:
 
@@ -80,7 +80,7 @@ Poor candidates are facts that:
 
 A practical test: if you'd write it in a sticky note on your monitor, it belongs in SuperMemory.
 
-Memory Entry Formats
+## Memory Entry Formats
 
 Entries work best when they are specific and dated. Vague entries lose value fast:
 
@@ -102,9 +102,9 @@ clock skew tolerance in jwt.verify(). See auth/middleware.ts line 47.
 
 The specific entry tells future-you (and future Claude) exactly what happened, where the fix lives, and why it was necessary.
 
-Practical Examples
+## Practical Examples
 
-Multi-Session Project Development
+## Multi-Session Project Development
 
 On day one of a project, you document an architecture decision:
 
@@ -120,7 +120,7 @@ When you return three days later, Claude loads this context before you type your
 
 This is the core value proposition: reducing the cold-start cost of resuming a session. The more complex your project, the more valuable this becomes.
 
-Preserving Debugging Solutions
+## Preserving Debugging Solutions
 
 When you solve a non-obvious bug, store the solution:
 
@@ -134,7 +134,7 @@ resolve 'fs'" for any package that optionally imports Node built-ins.
 
 This prevents the same debugging session from happening twice. It also means that if you onboard a teammate who hits the same issue, you can pull this note into a `CLAUDE.md` or documentation file with minimal rewriting.
 
-Capturing Third-Party API Quirks
+## Capturing Third-Party API Quirks
 
 External APIs often have behavior that is not in their documentation or is buried in a GitHub issue from 2019:
 
@@ -149,7 +149,7 @@ secret than live mode. do not share them.
 
 When you're back in this code six weeks later, Claude will already know this.
 
-Team Convention Notes
+## Team Convention Notes
 
 ```
 /supermemory
@@ -160,7 +160,7 @@ CI gates: unit tests + lint + build (all must pass)
 Deployment: staging auto-deploys on merge to develop; prod requires manual approval in GitHub Actions
 ```
 
-Tracking Dependencies and Their Quirks
+## Tracking Dependencies and Their Quirks
 
 ```
 /supermemory
@@ -173,7 +173,7 @@ Dependencies with known issues (as of 2026-03-14):
 
 This kind of note saves hours when a `npm update` breaks things and Claude needs to figure out why.
 
-SuperMemory vs CLAUDE.md
+## SuperMemory vs CLAUDE.md
 
 | | `CLAUDE.md` | SuperMemory skill |
 |---|---|---|
@@ -190,11 +190,11 @@ For anything you'd want in your repo's git history. tech stack, architecture ove
 
 A healthy workflow treats them as a pipeline: things start in SuperMemory (discovered mid-session, unpolished) and graduate to `CLAUDE.md` once they've stabilized (confirmed, agreed on by the team, worth committing).
 
-When Context Should Stay in SuperMemory
+## When Context Should Stay in SuperMemory
 
 Some context genuinely does not belong in `CLAUDE.md` or your codebase. Personal workflow preferences ("I prefer explanations before code, not after"), machine-specific paths, or notes about external tools that your team does not all use. these are SuperMemory material that would clutter `CLAUDE.md`.
 
-Combining SuperMemory with Other Skills
+## Combining SuperMemory with Other Skills
 
 SuperMemory composes well with other skills. The [`tdd` skill](/best-claude-skills-for-developers-2026/) benefits from remembering where your test files live and which framework you use. The `frontend-design` skill produces better output when it already knows your component library and design tokens. The [`pdf` skill](/best-claude-skills-for-data-analysis/) can store extraction schemas so you don't re-specify column mappings for recurring document types.
 
@@ -221,11 +221,11 @@ Testing conventions agreed on 2026-03-15:
 
 Now your next session starts with these conventions already loaded, and the `tdd` skill will apply them correctly without being told.
 
-Managing Stored Context Over Time
+## Managing Stored Context Over Time
 
 SuperMemory entries accumulate. Without occasional maintenance, your memory file grows stale and noisy. old decisions that were reversed, bug fixes that are no longer relevant, notes about dependencies you no longer use.
 
-Pruning Stale Entries
+## Pruning Stale Entries
 
 Periodically ask Claude to review what is stored:
 
@@ -244,7 +244,7 @@ Remove the entry about webpack resolve.fallback. we migrated off webpack
 to Vite in February and that no longer applies.
 ```
 
-Promoting Entries to CLAUDE.md
+## Promoting Entries to CLAUDE.md
 
 When a SuperMemory entry has proven durable. it's been accurate for several weeks and the whole team should know it. move it:
 
@@ -256,7 +256,7 @@ Move the CI gates entry to CLAUDE.md and remove it from SuperMemory.
 
 Claude will read the current `CLAUDE.md`, append the entry in an appropriate section, and clean up the SuperMemory file.
 
-Limitations
+## Limitations
 
 Storage is local. Context stored on one machine does not sync to another unless you manually copy the storage file or use a shared path.
 
@@ -268,7 +268,7 @@ No official sub-commands. Unlike the hallucinated `@supermemory list` or `@super
 
 No encryption. Memory files are stored as plain text. Do not store secrets, credentials, API keys, or sensitive user data in SuperMemory. Use a secrets manager or environment variables for those.
 
-When to Use SuperMemory
+## When to Use SuperMemory
 
 SuperMemory is worth reaching for when:
 
@@ -279,7 +279,7 @@ SuperMemory is worth reaching for when:
 
 For quick one-off tasks, the built-in session context is enough. Save SuperMemory for work where continuity matters.
 
-A Daily Workflow
+## A Daily Workflow
 
 A practical pattern that works well for multi-week projects:
 
@@ -300,6 +300,5 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Complete token optimization guide
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Skills worth the token cost
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code for Astro Integrations Workflow Guide
 
 Astro's integration system is one of its most powerful features, enabling you to extend the framework with custom functionality, community plugins, and framework adapters. However, building and maintaining Astro integrations can be complex, requiring careful management of configurations, build processes, and TypeScript types. This guide shows you how to use Claude Code to streamline your Astro integration development workflow from initial scaffolding through testing, publishing, and long-term maintenance.
 
-What Are Astro Integrations and Why They Matter
+## What Are Astro Integrations and Why They Matter
 
 Astro integrations are npm packages that hook into Astro's build pipeline to add capabilities that aren't part of the core framework. They range from simple utilities like sitemap generators to full-blown framework adapters like `@astrojs/react` or `@astrojs/netlify`. If you've ever run `npx astro add tailwind`, you've already used the integration system.
 
@@ -34,7 +31,7 @@ Common use cases for custom Astro integrations include:
 - Wrapping a UI framework or renderer not yet supported officially
 - Adding persistent dev server middleware for local API mocking
 
-Setting Up Your Integration Project
+## Setting Up Your Integration Project
 
 Before diving into code, establish a proper project structure for your Astro integration. A well-organized project accelerates development and makes collaboration easier. Use a monorepo-style setup with your integration as a separate package.
 
@@ -82,7 +79,7 @@ my-astro-integration/
 
 When you give Claude Code this structure and describe what each file should do, it will generate the initial boilerplate for all of them in one pass. This is significantly faster than scaffolding by hand, especially when you also want unit tests wired up from the start.
 
-Developing Integration Hooks
+## Developing Integration Hooks
 
 Astro integrations rely on lifecycle hooks that execute at different stages of the build process. Understanding these hooks is essential for creating useful integrations. The main hooks include `astro:config:setup`, `astro:config:done`, `astro:server:setup`, `astro:server:start`, `astro:server:done`, `astro:build:start`, `astro:build:done`, and `astro:build:ssr`.
 
@@ -135,7 +132,7 @@ export function myIntegration(options: { apiKey: string }): AstroIntegration {
 
 Use Claude Code to debug hook interactions by asking it to explain how different hooks chain together and what data flows between them. A prompt like "explain why my `astro:config:done` hook isn't seeing the Vite plugin I added in `astro:config:setup`" will usually get you a precise diagnosis and a fix.
 
-Managing Configuration and Options
+## Managing Configuration and Options
 
 Your integration likely needs user-configurable options. Design a clean options API that balances flexibility with simplicity. Document each option with TypeScript types for better developer experience.
 
@@ -213,7 +210,7 @@ export function myIntegration(rawOptions: unknown): AstroIntegration {
 
 Ask Claude Code to "add Zod validation to my integration options and map validation errors to friendly messages" and it will produce the parsing logic, error formatting, and the necessary import in one step.
 
-Working with Vite and Astro Plugins
+## Working with Vite and Astro Plugins
 
 Many integrations need to extend Vite's functionality. Astro provides a clean way to add Vite plugins through your integration. This is essential for transforming files, adding dev server middleware, or optimizing assets.
 
@@ -263,7 +260,7 @@ Separating the Vite plugin into its own function keeps your integration clean an
 
 Claude Code can help you write complex Vite plugins by describing the transformations you need. For example, "create a Vite plugin that inlines SVG files as React components" will generate appropriate code. More usefully, it can explain the subtle ordering issues that trip up new integration authors. for instance, why you must use `enforce: 'pre'` if your plugin needs to run before Astro's own transforms.
 
-Injecting Scripts and Styles
+## Injecting Scripts and Styles
 
 One underused capability of the integration API is `injectScript` and `injectRoute`. These let you add content to pages without requiring the user to modify their layout files.
 
@@ -285,7 +282,7 @@ One underused capability of the integration API is `injectScript` and `injectRou
 
 The `injectScript` type parameter controls where in the page lifecycle the script runs. The valid values are `page` (in the `<head>`), `page-ssr` (server-rendered only), and `before-hydration` (runs before any framework hydration). Getting this wrong can cause subtle timing bugs. Ask Claude Code to "explain when to use each injectScript type" for a thorough breakdown with examples.
 
-Testing Your Integration
+## Testing Your Integration
 
 Comprehensive testing ensures your integration works across different Astro configurations and use cases. Test against multiple Astro versions and configuration scenarios.
 
@@ -362,7 +359,7 @@ export default defineConfig({
 
 Claude Code can generate test fixtures and mock objects for complex scenarios, saving significant setup time. Give it a prompt like "generate a Vitest test that runs a full Astro build with my integration and asserts that `custom-manifest.json` exists in the output directory" and it will produce a working test using Node's `child_process.execSync` or Astro's programmatic build API.
 
-Debugging Common Integration Problems
+## Debugging Common Integration Problems
 
 Most integration bugs fall into a handful of categories. If a hook never runs, the most common cause is registering it after `astro:config:done`. Ask Claude Code to "trace the order in which my hooks execute given this `astro.config.mjs`" and paste in both files.
 
@@ -372,7 +369,7 @@ TypeScript errors in hook parameters: The parameter types for hooks changed betw
 
 Dev server middleware not responding: If your `configureServer` middleware isn't receiving requests, verify the path doesn't conflict with Astro's own dev server routes. Claude Code can help you add debug logging to trace where requests are being intercepted.
 
-Publishing and Distribution
+## Publishing and Distribution
 
 When your integration is ready, package it for distribution. Use npm to publish and maintain proper metadata in your `package.json`.
 
@@ -413,7 +410,7 @@ The `prepublishOnly` hook ensures you never accidentally publish broken code. Cl
 
 Consider submitting your integration to the [official Astro integrations catalog](https://astro.build/integrations/). The catalog requirements are straightforward: your package must have the `astro-integration` keyword and follow the integration API. Claude Code can generate the required README structure and example configuration snippets that the catalog expects.
 
-Best Practices and Performance Tips
+## Best Practices and Performance Tips
 
 Follow these practices for maintainable, performant integrations:
 
@@ -431,7 +428,7 @@ Version your peer dependency range conservatively. Pinning `"astro": ">=3.0.0"` 
 
 Write a CHANGELOG. Users who depend on your integration need to know what changed between versions. Claude Code can generate a structured CHANGELOG entry from your git diff: "summarize these changes as a CHANGELOG entry following the Keep a Changelog format."
 
-Comparison: Manual vs. Claude Code-Assisted Integration Development
+## Comparison: Manual vs. Claude Code-Assisted Integration Development
 
 | Task | Manual Approach | With Claude Code |
 |---|---|---|
@@ -444,7 +441,7 @@ Comparison: Manual vs. Claude Code-Assisted Integration Development
 
 The productivity gain is largest during the initial authoring phase, where you're making many small structural decisions. Claude Code's ability to hold the whole integration in context means you can ask "add a caching layer to the build:done hook that stores results keyed by content hash" and get a coherent implementation that fits your existing code rather than a generic snippet.
 
-Conclusion
+## Conclusion
 
 Building Astro integrations with Claude Code accelerates development through intelligent code generation, type safety, and debugging assistance. Start with a solid project structure, use lifecycle hooks effectively, and test comprehensively across configurations. Pay attention to the hook ordering table. getting hooks right from the start saves hours of debugging later. Separate your Vite plugin logic from your integration entry point, validate options early with Zod, and keep your hooks lean by deferring heavy work to Vite transforms or separate build steps.
 

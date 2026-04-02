@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for RTL Right-to-Left Layout Workflow
 
 Building web applications that support right-to-left (RTL) languages like Arabic, Hebrew, Persian, and Urdu requires more than just flipping text alignment. It demands a comprehensive approach to layout, typography, navigation, and user experience. Claude Code can significantly streamline RTL implementation, helping you create polished multilingual experiences without the typical headaches. This guide walks you through a practical workflow for RTL layout development using Claude Code.
 
-Understanding RTL Layout Challenges
+## Understanding RTL Layout Challenges
 
 RTL layouts mirror the entire user interface, not just the text direction. Every component, from navigation bars to form inputs, needs careful consideration. The main challenges include:
 
@@ -31,11 +30,11 @@ RTL layouts mirror the entire user interface, not just the text direction. Every
 
 Claude Code can help you anticipate these issues and implement comprehensive solutions.
 
-Setting Up Your RTL Project Foundation
+## Setting Up Your RTL Project Foundation
 
 Start by establishing a solid foundation for RTL support in your project. Create a dedicated skill or context for RTL work that Claude Code can reference throughout development.
 
-Creating an RTL Development Context
+## Creating an RTL Development Context
 
 When starting a new multilingual project, provide Claude Code with clear context about your RTL requirements:
 
@@ -51,7 +50,7 @@ When starting a new multilingual project, provide Claude Code with clear context
 
 This context helps Claude Code generate appropriate code from the start, preventing the common mistake of using physical CSS properties that break RTL layouts.
 
-CSS Logical Properties Workflow
+## CSS Logical Properties Workflow
 
 The most important shift when building RTL-compatible interfaces is adopting CSS logical properties. Instead of `margin-left` and `margin-right`, use `margin-inline-start` and `margin-inline-end`. Claude Code can help you convert existing code or write new code using these modern properties.
 
@@ -61,11 +60,11 @@ When working with Claude Code, explicitly request logical properties:
 
 This approach ensures your styles automatically adapt when the direction changes, reducing the need for separate stylesheets or conditional styling.
 
-Implementing Directional Components
+## Implementing Directional Components
 
 Certain UI elements require special attention in RTL layouts. Here's how to handle them effectively with Claude Code's assistance.
 
-Navigation Bars and Menus
+## Navigation Bars and Menus
 
 Navigation components need to mirror correctly. The menu items that appear on the right in LTR should appear on the left in RTL:
 
@@ -89,7 +88,7 @@ Navigation components need to mirror correctly. The menu items that appear on th
 
 Notice how `padding-inline` replaces `padding-left` and `padding-right`. This single property handles both directions automatically. Claude Code can refactor your existing navigation code to use these logical properties, making it RTL-ready.
 
-Form Inputs and Labels
+## Form Inputs and Labels
 
 Form labels should appear on the correct side based on direction. In LTR, labels are typically on the left of inputs; in RTL, they should be on the right:
 
@@ -111,7 +110,7 @@ Form labels should appear on the correct side based on direction. In LTR, labels
 
 The `border-inline-start` property creates a left border in LTR and a right border in RTL, exactly what you want for input focus indicators.
 
-Icons and Directional Elements
+## Icons and Directional Elements
 
 Icons with directional meaning need special handling. An arrow pointing right in English should point left in Arabic. Create a system for handling these:
 
@@ -132,7 +131,7 @@ function getDirectionalIcon(iconName, isRTL) {
 
 Claude Code can help you audit your icon library and identify which icons need flipping or mapping for RTL support.
 
-Building an RTL Toggle for Testing
+## Building an RTL Toggle for Testing
 
 One of the most valuable tools for RTL development is a live direction toggle. This allows you to instantly switch between LTR and RTL views during development:
 
@@ -163,7 +162,7 @@ if (new URLSearchParams(window.location.search).has('rtl')) {
 
 With this toggle, you can test your entire application in both directions without reloading or using browser dev tools. Claude Code can generate this component and integrate it into your project quickly.
 
-Content Bidirectional Handling
+## Content Bidirectional Handling
 
 RTL pages often contain LTR content, code snippets, numbers, English brand names, or technical terms. The Unicode bidirectional algorithm handles most cases, but you sometimes need manual intervention.
 
@@ -196,7 +195,7 @@ For dynamic content where the direction is unknown, use the bidirectional isolat
 
 This prevents the surrounding text's direction from affecting the embedded content's display.
 
-Testing Your RTL Implementation
+## Testing Your RTL Implementation
 
 Comprehensive testing is essential for RTL success. Here's a practical testing workflow:
 
@@ -208,7 +207,7 @@ Comprehensive testing is essential for RTL success. Here's a practical testing w
 
 Create a testing checklist document that Claude Code can reference when making changes. This ensures new features don't break RTL support.
 
-Best Practices Summary
+## Best Practices Summary
 
 Follow these key principles for successful RTL implementation:
 

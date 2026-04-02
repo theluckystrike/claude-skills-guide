@@ -16,7 +16,7 @@ permalink: /claude-skills-explained-simply-for-non-programmers/
 
 If you've heard about Claude Code skills and want to understand what they actually are without wading through technical documentation, this is for you. No assumed technical knowledge. No jargon without explanation.
 
-The Basic Idea
+## The Basic Idea
 
 Imagine you hire a consultant. A generalist consultant can help with a lot of things, but they have to figure out your specific situation from scratch each time. A specialist consultant. one who already knows your industry, your processes, and your standards. can hit the ground running and produce better results immediately.
 
@@ -24,13 +24,13 @@ Claude skills are how you turn Claude from a generalist into a specialist for yo
 
 A skill is like a briefing document that Claude reads before starting a task. It says: "When you're doing THIS type of work, here's exactly how I want you to approach it, what to focus on, what to avoid, and what the output should look like."
 
-A Concrete Example
+## A Concrete Example
 
 Say you're a writer who uses Claude to help produce blog posts. Every time you ask Claude for a blog post, you might type the same instructions: "Write in a conversational tone, keep paragraphs short, don't use buzzwords, end with a call to action, and include at least 3 subheadings."
 
 That's repetitive. With a skill, you write those instructions once, save them as a skill called `blog-writer`, and Claude automatically applies them whenever you ask for a blog post. You just say "write a post about organic gardening" and Claude already knows your style preferences without you repeating them.
 
-What Skills Are Actually Made Of
+## What Skills Are Actually Made Of
 
 A skill is just a text file. Specifically, it's a Markdown file (a common format for writing text with some basic formatting). That file has two parts:
 
@@ -62,7 +62,7 @@ Output format: complete draft, ready to publish.
 
 That's a skill. Anyone can write one. You don't need to code.
 
-The Built-In Skills Worth Knowing
+## The Built-In Skills Worth Knowing
 
 Claude Code comes with several pre-built skills. Even without writing your own, these are immediately useful:
 
@@ -76,7 +76,7 @@ frontend-design. Builds user interface components that match your visual design 
 
 docx. Same idea but outputs a Word document (.docx format) instead of a PDF.
 
-How to Use a Skill
+## How to Use a Skill
 
 There are two ways to use a skill:
 
@@ -84,7 +84,7 @@ Manually: Type `/skill-name` followed by your request. Example: `/blog-writer Wr
 
 Automatically: If a skill has trigger phrases and you say something that matches one of them, the skill activates on its own. If your blog-writer skill triggers on "write a blog post," just saying "Write a blog post about sourdough" is enough. Claude Code recognizes the match and uses the skill automatically.
 
-Where Skills Are Stored
+## Where Skills Are Stored
 
 Skills are files stored in a folder called `.claude/skills/` inside your project. (The dot at the beginning means it's a hidden folder on Mac and Linux. you might need to show hidden files to see it.)
 
@@ -103,7 +103,7 @@ You can write a skill.
 
 The only slightly technical part is the header section (front matter), which has a specific format with dashes and colons. But it's a short section with only a few fields, and you can copy a template and just fill in your values.
 
-Real-World Uses for Non-Developer Skills
+## Real-World Uses for Non-Developer Skills
 
 Skills aren't just for code. Here are examples relevant to people who don't write software:
 
@@ -117,7 +117,7 @@ Research tasks: A skill that structures research output in a specific format. al
 
 Report generation: A skill that knows your report template and fills it in consistently each time, using the `pdf` or `docx` skill to produce the final document.
 
-The supermemory Skill Deserves Special Mention
+## The supermemory Skill Deserves Special Mention
 
 For non-programmers, `supermemory` is probably the most immediately useful skill. Without it, every conversation with Claude starts completely blank. Claude doesn't know your name, your preferences, what you worked on last time, or any decisions you've made.
 

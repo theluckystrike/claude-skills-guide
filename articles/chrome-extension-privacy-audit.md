@@ -17,7 +17,7 @@ score: 8
 
 Chrome extensions enhance browser functionality but often request broad permissions that pose significant privacy risks. As a developer or power user, understanding how to audit these extensions protects your data and informs your installation decisions. This guide provides practical methods to analyze Chrome extensions for privacy concerns, covering everything from manifest inspection to live network interception.
 
-Why Privacy Audits Matter
+## Why Privacy Audits Matter
 
 Extensions run with substantial privileges inside your browser. They can read page content, modify DOM elements, make network requests on your behalf, and access stored data like cookies and local storage. A single malicious or poorly designed extension can expose sensitive information across every website you visit.
 
@@ -25,7 +25,7 @@ The Chrome Web Store provides basic permission warnings, but these often lack de
 
 The threat model is not abstract. In 2023, a credential-stealing extension masqueraded as a ChatGPT tool and accumulated 9,000 installs before removal. In 2022, a batch of 32 extensions with 75 million combined installs were found conducting ad fraud and data harvesting. These were ordinary-looking extensions that passed Chrome Web Store review. A manual audit is the only reliable defense.
 
-Permission Risk Levels at a Glance
+## Permission Risk Levels at a Glance
 
 Before diving into the audit steps, use this reference table when reading a manifest. It classifies the most common permissions by risk level so you can triage quickly.
 
@@ -48,7 +48,7 @@ Before diving into the audit steps, use this reference table when reading a mani
 
 Any permission rated High or Critical demands explanation. If the extension's stated purpose does not obviously require it, dig deeper.
 
-Gathering Extension Files
+## Gathering Extension Files
 
 Start by obtaining the extension's source files. Many extensions are available on GitHub, which provides the most transparent view. For store extensions, you can use tools to download and unpack the CRX file.
 
@@ -76,7 +76,7 @@ ls ~/Library/Application\ Support/Google/Chrome/Default/Extensions/EXTENSION_ID/
 
 This gives you the live version actually running in your browser, which is the most authoritative source for an audit.
 
-Analyzing the Manifest
+## Analyzing the Manifest
 
 The `manifest.json` file reveals the extension's declared permissions. Pay close attention to the `permissions` and `host_permissions` arrays.
 
@@ -111,7 +111,7 @@ Also check the `content_security_policy` field. A relaxed CSP like `"script-src 
 
 Check the `externally_connectable` key, which lists which web pages and extensions can send messages to this extension. A wildcard here (`"*"`) means any page on the internet can communicate with the extension. an obvious attack surface.
 
-Examining Background Scripts and Content Scripts
+## Examining Background Scripts and Content Scripts
 
 Background scripts run continuously and can intercept network requests. Content scripts execute on web pages you visit. Both handle your data.
 
@@ -156,7 +156,7 @@ grep -r "String.fromCharCode" --include="*.js" ./extension/
 
 If you find obfuscated strings or `eval()` usage that reconstructs URLs at runtime, treat this as a strong signal of intentional concealment. Legitimate extensions have no reason to hide their endpoint destinations.
 
-Checking Storage Usage
+## Checking Storage Usage
 
 Extensions use `chrome.storage` to persist data locally. Audit what information gets stored:
 
@@ -184,7 +184,7 @@ chrome.storage.sync.get(null, (items) => console.log('sync:', items));
 
 This shows you the live stored data. not just what the code says it might store, but what it has actually accumulated.
 
-Testing Network Behavior
+## Testing Network Behavior
 
 Install the extension in a test profile and monitor network traffic. Use Chrome's built-in tools or a proxy like Burp Suite.
 
@@ -220,7 +220,7 @@ This approach captures HTTPS traffic decrypted, which lets you see the full requ
 
 Pay attention to requests that happen without user interaction, particularly those triggered at regular intervals via the extension's alarm system. These are often telemetry or tracking beacons.
 
-Reviewing Updates
+## Reviewing Updates
 
 Extensions can change behavior through updates. Check the extension's update history in the Chrome Web Store. Sudden permission increases or new host access warrant re-audit.
 
@@ -233,7 +233,7 @@ When Chrome prompts you that an extension "has been updated and requires new per
 
 For extensions you depend on, set a periodic reminder. quarterly is reasonable. to re-run your audit against the latest version. Extensions are commonly acquired by third parties who then inject tracking into existing, trusted user bases.
 
-Automating Basic Checks
+## Automating Basic Checks
 
 For bulk auditing, consider scripts that automate manifest analysis:
 
@@ -314,7 +314,7 @@ for root, dirs, files in os.walk('./extension'):
                     print(f"  - {f}")
 ```
 
-Practical Audit Checklist
+## Practical Audit Checklist
 
 Use this checklist when evaluating any extension:
 
@@ -329,7 +329,7 @@ Use this checklist when evaluating any extension:
 9. Obfuscation Check: Search for eval, btoa, fromCharCode patterns
 10. Ownership History: Check if the extension changed hands recently
 
-Making Informed Decisions
+## Making Informed Decisions
 
 After completing your audit, weigh the functionality against privacy risks. Some extensions offer enough value to justify accepting certain risks, while others should be avoided entirely.
 
@@ -345,7 +345,6 @@ For sensitive tasks like password management or banking, use extensions with ver
 When in doubt, the safest option is to not install the extension. Browser hygiene. running fewer, more carefully vetted extensions. is more effective than any amount of post-hoc auditing.
 
 ---
-
 
 Related Reading
 

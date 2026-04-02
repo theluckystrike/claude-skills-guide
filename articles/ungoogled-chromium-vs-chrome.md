@@ -13,7 +13,6 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-
 If you spend your days writing code, debugging applications, or managing browser-based workflows, you have probably wondered whether Chrome's default configuration serves your best interests. Google Chrome dominates the browser market, but its deep integration with Google services raises legitimate concerns for privacy-conscious developers. Ungoogled Chromium offers an alternative that removes Google web services while maintaining the underlying Chromium architecture. This guide compares both browsers across the areas that matter most to developers and power users.
 
 What Is Ungoogled Chromium?
@@ -40,7 +39,7 @@ Google Chrome is Google's branded version of Chromium with additional features, 
 
 Chrome ships with non-free components not present in upstream Chromium, including Adobe Flash (historically) and various closed-source binaries.
 
-Privacy Comparison
+## Privacy Comparison
 
 For developers handling sensitive data or working in security-conscious environments, privacy matters. Chrome transmits data to Google servers for multiple purposes: usage metrics, crash reports, search suggestions, and CRL/OCSP checks for SSL certificates.
 
@@ -54,7 +53,7 @@ sudo tcpdump -i en0 -n port 53
 
 You will see Chrome resolving domains like `clients3.google.com` and `chrome.google.com`. Ungoogled Chromium makes none of these requests.
 
-Extension Compatibility
+## Extension Compatibility
 
 Both browsers support Chrome extensions. Ungoogled Chromium maintains full extension compatibility because it uses the same extension API and manifest format as Chrome. You can install extensions from the Chrome Web Store or load unpacked extensions directly.
 
@@ -67,7 +66,7 @@ You can load an unpacked extension in both browsers:
 3. Click "Load unpacked"
 4. Select your extension directory
 
-Developer Tools and DevTools Protocol
+## Developer Tools and DevTools Protocol
 
 Both browsers provide identical developer tools. Chrome DevTools, the Chrome DevTools Protocol, and all debugging capabilities work the same way in Ungoogled Chromium. The rendering engine is Chromium's Blink, the JavaScript engine is V8, and the debugging interfaces are identical.
 
@@ -75,7 +74,7 @@ If you build web applications, test browser-based features, or automate browsers
 
 Test your existing automation scripts. You may find they run more consistently in Ungoogled Chromium, particularly if your CI environment blocks Google domains or has strict network policies.
 
-Performance Considerations
+## Performance Considerations
 
 Performance is nearly identical because Ungoogled Chromium is built from the same codebase as Chrome. Any minor differences come from:
 
@@ -85,7 +84,7 @@ Performance is nearly identical because Ungoogled Chromium is built from the sam
 
 For most users, these differences are negligible. The performance gap between Chrome and Ungoogled Chromium is smaller than the gap between Chrome and Firefox or Safari.
 
-Installation and Updates
+## Installation and Updates
 
 Chrome installs via an installer that sets up Google Update and registers with your operating system's autostart mechanisms. Ungoogled Chromium requires manual installation and updates.
 
@@ -116,7 +115,7 @@ Choose Ungoogled Chromium if you want:
 - Privacy from Google's data collection
 - A cleaner testing environment for web development
 
-Practical Recommendation for Developers
+## Practical Recommendation for Developers
 
 Many developers use both browsers strategically. Run Ungoogled Chromium as your primary browser for development work, testing, and sensitive browsing. Keep Chrome installed for extension testing and when you specifically need Google integration.
 
@@ -133,7 +132,6 @@ brew install --cask ungoogled-chromium
 Create separate profiles in each browser to keep your development environment organized. Use keyboard shortcuts to switch quickly, `Cmd+Tab` on macOS or `Alt+Tab` on Windows.
 
 The choice between Ungoogled Chromium and Chrome ultimately comes down to your threat model, workflow preferences, and how much control you want over your browser's behavior. For developers who value transparency and privacy without sacrificing Chromium's excellent developer tools, Ungoogled Chromium provides a compelling alternative that integrates smoothly into existing workflows.
-
 
 Related Reading
 

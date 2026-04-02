@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Terraform Compliance Workflow"
 description: "Learn how to use Claude Code to automate Terraform compliance workflows. This guide covers policy-as-code, real-time compliance checking, CI/CD."
@@ -14,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Terraform Compliance Workflow
-
 Infrastructure compliance is no longer optional in modern cloud deployments. As organizations scale their Terraform usage, ensuring that every infrastructure change meets security, regulatory, and organizational standards becomes critical. This guide shows you how to use Claude Code to build solid Terraform compliance workflows that catch issues early, automate policy enforcement, and maintain audit trails.
 
-Understanding Terraform Compliance Challenges
+## Understanding Terraform Compliance Challenges
 
 Terraform compliance involves several moving parts: security scanning, policy enforcement, drift detection, and audit logging. Traditional approaches often rely on manual reviews or disconnected tools that create friction in the development workflow. Developers push changes, wait for security approval, and occasionally bypass controls to meet deadlines.
 
@@ -27,7 +23,7 @@ Claude Code transforms this paradigm by bringing compliance awareness directly i
 
 The key benefits include catching compliance violations during development rather than in production, generating compliance documentation automatically, and maintaining consistent policy enforcement across all teams.
 
-Setting Up Claude for Compliance-Aware Infrastructure Development
+## Setting Up Claude for Compliance-Aware Infrastructure Development
 
 To get started with compliance-focused Terraform development, you need to configure Claude with the right context. Create a CLAUDE.md file in your infrastructure repository that establishes compliance expectations:
 
@@ -50,7 +46,7 @@ Before committing any Terraform changes:
 
 This context file ensures Claude Code understands your compliance requirements and can proactively flag violations as you work.
 
-Implementing Real-Time Compliance Checking
+## Implementing Real-Time Compliance Checking
 
 One of the most powerful patterns is to have Claude Code check compliance as you write infrastructure code. Here's a practical workflow for detecting issues before they reach version control.
 
@@ -112,7 +108,7 @@ resource "aws_s3_bucket_tagging" "data_bucket" {
 
 This demonstrates how Claude can transform non-compliant configurations into secure, policy-compliant versions.
 
-Policy-as-Code Integration with Open Policy Agent
+## Policy-as-Code Integration with Open Policy Agent
 
 For organizations requiring formal policy enforcement, integrating Open Policy Agent (OPA) with your Terraform workflow provides enterprise-grade compliance control. Claude Code can help you write and test OPA policies that govern your infrastructure.
 
@@ -142,7 +138,7 @@ deny[msg] {
 
 Claude Code can generate these policies based on your organization's requirements, making it easier to maintain comprehensive compliance coverage.
 
-Automating Compliance in CI/CD Pipelines
+## Automating Compliance in CI/CD Pipelines
 
 Integrating compliance checks into your continuous integration pipeline ensures that no non-compliant infrastructure reaches production. Here's how to structure your GitHub Actions workflow:
 
@@ -188,7 +184,7 @@ jobs:
 
 Claude Code can help you generate these pipeline configurations and explain what each compliance tool does.
 
-Database Compliance Patterns
+## Database Compliance Patterns
 
 When managing databases through Terraform, compliance requirements become especially critical. Here's a pattern for compliant RDS configurations:
 
@@ -226,7 +222,7 @@ resource "aws_db_instance" "production" {
 
 Claude Code can audit existing database configurations and suggest the necessary changes to meet compliance standards like HIPAA, SOC 2, or PCI-DSS.
 
-Generating Compliance Documentation
+## Generating Compliance Documentation
 
 Beyond preventing non-compliant infrastructure, organizations need to demonstrate compliance to auditors. Claude Code can automatically generate compliance documentation based on your Terraform state:
 
@@ -254,7 +250,7 @@ Security Groups
 
 This documentation can be automatically generated and updated as your infrastructure changes.
 
-Best Practices for Terraform Compliance Workflows
+## Best Practices for Terraform Compliance Workflows
 
 Implementing effective Terraform compliance requires balancing security with developer productivity. Here are actionable best practices to follow:
 
@@ -272,7 +268,7 @@ Document exceptions formally. When compliance requirements can't be met, establi
 
 Maintain audit trails. Keep historical records of compliance checks, policy decisions, and any exceptions granted. This documentation proves invaluable during security audits.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Terraform compliance from a bottleneck into a smooth part of your infrastructure development workflow. By bringing compliance awareness directly into the development process, you can catch issues early, maintain consistent policy enforcement, and generate the documentation needed for audits.
 

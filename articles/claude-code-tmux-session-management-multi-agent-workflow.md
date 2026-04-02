@@ -16,13 +16,13 @@ permalink: /claude-code-tmux-session-management-multi-agent-workflow/
 
 When building [sophisticated AI-powered development workflows](/advanced-hub/) with Claude Code, managing multiple concurrent agent sessions becomes essential. Tmux (terminal multiplexer) provides the infrastructure needed to spawn, monitor, and coordinate multiple Claude Code instances running in parallel. This approach transforms Claude Code from a single interactive assistant into a capable multi-agent orchestration system.
 
-Why Tmux for Claude Code Multi Agent Workflows
+## Why Tmux for Claude Code Multi Agent Workflows
 
 Running Claude Code within tmux sessions offers several advantages over simple subprocess spawning. Tmux provides persistent terminal sessions that survive disconnection, window management for organizing agent workspaces, and built-in mechanisms for session-to-session communication. For developers building complex agentic systems, tmux creates a production-ready foundation.
 
 The core pattern involves creating separate tmux sessions for each Claude Code agent, each handling distinct responsibilities. One agent might handle frontend development using the frontend-design skill while another runs test-driven development with the tdd skill. A third session could manage documentation generation via the pdf skill, all running concurrently and communicating through shared files or a coordination script.
 
-Setting Up the Foundation
+## Setting Up the Foundation
 
 Before implementing multi-agent workflows, ensure tmux is installed and configure basic settings for agent management. Create a dedicated tmux configuration file optimized for automation:
 
@@ -47,7 +47,7 @@ set -g renumber-windows on
 
 Launch tmux with this configuration using `tmux -f ~/.tmux-agent.conf`. The configuration disables automatic window renaming, which keeps agent session names stable for programmatic access.
 
-Spawning Claude Code Agents in Tmux Sessions
+## Spawning Claude Code Agents in Tmux Sessions
 
 The fundamental operation involves creating a new tmux session and running Claude Code within it. Here's a bash function that spawns a Claude Code agent in print mode:
 
@@ -69,7 +69,7 @@ spawn_claude_agent "docs-agent" "Generate API documentation from the OpenAPI spe
 
 This pattern spawns three concurrent agents, each handling different aspects of a project. The `-d` flag runs sessions detached, allowing all agents to execute simultaneously.
 
-Managing Agent Lifecycle
+## Managing Agent Lifecycle
 
 Beyond spawning, your workflow needs to monitor agent status, retrieve results, and handle failures. Build a management script that provides these capabilities:
 
@@ -106,7 +106,7 @@ kill_agent() {
 
 These functions form the building blocks for sophisticated orchestration logic. Combine them to create workflows that respond to agent completion, failure, or timeout conditions.
 
-Implementing Coordination Patterns
+## Implementing Coordination Patterns
 
 With the foundation in place, implement coordination patterns that determine how agents interact. The [fan-out-fan-in pattern](/claude-code-agent-pipeline-sequential-vs-parallel/) with tmux-managed Claude Code agents:
 
@@ -148,7 +148,7 @@ done
 
 This pattern suits scenarios where you need multiple Claude Code agents to work on independent tasks simultaneously, then combine their outputs. Use this for parallel code generation, distributed testing, or concurrent documentation generation.
 
-Integrating Claude Skills Into Multi Agent Workflows
+## Integrating Claude Skills Into Multi Agent Workflows
 
 The real power emerges when combining tmux orchestration with Claude Code skills. Each agent session can load specific skills tailored to its role:
 
@@ -178,7 +178,7 @@ spawn_claude_agent_with_memory() {
 }
 ```
 
-Practical Example: Full Stack Development Workflow
+## Practical Example: Full Stack Development Workflow
 
 Consider a complete workflow for building a web application:
 
@@ -206,7 +206,7 @@ echo "All agents spawned. Monitor with: tmux ls"
 
 Run this script, and tmux manages six concurrent Claude Code sessions, each handling different responsibilities. Monitor progress using `tmux list-windows` or attach to specific sessions with `tmux attach -t session-name`.
 
-Pane Management Quick Reference
+## Pane Management Quick Reference
 
 When working with tmux interactively, these shortcuts help manage your agent workspace:
 
@@ -219,7 +219,7 @@ When working with tmux interactively, these shortcuts help manage your agent wor
 
 For session persistence and recovery, consider the tmux-resurrect plugin, which saves and restores entire tmux environments including running programs and pane layouts.
 
-Best Practices and Common Pitfalls
+## Best Practices and Common Pitfalls
 
 When building tmux-based multi-agent systems, avoid [spawning unlimited sessions](/parallel-subagents-claude-code-best-practices-2026/). Monitor system resources and cap concurrent agents based on available CPU and memory. Each Claude Code instance consumes resources even in print mode.
 
@@ -252,7 +252,7 @@ handle_agent_failure() {
 
 Use descriptive session names that reflect agent purpose. Names like `frontend-v2` or `api-auth` make debugging and monitoring significantly easier than auto-generated IDs.
 
-Extending the System
+## Extending the System
 
 For more advanced orchestration, integrate with tools like `supermemory` for persistent agent memory, or connect to external coordination systems through webhooks. The tmux foundation provides reliability and visibility into agent behavior while remaining simple to script and automate.
 

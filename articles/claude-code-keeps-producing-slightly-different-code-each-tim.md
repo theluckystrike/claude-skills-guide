@@ -15,11 +15,11 @@ score: 8
 
 {% raw %}
 
-Claude Code Keeps Producing Slightly Different Code Each Time
+## Claude Code Keeps Producing Slightly Different Code Each Time
 
 If you've noticed that Claude Code generates slightly different code each time you ask for the same task, you're experiencing one of the most common characteristics of large language models. This behavior isn't a bug, it's a fundamental property of how AI models generate text. However, there are practical strategies you can use to achieve more consistent results. This guide explains why this happens and provides actionable techniques to get reproducible output.
 
-Why Claude Code Produces Different Code Each Time
+## Why Claude Code Produces Different Code Each Time
 
 Claude Code uses probabilistic text generation, which means it selects tokens based on probability distributions rather than deterministic rules. Several factors contribute to this variability:
 
@@ -29,7 +29,7 @@ Context Window Variations: Even small changes in your prompt or the surrounding 
 
 Model Non-Determinism: The underlying transformer architecture has inherent randomness in its sampling process. Two identical prompts might produce functionally equivalent but syntactically different code.
 
-The Impact on Your Workflow
+## The Impact on Your Workflow
 
 This variability can cause several practical issues:
 
@@ -38,9 +38,9 @@ This variability can cause several practical issues:
 - Debugging Difficulty: When bugs appear inconsistently, they're harder to track down
 - Team Collaboration: Team members get different solutions to the same problem
 
-Practical Strategies for Consistent Output
+## Practical Strategies for Consistent Output
 
-Strategy 1: Use --print Mode with Consistent Prompts
+## Strategy 1: Use --print Mode with Consistent Prompts
 
 Using `--print` (non-interactive mode) with a fixed, precise prompt helps produce more consistent results by removing interactive session variables:
 
@@ -50,7 +50,7 @@ claude --print "Create a function that validates email addresses using regex"
 
 By using `--print` with the same prompt consistently, you reduce variables that could affect output.
 
-Strategy 2: Provide Explicit Examples in Your Prompt
+## Strategy 2: Provide Explicit Examples in Your Prompt
 
 One of the most effective ways to get consistent output is to provide an example of what you want. Claude Code is excellent at following patterns, and a single example can dramatically improve consistency:
 
@@ -71,7 +71,7 @@ interface Example {
 
 When you provide a structural example, Claude Code will follow that pattern much more closely than when you give no guidance.
 
-Strategy 3: Use Claude Code Skills for Template-Based Generation
+## Strategy 3: Use Claude Code Skills for Template-Based Generation
 
 Claude Code skills allow you to define consistent templates and patterns that the model follows. Create a skill that encapsulates your preferred code style:
 
@@ -94,7 +94,7 @@ Code Style
 
 When this skill is loaded, Claude Code will consistently follow these patterns regardless of other variations.
 
-Strategy 4: Use the System Prompt Effectively
+## Strategy 4: Use the System Prompt Effectively
 
 Your CLAUDE.md file (or equivalent system prompt) can enforce consistency across all generations. Include explicit instructions about output format:
 
@@ -109,7 +109,7 @@ Output Consistency Rules
 
 This ensures every code generation follows your team's conventions.
 
-Strategy 5: Use Seed Values When Available
+## Strategy 5: Use Seed Values When Available
 
 Some Claude Code configurations support seed values for reproducibility. Check if your setup supports this:
 
@@ -119,7 +119,7 @@ claude "Generate a React useState hook example"
 
 The seed parameter initializes the random number generator, which can produce more consistent results across runs.
 
-Strategy 6: Chain Prompts for Step-by-Step Consistency
+## Strategy 6: Chain Prompts for Step-by-Step Consistency
 
 Instead of asking for complete code in one prompt, break it into steps:
 
@@ -131,7 +131,7 @@ Step 3: Write unit tests for the validation function
 
 This approach gives you more control at each step and allows corrections before proceeding.
 
-Practical Example: Generating Consistent API Endpoints
+## Practical Example: Generating Consistent API Endpoints
 
 Here's how these strategies work together in practice:
 
@@ -177,7 +177,7 @@ This approach provides:
 3. Expected input/output types
 4. A structural template to follow
 
-Using Version Control to Track Changes
+## Using Version Control to Track Changes
 
 When Claude Code does produce different output, use git to track what changed:
 
@@ -194,7 +194,7 @@ diff user-service-v1.ts user-service-v2.ts
 
 This helps you understand what changed and choose the better version.
 
-When Variability Is Actually Beneficial
+## When Variability Is Actually Beneficial
 
 Sometimes different output isn't a problem, it's a feature. Consider using variability for:
 
@@ -204,14 +204,13 @@ Sometimes different output isn't a problem, it's a feature. Consider using varia
 
 The key is knowing when you need consistency and when variation is acceptable.
 
-Conclusion
+## Conclusion
 
 Claude Code's variable output is an inherent characteristic of language model generation, not a flaw. By understanding why it happens and applying these practical strategies, using explicit examples, creating consistent skills, structuring prompts carefully, and using templates, you can achieve the reproducibility your workflow requires. Start with providing examples in your prompts, as this single technique often provides the biggest improvement in output consistency.
 
 Remember: the goal isn't to eliminate all variation, but to control it strategically. Use these techniques when consistency matters, and enjoy the creative exploration when it doesn't.
 
 {% endraw %}
-
 
 Related Reading
 

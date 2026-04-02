@@ -14,7 +14,7 @@ score: 8
 
 Email snooze functionality has become essential for managing inbox overwhelm. Chrome extensions that implement email snooze scheduling allow users to temporarily remove emails from their inbox and have them reappear at a specified future time. This guide covers the implementation patterns, APIs, and practical considerations for developers building this type of extension.
 
-How Email Snooze Extensions Work
+## How Email Snooze Extensions Work
 
 Chrome extensions for email snooze scheduling typically operate by interacting with email provider APIs. The extension intercepts email messages, stores the snooze metadata on a backend or locally, and then uses scheduled triggers to move or relabel those emails back to the inbox at the designated time.
 
@@ -24,7 +24,7 @@ The core architecture involves three main components:
 2. Background Service Worker - Handles scheduling logic and API calls
 3. Storage Layer - Maintains snooze state using chrome.storage or a backend database
 
-Architecture Decision: Local vs. Backend Storage
+## Architecture Decision: Local vs. Backend Storage
 
 Before writing a single line of code, decide where your snooze state lives. This choice affects reliability, privacy, and the complexity of your extension.
 
@@ -37,7 +37,7 @@ Before writing a single line of code, decide where your snooze state lives. This
 
 For a personal productivity tool, `chrome.storage.local` with a fallback to provider labels is often the right balance. For a commercial product, a lightweight backend with OAuth gives users the reliability they expect.
 
-Manifest V3 Implementation
+## Manifest V3 Implementation
 
 Modern Chrome extensions must use Manifest V3, which introduces several changes from V2. Here's a basic manifest structure for an email snooze extension:
 
@@ -71,9 +71,9 @@ Modern Chrome extensions must use Manifest V3, which introduces several changes 
 
 The key Manifest V3 constraint to understand is that background pages are gone. you have a service worker instead. Service workers are ephemeral. They spin up to handle an event and then terminate. This means you cannot use global variables to hold state between alarm firings. Everything that needs to survive must go into `chrome.storage`.
 
-Core Implementation Patterns
+## Core Implementation Patterns
 
-Storing Snooze Data
+## Storing Snooze Data
 
 The chrome.storage API provides persistent storage that works across browser sessions. For email snooze extensions, you'll need to store the email ID, original label, and scheduled return time.
 
@@ -132,7 +132,7 @@ async function snoozeEmail(emailId, snoozeUntil) {
 }
 ```
 
-Scheduling with Chrome Alarms
+## Scheduling with Chrome Alarms
 
 Chrome's alarms API allows you to schedule future events reliably, even when the extension isn't actively running. The alarms API is the correct tool here. do not use `setTimeout` in a service worker, because the worker may terminate before the timeout fires.
 
@@ -177,7 +177,7 @@ async function processSnoozeReturn(emailId) {
 
 One important limitation: Chrome alarms have a minimum granularity of approximately one minute. If you need sub-minute precision (unusual for email snooze), you cannot achieve it with the alarms API alone. For typical snooze use cases. later today, tomorrow morning. one-minute granularity is perfectly acceptable.
 
-Handling Browser Restarts
+## Handling Browser Restarts
 
 When Chrome restarts, existing alarms survive (they are persisted by the browser). However, if your background service worker starts fresh after a restart, it needs to re-register its alarm listener. Because listeners are registered at service worker startup, the `chrome.alarms.onAlarm.addListener` call at the top of your background.js handles this automatically.
 
@@ -201,9 +201,9 @@ chrome.runtime.onStartup.addListener(async () => {
 
 This startup handler catches any snoozes that matured while the browser was closed, ensuring users see their emails when they open Chrome the next morning.
 
-Provider API Integration
+## Provider API Integration
 
-Gmail API Integration
+## Gmail API Integration
 
 For Gmail integration, you'll need to use the Gmail API to modify email labels. The typical snooze flow is: remove the INBOX label (archiving the email), optionally add a custom SNOOZED label, and then on wake, add INBOX back and remove the SNOOZED label.
 
@@ -284,7 +284,7 @@ async function ensureSnoozeLabelExists() {
 }
 ```
 
-Outlook API Integration
+## Outlook API Integration
 
 Microsoft Graph API handles Outlook.com and Office 365. The pattern mirrors Gmail but uses folder moves instead of label modifications:
 
@@ -328,7 +328,7 @@ async function archiveOutlookEmailForSnooze(emailId) {
 }
 ```
 
-Provider API Comparison
+## Provider API Comparison
 
 | Feature | Gmail API | Microsoft Graph |
 |---|---|---|
@@ -339,7 +339,7 @@ Provider API Comparison
 | Batch operations | Yes (batch endpoint) | Yes (batch endpoint) |
 | Webhook support | Push notifications (Cloud Pub/Sub) | Microsoft Graph subscriptions |
 
-User Interface Considerations
+## User Interface Considerations
 
 The snooze UI typically appears as a dropdown or popup when users hover over or select an email. Common preset options include:
 
@@ -393,7 +393,7 @@ function getDefaultSnoozeTime() {
 }
 ```
 
-Injecting UI into Gmail
+## Injecting UI into Gmail
 
 Gmail's DOM changes frequently, which is the main fragility point for content scripts that inject UI. Target stable data attributes rather than CSS class names, which Gmail minifies and rotates:
 
@@ -429,7 +429,7 @@ observer.observe(document.body, {
 });
 ```
 
-Security and Privacy
+## Security and Privacy
 
 Email snooze extensions handle sensitive data, so implement these security practices:
 
@@ -483,9 +483,9 @@ Also add a Content Security Policy to your manifest to prevent injected scripts 
 }
 ```
 
-Testing Your Snooze Extension
+## Testing Your Snooze Extension
 
-Unit Testing Alarm Logic
+## Unit Testing Alarm Logic
 
 Test the alarm scheduling logic in isolation using Jest and a mock Chrome API:
 
@@ -521,11 +521,11 @@ test('scheduleSnooze creates alarm with correct delay', () => {
 });
 ```
 
-End-to-End Testing Considerations
+## End-to-End Testing Considerations
 
 For end-to-end tests, use Puppeteer or Playwright with the `--load-extension` flag to load your unpacked extension. Test the full snooze and wake cycle against a real Gmail sandbox account with test emails you control.
 
-Building a Custom Solution
+## Building a Custom Solution
 
 For developers building their own snooze functionality, start with the fundamental patterns shown here and expand based on your specific requirements. Consider these enhancements as your extension matures:
 
@@ -547,7 +547,6 @@ async function bulkSnooze(emailIds, snoozeUntil) {
 ```
 
 The key is maintaining reliable scheduling even when the browser is closed, which requires combining chrome.alarms with a startup handler that catches missed firings. Pair that with a lightweight OAuth flow and the provider API patterns shown here, and you have a production-grade snooze extension that handles the full lifecycle from snooze to wake without data loss.
-
 
 Related Reading
 

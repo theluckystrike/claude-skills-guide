@@ -13,19 +13,15 @@ permalink: /claude-code-astro-static-site-generation-workflow-guide/
 ---
 {% raw %}
 
-
-
-Claude Code Astro Static Site Generation Workflow Guide
-
 [Building static sites with Claude Code and Astro creates a powerful combination](/best-claude-code-skills-to-install-first-2026/) for developers who want AI-assisted development without sacrificing performance. This guide covers practical workflows, skill integration, and automation patterns that work in 2026.
 
-Why Astro with Claude Code
+## Why Astro with Claude Code
 
 Astro's zero-JavaScript-by-default architecture makes it ideal for content-focused sites, blogs, and documentation. When paired with Claude Code, you get [AI assistance throughout the development process](/claude-skill-md-format-complete-specification-guide/)ss, from initial scaffolding to final deployment.
 
 The workflow uses Claude skills like `/frontend-design` for component creation, `/tdd` for test coverage, and `/supermemory` for context retention across sessions. Each skill adds capabilities without requiring additional infrastructure.
 
-Setting Up Your Astro Project with Claude
+## Setting Up Your Astro Project with Claude
 
 Start by creating a new Astro project. In your Claude Code session, you can use the shell to initialize the project:
 
@@ -58,9 +54,9 @@ Create a blog post card component with title, excerpt, date, and tags. Use seman
 
 Claude generates the component with proper accessibility attributes and styling considerations.
 
-Workflow Patterns for Static Site Development
+## Workflow Patterns for Static Site Development
 
-Component-Driven Development
+## Component-Driven Development
 
 Work through your site systematically using component patterns. Create reusable pieces first, then compose them into pages. Claude Code excels at understanding context, if you have an existing button component in your project, Claude can generate new components that follow the same patterns and conventions. This consistency is crucial for maintaining a cohesive codebase.
 
@@ -86,7 +82,7 @@ const blog = defineCollection({
 export const collections = { blog };
 ```
 
-Testing with the TDD Skill
+## Testing with the TDD Skill
 
 Integrate the [`/tdd` skill](/best-claude-skills-for-developers-2026/) for component testing. While Astro produces static output, interactive components and client-side logic benefit from test coverage:
 
@@ -118,7 +114,7 @@ describe('Card Component', () => {
 
 Claude understands that static sites have unique testing requirements. It can help you test not just components, but also your build process, routing configuration, and content generation pipelines.
 
-Documentation and Memory
+## Documentation and Memory
 
 The [`/supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) maintains context across long sessions. When building a larger site, activate it early:
 
@@ -128,15 +124,15 @@ The [`/supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) 
 
 This creates persistent memory of your project structure, design decisions, and coding preferences. Subsequent sessions retain knowledge of your component patterns, styling approach, and build configuration.
 
-Image Optimization Workflows
+## Image Optimization Workflows
 
 Static sites often struggle with image management. Astro provides excellent image optimization through its built-in tools, and Claude Code can automate the entire workflow. Claude can generate components that use Astro's `<Image />` component with appropriate presets. Describe your image requirements, responsive images, blur placeholders, or specific aspect ratios, and Claude will create the appropriate implementation.
 
 For bulk operations, describe your image assets and their intended usage. Claude can suggest optimal image formats, recommend compression settings, and generate the code needed to implement your image strategy.
 
-Automation and Deployment
+## Automation and Deployment
 
-Build Optimization
+## Build Optimization
 
 Astro's static generation produces optimized output by default. Configure build options in `astro.config.mjs`:
 
@@ -155,7 +151,7 @@ export default defineConfig({
 });
 ```
 
-Deployment Integration
+## Deployment Integration
 
 Connect your Astro project to deployment platforms. When deploying to platforms like Vercel, Netlify, or Cloudflare Pages, Claude can help configure environment variables, edge functions, and caching rules. Describe your deployment target and current challenges, and Claude will suggest specific configuration changes.
 
@@ -198,7 +194,7 @@ jobs:
 
 This workflow builds your site on every push and deploys to GitHub Pages automatically.
 
-PDF Generation for Static Content
+## PDF Generation for Static Content
 
 Many Astro sites need to generate PDFs, whitepapers, resumes, reports, or downloadable guides. The `/pdf` skill integrates smoothly with Astro's static generation. You can create pages that output as PDFs during build time, or generate them on-demand using server endpoints.
 
@@ -211,7 +207,7 @@ Common use cases include:
 
 The integration typically involves creating an Astro endpoint that renders your content to PDF format, which Claude can help architect and implement.
 
-Workflow Integration Tips
+## Workflow Integration Tips
 
 To get the most out of Claude Code with Astro, establish consistent patterns early:
 
@@ -222,9 +218,9 @@ To get the most out of Claude Code with Astro, establish consistent patterns ear
 
 The more context you provide about your project conventions, the more useful Claude becomes. Reference existing components when requesting new ones, and Claude will pick up on your patterns.
 
-Skill Integration Examples
+## Skill Integration Examples
 
-Creating a Blog with Multiple Skills
+## Creating a Blog with Multiple Skills
 
 A complete blog workflow combines several skills:
 
@@ -240,7 +236,7 @@ A complete blog workflow combines several skills:
 Create a responsive navigation component with mobile hamburger menu. Include links to home, blog, about, and contact pages.
 ```
 
-Generating Static Documentation
+## Generating Static Documentation
 
 For documentation sites, the workflow adapts to markdown-heavy content:
 
@@ -264,7 +260,7 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
 
 The `/pdf` skill can transform this documentation into downloadable guides for offline reading.
 
-Performance Considerations
+## Performance Considerations
 
 Static site generation provides excellent performance by default. Key optimization points include:
 
@@ -275,7 +271,7 @@ Static site generation provides excellent performance by default. Key optimizati
 
 Monitor Core Web Vitals during development. The `/tdd` skill can help create performance budgets and tests that validate metrics like Largest Contentful Paint and First Input Delay.
 
-Conclusion
+## Conclusion
 
 Claude Code combined with Astro delivers a productive workflow for static site development. The key is integrating the right skills at each stage, `/frontend-design` for components, `/tdd` for testing, `/supermemory` for context, and `/pdf` for content export. This combination gives you AI-assisted development with the performance benefits of static generation.
 
@@ -288,7 +284,6 @@ Related Reading
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Complete frontend skill stack
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). Testing workflows for any project
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Understanding skill activation
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

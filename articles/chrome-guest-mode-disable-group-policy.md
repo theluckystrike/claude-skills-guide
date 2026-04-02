@@ -13,13 +13,12 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
 {% raw %}
 How to Disable Chrome Guest Mode via Group Policy
 
 Chrome guest mode provides a browsing option that keeps user data separate from their regular profile. While useful for temporary browsing on personal devices, many organizations need to disable this feature for security and compliance reasons. This guide explains how to disable Chrome guest mode using group policy, with practical examples for Windows, macOS, and Linux environments.
 
-Understanding Chrome Guest Mode
+## Understanding Chrome Guest Mode
 
 Guest mode in Chrome creates a temporary profile that disappears when all guest windows close. This profile does not access the user's bookmarks, history, passwords, or other personal data. However, in enterprise environments, this feature can bypass security controls and create blind spots in compliance logging.
 
@@ -29,7 +28,7 @@ From a security standpoint, guest mode introduces several concrete problems for 
 
 These are not theoretical risks. Many compliance frameworks including HIPAA, SOC 2, and PCI DSS require auditability of all web activity on managed endpoints. Guest mode creates an unauditable channel that auditors flag as a finding.
 
-Group Policy Prerequisites
+## Group Policy Prerequisites
 
 Before configuring group policy, ensure you have the necessary tools installed:
 
@@ -41,7 +40,7 @@ You also need the Chrome Browser Enterprise bundle, which includes the administr
 
 Download the Chrome Browser Enterprise bundle from Google's Chrome Enterprise page. The bundle contains ADMX and ADML template files for Windows, a sample Chrome policy file for macOS, and documentation for all supported policy keys. Always match the template version to your deployed Chrome version or use the latest available. Chrome is backward compatible with newer templates but not always forward compatible.
 
-Chrome Policy Key Reference
+## Chrome Policy Key Reference
 
 Before diving into platform-specific steps, it helps to know the exact policy key names. Google uses consistent naming across platforms:
 
@@ -54,15 +53,15 @@ Before diving into platform-specific steps, it helps to know the exact policy ke
 
 `GuestModeEnabled` is the primary key covered in this guide. Note that disabling guest mode is separate from disabling incognito mode. both are independent policies. Many organizations disable both, but they require separate policy entries.
 
-Configuring Guest Mode Disablement on Windows
+## Configuring Guest Mode Disablement on Windows
 
-Step 1: Install Administrative Templates
+## Step 1: Install Administrative Templates
 
 Download the Chrome Browser Enterprise installer from Google's official support site. Run the installer and ensure the group policy templates are installed to the default location: `C:\Windows\SysWOW64\GroupPolicy`.
 
 After installing, the templates appear in the Group Policy Object Editor under Administrative Templates. If you manage a domain, copy the ADMX and ADML files to your Central Store at `\\domain\SYSVOL\domain\Policies\PolicyDefinitions\` so all domain controllers and management workstations have access.
 
-Step 2: Open Group Policy Editor
+## Step 2: Open Group Policy Editor
 
 Press `Win + R`, type `gpedit.msc`, and press Enter. Navigate to:
 
@@ -72,7 +71,7 @@ Computer Configuration > Administrative Templates > Google Chrome
 
 For domain environments, open Group Policy Management Console (`gpmc.msc`), create a new GPO or edit an existing one, then navigate to the same path inside the GPO editor.
 
-Step 3: Configure the Guest Mode Policy
+## Step 3: Configure the Guest Mode Policy
 
 Find and enable the policy named "Enable guest mode" (or "Enable Guest Browsing" in newer versions). Set it to Disabled.
 
@@ -86,7 +85,7 @@ After enabling this policy, restart Chrome or wait for group policy to refresh. 
 
 The difference between setting a policy to "Not Configured" versus "Disabled" matters here. "Not Configured" means the policy is absent and Chrome uses its default behavior (guest mode enabled). "Disabled" explicitly pushes the false value to managed devices. Always use "Disabled" explicitly rather than relying on defaults.
 
-Verification Command
+## Verification Command
 
 You can verify the policy application using Chrome's policy diagnostics:
 
@@ -111,7 +110,7 @@ Get-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Google\Chrome" `
 
 A value of `0` confirms the policy is applied. If the key does not exist, the policy has not reached the machine yet. run `gpupdate /force` and check again.
 
-Scoping the GPO to Specific OUs
+## Scoping the GPO to Specific OUs
 
 In most environments you want to apply this policy broadly, but you may need to exclude IT administrators or kiosk devices with different requirements. Use GPO security filtering to control scope:
 
@@ -120,7 +119,7 @@ In most environments you want to apply this policy broadly, but you may need to 
 3. Add the target security group (e.g., "Domain Computers" or a specific OU)
 4. Use WMI filters if you need to target only machines running specific Windows versions
 
-Configuring Guest Mode Disablement on macOS
+## Configuring Guest Mode Disablement on macOS
 
 macOS does not use traditional group policy, but you can achieve the same result through configuration profiles or MDM (Mobile Device Management) solutions.
 
@@ -160,7 +159,7 @@ Save this as `chrome_guest_disable.mobileconfig` and install it using:
 sudo profiles install -type=configuration -path=chrome_guest_disable.mobileconfig
 ```
 
-Deploying via Jamf Pro
+## Deploying via Jamf Pro
 
 If your organization uses Jamf Pro for macOS management, deploy the Chrome preference directly rather than a configuration profile:
 
@@ -184,7 +183,7 @@ If your organization uses Jamf Pro for macOS management, deploy the Chrome prefe
 
 Scope the profile to your target Smart Group and deploy. Jamf will push the preference to enrolled machines on the next check-in cycle (typically within 15 minutes).
 
-Verifying macOS Policy
+## Verifying macOS Policy
 
 After deploying, check that Chrome reads the managed preference:
 
@@ -198,11 +197,11 @@ defaults read /Library/Managed\ Preferences/$(whoami)/com.google.Chrome GuestMod
 
 Both should return `0`. Then open Chrome and navigate to `chrome://policy` to confirm the policy appears in the Active policies table with the correct value and source shown as "Platform."
 
-Configuring Guest Mode Disablement on Linux
+## Configuring Guest Mode Disablement on Linux
 
 Linux systems using Chrome require JSON policy files placed in specific directories.
 
-JSON Policy File Method
+## JSON Policy File Method
 
 Create a JSON file at `/etc/opt/chrome/policies/managed/guest_mode.json`:
 
@@ -219,7 +218,7 @@ mkdir -p ~/.config/google-chrome/policies/managed
 echo '{"GuestModeEnabled": false}' > ~/.config/google-chrome/policies/managed/guest_mode.json
 ```
 
-Deploying to Multiple Linux Machines
+## Deploying to Multiple Linux Machines
 
 For fleets of Linux machines, distribute the policy file using Ansible:
 
@@ -258,7 +257,7 @@ ansible-playbook -i inventory/workstations chrome_policy.yml
 
 The policy takes effect the next time Chrome starts or when policies are reloaded. No Chrome restart is required for policy file changes. Chrome polls its policy directory.
 
-Verifying Linux Configuration
+## Verifying Linux Configuration
 
 Check that Chrome recognizes the policy:
 
@@ -280,11 +279,11 @@ ls -la /etc/opt/chrome/policies/managed/
 
 If the JSON file has syntax errors or incorrect permissions, Chrome silently ignores it. Always validate JSON before deploying.
 
-Managing Multiple Devices with Chrome Browser Cloud Management
+## Managing Multiple Devices with Chrome Browser Cloud Management
 
 For organizations with devices across platforms, Chrome Browser Cloud Management provides a unified interface for policy deployment.
 
-Setting Up Cloud Management
+## Setting Up Cloud Management
 
 1. Sign up for Chrome Browser Cloud Management through the Google Admin console
 2. Enroll your Chrome Browser instances
@@ -294,15 +293,15 @@ The cloud management console allows you to target specific organizational units 
 
 Chrome Browser Cloud Management is particularly valuable for organizations with a mixed Windows/macOS/Linux environment, or where devices are not domain-joined. Enrollment requires deploying the Chrome management token to each machine, which can be done via existing MDM or software deployment tools.
 
-Cloud Management Policy Deployment
+## Cloud Management Policy Deployment
 
 In the Google Admin console, navigate to Devices > Chrome > Settings > Users & Browsers. Under the Security section, find "Guest mode" and set it to "Prevent guest mode." This setting propagates to all enrolled browsers within the policy refresh interval (default: 3 hours, or immediately on Chrome restart).
 
 Cloud Management provides a policy audit log showing when policies changed, who changed them, and which devices have received updates. This audit trail satisfies compliance requirements that on-premises group policy lacks.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Policy Not Applying
+## Policy Not Applying
 
 If policies fail to apply, check these common causes:
 
@@ -312,7 +311,7 @@ If policies fail to apply, check these common causes:
 
 A common Windows scenario: the GPO applies to computers but Chrome is running as the user. Computer-level Chrome policies apply to all users on a machine regardless of which user is logged in, while user-level policies apply based on the logged-in user. For guest mode disablement, apply the policy at Computer Configuration level to ensure no user can circumvent it.
 
-Testing Before Deployment
+## Testing Before Deployment
 
 Always test policy changes in a controlled environment:
 
@@ -332,7 +331,7 @@ A reliable testing workflow:
 5. Check endpoint monitoring tools to confirm they still capture activity under the test user's session
 6. Document the test results before broad deployment
 
-Guest Mode Still Appearing After Policy
+## Guest Mode Still Appearing After Policy
 
 If guest mode remains visible after applying the policy:
 
@@ -341,7 +340,7 @@ If guest mode remains visible after applying the policy:
 - Verify the Chrome version supports `GuestModeEnabled`. very old Chrome versions (pre-69) may not honor this key
 - On Windows, check for user-level policy overrides in `HKCU:\SOFTWARE\Policies\Google\Chrome` that may conflict with machine-level settings
 
-Removing Guest Mode Access Completely
+## Removing Guest Mode Access Completely
 
 Beyond group policy, consider these additional hardening measures:
 
@@ -352,7 +351,7 @@ Beyond group policy, consider these additional hardening measures:
 
 The combination of `GuestModeEnabled: false` and `IncognitoModeAvailability: 1` covers both anonymous browsing channels that compliance teams typically flag. Consider also enabling `SafeBrowsingEnabled: true` and `MetricsReportingEnabled: true` in the same policy file to improve security telemetry.
 
-Summary
+## Summary
 
 Disabling Chrome guest mode via group policy requires understanding your platform's policy mechanisms. Windows environments use the traditional Group Policy Editor with ADMX templates. macOS relies on configuration profiles, while Linux uses JSON policy files. Regardless of platform, the core setting remains consistent: set GuestModeEnabled to false.
 
@@ -360,7 +359,6 @@ For mixed environments, Chrome Browser Cloud Management provides the most compre
 
 By controlling guest mode, organizations maintain better security posture and ensure all browser activity traces to identifiable user profiles.
 {% endraw %}
-
 
 Related Reading
 

@@ -13,17 +13,16 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 If you spend time in terminal running repetitive commands, task runners can transform your workflow. Task (commonly referred to as just-taskfile) stands out as a lightweight, YAML-based task runner that pairs exceptionally well with Claude Code. This combination lets you automate complex development sequences while keeping configuration human-readable.
 
-What Makes Task Different
+## What Makes Task Different
 
 Task embraces simplicity through a single Taskfile.yml in your project root. Unlike complex build tools requiring extensive configuration, Task reads your intentions from straightforward YAML definitions. The syntax remains clean enough for quick edits while powerful enough for multi-step pipelines.
 
 The tool installs in seconds via Go, npm, or your preferred package manager. No daemon required, no runtime overhead, just execute `task` and watch your commands run.
 
-Setting Up Task with Claude Code
+## Setting Up Task with Claude Code
 
 Getting started requires creating a Taskfile.yml in your project. This file defines tasks as named commands or shell scripts. When Claude Code reads your project, it can parse this file and execute tasks on your behalf.
 
@@ -51,7 +50,7 @@ tasks:
 
 This basic setup demonstrates Task's declarative nature. The `deps` field ensures tasks run in correct order, here, tests execute before builds.
 
-Automating Claude Skill Workflows
+## Automating Claude Skill Workflows
 
 Claude Code works alongside Task beautifully when you automate skill-dependent workflows. Many Claude skills require specific setup steps that Task can handle consistently across machines.
 
@@ -73,9 +72,9 @@ tasks:
 
 Running `task pdf:compress myfile.pdf` now handles dependency installation automatically. Claude's pdf skill functions become immediately available without manual setup.
 
-Practical Integration Examples
+## Practical Integration Examples
 
-Frontend Design Workflows
+## Frontend Design Workflows
 
 The frontend-design skill benefits from Task's watch capabilities:
 
@@ -93,7 +92,7 @@ tasks:
 
 This pattern works identically with canvas-design for generating visual assets. Define your design pipeline once, let Task handle execution.
 
-Test-Driven Development
+## Test-Driven Development
 
 The tdd skill becomes more powerful when coupled with Task automation:
 
@@ -109,7 +108,7 @@ tasks:
       - coverage/
 ```
 
-Documentation Generation
+## Documentation Generation
 
 Documentation workflows using docx and pptx skills benefit from centralized task definitions:
 
@@ -129,7 +128,7 @@ tasks:
     deps: [pdf:setup]
 ```
 
-Leveraging Variables and Templates
+## Leveraging Variables and Templates
 
 Task supports variables that make configurations dynamic. Pass Claude's context directly into task execution:
 
@@ -146,7 +145,7 @@ tasks:
 
 Execute from Claude: `task review FILES="src/auth.ts"` passes the file directly into the task context.
 
-Advanced Patterns
+## Advanced Patterns
 
 For complex workflows, Task supports preconditions, dotenv loading, and hierarchical includes. The supermemory skill benefits from dotenv integration for API key management:
 
@@ -166,7 +165,7 @@ tasks:
 
 This ensures environment setup happens automatically before skill execution.
 
-Running Tasks in Parallel
+## Running Tasks in Parallel
 
 One of Task's most practical features for developer workflows is parallel execution. When you have independent steps that do not depend on each other, running them sequentially wastes time. Task handles this cleanly:
 
@@ -199,7 +198,7 @@ tasks:
 
 When `task ci` runs, the `lint`, `test`, and `typecheck` tasks all execute in parallel. Only after all three pass does the `build` step begin. Claude Code can trigger `task ci` as a single command and get full feedback from all checks at once.
 
-Environment Variables and .env Files
+## Environment Variables and .env Files
 
 Most projects require secrets and environment-specific values. Task integrates with dotenv files natively, which pairs well with Claude Code workflows where you want to isolate credentials from the task definitions themselves:
 
@@ -229,7 +228,7 @@ tasks:
 
 The `preconditions` block prevents tasks from running silently with missing configuration. Claude Code surfaces the error message directly, making it obvious what needs to be fixed without digging through shell output.
 
-Hierarchical Taskfiles for Monorepos
+## Hierarchical Taskfiles for Monorepos
 
 Large projects with multiple packages benefit from Task's include feature. You can define a root-level Taskfile that delegates to sub-Taskfiles in each package:
 
@@ -258,7 +257,7 @@ tasks:
 
 Now Claude Code can run `task api:test` to test just the API package, or `task dev:all` to bring up the entire stack. The namespace prefix keeps commands unambiguous even when package names overlap.
 
-Using Task for Claude Skill Pipelines
+## Using Task for Claude Skill Pipelines
 
 When you work with multiple Claude skills on the same project, Task helps sequence them reliably. A content processing pipeline combining the pdf skill with custom scripts looks like this:
 
@@ -298,7 +297,7 @@ tasks:
 
 Task's `sources` and `generates` fields add incremental build behavior. If the source PDFs have not changed since the last run, `content:extract` is skipped. Claude Code running `task content:process` only re-executes steps where inputs have actually changed, which matters when processing large document sets.
 
-A Complete Starter Taskfile
+## A Complete Starter Taskfile
 
 For teams adopting this workflow, a well-structured Taskfile serves as living documentation of every common operation. Here is a pattern that works well for a full-stack TypeScript project:
 
@@ -379,12 +378,11 @@ tasks:
 
 This Taskfile gives Claude Code a complete map of the project's operational surface. When you ask Claude to run tests before committing, or to reset the dev database, it finds the right command without ambiguity.
 
-Why This Combination Works
+## Why This Combination Works
 
 Claude Code excels at understanding intent and generating appropriate commands. Task excels at executing structured, repeatable command sequences. Together, they reduce friction between understanding what you want and making it happen.
 
 The workflow becomes: describe your goal to Claude, which reads your Taskfile, identifies the appropriate task, and executes it with proper dependencies. Complex multi-step processes collapse into single commands. The Taskfile also acts as a shared vocabulary. every developer on the project, and every Claude Code session, speaks the same task names regardless of the underlying toolchain.
-
 
 Related Reading
 

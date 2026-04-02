@@ -16,7 +16,7 @@ permalink: /advanced-hub/
 
 Once you've mastered the basics of Claude skills, the next frontier is efficiency and scale. This hub covers advanced topics: keeping token costs low, chaining skills intelligently, and building workflows that hold up in production.
 
-Table of Contents
+## Table of Contents
 
 1. [Token Optimization](#token-optimization)
 2. [Skill Chaining Strategies](#skill-chaining-strategies)
@@ -25,7 +25,7 @@ Table of Contents
 
 ---
 
-Token Optimization
+## Token Optimization
 
 Every skill invocation costs tokens. The skill definition itself, your system prompt, and the conversation history all count. Advanced users think carefully about which skills load when, and trim unnecessary context aggressively.
 
@@ -43,7 +43,7 @@ Full guide: [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-
 
 ---
 
-Skill Chaining Strategies
+## Skill Chaining Strategies
 
 Skill chains, where one skill's output feeds another, are where Claude skills deliver the most value. A well-designed chain eliminates entire categories of manual work.
 
@@ -62,7 +62,7 @@ For data-heavy chains, see [Best Claude Skills for Data Analysis](/best-claude-s
 
 ---
 
-Cost Reduction in Practice
+## Cost Reduction in Practice
 
 Advanced optimization isn't just about prompts. It's about workflow design:
 
@@ -73,7 +73,7 @@ Advanced optimization isn't just about prompts. It's about workflow design:
 
 ---
 
-Full Guide Index: Advanced Cluster
+## Full Guide Index: Advanced Cluster
 
 | Article | What You'll Learn |
 |---------|-------------------|

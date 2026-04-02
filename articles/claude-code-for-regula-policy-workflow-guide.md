@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Regula Policy Workflow Guide
 
 Infrastructure policy enforcement has evolved from manual reviews to automated checks, and Regula stands at the forefront of this transformation. By combining Regula's policy-as-code capabilities with Claude Code's intelligent assistance, you can build solid workflows that catch security misconfigurations before they reach production. This guide walks you through integrating Claude Code with Regula to create an efficient policy validation pipeline.
 
-Understanding Regula and Policy Workflows
+## Understanding Regula and Policy Workflows
 
 Regula is an open-source policy engine that evaluates infrastructure code against security and compliance rules. It supports multiple input formats including Terraform plans, CloudFormation templates, and Kubernetes manifests. When integrated with Claude Code, you gain an AI-powered partner that can interpret policy failures, suggest fixes, and even generate compliant configurations.
 
@@ -27,7 +26,7 @@ The typical policy workflow involves three stages: development where you write i
 
 Regula is built on Open Policy Agent (OPA) under the hood, which means its policies are written in Rego. a declarative query language. This gives it enormous flexibility. You can use the built-in rule library covering hundreds of CIS, PCI-DSS, SOC2, and HIPAA controls, or write your own Rego policies from scratch. Claude Code bridges the gap between reading Regula output and understanding what to actually change in your infrastructure code.
 
-How Regula Compares to Alternatives
+## How Regula Compares to Alternatives
 
 Before committing to a toolchain, it helps to understand where Regula fits relative to other popular policy engines:
 
@@ -41,11 +40,11 @@ Before committing to a toolchain, it helps to understand where Regula fits relat
 
 Regula's advantage is its tight Terraform plan integration and native OPA compatibility. If your team already uses OPA for other policy decisions, Regula is a natural fit. Claude Code works well with any of these tools, but the JSON output format from Regula is particularly clean for automated parsing and remediation suggestions.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before building workflows, ensure both Regula and Claude Code are installed and accessible. Regula runs as a container or binary, while Claude Code operates through its CLI interface. You'll want to verify both are in your PATH and configured for your infrastructure directory.
 
-Installing Regula
+## Installing Regula
 
 ```bash
 macOS via Homebrew
@@ -69,7 +68,7 @@ regula init --output-format json
 
 This creates the foundation for policy definitions and enables Regula to scan your infrastructure code. Claude Code can then reference these policies when assisting with remediation.
 
-Verifying the Setup
+## Verifying the Setup
 
 Run a quick sanity check before building any integrations:
 
@@ -86,7 +85,7 @@ regula run ./cloudformation/template.yaml --format json
 
 If Regula returns JSON output, you're ready to wire it into Claude Code workflows. A typical healthy run with no violations returns an empty `results` array; any violations populate with rule IDs, severities, and resource paths.
 
-Project Directory Structure
+## Project Directory Structure
 
 A clean project layout makes the integration easier to maintain:
 
@@ -112,7 +111,7 @@ infrastructure/
 
 Placing the Claude Code skill definition inside `.claude/skills/` makes it automatically discoverable within that project.
 
-Building the Policy Validation Skill
+## Building the Policy Validation Skill
 
 A Claude Code skill for Regula policy validation should capture the essential commands and interpretation logic. Here's a practical skill structure for policy workflows:
 
@@ -140,7 +139,7 @@ Policy Categories
 
 This skill provides the foundation for Claude to understand Regula's output format and respond appropriately to policy violations.
 
-Expanding the Skill with Remediation Context
+## Expanding the Skill with Remediation Context
 
 A more complete skill definition includes remediation patterns for common violations:
 
@@ -189,7 +188,7 @@ When reporting fixes, always include:
 
 With this richer skill definition, Claude Code can walk through a full results file and produce a prioritized remediation plan rather than just explaining individual failures.
 
-Interpreting Policy Results
+## Interpreting Policy Results
 
 When Regula identifies violations, it returns structured JSON output that Claude Code can parse and explain. The output includes severity levels, rule IDs, and resource identifiers. Understanding this structure helps you build more effective remediation workflows.
 
@@ -206,7 +205,7 @@ Consider a typical Regula output for an S3 bucket configuration:
 
 Claude Code can consume this output and provide actionable remediation steps. The key is creating a skill that understands both the policy rules and the recommended fixes for each violation type.
 
-Full Results Structure
+## Full Results Structure
 
 A real Regula results file for a multi-resource Terraform directory looks like this:
 
@@ -248,7 +247,7 @@ A real Regula results file for a multi-resource Terraform directory looks like t
 
 When you pass this to Claude Code with the regula-policy-assistant skill active, it can extract the `resource_id` and `filepath`, locate that resource in your Terraform files, and produce a targeted diff showing exactly what to change.
 
-Asking Claude to Parse Results
+## Asking Claude to Parse Results
 
 A practical prompt pattern for parsing Regula output:
 
@@ -264,7 +263,7 @@ Prioritize CRITICAL and HIGH severity first.
 
 Claude Code will then produce a numbered remediation list with before/after code blocks for each violation.
 
-Creating Automated Fix Suggestions
+## Creating Automated Fix Suggestions
 
 One of the most valuable integrations involves having Claude Code suggest fixes based on Regula's findings. You can build this capability by creating a mapping between common rule IDs and their remediation patterns.
 
@@ -290,11 +289,11 @@ resource "aws_s3_bucket" "example" {
 
 Claude Code can generate these corrections automatically by recognizing the rule ID and understanding the target resource type. This automation significantly reduces the time needed to address policy violations.
 
-Before and After: Common Terraform Fixes
+## Before and After: Common Terraform Fixes
 
 Here are three additional before/after patterns that Claude Code should understand when working through Regula results:
 
-EC2 IMDSv2 Enforcement
+## EC2 IMDSv2 Enforcement
 
 Before (FAIL. FG_R00100):
 ```hcl
@@ -318,7 +317,7 @@ resource "aws_instance" "web" {
 }
 ```
 
-S3 Public Access Block
+## S3 Public Access Block
 
 Before (FAIL. FG_R00229):
 ```hcl
@@ -343,7 +342,7 @@ resource "aws_s3_bucket_public_access_block" "assets" {
 }
 ```
 
-RDS Deletion Protection
+## RDS Deletion Protection
 
 Before (FAIL. FG_R00280):
 ```hcl
@@ -370,7 +369,7 @@ resource "aws_db_instance" "main" {
 
 These patterns can be embedded directly in your Claude Code skill definition so Claude applies them consistently without needing to reason from first principles each time.
 
-Building Multi-Stage Validation Pipelines
+## Building Multi-Stage Validation Pipelines
 
 Production workflows typically involve multiple validation stages. You can orchestrate these stages using Claude Code skills that coordinate between different tools and checks.
 
@@ -383,7 +382,7 @@ A typical pipeline might include:
 
 Claude Code can manage this pipeline by invoking Regula at each stage and interpreting the results. You define the rules, and Claude ensures consistent enforcement.
 
-Pre-Commit Hook Integration
+## Pre-Commit Hook Integration
 
 Add Regula checks directly to Git pre-commit hooks so violations are caught before code even leaves a developer's machine:
 
@@ -408,7 +407,7 @@ echo "All policy checks passed."
 exit 0
 ```
 
-GitHub Actions CI/CD Pipeline
+## GitHub Actions CI/CD Pipeline
 
 ```yaml
 name: Infrastructure Policy Validation
@@ -454,7 +453,7 @@ jobs:
 
 This pipeline blocks merges on CRITICAL and HIGH violations while still surfacing MEDIUM and LOW findings as informational. Claude Code can then be invoked in the remediation step with the results JSON to produce fix suggestions.
 
-Handling Custom Policies
+## Handling Custom Policies
 
 Beyond Regula's built-in rules, you can create custom policies tailored to your organization's requirements. These policies use Rego to define conditions that infrastructure must satisfy.
 
@@ -467,7 +466,7 @@ description: S3 buckets must follow naming standards
 
 Claude Code can assist in writing these custom policies by suggesting appropriate conditions based on the resources you're validating. This capability makes Regula adaptable to any compliance framework.
 
-Writing a Complete Custom Rego Policy
+## Writing a Complete Custom Rego Policy
 
 Here is a full example of a custom Rego policy that enforces mandatory resource tagging:
 
@@ -535,7 +534,7 @@ Using the regula-policy-assistant skill, write a Rego policy that:
 - Include the __rego__metadoc__ block
 ```
 
-Custom Policy Development Workflow
+## Custom Policy Development Workflow
 
 | Step | Action | Claude Code Role |
 |---|---|---|
@@ -545,7 +544,7 @@ Custom Policy Development Workflow
 | 4 | Refine edge cases | Identifies resources the policy misses |
 | 5 | Add to CI/CD pipeline | Generates the `--include` flag configuration |
 
-Best Practices for Integration
+## Best Practices for Integration
 
 When integrating Claude Code with Regula, consider these practical recommendations:
 
@@ -587,7 +586,7 @@ Claude Code can audit this exceptions file periodically and flag entries that ha
 
 Establish a feedback loop where remediation actions inform policy refinement. As your infrastructure evolves, your policies should adapt accordingly. Schedule quarterly reviews where Claude Code summarizes which rules are triggering most frequently. those patterns often indicate that a policy is too strict, or that a default Terraform module needs to be updated to include a compliant baseline.
 
-Remediation Velocity Tracking
+## Remediation Velocity Tracking
 
 Track how quickly your team resolves violations to identify bottlenecks:
 
@@ -600,7 +599,7 @@ Track how quickly your team resolves violations to identify bottlenecks:
 
 Claude Code can generate these metrics from your CI/CD logs if you ask it to parse the historical Regula output stored as build artifacts.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Regula creates a powerful policy-as-code workflow that automates security validation while maintaining developer productivity. By understanding Regula's output structure and building appropriate Claude Code skills, you can create systems that not only detect policy violations but actively guide remediation efforts.
 

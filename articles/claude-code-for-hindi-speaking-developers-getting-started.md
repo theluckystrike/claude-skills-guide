@@ -27,7 +27,7 @@ Claude Code की मुख्य विशेषताएं:
 - Skill ecosystem - specialized skills install करें
 - Terminal integration - shell commands run करें
 
-Claude Code कैसे Install करें
+## Claude Code कैसे Install करें
 
 Claude Code install करने के लिए सबसे पहले आपको एक terminal open करना होगा। यदि आप macOS use कर रहे हैं, तो Terminal.app या iTerm2 use करें। Linux पर कोई भी terminal काम करेगा।
 
@@ -43,7 +43,7 @@ npm install -g @anthropic-ai/claude-code
 
 Install होने के बाद, आप `claude` command use करके शुरू कर सकते हैं।
 
-Claude Code Setup करना
+## Claude Code Setup करना
 
 पहली बार Claude Code use करते समय, आपको कुछ basic setup करना होगा। Terminal में यह command run करें:
 
@@ -90,7 +90,7 @@ cp my-skill.md .claude/
 Place python.md in .claude/ then invoke: /python
 ```
 
-Hindi Developers के लिए सबसे Useful Skills
+## Hindi Developers के लिए सबसे Useful Skills
 
 1. Shell Scripting Skill
 
@@ -130,9 +130,9 @@ Place docker.md in .claude/ then invoke: /docker
 
 इससे आप Hindi में Dockerfiles और docker-compose files बना सकते हैं।
 
-Practical Examples
+## Practical Examples
 
-Example 1: Simple Python Script
+## Example 1: Simple Python Script
 
 मान लीजिए आपको एक script चाहिए जो numbers का sum करे। बस पूछें:
 
@@ -151,7 +151,7 @@ result = sum_numbers([1, 2, 3, 4, 5])
 print(f"Sum: {result}")  # Output: Sum: 15
 ```
 
-Example 2: React Component
+## Example 2: React Component
 
 React में component बनाना भी आसान है:
 
@@ -159,9 +159,9 @@ React में component बनाना भी आसान है:
 "ek React button component banaiyo jo click par alert dikhaye"
 ```
 
-Claude Code appropriate component generate करेगा।
+## Claude Code appropriate component generate करेगा।
 
-Example 3: API Endpoint
+## Example 3: API Endpoint
 
 FastAPI में endpoint बनाने के लिए:
 
@@ -181,7 +181,7 @@ async def get_user(user_id: int):
     return {"user_id": user_id, "name": "John Doe"}
 ```
 
-Claude Code के साथ Best Practices
+## Claude Code के साथ Best Practices
 
 1. Clear Prompts Use करें
 
@@ -211,9 +211,9 @@ Code लिखवाने के बाद, review के लिए पूछ�
 "Is code mein kya improvements ho sakte hain?"
 ```
 
-Common Issues और Solutions
+## Common Issues और Solutions
 
-Issue 1: Permission Errors
+## Issue 1: Permission Errors
 
 यदि आपको permission errors आते हैं, तो यह check करें कि आपके पास required permissions हैं:
 
@@ -225,7 +225,7 @@ Fix if needed
 chmod +x your-script.sh
 ```
 
-Issue 2: Dependencies Missing
+## Issue 2: Dependencies Missing
 
 यदि code run नहीं हो रहा, तो dependencies install करें:
 
@@ -237,13 +237,13 @@ Node dependencies
 npm install
 ```
 
-Issue 3: Claude Code Not Responding
+## Issue 3: Claude Code Not Responding
 
 यदि Claude Code hang हो जाए, तो Ctrl+C press करके interrupt करें और फिर से try करें।
 
-Advanced Tips
+## Advanced Tips
 
-Multi-file Projects
+## Multi-file Projects
 
 Bigger projects में, आप पूछ सकते हैं:
 
@@ -251,9 +251,9 @@ Bigger projects में, आप पूछ सकते हैं:
 "Mere project mein ek new file add karni hai user authentication ke liye"
 ```
 
-Claude Code आपको guidance देगा कि कहां और कैसे add करना है।
+## Claude Code आपको guidance देगा कि कहां और कैसे add करना है।
 
-Testing
+## Testing
 
 Test files बनवाने के लिए:
 
@@ -261,7 +261,7 @@ Test files बनवाने के लिए:
 "In code ke liye unit tests likhaiyo"
 ```
 
-Documentation
+## Documentation
 
 Documentation के लिए:
 
@@ -269,14 +269,13 @@ Documentation के लिए:
 "Is function ke liye docstring likhaiyo"
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code Hindi-बोलने वाले developers के लिए एक powerful tool है। शुरुआत में थोड़ा practice लगता है, लेकिन एक बार समझ आने के बाद, यह आपकी development speed को कई गुना बढ़ा सकता है। 
 
 सबसे important बात यह है कि आप अपनी Hindi में freely communicate कर सकते हैं। घबराएं नहीं, छोटे projects से शुरू करें और gradually अपनी skills बढ़ाएं।
 
-Happy Coding! 
-
+## Happy Coding!
 
 Related Reading
 

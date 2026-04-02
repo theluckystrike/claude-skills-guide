@@ -16,7 +16,7 @@ permalink: /claude-code-skills-for-ios-swift-development/
 
 iOS development with Swift requires handling complex architectures, extensive testing, and detailed documentation. Claude Code and its [skill system](/claude-skill-md-format-complete-specification-guide/) provide valuable assistance for developers working with Xcode, SwiftUI, and UIKit. This guide covers practical applications of Claude Code's built-in skills for iOS development workflows.
 
-Setting Up Claude Code for iOS Development
+## Setting Up Claude Code for iOS Development
 
 Before integrating Claude into your iOS workflow, ensure your development environment is properly configured. You'll need Xcode installed along with the command-line tools. Claude Code works best when it can access your project structure, so keep your `.xcodeproj` and `.xcworkspace` files accessible.
 
@@ -60,7 +60,7 @@ When starting a Claude session, also provide architectural context explicitly:
 I'm working on an iOS app with SwiftUI and MVVM architecture. The project uses Combine for reactive programming and Swift Package Manager for dependencies.
 ```
 
-Available Skills for iOS Development
+## Available Skills for iOS Development
 
 Claude Code ships with several built-in skills that enhance iOS development:
 
@@ -74,11 +74,11 @@ Claude Code ships with several built-in skills that enhance iOS development:
 
 While there are no iOS-specific built-in skills like `/swift`, `/xcode`, or `/swiftui`, Claude handles Swift code generation effectively when you describe your requirements clearly.
 
-Feature Development Workflow with Claude Code
+## Feature Development Workflow with Claude Code
 
 When starting a new feature, structure your requests to Claude in phases.
 
-Phase 1: Feature Planning and Architecture
+## Phase 1: Feature Planning and Architecture
 
 Describe your requirements with clear, structured prompts that include:
 
@@ -91,7 +91,7 @@ For example: "Design a feature for user authentication with biometric support us
 
 Claude Code will generate suggested architecture diagrams, file structure recommendations, protocol definitions, and initial view model and view controller templates.
 
-Phase 2: Code Generation and Implementation
+## Phase 2: Code Generation and Implementation
 
 Claude Code excels at generating Swift code that follows Apple's best practices. For example, a shopping cart view model:
 
@@ -136,7 +136,7 @@ final class ShoppingCartViewModel: ObservableObject {
 
 This demonstrates several Swift best practices: `@MainActor` for thread-safe UI updates, `@Published` properties for reactive updates, clear separation of concerns, and custom error types.
 
-Phase 3: Testing and Debugging
+## Phase 3: Testing and Debugging
 
 Claude Code can generate unit tests, integration tests, and UI tests. For the shopping cart above:
 
@@ -173,7 +173,7 @@ final class ShoppingCartViewModelTests: XCTestCase {
 }
 ```
 
-Test-Driven Development with the TDD Skill
+## Test-Driven Development with the TDD Skill
 
 The [TDD skill](/claude-tdd-skill-test-driven-development-workflow/) transforms your iOS development approach. Activate it in your Claude session:
 
@@ -255,7 +255,7 @@ actor UserService {
 }
 ```
 
-SwiftUI Development with Claude
+## SwiftUI Development with Claude
 
 When building SwiftUI interfaces, Claude assists with component creation and state management. Describe your UI requirements clearly:
 
@@ -422,7 +422,7 @@ final class ProfileViewModel {
 }
 ```
 
-Custom SwiftUI Components
+## Custom SwiftUI Components
 
 Claude Code also generates reusable component styles. Request components with specific requirements:
 
@@ -461,7 +461,7 @@ struct PrimaryButtonStyle: ButtonStyle {
 }
 ```
 
-Building Network Layers with Claude
+## Building Network Layers with Claude
 
 iOS apps require solid networking. Claude excels at generating type-safe API clients using modern Swift concurrency. A full NetworkService with structured error handling:
 
@@ -559,7 +559,7 @@ enum APIError: Error {
 }
 ```
 
-UI Testing with XCTest
+## UI Testing with XCTest
 
 iOS testing involves multiple layers: unit tests, UI tests, and integration tests. Claude helps generate [comprehensive test coverage](/claude-code-skills-for-qa-engineers-automating-test-suites/).
 
@@ -587,7 +587,7 @@ class ProfileScreenTests: XCTestCase {
 }
 ```
 
-Working with Xcode, Swift Packages, and CocoaPods
+## Working with Xcode, Swift Packages, and CocoaPods
 
 When your iOS project uses Swift Package Manager, Claude assists with dependency management and package integration. Describe your package requirements:
 
@@ -708,7 +708,7 @@ class NetworkViewController: UIViewController {
 
 When working with CocoaPods or Swift Package Manager, Claude can suggest appropriate libraries for your use case, help configure dependencies in Podfile or Package.swift, and identify potential version conflicts.
 
-XcodeGen Integration
+## XcodeGen Integration
 
 If your project uses XcodeGen, Claude Code can help modify your `project.yml` configuration:
 
@@ -718,7 +718,7 @@ Add a new SwiftUI view to project.yml with target MyApp, ensuring it compiles fo
 
 Claude Code generates the appropriate configuration updates, ensuring proper deployment targets and Swift version settings.
 
-Documentation Generation for iOS Projects
+## Documentation Generation for iOS Projects
 
 The `pdf` skill helps generate documentation for your iOS project. After completing feature development, use it to create API documentation or architecture guides. For similar cross-platform mobile workflows, see [Claude Code Dart Flutter Cross Platform Development Guide](/claude-code-dart-flutter-cross-platform-development-guide/).
 
@@ -738,7 +738,7 @@ Use this to generate Swift documentation with proper formatting, including code 
 
 The `supermemory` skill maintains context across development sessions. When working on complex features spanning multiple sessions, Claude recalls previous decisions, architectural choices, and implementation details.
 
-Debugging iOS Issues
+## Debugging iOS Issues
 
 When encountering runtime issues, Claude Code can help diagnose problems. Share error messages and relevant code:
 
@@ -749,7 +749,7 @@ The view has a @StateObject view model that fetches data from a service.
 
 Claude will analyze your code and suggest potential causes, often identifying retain cycles, threading issues, or state management problems. For larger debugging sessions, provide specific error messages and the relevant code sections; describe what you expected versus what occurred, and Claude suggests targeted fixes rather than generic solutions.
 
-Best Practices for iOS Development with Claude
+## Best Practices for iOS Development with Claude
 
 1. Provide context. Share your Xcode project structure, Swift version, minimum deployment target, and key files so Claude understands your architecture.
 

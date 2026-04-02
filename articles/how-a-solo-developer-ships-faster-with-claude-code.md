@@ -18,13 +18,13 @@ Solo developers face a unique challenge: you handle everything from architecture
 
 This guide covers practical strategies to accelerate your development workflow without sacrificing code quality.
 
-The Solo Developer Bottleneck
+## The Solo Developer Bottleneck
 
 Every solo developer encounters the same time sinks: writing tests that feel repetitive, generating documentation no one reads, manually processing client deliverables, and context-switching between frameworks. These tasks are necessary but don't directly contribute to shipping features.
 
 Claude Code addresses this through skills, specialized prompt packages that extend the AI's capabilities in specific domains. Rather than explaining your tech stack every session, skills provide persistent context and automation for recurring workflows.
 
-Automate Testing with the TDD Skill
+## Automate Testing with the TDD Skill
 
 Test-driven development improves code quality but feels like overkill when you're moving fast. [The tdd skill reverses this equation by generating tests automatically](/claude-tdd-skill-test-driven-development-workflow/) while you focus on implementation.
 
@@ -53,7 +53,7 @@ class TestUserAuthentication:
 
 Running tests becomes a single command, and the skill suggests edge cases you might have missed. The result: comprehensive test coverage in minutes instead of hours.
 
-Streamline Documentation with the PDF Skill
+## Streamline Documentation with the PDF Skill
 
 Client deliverables, invoices, and technical specifications often arrive as PDFs. [The pdf skill processes these documents programmatically](/best-claude-code-skills-to-install-first-2026/), extracting the information you need without manual copying.
 
@@ -66,7 +66,7 @@ Read client-brief-2026.pdf and extract all action items. Group them by section a
 
 Claude reads the document, extracts the structured information, and presents it in a format you can copy directly into your project tracker. This approach converts unstructured client input into actionable tasks without manual copying.
 
-Knowledge Management with Supermemory
+## Knowledge Management with Supermemory
 
 Working alone means you're both architect and historian. [The supermemory skill maintains persistent context across sessions](/claude-supermemory-skill-persistent-context-explained/), tracking decisions, API contracts, and project history.
 
@@ -82,7 +82,7 @@ Claude: Using context from last session, I'll continue with:
 
 This persistent context eliminates the friction of re-orienting an AI assistant every time you resume work.
 
-Frontend Design Without the Designer's Salary
+## Frontend Design Without the Designer's Salary
 
 Solo developers often struggle with visual design. The frontend-design skill provides component patterns, color schemes, and layout recommendations that match modern standards:
 
@@ -102,7 +102,7 @@ Solo developers often struggle with visual design. The frontend-design skill pro
 
 The skill generates responsive, accessible markup using Tailwind CSS patterns, ensuring your frontend meets professional standards without requiring a dedicated designer.
 
-Spreadsheet Automation with the XLSX Skill
+## Spreadsheet Automation with the XLSX Skill
 
 Client reporting, project tracking, and financial summaries often require spreadsheet work. The xlsx skill automates data processing and report generation. Invoke it with `/xlsx` in your Claude Code session:
 
@@ -113,7 +113,7 @@ Create an invoice spreadsheet for Acme Corp. Line items: API Development (24 hou
 
 Claude generates the spreadsheet with proper formatting, formulas, and totals. What used to take 20–30 minutes of manual spreadsheet work completes in seconds.
 
-CI/CD Pipeline Generation
+## CI/CD Pipeline Generation
 
 Deployment infrastructure takes time to configure correctly. Ask Claude Code directly to generate CI/CD pipelines for your stack. describe your language, test command, and deployment target and it produces a production-ready workflow file:
 
@@ -150,7 +150,7 @@ jobs:
 
 The pipeline includes testing, build verification, and deployment steps tailored to your framework.
 
-Workflow Integration
+## Workflow Integration
 
 These skills work best when combined strategically:
 
@@ -161,7 +161,7 @@ These skills work best when combined strategically:
 
 This workflow reduces context-switching and automates tasks that typically consume 30-40% of solo developer time.
 
-Measuring the Impact
+## Measuring the Impact
 
 After implementing these skills, track your development velocity:
 
@@ -170,7 +170,7 @@ After implementing these skills, track your development velocity:
 
 Many solo developers report 40-60% time savings on non-coding tasks, translating to faster iteration cycles and more capacity for feature work.
 
-Implementation Strategy
+## Implementation Strategy
 
 Start with one skill that matches your biggest bottleneck:
 

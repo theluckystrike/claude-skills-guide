@@ -18,13 +18,13 @@ Daily standups are a cornerstone of agile development, but manually compiling st
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. Skills give Claude specific instructions and context for recurring tasks, they're not Python packages or shell commands.
 
-Why Automate Standups with Claude Skills
+## Why Automate Standups with Claude Skills
 
 Developers spend an average of 10–15 minutes each morning crafting standup messages, time that compounds across a team. Rather than treating standups as a chore, automation lets you capture what actually matters: blockers, progress, and upcoming priorities.
 
 The real power comes from treating your development activity as structured data. Git commits, issue trackers, and project management tools all contain the information your standup needs. Claude Code sessions can execute shell commands to pull this data, and skills provide the formatting and synthesis instructions.
 
-Core Skills You Will Need
+## Core Skills You Will Need
 
 Several Claude skills work together to make this workflow function:
 
@@ -34,9 +34,9 @@ Several Claude skills work together to make this workflow function:
 
 Each skill plays a specific role in the pipeline, from data collection to final output.
 
-Building the Automation Pipeline
+## Building the Automation Pipeline
 
-Step 1: Configure Data Sources
+## Step 1: Configure Data Sources
 
 Your standup needs three types of information: what you completed yesterday, what you're working on today, and any blockers. For GitHub-based projects, fetch recent activity via the shell:
 
@@ -61,7 +61,7 @@ data_sources:
     project_key: PROJ
 ```
 
-Step 2: Create the Standup Generator Skill
+## Step 2: Create the Standup Generator Skill
 
 Build a custom skill at `~/.claude/skills/standup-generator.md`:
 
@@ -99,7 +99,7 @@ Invoke it each morning with:
 
 Claude executes the shell commands, fetches the relevant data, and produces the formatted standup.
 
-Step 3: Example Output
+## Step 3: Example Output
 
 Once your skill collects the data, it produces a clean standup format:
 
@@ -120,7 +120,7 @@ Blockers
 - Need access to staging environment for testing
 ```
 
-Step 4: Delivery Integration
+## Step 4: Delivery Integration
 
 Automate delivery to your team's communication channel using a webhook script:
 
@@ -146,9 +146,9 @@ if __name__ == "__main__":
 
 Schedule this with a cron job or GitHub Actions workflow that runs every morning at your team's standup time.
 
-Advanced Enhancements
+## Advanced Enhancements
 
-Using supermemory for Context
+## Using supermemory for Context
 
 The supermemory skill maintains long-term context about your projects. Use it to track recurring blockers that span multiple days:
 
@@ -159,7 +159,7 @@ The supermemory skill maintains long-term context about your projects. Use it to
 
 When generating standups, supermemory surfaces blockers that are still open, ensuring nothing falls through the cracks.
 
-Handling Multiple Projects
+## Handling Multiple Projects
 
 If you work across several projects, modify your standup skill to aggregate activity per project:
 
@@ -174,7 +174,7 @@ done
 
 Pass this output to Claude with your `/standup-generator` skill for formatting.
 
-PDF Generation for Records
+## PDF Generation for Records
 
 For teams that maintain meeting records, the pdf skill generates formal standup documents:
 
@@ -185,7 +185,7 @@ Convert this standup message into a formatted PDF document titled "Daily Standup
 
 Store these in a shared drive for historical reference and sprint reviews.
 
-Common Pitfalls and Solutions
+## Common Pitfalls and Solutions
 
 Problem: The generated standup includes irrelevant commits.
 
@@ -199,7 +199,7 @@ Problem: Standup feels too generic.
 
 Solution: Add a manual override step. After `/standup-generator` produces the draft, review and append custom notes before running the delivery script.
 
-Putting It All Together
+## Putting It All Together
 
 The complete workflow runs in under a minute once configured. Each morning, invoke `/standup-generator` in Claude Code. Claude pulls your development activity via shell commands, filters and formats it, and produces a polished standup. Run the delivery script to post it to your team channel.
 
@@ -212,6 +212,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack including tdd
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Automate deployments with Claude skills
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

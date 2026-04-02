@@ -18,13 +18,13 @@ This guide addresses a specific scenario: your software project is already struc
 
 Managing Claude skills across a [monorepo](/how-do-i-share-claude-skills-across-multiple-projects/) with multiple packages presents unique challenges. When your project spans dozens of packages, whether TypeScript workspaces, Python modules, or mixed-language environments, you need a strategy that avoids duplication while keeping skills accessible to every package that needs them. This guide covers practical approaches for sharing Claude skills across your entire monorepo.
 
-Understanding the Monorepo Challenge
+## Understanding the Monorepo Challenge
 
 [Monorepos offer undeniable benefits: unified dependency management, shared tooling, and atomic commits across packages](/best-claude-code-skills-to-install-first-2026/) However, they also create specific challenges for Claude skills. Each package may require different skill sets, a backend API package needs different workflows than a frontend UI package. Yet certain skills should be universal: code quality checks, testing patterns, and documentation generation should work consistently everywhere.
 
 The key is separating package-specific skills from shared skills, then making both accessible through a clear hierarchy.
 
-Project Structure for Shared Skills
+## Project Structure for Shared Skills
 
 The most effective approach places shared skills in a central location while allowing package-specific overrides. Create a `skills` directory at your monorepo root, then organize skills into clear categories:
 
@@ -50,7 +50,7 @@ my-monorepo/
  CLAUDE.md              # Root-level Claude instructions
 ```
 
-Configuring Claude to Find Shared Skills
+## Configuring Claude to Find Shared Skills
 
 Claude Code reads skills from `~/.claude/skills/`. To make monorepo skills available, symlink your shared skills directory into that location:
 
@@ -65,7 +65,7 @@ ln -s /path/to/my-monorepo/skills/frontend/frontend-design.skill.md ~/.claude/sk
 
 This makes all shared skills available for the entire monorepo without duplication. Individual packages can maintain their specialized skill files in the repo for documentation purposes.
 
-The Shared Skill Pattern
+## The Shared Skill Pattern
 
 Creating truly reusable skills requires careful design. A shared skill should be generic enough to work across packages while still providing meaningful automation. Here's a pattern for a universal testing skill that works across your monorepo:
 
@@ -99,7 +99,7 @@ Package-Specific Overrides
 Packages can override this skill by creating their own `universal-test.skill.md` in their local `skills/` directory. The local version takes precedence.
 ```
 
-Combining Skills with Composition
+## Combining Skills with Composition
 
 Claude skills support composition, allowing you to build higher-level workflows from shared components. A monorepo-level skill might combine multiple smaller skills:
 
@@ -131,7 +131,7 @@ Workflow
 
 This composition approach means you maintain the TDD skill once, and it automatically propagates to every package that needs it.
 
-Package-Specific Customization
+## Package-Specific Customization
 
 While shared skills handle common patterns, individual packages often need customization. The frontend-design skill might apply only to UI packages, while database migration skills belong only to packages with data layer code.
 
@@ -149,7 +149,7 @@ When working in backend or shared packages, decline to generate UI components.
 
 This ensures the frontend-design skill is contextually appropriate by self-limiting its scope in the skill instructions.
 
-Real-World Example: Multi-Language Monorepo
+## Real-World Example: Multi-Language Monorepo
 
 Consider a monorepo containing both TypeScript API packages and Python data processing packages. Shared skills handle universal concerns:
 
@@ -182,7 +182,7 @@ Detection Logic
 
 Each package automatically gets language-appropriate quality checks without requiring package-specific configuration.
 
-Versioning Shared Skills
+## Versioning Shared Skills
 
 When multiple teams use shared skills, version conflicts become likely. A few strategies help manage this:
 
@@ -202,7 +202,7 @@ Use Git submodules or a separate repository for skills, then lock to specific co
 
 Document breaking changes in a CHANGELOG within the skills directory. Teams can then coordinate updates during natural development cycles.
 
-Testing Shared Skills Before Deployment
+## Testing Shared Skills Before Deployment
 
 Before rolling out shared skills across your monorepo, validate them in a single package. Create a test package that exercises all shared functionality:
 
@@ -214,7 +214,7 @@ In your test package
 
 Once the skill works correctly in isolation, propagate it to other packages incrementally. Monitor for unexpected behavior in each package type before full deployment.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Over-sharing is the most frequent mistake. Not every skill needs to be universal. Package-specific workflows should stay local, they don't benefit from centralization and may cause confusion.
 
@@ -222,7 +222,7 @@ Neglecting overrides is another trap. Even with shared skills, packages sometime
 
 Ignoring skill conflicts can cause subtle bugs. When multiple skills define similar commands, the resolution order matters. Explicitly document which skills take precedence in your monorepo.
 
-Conclusion
+## Conclusion
 
 Sharing Claude skills across a monorepo with multiple packages requires thoughtful organization but pays significant dividends. Centralized skill maintenance reduces duplication, while package-specific overrides handle specialized needs. The key is establishing a clear hierarchy: shared skills for common patterns, composition for complex workflows, and local skills for unique requirements.
 

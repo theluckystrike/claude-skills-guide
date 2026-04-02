@@ -16,7 +16,7 @@ Writing infrastructure scripts has always been a mix of repetition and creativit
 
 This article breaks down when Claude Code excels at infrastructure scripting and when you might want to stick with traditional approaches. It also covers practical patterns, common pitfalls, and how to build a review process that lets you use AI assistance without losing control of your infrastructure.
 
-What Claude Code Brings to Infrastructure Scripts
+## What Claude Code Brings to Infrastructure Scripts
 
 Claude Code operates as an AI assistant that integrates directly into your terminal and development environment. Unlike simple code completion tools, it maintains context across your entire project, understanding your infrastructure topology, existing configurations, and coding patterns.
 
@@ -36,9 +36,9 @@ Consistency enforcement is another major benefit. Claude Code can review your ex
 
 Documentation generation rounds out the picture. After Claude Code writes a module, you can immediately ask it to produce the corresponding README with input variable descriptions, output descriptions, and usage examples, no separate documentation pass required.
 
-Practical Examples Where Claude Code Excels
+## Practical Examples Where Claude Code Excels
 
-Generating Boilerplate Infrastructure
+## Generating Boilerplate Infrastructure
 
 Every infrastructure project starts with boilerplate. Rather than copying from previous projects (and carrying forward old mistakes), let Claude Code generate fresh templates:
 
@@ -115,7 +115,7 @@ spec:
 
 That is production-quality output that covers resource limits, health probes, and autoscaling. Writing that from scratch, especially if you only do Kubernetes deployments occasionally, would mean opening the API docs, copying examples, and spending 20 to 30 minutes getting the structure right. Claude Code produces this in seconds, giving you a solid starting point to adjust for your specific application.
 
-Script Maintenance and Refactoring
+## Script Maintenance and Refactoring
 
 Legacy infrastructure scripts accumulate technical debt. Claude Code can modernize them:
 
@@ -140,7 +140,7 @@ Claude Code helps split this into:
 
 The split matters because Terraform can track state, if you run it twice it will not create a second instance. The old Bash approach had no such protection.
 
-Multi-Cloud Consistency
+## Multi-Cloud Consistency
 
 If you work across AWS, GCP, and Azure, Claude Code helps maintain consistent patterns:
 
@@ -164,7 +164,7 @@ module "database" {
 }
 ```
 
-Writing CI/CD Pipelines
+## Writing CI/CD Pipelines
 
 One area where Claude Code saves significant time is CI/CD pipeline creation. GitHub Actions, GitLab CI, and CircleCI all have distinct YAML formats and feature sets. Claude Code knows the syntax for each:
 
@@ -174,7 +174,7 @@ claude "Create a GitHub Actions workflow that builds a Docker image, runs tests,
 
 The resulting workflow handles cache layers for faster builds, conditional deployment steps, secrets handling, and proper job dependencies, details that are easy to miss if you only write pipelines occasionally.
 
-Infrastructure Testing
+## Infrastructure Testing
 
 Claude Code also helps write infrastructure tests, which most teams neglect because it feels like extra work on top of already tedious infrastructure code:
 
@@ -210,7 +210,7 @@ func TestVPCModule(t *testing.T) {
 
 Writing this from scratch requires knowing the Terratest API well. Claude Code produces it correctly on the first try.
 
-When Claude Code Falls Short
+## When Claude Code Falls Short
 
 Honesty requires acknowledging the limitations. Claude Code isn't perfect for every infrastructure scenario.
 
@@ -271,7 +271,7 @@ terraform {
 }
 ```
 
-Comparing Claude Code to Traditional Infrastructure Approaches
+## Comparing Claude Code to Traditional Infrastructure Approaches
 
 | Task | Traditional Approach | Claude Code Approach |
 |---|---|---|
@@ -284,7 +284,7 @@ Comparing Claude Code to Traditional Infrastructure Approaches
 
 The pattern is consistent: Claude Code is faster at generation and first drafts. You still need to be the expert who reviews, tightens security, and validates the output against your specific environment.
 
-A Practical Review Process
+## A Practical Review Process
 
 Getting value from Claude Code for infrastructure work requires a consistent review process. Skipping review is where teams get into trouble. A lightweight process looks like this:
 
@@ -297,7 +297,7 @@ Getting value from Claude Code for infrastructure work requires a consistent rev
 
 This process adds 10 to 15 minutes to tasks that Claude Code completes in seconds. It is not optional, it is the cost of using AI-generated infrastructure code responsibly.
 
-Claude Skills That Complement Infrastructure Work
+## Claude Skills That Complement Infrastructure Work
 
 Several Claude skills enhance the infrastructure scripting experience:
 
@@ -309,7 +309,7 @@ For documentation-heavy infrastructure work, the docx skill helps generate runbo
 
 The supermemory skill is particularly valuable for long-running infrastructure projects. You can store your architectural decisions, why you chose RDS over Aurora, why you went with ECS instead of EKS, what your tagging strategy is, and Claude Code will apply those decisions consistently across future sessions without you needing to re-explain the context every time.
 
-Making the Decision
+## Making the Decision
 
 Choose Claude Code for infrastructure scripts when:
 
@@ -328,7 +328,7 @@ Stick with traditional approaches when:
 
 The hybrid approach is what most experienced teams land on: use Claude Code for generation and initial drafts, apply a structured human review process, and manually write the highest-risk configurations where errors are most costly.
 
-Getting Started
+## Getting Started
 
 If you decide to try Claude Code for infrastructure scripting, start small. Generate a single Terraform module or one CI/CD pipeline. Review the output carefully. Learn what Claude Code does well and where you need to add your own expertise.
 
@@ -337,7 +337,6 @@ A good first exercise is to ask Claude Code to generate a Terraform configuratio
 Over time, you will develop a mental model of when to use AI assistance and when to write things manually. Teams that do this well typically find that Claude Code saves them two to four hours per week on infrastructure work, mostly on boilerplate and documentation. The time you save on generation gets reinvested into better review, better testing, and better architectural thinking, which is where your time should go anyway.
 
 That is the real benefit: not the code itself, but the enhanced decision-making process and the hours freed from repetitive generation work.
-
 
 Related Reading
 

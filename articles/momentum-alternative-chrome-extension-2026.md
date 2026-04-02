@@ -13,7 +13,6 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Momentum replaced your new tab page with a beautiful wallpaper, daily motivation, and a to-do list. It became a morning ritual for millions. But in 2026, the extension ecosystem has evolved significantly, and several alternatives now offer superior features for developers and power users who need more than just pretty pictures.
 
@@ -38,7 +37,7 @@ The ideal alternative should provide:
 - Options for self-hosting or local-only data storage
 - A free tier that is genuinely useful, not just a teaser
 
-Top Momentum Alternatives in 2026
+## Top Momentum Alternatives in 2026
 
 1. Tabliss
 
@@ -265,7 +264,7 @@ The GitHub integration alone justifies evaluating Epoc. Seeing your contribution
 
 Best for: Developers embedded in teams using GitHub and JIRA who want contextual project data rather than generic productivity content.
 
-Performance Comparison
+## Performance Comparison
 
 | Extension | Memory Usage | Load Time | Data Storage | Price |
 |-----------|-------------|-----------|--------------|-------|
@@ -280,7 +279,7 @@ The memory figures represent typical usage after the extension loads all assets.
 
 Load time matters more than it sounds. If you open 20 new tabs during a debugging session, an 800ms load time adds up to 16 seconds of waiting across those tabs. Himsal's 150ms load means the same 20 tabs cost you only 3 seconds total.
 
-Detailed Feature Comparison
+## Detailed Feature Comparison
 
 | Feature | Momentum | Tabliss | Infinity | Station | Himsal | Epoc |
 |---------|----------|---------|----------|---------|--------|------|
@@ -294,7 +293,7 @@ Detailed Feature Comparison
 | Open source | No | Yes | No | No | No | No |
 | Offline support | Partial | Full | Partial | Partial | Full | Partial |
 
-Choosing the Right Alternative
+## Choosing the Right Alternative
 
 Consider these factors based on your specific workflow:
 
@@ -310,7 +309,7 @@ For keyboard-first workflows: Himsal is the only option with comprehensive Vim-s
 
 For cross-device sync: Infinity New Tab Pro or Momentum are the strongest choices. Both sync settings and todos across devices, which matters if you switch between a desktop and laptop regularly.
 
-Migration Tips
+## Migration Tips
 
 When switching from Momentum, handle the transition in order:
 
@@ -326,7 +325,7 @@ When switching from Momentum, handle the transition in order:
 
 For Tabliss specifically, use the JSON configuration export feature after you've set it up on one machine. Save that JSON to a note or file, and importing it on a new machine takes seconds.
 
-Building Your Own: The DIY Option
+## Building Your Own: The DIY Option
 
 Some developers reach for none of the above and build a custom new-tab page. Chrome's extension API allows overriding the new tab page with a local HTML file. which opens the door to full customization without depending on a third-party extension.
 
@@ -392,14 +391,13 @@ A minimal custom new tab page might look like this:
 
 Package this with a minimal `manifest.json` specifying `"chrome_url_overrides": { "newtab": "newtab.html" }`, load it as an unpacked extension, and you have a completely custom new tab with zero external dependencies. The trade-off is obvious. you maintain it yourself. but for developers who want exactly and only what they want, this is the cleanest solution.
 
-Conclusion
+## Conclusion
 
 The Chrome extension landscape in 2026 offers superior alternatives to Momentum for developers and power users. Whether you prioritize privacy, performance, or integrations, a strong option exists for your workflow.
 
 Start with Tabliss if you want a well-rounded feature set without any privacy trade-offs. Try Himsal if low memory usage and keyboard navigation are your priorities. Evaluate Epoc if GitHub and JIRA integrations would genuinely change how you start your day. And consider the DIY route if no off-the-shelf option aligns with what you actually want.
 
 The best extension is the one you actually use daily. Test a few options for a week before committing your configuration. the friction of migration is lower than you think, especially since most alternatives support importing from browser bookmarks.
-
 
 Related Reading
 

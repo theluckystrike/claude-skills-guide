@@ -16,7 +16,7 @@ permalink: /salesforce-mcp-server-data-integration-guide/
 
 [The Model Context Protocol (MCP) provides a standardized way to connect Claude Code with external data sources](/building-your-first-mcp-tool-integration-guide-2026/), and Salesforce integration is one of the most powerful use cases for enterprise workflows. This guide walks you through setting up a Salesforce MCP server, configuring authentication, and building practical data integration pipelines that sync records, automate data entry, and query complex relationships.
 
-Setting Up Your Salesforce MCP Server
+## Setting Up Your Salesforce MCP Server
 
 Before you can integrate Salesforce with Claude Code, you need an MCP server that speaks the Salesforce API. The most common approach uses the `salesforce-mcp` package, which wraps the Salesforce REST API and Bulk API into MCP-compliant tools.
 
@@ -49,7 +49,7 @@ Configure your MCP settings in `~/.claude/mcp-servers.json`:
 
 This configuration uses a Connected App in Salesforce, which is the recommended authentication method for production integrations. Create a Connected App in Salesforce Setup, enable OAuth Settings, and select the appropriate scopes for your use case.
 
-Querying Salesforce Data
+## Querying Salesforce Data
 
 Once your MCP server is running, you can query Salesforce objects directly from Claude Code. The server exposes standard CRUD operations mapped to MCP tools.
 
@@ -67,7 +67,7 @@ Execute this SOQL query: SELECT Id, Name, Account.Name, Contact.Email FROM Oppor
 
 This approach works well for reporting and data analysis tasks. If you're building a dashboard, combine the results with the frontend-design skill to create visualization components that display Salesforce metrics in your application.
 
-Syncing Data Between Systems
+## Syncing Data Between Systems
 
 One of the most common integration patterns involves bidirectional sync between Salesforce and other systems. Here's a practical workflow for keeping a custom PostgreSQL database in sync with Salesforce contacts:
 
@@ -103,7 +103,7 @@ def sync_contacts(last_sync_time):
 
 This pattern scales well for millions of records when you switch to the Bulk API for batch processing. The MCP server handles rate limiting and retry logic automatically, but you should implement your own checkpoint system to handle failures gracefully.
 
-Automating Data Entry
+## Automating Data Entry
 
 Beyond querying, you can use the MCP server to create and update Salesforce records programmatically. This is useful for automating data entry from external sources like web forms, email imports, or IoT devices.
 
@@ -124,7 +124,7 @@ When a user provides lead information, use the salesforce_create tool to create 
 
 Save this as `~/.claude/skills/salesforce-lead-creator.md` and invoke it with `/salesforce-lead-creator` in your Claude session.
 
-Handling Complex Data Transformations
+## Handling Complex Data Transformations
 
 For ETL-style workflows involving data transformation, combine the Salesforce MCP server with Claude Code's built-in skills. The tdd skill helps you write test cases for your transformation logic before implementing the pipeline:
 
@@ -140,7 +140,7 @@ For document generation based on Salesforce data, pair the pdf skill with your i
 Query the Opportunity and Account data for opp_id '0065e000002ABC', then use the pdf skill to generate a proposal document using the template 'proposal-v2.html'.
 ```
 
-Best Practices for Production Integrations
+## Best Practices for Production Integrations
 
 When deploying Salesforce MCP integrations to production, consider these recommendations:
 
@@ -152,7 +152,7 @@ Error Handling: Implement comprehensive error handling that logs failures, sends
 
 Testing: Use Salesforce Sandboxes for all development and testing. The tdd skill integrates well with sandbox environments where you can create test data without affecting production.
 
-Conclusion
+## Conclusion
 
 Salesforce MCP server integration opens up powerful automation possibilities for developers building enterprise workflows. From simple query operations to complex multi-system syncs, the MCP approach provides a consistent, AI-friendly interface to your Salesforce data. Start with basic queries, then layer in automation and transformation logic as your integration matures. For patterns on combining MCP servers with skill workflows, see [building stateful agents with Claude skills](/building-stateful-agents-with-claude-skills-guide/).
 

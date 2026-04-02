@@ -13,20 +13,17 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Chrome Extension HTTP Header Viewer: A Developer's Guide
-
 HTTP headers are the backbone of web communication. They transmit metadata about requests and responses, authentication tokens, caching directives, content types, and security policies. For developers building APIs or debugging web applications, inspecting these headers is essential. While Chrome DevTools provides solid network inspection, Chrome extensions designed specifically for HTTP header analysis offer faster workflows, persistent views, and specialized features that power users appreciate.
 
 This guide covers practical ways to use Chrome extensions for viewing and analyzing HTTP headers, with code examples and real-world scenarios.
 
-Why HTTP Header Inspection Matters
+## Why HTTP Header Inspection Matters
 
 Every HTTP request carries headers, and every response does the same. Headers like `Authorization`, `Content-Type`, `Cache-Control`, and `Set-Cookie` control critical aspects of web behavior. When building REST APIs, you frequently need to verify that your server sends correct headers. When debugging authentication issues, you need to confirm tokens are being passed correctly. When optimizing performance, caching headers reveal what the browser is actually doing.
 
 Chrome DevTools Network tab handles this well, but extensions can streamline repetitive tasks. You can check headers across multiple requests without opening DevTools, export headers in bulk, or create persistent dashboards that track specific headers across page reloads.
 
-Built-in Chrome Tools vs Extensions
+## Built-in Chrome Tools vs Extensions
 
 Chrome DevTools Network panel shows all request and response headers. Right-click any request and select "Copy as cURL" to see headers in raw format. The Headers tab displays request and response headers in organized sections.
 
@@ -34,7 +31,7 @@ Extensions add value in three ways: speed, persistence, and customization. Exten
 
 For most developers, DevTools remains the primary tool. Extensions complement them for specific workflows.
 
-Practical Extensions for Header Viewing
+## Practical Extensions for Header Viewing
 
 Several extensions focus specifically on HTTP header inspection. Here are approaches developers commonly use:
 
@@ -64,7 +61,7 @@ Configuration example:
 
 Some Chrome extensions extend DevTools itself, adding custom panels for header analysis. These integrate directly into the DevTools interface, combining the power of native tools with extension capabilities.
 
-Using Extensions for API Debugging
+## Using Extensions for API Debugging
 
 When debugging APIs, you often need to verify specific headers across multiple requests. Here's a practical workflow:
 
@@ -86,7 +83,7 @@ Set-Cookie: session=xyz789; HttpOnly; Secure
 
 Each header tells you something. `Cache-Control` reveals caching behavior. `Set-Cookie` with `HttpOnly` and `Secure` flags shows security configuration. `X-Request-ID` helps correlate logs.
 
-Filtering and Searching Headers
+## Filtering and Searching Headers
 
 Extensions often include search functionality. You can filter to show only headers containing specific text. This is useful when you know you're looking for authentication headers or specific custom headers.
 
@@ -97,7 +94,7 @@ Typical filter patterns:
 - `X-`. find custom headers (usually prefixed with X-)
 - `Cache`. review caching configuration
 
-Automating Header Checks
+## Automating Header Checks
 
 For advanced users, some extensions support exporting header data. You can capture headers from a series of requests and export as JSON for analysis:
 
@@ -115,7 +112,7 @@ console.log(JSON.stringify(exportData, null, 2));
 
 This approach helps when you need to document header behavior or share specific configurations with team members.
 
-Security Considerations
+## Security Considerations
 
 When inspecting headers, you handle sensitive data:
 
@@ -127,7 +124,7 @@ Only install extensions from trusted developers. Review the permissions an exten
 
 For sensitive work, prefer DevTools or extensions with minimal permissions. Many header-viewing extensions work with just the current tab's network data.
 
-When Extensions Are the Right Choice
+## When Extensions Are the Right Choice
 
 Use header-viewer extensions when:
 
@@ -143,7 +140,7 @@ Stick with DevTools when:
 - You need to modify and resend requests
 - You need headers from requests that extensions cannot capture
 
-Building Your Own Header Viewer
+## Building Your Own Header Viewer
 
 For developers who want complete control, building a Chrome extension for header viewing is straightforward. Use the `chrome.webRequest` API to intercept headers:
 
@@ -170,14 +167,13 @@ chrome.webRequest.onCompleted.addListener(
 
 This gives you raw access to all headers. You can then build a custom popup UI that displays them however you prefer.
 
-Conclusion
+## Conclusion
 
 Chrome extensions for HTTP header viewing provide targeted functionality that complements DevTools. For quick checks and persistent analysis, they offer real workflow improvements. The key is choosing extensions with appropriate permissions and understanding when native tools serve better.
 
 For most developers, a combination works best: DevTools for deep debugging, extensions for quick checks and persistent monitoring. Try a few extensions from the Web Store, evaluate which workflows they improve, and build custom solutions when your needs outpace existing options.
 
 ---
-
 
 Related Reading
 

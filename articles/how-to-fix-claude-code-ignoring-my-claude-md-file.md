@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "How to Fix Claude Code Ignoring My claude.md File"
 description: "Is Claude Code ignoring your custom claude.md skill file? Learn the common reasons why skills aren't loading and how to fix them with practical solutions."
@@ -14,13 +13,9 @@ score: 7
 permalink: /how-to-fix-claude-code-ignoring-my-claude-md-file/
 ---
 
-
-
-How to Fix Claude Code Ignoring My claude.md File
-
 You've created a custom skill file, perhaps named `claude.md` or something like `my-custom-skill.md`, but Claude Code doesn't seem to recognize it. You're not alone. This is one of the most common issues users face when working with Claude Code skills. The good news is that it's usually easy to fix once you understand how Claude Code discovers and loads skill files.
 
-Understanding How Claude Code Loads Skills
+## Understanding How Claude Code Loads Skills
 
 Before diving into fixes, it's helpful to understand how Claude Code actually finds and loads your skill files. Claude Code looks for skill files in specific locations within your project:
 
@@ -30,7 +25,7 @@ Before diving into fixes, it's helpful to understand how Claude Code actually fi
 
 Claude Code uses the filename (without the extension) as the skill name. When you invoke a skill, it searches for a matching file in these locations.
 
-Common Reasons Why Your Skill File Is Being Ignored
+## Common Reasons Why Your Skill File Is Being Ignored
 
 1. Wrong File Location
 
@@ -129,7 +124,7 @@ Solution:
 - Reload VS Code window (Cmd+Shift+P → "Reload Window")
 - Or restart the Claude Code process entirely
 
-Verifying Your Skill Is Loaded
+## Verifying Your Skill Is Loaded
 
 To check if your skill is properly recognized, you can:
 
@@ -137,7 +132,7 @@ To check if your skill is properly recognized, you can:
 2. Check the skills directory: Make sure your file appears in the expected location
 3. Review the skill list: Claude Code should display your skill in the skills panel
 
-Best Practices for Skill Files
+## Best Practices for Skill Files
 
 To ensure your skills work reliably, follow these best practices:
 
@@ -146,7 +141,7 @@ To ensure your skills work reliably, follow these best practices:
 3. Keep skills focused: Each skill should handle one specific type of task
 4. Test incrementally: Add content gradually and test each change
 
-Creating a Working Skill File
+## Creating a Working Skill File
 
 Here's a complete example of a properly configured skill file:
 
@@ -171,13 +166,13 @@ I'll analyze:
 - Style inconsistencies
 ```
 
-Encoding and YAML Front Matter Issues
+## Encoding and YAML Front Matter Issues
 
 Claude Code expects UTF-8 encoded Markdown files. If your `.md` file contains special characters, non-standard quotes (curly quotes from word processors), or hidden formatting, the parser may fail silently. Always create skill files in a plain text editor and save as UTF-8.
 
 YAML front matter can also interfere with instruction parsing. While some skills include front matter for organizational purposes, Claude Code reads content after the closing `---` delimiter. Ensure your core instructions appear after the front matter, and keep front matter minimal, only `name` and `description` are recognized fields.
 
-Advanced Troubleshooting
+## Advanced Troubleshooting
 
 If your skill still isn't working after checking the basics:
 
@@ -186,12 +181,11 @@ If your skill still isn't working after checking the basics:
 3. Try a minimal skill: Create the simplest possible skill to test if skills work at all
 4. Check for conflicting names: Another skill with the same name might take precedence
 
-Conclusion
+## Conclusion
 
 Claude Code ignoring your claude.md file is usually caused by simple issues like wrong file location, missing front matter, or incorrect file extensions. By ensuring your skill file is in the right place (`.claude/skills/`), has proper YAML front matter, and uses the `.md` extension, you should be able to get your custom skills recognized and working.
 
 Remember: Claude Code skills are powerful tools for customizing your AI assistant. Take the time to set them up correctly, and they'll serve you well in your development workflow.
-
 
 Related Reading
 

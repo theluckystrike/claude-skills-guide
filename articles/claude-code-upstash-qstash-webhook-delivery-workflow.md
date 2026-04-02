@@ -13,7 +13,6 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Building Webhook Delivery Workflows with Claude Code and Upstash QStash
 
@@ -31,7 +30,7 @@ Upstash QStash is a serverless message queue designed specifically for the cloud
 
 When you combine these capabilities with Claude Code's ability to generate, explain, and optimize code, you get a powerful development workflow for building reliable webhook systems.
 
-Setting Up Your Project with Claude Code
+## Setting Up Your Project with Claude Code
 
 Claude Code excels at scaffolding projects and generating boilerplate code. Let's start by creating a Next.js project with the necessary dependencies:
 
@@ -47,7 +46,7 @@ Claude Code can help you understand the architecture and generate the core compo
 
 Claude will generate the foundational code, but let's walk through the key components to understand how they work together.
 
-Core Webhook Delivery Architecture
+## Core Webhook Delivery Architecture
 
 The webhook delivery system consists of three main components:
 
@@ -164,7 +163,7 @@ export async function retryWebhook(
 }
 ```
 
-Leveraging Claude Code for Optimization
+## Leveraging Claude Code for Optimization
 
 Claude Code isn't just a code generator, it can help you optimize and debug your webhook system. Here are practical ways to use Claude effectively:
 
@@ -209,7 +208,7 @@ export async function checkIdempotency(webhookId: string): Promise<boolean> {
 }
 ```
 
-Best Practices for Production
+## Best Practices for Production
 
 When deploying your webhook system to production, keep these best practices in mind:
 
@@ -223,7 +222,7 @@ When deploying your webhook system to production, keep these best practices in m
 
 5. Use message deduplication: QStash supports deduplication based on message IDs, essential for exactly-once semantics.
 
-Conclusion
+## Conclusion
 
 Building reliable webhook delivery systems requires careful attention to failure handling, retry logic, and observability. By combining Claude Code's AI-powered development capabilities with Upstash QStash's serverless message queue, you can rapidly build and iterate on webhook infrastructure that's production-ready.
 

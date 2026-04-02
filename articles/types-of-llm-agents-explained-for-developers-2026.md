@@ -13,16 +13,13 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Types of LLM Agents Explained for Developers 2026
-
 As large language models have evolved from simple text generators to sophisticated reasoning engines, a new paradigm has emerged: LLM agents. These AI systems can not only understand and generate text but also plan, execute actions, and interact with external tools and environments. For developers building with Claude Code in 2026, understanding the different types of LLM agents is essential for selecting the right architecture for your application.
 
 What Makes an LLM Agent Different from a Basic LLM?
 
 Before diving into agent types, it's important to understand what distinguishes an agent from a basic language model. A standard LLM takes a prompt and produces text output. An LLM agent goes further by maintaining state, reasoning about sequences of actions, using tools to interact with external systems, and adapting its behavior based on feedback. Claude Code embodies these agent capabilities through its skill system, tool use, and state management features.
 
-The Four Main Types of LLM Agents
+## The Four Main Types of LLM Agents
 
 1. Reactive Agents: Simple Stimulus-Response Systems
 
@@ -102,11 +99,11 @@ This flexibility allows Claude Code to:
 - Combine reactive speed with deliberative depth
 - Operate autonomously when appropriate
 
-Building Agents with Claude Code Skills
+## Building Agents with Claude Code Skills
 
 Claude Code's skill system provides a powerful way to extend agent capabilities. Skills encapsulate domain knowledge, tool configurations, and behavioral patterns that agents can invoke as needed.
 
-Creating a Specialized Agent Skill
+## Creating a Specialized Agent Skill
 
 You can create custom skills that define specific agent behaviors:
 
@@ -124,7 +121,7 @@ You can create custom skills that define specific agent behaviors:
 
 When you invoke this skill, Claude Code adopts the code reviewer agent persona, using the defined tools and approach to analyze your code.
 
-Skill Composition for Complex Agents
+## Skill Composition for Complex Agents
 
 For more sophisticated agents, compose multiple skills:
 
@@ -135,7 +132,7 @@ Invoke skill: /code-reviewer --skill security-scanner --skill performance-analyz
 
 This creates an agent that can perform security scans, performance analysis, and traditional code review in a single session.
 
-Choosing the Right Agent Type
+## Choosing the Right Agent Type
 
 Selecting the appropriate agent type depends on your specific needs:
 
@@ -146,7 +143,7 @@ Selecting the appropriate agent type depends on your specific needs:
 | Automated testing | Autonomous | "Fix all failing tests" |
 | Comprehensive workflows | Hybrid | "Build and deploy feature" |
 
-Conclusion
+## Conclusion
 
 Understanding the different types of LLM agents, from simple reactive systems to sophisticated hybrid architectures, is fundamental for building effective AI-powered applications. Claude Code provides a flexible platform that supports all these agent types, allowing you to choose the right approach for each task.
 

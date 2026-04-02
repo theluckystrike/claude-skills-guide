@@ -13,19 +13,18 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for AWS Config Rules Workflow
 
 AWS Config Rules provide a powerful way to evaluate the configuration settings of your AWS resources against desired security and compliance standards. However, managing these rules at scale can become complex and time-consuming. This guide shows you how to use Claude Code to streamline your AWS Config Rules workflow, making it more efficient and maintainable.
 
-Understanding AWS Config Rules Basics
+## Understanding AWS Config Rules Basics
 
 AWS Config continuously monitors and records your AWS resource configurations, allowing you to assess, audit, and evaluate these configurations against desired rules. Each rule defines a specific configuration requirement, for example, ensuring all S3 buckets have versioning enabled, or verifying that EC2 instances are using approved AMIs.
 
 There are two types of AWS Config Rules: managed rules (pre-built by AWS) and custom rules (you define using AWS Lambda functions). Claude Code can help you manage both types effectively, from initial setup to ongoing maintenance and troubleshooting.
 
-Setting Up Claude Code for AWS Config Management
+## Setting Up Claude Code for AWS Config Management
 
 Before diving into the workflow, ensure your Claude Code environment is configured to interact with AWS. You'll need the AWS CLI installed and configured with appropriate credentials:
 
@@ -53,17 +52,17 @@ Common Tasks
 - Generating compliance reports
 ```
 
-Creating AWS Config Rules with Claude Code
+## Creating AWS Config Rules with Claude Code
 
 Claude Code excels at generating CloudFormation templates for AWS Config Rules. Here's a practical workflow for creating a new rule:
 
-Step 1: Define Your Requirement
+## Step 1: Define Your Requirement
 
 Start by describing your rule requirement to Claude Code. For instance, you might say:
 
 > "Create a CloudFormation template for an AWS Config rule that checks if S3 buckets have public access blocked. The rule should evaluate all S3 buckets in the account."
 
-Step 2: Claude Code Generates the Template
+## Step 2: Claude Code Generates the Template
 
 Claude Code will generate a complete CloudFormation template:
 
@@ -86,7 +85,7 @@ Resources:
       MaximumExecutionFrequency: One_Hour
 ```
 
-Step 3: Customize Parameters
+## Step 3: Customize Parameters
 
 You can refine the template with additional parameters:
 
@@ -107,11 +106,11 @@ Parameters:
       - TwentyFour_Hours
 ```
 
-Automating Rule Validation
+## Automating Rule Validation
 
 A key benefit of using Claude Code is automating the validation of your Config Rules before deployment. This catches errors early and ensures your rules work as intended.
 
-Creating a Validation Skill
+## Creating a Validation Skill
 
 You can create a Claude Skill to validate Config Rule templates:
 
@@ -121,11 +120,11 @@ name: "AWS Config Rule Validator"
 description: "Validates AWS Config Rule CloudFormation templates"
 ```
 
-Managing Rule Compliance at Scale
+## Managing Rule Compliance at Scale
 
 When managing hundreds of Config Rules across multiple accounts, organization becomes critical. Here's how Claude Code can help organize and manage this complexity.
 
-Organizing Rules by Category
+## Organizing Rules by Category
 
 Create a directory structure that reflects your organizational needs:
 
@@ -145,7 +144,7 @@ aws-config-rules/
      tagging-rules.yaml
 ```
 
-Bulk Operations with Claude Code
+## Bulk Operations with Claude Code
 
 Claude Code can help perform bulk operations across multiple rules. For example, updating the execution frequency for all security rules:
 
@@ -156,11 +155,11 @@ to run every hour instead of every 24 hours
 
 Simply describe your intent: "Update the MaximumExecutionFrequency to One_Hour for all config rules in the security category."
 
-Troubleshooting Rule Violations
+## Troubleshooting Rule Violations
 
 When Config Rules report violations, Claude Code helps you investigate and remediate them efficiently.
 
-Investigating Violations
+## Investigating Violations
 
 Ask Claude Code to explain a violation:
 
@@ -168,7 +167,7 @@ Ask Claude Code to explain a violation:
 
 Claude Code can help you understand the rule logic and what specific configuration triggered the violation.
 
-Generating Remediation Scripts
+## Generating Remediation Scripts
 
 For common violations, Claude Code can generate remediation scripts:
 
@@ -193,7 +192,7 @@ def remediate_s3_public_access(bucket_name):
     print(f"Public access blocked for bucket: {bucket_name}")
 ```
 
-Best Practices for AWS Config Rules with Claude Code
+## Best Practices for AWS Config Rules with Claude Code
 
 Follow these recommendations to get the most out of your AWS Config Rules workflow:
 
@@ -209,7 +208,7 @@ Follow these recommendations to get the most out of your AWS Config Rules workfl
 
 6. Implement exception handling: Define a clear process for requesting and managing rule exceptions when legitimate business reasons exist.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms AWS Config Rules management from a manual, error-prone process into an automated, reliable workflow. By generating templates, validating configurations, and helping troubleshoot violations, Claude Code enables you to maintain strong security and compliance posture with less effort.
 

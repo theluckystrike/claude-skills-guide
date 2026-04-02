@@ -17,7 +17,7 @@ Claude Code Contract Testing with Pact Guide
 
 Contract testing has become essential for teams building microservices and API-driven architectures. When your frontend, backend, and third-party services need to communicate reliably, ensuring that contracts between these services remain intact prevents integration bugs before they reach production. This guide shows you how to use Claude Code alongside Pact to create solid contract testing workflows.
 
-Understanding Contract Testing with Pact
+## Understanding Contract Testing with Pact
 
 Pact is a consumer-driven contract testing framework that verifies API interactions between services. Instead of writing integration tests that require both services running, contract tests capture the expected behavior from the consumer's perspective and verify the provider fulfills those expectations.
 
@@ -25,7 +25,7 @@ The core workflow involves three stages: writing consumer tests that define expe
 
 For developers working with multiple services, combining Pact with Claude skills like tdd creates a powerful testing workflow. The tdd skill helps structure tests following test-driven development principles, ensuring your contract tests follow good practices from the start. Use supermemory to track contract versions across your services, this combination lets Claude understand the broader system constraints and helps prevent breaking existing contracts.
 
-Setting Up Pact in Your Project
+## Setting Up Pact in Your Project
 
 Begin by adding Pact dependencies to your project. For a JavaScript or TypeScript project:
 
@@ -52,7 +52,7 @@ module.exports = new Pact({
 
 This configuration defines the consumer (your frontend or consuming service) and provider (the API you're testing against). Claude Code can help generate this configuration by analyzing your project structure. If you're working with a monorepo, the supermemory skill helps recall previous configuration patterns across projects.
 
-Writing Consumer Contract Tests
+## Writing Consumer Contract Tests
 
 Consumer tests define how your application expects to interact with an API. Here's a practical example testing a user service:
 
@@ -104,7 +104,7 @@ uponReceiving: 'a user request'
 
 The pdf skill proves valuable here, when contract tests fail, generate PDF reports documenting the discrepancies for team review. This becomes especially useful during API version migrations where contract changes need stakeholder sign-off.
 
-Verifying Provider Contracts
+## Verifying Provider Contracts
 
 Once consumer tests generate pact files, you verify them against the actual provider. Create a provider verification script with proper error handling:
 
@@ -133,7 +133,7 @@ verifyContracts();
 
 Run this against your running provider service. The verifier checks each interaction defined in the pact file against the actual API responses. The supermemory skill is valuable here, track which services have verified contracts, which versions are currently compatible, and any known issues that need resolution.
 
-Integrating with Claude Code Workflows
+## Integrating with Claude Code Workflows
 
 Claude Code enhances contract testing through several practical integrations. When working with API documentation, combine the openapi skill with Pact to automatically generate contract tests from OpenAPI specifications:
 
@@ -149,7 +149,7 @@ For teams using the frontend-design skill, contract testing integrates naturally
 
 When Claude Code writes code for you, provide the contract test as context. Instead of asking Claude to "create a payment endpoint," reference the existing contract test and ask it to "implement the endpoint to satisfy the contract test."
 
-Handling Authentication and Headers
+## Handling Authentication and Headers
 
 Real-world APIs require authentication. Pact supports header matching and authentication patterns:
 
@@ -173,7 +173,7 @@ pact.addInteraction({
 
 The `like()` matcher allows flexible matching, useful when tokens vary between test runs but the structure remains consistent.
 
-Handling Contract Changes
+## Handling Contract Changes
 
 Breaking changes are inevitable as systems evolve. When a provider must change its contract:
 
@@ -185,7 +185,7 @@ Breaking changes are inevitable as systems evolve. When a provider must change i
 
 For complex migrations, use feature flags in your provider implementation. This allows serving both old and new contract versions during a transition period. Claude Code can help structure these conditional implementations when you explain the version requirements clearly.
 
-CI/CD Integration
+## CI/CD Integration
 
 Automate contract testing in your pipeline by running consumer tests first, then provider verification. Share pact files between jobs as build artifacts:
 
@@ -227,7 +227,7 @@ jobs:
 
 This ensures contract changes propagate through your pipeline before deployment.
 
-Common Pitfalls and Solutions
+## Common Pitfalls and Solutions
 
 Several issues frequently arise when implementing contract testing. First, avoid testing too many details, focus on the contract surface, not internal provider logic. Second, keep pact files version-controlled alongside your code to track contract evolution. Third, use matching rules sparingly; overly flexible matching defeats the purpose of contract testing.
 
@@ -235,7 +235,7 @@ Store your pact files in a centralized location that all services can access. Ma
 
 When provider responses change unexpectedly, the tdd skill helps approach the problem systematically: write a failing test, discuss the contract change with the API team, and update either the consumer or provider accordingly.
 
-Conclusion
+## Conclusion
 
 Contract testing with Pact provides confidence that your services communicate correctly without requiring full integration environments. Claude Code amplifies this workflow through skills that generate tests from specifications, document results, and integrate naturally into development processes.
 

@@ -13,16 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
 Claude Code transforms how ML engineers build and maintain feature stores. Instead of wrestling with repetitive transformation logic or manually tracking feature dependencies, you can use Claude Code's skills and capabilities to automate the heavy lifting. This guide provides practical daily workflow tips that will make your feature store development faster and more reliable.
 
-Understanding Feature Store Workflows
+## Understanding Feature Store Workflows
 
 A feature store serves as the central repository forML features, bridging the gap between data engineering and model training. As an ML engineer, you likely spend significant time defining feature transformations, validating data quality, and ensuring consistency between training and serving. Claude Code can assist with each of these tasks through its file editing capabilities, code generation, and bash execution.
 
 The daily workflow typically involves creating new features, updating existing ones, testing transformations, and deploying changes. Claude Code excels at handling repetitive tasks like generating boilerplate code for new features or running validation checks across your feature registry.
 
-Daily Tip 1: Scaffold New Features Quickly
+## Daily Tip 1: Scaffold New Features Quickly
 
 When creating a new feature, you need to define its computation logic, add it to the registry, and write validation tests. Instead of doing this manually each time, ask Claude Code to generate the feature template:
 
@@ -54,7 +53,7 @@ class UserTransactionCount:
         pass
 ```
 
-Daily Tip 2: Automate Feature Validation
+## Daily Tip 2: Automate Feature Validation
 
 Data quality issues in features can silently degrade model performance. Set up Claude Code to run validation checks before features are registered or deployed. Create a skill that validates:
 
@@ -71,7 +70,7 @@ claude "Run feature validation on user_features.py, check for nulls > 5% and fla
 
 Claude Code will analyze your feature definitions, check the underlying data, and report any violations. This proactive validation catches issues before they reach production.
 
-Daily Tip 3: Document Feature Lineage
+## Daily Tip 3: Document Feature Lineage
 
 Feature stores grow complex over time, and understanding where a feature comes from becomes critical. Use Claude Code to automatically generate and update feature lineage documentation:
 
@@ -81,7 +80,7 @@ Ask Claude to trace through your feature computation and create a dependency gra
 
 Claude Code will read through your feature definitions, identify data sources, trace transformation logic, and produce clear documentation. This helps with debugging, auditing, and onboarding new team members.
 
-Daily Tip 4: Optimize Feature Computation
+## Daily Tip 4: Optimize Feature Computation
 
 Feature computation efficiency directly impacts model training time and serving latency. Claude Code can analyze your feature transformations and suggest optimizations:
 
@@ -96,7 +95,7 @@ Prompt Claude Code with:
 
 Claude Code will review the code, identify patterns that could be optimized, and provide concrete suggestions with code examples.
 
-Daily Tip 5: Manage Feature Versions
+## Daily Tip 5: Manage Feature Versions
 
 Feature stores often need to maintain multiple versions of features as models evolve. Claude Code helps you manage versioned features by:
 
@@ -111,7 +110,7 @@ When you need to update a feature's computation while maintaining backward compa
 
 Claude Code will create the new version, ensure proper version naming, and help you set up the deprecation path for the old version.
 
-Daily Tip 6: Test Feature Transformations
+## Daily Tip 6: Test Feature Transformations
 
 Unit tests for feature transformations ensure correctness and prevent regressions. Claude Code can generate comprehensive test cases:
 
@@ -143,7 +142,7 @@ Ask Claude to generate tests with:
 
 > "Write unit tests for the user_engagement_features.py module, include edge cases for null handling and boundary conditions"
 
-Daily Tip 7: Streamline Feature Deployment
+## Daily Tip 7: Streamline Feature Deployment
 
 Deploying features to production requires coordinating between development, staging, and production environments. Claude Code can help by:
 
@@ -156,7 +155,7 @@ Use prompts like:
 
 > "Generate a deployment script for the new features in fraud_features.yaml to move from staging to production, include validation checks and rollback capability"
 
-Conclusion
+## Conclusion
 
 Claude Code becomes an invaluable partner in your daily feature store workflow. By automating repetitive tasks like scaffolding, validation, and documentation, you can focus on the creative problem-solving that ML engineering requires. The key is learning to phrase your requests effectively, be specific about what you need, provide context about your feature store architecture, and iterate on the results.
 

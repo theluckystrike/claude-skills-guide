@@ -13,12 +13,9 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code Responsible AI Checklist: A Developer's Guide
-
 Building software with AI assistance requires more than just generating code quickly. Developers need to verify outputs, understand what runs in their projects, and maintain security standards. This checklist provides practical steps for using Claude Code responsibly in any project.
 
-Pre-Development Setup
+## Pre-Development Setup
 
 Before starting a coding session with Claude Code, establish your baseline. Create a CLAUDE.md file that defines your project's coding standards, security requirements, and testing expectations. This file serves as a persistent instruction set that Claude Code references throughout your session.
 
@@ -51,11 +48,11 @@ Think of CLAUDE.md as an onboarding document for a new team member who happens t
 
 A well-written CLAUDE.md can also save significant debugging time. When Claude Code knows upfront that your project uses a custom error class rather than generic Error, or that all database calls go through a specific query builder, it avoids generating code you'll need to refactor immediately.
 
-Code Generation Verification
+## Code Generation Verification
 
 When Claude Code produces code, verify before integrating. This applies even to seemingly simple outputs.
 
-Security Review Checklist
+## Security Review Checklist
 
 - Input validation: Does the code validate all user inputs?
 - SQL injection: Are database queries parameterized?
@@ -93,7 +90,7 @@ async function createUser(input: unknown) {
 
 If the generated code lacks input validation entirely, add it before the PR review stage. not after.
 
-Testing Requirements
+## Testing Requirements
 
 Never commit code without test coverage. Use the claude-tdd skill to enforce test-driven development:
 
@@ -114,11 +111,11 @@ claude "Write tests for the createUser function covering:
 - Missing required fields throw descriptive errors"
 ```
 
-Project-Specific Configuration
+## Project-Specific Configuration
 
 Claude Code works best when it understands your environment. Configure it properly for each project.
 
-Scope the Context
+## Scope the Context
 
 Limit Claude Code's scope to relevant directories:
 
@@ -132,7 +129,7 @@ This prevents Claude Code from modifying unrelated files or accessing sensitive 
 
 Scoping also affects the quality of suggestions. When Claude Code reads your entire repository including vendor code, build artifacts, and legacy migrations, it may suggest patterns that match old code rather than your current standards. Tight scoping keeps suggestions aligned with where your project actually is today.
 
-Define Allowed Tools
+## Define Allowed Tools
 
 Restrict tool usage for sensitive operations:
 
@@ -150,11 +147,11 @@ The mcp-server-security skill helps enforce tool permissions across your team.
 
 Consider how permissions differ between environments. On a local development machine, Bash access is often fine and useful. In a CI pipeline or production environment, you may want to restrict Claude Code to read-only operations so it can analyze without making changes. Documenting these environment-specific permission profiles in your team's runbook prevents accidental misconfiguration.
 
-Ongoing Development Practices
+## Ongoing Development Practices
 
 Responsible AI usage continues after initial setup. Establish practices your team follows.
 
-Code Review Requirements
+## Code Review Requirements
 
 All AI-assisted code changes require human review. Your checklist should include:
 
@@ -177,7 +174,7 @@ export async function authMiddleware(req: Request, res: Response, next: NextFunc
 
 This makes AI-assisted code visible during future reviews without slowing down the workflow.
 
-Documentation Standards
+## Documentation Standards
 
 AI-generated code often lacks context. Require inline comments explaining complex logic, and update README files when adding features. The claude-skills-for-automated-changelog-generation skill tracks changes automatically.
 
@@ -194,11 +191,11 @@ const AUTH_RATE_LIMIT = rateLimit({
 });
 ```
 
-Handling Sensitive Data
+## Handling Sensitive Data
 
 When working with confidential information, additional precautions apply.
 
-Data Classification
+## Data Classification
 
 Never paste actual credentials, personal data, or proprietary information into Claude Code conversations. Use placeholder values:
 
@@ -235,17 +232,17 @@ export const TEST_API_KEY = 'sk_test_placeholder_key';
 
 Using shared fixtures ensures consistent synthetic data across your team and removes the temptation to paste real values for convenience.
 
-Audit Trails
+## Audit Trails
 
 For compliance-sensitive projects, maintain logs of AI-assisted changes. The claude-code-mcp-server-soc2-compliance skill helps generate audit documentation automatically.
 
 At a minimum, your git commit messages should indicate when a significant portion of the implementation was AI-generated. This creates a searchable trail without requiring separate tooling. For SOC 2 or HIPAA-regulated projects, a more formal logging approach ties specific code changes to the human who reviewed and approved them.
 
-Performance and Cost Optimization
+## Performance and Cost Optimization
 
 AI assistance has resource implications. Optimize your usage.
 
-Token Management
+## Token Management
 
 Reduce context window waste:
 
@@ -257,7 +254,7 @@ The supermemory skill helps manage context across sessions without redundant inf
 
 Understanding token costs also helps you prioritize when to use AI assistance. Generating a one-line utility function costs nearly the same in tokens as asking Claude Code to review a complex algorithm. Reserve AI assistance for high-value tasks: architecture decisions, security-sensitive code, and complex business logic. Boilerplate like configuration files, simple getters, or repetitive CRUD endpoints may be faster to write manually.
 
-Caching Strategies
+## Caching Strategies
 
 For repetitive tasks, implement caching:
 
@@ -276,7 +273,7 @@ async function getCachedCode(prompt) {
 
 Caching is especially valuable for template generation. if your team generates boilerplate components, route handlers, or test scaffolds from the same base prompts, caching the AI output prevents redundant API calls and keeps results consistent across team members.
 
-Team-Level Responsible AI Policies
+## Team-Level Responsible AI Policies
 
 Individual checklists matter, but sustainable responsible AI usage requires team-level agreement. Consider establishing a short policy document that covers:
 
@@ -290,11 +287,11 @@ Incident protocol: If a bug or security issue is traced back to AI-generated cod
 
 Writing these down, even briefly, transforms implicit assumptions into shared expectations. Teams that skip this step often discover misaligned assumptions during incident post-mortems rather than before.
 
-Continuous Improvement
+## Continuous Improvement
 
 Your usage of Claude Code should evolve. Track what works and what needs adjustment.
 
-Error Pattern Analysis
+## Error Pattern Analysis
 
 When Claude Code makes mistakes, document the pattern:
 
@@ -312,7 +309,7 @@ Fix: Added "always handle errors" to coding standards
 
 A well-maintained error log turns individual mistakes into systemic improvements. If Claude Code consistently misunderstands your data layer abstractions, that is a signal to improve your CLAUDE.md documentation. not just to manually correct each instance. The log also helps onboard new team members by showing common pitfalls and the reasoning behind current CLAUDE.md rules.
 
-Skill Selection
+## Skill Selection
 
 Different tasks benefit from different skills. Reference the best-claude-code-skills-to-install-first-2026 guide for recommendations:
 
@@ -323,7 +320,7 @@ Different tasks benefit from different skills. Reference the best-claude-code-sk
 
 Matching the right skill to the task also avoids context bloat. Using a specialized skill for PDF analysis rather than pasting document text directly keeps your working context focused on code rather than reference material.
 
-Final Checklist Summary
+## Final Checklist Summary
 
 Before marking any AI-assisted work complete:
 
@@ -339,7 +336,6 @@ Before marking any AI-assisted work complete:
 - [ ] Commit message notes AI assistance where significant
 
 Using Claude Code responsibly means balancing productivity with quality. This checklist provides a framework, but adapt it to your team's specific needs and project requirements. The goal is not to slow down development with bureaucratic overhead. it is to build habits that make AI assistance reliable, auditable, and safe to scale across your organization.
-
 
 Related Reading
 

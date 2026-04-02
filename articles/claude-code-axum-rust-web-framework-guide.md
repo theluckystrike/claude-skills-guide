@@ -16,13 +16,13 @@ permalink: /claude-code-axum-rust-web-framework-guide/
 
 Axum has become the go-to web framework for Rust developers who want productivity without sacrificing performance. Built by the tokio team, Axum combines Express-inspired routing with Rust's legendary type safety. When you pair Axum with Claude Code, you get an AI-powered development partner that understands your Rust code, suggests idiomatic patterns, and accelerates your workflow from prototype to production.
 
-Why Axum for Modern Rust Development
+## Why Axum for Modern Rust Development
 
 Axum stands out in the Rust web ecosystem for several reasons. The framework uses tower middleware, meaning you can mix and match authentication, logging, and rate-limiting components from the tower ecosystem. The extractor system makes request handling feel natural, extract what you need with type-safe parameters rather than wrestling with raw request objects.
 
 When working with Claude Code on Axum projects, you'll find the AI assistant understands async patterns, tokio runtime integration, and the extractor-based request handling that defines Axum development. This means less time explaining context and more time iterating on your actual implementation.
 
-Setting Up Your Axum Project
+## Setting Up Your Axum Project
 
 Initialize your project and add the necessary dependencies:
 
@@ -71,7 +71,7 @@ async fn root_handler() -> &'static str {
 }
 ```
 
-Building REST Endpoints with Extractors
+## Building REST Endpoints with Extractors
 
 Axum's extractor system is where the framework truly shines. Instead of parsing request bodies manually, you define functions that receive exactly what they need:
 
@@ -134,7 +134,7 @@ async fn list_users(
 
 Claude Code excels at generating these extractor patterns correctly. Simply describe what data you need from incoming requests, and the AI assistant produces the proper type signatures and error handling.
 
-Integrating Claude Skills for Enhanced Development
+## Integrating Claude Skills for Enhanced Development
 
 Several Claude skills can accelerate your Axum development workflow. The tdd skill helps you write tests before implementing endpoints, ensuring your API contracts are well-defined from the start. When building user-facing endpoints, the frontend-design skill provides guidance on designing intuitive JSON response structures.
 
@@ -142,7 +142,7 @@ For documentation generation, consider using skills that automate OpenAPI specif
 
 The supermemory skill proves valuable when working across multiple Axum services, you can store context about your API design decisions, authentication strategies, and database schemas and retrieve them in future sessions.
 
-Adding Middleware and Error Handling
+## Adding Middleware and Error Handling
 
 Middleware in Axum comes from the tower ecosystem, giving you proven building blocks:
 
@@ -194,7 +194,7 @@ impl IntoResponse for AppError {
 }
 ```
 
-Working with Claude Code Effectively
+## Working with Claude Code Effectively
 
 When developing Axum applications with Claude Code, structure your claude.md to include your project conventions. Define your error handling patterns, naming conventions for routes and handlers, and testing preferences:
 
@@ -217,7 +217,7 @@ Testing
 
 This context helps Claude Code generate code that matches your established patterns rather than starting fresh each time.
 
-Performance and Production Considerations
+## Performance and Production Considerations
 
 Axum runs on the tokio runtime, giving you non-blocking I/O by default. For production deployments, consider these optimizations:
 
@@ -235,12 +235,11 @@ let app = Router::new()
     // ... other routes
 ```
 
-Next Steps
+## Next Steps
 
 With your Axum foundation in place, explore adding database integration with sqlx or your preferred ORM, implementing JWT authentication using tower-http's middleware capabilities, and setting up graceful shutdown handling for production deployments. Claude Code can guide you through each of these enhancements, generating working code based on your specific requirements.
 
 The combination of Axum's ergonomic design and Claude Code's AI assistance makes Rust web development accessible without sacrificing the language's performance and safety guarantees. Start with simple endpoints, iterate rapidly, and scale confidently.
-
 
 Related Reading
 

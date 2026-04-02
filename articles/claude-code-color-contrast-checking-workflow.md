@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Color Contrast Checking Workflow with Claude Code
-
 Color contrast checking is a critical yet often overlooked aspect of web accessibility. Ensuring your text meets WCAG guidelines protects users with visual impairments and keeps your project legally compliant. This guide walks you through a practical workflow using Claude Code skills to systematically check and verify color contrast across your entire project.
 
-Why Color Contrast Checking Matters
+## Why Color Contrast Checking Matters
 
 Web Content Accessibility Guidelines (WCAG) 2.1 specify minimum contrast ratios: 4.5:1 for normal text and 3:1 for large text. Failure to meet these standards excludes users with low vision, color blindness, or those viewing content on poorly calibrated displays. Many development teams treat accessibility as an afterthought, discovering issues only during expensive audits or, worse, after legal complaints.
 
@@ -26,7 +23,7 @@ The business case for accessible color contrast is substantial. Approximately 8%
 
 Integrating color contrast checking into your regular development workflow catches problems early. The key is automation. manual checking becomes impractical as codebases grow. Claude Code skills provide the tooling to make contrast checking a smooth part of your development process.
 
-Understanding WCAG Contrast Requirements
+## Understanding WCAG Contrast Requirements
 
 Before automating checks, you need to understand what you're testing for. WCAG 2.1 defines two conformance levels for contrast:
 
@@ -41,7 +38,7 @@ There are notable exceptions. Decorative text, logos, and text that is part of a
 
 WCAG 3.0 (in draft) introduces APCA (Advanced Perceptual Contrast Algorithm), which replaces the current luminance-ratio formula with a more nuanced perceptual model. Building automation now that is easy to update will save you from scrambling when that standard matures.
 
-Prerequisites and Skill Setup
+## Prerequisites and Skill Setup
 
 Before implementing this workflow, ensure Claude Code is installed and configured. You will need several skills available in the Claude Skills ecosystem:
 
@@ -52,7 +49,7 @@ Before implementing this workflow, ensure Claude Code is installed and configure
 
 To install skills, clone community skill repositories from GitHub and place the `.md` files in `~/.claude/skills/`. Skills activate automatically when their trigger patterns match your prompts.
 
-Step 1: Audit Existing Color Values
+## Step 1: Audit Existing Color Values
 
 Begin by cataloging all color values used throughout your project. Create a dedicated file to track these values and their usage contexts. This inventory becomes your reference point for systematic checking.
 
@@ -91,7 +88,7 @@ Token                    | Hex Value | Used On        | Context
 
 This table becomes the input for your contrast ratio calculations and makes it easy to spot which tokens are risky at a glance.
 
-Step 2: Calculate Contrast Ratios
+## Step 2: Calculate Contrast Ratios
 
 Once you have your color inventory, calculate contrast ratios for each text-on-background combination. Claude Code can perform these calculations directly:
 
@@ -171,7 +168,7 @@ FAIL [2.42:1]  Placeholders. #9ca3af on #ffffff  ← critical failure
 
 For each failure, prompt Claude to suggest alternative hex values that preserve the visual intent while reaching the required threshold. A muted gray that fails at 4.18:1 can often be darkened by a single step. for example, `#6b7280` to `#5a6475`. to clear the 4.5:1 bar without visually disrupting the design.
 
-Step 3: Integrate Automated Testing
+## Step 3: Integrate Automated Testing
 
 Incorporate contrast checking into your test suite using the tdd skill. Create visual regression tests that capture contrast failures:
 
@@ -216,7 +213,7 @@ This gives you component-scoped failures with CSS selectors pointing to the exac
 
 Run these tests in your CI pipeline to prevent accessibility regressions. The super-memory skill can track historical contrast test results, helping you identify patterns in where violations typically occur.
 
-Step 4: Generate Comprehensive Reports
+## Step 4: Generate Comprehensive Reports
 
 For stakeholder communication and documentation, generate detailed contrast audit reports. Use the pdf skill to create professional documents:
 
@@ -247,7 +244,7 @@ A complete report table might look like:
 | Error label | #dc2626 on #fff7f7 | 3.96:1 | #b91c1c on #fff7f7 | 5.08:1 | Slightly darker red |
 | Placeholder | #9ca3af on #fff | 2.42:1 | #6b7280 on #fff | 4.18:1 | Noticeable darkening |
 
-Step 5: Continuous Monitoring
+## Step 5: Continuous Monitoring
 
 Implement pre-commit hooks that block code with obvious contrast violations:
 
@@ -289,7 +286,7 @@ A well-maintained design system documents approved pairs explicitly:
 
 Keeping deprecated token aliases in comments (with clear warnings) prevents regressions when developers copy old code snippets.
 
-Handling Dynamic Content
+## Handling Dynamic Content
 
 Color contrast checking becomes more complex with dynamic content. User-generated content, dark mode switches, and theme variations multiply the number of color combinations to verify. Address this through:
 
@@ -325,7 +322,7 @@ colorPicker.addEventListener('input', (e) => {
 });
 ```
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Several mistakes weaken color contrast checking workflows:
 
@@ -342,7 +339,7 @@ Animated content introduces contrast windows. An entrance animation fading text 
 
 Addressing these gaps requires expanding your testing matrix and automating checks across environments.
 
-Measuring Success
+## Measuring Success
 
 Track your accessibility metrics over time. Aim for zero critical contrast failures in automated tests. Use Lighthouse accessibility scores as a baseline metric:
 
@@ -368,7 +365,6 @@ Graphing these numbers over time reveals whether accessibility holds steady as n
 Teams that treat color contrast as a first-class quality metric. tracked in dashboards, blocked in CI, audited in design reviews. eliminate accessibility debt gradually rather than paying it back in panic before audits. Claude Code makes the automation lightweight enough that there is no reason to defer it.
 
 ---
-
 
 Related Reading
 

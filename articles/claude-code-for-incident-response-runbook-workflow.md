@@ -15,13 +15,13 @@ reviewed: true
 {% raw %}
 Incident response is a critical aspect of DevOps and SRE practices. When production issues arise, having an efficient, repeatable workflow can mean the difference between quick resolution and extended downtime. Claude Code (claude) offers powerful capabilities to automate, document, and execute incident response runbooks effectively. This guide explores practical ways to integrate Claude Code into your incident response workflow.
 
-Understanding Claude Code in Incident Response
+## Understanding Claude Code in Incident Response
 
 Claude Code is a CLI tool that brings AI-assisted development to your terminal. Beyond writing code, it can serve as an intelligent companion during incidents, helping you diagnose issues, execute remediation steps, and document findings in real-time.
 
 The key advantage is having an AI that understands your codebase, infrastructure, and previous incidents while guiding you through structured runbook steps.
 
-Setting Up Incident Response Runbooks
+## Setting Up Incident Response Runbooks
 
 Before diving into automation, establish a clean runbook structure. Create a dedicated directory for your incident response documentation:
 
@@ -36,7 +36,7 @@ Each runbook should follow a consistent format:
 - Escalation criteria: When to involve additional teams
 - Recovery verification: How to confirm resolution
 
-Integrating Claude Code into Your Workflow
+## Integrating Claude Code into Your Workflow
 
 1. Interactive Incident Investigation
 
@@ -113,7 +113,7 @@ process list. Are there any long-running queries? Locked tables?
 Connection pool exhaustion?"
 ```
 
-Building a Claude-Assisted Incident Command System
+## Building a Claude-Assisted Incident Command System
 
 For larger incidents, establish a structured command system:
 
@@ -144,9 +144,9 @@ case $action in
 esac
 ```
 
-Best Practices for Claude-Assisted Incident Response
+## Best Practices for Claude-Assisted Incident Response
 
-Context Preservation
+## Context Preservation
 
 Maintain a shared context file that Claude can reference:
 
@@ -166,7 +166,7 @@ Start each incident response session by loading this context:
 claude --print "$(cat incident-context.md) - Now help us resolve this incident"
 ```
 
-Runbook Versioning
+## Runbook Versioning
 
 Track changes to your runbooks in Git:
 
@@ -178,7 +178,7 @@ git tag "runbooks-$(date +%Y%m%d)"
 
 This ensures you can roll back problematic changes and audit evolution.
 
-Post-Incident Learning
+## Post-Incident Learning
 
 After resolving an incident, use Claude to generate a thorough postmortem:
 
@@ -188,7 +188,7 @@ generate a post-incident review covering: executive summary, timeline,
 root cause analysis, impact assessment, and actionable prevention items"
 ```
 
-Actionable Recommendations
+## Actionable Recommendations
 
 1. Start small: Pick one frequent incident type and create a Claude-assisted runbook. Measure improvement before expanding.
 
@@ -206,14 +206,13 @@ alias runbook="claude --print 'Help me execute our $1 runbook'"
 
 5. Practice incident scenarios: Run tabletop exercises where your team uses Claude-assisted runbooks to respond to simulated incidents. This validates both the runbooks and the tooling.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms incident response from purely manual procedures into an intelligent, assisted workflow. By providing immediate context, suggesting next steps, and helping analyze complex outputs, it reduces cognitive load during high-stress situations.
 
 The key is starting with well-structured runbooks and progressively adding Claude integration where it provides the most value, typically in diagnosis, log analysis, and post-incident documentation. With this approach, you build a more resilient incident response capability that improves over time.
 
 Remember: Claude enhances your team's expertise but doesn't replace good engineering judgment. Use it as a powerful tool within a mature incident management framework.
-
 
 Related Reading
 

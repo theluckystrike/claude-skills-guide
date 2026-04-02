@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for AWS App Mesh Workflow
 
@@ -21,7 +20,7 @@ AWS App Mesh is a service mesh that provides application-level networking, makin
 
 This guide shows how to use Claude Code effectively for AWS App Mesh development.
 
-Understanding the App Mesh Architecture
+## Understanding the App Mesh Architecture
 
 Before diving into workflows, it's essential to understand the key components in AWS App Mesh:
 
@@ -35,7 +34,7 @@ Claude Code can help you visualize these relationships and generate correct conf
 
 The dependency graph matters when building configurations from scratch. Virtual Services depend on Virtual Routers, which depend on Virtual Nodes. creating resources in the wrong order produces errors that are hard to interpret without knowing the relationship chain. Claude Code is particularly useful here because you can describe your intended architecture in plain language and let it produce the resources in the correct creation order.
 
-Setting Up Claude Code for AWS Development
+## Setting Up Claude Code for AWS Development
 
 First, ensure Claude Code is installed and configured for AWS work. Create a skill specifically for App Mesh operations:
 
@@ -68,7 +67,7 @@ claude "Run: aws appmesh list-meshes --region us-east-1 and tell me what meshes 
 
 Claude will execute the command, parse the JSON output, and provide a human-readable summary. This is significantly faster than manually reading raw CLI output when your mesh has dozens of resources.
 
-Useful AWS CLI Context to Provide
+## Useful AWS CLI Context to Provide
 
 When troubleshooting or building configurations, give Claude the full picture rather than one resource at a time. A single command that dumps all relevant resource descriptions into context produces better results:
 
@@ -84,7 +83,7 @@ claude "Analyze /tmp/mesh.json and /tmp/nodes.json. Are there any configuration 
 
 This pattern. dump state, then ask Claude to analyze. is more reliable than asking Claude to reconstruct state from memory across multiple interactions.
 
-Generating Virtual Node Configurations
+## Generating Virtual Node Configurations
 
 One of the most common tasks is creating Virtual Node definitions. Instead of manually writing CloudFormation YAML, ask Claude Code to generate it:
 
@@ -130,7 +129,7 @@ Resources:
 
 Notice the TLS mode is set to `PERMISSIVE` rather than `STRICT`. This is intentional for initial setup. PERMISSIVE accepts both plain and TLS traffic, which makes it easier to migrate existing services without a hard cutover. Once you've confirmed the certificate is working and all clients send TLS, Claude can update the template to STRICT mode.
 
-Adding Envoy Proxy Metadata
+## Adding Envoy Proxy Metadata
 
 Real production virtual nodes also need Envoy proxy metadata for the sidecar injection to work correctly. Ask Claude to add it:
 
@@ -156,7 +155,7 @@ The resulting metadata section Claude generates:
                       - !Ref CertificateAuthorityArn
 ```
 
-Debugging Traffic Flow Issues
+## Debugging Traffic Flow Issues
 
 When services in your mesh can't communicate, debugging is challenging. Claude Code can help analyze your configuration and identify problems:
 
@@ -174,7 +173,7 @@ Provide Claude with your configuration files, and it will analyze:
 3. Route configurations: Checking that virtual router routes point to existing virtual nodes
 4. IAM permissions: Verifying mesh gateway roles have proper access
 
-Common App Mesh Failure Patterns
+## Common App Mesh Failure Patterns
 
 Claude is most effective at debugging when you know which failure category you're dealing with. Here's a reference for the most common issues:
 
@@ -202,7 +201,7 @@ they suggest about the App Mesh configuration."
 
 Claude can parse the dense Envoy log format and surface the relevant lines far faster than manually scanning thousands of log entries.
 
-Creating Weighted Routing Configurations
+## Creating Weighted Routing Configurations
 
 A common production pattern is gradual traffic shifting using weighted routes. Claude can generate these configurations:
 
@@ -247,7 +246,7 @@ RouteV1:
             Value: 2000
 ```
 
-Progressive Rollout Automation
+## Progressive Rollout Automation
 
 For canary deployments, you typically want to shift traffic in stages: 5%, 10%, 25%, 50%, 100%. Writing a separate CloudFormation update for each stage is tedious. Ask Claude to generate a script that automates the progression:
 
@@ -261,7 +260,7 @@ exceeds 1%, roll back to 100% v1."
 
 Claude will produce a script using `aws appmesh update-route` calls combined with CloudWatch metric queries. This kind of orchestration script is exactly the sort of boilerplate that Claude handles well. it's mechanical, follows a clear pattern, and is easy to get wrong in the details (ARN formats, metric dimensions, correct AWS CLI subcommands).
 
-Header-Based Routing for Testing
+## Header-Based Routing for Testing
 
 Weighted routes aren't the only canary strategy. Header-based routing lets you send specific users or internal testers to v2 while everyone else stays on v1:
 
@@ -297,7 +296,7 @@ RouteHeaderMatch:
 
 The `Priority: 1` field is critical here. without it, App Mesh evaluates routes in an undefined order and your header match may not take precedence over the weight-based route. Claude handles this detail automatically when you describe the intent.
 
-Automating Mesh Validation
+## Automating Mesh Validation
 
 Create a validation script that Claude Code can run to verify mesh health:
 
@@ -328,7 +327,7 @@ if [ $? -ne 0 ]; then
 fi
 ```
 
-Managing Circuit Breakers and Outlier Detection
+## Managing Circuit Breakers and Outlier Detection
 
 App Mesh supports Envoy's outlier detection feature, which automatically removes unhealthy hosts from the load balancing pool. This is distinct from health checks. outlier detection reacts to actual traffic failures rather than polling a health endpoint.
 
@@ -359,7 +358,7 @@ Understanding when to use outlier detection versus health checks:
 
 For production meshes, you typically want both: health checks to catch startup failures and crash loops, and outlier detection to handle transient failures and degraded instances that pass health checks but fail under real load.
 
-Best Practices for Claude-Assisted App Mesh Work
+## Best Practices for Claude-Assisted App Mesh Work
 
 1. Provide complete context: When asking Claude to generate configurations, include all relevant details like mesh name, existing resources, and AWS region.
 
@@ -375,7 +374,7 @@ Best Practices for Claude-Assisted App Mesh Work
 
 7. Test in a staging mesh first: App Mesh resources can be replicated across environments by parameterizing the mesh name. Have Claude generate both a staging and production version of your configuration, differing only in the mesh name parameter.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms AWS App Mesh development from manual, error-prone configuration to an interactive, assisted workflow. By providing context-specific skills, generating accurate configurations, and debugging traffic issues, Claude helps developers focus on architecture rather than syntax. Start with basic Virtual Node configurations, then progressively adopt advanced patterns like weighted routing, TLS enforcement, and automated validation. The combination of Claude's configuration generation and your domain knowledge about the services being meshed produces reliable infrastructure faster than writing YAML from scratch or consulting documentation for every field name.
 {% endraw %}

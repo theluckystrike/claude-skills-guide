@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code Keeps Rewriting Functions I Said Keep"
 description: "Understand why Claude Code rewrites functions you've asked to preserve, and learn practical strategies to prevent unwanted refactoring during your."
@@ -14,14 +13,11 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills, debugging]
 ---
 
-
-Claude Code Keeps Rewriting Functions I Said Keep
-
 One of the most frustrating experiences when working with Claude Code is watching it silently rewrite functions you explicitly asked to preserve. You carefully craft a prompt saying "keep this function exactly as is" or "don't touch the legacy code," only to find that Claude Code has somehow decided to refactor everything anyway. This behavior isn't malicious, it's trying to be helpful, but it can derail your workflow, especially when working with code that has specific requirements, legacy systems, or carefully tuned implementations.
 
 This guide covers why it happens, how to prevent it with concrete prompt patterns and configuration, and what to do when a rewrite has already occurred.
 
-Why Claude Code Rewrites Functions
+## Why Claude Code Rewrites Functions
 
 Understanding the root causes of this behavior helps you address them effectively. Claude Code has several distinct tendencies that lead to unwanted rewrites, and knowing which one is at play helps you pick the right countermeasure.
 
@@ -33,7 +29,7 @@ Skill and system prompt conflicts: When Claude Code has an active skill loaded t
 
 Implicit refactoring triggers: Certain phrasings trigger Claude Code's refactoring instincts even when you don't intend them to. Saying "clean this up" or "improve this file" gives it broad latitude. Asking it to "fix the bug in this file" can cause it to rewrite unrelated functions that it judges to be poorly structured, even though you only wanted the bug fixed.
 
-Prompt Patterns That Fail vs. Patterns That Work
+## Prompt Patterns That Fail vs. Patterns That Work
 
 Not all preservation instructions are created equal. The table below shows common weak phrasings alongside stronger alternatives that get better results.
 
@@ -47,9 +43,9 @@ Not all preservation instructions are created equal. The table below shows commo
 
 The general principle: be explicit about what is off-limits, not just about what the outcome should be.
 
-Practical Solutions
+## Practical Solutions
 
-Use Explicit Preservation Blocks
+## Use Explicit Preservation Blocks
 
 The most effective technique is using clear markers in your code and prompts that signal boundaries Claude Code should respect. You can create explicit preservation comments that act as fences around code that must remain unchanged.
 
@@ -93,7 +89,7 @@ public double computeHash(byte[] input) {
 /* PRESERVE-END: certified_algorithm */
 ```
 
-Use Claude.md for Persistent Instructions
+## Use Claude.md for Persistent Instructions
 
 Create a `claude.md` file in your project root that specifies functions and code sections that should never be modified. This file persists across sessions and provides constant context to Claude Code, meaning you do not have to repeat preservation rules in every prompt.
 
@@ -127,7 +123,7 @@ Safe to Modify
 
 The specificity matters. A section that names files, functions, and directories gives Claude Code clear fences to work within. A vague rule like "respect legacy code" will be interpreted differently each session.
 
-Use the Read-Only Mode Strategy
+## Use the Read-Only Mode Strategy
 
 When you need Claude Code to analyze code without modifying it, explicitly frame the task as analysis-only. This changes its operational mindset from editing to understanding:
 
@@ -141,7 +137,7 @@ For longer analysis sessions where you want to ask multiple questions before com
 
 This framing sets an expectation at the conversation level rather than repeating it each time.
 
-Be Specific About Scope
+## Be Specific About Scope
 
 Vague instructions produce unpredictable results. Instead of "refactor this file but keep the old functions," specify exactly what should change and what should not, name names.
 
@@ -159,7 +155,7 @@ function in the file. Add no new imports.
 
 The more explicit the boundary, the less room there is for Claude Code to exercise its own judgment about what "improvement" means. Treat your prompts like surgical orders: state the procedure, the site, and everything that should remain untouched.
 
-Separate Concerns Across Multiple Prompts
+## Separate Concerns Across Multiple Prompts
 
 One underused strategy is splitting tasks into smaller, scoped prompts rather than asking Claude Code to do many things at once in a single request. When you ask it to "refactor the file and fix the bug and improve the tests," it has broad latitude and is more likely to rewrite things you didn't intend to touch.
 
@@ -171,7 +167,7 @@ Instead:
 
 Each prompt is a narrow, reversible operation. If one goes wrong, you revert one change, not an entangled mass of edits.
 
-Configuring Skills to Prevent Rewrites
+## Configuring Skills to Prevent Rewrites
 
 Claude Code skills can be configured to enforce conservative editing behavior. If you frequently work on codebases with preservation requirements, a custom skill file pays for itself quickly.
 
@@ -195,11 +191,11 @@ Rules
 
 Invoke it at the start of a sensitive session with `/conservative-editor`. The skill's rules stack on top of your per-prompt instructions, giving you two layers of enforcement.
 
-Handling Rewrites When They Happen
+## Handling Rewrites When They Happen
 
 When you catch Claude Code rewriting a function you wanted preserved, act quickly before the context accumulates more changes.
 
-Step 1: Assess the damage with git
+## Step 1: Assess the damage with git
 
 ```bash
 git diff
@@ -207,7 +203,7 @@ git diff
 
 This shows exactly what changed. Read the diff before deciding whether to revert or keep the changes, sometimes Claude Code's rewrite is actually an improvement even if it was unwanted, and it is worth a quick review before discarding.
 
-Step 2: Revert if needed
+## Step 2: Revert if needed
 
 To revert a single file:
 ```bash
@@ -225,7 +221,7 @@ git restore --staged path/to/file.py
 git checkout -- path/to/file.py
 ```
 
-Step 3: Add hard-stop comments and re-prompt
+## Step 3: Add hard-stop comments and re-prompt
 
 Before re-prompting, add prominent preservation markers to the functions that were rewritten:
 
@@ -237,7 +233,7 @@ def calculate_discount(price, customer_tier):
 
 Then re-issue your original request with explicit preservation language: "The previous attempt incorrectly modified `calculate_discount`. Do not touch that function. Make only [the specific change you wanted]."
 
-Step 4: Use git commits as checkpoints
+## Step 4: Use git commits as checkpoints
 
 For any session where you are making multiple incremental changes, commit after each successful step:
 
@@ -248,7 +244,7 @@ git commit -m "chore: add logging to fetchUser only"
 
 This keeps your recovery options clean. Each revert is a single commit undo rather than a tangled undo of multiple mixed changes.
 
-Comparing Preservation Strategies
+## Comparing Preservation Strategies
 
 Each of the approaches covered above has different strengths depending on your situation. Here is a quick reference:
 
@@ -263,7 +259,7 @@ Each of the approaches covered above has different strengths depending on your s
 
 For most developers, the most impactful combination is: a `claude.md` with preservation rules (set once, always active) plus narrow scoped prompts (per-task discipline) plus frequent git commits (recovery safety net). The other strategies are supplements for specific situations.
 
-Common Mistakes That Invite Rewrites
+## Common Mistakes That Invite Rewrites
 
 A few habits that developers often don't realize are triggering unwanted rewrites:
 
@@ -275,7 +271,7 @@ Not using git before starting a session: If you haven't committed your current s
 
 Assuming a previous instruction carries forward: Each new prompt is an opportunity for Claude Code to re-evaluate its approach. Instructions given three messages ago may be underweighted compared to newer context. Re-state preservation requirements when starting a new task within the same conversation.
 
-Best Practices Summary
+## Best Practices Summary
 
 Preventing unwanted function rewrites comes down to clear communication and strategic structuring. The combination that works best for most developers:
 
@@ -287,7 +283,6 @@ Preventing unwanted function rewrites comes down to clear communication and stra
 6. Run `git diff` after every Claude Code edit before accepting the result
 
 The key insight is that Claude Code wants to help by improving your code. Channel that energy by being extremely clear about what should improve and what should stay exactly as it is. With the right prompts and configuration, you can have both, helpful improvements where you want them and perfect preservation where you need it.
-
 
 Related Reading
 

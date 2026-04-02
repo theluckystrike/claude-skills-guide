@@ -13,7 +13,6 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code Paddle Billing Integration Setup Guide
 
@@ -21,7 +20,7 @@ Integrating billing into your application doesn't have to be a nightmare. Paddle
 
 This guide walks you through integrating Paddle billing using Claude Code, covering everything from initial setup to handling webhooks and managing subscriptions.
 
-Defining a Paddle Billing Skill
+## Defining a Paddle Billing Skill
 
 Before writing integration code, you can define a Claude skill that encapsulates the entire billing workflow. Skills give Claude a focused persona and explicit instructions for handling events:
 
@@ -71,7 +70,7 @@ Claude Code excels at:
 - Setting up test fixtures for payment scenarios
 - Documenting billing flows
 
-Prerequisites
+## Prerequisites
 
 Before starting, ensure you have:
 - A Paddle account (sandbox mode for testing)
@@ -79,7 +78,7 @@ Before starting, ensure you have:
 - Claude Code installed (`npm install -g @anthropic-ai/claude-code`)
 - A project with an existing API structure
 
-Step 1: Initialize Your Project with Claude Code
+## Step 1: Initialize Your Project with Claude Code
 
 Start by asking Claude Code to help set up your billing module structure:
 
@@ -99,7 +98,7 @@ export const paddleClient = new paddle.Client(
 );
 ```
 
-Step 2: Configure Environment Variables
+## Step 2: Configure Environment Variables
 
 Never hardcode your Paddle API keys. Create a `.env.example` file and ask Claude Code to update your configuration:
 
@@ -114,7 +113,7 @@ PADDLE_WEBHOOK_SECRET=your_webhook_secret
 PADDLE_VENDOR_ID=your_vendor_id
 ```
 
-Step 3: Implement Webhook Handlers
+## Step 3: Implement Webhook Handlers
 
 Webhooks are critical for billing integrations. When a subscription is created, updated, or cancelled, Paddle sends events to your server. Claude Code can generate solid webhook handlers:
 
@@ -186,7 +185,7 @@ def verify_webhook_signature(payload: str, signature: str) -> bool:
 
 The Python and TypeScript implementations follow the same HMAC-SHA256 pattern. always use `compare_digest` (or its equivalent) to prevent timing attacks.
 
-Step 4: Create Subscription Management APIs
+## Step 4: Create Subscription Management APIs
 
 Claude Code can generate the RESTful endpoints for subscription management:
 
@@ -228,7 +227,7 @@ router.post('/subscriptions/:id/cancel', requireAuth, async (req, res) => {
 });
 ```
 
-Step 5: Handle Edge Cases
+## Step 5: Handle Edge Cases
 
 Billing systems have many edge cases. Ask Claude Code to help identify and handle them:
 
@@ -286,7 +285,7 @@ def get_retry_schedule(failure_reason: str) -> list:
 
 This failure-aware retry schedule prevents unnecessary retries on cards that clearly need updating while giving customers with temporary balance issues enough time to resolve them.
 
-Invoice Lifecycle Handling
+## Invoice Lifecycle Handling
 
 Invoices flow through several statuses (`due` → `paid` or `overdue`). Each status requires a different action. Ask Claude Code to generate a complete invoice event handler:
 
@@ -316,7 +315,7 @@ def process_invoice_webhook(event: dict) -> dict:
     return {'action': 'no_action_needed'}
 ```
 
-Step 6: Testing Your Integration
+## Step 6: Testing Your Integration
 
 Claude Code excels at generating test fixtures. Ask for help:
 
@@ -345,7 +344,7 @@ export const subscriptionCanceledEvent = {
 };
 ```
 
-Testing Webhooks Locally with ngrok and paddle-cli
+## Testing Webhooks Locally with ngrok and paddle-cli
 
 Unit tests cover logic, but you also need to validate that Paddle can actually reach your local server. Use ngrok to expose your local port and `paddle-cli` to fire real sandbox events:
 
@@ -385,7 +384,7 @@ describe('Paddle Webhooks', () => {
 });
 ```
 
-Best Practices
+## Best Practices
 
 1. Always verify webhook signatures - Never trust incoming requests without validation
 2. Idempotency is key - Design handlers to handle duplicate events gracefully
@@ -393,7 +392,7 @@ Best Practices
 4. Use webhooks for state, not API calls - Store event data and use it to update your database
 5. Test in sandbox - Always fully test in Paddle's sandbox environment before production
 
-Conclusion
+## Conclusion
 
 Building a Paddle billing integration with Claude Code significantly accelerates development. The AI assistant helps generate type-safe code, identifies potential issues, and creates comprehensive tests. By following this guide and using Claude Code's capabilities, you'll have a production-ready billing system that handles subscriptions, webhooks, and payment failures elegantly.
 

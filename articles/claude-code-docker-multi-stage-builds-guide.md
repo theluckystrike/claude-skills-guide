@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code Docker Multi-Stage Builds Guide"
 description: "Learn how to use Claude Code to generate efficient Docker multi-stage builds. Practical examples, code snippets, and techniques for developers."
@@ -14,13 +13,12 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code Docker Multi-Stage Builds Guide
 
 Docker multi-stage builds have become essential for creating lean, production-ready container images. When combined with Claude Code's AI capabilities, you can generate optimized multi-stage Dockerfiles that reduce image size, improve build times, and follow security best practices. This guide shows you how to use Claude Code effectively for Docker multi-stage build workflows.
 
-Why Multi-Stage Builds Matter
+## Why Multi-Stage Builds Matter
 
 Traditional Dockerfiles bundle everything needed to build your application into a single image, resulting in bloated containers that contain compilers, build tools, and source code that production doesn't need. Multi-stage builds solve this by using multiple FROM statements, where each stage can copy artifacts from previous stages while discarding everything unnecessary.
 
@@ -28,11 +26,11 @@ A typical Node.js application built with a single Dockerfile might result in a 1
 
 Claude Code understands these patterns and can generate appropriate multi-stage configurations based on your project's language, framework, and requirements.
 
-Generating Multi-Stage Builds with Claude Code
+## Generating Multi-Stage Builds with Claude Code
 
 When working with Claude Code, you have several approaches to generate multi-stage Dockerfiles. The most effective method involves providing context about your project structure and requirements.
 
-Project Context for Claude Code
+## Project Context for Claude Code
 
 Before asking Claude Code to generate a multi-stage Dockerfile, ensure you provide relevant context. This includes your programming language, framework version, build tools, and any specific requirements like production versus development configurations.
 
@@ -78,11 +76,11 @@ EXPOSE 3000
 CMD ["node", "server.js"]
 ```
 
-Working with Different Language Ecosystems
+## Working with Different Language Ecosystems
 
 Claude Code adapts its multi-stage build generation based on your technology stack. Here's how it handles common scenarios.
 
-Python Applications
+## Python Applications
 
 For Python applications using pip and potentially Poetry or uv for dependency management:
 
@@ -125,7 +123,7 @@ ENV PYTHONUNBUFFERED=1 \
 CMD ["python", "main.py"]
 ```
 
-React Frontend Applications
+## React Frontend Applications
 
 For a React application built with Vite, multi-stage builds separate the Node.js build environment from a lightweight Nginx serving stage:
 
@@ -206,7 +204,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 The virtual environment is copied wholesale from the builder stage, preserving all installed packages without reinstalling them in the runtime stage.
 
-Node.js with Prisma ORM
+## Node.js with Prisma ORM
 
 For a Node.js Express API with TypeScript and Prisma ORM, Claude Code generates a configuration that handles schema generation in the build stage:
 
@@ -252,7 +250,7 @@ EXPOSE 3000
 CMD ["node", "dist/main.js"]
 ```
 
-Python Applications with uv
+## Python Applications with uv
 
 Modern Python projects benefit from `uv` for faster dependency resolution. Claude Code can generate a multi-stage build that uses `uv` with a compiler stage for packages requiring native extensions:
 
@@ -296,7 +294,7 @@ EXPOSE 8000
 CMD ["python", "main.py"]
 ```
 
-Go Applications
+## Go Applications
 
 Go applications benefit enormously from multi-stage builds since the compilation produces a single binary. For maximum image minimalism, Claude Code can target the `scratch` base image and copy CA certificates directly from the builder:
 
@@ -338,11 +336,11 @@ ENTRYPOINT ["/appbinary"]
 
 When HTTPS calls are not needed and no static assets are required, using `FROM scratch` produces the smallest possible image with zero OS overhead. Alternatively, use `FROM alpine:3.18` and `RUN apk --no-cache add ca-certificates` if you prefer a shell for debugging.
 
-Integrating Claude Code into Your Build Pipeline
+## Integrating Claude Code into Your Build Pipeline
 
 Beyond generating Dockerfiles, Claude Code can help you integrate multi-stage builds into CI/CD pipelines and optimize the entire container workflow.
 
-Automation with GitHub Actions
+## Automation with GitHub Actions
 
 Claude Code can generate GitHub Actions workflows that use multi-stage builds:
 
@@ -368,11 +366,11 @@ jobs:
           docker run --rm myapp:test
 ```
 
-Advanced Multi-Stage Patterns
+## Advanced Multi-Stage Patterns
 
 Claude Code understands advanced patterns that further optimize your container strategy.
 
-Test Stage Integration
+## Test Stage Integration
 
 You can add intermediate stages for running tests before building production images:
 
@@ -408,7 +406,7 @@ COPY package*.json ./
 CMD ["node", "dist/index.js"]
 ```
 
-Build Arguments in Multi-Stage Contexts
+## Build Arguments in Multi-Stage Contexts
 
 Claude Code can help you design multi-stage builds that accept build arguments for flexibility:
 
@@ -433,13 +431,13 @@ COPY --from=builder /app/node_modules ./node_modules
 CMD ["node", "dist/index.js"]
 ```
 
-Combining with Claude Code Skills
+## Combining with Claude Code Skills
 
 The true power emerges when combining multi-stage build generation with other Claude Code skills. The pdf skill can generate documentation about your container architecture. The tdd skill helps ensure your tests run correctly within container stages. For frontend projects, the frontend-design skill works alongside Docker optimization to deliver efficient development and production workflows.
 
 The supermemory skill maintains context about your organization's Docker patterns, enabling consistent multi-stage configurations across projects. When working with monorepos, the relevant skills help manage complex multi-stage builds that serve different applications from a single repository.
 
-Best Practices for Claude Code-Generated Dockerfiles
+## Best Practices for Claude Code-Generated Dockerfiles
 
 When using Claude Code to generate multi-stage builds, keep these considerations in mind:
 
@@ -467,18 +465,17 @@ Test your multi-stage builds locally before deploying. The `--target` flag allow
 docker build --target test -t myapp:test .
 ```
 
-Automating Dockerfile Updates
+## Automating Dockerfile Updates
 
 As your project evolves, regenerate Dockerfiles when dependencies change significantly. Track the Dockerfile alongside your code in version control so changes are reviewed alongside application code. Review Claude Code's output against the Docker Bench Security checklist to ensure compliance with hardening guidelines.
 
 When base image versions receive security patches, Claude Code can help you evaluate the impact and update `FROM` references across your stages consistently. This keeps the iteration loop tight as application requirements grow.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms multi-stage Dockerfile generation from a manual, error-prone process into an AI-assisted workflow that produces optimized, secure containers. By providing clear context about your project and requirements, you get production-ready configurations that follow industry best practices.
 
 The combination of AI assistance and multi-stage builds delivers smaller images, faster deployments, and improved security, all while reducing the cognitive load on developers. As containerized applications grow more complex, this approach becomes increasingly valuable for teams that want efficiency without sacrificing quality.
-
 
 Related Reading
 

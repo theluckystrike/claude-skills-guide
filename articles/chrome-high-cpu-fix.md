@@ -14,7 +14,7 @@ score: 8
 
 Chrome consuming excessive CPU can disrupt your workflow, drain your laptop battery, and make even simple tasks feel sluggish. For developers and power users running multiple tabs, heavy web applications, or browser-based development tools, high CPU usage becomes a common frustration. This guide covers practical diagnostic steps and fixes to bring Chrome back to reasonable resource levels.
 
-Identifying the Cause of High CPU Usage
+## Identifying the Cause of High CPU Usage
 
 Before applying fixes, identify what's driving the CPU consumption. Chrome's built-in Task Manager provides detailed per-tab and per-extension breakdown.
 
@@ -48,7 +48,7 @@ console.log(`Execution time: ${end - start}ms`);
 
 If you suspect a specific site, open a private/incognito window with extensions disabled and revisit the site. If CPU usage normalizes, an extension is the culprit. If the spike persists, the page itself is the problem.
 
-Disabling Hardware Acceleration
+## Disabling Hardware Acceleration
 
 Hardware acceleration can cause CPU (and GPU) spikes, particularly on systems with incompatible drivers. Disabling it forces Chrome to use software rendering.
 
@@ -64,7 +64,7 @@ On macOS, hardware acceleration conflicts are less common but still occur with c
 
 You can verify the current GPU and acceleration status at `chrome://gpu`. Look for items flagged as "Software only, hardware acceleration unavailable". these indicate Chrome has already fallen back to software rendering for that feature.
 
-Managing Extensions and Background Processes
+## Managing Extensions and Background Processes
 
 Extensions run continuously, even on inactive tabs. A misbehaving extension can consume significant CPU.
 
@@ -96,7 +96,7 @@ Pay special attention to extensions that modify page content, scrape data, or ru
 
 A useful technique is to open `chrome://extensions` and note the "Background page" link next to any extension that has one. Clicking that link opens a DevTools window for that extension's background page, letting you directly profile its CPU usage.
 
-Clearing Cache and Site Data
+## Clearing Cache and Site Data
 
 Accumulated cache can degrade performance over time. While not always a CPU fix, it removes corrupted data that might cause excessive script execution.
 
@@ -126,7 +126,7 @@ Linux (systemd-resolved)
 sudo systemd-resolve --flush-caches
 ```
 
-Adjusting Chrome Flags for Performance
+## Adjusting Chrome Flags for Performance
 
 Chrome's experimental flags include settings that can reduce CPU usage.
 
@@ -158,9 +158,9 @@ google-chrome \
 
 Note that `--no-sandbox` reduces security and should only be used in controlled environments like CI pipelines, never in a browser you use for personal browsing.
 
-Handling Specific CPU Culprits
+## Handling Specific CPU Culprits
 
-JavaScript Infinite Loops
+## JavaScript Infinite Loops
 
 If a tab contains buggy JavaScript running an infinite loop, CPU will spike immediately. Use the Performance profiler to identify:
 
@@ -190,7 +190,7 @@ function scheduleUpdate() {
 scheduleUpdate();
 ```
 
-WebGL and Canvas Intensive Sites
+## WebGL and Canvas Intensive Sites
 
 Sites using WebGL or heavy canvas operations can max out CPU:
 
@@ -215,7 +215,7 @@ canvas.style.width = window.innerWidth + 'px';
 canvas.style.height = window.innerHeight + 'px';
 ```
 
-Network Service High CPU
+## Network Service High CPU
 
 Chrome's Network Service process handles all HTTP requests. When it spikes:
 
@@ -225,7 +225,7 @@ Chrome's Network Service process handles all HTTP requests. When it spikes:
 
 QUIC (HTTP/3) is efficient but can cause CPU overhead if your network hardware doesn't handle it well. Disabling it reverts Chrome to standard TCP connections, which may reduce Network Service CPU at the cost of slightly slower connection establishment.
 
-Automation and Scripting Solutions
+## Automation and Scripting Solutions
 
 For developers managing Chrome across machines, automation helps standardize fixes.
 
@@ -256,7 +256,7 @@ const metrics = await page.evaluate(() => ({
 }));
 ```
 
-Profile Management for Power Users
+## Profile Management for Power Users
 
 Running separate Chrome profiles isolates resource-heavy scenarios:
 
@@ -270,7 +270,7 @@ A practical workflow for developers: maintain three profiles. one for daily brow
 
 Memory Saver mode aggressively discards background tabs, which reduces both RAM and CPU since discarded tabs stop executing JavaScript entirely. You can exclude specific sites from discarding by adding them to the Memory Saver exceptions list in `chrome://settings/performance`.
 
-Monitoring CPU Over Time
+## Monitoring CPU Over Time
 
 Rather than investigating only when things get bad, consider setting up ongoing monitoring. On macOS, the `caffeinate` command with Activity Monitor can log CPU data. On Linux, use `top -b -n 5 -d 2` to capture snapshots.
 
@@ -283,17 +283,16 @@ For a developer-oriented approach, Chrome's `chrome://tracing` interface records
 
 The resulting `.json` file can be shared and opened in any Chromium browser's tracing viewer for collaborative debugging.
 
-Preventive Measures
+## Preventive Measures
 
 - Keep Chrome updated. Newer versions include performance improvements
 - Limit open tabs. Use tab grouping and bookmarking to reduce memory pressure
 - Monitor with external tools. `htop` on Linux or Activity Monitor on macOS provide system-wide context
 - Consider Chrome variants. Chrome Canary may have newer optimizations but can be less stable
 
-Summary
+## Summary
 
 Chrome high CPU issues usually stem from a few common sources: aggressive extensions, hardware acceleration conflicts, JavaScript-heavy sites, or Network Service problems. Start with Chrome Task Manager to identify the culprit, then apply targeted fixes. For developers, DevTools and flags offer granular control. Most users find success by disabling hardware acceleration, auditing extensions, and keeping Chrome updated.
-
 
 Related Reading
 

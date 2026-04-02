@@ -14,7 +14,7 @@ tags: [claude-code, claude-skills]
 
 When building applications that interact with external APIs in Claude Code, you often find yourself repeating the same fetch boilerplate across multiple tools and scripts. A well-designed fetch API wrapper saves time, reduces errors, and makes your codebase more maintainable. This guide walks you through creating practical wrapper functions that integrate smoothly with Claude Code's tool-calling approach.
 
-Why Wrapper Functions Matter
+## Why Wrapper Functions Matter
 
 Raw fetch calls require handling URLs, headers, request bodies, response parsing, and error cases repeatedly. In a Claude Code environment where you're rapidly prototyping or building automation tools, this overhead compounds quickly. A wrapper centralizes configuration, adds sensible defaults, and provides consistent error handling across your entire project.
 
@@ -39,7 +39,7 @@ const data = await apiClient.post('/users', { name: 'test' });
 
 The wrapper approach becomes especially valuable when combining multiple API calls in a single Claude Code session, such as fetching documentation via the supermemory skill, generating PDFs with the pdf skill, or coordinating with frontend-design workflows.
 
-Building a Basic Wrapper
+## Building a Basic Wrapper
 
 Start with a simple, flexible wrapper that handles the most common scenarios:
 
@@ -122,7 +122,7 @@ class ApiError extends Error {
 
 This wrapper handles JSON automatically, provides typed HTTP methods, and wraps errors consistently. The ApiError class makes it easy to handle specific status codes in your calling code.
 
-Authentication Patterns
+## Authentication Patterns
 
 Most APIs require authentication. Include token management in your wrapper:
 
@@ -166,7 +166,7 @@ constructor(baseUrl, apiKey) {
 }
 ```
 
-Retry Logic and Timeouts
+## Retry Logic and Timeouts
 
 Network requests fail. Build resilience directly into your wrapper:
 
@@ -209,7 +209,7 @@ export class ResilientClient extends ApiClient {
 
 This exponential backoff strategy handles transient failures gracefully, useful when calling external services during long-running Claude Code sessions that might include tdd test runs or document generation with the docx skill.
 
-Integrating with Claude Code Tools
+## Integrating with Claude Code Tools
 
 To use your wrapper in a Claude Code tool, export the client and relevant functions:
 
@@ -239,7 +239,7 @@ export async function listPullRequests(owner, repo, state = 'open') {
 
 These functions become callable tools in your Claude Code configuration, enabling natural conversational interactions like "Show me the open pull requests for this repository" or "Create an issue documenting this bug."
 
-Testing Your Wrapper
+## Testing Your Wrapper
 
 Since you're building a utility used across multiple tools, test coverage matters. The tdd skill works well for writing tests alongside your implementation:
 
@@ -281,7 +281,7 @@ describe('ApiClient', () => {
 });
 ```
 
-Extending for Specific Use Cases
+## Extending for Specific Use Cases
 
 Your base wrapper adapts to specialized scenarios. For file uploads requiring multipart form data:
 
@@ -304,11 +304,11 @@ async uploadFile(endpoint, file, additionalFields = {}) {
 
 This pattern extends naturally to streaming responses, webhook signatures, rate limiting detection, and other API-specific concerns you encounter when building integrations for various Claude Code workflows.
 
-Conclusion
+## Conclusion
 
 A fetch API wrapper transforms scattered HTTP calls into a maintainable, testable, and extensible client. Start with the basic pattern shown here, then layer in authentication, retry logic, and specialized methods as your needs grow. The investment pays off immediately through cleaner code and fewer bugs, and compounds as you build more tools that interact with external services in your Claude Code projects.
 
-Step-by-Step Guide: Building an API Client Library
+## Step-by-Step Guide: Building an API Client Library
 
 Here is a concrete approach to building a reusable fetch API wrapper for use across a Claude Code project.
 
@@ -322,7 +322,7 @@ Step 4. Implement response caching with TTL. For endpoints that return stable da
 
 Step 5. Write integration tests against a mock server. Use msw (Mock Service Worker) to intercept fetch calls in tests and return controlled responses. Claude Code generates the msw handler definitions for each endpoint your wrapper targets, covering success responses, error responses, and network failure scenarios.
 
-Common Pitfalls
+## Common Pitfalls
 
 Not aborting inflight requests on component unmount. In React applications, fetch calls started in a useEffect can resolve after the component has unmounted. Integrate AbortController into your wrapper and expose an abort method. Claude Code generates the React hook that automatically calls abort when the component unmounts.
 
@@ -334,7 +334,7 @@ Missing timeout handling. Fetch has no built-in timeout. A request to a slow ser
 
 Not handling 429 Rate Limited responses. APIs that enforce rate limits return 429 with a Retry-After header. Without special handling, your wrapper's generic retry logic may retry immediately and get another 429. Claude Code generates the Retry-After aware retry logic that parses the header value and waits the specified duration before retrying.
 
-Best Practices
+## Best Practices
 
 Create typed endpoint definitions. Rather than passing raw URLs to your client methods, define typed endpoint descriptors that specify the URL template, path parameters, query parameters, and response type. Claude Code generates the endpoint registry and the typed call function that accepts strongly-typed parameters and returns typed response data.
 
@@ -344,7 +344,7 @@ Use a base URL per environment. Store API base URLs in environment variables and
 
 Document error codes with their causes and remediations. When your wrapper catches a specific HTTP status code, include a message that explains what the code means in the context of your API and what the caller should do. Claude Code generates an error code registry file that maps each status code to a human-readable description.
 
-Integration Patterns
+## Integration Patterns
 
 React Query integration. React Query expects a function that returns a Promise. Claude Code generates the React Query adapter that wraps your API client methods as queryFn functions, configures default staleTime and cacheTime, and sets up the QueryClient with your wrapper's error handling.
 
@@ -352,16 +352,13 @@ Next.js server actions. For Next.js 13 and later server actions, Claude Code gen
 
 Offline-first with service workers. Claude Code generates the service worker registration code and the cache strategy configuration that intercepts fetch calls and serves cached responses when the network is unavailable, implementing a stale-while-revalidate pattern for non-critical data.
 
-
-Handling Streaming Responses
+## Handling Streaming Responses
 
 Some API endpoints return streaming responses. server-sent events, chunked JSON, or newline-delimited JSON (NDJSON). The standard fetch API's response.json() method buffers the entire response before parsing, which fails for streaming endpoints. Your wrapper needs a streaming mode that processes chunks as they arrive.
 
 Claude Code generates the streaming reader that processes chunks line-by-line for NDJSON, accumulates partial JSON objects across chunk boundaries, and emits each complete object through an async generator. The generator interface integrates naturally with React's state updates and allows early termination of long-running streams when the user navigates away.
 
 For server-sent events specifically, Claude Code generates the EventSource wrapper with automatic reconnection, last-event-id tracking, and typed event discrimination based on the event type field. This pattern is particularly useful for progress reporting on long-running API operations.
-
-
 
 Related Reading
 

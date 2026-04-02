@@ -17,7 +17,7 @@ score: 8
 
 On-call rotations are a critical part of maintaining reliable software systems, but they often come with stress, sleep interruptions, and manual toil. What if you could automate significant portions of your incident response workflow? This tutorial shows you how to use Claude Code to transform your on-call experience from reactive firefighting into a more manageable, automated process.
 
-Understanding the On-Call Challenge
+## Understanding the On-Call Challenge
 
 Traditional on-call workflows suffer from several problems:
 
@@ -29,7 +29,7 @@ Traditional on-call workflows suffer from several problems:
 
 Claude Code can help address each of these challenges through intelligent automation and natural language interaction.
 
-Setting Up Claude Code for On-Call
+## Setting Up Claude Code for On-Call
 
 Before diving into specific workflows, you need to configure Claude Code for on-call duties. Start by installing relevant skills that extend Claude's capabilities:
 
@@ -41,7 +41,7 @@ claude install github
 
 These integrations enable Claude to interact with your monitoring systems, communication platforms, and code repositories.
 
-Creating an On-Call Skill
+## Creating an On-Call Skill
 
 Create a dedicated skill for on-call operations. This skill should understand your infrastructure and provide quick access to common on-call tasks:
 
@@ -68,11 +68,11 @@ Create a dedicated skill for on-call operations. This skill should understand yo
 
 Save this as `~/.claude/skills/oncall-assistant.json` to make it available in your on-call sessions.
 
-Automating Incident Triage
+## Automating Incident Triage
 
 One of the most valuable applications of Claude Code in on-call workflows is automated triage. Instead of manually investigating every alert, you can delegate the initial investigation to Claude.
 
-Building a Triage Workflow
+## Building a Triage Workflow
 
 Create a skill that connects to your monitoring systems (Datadog, PagerDuty, Prometheus, etc.) and performs initial investigation:
 
@@ -113,7 +113,7 @@ def triage_alert(alert_id: str) -> dict:
 
 This script fetches all the context needed to make an informed decision about an alert. You can then invoke this from Claude Code to get instant triage information.
 
-Using Claude for Triage
+## Using Claude for Triage
 
 When you receive an alert, simply ask Claude:
 
@@ -127,11 +127,11 @@ Claude will run your triage workflow and provide a clear recommendation:
 - Can wait: "Elevated but not critical; handle during business hours"
 - Action required: "Real incident; you need to respond now"
 
-Creating Interactive Runbooks as Code
+## Creating Interactive Runbooks as Code
 
 Static documentation often fails when you need it most. Claude Code lets you create executable runbooks that guide you through remediation steps interactively.
 
-Structure Your Runbooks
+## Structure Your Runbooks
 
 Store runbooks in your repository with clear, executable steps:
 
@@ -171,7 +171,7 @@ Escalation
 - Severity: SEV2
 ```
 
-Running Runbooks with Claude
+## Running Runbooks with Claude
 
 Ask Claude to execute the relevant runbook:
 
@@ -181,11 +181,11 @@ Ask Claude to execute the relevant runbook:
 
 Claude will guide you through each step, running commands and explaining the output.
 
-Automating Post-Incident Tasks
+## Automating Post-Incident Tasks
 
 After resolving an incident, there's always administrative work: updating status pages, documenting the issue, creating post-mortems. Claude Code can automate much of this.
 
-Post-Incident Workflow
+## Post-Incident Workflow
 
 ```python
 post_incident.py
@@ -221,7 +221,7 @@ With this automation, you can ask Claude to handle post-incident documentation:
 @claude Can you generate a post-mortem for incident #456 and create the action items?
 ```
 
-Best Practices for On-Call with Claude Code
+## Best Practices for On-Call with Claude Code
 
 1. Start Small
 
@@ -243,7 +243,7 @@ Before going on-call with new Claude Code automations, test them during less str
 
 When Claude Code encounters situations it can't handle, make sure there's a clear escalation path. Document these edge cases so you can improve your automations over time.
 
-Measuring Success
+## Measuring Success
 
 Track these metrics to understand how Claude Code improves your on-call experience:
 
@@ -252,12 +252,11 @@ Track these metrics to understand how Claude Code improves your on-call experien
 - On-call hours recovered: Measure time saved on manual tasks
 - Alert fatigue: Self-reported reduction in stress during on-call
 
-Conclusion
+## Conclusion
 
 Claude Code transforms on-call from a painful necessity into a more manageable, automated process. By investing time in setting up triage workflows, executable runbooks, and post-incident automation, you can significantly reduce the burden on your on-call engineers.
 
 Start with one painful alert type, automate its triage, and expand from there. Your future self, and your sleep schedule, will thank you.
-
 
 Related Reading
 

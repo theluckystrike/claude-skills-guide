@@ -28,7 +28,7 @@ The OpenAI Assistants API is a hosted API product that lets you create persisten
 
 ---
 
-Architectural Comparison
+## Architectural Comparison
 
 | Dimension | Claude Skills | OpenAI Assistants API |
 |---|---|---|
@@ -44,7 +44,7 @@ Architectural Comparison
 
 ---
 
-Claude Skills: Strengths and Weaknesses
+## Claude Skills: Strengths and Weaknesses
 
 Strengths:
 
@@ -62,7 +62,7 @@ Weaknesses:
 
 ---
 
-OpenAI Assistants API: Strengths and Weaknesses
+## OpenAI Assistants API: Strengths and Weaknesses
 
 Strengths:
 
@@ -81,7 +81,7 @@ Weaknesses:
 
 ---
 
-When to Use Claude Skills
+## When to Use Claude Skills
 
 - You are building developer-facing automation that runs in a coding environment
 - You want agent definitions that live in your repository and are version-controlled
@@ -89,7 +89,7 @@ When to Use Claude Skills
 - Portability and avoiding vendor lock-in are priorities
 - Your team already uses Claude Code
 
-When to Use OpenAI Assistants API
+## When to Use OpenAI Assistants API
 
 - You are building a user-facing conversational product (chatbot, support tool, tutor)
 - You need persistent conversation threads managed automatically
@@ -98,7 +98,7 @@ When to Use OpenAI Assistants API
 
 ---
 
-The Bigger Picture
+## The Bigger Picture
 
 Claude skills and the OpenAI Assistants API are not really competing for the same job. Skills are a developer tooling pattern for coding agents and automated workflows. The Assistants API is a platform for building user-facing AI products. Some teams use both. Claude skills for internal development automation, OpenAI Assistants for customer-facing features.
 

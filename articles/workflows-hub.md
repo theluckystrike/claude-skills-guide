@@ -16,7 +16,7 @@ permalink: /workflows-hub/
 
 Skills are most powerful when they're embedded in repeatable workflows rather than used ad-hoc. This hub covers how to build, contribute, and maintain Claude skill workflows that scale.
 
-Table of Contents
+## Table of Contents
 
 1. [Building Your Skill Workflow](#building-your-skill-workflow)
 2. [Contributing Skills to the Community](#contributing-skills-to-the-community)
@@ -25,7 +25,7 @@ Table of Contents
 
 ---
 
-Building Your Skill Workflow
+## Building Your Skill Workflow
 
 A mature Claude skill workflow has three phases:
 
@@ -40,7 +40,7 @@ A mature Claude skill workflow has three phases:
 
 ---
 
-Contributing Skills to the Community
+## Contributing Skills to the Community
 
 Once you've built a skill that solves a real problem, contributing it to open source multiplies its impact. The process:
 
@@ -55,7 +55,7 @@ Full guide: [How to Contribute Claude Skills to Open Source](/how-to-contribute-
 
 ---
 
-Workflow Patterns That Work
+## Workflow Patterns That Work
 
 Based on real production use, these patterns consistently deliver high ROI:
 
@@ -82,7 +82,7 @@ For cost-conscious teams running these workflows at scale, see [Claude Skills To
 
 ---
 
-Full Guide Index: Workflows Cluster
+## Full Guide Index: Workflows Cluster
 
 | Article | What You'll Learn |
 |---------|-------------------|
@@ -114,7 +114,7 @@ Full Guide Index: Workflows Cluster
 
 ---
 
-Related Hubs
+## Related Hubs
 
 - [Getting Started with Claude Skills](/getting-started-hub/). Workflow foundations: skill format and auto-invocation
 - [Advanced Claude Skills Architecture](/advanced-hub/). Token optimization and skill chaining for production workflows

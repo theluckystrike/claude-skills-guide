@@ -17,7 +17,7 @@ tags: [chrome, claude-skills]
 
 Session storage is a crucial mechanism for maintaining temporary data in web applications and Chrome extensions. Unlike localStorage, sessionStorage clears data when the tab closes, making it ideal for sensitive temporary state. This guide explores tools and techniques for editing sessionStorage directly in Chrome, helping developers debug and manage session-based data effectively.
 
-Understanding Session Storage in Chrome Extensions
+## Understanding Session Storage in Chrome Extensions
 
 Session storage in Chrome extensions operates differently than in regular web pages. Understanding these nuances is essential for effective debugging and management.
 
@@ -31,9 +31,9 @@ sessionStorage Characteristics:
 
 In Chrome extensions, session storage works within the context of extension pages, popup windows, and content scripts. However, for persistent extension data, chrome.storage API is generally preferred due to its larger quotas and additional features.
 
-Methods for Editing Session Storage
+## Methods for Editing Session Storage
 
-Using Chrome DevTools Application Tab
+## Using Chrome DevTools Application Tab
 
 The most accessible method for editing sessionStorage involves Chrome DevTools:
 
@@ -47,11 +47,11 @@ The most accessible method for editing sessionStorage involves Chrome DevTools:
 
 This method works well for quick edits and debugging but requires manual intervention each time.
 
-Creating a Custom Session Storage Editor Extension
+## Creating a Custom Session Storage Editor Extension
 
 Building a custom extension provides more powerful session storage editing capabilities:
 
-Manifest Configuration
+## Manifest Configuration
 
 ```json
 {
@@ -164,9 +164,9 @@ function escapeHtml(text) {
 }
 ```
 
-Advanced Session Storage Editing Techniques
+## Advanced Session Storage Editing Techniques
 
-Injecting Scripts for Cross-Context Access
+## Injecting Scripts for Cross-Context Access
 
 For content scripts that need to interact with sessionStorage on the page:
 
@@ -198,7 +198,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 ```
 
-Using Chrome Debugging Protocol
+## Using Chrome Debugging Protocol
 
 For automated testing and advanced editing, Chrome DevTools Protocol provides programmatic access:
 
@@ -235,7 +235,7 @@ async function editSessionStorage() {
 }
 ```
 
-Best Practices for Session Storage Management
+## Best Practices for Session Storage Management
 
 When working with session storage in Chrome extensions, follow these best practices:
 
@@ -260,7 +260,7 @@ Debugging Workflow:
 - Export session storage state for bug reports
 - Test with both empty and populated storage states
 
-Popular Session Storage Editor Extensions
+## Popular Session Storage Editor Extensions
 
 Several Chrome extensions provide session storage editing capabilities:
 
@@ -271,7 +271,7 @@ Several Chrome extensions provide session storage editing capabilities:
 | Redux DevTools | State inspection | React/Redux apps |
 | EditThisCookie | Cookie + storage editing | Full state debugging |
 
-Conclusion
+## Conclusion
 
 Editing sessionStorage in Chrome extensions is essential for effective debugging and development. Whether using DevTools directly, building custom extensions, or using third-party tools, understanding these techniques will significantly improve your development workflow. Remember to follow security best practices and consider using chrome.storage for production extension data.
 

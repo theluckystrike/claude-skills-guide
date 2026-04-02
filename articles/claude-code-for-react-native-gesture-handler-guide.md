@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for React Native Gesture Handler Guide"
 description: "Master gesture handling in React Native with Claude Code. Learn practical patterns for implementing pan, pinch, rotation, and tap gestures with."
@@ -14,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for React Native Gesture Handler Guide
 
@@ -22,11 +20,11 @@ Implementing smooth, performant touch interactions is essential for creating pol
 
 This guide walks you through practical patterns for implementing gesture handling with Claude Code assistance.
 
-Understanding React Native Gesture Handler Basics
+## Understanding React Native Gesture Handler Basics
 
 React Native Gesture Handler replaces the built-in touch system with a more powerful alternative that interfaces directly with the native touch system. It provides gesture recognizers for common interactions like taps, pans, pinches, and rotations.
 
-Core Concepts
+## Core Concepts
 
 Before diving into implementation, understand these fundamental concepts:
 
@@ -34,7 +32,7 @@ Before diving into implementation, understand these fundamental concepts:
 - Gesture Objects: Definitions of what gestures to recognize (tap, pan, pinch, rotation, long press)
 - Gesture State: Each gesture has states like `BEGAN`, `START`, `ACTIVE`, `END`, `CANCELLED`, `FAILED`
 
-Installation
+## Installation
 
 First, ensure gesture handler is installed in your project:
 
@@ -47,11 +45,11 @@ For Expo projects:
 npx expo install react-native-gesture-handler
 ```
 
-Implementing Basic Tap and Pan Gestures
+## Implementing Basic Tap and Pan Gestures
 
 Let's start with the most common gesture types you'll use in React Native applications.
 
-Tap Gesture Implementation
+## Tap Gesture Implementation
 
 A tap gesture detects single or multiple taps on a touchable element. Here's a practical implementation:
 
@@ -90,7 +88,7 @@ function TapButton() {
 
 When working with Claude Code, describe the tap behavior you want: "Create a button component that scales down slightly when pressed, then returns to normal with a spring animation. The tap should trigger an onPress callback."
 
-Pan Gesture for Drag Interactions
+## Pan Gesture for Drag Interactions
 
 Pan gestures enable drag functionality, essential for sliders, card swipes, and drag-and-drop interfaces:
 
@@ -133,11 +131,11 @@ function DraggableCard() {
 }
 ```
 
-Combining Multiple Gestures
+## Combining Multiple Gestures
 
 Real-world applications often need multiple gesture types on the same element or simultaneous gesture recognition.
 
-Simultaneous Gesture Recognition
+## Simultaneous Gesture Recognition
 
 When you need to recognize multiple gestures at once, for example, allowing both pan and pinch zoom on an image:
 
@@ -187,7 +185,7 @@ function ZoomableImage() {
 }
 ```
 
-Exclusive Gestures for Competing Interactions
+## Exclusive Gestures for Competing Interactions
 
 Use `Gesture.Exclusive` when gestures should not trigger simultaneously, like a pull-to-refresh that shouldn't interfere with scrolling:
 
@@ -224,23 +222,23 @@ function ScrollViewWithPullToRefresh() {
 }
 ```
 
-Best Practices for Gesture Implementation
+## Best Practices for Gesture Implementation
 
 Follow these guidelines for smooth, performant gesture handling in your React Native applications.
 
-Performance Optimization
+## Performance Optimization
 
 - Use `worklet` functions: Ensure gesture callbacks run on the UI thread by marking them with `'worklet'` directive
 - Limit re-renders: Use shared values and animated styles instead of React state during gesture updates
 - Batch native updates: Group related updates together to minimize native bridge calls
 
-Accessibility Considerations
+## Accessibility Considerations
 
 - Ensure gesture-based interactions have accessible alternatives
 - Provide haptic feedback for important gesture completions
 - Consider adding visible indicators for gesture-driven state changes
 
-Testing Gesture Behavior
+## Testing Gesture Behavior
 
 Claude Code can help you write tests for gesture interactions:
 
@@ -266,7 +264,7 @@ test('draggable card responds to pan gesture', () => {
 });
 ```
 
-Common Gesture Handler Patterns
+## Common Gesture Handler Patterns
 
 Claude Code excels at generating these common patterns for your projects:
 
@@ -278,7 +276,7 @@ Claude Code excels at generating these common patterns for your projects:
 
 When requesting these from Claude Code, be specific about the gesture types, animation preferences, and edge cases you need to handle.
 
-Debugging Gesture Issues
+## Debugging Gesture Issues
 
 Common problems and solutions when working with React Native Gesture Handler:
 
@@ -287,7 +285,7 @@ Common problems and solutions when working with React Native Gesture Handler:
 - Memory leaks: Clean up gesture listeners in component unmount
 - Janky animations: Move calculations to worklets and use shared values instead of state
 
-Conclusion
+## Conclusion
 
 React Native Gesture Handler combined with Reanimated provides a powerful foundation for building sophisticated touch interactions. When you use Claude Code to generate and debug these patterns, you can rapidly implement gesture-based features while maintaining clean, performant code.
 

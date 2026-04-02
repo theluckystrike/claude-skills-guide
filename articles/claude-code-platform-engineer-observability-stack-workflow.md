@@ -13,10 +13,7 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code Platform Engineer Observability Stack Workflow
 
 Building a solid observability stack is essential for any platform engineering team. we'll explore how Claude Code skills can automate the creation, configuration, and management of observability infrastructure, covering metrics collection, distributed tracing, log aggregation, and alerting systems.
 
@@ -30,7 +27,7 @@ The key advantages include:
 - Best Practices: Built-in knowledge of observability patterns
 - Automation: Integrate monitoring into your CI/CD pipelines
 
-Setting Up Your Observability Skills
+## Setting Up Your Observability Skills
 
 First, ensure you have the essential observability-related skills installed. Claude Code's skill ecosystem includes several that are particularly useful for platform engineers:
 
@@ -44,11 +41,11 @@ Place the logging skill in ~/.claude/skills/logging.md
 
 These skills understand the configuration formats, best practices, and deployment patterns for each tool.
 
-Building a Complete Observability Stack
+## Building a Complete Observability Stack
 
 Let's walk through creating a comprehensive observability stack for a microservices application using Claude Code.
 
-Step 1: Define Your Monitoring Requirements
+## Step 1: Define Your Monitoring Requirements
 
 Start by creating a monitoring specification:
 
@@ -63,7 +60,7 @@ Create a monitoring spec for my microservices app called 'payment-service' that:
 
 Claude Code will generate a comprehensive `monitoring.yaml` specification that defines all your metrics, alerts, and dashboard requirements.
 
-Step 2: Generate Prometheus Configuration
+## Step 2: Generate Prometheus Configuration
 
 Prometheus is the foundation of most observability stacks. Claude Code can generate optimized scrape configs:
 
@@ -94,7 +91,7 @@ scrape_configs:
 
 The generated config includes best practices like service discovery, relabeling rules, and proper metric path handling.
 
-Step 3: Create Grafana Dashboards
+## Step 3: Create Grafana Dashboards
 
 Visualization is crucial for understanding system behavior. Claude Code can generate comprehensive Grafana dashboards:
 
@@ -110,7 +107,7 @@ Create a Grafana dashboard for payment-service that shows:
 
 This generates a complete Grafana JSON dashboard with appropriate panels, queries using PromQL, and alert thresholds.
 
-Step 4: Configure Distributed Tracing
+## Step 4: Configure Distributed Tracing
 
 For microservices, distributed tracing is essential. Here's how Claude Code helps configure Jaeger:
 
@@ -150,7 +147,7 @@ data:
 
 This configuration includes sampling strategies that balance observability with cost management.
 
-Step 5: Set Up Alerting Rules
+## Step 5: Set Up Alerting Rules
 
 Alert fatigue is a real problem. Claude Code helps create well-thought-out alerting rules:
 
@@ -193,7 +190,7 @@ groups:
 
 These alerts follow best practices: appropriate thresholds, proper for durations, and meaningful annotations.
 
-Integrating with CI/CD
+## Integrating with CI/CD
 
 Claude Code excels at creating automated workflows. Here's how to integrate observability into your deployment pipeline:
 
@@ -235,7 +232,7 @@ jobs:
           ./scripts/check-alert-coverage.sh
 ```
 
-Log Aggregation with ELK Stack
+## Log Aggregation with ELK Stack
 
 Modern applications require structured logging. Claude Code can set up a complete ELK Stack configuration:
 
@@ -279,7 +276,7 @@ filter {
 }
 ```
 
-Automated On-Call Documentation
+## Automated On-Call Documentation
 
 Claude Code can generate on-call runbooks automatically:
 
@@ -293,7 +290,7 @@ Generate on-call runbook for payment-service that includes:
 
 This creates comprehensive documentation that helps on-call engineers respond quickly to incidents.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms observability from a manual, time-consuming task into an automated, consistent process. By using specialized skills, platform engineers can:
 

@@ -14,12 +14,6 @@ score: 7
 ---
 {% raw %}
 
-
-
-
-
-Best Way to Use Claude Code with Existing CI/CD Pipelines
-
 Integrating Claude Code into your existing CI/CD pipelines can dramatically improve your development workflow. Instead of treating AI as a separate tool that runs only on your local machine, you can embed it directly into automated processes that run every commit, every pull request, or on a scheduled basis.
 
 This guide shows you practical approaches to running Claude Code within CI/CD environments, with concrete examples for GitHub Actions, GitLab CI, and Jenkins.
@@ -36,7 +30,7 @@ Running Claude Code in your CI/CD pipeline enables several powerful automation s
 
 The key advantage is consistency. Every piece of code gets the same level of scrutiny, regardless of when it was submitted or who submitted it.
 
-Setting Up Claude Code for CI/CD
+## Setting Up Claude Code for CI/CD
 
 Before integrating Claude Code into your pipeline, ensure your environment can handle the authentication and network requirements:
 
@@ -50,7 +44,7 @@ claude --version
 
 You'll need an Anthropic API key stored as a secure environment variable in your CI/CD system. For GitHub Actions, this means adding `ANTHROPIC_API_KEY` as a repository secret.
 
-GitHub Actions Integration
+## GitHub Actions Integration
 
 The most common approach for GitHub Actions uses a composite action or a reusable workflow:
 
@@ -95,7 +89,7 @@ For more complex analyses, create a Claude Code project within your repository:
 
 This configuration restricts Claude Code to read-only operations during CI runs, preventing accidental modifications to your repository.
 
-GitLab CI Implementation
+## GitLab CI Implementation
 
 GitLab CI uses a similar approach with a custom image or service:
 
@@ -135,7 +129,7 @@ generate-tests:
     - merge_requests
 ```
 
-Jenkins Pipeline Example
+## Jenkins Pipeline Example
 
 Jenkins users can integrate Claude Code using the sh step:
 
@@ -169,7 +163,7 @@ pipeline {
 }
 ```
 
-Practical Patterns for CI/CD Integration
+## Practical Patterns for CI/CD Integration
 
 1. Use Project-Specific Instructions
 
@@ -224,7 +218,7 @@ Use the tdd skill to generate unit tests for the new files added in this changes
 EOF
 ```
 
-Handling API Rate Limits
+## Handling API Rate Limits
 
 CI/CD pipelines can quickly hit rate limits if you're not careful. Implement exponential backoff:
 
@@ -242,7 +236,7 @@ CI/CD pipelines can quickly hit rate limits if you're not careful. Implement exp
 
 Alternatively, cache responses for identical code segments to reduce API calls.
 
-Security Considerations
+## Security Considerations
 
 When running Claude Code in CI/CD:
 
@@ -251,7 +245,7 @@ When running Claude Code in CI/CD:
 - Restrict tool permissions to read-only operations when possible
 - Review Claude's outputs before automatically merging suggestions
 
-Measuring Impact
+## Measuring Impact
 
 Track the effectiveness of Claude Code integration by monitoring:
 
@@ -259,7 +253,7 @@ Track the effectiveness of Claude Code integration by monitoring:
 - Number of issues caught before production
 - Consistency of code quality across contributors
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into existing CI/CD pipelines transforms it from a developer assistant into a permanent team member. Start with simple analysis tasks, then expand to test generation and documentation as your team builds confidence in the outputs.
 

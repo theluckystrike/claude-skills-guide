@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Migrating VBA Excel Macros to Python with Claude Code
 
@@ -41,7 +40,7 @@ Beyond the table, there are practical reasons to move now:
 - Security posture: VBA macros are a persistent attack vector. Many corporate IT departments block macro execution entirely, which may already be affecting your workflows.
 - Reproducibility: Python scripts run the same way on any machine. VBA macros depend on the local Excel installation, add-ins, and Windows configuration.
 
-VBA to Python: A Library Comparison
+## VBA to Python: A Library Comparison
 
 Before you start migrating, understand which Python library handles which Excel task:
 
@@ -58,11 +57,11 @@ Before you start migrating, understand which Python library handles which Excel 
 
 When you need live control of an open Excel window (the way VBA worked natively), `xlwings` is the right choice. When you need file-based batch processing, `pandas` + `openpyxl` is faster and doesn't require Excel to be installed.
 
-Claude Code: Your Migration Assistant
+## Claude Code: Your Migration Assistant
 
 Claude Code excels at understanding code in multiple languages and can help translate VBA logic to Python. Here's how to use its capabilities effectively.
 
-Starting the Migration Conversation
+## Starting the Migration Conversation
 
 Begin by explaining your VBA code to Claude Code. The AI understands programming concepts, so you don't need to over-explain, focus on what the macro accomplishes:
 
@@ -114,7 +113,7 @@ def migrate_sales_report():
 
 If you paste the actual VBA source code instead of describing it, Claude Code will produce an even more accurate translation. It can handle complex logic, nested loops, and legacy patterns that are difficult to describe in plain language.
 
-Handling Common VBA Patterns
+## Handling Common VBA Patterns
 
 VBA often uses patterns that require different approaches in Python. Claude Code is excellent at handling these translations:
 
@@ -250,7 +249,7 @@ app.quit()
 
 Running with `visible=False` skips all screen rendering, making batch operations significantly faster.
 
-Interactive Migration Support
+## Interactive Migration Support
 
 Claude Code excels at handling complex, multi-file migrations. You can paste sections of your VBA code and ask for specific translations:
 
@@ -261,7 +260,7 @@ Claude Code excels at handling complex, multi-file migrations. You can paste sec
 
 The AI understands context, so you can have ongoing conversations about your specific migration challenges. You can also ask Claude Code to explain *why* the Python version works differently, which helps your team build a mental model rather than just copy-pasting output.
 
-Migrating Complex VBA: A Real-World Pattern
+## Migrating Complex VBA: A Real-World Pattern
 
 Many production VBA macros combine data fetching, transformation, and formatted output. Here is a more complete migration example showing how a monthly report macro looks in both languages:
 
@@ -324,7 +323,7 @@ generate_monthly_report()
 
 Claude Code will handle this kind of translation end to end when you paste your VBA source directly into the conversation.
 
-Best Practices for Migration
+## Best Practices for Migration
 
 1. Migrate incrementally: Don't try to convert everything at once. Start with a single macro, test thoroughly, then move to the next.
 
@@ -397,7 +396,7 @@ logging.info("Starting monthly report generation")
 logging.info("Report complete. Total rows processed: 1432")
 ```
 
-Choosing the Right Approach: openpyxl vs pandas vs xlwings
+## Choosing the Right Approach: openpyxl vs pandas vs xlwings
 
 A common source of confusion is knowing which library to use. Here is a practical decision guide:
 
@@ -421,7 +420,7 @@ Use xlwings when:
 
 For most migrations, you will combine pandas for data work and openpyxl for output formatting.
 
-Conclusion
+## Conclusion
 
 Migrating VBA Excel macros to Python doesn't have to be a painful process. With Claude Code as your development partner, you have an intelligent assistant that understands both languages and can guide you through the translation, explain concepts, and help debug issues along the way.
 
@@ -431,7 +430,6 @@ Start small, test often, and use Claude Code's ability to understand your specif
 
 *Ready to start your migration? Copy one of your VBA macros and ask Claude Code to help you convert it to Python today!*
 {% endraw %}
-
 
 Related Reading
 

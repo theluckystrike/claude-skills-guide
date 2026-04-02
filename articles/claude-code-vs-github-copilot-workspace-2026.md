@@ -26,7 +26,7 @@ MCP server ecosystem. [Claude Code can connect to any MCP server](/building-your
 
 ---
 
-Where GitHub Copilot Workspace Excels
+## Where GitHub Copilot Workspace Excels
 
 GitHub-native workflow. The issue-to-code flow in Copilot Workspace is genuinely smooth. You are looking at a bug report, you open Workspace, it proposes a plan, you edit the plan, it generates code. This end-to-end flow within GitHub reduces context-switching.
 
@@ -40,7 +40,7 @@ PR integration. Creating a PR from a Workspace session is one click. The PR titl
 
 ---
 
-Weaknesses
+## Weaknesses
 
 Claude Code does not have a native GitHub issue-to-code workflow. You need to set up the GitHub MCP server and potentially write a skill to replicate this flow. It also requires a local development environment and API key management, which adds setup overhead for teams used to pure GitHub workflows.
 
@@ -48,7 +48,7 @@ GitHub Copilot Workspace is constrained to GitHub's platform. It cannot run your
 
 ---
 
-Pricing Comparison
+## Pricing Comparison
 
 Claude Code costs based on Anthropic API token usage. A typical complex session might use $0.10–$2.00 in tokens depending on the task and model. There is no subscription floor.
 
@@ -58,7 +58,7 @@ For teams already on Copilot, the marginal cost of Workspace is zero. For teams 
 
 ---
 
-When to Use Claude Code
+## When to Use Claude Code
 
 - Your most important development tasks require access to your local environment
 - You want to build reusable skills and shared agent workflows
@@ -66,7 +66,7 @@ When to Use Claude Code
 - You need [model quality control and cost optimization](/claude-opus-orchestrator-sonnet-worker-architecture/) across task types
 - You work on large codebases with complex multi-service dependencies
 
-When to Use GitHub Copilot Workspace
+## When to Use GitHub Copilot Workspace
 
 - Your team lives in GitHub and wants zero-setup AI assistance
 - Your primary use case is resolving individual GitHub issues with straightforward fixes
@@ -75,7 +75,7 @@ When to Use GitHub Copilot Workspace
 
 ---
 
-Verdict
+## Verdict
 
 For professional developers with complex, real-world codebases, Claude Code with skills and MCP servers is the more powerful long-term tool. The ability to build reusable workflows, access the full local environment, and compose agent behaviors across tools is a significant advantage.
 

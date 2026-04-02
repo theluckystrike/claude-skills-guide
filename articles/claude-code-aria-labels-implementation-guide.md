@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code ARIA Labels Implementation Guide
-
 Accessibility in web development requires more than semantic HTML. ARIA (Accessible Rich Internet Applications) labels bridge the gap between complex UI components and assistive technologies. This guide shows you how to implement ARIA labels effectively using Claude Code and complementary skills. with enough depth to handle real production scenarios where the naive approach breaks down.
 
-Understanding ARIA Labels
+## Understanding ARIA Labels
 
 ARIA labels provide accessible names for interactive elements that lack visible text. They help screen readers convey meaning to users who cannot see visual labels. Understanding the distinction between the three primary labeling attributes is essential before writing a single line:
 
@@ -38,7 +35,7 @@ The key rule: `aria-label` and `aria-labelledby` both set the *accessible name* 
 
 The `role="alert"` on the last element implicitly sets `aria-live="assertive"`, so specifying `polite` overrides that default. This is the kind of subtle conflict that Claude Code can help you catch during code review.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before implementing ARIA labels at scale, configure Claude Code with skills that support accessible development. The frontend-design skill provides templates and patterns for accessible components. Install it first:
 
@@ -62,9 +59,9 @@ A practical workflow using Claude Code looks like this:
 4. Invoke `/tdd` to scaffold unit tests that assert on ARIA attribute presence
 5. Run the tests in CI to prevent regressions
 
-Implementing ARIA Labels in Practice
+## Implementing ARIA Labels in Practice
 
-Form Elements
+## Form Elements
 
 Forms often contain inputs without visible labels. Always pair each input with an accessible name. The most common mistake is relying on `placeholder` as the only label. screen readers do not consistently read placeholder text as a label, and it disappears once the user starts typing.
 
@@ -103,7 +100,7 @@ Setting `aria-invalid="true"` signals to screen readers that this field has a pr
 
 The pdf skill can generate accessibility reports from your HTML, helping you verify form labels are correctly implemented across your application.
 
-Icon Buttons
+## Icon Buttons
 
 Buttons that use only icons confuse screen reader users. This pattern shows up constantly in dashboards, toolbars, and media players. Add `aria-label` to icon buttons and remember to hide the SVG from the accessibility tree:
 
@@ -139,7 +136,7 @@ A common real-world scenario: toolbar buttons with tooltips. You might be tempte
 
 Both the SVG and the tooltip span carry `aria-hidden="true"`. The button's `aria-label` is the single source of truth for assistive technology.
 
-Modal Dialogs
+## Modal Dialogs
 
 Modals require careful ARIA implementation. Setting roles and labels is the easy part. managing focus is where most implementations fall short. When a modal opens, focus must move into the modal. When it closes, focus must return to the trigger that opened it.
 
@@ -203,7 +200,7 @@ function trapFocus(event) {
 
 The supermemory skill can help you recall patterns for modal accessibility you've used in previous projects, maintaining consistency across your codebase.
 
-Testing ARIA Implementation
+## Testing ARIA Implementation
 
 Automated testing catches many ARIA issues early. Use the tdd skill to write tests that assert structural requirements. not just that elements exist, but that they are correctly associated:
 
@@ -246,7 +243,7 @@ The third test is particularly valuable. it catches inputs that rely on `<label 
 
 Run these tests as part of your CI pipeline to catch regressions. The canvas-design skill can help create visual accessibility documentation for your team.
 
-Common Mistakes to Avoid
+## Common Mistakes to Avoid
 
 Several patterns undermine accessibility efforts:
 
@@ -280,7 +277,7 @@ Several patterns undermine accessibility efforts:
 
 The ARIA authoring practices document from W3C (WAI-ARIA Authoring Practices 1.2) is the definitive reference for which roles require which keyboard interaction patterns. Bookmark it, and prompt Claude Code to reference it when generating complex widget implementations.
 
-Generating Accessibility Documentation
+## Generating Accessibility Documentation
 
 After implementing ARIA labels, document your components for other developers. The pdf skill generates formatted documentation:
 
@@ -303,9 +300,9 @@ Required ARIA Attributes:
 Screen Reader Announcement: "[label] combobox, [selected value], collapsed/expanded"
 ```
 
-Advanced Patterns
+## Advanced Patterns
 
-Dynamic Content
+## Dynamic Content
 
 For content that updates dynamically, use aria-live regions. The choice between `polite` and `assertive` has real UX consequences:
 
@@ -332,7 +329,7 @@ function setLoadingState(isLoading) {
 }
 ```
 
-Compound Components
+## Compound Components
 
 When building compound components like tabs or accordions, coordinate ARIA attributes across elements. The relationship between trigger and panel must be bidirectional:
 
@@ -386,7 +383,7 @@ For accordions, the pattern is similar but uses `aria-expanded` instead of `aria
 </div>
 ```
 
-Conclusion
+## Conclusion
 
 Implementing ARIA labels correctly requires understanding both the attributes available and the assistive technology patterns they support. Start with semantic HTML, add ARIA labels where visual text is absent, and test with both automated tools and manual screen reader testing. The automated tests in this guide catch structural issues; manual testing with VoiceOver, NVDA, or Narrator catches announcement quality and interaction flow issues that no linter can detect.
 

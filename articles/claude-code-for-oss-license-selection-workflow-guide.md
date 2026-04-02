@@ -13,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for OSS License Selection Workflow Guide
-
 Choosing the right open source license is one of the most important decisions you'll make when starting a new project. The license you select determines how others can use, modify, and distribute your code, and can have significant implications for your project's community, commercial use cases, and long-term success. This guide walks you through a practical workflow for license selection using Claude Code, making what can be an overwhelming decision process clear and methodical.
 
-Why License Selection Matters
+## Why License Selection Matters
 
 Before diving into the workflow, it's worth understanding why license choice deserves careful consideration. An open source license is a legal contract between you (the copyright holder) and anyone who uses your code. The wrong license can:
 
@@ -29,9 +26,9 @@ Before diving into the workflow, it's worth understanding why license choice des
 
 Claude Code can help you navigate these considerations by asking the right questions, explaining license implications, and helping you weigh trade-offs based on your specific goals.
 
-The License Selection Workflow
+## The License Selection Workflow
 
-Step 1: Define Your Goals
+## Step 1: Define Your Goals
 
 The first step in license selection is clarifying what you want to achieve with your open source project. Start a conversation with Claude Code by describing your project and your intentions.
 
@@ -42,7 +39,7 @@ I'm starting a new JavaScript library for data visualization. I want it to be wi
 
 Claude Code will respond by asking clarifying questions about your priorities. Be honest about your goals, whether you prioritize maximum adoption, commercial use, copyleft requirements, or simplicity.
 
-Step 2: Understand License Categories
+## Step 2: Understand License Categories
 
 Once Claude Code understands your goals, it will help you understand the major license categories. Here's a quick overview you can discuss with Claude:
 
@@ -64,7 +61,7 @@ Proprietary-Friendly Licenses
 - Good for tools used in commercial development
 - Apache 2.0, BSD 3-Clause
 
-Step 3: Analyze Specific Considerations
+## Step 3: Analyze Specific Considerations
 
 Claude Code can help you think through specific scenarios that might affect your license choice. Here are key questions to discuss:
 
@@ -88,7 +85,7 @@ Contribution Expectations
 - How will you handle copyright assignment?
 - Should contributions be under the same license?
 
-Step 4: Evaluate Specific Licenses
+## Step 4: Evaluate Specific Licenses
 
 Based on your responses, Claude Code can narrow down recommendations. Here's a practical comparison you can work through together:
 
@@ -106,7 +103,7 @@ Common License Comparison
 * Stronger copyleft for network use
 ```
 
-Step 5: Research Real-World Examples
+## Step 5: Research Real-World Examples
 
 One of Claude Code's strengths is helping you find comparable projects. Ask about projects using similar licenses in your ecosystem:
 
@@ -117,11 +114,11 @@ What popular JavaScript libraries use the MIT license versus Apache 2.0? What ab
 
 This helps you understand how your choice will be perceived in your development community and what compatibility expectations exist.
 
-Step 6: Document Your Decision
+## Step 6: Document Your Decision
 
 Once you've selected a license, document your reasoning. Claude Code can help you create a LICENSE file with appropriate headers and maintain a decision log in your repository.
 
-Practical Code Snippets
+## Practical Code Snippets
 
 When you're ready to add your license, Claude Code can generate the appropriate files. Here are common patterns:
 
@@ -154,29 +151,29 @@ You can also ask Claude Code to add proper license headers to your source files:
 Please add the appropriate license header to all JavaScript files in this project, using the MIT license.
 ```
 
-Actionable Advice
+## Actionable Advice
 
-Start Simple
+## Start Simple
 
 If you're unsure, MIT license is the safest starting point. It's simple to understand, widely accepted, and allows maximum adoption. You can always migrate to a different license later (though this can be complex).
 
-Match Your Ecosystem
+## Match Your Ecosystem
 
 Look at what licenses similar projects in your language or domain use. Following conventions reduces friction for potential users and contributors.
 
-Consider Dual Licensing
+## Consider Dual Licensing
 
 For commercial projects, consider dual licensing (offering both open source and commercial licenses). This allows open source use while preserving revenue opportunities.
 
-Include License in Every File
+## Include License in Every File
 
 Add license headers to every source file in your project. This ensures copyright is maintained even if files are copied individually.
 
-Update Annually
+## Update Annually
 
 Review your license decision annually or when significant project changes occur. Your goals and the ecosystem may evolve.
 
-Conclusion
+## Conclusion
 
 Selecting an open source license doesn't have to be overwhelming. By following this workflow with Claude Code, defining your goals, understanding license categories, analyzing specific considerations, evaluating options, researching examples, and documenting your decision, you can make an informed choice that serves your project's long-term interests.
 

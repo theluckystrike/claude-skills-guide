@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for UMA Oracle Workflow Tutorial
 
 The UMA protocol provides decentralized oracle services and optimistic verification systems for building trustless financial contracts. Integrating Claude Code into your UMA oracle workflow can dramatically accelerate development, reduce errors, and help you navigate the complexities of optimistic oracle integration. This tutorial walks through practical patterns for using Claude Code effectively with UMA oracle workflows.
 
-Understanding the UMA Oracle Architecture
+## Understanding the UMA Oracle Architecture
 
 Before diving into Claude Code integration, it's essential to understand how UMA's optimistic oracle works. The system operates on a "dispute resolution" model where data can be proposed and challenged within a time window. This design allows for a wide range of applications, from insurance products to prediction markets, without requiring constant oracle availability.
 
@@ -31,7 +30,7 @@ UMA's oracle system consists of three key components:
 
 When building with UMA, you'll frequently interact with these components to propose prices, dispute incorrect values, and resolve queries. Claude Code can assist at every stage of this workflow.
 
-Setting Up Claude Code for UMA Development
+## Setting Up Claude Code for UMA Development
 
 Start by creating a skill tailored to UMA development. While there's no dedicated UMA skill in the default collection, you can create a custom skill that understands the protocol's nuances.
 
@@ -51,7 +50,7 @@ description: Assists with UMA oracle smart contract development and integration
 
 This configuration ensures Claude Code can read your contracts, modify files, and execute necessary commands while working with your oracle integration.
 
-Working with Price Requests
+## Working with Price Requests
 
 The core of UMA oracle integration involves handling price requests. Here's a practical workflow for processing these requests using Claude Code assistance:
 
@@ -83,7 +82,7 @@ When writing price request logic, ask Claude Code to:
 - Check that timestamps follow the AMM unique resolution window requirements
 - Verify ancillary data follows UMA's specification format
 
-Dispute Resolution Workflows
+## Dispute Resolution Workflows
 
 One of the most critical aspects of working with UMA oracles is handling disputes. When someone challenges your proposed price, you need to respond quickly and accurately. Claude Code can help generate the necessary dispute arguments and documentation.
 
@@ -112,7 +111,7 @@ For dispute workflows, use Claude Code to:
 - Generate documentation explaining your pricing methodology
 - Draft dispute arguments based on the specific market conditions
 
-Integrating with Existing DeFi Protocols
+## Integrating with Existing DeFi Protocols
 
 Many developers use UMA oracles to integrate with existing DeFi protocols. Here's how to structure these integrations:
 
@@ -141,7 +140,7 @@ function TokenPriceDisplay({ identifier, collateralToken }) {
 
 Claude Code excels at generating these integration patterns. Simply describe your requirements and ask for a scaffold implementation.
 
-Testing Your Oracle Integration
+## Testing Your Oracle Integration
 
 Solid testing is crucial for oracle integrations since incorrect price data can lead to significant financial losses. Claude Code can help structure comprehensive test suites:
 
@@ -175,7 +174,7 @@ When testing, ensure Claude Code helps you verify:
 - Dispute callbacks trigger appropriately
 - Stale price detection works correctly
 
-Best Practices for Production Deployments
+## Best Practices for Production Deployments
 
 When moving your UMA oracle integration to production, follow these actionable guidelines:
 
@@ -190,7 +189,7 @@ Document your pricing methodology thoroughly. When disputes arise, clear documen
 
 Test on testnet first using UMA's Goerli or Sepolia deployments before any mainnet interaction. This allows you to verify your entire workflow without financial risk.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms UMA oracle development from a complex, error-prone process into a streamlined workflow. By using Claude Code's ability to generate code, explain specifications, and assist with debugging, you can build solid oracle integrations faster while maintaining high code quality.
 

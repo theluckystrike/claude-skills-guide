@@ -13,9 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Trello Automation Workflow Guide
-
 Trello is a powerful project management tool, but managing boards, lists, and cards manually can become time-consuming as projects scale. By combining Claude Code CLI with Trello's REST API, you can automate repetitive tasks, create custom workflows, and integrate Trello smoothly into your development pipeline. Claude Code acts as an intelligent orchestration layer. it can understand your intent, write and run API calls, handle errors, and even suggest improvements to your board structure.
 
 This guide walks you through setting up Claude Code for Trello automation, from basic credential configuration to real-time webhook-driven pipelines, with practical examples you can adapt and deploy today.
@@ -33,11 +30,11 @@ Before diving into setup, it's worth understanding why Claude Code is a particul
 
 Claude Code lets you describe what you want in plain language ("move all cards older than 14 days to the Backlog list") and it will generate, test, and run the API calls to make it happen. You can iterate on the logic conversationally, which is significantly faster than editing and re-running scripts manually.
 
-Setting Up Your Trello API Integration
+## Setting Up Your Trello API Integration
 
 Before automating Trello with Claude Code, you'll need to generate an API key and token from the [Trello Developer Portal](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/).
 
-Step 1: Obtain Your API Credentials
+## Step 1: Obtain Your API Credentials
 
 1. Visit https://trello.com/app-key and log in to your Trello account
 2. Copy your API key
@@ -45,7 +42,7 @@ Step 1: Obtain Your API Credentials
 
 The token grants access to your boards, so treat it like a password. The token authorization page will show you the permission scope. for automation scripts that need to create, move, and archive cards, you'll want read and write access.
 
-Step 2: Configure Environment Variables
+## Step 2: Configure Environment Variables
 
 Store your credentials securely using environment variables:
 
@@ -81,11 +78,11 @@ API_KEY = os.environ["TRELLO_API_KEY"]
 TOKEN = os.environ["TRELLO_TOKEN"]
 ```
 
-Basic Board Operations with Claude Code
+## Basic Board Operations with Claude Code
 
 Claude Code can interact with Trello using curl commands or a Python script. Here's a practical example of creating a board management script that covers the most common operations.
 
-Creating a Trello Management Script
+## Creating a Trello Management Script
 
 ```python
 #!/usr/bin/env python3
@@ -172,7 +169,7 @@ if __name__ == "__main__":
         print(f"  - {board['name']} (ID: {board['id']})")
 ```
 
-Using the Script with Claude Code
+## Using the Script with Claude Code
 
 Once saved as `trello_manager.py`, you can call it from Claude Code directly or ask Claude to invoke it for you:
 
@@ -182,7 +179,7 @@ python3 trello_manager.py
 
 This outputs all your boards, making it easy to copy board IDs for further automation. You can also ask Claude Code things like "list all cards in the In Progress list on my Dev board" and it will use this script to fetch and display that data.
 
-Discovering Board and List IDs
+## Discovering Board and List IDs
 
 The most common first stumbling block is finding the right IDs. Add this helper to your script for quick discovery:
 
@@ -202,11 +199,11 @@ def print_board_structure(board_id: str) -> None:
 
 Run this once per board to capture all the IDs you'll reference in your automation scripts.
 
-Automating Recurring Workflows
+## Automating Recurring Workflows
 
 One of the most powerful use cases is automating recurring tasks. Here are practical automation patterns that cover the most common scenarios teams encounter.
 
-Daily Standup Card Creator
+## Daily Standup Card Creator
 
 Automatically create daily standup cards at the start of each workday:
 
@@ -242,7 +239,7 @@ Add this line to run at 9:00 AM Monday-Friday
 0 9 * * 1-5 /path/to/daily-standup.sh >> /var/log/trello-standup.log 2>&1
 ```
 
-Card Archival Automation
+## Card Archival Automation
 
 Keep your boards clean by automatically archiving completed cards older than a threshold:
 
@@ -272,14 +269,13 @@ def archive_stale_completed_cards(done_list_id: str, days_threshold: int = 7) ->
     print(f"\nArchived {archived_count} of {len(cards)} cards in Done list.")
     return archived_count
 
-
 if __name__ == "__main__":
     # Archive cards in Done that haven't moved in 7+ days
     DONE_LIST_ID = "your_done_list_id"
     archive_stale_completed_cards(DONE_LIST_ID, days_threshold=7)
 ```
 
-Bulk Card Labeler
+## Bulk Card Labeler
 
 When starting a new sprint, quickly label all existing cards by type based on their title keywords:
 
@@ -307,7 +303,7 @@ def auto_label_cards(list_id: str) -> None:
                 break
 ```
 
-Sprint Rollover Script
+## Sprint Rollover Script
 
 At sprint end, move all unfinished In Progress cards back to Backlog:
 
@@ -327,7 +323,7 @@ def rollover_sprint(in_progress_list_id: str, backlog_list_id: str) -> None:
     print("Sprint rollover complete.")
 ```
 
-Integrating with Claude Skills
+## Integrating with Claude Skills
 
 You can create a custom Claude Skill for Trello management. This enables natural language interactions with your boards directly inside a Claude Code session, without having to remember command-line syntax or card IDs.
 
@@ -356,11 +352,11 @@ Common actions:
 
 Once installed, you can ask Claude Code things like "move the authentication bug card to In Review" and it will look up the board structure, find the right card and list, and execute the move. no manual ID lookup required.
 
-Advanced: Webhook-Based Automation
+## Advanced: Webhook-Based Automation
 
 For real-time automation, set up Trello webhooks that trigger Claude Code actions whenever something changes on your board. This is particularly useful for integrating Trello with CI/CD pipelines, Slack notifications, or other services.
 
-Registering a Webhook
+## Registering a Webhook
 
 First, register your webhook endpoint with the Trello API:
 
@@ -386,7 +382,7 @@ webhook = register_webhook(
 print(f"Webhook registered: {webhook['id']}")
 ```
 
-Building the Webhook Handler
+## Building the Webhook Handler
 
 ```python
 from flask import Flask, request, jsonify
@@ -430,14 +426,12 @@ def trello_webhook():
 
     return jsonify({"status": "ok"})
 
-
 def notify_slack(card_name: str) -> None:
     """Send a Slack notification when a card is completed."""
     import requests as req
     webhook_url = os.environ.get("SLACK_WEBHOOK_URL", "")
     if webhook_url:
         req.post(webhook_url, json={"text": f"Trello card completed: *{card_name}*"})
-
 
 if __name__ == "__main__":
     app.run(port=5000, debug=False)
@@ -454,7 +448,7 @@ ngrok http 5000
 Copy the https://xxxxx.ngrok.io URL and use it as your callback_url
 ```
 
-Handling Rate Limits in Webhooks
+## Handling Rate Limits in Webhooks
 
 When webhook events arrive in bursts (e.g., bulk card moves during a sprint transition), you'll hit Trello's rate limit of 100 requests per 10-second window. Add a simple queue to smooth out the request rate:
 
@@ -487,7 +481,7 @@ def enqueue(func, *args, kwargs):
 
 Use `enqueue(move_card, card_id, list_id)` instead of calling `move_card` directly when processing bulk operations from webhooks.
 
-Best Practices and Security Tips
+## Best Practices and Security Tips
 
 When automating Trello with Claude Code, keep these recommendations in mind to avoid common pitfalls.
 
@@ -526,7 +520,7 @@ Rate Limiting
 - Cache board and list metadata locally for scripts that run on a schedule. Board structures rarely change, so there's no reason to fetch list IDs from the API on every run.
 - For webhook handlers that might receive bursts of events, use the queue pattern shown above rather than making synchronous API calls per event.
 
-Putting It All Together: A Complete Workflow
+## Putting It All Together: A Complete Workflow
 
 Here is how you might combine everything into a weekly board maintenance workflow that runs automatically:
 
@@ -568,20 +562,19 @@ Schedule it with cron:
 
 This runs every Friday at 6 PM, archives old done cards, rolls over unfinished work, and labels the backlog. with no manual effort.
 
-Conclusion
+## Conclusion
 
 Claude Code combined with Trello's API opens up a wide range of automation possibilities. The approach scales from a simple board-listing script all the way to real-time webhook-driven pipelines that integrate with Slack, CI systems, and deployment tools. Start with the basic `trello_manager.py` wrapper, then progressively add the patterns that match your team's workflow problems.
 
 The key to maintaining these automations long-term is treating your Trello scripts like production code: version-control them, add error handling, log failures, and rotate credentials on a schedule. With proper setup and security measures, you'll have a reliable automation layer that keeps your boards organized without manual effort.
 
-Automating Card Lifecycle Management
+## Automating Card Lifecycle Management
 
 Beyond creating and moving cards, a complete Trello automation handles the entire card lifecycle: creation from templates, assignment, due date management, checklist completion tracking, and archiving when work is done. Claude Code generates the full lifecycle manager that responds to card events via webhooks and enforces your team's workflow rules automatically.
 
 For cards that represent recurring tasks, Claude Code generates the template cloner that creates a new card from a template when the previous instance is moved to Done, pre-populating the description, checklist, and labels from the template. This eliminates the manual setup overhead for tasks that repeat on a regular cadence.
 
 Due date management is another area where automation saves time. Claude Code generates the due date monitor that runs daily, finds cards approaching their due date without assignees, and sends a Slack message to the board owner asking for assignment. Cards that pass their due date without being moved get a red label added automatically, making overdue work visible in the board view without manual tracking.
-
 
 Related Reading
 

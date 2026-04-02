@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Font Loading Optimization Workflow
 
 Font loading optimization is a critical yet often overlooked aspect of web performance. Poorly optimized fonts can block rendering, cause layout shifts, and frustrate users. Building an automated workflow with Claude Code can streamline the entire process, from analyzing font files to implementing advanced loading strategies. This guide walks you through creating a comprehensive font optimization workflow that you can invoke whenever you need to audit or improve your project's font delivery.
 
-Understanding the Font Loading Problem
+## Understanding the Font Loading Problem
 
 Web fonts introduce several performance challenges that traditional optimization techniques don't address. A typical font file ranges from 20KB to 200KB, and blocking font loads can delay text visibility by seconds on slow connections. The Cumulative Layout Shift (CLS) metric penalizes websites where fonts cause content to jump around as they load, making font optimization essential for both user experience and Core Web Vitals scores.
 
@@ -36,7 +35,7 @@ Here's a quick overview of how font loading performance issues map to real user 
 | WOFF instead of WOFF2 | LCP | 25-35% larger file size |
 | Unused font weights | TTI | Unnecessary bytes downloaded |
 
-Creating the Font Optimization Skill
+## Creating the Font Optimization Skill
 
 Start by creating a dedicated skill for font optimization. This skill will encapsulate all the analysis and transformation logic in one place:
 
@@ -73,7 +72,7 @@ Constraints
 
 This context lets Claude Code give you targeted recommendations rather than generic advice.
 
-Analyzing Font Files and Usage
+## Analyzing Font Files and Usage
 
 Your workflow should first gather comprehensive information about the current font situation. Here's how to structure the analysis phase:
 
@@ -124,7 +123,7 @@ Ask Claude Code to run this audit and interpret the results:
 
 Claude Code will cross-reference the font inventory with your actual HTML content and give you a prioritized action list, not just raw numbers.
 
-Implementing Font Display Strategies
+## Implementing Font Display Strategies
 
 The `font-display` CSS property is the single most impactful change you can make for perceived performance. It controls how fonts render while loading:
 
@@ -155,7 +154,7 @@ To automate the audit, ask Claude Code:
 
 > "Check every @font-face rule in ./src/styles and flag any missing font-display. Generate the corrected CSS with font-display: swap added, and also flag any that use font-display: block where swap would work."
 
-Automating Preload Generation
+## Automating Preload Generation
 
 Preloading critical fonts dramatically improves First Contentful Paint. Your workflow should generate the appropriate preload directives:
 
@@ -210,7 +209,7 @@ def find_above_fold_fonts(html_file, css_file, viewport_height=800):
     return list(set(preloads))
 ```
 
-Setting Up Fallback Font Stacks
+## Setting Up Fallback Font Stacks
 
 Proper fallback fonts make the font swap invisible to users. Your workflow should audit fallback declarations and ensure they match the metrics of your custom fonts:
 
@@ -243,7 +242,7 @@ Ask Claude Code to help you find the right override values:
 
 Claude Code will compute the percentages and generate the complete `@font-face` fallback declaration for you.
 
-Building the Complete Workflow
+## Building the Complete Workflow
 
 Put all these pieces together into an actionable Claude Code workflow. The complete process should:
 
@@ -280,7 +279,7 @@ Quick Wins
 - [ ] brand-bold.woff2: Not used on any page. delete file and @font-face rule
 ```
 
-Variable Fonts: Consolidation for Performance
+## Variable Fonts: Consolidation for Performance
 
 Variable fonts combine multiple weights and styles into a single file, which can dramatically reduce the total number of font requests. If your project uses more than two weights of the same typeface, switching to a variable font almost always wins:
 
@@ -303,7 +302,7 @@ Variable fonts combine multiple weights and styles into a single file, which can
 
 Ask Claude Code to audit your font stack for variable font opportunities and estimate the request count reduction.
 
-Continuous Font Optimization
+## Continuous Font Optimization
 
 Font optimization isn't a one-time task. As your site evolves, new fonts get added and content changes. Consider integrating this workflow into your CI/CD pipeline to catch performance regressions before they reach production.
 

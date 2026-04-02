@@ -18,7 +18,7 @@ Installing Claude Code should give you immediate access to the `claude` CLI tool
 
 This guide walks through the most common causes and their solutions, so you can get back to coding with Claude's AI assistance.
 
-Understanding the Problem
+## Understanding the Problem
 
 When you install Claude Code, the installer adds the Claude CLI to a specific directory on your system. Your shell needs to know where to find that executable. If the installation directory isn't in your PATH environment variable, your terminal simply cannot locate the `claude` command.
 
@@ -36,7 +36,7 @@ bash: claude: command not found
 
 The root cause is almost always PATH-related, but there are a few other possibilities worth checking.
 
-Why PATH Errors Happen
+## Why PATH Errors Happen
 
 To understand the fix, it helps to understand what PATH actually does. When you type a command in your terminal, your shell doesn't search your entire filesystem. It only looks in directories listed in the `PATH` environment variable, checked left to right. If the directory containing `claude` is not in that list, the shell gives up immediately and reports "command not found."
 
@@ -44,7 +44,7 @@ This is a deliberate security feature: unrestricted command lookup would allow m
 
 On macOS, the typical culprit is `~/.local/bin` or `~/.npm-global/bin`. directories that are common targets for user-mode installs but are not included in the default system PATH. On Linux, similar issues arise with `/opt` subdirectories or snap/flatpak wrappers.
 
-Quick Diagnostic Checklist
+## Quick Diagnostic Checklist
 
 Before diving into detailed solutions, run through this fast checklist:
 
@@ -58,7 +58,7 @@ Before diving into detailed solutions, run through this fast checklist:
 
 If `which claude` returns nothing, the binary either was not installed or is in a directory not in PATH. If it returns a path but running `claude` still fails, the issue is permissions or a broken symlink.
 
-Solution 1: Verify the Installation Location
+## Solution 1: Verify the Installation Location
 
 First, confirm where Claude Code was actually installed. Run this command to search for the executable:
 
@@ -80,7 +80,7 @@ The output will be something like `/usr/local` or `/Users/yourname/.npm-global`.
 
 Once you locate the executable, note the full path. You'll need it for the next steps.
 
-Solution 2: Check Your PATH Configuration
+## Solution 2: Check Your PATH Configuration
 
 Your shell searches for commands in directories listed in the PATH environment variable. Let's verify what's currently in your PATH:
 
@@ -136,7 +136,7 @@ Now try running `claude` again:
 claude --version
 ```
 
-Common PATH Additions by Install Method
+## Common PATH Additions by Install Method
 
 | Install Method | Typical Binary Location | PATH Line to Add |
 |---|---|---|
@@ -146,7 +146,7 @@ Common PATH Additions by Install Method
 | Manual download | `~/.local/bin` | `export PATH="$HOME/.local/bin:$PATH"` |
 | nvm-managed node | `~/.nvm/versions/node/vX.X.X/bin` | Set via nvm (see below) |
 
-Solution 3: Fix Shell Initialization Issues
+## Solution 3: Fix Shell Initialization Issues
 
 Sometimes the PATH is correct in login shells but not in interactive non-login shells. This commonly happens on macOS when using Terminal or iTerm2.
 
@@ -163,7 +163,7 @@ fi
 
 If the installer snippet is missing or corrupted, manually add it. Alternatively, some users find success by placing PATH exports at the very top of their shell config, before any conditional logic or framework initializations.
 
-Diagnosing Login vs. Non-Login Shell Problems
+## Diagnosing Login vs. Non-Login Shell Problems
 
 You can confirm which type of shell you are running with:
 
@@ -202,7 +202,7 @@ claude --version
 
 These version managers insert their shim directories early in PATH, which can shadow the system npm and cause installs to land in unexpected places.
 
-Solution 4: Handle Symlink Issues
+## Solution 4: Handle Symlink Issues
 
 The Claude installer may create a symbolic link rather than copying the binary directly. Verify the symlink exists and points to a valid target:
 
@@ -238,7 +238,7 @@ Fix: reinstall the package
 sudo npm install -g @anthropic-ai/claude-code
 ```
 
-Solution 5: Reinstall Claude Code
+## Solution 5: Reinstall Claude Code
 
 If the above solutions don't work, the installation may be corrupted or incomplete. Reinstalling is often faster than debugging further.
 
@@ -279,7 +279,7 @@ Should show the file
 
 If `npm bin -g` outputs a path not in your current PATH, add it using the instructions in Solution 2.
 
-Solution 6: Verify Permissions
+## Solution 6: Verify Permissions
 
 Permission issues can prevent the shell from executing the Claude binary. Check the file permissions:
 
@@ -315,7 +315,7 @@ test -x /usr/local/bin/claude && echo "executable" || echo "not executable"
 
 If the file is owned by root and lacks execute bits, the npm install may have run into a permissions issue mid-install. Rerunning with `sudo npm install -g` (only when necessary) can resolve this, though it is better practice to configure npm to install globally without needing sudo by setting a user-owned prefix.
 
-Fixing npm Global Installs Without sudo
+## Fixing npm Global Installs Without sudo
 
 To stop needing `sudo` for global npm installs, configure npm to use a user-owned directory:
 
@@ -335,7 +335,7 @@ claude --version
 
 This approach avoids permission problems entirely and is the recommended setup for developer machines.
 
-Solution 7: macOS Gatekeeper and Security Blocks
+## Solution 7: macOS Gatekeeper and Security Blocks
 
 On macOS, Gatekeeper can silently block unsigned binaries from running. If the binary exists, has correct permissions, and is in PATH, but still produces an error, check for a security block:
 
@@ -357,7 +357,7 @@ You can also run the binary directly once and approve it through the resulting d
 open /usr/local/bin/claude
 ```
 
-Debugging Summary: Decision Tree
+## Debugging Summary: Decision Tree
 
 Work through this decision tree when the error persists:
 
@@ -378,13 +378,13 @@ Does `which claude` return a path?
               NO  --> Reinstall (Solution 5)
 ```
 
-Using Claude Skills Once Working
+## Using Claude Skills Once Working
 
 Once you resolve the command not found error, you'll have access to Claude's full ecosystem. [Best Claude Code skills to install first](/best-claude-code-skills-to-install-first-2026/) covers which skills are worth adding immediately. Skills extend Claude's capabilities for specialized tasks. The `frontend-design` skill helps generate UI components and layouts. The `pdf` skill enables document manipulation and extraction. The `tdd` skill assists with test-driven development workflows.
 
 Other valuable skills include `supermemory` for managing project context across sessions, `docx` for Word document automation, and `xlsx` for spreadsheet operations. Skills are `.md` files stored in `~/.claude/skills/`. place the skill file there to activate it.
 
-Prevention Tips
+## Prevention Tips
 
 To avoid this issue in the future, keep these tips in mind:
 
@@ -395,7 +395,7 @@ To avoid this issue in the future, keep these tips in mind:
 5. Pin your node version with nvm or asdf so global installs always land in a consistent, expected directory
 6. Keep a shell config backup so you can restore known-good PATH configuration if something breaks during an OS upgrade
 
-Wrapping Up
+## Wrapping Up
 
 The "claude: command not found" error almost always comes down to PATH configuration. By locating the executable, adding its directory to PATH, and verifying permissions, you can resolve this in under five minutes.
 

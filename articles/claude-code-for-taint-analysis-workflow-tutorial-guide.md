@@ -13,14 +13,11 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Taint Analysis Workflow Tutorial Guide
-
 Taint analysis is a powerful security technique that tracks untrusted data (tainted input) as it flows through your application, helping you identify potential vulnerabilities like SQL injection, cross-site scripting (XSS), and command injection. When combined with Claude Code, you can create efficient, reproducible taint analysis workflows that integrate smoothly into your development process.
 
 This guide walks you through building a practical taint analysis workflow using Claude Code, with concrete examples you can adapt to your projects.
 
-Understanding Taint Analysis Fundamentals
+## Understanding Taint Analysis Fundamentals
 
 Before diving into the implementation, let's establish the core concepts. Taint analysis works by:
 
@@ -30,7 +27,7 @@ Before diving into the implementation, let's establish the core concepts. Taint 
 
 The goal is to automatically flag cases where untrusted input reaches sensitive operations without proper sanitization.
 
-Setting Up Your Claude Code Environment
+## Setting Up Your Claude Code Environment
 
 First, ensure you have Claude Code installed and configured:
 
@@ -57,9 +54,9 @@ description: "Analyzes code for potential taint flow vulnerabilities"
 ---
 ```
 
-Building the Taint Analysis Workflow
+## Building the Taint Analysis Workflow
 
-Step 1: Define Taint Sources
+## Step 1: Define Taint Sources
 
 The first step in any taint analysis is identifying where untrusted data enters your application. Create a configuration file that defines these sources:
 
@@ -93,7 +90,7 @@ module.exports = {
 };
 ```
 
-Step 2: Identify Dangerous Sinks
+## Step 2: Identify Dangerous Sinks
 
 Next, define the sinks, functions that become vulnerable when they receive tainted data:
 
@@ -123,7 +120,7 @@ module.exports = {
 };
 ```
 
-Step 3: Implementing the Analysis Script
+## Step 3: Implementing the Analysis Script
 
 Now create the main analysis script that Claude Code will use:
 
@@ -210,7 +207,7 @@ if __name__ == '__main__':
     analyzer.generate_report()
 ```
 
-Integrating with Claude Code
+## Integrating with Claude Code
 
 Create a skill that orchestrates the taint analysis workflow:
 
@@ -243,7 +240,7 @@ After analysis, I'll provide:
 - Follow-up tasks to track fixes
 ```
 
-Running the Analysis
+## Running the Analysis
 
 Execute your taint analysis workflow with Claude Code:
 
@@ -258,7 +255,7 @@ Claude Code will:
 3. Trace data flows between them
 4. Generate a prioritized vulnerability report
 
-Practical Example: Detecting SQL Injection
+## Practical Example: Detecting SQL Injection
 
 Consider this vulnerable Node.js code:
 
@@ -279,7 +276,7 @@ When analyzed, the workflow identifies:
 - Vulnerability: SQL injection (critical severity)
 - Remediation: Use parameterized queries instead of string concatenation
 
-Best Practices for Effective Taint Analysis
+## Best Practices for Effective Taint Analysis
 
 1. Keep Source/Sink Definitions Updated
 
@@ -334,7 +331,7 @@ Prioritize analysis on:
 - File upload handlers
 - API endpoints processing user input
 
-Conclusion
+## Conclusion
 
 Claude Code transforms taint analysis from a complex static analysis task into an accessible, reproducible workflow. By defining clear source/sink configurations and using Claude's ability to read and analyze code across your project, you can identify security vulnerabilities early in the development cycle.
 

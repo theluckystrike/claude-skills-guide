@@ -13,14 +13,11 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
-
-Claude MD Example for Android Kotlin Project
 
 Creating effective Claude skill files for Android Kotlin projects requires understanding both the skill format and how Claude Code processes mobile development workflows. This guide provides practical examples you can adapt immediately for building Android apps with Kotlin.
 
-The Claude Skill Format
+## The Claude Skill Format
 
 Claude skills are Markdown files with a specific structure that Claude reads when you invoke them. For Android Kotlin projects, these skills help Claude understand your tooling, architecture patterns, and preferred development practices.
 
@@ -42,7 +39,7 @@ Guidelines
 
 The skill loads when you type `/skillname` in Claude Code, making these instructions part of the AI's context for your session.
 
-Android Kotlin App Architecture Skill
+## Android Kotlin App Architecture Skill
 
 For an Android Kotlin project using MVVM and Clean Architecture, create a skill that guides Claude through your preferred patterns. Save this as `~/.claude/skills/android-kotlin.md`:
 
@@ -94,7 +91,7 @@ Testing
 
 To use this skill, type `/android-kotlin` in your Claude session, then describe what you need. Claude will apply your conventions throughout the task.
 
-Jetpack Compose UI Skill
+## Jetpack Compose UI Skill
 
 For projects heavily using Jetpack Compose, create a specialized skill. Save this as `~/.claude/skills/compose-ui.md`:
 
@@ -137,7 +134,7 @@ Navigation
 - Pass data through navigation arguments or ViewModel
 ```
 
-Room Database Skill
+## Room Database Skill
 
 For Android apps using Room for local persistence, create a skill. Save this as `~/.claude/skills/android-room.md`:
 
@@ -180,7 +177,7 @@ Repository Pattern
 - Use WorkManager for background sync
 ```
 
-Combining Skills for Android Development
+## Combining Skills for Android Development
 
 You can load multiple skills to cover different aspects of Android development. For a complete workflow:
 
@@ -190,7 +187,7 @@ You can load multiple skills to cover different aspects of Android development. 
 
 This combination gives Claude context on architecture, UI, and data layers. If you're also working on documentation, consider adding the pdf skill for generating reports, or the frontend-design skill for theming.
 
-Practical Example: Creating a New Feature
+## Practical Example: Creating a New Feature
 
 With the skills above loaded, here's how a typical workflow looks:
 
@@ -200,26 +197,25 @@ With the skills above loaded, here's how a typical workflow looks:
 
 The skills ensure consistent code quality across your entire Android project.
 
-Tips for Android Kotlin Skills
+## Tips for Android Kotlin Skills
 
 - Keep skills focused: Separate skills for architecture, UI, and data concerns work better than one large skill
 - Specify tooling versions: Include Kotlin, Compose, and dependency versions in guidelines
 - Include testing preferences: Android testing has many frameworks; specify your choices
 - Reference official docs: Link to Android developer documentation for complex APIs
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 - Overly generic guidelines: "Write good code" is not helpful; specify what "good" means
 - Missing version constraints: Kotlin and Android evolve quickly; pin to your used versions
 - Ignoring build configuration: Include Gradle conventions and plugin usage patterns
 - Forgetting gradle: Many teams forget to specify how Claude should handle Gradle tasks and build variants
 
-Conclusion
+## Conclusion
 
 Claude skill files transform how you work with Claude Code on Android Kotlin projects. By defining your architecture, coding standards, and tooling preferences in skills, you get consistent, high-quality code that matches your team's conventions.
 
 Start with one skill covering your core architecture, then expand as you identify more specific needs. The investment in creating well-structured skills pays dividends in faster development and fewer code review iterations.
-
 
 Related Reading
 

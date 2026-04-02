@@ -17,7 +17,7 @@ permalink: /getting-started-hub/
 
 Claude Code is Anthropic's command-line AI coding tool. a terminal-native assistant that reads your files, writes code, runs commands, and works through development problems alongside you. This hub is the single starting point for every beginner. It covers what Claude Code is, how to install it, what skills are, how to run your first session, and links to every getting-started article in the library.
 
-Table of Contents
+## Table of Contents
 
 1. [What Is Claude Code](#what-is-claude-code)
 2. [Installation Guide](#installation-guide)
@@ -31,7 +31,7 @@ Table of Contents
 
 ---
 
-What Is Claude Code
+## What Is Claude Code
 
 Claude Code is not a chatbot. It is Anthropic's AI coding assistant that runs in your terminal, directly inside your project. You launch it with `claude`, and it immediately has access to your file tree, your shell, and your development environment. It can read any file you give it permission to see, write and modify files, execute shell commands, and check their output. all within one interactive session.
 
@@ -45,7 +45,7 @@ Start here: [What Is Claude Code and Why Developers Love It in 2026](/what-is-cl
 
 ---
 
-Installation Guide
+## Installation Guide
 
 Getting Claude Code running takes about five minutes. You need Node.js 18 or later, an Anthropic API key, and access to a terminal.
 
@@ -93,7 +93,7 @@ More installation and setup guides:
 
 ---
 
-Understanding Skills
+## Understanding Skills
 
 Skills are the feature that separates Claude Code from every other AI coding tool. A skill is a plain Markdown file stored in `~/.claude/skills/`. It has two parts: a YAML front matter block at the top that holds metadata, and a Markdown body below that contains the actual instructions Claude follows when the skill is active.
 
@@ -138,7 +138,7 @@ Go deeper:
 
 ---
 
-Your First Session
+## Your First Session
 
 Once Claude Code is installed and authenticated, here is a practical walkthrough for your first real session.
 
@@ -193,11 +193,11 @@ Tutorials for your first session:
 
 ---
 
-Essential Skills for Beginners
+## Essential Skills for Beginners
 
 These are the skills worth understanding first. Each covers a common development workflow and demonstrates how skills change what Claude Code can do.
 
-PDF Skill
+## PDF Skill
 
 The `pdf` skill is the best demonstration of what a skill actually does. Without it, Claude can discuss PDF content you paste into the chat. With it, Claude becomes a full document processing engine. extracting tables, reading multi-column layouts, filling forms, and generating new PDF documents from structured data.
 
@@ -215,7 +215,7 @@ The pdf skill handles scanned documents (with OCR), form fields, and multi-page 
 
 Read more: [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/)
 
-TDD Skill
+## TDD Skill
 
 The `tdd` skill enforces test-driven development: write a failing test first, write the minimum implementation to pass it, refactor. It works with pytest, Jest, Vitest, and Bun Test.
 
@@ -231,7 +231,7 @@ The skill does not just generate tests. it helps you think through edge cases yo
 
 Read more: [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/). [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/)
 
-Frontend Design Skill
+## Frontend Design Skill
 
 The `frontend-design` skill specializes in building UI components that match a design system. It understands responsive layout, accessibility requirements (ARIA attributes, semantic HTML), and CSS design tokens. It works with React, Vue, Svelte, and vanilla JavaScript.
 
@@ -243,7 +243,7 @@ The skill does not just generate generic markup. it reads your actual design tok
 
 Read more: [Claude Frontend Design Skill Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/). [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 
-XLSX Skill
+## XLSX Skill
 
 The `xlsx` skill automates spreadsheet work: reading data from Excel files, generating new sheets, building formulas, and transforming data between formats.
 
@@ -259,7 +259,7 @@ For developers or analysts who spend time manually working with spreadsheets, th
 
 Read more: [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-xlsx-skill-spreadsheet-automation-tutorial/)
 
-SuperMemory Skill
+## SuperMemory Skill
 
 The `supermemory` skill gives Claude persistent memory across sessions. By default, Claude Code starts fresh each session with no recollection of previous work. SuperMemory writes structured notes to disk and reloads them at session start, giving Claude context about your project, your preferences, and previous decisions.
 
@@ -281,7 +281,7 @@ More essential skill guides:
 
 ---
 
-Understanding Auto-Invocation
+## Understanding Auto-Invocation
 
 Claude Code skills can be invoked in two ways: explicitly with a slash command (`/skill-name`), or automatically when Claude detects that the context matches a skill's trigger conditions.
 
@@ -304,7 +304,7 @@ Auto-invocation guides:
 
 ---
 
-Security and Permissions
+## Security and Permissions
 
 Claude Code is an agentic tool. It can read files, execute shell commands, write code, and make network requests. Understanding the permissions model is important before using it on real projects.
 
@@ -349,7 +349,7 @@ Common permission errors and fixes:
 
 ---
 
-Quick Reference Table
+## Quick Reference Table
 
 | Topic | Article | Difficulty |
 |-------|---------|------------|
@@ -382,11 +382,11 @@ Quick Reference Table
 
 ---
 
-Complete Article Index
+## Complete Article Index
 
 The articles below cover every getting-started topic in the library, organized by sub-topic. Use this as a complete map for any question about Claude Code fundamentals.
 
-What Is Claude Code
+## What Is Claude Code
 
 Articles explaining the platform, its purpose, and why developers choose it.
 
@@ -405,7 +405,7 @@ Articles explaining the platform, its purpose, and why developers choose it.
 - [Claude Skills Ecosystem: Predictions for the Next 12 Months](/claude-skills-ecosystem-predictions-next-12-months/)
 - [Open Source Claude Skills Ecosystem Outlook 2026](/open-source-claude-skills-ecosystem-outlook-2026/)
 
-Installation and Environment Setup
+## Installation and Environment Setup
 
 Getting Claude Code running on different platforms and configurations.
 
@@ -419,7 +419,7 @@ Getting Claude Code running on different platforms and configurations.
 - [How Do I Set Environment Variables for a Claude Skill](/how-do-i-set-environment-variables-for-a-claude-skill/)
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
 
-Skill File Format and Structure
+## Skill File Format and Structure
 
 Understanding and writing skill.md files from first principles.
 
@@ -439,7 +439,7 @@ Understanding and writing skill.md files from first principles.
 - [Advanced Claude Skills: Tool Use Patterns 2026](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Extended Thinking + Claude Skills: Integration Guide](/claude-code-extended-thinking-skills-integration-guide/)
 
-Discovering and Managing Skills
+## Discovering and Managing Skills
 
 Finding, installing, and organizing skills across projects.
 
@@ -457,7 +457,7 @@ Finding, installing, and organizing skills across projects.
 - [Claude Skills Onboarding for New Engineering Team Members](/claude-skills-onboarding-new-engineering-team-members/)
 - [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/)
 
-Auto-Invocation
+## Auto-Invocation
 
 How auto-invocation works, how to configure it, and how to fix it when it does not.
 
@@ -467,7 +467,7 @@ How auto-invocation works, how to configure it, and how to fix it when it does n
 - [How Do I Know Which Claude Skill Is Currently Active?](/how-do-i-know-which-claude-skill-is-currently-active/)
 - [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/)
 
-Security and Permissions
+## Security and Permissions
 
 Understanding and configuring Claude Code's permission model.
 
@@ -482,7 +482,7 @@ Understanding and configuring Claude Code's permission model.
 - [Claude Skills Compliance SOC2 ISO27001 Guide](/claude-skills-compliance-soc2-iso27001-guide/)
 - [Claude Skills Disaster Recovery and Backup Strategies](/claude-skills-disaster-recovery-and-backup-strategies/)
 
-Troubleshooting Errors
+## Troubleshooting Errors
 
 Fixing the most common errors you will encounter with Claude Code skills.
 
@@ -511,7 +511,7 @@ Fixing the most common errors you will encounter with Claude Code skills.
 - [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/)
 - [How Do I Rollback a Bad Claude Skill Update Safely](/how-do-i-rollback-a-bad-claude-skill-update-safely/)
 
-Performance, Tokens, and Optimization
+## Performance, Tokens, and Optimization
 
 Making Claude Code faster and more cost-efficient.
 
@@ -528,7 +528,7 @@ Making Claude Code faster and more cost-efficient.
 - [Measuring Claude Code Skill Efficiency Metrics](/measuring-claude-code-skill-efficiency-metrics/)
 - [How Do I See Claude Skill Usage and Token Costs Breakdown](/how-do-i-see-claude-skill-usage-and-token-costs-breakdown/)
 
-Memory and Context
+## Memory and Context
 
 Persistent memory, session state, and context architecture.
 
@@ -537,7 +537,7 @@ Persistent memory, session state, and context architecture.
 - [Claude Skill Not Saving State Between Sessions Fix](/claude-skill-not-saving-state-between-sessions-fix/)
 - [Building Stateful Agents with Claude Skills Guide](/building-stateful-agents-with-claude-skills-guide/)
 
-Skills by Developer Role
+## Skills by Developer Role
 
 Role-specific skill recommendations and configurations.
 
@@ -555,7 +555,7 @@ Role-specific skill recommendations and configurations.
 - [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-for-startup-founders-and-solopreneurs/)
 - [Best Claude Skills for Writing and Content Creation](/best-claude-skills-for-writing-and-content-creation/)
 
-Skills by Technology Stack
+## Skills by Technology Stack
 
 Stack-specific skill guides for common platforms and languages.
 
@@ -585,7 +585,7 @@ Stack-specific skill guides for common platforms and languages.
 - [Claude Code Sentry Error Tracking Source Maps Workflow](/claude-code-sentry-error-tracking-source-maps-workflow/)
 - [Claude Code Multi-Agent Error Recovery Strategies](/claude-code-multi-agent-error-recovery-strategies/)
 
-Integrations and Automation
+## Integrations and Automation
 
 Connecting Claude Code skills to external services and workflows.
 
@@ -603,7 +603,7 @@ Connecting Claude Code skills to external services and workflows.
 - [Can Claude Code Skills Work Alongside Other AI Models?](/can-claude-code-skills-work-alongside-other-ai-models/)
 - [Can Claude Skills Generate Images or Handle Multimedia Files?](/can-claude-skills-generate-images-or-handle-multimedia-files/)
 
-Automation Workflows
+## Automation Workflows
 
 Complete workflow automation guides using Claude Code skills.
 
@@ -623,7 +623,7 @@ Complete workflow automation guides using Claude Code skills.
 - [Claude Skills for Localization i18n Workflow Automation](/claude-skills-for-localization-i18n-workflow-automation/)
 - [Claude Code Batch Processing with Skills Guide](/claude-code-batch-processing-with-skills-guide/)
 
-Building Projects with Claude Code
+## Building Projects with Claude Code
 
 Step-by-step project guides that demonstrate skills in action.
 
@@ -672,7 +672,7 @@ Explaining unexpected Claude Code behavior.
 - [Why Does Claude Skill Produce Different Output Each Run](/why-does-claude-skill-produce-different-output-each-run/)
 - [Why Does My Claude Skill Work Locally But Fail in CI?](/why-does-my-claude-skill-work-locally-but-fail-in-ci/)
 
-Industry and Domain-Specific Skills
+## Industry and Domain-Specific Skills
 
 Guides for specific industries and regulated domains.
 
@@ -682,7 +682,7 @@ Guides for specific industries and regulated domains.
 
 ---
 
-Where to Go Next
+## Where to Go Next
 
 Once you have the basics down, the rest of the library is organized by topic:
 

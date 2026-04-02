@@ -13,14 +13,11 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
-
-Claude Code for CDK Pipelines Workflow Tutorial
 
 AWS CDK Pipelines provides a powerful infrastructure-as-code approach to continuous delivery. When combined with Claude Code, you can automate the creation, testing, and deployment of your CDK applications with intelligent assistance throughout the workflow. This tutorial demonstrates how to use Claude Code to enhance your CDK pipeline development experience.
 
-Understanding CDK Pipelines Architecture
+## Understanding CDK Pipelines Architecture
 
 CDK Pipelines is a construct library that makes it easy to set up continuous delivery pipelines for CDK applications. The pipeline itself is defined in code, which means your deployment infrastructure evolves alongside your application infrastructure.
 
@@ -32,7 +29,7 @@ A typical CDK Pipeline consists of several key stages:
 - Application Stages - Deploys your application stacks (dev, staging, production)
 - Approval Stages - Optional manual approval gates for production deployments
 
-Setting Up Claude Code for CDK Development
+## Setting Up Claude Code for CDK Development
 
 Before integrating Claude Code with CDK Pipelines, ensure your development environment is properly configured. Claude Code can assist you at every step, from initial pipeline design to troubleshooting deployment issues.
 
@@ -62,11 +59,11 @@ export class PipelineStack extends cdk.Stack {
 }
 ```
 
-Building a Multi-Stage Deployment Pipeline
+## Building a Multi-Stage Deployment Pipeline
 
 A solid CDK Pipeline typically includes multiple deployment stages representing different environments. Claude Code can help you design this structure efficiently.
 
-Defining Application Stages
+## Defining Application Stages
 
 Create separate stages for each environment:
 
@@ -119,7 +116,7 @@ export class PipelineStack extends cdk.Stack {
 }
 ```
 
-Integrating Claude Code for Pipeline Troubleshooting
+## Integrating Claude Code for Pipeline Troubleshooting
 
 One of the most valuable uses of Claude Code is debugging pipeline failures. When your CDK Pipeline fails during deployment, Claude Code can analyze CloudFormation change sets, identify resource conflicts, and suggest solutions.
 
@@ -135,7 +132,7 @@ cdk doctor                        # Check environment setup
 
 Claude Code can help interpret these outputs and recommend specific fixes based on your infrastructure patterns.
 
-Adding Custom Pipeline Actions
+## Adding Custom Pipeline Actions
 
 CDK Pipelines supports custom actions that can run additional validation or deployment steps. Here's how to add a security scanning stage:
 
@@ -180,7 +177,7 @@ export class SecurePipelineStack extends cdk.Stack {
 }
 ```
 
-Best Practices for CDK Pipeline Development
+## Best Practices for CDK Pipeline Development
 
 Follow these recommendations when building CDK Pipelines with Claude Code assistance:
 
@@ -194,7 +191,7 @@ Follow these recommendations when building CDK Pipelines with Claude Code assist
 
 5. Use Cross-Region Synthesis - For pipelines deploying to multiple regions, configure cross-region synthesis to ensure consistent deployments.
 
-Automating Pipeline Updates
+## Automating Pipeline Updates
 
 Claude Code can help you implement automated pipeline updates when your infrastructure code changes. The self-mutation feature ensures your pipeline stays synchronized with your CDK code:
 
@@ -216,7 +213,7 @@ const pipeline = new pipelines.CodePipeline(this, 'Pipeline', {
 
 With self-mutation enabled, any change to your pipeline code in the repository automatically triggers an update to the pipeline itself on the next run.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with AWS CDK Pipelines creates a powerful development workflow for infrastructure-as-code projects. Claude Code assists with generating pipeline configurations, debugging deployment issues, and implementing best practices throughout your CI/CD journey.
 

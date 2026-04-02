@@ -18,7 +18,7 @@ Security-sensitive applications, financial systems, healthcare platforms, authen
 
 Claude Code can be used safely in security-sensitive projects, but only when developers understand the data flow, apply deliberate redaction practices, and establish clear team-wide policies about what stays local. This guide walks through the concrete strategies that make that possible.
 
-Understanding What Claude Code Actually Sees
+## Understanding What Claude Code Actually Sees
 
 When you work with Claude Code, you're sending your code and files to Anthropic's servers for processing. This is the fundamental consideration for security-sensitive work. Before pasting any credentials, API keys, or proprietary algorithms into a Claude session, recognize that the content traverses external infrastructure.
 
@@ -46,9 +46,9 @@ Never share with Claude:
 
 Getting this categorization right is the foundation of safe Claude Code usage in security-sensitive projects.
 
-Practical Strategies for Security-Conscious Claude Usage
+## Practical Strategies for Security-Conscious Claude Usage
 
-Strategy 1: Use Local-Only Processing for Sensitive Code
+## Strategy 1: Use Local-Only Processing for Sensitive Code
 
 For truly sensitive code sections, consider using Claude's skills that keep processing local. The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/), for example, maintains context locally on your machine between sessions without necessarily sending every detail to external servers.
 
@@ -83,7 +83,7 @@ Pattern Preferences
 
 This creates a durable boundary that persists across sessions and can be committed to the repository as team policy.
 
-Strategy 2: Redact Sensitive Data Before Sharing
+## Strategy 2: Redact Sensitive Data Before Sharing
 
 Always review what you're about to share with Claude. Create a workflow that redacts sensitive information:
 
@@ -112,7 +112,7 @@ You can go further by making this a pre-paste habit enforced by tooling. Some te
 
 For environment-variable-heavy codebases, another approach is to share code with all `process.env.X` references intact but with a note that those values are environment-variable references, Claude understands this convention and will not ask you to reveal the actual values.
 
-Strategy 3: Use Claude for Architecture, Not Credentials
+## Strategy 3: Use Claude for Architecture, Not Credentials
 
 Claude excels at architectural guidance and code review but should never handle actual secrets. Use Claude for:
 
@@ -126,7 +126,7 @@ Keep actual credentials, API keys, and cryptographic keys completely outside of 
 
 A useful framing: Claude is your expert consultant who you are briefing in a public coffee shop. You would explain your architecture, describe your requirements, ask for recommendations, and review diagrams together, but you would not slide a piece of paper with your production database password across the table.
 
-Skills That Enhance Security Workflows
+## Skills That Enhance Security Workflows
 
 Several Claude skills can actually improve your security posture when used correctly.
 
@@ -168,7 +168,7 @@ Review this authentication module for:
 
 This is a high-value use case because security review is exactly the kind of systematic, pattern-matching task where Claude performs well. A developer might miss a timing vulnerability on a casual read; a systematic review with Claude checking specific categories is harder to overlook.
 
-Real-World Example: Building a Secure Token Generator
+## Real-World Example: Building a Secure Token Generator
 
 Consider a practical scenario: building a secure token generator for password reset functionality.
 
@@ -215,7 +215,7 @@ JWT_SECRET = "eyJhb..."  # Never paste real tokens
 
 The example above shows the right separation clearly. You describe requirements and let Claude handle implementation patterns. Notice that Claude's output even includes `secrets.compare_digest` rather than a direct equality check, catching the timing attack vector proactively.
 
-Common Security Mistakes Claude Can Help You Catch
+## Common Security Mistakes Claude Can Help You Catch
 
 One underappreciated use of Claude Code is as a second pass for security review before code goes to human review or production. Claude can identify common patterns that slip through even experienced developers' first drafts:
 
@@ -251,7 +251,7 @@ Card numbers should never appear in logs
 
 Catching these in a Claude review pass before pushing reduces the security debt that accumulates over time.
 
-When to Avoid Claude Code Altogether
+## When to Avoid Claude Code Altogether
 
 Certain scenarios call for complete isolation:
 
@@ -263,7 +263,7 @@ Certain scenarios call for complete isolation:
 
 For teams operating under SOC 2, ISO 27001, or similar certifications, document your Claude Code usage policies explicitly. Many auditors will want to understand what categories of data flow through external AI tools and what controls are in place.
 
-Comparison: Claude Code vs. Fully Local Alternatives
+## Comparison: Claude Code vs. Fully Local Alternatives
 
 | Consideration | Claude Code | Local AI (Ollama, etc.) |
 |---------------|-------------|------------------------|
@@ -276,7 +276,7 @@ Comparison: Claude Code vs. Fully Local Alternatives
 
 The practical recommendation for most teams: use Claude Code for the majority of development work while keeping local tooling or fully offline review for the narrow category of code that contains or handles actual secrets. This hybrid approach captures most of the productivity benefit while keeping the highest-risk work isolated.
 
-Best Practices Summary
+## Best Practices Summary
 
 - Always redact secrets, API keys, and credentials before sharing code
 - Use local-only mode when available to keep code on your machine
@@ -287,7 +287,7 @@ Best Practices Summary
 - Use Claude for review passes. systematic vulnerability checking before human review
 - Understand your compliance obligations. verify AI tool policies with your security and legal teams before adoption
 
-Conclusion
+## Conclusion
 
 Claude Code can be appropriate for security-sensitive applications when you apply proper safeguards. The tool excels at architectural guidance, code review, test generation, and pattern suggestions, areas that don't require sharing actual secrets. By redacting sensitive data, using local processing options, and maintaining clear boundaries about what stays private, you can benefit from Claude's capabilities while protecting your security-critical code.
 
@@ -296,7 +296,6 @@ The decision ultimately depends on your threat model and compliance requirements
 The key insight is that security and AI-assisted development are not mutually exclusive, they require the same discipline that applies to any external service or tool in your stack. Treat Claude Code like you treat any other third-party tool: understand what data it receives, apply appropriate controls, and document your policies so the whole team operates consistently.
 
 Evaluate your specific needs, implement the strategies that work for your context, and enjoy the productivity benefits Claude offers, without compromising your security posture.
-
 
 Related Reading
 

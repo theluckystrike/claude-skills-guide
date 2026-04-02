@@ -16,13 +16,13 @@ permalink: /how-do-i-test-a-claude-skill-before-deploying-to-team/
 
 [Testing a Claude skill before deploying it to your team is a critical step that prevents broken prompts](/claude-tdd-skill-test-driven-development-workflow/), inconsistent behavior, and frustrated teammates. Whether you've built a custom skill for frontend design, document processing, or test-driven development, a structured testing approach catches issues early and ensures reliability. This guide covers practical methods to validate your skill at every level.
 
-Understanding Claude Skill Testing Fundamentals
+## Understanding Claude Skill Testing Fundamentals
 
 Claude skills are Markdown files loaded into your Claude Code session. When activated, they modify how Claude responds, what tools it uses, and what patterns it follows. Testing these skills requires checking both the technical correctness of the file and the behavioral consistency of Claude's responses when the skill is active.
 
 The testing pyramid for Claude skills has three layers. At the base, you have syntax and structure validation, checking that the skill file is valid Markdown, has proper front matter, and follows skill conventions. The middle layer covers behavioral testing, verifying that Claude actually applies the skill's instructions in different scenarios. At the top, you have integration testing, ensuring the skill works within your team's actual workflow and doesn't conflict with other skills or tools.
 
-Step 1: Validate Skill File Structure
+## Step 1: Validate Skill File Structure
 
 Before running any behavioral tests, confirm your skill file passes basic validation. This catches typos in front matter, malformed Markdown, and missing required sections.
 
@@ -63,7 +63,7 @@ chmod +x validate-skill.sh
 ./validate-skill.sh ~/.claude/skills/your-skill.md
 ```
 
-Step 2: Behavioral Testing with Test Cases
+## Step 2: Behavioral Testing with Test Cases
 
 The real test of a Claude skill is whether it changes Claude's behavior as expected. Create a set of test prompts that exercise the skill's core functionality, then verify Claude's responses match expected patterns.
 
@@ -90,7 +90,7 @@ Test 3: Accessibility Enforcement
 
 Run each test case by starting a fresh Claude session, activating your skill with `/your-skill-name` or the activation command, then pasting the test prompt. Document the actual output against expected results.
 
-Step 3: Test Claude Skills That Depend on Tools
+## Step 3: Test Claude Skills That Depend on Tools
 
 If your skill configures tool usage, such as the `pdf` skill for document processing, the `tdd` skill for test generation, or the `supermemory` skill for knowledge retrieval, verify tool integration separately.
 
@@ -115,7 +115,7 @@ Validate that Claude produces working test code that actually passes when you ru
 
 For skills that interact with external services, mock the interactions during testing. Create test credentials, sandbox environments, or local replicas of external APIs to ensure your skill handles both success and failure cases gracefully.
 
-Step 4: Stress Test with Edge Cases
+## Step 4: Stress Test with Edge Cases
 
 Beyond happy-path testing, probe your skill's boundaries. The most common failures occur with unexpected inputs, conflicting skills, or resource constraints.
 
@@ -129,7 +129,7 @@ Test these edge cases:
 
 Document edge case behaviors. Some may be intentional design choices; others may need adjustment before deployment.
 
-Step 5: Team Beta Testing Workflow
+## Step 5: Team Beta Testing Workflow
 
 Before a full team rollout, run a beta program with 2-3 power users. This catches issues you might miss and builds internal buy-in.
 
@@ -155,7 +155,7 @@ Date: [date]
 4. Would you recommend this skill to the rest of the team? Why or why not?
 ```
 
-Step 6: Version Control and Rollback Planning
+## Step 6: Version Control and Rollback Planning
 
 Always version your skill files in a Git repository. This enables rollback if a deployed skill causes problems and provides a history of changes for debugging.
 
@@ -184,7 +184,7 @@ v1.1 (2026-03-10)
 - Initial team release
 ```
 
-Final Checklist Before Team Deployment
+## Final Checklist Before Team Deployment
 
 Run through this checklist before pushing a skill to your team:
 

@@ -14,12 +14,9 @@ tags: [claude-code, claude-skills]
 ---
 {% raw %}
 
-
-Claude Code AppSec: Developer Secure Coding Workflow Tips
-
 Security should never be an afterthought in software development. As applications become more complex and attack surfaces expand, integrating security into your daily workflow is essential. Claude Code offers powerful capabilities that can help developers build security into every stage of the development lifecycle. This guide explores practical tips for using Claude Code as part of your Application Security (AppSec) strategy.
 
-Understanding Secure Coding with Claude Code
+## Understanding Secure Coding with Claude Code
 
 Claude Code isn't just another coding assistant, it's a comprehensive tool that can analyze code for security vulnerabilities, suggest secure alternatives, and help you think like an attacker. By incorporating Claude Code into your workflow, you can catch security issues before they reach production.
 
@@ -27,7 +24,7 @@ The key is knowing how to prompt Claude Code effectively for security-focused ta
 
 Security work with Claude Code falls into three broad categories: proactive review (catching vulnerabilities before code ships), reactive analysis (investigating a suspected flaw or incident), and educational use (learning why a pattern is dangerous and how to fix it correctly). Each category benefits from slightly different prompting approaches, which this guide covers across the workflow tips below.
 
-Practical Tips for Secure Development
+## Practical Tips for Secure Development
 
 1. Start with Security-Aware Code Reviews
 
@@ -305,7 +302,7 @@ For the package [name] at version [version]:
 
 Pair Claude Code's analysis with automated tooling: Dependabot for automated PR creation when new versions patch CVEs, and `pip audit` or `npm audit` in your CI pipeline. Claude Code adds judgment about whether a vulnerability in a library is actually reachable given how you use the package, something automated scanners cannot do.
 
-Real-World Example: Securing a User Authentication Flow
+## Real-World Example: Securing a User Authentication Flow
 
 Let's walk through a practical example of using Claude Code to secure an authentication system.
 
@@ -402,7 +399,7 @@ def authenticate_user(username: str, password: str) -> dict | None:
 
 This version addresses username enumeration via timing, account lockout, and audit logging, all things Claude Code would flag as missing if you asked it to review the simpler version above.
 
-Building a Security-First Mindset
+## Building a Security-First Mindset
 
 Beyond individual code improvements, Claude Code can help cultivate a security-first mindset across your development team:
 
@@ -421,7 +418,7 @@ file handling, secrets management, and logging.
 
 Commit the resulting checklist to your repository as a PR template. Every contributor sees it on every PR, reinforcing the expectation that security is part of the work, not a separate audit that happens later.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your secure coding workflow isn't about replacing security expertise, it's about augmenting it. By using Claude Code's capabilities for vulnerability scanning, threat modeling, and secure code generation, you can build more secure applications while also growing your team's security knowledge.
 

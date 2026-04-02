@@ -14,12 +14,9 @@ score: 7
 ---
 {% raw %}
 
-
-Claude Code for Zola Rust Static Site Workflow
-
 Zola is a blazing-fast static site generator written in Rust, beloved by developers for its simplicity and speed. When paired with Claude Code, you get a powerful combination that accelerates content creation, theme development, and site deployment. This guide walks you through integrating Claude Code into your Zola workflow for maximum productivity.
 
-Setting Up Your Zola Project
+## Setting Up Your Zola Project
 
 Before diving into the Claude Code integration, ensure you have Zola installed. The official installation method uses pre-built binaries, but you can also install via Homebrew or your preferred package manager.
 
@@ -83,7 +80,7 @@ show_reading_time = true
 
 Claude Code can help you understand each configuration option and suggest values based on your project goals. Share your requirements with a prompt like: "Help me configure my Zola config.toml for a technical blog with syntax highlighting, search, and a custom domain at myblog.dev."
 
-Leveraging Claude Code for Content Creation
+## Leveraging Claude Code for Content Creation
 
 Claude Code excels at generating content quickly. When working with Zola, you can create new articles using a simple prompt that specifies the title, description, and content structure you need.
 
@@ -133,7 +130,7 @@ Common Topics
 - Developer tooling
 ```
 
-Batch Content Generation
+## Batch Content Generation
 
 When launching a new site or section, you can instruct Claude Code to generate multiple articles in sequence:
 
@@ -143,7 +140,7 @@ claude "Read CONTENT_BRIEF.md, then create three posts in content/posts/: one on
 
 This workflow is especially useful for populating a new site quickly. Claude Code keeps each article focused and avoids duplicating content between them.
 
-Theme Development with Claude Code
+## Theme Development with Claude Code
 
 Building custom Zola themes becomes significantly easier with Claude Code's assistance. Whether you're starting from scratch or modifying an existing theme, describe your desired layout and functionality to receive tailored code.
 
@@ -182,7 +179,7 @@ Provide details to Claude Code like: "Create a navigation component with home, a
 
 For styling, share your color palette and design preferences. You might say: "Generate a dark-mode friendly CSS file using CSS custom properties with a primary color of #ff6b6b and secondary color of #4ecdc4, with responsive typography using clamp()."
 
-Sample Theme Directory Structure
+## Sample Theme Directory Structure
 
 When building Zola themes, organize your files logically. Claude Code can scaffold the complete directory structure and populate each file:
 
@@ -231,7 +228,7 @@ Optional: document what extra config keys the theme uses
 These show up in zola's theme documentation
 ```
 
-Shortcodes and Custom Components
+## Shortcodes and Custom Components
 
 Zola's shortcode system lets you embed custom components in Markdown content. Claude Code can generate reusable shortcodes for common patterns:
 
@@ -257,7 +254,7 @@ Usage in Markdown content:
 A callout shortcode goes here.
 ```
 
-Workflow Optimization Strategies
+## Workflow Optimization Strategies
 
 Integrate Claude Code directly into your development workflow using shell aliases or scripts that automate repetitive tasks. Create shortcuts for common operations like generating new content, building the site, and running the development server.
 
@@ -296,7 +293,7 @@ new-section:
 	claude "Create a _index.md file for the Zola section content/$$section/ with appropriate front matter"
 ```
 
-Using Claude Code for SEO and Metadata Audits
+## Using Claude Code for SEO and Metadata Audits
 
 One underused capability is asking Claude Code to audit your existing content for SEO issues:
 
@@ -306,7 +303,7 @@ claude "Read all .md files in content/posts/. For each file, check: (1) does des
 
 This turns a tedious manual audit into a single command. You can extend this pattern to check for broken image references, missing alt text, or inconsistent front matter fields.
 
-Deployment and CI/CD Integration
+## Deployment and CI/CD Integration
 
 For automated deployments, configure your CI/CD pipeline to build your Zola site and deploy to your hosting provider. Claude Code can help you set up GitHub Actions or other CI systems with Zola-specific configurations.
 
@@ -345,7 +342,7 @@ jobs:
           directory: public
 ```
 
-Hosting Provider Comparison
+## Hosting Provider Comparison
 
 | Provider | Free Tier | Build Minutes | Custom Domains | Edge CDN |
 |---|---|---|---|---|
@@ -356,7 +353,7 @@ Hosting Provider Comparison
 
 For most Zola projects, Cloudflare Pages offers the best combination of performance and generous free limits. Ask Claude Code: "Help me set up a Cloudflare Pages deployment for my Zola site, including the wrangler.toml configuration and any caching headers I should set."
 
-Environment-Specific Builds
+## Environment-Specific Builds
 
 Zola supports different base URLs per environment, which matters for local development and staging previews:
 
@@ -371,11 +368,11 @@ Zola supports different base URLs per environment, which matters for local devel
         run: zola build --base-url "${{ env.CF_PAGES_URL }}"
 ```
 
-Maintenance and Troubleshooting
+## Maintenance and Troubleshooting
 
 When issues arise with your Zola site, Claude Code helps diagnose problems quickly. Common issues include broken internal links, missing front matter, and template errors.
 
-Common Zola Errors and Fixes
+## Common Zola Errors and Fixes
 
 | Error | Cause | Fix |
 |---|---|---|
@@ -391,7 +388,7 @@ For example, if your site fails to build with a TOML parsing error, share the er
 claude "My Zola site fails to build with this error: [paste error]. Here is the front matter from the failing file: [paste content]. What is wrong and how do I fix it?"
 ```
 
-Link Checking Automation
+## Link Checking Automation
 
 Run `zola check` regularly to catch broken internal links before they reach production:
 
@@ -402,7 +399,7 @@ zola check && echo "All links valid" || (echo "Broken links detected" && exit 1)
 
 Claude Code can help you write a more comprehensive link-checking script that also validates external URLs and reports results in a structured format.
 
-Performance Auditing
+## Performance Auditing
 
 Zola sites are already fast by default, but you can push further. Ask Claude Code: "Analyze my Zola config.toml and templates/base.html. Suggest specific changes to improve Lighthouse performance scores, focusing on resource loading order, image optimization, and CSS delivery."
 
@@ -414,7 +411,7 @@ Common performance wins include:
 - Deferring non-critical JavaScript
 - Setting aggressive cache headers in your deployment configuration
 
-Advanced Patterns: Taxonomies and Pagination
+## Advanced Patterns: Taxonomies and Pagination
 
 Zola's taxonomy system is powerful but often underused. Claude Code can scaffold the full taxonomy setup, including section templates and feed generation.
 
@@ -440,7 +437,7 @@ The pagination template pattern in Tera requires careful handling:
 {% endif %}
 ```
 
-Conclusion
+## Conclusion
 
 Combining Zola's speed and simplicity with Claude Code's AI capabilities creates a powerful static site development workflow. From initial project setup through content creation, theme development, and deployment, Claude Code serves as an intelligent assistant that accelerates each phase of your workflow. Start incorporating these practices into your Zola projects and experience the productivity gains firsthand.
 

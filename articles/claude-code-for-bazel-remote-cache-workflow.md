@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Bazel Remote Cache Workflow
 
 Bazel's incremental build capabilities are powerful, but even the fastest local builds can become bottlenecks in CI/CD pipelines and team environments. Remote caching transforms your build economy by sharing compilation artifacts across machines, and Claude Code can help you set up, manage, and optimize this workflow. This guide shows you how to integrate Claude Code into your Bazel remote cache setup for faster, more efficient builds.
 
-Understanding Bazel Remote Caching
+## Understanding Bazel Remote Caching
 
 Bazel remote caching stores build outputs on a remote server instead of (or in addition to) your local machine. When another developer or CI runner needs a build artifact, Bazel downloads it from the cache instead of rebuilding from source. This dramatically reduces build times, especially for large monorepos with many interdependent targets.
 
@@ -30,7 +29,7 @@ There are two primary remote cache backends compatible with Bazel:
 
 For most teams starting with remote caching, the cache-only approach is simpler to implement and provides immediate benefits without the complexity of remote execution.
 
-Remote Cache vs. Disk Cache vs. RBE
+## Remote Cache vs. Disk Cache vs. RBE
 
 Understanding which caching strategy fits your team is the first step before writing a single line of configuration.
 
@@ -46,7 +45,7 @@ Understanding which caching strategy fits your team is the first step before wri
 
 Most teams see the biggest immediate win from remote caching without RBE. Once your hit rate plateaus and build queue times become the bottleneck, migrating to RBE is the natural next step.
 
-How Bazel Computes Cache Keys
+## How Bazel Computes Cache Keys
 
 Bazel's cache key for any action is a hash of:
 
@@ -59,11 +58,11 @@ This design means two machines with identical inputs always produce the same cac
 
 Claude Code is particularly useful here because it can audit your `BUILD` files for common patterns that leak undeclared inputs.
 
-Setting Up Your Remote Cache
+## Setting Up Your Remote Cache
 
 The most common remote cache implementations use either a gRPC-based protocol or HTTP/1.1. Here's how to configure Bazel to use a remote cache with Claude Code assisting you:
 
-Configuring the Bazelrc File
+## Configuring the Bazelrc File
 
 Create or modify your `.bazelrc` file to enable remote caching:
 
@@ -100,7 +99,7 @@ build:dev --remote_upload_local_results=false
 
 Breaking the configuration this way achieves two goals. First, local developer builds stay fast when the remote cache is degraded. Second, only CI runners can write to the remote cache, which prevents half-built developer artifacts from poisoning the shared cache.
 
-Setting Up a Simple Cache Server
+## Setting Up a Simple Cache Server
 
 For teams wanting to self-host, several options exist. The Bazel-Build-Event-Service (BES) can serve as a basic cache, or you can use specialized tools like Buildbarn or EngFlow. Claude Code can help you generate the appropriate Docker compose configuration:
 
@@ -156,7 +155,7 @@ volumes:
 
 The `--max_size` flag enables LRU eviction so the cache disk usage stays bounded. Mounting the cache data directory on a fast SSD (or NVMe) significantly reduces the latency for cache reads.
 
-Managed Remote Cache Options
+## Managed Remote Cache Options
 
 If operating your own server is not practical, several managed options integrate with Bazel out of the box:
 
@@ -175,11 +174,11 @@ build:remote --remote_cache=https://storage.googleapis.com/YOUR_BUCKET_NAME
 build:remote --google_default_credentials
 ```
 
-Creating a Claude Code Skill for Cache Management
+## Creating a Claude Code Skill for Cache Management
 
 A Claude Code skill can automate common cache operations, diagnose issues, and help optimize your cache hit rates. Here's a skill structure for Bazel cache management:
 
-Cache Status Skill
+## Cache Status Skill
 
 ```yaml
 ---
@@ -261,7 +260,7 @@ else
 fi
 ```
 
-Cache Hit Rate Analysis
+## Cache Hit Rate Analysis
 
 Understanding your cache hit rate is crucial for optimization. Create a skill that parses build event logs to report cache performance:
 
@@ -291,7 +290,6 @@ import json
 import sys
 from collections import defaultdict
 from pathlib import Path
-
 
 def analyze_cache_performance(build_log_path: str) -> dict:
     """
@@ -353,7 +351,6 @@ def analyze_cache_performance(build_log_path: str) -> dict:
         ]
     }
 
-
 if __name__ == "__main__":
     result = analyze_cache_performance(sys.argv[1] if len(sys.argv) > 1 else "build_events.json")
     print(json.dumps(result, indent=2))
@@ -366,9 +363,9 @@ python3 analyze_cache.py build_events.json | \
   claude --print "Analyze these Bazel cache metrics and suggest the top 3 improvements"
 ```
 
-Practical Workflows with Claude Code
+## Practical Workflows with Claude Code
 
-Workflow 1: Initial Repository Setup
+## Workflow 1: Initial Repository Setup
 
 When setting up a new repository with Bazel and remote caching, Claude Code can guide you through the complete process:
 
@@ -400,7 +397,7 @@ And the companion `.bazelversion` that pins the exact Bazel release:
 
 Pinning the Bazel version is important for cache correctness. If different developers run different Bazel versions, the toolchain identifier changes and cache keys diverge, causing every CI build to rebuild from scratch.
 
-Workflow 2: Debugging Cache Misses
+## Workflow 2: Debugging Cache Misses
 
 When builds aren't caching as expected, Claude Code can help diagnose common issues:
 
@@ -447,7 +444,7 @@ Common root causes and fixes:
 | Non-hermetic toolchain | Misses on OS version changes | Use `rules_cc` hermetic toolchain |
 | `ctx.actions.run_shell` with `date` | Always misses | Replace with deterministic equivalent |
 
-Workflow 3: Optimizing Cache Usage
+## Workflow 3: Optimizing Cache Usage
 
 Claude Code can recommend optimizations based on your build patterns:
 
@@ -508,9 +505,9 @@ Instrument your CI pipeline to report hit rates over time. A drop in hit rate is
   run: python3 scripts/analyze_cache.py build_events.json >> $GITHUB_STEP_SUMMARY
 ```
 
-Best Practices for Remote Cache Workflows
+## Best Practices for Remote Cache Workflows
 
-Authentication and Security
+## Authentication and Security
 
 Always use authenticated connections to your remote cache, especially in production environments. Claude Code can help you set up credentials securely:
 
@@ -546,7 +543,7 @@ build:ci --remote_upload_local_results=true
 build:ci --remote_cache_header=Authorization=Bearer ${CI_CACHE_WRITE_TOKEN}
 ```
 
-Cache Invalidation Strategy
+## Cache Invalidation Strategy
 
 Sometimes you need to intentionally invalidate cache entries. Create a skill that handles this:
 
@@ -578,7 +575,7 @@ build --remote_default_exec_properties=cache-silo=2026-03-15
 
 Changing the `cache-silo` value effectively invalidates every cached artifact without deleting anything from the storage backend. Old entries will expire via LRU eviction.
 
-Monitoring and Alerts
+## Monitoring and Alerts
 
 Integrate cache monitoring into your CI/CD pipeline:
 
@@ -635,9 +632,9 @@ A complete GitHub Actions monitoring job that posts a summary and fails if the h
 
 Setting up a Datadog or Grafana dashboard for cache hit rates over time gives you the long-term visibility you need to catch regressions before they affect developer productivity.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Build Fails When Remote Cache Is Unavailable
+## Build Fails When Remote Cache Is Unavailable
 
 By default Bazel treats a remote cache failure as a build failure. Add `--remote_local_fallback` to fall back to local execution gracefully:
 
@@ -646,7 +643,7 @@ build:remote --remote_local_fallback
 build:remote --remote_local_fallback_strategy=local
 ```
 
-TLS Certificate Errors
+## TLS Certificate Errors
 
 Self-signed certificates are a common problem. You can provide a custom CA cert:
 
@@ -662,7 +659,7 @@ Or, for development only (never production), disable TLS verification:
 build:dev-insecure --remote_cache=grpc://cache.internal:9090
 ```
 
-Cache Writes Timing Out in CI
+## Cache Writes Timing Out in CI
 
 Large artifacts can time out on slow upload links. Increase the timeout and limit parallelism:
 
@@ -673,7 +670,7 @@ build:ci --jobs=8
 
 The `--jobs` flag controls how many concurrent Bazel actions run, which indirectly caps the number of simultaneous cache uploads.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Bazel remote caching creates a powerful workflow for build optimization. By automating cache management tasks, debugging issues, and providing actionable insights, Claude Code helps your team achieve faster builds and better developer experience. Start with a simple cache configuration, use skills to manage common operations, and progressively optimize as your build patterns mature.
 

@@ -16,7 +16,7 @@ permalink: /claude-code-skill-output-formatting-broken-fix/
 
 Your Claude Code skill is producing output, but the formatting is wrong. code blocks render as plain text, markdown headings appear literally, lists collapse into one line, or the output structure does not match what the skill is supposed to produce. This guide covers every known cause of broken output formatting in Claude Code skills and gives you the fix.
 
-Understanding Output Formatting in Claude Code
+## Understanding Output Formatting in Claude Code
 
 Claude Code renders output differently depending on the context:
 
@@ -27,11 +27,11 @@ Claude Code renders output differently depending on the context:
 
 If the same skill output looks correct in one context and broken in another, it is a rendering environment issue, not a skill issue. If it looks wrong everywhere, the skill instructions are producing the wrong output structure.
 
-Problem 1: Markdown Appearing as Raw Symbols
+## Problem 1: Markdown Appearing as Raw Symbols
 
 Symptom: You see `bold` instead of bold, `# Heading` as literal text, or `- item` not rendering as a bullet.
 
-Cause A: Running in a plain terminal without markdown rendering
+## Cause A: Running in a plain terminal without markdown rendering
 
 Claude Code outputs markdown-formatted text. If your terminal does not render markdown (most terminals do not by default), you see raw symbols.
 
@@ -46,15 +46,15 @@ Use CAPITALIZED WORDS for emphasis instead of asterisks.
 Use numbered lists (1. 2. 3.) and hyphens for structure.
 ```
 
-Cause B: The skill file itself uses inconsistent formatting
+## Cause B: The skill file itself uses inconsistent formatting
 
 If the skill instructions mix markdown and plain text guidance, Claude produces mixed output. Keep the output format instruction unambiguous.
 
-Problem 2: Code Blocks Not Rendering Correctly
+## Problem 2: Code Blocks Not Rendering Correctly
 
 Symptom: Code inside backtick blocks appears with extra whitespace, wrong indentation, or without syntax highlighting.
 
-Cause: Language tag missing from fenced code block instruction
+## Cause: Language tag missing from fenced code block instruction
 
 If the skill does not specify language tags in its output instructions, Claude may omit them:
 
@@ -174,7 +174,7 @@ Then re-build with clean entries. Going forward, instruct `supermemory` to store
 Save checkpoint: [description as plain text, no markdown formatting]
 ```
 
-Problem 8: Output Truncated Mid-Way
+## Problem 8: Output Truncated Mid-Way
 
 If skill output consistently gets cut off before completing. lists that end abruptly, code blocks that do not close. the cause is usually hitting the response length limit.
 
@@ -216,7 +216,7 @@ Output Format Rules
 - Command output: always wrap in a bash fenced block
 ```
 
-Verifying Your Fix
+## Verifying Your Fix
 
 After updating skill instructions, test with a controlled output request:
 

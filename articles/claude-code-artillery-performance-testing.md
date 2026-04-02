@@ -13,10 +13,6 @@ tags: [claude-code, claude-skills, artillery, performance-testing, load-testing]
 ---
 {% raw %}
 
-
-
-Claude Code Artillery Performance Testing: A Practical Guide
-
 Load testing remains one of the most critical yet often overlooked aspects of software development. When your application needs to handle hundreds or thousands of concurrent users, understanding its breaking points before deployment saves hours of debugging and frustrated users. Combining Claude Code with Artillery creates a powerful workflow for generating, running, and analyzing performance tests efficiently.
 
 This guide shows you how to integrate Claude Code with Artillery for performance testing, using practical examples you can apply immediately to your projects.
@@ -31,7 +27,7 @@ Key features include:
 - Plugin ecosystem for custom scenarios
 - Cloud-native design for distributed testing
 
-Setting Up Your Testing Environment
+## Setting Up Your Testing Environment
 
 Before you begin, ensure you have Node.js installed. Create a new project directory and install Artillery:
 
@@ -43,7 +39,7 @@ npm install artillery
 
 For Claude Code integration, you'll want the Artillery CLI accessible globally or through npx. If you're using the pdf skill or docx skill to generate test documentation, you might also want to install additional dependencies for report generation.
 
-Creating Your First Load Test
+## Creating Your First Load Test
 
 Artillery uses configuration files to define your test scenarios. Here's a basic configuration that tests a REST API endpoint:
 
@@ -88,7 +84,7 @@ Save this as `login-load-test.yml`. Run it with:
 npx artillery run login-load-test.yml
 ```
 
-Generating Tests with Claude Code
+## Generating Tests with Claude Code
 
 This is where Claude Code shines. Instead of manually writing complex test scenarios, you can describe your API endpoints and expected behaviors, and Claude Code will generate the Artillery configuration. Using the [tdd skill, you can create comprehensive test suites](/claude-tdd-skill-test-driven-development-workflow/) that cover authentication, error handling, and edge cases.
 
@@ -98,7 +94,7 @@ For example, tell Claude Code:
 
 Claude Code will produce a YAML configuration tailored to your GraphQL endpoints, complete with variable payloads and sequential flows.
 
-Analyzing Results Effectively
+## Analyzing Results Effectively
 
 Artillery outputs detailed metrics after each run. Look for these key indicators:
 
@@ -112,7 +108,7 @@ For deeper analysis, export results to JSON and process them with custom scripts
 npx artillery run login-load-test.yml --output results.json --format json
 ```
 
-Modeling Realistic User Journeys
+## Modeling Realistic User Journeys
 
 Instead of testing endpoints in isolation, create flows that represent actual user behavior. An e-commerce checkout flow, for example, tests how your system handles sequential, stateful operations under load:
 
@@ -160,9 +156,9 @@ config:
       name: "Recovery"
 ```
 
-Advanced Strategies
+## Advanced Strategies
 
-Dynamic Data Generation
+## Dynamic Data Generation
 
 Real-world applications require unique data per request. Use Artillery's built-in functions or custom processors:
 
@@ -184,7 +180,7 @@ module.exports = {
 
 Reference this in your config with `processor: "./processors"`.
 
-Distributed Load Testing
+## Distributed Load Testing
 
 For true scale testing, run Artillery across multiple machines. The webapp-testing skill can help you coordinate test execution and aggregate results from distributed runners.
 
@@ -192,7 +188,7 @@ For true scale testing, run Artillery across multiple machines. The webapp-testi
 artillery run --config cloud-config.yml login-load-test.yml
 ```
 
-Integration with CI/CD
+## Integration with CI/CD
 
 Automate performance testing in your pipeline. For broader CI patterns, see [Claude Code GitHub Actions approval workflows](/claude-code-github-actions-approval-workflows/). A complete GitHub Actions workflow:
 
@@ -227,13 +223,13 @@ npx artillery run api-test.yml --threshold "p95.responseTime:500"
 
 This fails the build if 95% of requests exceed 500ms, preventing performance regressions from reaching production.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Testing against localhost often masks real-world issues. Always test against staging environments that mirror production infrastructure. Additionally, avoid testing with unrealistic arrival rates that don't reflect actual user behavior. Gradually increase load as shown in the phase configuration above.
 
 Another mistake is ignoring think times. Users don't hammer APIs continuously, include realistic delays between requests to get accurate latency measurements.
 
-Using Claude Skills for Enhanced Testing
+## Using Claude Skills for Enhanced Testing
 
 Several Claude Code skills complement performance testing workflows:
 
@@ -244,7 +240,7 @@ Several Claude Code skills complement performance testing workflows:
 
 By combining these tools, you build a comprehensive testing pipeline that catches performance issues early and documents findings clearly.
 
-Conclusion
+## Conclusion
 
 Claude Code and Artillery together form a practical combination for modern performance testing. Automate test generation, run scalable load scenarios, and analyze results systematically. Start with simple configurations, gradually add complexity, and integrate testing into your development workflow. Your users will thank you when the application handles production traffic without breaking a sweat.
 

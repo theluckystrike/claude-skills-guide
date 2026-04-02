@@ -19,7 +19,7 @@ Claude Code Dart Flutter Cross Platform Development Guide
 
 [This guide covers practical strategies for building Flutter applications with Claude Code](/claude-tdd-skill-test-driven-development-workflow/), focusing on workflow automation, testing, and state management.
 
-Setting Up Your Flutter Workflow with Claude
+## Setting Up Your Flutter Workflow with Claude
 
 When starting a new Flutter project, Claude Code can generate the complete project structure with proper organization. Instead of manually creating directories for `lib/`, `test/`, and `assets/`, you can describe your requirements and let Claude scaffold the foundation.
 
@@ -60,7 +60,7 @@ You are a Flutter development expert specializing in cross-platform workflows.
 
 This skill gives Claude context about your Flutter expertise level and makes it aware of the tools it can use to assist with your projects.
 
-State Management and Code Generation
+## State Management and Code Generation
 
 Flutter state management remains a critical decision point. Whether you choose Riverpod, BLoC, or Provider, Claude Code helps implement the chosen pattern correctly. For Riverpod, Claude can generate provider files with proper typing:
 
@@ -134,7 +134,7 @@ Claude can also generate the corresponding widget bindings, making it easy to co
 
 The [tdd skill](/best-claude-skills-for-developers-2026/) proves invaluable here. It guides you through test-driven development, ensuring your state management logic works correctly before building UI components. When implementing complex state flows, write tests first using the tdd workflow, then implement the code to pass those tests.
 
-Building UI Components with Claude
+## Building UI Components with Claude
 
 Flutter's widget composition model benefits from Claude's ability to generate consistent, reusable components. The frontend-design skill assists with responsive layouts and Material Design implementation.
 
@@ -237,7 +237,7 @@ class AppButton extends StatelessWidget {
 
 Claude generates these patterns quickly and can adapt them for different screen sizes using `LayoutBuilder` and `MediaQuery` for responsive design.
 
-Responsive Layout Templates
+## Responsive Layout Templates
 
 Create reusable layout patterns that work across all platforms:
 
@@ -272,7 +272,7 @@ class ResponsiveBuilder extends StatelessWidget {
 
 This pattern allows you to define platform-specific layouts while maintaining a unified codebase.
 
-Implementing Navigation with GoRouter
+## Implementing Navigation with GoRouter
 
 Modern Flutter apps benefit from declarative routing, and GoRouter is the recommended approach. Claude Code helps you set up proper routing with deep links, redirects, and route guards.
 
@@ -308,7 +308,7 @@ final routerProvider = Provider<GoRouter>((ref) {
 });
 ```
 
-Database and Backend Integration
+## Database and Backend Integration
 
 Most Flutter applications require local storage or backend communication. The pdf skill helps when generating reports or invoices from stored data, but for data persistence, Flutter works with several options.
 
@@ -346,7 +346,7 @@ class UserRepositoryImpl implements UserRepository {
 
 This pattern, which Claude can generate based on your API contracts, separates data fetching from business logic cleanly.
 
-Testing Flutter Applications
+## Testing Flutter Applications
 
 The tdd skill integrates well with Flutter testing. Write widget tests using `flutter_test`:
 
@@ -409,7 +409,7 @@ flutter test --platform chrome
 flutter test --platform ios
 ```
 
-Performance Optimization
+## Performance Optimization
 
 Flutter performance tuning involves several areas where Claude provides guidance:
 
@@ -432,7 +432,7 @@ dart devtools
 
 Claude can help interpret the results and suggest specific optimizations based on your app's characteristics.
 
-Platform-Specific Features
+## Platform-Specific Features
 
 When building for multiple platforms, you encounter platform channels. Claude helps implement method channels for native iOS and Android functionality:
 
@@ -472,7 +472,7 @@ class PlatformService {
 
 The corresponding Swift or Kotlin implementation handles the native side. Claude generates both the Dart and platform-specific code based on your requirements.
 
-Conditional Platform Implementation
+## Conditional Platform Implementation
 
 For code that differs between platforms, use conditional imports effectively:
 
@@ -515,7 +515,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-Deployment and CI/CD
+## Deployment and CI/CD
 
 Building for iOS requires macOS with Xcode, but you can automate Android and web builds on any platform. GitHub Actions combined with Flutter's CLI enables continuous deployment:
 
@@ -561,7 +561,7 @@ android {
 }
 ```
 
-Practical Workflow
+## Practical Workflow
 
 Here's a complete example of how Claude Code fits into a typical Flutter development session:
 
@@ -573,14 +573,14 @@ Here's a complete example of how Claude Code fits into a typical Flutter develop
 
 This workflow reduces context switching and helps maintain focus on what matters: building great cross-platform experiences.
 
-Actionable Tips for Flutter Development with Claude
+## Actionable Tips for Flutter Development with Claude
 
 - Create project-specific skills that understand your app's architecture and naming conventions
 - Use Claude for repetitive patterns like CRUD operations, API integrations, and form validation
 - Use Claude for debugging by describing error messages and getting targeted solutions
 - Maintain a code snippets library that Claude can reference for your team's conventions
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Flutter development from manual coding to collaborative problem-solving. By using skills like tdd for test-driven development, frontend-design for UI implementation, and Claude Code for deployment automation, you build production-quality applications faster.
 

@@ -13,18 +13,15 @@ score: 7
 permalink: /claude-md-secrets-and-sensitive-info-handling/
 ---
 
-
-Claude MD Secrets and Sensitive Info Handling
-
 When you build Claude skills as Markdown files, you often need to work with API keys, database credentials, tokens, and other sensitive information. This guide covers practical patterns for handling secrets securely in your Claude skill workflows without exposing credentials to logs, outputs, or unintended parties.
 
-Why Secret Handling Matters in Claude Skills
+## Why Secret Handling Matters in Claude Skills
 
 Claude skills live as plain Markdown files in your `~/.claude/skills/` directory. Any credentials embedded directly in these files get loaded into Claude's context during every session. This creates several risks: credentials appear in conversation history, get included in potential AI training data, and may leak through error messages or debug outputs.
 
 The solution is never embedding secrets directly in your skill files. Instead, use environment variables, secure vaults, or external configuration files that Claude reads at runtime.
 
-Environment Variables: The Foundation
+## Environment Variables: The Foundation
 
 The most straightforward approach uses environment variables. Claude automatically inherits all exported environment variables from your shell, making them accessible without modification to your skill files.
 
@@ -61,7 +58,7 @@ Before performing any AWS operations, verify:
 If any required variables are missing, respond with a clear error message listing the missing variables. Do NOT proceed with any operations until all required credentials are available.
 ```
 
-Using .env Files with Dotenv Skills
+## Using .env Files with Dotenv Skills
 
 For projects using the dotenv pattern, create a skill that loads environment variables from a `.env` file. This skill helps Claude understand how to work with your project's configuration:
 
@@ -85,7 +82,7 @@ The .env file should contain:
 
 This approach keeps secrets on your local filesystem while giving Claude the context it needs to work with them properly.
 
-The SuperMemory Skill for Encrypted Notes
+## The SuperMemory Skill for Encrypted Notes
 
 For more sophisticated secret management, consider integrating with password managers or encrypted note systems. The supermemory skill can help organize sensitive information in an encrypted format that Claude can access without exposing raw secrets.
 
@@ -108,7 +105,7 @@ Example workflow:
 - You do not retain or log the key after the operation completes
 ```
 
-Integrating with HashiCorp Vault
+## Integrating with HashiCorp Vault
 
 For enterprise environments, Vault provides a solid secrets management solution. Create a skill that establishes Vault integration patterns:
 
@@ -129,7 +126,7 @@ Avoid hardcoding Vault addresses or tokens in skill files.
 
 This pattern scales well for teams requiring centralized secrets management with audit trails and rotation policies.
 
-Claude Code's Built-in Secret Handling
+## Claude Code's Built-in Secret Handling
 
 Claude Code itself provides some secret handling capabilities through its conversation context management. However, you should treat the following as permanent storage:
 
@@ -139,7 +136,7 @@ Claude Code itself provides some secret handling capabilities through its conver
 
 Always assume that anything typed or displayed in a Claude session could be captured somewhere. This mindset prevents accidental secret exposure.
 
-Practical Example: API Integration Skill
+## Practical Example: API Integration Skill
 
 Here's a complete example showing secure API integration:
 
@@ -170,7 +167,7 @@ If authentication fails:
 - Offer to validate the variable format without revealing its value
 ```
 
-Temporary Secret Patterns
+## Temporary Secret Patterns
 
 Sometimes you need to work with temporary secrets during a session. Use these patterns:
 
@@ -184,7 +181,7 @@ When:
 4. Recommend the user rotate the credential if it was shared verbally
 ```
 
-Best Practices Summary
+## Best Practices Summary
 
 - Never embed secrets directly in `.md` skill files
 - Use environment variables for all sensitive configuration
@@ -195,7 +192,6 @@ Best Practices Summary
 - Rotate secrets regularly regardless of storage method
 
 Following these patterns keeps your Claude skill workflows secure while maintaining the flexibility needed for complex development tasks. The key principle: secrets should flow through Claude's context without ever being written to persistent storage beyond your secure vault.
-
 
 Related Reading
 

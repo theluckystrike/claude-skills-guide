@@ -16,7 +16,7 @@ permalink: /how-data-scientists-use-claude-code-for-analysis/
 
 Data science workflows involve repetitive tasks: cleaning datasets, generating reports, running statistical models, and documenting findings. Claude Code with its skill system streamlines these workflows by providing specialized commands for common data science operations. This guide shows practical ways to integrate Claude Code into your analysis pipeline. from raw data ingestion through production-ready pipelines, with concrete code examples at every stage.
 
-Activating Data Science Skills
+## Activating Data Science Skills
 
 [Claude Code skills are Markdown files that define specialized behavior](/claude-skill-md-format-complete-specification-guide/) The system loads these skills when you invoke them with a forward slash command. For data science work, several skills prove particularly valuable.
 
@@ -32,7 +32,7 @@ To activate a skill in your Claude Code session, simply type:
 
 Each skill loads its instructions and tailors Claude's responses to that domain. You can activate multiple skills in a single session. Claude accumulates their context, so a session running `/xlsx` and `/tdd` simultaneously will apply both spreadsheet handling patterns and test-writing discipline to the same problem.
 
-Loading and Cleaning Data
+## Loading and Cleaning Data
 
 When starting a new analysis project, describe your data source to Claude. For example, tell Claude you have a CSV file with customer purchase history and need to identify trends. Claude can then guide you through loading the data with pandas, handling missing values, and performing initial exploration.
 
@@ -95,7 +95,7 @@ df = flag_outliers(df, 'revenue')
 print(df['revenue_outlier'].value_counts())
 ```
 
-Automating Report Generation
+## Automating Report Generation
 
 Data scientists spend significant time creating reports. The `/pdf` skill combined with Python's report generation libraries automates much of this work.
 
@@ -152,7 +152,7 @@ def build_full_report(data, output_path='report.pdf'):
     print(f"Report saved: {output_path}")
 ```
 
-Documenting Analysis Workflows
+## Documenting Analysis Workflows
 
 Reproducibility matters in data science. The `/supermemory` skill helps you maintain a knowledge base of your analysis decisions, code snippets, and findings. When you document your methodology within this skill, future iterations become faster because Claude remembers your prior approaches.
 
@@ -196,7 +196,7 @@ project/
 
 This structure, paired with `/supermemory` context, means Claude can pick up context about your project across sessions without re-explaining the full architecture each time.
 
-Building Testable Analysis Pipelines
+## Building Testable Analysis Pipelines
 
 The `/tdd` skill brings test-driven development to data science workflows. While traditional TDD focuses on application code, the principles apply well to analysis pipelines:
 
@@ -259,7 +259,7 @@ def test_drop_duplicate_transactions_keeps_first(sample_transactions):
     assert result['transaction_id'].nunique() == 3
 ```
 
-Visualizing Results
+## Visualizing Results
 
 The `/frontend-design` skill occasionally helps data scientists create dashboards or interactive visualizations. While primarily aimed at web developers, the skill's guidance on layout and user experience improves any data presentation:
 
@@ -323,7 +323,7 @@ def build_summary_dashboard(data, output_path='dashboard.png'):
     print(f"Dashboard saved: {output_path}")
 ```
 
-Skill Selection Reference
+## Skill Selection Reference
 
 Different data science tasks map to different Claude Code skills. This table helps you pick the right skill before starting a task:
 
@@ -338,7 +338,7 @@ Different data science tasks map to different Claude Code skills. This table hel
 
 When in doubt, start with no skill active. If you find Claude is missing domain-specific patterns. for example, it keeps forgetting how your team names Excel sheets. activate the relevant skill or document your conventions using `/supermemory`.
 
-Integration with Existing Tools
+## Integration with Existing Tools
 
 Claude Code works alongside your existing data science stack. Whether you use Jupyter notebooks, VS Code with the Jupyter extension, or Python scripts in your terminal, Claude integrates through conversation rather than replacing your tools.
 
@@ -375,7 +375,7 @@ def revenue_by_segment(transactions):
 
 This lets you run the same logic locally. with the test suite from `/tdd`. before the dbt model runs in production.
 
-Getting Started
+## Getting Started
 
 Begin by identifying repetitive tasks in your workflow. Common starting points include:
 

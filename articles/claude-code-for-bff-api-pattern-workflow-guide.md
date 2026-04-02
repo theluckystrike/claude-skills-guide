@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for BFF API Pattern Workflow Guide
 
 The Backend-for-Frontend (BFF) pattern has become an essential architecture for modern applications, especially those with multiple client types like web, mobile, and embedded systems. Claude Code can dramatically accelerate your BFF development workflow by automating repetitive tasks, generating boilerplate, and helping you design cohesive API layers. This guide shows you how to use Claude Code effectively for BFF API pattern implementation.
 
-Understanding the BFF Pattern
+## Understanding the BFF Pattern
 
 The BFF pattern involves creating dedicated backend services for each frontend client type. Instead of having a single monolithic API serving all clients, you create lightweight API gateways that aggregate, transform, and optimize data for specific frontend needs. This approach offers several advantages:
 
@@ -30,7 +29,7 @@ The BFF pattern involves creating dedicated backend services for each frontend c
 
 Claude Code excels at helping you design, implement, and maintain BFF layers by understanding your specific client requirements and generating appropriate API contracts.
 
-Setting Up Your BFF Development Environment
+## Setting Up Your BFF Development Environment
 
 Before diving into workflows, ensure your development environment is properly configured. Create a dedicated skill for BFF development that understands your stack:
 
@@ -43,11 +42,11 @@ description: "Helps develop BFF (Backend-for-Frontend) API services"
 
 This skill has access to file operations and code search tools, enabling it to understand your existing codebase and generate appropriate BFF code.
 
-Creating BFF Services with Claude Code
+## Creating BFF Services with Claude Code
 
 When starting a new BFF service, use Claude Code to scaffold the entire project structure. Here's a practical workflow:
 
-Step 1: Define Your API Contract
+## Step 1: Define Your API Contract
 
 Begin by describing your client requirements to Claude. For example:
 
@@ -55,7 +54,7 @@ Begin by describing your client requirements to Claude. For example:
 
 Claude will generate an OpenAPI specification or similar contract that defines endpoints, request/response shapes, and authentication requirements.
 
-Step 2: Generate Project Structure
+## Step 2: Generate Project Structure
 
 Use Claude Code to scaffold the BFF project:
 
@@ -76,7 +75,7 @@ src/
  index.ts         # Application entry point
 ```
 
-Step 3: Implement Aggregation Logic
+## Step 3: Implement Aggregation Logic
 
 The core value of BFF lies in aggregating multiple backend services into coherent responses. Here's how Claude Code helps implement this:
 
@@ -119,9 +118,9 @@ app.get('/api/mobile/user-dashboard', async (req, res) => {
 });
 ```
 
-Practical BFF Workflows with Claude Code
+## Practical BFF Workflows with Claude Code
 
-Workflow 1: Schema-First Development
+## Workflow 1: Schema-First Development
 
 Start with your frontend team to define the exact data shape each client needs. Use Claude Code to convert these requirements into:
 
@@ -146,7 +145,7 @@ interface MobileProductDetail {
 }
 ```
 
-Workflow 2: Implementing GraphQL BFF
+## Workflow 2: Implementing GraphQL BFF
 
 For complex frontend requirements, GraphQL BFFs provide flexibility. Claude Code can help set up a GraphQL layer:
 
@@ -182,7 +181,7 @@ const resolvers = {
 };
 ```
 
-Workflow 3: Response Transformation
+## Workflow 3: Response Transformation
 
 Claude Code excels at writing transformation logic that adapts backend responses to client needs:
 
@@ -206,7 +205,7 @@ function transformForMobile(product: WebProduct): MobileProduct {
 }
 ```
 
-Best Practices for BFF Development with Claude Code
+## Best Practices for BFF Development with Claude Code
 
 1. Keep BFFs Focused
 
@@ -265,7 +264,7 @@ Generate API docs from code
 claude "Generate OpenAPI documentation from all route files"
 ```
 
-Actionable Summary
+## Actionable Summary
 
 To get started with Claude Code for BFF development:
 

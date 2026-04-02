@@ -13,13 +13,12 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code Tips for Intermediate Developers
 
 If you have moved past the basics of Claude Code and are ready to unlock its full potential, these practical tips will help you work smarter, not harder. This guide covers skill selection strategies, prompt engineering patterns, file operation techniques, and automation approaches that developers and power users actually use in production workflows. Each section builds on the assumption that you are already comfortable with basic Claude Code usage and are looking for the kind of depth that separates competent users from truly efficient ones.
 
-Choose the Right Skill for the Job
+## Choose the Right Skill for the Job
 
 Claude Code skills are not one-size-fits-all tools. Each skill is designed for specific use cases, and selecting the correct one dramatically affects your productivity and the quality of output you receive.
 
@@ -31,7 +30,7 @@ If you practice test-driven development, the tdd skill structures your workflow 
 
 The key principle: match your task to the skill's specialty. Using a general-purpose prompt when a specialized skill exists means leaving performance on the table.
 
-Skill Selection Decision Guide
+## Skill Selection Decision Guide
 
 | Task Type | Recommended Skill | Why |
 |---|---|---|
@@ -44,11 +43,11 @@ Skill Selection Decision Guide
 | Presentation decks | pptx | pptx generation library patterns |
 | General coding tasks | (none) | Default Claude Code is fine |
 
-Master Prompt Engineering Patterns
+## Master Prompt Engineering Patterns
 
 Beyond basic instructions, intermediate developers benefit from structured prompt patterns that produce consistent, high-quality outputs on the first attempt. The cost of vague prompts is wasted round-trips: you get output that is roughly correct but needs correction, which takes more total time than writing a clear prompt up front.
 
-The Context-Frame-Output Pattern
+## The Context-Frame-Output Pattern
 
 Structure your prompts with three clear sections:
 
@@ -73,7 +72,7 @@ Include TypeScript types for the auth context value.
 
 This pattern reduces ambiguity and produces more accurate code the first time. The Frame section is where most developers underinvest. specifying what NOT to do is as important as specifying what to do.
 
-Chain-of-Thought for Complex Tasks
+## Chain-of-Thought for Complex Tasks
 
 When facing multi-step problems, explicitly ask Claude to think through the solution before writing code:
 
@@ -93,7 +92,7 @@ in order of likelihood before suggesting any changes.
 
 This avoids the common trap of jumping to premature optimization.
 
-Role and Persona Framing
+## Role and Persona Framing
 
 Setting an explicit role or perspective at the start of a complex session sharpens the quality of responses:
 
@@ -111,7 +110,7 @@ Review my authentication service.
 
 The first prompt produces structured, actionable feedback. The second produces generic observations. Role framing is particularly effective for review tasks, architectural decisions, and security analysis.
 
-The Minimal Failing Example Pattern
+## The Minimal Failing Example Pattern
 
 For debugging, the single most effective prompt pattern is asking for a minimal reproduction first:
 
@@ -122,11 +121,11 @@ suggesting a fix. Show me the minimal code that demonstrates the issue.
 
 This forces the problem to be isolated from the complexity of your real codebase. A surprising number of bugs disappear during this process, which tells you the root cause was in the surrounding code rather than the suspected location.
 
-Use File Operations Strategically
+## Use File Operations Strategically
 
 Claude Code's file operations become powerful when you understand how to use them efficiently. The difference between a fast workflow and a slow one often comes down to how you structure file reads and edits.
 
-Batch Related Operations
+## Batch Related Operations
 
 Instead of multiple separate operations, group related changes:
 
@@ -144,7 +143,7 @@ that follows the same conventions."
 
 When you ask Claude to read multiple related files in a single prompt, it can reason about their relationships and conventions before generating output. Reading them sequentially in separate prompts means re-establishing context each time.
 
-Use Edit Operations Over Rewrite
+## Use Edit Operations Over Rewrite
 
 When modifying existing code, prefer targeted edits over full file rewrites:
 
@@ -159,7 +158,7 @@ Full rewrites introduce risk: something in the existing file that Claude did not
 
 This matters especially in collaborative projects where preserving git blame and file metadata reduces friction during PR reviews.
 
-Provide Architecture Context Before Detailed look
+## Provide Architecture Context Before Detailed look
 
 For projects with non-obvious structure, invest one prompt in establishing architectural context:
 
@@ -171,11 +170,11 @@ Summarize what you learned, then we will work on adding a new endpoint.
 
 This front-loaded context read pays dividends throughout the session. Without it, Claude makes assumptions about your structure that may not match reality, producing code that needs manual adjustment to fit.
 
-Automate Repetitive Workflows
+## Automate Repetitive Workflows
 
 Intermediate users should build reusable patterns for common tasks rather than re-explaining the same context in every session.
 
-Create Project-Specific Skills
+## Create Project-Specific Skills
 
 For recurring project needs, create custom skills in your project repository that encode your conventions:
 
@@ -202,7 +201,7 @@ Good project skills document:
 - Naming conventions
 - What to mock and what to test against the real implementation
 
-Script Common Sequences
+## Script Common Sequences
 
 For multi-step workflows that you run regularly, shell scripts provide repeatability:
 
@@ -236,11 +235,11 @@ Wrapping these in npm scripts makes them accessible to the whole team without re
 }
 ```
 
-Work Effectively with Context
+## Work Effectively with Context
 
 Managing Claude's context window efficiently improves long-running session performance. Context is a finite resource. filling it with redundant or irrelevant information degrades the quality of responses on complex tasks.
 
-Use Reference Files Strategically
+## Use Reference Files Strategically
 
 Instead of pasting large files into prompts, reference them by path and let Claude read them:
 
@@ -259,7 +258,7 @@ In src/services/payment.ts, focus on the processRefund function
 (around line 200-280). Read just that function and its helper calls.
 ```
 
-Implement Context Refresh Points
+## Implement Context Refresh Points
 
 For complex sessions spanning many tasks, periodically summarize progress before continuing:
 
@@ -271,17 +270,17 @@ and what remains. Then continue with implementing the password reset flow.
 
 This serves two purposes: it confirms you and Claude have the same understanding of where things stand, and it effectively resets the active context to focus on what matters next rather than accumulating the full history of the session.
 
-Separate Concerns Across Sessions
+## Separate Concerns Across Sessions
 
 Resist the urge to keep a single session running for an entire day. Each session starts with a clean, focused context. Starting a new session for each distinct feature or bug fix tends to produce better results than one long session where context accumulates and becomes noisy.
 
 Keep a brief working note of where you left off between sessions. a few lines in a scratch file or a commented-out block in the relevant file is enough to re-establish context quickly in a new session.
 
-Debug Smarter, Not Harder
+## Debug Smarter, Not Harder
 
 Debugging with Claude Code is most effective when you treat it as a structured investigation rather than asking for a fix directly.
 
-Reproduce Before Fixing
+## Reproduce Before Fixing
 
 Always establish a reproduction case before discussing solutions:
 
@@ -293,7 +292,7 @@ Once we have the reproduction, we can discuss the fix.
 
 This ensures you understand the root cause rather than treating symptoms. It also gives you a regression test. once you have the minimal reproduction, you can add it to your test suite to prevent the bug from returning.
 
-Use Structured Error Analysis
+## Use Structured Error Analysis
 
 When encountering errors, provide complete structured information rather than just the error message:
 
@@ -314,7 +313,7 @@ Relevant config: tests use supertest; session middleware is in src/app.ts.
 
 Providing "only occurs in tests" type information immediately focuses the diagnosis. This eliminates guesswork and produces faster, more accurate solutions because Claude can rule out entire categories of causes.
 
-Ask for Explanation Alongside the Fix
+## Ask for Explanation Alongside the Fix
 
 After a fix is proposed, ask for the explanation separately:
 
@@ -325,7 +324,7 @@ and why the fix resolves it. I want to understand the root cause.
 
 This deepens your understanding and helps you catch similar issues in the future. It also gives you a chance to validate that the reasoning is sound before committing to the change.
 
-Build Your Skill Library Intentionally
+## Build Your Skill Library Intentionally
 
 Over time, curate a skill library that reflects your actual workflow rather than collecting every available skill:
 
@@ -343,7 +342,7 @@ The discipline of only keeping skills you actively use is important. Every insta
 
 Review your skill library every few weeks and remove skills you have not used. Community skills also receive updates. re-reading a skill's documentation after a version update often reveals new capabilities you were not aware of.
 
-Advanced Pattern: The Task Brief
+## Advanced Pattern: The Task Brief
 
 For complex, multi-day features, write a task brief as a markdown file at the start of work and reference it in every session:
 
@@ -381,7 +380,6 @@ This approach eliminates the friction of re-establishing context and ensures con
 ---
 
 These tips represent patterns that working developers use daily. Start with one or two that match your current workflow, then gradually incorporate more as they become natural. The goal is not to use every feature, but to identify which capabilities genuinely improve your productivity and eliminate the friction that slows you down.
-
 
 Related Reading
 

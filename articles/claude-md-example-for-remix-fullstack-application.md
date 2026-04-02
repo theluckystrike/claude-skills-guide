@@ -18,7 +18,7 @@ Remix has become one of the most popular fullstack React frameworks, offering a 
 
 This guide shows you how to create and use Claude skills specifically designed for Remix fullstack development. You'll find practical examples, code snippets, and workflow patterns that accelerate your Remix projects.
 
-Setting Up Claude Skills for Remix Development
+## Setting Up Claude Skills for Remix Development
 
 Claude Code's skill system uses Markdown files in `~/.claude/skills/` to provide context-specific guidance. For Remix projects, you want skills that understand loaders, actions, routes, and the fullstack nature of the framework.
 
@@ -36,7 +36,7 @@ nano ~/.claude/skills/remix-fullstack.md
 
 The reason you want a dedicated skill rather than relying on Claude's general knowledge is repeatability. Claude already knows Remix. the skill ensures it applies Remix patterns consistently across your project rather than mixing in patterns from Next.js, Express, or older React Router conventions. A well-written skill anchors Claude to your project's specific version, coding style, and architectural decisions.
 
-Example Claude Skill for Remix Fullstack Development
+## Example Claude Skill for Remix Fullstack Development
 
 Here is a practical skill template you can adapt:
 
@@ -82,7 +82,7 @@ Naming Conventions
 
 This level of detail eliminates entire categories of back-and-forth. Claude won't suggest JWT tokens when you use cookie sessions, won't reach for `fetch()` inside components when you've established the loader pattern, and won't return plain objects from actions when you've specified `json()`.
 
-Working with Loaders and Data Loading
+## Working with Loaders and Data Loading
 
 Loaders are the backbone of Remix data fetching. When you create a skill, specify how Claude should handle server-side data:
 
@@ -141,7 +141,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
 Document this pattern in your skill so Claude reaches for `Promise.all` automatically instead of three sequential awaits that triple your loader latency.
 
-Handling Form Actions
+## Handling Form Actions
 
 Remix actions process form submissions on the server. Your Claude skill should guide proper action implementation:
 
@@ -216,7 +216,7 @@ export async function action({ request }: ActionFunctionArgs) {
 
 Including a library preference like Conform + Zod in your skill means Claude generates this pattern rather than a hand-rolled validation object every time.
 
-Type-Safe Data with TypeScript
+## Type-Safe Data with TypeScript
 
 Remix provides excellent TypeScript support through generic typing. Reference skills that cover these patterns:
 
@@ -263,7 +263,7 @@ export default function Posts() {
 
 Documenting this in your skill prevents Claude from returning `post.createdAt.toLocaleDateString()`. a runtime error because the client receives a string, not a Date instance.
 
-Integration with Claude Skills
+## Integration with Claude Skills
 
 Combine your Remix skill with other Claude skills for comprehensive coverage. The `frontend-design` skill helps with component styling, while `tdd` assists with test-driven development for your route modules:
 
@@ -288,7 +288,7 @@ Here is how different skill combinations apply to real Remix development scenari
 
 Skill combination works because each skill provides focused guidance. When you invoke `/tdd` alongside `/remix-fullstack`, Claude knows to write Vitest tests for loaders using `createRemixStub`. the correct testing approach for Remix. rather than shallow rendering tests that miss the server-side behavior entirely.
 
-Error Handling Patterns
+## Error Handling Patterns
 
 Remix provides ErrorBoundary components for graceful error handling. Your Claude skill should include these patterns:
 
@@ -366,7 +366,7 @@ export function ErrorBoundary() {
 
 Adding this full pattern to your skill means Claude generates production-ready error handling instead of the minimal version that only handles one case.
 
-Nested Routes and Layout Data
+## Nested Routes and Layout Data
 
 One area where a Remix-specific skill pays off most is nested routing. Developers coming from other frameworks often ask Claude for patterns that fight against Remix's design. Your skill should establish the correct mental model:
 
@@ -416,7 +416,7 @@ export async function loader({ params, request }: LoaderFunctionArgs) {
 
 Include a note in your skill: "Use parent routes to load shared data once. Child routes load only their specific data. Never duplicate fetches between parent and child."
 
-Pending UI and Optimistic Updates
+## Pending UI and Optimistic Updates
 
 Remix's `useNavigation` and `useFetcher` hooks provide the building blocks for responsive UI during form submissions. Add these patterns to your skill so Claude includes them automatically:
 
@@ -462,7 +462,7 @@ function ProjectStatusToggle({ project }: { project: Project }) {
 }
 ```
 
-Practical Workflow
+## Practical Workflow
 
 When starting a new Remix feature, reference your skill file:
 
@@ -477,12 +477,11 @@ A realistic workflow looks like this: you tell Claude "Add a project archiving f
 
 Without the skill, you'd need to specify Prisma over raw SQL, Zod over manual validation, cookie sessions over JWT, and a dozen other decisions on every request. The skill captures those decisions once.
 
-Conclusion
+## Conclusion
 
 Creating Claude skills for Remix fullstack development significantly improves your productivity. Skills that understand loaders, actions, nested routing, and error handling provide context-aware assistance throughout your project. The more detail you invest in your skill. libraries, conventions, error handling approaches, TypeScript patterns. the less guidance you need to provide per request and the more consistently Claude applies your architectural decisions.
 
 Combine with complementary skills like `frontend-design`, `tdd`, and `supermemory` for comprehensive development support. Start with the basic template, then extend it each time you correct Claude's output. Within a few sessions, your skill will encode enough project-specific knowledge that Claude feels like a collaborator who has been working on your codebase from the start.
-
 
 Related Reading
 

@@ -16,7 +16,7 @@ permalink: /claude-code-daily-workflow-for-frontend-developers-guide/
 
 Every frontend developer faces recurring tasks: creating components, managing state, styling interfaces, and debugging issues. Claude Code transforms these daily workflows through intelligent automation and specialized skills. This guide shows you how to structure your daily routine for maximum productivity.
 
-Starting Your Day: Project Context Refresh
+## Starting Your Day: Project Context Refresh
 
 Begin each session by ensuring Claude Code understands your current project state. If you installed the supermemory skill, context loads automatically:
 
@@ -37,7 +37,7 @@ Project Context
 
 This context means Claude understands your architecture immediately, no repeated explanations needed.
 
-Morning Component Creation
+## Morning Component Creation
 
 When building new features, use the frontend-design skill for consistent, accessible components:
 
@@ -70,7 +70,7 @@ export function Dashboard({ user, onNavigate }: DashboardProps) {
 
 The skill applies your design system automatically, consistent spacing, colors, and accessibility attributes without manual specification.
 
-Sprint Ticket Workflow: From Backlog to Branch
+## Sprint Ticket Workflow: From Backlog to Branch
 
 Most frontend developers work from a ticket queue. Claude Code integrates cleanly into this pattern. At the start of each day, pull your assigned tickets and describe the work to Claude in plain terms:
 
@@ -94,7 +94,7 @@ Claude inspects your existing `ProductList` component, reads the structure, and 
 
 This ticket-by-ticket rhythm, describe, inspect, generate, review, compounds over a sprint. By Wednesday you are shipping Thursday's scope.
 
-Mid-Day Debugging Sessions
+## Mid-Day Debugging Sessions
 
 When bugs arise, Claude Code accelerates diagnosis. Describe the issue naturally:
 
@@ -122,7 +122,7 @@ For complex debugging, use the mcp-server tools to query your logs directly:
 /mcp-server logs query --service auth --level error --last 1h
 ```
 
-Afternoon Styling and Design Tasks
+## Afternoon Styling and Design Tasks
 
 Frontend developers spend significant time on styling. The canvas-design skill helps generate consistent visual designs:
 
@@ -157,7 +157,7 @@ For design system documentation, use the pdf skill to generate style guides:
 
 This creates a comprehensive PDF with color palettes, typography scales, and component examples.
 
-State and API Integration Patterns
+## State and API Integration Patterns
 
 Frontend work that hits real complexity tends to cluster around two areas: state management and API integration. Claude Code handles both well if you give it enough context upfront.
 
@@ -190,7 +190,7 @@ Follow the API mutation pattern in .claude/patterns.md
 
 After a few weeks, your patterns file becomes a project-specific playbook that Claude applies consistently without re-explanation.
 
-End-of-Day Code Review Preparation
+## End-of-Day Code Review Preparation
 
 Before committing, use Claude Code to review your changes:
 
@@ -217,7 +217,7 @@ Suggested commit message:
 feat(auth): add session refresh on token expiration
 ```
 
-Weekly Skill Optimization
+## Weekly Skill Optimization
 
 Each week, evaluate which skills provide the most value:
 
@@ -235,7 +235,7 @@ claude /skill install canvas-design
 claude /skill install accessibility-testing
 ```
 
-Sample Daily Workflow Script
+## Sample Daily Workflow Script
 
 Create a CLAUDE.md section for your daily routine:
 
@@ -258,7 +258,7 @@ End of Day (16:00-17:00)
 9. Update supermemory with today's progress
 ```
 
-Pro Tips for Frontend Workflows
+## Pro Tips for Frontend Workflows
 
 Chain skills for complex tasks: Combine frontend-design with tdd:
 
@@ -279,7 +279,7 @@ Automate repetitive code: If you write similar code three times, ask Claude to c
 Create a useDebounce hook following our pattern in hooks/useDebounce.ts
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code becomes more valuable as you integrate it consistently into your daily workflow. Start with essential skills (frontend-design, supermemory), add specialized tools as needed, and maintain context through CLAUDE.md. The initial setup time pays dividends in reduced boilerplate, faster debugging, and consistent code quality, all critical for frontend development success.
 

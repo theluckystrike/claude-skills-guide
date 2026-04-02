@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Strangler Fig Pattern Workflow
 
 The strangler fig pattern represents one of the most elegant approaches to modernizing legacy systems without the of massive "big bang" rewrites. Named after the strangler fig tree that slowly envelops and replaces its host, this pattern allows you to incrementally migrate functionality from a legacy system to a modern architecture while keeping everything running smoothly. Claude Code becomes an invaluable partner in executing this migration strategy, providing intelligent assistance from initial analysis through final decommissioning.
 
-Understanding the Strangler Fig Pattern
+## Understanding the Strangler Fig Pattern
 
 Before diving into implementation, you need to grasp the core principles that make this pattern so effective. The strangler fig pattern operates on three fundamental phases that run concurrently rather than sequentially.
 
@@ -31,7 +30,7 @@ Phase Three: Decommissioning occurs when all functionality has been migrated. Th
 
 Claude Code excels at each phase by helping you analyze the existing codebase, generate migration code, maintain test coverage, and verify behavior parity throughout the process.
 
-Analyzing Your Legacy System
+## Analyzing Your Legacy System
 
 Every successful strangler fig migration begins with thorough understanding of what you're migrating. Claude Code can accelerate this discovery phase significantly.
 
@@ -48,7 +47,7 @@ Output this as a structured markdown document that I can use for migration plann
 
 This analysis reveals your migration candidates. Look for standalone features with clear boundaries, these become your first targets. Complex, tightly coupled functionality should wait until you've established a rhythm with simpler migrations.
 
-Setting Up the Migration Facade
+## Setting Up the Migration Facade
 
 The facade serves as the traffic router between your legacy and new systems. Claude Code can help you generate an appropriate facade based on your tech stack.
 
@@ -106,7 +105,7 @@ claude "Create an API Gateway facade in [your-language/framework] that:
 Use environment variables for configuration and include proper TypeScript types."
 ```
 
-Implementing Incremental Feature Migration
+## Implementing Incremental Feature Migration
 
 With your facade in place, you can begin migrating features one at a time. This is where Claude Code demonstrates its value by helping you replicate functionality in the new system while maintaining parity with the old.
 
@@ -139,7 +138,7 @@ claude "Create a verification test script that:
 This will help me verify behavior parity before switching traffic."
 ```
 
-Managing Traffic Switches
+## Managing Traffic Switches
 
 Once a feature is migrated and verified, you update the facade configuration to route traffic to the new implementation. Claude Code can help you manage this systematically.
 
@@ -173,7 +172,7 @@ function resolveTarget(feature: string): 'legacy' | 'modern' {
 
 This allows instant rollback by simply changing environment variables without code deployment.
 
-Best Practices for Strangler Fig Success
+## Best Practices for Strangler Fig Success
 
 The strangler fig pattern rewards patience and discipline. These practices ensure your migrations succeed.
 
@@ -198,7 +197,7 @@ Plan for parallel operation. Your legacy and new systems will run simultaneously
 
 Document everything. As features migrate, update your API documentation to reflect which system handles each endpoint. Mark deprecated endpoints clearly.
 
-When to Use the Strangler Fig Pattern
+## When to Use the Strangler Fig Pattern
 
 This pattern shines in scenarios where you cannot afford downtime or risky deployments. Consider it when migrating from monoliths to microservices, upgrading legacy frameworks (PHP to Node.js, Java to Kotlin), moving from on-premise to cloud, or consolidating multiple legacy systems into one platform.
 

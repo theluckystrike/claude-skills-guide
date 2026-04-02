@@ -18,7 +18,7 @@ Adversarial robustness has become a critical concern for machine learning practi
 
 Claude Code provides an excellent framework for automating adversarial robustness testing. This guide walks through building a comprehensive workflow that integrates perturbation generation, attack simulation, and defensive validation into your existing ML pipeline.
 
-Understanding Adversarial Robustness
+## Understanding Adversarial Robustness
 
 Adversarial robustness refers to a model's ability to maintain correct predictions when faced with adversarial examples, inputs that have been specifically crafted to cause misclassification. These perturbations are often imperceptible to humans but can drastically alter model behavior.
 
@@ -26,7 +26,7 @@ The fundamental challenge is that gradient-based models create decision boundari
 
 Traditional unit tests verify that models work correctly on expected inputs. Adversarial robustness testing goes further by systematically exploring the input space around each prediction to identify failure modes that attackers might exploit.
 
-Setting Up Your Robustness Testing Environment
+## Setting Up Your Robustness Testing Environment
 
 Begin by creating a dedicated skill for adversarial testing. This skill will encapsulate the tools and workflows needed to evaluate model robustness:
 
@@ -148,7 +148,7 @@ class AdversarialTester:
 
 This implementation provides the foundation for testing models against Fast Gradient Sign Method (FGSM) and Projected Gradient Descent (PGD) attacks, the two most common adversarial attack methodologies.
 
-Automating Continuous Robustness Testing
+## Automating Continuous Robustness Testing
 
 Integrate adversarial testing into your CI/CD pipeline to catch robustness regressions before they reach production. Create a Claude Code skill that runs automatically:
 
@@ -192,7 +192,7 @@ echo "Robustness tests completed successfully"
 
 Schedule this to run nightly or on every model update. Set clear thresholds for acceptable robustness, typically 70% or higher adversarial accuracy for production systems.
 
-Implementing Defensive Strategies
+## Implementing Defensive Strategies
 
 Once you identify vulnerabilities, implement defensive measures. Common strategies include adversarial training, input preprocessing, and ensemble methods:
 
@@ -246,7 +246,7 @@ def adversarial_training(model: nn.Module,
 
 Adversarial training significantly improves robustness but typically reduces clean accuracy by 1-3%. This trade-off is often acceptable for security-critical applications.
 
-Measuring and Reporting Robustness Metrics
+## Measuring and Reporting Robustness Metrics
 
 Create comprehensive reports that track robustness over time:
 
@@ -280,7 +280,7 @@ Vulnerability Analysis
 
 Track these metrics in a dashboard to visualize robustness trends across model versions. Sudden drops in adversarial accuracy indicate potential issues requiring immediate investigation.
 
-Building the Complete Workflow
+## Building the Complete Workflow
 
 Tie everything together with a comprehensive skill that orchestrates the full adversarial robustness pipeline:
 
@@ -297,7 +297,7 @@ This workflow handles model loading, test execution, metric calculation, and rep
 
 Building solid ML systems requires proactive security testing. Claude Code makes adversarial robustness evaluation accessible through automation, comprehensive tooling, and continuous monitoring. Start with basic FGSM testing and progressively add more sophisticated attacks and defenses as your workflow matures.
 
-Step-by-Step Guide: Building a Continuous Robustness Testing Pipeline
+## Step-by-Step Guide: Building a Continuous Robustness Testing Pipeline
 
 Here is a concrete approach to integrating adversarial robustness testing into your ML deployment workflow.
 
@@ -311,7 +311,7 @@ Step 4. Implement adversarial training as an experiment. Create a training varia
 
 Step 5. Deploy robustness monitoring for production models. Add input validation at inference time that detects statistical anomalies consistent with adversarial examples. Claude Code generates the detection wrapper that computes feature statistics for each input, compares them to training distribution statistics, and flags anomalous inputs for review.
 
-Common Pitfalls
+## Common Pitfalls
 
 Testing only with FGSM. FGSM is the simplest attack and a model that resists FGSM may still be vulnerable to stronger attacks like PGD or AutoAttack. A model that claims robustness based on FGSM alone is likely overestimating its security. Claude Code generates an evaluation suite that includes multiple attack types at standardized epsilon values.
 
@@ -323,7 +323,7 @@ Evaluating robustness only on aggregate accuracy. Some classes may be much more 
 
 Treating adversarial robustness as a one-time task. Model robustness degrades when you retrain on new data or fine-tune for a different task. Claude Code generates the robustness regression test suite that runs on every model update.
 
-Best Practices
+## Best Practices
 
 Use certified defenses for high-assurance applications. Empirical defenses like adversarial training can be broken by adaptive attacks. For security-critical applications, use certified defenses based on randomized smoothing which provide provable guarantees. Claude Code generates the randomized smoothing wrapper and the certification script.
 
@@ -333,7 +333,7 @@ Maintain adversarial example datasets for regression testing. Save a fixed set o
 
 Document your threat model explicitly. Robustness is meaningful only relative to a threat model: what epsilon constraint, what attack budget, what attack algorithm? Document these parameters explicitly in your model card. Claude Code generates the threat model documentation template.
 
-Integration Patterns
+## Integration Patterns
 
 Weights and Biases integration. Claude Code generates the W&B callback that logs adversarial accuracy, robustness gap, and vulnerability distribution to your existing W&B runs alongside your standard training metrics. Robustness trends across experiments are visible in the same dashboard as your clean accuracy curves.
 
@@ -341,8 +341,7 @@ Model registry integration. Claude Code generates the pre-registration robustnes
 
 Red team automation. Claude Code generates a scheduled adversarial red team job that runs weekly against your production model endpoints using the latest attack algorithms, simulating the behavior of an attacker who periodically tries new approaches to defeat your defenses.
 
-
-Input Preprocessing Defenses
+## Input Preprocessing Defenses
 
 Before reaching the model, input preprocessing can neutralize many adversarial perturbations. Feature squeezing reduces color depth or applies spatial smoothing to remove high-frequency perturbations. JPEG compression removes subtle pixel-level changes that adversarial attacks rely on. These preprocessing steps are fast, require no model retraining, and can be applied at inference time with minimal latency impact.
 
@@ -350,9 +349,7 @@ The trade-off is that preprocessing also changes benign inputs, which can slight
 
 Input certification through randomized smoothing adds Gaussian noise to inputs multiple times, runs inference on each noisy version, and uses the majority vote as the prediction. Certified robustness means you can mathematically prove that no perturbation within a certain radius can change the prediction. Claude Code generates the smoothed classifier wrapper and the certification procedure using the CDF-based radius calculation from the original randomized smoothing paper.
 
-
 ---
-
 
 Related Reading
 

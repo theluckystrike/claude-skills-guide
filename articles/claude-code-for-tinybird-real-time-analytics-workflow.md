@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Real-time analytics has become essential for modern applications, from monitoring user behavior to detecting anomalies in production systems. Tinybird provides a powerful streaming analytics platform that enables developers to build data pipelines with sub-second latency. When combined with Claude Code, you can automate the entire workflow, from schema design to query optimization, making real-time analytics more accessible than ever.
 
 This guide walks you through building a complete Tinybird real-time analytics workflow using Claude Code, with practical examples and actionable advice you can apply to your own projects.
 
-Understanding the Tinybird Workflow
+## Understanding the Tinybird Workflow
 
 Tinybird works by ingesting data through various sources (HTTP APIs, Kafka, S3, etc.), processing it through pipes (which are similar to SQL views but more powerful), and exposing results via a REST API. The key components you'll work with are:
 
@@ -30,7 +29,7 @@ Tinybird works by ingesting data through various sources (HTTP APIs, Kafka, S3, 
 
 Claude Code can help you design schemas, write efficient SQL transformations, and even generate the code needed to integrate with your data sources.
 
-Setting Up Your Project with Claude Code
+## Setting Up Your Project with Claude Code
 
 Before diving into code, ensure you have the Tinybird CLI installed and authenticated. You can install it via npm:
 
@@ -48,7 +47,7 @@ tb init
 
 Claude Code can then help you generate the necessary configuration files and directory structure. Simply describe your analytics needs in natural language, and Claude will create the appropriate `.tinybird` files with data source definitions, pipe configurations, and endpoint specifications.
 
-Designing Your Data Schema
+## Designing Your Data Schema
 
 The foundation of any real-time analytics workflow is a well-designed schema. When working with Tinybird, you need to consider both the data format (JSON, CSV, Parquet) and the column types that will optimize query performance.
 
@@ -70,7 +69,7 @@ For example, if you're tracking user events, your schema might look like:
 
 Claude Code can analyze your data patterns and recommend optimal column types. For instance, it might suggest using LowCardinality for categorical fields like `event_type` to improve compression and query speed. It can also identify opportunities to use AggregateFunction columns for pre-computed metrics.
 
-Building Real-Time Pipes
+## Building Real-Time Pipes
 
 Pipes are Tinybird's transformation layer, allowing you to filter, aggregate, and enrich your data in real-time. Here's a practical example of a pipe that calculates user activity metrics:
 
@@ -98,7 +97,7 @@ SQL >
 
 Claude Code can help you write these pipes by explaining Tinybird's SQL dialect and suggesting optimizations. For instance, it might recommend using `SAMPLE` clauses for faster development or explain when to use `ORDER BY` within nodes to improve performance.
 
-Automating Data Ingestion
+## Automating Data Ingestion
 
 Getting data into Tinybird in real-time is crucial for actionable analytics. The HTTP endpoint approach is straightforward, Tinybird provides a push API where you can POST JSON data directly:
 
@@ -111,7 +110,7 @@ curl -X POST \
 
 For production systems, you might integrate with Kafka, Amazon Kinesis, or other streaming platforms. Claude Code can generate the producer code you need, whether you're using Python, Node.js, or another language. Simply describe your source system, and Claude will provide the integration code with proper error handling and retry logic.
 
-Creating API Endpoints
+## Creating API Endpoints
 
 Once your data is flowing and your pipes are processing it, you need to expose the results via API endpoints. Endpoints are defined within pipes and can return JSON, CSV, or even ndJSON (newline-delimited JSON) for streaming results.
 
@@ -133,7 +132,7 @@ ENDPOINT GET hourly-active-users
 
 The endpoint becomes available at `https://api.tinybird.co/v0/pipes/hourly_active_users`. You can then consume this in your frontend application or integrate it with your monitoring dashboards.
 
-Optimizing Performance
+## Optimizing Performance
 
 Real-time analytics only deliver value when they're fast. Claude Code can help you identify and resolve performance bottlenecks in your Tinybird workflow:
 
@@ -145,7 +144,7 @@ Real-time analytics only deliver value when they're fast. Claude Code can help y
 
 4. Query Optimization: Review your query patterns. Ensure filters are applied early, and avoid expensive operations like large JOINs in hot paths.
 
-Monitoring and Observability
+## Monitoring and Observability
 
 A solid analytics workflow requires monitoring. Tinybird provides built-in metrics for endpoint performance, but you should also implement application-level monitoring:
 
@@ -156,7 +155,7 @@ A solid analytics workflow requires monitoring. Tinybird provides built-in metri
 
 Claude Code can generate the monitoring code and help you set up dashboards in tools like Grafana or Datafold.
 
-Conclusion
+## Conclusion
 
 Building real-time analytics with Tinybird and Claude Code is a powerful combination. Claude Code acts as your development partner, helping you design schemas, write optimized SQL, generate integration code, and troubleshoot issues. Meanwhile, Tinybird handles the heavy lifting of processing millions of events per second with sub-second latency.
 

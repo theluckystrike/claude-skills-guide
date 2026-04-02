@@ -16,7 +16,7 @@ permalink: /mcp-servers-vs-claude-skills-what-is-the-difference/
 
 If you have been using Claude Code, you have probably encountered both MCP servers and Claude skills. They can seem similar on the surface. both extend what Claude can do. but they operate at different layers of the system and serve different purposes. This article explains both clearly so you can use them effectively.
 
-Quick Answer
+## Quick Answer
 
 - MCP servers give Claude access to external tools, data sources, and APIs. they expand what Claude can *connect to*.
 - Claude skills define reusable agent behaviors and workflows. they shape what Claude *does* and how it *approaches tasks*.
@@ -89,7 +89,7 @@ PR Summary Skill
 
 ---
 
-How They Work Together
+## How They Work Together
 
 MCP servers and skills are designed to be used together. Here is a concrete example:
 
@@ -102,7 +102,7 @@ Without the MCP server, the skill cannot reach GitHub. Without the skill, Claude
 
 ---
 
-Comparison Table
+## Comparison Table
 
 | Dimension | MCP Servers | Claude Skills |
 |---|---|---|
@@ -117,7 +117,7 @@ Comparison Table
 
 ---
 
-Common Misunderstandings
+## Common Misunderstandings
 
 "Skills and MCP servers do the same thing."
 They do not. Skills describe behavior; MCP servers provide capabilities. You need both if you want Claude to do something useful with an external service.
@@ -133,7 +133,7 @@ No. MCP is an open protocol. Other tools and AI systems can implement MCP client
 
 ---
 
-When to Add an MCP Server
+## When to Add an MCP Server
 
 - You need Claude to access an external service, API, or database
 - You want consistent, authenticated access to a tool across all your Claude sessions
@@ -176,7 +176,7 @@ async def call_tool(name, arguments):
         return response.json()
 ```
 
-When to Write a Claude Skill
+## When to Write a Claude Skill
 
 - You have a workflow you repeat more than a few times
 - You want to encode your team's conventions and preferences into a reusable behavior
@@ -185,7 +185,7 @@ When to Write a Claude Skill
 
 ---
 
-Summary
+## Summary
 
 MCP servers are the pipes; Claude skills are the playbooks. MCP servers connect Claude to the world. giving it access to your GitHub, your database, your internal APIs. Claude skills define how Claude should work within that world. the conventions, steps, and output formats that make the agent's behavior predictable and useful.
 

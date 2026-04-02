@@ -15,17 +15,15 @@ score: 7
 
 {% raw %}
 
-Claude Code for Bicep Azure IaC Workflow Guide
-
 Azure Infrastructure as Code (IaC) has evolved significantly with Bicep, Microsoft's declarative language that simplifies ARM template deployment. Combined with Claude Code, you can create powerful automation workflows that handle everything from initial resource provisioning to complex multi-environment deployments. This guide walks you through building an effective Bicep-focused workflow with Claude Code.
 
-Understanding Bicep for Azure IaC
+## Understanding Bicep for Azure IaC
 
 Bicep is a domain-specific language (DSL) that provides concise syntax for deploying Azure resources. Unlike raw ARM templates, Bicep offers improved readability, type safety, and modularity. When paired with Claude Code's intelligent assistance, you can rapidly develop, review, and maintain Azure infrastructure definitions.
 
 The key advantages include transpilation to ARM templates, native Azure integration, and a module system that promotes reusability. Claude Code can help you navigate these features, generate boilerplate code, and catch potential issues before deployment.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before creating your Claude Code workflow, ensure your development environment is properly configured. You'll need the Bicep CLI, Azure CLI, and appropriate credentials for authentication.
 
@@ -58,7 +56,7 @@ infrastructure/
      prod.bicepparam
 ```
 
-Creating the Claude Code Workflow
+## Creating the Claude Code Workflow
 
 The foundation of your workflow is a well-structured `CLAUDE.md` file that defines how Claude Code should interact with your Bicep files. This file should establish clear guidelines for resource creation, parameter handling, and deployment safety.
 
@@ -88,9 +86,9 @@ Code Quality
 - Keep modules focused on single responsibility
 ```
 
-Practical Examples
+## Practical Examples
 
-Deploying a Basic Virtual Network
+## Deploying a Basic Virtual Network
 
 Here's how Claude Code can help you create a virtual network with subnets:
 
@@ -136,7 +134,7 @@ output appSubnetId string = subnetApp.id
 
 When working with Claude Code, you can describe your requirements conversationally and let it generate the appropriate Bicep syntax, then explain the structure and any Azure-specific considerations.
 
-Creating Reusable Modules
+## Creating Reusable Modules
 
 Build modular infrastructure that scales across environments:
 
@@ -177,9 +175,9 @@ module storage 'modules/storage.bicep' = {
 }
 ```
 
-Deployment Workflow Best Practices
+## Deployment Workflow Best Practices
 
-Validate Before Deployment
+## Validate Before Deployment
 
 Always validate Bicep files before attempting deployment:
 
@@ -193,7 +191,7 @@ az deployment group what-if --resource-group my-rg --template-file main.bicep
 
 Claude Code can automate this validation step, running checks before presenting changes for approval and alerting you to potential issues like resource name conflicts or permission problems.
 
-Environment-Specific Parameters
+## Environment-Specific Parameters
 
 Use parameter files for environment-specific values:
 
@@ -209,7 +207,7 @@ param aksClusterConfig = {
 
 This separation allows the same Bicep code to deploy to development, staging, and production with appropriate configurations.
 
-State Management
+## State Management
 
 For production deployments, use remote state storage:
 
@@ -226,7 +224,7 @@ terraform {
 
 While this example shows Terraform, Bicep handles state natively through Azure Resource Manager, which tracks deployment history automatically.
 
-Actionable Advice
+## Actionable Advice
 
 Start Small: Begin with a single resource type (like storage accounts or virtual networks) and expand gradually. This lets you validate your workflow before handling complex architectures.
 
@@ -240,7 +238,7 @@ Document Your Modules: Every module should include clear parameter descriptions 
 
 Implement Deployment Pipelines: Combine Claude Code with CI/CD systems like Azure DevOps or GitHub Actions for automated, auditable deployments with approval workflows.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Bicep transforms Azure infrastructure management from manual template crafting to intelligent, assisted development. The workflow patterns outlined in this guide provide a foundation for scalable, maintainable IaC practices that improve team productivity and reduce deployment errors.
 

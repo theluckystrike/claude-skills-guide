@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Spike Testing Workflow Tutorial Guide
 
 Spike testing is a critical load testing technique that evaluates how your system handles sudden, dramatic increases in traffic. Unlike steady-state load testing, spike tests expose weaknesses that only emerge under rapid load changes, exactly what happens during product launches, viral moments, or flash sales. This guide shows you how to build an effective spike testing workflow using Claude Code, with practical examples you can apply to your projects immediately.
 
-Understanding Spike Testing Fundamentals
+## Understanding Spike Testing Fundamentals
 
 Spike testing differs from other load testing approaches in its focus on sudden load changes rather than sustained traffic. The goal is to answer questions like: How quickly can your system scale? Do timeouts occur during ramp-up? Does caching behave correctly under burst conditions? Do database connections exhaust during traffic surges?
 
@@ -27,7 +26,7 @@ A spike test typically follows this pattern: baseline load, sudden increase to p
 
 Claude Code can help you design spike test scenarios, generate realistic load patterns, analyze results, and identify bottlenecks. The key is structuring your approach so Claude understands your system architecture and testing goals.
 
-Setting Up Your Spike Testing Environment
+## Setting Up Your Spike Testing Environment
 
 Before writing any test code, ensure your environment is properly configured. Spike testing requires careful preparation to avoid skewing results or causing unintended side effects.
 
@@ -51,7 +50,7 @@ spike-testing/
 
 When working with Claude Code, provide context about your technology stack, expected traffic patterns, and business-critical thresholds. This background enables Claude to suggest appropriate spike scenarios and identify potential issues specific to your architecture.
 
-Creating Spike Test Scenarios
+## Creating Spike Test Scenarios
 
 Effective spike tests require scenarios that reflect realistic traffic patterns. Generic load profiles often miss the specific conditions that cause production failures. Work with Claude Code to design scenarios based on your actual usage patterns.
 
@@ -96,7 +95,7 @@ class SpikeScenario:
 
 Claude Code can help you extend this framework with scenario variants: gradual spikes versus instant spikes, multiple consecutive spikes, and spikes with sustained elevated baseline. Each variant exposes different failure modes.
 
-Implementing Load Generation with Claude Code
+## Implementing Load Generation with Claude Code
 
 When implementing load generation, use Claude Code's ability to work with multiple testing tools and languages. Choose load generation approaches based on your testing needs:
 
@@ -133,7 +132,7 @@ Notice the template variable `{{.BaseUrl}}`, this demonstrates how spike tests b
 
 For more complex scenarios involving WebSocket connections, database load, or message queue traffic, consider combining multiple testing approaches. Claude Code can help orchestrate coordinated load from different sources to simulate realistic mixed-workload spikes.
 
-Analyzing Spike Test Results
+## Analyzing Spike Test Results
 
 Running spike tests produces raw data; analyzing them produces insights. Claude Code can help you interpret results by identifying patterns, calculating statistics, and highlighting anomalies.
 
@@ -175,7 +174,7 @@ def analyze_spike_results(results, baseline_metrics):
     return analysis, findings
 ```
 
-Best Practices for Spike Testing Workflows
+## Best Practices for Spike Testing Workflows
 
 Following established best practices ensures your spike tests provide reliable, actionable results.
 
@@ -189,7 +188,7 @@ Document Everything: Record test parameters, environment conditions, and observa
 
 Automate and Integrate: Incorporate spike testing into your CI/CD pipeline. Automated spike tests catch performance regressions before they reach production.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Even experienced teams make mistakes that undermine spike test validity. Avoid these common pitfalls:
 

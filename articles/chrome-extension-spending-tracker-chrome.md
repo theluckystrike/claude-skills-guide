@@ -20,7 +20,7 @@ Most budget apps require accounts, cloud storage, and constant internet connecti
 
 The Chrome extension platform provides several advantages: background scripts for automation, the Storage API for persistent data, and smooth integration with browser UI through popup windows and options pages.
 
-Project Structure
+## Project Structure
 
 A Chrome extension needs a manifest file and at least one JavaScript file. Here's a minimal structure for your spending tracker:
 
@@ -38,7 +38,7 @@ spending-tracker/
 
 The manifest defines your extension's capabilities. Version 3 (MV3) is the current standard with improved security and performance.
 
-Manifest Configuration
+## Manifest Configuration
 
 Your `manifest.json` declares permissions and entry points:
 
@@ -63,7 +63,7 @@ Your `manifest.json` declares permissions and entry points:
 
 The `storage` permission enables the chrome.storage API, which syncs data across browser sessions. For purely local storage without sync, use `local` storage instead.
 
-Core Data Structure
+## Core Data Structure
 
 Design your data model before writing logic. A simple transaction schema works well:
 
@@ -95,7 +95,7 @@ async function addTransaction(transaction) {
 }
 ```
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides quick entry and viewing capabilities. Create `popup.html`:
 
@@ -148,7 +148,7 @@ The popup provides quick entry and viewing capabilities. Create `popup.html`:
 </html>
 ```
 
-Popup Logic
+## Popup Logic
 
 Connect the interface to your storage in `popup.js`:
 
@@ -213,7 +213,7 @@ async function addTransaction(transaction) {
 }
 ```
 
-Adding Analytics with Background Scripts
+## Adding Analytics with Background Scripts
 
 Background scripts run continuously, enabling automated insights. In `background.js`:
 
@@ -246,7 +246,7 @@ function calculateSummary(transactions) {
 }
 ```
 
-Loading Your Extension
+## Loading Your Extension
 
 To test your extension in Chrome:
 
@@ -257,7 +257,7 @@ To test your extension in Chrome:
 
 The extension icon appears in your toolbar. Click it to add transactions and see your spending at a glance.
 
-Next Steps for Enhancement
+## Next Steps for Enhancement
 
 Several features can elevate this foundation. Add an options page for custom categories and budget limits. Implement data export to CSV for spreadsheet analysis. Create charts using a library like Chart.js for visual spending breakdowns. Add keyboard shortcuts for rapid entry without opening the popup.
 
@@ -265,7 +265,7 @@ For developers seeking deeper integration, the Declarative Content API can trigg
 
 This extension keeps your financial data in your browser, under your control. No subscriptions, no data harvesting, just functional expense tracking built exactly to your specifications.
 
-Advanced: Monthly Budget Tracking
+## Advanced: Monthly Budget Tracking
 
 Show progress toward a monthly budget with visual progress bars:
 
@@ -286,7 +286,7 @@ function calculateBudgetStatus(transactions, budgets) {
 
 Render each category as a progress bar colored green (under 80%), yellow (80-100%), red (over budget).
 
-Comparison with Standalone Budgeting Tools
+## Comparison with Standalone Budgeting Tools
 
 | Feature | This Extension | YNAB | Mint |
 |---|---|---|---|
@@ -295,7 +295,7 @@ Comparison with Standalone Budgeting Tools
 | Privacy | Complete local control | Shared | Shared |
 | Cost | Free to build | $14.99/month | Free (ads) |
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Storage filling up after months of data: Auto-archive transactions older than 90 days to a JSON file in Downloads, then clear them from storage.
 
@@ -313,7 +313,6 @@ const csvContent = '\uFEFF' + [headers, ...rows].map(r => r.join(',')).join('\n'
 ```
 
 This extension keeps your financial data in your browser with no subscriptions and no data harvesting. just functional expense tracking built to your exact specifications.
-
 
 Related Reading
 

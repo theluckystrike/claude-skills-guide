@@ -19,7 +19,7 @@ Building a Chrome extension to track TikTok analytics opens up powerful possibil
 
 This guide walks through the architecture, implementation patterns, and practical considerations for building a TikTok analytics tracker as a Chrome extension.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 A Chrome extension for TikTok analytics typically consists of three main components:
 
@@ -29,7 +29,7 @@ A Chrome extension for TikTok analytics typically consists of three main compone
 
 The content script is where the real work happens. TikTok's web application loads analytics data dynamically, so you need to observe DOM changes and extract metrics as they become available.
 
-Extracting TikTok Analytics Data
+## Extracting TikTok Analytics Data
 
 TikTok's analytics page exposes data through the page's JavaScript environment. You can access this data by injecting scripts that interact with the page's state. Here's a pattern for extracting video performance metrics:
 
@@ -93,7 +93,7 @@ TikTok's analytics page exposes data through the page's JavaScript environment. 
 
 This content script uses a MutationObserver to detect when TikTok loads new video elements, then extracts metrics and sends them to the background script for storage.
 
-Background Service Worker Architecture
+## Background Service Worker Architecture
 
 The background service worker acts as the central hub for your extension. It receives data from content scripts, stores it using Chrome's storage API, and handles communication between different parts of your extension.
 
@@ -168,7 +168,7 @@ function getTopVideos(videos, count) {
 
 This background worker maintains a local cache of all video metrics, computes aggregate statistics, and provides an API for the popup interface to query the data.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides a quick view of your analytics without needing to navigate to a full dashboard. Here's a practical implementation:
 
@@ -246,7 +246,7 @@ function formatNumber(num) {
 }
 ```
 
-Important Implementation Considerations
+## Important Implementation Considerations
 
 When building TikTok analytics extensions, several practical challenges require attention:
 
@@ -260,7 +260,7 @@ Data Persistence: Chrome's `chrome.storage.local` provides 5MB of storage by def
 
 Cross-Account Tracking: If you manage multiple TikTok accounts, structure your data storage to separate metrics by account. Include account identification in your data model from the start.
 
-Extending Functionality
+## Extending Functionality
 
 Beyond basic metrics, you can enhance your extension with several advanced features:
 
@@ -270,7 +270,6 @@ Beyond basic metrics, you can enhance your extension with several advanced featu
 - Custom Alerts: Notify users when videos reach view milestones or engagement thresholds
 
 Building a TikTok analytics Chrome extension gives you complete control over how you collect, analyze, and visualize your content performance data. The patterns shown here provide a solid foundation that you can adapt based on your specific requirements and the metrics that matter most for your content strategy.
-
 
 Related Reading
 

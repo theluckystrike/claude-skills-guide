@@ -13,12 +13,9 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude MD Team Collaboration Best Practices
-
 Building effective Claude Code workflows for teams requires more than just installing skills. This guide covers practical patterns for sharing knowledge, maintaining consistency, and automating team workflows using Claude's capabilities. Whether you are running a five-person startup engineering team or a fifty-person enterprise group, the same principles apply: shared conventions beat individual heroics, and automating the mechanical frees engineers to do the creative work.
 
-Setting Up Shared Skill Libraries
+## Setting Up Shared Skill Libraries
 
 Teams benefit from a centralized skill repository that everyone accesses. Create a shared skills directory in your team's monorepo or a dedicated skills repository that all developers can pull from.
 
@@ -62,7 +59,7 @@ Here is a directory layout that works well in practice:
   CLAUDE.md       ← project context loaded automatically
 ```
 
-Establishing Project Conventions
+## Establishing Project Conventions
 
 Claude works best when teams define clear conventions. Create a skill that encodes your team's standards and make it the first skill every developer loads.
 
@@ -114,7 +111,7 @@ Testing
 - Minimum 80% coverage required for new modules
 ```
 
-Context Management Across Sessions
+## Context Management Across Sessions
 
 Long-running projects require careful context management. Claude's context window is generous but finite, so teams should establish patterns for maintaining state across sessions.
 
@@ -156,9 +153,9 @@ Next Steps
 3. Wire up cache layer once decision is made
 ```
 
-Collaborative Workflow Patterns
+## Collaborative Workflow Patterns
 
-Code Review Integration
+## Code Review Integration
 
 Combine the code-review pattern with team conventions:
 
@@ -195,7 +192,7 @@ A comparison of ad-hoc reviews versus skill-driven reviews illustrates the diffe
 | Feedback tone | Inconsistent | Templated, professional |
 | Time to review | Longer (re-deriving structure) | Shorter (pattern is loaded) |
 
-Documentation Synchronization
+## Documentation Synchronization
 
 The doc-writer skill pairs well with pdf generation for creating team handbooks. Automate documentation updates by running these skills in CI:
 
@@ -207,7 +204,7 @@ Step 2: /pdf
 
 The key principle is that documentation should be generated, not maintained manually. When your API changes, a CI step that runs the documentation skill and commits the output ensures docs never drift from code. Teams that rely on developers to manually update README files consistently find those files are three months stale.
 
-API Documentation Workflow
+## API Documentation Workflow
 
 For backend teams, combine api-design with your API framework:
 
@@ -225,7 +222,7 @@ description: Maintain API docs from code
 
 This workflow works well alongside tools like Swagger UI or Redoc. The skill handles the mechanical extraction; the developer writes the JSDoc comments that explain the business logic behind each endpoint. Combine both and you get documentation that is accurate (because it is derived from code) and useful (because it contains human context).
 
-Skill Chaining for Complex Tasks
+## Skill Chaining for Complex Tasks
 
 Complex team workflows often require multiple skills working together. Chain skills to automate multi-step processes:
 
@@ -244,7 +241,7 @@ The mcp-builder skill helps teams create custom tool chains for their specific n
 
 A well-designed incident response skill chain can mean the difference between a 15-minute and a 90-minute outage. When the on-call engineer loads `/incident-runbook`, they get structured guidance for triage, escalation paths, and post-incident documentation. all encoded from your team's hard-won experience.
 
-Version Control for Skills
+## Version Control for Skills
 
 Treat skills as code with the same rigor applied to your application code:
 
@@ -286,7 +283,7 @@ v1.1.0. 2025-12-01
 - Fixed: output format section now explicit about blocking vs non-blocking issues
 ```
 
-Measuring Team Adoption
+## Measuring Team Adoption
 
 Track Claude adoption through:
 - Commit messages mentioning skill usage
@@ -307,7 +304,7 @@ A simple retrospective question set for Claude adoption:
 4. What skill would you most want added?
 ```
 
-Security Considerations
+## Security Considerations
 
 When using Claude with team codebases:
 - Never share sensitive credentials in skill descriptions
@@ -332,7 +329,7 @@ Checks
 
 For teams working on regulated codebases. healthcare, fintech, government. add compliance-specific checks to this skill. A HIPAA-aware security skill that checks for PHI in logs is worth more than a generic one. Encode your compliance requirements where developers will actually see them, not buried in a policy document nobody reads.
 
-Getting Started
+## Getting Started
 
 Begin with these foundational skills for team collaboration:
 
@@ -345,7 +342,6 @@ Begin with these foundational skills for team collaboration:
 Build custom skills for your team's unique workflows. The investment in well-designed skills pays dividends in consistency, onboarding speed, and overall productivity. Start with your most painful recurring tasks. the things every developer groans about. and encode the solution once so you solve it for the whole team forever.
 
 ---
-
 
 Related Reading
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Imgix Image Optimization Workflow
 
 [Imgix](https://imgix.com/) is a real-time image processing service that transforms images on the fly through URL parameters. When combined with Claude Code's automation capabilities, you can build powerful workflows that automate image optimization, generate responsive image sets, and enforce performance standards across your entire image pipeline. This guide shows you how to create Claude skills that handle Imgix integration smoothly.
 
-Understanding Imgix URL Structure
+## Understanding Imgix URL Structure
 
 Before building Claude skills, you need to understand how Imgix generates transformed images. An Imgix URL consists of three parts: the base URL, the source path, and the query parameters for transformations.
 
@@ -51,7 +50,7 @@ The `fit` parameter controls how Imgix handles the relationship between the sour
 
 For product images where you cannot afford to lose content at the edges, `fit=clip` combined with a background color (`bg=ffffff`) is usually the right call. For user avatars and thumbnails where uniform size matters more than showing the full image, `fit=crop` with `crop=faces` gives the best results.
 
-Building a Claude Skill for Imgix URL Generation
+## Building a Claude Skill for Imgix URL Generation
 
 Create a skill that generates Imgix URLs based on specifications. Save this as `skills/imgix-url-generator.md`:
 
@@ -77,7 +76,7 @@ Provide the generated URL and explain the parameters used.
 
 This skill gives Claude context for generating URLs correctly every time.
 
-Extending the Skill with Context-Aware Defaults
+## Extending the Skill with Context-Aware Defaults
 
 A more sophisticated version of this skill encodes the different optimization profiles your application needs and lets Claude select the right one based on context:
 
@@ -119,7 +118,7 @@ Provide all necessary URLs for the context, explain why each parameter was chose
 
 Using context-aware profiles instead of always specifying parameters manually eliminates a large category of inconsistencies across a codebase.
 
-Automating Responsive Image Generation
+## Automating Responsive Image Generation
 
 One of the most practical Imgix workflows is generating responsive image srcsets. Create a skill that generates complete responsive image markup:
 
@@ -212,7 +211,7 @@ Claude generates:
 
 The explicit `width` and `height` attributes on the fallback `img` tag are critical for preventing layout shift (CLS). They give browsers the information to reserve space before the image loads.
 
-Batch Processing Images with Claude
+## Batch Processing Images with Claude
 
 For large-scale image optimization, create a skill that processes multiple images:
 
@@ -236,7 +235,7 @@ For each image, generate:
 Output as a JSON configuration file ready for use in your application.
 ```
 
-Generating a JSON Image Manifest
+## Generating a JSON Image Manifest
 
 For applications that render image URLs from data rather than hardcoding them in templates, ask Claude to produce a complete manifest file:
 
@@ -267,7 +266,7 @@ The resulting manifest drives your application's image rendering without any tem
 
 This JSON-first approach makes it easy to validate all image URLs in CI before deploying, and it decouples your rendering layer from your Imgix configuration.
 
-Auditing Existing Images for Optimization Gaps
+## Auditing Existing Images for Optimization Gaps
 
 One of the highest-value uses of Claude in an Imgix workflow is auditing existing code for images that are not using Imgix at all, or that are using suboptimal parameters:
 
@@ -282,7 +281,7 @@ for img tags and background-image CSS. For each one:
 
 This audit surfaces images that are bypassing Imgix entirely (loading from S3 directly, for example) and images that are missing the `auto=format` parameter and therefore always serving JPEG instead of WebP or AVIF.
 
-Implementing Smart Image Caching
+## Implementing Smart Image Caching
 
 Imgix provides excellent caching, but you can optimize further with proper cache headers and URL strategies. Create a skill that adds cache-busting parameters correctly:
 
@@ -304,7 +303,7 @@ For versioning, use format: `?v={hash}&w={width}&auto=format,compress`
 
 This ensures your images cache effectively at the CDN edge while allowing updates when necessary.
 
-Format Selection: WebP vs AVIF vs JPEG
+## Format Selection: WebP vs AVIF vs JPEG
 
 The `auto=format` parameter is convenient but it is worth understanding what Imgix actually selects:
 
@@ -362,7 +361,7 @@ function LazyImage({ src, alt, width, height }) {
 
 The LQIP approach with Imgix requires no additional storage, the `w=20&q=10` variant is generated on-demand and cached at the CDN edge exactly like any other transformation.
 
-Validating Imgix URLs in CI
+## Validating Imgix URLs in CI
 
 A broken Imgix URL silently returns a 400 or 404, which browsers display as a broken image. Add Claude-driven URL validation to your CI pipeline:
 
@@ -411,7 +410,7 @@ main();
 
 Run this as a CI step before deployment to catch image issues in the same pipeline that catches code issues.
 
-Best Practices for Imgix with Claude
+## Best Practices for Imgix with Claude
 
 When building Imgix workflows with Claude Code, follow these actionable guidelines:
 
@@ -435,7 +434,7 @@ Version static assets. For images that rarely change (logos, icons, hero backgro
 
 Avoid over-transforming. Each unique set of parameters creates a separate cached variant at Imgix. If you need five sizes, use five canonical size values rather than letting user-facing code calculate arbitrary pixel values. This keeps your CDN cache efficient and your Imgix bandwidth predictable.
 
-Comparing Image Delivery Approaches
+## Comparing Image Delivery Approaches
 
 When deciding how much of your image workflow to route through Imgix versus handling server-side or at build time, this comparison helps frame the decision:
 
@@ -449,7 +448,7 @@ When deciding how much of your image workflow to route through Imgix versus hand
 
 Imgix's advantage over build-time approaches is that you can add new size variants or change crop parameters without rebuilding and redeploying your site. This is essential for A/B testing image presentations or for content teams that need to adjust image display without engineering involvement.
 
-Putting It All Together
+## Putting It All Together
 
 The real power of Claude Code with Imgix comes from combining these patterns. A complete workflow might:
 

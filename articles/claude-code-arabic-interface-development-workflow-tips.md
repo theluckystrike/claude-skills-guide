@@ -16,7 +16,7 @@ permalink: /claude-code-arabic-interface-development-workflow-tips/
 
 Building Arabic interfaces requires attention to right-to-left (RTL) layout, typography, and bilingual content management. [Claude Code combined with specialized skills transforms this complex workflow](/claude-code-multilingual-codebase-management-guide/) into a streamlined process. This guide covers practical approaches for developers building Arabic interfaces or bilingual Arabic-English applications.
 
-Setting Up Your Arabic Development Environment
+## Setting Up Your Arabic Development Environment
 
 Before writing code, configure your project for RTL support. Create a dedicated configuration file for Arabic-specific settings:
 
@@ -44,7 +44,7 @@ export const arabicConfig = {
 
 This triggers component generation with proper `dir="rtl"` attributes and mirrored layout structures.
 
-Using Claude Skills for Arabic Development
+## Using Claude Skills for Arabic Development
 
 Several Claude skills accelerate [Arabic interface development workflow with Claude Code](/best-claude-code-skills-to-install-first-2026/):
 
@@ -78,7 +78,7 @@ Generate API documentation, technical specifications, or reports in Arabic using
 "Generate a technical API documentation PDF in Arabic with code examples"
 ```
 
-Managing Arabic Text Processing
+## Managing Arabic Text Processing
 
 Arabic text presents unique challenges: cursive letter connections, different numeral systems, and text reversal issues. Handle these in your code:
 
@@ -109,7 +109,7 @@ export function getBidiString(strings) {
 
 The xlsx skill helps when building applications that handle Arabic data in spreadsheets, generating properly formatted cells with RTL text direction.
 
-Building Bilingual Arabic-English Interfaces
+## Building Bilingual Arabic-English Interfaces
 
 Modern applications often require Arabic and English side by side. Structure your i18n approach:
 
@@ -143,7 +143,7 @@ Use the supermemory skill to query your project for existing bilingual patterns:
 
 This helps maintain consistency across your application's multilingual support.
 
-Testing Arabic Interfaces
+## Testing Arabic Interfaces
 
 Automated testing for Arabic requires special attention to text rendering and layout mirroring. The tdd skill helps create test suites:
 
@@ -172,7 +172,7 @@ describe('Arabic Validation', () => {
 });
 ```
 
-Performance Considerations
+## Performance Considerations
 
 Arabic text rendering can impact performance due to complex glyph shaping. Optimize by:
 
@@ -190,7 +190,7 @@ Arabic text rendering can impact performance due to complex glyph shaping. Optim
 }
 ```
 
-Handling CSS Layout Mirroring Correctly
+## Handling CSS Layout Mirroring Correctly
 
 One of the most error-prone areas in RTL development is CSS layout mirroring. Margin, padding, border, and positioning properties all need to be flipped when switching from LTR to RTL. Instead of maintaining two separate stylesheets, use logical CSS properties, which adapt automatically to the document direction.
 
@@ -224,7 +224,7 @@ When prompting Claude Code's frontend-design skill, mention logical properties e
 
 This produces cleaner, maintainable stylesheets that work for both Arabic and any future RTL language you might add.
 
-Managing Dynamic Content Direction
+## Managing Dynamic Content Direction
 
 Many Arabic applications display user-generated content where the direction cannot be known ahead of time. A user might type in Arabic, English, or a mix of both. Detecting and applying the correct direction dynamically prevents text from rendering garbled.
 
@@ -258,7 +258,7 @@ export function applyDynamicDirection(element) {
 
 Apply this to comment fields, chat inputs, or any user-generated content area where direction is unpredictable. The tdd skill can generate edge-case tests for this function covering empty input, emoji-only input, and heavily mixed strings.
 
-Working With Arabic Dates and Numbers
+## Working With Arabic Dates and Numbers
 
 Arabic locales use the Hijri calendar in some contexts and different numeral presentation conventions depending on the region. For Saudi Arabia (`ar-SA`), Eastern Arabic numerals are standard in traditional contexts but Western numerals are acceptable in technical UIs. For Egypt (`ar-EG`), Western numerals are more common even in everyday use.
 
@@ -290,7 +290,7 @@ export function formatArabicNumber(num, locale = 'ar-SA', useEasternNumerals = f
 
 When using the frontend-design skill to generate date pickers or number inputs for Arabic applications, specify which numeral system and calendar the target audience expects. A government portal in Saudi Arabia has different requirements than a tech startup targeting pan-Arab markets.
 
-Prompting Claude Code Effectively for Arabic Work
+## Prompting Claude Code Effectively for Arabic Work
 
 The quality of Claude Code's output for Arabic interfaces improves significantly when your prompts are specific about RTL context. Vague prompts produce generic components that need extensive RTL corrections. Specific prompts save multiple revision cycles.
 
@@ -314,7 +314,7 @@ More effective prompt:
 
 The second prompt gives Claude Code the full context to generate a component that works in production without manual RTL patching. Include RTL requirements the same way you would include responsive breakpoints, as a first-class constraint, not an afterthought.
 
-Workflow Summary
+## Workflow Summary
 
 1. Use frontend-design for RTL component generation
 2. Use docx and pdf skills for Arabic documentation

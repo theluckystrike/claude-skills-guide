@@ -13,10 +13,7 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code for Spark Delta Lake Workflow Tutorial
 
 Delta Lake has become the backbone of modern data lakehouse architectures, providing ACID transactions, time travel, and schema enforcement on top of Apache Spark. But writing and maintaining Delta Lake pipelines can be complex. This tutorial shows you how Claude Code, a CLI-powered AI assistant, can dramatically improve your productivity when working with Spark and Delta Lake.
 
@@ -32,7 +29,7 @@ The key advantages include:
 
 When you describe your pipeline requirements in plain language. "merge today's CDC records into the gold layer, handling late arrivals up to 48 hours". Claude Code produces working PySpark code rather than forcing you to consult API docs for every merge condition variant.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before diving into Delta Lake workflows, ensure your environment is properly configured. Claude Code works best when it has access to your project's context.
 
@@ -50,7 +47,7 @@ cd delta-lake-project
 mkdir notebooks scripts tests
 ```
 
-Giving Claude Code Your Project Context
+## Giving Claude Code Your Project Context
 
 Create a `CONTEXT.md` or paste the following block at the start of any Claude Code session. The more accurately you describe your environment, the better the generated code fits your actual infrastructure:
 
@@ -72,9 +69,9 @@ Conventions:
 
 With this block in scope, Claude Code will produce Unity Catalog-aware three-part table names, correct s3a:// paths, and consistent return signatures without being prompted for each function.
 
-Core Delta Lake Operations with Claude Code
+## Core Delta Lake Operations with Claude Code
 
-Creating and Managing Tables
+## Creating and Managing Tables
 
 One of the most common tasks is creating Delta Lake tables. Here's how Claude Code helps you write clean, production-ready code:
 
@@ -114,7 +111,7 @@ DeltaTable.createOrReplace(spark) \
     .execute()
 ```
 
-Table Creation: SQL vs Python API Comparison
+## Table Creation: SQL vs Python API Comparison
 
 Both the Python API and Spark SQL can create Delta tables. Use the comparison below to choose the right approach for your situation, then tell Claude Code which style your team prefers so it generates consistent code throughout the project.
 
@@ -125,7 +122,7 @@ Both the Python API and Spark SQL can create Delta tables. Use the comparison be
 | `spark.sql("CREATE TABLE ...")` | Replicating DDL from another system | Harder to parameterize in Python |
 | Delta Live Tables (DLT) `@dlt.table` | Declarative pipelines with lineage | Requires Databricks runtime |
 
-Implementing Incremental Data Processing
+## Implementing Incremental Data Processing
 
 Delta Lake's ability to track changes makes incremental processing efficient. Here's a practical pattern:
 
@@ -153,7 +150,7 @@ merge_condition = "target.id = source.id"
 incremental_upsert("/staging/new_data", "production_data", merge_condition)
 ```
 
-A More Complete MERGE with Soft-Delete Support
+## A More Complete MERGE with Soft-Delete Support
 
 Production CDC pipelines typically need to handle inserts, updates, and deletes in one pass. Ask Claude Code to extend the basic merge into a full CDC handler:
 
@@ -164,7 +161,6 @@ from pyspark.sql.functions import col, current_timestamp
 import logging
 
 logger = logging.getLogger(__name__)
-
 
 def apply_cdc_merge(
     spark,
@@ -222,7 +218,7 @@ def apply_cdc_merge(
     return result
 ```
 
-Time Travel and Data Versioning
+## Time Travel and Data Versioning
 
 One of Delta Lake's most powerful features is time travel. Claude Code can help you construct queries that use this capability:
 
@@ -248,7 +244,7 @@ changes = current_df.join(previous_df, "id", "outer") \
     .where(col("current.value") != col("previous.value"))
 ```
 
-Audit Trail with DESCRIBE HISTORY
+## Audit Trail with DESCRIBE HISTORY
 
 Before using time travel for rollback, inspect what actually changed. Claude Code can generate audit helpers like this one:
 
@@ -270,7 +266,6 @@ def get_table_history(spark, table_name: str, limit: int = 20) -> DataFrame:
         )
         .orderBy("version", ascending=False)
     )
-
 
 def rollback_to_version(spark, table_name: str, target_version: int) -> None:
     """
@@ -294,11 +289,11 @@ def rollback_to_version(spark, table_name: str, target_version: int) -> None:
 
 Pass a `DESCRIBE HISTORY` output snippet to Claude Code when diagnosing a data quality incident. It will read the operation timestamps, identify the bad write, and generate the RESTORE command with the correct version number.
 
-Optimizing Spark Performance for Delta Lake
+## Optimizing Spark Performance for Delta Lake
 
 Claude Code excels at helping you optimize performance. Here are key strategies:
 
-Partitioning Strategy
+## Partitioning Strategy
 
 ```python
 Create partitioned Delta table for query performance
@@ -311,7 +306,7 @@ Z-Order optimization for frequently filtered columns
 DeltaTable.forPath(spark, "/data/events").optimize().executeZOrderBy("event_id", "customer_id")
 ```
 
-Compaction and Data Skipping
+## Compaction and Data Skipping
 
 ```python
 Compact small files for better read performance
@@ -324,7 +319,7 @@ Auto-compaction after writes
 spark.conf.set("spark.databricks.delta.autoCompact.enabled", "true")
 ```
 
-Performance Tuning Decision Table
+## Performance Tuning Decision Table
 
 When you paste a slow query plan or a cluster usage screenshot into Claude Code and ask for help, it typically works through the following decision tree. Using it proactively before querying can save hours of tuning.
 
@@ -338,7 +333,7 @@ When you paste a slow query plan or a cluster usage screenshot into Claude Code 
 | Join shuffle dominates stage | Two large tables joining without bucketing | Use broadcast join for the smaller side |
 | Delta log reads slow at high version count | Transaction log accumulation | Run `VACUUM` and checkpoint the log |
 
-Auto-Optimize and Liquid Clustering
+## Auto-Optimize and Liquid Clustering
 
 Delta Lake 3.x introduced Liquid Clustering as a replacement for static partitioning. Ask Claude Code to help you migrate:
 
@@ -362,7 +357,7 @@ DeltaTable.forName(spark, "main.analytics.events").optimize().executeCompaction(
 
 Liquid Clustering avoids the file explosion that static `partitionBy` causes on high-cardinality columns and removes the need for Z-Order. Tell Claude Code which Databricks Runtime version you are on and it will recommend Liquid Clustering for DBR 13.3+ or Z-Order for earlier releases.
 
-Building Solid Data Pipelines
+## Building Solid Data Pipelines
 
 For production pipelines, incorporate error handling and monitoring:
 
@@ -406,7 +401,7 @@ safe_delta_write(transformed_df, "/production/analytics",
                  mode="overwrite", partition_cols=["year", "month"])
 ```
 
-Idempotent Pipeline Pattern
+## Idempotent Pipeline Pattern
 
 Production pipelines must be safe to re-run after a partial failure. Ask Claude Code to wrap any write operation in this idempotent helper:
 
@@ -416,7 +411,6 @@ from pyspark.sql.functions import lit, current_timestamp
 from delta.tables import DeltaTable
 from typing import Optional
 import hashlib
-
 
 def idempotent_write(
     spark,
@@ -454,7 +448,7 @@ def idempotent_write(
 
 Tell Claude Code your orchestration tool (Airflow, Databricks Workflows, dbt) and the run ID source (DAG run ID, job run ID) and it will wire this pattern into your specific scheduler.
 
-Testing Your Delta Lake Workflows
+## Testing Your Delta Lake Workflows
 
 Writing tests ensures your pipelines work correctly:
 
@@ -488,7 +482,7 @@ def test_incremental_upsert():
     assert updated_row["value"] == "updated"
 ```
 
-Expanding the Test Suite with Data Quality Assertions
+## Expanding the Test Suite with Data Quality Assertions
 
 Functional tests confirm the merge logic works; data quality tests confirm the output meets business rules. Ask Claude Code to generate a quality suite alongside every ETL function:
 
@@ -499,7 +493,6 @@ from pyspark.sql.functions import col, count, when, isnull
 from delta import DeltaTable
 import tempfile
 import os
-
 
 @pytest.fixture(scope="session")
 def spark():
@@ -514,11 +507,9 @@ def spark():
         .getOrCreate()
     )
 
-
 @pytest.fixture
 def tmp_delta_path(tmp_path):
     return str(tmp_path / "test_table")
-
 
 def test_no_duplicate_keys_after_merge(spark, tmp_delta_path):
     """Primary keys must be unique after any merge operation."""
@@ -534,7 +525,6 @@ def test_no_duplicate_keys_after_merge(spark, tmp_delta_path):
     dup_count = result.groupBy("id").count().filter(col("count") > 1).count()
     assert dup_count == 0, f"Found {dup_count} duplicate keys"
 
-
 def test_no_nulls_in_required_columns(spark, tmp_delta_path):
     """Non-nullable business columns must have zero nulls after write."""
     data = spark.createDataFrame(
@@ -546,7 +536,6 @@ def test_no_nulls_in_required_columns(spark, tmp_delta_path):
     result = spark.read.format("delta").load(tmp_delta_path)
     null_names = result.filter(isnull(col("name"))).count()
     assert null_names == 0, f"Found {null_names} null names in required column"
-
 
 def test_row_count_within_expected_range(spark, tmp_delta_path):
     """Written row count must fall within an expected band (±20%)."""
@@ -560,7 +549,7 @@ def test_row_count_within_expected_range(spark, tmp_delta_path):
 
 Paste failing test output into Claude Code and ask it to fix the ETL function. It will trace the assertion failure back to the transformation logic rather than guessing.
 
-Best Practices and Actionable Advice
+## Best Practices and Actionable Advice
 
 1. Always use schema enforcement: Let Delta Lake catch data quality issues early
 2. Implement proper partitioning: Balance file size (1GB target) with query patterns
@@ -570,7 +559,7 @@ Best Practices and Actionable Advice
 
 Claude Code can help you refactor existing code to follow these patterns and suggest improvements specific to your use case.
 
-Production Readiness Checklist
+## Production Readiness Checklist
 
 Before promoting any Delta Lake pipeline from development to production, walk through this checklist with Claude Code. Paste the checklist into your session and ask Claude Code to verify each item against your code:
 
@@ -586,7 +575,7 @@ Before promoting any Delta Lake pipeline from development to production, walk th
 | Table owner and comment set in Unity Catalog | Data discoverability and accountability |
 | Alert on empty-DataFrame writes | Distinguishes "no new data" from "pipeline silently broken" |
 
-Iterating with Claude Code on Performance Issues
+## Iterating with Claude Code on Performance Issues
 
 The most effective way to use Claude Code for performance work is to paste the Spark UI stage summary or the `EXPLAIN` output directly into the session:
 

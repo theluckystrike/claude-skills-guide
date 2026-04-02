@@ -13,14 +13,13 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-
 {% raw %}
 
 Building a Chrome extension that uses AI for sentiment analysis opens up powerful possibilities for analyzing text content directly in your browser. Whether you want to gauge the emotional tone of emails, social media posts, or customer feedback, combining Chrome extensions with AI sentiment analysis creates a smooth workflow without requiring server-side processing.
 
 This guide walks you through creating a functional AI sentiment analyzer Chrome extension, covering the architecture, implementation details, and practical use cases for developers and power users.
 
-How Chrome Extension Sentiment Analysis Works
+## How Chrome Extension Sentiment Analysis Works
 
 A sentiment analyzer Chrome extension intercepts or receives text input from web pages and processes it through an AI model to determine emotional tone, positive, negative, or neutral. The key advantage of running this locally in the browser is privacy: user data never leaves the device when using client-side models.
 
@@ -32,7 +31,7 @@ The typical architecture consists of three components:
 
 Understanding the data flow is critical before writing a single line of code. When a user selects text, the content script fires a message. The background worker receives that message, runs or delegates the analysis, stores the result in `chrome.storage.local`, and the popup reads it on open. This one-way data flow keeps the extension predictable and easy to debug.
 
-Choosing an Analysis Approach
+## Choosing an Analysis Approach
 
 Before picking a library, consider the tradeoffs across three common approaches:
 
@@ -47,7 +46,7 @@ For a personal productivity extension or internal tool, the lexicon-based approa
 
 This guide implements all three layers so you can swap them depending on your needs.
 
-Setting Up Your Extension Project
+## Setting Up Your Extension Project
 
 Create a new directory for your extension with the following structure:
 
@@ -61,7 +60,7 @@ sentiment-analyzer/
  analyzer.js
 ```
 
-Manifest Configuration
+## Manifest Configuration
 
 Your `manifest.json` defines permissions and capabilities:
 
@@ -90,9 +89,9 @@ Your `manifest.json` defines permissions and capabilities:
 
 The `activeTab` permission allows your extension to access the currently active tab when the user clicks the extension icon. The `scripting` permission enables executing content scripts dynamically. Adding `storage` lets the background worker persist results between popup opens. The `contextMenus` permission enables a right-click "Analyze Sentiment" option, which is more ergonomic than selecting text and clicking the toolbar icon.
 
-Implementing the Sentiment Analysis Engine
+## Implementing the Sentiment Analysis Engine
 
-Layer 1: Lexicon-Based Analyzer
+## Layer 1: Lexicon-Based Analyzer
 
 Create `analyzer.js` with the following sentiment analysis logic. This version is expanded beyond a minimal word list to cover common business and social media vocabulary:
 
@@ -159,7 +158,7 @@ function analyzeSentiment(text) {
 
 The negation logic handles phrases like "not good" or "never satisfied" by inverting the score of the word immediately following a negation token. This single change meaningfully improves accuracy on product reviews and customer support tickets.
 
-Layer 2: Transformers.js Integration
+## Layer 2: Transformers.js Integration
 
 For higher accuracy, swap in Transformers.js with DistilBERT fine-tuned for sentiment. Add this block to `analyzer.js` and guard it behind a feature flag:
 
@@ -192,7 +191,7 @@ async function analyzeSentimentBERT(text) {
 
 Note that Transformers.js works best in extension pages (background.html, popup.html) rather than service workers, because service workers have restricted module import capabilities in Manifest V3. If you need BERT in a service worker context, bundle the model using webpack with the `@xenova/transformers` package instead of using the CDN import.
 
-Layer 3: Claude API Integration
+## Layer 3: Claude API Integration
 
 For the highest accuracy on ambiguous or domain-specific text, call the Anthropic API from your background script. Store the API key in `chrome.storage.sync` so it persists across devices for signed-in Chrome profiles:
 
@@ -231,7 +230,7 @@ async function analyzeSentimentClaude(text) {
 
 Using `claude-haiku-3-5` keeps latency low and cost negligible for personal use. The structured JSON prompt eliminates parsing ambiguity. For production, add error handling around `JSON.parse` in case the model returns a preamble before the JSON object.
 
-Content Script for Text Selection
+## Content Script for Text Selection
 
 The content script captures text when users select it on any webpage. Add this to `content.js`:
 
@@ -269,7 +268,7 @@ chrome.runtime.onMessage.addListener((message) => {
 
 The 200 ms debounce prevents double-trigger on drag selections. The 5,000-character cap avoids sending entire article bodies through the API unnecessarily.
 
-Background Service Worker
+## Background Service Worker
 
 The background script coordinates between the content script and popup, and registers the context menu item:
 
@@ -323,7 +322,7 @@ async function handleAnalysis(text) {
 
 The `return true` at the end of the message listener is critical, without it, the message channel closes before the async `handleAnalysis` promise resolves, and `sendResponse` will throw an error.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides the user interface for viewing analysis results. This expanded version shows a confidence bar, the analyzed text snippet, and a timestamp:
 
@@ -389,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Adding an Options Page
+## Adding an Options Page
 
 For production extensions, add an options page to let users choose their analysis engine and enter an API key:
 
@@ -450,7 +449,7 @@ Register the options page in `manifest.json`:
 "options_page": "options.html"
 ```
 
-Loading and Testing Your Extension
+## Loading and Testing Your Extension
 
 To test your extension in Chrome:
 
@@ -469,7 +468,7 @@ Common pitfalls to check during testing:
 - Content script not injecting: Check the `matches` pattern covers the URL you're testing on
 - Context menu not appearing: Right-click only after selecting text; the `contexts: ['selection']` filter hides it otherwise
 
-Accuracy Comparison by Use Case
+## Accuracy Comparison by Use Case
 
 Different analysis engines suit different content types. Based on benchmarks against labeled datasets:
 
@@ -483,7 +482,7 @@ Different analysis engines suit different content types. Based on benchmarks aga
 
 The lexicon approach degrades significantly on sarcasm and technical text because it lacks context awareness. If your primary use case involves technical content or social media with informal language, the accuracy gap justifies integrating a transformer model.
 
-Practical Use Cases
+## Practical Use Cases
 
 For developers, this extension proves valuable for analyzing code review comments, measuring sentiment in customer feedback forms, or monitoring social media mentions. Power users can use it to quickly assess the tone of emails before responding or evaluate content quality across websites.
 
@@ -499,7 +498,7 @@ Recruiters: Analyze inbound candidate messages to flag unusually negative or fru
 
 The real power emerges when you integrate more sophisticated AI models. With Transformers.js, you can run BERT-based sentiment analysis entirely in the browser, achieving accuracy comparable to server-side solutions while maintaining complete privacy.
 
-Extending the Extension
+## Extending the Extension
 
 Consider these enhancements for more advanced functionality:
 
@@ -510,7 +509,6 @@ Consider these enhancements for more advanced functionality:
 - Trend tracking: Store the last 100 analyses with timestamps and domains in `chrome.storage.local`, then render a simple sparkline chart in the popup to show whether your reading skews positive or negative over the day.
 
 Building an AI sentiment analyzer Chrome extension provides a practical foundation for browser-based AI applications. The architecture demonstrated here scales from simple lexicon-based analysis to complex transformer models, giving you flexibility to balance performance, accuracy, and privacy according to your needs.
-
 
 Related Reading
 

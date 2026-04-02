@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Amplitude Analytics Workflow
 
@@ -31,14 +30,14 @@ Amplitude is a product analytics platform that helps teams understand how users 
 
 This integration bridges the gap between development and product analytics, enabling developers to work more efficiently with data.
 
-Setting Up Amplitude API Access
+## Setting Up Amplitude API Access
 
 Before building Claude skills for Amplitude, ensure you have proper API credentials. Amplitude provides two types of API keys:
 
 1. Analytics API Key - For sending events (use in your mobile/web apps)
 2. Management API Key - For administrative operations via the Management API
 
-Creating a Claude Skill for Amplitude Event Tracking
+## Creating a Claude Skill for Amplitude Event Tracking
 
 Here's a skill that tracks custom events to Amplitude:
 
@@ -104,11 +103,11 @@ if __name__ == "__main__":
     print(f"Event tracked: {success}")
 ```
 
-Querying Amplitude Data with Claude Skills
+## Querying Amplitude Data with Claude Skills
 
 Beyond tracking events, you can query Amplitude to retrieve analytics insights. The Management API allows you to run queries and fetch results.
 
-Building an Analytics Query Skill
+## Building an Analytics Query Skill
 
 ```yaml
 ---
@@ -134,7 +133,7 @@ Examples
 Provide the metric you want and the time range, and I'll query Amplitude and present the results.
 ```
 
-Python Query Implementation
+## Python Query Implementation
 
 ```python
 #!/usr/bin/env python3
@@ -178,13 +177,13 @@ active_users = query_active_users(start_date, end_date)
 print(f"Active users: {active_users}")
 ```
 
-Creating Automated Reporting Workflows
+## Creating Automated Reporting Workflows
 
 Combine multiple skills to build comprehensive reporting workflows. daily-analytics-summary
 description: "Generate daily Amplitude analytics summary"
 ---
 
-Daily Analytics Summary
+## Daily Analytics Summary
 
 Generate a comprehensive daily analytics report including:
 - Daily active users (DAU)

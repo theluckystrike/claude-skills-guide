@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Shared Memory Patterns for Collaborating AI Agents
-
 As AI agent systems grow more sophisticated, the challenge of enabling multiple agents to work together effectively becomes increasingly important. Claude Code skills provide powerful mechanisms for implementing shared memory patterns that allow AI agents to collaborate, share context, and maintain coherent understanding across complex tasks. This guide explores practical patterns for building collaborative AI agent systems using Claude Code.
 
-Understanding Shared Memory in Multi-Agent Systems
+## Understanding Shared Memory in Multi-Agent Systems
 
 Shared memory in AI agent contexts refers to any mechanism that allows multiple agents to access, read, and modify common information. This differs from traditional single-agent architectures where all state exists within a single execution context. When agents collaborate, they need ways to:
 
@@ -31,7 +28,7 @@ Claude Code skills can serve as the foundation for these shared memory patterns,
 
 The fundamental challenge is that individual AI agent invocations are stateless by default. Each Claude session starts fresh. Without an external coordination layer, two agents running in parallel have no awareness of each other and may duplicate work, contradict each other's outputs, or overwrite files without knowing they are in conflict. Shared memory patterns solve this by externalizing state into a medium that all agents can read from and write to.
 
-Why Shared Memory Architecture Matters
+## Why Shared Memory Architecture Matters
 
 Before diving into specific patterns, it's worth understanding what goes wrong without shared memory. Consider a hypothetical pipeline where three Claude agents process a codebase:
 
@@ -43,11 +40,11 @@ Without shared memory, Agent C has no access to what Agents A and B discovered u
 
 The architecture becomes even more valuable at scale. A fleet of ten specialized agents working on a large migration project needs a way to track which files have been processed, which are in progress, and which still need attention. otherwise agents will step on each other's work constantly.
 
-Pattern 1: File-Based Shared Context
+## Pattern 1: File-Based Shared Context
 
 The simplest and most reliable shared memory pattern uses the filesystem as a common data store. Claude Code can read and write files, making the filesystem an ideal coordination medium.
 
-Implementation Approach
+## Implementation Approach
 
 Create a shared context directory that all agents can access:
 
@@ -73,7 +70,7 @@ Each agent writes findings to structured files within this directory. A common p
 }
 ```
 
-Namespace Your Files
+## Namespace Your Files
 
 Use a consistent naming convention so agents can quickly discover relevant files without reading the entire directory:
 
@@ -86,7 +83,7 @@ findings/
 
 The pattern `{agent-name}_{timestamp}_{task-slug}.json` gives any agent enough context to decide whether to read a file before opening it.
 
-Best Practices
+## Best Practices
 
 Use clear naming conventions that indicate which agent created the content and when. Include a manifest file that indexes all shared documents for quick discovery.
 
@@ -114,7 +111,7 @@ A manifest file is a simple index that agents update whenever they write a new f
 
 Agents should read the manifest first, identify relevant entries, then read only those files rather than scanning the whole directory.
 
-Pattern 2: Structured Memory Files with Skills
+## Pattern 2: Structured Memory Files with Skills
 
 Claude Code skills can define structured schemas for shared memory, ensuring consistency across agent communications. Create a skill that defines the memory format:
 
@@ -158,7 +155,7 @@ Reading Memory Entries
 
 By encoding these rules in a skill, every agent that loads the skill follows the same protocol without needing it re-stated in every prompt.
 
-Pattern 3: Event-Driven Coordination
+## Pattern 3: Event-Driven Coordination
 
 For more dynamic collaboration, implement an event log pattern where agents publish and subscribe to state changes. A shared "coordination log" file serves as the event bus:
 
@@ -194,7 +191,7 @@ def append_event(log_path, agent_name, event_type, message):
 
 Agents read the entire log at startup to build situational awareness before beginning their assigned work. A search through the log for their own task name tells them whether another agent has already claimed it.
 
-Pattern 4: Shared Scratch Pads
+## Pattern 4: Shared Scratch Pads
 
 For iterative problem-solving, establish shared scratch pads where agents can leave intermediate results. This works particularly well for complex tasks that require multiple passes:
 
@@ -246,7 +243,7 @@ This adds ~5ms per request. Consider a short-lived local cache.
 
 This layered structure lets a summary agent later scan for headings and synthesize each agent's perspective into a unified report.
 
-Pattern 5: Memory Pruning and Consolidation
+## Pattern 5: Memory Pruning and Consolidation
 
 As collaborative work progresses, shared memory can grow unwieldy. Implement periodic consolidation where agents review and merge related entries:
 
@@ -290,7 +287,7 @@ A consolidation agent can be scheduled to run after every N individual agent com
 
 By moving processed findings to an archive directory, the active workspace stays lean while history is preserved for audit purposes.
 
-Pattern 6: Agent Awareness Skills
+## Pattern 6: Agent Awareness Skills
 
 Create skills that make agent collaboration explicit. A "team coordination" skill can maintain awareness of who's working on what:
 
@@ -355,7 +352,7 @@ The team state file is the single source of truth for who is doing what. It look
 
 An agent that is looking for work reads this file, identifies an unclaimed task whose dependencies are all completed, atomically claims it by updating `assigned_to` and `status`, and then begins execution. This prevents two agents from inadvertently picking up the same task.
 
-Pattern 7: Locking and Conflict Prevention
+## Pattern 7: Locking and Conflict Prevention
 
 In high-concurrency scenarios where multiple agents may try to write to the same file simultaneously, implement a simple lock file convention:
 
@@ -387,7 +384,7 @@ Each shared resource. the manifest, the team state file, the coordination log. g
 
 For most Claude-based workflows where agents run sequentially or in loosely parallel fashion, full locking is unnecessary. But when running a large fleet of agents against a single shared resource, even a simple lock convention prevents hard-to-debug corruption.
 
-Practical Example: Code Review Pipeline
+## Practical Example: Code Review Pipeline
 
 Consider a multi-agent code review system where different agents specialize in different aspects:
 
@@ -440,7 +437,7 @@ ReportService. Consider extracting a shared helper. See architecture-agent findi
 
 Cross-referencing between agent outputs is only possible because each agent wrote structured, discoverable findings to the shared workspace.
 
-Choosing the Right Pattern
+## Choosing the Right Pattern
 
 Not every project needs every pattern. Here is a practical guide for matching patterns to scenarios:
 
@@ -455,7 +452,7 @@ Not every project needs every pattern. Here is a practical guide for matching pa
 
 Start with the simplest pattern that works and add complexity only when the simpler approach breaks down. A file-based shared context and a coordination log will handle the majority of multi-agent Claude workflows without requiring lock management or consolidation agents.
 
-Conclusion
+## Conclusion
 
 Shared memory patterns transform isolated AI agents into collaborative teams. Claude Code skills provide the foundation through file operations, structured schemas, and coordination mechanisms. Start with simple file-based patterns and evolve toward more sophisticated event-driven architectures as your multi-agent systems grow. The key principle remains constant: establish clear contracts for what information gets shared, how it's structured, and how agents discover and build upon each other's work.
 

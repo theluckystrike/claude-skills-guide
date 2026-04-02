@@ -18,7 +18,7 @@ Database migrations are one of the most error-prone parts of application develop
 
 This guide shows you how to build Claude skills specifically designed for database migration workflows.
 
-Why Build a Migration Skill
+## Why Build a Migration Skill
 
 You can always ask Claude Code to generate a migration interactively, describe the change, review the output, apply it. That works well for one-off migrations. See [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/) for that interactive workflow.
 
@@ -28,7 +28,7 @@ Traditional migration workflows rely on manual script writing or ORM-generated c
 
 A well-crafted migration skill reads your current database schema, understands your intent, and produces production-ready SQL or ORM migration code.
 
-Anatomy of a Migration Skill
+## Anatomy of a Migration Skill
 
 A migration skill needs several components to be effective. First, it requires clear instructions for schema inspection. Second, it needs guidance for generating different migration types. Third, it must include validation rules specific to your database system.
 
@@ -61,7 +61,7 @@ Validation Rules
 
 This skill template provides the foundation. You extend it based on your specific database and framework.
 
-PostgreSQL Migration Skills
+## PostgreSQL Migration Skills
 
 PostgreSQL migrations often involve features beyond basic schema changes. You might need to handle JSON columns, array types, or custom functions. A PostgreSQL-specific skill should account for these.
 
@@ -91,7 +91,7 @@ CREATE INDEX idx_users_preferences ON users USING gin (preferences);
 ```
 ```
 
-Handling Complex Data Transformations
+## Handling Complex Data Transformations
 
 Many migrations involve not just schema changes but data transformations. A skill focused on data migration helps ensure data integrity during these operations.
 
@@ -124,7 +124,7 @@ ALTER TABLE customers DROP COLUMN contact_info;
 
 The skill generates these steps automatically when you describe the transformation you need.
 
-Rollback Strategies
+## Rollback Strategies
 
 Every migration skill should address rollbacks. Generated migrations must include reversible operations. For complex transformations, the skill should guide you toward creating backup tables rather than attempting complex reverse transformations.
 
@@ -147,7 +147,7 @@ SELECT * FROM customers WHERE 1=1;
 COMMIT;
 ```
 
-Integration with Frameworks
+## Integration with Frameworks
 
 If you use Rails, Django, Laravel, or similar frameworks, your migration skill should align with the framework's conventions. The skill generates migrations in the correct format and follows framework best practices. For backend-specific patterns including database integration, see the [Claude Code skills guide for backend developers](/claude-code-skills-for-backend-developers-node-and-python/).
 
@@ -165,7 +165,7 @@ end
 
 The skill understands Rails conventions, using `change` for reversible migrations, specifying migration versions, and including appropriate indexes.
 
-Testing Migrations
+## Testing Migrations
 
 A comprehensive migration skill includes testing guidance. Before applying migrations to production, test them against staging data. Pair your migration tests with an [automated testing pipeline](/claude-tdd-skill-test-driven-development-workflow/) to catch regressions continuously. Your skill should remind you to:
 
@@ -174,7 +174,7 @@ A comprehensive migration skill includes testing guidance. Before applying migra
 3. Check query performance with EXPLAIN ANALYZE
 4. Review migration runtime on realistic data volumes
 
-Building Your Own Migration Skill
+## Building Your Own Migration Skill
 
 Start by identifying your most common migration patterns. Do you mostly add columns? Create join tables? Refactor legacy schemas? Build the skill around these patterns.
 

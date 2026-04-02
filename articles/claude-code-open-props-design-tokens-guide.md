@@ -13,10 +13,9 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 Open Props has become one of the most popular CSS variable-based design systems for developers who want lightweight, customizable design tokens without the overhead of a full component library. When combined with Claude Code's AI capabilities, you can rapidly scaffold design systems, generate consistent token usage, and maintain design consistency across projects. This guide walks through practical approaches to integrating Open Props with your Claude Code workflow.
 
-What Are Open Props Design Tokens
+## What Are Open Props Design Tokens
 
 Open Props is a CSS-native design token system that provides variables for colors, spacing, typography, shadows, and more. Unlike heavy UI frameworks, Open Props lets you import only what you need. The tokens are CSS custom properties that follow a consistent naming convention, making them easy to understand and modify.
 
@@ -40,7 +39,7 @@ The core tokens include color scales, spacing units, font sizes, border radii, a
 
 The numbering convention is intentional. Lower numbers represent lighter, smaller, or softer values. Higher numbers represent darker, larger, or stronger values. Once you internalize this pattern, you can predict token names without consulting documentation. which is a huge productivity boost when working with Claude Code's generative prompts.
 
-Open Props vs. Other Design Token Systems
+## Open Props vs. Other Design Token Systems
 
 Before committing to Open Props, it helps to understand how it compares to alternatives. The decision affects how you prompt Claude Code and what kind of output you can expect.
 
@@ -54,7 +53,7 @@ Before committing to Open Props, it helps to understand how it compares to alter
 
 Open Props wins for projects where you want raw CSS flexibility, minimal build tooling, and the ability to generate component styles directly. Claude Code produces cleaner output when working with Open Props because the token names are semantic enough to appear in natural language prompts.
 
-Setting Up Open Props with Claude Code
+## Setting Up Open Props with Claude Code
 
 When starting a new project, you can use Claude Code to generate the complete Open Props setup. The frontend-design skill provides structured guidance for component-based architecture, but you can also work directly with Open Props for maximum flexibility.
 
@@ -94,7 +93,7 @@ module.exports = {
 
 The `postcss-jit-props` plugin only injects the tokens you actually use, which keeps your final CSS bundle lean even if you import the entire Open Props library in your source files.
 
-Using Claude Code to Generate Token-Based Components
+## Using Claude Code to Generate Token-Based Components
 
 Claude Code excels at generating consistent component styles using your design tokens. When working on a new component, describe your requirements and reference the specific Open Props tokens you want to use:
 
@@ -134,7 +133,7 @@ Keep all values as Open Props tokens.
 
 The resulting output stays consistent with the token system rather than introducing hard-coded values, which is the main benefit of working this way. If you later need to adjust the shadow depth globally, you change one token reference, not dozens of component files.
 
-Real-World Scenario: Building a Design System with Claude Code
+## Real-World Scenario: Building a Design System with Claude Code
 
 Consider a practical scenario: you are building a small SaaS product with five or six core UI components. buttons, cards, forms, navigation, badges, and modals. Using Open Props with Claude Code, you can scaffold all of these in a single session by providing a clear token baseline.
 
@@ -201,7 +200,7 @@ Claude Code generates:
 
 This component is fully token-driven. Changing `--brand-primary` in your semantic layer propagates throughout the entire design system automatically.
 
-Extending Open Props with Custom Tokens
+## Extending Open Props with Custom Tokens
 
 Your project may require tokens beyond what Open Props provides. Create a custom tokens file that extends the base system:
 
@@ -239,7 +238,7 @@ Import your custom tokens after Open Props to allow overrides:
 
 The layered approach. base tokens, then semantic tokens, then component tokens. is a proven pattern. It gives you the flexibility to rebrand by changing semantic tokens without touching any component files.
 
-Working with Typography Tokens
+## Working with Typography Tokens
 
 Open Props typography tokens provide a comprehensive scale. The font-size tokens work with your root font size to create consistent type hierarchies. Combine them with the line-height and font-weight tokens for complete type styles:
 
@@ -273,7 +272,7 @@ When you prompt Claude Code using these semantic names rather than raw token num
 
 For projects using the tdd skill for test-driven development, you can verify typography consistency by checking computed styles against these token values.
 
-Animation and Transition Tokens
+## Animation and Transition Tokens
 
 Open Props includes animation tokens for smooth transitions and micro-interactions. Use these tokens to maintain consistent motion design:
 
@@ -319,7 +318,7 @@ background for success messages and --space-3 for padding.
 
 This produces output that uses the token system throughout rather than mixing hard-coded values with variable references.
 
-Dark Mode with Open Props
+## Dark Mode with Open Props
 
 Open Props includes a built-in dark mode color scheme. The color tokens automatically remap when the user's system preference is dark, or you can control it manually with a class:
 
@@ -344,7 +343,7 @@ correctly in both light and dark mode without any
 prefers-color-scheme media queries.
 ```
 
-Practical Workflow with Claude Code Skills
+## Practical Workflow with Claude Code Skills
 
 When working on complex projects, combine multiple Claude Code skills for optimal results. The pdf skill helps generate design documentation from your token specifications. Use supermemory to remember project-specific token conventions across sessions.
 
@@ -361,7 +360,7 @@ use these semantic tokens, not raw Open Props values.
 
 This primes Claude Code to generate output that respects your conventions rather than defaulting to arbitrary values.
 
-Performance Considerations
+## Performance Considerations
 
 Open Props tokens are CSS custom properties, which means they inherit and cascade naturally. However, excessive token usage can impact CSS specificity and maintenance. Follow these practices:
 
@@ -372,12 +371,11 @@ Open Props tokens are CSS custom properties, which means they inherit and cascad
 
 For very large applications, consider organizing tokens by feature area to make auditing and refactoring easier. A tokens directory with files like `colors.css`, `spacing.css`, `typography.css`, and `components.css` scales better than a single flat file as the system grows.
 
-Conclusion
+## Conclusion
 
 Open Props provides a flexible foundation for design token management that pairs excellently with Claude Code's generative capabilities. By establishing clear token conventions and using AI-assisted code generation, you can build consistent design systems efficiently. The key is starting with the base tokens, adding a semantic layer that matches your project's language, and prompting Claude Code with those semantic names for output that fits naturally into your existing system.
 
 The combination is especially powerful for rapid prototyping. You can go from a rough component description to a fully token-driven, dark-mode-aware implementation in a single prompt cycle, then refine from there. That speed advantage compounds as your token system matures and Claude Code learns your project's conventions through context.
-
 
 Related Reading
 

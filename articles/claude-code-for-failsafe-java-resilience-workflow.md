@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Failsafe Java Resilience Workflow
 
 Building resilient Java applications requires handling failures gracefully, whether from network calls, database operations, or external service integrations. The Failsafe library provides a powerful, composable way to add resilience patterns to your code, and Claude Code can significantly accelerate your implementation workflow. This guide shows you how to combine both effectively.
 
-Understanding Failsafe Resilience Patterns
+## Understanding Failsafe Resilience Patterns
 
 Failsafe is a lightweight Java library that handles common resilience patterns through a fluent, composable API. Developed as part of the Resilience4j ecosystem, it provides a clean abstraction over complex retry and circuit-breaking logic. Before diving into Claude Code integration, let's review the core patterns you'll be implementing:
 
@@ -30,7 +29,7 @@ Failsafe is a lightweight Java library that handles common resilience patterns t
 
 Understanding these patterns is essential for designing systems that can recover from transient failures while maintaining stable performance during prolonged outages.
 
-Setting Up Failsafe in Your Project
+## Setting Up Failsafe in Your Project
 
 Claude Code can help you set up Failsafe quickly by generating the appropriate dependency declarations and import statements. Start by adding the dependency to your Maven or Gradle project:
 
@@ -52,7 +51,7 @@ implementation 'dev.failsafe:failsafe:4.0.0'
 
 Claude Code can also help you verify version compatibility with your existing Java version and other dependencies in your project.
 
-Implementing Retry Policies with Claude Code
+## Implementing Retry Policies with Claude Code
 
 When you need Claude Code to generate retry logic, provide context about your failure scenarios. Are you handling network timeouts? Database deadlocks? External API failures? Each scenario might require different retry strategies.
 
@@ -80,7 +79,7 @@ Claude Code excels at customizing these policies for specific scenarios. Ask it 
 
 Actionable Advice: Always log retry attempts in production systems. This helps you identify recurring issues and fine-tune your retry thresholds.
 
-Building Circuit Breaker Patterns
+## Building Circuit Breaker Patterns
 
 Circuit breakers protect your system from repeated failures. When a service is experiencing issues, you don't want to keep hammering it with requests, that just compounds the problem. Instead, you "open" the circuit to fail fast, giving the downstream service time to recover.
 
@@ -104,7 +103,7 @@ Actionable Advice: Start with conservative thresholds and adjust based on produc
 
 Failsafe also supports half-open state testing, where after the circuit remains open for a configured duration, it allows a single test request through to check if the service has recovered.
 
-Combining Multiple Policies
+## Combining Multiple Policies
 
 Failsafe's real power comes from composing multiple policies. You can chain retry policies with circuit breakers, add fallbacks, and even integrate bulkhead patterns, all working together as a unified resilience strategy.
 
@@ -125,7 +124,7 @@ Claude Code can suggest optimal composition strategies based on your use case. F
 - Place circuit breakers inside retries for retry-based recovery attempts on transient issues
 - Add bulkheads outside everything to prevent resource exhaustion
 
-Implementing Fallback Strategies
+## Implementing Fallback Strategies
 
 Fallbacks provide graceful degradation when operations ultimately fail. Rather than throwing an exception to the caller, you return a sensible default value, cached data, or an alternative response.
 
@@ -152,7 +151,7 @@ Common fallback strategies include:
 - Calling alternative service endpoints
 - Queueing failed requests for later processing
 
-Best Practices for Claude Code Integration
+## Best Practices for Claude Code Integration
 
 1. Provide Clear Context: When asking Claude Code for help, specify the exact failure types you're handling, your timeout requirements, and any existing policies in your codebase.
 
@@ -164,7 +163,7 @@ Best Practices for Claude Code Integration
 
 5. Document Policy Rationale: Use Claude Code to add comments explaining why specific thresholds were chosen, future developers (and your future self) will thank you.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 - Over-aggressive retries: Too many retries with too-short delays can amplify problems and delay recovery. Start conservative.
 - Ignoring timeout policies: Always combine retries with timeouts to prevent indefinite hangs. A retry without a timeout is a recipe for disaster.
@@ -172,7 +171,7 @@ Common Pitfalls to Avoid
 - Missing failure type handling: Be specific about which exceptions trigger resilience patterns. Catching everything can mask real bugs.
 - Not monitoring circuit breaker state: Without metrics, you won't know when circuits are opening or how often retries are occurring.
 
-Conclusion
+## Conclusion
 
 Claude Code dramatically accelerates building Failsafe resilience patterns by generating boilerplate code, suggesting optimal configurations, and helping you compose complex policies. Start with simple retry policies, gradually add circuit breakers and fallbacks, and always validate your implementations under failure conditions.
 

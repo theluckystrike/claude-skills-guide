@@ -25,7 +25,7 @@ GNU Stow is a symlink farm manager that originated for managing software package
 
 This approach keeps your dotfiles in a Git repository while making them appear in the right locations automatically.
 
-Setting Up Your Stow-Based Dotfiles Repository
+## Setting Up Your Stow-Based Dotfiles Repository
 
 First, let's create a proper Stow directory structure. Here's the recommended layout:
 
@@ -43,7 +43,7 @@ First, let's create a proper Stow directory structure. Here's the recommended la
 
 Each subdirectory (package) contains the actual files you want to symlink. The key insight is that Stow creates symlinks by mirroring the directory structure, you place `.zshrc` inside a `.zshrc/` folder, and Stow links it to `~/.zshrc`.
 
-Creating a Claude Skill for Dotfiles Management
+## Creating a Claude Skill for Dotfiles Management
 
 Now let's build a Claude skill that understands your Stow dotfiles workflow. Create a file called `dotfiles-manager.md` in your Claude skills directory:
 
@@ -74,9 +74,9 @@ When asked to show status:
 
 This skill gives Claude Code context about your dotfiles structure and the commands needed to manage them.
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Installing a New Dotfile
+## Installing a New Dotfile
 
 When you want to add a new configuration to your dotfiles:
 
@@ -96,7 +96,7 @@ Claude will run:
 stow -v -t ~ -d ~/dotfiles .newrc
 ```
 
-Updating Dotfiles Across Machines
+## Updating Dotfiles Across Machines
 
 A common workflow is to update your dotfiles on one machine, push to Git, then pull and apply on another:
 
@@ -119,7 +119,7 @@ Your Claude skill can handle this too, just ask:
 Pull my latest dotfiles from GitHub and install them
 ```
 
-Advanced: Stow with Git Submodules
+## Advanced: Stow with Git Submodules
 
 For more complex setups, you might want to include other repositories as part of your dotfiles. Git submodules work well with Stow:
 
@@ -130,14 +130,14 @@ git submodule add git@github.com:username/vim-plug.git .vim/plugged/vim-plug
 
 Then when you Stow your `.vim` directory, the submodule contents are included.
 
-Best Practices for Stow Dotfiles
+## Best Practices for Stow Dotfiles
 
 1. Use descriptive package names: Name directories after the tool (`.zshrc/`, `.vim/`) not after the file type
 2. Keep sensitive data separate: Never store secrets in your dotfiles repository; use tools like `pass` or environment variables
 3. Version control everything: Your dotfiles are code, commit changes, write meaningful messages, use branches for experimental configs
 4. Test before unstowing: Always check what will change with `stow --adopt --simulate` before running destructive operations
 
-Integrating with Your Daily Workflow
+## Integrating with Your Daily Workflow
 
 The real power comes from integrating your dotfiles management into your daily Claude Code interactions. Here are some prompts to try:
 
@@ -146,7 +146,7 @@ The real power comes from integrating your dotfiles management into your daily C
 - "Show me what changed in my dotfiles since last week"
 - "Backup my current dotfiles configuration"
 
-Troubleshooting Common Stow Issues
+## Troubleshooting Common Stow Issues
 
 "File exists" errors: Stow won't overwrite existing files. Remove the target file first or use the `--adopt` flag to adopt existing files.
 
@@ -154,7 +154,7 @@ Troubleshooting Common Stow Issues
 
 Symlinks pointing wrong: Use `ls -la ~ | grep dotfiles` to verify symlink targets are correct.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with GNU Stow gives you a powerful, reproducible system for managing configuration files. The declarative nature of Stow means your dotfiles remain organized and version-controlled, while Claude Code provides an intelligent interface to interact with them naturally. Start with a simple setup, commit regularly, and gradually add more configurations as you need them.
 

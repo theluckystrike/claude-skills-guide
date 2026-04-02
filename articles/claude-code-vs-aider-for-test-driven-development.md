@@ -13,24 +13,21 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code vs Aider for Test Driven Development
-
 Test-driven development (TDD) has become a cornerstone of modern software engineering, and developers are increasingly turning to AI-powered tools to enhance their TDD workflows. Two popular options have emerged: Claude Code, Anthropic's CLI assistant, and Aider, an AI-powered terminal-based coding tool. This guide compares their capabilities for TDD, helping you choose the right tool for your development workflow.
 
-Understanding the Tools
+## Understanding the Tools
 
-Claude Code
+## Claude Code
 
 Claude Code is Anthropic's CLI assistant that brings the power of Claude directly into your terminal. It excels at understanding project context, maintaining conversation history, and executing complex multi-step tasks. With the built-in `/tdd` skill, Claude Code provides structured guidance for test-driven development.
 
-Aider
+## Aider
 
 Aider is a terminal-based AI coding assistant that integrates with git repositories. It focuses on making edits to existing codebases and supports multiple AI models. Aider is known for its git-centric workflow and in-editor editing capabilities.
 
-TDD Workflow Comparison
+## TDD Workflow Comparison
 
-Claude Code TDD Approach
+## Claude Code TDD Approach
 
 Claude Code's approach to TDD centers on its conversation-driven workflow. When you activate the `/tdd` skill, Claude guides you through the red-green-refactor cycle with structured prompts.
 
@@ -59,7 +56,7 @@ When using TDD:
 4. Use descriptive test names that document behavior
 ```
 
-Aider TDD Approach
+## Aider TDD Approach
 
 Aider takes a more direct editing approach. You specify the file you want to work on, and Aider makes changes directly in your codebase.
 
@@ -78,9 +75,9 @@ Prompt Aider to write tests
 
 Aider will generate tests directly in the file. You then switch to the implementation file and prompt Aider to implement the function.
 
-Practical Examples
+## Practical Examples
 
-Example 1: Writing Unit Tests
+## Example 1: Writing Unit Tests
 
 With Claude Code:
 
@@ -106,7 +103,7 @@ aider tests/test_auth.py
 
 Aider will immediately edit the test file, generating tests based on the function signatures it finds in your implementation.
 
-Example 2: Red-Green-Refactor Cycle
+## Example 2: Red-Green-Refactor Cycle
 
 Claude Code provides explicit guidance through each phase:
 
@@ -132,7 +129,7 @@ aider tests/test_sort.py
 
 Both tools generate failing tests, but Claude Code's conversational approach often results in more thorough test coverage because it asks clarifying questions upfront.
 
-Example 3: Test-Driven Refactoring
+## Example 3: Test-Driven Refactoring
 
 When refactoring with TDD, Claude Code's context awareness shines:
 
@@ -159,7 +156,7 @@ aider tests/test_calculate_total.py
 > Add tests for functional approach
 ```
 
-Key Differences Summary
+## Key Differences Summary
 
 | Feature | Claude Code | Aider |
 |---------|-------------|-------|
@@ -170,7 +167,7 @@ Key Differences Summary
 | Multi-file Operations | Smooth | Requires explicit file switching |
 | Learning Curve | Lower (skill-based) | Medium (command-based) |
 
-When to Use Each Tool
+## When to Use Each Tool
 
 Choose Claude Code When:
 
@@ -186,7 +183,7 @@ Choose Aider When:
 - Model flexibility: You want to switch between different AI models
 - Existing test suites: You have clear test patterns Aider can follow
 
-Best Practices for TDD with Claude Code
+## Best Practices for TDD with Claude Code
 
 1. Use the /tdd skill explicitly: Start every TDD session with `/tdd` to activate the skill
 
@@ -196,7 +193,7 @@ Best Practices for TDD with Claude Code
 
 4. Review generated tests: Always verify tests make sense before implementing
 
-Conclusion
+## Conclusion
 
 Both Claude Code and Aider offer valuable capabilities for test-driven development, but they serve different workflows. Claude Code excels with its built-in TDD skill, conversational interface, and deep project understanding, making it ideal for developers who want guided, thorough test coverage. Aider shines in git-centric workflows and quick, direct edits.
 

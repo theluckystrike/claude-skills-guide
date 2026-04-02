@@ -16,7 +16,7 @@ permalink: /how-to-integrate-claude-skills-with-notion-api-guide/
 
 Notion serves as a knowledge base, project tracker, and documentation hub for many developer teams. Connecting Claude skills to the Notion API lets you automate document creation, populate databases from AI analysis, and build intelligent knowledge workflows. This guide covers how to integrate Claude skills with the Notion API, from authentication setup to practical patterns using `pdf`, `supermemory`, and `tdd` skills.
 
-Why This Integration Matters
+## Why This Integration Matters
 
 The combination solves real friction points:
 
@@ -25,14 +25,14 @@ The combination solves real friction points:
 - [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) can read from and write to Notion pages to maintain persistent project context
 - `frontend-design` skill feedback → organized in a Notion design review database
 
-Prerequisites
+## Prerequisites
 
 - A Notion workspace with API access enabled
 - Notion Internal Integration Token (from notion.so/my-integrations)
 - Node.js 18+ with the `@notionhq/client` package
 - Claude Code installed locally. skills run inside Claude Code, not via the Anthropic SDK
 
-Step 1: Create a Notion Integration
+## Step 1: Create a Notion Integration
 
 1. Go to [notion.so/my-integrations](https://www.notion.so/my-integrations)
 2. Click New integration
@@ -44,7 +44,7 @@ Step 1: Create a Notion Integration
 5. Copy the Internal Integration Token. this is your `NOTION_TOKEN`
 6. Share your target Notion pages/databases with the integration by clicking the ... menu on the page and choosing Add connections
 
-Step 2: Install Dependencies
+## Step 2: Install Dependencies
 
 ```bash
 npm install @notionhq/client dotenv
@@ -58,7 +58,7 @@ NOTION_DATABASE_ID=your_database_id_here
 
 Find your database ID in the Notion URL: `notion.so/workspace/{database_id}?v=...`
 
-Step 3: Initialize Notion Client
+## Step 3: Initialize Notion Client
 
 ```javascript
 require('dotenv').config();
@@ -77,7 +77,7 @@ Extract action items from /tmp/meeting-notes.pdf" 2>/dev/null)
 
 Then your Node.js script reads from a file or stdin that Claude Code wrote.
 
-Step 4: Run a Skill and Capture Output
+## Step 4: Run a Skill and Capture Output
 
 Shell script that calls a Claude skill and writes output to a JSON file for the Node.js pipeline:
 
@@ -109,7 +109,7 @@ function loadSkillOutput(filePath) {
 }
 ```
 
-Step 5: Create a Notion Page from Claude Output
+## Step 5: Create a Notion Page from Claude Output
 
 ```javascript
 async function createNotionPage(databaseId, title, content, tags = []) {
@@ -191,7 +191,7 @@ function contentToNotionBlocks(content) {
 }
 ```
 
-Step 6: Read Pages for Supermemory Context
+## Step 6: Read Pages for Supermemory Context
 
 The `supermemory` skill benefits from reading existing Notion content to build context:
 
@@ -222,7 +222,7 @@ async function buildProjectContext(pageIds) {
 }
 ```
 
-Step 7: Full Pipeline. Document to Notion
+## Step 7: Full Pipeline. Document to Notion
 
 ```javascript
 async function processDocumentToNotion(documentText, databaseId) {
@@ -259,7 +259,7 @@ processDocumentToNotion(
 );
 ```
 
-Step 8: Query Notion Database for Context
+## Step 8: Query Notion Database for Context
 
 Before sending content to Claude, retrieve related Notion entries to improve response quality:
 
@@ -282,7 +282,7 @@ async function getRelatedContext(databaseId, searchText) {
 }
 ```
 
-Handling Rate Limits
+## Handling Rate Limits
 
 The Notion API enforces rate limits. typically 3 requests per second on average. Implement exponential backoff for retry logic in your pipeline:
 
@@ -307,7 +307,7 @@ async function makeRequestWithRetry(fn, maxRetries = 3) {
 
 For read-heavy workflows, implement caching to reduce API calls and improve response times. Version your API interactions by pinning to a specific Notion API version header and updating deliberately to avoid breaking changes.
 
-Conclusion
+## Conclusion
 
 Integrating Claude skills with the Notion API creates a knowledge management pipeline where AI analysis flows directly into your team's documentation. The `pdf` skill populates databases with structured extracts, `tdd` generates code review docs, and `supermemory` reads existing pages to maintain project context. Build the pipeline incrementally. start with document-to-Notion, then add the two-way reading pattern.
 

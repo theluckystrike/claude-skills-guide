@@ -13,7 +13,7 @@ categories: [guides]
 
 Building a Chrome extension for grocery coupon discovery requires understanding the Chrome extension APIs, web scraping techniques, and user experience patterns that make coupon finding practical. This guide covers the technical foundation for creating a functional grocery coupon finder extension.
 
-Extension Architecture Overview
+## Extension Architecture Overview
 
 A grocery coupon finder extension typically consists of three main components: the background service worker, content scripts, and a popup interface. The background worker handles API calls and coupon storage, while content scripts inject UI elements into grocery store websites.
 
@@ -33,9 +33,9 @@ The manifest.json defines your extension's capabilities:
 }
 ```
 
-Core Functionality Implementation
+## Core Functionality Implementation
 
-Coupon Detection and Extraction
+## Coupon Detection and Extraction
 
 Your content script needs to scan page content for product prices and match them against a coupon database. Here's a practical approach:
 
@@ -67,7 +67,7 @@ function detectProducts() {
 }
 ```
 
-Background API Integration
+## Background API Integration
 
 The background service worker manages coupon API calls and maintains a local cache:
 
@@ -92,7 +92,7 @@ async function fetchCoupons(products) {
 }
 ```
 
-Coupon Data Sources
+## Coupon Data Sources
 
 Several approaches exist for obtaining coupon data:
 
@@ -125,7 +125,7 @@ function matchCoupons(productList, availableCoupons) {
 }
 ```
 
-User Interface Patterns
+## User Interface Patterns
 
 The popup interface should provide quick access to saved coupons without distracting from the shopping experience. Consider these design patterns:
 
@@ -155,7 +155,7 @@ function injectCouponBadges(products, coupons) {
 }
 ```
 
-Storage and Sync
+## Storage and Sync
 
 Use chrome.storage for persistent coupon storage with cross-device sync:
 
@@ -174,7 +174,7 @@ async function saveCoupon(coupon) {
 chrome.storage.sync.set({ savedCoupons: localCoupons });
 ```
 
-Performance Considerations
+## Performance Considerations
 
 Content scripts run on every page load, so optimize for efficiency:
 
@@ -199,7 +199,7 @@ const scanPage = debounce(() => {
 }, 500);
 ```
 
-Extension Testing
+## Extension Testing
 
 Test your extension across different scenarios:
 
@@ -217,7 +217,7 @@ testCases.forEach(tc => {
 });
 ```
 
-Handling Dynamic Store Pages
+## Handling Dynamic Store Pages
 
 Modern grocery websites load content asynchronously. Kroger, Albertsons, and Instacart all use React or Angular frontends where product grids render after the initial page load. A plain DOMContentLoaded listener will miss most products.
 
@@ -247,7 +247,7 @@ window.addEventListener('pagehide', () => observer.disconnect());
 
 For infinite scroll pages. common in Instacart's search results. throttle the observer so it fires at most once per 300ms. Batch all newly detected products and send a single message to the background worker rather than one message per product.
 
-Coupon Expiry and Freshness
+## Coupon Expiry and Freshness
 
 A coupon that expired yesterday is worse than no coupon. it creates false expectations and erodes user trust. Build expiry handling into your data model from the start.
 
@@ -295,7 +295,7 @@ async function getCouponsWithFreshness(storeId) {
 }
 ```
 
-Multi-Store Support Architecture
+## Multi-Store Support Architecture
 
 Supporting one store is straightforward. Supporting ten requires a translator pattern. the same logic that powers Zotero's site adapters.
 
@@ -344,7 +344,7 @@ Update `manifest.json` host_permissions to match your registry:
 ]
 ```
 
-Clipping Coupons Programmatically
+## Clipping Coupons Programmatically
 
 Showing a coupon code is useful. Clipping it automatically is better. Some store websites expose clip-to-card flows through predictable POST endpoints. When you detect a clipable coupon, you can trigger the clip directly from your content script using the user's existing authenticated session:
 
@@ -379,7 +379,7 @@ Not all stores allow this. Those that do typically use an anti-CSRF token in the
 const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content;
 ```
 
-Privacy and Permissions Design
+## Privacy and Permissions Design
 
 Coupon extensions have a reputation problem: users worry they're being profiled. Design around that concern, not against it.
 
@@ -399,7 +399,7 @@ async function hashProductName(name) {
 
 Your API receives hashes and returns matching coupon data without ever seeing the raw shopping list. Put this in your privacy policy and call it out in your Chrome Web Store listing. it differentiates you from competitors that log everything.
 
-Distribution and Updates
+## Distribution and Updates
 
 When ready to distribute:
 
@@ -411,7 +411,6 @@ When ready to distribute:
 A few things that meaningfully improve Chrome Web Store conversion: screenshot your badge notification on a real product page (not a mockup), include a short video showing the clip-and-save flow, and list the exact store names you support in the first sentence of your description. Users search for "Kroger coupon extension". store-specific keywords in your listing title outperform generic terms.
 
 Building a grocery coupon finder requires balancing functionality with performance. Focus on supporting major grocery store websites first, then expand to regional chains. The key is providing genuine value without overwhelming users with irrelevant offers.
-
 
 Related Reading
 

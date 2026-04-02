@@ -13,21 +13,20 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Writing CONTRIBUTING.md Files Guide
 
 A well-crafted CONTRIBUTING.md file is the gateway to your open-source project. It sets expectations, reduces friction for new contributors, and establishes the cultural foundation of your community. This guide shows you how to use Claude Code to create comprehensive, user-friendly contribution guidelines that scale with your project.
 
-Why CONTRIBUTING.md Matters
+## Why CONTRIBUTING.md Matters
 
 Your CONTRIBUTING.md file does more than list rules, it communicates your project's values and creates a positive first impression. When developers encounter a clear, detailed contribution guide, they're more likely to contribute and return to your project. Claude Code can help you generate this critical documentation efficiently while ensuring nothing important gets overlooked.
 
-Structuring Your CONTRIBUTING.md File
+## Structuring Your CONTRIBUTING.md File
 
 A effective CONTRIBUTING.md should cover these essential sections:
 
-Getting Started
+## Getting Started
 
 Begin with clear instructions on how to obtain, install, and configure your project locally. Contributors should be able to go from cloning to running tests within minutes.
 
@@ -41,7 +40,7 @@ Getting Started
 5. Make your changes and commit with conventional commits
 ```
 
-Code Style and Standards
+## Code Style and Standards
 
 Specify your project's coding conventions, including naming patterns, formatting rules, and architectural patterns. Claude Code can help generate this section by analyzing your existing codebase.
 
@@ -55,7 +54,7 @@ Code Style
 - Use TypeScript for all new code
 ```
 
-Pull Request Process
+## Pull Request Process
 
 Detail exactly how contributors should submit their work. Include requirements for PR descriptions, linking issues, and the review process.
 
@@ -69,11 +68,11 @@ Pull Request Process
 5. Request review from at least two maintainers
 ```
 
-Using Claude Code to Generate Your Guide
+## Using Claude Code to Generate Your Guide
 
 Claude Code can assist in creating a tailored CONTRIBUTING.md by analyzing your project structure and existing patterns. Here's a practical approach:
 
-Analyze Your Project First
+## Analyze Your Project First
 
 Ask Claude Code to examine your project setup:
 
@@ -88,7 +87,7 @@ Ask Claude Code to examine your project setup:
 
 This analysis provides the foundation for accurate, project-specific contribution guidelines.
 
-Generate Section by Section
+## Generate Section by Section
 
 Rather than generating the entire file at once, build it piece by piece:
 
@@ -97,7 +96,7 @@ Rather than generating the entire file at once, build it piece by piece:
 3. Testing requirements - From your test directories and configuration
 4. Code standards - From your linting configuration and style guides
 
-Use Claude Code's Pattern Recognition
+## Use Claude Code's Pattern Recognition
 
 Claude Code can identify patterns in your existing codebase to inform guidelines:
 
@@ -111,9 +110,9 @@ Claude Code can identify patterns in your existing codebase to inform guidelines
 "
 ```
 
-Essential Elements to Include
+## Essential Elements to Include
 
-Issue Templates
+## Issue Templates
 
 Your CONTRIBUTING.md should reference or include issue templates that guide contributors toward providing actionable information:
 
@@ -127,7 +126,7 @@ When reporting bugs, include:
 - Notes (possibly including why you think this might be happening)
 ```
 
-Feature Requests
+## Feature Requests
 
 Clearly define the process for suggesting features:
 
@@ -140,7 +139,7 @@ Suggesting Features
 4. Be open to feedback and discussion
 ```
 
-Commit Message Conventions
+## Commit Message Conventions
 
 If you use conventional commits or similar standards, document them clearly:
 
@@ -160,9 +159,9 @@ We follow the Conventional Commits specification:
 `feat: add user authentication with OAuth2`
 ```
 
-Best Practices for Contribution Guides
+## Best Practices for Contribution Guides
 
-Keep It Living
+## Keep It Living
 
 Your CONTRIBUTING.md should evolve with your project. Schedule quarterly reviews to:
 
@@ -171,11 +170,11 @@ Your CONTRIBUTING.md should evolve with your project. Schedule quarterly reviews
 - Remove deprecated processes
 - Incorporate feedback from recent contributors
 
-Test Your Documentation
+## Test Your Documentation
 
 Before publishing updates, verify that all commands and steps actually work. Ask a team member or new contributor to follow the guide and note any friction points.
 
-Use Inclusive Language
+## Use Inclusive Language
 
 Write for a global audience. Avoid idioms, use clear simple English, and provide context for cultural assumptions. Claude Code can help rephrase content for clarity:
 
@@ -184,7 +183,7 @@ Write for a global audience. Avoid idioms, use clear simple English, and provide
 for non-native English speakers while maintaining technical accuracy"
 ```
 
-Actionable Takeaways
+## Actionable Takeaways
 
 1. Start with the basics: Setup instructions, development environment, and running tests
 2. Be specific: Include actual commands, not just descriptions of what to do
@@ -193,7 +192,7 @@ Actionable Takeaways
 5. Automate verification: Include CI/CD status badges and test commands contributors can run
 6. Credit contributors: Include a section on recognition or a link to a contributors page
 
-Conclusion
+## Conclusion
 
 A well-written CONTRIBUTING.md transforms your project from an opaque codebase into an accessible community resource. By using Claude Code to analyze your project and generate tailored guidelines, you can create documentation that genuinely helps contributors while saving significant time. Remember that your contribution guide is a living document, review and refine it regularly to keep it relevant and welcoming.
 

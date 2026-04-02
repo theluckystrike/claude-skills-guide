@@ -19,7 +19,7 @@ Chrome Enterprise data loss prevention (DLP) provides organizations with granula
 
 This guide covers Chrome Enterprise DLP fundamentals, configuration approaches, and practical examples you can apply immediately.
 
-How Chrome Enterprise DLP Works
+## How Chrome Enterprise DLP Works
 
 Chrome Enterprise DLP operates through the Chrome Browser Cloud Management infrastructure. When users browse the web or interact with web applications, Chrome evaluates content against DLP rules configured in your organization admin console. The browser can:
 
@@ -29,11 +29,11 @@ Chrome Enterprise DLP operates through the Chrome Browser Cloud Management infra
 
 The system works at the browser level, meaning it inspects content regardless of whether it originates from typed input, copy-paste operations, file downloads, or API calls made from web pages.
 
-Configuring DLP Rules Through Admin Console
+## Configuring DLP Rules Through Admin Console
 
 Chrome Enterprise DLP rules live in the Google Admin console under Devices > Chrome > Browser and Devices > Data Loss Prevention. You define rules that match specific content types and specify actions when matches occur.
 
-Creating a Built-in Content Matcher
+## Creating a Built-in Content Matcher
 
 The simplest DLP configuration uses built-in content matchers. Here's a practical example for detecting credit card numbers:
 
@@ -50,11 +50,11 @@ The simplest DLP configuration uses built-in content matchers. Here's a practica
 
 This JSON structure represents the underlying configuration that translates into admin console rules. When a user attempts to submit a credit card number in a web form, Chrome blocks or warns based on your action settings.
 
-Custom DLP Rules for Developer Data
+## Custom DLP Rules for Developer Data
 
 Enterprise developers often work with proprietary code, API keys, and internal documentation. Custom DLP rules let you protect these assets using regular expressions.
 
-Detecting AWS API Keys
+## Detecting AWS API Keys
 
 ```json
 {
@@ -72,7 +72,7 @@ Detecting AWS API Keys
 
 This rule matches the standard AWS access key format (starting with `AKIA` followed by 16 alphanumeric characters). Deploying such rules prevents developers from accidentally committing credentials to public repositories or sharing them in messaging apps.
 
-Protecting Internal Hostnames
+## Protecting Internal Hostnames
 
 ```json
 {
@@ -88,11 +88,11 @@ Protecting Internal Hostnames
 
 This configuration triggers a warning whenever users attempt to share or copy URLs matching internal hostname patterns.
 
-Implementing DLP Through Policy Files
+## Implementing DLP Through Policy Files
 
 For organizations not using Chrome Browser Cloud Management, enterprise policy files provide an alternative deployment method. Chrome supports Windows Group Policy, macOS Configuration Profiles, and Linux configuration files.
 
-Windows Group Policy Example
+## Windows Group Policy Example
 
 On Windows, create a policy entry under `Computer Configuration > Administrative Templates > Google > Google Chrome > Data Loss Prevention`:
 
@@ -139,7 +139,7 @@ For macOS, create a configuration profile using Apple's Profile Manager or manua
 
 Deploy this profile through MDM (Mobile Device Management) solutions like Jamf or Microsoft Intune.
 
-Understanding DLP Violation Handling
+## Understanding DLP Violation Handling
 
 Chrome Enterprise DLP supports three action levels that determine what happens when content matches a rule:
 
@@ -149,7 +149,7 @@ WARN: Allows the user to proceed after displaying a warning. The warning include
 
 REPORT (Audit Only): Allows all actions but logs them for compliance review. Use this mode during initial DLP deployment to understand your organization's data flow before enforcing restrictions.
 
-Practical Implementation Strategy
+## Practical Implementation Strategy
 
 Deploying DLP effectively requires a phased approach. Start with REPORT mode on all rules to establish a baseline:
 
@@ -160,7 +160,7 @@ Deploying DLP effectively requires a phased approach. Start with REPORT mode on 
 
 This approach prevents productivity disruption while building confidence in your DLP configuration.
 
-Testing Your DLP Configuration
+## Testing Your DLP Configuration
 
 After configuring rules, verify they work correctly using Chrome's built-in testing tools. Navigate to `chrome://policy`, click "Reload Policies," and review the DLP section:
 
@@ -176,7 +176,7 @@ Rules:
 
 For deeper testing, create test content matching your rules and attempt the restricted actions. The browser should respond according to your action settings.
 
-Chrome Enterprise DLP Limitations
+## Chrome Enterprise DLP Limitations
 
 Understanding what Chrome Enterprise DLP cannot do helps set realistic expectations:
 
@@ -187,12 +187,11 @@ Understanding what Chrome Enterprise DLP cannot do helps set realistic expectati
 
 For comprehensive data protection, combine browser DLP with endpoint DLP solutions and endpoint protection platforms.
 
-Conclusion
+## Conclusion
 
 Chrome Enterprise data loss prevention provides essential controls for organizations handling sensitive information. By understanding rule configuration, deployment methods, and action behaviors, developers and IT administrators can implement effective data protection without unnecessary friction.
 
 Start with audit-only rules, analyze your data flows, then progressively tighten controls based on actual business needs. This measured approach builds solid data protection while maintaining workforce productivity.
-
 
 Related Reading
 

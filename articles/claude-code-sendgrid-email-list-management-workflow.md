@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code SendGrid Email List Management Workflow
 
 Email list management is a critical component of any marketing strategy, and automating it with Claude Code can save hours of manual work while ensuring consistency and accuracy. we'll explore how to build a comprehensive SendGrid email list management workflow using Claude Code skills, enabling you to handle subscribers, segment lists, and manage campaigns programmatically.
 
-Understanding the SendGrid API Integration
+## Understanding the SendGrid API Integration
 
 SendGrid provides a powerful REST API that allows you to manage contacts, lists, and campaigns programmatically. Claude Code can interact with these APIs through HTTP requests, making it ideal for building automation workflows. The key is creating reusable skills that abstract away the API complexity and provide natural language commands for common tasks.
 
@@ -29,7 +28,7 @@ Before building your workflow, you'll need to obtain a SendGrid API key with app
 - Campaigns (read/write)
 - Templates (read)
 
-Building the Foundation Skill
+## Building the Foundation Skill
 
 Create a foundational skill that handles the authentication and core API communication. This skill will serve as the base layer for all other SendGrid-related skills:
 
@@ -44,7 +43,7 @@ This skill provides core SendGrid API communication capabilities.
 
 The base skill should include helper functions for making authenticated requests to SendGrid endpoints. Store your API key in an environment variable (e.g., SENDGRID_API_KEY) and use it in the authorization header for all requests.
 
-Subscriber Management Skills
+## Subscriber Management Skills
 
 One of the most common tasks is managing email subscribers. Create a skill for adding new subscribers to your lists:
 
@@ -83,7 +82,7 @@ CSV Format
 The CSV should have columns: email, first_name, last_name, custom_field_1, etc.
 ```
 
-List Segmentation Workflows
+## List Segmentation Workflows
 
 Effective email marketing requires proper list segmentation. Claude Code can help you create and manage segments based on various criteria. Build skills for creating segments based on:
 - Geographic location
@@ -111,7 +110,7 @@ Parameters
 
 Segment creation involves building a query using SendGrid's filter language. For example, to create a segment of engaged subscribers (those who opened emails in the last 30 days), you'd construct a query using the `last_opened` field with a date filter.
 
-Campaign Management Automation
+## Campaign Management Automation
 
 Once you have subscribers organized into lists and segments, you can automate campaign creation and scheduling. Create skills for:
 
@@ -140,7 +139,7 @@ Parameters
 - send_at: Schedule time in ISO 8601 format (optional)
 ```
 
-Handling Unsubscribes and Compliance
+## Handling Unsubscribes and Compliance
 
 Email compliance is crucial. Build skills that automatically handle unsubscribe requests and maintain compliance:
 
@@ -164,7 +163,7 @@ This skill should:
 - Remove unsubscribed contacts from marketing lists
 - Log compliance events for auditing
 
-Practical Example: Welcome Email Workflow
+## Practical Example: Welcome Email Workflow
 
 Let's put it all together with a practical workflow for managing welcome emails:
 
@@ -176,7 +175,7 @@ Let's put it all together with a practical workflow for managing welcome emails:
 
 This automation ensures every new subscriber receives a timely, personalized welcome sequence without manual intervention.
 
-Best Practices for Your Workflow
+## Best Practices for Your Workflow
 
 When building SendGrid workflows with Claude Code, keep these best practices in mind:
 
@@ -186,7 +185,7 @@ When building SendGrid workflows with Claude Code, keep these best practices in 
 - Logging: Maintain detailed logs of all operations for debugging and compliance
 - Testing: Use SendGrid's sandbox mode for testing campaigns before sending to real subscribers
 
-Conclusion
+## Conclusion
 
 Claude Code combined with SendGrid's powerful API enables sophisticated email list management automation. By building reusable skills for common operations, subscriber management, segmentation, campaigns, and compliance, you create a flexible workflow system that grows with your needs. Start with the foundational skills, then gradually add more complex automation as your requirements evolve.
 

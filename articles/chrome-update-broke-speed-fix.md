@@ -19,19 +19,19 @@ Chrome updates bring new features, security patches, and bug fixes, but sometime
 
 This guide walks you through practical solutions to restore Chrome's performance after an update, covering everything from quick fixes to more advanced troubleshooting steps.
 
-Quick Fixes to Try First
+## Quick Fixes to Try First
 
 Before diving into complex solutions, start with these simple approaches that often resolve update-related speed issues:
 
-Restart Chrome Completely
+## Restart Chrome Completely
 
 Many users keep Chrome running in the background, which can cause issues after an update. Close Chrome entirely, make sure no windows or background processes remain, and then relaunch it. On macOS, you can use `Cmd+Q` or check the Activity Monitor to ensure no Chrome processes are running.
 
-Clear Browser Cache
+## Clear Browser Cache
 
 Cached data from the previous version can conflict with new update files. Clear your cache by pressing `Ctrl+Shift+Delete` (or `Cmd+Shift+Delete` on Mac), selecting "All time" as the time range, and checking at least "Cached images and files." Click "Clear data" and restart Chrome.
 
-Disable Conflicting Extensions
+## Disable Conflicting Extensions
 
 Browser extensions are a common source of performance problems after updates. Chrome updates can change how extensions interact with the browser, causing conflicts. To test if an extension is causing issues:
 
@@ -40,11 +40,11 @@ Browser extensions are a common source of performance problems after updates. Ch
 3. Restart Chrome and check if speed improves
 4. Re-enable extensions one by one to identify the culprit
 
-Addressing High Memory and CPU Usage
+## Addressing High Memory and CPU Usage
 
 If Chrome is consuming excessive system resources after an update, these steps can help:
 
-Enable Memory Saver Mode
+## Enable Memory Saver Mode
 
 Chrome's Memory Saver mode, formerly known as Tab Throttling, helps reduce memory usage by unloading inactive tabs. To enable it:
 
@@ -52,7 +52,7 @@ Chrome's Memory Saver mode, formerly known as Tab Throttling, helps reduce memor
 2. Toggle on "Memory Saver"
 3. Set the sensitivity level (Low, Medium, or High) based on your needs
 
-Disable Hardware Acceleration
+## Disable Hardware Acceleration
 
 Sometimes update changes to GPU rendering cause performance issues. Try disabling hardware acceleration:
 
@@ -62,7 +62,7 @@ Sometimes update changes to GPU rendering cause performance issues. Try disablin
 
 If this improves performance, you can leave it off or try updating your graphics drivers.
 
-Reset Chrome Settings
+## Reset Chrome Settings
 
 An update might have changed settings unexpectedly. Reset Chrome to default:
 
@@ -72,9 +72,9 @@ An update might have changed settings unexpectedly. Reset Chrome to default:
 
 This preserves your bookmarks and saved passwords while resetting other settings.
 
-Fixing Specific Update Issues
+## Fixing Specific Update Issues
 
-Profile Corruption
+## Profile Corruption
 
 Chrome stores user data in a profile folder, and updates can sometimes corrupt this data. Create a new profile:
 
@@ -85,7 +85,7 @@ Chrome stores user data in a profile folder, and updates can sometimes corrupt t
 
 If the new profile works smoothly, you can migrate your data or continue using the new profile.
 
-Clear DNS Cache
+## Clear DNS Cache
 
 Network-related issues after updates often stem from cached DNS data. Clear it:
 
@@ -94,7 +94,7 @@ Network-related issues after updates often stem from cached DNS data. Clear it:
 3. Go to `chrome://net-internals/#sockets`
 4. Click "Flush socket pools"
 
-Reinstall Chrome Completely
+## Reinstall Chrome Completely
 
 If other solutions fail, a clean reinstallation often works:
 
@@ -106,15 +106,15 @@ If other solutions fail, a clean reinstallation often works:
 3. Download the latest Chrome from the official website
 4. Install and sign in to restore bookmarks
 
-Preventing Future Performance Issues
+## Preventing Future Performance Issues
 
 Once you've fixed the current issue, take these preventive measures:
 
-Keep Extensions Minimal
+## Keep Extensions Minimal
 
 Only keep essential extensions installed. Each extension adds memory overhead and potential conflict points. Review your extensions monthly and remove any you don't actively use.
 
-Stay Updated, But Cautiously
+## Stay Updated, But Cautiously
 
 While keeping Chrome updated is important for security, you can control when updates install:
 
@@ -122,7 +122,7 @@ While keeping Chrome updated is important for security, you can control when upd
 2. Chrome automatically checks for updates
 3. After an update, restart Chrome immediately to avoid running mixed versions
 
-Monitor Chrome's Resource Usage
+## Monitor Chrome's Resource Usage
 
 Use Chrome's built-in Task Manager to identify problematic tabs or extensions:
 
@@ -130,7 +130,7 @@ Use Chrome's built-in Task Manager to identify problematic tabs or extensions:
 2. Sort by memory or CPU usage
 3. Identify and address high-usage items
 
-Diagnosing the Problem Before Fixing It
+## Diagnosing the Problem Before Fixing It
 
 Random fixes waste time. Chrome gives you enough built-in diagnostic information to narrow down the cause before you start changing settings. Spending three minutes here can save thirty minutes of trial and error.
 
@@ -140,7 +140,7 @@ Use the Task Manager as your baseline. Open Chrome's Task Manager with `Shift+Es
 
 Check the Net Internals log for network slowdowns. Sometimes a Chrome update changes how requests are prioritized or how the QUIC protocol is negotiated, which makes pages feel slow even when local resources are fine. Navigate to `chrome://net-internals/#events` and load a slow-feeling page. Look for DNS resolution failures, long TCP connection times, or QUIC fallback events that indicate network-layer issues unrelated to your machine's memory or CPU.
 
-Tuning Chrome Flags for Performance
+## Tuning Chrome Flags for Performance
 
 Chrome's experimental flags at `chrome://flags` let you enable or disable specific features independently of what the update changed. This is a powerful tool for isolating update regressions because you can often toggle the exact feature that changed.
 
@@ -156,7 +156,7 @@ Network service sandbox: Search for "Network service sandbox." On some systems, 
 
 After any flags change, click the "Relaunch" button that appears at the bottom of the flags page. Always revert flags you changed if they did not help, running with non-default flags indefinitely can expose you to stability issues.
 
-Freeing Up Resources Chrome Is Holding
+## Freeing Up Resources Chrome Is Holding
 
 Chrome updates sometimes change garbage collection schedules or caching limits, causing the browser to hold onto more memory than it should until it is restarted. If Chrome is slow but the Task Manager shows very high memory for the "GPU Process" or for individual tab processes, try these targeted steps.
 
@@ -166,7 +166,7 @@ Suspend inactive tabs manually. Before Memory Saver kicks in automatically, you 
 
 Kill and restart the GPU process. In Chrome's Task Manager, select the "GPU Process" row and click "End Process." Chrome will reinitialize it automatically within a second. This resets the GPU memory allocations without requiring a full browser restart and often fixes rendering lag that appeared after an update changed GPU compositing behavior.
 
-Profile-Specific Slowdowns
+## Profile-Specific Slowdowns
 
 A subtlety that trips up many users: Chrome updates can affect individual user profiles differently depending on how much data they contain. If you have a profile with years of browsing history, thousands of bookmarks, and dozens of saved passwords, post-update database migrations can run in the background for minutes to hours after the first launch following an update.
 
@@ -176,7 +176,7 @@ The fix is simply to wait. Let Chrome sit idle for ten to fifteen minutes after 
 
 If the slowdown persists after background processes settle, create a test profile as described in the Profile Corruption section above. Compare performance between your main profile and the clean test profile. A significant difference in speed points to profile data as the cause, either corruption, a problematic extension installed only in that profile, or a massive browsing history database that is legitimately slower to query.
 
-When to Seek Further Help
+## When to Seek Further Help
 
 If you've tried all these solutions and Chrome remains slow after updates, consider:
 
@@ -187,7 +187,6 @@ If you've tried all these solutions and Chrome remains slow after updates, consi
 - Checking the Chromium bug tracker at bugs.chromium.org for open issues matching your symptoms before spending more time debugging, someone may have already filed a report with a workaround or a confirmed fix in the next release
 
 Chrome's performance after an update largely depends on your specific setup, extension ecosystem, and how the update changed internal processes. By systematically working through these solutions, starting with the Task Manager baseline and flags before jumping to reinstalls, you can typically restore or even improve browser performance without losing any of your data.
-
 
 Related Reading
 

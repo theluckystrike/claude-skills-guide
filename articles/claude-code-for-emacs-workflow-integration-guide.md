@@ -13,9 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Emacs Workflow Integration Guide
-
 Emacs has long been the editor of choice for developers who value extensibility and keyboard-driven workflows. Integrating Claude Code into your Emacs setup can transform your development experience by combining Emacs's powerful text manipulation capabilities with AI-assisted coding assistance. This guide explores practical approaches to bringing Claude Code into your Emacs environment.
 
 Why Integrate Claude Code with Emacs?
@@ -29,11 +26,11 @@ Emacs users typically fall into one of two categories: those who use AI assistan
 
 The combination of Emacs's efficiency with AI assistance creates a powerful development environment that scales with your projects.
 
-Setting Up the Integration
+## Setting Up the Integration
 
 The most straightforward way to integrate Claude Code with Emacs is through a shell command wrapper that allows you to invoke Claude Code from within Emacs buffers. Here's a practical approach using Emacs Lisp:
 
-Creating a Claude Code Command Wrapper
+## Creating a Claude Code Command Wrapper
 
 Create a simple Emacs command that sends the current buffer or selected region to Claude Code:
 
@@ -52,7 +49,7 @@ Create a simple Emacs command that sends the current buffer or selected region t
 
 This basic setup sends selected content to Claude Code and replaces it with the response. For a more sophisticated integration, consider using `comint` or `shell` modes to maintain a conversation with Claude Code.
 
-Using Emacs as a Claude Code Frontend
+## Using Emacs as a Claude Code Frontend
 
 For a more integrated experience, you can spawn Claude Code in a dedicated Emacs buffer:
 
@@ -73,11 +70,11 @@ For a more integrated experience, you can spawn Claude Code in a dedicated Emacs
 
 This creates an interactive session where you can maintain context across multiple queries, similar to a REPL but for AI-assisted development.
 
-Practical Emacs Workflows with Claude Code
+## Practical Emacs Workflows with Claude Code
 
 Once integrated, Claude Code enhances several common Emacs workflows. Here are the most impactful use cases:
 
-Intelligent Code Completion
+## Intelligent Code Completion
 
 While Emacs has built-in completion through company-mode or corfu, Claude Code can provide context-aware suggestions that go beyond static analysis. Create a function that asks Claude Code for completions based on your current buffer:
 
@@ -94,7 +91,7 @@ While Emacs has built-in completion through company-mode or corfu, Claude Code c
     (message "%s" completion)))
 ```
 
-Automated Code Review
+## Automated Code Review
 
 Use Emacs keybindings to trigger code reviews without leaving your editor:
 
@@ -115,7 +112,7 @@ Use Emacs keybindings to trigger code reviews without leaving your editor:
 
 Bind this to a convenient keybinding like `C-c r` for quick code reviews while you remain in your development buffer.
 
-Refactoring with Context
+## Refactoring with Context
 
 Emacs's excellent project navigation combined with Claude Code's refactoring capabilities makes for a powerful combination. You can refactor entire projects by providing context:
 
@@ -133,11 +130,11 @@ REFACTORING-TYPE can be 'extract-function, 'rename, 'optimize, etc."
     (insert result)))
 ```
 
-Advanced Integration Patterns
+## Advanced Integration Patterns
 
 For power users, consider these advanced patterns that use Emacs's extensibility:
 
-Project-Aware Context
+## Project-Aware Context
 
 Configure Claude Code to understand your project structure by automatically including relevant files:
 
@@ -161,7 +158,7 @@ Configure Claude Code to understand your project structure by automatically incl
                "\n\n")))
 ```
 
-Integration with Magit
+## Integration with Magit
 
 If you use Magit for Git, you can add AI-assisted commit message generation:
 
@@ -180,7 +177,7 @@ If you use Magit for Git, you can add AI-assisted commit message generation:
 
 This allows you to review AI-generated commit messages before committing, maintaining human oversight while reducing the cognitive load of crafting messages.
 
-Best Practices for Emacs-Claude Integration
+## Best Practices for Emacs-Claude Integration
 
 To get the most out of your integrated workflow, follow these practical guidelines:
 
@@ -192,7 +189,7 @@ Combine with existing Emacs tools: Use Emacs's built-in tools like `grep`, `occu
 
 Maintain human oversight: While Claude Code is powerful, always review its suggestions before applying them, especially for production code. Use Emacs's version control integration to easily revert changes if needed.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Emacs combines two powerful paradigms: the extensibility of Emacs with the intelligence of AI-assisted development. Whether you use a simple command wrapper or a full interactive session, the integration enhances your workflow without sacrificing the keyboard-driven efficiency that makes Emacs powerful.
 

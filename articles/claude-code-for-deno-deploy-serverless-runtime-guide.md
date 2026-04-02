@@ -16,13 +16,13 @@ permalink: /claude-code-for-deno-deploy-serverless-runtime-guide/
 
 Deno Deploy is a serverless runtime that lets you run JavaScript, TypeScript, and WebAssembly at the edge. When combined with Claude Code, you get a powerful workflow for building, deploying, and maintaining serverless applications. For related serverless patterns, see the [workflows hub](/workflows-hub/). This guide shows you how to use Claude Code effectively with Deno Deploy.
 
-Why Deno Deploy Works Well with Claude Code
+## Why Deno Deploy Works Well with Claude Code
 
 [Deno Deploy uses standard web platform APIs](/best-claude-code-skills-to-install-first-2026/) Your handlers are just fetch functions that receive a Request and return a Response. This simplicity means Claude Code can generate correct Deno Deploy code without complex configuration files or framework-specific knowledge.
 
 [The runtime supports TypeScript natively, which aligns well with Claude Code's strengths in type-aware code generation](/claude-skill-md-format-complete-specification-guide/) When you describe what you want built, Claude understands TypeScript interfaces and can produce type-safe code from the start.
 
-Setting Up Your Deno Deploy Project
+## Setting Up Your Deno Deploy Project
 
 Initialize your project with a simple structure:
 
@@ -45,7 +45,7 @@ export default {
 
 This pattern works because Deno Deploy maps file routes automatically. Place files in the `routes/` directory, and they become HTTP endpoints.
 
-Using Claude Code to Scaffold Deno Deploy Applications
+## Using Claude Code to Scaffold Deno Deploy Applications
 
 When starting a new Deno Deploy project, describe your requirements to Claude Code:
 
@@ -95,7 +95,7 @@ export const handler: Handlers = {
 };
 ```
 
-Integrating Claude Skills for Deno Deploy Development
+## Integrating Claude Skills for Deno Deploy Development
 
 Several Claude skills enhance Deno Deploy development. The tdd skill helps you write tests alongside your code. for a full breakdown see the [automated testing pipeline guide](/claude-tdd-skill-test-driven-development-workflow/). Since Deno includes a built-in test runner, pairing Claude with test-driven development produces reliable serverless functions:
 
@@ -118,7 +118,7 @@ Run tests with `deno test` locally before deploying.
 
 For documentation, the pdf skill helps generate API documentation from your Deno Deploy routes. Combine it with the docx skill when creating user guides or deployment instructions for your team.
 
-Working with Deno Deploy KV
+## Working with Deno Deploy KV
 
 Deno Deploy includes built-in key-value storage. Claude Code understands the KV API and can help you model your data correctly:
 
@@ -164,7 +164,7 @@ export async function getRecentUsers() {
 }
 ```
 
-Deploying with Claude Code Assistance
+## Deploying with Claude Code Assistance
 
 Deploy your Deno Deploy project through Deno Deploy's dashboard or CLI. The CLI approach works well with Claude Code:
 
@@ -195,7 +195,7 @@ if (code === 0) {
 
 Run with: `deno run --allow-all deploy.ts my-project`
 
-Debugging Deno Deploy Functions
+## Debugging Deno Deploy Functions
 
 When your deployed function isn't working, use Deno Deploy's logs. The supermemory skill helps you track issues across sessions. similar debugging patterns are covered in the [Claude Code skill timeout error guide](/claude-code-skill-timeout-error-how-to-increase-the-limit/).
 
@@ -207,7 +207,7 @@ deno run --inspect-brk -A ./routes/index.ts
 
 Then connect your browser debugger at `chrome://inspect`. This pause-on-start pattern lets you set breakpoints before any code executes.
 
-Performance Considerations
+## Performance Considerations
 
 Deno Deploy functions run at the edge, close to your users. Keep these tips in mind:
 
@@ -244,7 +244,7 @@ export async function withCache(key: string, fetchFn: () => Promise<Response>) {
 }
 ```
 
-Summary
+## Summary
 
 Claude Code and Deno Deploy form a productive combination for serverless development. The runtime's simplicity enables accurate code generation, while Claude's understanding of TypeScript and web APIs produces working implementations quickly. Use the tdd skill for test-driven development, the pdf skill for generating documentation, and the supermemory skill to remember solutions to recurring problems.
 

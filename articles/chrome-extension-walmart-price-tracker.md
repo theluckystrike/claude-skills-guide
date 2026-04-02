@@ -13,10 +13,9 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 Building a Chrome extension for tracking Walmart prices requires understanding web scraping boundaries, Chrome extension architecture, and real-time notification systems. This guide walks through creating a functional price tracker from scratch.
 
-Understanding the Architecture
+## Understanding the Architecture
 
 A Walmart price tracker extension consists of three primary components:
 
@@ -26,7 +25,7 @@ A Walmart price tracker extension consists of three primary components:
 
 Before building, recognize that Walmart's Terms of Service restrict automated data collection. Use this knowledge responsibly, build for personal use or with explicit API partnerships.
 
-Setting Up the Extension Structure
+## Setting Up the Extension Structure
 
 Create your extension directory with the following structure:
 
@@ -78,7 +77,7 @@ The manifest.json defines permissions and entry points:
 }
 ```
 
-Extracting Price Data with Content Scripts
+## Extracting Price Data with Content Scripts
 
 The content script runs on Walmart product pages and extracts relevant pricing information. Walmart frequently changes their DOM structure, so build resilient selectors:
 
@@ -158,7 +157,7 @@ The content script runs on Walmart product pages and extracts relevant pricing i
 })();
 ```
 
-Managing Data Storage
+## Managing Data Storage
 
 Use Chrome's storage API to persist tracked products:
 
@@ -256,7 +255,7 @@ async function sendPriceNotification(title, oldPrice, newPrice) {
 setInterval(checkPrices, 6 * 60 * 60 * 1000);
 ```
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides users with a dashboard to manage tracked products:
 
@@ -362,7 +361,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 ```
 
-Loading and Testing Your Extension
+## Loading and Testing Your Extension
 
 To test your extension in Chrome:
 
@@ -373,7 +372,7 @@ To test your extension in Chrome:
 
 When visiting any Walmart product page, click the extension icon to add it to your tracking list. The background service will check prices every 6 hours and notify you of changes.
 
-Production Considerations
+## Production Considerations
 
 For a production extension, consider these enhancements:
 
@@ -386,7 +385,6 @@ For a production extension, consider these enhancements:
 
 Building a price tracker teaches valuable skills in Chrome extension development, web scraping ethics, and real-time notification systems. Use these principles to create useful tools while respecting platform terms of service.
 
-
 Related Reading
 
 - [Deal Finder Chrome Extension: A Developer's Guide to Building Price Tracking Tools](/deal-finder-chrome-extension/)
@@ -395,7 +393,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Advanced: Price History Chart
+## Advanced: Price History Chart
 
 Track prices over time and render a mini price history chart in the popup:
 
@@ -424,7 +422,7 @@ function renderPriceHistory(canvas, product) {
 }
 ```
 
-Comparison with Existing Tools
+## Comparison with Existing Tools
 
 | Tool | Setup | Real-time alerts | Price history | Cost |
 |---|---|---|---|---|
@@ -435,7 +433,7 @@ Comparison with Existing Tools
 
 Building your own gives full control over data and notification triggers. The trade-off is maintenance when Walmart updates their page structure.
 
-Step-by-Step: Tracking Your First Product
+## Step-by-Step: Tracking Your First Product
 
 1. Navigate to a Walmart product page (`walmart.com/ip/...`)
 2. Click the extension icon in the toolbar
@@ -445,7 +443,7 @@ Step-by-Step: Tracking Your First Product
 6. Revisit the popup to see current price and history chart
 7. Chrome sends a notification when the background alarm detects a price change
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Selector no longer matching prices: Use `[itemprop="price"]` or look for JSON-LD structured data as a more resilient fallback:
 

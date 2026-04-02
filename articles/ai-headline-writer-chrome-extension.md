@@ -13,10 +13,9 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 AI headline writer Chrome extensions have become essential tools for developers, content creators, and marketers who need to generate compelling titles at scale. These browser extensions integrate large language models directly into your workflow, allowing you to craft headlines without switching between applications. This guide covers the technical implementation, practical use cases, and customization strategies for building your own AI headline writer extension.
 
-How Chrome Extensions Access AI Capabilities
+## How Chrome Extensions Access AI Capabilities
 
 Chrome extensions can connect to AI services through several architectural patterns. The most common approach uses a background script that communicates with external APIs, while content scripts handle the user interface within web pages.
 
@@ -42,7 +41,7 @@ The background service worker acts as a bridge between your extension and AI API
 
 Understanding the separation of responsibilities matters before writing a single line of code. Manifest V3 (the current standard) enforces strict boundaries: service workers handle network requests and background logic, content scripts touch the DOM of pages the user visits, and popup scripts manage the extension's UI. This separation prevents security vulnerabilities and keeps each component focused.
 
-Building the Core Functionality
+## Building the Core Functionality
 
 The headline generation logic lives in your background script. Here's a practical implementation that calls an AI endpoint:
 
@@ -94,7 +93,7 @@ async function generateHeadlinesWithRetry(prompt, apiKey, maxRetries = 3) {
 
 Retry logic is important because AI API calls can fail due to rate limits, transient network errors, or temporary service outages. Without retries, a single failed request frustrates the user unnecessarily.
 
-Creating the User Interface
+## Creating the User Interface
 
 The popup interface provides the quickest way to generate headlines while browsing. A simple implementation uses vanilla JavaScript with the DOM:
 
@@ -161,7 +160,7 @@ results.querySelectorAll('.headline').forEach(el => {
 });
 ```
 
-Advanced: Context-Aware Headline Generation
+## Advanced: Context-Aware Headline Generation
 
 For power users, extend your extension to analyze page content automatically. Inject a content script that extracts article titles, meta descriptions, and body text:
 
@@ -201,7 +200,7 @@ async function generateFromPage() {
 
 This context-aware mode produces significantly more relevant headlines because the AI is working from actual page content rather than a brief user-typed summary.
 
-API Key Management for Distribution
+## API Key Management for Distribution
 
 When distributing your extension, never hardcode API keys. Instead, implement a settings page where users enter their own keys:
 
@@ -241,7 +240,7 @@ async function validateAndSaveKey(apiKey) {
 }
 ```
 
-Supporting Multiple AI Providers
+## Supporting Multiple AI Providers
 
 Locking your extension to a single AI provider limits its audience. A provider abstraction layer lets users choose between OpenAI, Anthropic, or other services:
 
@@ -282,7 +281,7 @@ async function callProvider(providerName, prompt, apiKey) {
 
 This pattern makes adding new providers straightforward and gives users flexibility.
 
-Use Cases for Developers
+## Use Cases for Developers
 
 An AI headline writer extension serves several practical scenarios:
 
@@ -304,7 +303,7 @@ Here is a comparison of headline prompt strategies and the types of results they
 | Question format | "Can AI Really Replace a Copywriter?" | Opinion pieces |
 | Data-backed | "87% of Marketers Use AI Headlines in 2026" | Marketing content |
 
-Performance Considerations
+## Performance Considerations
 
 Chrome extensions run in a constrained environment. Optimize your implementation by:
 
@@ -329,12 +328,11 @@ async function getCachedOrGenerate(prompt, apiKey) {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Building an AI headline writer Chrome extension combines browser APIs with large language models to create a powerful productivity tool. The architecture separates UI concerns from API logic, allowing flexible customization for different use cases. Start with the basic implementation shown here, then extend it to match your specific workflow requirements.
 
 For developers interested in further customization, explore adding support for different AI providers, implementing headline scoring algorithms, or integrating with content management systems through additional permissions.
-
 
 Related Reading
 

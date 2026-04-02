@@ -18,13 +18,13 @@ Migrating [test suite](/best-claude-skills-for-code-review-automation/)s from Je
 
 [This tutorial walks you through a complete migration workflow using Claude Code](/best-claude-code-skills-to-install-first-2026/), covering everything from initial assessment through final verification.
 
-Why Migrate from Jest to Vitest
+## Why Migrate from Jest to Vitest
 
 [Vitest shares compatibility with Jest's API, meaning most of your existing test patterns translate directly](/claude-tdd-skill-test-driven-development-workflow/) The performance gains stem from Vite's native hot module replacement and intelligent watch mode. Teams report test suites running 10x faster after switching, particularly beneficial in large codebases with hundreds of test files.
 
 The migration makes particular sense if your project already uses Vite for bundling. Vitest uses the same configuration, plugin ecosystem, and dependency resolution, eliminating duplicate tooling and reducing maintenance overhead.
 
-Phase 1: Project Assessment with Claude Code
+## Phase 1: Project Assessment with Claude Code
 
 Begin by having Claude Code analyze your current Jest configuration. Prompt Claude with a request to examine your test setup:
 
@@ -36,7 +36,7 @@ Claude Code examines your setup and produces a migration readiness report. This 
 
 For projects using TypeScript, note that Vitest provides excellent type inference out of the box. You may find that certain `@types/jest` packages become unnecessary after migration.
 
-Phase 2: Dependency Installation and Configuration
+## Phase 2: Dependency Installation and Configuration
 
 The actual migration starts with replacing Jest dependencies. Create a new configuration file for Vitest:
 
@@ -68,7 +68,7 @@ If you're working with Vue projects, this is where invoking the frontend-design 
 
 For projects transitioning from Jest's `--coverage` flag, Vitest's coverage configuration works similarly but uses Vite's coverage providers by default. The transition typically requires updating your CI pipeline's coverage thresholds.
 
-Phase 3: Test File Migration Patterns
+## Phase 3: Test File Migration Patterns
 
 Most Jest matchers work identically in Vitest, but several patterns require adjustment. Here's a practical migration approach:
 
@@ -112,7 +112,7 @@ describe('UserService', () => {
 
 The primary changes involve importing test utilities explicitly and replacing `jest` global with `vi`. Vitest supports `--globals` flag if you prefer the Jest-style global API, but explicit imports align better with modern ESM [workflows](/workflows-hub/).
 
-Phase 4: Handling Jest-Specific Features
+## Phase 4: Handling Jest-Specific Features
 
 Several Jest-specific features require targeted migration strategies:
 
@@ -129,7 +129,7 @@ vi.mock('./api', () => ({
 
 Custom matchers: If you've built custom Jest matchers, migrate them to Vitest's `expect.extend`. The API remains consistent, so this typically involves simple find-and-replace.
 
-Phase 5: CI/CD Pipeline Updates
+## Phase 5: CI/CD Pipeline Updates
 
 Your continuous integration configuration needs updating. Here's a typical package.json transition:
 
@@ -150,7 +150,7 @@ For GitHub Actions, update your workflow file to use Vitest commands. The test e
   run: npm run test:run
 ```
 
-Phase 6: Verification and Debugging
+## Phase 6: Verification and Debugging
 
 Run your migrated test suite and address any failures. Common issues include:
 
@@ -160,13 +160,13 @@ Run your migrated test suite and address any failures. Common issues include:
 
 The tdd skill provides excellent guidance for maintaining test-driven development practices during this transition. Claude Code can help you write additional tests to cover edge cases exposed during migration.
 
-Maintaining Your Migrated Suite
+## Maintaining Your Migrated Suite
 
 Post-migration, you'll benefit from Vitest's watch mode integration with Vite's HMR. When editing source files, only related tests re-run automatically, dramatically speeding up development cycles.
 
 Consider implementing snapshot management. Vitest handles snapshots similarly to Jest but stores them with `.snap` extension. You can migrate existing snapshots by running `vitest --update` once.
 
-Summary
+## Summary
 
 Migrating from Jest to Vitest with Claude Code as your migration assistant follows a structured path: assess your current setup, install Vitest dependencies, migrate test files using the provided patterns, update CI configuration, and verify everything works correctly. The performance improvements and simplified tooling make this migration worthwhile for any modern JavaScript project.
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Astro Middleware Workflow Guide
 
 Astro middleware enables you to intercept and modify requests and responses at the edge, making it essential for authentication, logging, redirects, and performance optimizations. This guide shows you how to use Claude Code to build, test, and refine Astro middleware efficiently.
 
-Understanding Astro Middleware Fundamentals
+## Understanding Astro Middleware Fundamentals
 
 Middleware in Astro runs before and after each request is processed. Unlike server-side rendering (SSR) routes that handle the full response, middleware focuses on request/response transformation. This makes it perfect for cross-cutting concerns that affect your entire application.
 
@@ -44,7 +43,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
 
 This pattern allows you to measure and modify response times across your entire site with minimal overhead.
 
-Setting Up Claude Code for Astro Development
+## Setting Up Claude Code for Astro Development
 
 Before building middleware, ensure Claude Code is configured for your Astro project. The most effective approach is creating a specialized skill for Astro middleware development.
 
@@ -61,7 +60,7 @@ You are an Astro middleware expert. Help the user build, test, and optimize midd
 
 This skill gives Claude access to file operations, shell commands, and search capabilities essential for middleware development.
 
-Building Authentication Middleware
+## Building Authentication Middleware
 
 One of the most common middleware use cases is protecting routes. Here's a practical workflow for building authentication middleware with Claude Code:
 
@@ -104,7 +103,7 @@ export const authMiddleware: MiddlewareHandler = async (context, next) => {
 };
 ```
 
-Implementing Rate Limiting Middleware
+## Implementing Rate Limiting Middleware
 
 Rate limiting protects your API from abuse. Here's how to build it with Claude Code's assistance:
 
@@ -166,7 +165,7 @@ export const rateLimitMiddleware: MiddlewareHandler = async (context, next) => {
 };
 ```
 
-Debugging Middleware Issues
+## Debugging Middleware Issues
 
 When middleware behaves unexpectedly, Claude Code helps diagnose problems quickly. Use the skill to trace through the execution flow:
 
@@ -193,7 +192,7 @@ export const debugMiddleware: MiddlewareHandler = async (context, next) => {
 Generate test cases for authentication middleware including: valid token, expired token, missing token, invalid token format, and cookie tampering attempts.
 ```
 
-Optimizing Middleware Performance
+## Optimizing Middleware Performance
 
 Middleware runs on every request, so optimization matters. Here are Claude Code's recommended patterns:
 
@@ -226,7 +225,7 @@ export const efficientMiddleware: MiddlewareHandler = async (context, next) => {
 };
 ```
 
-Integrating Third-Party Services
+## Integrating Third-Party Services
 
 Claude Code excels at integrating external services into your middleware. For example, adding analytics:
 
@@ -234,7 +233,7 @@ Claude Code excels at integrating external services into your middleware. For ex
 Create middleware that sends request data to Plausible analytics, including page views, referrers, and custom properties for authenticated users.
 ```
 
-Testing Middleware in Isolation
+## Testing Middleware in Isolation
 
 Write unit tests for middleware using Vitest and Astro's testing utilities:
 
@@ -261,7 +260,7 @@ describe('authMiddleware', () => {
 
 Ask Claude to generate comprehensive test suites that cover happy paths, edge cases, and error conditions.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Astro middleware development from manual coding to collaborative problem-solving. By creating specialized skills, generating boilerplate code, debugging issues, and creating tests, you build solid middleware faster. The key is treating Claude as a pair programmer who understands Astro's middleware API and TypeScript patterns.
 

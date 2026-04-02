@@ -224,7 +224,7 @@ Trigger the worker
 "Add code to call the WelcomeEmailWorker after user registration"
 ```
 
-Conclusion
+## Conclusion
 
 These Claude Code skills transform Ruby on Rails development workflows. From generating scaffolded code to optimizing database queries and managing background jobs, each skill targets specific problems in Rails development. Integrate these skills into your workflow to reduce boilerplate code, improve test coverage, and build reliable Rails applications faster.
 
@@ -235,7 +235,7 @@ Start by invoking one skill for your next Rails task:
 description:text, due_date:date, and status:integer"
 ```
 
-Advanced: Generating Complex Rails Features
+## Advanced: Generating Complex Rails Features
 
 Claude Code handles complex Rails patterns that typically require significant boilerplate. Some of the most time-saving use cases:
 
@@ -273,7 +273,7 @@ class EmailDeliveryJob < ApplicationJob
 end
 ```
 
-Step-by-Step: Using Claude Code for a New Feature
+## Step-by-Step: Using Claude Code for a New Feature
 
 1. Describe the feature in plain English: "Add a user reputation system where posts can be upvoted and downvoted, with reputation affecting user permissions"
 2. Claude Code generates the migration files, model changes, and controller actions
@@ -282,7 +282,7 @@ Step-by-Step: Using Claude Code for a New Feature
 5. Implement the feature and iterate with Claude Code for edge cases
 6. Use `supermemory` to store the reputation system's rules so future prompts in this project have context
 
-Comparison with Rails Scaffolding
+## Comparison with Rails Scaffolding
 
 | Feature | Claude Code | `rails generate scaffold` | Manual coding |
 |---|---|---|---|
@@ -294,7 +294,7 @@ Comparison with Rails Scaffolding
 
 Claude Code wins for features with custom logic. `rails generate scaffold` wins for standard CRUD resources where you just need the skeleton.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Generated migrations conflicting with existing schema: Always review generated migrations before running `rails db:migrate`. Claude Code works from a description, not direct database inspection, so check for column name conflicts or missing indexes.
 
@@ -305,7 +305,6 @@ Generated code not following your project conventions: Provide Claude Code with 
 N+1 queries in generated associations: Claude Code often generates clean code but may not include eager loading. After generating controller code, check the query log with `bullet` gem enabled and add `.includes()` where needed.
 
 These Claude Code skills transform Ruby on Rails development workflows. Integrate them into your workflow to reduce boilerplate, improve test coverage, and build reliable Rails applications faster.
-
 
 Related Reading
 

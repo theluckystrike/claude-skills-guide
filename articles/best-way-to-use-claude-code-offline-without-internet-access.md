@@ -13,23 +13,22 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Best Way to Use Claude Code Offline Without Internet Access
 
 Claude Code is powerful, but you don't always need an internet connection to get work done. Whether you're on a flight, working in a secure facility, or just want to avoid latency, this guide shows you how to use Claude Code effectively offline.
 
-Understanding Claude Code's Offline Capabilities
+## Understanding Claude Code's Offline Capabilities
 
 Claude Code operates in a hybrid mode, it can function with limited connectivity, but some features require internet access while others work entirely locally. The key is knowing which components work offline and how to configure your environment accordingly.
 
 When Claude Code initializes, it loads skills from your local filesystem. These skills are just Markdown files with YAML front matter, so they're always available locally. The real question is whether you're using local or remote models for inference.
 
-Using Local Models for Offline Inference
+## Using Local Models for Offline Inference
 
 The most important decision for offline Claude Code usage is your choice of model. Claude Code supports multiple model backends, including local models through Ollama and similar providers.
 
-Setting Up Ollama for Local Inference
+## Setting Up Ollama for Local Inference
 
 Ollama lets you run large language models locally on your machine. Here's how to configure Claude Code to use Ollama:
 
@@ -47,7 +46,7 @@ export ANTHROPIC_MODEL=llama3.3
 
 Once configured, Claude Code will use your local model instead of Anthropic's API. This means all your coding assistance happens on your machine, no network requests required.
 
-Practical Example: Offline Code Review
+## Practical Example: Offline Code Review
 
 Here's a practical workflow for offline code review using local models:
 
@@ -69,11 +68,11 @@ You are an expert code reviewer. Analyze the provided code for:
 4. Best practices violations
 ```
 
-Offline Skills: Your Local Knowledge Base
+## Offline Skills: Your Local Knowledge Base
 
 Skills are the heart of Claude Code's extensibility, and they work perfectly offline since they're stored locally. The key is building a skill library that doesn't depend on web resources.
 
-Creating Self-Contained Offline Skills
+## Creating Self-Contained Offline Skills
 
 When writing skills for offline use, avoid referencing external URLs or APIs that require internet access. Instead, embed all necessary information directly in the skill:
 
@@ -117,11 +116,11 @@ docker image prune -a
 
 This skill works entirely offline, no Docker Hub lookups or external documentation needed.
 
-Self-Hosted MCP Servers for Offline Tooling
+## Self-Hosted MCP Servers for Offline Tooling
 
 Model Context Protocol (MCP) servers extend Claude Code's capabilities. For offline use, you need self-hosted servers that don't require external APIs.
 
-Running Local MCP Servers
+## Running Local MCP Servers
 
 Many MCP servers work offline once installed. Here's how to set up a local file server:
 
@@ -135,7 +134,7 @@ claude mcp add filesystem /path/to/your/projects
 
 This gives Claude Code access to your local files without any network dependency.
 
-Offline Database Tools
+## Offline Database Tools
 
 For database work offline, use local database servers:
 
@@ -147,9 +146,9 @@ Use a local MCP server for database access
 claude mcp add postgres "host=localhost port=5432 dbname=mydb"
 ```
 
-Optimizing Your Workflow for Offline Use
+## Optimizing Your Workflow for Offline Use
 
-Pre-Caching Essential Skills
+## Pre-Caching Essential Skills
 
 Before going offline, prepare your skills by copying the relevant `.md` files into your project's `.claude/` directory (or `~/.claude/` for global availability):
 
@@ -163,7 +162,7 @@ cp ~/my-skills/git-commands.md .claude/
 Skills are local files. no network required to use them offline
 ```
 
-Project-Specific Offline Configurations
+## Project-Specific Offline Configurations
 
 Create a `.claude/` directory in your project with offline-ready configuration:
 
@@ -183,7 +182,7 @@ This skill knows about our specific codebase.
 Use this when answering questions about our project.' > .claude/skills/project.md
 ```
 
-Offline-Friendly Project Patterns
+## Offline-Friendly Project Patterns
 
 For teams working offline, establish these patterns:
 
@@ -192,7 +191,7 @@ For teams working offline, establish these patterns:
 3. Local linters and formatters: Don't rely on cloud-based tools
 4. Offline package caches: Mirror npm/pip registries locally
 
-Limitations to Understand
+## Limitations to Understand
 
 While Claude Code works well offline, be aware of limitations:
 
@@ -201,7 +200,7 @@ While Claude Code works well offline, be aware of limitations:
 - No live updates: Skills won't refresh until you're back online
 - Limited MCP servers: Some servers require cloud APIs
 
-Best Practices for Offline Success
+## Best Practices for Offline Success
 
 1. Prepare before going offline: Test your setup while connected
 2. Keep skills focused: Smaller, self-contained skills are more reliable offline
@@ -209,13 +208,12 @@ Best Practices for Offline Success
 4. Document offline workflows: Create skills that document your offline procedures
 5. Sync when back online: Regularly sync skills and configurations
 
-Conclusion
+## Conclusion
 
 Claude Code can be a powerful offline coding assistant with the right setup. By using local models through Ollama, building self-contained skills, and running MCP servers locally, you can maintain productivity even without internet access. The key is preparation, set up your offline environment while connected, and you'll never be stuck without your AI coding assistant.
 
 Start by installing Ollama and pulling a model, then create a few offline-ready skills for your common tasks. Once you've established your offline workflow, you'll wonder how you ever worked without it.
 {% endraw %}
-
 
 Related Reading
 

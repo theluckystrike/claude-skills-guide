@@ -24,7 +24,7 @@ This approach matters because each skill brings its own overhead. Skills like `p
 
 The principle is borrowed from software engineering, where lazy initialization defers expensive work until the moment it is needed. Applied to skill loading, it keeps your active context window lean, responsive, and cost-efficient.
 
-How Token Savings Work
+## How Token Savings Work
 
 Every token processed costs money and affects response latency. Token consumption in Claude sessions has two distinct components: input tokens (what goes into the context window each turn) and output tokens (what Claude generates in response). Lazy loading primarily reduces input token overhead.
 
@@ -42,7 +42,7 @@ Lazy loading reduces this initial processing burden. Instead of loading all skil
 
 This creates measurable token savings especially in sessions where you use multiple skills sequentially rather than simultaneously. For a deeper look at how context is structured and managed across skills, see the [skills memory and context architecture guide](/claude-skills-memory-and-context-architecture-explained/).
 
-Token Overhead Comparison
+## Token Overhead Comparison
 
 The following table illustrates approximate token overhead differences between eager and lazy loading patterns across common skill configurations:
 
@@ -55,7 +55,7 @@ The following table illustrates approximate token overhead differences between e
 
 The biggest savings come in focused sessions where you do one thing at a time. The more your session resembles a single-purpose workflow, the more dramatically lazy loading reduces your costs.
 
-Practical Implementation
+## Practical Implementation
 
 Consider a workflow where you need PDF processing followed by frontend design. Here's how lazy loading affects token consumption conceptually:
 
@@ -89,7 +89,7 @@ The savings compound when you use skills like `tdd` for test generation, then sw
 
 In a long development session spanning several hours and dozens of skill invocations, the cumulative difference can amount to tens of thousands of tokens, translating directly into cost savings and faster response times.
 
-Skill-Specific Examples
+## Skill-Specific Examples
 
 Different skills demonstrate lazy loading benefits across various use cases. Understanding the overhead profile of each skill helps you make better decisions about how to sequence your work.
 
@@ -105,7 +105,7 @@ Presentation Generation: The `pptx` skill similarly defers slide animation, mast
 
 Supermemory Integration: When `supermemory` handles knowledge retrieval, only relevant memory indices load rather than the entire knowledge graph. For a project-specific query, only that project's memory namespace initializes, personal notes, other project contexts, and global knowledge remain unloaded.
 
-Real-World Impact
+## Real-World Impact
 
 For developers running extended Claude Code sessions, lazy loading provides several compounding advantages.
 
@@ -119,7 +119,7 @@ Cleaner Context Switching: When moving between tasks, stale skill context clears
 
 Predictable Performance: Because skills load on first invocation and cache for the session, you get predictable latency patterns. The first call to a skill is slightly slower; all subsequent calls are fast. This is easier to reason about than eager loading, which imposes constant overhead regardless of which skills you use.
 
-Optimizing Your Skill Usage
+## Optimizing Your Skill Usage
 
 To maximize lazy loading benefits, structure your sessions intentionally around a few practical habits.
 
@@ -135,7 +135,7 @@ Avoid skill sprawl in CLAUDE.md: If you configure many skills in your project's 
 
 Close and restart for radical context reset: When a session has accumulated a lot of loaded context from earlier work, starting a fresh session can be more efficient than continuing. Lazy loading makes fresh sessions cheap, the first few skill invocations load quickly, and you begin with zero accumulated overhead.
 
-Technical Considerations
+## Technical Considerations
 
 The lazy loading implementation interacts with Claude's tool execution system. Understanding this interaction helps you predict behavior in complex workflows.
 
@@ -153,7 +153,7 @@ The caching behavior has an important implication: the benefits of lazy loading 
 
 Context eviction adds another layer of nuance. As your conversation grows longer, Claude's context management may evict earlier content including loaded skill definitions to make room for recent content. If a skill definition gets evicted and you subsequently invoke that skill again, it reloads. You may notice a brief pause when this happens. This is normal behavior, not a bug. The [skill slow performance speed-up guide](/claude-skills-slow-performance-speed-up-guide/) offers targeted diagnostics if you notice frequent reload pauses.
 
-Session Architecture for Lazy Loading
+## Session Architecture for Lazy Loading
 
 For long development sessions, consider architecting your workflow around these lazy loading principles:
 
@@ -181,7 +181,7 @@ Session Start
 
 This phased architecture maximizes lazy loading efficiency by minimizing concurrent skill activation and ensuring each skill's full loading cost is spread across multiple operations.
 
-Monitoring Token Usage
+## Monitoring Token Usage
 
 To observe lazy loading savings in practice, track your token consumption across different session types. Most Claude API access tiers provide usage metrics per session or per request.
 
@@ -193,7 +193,7 @@ The input token counts will differ meaningfully, with Session B typically showin
 
 Keeping a simple log of session length versus total token cost over a few weeks will reveal whether your actual usage patterns benefit from lazy loading optimization. Most developers with mixed-skill workflows see meaningful savings; developers who consistently use the same two or three skills see less dramatic differences since those skills would remain cached in either case.
 
-Summary
+## Summary
 
 Claude skill lazy loading represents a thoughtful optimization for token-conscious developers. By loading capabilities only when needed, the system reduces overhead while maintaining full functionality when you need it.
 

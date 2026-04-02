@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Runbook Review Process Workflow
 
@@ -30,7 +29,7 @@ Manual runbook reviews are time-consuming and inconsistent. A senior engineer mi
 
 The operational cost of a bad runbook is severe. During a production incident at 3 a.m., engineers are under stress and working fast. A runbook with ambiguous phrasing, missing environment variables, or a command that silently fails can extend an outage by hours. Automated review bakes quality directly into the authoring workflow so problems are caught when the author still has context, not when an on-call engineer is scrambling to keep a service alive.
 
-The Anatomy of a Good Runbook
+## The Anatomy of a Good Runbook
 
 Before you can automate review, you need to understand what quality looks like. A well-written operational runbook contains five sections, each serving a distinct purpose.
 
@@ -46,11 +45,11 @@ Rollback and Escalation. How to undo the procedure if it makes things worse, and
 
 A review process that evaluates runbooks against this structure will surface the gaps that cause incidents.
 
-Setting Up a Runbook Review Skill
+## Setting Up a Runbook Review Skill
 
 The first step is creating a Claude skill specifically for runbook reviews. This skill should understand what makes a good runbook and provide structured feedback.
 
-Skill Definition
+## Skill Definition
 
 Create a file at `~/.claude/skills/runbook-reviewer/skill.md`:
 
@@ -84,7 +83,7 @@ Detailed Findings
 [numbered list with each issue]
 ```
 
-Running the Reviewer
+## Running the Reviewer
 
 With the skill installed, you can invoke it on any runbook:
 
@@ -94,7 +93,7 @@ With the skill installed, you can invoke it on any runbook:
 
 This triggers the review against the currently open file. The skill reads your runbook, analyzes it against the criteria, and outputs structured feedback.
 
-Customizing Review Criteria
+## Customizing Review Criteria
 
 Different organizations have different standards. You can extend the base skill with organization-specific rules. For example, if your organization uses AWS, you might add a check that verifies all IAM role references follow your naming convention. If your services use internal APIs, you might check that API endpoints match your service registry.
 
@@ -115,11 +114,11 @@ In addition to the standard criteria, verify:
 
 Extending the skill this way keeps your organization's standards codified and reviewable, they live in source control, not in an engineer's head.
 
-Building Validation Scripts
+## Building Validation Scripts
 
 Beyond interactive review, you can create automated validation scripts that run as part of your CI/CD pipeline or pre-commit hooks.
 
-Basic Validation Script
+## Basic Validation Script
 
 ```bash
 #!/bin/bash
@@ -141,7 +140,7 @@ for runbook in "$RUNBOOK_DIR"/*.md; do
 done
 ```
 
-Integration with Git Hooks
+## Integration with Git Hooks
 
 Add a pre-commit hook to catch issues before they're committed:
 
@@ -163,7 +162,7 @@ if [ -n "$RUNBOOKS" ]; then
 fi
 ```
 
-CI Pipeline Integration
+## CI Pipeline Integration
 
 For teams using GitHub Actions, you can run a full review on every pull request that touches runbook files:
 
@@ -211,11 +210,11 @@ jobs:
 
 This workflow automatically reviews every changed runbook and posts findings as a pull request comment, giving reviewers structured feedback before they begin manual review.
 
-Common Runbook Issues to Check For
+## Common Runbook Issues to Check For
 
 When building your review process, focus on these high-impact areas:
 
-Prerequisites and Assumptions
+## Prerequisites and Assumptions
 
 Many runbooks assume too much context. Your review should flag:
 
@@ -226,7 +225,7 @@ Many runbooks assume too much context. Your review should flag:
 
 A useful test: ask a new team member to follow the runbook without asking questions. Every question they ask represents a missing prerequisite. Claude Code can simulate this by prompting it to identify every assumption embedded in the procedure.
 
-Command Safety
+## Command Safety
 
 Dangerous commands need explicit protection:
 
@@ -248,7 +247,7 @@ Beyond deletion commands, watch for these patterns:
 - Service restart commands that affect load-balanced traffic without a drain step
 - Terraform `apply` without a preceding `plan` review
 
-Error Handling
+## Error Handling
 
 Runbooks should anticipate failure:
 
@@ -258,7 +257,7 @@ Runbooks should anticipate failure:
 
 A missing error handling section is a major finding in any automated review. Claude Code can identify steps that have no corresponding failure path and flag them for the author to address.
 
-Credential and Secret Hygiene
+## Credential and Secret Hygiene
 
 Hardcoded secrets are a critical finding. A Claude Code review prompt should specifically scan for:
 
@@ -275,7 +274,7 @@ Also flag any commands that read credential files without verifying the file exi
 Report each finding with the exact text and line reference." < runbook.md
 ```
 
-Structured Review Output Format
+## Structured Review Output Format
 
 Consistency in review output makes it easier to track quality over time and integrate reviews into dashboards. Define a schema and ask Claude Code to always output to that schema:
 
@@ -305,7 +304,7 @@ Consistency in review output makes it easier to track quality over time and inte
 
 Storing reviews in this format allows you to build a quality dashboard, track which runbooks have accumulated technical debt, and measure improvement over time.
 
-Best Practices for Runbook Review Workflow
+## Best Practices for Runbook Review Workflow
 
 1. Establish Review Tiers
 
@@ -373,7 +372,7 @@ After each incident, review whether the runbook helped or hindered:
 
 Post-incident runbook reviews are a high-value activity. An incident that exposed a runbook gap is proof that the review process needs tightening. Document what was missed, add it to the review criteria, and run the updated criteria against all runbooks of the same type to find similar gaps.
 
-Runbook Templates as Review Baselines
+## Runbook Templates as Review Baselines
 
 One of the most effective ways to improve runbook quality is to provide authors with a reviewed, complete template. Claude Code can generate these templates:
 
@@ -387,7 +386,7 @@ Make all commands safe by default with explicit confirmation steps." \
 
 The resulting template becomes the baseline. Authors who fill in the template rather than writing from scratch produce higher-quality first drafts, and automated review has less to flag.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms runbook review from a manual, inconsistent process into an automated, reliable workflow. By creating dedicated review skills, building validation scripts, and establishing clear review criteria, you ensure that operational documentation meets the high standards your team deserves.
 

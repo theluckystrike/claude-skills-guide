@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-How to Make Claude Code Use Specific Library Version
-
 When Claude Code generates code for your project, it sometimes selects library versions that conflict with your existing dependencies or fail on your environment. Getting Claude to use specific library versions requires explicit configuration and clear communication. This guide shows you practical methods to ensure Claude Code respects your version requirements.
 
-Why Library Version Control Matters
+## Why Library Version Control Matters
 
 Mismatched library versions cause deployment failures, runtime errors, and hours of debugging. A common scenario: Claude generates code using the latest `pandas 2.2.0` features, but your production environment runs `pandas 1.5.3`. The code works perfectly on Claude's suggested setup and fails completely in production.
 
@@ -26,11 +23,11 @@ Controlling library versions becomes especially important when working with spec
 
 The problem is structural, not a bug in Claude. Claude's training data includes documentation, tutorials, and code samples from across the web, skewed toward recent and widely-cited content. When you ask it to write a data processing script without context, it defaults to patterns from recent library versions because that's what most of the training examples use. It doesn't know your production environment has a two-year-old pandas installation unless you tell it.
 
-Specifying Versions in Your Project Files
+## Specifying Versions in Your Project Files
 
 The most reliable method is adding version constraints directly to your dependency files before asking Claude to generate code.
 
-Python Projects
+## Python Projects
 
 In your `requirements.txt`, use exact versions or version ranges:
 
@@ -65,7 +62,7 @@ dependencies = [
 
 The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) often generates test code that imports your existing dependencies, version pinning ensures compatibility.
 
-Locking Dependencies with pip-tools
+## Locking Dependencies with pip-tools
 
 For production Python projects, exact version pinning in `requirements.txt` is a starting point, but it doesn't lock transitive dependencies. A package you pin directly might pull in a newer version of one of its own dependencies, which can still break your build.
 
@@ -92,7 +89,7 @@ pandas==2.1.4
 
 When you share this locked file with Claude Code, it has the full picture of what's installed in your environment. Mentioning the `requirements.txt` contents (or pasting the relevant lines) when starting a session removes any ambiguity about which API surfaces are available.
 
-Node.js Projects
+## Node.js Projects
 
 In `package.json`, specify exact versions or ranges:
 
@@ -112,7 +109,7 @@ In `package.json`, specify exact versions or ranges:
 
 The caret (`^`) allows minor and patch updates. For strict control, use exact versions like `"express": "4.18.2"`.
 
-Understanding npm Version Semantics
+## Understanding npm Version Semantics
 
 The version range operators in `package.json` have specific meanings that affect what Claude Code will suggest:
 
@@ -128,7 +125,7 @@ For projects in active production, the caret is a reasonable default for most de
 
 When you want Claude Code to match your locked state exactly, paste the relevant section of `package-lock.json` or tell it your Node.js version alongside your package versions. Node version matters because some packages ship different builds for different Node runtimes.
 
-Using Claude Code's Custom Instructions
+## Using Claude Code's Custom Instructions
 
 Add version requirements to your project's `CLAUDE.md` file. This file sits in your project root and gets loaded automatically at the start of each Claude Code session.
 
@@ -176,7 +173,7 @@ Use Django class-based views. Avoid async views. our WSGI deployment doesn't sup
 
 The notes about what NOT to use are just as important as what to use. Claude Code will sometimes suggest async patterns, newer API shapes, or features from library versions it has seen frequently in training data. Explicit prohibitions in `CLAUDE.md` prevent those suggestions without you needing to correct them after the fact.
 
-Communicating Version Requirements to Claude
+## Communicating Version Requirements to Claude
 
 Beyond configuration files, verbal communication works. When starting a session, explicitly state your version constraints:
 
@@ -188,7 +185,7 @@ This approach works well when combined with the [webapp-testing skill](/best-cla
 
 If you're in the middle of a session and Claude has already generated version-mismatched code, correct it explicitly rather than hoping the next suggestion will match. Something like: "That code uses the pandas 2.0 `.convert_dtypes()` behavior. We're on pandas 1.5.3. Please rewrite it to be compatible." Claude Code responds well to specific correction. naming the library, the version mismatch, and the target version gives it enough context to fix the code precisely.
 
-Handling Version Conflicts in Generated Code
+## Handling Version Conflicts in Generated Code
 
 Sometimes Claude generates code using a library version you don't have. When this happens:
 
@@ -214,11 +211,11 @@ Compatible with pandas 1.5.3
 series = pd.Series([1, 2, None], dtype="float64")
 ```
 
-Identifying Version-Specific Code Patterns
+## Identifying Version-Specific Code Patterns
 
 Some changes between library major versions are obvious from imports or method names. Others are subtle behavioral differences. Here are common patterns to watch for when reviewing Claude-generated code against your pinned versions:
 
-Python. pandas 1.x vs 2.x
+## Python. pandas 1.x vs 2.x
 
 ```python
 pandas 2.x. copy_on_write semantics; modifying a slice doesn't warn
@@ -231,7 +228,7 @@ df_subset = df[df['value'] > 0].copy()
 df_subset['label'] = 'positive'
 ```
 
-Python. SQLAlchemy 1.x vs 2.x
+## Python. SQLAlchemy 1.x vs 2.x
 
 ```python
 SQLAlchemy 2.x style
@@ -244,7 +241,7 @@ with Session(engine) as session:
     user = session.query(User).filter(User.id == user_id).one()
 ```
 
-Node.js. Express 4.x vs 5.x
+## Node.js. Express 4.x vs 5.x
 
 ```javascript
 // Express 5.x. async errors auto-forwarded to error handler
@@ -266,7 +263,7 @@ app.get('/user/:id', async (req, res, next) => {
 
 When Claude generates code in a session where you've specified version constraints, review these structural patterns before running anything. Version-specific idioms often look syntactically valid but fail at runtime.
 
-Using Virtual Environments
+## Using Virtual Environments
 
 Create a virtual environment with your specific versions before running Claude-generated code:
 
@@ -319,7 +316,7 @@ npm ci
 
 When you tell Claude Code you're using a specific Node version, it avoids suggesting APIs that were introduced in later releases. Node 18 and Node 20 have meaningful differences in the `fetch` API availability and several built-in module behaviors.
 
-Pro Tips for Version Control
+## Pro Tips for Version Control
 
 - Lock files matter: Python projects benefit from `pip-tools` or `poetry.lock`. Node projects should have `package-lock.json` committed.
 - Check skill-specific requirements: Skills like [mcp-builder](/best-claude-skills-for-developers-2026/) might require specific Node versions or package versions.
@@ -345,7 +342,7 @@ package-a 1.2.3 requires package-b>=2.0, but you have package-b 1.9.0
 
 Claude Code can fix these conflicts if you share the `pip check` output. Tell it: "These are the dependency conflicts I see. Please resolve them while keeping the core packages at their specified versions."
 
-Summary
+## Summary
 
 Making Claude Code use specific library versions requires a combination of:
 
@@ -357,7 +354,6 @@ Making Claude Code use specific library versions requires a combination of:
 These methods ensure Claude generates code compatible with your production environment, reducing deployment issues and debugging time.
 
 The most durable setup combines all four: pinned `requirements.txt` or `package.json` in version control, a `CLAUDE.md` with explicit constraints and prohibitions, a virtual environment or container that matches production, and the habit of stating your environment at the start of any session where version accuracy matters. Each layer reinforces the others. The configuration files load automatically, the `CLAUDE.md` provides context before any code is generated, and the runtime environment catches any gaps.
-
 
 Related Reading
 

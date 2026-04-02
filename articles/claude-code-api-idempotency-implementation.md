@@ -14,7 +14,7 @@ tags: [claude-code, claude-skills]
 
 Idempotency is a fundamental concept in API design that ensures the same operation can be executed multiple times without changing the result beyond the initial application. When building applications that interact with Claude Code API, implementing idempotency becomes essential for handling network failures, timeout scenarios, and retry logic gracefully. This guide provides practical implementation strategies for developers building reliable integrations.
 
-Why Idempotency Matters for Claude Code API
+## Why Idempotency Matters for Claude Code API
 
 When your application sends a request to Claude Code API, network issues can cause the request to fail silently or the response to get lost before reaching your application. Without idempotency, retrying such a request might result in duplicate operations, imagine generating multiple PDF documents through the pdf skill or creating redundant database entries.
 
@@ -22,7 +22,7 @@ Consider a scenario where you're using Claude Code to automate test generation w
 
 The consequences of non-idempotent retries scale with operation cost. A low-cost text generation call repeated twice is inconvenient. A billing action, a code commit, or a deployment trigger repeated twice can cause real damage. Idempotency is the safety net that makes retry logic safe rather than dangerous.
 
-Non-Idempotent vs. Idempotent Behavior
+## Non-Idempotent vs. Idempotent Behavior
 
 The difference between idempotent and non-idempotent designs becomes obvious when network failures occur mid-flight:
 
@@ -36,7 +36,7 @@ The difference between idempotent and non-idempotent designs becomes obvious whe
 
 HTTP methods have natural idempotency characteristics. GET and DELETE are inherently idempotent. PUT is idempotent by definition (setting a value to itself produces the same state). POST is not idempotent by default, which is exactly why API calls to create or trigger operations need explicit idempotency key support.
 
-Implementing Idempotency Keys
+## Implementing Idempotency Keys
 
 The most common approach to achieving idempotency is using idempotency keys, unique identifiers that client applications generate and include with each request. The server uses this key to recognize duplicate requests and return the original response instead of processing the operation again.
 
@@ -84,7 +84,7 @@ async function safeAPICall(messages, maxRetries = 3) {
 
 This implementation generates a unique key for each logical operation and includes it in the request headers. When network issues cause a failure, the same key in subsequent retries tells the server to return the cached response from the original request.
 
-Exponential Backoff with Jitter
+## Exponential Backoff with Jitter
 
 The retry loop above uses a simple linear backoff. For production systems, exponential backoff with jitter is better because it reduces thundering herd problems when many clients retry at the same time:
 
@@ -126,7 +126,7 @@ function isRetryableError(error) {
 
 The `isRetryableError` function is critical. You must never retry on 400 Bad Request (the payload is broken), 401 Unauthorized (credentials are wrong), or 403 Forbidden (you lack permission). Retrying these will never succeed and wastes quota.
 
-Python Implementation with Requests
+## Python Implementation with Requests
 
 For Python-based integrations, the implementation follows similar patterns but uses Python's idiomatic approaches:
 
@@ -176,7 +176,7 @@ def call_with_retry(messages, max_retries=3):
             time.sleep(2  attempt)
 ```
 
-Python with tenacity for Production-Grade Retry
+## Python with tenacity for Production-Grade Retry
 
 The `tenacity` library gives you much more control over retry behavior without writing retry loops by hand:
 
@@ -247,7 +247,7 @@ result = client.complete(
 
 The key insight here is that `tenacity` handles the retry loop but you are responsible for passing the same `idempotency_key` across all attempts. The decorator approach in the earlier example auto-generates the key once and reuses it, which is the correct behavior.
 
-Storing Idempotency Keys Strategically
+## Storing Idempotency Keys Strategically
 
 For long-running operations or workflows involving multiple Claude Code skill invocations, consider storing idempotency keys in a persistent storage system. This approach works well when coordinating between the frontend-design skill for UI generation and backend processing:
 
@@ -283,7 +283,7 @@ async function generateProjectArtifacts(prompt) {
 }
 ```
 
-Choosing the Right Key Strategy
+## Choosing the Right Key Strategy
 
 Your idempotency key scheme determines how granular your deduplication is. There are three common strategies:
 
@@ -323,7 +323,7 @@ function compositeKey(userId, resourceId, action, windowMinutes = 60) {
 
 Composite keys are useful when you want to prevent a user from accidentally submitting the same form twice within an hour but do want to allow the same action again tomorrow.
 
-Comparison of Key Strategies
+## Comparison of Key Strategies
 
 | Strategy | Collision Risk | Granularity | Best For |
 |---|---|---|---|
@@ -332,7 +332,7 @@ Comparison of Key Strategies
 | Composite key | Configurable | Per user/action/window | Form submissions, webhooks |
 | Database row ID | None | Per DB record | Operations tied to a record |
 
-Best Practices for Production Systems
+## Best Practices for Production Systems
 
 When deploying idempotent Claude Code API integrations in production, several practices improve reliability. First, choose idempotency key formats that match your operational patterns, using composite keys that include user ID, action type, and a hash of the input content helps prevent collisions in high-volume scenarios.
 
@@ -340,7 +340,7 @@ Second, implement appropriate TTL (time-to-live) values for your idempotency cac
 
 Third, always distinguish between retryable and non-retryable errors. Idempotency protects against duplicate operations, but you still need to handle cases where the original request genuinely failed and requires manual intervention.
 
-TTL Guidelines by Operation Type
+## TTL Guidelines by Operation Type
 
 | Operation Type | Recommended TTL | Reasoning |
 |---|---|---|
@@ -350,7 +350,7 @@ TTL Guidelines by Operation Type
 | Payment / billing triggers | 7 days | Regulatory and audit requirements |
 | Webhook delivery | 48 hours | External systems may re-deliver |
 
-Monitoring and Alerting
+## Monitoring and Alerting
 
 Instrument your idempotency layer so you can detect problems early:
 
@@ -384,7 +384,7 @@ def track_idempotency(key: str, result: Optional[dict], was_cached: bool):
 
 A high duplicate rate (above 5–10%) often signals that clients are retrying too aggressively or that your TTL is too short for the expected operation latency. A zero duplicate rate might indicate idempotency keys are being regenerated on every attempt, which defeats the purpose entirely.
 
-Testing Your Implementation
+## Testing Your Implementation
 
 Proper testing ensures your idempotency implementation works correctly. Create test cases that verify duplicate requests return identical responses, that different requests with the same key are properly rejected, and that expired keys allow fresh operations:
 
@@ -408,7 +408,7 @@ async function testIdempotency() {
 }
 ```
 
-A Complete Test Suite
+## A Complete Test Suite
 
 A thorough test suite covers five scenarios: same key returns cache hit, different keys produce independent results, key expiry allows fresh processing, non-retryable errors are not retried, and concurrent requests with the same key serialize correctly:
 
@@ -476,12 +476,11 @@ describe('IdempotencyStore', () => {
 
 Running this suite before deploying changes to your API integration layer catches regressions before they reach production.
 
-Conclusion
+## Conclusion
 
 Implementing idempotency in Claude Code API integrations protects your applications from duplicate operations, enables safe retry logic, and improves overall reliability. By using idempotency keys, storing responses strategically, and following testing best practices, you can build resilient systems that gracefully handle network failures. Whether you're generating documents with the pdf skill, creating test suites with tdd, or building complex workflows across multiple Claude skills, idempotency ensures consistent and predictable behavior.
 
 The pattern requires minimal overhead, a small investment that pays significant dividends in production reliability. Start implementing idempotency in your Claude Code integrations today and sleep better knowing your automated workflows won't accidentally double-process critical operations.
-
 
 Related Reading
 

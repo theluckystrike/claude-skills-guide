@@ -19,7 +19,7 @@ TamperMonkey has dominated the userscript management space for years, but develo
 
 This guide evaluates the best TamperMonkey alternatives, focusing on features that matter to developers: script management, API access, resource efficiency, and security.
 
-Why Consider a TamperMonkey Alternative
+## Why Consider a TamperMonkey Alternative
 
 TamperMonkey serves millions of users, yet it comes with drawbacks that frustrate power users. The extension consumes significant memory, particularly when managing hundreds of scripts. Some users report slow page loads when many scripts activate simultaneously. Others prefer open-source solutions with audited code or simpler interfaces that prioritize speed over feature density.
 
@@ -27,7 +27,7 @@ The closed-source nature of TamperMonkey is also a concern for security-focused 
 
 For teams managing userscripts across multiple environments, the ideal alternative provides clear script organization, reliable updates, and minimal performance impact. Corporate environments increasingly restrict which Chrome extensions can be installed, and open-source alternatives with verifiable builds are easier to get approved by security teams.
 
-Understanding the Userscript Ecosystem in 2026
+## Understanding the Userscript Ecosystem in 2026
 
 Before evaluating specific tools, it helps to understand how userscript managers work at a technical level. Every extension in this category injects a JavaScript environment into page contexts, then runs your scripts within that environment according to the metadata block rules you define.
 
@@ -52,7 +52,7 @@ The metadata block is the common language across all managers. Every userscript 
 
 The `@grant` directives are particularly important. They declare which privileged APIs your script needs. `GM_setValue` and `GM_getValue` provide persistent storage. `GM_xmlhttpRequest` allows cross-origin HTTP requests that would normally be blocked by browser CORS policy. Different managers implement these APIs with slight variations, which is the main source of compatibility issues when migrating.
 
-Violentmonkey: The Lightweight Champion
+## Violentmonkey: The Lightweight Champion
 
 Violentmonkey has emerged as the leading TamperMonkey alternative, offering a streamlined experience without sacrificing compatibility. The extension supports most TamperMonkey scripts with minimal configuration, making migration straightforward.
 
@@ -91,7 +91,7 @@ The extension stores scripts locally using IndexedDB, ensuring quick access and 
 
 Violentmonkey is also fully open source, hosted on GitHub. The codebase is actively maintained and the review history is public. For developers who want to verify exactly what the extension does with their scripts, this transparency is a concrete advantage over TamperMonkey.
 
-Violentmonkey API Compatibility Notes
+## Violentmonkey API Compatibility Notes
 
 Violentmonkey implements the full GM4 API alongside GM_ legacy functions. Scripts using `GM.getValue` and `GM.setValue` (the modern async versions) work correctly. The one area requiring attention is `GM_xmlhttpRequest`. Violentmonkey's implementation handles response types slightly differently than TamperMonkey when working with binary data. If you have scripts that download files or handle non-text responses, test them explicitly after migration.
 
@@ -107,7 +107,7 @@ GM.xmlHttpRequest({
 });
 ```
 
-ScriptSafe: Security-First Approach
+## ScriptSafe: Security-First Approach
 
 ScriptSafe takes a different approach, treating script execution as a security concern rather than mere convenience. The extension provides granular control over which scripts run on which domains, with explicit permission prompts for new installations.
 
@@ -137,7 +137,7 @@ ScriptSafe also monitors script behavior, flagging suspicious activities like ex
 
 For organizations deploying shared userscripts to a team, ScriptSafe's rule system allows admins to define which scripts are permitted on which domains and distribute that configuration through managed browser policies. This makes it practical for environments where IT needs audit trails of browser automation.
 
-Userscripts: Minimalist Alternative
+## Userscripts: Minimalist Alternative
 
 For developers who need only basic functionality, the Userscripts extension offers a no-frills approach. Created by the developer behind the popular 4chan board enhancements, this extension prioritizes simplicity above all else.
 
@@ -152,7 +152,7 @@ This limitation proves advantageous for users seeking speed. Userscripts loads f
 
 The trade-off means you sacrifice convenience features like automatic script updates and cloud sync. However, for locally-managed scripts that rarely change, Userscripts provides everything needed.
 
-Writing Portable Userscripts That Work Across Managers
+## Writing Portable Userscripts That Work Across Managers
 
 If you maintain scripts that other people use. or scripts you run across different machines with different managers installed. writing portable code pays dividends. The key is avoiding manager-specific APIs when standard alternatives exist.
 
@@ -187,7 +187,7 @@ await storage.set('last-run', Date.now());
 
 This pattern handles the three most common storage APIs gracefully, with localStorage as a fallback for edge cases. Similarly, when making cross-origin requests, define a wrapper that detects the available API rather than targeting one manager's implementation directly.
 
-Advanced Script Development Patterns
+## Advanced Script Development Patterns
 
 Developers who write substantial automation scripts eventually outgrow single-file scripts. For complex projects, a local development workflow with a build step produces more maintainable code.
 
@@ -222,7 +222,7 @@ The built output is a single file you load into any userscript manager. By writi
 
 This approach works particularly well for scripts that interact with complex pages like single-page applications, where you need reliable DOM observation and state management across navigation events.
 
-Making the Switch
+## Making the Switch
 
 Migrating from TamperMonkey to an alternative requires minimal effort. Most userscripts work across all major alternatives without modification, since the userscript metadata block format remains standardized.
 
@@ -244,13 +244,13 @@ Violentmonkey and ScriptSafe both accept TamperMonkey backup files directly, acc
 
 One practical tip for the testing step: keep a list of the five or six pages where your most important scripts run and visit each one explicitly after migration. DOM automation scripts in particular can fail silently. the page loads fine but the automation does not trigger. so you need to actively verify behavior rather than assume success because no errors appeared.
 
-Chrome Manifest V3 and Its Impact on Userscript Managers
+## Chrome Manifest V3 and Its Impact on Userscript Managers
 
 A technical factor affecting all Chrome extensions in 2026 is Manifest V3 compatibility. Google's extension platform changes restrict certain types of code execution that older extensions relied on. All major userscript managers have updated to work within MV3 constraints, but the implementation details affect performance.
 
 Under MV3, extensions cannot use `eval()` or inject arbitrary code through certain mechanisms. Userscript managers work around this by using sandboxed workers and declarative content scripts. The practical effect is that all managers are slightly slower under MV3 than they were under MV2, and Violentmonkey and ScriptSafe have both optimized their MV3 implementations more aggressively than TamperMonkey's current release. This accounts for part of the performance difference visible in benchmark testing.
 
-Performance Comparison
+## Performance Comparison
 
 Resource usage varies significantly across alternatives. Testing with 50 active userscripts reveals the following approximate memory consumption:
 
@@ -263,7 +263,7 @@ Resource usage varies significantly across alternatives. Testing with 50 active 
 
 These figures depend on script complexity and page characteristics, but the trend remains clear: alternatives consume fewer resources without sacrificing core functionality.
 
-Feature Comparison for Developer Use Cases
+## Feature Comparison for Developer Use Cases
 
 Beyond raw performance, different workflows demand different features.
 
@@ -279,7 +279,7 @@ Beyond raw performance, different workflows demand different features.
 
 For individual developers, Violentmonkey covers every common need. For teams with security requirements, ScriptSafe's policy support is the deciding feature. For minimal setups where you maintain just a handful of personal scripts, Userscripts is hard to beat on simplicity.
 
-Conclusion
+## Conclusion
 
 TamperMonkey remains a solid choice, particularly for users who need advanced features like cloud sync and comprehensive script management. However, alternatives in 2026 offer compelling reasons to switch.
 
@@ -288,7 +288,6 @@ Violentmonkey provides the best balance of compatibility and performance for mos
 ScriptSafe suits security-conscious users and organizations requiring granular control over which scripts run where, with team policy distribution built in. Userscripts serves those prioritizing speed above all else on personal machines running a small number of stable scripts.
 
 Evaluate your specific needs: script count, performance requirements, security constraints, and whether you need sync across devices. The best userscript manager is the one that disappears into the background, letting your automation run smoothly without drawing memory or attention.
-
 
 Related Reading
 

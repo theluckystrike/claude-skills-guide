@@ -17,18 +17,17 @@ score: 7
 
 When you're building CI/CD workflows with Claude Code skills, encountering failed GitHub Actions steps is inevitable. The key to efficient debugging lies in understanding how Claude Code interacts with GitHub Actions and knowing which techniques to use when things go wrong. This guide walks you through practical strategies for diagnosing and resolving failed workflow steps.
 
-Understanding the Claude Code + GitHub Actions Connection
+## Understanding the Claude Code + GitHub Actions Connection
 
 Claude Code skills can interact with GitHub Actions through multiple pathways: the GitHub CLI (`gh`), direct API calls, or integration-specific tools. When a step fails, the error could originate from several layers, the skill's logic, the GitHub API, the workflow configuration, or the runner environment.
 
 Before diving into debugging, ensure your skill has the necessary permissions. GitHub Actions debugging requires either a personal access token (PAT) with `repo` scope or a GitHub App installation token with appropriate permissions.
 
-Common Failure Patterns and Their Causes
+## Common Failure Patterns and Their Causes
 
 1. Authentication and Permission Errors
 
 The most frequent cause of step failures is authentication issues. When Claude Code attempts to interact with GitHub, you might see errors like "Bad credentials" or "Resource not found".
-
 
 ```yaml
 Example workflow with permission issues
@@ -45,13 +44,11 @@ jobs:
             -f environment='production'
 ```
 
-
 To debug authentication, first verify the token has the required scopes. The `GITHUB_TOKEN` provided by GitHub Actions automatically has permissions matching the workflow's repository settings, but custom tokens might lack necessary access.
 
 2. Workflow Syntax Errors
 
 YAML indentation mistakes or incorrect expression syntax can cause immediate step failures. Claude Code skills that generate or modify workflows should validate syntax before execution.
-
 
 ```yaml
 Common syntax error: incorrect conditional
@@ -65,19 +62,17 @@ jobs:
         run: npm test
 ```
 
-
 The fix requires proper expression syntax using double curly braces with the full expression: `matrix.os == "ubuntu-latest"` (inside GitHub Actions expression syntax).
 
 3. Runner Environment Issues
 
 Sometimes the runner itself lacks required dependencies. Claude Code can help identify these by examining the step logs for "command not found" or missing library errors.
 
-Debugging Techniques with Claude Code
+## Debugging Techniques with Claude Code
 
-Enable GitHub Actions Debug Logging
+## Enable GitHub Actions Debug Logging
 
 GitHub provides verbose debug output when you enable debug logging in your repository settings or workflow. Add the following to your workflow to capture detailed step information:
-
 
 ```yaml
 jobs:
@@ -94,8 +89,7 @@ jobs:
           echo "Runner OS: ${{ runner.os }}"
 ```
 
-
-Use Claude Code to Analyze Logs
+## Use Claude Code to Analyze Logs
 
 When a step fails, copy the error output into Claude Code and ask it to analyze the failure. Provide context about what the skill was attempting to do:
 
@@ -106,10 +100,9 @@ The skill was trying to get workflow run details. What might be wrong?
 
 Claude Code can help identify whether the issue stems from incorrect repository names, missing permissions, or API rate limiting.
 
-Use the GitHub CLI for Interactive Debugging
+## Use the GitHub CLI for Interactive Debugging
 
 Within your skill, use the `gh` CLI for more readable output:
-
 
 ```bash
 Debug workflow run status
@@ -122,12 +115,11 @@ Check specific step output
 gh api repos/${{ github.repository }}/actions/runs/$RUN_ID/jobs/$JOB_ID
 ```
 
-
 This approach provides cleaner JSON output that Claude Code can parse and analyze programmatically.
 
-Advanced Debugging Strategies
+## Advanced Debugging Strategies
 
-Simulating Steps Locally
+## Simulating Steps Locally
 
 Before running steps in GitHub Actions, simulate them locally using Docker containers that match the GitHub runner environment:
 
@@ -142,10 +134,9 @@ npm test
 
 This catches environment-related issues before consuming GitHub Actions minutes.
 
-Using Conditional Debugging Steps
+## Using Conditional Debugging Steps
 
 Add debug steps that only run when explicitly enabled:
-
 
 ```yaml
 jobs:
@@ -163,13 +154,11 @@ jobs:
         run: npm run build
 ```
 
-
 This pattern lets you enable detailed debugging without modifying your main workflow logic.
 
-Handling Rate Limiting
+## Handling Rate Limiting
 
 GitHub API rate limits can cause intermittent failures. Implement retry logic in your skill:
-
 
 ```bash
 Retry logic for GitHub API calls
@@ -180,8 +169,7 @@ for i in {1..3}; do
 done
 ```
 
-
-Best Practices for Claude Code Skills
+## Best Practices for Claude Code Skills
 
 1. Always validate workflow syntax before pushing changes. Use `yamllint` or similar tools.
 
@@ -189,12 +177,10 @@ Best Practices for Claude Code Skills
 
 3. Log extensively within skill code to help trace failures:
 
-
 ```bash
 echo "::debug::Starting deployment to $ENVIRONMENT"
 echo "::debug::Using token with scopes: $TOKEN_SCOPES"
 ```
-
 
 4. Handle errors gracefully with descriptive messages:
 
@@ -207,12 +193,11 @@ gh api repos/$REPO/actions/runs 2>/dev/null || {
 
 5. Test incrementally, run individual steps before combining them into full workflows.
 
-Conclusion
+## Conclusion
 
 Debugging GitHub Actions failures in Claude Code skills requires a systematic approach: verify authentication first, then examine logs for syntax or environment issues, and finally apply targeted fixes. By using Claude Code's analytical capabilities alongside GitHub's debugging features, you can quickly identify root causes and implement solid solutions.
 
 Remember that most failures stem from authentication, syntax, or environment issues, all of which are solvable with the right debugging strategy. Keep your skills modular, log generously, and test incrementally for the most efficient development experience.
-
 
 Related Reading
 

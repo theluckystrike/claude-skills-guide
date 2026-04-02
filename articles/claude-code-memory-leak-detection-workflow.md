@@ -13,24 +13,23 @@ reviewed: true
 score: 7
 ---
 
-
 Memory leaks in Claude Code sessions can silently degrade performance, cause unexpected crashes, and waste computational resources. For developers working on extended coding sessions or power users running complex agent workflows, understanding how to detect and address these issues is essential. This guide provides a practical detection workflow with concrete examples you can apply immediately.
 
-Understanding Memory Leaks in Claude Code
+## Understanding Memory Leaks in Claude Code
 
 A memory leak occurs when allocated memory is no longer needed but is never released back to the system. In Claude Code, this manifests through growing memory consumption during extended sessions, particularly when working with large files, complex project structures, or when using skills that maintain stateful connections.
 
 Common culprits include improperly closed file handles, unbounded caching in skills like supermemory, unreleased database connections in custom MCP servers, and accumulating context windows without cleanup. Unlike traditional applications where leaks are obvious, Claude Code leaks often appear gradually. your session starts responsive but becomes sluggish over hours of intensive work.
 
-Why Claude Code Sessions Are Particularly Susceptible
+## Why Claude Code Sessions Are Particularly Susceptible
 
 Claude Code's architecture adds several leak vectors that don't exist in typical CLI tools. First, MCP servers are long-running Node.js processes that persist for the entire session. Any leak in a custom MCP server compounds over hours. Second, skills that cache API responses or store intermediate results can grow their in-memory footprint without bound if they lack eviction logic. Third, the conversation context itself is an in-memory structure. every tool call result, file read, and code block gets appended to the context and held in memory until the session ends.
 
 Understanding which of these three vectors is causing your issue determines the right fix. A leak in an MCP server requires code changes to the server. A leak from context accumulation is addressed by session hygiene and context compaction. A leak in a skill's cache is fixed in the skill's configuration or source.
 
-The Detection Workflow
+## The Detection Workflow
 
-Step 1: Monitor Baseline Memory Usage
+## Step 1: Monitor Baseline Memory Usage
 
 Before detecting leaks, establish a baseline. Use system monitoring tools to track Claude Code's memory footprint during normal operation.
 
@@ -56,7 +55,7 @@ pmap -x $(pgrep -f "claude") | sort -k3 -n -r | head -20
 
 Save this output to a file at session start, then compare it after two hours of work. Regions that have grown significantly are your primary suspects.
 
-Step 2: Trigger Repeated Operations
+## Step 2: Trigger Repeated Operations
 
 Memory leaks often reveal themselves through repeated operations. Create a test scenario that exercises the functionality you suspect is leaking:
 
@@ -92,7 +91,7 @@ for i in $(seq 1 10); do
 done
 ```
 
-Step 3: Capture Heap Snapshots
+## Step 3: Capture Heap Snapshots
 
 For JavaScript-based memory analysis, Node.js provides built-in heap snapshot capabilities. If you're running custom MCP servers or debugging skill behavior, inject memory tracking:
 
@@ -124,7 +123,7 @@ When reviewing snapshot comparisons, focus on:
 - Strings that are holding large amounts of data. file contents, API responses, or serialized objects stored without bounds
 - Array instances that are growing. these are often the unbounded cache or accumulation pattern
 
-Step 4: Analyze Context Accumulation
+## Step 4: Analyze Context Accumulation
 
 Claude Code maintains conversation context that can grow unbounded. Use the tdd skill to run structured tests that expose context-related leaks:
 
@@ -148,9 +147,9 @@ longer need for the current task?
 
 This surfaces context bloat before it causes latency problems, and Claude can suggest which earlier tool results can be summarized away.
 
-Common Leak Patterns and Solutions
+## Common Leak Patterns and Solutions
 
-Unbounded Caching
+## Unbounded Caching
 
 Skills like supermemory often cache results for performance. Without eviction policies, this cache grows indefinitely:
 
@@ -187,7 +186,7 @@ const cache = new LRU({
 });
 ```
 
-Event Listener Accumulation
+## Event Listener Accumulation
 
 When skills register event listeners without cleanup, each session adds listeners that persist:
 
@@ -230,7 +229,7 @@ auditListeners(myEmitter, 'MCP server');
 
 Node.js itself will warn you when a single emitter has more than 10 listeners on one event (`MaxListenersExceededWarning`). If you see this warning in your Claude Code MCP server logs, you have a listener accumulation leak and the cleanup pattern above is the fix.
 
-Context Window Pollution
+## Context Window Pollution
 
 When using the pdf skill to process documents or frontend-design for UI work, each interaction adds to the conversation context. Periodically summarize and compact:
 
@@ -261,7 +260,7 @@ Starting fresh on the refactor."
 
 This pattern keeps context lean from the start rather than compacting retroactively.
 
-Database Connection Leaks in MCP Servers
+## Database Connection Leaks in MCP Servers
 
 If your custom MCP server connects to a database to serve tool calls, connection lifecycle management is critical. Each unawaited async operation that opens a connection and throws an exception can leave connections in the pool indefinitely:
 
@@ -288,7 +287,7 @@ async function queryTool(params) {
 
 Monitor your database connection pool health separately from process memory. A connection pool that is always at maximum capacity is a leak signal even if the Node.js heap looks healthy, because the leak is in the database server's connection table, not the MCP server's heap.
 
-Proactive Prevention
+## Proactive Prevention
 
 Build leak prevention into your development workflow using the tdd skill for test-driven development:
 
@@ -322,7 +321,7 @@ class DesignProcessor {
 
 `WeakMap` is particularly well-suited for caches keyed on objects because the GC can collect the key-value pair when the key object has no other references. This gives you automatic eviction without needing an LRU policy, at the cost of not being able to iterate the cache or check its size.
 
-Memory Thresholds in CI
+## Memory Thresholds in CI
 
 Adding memory assertions to your test suite catches regressions before they reach production:
 
@@ -349,7 +348,7 @@ test('processFiles does not leak memory', async () => {
 
 Run this test with `node --expose-gc` to enable explicit GC calls, which prevents false positives from GC timing.
 
-When to Reset
+## When to Reset
 
 Even with careful detection and prevention, some sessions benefit from a clean start. Reset when:
 

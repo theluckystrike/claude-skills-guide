@@ -18,7 +18,7 @@ Generating PDFs programmatically is one of those tasks that sounds simple and tu
 
 This guide covers how to invoke the `/pdf` skill, what it produces, and how to use it across the most common document generation scenarios: invoices, reports, and technical specifications. It also covers how to integrate generated PDF code into automated workflows.
 
-How to Invoke the PDF Skill
+## How to Invoke the PDF Skill
 
 The `/pdf` skill is a purpose-built agent within Claude Code. You invoke it like any other skill. prefix your prompt with `/pdf` and describe what you want.
 
@@ -40,7 +40,7 @@ Output from the above invocation would include:
 - A `generateInvoice.test.js` file that asserts the output PDF contains expected strings
 - Installation instructions for any new dependencies
 
-Generating Invoices
+## Generating Invoices
 
 Invoices are the most frequent PDF generation use case for solo developers and small teams. The `/pdf` skill handles the layout complexity that makes invoice generation annoying by hand. specifically, dynamic line item tables that grow with the number of items and push the totals block to the correct position.
 
@@ -122,7 +122,7 @@ module.exports = { generateInvoice };
 
 Plugging this into an Express route requires three lines. You have a working invoice endpoint in under an hour including tests.
 
-Generating Reports
+## Generating Reports
 
 Reports differ from invoices because they involve narrative text, charts or tables from dynamic data, and often a cover page. The `/pdf` skill handles all of these when prompted with sufficient context about the data source.
 
@@ -161,7 +161,7 @@ async function generateSalesReport(salesData, dateRange) {
 
 The `buildReportHTML` function it generates produces a complete HTML document with embedded CSS. The benefit of this approach is that you can preview the report in a browser by opening the HTML directly, which makes layout iteration fast without a print-and-check cycle.
 
-Generating Technical Specifications
+## Generating Technical Specifications
 
 Technical specifications. API docs, architecture decision records, system design documents. benefit from consistent formatting and the ability to include code blocks, tables, and diagrams. The `/pdf` skill generates these well when given a structured input schema.
 
@@ -232,7 +232,7 @@ function generateSpec(spec) {
 }
 ```
 
-Automating Document Workflows
+## Automating Document Workflows
 
 Once you have generator functions for invoices, reports, and specs, the next step is wiring them into automated workflows. scheduled report emails, webhook-triggered invoice delivery, CI-generated spec exports.
 

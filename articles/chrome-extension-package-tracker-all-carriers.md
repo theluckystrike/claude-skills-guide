@@ -13,12 +13,11 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
 Tracking packages across multiple carriers in a single Chrome extension is a common challenge for developers building logistics tools. Whether you're creating a personal productivity extension or a full-featured shipment management tool, understanding the underlying architecture and APIs makes the difference between a fragile implementation and a solid solution.
 
 This guide covers the technical foundation for building a Chrome extension that integrates with multiple shipping carriers, including practical code patterns, carrier comparison details, and architecture decisions you can adapt for your own projects.
 
-Understanding Carrier API Integration
+## Understanding Carrier API Integration
 
 Most major carriers (UPS, FedEx, USPS, DHL, etc.) provide tracking APIs, but they vary significantly in authentication methods, response formats, and rate limits. A well-designed extension abstracts these differences behind a unified interface.
 
@@ -135,7 +134,7 @@ class UPSAdapter extends CarrierAdapter {
 }
 ```
 
-Auto-Detecting Carriers from Tracking Numbers
+## Auto-Detecting Carriers from Tracking Numbers
 
 One of the most useful features for users is automatic carrier detection. Most carriers use predictable number patterns that let you identify them from the tracking number alone.
 
@@ -190,7 +189,7 @@ async function detectCarrierWithFallback(
 }
 ```
 
-Building the Extension Architecture
+## Building the Extension Architecture
 
 A typical Chrome extension for package tracking consists of three main components:
 
@@ -266,7 +265,7 @@ async function handleTracking(trackingNumber: string, carrier?: string): Promise
 }
 ```
 
-Handling Rate Limits and Caching
+## Handling Rate Limits and Caching
 
 Carrier APIs impose rate limits, and making excessive requests quickly leads to throttling or API key suspension. Implement caching to reduce redundant calls:
 
@@ -314,7 +313,7 @@ async function setCached(key: string, data: TrackingResult): Promise<void> {
 }
 ```
 
-Polling and Delivery Notifications
+## Polling and Delivery Notifications
 
 A passive tracker that only updates when the user opens the popup is less useful than one that proactively notifies about status changes. Use `chrome.alarms` to schedule periodic polling:
 
@@ -360,7 +359,7 @@ async function pollAllPackages(): Promise<void> {
 
 Avoid polling too frequently. A 30-minute interval is sufficient for most carriers. Polling every few minutes will quickly exhaust free-tier rate limits and may get your API key banned.
 
-Integrating Multiple Carriers
+## Integrating Multiple Carriers
 
 When a shipment moves between carriers (common with international packages), you need to handle multi-carrier tracking. The key is storing the full journey rather than just the current status:
 
@@ -387,7 +386,7 @@ function mergeTrackingSegments(segments: TrackingSegment[]): TrackingEvent[] {
 
 A common real-world scenario is a package shipped from Asia via China Post, transferred to USPS at the US border, and then delivered by your local post office. Handling this well requires that users can link tracking numbers and see a unified timeline.
 
-Local Storage and Data Persistence
+## Local Storage and Data Persistence
 
 Chrome extensions can store tracking data using the chrome.storage API, which persists across sessions and syncs with the user's Google account:
 
@@ -426,7 +425,7 @@ async function removePackage(trackingNumber: string): Promise<void> {
 
 If you use `chrome.storage.sync` instead of `chrome.storage.local`, data will sync across all of the user's Chrome instances using their Google account. This is convenient but comes with stricter size limits (100KB total, 8KB per key). For extensions with many tracked packages or detailed event histories, stick with `chrome.storage.local`.
 
-Content Script: Auto-Detecting Tracking Numbers on Pages
+## Content Script: Auto-Detecting Tracking Numbers on Pages
 
 A great quality-of-life feature is automatically recognizing tracking numbers on Amazon order pages, email confirmations, or shipping confirmation pages. Here is a simple content script pattern:
 
@@ -461,7 +460,7 @@ if (numbers.length > 0) {
 
 The popup can then offer a one-click "Add all detected packages" button, making the workflow smooth for users who shop frequently.
 
-Security Considerations
+## Security Considerations
 
 When building package tracking extensions, keep these security practices in mind:
 
@@ -472,7 +471,7 @@ When building package tracking extensions, keep these security practices in mind
 - Minimize permissions - Declare only the host permissions you actually need. A `host_permissions` entry for `https://*/*` will trigger Chrome Web Store security review flags.
 - Avoid storing sensitive data long-term - Cache only what you need for UI performance; do not log or store full shipment histories indefinitely without user consent.
 
-Practical Tips for Production
+## Practical Tips for Production
 
 Several issues come up repeatedly when this type of extension is used at scale:
 
@@ -484,14 +483,13 @@ Deduplicate events. Some carrier APIs return duplicate events when polled multip
 
 Test with real tracking numbers. Carrier sandbox environments often return synthetic data that does not reflect real-world edge cases. Test with real shipments to catch issues like missing fields, unexpected null values, or unusual status codes.
 
-Conclusion
+## Conclusion
 
 Building a Chrome extension for multi-carrier package tracking requires handling diverse API patterns, managing rate limits, and presenting unified data to users. The adapter pattern shown here scales well as you add carriers, while persistent caching, proactive polling, and proper storage ensure a responsive user experience that works even after the service worker sleeps.
 
 For developers looking to extend this foundation, consider adding delivery notifications with estimated windows, a visual timeline UI in the popup, historical tracking data charts for frequent shippers, or integration with calendar apps to surface expected delivery dates as events. Each of these builds naturally on the architecture described here.
 
 The most impactful single improvement for user experience is the content script that auto-detects tracking numbers on order pages. Users should not have to copy-paste tracking numbers manually, that friction is what separates a useful extension from one that sits unused after the first week.
-
 
 Related Reading
 

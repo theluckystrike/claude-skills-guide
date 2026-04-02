@@ -13,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Perl Script to Python Migration Workflow
 
 Migrating legacy Perl scripts to Python is a common challenge for development teams maintaining older codebases. Perl's powerful text processing capabilities and regular expression support made it popular for sysadmin tasks and data transformation, but Python's readability, extensive library ecosystem, and modern tooling have made it the preferred choice for new projects. Claude Code provides an excellent workflow for this migration, combining its code understanding capabilities with specialized skills that accelerate the entire process.
 
-Why Use Claude Code for Perl to Python Migration
+## Why Use Claude Code for Perl to Python Migration
 
 Claude Code excels at understanding legacy code patterns and can help translate them into modern Python equivalents. The key advantages include comprehensive code analysis, systematic transformation guidance, test generation during migration, and consistent output across large codebases. When migrating Perl scripts, you often encounter complex regular expressions, file handling patterns, and module dependencies that require careful translation to Python's equivalents.
 
 Before starting your migration, ensure you have the relevant skills loaded. The tdd skill helps generate tests alongside the migrated code, while the python skill provides Python-specific best practices. You can invoke these skills within your migration workflow to ensure the resulting Python code follows best practices.
 
-Step 1: Analyze the Perl Script Structure
+## Step 1: Analyze the Perl Script Structure
 
 Begin by having Claude Code examine your Perl script to understand its structure and dependencies. Create a task-specific prompt that focuses on code comprehension:
 
@@ -42,7 +41,7 @@ Provide a summary in markdown format.
 
 This analysis phase is crucial because Perl's flexible syntax can make code harder to parse. Claude Code can identify Perl-specific patterns like `@_` for function arguments, `$_` for the default variable, and special filehandle operations that need special attention during migration.
 
-Step 2: Create a Mapping Document
+## Step 2: Create a Mapping Document
 
 After analysis, create a mapping document that translates Perl constructs to their Python equivalents. This document serves as a reference throughout the migration. Claude Code can generate this mapping automatically based on the specific patterns found in your codebase:
 
@@ -57,7 +56,7 @@ After analysis, create a mapping document that translates Perl constructs to the
 | `foreach my $item (@arr) { }` | `for item in arr:` | Iteration |
 | `if (condition) { }` | `if condition:` | Conditionals |
 
-Step 3: Migrate Core Logic Systematically
+## Step 3: Migrate Core Logic Systematically
 
 Start the actual migration with the main program flow, then move to helper functions. This approach ensures you understand the control flow before tackling implementation details. For each function, provide clear migration instructions to Claude Code:
 
@@ -77,7 +76,7 @@ Provide the Python equivalent with explanations for any non-trivial translations
 
 When migrating regular expressions, pay special attention to Perl's pattern modifiers. Perl's case-insensitive matching with `/i`, multiline with `/m`, and global matching with `/g` have direct Python equivalents in the `re` module flags. However, Perl's capture group behavior differs from Python, so verify the group indices after migration.
 
-Step 4: Handle Perl-Specific Patterns
+## Step 4: Handle Perl-Specific Patterns
 
 Perl has several idioms that require careful handling during migration. Here's how to approach common patterns:
 
@@ -108,7 +107,7 @@ with open('file.txt', 'r') as f:
     content = f.read()
 ```
 
-Step 5: Generate Tests with TDD Skill
+## Step 5: Generate Tests with TDD Skill
 
 The tdd skill becomes invaluable during migration. Generate tests that verify the Python code produces identical output to the original Perl script:
 
@@ -127,7 +126,7 @@ Provide complete test file content with proper assertions.
 
 Running both the original Perl script and the new Python code against the same test inputs ensures functional equivalence. This is especially important for data transformation scripts where exact output matching matters.
 
-Step 6: Handle Module Dependencies
+## Step 6: Handle Module Dependencies
 
 Perl modules (CPAN) don't have direct Python equivalents. Research the appropriate Python packages for each Perl module used:
 
@@ -139,7 +138,7 @@ Perl modules (CPAN) don't have direct Python equivalents. Research the appropria
 
 Create a requirements.txt or pyproject.toml that includes these dependencies. Claude Code can help identify which Perl modules are used and suggest appropriate Python replacements.
 
-Step 7: Final Verification
+## Step 7: Final Verification
 
 After migration, run comprehensive verification:
 
@@ -150,7 +149,7 @@ After migration, run comprehensive verification:
 
 The migration workflow benefits significantly from treating it as a learning process. Each migrated script improves your team's understanding of both the legacy code and modern Python patterns.
 
-Practical Example: Data Processing Script
+## Practical Example: Data Processing Script
 
 Consider a Perl script that processes log files:
 
@@ -208,13 +207,12 @@ if __name__ == '__main__':
 
 The Python version adds type safety, uses dataclasses for structured data, and follows modern Python conventions while preserving the original logic.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms the Perl to Python migration from a tedious manual effort into a systematic, assisted process. By using code analysis, automated mapping, test generation, and careful pattern handling, you can migrate legacy Perl scripts with confidence. The key is maintaining functional equivalence while improving code readability and maintainability through Python's modern features.
 
 Start with small, isolated scripts to build familiarity with the workflow, then scale to larger applications. Each migration improves your team's expertise and builds a reusable knowledge base for future projects.
 {% endraw %}
-
 
 Related Reading
 

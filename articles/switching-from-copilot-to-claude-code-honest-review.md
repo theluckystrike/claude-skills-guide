@@ -13,10 +13,9 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 After using GitHub Copilot for two years, I made the switch to Claude Code six months ago. Here's my honest assessment of what changed, what surprised me, and whether I think the switch is worth it for most developers.
 
-The Basic Difference: Autocomplete vs. Conversation
+## The Basic Difference: Autocomplete vs. Conversation
 
 The most fundamental difference between Copilot and Claude Code is how you interact with them. Copilot feels like an incredibly smart autocomplete, it suggests code as you type, and with tab completion, code appears almost like magic. Claude Code works differently. It's a conversational assistant that reads your entire codebase and helps you reason through problems.
 
@@ -24,7 +23,7 @@ This distinction matters more than I expected. With Copilot, I rarely thought ab
 
 At first, I missed the frictionless nature of Copilot. But after a few weeks, I realized I was writing better code because I was actively thinking through problems with Claude Code rather than just accepting suggestions.
 
-Claude Code Skills: The Real Game-Changer
+## Claude Code Skills: The Real Game-Changer
 
 What truly sets Claude Code apart is its skill system. Skills are essentially prompt templates that customize Claude Code's behavior for specific tasks. Let me show you how this works in practice.
 
@@ -46,7 +45,7 @@ The skill system means Claude Code doesn't just help you write code, it helps yo
 
 Copilot doesn't have an equivalent feature. You're limited to whatever context you provide in your IDE, which often means starting from scratch with each conversation.
 
-Multi-File Understanding and Refactoring
+## Multi-File Understanding and Refactoring
 
 One of Copilot's limitations is its file-by-file focus. When refactoring across multiple files, you often need to manually copy context between files. Claude Code naturally works across your entire codebase.
 
@@ -64,7 +63,7 @@ tests as well."
 
 Claude Code will analyze your entire codebase, identify all occurrences, and make the changes while preserving your project's patterns. This single feature has saved me hours on large refactoring tasks.
 
-The Learning Curve Is Real
+## The Learning Curve Is Real
 
 I won't pretend the switch is effortless. There's a genuine learning curve with Claude Code that Copilot doesn't have. With Copilot, you just type code and accept suggestions. With Claude Code, you need to learn how to prompt effectively.
 
@@ -72,13 +71,13 @@ The difference is similar to the difference between using a search engine and ha
 
 The good news is that Claude Code's skill system helps here too. Once you find skills that match your workflow, much of the prompting complexity is abstracted away. I now use about a dozen skills regularly, and they cover 80% of my daily work.
 
-Where Copilot Still Wins
+## Where Copilot Still Wins
 
 For pure speed on simple, repetitive code, Copilot still has advantages. When I'm writing boilerplate or following familiar patterns, Copilot's inline suggestions feel faster. There's something satisfying about pressing tab and having exactly what you need appear.
 
 Claude Code also has a higher latency than Copilot's autocomplete. For very quick tasks, the conversational overhead can feel excessive. I still use Copilot for simple tasks like generating getters/setters or filling in standard patterns.
 
-The Skill Ecosystem
+## The Skill Ecosystem
 
 What surprised me most was how much the skill ecosystem has grown. Looking at available skills, you can find specialized skills for:
 
@@ -104,13 +103,13 @@ Describe the task to Claude as usual
 
 Copilot has no equivalent. You're stuck with whatever built-in capabilities GitHub provides, and those capabilities are relatively limited compared to what's available through Claude Code skills.
 
-Cost Considerations
+## Cost Considerations
 
 Both tools have free tiers, but for serious development work, you'll likely pay. Copilot is $10/month for individuals (or included with GitHub subscription tiers). Claude Code pricing varies based on usage, and the free tier is generous for personal projects.
 
 For teams, Claude Code's pricing can add up, but the productivity gains from skills and multi-file understanding often justify the cost. I've found myself more willing to tackle complex refactoring tasks because Claude Code makes them manageable.
 
-My Verdict After Six Months
+## My Verdict After Six Months
 
 Would I recommend switching from Copilot to Claude Code? It depends on your work style.
 

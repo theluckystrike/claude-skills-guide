@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for OpenAPI Zod Client Workflow
 
@@ -21,7 +20,7 @@ Building type-safe API clients is essential for modern TypeScript development. W
 
 you'll learn how to use Claude Code to automate and optimize your OpenAPI to Zod client workflow, saving hours of manual typing and reducing runtime errors.
 
-Understanding the OpenAPI to Zod Pipeline
+## Understanding the OpenAPI to Zod Pipeline
 
 The OpenAPI to Zod workflow typically involves several stages: fetching or updating your OpenAPI specification, converting it to Zod schemas, generating TypeScript types, and finally creating a type-safe API client. Each stage presents opportunities for Claude Code to assist you.
 
@@ -61,7 +60,7 @@ components:
 
 Manually converting this to Zod is straightforward but repetitive. Claude Code can handle this transformation instantly.
 
-Using Claude Code to Generate Zod Schemas
+## Using Claude Code to Generate Zod Schemas
 
 Claude Code excels at converting OpenAPI schemas to Zod. You can provide either the raw YAML/JSON or a URL to your OpenAPI spec, and Claude will generate clean, validated Zod schemas.
 
@@ -90,7 +89,7 @@ export type User = z.infer<typeof UserSchema>;
 
 Notice how Claude adds sensible validations, `.email()` for email fields, `.min(1)` for required strings, and `.datetime()` for ISO date strings. These small details make your runtime validation solid.
 
-Building Type-Safe API Clients
+## Building Type-Safe API Clients
 
 Once you have Zod schemas, the next step is creating a type-safe API client. Claude Code can generate an entire client wrapper that handles request serialization, response parsing, and error handling.
 
@@ -165,7 +164,7 @@ export class UserClient {
 }
 ```
 
-Automating Schema Synchronization
+## Automating Schema Synchronization
 
 One of the biggest challenges with OpenAPI to Zod workflows is keeping schemas in sync when your API changes. Claude Code can help you set up automation scripts that regenerate schemas and alert you to breaking changes.
 
@@ -193,7 +192,7 @@ async function syncSchemas() {
 
 Run this as part of your CI/CD pipeline or as a pre-commit hook to ensure your Zod schemas always match your OpenAPI spec.
 
-Actionable Best Practices
+## Actionable Best Practices
 
 Here are practical tips to get the most out of Claude Code in your OpenAPI Zod workflow:
 
@@ -220,7 +219,7 @@ const UserSchema = z.object({
 });
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms the OpenAPI to Zod workflow from a manual, error-prone process into an automated, type-safe pipeline. By using Claude's ability to generate schemas, clients, and validation logic, you can focus on building features instead of fighting types.
 

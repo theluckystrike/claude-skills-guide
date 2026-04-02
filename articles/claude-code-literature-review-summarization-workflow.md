@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code Literature Review Summarization Workflow"
 description: "Learn how to build an efficient literature review summarization workflow using Claude Code. This guide covers practical examples, code snippets, and."
@@ -16,13 +15,13 @@ score: 7
 
 {% raw %}
 
-Introduction
+## Introduction
 
 Conducting literature reviews is a fundamental part of academic research and technical writing. However, the process of reading, synthesizing, and summarizing multiple papers can be overwhelming. Claude Code offers powerful capabilities to automate and streamline this workflow, allowing developers to build custom literature review pipelines that save hours of manual work.
 
 This guide walks you through building an efficient literature review summarization workflow using Claude Code. You'll learn practical techniques for processing academic papers, extracting key insights, and generating coherent summaries that maintain the original meaning.
 
-Understanding the Workflow Architecture
+## Understanding the Workflow Architecture
 
 A literature review summarization workflow typically consists of several stages: document ingestion, content extraction, analysis, summarization, and output generation. Claude Code can handle each stage through its tool-use capabilities, making it ideal for building end-to-end pipelines.
 
@@ -36,7 +35,7 @@ The core architecture involves:
 
 Understanding this architecture helps you design modular workflows that can be easily extended or modified as your needs evolve.
 
-Building Your First Summarization Pipeline
+## Building Your First Summarization Pipeline
 
 Let's create a practical implementation. First, set up a project structure for your literature review workflow:
 
@@ -111,7 +110,7 @@ class LiteratureReviewPipeline:
 
 This script demonstrates a modular approach where each function handles a specific responsibility. You can expand each method to incorporate more sophisticated processing logic as needed.
 
-Integrating Claude Code for Intelligent Processing
+## Integrating Claude Code for Intelligent Processing
 
 The real power comes from combining Claude Code's language capabilities with structured processing. Create a custom skill that uses Claude's understanding:
 
@@ -148,11 +147,11 @@ Text:
 
 This skill can be invoked from your main pipeline to handle the intelligent parts of the workflow, semantic analysis, finding extraction, and natural language generation.
 
-Advanced Techniques for Better Results
+## Advanced Techniques for Better Results
 
 Once you have the basic workflow running, consider these enhancements for improved results.
 
-Multi-Paper Synthesis
+## Multi-Paper Synthesis
 
 When reviewing multiple related papers, create a synthesis that identifies themes, contrasts findings, and highlights gaps:
 
@@ -174,7 +173,7 @@ def synthesize_findings(papers: list[dict]) -> dict:
     return themes
 ```
 
-Citation Management
+## Citation Management
 
 Automatically extract and format citations for your literature review:
 
@@ -196,7 +195,7 @@ def extract_citations(text: str) -> list[tuple]:
     return citations
 ```
 
-Configurable Summarization Styles
+## Configurable Summarization Styles
 
 Define different summarization profiles for various use cases:
 
@@ -219,7 +218,7 @@ summarization_styles:
     include_limitations: true
 ```
 
-Best Practices and Recommendations
+## Best Practices and Recommendations
 
 Here are key recommendations for building effective literature review workflows:
 
@@ -235,7 +234,7 @@ Here are key recommendations for building effective literature review workflows:
 
 6. Handle diverse formats: Academic papers come in various formats, build adapters for common formats like PDF, LaTeX, and HTML to ensure broad compatibility.
 
-Conclusion
+## Conclusion
 
 Building a literature review summarization workflow with Claude Code combines powerful language understanding with programmatic processing. Start with the basic pipeline, then progressively add sophistication through multi-paper synthesis, citation extraction, and custom summarization styles. The key is iterating on your prompts and validating outputs to ensure quality results.
 

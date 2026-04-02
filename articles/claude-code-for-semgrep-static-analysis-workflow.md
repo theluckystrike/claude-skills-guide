@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Semgrep Static Analysis Workflow
 
@@ -21,7 +20,7 @@ Static analysis is a critical component of secure software development, and Semg
 
 This guide explores how to use Claude Code to enhance your Semgrep static analysis experience, from initial setup to custom rule development and automated remediation workflows.
 
-Understanding the Semgrep and Claude Code Integration
+## Understanding the Semgrep and Claude Code Integration
 
 Semgrep is a fast, open-source static analysis tool that works by pattern matching across multiple languages. It excels at finding known vulnerability patterns, enforcing coding standards, and ensuring security best practices. Claude Code complements Semgrep by providing intelligent context understanding, natural language explanations of findings, and automated responses to analysis results.
 
@@ -31,7 +30,7 @@ The integration works through Claude Code's ability to:
 - Generate actionable remediation suggestions
 - Automate repetitive analysis tasks across multiple projects
 
-Setting Up Your Semgrep Environment with Claude Code
+## Setting Up Your Semgrep Environment with Claude Code
 
 Before integrating with Claude Code, ensure Semgrep is installed and configured in your development environment:
 
@@ -57,7 +56,7 @@ description: "Run Semgrep analysis and interpret results"
 You are a security analysis assistant specializing in Semgrep static analysis.
 ```
 
-Running Basic Security Scans
+## Running Basic Security Scans
 
 With your environment set up, you can now run comprehensive security scans using Claude Code. The basic workflow involves executing Semgrep against your codebase and interpreting the results:
 
@@ -98,11 +97,11 @@ def parse_semgrep_results(json_file):
     return findings
 ```
 
-Developing Custom Semgrep Rules
+## Developing Custom Semgrep Rules
 
 One of Semgrep's most powerful features is custom rule development. Claude Code can assist you in creating precise rules tailored to your codebase's specific patterns and security requirements.
 
-Pattern Matching Basics
+## Pattern Matching Basics
 
 Semgrep rules use YAML to define patterns to match:
 
@@ -126,7 +125,7 @@ Claude Code can help you:
 3. Test rules against your codebase for accuracy
 4. Iterate on rule definitions to reduce false positives
 
-Advanced Rule Patterns
+## Advanced Rule Patterns
 
 For more complex scenarios, Semgrep supports metavariable matching and conditional logic:
 
@@ -146,7 +145,7 @@ rules:
       cwe: "CWE-78: OS Command Injection"
 ```
 
-Automating Continuous Analysis Workflows
+## Automating Continuous Analysis Workflows
 
 Integrate Semgrep into your CI/CD pipeline with Claude Code handling the orchestration and reporting:
 
@@ -178,11 +177,11 @@ Claude Code can enhance this workflow by:
 - Tracking findings over time to identify regression patterns
 - Prioritizing issues based on exploitability and business impact
 
-Interpreting and Remediating Findings
+## Interpreting and Remediating Findings
 
 When Semgrep identifies issues, Claude Code helps translate technical findings into actionable remediation guidance:
 
-SQL Injection Remediation
+## SQL Injection Remediation
 
 Finding:
 ```
@@ -216,7 +215,7 @@ Claude Code Generated Remediation:
        raise ValueError("Invalid user ID format")
    ```
 
-Best Practices for Claude Code + Semgrep Workflows
+## Best Practices for Claude Code + Semgrep Workflows
 
 To maximize the effectiveness of your static analysis workflow:
 
@@ -232,7 +231,7 @@ To maximize the effectiveness of your static analysis workflow:
 
 6. Track metrics over time: Use Claude Code to generate trend analysis showing improvement or regression in code quality metrics.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Semgrep creates a powerful static analysis workflow that transforms complex security scanning into an automated, intelligent process. By using Claude Code's natural language capabilities alongside Semgrep's pattern-matching engine, you can develop custom rules, automate analysis tasks, and provide actionable remediation guidance to your development team.
 

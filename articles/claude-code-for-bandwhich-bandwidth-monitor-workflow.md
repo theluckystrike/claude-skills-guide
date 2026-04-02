@@ -15,13 +15,11 @@ score: 8
 
 {% raw %}
 
-Claude Code for Bandwhich Bandwidth Monitor Workflow
-
 Network bandwidth monitoring is essential for developers debugging performance issues, identifying bandwidth-hungry processes, or optimizing application resource usage. Bandwhich, a Rust-based terminal bandwidth monitor, provides real-time visibility into network traffic organized by process, connection, and remote address. Combined with Claude Code's automation capabilities, you can create powerful workflows for network analysis, alerting, and historical tracking.
 
 This guide shows you how to integrate Claude Code into your bandwhich workflow, from installation to automated monitoring and analysis.
 
-Installing and Configuring Bandwhich
+## Installing and Configuring Bandwhich
 
 Bandwhich runs on macOS, Linux, and Windows (via WSL). Installation via Homebrew is the quickest method on macOS:
 
@@ -37,7 +35,7 @@ bandwhich --version
 
 Bandwhich requires elevated permissions to capture network traffic. On macOS, you'll be prompted for sudo access the first time you run it. The tool uses `libpcap` for packet capture, so ensure your system allows this functionality.
 
-Basic Bandwhich Usage Patterns
+## Basic Bandwhich Usage Patterns
 
 Running bandwithout arguments displays all network activity in an interactive TUI:
 
@@ -62,11 +60,11 @@ sudo bandwhich --narrow
 
 Claude Code can help you construct complex bandwhich commands and parse the output for specific analysis needs.
 
-Integrating Claude Code with Bandwhich
+## Integrating Claude Code with Bandwhich
 
 Claude Code enhances bandwhich workflows through several key capabilities: command construction, output parsing, automation scripting, and integration with other tools in your monitoring stack.
 
-Parsing Bandwhich Output
+## Parsing Bandwhich Output
 
 When you need to extract specific metrics from bandwhich output, Claude Code can write parsing scripts in your preferred language. Here's a Python example for extracting top bandwidth consumers:
 
@@ -104,7 +102,7 @@ if __name__ == "__main__":
 
 Claude Code can generate similar parsing scripts tailored to your specific output format requirements and integration needs.
 
-Automated Bandwidth Monitoring
+## Automated Bandwidth Monitoring
 
 Create automated monitoring workflows that run bandwhich on a schedule and alert on anomalies. Here's a bash script for periodic bandwidth sampling:
 
@@ -133,11 +131,11 @@ done
 
 This script runs continuously, logging processes that exceed your defined threshold. Integrate with notification systems like Slack or PagerDuty by adding curl commands to send alerts.
 
-Creating Claude Skills for Bandwhich
+## Creating Claude Skills for Bandwhich
 
 Claude Skills extend Claude Code's capabilities for recurring bandwhich tasks. Create a custom skill for common bandwidth analysis workflows.
 
-Skill Structure
+## Skill Structure
 
 Place your skill in the Claude skills directory:
 
@@ -171,7 +169,7 @@ Run: sudo bandwhich --json | jq '.'
 
 The skill file defines available commands and provides examples. Claude Code reads this to understand when to invoke bandwhich-related workflows.
 
-Interactive Monitoring Workflow
+## Interactive Monitoring Workflow
 
 When you need real-time bandwidth analysis during development, describe your requirements to Claude:
 
@@ -179,9 +177,9 @@ When you need real-time bandwidth analysis during development, describe your req
 
 Claude Code can construct monitoring scripts, explain the output, and help you interpret bandwidth patterns in context of your application architecture.
 
-Practical Examples and Use Cases
+## Practical Examples and Use Cases
 
-Debugging High Bandwidth Usage
+## Debugging High Bandwidth Usage
 
 When experiencing network performance issues, use bandwhich to identify culprits:
 
@@ -216,7 +214,7 @@ def analyze_bandwidth_patterns(json_file):
         print(f"{remote}: {total / 1024 / 1024:.2f} MB")
 ```
 
-Continuous Monitoring in Development
+## Continuous Monitoring in Development
 
 For development environments where you want ongoing visibility, run bandwhich in the background:
 
@@ -230,7 +228,7 @@ tail -f /tmp/bandwidth-stream.json | jq '.'
 
 Combine this with Claude Code's ability to analyze streaming data and provide insights about traffic patterns.
 
-Integrating with System Monitoring
+## Integrating with System Monitoring
 
 Bandwhich output integrates well with other monitoring tools. Export to Prometheus format:
 
@@ -250,7 +248,7 @@ done
 
 This Prometheus-compatible output can be scraped by Prometheus for long-term storage and visualization in Grafana.
 
-Best Practices for Bandwidth Monitoring
+## Best Practices for Bandwidth Monitoring
 
 Effective bandwidth monitoring requires thoughtful configuration and regular analysis. Here are key practices:
 
@@ -264,7 +262,7 @@ Automate routine analysis. Create Claude Skills for common queries like "show me
 
 Monitor during specific events. Run targeted monitoring sessions during deployments, load testing, or user acceptance testing to capture relevant data.
 
-Building Your Network Monitoring Toolkit
+## Building Your Network Monitoring Toolkit
 
 Bandwhich combined with Claude Code creates a powerful network monitoring foundation. The CLI tool provides real-time visibility, while Claude Code adds automation, analysis, and integration capabilities.
 

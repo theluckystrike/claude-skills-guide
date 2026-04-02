@@ -16,7 +16,7 @@ permalink: /claude-xlsx-skill-spreadsheet-automation-tutorial/
 
 The `/xlsx` skill in Claude Code provides structured guidance for working with Excel files, CSVs, and tabular data. This tutorial covers practical scenarios: creating formatted reports, processing batches of files, and generating charts. with working code examples you can adapt immediately.
 
-How the /xlsx Skill Works
+## How the /xlsx Skill Works
 
 The `/xlsx` skill is a `.md` file stored in `~/.claude/skills/` that loads when you type `/xlsx` in Claude Code. It gives Claude specialized context for spreadsheet tasks: understanding file formats, common libraries, formula conventions, and data processing patterns.
 
@@ -32,7 +32,7 @@ a summary workbook with one sheet per month.
 
 Claude loads the skill's guidance and produces code appropriate to your task. The skill does not run code itself. it helps Claude give you better, more accurate code for your spreadsheet work.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 The `/xlsx` skill works best when you have Python with `openpyxl` and `pandas` available, or Node.js with the `xlsx` package depending on your preference. Install what you need before starting:
 
@@ -53,7 +53,7 @@ Using Python with openpyxl. I need to create a new workbook
 with a header row, styled blue, and three data columns.
 ```
 
-Creating Formatted Workbooks
+## Creating Formatted Workbooks
 
 Here is a working example of formatted workbook creation using openpyxl:
 
@@ -96,7 +96,7 @@ def create_report(output_path, headers, rows):
 
 Use the `/xlsx` skill to ask for variations. adding freeze panes, applying number formats, or adding a totals row with SUM formulas.
 
-Processing Existing Data
+## Processing Existing Data
 
 Reading and analyzing spreadsheet data with pandas:
 
@@ -117,7 +117,7 @@ def summarize_sales_file(file_path):
 
 When the file has multiple sheets or mixed data types, describe the structure to Claude after invoking `/xlsx`. it will generate the appropriate `read_excel` parameters.
 
-Batch Processing Multiple Files
+## Batch Processing Multiple Files
 
 Processing a directory of files is a common request the `/xlsx` skill handles well:
 
@@ -149,7 +149,7 @@ def consolidate_monthly_reports(input_dir, output_path):
 
 Ask Claude for additions like summary sheets, cross-sheet formulas, or conditional formatting across the consolidated output.
 
-Adding Charts
+## Adding Charts
 
 Chart generation is a common follow-on request once the data is written:
 
@@ -179,7 +179,7 @@ def add_bar_chart(ws, data_range_rows, title="Summary"):
 
 When invoking `/xlsx` for chart work, describe the chart type, what the X and Y axes represent, and where the source data lives. Claude generates the Reference configuration accurately when given that detail.
 
-Error Handling for Production Scripts
+## Error Handling for Production Scripts
 
 Spreadsheet automation scripts that run unattended need reliable error handling:
 
@@ -198,7 +198,7 @@ def safe_read_excel(file_path, sheet_name=0):
 
 Use `/tdd` alongside `/xlsx` to write tests for your processing functions before deploying them to run on live data.
 
-Performance for Large Files
+## Performance for Large Files
 
 For workbooks with tens of thousands of rows:
 
@@ -217,7 +217,7 @@ wb.calculation.fullCalcOnLoad = True
 
 This reduces processing time significantly for large datasets. Ask Claude via `/xlsx` for write-optimized variants when working with files over 10,000 rows.
 
-Data Cleaning and Transformation
+## Data Cleaning and Transformation
 
 Messy imports with inconsistent formats are a common challenge. Build transformation pipelines that standardize data before analysis:
 
@@ -246,7 +246,7 @@ def clean_spreadsheet_data(input_file, output_file):
     df.to_csv(output_file, index=False)
 ```
 
-Common Pitfalls and Solutions
+## Common Pitfalls and Solutions
 
 Memory issues with large files: Load only the columns you need:
 
@@ -266,7 +266,7 @@ Unicode and encoding: Always specify encoding for CSV files with special charact
 df = pd.read_csv('data.csv', encoding='utf-8-sig')
 ```
 
-Combining with Other Skills
+## Combining with Other Skills
 
 The `/xlsx` skill pairs naturally with others:
 
@@ -282,6 +282,5 @@ Related Reading
 - [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Full data skill overview
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep sessions efficient
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate in context
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

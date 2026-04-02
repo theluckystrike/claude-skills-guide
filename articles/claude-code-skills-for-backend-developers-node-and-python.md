@@ -16,7 +16,7 @@ permalink: /claude-code-skills-for-backend-developers-node-and-python/
 
 [Backend development involves repetitive tasks that consume development time](/best-claude-code-skills-to-install-first-2026/) Claude Code and its built-in skills help automate these workflows. This guide covers practical applications of the real skills for Node.js and Python backend work.
 
-What Skills Are Available
+## What Skills Are Available
 
 Claude Code ships with these built-in skills:
 
@@ -30,7 +30,7 @@ Claude Code ships with these built-in skills:
 
 There are no `/api-design`, `/database`, `/fastapi`, `/django`, `/pytest`, `/typescript`, `/security-audit`, `/performance`, `/celery`, or `/documentation` built-in skills. For stack-specific work, you describe your task directly to Claude Code or write custom skills.
 
-Using /tdd for Backend Testing
+## Using /tdd for Backend Testing
 
 The `/tdd` skill works for both Node.js and Python testing workflows:
 
@@ -78,7 +78,7 @@ Use pytest with unittest.mock. Mock the email service and database calls.
 Cover: successful signup, duplicate email error, email service timeout.
 ```
 
-Using /supermemory for Long Sessions
+## Using /supermemory for Long Sessions
 
 Backend projects span many sessions. Use `/supermemory` to preserve architectural decisions:
 
@@ -107,7 +107,7 @@ Then at the start of any new session:
 /supermemory What is the current migration status?
 ```
 
-Using /pdf for Documentation
+## Using /pdf for Documentation
 
 Generate API documentation from your codebase:
 
@@ -123,7 +123,7 @@ DELETE /users/:id - soft-deletes user (requires admin role)
 Include: request format, response format, error codes, and authentication notes.
 ```
 
-Database Workflows with Claude Code Skills
+## Database Workflows with Claude Code Skills
 
 Claude Code has no built-in `/database` or `/migrate` skill, but you can handle database work effectively by combining direct prompts with `/supermemory` and custom skills.
 
@@ -194,7 +194,7 @@ Save as `~/.claude/skills/migration-review.md` and invoke with:
 [paste your migration file]
 ```
 
-API Development with Claude Code Skills
+## API Development with Claude Code Skills
 
 Building and iterating on APIs is a core backend workflow. Claude Code handles this through direct prompting, but combining it with skills makes common review and documentation steps faster.
 
@@ -270,7 +270,7 @@ When reviewing an API endpoint implementation, verify:
 Flag any violations with the line number and a corrected code snippet.
 ```
 
-Writing Custom Skills for Your Stack
+## Writing Custom Skills for Your Stack
 
 Create custom skills for stack-specific workflows. A custom Node.js API review skill:
 
@@ -299,7 +299,7 @@ Save as `~/.claude/skills/node-api-review.md`, then invoke with:
 [paste your route handler]
 ```
 
-Typical Backend Workflow Example
+## Typical Backend Workflow Example
 
 Adding a new API endpoint:
 
@@ -320,7 +320,7 @@ Adding a new API endpoint:
    validates item IDs exist before creating order, returns full order object with items"
 ```
 
-Summary
+## Summary
 
 The built-in skills useful for backend development are `/tdd` for tests, `/supermemory` for preserving context across sessions, and `/pdf` for documentation. There are no built-in skills for database work, API design, or specific frameworks. those workflows run through direct Claude Code prompts, optionally paired with custom skill files you write once and reuse across your team.
 

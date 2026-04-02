@@ -13,12 +13,11 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 
 WebAssembly (WASM) has transformed what's possible in browser-based applications. When you run compiled code in Chrome, you're tapping into a execution environment designed for near-native performance. This guide covers practical techniques for optimizing Chrome WASM performance in real-world applications.
 
-How Chrome Executes WebAssembly
+## How Chrome Executes WebAssembly
 
 Chrome compiles WebAssembly modules using its V8 engine. The process involves several stages: parsing the WASM binary, generating intermediate representation, and JIT compiling to native machine code. Understanding these stages helps you make informed optimization decisions.
 
@@ -38,7 +37,7 @@ async function loadWasmModule(url) {
 }
 ```
 
-Memory Management Best Practices
+## Memory Management Best Practices
 
 Memory efficiency directly impacts Chrome WASM performance. WebAssembly provides a linear memory model that you control explicitly. The key is matching your memory allocation to your actual needs.
 
@@ -53,7 +52,7 @@ const memory = new WebAssembly.Memory({
 
 Over-allocating memory wastes resources. Under-allocating causes traps. Profile your application memory usage in Chrome DevTools under the Memory tab to find the optimal balance.
 
-Optimizing Function Calls Between JavaScript and WASM
+## Optimizing Function Calls Between JavaScript and WASM
 
 Crossing the JS-WASM boundary carries overhead. Each call involves marshaling data and transitioning between execution contexts. Minimize these transitions for better Chrome WASM performance.
 
@@ -71,7 +70,7 @@ wasm.processPoints(pointsBuffer, points.length);
 
 Use `WebAssembly.Table` for function references when you need callbacks. Tables enable efficient function pointer storage without the overhead of object wrappers.
 
-Compilation Strategies
+## Compilation Strategies
 
 Chrome provides two compilation strategies: eager and lazy. Choose based on your use case.
 
@@ -93,7 +92,7 @@ const module = await WebAssembly.compile(bytes);
 
 For production applications, consider streaming compilation with `WebAssembly.compileStreaming()` to reduce perceived load time.
 
-Profiling WASM Performance in Chrome
+## Profiling WASM Performance in Chrome
 
 Chrome DevTools provides dedicated WebAssembly debugging features. Access them through the Performance panel and look for WASM-specific metrics.
 
@@ -105,7 +104,7 @@ Key metrics to monitor:
 
 Enable the WebAssembly debugging features in Chrome by visiting `chrome://flags/#enable-webassembly-debugging`.
 
-Practical Optimization Techniques
+## Practical Optimization Techniques
 
 1. Use Typed Arrays for Data Transfer
 
@@ -161,7 +160,7 @@ async function getWasmModule(url) {
 }
 ```
 
-Common Performance Pitfalls
+## Common Performance Pitfalls
 
 Avoid these frequent mistakes that degrade Chrome WASM performance:
 
@@ -173,7 +172,7 @@ Excessive JS-WASM crossings: Each boundary crossing has overhead. Minimize back-
 
 Ignoring Chrome updates: Chrome continually optimizes WASM execution. Stay current to benefit from improvements.
 
-Measuring Real-World Impact
+## Measuring Real-World Impact
 
 Benchmark your implementations with realistic workloads. Chrome provides precise timing APIs:
 
@@ -186,11 +185,11 @@ console.log(`WASM execution: ${end - start}ms`);
 
 Compare against pure JavaScript implementations to validate the performance benefit. Not all operations benefit from WASM, choose computations where the overhead of crossing boundaries is offset by faster execution.
 
-Conclusion
+## Conclusion
 
 Chrome WASM performance depends on thoughtful implementation. Focus on minimizing JS-WASM boundary crossings, managing memory efficiently, and using appropriate compilation strategies. Profile your application in Chrome DevTools to identify bottlenecks specific to your use case. With these techniques, you can build web applications that use near-native performance through WebAssembly.
 
-Multithreading with SharedArrayBuffer
+## Multithreading with SharedArrayBuffer
 
 Chrome supports multi-threaded WebAssembly through `SharedArrayBuffer` and the Atomics API, enabling parallel computation across web workers. This is one of the most significant performance levers available, but it requires specific HTTP response headers to be set correctly.
 
@@ -249,7 +248,7 @@ Atomics.wait(syncArray, 0, 0);
 const data = readSharedMemory();
 ```
 
-SIMD Optimization in Chrome
+## SIMD Optimization in Chrome
 
 WebAssembly SIMD (Single Instruction, Multiple Data) instructions allow a single operation to process multiple data values simultaneously. Chrome ships with WASM SIMD enabled by default, and it provides measurable speedups for numerical workloads.
 
@@ -294,7 +293,7 @@ pub fn add_vectors_simd(a: &[f32], b: &[f32], result: &mut [f32]) {
 
 The speedup relative to scalar WASM is typically 2-4x for operations that map cleanly to vector instructions: element-wise array math, color channel manipulation, and matrix operations.
 
-Debugging WASM in Chrome DevTools
+## Debugging WASM in Chrome DevTools
 
 Chrome DevTools supports source-level WebAssembly debugging when you compile with debug symbols. This lets you set breakpoints in your original C, C++, or Rust source rather than reading raw WAT (WebAssembly Text Format).
 
@@ -326,7 +325,7 @@ console.log(`Execution: ${entries[0].duration.toFixed(2)}ms`);
 
 The performance entries API pairs well with automated benchmarking. Run the same workload across Chrome versions to catch regressions introduced by browser updates, and track improvements as V8's WASM JIT compiler matures.
 
-Real-World Use Case: Image Processing Pipeline
+## Real-World Use Case: Image Processing Pipeline
 
 A concrete example grounds all of these techniques. Consider an image processing pipeline that applies filters to a canvas element. A pure JavaScript implementation processing a 4K image (8,294,400 pixels, 4 bytes each) at 30fps represents a demanding workload.
 

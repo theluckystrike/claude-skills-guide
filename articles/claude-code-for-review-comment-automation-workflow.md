@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Review Comment Automation Workflow"
 description: "Learn how to build a review comment automation workflow with Claude Code to streamline code reviews, manage feedback, and maintain consistent quality."
@@ -14,14 +13,13 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 
 Managing code review comments efficiently is one of the biggest challenges development teams face at scale. When you're juggling dozens of pull requests per day, manually tracking, categorizing, and responding to feedback becomes a significant time sink. This is where Claude Code shines, it can automate the entire review comment lifecycle, from detection to resolution.
 
 you'll learn how to build a practical review comment automation workflow using Claude Code that will save hours each week and ensure nothing falls through the cracks.
 
-Understanding the Review Comment Challenge
+## Understanding the Review Comment Challenge
 
 Before diving into automation, let's identify the core problems that make manual review comment management painful:
 
@@ -33,7 +31,7 @@ Third, there's the follow-up problem. It's easy for comments to get lost, especi
 
 Claude Code can address all three problems by implementing a structured automation workflow that standardizes how review comments are handled.
 
-Building Your Review Comment Automation Skill
+## Building Your Review Comment Automation Skill
 
 The foundation of your automation workflow is a well-designed Claude Code skill. Here's a practical implementation you can adapt:
 
@@ -70,7 +68,7 @@ Always format your response with:
 
 This skill provides the framework for consistent comment handling. The key is defining clear categories that match your team's workflow.
 
-Implementing Comment Categorization
+## Implementing Comment Categorization
 
 The first automation step is categorizing incoming review comments. This helps prioritize what needs immediate attention versus what can wait. Here's how to implement it:
 
@@ -135,7 +133,7 @@ function categorizeComment(commentText, hasChangesRequested) {
 
 This categorization system transforms chaos into structure. Every comment gets a clear priority, making it easy for PR authors to know what truly matters.
 
-Automating Response Generation
+## Automating Response Generation
 
 Once comments are categorized, the next automation opportunity is response generation. Claude Code can suggest appropriate responses based on comment type and context:
 
@@ -165,7 +163,7 @@ templates:
 
 Using templates ensures consistent, professional responses while saving time on boilerplate text. The key is customizing templates to match your team's communication style.
 
-Creating Summary Reports
+## Creating Summary Reports
 
 Automation is most valuable when it provides visibility. A good review comment workflow generates useful summaries for team leads and project managers:
 
@@ -196,7 +194,7 @@ Recommendations
 
 These summaries help identify bottlenecks, track review velocity, and maintain accountability.
 
-Integrating with Your CI Pipeline
+## Integrating with Your CI Pipeline
 
 To fully automate the workflow, integrate it with your continuous integration system. Here's a practical example using GitHub Actions:
 
@@ -234,7 +232,7 @@ jobs:
 
 This integration ensures every comment is immediately categorized, tracked, and routed to the right people without manual intervention.
 
-Best Practices for Implementation
+## Best Practices for Implementation
 
 When building your review comment automation workflow, keep these tips in mind:
 
@@ -246,7 +244,7 @@ Review and iterate. Check your automation's effectiveness monthly. Are comments 
 
 Maintain human oversight. Automation should assist, not replace, human judgment. Keep the ability to override automated categorizations and responses when needed.
 
-Conclusion
+## Conclusion
 
 Building a review comment automation workflow with Claude Code transforms an chaotic process into a structured, efficient system. By categorizing comments consistently, generating appropriate responses, and creating visibility through summaries, your team can significantly reduce the time spent managing feedback while improving overall code review quality.
 

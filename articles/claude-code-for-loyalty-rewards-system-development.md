@@ -13,22 +13,19 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Loyalty Rewards System Development
-
 Building a loyalty rewards system requires careful architecture balancing user engagement, business logic, and scalability. Claude Code transforms this development journey by acting as your expert pair programmer, helping you design database schemas, implement point calculations, and create intuitive APIs. This guide walks through building a complete loyalty rewards system with practical examples you can adapt for your projects.
 
-Why Use Claude Code for Loyalty Systems
+## Why Use Claude Code for Loyalty Systems
 
 Loyalty rewards systems present unique development challenges: complex point mathematics, tiered membership logic, expiration rules, and the need for real-time balance updates. Traditional development approaches often lead to spaghetti code scattered across services. Claude Code approaches this differently, by understanding your intent, it helps you create well-structured, maintainable implementations that separate concerns properly.
 
 The real advantage emerges during iterative development. When business requirements shift, as they always do in loyalty programs, Claude Code helps you refactor confidently, ensuring changes don't introduce bugs in point calculations or tier transitions.
 
-Designing Your Data Model
+## Designing Your Data Model
 
 Every solid loyalty system starts with a well-designed data model. Before writing code, define your core entities clearly.
 
-Core Schema Structure
+## Core Schema Structure
 
 A production loyalty system typically requires these primary entities:
 
@@ -75,7 +72,7 @@ class PointTransaction(Base):
 
 When designing your schema, always consider auditability. Every point change should be traceable through the transaction history, this becomes critical when users dispute balances or when you need to debug calculation errors.
 
-Implementing Point Calculation Logic
+## Implementing Point Calculation Logic
 
 The heart of any loyalty system lies in point calculations. Here's how to implement a flexible points engine:
 
@@ -129,7 +126,7 @@ class PointsCalculator:
 
 This design allows for easy extension, you can add new bonus calculation methods without modifying existing code. That's essential as loyalty programs evolve with new promotions and partner offers.
 
-Building the API Layer
+## Building the API Layer
 
 Your API should expose clear endpoints for point operations. Here's a Flask-based implementation:
 
@@ -184,7 +181,7 @@ def redeem_reward():
     return jsonify(result), 200 if result["success"] else 400
 ```
 
-Tier Management and Automated Upgrades
+## Tier Management and Automated Upgrades
 
 Tier management separates casual users from your most valuable customers. Implement automated tier calculations that run either on each transaction or via scheduled jobs:
 
@@ -222,7 +219,7 @@ class TierService:
         # Log upgrade notification, trigger welcome email, etc.
 ```
 
-Actionable Development Tips
+## Actionable Development Tips
 
 When building loyalty systems with Claude Code, keep these principles in mind:
 

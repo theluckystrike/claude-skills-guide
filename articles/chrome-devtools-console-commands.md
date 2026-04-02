@@ -16,13 +16,13 @@ score: 8
 
 The Chrome DevTools console is one of the most powerful tools in a web developer's toolkit. Beyond simple `console.log()`, the console API offers a comprehensive suite of commands that can dramatically improve your debugging workflow. Most developers use maybe five percent of what the console can do. This guide covers the essential Chrome DevTools console commands that professional developers rely on daily, including several that rarely appear in introductory tutorials but save significant time once you know they exist.
 
-Accessing the Console
+## Accessing the Console
 
 Open Chrome DevTools by pressing `F12`, `Ctrl+Shift+I` (Windows/Linux), or `Cmd+Option+I` (Mac). Click the Console tab, or press `Ctrl+`` (backtick) to toggle the console drawer while viewing any other DevTools panel. You can also right-click any element on a page and choose "Inspect" to jump directly to the Elements panel, then switch to Console from there.
 
 One underused tip: open a standalone console window by clicking the three-dot menu in DevTools and selecting "Undock into separate window." This gives you a full-screen console alongside your app, which is useful on single-monitor setups during long debugging sessions.
 
-Essential Console Output Commands
+## Essential Console Output Commands
 
 console.log() and Its Variants
 
@@ -76,7 +76,7 @@ console.dir(button);    // Shows the JavaScript object with all properties
 
 If you need to inspect event listeners, style properties, or custom data attributes on a DOM node, use `console.dir()`. The HTML representation from `console.log()` is easier to read visually, but the object view from `console.dir()` exposes the full API surface.
 
-Debugging Commands
+## Debugging Commands
 
 console.assert()
 
@@ -163,7 +163,7 @@ fetchUsers().then(users => {
 
 This gives you independent measurements for each phase without the timers interfering with each other.
 
-The debugger Statement
+## The debugger Statement
 
 The most direct way to pause execution is the `debugger` statement, which triggers a breakpoint when DevTools is open:
 
@@ -177,9 +177,9 @@ function processPayment(amount, currency) {
 
 When execution hits `debugger`, the Sources panel opens automatically and you can step through code, inspect variable values, and evaluate expressions in the console while execution is paused. This is more reliable than a conditional `console.log()` for diagnosing issues that only appear with specific inputs.
 
-Advanced Console Techniques
+## Advanced Console Techniques
 
-Grouping Output
+## Grouping Output
 
 Organize related console output with collapsible groups:
 
@@ -208,7 +208,7 @@ console.log('Timestamp:', new Date().toISOString());
 console.groupEnd();
 ```
 
-String Substitution
+## String Substitution
 
 Insert variables into console output using format specifiers:
 
@@ -229,7 +229,7 @@ The available format specifiers are:
 - `%O`. object (formatted with JSON-style display)
 - `%c`. CSS styling (apply the next argument as CSS)
 
-Styling Console Output
+## Styling Console Output
 
 Add CSS styling to make important messages stand out in a busy console:
 
@@ -245,7 +245,7 @@ console.log(
 
 This technique is most useful in development frameworks and libraries that want their internal messages visually distinct from application code. You can also use it to make your own debug logs easier to spot in a long console output.
 
-Console Utilities
+## Console Utilities
 
 $ and $$ Selectors
 
@@ -313,9 +313,9 @@ calculateTotal([{price: 10}, {price: 20}]);
 
 Use `unmonitor(calculateTotal)` to stop tracking. This is useful when you suspect a function is being called with unexpected arguments but don't want to modify the source code to add logging.
 
-Practical Debugging Workflows
+## Practical Debugging Workflows
 
-Inspecting Network Response Data
+## Inspecting Network Response Data
 
 Combine the console with the Network panel for a powerful debugging loop:
 
@@ -327,7 +327,7 @@ Combine the console with the Network panel for a powerful debugging loop:
 
 This workflow lets you analyze API responses with the full power of JavaScript without building throwaway test scripts.
 
-Live Expression
+## Live Expression
 
 Instead of repeatedly logging a value, use the Live Expression feature (the eye icon in the console toolbar) to pin an expression that continuously updates:
 
@@ -340,7 +340,7 @@ performance.now()
 
 Live expressions re-evaluate every 250ms and display the current value inline. This is particularly useful for debugging scroll handlers, focus management, or animation timing.
 
-Conditional Breakpoints via Console
+## Conditional Breakpoints via Console
 
 Set breakpoints programmatically when you identify problematic conditions:
 
@@ -355,7 +355,7 @@ function processItem(item) {
 
 You can also set conditional breakpoints in the Sources panel by right-clicking a line number and choosing "Add conditional breakpoint." Type any JavaScript expression; execution only pauses when the expression evaluates to true.
 
-Clearing the Console
+## Clearing the Console
 
 Keep output clean during long debugging sessions:
 
@@ -365,7 +365,7 @@ console.clear();  // Clears all previous output
 
 You can also press `Ctrl+L` (or `Cmd+K` on Mac) to clear without touching the keyboard shortcut. If you want to prevent `console.clear()` from working (for example, to preserve logs added by browser extensions), check "Preserve log" in the console settings.
 
-Quick Reference: Console Command Summary
+## Quick Reference: Console Command Summary
 
 | Command | Purpose | When to Use |
 |---------|---------|-------------|

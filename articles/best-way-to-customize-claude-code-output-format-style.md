@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Best Way to Customize Claude Code Output Format Style
 
 Customizing Claude Code's output format and style allows you to get consistent, predictable responses that match your team's coding standards and preferences. Whether you need concise bullet points, detailed technical documentation, or specific code formatting, mastering output customization significantly improves your development workflow efficiency. This guide covers every layer of the customization stack: CLAUDE.md configuration, skill metadata, prompt engineering patterns, and machine-parseable output structures.
 
-Understanding Claude Code Output Customization
+## Understanding Claude Code Output Customization
 
 Claude Code generates responses based on multiple input factors: your current prompt, the active skill configuration, project context from CLAUDE.md files, and any loaded skills. While you cannot directly control the underlying LLM's response generation, you can influence the format and style through strategic configuration at each of these layers.
 
@@ -32,7 +31,7 @@ The key customization mechanisms include:
 
 Understanding which layer to use for a given need prevents over-engineering. If a preference applies to every task in a repository, it belongs in CLAUDE.md. If it only applies to a specific workflow (like generating API docs), it belongs in a skill. If it only applies to one request, put it in the prompt.
 
-Customization Layer Comparison
+## Customization Layer Comparison
 
 | Layer | Scope | Persistence | Best For |
 |---|---|---|---|
@@ -42,11 +41,11 @@ Customization Layer Comparison
 | Prompt instructions | Single request | None | One-off formatting |
 | Output parsing config | Automated workflows | Configuration file | CI/CD integration |
 
-Configuring Output Style Through CLAUDE.md
+## Configuring Output Style Through CLAUDE.md
 
 The CLAUDE.md file in your project root serves as the primary customization point. This file influences how Claude Code formats its responses when working within your project directory. Claude Code reads this file automatically at session start, so preferences set here require no repetition in individual prompts.
 
-Setting Response Format Preferences
+## Setting Response Format Preferences
 
 Add a dedicated output preferences section to your CLAUDE.md file:
 
@@ -72,7 +71,7 @@ Documentation
 - Provide migration guides for breaking changes
 ```
 
-Defining Code Style Rules
+## Defining Code Style Rules
 
 Specify exact formatting rules to ensure Claude Code generates consistent code:
 
@@ -97,7 +96,7 @@ General
 - Add type annotations to function parameters
 ```
 
-Scoping CLAUDE.md to Subdirectories
+## Scoping CLAUDE.md to Subdirectories
 
 For monorepos or projects with distinct sub-packages, place additional CLAUDE.md files in subdirectories. Claude Code merges the rules from all CLAUDE.md files in the path from the repo root to the current working file, with deeper files taking precedence on conflicts.
 
@@ -118,7 +117,7 @@ Error Handling
 
 This keeps API-specific rules from cluttering the root CLAUDE.md that applies to the entire codebase.
 
-What NOT to Put in CLAUDE.md
+## What NOT to Put in CLAUDE.md
 
 CLAUDE.md is read by Claude Code on every session start, so bloated files slow things down and dilute signal. Avoid:
 
@@ -127,11 +126,11 @@ CLAUDE.md is read by Claude Code on every session start, so bloated files slow t
 - Preferences that change frequently (you will forget to update CLAUDE.md)
 - Sensitive values like API keys or environment-specific URLs
 
-Customizing Output Through Skill Configuration
+## Customizing Output Through Skill Configuration
 
 Skills provide another powerful customization layer. When you load a skill, its metadata and prompt templates influence how Claude Code responds. Skills are the right choice when you have a repeatable workflow that needs a specific output shape every time.
 
-Skill YAML Metadata
+## Skill YAML Metadata
 
 A skill definition lives in a YAML file. The description and prompt fields shape how Claude Code interprets requests made under that skill:
 
@@ -154,7 +153,7 @@ system_prompt: |
 
 The `system_prompt` field is the most powerful customization tool in a skill. It sets the behavioral context for every response generated while the skill is active, without requiring you to repeat instructions in each prompt.
 
-Creating Output Templates
+## Creating Output Templates
 
 Define response templates within skills for predictable output structures. Because this is inside a skill YAML and not rendered by Jekyll, placeholder notation using double-braces is fine in that context. In practice, you would replace the placeholders with actual content when invoking the skill:
 
@@ -203,11 +202,11 @@ curl -X POST https://api.example.com/users/register \
 
 Having this template defined in a skill means every engineer on the team generates documentation in the same format. regardless of individual habits or prompt phrasing.
 
-Prompt Engineering for Output Control
+## Prompt Engineering for Output Control
 
 Sometimes the most effective approach is direct prompt instructions. Include formatting guidelines directly in your prompts for immediate results without touching any configuration files.
 
-Structured Prompt Example
+## Structured Prompt Example
 
 ```
 Generate a React component with the following output format:
@@ -223,7 +222,7 @@ Component: A date range picker that supports disabled dates.
 
 The explicit numbered list tells Claude Code exactly what sections to produce and in what order. This is much more reliable than "write a React component with docs."
 
-Chain-of-Thought Formatting
+## Chain-of-Thought Formatting
 
 For debugging or code review tasks, requesting a structured analysis produces consistently organized output:
 
@@ -249,7 +248,7 @@ Code to analyze:
 
 This structure works well for async review workflows where output gets pasted into tickets or pull request comments. the consistent headings make it easy to skim.
 
-Controlling Response Length
+## Controlling Response Length
 
 Claude Code will match the implied level of detail in your request. Use these patterns to control verbosity:
 
@@ -263,11 +262,11 @@ Claude Code will match the implied level of detail in your request. Use these pa
 
 For team workflows, standardize on one or two patterns rather than letting everyone use different phrasing. it makes output more predictable when reviewing AI-generated content in PRs.
 
-Advanced: Programmatic Output Parsing
+## Advanced: Programmatic Output Parsing
 
 For automated workflows, you can structure outputs to be machine-parseable. This is most useful in CI/CD pipelines where Claude Code runs as a step and downstream tooling needs to extract specific fields.
 
-Delimited Output Format
+## Delimited Output Format
 
 Instruct Claude Code to wrap structured output in consistent delimiters:
 
@@ -289,7 +288,7 @@ OUTPUT_END
 
 A simple script can then extract these blocks and convert them to JSON, GitHub annotations, or Jira tickets.
 
-JSON Output for API Integrations
+## JSON Output for API Integrations
 
 When Claude Code output feeds directly into an API call or database insert, request JSON explicitly:
 
@@ -309,7 +308,7 @@ Return only the JSON array, no prose.
 
 Requesting "only the JSON array, no prose" is important. without it, Claude Code may wrap the JSON in markdown code fences or add an explanation paragraph, both of which break JSON.parse().
 
-Best Practices for Output Customization
+## Best Practices for Output Customization
 
 Start with CLAUDE.md configurations for project-wide consistency. Use skill-level settings for specialized workflows. Combine both approaches for comprehensive control. Review and refine your configurations based on actual usage patterns.
 
@@ -319,7 +318,7 @@ Test configurations with simple requests before applying to complex tasks. Run a
 
 Document your output preferences so team members understand the expected format. A brief comment in CLAUDE.md explaining *why* a rule exists. not just what it is. helps future contributors decide whether a rule still applies when the codebase evolves.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Claude Code ignores my CLAUDE.md settings. Verify the file is in the project root directory that Claude Code was launched from. CLAUDE.md in a parent directory is not automatically read unless you launch Claude Code from that directory.
 
@@ -329,13 +328,12 @@ Skill templates produce unexpected output. Check whether your skill YAML has ind
 
 JSON output includes markdown fences. Add "Return only raw JSON, no markdown formatting, no code fences" to your prompt. Some model versions are more likely to wrap JSON in fences by default.
 
-Conclusion
+## Conclusion
 
 Customizing Claude Code's output format and style is essential for productive human-AI collaboration in team settings. By configuring CLAUDE.md files, defining skill metadata with system prompts, and using explicit prompt instructions, you can achieve consistent, predictable responses that accelerate your development workflow.
 
 The best approach combines project-level configuration with skill-specific templates, allowing you to maintain consistent standards while retaining flexibility for specialized tasks. Start with basic formatting rules in CLAUDE.md, graduate to skill definitions when you find yourself repeating the same prompt preamble, and add machine-readable output structures only when automation requires it. Refine based on what your team actually finds useful. the goal is less friction, not more configuration.
 {% endraw %}
-
 
 Related Reading
 

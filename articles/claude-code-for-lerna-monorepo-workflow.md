@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Lerna Monorepo Workflow"
 description: "Master Lerna monorepo management with Claude Code. Learn how to automate package publishing, manage dependencies, coordinate cross-package changes, and."
@@ -13,7 +12,6 @@ permalink: /claude-code-for-lerna-monorepo-workflow/
 reviewed: true
 score: 8
 ---
-
 
 {% raw %}
 Claude Code for Lerna Monorepo Workflow
@@ -31,7 +29,7 @@ When you work with Lerna monorepos, you often face challenges that Claude Code i
 
 Claude Code doesn't just execute Lerna commands, it understands your codebase's architecture and can make intelligent decisions about how to handle complex monorepo scenarios.
 
-Setting Up Claude Code for Your Lerna Project
+## Setting Up Claude Code for Your Lerna Project
 
 The first step is configuring Claude Code to understand your monorepo structure. Create a `CLAUDE.md` file in your project root that provides context about your Lerna setup:
 
@@ -49,7 +47,7 @@ We use Lerna with fixed versioning and publish to npm.
 
 This context helps Claude Code understand package relationships when making decisions about changes.
 
-Creating a Lerna Management Skill
+## Creating a Lerna Management Skill
 
 For recurring monorepo tasks, create a dedicated Claude skill. Save this as `skills/lerna-manager.md`:
 
@@ -71,9 +69,9 @@ Always confirm version bump decisions with the user before proceeding.
 
 This skill restricts tool access appropriately while providing clear guidance for monorepo operations.
 
-Practical Workflows
+## Practical Workflows
 
-Analyzing Cross-Package Dependencies
+## Analyzing Cross-Package Dependencies
 
 When you modify a package in your monorepo, you need to know which other packages might be affected. Here's how to use Claude Code for this:
 
@@ -88,7 +86,7 @@ Claude Code will:
 
 This prevents the common mistake of forgetting to update dependent packages when making breaking changes.
 
-Coordinated Version Bumping
+## Coordinated Version Bumping
 
 Lerna supports both fixed and independent versioning modes. Claude Code can help manage either approach:
 
@@ -106,7 +104,7 @@ Claude, I fixed a bug in the utils package but it's not a breaking change. Help 
 
 Claude Code will examine your changes, compare them against semantic versioning rules, and recommend whether this is a patch, minor, or major bump.
 
-Streamlined Publishing Workflow
+## Streamlined Publishing Workflow
 
 Publishing a monorepo requires careful coordination. Here's an efficient workflow with Claude Code:
 
@@ -121,7 +119,7 @@ Claude Code will:
 4. Generate appropriate version commands
 5. Guide you through the publish process step-by-step
 
-Handling Package Interdependencies
+## Handling Package Interdependencies
 
 One of the trickiest aspects of monorepos is managing when Package A depends on Package B, and both need updates. Claude Code can orchestrate these coordinated changes:
 
@@ -135,9 +133,9 @@ Claude Code will:
 3. Update dependent packages to use the new function
 4. Ensure proper peer dependency declarations if applicable
 
-Best Practices for Claude Code with Lerna
+## Best Practices for Claude Code with Lerna
 
-Use Conventional Commits
+## Use Conventional Commits
 
 Configure your team to use conventional commit messages. This allows Claude Code to automatically determine version bumps:
 
@@ -149,7 +147,7 @@ BREAKING CHANGE: formatDate() now returns ISO 8601 format
 
 Claude Code parses these messages to understand the scope and type of changes, making accurate version recommendations.
 
-Maintain Clear Package Boundaries
+## Maintain Clear Package Boundaries
 
 Help Claude Code understand your architecture by documenting package purposes and dependencies. This enables more accurate impact analysis when changes occur.
 
@@ -163,7 +161,7 @@ lerna list --scope=@myorg/ui
 lerna run build --scope=@myorg/api
 ```
 
-Implement Pre-publish Checks
+## Implement Pre-publish Checks
 
 Create a skill that runs comprehensive checks before publishing:
 
@@ -180,21 +178,21 @@ Before publishing, always:
 4. Confirm all packages have valid versions
 ```
 
-Common Scenarios and Solutions
+## Common Scenarios and Solutions
 
-Scenario: Dependent Package Version Conflicts
+## Scenario: Dependent Package Version Conflicts
 
 When Package A requires `^2.0.0` of Package B but you're developing version `2.1.0`, Claude Code can help resolve this by understanding your Lerna configuration and npm aliasing strategies.
 
-Scenario: Circular Dependencies
+## Scenario: Circular Dependencies
 
 If your monorepo develops circular dependencies, Claude Code can help identify them using tools like madge and suggest refactoring approaches.
 
-Scenario: Selective Publishing
+## Scenario: Selective Publishing
 
 For projects where not all packages should be published, Claude Code can help configure Lerna's private flag and manage selective publishing workflows.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Lerna monorepo management from a complex coordination challenge into an intuitive, assisted workflow. By understanding your package structure, analyzing dependencies, and automating repetitive tasks, Claude Code helps you focus on writing code rather than managing release logistics.
 

@@ -19,7 +19,7 @@ Dataflow analysis is a fundamental technique for understanding how data moves th
 
 This tutorial shows you how to build effective dataflow analysis workflows using Claude Code skills and patterns.
 
-Understanding Dataflow Analysis in Code
+## Understanding Dataflow Analysis in Code
 
 Dataflow analysis involves tracking how values flow through your program, from input sources through transformations to final outputs. This includes:
 
@@ -30,7 +30,7 @@ Dataflow analysis involves tracking how values flow through your program, from i
 
 Traditional static analysis tools can help, but they often require complex configuration and produce overwhelming output. Claude Code lets you build custom analysis workflows that focus on exactly what you need to know.
 
-Setting Up Your Analysis Environment
+## Setting Up Your Analysis Environment
 
 Before diving into analysis, ensure your Claude Code environment is properly configured. You'll need the core tools available:
 
@@ -62,11 +62,11 @@ You are an expert at tracing data flow through code. When asked to analyze data 
 5. Provide clear, actionable findings with code references
 ```
 
-Practical Example: Tracing a User Request
+## Practical Example: Tracing a User Request
 
 Let's walk through a real analysis scenario. Suppose you want to understand how user authentication data flows through a Flask application.
 
-Step 1: Identify Entry Points
+## Step 1: Identify Entry Points
 
 Start by finding where user input enters your system:
 
@@ -79,7 +79,7 @@ def login():
     password = data.get('password')
 ```
 
-Step 2: Trace Data Through Functions
+## Step 2: Trace Data Through Functions
 
 Ask Claude to follow the data path:
 
@@ -91,7 +91,7 @@ Claude will use its tools to:
 - Locate logging statements that might expose the value
 - Map any caching or session storage operations
 
-Step 3: Document the Flow
+## Step 3: Document the Flow
 
 Have Claude generate a diagram or table summarizing the path:
 
@@ -102,11 +102,11 @@ Have Claude generate a diagram or table summarizing the path:
 | Session | create_session() | Store user ID in session | Low |
 | Logging | log_access() | Write to access logs | High |
 
-Automating Recurring Analysis Tasks
+## Automating Recurring Analysis Tasks
 
 For tasks you perform frequently, create automated workflows that Claude can execute with a single command.
 
-Security Audit Workflow
+## Security Audit Workflow
 
 Here's a skill for finding potential data leaks:
 
@@ -139,7 +139,7 @@ Run the analysis with:
 /security-flow
 ```
 
-Performance Bottleneck Detection
+## Performance Bottleneck Detection
 
 Track expensive operations in your data flow:
 
@@ -163,7 +163,7 @@ Identify performance bottlenecks by tracing:
 For each finding, show the exact code location and estimate the impact.
 ```
 
-Building Custom Analysis Chains
+## Building Custom Analysis Chains
 
 For complex analyses, chain multiple skills together. Create a master workflow skill:
 
@@ -201,16 +201,16 @@ Phase 4: Report Generation
 Provide the final report in markdown format.
 ```
 
-Actionable Advice for Effective Analysis
+## Actionable Advice for Effective Analysis
 
-Start Small, Then Expand
+## Start Small, Then Expand
 
 Begin with focused analyses before attempting comprehensive reviews. A narrow scope produces clearer results:
 
 - Instead of "analyze all data flow," try "trace user ID from login to database"
 - Instead of "find all security issues," try "check how passwords are hashed"
 
-Use Specific Tool Restrictions
+## Use Specific Tool Restrictions
 
 Limit tool access for focused analysis skills. A skill that only needs file reading shouldn't have bash access:
 
@@ -223,7 +223,7 @@ tools: [Read, Glob, Grep]
 
 This prevents accidental modifications and makes the skill's purpose clear.
 
-Use Claude's Context Window
+## Use Claude's Context Window
 
 Modern Claude models have large context windows. Use this to your advantage:
 
@@ -231,7 +231,7 @@ Modern Claude models have large context windows. Use this to your advantage:
 - Include configuration files alongside source code
 - Add relevant documentation or architecture decisions
 
-Validate Findings with Tests
+## Validate Findings with Tests
 
 After analysis, create test cases to verify your findings:
 
@@ -246,14 +246,13 @@ def test_login_password_not_logged():
         assert 'secret123' not in str(call)
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code transforms dataflow analysis from a manual, time-consuming process into an automated, reproducible workflow. By creating dedicated skills for your common analysis patterns, you can quickly trace data through complex codebases, identify security vulnerabilities, and document architecture decisions.
 
 Start with simple, focused skills and gradually build more comprehensive analysis chains as you discover what information is most valuable for your projects.
 
 Remember: the best analysis workflow is one you'll actually use. Build skills that address your specific problems and run them regularly to catch issues early.
-
 
 Related Reading
 

@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Dependency License Audit Workflow"
 description: "Learn how to use Claude Code to automate dependency license audits in your projects. Practical examples and actionable advice for maintaining license."
@@ -14,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Dependency License Audit Workflow
 
@@ -26,7 +24,7 @@ Manual license audits are time-consuming and error-prone. As projects grow to in
 
 Claude Code excels at this task because it can read files, execute commands, analyze output, and make decisions based on collected information. It can traverse your dependency trees, cross-reference licenses against your approved list, identify risky combinations, and generate comprehensive reports.
 
-Setting Up Your Audit Foundation
+## Setting Up Your Audit Foundation
 
 Before diving into automation, establish your baseline. Create a license policy file that defines which licenses are approved, which require review, and which are prohibited in your project. This file becomes the reference point for all audit decisions.
 
@@ -41,7 +39,7 @@ Prohibited: GPL-2.0, CC0-1.0, Unlicense (depends on project)
 
 Store this in your repository as `LICENSE_POLICY.md` or `.license-policy.json`. Claude Code will reference this document throughout the audit process.
 
-Automated Dependency Discovery
+## Automated Dependency Discovery
 
 The first step in any license audit is identifying what you're actually using. Most package managers provide commands to list dependencies with their versions. Claude Code can execute these commands and parse the output systematically.
 
@@ -49,7 +47,7 @@ For Node.js projects, start with `npm ls` to see your dependency tree. For Pytho
 
 Claude Code can run these commands and capture the full output for analysis. It can also detect which dependencies have newer versions available and flag potential security vulnerabilities alongside license issues.
 
-License Extraction and Normalization
+## License Extraction and Normalization
 
 Once you have your dependency list, the next challenge is determining each package's license. This task sounds simple but has several complications. Packages may not declare licenses consistently, may use multiple licenses, or may have licenses that require interpretation.
 
@@ -57,7 +55,7 @@ Many package ecosystems support license metadata through their registries. npm p
 
 For packages where metadata is unavailable or unclear, you'll need to examine the actual license files. Look for `LICENSE`, `LICENSE.md`, `COPYING`, or similar files in the package distribution. Claude Code can automate this by downloading packages and inspecting their contents when metadata is insufficient.
 
-Risk Assessment and Flagging
+## Risk Assessment and Flagging
 
 With license information gathered, Claude Code compares each dependency against your policy. It categorizes dependencies by their license status and flags items requiring attention. This is where having clear policy definitions pays off.
 
@@ -69,43 +67,43 @@ Create a systematic classification:
 
 Claude Code generates reports that identify specific dependencies causing issues, the licenses involved, and suggested next steps. This output formats easily for consumption by other tools or team members.
 
-Practical Workflow Integration
+## Practical Workflow Integration
 
 Integrating license audits into your development workflow prevents technical debt from accumulating. Several integration points work particularly well.
 
-Pre-Commit Checks
+## Pre-Commit Checks
 
 Run license audits before code merges. A pre-commit hook can execute a lightweight version of your audit, flagging new dependencies that introduce license concerns. This catches issues early when they're easiest to address.
 
 Claude Code can be invoked in CI pipelines to perform comprehensive audits on pull requests. The audit results become part of the review process, ensuring license compliance receives explicit attention.
 
-Continuous Monitoring
+## Continuous Monitoring
 
 Schedule regular audits rather than only checking during new dependency additions. Licenses can change between versions, a package you added months ago might have switched licenses in an update. Scheduled audits catch these changes.
 
 A weekly or bi-weekly audit that compares current dependency states against your policy catches drift early. Claude Code can automate this by running on a schedule and alerting team members when policy violations appear.
 
-Release Preparation
+## Release Preparation
 
 Before releases, perform thorough audits that generate documentation suitable for legal review. Many commercial products require license attribution documentation. Generating this automatically saves significant manual effort and ensures completeness.
 
-Handling Complex Scenarios
+## Handling Complex Scenarios
 
 Real-world projects often encounter situations beyond simple license matching.
 
-Multi-Licensed Packages
+## Multi-Licensed Packages
 
 Some projects distribute under multiple licenses, allowing you to choose. When this occurs, document which license you're using and ensure it meets your policy requirements. Claude Code can note these selections and include them in your audit documentation.
 
-License Change Detection
+## License Change Detection
 
 When dependencies change licenses between versions, you need to decide whether to upgrade, stay on an older version, or find alternatives. Claude Code can track version histories and license changes, helping you make informed decisions about dependency updates.
 
-License Compatibility
+## License Compatibility
 
 Some licenses have compatibility issues with others. The GPL family, for instance, has complex relationships with other licenses. If your project combines GPL-licensed code with proprietary components, you may have obligations about source code disclosure. Claude Code can flag potential compatibility concerns for legal review.
 
-Building Reusable Audit Scripts
+## Building Reusable Audit Scripts
 
 Rather than running ad-hoc audits, create repeatable scripts that Claude Code can execute. These scripts encapsulate your audit logic, making it consistent across projects and team members.
 
@@ -119,7 +117,7 @@ A solid audit script performs these steps:
 
 Claude Code's ability to use tools like file operations, bash commands, and web research makes building such scripts straightforward. Once created, these scripts become part of your project's infrastructure.
 
-Conclusion
+## Conclusion
 
 License compliance doesn't have to be a manual burden. Claude Code's capabilities make it well-suited for automating dependency license audits, from initial discovery through ongoing monitoring. By establishing clear policies, creating repeatable processes, and integrating audits into your workflow, you maintain compliance without sacrificing development velocity.
 

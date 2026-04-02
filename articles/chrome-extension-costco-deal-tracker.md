@@ -16,13 +16,13 @@ tags: [claude-code, claude-skills]
 {% raw %}
 Chrome extension Costco deal trackers represent a practical category of shopping automation tools that help users monitor price changes, detect deals, and get notified when items drop to target prices. For developers and power users, building your own Costco deal tracker extension provides full control over notification preferences, tracking logic, and data storage without relying on third-party services.
 
-Understanding Costco Deal Tracking Challenges
+## Understanding Costco Deal Tracking Challenges
 
 Costco's website presents specific challenges for deal tracking. Unlike Amazon or Walmart, Costco doesn't provide a public API for price data. The site uses dynamic content loading, and product pages contain pricing information that changes based on membership tier, location, and inventory status. This means your extension needs to handle JavaScript-rendered content and parse pricing from the page itself.
 
 Additionally, Costco products often have multiple price points: the current price, the member price, and potential instant rebates. A solid tracker must capture all these variations and correctly identify which represents the best deal.
 
-Extension Architecture
+## Extension Architecture
 
 A functional Costco deal tracker extension consists of several components working together. The background script handles scheduled polling and notifications, the content script extracts product data from pages, and the popup provides a user interface for managing tracked items.
 
@@ -49,7 +49,7 @@ Here's the manifest configuration for Manifest V3:
 
 The extension requests activeTab permission to read page content when you're viewing a product, storage permission to save tracked items locally, and notifications to alert you of price drops.
 
-Extracting Product Data
+## Extracting Product Data
 
 The content script runs on Costco product pages and extracts relevant pricing information. Here's a practical implementation:
 
@@ -94,7 +94,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This script parses the page DOM to extract pricing. Note that Costco's site structure may change, so you should test selectors against actual product pages and consider using more solid selector strategies for production.
 
-Managing Tracked Items
+## Managing Tracked Items
 
 Store tracked items using Chrome's storage API. Each tracked item should include the product URL, target price, and price history:
 
@@ -124,7 +124,7 @@ async function addTrackItem(productData, targetPrice) {
 
 The price history array enables you to show users price trends over time, which is valuable for determining whether a current price represents a genuine deal.
 
-Implementing Price Checking
+## Implementing Price Checking
 
 Background scripts can run periodically to check prices on tracked items. However, directly scraping Costco from a background script often fails due to anti-bot measures. A more reliable approach uses the activeTab permission to trigger checks when the user visits a product page:
 
@@ -186,7 +186,7 @@ function sendNotification(item, newPrice) {
 
 This approach checks prices whenever you visit a tracked product page, avoiding the need for background polling that might trigger rate limiting.
 
-Handling Multiple Price Points
+## Handling Multiple Price Points
 
 Costco products frequently display multiple prices. Your extension should track the lowest available price and notify users accordingly:
 
@@ -208,7 +208,7 @@ function getBestPrice(productData) {
 }
 ```
 
-Building the Popup Interface
+## Building the Popup Interface
 
 The popup provides users with a simple interface to view and manage tracked items:
 
@@ -272,12 +272,11 @@ async function loadTrackedItems() {
 loadTrackedItems();
 ```
 
-Practical Considerations
+## Practical Considerations
 
 When deploying your Costco deal tracker, consider these practical aspects. First, Costco's page structure changes periodically, so build in selector flexibility and include error handling for missing elements. Second, respect rate limits by not checking prices too frequently. The approach shown here, checking when users visit pages, is both efficient and respectful. Third, consider adding local storage encryption for sensitive data if you expand beyond simple price tracking.
 
 For developers looking to extend this functionality, adding price history visualization, CSV export for price data, or integration with external notification services like Pushover or Discord webhooks provides additional value without significant complexity.
-
 
 Related Reading
 

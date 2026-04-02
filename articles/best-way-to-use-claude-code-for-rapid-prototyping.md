@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Best Way to Use Claude Code for Rapid Prototyping
-
 Rapid prototyping is where Claude Code genuinely shines. Unlike traditional development workflows that require manual scaffolding, repetitive boilerplate, and context-switching between tools, Claude Code acts as an intelligent partner that understands your intent and builds toward it iteratively. The key lies in knowing how to use its capabilities strategically.
 
-Setting Up Your Prototyping Environment
+## Setting Up Your Prototyping Environment
 
 Before diving into code generation, establish a clear project context. Create a `CLAUDE.md` file in your project root that defines the technology stack, coding standards, and project structure. This file serves as the foundation for all subsequent interactions and ensures Claude Code generates consistent, aligned code.
 
@@ -33,7 +30,7 @@ Project Context
 
 With this context established, every code generation request starts from a position of understanding. Claude Code reads this file automatically at the start of each conversation, eliminating the need to repeat setup details.
 
-Choosing the Right Skills for Prototyping
+## Choosing the Right Skills for Prototyping
 
 Claude skills dramatically improve prototyping speed by providing domain-specific knowledge. For rapid prototyping, several skills prove particularly valuable.
 
@@ -45,7 +42,7 @@ The tdd skill transforms your prototyping workflow by writing tests alongside co
 
 The supermemory skill maintains context across prototyping sessions. When you return to a project days or weeks later, it provides relevant history without requiring you to re-explain decisions or rediscover implementation details.
 
-Effective Prompting Patterns for Prototypes
+## Effective Prompting Patterns for Prototypes
 
 The difference between a productive prototyping session and a frustrating one often comes down to how you communicate with Claude Code. Successful prototyping follows a pattern of progressive refinement.
 
@@ -66,7 +63,7 @@ lockout mechanism after 5 failed attempts.
 
 This progressive approach produces better results because each iteration gives you visibility into the code quality and architectural decisions before committing to a direction.
 
-Handling Dependencies and Setup
+## Handling Dependencies and Setup
 
 One of the biggest time sinks in rapid prototyping is environment setup. Claude Code excels at managing this complexity when you provide clear context about your stack.
 
@@ -85,7 +82,7 @@ file upload component in React? List only the essential
 dependencies with their versions.
 ```
 
-Building Interactive Prototypes Faster
+## Building Interactive Prototypes Faster
 
 Interactive prototypes require state management, event handling, and user feedback loops. Claude Code handles these patterns efficiently when you describe the behavior rather than the implementation.
 
@@ -113,7 +110,7 @@ Create a mock API layer that simulates async responses
 with 500ms delay for a todo list with CRUD operations
 ```
 
-Testing Your Prototype
+## Testing Your Prototype
 
 Prototypes often bypass testing for speed, but this creates technical debt that slows future development. The tdd skill makes test-first prototyping practical.
 
@@ -128,7 +125,7 @@ strong passwords over 12 characters with all character types
 
 This produces both the implementation and the verification suite in a single pass, ensuring your prototype is immediately ready for refinement.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Several patterns undermine prototyping productivity. Avoid requesting entire features in single prompts, break large implementations into smaller, verifiable chunks. This gives you checkpoints to validate direction before investing in incorrect implementations.
 
@@ -136,7 +133,7 @@ Resist the temptation to accept the first code generation. Review the output, id
 
 Finally, don't skip the context setup. The few minutes spent writing a comprehensive `CLAUDE.md` file saves hours of repeated explanations and misaligned code generation.
 
-Putting It All Together
+## Putting It All Together
 
 Effective rapid prototyping with Claude Code follows a workflow: establish context through `CLAUDE.md`, select relevant skills for your domain, use progressive refinement in your prompts, and maintain quality through built-in testing capabilities. The combination of clear context, iterative refinement, and strategic skill usage transforms Claude Code from a code generator into a genuine prototyping partner.
 

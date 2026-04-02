@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for OpenSea Protocol Workflow Guide
 
 The OpenSea Protocol is the backbone of NFT trading on Ethereum and other EVM-compatible chains. As a developer, you can use Claude Code to automate nearly every aspect of NFT collection management, from minting to royalty distribution. This guide walks you through practical workflows for integrating Claude Code with OpenSea's APIs and smart contracts.
 
-Understanding the OpenSea Protocol Architecture
+## Understanding the OpenSea Protocol Architecture
 
 The OpenSea Protocol operates through a layered architecture that combines off-chain indexing with on-chain settlement. At its core, you'll interact with:
 
@@ -29,7 +28,7 @@ The OpenSea Protocol operates through a layered architecture that combines off-c
 
 Claude Code can interact with all three layers, but the most practical workflows involve the OpenSea API for data operations and direct contract calls for on-chain actions.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before building workflows, ensure you have the necessary tooling configured:
 
@@ -60,7 +59,7 @@ When working with contracts, always verify network (mainnet/testnet) before exec
 EOF
 ```
 
-Practical Workflow: Collection Floor Price Monitor
+## Practical Workflow: Collection Floor Price Monitor
 
 One of the most useful automation tasks is monitoring collection floor prices. Here's how to build this with Claude Code:
 
@@ -88,7 +87,7 @@ async function getCollectionStats(collectionSlug) {
 
 This script demonstrates how Claude Code can execute JavaScript to fetch real-time collection data. The workflow is particularly useful when integrated with scheduled checks or Slack notifications.
 
-Creating and Fulfilling Orders
+## Creating and Fulfilling Orders
 
 The OpenSea order workflow involves creating a signed order and then fulfilling it. Here's the complete process:
 
@@ -129,7 +128,7 @@ Key Workflow Tips:
 - Use `makeAssetSchema` for ERC-1155 tokens
 - Check gas costs before submitting high-value orders
 
-Managing NFT Metadata and Minting
+## Managing NFT Metadata and Minting
 
 OpenSea relies on metadata standards for displaying NFT attributes. Claude Code can help standardize your collection's metadata:
 
@@ -173,7 +172,7 @@ curl -X POST "https://api.pinata.cloud/pinning/pinJSONToIPFS" \
   -d @metadata.json
 ```
 
-Royalty and Analytics Workflows
+## Royalty and Analytics Workflows
 
 OpenSea provides built-in royalty enforcement for ERC-1155C tokens. Here's how to query royalty information:
 
@@ -215,7 +214,7 @@ async function getCollectionAnalytics(collectionSlug) {
 }
 ```
 
-Best Practices for Claude Code Integration
+## Best Practices for Claude Code Integration
 
 When integrating Claude Code with OpenSea workflows, follow these actionable guidelines:
 
@@ -245,7 +244,7 @@ async function withRetry(fn, maxRetries = 3) {
 
 5. Error Handling: Implement comprehensive error handling for network failures, expired orders, and gas spikes.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms OpenSea protocol development from manual CLI work into automated, intelligent workflows. By combining Claude's task execution with OpenSea's API and smart contracts, you can build sophisticated NFT marketplace tools, from floor price monitors to automated trading bots.
 

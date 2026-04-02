@@ -16,7 +16,7 @@ permalink: /claude-code-extended-thinking-skills-integration-guide/
 
 Claude Code's [extended thinking](/claude-opus-orchestrator-sonnet-worker-architecture/) mode lets the model reason through complex, multi-step problems using a longer internal chain of thought. Skills extend that capability by providing domain-specific context and workflows. This guide shows how to combine skills effectively for complex problem-solving.
 
-What Extended Thinking Adds
+## What Extended Thinking Adds
 
 [When you enable extended thinking in Claude Code, Claude spends more tokens reasoning before responding](/best-claude-code-skills-to-install-first-2026/) This is most useful for:
 
@@ -26,7 +26,7 @@ What Extended Thinking Adds
 
 [Skills complement extended thinking by providing the domain context Claude needs to reason well](/claude-skill-md-format-complete-specification-guide/), persistent memory, structured document data, and systematic workflows.
 
-Using /supermemory for Persistent Context
+## Using /supermemory for Persistent Context
 
 One limitation of extended thinking is that each session starts fresh. The `/supermemory` skill addresses this by giving Claude a way to store and retrieve project context across sessions.
 
@@ -52,7 +52,7 @@ Recall project-architecture-2026
 
 This is valuable on multi-week projects where re-explaining context each session would consume most of your context window before the actual reasoning begins.
 
-Using /tdd for Systematic Problem Decomposition
+## Using /tdd for Systematic Problem Decomposition
 
 The `/tdd` skill applies test-driven thinking to problem-solving. It guides Claude to break a complex feature into verifiable conditions before writing any implementation.
 
@@ -75,7 +75,7 @@ describe('Authentication flow', () => {
 
 This systematic decomposition makes extended reasoning more tractable, each test case becomes a checkpoint Claude works toward.
 
-Working with Documents Using /pdf and /xlsx
+## Working with Documents Using /pdf and /xlsx
 
 /pdf for Technical Specifications
 
@@ -99,7 +99,7 @@ Open project-metrics.xlsx, sheet "Budget 2026". Calculate whether Q1 expenses ar
 
 Claude processes the spreadsheet data and reasons about it, useful for business decisions that depend on tabular data without needing a separate analysis tool.
 
-Using /frontend-design and /canvas-design
+## Using /frontend-design and /canvas-design
 
 /frontend-design for UI Architecture
 
@@ -123,7 +123,7 @@ Create a flowchart for the user authentication decision logic: check credentials
 
 Visual artifacts make abstract logic concrete and easier to validate before implementation.
 
-Combining Skills in a Session
+## Combining Skills in a Session
 
 You can activate multiple skills in a single session. A research and analysis workflow might look like this:
 
@@ -140,7 +140,7 @@ Based on those requirements, write test cases for the three new endpoints
 
 Each skill is invoked with its own slash command. Skills do not call each other programmatically, they shape Claude's behavior for each step of your workflow.
 
-Skill Loading Order
+## Skill Loading Order
 
 When combining multiple skills, activate them in an order that mirrors your workflow:
 
@@ -151,7 +151,7 @@ When combining multiple skills, activate them in an order that mirrors your work
 
 This sequence ensures each skill's output feeds naturally into the next step.
 
-Avoiding Context Overload
+## Avoiding Context Overload
 
 Extended thinking uses more tokens, and large documents make this worse. When using `/pdf` or `/xlsx`, ask Claude to extract only what you need rather than summarizing the entire document:
 
@@ -162,7 +162,7 @@ From api-specification-v2.pdf, extract only the definitions of the five endpoint
 
 Focused extraction keeps the context window available for Claude's reasoning rather than raw document text.
 
-Storing Reasoning State with /supermemory
+## Storing Reasoning State with /supermemory
 
 If a complex reasoning session spans multiple days, save your progress before ending:
 
@@ -173,7 +173,7 @@ Store: auth-refactor-session-state = reviewed existing tests (passing), identifi
 
 When you return, that stored state gets Claude oriented immediately without replaying the full session.
 
-Creating Custom Skill Combinations
+## Creating Custom Skill Combinations
 
 Skills are Markdown files in `~/.claude/skills/`. You can write a custom skill that documents a specific multi-step workflow, giving Claude clear instructions for repeating a complex process. Use `/skill-creator` to scaffold a new skill:
 
@@ -184,7 +184,7 @@ Create a skill called research-pipeline that: 1) retrieves stored project contex
 
 Claude generates a `research-pipeline.md` file you can save to `~/.claude/skills/` and invoke with `/research-pipeline`.
 
-Conclusion
+## Conclusion
 
 Extended thinking and Claude skills work best together when skills provide the context and structure that makes long reasoning chains tractable. Use `/supermemory` to persist context across sessions, `/tdd` to decompose problems systematically, `/pdf` and `/xlsx` to incorporate document data, and `/frontend-design` or `/canvas-design` for visual clarity. Each skill is invoked with a slash command and shapes how Claude reasons during that step of your workflow.
 
@@ -195,6 +195,5 @@ Related Reading
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Top frontend skills with examples
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Broader developer skill overview
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

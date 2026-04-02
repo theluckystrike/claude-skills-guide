@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Building a CLI DevTool with Claude Code: A Practical."
 description: "Learn how to build a powerful command-line development tool using Claude Code. This guide covers project setup, skill integration, automation, and."
@@ -14,18 +13,17 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-Building a CLI DevTool with Claude Code: A Practical Walkthrough
+## Building a CLI DevTool with Claude Code: A Practical Walkthrough
 
 Command-line tools remain the backbone of efficient development workflows. Building a custom CLI devtool with Claude Code transforms how you interact with your projects, automating repetitive tasks and providing intelligent assistance directly in your terminal. This walkthrough shows you how to create a production-ready CLI tool powered by Claude Code.
 
-Why Build a CLI DevTool with Claude Code
+## Why Build a CLI DevTool with Claude Code
 
 Modern development involves juggling multiple tools, configurations, and workflows. A well-designed CLI devtool centralizes your development tasks, making them accessible through simple commands. When you embed Claude Code capabilities into your CLI, you gain natural language processing, context awareness, and the ability to chain complex operations together.
 
 The real advantage comes from combining your CLI's domain-specific knowledge with Claude Code's reasoning capabilities. Whether you need to analyze codebases, generate tests, or manage project resources, a custom CLI tool amplified by Claude Code becomes significantly more powerful than standalone solutions.
 
-Setting Up Your CLI Project Structure
+## Setting Up Your CLI Project Structure
 
 Start by creating a new project directory with a clear structure. A typical CLI devtool includes a main entry point, command handlers, and configuration files.
 
@@ -52,7 +50,7 @@ cli.js
 
 Your main CLI entry point should handle argument parsing and delegate to appropriate command handlers. Using a library like `yargs` simplifies this process significantly.
 
-Integrating Claude Code into Your CLI
+## Integrating Claude Code into Your CLI
 
 The core of your CLI devtool involves communicating with Claude Code. You can either use the Claude Code CLI directly or integrate via the official SDK. For a CLI tool, invoking the `claude` command with appropriate prompts provides the most flexibility.
 
@@ -98,7 +96,7 @@ module.exports = ClaudeClient;
 
 This basic client provides the foundation for sending prompts to Claude Code and receiving responses. You can expand it to handle streaming responses, tool use, and multi-step workflows.
 
-Building Your First Command
+## Building Your First Command
 
 Now create a command that uses Claude Code for code analysis. This demonstrates how to combine your CLI logic with Claude's capabilities.
 
@@ -140,7 +138,7 @@ function getSourceFiles(dir) {
 module.exports = analyzeCommand;
 ```
 
-Leveraging Claude Skills in Your CLI
+## Leveraging Claude Skills in Your CLI
 
 Claude Code's skill system extends your CLI's capabilities without additional code. Skills like `tdd` automate test-driven development, while `frontend-design` provides UI/UX guidance directly in your workflow.
 
@@ -162,7 +160,7 @@ async function runTddCommand(argv) {
 
 Other valuable skills to incorporate include `pdf` for document generation, `supermemory` for project-specific context, and `template-skill` for scaffolding new components. Each skill adds specialized capabilities to your CLI without requiring you to implement the logic yourself.
 
-Automating Complex Workflows
+## Automating Complex Workflows
 
 One of the most powerful features of combining CLI tools with Claude Code is workflow automation. Chain multiple operations together to handle complex tasks with single commands.
 
@@ -193,7 +191,7 @@ async function fullStackGenerateCommand(argv) {
 
 This approach works particularly well for scaffolding new features, performing code reviews across your entire codebase, or generating documentation automatically.
 
-Configuration and Persistence
+## Configuration and Persistence
 
 Add configuration management to make your CLI tool user-friendly. Store user preferences, project settings, and context using a simple JSON or YAML configuration file.
 
@@ -219,7 +217,7 @@ function getConfig() {
 module.exports = { getConfig };
 ```
 
-Best Practices for CLI DevTool Development
+## Best Practices for CLI DevTool Development
 
 When building CLI tools with Claude Code integration, follow these practices for maintainable and reliable tools.
 
@@ -231,12 +229,11 @@ Use streaming for long responses. Claude Code supports streaming output, which k
 
 Test your CLI thoroughly. Use the `tdd` skill to generate comprehensive test suites that cover edge cases and error conditions.
 
-Conclusion
+## Conclusion
 
 Building a CLI devtool with Claude Code unlocks powerful automation possibilities for your development workflow. By combining structured CLI commands with Claude's natural language capabilities, you create tools that understand your codebase and assist with complex tasks intelligently.
 
 Start with simple commands and gradually add more sophisticated features. The skill system provides ready-made capabilities you can integrate immediately, while the flexible prompt-based interface allows for completely custom functionality. Your CLI devtool becomes more valuable over time as you tailor it to your specific needs and workflows.
-
 
 Related Reading
 

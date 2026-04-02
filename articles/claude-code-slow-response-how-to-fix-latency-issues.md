@@ -16,7 +16,7 @@ permalink: /claude-code-slow-response-how-to-fix-latency-issues/
 
 When Claude Code responds slowly, it disrupts your development workflow and kills productivity. This guide covers practical solutions for diagnosing and fixing latency issues in Claude Code, from skill configuration to context management. For related optimization strategies at the skill file level, see [Claude MD too long: context window optimization](/claude-md-too-long-context-window-optimization/).
 
-Common Causes of Slow Responses
+## Common Causes of Slow Responses
 
 Claude Code latency typically stems from a few key areas. Understanding these causes helps you apply the right fix.
 
@@ -32,7 +32,7 @@ CLAUDE.md file size is frequently underestimated as a performance factor. Claude
 
 Understanding which of these factors is actually hurting you is the first step. A developer on a fast connection whose session just started and is still slow has a different problem than someone who's been in the same session for three hours.
 
-Quick Diagnosis Checklist
+## Quick Diagnosis Checklist
 
 Before diving into fixes, run through this checklist to identify your specific bottleneck:
 
@@ -44,7 +44,7 @@ Before diving into fixes, run through this checklist to identify your specific b
 | Slow regardless of session state | Network or service issue | Check connection, verify status page |
 | Slow with specific skill active | Skill instruction overhead | Deactivate or trim that skill |
 
-Optimizing Your Skill Configuration
+## Optimizing Your Skill Configuration
 
 The most impactful fix involves managing your installed skills. Start by auditing your current setup.
 
@@ -70,7 +70,7 @@ A practical approach is to maintain separate skill profiles for different contex
 
 Before a session, copy the appropriate profile into `~/.claude/skills/`. This keeps your active skill count low. typically 3-5 instead of 15-20. which meaningfully cuts initial response time.
 
-Context Management Strategies
+## Context Management Strategies
 
 Managing conversation context dramatically improves response speed. Claude Code provides several context-handling commands.
 
@@ -94,7 +94,7 @@ Starting fresh sessions prevents context bloat. You can reference previous work 
 /supermemory What do you know about the previous implementation details?
 ```
 
-Understanding Context Growth
+## Understanding Context Growth
 
 Context grows faster than most developers expect. Each exchange adds both your message and Claude's response to the running history. A typical back-and-forth debugging session might look like this:
 
@@ -107,7 +107,7 @@ Response latency scales roughly with context size. At 60,000 tokens, you're proc
 
 Running `/compact` typically compresses context by 60-70%, bringing a bloated session back to a manageable size without losing the important conclusions and code you've already established.
 
-File Processing Optimizations
+## File Processing Optimizations
 
 Claude Code's file reading can cause delays with large projects. Optimize by excluding unnecessary files.
 
@@ -137,7 +137,7 @@ Read only src/app.js and src/components/, ignoring all other files.
 
 Being explicit about what to read is faster than letting Claude decide. When you say "look at my authentication code," Claude may scan through several directories before settling on the relevant files. When you say "read src/auth/middleware.js and src/auth/session.js," it goes directly there.
 
-Large Repository Strategies
+## Large Repository Strategies
 
 In monorepos or large codebases, file scanning becomes a serious latency source. Beyond `.claudeignore`, consider these approaches:
 
@@ -153,7 +153,7 @@ You do not need to read the full config file.
 
 This trades a short manual summary for significant repeated file-read overhead across the session.
 
-Network and Connection Improvements
+## Network and Connection Improvements
 
 Network latency often goes overlooked. Simple adjustments improve response times noticeably.
 
@@ -165,7 +165,7 @@ Consider regional model routing. Some Claude Code configurations allow selecting
 
 VPN impact is significant and bidirectional. A VPN routing through a nearby server can actually improve latency on congested networks. However, a VPN routing through a distant server. especially common with corporate VPNs that route all traffic through headquarters. can add 50-100ms or more per request. If you're on a corporate VPN and experiencing unusual slowness, test temporarily without it to isolate whether the VPN is a factor.
 
-Monitoring and Diagnostics
+## Monitoring and Diagnostics
 
 Claude Code includes diagnostic capabilities for identifying performance bottlenecks.
 
@@ -185,7 +185,7 @@ For advanced users, examine system logs:
 
 Real-time log monitoring reveals patterns in slow responses. certain skill combinations, specific file types, or conversation topics that consistently cause delays.
 
-Configuration Tweaks
+## Configuration Tweaks
 
 Fine-tune Claude Code's behavior through configuration files.
 
@@ -205,7 +205,7 @@ The `responseStreaming` setting is worth keeping enabled even when troubleshooti
 
 For teams with shared configuration, push a standardized `settings.json` through your team's dotfiles repository so everyone starts with sensible performance defaults rather than leaving things at defaults.
 
-Skill-Specific Performance Tips
+## Skill-Specific Performance Tips
 
 Certain skills require special consideration for performance.
 
@@ -221,7 +221,7 @@ The xlsx skill handles spreadsheet operations efficiently, but complex formulas 
 
 For any skill that combines multiple tools. for instance, a skill that reads files, then searches the web, then generates code. expect compounding latency. Each external operation adds round-trip time. If you notice a particular skill-triggered workflow is consistently slow, consider whether you can break the task into sequential manual steps rather than letting the skill chain them automatically.
 
-When to Seek Further Help
+## When to Seek Further Help
 
 If latency persists after applying these solutions, consider these additional steps:
 

@@ -20,11 +20,11 @@ Browser developer tools cover many auditing needs, but they require multiple pan
 
 Extensions also benefit teams. Share your audit tool with colleagues to standardize code reviews and catch issues before deployment. The investment in building a custom tool pays dividends in consistency and time savings.
 
-Core Components of a Site Audit Extension
+## Core Components of a Site Audit Extension
 
 Every audit extension needs three main pieces: the manifest file, a background script for persistent logic, and a popup interface for user interaction.
 
-Manifest Configuration
+## Manifest Configuration
 
 Your `manifest.json` defines permissions and declares which files Chrome should load:
 
@@ -44,7 +44,7 @@ Your `manifest.json` defines permissions and declares which files Chrome should 
 
 The `activeTab` permission lets your extension access the current page when the user invokes it. Use `scripting` to inject content scripts that analyze the page. The `host_permissions` field grants access to website data across all URLs.
 
-Content Script for Page Analysis
+## Content Script for Page Analysis
 
 Content scripts run in the context of the target page, giving you full access to the DOM and JavaScript variables:
 
@@ -97,7 +97,7 @@ function analyzeScripts() {
 
 This script extracts structural information about the page. You can expand it to measure performance metrics, check color contrast, or validate schema markup.
 
-Popup Interface
+## Popup Interface
 
 The popup provides the user-facing interface:
 
@@ -167,11 +167,11 @@ function displayResults(data) {
 }
 ```
 
-Advanced Audit Capabilities
+## Advanced Audit Capabilities
 
 Beyond basic DOM analysis, extend your tool with performance and network auditing.
 
-Performance Metrics
+## Performance Metrics
 
 Use the Performance API to capture timing data:
 
@@ -192,7 +192,7 @@ function measurePerformance() {
 }
 ```
 
-Network Request Analysis
+## Network Request Analysis
 
 The `chrome.devtools.network` API lets you capture HTTP requests:
 
@@ -213,7 +213,7 @@ chrome.devtools.network.onRequestFinished.addListener(request => {
 });
 ```
 
-Practical Applications
+## Practical Applications
 
 Site audit tools serve various workflows. E-commerce developers verify product pages include proper structured data and meta tags. Marketing teams check that landing pages have correct Open Graph metadata for social sharing. Accessibility auditors quickly identify images missing alt text across large sites.
 
@@ -247,20 +247,19 @@ async function auditApiHealth() {
 }
 ```
 
-Loading and Testing Your Extension
+## Loading and Testing Your Extension
 
 After creating your files, load the extension in Chrome by visiting `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Select your extension directory.
 
 Test incrementally. Verify the popup opens, then confirm the content script executes, then add more complex audits. Use `console.log` statements in your scripts and view output in the Chrome DevTools console for the respective context.
 
-Extending for Team Use
+## Extending for Team Use
 
 Package your extension for internal distribution by creating a ZIP file of your directory. Team members load it the same way during development. For wider distribution, publish to the Chrome Web Store after creating developer account credentials.
 
 Version your extension semantically and document changes in a `CHANGELOG.md` file. This practice helps teammates understand what changed between updates and why certain audits were added or modified.
 
 Building a custom Chrome extension site audit tool gives you precise control over the checks that matter for your projects. Start with simple DOM audits and gradually add performance monitoring, API validation, and accessibility checks. The result is a personalized toolkit that accelerates your development workflow and helps maintain quality standards across your work.
-
 
 Related Reading
 

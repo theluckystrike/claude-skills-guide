@@ -13,11 +13,10 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Building a backend with Supabase and Claude Code together creates a powerful development workflow. This guide covers practical strategies to accelerate your backend development, from database schema design to implementing Row Level Security policies. For client-side integration patterns covering CRUD operations, authentication flows, real-time subscriptions, and file storage, see the [Claude Code with Supabase Backend Integration Guide](/claude-code-with-supabase-backend-integration-guide/).
 
-Why Supabase Works Well with Claude Code
+## Why Supabase Works Well with Claude Code
 
 Supabase's architecture is inherently text-friendly. Migrations are plain SQL files. RLS policies are declarative SQL expressions. Edge Functions are TypeScript. Type definitions are generated output. This means Claude Code can read, write, and reason about virtually every layer of your backend without needing specialized tooling.
 
@@ -25,7 +24,7 @@ In practice, this shows up in the workflow constantly. You describe a feature. "
 
 The key is learning what prompts produce good results and organizing your project so Claude has the context it needs to generate accurate code.
 
-Project Structure for Supabase Projects
+## Project Structure for Supabase Projects
 
 Organize your Supabase project with a clear directory structure that separates migrations, functions, and type definitions. Create separate folders for SQL migrations, Edge Functions, and TypeScript type definitions:
 
@@ -55,7 +54,7 @@ This structure keeps your backend organized and makes it easier to version contr
 
 Claude Code benefits from this organization because when you ask it to write a new migration, you can say "read the existing migrations to understand the current schema before writing migration 20260301_add_audit_log.sql." Claude will load the migration history, understand the existing table structures, and write SQL that references the correct column names and foreign key targets.
 
-Database Schema Development
+## Database Schema Development
 
 Start with your core tables and relationships. Define tables using clear SQL with proper constraints:
 
@@ -104,7 +103,7 @@ CREATE TRIGGER set_profiles_updated_at
   FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();
 ```
 
-Row Level Security Best Practices
+## Row Level Security Best Practices
 
 RLS is Supabase's powerful feature for securing your data. Write granular policies that follow the principle of least privilege. Instead of broad policies, create specific ones for each operation:
 
@@ -144,7 +143,7 @@ When RLS policies involve subqueries on large tables, performance can suffer. Us
 
 A useful pattern for testing RLS without writing an entire test suite is to use the Supabase dashboard's SQL editor with `SET LOCAL role = authenticated; SET LOCAL request.jwt.claims = '{"sub": "some-uuid"}';` to simulate a specific user's session and run queries against your tables directly. Claude Code can generate these test queries if you describe the scenarios you want to verify.
 
-Edge Functions Development
+## Edge Functions Development
 
 For server-side logic beyond what SQL can handle, Supabase Edge Functions run on Deno. Write functions with proper error handling and logging:
 
@@ -217,7 +216,7 @@ Deploy functions with the Supabase CLI: `supabase functions deploy my-function`.
 
 When using Claude Code to write Edge Functions, provide context about your database schema and the specific operation the function needs to perform. A prompt like "write a Supabase Edge Function that accepts a POST request with a task_id, marks the task complete, and sends a notification to the task creator. here are the relevant table schemas:" produces much better output than a vague request.
 
-Leveraging Claude Skills for Backend Development
+## Leveraging Claude Skills for Backend Development
 
 Several Claude skills enhance your Supabase backend workflow. The tdd skill helps you write tests for your database functions and Edge Functions before implementation, following test-driven development principles.
 
@@ -234,7 +233,7 @@ For generating client libraries from your schema, the xlsx skill helps create AP
 
 Beyond these skills, the most practical Claude Code workflow for Supabase development is iterative schema review. As your migration count grows, ask Claude to read all your migrations in order and produce a summary of the current schema state. what tables exist, what their columns are, and what RLS policies are active. This gives you a quick reference without needing to mentally trace through every migration file.
 
-Type-Safe Database Clients
+## Type-Safe Database Clients
 
 Generate TypeScript types from your database schema to ensure type safety across your application. Use the Supabase CLI to generate types:
 
@@ -294,7 +293,7 @@ Regenerate types after every migration. The easiest way to enforce this is to ad
 }
 ```
 
-Workflow Optimization Tips
+## Workflow Optimization Tips
 
 1. Use the Supabase CLI locally: Run `supabase start` to spin up a local development environment that mirrors production. Test migrations and policies locally before pushing changes.
 
@@ -335,7 +334,7 @@ $$ LANGUAGE plpgsql SECURITY DEFINER;
 
 7. Seed data for local development: Maintain a `supabase/seed.sql` file with test users, sample content, and representative data. Running `supabase db reset` applies all migrations and then the seed file, giving you a clean and realistic local environment in seconds.
 
-CI/CD Integration
+## CI/CD Integration
 
 Automate your deployment pipeline with GitHub Actions. Run migrations and deploy functions automatically on merge:
 
@@ -371,7 +370,6 @@ This workflow ensures your production database stays in sync with your codebase.
 For staging environments, maintain a separate Supabase project and deploy to it on pushes to a `staging` branch. This lets you validate migrations and function changes against real data before they reach production, catching issues like missing indexes or RLS policy gaps before users encounter them.
 
 Building efficient Supabase backends with Claude Code comes down to organized project structure, well-written RLS policies, and automated workflows. Apply these patterns to speed up development and maintain reliable backend infrastructure.
-
 
 Related Reading
 

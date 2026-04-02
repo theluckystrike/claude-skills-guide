@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for IPFS Decentralized Storage Workflow"
 description: "A comprehensive guide to building decentralized storage workflows using Claude Code and IPFS. Learn practical patterns for file uploading, content."
@@ -14,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for IPFS Decentralized Storage Workflow
 
@@ -22,13 +20,13 @@ Decentralized storage is becoming increasingly important for developers who need
 
 This guide walks you through building practical IPFS workflows using Claude Code, with real code examples you can adapt for your projects.
 
-Understanding IPFS and Content Addressing
+## Understanding IPFS and Content Addressing
 
 Before diving into workflows, it's essential to understand how IPFS differs from traditional file storage. In a traditional system, files are accessed by their location (e.g., `https://example.com/file.txt`). In IPFS, files are accessed by their content hash, known as a CID (Content Identifier). This means the same file uploaded by different people will produce the same CID, ensuring verifiability and deduplication.
 
 When you add a file to IPFS, the network generates a unique CID based on the file's content. Any node that has the file can serve it, creating redundancy without central servers. However, for persistent storage, you'll typically need to "pin" content to ensure it remains available.
 
-Setting Up Your IPFS Environment
+## Setting Up Your IPFS Environment
 
 Before building workflows with Claude Code, ensure you have IPFS installed. You can use a local IPFS node or connect to a pinning service API. For production workflows, services like Pinata, Infura, or nft.storage provide reliable APIs.
 
@@ -51,7 +49,7 @@ export PINATA_API_KEY="your-api-key"
 export PINATA_SECRET_KEY="your-secret-key"
 ```
 
-Building Your First Upload Workflow
+## Building Your First Upload Workflow
 
 The most fundamental IPFS workflow is uploading a file and retrieving its CID. Here's a Claude Code script that handles file uploads to IPFS:
 
@@ -101,7 +99,7 @@ if __name__ == "__main__":
 
 This script handles both local IPFS uploading and remote pinning. Claude Code can execute this directly, making it easy to integrate into larger automation pipelines.
 
-Automating Directory Uploads
+## Automating Directory Uploads
 
 When working with complex projects, you'll often need to upload entire directories while preserving their structure. IPFS handles this through directory formatting:
 
@@ -145,7 +143,7 @@ def get_directory_structure(cid):
 
 This approach is particularly useful when deploying static websites to IPFS. You can maintain version history by uploading new directory versions and tracking their CIDs in a manifest.
 
-Integrating with Claude Code Skills
+## Integrating with Claude Code Skills
 
 Claude Code's skills system pairs excellently with IPFS workflows. You can create a skill that standardizes file uploads across your team:
 
@@ -186,7 +184,7 @@ Claude Code's skills system pairs excellently with IPFS workflows. You can creat
 
 This skill can then be invoked naturally in conversations with Claude Code: "Upload the build artifacts to IPFS and pin them to Pinata."
 
-Handling Large Files and Streaming
+## Handling Large Files and Streaming
 
 For large files, consider using chunked uploads to avoid memory issues. IPFS automatically chunks large files, but streaming uploads provide better control:
 
@@ -217,7 +215,7 @@ def stream_upload_large_file(file_path, chunk_size=1024*1024):
     return result.stdout.decode().strip()
 ```
 
-Best Practices for Production Workflows
+## Best Practices for Production Workflows
 
 When deploying IPFS workflows in production, consider these essential practices:
 
@@ -246,7 +244,7 @@ def upload_with_retry(file_path, max_retries=3):
 
 Monitor gateway performance: Different IPFS gateways have varying performance characteristics. Implement fallback gateway selection for critical reads.
 
-Conclusion
+## Conclusion
 
 Claude Code provides an excellent platform for building IPFS decentralized storage workflows. By combining Claude Code's automation capabilities with IPFS's content-addressed storage, you can create solid systems that ensure data persistence without relying on centralized infrastructure.
 

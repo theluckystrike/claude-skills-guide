@@ -16,7 +16,7 @@ tags: [claude-code, claude-skills]
 {% raw %}
 AI lead generator chrome extensions automate the process of identifying, extracting, and organizing potential leads from web pages. For developers and power users, these extensions represent a practical intersection of web scraping, natural language processing, and browser automation. This guide covers the architecture, implementation patterns, and practical considerations for building these tools, from the raw extraction layer all the way through AI enrichment and export.
 
-Why Build an AI Lead Generator Extension
+## Why Build an AI Lead Generator Extension
 
 Off-the-shelf prospecting tools like Hunter.io, Apollo, or LinkedIn Sales Navigator cover common use cases, but they have fixed data models and charge per credit or seat. Building your own extension gives you:
 
@@ -27,7 +27,7 @@ Off-the-shelf prospecting tools like Hunter.io, Apollo, or LinkedIn Sales Naviga
 
 The tradeoff is development time and maintenance burden, which is why this guide focuses on practical patterns you can reuse rather than building everything from scratch.
 
-Core Architecture
+## Core Architecture
 
 AI lead generator extensions operate by scanning web pages for contact information, social profiles, and business data, then processing that data using AI to structure and enrich it. The architecture consists of four primary components:
 
@@ -57,7 +57,7 @@ Here's a basic Manifest V3 structure:
 
 Note that `downloads` is added here, you'll need it later for CSV export. Keeping the permission list minimal is good practice for user trust and Chrome Web Store review.
 
-Data Extraction Patterns
+## Data Extraction Patterns
 
 The most common extraction targets include email addresses, phone numbers, LinkedIn profiles, company names, and job titles. Regular expressions work well for structured data like emails and phone numbers:
 
@@ -101,7 +101,7 @@ function extractStructuredContacts() {
 
 Combining both approaches, regex for unstructured pages, DOM selectors for structured ones, gives you the best coverage across different site types.
 
-AI Processing Integration
+## AI Processing Integration
 
 The AI module transforms raw extracted data into enriched lead profiles. This typically involves sending the page content or extracted snippets to an LLM with a structured prompt:
 
@@ -143,7 +143,7 @@ async function getApiKey() {
 }
 ```
 
-Choosing the Right Model for Enrichment
+## Choosing the Right Model for Enrichment
 
 Not every lead enrichment task needs a large model. Here's a practical comparison:
 
@@ -156,7 +156,7 @@ Not every lead enrichment task needs a large model. Here's a practical compariso
 
 Using a smaller model for the bulk of extractions and reserving the larger model for high-value enrichment keeps API costs manageable at scale.
 
-Managing Extracted Leads
+## Managing Extracted Leads
 
 Storage options range from local Chrome storage to cloud backends. For privacy-conscious implementations, local storage with export options works well:
 
@@ -206,7 +206,7 @@ async function syncLeadToWebhook(lead) {
 
 Point the webhook at Zapier, Make, or your own endpoint to route leads into HubSpot, Airtable, Notion, or any CRM that supports HTTP.
 
-Rate Limiting and Ethical Scraping
+## Rate Limiting and Ethical Scraping
 
 Responsible lead generation requires respecting website terms of service and implementing rate limiting. Add delays between requests and respect robots.txt signals in page meta tags:
 
@@ -248,7 +248,7 @@ Beyond technical rate limiting, keep these principles in mind:
 - Respect site-specific terms of service; LinkedIn, for example, explicitly prohibits automated scraping
 - Give users an in-extension data deletion option, not just export
 
-Deduplication and Lead Quality
+## Deduplication and Lead Quality
 
 Raw extraction produces duplicates. The same email address may appear on multiple pages, and the same person may appear under slightly different name spellings. Add a deduplication step before storage:
 
@@ -273,7 +273,7 @@ function mergeOrAdd(leads, newLead) {
 }
 ```
 
-Practical Use Cases
+## Practical Use Cases
 
 For sales teams, these extensions extract contact information from LinkedIn profiles, conference attendee pages, and directory listings. For recruiters, they pull candidate information from professional networks and portfolio sites. Developers can build internal tools that aggregate lead data from multiple sources into a unified dashboard.
 
@@ -286,7 +286,7 @@ A few specific scenarios where custom extensions outperform generic tools:
 
 The key differentiator between basic scrapers and AI-powered generators is the enrichment layer, transforming raw contact information into actionable lead profiles with inferred company information, industry classification, and relevance scoring.
 
-Security and Privacy
+## Security and Privacy
 
 Handle extracted data carefully. Store leads locally when possible rather than sending all data to third-party services. Implement encryption for any stored API keys. Provide users with clear data export and deletion options to comply with privacy regulations.
 
@@ -299,7 +299,7 @@ A minimal settings UI should expose:
 
 For any extension that handles personal data from EU residents, document your data handling in a privacy policy and consider whether your use case falls under GDPR's legitimate interest provisions.
 
-Conclusion
+## Conclusion
 
 AI lead generator chrome extensions combine web extraction with AI processing to automate prospecting workflows. The Manifest V3 architecture provides the foundation, while the AI enrichment layer adds intelligence. For developers, the key challenges involve building reliable extraction patterns, managing API costs, and ensuring ethical data collection practices.
 

@@ -18,7 +18,7 @@ Database migrations are critical operations that can make or break your applicat
 
 This guide walks through practical strategies for integrating Claude Code into your migration workflow, whether you use raw SQL, ORMs like Prisma or Django, or custom migration frameworks.
 
-Setting Up Claude Code for Migration Work
+## Setting Up Claude Code for Migration Work
 
 Before diving into migration generation, ensure Claude Code understands your project structure. Create a project-specific context file that describes your database system, existing schema, and migration conventions. This context serves as the foundation for accurate migration generation.
 
@@ -35,7 +35,7 @@ Migration history: ./prisma/migrations/
 
 When Claude Code has access to this context, it can generate migrations that respect your existing patterns, naming conventions, and business rules.
 
-Generating Your First Migration
+## Generating Your First Migration
 
 The most straightforward approach is to describe your schema change in natural language and let Claude Code generate the migration. Here's how to get the best results:
 
@@ -73,7 +73,7 @@ ALTER TABLE "orders" ADD CONSTRAINT "orders_status_check"
 CHECK ("status" IN ('pending', 'completed', 'cancelled'));
 ```
 
-Validating and Reviewing Migrations
+## Validating and Reviewing Migrations
 
 The best way to use Claude Code goes beyond generation, it includes validation. Before applying any migration, use Claude Code to review it for common issues:
 
@@ -89,7 +89,7 @@ Ask Claude Code to review your migration:
 
 Claude Code can also explain what each statement does in plain language, helping team members understand the migration without reading raw SQL.
 
-Integrating with Claude Skills
+## Integrating with Claude Skills
 
 Several Claude skills enhance the migration workflow when used together with Claude Code:
 
@@ -102,11 +102,11 @@ For teams using Prisma, the workflow becomes even tighter. Describe your schema 
 
 If you find yourself running the same type of migrations repeatedly, adding audit columns, splitting contact fields, standardising index naming, consider encoding those patterns as a reusable Claude skill rather than re-prompting each time. See [Claude Skills for Creating Database Migration Scripts](/claude-skills-for-creating-database-migration-scripts/) for how to build a dedicated `db-migration` skill that captures your project's conventions and generates production-ready scripts automatically.
 
-Handling Complex Scenarios
+## Handling Complex Scenarios
 
 Real-world migrations often involve data transformation, not just schema changes. Here's how to handle these scenarios:
 
-Data Migration with Cleanup
+## Data Migration with Cleanup
 
 ```sql
 -- Migrating user emails to lowercase and removing duplicates
@@ -121,7 +121,7 @@ WHERE id NOT IN (
 );
 ```
 
-Adding Columns with Defaults
+## Adding Columns with Defaults
 
 For large tables, adding columns with DEFAULT values can cause table locks. Claude Code recommends safer approaches:
 
@@ -139,7 +139,7 @@ LIMIT 1000;
 ALTER TABLE orders ALTER COLUMN tracking_number SET DEFAULT 'PENDING';
 ```
 
-Zero-Downtime Migration Patterns
+## Zero-Downtime Migration Patterns
 
 For production systems that cannot tolerate downtime, the expand-contract pattern provides the safest approach:
 
@@ -163,7 +163,7 @@ ALTER TABLE users DROP COLUMN email_verified;
 
 Key principles for zero-downtime migrations: maintain backward compatibility between old and new schemas, deploy changes in small reversible steps, and use feature flags to toggle new behavior without redeployment.
 
-Zero-Downtime Migration Patterns
+## Zero-Downtime Migration Patterns
 
 For production databases serving live traffic, zero-downtime migrations follow the expand-contract pattern:
 
@@ -185,7 +185,7 @@ ALTER TABLE users DROP COLUMN email_verified;
 
 Key principles: never change a column in place, deploy changes in small reversible steps, and use feature flags to toggle new features on/off without redeployment. Your application must work with both old and new schemas simultaneously during the migration window.
 
-Production Best Practices
+## Production Best Practices
 
 When using Claude Code for production migrations, follow these proven practices:
 
@@ -195,14 +195,13 @@ When using Claude Code for production migrations, follow these proven practices:
 4. Document changes: Use the pdf skill to export schema documentation after major changes
 5. Keep migrations atomic: Each migration should represent a single logical change
 
-Conclusion
+## Conclusion
 
 The best way to use Claude Code for database migrations is an interactive loop: you describe the change in plain language, Claude Code generates the SQL, you review it, and you apply it only when satisfied. Claude Code excels at producing correct SQL syntax, suggesting appropriate indexes, flagging lock-time risks, and explaining what each statement does before it runs.
 
 This interactive approach is distinct from the skills-based approach, where you pre-author a `db-migration` skill that encodes your project's conventions and generates migrations on demand without needing to prompt from scratch each time. Both approaches complement each other: start interactively with Claude Code to understand your migration patterns, then crystallise those patterns into a reusable skill for day-to-day use.
 
 By pairing Claude Code with skills like tdd for testing, pdf for documentation, and supermemory for knowledge management, you build a migration workflow that scales with your project. Start with small, low-risk migrations to build confidence, then expand to more complex schema changes as you trust the workflow.
-
 
 Related Reading
 

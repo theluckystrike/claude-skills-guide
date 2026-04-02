@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Go Profile-Guided Optimization
 
 Profile-Guided Optimization (PGO) is one of the most powerful techniques for optimizing Go applications, yet many developers underutilize it because they don't know how to properly collect and apply profiling data. Claude Code can significantly streamline this process, helping you identify optimization opportunities, generate the right profiling code, and interpret results effectively. This guide shows you how to combine Claude Code's capabilities with Go's built-in pprof tooling to achieve meaningful performance improvements.
 
-Understanding Profile-Guided Optimization in Go
+## Understanding Profile-Guided Optimization in Go
 
 Profile-Guided Optimization works by letting the compiler make intelligent decisions about inlining, code placement, and register allocation based on real execution data. When you enable PGO in Go 1.21+, the compiler uses CPU profiles to hot path optimize your code, typically delivering 2-10% performance improvements automatically.
 
@@ -27,7 +26,7 @@ The workflow involves three main stages: collecting representative CPU profiles 
 
 Claude Code can help by generating the profiling infrastructure, explaining complex profiling results, and guiding you through the optimization decisions based on what the profiles reveal. The key is ensuring you collect profiles that represent actual production workloads rather than synthetic benchmarks.
 
-Setting Up Profiling Infrastructure
+## Setting Up Profiling Infrastructure
 
 Before you can optimize with PGO, you need reliable profiling infrastructure. Claude Code can help you set this up correctly the first time, avoiding common pitfalls like profiling in development environments that don't match production behavior.
 
@@ -80,7 +79,7 @@ func init() {
 
 The important thing is collecting profiles during periods of representative load. Ask Claude Code to help you design a profiling strategy that captures the right scenarios, peak traffic, complex queries, or batch processing depending on your application.
 
-Collecting and Processing Profiles
+## Collecting and Processing Profiles
 
 Once your profiling infrastructure is in place, you need to collect profiles that represent how your application actually performs in production. This is where many developers go wrong: they profile development workloads that don't match real usage patterns.
 
@@ -105,7 +104,7 @@ go tool pprof -output=cpu.prof cpu.pprof
 
 Place the resulting `.prof` file in your module root, named `default.pprof` for automatic detection by the Go compiler.
 
-Building with PGO Enabled
+## Building with PGO Enabled
 
 With your profile data collected and processed, enabling PGO is straightforward. The Go compiler automatically looks for `default.pprof` in your module root:
 
@@ -121,7 +120,7 @@ When you rebuild with PGO, you'll see the compiler making different optimization
 
 Claude Code can help you interpret what's happening during the PGO build. Ask it to explain what specific optimizations the compiler is applying and whether there are additional changes you can make to improve the profile quality.
 
-Iterating on Profile Data
+## Iterating on Profile Data
 
 Single-profile PGO is good, but iterative profiling produces better results. As you make changes to your code, new hot paths emerge and old ones disappear. Your profile data becomes stale.
 
@@ -174,7 +173,7 @@ func main() {
 
 Compare profiles over time to understand whether optimizations are working or if new performance issues are emerging. This iterative approach ensures your PGO data remains current and valuable.
 
-Beyond Basic PGO: Deeper Optimizations
+## Beyond Basic PGO: Deeper Optimizations
 
 While PGO provides automatic compiler optimizations, the profiling data it generates can guide many other performance improvements. Use pprof visualizations and analysis to identify:
 
@@ -191,7 +190,7 @@ go tool pprof -text cpu.prof | head -50
 
 This shows the top CPU-consuming functions. Claude Code can then suggest concrete improvements, whether that's caching frequently computed values, using more efficient data structures, or parallelizing sequential operations.
 
-Best Practices for PGO Success
+## Best Practices for PGO Success
 
 To get the most from PGO, follow these proven practices:
 

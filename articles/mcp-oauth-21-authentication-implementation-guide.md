@@ -13,22 +13,19 @@ reviewed: true
 score: 7
 ---
 
-
-MCP OAuth 2.1 Authentication Implementation Guide
-
 OAuth 2.1 represents the latest evolution in authorization protocols, consolidating best practices from OAuth 2.0 and its extensions. When implementing authentication for Model Context Protocol (MCP) servers, understanding OAuth 2.1 principles helps you build secure, standards-compliant systems. This guide walks through practical implementation patterns for MCP authentication.
 
-What OAuth 2.1 Brings to MCP
+## What OAuth 2.1 Brings to MCP
 
 The MCP protocol enables AI assistants like Claude to interact with external tools and services through a standardized interface. When your MCP server handles sensitive data or provides access to protected resources, proper authentication becomes essential. OAuth 2.1 simplifies the security model by requiring PKCE (Proof Key for Code Exchange) for all grant types, mandating secure token storage, and deprecating insecure practices.
 
 If you are building MCP servers that need authentication, the [mcp-builder skill](https://github.com/anthropic/mcp-servers) provides foundational patterns for server architecture. Combine that with proper OAuth 2.1 implementation for production deployments.
 
-Implementing the Authorization Code Flow with PKCE
+## Implementing the Authorization Code Flow with PKCE
 
 The recommended flow for MCP authentication uses Authorization Code grant with PKCE. This pattern protects against authorization code interception attacks and works well for server-to-server and client applications.
 
-Server-Side Implementation
+## Server-Side Implementation
 
 ```python
 Simplified OAuth 2.1 Authorization Code + PKCE flow
@@ -91,7 +88,7 @@ class MCPAuthorizationServer:
         }
 ```
 
-Client-Side MCP Integration
+## Client-Side MCP Integration
 
 ```javascript
 // MCP client requesting authenticated resources
@@ -160,7 +157,7 @@ class MCPAuthenticatedClient {
 }
 ```
 
-Token Refresh and Security Best Practices
+## Token Refresh and Security Best Practices
 
 OAuth 2.1 requires short-lived access tokens with refresh token rotation. Implement proper token lifecycle management:
 
@@ -200,7 +197,7 @@ class TokenManager:
         return False
 ```
 
-Integrating with MCP Server Architecture
+## Integrating with MCP Server Architecture
 
 When building MCP servers that require OAuth authentication, structure your server to validate tokens on each request:
 
@@ -229,7 +226,7 @@ class MCPServer:
         return await self.execute_tool(tool_name, tool_args, token_data)
 ```
 
-Testing Your Implementation
+## Testing Your Implementation
 
 Use the [tdd skill](/best-claude-skills-for-developers-2026/) to build comprehensive test coverage for your OAuth implementation. The tdd skill helps you write tests before implementing security-critical code:
 
@@ -245,7 +242,7 @@ Write unit tests for an OAuth 2.1 authorization server including:
 
 After writing tests, implement the server following test-driven development principles. For generating API documentation of your MCP endpoints, consider the [pdf skill](https://github.com/anthropic/claude-code-skills) to export documentation in portable formats.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Several mistakes frequently appear in OAuth implementations:
 
@@ -259,12 +256,11 @@ Several mistakes frequently appear in OAuth implementations:
 
 5. Insecure redirect URIs - Only allow pre-registered redirect URIs. Reject any attempts to redirect to unexpected domains.
 
-Conclusion
+## Conclusion
 
 Implementing OAuth 2.1 for MCP servers requires attention to security details but follows straightforward patterns. The key requirements, PKCE for all flows, secure token generation, refresh token rotation, and short-lived access tokens, provide solid protection against common attack vectors. Build your implementation incrementally, test thoroughly using the tdd skill, and validate against the OAuth 2.1 specification before production deployment.
 
 For deeper integration with Claude's ecosystem, explore how MCP servers can use the [supermemory skill](https://github.com/supermemoryai/supermemory) for context management, or use the [webapp-testing skill](https://github.com/anthropic/claude-code-skills) to verify your authentication flows work correctly in browser environments.
-
 
 Related Reading
 

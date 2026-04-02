@@ -26,7 +26,7 @@ Skills in Claude Code are packaged prompt enhancements that define specialized w
 
 Together, tools and skills transform an AI from a conversational partner into a capable development assistant that can take meaningful action on your behalf.
 
-How Tool Use Works: The Execution Loop
+## How Tool Use Works: The Execution Loop
 
 When you give Claude Code a task, it enters an agent loop that typically follows these steps:
 
@@ -47,7 +47,7 @@ For example, when asked to fix a bug in your codebase, Claude might:
 - Use editing tools to implement the fix
 - Run tests to verify the solution works
 
-Claude Code Skills: Specialized Prompt Enhancements
+## Claude Code Skills: Specialized Prompt Enhancements
 
 Claude Code skills use a markdown-based format with YAML front matter to define metadata and instructions. Here's a practical example of a skill structure:
 
@@ -73,9 +73,9 @@ Use these testing frameworks based on language:
 
 This skill ensures Claude always approaches test-related tasks with TDD principles in mind, creating more maintainable code.
 
-Practical Examples of Tool and Skill Usage
+## Practical Examples of Tool and Skill Usage
 
-Example 1: Automated Code Review
+## Example 1: Automated Code Review
 
 With appropriate skills loaded, Claude can perform comprehensive code reviews:
 
@@ -91,7 +91,7 @@ Claude uses tools to:
 - Analyze dependencies for known CVEs
 - Generate a detailed review report
 
-Example 2: Database Migration
+## Example 2: Database Migration
 
 When asked to create a database migration:
 
@@ -105,7 +105,7 @@ Claude:
 - Creates both forward and rollback migrations
 - Verifies the migration syntax is correct
 
-Example 3: Multi-File Refactoring
+## Example 3: Multi-File Refactoring
 
 For larger refactoring tasks:
 
@@ -119,7 +119,7 @@ Claude:
 - Updates all references throughout the codebase
 - Ensures no breaking changes are introduced
 
-How Claude Code Prioritizes Tools
+## How Claude Code Prioritizes Tools
 
 When multiple tools could accomplish a similar goal, Claude Code applies prioritization logic:
 
@@ -129,7 +129,7 @@ Use the most specific tool available. If you ask to "list files in a directory,"
 
 Batch related operations when possible. Instead of reading five files individually, Claude Code might read them in parallel to reduce latency. This optimization happens automatically within the agent's planning phase.
 
-Influencing Tool Decisions as a User
+## Influencing Tool Decisions as a User
 
 You can guide Claude Code's tool decisions through how you frame requests:
 
@@ -139,7 +139,7 @@ Indicate when you want action versus discussion. Starting with action verbs, "Cr
 
 Set context about your environment. Mentioning "in our React app" or "the backend service" helps Claude Code narrow down which files and tools are relevant.
 
-Chaining Skills for Complex Workflows
+## Chaining Skills for Complex Workflows
 
 One of Claude Code's powerful features is the ability to chain multiple skills together. You might combine:
 
@@ -150,7 +150,7 @@ One of Claude Code's powerful features is the ability to chain multiple skills t
 
 When working on a feature, Claude automatically applies all relevant skills, producing higher-quality output without requiring you to repeat instructions.
 
-Best Practices for Leveraging Tools and Skills
+## Best Practices for Leveraging Tools and Skills
 
 1. Use claude-md files: Project-specific instructions in `CLAUDE.md` ensure Claude understands your codebase conventions.
 
@@ -162,7 +162,7 @@ Best Practices for Leveraging Tools and Skills
 
 5. Review tool usage: When Claude uses tools, examine the outputs to verify the actions match your intentions.
 
-Conclusion
+## Conclusion
 
 AI agents like Claude Code use tools and skills to bridge the gap between theoretical knowledge and practical action. Tools provide the means to interact with real systems, while skills provide the context and patterns to use those tools effectively. By understanding this mechanism, you can build more powerful workflows and get more value from your AI assistant.
 

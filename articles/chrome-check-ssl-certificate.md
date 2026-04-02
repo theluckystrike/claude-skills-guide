@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Check SSL Certificate: A Developer Guide"
 description: "Learn how to check SSL certificates in Chrome for developers and power users. Covers DevTools, command-line tools, and practical verification techniques."
@@ -14,7 +13,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Chrome Check SSL Certificate: A Developer Guide
 
@@ -22,7 +20,7 @@ Verifying SSL certificates is a fundamental skill for developers and power users
 
 This guide covers the most effective methods for checking SSL certificates in Chrome, from quick visual checks to detailed technical analysis. plus command-line tools for automation, common errors you'll encounter, and how to set up proactive expiration monitoring.
 
-Quick Certificate Inspection
+## Quick Certificate Inspection
 
 The fastest way to check a site's SSL certificate in Chrome is through the address bar. When you visit a site with HTTPS, look for the lock icon on the left side of the URL bar.
 
@@ -39,7 +37,7 @@ For detailed certificate information, click "Certificate is valid" or the certif
 
 This quick method works for most day-to-day certificate checks. If the lock icon is missing or replaced by a warning triangle, Chrome has already detected a problem. use DevTools to dig deeper.
 
-Detailed look with Chrome DevTools
+## Detailed look with Chrome DevTools
 
 For more comprehensive analysis, Chrome DevTools provides detailed security information. Open DevTools with F12 or right-click and select "Inspect," then navigate to the Security tab.
 
@@ -63,7 +61,7 @@ For developers debugging certificate issues, the Security tab also displays:
 - HSTS (HTTP Strict Transport Security) status
 - Certificate transparency information
 
-Reading the Security Tab's Protocol Information
+## Reading the Security Tab's Protocol Information
 
 Beyond the certificate itself, the Security tab tells you which TLS version and cipher suite the connection negotiated. This matters more than most developers realize. A site might have a perfectly valid certificate but still be negotiating TLS 1.0 or a weak cipher. both of which Chrome flags as security problems.
 
@@ -78,7 +76,7 @@ TLS 1.3 is preferred. If you see TLS 1.0 or TLS 1.1, Chrome will show a "Your co
 
 For cipher suite analysis, avoid anything containing RC4, DES, or NULL in the name. Modern deployments should negotiate ECDHE or DHE key exchange (providing forward secrecy) combined with AES-GCM or ChaCha20-Poly1305 encryption.
 
-Checking Certificate Transparency
+## Checking Certificate Transparency
 
 Chrome logs all certificates to Certificate Transparency (CT) logs, which provides an additional verification mechanism. When a certificate passes through Chrome's requirements, it appears in these public logs.
 
@@ -89,17 +87,17 @@ To check if a certificate is logged:
 
 You can also use Google's Certificate Transparency search at crt.sh or Google's CT monitor to look up certificates by domain name. This helps verify that certificates were properly issued and logged.
 
-Why CT Matters for Developers
+## Why CT Matters for Developers
 
 Certificate Transparency was introduced to prevent CAs from secretly issuing certificates. Before CT, a rogue CA could issue a certificate for google.com without Google knowing. With CT, every certificate must be logged in a public append-only log before browsers will trust it.
 
 For developers, CT has a practical implication: if you're issuing certificates for internal services or staging environments, those certificates will appear in public CT logs. Anyone can search crt.sh for your domain and see every certificate ever issued. including staging subdomains you might not want advertised. Consider using private PKI for internal services rather than publicly-trusted certificates.
 
-Command-Line Tools for SSL Verification
+## Command-Line Tools for SSL Verification
 
 For automation and scripting, command-line tools provide more flexibility than browser-based inspection. These are especially useful for CI/CD pipelines, monitoring scripts, and bulk certificate audits.
 
-OpenSSL
+## OpenSSL
 
 The most versatile tool for SSL certificate checking:
 
@@ -122,7 +120,7 @@ openssl s_client -connect example.com:443 -servername example.com -showcerts </d
 
 The `-servername` flag is critical when checking certificates on hosts with multiple domains (SNI). Without it, you may receive the wrong certificate for shared hosting environments.
 
-Certifi and Python
+## Certifi and Python
 
 For programmatic certificate checking:
 
@@ -209,7 +207,7 @@ Check with specific TLS version (useful for compatibility testing)
 curl --tlsv1.2 --tls-max 1.2 -vI https://example.com 2>&1 | head -20
 ```
 
-Using nmap for SSL Auditing
+## Using nmap for SSL Auditing
 
 For comprehensive SSL/TLS auditing, nmap's ssl-enum-ciphers script goes deeper than curl or openssl:
 
@@ -223,7 +221,7 @@ nmap --script ssl-heartbleed,ssl-poodle,ssl-dh-params -p 443 example.com
 
 The ssl-enum-ciphers output grades each cipher suite (A, B, C, D, F) and shows the complete list of supported protocols. This is invaluable for security audits and compliance checks.
 
-Common Certificate Problems and How to Identify Them
+## Common Certificate Problems and How to Identify Them
 
 Understanding common SSL issues helps you diagnose problems faster. Here is a reference for the errors Chrome surfaces and what causes them.
 
@@ -238,7 +236,7 @@ Understanding common SSL issues helps you diagnose problems faster. Here is a re
 | ERR_SSL_PROTOCOL_ERROR | Protocol negotiation failed | Check TLS version configuration |
 | ERR_SSL_VERSION_OR_CIPHER_MISMATCH | No common protocol/cipher | Enable TLS 1.2/1.3; update cipher list |
 
-Expired Certificates
+## Expired Certificates
 
 The most frequent issue. In Chrome, an expired certificate shows a security warning with a red lock icon. The Certificate Viewer displays the expiration date prominently. Use the expiration check commands above to proactively monitor certificates.
 
@@ -252,7 +250,7 @@ Check renewal timer status (systemd)
 systemctl status certbot.timer
 ```
 
-Self-Signed Certificates
+## Self-Signed Certificates
 
 Self-signed certificates show a "not secure" warning. The issuer and subject fields match the same domain. These work for development but cause browser warnings in production.
 
@@ -266,13 +264,13 @@ mkcert localhost 127.0.0.1 ::1
 
 This installs a local CA into your system trust store and issues certificates signed by it. Chrome trusts them without warnings.
 
-Certificate Name Mismatch
+## Certificate Name Mismatch
 
 This occurs when the certificate's Common Name (CN) or Subject Alternative Name (SAN) doesn't match the requested domain. Chrome shows "ERR_CERT_COMMON_NAME_INVALID" or "ERR_CERT_NAME_CONSTRAINT_FAILED". Check the certificate's Subject and SAN fields against the domain you're visiting.
 
 Modern certificates should use SANs rather than the legacy CN field for domain matching. If you're issuing certificates and only specifying a CN, add explicit SAN entries. Chrome deprecated CN matching for DNS names several years ago.
 
-Chain Issues
+## Chain Issues
 
 Certificate chain problems arise when intermediate certificates are missing or misconfigured. Chrome shows "ERR_CERT_AUTHORITY_INVALID" or "ERR_CERT_CHAINING_ERROR". The Security tab in DevTools clearly displays broken chain visualization.
 
@@ -285,7 +283,7 @@ openssl s_client -connect example.com:443 -showcerts </dev/null 2>/dev/null | gr
 
 A result of 1 means only the leaf certificate is being served. you're missing intermediates.
 
-Revoked Certificates
+## Revoked Certificates
 
 Chrome checks certificate revocation status via CRL (Certificate Revocation List) or OCSP (Online Certificate Status Protocol). A revoked certificate shows "ERR_CERT_REVOKED". Chrome maintains its own revocation checks but also respects OCSP responses.
 
@@ -299,7 +297,7 @@ Query OCSP directly
 openssl ocsp -issuer issuer.pem -cert cert.pem -url http://ocsp.example.com -resp_text
 ```
 
-Certificate Pinning Considerations
+## Certificate Pinning Considerations
 
 Some sites implement certificate pinning to prevent man-in-the-middle attacks. When a site pins its certificate, Chrome only accepts the pinned certificate or certificates in the chain.
 
@@ -310,11 +308,11 @@ If you're developing against a pinned site:
 
 HTTP Public Key Pinning (HPKP) was deprecated and removed from Chrome, so modern pinning happens at the application level (in mobile apps and via Chrome's built-in preload list for major Google domains). If you're using a MITM proxy for debugging and seeing mysterious failures on Google properties, Chrome's built-in pins may be the cause.
 
-Automating Certificate Monitoring
+## Automating Certificate Monitoring
 
 Relying on manual checks means you'll discover expired certificates at the worst possible time. when a customer files a support ticket. Automate expiration monitoring as part of your infrastructure.
 
-Simple Bash Monitoring Script
+## Simple Bash Monitoring Script
 
 ```bash
 #!/bin/bash
@@ -348,7 +346,7 @@ done
 
 Run this daily via cron and pipe alerts to Slack, PagerDuty, or email. Many teams also use purpose-built tools like `cert-manager` in Kubernetes or UptimeRobot's SSL monitoring feature.
 
-Best Practices for Developers
+## Best Practices for Developers
 
 - Monitor certificate expiration: Use automated monitoring tools or scripts to check certificate validity before expiration. set alerts at 60, 30, and 14 days
 - Enable auto-renewal: Let's Encrypt with Certbot or similar tools automate the renewal cycle; verify the automation works with dry-run tests

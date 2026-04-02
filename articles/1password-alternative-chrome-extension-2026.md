@@ -19,7 +19,7 @@ tags: [claude-code, claude-skills]
 
 This guide evaluates the best 1Password alternatives with Chrome extensions, focusing on features that matter to developers: open-source transparency, CLI access, API capabilities, and self-hosting options.
 
-Bitwarden: The Open-Source Standard
+## Bitwarden: The Open-Source Standard
 
 Bitwarden has emerged as the leading open-source alternative to 1Password, offering a full-featured Chrome extension that rivals the commercial competition. The extension supports:
 
@@ -52,7 +52,7 @@ services:
       - ./data:/data
 ```
 
-Proton Pass: Privacy-First Alternative
+## Proton Pass: Privacy-First Alternative
 
 Proton Pass, developed by the team behind Proton Mail, brings strong privacy credentials to the password management space. The Chrome extension includes:
 
@@ -63,7 +63,7 @@ Proton Pass, developed by the team behind Proton Mail, brings strong privacy cre
 
 What sets Proton Pass apart for developers is its integration with Proton's ecosystem. If you're already using Proton Mail or Proton VPN, the unified experience simplifies credential management across services. The free tier includes unlimited devices and password storage, making it accessible for individual developers.
 
-KeePassXC: For Power Users
+## KeePassXC: For Power Users
 
 While KeePassXC doesn't have an official Chrome extension, it integrates beautifully with browser-based workflows through browser-specific plugins. This approach offers maximum flexibility for developers who prefer local-only storage.
 
@@ -79,7 +79,7 @@ keepassxc-cli generate -L 20 -A -a -n -c
 
 For developers comfortable with manual configuration, KeePassXC provides complete control. Pair it with the KeePassHTTP-Connector extension for browser integration, though this requires additional setup.
 
-NordPass: Streamlined Experience
+## NordPass: Streamlined Experience
 
 NordPass, from the creators of NordVPN, offers a clean Chrome extension with a focus on simplicity. The extension includes:
 
@@ -90,7 +90,7 @@ NordPass, from the creators of NordVPN, offers a clean Chrome extension with a f
 
 The XCHM (Encrypted JSON) file format allows you to export and import credentials between password managers, providing migration flexibility. For teams already using NordVPN, the unified billing and familiar interface reduce friction.
 
-CLI-First Approaches
+## CLI-First Approaches
 
 For developers who prefer terminal-based workflows, several options exist beyond traditional GUI-focused managers:
 
@@ -126,7 +126,7 @@ pass -c work/database
 
 These CLI tools integrate with Chrome through browser plugins that communicate with your local password store, providing a hybrid approach combining CLI flexibility with browser convenience.
 
-Choosing the Right Alternative
+## Choosing the Right Alternative
 
 Selecting a 1Password alternative depends on your specific requirements:
 
@@ -142,7 +142,7 @@ For teams requiring enterprise features like directory sync and advanced reporti
 
 The Chrome extension experience varies significantly between options. Bitwarden provides the closest feel to 1Password's polished interface, while KeePassXC requires more manual configuration but offers unmatched transparency.
 
-Migration Strategies
+## Migration Strategies
 
 Moving from 1Password to an alternative requires careful planning. Export your 1Password data in a format your new manager accepts:
 
@@ -153,11 +153,11 @@ Moving from 1Password to an alternative requires careful planning. Export your 1
 
 For developers managing team credentials, consider maintaining a transition period where both systems remain active, gradually shifting workflows to the new solution.
 
-Integrating Your Password Manager With Developer Workflows
+## Integrating Your Password Manager With Developer Workflows
 
 The real separator between password managers for developers is not the Chrome extension UI. it is how well the tool integrates into your actual build and deployment pipelines.
 
-Bitwarden in CI/CD
+## Bitwarden in CI/CD
 
 The Bitwarden CLI shines in automated environments. You can retrieve secrets at build time rather than hardcoding them in environment files:
 
@@ -186,7 +186,7 @@ gopass git log services/stripe/api-key
 
 The Git history becomes your credential changelog. Combined with GPG-signed commits, you get cryptographic proof of who rotated each secret.
 
-KeePassXC and SSH Agent Integration
+## KeePassXC and SSH Agent Integration
 
 KeePassXC supports acting as an SSH agent, automatically serving your SSH keys to the terminal when the database is unlocked:
 
@@ -197,7 +197,7 @@ KeePassXC supports acting as an SSH agent, automatically serving your SSH keys t
 
 This eliminates the need to call `ssh-add` on every session and avoids leaving unencrypted keys loaded in memory indefinitely.
 
-Evaluating the Chrome Extension Experience
+## Evaluating the Chrome Extension Experience
 
 The Chrome extension is the daily driver for most developers, and quality varies more than feature tables suggest.
 
@@ -209,7 +209,7 @@ KeePassXC with the KeePass-XC browser extension communicates over a local WebSoc
 
 NordPass has the simplest extension UI of the group. For developers who want something that works without configuration, that is a genuine advantage. The password health dashboard visible from the extension popup surfaces reused and weak passwords across your vault at a glance.
 
-Self-Hosting Bitwarden: A Practical Walkthrough
+## Self-Hosting Bitwarden: A Practical Walkthrough
 
 If you decide Bitwarden self-hosted is the right choice, here is a realistic production setup beyond the basic Docker Compose snippet. The official `bitwarden.sh` script handles most of the complexity:
 
@@ -229,7 +229,7 @@ The installer provisions a full nginx, MSSQL, and API container stack behind TLS
 
 For organizations that need SSO, Bitwarden's self-hosted tier supports SAML 2.0 and OpenID Connect integrations with providers like Okta and Azure AD. features that cost substantially more if you use 1Password Teams or Enterprise.
 
-Common Pitfalls When Switching
+## Common Pitfalls When Switching
 
 Partial exports: 1Password exports do not include file attachments. If you store SSH keys, certificates, or other files as vault attachments, download them separately before you decommission your 1Password account.
 
@@ -238,7 +238,6 @@ TOTP migration: Time-based one-time passwords (TOTP) stored in 1Password are exp
 Browser extension conflicts: Running two password manager extensions simultaneously causes autofill races where both try to fill the same field. Disable the 1Password extension in Chrome before enabling its replacement to avoid confusing behavior during the transition period.
 
 Team shared vaults: If your team uses 1Password Teams, switching requires migrating all shared vault items, then updating access grants in the new system. Bitwarden Organizations provides a comparable model, but the access control granularity differs. Map your existing permission structure before the migration rather than rebuilding it from memory afterward.
-
 
 Related Reading
 

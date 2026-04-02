@@ -27,7 +27,7 @@ Generate a card component from a description
 
 This skill works particularly well with modern frameworks like React, Vue, and Svelte. It understands component composition patterns and can generate accessible HTML structures with appropriate ARIA attributes.
 
-What frontend-design actually produces
+## What frontend-design actually produces
 
 When you invoke `/frontend-design` with a component description, the skill generates more than raw markup. It outputs a complete implementation file with props defined, default values set, and event handlers wired up. For a React project, you get a typed component with PropTypes or TypeScript interfaces depending on your project setup.
 
@@ -67,7 +67,7 @@ export function ConfirmModal({ isOpen, title, message, onConfirm, onCancel }) {
 
 Notice that the skill uses the native `<dialog>` element rather than a `<div>` with ARIA roles bolted on, and it wires focus management correctly. These are the kinds of decisions that take time to get right manually but come out of the skill correctly by default.
 
-Responsive layout generation
+## Responsive layout generation
 
 The skill also handles layout problems well. When you describe a grid or a responsive sidebar, it generates CSS that works across breakpoints without media query bloat:
 
@@ -106,7 +106,7 @@ The canvas-design skill creates visual assets directly within your project. Inst
 
 This skill is invaluable for prototyping and creating placeholder graphics during development.
 
-When canvas-design saves the most time
+## When canvas-design saves the most time
 
 The biggest wins come during early prototyping, when you need visual placeholders before the design team delivers final assets. Instead of using lorem picsum images or generic icons, you can generate on-brand placeholder graphics that accurately represent the final layout.
 
@@ -138,7 +138,7 @@ Generate API documentation from JSDoc comments
 
 This skill preserves formatting, handles page breaks intelligently, and can include syntax-highlighted code blocks.
 
-Building a living component library
+## Building a living component library
 
 One strong use case for the pdf skill is generating component documentation during CI. After each release, invoke `/pdf` to regenerate the style guide with the latest component API. The resulting PDF becomes a deliverable for stakeholders who do not have access to Storybook.
 
@@ -164,7 +164,7 @@ The tdd skill enforces test-first development. It writes unit tests before imple
 
 Pair this skill with Vitest for JavaScript projects or Jest for React applications. The skill understands testing patterns specific to frontend development, including mocking DOM APIs and handling asynchronous operations. For a full breakdown of tdd alongside other developer-focused skills, see [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/).
 
-What good TDD output looks like
+## What good TDD output looks like
 
 The skill does not just write happy-path tests. It generates edge cases that developers commonly miss: empty states, boundary conditions, error states, and accessibility checks. Here is what the pagination example produces:
 
@@ -222,7 +222,7 @@ Query your project knowledge
 
 This skill connects with tools like Obsidian and Notion, creating a unified knowledge management system. For large projects with multiple contributors, supermemory becomes essential for maintaining institutional knowledge. To make the most of supermemory without burning tokens, check out [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/).
 
-Practical supermemory queries for frontend teams
+## Practical supermemory queries for frontend teams
 
 The skill excels at answering the kind of questions that would otherwise require reading through Slack history or old PR comments:
 
@@ -244,7 +244,7 @@ Optimize a virtual scrolling list implementation
 
 Frontend developers benefit from this skill when dealing with state management complexity, memoization strategies, and bundle optimization.
 
-Concrete optimization scenarios
+## Concrete optimization scenarios
 
 The alg skill is most valuable when you have a specific performance problem to diagnose. Here are scenarios where it consistently produces actionable output:
 
@@ -267,7 +267,7 @@ Generate a technical specification document
 
 This skill maintains consistent formatting across documents and can convert between markdown and Word formats.
 
-When docx beats pdf for frontend work
+## When docx beats pdf for frontend work
 
 Use docx when stakeholders need to edit or comment on the document. A product manager reviewing a component specification can add tracked changes and inline comments to a .docx file. A PDF is read-only. The docx skill respects this distinction and outputs files that open cleanly in Microsoft Word, Google Docs, and LibreOffice without formatting corruption.
 
@@ -282,7 +282,7 @@ Create a performance metrics dashboard
 
 This skill integrates with charting libraries and can export data from your application's analytics.
 
-Tracking Core Web Vitals across sprints
+## Tracking Core Web Vitals across sprints
 
 One practical use is building a sprint-by-sprint performance tracking sheet. Feed the skill your Lighthouse scores and it generates a spreadsheet with:
 
@@ -293,7 +293,7 @@ One practical use is building a sprint-by-sprint performance tracking sheet. Fee
 
 This turns raw Lighthouse output into an artifact you can share with engineering leadership without manual formatting work.
 
-Skill Comparison at a Glance
+## Skill Comparison at a Glance
 
 | Skill | Primary use | Best for | Replaces |
 |---|---|---|---|
@@ -306,7 +306,7 @@ Skill Comparison at a Glance
 | docx | Editable documents | Review workflows | Manual Word formatting |
 | xlsx | Spreadsheet reporting | Metrics tracking | Manual Excel work |
 
-Putting It All Together
+## Putting It All Together
 
 The real power emerges when you combine these skills in your workflow. Here is a typical development sequence:
 
@@ -318,7 +318,7 @@ The real power emerges when you combine these skills in your workflow. Here is a
 
 This integrated approach reduces context switching and keeps your development process coherent.
 
-Choosing the Right Skill
+## Choosing the Right Skill
 
 Not every project requires all skills. Consider these factors:
 
@@ -329,7 +329,7 @@ Not every project requires all skills. Consider these factors:
 
 Start with the skills that address your immediate problems, then expand as your workflow matures.
 
-Summary
+## Summary
 
 Invoke `/frontend-design` to scaffold components, `/tdd` to write tests before implementation, `/supermemory` to query your project knowledge, and `/pdf` or `/docx` to generate documentation. Start with the skill that addresses your most frequent bottleneck.
 

@@ -16,7 +16,7 @@ tags: [claude-code, claude-skills]
 
 Go modules have become the standard for dependency management in Go projects. When paired with Claude Code's AI capabilities, you can accelerate module development while maintaining code quality through automated testing and documentation workflows. This guide walks you through building production-ready Go modules with Claude Code, from initial setup through versioning, using specialized skills for testing, documentation, and project management.
 
-Initializing Your Go Module
+## Initializing Your Go Module
 
 Start by creating a new Go module with proper initialization. The foundation of any Go module begins with a well-structured `go.mod` file:
 
@@ -48,7 +48,7 @@ go work init ./moduleA ./moduleB
 
 This is especially useful when you're developing a shared library alongside the application that consumes it.
 
-Structuring Your Module Architecture
+## Structuring Your Module Architecture
 
 A well-organized Go module follows Go conventions while maintaining clear separation of concerns. Here's a practical project structure for a service-style module:
 
@@ -90,7 +90,7 @@ type OrderRepository interface {
 
 Keep interfaces small and focused. The Go community idiom, accept interfaces, return structs, means your public functions should accept interface parameters but return concrete types. This keeps code flexible for callers without hiding useful type information.
 
-Writing Testable Code
+## Writing Testable Code
 
 Go's testing package provides everything needed for unit testing. Write tests alongside your code using table-driven patterns:
 
@@ -170,7 +170,7 @@ func TestOrderService_Integration(t *testing.T) {
 
 Run integration tests explicitly with `go test -tags integration ./...` so they don't slow down normal development cycles.
 
-Documenting Your Module
+## Documenting Your Module
 
 Good documentation makes your module usable by others, and by your future self. Go provides documentation tooling built directly into the language through `godoc`:
 
@@ -211,7 +211,7 @@ func ExampleSum() {
 
 Run `go doc ./...` to see rendered documentation for all packages. For more comprehensive documentation, the pdf skill can help generate formatted documentation files for distribution to teams that prefer static documents over browsing `pkg.go.dev`.
 
-Managing Dependencies Effectively
+## Managing Dependencies Effectively
 
 Go modules handle dependency versions through `go.mod` and `go.sum`. Keep dependencies minimal and audit them regularly:
 
@@ -242,7 +242,7 @@ go mod vendor
 go build -mod=vendor ./...
 ```
 
-Building CLI Tools
+## Building CLI Tools
 
 Many Go modules expose command-line interfaces. Use the standard library's `flag` package for simple CLIs or `spf13/cobra` for more complex multi-command tools:
 
@@ -309,7 +309,7 @@ func init() {
 
 When building CLIs, always return meaningful exit codes. Exit 0 for success, exit 1 for general errors, and exit 2 for usage errors (wrong flags, missing arguments). This matters for shell scripts that call your tool.
 
-Comparing Dependency Management Approaches
+## Comparing Dependency Management Approaches
 
 Understanding the tradeoffs between Go module strategies helps you make better architectural decisions:
 
@@ -323,7 +323,7 @@ Understanding the tradeoffs between Go module strategies helps you make better a
 
 Go's minimal version selection (MVS) algorithm means you always get the minimum version that satisfies all requirements, unlike npm's behavior of installing the latest compatible version. This predictability is a significant advantage for long-running projects.
 
-Versioning and Releases
+## Versioning and Releases
 
 Follow semantic versioning for Go modules. Use Git tags to mark releases:
 
@@ -363,7 +363,7 @@ git tag v1.3.0-rc.1
 git tag v1.3.0
 ```
 
-Automating Workflows
+## Automating Workflows
 
 Combine Claude Code skills for automated development workflows. Create a Makefile for common tasks:
 
@@ -398,7 +398,7 @@ Notice the `-ldflags="-X main.version=..."` in the build target, this embeds the
 
 The tdd skill can suggest improvements to your test coverage by analyzing which code paths are exercised. For documentation generation, the pdf skill converts Go docs into shareable formats suitable for team distribution or client handoffs.
 
-Error Handling Patterns
+## Error Handling Patterns
 
 Good Go modules handle errors consistently. Establish patterns early:
 
@@ -431,10 +431,9 @@ func (s *OrderService) GetOrder(ctx context.Context, id string) (Order, error) {
 
 Callers can then use `errors.Is` to check for sentinel errors and `errors.As` to extract typed errors, maintaining the full error chain for logging while still enabling programmatic error handling.
 
-Conclusion
+## Conclusion
 
 Building Go modules with Claude Code combines Go's simplicity and performance with AI-assisted development. Focus on clean package design, comprehensive testing, and clear documentation from the start. Lean on interfaces to create architectural boundaries, use table-driven tests to cover edge cases thoroughly, and establish consistent error handling patterns before your codebase grows large enough to make refactoring painful. The skills ecosystem, including tdd, pdf, and supermemory, provides targeted assistance for different aspects of module development. Start with a solid foundation, ship working code quickly, and iterate based on actual usage patterns rather than speculation.
-
 
 Related Reading
 

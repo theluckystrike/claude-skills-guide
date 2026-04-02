@@ -13,9 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code for Apache Drill Workflow Tutorial
-
 Apache Drill is a schema-free SQL query engine that enables analysts and developers to explore data across multiple data sources, including HDFS, MongoDB, Amazon S3, and cloud storage, using familiar SQL syntax. When combined with Claude Code's automation capabilities, you can create powerful, reproducible workflows for data exploration, schema discovery, and complex query generation. This tutorial walks you through building Drill-powered workflows using Claude Code, from initial setup through production-ready automation patterns.
 
 Why Combine Apache Drill with Claude Code?
@@ -24,7 +21,7 @@ Before jumping into setup, it's worth understanding what you gain from this comb
 
 Teams that integrate Claude Code into their Drill workflows typically see faster iteration on ad hoc analysis requests, more consistent query structures across analysts, and reproducible scripts that non-SQL users can run with simple parameter changes.
 
-Prerequisites and Setup
+## Prerequisites and Setup
 
 Before creating Drill workflows with Claude Code, ensure you have the following components installed and configured:
 
@@ -51,7 +48,7 @@ curl -s -X POST -H "Content-Type: application/json" \
 
 If this returns `[{"result":"2"}]`, your pipeline is working end-to-end.
 
-Connecting Claude Code to Apache Drill
+## Connecting Claude Code to Apache Drill
 
 The most straightforward approach involves using Drill's REST API through curl commands executed via Claude Code's Bash tool. This method requires no additional Python dependencies and works across all platforms.
 
@@ -104,11 +101,11 @@ curl -u "$DRILL_USER:$DRILL_PASS" -X POST -H "Content-Type: application/json" \
   "http://$DRILL_HOST:$DRILL_PORT/query.json"
 ```
 
-Building Your First Drill Workflow
+## Building Your First Drill Workflow
 
 A practical Drill workflow typically involves three phases: schema discovery, query construction, and result export. Let's build a complete example that explores a nested JSON dataset.
 
-Step 1: Discover Available Data Sources
+## Step 1: Discover Available Data Sources
 
 Start by listing storage plugins and their configurations:
 
@@ -132,7 +129,7 @@ Claude Code can automate this exploration, systematically discovering tables and
 
 Claude Code will issue the REST API call, parse the JSON response, and present a readable summary. far faster than manually scrolling through raw JSON.
 
-Step 2: Analyze Schema with DESCRIBE
+## Step 2: Analyze Schema with DESCRIBE
 
 Drill's DESCRIBE command reveals complex nested structures, crucial for JSON, Parquet, and MongoDB sources:
 
@@ -154,7 +151,7 @@ LIMIT 50
 
 This reveals whether fields are consistently typed across records, critical information before running aggregations. Pass this output to Claude Code and ask it to identify any fields with inconsistent types that could cause query failures at scale.
 
-Step 3: Construct and Execute Queries
+## Step 3: Construct and Execute Queries
 
 Now build your analysis query. A well-structured Drill query handles complex types explicitly:
 
@@ -183,7 +180,7 @@ curl -X POST -H "Content-Type: application/json" \
 
 When queries fail, pass the full error response to Claude Code for diagnosis. Drill's error messages often include detailed position information that Claude Code can use to pinpoint and fix syntax issues in complex queries.
 
-Working with Multi-Source Joins
+## Working with Multi-Source Joins
 
 One of Drill's most powerful capabilities is joining data across storage systems. You can join a JSON file on the local filesystem with a MongoDB collection and a Parquet file on S3 in a single query. Claude Code helps manage the complexity of cross-source queries.
 
@@ -209,7 +206,7 @@ joins these three sources to show total revenue by customer tier and campaign so
 
 Claude Code will produce a properly structured multi-source join, handling the different plugin naming conventions automatically.
 
-Exporting and Transforming Results
+## Exporting and Transforming Results
 
 Raw Drill query output is a JSON object with a `rows` array. For downstream processing, you often need CSV or a specific JSON structure. Here is a reusable extraction pattern:
 
@@ -224,7 +221,7 @@ curl -s -X POST -H "Content-Type: application/json" \
 
 For transforming output into a specific shape for downstream APIs or dashboards, describe the target format to Claude Code and it will generate the appropriate jq transformation pipeline.
 
-Automating Repeated Workflows
+## Automating Repeated Workflows
 
 For recurring analysis tasks, create Claude Code skills that encapsulate entire workflows. A typical pattern involves:
 
@@ -295,7 +292,7 @@ fi
 echo "Report saved to $OUTPUT_DIR"
 ```
 
-Comparing Drill to Other Query Engines
+## Comparing Drill to Other Query Engines
 
 Understanding where Drill fits relative to other tools helps you make better architectural decisions:
 
@@ -310,7 +307,7 @@ Understanding where Drill fits relative to other tools helps you make better arc
 
 Drill's embedded mode makes it uniquely suited to developer workstations and CI pipelines, no cluster required. Claude Code workflows built on Drill can run anywhere Drill can be installed, making them highly portable.
 
-Best Practices for Drill Workflows
+## Best Practices for Drill Workflows
 
 When building production-grade Drill workflows with Claude Code, consider these recommendations:
 
@@ -353,7 +350,7 @@ curl -s http://localhost:8047/profiles/YOUR_QUERY_ID.json | jq '.totalFragmentDu
 
 Claude Code can identify which fragments consumed the most time and suggest targeted optimizations such as filter pushdown, partition pruning, or join reordering.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Apache Drill from an interactive query tool into an automatable workflow engine. By encapsulating connection logic, query templates, and result processing into skills, you enable reproducible data exploration across your organization. Start with simple REST API interactions, then graduate to parameterized workflows that handle real-world analytical requirements. The combination of Drill's schema-free flexibility and Claude Code's automation capabilities creates a powerful foundation for data-driven workflows that scale from individual developer machines to multi-node clusters without requiring changes to your automation layer.
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Azure Cost Management Workflow
 
 Managing Azure costs effectively requires consistent monitoring, automated alerts, and actionable insights. By combining Claude Code with Azure's Cost Management APIs, you can create powerful workflows that automate cost tracking and optimization tasks. This guide shows you how to build Claude skills specifically designed for Azure cost management.
 
-Understanding Azure Cost Management APIs
+## Understanding Azure Cost Management APIs
 
 Before building Claude skills, you need to understand how Azure exposes cost data. The Azure Cost Management API provides programmatic access to:
 
@@ -38,7 +37,7 @@ Get access token
 TOKEN=$(az account get-access-token --query accessToken -o tsv)
 ```
 
-Building a Basic Azure Cost Query Skill
+## Building a Basic Azure Cost Query Skill
 
 The foundation of any cost management workflow is querying cost data. Here's a skill that retrieves cost summaries for a specified time period:
 
@@ -94,7 +93,7 @@ curl -s -X GET \
 This returns daily cost breakdowns grouped by resource group, giving you visibility into where your spending occurs.
 ```
 
-Creating a Budget Monitoring Skill
+## Creating a Budget Monitoring Skill
 
 Proactive cost management requires budget alerts. This skill creates and manages budget alerts:
 
@@ -135,7 +134,7 @@ curl -s -X GET \
 This returns all budgets with their current spending versus limits.
 ```
 
-Implementing Cost Anomaly Detection
+## Implementing Cost Anomaly Detection
 
 Unexpected cost spikes can indicate issues like misconfigured resources or security breaches. This skill analyzes cost patterns:
 
@@ -181,7 +180,7 @@ echo "$DAILY_COSTS" | jq '[.properties.rows[][0]] | map(select(. > (add / length
 This approach helps identify days where spending exceeded twice the average, requiring investigation.
 ```
 
-Automating Cost Optimization Recommendations
+## Automating Cost Optimization Recommendations
 
 Azure provides recommendations through the Azure Advisor API. This skill fetches and displays cost-saving recommendations:
 
@@ -222,9 +221,9 @@ tools:
   - Read
 ---
 
-Azure Monitor Integration
+## Azure Monitor Integration
 
-Publishing Cost Metrics
+## Publishing Cost Metrics
 
 Send cost data to Azure Monitor for custom dashboards:
 

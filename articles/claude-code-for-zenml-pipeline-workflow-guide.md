@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for ZenML Pipeline Workflow Guide
 
@@ -21,7 +20,7 @@ If you're building machine learning pipelines in Python, ZenML has become a go-t
 
 you'll learn how to integrate Claude Code into your ZenML workflow for faster development, cleaner code, and more maintainable pipelines.
 
-Why ZenML and Claude Code Belong Together
+## Why ZenML and Claude Code Belong Together
 
 ZenML handles a genuine problem in machine learning engineering: reproducibility. Every pipeline run is tracked, every artifact versioned, and every step configuration logged. But writing ZenML pipelines well requires knowing its conventions, the right way to annotate return types, configure stacks, handle materializers, and set up integrations with external tools.
 
@@ -35,7 +34,7 @@ Claude Code bridges the knowledge gap. Instead of spending twenty minutes huntin
 | Write step docstrings + type hints | Manual effort | Ask Claude to annotate |
 | Set up CI/CD | Copy-paste from examples | Generate + customize |
 
-Setting Up Claude Code with ZenML
+## Setting Up Claude Code with ZenML
 
 Before diving into workflow optimization, ensure Claude Code is installed and configured. The installation is straightforward:
 
@@ -78,11 +77,11 @@ Conventions
 
 With this file in place, Claude understands your infrastructure choices from the first message of every session.
 
-Creating ZenML Pipelines with Claude Code
+## Creating ZenML Pipelines with Claude Code
 
 One of the most powerful features of Claude Code is its ability to generate boilerplate code. Instead of manually writing every step, you can describe your pipeline and let Claude generate the skeleton.
 
-Generating a Basic Pipeline
+## Generating a Basic Pipeline
 
 Say you need a data ingestion pipeline with validation. Simply describe what you need:
 
@@ -134,7 +133,7 @@ def ml_pipeline(file_path: str):
 
 This approach saves significant setup time and ensures you follow ZenML best practices from the start.
 
-Adding Proper Type Annotations and Return Types
+## Adding Proper Type Annotations and Return Types
 
 ZenML relies heavily on Python type annotations for artifact tracking. Generated code often needs type annotations tightened up. Ask Claude to improve the generated pipeline:
 
@@ -202,7 +201,7 @@ def evaluator(
 
 The `Annotated` types with string names are especially important, ZenML uses them as artifact names in its dashboard, making it much easier to track what each step produced when reviewing run history.
 
-Debugging Pipeline Issues
+## Debugging Pipeline Issues
 
 Pipeline errors can be cryptic. Claude Code excels at debugging by analyzing error messages and suggesting fixes. When a pipeline fails, simply paste the error into Claude and ask for help:
 
@@ -212,7 +211,7 @@ claude: Debug this ZenML error: "KeyError: 'step_name' when running pipeline"
 
 Claude will analyze the error context, check your step configurations, and suggest fixes, such as ensuring step names match between decorator definitions and pipeline calls.
 
-Common ZenML Errors and Claude-Assisted Fixes
+## Common ZenML Errors and Claude-Assisted Fixes
 
 Materializer not found errors occur when ZenML doesn't know how to serialize a custom class returned from a step. Claude can generate a custom materializer:
 
@@ -266,7 +265,7 @@ zenml stack register ml-stack \
 
 Ask Claude to generate the full registration sequence for your infrastructure by describing your stack components and cloud provider.
 
-Optimizing Pipeline Configuration
+## Optimizing Pipeline Configuration
 
 ZenML offers numerous configuration options for orchestrators, artifact stores, and step parameters. Claude can help you choose the right configuration for your infrastructure:
 
@@ -300,7 +299,7 @@ artifact_store = GCPArtifactStore(
 )
 ```
 
-Configuring Step-Level Resources
+## Configuring Step-Level Resources
 
 For training steps that need GPUs or large memory allocations, ZenML lets you specify resource requirements at the step level. This prevents expensive compute from being allocated to lightweight preprocessing steps:
 
@@ -325,7 +324,7 @@ def deep_learning_trainer(
 
 Claude can help you right-size these settings based on your typical dataset sizes and model architectures. Describe your workload and ask for recommended resource allocations.
 
-Implementing CI/CD for ZenML Pipelines
+## Implementing CI/CD for ZenML Pipelines
 
 Modern MLOps requires automated testing and deployment. Claude Code can help you set up GitHub Actions or GitLab CI pipelines that run ZenML workflows:
 
@@ -360,7 +359,7 @@ jobs:
 
 Claude can generate this configuration and explain each component, making CI/CD setup accessible even for teams new to MLOps.
 
-Adding Model Quality Gates
+## Adding Model Quality Gates
 
 A CI/CD pipeline that blindly deploys every model is more dangerous than no automation at all. Claude can help you add quality gate logic that blocks deployment if accuracy drops below a threshold:
 
@@ -391,7 +390,7 @@ if __name__ == "__main__":
 
 This pattern makes the CI step fail with a non-zero exit code when model quality regresses, preventing bad models from reaching production automatically.
 
-Best Practices for Claude Code + ZenML
+## Best Practices for Claude Code + ZenML
 
 To get the most out of this workflow combination, follow these recommendations:
 
@@ -433,7 +432,7 @@ def test_evaluator_returns_float():
 
 Running these tests in CI, before the full pipeline runs, gives you fast feedback on step-level regressions without waiting for artifact materialization.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms ZenML pipeline development from a manual, error-prone process into an efficient, AI-assisted workflow. By generating boilerplate code, debugging errors, optimizing configurations, and setting up CI/CD, Claude Code becomes an invaluable team member in your MLOps journey.
 

@@ -13,11 +13,10 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Caching is one of the most effective ways to speed up your GitHub Actions workflows. When you integrate Claude Code into your development pipeline, understanding how to cache dependencies, build artifacts, and Claude's internal caches can shave minutes off every workflow run. This guide covers practical caching strategies you can implement today.
 
-Understanding the GitHub Actions Cache
+## Understanding the GitHub Actions Cache
 
 GitHub Actions provides a built-in cache mechanism that stores files and directories across workflow runs. The cache lives for up to 90 days and is scoped to your repository and branch, meaning you can access cached files when the same workflow runs again. Understanding how to use this effectively is crucial for optimizing your pipelines.
 
@@ -37,11 +36,11 @@ The basic syntax uses the official `actions/cache` action:
 
 This pattern caches the `node_modules` directory using a hash of your lockfile as part of the cache key. When dependencies change, the cache invalidates automatically.
 
-Caching Dependencies for Claude Code Projects
+## Caching Dependencies for Claude Code Projects
 
 Claude Code projects often involve multiple dependency ecosystems. Here is how to handle the most common ones.
 
-Node.js and npm Caching
+## Node.js and npm Caching
 
 For JavaScript and TypeScript projects that Claude Code manages or generates, npm caching follows the pattern above. The `actions/setup-node` action provides a simpler built-in interface:
 
@@ -71,7 +70,7 @@ jobs:
 
 Notice the `cache: 'npm'` parameter in the setup-node action. This single line handles caching automatically, detecting your package manager and applying appropriate caching based on your lockfile.
 
-Python and pip Caching
+## Python and pip Caching
 
 Python projects benefit from pip cache in workflows. The `actions/setup-python` action provides similar built-in caching:
 
@@ -102,7 +101,7 @@ For more control, or for projects using uv instead of pip, you can configure man
     key: ${{ runner.os }}-uv-${{ hashFiles('/uv.lock') }}
 ```
 
-Docker Layer Caching
+## Docker Layer Caching
 
 Building Docker containers in CI can be slow without proper caching. The `docker/build-push-action` supports cache exports that work across builds:
 
@@ -119,11 +118,11 @@ Building Docker containers in CI can be slow without proper caching. The `docker
 
 This approach uses GitHub Actions cache for Docker build layers, dramatically reducing build times for projects using Docker with Claude Code.
 
-Advanced Caching Strategies
+## Advanced Caching Strategies
 
 Once you master basic caching, implement these strategies for maximum efficiency.
 
-Multi-Layer Caching
+## Multi-Layer Caching
 
 For monorepos or projects with multiple dependency types, cache each dependency layer separately so updating one does not invalidate the others:
 
@@ -153,7 +152,7 @@ For monorepos or projects with multiple dependency types, cache each dependency 
       ${{ runner.os }}-cypress-
 ```
 
-Platform-Specific Caching with Matrix Builds
+## Platform-Specific Caching with Matrix Builds
 
 Different operating systems require different caching strategies. Use matrix builds to optimize for each platform:
 
@@ -177,11 +176,11 @@ jobs:
 
 Each OS and Node version combination gets its own cache, preventing cross-platform cache pollution.
 
-Caching Claude Code Artifacts
+## Caching Claude Code Artifacts
 
 When Claude Code generates code, builds, or performs analysis, certain directories can be cached between runs to avoid redundant work.
 
-Caching Build Artifacts
+## Caching Build Artifacts
 
 If your workflow runs builds or compilations, cache the output directories:
 
@@ -198,7 +197,7 @@ If your workflow runs builds or compilations, cache the output directories:
       ${{ runner.os }}-build-
 ```
 
-Caching Test Results
+## Caching Test Results
 
 Running tests repeatedly can be expensive. While you cannot cache test execution directly, you can cache test reports and coverage data:
 
@@ -210,7 +209,7 @@ Running tests repeatedly can be expensive. While you cannot cache test execution
     key: ${{ runner.os }}-coverage-${{ hashFiles('/*.py') }}
 ```
 
-Strategic Cache Key Design
+## Strategic Cache Key Design
 
 Your cache key strategy determines hit rates. The most effective approach uses multiple restore keys that provide graceful degradation when exact cache misses occur:
 
@@ -223,7 +222,7 @@ restore-keys: |
 
 This strategy creates a precise match first, then falls back to any cache with the same lockfile hash, then any cache with the same operating system prefix. When an exact match fails, GitHub searches each restore key in order, so even without an exact cache hit you often get a partial cache that speeds up dependency installation significantly.
 
-Cache Invalidation Considerations
+## Cache Invalidation Considerations
 
 GitHub Actions caches have a retention period of up to 90 days, but you should understand when caches invalidate:
 
@@ -241,7 +240,7 @@ For projects where Claude Code generates files frequently, consider caching gene
     key: ${{ runner.os }}-types-${{ hashFiles('src//*.ts') }}
 ```
 
-Using Claude Skills with Cached Workflows
+## Using Claude Skills with Cached Workflows
 
 Several Claude Code skills work well with cached workflows. The tdd skill generates test files that benefit from cached node_modules. The pdf skill produces output files that can be cached between runs. The frontend-design skill creates component files where caching build dependencies improves iteration speed.
 
@@ -267,7 +266,7 @@ steps:
     run: npm run build
 ```
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Avoid caching too aggressively. Caching files that change every run wastes storage and provides no benefit. Also avoid cache keys that are too specific, they reduce hit rates significantly.
 
@@ -292,16 +291,15 @@ Cache Maven local repository
 
 Do not cache credentials, environment secrets, or temporary files. The cache action stores files unencrypted in GitHub's storage, so only safe, non-sensitive files belong in caches.
 
-Measuring Cache Performance
+## Measuring Cache Performance
 
 GitHub Actions shows cache hit rates in your workflow run logs. A well-configured cache typically achieves 70-90% hit rates on regular workflows, with dependency installation dropping from minutes to seconds on cache hits.
 
 Review your workflow summaries to identify which caches provide the most value. Focus optimization efforts on dependencies and build steps that show consistent cache misses. Track workflow run times before and after implementation to quantify the improvement.
 
-Conclusion
+## Conclusion
 
 Implementing proper caching strategies in your GitHub Actions workflows significantly reduces CI/CD execution times. Start with built-in caching via setup actions, expand to manual cache steps for specialized tools and build artifacts, and refine your cache key strategies based on actual hit rates. Every second saved on CI builds compounds over time, a minute saved across hundreds of workflow runs adds up to significant developer hours reclaimed throughout your project lifecycle. Combined with Claude Code skills like tdd, pdf, and frontend-design, efficient caching creates a faster development cycle.
-
 
 Related Reading
 

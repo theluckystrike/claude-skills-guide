@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-How to Make Claude Code Make Smaller, Focused Changes
-
 Claude Code excels at understanding context and executing complex tasks, but sometimes it produces larger changes than you need. When working on large codebases or collaborating with teams, smaller, incremental changes are easier to review, test, and maintain. This guide shows you how to guide Claude Code toward surgical, focused modifications, covering not just the prompting techniques but the reasoning behind each approach and how they interact with different Claude skills.
 
-The Problem with Broad Requests
+## The Problem with Broad Requests
 
 When you ask Claude Code to "refactor this module" or "improve this function," it often generates comprehensive changes across multiple files. While thorough, this approach creates several challenges:
 
@@ -30,7 +27,7 @@ When you ask Claude Code to "refactor this module" or "improve this function," i
 
 The solution lies in how you communicate with Claude Code. The model follows your lead. Vague requests invite comprehensive responses. Precise requests produce surgical ones.
 
-Why Claude Code Tends Toward Larger Changes
+## Why Claude Code Tends Toward Larger Changes
 
 Understanding the default behavior helps you counter it deliberately. Claude Code is trained to be thorough and helpful. When given an open-ended request like "improve this code," it interprets that as license to address every issue it detects, naming inconsistencies, missing error handling, suboptimal patterns, and structural concerns. It is doing exactly what it was built to do.
 
@@ -38,7 +35,7 @@ This is valuable when you need a codebase audit or want to modernize legacy code
 
 The techniques below train Claude Code to match your actual intent rather than its maximal interpretation.
 
-Technique 1: Specify Exact Boundaries
+## Technique 1: Specify Exact Boundaries
 
 Instead of vague directives, define precise boundaries for your changes. Tell Claude Code exactly which files, functions, or lines to modify.
 
@@ -67,7 +64,7 @@ Vague (produces large diff)
 
 This precision works especially well when using the pdf skill for documentation updates, specify exactly which section to modify rather than asking for comprehensive rewrites. For example: "In the API reference PDF, update only the authentication section on page 4 to reflect the new token format."
 
-Adding Boundary Markers in Comments
+## Adding Boundary Markers in Comments
 
 For recurring tasks on the same codebase, add comment markers to signal Claude Code's operating zone:
 
@@ -82,9 +79,9 @@ function processPayment(amount: number, currency: string) {
 }
 ```
 
-Ask Claude: "Update only the code between the MODIFY ZONE markers in processPayment()."
+## Ask Claude: "Update only the code between the MODIFY ZONE markers in processPayment()."
 
-Technique 2: Use File-Level Targeting
+## Technique 2: Use File-Level Targeting
 
 When invoking skills or making requests, include specific file paths rather than directory references. This forces Claude Code to limit its scope.
 
@@ -116,7 +113,7 @@ This approach pairs well with the tdd skill when you're adding specific test cas
 Cover the happy path and the null input case.
 ```
 
-Technique 3: Chain Small Requests
+## Technique 3: Chain Small Requests
 
 Rather than one large task, break your work into a sequence of small, independent changes. Each invocation produces a focused output, and you maintain control throughout.
 
@@ -150,7 +147,7 @@ Step 4: Fill in the next method
 
 This chaining technique works well with the xlsx skill when generating reports, build complex spreadsheets through incremental additions rather than generating everything at once. For example: "Add the revenue column to the existing report spreadsheet. Do not change the existing columns or formulas."
 
-Technique 4: Constrain Your Changes
+## Technique 4: Constrain Your Changes
 
 Explicitly state what Claude Code should NOT do. Constraints help focus the model's attention on your actual goal and prevent well-intentioned scope creep.
 
@@ -195,7 +192,7 @@ Do NOT create a new design token or CSS variable.
 Return a single component file with no new dependencies.
 ```
 
-Technique 5: Reference Specific Commits or Versions
+## Technique 5: Reference Specific Commits or Versions
 
 When working with version control, anchor your requests to specific commits or diffs. This naturally limits change scope because Claude Code uses the referenced commit as a concrete model to follow.
 
@@ -217,7 +214,7 @@ Apply that exact pattern to the new notifications module.
 Do not invent a new pattern, mirror the existing one.
 ```
 
-Using Git Diffs as Context
+## Using Git Diffs as Context
 
 Before asking for changes, provide Claude with the current diff so it understands the limited scope you expect:
 
@@ -230,7 +227,7 @@ Then request:
 function to log the same audit event we added to createUser(). No other changes."
 ```
 
-Technique 6: Use Before-After Specifications
+## Technique 6: Use Before-After Specifications
 
 Describe the exact state you want in "before" and "after" terms. This removes ambiguity and prevents scope creep by making the desired end state explicit.
 
@@ -256,7 +253,7 @@ After:
 
 This technique ensures Claude Code produces minimal, targeted changes that achieve your exact specification. It also doubles as a reviewable spec you can share with teammates.
 
-Writing Before-After as Test Cases
+## Writing Before-After as Test Cases
 
 A powerful variant is expressing before-after as failing-then-passing test cases:
 
@@ -272,7 +269,7 @@ it("should reject invalid email formats", () => {
 
 Ask Claude: "Make the minimum code changes to src/utils/validation.ts so that this test passes. Do not modify any other tests or functions."
 
-Technique 7: Request Plans Before Execution
+## Technique 7: Request Plans Before Execution
 
 For any request that feels like it might produce a large change, ask Claude Code to produce its plan first. Review and narrow the plan before authorizing execution.
 
@@ -288,7 +285,7 @@ Skip items 3-5 for now, we will handle those separately."
 
 This two-phase approach is especially valuable for refactoring work, where Claude's initial instinct might be to improve five things when you only need one addressed right now.
 
-Practical Example: Incremental Bug Fix
+## Practical Example: Incremental Bug Fix
 
 Here's how these techniques combine in a real scenario:
 
@@ -314,7 +311,7 @@ Step 4 - Verify scope:
 
 This produces a two-line diff instead of a sprawling set of changes. The PR is instant to review, trivial to revert if needed, and clearly communicates the intent.
 
-Comparison: Broad vs. Focused Request
+## Comparison: Broad vs. Focused Request
 
 | Prompt Style | Files Changed | Lines Diff | Review Time |
 |-------------|---------------|------------|-------------|
@@ -324,7 +321,7 @@ Comparison: Broad vs. Focused Request
 
 The time savings compound across every PR in a project.
 
-Working with Specific Skills
+## Working with Specific Skills
 
 Several Claude Code skills benefit particularly from focused change requests:
 
@@ -335,7 +332,7 @@ Several Claude Code skills benefit particularly from focused change requests:
 - supermemory: Use it to recall your previous patterns explicitly, then instruct Claude to mirror them rather than inventing new approaches.
 - defect-fix: Always include the file path and approximate line range where the defect occurs. This eliminates exploratory changes in unrelated areas.
 
-Handling Situations Where Claude Ignores Constraints
+## Handling Situations Where Claude Ignores Constraints
 
 If Claude Code ignores your boundaries and makes broader changes anyway, use these recovery strategies:
 
@@ -347,7 +344,7 @@ Use the `/compact` command before retrying: Compressing the conversation history
 
 Split into separate sessions: Start a fresh Claude Code session for each file you want to change. Fresh sessions have no accumulated context pushing toward larger scope.
 
-When You Need Larger Changes
+## When You Need Larger Changes
 
 Sometimes you genuinely need comprehensive changes. In those cases, ask Claude Code to output its plan first, then approve sections incrementally:
 
@@ -365,7 +362,7 @@ This approach gives you the comprehensive result you need while maintaining revi
 
 A useful batching heuristic: any batch that would take more than 15 minutes to review is too large. Keep breaking it down until each batch is confidently reviewable.
 
-Summary
+## Summary
 
 Getting Claude Code to produce smaller, focused changes comes down to specificity in your requests. Define exact boundaries (file, function, line range), use file-level targeting rather than directory-level, chain small independent requests together, add explicit negative constraints, reference specific commits or patterns to mirror, and describe before-after states precisely. When in doubt, ask for the plan before execution and approve batches incrementally.
 

@@ -13,12 +13,9 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
-AI Assisted Architecture Design Workflow Guide
-
 Software architecture decisions shape the long-term maintainability, scalability, and performance of your projects. Using AI assistance during the architecture design phase helps you explore patterns faster, validate decisions against best practices, and document your reasoning clearly. This guide walks through a practical workflow for incorporating AI into your architecture design process.
 
-Starting with Requirements Analysis
+## Starting with Requirements Analysis
 
 Before touching any diagram or code, gather your requirements in a structured format. AI tools excel at helping you organize and refine requirements into actionable specifications. Create a simple requirements document that captures functional requirements, non-functional requirements, and constraints.
 
@@ -38,7 +35,7 @@ Non-Functional Requirements
 - Horizontal scaling capability
 ```
 
-Pattern Selection and Validation
+## Pattern Selection and Validation
 
 Once you have clear requirements, the next step involves selecting appropriate architectural patterns. AI assistance helps you compare patterns against your specific constraints without bias. Rather than defaulting to microservices because it's popular, you can evaluate whether a modular monolith or service-oriented architecture better fits your team size and scaling needs.
 
@@ -61,7 +58,7 @@ def test_notification_delivery():
 
 Writing these tests before architecture decisions forces you to confront requirements that might otherwise be overlooked.
 
-Visual Design and Documentation
+## Visual Design and Documentation
 
 Architecture diagrams communicate structure to stakeholders and provide reference during implementation. The frontend-design skill can help generate component diagrams and visualize data flow between services. While not a replacement for detailed technical documentation, visual representations accelerate team alignment.
 
@@ -85,7 +82,7 @@ Consequences
 - Requires managed backup strategy
 ```
 
-Technology Stack Evaluation
+## Technology Stack Evaluation
 
 Every architecture includes a technology stack. AI assistance helps you evaluate options based on your specific constraints rather than popularity or recent blog posts. Create comparison matrices that score technologies against weighted criteria derived from your requirements.
 
@@ -100,7 +97,7 @@ Document your evaluation criteria explicitly:
 | Team Familiarity | 20 | 8 | 6 | 7 |
 | Cost at Scale | 25 | 7 | 7 | 8 |
 
-Prototyping Critical Paths
+## Prototyping Critical Paths
 
 Before full implementation, build prototypes of the most uncertain or critical paths in your architecture. AI coding assistants excel at rapid prototyping, helping you validate that chosen technologies integrate correctly before committing to the full implementation.
 
@@ -108,13 +105,13 @@ Focus prototyping efforts on areas with highest technical risk or where integrat
 
 Use the canvas-design skill if you need to visualize prototype architectures or create mockups of system interactions. Visual feedback helps identify gaps in your mental model before code confirms them.
 
-Review and Refinement
+## Review and Refinement
 
 Architecture decisions benefit from peer review just like code. Present your proposed architecture to team members with varying expertise, database specialists, security engineers, and operations staff each bring perspectives that improve final designs.
 
 Document review feedback and explicitly address each concern in your architecture document. This practice creates a traceable record showing how the architecture evolved based on team input.
 
-Implementation Planning
+## Implementation Planning
 
 With a reviewed architecture in hand, break down implementation into manageable phases. Identify dependencies between components and sequence work to maximize parallel development while minimizing blockers.
 
@@ -138,14 +135,13 @@ phase_3:
 
 The docx skill can help generate implementation playbooks and technical specifications that translate architecture decisions into actionable tasks for your development team.
 
-Conclusion
+## Conclusion
 
 AI-assisted architecture design combines human judgment with AI's ability to process patterns, validate decisions, and maintain documentation. By following a structured workflow, from requirements analysis through implementation planning, you use AI as a thinking partner rather than a passive tool.
 
 The key is maintaining human oversight while using AI for exploration, documentation, and validation. Claude skills like supermemory for knowledge management, tdd for test-first design, and pdf for documentation generation form a toolkit that supports each phase of the architecture workflow.
 
 Remember that architecture decisions are rarely final. Build in feedback mechanisms that allow your architecture to evolve as requirements clarify and technology landscapes change.
-
 
 Related guides: [Claude Code System Design Documentation](/claude-code-system-design-documentation/)
 

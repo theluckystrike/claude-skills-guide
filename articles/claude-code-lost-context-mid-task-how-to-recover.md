@@ -16,13 +16,13 @@ permalink: /claude-code-lost-context-mid-task-how-to-recover/
 
 When you're three hours into a complex refactoring session with Claude Code and suddenly Claude seems to forget what you were working on, it can be frustrating. Context loss happens, and understanding how to recover from it is a critical skill for power users. This guide covers practical methods to get Claude Code back on track without losing your progress.
 
-Why Context Loss Happens
+## Why Context Loss Happens
 
 Claude Code maintains conversation context within each session, but several factors can cause it to lose track of your task. Long conversations exceeding the context window, complex multi-file operations, or session interruptions all contribute to context fragmentation. Additionally, certain Claude skills like `frontend-design` or `pdf` can generate substantial intermediate output that competes for attention allocation.
 
 Understanding these triggers helps you recognize when context loss is happening and choose the appropriate recovery strategy.
 
-The Context Window Explained
+## The Context Window Explained
 
 Claude Code's context window is finite. Every message you send, every file Claude reads, and every response it generates consumes tokens. When the total token count approaches the limit, Claude begins to lose access to earlier parts of the conversation. including the original task description, the files you showed it first, and the decisions you made at the beginning of the session.
 
@@ -33,7 +33,7 @@ This is not a bug. It is an architectural constraint of large language models. T
 - Skill output that returns extensive intermediate results (a full PDF extraction, a full UI design pass) can crowd out earlier task context
 - Multi-step tasks that require reading many files accumulate context pressure over time
 
-Warning Signs of Context Loss
+## Warning Signs of Context Loss
 
 Before Claude completely loses track, there are recognizable symptoms:
 
@@ -47,7 +47,7 @@ Before Claude completely loses track, there are recognizable symptoms:
 
 Catching these signals early lets you recover before wasted work accumulates.
 
-Quick Recovery Commands
+## Quick Recovery Commands
 
 The fastest way to recover context is to provide a concise summary of your current task state. Instead of assuming Claude remembers everything, give it an explicit reminder:
 
@@ -65,7 +65,7 @@ We were extracting the User model to a separate file.
 Current file is models/user.ts.
 ```
 
-Why Explicit Summaries Work
+## Why Explicit Summaries Work
 
 When you provide a summary like this, you are effectively restoring the essential context that was pushed out of the window. Claude does not need to see the full conversation history. it needs to understand the task goal, the current state, and the immediate next action. A well-written summary delivers all three in about five sentences.
 
@@ -77,7 +77,7 @@ The key elements of an effective quick recovery summary:
 4. Active file or resource. prevents Claude from working on the wrong file
 5. Next action. the specific thing you want done next
 
-Using Session Recap Techniques
+## Using Session Recap Techniques
 
 When quick summaries are not enough, use a more structured approach. Create a recap that includes:
 
@@ -100,7 +100,7 @@ Current Task Context
 
 This structured format works especially well when using skills like `tdd` or `supermemory` because those skills benefit from clear task boundaries.
 
-Structured Recap for Complex Projects
+## Structured Recap for Complex Projects
 
 For larger projects with many moving parts, expand the recap to include architecture decisions that Claude needs to respect:
 
@@ -134,7 +134,7 @@ Add handling for the `invoice.payment_failed` event type
 
 The architecture decisions section is particularly valuable because it prevents Claude from suggesting refactors that contradict earlier choices you made for good reasons.
 
-Using the Super Memory Skill
+## Using the Super Memory Skill
 
 The `supermemory` skill is specifically designed to handle long-term context across sessions. If you're working on extended projects, activating it early provides persistent memory that survives context gaps:
 
@@ -152,7 +152,7 @@ Recall the last project state
 
 This approach works particularly well for multi-day projects where you return to the same codebase repeatedly. The skill maintains external memory that Claude can reference regardless of the current conversation state.
 
-Best Practices for Supermemory
+## Best Practices for Supermemory
 
 The `supermemory` skill is most effective when you treat it like a project journal. Store entries at meaningful milestones rather than constantly:
 
@@ -177,13 +177,13 @@ Recall: user-dashboard project state
 
 Claude retrieves the full milestone record, including the blocked status and what was needed to unblock it. This eliminates the need to re-explain project history at the start of every session.
 
-When Supermemory Does Not Help
+## When Supermemory Does Not Help
 
 Supermemory is an external storage layer. it saves and retrieves text, but it does not automatically inject that context into every response. If Claude loses mid-session context, you still need to explicitly recall the stored state. Think of it as a filing cabinet: extremely useful, but you still have to open the drawer.
 
 For mid-session context drift (not full session loss), the explicit summary approach is faster than a supermemory recall.
 
-File-Based Context Anchoring
+## File-Based Context Anchoring
 
 For complex tasks, anchor context in files rather than relying on conversation memory. Create a `CONTEXT.md` or `TASK.md` file in your project root:
 
@@ -215,7 +215,7 @@ I'm using the context in CONTEXT.md. Continue with the webhook handler.
 
 This method works smoothly with any skill including `pdf` for generating documentation, `frontend-design` for UI tasks, or `canvas-design` for visual projects.
 
-Keeping CONTEXT.md Updated
+## Keeping CONTEXT.md Updated
 
 The file-based approach only works if you maintain it. Build the habit of updating `CONTEXT.md` whenever you complete a step:
 
@@ -226,11 +226,11 @@ Add note: payment-intent.ts is done, webhook handler is next.
 
 Ask Claude to make this update at the end of each working block. Since Claude is already in the conversation, this takes one extra line and costs almost nothing. but it means your next session starts with accurate state rather than stale notes.
 
-CONTEXT.md vs a README
+## CONTEXT.md vs a README
 
 A `CONTEXT.md` is not documentation for other developers. It is a working state file for the current task. Keep it focused on current progress and next actions. Archive it or reset it when a task completes. Some developers prefer to call it `TASK.md` to make clear it is temporary.
 
-The Context Refresh Pattern
+## The Context Refresh Pattern
 
 When Claude completely loses track, use the refresh pattern:
 
@@ -248,7 +248,7 @@ and I'll explain what comes next.
 
 This pause-and-confirm approach prevents wasted work on incorrect files or outdated assumptions.
 
-The Full Context Refresh Prompt Template
+## The Full Context Refresh Prompt Template
 
 For severe context loss, use a more complete refresh prompt:
 
@@ -270,7 +270,7 @@ Confirm you understand and then proceed.
 
 The `[CONTEXT RESET]` marker signals clearly that you are starting fresh. Asking for confirmation before proceeding catches cases where Claude acknowledges the reset but has misunderstood a key detail.
 
-Diagnosing the Depth of Context Loss
+## Diagnosing the Depth of Context Loss
 
 Not all context loss is equal. Before choosing a recovery method, diagnose the severity:
 
@@ -283,7 +283,7 @@ Not all context loss is equal. Before choosing a recovery method, diagnose the s
 
 Starting with the lightest recovery that works saves time and avoids overwhelming Claude with a wall of context it does not actually need.
 
-Preventing Context Loss
+## Preventing Context Loss
 
 Recovery is easier when you prevent loss from happening:
 
@@ -299,7 +299,7 @@ Keep reference files updated. Maintain the `CONTEXT.md` approach for any task la
 
 Activate supermemory early for multi-session projects rather than as a recovery tool.
 
-The Cost of Large File Reads
+## The Cost of Large File Reads
 
 One of the most common causes of context pressure is reading entire large files when only a portion is relevant. Instead of asking Claude to read a 3,000-line file, be specific about what section matters:
 
@@ -310,7 +310,7 @@ Read lines 150-300 of src/services/payment.service.ts
 
 This is more efficient than reading the whole file, and it leaves more room in the context window for subsequent steps. When Claude needs to understand a large codebase, it is better to read files incrementally across multiple focused steps than to dump everything in at once.
 
-Session Length Discipline
+## Session Length Discipline
 
 Long sessions compound context pressure. A practical discipline: when a session has been running for 90 minutes or more on a complex task, do a deliberate checkpoint:
 
@@ -320,7 +320,7 @@ Long sessions compound context pressure. A practical discipline: when a session 
 
 Starting fresh with a tight summary costs almost nothing. you lose a few minutes, but gain a full clean context window for the remaining work.
 
-Skill-Specific Recovery Tips
+## Skill-Specific Recovery Tips
 
 Different skills have different context demands. The `frontend-design` skill works with visual state that can be hard to reconstruct. keep screenshots or describe the current UI explicitly. The `pdf` skill processes document content sequentially. if you lose context mid-document, re-summarize the document structure and what you've already extracted. The `algorithmic-art` skill maintains canvas state that requires explicit description to reconstruct.
 
@@ -330,7 +330,7 @@ When using any skill, include the skill name in your recovery summary:
 Using the tdd skill. We were writing tests for the user model validation.
 ```
 
-Skill-by-Skill Recovery Guidance
+## Skill-by-Skill Recovery Guidance
 
 | Skill | Context That Is Hard to Reconstruct | Recovery Approach |
 |---|---|---|
@@ -341,7 +341,7 @@ Skill-by-Skill Recovery Guidance
 | `supermemory` | What was stored and when | Run a recall command before asking anything else |
 | `algorithmic-art` | Canvas dimensions, current algorithm parameters | Include the render function signature and last known output description |
 
-Multi-File Task Recovery
+## Multi-File Task Recovery
 
 When a task spans many files. say, adding a feature that touches API routes, service layer, data model, and tests. context loss often manifests as Claude losing track of which file has already been updated. A simple tracking list prevents this:
 
@@ -355,14 +355,13 @@ Files Modified So Far
 
 Paste this list whenever Claude seems confused about what has or has not been done. It is faster than explaining the situation in prose.
 
-Conclusion
+## Conclusion
 
 Context loss does not have to derail your workflow. By maintaining file-based anchors, using the supermemory skill for persistence, and providing explicit recovery summaries, you can keep Claude Code productive even through complex, multi-session tasks. The key is treating context as something you actively manage rather than something that simply persists.
 
 The best developers using Claude Code develop a lightweight discipline around context: they write brief checkpoints, keep a `CONTEXT.md` updated, and start fresh sessions rather than dragging along hours of accumulated conversation history. That discipline pays off in fewer recovery situations to handle in the first place.
 
 When context loss does happen, the diagnostic table in this guide helps you match the right recovery method to the severity of the loss. Mild drift gets a one-line correction. Complete loss gets a full reset prompt. Matching the response to the problem keeps you moving without over-engineering a simple correction.
-
 
 Related Reading
 

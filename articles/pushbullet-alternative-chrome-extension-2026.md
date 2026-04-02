@@ -17,7 +17,7 @@ tags: [claude-code, claude-skills]
 
 Pushbullet revolutionized cross-device notifications and file sharing, but its discontinuation left many developers searching for capable replacements. In 2026, several alternatives offer Chrome extensions with varying approaches to device synchronization, notification forwarding, and file transfer. This guide evaluates the best options for developers and power users who need reliable cross-device workflows.
 
-What Made Pushbullet Popular
+## What Made Pushbullet Popular
 
 Pushbullet succeeded because it solved a fundamental problem: smooth communication between your phone and computer. Users could:
 
@@ -28,9 +28,9 @@ Pushbullet succeeded because it solved a fundamental problem: smooth communicati
 
 The Chrome extension served as a central hub for these features. When evaluating alternatives, developers should consider API access, self-hosting capabilities, and integration with existing workflows.
 
-Top Pushbullet Alternatives in 2026
+## Top Pushbullet Alternatives in 2026
 
-Pushover
+## Pushover
 
 Pushover remains the most reliable notification service for developers, offering a Chrome extension that complements its solid API.
 
@@ -128,7 +128,7 @@ kdeconnect-cli --share-clipboard
 
 KDE Connect is free and open-source. For developers using Chrome OS or browsers on Linux, combining KDE Connect with a simple notification relay provides Pushbullet-like functionality.
 
-LocalSend
+## LocalSend
 
 LocalSend is a free, open-source alternative focusing on local network file sharing:
 
@@ -146,7 +146,7 @@ The Chrome extension (via ChromeOS or PWA) combined with the desktop app enables
 
 For developers frequently sharing files between machines on the same network, LocalSend offers speed and privacy advantages.
 
-Wormhole
+## Wormhole
 
 Wormhole provides secure, link-based file sharing with a clean Chrome extension:
 
@@ -163,11 +163,11 @@ The web-based approach works across all platforms, and the Chrome extension prov
 
 Wormhole offers a free tier with limitations; pro plans start at $8/month for unlimited transfers.
 
-Self-Hosted Solutions
+## Self-Hosted Solutions
 
 For developers requiring complete control, several self-hosted options exist:
 
-Gotify
+## Gotify
 
 Gotify is a simple push notification service you can host yourself:
 
@@ -207,7 +207,7 @@ curl -d "Server deployed" ntfy.sh/mytopic
 
 The Chrome extension supports subscribing to topics and receiving real-time updates. For teams running internal infrastructure, ntfy integrates naturally with existing monitoring systems.
 
-Comparison for Developers
+## Comparison for Developers
 
 | Feature | Pushover | Join | KDE Connect | Gotify | ntfy |
 |---------|----------|------|-------------|--------|------|
@@ -217,7 +217,7 @@ Comparison for Developers
 | API Access | Yes | Yes | CLI | Yes | Yes |
 | File Transfer | No | Yes | Yes | No | No |
 
-Choosing the Right Alternative
+## Choosing the Right Alternative
 
 Select based on your workflow requirements:
 
@@ -229,7 +229,7 @@ Select based on your workflow requirements:
 
 For developers building custom workflows, Pushover's API simplicity or ntfy's self-hosted flexibility provide the best foundations. The Chrome extension serves as a convenient interface, but the real value lies in programmatic access for automation.
 
-Implementation Strategy
+## Implementation Strategy
 
 Migrating from Pushbullet requires evaluating your existing use cases:
 
@@ -239,7 +239,6 @@ Migrating from Pushbullet requires evaluating your existing use cases:
 4. Gradual migration - Run both systems during transition to catch gaps
 
 For CI/CD notifications specifically, Pushover and ntfy integrate naturally with existing build pipelines. Mobile companion apps ensure you receive alerts regardless of your primary device.
-
 
 Related Reading
 

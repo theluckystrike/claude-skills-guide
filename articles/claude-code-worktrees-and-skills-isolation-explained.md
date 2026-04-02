@@ -40,7 +40,7 @@ myproject/              <- main worktree (your working directory)
         ...
 ```
 
-How Claude Code Uses Worktrees
+## How Claude Code Uses Worktrees
 
 When you invoke `/worktree {name}` in Claude Code, it:
 
@@ -51,7 +51,7 @@ When you invoke `/worktree {name}` in Claude Code, it:
 
 The key isolation benefit: Claude can modify files freely in the worktree without affecting your main branch or any other worktree.
 
-What Gets Isolated
+## What Gets Isolated
 
 Isolated per worktree:
 - All files in the working tree (source code, config files, etc.)
@@ -69,7 +69,7 @@ Partially shared:
 - `.claude/settings.json`. session settings come from the main project, not the worktree
 - MCP servers. registered globally, not per-worktree
 
-Skills and Worktrees: The Critical Detail
+## Skills and Worktrees: The Critical Detail
 
 Skills are read from `.claude/skills/` relative to the main project root, not from the worktree. This means:
 
@@ -79,7 +79,7 @@ Skills are read from `.claude/skills/` relative to the main project root, not fr
 
 This is by design. you do not want different worktrees running different versions of your [`/tdd` skill](/best-claude-skills-for-developers-2026/). It creates consistency across parallel workstreams.
 
-Skills and Relative File References
+## Skills and Relative File References
 
 When a skill's instructions reference project files, Claude resolves those paths relative to the current working directory at invocation time. which in a worktree session is the worktree directory. This means Claude naturally reads the worktree's version of the files.
 
@@ -94,11 +94,11 @@ and docs/testing-guide.md for project testing conventions.
 
 When Claude is working in a worktree branch for a feature, it reads that branch's version of the referenced files automatically.
 
-Designing Skills for Worktree Use
+## Designing Skills for Worktree Use
 
 Skills that will be used in worktrees need to be explicit about which directory they are operating in.
 
-Avoid Hardcoded Absolute Paths
+## Avoid Hardcoded Absolute Paths
 
 Bad:
 ```
@@ -113,7 +113,7 @@ Use the project root as the base: {project_root}/src/
 
 The `{project_root}` template variable resolves to the current worktree's root, not the main project root.
 
-State Files and Worktrees
+## State Files and Worktrees
 
 If your skill uses state files, write them to the worktree directory:
 
@@ -124,7 +124,7 @@ In a worktree, this will be {project_root}/.claude/state/. keeping state isolate
 
 Each worktree has its own `.claude/state/` directory, so task state does not bleed across parallel workstreams.
 
-Parallel Skill Execution via Worktrees
+## Parallel Skill Execution via Worktrees
 
 The most powerful use of worktrees is running the same skill across multiple branches in parallel. You can set this up with a shell script that creates worktrees for each feature branch and then runs Claude Code in print mode in each:
 
@@ -144,7 +144,7 @@ done
 
 Then run Claude Code in each worktree. Since Claude Code is interactive, you would open each worktree as a separate Claude Code session and invoke the `/tdd` skill there. The [`supermemory` skill](/claude-skills-token-optimization-reduce-api-costs/) can preserve context across these parallel sessions.
 
-Worktree Cleanup
+## Worktree Cleanup
 
 Worktrees accumulate. Build cleanup into your workflow:
 
@@ -166,7 +166,7 @@ git worktree list --porcelain | grep "worktree" | awk '{print $2}' | \
   done
 ```
 
-The WorktreeCreate Hook
+## The WorktreeCreate Hook
 
 Claude Code has a `WorktreeCreate` hook that fires when a new worktree is created via `/worktree`. Use it to initialize the worktree environment:
 
@@ -202,7 +202,7 @@ fi
 echo "Worktree initialized: $WORKTREE_PATH"
 ```
 
-Skills That Should Not Run in Worktrees
+## Skills That Should Not Run in Worktrees
 
 Some skills are not safe to run in worktrees because they affect shared state:
 
@@ -229,6 +229,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top skills every developer should know
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 - [Building Stateful Agents with Claude Skills](/building-stateful-agents-with-claude-skills-guide/). State management patterns for long-running agent tasks
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

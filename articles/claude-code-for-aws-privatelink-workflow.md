@@ -13,17 +13,16 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for AWS PrivateLink Workflow
 
 AWS PrivateLink provides secure, private connectivity between AWS services, your VPCs, and on-premises networks without exposing traffic to the public internet. Managing PrivateLink configurations manually can be complex and error-prone. This guide shows you how to use Claude Code to automate PrivateLink workflows, from initial setup to ongoing management and troubleshooting.
 
-Understanding PrivateLink Architecture
+## Understanding PrivateLink Architecture
 
 Before diving into automation, it's essential to understand the key components of PrivateLink architecture. A typical PrivateLink setup involves several interconnected AWS resources that work together to enable private connectivity.
 
-Key Components
+## Key Components
 
 The foundation of any PrivateLink implementation starts with the VPC Endpoint. This is the entry point within your VPC that allows private access to AWS services or your own services. The endpoint creates an elastic network interface in your chosen subnets with a private IP address from your VPC's CIDR range.
 
@@ -33,7 +32,7 @@ When you want to offer your own service through PrivateLink, you create a VPC En
 
 The final piece involves the connection acceptance mechanism. When a consumer creates an endpoint to your service, you must accept the connection. For AWS services, this happens automatically, but for your own endpoint services, manual or automated acceptance is required.
 
-Setting Up Claude Code for AWS Automation
+## Setting Up Claude Code for AWS Automation
 
 Claude Code can interact with AWS through various mechanisms. The recommended approach uses AWS CLI commands executed through Claude Code's bash tool. This provides flexibility and works with your existing AWS authentication setup.
 
@@ -74,11 +73,11 @@ Make sure your IAM user or role has the necessary permissions for PrivateLink op
 }
 ```
 
-Automating VPC Endpoint Creation
+## Automating VPC Endpoint Creation
 
 One of the most common PrivateLink tasks is creating VPC endpoints to access AWS services privately. Here's how to automate this with Claude Code.
 
-Creating Interface Endpoints for AWS Services
+## Creating Interface Endpoints for AWS Services
 
 When you need to create interface VPC endpoints for AWS services, you can ask Claude Code to generate the appropriate command. Provide details about your VPC, subnets, and the service you want to access.
 
@@ -106,7 +105,7 @@ aws ec2 create-vpc-endpoint \
     --tag "Name=secrets-manager-endpoint"
 ```
 
-Creating Gateway Endpoints for S3 and DynamoDB
+## Creating Gateway Endpoints for S3 and DynamoDB
 
 Gateway endpoints are simpler to configure since they only require route table associations. Claude Code can help you set these up quickly:
 
@@ -126,11 +125,11 @@ aws ec2 create-vpc-endpoint \
     --route-table-ids rtb-0123456789abcdef0
 ```
 
-Managing Endpoint Services
+## Managing Endpoint Services
 
 If you're building a service to offer over PrivateLink, Claude Code can help you create and manage endpoint service configurations.
 
-Creating an Endpoint Service
+## Creating an Endpoint Service
 
 Start by creating a Network Load Balancer in your VPC that forwards traffic to your application. Then create the endpoint service:
 
@@ -143,7 +142,7 @@ aws ec2 create-vpc-endpoint-service-configuration \
 
 The `accept-allowed-principal` parameter specifies which IAM principals can create endpoints to your service without requiring acceptance. For more restricted access, omit this parameter and manually accept connections.
 
-Accepting Connection Requests
+## Accepting Connection Requests
 
 When consumers create endpoints to your service, you need to accept the connections:
 
@@ -159,11 +158,11 @@ aws ec2 accept-vpc-endpoint-connections \
     --vpc-endpoint-ids vpce-0123456789abcdef0
 ```
 
-Implementing a Complete PrivateLink Workflow
+## Implementing a Complete PrivateLink Workflow
 
 You can create comprehensive automation by combining multiple AWS CLI calls with Claude Code. Here's a practical workflow pattern.
 
-A Reusable Endpoint Creation Script
+## A Reusable Endpoint Creation Script
 
 Ask Claude Code to create a reusable script for endpoint creation:
 
@@ -212,11 +211,11 @@ create_endpoint "vpc-0123456789abcdef0" \
     "secrets-manager-endpoint"
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Claude Code can help diagnose and resolve common PrivateLink problems.
 
-Connectivity Issues
+## Connectivity Issues
 
 If endpoints are created but connectivity fails, common causes include security group rules blocking traffic, incorrect route tables for gateway endpoints, or missing private DNS configuration. Here's a diagnostic approach:
 
@@ -234,7 +233,7 @@ aws ec2 describe-route-tables \
     --filters "Name=route.vpc-endpoint-id,Values=vpce-0123456789abcdef0"
 ```
 
-DNS Resolution Problems
+## DNS Resolution Problems
 
 For interface endpoints, ensure private DNS is configured correctly:
 
@@ -250,7 +249,7 @@ aws ec2 describe-vpcs \
     --query 'Vpcs[0].DhcpOptions.DhcpConfiguration'
 ```
 
-Best Practices for PrivateLink Automation
+## Best Practices for PrivateLink Automation
 
 When automating PrivateLink with Claude Code, follow these recommendations for production environments.
 

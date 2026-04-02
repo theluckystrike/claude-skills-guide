@@ -13,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for RTX Tool Version Manager Workflow
 
 Managing GPU tool versions across different projects can be a headache. Whether you're switching between CUDA versions, matching TensorFlow/PyTorch builds, or maintaining compatibility with specific driver versions, the RTX Tool Version Manager workflow powered by Claude Code can transform this tedious process into an automated, error-free experience.
 
-Understanding RTX Tool Version Manager
+## Understanding RTX Tool Version Manager
 
 The RTX Tool Version Manager is a CLI utility designed specifically for developers working with NVIDIA RTX GPUs. It handles version switching, dependency resolution, and environment configuration for CUDA toolkit, cuDNN, and related libraries. When integrated with Claude Code, it becomes part of an intelligent workflow that understands your project requirements and automatically configures the right tool versions.
 
 The core philosophy is simple: specify what you need, and let Claude Code and RTX Tool Version Manager handle the rest. No more manual environment toggling or compatibility hunting.
 
-Setting Up the Integration
+## Setting Up the Integration
 
 Before diving into workflows, ensure you have the RTX Tool Version Manager installed and accessible. Here's how to verify your setup:
 
@@ -42,7 +41,7 @@ rtx current
 
 Once verified, you can invoke Claude Code with specific context about your tool version needs. The key is providing Claude with clear information about your project requirements.
 
-Workflow 1: Project-Based Version Switching
+## Workflow 1: Project-Based Version Switching
 
 The most common use case is switching tool versions when moving between projects. Each project typically has specific version requirements documented in a `.rtx-version` file or similar configuration.
 
@@ -61,7 +60,7 @@ When you ask Claude Code to help with this project, it can read these requiremen
 
 Claude Code will read your `.rtx-version` file, invoke `rtx install` for each tool, and verify the installation by checking `nvcc --version` and library paths.
 
-Workflow 2: Automatic Dependency Resolution
+## Workflow 2: Automatic Dependency Resolution
 
 One of RTX Tool Version Manager's powerful features is automatic dependency resolution. When you request a specific CUDA version, it can automatically install compatible cuDNN and TensorRT versions. Claude Code enhances this by understanding your broader context.
 
@@ -83,7 +82,7 @@ print(f"CUDA available: {torch.cuda.is_available()}")
 print(f"CUDA version: {torch.version.cuda}")
 ```
 
-Workflow 3: Environment Validation and Debugging
+## Workflow 3: Environment Validation and Debugging
 
 When things don't work as expected, Claude Code can help diagnose version conflicts. The workflow involves checking current versions, comparing against requirements, and identifying mismatches.
 
@@ -101,7 +100,7 @@ Common issues include:
 - Symbol conflicts: Multiple CUDA versions in library path
 - Missing dependencies: cuDNN or TensorRT not properly linked
 
-Workflow 4: Multi-Project Environment Management
+## Workflow 4: Multi-Project Environment Management
 
 Developers often work on multiple projects simultaneously, each with different version requirements. The RTX Tool Version Manager supports `.rtx-version` files per directory, enabling smooth switching.
 
@@ -126,7 +125,7 @@ rtx alias set ml-training "cuda=12.1 cudnn=8.9 tensorrt=8.5"
 rtx alias set inference "cuda=11.8 cudnn=8.6 tensorrt=8.4"
 ```
 
-Best Practices for Claude Code Integration
+## Best Practices for Claude Code Integration
 
 To get the most out of this workflow, follow these best practices:
 
@@ -171,7 +170,7 @@ When asking for help, provide context:
 - Your target version from project requirements
 - Any error messages you're seeing
 
-Advanced: Custom Skills for Version Management
+## Advanced: Custom Skills for Version Management
 
 You can create a Claude Code skill that encapsulates your version management workflow. A custom skill can automate common tasks:
 
@@ -204,7 +203,7 @@ Verify Installation
 Run verification commands to confirm proper setup.
 ```
 
-Conclusion
+## Conclusion
 
 The RTX Tool Version Manager workflow combined with Claude Code creates a powerful automation system for GPU development environments. By documenting your requirements, using automatic dependency resolution, and providing clear context to Claude, you can eliminate manual version management headaches and focus on what matters: building great software.
 

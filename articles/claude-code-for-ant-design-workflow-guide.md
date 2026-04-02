@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Ant Design Workflow Guide
 
@@ -28,7 +27,7 @@ Ant Design components are powerful but often require verbose configuration. A si
 - Refactoring existing AntD code for better maintainability
 - Handling complex component compositions
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before integrating Claude Code with Ant Design, ensure your project is properly configured. Create a new React project with Ant Design installed:
 
@@ -44,11 +43,11 @@ If you're using TypeScript (recommended for enterprise projects), add the proper
 npm install @types/react @types/node --save-dev
 ```
 
-Generating Ant Design Components
+## Generating Ant Design Components
 
 One of the most powerful applications of Claude Code is generating Ant Design components from descriptions. Instead of manually writing every prop, you can describe what you need and let Claude Code build the component.
 
-Basic Component Generation
+## Basic Component Generation
 
 When you need a form with multiple input types, describe the requirements to Claude Code:
 
@@ -147,11 +146,11 @@ const RegistrationForm = () => {
 export default RegistrationForm;
 ```
 
-Working with Complex Data Tables
+## Working with Complex Data Tables
 
 Ant Design's Table component is incredibly powerful but can become complex quickly. Claude Code excels at generating well-structured table implementations with sorting, filtering, and pagination.
 
-Data Table with CRUD Operations
+## Data Table with CRUD Operations
 
 Request a complete data table with inline editing:
 
@@ -167,7 +166,7 @@ Create an Ant Design Table for managing products with:
 
 Claude Code will provide a comprehensive implementation including state management, modal forms for editing, and proper event handlers.
 
-Integrating with Ant Design Pro Components
+## Integrating with Ant Design Pro Components
 
 For enterprise applications, Ant Design Pro offers additional components like ProTable, ProForm, and ProLayout. These advanced components can further accelerate development:
 
@@ -203,7 +202,7 @@ const AdvancedTable = () => {
 };
 ```
 
-Customizing Ant Design Theme
+## Customizing Ant Design Theme
 
 Claude Code can help you configure the Ant Design theme to match your brand requirements. Request theme customization:
 
@@ -238,7 +237,7 @@ function App() {
 }
 ```
 
-Best Practices for Claude Code with Ant Design
+## Best Practices for Claude Code with Ant Design
 
 1. Be Specific About Component Requirements
 
@@ -260,7 +259,7 @@ When building administrative dashboards, use Ant Design Pro components for built
 
 Request that Claude Code organize your code with separate files for components, hooks, and types. This improves maintainability as your application grows.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Ant Design dramatically improves development velocity while maintaining code quality. By using Claude Code's understanding of React patterns and Ant Design's API, you can generate complex components in seconds rather than hours. The key is providing detailed requirements and using TypeScript for type safety in larger projects.
 

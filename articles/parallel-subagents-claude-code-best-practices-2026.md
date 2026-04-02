@@ -18,13 +18,13 @@ Claude Code's subagent system lets you spawn multiple independent reasoning thre
 
 This guide covers practical patterns for using parallel subagents effectively in 2026.
 
-How Parallel Subagents Work
+## How Parallel Subagents Work
 
 [Claude Code supports subagent invocation through the /subagent command or direct tool calls](/best-claude-code-skills-to-install-first-2026/) Each subagent runs as an independent reasoning thread with its own context window, allowing you to tackle multiple aspects of a problem simultaneously.
 
 The key insight: subagents share access to the parent session's tools and files, but maintain separate conversation histories. This makes them ideal for parallelizing independent tasks.
 
-Basic Parallel Execution Pattern
+## Basic Parallel Execution Pattern
 
 The simplest pattern involves spawning multiple subagents for independent tasks:
 
@@ -36,9 +36,9 @@ Claude: [spawns three subagents, one for each analysis type]
 
 Each subagent works in parallel, returning results that Claude synthesizes into a unified response.
 
-Real-World Workflows
+## Real-World Workflows
 
-Multi-File Code Review
+## Multi-File Code Review
 
 When reviewing a large PR with multiple changed files, spawn parallel subagents to analyze different components:
 
@@ -50,7 +50,7 @@ When reviewing a large PR with multiple changed files, spawn parallel subagents 
 
 This approach scales linearly with the number of subagents rather than sequentially.
 
-Research and Implementation Combo
+## Research and Implementation Combo
 
 A powerful pattern combines a research subagent with an implementation subagent:
 
@@ -61,7 +61,7 @@ A powerful pattern combines a research subagent with an implementation subagent:
 
 The implementation subagent can reference the research subagent's findings in real-time.
 
-Documentation Generation with PDF Skill
+## Documentation Generation with PDF Skill
 
 Pair subagents with specialized skills for enhanced output. Use the pdf skill to generate comprehensive documentation while simultaneously running tests:
 
@@ -72,7 +72,7 @@ Pair subagents with specialized skills for enhanced output. Use the pdf skill to
 
 The pdf skill creates structured output while other subagents handle testing.
 
-Best Practices for 2026
+## Best Practices for 2026
 
 1. Keep Subagent Tasks Independent
 
@@ -127,9 +127,9 @@ Target: Under 100MB for 10K records.
 Deliverable: Updated code + benchmark comparison
 ```
 
-Advanced Patterns
+## Advanced Patterns
 
-Hierarchical Subagents
+## Hierarchical Subagents
 
 For complex projects, create a two-level structure:
 
@@ -147,7 +147,7 @@ Level 2 Subagents (per service):
 - Write integration tests
 ```
 
-Parallel Review Cycles
+## Parallel Review Cycles
 
 Speed up code review by distributing checks across subagents:
 
@@ -158,7 +158,7 @@ Speed up code review by distributing checks across subagents:
 /subagent: Performance analysis (complexity, database queries)
 ```
 
-Conditional Branching
+## Conditional Branching
 
 Use subagent results to drive conditional workflows:
 
@@ -170,7 +170,7 @@ Based on results:
 - If all pass: /subagent: Run performance benchmarks
 ```
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Over-spawning: Creating too many subagents simultaneously can overwhelm the context window and reduce quality. Start with 2-4 subagents and scale up only when proven effective.
 
@@ -178,7 +178,7 @@ Unclear ownership: When multiple subagents modify the same files, conflicts aris
 
 Ignoring skill integration: Subagents work best when combined with specialized skills. Always consider whether a skill like pdf, tdd, or frontend-design could enhance the subagent's output.
 
-Measuring Subagent Effectiveness
+## Measuring Subagent Effectiveness
 
 After adopting parallel subagents, measuring whether they are actually saving time prevents over-reliance on patterns that feel fast but do not produce better outcomes. The key metric is not wall-clock time (subagents often feel faster because they produce output simultaneously) but quality and accuracy of results.
 
@@ -192,13 +192,13 @@ For code review workflows specifically, a useful benchmark is comparing a parall
 
 Subagents provide the most unambiguous benefit when tasks genuinely cannot inform each other. analyzing three completely independent modules, for instance. They provide marginal benefit when tasks share context but could theoretically run in parallel. Knowing which category your workflow falls into helps you apply subagents where they add the most value.
 
-Conclusion
+## Conclusion
 
 Parallel subagents represent one of Claude Code's most powerful capabilities for scaling complex workflows. By following these best practices, keeping tasks independent, providing clear instructions, applying specialized skills, and managing context strategically, you can significantly accelerate your development workflows.
 
 The key is starting simple: identify truly parallel work in your current tasks, spawn subagents to handle it, and iteratively refine your approach as you gain experience.
 
-Debugging Subagent Failures
+## Debugging Subagent Failures
 
 When a subagent produces unexpected output or fails silently, diagnosing the issue requires a different approach than debugging synchronous code. The subagent ran in its own context window, so you cannot step through its reasoning after the fact.
 

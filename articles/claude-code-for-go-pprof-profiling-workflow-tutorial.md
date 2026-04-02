@@ -13,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Go pprof Profiling Workflow Tutorial
-
 Performance optimization is a critical skill for any Go developer, and the pprof tool is your gateway to understanding where your application spends its time and memory. This tutorial shows you how to integrate Claude Code into your pprof workflow to accelerate profile analysis and make smarter optimization decisions.
 
-Understanding the Go pprof ecosystem
+## Understanding the Go pprof ecosystem
 
 The Go standard library includes [net/http/pprof](https://pkg.go.dev/net/http/pprof) package, which exposes profiling data over HTTP. When you import this package in your application, you gain access to CPU, memory, goroutine, block, and mutex profiles via HTTP endpoints.
 
@@ -35,7 +32,7 @@ func main() {
 
 This simple import enables the `/debug/pprof/` endpoints that serve profile data.
 
-Profile Types and What They Measure
+## Profile Types and What They Measure
 
 Understanding which profile type to collect is the first step. The pprof ecosystem exposes several distinct profile types, each measuring a different resource:
 
@@ -51,7 +48,7 @@ Understanding which profile type to collect is the first step. The pprof ecosyst
 
 A common mistake is collecting only CPU profiles and concluding the application has no performance problems when CPU usage looks reasonable. In Go, memory allocation pressure drives GC pauses that appear as CPU spikes in the runtime, so heap profiling is equally important.
 
-Enabling pprof in Production-Safe Configurations
+## Enabling pprof in Production-Safe Configurations
 
 Exposing `/debug/pprof/` on your main application port is a security risk. The preferred approach is to serve pprof on a separate internal port, accessible only from your own infrastructure:
 
@@ -88,7 +85,7 @@ ssh -L 6060:localhost:6060 your-production-host
 Now access http://localhost:6060/debug/pprof/ locally
 ```
 
-Setting Up Profile Collection
+## Setting Up Profile Collection
 
 Collecting meaningful profiles requires triggering them at the right moment. For CPU profiles, use the pprof command-line tool:
 
@@ -110,7 +107,7 @@ go tool pprof -raw http://localhost:8080/debug/pprof/profile > cpu.pprof
 go tool pprof -raw http://localhost:8080/debug/pprof/heap > heap.pprof
 ```
 
-Collecting Profiles Programmatically
+## Collecting Profiles Programmatically
 
 For benchmark-driven profiling or one-off detailed looks, you can collect profiles directly inside your Go code using the `runtime/pprof` package. This approach gives you precise control over exactly what is profiled:
 
@@ -171,7 +168,7 @@ go test -bench=BenchmarkExpensiveOperation -cpuprofile cpu.pprof -memprofile mem
 go tool pprof cpu.pprof
 ```
 
-Using Claude Code to Analyze pprof Output
+## Using Claude Code to Analyze pprof Output
 
 Claude Code excels at interpreting complex data formats and explaining them in developer-friendly terms. Once you have profile data, feed it to Claude for analysis:
 
@@ -182,7 +179,7 @@ claude "Analyze this pprof profile and identify the top 5 functions consuming CP
 
 Provide the profile file path or describe what you're seeing. Claude can help interpret the sometimes cryptic pprof output.
 
-Interactive Analysis Commands
+## Interactive Analysis Commands
 
 The pprof interactive mode offers powerful exploration capabilities. Here are essential commands:
 
@@ -197,7 +194,7 @@ Use these with Claude to get contextual explanations:
 claude "I'm looking at a CPU profile and the top command shows runtime.makeslice at 45%. Explain what makeslice does and why it might be consuming so much CPU."
 ```
 
-What Claude Can Do With pprof Text Output
+## What Claude Can Do With pprof Text Output
 
 The `go tool pprof` tool can export profiles as text that Claude can analyze directly. Use the `-text` flag or the `top -cum` command inside the interactive shell:
 
@@ -223,7 +220,7 @@ Showing top 10 nodes out of 78
 
 Claude can explain that high `runtime.memmove` combined with high `runtime.mallocgc` is a strong signal of excessive small allocations causing the GC to copy memory frequently. a pattern that points to using `bytes.Buffer` or pre-allocated slices instead of append-heavy loops.
 
-Asking Claude About Flame Graphs
+## Asking Claude About Flame Graphs
 
 The pprof `-http` mode generates an interactive flame graph in your browser. When you see a pattern in the flame graph but are unsure what it means, describe it to Claude:
 
@@ -233,9 +230,9 @@ claude "In my CPU flame graph, I see a wide bar for 'encoding/json.(*decodeState
 
 Claude will suggest approaches like using `json.Decoder` with stream processing, switching to a faster JSON library like `jsoniter` or `sonic`, using `easyjson` for code-generated marshalers, or redesigning the data format to avoid repeated deserialization.
 
-Common Performance Patterns and Fixes
+## Common Performance Patterns and Fixes
 
-Memory Allocation Issues
+## Memory Allocation Issues
 
 Heap allocations often dominate profiling results. Look for these patterns:
 
@@ -302,7 +299,7 @@ go build -gcflags="-m=2" ./... 2>&1 > escape_analysis.txt
 claude "Read escape_analysis.txt and explain which allocations are worth fixing. Which ones are hot-path and which are one-time setup costs I can ignore?"
 ```
 
-Goroutine Leaks
+## Goroutine Leaks
 
 Goroutine leaks cause memory growth and can stem from unbuffered channels or missing done channel checks:
 
@@ -360,7 +357,7 @@ func handlerFixed(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-Mutex and Channel Contention
+## Mutex and Channel Contention
 
 Block and mutex profiles identify synchronization bottlenecks. You need to enable these profiles explicitly at startup, as they are off by default:
 
@@ -420,7 +417,7 @@ func (c *ShardedCache) Get(key string) (Item, bool) {
 }
 ```
 
-Building a Profiling Skill for Claude
+## Building a Profiling Skill for Claude
 
 Create a custom skill to standardize your profiling workflow:
 
@@ -456,7 +453,7 @@ Focus on changes that provide:
 
 Save this as `skills/pprof.md` and Claude will have context for all your profiling sessions.
 
-Extending the Skill With Project Context
+## Extending the Skill With Project Context
 
 The basic skill above works for any Go project, but you can make it significantly more useful by adding context specific to your codebase:
 
@@ -492,7 +489,7 @@ Optimization Priorities
 
 With this context, Claude gives more targeted answers when you paste in profile summaries.
 
-Automating Profile Collection
+## Automating Profile Collection
 
 Create a simple script to collect profiles during load testing:
 
@@ -518,7 +515,7 @@ Run this during your load tests, then analyze with Claude:
 claude "Compare the CPU and heap profiles I collected during load testing. What changed between the start and peak load periods?"
 ```
 
-Integrating Profile Collection Into CI
+## Integrating Profile Collection Into CI
 
 Adding profiling to your CI pipeline catches regressions before they reach production. Here is a GitHub Actions example that runs a benchmark suite, collects profiles, and fails the build if performance degrades beyond a threshold:
 
@@ -557,7 +554,7 @@ jobs:
 
 After the job runs, download the profiles artifact and open them with `go tool pprof` locally for any PR that shows a performance change.
 
-Comparing Profiles Before and After Optimization
+## Comparing Profiles Before and After Optimization
 
 One of the most powerful pprof features is differential profiling. comparing two profiles taken before and after a change. This tells you precisely whether your optimization worked:
 
@@ -592,7 +589,7 @@ go tool pprof -text -base heap_before.pprof heap_after.pprof > diff.txt
 claude "Read diff.txt. This is a differential heap profile. Confirm whether the optimization was effective and identify any areas where memory usage unexpectedly increased."
 ```
 
-Best Practices for Effective Profiling
+## Best Practices for Effective Profiling
 
 1. Profile in production-like environments: Staging or production mirrors real behavior
 2. Collect multiple profiles: Single snapshots can be misleading
@@ -600,7 +597,7 @@ Best Practices for Effective Profiling
 4. Measure after changes: Always verify optimizations actually improve performance
 5. Document findings: Keep notes on what you found and fixed for future reference
 
-Profiling Overhead Reference
+## Profiling Overhead Reference
 
 Knowing the overhead of each profile type helps you decide when it is safe to enable them in production:
 
@@ -615,7 +612,7 @@ Knowing the overhead of each profile type helps you decide when it is safe to en
 
 The block and mutex profiles are the most dangerous to leave on at full rate in production. If you want continuous profiling in production, use Continuous Profiling platforms (Google Cloud Profiler, Datadog Continuous Profiler, or Pyroscope) which use statistical sampling at rates safe for always-on collection.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your Go pprof workflow transforms raw profiling data into actionable insights. By combining pprof's powerful instrumentation with Claude's ability to explain code patterns and suggest fixes, you can systematically improve your application's performance. Start with the skill above, customize it for your stack, and make profiling a regular part of your development cycle.
 

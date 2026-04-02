@@ -12,11 +12,9 @@ tags: [claude-code, claude-skills]
 
 {% raw %}
 
-Claude Code for Diamond Model Intrusion Workflow Tutorial
-
 The Diamond Model of intrusion analysis provides a structured framework for understanding and documenting cyberattacks. By organizing intrusion data around four core elements, Adversary, Victim, Infrastructure, and Capability, security analysts can systematically track threat actors and their tactics. This tutorial shows you how to use Claude Code to build reusable skills that automate and streamline Diamond Model analysis workflows.
 
-Understanding the Diamond Model Framework
+## Understanding the Diamond Model Framework
 
 Before diving into the implementation, let's briefly cover the Diamond Model's four vertices:
 
@@ -27,11 +25,11 @@ Before diving into the implementation, let's briefly cover the Diamond Model's f
 
 Each intrusion event creates a "diamond" connecting these four elements. By tracking multiple diamonds over time, analysts can identify patterns, attribute attacks, and build comprehensive threat intelligence.
 
-Creating a Diamond Model Analysis Skill
+## Creating a Diamond Model Analysis Skill
 
 The first step is building a Claude Code skill that guides analysts through the Diamond Model documentation process. Here's how to structure this skill:
 
-Skill Structure and Front Matter
+## Skill Structure and Front Matter
 
 ```yaml
 ---
@@ -43,7 +41,7 @@ tools: [read_file, write_file, bash]
 
 The skill restricts tool access to file operations and bash commands, keeping the workflow focused on documentation rather than enabling unintended actions.
 
-Guided Analysis Prompts
+## Guided Analysis Prompts
 
 The skill body should guide analysts through each Diamond Model vertex systematically:
 
@@ -79,7 +77,7 @@ Generate a summary report in markdown format with all findings.
 
 This structured approach ensures consistency across different analysts and incidents.
 
-Automating Diamond Model Data Extraction
+## Automating Diamond Model Data Extraction
 
 Beyond guided analysis, you can build skills that automatically extract Diamond Model elements from existing security data. For example, a skill that processes firewall logs to identify potential infrastructure:
 
@@ -119,7 +117,7 @@ infrastructure:
     source: dns_logs
 ```
 
-Building Correlation Skills
+## Building Correlation Skills
 
 One of the most powerful applications of Claude Code skills is correlating new intrusions with historical data. Create a skill that:
 
@@ -144,7 +142,7 @@ Given a new intrusion's Diamond Model elements:
 
 This workflow enables analysts to quickly determine if a new incident is related to known threat actors.
 
-Integrating with MITRE ATT&CK
+## Integrating with MITRE ATT&CK
 
 The Diamond Model's "Capability" vertex naturally maps to MITRE ATT&CK techniques. Build a skill that helps analysts translate their capability observations into ATT&CK mappings:
 
@@ -164,7 +162,7 @@ Output format:
 
 This integration ensures your Diamond Model analysis aligns with industry-standard threat frameworks.
 
-Actionable Advice for Implementation
+## Actionable Advice for Implementation
 
 When building Diamond Model skills for Claude Code, consider these best practices:
 
@@ -178,12 +176,11 @@ Export for SIEM Integration: Build skills that export Diamond Model data in form
 
 Automate Where Safe: Start with guided analysis skills before attempting automation. Validate automated extractions manually until confidence levels are established.
 
-Conclusion
+## Conclusion
 
 Claude Code skills transform Diamond Model intrusion analysis from a manual, inconsistent process into a structured, repeatable workflow. By creating skills for guided analysis, automated extraction, correlation, and framework integration, you build a comprehensive toolkit for threat intelligence operations. Start with simple guided workflows, then progressively add automation as your skills mature and your confidence in their accuracy grows.
 
 The key is maintaining consistency in how you document intrusions. Once your team standardizes on a Diamond Model skill workflow, the accumulated data becomes increasingly valuable for pattern recognition and adversary attribution.
-
 
 Related Reading
 

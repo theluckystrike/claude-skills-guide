@@ -16,7 +16,7 @@ permalink: /mcp-memory-server-persistent-storage-for-claude-agents/
 
 Claude's Model Context Protocol (MCP) includes an official memory server that provides persistent storage across Claude Code sessions. Unlike ephemeral conversation context, the MCP memory server persists data so your agents can maintain long-term context and reference previous interactions. This guide covers setup, configuration, and practical usage patterns for solo developers and teams alike.
 
-What Is the MCP Memory Server
+## What Is the MCP Memory Server
 
 The MCP memory server is one of Anthropic's reference server implementations, maintained at [github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers). It exposes a set of memory management tools. `create_entities`, `add_observations`, `search_nodes`, `delete_entities`, and others. that Claude can call during a session to read and write a persistent knowledge graph stored locally as JSON.
 
@@ -24,7 +24,7 @@ Each entity in the memory graph has a name, entity type, and a set of observatio
 
 The memory server solves a real problem: Claude Code sessions are stateless by default. Every time you start a new session, Claude has no recollection of decisions made, architecture choices, or context accumulated in previous sessions. The MCP memory server bridges that gap by giving Claude a stable, queryable store it can read from and write to across any number of sessions.
 
-How the Knowledge Graph Works
+## How the Knowledge Graph Works
 
 Understanding the data model helps you use the memory server more effectively. The memory graph has three core concepts:
 
@@ -70,13 +70,13 @@ Here is what the raw JSON looks like inside the memory file for a simple two-ent
 
 This flat JSON structure is human-readable, easy to back up, and simple to inspect when you need to audit what Claude has stored.
 
-Prerequisites
+## Prerequisites
 
 - Node.js 18 or higher
 - Claude Code configured on your machine (`claude --version`)
 - `npx` available (included with Node.js)
 
-Installing the MCP Memory Server
+## Installing the MCP Memory Server
 
 The official memory server is distributed via npm. The recommended way to run it is with `npx`, so Claude Code spawns it on demand:
 
@@ -99,7 +99,7 @@ mkdir -p ~/.claude/memory/myapp
 mkdir -p ~/.claude/memory/other-project
 ```
 
-Connecting Claude Code to the Memory Server
+## Connecting Claude Code to the Memory Server
 
 Add the server to `~/.claude/settings.json` under `mcpServers`:
 
@@ -122,7 +122,7 @@ Add the server to `~/.claude/settings.json` under `mcpServers`:
 
 Replace `/Users/yourname` with your actual home directory path. Restart Claude Code after saving. the memory server will start automatically when Claude Code launches.
 
-Project-Level Configuration
+## Project-Level Configuration
 
 For project-specific memory, create a `.claude/settings.json` in the project root instead of (or in addition to) the global config. This scopes the memory file to that project:
 
@@ -142,7 +142,7 @@ For project-specific memory, create a `.claude/settings.json` in the project roo
 
 Claude Code merges project-level and global settings, with project-level taking precedence for conflicting keys.
 
-Verifying the Connection
+## Verifying the Connection
 
 After restarting, start a Claude Code session and ask:
 
@@ -158,7 +158,7 @@ If the tools are not listed, check:
 3. `npx` resolves correctly in your shell (`which npx`)
 4. Claude Code was fully restarted (not just a new tab in the same session)
 
-Complete MCP Memory Tool Reference
+## Complete MCP Memory Tool Reference
 
 The memory server exposes nine tools. Knowing what each does helps you give Claude precise instructions:
 
@@ -174,11 +174,11 @@ The memory server exposes nine tools. Knowing what each does helps you give Clau
 | `delete_observations` | Remove specific observations from an entity |
 | `delete_relations` | Remove specific relations between entities |
 
-Using Memory in Claude Sessions
+## Using Memory in Claude Sessions
 
 Once connected, you can ask Claude to store and retrieve information in plain English. Claude calls the underlying memory tools automatically.
 
-Storing Context
+## Storing Context
 
 ```
 Remember that this project uses PostgreSQL 16, runs on port 5432,
@@ -187,7 +187,7 @@ and the main schema is in db/schema.sql. Store this as a project entity.
 
 Claude calls `create_entities` to store a "project" entity with those observations.
 
-Retrieving Context
+## Retrieving Context
 
 In a future session:
 
@@ -197,7 +197,7 @@ What do you know about this project's database setup?
 
 Claude calls `search_nodes` with a relevant query and returns what it stored.
 
-Building Structured Knowledge
+## Building Structured Knowledge
 
 ```
 Create an entity for "UserService" of type "service".
@@ -211,7 +211,7 @@ You can then create relations:
 Create a relation: UserService "depends_on" PostgreSQL.
 ```
 
-Reading the Full Graph
+## Reading the Full Graph
 
 ```
 Show me everything you have stored in memory.
@@ -219,7 +219,7 @@ Show me everything you have stored in memory.
 
 Claude calls `read_graph` and returns all entities and relations.
 
-Updating Existing Entities
+## Updating Existing Entities
 
 To add new information to an entity you've already stored:
 
@@ -230,7 +230,7 @@ using the express-rate-limit package".
 
 This appends to the entity without overwriting existing observations. Observations are cumulative, so the entity builds up a history over time.
 
-Cleaning Up Outdated Facts
+## Cleaning Up Outdated Facts
 
 When a fact becomes stale, you can remove specific observations rather than deleting the whole entity:
 
@@ -239,9 +239,9 @@ From MyApp-Auth, delete the observation about tokens expiring after 24 hours.
 Add a new observation: "tokens now expire after 7 days, updated March 2026".
 ```
 
-Practical Usage Patterns
+## Practical Usage Patterns
 
-Session Startup Routine
+## Session Startup Routine
 
 The most reliable way to use memory is to make context loading explicit at the start of every session. Add a CLAUDE.md instruction:
 
@@ -253,7 +253,7 @@ Summarize what you found before proceeding with any task.
 
 This ensures Claude has full project context before answering questions or writing code, without you having to ask for it every time.
 
-Decision Log Pattern
+## Decision Log Pattern
 
 One of the most valuable uses of the memory server is recording architectural decisions and the reasoning behind them:
 
@@ -267,7 +267,7 @@ Observations:
 
 Future sessions can query this to understand why the current approach was chosen, preventing the common pattern of re-litigating past decisions.
 
-Sprint/Milestone Tracking
+## Sprint/Milestone Tracking
 
 ```
 Create entity "Sprint-14" of type "milestone".
@@ -284,7 +284,7 @@ Add observation to Sprint-14: "Stripe issue resolved 2026-03-12,
 fix was to use raw request body not parsed JSON".
 ```
 
-Dependency Map
+## Dependency Map
 
 For complex projects with many services, build a dependency map in the memory graph:
 
@@ -304,7 +304,7 @@ Create relations:
 
 You can then ask: "What services depend on UserDB?" and Claude will traverse the graph to answer.
 
-Integrating Memory with Claude Skills
+## Integrating Memory with Claude Skills
 
 The memory server complements Claude skills naturally. Use it alongside [`/supermemory`](/claude-skills-token-optimization-reduce-api-costs/), `/tdd`, and other skills to build persistent workflows:
 
@@ -326,7 +326,7 @@ At the start of each session, call read_graph to load project context
 from the MCP memory server.
 ```
 
-MCP Memory Server vs Alternative Approaches
+## MCP Memory Server vs Alternative Approaches
 
 Before committing to the MCP memory server, it helps to understand how it compares to other persistence strategies:
 
@@ -340,7 +340,7 @@ Before committing to the MCP memory server, it helps to understand how it compar
 
 The MCP memory server is the right choice when you want structured, queryable memory that persists across sessions on a single machine with minimal setup. For team environments or multi-machine access, a cloud solution or custom MCP server with a shared database backend is more appropriate.
 
-Practical Tips
+## Practical Tips
 
 Use descriptive entity names. Generic names like `project` become confusing across projects. Prefer `MyApp-AuthService` or `MyApp-DeploymentConfig`.
 
@@ -358,7 +358,7 @@ Use entity types consistently. Decide on a fixed vocabulary for entity types. fo
 
 Add dates to observations. Since observations are plain text, timestamping them manually helps you track when things changed: `"Migrated from MySQL to PostgreSQL on 2026-02-15"`. This turns the memory graph into a lightweight changelog.
 
-Production Considerations
+## Production Considerations
 
 The official MCP memory server uses a local JSON file. For multi-user or multi-machine scenarios, this is a limitation. the file does not sync automatically across machines.
 

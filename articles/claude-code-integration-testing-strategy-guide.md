@@ -16,7 +16,7 @@ tags: [claude-code, claude-skills]
 
 Testing Claude Code skills requires a different approach than traditional unit testing. Since skills combine prompt engineering, tool definitions, and runtime behavior, your testing strategy must cover all three dimensions. This guide walks through practical patterns for building reliable integration tests that validate your skills work correctly in real scenarios.
 
-Why Integration Testing Matters for Skills
+## Why Integration Testing Matters for Skills
 
 Skills often fail in production not because the prompt is wrong, but because tool outputs vary, state management breaks, or edge cases weren't considered. A skill that works perfectly in one conversation may fail when Claude encounters unexpected tool responses or when file system permissions change.
 
@@ -24,7 +24,7 @@ Integration testing catches these failures before deployment. Rather than testin
 
 This distinction matters more than it might initially appear. Unit tests can verify that your prompt instructions are syntactically valid and that individual tool definitions are well-formed. But only integration tests can tell you whether the skill actually does what you intend when Claude processes real inputs, calls real tools, and produces real outputs. A refactoring skill might pass every unit check yet consistently drop comments from code when invoked in certain sequences, an integration test would catch that; a unit test would not.
 
-The Three Testing Dimensions
+## The Three Testing Dimensions
 
 Before diving into specific patterns, it helps to frame what you are actually testing when you write integration tests for a skill:
 
@@ -36,7 +36,7 @@ Before diving into specific patterns, it helps to frame what you are actually te
 
 Every meaningful integration test should touch at least two of these dimensions. Tests that only exercise the prompt in isolation tend to give false confidence, they pass in your local environment and fail in CI because they never tested the tool boundary.
 
-Core Testing Patterns
+## Core Testing Patterns
 
 1. Input-Output Validation Tests
 
@@ -166,7 +166,7 @@ def test_file_writing_skill(isolated_workspace):
     assert os.path.exists(os.path.join(isolated_workspace, "my-app", "src"))
 ```
 
-Building a Test Suite
+## Building a Test Suite
 
 Organize your tests around skill boundaries rather than individual functions. Each skill should have its own test file that covers the primary use cases:
 
@@ -193,7 +193,7 @@ tests/
 
 Keeping workflow tests separate from individual skill tests makes it easier to run fast unit-style skill checks in development and reserve the slower end-to-end workflow tests for CI.
 
-Automating Test Execution
+## Automating Test Execution
 
 Integrate your test suite into a CI pipeline using GitHub Actions or similar tools. Run tests on every pull request that modifies skill definitions. This catches regressions before they reach users.
 
@@ -229,7 +229,7 @@ jobs:
         run: python -m pytest tests/skills/ -k "${{ matrix.input_type }}"
 ```
 
-Testing Multi-Skill Workflows
+## Testing Multi-Skill Workflows
 
 Complex workflows often chain multiple skills together. Test the complete workflow, not just individual skills. For example, a documentation pipeline might use `pdf` for extraction, `docx` for content generation, and a custom skill for formatting.
 
@@ -275,7 +275,7 @@ def test_documentation_workflow_with_intermediate_checks():
     assert "##" in format_result.stdout, "Formatted output missing section headers"
 ```
 
-Continuous Validation
+## Continuous Validation
 
 Beyond traditional tests, consider implementing runtime validation. Log skill executions and analyze patterns in failures. If a skill consistently produces unexpected output for certain input types, add specific tests for those cases.
 
@@ -301,10 +301,9 @@ def log_test_failure(skill_name, input_data, actual_output, expected_pattern):
 
 Review this log periodically. Clusters of similar failures indicate either a gap in your skill's prompt or a category of inputs you haven't accounted for. Both are cheap to fix early and expensive to debug in production.
 
-Summary
+## Summary
 
 Integration testing for Claude Code skills combines input-output validation, tool mocking, and state persistence checks into a comprehensive quality assurance strategy. Build tests around skill boundaries, automate execution in CI pipelines, and continuously expand coverage based on production failures. This approach ensures your skills work reliably across the diverse scenarios they'll encounter in real-world use.
-
 
 Related Reading
 

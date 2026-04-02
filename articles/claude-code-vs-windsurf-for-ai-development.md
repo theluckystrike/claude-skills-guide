@@ -16,11 +16,11 @@ permalink: /claude-code-vs-windsurf-for-ai-development/
 
 Claude Code and Windsurf take different approaches to AI-assisted development. [extended by skills](/claude-skill-md-format-complete-specification-guide/) you call with `/skill-name`. Windsurf is an IDE-integrated assistant built by Codeium, primarily for VS Code. This comparison covers where each tool excels and how to decide between them.
 
-What Claude Code Brings to Your Workflow
+## What Claude Code Brings to Your Workflow
 
 Claude Code runs in your terminal. You work inside your own project, and Claude reads your files directly. For multi-file tasks or large codebases, this means you can ask Claude to understand the whole project before making changes. without copy-pasting code into a chat window.
 
-Claude Skills: Extending Functionality
+## Claude Skills: Extending Functionality
 
 Skills are `.md` files stored in `~/.claude/skills/`. You invoke them with `/skill-name` to give Claude structured instructions for specific types of work:
 
@@ -41,7 +41,7 @@ Claude writes the tests first, then the implementation. You own the output in yo
 
 You can also create your own skills by dropping a `.md` file into `~/.claude/skills/`. The system is transparent and fully user-controlled.
 
-Where Windsurf Fits In
+## Where Windsurf Fits In
 
 Windsurf integrates into VS Code (and other editors) as a sidebar assistant. Its strength is in-editor awareness: it tracks your open files, recent edits, and cursor position to provide contextual suggestions without you needing to describe your project each time.
 
@@ -61,9 +61,9 @@ class APIClient:
 
 Windsurf's context is session-based. It does not currently offer persistent memory across separate editing sessions.
 
-Comparing Development Workflows
+## Comparing Development Workflows
 
-Terminal vs Editor Integration
+## Terminal vs Editor Integration
 
 Claude Code is the right choice when:
 - You work across multiple environments or editors
@@ -75,7 +75,7 @@ Windsurf is the right choice when:
 - Visual context. highlighted code, open files. matters to your flow
 - You prefer minimal context switching during active coding
 
-Context and Memory
+## Context and Memory
 
 [Claude Code with `/supermemory`](/building-stateful-agents-with-claude-skills-guide/) can store notes about your project. architecture decisions, conventions, known issues. and retrieve them in later sessions:
 
@@ -87,13 +87,13 @@ and 30-day refresh tokens. Refresh logic is in src/auth/refresh.ts.
 
 Windsurf's context is limited to the current session. It does not offer equivalent cross-session persistence.
 
-Skill Ecosystem vs Base Capabilities
+## Skill Ecosystem vs Base Capabilities
 
 Claude's skill system means specialized behaviors are explicit and inspectable. If `/tdd` is writing tests in a way you don't want, you can open `~/.claude/skills/tdd.md` and change it.
 
 Windsurf relies on its base model capabilities and prompt engineering. You can guide it through chat instructions, but there is no equivalent user-defined skill layer.
 
-Practical Scenarios
+## Practical Scenarios
 
 Rapid file generation: Use Claude Code when you need a complete file. component, test suite, config. generated to your specifications in one shot:
 
@@ -109,7 +109,7 @@ Documentation-heavy projects: `/pdf` in Claude Code lets you generate technical 
 
 Test coverage: Invoking `/tdd` in Claude Code means describing requirements and receiving a test suite before any implementation. Windsurf can generate tests for existing code but does not enforce the TDD order.
 
-Feature Comparison at a Glance
+## Feature Comparison at a Glance
 
 The table below summarizes the most decision-relevant differences across common developer needs.
 
@@ -126,7 +126,7 @@ The table below summarizes the most decision-relevant differences across common 
 | Skill inspection & editing | Yes. plain `.md` files | Not applicable |
 | Free tier | Limited (API cost) | Yes. Codeium free tier |
 
-Workflow Speed and Latency
+## Workflow Speed and Latency
 
 In practice, the tools differ not just in capability but in interaction speed.
 
@@ -136,7 +136,7 @@ Claude Code is deliberate by design. You write a prompt, Claude reads your files
 
 Rule of thumb: if you're changing fewer than 10 lines with a clear mechanical goal, Windsurf is faster. If you're generating a new module, migrating an API, or running a multi-step workflow, Claude Code wins.
 
-Use-Case Recommendations
+## Use-Case Recommendations
 
 Use Claude Code when:
 
@@ -158,7 +158,7 @@ Use both when:
 - Windsurf handles daily in-editor assistance for smaller edits and navigation
 - Claude Code handles planned, structured tasks where skill invocation and memory provide use that an in-editor assistant cannot replicate
 
-Making Your Choice
+## Making Your Choice
 
 If you value terminal-based workflows, explicit skill invocation, and persistent project memory, Claude Code provides a more extensible foundation. You can write your own skills, audit what each skill does, and integrate Claude into scripts and pipelines.
 

@@ -15,7 +15,7 @@ score: 8
 {% raw %}
 When evaluating password management options, developers and power users need concrete technical details rather than marketing claims. Chrome's built-in password manager offers convenience, but understanding its security architecture helps you make informed decisions about where to store sensitive credentials.
 
-How Chrome's Password Manager Actually Works
+## How Chrome's Password Manager Actually Works
 
 Chrome's password manager stores credentials locally on your device using operating system-level protection. When you save a password in Chrome, the browser encrypts it before writing to disk.
 
@@ -33,7 +33,7 @@ stat_info = os.stat(login_data_path)
 print(f"File permissions: {oct(stat_info.st_mode)}")
 ```
 
-Encryption at Rest and in Transit
+## Encryption at Rest and in Transit
 
 Chrome encrypts passwords using AES-256 through the operating system's encryption framework. When sync is enabled, passwords travel over TLS 1.3 connections to Google's servers. At rest on Google's servers, passwords remain encrypted with a key derived from your Google account credentials.
 
@@ -63,7 +63,7 @@ const encryptPassword = async (password, syncKey) => {
 };
 ```
 
-What Security Researchers Actually Criticize
+## What Security Researchers Actually Criticize
 
 The legitimate criticisms of Chrome's password manager center on three areas:
 
@@ -79,7 +79,7 @@ Enable biometric authentication for password autofill in Chrome:
 
 3. Single-Point-of-Failure Model: If someone gains access to your Google account, they potentially access all synced passwords. Dedicated password managers offer additional security layers like secret keys or YubiKey integration.
 
-Comparing Security Models
+## Comparing Security Models
 
 For developers handling sensitive project credentials, understanding the architectural differences matters:
 
@@ -93,7 +93,7 @@ For developers handling sensitive project credentials, understanding the archite
 
 The "zero-knowledge" architecture means the password manager server never sees your plaintext passwords. Bitwarden and 1Password implement this fully, Google's sync model requires the server to handle encrypted data.
 
-When Chrome's Password Manager Makes Sense
+## When Chrome's Password Manager Makes Sense
 
 For developers, Chrome's password manager provides adequate security for:
 
@@ -103,7 +103,7 @@ For developers, Chrome's password manager provides adequate security for:
 
 The convenience factor matters: developers often need to authenticate across dozens of services daily. The built-in manager reduces credential fatigue without requiring additional software installation.
 
-Hardening Your Chrome Password Security
+## Hardening Your Chrome Password Security
 
 Regardless of which password manager you choose, enable additional protections:
 
@@ -120,7 +120,7 @@ Regardless of which password manager you choose, enable additional protections:
 
 Regular security hygiene applies: use unique passwords per service, enable two-factor authentication everywhere possible, and audit saved passwords quarterly for old or duplicate entries.
 
-The Bottom Line for Developers
+## The Bottom Line for Developers
 
 Chrome's built-in password manager provides reasonable security for personal use cases. The encryption model protects against casual access, and OS integration means credentials benefit from your device's security controls.
 
@@ -128,7 +128,7 @@ For production systems, API keys, database credentials, and other sensitive deve
 
 The best password manager is the one you actually use consistently. For developers who already live in Chrome, the built-in manager removes friction while providing baseline security. Just understand its limitations and supplement with dedicated tools for high-value credentials.
 
-Understanding Chrome's Passkey Integration
+## Understanding Chrome's Passkey Integration
 
 Chrome's password manager has quietly expanded beyond traditional passwords to include passkey support, which changes the security conversation substantially. Passkeys use asymmetric cryptography: your device holds a private key that never leaves local storage, and the server stores only a public key.
 
@@ -159,7 +159,7 @@ const credential = await navigator.credentials.create({
 
 For developers building applications, supporting passkeys through Chrome's credential management API is increasingly the right default. Users who rely on Chrome's built-in manager get smooth passkey authentication, and you eliminate the password reset support burden entirely.
 
-How Malicious Extensions Can Compromise Chrome Credentials
+## How Malicious Extensions Can Compromise Chrome Credentials
 
 Browser extensions represent the most realistic threat vector for Chrome credential theft in 2026, and it's worth understanding the mechanism precisely. Extensions granted `activeTab` or broad host permissions can read the DOM of any page the user visits, including password fields before Chrome autofills them.
 
@@ -190,7 +190,7 @@ Review each extension's requested permissions
 Remove extensions that request access to all sites without clear need
 ```
 
-Practical Workflow: Segmenting Credentials by Risk Level
+## Practical Workflow: Segmenting Credentials by Risk Level
 
 The most effective approach for developers is not choosing one password manager but segmenting credentials by sensitivity and routing them to appropriate storage.
 
@@ -224,7 +224,7 @@ aws secretsmanager get-secret-value \
   --output text
 ```
 
-Auditing and Monitoring Chrome Passwords
+## Auditing and Monitoring Chrome Passwords
 
 Chrome provides a built-in password checkup tool that checks your saved credentials against Google's database of known breaches. For developers who have accumulated hundreds of saved passwords over years of Chrome use, this tool surfaces real problems.
 

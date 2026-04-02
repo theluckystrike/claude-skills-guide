@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Team Coding Standards Enforcement Workflow
-
 Establishing consistent coding standards across a development team is challenging but essential for maintainable codebases. Claude Code offers powerful mechanisms to enforce these standards through skills, custom configurations, and automated workflows. This guide walks you through implementing a comprehensive coding standards enforcement system that keeps your team aligned without micromanaging every line of code.
 
-Understanding Standards Enforcement in Claude Code
+## Understanding Standards Enforcement in Claude Code
 
 Before diving into implementation, it's important to understand how Claude Code processes and enforces standards. Unlike traditional linters that only catch syntax errors, Claude Code can enforce semantic standards, architectural patterns, and team-specific conventions through skill-based guidance and automated checks.
 
@@ -28,7 +25,7 @@ The enforcement workflow operates on three levels:
 2. Proactive enforcement - Pre-commit hooks and CI/CD pipelines prevent violations from entering the codebase
 3. Educational enforcement - Claude Code explains why standards exist, helping developers understand the reasoning
 
-Setting Up Your Standards Skill
+## Setting Up Your Standards Skill
 
 The foundation of your enforcement workflow is a dedicated skill that defines your team's coding standards. Create a skill that captures your conventions in a format Claude Code can reference and enforce.
 
@@ -69,7 +66,7 @@ TypeScript Specific
 
 This skill becomes the baseline for all code generation and review activities. When developers work with Claude Code, this skill automatically influences its output.
 
-Implementing Pre-Commit Enforcement
+## Implementing Pre-Commit Enforcement
 
 Pre-commit hooks provide the first line of defense against standards violations. Configure your project to run Claude Code checks before code enters your repository.
 
@@ -111,7 +108,7 @@ for file in $FILES; do
 done
 ```
 
-Continuous Integration Standards Validation
+## Continuous Integration Standards Validation
 
 CI/CD pipelines should include Claude Code-based standards validation as part of your build process. This ensures that even if pre-commit hooks are bypassed, violations are caught before deployment.
 
@@ -155,11 +152,11 @@ jobs:
           fi
 ```
 
-Building Team-Specific Enforcement Rules
+## Building Team-Specific Enforcement Rules
 
 Every team has unique requirements. Extend your enforcement workflow with custom rules that address your specific challenges.
 
-API Response Standardization
+## API Response Standardization
 
 ```yaml
 API Response Standards
@@ -184,7 +181,7 @@ When generating API endpoints:
 4. Never expose internal error details to clients
 ```
 
-Error Handling Requirements
+## Error Handling Requirements
 
 ```yaml
 Error Handling Standards
@@ -216,7 +213,7 @@ try {
 ```
 ```
 
-Measuring Standards Compliance
+## Measuring Standards Compliance
 
 Track your team's adherence to coding standards over time. Create a metrics collection system that Claude Code populates during its operations:
 
@@ -235,7 +232,7 @@ Use this data to:
 3. Recognize teams or individuals with high compliance
 ```
 
-Best Practices for Standards Enforcement
+## Best Practices for Standards Enforcement
 
 Implementing standards is only half the battle. Making them stick requires thoughtful execution:
 
@@ -245,7 +242,7 @@ Implementing standards is only half the battle. Making them stick requires thoug
 4. Iterate based on feedback - Adjust standards that create friction without adding value
 5. Automate where possible - Use Claude Code for repetitive checks, reserve human review for nuanced decisions
 
-Conclusion
+## Conclusion
 
 A well-implemented Claude Code standards enforcement workflow transforms coding conventions from documentation into actionable guidance. By combining skills-based rules, pre-commit hooks, CI/CD integration, and continuous feedback, you create a self-documenting system that maintains code quality while reducing the burden on human reviewers.
 

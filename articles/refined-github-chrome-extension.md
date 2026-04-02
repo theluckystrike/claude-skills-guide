@@ -16,13 +16,13 @@ permalink: /refined-github-chrome-extension/
 
 The Refined GitHub browser extension transforms the GitHub interface into a more efficient workspace for developers who spend significant time navigating repositories, issues, and pull requests. This extension adds thoughtful enhancements that address common problems in the GitHub workflow without fundamentally altering the platform's familiar layout.
 
-What Refined GitHub Actually Does
+## What Refined GitHub Actually Does
 
 Refined GitHub operates as a client-side layer that modifies GitHub's DOM to expose functionality that either exists but is hidden or should exist based on user feedback. The extension is open source, with versions available for Chrome, Firefox, and Safari.
 
 The core value proposition is simple: reduce friction in daily GitHub operations. Every feature addresses something developers encounter repeatedly, copying permalinks, viewing diffs more clearly, or managing issue labels more efficiently.
 
-Installation and Initial Setup
+## Installation and Initial Setup
 
 Install the extension from the Chrome Web Store or Firefox Add-ons repository. After installation, the extension activates automatically on GitHub.com. No account creation or API keys are required for basic functionality.
 
@@ -33,31 +33,31 @@ To access configuration options, click the extension icon in your browser toolba
 - Diff improvements: Syntax highlighting enhancements, better line number visibility
 - Repository browsing: Quick navigation to files, branch selection improvements
 
-Features That Actually Matter
+## Features That Actually Matter
 
-Copy Functionality
+## Copy Functionality
 
 One of the most-used features is the ability to copy various GitHub identifiers without manual selection. Hovering over commit SHAs, branch names, or issue numbers reveals a copy button. This proves invaluable when writing commit messages, documenting changes, or referencing issues in external systems.
 
 The extension also adds a "Copy Diff" option in pull request views, which copies the full diff to your clipboard in a format suitable for sharing or code review outside GitHub.
 
-Enhanced Issue Management
+## Enhanced Issue Management
 
 Refined GitHub expands collapsed issue elements by default, showing full descriptions without additional clicks. For teams managing large issue queues, this eliminates repetitive expand/collapse operations.
 
 The extension adds reaction filters to issues and pull requests. If you're looking for issues with specific feedback (such as all issues marked with a thumbs-up indicating community interest), reaction filtering surfaces those quickly.
 
-Commit and Diff Improvements
+## Commit and Diff Improvements
 
 Commit pages receive several enhancements. The extension displays commit hashes in a more readable format and adds copy buttons directly to the SHA display. For commits with large diffs, it provides a "Load all" option to display the entire diff without scrolling.
 
 In diff views, you get improved line number visibility and the ability to collapse unchanged sections while maintaining context. This becomes useful when reviewing large pull requests where you want to focus on meaningful changes.
 
-Repository Navigation
+## Repository Navigation
 
 Within repositories, Refined GitHub adds a keyboard shortcut indicator showing available navigation keys. It also enables direct linking to specific lines in files, a small addition that significantly improves sharing specific code locations with teammates.
 
-Configuration for Power Users
+## Configuration for Power Users
 
 The extension stores preferences locally in your browser. For teams wanting consistent configurations across multiple machines, manual synchronization through browser export/import functions works adequately.
 
@@ -65,9 +65,9 @@ Individual features toggle on or off independently. This granular control means 
 
 Certain features require additional permissions. The extension clearly indicates which features need wider browser access and explains why, typically for features that work across multiple domains or need to modify clipboard contents.
 
-Practical Examples
+## Practical Examples
 
-Scenario: Reviewing a Pull Request
+## Scenario: Reviewing a Pull Request
 
 When opening a pull request with 50+ changed files, use the extension's collapse-unchanged feature to focus on files with actual modifications. The copy diff button lets you grab the entire change set for offline review or to paste into a code review tool.
 
@@ -80,15 +80,15 @@ git apply << 'EOF'
 EOF
 ```
 
-Scenario: Finding Issues by Reaction
+## Scenario: Finding Issues by Reaction
 
 A maintainer looking for issues that received community validation can filter by reaction. Navigate to the repository's issues page, click the reaction filter, and select the relevant emoji. Issues with that reaction appear immediately, bypassing manual scanning.
 
-Scenario: Quick Reference Links
+## Scenario: Quick Reference Links
 
 When documenting a codebase, right-click any file in the repository and select "Copy permalink" to get a link to the exact version of that file at the current commit. These permanent links ensure documentation remains valid even after the file changes.
 
-Limitations and Considerations
+## Limitations and Considerations
 
 Refined GitHub modifies GitHub's interface through DOM manipulation. GitHub periodically updates their UI, which occasionally causes features to break until the extension updates. The maintainers respond quickly to such changes, but there's typically a small delay.
 
@@ -96,12 +96,11 @@ Some features overlap with GitHub's native functionality that GitHub has added o
 
 The extension runs entirely client-side. All processing happens in your browser, and no data sends to external servers beyond GitHub itself. This maintains privacy while providing functionality.
 
-Conclusion
+## Conclusion
 
 Refined GitHub delivers practical improvements for developers who use GitHub daily. The installation takes seconds, configuration is straightforward, and the feature set addresses real workflow friction. The open-source nature means transparency in what the extension does, and the active maintenance keeps it functional as GitHub evolves.
 
 For developers toggling between dozens of repositories, managing multiple issues, or reviewing pull requests regularly, these enhancements compound into meaningful time savings. Start with default settings and disable features that don't match your workflow, the modular approach ensures you get only what you need.
-
 
 Related Reading
 

@@ -18,7 +18,7 @@ permalink: /open-source-claude-skills-ecosystem-outlook-2026/
 
 The open source community [shares skills as GitHub repositories](/how-to-contribute-claude-skills-to-open-source/) containing `.md` files. This article covers how that ecosystem works in 2026.
 
-How Skills Actually Work
+## How Skills Actually Work
 
 - A skill is a `.md` file in `~/.claude/skills/`
 - You invoke it with `/skill-name` in a Claude Code session
@@ -35,7 +35,7 @@ Incorrect:
 claude "Use tdd to create tests"  # Wrong. this doesn't invoke skills
 ```
 
-Built-in Skills in Claude Code
+## Built-in Skills in Claude Code
 
 Skills that ship pre-installed with Claude Code:
 
@@ -52,7 +52,7 @@ Skills that ship pre-installed with Claude Code:
 
 These don't require installation. Verify availability by starting a session and typing the slash command.
 
-Community Skills on GitHub
+## Community Skills on GitHub
 
 A typical community skill repository:
 ```
@@ -71,7 +71,7 @@ cp downloaded-skill.md ~/.claude/skills/my-skill.md
 Now invokable as /my-skill
 ```
 
-Emerging Skill Categories: DevOps, Data, and Security
+## Emerging Skill Categories: DevOps, Data, and Security
 
 The earliest community skills focused on general coding tasks. code review, refactoring, test generation. In 2026 the ecosystem has diversified into three categories that are growing especially fast.
 
@@ -83,7 +83,7 @@ Security and compliance skills are newer but gaining traction quickly. These ski
 
 All three categories share a common trait: they work best when the skill file encodes domain conventions that Claude would otherwise have to infer or be told about repeatedly. The open source ecosystem accelerates this by letting practitioners share the conventions they've already refined in production.
 
-Evaluating Community Skills
+## Evaluating Community Skills
 
 Check these when reviewing a community skill:
 
@@ -97,7 +97,7 @@ Red flags:
 - Instructions referencing Python imports or npm packages
 - Mentions of `claude skill install` or similar fake CLI commands
 
-Where to Find Community Skills
+## Where to Find Community Skills
 
 - GitHub repositories (search "claude skill" or "claude-code skill")
 - Developer blogs and tutorials
@@ -105,7 +105,7 @@ Where to Find Community Skills
 
 There is no official skills marketplace on the claude-skills-guide site or elsewhere. Any site claiming to be an official Anthropic skills store is not affiliated with Anthropic.
 
-Contributing Your Own Skills
+## Contributing Your Own Skills
 
 Use `/skill-creator` to scaffold a new skill:
 
@@ -117,7 +117,7 @@ Check formatting, naming conventions, and docstring quality.
 
 Share by publishing the `.md` file to a public GitHub repository.
 
-Skill Composability and Chaining
+## Skill Composability and Chaining
 
 Skills are invoked one at a time, but that doesn't mean they operate in isolation. The most effective practitioners treat skills as composable steps in a larger workflow, chaining them deliberately across a session.
 
@@ -133,7 +133,7 @@ A few principles make composability work well in practice:
 
 Community skill repositories that document how their skill fits into a larger workflow are easier to evaluate and more likely to be adopted. A `README.md` that shows a three-step chain using the skill is more convincing than one that only describes the skill in isolation.
 
-The Role of MCP in the Ecosystem
+## The Role of MCP in the Ecosystem
 
 The Model Context Protocol (MCP) is a separate but complementary layer to the skill system. Understanding how they relate is important for anyone building serious Claude Code workflows.
 
@@ -145,7 +145,7 @@ For the open source ecosystem, MCP creates a new dimension of skill specializati
 
 The practical implication: when evaluating a community skill, check whether its documentation mentions MCP. Skills that are MCP-aware tend to be written by practitioners who have moved beyond basic Claude Code usage and are building production-grade workflows.
 
-The Ecosystem in 2026
+## The Ecosystem in 2026
 
 The skill format is simple: a plain Markdown file with instructions. This means:
 

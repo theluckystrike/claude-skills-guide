@@ -18,7 +18,7 @@ permalink: /zoom-mcp-server-meeting-summary-automation/
 
 This guide walks through building a complete Zoom meeting summary automation workflow using MCP servers, with practical code examples you can adapt for your team.
 
-The Real Cost of Manual Meeting Documentation
+## The Real Cost of Manual Meeting Documentation
 
 Before diving into the technical setup, it is worth understanding the problem clearly, because the solution only makes sense if you have the right motivation for building it.
 
@@ -28,7 +28,7 @@ Conservatively, this costs thirty to sixty minutes per meeting in combined time 
 
 The Zoom MCP server integration eliminates most of this. With the right setup, a meeting ends and within minutes a structured summary. with decisions, action items, follow-up owners, and deadlines. is automatically available in whatever system your team uses.
 
-How Zoom MCP Server Integration Works
+## How Zoom MCP Server Integration Works
 
 [The Zoom MCP server connects Claude Code directly to your Zoom account](/how-do-i-combine-two-claude-skills-in-one-workflow/) through the Zoom API. This connection enables Claude to:
 
@@ -43,7 +43,7 @@ The architecture is straightforward: your Claude Code instance runs locally (or 
 
 This means the quality of the output depends partly on Zoom's transcription accuracy. For most modern meetings with good audio, Zoom's automatic transcription is accurate enough to serve as the raw material for Claude's summarization. Meetings with heavy technical jargon, multiple simultaneous speakers, or poor audio will produce noisier transcripts, and Claude's summaries will reflect that noise. For high-stakes meetings, it is always worth doing a quick scan of the raw transcript before distributing a Claude-generated summary.
 
-Setting Up Your Zoom MCP Server
+## Setting Up Your Zoom MCP Server
 
 First, you'll need to create a Zoom OAuth app to authenticate the MCP server:
 
@@ -79,7 +79,7 @@ Configure Claude Code to use the server by adding it to your configuration:
 
 Restart Claude Code to load the new server configuration.
 
-Verifying the Connection
+## Verifying the Connection
 
 Once the server is configured, verify the connection before building your automation. Run a simple test that lists your recent meetings:
 
@@ -95,7 +95,7 @@ Claude will call the Zoom MCP server and return results like:
 
 If this returns data, your OAuth credentials are working and the MCP server can reach the Zoom API. If you get authentication errors, double-check that your OAuth app has the `meeting:read` and `recording:read` scopes enabled in the Zoom Marketplace configuration.
 
-Building the Meeting Summary Automation
+## Building the Meeting Summary Automation
 
 With the Zoom MCP server connected, you can now build automation workflows. Here's a practical example that fetches recent meetings and generates summaries:
 
@@ -188,9 +188,9 @@ function buildSummaryPrompt(transcript, meetingType = "general") {
 }
 ```
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Daily Standup Summary Automation
+## Daily Standup Summary Automation
 
 For teams running daily standups over Zoom, automate the documentation process:
 
@@ -233,7 +233,7 @@ async function processTodayStandup() {
 }
 ```
 
-Sprint Retrospective Processing
+## Sprint Retrospective Processing
 
 After sprint retrospectives, extract action items automatically using the tdd skill for test creation or the supermemory skill for persistent storage:
 
@@ -260,7 +260,7 @@ What makes retrospective processing particularly valuable is the longitudinal tr
 
 After six sprints of collected data, that analysis can inform quarterly planning in ways that are impossible when retrospective notes live in scattered documents.
 
-Design Review Documentation
+## Design Review Documentation
 
 Design review meetings generate specific artifacts that differ from standard meeting summaries. you need decisions tied to specific design choices, not just a general list of what was discussed:
 
@@ -288,7 +288,7 @@ async function processDesignReview(meetingId, designDocUrl) {
 }
 ```
 
-Advanced: PDF Report Generation
+## Advanced: PDF Report Generation
 
 Transform meeting summaries into professional PDF reports using the pdf skill for client deliverables:
 
@@ -326,7 +326,7 @@ async function generateMeetingReport(meetingData, summary) {
 
 PDF reports are most useful for client-facing contexts where you need to send a polished artifact rather than a Slack message or Notion page. The report can include your company branding, be version-stamped, and attached to a formal email chain. For internal use, Notion or Slack is usually more convenient because the content stays searchable and linkable.
 
-Security Considerations
+## Security Considerations
 
 When automating meeting data access, follow these security practices:
 
@@ -339,7 +339,7 @@ Two additional considerations often get overlooked. First, meeting participants 
 
 Second, if your meetings involve confidential information (legal discussions, unreleased product details, personnel matters), consider whether those meetings should be excluded from automation entirely. A simple allowlist of meeting topic patterns, rather than processing all meetings, reduces the risk of sensitive summaries landing in the wrong place.
 
-Common Integration Patterns
+## Common Integration Patterns
 
 Teams typically combine the Zoom MCP server with other integrations:
 
@@ -382,7 +382,7 @@ async function distributeSummary(summary, meetingMetadata) {
 
 Running distribution in parallel with `Promise.all` keeps the total time short. the bottleneck is usually Claude's summarization, not the downstream API calls.
 
-Troubleshooting
+## Troubleshooting
 
 If your Zoom MCP server connection fails:
 
@@ -409,7 +409,7 @@ async function waitForTranscript(meetingId, maxAttempts = 10) {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Automating Zoom meeting summaries with Claude Code transforms a manual, time-consuming task into a streamlined workflow. By connecting the Zoom MCP server to Claude's analysis capabilities, you can extract value from every meeting without the overhead of manual documentation.
 

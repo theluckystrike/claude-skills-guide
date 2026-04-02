@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Jupyter Notebook Analysis Workflow Guide
 
 Combining Claude Code with Jupyter notebooks creates a powerful environment for interactive data analysis. This guide walks you through practical workflows, code patterns, and strategies to maximize your productivity when working with notebooks alongside Claude Code, from loading raw CSV files through statistical testing, model evaluation, and reproducible reporting.
 
-Why Use Claude Code with Jupyter Notebooks
+## Why Use Claude Code with Jupyter Notebooks
 
 Jupyter notebooks excel at exploratory data analysis, allowing you to see results immediately as you iteratively refine your approach. Claude Code complements this by providing intelligent assistance throughout your workflow, from initial data exploration to final results documentation.
 
@@ -33,7 +32,7 @@ The combination works particularly well because:
 
 Practically, this means you spend more time thinking about your data and less time remembering the exact Pandas API for a groupby aggregation. Claude Code acts as a knowledgeable pair programmer who never gets impatient when you ask the same question twice.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before diving into workflows, ensure your environment is properly configured. Use a dedicated virtual environment to keep notebook dependencies isolated from other projects:
 
@@ -82,9 +81,9 @@ print("Environment ready.")
 
 Running this setup cell first in every notebook means you get consistent output formatting and plot styles regardless of what was previously run. It is a small habit that pays dividends when reviewing older notebooks months later.
 
-The Exploratory Analysis Workflow
+## The Exploratory Analysis Workflow
 
-Step 1: Data Loading and Initial Inspection
+## Step 1: Data Loading and Initial Inspection
 
 Begin by loading your data and performing initial exploration. This sets the foundation for deeper analysis.
 
@@ -123,7 +122,7 @@ def data_profile(df):
 data_profile(df)
 ```
 
-Step 2: Data Cleaning and Preprocessing
+## Step 2: Data Cleaning and Preprocessing
 
 Clean data is essential for accurate analysis. Use Claude Code to help identify cleaning strategies:
 
@@ -165,7 +164,7 @@ for col in numeric_cols:
 
 Paste the output of these cells to Claude and ask "How should I handle these outliers given that this is a sales dataset?" The answer will differ depending on domain context, you want to keep legitimate high-value sales records but remove data entry errors.
 
-Step 3: Exploratory Data Analysis
+## Step 3: Exploratory Data Analysis
 
 Create visualizations and statistical summaries to understand your data better:
 
@@ -215,9 +214,9 @@ plt.savefig('correlation_matrix.png', dpi=150, bbox_inches='tight')
 plt.show()
 ```
 
-Advanced Analysis Patterns
+## Advanced Analysis Patterns
 
-Time Series Analysis
+## Time Series Analysis
 
 For temporal data, Claude Code can help construct analysis pipelines:
 
@@ -271,7 +270,7 @@ plt.savefig('decomposition.png', dpi=150, bbox_inches='tight')
 plt.show()
 ```
 
-Statistical Testing
+## Statistical Testing
 
 Validate your hypotheses with appropriate statistical tests:
 
@@ -311,7 +310,7 @@ print(f"Cohen's d: {cohens_d:.4f} ({'large' if abs(cohens_d) > 0.8 else 'medium'
 
 The normality check is often skipped in quick analyses, which leads to applying t-tests to skewed data and drawing incorrect conclusions. Claude Code can help you remember these checks by asking it "is my statistical approach correct for this type of data?"
 
-Feature Engineering for Machine Learning
+## Feature Engineering for Machine Learning
 
 When your analysis moves toward predictive modeling, Claude Code can suggest relevant feature engineering strategies:
 
@@ -343,7 +342,7 @@ X_test_scaled = scaler.transform(X_test)   # Use train scaler on test set
 print(f"Train: {X_train_scaled.shape}, Test: {X_test_scaled.shape}")
 ```
 
-Best Practices for Claude + Notebook Workflows
+## Best Practices for Claude + Notebook Workflows
 
 1. Use Clear Cell Organization
 
@@ -352,7 +351,6 @@ Structure your notebooks logically with descriptive cell titles:
 ```python
 
 SECTION: Data Loading and Preparation
-
 
 Your code here
 ```
@@ -410,7 +408,6 @@ SIGNIFICANCE_ALPHA = 0.05
 OUTPUT_DIR      = 'output/'
 RANDOM_SEED     = 42
 
-
 import os
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 np.random.seed(RANDOM_SEED)
@@ -425,9 +422,9 @@ papermill analysis.ipynb output/analysis_march.ipynb \
   -p REPORT_DATE 2026-03-31
 ```
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
-Kernel Crashes
+## Kernel Crashes
 
 If your kernel crashes frequently:
 - Break large operations into smaller chunks and checkpoint intermediate DataFrames to disk with `df.to_parquet('checkpoint.parquet')`
@@ -435,7 +432,7 @@ If your kernel crashes frequently:
 - Restart the kernel periodically using Kernel > Restart & Run All to verify the notebook runs clean from top to bottom
 - Use `%memit` from the `memory_profiler` package to measure memory usage of individual cells
 
-Slow Execution
+## Slow Execution
 
 For slow-running code:
 - Use vectorized Pandas/NumPy operations instead of Python loops, a loop over DataFrame rows is almost always the wrong approach
@@ -443,14 +440,14 @@ For slow-running code:
 - Sample large datasets during development with `df.sample(10000, random_state=42)` and run the full dataset only when you are satisfied with the logic
 - Use `%%time` or `%%timeit` cell magic to benchmark alternative implementations
 
-Output Format Issues
+## Output Format Issues
 
 When notebook outputs look cluttered or too verbose:
 - Use `display(df.head(10))` rather than `print(df)` for DataFrames, it renders as a formatted HTML table in Jupyter
 - Suppress unwanted output with a semicolon at the end of the last line in a cell (e.g., `plt.show();`)
 - Use `pd.set_option('display.max_rows', 20)` to prevent DataFrames from printing hundreds of rows
 
-Conclusion
+## Conclusion
 
 The Claude Code and Jupyter notebook combination offers a powerful environment for data analysis. By following these workflow patterns and best practices, you can accelerate your exploratory analysis while maintaining clean, reproducible code. Remember to use Claude Code's strengths, code generation, explanation, and review, throughout your analysis process.
 

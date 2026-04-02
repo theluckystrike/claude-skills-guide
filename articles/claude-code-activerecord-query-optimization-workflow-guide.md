@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code ActiveRecord Query Optimization Workflow Guide"
 description: "Master ActiveRecord query optimization with Claude Code. Learn practical techniques for identifying N+1 queries, using eager loading, query methods."
@@ -14,20 +13,17 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code ActiveRecord Query Optimization Workflow Guide
 
 ActiveRecord is Rails' powerful ORM that abstracts database interactions, but it can silently introduce performance bottlenecks if you're not careful. N+1 queries, missing indexes, and inefficient query patterns can turn a snappy application into a sluggish one. This guide shows you how to use Claude Code to identify, diagnose, and fix ActiveRecord performance issues systematically.
 
-Why ActiveRecord Optimization Matters
+## Why ActiveRecord Optimization Matters
 
 Database queries are often the primary cause of application slowdowns. A single request can trigger dozens of database calls, each adding latency. For Rails applications handling moderate traffic, inefficient queries can escalate response times from milliseconds to seconds. Optimizing your ActiveRecord usage directly impacts user experience, server costs, and your application's scalability.
 
 Claude Code excels at analyzing Rails codebases because it understands the relationships between models, controllers, and views. This makes it particularly effective for identifying query patterns that cause performance issues across your application.
 
-Identifying N+1 Query Problems
+## Identifying N+1 Query Problems
 
 The N+1 query problem is the most common performance issue in Rails applications. It occurs when your code fetches a parent record and then makes separate queries for each related object. Consider this typical pattern:
 
@@ -49,7 +45,7 @@ View
 
 This code executes one query for posts, then one query per author, and one query per comment collection, potentially hundreds of queries for a page with 50 posts.
 
-Using Claude Code to Detect N+1 Queries
+## Using Claude Code to Detect N+1 Queries
 
 Ask Claude Code to analyze your code:
 
@@ -60,11 +56,11 @@ Claude Code will examine your model relationships and identify patterns like:
 - Calling methods that trigger additional queries in loops
 - Missing `includes`, `preload`, or `eager_load` clauses
 
-Implementing Eager Loading
+## Implementing Eager Loading
 
 Once you've identified N+1 problems, the fix is straightforward: use eager loading to fetch related records in a single query. ActiveRecord provides three methods for this: `includes`, `preload`, and `eager_load`.
 
-Using includes for Associations
+## Using includes for Associations
 
 The `includes` method is the most versatile:
 
@@ -78,7 +74,7 @@ After: Single query with JOIN or two queries
 
 This generates either a single query with LEFT JOINs or two queries (one for posts, one for all related records), eliminating the N+1 problem entirely.
 
-Choosing Between preload and eager_load
+## Choosing Between preload and eager_load
 
 For complex scenarios, you may need to choose between these methods:
 
@@ -94,11 +90,11 @@ Ask Claude Code to recommend the appropriate method:
 
 > "What's the best way to eager load the comments association for this query? Should I use includes, preload, or eager_load?"
 
-Optimizing Query Conditions
+## Optimizing Query Conditions
 
 Beyond eager loading, optimizing your WHERE clauses and query conditions can yield significant improvements.
 
-Using select to Limit Fields
+## Using select to Limit Fields
 
 Fetching only the columns you need reduces memory usage and network transfer:
 
@@ -110,7 +106,7 @@ After: Selecting only needed fields
 @posts = Post.select(:id, :title, :published_at)
 ```
 
-Using where with Proper Indexing
+## Using where with Proper Indexing
 
 Ensure your database has indexes on columns you frequently query:
 
@@ -125,11 +121,11 @@ Ask Claude Code to analyze your queries:
 
 > "Review these ActiveRecord queries and suggest which columns need indexes for optimal performance."
 
-Leveraging Query Methods
+## Leveraging Query Methods
 
 ActiveRecord provides numerous query methods that can simplify your code while improving performance.
 
-Using pluck for Value Arrays
+## Using pluck for Value Arrays
 
 When you only need a specific column's values, `pluck` is more efficient than `map`:
 
@@ -141,7 +137,7 @@ More efficient: Direct database query
 user_ids = User.active.pluck(:id)
 ```
 
-Using exists? for Boolean Checks
+## Using exists? for Boolean Checks
 
 For checking record existence, use `exists?` instead of `any?`:
 
@@ -153,7 +149,7 @@ More efficient: Single COUNT query
 has_posts = user.posts.exists?
 ```
 
-Caching and Counter Columns
+## Caching and Counter Columns
 
 Frequent count queries can be expensive. Consider using counter caches:
 
@@ -181,7 +177,7 @@ Ask Claude Code to implement counter caches:
 
 > "Add counter cache columns to all has_many associations in this Rails app that would benefit from them."
 
-Using Bullet Gem with Claude Code
+## Using Bullet Gem with Claude Code
 
 For comprehensive query analysis, combine Claude Code with the Bullet gem. Bullet alerts you to N+1 queries, unnecessary counts, and missing eager loading in development.
 
@@ -202,7 +198,7 @@ When Bullet reports issues, ask Claude Code to fix them:
 
 > "Fix the N+1 query that Bullet detected in the posts controller. The issue is with the comments association."
 
-Practical Workflow with Claude Code
+## Practical Workflow with Claude Code
 
 Here's a systematic approach to optimizing your ActiveRecord queries:
 
@@ -219,7 +215,7 @@ Here's a systematic approach to optimizing your ActiveRecord queries:
 5. Document: Ask Claude Code to add comments explaining the optimization:
    > "Add comments explaining why we use includes here and what performance problem it solves."
 
-Measuring Your Improvements
+## Measuring Your Improvements
 
 Track query performance using Rails' built-in instrumentation:
 
@@ -235,7 +231,7 @@ end
 
 For production monitoring, consider tools like Scout, New Relic, or PgHero that provide query performance insights.
 
-Conclusion
+## Conclusion
 
 Optimizing ActiveRecord queries is essential for building fast, scalable Rails applications. By using Claude Code's understanding of your codebase, you can systematically identify N+1 problems, implement eager loading, and apply best practices for query construction. Start with the most frequently accessed pages, measure your improvements, and make query optimization part of your regular development workflow.
 

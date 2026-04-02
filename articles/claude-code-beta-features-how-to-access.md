@@ -13,12 +13,9 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code Beta Features: How to Access and Use Them
-
 Claude Code continues to evolve with new capabilities that enhance developer productivity. Beta features give you early access to cutting-edge functionality before it reaches general availability. This guide walks you through accessing these features, understanding their requirements, and integrating them into your workflow.
 
-Understanding Beta Features in Claude Code
+## Understanding Beta Features in Claude Code
 
 Beta features in Claude Code represent functionality that is actively being refined based on user feedback. These features may include new skill capabilities, enhanced tool integrations, improved performance optimizations, or experimental APIs. The beta label indicates that while the feature works, it might undergo changes before stable release.
 
@@ -33,11 +30,11 @@ Beta features fall into several categories worth distinguishing:
 
 Understanding which category a beta feature falls into helps you set up and debug it correctly.
 
-How to Access Claude Code Beta Features
+## How to Access Claude Code Beta Features
 
 The primary method for accessing beta features involves enabling them through your Claude Code configuration file. The `settings.json` file controls which experimental capabilities are active.
 
-Accessing Beta Through Configuration Files
+## Accessing Beta Through Configuration Files
 
 For persistent beta feature access, you can modify your Claude Code configuration file. Create or edit the configuration at `~/.claude/settings.json`:
 
@@ -69,7 +66,7 @@ Configuration files can exist at two scopes:
 
 Project-scoped settings take precedence over user-wide settings when both exist. This lets you enable aggressive beta configurations in a sandbox project without affecting your production workflows.
 
-Passing Beta Flags at Launch
+## Passing Beta Flags at Launch
 
 For one-off testing without modifying your permanent configuration, pass flags directly when launching Claude Code:
 
@@ -95,7 +92,7 @@ Then launch
 claude
 ```
 
-Installing Beta Skills
+## Installing Beta Skills
 
 Many beta features arrive as specialized skills that you install separately. Beta skills often provide access to new tool integrations or enhanced capabilities for specific workflows.
 
@@ -127,9 +124,9 @@ my-project/
 
 Beta skill files may have additional requirements or limitations compared to their stable counterparts. Always read the preamble comments in a beta skill file, they document the specific Claude Code version and model required.
 
-Practical Examples of Beta Feature Usage
+## Practical Examples of Beta Feature Usage
 
-Enhanced Test-Driven Development with Beta Skills
+## Enhanced Test-Driven Development with Beta Skills
 
 The beta TDD skill provides advanced testing capabilities including property-based testing, mutation testing integration, and automatic test optimization suggestions. To use these features, place the beta TDD skill file in `~/.claude/skills/` then open Claude Code:
 
@@ -160,7 +157,7 @@ Done. Run: npm test -- --testPathPattern=login.beta
 
 The beta TDD skill's property-based test generation is particularly valuable for parsing and validation code where manual test case enumeration misses edge cases.
 
-Advanced Frontend Design with Beta Preview
+## Advanced Frontend Design with Beta Preview
 
 The beta frontend-design skill includes real-time component preview generation, design system integration, and cross-browser compatibility checking. Place the skill file in `~/.claude/skills/` then invoke it in the REPL:
 
@@ -185,7 +182,7 @@ The beta version of this skill can connect to a local Playwright MCP server to s
 
 With the Playwright MCP server running, the frontend-design skill can render components and return screenshots of how they look in Chromium, Firefox, and WebKit, all from within a single Claude Code session.
 
-Memory and Context Management
+## Memory and Context Management
 
 Beta features for memory management provide enhanced context retention and retrieval capabilities. The supermemory skill represents one of the most powerful beta offerings in this category. Configure it in `~/.claude/settings.json`:
 
@@ -259,11 +256,11 @@ Verify that MCP servers are connecting correctly at startup by running Claude Co
 
 If a server fails to connect, the tool it provides is silently unavailable. Verbose mode is the fastest way to catch this.
 
-Configuring Beta Feature Dependencies
+## Configuring Beta Feature Dependencies
 
 Some beta features require additional setup or dependencies. Before enabling beta features, ensure your environment meets these requirements.
 
-Node.js and npm Requirements
+## Node.js and npm Requirements
 
 Claude Code itself requires Node.js 18 or later. Beta features that involve MCP servers often require Node.js 20+ for native ES modules support:
 
@@ -278,7 +275,7 @@ Then update Claude Code
 npm install -g @anthropic-ai/claude-code
 ```
 
-Python Environment for Beta Skills
+## Python Environment for Beta Skills
 
 Some beta skills with data analysis or scientific computing capabilities require Python 3.10 or later with specific packages:
 
@@ -302,7 +299,7 @@ Point Claude Code at your virtual environment if the skill requires it:
 }
 ```
 
-Node.js Requirements for MCP Integration
+## Node.js Requirements for MCP Integration
 
 Beta features involving Model Context Protocol (MCP) servers require Node.js 18 or later:
 
@@ -320,7 +317,7 @@ npm install -g @modelcontextprotocol/server-github
 npm install -g @playwright/mcp
 ```
 
-Managing Beta Feature Updates
+## Managing Beta Feature Updates
 
 Beta features update frequently, sometimes daily. Stay current with beta releases to access the latest improvements and bug fixes.
 
@@ -358,7 +355,7 @@ Check what version you have pinned
 npm list -g @anthropic-ai/claude-code
 ```
 
-Troubleshooting Beta Feature Access
+## Troubleshooting Beta Feature Access
 
 If beta features fail to activate, several common issues may be the cause.
 
@@ -405,7 +402,7 @@ curl -H "x-api-key: $ANTHROPIC_API_KEY" \
      https://api.anthropic.com/v1/models | jq '.models[].id'
 ```
 
-Comparing Beta Access Methods
+## Comparing Beta Access Methods
 
 Not all methods for accessing beta features are equivalent. Here is a practical comparison:
 
@@ -420,7 +417,7 @@ Not all methods for accessing beta features are equivalent. Here is a practical 
 
 For production workflows, prefer `settings.json` over environment variables. This creates a reproducible configuration that you can commit to your dotfiles repository and share with your team.
 
-When to Use Beta Features
+## When to Use Beta Features
 
 Beta features suit developers comfortable with experimental software who want early access to new capabilities. Consider beta usage when working on non-production projects, evaluating new workflows, or providing feedback that shapes feature development.
 
@@ -432,7 +429,7 @@ The cases where beta features provide the most value are:
 
 For production environments, stick with stable releases unless a specific beta feature addresses a critical need and you understand the associated risks. A beta feature that changes its interface between updates can break automation scripts or CI pipelines that depend on specific behavior.
 
-Giving Feedback on Beta Features
+## Giving Feedback on Beta Features
 
 Beta features improve fastest when users report specific, reproducible issues. Anthropic's recommended channel for Claude Code feedback is GitHub issues at `github.com/anthropic-ai/claude-code`. When filing a bug against a beta feature, include:
 
@@ -448,12 +445,11 @@ Verbose log: (attach output of `claude --verbose` during the failure)
 
 Specific reproduction steps with log output dramatically shorten the feedback loop compared to general "it doesn't work" reports.
 
-Conclusion
+## Conclusion
 
 Accessing Claude Code beta features opens doors to advanced functionality that enhances your development workflow. Through configuration files, beta skill installations, and MCP server integrations, you can experiment with cutting-edge capabilities. Start with one beta feature, understand its behavior in your specific environment, then gradually incorporate more as you build confidence.
 
 The beta ecosystem continues expanding with skills like pdf for document processing, docx for Word document manipulation, and xlsx for spreadsheet operations all offering beta variants with enhanced functionality. MCP server support broadens this further, connecting Claude Code to databases, browsers, APIs, and local tools that were previously out of reach. Explore the available options, experiment safely in non-production environments, and provide feedback to help shape the future of Claude Code.
-
 
 Related Reading
 

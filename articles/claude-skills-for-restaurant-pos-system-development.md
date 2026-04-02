@@ -16,7 +16,7 @@ permalink: /claude-skills-for-restaurant-pos-system-development/
 
 Building a restaurant point-of-sale system requires handling orders, inventory, payments, and reporting. Claude Code skills streamline this development by automating document generation, testing, data management, and reporting workflows. This guide covers practical applications for developers building restaurant POS solutions. For a broader look at how skills handle domain-specific automation, see the [use cases hub](/use-cases-hub/).
 
-Order Management with Spreadsheet Automation
+## Order Management with Spreadsheet Automation
 
 Restaurant POS systems generate substantial operational data: daily sales, inventory counts, employee shifts, and customer orders. The [xlsx skill](/claude-xlsx-skill-spreadsheet-automation-tutorial/) enables rapid data analysis and report generation without manual spreadsheet manipulation.
 
@@ -55,7 +55,7 @@ Use the xlsx skill to automate recurring reports:
 /xlsx analyze sales-data.csv: calculate daily revenue, top 10 items, peak hours, group by payment method
 ```
 
-Invoice and Receipt Generation with PDF Skills
+## Invoice and Receipt Generation with PDF Skills
 
 Every transaction in a restaurant POS requires documentation. The pdf skill handles invoice generation, receipt formatting, and [batch processing](/claude-code-batch-processing-with-skills-guide/) of daily transactions.
 
@@ -107,7 +107,7 @@ Practical PDF commands for POS development:
 /pdf create receipt.pdf: Order #1234, Table 5, 2x Burger, 1x Fries, Total $24.50
 ```
 
-Testing POS Workflows with TDD and Web Testing
+## Testing POS Workflows with TDD and Web Testing
 
 Restaurant POS systems involve complex state management: order creation, payment processing, inventory deduction, and kitchen ticket routing. The [tdd skill](/claude-tdd-skill-test-driven-development-workflow/) and webapp-testing skill ensure reliable POS behavior.
 
@@ -153,7 +153,7 @@ Test POS workflows with Claude:
 /webapp-testing verify POS frontend: add item to order, apply 10% discount, process payment, verify receipt shows correct total
 ```
 
-Menu Management and Data Pipelines
+## Menu Management and Data Pipelines
 
 Restaurant POS systems require dynamic menu management: items, prices, modifiers, availability, and category organization. Combine spreadsheet automation with code generation for structured menu data handling.
 
@@ -188,7 +188,7 @@ Use Claude skills for menu operations:
 /xlsx create menu-pricing.xlsx: Sheet1=items, Sheet2=modifiers, Sheet3=categories, VLOOKUP for price calculations
 ```
 
-Inventory Tracking Integration
+## Inventory Tracking Integration
 
 Restaurant POS systems connect closely with inventory management. Track ingredient usage, trigger reorder alerts, and calculate food costs using data automation skills.
 
@@ -200,7 +200,7 @@ Restaurant POS systems connect closely with inventory management. Track ingredie
 /xlsx create food-cost-report.xlsx: link to sales data, calculate actual food cost percentage per day, highlight variance over 5%
 ```
 
-Shift and Labor Reporting
+## Shift and Labor Reporting
 
 Beyond orders and inventory, restaurant POS systems must handle labor data: clock-in and clock-out times, shift assignments, overtime calculations, and tip distributions. This is an area where the xlsx skill provides immediate value because restaurant managers typically want labor data in spreadsheet form alongside sales data for cost-of-labor analysis.
 
@@ -238,7 +238,7 @@ Use the xlsx skill to generate the weekly labor summary managers review every Mo
 
 Exporting labor reports as PDFs for payroll records is a natural extension of this workflow, use the pdf skill to merge weekly labor sheets into a single monthly payroll reference document.
 
-Kitchen Display System Integration and Ticket Routing
+## Kitchen Display System Integration and Ticket Routing
 
 A functional POS system in a full-service restaurant needs to route orders to the correct kitchen station: cold prep, grill, fryer, and expediter. Building and testing this routing logic is where the tdd skill earns its place in the workflow.
 
@@ -300,7 +300,7 @@ Generate this test suite with Claude:
 /tdd write pytest tests for KitchenRouter: test routing for each station, test mixed orders split correctly, test unknown categories default to expediter, test order_id preserved in all tickets
 ```
 
-End-of-Day Closing Reports
+## End-of-Day Closing Reports
 
 Every restaurant closes out the day by reconciling cash drawers, reviewing voids and refunds, and summarizing sales by category. This report goes to the owner or GM and often needs to be both a digital record and a printed document. The combination of xlsx for data and pdf for the final deliverable handles this pattern well.
 
@@ -345,7 +345,7 @@ Skill commands for generating the closing report package:
 /pdf merge eod-report-2026-03-20.pdf with eod-2026-03-20.xlsx export: combine into single closing-package-2026-03-20.pdf for records
 ```
 
-Why These Skills Matter for POS Development
+## Why These Skills Matter for POS Development
 
 Restaurant POS development involves multiple data types: orders, payments, menus, inventory, labor, and reports. Claude skills handle the document and data automation that would otherwise consume significant development time.
 

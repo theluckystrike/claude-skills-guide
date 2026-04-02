@@ -13,23 +13,22 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for LLM Caching Workflow Tutorial
 
 LLM caching is one of the most impactful optimizations you can add to your AI-powered applications. By storing and reusing responses for identical or similar requests, you can dramatically reduce API costs, decrease response latency, and handle higher traffic volumes without hitting rate limits. In this tutorial, you'll learn how to build a solid LLM caching workflow using Claude Code and Claude Skills.
 
-Why LLM Caching Matters
+## Why LLM Caching Matters
 
 Every time you send a prompt to an LLM, you're paying for the full computation, even if you've asked the exact same question before. For applications with repetitive queries, user FAQs, or structured data extraction tasks, caching can reduce costs by 50-90% while improving response times from seconds to milliseconds.
 
 The challenge is that LLMs don't have built-in caching like traditional databases. You need to implement it yourself, and that's where Claude Code skills become invaluable.
 
-Setting Up Your Caching Infrastructure
+## Setting Up Your Caching Infrastructure
 
 Before building the caching workflow, you need to decide on your storage backend. For most use cases, Redis offers the best balance of speed, persistence, and simplicity. Let's create a skill that handles cache operations.
 
-Redis-Based Cache Skill
+## Redis-Based Cache Skill
 
 Create a new skill file `llm-cache-skill.md` in your skills directory:
 

@@ -18,13 +18,13 @@ AI Text to Speech Chrome Extension: A Developer Guide
 
 Chrome extensions that convert text to speech using AI have become essential tools for accessibility, productivity, and content consumption. This guide walks you through building a solid AI text-to-speech Chrome extension from scratch, covering the Web Speech API, integration patterns, and practical implementation details for developers and power users.
 
-Understanding the Foundation
+## Understanding the Foundation
 
 Modern browsers provide the Web Speech API as the core technology for text-to-speech capabilities. This API offers two distinct interfaces: SpeechSynthesis for converting text to spoken audio, and SpeechRecognition for converting spoken input to text. For our purposes, the SpeechSynthesis interface provides everything needed to create a functional TTS extension.
 
 The Web Speech API requires no external dependencies and works across Chrome, Edge, and Safari. However, the quality of built-in voices varies significantly between browsers and operating systems. AI-powered extensions typically enhance this base functionality by integrating with external AI services that provide more natural, expressive voices.
 
-Setting Up Your Extension Structure
+## Setting Up Your Extension Structure
 
 Every Chrome extension begins with a manifest file. For a text-to-speech extension using Manifest V3, your structure looks like this:
 
@@ -58,7 +58,7 @@ Every Chrome extension begins with a manifest file. For a text-to-speech extensi
 
 The key permissions here are `activeTab` for accessing the current page content, `scripting` for extracting text from web pages, and `storage` for persisting user preferences like voice selection, speed, and pitch settings.
 
-Extracting Text from Web Pages
+## Extracting Text from Web Pages
 
 The content script handles text extraction from web pages. You need to be selective about what content to extract, pulling entire pages often includes navigation, ads, and other unwanted text:
 
@@ -108,7 +108,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This extraction strategy prioritizes semantic HTML elements but gracefully falls back to collecting paragraph text when dedicated content areas aren't available.
 
-Building the Speech Engine
+## Building the Speech Engine
 
 The core TTS functionality lives in your popup or background script. Here's a solid implementation using the Web Speech API:
 
@@ -190,7 +190,7 @@ class TextToSpeechEngine {
 
 This class provides full control over speech playback including play, pause, resume, and cancel operations. The voice selection logic prefers Google voices when available, as they generally offer better quality than browser defaults.
 
-Integrating AI Voice Services
+## Integrating AI Voice Services
 
 The built-in Web Speech API voices serve as a solid baseline, but AI-powered services dramatically improve output quality. Services like Google Cloud Text-to-Speech, Amazon Polly, or OpenAI's Audio API provide natural-sounding voices with emotional range.
 
@@ -250,7 +250,7 @@ class AIVoiceService {
 
 This integration pattern works with most AI TTS APIs. You send text to the service, receive audio data, and play it through the browser's audio system. Consider caching responses to avoid redundant API calls for repeated content.
 
-Creating the User Interface
+## Creating the User Interface
 
 The popup interface provides controls for playback and settings:
 
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Storing User Preferences
+## Storing User Preferences
 
 Persist user settings using the Chrome Storage API:
 
@@ -377,7 +377,7 @@ function loadPreferences(callback) {
 
 This ensures users maintain their preferred voice, speed, and other settings across browsing sessions.
 
-Testing and Deployment
+## Testing and Deployment
 
 Load your extension in Chrome by navigating to `chrome://extensions/`, enabling Developer mode, and clicking "Load unpacked". Test thoroughly across different types of websites:
 

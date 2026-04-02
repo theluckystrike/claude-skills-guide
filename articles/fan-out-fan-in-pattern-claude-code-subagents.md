@@ -16,13 +16,13 @@ permalink: /fan-out-fan-in-pattern-claude-code-subagents/
 
 [The fan-out fan-in pattern is a powerful concurrency strategy that enables parallel processing of multiple independent tasks](/best-claude-code-skills-to-install-first-2026/), then aggregates their results into a unified output. When implemented with Claude Code subagents, this pattern becomes exceptionally useful for developers building complex automation workflows, handling bulk operations, or processing multiple data sources simultaneously.
 
-Understanding the Pattern
+## Understanding the Pattern
 
 Fan-out refers to the process of spawning multiple subagents to handle independent tasks in parallel. Fan-in is the subsequent aggregation of results from these subagents into a coherent whole. This approach significantly reduces total execution time when tasks are independent and can run concurrently.
 
 Claude Code provides native support for subagent creation through the `claude` CLI tool and programmatic interfaces. With this capability, you can orchestrate complex workflows that distribute work across multiple AI agents while maintaining control over the aggregation logic.
 
-Basic Implementation Structure
+## Basic Implementation Structure
 
 The fundamental structure involves three key phases: task decomposition, parallel execution, and result aggregation.
 
@@ -68,9 +68,9 @@ def fan_in_results(results):
     return aggregated
 ```
 
-Practical Applications
+## Practical Applications
 
-Bulk File Processing
+## Bulk File Processing
 
 When you need to process multiple files with similar operations, the fan-out fan-in pattern excels. For instance, using the pdf skill to extract text from hundreds of PDF documents becomes highly efficient when you spawn multiple subagents, each handling a subset of files.
 
@@ -81,17 +81,17 @@ claude -p "Extract all text from file2.pdf and return as JSON"
 ... parallel execution continues
 ```
 
-Multi-Source Data Aggregation
+## Multi-Source Data Aggregation
 
 The pattern shines when gathering information from disparate sources. Suppose you're building a research assistant that pulls data from multiple APIs or documents. You can spawn subagents using the supermemory skill to query different knowledge bases in parallel, then aggregate the findings into a comprehensive report.
 
-Test-Driven Development Workflows
+## Test-Driven Development Workflows
 
 When working with the tdd skill, you can fan out test generation across multiple modules simultaneously. Each subagent generates tests for a specific module, and the results are aggregated into a complete test suite.
 
-Advanced Patterns with Claude Skills
+## Advanced Patterns with Claude Skills
 
-Skill-Specific Subagent Routing
+## Skill-Specific Subagent Routing
 
 You can route tasks to specialized subagents based on their capabilities:
 
@@ -117,7 +117,7 @@ def route_to_specialized_agent(task_type, task_data):
     return result.stdout
 ```
 
-Hierarchical Fan-Out
+## Hierarchical Fan-Out
 
 For complex workflows, implement hierarchical fan-out where primary agents spawn secondary agents:
 
@@ -146,7 +146,7 @@ def hierarchical_fan_out(primary_tasks, max_primary=3, max_secondary=5):
     return aggregate_hierarchical_results(primary_results)
 ```
 
-Error Handling and Resilience
+## Error Handling and Resilience
 
 Well-built fan-out fan-in implementations must handle failures gracefully:
 
@@ -193,13 +193,13 @@ def safe_process(task):
         return {"success": False, "error": str(e), "task": task}
 ```
 
-Monitoring and Debugging Parallel Workflows
+## Monitoring and Debugging Parallel Workflows
 
 Parallel execution introduces debugging challenges. Tracking which subagent produced which output, identifying bottlenecks, and handling partial failures require structured logging and monitoring.
 
 Implement unique identifiers for each subagent execution. Log start times, completion times, and outcomes. Capture stdout and stderr from each agent for post-mortem analysis. Consider implementing a coordinator agent whose sole responsibility is managing the fan-out fan-in workflow, collecting outputs, and handling edge cases.
 
-Performance Considerations
+## Performance Considerations
 
 When implementing this pattern, consider these factors:
 
@@ -209,7 +209,7 @@ Token Budget Management: Each subagent consumes tokens from your Claude API allo
 
 Rate Limiting: Implement throttling to respect API limits and prevent token exhaustion during intensive workloads.
 
-Conclusion
+## Conclusion
 
 The fan-out fan-in pattern with Claude Code subagents enables scalable, efficient processing of parallel workloads. For managing resource consumption in these workflows, apply the [rate limit management strategies](/rate-limit-management-claude-code-skill-intensive-workflows/) designed for high-intensity skill pipelines. Whether you're automating document processing with the pdf skill, generating comprehensive tests with tdd, or building complex multi-agent systems, this pattern provides a solid foundation for concurrent AI-driven workflows.
 

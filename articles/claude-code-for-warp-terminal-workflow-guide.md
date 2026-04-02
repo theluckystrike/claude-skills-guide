@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Warp Terminal Workflow Guide"
 description: "Learn how to integrate Claude Code with Warp terminal for enhanced developer productivity. This guide covers setup, configuration, and practical workflows."
@@ -14,9 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Warp Terminal Workflow Guide
-
 The terminal is where developers spend significant time, and combining it with AI assistance creates a powerful productivity boost. Warp terminal, known for its modern interface and AI-powered features, pairs exceptionally well with Claude Code to streamline development workflows. This guide walks you through setting up and maximizing Claude Code within your Warp environment.
 
 Why Combine Claude Code with Warp?
@@ -25,7 +21,7 @@ Warp brings several advantages to the table that make it ideal for AI-assisted d
 
 The integration works particularly well because both tools share a philosophy of reducing friction. Warp's AI commands can suggest shell commands based on natural language, and Claude Code can generate complex command pipelines, scripts, and automate repetitive tasks. Together, they create a smooth development experience that keeps you in the flow state.
 
-Setting Up Claude Code with Warp
+## Setting Up Claude Code with Warp
 
 Getting Claude Code running with Warp requires a few straightforward steps. First, ensure you have Claude Code installed on your system. The recommended installation method uses the official installer:
 
@@ -62,9 +58,9 @@ EOF
 
 This configuration enables terminal mode with a convenient keyboard shortcut and sets up context gathering for git and environment variables.
 
-Practical Workflows and Examples
+## Practical Workflows and Examples
 
-Quick Command Generation
+## Quick Command Generation
 
 One of the most immediate benefits is generating complex shell commands from natural language. Instead of manually constructing a pipeline or searching through man pages, describe what you need:
 
@@ -80,7 +76,7 @@ find . -name "*.ts" -not -path "*/node_modules/*" -mtime -7 -exec ls -lh {} \;
 
 You can execute this directly or modify it as needed. This workflow saves considerable time when working with unfamiliar command combinations.
 
-Script Generation and Automation
+## Script Generation and Automation
 
 Claude Code excels at creating shell scripts tailored to your specific needs. Suppose you need a deployment script that checks environment variables, runs tests, and deploys to staging:
 
@@ -112,7 +108,7 @@ else
 fi
 ```
 
-Debugging and Explaining Errors
+## Debugging and Explaining Errors
 
 When you encounter cryptic error messages, Claude Code can help decode them. Copy the error output and ask Claude to explain:
 
@@ -122,7 +118,7 @@ claude: Explain this error: /bin/bash: npm: command not found
 
 You'll get a clear explanation and suggested solutions, such as checking your PATH configuration or reinstalling Node.js.
 
-Working with Git Workflows
+## Working with Git Workflows
 
 Git operations are frequent problems, especially with complex rebase scenarios or merge conflicts. Use Claude Code to handle these intelligently:
 
@@ -132,7 +128,7 @@ claude: Show me a step-by-step rebase workflow to rebase my feature branch onto 
 
 Claude Code will guide you through the process, explaining each step and providing commands for conflict resolution that preserve your changes.
 
-Optimizing Your Warp + Claude Workflow
+## Optimizing Your Warp + Claude Workflow
 
 To get the most out of this combination, consider these productivity tips:
 
@@ -148,7 +144,7 @@ use Context Awareness. Both Warp and Claude Code understand your project context
 
 Integrate with Your IDE. While Warp handles terminal tasks beautifully, use Claude Code alongside your editor for comprehensive development. The combination of terminal automation with IDE-based coding creates a complete development experience.
 
-Advanced Configuration for Power Users
+## Advanced Configuration for Power Users
 
 For more advanced use cases, consider adding these configurations to your Claude Code setup:
 
@@ -177,7 +173,7 @@ Commands
 EOF
 ```
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Warp terminal creates a powerful development environment that combines the best of modern terminal features with AI-assisted productivity. Start with the basic setup, then gradually incorporate more advanced workflows as you become comfortable. The initial time investment pays dividends in reduced context switching, faster command generation, and smarter automation of repetitive tasks.
 

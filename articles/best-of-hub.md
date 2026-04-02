@@ -16,7 +16,7 @@ permalink: /best-of-hub/
 
 There are dozens of Claude skills. Not all of them are worth your time. This hub collects the best-of guides and rankings to help you identify the skills with the highest ROI for your workflow.
 
-Table of Contents
+## Table of Contents
 
 1. [Top Skills by Category](#top-skills-by-category)
 2. [The Universal Top 5](#the-universal-top-5)
@@ -25,7 +25,7 @@ Table of Contents
 
 ---
 
-Top Skills by Category
+## Top Skills by Category
 
 Document Processing
 | Skill | Why It's Top-Tier |
@@ -50,7 +50,7 @@ Infrastructure & Intelligence
 
 ---
 
-The Universal Top 5
+## The Universal Top 5
 
 If you're just getting started with skills, these five deliver the highest value across the widest range of workflows:
 
@@ -62,7 +62,7 @@ If you're just getting started with skills, these five deliver the highest value
 
 ---
 
-By Developer Role
+## By Developer Role
 
 Frontend developers: frontend-design, tdd, canvas-design, pdf, supermemory
 → [Full frontend guide](/best-claude-code-skills-for-frontend-development/)
@@ -78,7 +78,7 @@ Full-stack developers: All of the above, plus skill-creator for custom integrati
 
 ---
 
-Full Guide Index: Best-Of Cluster
+## Full Guide Index: Best-Of Cluster
 
 | Article | What You'll Learn |
 |---------|-------------------|

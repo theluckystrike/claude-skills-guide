@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code TypeORM Entities Relations Migration Workflow
 
 Building solid database layers with TypeORM requires careful attention to entity design, relationship mapping, and migration management. This guide walks you through a practical workflow using Claude Code to accelerate TypeORM development while maintaining code quality and database integrity. Each section includes production-ready patterns you can adapt directly to your NestJS, Express, or standalone TypeScript projects.
 
-Setting Up Your TypeORM Project
+## Setting Up Your TypeORM Project
 
 Before diving into entities, ensure your TypeORM project is properly configured. Claude Code can help scaffold the initial setup quickly, but the configuration deserves careful thought. The DataSource configuration is the foundation everything else depends on:
 
@@ -67,7 +66,7 @@ Conventions
 - Use soft deletes (deletedAt) rather than hard deletes for user data
 ```
 
-Creating TypeORM Entities
+## Creating TypeORM Entities
 
 Entities are the foundation of your database layer. Each entity maps to a database table, and properties map to columns. Rather than duplicating audit columns on every entity, define a shared base entity that all others extend:
 
@@ -147,7 +146,7 @@ export class User extends BaseEntity {
 
 Notice several production details here: `select: false` on `passwordHash` means it never leaks into API responses unless explicitly requested; the `@Index()` on email speeds up lookups; the enum is string-based rather than integer-based for readable query logs and easier debugging.
 
-Defining Entity Relationships
+## Defining Entity Relationships
 
 TypeORM supports four relationship types. Choosing the wrong one is a common source of bugs and performance problems. Here is a quick decision guide:
 
@@ -158,7 +157,7 @@ TypeORM supports four relationship types. Choosing the wrong one is a common sou
 | Order contains many Products | ManyToMany | join table |
 | OrderItem has one Product | ManyToOne | order_items table |
 
-One-to-One Relationship
+## One-to-One Relationship
 
 A User has exactly one Profile. The foreign key lives on the Profile side:
 
@@ -190,7 +189,7 @@ export class Profile extends BaseEntity {
 
 Always include the explicit foreign key column (`userId: string`) alongside the relation property. This makes it possible to update the relation without loading the related entity, and it prevents accidental lazy-load queries.
 
-One-to-Many Relationship
+## One-to-Many Relationship
 
 A User can have multiple Orders. The `@JoinColumn` decorator specifies which column represents the foreign key on the many side:
 
@@ -240,7 +239,7 @@ export class Order extends BaseEntity {
 
 Note the use of `onDelete: "RESTRICT"` rather than `CASCADE`. This prevents accidentally deleting all of a user's order history if a User record is removed. Use `RESTRICT` by default and only use `CASCADE` when you have explicitly decided child records should be destroyed.
 
-Many-to-Many Relationship
+## Many-to-Many Relationship
 
 Products can belong to multiple Categories. Use `@JoinTable` only on the owning side:
 
@@ -310,7 +309,7 @@ export class Category extends BaseEntity {
 }
 ```
 
-The OrderItem Join Entity
+## The OrderItem Join Entity
 
 For many-to-many relationships that carry extra data (like quantity and unit price at time of purchase), use an explicit join entity rather than `@JoinTable`:
 
@@ -348,7 +347,7 @@ export class OrderItem extends BaseEntity {
 
 This is a critical pattern: storing `unitPrice` as a snapshot means historical orders remain accurate even if the product's price changes later. Claude Code can flag this risk when you paste a schema and ask "what data integrity issues does this have?"
 
-Handling Soft Deletes Correctly
+## Handling Soft Deletes Correctly
 
 With `deletedAt` on `BaseEntity`, TypeORM automatically filters soft-deleted records when you have the `@DeleteDateColumn` decorator. Verify this in your queries:
 
@@ -368,11 +367,11 @@ await userRepository.delete(userId);
 
 Be aware that `softDelete` does not cascade. If you soft-delete a User, their Orders are not automatically soft-deleted. You need to handle cascading soft deletes in your service layer, or accept that orphaned child records remain visible. Ask Claude to audit your service layer for this pattern: "Check all places where we soft-delete User and tell me what related records are left dangling."
 
-Generating and Running Migrations
+## Generating and Running Migrations
 
 Never modify your schema directly in production. Migrations give you a versioned, reversible record of every schema change. The workflow with TypeORM migrations has three steps: generate, review, apply.
 
-Generating Migrations Automatically
+## Generating Migrations Automatically
 
 TypeORM can diff your entity definitions against the current database schema and generate the migration for you:
 
@@ -382,7 +381,7 @@ npx typeorm-ts-node-commonjs migration:generate src/migrations/AddUserRoleEnum -
 
 This produces a timestamped migration file. Always read the generated file before running it. TypeORM sometimes generates destructive changes if column types have changed.
 
-Writing Migrations Manually
+## Writing Migrations Manually
 
 For complex changes involving data backfills or multi-step operations, write the migration by hand:
 
@@ -426,7 +425,7 @@ export class AddOrderStatusEnum1700000000000 implements MigrationInterface {
 
 The `down` method is not optional. If a deployment goes wrong and you need to roll back, a missing `down` method turns a 5-minute fix into an emergency.
 
-Running and Reverting Migrations
+## Running and Reverting Migrations
 
 ```bash
 Apply all pending migrations
@@ -441,7 +440,7 @@ npx typeorm-ts-node-commonjs migration:revert -d src/data-source.ts
 
 In a CI/CD pipeline, run migrations as a step before deploying the new application version. Never run migrations after the app is already serving traffic on the new version. some migrations are incompatible with the old application code and will cause errors during the rollout window.
 
-Querying with the Repository Pattern
+## Querying with the Repository Pattern
 
 TypeORM's repository pattern integrates naturally with Claude Code's ability to generate complex query builders from plain English descriptions. Here is a realistic example combining eager loading, filtering, and pagination:
 
@@ -489,7 +488,7 @@ export class OrderRepository {
 
 Ask Claude Code to generate repository methods by describing them: "Write a TypeORM query that returns all orders for a user in the last 30 days, including items and products, ordered by most recent, with a count of total results for pagination."
 
-Best Practices for TypeORM Development
+## Best Practices for TypeORM Development
 
 | Practice | Why it matters |
 |---|---|
@@ -528,7 +527,7 @@ await AppDataSource.transaction(async (manager) => {
 
 If any step inside the transaction callback throws, TypeORM automatically rolls back the entire operation. Without a transaction, a crash between saving the Order and saving its OrderItems leaves an empty order in the database.
 
-Conclusion
+## Conclusion
 
 A solid TypeORM workflow combines proper entity design, clear relationship definitions, and disciplined migration management. Claude Code can help you generate entities, write migrations, review schemas for integrity issues, and maintain consistency across your database layer. By following these patterns. shared base entities, explicit foreign key columns, string enums, soft deletes, transactional writes, and always-present `down` methods. you build a database layer that holds up as your application grows.
 
@@ -547,7 +546,7 @@ Step 4. Create a migration workflow script. Add npm scripts for common migration
 
 Step 5. Set up the repository pattern. Create typed repository classes that extend TypeORM's Repository with your business-logic query methods. Claude Code generates the base repository class with common patterns. findByIdOrThrow that throws a typed NotFoundException, softDelete that sets isDeleted rather than removing the row, and paginate that returns a typed PaginationResult.
 
-Common Pitfalls
+## Common Pitfalls
 
 Using synchronize: true in staging or production. TypeORM's automatic synchronization can drop columns silently when you rename a property on an entity. Always set synchronize: false for any environment that has real data. Claude Code adds an environment guard that throws if synchronize is set to true while NODE_ENV is not development.
 
@@ -559,7 +558,7 @@ N+1 queries from unoptimized loading. Loading a User entity and then accessing u
 
 Not using transactions for multi-entity writes. Writing to two related tables without a transaction means a failure partway through leaves your database in an inconsistent state. Claude Code generates transaction wrappers for every service method that touches more than one table.
 
-Best Practices
+## Best Practices
 
 Use a base entity with common fields. Create a BaseEntity class with id, createdAt, and updatedAt that all your entities extend. This ensures consistent column types and names across your schema. Claude Code generates the BaseEntity with UUID primary key and automatic timestamp columns.
 
@@ -569,14 +568,13 @@ Test migrations against a copy of production data. Before applying a migration t
 
 Version your DataSource configuration. Keep multiple DataSource configurations: one for the application, one for migrations, one for testing. Claude Code generates all three with the appropriate settings and the environment switching logic that selects the right configuration.
 
-Integration Patterns
+## Integration Patterns
 
 NestJS integration. Claude Code generates the TypeORM NestJS module configuration that registers your entities, provides the DataSource token for injection, and configures the connection pool size. It also generates the custom repository provider pattern that NestJS recommends for testing.
 
 GraphQL with TypeGraphQL. For projects combining TypeORM with TypeGraphQL, Claude Code generates entities that use both ObjectType and Entity decorators on the same class, sharing the schema definition between the GraphQL layer and the database layer without duplication.
 
 Seeding and test fixtures. Claude Code generates a seed script using TypeORM's DataSource that creates realistic test data for each entity in dependency order. The seed script uses factories that generate realistic data and can be run in CI before integration tests.
-
 
 {% endraw %}
 

@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Svelte Animations Workflow Tutorial
 
@@ -27,7 +26,7 @@ When you pair Svelte's animation capabilities with Claude Code's ability to unde
 
 > Scope of this article: This tutorial covers all three of Svelte's animation primitives. `svelte/transition` (enter/leave effects), `svelte/motion` (spring and tweened stores), and `svelte/animate` (list reordering with `flip`). If you want a focused deep detailed look on `svelte/transition` alone. including custom transition functions and SvelteKit page transitions. see the companion guide [Claude Code for Svelte Transitions Workflow Guide](/claude-code-for-svelte-transitions-workflow-guide/).
 
-Setting Up Your Svelte Animation Project
+## Setting Up Your Svelte Animation Project
 
 Before diving into animations, ensure you have a Svelte project ready. If you're starting fresh, create one using the standard tooling:
 
@@ -39,11 +38,11 @@ npm install
 
 Once your project is ready, you can start building animations. Claude Code can help you scaffold components, suggest appropriate animation techniques, and debug animation performance issues.
 
-Understanding Svelte's Animation Primitives
+## Understanding Svelte's Animation Primitives
 
 Svelte provides three main animation primitives: `transition`, `motion`, and `animate`. Each serves different purposes:
 
-Transitions for Element Appearance
+## Transitions for Element Appearance
 
 Transitions handle elements entering and leaving the DOM. The `svelte/transition` module provides built-in functions like `fade`, `fly`, `slide`, and `scale`:
 
@@ -64,7 +63,7 @@ Transitions handle elements entering and leaving the DOM. The `svelte/transition
 {/if}
 ```
 
-Motion for Values Over Time
+## Motion for Values Over Time
 
 The `svelte/motion` module offers `spring` and `tweened` stores for animating numeric values. Spring animations create natural, physics-based motion:
 
@@ -87,7 +86,7 @@ The `svelte/motion` module offers `spring` and `tweened` stores for animating nu
 </div>
 ```
 
-Animate for List Reordering
+## Animate for List Reordering
 
 The `svelte/animate` module, particularly the `flip` function, smoothly animates elements when their order changes:
 
@@ -106,7 +105,7 @@ The `svelte/animate` module, particularly the `flip` function, smoothly animates
 {/each}
 ```
 
-Building an Animation Workflow with Claude Code
+## Building an Animation Workflow with Claude Code
 
 Now that you understand the basics, let's discuss how to build an efficient workflow using Claude Code.
 
@@ -142,7 +141,7 @@ Animation often requires tweaking values to feel right. Describe the behavior yo
 
 Always verify your animations perform well, especially on mobile devices. Claude Code can help you add debugging to check frame rates or identify layout thrashing.
 
-Practical Example: Card Stack Animation
+## Practical Example: Card Stack Animation
 
 Let's build a practical card stack animation that demonstrates multiple techniques working together:
 
@@ -250,9 +249,9 @@ Let's build a practical card stack animation that demonstrates multiple techniqu
 
 This example combines transitions for entering and leaving, spring physics for the rotation effect, and conditional styling for depth perception.
 
-Actionable Tips for Better Animations
+## Actionable Tips for Better Animations
 
-Respect Motion Preferences
+## Respect Motion Preferences
 
 Always respect users who prefer reduced motion:
 
@@ -271,7 +270,7 @@ Always respect users who prefer reduced motion:
 {/if}
 ```
 
-Use Easing Functions Wisely
+## Use Easing Functions Wisely
 
 Default linear animations feel robotic. Use easing functions to create natural motion:
 
@@ -279,11 +278,11 @@ Default linear animations feel robotic. Use easing functions to create natural m
 - `cubicIn`. Slow start, fast end (good for elements exiting)
 - `backOut`. Slight overshoot for playful interactions
 
-Keep Animations Short
+## Keep Animations Short
 
 Most UI animations should complete in 200-400ms. Anything longer feels sluggish. Use the minimum duration that still conveys the motion clearly.
 
-Conclusion
+## Conclusion
 
 Svelte's animation system is remarkably powerful yet approachable. By combining Svelte's built-in primitives with Claude Code's ability to generate, explain, and iterate on your code, you can create sophisticated motion designs efficiently. Start with simple transitions, gradually incorporate spring physics, and always test on real devices to ensure smooth performance.
 

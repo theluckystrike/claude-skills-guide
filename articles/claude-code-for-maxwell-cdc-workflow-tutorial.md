@@ -15,8 +15,6 @@ score: 8
 
 {% raw %}
 
-Claude Code for Maxwell CDC Workflow Tutorial
-
 Change Data Capture (CDC) has become an essential pattern for modern data architectures, enabling real-time data synchronization between databases and downstream systems. Maxwell CDC, an open-source CDC platform that reads MySQL binlogs, provides a powerful way to stream database changes to Kafka, Redis, or other consumers. Combined with Claude Code's automation capabilities, you can build solid CDC workflows that handle schema changes, error recovery, and monitoring with minimal manual intervention.
 
 This tutorial walks you through integrating Claude Code into your Maxwell CDC workflow, from initial setup to advanced automation patterns.
@@ -31,11 +29,11 @@ Maxwell CDC is a lightweight Java application that reads MySQL binary logs (binl
 
 Key components include the Maxwell daemon that reads binlogs, a configuration system for specifying source databases and output targets, and built-in support for various producers.
 
-Setting Up Maxwell CDC with Claude Code
+## Setting Up Maxwell CDC with Claude Code
 
 Before integrating with Claude Code, ensure you have Maxwell installed and configured. The simplest setup uses Kafka as the message broker:
 
-Installing Maxwell
+## Installing Maxwell
 
 Download and extract Maxwell from the official releases:
 
@@ -45,7 +43,7 @@ tar -xzf maxwell-1.42.3.tar.gz
 cd maxwell-1.42.3
 ```
 
-Configuring MySQL for Binlog Reading
+## Configuring MySQL for Binlog Reading
 
 Edit your MySQL configuration to enable binlog logging:
 
@@ -65,7 +63,7 @@ GRANT SELECT, REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO 'maxwell'@'%';
 GRANT ALL PRIVILEGES ON maxwell.* TO 'maxwell'@'%';
 ```
 
-Creating a Claude Code Skill for Maxwell CDC
+## Creating a Claude Code Skill for Maxwell CDC
 
 Now let's create a Claude Code skill that automates common Maxwell CDC operations. Create a file called `maxwell-cdc-skill.md` in your project's skills directory:
 
@@ -92,9 +90,9 @@ commands:
     command: ./bin/maxwell --config config.properties --reset
 ```
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Starting a CDC Pipeline
+## Starting a CDC Pipeline
 
 Use Claude Code to initialize your CDC pipeline with proper validation:
 
@@ -109,7 +107,7 @@ Claude Code will:
 3. Start the Maxwell daemon
 4. Verify it's processing binlog events
 
-Monitoring CDC Lag and Performance
+## Monitoring CDC Lag and Performance
 
 CDC lag, the time between a database change and its appearance in the output, critical for real-time systems. Create a monitoring script:
 
@@ -130,7 +128,7 @@ if [ "$POSITION" != "$LATEST_BINLOG" ]; then
 fi
 ```
 
-Handling Schema Changes
+## Handling Schema Changes
 
 Maxwell automatically handles most schema changes, but you'll want Claude Code to:
 
@@ -156,11 +154,11 @@ for message in consumer:
         # Trigger downstream schema updates
 ```
 
-Error Recovery Patterns
+## Error Recovery Patterns
 
 CDC pipelines require solid error handling. Here are patterns Claude Code can help implement:
 
-Automatic Retry with Backoff
+## Automatic Retry with Backoff
 
 ```python
 maxwell_retry.py
@@ -189,7 +187,7 @@ def start_maxwell_with_retry(max_retries=3, backoff_seconds=5):
     return False
 ```
 
-Checkpoint Recovery
+## Checkpoint Recovery
 
 If Maxwell stops unexpectedly, restart from the last processed position:
 
@@ -200,7 +198,7 @@ claude "Restart Maxwell from the last processed binlog position"
 
 The `--reset` flag allows manual recovery when you need to reprocess events.
 
-Advanced: Multi-Database CDC Setup
+## Advanced: Multi-Database CDC Setup
 
 For complex architectures with multiple source databases, use a centralized Maxwell configuration:
 
@@ -231,7 +229,7 @@ Switch between configurations using Claude Code:
 claude "Switch Maxwell to use the production configuration"
 ```
 
-Best Practices for Maxwell CDC with Claude Code
+## Best Practices for Maxwell CDC with Claude Code
 
 1. Always validate binlog configuration before starting. Use Claude Code to check `binlog_format=ROW` and proper server_id setting
 
@@ -243,7 +241,7 @@ Best Practices for Maxwell CDC with Claude Code
 
 5. Test schema changes in staging. Run your CDC pipeline against a staging database before applying schema changes to production
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code with Maxwell CDC transforms your change data capture pipeline from a manual operation into an automated, observable system. By creating skills for common operations like starting/stopping, monitoring, and error recovery, you can focus on building data-driven features rather than managing infrastructure.
 

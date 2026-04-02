@@ -16,7 +16,7 @@ permalink: /mcp-server-logging-audit-trail-security-guide/
 
 When building Model Context Protocol (MCP) servers, logging and audit trails are critical for debugging, compliance, and security monitoring. This guide covers practical approaches to implementing secure logging systems for your MCP servers, with code examples you can adapt immediately.
 
-Why Logging Matters for MCP Servers
+## Why Logging Matters for MCP Servers
 
 [MCP servers act as bridges between Claude and external services](/building-your-first-mcp-tool-integration-guide-2026/) Each request passing through your server represents a potential security boundary crossing. Without proper logging, you lose visibility into:
 
@@ -27,7 +27,7 @@ Why Logging Matters for MCP Servers
 
 Whether you're building a simple MCP server for personal use or deploying one across an organization, [implementing structured logging from day one saves significant debugging time](/mcp-server-permission-auditing-best-practices/)
 
-Structured Logging Implementation
+## Structured Logging Implementation
 
 The foundation of any logging system is structured output. Instead of plain text messages, emit JSON objects that are machine-parseable:
 
@@ -69,7 +69,7 @@ class JsonFormatter(logging.Formatter):
 
 This pattern ensures consistent log structure across your server. The `_redact_sensitive` method prevents accidental exposure of credentials, essential for security-sensitive deployments.
 
-Building an Audit Trail
+## Building an Audit Trail
 
 An audit trail goes beyond basic logging by recording the complete lifecycle of each operation. For MCP servers, this typically means capturing:
 
@@ -153,7 +153,7 @@ class AuditTrail:
 
 This SQLite-backed audit trail provides queryable records for compliance reporting and incident investigation. The indexed columns ensure performance even with high-volume logging.
 
-Security Best Practices
+## Security Best Practices
 
 Beyond logging implementation, consider these security measures:
 
@@ -191,13 +191,13 @@ class SignedLogger:
         return f"{log_entry}\nHMAC: {signature}"
 ```
 
-Integrating with Claude Skills
+## Integrating with Claude Skills
 
 When developing MCP servers, pair your logging implementation with Claude's diagnostic skills. The [superpower skill](/) provides general debugging guidance, while specific skills like [pdf](/) for document processing or [frontend-design](/) for UI components can help you build better server interfaces.
 
 For test-driven development of your logging systems, the tdd skill helps you write tests before implementing log handlers. Claude Code can audit your logging code for security issues before deployment.
 
-Monitoring and Alerting
+## Monitoring and Alerting
 
 Logging without monitoring provides historical value but misses active threats. Implement basic alerting:
 
@@ -225,13 +225,13 @@ class AlertingLogger(StructuredLogger):
 
 This pattern integrates with monitoring tools like Datadog or Prometheus for production deployments.
 
-Conclusion
+## Conclusion
 
 Implementing logging and audit trails for MCP servers requires upfront design decisions that pay dividends throughout your project's lifecycle. Start with structured JSON logging, build queryable audit trails, and layer security measures appropriate to your data sensitivity. The patterns shown here provide a foundation you can extend based on specific compliance requirements and operational needs.
 
 Remember: the best logging system is one that gets reviewed. Build dashboards, set up regular log reviews, and treat anomalies as investigation opportunities.
 
-Log Shipping to Centralized Observability Systems
+## Log Shipping to Centralized Observability Systems
 
 Individual MCP server log files become unwieldy once you run more than two or three servers, or when servers are deployed across multiple machines. Centralizing logs into an observability platform lets you correlate events across servers, set up unified alerting, and retain data beyond what local disk allows.
 
@@ -281,7 +281,7 @@ services:
         loki-labels: "job=mcp-server,server=filesystem"
 ```
 
-Retention Policies and Compliance Considerations
+## Retention Policies and Compliance Considerations
 
 Storing every MCP tool invocation indefinitely creates both cost and compliance risk. A thoughtful retention policy balances operational needs against regulatory requirements and storage costs.
 

@@ -13,7 +13,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Distributing Claude Skills Across Isolated Client Environments
 
@@ -21,7 +20,7 @@ As organizations adopt Claude Code for development workflows, the challenge of d
 
 This guide covers the full distribution lifecycle: how skills are structured, how to deliver them across heterogeneous environments, how to handle offline and air-gapped scenarios, and how to keep everything in sync without creating operational overhead.
 
-Understanding Claude Code Skills Architecture
+## Understanding Claude Code Skills Architecture
 
 Claude Code skills are designed to extend Claude's capabilities through specialized knowledge and tool integrations. Each skill encapsulates domain expertise, workflows, and operational patterns that can be loaded dynamically when needed. In isolated environments, such as different developer machines, containerized builds, or air-gapped production systems, ensuring these skills are consistently available requires deliberate distribution strategies.
 
@@ -42,7 +41,7 @@ At the filesystem level, a skill lives in a named directory inside `~/.claude/sk
 
 Understanding this layout matters when you design your distribution pipeline. Anything that reliably places the right directory tree in the right location on each client machine can serve as a distribution mechanism.
 
-Distribution Strategies for Claude Skills
+## Distribution Strategies for Claude Skills
 
 1. Repository-Based Skill Distribution
 
@@ -132,11 +131,11 @@ echo "Skills installed at $SKILLS_DIR (version: $PINNED_VERSION)"
 
 By reading the version from an environment variable, this script allows CI systems to pin a specific release while developer machines default to `stable`.
 
-Handling Isolated and Air-Gapped Environments
+## Handling Isolated and Air-Gapped Environments
 
 Isolated environments present unique challenges for skill distribution since they cannot access public repositories directly. Here are practical approaches for these scenarios:
 
-Offline Skill Bundling
+## Offline Skill Bundling
 
 Package all required skills into a distributable archive that can be transferred via secure media:
 
@@ -166,7 +165,7 @@ tar -xzvf claude-skills-v1.2.0.tar.gz -C ~/.claude/skills/
 
 This chain ensures that only authorized bundles are unpacked, which satisfies most compliance requirements for software supply chain integrity.
 
-Internal Mirror Repositories
+## Internal Mirror Repositories
 
 Where the air-gapped network has internal git infrastructure (GitLab, Gitea, Bitbucket Server), set up a mirror that synchronizes from the external canonical repository through your secure boundary:
 
@@ -184,7 +183,7 @@ git clone git@internal-git.corp:claude-skills.git ~/.claude/skills/your-org
 
 This is the cleanest long-term solution for large teams in regulated sectors: the git workflow is identical to the non-air-gapped case, and only the remote URL differs.
 
-Version Pinning and Reproducibility
+## Version Pinning and Reproducibility
 
 In regulated environments, maintaining reproducible skill versions is critical. Use explicit version pinning in skill manifests:
 
@@ -215,9 +214,9 @@ if [ "$MANIFEST_VERSION" != "$GIT_TAG" ]; then
 fi
 ```
 
-Best Practices for Multi-Environment Skill Management
+## Best Practices for Multi-Environment Skill Management
 
-Environment-Specific Skill Activation
+## Environment-Specific Skill Activation
 
 Not all skills are appropriate for every environment. Use conditional activation based on environment markers:
 
@@ -257,7 +256,7 @@ ln -sfn "${SKILLS_REPO_PATH}/${TIER}" "${HOME}/.claude/skills/env-specific"
 ln -sfn "${SKILLS_REPO_PATH}/shared" "${HOME}/.claude/skills/shared"
 ```
 
-Skill Dependency Management
+## Skill Dependency Management
 
 Complex skill sets often have interdependent requirements. Maintain a dependency graph to ensure all required skills are distributed together:
 
@@ -303,7 +302,7 @@ echo "All required skills present."
 
 Running this check as part of your CI pipeline and in the developer onboarding script catches incomplete distributions before they become support issues.
 
-Testing Skills Across Environments
+## Testing Skills Across Environments
 
 Before distributing updates, validate skills in representative environments by starting a Claude session in that environment and invoking the skill directly:
 
@@ -336,7 +335,7 @@ fi
 
 This is intentionally simple; the goal is not full integration testing but a basic sanity check that the skill loaded and executed without crashing.
 
-Practical Example: Team Onboarding Workflow
+## Practical Example: Team Onboarding Workflow
 
 Consider a development team adopting Claude Code with custom skills for their tech stack. The distribution workflow might look like:
 
@@ -369,7 +368,7 @@ EOF
 
 The result is a developer who has the correct skills on day one, with a mechanism that keeps them current without requiring manual intervention.
 
-Scaling to CI/CD Pipelines
+## Scaling to CI/CD Pipelines
 
 Distributing skills to developer machines is one problem; distributing them to ephemeral CI runners is another. CI containers are typically created fresh for each build, so skills must be installed as part of the container setup.
 
@@ -391,7 +390,7 @@ RUN git clone --depth=1 \
 
 Baking the skills into the image rather than cloning at runtime means that build times are predictable and do not depend on GitHub availability. The `SKILLS_VERSION` build argument lets you pin to a specific commit hash in your CI configuration file, making the relationship between your codebase and your skill versions explicit and auditable.
 
-Conclusion
+## Conclusion
 
 Distributing Claude skills across isolated client environments requires thoughtful planning and appropriate tooling. By using version control, configuration management, and proper dependency handling, organizations can ensure consistent skill availability while maintaining the flexibility needed for different environment requirements. Whether you're managing a handful of developer machines or hundreds of automated build systems, these patterns provide a foundation for reliable skill distribution.
 

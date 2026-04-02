@@ -17,13 +17,13 @@ Claude Code ActiveRecord Scopes and Callbacks Best Practices
 
 ActiveRecord scopes and callbacks are fundamental building blocks in Rails applications. When used correctly with Claude Code, they enable you to create clean, maintainable, and efficient data layer code. This guide covers best practices for writing scopes and callbacks that work smoothly with Claude Code's AI-assisted development workflow. including patterns that are easy to misuse and the reasoning behind each recommendation.
 
-Understanding ActiveRecord Scopes
+## Understanding ActiveRecord Scopes
 
 Scopes in ActiveRecord allow you to define commonly used queries that can be chained together. They provide a way to encapsulate reusable query logic directly in your models, making your code more expressive and DRY. A well-written scope is indistinguishable from a column-based query when chained. it composes cleanly with `where`, `joins`, `includes`, and other scopes without requiring the caller to know what SQL is generated underneath.
 
 The key contract a scope must uphold: it always returns an `ActiveRecord::Relation`. Break this contract and any code that chains onto your scope will raise a `NoMethodError` at runtime.
 
-Writing Efficient Scopes
+## Writing Efficient Scopes
 
 When working with Claude Code, you can use its AI capabilities to generate optimized scopes. Here's what makes a scope efficient:
 
@@ -46,7 +46,7 @@ class User < ApplicationRecord
 end
 ```
 
-Avoiding Common Scope Pitfalls
+## Avoiding Common Scope Pitfalls
 
 Claude Code can help you identify and fix common scope issues. Here are the most frequent problems:
 
@@ -66,7 +66,7 @@ scope :by_status, ->(status) { status.present? ? where(status: status) : all }
 
 The `all` fallback is important. When `status` is blank, returning `all` means callers can still chain further conditions without a nil check. If you return `nil`, the next chained method explodes. If you return an array, `where` is no longer available. `all` preserves the full relation interface.
 
-Scope Naming Conventions
+## Scope Naming Conventions
 
 Scope names should read naturally when called as filters. Avoid names that describe the SQL rather than the business concept:
 
@@ -82,7 +82,7 @@ scope :pending_review, -> { where(status: :pending).where(reviewed_at: nil) }
 
 When asking Claude Code to generate scopes, provide the business context, not the column names. "Give me a scope for users who haven't logged in for 90 days and have completed onboarding" produces better scope names than "give me a scope where last_login_at is less than 90 days ago and onboarding_completed_at is not null."
 
-Scopes vs. Class Methods
+## Scopes vs. Class Methods
 
 There is an ongoing Rails community debate about when to use a scope versus a class method. The practical answer:
 
@@ -96,7 +96,7 @@ There is an ongoing Rails community debate about when to use a scope versus a cl
 
 Scopes defined with `-> { }` lambdas evaluate lazily. Class methods are also lazy when they return a relation. The real difference is that scopes are automatically merged into the default scope context, which matters if you are using `default_scope` (which you generally should not, but that is another discussion).
 
-Composing Scopes for Complex Queries
+## Composing Scopes for Complex Queries
 
 Production Rails apps often need to compose multiple filters from user input. search forms, API filters, admin dashboards. A common pattern is a filter class that applies scopes conditionally:
 
@@ -133,11 +133,11 @@ end
 
 This pattern keeps scopes small and single-purpose while enabling complex multi-filter queries. Claude Code works well here: you can describe the filter requirements in natural language and ask it to generate both the filter class and the underlying model scopes, then review the SQL generated in the Rails console with `to_sql`.
 
-Mastering ActiveRecord Callbacks
+## Mastering ActiveRecord Callbacks
 
 Callbacks allow you to trigger logic before or after changes to an object's state. They're essential for automating repetitive tasks like validation, logging, and data synchronization.
 
-Callback Execution Order
+## Callback Execution Order
 
 Understanding the callback order is crucial for avoiding unexpected behavior:
 
@@ -178,7 +178,7 @@ end
 
 One critical point about the order: `after_commit` fires after the database transaction has been committed. This is fundamentally different from `after_save`, which fires while still inside the transaction. The practical consequence: if `after_save` enqueues a background job, that job may run before the transaction commits, causing the job to query a record that doesn't exist yet. Always use `after_commit` for anything that touches external systems or background queues.
 
-Best Practices for Callbacks
+## Best Practices for Callbacks
 
 Working with Claude Code, follow these callback best practices:
 
@@ -205,7 +205,7 @@ class Transaction < ApplicationRecord
 end
 ```
 
-When Not to Use Callbacks
+## When Not to Use Callbacks
 
 Callbacks are one of the most misused features in Rails. The warning signs:
 
@@ -239,11 +239,11 @@ end
 
 This is more code, but the call site reads as a sequence of operations. It is straightforward to test each step independently, and Claude Code can reason about the flow without needing to trace through multiple callback chains.
 
-Scopes and Callbacks with Claude Code
+## Scopes and Callbacks with Claude Code
 
 Claude Code can help you write, review, and refactor scopes and callbacks. Here's how to collaborate effectively:
 
-Generating Scopes
+## Generating Scopes
 
 Ask Claude Code to generate scopes based on your requirements:
 
@@ -261,7 +261,7 @@ end
 
 When generating scopes with Claude Code, always follow up by asking it to generate the corresponding RSpec examples. This catches edge cases. particularly the nil-return issue with conditional scopes. before the code reaches production.
 
-Reviewing Callbacks
+## Reviewing Callbacks
 
 Use Claude Code to review callback chains for potential issues:
 
@@ -274,9 +274,9 @@ Before refactoring, ask Claude to analyze:
 
 A useful prompt pattern is: "Here is my `User` model. List every callback in the order it fires during a `user.update!(email: 'new@example.com')` call, and flag any that could cause issues if the transaction rolls back." Claude Code can trace the execution order and identify `after_save` calls that should be `after_commit`.
 
-Advanced Patterns
+## Advanced Patterns
 
-Custom Scope Methods
+## Custom Scope Methods
 
 Combine scopes with class methods for complex queries:
 
@@ -296,7 +296,7 @@ class Article < ApplicationRecord
 end
 ```
 
-Conditional Callbacks
+## Conditional Callbacks
 
 Use `if` and `unless` to make callbacks conditional:
 
@@ -315,7 +315,7 @@ end
 
 Conditional callbacks are preferable to callbacks with internal `if` branches, because Rails skips the callback method entirely when the condition is false. meaning less call overhead and clearer intent.
 
-Callbacks with Transactions
+## Callbacks with Transactions
 
 When callbacks need to perform multiple operations atomically, wrap them in a transaction explicitly:
 
@@ -340,7 +340,7 @@ end
 
 Note the error handling: `after_commit` runs outside the original save transaction. If `provision_access` raises, it does not roll back the subscription record. Always handle errors explicitly in `after_commit` callbacks and enqueue retry jobs for recoverable failures.
 
-Scopes with Joins and Includes
+## Scopes with Joins and Includes
 
 Scopes can include complex joins, but be careful about scopes that implicitly change the returned rows:
 
@@ -366,7 +366,7 @@ end
 
 Claude Code is good at spotting N+1 opportunities in scope chains. When you ask it to review a controller action that calls model scopes, provide the full call chain including any subsequent attribute accesses. It will flag patterns like `User.active.map(&:profile)` that load profiles one by one.
 
-Testing Scopes and Callbacks
+## Testing Scopes and Callbacks
 
 Claude Code can help you write comprehensive tests for scopes and callbacks:
 
@@ -392,7 +392,7 @@ RSpec.describe User do
 end
 ```
 
-Testing Scope Chaining
+## Testing Scope Chaining
 
 Beyond testing that a scope returns the right records, test that it chains correctly. A scope that breaks chaining will cause obscure errors in controller specs, not model specs:
 
@@ -414,7 +414,7 @@ RSpec.describe User, '.by_role' do
 end
 ```
 
-Testing Callbacks in Isolation
+## Testing Callbacks in Isolation
 
 For callbacks that have significant side effects, test them in isolation using `expect_any_instance_of` or by directly calling the private method:
 
@@ -432,7 +432,7 @@ end
 
 Testing the callback method directly decouples the test from the persistence layer, making it faster and easier to debug when it fails.
 
-Callback Observability
+## Callback Observability
 
 Production Rails apps benefit from logging when callbacks execute, especially for complex models with many callbacks. A simple approach using `ActiveSupport::Concern`:
 
@@ -462,7 +462,7 @@ end
 
 When debugging production issues with Claude Code, share your callback logs alongside the error traces. Claude Code can correlate callback timing with errors and suggest which callback to add defensive error handling to.
 
-Conclusion
+## Conclusion
 
 ActiveRecord scopes and callbacks, when used correctly, make your Rails applications more maintainable and expressive. Claude Code can be an invaluable partner in writing, reviewing, and testing these patterns. Remember to:
 

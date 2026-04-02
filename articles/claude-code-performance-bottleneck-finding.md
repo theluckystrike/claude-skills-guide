@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Performance Bottleneck Finding
-
 Performance bottlenecks in Claude Code can silently drain your productivity, inflate token usage, and slow down your development workflow. Whether you are using skills for automated testing with the tdd skill, generating documents with the pdf skill, or building presentations with the pptx skill, understanding how to identify and resolve these bottlenecks is essential for maintaining an efficient AI-assisted development environment.
 
 This guide provides practical techniques for finding performance bottlenecks in your Claude Code setup, with real-world examples and actionable optimization strategies.
 
-Common Performance Bottlenecks
+## Common Performance Bottlenecks
 
 Before diving into detection methods, recognize the typical culprits that affect Claude Code performance:
 
@@ -32,7 +29,7 @@ Before diving into detection methods, recognize the typical culprits that affect
 
 The frontend-design skill often encounters bottlenecks when processing multiple asset files simultaneously. The supermemory skill may struggle with large knowledge bases if indexing is not optimized. Identifying which category affects your workflow is the first step toward resolution.
 
-Profiling Skill Execution
+## Profiling Skill Execution
 
 Start by measuring actual execution time for your most-used skills. Create a profiling script that captures timing data:
 
@@ -61,7 +58,7 @@ echo "Token estimates: $(wc -c < /tmp/skill-output.log)"
 
 Run this against your skills to establish baseline performance metrics. Compare results across different skill configurations to spot anomalies.
 
-Analyzing Tool Call Patterns
+## Analyzing Tool Call Patterns
 
 Tool calls reveal how skills interact with your project. Excessive or inefficient tool usage typically indicates optimization opportunities. Use the bash tool with verbose logging to capture detailed call sequences:
 
@@ -77,7 +74,7 @@ This command sequence helps you identify which tools are overused. For example, 
 
 The tdd skill frequently benefits from this analysis. By examining its tool call patterns, you can determine whether test files are being read individually or whether the skill could benefit from bulk file operations.
 
-Context Growth Analysis
+## Context Growth Analysis
 
 Conversation context grows over time, and this growth directly impacts response latency. Monitor your context size using the available logging features:
 
@@ -97,7 +94,7 @@ function logContextSize(phase) {
 
 The pdf skill and docx skill often work with large documents that quickly consume context. If you notice response times increasing during long sessions, consider breaking operations into smaller chunks or implementing context summarization.
 
-Memory and Resource Monitoring
+## Memory and Resource Monitoring
 
 System resources affect Claude Code performance. Monitor memory usage and CPU availability during skill execution:
 
@@ -115,7 +112,7 @@ done
 
 This approach helps identify whether bottlenecks stem from Claude Code itself or from system constraints. The supermemory skill, for instance, may require significant memory when indexing large knowledge bases.
 
-Optimization Strategies
+## Optimization Strategies
 
 Once you identify bottlenecks, apply targeted fixes:
 
@@ -127,7 +124,7 @@ Limit context scope. Use explicit scope boundaries to prevent unnecessary contex
 
 Parallelize independent operations. When skills support concurrent execution, use that capability. The pptx skill can often generate multiple slides in parallel when properly configured.
 
-Continuous Monitoring
+## Continuous Monitoring
 
 Establish a regular profiling routine to catch new bottlenecks before they impact productivity:
 
@@ -151,7 +148,7 @@ done
 
 Track these metrics over time to establish performance trends and identify when optimization efforts are needed.
 
-When to Seek Alternative Skills
+## When to Seek Alternative Skills
 
 Sometimes the bottleneck lies in the skill design itself rather than configuration. If you consistently encounter performance issues despite optimization attempts, explore alternatives. The community-driven skills often address specific performance concerns that the official skills may not prioritize.
 

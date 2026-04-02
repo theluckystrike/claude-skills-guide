@@ -19,7 +19,7 @@ Microbenchmarking is essential for understanding code performance at a granular 
 
 This guide walks you through building a practical microbenchmark workflow with Claude Code, complete with examples you can adapt to your own projects. By the end, you'll have a complete pipeline for writing, running, analyzing, and automating microbenchmarks, with Claude handling the tedious parts so you can focus on interpreting results and improving your code.
 
-Why Microbenchmarking Matters
+## Why Microbenchmarking Matters
 
 Before diving into the workflow, it's worth understanding why microbenchmarks deserve their own dedicated process. A microbenchmark measures a small, isolated piece of code, typically a single function or algorithm, under controlled conditions. This differs from profiling, which measures a whole application under realistic load, and from macro-benchmarks, which measure end-to-end system throughput.
 
@@ -33,7 +33,7 @@ Microbenchmarks are the right tool when you want to:
 
 The challenge is that microbenchmarks are notoriously easy to write incorrectly. JIT compilation, CPU branch prediction, garbage collection, and OS scheduling all introduce noise that can make results misleading. Claude Code understands these pitfalls and can help you avoid them from the start.
 
-Setting Up Your Benchmark Environment
+## Setting Up Your Benchmark Environment
 
 Before running any benchmarks, you need a reproducible environment. Claude Code can help you create one from scratch or adapt an existing project structure.
 
@@ -80,7 +80,7 @@ For Java projects, Claude would scaffold a JMH (Java Microbenchmark Harness) pro
 
 JMH handles JVM warmup, dead-code elimination prevention, and forked JVM runs, all sources of measurement error that are easy to get wrong. Claude knows to use JMH for Java rather than rolling a custom timing loop.
 
-Writing Your First Benchmark
+## Writing Your First Benchmark
 
 The real power of using Claude for benchmarking lies in its ability to write correct, statistically sound benchmarks. Here's how to collaborate with Claude on this task:
 
@@ -147,7 +147,7 @@ def test_map_scaling(benchmark, data):
 
 This parametrized approach generates a benchmark matrix covering all combinations, giving you performance data that reveals whether time complexity is O(n) or whether there are unexpected jumps at certain sizes.
 
-Common Benchmarking Mistakes and How Claude Helps Avoid Them
+## Common Benchmarking Mistakes and How Claude Helps Avoid Them
 
 When writing benchmarks manually, certain classes of errors appear repeatedly. Claude actively avoids these when generating benchmark code:
 
@@ -172,7 +172,7 @@ Here is a comparison of a naive benchmark versus what Claude produces:
 | Parametrization | Single input size | Multiple sizes via params |
 | Output format | Print to stdout | JSON via --benchmark-json |
 
-Running Benchmarks with Claude
+## Running Benchmarks with Claude
 
 Once your benchmarks are written, executing them consistently is crucial. Create a simple shell script that Claude can help you maintain:
 
@@ -242,7 +242,7 @@ cp "${CURRENT_FILE}" "${RESULTS_DIR}/benchmark_${GIT_SHA}.json"
 echo "Results saved to ${CURRENT_FILE}"
 ```
 
-Analyzing Results Effectively
+## Analyzing Results Effectively
 
 Raw benchmark numbers are rarely useful in isolation. Claude can help you transform results into actionable insights by:
 
@@ -328,7 +328,7 @@ Here's a sample of what that analysis might produce:
 
 The exit code behavior matters for CI integration, if the script exits with code 1 when regressions are found, your CI pipeline fails automatically and blocks merging regressions to the main branch.
 
-Automating Continuous Benchmarking
+## Automating Continuous Benchmarking
 
 For ongoing projects, consider setting up automated benchmarks that run on code changes. Claude can help you configure this using GitHub Actions or a local watch script.
 
@@ -407,7 +407,7 @@ jobs:
 
 Combine this with Claude's ability to generate summary reports, and you have a powerful feedback loop for performance optimization.
 
-Cross-Language Benchmark Patterns
+## Cross-Language Benchmark Patterns
 
 Claude can generate idiomatic benchmark code across different language ecosystems. Here's how the same comparison looks in JavaScript using the `tinybench` library:
 
@@ -464,7 +464,7 @@ criterion_main!(benches);
 
 Note the use of `black_box`, this prevents LLVM from optimizing away the computation because the result is "unused." Claude knows to include this in Rust benchmarks, a subtle but critical detail.
 
-Best Practices for AI-Assisted Benchmarking
+## Best Practices for AI-Assisted Benchmarking
 
 To get the most out of Claude in your benchmark workflow, keep these principles in mind:
 
@@ -479,7 +479,7 @@ A useful prompt pattern when you get unexpected results is: "My list comprehensi
 
 Claude will typically suggest checking CPU cache behavior, Python version differences, and whether the CI runner is a shared VM with noisy neighbors, actionable directions you can pursue immediately.
 
-Wrapping Up
+## Wrapping Up
 
 Claude Code transforms microbenchmarking from a manual, error-prone process into a collaborative workflow. By using Claude's understanding of performance patterns and best practices, you can:
 
@@ -494,7 +494,6 @@ Start with small, focused benchmarks and let Claude help you build up a comprehe
 The workflow described here scales from a single-developer project with a local watch script all the way to a team workflow with GitHub Actions-based regression gates. Whether you're doing a one-off comparison or building a long-term performance history, Claude Code handles the scaffolding and analysis so you can focus on the insight that matters: understanding why your code performs the way it does and how to make it better.
 
 Remember: good benchmarks are repeatable, comparable, and representative of real-world usage. Claude can help you achieve all three properties more efficiently than manual approaches.
-
 
 Related Reading
 

@@ -15,7 +15,7 @@ score: 8
 {% raw %}
 Chrome extensions for royalty-free image search streamline the creative workflow by letting you find, preview, and download licensed images without leaving your browser. For developers building design tools, content management systems, or marketing platforms, understanding how these extensions work helps you create better integrations or build custom solutions.
 
-How Royalty-Free Image Search Extensions Work
+## How Royalty-Free Image Search Extensions Work
 
 Most royalty-free image extensions connect to APIs from providers like Unsplash, Pexels, Pixabay, or Wikimedia Commons. The extension typically includes a popup interface for search queries, a content script for displaying results, and background scripts that handle API communication and caching.
 
@@ -46,11 +46,11 @@ Note the `host_permissions` field. In Manifest V3, cross-origin fetch requests f
 
 The popup.html provides the search interface where users enter keywords. The background script then calls the image provider's API and returns results to the popup for display.
 
-Building a Basic Image Search Extension
+## Building a Basic Image Search Extension
 
 Creating a functional image search extension requires understanding three key components: the search UI, the API integration, and the download handling. Let's walk through each part.
 
-The Search Interface
+## The Search Interface
 
 The popup HTML provides a simple search form and results container:
 
@@ -90,7 +90,7 @@ The popup HTML provides a simple search form and results container:
 
 This creates a two-column grid layout for displaying thumbnails. Each result links to the full image or triggers a download. The status div provides loading feedback. a small detail that makes a large difference in perceived responsiveness when API calls take more than a second.
 
-API Integration
+## API Integration
 
 The popup JavaScript handles form submission and displays results:
 
@@ -159,7 +159,7 @@ function displayResults(images) {
 
 This sends requests to the Unsplash API and renders thumbnails with download links. You can adapt this pattern for Pexels, Pixabay, or other providers by adjusting the API endpoint and response handling.
 
-Handling Downloads
+## Handling Downloads
 
 For a more complete implementation, you might want to download images directly:
 
@@ -202,7 +202,7 @@ async function downloadImageNative(imageUrl, filename) {
 
 Add `"downloads"` to the `permissions` array in `manifest.json` to unlock this API. The `saveAs: false` flag skips the "Save As" dialog; set it to `true` if you want the user to choose the save location.
 
-Querying Multiple Providers in Parallel
+## Querying Multiple Providers in Parallel
 
 A more powerful extension queries several APIs simultaneously and merges the results. This maximizes variety and avoids showing users an empty state when one provider has no matching images:
 
@@ -271,7 +271,7 @@ async function searchPixabay(query) {
 
 Using `Promise.allSettled` instead of `Promise.all` is deliberate: if one provider's API is down or returns an error, the other results still render. `Promise.all` would reject the entire batch on a single failure.
 
-Implementing a Results Cache with chrome.storage
+## Implementing a Results Cache with chrome.storage
 
 API rate limits are a real constraint at scale. Unsplash's free tier allows 50 requests per hour. Caching recent searches eliminates redundant calls and makes repeat queries feel instant:
 
@@ -316,7 +316,7 @@ async function search(query) {
 
 `chrome.storage.local` has a default quota of 10 MB, which is more than enough for thumbnail URLs and metadata. If you store actual image blobs in the cache, you will hit that limit quickly. store URLs, not binary data.
 
-Popular Use Cases for Developers
+## Popular Use Cases for Developers
 
 Royalty-free image extensions serve several practical purposes beyond simple searching. Developers often integrate these capabilities into content creation workflows, design prototyping, and automated content generation.
 
@@ -326,7 +326,7 @@ In design tools, image search extensions provide quick access to reference mater
 
 Automated reporting tools benefit from integration with image APIs. Your extension can suggest relevant images based on article topics or generate featured images for content automatically.
 
-Inserting Images into Web Editors
+## Inserting Images into Web Editors
 
 A content script can interact with rich text editors like WordPress Gutenberg or TinyMCE, inserting the selected image at the cursor position:
 
@@ -372,7 +372,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
 
 This pattern works for any editor that either uses contenteditable or exposes a JavaScript API. For Gutenberg (WordPress's block editor), you would dispatch a Redux action to insert an image block rather than manipulating the DOM directly.
 
-Choosing Image Sources
+## Choosing Image Sources
 
 Not all royalty-free image providers offer the same licensing terms. Understanding the differences helps you choose the right source for your use case:
 
@@ -380,7 +380,7 @@ Unsplash provides high-quality photography with permissive licenses allowing bot
 
 For commercial projects, verify that your chosen provider's license covers your specific use case. Most provide API documentation with clear licensing terms.
 
-Provider Comparison Table
+## Provider Comparison Table
 
 | Provider | Free Tier Limit | License | Attribution Required | Vectors | Videos | API Docs |
 |----------|----------------|---------|---------------------|---------|--------|----------|
@@ -392,7 +392,7 @@ Provider Comparison Table
 
 The Openverse API (maintained by WordPress.org) aggregates images from Flickr, Wikimedia, and other sources. It returns rich license metadata per image, which is useful when you need to display exact attribution requirements to end users.
 
-Handling Attribution Correctly
+## Handling Attribution Correctly
 
 Even when attribution is "appreciated but not required," displaying it builds trust and protects you legally if license terms change. A solid implementation stores attribution metadata alongside the image URL:
 
@@ -423,7 +423,7 @@ async function saveAttribution(attribution) {
 
 An options page can then render this list as a formatted credits block that users copy into their projects.
 
-Building Production-Ready Extensions
+## Building Production-Ready Extensions
 
 When developing extensions for distribution, consider these practical aspects:
 
@@ -435,7 +435,7 @@ Third, respect user privacy by only requesting necessary permissions. The active
 
 Finally, comply with Chrome Web Store policies. Ensure your extension's description accurately represents its functionality, and handle user data according to Google's policies.
 
-Securing API Keys
+## Securing API Keys
 
 Never hardcode API keys in your extension's source code. Chrome extensions are distributed as zip archives that anyone can unpack and inspect. Instead, use one of these approaches:
 
@@ -459,7 +459,7 @@ Backend proxy: Your extension calls a server you control, which holds the API ke
 
 For internal team tools, the options page approach is usually the right call. For consumer extensions distributed to thousands of users, the backend proxy avoids key theft and lets you add rate limiting per user.
 
-Testing Your Extension Locally
+## Testing Your Extension Locally
 
 Load your unpacked extension through `chrome://extensions` with Developer Mode enabled. Use the "Inspect views: popup.html" link to open DevTools attached to the extension popup. this gives you a full console, network panel, and Sources debugger scoped to the extension's context.
 
@@ -500,14 +500,13 @@ console.assert(count > 0, 'Expected at least one result');
 
 This test approach catches regressions in the UI layer. Combine it with unit tests for individual functions like cache logic and attribution formatting.
 
-Conclusion
+## Conclusion
 
 Chrome extensions for royalty-free image search combine browser APIs with image provider services to create powerful productivity tools. Whether you're building custom solutions for your team or developing extensions for distribution, understanding the underlying architecture helps you create more effective implementations.
 
 The patterns shown here. search interfaces, API integration, multi-provider parallel queries, caching, download handling, and CMS insertion. form the foundation for more complex extensions. You can extend these basics with features like bulk downloading, collections management, or integration with design tools.
 
 As you scale toward production, the most important investments are rate limit caching, proper API key security through an options page or backend proxy, and a clear attribution record for every image your users download. These three measures address the practical problems that most hobby implementations ignore and that production tools can't afford to skip.
-
 
 Related Reading
 

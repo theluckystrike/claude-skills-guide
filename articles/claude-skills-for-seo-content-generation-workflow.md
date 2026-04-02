@@ -18,7 +18,7 @@ permalink: /claude-skills-for-seo-content-generation-workflow/
 
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. Each skill loads a set of instructions into Claude's context, turning a general-purpose AI into a specialized tool tuned for a specific task.
 
-Why Skills Beat Plain Prompts for SEO Work
+## Why Skills Beat Plain Prompts for SEO Work
 
 Before diving into the pipeline, it is worth understanding why skills are better than repeating the same long prompts every session. A plain prompt gets you one response. A skill definition is loaded fresh each session, ensuring every piece of content is evaluated against the same checklist, the same criteria, and the same formatting rules.
 
@@ -32,7 +32,7 @@ Consider the difference in practice:
 
 For an SEO operation producing more than a handful of articles per week, the consistency argument alone justifies building skills. Every article gets audited against the same checklist. Every brief follows the same structure. Every keyword cluster uses the same classification logic.
 
-The SEO Content Pipeline
+## The SEO Content Pipeline
 
 [A modern SEO content workflow involves multiple stages: keyword research, content brief creation, drafting, optimization, and performance tracking](/claude-skill-md-format-complete-specification-guide/) Claude skills assist with each phase, reducing manual effort while maintaining quality standards.
 
@@ -45,7 +45,7 @@ Raw keyword export → Intent clustering → Content brief → Draft → SEO aud
 
 Each step has a skill or Claude Code interaction that handles the mechanical work, freeing you to focus on editorial judgment.
 
-Keyword Research with Spreadsheet Automation
+## Keyword Research with Spreadsheet Automation
 
 The xlsx skill transforms how you handle keyword data. Instead of manually sorting through CSV exports from SEO tools, create automated pipelines that categorize keywords, calculate difficulty scores, and generate content opportunities.
 
@@ -90,7 +90,7 @@ Compare these two keyword lists (mine vs competitor). Identify keywords the comp
 that I do not have published content targeting. Flag any with search_volume over 500 as high priority.
 ```
 
-Content Brief Generation
+## Content Brief Generation
 
 Once you have target keywords, the docx skill generates structured content briefs:
 
@@ -116,7 +116,7 @@ A complete brief template produced by the docx skill might include:
 
 Briefs in this format ensure that any writer, human or AI, starts with a complete picture of what the article must accomplish to rank.
 
-Document Processing for Research
+## Document Processing for Research
 
 The pdf skill is essential when researching competitor content or extracting data from industry reports:
 
@@ -137,7 +137,7 @@ Practical uses in an SEO workflow include:
 
 The pdf skill saves hours of manual research time per article when a topic requires multiple source documents. Instead of reading each PDF in full, you extract only what is relevant to the article at hand.
 
-Content Optimization Workflow
+## Content Optimization Workflow
 
 For existing content that needs SEO improvements, create a custom audit skill at `~/.claude/skills/seo-audit.md`:
 
@@ -180,7 +180,7 @@ You can extend the seo-audit skill with additional checks specific to your site.
 
 The skill becomes a house style guide that every piece of content is measured against before publication.
 
-Scaling Article Production with a Generation Skill
+## Scaling Article Production with a Generation Skill
 
 Beyond auditing, you can create a dedicated content generation skill that embeds your editorial standards into every draft. Save this to `~/.claude/skills/seo-writer.md`:
 
@@ -220,7 +220,7 @@ Write an article targeting the keyword "typescript interface vs type". Include a
 table and at least two code examples showing real-world use cases.
 ```
 
-Content Calendar Management
+## Content Calendar Management
 
 The xlsx skill handles content calendar management. Track publication dates, keyword targets, and performance metrics in a structured spreadsheet that the skill can read and update programmatically:
 
@@ -244,7 +244,7 @@ status, which are overdue (publish date past today), and which keywords have no 
 
 This turns your spreadsheet into a queryable database without writing any SQL or building a separate dashboard.
 
-Memory and Knowledge Management
+## Memory and Knowledge Management
 
 The supermemory skill enhances long-term SEO strategy by maintaining a knowledge base of what content performs well. Unlike notes in a spreadsheet, supermemory lets you query your institutional knowledge in natural language:
 
@@ -263,7 +263,7 @@ What topics have we covered that ranked in the top 5? What word counts did those
 
 This pattern prevents you from repeatedly discovering the same insights from scratch. It also makes strategy discussions faster, instead of manually pulling a report, you query your stored knowledge.
 
-Frontend Design Integration
+## Frontend Design Integration
 
 When creating landing pages or content-heavy sites, proper rendering impacts Core Web Vitals, which Google uses as ranking signals. Use Claude Code directly to audit your content templates:
 
@@ -281,7 +281,7 @@ Claude reviews your HTML/CSS and surfaces specific fixes, no separate skill invo
 
 Fixing Core Web Vitals is not glamorous SEO work, but a site that passes Google's thresholds has a meaningful ranking advantage over a competitor that fails them.
 
-Automating the Entire Pipeline
+## Automating the Entire Pipeline
 
 Combining these skills creates a practical content generation system with clear separation of concerns. Here is the full workflow map:
 
@@ -299,7 +299,7 @@ Combining these skills creates a practical content generation system with clear 
 
 Each skill handles its domain, and Claude orchestrates the workflow between them. This approach scales content production while maintaining consistency across your SEO portfolio. A team of one can realistically manage a pipeline producing ten to twenty articles per week without quality degradation, because the mechanical checks are automated and the editorial judgment is the only bottleneck.
 
-Building Your First SEO Skill
+## Building Your First SEO Skill
 
 If you are new to Claude skills, the seo-audit skill is the best place to start because it has immediate, measurable value. Create the file:
 
@@ -321,6 +321,5 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top skills every developer should know
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Decide when skills beat plain prompts
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
-
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

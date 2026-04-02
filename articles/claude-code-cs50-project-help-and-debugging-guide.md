@@ -13,19 +13,18 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code CS50 Project Help and Debugging Guide
 
 CS50 is Harvard's legendary introduction to computer science course, known for its rigorous problem sets and hands-on approach to programming. Whether you're tackling C pointers, Python algorithms, or SQL databases, Claude Code can be your ultimate debugging companion. This guide walks you through how to use Claude Code's capabilities to overcome common CS50 challenges and level up your debugging skills.
 
-Understanding Claude Code in the CS50 Context
+## Understanding Claude Code in the CS50 Context
 
 Claude Code is a command-line AI assistant that lives in your terminal, ready to help you with any coding challenge. Unlike traditional debuggers that only show you what's happening, Claude Code understands your intent and can explain why something isn't working.
 
 When working on CS50 projects, you'll often encounter errors that seem cryptic, especially with C's memory management or Python's complex data structures. Claude Code can analyze your code, identify the root cause, and suggest fixes with clear explanations.
 
-Getting Started with Claude Code for CS50
+## Getting Started with Claude Code for CS50
 
 The first step is to invoke Claude Code in your project directory:
 
@@ -42,11 +41,11 @@ Please review my code in pset1/mario.c and help me understand why the pyramid is
 
 Claude Code will read your files and provide detailed feedback. This immediate access to code analysis makes it invaluable for CS50's iterative development process.
 
-Debugging C Programs in CS50
+## Debugging C Programs in CS50
 
 CS50's C assignments (psets 1-3) introduce memory management, pointers, and data structures. These are notoriously difficult to debug. Here's how Claude Code helps:
 
-Common C Debugging Scenarios
+## Common C Debugging Scenarios
 
 1. Segmentation Faults
 
@@ -71,7 +70,7 @@ My code passes all test cases but valgrind shows definite leaks in my hash table
 
 Claude Code will analyze your allocation and free patterns, helping you identify where you're missing `free()` calls.
 
-Debugging a Linked List
+## Debugging a Linked List
 
 Consider this common mistake in a linked list insertion:
 
@@ -103,7 +102,7 @@ void insert(node head, int value) {
 }
 ```
 
-Python Debugging for CS50
+## Python Debugging for CS50
 
 Later psets (4-6) transition to Python. Claude Code excels here by combining its understanding of Python semantics with CS50-specific conventions.
 
@@ -130,7 +129,7 @@ If this returns unexpected results, Claude Code can help you verify:
 - Correct table and column names
 - Transaction handling
 
-Leveraging Claude Code's Analysis Tools
+## Leveraging Claude Code's Analysis Tools
 
 Claude Code offers several features specifically useful for CS50 work:
 
@@ -163,9 +162,9 @@ Claude Code will catch:
 - Improper input validation
 - Style guideline violations
 
-Best Practices for Using Claude Code with CS50
+## Best Practices for Using Claude Code with CS50
 
-Learn While You Debug
+## Learn While You Debug
 
 Don't just accept fixes, ask for explanations:
 
@@ -175,7 +174,7 @@ Why does this fix work? Can you explain the concept behind it?
 
 This approach turns each debugging session into a learning opportunity.
 
-Combine with CS50's Tools
+## Combine with CS50's Tools
 
 Claude Code complements (doesn't replace) CS50's debugging ecosystem:
 - Use debug50 for step-by-step debugging
@@ -183,14 +182,14 @@ Claude Code complements (doesn't replace) CS50's debugging ecosystem:
 - Use style50 for code formatting
 - Use Claude Code for understanding and solving persistent issues
 
-Build Good Habits
+## Build Good Habits
 
 Early CS50 psets establish programming fundamentals. Use Claude Code to:
 - Understand why code works (not just that it works)
 - Learn proper code organization
 - Develop debugging intuition
 
-Practical Example: Solving a Recursive Function
+## Practical Example: Solving a Recursive Function
 
 Here's how a typical debugging session works:
 
@@ -221,7 +220,7 @@ For CS50, you have a few options:
 
 This explanation helps you understand the actual problem rather than just applying a band-aid fix.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms debugging from a frustrating chore into a valuable learning experience. For CS50 students, it serves as a patient mentor available 24/7, helping you understand errors, review code, and develop strong debugging instincts.
 
@@ -229,7 +228,6 @@ Remember: the goal isn't to avoid errors, it's to learn from them. With Claude C
 
 Start small, ask questions, and embrace the debugging process. Your future self will thank you when you're building more complex projects with confidence.
 {% endraw %}
-
 
 Related Reading
 

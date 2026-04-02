@@ -13,7 +13,6 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code Kubernetes Deployment Workflow Guide
 
@@ -21,7 +20,7 @@ Kubernetes deployment workflows can become complex quickly. From writing manifes
 
 This guide shows you how to build an efficient Kubernetes deployment workflow using Claude Code, with practical examples you can apply immediately.
 
-Setting Up Your Project for Kubernetes Deployment
+## Setting Up Your Project for Kubernetes Deployment
 
 Before deploying to Kubernetes, ensure your project has the right structure. Claude Code works best when your repository contains:
 
@@ -31,7 +30,7 @@ Before deploying to Kubernetes, ensure your project has the right structure. Cla
 
 Initialize your project with these components. If you're starting fresh, ask Claude Code to generate a production-ready Dockerfile and the initial Kubernetes manifests. The tool understands multi-stage builds, security best practices, and can optimize for smaller image sizes.
 
-Generating Kubernetes Manifests
+## Generating Kubernetes Manifests
 
 One of Claude Code's strongest capabilities is generating Kubernetes YAML manifests from descriptions. Instead of manually writing each resource, you can describe what you need:
 
@@ -83,7 +82,7 @@ spec:
 
 This approach works for all Kubernetes resource types: Services, ConfigMaps, Secrets, Ingress, PersistentVolumeClaims, and custom resources.
 
-Managing Multi-Environment Configurations
+## Managing Multi-Environment Configurations
 
 Production deployments typically require different configurations for staging, QA, and production environments. Rather than duplicating manifests, use Kustomize or Helm. Claude Code excels at setting up these tools correctly.
 
@@ -97,7 +96,7 @@ Claude Code creates the proper directory structure with `kustomization.yaml` fil
 
 If you prefer Helm, Claude Code generates chart templates with values files for each environment. It understands Helm's templating syntax and can create production-ready charts with proper defaults.
 
-Integrating with CI/CD Pipelines
+## Integrating with CI/CD Pipelines
 
 Automated deployments require CI/CD integration. Claude Code helps you set up GitHub Actions workflows that handle the complete deployment cycle:
 
@@ -125,7 +124,7 @@ jobs:
 
 The workflow builds your container, updates the image tag in your manifests, and applies changes to your cluster. You can extend this with additional steps for running tests, scanning for vulnerabilities, or sending notifications.
 
-Handling Secrets Securely
+## Handling Secrets Securely
 
 Never commit secrets to your repository. Claude Code helps you set up proper secret management using Kubernetes-native solutions or external secrets operators.
 
@@ -137,7 +136,7 @@ Generate a Kubernetes Secret manifest for database credentials with keys usernam
 
 For more sophisticated setups, Claude Code can configure AWS Secrets Manager, HashiCorp Vault, or SealedSecrets. It generates the necessary manifests and helps you integrate secret injection into your deployment workflow.
 
-Health Checks and Rollout Management
+## Health Checks and Rollout Management
 
 Production deployments require proper health monitoring. Claude Code ensures your manifests include liveness and readiness probes, and it can generate rollout strategies for zero-downtime deployments.
 
@@ -158,7 +157,7 @@ spec:
 
 This configuration ensures zero downtime by only creating new pods after existing ones are ready, while allowing one extra pod during the rollout.
 
-Testing Deployments Locally
+## Testing Deployments Locally
 
 Before pushing to production, test your deployments locally using kind (Kubernetes in Docker) or Minikube. Claude Code can set up local development clusters and help you iterate quickly.
 
@@ -168,7 +167,7 @@ Set up a kind cluster for local development with ingress enabled. Create a scrip
 
 This creates a reproducible local environment where you can catch issues before they reach production.
 
-Leveraging Claude Skills for Deployment
+## Leveraging Claude Skills for Deployment
 
 Several Claude skills enhance your Kubernetes workflow:
 
@@ -179,7 +178,7 @@ Several Claude skills enhance your Kubernetes workflow:
 
 Install these skills through Claude Code's skill management system to extend capabilities without writing custom integrations.
 
-Automating Routine Tasks
+## Automating Routine Tasks
 
 Once your workflow is established, ask Claude Code to automate repetitive tasks:
 
@@ -190,12 +189,11 @@ Once your workflow is established, ask Claude Code to automate repetitive tasks:
 
 Claude Code remembers your cluster configuration and can execute these tasks with appropriate context, making your deployment workflow increasingly efficient over time.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Kubernetes deployment from a manual, error-prone process into an automated, reproducible workflow. By generating manifests from descriptions, setting up proper configuration management, and integrating with CI/CD pipelines, you spend less time on boilerplate and more time on what matters, building your application.
 
 Start with the basics: generate your first manifest, set up environment configurations, and add CI/CD automation. Each layer builds on the previous one, creating a deployment system that scales with your project.
-
 
 Related Reading
 

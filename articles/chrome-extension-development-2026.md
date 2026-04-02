@@ -16,7 +16,7 @@ permalink: /chrome-extension-development-2026/
 
 Manifest V2 is gone. Chrome enforced the deadline, and every extension published to the Chrome Web Store now runs under Manifest V3 (MV3). If you built extensions under MV2 or you are starting fresh, this guide gives you a working foundation: architecture, code, and a path to publishing.
 
-What Changed with Manifest V3
+## What Changed with Manifest V3
 
 The biggest shift in MV3 is the replacement of persistent background pages with service workers. Under MV2, your background script ran continuously and held state in memory. Under MV3, the service worker starts on demand, handles an event, and terminates. You cannot rely on in-memory globals surviving between events.
 
@@ -29,11 +29,11 @@ Other notable changes:
 
 The mental model shift: your background logic is now event-driven and stateless between activations. Use `chrome.storage` for anything that needs to persist.
 
-The Minimal Working Extension
+## The Minimal Working Extension
 
 Here is the smallest useful extension: it reads the current tab's URL and copies it to the clipboard when you click the toolbar icon.
 
-Directory structure
+## Directory structure
 
 ```
 my-extension/
@@ -120,7 +120,7 @@ document.getElementById("copyBtn").addEventListener("click", async () => {
 
 Load this in Chrome by going to `chrome://extensions`, enabling Developer mode, and clicking Load unpacked. Point it at your `my-extension/` directory.
 
-Service Workers: What You Need to Know
+## Service Workers: What You Need to Know
 
 Since the service worker can be terminated at any time, any state you set on a plain variable is gone on the next activation. The fix is `chrome.storage.local` or `chrome.storage.session`.
 
@@ -135,7 +135,7 @@ console.log(data.lastCopied);
 
 `chrome.storage.session` (available since Chrome 102) holds data for the lifetime of the browser session and is faster than `local`, but it does not persist across browser restarts. Use it for ephemeral state like rate-limit counters.
 
-Keeping the service worker alive for long tasks
+## Keeping the service worker alive for long tasks
 
 If you have a long-running task (polling, a chain of async operations), use `chrome.alarms` instead of `setInterval`. Alarms fire the service worker reliably:
 
@@ -150,7 +150,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 ```
 
-Content Scripts
+## Content Scripts
 
 Content scripts run in the context of a web page. They can read and modify the DOM, but they run in an isolated world. they share the DOM but not the JavaScript scope with the page.
 
@@ -185,7 +185,7 @@ chrome.action.onClicked.addListener(async (tab) => {
 });
 ```
 
-Messaging Between Contexts
+## Messaging Between Contexts
 
 Popup, background, and content scripts are separate contexts. Use `chrome.runtime.sendMessage` and `chrome.runtime.onMessage` to pass data between them.
 
@@ -205,7 +205,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 For content scripts to communicate with the background, the same API works. the `sender` object will include `sender.tab` so you know which tab it came from.
 
-Publishing to the Chrome Web Store
+## Publishing to the Chrome Web Store
 
 Once your extension works locally:
 
@@ -219,14 +219,14 @@ Once your extension works locally:
 
 Review typically takes 1-3 business days for new items. Updates to existing extensions with small diffs often go through in hours.
 
-What trips up reviews
+## What trips up reviews
 
 - Requesting permissions you do not actually use (reviewers check)
 - Missing privacy policy if your extension handles any user data
 - Remote code loading (banned under MV3)
 - Misleading descriptions or screenshots
 
-Using Claude Code During Development
+## Using Claude Code During Development
 
 Claude Code is genuinely useful for Chrome extension work because the surface area of the Chrome APIs is large and the documentation is scattered. A few patterns that work well:
 
@@ -240,7 +240,7 @@ Migrating MV2 code. If you have an older extension with a background page, ask C
 
 Debugging undefined behavior. The Chrome extension APIs fail silently in many cases. Paste your code and ask: "This `chrome.storage.local.get` call is returning undefined even though I set the key. What are the possible reasons?"
 
-Common Pitfalls
+## Common Pitfalls
 
 Service worker scope: Files referenced by the service worker must be at the extension root or a subdirectory you control. You cannot load scripts from external URLs.
 

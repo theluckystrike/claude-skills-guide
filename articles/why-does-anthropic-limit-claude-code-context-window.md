@@ -22,29 +22,29 @@ The context window refers to the maximum amount of text Claude Code can process 
 
 Currently, Claude Code supports a context window significantly larger than many competitors, but it is not infinite. When you approach the limit, Claude will summarize earlier parts of the conversation or ask you to continue with a fresh session.
 
-Why Anthropic Limits Context Window
+## Why Anthropic Limits Context Window
 
-Computational Costs
+## Computational Costs
 
 Every token in the context window must be processed by the underlying language model. The attention mechanism, which allows Claude to "remember" and relate distant parts of the conversation, scales quadratically with context length. This means doubling the context window more than doubles the computational requirements.
 
 Anthropic must balance capability against cost. A larger context window would require substantially more GPU resources, driving up the price of running Claude Code. By keeping the window manageable, Anthropic offers a tool that remains accessible and reasonably priced for most developers.
 
-Latency and Response Times
+## Latency and Response Times
 
 Longer context means longer processing time. When Claude must scan through hundreds of thousands of tokens to generate a response, each query takes longer to complete. Developers working with Claude Code expect reasonably fast responses. Expanding the context window would directly impact the snappy, interactive experience that makes Claude Code valuable for coding tasks.
 
-Quality Degradation
+## Quality Degradation
 
 Research and practical experience show that language models can lose focus in extremely long contexts. Relevant information gets "diluted" among less relevant content. By keeping the context window within a practical range, Anthropic ensures Claude Code maintains high-quality responses throughout the conversation.
 
-Token Economics
+## Token Economics
 
 Claude Code operates within a token-based system. Every API call, whether using the free tier or a paid plan, consumes tokens from your allocation. A larger context window would deplete tokens faster, potentially making the tool less economical for everyday use. The current limits represent a sweet spot between capability and cost-effectiveness.
 
-Practical Strategies for Working Within the Limit
+## Practical Strategies for Working Within the Limit
 
-File-by-File Analysis
+## File-by-File Analysis
 
 Instead of dumping an entire repository into the conversation, work file by file. When using the frontend-design skill for UI components, load one component file at a time. Describe the specific issue or feature you need help with.
 
@@ -54,7 +54,7 @@ Bad: Pasting entire project at once
 Good: Loading specific files relevant to your current task
 ```
 
-Use Claude Skills Effectively
+## Use Claude Skills Effectively
 
 Skills like the tdd skill help structure your workflow into manageable chunks. By breaking your development process into test-driven cycles, you naturally work with smaller, focused portions of code at a time.
 
@@ -68,7 +68,7 @@ When using /tdd, the workflow naturally limits context:
 5. Move to next function
 ```
 
-Use Summarization
+## Use Summarization
 
 When you have been working on a complex problem and need to continue, ask Claude to summarize the current state before starting a new session. Use the supermemory skill to maintain persistent notes across sessions.
 
@@ -77,7 +77,7 @@ Before closing a session with Claude:
 "Can you summarize where we left off and the key files we were working on?"
 ```
 
-Selective Context Loading
+## Selective Context Loading
 
 Many Claude Code users employ MCP (Model Context Protocol) servers to pull in only the most relevant files. Tools like the pdf skill can help you extract specific information from documentation without loading entire documents.
 
@@ -101,13 +101,13 @@ If you genuinely need larger context for a specific project, consider:
 - Using persistent storage with skills like supermemory to maintain project context externally
 - Creating focused conversation threads for different aspects of the same project
 
-The Engineering Reality
+## The Engineering Reality
 
 Context window limitations are not unique to Anthropic. Every AI company building large language models faces this trade-off. The engineering challenge is fundamental to how transformer models work.
 
 As GPU technology improves and efficiency algorithms get better, context windows will naturally expand. Until then, working effectively within these constraints is a valuable skill. Developers who master context management often produce better results than those who try to work around the limits by dumping massive amounts of code.
 
-Conclusion
+## Conclusion
 
 The context window limit in Claude Code exists because of real engineering constraints: computational costs, latency, response quality, and token economics. Rather than viewing this as a shortcoming, think of it as a design constraint that encourages better coding practices, modular design, focused work sessions, and clear communication.
 

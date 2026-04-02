@@ -16,13 +16,13 @@ If you're a developer running multiple instances of Chrome, Firefox, or Edge whi
 
 This guide explores the best browsers for low RAM usage, comparing the top contenders and providing practical recommendations for developers who need to maximize system resources without sacrificing web functionality.
 
-Understanding Browser Memory Consumption
+## Understanding Browser Memory Consumption
 
 Modern browsers consume significant RAM due to several factors. Each tab runs in an isolated process for security and stability, but this architectural choice directly increases memory usage. Additionally, browser extensions, JavaScript execution engines, and graphics rendering all contribute to the overall memory footprint.
 
 For developers specifically, the problem is amplified. You might have documentation tabs open in one window, API testing interfaces in another, while running local development servers and CI/CD pipelines. A single browser can easily consume 4-8GB of RAM under normal development workflows.
 
-Top Low-RAM Browsers in 2026
+## Top Low-RAM Browsers in 2026
 
 1. Firefox with Enhanced Tracking Protection
 
@@ -74,11 +74,11 @@ LibreWolf is a Firefox fork configured for maximum privacy, with memory usage co
 
 Ungoogled Chromium provides Chrome's familiar interface without Google integration, offering similar memory characteristics to Brave.
 
-Memory Optimization Strategies for Any Browser
+## Memory Optimization Strategies for Any Browser
 
 Regardless of your browser choice, implementing these strategies can significantly reduce memory consumption:
 
-Extension Management
+## Extension Management
 
 Every browser extension adds memory overhead. Review your extensions regularly:
 
@@ -89,7 +89,7 @@ Every browser extension adds memory overhead. Review your extensions regularly:
 
 Disable or remove extensions not actively used. Consider using browser-native features instead of extension-based solutions where possible.
 
-Tab Management Techniques
+## Tab Management Techniques
 
 ```bash
 Using tmux with browser for better tab organization
@@ -97,7 +97,7 @@ tmux new-session -s dev
 Split windows for different tasks instead of browser tabs
 ```
 
-Browser Process Limits
+## Browser Process Limits
 
 ```javascript
 // Chrome flags for memory optimization
@@ -128,7 +128,7 @@ In standardized testing with 20 tabs open (mix of documentation, GitHub, Stack O
 
 These results demonstrate that Firefox and Brave offer the best memory efficiency for developers who need to keep numerous tabs accessible.
 
-Recommendations by Use Case
+## Recommendations by Use Case
 
 For Frontend Developers: Firefox provides the best balance of developer tools and memory efficiency. The DevTools are comprehensive, and WebAssembly debugging has improved substantially.
 
@@ -138,14 +138,13 @@ For Full-Stack Developers: Consider using Firefox for frontend work and Brave fo
 
 For Maximum Memory Efficiency: Use Firefox in conjunction with the Tab Suspender extension, or Brave's built-in tab suspension. Configure both browsers to limit maximum processes.
 
-Conclusion
+## Conclusion
 
 Choosing the best browser for low RAM usage depends on your specific workflow, but Firefox and Brave consistently outperform their competitors in 2026. Firefox offers the lowest baseline memory consumption with excellent developer tools, while Brave provides Chromium compatibility with built-in privacy features.
 
 For developers, the key is finding the balance between memory efficiency and the tools you need. Test the options with your actual workflow, monitor memory usage over a week, and adjust your approach based on real-world performance rather than synthetic benchmarks.
 
 The browser landscape continues evolving rapidly. New entrants like Arc demonstrate innovative approaches to tab management that could reshape recommendations in coming years. Stay current with developments, and don't hesitate to switch if your workflow needs change.
-
 
 Related Reading
 

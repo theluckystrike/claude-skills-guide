@@ -13,8 +13,6 @@ tags: [claude-code, claude-skills]
 
 {% raw %}
 
-Claude Code for Prompt Chaining Workflows Tutorial Guide
-
 Prompt chaining is one of the most powerful techniques for building sophisticated AI workflows. Instead of asking Claude Code to accomplish complex tasks in a single prompt, you chain multiple smaller prompts together, each building on the output of the previous one. This approach transforms how developers automate workflows, process documents, and build AI-powered applications. In this tutorial, you'll learn how to implement prompt chaining with Claude Code skills to create solid, maintainable AI workflows.
 
 What Is Prompt Chaining?
@@ -28,11 +26,11 @@ Prompt chaining breaks down complex tasks into a sequence of focused prompts, wh
 
 Claude Code's skill system is purpose-built for prompt chaining. Each skill encapsulates specific functionality, and by combining skills strategically, you can create sophisticated workflows that handle complex scenarios.
 
-Setting Up Your First Prompt Chain
+## Setting Up Your First Prompt Chain
 
 Let's build a practical prompt chain that processes a raw dataset, cleans it, generates analysis, and creates a formatted report. This example demonstrates the core pattern you'll use for most prompt chaining workflows.
 
-Step 1: Define the Workflow Structure
+## Step 1: Define the Workflow Structure
 
 First, establish the sequence of operations:
 
@@ -42,7 +40,7 @@ Input Data → Data Validation → Data Cleaning → Analysis → Report Generat
 
 Each step is a discrete prompt that takes input, processes it, and produces structured output for the next step.
 
-Step 2: Implement the Chain with Claude Code Skills
+## Step 2: Implement the Chain with Claude Code Skills
 
 Here's how you might implement this using Claude Code's skill system:
 
@@ -103,11 +101,11 @@ report_result = chain.execute_step(
 
 This pattern scales to any complexity. The key is ensuring each step has clear inputs, produces structured outputs, and passes relevant context to subsequent steps.
 
-Advanced Prompt Chaining Patterns
+## Advanced Prompt Chaining Patterns
 
 Once you master the basic chain, these advanced patterns will help you handle more complex scenarios.
 
-Conditional Branching
+## Conditional Branching
 
 Not all workflows follow a linear path. Use conditional logic to branch based on intermediate results:
 
@@ -139,7 +137,7 @@ def process_business_content(data):
     return visualized
 ```
 
-Parallel Processing with Aggregation
+## Parallel Processing with Aggregation
 
 When steps are independent, run them in parallel to reduce total execution time:
 
@@ -165,7 +163,7 @@ async def parallel_analysis_pipeline(data):
     })
 ```
 
-Feedback Loops for Quality Improvement
+## Feedback Loops for Quality Improvement
 
 For critical outputs, implement iterative refinement:
 
@@ -192,11 +190,11 @@ def refine_with_feedback(initial_output, quality_threshold=0.8):
     return current_output
 ```
 
-Best Practices for Prompt Chaining
+## Best Practices for Prompt Chaining
 
 Follow these principles to build reliable, maintainable prompt chains.
 
-Design Clear Interfaces Between Steps
+## Design Clear Interfaces Between Steps
 
 Each step should have well-defined inputs and outputs. Use structured formats like JSON or markdown tables to pass data between steps:
 
@@ -211,7 +209,7 @@ Step Output Format
 ```
 ```
 
-Handle Errors Gracefully
+## Handle Errors Gracefully
 
 Every step in your chain can fail. Implement proper error handling:
 
@@ -228,7 +226,7 @@ def safe_execute_step(chain, step_name, prompt, context, max_retries=3):
     return {"error": "Max retries exceeded", "step": step_name}
 ```
 
-Monitor and Log Chain Execution
+## Monitor and Log Chain Execution
 
 Track the performance and output quality of each step:
 
@@ -250,7 +248,7 @@ class MonitoredChain(PromptChain):
         return result
 ```
 
-Real-World Application: Document Processing Pipeline
+## Real-World Application: Document Processing Pipeline
 
 Here's a complete example of a document processing pipeline using prompt chaining:
 
@@ -298,12 +296,11 @@ class DocumentPipeline:
 
 This pipeline transforms unstructured documents into actionable, structured data, demonstrating how prompt chaining transforms raw inputs into valuable outputs.
 
-Conclusion
+## Conclusion
 
 Prompt chaining with Claude Code skills unlocks powerful workflow automation capabilities. By breaking complex tasks into manageable steps, implementing proper error handling, and following best practices for interface design, you can build AI workflows that are reliable, maintainable, and scalable. Start with simple chains, then progressively incorporate branching, parallel processing, and feedback loops as your workflows grow more sophisticated.
 
 The key is treating each prompt as a focused, testable component. This modular approach lets you refine individual steps, reuse them across workflows, and confidently scale your AI automation efforts.
-
 
 Related Reading
 

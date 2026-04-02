@@ -17,7 +17,7 @@ Claude Code for Vault Transit Encryption Guide
 
 HashiCorp Vault's Transit secrets engine provides encryption as a service, allowing developers to encrypt and decrypt data without managing encryption keys directly. When combined with Claude Code, you can implement solid encryption workflows that are both secure and easy to manage. This guide shows you how to integrate Claude Code with Vault Transit for practical encryption operations.
 
-Understanding Vault Transit Encryption
+## Understanding Vault Transit Encryption
 
 Vault Transit is a secrets engine that handles cryptographic functions on data in transit. Unlike traditional key-value stores, Transit provides:
 
@@ -28,9 +28,9 @@ Vault Transit is a secrets engine that handles cryptographic functions on data i
 
 The Transit engine is ideal for scenarios where you need to encrypt sensitive data like credit card numbers, Social Security numbers, or other personally identifiable information (PII).
 
-Setting Up Vault Transit
+## Setting Up Vault Transit
 
-Prerequisites
+## Prerequisites
 
 Before starting, ensure you have:
 
@@ -38,7 +38,7 @@ Before starting, ensure you have:
 - Claude Code configured with bash and read_file tools
 - A running Vault instance (dev server for testing)
 
-Enabling the Transit Engine
+## Enabling the Transit Engine
 
 Enable the Transit secrets engine and create your first encryption key:
 
@@ -56,7 +56,7 @@ vault list transit/keys/
 
 When working with Claude Code, you can simply describe what you need: "Set up a new encryption key called payment-key for our billing service." Claude will execute the necessary Vault commands.
 
-Configuring Key Policies
+## Configuring Key Policies
 
 Create a policy to control access to your encryption keys:
 
@@ -81,9 +81,9 @@ Apply the policy:
 vault policy write payment-encryption transit-encryption-policy.hcl
 ```
 
-Encrypting Data with Claude Code
+## Encrypting Data with Claude Code
 
-Basic Encryption Workflow
+## Basic Encryption Workflow
 
 The most common use case is encrypting sensitive data before storage. Here's how Claude Code simplifies this:
 
@@ -98,7 +98,7 @@ ciphertext: vault:v1:abcdefghijk...
 
 When working with Claude, you can simply ask: "Encrypt this credit card number using our payment key." Claude will handle the base64 encoding and return the encrypted value.
 
-Encrypting Data in Applications
+## Encrypting Data in Applications
 
 Here's a practical example of encrypting user data:
 
@@ -120,7 +120,7 @@ Claude Code can automate this entire workflow for batch operations:
 3. Store or update the encrypted values
 4. Provide a summary of all encrypted items
 
-Decryption Operations
+## Decryption Operations
 
 Decrypting data follows a similar pattern:
 
@@ -137,9 +137,9 @@ vault write transit/decrypt/my-app-key \
 
 The context parameter enables key derivation, adding an extra layer of security.
 
-Advanced Transit Operations
+## Advanced Transit Operations
 
-Key Rotation
+## Key Rotation
 
 One of Transit's powerful features is key rotation without re-encrypting existing data:
 
@@ -159,7 +159,7 @@ vault write transit/decrypt/my-app-key ciphertext=vault:v1:old-ciphertext...
 
 Ask Claude: "Rotate our encryption key and verify all recent encryptions still work." Claude will rotate the key and test decryption with both old and new versions.
 
-Batch Encryption
+## Batch Encryption
 
 For high-volume operations, use batch endpoints:
 
@@ -174,7 +174,7 @@ vault write transit/encrypt/batch \
     input=$(echo '["data1", "data2", "data3"]' | base64)
 ```
 
-Managing Multiple Keys
+## Managing Multiple Keys
 
 Organize keys by purpose:
 
@@ -188,9 +188,9 @@ List all keys with details
 vault list -format=json transit/keys/ | jq
 ```
 
-Claude Code Integration Patterns
+## Claude Code Integration Patterns
 
-Creating a Transit Encryption Skill
+## Creating a Transit Encryption Skill
 
 A dedicated Claude skill makes encryption operations smooth:
 
@@ -227,7 +227,7 @@ Security Notes
 - Regularly rotate keys per policy
 ```
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
 Encrypting Environment Variables:
 
@@ -264,9 +264,9 @@ Send encrypted response
 echo "{\"encrypted\": \"$ENCRYPTED\"}"
 ```
 
-Best Practices
+## Best Practices
 
-Security Recommendations
+## Security Recommendations
 
 1. Use Separate Keys by Data Type: Create distinct keys for different sensitivity levels
 2. Enable Key Rotation: Rotate keys at least annually, more frequently for sensitive data
@@ -278,7 +278,7 @@ Enable audit logging for Transit
 vault audit enable file file_path=/var/log/vault/transit-audit.log
 ```
 
-Key Management
+## Key Management
 
 ```bash
 Check key versions and rotation status
@@ -291,7 +291,7 @@ Export key material (for external systems)
 vault read -field=keys transit/keys/my-app-key exportable=true
 ```
 
-Error Handling
+## Error Handling
 
 Implement proper error handling in your Claude workflows:
 
@@ -310,7 +310,7 @@ else
 fi
 ```
 
-Conclusion
+## Conclusion
 
 Vault Transit encryption combined with Claude Code provides a powerful solution for data protection. By using Claude's natural language capabilities, you can perform complex encryption operations without memorizing Vault CLI commands or managing encryption logic manually.
 

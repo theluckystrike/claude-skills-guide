@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Extension Accessibility Audit: A Practical Guide"
 description: "Learn how to conduct a comprehensive accessibility audit for Chrome extensions. Step-by-step process, automated tools, and manual testing techniques."
@@ -14,20 +13,17 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-
-Chrome Extension Accessibility Audit: A Practical Guide
-
 Accessibility in Chrome extensions often receives less attention than web applications, yet millions of users depend on assistive technologies to interact with browser extensions. Whether you are maintaining an existing extension or reviewing one you just shipped, conducting regular accessibility audits ensures your extension serves all users effectively, including those using screen readers, keyboard navigation, or magnification tools.
 
 This guide walks you through the complete process of auditing a Chrome extension for accessibility issues, from automated scanning to manual testing with real assistive technologies. If you are starting from zero and want to build an AI-powered accessibility extension rather than audit an existing one, see the companion guide on [building an AI accessibility Chrome extension](/ai-accessibility-chrome-extension/).
 
-Why Chrome Extension Accessibility Matters
+## Why Chrome Extension Accessibility Matters
 
 Chrome extensions operate within a unique environment: they combine popup interfaces, options pages, content scripts injected into web pages, and background service workers. Each component presents distinct accessibility challenges. A popup with poor keyboard navigation prevents power users from efficiently using your extension. A content script that disrupts screen reader announcements creates confusion for users with visual impairments.
 
 The Chrome Web Store policies explicitly require compliance with accessibility standards. Extensions that fail to meet basic accessibility requirements may face rejection during review or removal from the store.
 
-Setting Up Your Audit Environment
+## Setting Up Your Audit Environment
 
 Before beginning the audit, install the necessary tools. The Chrome Accessibility Developer Tools extension provides a solid foundation for automated checks:
 
@@ -41,9 +37,9 @@ axe https://your-extension-url
 
 For local development, the Lighthouse accessibility audit integrated into Chrome DevTools offers quick feedback. Open DevTools (F12), navigate to the Lighthouse tab, and run an accessibility audit on your extension's popup or options page.
 
-Automated Testing Tools
+## Automated Testing Tools
 
-Axe Core Integration
+## Axe Core Integration
 
 Axe-core provides the most comprehensive automated testing for accessibility violations. Create a simple test script to audit your extension pages:
 
@@ -74,7 +70,7 @@ async function auditExtension() {
 
 Run this script against all extension pages: popup, options page, any injected modals, and background management interfaces.
 
-Testing Content Scripts
+## Testing Content Scripts
 
 Content scripts run within web pages, inheriting their accessibility challenges. Test your content scripts against pages with varying accessibility issues:
 
@@ -95,11 +91,11 @@ async function testContentScriptAccessibility() {
 }
 ```
 
-Manual Keyboard Navigation Testing
+## Manual Keyboard Navigation Testing
 
 Automated tools catch approximately 30-40% of accessibility issues. Manual testing remains essential.
 
-Testing Protocol
+## Testing Protocol
 
 1. Disable your mouse and attempt to complete every action using only keyboard
 2. Tab through all interactive elements in your popup and options page
@@ -113,11 +109,11 @@ Common keyboard navigation failures in Chrome extensions include:
 - Keyboard traps in injected overlays
 - Tab order that does not follow visual layout
 
-Screen Reader Compatibility
+## Screen Reader Compatibility
 
 Test your extension with actual screen readers. NVDA (Windows), VoiceOver (macOS), and TalkBack (Android) each present content differently.
 
-Key Screen Reader Testing Steps
+## Key Screen Reader Testing Steps
 
 1. Navigate using screen reader commands. not just Tab key
 2. Verify ARIA labels accurately describe interactive elements
@@ -157,7 +153,7 @@ The `.sr-only` class (screen-reader only) hides visual text while making it avai
 }
 ```
 
-Color Contrast and Visual Accessibility
+## Color Contrast and Visual Accessibility
 
 Chrome extensions must meet WCAG 2.1 AA contrast ratios (4.5:1 for normal text, 3:1 for large text). Test your extension's color scheme in:
 - Default theme
@@ -166,7 +162,7 @@ Chrome extensions must meet WCAG 2.1 AA contrast ratios (4.5:1 for normal text, 
 
 The Chrome DevTools Color Picker includes a contrast ratio checker. Select any text element and verify it passes contrast requirements against its background.
 
-Documenting and Fixing Issues
+## Documenting and Fixing Issues
 
 Create an accessibility audit report tracking:
 
@@ -178,11 +174,11 @@ Create an accessibility audit report tracking:
 
 Prioritize fixes using severity: critical issues prevent any user with disabilities from using a feature, while minor issues cause inconvenience but do not block functionality.
 
-Building a Custom Accessibility Checker Extension
+## Building a Custom Accessibility Checker Extension
 
 If you want to embed accessibility scanning directly into your own extension rather than relying on external tools, the following patterns provide a solid starting point.
 
-Manifest Setup
+## Manifest Setup
 
 ```json
 {
@@ -203,7 +199,7 @@ Manifest Setup
 }
 ```
 
-Page Analysis: Images, Headings, and Form Labels
+## Page Analysis: Images, Headings, and Form Labels
 
 Inject a content script to detect the most common issues: missing image alt text, skipped heading levels, and unlabelled form inputs.
 
@@ -269,7 +265,7 @@ function getSelector(el) {
 }
 ```
 
-Programmatic Color Contrast Calculation
+## Programmatic Color Contrast Calculation
 
 To check contrast ratios at runtime rather than relying on DevTools, compute relative luminance directly from computed styles:
 
@@ -303,7 +299,7 @@ function hexToRgb(hex) {
 
 WCAG 2.1 AA requires 4.5:1 for normal text and 3:1 for large text. Call `getContrastRatio` with the foreground and background hex values extracted from `window.getComputedStyle`.
 
-Programmatic Keyboard Accessibility Checks
+## Programmatic Keyboard Accessibility Checks
 
 Beyond manual testing, you can detect two common keyboard issues in code: positive `tabindex` values (which disrupt natural tab order) and focusable elements with no visible focus ring.
 
@@ -338,7 +334,7 @@ function checkKeyboardAccessibility() {
 }
 ```
 
-ARIA Validation
+## ARIA Validation
 
 Catch empty or invalid ARIA roles and mismatched `aria-required` usage:
 
@@ -370,7 +366,7 @@ function validateARIA() {
 }
 ```
 
-Displaying Results in the Extension Popup
+## Displaying Results in the Extension Popup
 
 Wire up a minimal popup to display findings from the content script:
 
@@ -426,7 +422,7 @@ function displayResults(issues) {
 }
 ```
 
-Best Practices for Accessibility-Checker Extensions
+## Best Practices for Accessibility-Checker Extensions
 
 - Scan dynamically: Use `MutationObserver` to catch dynamically added content after initial page load
 - Provide actionable feedback: Each reported issue should include clear remediation steps, not just a type label
@@ -434,7 +430,7 @@ Best Practices for Accessibility-Checker Extensions
 - Stay updated: Revisit your checks as WCAG guidelines evolve (e.g., WCAG 2.2 additions)
 - Test with screen readers: Verify your extension's own UI works with NVDA, JAWS, and VoiceOver
 
-Continuous Accessibility Testing
+## Continuous Accessibility Testing
 
 Integrate accessibility testing into your development workflow:
 
@@ -453,12 +449,11 @@ describe('Extension popup accessibility', () => {
 
 Run these tests in CI to catch regressions before shipping updates.
 
-Conclusion
+## Conclusion
 
 Regular accessibility audits protect all users, particularly those relying on assistive technologies. By combining automated scanning with manual testing and integrating accessibility checks into your development workflow, you build extensions that work effectively for everyone.
 
 The effort required for accessibility auditing is modest compared to the impact: inclusive extensions reach more users and comply with store policies. Start with the automated tools, add keyboard and screen reader testing, and maintain accessibility as a continuous priority.
-
 
 Related Reading
 

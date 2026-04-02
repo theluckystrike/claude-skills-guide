@@ -13,12 +13,9 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for Optimism Bedrock Workflow
-
 Optimism Bedrock represents a significant evolution in Ethereum Layer 2 scaling technology. As developers increasingly adopt this architecture for building scalable decentralized applications, Claude Code emerges as an invaluable companion for navigating the complexities of Bedrock development. This guide walks you through integrating Claude Code into your Optimism Bedrock workflow, from smart contract development to deployment and testing.
 
-Understanding Optimism Bedrock Architecture
+## Understanding Optimism Bedrock Architecture
 
 Before diving into the workflow, it's essential to understand what makes Bedrock different from previous Optimism versions. Bedrock introduces several key improvements:
 
@@ -29,11 +26,11 @@ Before diving into the workflow, it's essential to understand what makes Bedrock
 
 When working with Bedrock, you'll interact with several key components: the L1 contracts (OptimismPortal, L1CrossDomainMessenger), L2 system contracts, and your application-specific smart contracts. Claude Code can help you understand these interactions and write correct code faster.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 The first step in your Optimism Bedrock workflow is establishing a solid development environment. Claude Code can guide you through this process efficiently.
 
-Initializing Your Project
+## Initializing Your Project
 
 Create a new directory for your Bedrock project and initialize it with the necessary dependencies:
 
@@ -70,11 +67,11 @@ module.exports = {
 };
 ```
 
-Writing Smart Contracts for Bedrock
+## Writing Smart Contracts for Bedrock
 
 When writing smart contracts for Optimism Bedrock, you'll often need to interact with L1 contracts or handle cross-layer messaging. Claude Code excels at generating correct integration code.
 
-Inter-Layer Communication Patterns
+## Inter-Layer Communication Patterns
 
 Bedrock uses a message-passing system between L1 and L2. Here's how to send messages from L2 to L1:
 
@@ -103,7 +100,7 @@ contract MyL2Contract {
 
 Claude Code can help you understand when to use `L2ToL1MessagePasser` versus `L1CrossDomainMessenger` and generate the appropriate code for your use case. Simply describe your cross-layer requirement, and Claude Code will provide the implementation.
 
-Handling Deposits from L1
+## Handling Deposits from L1
 
 For L1 to L2 deposits, your contract will typically implement the `IL2DepositedToken` interface or interact with the `OptimismPortal`:
 
@@ -139,11 +136,11 @@ contract L2Receiver {
 }
 ```
 
-Deployment Workflow with Claude Code
+## Deployment Workflow with Claude Code
 
 Deploying to Optimism Bedrock requires understanding the deployment process and potential pitfalls. Claude Code can streamline this workflow significantly.
 
-Step-by-Step Deployment
+## Step-by-Step Deployment
 
 Ask Claude Code to walk you through deployment or handle it directly. The general process involves:
 
@@ -177,11 +174,11 @@ main()
   });
 ```
 
-Testing Your Bedrock Applications
+## Testing Your Bedrock Applications
 
 Testing is crucial in Layer 2 development due to the complexity of cross-layer interactions. Claude Code can help you write comprehensive tests.
 
-Unit Testing Contracts
+## Unit Testing Contracts
 
 ```javascript
 const { expect } = require("chai");
@@ -208,7 +205,7 @@ describe("MyL2Contract", function () {
 });
 ```
 
-Integration Testing with Mock Bridges
+## Integration Testing with Mock Bridges
 
 For more comprehensive testing, you may need to mock the bridge contracts. Claude Code can generate these mocks:
 
@@ -221,26 +218,26 @@ await myContract.setBridgeAddress(mockBridge.address);
 // Now test cross-layer interactions
 ```
 
-Best Practices for Claude Code + Bedrock Development
+## Best Practices for Claude Code + Bedrock Development
 
 To get the most out of Claude Code in your Optimism Bedrock workflow, follow these practices:
 
-Provide Context About Bedrock Specifics
+## Provide Context About Bedrock Specifics
 
 When prompting Claude Code, be explicit about Bedrock-specific requirements. Instead of "Write a Solidity contract," try "Write a Solidity contract that interacts with Optimism Bedrock's L2ToL1MessagePasser to send messages to L1."
 
-Use the Correct Contract Addresses
+## Use the Correct Contract Addresses
 
 Bedrock uses different addresses than previous versions. Always verify you're using Bedrock addresses:
 - L2ToL1MessagePasser: `0x4200000000000000000000000000000000000000`
 - L1CrossDomainMessenger: `0x4200000000000000000000000000000000000007`
 - OptimismPortal: `0xbEb5f459Ca3DC7D436F5855E2dDE579bDc2d367`
 
-Understand Gas Implications
+## Understand Gas Implications
 
 Bedrock significantly reduces gas costs compared to earlier Optimism versions, but cross-layer transactions still have unique gas requirements. Claude Code can help you optimize for gas by suggesting improvements to your contract code.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Claude Code can help debug common Bedrock development problems:
 
@@ -250,7 +247,7 @@ Claude Code can help debug common Bedrock development problems:
 
 When encountering issues, provide Claude Code with the relevant transaction hashes and error messages for targeted debugging.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your Optimism Bedrock workflow dramatically improves productivity. From setting up your development environment to writing, testing, and deploying smart contracts, Claude Code serves as an knowledgeable partner that understands the intricacies of Bedrock architecture. By following the patterns and practices in this guide, you'll be well-equipped to build solid L2 applications on Optimism.
 

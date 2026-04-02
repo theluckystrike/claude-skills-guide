@@ -20,7 +20,7 @@ Grammarly has dominated the writing assistance space for years, but its premium 
 
 This guide evaluates the best Grammarly alternatives with Chrome extensions, focusing on features that matter to developers: API access, CLI tools, self-hosting options, and precise control over writing rules. It also covers how to build a complete writing workflow by layering multiple tools, and where AI-based assistants like Claude fit into the mix.
 
-Why Developers Leave Grammarly
+## Why Developers Leave Grammarly
 
 Before diving into alternatives, it helps to understand what specific problems drive the switch. Grammarly's problems are predictable:
 
@@ -34,7 +34,7 @@ No customization for technical style. You cannot teach Grammarly that your team 
 
 The alternatives below address these problems in different ways.
 
-LanguageTool: The Open-Source Leader
+## LanguageTool: The Open-Source Leader
 
 LanguageTool has emerged as the strongest open-source alternative to Grammarly, offering a full-featured Chrome extension that handles grammar, spelling, and style suggestions. The extension supports over 20 languages and provides real-time checking as you type.
 
@@ -52,7 +52,7 @@ For teams requiring on-premise deployment, LanguageTool's self-hosted option pro
 
 The extension provides detailed explanations for each suggestion, helping developers understand the underlying grammar rules, valuable when writing documentation or technical content that requires precise language.
 
-Adding Custom Dictionaries
+## Adding Custom Dictionaries
 
 Self-hosted LanguageTool supports custom word lists, which solves the false positive problem for technical vocabulary:
 
@@ -75,7 +75,7 @@ docker run -d -p 8010:8010 \
 
 Once the custom dictionary is in place, LanguageTool stops flagging your entire tech stack as spelling errors. This single improvement makes it significantly more usable than Grammarly for technical writing.
 
-ProseShaker: Developer-First Approach
+## ProseShaker: Developer-First Approach
 
 ProseShaker targets developers who want writing assistance integrated directly into their workflow without the overhead of a full grammar checker. The Chrome extension focuses on readability metrics, passive voice detection, and conciseness, areas particularly relevant for technical documentation.
 
@@ -104,7 +104,7 @@ The extension analyzes text using several algorithms:
 
 ProseShaker integrates with popular documentation tools like GitBook, ReadMe, and Docusaurus, making it ideal for developers maintaining API documentation or technical blogs. The VSCode plugin provides consistent checking across local editing and browser-based platforms.
 
-Readability Metrics That Actually Matter
+## Readability Metrics That Actually Matter
 
 ProseShaker's focus on readability metrics is particularly useful when writing user-facing documentation. Technical writers often default to long, complex sentences when the subject matter is complex, but readers do not benefit from that complexity. ProseShaker's grade-level scoring surfaces sentences that need simplifying:
 
@@ -114,7 +114,7 @@ ProseShaker's focus on readability metrics is particularly useful when writing u
 
 Combining the grade-level target with a maximum sentence length cap catches most of the readability problems without requiring manual review of every paragraph.
 
-Hemingway Editor: Simplicity for Technical Writing
+## Hemingway Editor: Simplicity for Technical Writing
 
 Hemingway Editor takes a minimalist approach to writing assistance, focusing on clarity and readability rather than comprehensive grammar checking. The Chrome extension, available through the web version, highlights complex sentences, adverbs, and passive voice in real-time.
 
@@ -130,13 +130,13 @@ Configure the application to handle multiple concurrent requests without perform
 
 The desktop and web versions include a publishing integration that connects directly to Ghost, WordPress, and Medium. While it lacks the extensive grammar database of Grammarly, Hemingway excels at improving readability scores, a critical factor when writing for technical audiences.
 
-Where Hemingway Falls Short
+## Where Hemingway Falls Short
 
 Hemingway is opinionated. It penalizes adverbs and complex sentences categorically, even when they are appropriate. Technical writing sometimes requires precise qualifiers ("this value must be strictly greater than zero") and multi-clause sentences that explain sequential steps. Treat Hemingway's highlights as suggestions to review, not mandates to rewrite.
 
 The tool is most useful during a dedicated editing pass rather than while drafting. Write first, then run the Hemingway pass to catch sentences that drifted into unnecessary complexity.
 
-Natural Reader: Text-to-Speech for Proofreading
+## Natural Reader: Text-to-Speech for Proofreading
 
 While not a direct Grammarly replacement, Natural Reader's Chrome extension provides unique value for developers who prefer auditory proofreading. Reading your code comments, documentation, or emails aloud reveals errors that visual review misses.
 
@@ -154,7 +154,7 @@ const settings = {
 
 Pair Natural Reader with a grammar checker for a comprehensive writing workflow: use LanguageTool or ProseShaker for grammar and style, then Natural Reader for final auditory review.
 
-When Auditory Review Catches What Visual Review Misses
+## When Auditory Review Catches What Visual Review Misses
 
 Auditory review is especially effective for:
 
@@ -165,7 +165,7 @@ Auditory review is especially effective for:
 
 For documentation that users will read carefully, an auditory review pass before publishing catches a category of errors that no grammar checker surfaces.
 
-Custom Rules with CustomCheck
+## Custom Rules with CustomCheck
 
 For developers comfortable with JavaScript, CustomCheck offers a unique approach: write your own grammar and style rules using a simple API. This level of customization appeals to teams with specific writing standards or terminology requirements.
 
@@ -182,7 +182,7 @@ For developers comfortable with JavaScript, CustomCheck offers a unique approach
 
 CustomCheck runs entirely in the browser, sending no data to external servers. This makes it suitable for developers working with sensitive content or those who prioritize privacy.
 
-Building a Team Style Guide with CustomCheck
+## Building a Team Style Guide with CustomCheck
 
 The most powerful use of CustomCheck is encoding your team's style guide as enforceable rules. Instead of a Confluence page that no one reads, style decisions become live checks in the writing environment:
 
@@ -212,7 +212,7 @@ const rules = [
 
 Rules like these catch drift from agreed conventions the moment they happen, rather than in a documentation review weeks later.
 
-Using Claude as a Writing Assistant
+## Using Claude as a Writing Assistant
 
 Beyond dedicated grammar tools, Claude Code with a writing-focused skill functions as a powerful Grammarly alternative for longer-form technical content. Where grammar checkers flag individual sentences, Claude can evaluate entire documents for coherence, completeness, and tone.
 
@@ -242,7 +242,7 @@ Invoke it on any document:
 
 This is particularly effective for pull request descriptions, which are traditionally written quickly and often lack context for reviewers who were not involved in the work. Claude can expand a two-sentence PR description into a structured summary with context, changes, and testing notes.
 
-Comparison Table
+## Comparison Table
 
 | Tool | Grammar | Style | Self-Hostable | Custom Rules | Cost |
 |---|---|---|---|---|---|
@@ -255,7 +255,7 @@ Comparison Table
 
 For teams that currently pay for Grammarly Business, replacing it with a self-hosted LanguageTool instance plus a team CustomCheck ruleset covers nearly all the same ground at a fraction of the cost.
 
-Integration Strategies for Developers
+## Integration Strategies for Developers
 
 Building an effective writing workflow requires combining multiple tools. Consider this approach for technical documentation:
 
@@ -287,7 +287,7 @@ jobs:
 
 This setup catches documentation issues in the same pipeline that catches code issues. A PR that introduces grammatical errors or style violations in documentation fails the check just like a PR that breaks tests.
 
-Automating Documentation Quality Gates
+## Automating Documentation Quality Gates
 
 For teams that maintain large documentation sites, automating quality checks prevents documentation rot. A more complete GitHub Actions workflow checks multiple files and aggregates results:
 
@@ -319,7 +319,7 @@ jobs:
 
 This catches issues on changed files only, keeping CI times reasonable even on large documentation repositories.
 
-Choosing Your Alternative
+## Choosing Your Alternative
 
 The right Grammarly alternative depends on your specific requirements:
 
@@ -330,7 +330,6 @@ The right Grammarly alternative depends on your specific requirements:
 - Teams wanting AI-level review should pair any grammar tool with a Claude writing skill for document-level review
 
 Each alternative brings distinct advantages. Test several to determine which fits your workflow best, most offer free tiers sufficient for evaluation. The combination that works for most developer teams is LanguageTool (self-hosted) for grammar, a simple Claude skill for document-level review, and CustomCheck for team-specific style enforcement.
-
 
 Related Reading
 

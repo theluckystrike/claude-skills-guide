@@ -18,7 +18,7 @@ Claude Code BullMQ Delayed Retry Job Workflow Guide
 
 Building reliable asynchronous job processing systems requires careful consideration of failure handling, delayed execution, and retry strategies. BullMQ, a Node.js message queue library built on Redis, provides powerful primitives for implementing these patterns. This guide explores how to use Claude Code's capabilities to design, implement, and maintain BullMQ delayed retry job workflows effectively.
 
-Understanding BullMQ Delayed Jobs and Retry Mechanisms
+## Understanding BullMQ Delayed Jobs and Retry Mechanisms
 
 BullMQ offers two primary mechanisms for handling delayed execution and retries: delayed jobs and retry strategies. Understanding when to use each approach is fundamental to building solid systems.
 
@@ -37,7 +37,7 @@ Understanding the difference between these two mechanisms matters for architectu
 
 Claude Code can assist you in designing these patterns by analyzing your requirements and generating appropriate configurations. Its understanding of BullMQ internals allows it to suggest optimal settings based on your use case.
 
-Setting Up a Basic BullMQ Worker with Claude Code
+## Setting Up a Basic BullMQ Worker with Claude Code
 
 Let's create a solid BullMQ worker that demonstrates delayed jobs and retry handling. Claude Code can help you scaffold this structure efficiently:
 
@@ -96,7 +96,7 @@ paymentWorker.on('stalled', jobId => {
 
 Notice the `maxRetriesPerRequest: null` setting on the Redis connection. this is required by BullMQ and a common source of confusing startup errors. Claude Code will flag this omission if you paste an incomplete configuration.
 
-Implementing Delayed Jobs with Custom Backoff
+## Implementing Delayed Jobs with Custom Backoff
 
 For more complex scenarios, you might need custom delayed retry logic that adapts based on job attributes or failure types. Here's how to implement a sophisticated delayed retry workflow:
 
@@ -164,7 +164,7 @@ const worker = new Worker('payment-processing', async job => {
 
 Claude Code can help you extend this pattern to handle specific error types differently, implement circuit breaker patterns, or add alerting for jobs that exceed retry limits.
 
-Differentiating Transient vs. Permanent Failures
+## Differentiating Transient vs. Permanent Failures
 
 One of the most valuable things Claude Code helps you think through is the classification of error types. Not all failures should be retried the same way.
 
@@ -211,7 +211,7 @@ const worker = new Worker('payment-processing', async job => {
 
 This pattern lets you embed retry intelligence directly in the error boundary rather than spreading conditional logic across multiple places. Claude Code can audit your existing error handling and suggest where to add similar classification logic.
 
-Using Claude Code to Analyze and Optimize Your Workflow
+## Using Claude Code to Analyze and Optimize Your Workflow
 
 One of Claude Code's strengths is its ability to analyze your existing BullMQ setup and suggest improvements. When working with delayed retry workflows, consider asking Claude Code to:
 
@@ -232,7 +232,7 @@ ensuring no jobs are lost?
 
 Claude Code can then analyze your code and provide specific recommendations tailored to your use case. It will typically surface things like missing `maxStalledCount` settings, overly aggressive retry counts that can saturate Redis, and missing job progress reporting that makes dashboards useless.
 
-Advanced Pattern: Circuit Breaker with BullMQ
+## Advanced Pattern: Circuit Breaker with BullMQ
 
 For production systems calling external APIs, a circuit breaker prevents cascading failures when a downstream service is down. Here's how to implement one alongside BullMQ:
 
@@ -299,7 +299,7 @@ const worker = new Worker('notification-queue', async job => {
 
 When the circuit is open, jobs fail immediately and BullMQ applies its backoff before retrying. By the time BullMQ retries, the circuit may have moved to `half-open`, allowing a probe request through.
 
-Best Practices for Production Environments
+## Best Practices for Production Environments
 
 When deploying BullMQ delayed retry workflows in production, keep these best practices in mind:
 
@@ -387,7 +387,7 @@ await flow.add({
 
 The parent job (`charge-card`) only becomes active after all children complete successfully. If a child fails and exhausts retries, the parent job is also failed. Claude Code can help you map your existing business logic onto the `FlowProducer` API.
 
-Comparing Backoff Strategies
+## Comparing Backoff Strategies
 
 Choosing the wrong backoff strategy is a common source of reliability problems. Here's a practical comparison:
 
@@ -403,7 +403,7 @@ For most production systems, exponential backoff with jitter is the right defaul
 
 Claude Code can assist you in designing appropriate monitoring solutions, reviewing your chosen strategy against your throughput numbers, and setting up alerts for anomalous patterns like sudden spikes in `failed` job counts.
 
-Conclusion
+## Conclusion
 
 Building reliable BullMQ delayed retry job workflows requires thoughtful configuration and ongoing maintenance. By using BullMQ's built-in retry mechanisms, implementing custom backoff strategies, using `UnrecoverableError` to skip pointless retries, and applying circuit breaker patterns for downstream dependencies, you can create solid systems that handle failures gracefully while maintaining processing reliability.
 

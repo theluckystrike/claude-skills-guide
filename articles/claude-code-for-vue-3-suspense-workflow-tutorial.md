@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Vue 3 Suspense Workflow Tutorial
 
 Vue 3's Suspense component is a powerful feature for handling async dependencies in your components. When combined with Claude Code, you can rapidly build solid async loading workflows that provide excellent user experiences. This tutorial walks you through using Claude Code to implement Vue 3 Suspense patterns effectively, from basic setup through advanced multi-boundary architectures.
 
-Understanding Vue 3 Suspense
+## Understanding Vue 3 Suspense
 
 Suspense is a built-in Vue 3 component that allows you to handle async dependencies in your component tree. Instead of manually managing loading states at each level, Suspense provides a unified way to show fallback content while async components are being resolved.
 
@@ -38,7 +37,7 @@ Suspense is a built-in Vue 3 component that allows you to handle async dependenc
 
 The key insight is that Suspense intercepts the setup function's promise. When your component returns a Promise from its setup (or uses an async setup), Suspense waits for it to resolve before rendering the default slot.
 
-How Suspense Differs from Manual Loading State
+## How Suspense Differs from Manual Loading State
 
 Before Suspense, every async component required its own loading flag management. That approach leads to repetitive boilerplate and inconsistent loading UX across the app:
 
@@ -71,7 +70,7 @@ onMounted(async () => {
 
 Suspense eliminates this per-component boilerplate by moving the concern up to a boundary component. The async child just awaits its data; the parent Suspense handles the rest.
 
-Suspense vs. defineAsyncComponent: Comparison
+## Suspense vs. defineAsyncComponent: Comparison
 
 | Feature | Suspense + async setup | defineAsyncComponent |
 |---|---|---|
@@ -84,7 +83,7 @@ Suspense vs. defineAsyncComponent: Comparison
 
 Use `defineAsyncComponent` for large UI chunks you want to code-split. Use async `setup()` with Suspense when the component is always loaded but needs async data before rendering.
 
-Setting Up Your Vue 3 Project with Claude Code
+## Setting Up Your Vue 3 Project with Claude Code
 
 Before building Suspense workflows, set up a Vue 3 project and configure Claude Code to assist you:
 
@@ -114,7 +113,7 @@ This is a Vue 3 project using Composition API with <script setup> syntax.
 
 This CLAUDE.md file is read automatically every session, giving Claude Code persistent project knowledge without repeating context in each prompt.
 
-Useful Claude Code Prompts for Suspense Work
+## Useful Claude Code Prompts for Suspense Work
 
 When starting a new async component, try prompts like:
 
@@ -125,7 +124,7 @@ When starting a new async component, try prompts like:
 
 Claude Code reads your existing components when you reference them by filename, so it can generate matching styles and naming conventions automatically.
 
-Building Your First Async Component
+## Building Your First Async Component
 
 For a component to work with Suspense, its `setup()` function must return a Promise. The cleanest way to achieve this in Vue 3 is top-level await inside `<script setup>`:
 
@@ -181,7 +180,7 @@ const user = await fetchUser(props.userId)
 
 This pattern throws on error, which Suspense and `onErrorCaptured` in a parent can catch and display.
 
-Implementing Nested Suspense Boundaries
+## Implementing Nested Suspense Boundaries
 
 One of Suspense's powerful features is nested handling. Ask Claude Code to create a dashboard with multiple async components, each with independent loading states:
 
@@ -242,7 +241,7 @@ const AsyncActivityFeed = defineAsyncComponent(() =>
 
 With nested boundaries, the analytics chart can load and render while the user list is still pending. Without nesting, all sections would wait for the slowest component.
 
-When to Nest vs. Keep Flat
+## When to Nest vs. Keep Flat
 
 Nested Suspense is the right choice when:
 - Sections are independently valuable to the user
@@ -254,7 +253,7 @@ Keep a flat single Suspense when:
 - A layout shift from partial loading would confuse users
 - The combined load time is short enough that splitting adds no benefit
 
-Handling Errors with Error Boundaries
+## Handling Errors with Error Boundaries
 
 Vue 3 doesn't have a built-in error boundary component, but `onErrorCaptured` provides the same capability. Claude Code can help you build a reusable wrapper:
 
@@ -322,7 +321,7 @@ Use this wrapper throughout your application for consistent error handling:
 
 The `key` prop trick forces the component to remount on retry, re-triggering the async setup and clearing the error state.
 
-Practical Suspense Workflow Patterns
+## Practical Suspense Workflow Patterns
 
 1. Multiple Dependent Async Resources
 
@@ -451,7 +450,7 @@ export const useUserStore = defineStore('user', {
 })
 ```
 
-Building Skeleton Loaders That Match Your Layout
+## Building Skeleton Loaders That Match Your Layout
 
 Skeleton loaders are significantly better than generic spinners because they maintain layout stability and give users a visual preview of the content structure. Ask Claude Code to generate a matching skeleton for any component:
 
@@ -498,7 +497,7 @@ Skeleton loaders are significantly better than generic spinners because they mai
 </style>
 ```
 
-Best Practices from Claude Code
+## Best Practices from Claude Code
 
 When working with Vue 3 Suspense, Claude Code recommends these patterns:
 
@@ -509,7 +508,7 @@ When working with Vue 3 Suspense, Claude Code recommends these patterns:
 5. Test with slow networks - Use Chrome DevTools Network tab to throttle to "Slow 3G" and verify your skeleton loaders and timeouts work correctly.
 6. Avoid waterfall fetching - If three components each make sequential API calls, consider combining them into a single parallel fetch in a parent component.
 
-Debugging Suspense Issues
+## Debugging Suspense Issues
 
 When Suspense doesn't behave as expected, check these common issues:
 
@@ -521,7 +520,7 @@ When Suspense doesn't behave as expected, check these common issues:
 
 Claude Code can help diagnose issues by examining your component tree and identifying where async dependencies aren't properly configured. Paste the relevant component files into your session and describe the behavior you're seeing.
 
-Using Claude Code to Generate Suspense Boilerplate
+## Using Claude Code to Generate Suspense Boilerplate
 
 Claude Code significantly accelerates Suspense workflow development by generating complete patterns from short prompts. Some effective prompts:
 
@@ -545,7 +544,7 @@ state, making it compatible with Vue 3 Suspense.
 
 Claude Code generates production-ready code that follows your project's existing conventions when your CLAUDE.md contains sufficient context.
 
-Conclusion
+## Conclusion
 
 Vue 3 Suspense provides an elegant solution for managing async component loading. By combining Suspense with thoughtful error handling and loading states, you create applications that feel responsive and handle network variability gracefully. Use Claude Code to rapidly prototype these patterns and iterate on your implementation.
 

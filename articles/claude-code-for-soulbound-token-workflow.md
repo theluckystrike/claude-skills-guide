@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Soulbound Token Workflow"
 description: "Learn how to use Claude Code to develop, test, and deploy soulbound tokens (SBTs) on Ethereum and other EVM chains. Practical examples and actionable."
@@ -14,17 +13,16 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Soulbound Token Workflow
 
 Soulbound tokens (SBTs) represent a powerful primitive in Web3 development, non-transferable tokens that bind an asset to a specific wallet address. Unlike traditional NFTs, SBTs cannot be sold or transferred, making them ideal for credentials, memberships, achievements, and identity verification. This guide shows you how to use Claude Code to streamline your soulbound token development workflow.
 
-Understanding Soulbound Tokens
+## Understanding Soulbound Tokens
 
 Soulbound tokens derive their name from the concept in gaming, items that are permanently bound to a character and cannot be traded. In blockchain terms, this translates to tokens with transfer restrictions enforced at the smart contract level.
 
-Key Use Cases
+## Key Use Cases
 
 - Credential Verification: Academic degrees, professional certifications
 - Membership Cards: DAO membership, club memberships
@@ -32,11 +30,11 @@ Key Use Cases
 - Identity Verification: KYC badges, government-issued credentials
 - Reputation Systems: Employment history, project contributions
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Before writing soulbound token contracts, ensure your environment is properly configured with Claude Code and the necessary tooling.
 
-Prerequisites
+## Prerequisites
 
 ```bash
 Install Foundry (smart contract development framework)
@@ -48,7 +46,7 @@ forge init soulbound-token-project
 cd soulbound-token-project
 ```
 
-Claude Code Project Structure
+## Claude Code Project Structure
 
 Create a Claude Code skill to manage your soulbound token workflow:
 
@@ -71,11 +69,11 @@ When creating SBT contracts:
 5. Write comprehensive tests
 ```
 
-Writing Your First Soulbound Token Contract
+## Writing Your First Soulbound Token Contract
 
 The most common approach to creating soulbound tokens is implementing ERC-5192, which defines a minimal interface for soul-bound tokens. Let's create a complete implementation.
 
-Basic Soulbound Token Contract
+## Basic Soulbound Token Contract
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -209,11 +207,11 @@ contract SoulboundToken is ERC721, ERC721URIStorage, Ownable, ReentrancyGuard {
 }
 ```
 
-Testing Your Soulbound Token
+## Testing Your Soulbound Token
 
 Claude Code can help you write comprehensive tests to ensure your soulbound token behaves correctly.
 
-Writing Tests with Foundry
+## Writing Tests with Foundry
 
 ```solidity
 // test/SoulboundToken.t.sol
@@ -274,11 +272,11 @@ Run tests with:
 forge test
 ```
 
-Deploying to Testnet
+## Deploying to Testnet
 
 Use Claude Code to generate deployment scripts and verify contracts on block explorers.
 
-Deployment Script
+## Deployment Script
 
 ```javascript
 // scripts/deploy.js
@@ -324,36 +322,36 @@ Deploy to Sepolia testnet
 npx hardhat run scripts/deploy.js --network sepolia
 ```
 
-Best Practices for Soulbound Token Development
+## Best Practices for Soulbound Token Development
 
-Security Considerations
+## Security Considerations
 
 1. Access Control: Always use `Ownable` or role-based access control for minting
 2. Reentrancy Protection: Use `ReentrancyGuard` for state-modifying functions
 3. Input Validation: Validate all addresses and parameters
 4. Front-Running Protection: Consider adding commit-reveal schemes for sensitive operations
 
-Gas Optimization Tips
+## Gas Optimization Tips
 
 - Use `custom errors` instead of require messages to save gas
 - Implement ` ERC-721A` for batch minting efficiency
 - Consider `immutable` variables for contract parameters
 - Use `mapping` instead of arrays where possible
 
-UX Improvements
+## UX Improvements
 
 - Provide clear error messages (even though they cost gas)
 - Emit descriptive events for off-chain indexing
 - Include metadata standards compliance
 - Add support for off-chain metadata resolution
 
-Conclusion
+## Conclusion
 
 Soulbound tokens represent an emerging standard in Web3 with applications spanning credentials, identity, and reputation systems. By using Claude Code's development workflow capabilities, you can efficiently implement, test, and deploy secure soulbound token contracts. Start with the basic implementation provided in this guide, then extend it based on your specific requirements, whether that's multi-token support, governance integration, or advanced metadata handling.
 
 Remember to always audit your smart contracts and consider professional security reviews before deploying to mainnet. Claude Code can help you identify potential vulnerabilities, but final security verification requires expert review.
 
-Step-by-Step: Building a Soulbound Token with Claude Code
+## Step-by-Step: Building a Soulbound Token with Claude Code
 
 1. Set up your development environment: install Hardhat or Foundry, configure a local network, and ask Claude Code to scaffold the project structure with the correct directory layout for contracts, tests, and deployment scripts.
 2. Define the SBT interface: describe to Claude Code what the token represents (a credential, achievement, or identity document) and it will generate the Solidity interface with the appropriate metadata fields.
@@ -362,7 +360,7 @@ Step-by-Step: Building a Soulbound Token with Claude Code
 5. Write the test suite: ask Claude Code to generate a Foundry or Hardhat test file that covers mint success, transfer failure, burn by holder, and metadata retrieval. Run `forge test` or `npx hardhat test` to verify.
 6. Deploy and verify: generate the deployment script and the contract verification command for Etherscan or Blockscout. Claude Code produces both from the contract name and constructor arguments.
 
-Core SBT Contract
+## Core SBT Contract
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -398,7 +396,7 @@ contract SoulboundToken is ERC721, Ownable {
 }
 ```
 
-SBT Use Case Comparison
+## SBT Use Case Comparison
 
 | Use Case | Transferable | Revocable | Privacy needs | Example |
 |---|---|---|---|---|
@@ -410,7 +408,7 @@ SBT Use Case Comparison
 
 Claude Code can generate different contract variants for each pattern from this table. just describe the use case and constraints.
 
-Advanced: Off-Chain Metadata with IPFS
+## Advanced: Off-Chain Metadata with IPFS
 
 Store the credential metadata on IPFS for decentralization while keeping the token itself on-chain:
 
@@ -433,7 +431,7 @@ await sbtContract.mint(recipientAddress, tokenURI);
 
 Ask Claude Code to generate the complete minting workflow including IPFS upload, metadata pinning via Pinata, and the on-chain mint transaction.
 
-Troubleshooting
+## Troubleshooting
 
 Contract reverting on OpenZeppelin 5.x with transfer override: OpenZeppelin 5.x replaced `_beforeTokenTransfer` with `_update`. The correct override function is `_update(address to, uint256 tokenId, address auth)`. Claude Code generates the correct pattern for the OZ version you have installed. specify the version explicitly in your prompt.
 

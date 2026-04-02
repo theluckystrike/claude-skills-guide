@@ -18,13 +18,13 @@ Chrome Extension Wireframe Builder: A Practical Guide
 
 Building a wireframe tool as a Chrome extension gives you direct access to any webpage, allowing users to overlay interactive wireframes without leaving their working environment. This approach differs from standalone wireframe tools because the extension lives in the browser, has access to the DOM, and can use existing page context for smarter component detection.
 
-Why Build a Wireframe Builder as a Chrome Extension
+## Why Build a Wireframe Builder as a Chrome Extension
 
 Standalone wireframe tools require you to export designs or manually recreate page structures. A Chrome extension wireframe builder solves this by letting users select actual page elements and convert them into wireframe representations instantly. You can detect headings, buttons, forms, images, and navigation elements, then replace them with clean wireframe equivalents.
 
 For developers, this means faster prototyping. For UX designers, it means capturing existing page structures without starting from scratch. The extension approach also enables team collaboration through shared element libraries and export capabilities.
 
-Core Architecture
+## Core Architecture
 
 A Chrome extension wireframe builder operates through three main components:
 
@@ -34,7 +34,7 @@ A Chrome extension wireframe builder operates through three main components:
 
 The extension needs the `activeTab`, `scripting`, and `storage` permissions. You'll also need host permissions for the sites where wireframing will occur.
 
-Implementation Pattern
+## Implementation Pattern
 
 Here's a practical implementation starting with the manifest:
 
@@ -63,7 +63,7 @@ Here's a practical implementation starting with the manifest:
 }
 ```
 
-Element Detection and Conversion
+## Element Detection and Conversion
 
 The core functionality involves detecting page elements and converting them to wireframe representations. Create a content script that handles element selection:
 
@@ -179,7 +179,7 @@ if (document.readyState === 'loading') {
 }
 ```
 
-Adding Drawing Tools
+## Adding Drawing Tools
 
 Beyond converting existing elements, users need the ability to draw new wireframe components directly. Implement a canvas-based drawing layer:
 
@@ -247,7 +247,7 @@ class DrawingTool {
 }
 ```
 
-Export Functionality
+## Export Functionality
 
 A wireframe builder needs export capabilities. Add functionality to export the wireframe as HTML, PNG, or a structured data format:
 
@@ -295,7 +295,7 @@ function generateExport(elements) {
 }
 ```
 
-Practical Use Cases
+## Practical Use Cases
 
 A Chrome extension wireframe builder serves several practical purposes:
 
@@ -304,10 +304,9 @@ A Chrome extension wireframe builder serves several practical purposes:
 - Documentation - Generate wireframe snapshots for design documentation
 - Accessibility Audits - Create simplified views of complex pages for accessibility review
 
-Extending the Builder
+## Extending the Builder
 
 Once you have the core functionality, consider adding collaborative features through cloud storage, element libraries for common UI patterns, or integration with design tools like Figma through their APIs. The extension architecture gives you flexibility to expand based on user feedback.
-
 
 Related Reading
 
@@ -317,7 +316,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Creating a Wireframe from an Existing Page
+## Step-by-Step: Creating a Wireframe from an Existing Page
 
 1. Navigate to any web page you want to wireframe
 2. Click the extension icon and select "Wireframe Current Page"
@@ -327,7 +326,7 @@ Step-by-Step: Creating a Wireframe from an Existing Page
 6. Click "Export" to save as an SVG or PNG for use in design tools
 7. Click "Annotate" to add labels and notes to specific elements before exporting
 
-Advanced: Semantic Element Recognition
+## Advanced: Semantic Element Recognition
 
 Improve wireframe quality by recognizing common UI patterns and rendering them as standard wireframe components:
 
@@ -348,14 +347,14 @@ function recognizeComponent(el) {
 
 This produces wireframes with standardized component representations rather than raw HTML structure.
 
-Practical Use Cases
+## Practical Use Cases
 
 - Rapid Prototyping: Convert existing websites into wireframes for redesign projects without recreating the layout from scratch
 - Client Presentations: Show clients quick mockups based on their existing sites. much faster than building wireframes by hand
 - Documentation: Generate wireframe snapshots for design documentation and handoff packages
 - Accessibility Audits: Create simplified views of complex pages that make the information hierarchy visible
 
-Comparison with Standalone Wireframing Tools
+## Comparison with Standalone Wireframing Tools
 
 | Feature | This Extension | Figma | Balsamiq |
 |---|---|---|---|
@@ -367,7 +366,7 @@ Comparison with Standalone Wireframing Tools
 
 The extension is uniquely suited for reverse-wireframing existing sites. Figma and Balsamiq win for building wireframes from scratch with a rich component library.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 Wireframe overlay breaking page layout: Use `pointer-events: none` on all overlay elements so the original page remains interactive while the wireframe is visible.
 
@@ -378,6 +377,5 @@ Complex CSS animations breaking the wireframe overlay: Freeze animations before 
 Extension iframe not loading on pages with strict CSP: Use a Chrome extension side panel instead of an injected iframe for the wireframe editor UI.
 
 Once you have core functionality working, consider adding collaborative features through cloud storage, element libraries for common UI patterns, or integration with design tools like Figma through their APIs.
-
 
 {% endraw %}

@@ -13,11 +13,11 @@ tags: [claude-code, claude-skills]
 {% raw %}
 Cross-Origin Resource Sharing (CORS) misconfigurations remain one of the most common and potentially dangerous security issues in modern web applications. Whether you're building APIs that serve multiple frontend applications or integrating third-party services, understanding how to properly configure CORS is essential. This guide walks you through using Claude Code to identify, diagnose, and fix CORS misconfigurations efficiently.
 
-Understanding CORS Misconfigurations
+## Understanding CORS Misconfigurations
 
 Before diving into the fix workflow, it's important to understand what CORS protects against and why misconfigurations occur. CORS is a browser security mechanism that restricts web pages from making requests to domains different from the one serving the web page. While this protection is valuable, improper configuration can either block legitimate traffic or, more dangerously, allow malicious cross-origin access.
 
-Common CORS Misconfiguration Patterns
+## Common CORS Misconfiguration Patterns
 
 Several patterns frequently appear in production environments:
 
@@ -27,11 +27,11 @@ Several patterns frequently appear in production environments:
 4. Improper Origin Validation - Using string matching instead of proper validation
 5. Missing Access-Control-Allow-Headers - Not specifying allowed request headers
 
-Using Claude Code to Detect CORS Issues
+## Using Claude Code to Detect CORS Issues
 
 Claude Code can help you identify CORS misconfigurations by analyzing your codebase and explaining potential issues. Start by asking Claude to review your CORS configuration:
 
-Step 1: Analyze Your Current Configuration
+## Step 1: Analyze Your Current Configuration
 
 Present your existing CORS setup to Claude Code and ask for analysis:
 
@@ -43,7 +43,7 @@ Here's my current CORS configuration. Please analyze it for security issues and 
 
 Claude will examine your configuration and identify specific issues, explaining why each pattern is problematic and what the potential security implications are.
 
-Step 2: Review Response Headers
+## Step 2: Review Response Headers
 
 Ask Claude to help you understand what headers your API is currently sending:
 
@@ -55,11 +55,11 @@ console.log(response.headers.get('Access-Control-Allow-Credentials'));
 console.log(response.headers.get('Access-Control-Allow-Methods'));
 ```
 
-Implementing Secure CORS with Claude Code
+## Implementing Secure CORS with Claude Code
 
 Once you've identified issues, Claude Code can help you implement proper fixes. Here's a practical workflow.
 
-Secure CORS Middleware Example
+## Secure CORS Middleware Example
 
 Here's a properly configured CORS middleware that Claude Code might help you implement:
 
@@ -88,7 +88,7 @@ function corsMiddleware(req, res, next) {
 }
 ```
 
-Dynamic Origin Validation
+## Dynamic Origin Validation
 
 For applications with many allowed origins, implement dynamic validation:
 
@@ -105,11 +105,11 @@ function validateOrigin(origin) {
 }
 ```
 
-Testing Your CORS Configuration
+## Testing Your CORS Configuration
 
 After implementing fixes, thorough testing is crucial. Claude Code can help you create comprehensive tests.
 
-Testing with Node.js
+## Testing with Node.js
 
 ```javascript
 // Comprehensive CORS tests
@@ -133,7 +133,7 @@ async function testCORSConfiguration() {
 }
 ```
 
-Best Practices for CORS Configuration
+## Best Practices for CORS Configuration
 
 Follow these actionable recommendations when configuring CORS:
 
@@ -175,7 +175,7 @@ function logCORSViolation(origin, ip) {
 }
 ```
 
-Automating CORS Audits with Claude Code
+## Automating CORS Audits with Claude Code
 
 You can automate regular CORS security audits by asking Claude Code to review your configuration:
 
@@ -189,7 +189,7 @@ Review my CORS configuration weekly and check for:
 
 This proactive approach helps catch misconfigurations before they become security vulnerabilities.
 
-Conclusion
+## Conclusion
 
 CORS misconfigurations can lead to serious security vulnerabilities, but with Claude Code's assistance, you can systematically identify, fix, and prevent these issues. The key is implementing strict origin validation, avoiding wildcards in production, and maintaining comprehensive test coverage. By following this workflow and using Claude Code's analysis capabilities, you'll significantly improve your API's security posture.
 

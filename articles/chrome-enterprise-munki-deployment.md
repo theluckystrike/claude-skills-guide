@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Enterprise Munki Deployment: Complete Setup Guide"
 description: "Learn how to deploy and manage Google Chrome Enterprise using Munki with practical examples, scripts, and configuration strategies for Mac administrators."
@@ -14,16 +13,15 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
 Deploying Google Chrome Enterprise across a Mac fleet requires a reliable package management solution. Munki provides an open-source framework for software distribution that gives administrators fine-grained control over installations, updates, and removals. This guide covers the complete workflow for getting Chrome Enterprise running in your organization using Munki.
 
-Understanding Munki for Enterprise Software Deployment
+## Understanding Munki for Enterprise Software Deployment
 
 Munki consists of three main components: the Munki server (a simple web server hosting software packages and manifests), the Munki client installed on managed Macs, and the `makepkginfo` tool for creating package definitions. Unlike commercial solutions, Munki puts you in complete control of your software distribution infrastructure.
 
 The Chrome Enterprise deployment workflow follows a straightforward pattern: download the installer, create a Munki catalog entry, define a manifest for target machines, and let Munki handle the rest. This approach works whether you manage ten Macs or ten thousand.
 
-Downloading Chrome Enterprise
+## Downloading Chrome Enterprise
 
 Google provides Chrome Enterprise as a PKG installer suitable for Munki deployment. You can download the macOS version directly from Google's enterprise portal or use the command-line download for automation:
 
@@ -33,7 +31,7 @@ curl -L -o /tmp/GoogleChrome.pkg "https://dl.google.com/chrome/mac/stable/GGRO/G
 
 If you need the latest version programmatically, check Google's download page for the current URL. For organizations requiring specific versions, consider hosting a cached copy on your internal Munki server to ensure consistency across deployments.
 
-Creating the Munki Package Definition
+## Creating the Munki Package Definition
 
 Once you have the installer, use Munki's `makepkginfo` tool to generate the package catalog entry. This creates an XML plist describing the package, its version, and installation behavior:
 
@@ -52,7 +50,7 @@ makecatalogs your-catalogname
 
 For Munki servers running in a different location, adjust the catalog path accordingly. The key fields, name, version, and displayname, appear in Self Service and the Munki status interface, so choose clear values.
 
-Configuring Chrome Enterprise Policies
+## Configuring Chrome Enterprise Policies
 
 Chrome Enterprise supports extensive group policy configuration through preferences files. Munki can deploy these as separate configuration items, ensuring browsers in your organization follow your security and usability standards.
 
@@ -87,7 +85,7 @@ makepkginfo --name ChromeEnterprisePrefs --version 1.0 \
   --displayname "Chrome Enterprise Policies"
 ```
 
-Building the Manifest
+## Building the Manifest
 
 Munki uses manifests to define which software each machine or group receives. Create a manifest for Chrome deployment:
 
@@ -115,7 +113,7 @@ Munki uses manifests to define which software each machine or group receives. Cr
 
 This manifest tells Munki to install both Google Chrome and the enterprise preferences on any Mac assigned to it. Assign machines to manifests based on your organizational structure, department, location, or machine type work well as grouping criteria.
 
-Handling Updates
+## Handling Updates
 
 Munki tracks installed versions and offers updates through its standard update mechanism. For Chrome specifically, consider these strategies:
 
@@ -125,7 +123,7 @@ Controlled major updates: If you need to test new Chrome versions before rolling
 
 Blocked updates: For situations requiring version stability, you can block Chrome updates by removing Chrome's update components or setting `UpdatePolicy` to `disabled`. This works for specific use cases but creates security debt, plan for eventual updates.
 
-Automating the Deployment Pipeline
+## Automating the Deployment Pipeline
 
 For larger deployments, script the entire process. Here's a complete example that downloads Chrome, creates the Munki package info, and imports to your catalog:
 
@@ -162,7 +160,7 @@ echo "Chrome $CHROME_VERSION added to Munki catalog"
 
 Run this script on your Munki server to keep Chrome current. Schedule it with cron or launchd for regular updates.
 
-Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 When Chrome doesn't appear in Self Service or fails to install, check these common problems:
 
@@ -175,7 +173,6 @@ Catalina and beyond: macOS 10.15 and later require user approval for certain ins
 Version conflicts: If users have the consumer Chrome installed alongside your enterprise version, you may need to uninstall the consumer version first. Add `GoogleChrome` to `managed_uninstalls` after confirming the enterprise version works correctly.
 
 Deploying Chrome Enterprise with Munki gives your organization a flexible, scriptable solution for browser management. The initial setup requires some infrastructure work, but the payoff comes in consistent deployments, automatic updates, and centralized policy control across your entire Mac fleet.
-
 
 Related Reading
 

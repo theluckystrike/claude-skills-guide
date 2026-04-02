@@ -16,7 +16,7 @@ permalink: /what-is-claude-code-and-why-developers-love-it-2026/
 
 Claude Code is Anthropic's command-line interface for Claude, designed specifically for software development. Unlike the Claude.ai web interface, Claude Code runs in your terminal, has access to your local files, can execute shell commands, and integrates directly into your development workflow. It's not a chatbot. It's a coding partner that works alongside you in your existing environment.
 
-What Claude Code Actually Does
+## What Claude Code Actually Does
 
 When you run `claude` in a project directory, you open an interactive session. Claude can see your project structure, read any file you give it access to, write new files, modify existing ones, run commands, and check the output. It works iteratively. you describe what you want, it does it, you review, you iterate.
 
@@ -31,7 +31,7 @@ A typical session might go like this:
 
 That whole flow, start to finish, without leaving your terminal.
 
-The Skills System: What Makes Claude Code Different
+## The Skills System: What Makes Claude Code Different
 
 The biggest differentiator is the skills system. Skills are Markdown files that turn Claude into a specialist for specific tasks in your project.
 
@@ -45,29 +45,29 @@ Instead of being a generic AI assistant, you configure skills for your workflow:
 
 Skills are just `.md` files you create and customize. You define the role, the constraints, the output format, and the context the skill should have. Once a skill is set up, it can trigger automatically when Claude detects relevant work. you ask for tests, the `tdd` skill activates without you having to specify it.
 
-Why Developers Choose Claude Code Over Alternatives
+## Why Developers Choose Claude Code Over Alternatives
 
-It Stays in the Terminal
+## It Stays in the Terminal
 
 Many AI coding tools require you to either switch to a browser or install an IDE plugin. Claude Code works in the terminal, which is where developers already spend their time. It works with any editor, any stack, any build system.
 
-The Model Is Better at Reasoning Through Code
+## The Model Is Better at Reasoning Through Code
 
 Claude's extended context window and reasoning capabilities make it particularly strong at understanding large codebases, tracking dependencies across files, and making coherent changes that consider the whole system rather than just the function you're pointing at. This shows up in fewer "technically correct but practically wrong" code suggestions.
 
-Full Control via Skills and Hooks
+## Full Control via Skills and Hooks
 
 Claude Code gives you precision control over Claude's behavior through skills and hooks. Skills define what Claude knows and how it approaches tasks. Hooks let you intercept any tool call before it happens. blocking, logging, modifying, or approving actions. Other tools give you personality settings or instruction fields. Claude Code gives you a programmable execution layer.
 
-No IDE Lock-In
+## No IDE Lock-In
 
 Cursor, Copilot, and similar tools are tied to specific IDEs. Claude Code is independent. Vim, Emacs, VS Code, JetBrains, a plain text editor. doesn't matter. Claude Code is a CLI that works wherever your terminal works.
 
-It Actually Runs Commands
+## It Actually Runs Commands
 
 This sounds basic but it matters: Claude Code doesn't just suggest commands, it runs them and shows you the output. It installs packages, runs tests, formats code, and checks types. The feedback loop between writing code and verifying it works is built in.
 
-What Claude Code Is Not Good At
+## What Claude Code Is Not Good At
 
 Being precise about limitations matters for setting correct expectations.
 
@@ -79,7 +79,7 @@ It's not a replacement for understanding your code: Claude Code amplifies what y
 
 It requires an API key: Unlike IDE plugins that come bundled with flat-fee subscriptions, Claude Code uses Anthropic's API and charges per token. For heavy users, this cost is worth it. For casual use, compare the pricing against what you'd use.
 
-How Developers Use It Day-to-Day
+## How Developers Use It Day-to-Day
 
 Developers who get the most from Claude Code typically use it for:
 
@@ -93,7 +93,7 @@ Code review prep: Before submitting a PR, running Claude Code to identify issues
 
 Onboarding to unfamiliar code: Opening Claude Code in an unfamiliar codebase and asking it to explain how things work. faster than reading docs that may be outdated.
 
-Getting Started
+## Getting Started
 
 Install it with npm:
 

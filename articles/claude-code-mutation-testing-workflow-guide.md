@@ -16,13 +16,13 @@ permalink: /claude-code-mutation-testing-workflow-guide/
 
 Mutation testing evaluates your test suite by introducing small changes (mutations) to your code and checking whether your tests detect them. If a mutation passes your tests, you have a gap in test coverage. This guide shows you how to build a practical mutation testing workflow using Claude Code, the tdd skill, and integration with your existing development process.
 
-Why Mutation Testing Matters
+## Why Mutation Testing Matters
 
 Traditional code coverage tells you which lines execute during tests, not whether those tests actually verify behavior. You can have 90% coverage and still miss critical bugs if your assertions are weak or missing. Mutation testing solves this by creating artificial defects and verifying your test suite catches them.
 
 For example, changing `a === b` to `a !== b` should cause at least one test to fail. If your tests still pass, your assertion quality needs improvement. This feedback loop makes your test suite more solid and gives you genuine confidence in your code quality.
 
-Coverage vs. Mutation Score: The Real Difference
+## Coverage vs. Mutation Score: The Real Difference
 
 Many teams reach a coverage target and stop there, assuming their tests are solid. Mutation testing reveals a different picture:
 
@@ -34,7 +34,7 @@ Many teams reach a coverage target and stop there, assuming their tests are soli
 
 A team with 95% line coverage but a 55% mutation score has a lot of tests that execute code without verifying its behavior. Mutation testing is the only automated way to catch this pattern before it causes production incidents.
 
-Setting Up Mutation Testing in Your Project
+## Setting Up Mutation Testing in Your Project
 
 Mutation testing requires a dedicated tool. The specific tool depends on your language:
 
@@ -72,7 +72,7 @@ Create a `stryker.conf.json` file in your project root:
 
 This configuration runs mutation testing with Jest as the test runner and generates an HTML report showing which mutations survived.
 
-TypeScript Projects
+## TypeScript Projects
 
 For TypeScript projects, add the TypeScript plugin and point Stryker at your compiled output:
 
@@ -98,7 +98,7 @@ npm install --save-dev @stryker-mutator/typescript-checker
 
 The `coverageAnalysis: "perTest"` setting significantly speeds up mutation testing by only running the tests that cover each mutated line, rather than your entire test suite for every mutation.
 
-Python Projects with Mutmut
+## Python Projects with Mutmut
 
 For Python, mutmut is straightforward to set up:
 
@@ -111,7 +111,7 @@ mutmut html
 
 Mutmut creates a `html/` directory with a report you can open in any browser. The workflow with Claude Code is the same regardless of the underlying tool. you run the report, share the output, and ask Claude Code to help you write tests that kill the surviving mutations.
 
-The Claude Code Workflow
+## The Claude Code Workflow
 
 Activate the tdd skill in Claude Code to structure your workflow:
 
@@ -124,7 +124,7 @@ survived our test suite. Focus on mutations in the core business logic.
 
 Claude loads the tdd skill and analyzes your project structure. It checks for existing test files, understands the module boundaries, and identifies where mutation testing should run. The skill prompts you for configuration preferences and runs the mutation testing tool.
 
-Interpreting Results
+## Interpreting Results
 
 When mutation testing completes, you receive a survival rate. the percentage of mutations your tests caught versus total mutations. Aim for above 80% survival rate (meaning 80% of mutations were killed by your tests).
 
@@ -140,7 +140,7 @@ Mutation testing results:
 
 These surviving mutations reveal specific gaps. The email validation test likely only tested valid formats, not edge cases. The password length check probably used a weak assertion like `>= 8` instead of testing boundary conditions.
 
-Asking Claude Code to Write Killing Tests
+## Asking Claude Code to Write Killing Tests
 
 Once you have surviving mutations, paste them into Claude Code with the context of the original function and ask directly:
 
@@ -148,7 +148,7 @@ Once you have surviving mutations, paste them into Claude Code with the context 
 
 Claude Code will produce focused, behavioral tests that verify the specific conditions being mutated. This is faster and more effective than trying to reason through what assertions are missing by reading the mutation report alone.
 
-Integrating with Claude Skills
+## Integrating with Claude Skills
 
 The supermemory skill stores mutation testing results across sessions:
 
@@ -172,7 +172,7 @@ Include: overall survival rate, trends over time,
 and specific code areas needing attention.
 ```
 
-Combining with the Code Review Skill
+## Combining with the Code Review Skill
 
 If your project uses Claude Code's code review capabilities, add a mutation testing check to your review workflow. When a pull request modifies a core module, ask Claude Code to check whether the accompanying tests would kill mutations in the changed code:
 
@@ -186,7 +186,7 @@ too weak to detect off-by-one errors.
 
 This makes mutation testing part of code review without requiring every reviewer to run Stryker manually.
 
-Automating the Workflow
+## Automating the Workflow
 
 Add mutation testing to your CI pipeline. Create a script in `package.json`:
 
@@ -203,7 +203,7 @@ The `prebuild` hook ensures mutation tests pass before any deployment. Set your 
 
 For teams adopting continuous improvement, track mutation survival rate over time. A dropping rate indicates test quality degradation and warrants investigation.
 
-GitHub Actions Integration
+## GitHub Actions Integration
 
 A minimal GitHub Actions workflow that runs mutation tests on pull requests:
 
@@ -235,7 +235,7 @@ jobs:
 
 The `paths` filter is important. you only need mutation tests to run when source or test files change, not on documentation-only PRs. The uploaded artifact means every PR has a downloadable HTML report that reviewers can inspect without running the tests locally.
 
-Incremental Mutation Testing
+## Incremental Mutation Testing
 
 Running mutation tests on your entire codebase is slow. For large projects, configure Stryker to only mutate files touched by the current diff:
 
@@ -247,7 +247,7 @@ npx stryker run --mutate "$CHANGED"
 
 Claude Code can help you integrate this pattern into your CI script, including handling edge cases like merge commits or changes to test files without corresponding source changes.
 
-Practical Example
+## Practical Example
 
 Consider a simple function in `src/calculate.js`:
 
@@ -292,7 +292,7 @@ test('discount is proportional to price', () => {
 
 Now mutations to the discount logic are caught while implementation details remain flexible. The proportionality test in particular is a strong mutation killer. it catches changes to the multiplier value that a simple `toBe(90)` assertion would also catch, but it also survives refactors that change how the discount is computed internally.
 
-Boundary Condition Testing
+## Boundary Condition Testing
 
 Mutation testing almost always reveals weak boundary tests. If your code contains comparisons like `age >= 18` or `balance > 0`, Stryker will mutate them to `age > 18` or `balance >= 0`. Catching these requires tests at the exact boundary:
 
@@ -308,7 +308,7 @@ test('17 does not qualify as adult', () => {
 
 Without both tests, one of the boundary mutations will survive. Ask Claude Code to review any module with comparison operators and flag which boundary conditions lack tests at the exact threshold value.
 
-Conclusion
+## Conclusion
 
 Mutation testing transforms test quality from "lines covered" to "bugs actually caught." Using Claude Code with the tdd skill creates a practical workflow: analyze code, run mutations, interpret results, and improve test assertions. The supermemory skill preserves this knowledge, and the pdf skill generates reports for team communication.
 

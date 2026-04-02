@@ -16,7 +16,7 @@ permalink: /claude-skills-for-writing-unit-tests-automatically/
 
 Writing unit tests is one of those tasks every developer knows matters, yet finding time to write comprehensive test coverage feels like a luxury. [Claude Code offers several approaches](/best-claude-code-skills-to-install-first-2026/) to automate test generation, ranging from built-in skills to custom configurations. This guide covers the practical methods for getting Claude to write unit tests automatically.
 
-The TDD Skill: Your Primary Test Generator
+## The TDD Skill: Your Primary Test Generator
 
 The [`/tdd` skill](/claude-tdd-skill-test-driven-development-workflow/) is the most direct way to generate unit tests in Claude Code. This skill doesn't require installation, it activates through a simple command and transforms Claude's behavior toward test-first development.
 
@@ -45,7 +45,7 @@ The skill supports multiple testing frameworks:
 
 Specify your preferred framework in the request for the most relevant output.
 
-Generating Tests from Existing Code
+## Generating Tests from Existing Code
 
 Beyond the TDD skill, Claude can analyze existing implementation code and generate corresponding unit tests. This works well for adding test coverage to legacy projects or quickly scaffolding tests for new functions.
 
@@ -71,7 +71,7 @@ Claude analyzes function signatures, identifies dependencies, and produces testa
 - Boundary conditions
 - Exception scenarios
 
-Additional Skills for Specialized Testing
+## Additional Skills for Specialized Testing
 
 Beyond the `/tdd` skill, several other Claude skills enhance test generation for specific use cases:
 
@@ -80,7 +80,7 @@ Beyond the `/tdd` skill, several other Claude skills enhance test generation for
 - frontend-design: When generating tests for React components or JavaScript UI functions, this skill understands component structure and produces tests that verify rendering, state changes, and user interactions.
 - supermemory: Helps maintain test consistency across a project by recalling testing patterns you've used previously, ensuring new tests follow the same conventions and style.
 
-Custom Skills for Test Automation
+## Custom Skills for Test Automation
 
 For teams requiring consistent test patterns across projects, [creating a custom test-generation skill](/claude-skill-md-format-complete-specification-guide/) makes sense. Store your skill definition in `~/.claude/skills/test-gen.md`:
 
@@ -113,7 +113,7 @@ Activate this custom skill anytime with:
 /test-gen
 ```
 
-Practical Example: Testing a TypeScript Service
+## Practical Example: Testing a TypeScript Service
 
 Consider a typical service class you want tested:
 
@@ -206,7 +206,7 @@ describe('OrderProcessor', () => {
 
 This test suite covers the primary behaviors without requiring manual input. Run these tests immediately to validate the implementation.
 
-Integrating Test Generation into Your Workflow
+## Integrating Test Generation into Your Workflow
 
 Beyond ad-hoc test generation, consider these workflow integrations:
 
@@ -224,7 +224,7 @@ Refactoring safety: Before major refactoring, generate tests for existing code t
 Generate tests for these three files so we have coverage before the refactor
 ```
 
-Limitations and Best Practices
+## Limitations and Best Practices
 
 Automated test generation has boundaries. Generated tests cover happy paths and obvious edge cases, but they cannot discover domain-specific business logic bugs or understand behavioral expectations beyond the code itself.
 

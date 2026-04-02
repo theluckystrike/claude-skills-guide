@@ -13,14 +13,11 @@ categories: [workflows]
 tags: [claude-code, claude-skills]
 ---
 
-
-Claude Code Full Stack Developer Feature Shipping Workflow
-
 Shipping features as a full stack developer means juggling frontend UI, backend APIs, database schemas, and deployment pipelines, all while maintaining code quality and meeting deadlines. Claude Code transforms this workflow from a marathon of context-switching into a streamlined conversation where you describe what you want to build, and Claude helps execute it across your entire stack.
 
 This guide walks you through a complete feature shipping workflow using Claude Code, showing practical patterns that work for any full stack project. We'll use a realistic example, building a user notification system, to illustrate each stage from planning to production.
 
-Starting a Feature: The Planning Phase
+## Starting a Feature: The Planning Phase
 
 Before writing code, establish a clear feature specification. Claude Code excels at helping you think through requirements and translate them into actionable tasks.
 
@@ -43,7 +40,7 @@ Claude Code will help break this down into frontend and backend tasks. This is w
 
 With this context, Claude Code can generate appropriate code for your specific stack rather than generic examples.
 
-Turning Plain-Language Requirements into a Task Breakdown
+## Turning Plain-Language Requirements into a Task Breakdown
 
 One of the most useful planning patterns is asking Claude Code to produce an explicit task list before any code is written. For the notification system example, you might get:
 
@@ -70,7 +67,7 @@ Testing tasks:
 
 Working from an explicit list means you can hand individual tasks to Claude Code one at a time, review each output, and maintain control over the sequence. It also prevents the common failure mode of starting implementation before the schema design is settled.
 
-Setting Up Stack Context for Better Code Generation
+## Setting Up Stack Context for Better Code Generation
 
 The quality of code Claude Code generates scales directly with the context you provide. A one-time investment in documenting your stack conventions pays off across every feature you ship.
 
@@ -101,7 +98,7 @@ Testing
 
 When you reference this document at the start of a session, Claude Code generates code that fits your actual patterns instead of generic boilerplate you'd need to adapt.
 
-Frontend Implementation: Component-Driven Development
+## Frontend Implementation: Component-Driven Development
 
 For the notification UI, you'll want Claude Code to create React components. Here's a practical pattern:
 
@@ -170,7 +167,7 @@ export function NotificationBell() {
 
 After generating the component, test it interactively. Claude Code can help you verify the component renders correctly and handles edge cases like empty notification states, network errors, and the 9+ overflow badge.
 
-Backend API: Schema and Endpoint Design
+## Backend API: Schema and Endpoint Design
 
 For the notification system backend, work with Claude Code to design your database schema and API endpoints. Describe what you need:
 
@@ -244,7 +241,7 @@ export class NotificationService {
 }
 ```
 
-Real-Time Updates: WebSocket Integration
+## Real-Time Updates: WebSocket Integration
 
 Adding WebSocket functionality is where Claude Code truly shines for full stack work. Describe the requirement:
 
@@ -295,7 +292,7 @@ export function useNotifications() {
 
 Claude Code can generate both sides of this integration and verify that the event name and payload shape match between server and client, a class of bug that's easy to introduce when working across the stack manually.
 
-Database Interactions: Testing with Real Data
+## Database Interactions: Testing with Real Data
 
 Testing full stack features requires data. Claude Code can help you:
 
@@ -342,7 +339,7 @@ describe('Notification creation on comment', () => {
 
 When tests fail, paste the error output to Claude Code with the request: "Read the relevant service and route files, then explain why this test is failing and suggest a fix." Claude Code's ability to trace through multiple files in your codebase makes this debugging loop significantly faster than manually tracing call stacks.
 
-Handling Edge Cases Before Shipping
+## Handling Edge Cases Before Shipping
 
 Before a feature reaches code review, walk through edge cases with Claude Code:
 
@@ -361,7 +358,7 @@ This kind of adversarial review often surfaces issues that unit tests miss:
 
 Catching these before PR review reduces back-and-forth with reviewers and builds trust that you've thought through the full feature lifecycle.
 
-Deployment: CI/CD Integration
+## Deployment: CI/CD Integration
 
 Before shipping, ensure your feature works in your CI pipeline. Claude Code can help verify your tests pass and generate any necessary CI configuration updates:
 
@@ -399,7 +396,7 @@ export function createTestServer(app: Express) {
 
 This pattern runs entirely in the CI environment without any external dependencies.
 
-Workflow Summary: Shipping with Claude Code
+## Workflow Summary: Shipping with Claude Code
 
 The complete feature shipping workflow with Claude Code follows this pattern:
 

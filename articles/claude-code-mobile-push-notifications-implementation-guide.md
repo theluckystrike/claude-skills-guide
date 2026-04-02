@@ -13,12 +13,9 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Mobile Push Notifications Implementation Guide
-
 Push notifications remain one of the most effective ways to re-engage mobile app users. Whether you're sending breaking news alerts, transaction confirmations, or personalized reminders, implementing push notifications correctly is essential for a smooth user experience. This guide walks you through the complete implementation process for both iOS and Android platforms.
 
-Understanding Push Notification Architecture
+## Understanding Push Notification Architecture
 
 Before diving into code, it's important to understand how push notifications work across platforms. The architecture involves three main components:
 
@@ -32,7 +29,7 @@ Setting Up Apple Push Notification Service (APNs)
 
 For iOS apps, you'll need to configure APNs through the Apple Developer Portal. Start by creating an App ID with Push Notifications capability enabled. You'll also need to create a Push Notification SSL certificate (for sandbox and production) or a authentication key for token-based authentication.
 
-Generating APNs Credentials
+## Generating APNs Credentials
 
 Navigate to the Apple Developer Portal, select your app ID, and enable Push Notifications. Then create either a SSL certificate (which requires renewal annually) or a token authentication key (which doesn't expire). Download the .p8 file for token authentication and note your Key ID and Team ID.
 
@@ -51,7 +48,7 @@ Setting Up Firebase Cloud Messaging (FCM)
 
 For Android, FCM provides a unified solution across Google services. Create a Firebase project at console.firebase.google.com, add your Android app, and download the google-services.json file. Place this file in your app's app directory.
 
-Configuring FCM in Your Android Project
+## Configuring FCM in Your Android Project
 
 Add the required dependencies to your build.gradle files:
 
@@ -64,7 +61,7 @@ implementation 'com.google.firebase:firebase-messaging:23.4.0'
 apply plugin: 'com.google.gms.google-services'
 ```
 
-Implementing Client-Side Registration
+## Implementing Client-Side Registration
 
 iOS Implementation with Swift
 
@@ -109,7 +106,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 ```
 
-Android Implementation with Kotlin
+## Android Implementation with Kotlin
 
 Create a service to handle FCM registration and incoming messages:
 
@@ -156,9 +153,9 @@ Register this service in your AndroidManifest.xml:
 </service>
 ```
 
-Sending Notifications from Your Backend
+## Sending Notifications from Your Backend
 
-Node.js Example with FCM
+## Node.js Example with FCM
 
 Here's a practical server-side implementation for sending notifications:
 
@@ -210,7 +207,7 @@ async function sendiOSNotification(token, title, body) {
 }
 ```
 
-Handling Notification Interactions
+## Handling Notification Interactions
 
 When users tap notifications, you need to handle deep links to navigate them to the relevant content. Store the navigation path in the notification payload:
 
@@ -253,7 +250,7 @@ func userNotificationCenter(
 }
 ```
 
-Best Practices for Reliable Delivery
+## Best Practices for Reliable Delivery
 
 Implementing push notifications is only half the battle. Ensuring reliable delivery requires attention to several operational concerns:
 
@@ -265,7 +262,7 @@ Rate Limiting: Both Apple and FCM impose rate limits. Design your notification s
 
 Testing: Use sandbox environments for iOS (APNs sandbox) and Android (FCM testing) before production. Test edge cases like airplane mode, Do Not Disturb, and low battery scenarios.
 
-Conclusion
+## Conclusion
 
 Push notifications remain a powerful tool for mobile engagement when implemented thoughtfully. The key takeaways are: properly configure your APNs and FCM credentials, handle device tokens robustly on your backend, implement proper notification interaction handling, and respect user permissions and preferences. With this foundation in place, you can build engaging notification experiences that bring users back to your app at the right moments.
 

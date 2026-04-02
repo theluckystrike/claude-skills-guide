@@ -18,7 +18,7 @@ Chrome's cache system is a double-edged sword. It speeds up page loads by storin
 
 This guide covers multiple methods to clear Chrome cache, from quick UI actions to programmatic approaches that integrate into development workflows.
 
-Understanding Chrome's Cache Structure
+## Understanding Chrome's Cache Structure
 
 Before diving into clearing methods, it helps to understand what Chrome actually caches. The browser stores several types of data:
 
@@ -30,7 +30,7 @@ Before diving into clearing methods, it helps to understand what Chrome actually
 
 Each cache type serves a different purpose, and some issues require clearing specific caches rather than everything at once.
 
-Quick Methods: UI and Keyboard Shortcuts
+## Quick Methods: UI and Keyboard Shortcuts
 
 The fastest way to clear cache through Chrome's interface involves the Clear browsing data dialog. Open it with:
 
@@ -41,7 +41,7 @@ This opens a dialog where you can select which data types to clear. For most dev
 
 The dialog includes a Time range dropdown. Options range from "Last hour" to "All time." For thorough testing, select "All time" to ensure no stale entries remain.
 
-Clearing Cache for Specific Sites Only
+## Clearing Cache for Specific Sites Only
 
 Sometimes you need to clear cache for a single domain rather than the entire browser. Chrome provides two approaches:
 
@@ -59,7 +59,7 @@ Method 2: Application Panel
 
 This approach is particularly useful when debugging service workers, localStorage issues, or PWA behavior.
 
-Command-Line Approaches for Power Users
+## Command-Line Approaches for Power Users
 
 For developers who prefer keyboard-driven workflows or need to automate cache clearing, Chrome supports several command-line flags.
 
@@ -95,11 +95,11 @@ open -a "Google Chrome" --args --user-data-dir=/tmp/chrome-dev-profile
 
 This creates an isolated profile with no existing cache or cookies.
 
-Programmatic Cache Clearing
+## Programmatic Cache Clearing
 
 For automated testing and CI/CD pipelines, programmatic cache control becomes essential.
 
-Using Puppeteer
+## Using Puppeteer
 
 If you're running automated tests with Puppeteer, clear cache between tests:
 
@@ -123,7 +123,7 @@ async function clearCacheAndReload(page) {
 }
 ```
 
-Using Playwright
+## Using Playwright
 
 Playwright provides similar capabilities:
 
@@ -136,7 +136,7 @@ async function clearBrowserData(context) {
 }
 ```
 
-Selenium with Chrome
+## Selenium with Chrome
 
 For Selenium-based automation:
 
@@ -153,7 +153,7 @@ def clear_chrome_cache(driver):
     driver.execute_cdp_cmd('Network.clearBrowserCookies', {})
 ```
 
-Cache Control Headers: Preventing Stale Cache
+## Cache Control Headers: Preventing Stale Cache
 
 Beyond clearing cache, understanding cache control headers helps prevent issues. Key headers include:
 
@@ -174,7 +174,7 @@ app.use((req, res, next) => {
 });
 ```
 
-Measuring the Impact
+## Measuring the Impact
 
 After clearing cache, you may want to verify the performance difference. Chrome DevTools provides several tools:
 
@@ -185,7 +185,7 @@ After clearing cache, you may want to verify the performance difference. Chrome 
 
 For a quantitative comparison, use the Performance tab to measure page load times before and after cache clearing.
 
-When to Clear Cache
+## When to Clear Cache
 
 Common scenarios requiring cache clearing include:
 
@@ -196,7 +196,7 @@ Common scenarios requiring cache clearing include:
 - Extension development: Extension code conflicts with cached assets
 - PWA development: Service worker updates not registering
 
-Summary
+## Summary
 
 Clearing Chrome cache is a fundamental troubleshooting skill. The method you choose depends on your situation:
 
@@ -206,7 +206,6 @@ Clearing Chrome cache is a fundamental troubleshooting skill. The method you cho
 - Prevention: Set appropriate cache control headers in development
 
 Integrating cache clearing into your development workflow catches issues early and keeps debugging efficient.
-
 
 Related Reading
 

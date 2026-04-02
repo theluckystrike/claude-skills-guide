@@ -18,7 +18,7 @@ The AI coding tool landscape has split into two distinct categories. On one side
 
 Both categories are genuinely useful. The mistake is treating them as competitors when they solve different problems. This guide compares the leading inline completion tools. GitHub Copilot, Codeium, Cursor Tab, and Supermaven. against Claude Code, and maps out when each one delivers the most value.
 
-The Core Distinction: Autocomplete vs Agentic
+## The Core Distinction: Autocomplete vs Agentic
 
 Inline completion tools sit in your editor and predict what comes next. They operate token-by-token or line-by-line, using your current file and nearby context to suggest continuations. The interaction model is passive: you type, they suggest, you accept or reject.
 
@@ -39,7 +39,7 @@ Claude Code: you describe the whole task
 
 The first workflow is fast for single-expression completions. The second is fast for anything that spans more than one function or file.
 
-GitHub Copilot
+## GitHub Copilot
 
 GitHub Copilot remains the most widely deployed inline completion tool. It integrates deeply with VS Code and JetBrains, has multi-line suggestion support, and in 2025 added Copilot Workspace for lightweight multi-step tasks.
 
@@ -63,7 +63,7 @@ async function getUser(req, res) {
 }
 ```
 
-Codeium
+## Codeium
 
 Codeium positions itself as the free alternative to Copilot. The free tier is genuinely capable. it supports 70+ languages and integrates with most major editors.
 
@@ -78,7 +78,7 @@ Limitations:
 
 Codeium's sweet spot is developers who want persistent autocomplete without a subscription, especially on codebases in mainstream languages.
 
-Cursor Tab
+## Cursor Tab
 
 Cursor is an editor fork of VS Code with AI completion built into the core editing experience. Its Tab completion model (distinct from its chat models) is trained specifically for the accept/reject completion workflow.
 
@@ -101,7 +101,7 @@ def process_orders(orders: list[Order]) -> dict:
     return {k: sum(o.total for o in v) for k, v in result.items()}
 ```
 
-Supermaven
+## Supermaven
 
 Supermaven is the fastest inline completion tool available as of 2026. It uses a proprietary architecture with a very large context window (300k tokens) that lets it reason about your entire codebase when making suggestions.
 
@@ -116,7 +116,7 @@ Limitations:
 
 Supermaven is worth evaluating if you find Copilot's suggestions feel disconnected from your project's specific patterns.
 
-Claude Code: When Agentic Wins
+## Claude Code: When Agentic Wins
 
 Claude Code is not an autocomplete tool. Comparing it to Copilot on "suggestion speed" misses the point. The right comparison is against a junior developer you can delegate a ticket to.
 
@@ -145,7 +145,7 @@ Skills make Claude Code composable in ways no inline tool matches.
 
 Debugging with context. Paste a stack trace and the relevant files. Claude Code traces the failure, hypothesizes the root cause, and writes the fix with a regression test. The inline tools can suggest fixes for the line you're on; they cannot reason through a multi-frame stack trace autonomously.
 
-The Right Tool Stack in 2026
+## The Right Tool Stack in 2026
 
 The practical answer for most developers is not either/or. it is both.
 
@@ -163,7 +163,7 @@ Reach for Claude Code when:
 
 The cost model also differs. Inline tools are flat subscription. Claude Code is usage-based on the Anthropic API. heavier tasks cost more, lighter tasks cost little. For most developers the monthly total is comparable, but the work done per dollar diverges significantly for complex tasks.
 
-Summary Table
+## Summary Table
 
 | Tool | Type | Best For | Multi-File | Runs Tests |
 |---|---|---|---|---|

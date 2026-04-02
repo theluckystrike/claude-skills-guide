@@ -13,13 +13,12 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Carvel imgpkg Workflow Tutorial
 
 Carvel's imgpkg is a powerful tool for packaging Kubernetes configurations and OCI images, enabling reproducible and secure deployments across environments. When combined with Claude Code CLI, you can create intelligent automation workflows that simplify complex image management tasks. This tutorial guides you through integrating Claude Code with imgpkg to build efficient, repeatable processes for your Kubernetes deployments.
 
-Understanding the imgpkg Workflow
+## Understanding the imgpkg Workflow
 
 Imgpkg allows you to bundle Kubernetes configuration files into OCI-compliant images that can be stored in container registries. This approach provides version control, security scanning, and easy distribution of your deployment configurations. The basic workflow involves creating a bundle from your configuration files, pushing it to a registry, and then pulling and applying it to your clusters.
 
@@ -31,7 +30,7 @@ imgpkg version
 
 This command should return the installed version number, confirming that imgpkg is properly configured.
 
-Setting Up Claude Code for imgpkg Operations
+## Setting Up Claude Code for imgpkg Operations
 
 Claude Code CLI serves as an intelligent wrapper around your existing toolchain. To get started, ensure Claude Code is installed and accessible from your terminal. You can verify this with:
 
@@ -48,7 +47,7 @@ cd imgpkg-projects/my-app-config
 
 Within this directory, organize your Kubernetes manifests as you normally would. The key advantage of using Claude Code is its ability to understand your project context and generate appropriate imgpkg commands based on your specific requirements.
 
-Creating Your First imgpkg Bundle with Claude Code
+## Creating Your First imgpkg Bundle with Claude Code
 
 When you're ready to package your Kubernetes configurations, you can use Claude Code to generate the appropriate imgpkg commands. For example, to create a bundle from your configuration directory, Claude Code can help you construct the command:
 
@@ -67,7 +66,7 @@ imgpkg inspect -i your-registry.example.com/my-app-config:v1.0.0
 
 This inspection capability is crucial for validating that your bundle contains exactly what you expect before deploying to production clusters.
 
-Automating Workflows with Claude Code Prompts
+## Automating Workflows with Claude Code Prompts
 
 One of the most powerful aspects of combining Claude Code with imgpkg is workflow automation. Instead of manually typing each command, you can describe your desired outcome and let Claude Code generate the appropriate sequence of operations.
 
@@ -91,7 +90,7 @@ imgpkg push -i your-registry.example.com/my-app-config:v1.0.1 \
 
 This approach ensures consistency while reducing the risk of manual errors during updates.
 
-Integrating imgpkg with Continuous Deployment Pipelines
+## Integrating imgpkg with Continuous Deployment Pipelines
 
 For teams adopting GitOps practices, imgpkg bundles work smoothly with tools like ArgoCD and Flux. Claude Code can help you generate the appropriate Kubernetes Custom Resources to integrate your imgpkg bundles with these controllers.
 
@@ -117,7 +116,7 @@ spec:
 
 Claude Code can generate this YAML structure based on your specific registry and deployment requirements, making it easier to maintain consistent Application definitions across your cluster deployments.
 
-Best Practices for Claude Code and imgpkg Integration
+## Best Practices for Claude Code and imgpkg Integration
 
 When using Claude Code to assist with imgpkg workflows, consider these practical recommendations:
 
@@ -129,7 +128,7 @@ Maintain separate registries - Use distinct container registries for development
 
 Document your workflow patterns - Store Claude Code conversation logs that generate successful imgpkg commands. These serve as documentation and enable team members to understand the approved deployment patterns.
 
-Troubleshooting Common imgpkg Issues
+## Troubleshooting Common imgpkg Issues
 
 Even with Claude Code assistance, you may encounter occasional issues. Here are solutions to frequent challenges:
 
@@ -139,7 +138,7 @@ Bundle size optimization - Large bundles take longer to transfer and can impact 
 
 Image reference resolution - When your Kubernetes manifests reference container images, ensure those images are accessible from your target cluster. Use imgpkg's `--image-repo` flag to relocate images if needed.
 
-Conclusion
+## Conclusion
 
 Combining Claude Code with Carvel imgpkg creates a powerful workflow for managing Kubernetes configurations. Claude Code's contextual understanding helps generate accurate commands, automate repetitive tasks, and maintain consistency across deployments. By following this tutorial, you've learned how to set up the integration, create and manage bundles, automate updates, and implement best practices for production-ready workflows.
 

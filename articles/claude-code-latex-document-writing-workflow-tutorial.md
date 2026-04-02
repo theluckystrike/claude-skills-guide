@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code LaTeX Document Writing Workflow Tutorial
 
 LaTeX remains the gold standard for scientific and technical document preparation, offering unparalleled control over formatting and typography. When combined with Claude Code's AI capabilities, you get a powerful workflow that dramatically accelerates document creation while maintaining professional quality. This tutorial walks you through setting up and mastering a LaTeX writing workflow with Claude Code.
 
-Prerequisites and Environment Setup
+## Prerequisites and Environment Setup
 
 Before diving into the workflow, ensure you have the necessary tools installed. You'll need:
 
@@ -43,7 +42,7 @@ Next, create a new directory for your project:
 mkdir my-latex-project && cd my-latex-project
 ```
 
-Choosing a LaTeX Distribution
+## Choosing a LaTeX Distribution
 
 Not all distributions are equal for every workflow:
 
@@ -56,7 +55,7 @@ Not all distributions are equal for every workflow:
 
 If you're starting fresh and are on macOS, MacTeX is the simplest path. On Linux, install TeX Live via your system package manager (`apt install texlive-full` on Debian/Ubuntu). Ask Claude Code to help you pick and configure the right distribution for your operating system.
 
-Structuring Your LaTeX Project
+## Structuring Your LaTeX Project
 
 A well-organized LaTeX project makes collaboration and maintenance significantly easier. Here's a recommended structure:
 
@@ -78,7 +77,7 @@ my-latex-project/
 
 This modular approach allows you to work on sections independently and reuse components across documents. Claude Code excels at generating these structural templates when you describe your document type. Try prompting: "Create a complete LaTeX project structure for a journal article submission to IEEE."
 
-Using \input vs \include
+## Using \input vs \include
 
 Understanding the difference between these two commands saves debugging time:
 
@@ -87,7 +86,7 @@ Understanding the difference between these two commands saves debugging time:
 
 For long documents like theses, use `\include` for chapters and `\input` for smaller fragments like custom commands or abbreviation lists. Claude Code can refactor an existing single-file document into this modular structure on request.
 
-Creating Your First Document
+## Creating Your First Document
 
 Start with a minimal working document. In your `main.tex`:
 
@@ -121,7 +120,7 @@ Your introduction content.
 
 When working with Claude Code, you can generate this structure conversationally. Simply describe what you need: "Create a LaTeX article template with AMS math packages, a two-column layout, and hyperref configured for PDF bookmarks." Claude Code will generate the appropriate preamble and structure, including package options you might not know about.
 
-Document Classes Comparison
+## Document Classes Comparison
 
 The choice of document class shapes everything else:
 
@@ -137,11 +136,11 @@ The choice of document class shapes everything else:
 
 Many journals provide their own `.cls` file. When you receive a submission template, ask Claude Code to explain the custom commands and environments defined in that class file. it can reverse-engineer unfamiliar macros and explain what they produce.
 
-Writing with Claude Code
+## Writing with Claude Code
 
 Claude Code transforms LaTeX writing through its contextual understanding of mathematical notation, document structure, and proper package usage. Here are practical strategies:
 
-Generating Mathematical Content
+## Generating Mathematical Content
 
 LaTeX math notation can be challenging. Describe mathematical concepts naturally:
 
@@ -192,7 +191,7 @@ Ask Claude to generate definitions for custom macros that shorten frequently-use
 \newcommand{\prob}[1]{P\!\left(#1\right)}
 ```
 
-Refactoring Existing Content
+## Refactoring Existing Content
 
 When you have draft LaTeX that needs improvement, paste it and ask Claude Code to enhance it:
 
@@ -204,7 +203,7 @@ When you have draft LaTeX that needs improvement, paste it and ask Claude Code t
 
 This refactoring workflow is one of the fastest ways to upgrade a draft document from functional to publication-ready.
 
-Handling Complex Structures
+## Handling Complex Structures
 
 For tables, figures, and advanced layouts, describe your requirements:
 
@@ -251,7 +250,7 @@ For publication-quality tables, ask Claude to use the `booktabs` package instead
 
 The `booktabs` style avoids vertical rules and uses proper horizontal spacing, which is the standard in most academic journals.
 
-Figures and Subfigures
+## Figures and Subfigures
 
 Including figures is straightforward, but managing multiple related images requires care:
 
@@ -279,7 +278,7 @@ Including figures is straightforward, but managing multiple related images requi
 
 Ask Claude Code to generate figure placement code when you describe the layout: "I have two plots side by side, each taking up about half the column width, with individual captions and a shared caption." Claude will produce exactly this structure.
 
-Bibliography Management
+## Bibliography Management
 
 Bibliography handling is an area where many LaTeX beginners struggle. There are two main approaches:
 
@@ -326,11 +325,11 @@ For new projects, `biblatex` with the `biber` backend offers better Unicode supp
 
 Ask Claude Code which bibliography system matches your target journal's requirements. Most modern venues accept either, but some (like ACL in NLP) provide their own `.bst` style files.
 
-Building and Compiling Documents
+## Building and Compiling Documents
 
 Compilation is where many developers struggle. While `pdflatex` is common, `latexmk` is the recommended tool because it handles multi-pass compilation and bibliography rebuilds automatically.
 
-Using latexmk
+## Using latexmk
 
 ```bash
 Compile to PDF (handles all passes automatically)
@@ -360,7 +359,7 @@ $pdf_mode = 1;
 $biber = 'biber %O %S';
 ```
 
-Makefile for Convenience
+## Makefile for Convenience
 
 Create a `Makefile` for automated builds:
 
@@ -386,9 +385,9 @@ view: all
 
 With this setup, `make` builds the document, `make watch` starts continuous compilation, and `make clean` removes all generated files. Ask Claude Code to extend this Makefile for your specific needs. for instance, to automatically copy the final PDF to a submission directory.
 
-Advanced Workflow Tips
+## Advanced Workflow Tips
 
-Version Control for LaTeX
+## Version Control for LaTeX
 
 LaTeX documents are text files, making them ideal for Git. Add a `.gitignore`:
 
@@ -415,7 +414,7 @@ Commit your `.tex`, `.bib`, and figure source files. The build artifacts stay un
 
 A useful Git workflow for LaTeX: work on a `draft` branch for major revisions, and merge to `main` for submitted versions. Tag each submission: `git tag -a v1.0 -m "Initial submission"`. This creates a clean history of what was submitted to which venue.
 
-Real-time Collaboration
+## Real-time Collaboration
 
 For collaborative writing, consider these approaches:
 
@@ -428,7 +427,7 @@ For collaborative writing, consider these approaches:
 
 For most academic collaborations, Overleaf is the path of least resistance. For larger projects with strict version control requirements, Git is the right choice. Ask Claude Code to help you set up a `.latexindent.yaml` configuration that normalizes whitespace in `.tex` files before commits. this prevents spurious diffs from indentation changes.
 
-Debugging Compilation Errors
+## Debugging Compilation Errors
 
 LaTeX errors can be cryptic. When stuck:
 
@@ -450,7 +449,7 @@ Common error categories and their causes:
 
 Claude Code can also help interpret error messages. Paste the relevant lines from the `.log` file and ask for explanation and solution. Unlike searching Stack Overflow, Claude will explain the root cause in the context of your specific document structure.
 
-Optimizing for Specific Journals
+## Optimizing for Specific Journals
 
 Most publishers provide author guidelines and a LaTeX template. Claude Code can help you:
 
@@ -461,7 +460,7 @@ Most publishers provide author guidelines and a LaTeX template. Claude Code can 
 
 Prompt example: "Here is the preamble from the ACL 2025 template. I have an existing paper using the article class. What changes do I need to make to convert it to ACL format?"
 
-Using LuaLaTeX and XeLaTeX for Modern Typography
+## Using LuaLaTeX and XeLaTeX for Modern Typography
 
 While `pdflatex` is the most common compiler, `lualatex` and `xelatex` offer significant advantages for documents that need:
 
@@ -480,7 +479,7 @@ While `pdflatex` is the most common compiler, `lualatex` and `xelatex` offer sig
 
 Ask Claude Code to help you migrate a pdflatex document to xelatex when you need better font support. The main changes involve replacing `inputenc`/`fontenc` packages with `fontspec`.
 
-Conclusion
+## Conclusion
 
 Integrating Claude Code into your LaTeX workflow significantly enhances productivity while maintaining document quality. The AI assistance handles routine formatting tasks, generates complex mathematical notation, builds bibliography entries, and provides contextual suggestions that would otherwise require extensive manual reference lookup.
 

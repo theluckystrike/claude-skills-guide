@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for GraphQL Directives Workflow
 
 GraphQL directives provide a powerful way to annotate and transform your schema, but managing them across a growing codebase can quickly become overwhelming. A well-designed Claude Code skill can automate directive creation, enforce naming conventions, validate usage patterns, and even generate documentation. This guide walks you through building a comprehensive workflow for working with GraphQL directives using Claude Code skills.
 
-Understanding GraphQL Directives
+## Understanding GraphQL Directives
 
 Before diving into the workflow, let's establish what directives can do for your GraphQL API. Directives are annotations that start with `@` and can modify query execution or type definitions. They're incredibly useful for conditional field inclusion, deprecated markers, formatting, authorization, and more.
 
@@ -35,7 +34,7 @@ type User {
 
 The most common built-in directives are `@skip`, `@include`, and `@deprecated`, but custom directives use the true power of this feature. They let you express cross-cutting concerns, caching policies, rate limiting, formatting rules, access control, directly in the schema, where every client and every developer can see them at a glance.
 
-Directive Location Types
+## Directive Location Types
 
 GraphQL directives can be applied at two levels: schema definition directives (SDL) that annotate your type definitions, and executable directives that appear in client queries. Understanding the distinction shapes how you design your skill.
 
@@ -47,9 +46,9 @@ GraphQL directives can be applied at two levels: schema definition directives (S
 
 SDL directives are the more common target for automation because they live in your schema files, benefit from linting, and need consistent conventions across a team. Executable directives are usually simpler and client-driven.
 
-Building Your GraphQL Directives Skill
+## Building Your GraphQL Directives Skill
 
-Skill Structure and Front Matter
+## Skill Structure and Front Matter
 
 Start by creating a skill file that defines its capabilities clearly. The front matter should declare the skill's purpose and available tools:
 
@@ -67,7 +66,7 @@ tools:
 
 Declaring tools explicitly in the skill front matter helps Claude Code pre-approve the right permission scopes for the session. A directive skill needs file read access for scanning existing schema files, write access for generating new directive definitions, and Bash access for running validation scripts or schema checks.
 
-Directive Generation Patterns
+## Directive Generation Patterns
 
 One of the most valuable automations is generating boilerplate for common directive types. Here's how to structure directive generation in your skill:
 
@@ -118,7 +117,7 @@ directive @rateLimit(
 
 For each of these patterns, your skill should be able to produce not just the SDL definition but also the accompanying resolver implementation. A Claude Code skill that generates the directive definition without the resolver leaves developers with half the work done, the definition is inert until the resolver actually enforces it.
 
-Resolver Implementation Alongside Directives
+## Resolver Implementation Alongside Directives
 
 A directive without enforcement logic is documentation, not functionality. Your skill workflow should pair each directive with its resolver stub:
 
@@ -161,7 +160,7 @@ module.exports = { AuthDirective };
 
 This pattern, directive definition plus resolver implementation in a single generation step, is what separates a useful directive skill from a template generator.
 
-Validation and Convention Enforcement
+## Validation and Convention Enforcement
 
 A solid skill should validate directives against your team's conventions. Create rules that check:
 
@@ -202,9 +201,9 @@ def validate_directive(directive):
 
 Surfacing warnings separately from errors lets developers make informed decisions rather than enforcing one rigid style. An error blocks generation; a warning prompts a conversation.
 
-Practical Workflow Examples
+## Practical Workflow Examples
 
-Schema Evolution Workflow
+## Schema Evolution Workflow
 
 When your API evolves, directives need to migrate accordingly. Use Claude Code to handle this systematically:
 
@@ -223,7 +222,7 @@ grep -r "@auth" --include="*.graphql" schema/
 
 A Claude Code skill can wrap these searches and present the results in a structured format, then offer to apply changes across all matching files in a single operation, something that would require careful manual work otherwise.
 
-Schema Audit Report
+## Schema Audit Report
 
 Before a major API version, run a directive audit to understand what you're working with:
 
@@ -246,7 +245,7 @@ A skill that scans this and produces:
 
 That kind of audit catches bugs and design issues that code review routinely misses.
 
-Multi-Environment Directive Management
+## Multi-Environment Directive Management
 
 Different environments may require different directive configurations. Your skill can manage this by:
 
@@ -275,7 +274,7 @@ extend type Product {
 
 A directive skill that understands this layered approach can generate environment-specific schemas on demand, validate that the layers don't introduce contradictions, and document which directives are active in which environments.
 
-Documentation Generation
+## Documentation Generation
 
 Transform directive definitions into usable documentation automatically. A directive definition is already structured data, the skill should exploit that:
 
@@ -304,7 +303,7 @@ Since: v2.1.0
 
 This level of auto-generated documentation is accurate by definition, it's derived directly from the schema and the resolver implementation, and it stays in sync automatically when the skill regenerates it.
 
-Actionable Best Practices
+## Actionable Best Practices
 
 1. Keep Directives Focused
 
@@ -368,7 +367,7 @@ Keep a central registry of all directives with their purposes, versions, and own
 
 A registry entry should capture at minimum: directive name, purpose, locations, arguments, owner team, version introduced, and whether it's currently active or deprecated.
 
-Integrating with Your Development Workflow
+## Integrating with Your Development Workflow
 
 Your GraphQL directives skill should integrate smoothly with other development tools. Consider these integration points:
 
@@ -380,7 +379,7 @@ CI/CD pipelines: Include directive validation in your build process. The schema 
 
 API documentation: Auto-generate directive reference docs as part of your documentation build. When the schema changes, the docs rebuild. The directive documentation is never out of date because it can't be, it's derived from the schema itself.
 
-Conclusion
+## Conclusion
 
 A well-crafted Claude Code skill for GraphQL directives transforms what could be a tedious manual process into an efficient, consistent workflow. By automating generation, validation, documentation, and migration, you ensure your schema remains maintainable as it grows. Start with the basics, directive generation and validation, then expand into documentation and cross-file analysis as your needs evolve.
 

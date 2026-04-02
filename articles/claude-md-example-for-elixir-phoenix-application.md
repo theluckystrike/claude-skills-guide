@@ -16,7 +16,7 @@ permalink: /claude-md-example-for-elixir-phoenix-application/
 
 Elixir Phoenix applications benefit significantly from Claude Code's skill system. By creating custom `.md` files in your skills directory, you can teach Claude about Phoenix conventions, Ecto patterns, and LiveView components. This guide provides practical examples and real code snippets for integrating Claude into your Phoenix development workflow. For the complete skill file specification, see the [Claude skill .md format guide](/claude-skill-md-format-complete-specification-guide/).
 
-Setting Up Claude Skills for Phoenix
+## Setting Up Claude Skills for Phoenix
 
 The Claude skills system uses Markdown files stored in `~/.claude/skills/`. Each skill is a plain Markdown file that Claude loads when activated. For Phoenix development, you can create a dedicated skill that understands your codebase conventions.
 
@@ -46,7 +46,7 @@ Key conventions:
 - Components go in lib/my_app_web/components/
 ```
 
-What to Put in Your Phoenix Skill File
+## What to Put in Your Phoenix Skill File
 
 The skill file is not documentation. it is a set of active instructions that shapes every response Claude gives while the skill is loaded. Think of it as a persistent system prompt scoped to Phoenix work. The most useful things to include are:
 
@@ -57,7 +57,7 @@ The skill file is not documentation. it is a set of active instructions that sha
 
 The more project-specific your skill file, the less Claude has to guess. A well-crafted skill file is the difference between Claude generating idiomatic code that passes review on the first try and code that needs significant reworking to fit your patterns.
 
-Using the Phoenix Skill in Your Projects
+## Using the Phoenix Skill in Your Projects
 
 Activate the skill in your Claude Code session by typing:
 
@@ -71,7 +71,7 @@ Then describe your task. For example, you might say:
 
 Claude will generate the context, schema, migration, and LiveView components following Phoenix conventions.
 
-Prompts That Work Well with the Phoenix Skill
+## Prompts That Work Well with the Phoenix Skill
 
 The skill sets context, but the prompt drives the output. Here are prompt patterns that consistently produce high-quality Phoenix code:
 
@@ -87,7 +87,7 @@ LiveView real-time updates:
 Designing Ecto schemas with complex associations:
 > "I need a many-to-many between users and projects with a join table that has a role field (admin, member, viewer). Show me the schemas, the join schema, and the migration."
 
-Real-World Example: User Authentication Context
+## Real-World Example: User Authentication Context
 
 Here is an example of what Claude generates when you ask for a complete authentication system:
 
@@ -132,7 +132,7 @@ end
 
 This follows the PhoenixContext pattern perfectly, keeping Ecto calls behind the context boundary. Notice the use of `Ecto.Multi` for the registration transaction. this pattern ensures the user record and the email confirmation token are created atomically. If the token creation fails, the user insert is rolled back. Claude generates this pattern reliably when your skill file specifies "use Ecto.Multi for operations that involve multiple database writes."
 
-Adding the User Schema and Changeset
+## Adding the User Schema and Changeset
 
 A complete authentication system needs the schema alongside the context. Ask Claude to generate both together:
 
@@ -199,7 +199,7 @@ end
 
 The `redact: true` field option is a Phoenix 1.7+ convention that prevents password hashes from appearing in logs and inspect output. Claude knows these conventions when your skill file specifies which Phoenix version you are targeting.
 
-Combining Skills for Better Results
+## Combining Skills for Better Results
 
 You can activate multiple skills for complex tasks. For a Phoenix application with comprehensive testing, activate both the phoenix and [tdd skills](/claude-tdd-skill-test-driven-development-workflow/):
 
@@ -210,7 +210,7 @@ You can activate multiple skills for complex tasks. For a Phoenix application wi
 
 The tdd skill guides Claude to write tests first, then implement the code. When working on a new Phoenix context, Claude will generate the schema, context functions, and corresponding tests in `test/my_app/accounts_test.exs`.
 
-ExUnit Test Examples
+## ExUnit Test Examples
 
 With both skills active, asking for a context generates tests alongside the implementation:
 
@@ -250,7 +250,7 @@ end
 
 The test structure follows Phoenix conventions: `DataCase` for database tests, `errors_on/1` helper from `MyApp.DataCase` for readable assertions, and `describe` blocks grouped by function. Claude generates this pattern consistently when the tdd skill is active alongside the phoenix skill.
 
-Generating Documentation with the PDF Skill
+## Generating Documentation with the PDF Skill
 
 When you need to document your Phoenix API, the pdf skill can help generate comprehensive documentation. Activate it alongside your phoenix skill:
 
@@ -261,7 +261,7 @@ When you need to document your Phoenix API, the pdf skill can help generate comp
 
 This combination is useful for creating API documentation that you can share with external consumers of your Phoenix JSON API.
 
-Managing Project Context with Super Memory
+## Managing Project Context with Super Memory
 
 For ongoing Phoenix projects, the [supermemory skill helps Claude remember your project structure](/claude-supermemory-skill-persistent-context-explained/) and conventions across sessions:
 
@@ -272,7 +272,7 @@ For ongoing Phoenix projects, the [supermemory skill helps Claude remember your 
 
 This is particularly useful when working on larger Phoenix applications with multiple contexts and custom conventions. Claude will remember which patterns you prefer and apply them consistently.
 
-Encoding Project-Specific Knowledge in Your Skill
+## Encoding Project-Specific Knowledge in Your Skill
 
 As your project grows, update the skill file to capture decisions made:
 
@@ -300,7 +300,7 @@ Testing Conventions
 
 This kind of accumulated knowledge in the skill file is the difference between Claude generating code that could work anywhere versus code that fits smoothly into your specific codebase.
 
-LiveView Component Examples
+## LiveView Component Examples
 
 Here is a practical LiveView component that Claude might generate for a Phoenix application:
 
@@ -343,7 +343,7 @@ end
 
 This follows the current Phoenix LiveView conventions, including the use of `stream_new` for efficient list rendering.
 
-Adding Real-Time Updates to the LiveView
+## Adding Real-Time Updates to the LiveView
 
 The component above renders a static list. To make it update in real time when products change, ask Claude to add PubSub integration:
 
@@ -384,7 +384,7 @@ end
 
 The `connected?(socket)` guard ensures subscriptions only happen for connected LiveView processes, not the static render. Claude generates this pattern correctly when you ask: "Add real-time updates to this LiveView using PubSub so inserts, updates, and deletes are reflected without a page reload."
 
-Skill File Maintenance Over Time
+## Skill File Maintenance Over Time
 
 A Phoenix skill file has a useful lifespan proportional to how actively you maintain it. As Phoenix releases new major versions and your application grows, the skill should evolve too.
 
@@ -400,7 +400,7 @@ DO NOT DO
 
 Negative rules ("do not") are often more useful than positive ones because they address the specific patterns Claude defaults to that do not match your codebase.
 
-Key Takeaways
+## Key Takeaways
 
 Creating a custom Claude skill for Phoenix development significantly improves the quality and consistency of generated code. The skill file acts as a set of instructions that Claude follows when working on your Elixir projects.
 

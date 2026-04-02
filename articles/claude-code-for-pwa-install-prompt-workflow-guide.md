@@ -13,11 +13,10 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Progressive Web Apps (PWAs) have become an essential part of modern web development, offering an app-like experience directly from the browser. One of the most powerful features of PWAs is the ability to prompt users to install your app on their device. we'll explore how to use Claude Code to implement a complete PWA install prompt workflow, complete with service worker setup, custom UI, and best practices.
 
-Understanding the PWA Install Prompt
+## Understanding the PWA Install Prompt
 
 Before diving into implementation, it's important to understand how the PWA install prompt works. The browser provides a `beforeinstallprompt` event that fires when your PWA meets the installation criteria. However, browsers have specific requirements before this event fires:
 
@@ -28,7 +27,7 @@ Before diving into implementation, it's important to understand how the PWA inst
 
 Claude Code can help you set up all these requirements systematically. Let's start by creating the necessary files.
 
-Setting Up Your PWA Manifest
+## Setting Up Your PWA Manifest
 
 The first step is creating a proper web app manifest. Ask Claude Code to generate this file for you:
 
@@ -66,7 +65,7 @@ Make sure to include this manifest in your HTML file:
 <link rel="manifest" href="/manifest.json">
 ```
 
-Creating the Service Worker
+## Creating the Service Worker
 
 Your PWA needs a service worker to function properly. Here's a basic service worker setup:
 
@@ -111,7 +110,7 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-Implementing the Install Prompt Handler
+## Implementing the Install Prompt Handler
 
 Now comes the core logic for handling the install prompt. Here's a complete implementation:
 
@@ -167,7 +166,7 @@ window.addEventListener('appinstalled', (event) => {
 });
 ```
 
-Creating a User-Friendly Install UI
+## Creating a User-Friendly Install UI
 
 The default browser install prompt is limited, so creating a custom UI can significantly improve your conversion rate. Here's a stylish banner implementation:
 
@@ -245,11 +244,11 @@ The default browser install prompt is limited, so creating a custom UI can signi
 </style>
 ```
 
-Best Practices for PWA Install Prompts
+## Best Practices for PWA Install Prompts
 
 Implementing the install prompt is only half the battle. Here are best practices to maximize your installation rate:
 
-Timing is Everything
+## Timing is Everything
 
 Don't show the install prompt immediately when users land on your site. Instead, wait until users have engaged with your app:
 
@@ -270,7 +269,7 @@ document.addEventListener('click', trackEngagement);
 document.addEventListener('scroll', trackEngagement);
 ```
 
-Respect User Decisions
+## Respect User Decisions
 
 If users dismiss your install prompt, don't show it again immediately. Use localStorage to track this:
 
@@ -293,7 +292,7 @@ function shouldShowInstallPrompt() {
 }
 ```
 
-Provide Value in the Prompt
+## Provide Value in the Prompt
 
 Users are more likely to install your PWA when they understand the benefits. Include value propositions in your prompt:
 
@@ -314,7 +313,7 @@ function updateBannerContent() {
 }
 ```
 
-Testing Your PWA Install Flow
+## Testing Your PWA Install Flow
 
 Before deploying, thoroughly test your PWA install flow. Claude Code can help you verify:
 
@@ -334,7 +333,7 @@ In Chrome DevTools
 4. Click "Analyze page load"
 ```
 
-Conclusion
+## Conclusion
 
 Implementing a PWA install prompt workflow doesn't have to be complicated. With Claude Code helping you generate the necessary files and code snippets, you can set up a complete installation flow in under an hour. Remember to focus on user experience by timing your prompts appropriately, providing clear value propositions, and respecting user decisions. A well-implemented install prompt can significantly increase your PWA's installation rate and user engagement.
 

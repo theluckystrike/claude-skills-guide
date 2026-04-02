@@ -13,18 +13,15 @@ reviewed: true
 score: 7
 ---
 
-
-Claude Code Django ORM Optimization Guide
-
 Django's Object-Relational Mapper (ORM) provides a powerful abstraction layer for database interactions, but without careful attention, queries can become a significant performance bottleneck. This guide walks you through practical optimization techniques using Claude Code, helping you write faster, more efficient Django applications.
 
-Why Django ORM Optimization Matters
+## Why Django ORM Optimization Matters
 
 Database queries often represent the slowest part of web applications. A single page load might trigger dozens of queries, each one adding latency. For applications with moderate traffic, N+1 query problems can slow response times from milliseconds to seconds. Optimizing your ORM usage directly impacts user experience and server costs.
 
 When working with Django projects in Claude Code, you can use several strategies to identify and fix performance issues. The platform provides excellent context management for examining code patterns across your project, making it ideal for systematic optimization work.
 
-Identifying N+1 Query Problems
+## Identifying N+1 Query Problems
 
 The N+1 query problem occurs when your code fetches a parent record, then makes separate queries for each related object. Consider this typical pattern:
 
@@ -39,7 +36,7 @@ With just 10 posts, this generates 11 database queries (1 for posts, 10 for auth
 
 Claude Code can help you spot these patterns by analyzing your views and serializers. When working on larger codebases, consider using the tdd skill to create performance tests that measure query counts before and after optimization.
 
-Using select_related for Foreign Keys
+## Using select_related for Foreign Keys
 
 For forward foreign key relationships (many-to-one), `select_related` performs an SQL JOIN to fetch related objects in a single query:
 
@@ -54,7 +51,7 @@ This reduces 11 queries to just 1. The tradeoff is that `select_related` works o
 
 When implementing this optimization, examine your templates and API responses to determine which relationships are consistently accessed. Adding `select_related` on relationships you rarely use wastes database resources.
 
-Optimizing Reverse Relationships with prefetch_related
+## Optimizing Reverse Relationships with prefetch_related
 
 For reverse foreign keys and many-to-many relationships, `select_related` won't work. Use `prefetch_related` instead, which performs a separate query for each relationship:
 
@@ -74,7 +71,7 @@ You can combine both methods for complex queries:
 posts = Post.objects.select_related('author', 'category').prefetch_related('tags', 'comments')
 ```
 
-Filtering with QuerySet Methods
+## Filtering with QuerySet Methods
 
 Django provides powerful queryset methods that push filtering to the database, reducing data transfer:
 
@@ -99,7 +96,7 @@ from django.contrib.postgres.search import SearchVector
 posts = Post.objects.annotate(search=SearchVector('title', 'content')).filter(search='django')
 ```
 
-Using annotate for Aggregation
+## Using annotate for Aggregation
 
 When you need computed values, use Django's `annotate()` to perform aggregations in the database rather than Python:
 
@@ -115,7 +112,7 @@ products = Product.objects.annotate(avg_rating=Avg('reviews__rating'))
 
 This approach is far more efficient than iterating through objects in Python to calculate counts or averages.
 
-Implementing Database Indexes
+## Implementing Database Indexes
 
 Indexes dramatically improve query performance for filtered and sorted fields. Add indexes strategically:
 
@@ -151,7 +148,7 @@ class Migration(migrations.Migration):
     ]
 ```
 
-Caching Strategies
+## Caching Strategies
 
 For frequently accessed data that rarely changes, caching provides substantial performance gains:
 
@@ -172,7 +169,7 @@ def get_featured_posts():
 
 For more advanced caching, explore Django's cache framework with Redis or Memcached. The supermemory skill can help you organize caching strategies across your application.
 
-Using Values and ValuesQuerySet
+## Using Values and ValuesQuerySet
 
 When you need only specific fields, `values()` returns dictionaries instead of model instances:
 
@@ -184,7 +181,7 @@ Each dict: {'id': 1, 'title': '...', 'author__username': 'john'}
 
 This reduces memory usage and data transfer, particularly useful for dashboards and API endpoints that don't need full model data.
 
-Practical Optimization Workflow
+## Practical Optimization Workflow
 
 When optimizing Django ORM with Claude Code, follow this systematic approach:
 
@@ -212,12 +209,11 @@ LOGGING = {
 }
 ```
 
-Conclusion
+## Conclusion
 
 Django ORM optimization requires understanding both your data access patterns and database capabilities. The techniques in this guide, using `select_related`, `prefetch_related`, database-level filtering, indexing, and caching, form a solid foundation for building performant Django applications.
 
 Start by profiling your most frequently accessed views, then systematically apply these optimizations. Remember that premature optimization is wasteful; measure first, optimize where it matters most.
-
 
 Related Reading
 

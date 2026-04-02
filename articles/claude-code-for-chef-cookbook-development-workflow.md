@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Chef Cookbook Development Workflow
 
@@ -21,7 +20,7 @@ Chef cookbook development has traditionally been a manual and time-consuming pro
 
 This guide explores how to integrate Claude Code into your Chef cookbook development workflow, providing practical examples and actionable strategies to accelerate your infrastructure-as-code practices.
 
-Setting Up Claude Code for Chef Projects
+## Setting Up Claude Code for Chef Projects
 
 Before diving into cookbook development, ensure Claude Code is properly configured for your Chef environment. The key is providing sufficient context about your Chef setup, including your cookbook structure, testing framework, and any organization-specific conventions.
 
@@ -40,7 +39,7 @@ Chef Cookbook Context
 
 This context helps Claude Code generate code that aligns with your existing patterns and testing requirements.
 
-Scaffold New Cookbooks Efficiently
+## Scaffold New Cookbooks Efficiently
 
 When creating a new cookbook from scratch, Claude Code can handle the entire scaffolding process. Instead of manually creating directory structures and configuration files, describe your requirements and let Claude Code generate the foundation.
 
@@ -54,11 +53,11 @@ For example, a request like "Create a Chef cookbook for managing Nginx with SSL 
 
 The generated code follows Chef conventions, including proper resource ordering, notification patterns, and idempotency checks.
 
-Writing Recipes with Claude Code Assistance
+## Writing Recipes with Claude Code Assistance
 
 Claude Code excels at writing Chef recipes because it understands resource primitives, attribute precedence, and common cookbook patterns. Here's how to use this capability effectively.
 
-Recipe Development Best Practices
+## Recipe Development Best Practices
 
 When working with Claude Code on recipes, provide clear context about:
 
@@ -73,13 +72,13 @@ A well-formed prompt might look like:
 
 Claude Code will generate a recipe using the `postgresql` cookbook resources, implementing secure password handling via data bags or secrets management, and ensuring proper service notifications.
 
-Handling Template Variables
+## Handling Template Variables
 
 One area where Claude Code particularly shines is template development. Chef templates use ERB syntax with variables passed from attributes or recipe logic. When working with templates, describe the complete configuration structure you need.
 
 For instance, requesting a PostgreSQL pg_hba.conf template will produce appropriately structured rules with comments explaining each section, proper host-based authentication patterns, and integration with recipe-level attribute overrides.
 
-Managing Attributes and Configuration
+## Managing Attributes and Configuration
 
 Attribute management in Chef can become complex as cookbooks evolve. Claude Code helps organize attributes following Chef's precedence rules and ensures proper documentation.
 
@@ -92,11 +91,11 @@ When expanding attribute files, Claude Code understands:
 
 Request attribute expansion by describing all configurable options: "Add attributes for Redis configuration including port, bind address, maxmemory settings, persistence options (RDB/AOF), and cluster mode settings. Include sensible defaults and documentation comments."
 
-Test-Driven Cookbook Development
+## Test-Driven Cookbook Development
 
 Integrating testing into your workflow from the start leads to more reliable infrastructure code. Claude Code assists with writing tests at both unit and integration levels.
 
-ChefSpec Unit Testing
+## ChefSpec Unit Testing
 
 For unit testing, Claude Code generates ChefSpec examples that verify resource convergence:
 
@@ -125,7 +124,7 @@ end
 
 These tests run quickly and catch regressions early in development.
 
-Integration Testing with Test Kitchen
+## Integration Testing with Test Kitchen
 
 For integration testing, Claude Code generates .kitchen.yml configurations and Inspec controls:
 
@@ -150,7 +149,7 @@ suites:
 
 Integration tests verify that your cookbook works correctly in real environments, catching issues that unit tests cannot.
 
-Debugging and Troubleshooting
+## Debugging and Troubleshooting
 
 When cookbook runs fail, Claude Code helps diagnose issues by analyzing error messages, logs, and recipe logic. Provide the error output and relevant context, and Claude Code will suggest possible causes and solutions.
 
@@ -161,7 +160,7 @@ Common debugging scenarios include:
 - Template rendering failures - checking variable availability and ERB syntax
 - Platform-specific failures - identifying platform-conditional logic gaps
 
-Actionable Tips for Daily Workflow
+## Actionable Tips for Daily Workflow
 
 1. Iterate incrementally - Start with simple recipes and expand gradually. Claude Code generates better code when working on focused, modular pieces.
 
@@ -173,7 +172,7 @@ Actionable Tips for Daily Workflow
 
 5. Document as you go - Request Claude Code to add inline comments explaining complex logic, and maintain updated README files.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Chef cookbook development from a manual, error-prone process into an assisted workflow that maintains quality while accelerating delivery. By understanding Chef's idioms and best practices, Claude Code generates infrastructure code that is testable, maintainable, and aligned with community standards.
 

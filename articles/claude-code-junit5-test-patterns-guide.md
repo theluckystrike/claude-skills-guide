@@ -16,7 +16,7 @@ permalink: /claude-code-junit5-test-patterns-guide/
 
 Writing maintainable tests is one of the most valuable skills a Java developer can develop. JUnit 5 provides a powerful foundation for testing, but knowing how to structure tests effectively separates amateur test suites from professional-grade codebases. This guide explores practical JUnit 5 test patterns that work exceptionally well when paired with Claude Code's AI-assisted development workflow.
 
-Setting Up JUnit 5 with Claude Code
+## Setting Up JUnit 5 with Claude Code
 
 Before diving into patterns, ensure your project has JUnit 5 dependencies properly configured. If you're working on a Maven project, add the following dependency to your pom.xml:
 
@@ -60,7 +60,7 @@ One often-overlooked step is confirming your IDE and CI pipeline both run JUnit 
 </plugin>
 ```
 
-The AAA Pattern: Arrange-Act-Assert
+## The AAA Pattern: Arrange-Act-Assert
 
 The most fundamental pattern every developer should master is the AAA pattern. This structure organizes each test method into three clear sections:
 
@@ -86,7 +86,7 @@ The AAA structure becomes even more valuable at scale. When a test suite grows t
 
 A subtle but important rule: keep the Act section to a single method call. If you find yourself calling two methods in Act, you are either testing two behaviors in one test (split them) or your API design has a usability problem. Claude Code tends to follow this rule naturally, but it is worth enforcing during review.
 
-Parameterized Tests for Data-Driven Validation
+## Parameterized Tests for Data-Driven Validation
 
 Parameterized tests let you run the same test logic with multiple inputs, reducing code duplication and improving test coverage. JUnit 5's @ParameterizedTest annotation makes this straightforward:
 
@@ -153,7 +153,7 @@ void shouldGenerateTokenForAnyRole(UserRole role) {
 
 When working with Claude Code, parameterized tests are an area where the AI genuinely saves time. Prompt it with your business rule and a few example inputs, and it will generate a @CsvSource or @MethodSource test covering the happy path, boundary values, and invalid inputs in a single pass.
 
-Nested Tests for Organized Test Suites
+## Nested Tests for Organized Test Suites
 
 When testing complex classes with multiple behaviors, nested tests provide hierarchical organization that mirrors your class structure:
 
@@ -239,7 +239,7 @@ class PaymentProcessorTest {
 
 This approach reads almost like a specification document. When the test report renders in your IDE or CI output, you see a tree: `PaymentProcessorTest > WhenCardIsValid > shouldReturnSuccessResult`. That hierarchical output communicates intent far more clearly than a flat list of method names.
 
-Custom Assertions for Readable Test Code
+## Custom Assertions for Readable Test Code
 
 Rather than chaining multiple assertion methods, create custom assertions that express business rules clearly:
 
@@ -304,7 +304,7 @@ public class OrderAssert extends AbstractAssert<OrderAssert, Order> {
 
 This pattern works exceptionally well when combined with documentation workflows. If you're generating test documentation using the pdf skill, custom assertions make the generated documentation significantly clearer.
 
-Test Interfaces and Default Methods
+## Test Interfaces and Default Methods
 
 JUnit 5 supports test interfaces with default methods, enabling reusable test behavior across multiple test classes:
 
@@ -370,7 +370,7 @@ class ProductRepositoryTest implements CrudOperationsTest<Product> {
 
 Any class that implements `CrudOperationsTest` automatically gets the full CRUD lifecycle test for free. Add a `CategoryRepositoryTest` or `OrderRepositoryTest` and each one inherits the same contract test without copying a single line.
 
-Dynamic Tests for Flexible Test Generation
+## Dynamic Tests for Flexible Test Generation
 
 Sometimes you need tests that are generated at runtime based on external data or configuration. JUnit 5's @TestFactory annotation enables dynamic test generation:
 
@@ -414,7 +414,7 @@ Stream<DynamicTest> shouldMatchAllRoutingRules() throws IOException {
 
 When the rules file changes, the test suite automatically changes with it. No test code needs to be updated, and no rule can be silently missed.
 
-Exception Testing and Timeout Assertions
+## Exception Testing and Timeout Assertions
 
 Two commonly mishandled patterns in JUnit 5 are exception testing and timeout verification.
 
@@ -447,7 +447,7 @@ void shouldCompleteIndexingWithinTimeLimit() {
 
 The difference between the two variants matters: assertTimeout runs in the same thread and reports the actual elapsed time after completion, even if it exceeded the limit. assertTimeoutPreemptively aborts the test in a new thread if the time limit is exceeded. Use assertTimeoutPreemptively for tests where runaway execution would slow your entire suite.
 
-Extension Model for Cross-Cutting Concerns
+## Extension Model for Cross-Cutting Concerns
 
 JUnit 5's extension model replaces JUnit 4's @Rule and @ClassRule with a single @ExtendWith mechanism. This is where you hook in cross-cutting concerns like database setup, timing, and logging without polluting individual test classes.
 
@@ -487,7 +487,7 @@ class PerformanceSensitiveServiceTest {
 
 Extensions can be registered globally in `src/test/resources/META-INF/services/org.junit.jupiter.api.extension.Extension` so they apply to all tests in the project without any per-class annotation.
 
-Integration with Claude Code Workflows
+## Integration with Claude Code Workflows
 
 When using Claude Code for test-driven development, combine these patterns with the AI's capabilities for maximum efficiency. Start by describing your requirements clearly, then use Claude Code to generate initial test structures based on these patterns. Review and refine the output, adding custom assertions and organizing tests with nested classes.
 
@@ -498,7 +498,6 @@ For teams doing strict TDD, the workflow inverts: ask Claude Code to generate a 
 For frontend testing scenarios, the frontend-design skill complements JUnit 5 by helping you understand how backend services interact with user interfaces. The key is treating tests as first-class citizens in your codebase, not an afterthought.
 
 Writing solid tests takes practice, but JUnit 5's modern features make the process more enjoyable than ever. These patterns provide a foundation you can build upon as your testing skills mature.
-
 
 Related Reading
 

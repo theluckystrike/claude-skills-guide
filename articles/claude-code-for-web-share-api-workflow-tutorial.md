@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Web Share API Workflow Tutorial"
 description: "Learn how to use Claude Code to build efficient workflows around the Web Share API for smooth content sharing in web applications."
@@ -14,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Web Share API Workflow Tutorial
 
 The Web Share API is a powerful browser feature that enables web applications to invoke the native sharing capabilities of a user's device. When combined with Claude Code's development workflow, you can create smooth sharing experiences that feel natural and efficient. This tutorial walks you through building a solid Web Share API workflow using Claude Code as your development assistant.
 
-Understanding the Web Share API
+## Understanding the Web Share API
 
 The Web Share API provides a `navigator.share()` method that opens the native share dialog on the user's device. This API is particularly valuable because it allows web apps to access the same sharing capabilities that native apps use, eliminating the need for custom share buttons for each platform.
 
@@ -32,7 +30,7 @@ Before diving into the workflow, it's essential to understand what the Web Share
 
 However, the API has limitations you should be aware of. It requires a secure context (HTTPS), only works in user-initiated contexts, and falls back gracefully when unavailable.
 
-Browser Support at a Glance
+## Browser Support at a Glance
 
 Understanding where the Web Share API works. and where it does not. is essential before committing to it as your primary sharing strategy.
 
@@ -63,11 +61,11 @@ The share payload accepts up to four fields:
 
 At least one field must be present, but not all targets use all fields. Twitter typically uses `url`. iMessage uses `text` and `url`. WhatsApp uses `text` with the URL appended inline. Designing for this fragmentation means keeping your `text` field self-contained and including the URL both in `url` and appended to `text` when broad compatibility matters.
 
-Setting Up Your Claude Code Workflow
+## Setting Up Your Claude Code Workflow
 
 Claude Code can significantly accelerate your Web Share API implementation. Here's how to structure your development workflow:
 
-Step 1: Define Feature Requirements
+## Step 1: Define Feature Requirements
 
 Before writing code, use Claude Code to outline your sharing requirements. Describe your use case and ask for a feature specification. For example:
 
@@ -84,7 +82,7 @@ A well-formed requirements prompt to Claude Code should specify:
 
 Starting with a clear requirements conversation rather than jumping straight to code produces implementations with fewer design-level rework cycles.
 
-Step 2: Feature Detection and Graceful Degradation
+## Step 2: Feature Detection and Graceful Degradation
 
 Always check for API availability before attempting to use it. Claude Code can help you write solid feature detection:
 
@@ -137,7 +135,7 @@ async function shareWithFiles(data, files) {
 
 This two-tier check prevents runtime errors when a browser supports `navigator.share()` but rejects a specific file type or size in the payload.
 
-Step 3: Building a Reusable Share Component
+## Step 3: Building a Reusable Share Component
 
 Claude Code can help you create a reusable component that handles all the complexity:
 
@@ -211,9 +209,9 @@ showManualCopyDialog(data) {
 
 The three-tier fallback chain. native share, clipboard API, manual copy. covers virtually every browser scenario your users will encounter.
 
-Advanced Patterns for Production Apps
+## Advanced Patterns for Production Apps
 
-Dynamic Content Preparation
+## Dynamic Content Preparation
 
 For optimal share experiences, prepare content dynamically based on the current context. Claude Code can help you implement smart previews:
 
@@ -243,7 +241,7 @@ Dynamic content preparation also means thinking about character limits. Differen
 
 Because you cannot predict which app the user will choose, the safest strategy is to keep `text` under 280 characters while including the URL explicitly in the `url` field. This maximizes compatibility without truncation on any target.
 
-Tracking Share Events with Analytics
+## Tracking Share Events with Analytics
 
 Most analytics platforms do not automatically capture Web Share API events. Add tracking around your share calls to understand what content drives sharing behavior:
 
@@ -287,7 +285,7 @@ class ShareManager {
 
 Tracking `cancelled` separately from `error` is important. A high cancellation rate on a particular piece of content may indicate users are opening the share dialog by accident, while a high success rate shows genuine sharing intent. Both signals are actionable.
 
-Integration with State Management
+## Integration with State Management
 
 In modern frameworks, integrate the ShareManager with your state management system:
 
@@ -348,7 +346,7 @@ function ArticleCard({ article }) {
 
 This pattern keeps share state co-located with the component that needs it while delegating all sharing logic to the context-provided manager.
 
-Handling Web Share Target
+## Handling Web Share Target
 
 For receiving shared content, implement the Web Share Target API in your PWA manifest:
 
@@ -423,7 +421,7 @@ async function handleShareTarget(request) {
 
 This service worker intercept pattern is what makes Web Share Target work. the incoming POST from the OS sharing system gets intercepted before the page loads, data is cached, and then the app page reads from cache on startup.
 
-Comparing Share Strategies
+## Comparing Share Strategies
 
 When deciding between the Web Share API and traditional share buttons, the trade-offs are practical and measurable:
 
@@ -439,11 +437,11 @@ When deciding between the Web Share API and traditional share buttons, the trade
 
 For content-focused apps where sharing is a primary action. news readers, bookmarking tools, recipe apps. the Web Share API with a solid fallback is almost always the better choice. For marketing pages where tracking platform-specific click-through rates matters, custom buttons may be worth the extra complexity.
 
-Testing Your Implementation
+## Testing Your Implementation
 
 Testing share functionality requires more care than most browser APIs because `navigator.share()` requires a user gesture and a secure context.
 
-Unit Testing the Logic
+## Unit Testing the Logic
 
 Isolate your share logic from the browser API to make it unit-testable:
 
@@ -481,7 +479,7 @@ test('rejects empty payloads', () => {
 
 Ask Claude Code to generate these unit tests for your specific payload-building logic. The separation of pure utility functions from browser API calls makes the pure functions trivially testable.
 
-End-to-End Testing with Playwright
+## End-to-End Testing with Playwright
 
 Playwright can mock `navigator.share()` to test the full UI flow:
 
@@ -521,7 +519,7 @@ test('falls back to clipboard when share API unavailable', async ({ page }) => {
 
 Use Claude Code to scaffold these Playwright tests. Describe your share button's selector and the expected outcomes; Claude generates the mock setup and assertions.
 
-Best Practices and Actionable Advice
+## Best Practices and Actionable Advice
 
 1. Always provide fallbacks - Not all browsers support the Web Share API. Implement clipboard copying or custom share modals as alternatives.
 
@@ -558,7 +556,7 @@ function createDebouncedShare(shareManager) {
 
 10. Verify HTTPS in development. The Web Share API silently does nothing on HTTP. If your local dev environment uses HTTP, switch to HTTPS (many frameworks support `--https` flags) or test directly on a deployed staging environment to avoid mysterious non-behavior during development.
 
-Prompt Patterns That Work Well with Claude Code
+## Prompt Patterns That Work Well with Claude Code
 
 Claude Code accelerates Web Share API work most when you give it specific, constrained prompts rather than open-ended ones. A few patterns that produce high-quality output:
 
@@ -576,7 +574,7 @@ Prompt for a test:
 
 Each of these prompts gives Claude Code enough context to produce directly usable code without multiple clarification rounds.
 
-Conclusion
+## Conclusion
 
 The Web Share API, combined with Claude Code's development workflow, enables you to create smooth sharing experiences that rival native applications. By following this tutorial's patterns, feature detection, graceful degradation, and reusable components, you'll build solid sharing functionality that works across all browsers and devices.
 

@@ -17,7 +17,7 @@ permalink: /claude-code-express-typescript-api-guide/
 
 Building Express APIs with TypeScript provides type safety, better developer experience, and maintainable codebases. Claude Code accelerates this workflow by generating boilerplate, writing tests, and helping you implement best practices efficiently. This guide walks through creating a production-ready Express TypeScript API with Claude Code.
 
-Project Setup with Claude Code
+## Project Setup with Claude Code
 
 Initialize your Express TypeScript project with proper tooling. Claude Code can scaffold the entire structure including package.json, TypeScript configuration, and directory structure.
 
@@ -70,7 +70,7 @@ export const createApp = (): Application => {
 };
 ```
 
-Building API Routes and Controllers
+## Building API Routes and Controllers
 
 Organize your API using the controller pattern. Claude Code helps generate clean, separation-of-concerns architecture.
 
@@ -116,7 +116,7 @@ export const userController = {
 
 Wire up the routes in `src/routes/userRoutes.ts` and register them in your app entry point. Claude Code can generate the complete wiring from a brief description of your endpoint structure.
 
-Input Validation with Zod
+## Input Validation with Zod
 
 Always validate incoming data. Use Zod for schema validation:
 
@@ -167,7 +167,7 @@ Apply validation to your routes:
 router.post('/users', validate(createUserSchema), userController.create);
 ```
 
-Testing with Claude Code and TDD
+## Testing with Claude Code and TDD
 
 Claude Code combined with the tdd skill accelerates test-driven development. Create tests before implementing features:
 
@@ -208,7 +208,7 @@ module.exports = {
 };
 ```
 
-Authentication with JWT
+## Authentication with JWT
 
 Production APIs require authentication. JWT middleware integrates cleanly into the Express middleware chain:
 
@@ -244,7 +244,7 @@ export const authenticate = (req: AuthRequest, res: Response, next: NextFunction
 
 Apply this middleware after public routes. Claude Code generates comprehensive auth flows. describe the token lifecycle and it scaffolds login, refresh, and logout endpoints automatically.
 
-Database Integration with Prisma
+## Database Integration with Prisma
 
 Prisma provides type-safe database access that complements TypeScript well:
 
@@ -286,7 +286,7 @@ if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 
 Claude Code generates complete Prisma schemas from plain-language data model descriptions, including relations, indexes, and seed data.
 
-Rate Limiting and Security Hardening
+## Rate Limiting and Security Hardening
 
 Protect your API from abuse with rate limiting:
 
@@ -315,7 +315,7 @@ export const authLimiter = rateLimit({
 
 Apply limiters selectively: use `apiLimiter` on all API routes and `authLimiter` only on authentication endpoints. Pair this with a tighter Helmet CSP configuration and HSTS headers for production deployments.
 
-Deployment with Docker
+## Deployment with Docker
 
 Package your API as a Docker container for consistent deployments:
 
@@ -345,7 +345,7 @@ docker run -p 3000:3000 --env-file .env my-express-api
 
 Claude Code generates Dockerfiles and docker-compose configurations from a description of your stack. Provide the database and caching layer names and it scaffolds the full compose file with health checks and volume mounts.
 
-Common Use Cases
+## Common Use Cases
 
 - Internal tooling APIs: TypeScript's type safety reduces errors in admin backends used by small teams
 - Microservice endpoints: Express keeps the bundle small; TypeScript keeps interfaces explicit across services
@@ -353,7 +353,7 @@ Common Use Cases
 - Webhook receivers: The middleware chain makes it easy to validate signatures and parse payloads before they reach business logic
 - Prototyping: Claude Code scaffolds a working skeleton in minutes; TypeScript prevents the technical debt that usually accumulates in quick prototypes
 
-Best Practices Summary
+## Best Practices Summary
 
 When building Express TypeScript APIs with Claude Code:
 
@@ -369,7 +369,6 @@ When building Express TypeScript APIs with Claude Code:
 - Implement structured logging with pino or morgan for production observability
 
 For persistent context across sessions, consider the supermemory skill to maintain project memory. When building frontend integrations, the frontend-design skill helps create consistent UI patterns that consume your API.
-
 
 Related Reading
 

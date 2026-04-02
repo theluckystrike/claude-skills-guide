@@ -13,7 +13,6 @@ reviewed: true
 score: 8
 ---
 
-
 {% raw %}
 Claude Code for Pulumi Multi-Cloud Workflow
 
@@ -21,7 +20,7 @@ Managing infrastructure across multiple cloud providers, AWS, Azure, GCP, and be
 
 This guide walks you through building a multi-cloud Pulumi workflow with Claude Code as your development partner.
 
-Setting Up Your Pulumi Project with Claude Code
+## Setting Up Your Pulumi Project with Claude Code
 
 Before diving into multi-cloud configurations, ensure your development environment is properly configured. Start by creating a new Pulumi project or initializing one in your existing repository:
 
@@ -36,7 +35,7 @@ When working with Claude Code, provide context about your infrastructure require
 
 Claude Code will generate a project structure with separated concerns, typically organizing cloud-specific resources into distinct modules while maintaining shared configuration.
 
-Understanding Pulumi Stack Configuration
+## Understanding Pulumi Stack Configuration
 
 Pulumi's stack concept is crucial for multi-cloud deployments. Each environment, dev, staging, production, can have different configurations, but you also need to handle multiple cloud providers within the same stack.
 
@@ -69,7 +68,7 @@ export const commonTags = {
 
 This configuration approach lets you manage secrets securely while providing a consistent interface for accessing provider credentials.
 
-Building Reusable Cloud Components
+## Building Reusable Cloud Components
 
 One of Pulumi's greatest strengths is component resources, reusable building blocks that abstract away provider-specific complexity. Claude Code excels at generating these components based on your requirements.
 
@@ -136,7 +135,7 @@ export class MultiCloudCluster extends pulumi.ComponentResource {
 
 This component abstracts the differences between EKS and GKE, presenting a unified interface. When you instantiate it, you specify the provider, and Pulumi handles the rest.
 
-Deploying to Multiple Clouds Simultaneously
+## Deploying to Multiple Clouds Simultaneously
 
 With your components in place, orchestrating multi-cloud deployments becomes straightforward. Here's how to deploy identical workloads across providers:
 
@@ -185,7 +184,7 @@ export const gcpClusterEndpoint = gcpCluster.clusterName;
 
 This approach ensures consistent infrastructure across providers while maintaining provider-specific optimizations.
 
-Managing Cross-Cloud Networking
+## Managing Cross-Cloud Networking
 
 A true multi-cloud setup requires networking between providers. While complex, you can establish basic connectivity through VPC peering or Cloud Interconnect. Claude Code can help generate the appropriate configurations:
 
@@ -221,7 +220,7 @@ export class CrossCloudNetworking extends pulumi.ComponentResource {
 }
 ```
 
-Best Practices for Multi-Cloud Pulumi Projects
+## Best Practices for Multi-Cloud Pulumi Projects
 
 When working with Claude Code on multi-cloud Pulumi projects, keep these practices in mind:
 
@@ -250,7 +249,7 @@ Automate secret management. Never hardcode credentials. Use Pulumi's secret encr
 pulumi config set --secret aws-secret-key "your-secret-value"
 ```
 
-Debugging Multi-Cloud Deployments
+## Debugging Multi-Cloud Deployments
 
 When deployments fail, Claude Code helps identify issues quickly. Share error messages and ask targeted questions:
 
@@ -258,7 +257,7 @@ When deployments fail, Claude Code helps identify issues quickly. Share error me
 
 Claude Code will analyze the error, identify missing permissions, and suggest the required IAM roles to add to your GCP service account.
 
-Conclusion
+## Conclusion
 
 Combining Pulumi's infrastructure-as-code capabilities with Claude Code's intelligent assistance creates a powerful workflow for managing multi-cloud environments. By building reusable components, organizing configuration properly, and using Claude Code's debugging capabilities, you can deploy consistent infrastructure across AWS, Azure, GCP, and other providers efficiently.
 

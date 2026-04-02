@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Chrome Service Workers Slow: Practical Solutions for."
 description: "Discover why Chrome service workers become slow, common performance pitfalls, and actionable fixes to optimize your PWA and caching strategies."
@@ -14,16 +13,15 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 ---
 
-
 Service workers have transformed web performance by enabling powerful caching strategies and offline capabilities. However, developers frequently encounter situations where service workers themselves become a performance bottleneck. Understanding why Chrome service workers slow down and knowing how to diagnose and fix these issues is essential for building responsive Progressive Web Apps.
 
-Why Service Workers Impact Performance
+## Why Service Workers Impact Performance
 
 Service workers run in a separate thread from your main JavaScript execution context. While this separation provides benefits, it also introduces unique performance considerations. The communication between your pages and the service worker uses asynchronous messaging, which can introduce latency if not handled correctly.
 
 When a service worker becomes slow, the entire caching infrastructure suffers. Requests that should be served instantly from cache end up waiting for the service worker to process them. This delay propagates to your users as slower page loads and diminished user experience.
 
-Common Causes of Slow Service Workers
+## Common Causes of Slow Service Workers
 
 Unoptimized fetch event handlers represent the most frequent cause of service worker sluggishness. Each network request passes through the service worker, which means complex logic in your fetch handler directly impacts response times.
 
@@ -33,7 +31,7 @@ Large cache inventories slow down cache lookup operations. When you store thousa
 
 Inefficient cache matching strategies using imprecise patterns force the service worker to scan through multiple cache versions or employ suboptimal matching algorithms.
 
-Diagnosing Service Worker Performance Issues
+## Diagnosing Service Worker Performance Issues
 
 Chrome DevTools provides comprehensive debugging capabilities for service workers. Open DevTools and navigate to the Application tab to access the Service Workers panel. Here you can inspect the service worker status, view registered service workers, and monitor their lifecycle events.
 
@@ -60,7 +58,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-Optimizing Fetch Event Handlers
+## Optimizing Fetch Event Handlers
 
 The fetch event handler executes for every network request. Keep this code path as lean as possible. Avoid synchronous operations, complex computations, and unnecessary asynchronous waiting.
 
@@ -114,7 +112,7 @@ self.addEventListener('fetch', (event) => {
 
 Notice how the code checks the request origin first. By skipping cross-origin requests entirely, you eliminate unnecessary processing for CDN resources, third-party assets, and external APIs.
 
-Managing Cache Size Effectively
+## Managing Cache Size Effectively
 
 Implement cache expiration policies to prevent unbounded cache growth. Use a versioning strategy that limits how many previous versions remain available:
 
@@ -158,7 +156,7 @@ self.addEventListener('activate', (event) => {
 });
 ```
 
-Using Background Sync for Deferred Operations
+## Using Background Sync for Deferred Operations
 
 For operations that don't require immediate processing, Background Sync API lets you defer work until the user has stable connectivity. This prevents the service worker from blocking on network-dependent tasks:
 
@@ -187,13 +185,13 @@ async function syncData() {
 }
 ```
 
-Testing Performance Impact
+## Testing Performance Impact
 
 After implementing optimizations, measure the actual improvement. Use Lighthouse in Chrome DevTools to audit PWA performance. Focus on metrics like "Service Worker Startup Time" and "Max Potential First Input Delay."
 
 Compare timing before and after changes by recording network waterfalls in the Performance tab. Service worker request handling should complete within 10-20 milliseconds for cached assets. Requests that take longer indicate optimization opportunities.
 
-When to Skip the Service Worker
+## When to Skip the Service Worker
 
 For certain request types, bypassing the service worker entirely improves performance. Use the `skipWaiting()` method strategically and consider excluding non-critical resources from service worker interception:
 
@@ -215,7 +213,6 @@ self.addEventListener('fetch', (event) => {
 ```
 
 Service worker performance directly affects your application's responsiveness. By keeping fetch handlers lean, managing cache sizes, and strategically skipping unnecessary processing, you can build PWAs that deliver fast, reliable experiences across all devices.
-
 
 Related Reading
 

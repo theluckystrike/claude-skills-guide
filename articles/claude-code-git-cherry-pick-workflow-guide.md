@@ -13,7 +13,6 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code Git Cherry-Pick Workflow Guide
 
@@ -21,7 +20,7 @@ Git cherry-pick stands as one of the most powerful yet underutilized commands in
 
 This guide covers practical cherry-pick workflows that developers and power users can implement immediately, including real-world scenarios, conflict resolution strategies, and automation patterns that save significant time in multi-branch release environments.
 
-Understanding Cherry-Pick Basics
+## Understanding Cherry-Pick Basics
 
 Cherry-pick allows you to apply specific commits from one branch onto another. Unlike a full merge or rebase, cherry-pick grabs only the changes from selected commits while leaving your branch history intact. Think of it as copying the diff introduced by a commit and re-applying it at a different point in history.
 
@@ -54,7 +53,7 @@ This distinction trips up developers regularly. When in doubt, specify commits i
 
 Claude Code can help identify which commits to pick by analyzing your git log. Simply ask Claude to review recent commits on a feature branch and suggest which ones should be backported to a release branch, and it will parse the log output, read commit messages, and reason about which changes are self-contained enough to cherry-pick safely.
 
-When to Use Cherry-Pick vs. Alternatives
+## When to Use Cherry-Pick vs. Alternatives
 
 Cherry-pick is the right tool in specific situations, but it is often overused when a merge or rebase would be cleaner. Understanding the tradeoffs helps you choose the right approach.
 
@@ -69,9 +68,9 @@ Cherry-pick is the right tool in specific situations, but it is often overused w
 
 Cherry-pick creates a new commit with a new hash, even though the changes are identical. This means the same logical change exists as multiple commits in your history. Tools like `git log --cherry` can identify already-cherry-picked commits to avoid duplicates, which is important in long-lived maintenance workflows.
 
-Practical Workflows for Developers
+## Practical Workflows for Developers
 
-Backporting Bug Fixes
+## Backporting Bug Fixes
 
 One of the most common use cases involves applying critical bug fixes from main to release branches. Suppose you are maintaining a stable release branch while developing features on main. When a bug fix lands on main, you need that same fix on your release branch without pulling in the half-finished features that landed around it.
 
@@ -93,7 +92,7 @@ git diff HEAD~1 HEAD
 
 Always review the diff after cherry-picking before pushing. The fix that worked cleanly on main may interact differently with older code on the release branch. Claude Code can read both the cherry-pick diff and the surrounding context in the release branch to flag potential incompatibilities before you push.
 
-Applying Hotfixes Across Branches
+## Applying Hotfixes Across Branches
 
 Production issues demand rapid response. When pushing a hotfix to production, you often need that same fix on development, staging, and release branches simultaneously. Doing this manually is error-prone. it is easy to miss a branch or apply commits in the wrong order.
 
@@ -143,7 +142,7 @@ for branch in "${BRANCHES[@]}"; do
 done
 ```
 
-Selective Feature Backporting
+## Selective Feature Backporting
 
 Sometimes you want only certain commits from a feature branch, not the entire change set. This frequently occurs when feature branches contain multiple independent improvements and only some are ready for the current release.
 
@@ -174,7 +173,7 @@ git show 9ab1234
 
 Claude Code can analyze a commit's diff and cross-reference it against the target branch to identify missing dependencies before you attempt the cherry-pick.
 
-Handling Merge Conflicts
+## Handling Merge Conflicts
 
 Cherry-pick inevitably produces conflicts when the same lines were modified differently in the source and target branches. This is especially common when backporting to older branches where the code has diverged significantly.
 
@@ -223,17 +222,17 @@ git cherry-pick --abort
 
 The `--abort` flag restores your branch to exactly the state it was in before you started the cherry-pick, with no partial changes left behind.
 
-Resolving Common Conflict Patterns
+## Resolving Common Conflict Patterns
 
-Conflict pattern 1: Function was refactored in target branch
+## Conflict pattern 1: Function was refactored in target branch
 
 The fix modifies a function that was extracted into a helper on the target branch. Resolution: apply the fix to the helper function instead.
 
-Conflict pattern 2: Same bug was fixed differently
+## Conflict pattern 2: Same bug was fixed differently
 
 Both branches fixed the same bug independently. Review both fixes and keep whichever is more correct, or combine them.
 
-Conflict pattern 3: Import paths differ
+## Conflict pattern 3: Import paths differ
 
 The source branch uses a new import path that does not exist on the target branch. Resolution: update the import to match the target branch's structure.
 
@@ -245,7 +244,7 @@ Or configure a visual diff tool
 git config --global merge.tool vimdiff
 ```
 
-Inspecting and Comparing Before Picking
+## Inspecting and Comparing Before Picking
 
 Before executing a cherry-pick, gather information to ensure it will apply cleanly and include everything needed:
 
@@ -269,7 +268,7 @@ git log -S "loginTimeoutMs" --oneline
 
 Claude Code can run these inspection commands and summarize the findings in plain language, telling you whether a commit is safe to cherry-pick, what files it touches, and whether any of those files have diverged significantly on the target branch.
 
-Automating with Claude Code Skills
+## Automating with Claude Code Skills
 
 Creating a structured workflow for cherry-pick operations standardizes your team's approach and reduces the risk of mistakes. A custom Claude Code skill can:
 
@@ -303,9 +302,9 @@ Ready to push. Shall I push to origin/release/2.1?
 
 This workflow handles the research, validation, execution, and confirmation steps that developers often skip when doing cherry-picks manually under time pressure.
 
-Best Practices
+## Best Practices
 
-Always Test Before Cherry-Picking to Production
+## Always Test Before Cherry-Picking to Production
 
 Run your test suite after any cherry-pick, even a trivial-looking one. A one-line fix can interact with surrounding code in unexpected ways:
 
@@ -318,7 +317,7 @@ Only push if tests pass
 git push origin release/2.1
 ```
 
-Document Cherry-Picked Commits
+## Document Cherry-Picked Commits
 
 Include references in commit messages to create an audit trail. This is invaluable when debugging production issues months later:
 
@@ -337,7 +336,7 @@ The -x flag adds "(cherry picked from commit a3f8c21)" automatically
 git cherry-pick -x a3f8c21
 ```
 
-Use Tags for Tracking in Large Teams
+## Use Tags for Tracking in Large Teams
 
 In projects with many maintainers and release branches, tags help track what has been applied where:
 
@@ -349,7 +348,7 @@ List all backport tags for a release
 git tag -l "backport/release-2.1/*"
 ```
 
-Squash Related Commits Before Cherry-Picking
+## Squash Related Commits Before Cherry-Picking
 
 If you need to backport a feature that spans five small commits, squash them into one before cherry-picking. A single coherent commit is easier to cherry-pick, easier to revert if needed, and easier to understand in the target branch's history.
 
@@ -364,14 +363,13 @@ git checkout release/2.1
 git cherry-pick $SQUASHED
 ```
 
-Summary
+## Summary
 
 Git cherry-pick combined with Claude Code CLI transforms how you handle targeted code changes across branches. Whether backporting hotfixes under production pressure, applying specific features to a release branch, or managing complex multi-version release workflows, this combination provides precision and automation that scales with team size.
 
 The key is establishing consistent patterns: always inspect commits before picking, run tests after every cherry-pick, handle conflicts methodically rather than rushing, and document your changes thoroughly. Claude Code handles the execution and analysis, letting you focus on decision-making rather than manual command sequencing.
 
 Start with simple single-commit cherry-picks on non-critical branches to build confidence with the tool. Once you have a feel for how it behaves when things go cleanly and when they conflict, gradually incorporate it into your regular workflow with automation scripts. The investment pays off quickly for teams maintaining multiple release lines.
-
 
 Related Reading
 

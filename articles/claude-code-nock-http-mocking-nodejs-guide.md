@@ -16,13 +16,13 @@ permalink: /claude-code-nock-http-mocking-nodejs-guide/
 
 Building reliable Node.js applications requires testing HTTP integrations without depending on external services. Nock provides HTTP interception capabilities that make this possible, and when combined with Claude Code's skills, you can create solid testing workflows for your Node.js projects. This guide covers everything from initial setup to advanced patterns for sequential mocks, recording real responses, and integrating Nock into Express application tests.
 
-What is Nock and Why Use It
+## What is Nock and Why Use It
 
 Nock is an HTTP mocking library for Node.js that intercepts outgoing HTTP requests at the `http`/`https` module level and returns predefined responses. Instead of making real network calls to APIs like Stripe, GitHub, or your own microservices during tests, Nock simulates those responses locally.
 
 The primary benefits include faster test execution, elimination of network flakiness, ability to test error scenarios that are difficult to reproduce with live APIs, and running tests in CI/CD pipelines without external dependencies or rate limits.
 
-How Nock Compares to Alternatives
+## How Nock Compares to Alternatives
 
 | Tool | Approach | Works With | Best For |
 |---|---|---|---|
@@ -36,7 +36,7 @@ Nock is the right choice when you are writing Node.js unit and integration tests
 
 When you use Nock with Claude Code, you can describe the HTTP interactions you need to mock using natural language, and Claude will generate the appropriate Nock configurations while you work on your implementation.
 
-Setting Up Nock in Your Node.js Project
+## Setting Up Nock in Your Node.js Project
 
 Install Nock as a development dependency in your project:
 
@@ -53,7 +53,7 @@ npm install --save-dev nock
 
 Nock works by monkey-patching the native `http` and `https` modules. Any library that uses these modules internally. axios, node-fetch, got, undici in compatibility mode. will have its requests intercepted. Libraries that use their own TCP stack (such as some gRPC clients) are not affected.
 
-Verifying Nock is Active
+## Verifying Nock is Active
 
 A quick sanity check before writing your first mock:
 
@@ -70,7 +70,7 @@ nock.enableNetConnect('127.0.0.1');
 
 Setting `nock.disableNetConnect()` in a global test setup file means any unmocked HTTP call will throw an error instead of silently hitting a real server. This is the recommended CI configuration. it catches tests that accidentally depend on network access.
 
-Basic Nock Interception Example
+## Basic Nock Interception Example
 
 Consider a simple function that fetches user data from an external API:
 
@@ -130,11 +130,11 @@ describe('getUser', () => {
 
 The `nock.cleanAll()` in `afterEach` is important. it ensures interceptors registered in one test do not bleed into the next.
 
-Mocking Different HTTP Scenarios
+## Mocking Different HTTP Scenarios
 
 Nock excels at testing various HTTP scenarios that would be difficult to test with live APIs.
 
-Testing Error Responses
+## Testing Error Responses
 
 ```javascript
 it('should handle 404 responses gracefully', async () => {
@@ -164,7 +164,7 @@ it('should handle network-level connection errors', async () => {
 
 Note the difference between `.reply(500, ...)` (which returns an HTTP error response) and `.replyWithError(...)` (which simulates a connection-level failure like a DNS error or connection reset). Both are important to test.
 
-Testing Request Headers and Bodies
+## Testing Request Headers and Bodies
 
 Nock can assert that your code sends the correct headers and request bodies, not just that it handles responses correctly:
 
@@ -196,7 +196,7 @@ it('should send correct query parameters', async () => {
 
 If the interceptor has `reqheaders` defined and your code does not send them, Nock will not match the request and it will either hit the network (if connect is enabled) or throw (if `disableNetConnect` is active). This makes it an implicit assertion on outbound request correctness.
 
-Simulating Network Delays
+## Simulating Network Delays
 
 Testing timeout handling and slow responses is straightforward with Nock's `.delay()` modifier:
 
@@ -225,7 +225,7 @@ it('should timeout after 1 second', async () => {
 });
 ```
 
-Using Claude Code with Nock
+## Using Claude Code with Nock
 
 The `tdd` skill in Claude Code works particularly well with Nock. When you need to test HTTP-dependent code, you can invoke the skill and describe your API interactions.
 
@@ -245,9 +245,9 @@ This workflow is especially useful when integrating with a new third-party API. 
 
 For projects that involve PDF generation from web content, you might combine the `tdd` skill with the `pdf` skill to test scenarios where your application fetches remote data and converts it to PDF format. using Nock to intercept the HTTP fetch so no real network call is needed during tests.
 
-Advanced Nock Patterns
+## Advanced Nock Patterns
 
-Matching with Regular Expressions
+## Matching with Regular Expressions
 
 When your URL contains dynamic segments (resource IDs, UUIDs, slugs), use regex matching instead of literal paths:
 
@@ -262,7 +262,7 @@ nock('https://api.example.com')
 
 The reply factory function receives the URI and can generate dynamic responses based on path segments, which is useful for building mock APIs that behave like the real thing across a range of inputs.
 
-Sequential and Conditional Responses
+## Sequential and Conditional Responses
 
 Test retry logic by returning errors on the first call and success on subsequent calls:
 
@@ -285,7 +285,7 @@ it('should retry on 503 and succeed', async () => {
 
 Nock interceptors are consumed in order and each is used once by default. Registering two interceptors for the same path means the first request hits the first interceptor, and the second request hits the second.
 
-Persisting Mocks for Development
+## Persisting Mocks for Development
 
 For local development without external services, persist mocks across multiple calls:
 
@@ -301,7 +301,7 @@ nock('https://api.example.com')
 // This mock will match every GET /config call without being consumed
 ```
 
-Intercepting Paginated APIs
+## Intercepting Paginated APIs
 
 APIs that return paginated results require sequential mocks with different query parameters:
 
@@ -328,7 +328,7 @@ it('should fetch all pages', async () => {
 });
 ```
 
-Mocking OAuth Token Exchange
+## Mocking OAuth Token Exchange
 
 Testing OAuth flows requires intercepting both the token endpoint and subsequent authenticated calls:
 
@@ -356,7 +356,7 @@ it('should exchange code for token and fetch user profile', async () => {
 });
 ```
 
-Combining Nock with Express/Fastify Integration Tests
+## Combining Nock with Express/Fastify Integration Tests
 
 For comprehensive integration testing of your own HTTP server, combine Supertest (which fires real HTTP requests against a locally started server) with Nock (which intercepts outbound calls from that server to external APIs):
 
@@ -399,7 +399,7 @@ describe('GET /api/users/:id', () => {
 
 This pattern gives you end-to-end coverage of your own routing, middleware, authentication, and error-handling logic while keeping all external dependencies mocked.
 
-Recording Real Responses as Fixtures
+## Recording Real Responses as Fixtures
 
 When integrating with a new third-party API, the fastest way to get accurate Nock fixtures is to record real responses once and replay them in tests. The `nock-record` package provides this capability:
 
@@ -435,7 +435,7 @@ beforeEach(() => {
 
 This approach is particularly valuable for complex APIs with deeply nested response schemas that would be tedious to write by hand.
 
-Organizing Nock Fixtures
+## Organizing Nock Fixtures
 
 For large applications with many API integrations, centralize mock definitions to avoid duplication across test files.
 
@@ -483,7 +483,7 @@ module.exports = { setupNock };
 
 Using `nock.pendingMocks()` to warn about unused interceptors catches a subtle class of bugs: when your code stops making a call you expected it to make, stale interceptors silently accumulate.
 
-Best Practices
+## Best Practices
 
 Keep your Nock configurations organized by placing them in dedicated fixture files. Name your mock files descriptively, like `mocks/github-api-repository-success.json` or `mocks/stripe-payment-failed.json`.
 
@@ -495,14 +495,13 @@ Use `.replyWithError()` as well as `.reply(500, ...)`. they test different failu
 
 For TypeScript projects, define interfaces for your API response shapes and use them in both your mock data and your type assertions. This ensures your mocks stay in sync with the types your production code depends on.
 
-Conclusion
+## Conclusion
 
 Nock provides essential HTTP mocking capabilities for Node.js testing, and when paired with Claude Code's skills like `tdd`, you can rapidly generate comprehensive test coverage for HTTP-dependent code. This combination ensures your applications handle various API scenarios gracefully without relying on external services.
 
 The patterns covered here. error scenarios, header assertions, sequential mocks for retry logic, OAuth flow testing, and Express integration tests. give you the tools to test every HTTP interaction your application depends on. Combined with fixture organization and the `disableNetConnect` discipline, your test suite becomes a reliable safety net that catches regressions without ever touching a live API.
 
 ---
-
 
 Related Reading
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Health Endpoint Pattern Workflow
 
 Health endpoints are a critical infrastructure component in modern applications. Whether you're running microservices in Kubernetes, exposing APIs behind load balancers, or building distributed systems, health checks determine when traffic should be routed to your service and whether your application needs attention. This guide shows you how to use Claude Code to implement comprehensive health endpoint patterns efficiently.
 
-Understanding Health Endpoint Types
+## Understanding Health Endpoint Types
 
 Before diving into implementation, it's essential to understand the different health check patterns and their purposes. Each serves a distinct role in your system's reliability.
 
@@ -31,7 +30,7 @@ Startup probes are used when applications have long startup times. They delay bo
 
 Claude Code can help you implement all three patterns correctly, but understanding this distinction ensures you ask for the right implementation.
 
-Implementing Basic Health Endpoints
+## Implementing Basic Health Endpoints
 
 Start with a straightforward health endpoint that reports the service status. When prompting Claude Code, be specific about your framework and requirements:
 
@@ -57,7 +56,7 @@ async def health_check():
 
 This basic endpoint works for liveness probes, but production systems typically need more thorough checks.
 
-Adding Dependency Health Checks
+## Adding Dependency Health Checks
 
 A health endpoint that only checks whether the process is running provides minimal value. Real health checks verify that your dependencies are accessible. Here's how to prompt Claude Code for comprehensive dependency checking:
 
@@ -132,7 +131,7 @@ async def readiness_check(response: Response):
     }
 ```
 
-Configuring Kubernetes Probes
+## Configuring Kubernetes Probes
 
 Once your endpoints exist, you need proper Kubernetes probe configuration. Claude Code can generate this as well:
 
@@ -166,7 +165,7 @@ readinessProbe:
 
 The liveness probe has a longer initial delay to account for startup time, while the readiness probe checks more frequently to quickly detect when the service becomes available.
 
-Building Health Check Aggregation
+## Building Health Check Aggregation
 
 In microservices architectures, you often need to aggregate health status from multiple services. Claude Code can help design this pattern:
 
@@ -183,7 +182,7 @@ This pattern involves:
 
 The aggregator should expose its own health endpoint that reflects both the aggregator's status and the downstream services' status.
 
-Best Practices for Health Endpoint Design
+## Best Practices for Health Endpoint Design
 
 When implementing health checks with Claude Code, keep these principles in mind:
 
@@ -197,7 +196,7 @@ Consider security. Health endpoints often bypass authentication for probe checks
 
 Test your health checks. Use Claude Code to write integration tests that verify your health endpoints return correct status under various failure conditions.
 
-Conclusion
+## Conclusion
 
 Claude Code streamlines health endpoint implementation by generating boilerplate code, Kubernetes configurations, and architectural patterns quickly. The key is providing clear context about your stack, dependencies, and requirements. Start with basic endpoints, layer in dependency checks as needed, and always configure Kubernetes probes to match your application's characteristics.
 

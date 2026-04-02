@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Noise Cancellation Chrome Extension: A Developer Guide"
 description: "Learn how to build noise cancellation features for Chrome extensions. Practical code examples, Web Audio API techniques, and implementation patterns for."
@@ -14,19 +13,18 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Noise Cancellation Chrome Extension: A Developer Guide
 
 Creating a noise cancellation feature within a Chrome extension requires understanding the Web Audio API and how content scripts interact with media streams. This guide provides practical implementation patterns for developers building audio-processing extensions.
 
-How Noise Cancellation Works in Browser Extensions
+## How Noise Cancellation Works in Browser Extensions
 
 Chrome extensions can use the Web Audio API to process audio in real-time. The basic architecture involves capturing microphone input, applying noise reduction algorithms, and outputting the cleaned audio. For extensions that process already-recorded audio (like voice memos or recorded calls), the approach differs slightly from real-time processing.
 
 The core challenge is implementing effective noise suppression without introducing artifacts or significant latency. Most implementations use spectral subtraction, Wiener filtering, or machine learning-based approaches. For browser extensions, the Web Audio API provides the necessary building blocks through nodes like `ScriptProcessorNode` (deprecated but still functional) or `AudioWorklet` (modern approach).
 
-Setting Up Your Extension Structure
+## Setting Up Your Extension Structure
 
 A noise cancellation extension requires three main components: the manifest configuration, content script for audio handling, and optional background worker for state management.
 
@@ -53,7 +51,7 @@ Your manifest file must declare the appropriate permissions:
 
 For real-time microphone processing, you will need the `navigator.mediaDevices.getUserMedia` API, which requires user permission and HTTPS context. Extensions running on localhost can access this during development.
 
-Implementing Audio Capture and Processing
+## Implementing Audio Capture and Processing
 
 The core of noise cancellation lies in processing audio buffers. Here is a practical implementation using AudioWorklet:
 
@@ -94,7 +92,7 @@ registerProcessor('noise-cancellation-processor', NoiseCancellationProcessor);
 
 This basic implementation uses a noise gate, a simple threshold-based approach. For more sophisticated noise reduction, you would implement spectral subtraction or integrate a WebAssembly-based noise suppression library like RNNoise.
 
-Building the Popup Interface
+## Building the Popup Interface
 
 Users need controls to enable, disable, and adjust noise cancellation settings:
 
@@ -144,7 +142,7 @@ Users need controls to enable, disable, and adjust noise cancellation settings:
 </html>
 ```
 
-Connecting Audio Processing to the Extension
+## Connecting Audio Processing to the Extension
 
 The popup script manages the audio context and loads the worklet:
 
@@ -200,7 +198,7 @@ document.getElementById('threshold').addEventListener('input', (e) => {
 });
 ```
 
-Advanced: Spectral Subtraction Implementation
+## Advanced: Spectral Subtraction Implementation
 
 For better quality noise reduction, implement spectral subtraction in your worklet:
 
@@ -266,7 +264,7 @@ class SpectralSubtractionProcessor extends AudioWorkletProcessor {
 registerProcessor('spectral-subtraction-processor', SpectralSubtractionProcessor);
 ```
 
-Performance Considerations
+## Performance Considerations
 
 Real-time audio processing in extensions carries performance implications. Consider these optimizations:
 
@@ -278,11 +276,11 @@ Real-time audio processing in extensions carries performance implications. Consi
 
 4. Memory management: Reuse buffers rather than allocating new ones per frame to prevent garbage collection pauses.
 
-Extension Publishing Considerations
+## Extension Publishing Considerations
 
 When publishing a noise cancellation extension to the Chrome Web Store, you must accurately represent microphone permissions. Users see a scary permission dialog warning about camera and microphone access. Include clear documentation about why your extension needs these permissions and how data is handled.
 
-Conclusion
+## Conclusion
 
 Building a noise cancellation Chrome extension combines familiar web audio techniques with extension-specific architecture. Start with a simple noise gate implementation to validate your use case, then iterate toward more sophisticated algorithms. The Web Audio API provides sufficient power for most voice processing scenarios, while AudioWorklet ensures smooth performance without blocking the main thread.
 
@@ -290,7 +288,6 @@ Focus on specific use cases, whether that is cleaning up voice recordings, reduc
 {% endraw %}
 
 ---
-
 
 Related Reading
 

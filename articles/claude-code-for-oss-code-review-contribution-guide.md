@@ -13,14 +13,11 @@ reviewed: true
 score: 8
 ---
 
-
-Claude Code for OSS Code Review Contribution Guide
-
 Code review is one of the most valuable ways to contribute to open source projects. It improves code quality, helps maintainers, and teaches you about different programming approaches. However, writing helpful code reviews takes practice. Claude Code can accelerate your learning curve and help you provide more effective feedback to OSS projects.
 
 This guide shows you how to use Claude Code to become a better code reviewer for open source projects.
 
-Why Use Claude Code for Code Review
+## Why Use Claude Code for Code Review
 
 Code review in OSS presents unique challenges. You may be unfamiliar with the project's conventions, testing patterns, or architecture. Claude Code helps you navigate these challenges by:
 
@@ -29,7 +26,7 @@ Code review in OSS presents unique challenges. You may be unfamiliar with the pr
 - Suggesting improvements aligned with project standards
 - Accelerating your understanding of large codebases
 
-Setting Up Claude Code for Review Tasks
+## Setting Up Claude Code for Review Tasks
 
 Before diving into reviews, configure Claude Code with a dedicated review skill. Create a `.claude/settings/review.md` skill file:
 
@@ -50,9 +47,9 @@ When reviewing code:
 5. Be respectful and constructive in all comments
 ```
 
-Practical Review Workflow
+## Practical Review Workflow
 
-Step 1: Understand the Context
+## Step 1: Understand the Context
 
 Before reviewing any code, understand what the PR attempts to solve. Use Claude Code to examine the PR description and related issues:
 
@@ -60,7 +57,7 @@ Before reviewing any code, understand what the PR attempts to solve. Use Claude 
 Read the pull request description and linked issues to understand the motivation behind this change. Summarize the problem being solved and the expected outcome.
 ```
 
-Step 2: Explore the Codebase
+## Step 2: Explore the Codebase
 
 Claude Code can quickly help you understand the project structure and find related code:
 
@@ -72,7 +69,7 @@ Read related test files to understand expected behavior
 read_file "tests/unit/utils.test.ts"
 ```
 
-Step 3: Analyze the Changes
+## Step 3: Analyze the Changes
 
 When reviewing diffs, ask Claude Code to identify potential issues:
 
@@ -87,7 +84,7 @@ Review the following diff and identify:
 Provide specific line-by-line feedback with suggested fixes where applicable.
 ```
 
-Step 4: Verify Your Understanding
+## Step 4: Verify Your Understanding
 
 Before submitting review comments, verify your understanding of the code:
 
@@ -95,9 +92,9 @@ Before submitting review comments, verify your understanding of the code:
 Explain what this function does in simple terms. What are its inputs, outputs, and side effects? Are there any edge cases that might cause issues?
 ```
 
-Common Issues to Look For
+## Common Issues to Look For
 
-Security Vulnerabilities
+## Security Vulnerabilities
 
 Claude Code excels at identifying common security issues:
 
@@ -122,7 +119,7 @@ def search_users(query):
     return db.execute("SELECT * FROM users WHERE name = ?", (query,))
 ```
 
-Error Handling
+## Error Handling
 
 Review how errors are handled throughout the codebase:
 
@@ -131,7 +128,7 @@ Review how errors are handled throughout the codebase:
 - Is there proper logging for debugging?
 - Are resources properly cleaned up in finally blocks?
 
-Test Coverage
+## Test Coverage
 
 Good reviews include assessing test quality:
 
@@ -143,21 +140,21 @@ Analyze the test coverage for this PR:
 4. Are there any flaky or unreliable tests?
 ```
 
-Writing Effective Review Comments
+## Writing Effective Review Comments
 
 Claude Code can help you phrase feedback constructively. Use this framework for your comments:
 
-Be Specific
+## Be Specific
 
 Instead of: "This code is bad"
 Write: "This loop has O(n²) complexity. Consider using a hash map for O(n) performance."
 
-Provide Context
+## Provide Context
 
 Instead of: "Use const instead of let"
 Write: "This variable is never reassigned, so `const` would be more appropriate and communicate intent better."
 
-Suggest Solutions
+## Suggest Solutions
 
 When possible, provide code examples:
 
@@ -175,29 +172,29 @@ return user.isActive === true;
 return !!user.isActive;
 ```
 
-Using Claude Code to Learn
+## Using Claude Code to Learn
 
 One of the greatest benefits of code review is learning from other developers. Use Claude Code to maximize your learning:
 
-Ask Explanations
+## Ask Explanations
 
 ```
 Explain the design pattern used in this code. Why was this approach chosen over alternatives?
 ```
 
-Explore Alternatives
+## Explore Alternatives
 
 ```
 What are some alternative implementations for this function? What are the tradeoffs of each approach?
 ```
 
-Detailed look
+## Detailed look
 
 ```
 Research the libraries and frameworks used in this PR. Provide a brief summary of how they work and their key concepts.
 ```
 
-Building Your Review Skills
+## Building Your Review Skills
 
 Practice makes perfect. Here's how to build your skills systematically:
 
@@ -207,7 +204,7 @@ Practice makes perfect. Here's how to build your skills systematically:
 4. Ask questions: Use Claude Code to clarify your understanding before commenting
 5. Learn the codebase: Spend time understanding project conventions before reviewing
 
-Conclusion
+## Conclusion
 
 Claude Code is a powerful ally for OSS code review contributions. It helps you understand unfamiliar code, identify issues, and provide constructive feedback. By following this guide, you can make meaningful contributions to open source projects while developing your skills as a code reviewer.
 

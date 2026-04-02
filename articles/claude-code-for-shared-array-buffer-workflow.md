@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for SharedArrayBuffer Workflow
 
 SharedArrayBuffer is a powerful JavaScript feature that enables true shared memory between Web Workers, unlocking high-performance parallel computing capabilities in web applications. This guide walks you through implementing a solid SharedArrayBuffer workflow using Claude Code, covering setup, implementation patterns, and best practices.
 
-Understanding SharedArrayBuffer Basics
+## Understanding SharedArrayBuffer Basics
 
 SharedArrayBuffer is a JavaScript object that represents a generic, fixed-length raw binary data buffer that can be shared across multiple concurrent execution contexts (threads). Unlike regular ArrayBuffers, which are copied when passed between workers, SharedArrayBuffer allows multiple workers to read and write to the same memory location directly.
 
@@ -39,7 +38,7 @@ console.log('Initial value:', sharedArray[0]); // Output: 42
 
 The key advantage is that changes made by one worker are immediately visible to other workers without any explicit message passing. This eliminates the serialization overhead that comes with postMessage, which can be significant when you're passing large arrays or binary data frequently.
 
-SharedArrayBuffer vs Regular ArrayBuffer
+## SharedArrayBuffer vs Regular ArrayBuffer
 
 To understand when SharedArrayBuffer is the right choice, it helps to see the difference in practice:
 
@@ -58,13 +57,13 @@ worker.postMessage({ buffer: sharedBuffer });
 
 For a 10MB dataset, the ArrayBuffer approach requires copying 10MB per worker. With five workers, that's 50MB of transfer overhead. SharedArrayBuffer reduces that to zero copy regardless of how many workers you spawn.
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before using SharedArrayBuffer, you need to configure your development environment properly. SharedArrayBuffer requires specific security headers due to Spectre and Meltdown vulnerabilities discovered in modern processors. These vulnerabilities allow malicious scripts to use high-resolution timers (which SharedArrayBuffer enables indirectly) to extract information from memory they shouldn't have access to.
 
 The browser enforces cross-origin isolation to mitigate this, which requires your page to explicitly opt in to a restricted security context.
 
-Server Configuration
+## Server Configuration
 
 You must serve your application with these headers:
 
@@ -116,7 +115,7 @@ module.exports = {
 };
 ```
 
-Verifying Cross-Origin Isolation
+## Verifying Cross-Origin Isolation
 
 After configuring your headers, you can verify that cross-origin isolation is active:
 
@@ -133,11 +132,11 @@ if (crossOriginIsolated) {
 
 If `crossOriginIsolated` is false, SharedArrayBuffer will be undefined and any attempt to use it will throw a ReferenceError. Always check this before trying to allocate a buffer.
 
-Implementing the Worker Communication Pattern
+## Implementing the Worker Communication Pattern
 
 Now let's build a practical SharedArrayBuffer workflow. We'll create a main thread that spawns workers that coordinate through shared memory.
 
-Creating the Worker Script
+## Creating the Worker Script
 
 First, create a worker file that will perform computations:
 
@@ -165,7 +164,7 @@ self.onmessage = function(event) {
 };
 ```
 
-Main Thread Implementation
+## Main Thread Implementation
 
 Here's how to orchestrate multiple workers from the main thread:
 
@@ -213,7 +212,7 @@ await manager.increment(0, 0, 1);
 console.log(await manager.read(0)); // Output: 1
 ```
 
-Parallel Processing with Multiple Workers
+## Parallel Processing with Multiple Workers
 
 A more realistic use case involves splitting a large dataset across multiple workers for parallel computation. Here's a pattern for parallel array summation:
 
@@ -282,13 +281,13 @@ self.onmessage = function({ data }) {
 
 This approach divides the work proportionally across available CPU cores. On a machine with 8 logical cores, you get up to 8x throughput on parallelizable operations compared to single-threaded processing.
 
-Using Atomics for Thread-Safe Operations
+## Using Atomics for Thread-Safe Operations
 
 The Atomics object provides atomic operations essential for safe concurrent access to shared memory. These operations prevent race conditions when multiple workers access the same memory location simultaneously.
 
 Without atomic operations, a seemingly simple increment like `sharedArray[i]++` is actually three separate operations: read, add, write. Two workers can interleave these steps and produce incorrect results. Atomics.add performs all three as an uninterruptible unit.
 
-Common Atomics Operations
+## Common Atomics Operations
 
 ```javascript
 const sharedArray = new Int32Array(sharedBuffer);
@@ -313,7 +312,7 @@ Atomics.notify(sharedArray, index, count);
 
 The `Atomics.wait()` method acts like a mutex, blocking until a value changes, while `Atomics.notify()` (previously called `Atomics.wake()`) signals waiting threads. This enables sophisticated synchronization patterns.
 
-Implementing a Mutex with Atomics
+## Implementing a Mutex with Atomics
 
 A mutex (mutual exclusion lock) ensures only one worker enters a critical section at a time. Here's a minimal implementation:
 
@@ -367,9 +366,9 @@ self.onmessage = function({ data }) {
 
 Note that `Atomics.wait()` cannot be called on the main thread in most browsers. it would freeze the UI. Use it only inside Web Workers.
 
-Real-World Use Cases
+## Real-World Use Cases
 
-Image Processing Pipeline
+## Image Processing Pipeline
 
 SharedArrayBuffer shines in image processing, where you operate on large pixel arrays. A grayscale conversion across a 4K image (over 8 million pixels) benefits enormously from parallel processing:
 
@@ -426,7 +425,7 @@ self.onmessage = function({ data }) {
 
 Since each row of pixels is processed by exactly one worker (no overlap), no atomic operations are needed here. the partitioning itself ensures no two workers touch the same memory.
 
-Game State Synchronization
+## Game State Synchronization
 
 In browser-based games and simulations, SharedArrayBuffer enables a dedicated physics worker to update entity positions while the render thread reads them simultaneously. without the latency of postMessage:
 
@@ -452,9 +451,9 @@ function render() {
 
 The physics worker updates positions in place; the render thread reads them without any data copying or message passing overhead.
 
-Best Practices and Common Pitfalls
+## Best Practices and Common Pitfalls
 
-Do's
+## Do's
 
 1. Always use Atomics for shared memory operations - Direct array access can lead to race conditions
 2. Initialize your buffer before sharing - Ensure all workers see consistent initial state
@@ -473,7 +472,7 @@ function isSharedArrayBufferSupported() {
 
 5. Partition data to minimize contention. The less often two workers write to adjacent memory locations, the better. False sharing (two workers writing to different values in the same CPU cache line) can degrade performance even when using Atomics.
 
-Don'ts
+## Don'ts
 
 1. Don't share buffers between too many workers - Each worker adds complexity and potential contention
 2. Avoid busy-waiting loops - Use Atomics.wait() instead of polling
@@ -481,7 +480,7 @@ Don'ts
 4. Never trust shared data without validation - Always verify values before using them
 5. Don't call Atomics.wait() on the main thread. It blocks the UI thread and will throw in most browsers
 
-Performance Considerations
+## Performance Considerations
 
 SharedArrayBuffer excels in specific scenarios:
 
@@ -491,7 +490,7 @@ SharedArrayBuffer excels in specific scenarios:
 
 For CPU-bound tasks that don't require sharing state, regular Web Workers with message passing may be simpler and equally performant.
 
-When NOT to Use SharedArrayBuffer
+## When NOT to Use SharedArrayBuffer
 
 SharedArrayBuffer is not always the right tool. Avoid it when:
 
@@ -502,7 +501,7 @@ SharedArrayBuffer is not always the right tool. Avoid it when:
 
 A useful rule of thumb: start with postMessage, profile for bottlenecks, and switch to SharedArrayBuffer only when you have measured evidence that data transfer is the limiting factor.
 
-Debugging SharedArrayBuffer Applications
+## Debugging SharedArrayBuffer Applications
 
 Multi-threaded bugs in JavaScript are tricky because they're often non-deterministic. Here are practical strategies:
 
@@ -529,7 +528,7 @@ function criticalSection() {
 
 Slow down workers deliberately during testing. Inserting artificial delays makes race conditions surface more reliably before you ship. Remove the delays in production.
 
-Conclusion
+## Conclusion
 
 SharedArrayBuffer transforms JavaScript's concurrency capabilities, enabling high-performance parallel computing in web applications. By understanding the security requirements, implementing proper synchronization with Atomics, and following best practices, you can build solid multi-threaded applications that fully use modern browser capabilities.
 

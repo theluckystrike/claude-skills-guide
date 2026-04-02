@@ -15,21 +15,19 @@ score: 8
 
 {% raw %}
 
-Claude Code for Backstage Plugin Workflow Tutorial
-
 Backstage, Spotify's open-source developer portal framework, has transformed how organizations build internal developer platforms. One of Backstage's most powerful features is its plugin system, which allows you to extend the platform with custom functionality tailored to your organization's needs. This tutorial explores how Claude Code can accelerate your Backstage plugin development workflow, from scaffolding to deployment.
 
-Why Use Claude Code for Backstage Plugin Development
+## Why Use Claude Code for Backstage Plugin Development
 
 Building Backstage plugins requires understanding multiple technologies: React, TypeScript, the Backstage plugin API, and often backend services with various APIs. Claude Code excels at navigating this complexity by understanding the relationships between different parts of your codebase and generating coherent, working code.
 
 When you work with Claude Code on Backstage plugins, you benefit from its ability to understand the Backstage plugin architecture, generate TypeScript React components following Backstage conventions, create proper plugin configuration, and write integration tests for plugin functionality.
 
-Setting Up Your Backstage Plugin Project
+## Setting Up Your Backstage Plugin Project
 
 Before diving into development, ensure your environment is properly configured. Claude Code can help you set up a new Backstage plugin or work within an existing monorepo.
 
-Creating a New Plugin
+## Creating a New Plugin
 
 The fastest way to scaffold a new Backstage plugin is using the Backstage CLI. Here's how Claude Code can guide you through the process:
 
@@ -50,7 +48,7 @@ When prompted, choose whether you want a frontend plugin, backend plugin, or bot
 
 Claude Code can help you understand the generated structure and make initial modifications. Simply share the generated files with Claude Code and ask for explanations or modifications.
 
-Understanding Plugin Structure
+## Understanding Plugin Structure
 
 A typical Backstage plugin contains several key directories and files. Let's examine what Claude Code can help you understand and modify:
 
@@ -67,11 +65,11 @@ plugins/my-custom-plugin/
 
 The `plugin.ts` file is particularly important, it defines what your plugin exposes to Backstage. Claude Code can help you understand how to extend this file to add new features, routes, and integrations.
 
-Building Your First Plugin Feature
+## Building Your First Plugin Feature
 
 Let's walk through creating a simple but practical Backstage plugin: a service status dashboard that shows the health of various internal services.
 
-Step 1: Define the Plugin
+## Step 1: Define the Plugin
 
 Open your plugin's main file and define the plugin with its initial configuration:
 
@@ -99,7 +97,7 @@ export const serviceStatusPlugin = createPlugin({
 
 Claude Code can explain each of these route definitions and help you add more complex routing patterns as your plugin grows.
 
-Step 2: Create the Main Page Component
+## Step 2: Create the Main Page Component
 
 Next, create a component that displays your service status overview:
 
@@ -166,7 +164,7 @@ export function ServiceStatusPage() {
 
 This component uses Backstage's built-in UI components to maintain visual consistency with the rest of your portal. Claude Code can help you extend this with filtering, sorting, and real-time updates.
 
-Step 3: Register the Plugin Route
+## Step 3: Register the Plugin Route
 
 Now you need to expose your component through the plugin's router:
 
@@ -180,11 +178,11 @@ export const ServiceStatusPage = serviceStatusPlugin.provide(
 );
 ```
 
-Adding Backend Integration
+## Adding Backend Integration
 
 Most real-world plugins need to communicate with backend services. Backstage plugins typically use a proxy or custom backend to handle this communication securely.
 
-Creating a Backend API Client
+## Creating a Backend API Client
 
 Here's how you might create a client to fetch service status data:
 
@@ -228,11 +226,11 @@ export class ServiceStatusClientImpl implements ServiceStatusClient {
 
 Claude Code can help you set up the corresponding backend routes in your plugin's backend module, complete with proper error handling and authentication.
 
-Testing Your Plugin
+## Testing Your Plugin
 
 Testing is crucial for maintaining plugin quality. Backstage provides utilities for both unit and integration testing.
 
-Writing Component Tests
+## Writing Component Tests
 
 ```typescript
 import { renderInTestApp } from '@backstage/test-utils';
@@ -257,7 +255,7 @@ cd plugins/service-status
 yarn test
 ```
 
-Best Practices for Backstage Plugin Development
+## Best Practices for Backstage Plugin Development
 
 When developing Backstage plugins with Claude Code assistance, keep these best practices in mind:
 
@@ -269,7 +267,7 @@ Document Thoroughly: Include clear documentation for both users and other develo
 
 Test Extensively: The plugin will be used by many teams. Invest in comprehensive tests to ensure reliability.
 
-Conclusion
+## Conclusion
 
 Claude Code significantly accelerates Backstage plugin development by handling the boilerplate, explaining complex APIs, and generating working code that follows best practices. Whether you're building a simple status dashboard or a complex integration with external systems, Claude Code can guide you through the entire development workflow.
 

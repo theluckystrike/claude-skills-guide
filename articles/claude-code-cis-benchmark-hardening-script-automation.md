@@ -13,19 +13,18 @@ score: 7
 permalink: /claude-code-cis-benchmark-hardening-script-automation/
 ---
 
-
 {% raw %}
 Claude Code CIS Benchmark Hardening Script Automation
 
 The Center for Internet Security (CIS) Benchmarks are industry-standard security configuration guides used by organizations worldwide to harden their systems. Automating CIS benchmark compliance with Claude Code transforms what was once a manual, time-intensive process into an efficient, repeatable workflow. This guide shows you how to use Claude Code skills to create automated CIS hardening scripts that ensure consistent security compliance across your infrastructure.
 
-Understanding CIS Benchmarks and Automation
+## Understanding CIS Benchmarks and Automation
 
 CIS Benchmarks provide detailed security configurations for operating systems, applications, and cloud platforms. Each benchmark contains hundreds of individual checks, settings that must be verified and remediated to achieve compliance. Traditionally, auditors and system administrators manually reviewed each control, a process that scales poorly and introduces human error.
 
 Claude Code changes this equation fundamentally. By combining Claude Code's natural language processing with its ability to execute shell commands, read files, and run scripts, you can create skills that understand CIS benchmark requirements and automatically generate, execute, and verify hardening scripts.
 
-Creating a CIS Benchmark Hardening Skill
+## Creating a CIS Benchmark Hardening Skill
 
 A Claude Code skill for CIS hardening consists of markdown files containing detailed instructions that Claude uses when invoked. Here's how to structure a comprehensive CIS benchmark hardening skill:
 
@@ -49,7 +48,7 @@ Always prioritize safety: never execute destructive commands without explicit us
 
 Save this as `~/.claude/skills/cis-hardening/skill.md` and invoke it with `/cis-hardening` in your Claude Code session.
 
-Practical Example: Ubuntu CIS Benchmark Auditing
+## Practical Example: Ubuntu CIS Benchmark Auditing
 
 Once your skill is loaded, you can perform comprehensive audits. Here's a practical example:
 
@@ -94,7 +93,7 @@ echo "=== Package Repository Check ==="
 apt-cache policy 2>/dev/null | head -20
 ```
 
-Generating Automated Hardening Scripts
+## Generating Automated Hardening Scripts
 
 After auditing, Claude can generate remediation scripts. Here's how to request hardening:
 
@@ -146,7 +145,7 @@ echo "Review /var/log/cis-hardening.log for details"
 echo "REBOOT RECOMMENDED for full effect"
 ```
 
-Continuous Compliance Monitoring
+## Continuous Compliance Monitoring
 
 Beyond one-time hardening, Claude Code skills can implement continuous monitoring. Create a skill that schedules regular compliance checks:
 
@@ -183,7 +182,7 @@ Add this line for daily checks at midnight
 0 0 * * * /opt/cis-monitor/run-daily.sh >> /var/log/cis-cron.log 2>&1
 ```
 
-Integration with Configuration Management
+## Integration with Configuration Management
 
 Claude Code hardening scripts integrate smoothly with tools like Ansible, Chef, or Puppet. Generate Ansible-playbook compatible output:
 
@@ -226,7 +225,7 @@ Claude outputs a complete playbook:
         - { name: 'fs.suid_dumpable', value: '0' }
 ```
 
-Best Practices for CIS Hardening Automation
+## Best Practices for CIS Hardening Automation
 
 When automating CIS benchmark hardening with Claude Code, follow these best practices:
 
@@ -240,11 +239,10 @@ Document Exceptions: Some CIS controls may not apply to your environment. Docume
 
 Version Control Your Scripts: Store your hardening scripts in git with clear version tagging matching the CIS benchmark version.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms CIS benchmark compliance from a manual, error-prone process into an automated, reproducible workflow. By creating dedicated skills for security hardening, you can audit systems, generate remediation scripts, implement continuous monitoring, and integrate with configuration management, all through natural language interactions. This approach ensures consistent security compliance while saving significant time and reducing human error in your security operations.
 {% endraw %}
-
 
 Related Reading
 

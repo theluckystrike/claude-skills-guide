@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 Claude Code for Web App Manifest Configuration Guide
 
 Web app manifests are the backbone of modern progressive web applications (PWAs) and define how your application behaves when installed on a user's device. When working with Claude Code, understanding how to properly configure these manifests ensures your AI-assisted projects are production-ready and installable. This guide walks you through the essential configurations, common pitfalls, and best practices for web app manifest files in Claude Code projects.
 
-Understanding Web App Manifests
+## Understanding Web App Manifests
 
 A web app manifest is a JSON file that provides metadata about your web application. It controls how your app appears in the user's home screen, what icon to display, and how it should launch. Claude Code can help you generate, validate, and optimize these manifests as part of your development workflow.
 
@@ -117,7 +116,7 @@ Before diving into individual fields, it helps to understand what a complete, pr
 
 You can ask Claude Code to generate this file from a single prompt: `Create a complete web app manifest for a productivity PWA named TaskMaster, using blue (#2563eb) as the primary color, with icon entries for all standard sizes and two app shortcuts.`
 
-Essential Manifest Fields
+## Essential Manifest Fields
 
 Every web app manifest should include these fundamental properties to function correctly:
 
@@ -212,7 +211,7 @@ The `display` mode controls the browser chrome appearance:
 
 For most production PWAs, `standalone` is the right default. It removes the address bar while keeping the system status bar, giving users a native-app feel without hiding the clock or battery indicator.
 
-Advanced Configuration Options
+## Advanced Configuration Options
 
 theme_color and background_color
 
@@ -327,11 +326,11 @@ The `screenshots` array provides images used in app stores and install dialogs t
 
 Use `form_factor: "wide"` for desktop screenshots and `form_factor: "narrow"` for mobile. Chrome on Android uses these in the enhanced install dialog to show users what the app looks like before they install it, which increases conversion rates.
 
-Working with Claude Code
+## Working with Claude Code
 
 Claude Code can assist you in several ways when configuring web app manifests:
 
-Generating Initial Manifests
+## Generating Initial Manifests
 
 Ask Claude Code to create a basic manifest by providing your project details:
 
@@ -344,7 +343,7 @@ and Today's Tasks, and two screenshots for mobile and desktop.
 
 Claude Code will produce a complete JSON file you can place at `public/manifest.json` immediately. From there you can refine specific fields rather than writing from scratch.
 
-Validating Manifests
+## Validating Manifests
 
 Claude Code can review your manifest for common issues:
 
@@ -357,7 +356,7 @@ Claude Code can review your manifest for common issues:
 
 Paste your manifest and ask: `Review this web app manifest for missing fields, incorrect values, and any properties that would prevent Chrome from showing the install prompt.`
 
-Generating the Icon Build Script
+## Generating the Icon Build Script
 
 Ask Claude Code to write an automated icon pipeline for your CI/CD process:
 
@@ -370,7 +369,7 @@ them to public/icons/, and also creates a 512x512 maskable version with
 
 Claude Code will produce a ready-to-run script using `sharp` or `jimp`, saving significant manual effort.
 
-Dynamic Manifest Updates
+## Dynamic Manifest Updates
 
 For single-page applications, you might need to update manifest properties dynamically based on user preferences or runtime conditions:
 
@@ -390,7 +389,7 @@ if ('serviceWorker' in navigator) {
 
 This technique is useful for white-label applications where tenant branding (colors, app name) differs per account. Note that dynamically injecting a data URI manifest is not fully supported in all browsers. test on iOS Safari and Firefox before relying on it in production.
 
-Manifest Validation with Workbox
+## Manifest Validation with Workbox
 
 If you are using Workbox for your service worker, Claude Code can help you integrate manifest validation into your build process:
 
@@ -410,7 +409,7 @@ if (errors.length > 0) {
 
 Ask Claude Code to write the `validateManifest` function that checks for all required fields, valid icon sizes, correct URL formats, and correct use of `purpose` values.
 
-Common Configuration Mistakes to Avoid
+## Common Configuration Mistakes to Avoid
 
 1. Missing Icon Files
 
@@ -454,7 +453,7 @@ Teams that rebrand often update their source logo but forget to regenerate the i
 
 As of the current spec, valid `purpose` values are `any`, `maskable`, and `monochrome`. Some older guides recommend `"any maskable"` as a space-separated list (which is valid) but using only `"maskable"` for a non-maskable icon causes Android to crop the image incorrectly. Always test maskable icons using the [Maskable.app](https://maskable.app) tool before shipping.
 
-Testing Your Manifest
+## Testing Your Manifest
 
 After creating your manifest, verify it works correctly:
 
@@ -467,7 +466,7 @@ After creating your manifest, verify it works correctly:
 
 Claude Code can help you interpret these test results and suggest fixes for any issues found. Paste the Lighthouse PWA audit JSON output and ask: `Identify which manifest properties are causing the failing PWA checks and provide corrected JSON for each.`
 
-Automated Manifest Testing with Playwright
+## Automated Manifest Testing with Playwright
 
 For CI pipelines, you can use Playwright to verify the manifest is served correctly on every deploy:
 
@@ -507,7 +506,7 @@ test('manifest is valid and installable', async ({ page }) => {
 
 Ask Claude Code to expand this test suite to also validate that every icon URL returns a 200 status and that color values are valid hex strings.
 
-Manifest Field Reference
+## Manifest Field Reference
 
 Here is a quick-reference table of all manifest properties with their support status:
 
@@ -527,7 +526,7 @@ Here is a quick-reference table of all manifest properties with their support st
 | `screenshots` | Optional | Yes | No | No | Install dialog |
 | `lang` | Recommended | Yes | Yes | Yes | BCP 47 language tag |
 
-Best Practices Summary
+## Best Practices Summary
 
 - Always provide both 192x192 and 512x512 icon sizes as a minimum
 - Use maskable icons for Android compatibility, keeping content in the central 80% safe zone

@@ -13,18 +13,15 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-
-Have I Been Pwned Chrome: A Developer and Power User Guide
-
 Have I Been Pwned (HIBP) remains the most comprehensive resource for checking whether your email addresses or passwords have appeared in known data breaches. Created by security researcher Troy Hunt, this free service aggregates breach data from thousands of incidents and provides multiple ways to query its database. For developers and power users, integrating HIBP into your workflow goes beyond the basic website check.
 
-Using the Official Have I Been Pwned Website
+## Using the Official Have I Been Pwned Website
 
 The simplest entry point is visiting [haveibeenpwned.com](https://haveibeenpwned.com). Enter your email address, and the service returns all breaches where that email appears. Each breach entry includes the date, the affected service, and what data types were exposed (email, password, phone number, physical address, etc.).
 
 For Chrome users, the official "Have I Been Pwned" extension provides continuous protection. After installing it from the Chrome Web Store, the extension monitors your browsing and alerts you when you visit a site that has suffered a breach. This real-time notification system helps you make informed decisions about creating new accounts or logging into potentially compromised services.
 
-The Have I Been Pwned API for Developers
+## The Have I Been Pwned API for Developers
 
 For programmatic access, HIBP offers a well-documented REST API. The API requires an API key, which you can obtain by subscribing to the service. Here's how to check an email address programmatically:
 
@@ -35,7 +32,7 @@ curl -H "hibp-api-key: YOUR_API_KEY" \
 
 The API returns a JSON array of breach objects. Each object contains the breach name, title, domain, breach date, and a description of what was exposed. Handle this data carefully, it's breach data, meaning you're working with compromised credentials that should never be stored or misused.
 
-Batch Checking Multiple Emails
+## Batch Checking Multiple Emails
 
 If you need to check multiple email addresses, a Python script provides flexibility for bulk workflows:
 
@@ -67,7 +64,7 @@ if __name__ == "__main__":
 
 Save this as `check_breaches.py`, set your environment variables, and run it with `python check_breaches.py`. This pattern extends easily to read emails from a file or database for bulk checking.
 
-Checking Passwords Securely
+## Checking Passwords Securely
 
 Password checking via the API uses a k-anonymity model that never sends your actual password over the network. The process works like this:
 
@@ -101,7 +98,7 @@ else:
 
 This implementation sends only the first five characters of the SHA-1 hash to the API. The server returns all hashes matching that prefix, and your local code performs the suffix comparison. This design ensures your password never leaves your machine in any form.
 
-Integrating HIBP into Your Applications
+## Integrating HIBP into Your Applications
 
 For developers building authentication systems or password managers, integrating HIBP provides an additional security layer. Consider these practical approaches:
 
@@ -166,7 +163,7 @@ while True:
     time.sleep(60)
 ```
 
-Quick Checks with Chrome DevTools
+## Quick Checks with Chrome DevTools
 
 For on-the-fly verification without leaving the browser, Chrome DevTools provides a handy shortcut. Open the console on any page and run a fetch directly:
 
@@ -184,7 +181,7 @@ checkBreach('your@email.com');
 
 This is useful for quick, one-off checks during development or security audits without needing a dedicated script.
 
-Chrome Extension Alternatives and Extensions
+## Chrome Extension Alternatives and Extensions
 
 Beyond the official HIBP extension, several Chrome extensions provide similar functionality with additional features:
 
@@ -196,7 +193,7 @@ Chrome Password Manager Integration: Google's built-in password manager includes
 
 For power users managing multiple identities or conducting security research, consider running local copies of breach databases. Several projects provide downloadable breach datasets for offline analysis, though handling this data requires strict security practices.
 
-Scheduling Automated Breach Checks
+## Scheduling Automated Breach Checks
 
 For continuous monitoring without a full application stack, a simple cron job is sufficient. Schedule the Python batch script to run daily:
 
@@ -206,7 +203,7 @@ For continuous monitoring without a full application stack, a simple cron job is
 
 This runs at 8 AM every day and logs results. Extend the script to send notifications via email, Slack, or a webhook when new breaches are detected.
 
-What to Do If Your Email Is Breached
+## What to Do If Your Email Is Breached
 
 When breach checking reveals exposed addresses, act immediately:
 
@@ -216,7 +213,7 @@ When breach checking reveals exposed addresses, act immediately:
 4. Use a password manager to generate unique, strong passwords for each account going forward
 5. Monitor for phishing attempts that may weaponize information from the breach
 
-API Security Considerations
+## API Security Considerations
 
 When building breach-checking workflows, follow these guardrails:
 
@@ -225,7 +222,7 @@ When building breach-checking workflows, follow these guardrails:
 - Only check addresses you own or have explicit permission to query. checking third-party emails without consent raises ethical and legal concerns
 - Never store breach data beyond its immediate use. breach datasets contain compromised credentials and should not be persisted
 
-Best Practices for Ongoing Protection
+## Best Practices for Ongoing Protection
 
 Beyond checking whether you've been pwned, establish habits that minimize your exposure:
 
@@ -236,7 +233,6 @@ Beyond checking whether you've been pwned, establish habits that minimize your e
 - Consider using email forwarding aliases to identify which services leak or sell your data
 
 The HIBP API and Chrome extensions provide solid tools for staying informed about credential exposure. By integrating these checks into your development workflow and personal security practices, you reduce the risk of account compromise through credential stuffing and targeted attacks that rely on reused passwords.
-
 
 Related Reading
 

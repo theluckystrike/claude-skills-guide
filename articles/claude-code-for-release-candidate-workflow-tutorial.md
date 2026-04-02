@@ -1,6 +1,5 @@
 ---
 
-
 layout: default
 title: "Claude Code for Release Candidate Workflow Tutorial"
 description: "Learn how to create a professional release candidate workflow using Claude Code. This tutorial covers automated testing, version management, and."
@@ -13,7 +12,6 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 ---
-
 
 {% raw %}
 Claude Code for Release Candidate Workflow Tutorial
@@ -30,7 +28,7 @@ One of the most common failure modes in software delivery is the "release day sc
 
 The practical difference is that when your RC branch is created, the hard work is already done. You're verifying and approving, not discovering and writing.
 
-Setting Up Your Release Candidate Branch Strategy
+## Setting Up Your Release Candidate Branch Strategy
 
 A solid foundation for RC workflows begins with branch management. The following structure works well for most projects:
 
@@ -62,7 +60,7 @@ fi
 
 A consistent naming convention also makes it straightforward to wire up GitHub Actions or other CI systems to run a specific set of release-focused checks that differ from standard PR checks. longer integration test suites, full build verification, dependency audit.
 
-Automated Testing in Your RC Workflow
+## Automated Testing in Your RC Workflow
 
 Testing forms the backbone of any release candidate workflow. Claude Code can orchestrate comprehensive testing across multiple dimensions:
 
@@ -130,7 +128,7 @@ jobs:
 
 This parallel execution of integration tests and security audit after unit tests pass keeps the overall pipeline time reasonable while ensuring nothing is skipped.
 
-Version Management with Claude Code
+## Version Management with Claude Code
 
 Semantic versioning provides clarity about the nature of changes in each release. Claude Code can automate version updates and. importantly. validate that the version bump is appropriate given the actual changes in the branch.
 
@@ -158,7 +156,7 @@ This automation ensures your release notes are always current and comprehensive.
 
 A practical pattern is to keep a `CHANGELOG.md` with an `[Unreleased]` section that accumulates entries as features and fixes land. When you cut an RC, Claude Code renames that section to the version number and creates a new empty `[Unreleased]` section. This makes the changelog a living document rather than a release-day chore.
 
-Pre-Release Verification Checklist
+## Pre-Release Verification Checklist
 
 Before declaring a release candidate ready for production, run through this checklist. Claude Code can help verify each item programmatically:
 
@@ -182,7 +180,7 @@ The database migration item deserves extra attention. Many outages during releas
 
 Claude Code can help here by reading your migration files and flagging patterns that are known to cause issues. adding non-null columns without defaults, building unindexed foreign keys on large tables, or using operations that hold exclusive locks.
 
-Rollback Planning
+## Rollback Planning
 
 Every RC promotion plan needs an equally detailed rollback plan. The worst time to figure out how to roll back is when you're under pressure after a bad deploy.
 
@@ -215,7 +213,7 @@ echo "Rollback to ${PREVIOUS_TAG} complete."
 
 Claude Code can generate rollback scripts tailored to your deployment environment. whether you're on Kubernetes, a managed container service, or a traditional server deployment. The key is having this script written, tested in staging, and stored somewhere your team can find it at 2am.
 
-Promoting Release Candidates to Production
+## Promoting Release Candidates to Production
 
 When your RC passes all verification checks, promoting to production requires careful execution:
 
@@ -247,7 +245,7 @@ For teams that need richer release notes than the auto-generated commit list, Cl
 
 After the promotion, monitor your key indicators actively for at least 30 minutes before declaring the release stable. Error rates, response times, and queue depths should all be watched. Define in advance what threshold would trigger an immediate rollback. for example, if error rate exceeds 0.5% in the first 10 minutes, roll back without waiting to investigate the cause.
 
-Workflow Comparison: Manual vs. Claude Code-Assisted
+## Workflow Comparison: Manual vs. Claude Code-Assisted
 
 | Stage | Manual Process | Claude Code-Assisted |
 |---|---|---|
@@ -260,7 +258,7 @@ Workflow Comparison: Manual vs. Claude Code-Assisted
 
 The compounding effect across these stages is significant. Each individual step is faster, but the larger benefit is that the entire process becomes auditable and repeatable. A new team member can follow the same steps and get the same results, because Claude Code enforces consistency that humans under time pressure do not.
 
-Best Practices for RC Workflows
+## Best Practices for RC Workflows
 
 Keep these principles in mind for successful release candidate management:
 
@@ -274,7 +272,7 @@ Automate Repetitive Tasks: Any task you perform more than twice should be automa
 
 Run RCs in Production-Like Environments: Testing in an environment that differs significantly from production is the most common source of "it worked in staging" failures. Your RC validation should happen in an environment that mirrors production infrastructure, data volumes, and traffic patterns as closely as possible.
 
-Conclusion
+## Conclusion
 
 Building an effective release candidate workflow with Claude Code transforms a potentially chaotic process into a systematic, repeatable operation. By using AI assistance for testing, version management, and documentation, teams can release with confidence while maintaining high code quality.
 

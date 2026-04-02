@@ -13,7 +13,6 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-
 {% raw %}
 Claude Code Jest Unit Testing Workflow Guide
 
@@ -25,7 +24,7 @@ Jest is the default test runner for Create React App and has a mature, battle-te
 
 For teams using Vitest instead, see [Vitest Fast Testing Workflow](/claude-code-vitest-fast-testing-workflow/)
 
-Setting Up Jest with Claude Code
+## Setting Up Jest with Claude Code
 
 Before establishing your testing workflow, ensure Jest is properly configured in your project. The foundation begins with installing Jest and its dependencies:
 
@@ -51,7 +50,7 @@ module.exports = {
 
 Claude Code can assist with generating initial test configurations and explaining complex setup options. When you need to debug configuration issues, describe your setup to Claude and it will provide targeted recommendations.
 
-Writing Effective Unit Tests
+## Writing Effective Unit Tests
 
 Unit tests should focus on testing individual functions, methods, or components in isolation. The key principle involves writing tests that are fast, reliable, and provide clear feedback when failures occur.
 
@@ -130,7 +129,7 @@ describe('validateUser', () => {
 });
 ```
 
-Integrating Test-Driven Development
+## Integrating Test-Driven Development
 
 Test-driven development (TDD) creates a rhythm where tests guide implementation. Claude Code can accelerate this workflow by generating test skeletons based on function signatures or requirements. When practicing TDD, follow the red-green-refactor cycle:
 
@@ -140,7 +139,7 @@ Test-driven development (TDD) creates a rhythm where tests guide implementation.
 
 The TDD approach works particularly well when combined with Claude Code's ability to suggest edge cases and boundary conditions you might otherwise overlook. For complex business logic, ask Claude to generate test cases covering various input scenarios.
 
-Automating Test Execution
+## Automating Test Execution
 
 Efficient workflows require automated test execution at appropriate stages. Configure your package.json scripts to run tests in different modes:
 
@@ -163,13 +162,13 @@ npx husky add .husky/pre-commit "npm test"
 
 This prevents broken code from entering your repository and maintains a clean main branch.
 
-Leveraging Claude Skills for Testing
+## Leveraging Claude Skills for Testing
 
 Several Claude skills enhance the testing experience. The tdd skill provides structured guidance for test-driven development workflows, offering prompts and templates tailored to your project requirements. When documenting test coverage, the pdf skill can generate comprehensive reports for stakeholders who prefer formatted documentation.
 
 For frontend projects, combining Jest with the frontend-design skill helps create tests that verify UI component behavior. The supermemory skill maintains context across testing sessions, remembering your project's conventions and preferences.
 
-Measuring and Improving Coverage
+## Measuring and Improving Coverage
 
 Code coverage metrics reveal how much of your codebase executes during tests. Jest provides coverage reports out of the box:
 
@@ -207,7 +206,7 @@ describe('processPayment error handling', () => {
 });
 ```
 
-Best Practices for Maintainable Tests
+## Best Practices for Maintainable Tests
 
 Keep your test suite maintainable by following these principles:
 
@@ -219,14 +218,13 @@ Keep your test suite maintainable by following these principles:
 
 When tests become slow or flaky, investigate the cause immediately. Slow tests indicate tightly coupled code, while flaky tests often reveal timing dependencies or shared state issues.
 
-Conclusion
+## Conclusion
 
 Building a solid Jest unit testing workflow with Claude Code combines powerful automation with intelligent assistance. Focus on writing meaningful tests that verify behavior, automate execution at appropriate gates, and continuously improve your test suite. The investment in testing pays dividends through reduced bugs, easier refactoring, and confident deployments.
 
 Remember that testing is a skill that improves with practice. Use Claude Code as a learning partner, ask questions, request explanations, and let it help you develop comprehensive test strategies tailored to your project's unique needs.
 
 ---
-
 
 Related Reading
 

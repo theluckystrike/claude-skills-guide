@@ -18,7 +18,7 @@ Capacity planning is one of the most challenging aspects of infrastructure manag
 
 This tutorial walks you through building a complete capacity planning workflow using Claude Code skills, complete with practical examples and actionable advice you can apply immediately to your projects.
 
-Understanding Capacity Planning Challenges
+## Understanding Capacity Planning Challenges
 
 Before diving into the technical implementation, it's worth understanding what makes capacity planning difficult. Traditional approaches rely on static thresholds and manual analysis, which leads to either over-provisioning (wasting money) or under-provisioning (causing outages).
 
@@ -30,7 +30,7 @@ Modern capacity planning requires:
 
 Claude Code can assist with all of these areas through carefully designed skills that handle data collection, analysis, and even execution of scaling actions.
 
-Setting Up Your Capacity Planning Skill
+## Setting Up Your Capacity Planning Skill
 
 The first step is creating a dedicated Claude Code skill for capacity planning. This skill will encapsulate all the prompts, tools, and logic needed for your workflow.
 
@@ -48,7 +48,7 @@ You are a capacity planning expert. Analyze the provided metrics and generate ac
 
 This minimal skill definition gives you a foundation to build upon. The key here is restricting tools to only what's necessary for the workflow, in this case, file operations, bash commands for running analysis scripts, and the todo tool for tracking action items.
 
-Collecting and Analyzing Metrics
+## Collecting and Analyzing Metrics
 
 The core of any capacity planning workflow is data. Your Claude Code skill needs access to metrics from your infrastructure. Here's how to structure the analysis phase:
 
@@ -99,7 +99,7 @@ if __name__ == "__main__":
 
 This script collects CPU and memory metrics from your infrastructure. Run it periodically and store the results for trend analysis. Your Claude Code skill can then read these JSON files and provide analysis.
 
-Building the Analysis Prompt
+## Building the Analysis Prompt
 
 The real power of Claude Code comes from its ability to understand context and provide intelligent recommendations. Here's how to structure the analysis prompt within your skill:
 
@@ -118,7 +118,7 @@ Present your findings in a structured format with clear action items.
 
 When you invoke this skill with your metrics data, Claude will analyze patterns and provide recommendations based on its understanding of capacity planning best practices. The model can identify correlations you might miss and suggest actions that balance performance with cost efficiency.
 
-Creating Automated Scaling Recommendations
+## Creating Automated Scaling Recommendations
 
 Beyond passive analysis, you can extend your capacity planning skill to generate concrete scaling recommendations. Here's a practical approach:
 
@@ -167,7 +167,7 @@ if __name__ == "__main__":
 
 This script identifies when resources exceed defined thresholds and generates actionable recommendations. Integrate it into your Claude Code workflow by having the skill call this script and then analyze the output.
 
-Implementing a Complete Workflow
+## Implementing a Complete Workflow
 
 Now let's put it all together into a complete capacity planning workflow:
 
@@ -199,7 +199,7 @@ For each recommendation, provide:
 
 This workflow collects metrics, generates initial recommendations, and then uses Claude to add intelligent context and prioritization. The human-in-the-loop approach ensures that scaling decisions are reviewed before execution.
 
-Best Practices for Capacity Planning Skills
+## Best Practices for Capacity Planning Skills
 
 When building capacity planning workflows with Claude Code, keep these best practices in mind:
 
@@ -213,14 +213,13 @@ Maintain human oversight. Fully automated scaling can be risky. Design your work
 
 Iterate and improve. Start simple and add sophistication over time. Monitor what recommendations Claude provides and refine your prompts based on the results.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms capacity planning from a reactive, manual process into an intelligent, automated workflow. By combining structured data collection with Claude's analysis capabilities, you can build systems that proactively identify scaling needs, predict future demand, and optimize resource allocation.
 
 The key is starting simple: collect metrics, generate basic recommendations, and gradually add sophistication as you learn what works for your specific infrastructure. With this tutorial's patterns as a foundation, you'll be able to build capacity planning workflows that save both money and prevent outages.
 
 Remember that the most effective capacity planning combines automation with human judgment. Use Claude Code to do the heavy lifting of data analysis and recommendation generation, but keep experienced engineers in the loop for critical decisions.
-
 
 Related Reading
 

@@ -13,13 +13,12 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
 How to Make Claude Code Not Break Type Definitions
 
 When working with Claude Code for code generation and editing, maintaining type safety is crucial. Type definitions serve as the contract between your codebase components, and accidentally modifying them can introduce subtle bugs that are hard to track down. This guide covers practical strategies to use Claude Code's capabilities while preserving type definition integrity.
 
-Understanding the Challenge
+## Understanding the Challenge
 
 Claude Code is excellent at generating code, refactoring, and making systematic changes across your codebase. However, when editing type definitions, whether TypeScript interfaces, type aliases, or declaration files, it's easy for AI-assisted edits to introduce inconsistencies.
 
@@ -37,7 +36,7 @@ Common issues include:
 
 The frustrating part is that many of these changes compile cleanly. The bug only surfaces at runtime, or in a component you didn't think was related to the change at all.
 
-Why AI-Assisted Edits Are Especially Risky for Types
+## Why AI-Assisted Edits Are Especially Risky for Types
 
 When Claude Code modifies an implementation file, the risk is localized. If a function body is wrong, the function misbehaves. But when a type definition changes, every consumer of that type is affected simultaneously. A single interface change can silently break dozens of components.
 
@@ -45,7 +44,7 @@ Claude Code also tends to be pragmatic about types. If a function needs a new pr
 
 The strategies below address these risks directly.
 
-Strategic Approaches
+## Strategic Approaches
 
 1. Use File Targeting for Type-Safe Edits
 
@@ -170,9 +169,9 @@ If your codebase uses TypeScript project references, you can physically separate
 
 With this structure, when you ask Claude Code to modify `packages/api`, it works within that package's scope. Modifying `packages/types` requires a separate, explicit request. giving you a natural checkpoint to review type changes independently.
 
-Practical Examples
+## Practical Examples
 
-Example 1: Safe Interface Extension
+## Example 1: Safe Interface Extension
 
 When you need to extend an interface, explicitly reference the original:
 
@@ -203,7 +202,7 @@ export interface User extends BaseEntity {
 
 If Claude Code instead modifies `BaseEntity` directly by adding the new fields, that would affect every entity in the system. not just users. Be explicit that extension is required, not mutation.
 
-Example 2: Type-Safe API Response Handling
+## Example 2: Type-Safe API Response Handling
 
 When Claude Code generates API handling code, specify the response contract:
 
@@ -246,7 +245,7 @@ async function getUser(id: string): Promise<{ data: any; status: number }> {
 
 The second version compiles but bypasses your type contracts entirely.
 
-Example 3: Preserving Third-Party Type Definitions
+## Example 3: Preserving Third-Party Type Definitions
 
 When working with libraries that have their own type definitions:
 
@@ -274,7 +273,7 @@ declare module "stripe" {
 
 This approach survives library updates and keeps your augmentations clearly separated from the library's own definitions.
 
-Example 4: Preventing Type Widening in Refactors
+## Example 4: Preventing Type Widening in Refactors
 
 A common problem during refactors: Claude Code converts a discriminated union to a simpler type because it seems to reduce complexity:
 
@@ -299,7 +298,7 @@ Refactor the payment processing code. The PaymentMethod discriminated union
 in types/payment.ts is intentional and must not be simplified or widened.
 ```
 
-Comparison: Safe vs. Unsafe Prompting
+## Comparison: Safe vs. Unsafe Prompting
 
 | Scenario | Unsafe Prompt | Safe Prompt |
 |---|---|---|
@@ -310,7 +309,7 @@ Comparison: Safe vs. Unsafe Prompting
 
 The pattern is always the same: be explicit about what should remain unchanged, not just what should change.
 
-Best Practices Summary
+## Best Practices Summary
 
 1. Never modify node_modules type definitions directly. Create override types in your own types directory using declaration merging
 
@@ -328,7 +327,7 @@ Best Practices Summary
 
 8. Establish type boundaries in your prompts. Tell Claude exactly which type files are off-limits unless explicitly instructed otherwise
 
-Using Claude Code's Built-in Safeguards
+## Using Claude Code's Built-in Safeguards
 
 Claude Code includes features that help prevent unintended type breaks:
 
@@ -347,7 +346,7 @@ optional additions. Flag any change that could break existing consumers.
 
 This gives you a second pass specifically focused on type safety before you run the type checker.
 
-Conclusion
+## Conclusion
 
 Claude Code is a powerful tool for accelerating development, but type definitions require special care. By using explicit targeting, using edit modes, creating type snapshots, and following the practices outlined in this guide, you can harness AI-assisted development while maintaining a solid type system.
 
@@ -356,7 +355,6 @@ The key mindset shift is treating type definitions as protected contracts rather
 Remember: Type definitions are the contract of your codebase. Protect them, and they'll protect you from runtime errors.
 
 {% endraw %}
-
 
 Related Reading
 

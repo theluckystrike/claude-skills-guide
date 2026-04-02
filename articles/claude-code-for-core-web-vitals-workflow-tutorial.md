@@ -17,7 +17,7 @@ Claude Code for Core Web Vitals Workflow Tutorial
 
 Core Web Vitals have become essential metrics for web performance, directly impacting user experience and search engine rankings. Google's Core Web Vitals, Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS), measure loading performance, interactivity, and visual stability. This tutorial shows you how to use Claude Code to create efficient workflows for measuring, monitoring, and optimizing these critical metrics.
 
-Understanding Core Web Vitals Metrics
+## Understanding Core Web Vitals Metrics
 
 Before diving into workflows, let's review what each metric measures, what counts as a passing score, and why it matters for your users:
 
@@ -37,7 +37,7 @@ Before diving into workflows, let's review what each metric measures, what count
 
 Claude Code can help you audit all four metrics, identify root causes, and implement fixes systematically.  practical workflows.
 
-Setting Up Your Web Vitals Testing Environment
+## Setting Up Your Web Vitals Testing Environment
 
 First, create a Claude Code skill that helps you run Web Vitals audits consistently. This skill encapsulates the tools and prompts needed across sessions:
 
@@ -71,7 +71,7 @@ lighthouse https://example.com \
   --chrome-flags="--headless"
 ```
 
-Workflow 1: Running Quick Web Vitals Audits
+## Workflow 1: Running Quick Web Vitals Audits
 
 The most common workflow is running a quick audit on a URL to get baseline metrics. Create a simple bash function to run Lighthouse and extract the scores you actually care about:
 
@@ -123,7 +123,7 @@ Read lighthouse-20260315-143022.json and explain:
 
 Claude Code will parse the JSON, identify the `lcp-lazy-loaded`, `render-blocking-resources`, and `unused-javascript` audits, and give you specific file names and sizes rather than generic advice.
 
-Workflow 2: Batch Testing Multiple Pages
+## Workflow 2: Batch Testing Multiple Pages
 
 For larger sites, you need to test multiple pages systematically. Create a workflow that reads a list of URLs and runs audits on each, then aggregates the results into a single report:
 
@@ -179,7 +179,7 @@ Highlight any page where LCP > 2.5s or CLS > 0.1.
 
 This batch approach lets you track performance across your entire site without manually opening each report. Store the reports directory in Git to compare runs over time.
 
-Workflow 3: Automated Regression Detection
+## Workflow 3: Automated Regression Detection
 
 Set up a GitHub Actions workflow that runs Web Vitals audits on every pull request and blocks merges that regress your scores:
 
@@ -249,11 +249,11 @@ Suggest thresholds for each Core Web Vital assertion that:
 - Match our P75 field data from CrUX
 ```
 
-Workflow 4: Real User Monitoring Integration
+## Workflow 4: Real User Monitoring Integration
 
 Lab tests measure a controlled environment. Real users have different devices, networks, and browser extensions. Combine Claude Code with real user monitoring (RUM) data for a complete picture.
 
-Collecting Field Data with the web-vitals Library
+## Collecting Field Data with the web-vitals Library
 
 Add the `web-vitals` npm package to your frontend to collect INP, LCP, and CLS from actual users:
 
@@ -285,7 +285,7 @@ onFCP(sendToAnalytics);
 onTTFB(sendToAnalytics);
 ```
 
-Querying the Chrome UX Report API
+## Querying the Chrome UX Report API
 
 For public-facing sites Google collects field data automatically. Export it via the CrUX API:
 
@@ -313,7 +313,7 @@ For each metric, note whether field P75 is better or worse than lab results.
 Explain likely reasons for any gaps larger than 30%.
 ```
 
-Lab vs. Field Data Comparison
+## Lab vs. Field Data Comparison
 
 Understanding the gap between lab and field performance is important for prioritizing fixes:
 
@@ -326,11 +326,11 @@ Understanding the gap between lab and field performance is important for priorit
 
 Claude Code can help you interpret these discrepancies and decide which metric to prioritize based on your actual user demographics.
 
-Common Optimization Patterns
+## Common Optimization Patterns
 
 Claude Code can help you implement proven optimization techniques. Here are patterns for each metric, with concrete before/after examples.
 
-Optimizing LCP
+## Optimizing LCP
 
 LCP measures when the largest content element becomes visible. The most impactful optimizations:
 
@@ -399,7 +399,7 @@ for region in us-east eu-west ap-south; do
 done
 ```
 
-Optimizing FID and INP
+## Optimizing FID and INP
 
 FID and INP both stem from the same root cause: long JavaScript tasks blocking the main thread. The key strategies:
 
@@ -464,7 +464,7 @@ then read the generated stats.html and identify:
 - Tree-shaking opportunities in our utility imports
 ```
 
-Optimizing CLS
+## Optimizing CLS
 
 CLS measures visual stability during page load. Preventing layout shifts requires reserving space before content loads.
 
@@ -536,7 +536,7 @@ And preload the font in your HTML head:
 
 Using `font-display: optional` eliminates font-swap layout shift entirely by only using the web font if it has already been cached or loads within the first 100ms of the page load.
 
-Diagnosing CLS with Claude Code
+## Diagnosing CLS with Claude Code
 
 CLS is notoriously difficult to debug because the shift may happen after the initial load. Use Claude Code to write a diagnostic script that captures shift sources in the browser:
 
@@ -565,7 +565,7 @@ Identify which elements are causing the largest shifts and
 suggest the CSS or HTML changes needed to fix each one.
 ```
 
-Continuous Monitoring Strategy
+## Continuous Monitoring Strategy
 
 For sustainable performance improvement, establish a layered monitoring strategy:
 
@@ -618,7 +618,7 @@ rm -f "$REPORT"
 
 Schedule this with a GitHub Actions `schedule` trigger (daily at 6am UTC) so failures alert your team before users notice.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms Core Web Vitals optimization from a manual, sporadic process into an automated, systematic workflow. By integrating Lighthouse audits into your development pipeline, setting up regression detection, and following proven optimization patterns, you can maintain excellent Core Web Vitals scores consistently.
 
@@ -627,7 +627,6 @@ Start with quick audits on your key pages to establish baseline metrics. Then mo
 Claude Code handles the heavy lifting at every step, generating audit scripts, interpreting JSON output, suggesting fixes with working code, and building monitoring pipelines, so you can focus on the optimizations that matter most.
 
 Remember: good Core Web Vitals scores not only improve user experience but also contribute to better search rankings. Make them a priority in your development workflow.
-
 
 Related Reading
 

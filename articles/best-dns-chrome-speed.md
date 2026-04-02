@@ -17,7 +17,7 @@ DNS (Domain Name System) resolution is often the hidden bottleneck in browser pe
 
 For developers and power users, Chrome provides several settings to optimize DNS behavior. This guide covers practical configurations that can reduce resolution time and improve overall browsing speed. including how to measure the impact before and after your changes.
 
-Understanding DNS Resolution in Chrome
+## Understanding DNS Resolution in Chrome
 
 Every time you type a URL into Chrome's address bar, the browser performs a DNS lookup. By default, Chrome uses your operating system's DNS settings, which typically rely on your ISP's resolver. This approach has limitations:
 
@@ -30,7 +30,7 @@ Chrome implements its own DNS layer with features designed to reduce lookup late
 
 When you open DevTools and look at the Network waterfall, you will often see a thin gray bar labeled "DNS Lookup" before the white "Connecting" bar. On a fast resolver that bar might be 2–10ms. On a congested ISP resolver it can reach 80–200ms for cold lookups. Multiply that by the number of third-party domains a modern page hits. fonts, CDNs, analytics, ad networks. and DNS can account for 500ms or more of real user latency on first loads.
 
-Enable DNS Prefetching
+## Enable DNS Prefetching
 
 Chrome's DNS prefetching feature proactively resolves domain names before you click links. When you hover over a link or when a page contains links to external domains, Chrome can initiate DNS resolution in the background.
 
@@ -94,7 +94,7 @@ DnsOverHttpsTemplates = "https://dns.cloudflare.com/dns-query"
 
 For macOS managed environments, a configuration profile can push these settings to all Chrome instances without end-user involvement. useful when you want consistent DoH behavior across a development team.
 
-Use a Fast Custom DNS Resolver
+## Use a Fast Custom DNS Resolver
 
 While browser-level DoH is convenient, system-level DNS configuration often provides more control. For developers and power users, switching to a fast DNS resolver can significantly reduce lookup times.
 
@@ -123,7 +123,7 @@ google-chrome --dns-over-https.template="https://dns.cloudflare.com/dns-query"
 
 This keeps your system DNS untouched while Chrome uses the faster resolver. useful when you need your other applications to continue using a corporate DNS server but want Chrome to resolve public sites faster.
 
-Enable Prediction API
+## Enable Prediction API
 
 Chrome's Prediction API helps the browser anticipate your actions based on browsing history and machine learning. While primarily known for preloading pages, the prediction system also helps with DNS resolution.
 
@@ -145,7 +145,7 @@ There are three preloading levels Chrome can use, and understanding them helps y
 
 Extended preloading fetches and renders pages you have not navigated to yet, which means those sites may see requests as real visits. For most developer workflows this trade-off is acceptable, but be aware when profiling analytics or testing ad funnels.
 
-Clear DNS Cache When Needed
+## Clear DNS Cache When Needed
 
 Sometimes DNS configuration changes don't take effect immediately due to Chrome's internal cache. The browser caches DNS results for a period determined by the TTL (Time To Live) value from the DNS server.
 
@@ -164,7 +164,7 @@ This is particularly useful after changing DNS providers or when debugging DNS-r
 
 You can also automate the flush in a local dev script using Chrome's remote debugging protocol if you run a headless or automated Chrome instance as part of your build pipeline.
 
-Advanced: Custom Hosts File with Chrome
+## Advanced: Custom Hosts File with Chrome
 
 For development workflows, you might want to override DNS results for specific domains. Chrome respects the system's hosts file, but you can also use the `--host-resolver-rules` flag for browser-specific overrides:
 
@@ -188,7 +188,7 @@ This approach is valuable for:
 
 Combine `--host-resolver-rules` with a self-signed certificate in Chrome's certificate store for fully realistic HTTPS local development without editing system files.
 
-Measuring DNS Performance
+## Measuring DNS Performance
 
 To evaluate whether your DNS configuration improvements are working, use Chrome's built-in tools:
 
@@ -216,14 +216,13 @@ Run each command several times and compare the `Query time` output. In real-worl
 
 For a full-page production view, run WebPageTest against your site before and after DNS changes. Look at the "DNS" row in the waterfall for each domain. that aggregate difference represents the real-user latency you saved.
 
-Conclusion
+## Conclusion
 
 Optimizing DNS settings in Chrome involves balancing speed, privacy, and control. For most users, enabling DoH with a fast provider like Cloudflare or Google provides immediate benefits with zero downside. Developers working with local environments can use Chrome's flags and hosts integration for more granular control.
 
 The key workflow is: measure baseline first using DevTools or `dig`, apply one change at a time, then measure again. Combining DoH with `<link rel="preconnect">` hints on your pages and Chrome's prediction API gives you a layered DNS optimization strategy that compounds across repeated visits.
 
 For enterprise and team environments, push DoH configuration via group policy so that every developer's Chrome instance benefits consistently. and pair it with a DNS provider that offers analytics (NextDNS or Cloudflare for Teams) so you can monitor resolver performance over time.
-
 
 Related Reading
 

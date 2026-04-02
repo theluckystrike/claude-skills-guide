@@ -18,7 +18,7 @@ Keyword density remains a useful metric for content optimization, even as search
 
 This guide covers how to build a keyword density checker as a Chrome extension, the core algorithms involved, and practical approaches for implementing this tool efficiently. By the end, you'll have a functional extension and a clear picture of where to take it next.
 
-Understanding Keyword Density Calculation
+## Understanding Keyword Density Calculation
 
 Keyword density represents the percentage of times a specific keyword or phrase appears relative to the total word count on a page. The basic formula is straightforward:
 
@@ -38,11 +38,11 @@ Modern implementations go beyond simple counting. A solid checker should handle:
 
 One subtlety worth understanding early: `document.body.innerText` gives you visible text but excludes content hidden via CSS (`display: none`, `visibility: hidden`). This is usually what you want for density analysis. hidden content doesn't contribute to the reading experience. but it means your numbers may differ slightly from server-side analysis tools that parse raw HTML.
 
-Building the Extension Structure
+## Building the Extension Structure
 
 A Chrome extension requires a manifest file, background scripts, and content scripts. Here's the essential structure for a keyword density checker:
 
-Manifest Configuration
+## Manifest Configuration
 
 ```json
 {
@@ -60,7 +60,7 @@ Manifest Configuration
 
 The manifest defines the extension's permissions and the popup interface users interact with. The `storage` permission is worth adding upfront. you'll almost certainly want to persist the user's keyword list between sessions so they don't have to retype it every time they open the extension.
 
-Content Script for Page Analysis
+## Content Script for Page Analysis
 
 The content script extracts text from the active page and performs the density calculation:
 
@@ -97,7 +97,7 @@ const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
 
 Whether you want whole-word matching depends on your use case. For short, generic keywords, whole-word matching prevents false positives. For branded terms or technical jargon that appear as substrings, you may prefer the looser match.
 
-Popup Interface
+## Popup Interface
 
 The popup provides user input for keywords and displays results:
 
@@ -127,7 +127,7 @@ The popup provides user input for keywords and displays results:
 
 The small additions to the original. `box-sizing: border-box` on the input, hover state on the button, density bar, warning class. go a long way toward making the tool feel polished. Users are more likely to reach for an extension that looks intentional.
 
-Popup Script with Result Rendering
+## Popup Script with Result Rendering
 
 The popup.js file connects the button click to the content script and renders results:
 
@@ -177,11 +177,11 @@ function renderResults(data, container) {
 }
 ```
 
-Advanced Features for Power Users
+## Advanced Features for Power Users
 
 Beyond basic counting, consider implementing these features for a more capable tool.
 
-Stop Word Filtering
+## Stop Word Filtering
 
 Raw word counts include common words like "the", "and", "is" that inflate the total and distort density figures. Filtering them gives a more meaningful denominator:
 
@@ -205,7 +205,7 @@ function countMeaningfulWords(text) {
 
 With stop words excluded, a density of 3% in the filtered count is a more informative signal than 3% in the raw count, because you're measuring how prominent the keyword is relative to the meaningful content. not filler words.
 
-Real-Time Analysis
+## Real-Time Analysis
 
 Monitor page changes and update density automatically:
 
@@ -225,7 +225,7 @@ observer.observe(document.body, {
 
 This approach catches dynamically loaded content but requires debouncing to avoid excessive calculations.
 
-Page Section Analysis
+## Page Section Analysis
 
 Different sections of a page warrant different keyword emphasis. Allow users to analyze specific elements:
 
@@ -250,7 +250,7 @@ function analyzeHeadings(keyword) {
 
 Heading analysis is particularly useful. A keyword appearing in H1 and at least one H2 is a healthy signal. If the keyword is absent from all headings but appears frequently in body text, that's worth flagging. it suggests the page structure doesn't reinforce the topic clearly.
 
-Export Functionality
+## Export Functionality
 
 Power users often need to export data for reports:
 
@@ -278,7 +278,7 @@ function exportToCSV(results) {
 
 Note the addition of `"${cell}"` quoting around each cell. this prevents issues when keyword values contain commas.
 
-Performance Considerations
+## Performance Considerations
 
 When analyzing pages with extensive content, performance matters. Implement these optimizations:
 
@@ -325,7 +325,7 @@ worker.onmessage = ({ data }) => sendResponse(data);
 
 Remember to add the worker file to your manifest's `web_accessible_resources` so the content script can load it via `chrome.runtime.getURL`.
 
-Comparison: Density Checker Approaches
+## Comparison: Density Checker Approaches
 
 | Method | Accuracy | Works Offline | Real-Time | Handles Dynamic Content |
 |---|---|---|---|---|
@@ -337,7 +337,7 @@ Comparison: Density Checker Approaches
 
 A Chrome extension wins on flexibility: it works on any site you don't control, including competitor pages, and it gives you live DOM data rather than cached HTML. CMS plugins are more convenient for your own content but don't generalize.
 
-Practical Usage Patterns
+## Practical Usage Patterns
 
 A keyword density checker becomes valuable in these common scenarios:
 
@@ -365,7 +365,7 @@ function runPublishChecklist(keyword, pageData) {
 
 Returning a checklist object makes it trivial to render a pass/fail summary in the popup.
 
-Integration with Development Workflow
+## Integration with Development Workflow
 
 Developers can integrate density checking into their workflow through several approaches:
 
@@ -406,7 +406,7 @@ function checkFile(filePath, keywords) {
 
 This surfaces the same checks your Chrome extension runs, but catches issues before content reaches production.
 
-What to Build Next
+## What to Build Next
 
 A working keyword density checker is a solid foundation. Here are natural next steps:
 
@@ -416,7 +416,6 @@ A working keyword density checker is a solid foundation. Here are natural next s
 - Batch analysis: Let users paste a list of URLs and analyze all of them in sequence, writing results to a single CSV.
 
 The Chrome extension format scales well for all of these additions. Because the core architecture separates content extraction (content script), logic (background service worker), and display (popup), each feature can be added without disrupting the others.
-
 
 Related Reading
 

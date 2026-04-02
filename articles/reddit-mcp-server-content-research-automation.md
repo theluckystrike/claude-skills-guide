@@ -34,7 +34,7 @@ For content strategy purposes, Reddit is particularly valuable because:
 - Hot, rising, and top feeds give different time horizons for trend analysis
 - User flairs and community rules indicate the expertise level of contributors
 
-Setting Up Your Environment
+## Setting Up Your Environment
 
 Before implementing the Reddit MCP server, ensure you have the necessary dependencies installed:
 
@@ -74,7 +74,7 @@ Register the Reddit MCP server in your Claude Code configuration:
 }
 ```
 
-Basic Implementation Patterns
+## Basic Implementation Patterns
 
 The most common use case involves fetching posts from specific subreddits based on keywords or trending topics. Here is a practical implementation using PRAW, the Python Reddit API Wrapper:
 
@@ -122,7 +122,7 @@ def research_topic(subreddit: str, keyword: str, limit: int = 50, sort: str = "r
 
 This function retrieves relevant posts and returns structured data suitable for further analysis. You can extend this pattern to track multiple keywords across different subreddits simultaneously.
 
-Fetching Top Comments from High-Value Posts
+## Fetching Top Comments from High-Value Posts
 
 Posts with high scores often contain valuable comments that do not appear in title-only searches. Fetch top comments from your highest-scoring results:
 
@@ -146,7 +146,7 @@ def get_top_comments(post_id: str, limit: int = 10):
 
 High-scoring comments often contain the most practical insights, technical clarifications, and community consensus that does not appear in the original post. For content strategy, these comments reveal what aspects of a topic the audience cares most about.
 
-Automating Trend Analysis
+## Automating Trend Analysis
 
 Content research becomes powerful when you automate trend detection. By scheduling regular queries and comparing results over time, you can identify emerging topics before they peak. For web-based trend research that complements Reddit data, the [Tavily MCP server research automation guide](/tavily-mcp-server-research-automation-guide/) covers real-time search integration.
 
@@ -208,7 +208,7 @@ class TrendTracker:
 
 This pattern works well when combined with [frontend-design skills for building dashboards](/best-claude-code-skills-to-install-first-2026/), or xlsx skills for generating trend reports in spreadsheet format.
 
-Scheduling Regular Snapshots
+## Scheduling Regular Snapshots
 
 Use cron or a simple loop to collect snapshots on a regular schedule:
 
@@ -235,7 +235,7 @@ while True:
 
 Running this for two to three weeks gives you enough historical data to distinguish genuinely emerging topics from one-off spikes.
 
-Extracting Actionable Insights
+## Extracting Actionable Insights
 
 Raw data needs processing to become useful. The following approach extracts common themes and engagement signals from collected posts:
 
@@ -284,7 +284,7 @@ def _analyze_posting_times(posts: list):
 
 The `high_engagement_titles` output is particularly useful for content strategy. These titles represent proven framing that resonated with the community. Studying them reveals the vocabulary, specificity level, and question formats that drive clicks and discussion.
 
-Practical Workflow Integration
+## Practical Workflow Integration
 
 For a complete research workflow, chain multiple MCP tools together. Use the tdd skill to test your automation scripts, the pdf skill to generate research summaries, and docx for formatted deliverables.
 
@@ -349,7 +349,7 @@ A typical pipeline execution:
 6. Feed JSON into the pdf skill to generate a formatted research brief
 7. Store key findings using supermemory for future reference in Claude sessions
 
-Handling Rate Limits and Errors
+## Handling Rate Limits and Errors
 
 Reddit's API imposes rate limits that your automation must respect. The standard limit is 100 requests per minute for authenticated applications. Implement exponential backoff and caching to stay within guidelines:
 
@@ -401,7 +401,7 @@ def safe_search(subreddit: str, query: str, kwargs):
 
 This combination of rate limiting and retry logic ensures your research automation runs reliably without triggering Reddit's anti-abuse systems. The random jitter in both the rate limiter and retry delays prevents thundering-herd behavior when multiple parallel workers hit limits simultaneously.
 
-Common Error Scenarios
+## Common Error Scenarios
 
 | Error | Cause | Handling |
 |-------|-------|---------|
@@ -411,7 +411,7 @@ Common Error Scenarios
 | `praw.exceptions.InvalidURL` | Malformed permalink | Validate before fetching |
 | Network timeout | API slowness | Retry with longer timeout |
 
-Advanced: Multi-Source Research
+## Advanced: Multi-Source Research
 
 While Reddit provides valuable community insights, combining it with other data sources improves research quality. The [Brave Search MCP server](/brave-search-mcp-server-research-automation/) provides an effective complement for web-wide search alongside community discussions.
 
@@ -440,7 +440,7 @@ def correlate_sources(topic: str):
 
 The `mcp-builder` skill can help you create custom MCP servers for additional data sources such as Hacker News, GitHub discussions, or Stack Overflow. This modular approach lets you expand your research capabilities over time without rewriting core logic.
 
-Choosing the Right Subreddits for Your Niche
+## Choosing the Right Subreddits for Your Niche
 
 The subreddits you monitor determine the quality of your research. Here are productive starting points for common content niches:
 
@@ -454,7 +454,7 @@ The subreddits you monitor determine the quality of your research. Here are prod
 
 Monitor the meta-discussions in these communities too. Posts asking "what should I learn next?" or "what tool do you wish existed?" reveal demand that has not yet been served by existing content.
 
-Conclusion
+## Conclusion
 
 Automating Reddit content research through MCP servers saves significant manual effort while providing data-driven insights for content strategy. The patterns shown here scale from individual projects to enterprise workflows, and each component is independently useful even before the full pipeline is assembled.
 

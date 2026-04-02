@@ -16,7 +16,7 @@ Redux DevTools is a powerful browser extension that transforms how developers de
 
 This tutorial covers installation, store configuration, core debugging techniques, advanced usage patterns, and solutions to the most common problems developers run into.
 
-Installing Redux DevTools
+## Installing Redux DevTools
 
 You can install Redux DevTools from the Chrome Web Store by searching for "Redux DevTools" or directly from the GitHub repository at `reduxjs/redux-devtools`. The extension adds a new panel to your Chrome DevTools that displays your Redux store state, dispatched actions, and allows for time-travel debugging.
 
@@ -34,7 +34,7 @@ yarn add @redux-devtools/extension
 
 If you're using Redux Toolkit (which is the recommended approach for new Redux projects in 2026), DevTools integration is built in and requires zero additional configuration. covered further below.
 
-Setting Up Your Redux Store
+## Setting Up Your Redux Store
 
 For Redux DevTools to work, you need to configure your store with the appropriate middleware. Here's a basic setup using the classic `createStore` API:
 
@@ -69,7 +69,7 @@ export default store;
 
 The `composeWithDevTools` function from `@redux-devtools/extension` automatically integrates DevTools into your store. This is the recommended approach for classic Redux applications still using `createStore`.
 
-Setup with Redux Toolkit
+## Setup with Redux Toolkit
 
 If you're using Redux Toolkit's `configureStore`, DevTools is enabled automatically in development mode. No extra packages or configuration are required:
 
@@ -95,7 +95,7 @@ export default store;
 
 Redux Toolkit automatically disables DevTools in production builds when `process.env.NODE_ENV === 'production'`, so you don't need to add conditional logic yourself.
 
-Setup with Middleware
+## Setup with Middleware
 
 Most real applications include middleware like `redux-thunk` or `redux-saga`. Here's how to combine DevTools with middleware:
 
@@ -118,7 +118,7 @@ export default store;
 
 The key is that `composeWithDevTools` replaces the standard `compose` from Redux. If you were previously using `compose` to chain your enhancers, swap it for `composeWithDevTools` directly.
 
-Understanding the DevTools Interface
+## Understanding the DevTools Interface
 
 The Redux DevTools panel displays several key areas worth understanding before you start debugging:
 
@@ -130,7 +130,7 @@ The Redux DevTools panel displays several key areas worth understanding before y
 
 The toolbar at the top of the panel includes controls to pause recording, clear the action log, and access settings. The slider at the bottom of the panel is how you scrub through your action history interactively.
 
-Time-Travel Debugging
+## Time-Travel Debugging
 
 One of the most powerful features of Redux DevTools is time-travel debugging. You can literally travel back in time to inspect your application's state at any point in its history during the current session.
 
@@ -151,7 +151,7 @@ When you view these actions in DevTools, clicking on the `DECREMENT` action show
 
 The "Slider" control at the bottom lets you scrub through your entire action history smoothly. This is particularly useful for debugging animations or transitions tied to state changes. you can step frame-by-frame through a sequence to find exactly where a visual glitch originates.
 
-Commit and Revert
+## Commit and Revert
 
 The DevTools panel has two important buttons in the action log:
 
@@ -160,7 +160,7 @@ The DevTools panel has two important buttons in the action log:
 
 These controls let you create a checkpoint in your session, experiment with actions, and roll back cleanly if needed.
 
-Inspecting Action Payloads
+## Inspecting Action Payloads
 
 Redux DevTools automatically displays the full payload of each action in a formatted, expandable tree. This helps you verify that your actions carry the correct data before they reach the reducer:
 
@@ -199,7 +199,7 @@ store.dispatch({
 
 The DevTools panel shows these nested objects in a readable format, making it easy to verify your data structures match what your reducer expects. If you're seeing unexpected state values, checking the action payload first often reveals the problem immediately. either the payload structure is wrong, or the reducer is handling it incorrectly.
 
-Using Selective Monitoring
+## Using Selective Monitoring
 
 For larger applications, you might want to limit what DevTools tracks. High-frequency actions like WebSocket heartbeats, polling ticks, or scroll position updates can flood the action log and make it hard to find relevant actions.
 
@@ -240,7 +240,7 @@ Setting `maxAge` to 50 means DevTools only keeps the last 50 actions in history.
 
 The `serialize` option is particularly important for applications that store non-serializable values like `Date` objects, `Map`, or `Set` instances in Redux state. By default, Redux DevTools will warn about these. the serializer lets you control how they appear in the panel.
 
-Debugging with State Diff
+## Debugging with State Diff
 
 The Diff view shows exactly what changed between two states. Click on an action, then click the "Diff" tab to see a color-coded breakdown:
 
@@ -274,7 +274,7 @@ case 'ADD_TODO':
   return { ...state, items: [...state.items, action.payload] };
 ```
 
-Exporting and Importing State
+## Exporting and Importing State
 
 Redux DevTools lets you export your entire action history or current state, which is useful in several scenarios:
 
@@ -300,7 +300,7 @@ To import, click the folder icon in the DevTools panel and select the exported J
 
 This is particularly valuable in remote debugging scenarios. A user can trigger "Export State" from a debug menu in your application (which calls `window.__REDUX_DEVTOOLS_EXTENSION__.exportState()`) and attach the file to a support ticket.
 
-Advanced: Customizing DevTools
+## Advanced: Customizing DevTools
 
 For development environments where you want DevTools embedded directly in the application (not as a browser extension), you can create a custom DevTools component:
 
@@ -356,7 +356,7 @@ function App() {
 
 This gives you keyboard shortcuts to show/hide and reposition the DevTools panel within your application. useful for testing environments where you can't open browser DevTools, such as a dedicated QA machine or a CI browser test.
 
-Integrating DevTools with Redux Toolkit Slices
+## Integrating DevTools with Redux Toolkit Slices
 
 Redux Toolkit slices work transparently with DevTools. Action types are automatically namespaced by the slice name, making them easy to identify in the action log:
 
@@ -402,7 +402,7 @@ export const fetchTodos = createAsyncThunk(
 // todos/fetchAll/rejected . if it errors
 ```
 
-Common Issues and Solutions
+## Common Issues and Solutions
 
 Redux DevTools isn't appearing in the panel:
 1. Verify your store is configured with `composeWithDevTools` or that you're using `configureStore` from Redux Toolkit
@@ -440,7 +440,7 @@ This is expected. Hot module replacement replaces your reducer code but doesn't 
 
 For production builds, DevTools automatically disables itself. you don't need to remove the integration code. The `composeWithDevTools` function returns the plain `compose` function when the extension isn't present, so there's no runtime error if a user doesn't have the extension installed.
 
-Summary
+## Summary
 
 Redux DevTools is an indispensable tool for Redux developers that pays for its setup time within the first debugging session. Key takeaways:
 
@@ -453,7 +453,6 @@ Redux DevTools is an indispensable tool for Redux developers that pays for its s
 - Integrate the custom DevTools component for embedded debugging in non-browser environments
 
 With these techniques in hand, you'll debug Redux applications significantly faster and gain much deeper insight into how your state evolves over time. The combination of time-travel, action inspection, and diff views removes most of the guesswork from state-related bugs.
-
 
 Related Reading
 

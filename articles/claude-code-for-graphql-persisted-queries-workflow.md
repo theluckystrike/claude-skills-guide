@@ -13,14 +13,11 @@ reviewed: true
 score: 7
 ---
 
-
 {% raw %}
-
-Claude Code for GraphQL Persisted Queries Workflow
 
 GraphQL persisted queries represent a powerful optimization technique that transforms how your API handles client requests. By pre-registering queries on your server and referencing them by ID instead of sending full query strings, you dramatically reduce payload sizes, improve security, and enhance performance. But managing persisted queries at scale introduces new challenges, versioning, synchronization, and maintaining consistency across environments. This is where Claude Code becomes an invaluable part of your development workflow.
 
-Understanding GraphQL Persisted Queries
+## Understanding GraphQL Persisted Queries
 
 When a client sends a traditional GraphQL request, the entire query string travels with every request. For complex queries spanning hundreds of lines, this creates unnecessary network overhead. Persisted queries solve this by storing queries on the server and assigning each a unique identifier. Clients then send only the operation name or hash ID, dramatically reducing request payload.
 
@@ -31,7 +28,7 @@ The benefits extend beyond network optimization:
 - Caching: CDNs and proxies can cache responses more effectively with stable request identifiers
 - Schema evolution: Breaking changes become easier to track when you know exactly which queries depend on specific fields
 
-How Persisted Queries Work Under the Hood
+## How Persisted Queries Work Under the Hood
 
 The standard flow for Automatic Persisted Queries (APQ) follows a two-phase request pattern:
 
@@ -41,7 +38,7 @@ The standard flow for Automatic Persisted Queries (APQ) follows a two-phase requ
 
 This means the first request for any new query takes two round-trips, but every request after that is lean. For high-traffic APIs where the same queries run thousands of times per minute, the bandwidth savings compound quickly.
 
-Persisted Queries vs. Automatic Persisted Queries
+## Persisted Queries vs. Automatic Persisted Queries
 
 These two terms are often used interchangeably but have a meaningful distinction:
 
@@ -57,7 +54,7 @@ These two terms are often used interchangeably but have a meaningful distinction
 
 For production APIs serving mobile clients, true persisted queries (manual registration) are almost always the right choice. APQ is a reasonable middle ground for internal tooling or early-stage products.
 
-Setting Up Your Claude Code Workflow
+## Setting Up Your Claude Code Workflow
 
 Claude Code excels at orchestrating the complex lifecycle of persisted query management. Here's how to structure your workflow:
 
@@ -203,7 +200,7 @@ jobs:
 
 The key insight here is that the manifest generation and registration happen before the application deploys. If registration fails, the deployment stops. you never end up with an app pointing to unregistered query IDs.
 
-Building a Claude Skill for Query Management
+## Building a Claude Skill for Query Management
 
 Create a specialized Claude skill that handles persisted query operations:
 
@@ -244,7 +241,7 @@ When asked to sync:
 4. Execute with confirmation
 ```
 
-Extending the Skill with Deprecation Tracking
+## Extending the Skill with Deprecation Tracking
 
 A more advanced version of this skill can track deprecated fields across your query set:
 
@@ -265,11 +262,11 @@ When asked to check deprecations:
 
 This means that instead of discovering breaking changes during deployment, you catch them in code review or in a pre-commit hook.
 
-Practical Workflow Example
+## Practical Workflow Example
 
 Here's a complete workflow for adding a new feature with persisted queries:
 
-Step 1: Write Your Query
+## Step 1: Write Your Query
 
 Create `graphql/persisted-queries/product-catalog.graphql`:
 
@@ -301,7 +298,7 @@ query ProductCatalog(
 }
 ```
 
-Step 2: Generate and Register
+## Step 2: Generate and Register
 
 Use your Claude skill to generate the hash and update your manifest:
 
@@ -317,7 +314,7 @@ The skill outputs:
  Added entry to CHANGELOG-PERSISTED-QUERIES.md
 ```
 
-Step 3: Update the Client
+## Step 3: Update the Client
 
 With the hash known at build time, your client code can reference it directly instead of embedding the full query string:
 
@@ -371,7 +368,7 @@ const client = new ApolloClient({
 });
 ```
 
-Step 4: Deploy with Confidence
+## Step 4: Deploy with Confidence
 
 Your CI pipeline now includes the hash in deployments:
 
@@ -382,7 +379,7 @@ APOLLO_VARIANT=production \
 npx apollo service push
 ```
 
-Server-Side Setup
+## Server-Side Setup
 
 The client side only works if your server is configured to accept persisted query IDs. Here is what a minimal setup looks like for Apollo Server 4:
 
@@ -419,9 +416,9 @@ ApolloServerPluginPersistedQueries({
 }),
 ```
 
-Best Practices and Actionable Advice
+## Best Practices and Actionable Advice
 
-Version Your Queries
+## Version Your Queries
 
 Always version your persisted queries to enable gradual rollbacks:
 
@@ -434,7 +431,7 @@ This allows clients to migrate incrementally while maintaining backward compatib
 
 A practical versioning strategy: keep the old version registered and deployed for at least two release cycles before deregistering it. Mobile clients especially can lag behind, and you do not want a 400 error hitting users who have not updated the app.
 
-Automate Schema Compatibility Checks
+## Automate Schema Compatibility Checks
 
 Add a pre-commit hook that validates all persisted queries against your schema:
 
@@ -455,7 +452,7 @@ rover graph check my-graph@production \
 
 This check runs locally before the code even reaches your CI pipeline, which means developers catch broken queries in seconds rather than minutes.
 
-Document Query Dependencies
+## Document Query Dependencies
 
 Maintain a manifest that tracks which features depend on each persisted query:
 
@@ -490,7 +487,7 @@ Extend this with a `retired` field so you can track when queries were deregister
 
 This history is invaluable during incident response. If you see errors spiking on a specific hash, you can immediately look up which client versions were using it.
 
-Monitor Query Usage
+## Monitor Query Usage
 
 Track which persisted queries are actually being used:
 
@@ -526,7 +523,7 @@ app.use('/graphql', async (req, res, next) => {
 
 This monitoring data directly informs which queries are safe to retire, which are hot paths worth caching aggressively, and which are unexpectedly slow.
 
-Use a Staged Rollout Approach
+## Use a Staged Rollout Approach
 
 For large teams or high-traffic APIs, roll out persisted query enforcement in stages:
 
@@ -536,7 +533,7 @@ For large teams or high-traffic APIs, roll out persisted query enforcement in st
 
 This staged approach catches gaps in your registration coverage before they become outages.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 Forgetting to register queries before deployment. Always run your registration step before deploying to production. Unregistered query IDs result in 400 errors for clients.
 
@@ -560,7 +557,7 @@ echo "Registering to $ENVIRONMENT..."
 
 Not pinning the normalization library version. If the version of the GraphQL parser you use to normalize queries changes its output format, all your hashes change. Pin the `graphql` package version in your build tools and test infrastructure to the same version.
 
-Conclusion
+## Conclusion
 
 Claude Code transforms persisted query management from a manual, error-prone process into an automated, reliable workflow. By defining query registries, creating management skills, and integrating with your CI/CD pipeline, you gain the performance benefits of persisted queries without the operational overhead. Start small, pick one high-frequency query, register it, measure the improvement, and expand from there.
 

@@ -17,13 +17,13 @@ Color contrast is one of the most critical yet overlooked aspects of web accessi
 
 This guide covers the most useful Chrome extensions for color contrast checking, practical workflows for integrating accessibility checks into your development process, and how to handle tricky contrast scenarios.
 
-Why Color Contrast Matters
+## Why Color Contrast Matters
 
 Beyond legal compliance under regulations like the ADA and EN 301 549, adequate contrast improves usability for everyone. Users browsing on mobile devices in bright sunlight, older adults with reduced visual acuity, and developers working in poorly lit environments all benefit from thoughtful color choices. Contrast issues also affect color-blind users, particularly those with deuteranopia (red-green blindness) or protanopia (red blindness).
 
 A study by the Nielsen Norman Group found that only 6% of users abandon a well-designed page due to contrast issues, but the impact on user trust and brand perception is harder to quantify.
 
-Top Chrome Extensions for Color Contrast Checking
+## Top Chrome Extensions for Color Contrast Checking
 
 1. WCAG Color Contrast Checker
 
@@ -73,9 +73,9 @@ This extension functions as a literal eyedropper tool, letting you pick any colo
 
 Practical tip: Use ColorPick to sample colors from design mockups or competitor sites, then verify them against WCAG standards using an online contrast calculator or another extension.
 
-Integrating Contrast Checking into Your Workflow
+## Integrating Contrast Checking into Your Workflow
 
-During Design
+## During Design
 
 Before writing any code, check your color palette against WCAG standards. Create a small matrix of your brand colors and their compliant pairings:
 
@@ -88,7 +88,7 @@ Before writing any code, check your color palette against WCAG standards. Create
 
 This prevents the common problem of designing in Figma or Sketch with colors that pass on your monitor but fail in real-world viewing conditions.
 
-During Development
+## During Development
 
 For React developers, consider creating a simple component to test contrast:
 
@@ -110,7 +110,7 @@ const ContrastChecker = ({ foreground, background }) => {
 
 Adding such components to a development staging environment lets QA testers verify contrast without special tools.
 
-In CI/CD Pipelines
+## In CI/CD Pipelines
 
 For teams serious about accessibility, automate contrast checking in your continuous integration pipeline. Tools like pa11y can run accessibility audits including contrast checks:
 
@@ -124,9 +124,9 @@ pa11y https://your-website.com --standard WCAG2AA
 
 This catches contrast regressions before they reach production.
 
-Handling Tricky Scenarios
+## Handling Tricky Scenarios
 
-Dynamic Color Combinations
+## Dynamic Color Combinations
 
 Some interfaces use color changes based on user interaction or state. Use CSS custom properties to maintain consistent contrast:
 
@@ -150,7 +150,7 @@ Some interfaces use color changes based on user interaction or state. Use CSS cu
 
 Always verify both light and dark mode combinations meet contrast requirements.
 
-Large Text Exceptions
+## Large Text Exceptions
 
 WCAG provides a 3:1 contrast ratio allowance for large text (18pt or 14pt bold). However, verify your understanding of "large" correctly:
 
@@ -159,18 +159,17 @@ WCAG provides a 3:1 contrast ratio allowance for large text (18pt or 14pt bold).
 
 For headlines and call-to-action buttons, the lower threshold might be acceptable, but testing with actual users remains advisable.
 
-Logo and Decorative Text
+## Logo and Decorative Text
 
 Text within logos or brand elements is exempt from contrast requirements under WCAG 2.1 Success Criterion 1.4.3. However, any text that conveys meaningful information must still meet contrast standards regardless of its visual treatment.
 
-Building Better Habits
+## Building Better Habits
 
 Make contrast checking a habit rather than an afterthought. Install a contrast checker extension in your primary browser, and before finalizing any design or code review, run a quick contrast check on all text-background combinations.
 
 For teams, establish a design system with pre-tested color combinations. Documentation showing which colors pair safely reduces back-and-forth during reviews and ensures consistency across products.
 
 The investment in proper contrast pays dividends in broader accessibility, improved SEO (search engines favor accessible sites), and better user experience across all demographics and viewing conditions.
-
 
 Related Reading
 

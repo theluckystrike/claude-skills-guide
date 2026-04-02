@@ -30,7 +30,7 @@ The first prompt gives Claude the expected behavior (30 minutes), the actual beh
 
 For larger codebases, [using the supermemory skill to maintain context across multiple debugging sessions](/claude-supermemory-skill-persistent-context-explained/) prevents you from re-explaining your codebase structure at the start of every new session. Save key architecture decisions and recurring patterns once, and they persist automatically.
 
-The Debugging Context Template
+## The Debugging Context Template
 
 Adopt this template as your starting point for any non-trivial debugging session:
 
@@ -47,7 +47,7 @@ ALREADY TRIED: [list what you tested that did not work]
 
 Not every field applies to every bug, but filling in what you know eliminates the back-and-forth and focuses Claude on the actual unknown.
 
-Essential Skills for Debugging Workflows
+## Essential Skills for Debugging Workflows
 
 Several Claude skills significantly improve debugging productivity when combined with the base debugging workflow.
 
@@ -75,9 +75,9 @@ For frontend issues, the frontend-design skill can help identify CSS and layout 
 
 Visual bugs are notoriously difficult to describe in text, but the frontend-design skill is trained to interpret layout descriptions and CSS context together.
 
-Practical Debugging Patterns
+## Practical Debugging Patterns
 
-Pattern 1: Error Message Analysis
+## Pattern 1: Error Message Analysis
 
 When you encounter an error, paste the full message along with the surrounding context:
 
@@ -94,7 +94,7 @@ const UserList = ({ users }) => {
 
 Claude will identify the likely cause (the users prop is undefined while the API call is in flight), suggest an immediate fix (add a loading check or default empty array), and often catch the same pattern elsewhere in your codebase. The inclusion of the actual component code means Claude can point to the exact fix rather than explaining the general category of error.
 
-Pattern 2: Bisect and Isolate
+## Pattern 2: Bisect and Isolate
 
 [Claude Code can assist with git bisect workflows](/claude-code-git-bisect-automated-bug-finding-workflow/) when you have a regression with an unknown origin. Rather than manually narrowing down commits, describe the regression boundary:
 
@@ -118,7 +118,7 @@ git bisect run npm run test:email-confirmation
 
 Ask Claude to help you write the `test:email-confirmation` script that returns exit code 0 for good and 1 for bad, and git bisect handles the rest automatically.
 
-Pattern 3: Log Analysis
+## Pattern 3: Log Analysis
 
 For production issues with extensive logs, use Claude to spot patterns you would miss scanning manually:
 
@@ -142,7 +142,7 @@ What does this pattern suggest?
 
 Providing the summary rather than raw logs often produces better analysis because you have already filtered out noise.
 
-Pattern 4: Hypothesis Testing
+## Pattern 4: Hypothesis Testing
 
 When you suspect a cause but are not certain, use Claude to stress-test your hypothesis before spending time on a fix:
 
@@ -158,9 +158,9 @@ Does this hypothesis hold? What would disprove it?
 
 This approach is faster than building a test for every possible cause. Claude will often point out the flaw in your hypothesis or suggest a quick way to confirm or deny it, like checking Redis logs for reconnection events during the incident window.
 
-Handling Common Debugging Scenarios
+## Handling Common Debugging Scenarios
 
-Memory Leaks and Performance Issues
+## Memory Leaks and Performance Issues
 
 For JavaScript memory leaks, ask Claude to analyze heap snapshots or profile data with specific questions:
 
@@ -178,7 +178,7 @@ Which pattern does this match? What code patterns create this kind of EventEmitt
 
 Providing the heap comparison analysis rather than raw heap dumps gives Claude the signal it needs without hitting context length limits. EventEmitter leaks from forgotten `.on()` listeners, closure leaks in async event handlers, and timer accumulation are the most common causes Claude will identify and explain.
 
-Race Conditions and Concurrency Bugs
+## Race Conditions and Concurrency Bugs
 
 Concurrency issues are notoriously difficult to reproduce and explain. Structure your request to include timing information and the specific failure modes:
 
@@ -196,7 +196,7 @@ What concurrency control mechanism fits this pattern?
 
 Claude will typically identify whether this needs database-level locking (SELECT FOR UPDATE), optimistic concurrency control (version fields), or distributed locking (Redis-based), and explain the trade-offs for your specific scenario.
 
-Debugging Across Service Boundaries
+## Debugging Across Service Boundaries
 
 When bugs span multiple services, Claude Code excels at tracing the flow and designing debugging strategies:
 
@@ -211,7 +211,7 @@ The message appears to never reach RabbitMQ. How do I trace this?
 
 This level of detail, what each service logged and the timestamp gap, lets Claude pinpoint where to look (the publish call in order-service, the exchange binding, the routing key) rather than suggesting you audit every service. Claude will typically produce a step-by-step debugging checklist ordered by likelihood of being the cause.
 
-Database Query Performance
+## Database Query Performance
 
 Slow query debugging benefits from a specific prompt structure that includes the query, the explain plan, and the table sizes:
 
@@ -228,7 +228,7 @@ The query uses a JOIN on order_id. Production has the index. What is causing the
 
 Claude will identify whether this is a statistics staleness problem, index selectivity falling off at scale, a nested loop plan that works at small scale but degrades at large scale, or a missing composite index, and suggest the fix appropriate to the cause.
 
-Maximizing Debugging Efficiency
+## Maximizing Debugging Efficiency
 
 A few practices dramatically improve your debugging sessions with Claude Code.
 
@@ -248,7 +248,7 @@ Use Claude for root cause, tests for verification. Claude Code might generate a 
 
 Document what Claude found. When you close a debugging session that succeeded, capture the root cause explanation Claude provided as a comment near the fix or in your PR description. This context, which Claude generated from your prompts, is often clearer than anything you would write under time pressure.
 
-When Claude Code Excels at Debugging
+## When Claude Code Excels at Debugging
 
 Claude Code performs best in these debugging scenarios:
 

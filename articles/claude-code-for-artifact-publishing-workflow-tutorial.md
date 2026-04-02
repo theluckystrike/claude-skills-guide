@@ -17,7 +17,7 @@ Claude Code for Artifact Publishing Workflow Tutorial
 
 Automating artifact publishing is one of the most valuable workflows you can set up with Claude Code. Whether you're releasing npm packages, publishing Docker images, or deploying static assets to cloud storage, Claude Code can handle the entire process, from version bumping to publishing to changelog generation. This tutorial walks you through building a complete artifact publishing workflow.
 
-Understanding Artifact Publishing in Claude Code
+## Understanding Artifact Publishing in Claude Code
 
 Artifact publishing involves taking your built code or compiled assets and making them available for distribution. This could mean:
 
@@ -28,7 +28,7 @@ Artifact publishing involves taking your built code or compiled assets and makin
 
 Claude Code excels at this because it can execute shell commands, read configuration files, and make intelligent decisions about versioning and publishing based on your project state.
 
-Setting Up Your Publishing Skill
+## Setting Up Your Publishing Skill
 
 The first step is creating a skill dedicated to artifact publishing. Here's a basic skill structure:
 
@@ -43,7 +43,7 @@ tools: [Read, Write, Bash, Grep]
 
 This skill has access to file reading, writing, shell execution, and text searching, everything needed for publishing tasks.
 
-Automated Version Management
+## Automated Version Management
 
 One of the most valuable aspects of automated publishing is semantic versioning. Claude Code can read your current version, determine what the next version should be based on commit messages, and update all necessary files.
 
@@ -78,7 +78,7 @@ def bump_version(current, bump_type="patch"):
 
 This pattern lets Claude intelligently increment versions based on the type of changes in your codebase.
 
-Publishing to npm
+## Publishing to npm
 
 For JavaScript and TypeScript projects, npm publishing is straightforward. Here's a workflow Claude can execute:
 
@@ -112,7 +112,7 @@ Check if the version in package.json has been bumped. If so:
 If version hasn't changed, report that no publish is needed.
 ```
 
-Docker Image Publishing
+## Docker Image Publishing
 
 For containerized applications, Claude can build and push Docker images to registries like Docker Hub, GitHub Container Registry, or AWS ECR:
 
@@ -144,7 +144,7 @@ This skill handles Docker image publishing:
 4. Report success with image digests
 ```
 
-GitHub Releases and Binaries
+## GitHub Releases and Binaries
 
 For software releases, you often need to create GitHub Releases and upload compiled binaries. Claude can handle this through the GitHub CLI:
 
@@ -179,7 +179,7 @@ For releases:
 7. Push version tag
 ```
 
-Conditional Publishing
+## Conditional Publishing
 
 A smart publishing workflow should only publish when necessary. Use Claude's decision-making capabilities to check:
 
@@ -203,7 +203,7 @@ def should_publish():
     return True, f"Ready to publish v{current}"
 ```
 
-Security Best Practices
+## Security Best Practices
 
 When automating artifact publishing, security is critical:
 
@@ -213,7 +213,7 @@ When automating artifact publishing, security is critical:
 4. Audit trails: Log all publishing actions for traceability
 5. Require approvals: For production releases, consider requiring human approval
 
-Actionable Advice for Your Workflow
+## Actionable Advice for Your Workflow
 
 Start simple and iterate:
 
@@ -223,12 +223,11 @@ Start simple and iterate:
 4. Monitor everything: Set up alerts for failed publishes
 5. Document the process: Write clear skill descriptions so Claude knows when and how to publish
 
-Conclusion
+## Conclusion
 
 Claude Code transforms artifact publishing from a manual, error-prone process into a reliable automated workflow. By combining version management, testing, building, and publishing in well-designed skills, you can release faster and more consistently. Start with one publishing channel, npm or Docker, and expand as you gain confidence in your automation.
 
 The key is treating your publishing workflow as code: version it, test it, and continuously improve it.
-
 
 Related Reading
 

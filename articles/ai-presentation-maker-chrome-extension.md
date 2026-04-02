@@ -18,7 +18,7 @@ AI Presentation Maker Chrome Extension: A Developer Guide
 
 Building a Chrome extension that uses AI to create presentations transforms how developers and content creators generate slides. This guide covers the technical implementation, API integrations, and practical patterns for creating a production-ready AI presentation maker extension.
 
-Core Architecture Overview
+## Core Architecture Overview
 
 An AI presentation maker Chrome extension operates across multiple layers: content scripts for capturing source material, background services for API communication, and a popup or side panel for user interaction. The extension typically works with existing presentation platforms or generates output files directly.
 
@@ -29,7 +29,7 @@ The architecture breaks down into four key components:
 3. Presentation Builder - Converts AI responses into usable slide formats
 4. Export/Integration Layer - Outputs to PowerPoint, Google Slides, or PDF
 
-Setting Up Your Extension
+## Setting Up Your Extension
 
 Create the manifest file with the necessary permissions:
 
@@ -55,7 +55,7 @@ Create the manifest file with the necessary permissions:
 
 The `activeTab` permission allows your extension to access the current page content when the user invokes it. The `scripting` permission enables content script injection for extraction tasks.
 
-Content Extraction Implementation
+## Content Extraction Implementation
 
 The content script extracts meaningful content from the active tab. Here's a practical implementation:
 
@@ -104,7 +104,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 This extraction strategy focuses on high-value content, headings, substantial paragraphs, meaningful images, and structured lists. Adjust selectors based on your target content types.
 
-AI Integration Pattern
+## AI Integration Pattern
 
 Connect your extension to an AI service for generating slide content. The background service handles API communication:
 
@@ -148,7 +148,7 @@ Respond in JSON format:
 
 This implementation uses Anthropic's Claude API. You can adapt the pattern for other AI providers by adjusting the endpoint, headers, and request format.
 
-Building the Presentation Output
+## Building the Presentation Output
 
 Convert AI-generated content into downloadable formats. Here's a PowerPoint-compatible approach:
 
@@ -197,7 +197,7 @@ function downloadPresentation(slideData) {
 
 Users can open the HTML output in their browser and print to PDF or copy content into their preferred presentation software.
 
-User Interface Design
+## User Interface Design
 
 The popup interface provides essential controls:
 
@@ -231,7 +231,7 @@ The popup interface provides essential controls:
 </html>
 ```
 
-Handling API Keys Securely
+## Handling API Keys Securely
 
 Store API keys using Chrome's secure storage:
 
@@ -249,7 +249,7 @@ async function getApiKey() {
 
 Never store API keys in localStorage or plain files. The session storage provides ephemeral storage that clears when the browser closes.
 
-Performance Considerations
+## Performance Considerations
 
 When building production extensions, implement these optimizations:
 
@@ -258,14 +258,13 @@ When building production extensions, implement these optimizations:
 - Limit content size - Truncate long pages to first 10,000 characters
 - Handle rate limits - Implement exponential backoff for API failures
 
-Conclusion
+## Conclusion
 
 An AI presentation maker Chrome extension combines content extraction, AI processing, and presentation generation into a cohesive tool. The implementation patterns shown here, content scripts for extraction, background services for API calls, and HTML-based output, provide a foundation for building production-ready extensions.
 
 Start with basic content extraction, add one AI provider integration, and expand output formats based on user feedback. The core value proposition remains consistent: transforming web content into structured presentations with minimal manual effort.
 
 ---
-
 
 Related Reading
 
@@ -275,7 +274,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-Step-by-Step: Building the AI Presentation Maker
+## Step-by-Step: Building the AI Presentation Maker
 
 1. Set up Manifest V3 with `storage`, `downloads`, and `activeTab` permissions.
 2. Extract content from the current page: when the user clicks "Create Presentation", extract the page's headings (h1-h3), key paragraphs, and any data tables. This forms the raw material for the presentation.
@@ -284,7 +283,7 @@ Step-by-Step: Building the AI Presentation Maker
 5. Assemble and preview: display the presentation in a new tab using a simple slide viewer that supports keyboard navigation (left/right arrows, F for fullscreen).
 6. Export to PowerPoint: convert the HTML slides to a PPTX file using the `pptxgenjs` library bundled with the extension and trigger a download.
 
-Generating Slide Content
+## Generating Slide Content
 
 ```javascript
 async function generatePresentation(pageContent, config) {
@@ -305,7 +304,7 @@ async function buildSlideHTML(slide, template) {
 }
 ```
 
-Comparison with Presentation Tools
+## Comparison with Presentation Tools
 
 | Tool | AI generation | From web page | Export format | Cost |
 |---|---|---|---|---|
@@ -317,7 +316,7 @@ Comparison with Presentation Tools
 
 The extension's advantage is its ability to convert any web page. an article, a Wikipedia page, a research paper. directly into a presentation without copy-pasting.
 
-Advanced: Speaker Notes Generation
+## Advanced: Speaker Notes Generation
 
 After generating slide bullets, ask the AI to write 2-3 sentences of speaker notes for each slide:
 
@@ -334,7 +333,7 @@ async function generateSpeakerNotes(slide) {
 
 Speaker notes make the exported PPTX immediately usable for live presentations without additional preparation.
 
-Troubleshooting
+## Troubleshooting
 
 AI generating too many or too few slides: Add explicit constraints to the prompt. "Exactly 8 slides, no more, no fewer". If the model still produces the wrong count, post-process the response to trim or pad the slide array to the target count.
 

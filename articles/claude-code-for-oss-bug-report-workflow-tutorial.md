@@ -17,7 +17,7 @@ Bug reporting is the backbone of open source software improvement. Yet many deve
 
 This tutorial walks you through a practical workflow for using Claude Code to enhance every stage of the OSS bug reporting process.
 
-Setting Up Your Bug Report Environment
+## Setting Up Your Bug Report Environment
 
 Before diving into bug reporting, configure Claude Code for optimal debugging sessions. Create a dedicated skill for bug investigation that includes essential tools:
 
@@ -35,7 +35,7 @@ tools:
 
 This skill ensures you have file reading, command execution, and search capabilities available when investigating issues.
 
-Essential Claude Code Settings
+## Essential Claude Code Settings
 
 Configure your environment for bug reporting success:
 
@@ -49,11 +49,11 @@ export CLAUDE_EDITOR=vim
 
 These settings help Claude provide more detailed reasoning when analyzing bugs.
 
-Reproducing Bugs Systematically
+## Reproducing Bugs Systematically
 
 The most critical, and often most time-consuming, part of bug reporting is reproduction. Claude Code excels at helping you create minimal reproduction cases.
 
-Step 1: Gather Initial Context
+## Step 1: Gather Initial Context
 
 When you encounter a bug, start by describing it to Claude:
 
@@ -65,7 +65,7 @@ Claude will help you explore the codebase to understand the issue context:
 2. Search for similar issues in the codebase or issues database
 3. Identify dependencies that might be causing the problem
 
-Step 2: Create Minimal Reproduction Cases
+## Step 2: Create Minimal Reproduction Cases
 
 Claude can help you strip away unnecessary code to create the smallest possible test case. This is invaluable for OSS maintainers who need to understand the root cause quickly.
 
@@ -87,11 +87,11 @@ Actual: segmentation fault
 
 Claude can generate these minimal cases automatically by analyzing your full codebase and identifying the essential components.
 
-Gathering Diagnostic Information
+## Gathering Diagnostic Information
 
 A great bug report includes system context that helps maintainers reproduce and fix the issue.
 
-Automatic Environment Collection
+## Automatic Environment Collection
 
 Ask Claude to gather diagnostic information:
 
@@ -104,7 +104,7 @@ Have Claude collect this information automatically
 - Error logs and stack traces
 ```
 
-Capturing Stack Traces
+## Capturing Stack Traces
 
 When crashes occur, detailed stack traces are essential. Claude can help you:
 
@@ -127,11 +127,11 @@ except Exception as e:
     error_info = traceback.format_exc()
 ```
 
-Crafting Effective Bug Reports
+## Crafting Effective Bug Reports
 
 The difference between a bug that gets fixed and one that gets ignored often comes down to how the report is written. Claude Code can help you structure comprehensive reports.
 
-The Ideal Bug Report Structure
+## The Ideal Bug Report Structure
 
 Work with Claude to create reports that include:
 
@@ -144,7 +144,7 @@ Work with Claude to create reports that include:
 - Minimal reproduction: The simplest code that triggers the bug
 - Suggested fix (optional): If you have identified the solution
 
-Example Bug Report Template
+## Example Bug Report Template
 
 ```markdown
 Bug Summary
@@ -175,7 +175,7 @@ Additional Context
 [Any other relevant information]
 ```
 
-Using Claude Skills for Bug Report Automation
+## Using Claude Skills for Bug Report Automation
 
 Create a reusable skill that automates much of the bug reporting workflow:
 
@@ -217,9 +217,9 @@ Tips for Effective Reports
 - Add context about your environment
 ```
 
-Advanced Techniques
+## Advanced Techniques
 
-Bisecting to Find the Culprit
+## Bisecting to Find the Culprit
 
 For bugs that were introduced recently, Claude can help you use git bisect:
 
@@ -237,7 +237,7 @@ Claude will help test each commit automatically
 until the problematic commit is identified
 ```
 
-Analyzing Regression Causes
+## Analyzing Regression Causes
 
 When a feature that worked before now fails:
 
@@ -247,7 +247,7 @@ When a feature that worked before now fails:
 
 Claude can script this analysis to produce a clear regression report.
 
-Best Practices Summary
+## Best Practices Summary
 
 Follow these principles for bug reports that get results:
 
@@ -257,7 +257,7 @@ Follow these principles for bug reports that get results:
 4. Include context: Environment, versions, and configuration matter
 5. Be responsive: Follow up on maintainer questions quickly
 
-Conclusion
+## Conclusion
 
 Claude Code transforms bug reporting from a chore into an efficient workflow. By automating reproduction case creation, diagnostic gathering, and report formatting, you can spend less time documenting and more time actually fixing issues, or helping maintainers do so.
 

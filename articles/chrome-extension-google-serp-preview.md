@@ -17,7 +17,7 @@ Google Search Engine Results Pages (SERPs) display more than just blue links. Mo
 
 Building a SERP preview extension is also one of the better ways to sharpen your Chrome extension development skills, because it forces you to deal with a real, complex DOM that changes frequently, asynchronous messaging between scripts, and meaningful data presentation in a constrained popup UI.
 
-How SERP Preview Extensions Work
+## How SERP Preview Extensions Work
 
 Chrome extensions that interact with Google SERPs typically work through content scripts injected into search result pages. These scripts parse the DOM structure to extract relevant data points such as title tags, meta descriptions, URL structures, and rich snippet markup.
 
@@ -45,7 +45,7 @@ The content script captures search results after the page fully loads, ensuring 
 
 One common mistake is forgetting to request the `storage` permission in the manifest. If you want the extension to persist user preferences (like which SERP features to highlight), add it to the permissions array alongside `activeTab` and `scripting`.
 
-Extracting Search Result Data
+## Extracting Search Result Data
 
 When building a SERP preview extension, you need to handle Google's complex DOM structure. Search results appear in multiple formats, including organic results, ads, featured snippets, and knowledge graph elements. Each requires different CSS selectors for extraction.
 
@@ -101,7 +101,7 @@ function getSnippetText(resultElement) {
 
 This fallback chain makes your extension considerably more resilient to Google's layout experiments.
 
-Building a Preview Feature
+## Building a Preview Feature
 
 One practical use case for SERP extensions is generating previews of how your content might appear in search results. This helps content creators visualize the final presentation before publishing.
 
@@ -160,7 +160,7 @@ function isTitleTooLong(title) {
 
 This won't be perfectly accurate without rendering the actual font, but it gets you much closer to real-world truncation behavior than a simple character count.
 
-Analyzing Rich Snippets
+## Analyzing Rich Snippets
 
 Rich snippets use structured data markup (JSON-LD or Microdata) to provide additional context to search engines. Extensions can extract and display this information to help developers verify their implementation.
 
@@ -218,7 +218,7 @@ function validateArticleSchema(schemaData) {
 
 This kind of inline validation is useful during development and saves a round-trip to Google's Rich Results Test tool for quick checks.
 
-Comparison: SERP Extension vs. Browser DevTools vs. Online Tools
+## Comparison: SERP Extension vs. Browser DevTools vs. Online Tools
 
 | Approach | Speed | Works On Live Pages | Saves Session Data | Requires Install |
 |---|---|---|---|---|
@@ -229,7 +229,7 @@ Comparison: SERP Extension vs. Browser DevTools vs. Online Tools
 
 Chrome extensions occupy a unique position: they run inline with real Google results, require no manual data entry, and can persist state across sessions. Online tools like Mangools' SERP Simulator are quick for one-off checks but cannot analyze live, personalized search results. DevTools require manual selector work every time. The extension wins for repeated workflow use.
 
-Practical Applications for Developers
+## Practical Applications for Developers
 
 SERP preview extensions serve several practical purposes beyond basic analysis. For A/B testing, you can compare how different title and description combinations appear. For competitive analysis, examine what rich features competitors use in search results. For technical SEO, verify that structured data renders correctly in live search results.
 
@@ -256,7 +256,7 @@ Building these tools requires understanding both Chrome extension APIs and searc
 
 Consider implementing error handling for selector failures, as Google periodically redesigns their search interface. Using solid selectors that target semantic elements rather than fragile class names improves longevity.
 
-Debugging SERP Extensions in Development
+## Debugging SERP Extensions in Development
 
 One workflow challenge with SERP extensions is that Google's rate limiting can interfere with testing. If you reload the same search page dozens of times during development, you may start seeing CAPTCHAs or slightly different DOM structures.
 
@@ -282,7 +282,7 @@ const dom = new JSDOM(html);
 
 This lets you iterate quickly on selector logic without hitting Google's servers.
 
-Performance Considerations
+## Performance Considerations
 
 When processing SERPs with many results, optimize your content script to avoid performance degradation. Use document.querySelectorAll with specific selectors rather than broad searches. Implement lazy evaluation by only extracting data when users request it through the popup interface.
 
@@ -321,7 +321,7 @@ async function getCachedOrFresh(tabId) {
 
 `chrome.storage.session` is cleared when the browser session ends, so you never accumulate stale data across restarts.
 
-What to Build Next
+## What to Build Next
 
 Once you have a working SERP preview extension, several natural extensions of the feature set are worth considering:
 
@@ -331,7 +331,6 @@ Once you have a working SERP preview extension, several natural extensions of th
 - Bulk export: Let users collect data from multiple SERP pages in a session and export the full dataset as CSV or JSON for offline analysis.
 
 Understanding SERP structure and building preview tools provides valuable insights for search optimization. Chrome extensions offer a powerful way to interact with search results directly in the browser, making them ideal for ongoing SEO work and content optimization workflows.
-
 
 Related Reading
 

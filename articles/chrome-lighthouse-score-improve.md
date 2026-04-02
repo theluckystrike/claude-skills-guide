@@ -15,11 +15,9 @@ score: 8
 
 {% raw %}
 
-How to Improve Chrome Lighthouse Score: A Developer Guide
-
 Chrome Lighthouse provides comprehensive audits for performance, accessibility, progressive web app compliance, SEO, and best practices. A higher Lighthouse score directly correlates with better user experience, improved search rankings, and increased conversion rates. This guide covers actionable techniques to improve your Chrome Lighthouse score across all core metrics.
 
-Understanding Lighthouse Score Categories
+## Understanding Lighthouse Score Categories
 
 Lighthouse evaluates your site across five categories. Each category produces a score from 0 to 100, with 90 or above considered good. The categories are:
 
@@ -41,11 +39,11 @@ Here is a quick reference for score thresholds across all categories:
 
 The scoring weights within Performance deserve special attention. LCP, TBT (Total Blocking Time), CLS, FCP, and Speed Index each contribute differently. TBT has historically carried 30% of the performance score weight, making JavaScript optimization particularly high-use.
 
-Improving Performance Score
+## Improving Performance Score
 
 Performance is usually the hardest category to optimize. It also has the most moving parts. Here are practical techniques ordered roughly by impact:
 
-Optimize Images
+## Optimize Images
 
 Unoptimized images tank performance scores. Use modern formats like WebP or AVIF:
 
@@ -69,7 +67,7 @@ For your hero image. the one that drives LCP. do the opposite: skip lazy loading
 
 Image compression tools worth using: Squoosh (browser-based, excellent quality control), imagemin (Node.js, good for build pipelines), and Sharp (fast server-side processing). Target file sizes under 150kb for full-width hero images, and under 50kb for inline content images.
 
-Minimize Main Thread Work
+## Minimize Main Thread Work
 
 JavaScript execution blocks rendering. Use the Chrome DevTools Performance tab to identify expensive operations, then:
 
@@ -113,7 +111,7 @@ function loadThirdParty() {
 
 This pattern keeps your TBT low on initial load while still loading the widget for active users.
 
-Implement Core Web Vitals
+## Implement Core Web Vitals
 
 Core Web Vitals directly impact your Lighthouse performance score:
 
@@ -203,7 +201,7 @@ self.onmessage = (event) => {
 };
 ```
 
-Use Browser Caching
+## Use Browser Caching
 
 Missing cache headers force repeat visitors to re-download unchanged resources. Serve static assets with long cache lifetimes and use content-hash filenames for cache busting:
 
@@ -217,7 +215,7 @@ location ~* \.(js|css|png|jpg|webp|avif|woff2)$ {
 
 When you update a file, change the filename hash (e.g., `app.a3f9c1.js` to `app.b7d2e4.js`). Build tools like Vite and webpack do this automatically.
 
-Reduce Render-Blocking Resources
+## Reduce Render-Blocking Resources
 
 CSS in `<head>` blocks rendering. Inline critical CSS and load the rest asynchronously:
 
@@ -238,11 +236,11 @@ CSS in `<head>` blocks rendering. Inline critical CSS and load the rest asynchro
 
 Tools like Critical and Penthouse can extract critical CSS automatically from your pages.
 
-Improving Accessibility Score
+## Improving Accessibility Score
 
 Accessibility often has easy fixes that significantly boost your score. Many accessibility issues also make sites easier to use for everyone, not just users with disabilities.
 
-Add Proper ARIA Labels
+## Add Proper ARIA Labels
 
 ```html
 <!-- Missing labels hurt accessibility score -->
@@ -268,7 +266,7 @@ Form inputs without labels are one of the most common accessibility failures:
 <input type="search" aria-label="Search the site" placeholder="Search...">
 ```
 
-Ensure Color Contrast
+## Ensure Color Contrast
 
 Minimum contrast ratios must meet WCAG 2.1 standards:
 
@@ -303,7 +301,7 @@ Common color pairs that fail and their fixes:
 | #ff6600 on #fff | 3.0:1 | #c45000 on #fff | 4.6:1 |
 | #4a90d9 on #fff | 3.1:1 | #1d6fa8 on #fff | 4.8:1 |
 
-Include Document Structure
+## Include Document Structure
 
 ```html
 <!-- Proper heading hierarchy -->
@@ -349,7 +347,7 @@ For interactive elements, ensure keyboard focus is always visible:
 }
 ```
 
-Keyboard Navigation and Skip Links
+## Keyboard Navigation and Skip Links
 
 Add a skip link as the first interactive element on the page so keyboard users can bypass navigation:
 
@@ -378,11 +376,11 @@ Add a skip link as the first interactive element on the page so keyboard users c
 }
 ```
 
-Improving Best Practices Score
+## Improving Best Practices Score
 
 Best practices catches security and technical issues:
 
-Use HTTPS
+## Use HTTPS
 
 Never serve mixed content:
 
@@ -412,7 +410,7 @@ A Content Security Policy (CSP) is the most impactful header for the Best Practi
   content="default-src 'self'; report-uri /csp-report">
 ```
 
-Set Proper Doctype
+## Set Proper Doctype
 
 ```html
 <!DOCTYPE html>
@@ -426,7 +424,7 @@ Set Proper Doctype
 
 The `lang` attribute on `<html>` matters for both accessibility and best practices. Use the correct BCP 47 language tag for your content. For regional variants: `lang="en-US"`, `lang="pt-BR"`, `lang="zh-Hans"`.
 
-Avoid Console Errors
+## Avoid Console Errors
 
 Register service worker errors with proper error handling:
 
@@ -457,7 +455,7 @@ if (modal) {
 }
 ```
 
-Avoid Deprecated APIs
+## Avoid Deprecated APIs
 
 Lighthouse flags use of deprecated browser APIs. Common ones to watch for:
 
@@ -469,11 +467,11 @@ Lighthouse flags use of deprecated browser APIs. Common ones to watch for:
 | `-webkit-` prefixed CSS | Standard CSS properties |
 | Synchronous XHR | Async fetch with await |
 
-Improving SEO Score
+## Improving SEO Score
 
 SEO is straightforward to fix once you know what Lighthouse checks. The audit covers technical SEO factors, not content quality.
 
-Add Meta Tags
+## Add Meta Tags
 
 ```html
 <head>
@@ -491,7 +489,7 @@ Add Meta Tags
 
 The meta description should be unique per page and between 120–160 characters. Duplicate descriptions across pages are flagged by Google Search Console even if Lighthouse does not directly penalize them.
 
-Ensure Crawlability
+## Ensure Crawlability
 
 ```txt
 robots.txt
@@ -512,7 +510,7 @@ Link text quality also matters. Lighthouse checks whether links have descriptive
 <a href="/guide">Read the complete optimization guide</a>
 ```
 
-Add Structured Data
+## Add Structured Data
 
 ```html
 <script type="application/ld+json">
@@ -532,7 +530,7 @@ Add Structured Data
 
 Structured data does not directly improve your Lighthouse SEO score, but it enables rich results in Google Search. For e-commerce sites, add Product and Review schemas. For local businesses, use LocalBusiness. For articles, Article or BlogPosting.
 
-Canonical URLs
+## Canonical URLs
 
 Duplicate content from trailing slashes, query parameters, or HTTP/HTTPS variants lowers crawl efficiency. Use canonical tags to declare the preferred URL:
 
@@ -542,7 +540,7 @@ Duplicate content from trailing slashes, query parameters, or HTTP/HTTPS variant
 
 Also set your preferred domain in Google Search Console (with or without www) and configure server-side redirects to enforce consistency.
 
-Running Lighthouse Locally
+## Running Lighthouse Locally
 
 Test your changes locally using Chrome DevTools:
 
@@ -610,7 +608,7 @@ Pair this with a budget file to enforce score minimums and fail the build when s
 ]
 ```
 
-Interpreting Lighthouse Reports Effectively
+## Interpreting Lighthouse Reports Effectively
 
 Lighthouse scores fluctuate between runs because they simulate network and CPU throttling using probabilistic models. A single score does not tell you much. trends over multiple runs do. Run three to five audits and average the results before making decisions.
 
@@ -623,12 +621,11 @@ When scores are inconsistent, check:
 - Third-party scripts: External services with variable latency
 - Font loading: Self-host fonts to eliminate third-party DNS lookups
 
-Summary
+## Summary
 
 Improving your Chrome Lighthouse score requires addressing multiple dimensions of web development. Start with performance optimizations that have the biggest impact: image optimization, JavaScript reduction, and Core Web Vitals improvements. Then systematically work through accessibility, best practices, and SEO fixes.
 
 Run Lighthouse regularly during development to catch regressions early. A score above 90 across all categories indicates a well-optimized site that provides excellent user experience and ranks well in search results. Use CI budgets to prevent regressions from shipping, and interpret scores as averages across multiple runs rather than single measurements.
-
 
 Related Reading
 

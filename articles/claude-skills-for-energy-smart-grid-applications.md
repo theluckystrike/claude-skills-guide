@@ -79,7 +79,7 @@ This skill handles the formatting requirements for utility regulatory bodies, in
 
 Common regulatory reports you can generate include interconnection queue status documents, outage summary reports, renewable energy credit tracking, and environmental compliance filings. Each follows the specific formatting standards required by your regulatory jurisdiction.
 
-Grid Visualization and Monitoring
+## Grid Visualization and Monitoring
 
 Claude Code helps generate visualization code for grid monitoring dashboards. Describe what you need and Claude will generate the implementation for heat maps showing load distribution, flow diagrams for power routing, and anomaly detection graphics.
 
@@ -108,7 +108,7 @@ def test_grid_dashboard():
 
 Use this skill to test demand response interfaces, outage management workflows, and DER coordination platforms. The [automated testing pipeline guide](/claude-tdd-skill-test-driven-development-workflow/) covers how to wire these tests into a CI workflow.
 
-Practical Example: Building a Demand Response Application
+## Practical Example: Building a Demand Response Application
 
 Combine these skills to build a complete demand response application:
 
@@ -127,7 +127,7 @@ def calculate_baseline(meter_data, event_days):
     return baseline * 1.10
 ```
 
-Skill Selection for Grid Applications
+## Skill Selection for Grid Applications
 
 | Use Case | Recommended Skill |
 |----------|-------------------|
@@ -137,7 +137,7 @@ Skill Selection for Grid Applications
 | Operator dashboards | Direct Claude prompting |
 | Control system testing | webapp-testing |
 
-Next Steps
+## Next Steps
 
 Start with the xlsx skill for immediate productivity gains on existing data. Load your smart meter CSV exports, apply built-in forecasting formulas, and generate load predictions within minutes. This provides quick wins while you build more sophisticated integrations.
 

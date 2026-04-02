@@ -18,7 +18,7 @@ Open source software thrives on contributor engagement, and "good first issues" 
 
 This guide walks you through a practical, step-by-step process for tackling good first issues using Claude Code, from initial issue selection to submitting a polished pull request.
 
-Understanding Good First Issues
+## Understanding Good First Issues
 
 Good first issues are labeled GitHub issues specifically tagged as beginner-friendly. They typically require minimal codebase familiarity, have clear acceptance criteria, and offer opportunities to learn project patterns. These issues serve dual purposes: they help projects attract contributions while giving new developers real-world experience with professional codebases.
 
@@ -28,7 +28,7 @@ Not all good first issues are created equal. The best ones for Claude Code-assis
 
 When evaluating issues, look at the comment thread carefully. If maintainers have left guidance like "look in `src/utils/parser.js`" or "this is related to how we handle null values in X module," that commentary is gold. Claude Code can take that kind of scoped hint and immediately explore the relevant files rather than searching the entire repository blind.
 
-Issue Quality Comparison
+## Issue Quality Comparison
 
 | Trait | Weak Issue | Strong Issue |
 |---|---|---|
@@ -40,7 +40,7 @@ Issue Quality Comparison
 
 Spending five minutes evaluating issue quality before cloning a repo saves hours of misdirected effort.
 
-Setting Up Your Development Environment
+## Setting Up Your Development Environment
 
 Once you've identified a promising issue, proper environment setup is crucial. Clone the repository and install dependencies:
 
@@ -68,7 +68,7 @@ git checkout -b fix/issue-123-improve-validation-error-message
 
 Branch names that reference the issue number and a short description help maintainers understand your PR's context at a glance during triage.
 
-Analyzing the Issue Requirements
+## Analyzing the Issue Requirements
 
 Careful issue analysis prevents wasted effort. Break down the issue into specific tasks:
 
@@ -91,7 +91,7 @@ The real power here is asking Claude Code to trace execution paths. If the issue
 
 Another effective approach is asking Claude Code to compare how the project handles similar problems elsewhere. If you're adding validation to one form, ask: "Show me how other forms in this project handle validation." This surfaces the patterns the project already uses, so your implementation will feel native rather than inconsistent.
 
-Questions to Ask Claude Code During Analysis
+## Questions to Ask Claude Code During Analysis
 
 - "What does this function return when the input is null?"
 - "Are there other places in the codebase that handle this same type of error?"
@@ -101,11 +101,11 @@ Questions to Ask Claude Code During Analysis
 
 Getting these answers before touching any code means you write less throwaway code and submit fewer rounds of revision.
 
-Implementing Your Solution
+## Implementing Your Solution
 
 With clear requirements, begin implementation. Follow these best practices:
 
-Reading Existing Code Patterns
+## Reading Existing Code Patterns
 
 Before writing any code, study the project's style. Look at similar functions or modules and mimic their patterns:
 
@@ -124,7 +124,7 @@ Pay attention to naming conventions (camelCase vs. snake_case), how the project 
 
 If the project uses ESLint, Prettier, or a similar formatter, run it before and after your changes. Many projects enforce these via pre-commit hooks, so a PR that doesn't pass the linter won't even be considered. Ask Claude Code: "Does this project have a lint configuration, and what command should I run?" It can scan the `package.json` or `pyproject.toml` and give you the exact command.
 
-Making Incremental Changes
+## Making Incremental Changes
 
 Work in small, testable increments. After each logical change, verify functionality:
 
@@ -135,7 +135,7 @@ npm test -- --grep "user authentication"
 
 Incremental work also makes it easier to pinpoint the source of any newly failing tests. If you make five changes at once and tests break, you'll need to bisect your own work. If you make one change and verify before continuing, failures are immediately traceable.
 
-Handling Edge Cases
+## Handling Edge Cases
 
 Good first issues often reveal edge cases. Ask Claude Code to help identify potential problems:
 
@@ -151,11 +151,11 @@ A practical edge case checklist for most validation issues:
 - Inputs that bypass obvious checks (e.g., `" "`. a space. when checking for non-empty)
 - Inputs that were valid in old formats but aren't in new ones
 
-Testing Your Changes
+## Testing Your Changes
 
 Comprehensive testing demonstrates competence and ensures your contribution works correctly.
 
-Writing Tests
+## Writing Tests
 
 Follow existing test patterns in the project:
 
@@ -172,7 +172,7 @@ When adding tests, aim to cover the specific scenario the issue describes, at mi
 
 Test naming matters too. A test named `it('handles bad input')` is vague. A test named `it('throws ValidationError when email contains no @ symbol')` tells reviewers exactly what behavior is guaranteed and makes the test suite serve as living documentation.
 
-Running the Full Test Suite
+## Running the Full Test Suite
 
 Always verify your changes don't break existing functionality:
 
@@ -196,11 +196,11 @@ pytest --cov=src
 
 If your change introduces a new code path, you should have a test that exercises it. Coverage tools will highlight uncovered lines in your diff and make it easy to spot gaps.
 
-Creating a Quality Pull Request
+## Creating a Quality Pull Request
 
 A well-crafted pull request (PR) increases the likelihood of acceptance and demonstrates professionalism.
 
-Writing Descriptive Commit Messages
+## Writing Descriptive Commit Messages
 
 Use clear, concise commit messages that explain the "why" behind changes:
 
@@ -208,7 +208,7 @@ Use clear, concise commit messages that explain the "why" behind changes:
 git commit -m "Add email validation to user registration form"
 ```
 
-Avoid vague messages like "fixed bug" or "updated code."
+## Avoid vague messages like "fixed bug" or "updated code."
 
 For more substantial changes, use a multi-line commit message with a subject and body:
 
@@ -222,7 +222,7 @@ explicit check with a fallback to the current working directory.
 Fixes #247"
 ```
 
-Writing a Good PR Description
+## Writing a Good PR Description
 
 Include these elements in your PR:
 
@@ -235,7 +235,7 @@ Claude Code can help you draft a PR description. Share the diff and the issue te
 
 A common mistake is writing a PR description that only describes *what* you changed ("Updated the validate function") rather than *why* ("The validate function was returning undefined instead of throwing, which caused the calling code to treat invalid input as valid"). Reviewers already see what you changed in the diff. they need to understand the reasoning.
 
-Responding to Feedback
+## Responding to Feedback
 
 Maintain a positive attitude when reviewers provide feedback. Address each comment thoughtfully:
 
@@ -245,7 +245,7 @@ When a reviewer requests changes, address every comment before re-requesting rev
 
 Never go silent after receiving review comments. Even a quick "I'll look at this tonight" keeps the PR alive and shows maintainers you're engaged.
 
-Common Pitfalls to Avoid
+## Common Pitfalls to Avoid
 
 New contributors frequently encounter these challenges:
 
@@ -258,7 +258,7 @@ New contributors frequently encounter these challenges:
 - Opening a PR before it's ready: Mark drafts as "Draft PR" using GitHub's feature. This signals that you're still working and prevents reviewers from spending time on an incomplete implementation.
 - Scope creep: A good first issue asks for one thing. If you notice a related problem while fixing it, open a separate issue rather than expanding your PR. Maintainers value focused, reviewable PRs.
 
-Using Claude Code for Code Review Preparation
+## Using Claude Code for Code Review Preparation
 
 Before submitting, do a self-review pass with Claude Code's help. Paste your diff and ask:
 
@@ -268,7 +268,7 @@ This catches problems before maintainers see them, reducing revision cycles. Cla
 
 You can also ask Claude Code to compare your implementation to what the issue requested: "Does this implementation fully address the requirements described in this issue?" Attach both the issue text and the diff. This sanity check ensures you haven't drifted from what was actually asked.
 
-Conclusion
+## Conclusion
 
 Contributing to open source through good first issues builds skills, establishes professional presence, and connects you with communities of developers. Claude Code amplifies your effectiveness by providing instant code exploration, pattern suggestions, and implementation guidance.
 
@@ -277,7 +277,6 @@ Start with a small issue, follow this workflow systematically, and gradually tac
 The workflow described here. evaluate, set up, analyze, implement, test, submit. is not unique to first-time contributors. Senior open source contributors follow the same pattern, just faster. Claude Code compresses the analysis and exploration phase dramatically, which means you spend more time actually solving problems and less time getting lost in unfamiliar code.
 
 Remember: every expert contributor began exactly where you are now. The community welcomes your contributions.
-
 
 Related Reading
 

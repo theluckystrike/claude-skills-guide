@@ -15,13 +15,9 @@ score: 7
 
 {% raw %}
 
-
-
-Claude Code for ArgoCD App of Apps Workflow
-
 The App of Apps pattern is one of the most powerful ways to manage complex Kubernetes deployments with ArgoCD. Instead of manually creating dozens of Application resources, you define a single "root" Application that spawns all others. Claude Code can help you design, implement, and maintain this pattern efficiently.
 
-Understanding the App of Apps Pattern
+## Understanding the App of Apps Pattern
 
 At its core, the App of Apps pattern uses a parent Application to reference a directory or Helm chart containing child Application manifests. When ArgoCD syncs the parent, it automatically creates or updates all children.
 
@@ -52,7 +48,7 @@ spec:
 
 The `apps` directory referenced here contains the child Application definitions that get deployed automatically.
 
-How Claude Code Helps Generate App of Apps Configurations
+## How Claude Code Helps Generate App of Apps Configurations
 
 When you're first setting up this pattern, Claude can generate the directory structure and initial YAML files. Simply describe your desired architecture:
 
@@ -97,7 +93,7 @@ spec:
       selfHeal: true
 ```
 
-Using Claude for Environment-Specific Variations
+## Using Claude for Environment-Specific Variations
 
 One common challenge is managing different configurations for development, staging, and production environments. Claude can help you create a flexible structure that handles this elegantly:
 
@@ -124,7 +120,7 @@ You can ask Claude to create environment-specific overlays using Kustomize or He
 
 Claude will create the appropriate Kustomize structure with base configurations and environment-specific patches.
 
-Automating App of Apps Updates
+## Automating App of Apps Updates
 
 When you need to add a new service to your platform, Claude can automate the process. Simply describe what you want to add:
 
@@ -156,7 +152,7 @@ spec:
   ignoreMissingSchemas: true
 ```
 
-Managing Application Dependencies
+## Managing Application Dependencies
 
 A more sophisticated pattern uses App of Apps to manage dependencies between services. Claude can help you set up proper sync waves using sync options:
 
@@ -200,7 +196,7 @@ spec:
 
 Claude can explain the different propagation policies and help you choose the right one based on your cleanup requirements.
 
-Best Practices for App of Apps with Claude
+## Best Practices for App of Apps with Claude
 
 When working with Claude to generate and maintain App of Apps configurations, keep these practices in mind:
 
@@ -234,7 +230,7 @@ spec:
 
 Use Claude for validation: Before applying configurations, ask Claude to validate your YAML structure and check for common issues like missing required fields or incorrect API versions.
 
-Troubleshooting App of Apps with Claude
+## Troubleshooting App of Apps with Claude
 
 When your App of Apps isn't behaving as expected, Claude can help diagnose the issue. Describe the problem and share relevant output:
 
@@ -255,13 +251,11 @@ Check sync status
 argocd app get platform-root --hard-refresh
 ```
 
-Conclusion
+## Conclusion
 
 Claude Code significantly accelerates your App of Apps workflow by automating YAML generation, explaining complex patterns, and helping troubleshoot issues. Whether you're setting up a new platform or managing an existing deployment, having Claude assist with the repetitive YAML configurations lets you focus on the architectural decisions that really matter.
 
 Start with a simple two-level structure and expand as your platform grows. Claude can help you evolve the pattern from basic deployments to sophisticated multi-environment, multi-tenant configurations as your needs become more complex.
-
-
 
 {% endraw %}
 

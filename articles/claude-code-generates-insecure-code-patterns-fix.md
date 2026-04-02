@@ -13,15 +13,11 @@ permalink: /claude-code-generates-insecure-code-patterns-fix/
 ---
 {% raw %}
 
-
-
-Claude Code Generates Insecure Code Patterns Fix
-
 [When working with Claude Code, you might occasionally receive code that contains security vulnerabilities](/best-claude-code-skills-to-install-first-2026/) This happens because AI models generate code based on patterns in their training data, which can include legacy or insecure practices. Understanding how to identify and fix these patterns is essential for building secure applications.
 
 [This guide covers common insecure code patterns that Claude Code might generate, how to recognize them](/claude-tdd-skill-test-driven-development-workflow/), and practical workflows using Claude skills to improve your code security.
 
-Why AI-Generated Code Can Be Insecure
+## Why AI-Generated Code Can Be Insecure
 
 Before jumping to fixes, it helps to understand the root cause. Claude Code learns from enormous corpora of publicly available code. That training data includes Stack Overflow answers from 2012 that predate modern security guidance, tutorials that prioritize brevity over safety, and legacy codebases where security was retrofitted rather than designed in. The model does not inherently know that a pattern is dangerous, it knows that the pattern solves a certain kind of problem, because it has seen thousands of examples of that pattern doing so.
 
@@ -29,9 +25,9 @@ This does not mean Claude Code is unreliable. It means the same thing that has a
 
 The good news is that Claude Code responds well to explicit security framing. Telling it "write this function securely, using parameterized queries and input validation" will produce a significantly different output than "write a login function." Your prompting habits are the first layer of defense.
 
-Common Insecure Patterns in AI-Generated Code
+## Common Insecure Patterns in AI-Generated Code
 
-SQL Injection Vulnerabilities
+## SQL Injection Vulnerabilities
 
 One of the most frequent issues appears in database queries. Claude might generate code like this:
 
@@ -72,7 +68,7 @@ When you encounter this pattern, you can [use the `tdd` skill to write proper te
 
 Prompt Claude securely: Ask "generate a user lookup function using SQLAlchemy ORM with parameterized queries and error handling for missing users" rather than "generate a SQL query to look up a user by name."
 
-Hardcoded Secrets and API Keys
+## Hardcoded Secrets and API Keys
 
 Another common issue is hardcoded credentials:
 
@@ -137,7 +133,7 @@ db_password = db_creds["password"]
 
 Add `.env` and any `*secret*` or `*credential*` patterns to your `.gitignore` immediately when starting any project. Claude can help you generate a comprehensive `.gitignore` tailored to your tech stack.
 
-Insecure Random Number Generation
+## Insecure Random Number Generation
 
 For cryptographic operations, never use `Math.random()` in JavaScript:
 
@@ -177,7 +173,7 @@ The `secrets` module in Python 3.6+ is specifically designed for cryptographic u
 | API key generation | `uuid.uuid4()` | `secrets.token_hex(32)` |
 | OTP/TOTP secrets | Any PRNG | `pyotp.random_base32()` |
 
-Cross-Site Scripting (XSS) Vulnerabilities
+## Cross-Site Scripting (XSS) Vulnerabilities
 
 When rendering user input in web applications, always escape output:
 
@@ -231,7 +227,7 @@ Beyond output escaping, set the `Content-Security-Policy` HTTP header to restric
 Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.trusted.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;
 ```
 
-Command Injection
+## Command Injection
 
 A less common but extremely dangerous pattern is passing user input to shell commands:
 
@@ -271,7 +267,7 @@ result = subprocess.run(['cat', safe_path], shell=False, capture_output=True, te
 
 When `shell=False`, the OS never interprets the arguments as shell commands. There is no injection surface.
 
-Path Traversal
+## Path Traversal
 
 Related to command injection, path traversal attacks occur when user input controls a file path:
 
@@ -304,9 +300,9 @@ def serve_file(filename: str) -> str:
         return f.read()
 ```
 
-Using Claude Skills for Security Reviews
+## Using Claude Skills for Security Reviews
 
-The Security Checklist Skill
+## The Security Checklist Skill
 
 Create a custom skill for security reviews. Place this in `~/.claude/skills/security-review.md`:
 
@@ -333,7 +329,7 @@ Use this skill with any code review task:
 
 A more detailed prompt that Claude responds well to is: "Review the following code for the OWASP Top 10 vulnerabilities. For each issue found, rate the severity (Critical/High/Medium/Low), explain the attack vector, and provide a corrected version of the affected code."
 
-Integrating with TDD Workflow
+## Integrating with TDD Workflow
 
 The `tdd` skill already encourages writing tests first. Extend this practice to include security test cases:
 
@@ -362,7 +358,7 @@ def test_session_token_length():
 
 Run your security tests alongside regular unit tests. The `tdd` skill will help structure these tests properly.
 
-Automating Security Checks
+## Automating Security Checks
 
 Consider adding automated security scanning to your workflow. Tools like Bandit (Python), ESLint with security plugins (JavaScript), and SAST scanners can catch many issues automatically. You can create a Claude skill that runs these tools:
 
@@ -409,9 +405,9 @@ npx eslint src/ --ext .js,.ts
 
 Integrate these checks into your CI pipeline so they run on every pull request. Claude can help you write the GitHub Actions configuration, CircleCI config, or whatever CI system you use.
 
-Building Secure Defaults
+## Building Secure Defaults
 
-Project Templates
+## Project Templates
 
 When starting new projects, establish secure defaults early. Use the `pdf` skill if you need to generate security documentation, or apply the `canvas-design` skill to create security awareness materials for your team.
 
@@ -434,7 +430,7 @@ project/
 
 Ask Claude to generate this scaffold with appropriate content in each file: "Create a Python project scaffold that includes Bandit security scanning, a pre-commit hook for secret detection, and a validation module with common input sanitizers."
 
-Dependency Management
+## Dependency Management
 
 AI-generated code might include outdated dependencies with known vulnerabilities. Always:
 
@@ -458,7 +454,7 @@ Pillow     8.1.0    GHSA-8vj2-vxx3   9.3.0
 
 When reviewing AI-generated `requirements.txt` files, check each pinned version against the current release. Claude will often use versions it saw frequently in training data, which may be one or two major releases behind.
 
-Input Validation
+## Input Validation
 
 Never trust user input. Implement validation at every layer:
 
@@ -522,7 +518,7 @@ async def create_user(request: UserCreateRequest):
 
 Pydantic validation runs before your business logic executes, so invalid data never reaches your database layer or external API calls.
 
-Practical Workflow for Secure Development
+## Practical Workflow for Secure Development
 
 1. Before generating code: Use the `supermemory` skill to recall security patterns relevant to your tech stack
 
@@ -544,7 +540,7 @@ After code generation. Run your automated tools (Bandit, ESLint security plugin,
 
 Before deployment. Do a manual pass through the OWASP Top 10 checklist for your application category. Claude can walk you through each item and help you determine whether your current implementation is compliant.
 
-Quick Reference: Secure Patterns
+## Quick Reference: Secure Patterns
 
 | Insecure Pattern | Secure Alternative |
 |-----------------|-------------------|
@@ -560,7 +556,7 @@ Quick Reference: Secure Patterns
 | `md5` for passwords | `bcrypt`, `argon2`, or `scrypt` |
 | HTTP-only cookies | `Secure; HttpOnly; SameSite=Strict` flags |
 
-Conclusion
+## Conclusion
 
 Claude Code generates code based on patterns it has seen in training data, which sometimes includes legacy or insecure practices. By understanding common vulnerability patterns and using Claude skills strategically, you can catch and fix these issues before they reach production.
 
