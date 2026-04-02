@@ -4,6 +4,146 @@ title: "Claude Code Guides — Tutorials, Workflows & AI Agent Guides"
 description: "2,500+ practical Claude Code tutorials for developers. Prompt engineering, API guides, MCP integrations, autonomous agents, and production workflows."
 ---
 
+<style>
+/* --- Hero Bio & CTA --- */
+.hero-bio {
+  color: #9a9590;
+  font-size: 0.92rem;
+  max-width: 620px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.6;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #d97757;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  border: 1px solid #3a3a35;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.hero-cta:hover {
+  color: #e8856a;
+  border-color: #d97757;
+  background: rgba(217, 119, 87, 0.06);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* --- Community Section --- */
+.community-section {
+  margin: 2.5rem 0;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, #1c1c1a 0%, #2a2420 40%, #141413 100%);
+  border-radius: 14px;
+  border: 1px solid #3a3a35;
+  position: relative;
+  overflow: hidden;
+}
+.community-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d97757, transparent);
+}
+.community-section h2 {
+  color: #faf9f5;
+  font-size: 1.35rem;
+  border: none;
+  padding: 0;
+  margin: 0 0 0.75rem 0;
+}
+.community-section h2::after {
+  display: none;
+}
+.community-lead {
+  color: #b0aea5;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 1.25rem;
+}
+.community-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+}
+.community-perks li {
+  color: #e8e6dc;
+  font-size: 0.92rem;
+  padding: 4px 0 4px 20px;
+  position: relative;
+  margin-bottom: 0.3rem;
+}
+.community-perks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d97757;
+}
+.community-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.community-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #d97757;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border: 1px solid #3a3a35;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.community-btn:hover {
+  color: #e8856a;
+  border-color: #d97757;
+  background: rgba(217, 119, 87, 0.06);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.community-btn-primary {
+  background: #d97757;
+  color: #141413;
+  border-color: #d97757;
+}
+.community-btn-primary:hover {
+  background: #e8856a;
+  color: #141413;
+  border-color: #e8856a;
+}
+
+@media (max-width: 768px) {
+  .hero-bio {
+    font-size: 0.85rem;
+  }
+  .community-section {
+    padding: 2rem 1.25rem;
+  }
+  .community-buttons {
+    flex-direction: column;
+  }
+  .community-btn {
+    justify-content: center;
+  }
+}
+</style>
+
 <div class="hero">
   <h1>Claude Code Guides</h1>
   <p class="hero-sub">Practical tutorials for developers who build with Claude. 2,500+ guides and counting.</p>
@@ -12,6 +152,8 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
     <div class="stat"><span class="number">7</span><span class="label">Topics</span></div>
     <div class="stat"><span class="number">Daily</span><span class="label">Updates</span></div>
   </div>
+  <p class="hero-bio">Built by Michael Lip — solo founder of Zovo, 20+ Chrome extensions, $400K+ on Upwork, 670+ open source contributions.</p>
+  <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="hero-cta">Join the Builder Community &rarr;</a>
 </div>
 
 <h2>Start Here</h2>
@@ -137,6 +279,23 @@ description: "2,500+ practical Claude Code tutorials for developers. Prompt engi
   </div>
 
 </div>
+
+<section class="community-section" aria-label="Builder community">
+  <h2>Join the Builder Community</h2>
+  <p class="community-lead">These guides are one piece of a larger developer ecosystem. Zovo is where developers building with AI and Chrome extensions connect, share, and ship together.</p>
+  <ul class="community-perks">
+    <li>2,500+ Claude Code guides (you're here)</li>
+    <li>20+ Chrome extensions (zovo.one)</li>
+    <li>Private Discord with verified builders</li>
+    <li>Monthly live calls &amp; extension teardowns</li>
+    <li>In-person meetups: Da Nang, Bangkok, Bali</li>
+  </ul>
+  <div class="community-buttons">
+    <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="community-btn community-btn-primary">Join Discord (Free) &rarr;</a>
+    <a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="community-btn">Explore Zovo &rarr;</a>
+    <a href="https://zovo.one/pricing" target="_blank" rel="noopener noreferrer" class="community-btn">View Pricing &rarr;</a>
+  </div>
+</section>
 
 <div class="about-section">
   <h2>About</h2>
