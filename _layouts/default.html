@@ -1090,6 +1090,99 @@
       border-color: #d97757;
     }
 
+    /* ============================================
+       STICKY FOOTER CTA BAR
+       ============================================ */
+    .cta-footer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: #1e1d1c;
+      border-top: 1px solid #d97757;
+      padding: 0 24px;
+      display: none;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .cta-footer-bar.is-visible {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .cta-footer-bar-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      min-height: 52px;
+      padding: 8px 0;
+    }
+    .cta-footer-bar-text {
+      color: #b0aea5;
+      font-size: 0.88rem;
+      white-space: nowrap;
+    }
+    .cta-footer-bar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 7px 18px;
+      background: #d97757;
+      color: #141413;
+      font-weight: 600;
+      font-size: 0.85rem;
+      font-family: inherit;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s ease;
+    }
+    .cta-footer-bar-btn:hover {
+      background: #e8856a;
+      color: #141413;
+      text-decoration: none;
+    }
+    .cta-footer-bar-dismiss {
+      background: none;
+      border: none;
+      color: #9a9590;
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 4px 8px;
+      line-height: 1;
+      transition: color 0.2s ease;
+      flex-shrink: 0;
+    }
+    .cta-footer-bar-dismiss:hover {
+      color: #faf9f5;
+    }
+
+    @media (max-width: 768px) {
+      .cta-footer-bar {
+        padding: 0 16px;
+      }
+      .cta-footer-bar-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 0;
+        min-height: auto;
+      }
+      .cta-footer-bar-text {
+        white-space: normal;
+        text-align: center;
+        font-size: 0.82rem;
+        flex-basis: 100%;
+      }
+    }
+
     /* --- Visually Hidden (for accessible labels) --- */
     .visually-hidden {
       position: absolute;
@@ -1194,5 +1287,80 @@
     <p><a href="https://chrometipsguide.com">Chrome Tips</a> &middot; <a href="https://bestchromeextensions.com">Extensions</a> &middot; <a href="https://securetoolsguide.com">Security Tools</a> &middot; <a href="https://bestremotetools.com">AI Tools</a> &middot; <a href="https://welikeremotestack.com">Remote Work</a></p>
     <p>&copy; 2026 Claude Code Guides &middot; <a href="/about/">About</a></p>
   </footer>
+
+  <!-- Sticky Footer CTA Bar -->
+  <div class="cta-footer-bar" id="ctaFooterBar" role="complementary" aria-label="Community invitation">
+    <div class="cta-footer-bar-inner">
+      <span class="cta-footer-bar-text">&#128295; These guides are built by the developer behind 20+ Chrome extensions.</span>
+      <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="cta-footer-bar-btn">Join the Community &#8594;</a>
+      <button type="button" class="cta-footer-bar-dismiss" id="ctaFooterDismiss" aria-label="Dismiss community banner">&#10005;</button>
+    </div>
+  </div>
+  <script>
+  (function() {
+    'use strict';
+    var COOKIE_NAME = 'zovo_footer_dismissed';
+    var COOKIE_DAYS = 7;
+    var SHOW_DELAY_MS = 5000;
+    var SCROLL_THRESHOLD = 0.3;
+
+    /* Check cookie — if dismissed, exit immediately */
+    function getCookie(name) {
+      var match = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
+      return match ? match[1] : null;
+    }
+
+    if (getCookie(COOKIE_NAME) === '1') {
+      return;
+    }
+
+    var bar = document.getElementById('ctaFooterBar');
+    var dismissBtn = document.getElementById('ctaFooterDismiss');
+    if (!bar || !dismissBtn) { return; }
+
+    var shown = false;
+    var timer = null;
+
+    function showBar() {
+      if (shown) { return; }
+      shown = true;
+      /* Clear timeout if scroll triggered first */
+      if (timer) { clearTimeout(timer); timer = null; }
+      /* Remove scroll listener — bounded, one-shot */
+      window.removeEventListener('scroll', onScroll);
+      /* Force reflow before adding class for CSS transition */
+      bar.style.display = 'block';
+      bar.offsetHeight;
+      bar.classList.add('is-visible');
+    }
+
+    function dismissBar() {
+      bar.classList.remove('is-visible');
+      /* Set cookie with 7-day expiry */
+      var expires = new Date();
+      expires.setTime(expires.getTime() + (COOKIE_DAYS * 24 * 60 * 60 * 1000));
+      document.cookie = COOKIE_NAME + '=1;expires=' + expires.toUTCString() + ';path=/;SameSite=Lax';
+      /* Remove element after transition completes */
+      setTimeout(function() { bar.style.display = 'none'; }, 350);
+    }
+
+    /* Dismiss handler — one-shot via { once: true } */
+    dismissBtn.addEventListener('click', dismissBar, { once: true });
+
+    /* Scroll handler — bounded, self-removing */
+    function onScroll() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0 && (scrollTop / docHeight) >= SCROLL_THRESHOLD) {
+        showBar();
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    /* Timer trigger — 5 seconds, cleared if scroll fires first */
+    timer = setTimeout(showBar, SHOW_DELAY_MS);
+  })();
+  </script>
 </body>
 </html>
