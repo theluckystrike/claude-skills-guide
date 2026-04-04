@@ -186,6 +186,6 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 - [Claude MD Too Long: Context Window Optimization](/claude-md-too-long-context-window-optimization/)
 - [Claude Code Slow Response: How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/)
-- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep detailed look/)
+- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

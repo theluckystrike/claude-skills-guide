@@ -99,6 +99,6 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/). actionable techniques to cut token consumption without losing capability
 - [Caching Strategies for Claude Code Skill Outputs](/caching-strategies-for-claude-code-skill-outputs/). cache skill results to avoid redundant token spend
 - [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/). troubleshoot and resolve context overflow issues
-- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep detailed look/). understand how lazy loading keeps context lean
+- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep-dive/). understand how lazy loading keeps context lean
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

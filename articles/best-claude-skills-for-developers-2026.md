@@ -87,7 +87,7 @@ The distinction between unit testing and end-to-end testing matters here. A unit
 
 PDF
 
-The [`pdf` skill](/claude-pdf-skill-document-generation-guide/) generates structured PDF documents from your codebase or specifications. It handles invoices, technical specs, reports, and documentation exports.
+The [`pdf` skill](/claude-code-pdf-skill-document-generation-guide/) generates structured PDF documents from your codebase or specifications. It handles invoices, technical specs, reports, and documentation exports.
 
 ```
 /pdf Create an API reference document from the routes in src/api/

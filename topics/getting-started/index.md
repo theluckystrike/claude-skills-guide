@@ -33,7 +33,6 @@ Everything you need to go from zero to productive with Claude Code. Installation
 - [Claude Code GCP Google Cloud Setup and Deployment Guide](/claude-code-gcp-google-cloud-setup-and-deployment-guide/)
 - [Claude Code GitHub Actions Notification Setup](/claude-code-github-actions-notification-setup/)
 - [Claude Code Hot Reload Development Setup](/claude-code-hot-reload-development-setup/)
-- [Claude Code Korean Developer Productivity Workflow Setup](/claude-code-korean-developer-productivity-workflow-setup/)
 - [Claude Code Launchdarkly Targeting Rules Setup Workflow](/claude-code-launchdarkly-targeting-rules-setup-workflow/)
 - [Claude Code Local Development Setup Guide](/claude-code-local-development-setup-guide/)
 - [Claude Code Nextauth Database Adapter Setup Guide](/claude-code-nextauth-database-adapter-setup-guide/)

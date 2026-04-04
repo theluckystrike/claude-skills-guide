@@ -73,3 +73,4 @@ Connect Claude Code to databases, APIs, cloud services, and developer tools usin
 - [Top MCP Servers for Claude Code Developers 2026](/top-mcp-servers-for-claude-code-developers-2026/)
 - [Zoom MCP Server Meeting Summary Automation](/zoom-mcp-server-meeting-summary-automation/)
 
+- [Claude Code MCP Timeout: How to Configure Settings](/claude-code-mcp-timeout-settings-configuration-guide/)

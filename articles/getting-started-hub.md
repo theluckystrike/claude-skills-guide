@@ -134,7 +134,7 @@ Go deeper:
 - [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-directory-where-to-find-skills/)
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/)
 - [Optimal Skill File Size and Complexity Guidelines](/optimal-skill-file-size-and-complexity-guidelines/)
-- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep detailed look/)
+- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
 
 ---
 
@@ -516,7 +516,7 @@ Fixing the most common errors you will encounter with Claude Code skills.
 Making Claude Code faster and more cost-efficient.
 
 - [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/)
-- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep detailed look/)
+- [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
 - [Claude Skill Token Usage Profiling and Optimization](/claude-skill-token-usage-profiling-and-optimization/)
 - [Claude Skill Prompt Compression Techniques](/claude-skill-prompt-compression-techniques/)
 - [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/)

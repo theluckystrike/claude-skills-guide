@@ -801,7 +801,6 @@ Configure projects, automate workflows, and get the most out of Claude Code's pr
 - [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-code-jest-to-vitest-migration-workflow-tutorial/)
 - [Claude Code Jest Unit Testing Workflow Guide](/claude-code-jest-unit-testing-workflow-guide/)
 - [Claude Code Jupyter Notebook Analysis Workflow Guide](/claude-code-jupyter-notebook-analysis-workflow-guide/)
-- [Claude Code Korean Developer Productivity Workflow Setup](/claude-code-korean-developer-productivity-workflow-setup/)
 - [Claude Code Kotlin Android Development Workflow Guide](/claude-code-kotlin-android-development-workflow-guide/)
 - [Claude Code Kubernetes Deployment Workflow Guide](/claude-code-kubernetes-deployment-workflow-guide/)
 - [Claude Code Kubernetes Upgrade Workflow Guide](/claude-code-kubernetes-upgrade-workflow-guide/)
