@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Check if Your Email Has Been Compromised in a Data Breach"
+title: "Check if Your Email Was Compromised in a Data Breach"
 description: "Learn how to use Chrome and developer tools to check if your email address has appeared in known data breaches. Practical methods and code examples for."
 date: 2026-03-15
 last_modified_at: 2026-03-15

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Compress Images Before Upload: Practical Guide"
+title: "Chrome Extension Compress Images Before Upload"
 description: "Learn how to build a Chrome extension that compresses images before upload. Includes implementation code, optimization techniques, and practical examples."
 date: 2026-03-15
 last_modified_at: 2026-03-15

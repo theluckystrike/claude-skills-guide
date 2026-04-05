@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Memory Saver Mode: A Developer's Guide to Reducing Browser Memory Usage"
+title: "Chrome Memory Saver Mode: Reducing Browser Memory"
 description: "Learn how Chrome's Memory Saver mode works, how to enable it programmatically, and practical tips for developers managing multiple browser tabs and extensions."
 date: 2026-03-15
 last_modified_at: 2026-03-15

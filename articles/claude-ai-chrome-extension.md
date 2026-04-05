@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude AI Chrome Extension: A Developer's Guide to Integration"
+title: "Claude AI Chrome Extension: Integration Guide"
 description: "Learn how to integrate Claude AI into Chrome with extensions, userscripts, and custom workflows for enhanced productivity."
 date: 2026-03-15
 last_modified_at: 2026-03-15

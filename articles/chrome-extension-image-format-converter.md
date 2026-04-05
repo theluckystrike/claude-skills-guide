@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Image Format Converter: Complete Developer Guide"
+title: "Chrome Extension Image Format Converter"
 description: "Build a Chrome extension that converts image formats directly in your browser. Practical code examples, APIs, and implementation patterns for developers."
 date: 2026-03-15
 last_modified_at: 2026-03-15

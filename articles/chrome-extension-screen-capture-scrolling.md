@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Screen Capture with Scrolling: A Developer's Guide"
+title: "Chrome Extension Screen Capture with Scrolling"
 description: "Learn how to capture full-page screenshots with automatic scrolling in Chrome. Technical implementation, use cases, and practical examples for developers."
 date: 2026-03-15
 last_modified_at: 2026-03-15

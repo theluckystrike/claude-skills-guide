@@ -10,6 +10,8 @@ author: "theluckystrike"
 reviewed: true
 score: 8
 permalink: /claude-api-timeout-error-handling-retry-guide/
+redirect_from:
+  - /claude-code-api-timeout-handling-best-practices/
 ---
 
 # Claude API Timeout Errors: Handling and Retry Guide

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Network Request Blocker: A Developer's Guide"
+title: "Chrome Extension Network Request Blocker"
 description: "Learn how to block network requests in Chrome extensions using the declarativeNetRequest API. Practical examples for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-03-15

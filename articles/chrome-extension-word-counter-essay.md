@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Word Counter for Essay Writing: A Developer Guide"
+title: "Chrome Extension Word Counter for Essay Writing"
 description: "Build a Chrome extension that counts words in essays and documents. Practical code examples, implementation patterns, and API usage for developers."
 date: 2026-03-15
 last_modified_at: 2026-03-15

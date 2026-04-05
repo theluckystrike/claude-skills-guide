@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome SSO Extension Enterprise: Implementation Guide for Developers"
+title: "Chrome SSO Extension Enterprise: Implementation Guide"
 description: "A practical guide to implementing Chrome SSO extensions for enterprise environments. Learn about SAML, OAuth, and session management for your organization."
 date: 2026-03-15
 last_modified_at: 2026-03-15

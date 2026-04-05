@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Return Policy Finder: Tools and Techniques for Developers"
+title: "Chrome Extension Return Policy Finder"
 description: "Learn how to build and use Chrome extensions for finding return policies. Includes practical code examples, API integration patterns, and techniques for."
 date: 2026-03-15
 last_modified_at: 2026-03-15

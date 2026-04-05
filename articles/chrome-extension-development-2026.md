@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Development in 2026: A Practical Manifest V3 Guide"
+title: "Chrome Extension Development 2026: Manifest V3 Guide"
 description: "Build Chrome extensions in 2026 with Manifest V3, service workers, content scripts, and popup UI. Includes a minimal working example and Chrome Web Store."
 date: 2026-03-20
 last_modified_at: 2026-03-20

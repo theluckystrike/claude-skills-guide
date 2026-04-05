@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Run Async Team Retrospectives Using Shared Documents and Recorded Summaries"
+title: "Async Team Retrospectives with Shared Docs and Recaps"
 description: "Learn how to run effective async team retrospectives using shared documents and recorded summaries. Perfect for distributed teams across time zones."
 date: 2026-03-18
 last_modified_at: 2026-03-18

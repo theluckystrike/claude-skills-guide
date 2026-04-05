@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool"
+title: "Chrome Extension Markdown Editor: Build Your Own"
 description: "Learn how to create a Chrome extension that functions as a markdown editor. This guide covers architecture, implementation, and practical code examples."
 date: 2026-03-15
 last_modified_at: 2026-03-15

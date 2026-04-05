@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Which Chrome Extensions Are Safe? A Developer's Guide to Security"
+title: "Which Chrome Extensions Are Safe? Security Guide"
 description: "Learn how to evaluate Chrome extension safety, identify red flags, and protect your browser from malicious extensions. Practical checklist for developers."
 date: 2026-03-15
 last_modified_at: 2026-03-15

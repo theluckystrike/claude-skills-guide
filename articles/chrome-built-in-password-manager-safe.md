@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Is Chrome's Built-in Password Manager Safe? A Developer Perspective"
+title: "Is Chrome's Built-in Password Manager Safe?"
 description: "A technical breakdown of Chrome's password manager security model, encryption methods, and how it compares to dedicated password managers for developers."
 date: 2026-03-15
 last_modified_at: 2026-03-15

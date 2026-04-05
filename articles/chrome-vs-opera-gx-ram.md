@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome vs Opera GX RAM: Memory Usage Comparison for Developers"
+title: "Chrome vs Opera GX RAM: Memory Usage Comparison"
 description: "A practical comparison of Chrome and Opera GX browser RAM usage. Learn memory management techniques, extension overhead, and optimization strategies for."
 date: 2026-03-15
 last_modified_at: 2026-03-15

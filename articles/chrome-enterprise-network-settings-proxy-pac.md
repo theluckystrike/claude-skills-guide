@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Enterprise Network Settings: Configuring Proxy PAC Files"
+title: "Chrome Enterprise Network Settings: Proxy PAC Files"
 description: "Learn how to configure Proxy PAC files in Chrome Enterprise for developers and power users. Includes practical examples, JavaScript patterns, and."
 date: 2026-03-15
 last_modified_at: 2026-03-15

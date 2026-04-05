@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "WireGuard PostUp/PostDown Scripts for Advanced Routing Configuration"
+title: "WireGuard PostUp/PostDown Scripts: Advanced Routing"
 description: "Learn how to use WireGuard's PostUp and PostDown directives to automate routing, firewall rules, and network configuration when your VPN tunnel connects."
 date: 2026-03-17
 last_modified_at: 2026-03-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Claude Error Handling Patterns Workflow Guide"
+title: "Claude Code for Claude Error Handling Patterns Workflow"
 description: "A comprehensive guide to implementing error handling patterns in Claude Code workflows for developers."
 date: 2026-03-20
 last_modified_at: 2026-03-20

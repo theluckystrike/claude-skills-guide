@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Set Up Always-On VPN on Android: Technical Implementation Guide"
+title: "How to Set Up Always-On VPN on Android: Tech Guide"
 description: "Learn how to configure always-on VPN on Android devices for persistent protection. Step-by-step technical guide covering VPN service configuration, kill."
 date: 2026-03-18
 last_modified_at: 2026-03-18

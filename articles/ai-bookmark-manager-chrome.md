@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Bookmark Manager for Chrome: Organizing Your Web Knowledge"
+title: "AI Bookmark Manager for Chrome: Web Knowledge Tools"
 description: "Discover how AI-powered bookmark managers for Chrome can automate organization, extract content summaries, and transform how you save and retrieve web."
 date: 2026-03-15
 last_modified_at: 2026-03-15

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Browser Memory Comparison 2026: A Developer and Power User Guide"
+title: "Browser Memory Comparison 2026: Developer Guide"
 description: "A practical comparison of browser memory usage in 2026. Learn which browsers use less RAM, memory management techniques, and optimization strategies for."
 date: 2026-03-15
 last_modified_at: 2026-03-15

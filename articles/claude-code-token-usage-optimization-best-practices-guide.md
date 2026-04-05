@@ -9,6 +9,8 @@ author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, claude-code, token-optimization, cost-efficiency, development]
 permalink: /claude-code-token-usage-optimization-best-practices-guide/
+redirect_from:
+  - /claude-code-claude-code-token-usage-optimization-best-practices-guide/
 reviewed: true
 score: 7
 ---

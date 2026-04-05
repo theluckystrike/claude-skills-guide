@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Async Product Discovery Process for Remote Teams Using Recorded Interviews"
+title: "Async Product Discovery for Remote Teams"
 description: "Learn how to implement an effective async product discovery process for remote teams using recorded interviews. Step-by-step guide for product managers."
 date: 2026-03-18
 last_modified_at: 2026-03-18

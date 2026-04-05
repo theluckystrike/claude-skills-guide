@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Claude RFP Response AI Workflow Tutorial Guide"
+title: "Claude Code for Claude RFP Response AI Workflow Tutorial"
 description: "Learn how to use Claude Code to automate and streamline your RFP response process with AI-powered workflows."
 date: 2026-03-20
 last_modified_at: 2026-03-20

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Favicon Generator: Complete Guide for Developers"
+title: "Chrome Extension Favicon Generator"
 description: "Learn how to create perfect favicons for your Chrome extension with practical examples, code snippets, and best practices for developers."
 date: 2026-03-15
 last_modified_at: 2026-03-15

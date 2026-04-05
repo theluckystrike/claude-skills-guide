@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Task Prioritizer Chrome Extension: A Practical Guide for Developers"
+title: "AI Task Prioritizer Chrome Extension: A Practical Guide"
 description: "Build an AI-powered task prioritization Chrome extension with practical code examples. Learn to integrate AI APIs, manage task data, and create intuitive."
 date: 2026-03-15
 last_modified_at: 2026-03-15

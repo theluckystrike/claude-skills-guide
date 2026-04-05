@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Slow After Update: Causes and Solutions for Power Users"
+title: "Chrome Slow After Update: Causes and Solutions"
 description: "Learn why Chrome slows down after updates and how to fix it. Practical solutions for developers and power users dealing with post-update performance issues."
 date: 2026-03-15
 last_modified_at: 2026-03-15

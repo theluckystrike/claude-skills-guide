@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Enterprise Private Extension Hosting: A Complete Guide"
+title: "Chrome Enterprise Private Extension Hosting"
 description: "Learn how to host and distribute private Chrome extensions within your organization using enterprise deployment methods."
 date: 2026-03-15
 last_modified_at: 2026-03-15

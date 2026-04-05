@@ -1,0 +1,31 @@
+---
+layout: null
+permalink: /feed.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  <link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}{{ site.baseurl }}/" rel="alternate" type="text/html"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}{{ site.baseurl }}/</id>
+  <author>
+    <name>{{ site.author.name | xml_escape }}</name>
+  </author>
+  {% assign articles = site.pages | where_exp: "p", "p.date" | sort: "date" | reverse %}
+  {% for article in articles limit:20 %}
+  <entry>
+    <title type="html">{{ article.title | xml_escape }}</title>
+    <link href="{{ site.url }}{{ site.baseurl }}{{ article.url }}" rel="alternate" type="text/html"/>
+    <published>{{ article.date | date_to_xmlschema }}</published>
+    <updated>{% if article.last_modified_at %}{{ article.last_modified_at | date_to_xmlschema }}{% else %}{{ article.date | date_to_xmlschema }}{% endif %}</updated>
+    <id>{{ site.url }}{{ site.baseurl }}{{ article.url }}</id>
+    <author>
+      <name>{% if article.author %}{{ article.author | xml_escape }}{% else %}{{ site.author.name | xml_escape }}{% endif %}</name>
+    </author>
+    <summary type="html">{{ article.description | xml_escape }}</summary>
+  </entry>
+  {% endfor %}
+</feed>

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Clearance Sale Finder: A Developer's Guide to Finding Deals"
+title: "Chrome Extension Clearance Sale Finder"
 description: "Learn how to find discounts, sales, and clearance deals on Chrome extensions. Practical methods for developers and power users to save money on browser tools."
 date: 2026-03-15
 last_modified_at: 2026-03-15

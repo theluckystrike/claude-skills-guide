@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Tab Groups Memory: A Developer Guide to Efficient Tab Management"
+title: "Chrome Tab Groups Memory: Efficient Tab Management"
 description: "Learn how Chrome tab groups impact memory usage and discover practical techniques to optimize browser performance for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-03-15

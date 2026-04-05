@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Claude SSO Integration Workflow Tutorial Guide"
+title: "Claude Code for Claude SSO Integration Workflow Tutorial"
 description: "A comprehensive guide to integrating Claude Code with Single Sign-On (SSO) workflows. Learn practical implementation steps, code examples, and best..."
 date: 2026-03-20
 last_modified_at: 2026-03-20

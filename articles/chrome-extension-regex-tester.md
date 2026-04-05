@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Regex Tester: Build Your Own or Find the Best Tools"
+title: "Chrome Extension Regex Tester: Build or Find Tools"
 description: "Learn how to use a regex tester Chrome extension for efficient pattern development. Discover practical examples, code snippets, and tips for testing."
 date: 2026-03-15
 last_modified_at: 2026-03-15

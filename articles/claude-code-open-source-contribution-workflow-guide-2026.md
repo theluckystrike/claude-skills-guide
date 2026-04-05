@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Open Source Contributions: 2026 Workflow Guide"
+title: "Claude Code for Open Source Contributions: 2026 Workflow"
 description: "Use Claude Code to analyze repos, understand unfamiliar codebases, write quality PRs, run test suites, and follow contribution guidelines. A practical."
 date: 2026-03-20
 last_modified_at: 2026-03-20
