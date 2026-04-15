@@ -1,0 +1,196 @@
+---
+layout: default
+title: "Claude Code Environment Variables Reference"
+description: "Complete reference for Claude Code environment variables: API keys, proxy settings, model selection, timeouts, and debug flags."
+date: 2026-04-15
+permalink: /claude-code-environment-variables-reference/
+categories: [guides, claude-code]
+tags: [environment-variables, configuration, API-key, proxy, reference]
+---
+
+# Claude Code Environment Variables Reference
+
+## The Problem
+
+You need to configure Claude Code behavior through environment variables for proxy settings, API keys, model selection, MCP timeouts, or debug logging, but you do not know which variables exist or how to set them permanently.
+
+## Quick Fix
+
+Set environment variables before launching Claude Code or add them to `settings.json`:
+
+```bash
+# One-time use
+ANTHROPIC_MODEL=claude-sonnet-4-6 claude
+
+# Permanent via settings
+```
+
+```json
+{
+  "env": {
+    "ANTHROPIC_MODEL": "claude-sonnet-4-6",
+    "MCP_TIMEOUT": "10000"
+  }
+}
+```
+
+## What's Happening
+
+Claude Code reads environment variables from your shell and from the `env` key in settings.json files. Shell variables apply to the current session; settings.json variables apply to every session. When both are set, the shell environment takes precedence.
+
+Settings.json supports user scope (`~/.claude/settings.json`) for personal configuration, project scope (`.claude/settings.json`) for team configuration, and managed scope for organization-wide enforcement.
+
+## Step-by-Step Fix
+
+### Essential variables
+
+#### API authentication
+
+```bash
+# Direct Anthropic API
+export ANTHROPIC_API_KEY=sk-ant-...
+
+# Custom API key helper script
+# Outputs key to stdout, used as X-Api-Key and Authorization: Bearer
+```
+
+In settings.json, use `apiKeyHelper` instead of storing keys directly:
+
+```json
+{
+  "apiKeyHelper": "/path/to/generate-api-key.sh"
+}
+```
+
+#### Model selection
+
+```bash
+# Override the default model
+export ANTHROPIC_MODEL=claude-sonnet-4-6
+```
+
+Or set it in settings.json with the `effortLevel` key:
+
+```json
+{
+  "effortLevel": "medium"
+}
+```
+
+Effort levels (`low`, `medium`, `high`) are supported on Opus 4.6 and Sonnet 4.6.
+
+#### Proxy and network configuration
+
+```bash
+# HTTP proxy for all outbound requests
+export HTTP_PROXY=http://proxy.example.com:8080
+export HTTPS_PROXY=http://proxy.example.com:8080
+
+# Corporate CA certificate for TLS inspection
+export NODE_EXTRA_CA_CERTS=/path/to/corporate-ca.pem
+```
+
+### MCP configuration variables
+
+```bash
+# MCP server startup timeout in milliseconds (default varies)
+export MCP_TIMEOUT=10000
+
+# Maximum MCP tool output tokens before warning (default: 10000)
+export MAX_MCP_OUTPUT_TOKENS=50000
+```
+
+### Provider-specific variables
+
+#### AWS Bedrock
+
+```bash
+export CLAUDE_CODE_USE_BEDROCK=1
+export AWS_REGION=us-east-1
+export AWS_ACCESS_KEY_ID=your-key
+export AWS_SECRET_ACCESS_KEY=your-secret
+export ANTHROPIC_MODEL=us.anthropic.claude-sonnet-4-6-20250514-v1:0
+```
+
+#### Google Vertex AI
+
+```bash
+export CLAUDE_CODE_USE_VERTEX=1
+export CLOUD_ML_REGION=us-east5
+export ANTHROPIC_VERTEX_PROJECT_ID=your-project-id
+export ANTHROPIC_MODEL=claude-sonnet-4-6@20250514
+```
+
+### Debug and telemetry variables
+
+```bash
+# Enable telemetry
+export CLAUDE_CODE_ENABLE_TELEMETRY=1
+
+# OpenTelemetry metrics exporter
+export OTEL_METRICS_EXPORTER=otlp
+
+# Skip writing session transcripts
+export CLAUDE_CODE_SKIP_PROMPT_HISTORY=1
+```
+
+### Experimental features
+
+```bash
+# Enable agent teams
+export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
+
+# New interactive init flow
+export CLAUDE_CODE_NEW_INIT=1
+```
+
+### Setting variables permanently
+
+Add variables to `~/.claude/settings.json` for all projects:
+
+```json
+{
+  "env": {
+    "MCP_TIMEOUT": "10000",
+    "HTTP_PROXY": "http://proxy.example.com:8080",
+    "HTTPS_PROXY": "http://proxy.example.com:8080",
+    "NODE_EXTRA_CA_CERTS": "/path/to/corporate-ca.pem"
+  }
+}
+```
+
+Add to `.claude/settings.json` for project-specific variables shared with your team:
+
+```json
+{
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1"
+  }
+}
+```
+
+## Prevention
+
+Use `settings.json` for variables that should persist rather than exporting them in your shell configuration. This keeps Claude Code configuration separate from your general shell environment and makes it visible to team members through project settings.
+
+Document required environment variables in your project's CLAUDE.md or README so new team members can configure them quickly.
+
+---
+
+### Level Up Your Claude Code Workflow
+
+The developers who get the most out of Claude Code aren't just fixing errors — they're running multi-agent pipelines, using battle-tested CLAUDE.md templates, and shipping with production-grade operating principles.
+
+**[Claude Code Mastery →](https://claudecodeguides.com/mastery/?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-environment-variables-reference)**
+Templates, configs, and orchestration playbooks used by a Top Rated Plus developer with $400K+ earned building with Claude Code.
+
+$19/month · $149 lifetime · No fluff, no courses, just tools that ship.
+
+---
+
+## Related Guides
+
+- [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/)
+- [Claude Code Headless Linux Auth](/claude-code-headless-linux-auth/)
+- [Claude Code TLS/SSL Connection Error Corporate Proxy Fix](/claude-code-tls-ssl-connection-error-corporate-proxy-fix/)
+- [Claude Code Slow Response Fix](/claude-code-slow-response-fix/)

@@ -1,0 +1,183 @@
+---
+layout: default
+title: "How to Use Claude Code with Jest Testing"
+description: "Use Claude Code to write, run, debug, and fix Jest tests automatically. TDD workflow, hook integration, and error analysis tips."
+date: 2026-04-15
+permalink: /claude-code-with-jest-testing-workflow/
+categories: [guides, claude-code]
+tags: [jest, testing, TDD, workflow, hooks]
+---
+
+# How to Use Claude Code with Jest Testing
+
+## The Problem
+
+Writing and maintaining Jest tests is time-consuming. You want Claude Code to write tests, run them, analyze failures, and fix the code or tests automatically, but getting reliable results requires the right workflow.
+
+## Quick Fix
+
+Pre-approve Jest commands in your project settings and ask Claude to implement with tests:
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx jest *)",
+      "Bash(npm run test *)",
+      "Bash(pnpm test *)"
+    ]
+  }
+}
+```
+
+Then: "Write tests for src/api/handlers/users.ts and run them"
+
+## What's Happening
+
+Claude Code can run Jest directly through its Bash tool, read test output, analyze failures, and iterate on fixes. The key to reliable results is pre-approving test commands so Claude can run tests without permission prompts at every step, and structuring your CLAUDE.md with test conventions so Claude writes tests that match your project's patterns.
+
+## Step-by-Step Fix
+
+### Step 1: Configure test permissions
+
+Add test-related commands to your project settings at `.claude/settings.json`:
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx jest *)",
+      "Bash(npm run test *)",
+      "Bash(pnpm test *)",
+      "Bash(npx jest --coverage *)"
+    ]
+  }
+}
+```
+
+### Step 2: Add test conventions to CLAUDE.md
+
+Tell Claude how your project handles testing:
+
+```markdown
+# Testing
+- Test framework: Jest with TypeScript
+- Test files: `*.test.ts` next to source files
+- Run all tests: `pnpm test`
+- Run single test: `pnpm test -- --testPathPattern=path/to/test`
+- Coverage: `pnpm test -- --coverage`
+- Mock conventions: Use `jest.mock()` for external dependencies
+- Test structure: describe/it blocks, arrange-act-assert pattern
+- Always test error cases and edge cases, not just happy paths
+```
+
+### Step 3: TDD workflow with Claude Code
+
+Ask Claude to write tests first, then implement:
+
+```text
+Write failing Jest tests for a UserService.create() method that:
+- Creates a user with valid input
+- Throws ValidationError for missing email
+- Throws DuplicateError if email already exists
+- Hashes the password before storing
+
+Then implement the method to make all tests pass.
+```
+
+Claude will:
+1. Write the test file
+2. Run the tests (they should fail)
+3. Implement the method
+4. Run the tests again (they should pass)
+5. Iterate if any tests still fail
+
+### Step 4: Auto-run tests after edits with hooks
+
+Configure a PostToolUse hook that runs related tests after every file edit:
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE=$(jq -r '.tool_input.file_path'); case \"$FILE\" in *.ts|*.tsx) npx jest --findRelatedTests \"$FILE\" --passWithNoTests 2>&1 | tail -20 ;; esac"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+This runs `jest --findRelatedTests` on the edited file, so Claude immediately sees test results after every edit.
+
+### Step 5: Debug failing tests
+
+When tests fail, give Claude the full context:
+
+```text
+Run pnpm test and fix any failures. Show me what was wrong and what you changed.
+```
+
+Claude reads the test output, identifies the root cause, and fixes either the implementation or the test.
+
+### Step 6: Generate coverage reports
+
+```text
+Run pnpm test -- --coverage and identify files under 80% coverage.
+Write tests for the uncovered paths.
+```
+
+### Step 7: Reduce test output context
+
+Large test outputs fill the context window. Use a hook to filter to failures only:
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "if": "Bash(npx jest*)",
+            "command": "jq -r '.tool_output' | grep -A 5 'FAIL\\|Error\\|expected\\|received' || echo 'All tests passed'"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+## Prevention
+
+Add testing conventions to your CLAUDE.md so Claude writes tests consistently. Pre-approve test commands to eliminate permission prompt friction. Use the `--findRelatedTests` flag in hooks to keep test runs fast and focused.
+
+Start each testing task with `/clear` to avoid stale context from previous work contaminating the test analysis.
+
+---
+
+### Level Up Your Claude Code Workflow
+
+The developers who get the most out of Claude Code aren't just fixing errors — they're running multi-agent pipelines, using battle-tested CLAUDE.md templates, and shipping with production-grade operating principles.
+
+**[Claude Code Mastery →](https://claudecodeguides.com/mastery/?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-with-jest-testing-workflow)**
+Templates, configs, and orchestration playbooks used by a Top Rated Plus developer with $400K+ earned building with Claude Code.
+
+$19/month · $149 lifetime · No fluff, no courses, just tools that ship.
+
+---
+
+## Related Guides
+
+- [Best Way to Validate Claude Code Output Before Committing](/best-way-to-validate-claude-code-output-before-committing/)
+- [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
+- [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+- [Claude Code for Batch Processing Optimization](/claude-code-for-batch-processing-optimization-workflow/)
