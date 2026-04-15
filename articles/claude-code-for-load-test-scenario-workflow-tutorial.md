@@ -10,6 +10,7 @@ categories: [tutorials, guides]
 tags: [claude-code, claude-skills, load-testing, automation, devops]
 reviewed: true
 score: 8
+render_with_liquid: false
 ---
 
 {% raw %}

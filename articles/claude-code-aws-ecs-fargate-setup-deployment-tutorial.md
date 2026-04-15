@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-code-aws-ecs-fargate-setup-deployment-tutorial/
+render_with_liquid: false
 ---
 {% raw %}
 

@@ -11,6 +11,7 @@ author: "theluckystrike"
 reviewed: true
 score: 7
 permalink: /talend-api-alternative-chrome-extension-2026/
+render_with_liquid: false
 ---
 {% raw %}
 

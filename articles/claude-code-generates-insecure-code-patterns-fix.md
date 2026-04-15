@@ -10,6 +10,7 @@ author: "theluckystrike"
 reviewed: true
 score: 8
 permalink: /claude-code-generates-insecure-code-patterns-fix/
+render_with_liquid: false
 ---
 {% raw %}
 

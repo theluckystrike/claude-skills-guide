@@ -10,6 +10,7 @@ tags: [claude-code, claude-skills, sentry, error-tracking, source-maps, debuggin
 reviewed: true
 score: 8
 permalink: /claude-code-sentry-error-tracking-source-maps-workflow/
+render_with_liquid: false
 ---
 {% raw %}
 

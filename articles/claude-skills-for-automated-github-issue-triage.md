@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /claude-skills-for-automated-github-issue-triage/
+render_with_liquid: false
 ---
 {% raw %}
 

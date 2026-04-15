@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-iso27001-evidence-collection-workflow/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

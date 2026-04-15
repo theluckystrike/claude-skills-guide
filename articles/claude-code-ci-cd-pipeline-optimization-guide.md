@@ -9,6 +9,7 @@ permalink: /claude-code-ci-cd-pipeline-optimization-guide/
 reviewed: true
 categories: [guides, claude-code]
 tags: [cicd, github-actions, pipeline, optimization, devops]
+render_with_liquid: false
 ---
 
 # CI/CD Pipeline Optimization with Claude Code

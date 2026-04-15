@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /claude-code-skills-for-ansible-automation/
+render_with_liquid: false
 ---
 {% raw %}
 

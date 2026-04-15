@@ -10,6 +10,7 @@ author: theluckystrike
 reviewed: true
 score: 7
 permalink: /claude-code-for-t3-stack-trpc-nextjs-workflow/
+render_with_liquid: false
 ---
 
 {% raw %}

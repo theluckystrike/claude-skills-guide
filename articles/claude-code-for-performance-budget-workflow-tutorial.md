@@ -10,6 +10,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills, performance, devops, ci-cd]
 score: 7
 reviewed: true
+render_with_liquid: false
 ---
 
 {% raw %}

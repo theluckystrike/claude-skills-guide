@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /claude-code-cis-benchmark-hardening-script-automation/
+render_with_liquid: false
 ---
 
 {% raw %}

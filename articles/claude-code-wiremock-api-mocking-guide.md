@@ -10,6 +10,7 @@ author: theluckystrike
 reviewed: true
 score: 8
 permalink: /claude-code-wiremock-api-mocking-guide/
+render_with_liquid: false
 ---
 {% raw %}
 

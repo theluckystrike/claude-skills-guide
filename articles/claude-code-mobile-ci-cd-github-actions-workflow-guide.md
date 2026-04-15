@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-mobile-ci-cd-github-actions-workflow-guide/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-github-actions-skill-step-failed-debug/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 {% raw %}
 # Debugging Failed GitHub Actions Skill Steps in Claude Code

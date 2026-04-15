@@ -10,6 +10,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, claude-skills, beginner, getting-started]
+render_with_liquid: false
 ---
 
 {% raw %}

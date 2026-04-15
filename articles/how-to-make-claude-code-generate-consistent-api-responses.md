@@ -10,6 +10,7 @@ author: theluckystrike
 reviewed: true
 score: 7
 permalink: /how-to-make-claude-code-generate-consistent-api-responses/
+render_with_liquid: false
 ---
 {% raw %}
 

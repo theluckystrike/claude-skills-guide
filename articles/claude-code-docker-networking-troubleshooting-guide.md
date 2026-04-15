@@ -11,6 +11,7 @@ reviewed: true
 categories: [guides]
 score: 7
 tags: [claude-code, claude-skills]
+render_with_liquid: false
 ---
 
 {% raw %}

@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-client-library-generation-guide/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-cloud-run-jobs-workflow/
 reviewed: true
 score: 8
+render_with_liquid: false
 ---
 
 {% raw %}

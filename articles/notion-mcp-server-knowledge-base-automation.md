@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /notion-mcp-server-knowledge-base-automation/
+render_with_liquid: false
 ---
 {% raw %}
 

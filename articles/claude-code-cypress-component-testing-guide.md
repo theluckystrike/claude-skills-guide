@@ -10,6 +10,7 @@ author: "theluckystrike"
 reviewed: true
 score: 8
 permalink: /claude-code-cypress-component-testing-guide/
+render_with_liquid: false
 ---
 {% raw %}
 

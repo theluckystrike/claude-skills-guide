@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-pull-request-review-workflow-guide/
 score: 7
 reviewed: true
+render_with_liquid: false
 ---
 
 {% raw %}

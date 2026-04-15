@@ -9,6 +9,7 @@ permalink: /claude-code-code-review-automation-guide/
 reviewed: true
 categories: [guides, claude-code]
 tags: [code-review, automation, pull-request, quality, workflow]
+render_with_liquid: false
 ---
 
 # Automate Code Reviews with Claude Code

@@ -11,6 +11,7 @@ categories: [guides]
 reviewed: true
 score: 7
 tags: [claude-code, full-stack, workflow, remix]
+render_with_liquid: false
 ---
 
 {% raw %}

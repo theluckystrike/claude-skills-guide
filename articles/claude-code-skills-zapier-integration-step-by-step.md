@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 9
 permalink: /claude-code-skills-zapier-integration-step-by-step/
+render_with_liquid: false
 ---
 {% raw %}
 

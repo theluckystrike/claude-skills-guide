@@ -10,6 +10,7 @@ reviewed: true
 score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
+render_with_liquid: false
 ---
 {% raw %}
 # Claude Code SDK Testing Workflow Guide

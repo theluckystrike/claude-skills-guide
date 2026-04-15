@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-few-shot-prompting-best-practices-workflow/
 categories: [tutorials]
 tags: [claude-code, claude-skills, prompting, ai-productivity]
+render_with_liquid: false
 ---
 
 {% raw %}

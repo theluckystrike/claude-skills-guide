@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-code-l10n-testing-automation-workflow-tutorial/
+render_with_liquid: false
 ---
 {% raw %}
 

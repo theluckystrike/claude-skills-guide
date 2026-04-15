@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /claude-code-xata-serverless-database-branching-guide/
+render_with_liquid: false
 ---
 {% raw %}
 

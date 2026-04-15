@@ -8,6 +8,7 @@ author: Claude Skills Guide
 permalink: /claude-code-for-self-consistency-prompting-workflow-tutorial/
 categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
+render_with_liquid: false
 ---
 
 {% raw %}

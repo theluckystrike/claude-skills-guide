@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /claude-frontend-design-skill-review-and-tutorial/
+render_with_liquid: false
 ---
 {% raw %}
 

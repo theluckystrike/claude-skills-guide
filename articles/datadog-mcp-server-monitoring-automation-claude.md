@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /datadog-mcp-server-monitoring-automation-claude/
+render_with_liquid: false
 ---
 {% raw %}
 

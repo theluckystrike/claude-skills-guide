@@ -10,6 +10,7 @@ author: theluckystrike
 reviewed: true
 score: 8
 permalink: /claude-code-ml-engineer-model-evaluation-workflow-guide/
+render_with_liquid: false
 ---
 
 {% raw %}

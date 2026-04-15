@@ -8,6 +8,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-k9s-kubernetes-terminal-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+render_with_liquid: false
 ---
 
 {% raw %}

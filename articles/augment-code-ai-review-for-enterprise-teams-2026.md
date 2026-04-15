@@ -11,6 +11,7 @@ categories: [guides]
 reviewed: true
 score: 8
 tags: [claude-code, enterprise, code-review, ai-tools]
+render_with_liquid: false
 ---
 {% raw %}
 

@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 categories: [integrations, guides]
 tags: [chrome-extension, colorpicker, developer-tools]
+render_with_liquid: false
 ---
 {% raw %}
 

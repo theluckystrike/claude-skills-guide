@@ -9,6 +9,7 @@ permalink: /claude-code-aws-lambda-deployment-guide/
 reviewed: true
 categories: [guides, claude-code]
 tags: [aws, lambda, serverless, deployment, sam]
+render_with_liquid: false
 ---
 
 # Deploy AWS Lambda Functions with Claude Code

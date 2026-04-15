@@ -10,6 +10,7 @@ categories: [guides]
 tags: [claude-code, react, accessibility, aria]
 reviewed: true
 score: 8
+render_with_liquid: false
 ---
 
 {% raw %}

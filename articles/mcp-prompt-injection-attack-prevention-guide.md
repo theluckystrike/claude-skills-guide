@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /mcp-prompt-injection-attack-prevention-guide/
+render_with_liquid: false
 ---
 {% raw %}
 

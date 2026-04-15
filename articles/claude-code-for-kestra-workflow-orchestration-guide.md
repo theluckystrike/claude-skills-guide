@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-kestra-workflow-orchestration-guide/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

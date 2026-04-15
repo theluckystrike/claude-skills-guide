@@ -6,6 +6,7 @@ date: 2026-04-15
 permalink: /claude-code-github-actions-setup-guide/
 categories: [guides, claude-code]
 tags: [github-actions, CI-CD, automation, pull-requests]
+render_with_liquid: false
 ---
 
 # Claude Code GitHub Actions Setup Guide

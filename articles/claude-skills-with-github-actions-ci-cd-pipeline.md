@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-skills-with-github-actions-ci-cd-pipeline/
+render_with_liquid: false
 ---
 {% raw %}
 

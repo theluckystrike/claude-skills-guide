@@ -10,6 +10,7 @@ author: theluckystrike
 reviewed: true
 score: 7
 permalink: /claude-code-for-arabic-speaking-developer-teams/
+render_with_liquid: false
 ---
 
 {% raw %}

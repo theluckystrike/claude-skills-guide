@@ -10,6 +10,7 @@ tags: [claude-code, claude-skills, claude-code, java, library-development, maven
 permalink: /claude-code-java-library-development-guide/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 {% raw %}
 

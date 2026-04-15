@@ -10,6 +10,7 @@ author: theluckystrike
 reviewed: true
 score: 8
 permalink: /claude-code-container-security-scanning-workflow-guide/
+render_with_liquid: false
 ---
 
 {% raw %}

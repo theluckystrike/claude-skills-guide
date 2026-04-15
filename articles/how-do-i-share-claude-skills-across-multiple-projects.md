@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /how-do-i-share-claude-skills-across-multiple-projects/
+render_with_liquid: false
 ---
 {% raw %}
 

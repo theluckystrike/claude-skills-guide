@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-dependency-versioning-workflow-guide/
 reviewed: true
 score: 8
+render_with_liquid: false
 ---
 
 {% raw %}

@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 categories: [comparisons]
 tags: [chrome, claude-skills]
+render_with_liquid: false
 ---
 {% raw %}
 

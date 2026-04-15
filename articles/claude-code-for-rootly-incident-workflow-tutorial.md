@@ -11,6 +11,7 @@ tags: [claude-code, rootly, incident-management, devops, automation, claude-skil
 permalink: /claude-code-for-rootly-incident-workflow-tutorial/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

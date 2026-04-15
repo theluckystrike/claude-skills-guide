@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-code-i18n-workflow-for-react-applications-guide/
+render_with_liquid: false
 ---
 {% raw %}
 

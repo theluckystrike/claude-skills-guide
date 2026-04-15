@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-code-lm-studio-local-model-skill-integration-guide/
+render_with_liquid: false
 ---
 {% raw %}
 

@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-code-skills-for-real-estate-listing-platforms/
+render_with_liquid: false
 ---
 {% raw %}
 

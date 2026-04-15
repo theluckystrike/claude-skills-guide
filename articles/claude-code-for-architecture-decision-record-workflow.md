@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-architecture-decision-record-workflow/
 score: 7
 reviewed: true
+render_with_liquid: false
 ---
 {% raw %}
 

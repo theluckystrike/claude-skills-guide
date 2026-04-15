@@ -11,6 +11,7 @@ categories: [tutorials, guides]
 tags: [claude-code, claude-skills, vue-3, suspense, async-components]
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

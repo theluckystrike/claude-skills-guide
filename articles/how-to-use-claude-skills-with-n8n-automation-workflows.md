@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /how-to-use-claude-skills-with-n8n-automation-workflows/
+render_with_liquid: false
 ---
 {% raw %}
 

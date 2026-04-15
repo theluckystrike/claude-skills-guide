@@ -10,6 +10,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 permalink: /claude-code-csp-content-security-policy-generation-guide/
+render_with_liquid: false
 ---
 {% raw %}
 

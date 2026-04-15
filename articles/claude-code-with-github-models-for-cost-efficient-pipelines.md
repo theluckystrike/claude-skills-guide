@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-with-github-models-for-cost-efficient-pipelines/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

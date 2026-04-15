@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 tags: [claude-code, claude-skills, automation, changelog, devops]
 permalink: /claude-skills-for-automated-changelog-generation/
+render_with_liquid: false
 ---
 {% raw %}
 

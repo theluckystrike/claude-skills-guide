@@ -11,6 +11,7 @@ categories: [workflows, guides]
 tags: [claude-code, claude-skills, snyk, container-security, devsecops]
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

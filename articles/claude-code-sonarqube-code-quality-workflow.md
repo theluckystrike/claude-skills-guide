@@ -10,6 +10,7 @@ author: theluckystrike
 reviewed: true
 score: 7
 permalink: /claude-code-sonarqube-code-quality-workflow/
+render_with_liquid: false
 ---
 {% raw %}
 # Claude Code SonarQube Code Quality Workflow

@@ -10,6 +10,7 @@ author: theluckystrike
 reviewed: true
 score: 7
 permalink: /claude-code-docusaurus-docs-site-guide/
+render_with_liquid: false
 ---
 
 {% raw %}

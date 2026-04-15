@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-nuxt-vue-full-stack-workflow/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 {% raw %}
 

@@ -9,6 +9,7 @@ permalink: /claude-code-next-js-hydration-error-fix/
 reviewed: true
 categories: [troubleshooting, claude-code]
 tags: [nextjs, hydration, react, ssr, debugging]
+render_with_liquid: false
 ---
 
 # Fix Next.js Hydration Errors Using Claude Code

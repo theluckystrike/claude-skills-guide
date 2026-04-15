@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 permalink: /claude-code-playwright-visual-regression-testing-guide/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /mcp-transport-layer-security-tls-configuration/
+render_with_liquid: false
 ---
 {% raw %}
 

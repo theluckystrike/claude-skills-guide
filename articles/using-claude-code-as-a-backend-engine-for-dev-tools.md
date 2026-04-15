@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /using-claude-code-as-a-backend-engine-for-dev-tools/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills, lighthouse, performance, automation]
 reviewed: true
 score: 8
 permalink: /claude-code-lighthouse-score-improvement-automation-guide/
+render_with_liquid: false
 ---
 {% raw %}
 

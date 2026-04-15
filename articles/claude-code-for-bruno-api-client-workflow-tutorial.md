@@ -8,6 +8,7 @@ author: Claude Skills Guide
 permalink: /claude-code-for-bruno-api-client-workflow-tutorial/
 categories: [tutorials, guides]
 tags: [claude-code, claude-skills, bruno, api-client, workflow-automation]
+render_with_liquid: false
 ---
 
 {% raw %}

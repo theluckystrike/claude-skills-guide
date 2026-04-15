@@ -11,6 +11,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+render_with_liquid: false
 ---
 {% raw %}
 Pull request size is one of the most overlooked factors in developer productivity. Large PRs slow down code reviews, increase the chance of bugs slipping through, and create merge conflicts that waste everyone's time. In this tutorial, you'll learn how to use Claude Code to automate PR size management, enforce team standards, and build healthier code review habits.

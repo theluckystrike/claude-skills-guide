@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-go-benchmark-workflow-tutorial-guide/
 score: 7
 reviewed: true
+render_with_liquid: false
 ---
 {% raw %}
 # Claude Code for Go Benchmark Workflow Tutorial Guide

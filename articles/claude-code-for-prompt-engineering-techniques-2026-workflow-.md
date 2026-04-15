@@ -8,6 +8,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-for-prompt-engineering-techniques-2026-workflow-/
+render_with_liquid: false
 ---
 
 {% raw %}

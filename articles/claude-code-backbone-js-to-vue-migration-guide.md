@@ -11,6 +11,7 @@ tags: [claude-code, backbone-js, vue, migration, javascript, claude-skills]
 permalink: /claude-code-backbone-js-to-vue-migration-guide/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

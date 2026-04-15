@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /how-do-i-make-a-claude-skill-available-organization-wide/
+render_with_liquid: false
 ---
 {% raw %}
 

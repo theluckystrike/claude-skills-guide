@@ -11,6 +11,7 @@ categories: [tutorials, guides]
 tags: [claude-code, claude-skills, pr-checks, ci-cd, automation]
 reviewed: true
 score: 8
+render_with_liquid: false
 ---
 
 {% raw %}

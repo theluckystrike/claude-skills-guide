@@ -10,6 +10,7 @@ categories: [guides]
 tags: [chatgpt, chrome-extension, ai, developer-tools, productivity, alternatives]
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 {% raw %}
 # ChatGPT Chrome Extension Alternatives: A Developer's Guide

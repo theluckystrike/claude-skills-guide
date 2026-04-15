@@ -11,6 +11,7 @@ tags: [claude-code, posthog, feature-flags, react, sdk, claude-skills]
 permalink: /claude-code-posthog-feature-flag-react-sdk-guide/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 {% raw %}
 

@@ -9,6 +9,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-argo-rollouts-canary-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
+render_with_liquid: false
 ---
 
 {% raw %}

@@ -11,6 +11,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills, opensea, nft, ethereum, blockchain]
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

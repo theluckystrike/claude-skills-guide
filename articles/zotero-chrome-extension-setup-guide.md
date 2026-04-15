@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
+render_with_liquid: false
 ---
 {% raw %}
 # Zotero Chrome Extension Setup Guide

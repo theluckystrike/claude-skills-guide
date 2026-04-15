@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-skills-for-site-reliability-engineers-sre/
+render_with_liquid: false
 ---
 {% raw %}
 

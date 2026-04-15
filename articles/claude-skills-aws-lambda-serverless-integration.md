@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 9
 permalink: /claude-skills-aws-lambda-serverless-integration/
+render_with_liquid: false
 ---
 {% raw %}
 

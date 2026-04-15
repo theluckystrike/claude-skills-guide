@@ -10,6 +10,7 @@ author: theluckystrike
 reviewed: true
 score: 8
 permalink: /openclaw-skill-security-risks-and-mitigations/
+render_with_liquid: false
 ---
 {% raw %}
 

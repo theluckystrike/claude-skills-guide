@@ -10,6 +10,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 permalink: /claude-code-astro-static-site-generation-workflow-guide/
+render_with_liquid: false
 ---
 {% raw %}
 

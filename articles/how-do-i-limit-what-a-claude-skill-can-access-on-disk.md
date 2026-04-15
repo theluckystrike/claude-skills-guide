@@ -10,6 +10,7 @@ tags: [claude-code, claude-skills, permissions, security, file-access]
 reviewed: true
 score: 9
 permalink: /how-do-i-limit-what-a-claude-skill-can-access-on-disk/
+render_with_liquid: false
 ---
 {% raw %}
 

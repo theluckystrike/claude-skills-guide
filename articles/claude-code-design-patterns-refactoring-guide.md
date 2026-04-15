@@ -10,6 +10,7 @@ tags: [claude-code, claude-skills, refactoring, design-patterns, code-quality]
 reviewed: true
 score: 9
 permalink: /claude-code-design-patterns-refactoring-guide/
+render_with_liquid: false
 ---
 {% raw %}
 

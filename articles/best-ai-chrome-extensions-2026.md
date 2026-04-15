@@ -10,6 +10,7 @@ categories: [guides]
 tags: [ai, chrome-extension, productivity, developer-tools, 2026]
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-skills-serverless-function-development-workflow/
+render_with_liquid: false
 ---
 {% raw %}
 

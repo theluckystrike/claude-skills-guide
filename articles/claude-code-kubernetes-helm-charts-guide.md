@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-kubernetes-helm-charts-guide/
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 {% raw %}
 # Claude Code Kubernetes Helm Charts Guide

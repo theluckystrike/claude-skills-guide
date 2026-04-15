@@ -10,6 +10,7 @@ author: theluckystrike
 reviewed: true
 score: 7
 permalink: /claude-code-terraform-module-development-guide/
+render_with_liquid: false
 ---
 
 {% raw %}

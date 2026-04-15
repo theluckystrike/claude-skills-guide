@@ -11,6 +11,7 @@ categories: [workflows, tutorials]
 tags: [claude-code, claude-skills, svelte, transitions, animations, frontend]
 reviewed: true
 score: 7
+render_with_liquid: false
 ---
 
 {% raw %}

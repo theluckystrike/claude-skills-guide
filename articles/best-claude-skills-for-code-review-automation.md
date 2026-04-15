@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 9
 permalink: /best-claude-skills-for-code-review-automation/
+render_with_liquid: false
 ---
 
 {% raw %}

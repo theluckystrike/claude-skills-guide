@@ -11,6 +11,7 @@ categories: [guides]
 tags: [security, chrome, password-manager, developer-tools]
 reviewed: true
 score: 8
+render_with_liquid: false
 ---
 {% raw %}
 
