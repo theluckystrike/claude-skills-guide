@@ -12,6 +12,8 @@ tags: [code-review, automation, pull-request, quality, workflow]
 render_with_liquid: false
 ---
 
+{% raw %}
+
 # Automate Code Reviews with Claude Code
 
 ## The Problem
@@ -269,3 +271,4 @@ $99 once. Free forever. 47/500 founding spots left.
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/)
 - [Claude Code Subagents Guide](/claude-code-subagents-guide/)
+{% endraw %}

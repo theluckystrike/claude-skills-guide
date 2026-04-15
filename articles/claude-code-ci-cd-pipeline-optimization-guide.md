@@ -12,6 +12,8 @@ tags: [cicd, github-actions, pipeline, optimization, devops]
 render_with_liquid: false
 ---
 
+{% raw %}
+
 # CI/CD Pipeline Optimization with Claude Code
 
 ## The Problem
@@ -358,3 +360,4 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)
 - [Claude Code Workflow Optimization Tips 2026](/claude-code-workflow-optimization-tips-2026/)
 - [Claude Code Test Reporting Workflow Guide](/claude-code-test-reporting-workflow-guide/)
+{% endraw %}

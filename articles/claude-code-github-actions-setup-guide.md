@@ -9,6 +9,8 @@ tags: [github-actions, CI-CD, automation, pull-requests]
 render_with_liquid: false
 ---
 
+{% raw %}
+
 # Claude Code GitHub Actions Setup Guide
 
 ## The Problem
@@ -221,3 +223,4 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
+{% endraw %}

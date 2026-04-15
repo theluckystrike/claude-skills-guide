@@ -12,6 +12,8 @@ tags: [aws, lambda, serverless, deployment, sam]
 render_with_liquid: false
 ---
 
+{% raw %}
+
 # Deploy AWS Lambda Functions with Claude Code
 
 ## The Problem
@@ -405,3 +407,4 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude Code AWS ECS Fargate Setup Deployment Tutorial](/claude-code-aws-ecs-fargate-setup-deployment-tutorial/)
 - [Claude Code AWS S3 Multipart Upload Workflow Guide](/claude-code-aws-s3-multipart-upload-workflow-guide/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)
+{% endraw %}

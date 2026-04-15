@@ -14,6 +14,8 @@ score: 7
 render_with_liquid: false
 ---
 
+{% raw %}
+
 Managing dependencies across multiple projects can quickly become overwhelming. Dependabot automates this process by creating pull requests for outdated dependencies, but configuring it effectively requires understanding its various options and workflows. This guide shows you how to use Claude Code to set up, manage, and optimize your Dependabot configuration workflow. from first-time setup to multi-repo governance at scale.
 
 ## Understanding Dependabot and Claude Code
@@ -510,3 +512,4 @@ Related Reading
 - [Claude Code for ArgoCD Image Updater Workflow](/claude-code-for-argocd-image-updater-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}
