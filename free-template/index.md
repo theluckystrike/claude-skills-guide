@@ -276,6 +276,10 @@ The core principles -- bounded functions, explicit types, mandatory tests, struc
 - [Claude Code Config File Location](/claude-code-config-file-location/) -- Where Claude Code stores settings and how to manage them
 - [Permission Rules and settings.json Guide](/claude-code-permission-rules-settings-json-guide/) -- Control what Claude Code can and cannot do in your project
 
+<div class="trust-strip">
+$400K+ earned on Upwork · 100% Job Success · Top Rated Plus · 16 published extensions · 3,000+ users · Building with Claude Code since launch
+</div>
+
 ## Want More Templates, Prompts, and Configs?
 
 This free template is one of 16 production-ready CLAUDE.md templates included in the Zovo Lifetime package. The full collection covers:

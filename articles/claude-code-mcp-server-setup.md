@@ -136,7 +136,29 @@ Claude should invoke the MCP tool and return results.
 
 ---
 
+
+<div class="author-bio">
+<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
+<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+</div>
+
 ---
+
+
+<div class="before-after">
+<div class="before">
+<h4>Without CLAUDE.md</h4>
+<p>You: "Set up a database layer for my FastAPI project"</p>
+<p>Claude Code generates synchronous SQLAlchemy with hardcoded <code>sqlite:///./test.db</code>, no migrations, connection strings in source code, and blocking I/O calls inside async route handlers that tank your throughput.</p>
+<p><strong>Result:</strong> You discover the performance cliff in staging. Rewrite takes a full day.</p>
+</div>
+<div class="after">
+<h4>With a Professional CLAUDE.md</h4>
+<p>You: Same prompt.</p>
+<p>Claude Code reads CLAUDE.md &rarr; knows async SQLAlchemy 2.0 + <code>.env</code> config + Alembic &rarr; generates <code>AsyncSession</code>, proper connection pooling, an initial Alembic migration, and a <code>get_db</code> dependency that handles lifecycle correctly.</p>
+<p><strong>Result:</strong> Production-ready from the first commit. Zero rewrites.</p>
+</div>
+</div>
 
 <div class="mastery-cta">
 

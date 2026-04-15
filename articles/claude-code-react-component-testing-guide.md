@@ -369,7 +369,29 @@ Add testing rules to your CLAUDE.md:
 
 ---
 
+
+<div class="author-bio">
+<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
+<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+</div>
+
 ---
+
+
+<div class="before-after">
+<div class="before">
+<h4>Without CLAUDE.md</h4>
+<p>You: "Write tests for my React components"</p>
+<p>Claude Code generates Enzyme shallow renders (deprecated since React 18), tests implementation details like state variables, mocks <code>fetch</code> with manual stubs, and asserts on snapshot strings that break every time you change a CSS class.</p>
+<p><strong>Result:</strong> Tests pass once, then become a maintenance burden nobody trusts.</p>
+</div>
+<div class="after">
+<h4>With a Professional CLAUDE.md</h4>
+<p>You: Same prompt.</p>
+<p>Claude Code reads CLAUDE.md &rarr; knows React Testing Library + MSW + Vitest &rarr; generates user-centric tests with <code>screen.getByRole</code>, MSW handlers for API mocking, and assertions on visible behavior rather than implementation details.</p>
+<p><strong>Result:</strong> Tests survive three refactors without a single update. Your team actually runs them.</p>
+</div>
+</div>
 
 <div class="mastery-cta">
 

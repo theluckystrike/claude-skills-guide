@@ -130,6 +130,12 @@ dig api.anthropic.com
 
 ---
 
+
+<div class="author-bio">
+<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
+<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+</div>
+
 ---
 
 <div class="mastery-cta">

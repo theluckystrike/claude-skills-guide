@@ -188,7 +188,29 @@ The developers who get the most out of Claude Code aren't just fixing errors —
 
 ---
 
+
+<div class="author-bio">
+<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
+<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+</div>
+
 ---
+
+
+<div class="before-after">
+<div class="before">
+<h4>Without CLAUDE.md</h4>
+<p>You: "Add authentication to my Next.js app"</p>
+<p>Claude Code generates a <code>pages/</code> directory (your App Router uses <code>app/</code>), picks NextAuth v4 (v5 is current), creates <code>.js</code> files in a TypeScript project, and uses <code>getServerSession</code> incorrectly with the wrong adapter pattern.</p>
+<p><strong>Result:</strong> You spend 45 minutes fixing what Claude broke.</p>
+</div>
+<div class="after">
+<h4>With a Professional CLAUDE.md</h4>
+<p>You: Same prompt.</p>
+<p>Claude Code reads CLAUDE.md &rarr; knows App Router + TypeScript strict + NextAuth v5 &rarr; generates <code>app/api/auth/[...nextauth]/route.ts</code> with correct session handling, middleware config, and type-safe session types that match your existing schema.</p>
+<p><strong>Result:</strong> It works on the first run. You ship.</p>
+</div>
+</div>
 
 <div class="mastery-cta">
 

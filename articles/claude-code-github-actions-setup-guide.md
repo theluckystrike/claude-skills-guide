@@ -168,7 +168,29 @@ The developers who get the most out of Claude Code aren't just fixing errors —
 
 ---
 
+
+<div class="author-bio">
+<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
+<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+</div>
+
 ---
+
+
+<div class="before-after">
+<div class="before">
+<h4>Without CLAUDE.md</h4>
+<p>You: "Create a Dockerfile for my Node.js app"</p>
+<p>Claude Code generates a single-stage build: <code>FROM node:20</code>, copies everything including <code>node_modules</code> and <code>.git</code>, runs as root, no <code>.dockerignore</code>, no health check. Final image: <strong>1.2 GB</strong>. Fails security audit on day one.</p>
+<p><strong>Result:</strong> CI takes 8 minutes. Your security team sends it back.</p>
+</div>
+<div class="after">
+<h4>With a Professional CLAUDE.md</h4>
+<p>You: Same prompt.</p>
+<p>Claude Code reads CLAUDE.md &rarr; knows multi-stage builds + Alpine + non-root user &rarr; generates a build stage, a production stage with <code>node:20-alpine</code>, proper <code>.dockerignore</code>, <code>HEALTHCHECK</code>, <code>USER node</code>, and pinned dependencies. Final image: <strong>89 MB</strong>.</p>
+<p><strong>Result:</strong> CI runs in 90 seconds. Security passes it without comments.</p>
+</div>
+</div>
 
 <div class="mastery-cta">
 
