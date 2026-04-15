@@ -1,0 +1,134 @@
+---
+layout: default
+title: "Fix: Claude Code Image 400 Error Loop"
+description: "Fix the unrecoverable 'Could not process image' API 400 error in Claude Code where attaching a PNG makes the entire session unusable."
+date: 2026-04-15
+last_modified_at: 2026-04-15
+author: "Claude Code Guides"
+permalink: /claude-code-image-could-not-process-400/
+reviewed: true
+score: 8
+categories: [troubleshooting]
+tags: [claude-code, images, vision, 400-error, api-errors]
+---
+
+# Fix: Claude Code 'Could Not Process Image' 400 Loop
+
+## The Error
+
+After sharing a PNG image in a Claude Code session, every subsequent message fails with:
+
+```
+API Error: 400 {"type":"error","error":{"type":"invalid_request_error",
+"message":"Could not process image"}}
+```
+
+The image is stuck in the conversation context. Even commands like `/resume`, `/compact`, and `/simplify` fail with the same error. The session is completely unusable.
+
+## Quick Fix
+
+```bash
+# Exit the broken session
+# Ctrl+C or type /exit
+
+# Start a fresh session (do NOT use /resume)
+claude
+
+# If you need to continue from where you left off,
+# re-describe what you were working on rather than resuming
+```
+
+## What Causes This
+
+When you attach an image to a Claude Code session, it is encoded and included in every subsequent API request as part of the conversation context. If the API cannot process that image (corrupt file, unsupported format variant, dimension issues), it returns a 400 `invalid_request_error`.
+
+The critical problem: the image is now permanently embedded in the conversation history. Every API call -- including commands meant to help you recover -- sends the full conversation context including the bad image. This creates an unrecoverable error loop:
+
+1. Image is added to conversation context
+2. API rejects the image with 400 "Could not process image"
+3. `/compact` tries to send the conversation (including the image) to the API for summarization -- fails with same 400
+4. `/resume` reloads the conversation history (including the image) -- fails with same 400
+
+## Full Solution
+
+### 1. Start a Fresh Session
+
+```bash
+# Exit completely
+# Ctrl+C
+
+# Start fresh - do not resume
+claude
+```
+
+### 2. If You Need Previous Context
+
+Your file changes are on disk regardless of the session state. Only the conversation context is broken, not your files:
+
+```bash
+# Check if you have git changes from before the error
+git log --oneline -5
+git diff --stat
+```
+
+### 3. Validate Images Before Attaching
+
+The API rejects images larger than 8000x8000 pixels. If you submit more than 20 images in one request, the limit drops to 2000x2000 pixels. The maximum request size is 32 MB for standard API endpoints.
+
+Before sharing an image with Claude Code:
+
+```bash
+# Check image format and dimensions
+file screenshot.png
+# Expected: PNG image data, 1920 x 1080, 8-bit/color RGBA, non-interlaced
+
+# Check file size
+ls -la screenshot.png
+
+# Verify the image opens correctly
+open screenshot.png  # macOS
+xdg-open screenshot.png  # Linux
+```
+
+### 4. Convert Problematic Images
+
+For optimal performance, resize images so the long edge is no more than 1568 pixels. Images larger than this are scaled down by the API anyway, adding latency with no quality benefit.
+
+```bash
+# Re-encode with standard settings and resize to safe dimensions
+# Strips problematic metadata and format variants
+convert input.png -strip -resize '1568x1568>' output.png
+
+# Or with ImageMagick 7+
+magick input.png -strip -resize '1568x1568>' output.png
+
+# Or with ffmpeg
+ffmpeg -i input.png -vf "scale='min(1568,iw)':'min(1568,ih)'" output.png
+```
+
+### 5. Use Text Descriptions Instead of Images
+
+For many use cases, describing what you see is more reliable than sharing an image:
+
+```
+Instead of: [attaching a screenshot of an error]
+
+Try: "I'm seeing this error in the terminal:
+Error: ENOENT: no such file or directory, open '/path/to/file'
+The error appears after running 'npm build' on line 47 of build.js"
+```
+
+## Prevention
+
+- **Validate images before attaching**: check format, dimensions, and file size
+- **Use PNG or JPEG**: the API supports JPEG, PNG, GIF, and WebP
+- **Resize large images**: keep the long edge under 1568 pixels for optimal performance
+- **Re-encode screenshots**: use `convert image.png -strip clean.png` to remove problematic metadata
+- **Prefer text over images**: error messages, logs, and code are better shared as text
+
+## Related Guides
+
+- [Anthropic API Error Reference](/claude-api-error-reference/)
+- [Claude Vision Capabilities Guide](/claude-vision-guide/)
+- [Claude Code Common Errors](/claude-code-common-errors/)
+- [Understanding API Request Size Limits](/api-request-size-limits/)
