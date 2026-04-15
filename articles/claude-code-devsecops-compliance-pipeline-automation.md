@@ -12,7 +12,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, devsecops, compliance]
 ---
 
-{% raw %}
+
 Building automated compliance pipelines is essential for modern development teams that need to maintain security standards while moving quickly. Claude Code skills provide powerful capabilities for automating security checks, compliance validations, and audit documentation throughout your development workflow. This guide explores practical approaches to implementing DevSecOps compliance automation using Claude Code.
 
 ## Understanding DevSecOps Compliance Pipelines
@@ -174,4 +174,4 @@ Related Reading
 - [Claude Code German Enterprise Compliance Workflow Tips](/claude-code-german-enterprise-compliance-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

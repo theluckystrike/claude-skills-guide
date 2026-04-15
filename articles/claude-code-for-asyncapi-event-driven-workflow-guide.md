@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for AsyncAPI Event-Driven Workflow Guide
 
 Event-driven architectures have become the backbone of modern distributed systems. Whether you're building microservices, IoT platforms, or real-time data pipelines, communicating through events requires clear contracts and reliable specifications. AsyncAPI provides that specification, and Claude Code can help you write, validate, and implement event-driven workflows efficiently.
@@ -424,7 +424,7 @@ AsyncAPI provides the contract foundation that event-driven systems need to scal
 Start small, define one event stream using AsyncAPI and let Claude help you expand from there. The initial investment pays dividends as your system grows and more teams need to integrate with your event channels. A well-maintained AsyncAPI specification is also a form of living documentation: when a new engineer joins the team, the spec tells the complete story of how your services communicate without requiring them to read source code across a dozen repositories.
 
 The combination of Claude Code for generation and iteration, the AsyncAPI CLI for validation, and a disciplined versioning strategy gives your event-driven architecture a solid foundation that scales with both system complexity and team size.
-{% endraw %}
+
 
 ---
 

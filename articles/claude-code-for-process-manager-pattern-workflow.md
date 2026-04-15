@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 The Process Manager pattern (also known as Saga Coordinator or Workflow Orchestrator) is a powerful architectural pattern for coordinating complex multi-step business processes across distributed services. When implemented correctly, it enables reliable execution of long-running workflows while handling failures gracefully through compensation mechanisms. This guide shows you how to use Claude Code to implement solid Process Manager workflows efficiently.
 
@@ -268,7 +268,7 @@ The Process Manager pattern provides a solid foundation for building reliable di
 
 Start with simple workflows and progressively add complexity as your understanding of failure modes improves. The investment in proper Process Manager implementation pays dividends in system reliability and maintainability.
 
-{% endraw %}
+
 
 ---
 

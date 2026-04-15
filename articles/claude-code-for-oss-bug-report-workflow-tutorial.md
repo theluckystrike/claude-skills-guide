@@ -10,7 +10,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for OSS Bug Report Workflow Tutorial
 
 Bug reporting is the backbone of open source software improvement. Yet many developers struggle with creating effective bug reports that actually get attention and resolution from maintainers. Claude Code can transform how you approach OSS bug reporting, helping you reproduce issues, gather context, and craft detailed reports that lead to faster fixes.
@@ -287,4 +287,4 @@ Related Reading
 - [Claude Code for OSS Maintainer Workflow Tutorial Guide](/claude-code-for-oss-maintainer-workflow-tutorial-guide/)
 - [Claude Code for OSS Roadmap Workflow Tutorial Guide](/claude-code-for-oss-roadmap-workflow-tutorial-guide/)
 
-{% endraw %}
+

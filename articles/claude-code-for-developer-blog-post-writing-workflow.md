@@ -199,7 +199,7 @@ To implement this workflow effectively:
 6. Connect your blog writing with your publishing pipeline for smooth workflows
 
 Claude Code transforms developer blog writing from a solitary struggle into a collaborative process. By handling the mechanical aspects of writing, formatting, code accuracy, structure, it frees you to focus on what matters most: sharing knowledge that helps other developers grow.
-{% endraw %}
+
 
 ---
 
@@ -224,3 +224,4 @@ Related Reading
 - [Claude Code for Technical Writing Workflow](/claude-code-for-technical-writing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

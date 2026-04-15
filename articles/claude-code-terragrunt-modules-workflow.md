@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Terragrunt Modules Workflow: A Practical Guide
 
 Managing infrastructure as code becomes significantly more complex when working with multiple environments, regions, and component types. Terragrunt provides a powerful solution for orchestrating Terraform modules across these dimensions, but the workflow efficiency depends heavily on how you structure your interactions with the tool. This guide explores practical strategies for integrating Claude Code into your Terragrunt modules workflow to accelerate development and reduce manual overhead.
@@ -192,4 +192,4 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

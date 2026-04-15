@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Performance regressions silently degrade user experience and can quickly spiral into critical issues if not caught early. As applications grow in complexity, manual performance testing becomes impractical. This guide shows you how to use Claude Code to build an automated performance regression detection workflow that catches issues before they reach production.
 
@@ -242,7 +242,7 @@ Performance regression workflows don't need to be complex or burdensome. By inte
 The key is starting: define your critical paths, establish baselines, and add automated checks to your workflow. Even basic regression detection is far better than none at all. From there, you can refine and expand as your needs evolve.
 
 Remember: the best time to catch a performance regression is before it ships. Claude Code makes that practical at scale.
-{% endraw %}
+
 
 ---
 

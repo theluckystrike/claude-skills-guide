@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Workspace indexing is one of Claude Code's most powerful features for developers working with large codebases. When you index your workspace, Claude gains deep understanding of your project's structure, dependencies, and codebase patterns, enabling more accurate suggestions, faster context retrieval, and smarter code generation. This tutorial walks you through setting up, configuring, and optimizing workspace indexing workflows for maximum productivity.
 
@@ -350,7 +350,7 @@ Remember: a well-indexed workspace is the foundation for effective AI-assisted d
 
 The workflows described here, cross-file refactoring, context-aware debugging, accurate code generation, and automated documentation, all become dramatically more effective as the index matures. Each session adds to Claude's understanding of your project's patterns and conventions. Developers who invest in proper indexing configuration consistently report that Claude's suggestions feel more like a knowledgeable colleague than a generic AI tool.
 
-{% endraw %}
+
 
 ---
 

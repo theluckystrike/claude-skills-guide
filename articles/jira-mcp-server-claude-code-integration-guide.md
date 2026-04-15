@@ -11,7 +11,7 @@ reviewed: true
 score: 8
 permalink: /jira-mcp-server-claude-code-integration-guide/
 ---
-{% raw %}
+
 
 Project management automation becomes significantly more powerful when Claude Code connects directly to your Jira instance. The Jira MCP server enables Claude to interact with tickets, manage workflows, query issues, and automate repetitive project management tasks through natural language commands. This guide covers practical integration patterns for developers and power users who want to streamline their Jira workflows, with concrete configuration examples, JQL query patterns, and automation recipes you can use immediately.
 
@@ -504,4 +504,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

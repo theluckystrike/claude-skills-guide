@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Azure Infrastructure as Code (IaC) has evolved significantly with Bicep, Microsoft's declarative language that simplifies ARM template deployment. Combined with Claude Code, you can create powerful automation workflows that handle everything from initial resource provisioning to complex multi-environment deployments. This guide walks you through building an effective Bicep-focused workflow with Claude Code.
 
@@ -244,7 +244,7 @@ Integrating Claude Code with Bicep transforms Azure infrastructure management fr
 
 Start by establishing clear guidelines in your CLAUDE.md, create reusable modules for common infrastructure patterns, and always validate before deployment. With these practices in place, your team can confidently manage Azure resources at any scale.
 
-{% endraw %}
+
 
 ---
 

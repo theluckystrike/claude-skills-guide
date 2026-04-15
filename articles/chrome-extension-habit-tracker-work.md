@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Habit Tracker for Work: A Developer Guide
 
 Building a habit tracker as a Chrome extension offers unique advantages for work productivity. Unlike standalone apps, a browser-based tracker integrates directly with your workflow, triggering reminders at the right moments and tracking behaviors that happen online. This guide walks you through building a practical habit tracking extension using modern Chrome APIs.
@@ -307,4 +307,4 @@ Related Reading
 - [Chrome Extension Costco Deal Tracker: A Developer Guide](/chrome-extension-costco-deal-tracker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

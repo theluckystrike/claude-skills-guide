@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Runbook Authoring Workflow Tutorial
 
 Runbooks are the backbone of reliable operational procedures. Whether you're handling incident response, deployment rollback, or routine maintenance, well-authored runbooks ensure consistency and reduce mean time to recovery (MTTR). In this tutorial, you'll learn how to use Claude Code to create, maintain, and evolve comprehensive runbooks that your team can actually use.
@@ -693,4 +693,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

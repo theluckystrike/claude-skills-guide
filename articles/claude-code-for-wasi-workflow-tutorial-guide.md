@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 WebAssembly System Interface (WASI) is revolutionizing how developers build portable, secure applications that run across different operating systems and environments. Combined with Claude Code's AI-assisted development capabilities, you can significantly accelerate your WASI development workflow. This guide walks you through practical strategies for integrating Claude Code into your WASI projects.
 
 ## Understanding WASI and Its Development Landscape
@@ -264,7 +263,7 @@ Claude Code transforms WASI development from a potentially frustrating experienc
 
 The WASI ecosystem continues to evolve rapidly, with new capabilities and standards emerging regularly. Claude Code stays current with these developments, making it an invaluable partner in your WebAssembly journey.
 
-{% endraw %}
+
 
 ---
 
@@ -289,3 +288,4 @@ Related Reading
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

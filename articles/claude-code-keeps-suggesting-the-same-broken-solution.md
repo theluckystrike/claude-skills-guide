@@ -13,7 +13,7 @@ score: 7
 permalink: /claude-code-keeps-suggesting-the-same-broken-solution/
 ---
 
-{% raw %}
+
 Why Claude Code Keeps Suggesting the Same Broken Solution
 
 One of the most frustrating experiences when working with Claude Code is watching it repeatedly suggest the same solution that clearly isn't working. You've explained the problem multiple times, tried different phrasings, and yet Claude keeps circling back to the same approach. This behavior isn't a flaw, it's a feature of how LLMs work, and understanding it gives you the tools to fix it.
@@ -174,7 +174,7 @@ The best way to avoid these loops is to structure your interactions to prevent t
 When Claude Code keeps suggesting the same broken solution, it's not misbehaving, it's following patterns in your conversation that reinforce that solution. By understanding why this happens and using techniques like fresh context, explicit constraints, and structured exploration, you can break the loop and get back to productive problem-solving.
 
 The key insight is that your prompts shape Claude's behavior. Rather than criticizing failures, guide toward successes. Rather than listing what doesn't work, specify what should work. Instead of one more attempt at the same approach, explicitly request alternatives.
-{% endraw %}
+
 
 ---
 

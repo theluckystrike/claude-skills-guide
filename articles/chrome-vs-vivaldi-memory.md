@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome vs Vivaldi Memory: A Developer's Performance Guide
 
 When choosing a browser for development work, memory consumption often becomes a critical factor, especially when running multiple tabs, development servers, and resource-intensive IDEs simultaneously. This guide examines the memory characteristics of Chrome and Vivaldi, helping developers and power users make informed decisions about their browser choice.
@@ -237,4 +237,4 @@ Related Reading
 - [Benchmarking Claude Code Skills Performance Guide](/benchmarking-claude-code-skills-performance-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

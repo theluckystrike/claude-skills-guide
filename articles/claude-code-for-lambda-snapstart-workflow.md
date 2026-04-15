@@ -242,7 +242,7 @@ Claude Code can guide you through implementing these best practices and help tro
 
 Lambda SnapStart represents a significant advancement in serverless cold start optimization, and Claude Code makes implementing it straightforward. By following the patterns in this guide, proper configuration, code optimization, automated testing, and effective monitoring, you can achieve substantial performance improvements for your Lambda functions. Start with non-critical functions to build confidence, then expand SnapStart adoption across your serverless architecture as you gain experience with the workflow.
 
-{% endraw %}
+
 
 ---
 
@@ -267,3 +267,4 @@ Related Reading
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Batch Image Download: A Developer Guide
 
 Building a Chrome extension that downloads multiple images from a webpage automatically is a valuable skill for developers and power users. Whether you're collecting reference images for a design project, archiving visual content, or gathering training data for machine learning, understanding how to programmatically extract and save images at scale saves countless hours of manual work.
@@ -318,4 +318,4 @@ Related Reading
 - [Chrome Enterprise Bundle Download: A Developer's Guide](/chrome-enterprise-bundle-download/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

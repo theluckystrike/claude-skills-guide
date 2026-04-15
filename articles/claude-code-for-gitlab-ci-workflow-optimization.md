@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 GitLab CI/CD pipelines are the backbone of modern software delivery, but optimizing them for speed, reliability, and cost-efficiency remains a constant challenge. Claude Code brings intelligent automation to pipeline optimization, helping developers identify bottlenecks, implement caching strategies, and create self-healing workflows. This guide covers practical techniques for getting the most out of your GitLab CI workflows using Claude Code.
 
@@ -203,7 +203,7 @@ Start optimizing your GitLab CI workflows today with these concrete steps:
 
 Claude Code transforms pipeline optimization from a manual, time-consuming process into an automated, continuous improvement cycle. By using its understanding of GitLab CI internals and your specific project context, you can achieve significant pipeline speedups without sacrificing reliability or test coverage.
 
-{% endraw %}
+
 
 ---
 

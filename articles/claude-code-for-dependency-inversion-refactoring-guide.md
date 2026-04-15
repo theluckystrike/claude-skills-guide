@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Dependency Inversion Refactoring Guide
 
 Dependency Inversion is one of the most transformative principles in software design, yet applying it to existing codebases can feel overwhelming. Fortunately, Claude Code transforms this refactoring from a manual, error-prone process into an assisted, systematic approach. This guide shows you how to use Claude Code effectively for dependency inversion refactoring.
@@ -274,4 +274,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Nx Generators Executors Custom Workflow Guide
 
 Nx is a powerful build system and monorepo management tool that has become essential for modern JavaScript and TypeScript development. When combined with Claude Code, Nx's generators and executors become even more powerful, enabling you to create sophisticated custom workflows that automate repetitive tasks and enforce best practices across your projects.
@@ -361,7 +361,7 @@ When combined with Claude Code's ability to understand and interact with your co
 - Maintain consistency across your monorepo
 
 Start small with a single custom generator, then expand your collection over time. Your team will thank you for the consistency and time savings.
-{% endraw %}
+
 
 ---
 

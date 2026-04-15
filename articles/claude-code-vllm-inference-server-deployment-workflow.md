@@ -206,7 +206,7 @@ Claude Code transforms vLLM inference server deployment from a manual, error-pro
 The key is loading the appropriate skills before starting your deployment project. Skills like dockerfile-generation, kubernetes-manifest, github-actions-workflow, and monitoring-dashboards work together smoothly to build a complete deployment pipeline. As vLLM continues to evolve, these skills update to support new features and best practices, ensuring your deployment remains current with the latest framework capabilities.
 
 If you have not yet written the vLLM inference server itself, the companion guide [Claude Code for vLLM Inference Server Workflow](/claude-code-for-vllm-inference-server-workflow/) covers using Claude Code to build the FastAPI server, initialize the LLM engine, and add inline Prometheus instrumentation before you containerize and deploy.
-{% endraw %}
+
 
 ---
 
@@ -231,3 +231,4 @@ Related Reading
 - [Claude Code for Astro Server Endpoints Workflow](/claude-code-for-astro-server-endpoints-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

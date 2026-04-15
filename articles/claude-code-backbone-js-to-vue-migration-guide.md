@@ -246,7 +246,7 @@ Execute your migration using this proven approach:
 5. Implement routing last once individual components function correctly
 
 The migration from Backbone.js to Vue represents moving from an era of manual DOM manipulation to reactive, component-based architecture. Claude Code skills accelerate this journey by automating repetitive transformations and enabling systematic analysis of your existing codebase. Start with isolated components, maintain backward compatibility during the transition, and progressively modernize your application one feature at a time.
-{% endraw %}
+
 
 ---
 
@@ -271,3 +271,4 @@ Related Reading
 - [Claude Code for GraphQL to REST Migration Guide](/claude-code-for-graphql-to-rest-migration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

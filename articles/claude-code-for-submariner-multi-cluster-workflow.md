@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Submariner Multi-Cluster Workflow: A Developer's Guide
 
 Managing Kubernetes clusters across multiple environments has become the norm for modern cloud-native applications. Submariner, the Kubernetes networking project that enables secure cross-cluster communication, offers powerful capabilities but comes with operational complexity. This guide shows you how to use Claude Code to automate Submariner multi-cluster workflows, reducing manual configuration errors and speeding up your deployment pipeline.
@@ -197,7 +197,7 @@ Claude Code transforms Submariner multi-cluster management from a manual, error-
 Start by building a basic skill that understands your cluster topology, then progressively add more sophisticated automation as your multi-cluster environment grows. The initial investment pays dividends in reduced operational overhead and improved reliability.
 
 Remember that Submariner's capabilities continue to evolve, keep your Claude Code skills updated to use new features and address emerging challenges in multi-cluster networking.
-{% endraw %}
+
 
 ---
 

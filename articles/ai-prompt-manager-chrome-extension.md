@@ -13,8 +13,8 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Working with AI coding assistants, ChatGPT, Claude, and other language models requires efficient prompt management. An AI prompt manager Chrome extension provides a centralized solution for storing, organizing, and retrieving your most effective prompts without switching between tabs or losing valuable work.
 
 ## Why Prompt Management Matters for Developers

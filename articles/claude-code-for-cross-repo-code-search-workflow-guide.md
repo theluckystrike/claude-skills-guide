@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Working with multiple repositories is a common scenario for modern development teams. Whether you're maintaining a monorepo, managing microservices, or contributing across several projects, finding code across repositories efficiently can significantly impact your productivity. This guide shows you how to use Claude Code to build an effective cross-repo code search workflow that saves time and reduces context switching fatigue.
 
 ## Why Cross-Repo Search Matters
@@ -302,4 +302,4 @@ Related Reading
 - [Claude Code for Git Filter-Repo Workflow](/claude-code-for-git-filter-repo-workflow/)
 
 Built by theluckystrike. More at https://zovo.one
-{% endraw %}
+

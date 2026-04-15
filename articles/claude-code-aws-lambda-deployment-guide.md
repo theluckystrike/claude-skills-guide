@@ -13,7 +13,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 # Deploy AWS Lambda Functions with Claude Code
 
 ## The Problem

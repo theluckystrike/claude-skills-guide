@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome extensions that handle multiple accounts within a single browser profile solve a real problem for developers, marketers, and power users who manage numerous identities. Rather than maintaining separate browser profiles or logging out and back in repeatedly, a well-designed multi-account container system lets users switch between contexts instantly.
 
 This guide covers the architecture patterns, implementation strategies, and practical code examples for building Chrome extensions with solid multi-account container support.
@@ -308,4 +308,4 @@ Related Reading
 - [Claude Code Container Environment Variables Management](/claude-code-container-environment-variables-management/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

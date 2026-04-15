@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for DVC Data Versioning Workflow
 
 Data versioning is a critical yet often overlooked aspect of machine learning and data science projects. Without proper version control for datasets, models, and experiments, teams quickly lose track of which data produced which results. DVC (Data Version Control) addresses this challenge by bringing Git-like semantics to your data files while integrating smoothly with existing workflows. When combined with Claude Code, you gain an intelligent assistant that can automate DVC operations, generate tracking scripts, and help maintain reproducible pipelines.
@@ -276,7 +276,7 @@ Ask Claude to analyze failures: "Our DVC pipeline failed during the training sta
 DVC transforms data science workflows from ad-hoc file management into professional, reproducible pipelines. When combined with Claude Code, you gain an intelligent partner that can automate setup, generate code, and help maintain best practices. Start with basic data tracking, gradually incorporate pipelines and metrics, and use Claude's assistance for complex configurations and troubleshooting.
 
 The key is providing clear context about your infrastructure and goals. The more specific your prompts, the more helpful Claude Code can be in building and maintaining your data versioning workflow.
-{% endraw %}
+
 
 ---
 

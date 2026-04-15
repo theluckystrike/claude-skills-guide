@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Freelancer Multi-Client Project Workflow Guide
 
 Managing multiple client projects simultaneously is one of the biggest challenges freelance developers face. Each client has unique requirements, coding standards, tech stacks, and communication preferences. Claude Code, with its skills system and flexible configuration options, provides powerful tools to streamline this complexity. This guide explores practical strategies for maintaining productivity across multiple concurrent client engagements.
@@ -261,7 +261,7 @@ Implementing a structured multi-client workflow with Claude Code provides severa
 Claude Code's flexibility makes it an excellent tool for freelancers managing multiple concurrent projects. By investing time in setting up proper directory structures, client-specific configurations, and reusable skills, you create a sustainable workflow that scales with your client base. The initial setup effort pays dividends in reduced mental overhead and consistently high-quality deliverables across all your projects.
 
 Start with one client, refine your `CLAUDE.md` and skill templates, then replicate the pattern for each new client. Within a few weeks, you'll have a streamlined system that handles the complexity of multi-client freelance work effortlessly.
-{% endraw %}
+
 
 ---
 

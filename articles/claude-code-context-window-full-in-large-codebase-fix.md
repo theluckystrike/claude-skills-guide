@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 How to Fix Claude Code Context Window Full in Large Codebases
 
 Working with large codebases in Claude Code can sometimes trigger the dreaded "context window full" error. This happens when the combined content of your project files, conversation history, and AI responses exceed Claude's maximum token capacity. For developers working on substantial projects, understanding how to manage context effectively is essential for maintaining productivity.
@@ -190,7 +190,7 @@ Beyond immediate fixes, adopt these practices to consistently avoid context issu
 The context window limitation in Claude Code isn't a blocker for large codebase work, it's a reminder to be intentional about what you include in your AI conversations. By configuring your workspace strategically, using file-focused commands, using memory systems, and adopting chunking strategies, you can work effectively with projects of any size.
 
 Remember: The goal isn't to fit your entire codebase into context, but to put exactly the right code in context for each task. With these techniques, you'll spend less time managing constraints and more time building great software.
-{% endraw %}
+
 
 ---
 

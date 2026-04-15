@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Runtime security is critical for modern cloud-native applications, and Falco provides powerful threat detection capabilities for Kubernetes and Linux environments. By integrating Claude Code with Falco, you can create intelligent automated responses to security events, streamline incident investigation, and build proactive security workflows. This guide walks through architecture decisions, practical integration code, alert triage patterns, and production deployment considerations.
 
 ## Understanding Falco's Architecture
@@ -327,7 +327,7 @@ Integrating Claude Code with Falco transforms raw security alerts into intellige
 The key is starting simple, begin with investigation workflows before advancing to automated containment. This measured approach lets you build confidence in the integration while learning the nuances of your specific environment's security requirements. Add deduplication and priority filtering from day one, or alert volume will overwhelm both your Claude API quota and your on-call team.
 
 The final architecture goal is a system where NOTICE-level Falco alerts are logged silently, WARNING-level alerts are triaged by Claude and queued for human review, CRITICAL and ALERT-level events trigger Claude investigation with automated containment, and EMERGENCY events trigger immediate containment with simultaneous human escalation. When that pipeline is running smoothly, your security team can focus on tuning rules and post-mortems rather than manually reading raw syscall alerts at 3am.
-{% endraw %}
+
 
 ---
 

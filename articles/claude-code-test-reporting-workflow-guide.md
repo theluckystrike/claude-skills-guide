@@ -462,5 +462,4 @@ Related Reading
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 {% endraw %}

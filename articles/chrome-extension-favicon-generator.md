@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Favicon Generator: Complete Guide for Developers
 
 Chrome extensions require properly sized favicon assets to display correctly across the browser interface, the extensions management page, and the Chrome Web Store. This guide covers everything you need to generate and implement favicons for your Chrome extension. from understanding the spec, to writing build scripts, to handling dynamic icon states at runtime.
@@ -391,7 +391,7 @@ Creating proper favicons for Chrome extensions requires multiple sizes and caref
 Pay particular attention to how your icon reads at 16x16. that's the smallest context and the one most developers skip testing. A bold, simple design that works at 16px will look great at every size above it.
 
 With correct icon implementation, your extension presents professionally in the browser toolbar, the extensions management page, and the Chrome Web Store. establishing credibility with users from the first interaction and avoiding the blurry-icon problem that plagues many otherwise well-built extensions.
-{% endraw %}
+
 
 ---
 

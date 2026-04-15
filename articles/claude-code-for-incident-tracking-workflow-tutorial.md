@@ -253,7 +253,7 @@ Claude Code provides a flexible foundation for building incident tracking workfl
 The skills and workflows in this tutorial are starting points. Customize them to match your organization's terminology, integrate with your existing tools, and evolve them as your incident management matures.
 
 With Claude handling the operational aspects of incident tracking, your team can focus on what matters most: building reliable systems and responding effectively when issues arise.
-{% endraw %}
+
 
 ---
 
@@ -278,3 +278,4 @@ Related Reading
 - [Claude Code for Code Bookmark Workflow Tutorial Guide](/claude-code-for-code-bookmark-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Best Way to Give Claude Code Repeatable, Deterministic Output
 
 When working with Claude Code, you might sometimes want deterministic, repeatable outputs rather than creative variations. Whether you're building automated workflows, writing tests, or need consistent code generation, understanding how to achieve predictability is essential. This guide covers the best techniques for getting Claude Code to produce the same results for the same inputs.
@@ -448,7 +448,7 @@ Achieving repeatable, deterministic output from Claude Code requires a combinati
 - Running determinism verification before relying on a pipeline in production
 
 By implementing these techniques, you can build reliable, reproducible workflows with Claude Code for testing, automation, and consistent code generation. Remember that while byte-for-byte identical output is not always achievable with LLMs, functionally identical output. code that behaves the same way every time. is a realistic and attainable goal.
-{% endraw %}
+
 
 ---
 

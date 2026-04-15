@@ -228,7 +228,7 @@ Provide Claude Code with the error details and relevant workflow sections, and i
 Integrating Claude Code with Kestra workflow orchestration dramatically improves your development productivity. By using Claude Code's understanding of Kestra's architecture and best practices, you can create solid, efficient, and maintainable workflows faster than ever. Start by defining your workflow requirements clearly, use the practical examples in this guide as templates, and apply the actionable advice to optimize your Kestra implementations.
 
 Remember to keep your workflows modular, well-documented, and properly tested. With Claude Code as your development partner, you'll be building production-ready Kestra orchestrations with confidence and efficiency.
-{% endraw %}
+
 
 ---
 
@@ -253,3 +253,4 @@ Related Reading
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

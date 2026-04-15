@@ -238,7 +238,7 @@ Start small: set up basic read/write operations, then gradually incorporate dyna
 Remember that security is paramount, always use proper authentication, implement least-privilege policies, and audit your Vault operations. Claude can help enforce these practices by prompting for proper confirmation before destructive operations and suggesting secure alternatives.
 
 The combination of Claude Code and Vault empowers teams to manage secrets efficiently while maintaining the security standards modern applications require.
-{% endraw %}
+
 
 ---
 
@@ -263,3 +263,4 @@ Related Reading
 - [Claude Code Flutter State Management Workflow Best Practices](/claude-code-flutter-state-management-workflow-bestpractices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-csp-content-security-policy-generation-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [Content Security Policy (CSP) is one of the most effective defenses](/best-claude-code-skills-to-install-first-2026/) against cross-site scripting (XSS) attacks and data injection vulnerabilities. When properly implemented, CSP tells browsers exactly which resources are allowed to load on your page, blocking malicious scripts from executing. This guide shows you how to use Claude Code to generate, validate, and maintain CSP headers for your projects.
 
 ## Why Content Security Policy Matters

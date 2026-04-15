@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for vLLM Inference Server Workflow
 
 Building production-ready LLM inference servers requires careful orchestration of multiple components. vLLM has emerged as a high-performance inference engine that dramatically reduces latency and increases throughput for large language models. When combined with Claude Code's development capabilities, you get a powerful workflow for deploying and managing inference services.
@@ -722,7 +722,7 @@ Key takeaways:
 
 By following this workflow, you'll have a production-ready LLM inference server that's both performant and maintainable. Once the server code is solid, move on to the infrastructure side with the companion guide [Claude Code vLLM Inference Server Deployment Workflow](/claude-code-vllm-inference-server-deployment-workflow/), which covers using Claude Code skills to build Dockerfiles, Kubernetes manifests, CI/CD pipelines, and security hardening for your vLLM service.
 
-{% endraw %}
+
 
 ---
 

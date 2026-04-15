@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Metaflow Workflow Tutorial
 
 Metaflow has become a go-to framework for data scientists and ML engineers who need to build solid, scalable workflows without getting bogged down in infrastructure complexity. Developed by Netflix and now widely adopted across the industry, Metaflow provides a unified API for data manipulation, workflow orchestration, and model training. When you combine Metaflow with Claude Code's AI-assisted development capabilities, you can accelerate your workflow development cycle significantly.
@@ -274,7 +274,7 @@ You can ask Claude Code to integrate these patterns into your workflows for enha
 Claude Code significantly accelerates Metaflow workflow development by handling boilerplate, suggesting optimizations, and helping debug issues. The combination of Metaflow's solid infrastructure and Claude Code's AI assistance lets you focus on the logic that matters, building data pipelines that scale.
 
 Start with simple flows, then gradually incorporate more advanced patterns like branching, parallel processing, and conditional logic as you become comfortable with the framework.
-{% endraw %}
+
 
 ---
 

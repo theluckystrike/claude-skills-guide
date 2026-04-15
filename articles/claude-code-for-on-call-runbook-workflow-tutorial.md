@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for On-Call Runbook Workflow Tutorial
 
 Every developer who has been on-call knows the feeling: it's 3 AM, something is broken, and you're scrambling through wiki pages, hunting for that one runbook that might help. Runbooks are meant to be our safety net, but often they become outdated, hard to navigate, or simply too slow to use when every second counts. This is where Claude Code transforms your on-call experience from chaotic scrambling into confident, efficient incident response.
@@ -263,7 +263,7 @@ Claude Code transforms on-call from a stressful, error-prone experience into a s
 Start small, pick one service, create a basic runbook, and let Claude help you respond to the next incident. You'll be surprised how quickly this approach becomes indispensable.
 
 Remember: The goal isn't to replace human judgment, it's to augment it with intelligent automation that helps you respond faster and more accurately when it matters most.
-{% endraw %}
+
 
 ---
 

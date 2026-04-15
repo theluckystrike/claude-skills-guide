@@ -12,7 +12,7 @@ score: 7
 permalink: /claude-code-activerecord-scopes-callbacks-best-practices/
 ---
 
-{% raw %}
+
 Claude Code ActiveRecord Scopes and Callbacks Best Practices
 
 ActiveRecord scopes and callbacks are fundamental building blocks in Rails applications. When used correctly with Claude Code, they enable you to create clean, maintainable, and efficient data layer code. This guide covers best practices for writing scopes and callbacks that work smoothly with Claude Code's AI-assisted development workflow. including patterns that are easy to misuse and the reasoning behind each recommendation.
@@ -474,7 +474,7 @@ ActiveRecord scopes and callbacks, when used correctly, make your Rails applicat
 - Log callback execution in production so you can debug state mutations
 
 With these best practices, you'll write Rails models that are both powerful and easy to maintain. The patterns here are opinionated, but they reflect what breaks most often in large Rails codebases. and what Claude Code is best positioned to help you get right the first time.
-{% endraw %}
+
 
 ---
 

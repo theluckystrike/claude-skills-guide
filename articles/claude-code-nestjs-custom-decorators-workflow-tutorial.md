@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code NestJS Custom Decorators Workflow Tutorial
 
 NestJS decorators are one of the most powerful features for building scalable backend applications. When combined with Claude Code's development workflow, you can create clean, maintainable, and type-safe decorator patterns that accelerate your development process. This tutorial walks you through creating custom decorators in NestJS while using Claude Code for intelligent code generation and refactoring.
@@ -223,7 +223,7 @@ Custom decorators in NestJS provide a powerful mechanism for building clean, mai
 The workflow patterns demonstrated in this tutorial, from simple user extraction to complex authorization systems, showcase the flexibility of NestJS's decorator system. Combined with Claude Code's intelligent development assistance, you can rapidly develop and iterate on custom decorator patterns that scale with your application.
 
 Start with simple decorators and progressively build more complex compositions as your application evolves. This incremental approach ensures your decorators remain focused, testable, and maintainable over time.
-{% endraw %}
+
 
 ---
 

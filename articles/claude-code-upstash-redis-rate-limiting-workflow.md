@@ -12,7 +12,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-upstash-redis-rate-limiting-workflow/
 ---
-{% raw %}
+
 # Claude Code Upstash Redis Rate Limiting Workflow
 
 Building solid rate limiting into your applications is essential for API protection, cost control, and abuse prevention. When combined with Claude Code's automation capabilities, Upstash Redis provides a powerful foundation for implementing sophisticated rate limiting workflows. This guide walks you through creating an integrated system that uses Claude Code skills with Upstash's edge-friendly Redis solution.
@@ -327,4 +327,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```
-{% endraw %}
+

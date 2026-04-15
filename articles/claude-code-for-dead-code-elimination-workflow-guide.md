@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Dead Code Elimination Workflow Guide
 
 Dead code, functions never called, variables never used, classes never instantiated, silently accumulates in software projects over time. This guide shows you how to use Claude Code to systematically identify and eliminate dead code, improving code quality and reducing maintenance burden.
@@ -247,4 +247,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

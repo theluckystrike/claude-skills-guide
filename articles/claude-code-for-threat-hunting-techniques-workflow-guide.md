@@ -10,7 +10,7 @@ categories: [guides, security]
 tags: [claude-code, claude-skills, threat-hunting, security, cybersecurity]
 ---
 
-{% raw %}
+
 Claude Code for Threat Hunting Techniques Workflow Guide
 
 Threat hunting is a proactive cybersecurity practice that involves searching through networks and datasets to detect and isolate advanced threats that evade existing security solutions. With Claude Code, security teams can automate repetitive hunting tasks, analyze logs at scale, and build repeatable workflows that make threat hunting more efficient and accessible to developers.
@@ -224,4 +224,4 @@ Related Reading
 - [Claude Code for Claude SSO Integration Workflow Tutorial Guide](/claude-code-for-claude-sso-integration-workflow-tutorial-gui/)
 - [Claude Code for CORS Misconfiguration Fix Workflow Guide](/claude-code-for-cors-misconfiguration-fix-workflow-guide/)
 
-{% endraw %}
+

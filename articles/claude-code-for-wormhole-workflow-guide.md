@@ -252,7 +252,7 @@ Each pattern includes:
 Wormhole workflows transform Claude Code from a session-based assistant into a persistent knowledge partner. By capturing solutions, patterns, and context in structured ways, you create instant-access channels that accelerate every future development task. Start with one simple wormhole, a single skill or pattern file, and watch as your productivity compounds over time.
 
 The beauty of wormhole workflows is that they improve with use. Every pattern you capture makes your future sessions more productive, every solution you store makes problem-solving faster, and every team wormhole you create makes your entire organization more efficient.
-{% endraw %}
+
 
 ---
 
@@ -277,3 +277,4 @@ Related Reading
 - [Claude Code Workflow Optimization Tips for 2026](/claude-code-workflow-optimization-tips-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Development Environment Workflow
 
 Modern software development increasingly relies on AI assistants to boost productivity and streamline complex workflows. Claude Code, Anthropic's CLI tool for Claude, integrates directly into your development environment to provide intelligent assistance throughout your coding journey. This guide explores practical ways to incorporate Claude Code into your daily development workflow, from initial setup to advanced automation patterns.
@@ -183,7 +183,7 @@ Claude Code complements rather than replaces your existing toolkit. Use it along
 Claude Code represents a significant step forward in developer productivity tooling. By integrating AI assistance directly into your terminal workflow, it eliminates context switching and provides contextual help precisely when you need it. Start with simple tasks, gradually incorporate more advanced patterns, and you'll find Claude Code becoming an invaluable partner in your development process.
 
 The key is starting simple: install the tool, configure basic project context, and begin using it for straightforward tasks like code explanation or bug analysis. As you become comfortable with its capabilities, expand into more sophisticated workflows like automated code review, test generation, and interactive development sessions. Your development workflow will never be the same.
-{% endraw %}
+
 
 ---
 

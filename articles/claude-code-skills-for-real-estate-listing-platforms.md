@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-skills-for-real-estate-listing-platforms/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Building a real estate listing platform involves managing property data, integrating maps, implementing search filters, and handling media assets. Claude Code provides skills that accelerate development across these areas. This guide covers practical skills for real estate developers. from bulk data ingestion and document generation to geospatial filtering, automated testing, and production deployment considerations.
 
 xlsx: Property Data Management

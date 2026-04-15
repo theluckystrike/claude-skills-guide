@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 Disabling Chrome Developer Tools through Group Policy is a common requirement for enterprise environments, educational institutions, and organizations that need to restrict access to browser debugging capabilities. Whether you're managing a fleet of workstations or securing kiosk systems, controlling DevTools access provides an additional layer of policy enforcement.
 
@@ -378,4 +378,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 When you need a versatile networking tool that can handle everything from simple port scans to complex file transfers, Netcat (commonly called `nc`) is the Swiss Army knife developers reach for. This guide shows you how to integrate Netcat into your Claude Code workflow for efficient network debugging, testing, and administration tasks.
 
@@ -280,7 +280,7 @@ Netcat remains an essential tool for developers working with network operations.
 
 Start with simple operations like port scanning, then gradually incorporate file transfers and debugging scripts into your daily workflow. As you become more comfortable with Netcat's capabilities, you'll find it invaluable for both development and system administration tasks.
 
-{% endraw %}
+
 
 ---
 

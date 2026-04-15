@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Load Testing with Locust Workflow Guide
 
 Load testing is a critical part of building scalable applications. When your service goes live, you need confidence that it can handle expected traffic spikes without degrading performance. Locust, an open-source load testing tool written in Python, has become a favorite among developers for its simplicity and extensibility. Combined with Claude Code, you can create intelligent, maintainable load testing workflows that adapt to your application's evolution.
@@ -246,7 +246,7 @@ Claude Code can help you maintain test documentation, generate run books, and cr
 Load testing with Locust and Claude Code forms a powerful combination for ensuring application reliability. Locust provides flexible, code-driven testing capabilities, while Claude Code accelerates test creation, analysis, and maintenance. By integrating this workflow into your development process, you gain confidence in your application's performance under load and catch issues before they affect users.
 
 Start with simple tests, iterate on them as your application evolves, and build a comprehensive testing strategy that scales with your needs.
-{% endraw %}
+
 
 ---
 

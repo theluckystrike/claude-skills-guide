@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Pair programming and code review are fundamental practices for building high-quality software. When combined with AI assistance through Claude Code, these workflows become even more powerful, enabling real-time collaboration, instant feedback, and knowledge sharing across your team. This tutorial guide walks you through setting up and maximizing Claude Code for pair review workflows.
 
@@ -256,4 +256,3 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}

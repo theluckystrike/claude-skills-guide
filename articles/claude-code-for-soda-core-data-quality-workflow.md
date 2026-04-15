@@ -256,7 +256,7 @@ When deploying this workflow in production, consider these patterns:
 Combining Claude Code with Soda Core transforms data quality from a manual, reactive process into an automated, proactive workflow. Claude Code handles the cognitive work, generating appropriate checks, interpreting results, and recommending fixes, while Soda Core provides the reliable execution engine for running validations at scale.
 
 Start by creating a simple skill that generates basic checks, then progressively add complexity as your confidence grows. The investment pays dividends in reduced data incidents and increased trust in your analytical outputs.
-{% endraw %}
+
 
 ---
 
@@ -281,3 +281,4 @@ Related Reading
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

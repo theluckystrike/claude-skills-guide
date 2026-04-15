@@ -273,7 +273,7 @@ Follow these recommendations to get the most out of your AI-assisted load testin
 ## Conclusion
 
 Claude Code transforms distributed load testing from a manual, error-prone process into an automated, intelligent workflow. By using AI for test generation, execution, and analysis, you can more quickly identify performance issues and validate system reliability at scale. The key is integrating Claude Code into your existing tooling while maintaining control over test scenarios and success criteria.
-{% endraw %}
+
 
 ---
 
@@ -298,3 +298,4 @@ Related Reading
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

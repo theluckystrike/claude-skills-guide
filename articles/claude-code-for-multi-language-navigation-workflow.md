@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Multi-Language Navigation Workflow
 
 Building applications that span multiple programming languages presents unique navigation challenges. Whether you're working on a polyglot microservices architecture, maintaining a legacy codebase with mixed languages, or developing internationalized applications, finding your way around the codebase efficiently becomes critical. Claude Code offers powerful capabilities that can transform how you navigate and work with multi-language projects.
@@ -312,4 +312,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

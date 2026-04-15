@@ -12,8 +12,8 @@ score: 7
 permalink: /mcp-transport-layer-security-tls-configuration/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [When building production systems with the Model Context Protocol (MCP)](/building-your-first-mcp-tool-integration-guide-2026/), securing communications between clients and servers becomes essential. Transport Layer Security (TLS) encryption protects sensitive data from interception and tampering. This guide walks you through configuring TLS for MCP servers with practical examples you can apply immediately.
 
 ## Understanding MCP and TLS Basics

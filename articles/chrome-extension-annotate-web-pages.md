@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Annotate Web Pages: Build Your Own Annotation Tool
 
 Web annotation transforms passive reading into active engagement. Whether you're a researcher collecting evidence, a developer documenting bugs, or a student highlighting study materials, the ability to annotate web pages directly in your browser provides immediate value. Building a Chrome extension for page annotation is a practical project that demonstrates core extension APIs while creating a genuinely useful tool.
@@ -370,4 +370,4 @@ Related Reading
 - [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

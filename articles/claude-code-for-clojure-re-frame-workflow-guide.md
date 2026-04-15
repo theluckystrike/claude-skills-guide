@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Clojure re-frame Workflow Guide
 
 Clojure developers working with re-frame have discovered a powerful ally in Claude Code. This guide demonstrates how to use Claude Code effectively for re-frame projects, from initial setup to advanced state management patterns.
@@ -203,7 +203,7 @@ Test Generated Code: Always verify generated handlers and subscriptions work cor
 Claude Code transforms re-frame development by accelerating component creation, event handler implementation, and debugging workflows. The key lies in providing clear, structured prompts that describe data flow and user interactions. As you develop familiarity with this workflow, you'll find Claude Code becomes an invaluable pair programmer for your ClojureScript projects.
 
 The re-frame pattern of state, events, and views maps naturally to prompt-based description. use this alignment to generate idiomatic, maintainable code that fits smoothly into your application architecture.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Pulsar Tenant Workflow Tutorial
 
 Apache Pulsar's multi-tenant architecture is one of its most powerful features, enabling organizations to isolate workloads, enforce resource quotas, and manage access control across different teams and projects. However, managing Pulsar tenants programmatically can be complex, especially when you need to automate tenant provisioning, configure permissions, and set up namespace-level policies. This tutorial shows you how to use Claude Code to simplify and accelerate your Pulsar tenant workflows.
@@ -206,7 +206,7 @@ When implementing Claude Code workflows for Pulsar tenant management, keep these
 Claude Code transforms Pulsar tenant management from a manual, error-prone process into a streamlined, automated workflow. By defining configurations as code, scripting common operations, and implementing comprehensive lifecycle management, you can significantly reduce operational overhead while improving consistency and security across your Pulsar infrastructure.
 
 Start small by automating one aspect of your tenant workflows, such as provisioning or policy configuration, and gradually expand to cover the full lifecycle. The time invested in building these automation scripts will pay dividends in reduced errors, faster provisioning, and more maintainable infrastructure.
-{% endraw %}
+
 
 ---
 

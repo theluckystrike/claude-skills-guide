@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for SolidJS Resources Workflow Guide
 
 SolidJS offers a unique reactive programming model with primitives like signals, stores, and resources. When combined with Claude Code CLI, you can dramatically accelerate your development workflow, getting AI assistance for generating boilerplate, debugging reactive state, and optimizing component performance. This guide walks you through integrating Claude Code into your SolidJS projects effectively.
@@ -469,7 +469,7 @@ Claude Code paired with SolidJS gives you AI-assisted development while using So
 The most productive workflow combines clear CLAUDE.md context, specific prompts that reference SolidJS primitives by name, and iterative refinement after the initial output. Claude Code is particularly strong at generating complete patterns (stores with all CRUD operations, resources with full error/loading/success handling, custom reactive primitives) when you ask for the complete version upfront rather than building incrementally.
 
 Start with small tasks, gradually tackle more complex patterns, and let Claude Code help you learn SolidJS idioms along the way. The investment in writing precise prompts pays back quickly once you see the quality of idiomatic SolidJS code that results.
-{% endraw %}
+
 
 ---
 

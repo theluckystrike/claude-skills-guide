@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Competitive Programming Practice Workflow
 
 Competitive programming demands rapid problem-solving, clean code implementation, and rigorous testing. Claude Code transforms this process by providing intelligent assistance that understands algorithms, generates templates, executes solutions, and verifies correctness. This guide explores how to build an effective competitive programming practice workflow using Claude Code's skills and capabilities.
@@ -491,7 +491,7 @@ Claude Code transforms competitive programming practice from isolated problem-so
 The programmers who improve fastest are not the ones who get the most accepted submissions; they are the ones who understand why their solutions work, why they fail, and what to do differently next time. Claude Code gives you the infrastructure to close that feedback loop far more quickly than working alone.
 
 Start implementing these workflows today with a single practice problem, build your template library incrementally, and measure your improvement over the following weeks.
-{% endraw %}
+
 
 ---
 

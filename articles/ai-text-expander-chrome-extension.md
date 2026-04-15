@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI text expander chrome extensions represent a significant advancement in text automation, combining traditional abbreviation-based expansion with artificial intelligence to handle complex, context-aware text generation. For developers and power users, understanding how to build or integrate these extensions can dramatically improve workflow efficiency across email, code documentation, customer support, and content creation.
 
 ## How AI Text Expander Extensions Work
@@ -300,4 +300,4 @@ Related Reading
 - [AI Text to Speech Chrome Extension: A Developer Guide](/ai-text-to-speech-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code Git Worktree Parallel Development Workflow
 
 Managing multiple features, bug fixes, or experiments simultaneously without disrupting your main development environment becomes effortless when you combine Git worktrees with Claude Code. This approach lets you work across several branches in parallel, each with its own working directory, while Claude Code's skill system helps orchestrate your workflow efficiently.
@@ -271,4 +271,4 @@ Related Reading
 - [Claude Code for Aurora Serverless V2 Workflow](/claude-code-for-aurora-serverless-v2-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 # CI/CD Pipeline Optimization with Claude Code
 
 ## The Problem

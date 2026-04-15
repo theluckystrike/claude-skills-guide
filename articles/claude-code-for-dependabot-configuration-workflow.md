@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Managing dependencies across multiple projects can quickly become overwhelming. Dependabot automates this process by creating pull requests for outdated dependencies, but configuring it effectively requires understanding its various options and workflows. This guide shows you how to use Claude Code to set up, manage, and optimize your Dependabot configuration workflow. from first-time setup to multi-repo governance at scale.
 
 ## Understanding Dependabot and Claude Code
@@ -380,7 +379,7 @@ Security vulnerabilities require immediate attention and should not compete with
 
 Then configure a GitHub Actions workflow that auto-merges security patches that pass CI, or at minimum auto-approves them to reduce friction:
 
-{% raw %}
+
 ```yaml
 .github/workflows/dependabot-auto-merge.yml
 on: pull_request
@@ -401,7 +400,7 @@ jobs:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
-{% endraw %}
+
 
 3. Use Labels Strategically
 

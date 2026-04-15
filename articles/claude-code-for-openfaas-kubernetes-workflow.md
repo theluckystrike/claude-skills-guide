@@ -547,7 +547,7 @@ Start with simple functions, establish good practices early, and gradually build
 
 Remember to check the OpenFaaS documentation for the latest features and best practices, and use Claude Code's understanding of both your application code and Kubernetes primitives to streamline your development workflow.
 
-{% endraw %}
+
 
 ---
 
@@ -572,3 +572,4 @@ Related Reading
 - [Claude Code for k9s Kubernetes Terminal Workflow Guide](/claude-code-for-k9s-kubernetes-terminal-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

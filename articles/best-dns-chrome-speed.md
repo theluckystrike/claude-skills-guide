@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 DNS (Domain Name System) resolution is often the hidden bottleneck in browser performance. When Chrome visits a website, it must translate human-readable domain names into IP addresses before establishing a connection. This process can add measurable latency to page load times, especially on networks with slow or congested DNS resolvers.
 
 For developers and power users, Chrome provides several settings to optimize DNS behavior. This guide covers practical configurations that can reduce resolution time and improve overall browsing speed. including how to measure the impact before and after your changes.
@@ -247,4 +247,4 @@ Related Reading
 - [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

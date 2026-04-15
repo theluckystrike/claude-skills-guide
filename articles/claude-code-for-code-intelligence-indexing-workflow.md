@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Code Intelligence Indexing Workflow
 
 Code intelligence is the backbone of modern developer experience. From IDE autocomplete to semantic search, from cross-repository analysis to automated documentation, intelligent code understanding powers the tools developers rely on daily. Claude Code isn't just an AI assistant; it's a powerful engine for building custom code intelligence workflows that understand your codebase deeply and act on that knowledge precisely.
@@ -282,4 +282,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

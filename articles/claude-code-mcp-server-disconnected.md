@@ -22,7 +22,7 @@ Your MCP server tool call completes successfully, but Claude Code immediately te
 Closing transport (stdio transport error: Error)
 ```
 
-From the MCP logs (found at `~/Library/Caches/claude-cli-nodejs/-Users-{% raw %}{username}{% endraw %}/mcp-logs-{% raw %}{server-name}{% endraw %}/`):
+From the MCP logs (found at `~/Library/Caches/claude-cli-nodejs/-Users-{username}/mcp-logs-{server-name}/`):
 
 ```json
 {"debug":"Calling MCP tool: my_tool_name","timestamp":"2026-04-14T05:41:34.761Z"}

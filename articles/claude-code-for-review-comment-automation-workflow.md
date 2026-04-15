@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Managing code review comments efficiently is one of the biggest challenges development teams face at scale. When you're juggling dozens of pull requests per day, manually tracking, categorizing, and responding to feedback becomes a significant time sink. This is where Claude Code shines, it can automate the entire review comment lifecycle, from detection to resolution.
 
 you'll learn how to build a practical review comment automation workflow using Claude Code that will save hours each week and ensure nothing falls through the cracks.
@@ -251,7 +250,7 @@ Building a review comment automation workflow with Claude Code transforms an cha
 
 Start with the basic skill structure outlined here, customize it to your team's needs, and iterate as you learn what works best. The time investment pays dividends in reduced review cycle times and clearer communication.
 
-{% endraw %}
+
 
 ---
 
@@ -276,3 +275,4 @@ Related Reading
 - [Claude Code Drone CI Workflow Automation](/claude-code-drone-ci-workflow-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

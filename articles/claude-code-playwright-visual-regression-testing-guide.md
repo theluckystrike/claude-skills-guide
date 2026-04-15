@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Visual regression testing has become an essential part of modern web development workflows. When combined with Claude Code, you get a powerful duo that not only helps you set up Playwright-based visual testing but also assists in maintaining and improving your test suites over time. This guide walks you through practical approaches to implementing visual regression testing that catches unintended UI changes before they reach production.
 
 ## Understanding Visual Regression Testing
@@ -480,7 +479,7 @@ Start with your highest-impact pages and build out incrementally. Establish base
 
 The combination of Playwright's deterministic browser control and Claude Code's ability to reason about test failures and suggest fixes means you spend less time maintaining tests and more time catching the regressions that matter. A visual test suite that runs in five minutes and surfaces real failures without crying wolf is one your team will actually trust and maintain.
 
-{% endraw %}
+
 
 ---
 
@@ -505,3 +504,4 @@ Related Reading
 - [Claude Code Chaos Engineering Testing Automation Guide](/claude-code-chaos-engineering-testing-automation-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

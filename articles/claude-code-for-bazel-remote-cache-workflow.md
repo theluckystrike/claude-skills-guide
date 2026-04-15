@@ -676,7 +676,7 @@ The `--jobs` flag controls how many concurrent Bazel actions run, which indirect
 Integrating Claude Code with Bazel remote caching creates a powerful workflow for build optimization. By automating cache management tasks, debugging issues, and providing actionable insights, Claude Code helps your team achieve faster builds and better developer experience. Start with a simple cache configuration, use skills to manage common operations, and progressively optimize as your build patterns mature.
 
 The key is starting simple, configure a basic remote cache, verify it works, then layer on Claude Code skills to handle the operational complexities. Use the cache hit rate analysis scripts to identify your worst-performing targets, consult Claude Code to understand why those targets miss, and apply the targeted fixes from the troubleshooting table. Your team will thank you when those build times drop from minutes to seconds, and your CI queue times shrink to match.
-{% endraw %}
+
 
 ---
 
@@ -701,3 +701,4 @@ Related Reading
 - [Claude Code Turborepo Remote Caching Setup Workflow Guide](/claude-code-turborepo-remote-caching-setup-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

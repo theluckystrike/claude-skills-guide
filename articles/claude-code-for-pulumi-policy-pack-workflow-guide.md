@@ -244,7 +244,7 @@ export function createResourcePolicy(
 Pulumi Policy Packs combined with Claude Code create a powerful governance workflow. By automating policy creation, enforcing checks in CI/CD, and following best practices for policy development, you can ensure your infrastructure remains secure, compliant, and well-managed without slowing down development teams.
 
 Start small, implement a few critical policies, and expand gradually. The key is balancing enforcement with developer experience, providing clear guidance when policies are violated so teams can self-correct efficiently.
-{% endraw %}
+
 
 ---
 
@@ -269,3 +269,4 @@ Related Reading
 - [Claude Code for CDK Nag Policy Workflow Guide](/claude-code-for-cdk-nag-policy-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

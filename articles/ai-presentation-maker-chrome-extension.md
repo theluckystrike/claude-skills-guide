@@ -355,5 +355,4 @@ AI generating too many or too few slides: Add explicit constraints to the prompt
 pptxgenjs export not working in extension context: `pptxgenjs` uses `FileSaver.js` internally, which calls `URL.createObjectURL`. In a service worker context, this is not available. Run the PPTX generation in the extension popup or an offscreen document where DOM APIs are available.
 
 Slide content too long for the slide template: Limit each bullet to 10 words maximum by adding this to the AI prompt. Long bullets are a common presentation mistake and the AI will respect explicit word-count constraints.
-
 {% endraw %}

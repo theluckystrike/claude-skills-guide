@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Translation key extraction is one of the most tedious yet essential tasks in internationalizing applications. Manually hunting through hundreds of files to find hardcoded strings, ensuring consistent naming conventions, and keeping translation files synchronized with the codebase consumes significant developer time. This guide demonstrates how to use Claude Code to automate and streamline your translation key extraction workflow, saving hours of repetitive work while improving consistency.
 
@@ -120,7 +120,7 @@ When integrating with continuous integration systems, configure pipelines to run
 ---
 
 By implementing Claude Code for translation key extraction, development teams transform what was once a painful manual process into an automated workflow that improves over time. The AI's ability to understand context, maintain consistency, and handle complex patterns makes it an invaluable tool for any application requiring multilingual support. Start with the extraction fundamentals outlined in this guide, then progressively integrate more advanced automation as your internationalization needs evolve.
-{% endraw %}
+
 
 ---
 

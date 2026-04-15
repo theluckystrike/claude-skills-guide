@@ -13,7 +13,7 @@ categories: [tutorials]
 tags: [chrome-extension, apa-citation, academic-writing, reference-management, claude-skills]
 ---
 
-{% raw %}
+
 Building a Chrome extension for APA citation formatting addresses a real problem for researchers, students, and academics who frequently need to cite web sources. Rather than manually formatting each reference according to the Publication Manual of the American Psychological Association, a well-designed extension can extract metadata from the current page and generate properly formatted citations in seconds.
 
 This guide covers the technical implementation of an APA citation formatter extension, from architecture decisions to specific code patterns that handle the nuances of APA style requirements.
@@ -294,4 +294,4 @@ Related Reading
 - [Slack Chrome Extension Features for Developers and Power.](/slack-chrome-extension-features/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Rye Python Project Workflow Guide
 
 Rye is a modern Python project management tool created by Armin Ronacher (the creator of Flask and Sphinx). It provides an all-in-one solution for managing virtual environments, dependencies, toolchains, and publishing packages. When combined with Claude Code, you get a powerful AI-assisted development workflow that can automate repetitive tasks, generate code, and help debug issues. This guide shows you how to integrate Claude Code into your Rye-based Python projects for maximum productivity.
@@ -287,7 +287,7 @@ When asked to write code:
 Combining Claude Code with Rye gives you the best of both worlds: a powerful Python project management tool and an intelligent AI assistant. By following this workflow guide, you can significantly improve your development productivity, maintain higher code quality, and streamline your entire Python development process.
 
 The key is to let Claude Code handle the cognitive heavy lifting, planning, writing, debugging, and reviewing, while Rye manages the mechanical aspects of Python project management. This separation of concerns allows you to focus on solving problems rather than managing tools.
-{% endraw %}
+
 
 ---
 

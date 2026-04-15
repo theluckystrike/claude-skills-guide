@@ -252,7 +252,7 @@ Claude Code provides an excellent platform for building IPFS decentralized stora
 Start with simple single-file uploads, then expand to directory management, pinning services, and production-grade error handling. The workflows outlined in this guide provide a solid foundation for building censorship-resistant applications and decentralized data pipelines.
 
 Remember to always consider your redundancy needs, implement proper error handling, and maintain systematic CID tracking. With these patterns, you're well-equipped to use decentralized storage effectively in your projects.
-{% endraw %}
+
 
 ---
 
@@ -277,3 +277,4 @@ Related Reading
 - [Claude Code for Web Storage Workflow Guide](/claude-code-for-web-storage-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

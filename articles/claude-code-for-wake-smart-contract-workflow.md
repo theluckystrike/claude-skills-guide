@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Wake Smart Contract Workflow
 
 Wake is a powerful Python-based smart contract development framework that provides testing, deployment, and formal verification tools for Ethereum and EVM-compatible blockchains. Integrating Claude Code with Wake creates a smooth development experience where AI assistance enhances every phase of smart contract development. This guide shows you how to set up and optimize this workflow, from initial project scaffolding through production deployment.
@@ -426,7 +426,7 @@ The key insight is that Wake's Python-based testing layer makes contract state i
 
 Start by setting up a Wake project, creating a specialized Claude Skill, and gradually incorporating AI assistance into your development workflow. The combination of human oversight and AI capability leads to more reliable, well-documented smart contracts, and fewer late-night debugging sessions after a production incident.
 
-{% endraw %}
+
 
 ---
 

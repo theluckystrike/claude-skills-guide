@@ -13,8 +13,8 @@ reviewed: true
 score: 7
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 ## Git LFS with Claude Code: Managing Large Files Effectively
 
 Working with large binary files in Git repositories can quickly become a nightmare without proper tooling. Git LFS (Large File Storage) provides an elegant solution, and when combined with Claude Code, creates a powerful workflow for managing assets, documentation, and data files in your projects.

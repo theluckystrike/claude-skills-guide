@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Printing from Google Chrome can feel agonizingly slow, especially when you need to churn out multiple documents quickly. Whether you're a developer printing code snippets, a power user handling bulk reports, or anyone who relies on browser-based printing, Chrome's sluggish print dialog and slow rendering can become a genuine productivity bottleneck.
 
@@ -273,4 +273,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

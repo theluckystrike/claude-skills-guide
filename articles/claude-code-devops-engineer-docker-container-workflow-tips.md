@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Docker has become the backbone of modern application deployment, and DevOps engineers constantly juggle container creation, optimization, debugging, and orchestration. Claude Code brings intelligent automation to these workflows, helping you write better Dockerfiles, debug container issues faster, and automate repetitive DevOps tasks. Here are practical tips to speed up your Docker container workflows with Claude Code.
 
 ## Streamlining Dockerfile Creation and Optimization
@@ -253,7 +252,7 @@ The key is treating Claude Code as a collaborative partner rather than just a co
 
 Related Topics: [Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/) | [Container Debugging Guide](/claude-code-container-debugging-docker-logs-workflow-guide/) | [DevOps Skills for Claude Code](/best-claude-skills-for-devops-and-deployment/)
 
-{% endraw %}
+
 
 ---
 
@@ -278,3 +277,4 @@ Related Reading
 - [Chrome Extension Docker Dashboard: Streamlined Container.](/chrome-extension-docker-dashboard/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

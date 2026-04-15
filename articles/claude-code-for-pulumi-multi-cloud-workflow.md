@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Pulumi Multi-Cloud Workflow
 
 Managing infrastructure across multiple cloud providers, AWS, Azure, GCP, and beyond, can quickly become complex and error-prone. Pulumi, with its infrastructure-as-code approach using familiar programming languages, offers a powerful solution. When combined with Claude Code, you get an intelligent assistant that can help you write, debug, and optimize your multi-cloud infrastructure definitions efficiently.
@@ -265,7 +265,7 @@ Remember to start small, deploy a simple resource to multiple clouds first, then
 
 With this foundation, you're equipped to tackle sophisticated multi-cloud architectures while maintaining infrastructure as reliable, version-controlled code.
 
-{% endraw %}
+
 
 ---
 

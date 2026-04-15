@@ -11,7 +11,7 @@ score: 8
 categories: [guides]
 ---
 
-{% raw %}
+
 
 Chrome managed bookmarks represent a powerful enterprise feature that allows system administrators to deploy a standardized set of bookmarks across all managed browsers in an organization. Unlike regular user-created bookmarks, managed bookmarks appear in a dedicated folder and cannot be modified or deleted by end users, making them ideal for ensuring consistent access to company resources, compliance documentation, and internal tools.
 
@@ -167,4 +167,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

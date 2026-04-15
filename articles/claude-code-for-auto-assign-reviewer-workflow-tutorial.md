@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Manual PR reviewer assignment is time-consuming and often inconsistent. Teams waste valuable developer hours playing the assignment game, and new team members have no visibility into who should review what. This tutorial shows you how to build an automated reviewer assignment system using Claude Code that scales with your team and enforces consistent review policies.
 
 ## Understanding the Auto-Assign Reviewer Problem
@@ -565,7 +564,7 @@ The key is maintaining the right balance: enough automation to save time, enough
 
 By combining CODEOWNERS respect, live load checking, expertise matching, and availability windows, you end up with a system that most teams can run for months without manual intervention. The real payoff is not just saving five minutes per PR. it is the elimination of the invisible cost of interrupted flow when an engineer has to stop and think about reviewer politics instead of writing code.
 
-{% endraw %}
+
 
 ---
 
@@ -590,3 +589,4 @@ Related Reading
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

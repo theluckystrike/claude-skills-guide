@@ -11,7 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-struts-to-spring-boot-migration-workflow/
 ---
-{% raw %}
+
 
 Legacy Struts applications served enterprises well for decades, but modern development demands Spring Boot's agility, auto-configuration, and cloud-native capabilities. Migrating from Struts to Spring Boot is complex, requiring careful analysis of Action classes, XML configurations, and JSP views. This guide demonstrates how Claude Code skills transform a tedious manual migration into an automated, reliable workflow.
 
@@ -443,4 +443,4 @@ Related Reading
 - [Claude Code for GraphQL to REST Migration Guide](/claude-code-for-graphql-to-rest-migration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Core Web Vitals Checker: Developer Guide
 
 Core Web Vitals have become the standard for measuring web performance and user experience. Building a Chrome extension that checks these metrics gives you real-time insights without leaving your browser. This guide walks you through creating a functional Core Web Vitals checker extension from scratch.
@@ -277,4 +277,4 @@ Related Reading
 - [AI Grammar Checker Chrome Extension: A Developer's Guide](/ai-grammar-checker-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

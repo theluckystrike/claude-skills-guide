@@ -11,7 +11,7 @@ reviewed: true
 score: 7
 permalink: /mcp-server-input-validation-security-patterns/
 ---
-{% raw %}
+
 
 When building MCP servers that interact with external systems, input validation serves as your first line of defense against malicious requests. Poorly validated inputs can lead to injection attacks, data breaches, and unauthorized system access. This guide presents practical patterns for securing your MCP server inputs while maintaining functionality and usability.
 
@@ -453,4 +453,4 @@ Related Reading
 - [Integrations Hub](/integrations-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

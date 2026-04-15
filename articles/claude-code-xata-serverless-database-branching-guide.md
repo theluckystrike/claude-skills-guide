@@ -13,8 +13,8 @@ score: 7
 permalink: /claude-code-xata-serverless-database-branching-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Modern development workflows demand flexible database environments that can match the speed of your code iterations. Xata's serverless database branching feature provides exactly this capability, creating isolated database copies that mirror your git branching strategy. When combined with Claude Code's intelligent automation, you get a powerful workflow for schema development, testing, and feature iteration.
 
 This guide explores how to use Claude Code skills with Xata's database branching to streamline your development process, with concrete code examples, configuration patterns, and strategies for integrating database branching into CI/CD pipelines.
@@ -682,7 +682,7 @@ Start integrating database branching into your development workflow today. The i
 
 *Explore more about optimizing your development workflow with Claude Code and modern database technologies.*
 
-{% endraw %}
+
 
 ---
 
@@ -707,3 +707,4 @@ Related Reading
 - [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

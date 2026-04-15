@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Unbuild Build Tool Workflow Guide
 
 [Unbuild](https://unbuild.io) is a modern, modular build system designed for JavaScript and TypeScript libraries. It provides a standardized way to create builds with automatic entry point generation, TypeScript support, and plugin-based extensibility. When combined with Claude Code, you can automate the entire build configuration process, from initial setup to publishing готовые пакеты.
@@ -432,7 +432,7 @@ Combining Claude Code with Unbuild creates a powerful workflow for JavaScript an
 The key insight is that Unbuild eliminates most of the manual Rollup configuration that library authors used to manage, and Claude Code eliminates the remaining friction: generating the correct `package.json` exports map, auditing for bundled peer dependencies, setting up stub-mode development scripts, and writing pre-publish test harnesses. Together they reduce the time from "I want to publish a library" to a correctly configured, CI-protected npm package from hours to minutes.
 
 Start small: create a new Unbuild project, let Claude generate the initial configuration, then iterate as your library grows. The combination of AI assistance and modern tooling makes library development more accessible than ever.
-{% endraw %}
+
 
 ---
 

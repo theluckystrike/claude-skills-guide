@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Serverless architecture has revolutionized how developers build and deploy applications. When combined with Claude Code and the ARC (Architectural Runtime Components) pattern, you can create powerful, scalable serverless workflows that are both maintainable and efficient. This guide walks you through using Claude Code to architect ARC-based serverless workflows, complete with practical examples and actionable advice.
 
@@ -385,7 +385,7 @@ Key takeaways: define clear event triggers, implement idempotent processing, use
 
 Start by setting up your Claude Code environment with ARC-specific configurations, then iteratively build out your workflow components. The combination of structured architecture patterns and AI-assisted development will significantly accelerate your serverless journey.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Call Graph Analysis Workflow Tutorial
 
 Call graph analysis is one of the most powerful techniques for understanding codebases, yet many developers struggle to apply it effectively. In this tutorial, you'll learn how to use Claude Code to perform call graph analysis efficiently, helping you understand code relationships, trace dependencies, and analyze program structure with minimal manual effort.
@@ -218,7 +218,7 @@ Run this periodically to track how your codebase evolves.
 Call graph analysis with Claude Code transforms how you understand and work with codebases. By systematically mapping function relationships, you gain insights that would take hours to discover manually. Start applying these techniques today, and you'll find yourself navigating unfamiliar codebases with confidence.
 
 Remember: the goal isn't just to generate a call graph, but to answer specific questions about your code's structure and behavior. Let your analysis questions guide the process, and Claude will help you build a clear picture of your program's architecture.
-{% endraw %}
+
 
 ---
 

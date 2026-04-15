@@ -12,7 +12,7 @@ score: 8
 categories: [guides]
 ---
 
-{% raw %}
+
 How to Inspect CSS Styles in Chrome Extensions
 
 Debugging CSS in Chrome extensions presents unique challenges that differ from standard web development. When you're building or debugging a Chrome extension, styles live in multiple contexts, content scripts, injected stylesheets, and the extension's own UI. Understanding how to inspect and modify these styles effectively is essential for creating polished extension experiences.
@@ -152,4 +152,4 @@ Related Reading
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

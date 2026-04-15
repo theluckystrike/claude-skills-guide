@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude API Prompt Caching Performance Optimization Guide
 
 Prompt caching is one of the most impactful optimizations you can implement when building production applications with the Claude API. By reusing context that's been previously processed, you can dramatically reduce latency, lower API costs, and improve the responsiveness of your AI-powered features. This guide walks you through practical strategies for implementing prompt caching effectively.
@@ -232,7 +232,7 @@ def should_refresh_cache(cache_entry):
 Prompt caching is a powerful optimization that can reduce API costs by 30-70% while improving response times. The key is identifying the stable, reusable components of your prompts, system instructions, documentation, knowledge bases, and strategically caching them. Implement the patterns in this guide, monitor your cache hit ratios, and adjust your approach based on actual production data.
 
 Start with simple caching of your system prompts, then expand to knowledge base and conversation history caching as you become more comfortable with the patterns. Your users will appreciate the faster responses, and your infrastructure costs will thank you.
-{% endraw %}
+
 
 ---
 

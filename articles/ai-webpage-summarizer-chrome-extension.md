@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI Webpage Summarizer Chrome Extension: A Developer Guide
 
 AI webpage summarizer Chrome extensions transform how we consume web content. Instead of reading entire articles, blog posts, or research papers, these extensions use large language models to extract key points and present concise summaries directly in the browser. For developers and power users, understanding the underlying architecture enables you to build custom solutions tailored to specific workflows.
@@ -378,4 +378,4 @@ API key exposed in extension source: Store the key in `chrome.storage.sync` via 
 
 Summary cached for outdated page content: Add a content hash to the cache key so that when the article is updated, the old cached summary is invalidated. Compute a simple 32-character hash of the first 2,000 characters of the page text and append it to the URL key.
 
-{% endraw %}
+

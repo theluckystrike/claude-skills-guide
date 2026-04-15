@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for EKS IRSA Workflow
 
 Managing IAM roles for Kubernetes service accounts in Amazon EKS can be complex. Manual configuration of OIDC providers, IAM policies, and Kubernetes service accounts often leads to errors and security misconfigurations. This guide shows how to use Claude Code to automate and simplify your EKS IRSA workflow, making it reproducible, secure, and maintainable.
@@ -441,7 +441,7 @@ Start by creating a dedicated skill for IRSA operations in your Claude Code setu
 Use Claude Code's audit capabilities periodically to review your existing IRSA configurations and remove stale permissions. Security drift in IAM roles is a real risk in active clusters, and having an automated review step keeps your least-privilege posture intact over time.
 
 Remember: IRSA is about security. Always prefer more restrictive trust policies, use dedicated roles per application, tag your roles for discoverability, and regularly audit your configurations. Claude Code makes this disciplined approach practical and scalable.
-{% endraw %}
+
 
 ---
 

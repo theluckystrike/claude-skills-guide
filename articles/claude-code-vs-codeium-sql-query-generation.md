@@ -13,7 +13,7 @@ score: 8
 tags: [claude-code, codeium, sql, database, ai-coding-tools]
 ---
 
-{% raw %}
+
 
 SQL query generation has become a critical use case for AI-powered coding assistants. As developers work with databases daily, having an AI tool that understands schema context, generates optimized queries, and handles complex joins can significantly boost productivity. In this comparison, we'll examine how Claude Code and Codeium approach SQL query generation, highlighting where Claude Code excels and provides distinct advantages.
 
@@ -163,7 +163,7 @@ For SQL query generation, Claude Code offers distinct advantages through its lar
 
 By using Claude Code's strengths in context understanding and its database-focused skills, developers can generate more accurate, optimized SQL queries while reducing the back-and-forth typically required with AI assistants.
 
-{% endraw %}
+
 
 ---
 

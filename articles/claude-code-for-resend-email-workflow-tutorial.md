@@ -289,7 +289,7 @@ When deploying your email workflow to production, consider these recommendations
 Building email workflows with Resend and Claude Code doesn't have to be complicated. By following this tutorial, you now have a solid foundation for implementing transactional emails in your application. Claude Code can help you extend these patterns further, whether you need complex multi-step email sequences, template customization, or integration with other services.
 
 Start with the basics outlined here, then iterate based on your specific use cases. With proper error handling, testing, and monitoring, your email workflows will be reliable and scalable.
-{% endraw %}
+
 
 ---
 
@@ -314,3 +314,4 @@ Related Reading
 - [Claude Code for Codemod Authoring Workflow Tutorial](/claude-code-for-codemod-authoring-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

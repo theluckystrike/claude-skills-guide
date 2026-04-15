@@ -791,7 +791,7 @@ Automating changelog generation in Lerna monorepos with Claude Code eliminates m
 Start by setting up the basic commit parsing, then gradually add features like dependency tracking, multi-language support, and preview workflows. Your future self, and your users, will thank you for the clear, organized changelogs.
 
 The single biggest lever in this entire system is consistent conventional commits. Once every developer on your team writes structured commits with accurate types and scopes, the changelog pipeline becomes nearly automatic. The scripts handle the mechanics; Claude Code handles the judgment calls around categorization and human-readable summaries. Together, they reduce one of the most tedious release tasks to a ten-minute review.
-{% endraw %}
+
 
 ---
 
@@ -816,3 +816,4 @@ Related Reading
 - [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -10,7 +10,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Webhook Handler Tutorial Guide
 
 Webhook handlers are essential for building responsive, event-driven applications. When integrated with Claude Code, they become even more powerful, enabling intelligent processing and automation of incoming events. This comprehensive guide walks you through building solid webhook handlers using Claude Code skills.
@@ -292,4 +292,4 @@ Related Reading
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
-{% endraw %}
+

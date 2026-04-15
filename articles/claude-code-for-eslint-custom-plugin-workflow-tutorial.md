@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for ESLint Custom Plugin Workflow Tutorial
 
 Creating custom ESLint plugins can significantly improve your codebase's consistency and catch domain-specific issues early. When combined with Claude Code, you gain an AI-powered development partner that can accelerate every step of the plugin creation process, from scaffolding to testing and publishing.
@@ -256,4 +256,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

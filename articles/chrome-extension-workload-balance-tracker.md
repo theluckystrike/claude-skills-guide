@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome extension workload balance trackers are specialized browser tools that help developers and power users monitor, distribute, and optimize their work across multiple projects and time blocks. These extensions bridge the gap between simple task lists and comprehensive project management, offering real-time insights into how you allocate your time and mental energy.
 
 ## Understanding Workload Balance in Browser Contexts
@@ -368,4 +368,4 @@ Related Reading
 - [Chrome Extension Gift Card Balance Checker: A Developer Guide](/chrome-extension-gift-card-balance-checker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

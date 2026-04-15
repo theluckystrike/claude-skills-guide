@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Jest Unit Testing Workflow Guide
 
 Automated testing forms the backbone of reliable software development, and Jest remains one of the most popular testing frameworks for JavaScript and TypeScript projects. When combined with Claude Code's AI capabilities, developers can build solid testing workflows that catch bugs early and maintain code quality throughout the development lifecycle. This guide explores practical strategies for integrating Jest with Claude Code to create an efficient unit testing pipeline.
@@ -248,4 +248,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

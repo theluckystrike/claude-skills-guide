@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 The Cloud Development Kit for Terraform (CDKTF) enables you to define cloud infrastructure using familiar programming languages like TypeScript, Python, Go, and C#. By combining the expressive power of general-purpose languages with Terraform's infrastructure provisioning capabilities, CDKTF offers a powerful approach to infrastructure-as-code. This guide shows you how to integrate Claude Code into your CDKTF workflow to accelerate development, improve code quality, and streamline infrastructure management.
 
@@ -221,7 +221,7 @@ Test Infrastructure Code: Use CDKTF's testing capabilities. Claude can help writ
 
 Claude Code transforms CDKTF development by bringing intelligent assistance to every phase of infrastructure development. From generating boilerplate code and building reusable constructs to reviewing for security and setting up CI/CD pipelines, Claude accelerates your workflow while improving code quality. Start by setting up proper context in your project, then iterate with specific, focused requests to get the most out of your CDKTF and Claude Code combination.
 
-{% endraw %}
+
 
 ---
 

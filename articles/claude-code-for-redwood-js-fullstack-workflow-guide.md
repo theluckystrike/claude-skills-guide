@@ -775,7 +775,7 @@ Here are concrete prompt patterns that produce the best results with Claude on R
 Building with RedwoodJS and Claude Code combines the best of modern fullstack development: React's component model, GraphQL's data flexibility, and AI-assisted development speed. Start with a clear project structure, use Cells for data fetching, and use Claude to handle the boilerplate while you focus on your unique business logic. The workflow becomes iterative, describe what you need, review what Claude generates, refine, and continue building.
 
 The patterns in this guide, layered architecture, typed services, Cell-based data fetching, role-based auth, and staged deployment, form a foundation that scales from side project to production application. Claude Code is most powerful when you understand the framework well enough to evaluate what it generates. Invest in learning Redwood's conventions, and Claude becomes a force multiplier rather than a source of mystery code.
-{% endraw %}
+
 
 ---
 
@@ -800,3 +800,4 @@ Related Reading
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

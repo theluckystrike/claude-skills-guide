@@ -370,7 +370,7 @@ Claude Code's combination of AI reasoning, tool execution, and extensibility mak
 The practical path forward: pick one workflow in your daily development cycle that involves repetitive judgment work, reviewing pull requests, triaging bug reports, writing docstrings, and build a minimal Claude Code skill around it. Ship it as a shell alias or git hook. Use it for a week. Then expand from there. The compounding productivity gains become clear fast once you have one real tool running in anger.
 
 Start small, create a simple skill for one specific task, and gradually expand as you learn what Claude Code can do. The possibilities are vast, and the productivity gains can be significant.
-{% endraw %}
+
 
 ---
 
@@ -395,3 +395,4 @@ Related Reading
 - [Render MCP Server Web Service Automation](/render-mcp-server-web-service-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

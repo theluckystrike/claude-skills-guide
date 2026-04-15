@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Real-time applications demand solid communication channels, and tRPC with WebSocket subscriptions offers a type-safe solution for building interactive features. This guide shows you how to use Claude Code to streamline the entire tRPC WebSocket workflow, from initial setup to production deployment.
 
@@ -250,7 +250,7 @@ process.on('SIGTERM', () => {
 Building real-time applications with tRPC and WebSockets requires understanding subscription patterns, connection lifecycle management, and production scaling strategies. Claude Code accelerates development by generating boilerplate code, suggesting optimizations, and helping debug complex async flows.
 
 Start with basic subscriptions, then layer in reconnection logic, cross-server communication, and performance optimizations as your application grows. The type-safe foundation tRPC provides makes this evolution manageable and maintainable.
-{% endraw %}
+
 
 ---
 

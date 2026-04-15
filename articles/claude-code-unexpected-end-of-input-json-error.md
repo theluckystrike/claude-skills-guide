@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Fixing Claude Code's "Unexpected End of Input" JSON Error
 
 If you're working with Claude Code (claude.ai/cli), you've probably encountered the frustrating "unexpected end of input" JSON error at some point. This error typically occurs when Claude Code tries to parse a configuration file or JSON input and finds that the file is incomplete, malformed, or truncated. we'll explore what causes this error, how to identify it, and, most importantly, how to fix it.
@@ -447,7 +447,7 @@ The "unexpected end of input" JSON error in Claude Code is usually caused by mal
 By following the debugging steps outlined in this guide, you can quickly identify and resolve these JSON parsing errors. The key habits that prevent this error from recurring are: using an editor with JSON validation built in, validating configuration files programmatically after every manual edit, and making incremental changes so you can easily identify what caused any issues.
 
 If you continue to experience this error after checking your local configurations, it might be worth checking Claude Code's documentation or community forums for known issues with specific versions or configurations. The Claude Code GitHub repository also tracks open issues, so searching for "unexpected end of input" there may surface a version-specific bug or workaround.
-{% endraw %}
+
 
 ---
 

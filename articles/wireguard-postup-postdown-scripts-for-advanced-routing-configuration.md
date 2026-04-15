@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 WireGuard's `PostUp` and `PostDown` directives are powerful features that allow you to execute shell commands automatically when your VPN tunnel is established or torn down. These scripts enable advanced routing configurations, automated firewall rule management, and dynamic network setup that responds to your VPN connection state.
 
 ## Understanding PostUp and PostDown
@@ -453,4 +453,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Echidna Fuzzing Workflow
 
 Security vulnerabilities in smart contracts can lead to catastrophic financial losses. Echidna, developed by Trail of Bits, is a powerful property-based fuzzing tool specifically designed for Ethereum smart contracts. When combined with Claude Code's coding assistance, you can create solid fuzzing workflows that discover vulnerabilities early in your development cycle.
@@ -213,7 +213,7 @@ Combining Claude Code's assistance with Echidna's powerful fuzzing capabilities 
 Start with simple invariants, run short fuzzing campaigns during development, and expand your testing as your contracts grow in complexity. The time invested in fuzzing pays dividends in security and reliability.
 
 Remember: smart contract security requires multiple layers of testing. Echidna complements other tools like static analyzers and manual audits, providing automated exploration that humans might miss.
-{% endraw %}
+
 
 ---
 

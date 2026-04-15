@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Introduction
 
 Stale pull requests are a common problem in software development. When PRs sit for days or weeks without activity, they become increasingly difficult to review, often accumulate merge conflicts, and can block dependent work. Manually tracking and following up on these stale PRs is time-consuming and error-prone.
@@ -231,4 +231,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Building Chrome extensions with Svelte gives you a powerful combination: Svelte's reactive framework for creating responsive UI, and Chrome's extension APIs for browser functionality. This guide walks you through setting up a Chrome extension with Svelte and using devtools effectively during development.
 
 You'll cover project scaffolding, Manifest V3 configuration, bridging Chrome's async APIs with Svelte stores, and a systematic debugging approach for every extension context, popup, service worker, and content script.
@@ -433,4 +433,4 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

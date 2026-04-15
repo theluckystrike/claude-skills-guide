@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, image-processing, web-development]
 ---
 
-{% raw %}
+
 Chrome Extension Image Format Converter: Complete Developer Guide
 
 Converting image formats directly in your browser without uploading to external servers is a powerful capability that many developers and power users find invaluable. Whether you're building a productivity tool, a design workflow accelerator, or a utility for batch processing assets, understanding how to create a chrome extension image format converter opens up significant possibilities.
@@ -280,4 +280,3 @@ Related Reading
 - [Chrome Extension Product Review Summary AI: A Developer Guide](/chrome-extension-product-review-summary-ai/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}

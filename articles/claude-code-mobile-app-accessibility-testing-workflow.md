@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Mobile app accessibility is no longer optional, it's a legal requirement and a business imperative. With over 1 billion people worldwide living with some form of disability, ensuring your mobile app is accessible isn't just good practice; it's essential for reaching your full audience. Legislation like the Americans with Disabilities Act (ADA), the European Accessibility Act, and Apple and Google's own App Store guidelines increasingly enforce accessibility standards. Failing to comply can mean rejected app submissions, costly lawsuits, or simply losing a large segment of potential users.
 
 This guide walks you through building a comprehensive accessibility testing workflow using Claude Code, covering automated scanning, manual testing strategies, real-world scenarios, and continuous integration setup. Whether you're working in Swift, Kotlin, or React Native, the patterns here apply across the board.
@@ -437,7 +436,7 @@ Accessibility Standards
 
 By integrating testing into your development process, documenting common issues, and using Claude Code to assist with analysis and fixes, you can build accessible mobile apps that serve all users effectively. Remember that accessibility is an ongoing commitment, not a one-time effort. As you add new features and update existing ones, continue to apply these testing practices to maintain the accessibility standards you've established, and raise the bar with each release.
 
-{% endraw %}
+
 
 ---
 
@@ -462,3 +461,4 @@ Related Reading
 - [Claude Code L10n Testing Automation Workflow Tutorial](/claude-code-l10n-testing-automation-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

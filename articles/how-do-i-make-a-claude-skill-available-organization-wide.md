@@ -12,8 +12,8 @@ score: 8
 permalink: /how-do-i-make-a-claude-skill-available-organization-wide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Sharing Claude skills across your organization ensures consistency, reduces duplicate effort, and accelerates onboarding for new team members. Instead of each developer maintaining their own skill set, you can distribute standardized skills that enforce your team's conventions and best practices.
 
 This guide covers practical methods for making Claude skills available organization-wide, from simple file sharing to automated deployment pipelines.

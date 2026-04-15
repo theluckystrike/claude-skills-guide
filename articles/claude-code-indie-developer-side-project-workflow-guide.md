@@ -13,8 +13,8 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Building side projects as an indie developer is exciting but challenging. Between managing your time, handling multiple roles, and delivering quality software, the overhead can quickly overwhelm. Claude Code offers a powerful workflow that can transform how you approach side project development, helping you move from idea to production faster while maintaining code quality.
 
 ## Why Claude Code Fits the Indie Developer Reality

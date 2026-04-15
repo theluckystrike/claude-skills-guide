@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Chrome extensions that use artificial intelligence to capture, organize, and summarize notes have become essential tools for developers managing complex projects. Unlike traditional note-taking apps, AI-powered extensions can automatically categorize content, extract code snippets, and generate summaries from web pages, documentation, and developer discussions. This guide covers how to evaluate existing tools, integrate them into development workflows, and build a custom solution when off-the-shelf options fall short.
 
@@ -353,4 +353,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

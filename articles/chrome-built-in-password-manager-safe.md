@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 When evaluating password management options, developers and power users need concrete technical details rather than marketing claims. Chrome's built-in password manager offers convenience, but understanding its security architecture helps you make informed decisions about where to store sensitive credentials.
 
 ## How Chrome's Password Manager Actually Works
@@ -293,4 +293,4 @@ Related Reading
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

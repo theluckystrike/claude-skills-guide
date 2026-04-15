@@ -297,7 +297,7 @@ Conclusion
 Astro's View Transitions API combined with Claude Code's automation capabilities provides a powerful workflow for creating sophisticated page transitions. Start with simple fades, progressively add persistent elements, and always test across browsers and devices. The key is incremental implementation, adding complexity only when the basics work perfectly.
 
 By following these patterns and workflows, you'll create applications that feel responsive and polished while maintaining Astro's excellent performance characteristics. Claude Code can help you generate components, debug transition issues, and optimize your implementation at every step.
-{% endraw %}
+
 
 ---
 
@@ -322,3 +322,4 @@ Related Reading
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

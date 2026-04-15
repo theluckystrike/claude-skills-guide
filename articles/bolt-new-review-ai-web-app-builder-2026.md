@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Bolt.new Review: AI Web App Builder 2026
 
 The web development landscape has been revolutionized by AI-powered tools, and in 2026, Bolt.new stands out as one of the most capable AI web app builders available. This comprehensive review explores Bolt.new's capabilities, limitations, and, most importantly, how you can use Claude Code skills to speed up your Bolt.new development workflow.
@@ -185,7 +185,7 @@ Bolt.new is an excellent tool for rapid prototyping and building web application
 
 The key to success is understanding that Bolt.new handles the "what" of your application, while Claude Code handles the "how well", ensuring your AI-generated code is secure, performant, and maintainable.
 
-{% endraw %}
+
 
 ---
 

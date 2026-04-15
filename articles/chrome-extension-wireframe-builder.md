@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Wireframe Builder: A Practical Guide
 
 Building a wireframe tool as a Chrome extension gives you direct access to any webpage, allowing users to overlay interactive wireframes without leaving their working environment. This approach differs from standalone wireframe tools because the extension lives in the browser, has access to the DOM, and can use existing page context for smarter component detection.
@@ -394,4 +394,4 @@ Extension iframe not loading on pages with strict CSP: Use a Chrome extension si
 
 Once you have core functionality working, consider adding collaborative features through cloud storage, element libraries for common UI patterns, or integration with design tools like Figma through their APIs.
 
-{% endraw %}
+

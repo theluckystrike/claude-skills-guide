@@ -332,7 +332,7 @@ Building automated data anonymization workflows with Claude Code significantly r
 Start with simple use cases like test data generation, then expand to real-time API response anonymization and database export pipelines. Claude Code's ability to understand context and generate appropriate code makes this process much more efficient than traditional manual approaches.
 
 Remember: data anonymization is not a one-time task but an ongoing process. Regularly review and update your transformation rules as new data fields are added and privacy regulations evolve.
-{% endraw %}
+
 
 ---
 
@@ -357,3 +357,4 @@ Related Reading
 - [Claude Code Data Visualization Workflow for Researchers](/claude-code-data-visualization-workflow-for-researchers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

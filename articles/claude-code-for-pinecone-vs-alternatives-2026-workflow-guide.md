@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, pinecone, vector-database, ai]
 ---
 
-{% raw %}
+
 
 Vector databases have become essential infrastructure for AI-powered applications, enabling semantic search, retrieval-augmented generation (RAG), and long-term memory for agents. As we move through 2026, developers are increasingly using Claude Code not just for writing code, but for directly interacting with vector databases to build intelligent systems. This guide compares working with Pinecone versus popular alternatives through Claude Code, providing workflow patterns you can apply today.
 
@@ -266,4 +266,4 @@ Related Reading
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Coverage Reporting Setup Guide
 
 Setting up proper code coverage reporting is essential for maintaining quality in any project. This guide walks you through configuring coverage reporting tools that work smoothly with Claude Code, giving you visibility into how much of your codebase is tested. Beyond the raw configuration, you'll learn how to use Claude Code as an active collaborator in interpreting results and closing gaps.
@@ -389,4 +389,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

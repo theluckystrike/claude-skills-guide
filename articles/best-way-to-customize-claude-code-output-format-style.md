@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Best Way to Customize Claude Code Output Format Style
 
 Customizing Claude Code's output format and style allows you to get consistent, predictable responses that match your team's coding standards and preferences. Whether you need concise bullet points, detailed technical documentation, or specific code formatting, mastering output customization significantly improves your development workflow efficiency. This guide covers every layer of the customization stack: CLAUDE.md configuration, skill metadata, prompt engineering patterns, and machine-parseable output structures.
@@ -333,7 +333,7 @@ JSON output includes markdown fences. Add "Return only raw JSON, no markdown for
 Customizing Claude Code's output format and style is essential for productive human-AI collaboration in team settings. By configuring CLAUDE.md files, defining skill metadata with system prompts, and using explicit prompt instructions, you can achieve consistent, predictable responses that accelerate your development workflow.
 
 The best approach combines project-level configuration with skill-specific templates, allowing you to maintain consistent standards while retaining flexibility for specialized tasks. Start with basic formatting rules in CLAUDE.md, graduate to skill definitions when you find yourself repeating the same prompt preamble, and add machine-readable output structures only when automation requires it. Refine based on what your team actually finds useful. the goal is less friction, not more configuration.
-{% endraw %}
+
 
 ---
 

@@ -13,8 +13,8 @@ reviewed: true
 score: 7
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Integrating Claude Code into your existing CI/CD pipelines can dramatically improve your development workflow. Instead of treating AI as a separate tool that runs only on your local machine, you can embed it directly into automated processes that run every commit, every pull request, or on a scheduled basis.
 
 This guide shows you practical approaches to running Claude Code within CI/CD environments, with concrete examples for GitHub Actions, GitLab CI, and Jenkins.

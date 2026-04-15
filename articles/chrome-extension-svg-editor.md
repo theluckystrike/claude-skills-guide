@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension SVG Editor: A Developer Guide
 
 Creating a Chrome extension for SVG editing opens up powerful possibilities for web developers, designers, and power users who need to manipulate scalable vector graphics directly in their browser. This guide walks you through the core concepts, APIs, and practical implementation patterns for building a functional SVG editor extension.
@@ -272,4 +272,4 @@ Related Reading
 - [Chrome Extension LaTeX Equation Editor: A Developer's Guide](/chrome-extension-latex-equation-editor/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

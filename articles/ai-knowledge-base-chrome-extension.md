@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI knowledge base chrome extensions transform how developers and power users manage information across the web. These extensions use large language models to organize, search, and retrieve information from personal document collections, team wikis, and online resources. If you work with large amounts of documentation, research papers, or technical articles, understanding how these tools function helps you make informed decisions about integrating them into your workflow.
 
 ## How AI Knowledge Base Extensions Work
@@ -221,4 +221,4 @@ Related Reading
 - [Chrome Extension Base64 Encoder Decoder: A Practical Guide](/chrome-extension-base64-encoder-decoder/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

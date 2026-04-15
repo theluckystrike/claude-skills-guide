@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Thirdweb SDK Workflow Tutorial
 
 Thirdweb simplifies blockchain development by providing powerful SDKs that abstract away the complexity of smart contract interactions. When combined with Claude Code, you can create efficient workflows for deploying contracts, managing NFTs, and interacting with blockchain applications. This tutorial shows you how to use Claude Code to accelerate your Thirdweb development across the entire lifecycle, from initial project setup through production monitoring.
@@ -637,7 +637,7 @@ Combining Claude Code with Thirdweb SDK creates a powerful development environme
 The most effective workflow is iterative: start with simple single-chain deployments using prebuilt contracts, add proper TypeScript typing and error handling, then build toward multi-chain support, smart wallet integration, and real-time event monitoring. Use Claude Code at each stage not just to write code but to audit what you have, suggest optimizations, and generate tests.
 
 Always test thoroughly on testnets before deploying to mainnet, keep your private keys in environment variables (never in source control), and use Thirdweb's dashboard to monitor your deployed contracts in production.
-{% endraw %}
+
 
 ---
 

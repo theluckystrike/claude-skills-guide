@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 After months of using Claude Code as my primary AI coding assistant in 2026, here's my honest assessment. This review covers the skills system, practical capabilities, real-world examples, and where the tool still falls short. If you're evaluating whether Claude Code is worth adding to your development workflow, this is the ground-level perspective you need.
 
@@ -284,7 +284,7 @@ The key is understanding it as a CLI-powered AI assistant rather than a magic so
 
 *What's your experience with Claude Code? Share your thoughts in the comments below.*
 
-{% endraw %}
+
 
 ---
 

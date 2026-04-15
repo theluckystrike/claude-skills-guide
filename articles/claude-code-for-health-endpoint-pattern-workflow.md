@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Health Endpoint Pattern Workflow
 
 Health endpoints are a critical infrastructure component in modern applications. Whether you're running microservices in Kubernetes, exposing APIs behind load balancers, or building distributed systems, health checks determine when traffic should be routed to your service and whether your application needs attention. This guide shows you how to use Claude Code to implement comprehensive health endpoint patterns efficiently.
@@ -201,7 +201,7 @@ Test your health checks. Use Claude Code to write integration tests that verify 
 Claude Code streamlines health endpoint implementation by generating boilerplate code, Kubernetes configurations, and architectural patterns quickly. The key is providing clear context about your stack, dependencies, and requirements. Start with basic endpoints, layer in dependency checks as needed, and always configure Kubernetes probes to match your application's characteristics.
 
 A well-designed health endpoint system improves reliability by enabling Kubernetes to restart failing containers, routing traffic away from unhealthy instances, and providing visibility into system status. With Claude Code handling the implementation details, you can focus on defining what healthy means for your specific application.
-{% endraw %}
+
 
 ---
 

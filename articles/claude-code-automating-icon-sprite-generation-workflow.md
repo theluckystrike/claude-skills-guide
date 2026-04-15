@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Icon sprites have been a cornerstone of web performance optimization for over a decade. By combining multiple icons into a single image and using CSS positioning to display them, developers can dramatically reduce HTTP requests and improve page load times. However, the manual process of generating, organizing, and maintaining icon sprites can be tedious and error-prone. Enter Claude Code, the AI assistant that can automate this entire workflow for you.
 
@@ -189,7 +189,7 @@ By using Claude Code's skills and tool-calling capabilities, you can focus on de
 
 Start automating your icon sprite workflow today, and experience the productivity gains that come from letting Claude Code handle the repetitive tasks in your development pipeline.
 
-{% endraw %}
+
 
 ---
 

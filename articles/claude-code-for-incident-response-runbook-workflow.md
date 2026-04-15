@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Incident response is a critical aspect of DevOps and SRE practices. When production issues arise, having an efficient, repeatable workflow can mean the difference between quick resolution and extended downtime. Claude Code (claude) offers powerful capabilities to automate, document, and execute incident response runbooks effectively. This guide explores practical ways to integrate Claude Code into your incident response workflow.
 
 ## Understanding Claude Code in Incident Response
@@ -238,4 +238,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

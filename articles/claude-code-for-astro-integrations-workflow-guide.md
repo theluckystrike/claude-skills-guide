@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Astro's integration system is one of its most powerful features, enabling you to extend the framework with custom functionality, community plugins, and framework adapters. However, building and maintaining Astro integrations can be complex, requiring careful management of configurations, build processes, and TypeScript types. This guide shows you how to use Claude Code to streamline your Astro integration development workflow from initial scaffolding through testing, publishing, and long-term maintenance.
 
@@ -447,7 +447,7 @@ Building Astro integrations with Claude Code accelerates development through int
 
 Following these workflow patterns helps you create integrations that are reliable, well-documented, and a joy for other developers to use. The combination of Astro's explicit lifecycle API and Claude Code's ability to generate correct, typed implementations at each stage makes integration authoring far more approachable than the raw API documentation alone would suggest.
 
-{% endraw %}
+
 
 ---
 

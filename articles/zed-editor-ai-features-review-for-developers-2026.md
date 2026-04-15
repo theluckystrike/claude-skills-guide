@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Zed Editor AI Features Review for Developers 2026
 
 Zed Editor has emerged as one of the most powerful AI-integrated development environments in 2026. Built with performance and AI collaboration at its core, Zed offers developers a streamlined coding experience enhanced by Claude Code's advanced capabilities. This review examines the key AI features that make Zed Editor a top choice for developers seeking intelligent coding assistance.
@@ -196,7 +196,7 @@ The key to maximizing these benefits is understanding how to effectively collabo
 ---
 
 *This review covers Zed Editor's AI features as of March 2026. Capabilities may vary based on your subscription tier and configuration.*
-{% endraw %}
+
 
 ---
 

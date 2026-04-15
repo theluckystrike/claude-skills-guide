@@ -257,7 +257,7 @@ Start building your community health metrics documentation today:
 5. Act on the data - Metrics only matter if they inform decisions. Pick one insight from your documentation each month and act on it.
 
 By establishing a solid community health metrics documentation workflow, you create the foundation for a sustainable, thriving community around your Claude Code skills. The investment pays dividends in better decision-making, increased contributor engagement, and a clearer picture of your project's impact.
-{% endraw %}
+
 
 ---
 
@@ -282,3 +282,4 @@ Related Reading
 - [Claude Code for Documentation Testing Workflow Guide](/claude-code-for-documentation-testing-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

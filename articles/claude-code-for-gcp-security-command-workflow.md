@@ -263,7 +263,7 @@ Claude Code transforms GCP security command workflows from complex CLI navigatio
 - Integrate security checks into your development workflow
 
 Start by identifying your most frequent security operations, then create Claude Code workflows to automate them. The time invested in setting up these workflows pays dividends in reduced errors, improved compliance, and faster incident response.
-{% endraw %}
+
 
 ---
 
@@ -288,3 +288,4 @@ Related Reading
 - [Claude Code for Cloud Security Posture Workflow](/claude-code-for-cloud-security-posture-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

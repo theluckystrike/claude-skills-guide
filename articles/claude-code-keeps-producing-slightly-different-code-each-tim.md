@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 ## Claude Code Keeps Producing Slightly Different Code Each Time
 
@@ -210,7 +210,7 @@ Claude Code's variable output is an inherent characteristic of language model ge
 
 Remember: the goal isn't to eliminate all variation, but to control it strategically. Use these techniques when consistency matters, and enjoy the creative exploration when it doesn't.
 
-{% endraw %}
+
 
 ---
 

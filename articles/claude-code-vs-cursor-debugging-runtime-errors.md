@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code vs Cursor: Debugging Runtime Errors
 
 Debugging runtime errors remains one of the most time-consuming tasks in software development. When your application crashes, throws unexpected exceptions, or produces incorrect output, you need tools that help you quickly identify the root cause. This article compares how Claude Code and Cursor approach runtime error debugging, highlighting their strengths and practical techniques you can use today.
@@ -156,7 +156,7 @@ Runtime error debugging doesn't have to be a solitary struggle. Both Claude Code
 - Using both tools in sequence often yields the best results, let Claude Code guide your investigation, then verify with Cursor's debugger
 
 The best debugging approach depends on your situation. For mysterious errors in unfamiliar code, Claude Code's conversational debugging helps you learn quickly. For precise, known-location errors, Cursor's integrated debugger offers faster time-to-inspection. Master both, and you'll handle any runtime error with confidence.
-{% endraw %}
+
 
 ---
 

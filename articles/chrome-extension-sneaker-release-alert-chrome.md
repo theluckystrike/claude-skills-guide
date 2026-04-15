@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 
 Sneaker release alerts have become essential tools for collectors, resellers, and enthusiasts who need real-time notifications when limited editions drop. Building a Chrome extension for sneaker release alerts requires understanding browser extension architecture, web scraping fundamentals, and notification systems. This guide walks through the technical implementation for developers and power users.
 
@@ -356,4 +356,4 @@ chrome.permissions.request({ permissions: ['notifications'] }, (granted) => {
 
 When publishing to the Chrome Web Store, frame your extension as a notification utility rather than an automated purchase tool. the latter violates store policies and retailer terms. Include a clear privacy policy and test thoroughly across each target retailer.
 
-{% endraw %}
+

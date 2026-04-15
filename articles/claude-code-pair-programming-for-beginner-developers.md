@@ -13,7 +13,7 @@ score: 7
 permalink: /claude-code-pair-programming-for-beginner-developers/
 ---
 
-{% raw %}
+
 Claude Code Pair Programming for Beginner Developers
 
 Pair programming has long been recognized as one of the most effective ways to write better code. Traditionally, it involves two human developers working together at one workstation, one typing (the driver) and one reviewing (the navigator). But what if you could have an experienced programming partner available 24/7? That's exactly what Claude Code offers through AI-assisted pair programming.
@@ -190,7 +190,7 @@ It may be less ideal for very simple, repetitive tasks where a snippet or templa
 Claude Code pair programming represents a new paradigm in software development, having an intelligent, context-aware partner available whenever you code. For beginner developers, this means you no longer have to struggle alone with confusing errors or spend hours figuring out the best approach.
 
 The key is to treat Claude as a partner rather than a tool. Engage with it, ask questions, and you'll not only write better code but also become a better developer yourself. Start with small projects, practice the workflow, and gradually take on more complex challenges. Your AI pair programming partner is ready to help you grow.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code LaTeX Document Writing Workflow Tutorial
 
 LaTeX remains the gold standard for scientific and technical document preparation, offering unparalleled control over formatting and typography. When combined with Claude Code's AI capabilities, you get a powerful workflow that dramatically accelerates document creation while maintaining professional quality. This tutorial walks you through setting up and mastering a LaTeX writing workflow with Claude Code.
@@ -488,7 +488,7 @@ Start with simple documents, gradually incorporate more advanced features, and b
 The most effective use pattern is iterative: draft your content in plain prose, then ask Claude Code to convert sections to proper LaTeX, add appropriate environments, generate complex notation, and polish the overall structure. This keeps your focus on the intellectual content while Claude handles the mechanical aspects of LaTeX syntax.
 
 Remember: Claude Code handles the mechanical aspects of LaTeX, but your expertise and content remain central. Use the AI to amplify your capabilities, not replace your knowledge.
-{% endraw %}
+
 
 ---
 

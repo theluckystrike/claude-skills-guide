@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Elastic APM Integration Workflow
 
 Modern application monitoring requires smooth integration between development tools and observability platforms. Elastic APM (Application Performance Monitoring) provides powerful capabilities for tracking application performance, distributed traces, and errors. When combined with Claude Code, you can create intelligent automation workflows that proactively monitor, analyze, and respond to application health issues.
@@ -237,7 +237,7 @@ Monitor the Monitor: Track your automation workflows themselves. Ensure that err
 Integrating Claude Code with Elastic APM opens powerful possibilities for automated observability. From real-time error detection to performance analysis and incident response automation, these workflows help maintain application health while reducing manual monitoring burden.
 
 Start with simple error detection scripts, then gradually add more sophisticated analysis capabilities as your monitoring needs evolve. The combination of Claude Code's flexibility and Elastic APM's comprehensive data creates a foundation for truly intelligent operational workflows.
-{% endraw %}
+
 
 ---
 

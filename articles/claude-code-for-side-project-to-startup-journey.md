@@ -12,7 +12,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Side Project to Startup Journey
 
 Every successful startup begins with a simple question: "What if I built this?" That late-night idea that started as a side project has the potential to become something much bigger. The journey from side project to startup is challenging, but Claude Code can serve as your intelligent development partner throughout this transformation. This guide walks you through using Claude Code effectively as you evolve your side project into a viable startup.
@@ -163,4 +163,4 @@ Related Reading
 - [Claude Code Indie Developer Side Project Workflow Guide](/claude-code-indie-developer-side-project-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

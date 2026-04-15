@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Tree of Thought Prompting Workflow Guide
 
 Tree of Thought (ToT) prompting transforms how you interact with Claude Code by enabling systematic exploration of multiple solution paths simultaneously. Rather than following a single linear reasoning chain, ToT encourages Claude to branch into different approaches, evaluate each path, and converge on the optimal solution. This guide shows you how to implement effective Tree of Thought workflows that dramatically improve problem-solving quality.
@@ -231,4 +231,4 @@ Related Reading
 - [Claude Code for Self-Consistency Prompting Workflow Tutorial](/claude-code-for-self-consistency-prompting-workflow-tutorial/)
 - [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)
 
-{% endraw %}
+

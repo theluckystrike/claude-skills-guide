@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Why Is Claude Code Changing Files I Did Not Mention?
 
 You've asked Claude Code to modify one specific file, but you notice other files have been changed. Maybe a configuration file was updated, tests were modified, or a related module was altered. This behavior can be surprising, but it usually has understandable reasons.  why Claude Code sometimes changes files you didn't explicitly mention.
@@ -213,7 +213,7 @@ Claude Code changing files you didn't mention usually happens for good reasons, 
 The solution isn't necessarily to prevent all automatic changes, but to understand what's happening and control it when needed. Use explicit instructions, review changes before applying them, and configure your skills appropriately for your workflow.
 
 With practice, you'll learn to work with Claude Code's file awareness rather than against it, getting the benefits of automated consistency while maintaining control over your project's evolution.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Feature flags have become an essential tool in modern software development, enabling teams to decouple deployments from releases. When combined with Claude Code and Git workflows, feature flags provide powerful control over how and when features reach users. This guide explores practical strategies for integrating feature flags into your development process using Claude Code CLI.
 
 ## Understanding Feature Flags in Git-Based Workflows
@@ -207,7 +207,7 @@ Don't commit secrets in flag configs. If using external flag services, don't com
 Feature flags combined with Git workflows and Claude Code create a powerful development pipeline. By following these patterns, you can deploy with confidence, test incrementally, and release features gradually. Claude Code accelerates implementation by generating consistent flag code, tests, and configurations across your codebase.
 
 Start small with feature flags in your next project. Use Claude Code to generate the infrastructure, then gradually adopt more sophisticated patterns as your team grows comfortable with the workflow.
-{% endraw %}
+
 
 ---
 

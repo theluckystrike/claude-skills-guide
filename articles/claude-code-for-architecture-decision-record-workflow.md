@@ -12,8 +12,8 @@ score: 7
 reviewed: true
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Architecture Decision Records (ADRs) are a crucial part of sustainable software development. They document the "why" behind technical choices, making your project's architectural evolution traceable and understandable. Claude Code can significantly accelerate your ADR workflow, from initial drafting to ongoing maintenance. This guide shows you how to use Claude Code effectively for creating and managing ADRs.
 
 ## Why Use Claude Code for ADRs

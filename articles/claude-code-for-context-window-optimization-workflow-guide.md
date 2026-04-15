@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Context Window Optimization Workflow Guide
 
 Working effectively with Claude Code (the Claude CLI) requires understanding how to optimize your context window. When you're building applications, debugging code, or refactoring large codebases, managing what Claude "sees" can dramatically improve response quality and efficiency. This guide provides practical strategies for developers who want to master context window optimization in their daily workflow.
@@ -227,4 +227,4 @@ Related Reading
 - [Claude Code ActiveRecord Query Optimization Workflow Guide](/claude-code-activerecord-query-optimization-workflow-guide/)
 - [Claude Code Consultant Codebase Context Switching Workflow](/claude-code-consultant-codebase-context-switching-workflow/)
 
-{% endraw %}
+

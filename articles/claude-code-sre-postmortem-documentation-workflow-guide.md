@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Every incident tells a story. As Site Reliability Engineers, our job is not just to fix the immediate problem but to capture the lessons learned so our teams can prevent recurrence. Postmortem documentation is the backbone of a learning culture, yet it often gets neglected in the rush to return to normal operations. Claude Code transforms this process from a tedious chore into an efficient, thorough workflow that produces better documentation with less effort.
 
@@ -153,7 +153,7 @@ The skills ecosystem, particularly internal-comms and docx, provides specialized
 
 Effective postmortems build reliability culture. With Claude Code handling the mechanical aspects of documentation, your team can invest more energy in the thoughtful analysis that drives genuine improvement.
 
-{% endraw %}
+
 
 ---
 

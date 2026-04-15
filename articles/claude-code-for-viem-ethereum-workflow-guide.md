@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Viem Ethereum Workflow Guide
 
 Viem has emerged as one of the most performant and developer-friendly Ethereum libraries for TypeScript applications. When combined with Claude Code, you can dramatically accelerate your smart contract interactions, from initial setup to production deployment. This guide walks you through practical workflows that will make your Ethereum development more efficient.
@@ -675,7 +675,7 @@ Key areas where Claude Code saves the most time with Viem:
 - Scaffolding observability wrappers for RPC transport
 
 Remember: the key to success is starting simple and incrementally adding complexity as your application grows. Claude Code adapts to your needs and scales with your project.
-{% endraw %}
+
 
 ---
 

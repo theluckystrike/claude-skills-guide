@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Fork and Pull Request Workflow Guide
 
 Working with GitHub forks and pull requests is a daily reality for open source contributors and team collaboration. Claude Code (claude) provides powerful CLI capabilities that can streamline your fork and PR workflow, making it more efficient and less error-prone. This guide walks you through practical strategies and commands to maximize your productivity.
@@ -214,7 +214,7 @@ Claude Code transforms the fork and pull request workflow from a tedious series 
 
 Remember that the best workflow is one that works consistently for you. Experiment with these suggestions, adapt them to your needs, and enjoy smoother open source contributions.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for ARIA Live Regions Workflow Guide
 
 ARIA live regions are a critical component of building accessible web applications. They enable screen readers to announce dynamic content changes to users in real-time, ensuring that users of assistive technologies stay informed about updates without losing their place in the application. This guide explores how Claude Code can streamline your workflow for implementing and managing ARIA live regions effectively.
@@ -720,7 +720,7 @@ ARIA live regions are essential for building inclusive web applications. By usin
 The most important mindset shift is treating live regions as infrastructure, not afterthoughts. Mount persistent containers at the app root, keep them in the DOM at all times, and feed them content changes rather than swapping elements in and out. Pair every live region decision with an automated test that validates the structural requirements, even if that test can't fully simulate the screen reader experience.
 
 The key to success is treating accessibility as an integral part of your development process rather than an afterthought. With Claude Code as your assistant, implementing and maintaining ARIA live regions becomes a streamlined, efficient workflow that benefits all your users.
-{% endraw %}
+
 
 ---
 

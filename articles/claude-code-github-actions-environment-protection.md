@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 When running automated workflows through GitHub Actions, protecting sensitive environment variables and secrets is critical. Claude Code can help you implement solid security patterns for your CI/CD pipelines, preventing credential leaks and unauthorized access to production environments.
 
 Scope of this article: This article focuses on GitHub Actions environment protection rules. required reviewers, wait timers, deployment gates, and fork-PR validation. These are the controls that govern when and whether a deployment is allowed to proceed. If you need guidance on secrets creation, rotation, org-level scoping, composite actions, or Vault integration, see [Claude Code GitHub Actions Secrets Management](/claude-code-github-actions-secrets-management/).

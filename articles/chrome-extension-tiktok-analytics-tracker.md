@@ -12,7 +12,7 @@ score: 8
 categories: [guides]
 ---
 
-{% raw %}
+
 Chrome Extension TikTok Analytics Tracker: A Developer's Guide
 
 Building a Chrome extension to track TikTok analytics opens up powerful possibilities for content creators, marketers, and developers who want to automate data collection from the platform. While TikTok provides native analytics for Pro accounts, custom extensions let you aggregate data across multiple accounts, build custom visualizations, and create alerting systems that go beyond what the platform offers.
@@ -294,4 +294,4 @@ Related Reading
 - [Chrome Extension Habit Tracker for Work: A Developer Guide](/chrome-extension-habit-tracker-work/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

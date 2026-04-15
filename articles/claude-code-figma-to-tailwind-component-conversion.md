@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Figma to Tailwind Component Conversion
 
 Converting Figma designs to Tailwind CSS components is a common but time-consuming task in modern web development. With Claude Code and the right MCP (Model Context Protocol) tools, you can automate much of this workflow and generate production-ready components from your design files.
@@ -399,7 +399,7 @@ Token consistency check. Verify that colors, spacing, and font values in the gen
 Claude Code dramatically accelerates Figma to Tailwind conversion by analyzing designs, generating component code, and creating proper configuration tokens. The key is setting up the MCP connection and providing Claude with structured design analysis. With this workflow, you can convert complex designs into clean, maintainable Tailwind components in minutes instead of hours.
 
 The combination of Claude's understanding of both design principles and Tailwind's utility classes makes this workflow particularly powerful for development teams working with design-driven development processes. As your component library grows, the design tokens you define in `tailwind.config.js` become the shared language between designers and developers. and Claude helps you keep that language consistent across every new component you add.
-{% endraw %}
+
 
 ---
 

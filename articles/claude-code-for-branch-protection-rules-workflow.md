@@ -358,7 +358,7 @@ Implementing Claude Code for branch protection rules workflow transforms how you
 The key is treating your branch protection rules as code, version controlled, reviewed, and tested. This approach, combined with Claude Code's automation capabilities, gives you the best of both worlds: rigorous security and operational efficiency.
 
 Remember to regularly review and update your branch protection strategy as your project evolves. What works for a small team may need adjustment as you scale, and Claude Code makes that adaptation straightforward.
-{% endraw %}
+
 
 ---
 
@@ -383,3 +383,4 @@ Related Reading
 - [Claude Code for Chef Cookbook Development Workflow](/claude-code-for-chef-cookbook-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

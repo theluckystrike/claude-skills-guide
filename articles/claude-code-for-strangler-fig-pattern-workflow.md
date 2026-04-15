@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Strangler Fig Pattern Workflow
 
 The strangler fig pattern represents one of the most elegant approaches to modernizing legacy systems without the of massive "big bang" rewrites. Named after the strangler fig tree that slowly envelops and replaces its host, this pattern allows you to incrementally migrate functionality from a legacy system to a modern architecture while keeping everything running smoothly. Claude Code becomes an invaluable partner in executing this migration strategy, providing intelligent assistance from initial analysis through final decommissioning.
@@ -204,7 +204,7 @@ This pattern shines in scenarios where you cannot afford downtime or risky deplo
 The incremental nature of the strangler fig pattern means you deliver value continuously rather than waiting for a massive, risky release. Claude Code accelerates every phase of this journey, making what was once a daunting migration into a manageable, methodical process.
 
 Start small, verify frequently, and let the strangler fig pattern gradually transform your system one feature at a time.
-{% endraw %}
+
 
 ---
 

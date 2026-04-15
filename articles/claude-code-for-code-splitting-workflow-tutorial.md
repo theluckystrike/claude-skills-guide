@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Code Splitting Workflow Tutorial
 
 Code splitting is one of the most effective techniques for optimizing web application performance. By breaking your JavaScript bundles into smaller chunks, you can reduce initial load times, improve Time to Interactive (TTI), and create a smoother user experience. However, implementing an efficient code splitting workflow manually can be time-consuming and error-prone.
@@ -293,7 +293,7 @@ Claude Code transforms code splitting from a manual, error-prone process into an
 Start with route-based splitting, then progressively add component-level optimization as your application matures. Regular analysis and monitoring will ensure your splitting strategy continues to deliver performance improvements over time.
 
 Implement these techniques in your next project and watch your application load times improve dramatically while maintaining a smooth user experience.
-{% endraw %}
+
 
 ---
 

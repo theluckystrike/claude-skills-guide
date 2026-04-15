@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 Remote work offers flexibility and freedom, but it also blurs the boundaries between focused work and rest. Without the natural interruptions of an office environment, colleagues stopping by, meetings, or simply walking to a different room, developers and power users often find themselves staring at screens for hours without taking breaks. This habit leads to eye strain, decreased productivity, and burnout.
 
 A well-designed Chrome extension for break reminders solves this problem by proactively nudging you to step away from the keyboard. I'll walk you through building a break reminder extension tailored for remote workers, complete with practical code examples you can customize.
@@ -249,4 +249,4 @@ Related Reading
 - [Building a Chrome Extension for Standup Meeting Notes](/chrome-extension-standup-meeting-notes/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

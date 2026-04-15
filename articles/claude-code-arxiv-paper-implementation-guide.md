@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code ArXiv Paper Implementation Guide
 
 Research papers on ArXiv contain cutting-edge algorithms and techniques, but translating academic descriptions into working code can be challenging. The gap between a paper's mathematical formalism and a running implementation often takes experienced engineers days of careful reading, failed experiments, and hard-won debugging. This guide shows you how to use Claude Code to efficiently understand and implement algorithms directly from ArXiv papers. from reading the abstract to running validated tests against reported benchmarks.
@@ -581,7 +581,7 @@ Claude Code transforms paper implementation from a tedious translation exercise 
 Start with well-structured prompts that include specific paper sections and notation, verify mathematical correctness at each step, and test thoroughly at multiple levels. unit, integration, and benchmark. The practices in this guide. structured configs, incremental testing, numerical stability awareness, and disciplined git commits. apply equally whether you are implementing a two-page workshop paper or a 50-page foundational architecture.
 
 With practice, you will find implementing ArXiv papers becomes a reproducible workflow rather than a one-off challenge. The combination of Claude's ability to parse academic notation and your domain knowledge produces implementations that are both correct and maintainable.
-{% endraw %}
+
 
 ---
 

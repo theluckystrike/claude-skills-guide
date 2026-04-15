@@ -10,7 +10,7 @@ categories: [guides, security]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Cross-Origin Resource Sharing (CORS) misconfigurations remain one of the most common and potentially dangerous security issues in modern web applications. Whether you're building APIs that serve multiple frontend applications or integrating third-party services, understanding how to properly configure CORS is essential. This guide walks you through using Claude Code to identify, diagnose, and fix CORS misconfigurations efficiently.
 
 ## Understanding CORS Misconfigurations
@@ -217,4 +217,3 @@ Related Reading
 - [Claude Code for Sigma Rules Detection Workflow Tutorial](/claude-code-for-sigma-rules-detection-workflow-tutorial/)
 - [Claude Code for Threat Hunting Techniques Workflow Guide](/claude-code-for-threat-hunting-techniques-workflow-guide/)
 
-{% endraw %}

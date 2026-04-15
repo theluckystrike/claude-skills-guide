@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 What Can Claude Code Do? A Plain English Explanation for Developers
 
 If you've been hearing about Claude Code but aren't sure what it actually does or how it can help you as a developer, this guide is for you. We'll cut through the jargon and give you a clear, practical understanding of what Claude Code brings to your development workflow.
@@ -179,7 +179,7 @@ The key is to start experimenting. Pick a small task, try asking Claude Code for
 ---
 
 *Ready to dive deeper? Explore more guides in the Claude Skills Guide to master AI-assisted development.*
-{% endraw %}
+
 
 ---
 

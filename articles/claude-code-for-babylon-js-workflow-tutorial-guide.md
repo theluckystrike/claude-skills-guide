@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Babylon.js Workflow Tutorial Guide
 
 Babylon.js is one of the most powerful 3D engines for web-based games and interactive experiences. When combined with Claude Code CLI, you can dramatically accelerate your development workflow, automate repetitive tasks, and focus on creative aspects of 3D game development. This guide walks you through practical patterns for integrating Claude Code into your Babylon.js projects.
@@ -198,7 +198,7 @@ To get the most out of Claude Code in your Babylon.js workflow, follow these pra
 Integrating Claude Code into your Babylon.js workflow transforms how you approach 3D web development. By automating repetitive tasks, generating boilerplate code, and assisting with debugging, you can focus on what matters most: creating immersive interactive experiences. Start with small, focused requests and gradually expand your Claude Code toolkit as you become more comfortable with the collaboration pattern.
 
 The combination of Babylon.js's powerful 3D capabilities and Claude Code's assistance creates a productive environment for game developers of all skill levels. Experiment with different prompts, track which approaches work best for your workflow, and continuously refine your process.
-{% endraw %}
+
 
 ---
 

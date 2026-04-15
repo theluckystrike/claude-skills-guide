@@ -13,8 +13,8 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Wolfram Alpha has become an indispensable tool for developers, researchers, and anyone who needs computational knowledge at their fingertips. When you add browser-based extensions to the mix, you get instant access to Wolfram's vast knowledge base without interrupting your workflow. This guide explores Chrome extensions that bring Wolfram Alpha functionality directly into your browser, with practical examples for integrating computational reasoning into your daily tasks.
 
 ## What Makes Wolfram Alpha Valuable for Developers

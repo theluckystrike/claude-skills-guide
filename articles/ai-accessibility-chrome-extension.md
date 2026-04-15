@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI Accessibility Chrome Extension: A Developer Guide
 
 Building an accessibility-focused Chrome extension that uses artificial intelligence opens up powerful possibilities for making the web more inclusive. This guide walks you through the core concepts, APIs, and practical implementation patterns for creating an AI-powered accessibility tool from scratch. If you already have an extension and want to test it for accessibility compliance, see the companion guide on [Chrome extension accessibility auditing](/chrome-extension-accessibility-audit/).
@@ -310,4 +310,4 @@ Related Reading
 - [Claude Code Accessibility Regression Testing Guide](/claude-code-accessibility-regression-testing/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

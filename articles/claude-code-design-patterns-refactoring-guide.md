@@ -12,8 +12,8 @@ score: 9
 permalink: /claude-code-design-patterns-refactoring-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Refactoring Claude skills is essential for maintaining clean, scalable, and efficient AI-assisted workflows. Just as software code benefits from design patterns, Claude skills thrive when structured using proven refactoring techniques. This guide covers practical patterns you can apply immediately to improve your skill development practice.
 
 ## Understanding Skill Refactoring

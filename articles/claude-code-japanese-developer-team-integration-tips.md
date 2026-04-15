@@ -12,7 +12,7 @@ score: 8
 permalink: /claude-code-japanese-developer-team-integration-tips/
 ---
 
-{% raw %}
+
 
 Integrating Claude Code into Japanese developer teams requires understanding both technical implementation and cultural workflow patterns. Japanese development teams are known for their meticulous documentation standards, collaborative code review processes, and emphasis on knowledge sharing. This guide provides practical strategies to successfully integrate Claude Code into these environments while respecting team conventions.
 
@@ -522,7 +522,7 @@ This longitudinal view. which is difficult to maintain manually. helps teams rec
 
 Successfully integrating Claude Code into Japanese developer teams requires respecting established workflows while using automation where it adds value. The key is starting with documentation and quality assurance skills, then expanding to other areas as teams become comfortable with the technology. A comprehensive CLAUDE.md file, a shared prompt library, and a phased rollout aligned with the nemawashi principle will give you the smoothest path from pilot to full integration. By following these integration tips, your team can achieve the productivity benefits of AI-assisted development while maintaining the quality standards and collaborative culture that define Japanese software development.
 
-{% endraw %}
+
 
 ## Measuring Adoption Across the Team
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Complex Event Processing (CEP) with Apache Flink enables developers to detect patterns across streaming data in real-time. Whether you're building fraud detection systems, monitoring infrastructure alerts, or analyzing user behavior sequences, Flink CEP provides powerful pattern matching capabilities. This guide demonstrates how Claude Code accelerates your CEP workflow from pattern design to production deployment.
 
@@ -445,7 +445,7 @@ Apache Flink CEP enables sophisticated real-time pattern detection, and Claude C
 
 Start with simple patterns to validate your detection logic, then progressively incorporate more sophisticated conditions and quantifiers. Pay particular attention to watermark strategy and state backend selection, these two decisions have the largest impact on production reliability. With Claude Code assistance, you'll build solid CEP applications capable of detecting critical events across your streaming data in real-time.
 
-{% endraw %}
+
 
 ---
 

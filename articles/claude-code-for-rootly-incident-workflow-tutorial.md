@@ -455,7 +455,7 @@ Runbook steps time out: The default HTTP timeout in the Python executor is 10 se
 
 Post-mortem call returns 409: The `incident_documents.create` endpoint requires the incident to be in `resolved` or `monitoring` status. Calling it while the incident is still `triggered` returns a 409 conflict. Add a status check before generating the post-mortem, or subscribe to the Rootly `incident.resolved` webhook event to trigger generation automatically at the right time.
 
-{% endraw %}
+
 
 ---
 
@@ -481,3 +481,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```
+{% endraw %}

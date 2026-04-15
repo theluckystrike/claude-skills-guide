@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Managing feature deprecations in open source projects is one of the most challenging aspects of project maintenance. You need to balance backward compatibility with the freedom to evolve your codebase, communicate changes clearly to users, and ensure a smooth migration path. Claude Code provides powerful capabilities to automate and systematize this process, making deprecations less painful for both maintainers and users.
 
@@ -290,7 +290,7 @@ High migration rates and low support ticket volume indicate successful deprecati
 
 Managing deprecations doesn't have to be chaotic. Claude Code helps you systematize the process, ensuring consistent communication, clear migration paths, and smooth transitions for your users. Start by creating a deprecation skill, implement detection automation, and build comprehensive migration guides. Your users will appreciate the clarity, and your project will evolve more smoothly.
 
-{% endraw %}
+
 
 ---
 

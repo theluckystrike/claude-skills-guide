@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Kubernetes CSI Driver Workflow
 
 Developing Kubernetes Container Storage Interface (CSI) drivers requires deep understanding of the CSI specification, Kubernetes APIs, and storage backend technologies. Claude Code can significantly accelerate your CSI driver development workflow by helping with code generation, debugging, testing, and documentation. This guide walks you through practical patterns for using Claude Code effectively in your CSI driver projects.
@@ -207,7 +207,7 @@ Document your driver: Use Claude to help write comprehensive documentation cover
 ## Conclusion
 
 Claude Code transforms CSI driver development from a daunting undertaking into an iterative, manageable process. By generating boilerplate, explaining complex APIs, and helping debug issues, it lets developers focus on what matters: integrating their storage backend with Kubernetes. Start with small, focused requests and gradually build up to complete driver implementations. The key is understanding that Claude accelerates your learning while you remain responsible for the final implementation's correctness.
-{% endraw %}
+
 
 ---
 

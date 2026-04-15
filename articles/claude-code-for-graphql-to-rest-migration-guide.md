@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for GraphQL to REST Migration Guide
 
 Migrating from GraphQL to REST is a significant architectural decision that many teams face as their applications evolve. Whether you are dealing with over-fetching concerns, client complexity, or simply want to use REST's widespread ecosystem, Claude Code can dramatically streamline this migration process. This guide walks you through practical strategies for moving your API from GraphQL to REST while maintaining functionality and minimizing disruptions.
@@ -274,7 +274,7 @@ Follow these recommendations when migrating with Claude Code:
 5. Versioning: Consider API versioning from the start. Use `/api/v1/` prefix to allow future migrations.
 
 Claude Code accelerates every step of this migration, from analyzing your GraphQL schema to generating endpoints, transformers, tests, and documentation. By following this systematic approach, you can complete your GraphQL to REST migration efficiently while maintaining API reliability.
-{% endraw %}
+
 
 ---
 

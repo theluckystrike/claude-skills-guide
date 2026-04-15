@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude API Tool Use and Function Calling Detailed look Guide
 
 The Claude API's tool use and function calling capabilities represent one of its most powerful features, enabling you to build AI systems that can interact with external services, execute code, and perform real-world actions. This comprehensive guide walks you through everything you need to know to use these capabilities effectively in your applications.
@@ -416,7 +416,7 @@ The descriptions guide Claude toward the right tool in each scenario without req
 Tool use and function calling transform Claude from a conversational AI into a powerful agent capable of taking real actions. By following the patterns and best practices in this guide, you can build reliable integrations that use Claude's decision-making capabilities alongside your existing systems and services.
 
 Start with simple tool definitions, test thoroughly, and gradually add complexity as you become comfortable with the patterns. The key to success lies in well-structured tool descriptions and solid error handling in your implementation. Pay particular attention to message history management in multi-turn workflows, and always keep authentication and authorization in your execution layer where you have full control over what actually runs.
-{% endraw %}
+
 
 ---
 

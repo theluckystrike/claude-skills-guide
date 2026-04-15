@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 
 ## How to Spoof User Agent in Chrome for Development and Testing
 
@@ -331,4 +331,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

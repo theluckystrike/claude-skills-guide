@@ -394,7 +394,7 @@ Claude Code transforms runbook review from a manual, inconsistent process into a
 The investment compounds over time. Each improvement to the review skill benefits every runbook that follows. Each finding added to the criteria represents a real incident that will not recur because of a documentation gap. Over months, the gap between a well-reviewed runbook library and an un-reviewed one becomes the difference between a team that resolves incidents in minutes and one that struggles for hours.
 
 Start small: create one review skill, test it on your existing runbooks, and expand from there. The investment pays dividends in reduced incident duration and increased team confidence.
-{% endraw %}
+
 
 ---
 
@@ -419,3 +419,4 @@ Related Reading
 - [Claude Code for Async Code Review Workflow](/claude-code-for-async-code-review-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

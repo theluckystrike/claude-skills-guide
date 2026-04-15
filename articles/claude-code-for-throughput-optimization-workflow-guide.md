@@ -12,7 +12,7 @@ score: 8
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Throughput Optimization Workflow Guide
 
 Throughput optimization is the practice of maximizing the amount of work your system can complete within a given time frame. Whether you're processing large datasets, handling concurrent API requests, or managing complex build pipelines, understanding how to optimize throughput with Claude Code can dramatically improve your development velocity and application performance. This guide provides practical strategies and code examples for building high-throughput workflows that scale.
@@ -272,4 +272,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 AI vocabulary builder chrome extensions represent a specialized category of browser tools that use artificial intelligence to help users learn new words, track terminology, and improve language comprehension while browsing the web. For developers and power users, understanding how to build and customize these extensions provides significant opportunities for creating personalized learning experiences.
 
 ## How AI Vocabulary Builder Extensions Function
@@ -356,4 +356,4 @@ Related Reading
 - [AI Competitive Analysis Chrome Extension: A Developer's Guide](/ai-competitive-analysis-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

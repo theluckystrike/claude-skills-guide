@@ -13,7 +13,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 # Fix Next.js Hydration Errors Using Claude Code
 
 ## The Problem

@@ -265,7 +265,7 @@ Request that Claude Code organize your code with separate files for components, 
 Integrating Claude Code with Ant Design dramatically improves development velocity while maintaining code quality. By using Claude Code's understanding of React patterns and Ant Design's API, you can generate complex components in seconds rather than hours. The key is providing detailed requirements and using TypeScript for type safety in larger projects.
 
 Start by generating simple components, then progressively tackle more complex implementations like data tables with CRUD operations. With practice, you'll discover that Claude Code becomes an invaluable partner in building solid Ant Design applications.
-{% endraw %}
+
 
 ---
 
@@ -290,3 +290,4 @@ Related Reading
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

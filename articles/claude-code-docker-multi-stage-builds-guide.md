@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Docker Multi-Stage Builds Guide
 
 Docker multi-stage builds have become essential for creating lean, production-ready container images. When combined with Claude Code's AI capabilities, you can generate optimized multi-stage Dockerfiles that reduce image size, improve build times, and follow security best practices. This guide shows you how to use Claude Code effectively for Docker multi-stage build workflows.
@@ -500,4 +500,4 @@ Related Reading
 - [Chrome Extension Multi Account Container: A Developer Guide](/chrome-extension-multi-account-container/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

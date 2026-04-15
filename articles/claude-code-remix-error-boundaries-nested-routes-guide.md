@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Remix Error Boundaries and Nested Routes: A Practical Guide
 
 Remix's nested routing system is one of its most powerful architectural features. and understanding how error boundaries interact with that hierarchy is the key to building applications where failures are contained rather than catastrophic. This guide focuses on the structural decisions: where to place boundaries in your route tree, how parent and child boundaries relate, and the practical patterns for loader errors, action errors, and error recovery in a nested route context.
@@ -254,7 +254,7 @@ Provide actionable recovery paths. Always give users a way forward, whether retr
 ## Conclusion
 
 Remix's error boundaries combined with nested routes give you precise control over error handling at every level of your application. By strategically placing boundaries in your route hierarchy, you create resilient applications where failures are contained, user experience remains positive, and debugging information is captured. Start with parent-level boundaries for navigation stability, then add granular boundaries for feature-specific error handling as your application grows.
-{% endraw %}
+
 
 ---
 

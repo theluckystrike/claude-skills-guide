@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for OPA Rego Workflow Tutorial Guide
 
 Open Policy Agent (OPA) has become the industry standard for policy enforcement across cloud-native applications, Kubernetes admission control, and API authorization. However, writing and debugging Rego policies, the declarative language OPA uses, can be challenging, especially for developers new to policy-as-code. This guide shows you how to use Claude Code to accelerate your OPA/Rego workflow from policy writing to testing and deployment.
@@ -251,7 +251,7 @@ Use the REPL: OPA's interactive REPL (`opa run`) is invaluable. Ask Claude to ge
 Claude Code transforms OPA/Rego development from a potentially frustrating experience into a streamlined workflow. By using Claude's ability to generate, explain, test, and debug Rego policies, you can develop solid policy-as-code systems faster while maintaining high quality. Start with simple policies, build comprehensive tests, and progressively tackle more complex authorization scenarios.
 
 The key is treating Claude as a collaborative partner, explain your requirements, ask for explanations when policies are unclear, and iterate quickly based on test results. Combined with OPA's powerful policy engine, you'll have a scalable authorization system that developers and security teams can both understand and maintain.
-{% endraw %}
+
 
 ---
 

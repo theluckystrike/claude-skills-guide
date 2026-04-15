@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 If you have spent any time debugging web applications or managing user sessions, you have probably used a cookie editor. For years, EditThisCookie was the go-to extension for Chrome users needing to view, edit, and delete cookies. However, the extension has not kept pace with modern browser security requirements, and developers increasingly need more solid solutions.
 
 This article explores the best EditThisCookie alternatives available in 2026, with a focus on tools that serve developers and power users who need programmatic control and advanced cookie management.
@@ -255,4 +255,4 @@ Related Reading
 - [Apollo.io Alternative Chrome Extension in 2026](/apollo-io-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

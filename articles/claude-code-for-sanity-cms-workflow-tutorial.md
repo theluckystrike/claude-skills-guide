@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Sanity CMS Workflow Tutorial
 
 Sanity CMS is a powerful headless CMS that offers incredible flexibility through its real-time datastore and customizable schema. However, managing content at scale, migrations, batch edits, schema validation, can become tedious without automation. This tutorial shows you how to use Claude Code to streamline Sanity CMS workflows, reducing manual effort and preventing errors.
@@ -326,7 +326,7 @@ When automating Sanity workflows with Claude, keep these tips in mind:
 Claude Code transforms Sanity CMS management from manual drudgery into efficient, automated workflows. By combining Claude's natural language processing with Sanity's powerful API, you can query content, perform batch operations, validate schemas, and execute migrations with minimal effort. Start small, automate one repetitive task, and gradually expand your automation library.
 
 The key is treating your CMS operations as code: version-controlled, tested, and reproducible. With these patterns, you'll spend less time on maintenance and more time building great content experiences.
-{% endraw %}
+
 
 ---
 

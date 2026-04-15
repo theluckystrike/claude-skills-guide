@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Claude Code vs Free Supermaven Tier: Is the Free Version Enough?
 
@@ -167,7 +167,7 @@ For serious developers who want to accelerate their workflow, the question isn't
 
 The free Supermaven tier might be "enough" for casual coding, but for professional development workflows, Claude Code's free tier delivers substantially more value, making it the smarter choice for developers who want to maximize their productivity.
 
-{% endraw %}
+
 
 ---
 

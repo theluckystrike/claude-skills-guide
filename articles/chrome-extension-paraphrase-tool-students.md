@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Paraphrase Tool for Students: A Developer Guide
 
 Building a Chrome extension that helps students paraphrase text combines browser extension development with natural language processing. This guide provides practical implementation patterns for developers creating student-focused paraphrase tools.
@@ -269,4 +269,3 @@ Related Reading
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}

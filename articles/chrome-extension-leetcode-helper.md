@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension LeetCode Helper: Boost Your Coding Interview Prep
 
 Preparing for technical interviews requires systematic practice on platforms like LeetCode. While the platform itself provides an excellent environment for solving algorithms and data structure problems, Chrome extensions can significantly enhance your workflow by adding productivity features, tracking progress, and integrating with your development environment.
@@ -200,4 +200,4 @@ Related Reading
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

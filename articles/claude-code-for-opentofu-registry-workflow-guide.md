@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 OpenTofu is a powerful infrastructure-as-code tool that lets you define, provision, and manage cloud infrastructure using declarative configuration files. When combined with Claude Code, you can significantly accelerate your infrastructure development workflow, reduce errors, and maintain better documentation. This guide walks you through practical strategies for integrating Claude Code into your OpenTofu registry operations.
 
@@ -214,7 +214,7 @@ Claude Code can help you customize this pipeline for your specific needs, add dr
 
 By integrating Claude Code into your OpenTofu workflow, you gain an intelligent assistant that helps generate configurations, explains provider behaviors, troubleshoots issues, and accelerates your infrastructure development cycle. The combination of declarative infrastructure as code with AI-assisted development creates a powerful workflow for modern DevOps teams.
 
-{% endraw %}
+
 
 ---
 

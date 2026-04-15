@@ -13,8 +13,8 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Chrome Enterprise provides powerful group policies that let administrators control what happens when users launch the browser or open new tabs. The startup pages policy is particularly useful for organizations that need to direct users to internal dashboards, documentation portals, or compliance landing pages immediately after Chrome launches.
 
 This guide covers the technical details developers and IT administrators need to deploy and manage Chrome startup pages across their organization. Whether you are deploying to twenty developer workstations or twenty thousand managed endpoints, the same policies apply. and the configuration mistakes are largely the same too. This guide covers both, with practical examples at each step.

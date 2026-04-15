@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Terraform Backend Migration Workflow
 
 Migrating Terraform backends is one of those infrastructure tasks that sounds straightforward but can quickly become complex. Whether you're moving from a local state to remote storage, switching cloud providers, or consolidating multiple backend configurations, the process requires careful planning and execution. Claude Code emerges as an invaluable assistant in these scenarios, helping you understand your current state, plan the migration, and execute it safely.
@@ -239,7 +239,7 @@ Terraform backend migration doesn't have to be a stressful operation. Claude Cod
 The key is treating migration as a planned operation with proper backups, testing, and verification rather than a quick change. Claude Code's ability to explain complex configurations, generate safe scripts, and recommend best practices makes it an essential tool for infrastructure teams.
 
 Remember: the goal is not just to migrate state, but to maintain infrastructure reliability throughout the process. Take your time, test thoroughly, and use Claude Code's assistance at every step.
-{% endraw %}
+
 
 ---
 

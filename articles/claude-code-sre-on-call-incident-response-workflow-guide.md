@@ -13,7 +13,7 @@ categories: [workflows]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 When you're on-call and an alert fires at 3 AM, every second counts. Site Reliability Engineering (SRE) teams need rapid, reliable incident response workflows that minimize mean time to resolution (MTTR) while reducing cognitive load on engineers. Claude Code offers a powerful toolkit for automating incident response, from initial triage to post-mortem documentation. This guide explores how to build effective on-call incident response workflows using Claude Code skills and features.
 
@@ -169,7 +169,7 @@ Measure and iterate: Track MTTR and other incident metrics before and after impl
 Document everything: Use Claude Code to automatically document all actions taken during incidents, creating a valuable knowledge base for future reference.
 
 Claude Code transforms on-call incident response from a stressful, manual process into an efficient, automated workflow. By investing time in setting up proper skills, integrating with your tooling, and building comprehensive playbooks, you can significantly reduce MTTR while making incident response more manageable for your team.
-{% endraw %}
+
 
 ---
 

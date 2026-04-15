@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Claude Code combined with Tooljet creates a powerful low-code development environment where AI assists in building applications faster. This guide shows you how to integrate Claude Code with Tooljet to streamline your workflow automation, build internal tools, and create sophisticated applications without writing extensive code.
 
 ## Understanding Tooljet and Claude Code Integration
@@ -190,7 +189,7 @@ For query timeout issues, review your database indexes and consider adding pagin
 Integrating Claude Code with Tooljet transforms low-code development from a visual-only experience into an intelligent partnership. Claude Code handles the technical complexity while Tooljet provides the visual interface, enabling developers to build sophisticated applications more efficiently. Start with simple workflows, progressively incorporate more complex patterns, and use Claude Code's assistance for debugging and optimization.
 
 The combination of AI-assisted development and visual low-code platforms represents the future of internal tool development, faster builds, fewer errors, and more maintainable applications.
-{% endraw %}
+
 
 ---
 
@@ -215,3 +214,4 @@ Related Reading
 - [Best Browser for Low RAM in 2026 - A Developer's Guide](/best-browser-low-ram-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -8,7 +8,7 @@ author: "theluckystrike"
 permalink: /chrome-extension-save-articles-offline/
 ---
 
-{% raw %}
+
 Chrome Extension Save Articles Offline: A Developer Guide
 
 Building a Chrome extension that saves articles for offline reading is a practical project that touches on several core Chrome extension APIs. Whether you want to build a personal reading list tool or a full-featured offline reader, understanding the architecture and storage options will help you make the right technical decisions.
@@ -236,7 +236,7 @@ Building a Chrome extension for saving articles offline requires careful conside
 The architecture described here provides a solid foundation. From there, you can expand into areas like article tagging, full-text search, or integration with read-later services. The key is maintaining focus on the core offline reading experience while keeping the extension lightweight and reliable.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+
 
 
 ---

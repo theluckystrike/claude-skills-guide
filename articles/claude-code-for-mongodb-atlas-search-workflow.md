@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for MongoDB Atlas Search Workflow
 
 Integrating Claude Code with MongoDB Atlas Search unlocks powerful capabilities for building intelligent search experiences. This guide walks you through creating a complete workflow that uses Claude's AI capabilities alongside MongoDB's full-text search features. By the end, you will have a working pipeline that accepts natural language input, translates it into Atlas Search aggregation pipelines, and returns ranked, faceted results your application can consume directly.
@@ -646,7 +646,7 @@ Combining Claude Code with MongoDB Atlas Search creates a powerful foundation fo
 The key is to maintain clean separation between the search logic and the AI interpretation layer, making your codebase maintainable and extensible. Claude Code handles the hard parts, intent parsing, dynamic pipeline construction, and iterative debugging, while Atlas Search handles the heavy lifting of full-text indexing, ranking, and faceting at scale.
 
 Whether you are building a product catalog, a documentation site, or an internal knowledge base, this architecture gives you a production-grade search experience that improves as you add more data and refine your index configuration.
-{% endraw %}
+
 
 ---
 

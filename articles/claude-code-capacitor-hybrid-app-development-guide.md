@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Capacitor Hybrid App Development Guide
 
 Building hybrid mobile applications has evolved significantly with modern tooling. Capacitor, the spiritual successor to Cordova, enables developers to create cross-platform apps using web technologies while maintaining access to native device features. When combined with Claude Code, you gain an AI-powered development partner that understands the nuances of hybrid app development across iOS, Android, and web platforms.
@@ -342,7 +342,7 @@ Remember these key takeaways:
 
 Continue exploring Capacitor's capabilities by experimenting with additional plugins, implementing complex native features, and optimizing your app's performance across all target platforms.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 
 Podcasts have become an essential source of information for developers and tech professionals. With hours of content produced daily, finding time to listen to every relevant episode poses a real challenge. AI podcast summary Chrome extensions offer a solution by automatically generating concise summaries directly in your browser. This guide covers the technical implementation, existing solutions, and how to build your own extension.
 
@@ -328,4 +328,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

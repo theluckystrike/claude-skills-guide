@@ -309,7 +309,7 @@ Start by creating your project structure, building basic validation scripts, and
 ---
 
 *This tutorial covers practical Varnish Cache workflows using Claude Code CLI. For more advanced topics like Varnish Enterprise features, ESI (Edge Side Includes), or VMOD development, explore our additional guides.*
-{% endraw %}
+
 
 ---
 
@@ -334,3 +334,4 @@ Related Reading
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

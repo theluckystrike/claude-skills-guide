@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Prisma Schema Migrations Advanced Workflow Guide
 
 Database schema migrations are one of the most critical yet error-prone aspects of application development. When working with Prisma in modern TypeScript and Node.js applications, Claude Code can dramatically improve your migration workflows, turning what used to be a stressful, error-heavy process into a streamlined, repeatable system. This guide explores advanced strategies for managing Prisma schema migrations with Claude Code, covering production-grade patterns that professional development teams use daily. If you are new to Prisma migrations with Claude Code, start with [Using Claude Code with Prisma ORM Database Migrations](/using-claude-code-with-prisma-orm-database-migrations/) first.
@@ -252,7 +252,7 @@ LIMIT 100;
 Mastering Prisma schema migrations with Claude Code transforms database changes from a source of anxiety into a repeatable, confident process. The key lies in understanding your database's specific characteristics, implementing atomic multi-step migrations, testing thoroughly before production, and maintaining clear rollback procedures.
 
 By applying these advanced workflows, atomic migrations, zero-downtime patterns, comprehensive testing, and solid monitoring, you'll build confidence in your database change management process. Claude Code becomes not just an assistant but a strategic partner in maintaining database integrity while moving your application forward rapidly and safely.
-{% endraw %}
+
 
 ---
 

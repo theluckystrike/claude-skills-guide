@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Multi-Language Comment and Docstring Workflow
 
 Documentation is the backbone of maintainable software, yet keeping comments and docstrings consistent across multiple programming languages remains a persistent challenge. Whether you're maintaining a polyglot codebase or switching between projects in different languages, Claude Code offers powerful capabilities to streamline your documentation workflow. This guide explores practical strategies for managing multi-language comments and docstrings efficiently.
@@ -203,7 +203,7 @@ Claude Code transforms multi-language documentation from a tedious chore into an
 Start by configuring your documentation standards in CLAUDE.md, then gradually adopt these workflows. The initial investment pays dividends in code maintainability and team collaboration.
 
 Remember: Good documentation is an investment in your future self and your team. Let Claude Code help you make that investment consistently across all your languages.
-{% endraw %}
+
 
 ---
 

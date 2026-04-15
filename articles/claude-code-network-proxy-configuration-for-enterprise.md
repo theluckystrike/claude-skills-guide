@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, network, proxy, enterprise, configuration, claude-skills]
 ---
 
-{% raw %}
+
 
 Enterprise environments often require all network traffic to route through corporate proxies for security monitoring, compliance, and access control. Configuring Claude Code to work within these environments is essential for teams that need AI assistance while maintaining strict network policies. This guide covers everything you need to know about setting up Claude Code with network proxies, including authentication, SSL certificate handling, and troubleshooting common issues.
 
@@ -174,7 +174,7 @@ Provide support channels for users encountering proxy issues. Enterprise network
 
 Configuring Claude Code for enterprise proxy environments is straightforward once you understand the standard mechanisms. By setting appropriate environment variables, installing corporate certificates, and following the troubleshooting guidelines in this article, your team can successfully use Claude Code within restrictive network environments. Remember to test configurations thoroughly and document any specific requirements for different teams or use cases within your organization.
 
-{% endraw %}
+
 
 ---
 

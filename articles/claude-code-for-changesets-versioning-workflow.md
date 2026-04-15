@@ -424,7 +424,7 @@ Combining Claude Code with Changesets creates a powerful, automated versioning s
 The `changesets/action` approach. where a "Version Packages" PR accumulates all pending changes until you're ready to release. is the right default for most teams. It gives you control over release timing without sacrificing automation. Claude Code fits naturally into this workflow: it can write changeset files, audit coverage before PRs merge, interpret `changeset status` output, and troubleshoot publishing failures.
 
 The key is consistency: write clear changeset descriptions, test locally before pushing, and let Claude handle the repetitive tasks. Your future self (and your users) will thank you when every version tells a clear story of what changed and why.
-{% endraw %}
+
 
 ---
 
@@ -449,3 +449,4 @@ Related Reading
 - [Claude Code for DVC Data Versioning Workflow](/claude-code-for-dvc-data-versioning-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}# Claude Code for Aave Flash Loan Workflow
+# Claude Code for Aave Flash Loan Workflow
 
 Aave flash loans represent one of DeFi's most powerful primitives, enabling developers to borrow significant capital without collateral, provided the borrowed amount is repaid within a single blockchain transaction. This capability opens doors to arbitrage opportunities, collateral swaps, and liquidity management strategies that would otherwise require substantial capital. However, building secure flash loan integrations demands careful attention to reentrancy guards, proper callback handling, and solid error handling. This guide demonstrates how Claude Code can streamline your Aave flash loan development workflow, from smart contract writing to testing and security analysis.
 
@@ -208,7 +208,7 @@ Circuit breakers add protection against extreme market conditions. Implement pau
 Monitoring dashboards should track flash loan usage, success rates, and profit/loss in real-time. Integrate with alerting systems for failed transactions or unusual activity patterns.
 
 Claude Code can help you implement all these patterns while maintaining clean, readable code that's easier to audit and maintain. Remember that flash loan contracts handle significant value, security and robustness should always take precedence over clever optimizations.
-{% endraw %}
+
 
 ---
 

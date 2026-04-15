@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Tree-Sitter Syntax Highlighting Guide
 
 Tree-sitter has revolutionized how developers visualize and navigate code. As a solid parsing library, Tree-sitter generates precise syntax trees that power everything from editor highlighting to code intelligence tools. This guide shows you how to use Claude Code to work with Tree-sitter for syntax highlighting in your projects.
@@ -577,7 +577,7 @@ This loop typically takes 1-2 hours for a simple DSL versus a full day writing t
 Tree-sitter syntax highlighting transforms code visualization from simple pattern matching to semantic understanding. By using Claude Code's assistance, you can efficiently create and maintain highlighting rules that make your codebase more navigable and readable. Start with basic queries, iterate based on what you see in your editor, and gradually build comprehensive coverage for all the languages you work with.
 
 The investment in well-crafted Tree-sitter queries pays dividends every time you open your editor and instantly recognize code structure at a glance.
-{% endraw %}
+
 
 ---
 

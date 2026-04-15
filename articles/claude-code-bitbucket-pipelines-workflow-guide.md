@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Bitbucket Pipelines provides a powerful CI/CD solution for teams using Atlassian's ecosystem. When combined with Claude Code, you can automate code generation, enforce quality standards, and streamline development workflows without manual intervention. This guide walks through practical configurations to integrate Claude Code into your Bitbucket Pipelines setup.
 
@@ -256,4 +256,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

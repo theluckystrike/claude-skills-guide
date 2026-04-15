@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 BuiltWith Alternative Chrome Extension: Top Picks for 2026
 
 When you need to quickly identify the technologies powering a website, BuiltWith has long been a go-to tool. However, the market has evolved significantly, and several compelling alternatives offer unique features, better pricing, or specialized capabilities for developers and power users. This guide explores the best BuiltWith alternative Chrome extensions available in 2026.
@@ -360,4 +360,4 @@ Related Reading
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

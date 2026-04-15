@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for step-ca PKI Workflow Guide
 
 Managing Public Key Infrastructure (PKI) is essential for securing modern applications, but it can be complex and error-prone. smallstep's step-ca provides a modern, automated certificate authority that integrates well with Claude Code, enabling developers to automate certificate lifecycle management efficiently.
@@ -417,7 +417,7 @@ Implementing step-ca PKI workflows with Claude Code provides significant benefit
 
 Start by setting up your step-ca environment, bootstrap trust on your client hosts using the CA fingerprint, and create a custom pki-manager skill for your most common operations. As your comfort grows, layer in the rotation automation and mTLS configurations. The payoff is a certificate infrastructure that mostly runs itself, with Claude Code available to handle the exceptions.
 
-{% endraw %}
+
 
 ---
 

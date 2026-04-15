@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Confluence Workflow Tutorial Guide
 
 Confluence is a powerful collaboration platform, but managing content workflows manually can be time-consuming. This guide shows you how to use Claude Code CLI to automate Confluence workflows, saving hours of repetitive work and ensuring consistency across your team's documentation.
@@ -332,4 +332,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI lead generator chrome extensions automate the process of identifying, extracting, and organizing potential leads from web pages. For developers and power users, these extensions represent a practical intersection of web scraping, natural language processing, and browser automation. This guide covers the architecture, implementation patterns, and practical considerations for building these tools, from the raw extraction layer all the way through AI enrichment and export.
 
 ## Why Build an AI Lead Generator Extension
@@ -328,4 +328,4 @@ Related Reading
 - [AI Password Generator Chrome Extension: A Developer Guide](/ai-password-generator-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

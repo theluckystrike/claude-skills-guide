@@ -10,7 +10,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 
 Writing compelling LinkedIn posts takes time. Between crafting the hook, structuring the content, and adding the right call-to-action, the process can eat into your coding schedule. For developers and power users, automating this workflow through Chrome extensions offers significant productivity gains. This guide covers practical approaches to building and using AI-powered LinkedIn post writing tools in Chrome.
 
@@ -307,4 +307,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 ARIA landmark regions are invisible yet powerful structural elements that help screen reader users navigate web pages efficiently. By properly implementing landmark regions, you create a semantic backbone that assistive technologies can traverse, allowing users to jump between main content, navigation, sidebars, and other key sections without reading through every element. This guide demonstrates how to use Claude Code and related skills to implement, audit, and maintain landmark regions in your projects.
 
 ## Understanding ARIA Landmark Regions
@@ -496,7 +495,7 @@ Landmark regions form the navigation backbone of accessible websites. By using C
 
 Start by auditing your current projects for landmark presence using axe-core, then add missing regions and labels. Pair your landmarks with skip links for keyboard-only users, and validate with at least one real screen reader before shipping. Your users will notice the improvement immediately.
 
-{% endraw %}
+
 
 ---
 
@@ -521,3 +520,4 @@ Related Reading
 - [Chrome Extension Accessibility Audit: A Practical Guide](/chrome-extension-accessibility-audit/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

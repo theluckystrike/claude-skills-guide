@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Gateway Routing Pattern Workflow
 
 The gateway routing pattern is a fundamental architectural pattern in modern software systems that directs incoming requests to appropriate backend services based on routing rules. When combined with Claude Code's CLI capabilities, developers can automate the creation, testing, and maintenance of gateway routing configurations across their infrastructure. This guide walks you through practical workflows for implementing gateway routing patterns using Claude Code, with actionable examples you can apply immediately.
@@ -275,7 +275,7 @@ Follow these guidelines when implementing gateway routing with Claude Code:
 Gateway routing patterns are essential for building scalable, maintainable microservices architectures. By using Claude Code's capabilities, you can automate the creation, testing, and debugging of routing configurations across your infrastructure. Start with simple path-based routing, then progressively add dynamic service discovery, version-based traffic splitting, and advanced resilience patterns as your system grows.
 
 Remember that gateway routing is not a set-it-and-forget-it configuration. Continuously monitor your routing behavior, use Claude Code to analyze performance data, and iteratively improve your routing strategy as your services evolve.
-{% endraw %}
+
 
 ---
 

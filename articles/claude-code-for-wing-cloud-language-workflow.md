@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Wing Cloud Language Workflow
 
 The Wing cloud-oriented programming language lets developers write infrastructure and application code that compiles to multiple cloud platforms. But like any specialized language, Wing development benefits from intelligent assistant tools. This guide shows you how to integrate Claude Code into your Wing workflow for faster development, better code generation, and streamlined debugging.
@@ -332,7 +332,7 @@ The review pattern is especially useful before deploying to a real cloud account
 Claude Code transforms Wing development from manual coding to collaborative creation. By providing context about Wing's syntax, cloud resource patterns, and your specific requirements, you get accurate, idiomatic code that compiles correctly the first time. The combination lets you focus on cloud architecture decisions while Claude handles implementation details.
 
 The iterative workflow, describe architecture, generate code, simulate locally, debug with Claude, deploy, fits naturally with how Wing is designed to be used. Start by creating a Wing-specific skill, build up a library of prompt patterns that match your typical workloads, then iterate on your prompts to get exactly the cloud infrastructure you need.
-{% endraw %}
+
 
 ---
 

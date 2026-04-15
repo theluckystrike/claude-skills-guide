@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Tauri Plugin Workflow Tutorial
 
 Tauri plugin development combines the complexity of Rust systems programming with the nuances of JavaScript/TypeScript frontend integration. Claude Code can significantly accelerate this workflow by helping you generate boilerplate, debug Rust compilation errors, design plugin APIs, and maintain documentation. This tutorial walks you through using Claude Code effectively for Tauri plugin development.
@@ -204,7 +204,7 @@ For integration tests that span Rust and JavaScript, Claude Code can guide you o
 Claude Code transforms Tauri plugin development from a potentially tedious process into a more efficient workflow. By using its capabilities for code generation, error debugging, API design, and testing, you can focus on your plugin's unique functionality rather than getting stuck on boilerplate or cryptic error messages. The key is providing clear context, iterating incrementally, and always verifying the generated code meets your specific requirements.
 
 Start by integrating Claude Code into small parts of your workflow, perhaps just for generating command boilerplate, and gradually expand to more complex tasks like debugging or API design. You'll find that the time invested in learning to communicate effectively with Claude Code pays dividends throughout your Tauri plugin projects.
-{% endraw %}
+
 
 ---
 

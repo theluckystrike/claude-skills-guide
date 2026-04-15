@@ -322,7 +322,7 @@ This makes font performance a hard gate in your review process rather than a per
 You can also extend the workflow to handle self-hosted versus CDN-hosted font decisions. Google Fonts, for example, now supports `font-display=swap` via URL parameter (`&display=swap`), but self-hosting still gives you more control over preloading and eliminates a third-party DNS lookup. Claude Code can help you evaluate this tradeoff for your specific traffic patterns and hosting setup.
 
 By automating font optimization through Claude Code, you transform a complex, often-neglected performance task into a reproducible workflow that keeps your fonts fast without manual effort.
-{% endraw %}
+
 
 ---
 
@@ -347,3 +347,4 @@ Related Reading
 - [Claude Code for Connection Pool Optimization Workflow](/claude-code-for-connection-pool-optimization-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

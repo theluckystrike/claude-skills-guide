@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Audit Tool: A Developer's Guide
 
 Chrome extensions add powerful functionality to your browser, but they also introduce security risks, performance overhead, and potential privacy concerns. Whether you're developing your own extension, evaluating third-party tools, or managing a fleet of extensions across your organization, understanding how to audit them effectively is essential for any developer or power user.
@@ -236,7 +236,7 @@ Chrome extension auditing is a critical security practice for developers and pow
 
 For teams managing multiple extensions, consider implementing automated scanning in your CI/CD pipeline and establishing policies that enforce security standards across your organization.
 
-{% endraw %}
+
 
 ---
 

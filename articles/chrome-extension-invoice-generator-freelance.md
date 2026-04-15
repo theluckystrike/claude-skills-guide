@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Building a Chrome Extension Invoice Generator for Freelance Work
 
 Freelancers often juggle multiple tools to manage their business. Between project management, communication, and billing, the administrative overhead can quickly eat into productive hours. A custom Chrome extension that generates invoices directly from your browser can streamline this workflow significantly.
@@ -502,4 +502,4 @@ Related Reading
 - [AI Lead Generator Chrome Extension: A Developer Guide](/ai-lead-generator-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

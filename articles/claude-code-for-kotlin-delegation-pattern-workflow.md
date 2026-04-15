@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Kotlin Delegation Pattern Workflow
 
 Kotlin's delegation pattern is a powerful feature that allows you to delegate method calls to another object, promoting composition over inheritance and improving code reusability. When combined with Claude Code, you can efficiently implement, refactor, and maintain delegation patterns in your Kotlin projects. This guide provides practical workflows, code examples, and actionable strategies for using Claude Code in your Kotlin delegation pattern development.
@@ -348,7 +348,7 @@ class MyDelegate<V> : ReadWriteProperty<Any?, V> { /* ... */ }
 
 Kotlin's delegation patterns, combined with Claude Code's assistance, provide a powerful workflow for building maintainable, reusable code. By using Claude Code's ability to generate, explain, and refactor delegation implementations, you can accelerate development while ensuring best practices. Remember to define clear interfaces, document behavior, and use built-in delegates where appropriate. With these patterns in your toolkit, you'll write more elegant and composable Kotlin code.
 
-{% endraw %}
+
 
 ---
 

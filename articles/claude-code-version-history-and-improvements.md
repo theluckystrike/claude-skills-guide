@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Version History and Improvements
 
 Claude Code has undergone significant evolution since its initial release, transforming from a basic CLI assistant into a powerful agentic coding tool. Understanding this version history helps developers appreciate the capabilities available today and make informed decisions about which features to use in their workflows.
@@ -250,4 +250,4 @@ Related Reading
 - [Claude 4 Skills: New Features and Improvements Guide](/claude-4-skills-improvements-and-new-features/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

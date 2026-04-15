@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Grafana plugins extend Grafana's capabilities with custom visualizations, data sources, and panels. Developing these plugins involves multiple steps, from scaffolding to debugging, and Claude Code can significantly accelerate each phase. This guide shows you how to create a Claude skill tailored for Grafana plugin development, complete with practical examples and workflow patterns.
 
 ## Why Use Claude Code for Grafana Plugin Development
@@ -256,7 +255,7 @@ TypeScript errors: Run `npm run build` to see compilation errors. Claude can exp
 ## Conclusion
 
 Claude Code transforms Grafana plugin development from a complex, multi-step process into a guided workflow. By creating a dedicated skill for plugin development, you get instant access to scaffolding, code generation, and debugging assistance, all tailored to the Grafana plugin SDK. Start with a simple skill definition and expand it as you encounter new plugin patterns. The result is faster development cycles and more reliable plugins.
-{% endraw %}
+
 
 ---
 
@@ -281,3 +280,4 @@ Related Reading
 - [Claude Code for Chef Cookbook Development Workflow](/claude-code-for-chef-cookbook-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

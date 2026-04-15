@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Building a price tracker Chrome extension for Amazon gives you complete control over price monitoring. Rather than relying on third-party services, you can create a custom solution tailored to your shopping needs. This guide walks through the technical implementation for developers and power users.
 
 ## Understanding Amazon's Page Structure
@@ -422,4 +422,4 @@ Storage filling up for heavily tracked products: Limit price history to the last
 
 Notification not firing even when price drops: `chrome.notifications` requires the `notifications` permission in the manifest. Also verify that the user has allowed notifications from Chrome in the OS notification settings. extensions respect the system-level permission.
 
-{% endraw %}
+

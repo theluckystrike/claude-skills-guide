@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 Creating effective Claude skill files for .NET ASP.NET Core projects requires understanding both the skill format and how Claude Code processes .NET-specific workflows. This guide provides practical examples you can adapt immediately.
 
@@ -318,4 +318,4 @@ with form validation matching the server-side validation rules
 
 The `dotnet-api` skill ensures consistent response shapes and error handling on the server side. The `blazor` skill ensures the component handles loading states, error display, and form validation in the project's established style. rather than defaulting to generic patterns.
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 AI Text to Speech Chrome Extension: A Developer Guide
 
 Chrome extensions that convert text to speech using AI have become essential tools for accessibility, productivity, and content consumption. This guide walks you through building a solid AI text-to-speech Chrome extension from scratch, covering the Web Speech API, integration patterns, and practical implementation details for developers and power users.
@@ -411,4 +411,4 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Codemod Authoring Workflow Tutorial
 
 Codemods are automated code transformations that help developers refactor large codebases efficiently. Writing codemods manually can be complex, but Claude Code combined with tools like codemod-cli and AST-based transformation frameworks makes the process significantly more approachable. This tutorial walks you through setting up a Claude Code-powered codemod authoring workflow and demonstrates practical examples you can apply immediately.
@@ -149,4 +149,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Diffusers Stable Diffusion Training Guide
 
 The combination of Claude Code with Hugging Face's Diffusers library opens up powerful possibilities for training and fine-tuning Stable Diffusion models. Whether you're an AI artist wanting to create custom models or a developer building production pipelines, Claude Code skills can streamline your workflow significantly. This guide walks you through environment setup, training approaches, optimization techniques, and real-world troubleshooting. giving you the concrete information you need to start producing results.
@@ -292,7 +292,7 @@ With these foundations, you can:
 - Deploy for inference - Optimize for production with ONNX or TensorRT
 
 Claude Code skills transform the complex landscape of diffusion model training into manageable, reproducible workflows. Start with LoRA fine-tuning on a small dataset, then progressively tackle more advanced techniques as you build confidence. The ability to quickly generate, test, and iterate on training scripts makes Claude Code a practical force-multiplier for anyone working in the diffusion model space.
-{% endraw %}
+
 
 ---
 

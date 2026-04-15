@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code Security Engineer Threat Modeling Workflow Tips
 
 Threat modeling is a critical security practice that helps teams identify potential threats, understand attack surfaces, and implement appropriate mitigations before vulnerabilities can be exploited. For security engineers, Claude Code offers powerful capabilities to streamline and enhance threat modeling workflows. This guide provides practical tips for using Claude Code skills and features to conduct effective threat modeling sessions.
@@ -237,7 +237,7 @@ One often overlooked practice is threat model versioning. Store your threat mode
 
 Claude Code transforms threat modeling from a periodic exercise into a continuous, integrated practice. By using skills, hooks, and MCP server integrations, security engineers can build comprehensive threat models faster while maintaining the rigor required for solid security programs.
 
-{% endraw %}
+
 
 ---
 

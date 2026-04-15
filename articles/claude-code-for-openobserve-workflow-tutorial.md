@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for OpenObserve Workflow Tutorial
 
 OpenObserve is a powerful open-source observability platform that provides log, metrics, and trace collection with a user-friendly interface. When combined with Claude Code, you can automate repetitive monitoring tasks, build custom dashboards, and create intelligent alerting workflows that would otherwise require significant manual effort. This tutorial walks you through practical ways to integrate Claude Code into your OpenObserve daily operations.
@@ -229,7 +229,7 @@ Key first steps:
 4. Establish alert generation patterns
 
 As you become more comfortable with these workflows, you'll discover additional opportunities to automate observability tasks and reduce manual monitoring overhead.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Stencil Web Components Workflow
 
 Stencil has become one of the most popular tools for building design system components that work across multiple frameworks. When combined with Claude Code, the CLI version of Anthropic's AI assistant, you have a powerful workflow that can dramatically accelerate your component development. This guide walks you through integrating Claude Code into your Stencil projects effectively.
@@ -214,7 +214,7 @@ Integrating Claude Code into your Stencil web components workflow transforms com
 The key is treating Claude as a collaborative tool, describe your intent clearly, review its suggestions, and iterate to achieve the best results. With practice, you'll find your development velocity increasing while maintaining the code quality your design system requires.
 
 Start small: generate one component with Claude's help, review the output, and gradually incorporate more AI-assisted workflows into your development process. The combination of Stencil's powerful component architecture and Claude's code generation capabilities creates a productivity boost that scales with your project complexity.
-{% endraw %}
+
 
 ---
 

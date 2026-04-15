@@ -703,7 +703,7 @@ Snapshot testing, when used correctly, provides an excellent safety net for your
 
 Remember: snapshots are a tool, not a crutch. Combine them with traditional assertions for critical behavior, and use snapshot testing for capturing and monitoring UI output, API responses, and other serializable data structures. The most maintainable snapshot suites are small, focused, and reviewed with the same rigor as production code. Claude Code's ability to generate, analyze, and explain snapshot diffs makes it a natural fit throughout this workflow, from writing the first test to investigating a CI failure at 2 AM.
 
-{% endraw %}
+
 
 ---
 
@@ -728,3 +728,4 @@ Related Reading
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

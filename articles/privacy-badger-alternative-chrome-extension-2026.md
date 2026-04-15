@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 Privacy Badger has been a go-to extension for automatic tracker blocking since its release by the Electronic Frontier Foundation. However, power users and developers often need more granular control, better performance, or specific features that Privacy Badger doesn't provide. In 2026, several alternatives have emerged that offer enhanced capabilities while maintaining the core mission of protecting user privacy.
 
@@ -275,4 +275,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

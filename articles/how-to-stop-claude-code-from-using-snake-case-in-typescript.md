@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 How to Stop Claude Code from Using Snake Case in TypeScript
 
 If you have ever asked Claude Code to generate TypeScript code only to find it producing `user_name`, `get_data`, or `api_response` instead of the more idiomatic `userName`, `getData`, and `apiResponse`, you are not alone. This is one of the most common friction points developers encounter when working with Claude Code on TypeScript projects. The good news is that with the right configuration and prompting strategies, you can guide Claude Code to consistently use camelCase, the standard naming convention for JavaScript and TypeScript.
@@ -172,7 +172,7 @@ Remember that consistency matters more than perfection. If snake_case appears oc
 ## Conclusion
 
 Stopping Claude Code from using snake_case in TypeScript requires a multi-layered approach: project configuration, linting rules, explicit prompts, and editor tools working together. By implementing ESLint's naming convention rules, creating a CLAUDE.md file with your conventions, and being explicit in your prompts, you can enjoy TypeScript code that consistently uses camelCase, the standard that your team and future maintainers will thank you for.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 If you have been using YouTube extensively, you have probably heard of Enhancer for YouTube, a popular Chrome extension that adds a wide range of customization options to the video platform. From playback speed controls and loop options to advanced thumbnail previews and UI customization, Enhancer for YouTube has been a go-to solution for power users seeking more control over their viewing experience.
 
@@ -187,4 +187,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

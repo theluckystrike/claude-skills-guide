@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Code smells are subtle indicators of deeper problems in your codebase that can lead to maintenance nightmares, bugs, and technical debt if left unchecked. While traditional static analysis tools can catch certain issues, Claude Code offers a powerful, context-aware approach to detecting and addressing code smells. This guide walks you through practical workflows for using Claude Code in your code smell detection process.
 
@@ -280,4 +280,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

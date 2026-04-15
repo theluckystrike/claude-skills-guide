@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Axolotl Fine-Tuning Workflow Guide
 
 Fine-tuning large language models doesn't have to be a fragmented process of switching between scripts, configuration files, and documentation. By integrating Claude Code into your Axolotl workflow, you can automate repetitive tasks, validate configurations before training, and maintain clear documentation throughout the process. This guide walks you through practical strategies for using Claude Code as your AI-assisted fine-tuning companion.
@@ -253,7 +253,7 @@ To maximize your productivity with Axolotl and Claude Code:
 - Automate Evaluation - Create scripts that generate sample outputs after each training run
 
 By treating Claude Code as an integrated part of your workflow rather than a separate tool, you can move faster while making fewer configuration errors. The key is establishing clear patterns for dataset preparation, configuration validation, and training execution, then letting Claude Code handle the implementation details.
-{% endraw %}
+
 
 ---
 

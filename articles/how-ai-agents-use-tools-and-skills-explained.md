@@ -13,7 +13,7 @@ score: 8
 tags: [claude-code, claude-skills, tools]
 ---
 
-{% raw %}
+
 How AI Agents Use Tools and Skills Explained
 
 Modern AI agents have evolved far beyond simple text generators. Through sophisticated tool-use capabilities, agents like Claude Code can read files, execute commands, interact with APIs, and use specialized skills to accomplish real-world tasks. Understanding how this mechanism works helps developers maximize their productivity and build powerful automated workflows.
@@ -167,7 +167,7 @@ When working on a feature, Claude automatically applies all relevant skills, pro
 AI agents like Claude Code use tools and skills to bridge the gap between theoretical knowledge and practical action. Tools provide the means to interact with real systems, while skills provide the context and patterns to use those tools effectively. By understanding this mechanism, you can build more powerful workflows and get more value from your AI assistant.
 
 The key is providing clear context through skills, understanding which tools are available, and structuring your requests in ways that help Claude identify the best path to accomplish your goals.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 TypeScript const enums are a powerful feature that can significantly improve your codebase's performance and type safety. When combined with Claude Code's intelligent assistance, you can create solid enum workflows that enhance your development experience. This guide walks you through practical approaches to working with const enums using Claude Code, from basic setup to advanced patterns.
 
@@ -228,7 +228,7 @@ TypeScript const enums provide an excellent way to maintain type safety while op
 
 The workflows and patterns covered in this guide will help you make the most of const enums in your TypeScript projects while maintaining clean, type-safe code. Start implementing these practices today to improve your development workflow and code quality.
 
-{% endraw %}
+
 
 ---
 

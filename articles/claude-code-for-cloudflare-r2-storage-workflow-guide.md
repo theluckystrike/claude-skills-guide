@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Cloudflare R2 Storage Workflow Guide
 
 Cloudflare R2 provides S3-compatible object storage with zero egress fees, making it an attractive choice for developers building storage-intensive applications. When combined with Claude Code's AI capabilities, you can automate file management, content organization, and data processing workflows that would otherwise require manual intervention or complex scripts. This guide walks you through practical approaches to integrating Claude Code with Cloudflare R2 storage workflows.
@@ -160,7 +160,7 @@ Finally, test workflows thoroughly in a development environment before productio
 Claude Code transforms Cloudflare R2 storage from simple object persistence into an intelligent, automated system. By using Claude's ability to understand context, follow complex instructions, and execute commands, you can build workflows that organize content, generate metadata, manage versions, and optimize storage, all while reducing manual effort and improving consistency.
 
 Start with simple workflows like file organization, then progressively add sophistication as you gain confidence in Claude's operation within your specific use case. The combination of R2's cost-effective storage and Claude's AI capabilities creates a powerful foundation for modern application storage needs.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Incident retrospectives are critical for improving system reliability, but they often suffer from poor documentation, inconsistent formats, and unclear action items. Claude Code can transform your retrospective workflow by automating documentation, generating structured templates, and helping teams extract meaningful insights from post-incident analysis. This guide shows you how to build an effective incident retrospective workflow using Claude Code.
 
@@ -123,7 +123,7 @@ Iterate on your templates. Each retrospective should improve your Claude skill t
 Claude Code transforms incident retrospectives from painful documentation exercises into valuable learning opportunities. By automating timeline reconstruction, guiding root cause analysis, and generating specific action items, your team can focus on actual improvements rather than form-filling.
 
 The key is starting simple, create a basic retrospective skill, use it for a few incidents, and refine based on experience. Over time, you'll build a powerful knowledge base that makes each retrospective more valuable than the last.
-{% endraw %}
+
 
 ---
 

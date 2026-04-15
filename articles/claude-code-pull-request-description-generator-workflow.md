@@ -13,8 +13,8 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Pull request descriptions are critical for effective code reviews, but writing them manually is time-consuming and often inconsistent. This guide shows you how to build an automated pull request description generator using Claude Code that analyzes your changes and generates comprehensive, well-structured descriptions automatically.
 
 Why Automate PR Descriptions?
@@ -524,7 +524,7 @@ When the diff is chunked this way, the description will be somewhat less precise
 Automating pull request descriptions with Claude Code improves consistency, saves time, and ensures reviewers always have the context they need. Start with the basic workflow shown here, then customize it to match your team's specific needs and conventions.
 
 The key is to balance automation with human oversight. let Claude handle the mechanical aspects of description writing while you focus on adding the nuanced context that only a human developer can provide. Over time, the generator becomes a mirror of your team's conventions: the sections it produces, the language it uses, and the checklists it includes all reflect how your team thinks about code review quality. That institutional knowledge, encoded in the generator config, persists even as team members come and go.
-{% endraw %}
+
 
 ---
 
@@ -549,3 +549,4 @@ Related Reading
 - [Claude Code for Pull Request Review Workflow Guide](/claude-code-for-pull-request-review-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

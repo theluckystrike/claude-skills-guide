@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Building a Chrome extension to switch user agents is a practical project that demonstrates how to interact with browser network requests and modify extension behavior dynamically. This guide walks you through the implementation, from manifest configuration to runtime message handling.
 
 ## Understanding the User Agent Challenge
@@ -361,4 +361,4 @@ Testing on localhost: The `urlFilter: "*"` may not match `localhost` in all Chro
 
 Building a user agent switcher requires understanding the Declarative Net Request API and its trade-offs. Choose the method that matches your use case: declarative rules for global switching, runtime messaging for dynamic control, or content script injection for per-tab JavaScript-level overrides.
 
-{% endraw %}
+

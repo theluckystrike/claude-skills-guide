@@ -552,7 +552,7 @@ Vue 3 Suspense provides an elegant solution for managing async component loading
 The combination of top-level await in `<script setup>`, nested Suspense boundaries, reusable error boundary components, and skeleton loaders covers the vast majority of real-world async UI requirements. Start with simple async components at the route level, then progressively add nested boundaries and granular skeletons as your application's complexity grows.
 
 The investment in proper async handling. particularly the error boundary wrapper and meaningful skeleton loaders. pays compounding returns as your application scales. Users encounter fewer broken states, and developers spend less time debugging inconsistent loading behavior across different parts of the app.
-{% endraw %}
+
 
 ---
 
@@ -577,3 +577,4 @@ Related Reading
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

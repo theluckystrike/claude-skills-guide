@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Google Meet Chrome Extension Enhancer: A Developer Guide
 
 Building a Chrome extension that enhances Google Meet opens up powerful possibilities for customizing the video conferencing experience. This guide walks you through the core concepts, APIs, and practical implementation patterns for creating a Google Meet enhancement extension.
@@ -606,4 +606,4 @@ Related Reading
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

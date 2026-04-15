@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI Password Generator Chrome Extension: A Developer Guide
 
 Password security remains one of the most critical aspects of digital security. While traditional password generators create random strings based on configurable rules, AI-powered password generators offer smarter approaches, context-aware password creation, memorability optimization, and intelligent strength analysis. This guide covers how these extensions work, how to build one, and what considerations matter for developers and power users.
@@ -362,4 +362,4 @@ function detectPasswordConstraints(field) {
 
 Building an AI password generator extension gives you complete control over password security while developing practical skills in Chrome extension development, cryptographic implementation, and secure coding practices.
 
-{% endraw %}
+

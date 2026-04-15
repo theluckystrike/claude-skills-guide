@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Mastering Coding Interviews with Claude Code: A Complete Workflow Guide
 
 Preparing for coding interviews can feel overwhelming. With countless algorithms to master, data structures to review, and system design concepts to understand, many developers struggle to create an effective study routine. This is where Claude Code becomes your secret weapon. I'll walk you through a practical workflow using Claude Code's skills and features to efficiently prepare for your next coding interview.
@@ -158,7 +158,7 @@ Claude Code transforms interview preparation from a solitary, often frustrating 
 Remember, the goal isn't just to memorize solutions, it's to develop genuine problem-solving skills and the ability to communicate your thinking clearly. With Claude Code as your practice partner, you're not just preparing for interviews; you're becoming a better developer overall.
 
 Start today, stay consistent, and trust the process. Your dream job is within reach.
-{% endraw %}
+
 
 ---
 

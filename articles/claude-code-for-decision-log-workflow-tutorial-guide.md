@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Decision Log Workflow: A Complete Tutorial Guide
 
 Decision logs are one of the most underutilized tools in software development, yet they provide immense value for team alignment, project history, and onboarding new team members. A well-maintained decision log answers the critical question: "Why did we make this choice?" When combined with Claude Code's automation capabilities, creating and maintaining decision logs becomes effortless rather than burdensome.
@@ -282,4 +282,4 @@ Related Reading
 - [Claude Code for Code Bookmark Workflow Tutorial Guide](/claude-code-for-code-bookmark-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

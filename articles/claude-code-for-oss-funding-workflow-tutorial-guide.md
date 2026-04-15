@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for OSS Funding Workflow Tutorial Guide
 
 Open source software powers much of the modern internet, yet sustainable funding remains one of the biggest challenges for maintainers. we'll explore how Claude Code can help automate and streamline your OSS funding workflows, making it easier to attract sponsors, manage donations, and build sustainable open source projects.
@@ -288,7 +288,7 @@ Consistent, data-backed updates to your sponsors demonstrate accountability and 
 Claude Code is a powerful ally in building sustainable open source projects. By automating funding setup, communications, and tier management, you can focus more on what matters, building great software.
 
 Start small: create your FUNDING.yml today, then gradually add more sophisticated funding workflows as your project grows. Your future self (and your sponsors) will thank you.
-{% endraw %}
+
 
 ---
 

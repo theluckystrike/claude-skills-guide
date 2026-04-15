@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Soak Testing Workflow Tutorial Guide
 
 Soak testing is a critical performance testing methodology that runs your application under sustained load over an extended period, typically hours or even days. The goal is to uncover memory leaks, resource exhaustion, database connection pool degradation, and other issues that only manifest during prolonged operation. you'll learn how to use Claude Code CLI to build, automate, and analyze soak testing workflows effectively.
@@ -311,4 +311,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Regula Policy Workflow Guide
 
 Infrastructure policy enforcement has evolved from manual reviews to automated checks, and Regula stands at the forefront of this transformation. By combining Regula's policy-as-code capabilities with Claude Code's intelligent assistance, you can build solid workflows that catch security misconfigurations before they reach production. This guide walks you through integrating Claude Code with Regula to create an efficient policy validation pipeline.
@@ -606,7 +606,7 @@ Combining Claude Code with Regula creates a powerful policy-as-code workflow tha
 The integration transforms policy compliance from a gatekeeping exercise into a collaborative process where AI assistance helps teams build secure infrastructure from the start. Whether you are enforcing CIS benchmarks for an AWS environment, writing custom tagging policies for cost attribution, or building multi-stage pipelines that block unsafe deployments, Claude Code reduces the cognitive overhead of interpreting policy output and translating it into concrete changes.
 
 Start with the skill definition, run your first `regula run` against a real Terraform directory, and let Claude Code walk you through the results. The initial setup takes less than an hour, and the workflow compounds in value as your policy library grows.
-{% endraw %}
+
 
 ---
 

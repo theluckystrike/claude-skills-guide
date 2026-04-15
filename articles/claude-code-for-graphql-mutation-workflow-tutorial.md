@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for GraphQL Mutation Workflow Tutorial
 
 GraphQL mutations are the cornerstone of data manipulation in GraphQL APIs. When paired with Claude Code CLI, you can create powerful, automated workflows that streamline development, testing, and deployment of mutation-driven features. This tutorial walks you through building efficient GraphQL mutation workflows using Claude Code, with practical examples you can apply immediately to your projects.
@@ -470,7 +470,7 @@ Claude Code transforms GraphQL mutation development from manual coding to an ass
 The key is treating Claude Code as a collaborative partner, provide clear context about your schema, requirements, and constraints, and you'll receive well-structured, production-ready code that follows industry best practices. Invest a few minutes in a good `.claude/context.md` file up front, and every subsequent code generation request in the project will benefit from that shared context automatically.
 
 As your API grows, return to Claude Code for ongoing tasks: refactoring resolvers to adopt new patterns, generating migration scripts when schemas change, reviewing resolver logic for N+1 query problems, and keeping your test suite current with new mutation scenarios. The compounding productivity gain across the full development lifecycle is where Claude Code's value really shows.
-{% endraw %}
+
 
 ---
 

@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Building an AI-powered video summarizer as a Chrome extension opens up powerful possibilities for extracting key insights from long-form video content without watching the entire video. Whether you need quick summaries of educational courses, meeting recordings, or tutorial videos, combining Chrome extension architecture with modern AI APIs creates a tool that transforms how you consume video content.
 
@@ -366,4 +366,4 @@ Related Reading
 
 Built by theluckystrike. More at https://zovo.one
 
-{% endraw %}
+

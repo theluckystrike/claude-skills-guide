@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for PR Status Check Workflow Tutorial
 
 Pull request status checks are essential for maintaining code quality in any development workflow. Automating these checks with Claude Code can save time and ensure consistent validation across your codebase. This tutorial walks you through building a complete PR status check workflow using Claude Code's capabilities.
@@ -268,4 +268,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

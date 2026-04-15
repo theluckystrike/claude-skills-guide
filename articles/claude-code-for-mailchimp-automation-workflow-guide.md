@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Mailchimp Automation Workflow Guide
 
 Mailchimp remains one of the most popular email marketing platforms, but managing complex automation workflows can become time-consuming. This guide shows you how to harness Claude Code to streamline your Mailchimp automation, reducing manual work and improving campaign effectiveness.
@@ -291,7 +291,7 @@ async function getAutomationReport(automationId) {
 Claude Code can significantly enhance your Mailchimp automation capabilities by enabling programmatic workflows that would otherwise require manual intervention. From welcome sequences to complex segment-based triggers, the combination of Claude Code and the Mailchimp API provides a powerful toolkit for scaling your email marketing operations.
 
 Start with simple automations like welcome sequences, then gradually build more complex workflows as you become comfortable with the API. The time invested in setting up solid automations will pay dividends in improved engagement and reduced manual workload.
-{% endraw %}
+
 
 ---
 

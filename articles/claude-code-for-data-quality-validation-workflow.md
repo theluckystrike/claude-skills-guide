@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Introduction
 
 Data quality is the foundation of reliable software systems and data-driven decisions. Poor data quality leads to flawed analytics, incorrect business decisions, and system failures. This guide explores how Claude Code CLI can automate and streamline your data quality validation workflows, making it easier to catch issues before they impact production systems.
@@ -469,7 +469,7 @@ fi
 
 This gate catches data pipeline failures before they corrupt production databases, which is far cheaper than discovering corrupt data after the fact through customer complaints or financial audits.
 
-{% endraw %}
+
 
 ---
 

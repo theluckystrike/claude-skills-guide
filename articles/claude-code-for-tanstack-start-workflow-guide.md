@@ -12,7 +12,7 @@ score: 8
 permalink: /claude-code-for-tanstack-start-workflow-guide/
 ---
 
-{% raw %}
+
 Claude Code for TanStack Start Workflow Guide
 
 TanStack Start (now part of TanStack Router) provides a powerful, type-safe routing and data loading framework for React applications. Combined with Claude Code's CLI capabilities, developers can rapidly build solid applications with end-to-end type safety, nested layouts, and sophisticated data loading patterns.
@@ -271,7 +271,7 @@ Implement comprehensive error handling at multiple levels:
 Claude Code combined with TanStack Start provides a powerful workflow for building type-safe React applications. The framework's routing and data loading capabilities, paired with Claude Code's ability to generate boilerplate and implement patterns quickly, enable rapid development without sacrificing code quality.
 
 By following the workflows outlined in this guide, proper project setup, type-safe routing, data loading patterns, and best practices, you'll be well-equipped to build production-ready applications with confidence. The key is using Claude Code's strengths in code generation and pattern implementation while relying on TanStack Start's type-safe foundations for your application's core architecture.
-{% endraw %}
+
 
 ---
 

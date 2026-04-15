@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for VHS Terminal Recorder Workflow
 
 Creating high-quality terminal recordings for documentation, demos, and tutorials has never been easier than with the combination of Claude Code and VHS (Video Haskell System). This powerful workflow allows developers to automate the creation of terminal sessions that can be exported as GIFs, MP4s, or WebM files. we'll explore how to integrate Claude Code with VHS to streamline your terminal recording workflow.
@@ -268,7 +268,7 @@ Enter
 The combination of Claude Code and VHS provides a powerful workflow for creating professional terminal recordings. By using Claude Code's ability to generate, debug, and refine VHS scripts, you can efficiently produce high-quality demos, tutorials, and documentation for your projects. Start incorporating this workflow into your development process, and you'll find creating terminal recordings becomes faster, more reliable, and far less frustrating.
 
 Remember to experiment with different themes, fonts, and recording configurations to find the perfect setup for your specific needs. With practice, you'll be producing polished terminal recordings that enhance your documentation and captivate your audience.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Translating web page content automatically has become essential for developers working with international users and for power users browsing foreign-language content. Chrome extensions that translate pages offer a flexible solution that runs directly in the browser, processing content without sending entire pages to external services.
 
 This guide walks you through building a chrome extension translate pages feature using the Chrome Extension Manifest V3 architecture. You'll learn the core patterns, implementation details, and practical considerations for creating a functional translation tool.
@@ -329,4 +329,4 @@ Related Reading
 - [Chrome Preload Pages Setting: A Complete Guide for.](/chrome-preload-pages-setting/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

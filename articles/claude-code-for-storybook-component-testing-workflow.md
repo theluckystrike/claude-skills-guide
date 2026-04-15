@@ -524,7 +524,7 @@ Regular maintenance keeps Storybook useful. Ask Claude Code to audit your Storyb
 Claude Code transforms Storybook component testing from a manual, time-consuming process into an efficient, automated workflow. By using AI-assisted story generation, intelligent debugging, and systematic coverage analysis, frontend teams can maintain high-quality component libraries without sacrificing development speed. The key is establishing clear conventions, automating repetitive tasks, and using Claude Code as a collaborative partner in your testing process.
 
 Start by integrating Claude Code into your next component project, you'll quickly discover how it accelerates story creation, improves test coverage, and simplifies debugging across your entire component library.
-{% endraw %}
+
 
 ---
 
@@ -549,3 +549,4 @@ Related Reading
 - [Claude Code Cypress Component Testing Guide](/claude-code-cypress-component-testing-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -12,8 +12,8 @@ score: 7
 permalink: /claude-code-skills-for-ansible-automation/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [Ansible remains one of the most popular tools for configuration management](/claude-code-skills-for-infrastructure-as-code-terraform/) and infrastructure automation. Combining Claude Code with Ansible through custom skills unlocks powerful possibilities for developers who want natural language interfaces to manage their infrastructure code. This guide shows you how to build Claude Code skills specifically designed for Ansible automation workflows.
 
 ## Why Combine Claude Code with Ansible

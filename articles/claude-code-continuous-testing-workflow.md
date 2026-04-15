@@ -14,7 +14,7 @@ intent-checked: true
 voice-checked: true
 ---
 
-{% raw %}
+
 Claude Code Continuous Testing Workflow: Complete Guide for 2026
 
 Continuous testing is the practice of executing automated tests throughout the software development lifecycle to provide immediate feedback on code changes. In modern development workflows, integrating continuous testing with Claude Code creates a powerful synergy that accelerates delivery while maintaining high quality. This guide explores how to implement a comprehensive continuous testing workflow using Claude Code as your intelligent testing assistant.
@@ -422,4 +422,4 @@ Related Reading
 - Claude Code Test Isolation Strategies Guide
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

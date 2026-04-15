@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for NGINX WAF Workflow Tutorial
 
 Securing web applications against malicious traffic is a critical priority for any development team. NGINX WAF (Web Application Firewall) provides powerful protection against common attacks like SQL injection, cross-site scripting (XSS), and other OWASP Top 10 vulnerabilities. However, configuring and managing WAF rules manually can be complex and time-consuming. This tutorial demonstrates how to use Claude Code to automate and accelerate your NGINX WAF workflow from initial setup to ongoing management.
@@ -291,7 +291,7 @@ Follow these recommendations when managing NGINX WAF with Claude Code:
 ## Conclusion
 
 Claude Code significantly simplifies NGINX WAF management by automating rule creation, testing, and analysis. By integrating Claude into your security workflow, you can deploy solid WAF protection faster while maintaining the flexibility to customize rules for your specific application needs. Start with the basics outlined in this tutorial, then gradually add custom rules as you identify unique threats to your application.
-{% endraw %}
+
 
 ---
 

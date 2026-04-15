@@ -9,7 +9,7 @@ author: theluckystrike
 permalink: /chrome-extension-seo-checker/
 ---
 
-{% raw %}
+
 Chrome extension SEO checkers allow developers and power users to analyze web pages for search engine optimization issues without leaving the browser. These tools inspect on-page elements, meta tags, heading structure, and content quality in real-time. Building your own SEO checker extension gives you complete control over which metrics to track and how to present the data.
 
 ## How Chrome Extension SEO Checkers Work
@@ -175,7 +175,7 @@ Regular updates keep the extension functional as browser APIs evolve. Manifest V
 Building a chrome extension SEO checker provides immediate utility for your own workflow while demonstrating practical browser extension development. The patterns shown here scale from simple analysis tools to comprehensive SEO platforms, depending on your requirements and user needs.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+
 
 
 ---

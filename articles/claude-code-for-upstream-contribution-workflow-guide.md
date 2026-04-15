@@ -217,7 +217,7 @@ Reviewers are often volunteers with limited time. Give them a few days to respon
 Upstream contribution is rewarding but requires a structured approach. Claude Code can be your companion throughout this journey, helping you navigate unfamiliar codebases, follow project conventions, and focus on making meaningful contributions. Start with small contributions, learn from the process, and gradually take on more complex changes. The open source community welcomes your contributions!
 
 Remember: every contribution counts, whether it's code, documentation, or simply helping other users in issues and discussions. Happy contributing!
-{% endraw %}
+
 
 ---
 
@@ -243,3 +243,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

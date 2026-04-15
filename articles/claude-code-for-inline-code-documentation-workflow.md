@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Inline documentation is one of the most neglected aspects of software development. We all know we should document our code, but between shipping deadlines and feature requests, it often falls by the wayside. That's where Claude Code comes in, it's not just an AI coding assistant; it's a powerful tool for automating documentation workflows that would otherwise consume hours of developer time.
 
@@ -193,7 +193,7 @@ Start small: pick one module, generate documentation with Claude, and see the di
 ---
 
 *Want to explore more Claude Code workflows? Check out our guides on AI-assisted code review and automated testing workflows.*
-{% endraw %}
+
 
 ---
 

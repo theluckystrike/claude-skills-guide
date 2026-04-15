@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for RTL Right-to-Left Layout Workflow
 
 Building web applications that support right-to-left (RTL) languages like Arabic, Hebrew, Persian, and Urdu requires more than just flipping text alignment. It demands a comprehensive approach to layout, typography, navigation, and user experience. Claude Code can significantly streamline RTL implementation, helping you create polished multilingual experiences without the typical headaches. This guide walks you through a practical workflow for RTL layout development using Claude Code.
@@ -221,7 +221,7 @@ Follow these key principles for successful RTL implementation:
 Claude Code becomes an invaluable partner in RTL development when you provide clear context about your requirements. By establishing good patterns from the start and maintaining comprehensive documentation, you can build applications that feel natural in any language direction.
 
 The initial investment in proper RTL architecture pays dividends as your application grows. With logical CSS properties, proper content handling, and thorough testing, you'll create experiences that feel truly localized for RTL language speakers.
-{% endraw %}
+
 
 ---
 

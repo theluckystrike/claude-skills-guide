@@ -264,7 +264,7 @@ Checking whether your email has appeared in data breaches is a straightforward p
 
 For developers, integrating breach checking into your security tooling provides valuable monitoring capabilities. The methods covered here range from simple one-off checks to automated monitoring systems. Choose the approach that fits your needs and stay ahead of potential security threats.
 
-{% endraw %}
+
 
 ---
 
@@ -289,3 +289,4 @@ Related Reading
 - [Chrome Extension Email Snooze Scheduler - Complete Guide for Developers](/chrome-extension-email-snooze-scheduler/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

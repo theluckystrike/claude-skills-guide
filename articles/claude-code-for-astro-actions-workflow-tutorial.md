@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Astro Actions Workflow Tutorial
 
 Astro Actions is a powerful feature that enables developers to build type-safe backend functionality directly within their Astro projects. When combined with Claude Code, you can automate repetitive tasks, generate boilerplate code, and create intelligent workflows that significantly accelerate your development process. This tutorial will guide you through integrating Claude Code into your Astro Actions workflow.
@@ -272,7 +272,7 @@ Integrating Claude Code with Astro Actions transforms your development workflow 
 Start small, generate your first action with Claude Code and gradually expand to more complex workflows. The combination of Astro's type-safe actions and Claude Code's AI capabilities creates a powerful development environment that will significantly improve your productivity.
 
 Remember to always review generated code for security and correctness, and use these tools as a starting point rather than a final solution. With practice, you'll find the perfect balance between AI assistance and your own expertise.
-{% endraw %}
+
 
 ---
 

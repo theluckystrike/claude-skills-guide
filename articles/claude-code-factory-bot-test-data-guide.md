@@ -12,7 +12,7 @@ score: 7
 permalink: /claude-code-factory-bot-test-data-guide/
 ---
 
-{% raw %}
+
 Claude Code Factory Bot Test Data Guide
 
 Factory Bot is a Ruby library for building test data fixtures in a flexible and maintainable way. When combined with Claude Code, you can automate factory creation, generate complex test scenarios, and build solid test suites faster than ever.
@@ -496,7 +496,7 @@ end
 
 The linter instantiates each factory and checks that the resulting object is valid according to your model validations. Run this in your CI pipeline on every push. A factory that fails validation silently in tests can cause hours of debugging.
 
-{% endraw %}
+
 
 ---
 

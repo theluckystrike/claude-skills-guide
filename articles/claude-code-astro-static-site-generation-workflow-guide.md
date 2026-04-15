@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-astro-static-site-generation-workflow-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [Building static sites with Claude Code and Astro creates a powerful combination](/best-claude-code-skills-to-install-first-2026/) for developers who want AI-assisted development without sacrificing performance. This guide covers practical workflows, skill integration, and automation patterns that work in 2026.
 
 ## Why Astro with Claude Code

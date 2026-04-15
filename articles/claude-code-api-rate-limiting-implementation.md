@@ -187,7 +187,7 @@ The `Retry-After` header tells you how long to wait before retrying. Always resp
 
 When running multiple instances of your service, you need distributed rate limiting that coordinates across processes. Redis provides a reliable implementation. The Lua script approach ensures atomic check-and-consume operations:
 
-{% raw %}
+
 ```python
 redis_rate_limiter.py
 import redis
@@ -237,7 +237,7 @@ class RedisRateLimiter:
 
         return allowed, remaining
 ```
-{% endraw %}
+
 
 ## Integrating with Your API Framework
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Accessible Modal Dialog Implementation
 
 Modal dialogs are ubiquitous in modern web applications, but implementing them accessibly remains a challenge for many developers. An inaccessible modal can exclude users who rely on screen readers, keyboard navigation, or assistive technologies. This guide walks you through building accessible modals using Claude Code, covering the essential patterns and techniques that ensure your modals work for everyone.
@@ -252,7 +252,7 @@ Several mistakes frequently appear in modal implementations:
 Accessible modal dialog implementation requires attention to detail, but the patterns are straightforward once understood. Focus management, proper ARIA attributes, and keyboard navigation form the foundation of an accessible modal. Claude Code can generate production-ready implementations that follow these patterns, saving development time while ensuring accessibility compliance.
 
 Remember: an accessible modal isn't just about meeting WCAG requirements, it's about ensuring all users can successfully interact with your application. Invest the time to get it right, and your users will thank you.
-{% endraw %}
+
 
 ---
 

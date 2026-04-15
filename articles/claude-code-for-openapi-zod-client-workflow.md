@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for OpenAPI Zod Client Workflow
 
 Building type-safe API clients is essential for modern TypeScript development. When you combine OpenAPI specifications with Zod schemas, you get end-to-end type safety from your backend to your frontend. But manually translating OpenAPI definitions to Zod schemas is tedious and error-prone. This is where Claude Code becomes your productivity superpower.
@@ -226,7 +226,7 @@ Claude Code transforms the OpenAPI to Zod workflow from a manual, error-prone pr
 Start small: generate your first Zod schema from an OpenAPI spec, then expand to full client generation. The time savings compound quickly, and your code becomes more reliable with each iteration.
 
 Remember: type safety isn't just about catching bugs, it's about documentation that never lies and refactoring with confidence. Let Claude Code help you achieve both.
-{% endraw %}
+
 
 ---
 

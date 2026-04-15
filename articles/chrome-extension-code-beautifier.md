@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 
 Code formatting is a critical aspect of developer productivity. When you're reviewing pull requests, inspecting web applications, or working with minified code, having the ability to beautify code directly in your browser saves significant time. Chrome extensions designed for code beautification provide this capability without requiring you to switch between your editor and browser.
 
@@ -299,4 +299,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

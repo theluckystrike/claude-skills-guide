@@ -326,7 +326,7 @@ Release tag created before all platform builds complete: Use GitHub Actions `nee
 
 Changelog including internal commits: Use a commit message convention filter in the changelog generation script. Only include commits matching `feat:`, `fix:`, `perf:`, and `BREAKING CHANGE:` prefixes. Ask Claude Code to add this filter to the changelog generation step.
 
-{% endraw %}
+
 
 ---
 
@@ -351,3 +351,4 @@ Related Reading
 - [Claude Code for Performance Budget Workflow Tutorial](/claude-code-for-performance-budget-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

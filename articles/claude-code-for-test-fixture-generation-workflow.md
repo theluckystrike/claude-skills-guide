@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Test Fixture Generation Workflow
 
 Test fixture generation is one of the most time-consuming aspects of software testing. Manually creating test data, mocking dependencies, and setting up realistic scenarios can consume hours of development time. Fortunately, Claude Code offers powerful capabilities to automate and streamline this workflow, allowing developers to focus on writing actual test logic rather than getting bogged down in data preparation.
@@ -603,4 +603,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

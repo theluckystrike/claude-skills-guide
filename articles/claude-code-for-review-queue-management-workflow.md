@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 ---
-{% raw %}
+
 
 Building an effective review queue management workflow is essential for development teams that want to maintain code quality without bottlenecks. Claude Code provides powerful capabilities to automate, prioritize, and orchestrate your review pipeline. This guide walks you through practical patterns for creating a solid review queue system that scales with your team.
 
@@ -234,4 +234,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

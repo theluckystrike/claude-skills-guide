@@ -13,7 +13,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Notion Workflow Tutorial Guide
 
 Notion has become a central hub for team collaboration, project management, and knowledge base creation. Meanwhile, Claude Code brings the power of AI assistance directly to your terminal. Combining these two tools opens up remarkable possibilities for developers who want to automate tasks, sync data, and build intelligent workflows.
@@ -295,4 +295,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

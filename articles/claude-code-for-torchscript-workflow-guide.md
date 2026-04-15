@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for TorchScript Workflow Guide
 
 TorchScript is PyTorch's solution for serializing and optimizing models for production deployment. When combined with Claude Code's intelligent assistance, you can dramatically accelerate your TorchScript development workflow, from initial model tracing to production debugging. This guide walks you through practical strategies for working with TorchScript using Claude Code.
@@ -573,7 +573,7 @@ When working with Claude Code for TorchScript development, keep these principles
 8. Inspect the graph: After tracing or scripting, call `model.graph` and review the output. Claude can help you interpret unusual nodes or identify missed optimization opportunities.
 
 Claude Code can dramatically accelerate your TorchScript workflow by generating boilerplate, suggesting optimizations, and debugging compilation errors. The key is providing clear context about your model's architecture and deployment targets.
-{% endraw %}
+
 
 ---
 

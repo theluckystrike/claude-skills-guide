@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Inspector v2 Workflow
 
 The Inspector v2 represents a significant evolution in Claude Code's debugging and inspection capabilities. This workflow combines powerful runtime inspection, intelligent debugging, and AI-assisted analysis to help developers identify issues faster and write more reliable code. we'll explore practical patterns for integrating Claude Code into your Inspector v2 workflow. from initial setup through advanced async debugging, memory analysis, and CI/CD integration.
@@ -537,7 +537,7 @@ Inspector v2 transforms debugging from a reactive, manual process into an AI-ass
 The combination of Inspector v2's non-blocking event capture with Claude Code's ability to reason across your full codebase is qualitatively different from traditional debugging. You are no longer just looking at a stack trace. you are giving Claude a complete picture of what the application was doing, thinking, and communicating at the exact moment something went wrong. That context is what makes the difference between a ten-minute diagnosis and a three-hour debugging session.
 
 The key is treating Inspector v2 not as a replacement for your debugging skills, but as an amplifier that makes your expertise more effective. Combined with Claude Code's understanding of your specific codebase, you will have a powerful ally for tackling the most challenging bugs your team encounters.
-{% endraw %}
+
 
 ---
 

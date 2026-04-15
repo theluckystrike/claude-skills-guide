@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code represents a paradigm shift in how developers learn and grow their technical skills. As an AI coding assistant, it serves not just as a tool for writing code but as a powerful mentorship platform that can accelerate learning curves and make complex concepts accessible. This guide explores effective strategies for using Claude Code as a teaching and mentorship tool, with practical examples, real-world scenarios, and concrete techniques you can apply immediately.
 
 ## Understanding Claude Code as a Learning Partner
@@ -204,4 +204,4 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

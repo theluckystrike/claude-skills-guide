@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Elastic SIEM Workflow Guide
 
 Security monitoring is a critical component of any modern infrastructure. Elastic SIEM provides powerful capabilities for collecting, analyzing, and visualizing security events across your environment. When combined with Claude Code, you can build intelligent automation workflows that enhance threat detection, streamline incident response, and continuously improve your security posture.
@@ -257,7 +257,7 @@ Audit Trail: Maintain logs of all automated actions for compliance and forensic 
 Integrating Claude Code with Elastic SIEM opens powerful possibilities for security automation. From automated alert investigation to threat intelligence enrichment and incident response, you can build comprehensive workflows that enhance your security operations without sacrificing reliability.
 
 Start with simple query automation and progressively add more sophisticated detection and response capabilities. The key is building a foundation that you can trust and extend as your security needs evolve.
-{% endraw %}
+
 
 ---
 

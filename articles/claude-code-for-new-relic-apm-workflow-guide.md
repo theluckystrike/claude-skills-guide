@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for New Relic APM Workflow Guide
 
 Application Performance Monitoring (APM) is critical for maintaining reliable software systems. New Relic APM provides deep visibility into your application's behavior, but analyzing performance data and debugging issues can be time-consuming. This guide shows how to integrate Claude Code with New Relic APM to automate monitoring workflows, accelerate debugging, and streamline observability tasks.
@@ -226,7 +226,7 @@ Integrating Claude Code with New Relic APM transforms how you monitor and debug 
 
 Remember to iterate on your prompts and skills based on what works best for your specific use cases. The combination of Claude Code's natural language processing and New Relic's rich APM data creates powerful possibilities for operational excellence.
 
-{% endraw %}
+
 
 ---
 

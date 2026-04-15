@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Go Profile-Guided Optimization
 
 Profile-Guided Optimization (PGO) is one of the most powerful techniques for optimizing Go applications, yet many developers underutilize it because they don't know how to properly collect and apply profiling data. Claude Code can significantly streamline this process, helping you identify optimization opportunities, generate the right profiling code, and interpret results effectively. This guide shows you how to combine Claude Code's capabilities with Go's built-in pprof tooling to achieve meaningful performance improvements.
@@ -207,7 +207,7 @@ Test performance regressions. Ensure your optimizations don't break functionalit
 Claude Code can help you implement all of these practices, from generating profiling scripts to analyzing results and implementing suggested optimizations. By combining AI assistance with Go's built-in tooling, you can achieve significant performance improvements with less trial and error.
 
 The key is treating PGO as part of an ongoing performance engineering process rather than a one-time optimization. With Claude Code's help, you can establish this cycle and continuously improve your application's performance over time.
-{% endraw %}
+
 
 ---
 

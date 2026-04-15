@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Static Application Security Testing (SAST) is a critical component of modern secure software development. Unlike dynamic testing that runs the application, SAST analyzes source code, bytecode, or binary code at rest to identify security vulnerabilities before deployment. When combined with Claude Code, SAST workflows become significantly more efficient, enabling developers to catch security issues early while maintaining fast development velocity.
 
@@ -201,7 +201,7 @@ Start with incremental scanning to make checks fast, use custom triage rules to 
 
 Remember: SAST is most effective when it's fast, accurate, and integrated into daily development. Claude Code helps achieve all three goals by bringing intelligent context to automated security scanning.
 
-{% endraw %}
+
 
 ---
 

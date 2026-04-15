@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Agent Task Queue Architecture Detailed look
 
 Claude Code's power as an AI-assisted development tool comes from its sophisticated task queue architecture. Understanding how the agent manages, prioritizes, and executes tasks enables you to build more efficient workflows and use Claude Code's full capabilities. This detailed look explores the internal mechanisms that make Claude Code's agent mode so effective.
@@ -212,7 +212,7 @@ When debugging skill issues, examine the task flow:
 Claude Code's task queue architecture provides the foundation for sophisticated AI-assisted development workflows. By understanding how tasks are scheduled, skills are dispatched, and execution is parallelized, you can author more powerful skills that integrate smoothly with Claude Code's internal systems.
 
 The key takeaways: tasks flow through a priority-based queue with dependency awareness, skills act as specialized handlers that can schedule subtasks, and parallel execution maximizes throughput while preventing conflicts. Master these patterns, and you'll use the full potential of Claude Code's agent capabilities.
-{% endraw %}
+
 
 ---
 

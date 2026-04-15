@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Amazon ElastiCache is a critical infrastructure component for applications requiring high-performance caching. Managing ElastiCache clusters, whether Redis or Memcached, involves careful configuration, security considerations, and operational best practices. Claude Code can significantly streamline your ElastiCache workflows, from initial cluster provisioning to day-to-day operations and troubleshooting.
 
@@ -315,7 +315,7 @@ Claude Code accelerates all these workflows by generating configurations, code s
 
 Would you like me to elaborate on any specific aspect of ElastiCache cluster management with Claude Code?
 
-{% endraw %}
+
 
 ---
 

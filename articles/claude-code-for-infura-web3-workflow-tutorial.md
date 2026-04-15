@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Infura Web3 Workflow Tutorial
 
 Web3 development has evolved significantly, and integrating AI assistants like Claude Code into your workflow can dramatically improve productivity. This tutorial will walk you through setting up Claude Code with Infura, the industry-leading Ethereum API provider, to streamline your blockchain development process. Whether you're querying on-chain data, debugging failed transactions, or deploying smart contracts, Claude Code reduces the friction at every step.
@@ -425,7 +425,7 @@ Integrating Claude Code with Infura opens up powerful possibilities for Web3 dev
 The key insight is that Infura handles the infrastructure complexity of blockchain access while Claude Code handles the developer ergonomics of writing and maintaining scripts. Together, they let you focus on the actual product you are building rather than the plumbing beneath it.
 
 Remember to always test on testnets before deploying to mainnet, keep your credentials secure throughout the development process, and use Claude Code's conversational debugging capability whenever you hit an unexpected error.
-{% endraw %}
+
 
 ---
 

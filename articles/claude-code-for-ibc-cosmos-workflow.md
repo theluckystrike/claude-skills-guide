@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for IBC Cosmos Workflow
 
 The Inter-Blockchain Communication (IBC) protocol is the backbone of the Cosmos ecosystem, enabling secure cross-chain transactions and state synchronization between independent blockchain networks. Building solid IBC workflows requires handling complex relay paths, packet acknowledgments, and state verification across multiple chains. Claude Code can significantly accelerate IBC development by automating repetitive configuration tasks, generating relayer configurations, and helping debug cross-chain transaction failures.
@@ -321,7 +321,7 @@ Validate Generated Code: Always review generated configurations and code. IBC in
 Claude Code significantly accelerates IBC Cosmos workflow development by automating configuration generation, providing debugging assistance, and scaffolding complex components. The key is providing rich context about your specific chain topology and requirements.
 
 Start with clear configuration in your CLAUDE.md, break complex tasks into manageable steps, and always validate generated code on testnets before production deployment. With these practices, you can build solid cross-chain applications efficiently.
-{% endraw %}
+
 
 ---
 

@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Building a thriving open source community requires consistent engagement with contributors, users, and stakeholders. Managing issues, reviewing pull requests, answering questions, and coordinating with maintainers can quickly become overwhelming. Claude Code offers powerful capabilities to automate and streamline these community engagement workflows, helping maintainers focus on what matters most: growing their projects and nurturing contributor relationships.
 
 ## Understanding OSS Community Engagement Challenges
@@ -341,7 +340,7 @@ Under 50 issues/month: Use Claude Code for drafting responses only. Review every
 
 Claude Code transforms OSS community engagement from reactive firefighting to proactive relationship building. By automating triage, standardizing reviews, and maintaining consistent communication, you free maintainers to focus on technical decisions and meaningful community connections. The community health metrics that matter. time to first response, contributor retention, PR merge rate for first-timers. all improve when automation handles the repetitive work and humans focus on the judgment calls. Start small with drafting assistance, measure results, and iteratively expand your automation as your community grows. Your contributors. and your own sustainability as a maintainer. will benefit.
 
-{% endraw %}
+
 
 ---
 
@@ -366,3 +365,4 @@ Related Reading
 - [Claude Code for OSS Contributor Guide Workflow](/claude-code-for-oss-contributor-guide-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

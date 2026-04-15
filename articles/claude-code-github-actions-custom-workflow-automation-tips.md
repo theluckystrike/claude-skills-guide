@@ -14,7 +14,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 GitHub Actions provides a powerful automation platform, but building truly efficient and maintainable workflows requires strategic planning and best practices. Claude Code can help you design, implement, and optimize custom workflow automation that scales with your project needs. This guide covers essential tips for creating solid CI/CD pipelines and automation workflows using GitHub Actions with Claude Code assistance.
 
 ## Building Efficient Workflow Structures
@@ -490,5 +489,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 {% endraw %}

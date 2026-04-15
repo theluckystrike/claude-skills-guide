@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Transaction tracing is essential for debugging complex systems, understanding user journeys, and ensuring data consistency across distributed applications. In this tutorial, we'll explore how to use Claude Code to build effective transaction tracing workflows that help you track, analyze, and resolve issues in your applications.
 
 What is Transaction Tracing?
@@ -496,4 +496,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Release rollbacks are critical operations in modern software deployment. When a production deployment goes wrong, the difference between a five-minute recovery and a five-hour outage can depend on having the right automation in place. This tutorial shows you how to build a solid release rollback workflow using Claude Code, enabling your team to detect issues quickly and recover safely.
 
 ## Understanding Release Rollback Patterns
@@ -283,7 +282,7 @@ Building a solid release rollback workflow with Claude Code transforms how your 
 The key is starting simple: create a basic rollback skill, test it regularly, and gradually add sophistication as your deployment infrastructure evolves. Claude Code's natural language interface makes this process accessible to the entire team, not just DevOps specialists.
 
 Remember that rollback workflows are like insurance, you hope you never need them, but you'll be grateful they're there when you do. Invest the time to build them properly now, and your future self will thank you during the next production incident.
-{% endraw %}
+
 
 ---
 
@@ -306,3 +305,4 @@ Related Reading
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
+{% endraw %}

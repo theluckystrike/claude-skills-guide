@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Continuing Education as a Developer
 
 The technology landscape evolves at an unprecedented pace. As developers, we face the constant challenge of staying relevant, learning new frameworks, mastering emerging paradigms, and adapting to shifting industry standards. Claude Code offers a powerful ally in this ongoing journey, transforming how we approach continuing education.
@@ -231,7 +231,7 @@ Claude Code represents a paradigm shift in developer education. Rather than repl
 The key insight is that Claude Code is not a shortcut that lets you skip understanding, it's a multiplier that lets you build understanding faster. You still have to engage, ask follow-up questions, apply what you learn, and push on the edges of your comprehension. But you can do all of that at a pace that was previously impossible without a senior mentor available every time you open your editor.
 
 Start your next learning session with Claude Code today. Your future self will thank you.
-{% endraw %}
+
 
 ---
 

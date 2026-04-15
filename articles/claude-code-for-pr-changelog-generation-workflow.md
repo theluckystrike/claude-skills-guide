@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Generating changelogs for pull requests is one of those repetitive tasks that developers often dread. Between remembering what changed, categorizing features from bug fixes, and formatting everything consistently, it can consume hours each release. This is where Claude Code transforms your workflow, turning manual changelog creation into an automated process that generates clean, consistent release notes in seconds.
 
 ## Understanding the PR Changelog Challenge
@@ -169,7 +168,7 @@ Claude Code transforms PR changelog generation from a tedious manual task into a
 
 The key is consistency in your commit messages and PR descriptions, once Claude has quality input, it excels at producing structured, readable output that your users and stakeholders will appreciate.
 
-{% endraw %}
+
 
 ---
 
@@ -194,3 +193,4 @@ Related Reading
 - [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

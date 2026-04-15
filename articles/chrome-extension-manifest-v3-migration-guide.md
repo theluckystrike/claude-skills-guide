@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 Google's transition from Manifest V2 to Manifest V3 represents the most significant API overhaul for Chrome extensions since the platform's inception. This guide walks you through the practical migration steps, highlighting the key differences and providing working code examples you can apply immediately.
 
 ## Understanding the Manifest V3 Timeline
@@ -291,4 +291,4 @@ Related Reading
 - [AI Podcast Summary Chrome Extension: A Developer's Guide.](/ai-podcast-summary-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

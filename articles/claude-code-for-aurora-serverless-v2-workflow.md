@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Aurora Serverless V2 Workflow
 
 Amazon Aurora Serverless V2 represents a significant evolution in serverless database technology, offering automatic scaling, pay-per-use pricing, and MySQL/PostgreSQL compatibility. However, working effectively with Aurora Serverless V2 requires understanding its unique characteristics, connection management, and scaling behavior. This guide shows you how to use Claude Code skills to streamline your Aurora Serverless V2 workflow, from initial setup through ongoing management.
@@ -225,7 +225,7 @@ When working with Aurora Serverless V2 and Claude Code, keep these practices in 
 Claude Code skills accelerate every phase of your Aurora Serverless V2 workflow, from initial design through ongoing optimization. By combining AI assistance with proper architecture patterns, you can build solid, scalable serverless applications with confidence.
 
 The key is treating Aurora Serverless V2 as a unique environment that requires specific considerations for connection management, scaling behavior, and cost optimization. With Claude Code as your development partner, you'll catch issues earlier, write better migrations, and maintain healthier database operations overall.
-{% endraw %}
+
 
 ---
 

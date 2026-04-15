@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for LLM Caching Workflow Tutorial
 
 LLM caching is one of the most impactful optimizations you can add to your AI-powered applications. By storing and reusing responses for identical or similar requests, you can dramatically reduce API costs, decrease response latency, and handle higher traffic volumes without hitting rate limits. In this tutorial, you'll learn how to build a solid LLM caching workflow using Claude Code and Claude Skills.
@@ -241,7 +241,7 @@ Conclusion
 Implementing LLM caching with Claude Code is straightforward and delivers immediate benefits. Start with exact-match caching for quick wins, then evolve to semantic caching as your application matures. The skills you create for caching become reusable infrastructure that improves every AI-powered feature in your application.
 
 Remember to monitor your metrics, tune your TTL values, and always have fallback mechanisms in place. With proper implementation, you can significantly reduce costs while delivering faster responses to your users.
-{% endraw %}
+
 
 ---
 

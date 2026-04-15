@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code NextAuth Database Adapter Setup Guide
 
 NextAuth.js (now Auth.js) provides a flexible authentication system for Next.js applications, and one of its most powerful features is the database adapter system. This guide walks you through setting up NextAuth with various database adapters using Claude Code, demonstrating how Claude Code can accelerate your authentication infrastructure setup.
@@ -293,7 +293,7 @@ Conclusion
 Setting up NextAuth with database adapters doesn't have to be complex. Claude Code can help you generate schemas, configuration files, and migration scripts quickly. Whether you choose Prisma, Drizzle, or another adapter, the key is understanding how your data model aligns with NextAuth's requirements.
 
 Start with the adapter that matches your existing stack, and use Claude Code's code generation capabilities to accelerate your authentication setup. Remember to always handle sensitive user data according to privacy regulations and security best practices.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Delta Lake Workflow Guide
 
 Delta Lake has revolutionized how teams build data lakes by bringing ACID transactions, time travel, and schema enforcement to cloud object storage. But working with Delta Lake effectively requires understanding its unique patterns and best practices. This guide demonstrates how Claude Code can automate and streamline your Delta Lake workflows, from initial setup to production data pipelines.
@@ -310,7 +310,7 @@ With this skill, you can describe your table requirements in natural language, a
 
 By integrating Claude Code into your Delta Lake workflows, you can reduce manual coding effort, enforce best practices consistently, and focus on business logic rather than boilerplate operations.
 
-{% endraw %}
+
 
 ---
 

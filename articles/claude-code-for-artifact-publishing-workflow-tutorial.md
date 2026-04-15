@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Artifact Publishing Workflow Tutorial
 
 Automating artifact publishing is one of the most valuable workflows you can set up with Claude Code. Whether you're releasing npm packages, publishing Docker images, or deploying static assets to cloud storage, Claude Code can handle the entire process, from version bumping to publishing to changelog generation. This tutorial walks you through building a complete artifact publishing workflow.
@@ -253,4 +253,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

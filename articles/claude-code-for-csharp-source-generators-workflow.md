@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for C# Source Generators Workflow
 
 C# source generators have transformed how .NET developers write code, enabling compile-time code generation that eliminates boilerplate and enhances productivity. However, developing and debugging source generators can be challenging without the right workflow. This guide shows you how to use Claude Code to streamline your source generator development process, from initial setup through debugging and optimization.
@@ -151,7 +151,7 @@ Version your generator following semantic versioning, as breaking changes in gen
 Integrating Claude Code into your C# source generator workflow accelerates development, improves code quality, and helps navigate the Roslyn API's complexity. By following the practices outlined in this guide, structuring projects properly, using incremental generation, and implementing effective debugging, you'll create solid source generators that enhance your .NET development experience.
 
 The key to success lies in iterative development: start with simple generators, validate output, then progressively add complexity. Claude Code serves as an intelligent partner throughout this journey, helping you understand APIs, debug issues, and implement best practices efficiently.
-{% endraw %}
+
 
 ---
 

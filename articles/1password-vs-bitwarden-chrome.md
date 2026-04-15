@@ -13,8 +13,8 @@ categories: [comparisons]
 tags: [chrome, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 1Password vs Bitwarden Chrome: Which Password Manager Works Best for Developers?
 
 Choosing between 1Password and Bitwarden for Chrome involves more than comparing features, it is about selecting a tool that fits your development workflow, security requirements, and budget. Both offer solid Chrome extensions, but they differ significantly in pricing models, open-source transparency, and developer-focused integrations.

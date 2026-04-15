@@ -13,7 +13,7 @@ score: 7
 permalink: /claude-code-automated-alt-text-generation-workflow/
 ---
 
-{% raw %}
+
 
 Accessibility matters. Alt text transforms images into meaningful descriptions for people who use screen readers, yet manually writing descriptive alt text for hundreds or thousands of images remains a tedious task. Claude Code offers a powerful solution through its image analysis capabilities and skill system, enabling automated alt text generation workflows that save hours of manual work.
 
@@ -160,7 +160,7 @@ Start small with single-image analysis, build reusable skills for consistency, a
 
 Remember: automated alt text augments human accessibility work, it doesn't replace the need for judgment about context, purpose, and cultural sensitivity that only humans can provide.
 
-{% endraw %}
+
 
 ---
 

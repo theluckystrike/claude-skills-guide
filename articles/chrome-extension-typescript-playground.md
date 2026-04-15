@@ -11,7 +11,7 @@ score: 8
 categories: [guides]
 ---
 
-{% raw %}
+
 
 Developing Chrome extensions with TypeScript requires a solid development environment that supports hot reloading, type checking, and smooth debugging. A well-configured TypeScript playground for Chrome extension development can significantly accelerate your workflow and catch errors before they reach production.
 
@@ -456,4 +456,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

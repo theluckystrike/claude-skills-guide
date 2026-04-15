@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 AI Reading Assistant Chrome: Technical Implementation Guide
 
 AI reading assistants have transformed how developers and power users consume web content. These tools use large language models to summarize, simplify, and extract key information from articles, documentation, and technical posts. This guide covers the technical architecture, implementation patterns, and practical code examples for building or integrating an AI reading assistant in Chrome.
@@ -385,4 +385,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Ambassador Sidecar Pattern Workflow
 
 The Ambassador sidecar pattern is a powerful architectural approach that deploys Envoy proxy as a sidecar alongside your microservices. This pattern enables transparent traffic management, observability, and cross-cutting concerns without modifying your application code. you'll learn how to use Claude Code to implement, configure, and manage Ambassador sidecar deployments efficiently.
@@ -468,7 +468,7 @@ The Ambassador sidecar pattern, when implemented with Claude Code, provides a so
 Start by deploying simple sidecar configurations and gradually incorporate advanced features like circuit breaking, rate limiting, and mTLS as your system matures. Claude Code's contextual understanding of your architecture makes this incremental adoption smooth and manageable.
 
 Remember: the key to successful sidecar deployments is treating the sidecar as an integral part of your service deployment, not an afterthought. Use the automation capabilities of Claude Code to ensure consistency across all your services. Maintain your Envoy configs in version control alongside your application code, review them in pull requests, and let Claude Code handle the repetitive scaffolding so your team can focus on the design decisions that actually require human judgment.
-{% endraw %}
+
 
 ---
 

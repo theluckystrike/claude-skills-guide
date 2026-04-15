@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Tor vs Chrome Privacy: A Technical Comparison for Developers
 
 When building privacy-conscious applications or choosing a browser for security research, understanding the fundamental differences between Tor Browser and Google Chrome is essential. Both tools take radically different approaches to user privacy, and the choice between them impacts what data you expose to network observers, websites, and potentially malicious actors.
@@ -214,4 +214,4 @@ Related Reading
 - [Firefox vs Chrome Privacy 2026: A Developer's Technical.](/firefox-vs-chrome-privacy-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

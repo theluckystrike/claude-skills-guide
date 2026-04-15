@@ -13,8 +13,8 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Error handling in Claude skills requires deliberate design. When you build automated workflows with Claude Code, unexpected failures can derail entire pipelines. This guide shows developers and power users how to embed solid error handling directly into Claude MD files, ensuring your skills recover gracefully from failures.
 
 ## Why Error Handling Matters in Claude MD Files

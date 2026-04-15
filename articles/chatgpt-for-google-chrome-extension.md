@@ -11,7 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 ---
-{% raw %}
+
 # ChatGPT for Google Chrome Extension: A Developer Guide
 
 Chrome extensions provide a powerful way to extend browser functionality, and integrating ChatGPT opens up numerous possibilities for developers and power users. Whether you want to add AI-assisted writing, automate repetitive tasks, or create custom productivity tools, understanding how to build ChatGPT-powered extensions gives you a significant advantage.
@@ -365,4 +365,4 @@ Response truncated mid-sentence: The default `max_tokens` may cut off long respo
 
 Page context exceeding token limit: Summarize long pages before injecting them. Extract only the first 2,000 characters, or use the page's meta description and h1/h2 headings as a compact representation of the page content.
 
-{% endraw %}
+

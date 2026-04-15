@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Debugging skill configurations in Claude Code requires a systematic approach. When your skills behave unexpectedly or fail to trigger correctly, understanding the debug configuration workflow helps you identify and resolve issues quickly. This guide walks through practical debugging techniques that work with any Claude skill, from simple prompt modifications to complex multi-tool configurations.
 
 ## Understanding Skill Execution Context

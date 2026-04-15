@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for GraphQL Directives Workflow
 
 GraphQL directives provide a powerful way to annotate and transform your schema, but managing them across a growing codebase can quickly become overwhelming. A well-designed Claude Code skill can automate directive creation, enforce naming conventions, validate usage patterns, and even generate documentation. This guide walks you through building a comprehensive workflow for working with GraphQL directives using Claude Code skills.
@@ -386,7 +386,7 @@ A well-crafted Claude Code skill for GraphQL directives transforms what could be
 The key is to build incrementally, adding capabilities as you identify problems in your current workflow. Your directive skill should grow alongside your GraphQL API, providing increasing value as your schema matures. Teams that invest in this kind of tooling early find that their schemas stay coherent through growth phases that would otherwise produce an inconsistent tangle of ad-hoc annotations.
 
 The payoff compounds: a schema with well-managed directives is easier to audit, easier to document, easier to migrate, and easier to hand off to new developers who can read the intent of every field directly from its annotations.
-{% endraw %}
+
 
 ---
 

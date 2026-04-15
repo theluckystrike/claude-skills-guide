@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code with Astro Content Collections Workflow
 
 Astro's Content Collections provide a powerful, type-safe way to manage structured content in your projects. When combined with Claude Code's skill system, you can create intelligent workflows that automate content management, validate schemas, and streamline the entire authoring experience. This guide explores how to use Claude Code skills to enhance your Astro content collections workflow.
@@ -287,7 +287,7 @@ Static search integration. Use Claude Code to generate Pagefind or FlexSearch in
 Astro Content Collections combined with Claude Code skills create a powerful content management system. The type-safe schemas catch errors early, while Claude Code automates repetitive tasks and guides you through best practices. Start with simple collections and gradually adopt advanced patterns as your content needs grow.
 
 The key is integrating Claude Code as an active collaborator, let it handle schema generation, content validation, and structural consistency while you focus on writing quality content.
-{% endraw %}
+
 
 ## Advanced Configuration Patterns
 

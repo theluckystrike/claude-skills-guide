@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code vs Tabnine: Which is Better for Offline Private Codebases?
 
 When working with sensitive private codebases, whether proprietary enterprise software, healthcare systems with HIPAA requirements, or government projects with strict security clearance, developers need AI coding tools that respect data privacy while maintaining productivity. This comparison examines how Claude Code and Tabnine perform in offline and private codebase scenarios, helping you choose the right tool for security-sensitive development environments.
@@ -177,7 +177,7 @@ This hybrid approach maximizes both security and capability.
 For offline private codebases, Tabnine offers a more straightforward solution with true offline capabilities. However, Claude Code's enterprise offerings make it viable for organizations with compliance requirements that can use Anthropic's enterprise API services. Evaluate your specific security requirements, offline needs, and the complexity of development tasks to make the right choice for your team.
 
 The key consideration is understanding that Claude Code requires API access for its full capabilities, while Tabnine provides complete offline functionality at the cost of more limited AI assistance. For highly sensitive projects in air-gapped environments, Tabnine remains the practical choice. For organizations with enterprise security frameworks, Claude Code's advanced capabilities become accessible through proper configuration.
-{% endraw %}
+
 
 ---
 

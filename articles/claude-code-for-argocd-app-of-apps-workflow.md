@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 The App of Apps pattern is one of the most powerful ways to manage complex Kubernetes deployments with ArgoCD. Instead of manually creating dozens of Application resources, you define a single "root" Application that spawns all others. Claude Code can help you design, implement, and maintain this pattern efficiently.
 
@@ -257,7 +257,7 @@ Claude Code significantly accelerates your App of Apps workflow by automating YA
 
 Start with a simple two-level structure and expand as your platform grows. Claude can help you evolve the pattern from basic deployments to sophisticated multi-environment, multi-tenant configurations as your needs become more complex.
 
-{% endraw %}
+
 
 ---
 

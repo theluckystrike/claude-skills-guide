@@ -469,7 +469,7 @@ Start small, measure results, and iterate based on real feedback. The investment
 ---
 
 *Ready to start scaling Claude Code in your organization? Begin with a pilot team, document your learnings, and expand gradually. The investment in proper implementation will pay dividends in developer productivity and code quality.*
-{% endraw %}
+
 
 ---
 
@@ -494,3 +494,4 @@ Related Reading
 - [Async Product Discovery Process for Remote Teams Using Recorded Interviews](/async-product-discovery-process-for-remote-teams-using-recorded-interviews/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

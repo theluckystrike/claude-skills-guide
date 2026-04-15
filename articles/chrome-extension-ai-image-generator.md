@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension AI Image Generator: A Complete Guide for Developers
 
 Building a Chrome extension that integrates AI image generation opens up powerful possibilities for browser-based creative workflows. This guide walks you through the architecture, implementation patterns, and practical considerations for creating a chrome extension AI image generator that actually works.
@@ -227,4 +227,4 @@ Related Reading
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

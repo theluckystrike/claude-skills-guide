@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Container registries are the backbone of modern deployment pipelines, yet managing builds, tags, and pushes often involves repetitive CLI commands prone to human error. This guide shows you how to automate container registry workflows using Claude Code, reducing manual steps, preventing deployment errors, and giving your team a consistent, repeatable process regardless of which registry you use.
 
 ## Why Automate Container Registry Workflows
@@ -400,7 +399,7 @@ Pin base image digests for reproducibility. Instead of `FROM node:20-alpine`, us
 
 Document your tagging conventions in CLAUDE.md. Adding a note like "images are tagged as {service}-{environment}-{sha}" to your project's CLAUDE.md ensures Claude Code always generates commands consistent with your team's conventions without you needing to repeat that context in every prompt.
 
-{% endraw %}
+
 
 ---
 
@@ -425,3 +424,4 @@ Related Reading
 - [Claude Code for Aqua Security Container Workflow Guide](/claude-code-for-aqua-security-container-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

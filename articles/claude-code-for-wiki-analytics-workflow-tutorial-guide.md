@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Wiki Analytics Workflow Tutorial Guide
 
 Wiki platforms contain treasure troves of valuable data, from documentation to team knowledge bases. Analyzing this data effectively can unlock insights about content quality, user engagement, and knowledge gaps. you'll learn how to use Claude Code to build powerful wiki analytics workflows that automate data extraction, processing, and visualization.
@@ -257,4 +257,4 @@ Related Reading
 - [Claude Code for Engineering Wiki Workflow Tutorial](/claude-code-for-engineering-wiki-workflow-tutorial/)
 - [Claude Code for Metabase Analytics Workflow Guide](/claude-code-for-metabase-analytics-workflow-guide/)
 
-{% endraw %}
+

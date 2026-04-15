@@ -13,8 +13,8 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Infrastructure cost estimation is one of those tasks that feels simple until you are three months into a project and realize your AWS bill is triple what you projected. Infracost solves this problem by bringing cost visibility to your infrastructure-as-code workflow, and when combined with Claude Code, it becomes a powerful assistant for making cost-conscious decisions before you deploy.
 
 ## What Infracost Brings to Your Workflow

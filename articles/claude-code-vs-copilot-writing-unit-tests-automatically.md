@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code vs Copilot: Writing Unit Tests Automatically
 
 In the ever-evolving landscape of AI-powered coding assistants, the ability to automatically generate unit tests has become a crucial differentiator. Developers increasingly rely on these tools to improve code quality, reduce testing time, and catch bugs early in the development cycle. This article compares Claude Code and GitHub Copilot in their ability to write unit tests automatically, exploring their approaches, strengths, and practical examples.
@@ -188,7 +188,7 @@ While both tools can assist with unit test generation, Claude Code's agentic app
 The choice between these tools ultimately depends on your workflow needs. For teams that require comprehensive, automatically-verified test suites, Claude Code offers a more complete solution. For developers seeking quick suggestions during typing, Copilot remains a useful companion.
 
 Remember: AI-generated tests are a starting point. Regardless of which tool you use, always review generated tests to ensure they accurately reflect your intended behavior and cover the scenarios that matter most for your application.
-{% endraw %}
+
 
 ---
 

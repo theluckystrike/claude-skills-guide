@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Secret leaks are among the most critical security vulnerabilities in software development. A single exposed API key or database password can lead to data breaches, unauthorized access, and significant financial damage. The 2023 GitGuardian State of Secrets Sprawl report found that over 10 million secrets were exposed on public GitHub commits in a single year, and that figure has only grown. Gitleaks is a powerful open-source tool that scans Git repositories for secrets, and when combined with Claude Code, it becomes an even more powerful part of your security workflow. This guide shows you how to integrate Claude Code with Gitleaks for automated secret scanning from local development through production CI/CD pipelines.
 
 Why Integrate Claude Code with Gitleaks?
@@ -431,7 +430,7 @@ Integrating Claude Code with Gitleaks creates a solid secret scanning workflow t
 
 The key is to make secret scanning automatic and routine, so your team catches issues before they become security incidents. A secret that never enters Git history cannot become a breach, but a secret caught at the pre-commit stage is the next best outcome. Build the habit, automate the tooling, and use Claude Code to translate raw findings into the concrete steps your team needs to stay ahead of exposure.
 
-{% endraw %}
+
 
 ---
 
@@ -456,3 +455,4 @@ Related Reading
 - [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

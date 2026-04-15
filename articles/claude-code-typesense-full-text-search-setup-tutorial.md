@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Typesense Full Text Search Setup Tutorial
 
 Full-text search is a critical feature for modern applications, enabling users to find relevant content quickly and accurately. Typesense, an open-source search engine, provides lightning-fast, typo-tolerant search results. When combined with Claude Code's AI capabilities, you can create intelligent search experiences that understand context and intent. This comprehensive tutorial walks you through setting up Typesense with Claude Code to build powerful search functionality. from running the server locally to building a complete search pipeline with facets, filters, and a CLI interface.
@@ -407,7 +407,7 @@ Use Claude Code to generate your initial schema from a sample JSON document, wri
 Integrating Claude Code with Typesense opens up possibilities for building sophisticated search experiences with far less effort than rolling your own solution. This tutorial covered the essential setup, client configuration, schema design, bulk indexing with upsert support, weighted field searching, faceted filtering, typo tolerance tuning, synonyms, and geo-search.
 
 With these foundations in place, the next natural extensions are: connecting the indexer to a database change stream (e.g., Postgres logical replication or a webhook), adding vector search embeddings for semantic similarity alongside keyword matching, and building a React-based search UI using the Typesense InstantSearch adapter. Claude Code can accelerate every one of these steps by generating boilerplate, explaining API options, and catching edge cases before they reach production.
-{% endraw %}
+
 
 ---
 

@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 As software development teams become increasingly distributed across time zones, traditional synchronous code review practices often create bottlenecks. Developers wait hours, or even days, for feedback on pull requests, slowing down iteration cycles and frustrating team members. This is where Claude Code for async code review workflow transforms your development process.
 
 ## Understanding Async Code Review
@@ -353,7 +352,7 @@ Track key metrics to optimize your workflow:
 Claude Code transforms async code review from a bottleneck into a competitive advantage. By automating initial review passes, generating structured feedback, and integrating smoothly with existing tools, distributed teams can maintain high code quality without sacrificing productivity. The key is establishing clear workflows, crafting effective prompts, and treating Claude Code reviews as a collaborative starting point rather than a replacement for human insight.
 
 Implement these practices gradually, measure your outcomes, and continuously refine your prompts based on what works best for your team's unique composition and goals.
-{% endraw %}
+
 
 ---
 
@@ -378,3 +377,4 @@ Related Reading
 - [Claude Code for Changelog Review Workflow Tutorial](/claude-code-for-changelog-review-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

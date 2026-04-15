@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, mongodb, aggregation, data-pipeline]
 ---
 
-{% raw %}
+
 Claude Code MongoDB Aggregation Pipeline Workflow Guide
 
 MongoDB's aggregation framework is one of the most powerful tools for data analysis and transformation in the NoSQL world. When combined with Claude Code's capabilities, you can build sophisticated data pipelines that handle complex transformations, analytics, and real-time processing. This guide walks you through practical workflows for working with MongoDB aggregation pipelines using Claude Code.
@@ -461,7 +461,7 @@ Remember these best practices:
 - Set appropriate timeouts for long-running pipelines
 
 With these patterns and practices, you're well-equipped to build solid MongoDB aggregation workflows that scale with your application's needs.
-{% endraw %}
+
 
 ---
 

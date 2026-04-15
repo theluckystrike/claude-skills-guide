@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 AWS Web Application Firewall (WAF) is a critical security service that protects web applications from common web exploits and bots. However, configuring and managing AWS WAF rules can be complex and time-consuming. This guide shows you how to use Claude Code to automate AWS WAF workflows, from initial setup to ongoing management.
 
@@ -402,7 +402,7 @@ Claude Code transforms AWS WAF management from a manual, error-prone process int
 
 Start with the basic Web ACL template, then gradually add custom rules and automation. Remember to always test in non-production environments first, and use WAF's logging and metrics to continuously improve your security posture.
 
-{% endraw %}
+
 
 ---
 

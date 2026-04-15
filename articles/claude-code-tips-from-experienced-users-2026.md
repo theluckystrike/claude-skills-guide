@@ -13,8 +13,8 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Claude Code has evolved into an indispensable development companion. Through months of real-world usage, developers have discovered patterns that dramatically improve productivity. This collection of practical tips comes from experienced users who have integrated Claude Code into their daily workflows. From prompt engineering to skill selection, workflow automation, and debugging strategies, these insights will help you move from casual user to power user.
 
 ## Choose Skills That Match Your Stack

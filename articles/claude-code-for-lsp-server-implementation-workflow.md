@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for LSP Server Implementation Workflow
 
 The Language Server Protocol (LSP) has become the standard for enabling language features like autocomplete, goto definition, and refactoring across code editors. Implementing an LSP server from scratch, however, can be a daunting task involving complex JSON-RPC messaging, abstract syntax tree (AST) traversal, and editor integration. This is where Claude Code transforms the development experience, turning what could be weeks of work into a streamlined, iterative process.
@@ -291,4 +291,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

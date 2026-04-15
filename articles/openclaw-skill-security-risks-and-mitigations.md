@@ -12,8 +12,8 @@ score: 8
 permalink: /openclaw-skill-security-risks-and-mitigations/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 OpenCLAW opens powerful possibilities for extending Claude's capabilities through custom skills. However, with great power comes significant security considerations that developers must understand before deploying skills in production environments. This guide examines the primary security risks associated with OpenCLAW skills and provides practical mitigation strategies you can implement immediately.
 
 ## Understanding the Attack Surface

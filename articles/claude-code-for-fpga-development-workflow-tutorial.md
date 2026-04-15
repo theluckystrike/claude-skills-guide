@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 FPGA development has traditionally been a complex, tool-heavy process requiring specialized knowledge of hardware description languages like Verilog or VHDL, vendor-specific toolchains, and intricate debugging setups. Claude Code brings AI-assisted development capabilities to this domain, helping developers write cleaner HDL code, manage projects more efficiently, and automate repetitive tasks. This tutorial walks you through integrating Claude Code into your FPGA development workflow, from initial project scaffolding through simulation, synthesis, and deployment.
 
@@ -445,7 +445,7 @@ Claude Code transforms FPGA development by handling routine tasks, generating bo
 
 The key is treating AI as an intelligent assistant rather than an oracle, provide clear specifications, verify outputs rigorously through simulation, and maintain human oversight for critical timing and safety decisions. Start with small projects, build your collection of skills and scripts, and progressively tackle more complex FPGA designs with confidence. Over time, the collection of project-specific context files, constraint templates, and simulation scripts you build with Claude Code's help becomes a compounding productivity asset for every future project.
 
-{% endraw %}
+
 
 ---
 

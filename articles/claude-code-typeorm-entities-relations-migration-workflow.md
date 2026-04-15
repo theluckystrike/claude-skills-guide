@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code TypeORM Entities Relations Migration Workflow
 
 Building solid database layers with TypeORM requires careful attention to entity design, relationship mapping, and migration management. This guide walks you through a practical workflow using Claude Code to accelerate TypeORM development while maintaining code quality and database integrity. Each section includes production-ready patterns you can adapt directly to your NestJS, Express, or standalone TypeScript projects.
@@ -576,7 +576,7 @@ GraphQL with TypeGraphQL. For projects combining TypeORM with TypeGraphQL, Claud
 
 Seeding and test fixtures. Claude Code generates a seed script using TypeORM's DataSource that creates realistic test data for each entity in dependency order. The seed script uses factories that generate realistic data and can be run in CI before integration tests.
 
-{% endraw %}
+
 
 ---
 

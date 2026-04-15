@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Knip Dead Code Finder Workflow
 
 Dead code accumulates in every growing codebase, unused exports, obsolete dependencies, abandoned files, and TypeScript declarations that no longer serve any purpose. Left unchecked, this technical debt slows down CI pipelines, bloats bundle sizes, and creates confusion for developers navigating the codebase. Knip, the dead code finder for JavaScript and TypeScript projects, detects these issues systematically. When combined with Claude Code's agentic capabilities, you get an automated workflow that not only finds dead code but helps you safely remove it.
@@ -203,7 +203,7 @@ Document your cleanup efforts in a CHANGELOG or dedicated notes. This helps team
 ## Conclusion
 
 Knip combined with Claude Code creates a powerful dead code detection and removal workflow. The integration brings several key advantages: automated scanning during development, intelligent verification before deletion, and systematic cleanup that minimizes risk. By establishing this workflow early in your project and running it consistently, you maintain a cleaner codebase that stays maintainable as it grows. The time invested in setting up this workflow pays dividends through faster builds, smaller bundles, and easier code navigation for your entire team.
-{% endraw %}
+
 
 ---
 

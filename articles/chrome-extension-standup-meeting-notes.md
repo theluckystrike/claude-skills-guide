@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 
 As developers, we attend daily standups where capturing quick notes can make or break our productivity throughout the day. A well-built Chrome extension for standup meeting notes can transform how you track your progress, blockers, and plans. This guide walks you through building a functional Chrome extension tailored for standup note-taking, from the initial manifest file to practical enhancements that fit real engineering workflows.
 
@@ -383,4 +383,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

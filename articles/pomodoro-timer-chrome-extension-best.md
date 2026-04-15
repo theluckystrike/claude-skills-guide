@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Best Pomodoro Timer Chrome Extension for Developers and Power Users
 
 Managing focus time effectively is a challenge for developers working on complex coding tasks. The Pomodoro Technique, working in focused 25-minute intervals with short breaks, has become a staple productivity method. Finding the right Chrome extension to implement this technique can significantly impact your workflow.
@@ -327,4 +327,4 @@ Related Reading
 - [AI Task Prioritizer Chrome Extension: A Practical Guide for Developers](/ai-task-prioritizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

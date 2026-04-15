@@ -13,8 +13,8 @@ reviewed: true
 score: 8
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Software license compliance is a critical aspect of modern software development. As projects grow and incorporate open-source dependencies, tracking licensing information becomes increasingly complex. This tutorial demonstrates how to use Claude Code to automate license scanning workflows, identify compliance risks, and maintain a healthy dependency ecosystem.
 
 ## Why License Scanning Matters
@@ -478,7 +478,7 @@ License scanning doesn't have to be a manual, error-prone process. By using Clau
 Start with simple scans using language-native tools like `license-checker` or `pip-licenses`, then layer in deeper scanning with ScanCode for source-level analysis. Build your policy file incrementally as your team reaches consensus on allowed licenses. Wire the compliance check into CI so violations surface before merge rather than during a legal review.
 
 Claude Code is well-equipped to help you every step of the way, from initial setup and tool selection to debugging CI failures and drafting exception justifications. The combination of automated scanning and Claude's ability to reason about license implications makes it practical for teams of any size to maintain genuine compliance, not just checkbox compliance.
-{% endraw %}
+
 
 ---
 
@@ -503,3 +503,4 @@ Related Reading
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

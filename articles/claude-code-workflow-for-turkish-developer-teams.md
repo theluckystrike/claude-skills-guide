@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-workflow-for-turkish-developer-teams/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Turkish developer teams are increasingly adopting Claude Code as their primary AI coding assistant to accelerate development workflows and improve code quality. Turkey's tech sector has grown substantially over the past decade, with thriving startup ecosystems in Istanbul, Ankara, and Izmir producing globally competitive software teams. These teams face the same challenges as any modern development organization, maintaining code quality at speed, onboarding new engineers, managing technical debt, but with the added dimension of working across Turkish and English in a single codebase.
 
 This guide provides practical strategies for implementing Claude Code in team environments, covering setup, collaboration patterns, Turkish language integration, and essential skills for Turkish development teams working across backend, frontend, mobile, and DevOps domains.

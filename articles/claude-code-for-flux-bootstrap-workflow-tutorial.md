@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Flux Bootstrap Workflow Tutorial
 
 Flux bootstrap is the foundation of GitOps-based Kubernetes management, but the process involves multiple steps that can feel repetitive across different clusters and environments. Claude Code can significantly accelerate this workflow by generating configuration templates, explaining bootstrap commands, and automating repetitive setup tasks. This tutorial shows you how to use Claude Code effectively for Flux bootstrap workflows.
@@ -180,7 +180,7 @@ Implement proper Git branch protection. Since Flux will push changes to your rep
 Claude Code transforms Flux bootstrap from a manual, error-prone process into a guided workflow. By generating configuration templates, explaining complex options, and helping troubleshoot issues, it lets you focus on designing your GitOps architecture rather than wrestling with YAML syntax. Start with single-cluster bootstraps, then expand to multi-cluster patterns as your infrastructure grows.
 
 The key is providing Claude Code with enough context about your environment, repository structure, cluster names, and specific requirements, to generate accurate configurations. With this foundation, you can build solid, reproducible Kubernetes deployments managed entirely through Git.
-{% endraw %}
+
 
 ---
 

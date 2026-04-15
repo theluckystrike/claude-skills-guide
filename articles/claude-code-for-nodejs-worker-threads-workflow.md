@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Node.js Worker Threads Workflow
 
 Node.js worker threads enable developers to execute JavaScript in parallel, bypassing the single-threaded event loop limitations. When combined with Claude Code, you can create intelligent automation workflows that handle CPU-intensive tasks while maintaining responsive main threads. This guide explores practical patterns for integrating Claude Code with worker threads to build efficient, scalable applications.
@@ -307,7 +307,7 @@ Integrating Claude Code with Node.js worker threads unlocks powerful parallel pr
 
 Start with simple worker implementations and progressively add complexity as your requirements grow. The worker thread API is stable and well-supported, making it a reliable foundation for high-performance Node.js applications.
 
-{% endraw %}
+
 
 ---
 

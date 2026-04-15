@@ -13,7 +13,7 @@ score: 7
 permalink: /claude-code-axolotl-qlora-training-script-workflow/
 ---
 
-{% raw %}
+
 Claude Code Axolotl QLoRA Training Script Workflow
 
 Fine-tuning large language models with QLoRA (Quantized Low-Rank Adaptation) has become a cornerstone technique for customizing AI models on consumer hardware. Axolotl provides a powerful, unified interface for running these training workflows, but managing configurations, scripts, and monitoring can quickly become complex. Claude Code skills offer a transformative approach to automating and streamlining your entire Axolotl QLoRA training pipeline.
@@ -586,7 +586,7 @@ Claude Code transforms Axolotl QLoRA training from a manual, error-prone process
 The key is treating Claude Code not just as a chat interface, but as an integrated development partner that understands the specifics of Axolotl configurations, QLoRA parameters, and LLM training best practices. With the right skills loaded, Claude Code becomes invaluable for both newcomers learning fine-tuning and experienced practitioners optimizing their workflows.
 
 Start with a single working configuration, build your dataset validation and launch scripts, and progressively add monitoring and post-training automation as your pipeline matures. Each component you automate with Claude Code's help is one less distraction from the core work: building models that actually solve real problems.
-{% endraw %}
+
 
 ---
 

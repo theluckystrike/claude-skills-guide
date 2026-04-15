@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 WebAssembly (WASM) has transformed what's possible in browser-based applications. When you run compiled code in Chrome, you're tapping into a execution environment designed for near-native performance. This guide covers practical techniques for optimizing Chrome WASM performance in real-world applications.
 
@@ -383,4 +383,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

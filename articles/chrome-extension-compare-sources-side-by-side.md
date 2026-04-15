@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 How to Compare Sources Side by Side in Chrome Extensions
 
 Comparing two sources side by side is a common task for developers reviewing code changes, writers checking document revisions, or anyone needing to spot differences between two pieces of text. Chrome extensions offer powerful ways to bring this capability directly into your browser, eliminating the need to copy-paste content into external tools.
@@ -446,4 +446,4 @@ Related Reading
 - [1Password vs Bitwarden Chrome: Which Password Manager.](/1password-vs-bitwarden-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

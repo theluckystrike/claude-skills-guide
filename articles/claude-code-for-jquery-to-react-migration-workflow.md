@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Migrating a legacy jQuery application to React is one of the most challenging modernization tasks a frontend developer can face. jQuery's imperative DOM manipulation patterns differ fundamentally from React's declarative component architecture. However, Claude Code transforms this daunting migration into a systematic, manageable workflow. This guide explores how to use Claude Code's skills and capabilities to migrate jQuery codebases efficiently while maintaining application functionality.
 
@@ -176,7 +176,7 @@ Claude Code transforms jQuery-to-React migration from an overwhelming project in
 
 Start your migration today by having Claude Code analyze your codebase and provide a prioritized migration roadmap. The journey from jQuery to React becomes much more manageable with an AI partner guiding you through each conversion challenge.
 
-{% endraw %}
+
 
 ---
 

@@ -12,7 +12,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI distraction blocker Chrome extensions represent a powerful solution for developers and power users seeking to reclaim their attention in an increasingly noisy digital environment. Unlike traditional blockers that use static blocklists, AI-powered versions analyze page content in real-time, identifying contextually distracting elements and dynamically filtering them based on your work context.
 
 Building one from scratch teaches you Manifest V3 architecture, Chrome Extension APIs, local model inference, and event-driven content scripts. skills that transfer directly to any browser extension project.
@@ -592,4 +592,4 @@ Related Reading
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

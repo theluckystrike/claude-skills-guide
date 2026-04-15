@@ -210,7 +210,7 @@ Monitor and measure. Track metrics like issue detection rate, false positive fre
 Automated PR checks with Claude Code transform code review from a bottleneck into a scalable, consistent process. By integrating AI analysis into your CI/CD pipeline, you catch issues earlier, provide developers with actionable feedback, and maintain higher code quality with less effort. Start with simple implementations, iterate on your prompts, and progressively adopt advanced patterns as your workflow matures.
 
 The investment in setting up these automated checks pays dividends in reduced bugs, improved code consistency, and more efficient human reviews. Your team focuses on creative problem-solving while Claude handles the systematic analysis, exactly the division of labor that modern development requires.
-{% endraw %}
+
 
 ---
 
@@ -235,3 +235,4 @@ Related Reading
 - [Claude Code for Wazuh SIEM Workflow Tutorial](/claude-code-for-wazuh-siem-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

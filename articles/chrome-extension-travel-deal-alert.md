@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 Travel deal alert extensions represent a practical intersection of web scraping, notification systems, and user preference management. For developers interested in building these tools, understanding the underlying architecture and implementation patterns is essential for creating effective solutions.
 
 Whether you are building for personal use or shipping to the Chrome Web Store, the same core challenges appear: travel sites change their DOM frequently, prices need a reliable baseline to compare against, and users need notifications that are timely without being annoying. This guide covers each of those areas with working code you can adapt directly.
@@ -388,4 +388,4 @@ Related Reading
 - [Chrome Extension Open Box Deal Tracker: Build Your Own.](/chrome-extension-open-box-deal-tracker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

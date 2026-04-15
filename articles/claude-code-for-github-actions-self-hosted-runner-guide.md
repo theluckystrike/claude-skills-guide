@@ -463,7 +463,7 @@ If Claude Code is timing out inside a job, the most common cause is an overly br
 Integrating Claude Code with GitHub Actions self-hosted runners unlocks powerful AI-assisted development workflows while maintaining control over your infrastructure. Start with the basic workflow examples above, then customize them to match your team's needs. Remember to monitor API usage, secure your credentials, and implement proper logging for production deployments.
 
 With proper configuration, Claude Code becomes a valuable team member, handling code reviews, generating documentation, and assisting with complex refactoring tasks, all executing securely within your own infrastructure. The persistent nature of self-hosted runners means you can cache skill files, build up institutional prompts in a `skills/` directory, and run longer multi-step workflows that would time out on ephemeral hosted runners.
-{% endraw %}
+
 
 ---
 
@@ -488,3 +488,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

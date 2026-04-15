@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Java Virtual Threads (Loom) Workflow
 
 Java Virtual Threads, formerly known as Project Loom, represent one of the most significant changes to Java concurrency in the language's history. Released in Java 21, Virtual Threads enable developers to build highly scalable applications that can handle millions of concurrent operations with minimal overhead. This guide demonstrates how Claude Code can accelerate your Virtual Threads development workflow.
@@ -237,7 +237,7 @@ Java Virtual Threads (Project Loom) open new possibilities for building highly s
 4. Join the community: Follow the Loom mailing list and JEP discussions for latest updates
 5. Update your tooling: Ensure your IDE and build tools support Java 21+ features
 
-{% endraw %}
+
 
 ---
 

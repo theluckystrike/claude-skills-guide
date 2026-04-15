@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Audit Logging for Enterprise Compliance Workflow
 
 Enterprise compliance requirements demand comprehensive audit trails for any system that handles sensitive data or makes automated decisions. When teams adopt Claude Code for development workflows, implementing proper audit logging becomes essential for meeting regulatory requirements like SOC 2, ISO 27001, HIPAA, and GDPR. This guide provides practical patterns for building compliance-ready audit logging into your Claude Code skills and workflows.
@@ -318,7 +318,7 @@ Implementing comprehensive audit logging for Claude Code in enterprise environme
 
 The investment in proper audit logging pays dividends during compliance audits, security reviews, and incident investigations. Start with the patterns in this guide and adapt them to your specific organizational requirements.
 
-{% endraw %}
+
 
 ---
 

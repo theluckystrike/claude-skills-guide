@@ -240,7 +240,7 @@ Identify documentation tasks you perform frequently, weekly status updates, chan
 Claude Code transforms technical writing from a manual, time-consuming process into an automated workflow that produces consistent, high-quality documentation. By creating specialized skills for different documentation types, you build a reusable toolkit that improves with use. Start with one skill focused on your most frequent documentation task, then expand gradually as you discover more opportunities for automation.
 
 The key is treating your documentation workflow as a system worth optimizing, because well-maintained documentation is as valuable to your project as the code itself.
-{% endraw %}
+
 
 ---
 
@@ -265,3 +265,4 @@ Related Reading
 - [Claude Code LaTeX Document Writing Workflow Tutorial](/claude-code-latex-document-writing-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

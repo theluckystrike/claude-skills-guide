@@ -11,7 +11,7 @@ categories: [tutorials, integrations]
 tags: [claude-code, claude-skills, twistlock, prisma-cloud, security, devsecops]
 ---
 
-{% raw %}
+
 Claude Code for Twistlock Prisma Cloud Workflow Tutorial
 
 Cloud security has become a critical concern for development teams, and Twistlock (now part of Prisma Cloud) provides solid container and cloud-native security scanning capabilities. This tutorial demonstrates how to use Claude Code to automate Twistlock Prisma Cloud workflows, reducing manual effort and improving your security posture.
@@ -171,4 +171,4 @@ Related Reading
 - [Claude Code for Zuora Billing Workflow Tutorial](/claude-code-for-zuora-billing-workflow-tutorial/)
 - [Claude Code for Go Fuzz Workflow Tutorial Guide](/claude-code-for-go-fuzz-workflow-tutorial-guide/)
 
-{% endraw %}
+

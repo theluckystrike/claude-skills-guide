@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 ## How to Fix "Uncaught TypeError: Is Not a Function" in Claude Code
 
@@ -446,7 +446,7 @@ Remember to verify function existence before calling, use proper imports, handle
 
 With these debugging techniques and Claude Code's assistance, you'll spend less time fixing runtime errors and more time building great applications.
 
-{% endraw %}
+
 
 ---
 

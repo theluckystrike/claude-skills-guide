@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Kotlin Coroutines Flow Workflow
 
 Kotlin Coroutines Flow is the modern way to handle asynchronous data streams in Kotlin. When combined with Claude Code's AI-assisted development capabilities, you can dramatically accelerate your flow-based application development. This guide shows you how to use Claude Code effectively throughout your Kotlin Coroutines Flow workflow.
@@ -272,7 +272,7 @@ When working with Claude Code on Kotlin Flow projects, follow these principles:
 Kotlin Coroutines Flow provides a powerful foundation for reactive programming in Kotlin. By using Claude Code throughout your development workflow, from initial design through testing, you can implement solid flow pipelines faster while following best practices. The key is treating Claude Code as a collaborative partner that understands both Kotlin's flow semantics and your specific domain requirements.
 
 Start your next flow-based project with Claude Code, and experience how AI-assisted development transforms complex async logic into maintainable, testable code.
-{% endraw %}
+
 
 ---
 

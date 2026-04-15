@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code GitHub Discussions Summarizer Workflow
 
 GitHub Discussions have become the go-to place for open-source communities to ask questions, share ideas, and collaborate. But with active communities, discussions can quickly accumulate into hundreds of threads. Manually reading through all of them wastes valuable developer time. This guide shows you how to build an automated summarization workflow using Claude Code to efficiently digest GitHub Discussions and extract key insights.
@@ -255,7 +255,7 @@ When implementing this workflow in production, keep these tips in mind:
 Automating GitHub Discussion summaries with Claude Code transforms how your team consumes community feedback. Instead of spending hours scanning through threads, developers can quickly review concise summaries and focus on high-value work. The workflow is flexible, start with the basic version and extend it as your needs evolve.
 
 Start building your summarizer today, and you'll wonder how you ever managed without it.
-{% endraw %}
+
 
 ---
 

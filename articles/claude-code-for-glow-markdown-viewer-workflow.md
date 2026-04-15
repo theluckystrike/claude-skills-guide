@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Glow Markdown Viewer Workflow
 
 Documentation is the backbone of every successful software project, yet reading and navigating through markdown files can sometimes feel disjointed. The combination of Claude Code with Glow, a sleek markdown viewer, creates a powerful workflow that transforms how developers consume technical documentation. This guide walks you through building an efficient pipeline between Claude Code's AI capabilities and Glow's elegant markdown rendering.
@@ -167,7 +167,7 @@ The true power of Claude Code plus Glow lies in customization. Here are recommen
 The Claude Code and Glow workflow represents a significant improvement in how developers interact with documentation. By combining Claude's intelligent file discovery and analysis with Glow's beautiful rendering, you create a reading experience that feels natural and efficient. Start with the basic integrations, then gradually build more sophisticated automation as you discover what works best for your specific needs.
 
 This workflow isn't just about convenience, it's about making documentation as accessible and readable as possible, which ultimately leads to better-informed developers and more successful projects.
-{% endraw %}
+
 
 ---
 

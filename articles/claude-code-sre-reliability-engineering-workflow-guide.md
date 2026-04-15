@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, sre, reliability-engineering, claude-skills]
 ---
 
-{% raw %}
+
 
 Site Reliability Engineering (SRE) bridges the gap between development and operations, focusing on building and maintaining reliable systems at scale. Claude Code, with its powerful CLI tools and extensible skills framework, offers a solid toolkit for SRE practitioners. This guide walks through practical workflows that use Claude Code to enhance reliability engineering practices.
 
@@ -306,7 +306,7 @@ Start by placing the core SRE skill files in your `.claude/` directory, configur
 
 *Explore related skills like `incident-response-automation`, `observability-dashboard`, and `runbook-generator` to expand your SRE toolkit with Claude Code.*
 
-{% endraw %}
+
 
 ---
 

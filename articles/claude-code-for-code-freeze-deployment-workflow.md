@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Code freeze periods are critical moments in software development where teams halt new feature development to focus on stability, bug fixes, and release preparation. While code freeze is essential for ensuring reliable releases, it can also create bottlenecks if not managed properly. Claude Code offers powerful capabilities to streamline your code freeze deployment workflow, helping your team maintain productivity while ensuring only safe, vetted changes reach production.
 
 This guide explores practical strategies and code examples for using Claude Code during code freeze periods, from automated validation to controlled deployment pipelines.
@@ -209,7 +208,7 @@ Claude Code transforms code freeze from a stressful bottleneck into a controlled
 
 *Ready to implement these strategies? Start by configuring your code freeze validation skills in Claude Code, and gradually expand to more advanced automation as your team becomes comfortable with the workflow.*
 
-{% endraw %}
+
 
 ---
 
@@ -234,3 +233,4 @@ Related Reading
 - [Claude Code Kubernetes Deployment Workflow Guide](/claude-code-kubernetes-deployment-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

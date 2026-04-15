@@ -12,8 +12,8 @@ score: 7
 permalink: /planetscale-mcp-server-branching-workflow-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Database branching represents one of the most powerful capabilities in modern development workflows. [When combined with the Model Context Protocol (MCP), you can automate schema migrations](/building-your-first-mcp-tool-integration-guide-2026/), validate database states, and synchronize branch environments without manual intervention. This guide walks you through building an efficient Planetscale MCP server branching workflow that fits into your development pipeline.
 
 ## Understanding Planetscale Branching

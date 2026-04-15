@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Amazon Prime Day creates massive demand, and finding genuine deals among the noise takes effort. A well-built Chrome extension can automate deal discovery, filter by categories, and alert you to price drops. This guide walks through building a functional Prime Day deal finder extension from scratch.
 
 ## Understanding the Architecture
@@ -414,4 +414,4 @@ async function trimDeals() {
 
 A custom Chrome extension gives you control over deal discovery during Prime Day that generic shopping tools cannot match. Start with the foundation above and extend it with price history tracking or category-based alerts based on your needs.
 
-{% endraw %}
+

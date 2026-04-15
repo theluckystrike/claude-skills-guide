@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills, business-intelligence, automation]
 reviewed: true
 score: 7
 ---
-{% raw %}
+
 
 Business intelligence (BI) workflows typically involve collecting data from multiple sources, transforming it into actionable insights, and presenting findings through reports or dashboards. Claude Code can automate significant portions of this pipeline, from initial data extraction to final report generation. This guide shows you how to build a practical BI workflow using Claude Code and its skill ecosystem.
 
@@ -184,4 +184,4 @@ Related Reading
 - [Claude Code AWS S3 Multipart Upload Workflow Guide](/claude-code-aws-s3-multipart-upload-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

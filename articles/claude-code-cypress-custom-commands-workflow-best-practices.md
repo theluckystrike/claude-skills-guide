@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Cypress custom commands are one of the most powerful features for creating reusable, maintainable test automation. When combined with Claude Code's AI capabilities, you can dramatically accelerate the creation of custom commands while ensuring they follow industry best practices. This guide covers essential workflow patterns, TypeScript integration, and actionable advice for building solid custom commands.
 
@@ -451,7 +451,7 @@ This pattern is far faster than driving the UI to create test data. Use API comm
 
 By following these best practices and using Claude Code effectively, you'll build a maintainable custom command library that accelerates your Cypress test development.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for PyTorch Model Training Workflow
 
 Modern machine learning development requires juggling multiple components: data preprocessing, model architecture design, training loops, hyperparameter tuning, and deployment. Claude Code, the command-line interface for Claude, can significantly accelerate each stage of your PyTorch workflow. This guide walks you through practical ways to integrate Claude Code into your model training pipeline, with concrete examples you can adapt directly to your projects.
@@ -412,7 +412,7 @@ Claude Code transforms PyTorch development by providing intelligent assistance a
 The patterns covered here, validation hooks, warmup schedulers, mixed precision training, and Optuna integration, represent the concerns that come up in nearly every serious training project. Having Claude Code generate them correctly the first time, rather than searching documentation or copying from old notebooks, compounds into significant time savings across a project.
 
 The key is to view Claude Code not as a replacement for your expertise, but as a powerful tool that amplifies your capabilities and accelerates your development cycle. The best results come from pairing it with clear project context and iterative refinement of its suggestions.
-{% endraw %}
+
 
 ---
 

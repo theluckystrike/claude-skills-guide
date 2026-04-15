@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Web Share API Workflow Tutorial
 
 The Web Share API is a powerful browser feature that enables web applications to invoke the native sharing capabilities of a user's device. When combined with Claude Code's development workflow, you can create smooth sharing experiences that feel natural and efficient. This tutorial walks you through building a solid Web Share API workflow using Claude Code as your development assistant.
@@ -581,7 +581,7 @@ The Web Share API, combined with Claude Code's development workflow, enables you
 The core implementation is straightforward, but production quality requires attention to fallback depth, analytics instrumentation, file sharing capability detection, and thorough testing across both native-share and fallback paths. Claude Code handles the repetitive scaffolding and edge-case analysis, letting you focus on the design decisions that actually differentiate your sharing experience.
 
 Remember to always provide fallback options for unsupported browsers, and use Claude Code to iterate quickly on your implementation. With these tools and practices, you can create share features that feel natural and effective for your users.
-{% endraw %}
+
 
 ---
 

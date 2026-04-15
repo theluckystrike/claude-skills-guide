@@ -12,8 +12,8 @@ score: 7
 permalink: /claude-code-nextjs-image-optimization-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Image optimization in Next.js combines the framework's built-in Image component with modern formats like WebP and AVIF. [When you pair Next.js image handling with Claude Code's CLI capabilities](/best-claude-code-skills-to-install-first-2026/), you can automate optimization workflows, validate image implementations, and maintain consistent performance across your application.
 
 This guide covers practical approaches for [developers using Claude Code for frontend work](/best-claude-code-skills-for-frontend-development/) with Next.js image optimization, from foundational component usage to advanced automation and testing patterns.

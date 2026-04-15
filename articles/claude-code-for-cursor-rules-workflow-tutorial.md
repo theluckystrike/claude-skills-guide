@@ -601,7 +601,7 @@ Start with simple rules and basic workflows, then gradually add complexity as yo
 The investment in a well-crafted `.cursorrules` file compounds over time. Every new developer who joins the project gets the same AI-assisted experience from day one. Every automation script you write benefits from the shared context. Every code review catches the same class of violations. The upfront cost of writing precise, well-structured rules pays for itself within the first week of use.
 
 Remember: The goal isn't to automate everything, but to handle repetitive tasks intelligently so you can focus on solving complex problems that truly need human creativity and expertise.
-{% endraw %}
+
 
 ---
 
@@ -626,3 +626,4 @@ Related Reading
 - [Claude Code for Sigma Rules Detection Workflow Tutorial](/claude-code-for-sigma-rules-detection-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

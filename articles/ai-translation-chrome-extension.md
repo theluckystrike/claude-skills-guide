@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 AI Translation Chrome Extension: A Developer Guide
 
 Building an AI-powered translation extension for Chrome combines browser extension development with modern machine learning APIs. This guide covers the essential components, architectural decisions, and practical code patterns you need to create a functional translation tool.
@@ -357,4 +357,4 @@ API key exposed in extension source: Never hard-code the key. Store it in `chrom
 
 Translation breaking on React/Vue pages: Single-page apps re-render the DOM after navigation, undoing direct text node replacements. Use a `MutationObserver` to re-apply translations to newly added nodes, and skip nodes that already contain translated text by checking a custom data attribute like `data-translated="true"`.
 
-{% endraw %}
+

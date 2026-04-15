@@ -13,8 +13,8 @@ reviewed: true
 score: 7
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Dependency injection isn't just for traditional software development, it transforms how you build and maintain Claude skills. When your skills grow beyond simple prompts into complex workflows, applying dependency injection principles makes them testable, reusable, and easier to evolve.
 
 ## What Dependency Injection Means for Claude Skills

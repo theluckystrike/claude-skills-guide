@@ -12,7 +12,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Fiber Go Web Framework Workflow
 
 The Fiber framework has become one of the most popular Go web frameworks due to its Express-like API and blazing fast performance. When combined with Claude Code, you can significantly accelerate your development workflow, reduce boilerplate code, and catch errors before they reach production. This guide walks you through integrating Claude Code into your Fiber projects effectively.
@@ -325,7 +325,7 @@ To maximize your productivity, follow these guidelines when working with Claude 
 Integrating Claude Code into your Fiber Go web framework workflow dramatically improves development speed while maintaining code quality. From generating route handlers to implementing authentication and testing, Claude Code serves as an intelligent pair programmer that understands Go and Fiber conventions. Start incorporating these patterns into your projects today and experience the productivity gains firsthand.
 
 The key is providing clear context, reviewing generated code, and building upon solid foundations. As you become more comfortable with the workflow, you'll discover even more ways Claude Code can accelerate your Fiber development journey.
-{% endraw %}
+
 
 ---
 

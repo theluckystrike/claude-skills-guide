@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Choosing the right AI coding assistant can significantly impact your productivity as a React developer. While both Claude Code and Cursor offer powerful AI capabilities, they take different approaches to assisting with React development. This guide examines their strengths with practical examples to help you decide which tool fits your workflow.
 
@@ -514,7 +514,7 @@ The ideal choice depends on your development style, team size, and how much you 
 
 Many React developers ultimately use both tools for different aspects of their workflow, and that is a perfectly reasonable conclusion.
 
-{% endraw %}
+
 
 ---
 

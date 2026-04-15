@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Web App Manifest Configuration Guide
 
 Web app manifests are the backbone of modern progressive web applications (PWAs) and define how your application behaves when installed on a user's device. When working with Claude Code, understanding how to properly configure these manifests ensures your AI-assisted projects are production-ready and installable. This guide walks you through the essential configurations, common pitfalls, and best practices for web app manifest files in Claude Code projects.
@@ -543,7 +543,7 @@ Here is a quick-reference table of all manifest properties with their support st
 
 By following these guidelines and using Claude Code's assistance, you can create web app manifests that provide excellent user experiences and ensure your applications are installable across all major platforms.
 
-{% endraw %}
+
 
 ---
 

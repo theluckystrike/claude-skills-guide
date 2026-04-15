@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for GraphQL Codegen Workflow Tutorial
 
 If you're working with GraphQL in a modern TypeScript project, you've probably experienced the tedium of manually keeping your API types in sync with your schema. GraphQL Codegen solves this problem by automatically generating types from your schema, but setting up and maintaining the workflow can still be time-consuming. This is where Claude Code becomes your secret weapon.
@@ -730,7 +730,7 @@ The combination of a well-structured `codegen.yml`, a clear agent prompt in `.cl
 Start implementing this workflow in your project today, and you'll wonder how you ever managed without it.
 
 Remember to regularly update your Claude Code agents as your project evolves, and keep your codegen configuration in version control to ensure consistency across your team.
-{% endraw %}
+
 
 ---
 

@@ -185,7 +185,7 @@ Testing: Test snapshots on non-production data first. Verify that changes are ca
 Claude Code transforms dbt snapshot management from a manual, error-prone process into an assisted workflow where you describe requirements and let the AI handle implementation details. Whether you're creating new snapshots, querying historical data, or troubleshooting issues, Claude Code provides intelligent guidance throughout the process.
 
 Start small with one snapshot, validate the behavior, then expand to other dimension tables. The time savings compound quickly as your snapshot collection grows.
-{% endraw %}
+
 
 ---
 
@@ -210,3 +210,4 @@ Related Reading
 - [Claude Code for OSS Security Policy Workflow Tutorial](/claude-code-for-oss-security-policy-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

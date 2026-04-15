@@ -12,7 +12,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Manifest V3 Privacy: What Developers and Power Users Need to Know
 
 Chrome extensions have long been a powerful way to customize browser behavior, but they also present significant privacy concerns. With the transition from Manifest V2 to Manifest V3, Google introduced substantial changes to how extensions handle permissions, network requests, and user data. Understanding these changes helps developers build privacy-respecting extensions and empowers power users to make informed decisions about the extensions they install.
@@ -353,4 +353,4 @@ Related Reading
 - [Chrome Extension Screen Recorder for Meetings: A.](/chrome-extension-screen-recorder-meetings/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -501,7 +501,7 @@ Multi-arch build failures: ARM builds on x86 CI runners require QEMU emulation. 
 Integrating Claude Code with Docker and CI/CD pipelines transforms your development workflow by bringing AI assistance to automation tasks. From generating Dockerfiles to analyzing pipeline failures, Claude Code serves as a powerful companion for containerized development. Start with simple integrations and progressively adopt more advanced patterns as your team's container expertise grows.
 
 The combination of Claude Code's intelligent assistance with Docker's containerization capabilities creates a foundation for efficient, automated, and reliable software delivery, empowering developers to focus on building features while AI handles routine DevOps tasks. Whether you are authoring multi-stage builds, configuring layer caching in GitHub Actions, running vulnerability scans, or translating pipelines between CI platforms, Claude Code reduces the configuration burden and catches the kind of subtle mistakes, pinning, permissions, secret handling, that cause production incidents.
-{% endraw %}
+
 
 ---
 
@@ -526,3 +526,4 @@ Related Reading
 - [Claude AI Chrome Extension: A Developer's Guide to Integration](/claude-ai-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

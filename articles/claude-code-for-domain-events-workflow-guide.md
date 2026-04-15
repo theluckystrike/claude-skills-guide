@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Domain Events Workflow Guide
 
 Domain events are a powerful architectural pattern that enables loose coupling, scalability, and traceability in modern applications. When something significant happens in your domain, like a user registering, an order being placed, or a payment being processed, domain events capture these occurrences as first-class objects that other parts of your system can react to. This guide shows you how to use Claude Code to design, implement, and maintain solid domain event workflows.
@@ -269,7 +269,7 @@ Domain events provide a foundation for building scalable, maintainable systems t
 
 Remember that domain events are a tool for expressing business behavior, not just a technical implementation detail. Let your business domain guide your event design, and Claude Code will help you translate those concepts into clean, maintainable code.
 
-{% endraw %}
+
 
 ---
 

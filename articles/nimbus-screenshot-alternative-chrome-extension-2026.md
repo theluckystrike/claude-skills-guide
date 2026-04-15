@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Nimbus Screenshot has long been a popular choice for browser-based screen capture, offering annotation tools, scrolling captures, and quick sharing features. However, as workflows become more automated and developers increasingly need programmatic control over screenshots, many are seeking alternatives that integrate better with development environments and support automation pipelines.
 
 This guide examines the strongest Nimbus Screenshot alternatives in 2026, with a focus on extensions that developers and power users can incorporate into technical workflows.
@@ -406,7 +405,7 @@ The right alternative ultimately depends on where screenshots fit into your deve
 
 ---
 
-{% endraw %}
+
 
 ---
 
@@ -431,3 +430,4 @@ Related Reading
 - [Semrush Alternative Chrome Extension in 2026](/semrush-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

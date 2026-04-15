@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Gradual rollouts are a critical component of modern software delivery, allowing teams to release new features to a small percentage of users first, monitor for issues, and incrementally expand coverage. LaunchDarkly is a popular feature management platform that provides sophisticated targeting and rollout capabilities, while Claude Code brings intelligent automation to the entire process. This tutorial shows you how to combine these tools for efficient gradual feature rollouts.
 
@@ -242,7 +242,7 @@ Combining Claude Code with LaunchDarkly creates a powerful workflow for gradual 
 
 The key is establishing clear patterns early: consistent flag naming, centralized configuration, automated progressions, and comprehensive monitoring. With these elements in place, you can confidently release features to millions of users while minimizing risk.
 
-{% endraw %}
+
 
 ---
 

@@ -12,11 +12,11 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 The Chrome browser's bookmark bar remains one of the most frequently accessed features for developers and power users who need quick access to documentation, repositories, and internal tools. For organizations deploying Chrome across multiple machines, understanding how to configure bookmark bar settings through enterprise policies becomes essential for maintaining consistency and productivity.
 
 This guide covers the available Chrome enterprise policies related to bookmark bar configuration, practical implementation methods, and real-world examples for IT administrators and developers managing Chrome deployments.
-{% endraw %}
+
 
 ## Understanding Chrome Enterprise Policies for Bookmarks
 

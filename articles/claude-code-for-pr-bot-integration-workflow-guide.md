@@ -13,8 +13,8 @@ reviewed: true
 score: 8
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 PR bots have become essential tools for maintaining code quality and streamlining code review processes. When you integrate Claude Code into these workflows, you unlock powerful capabilities like automated code analysis, intelligent summarization, and contextual feedback generation. This guide walks you through practical approaches to building effective PR bot integrations that enhance your development pipeline.
 
 ## Understanding PR Bot Integration Points
@@ -258,5 +258,4 @@ Related Reading
 - [Claude Code for Benchmark CI Integration Workflow](/claude-code-for-benchmark-ci-integration-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 {% endraw %}

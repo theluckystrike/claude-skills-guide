@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills, tech-lead, team-coordination]
 ---
 
-{% raw %}
+
 
 As a tech lead managing multiple engineering teams, keeping everyone aligned on architecture decisions, coding standards, and project priorities is a constant challenge. Claude Code offers powerful features that can automate much of this coordination work, reducing meeting fatigue while improving consistency across your organization. This guide covers practical workflows for using Claude Code as your cross-team alignment tool.
 
@@ -200,7 +200,7 @@ Claude Code transforms cross-team coordination from a constant struggle into a s
 
 Start small by creating one team standards skill and gradually expand your automation coverage. Your teams will thank you for the time saved and the clarity gained.
 
-{% endraw %}
+
 
 ---
 

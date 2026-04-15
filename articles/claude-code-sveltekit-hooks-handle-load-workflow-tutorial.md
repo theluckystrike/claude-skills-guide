@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code SvelteKit Hooks Handle Load Workflow Tutorial
 
 SvelteKit's hooks system is one of the most powerful features for handling server-side logic, authentication, and request processing. Combined with the `load` function workflow, it provides a solid architecture for building modern web applications. In this tutorial, you'll learn how to effectively work with SvelteKit hooks, the `handle` function, and the `load` workflow using Claude Code to accelerate your development.
@@ -616,7 +616,7 @@ SvelteKit's hooks system and load workflow form the backbone of server-side requ
 The `sequence` helper, layout load inheritance, and `Promise.all` parallel fetching are the three techniques that separate good SvelteKit applications from great ones. Combined with Claude Code's ability to generate and refactor these patterns quickly, you can build solid, secure, and performant SvelteKit applications with significantly less boilerplate than traditional Node.js frameworks require.
 
 By internalizing the request flow, from `handle` setting `locals`, through layout loads establishing shared context, to page loads fetching specific data, you'll know exactly where to place each piece of logic and how to debug it when something goes wrong.
-{% endraw %}
+
 
 ---
 

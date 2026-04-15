@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Semgrep Static Analysis Workflow
 
 Static analysis is a critical component of secure software development, and Semgrep has emerged as a powerful, developer-friendly tool for finding bugs, security vulnerabilities, and code quality issues. When combined with Claude Code's natural language processing and automation capabilities, you can create a highly efficient static analysis workflow that integrates smoothly into your development pipeline.
@@ -240,7 +240,7 @@ Start by running basic scans, then progressively build custom rules and automati
 ---
 
 *This guide is part of the Claude Skills Guide series, providing practical workflows for developers integrating AI assistance into their development pipelines.*
-{% endraw %}
+
 
 ---
 

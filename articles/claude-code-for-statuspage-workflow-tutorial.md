@@ -11,7 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-for-statuspage-workflow-tutorial/
 ---
-{% raw %}
+
 
 Status pages are critical for transparent communication with users during incidents and maintenance windows. Managing status pages manually can be time-consuming, especially when you're dealing with multiple components, scheduled maintenance, and rapid incident updates. This tutorial shows you how to use Claude Code to automate your statuspage workflow, from incident creation to automated status updates based on your monitoring systems.
 
@@ -296,7 +296,7 @@ Automating your statuspage workflow with Claude Code transforms how you communic
 
 Start with basic incident creation, then gradually add component monitoring and maintenance automation as your workflow matures. The key is to maintain a balance between automation and human oversight, your users will thank you for fast, accurate updates during critical moments.
 
-{% endraw %}
+
 
 ---
 

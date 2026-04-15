@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Chargebee Subscription Workflow: A Developer's Guide
 
 Chargebee is a popular subscription billing platform that helps businesses manage recurring revenue, handle complex pricing models, and automate billing operations. Integrating Chargebee into your application requires careful planning and solid implementation. This guide shows you how to use Claude Code to streamline your Chargebee subscription workflows, from initial setup to advanced automation scenarios.
@@ -245,7 +245,7 @@ Test edge cases. Don't just test happy paths. Claude Code can help you identify 
 Claude Code significantly accelerates Chargebee subscription workflow development by generating well-structured, maintainable code that follows best practices. Whether you're setting up initial integrations, building webhook handlers, or implementing complex subscription operations, Claude Code serves as an intelligent pair programmer that understands both your application's context and subscription billing patterns.
 
 Remember to provide Claude Code with relevant context about your existing codebase, test coverage requirements, and any specific business rules that govern your subscription logic. This context enables the AI to generate code that truly fits your project.
-{% endraw %}
+
 
 ---
 

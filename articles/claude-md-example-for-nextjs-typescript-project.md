@@ -13,8 +13,8 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Building modern web applications with Next.js and TypeScript requires efficient workflows and consistent code patterns. Claude Code, combined with well-structured skill files in Markdown format, transforms how developers approach full-stack development. This guide provides concrete examples of setting up and using Claude skills specifically designed for Next.js TypeScript projects.
 
 ## Why Claude Skills Matter for Next.js Projects

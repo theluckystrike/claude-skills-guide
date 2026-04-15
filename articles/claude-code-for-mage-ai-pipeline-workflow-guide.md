@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Mage AI Pipeline Workflow Guide
 
 Mage AI is an open-source data pipeline orchestration platform that empowers data engineers to build, test, and deploy ETL pipelines with ease. When combined with Claude Code, you gain an intelligent assistant that can accelerate pipeline development, debug issues, and help you implement best practices. This guide walks through practical workflows for integrating Claude Code into your Mage AI projects.
@@ -564,7 +564,7 @@ Task: Build a daily pipeline that ingests Stripe payment events, enriches them w
 Claude Code transforms Mage AI pipeline development from a manual process into a collaborative workflow. By using Claude for scaffolding, debugging, optimization, testing, and documentation, you can significantly accelerate your data engineering productivity. Start with one workflow. such as generating pipeline scaffolding. and gradually incorporate more advanced use cases as you become comfortable with the collaboration pattern.
 
 The key is treating Claude as a pair programmer who understands data engineering concepts and Mage AI specifics. Provide clear requirements, review suggestions critically, and iterate toward solid, production-ready pipelines. Over time, as you build up a history of successful prompts and generated patterns for your specific stack, working with Claude on Mage pipelines becomes dramatically faster than writing every block from scratch.
-{% endraw %}
+
 
 ---
 

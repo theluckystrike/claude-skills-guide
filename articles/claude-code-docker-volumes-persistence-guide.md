@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 When running Claude Code inside Docker containers, understanding how to persist data across container restarts becomes essential for maintaining development state, preserving generated artifacts, and managing skill configurations. This guide covers Docker volume strategies that work smoothly with Claude Code workflows, including real-world examples, comparison tables, and common pitfalls to avoid.
 
@@ -469,4 +469,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

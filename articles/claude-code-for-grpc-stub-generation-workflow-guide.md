@@ -13,7 +13,7 @@ score: 8
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for gRPC Stub Generation Workflow Guide
 
 gRPC stub generation is a critical part of building microservices that communicate efficiently. While Protocol Buffers and gRPC tools are powerful, manually managing the generation workflow can be tedious and error-prone. This guide shows you how to use Claude Code to automate and streamline your gRPC stub generation process, saving time and reducing mistakes.
@@ -244,7 +244,7 @@ When gRPC stubs fail to compile or have runtime errors, share the error messages
 Claude Code transforms gRPC stub generation from a manual, error-prone process into an automated, reliable workflow. By setting up proper project structure, using buf for generation, and using Claude's verification capabilities, you can significantly reduce the time spent on boilerplate code while improving code quality.
 
 Start by defining clear proto file conventions, create reusable generation templates, and let Claude Code handle the repetitive tasks. Your future self will thank you when maintaining microservices becomes noticeably smoother.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 # Automate Code Reviews with Claude Code
 
 ## The Problem

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Effective log management is crucial for maintaining healthy applications and identifying issues. Datadog provides powerful log analytics capabilities, and Claude Code can enhance your workflow by automating repetitive tasks, constructing complex queries, and providing intelligent log analysis. This tutorial demonstrates how to combine Claude Code skills with Datadog to streamline your log management processes.
 
@@ -162,7 +162,7 @@ Claude Code transforms Datadog log management from a manual, time-consuming proc
 
 Start with the basic search workflows, then gradually adopt more sophisticated automation as you become comfortable with Claude Code's capabilities. The time invested in setting up these workflows pays dividends through faster incident response and deeper operational insights.
 
-{% endraw %}
+
 
 ---
 

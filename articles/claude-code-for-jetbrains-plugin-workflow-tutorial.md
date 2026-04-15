@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Developing JetBrains IDE plugins can be a complex endeavor, requiring deep understanding of the IntelliJ Platform SDK, XML configurations, and platform-specific APIs. Claude Code transforms this workflow by providing intelligent assistance throughout the entire plugin development lifecycle, from initial scaffolding to debugging and deployment. This tutorial walks you through practical strategies for using Claude Code to build, test, and maintain JetBrains plugins more efficiently.
 
@@ -238,7 +238,7 @@ Start small, experiment with the examples in this tutorial, and gradually incorp
 
 *Ready to build your first JetBrains plugin? Use this tutorial as a starting point, and don't hesitate to ask Claude Code for help with specific implementation challenges. Happy coding!*
 
-{% endraw %}
+
 
 ---
 

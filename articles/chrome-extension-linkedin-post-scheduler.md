@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension LinkedIn Post Scheduler: A Developer's Guide
 
 Building a Chrome extension to schedule LinkedIn posts opens up powerful automation possibilities for content creators, marketers, and developers who want to automate their social media workflow. This guide walks you through the architecture, implementation details, and practical considerations for creating a LinkedIn post scheduler extension.
@@ -334,4 +334,4 @@ Post not publishing due to rate limiting: Add a 3-5 second delay between opening
 
 Use your extension responsibly. LinkedIn's Terms of Service prohibit automated bulk posting. Test thoroughly since LinkedIn's DOM structure changes frequently.
 
-{% endraw %}
+

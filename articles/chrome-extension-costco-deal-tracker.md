@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome extension Costco deal trackers represent a practical category of shopping automation tools that help users monitor price changes, detect deals, and get notified when items drop to target prices. For developers and power users, building your own Costco deal tracker extension provides full control over notification preferences, tracking logic, and data storage without relying on third-party services.
 
 ## Understanding Costco Deal Tracking Challenges
@@ -301,4 +301,4 @@ Related Reading
 - [Building a Chrome Extension for Gaming Deal Finding](/chrome-extension-gaming-deal-finder-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

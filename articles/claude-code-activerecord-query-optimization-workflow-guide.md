@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 ActiveRecord is Rails' powerful ORM that abstracts database interactions, but it can silently introduce performance bottlenecks if you're not careful. N+1 queries, missing indexes, and inefficient query patterns can turn a snappy application into a sluggish one. This guide shows you how to use Claude Code to identify, diagnose, and fix ActiveRecord performance issues systematically.
 
@@ -237,7 +237,7 @@ Optimizing ActiveRecord queries is essential for building fast, scalable Rails a
 
 Remember: every database query has a cost. By fetching only what you need, when you need it, you'll create a more responsive experience for your users and a more efficient application overall.
 
-{% endraw %}
+
 
 ---
 

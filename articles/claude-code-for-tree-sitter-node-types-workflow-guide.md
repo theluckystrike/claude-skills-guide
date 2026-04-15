@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Tree-sitter Node Types Workflow Guide
 
 Tree-sitter has become the backbone of modern code analysis tools, powering everything from syntax highlighting to refactoring engines. But working effectively with Tree-sitter node types requires understanding how to parse, navigate, and transform the Abstract Syntax Tree (AST) efficiently. This guide shows you how to use Claude Code to streamline your Tree-sitter workflow.
@@ -309,4 +309,4 @@ Related Reading
 - [Claude Code for Tree-sitter Playground Workflow Guide](/claude-code-for-tree-sitter-playground-workflow-guide/)
 - [Claude Code for Tree-sitter Workflow Tutorial](/claude-code-for-tree-sitter-workflow-tutorial/)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Fast Web Components Workflow
 
 Web components represent the future of reusable UI development, but setting up a productive workflow can be time-consuming. This guide shows you how to use Claude Code to accelerate every phase of web components development, from scaffolding to testing to deployment.
@@ -282,7 +282,7 @@ Claude will execute the test command and help interpret results.
 Claude Code transforms web components development from repetitive boilerplate generation to intelligent assistance. By using AI for scaffolding, debugging, and testing, you can focus on what matters: building great user experiences.
 
 Start with one component, establish your patterns, and expand your Claude Code skills as your component library grows. The time saved on repetitive tasks quickly compounds into significant productivity gains.
-{% endraw %}
+
 
 ---
 

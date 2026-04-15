@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Chrome extensions that handle reading, annotation, and note-taking have become essential tools for developers, researchers, and knowledge workers. Whether you're building a read-it-later app, a research assistant, or a productivity tool, understanding how to export highlights and notes programmatically opens up powerful integration possibilities.
 
@@ -459,4 +459,4 @@ async function compressJSON(data) {
 
 These patterns work whether you are extending an existing annotation tool or building a new reading companion from scratch. Start with the data structure that matches your needs, then layer in export formats as your users require them.
 
-{% endraw %}
+

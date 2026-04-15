@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code as Your Technical Co-founder: Workflow Productivity Guide
 
 Every successful startup needs a technical co-founder who can translate business vision into technical reality. But not every founder has access to that ideal partner. Claude Code emerges as a powerful alternative, acting as your ever-patient technical partner who never sleeps, never burns out, and brings decades of collective engineering knowledge to every decision. This guide explores how to structure your workflow to get the most out of Claude Code as your virtual technical co-founder.
@@ -270,7 +270,7 @@ Claude Code as a technical co-founder isn't about replacing human judgment, it's
 
 Start with small interactions, build context over time, and watch as your development velocity transforms. Your virtual technical co-founder is ready to help you ship faster.
 
-{% endraw %}
+
 
 ---
 

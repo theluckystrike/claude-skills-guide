@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 If you are a developer or power user looking to speed up your workflow with AI-assisted coding, the Claude Code beta program offers early access to powerful features that can transform how you write, test, and deploy code. This guide walks you through the process of joining the beta program and making the most of what it offers.
 
@@ -173,4 +173,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 ## Claude Code vs Cursor 2026: Detailed Comparison for Developers
 
@@ -211,7 +211,7 @@ Cursor and Claude Code are not direct competitors. they are complementary tools 
 
 For teams, Claude Code's skill system offers a unique advantage. the ability to codify and share best practices as executable AI workflows. This makes Claude Code particularly compelling for engineering organizations that want to standardize how AI is used across their team.
 
-{% endraw %}
+
 
 ---
 

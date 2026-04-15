@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-aws-ecs-fargate-setup-deployment-tutorial/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 ## Claude Code AWS ECS Fargate Setup Deployment Tutorial
 
 [AWS ECS Fargate provides serverless container orchestration](/aws-mcp-server-cloud-automation-with-claude-code/), eliminating the need to manage underlying EC2 instances. This guide walks through setting up and deploying containerized applications to ECS Fargate using Claude Code.
@@ -377,5 +377,4 @@ Health check failing on new tasks: If the application takes more than 30 seconds
 Secrets Manager not injecting into container environment: Ensure the task execution role has `secretsmanager:GetSecretValue` and that the secret ARN in the task definition matches exactly (including the version suffix if used).
 
 Claude Code accelerates each phase of ECS Fargate deployment. generating Terraform and task definitions, writing tests, and producing deployment runbooks. Start with a single-task deployment and add complexity incrementally.
-
 {% endraw %}

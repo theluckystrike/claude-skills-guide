@@ -847,7 +847,7 @@ Combining Claude Code with LitServe and Lightning AI creates a powerful developm
 The key to success is treating Claude Code as a collaborative partner, provide clear context about your model architecture, performance requirements, and deployment targets. With these inputs, Claude Code transforms complex AI serving tasks into manageable development steps.
 
 Concretely, the workflow that works best is: describe your model and SLA requirements to Claude Code, let it generate the initial `LitAPI` scaffold with appropriate batching and caching settings, ask it to add observability and tests, then use it to generate the Docker and CI/CD configuration. What would take a senior engineer two to three days to assemble correctly from documentation and Stack Overflow becomes a focused two-to-four hour session. The remaining complexity, tuning batch sizes against your actual traffic patterns, calibrating cache TTLs, setting alert thresholds, requires production data that only your specific deployment can provide.
-{% endraw %}
+
 
 ---
 
@@ -872,3 +872,4 @@ Related Reading
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

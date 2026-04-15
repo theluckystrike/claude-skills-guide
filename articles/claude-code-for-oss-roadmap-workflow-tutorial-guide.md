@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Creating and maintaining an effective open source project roadmap is one of the most challenging aspects of OSS maintenance. Projects must balance feature development, community contributions, security updates, and backward compatibility, all while coordinating with diverse stakeholders who have varying priorities. Claude Code offers powerful capabilities to streamline roadmap planning and execution, helping maintainers create clear, actionable roadmaps that align their communities and drive project success.
 
@@ -212,7 +212,7 @@ The key is to start simple, gather feedback from your community, and iterate. Cl
 
 By implementing these workflow improvements, you'll find it easier to coordinate contributions, communicate progress, and ultimately deliver better software that serves your users effectively.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome extension team status trackers enable distributed teams to monitor member availability, track project progress, and coordinate work directly from the browser. For developers building collaborative tools and power users managing remote teams, understanding how to implement these features unlocks significant productivity gains.
 
 ## Understanding Team Status Tracking Architecture
@@ -282,4 +282,4 @@ Related Reading
 - [Chrome Extension Costco Deal Tracker: A Developer Guide](/chrome-extension-costco-deal-tracker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

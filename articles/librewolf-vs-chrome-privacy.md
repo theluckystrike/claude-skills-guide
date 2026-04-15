@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 ## Librewolf vs Chrome Privacy: A Developer and Power User Guide
 
@@ -230,7 +230,7 @@ For developers working with web platforms, having both browsers installed serves
 
 ---
 
-{% endraw %}
+
 
 ---
 

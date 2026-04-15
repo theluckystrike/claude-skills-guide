@@ -366,7 +366,7 @@ Automating ARIA label implementation in React components through Claude Code tra
 - Maintain consistency across your component library
 
 The result is a more inclusive user experience with significantly less manual effort. Start by using the key skills in Claude Code, defining your accessibility conventions in CLAUDE.md, and gradually automating ARIA label implementation across your React codebase.
-{% endraw %}
+
 
 ---
 
@@ -391,3 +391,4 @@ Related Reading
 - [Claude Code PostHog Feature Flag React SDK Guide](/claude-code-posthog-feature-flag-react-sdk-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

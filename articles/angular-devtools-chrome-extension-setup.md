@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Angular DevTools is an official Chrome extension provided by the Angular team that provides powerful debugging and profiling capabilities for Angular applications. Whether you are maintaining a legacy Angular project or building a modern application with the latest Angular version, this extension significantly improves your development workflow. It bridges the gap between generic browser DevTools and Angular-specific internals, exposing the component tree, change detection behavior, and performance timing in ways that were previously only accessible through console logging or guesswork.
 
 ## Installing Angular DevTools
@@ -352,5 +351,4 @@ Related Reading
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 {% endraw %}

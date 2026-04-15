@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Claude Issue Triage Workflow Tutorial Guide
 
 Issue triage is one of the most time-consuming tasks in software development. Every day, teams receive bug reports, feature requests, and support tickets that need to be categorized, prioritized, and routed to the right people. While Claude Code excels at writing code and explaining concepts, it can also serve as the backbone of an intelligent issue triage system. This guide walks you through building a complete issue triage workflow using Claude Code skills.
@@ -231,4 +231,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```
-{% endraw %}
+

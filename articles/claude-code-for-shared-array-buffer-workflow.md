@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for SharedArrayBuffer Workflow
 
 SharedArrayBuffer is a powerful JavaScript feature that enables true shared memory between Web Workers, unlocking high-performance parallel computing capabilities in web applications. This guide walks you through implementing a solid SharedArrayBuffer workflow using Claude Code, covering setup, implementation patterns, and best practices.
@@ -535,7 +535,7 @@ SharedArrayBuffer transforms JavaScript's concurrency capabilities, enabling hig
 The key principles to carry forward: set COOP/COEP headers before anything else, verify `crossOriginIsolated` at runtime, partition data to minimize contention between workers, and reach for Atomics whenever two workers might touch the same memory location. For image processing, physics simulations, numerical computing, and any workload that benefits from true parallelism, SharedArrayBuffer delivers performance that no amount of optimized single-threaded JavaScript can match.
 
 Remember to always test your SharedArrayBuffer implementations across different browsers and devices, as support and performance characteristics can vary. With proper implementation, you'll unlock significant performance gains for compute-intensive web applications.
-{% endraw %}
+
 
 ---
 

@@ -559,7 +559,7 @@ The `publish-dry-run` job catches packaging problems on every pull request, long
 Claude Code significantly improves your cargo crate publishing workflow by automating repetitive tasks, catching errors before publication, and providing guidance throughout the process. By establishing consistent checklists and using Claude's capabilities, you can publish crates with confidence while spending less time on mechanical details.
 
 Start by implementing the pre-publish checklist, then gradually add more automation as you identify problems in your workflow. Your future self, and your crate's users, will thank you.
-{% endraw %}
+
 
 ---
 
@@ -584,3 +584,4 @@ Related Reading
 - [Claude Code for Docker Image Publishing Workflow Guide](/claude-code-for-docker-image-publishing-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

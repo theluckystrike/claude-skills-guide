@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Documentation Testing Workflow Guide
 
 Documentation is the backbone of any successful software project. Yet, maintaining high-quality documentation that stays accurate, consistent, and error-free is a persistent challenge for development teams. This is where Claude Code becomes an invaluable part of your documentation testing workflow. we'll explore how to use Claude Code CLI to automate documentation testing, catch errors early, and maintain documentation quality at scale.
@@ -201,7 +201,7 @@ Claude Code transforms documentation testing from a manual, error-prone process 
 
 Start small, implement one test category at a time, and gradually build a complete testing suite. Your future self (and your documentation readers) will thank you.
 
-{% endraw %}
+
 
 ---
 

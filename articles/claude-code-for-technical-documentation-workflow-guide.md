@@ -238,7 +238,7 @@ For larger projects, implement continuous documentation generation:
 Claude Code transforms technical documentation from a tedious chore into an efficient, automated workflow. By using its code understanding capabilities, skill system, and context-aware generation, you can maintain accurate, comprehensive documentation that evolves with your project. Start implementing these workflows today, and you'll wonder how you ever managed without them.
 
 The key is consistency: regular updates, automated reviews, and treating documentation as a first-class citizen in your development process. With Claude Code handling the heavy lifting, your team can focus on writing great code, and having that code document itself.
-{% endraw %}
+
 
 ---
 
@@ -263,3 +263,4 @@ Related Reading
 - [Claude Code API Changelog Documentation Guide](/claude-code-api-changelog-documentation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

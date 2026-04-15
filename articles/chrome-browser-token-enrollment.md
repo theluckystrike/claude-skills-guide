@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Browser Token Enrollment: A Practical Guide
 
 Chrome browser token enrollment provides a secure mechanism for automatically registering Chrome browsers within enterprise environments. Instead of manual configuration or complex group policy deployment, token enrollment allows browsers to authenticate against your identity infrastructure and receive pre-configured policies automatically. This approach reduces administrative overhead while maintaining security standards required by organizations managing hundreds or thousands of endpoints.
@@ -426,4 +426,4 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

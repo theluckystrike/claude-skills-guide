@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Database Benchmark Workflow Tutorial
 
 Database performance benchmarking is essential for making informed decisions about database selection, infrastructure sizing, and query optimization. However, running meaningful benchmarks can be complex, requiring test data generation, workload simulation, metric collection, and result analysis. This tutorial shows you how to use Claude Code to streamline each phase of your database benchmark workflow, making it faster to gather reliable performance metrics.
@@ -360,4 +360,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

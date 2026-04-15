@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Word Count Tracker: A Developer Guide
 
 A word count tracker Chrome extension serves as a practical tool for writers, content creators, and developers who need to monitor text metrics across web pages. Whether you're tracking article length, monitoring character counts in forms, or analyzing content density, building this extension teaches you fundamental Chrome extension development patterns that apply to countless other projects.
@@ -491,4 +491,4 @@ Related Reading
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

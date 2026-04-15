@@ -13,8 +13,8 @@ reviewed: true
 score: 7
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Optimistic UI is a powerful pattern that makes web applications feel instant and responsive by updating the interface immediately after a user action, before the server confirms the operation. When paired with Remix's solid data loading and mutation primitives, you can create fluid user experiences that rival native applications. This guide explores how Claude Code can streamline your optimistic UI implementation workflow in Remix applications, from identifying where optimistic updates will have the biggest impact to handling error recovery correctly.
 
 ## Understanding Optimistic UI in Remix

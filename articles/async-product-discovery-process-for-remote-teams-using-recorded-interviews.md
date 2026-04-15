@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 As remote work becomes the norm, product teams face a fundamental challenge: how do you conduct effective product discovery without the luxury of in-person conversations? The answer lies in mastering the async product discovery process using recorded interviews. This approach not only works beautifully for distributed teams but often produces richer insights than traditional synchronous sessions.
 
@@ -155,4 +155,4 @@ Related Reading
 
 Built by theluckystrike. More at https://zovo.one
 
-{% endraw %}
+

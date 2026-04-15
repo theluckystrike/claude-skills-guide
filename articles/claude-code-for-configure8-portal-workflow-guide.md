@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Configure8 Portal Workflow Guide
 
 Configure8 has emerged as a powerful developer portal platform that helps teams manage APIs, documentation, and internal developer tools in one unified location. When combined with Claude Code's AI-assisted capabilities, you can dramatically streamline portal configuration, documentation generation, and workflow automation. This guide walks you through practical strategies for integrating Claude Code into your Configure8 portal workflows. from initial setup through advanced multi-stage sync pipelines.
@@ -374,7 +374,7 @@ This end-to-end workflow ensures your developer portal remains accurate, well-do
 Claude Code transforms Configure8 portal management from a manual, error-prone process into an automated, reliable workflow. By using AI-assisted automation for service registration, documentation generation, and policy enforcement, your team can focus on building great developer experiences rather than managing portal infrastructure. Start with simple automations. a single upsert script run manually. and progressively add the validation layer, the documentation enrichment step, and finally the full scheduled sync as you build confidence in each stage.
 
 The combination of Claude Code's intelligent automation and Configure8's powerful portal capabilities creates a foundation for world-class internal developer platforms. Implement these patterns in your organization and watch your developer portal become a true source of truth for your entire engineering team.
-{% endraw %}
+
 
 ---
 

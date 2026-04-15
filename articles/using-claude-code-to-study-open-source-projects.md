@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 ## Using Claude Code to Study Open Source Projects: A Practical Guide
 
@@ -136,7 +136,7 @@ Remember that effective learning requires active engagement, ask questions, expe
 
 Start with a small project, apply these techniques, and gradually scale up to larger codebases. You'll find that understanding complex systems becomes not just possible, but genuinely enjoyable.
 
-{% endraw %}
+
 
 ---
 

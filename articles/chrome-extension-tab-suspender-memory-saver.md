@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Tab Suspender Memory Saver: A Developer Guide
 
 Browser tab proliferation is one of the biggest memory challenges facing developers and power users today. With modern web applications consuming significant resources even when idle, tab suspenders have become essential tools for managing browser memory efficiently. This guide explores the technical mechanisms behind these extensions, implementation patterns, and practical considerations for building your own solution.
@@ -319,4 +319,4 @@ Related Reading
 - [AI Tab Organizer Chrome Extension: A Practical Guide for.](/ai-tab-organizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

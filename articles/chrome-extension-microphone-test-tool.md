@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome extensions that use microphone input require careful testing to ensure reliable functionality across different browsers, devices, and permission scenarios. A chrome extension microphone test tool helps developers verify that audio capture works correctly before deploying production features.
 
 ## Understanding Microphone Access in Chrome Extensions
@@ -306,4 +306,4 @@ Related Reading
 - [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

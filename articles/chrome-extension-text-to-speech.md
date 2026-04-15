@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Text to Speech: A Developer Guide
 
 Text-to-speech functionality in Chrome extensions transforms written content into spoken audio, opening doors for accessibility tools, language learning applications, and productivity boosters. This guide covers the technical implementation, from Web Speech API integration to custom audio solutions, with real-world code patterns you can drop into your own projects.
@@ -449,4 +449,4 @@ Related Reading
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

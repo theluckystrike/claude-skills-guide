@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Kubernetes Role-Based Access Control (RBAC) is the backbone of cluster security. When configured correctly, RBAC ensures that users, service accounts, and groups receive only the permissions they need to perform their tasks. This guide walks you through implementing solid RBAC policies using Claude Code, with practical examples and real-world patterns.
 
 ## Understanding RBAC in Kubernetes
@@ -219,4 +219,4 @@ Related Reading
 - [Chrome Security Headers Extension: A Practical Guide for.](/chrome-security-headers-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

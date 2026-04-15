@@ -13,8 +13,8 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Automating API testing workflows saves development teams countless hours. Claude Code brings intelligent automation to Postman collection management, enabling you to generate tests, organize requests, and maintain collection hygiene without manual effort. This guide covers practical techniques for automating Postman collections with Claude Code, from basic test generation through full CI/CD pipeline integration.
 
 ## Understanding the Integration

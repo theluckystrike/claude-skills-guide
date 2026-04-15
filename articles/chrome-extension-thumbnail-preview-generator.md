@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Thumbnail Preview Generator: Complete Implementation Guide
 
 Thumbnail preview generators are essential tools for enhancing user experience in Chrome extensions. Whether you're building a bookmark manager, a link preview system, or a media gallery, generating accurate previews requires understanding Chrome's rendering APIs and extension architecture. This guide provides practical implementation patterns for creating a solid thumbnail preview generator.
@@ -415,4 +415,4 @@ Canvas text appearing blurry on high-DPI displays: Scale the canvas by `window.d
 
 Downloaded thumbnail filenames generic: Generate a filename from the page title: `pageTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 50) + '-thumbnail.png'`. This makes thumbnails easier to organize in a download folder.
 
-{% endraw %}
+

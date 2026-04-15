@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Keeps Adding Unnecessary Console Log Statements: Solutions and Best Practices
 
 If you've been working with Claude Code for any length of time, you've likely noticed a common pattern: Claude seems to have an affinity for sprinkling `console.log` statements throughout your code. While debugging is essential, these extra log statements often accumulate, cluttering production code and making it harder to maintain clean, professional codebases. This guide explores why this happens and how to work with Claude Code more effectively to keep your code lean.
@@ -188,7 +188,7 @@ Remember to:
 - Review all changes carefully
 
 With these strategies, you can enjoy Claude Code's powerful capabilities while keeping your codebase clean and professional.
-{% endraw %}
+
 
 ---
 

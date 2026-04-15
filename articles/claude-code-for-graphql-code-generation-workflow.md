@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for GraphQL Code Generation Workflow
 
 GraphQL has revolutionized how we build APIs, but the boilerplate code required to implement a solid GraphQL server can quickly become overwhelming. From type definitions to resolvers, inputs to interfaces, there's a lot of repetitive code to maintain. This is where Claude Code becomes invaluable, helping you automate and streamline your GraphQL code generation workflow.
@@ -237,7 +237,7 @@ Claude Code transforms GraphQL development from manual boilerplate management to
 The key is establishing clear conventions, maintaining schema-first development, and using Claude Code for repetitive code generation tasks. This approach reduces errors, maintains consistency, and frees developers to focus on what matters most, building great products.
 
 Start small: use Claude Code to generate one type and its resolver, then expand to cover your entire schema. The incremental approach lets you validate the output and refine your conventions before scaling up.
-{% endraw %}
+
 
 ---
 

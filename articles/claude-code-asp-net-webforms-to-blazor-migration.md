@@ -12,7 +12,7 @@ score: 8
 permalink: /claude-code-asp-net-webforms-to-blazor-migration/
 ---
 
-{% raw %}
+
 ASP.NET WebForms to Blazor Migration with Claude Code
 
 Migrating legacy ASP.NET WebForms applications to modern Blazor represents one of the most significant modernization journeys for .NET developers. This transformation unlocks component-based architecture, server-side rendering improvements, and the ability to run C# in the browser via WebAssembly. When you use Claude Code as your AI development assistant, the migration becomes a structured, systematic process that handles code analysis, component conversion, and testing validation with remarkable efficiency.
@@ -256,7 +256,7 @@ Use bUnit for component testing and xUnit for service layer tests.
 Migrating WebForms to Blazor with Claude Code transforms an intimidating modernization project into a manageable, step-by-step process. Claude Code handles the mechanical translation while your team focuses on architectural decisions and business logic validation. The systematic approach, assessment, scaffolding, component conversion, data layer modernization, and testing, ensures nothing falls through the cracks.
 
 Start with a small, low-risk page to establish your migration patterns, then scale systematically across your application. Claude Code's consistent output and ability to maintain context across the migration makes it an invaluable partner in your modernization journey.
-{% endraw %}
+
 
 ---
 

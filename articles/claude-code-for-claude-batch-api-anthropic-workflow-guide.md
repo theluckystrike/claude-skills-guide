@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Claude Batch API: Anthropic Workflow Guide
 
 The Claude Batch API from Anthropic represents a powerful way to process large volumes of prompts efficiently and cost-effectively. When combined with Claude Code, you get a streamlined development experience that enables rapid prototyping, batch processing, and automated workflows. This guide walks you through everything you need to know to integrate these tools effectively.
@@ -333,4 +333,4 @@ Related Reading
 - [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
 - [Building Apps with Claude API: Anthropic SDK Python Guide](/building-apps-with-claude-api-anthropic-sdk-python-guide/)
 
-{% endraw %}
+

@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 ---
-{% raw %}
+
 
 AST-based code search transforms how developers find and modify code. Unlike simple text search, Abstract Syntax Tree (AST) analysis understands code structure, making it possible to locate specific patterns, functions, or constructs regardless of formatting or variable names. When combined with Claude Code's AI capabilities, you get a powerful workflow for code analysis, refactoring, and maintenance tasks.
 
@@ -248,4 +248,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

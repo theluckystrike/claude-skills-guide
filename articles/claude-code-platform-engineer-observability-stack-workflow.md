@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Building a solid observability stack is essential for any platform engineering team. we'll explore how Claude Code skills can automate the creation, configuration, and management of observability infrastructure, covering metrics collection, distributed tracing, log aggregation, and alerting systems.
 
 Why Use Claude Code for Observability?
@@ -304,7 +303,7 @@ Start building your observability stack with Claude Code today, and transform ho
 
 The key is to treat monitoring as code, version controlled, reviewed, and automated, just like your application code. Claude Code makes this approach practical and efficient for teams of any size.
 
-{% endraw %}
+
 
 ---
 
@@ -329,3 +328,4 @@ Related Reading
 - [Claude Code Kubernetes Logging Stack Guide](/claude-code-kubernetes-logging-stack-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

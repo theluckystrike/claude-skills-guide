@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Best Way to Use Claude Code Offline Without Internet Access
 
 Claude Code is powerful, but you don't always need an internet connection to get work done. Whether you're on a flight, working in a secure facility, or just want to avoid latency, this guide shows you how to use Claude Code effectively offline.
@@ -213,7 +213,7 @@ While Claude Code works well offline, be aware of limitations:
 Claude Code can be a powerful offline coding assistant with the right setup. By using local models through Ollama, building self-contained skills, and running MCP servers locally, you can maintain productivity even without internet access. The key is preparation, set up your offline environment while connected, and you'll never be stuck without your AI coding assistant.
 
 Start by installing Ollama and pulling a model, then create a few offline-ready skills for your common tasks. Once you've established your offline workflow, you'll wonder how you ever worked without it.
-{% endraw %}
+
 
 ---
 

@@ -12,8 +12,8 @@ score: 7
 permalink: /claude-frontend-design-skill-review-and-tutorial/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Building user interfaces efficiently requires the right tools and workflows. The frontend-design skill in Claude Code transforms how developers approach UI implementation by translating design concepts into production-ready code. This review covers practical usage, real examples, and integration strategies for frontend teams.
 
 ## What the Frontend-Design Skill Provides

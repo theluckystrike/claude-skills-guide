@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension GraphQL Network Inspector: A Developer Guide
 
 GraphQL has transformed how developers build APIs, offering flexible queries and precise data fetching. However, debugging GraphQL requests in the browser requires specialized tools beyond standard network inspectors. This guide covers everything you need to know about Chrome extensions for inspecting GraphQL network traffic, from using existing tools to building your own inspector.
@@ -335,4 +335,4 @@ Related Reading
 - [Building a Chrome Extension DOM Inspector Tool: A.](/chrome-extension-dom-inspector-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

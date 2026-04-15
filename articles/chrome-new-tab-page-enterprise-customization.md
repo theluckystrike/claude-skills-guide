@@ -11,7 +11,7 @@ score: 8
 categories: [guides]
 ---
 
-{% raw %}
+
 
 The new tab page in Chrome serves as the gateway to your browsing experience. For enterprise environments, customizing this page can improve productivity, reinforce branding, and provide quick access to internal tools. This guide covers practical methods for developers and power users to implement Chrome new tab page enterprise customization across organizations of various sizes.
 
@@ -283,4 +283,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

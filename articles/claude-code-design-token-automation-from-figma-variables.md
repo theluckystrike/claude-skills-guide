@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Design Token Automation from Figma Variables
 
 Design tokens have become the backbone of modern design systems, enabling teams to maintain consistency across products. When combined with Claude Code's powerful automation capabilities and Figma's Variables feature, you can create a smooth pipeline that transforms design decisions into code automatically. This guide walks through the full setup: exporting tokens from Figma, transforming them into CSS, JavaScript, and TypeScript, and wiring everything into a CI/CD pipeline so your codebase stays in sync with your design file without manual work.
@@ -396,7 +396,7 @@ By combining Claude Code's automation capabilities with Figma Variables, you cre
 Start small with basic color and typography tokens, then expand to spacing, shadows, and more complex token structures as your design system matures. Once the pipeline is running, the real dividend is organizational: designers can make changes in Figma with confidence that they will land in code correctly, and engineers stop manually translating hex codes from Slack messages into CSS files.
 
 The naming convention investment at the start of the project pays off every time you add a new token category. A well-named, consistently structured token file makes every downstream transform. CSS, TypeScript, Tailwind, iOS, Android. a simple traversal rather than a bespoke parsing problem.
-{% endraw %}
+
 
 ---
 

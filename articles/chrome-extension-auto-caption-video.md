@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Auto Caption Video: A Developer Guide
 
 Automatic captioning for video content has become essential for accessibility, multilingual audiences, and silent viewing environments. Chrome extensions that provide auto caption functionality use browser APIs and speech recognition services to generate subtitles in real-time or from recorded videos. This guide covers the technical implementation, available approaches, and practical code patterns for building or using these extensions.
@@ -240,4 +240,4 @@ Related Reading
 - [AI Competitive Analysis Chrome Extension: A Developer's Guide](/ai-competitive-analysis-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

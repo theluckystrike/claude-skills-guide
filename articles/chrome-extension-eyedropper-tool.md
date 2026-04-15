@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 The Chrome Eyedropper API provides a powerful way to capture colors directly from web pages. This tool enables users to sample any pixel color on their screen and get its hex, RGB, or HSL values. For developers building design tools, color pickers, or accessibility utilities, understanding this API opens up practical possibilities.
 
 What Is the Chrome Eyedropper API?
@@ -233,4 +233,4 @@ Related Reading
 - [Chrome Extension Site Audit Tool: A Developer's Guide](/chrome-extension-site-audit-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

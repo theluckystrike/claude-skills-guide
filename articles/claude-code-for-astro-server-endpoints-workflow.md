@@ -11,7 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-for-astro-server-endpoints-workflow/
 ---
-{% raw %}
+
 
 Astro's server endpoints (also known as API routes) enable you to build full-stack applications with the same elegant developer experience that makes Astro famous for static sites. When combined with Claude Code, you get AI-assisted development for your backend logic, data handling, and API implementations. This guide walks you through practical workflows for creating and managing server endpoints in Astro using Claude Code.
 
@@ -267,7 +267,7 @@ Building server endpoints in Astro with Claude Code combines the best of both wo
 
 The key is to be explicit about your requirements when working with Claude Code, specify the data models and validation rules, and ensure proper error handling is always implemented. With these workflows, you'll build production-ready server endpoints efficiently.
 
-{% endraw %}
+
 
 ---
 

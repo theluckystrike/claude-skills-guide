@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 SMS remains one of the most effective communication channels for businesses, with open rates exceeding 90%. Combining Claude Code with Twilio's SMS API enables you to build sophisticated messaging automation that handles appointment reminders, notifications, two-factor authentication, and customer support workflows. This comprehensive guide walks you through creating production-ready Twilio SMS workflows using Claude Code skills.
 
@@ -288,7 +288,7 @@ Claude Code provides an excellent framework for building sophisticated Twilio SM
 
 The combination of Claude Code's orchestration capabilities and Twilio's reliable messaging infrastructure enables you to build communication systems that engage customers effectively while maintaining compliance and optimizing costs.
 
-{% endraw %}
+
 
 ---
 

@@ -322,7 +322,7 @@ Claude Code transforms SRE toil management from reactive firefighting to proacti
 Start small: pick one high-frequency toil task, automate it with Claude Code, measure the time savings, then iterate. The cumulative effect of these automations will dramatically improve your team's productivity and reduce burnout.
 
 Remember: the goal isn't to eliminate all manual work, it's to eliminate work that doesn't require human judgment, freeing your team to focus on reliability, innovation, and solving novel problems.
-{% endraw %}
+
 
 ---
 
@@ -347,3 +347,4 @@ Related Reading
 - [Claude Code SRE Postmortem Documentation Workflow Guide](/claude-code-sre-postmortem-documentation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

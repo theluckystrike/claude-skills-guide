@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Noise Cancellation Chrome Extension: A Developer Guide
 
 Creating a noise cancellation feature within a Chrome extension requires understanding the Web Audio API and how content scripts interact with media streams. This guide provides practical implementation patterns for developers building audio-processing extensions.
@@ -285,7 +285,7 @@ When publishing a noise cancellation extension to the Chrome Web Store, you must
 Building a noise cancellation Chrome extension combines familiar web audio techniques with extension-specific architecture. Start with a simple noise gate implementation to validate your use case, then iterate toward more sophisticated algorithms. The Web Audio API provides sufficient power for most voice processing scenarios, while AudioWorklet ensures smooth performance without blocking the main thread.
 
 Focus on specific use cases, whether that is cleaning up voice recordings, reducing background noise during calls, or enhancing audio for transcription. Users appreciate focused tools that solve real problems effectively.
-{% endraw %}
+
 
 ---
 

@@ -12,8 +12,8 @@ score: 7
 permalink: /notion-mcp-server-knowledge-base-automation/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [Managing a personal or team knowledge base becomes significantly more powerful](/claude-supermemory-skill-persistent-context-explained/) when combined with Claude Code's MCP server capabilities. The Notion MCP server enables you to programmatically create, update, search, and organize your Notion pages through natural language commands, transforming static documentation into an automated knowledge management system.
 
 ## Understanding the Notion MCP Server

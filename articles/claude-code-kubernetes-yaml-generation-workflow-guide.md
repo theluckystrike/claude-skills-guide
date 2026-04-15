@@ -365,7 +365,7 @@ Claude Code produces an updated manifest in one pass, explaining the API version
 ## Conclusion
 
 Claude Code transforms Kubernetes YAML generation from a tedious manual task into an intelligent, assisted workflow. By understanding your requirements and Kubernetes best practices, it generates production-ready configurations that follow industry standards. The real use comes from iterative refinement, generating a base manifest, validating it, extending it with autoscaling and network policies, then migrating it to Helm as your needs grow. Start integrating Claude Code into your Kubernetes development workflow today and experience the difference in productivity and configuration quality.
-{% endraw %}
+
 
 ---
 
@@ -390,3 +390,4 @@ Related Reading
 - [Automating Icon Sprite Generation Workflow with Claude Code](/claude-code-automating-icon-sprite-generation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

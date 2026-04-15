@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Knowledge Base Workflow Tutorial Guide
 
 Building a knowledge base that stays organized, searchable, and up-to-date is a recurring challenge for developers. Claude Code transforms this workflow by combining natural language processing with direct file system access, API integration, and automated content generation. This guide walks you through creating practical knowledge base workflows using Claude Code, with actionable patterns you can apply immediately.
@@ -296,4 +296,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

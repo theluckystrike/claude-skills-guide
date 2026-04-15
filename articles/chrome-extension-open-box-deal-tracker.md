@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 Open box deals represent one of the best ways to save money on electronics, but manually checking multiple retailers for price drops quickly becomes tedious. A custom chrome extension deal tracker automates this process, notifying you the moment prices drop on items you're watching. This guide walks through building a functional open box deal tracker extension from scratch.
 
 ## Understanding the Deal Tracker Architecture
@@ -302,4 +302,4 @@ Related Reading
 - [Chrome Extension Employee Recognition Tool: Build Your Own](/chrome-extension-employee-recognition-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

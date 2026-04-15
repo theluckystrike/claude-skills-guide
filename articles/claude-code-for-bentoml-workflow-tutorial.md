@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for BentoML Workflow Tutorial
 
 BentoML has become one of the most popular frameworks for packaging and serving machine learning models. When combined with Claude Code, you can dramatically accelerate your ML deployment workflow. This tutorial walks you through using Claude Code to streamline every step of your BentoML projects.
@@ -369,7 +369,7 @@ When using Claude Code with BentoML, keep these tips in mind:
 Claude Code transforms your BentoML workflow from manual and error-prone to automated and reliable. By using Claude's code generation capabilities, you can focus on model development while it handles the deployment complexity. Start with simple services, gradually adopt advanced features, and you'll have production-ready ML deployments in no time.
 
 The combination of Claude Code's intelligent assistance and BentoML's solid serving framework gives you the best of both worlds: rapid development and reliable production performance.
-{% endraw %}
+
 
 ---
 

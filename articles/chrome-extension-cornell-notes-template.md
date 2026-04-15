@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome extensions provide a powerful way to enhance note-taking workflows directly in your browser. For developers and power users, building a Cornell Notes template extension gives you complete control over how you capture, organize, and review web content. This guide walks you through the architecture, implementation patterns, and practical code examples needed to create a functional Cornell Notes Chrome extension.
 
 ## Understanding the Cornell Notes System
@@ -230,4 +230,4 @@ Related Reading
 - [Chrome Extension Meeting Agenda Template: A Developer's.](/chrome-extension-meeting-agenda-template/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

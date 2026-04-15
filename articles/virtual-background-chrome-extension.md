@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Virtual Background Chrome Extension: A Developer Guide
 
 Virtual background technology has become essential for video conferencing, streaming, and content creation. Chrome extensions that enable virtual backgrounds operate at the intersection of computer vision, media processing, and browser APIs. This guide breaks down how these extensions work, what technologies you need, and how to build one from scratch.
@@ -244,4 +244,4 @@ Related Reading
 - [Claude Code for Java Virtual Threads (Loom) Workflow](/claude-code-for-java-virtual-threads-loom-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 A/B testing and experimentation are critical for data-driven product development, and Statsig has emerged as a powerful platform for running experiments. When combined with Claude Code, you can automate experiment setup, generate exposure code, and streamline analysis workflows. This comprehensive guide walks you through setting up Statsig A/B tests using Claude Code CLI.
 
 ## Understanding Statsig Experimentation Platform
@@ -200,7 +200,7 @@ You can create Claude Code skills that understand your deployment pipeline and g
 Setting up A/B tests with Statsig and Claude Code creates a powerful experimentation workflow. Claude Code accelerates implementation by generating consistent code, creating analysis helpers, and enforcing best practices. The combination enables teams to ship experiments faster while maintaining code quality and analytical rigor.
 
 Start by integrating Statsig into your project, then use Claude Code to generate exposure tracking and analysis code. As your experimentation program matures, develop custom Claude skills that understand your specific patterns and requirements. With this approach, you'll build a scalable system for data-driven product decisions.
-{% endraw %}
+
 
 ---
 

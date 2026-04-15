@@ -244,7 +244,7 @@ Claude Code can help integrate these libraries while maintaining Svelte's reacti
 Svelte's transition system provides an excellent foundation for creating polished, performant animations. With Claude Code as your development partner, you can rapidly implement everything from simple fade effects to complex custom transitions. The key is understanding the framework's capabilities, providing clear context for the AI assistant, and iterating on timing values to achieve the perfect feel for your application.
 
 Start with built-in transitions, customize parameters as needed, and gradually explore custom implementations for unique effects. Your users will appreciate the attention to detail in smooth, thoughtful animations.
-{% endraw %}
+
 
 ---
 
@@ -270,3 +270,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

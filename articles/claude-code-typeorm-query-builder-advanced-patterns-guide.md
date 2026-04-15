@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Mastering TypeORM Query Builder: Advanced Patterns for Complex Database Operations
 
 The TypeORM Query Builder is one of the most powerful tools in the TypeORM ecosystem, allowing developers to construct complex database queries programmatically. While basic CRUD operations are straightforward, mastering advanced Query Builder patterns will improve your application's data access layer to enterprise-grade quality. This guide explores sophisticated techniques for building dynamic, efficient, and maintainable database queries.
@@ -662,7 +662,7 @@ The `getManyAndCount()` call at the end returns both the paginated results and t
 The TypeORM Query Builder transforms database operations from rigid SQL strings into flexible, type-safe, and maintainable code. By mastering these advanced patterns, subqueries (including computed SELECT subqueries), complex multi-alias joins, dynamic query construction with `Brackets` for correct precedence, bulk insert/upsert, transactional pessimistic locking, and performance-conscious patterns like column selection and cursor-based pagination, you'll build data access layers that are both powerful and elegant.
 
 Claude Code accelerates the process by generating correct Query Builder syntax for complex use cases, auditing existing queries for N+1 problems, suggesting missing indexes, and explaining trade-offs between different join and loading strategies. Start implementing these patterns in your projects today, and experience the difference enterprise-grade database code makes in application reliability and maintainability.
-{% endraw %}
+
 
 ---
 

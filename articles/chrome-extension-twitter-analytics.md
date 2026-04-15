@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Twitter Analytics: A Developer Guide
 
 Building a Chrome extension that provides Twitter analytics opens up powerful possibilities for tracking engagement, understanding audience behavior, and optimizing your social media strategy. This guide walks you through the core concepts, Twitter API integration, and practical implementation patterns for creating a Twitter analytics extension from scratch.
@@ -277,4 +277,4 @@ Related Reading
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

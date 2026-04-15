@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Design System Tokens: A Frontend Developer Guide
 
 Design system tokens are the foundation of consistent, scalable user interfaces. When working with Claude Code's canvas-design skill, understanding how to use these tokens can dramatically improve your workflow and output quality. This guide walks you through practical patterns for integrating design system tokens into your frontend development process, from basic color usage through theming, component composition, and dark mode support.
@@ -541,7 +541,7 @@ const goodTokenUsage = {
 Design system tokens transform how you build user interfaces. By using Claude Code's canvas-design skill token system, you create applications that are consistent, maintainable, and themable. Start with the basic color, typography, and spacing tokens, then build up to more complex component patterns as your familiarity grows.
 
 The investment in learning token-based design pays dividends in reduced design debt, faster iteration, and more cohesive user experiences. The semantic layer is the key architectural decision. once components reference semantic tokens instead of primitives, supporting dark mode, rebranding, or white-labeling becomes a configuration change rather than a migration project. Claude Code can accelerate every stage of this work, from scaffolding your initial token file through auditing existing components for hardcoded values and generating dark-mode-ready component variants.
-{% endraw %}
+
 
 ---
 

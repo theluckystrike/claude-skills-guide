@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Running effective team retrospectives in a fully distributed environment presents unique challenges. When your team spans multiple time zones, finding a meeting time that works for everyone becomes nearly impossible. The solution? Async retrospectives using shared documents and recorded summaries. This approach not only accommodates different schedules but also produces more thoughtful, well-documented outcomes that teams can reference long after the retrospective concludes.
 
@@ -196,4 +196,4 @@ Related Reading
 - [Claude Code for Dutch Developer Team Workflow Guide](/claude-code-for-dutch-developer-team-workflow-guide/)
 - [Claude Code for Team Wiki Maintenance Workflow](/claude-code-for-team-wiki-maintenance-workflow/)
 Built by the luckystrike. More at https://zovo.one
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Outline Notes Organizer: A Developer Guide
 
 Creating a Chrome extension for organizing outlines and notes transforms how you capture and structure information across the web. Whether you're researching topics, collecting resources, or organizing project ideas, a well-built extension becomes an essential productivity tool. This guide walks you through building a functional outline notes organizer extension from scratch.
@@ -332,4 +332,4 @@ Related Reading
 - [Chrome Extension Tab Organizer Research: A Developer's Guide](/chrome-extension-tab-organizer-research/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

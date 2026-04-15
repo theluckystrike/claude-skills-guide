@@ -428,7 +428,7 @@ Log validation attempts. Keep track of when and where licenses are validated to 
 Building a license validation workflow with Claude Code and LemonSqueezy combines the best of both worlds: Claude Code's agentic capabilities for automation and LemonSqueezy's solid licensing infrastructure. Whether you're validating licenses in a CLI tool, a web application, or a desktop app, the patterns outlined in this guide provide a solid foundation.
 
 Start by creating the Claude Code skill to handle validation conversations, then implement the proxy server to keep your API key safe. Add caching and offline grace periods to handle the real-world conditions your users will encounter. With proper error handling, activation management, and audit logging, you'll have a production-ready system that protects your software while providing a smooth experience for legitimate customers.
-{% endraw %}
+
 
 ---
 
@@ -453,3 +453,4 @@ Related Reading
 - [Claude Code for License Compatibility Workflow Guide](/claude-code-for-license-compatibility-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

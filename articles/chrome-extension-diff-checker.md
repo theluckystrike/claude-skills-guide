@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Diff Checker: A Developer Guide
 
 Diff checking is a fundamental skill for developers. Whether you're reviewing pull requests, comparing configuration files, or tracking changes across versions, knowing how to identify differences quickly saves hours of frustration. Chrome extensions that perform diff checking bring this capability directly into your browser, eliminating the need to switch between tools or open terminal commands.
@@ -269,4 +269,4 @@ Related Reading
 - [Chrome Extension Core Web Vitals Checker: Developer Guide](/chrome-extension-core-web-vitals-checker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

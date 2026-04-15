@@ -14,7 +14,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Runbooks are essential documentation artifacts that capture operational procedures, troubleshooting steps, and automation workflows. When combined with Claude Code, these runbooks become interactive guides that can execute tasks directly. This guide covers how to create and maintain Claude Code runbook documentation that bridges the gap between static instructions and executable automation.
 
@@ -230,4 +230,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

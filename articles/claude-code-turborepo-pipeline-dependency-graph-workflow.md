@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Turborepo Pipeline Dependency Graph Workflow
 
 Monorepos have become the standard for managing multi-package projects, and Turborepo has emerged as the leading build system for orchestrating complex dependency graphs. When you combine Claude Code's AI capabilities with Turborepo's pipeline automation, you get a powerful workflow that can intelligently manage builds, handle caching, and optimize your development experience. This guide shows you how to use this combination effectively.
@@ -214,7 +214,7 @@ To get the most out of Claude Code with Turborepo:
 5. Monitor cache performance: Regularly check cache hit rates and optimize accordingly
 
 The combination of Claude Code's AI capabilities with Turborepo's sophisticated pipeline orchestration creates a development experience that is both intelligent and efficient. By understanding and applying these patterns, you can significantly improve your monorepo development workflow.
-{% endraw %}
+
 
 ---
 

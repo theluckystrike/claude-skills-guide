@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for LazyGit Workflow Tutorial Guide
 
 Version control is the backbone of modern software development, and mastering git workflows can significantly boost your productivity. LazyGit (lazygit) provides a terminal UI that makes git operations intuitive and visual, while Claude Code brings AI-powered assistance to your development workflow. Together, they create a powerful combination that streamlines your version control experience.
@@ -224,7 +224,7 @@ Integrating Claude Code with LazyGit transforms your version control workflow fr
 Start with the basic setup, gradually incorporate Claude's assistance for commits and reviews, and build custom skills for your team's specific workflows. The combination of these tools will make you more productive and your commit history more meaningful.
 
 Remember: the goal isn't to use every feature, but to find the patterns that work best for your development style and integrate them into your daily routine.
-{% endraw %}
+
 
 ---
 

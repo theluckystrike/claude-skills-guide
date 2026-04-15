@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Network bandwidth monitoring is essential for developers debugging performance issues, identifying bandwidth-hungry processes, or optimizing application resource usage. Bandwhich, a Rust-based terminal bandwidth monitor, provides real-time visibility into network traffic organized by process, connection, and remote address. Combined with Claude Code's automation capabilities, you can create powerful workflows for network analysis, alerting, and historical tracking.
 
@@ -293,4 +293,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for OSS Maintainer Burnout Workflow
 
 Open source maintainer burnout is a growing crisis in our industry. The constant pressure of triaging issues, reviewing pull requests, answering questions, and maintaining documentation while balancing paid work creates a perfect storm of exhaustion. Many maintainers eventually abandon projects they love because the workload became unsustainable. Claude Code offers a practical solution, not by replacing human connection, but by automating repetitive tasks and reducing the cognitive load that leads to burnout.
@@ -243,7 +243,7 @@ The workflows above share common principles that prevent burnout:
 Claude Code won't solve the systemic issues around open source sustainability, but it provides practical tools for individual maintainers to create sustainable workflows. The key is using technology to create boundaries, reduce cognitive load, and make maintenance work manageable rather than overwhelming.
 
 Start small: create one skill for your most repetitive task, set one bounded session, automate one category of responses. Burnout prevention is a practice, not a one-time fix, and Claude Code can be a valuable partner in building that practice.
-{% endraw %}
+
 
 ---
 

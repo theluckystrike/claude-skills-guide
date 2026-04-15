@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Real-time analytics has become essential for modern applications, from monitoring user behavior to detecting anomalies in production systems. Tinybird provides a powerful streaming analytics platform that enables developers to build data pipelines with sub-second latency. When combined with Claude Code, you can automate the entire workflow, from schema design to query optimization, making real-time analytics more accessible than ever.
 
 This guide walks you through building a complete Tinybird real-time analytics workflow using Claude Code, with practical examples and actionable advice you can apply to your own projects.
@@ -160,7 +160,7 @@ Claude Code can generate the monitoring code and help you set up dashboards in t
 Building real-time analytics with Tinybird and Claude Code is a powerful combination. Claude Code acts as your development partner, helping you design schemas, write optimized SQL, generate integration code, and troubleshoot issues. Meanwhile, Tinybird handles the heavy lifting of processing millions of events per second with sub-second latency.
 
 Start small, ingest a single event type and expose one endpoint. As your confidence grows, expand to more complex transformations and multiple data sources. With this workflow, you'll be building production-grade real-time analytics in no time.
-{% endraw %}
+
 
 ---
 

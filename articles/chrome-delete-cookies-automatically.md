@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 Managing cookies in Chrome is essential for privacy, security, and testing web applications. While manual cookie deletion works, automating the process saves time and ensures consistent hygiene. This guide covers multiple approaches to automatically delete cookies in Chrome, ranging from browser settings to command-line automation.
 
 ## Understanding Chrome Cookie Storage
@@ -479,4 +479,4 @@ Related Reading
 - [AI Podcast Summary Chrome Extension: A Developer's Guide.](/ai-podcast-summary-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for NX Monorepo Micro Frontend Guide
 
 Building micro frontends with NX provides excellent structure for scaling frontend applications, but managing a monorepo comes with its own challenges. This guide shows you how to use Claude Code to accelerate NX monorepo development, from initial setup to deploying independent micro frontends. Whether you are starting fresh or migrating an existing application, Claude Code can dramatically reduce the cognitive overhead of managing a complex workspace.
@@ -463,7 +463,7 @@ Slow local builds despite caching often mean the cache is being invalidated by e
 ## Conclusion
 
 Claude Code significantly accelerates NX monorepo development by understanding the workspace structure and applying appropriate patterns. From setting up shared libraries to configuring independent deployments, Claude helps you maintain architectural integrity while moving quickly. The key is using NX's built-in tooling and enforcing boundaries through configuration, with Claude handling the implementation details and identifying opportunities for code reuse across your micro frontends. The most effective teams treat Claude as a pair programmer who knows the NX plugin API in detail. describe your intent clearly, provide the relevant configuration context, and let Claude translate that intent into the correct generator commands, TypeScript interfaces, and CI pipeline YAML.
-{% endraw %}
+
 
 ---
 

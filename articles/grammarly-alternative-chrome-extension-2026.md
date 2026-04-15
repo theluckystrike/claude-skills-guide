@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Grammarly Alternative Chrome Extension 2026
 
 Grammarly has dominated the writing assistance space for years, but its premium pricing, data processing concerns, and limited customization options drive many developers and power users to seek alternatives. In 2026, several Chrome extensions deliver comparable, or even superior, functionality for technical writing, code documentation, and professional communication.
@@ -354,4 +354,4 @@ Related Reading
 - [Apollo.io Alternative Chrome Extension in 2026](/apollo-io-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

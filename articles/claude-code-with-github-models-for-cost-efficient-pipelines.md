@@ -166,7 +166,7 @@ Build feedback loops. Monitor your pipeline's effectiveness and adjust routing r
 Maintain quality gates. Ensure that cost savings don't compromise output quality. Include validation steps that can escalate to Claude Code if GitHub Models produce unsatisfactory results.
 
 The combination of Claude Code's advanced agentic capabilities with GitHub's economical models represents a significant advancement in practical AI-assisted development. By implementing thoughtful routing and task segmentation, you can build pipelines that deliver high-quality results while maintaining predictable, manageable costs. The key is treating this as an optimization challenge rather than a binary choice between models, each has its place in a well-architected system.
-{% endraw %}
+
 
 ---
 
@@ -191,3 +191,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

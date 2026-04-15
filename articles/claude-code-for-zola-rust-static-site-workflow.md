@@ -13,8 +13,8 @@ reviewed: true
 score: 7
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Zola is a blazing-fast static site generator written in Rust, beloved by developers for its simplicity and speed. When paired with Claude Code, you get a powerful combination that accelerates content creation, theme development, and site deployment. This guide walks you through integrating Claude Code into your Zola workflow for maximum productivity.
 
 ## Setting Up Your Zola Project

@@ -174,7 +174,7 @@ These commands give you a view into the container's network stack from the host'
 Docker networking troubleshooting doesn't have to be painful. By using Claude Code's skills and contextual understanding, you can diagnose issues faster and more systematically. The key is building reusable skills that capture your team's troubleshooting patterns, then letting Claude execute those patterns while explaining the results in terms of your specific application architecture.
 
 Start by creating a basic diagnostic skill, then expand it as you encounter and solve more networking challenges. Over time, you'll have a powerful toolkit that makes Docker networking issues much easier to resolve.
-{% endraw %}
+
 
 ---
 
@@ -199,3 +199,4 @@ Related Reading
 - [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

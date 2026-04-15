@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Model quantization has revolutionized how we deploy large language models, enabling powerful AI capabilities on consumer hardware. bitsandbytes stands out as one of the most popular quantization libraries, offering 8-bit and 4-bit quantization that dramatically reduces memory requirements while preserving model quality. This guide shows you how to use Claude Code to streamline your bitsandbytes quantization workflow, making it more efficient and less error-prone.
 
@@ -169,7 +169,7 @@ Using Claude Code with bitsandbytes quantization creates a powerful combination 
 
 Remember that quantization is not a one-size-fits-all solution. Different models, use cases, and hardware configurations will require different approaches. Claude Code's contextual understanding allows it to adapt its recommendations to your specific situation, making it an invaluable partner in your quantization projects.
 
-{% endraw %}
+
 
 ---
 

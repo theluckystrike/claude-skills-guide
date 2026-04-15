@@ -12,8 +12,8 @@ reviewed: true
 score: 8
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 The Miro whiteboard platform has become an essential tool for remote collaboration, design thinking, and visual project management. While the web-based version offers solid functionality, the Chrome extension brings additional capabilities that streamline your workflow directly from the browser. This guide explores how developers and power users can maximize their productivity with the Miro Chrome extension.
 
 What is the Miro Chrome Extension?

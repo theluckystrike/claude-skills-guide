@@ -304,7 +304,7 @@ Token expired errors
 OIDC authentication for GitHub Actions is a significant security improvement over storing long-lived secrets. By using temporary, scoped tokens, you reduce the risk of credential compromise while simplifying your security posture. Claude Code can help you generate the appropriate workflow files for your cloud provider, making the setup process straightforward.
 
 Start by migrating one workflow to OIDC, you'll immediately see the benefits of eliminating secret rotation and gaining fine-grained access control.
-{% endraw %}
+
 
 ---
 
@@ -329,3 +329,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

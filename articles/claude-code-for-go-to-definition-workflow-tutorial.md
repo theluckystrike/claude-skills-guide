@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 One of the most powerful features that separates Claude Code from traditional code editors is its ability to understand and navigate code relationships. While IDEs like VS Code offer "Go to Definition" through Language Server Protocol (LSP), Claude Code brings this capability into an AI-powered context that understands not just syntax, but semantics and intent. This tutorial explores practical workflows for using Claude Code's definition navigation capabilities to accelerate your development workflow.
 
@@ -262,7 +262,7 @@ Claude Code's definition navigation capabilities transform how you explore and u
 
 Practice these workflows with your current projects, and you'll find yourself navigating codebases faster and with greater confidence than ever before.
 
-{% endraw %}
+
 
 ---
 

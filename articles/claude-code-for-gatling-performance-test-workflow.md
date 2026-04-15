@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Gatling Performance Test Workflow
 
 Performance testing is a critical part of software development, yet many teams struggle to create comprehensive load tests efficiently. Gatling is a powerful open-source load testing tool that, when combined with Claude Code's capabilities, becomes an even more formidable asset for identifying performance bottlenecks and ensuring your application can handle real-world traffic.
@@ -253,7 +253,7 @@ Follow these recommendations for effective performance testing with Claude:
 Claude Code transforms Gatling performance testing from a technical chore into a more accessible and efficient process. By using Claude's code generation capabilities, you can rapidly create comprehensive load tests, while its analytical abilities help you interpret results and optimize your application's performance.
 
 Start small, iterate quickly, and let Claude handle the boilerplate while you focus on designing meaningful test scenarios that reveal how your system performs under real-world conditions.
-{% endraw %}
+
 
 ---
 

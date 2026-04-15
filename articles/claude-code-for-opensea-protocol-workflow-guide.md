@@ -252,7 +252,7 @@ Claude Code transforms OpenSea protocol development from manual CLI work into au
 Start with simple API integrations, then progress to on-chain contract interactions as you become comfortable with the patterns. The OpenSea Protocol's well-documented API and Claude Code's flexible execution model make this one of the most accessible Web3 development workflows available today.
 
 For deeper integration, explore OpenSea's Seaport contract documentation and consider building custom MCP tools that encapsulate your most frequently used operations. This approach transforms repetitive tasks into reusable, Claude-executable commands that scale with your portfolio management needs.
-{% endraw %}
+
 
 ---
 
@@ -277,3 +277,4 @@ Related Reading
 - [Claude Code for Mythril Workflow Tutorial](/claude-code-for-mythril-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Readability Score Checker: A Developer Guide
 
 Readability score checkers have become essential tools for content creators, developers, and technical writers who need to ensure their text reaches the right audience. Chrome extensions that calculate readability scores provide instant feedback directly in the browser, eliminating the need to copy-paste content into separate tools. This guide covers the implementation details, algorithms, and practical approaches for building or using these extensions effectively.
@@ -487,4 +487,4 @@ Related Reading
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

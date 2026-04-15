@@ -107,7 +107,7 @@ async function resilientStream(
     onRetry?: (attempt: number, error: unknown) => void;
   } = {}
 ): Promise<Anthropic.Message> {
-  const {% raw %}{ maxRetries = 3, baseDelayMs = 1000, onRetry }{% endraw %} = options;
+  const { maxRetries = 3, baseDelayMs = 1000, onRetry } = options;
 
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {

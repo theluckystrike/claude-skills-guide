@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Container Environment Variables Management
 
 Environment variables are the backbone of flexible, secure container configurations in Claude Code. Whether you're managing API keys, database connections, or feature flags, understanding how to properly handle environment variables in containerized Claude Code environments is essential for building solid, production-ready applications.
@@ -515,7 +515,7 @@ Understanding this order helps you predict which value wins when the same variab
 Mastering environment variable management in Claude Code containers is fundamental to building secure, maintainable applications. By following these patterns, using environment variables for configuration, implementing proper secret management, validating variables at startup, and organizing them with consistent namespacing, you'll create containerized applications that are both flexible and secure.
 
 Remember: treat your environment variables as first-class configuration citizens, and your containerized applications will be easier to deploy, manage, and scale across different environments. Whether you're running a single Docker container on a personal project or orchestrating hundreds of pods across a Kubernetes cluster, the same principles apply: externalize configuration, validate early, and never hardcode secrets.
-{% endraw %}
+
 
 ---
 

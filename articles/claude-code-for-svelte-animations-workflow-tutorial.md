@@ -288,7 +288,7 @@ Most UI animations should complete in 200-400ms. Anything longer feels sluggish.
 Svelte's animation system is remarkably powerful yet approachable. By combining Svelte's built-in primitives with Claude Code's ability to generate, explain, and iterate on your code, you can create sophisticated motion designs efficiently. Start with simple transitions, gradually incorporate spring physics, and always test on real devices to ensure smooth performance.
 
 Remember to respect user preferences, keep animations brief, and use easing functions to create natural-feeling motion. With practice, you'll be building polished, animated interfaces that delight users without sacrificing performance.
-{% endraw %}
+
 
 ---
 
@@ -314,3 +314,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

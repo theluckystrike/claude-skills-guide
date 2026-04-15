@@ -13,7 +13,7 @@ score: 7
 permalink: /claude-code-weights-and-biases-experiment-tracking/
 ---
 
-{% raw %}
+
 Claude Code Weights and Biases Experiment Tracking
 
 Machine learning experimentation requires careful tracking of hyperparameters, metrics, and artifacts. Weights & Biases (W&B) has become the standard for experiment tracking, and when combined with Claude Code's CLI capabilities, you get a powerful workflow for automating your ML development pipeline. This guide shows you how to integrate Claude Code with Weights & Biases for smooth experiment tracking.
@@ -610,7 +610,7 @@ Ask Claude Code: "Look at run `resnet50-baseline` in W&B. does the loss curve in
 ## Conclusion
 
 Combining Claude Code with Weights & Biases gives you powerful experiment tracking capabilities. Claude Code can execute training scripts, analyze results, and help you manage your ML workflow while W&B handles the heavy lifting of metrics logging and comparison. Start by creating dedicated skills for your experiment tracking needs, and progressively add more automation as your workflow matures. The integration enables reproducible research, easier debugging, and faster iteration cycles for your machine learning projects.
-{% endraw %}
+
 
 ---
 

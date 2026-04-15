@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Redis Streams Workflow Guide
 
 Redis Streams is a powerful data structure designed for building real-time message processing systems, event sourcing architectures, and distributed task queues. When combined with Claude Code, you can create intelligent, context-aware workflows that process stream data with the power of AI. This guide walks you through building solid Redis Streams workflows using Claude Code, from basic patterns to production-ready implementations.
@@ -318,7 +318,7 @@ Redis Streams combined with Claude Code creates powerful, intelligent workflow s
 Start with the basic patterns in this guide, then extend them based on your specific requirements. The combination of Redis's rock-solid streaming infrastructure with Claude Code's AI capabilities opens up possibilities for building sophisticated, autonomous systems that can understand, categorize, and route data intelligently.
 
 Remember to monitor your streams in production, implement proper error handling, and design for scale from the beginning. With these patterns in place, you'll have a solid foundation for building event-driven, AI-powered applications.
-{% endraw %}
+
 
 ---
 

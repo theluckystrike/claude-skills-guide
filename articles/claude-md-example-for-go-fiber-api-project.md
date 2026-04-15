@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Building a Go Fiber API project becomes significantly more productive when you integrate Claude Code into your workflow. This guide provides concrete examples of how to use Claude's capabilities to accelerate development, testing, and documentation for your Fiber applications. Whether you are starting a greenfield project or maintaining an existing codebase, the patterns here apply directly to real work.
 
 ## Setting Up Your Go Fiber Project
@@ -508,4 +508,4 @@ Related Reading
 - [Claude MD Example for .NET ASP.NET Core Project](/claude-md-example-for-dotnet-aspnet-core-project/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

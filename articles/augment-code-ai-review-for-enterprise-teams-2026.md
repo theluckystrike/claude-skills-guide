@@ -13,8 +13,8 @@ score: 8
 tags: [claude-code, enterprise, code-review, ai-tools]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Enterprise software development demands rigorous code review processes that balance speed with security, compliance, and maintainability. As AI-assisted code review matures in 2026, organizations are moving beyond basic linting toward sophisticated systems that understand architectural patterns, enforce enterprise policies, and integrate smoothly with existing DevOps workflows. Claude Code skills provide the building blocks to construct comprehensive AI review pipelines tailored to enterprise requirements.
 
 ## The Enterprise Code Review Challenge

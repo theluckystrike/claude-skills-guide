@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Calico is one of the most popular container networking and security solutions for Kubernetes, providing fine-grained network policies that control traffic flow between pods, services, and external endpoints. Managing Calico network policies effectively requires understanding both Kubernetes networking concepts and Calico's specific CRDs (Custom Resource Definitions). we'll explore how Claude Code can accelerate your Calico network policy workflow, from initial policy design to testing and maintenance.
 
 ## Understanding Calico Network Policies
@@ -281,7 +281,7 @@ Based on common patterns and pitfalls, here are actionable recommendations:
 Claude Code significantly streamlines the Calico network policy workflow by generating manifests, validating configurations, creating test scenarios, and assisting with policy documentation. By integrating Claude Code into your Kubernetes networking workflow, you can reduce manual errors, accelerate policy development, and maintain solid security posture.
 
 Remember to always test policies in non-production environments before deploying to production, and use Calico's logging and visibility features to understand the impact of your policies in real-time.
-{% endraw %}
+
 
 ---
 

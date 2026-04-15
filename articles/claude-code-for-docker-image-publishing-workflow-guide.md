@@ -357,7 +357,7 @@ Start small: automate your local build process first, then add tagging, then CI/
 
 Remember to always consider security, implement proper versioning, and test your publishing workflow regularly. With Claude Code as your assistant, you have an expert guide available at every step.
 
-{% endraw %}
+
 
 ---
 
@@ -382,3 +382,4 @@ Related Reading
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

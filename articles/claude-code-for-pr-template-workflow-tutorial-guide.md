@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Pull request templates are one of the most underrated tools in a developer's toolkit. When used effectively, they can transform chaotic PR discussions into structured, actionable feedback loops. This guide shows you how to use Claude Code to build powerful PR template workflows that save time and improve code quality.
 
@@ -191,7 +191,7 @@ PR template workflows powered by Claude Code transform how teams handle code rev
 
 The best PR template is one that developers actually use. With Claude Code handling the mechanical parts, your team can focus on what matters: writing great code and providing thoughtful reviews.
 
-{% endraw %}
+
 
 ---
 

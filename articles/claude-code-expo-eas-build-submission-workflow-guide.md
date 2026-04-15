@@ -14,7 +14,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Building and submitting React Native applications to the App Store and Google Play Store can be a complex process involving multiple steps, credentials, and configurations. This guide shows you how to use Claude Code to automate and streamline your Expo Application Services (EAS) build and submission workflow, making mobile app releases as smooth as possible.
 
 ## Understanding the EAS Build Pipeline
@@ -312,7 +311,7 @@ Claude Code transforms EAS builds from a manual, error-prone process into an aut
 
 Start by creating a basic EAS workflow skill, then expand it as your release process evolves. With Claude Code handling the complexity, you can focus on building great mobile experiences.
 
-{% endraw %}
+
 
 ---
 
@@ -337,3 +336,4 @@ Related Reading
 - [Claude Code React Native Performance Optimization Guide](/claude-code-react-native-performance-optimization-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

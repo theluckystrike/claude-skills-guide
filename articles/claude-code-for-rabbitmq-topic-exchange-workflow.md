@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for RabbitMQ Topic Exchange Workflow
 
 RabbitMQ's topic exchange is one of the most powerful messaging patterns available for building flexible, scalable systems. When combined with Claude Code's AI-assisted development capabilities, you can rapidly prototype, implement, and debug complex message routing workflows. This guide walks you through creating production-ready RabbitMQ topic exchange implementations with Claude Code as your development partner.
@@ -324,7 +324,7 @@ The RabbitMQ Management UI at `http://localhost:15672` provides a real-time view
 ## Conclusion
 
 RabbitMQ topic exchanges provide the flexibility needed for complex, evolving message routing requirements. By combining Claude Code's development assistance with solid RabbitMQ patterns, you can rapidly build solid messaging systems that scale with your application's needs. Start with simple routing patterns and gradually add complexity as your system grows. Design your routing key taxonomy first, build the topology second, and let Claude Code handle the boilerplate so you can focus on consumer logic that actually differentiates your system.
-{% endraw %}
+
 
 ---
 

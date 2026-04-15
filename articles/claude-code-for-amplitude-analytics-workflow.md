@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Amplitude Analytics Workflow
 
 Integrating Claude Code with Amplitude analytics empowers developers to track events, analyze user behavior, and derive actionable insights directly from their development workflow. This guide walks you through building Claude skills that interact with Amplitude's API, enabling automated analytics operations without leaving your coding environment.
@@ -320,7 +320,7 @@ Building Claude skills for Amplitude analytics transforms how developers interac
 Start with simple event tracking, then expand to querying and reporting as you become comfortable with the API. The combination of Claude Code's conversational interface and Amplitude's powerful analytics creates a productivity boost for data-driven development teams.
 
 Remember to secure your credentials, handle rate limits gracefully, and validate event schemas to ensure reliable analytics integration.
-{% endraw %}
+
 
 ---
 

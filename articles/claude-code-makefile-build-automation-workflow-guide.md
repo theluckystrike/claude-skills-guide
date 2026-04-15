@@ -12,7 +12,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Makefile Build Automation Workflow Guide
 
 Makefiles remain one of the most powerful tools in a developer's toolkit for automating build processes, and when combined with Claude Code's AI capabilities, they become even more formidable. This guide walks you through creating efficient Makefile-based build automation workflows that use Claude Code's contextual understanding and skill ecosystem.
@@ -697,4 +697,4 @@ Related Reading
 - [Claude Code Package.json Scripts Automation Workflow Guide](/claude-code-package-json-scripts-automation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

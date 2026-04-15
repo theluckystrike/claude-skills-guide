@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Mobile app development demands reliable CI/CD pipelines to ensure consistent builds, comprehensive testing, and smooth deployments to app stores. This guide shows you how to build production-ready mobile CI/CD workflows using GitHub Actions with Claude Code to automate repetitive tasks and catch issues early. Whether you're building iOS apps with Xcode, Android apps with Gradle, or cross-platform apps with React Native or Flutter, these patterns will help you ship faster with confidence.
 
 ## Why Mobile CI/CD Needs Special Attention
@@ -329,7 +328,7 @@ Fourth, implement proper branch protection rules that require CI to pass before 
 Finally, document your workflow configuration and team conventions. Use Claude Code to generate documentation explaining what each job does, what secrets it requires, and how to troubleshoot common failures. This documentation pays dividends when team members need to modify the workflow months later.
 
 Mobile CI/CD doesn't have to be complicated. Start with the patterns in this guide, adapt them to your project's specific needs, and iterate as you discover what works best for your team.
-{% endraw %}
+
 
 ---
 
@@ -354,3 +353,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

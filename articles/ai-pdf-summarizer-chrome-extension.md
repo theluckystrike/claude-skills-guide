@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI PDF summarizer Chrome extensions have become essential tools for developers, researchers, and knowledge workers who process large volumes of documents. These extensions use large language models to extract key information from PDFs directly within the browser, eliminating the need to copy-paste content into separate AI tools.
 
 ## Understanding the Architecture
@@ -274,4 +274,4 @@ Related Reading
 - [AI Webpage Summarizer Chrome Extension: A Developer Guide](/ai-webpage-summarizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,8 +13,8 @@ reviewed: true
 score: 7
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 WebDriverIO remains one of the most popular JavaScript-based browser automation frameworks in 2026. When combined with Claude Code, it becomes a powerful duo for building reliable test automation. This guide shows you how to use Claude Code as your coding partner throughout the WebDriverIO development lifecycle, from initial project setup through advanced patterns like data-driven testing, visual regression, and CI/CD integration.
 
 ## Why Combine Claude Code with WebDriverIO

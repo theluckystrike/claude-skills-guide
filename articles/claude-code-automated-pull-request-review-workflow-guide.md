@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Automated Pull Request Review Workflow Guide
 
 Pull request reviews are a critical part of maintaining code quality, but they can also be time-consuming and repetitive. Automating parts of the review process with Claude Code skills can significantly reduce manual effort while ensuring consistent quality standards. This guide shows you how to build and deploy an automated PR review skill. a reusable, always-on workflow that handles linting, security scanning, and generates formatted feedback without requiring a developer to be present.
@@ -218,7 +218,7 @@ Monitor and tune. Track false positive rates and developer feedback. Regularly u
 Automated PR review workflows powered by Claude Code skills transform how teams handle code quality. By catching issues early, providing instant feedback, and enforcing consistent standards, you free developers to focus on what matters most: building great software. Start with simple linting checks, gradually add more sophisticated analysis, and watch your code quality improve while review cycles shorten.
 
 The investment in setting up these workflows pays dividends in reduced review time, fewer regressions, and more consistent code across your project.
-{% endraw %}
+
 
 ---
 

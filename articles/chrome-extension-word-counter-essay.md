@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Word Counter for Essay Writing: A Developer Guide
 
 When you need to track word count while writing essays, blog posts, or any lengthy document, a well-built Chrome extension becomes an indispensable tool. This guide shows you how to create a word counter extension tailored for essay writing, with real-time counting, character tracking, and reading time estimates.
@@ -337,4 +337,4 @@ Related Reading
 - [AI Writing Tools for Real Estate Listings 2026: A.](/ai-writing-tools-for-real-estate-listings-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

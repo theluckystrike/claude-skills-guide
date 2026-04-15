@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Custom LSP Diagnostics Workflow
 
 The Language Server Protocol (LSP) has revolutionized how we approach code analysis and diagnostics. By combining Claude Code with custom LSP diagnostics workflows, developers can create powerful automated systems that catch errors, enforce coding standards, and provide intelligent feedback, all without leaving their development environment.
@@ -665,7 +665,7 @@ The combination of standard LSP diagnostics, custom domain-specific rules, and C
 
 Start with the pre-commit hook and a basic collection pipeline. Add custom rules for your most frequent error patterns. Then layer in Claude fix suggestions once you have the pipeline stable. The key is finding the right balance between thoroughness and performance, ensuring your diagnostics enhance rather than hinder your development process.
 
-{% endraw %}
+
 
 ---
 

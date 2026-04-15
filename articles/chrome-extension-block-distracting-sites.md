@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Building a chrome extension to block distracting sites gives you granular control over your browsing environment. Unlike generic blockers, a custom solution lets you define exact blocking rules, integrate with your workflow, and extend functionality as needs change. This guide walks through the implementation using Chrome's declarative NetRequest API for Manifest V3 compliance.
 
 ## Understanding the Blocking Mechanism
@@ -390,4 +390,4 @@ Focus session timer not surviving browser restart: `chrome.alarms` persist acros
 
 Users bypassing the blocker by using incognito: The extension only runs in incognito if the user has explicitly allowed it in the extensions settings. For self-blocking use cases, consider adding a note in the focus page that the block does not apply in incognito mode.
 
-{% endraw %}
+

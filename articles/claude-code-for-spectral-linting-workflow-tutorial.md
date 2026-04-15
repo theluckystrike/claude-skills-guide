@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Spectral is a powerful JSON/YAML linting tool that helps teams maintain API quality and consistency. When combined with Claude Code, it becomes an even more potent pair for API development workflows. This tutorial will show you how to integrate Spectral into your Claude Code projects and use its capabilities for better API governance.
 
 ## Understanding Spectral and Its Role in API Development
@@ -173,7 +173,7 @@ Integrate Spectral into your Claude Code workflow by creating a custom skill tha
 Finally, add Spectral to your CI/CD pipeline to ensure all API changes are validated automatically. This creates a safety net that catches issues even when Claude Code isn't directly involved in the review.
 
 By combining Spectral's powerful linting capabilities with Claude Code's assistance, you can build APIs that are consistent, well-documented, and aligned with your organization's standards from day one.
-{% endraw %}
+
 
 ---
 

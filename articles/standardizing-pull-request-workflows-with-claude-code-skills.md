@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Pull requests are the heartbeat of modern software development. They gate code quality, help collaboration, and serve as the primary record of changes flowing into your codebase. Yet too many teams treat PR workflows as an afterthought, relying on inconsistent human judgment, ad-hoc checklists, or tools that don't talk to each other. This is where Claude Code skills come in.
 
 Claude Code skills are reusable, customizable workflows that extend Claude Code's capabilities. When applied to pull request workflows, they bring consistency, automation, and intelligence to every code change that crosses your team's threshold.
@@ -269,7 +268,7 @@ Standardizing pull request workflows with Claude Code skills transforms a manual
 
 Start small. Pick one problem, maybe it's always forgetting to add tests, or PRs lacking context, and automate that first. Write a simple skill, run it on your next five PRs, and refine based on what you learn. Build from there. Your future self, and your future reviewers, will thank you.
 
-{% endraw %}
+
 
 ---
 
@@ -294,3 +293,4 @@ Related Reading
 - [Extended Thinking + Claude Skills: Integration Guide](/claude-code-extended-thinking-skills-integration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Dependency License Audit Workflow
 
 Managing open source dependencies means managing legal obligations. Every package you add to your project comes with license terms that could impact your product's distribution, commercialization, or open source obligations. A systematic license audit workflow isn't just good practice, it's often a compliance requirement. Claude Code can automate significant portions of this process, making license audits faster, more thorough, and easier to integrate into your development workflow.
@@ -122,7 +122,7 @@ Claude Code's ability to use tools like file operations, bash commands, and web 
 License compliance doesn't have to be a manual burden. Claude Code's capabilities make it well-suited for automating dependency license audits, from initial discovery through ongoing monitoring. By establishing clear policies, creating repeatable processes, and integrating audits into your workflow, you maintain compliance without sacrificing development velocity.
 
 Start small, create your policy document, run an initial audit, and address the most critical findings. Build from there, adding automation and integration as your process matures. The investment pays dividends in reduced risk and reduced manual effort.
-{% endraw %}
+
 
 ---
 

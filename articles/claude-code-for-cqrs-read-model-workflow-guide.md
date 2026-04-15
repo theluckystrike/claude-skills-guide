@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 CQRS (Command Query Responsibility Segregation) is an architectural pattern that separates read and write operations into distinct models. While the write side handles commands (create, update, delete), the read side provides optimized data representations for querying. This guide shows how Claude Code can streamline your CQRS read model workflow, from initial design to ongoing maintenance, with practical TypeScript examples, projection patterns, synchronization strategies, and schema versioning techniques.
 
@@ -635,7 +635,7 @@ Claude Code transforms CQRS read model development from manual boilerplate to gu
 
 The key is treating read models as first-class citizens in your architecture, with proper versioning, testing, and monitoring. Claude Code becomes your partner in maintaining this complexity, generating consistent code and catching potential issues before they reach production. Whether you are implementing the outbox pattern for safe synchronization, writing projection rebuild scripts for schema migrations, or generating comprehensive test suites that cover idempotency and ordering edge cases, Claude Code accelerates each step without sacrificing correctness.
 
-{% endraw %}
+
 
 ---
 

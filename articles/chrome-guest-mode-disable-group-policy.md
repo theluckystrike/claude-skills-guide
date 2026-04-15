@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 How to Disable Chrome Guest Mode via Group Policy
 
 Chrome guest mode provides a browsing option that keeps user data separate from their regular profile. While useful for temporary browsing on personal devices, many organizations need to disable this feature for security and compliance reasons. This guide explains how to disable Chrome guest mode using group policy, with practical examples for Windows, macOS, and Linux environments.
@@ -358,7 +358,7 @@ Disabling Chrome guest mode via group policy requires understanding your platfor
 For mixed environments, Chrome Browser Cloud Management provides the most comprehensive solution. Remember to test policies thoroughly before broad deployment and document your configuration for audit purposes.
 
 By controlling guest mode, organizations maintain better security posture and ensure all browser activity traces to identifiable user profiles.
-{% endraw %}
+
 
 ---
 

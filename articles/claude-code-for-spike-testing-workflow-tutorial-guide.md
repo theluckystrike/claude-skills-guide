@@ -202,7 +202,7 @@ Testing Only Happy Paths: Include error scenarios in your spike tests. What happ
 Neglecting Downstream Systems: Your API might handle spikes gracefully, but does your database? Message queue? Third-party integrations? Test the entire request path.
 
 Spike testing reveals system behavior that steady-state testing misses. By combining Claude Code's assistance with sound testing methodology, you can confidently understand how your systems perform under sudden load conditions, and fix issues before they affect your users.
-{% endraw %}
+
 
 ---
 
@@ -227,3 +227,4 @@ Related Reading
 - [Claude Code for Distributed Load Testing Workflow](/claude-code-for-distributed-load-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

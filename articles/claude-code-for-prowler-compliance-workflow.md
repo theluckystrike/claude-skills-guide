@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Prowler Compliance Workflow
 
 Prowler is an essential open-source security tool that performs comprehensive security assessments across AWS, Azure, GCP, and Kubernetes environments. When combined with Claude Code, you can create powerful automated compliance workflows that continuously monitor your infrastructure, interpret findings, and even trigger remediation actions. This guide walks you through practical techniques for integrating Claude Code with Prowler to streamline your security compliance processes.
@@ -225,7 +225,7 @@ Prowler output combined with Claude Code analysis creates comprehensive complian
 Integrating Claude Code with Prowler transforms security compliance from a periodic manual process into an automated, continuous workflow. By using Claude's natural language understanding and code generation capabilities, you can quickly analyze findings, generate actionable remediation steps, and maintain comprehensive compliance documentation. Start with basic scan analysis, then gradually build toward automated remediation pipelines as your team's confidence grows.
 
 The key is treating Claude Code not just as a reporting tool, but as an active participant in your security compliance workflow, asking it to generate specific commands, compare findings across scans, and develop long-term remediation strategies.
-{% endraw %}
+
 
 ---
 

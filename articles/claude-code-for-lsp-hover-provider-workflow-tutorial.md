@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for LSP Hover Provider Workflow Tutorial
 
 The Language Server Protocol (LSP) has revolutionized how development tools understand and interact with code. LSP hover providers are one of the most valuable features, displaying contextual information when developers hover over code symbols. This tutorial shows you how to create Claude Code skills that implement LSP-style hover provider workflows, bringing rich contextual information directly into your AI-assisted development workflow.
@@ -295,4 +295,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

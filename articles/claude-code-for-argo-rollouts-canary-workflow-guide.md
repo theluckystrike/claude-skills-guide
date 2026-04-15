@@ -13,7 +13,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Deploying applications with confidence requires solid progressive delivery strategies. Argo Rollouts provides Kubernetes-native progressive delivery with automated canary deployments, and when combined with Claude Code, you gain an intelligent assistant that can help design, implement, and troubleshoot your deployment workflows. This guide demonstrates how to use Claude Code effectively for Argo Rollouts canary workflows.
 
 ## Understanding Argo Rollouts Canary Deployments
@@ -211,5 +210,4 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
-
 {% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for UMA Oracle Workflow Tutorial
 
 The UMA protocol provides decentralized oracle services and optimistic verification systems for building trustless financial contracts. Integrating Claude Code into your UMA oracle workflow can dramatically accelerate development, reduce errors, and help you navigate the complexities of optimistic oracle integration. This tutorial walks through practical patterns for using Claude Code effectively with UMA oracle workflows.
@@ -196,7 +196,7 @@ Claude Code transforms UMA oracle development from a complex, error-prone proces
 Remember to always verify the generated code against current UMA documentation, as blockchain protocols evolve rapidly. With the patterns covered in this tutorial, you're well-equipped to start building sophisticated oracle-powered applications.
 
 The key to success is treating Claude Code as a collaborative partner, use it for generation, review, and explanation, but always maintain human oversight for financial-critical code.
-{% endraw %}
+
 
 ---
 

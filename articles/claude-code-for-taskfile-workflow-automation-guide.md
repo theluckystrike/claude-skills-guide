@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Taskfile has become an essential tool for developers seeking cross-platform task automation. When combined with Claude Code, you create a powerful duo that can handle complex workflows while maintaining the flexibility of natural language interaction. This guide explores practical strategies for integrating Claude Code with Taskfile to automate development processes effectively.
 
@@ -234,7 +234,7 @@ Combining Claude Code with Taskfile creates powerful automation possibilities th
 
 The key is treating Claude Code not just as a CLI tool but as an intelligent collaborator that understands your codebase and can make informed decisions about which tasks to run and how to handle various development scenarios.
 
-{% endraw %}
+
 
 ---
 

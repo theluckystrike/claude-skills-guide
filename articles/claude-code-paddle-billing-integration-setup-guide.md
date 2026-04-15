@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Paddle Billing Integration Setup Guide
 
 Integrating billing into your application doesn't have to be a nightmare. Paddle, a merchant of record platform, simplifies subscription management and payment processing. Combined with Claude Code's AI-assisted development capabilities, you can set up a solid billing system in hours rather than days.
@@ -397,7 +397,7 @@ describe('Paddle Webhooks', () => {
 Building a Paddle billing integration with Claude Code significantly accelerates development. The AI assistant helps generate type-safe code, identifies potential issues, and creates comprehensive tests. By following this guide and using Claude Code's capabilities, you'll have a production-ready billing system that handles subscriptions, webhooks, and payment failures elegantly.
 
 Remember to thoroughly test your integration in Paddle's sandbox environment before deploying to production. With proper error handling and webhook processing, your billing system will be solid and reliable.
-{% endraw %}
+
 
 ---
 

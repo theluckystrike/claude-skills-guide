@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 Introduction
 
 Privacy in browsers has become a critical consideration for developers and power users who handle sensitive data or build privacy-conscious applications. This comparison examines Firefox and Chrome as they stand in 2026, focusing on technical privacy mechanisms rather than marketing claims. We'll analyze data collection policies, fingerprinting resistance, network-level protections, and extension API behaviors that affect user privacy.
@@ -238,4 +238,4 @@ Related Reading
 - [1Password vs Bitwarden Chrome: Which Password Manager.](/1password-vs-bitwarden-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

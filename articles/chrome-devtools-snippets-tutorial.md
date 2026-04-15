@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome DevTools Snippets Tutorial: Automate Your Browser Workflow
 
 Chrome DevTools Snippets are small JavaScript programs you can write, save, and execute directly within your browser's developer tools. They bridge the gap between console one-liners and full browser extensions, giving developers a powerful way to automate repetitive tasks, debug complex issues, and prototype ideas without leaving Chrome.
@@ -233,4 +233,4 @@ Related Reading
 - [Best Browser for Low RAM in 2026 - A Developer's Guide](/best-browser-low-ram-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

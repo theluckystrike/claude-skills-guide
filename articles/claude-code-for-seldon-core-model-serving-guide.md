@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Seldon Core Model Serving Guide
 
 Seldon Core transforms machine learning models into production-ready inference services running on Kubernetes. While powerful, setting up Seldon deployments involves multiple configuration files, understanding Kubernetes resources, and managing complex ML pipelines. Claude Code can significantly accelerate this workflow by automating repetitive tasks, generating configuration templates, and helping you debug deployment issues.
@@ -545,7 +545,7 @@ Claude Code transforms Seldon Core deployment from manual YAML editing into an a
 
 Start by creating a deployment generator skill for your specific model types, then expand to cover testing, monitoring, and advanced inference graph patterns as your serving needs grow. As your fleet of deployed models scales, the consistency that comes from Claude Code-generated configurations pays compounding dividends. fewer incidents caused by hand-crafted YAML errors, faster onboarding for new team members, and a documented, reproducible process for every deployment.
 
-{% endraw %}
+
 
 ---
 

@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Chrome extensions have become essential tools for developers and power users who need to extract, transform, and process data from web pages. When you combine browser automation with AI capabilities, you unlock powerful workflows for scraping structured data, summarizing content, and automating repetitive data tasks. This guide covers everything you need to know about building and using AI data extractor Chrome extensions.
 
@@ -501,4 +501,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

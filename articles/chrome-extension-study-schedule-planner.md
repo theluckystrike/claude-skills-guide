@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, productivity, study-tools]
 ---
 
-{% raw %}
+
 Chrome extension study schedule planners transform browser-based learning by integrating task management directly into your workflow. For developers and power users, building a custom planner means you get exactly the features you need without relying on generic productivity apps.
 
 ## Why Build a Study Schedule Planner Extension
@@ -653,4 +653,4 @@ Related Reading
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

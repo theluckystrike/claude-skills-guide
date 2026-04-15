@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 AI Speed Reader Chrome Extension: A Developer Guide
 
 AI-powered speed reading extensions represent one of the more practical applications of large language models in browser tooling. These extensions help users consume content faster by intelligently chunking text, highlighting key phrases, and presenting information in optimized formats. This guide covers the technical implementation for developers looking to build or customize these tools.
@@ -331,4 +331,4 @@ Related Reading
 - [Chrome iOS Slow Fix: A Developer's Guide to Speed Optimization](/chrome-ios-slow-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

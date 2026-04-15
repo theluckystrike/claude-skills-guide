@@ -287,7 +287,7 @@ Create separate templates for different project types and let Claude detect and 
 Claude Code transforms README generation from a tedious manual task into an automated, consistent process. By creating well-structured skills and integrating them into your development workflow, you can ensure every project has professional documentation without investing excessive manual effort.
 
 Start with simple templates and gradually expand your README generation capabilities. The investment in setting up this workflow pays dividends through improved project documentation and reduced maintenance overhead. With Claude Code handling the heavy lifting, you can focus on writing code while maintaining excellent project documentation.
-{% endraw %}
+
 
 ---
 
@@ -313,3 +313,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

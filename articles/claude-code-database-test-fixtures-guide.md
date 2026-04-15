@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Database test fixtures are essential for creating reliable, repeatable tests. They provide known initial states for your database, ensuring that tests run consistently regardless of external factors. Claude Code can help you generate, manage, and maintain database fixtures efficiently, saving hours of manual work and reducing test flakiness.
 
 ## Understanding Database Test Fixtures
@@ -312,7 +312,7 @@ Claude will scan all the fixture files, identify the affected INSERT statements,
 Claude Code transforms database fixture creation from a tedious manual task into an efficient, automated process. By using its understanding of code and data structures, you can generate high-quality fixtures that make your tests more reliable and maintainable. Whether you're setting up new test suites or improving existing ones, Claude Code provides practical assistance for every aspect of database fixture management.
 
 The patterns that deliver the most value are: organizing fixtures by feature rather than by table, using named factories for dynamic data, scoping database transactions carefully to avoid test bleed, and treating fixture updates as a first-class part of every schema migration. With Claude Code handling the generation and maintenance work, you can focus on writing test assertions instead of wrestling with setup code.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome extension focus timer productivity tools have become essential for developers and power users seeking to combat distraction and maintain deep work sessions. These browser-based timers integrate directly into your workflow, offering smooth session management without switching contexts. This guide explores how these extensions function, practical implementation patterns, and strategies for maximizing your productivity.
 
 ## Understanding Focus Timer Extensions
@@ -381,4 +381,4 @@ Related Reading
 - [Claude Code for Developer Productivity Tracking](/claude-code-for-developer-productivity-tracking/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

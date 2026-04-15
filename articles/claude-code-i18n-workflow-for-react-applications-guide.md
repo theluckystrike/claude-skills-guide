@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-i18n-workflow-for-react-applications-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [Internationalization (i18n) remains one of the most challenging aspects of building React applications that serve global audiences](/best-claude-code-skills-to-install-first-2026/) Managing translation keys, coordinating with localization teams, and maintaining consistency across locales can quickly become overwhelming. This guide shows you how to use Claude Code to streamline your i18n workflow, reducing manual effort and preventing common mistakes.
 
 ## Setting Up Your React i18n Foundation

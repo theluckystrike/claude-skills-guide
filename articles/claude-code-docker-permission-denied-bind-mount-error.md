@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 ## Understanding and Fixing Docker Permission Denied Bind Mount Errors in Claude Code
 
@@ -477,4 +477,4 @@ Related Reading
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

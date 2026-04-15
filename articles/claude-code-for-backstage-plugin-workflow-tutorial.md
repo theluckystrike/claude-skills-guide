@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Backstage, Spotify's open-source developer portal framework, has transformed how organizations build internal developer platforms. One of Backstage's most powerful features is its plugin system, which allows you to extend the platform with custom functionality tailored to your organization's needs. This tutorial explores how Claude Code can accelerate your Backstage plugin development workflow, from scaffolding to deployment.
 
 ## Why Use Claude Code for Backstage Plugin Development
@@ -274,7 +273,7 @@ Claude Code significantly accelerates Backstage plugin development by handling t
 
 Start with small, focused plugins, and gradually expand as you become more comfortable with the Backstage plugin architecture. The combination of Claude Code's assistance and Backstage's extensive plugin system empowers you to create powerful, customized developer experiences for your organization.
 
-{% endraw %}
+
 
 ---
 
@@ -299,3 +298,4 @@ Related Reading
 - [Claude Code for JetBrains Plugin Workflow Tutorial](/claude-code-for-jetbrains-plugin-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

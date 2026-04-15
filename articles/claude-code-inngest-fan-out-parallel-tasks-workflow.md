@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Building Fan-Out Parallel Tasks Workflows with Claude Code and Inngest
 
 When building modern applications, you'll often encounter scenarios where a single trigger needs to spawn multiple independent tasks that can execute concurrently. This pattern, called "fan-out", is essential for processing bulk operations, sending notifications, generating reports, or handling webhooks at scale. Inngest, combined with Claude Code's powerful development capabilities, provides an elegant solution for implementing these workflows.
@@ -310,7 +310,7 @@ When implementing fan-out workflows with Claude Code and Inngest, keep these tip
 Fan-out parallel task workflows are a powerful pattern for building scalable applications. With Claude Code's development capabilities and Inngest's event-driven architecture, you can implement solid parallel processing in minutes rather than hours. The combination of TypeScript safety, step functions, and automatic retries makes this approach production-ready from the start.
 
 Start experimenting with these patterns in your next project, and you'll quickly see how parallel task execution can transform your application's performance and user experience.
-{% endraw %}
+
 
 ---
 

@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Changelog Review Workflow Tutorial
 
 Changelog management is a critical yet often overlooked part of software development. Keeping CHANGELOG files accurate, consistent, and informative requires systematic review. In this tutorial, you'll learn how to create a Claude Code skill that automates your changelog review workflow, parsing entries, validating formats, checking for consistency issues, and providing actionable feedback.
@@ -246,4 +246,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

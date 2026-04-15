@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Browser-based image cropping has become an essential workflow for developers, designers, and power users who need quick edits without launching dedicated image editing software. Chrome extensions that crop images online provide a streamlined solution for handling image assets directly within the browser environment.
 
@@ -348,4 +348,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Video Downloader: A Developer Guide
 
 Building a Chrome extension that downloads videos from websites requires understanding browser extension architecture, network request interception, and media handling. This guide covers the technical implementation for developers and power users who want to understand how video downloaders work or build their own.
@@ -446,4 +446,4 @@ Related Reading
 - [Chrome Extension YouTube Thumbnail Downloader: A.](/chrome-extension-youtube-thumbnail-downloader/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

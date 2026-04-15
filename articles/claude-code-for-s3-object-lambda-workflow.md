@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for S3 Object Lambda Workflow
 
 S3 Object Lambda lets you add custom code to transform data as it's retrieved from S3, enabling powerful on-the-fly processing without managing infrastructure. When combined with Claude Code, you get an intelligent development partner that can help you design, implement, debug, and optimize your Object Lambda workflows. This guide shows you how to use Claude Code throughout the entire S3 Object Lambda development lifecycle.
@@ -236,7 +236,7 @@ Claude Code can help you troubleshoot common S3 Object Lambda problems:
 Claude Code transforms S3 Object Lambda development from a complex, infrastructure-heavy task into an intelligent, assisted workflow. By using Claude's capabilities for code generation, testing, infrastructure as code, and debugging, you can build solid Object Lambda solutions faster while following AWS best practices.
 
 Remember to start simple, test thoroughly in local environments, and iterate based on real-world performance data. With Claude Code as your development partner, you have an intelligent assistant ready to help at every step of your S3 Object Lambda journey.
-{% endraw %}
+
 
 ---
 

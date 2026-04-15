@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Screen recording has become essential for developer workflows, creating tutorials, bug reports, and code walkthroughs. Loom set the standard, but its free tier comes with limitations that frustrate power users. Several legitimate free alternatives exist, each with distinct trade-offs worth understanding.
 
 This guide evaluates Chrome extensions and desktop applications that replace Loom's core functionality without subscription costs. You'll find options ranging from simple browser-based tools to fully self-hosted solutions.
@@ -176,4 +176,4 @@ Related Reading
 - [Apollo.io Alternative Chrome Extension in 2026](/apollo-io-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

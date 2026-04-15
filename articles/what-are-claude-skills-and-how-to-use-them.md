@@ -14,7 +14,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Claude skills are reusable instruction sets that tell Claude Code how to handle specific types of tasks. Instead of repeating the same context and instructions every time you start a conversation, skills let you define your preferences, workflows, and domain knowledge once and have Claude apply them automatically.
 
 This guide covers what skills are, how they work under the hood, and practical steps for using them in your projects.
@@ -239,7 +238,7 @@ Claude skills transform Claude Code from a general-purpose assistant into a spec
 
 Start with one or two skills for your most common tasks, refine them based on results, and gradually expand your skill library as you discover new patterns worth codifying.
 
-{% endraw %}
+
 
 ---
 
@@ -264,3 +263,4 @@ Related Reading
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

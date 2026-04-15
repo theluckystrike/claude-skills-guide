@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Building a Chrome extension for team mood tracking represents an interesting intersection of browser extension development, real-time data synchronization, and team wellness analytics. This guide covers the technical implementation details, architectural decisions, and practical considerations for developers looking to create collaborative mood tracking tools.
 
 ## Understanding Team Mood Tracking Requirements
@@ -323,4 +323,4 @@ Related Reading
 - [Async Product Discovery Process for Remote Teams Using Recorded Interviews](/async-product-discovery-process-for-remote-teams-using-recorded-interviews/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

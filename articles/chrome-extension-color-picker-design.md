@@ -12,7 +12,7 @@ categories: [guides]
 tags: [chrome-extension, design, development]
 ---
 
-{% raw %}
+
 Chrome extension color picker design represents a fascinating intersection of user experience and technical implementation. When building a color picker for a Chrome extension, developers face unique challenges that differ from traditional web applications. The extension operates within the constraints of Chrome's UI environment while still delivering powerful color selection capabilities.
 
 ## Core Components of a Color Picker Extension
@@ -282,4 +282,4 @@ Related Reading
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

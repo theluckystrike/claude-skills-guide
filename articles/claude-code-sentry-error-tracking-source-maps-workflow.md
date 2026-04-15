@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-sentry-error-tracking-source-maps-workflow/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Modern JavaScript applications bundle code into minified files, making production errors nearly impossible to read without proper source map infrastructure. This guide walks through connecting Claude Code with Sentry to create an automated error tracking and debugging workflow that transforms cryptic stack traces into actionable insights.
 
 ## Why Source Maps Matter for Error Tracking

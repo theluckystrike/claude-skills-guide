@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Nitric Cloud Framework Workflow
 
 The Nitric framework provides a refreshing approach to cloud development, write once, deploy anywhere (AWS, Azure, GCP). Combined with Claude Code, you get an AI-powered development partner that understands both your business logic and cloud infrastructure patterns. This guide shows you how to integrate Claude Code into your Nitric workflow for maximum productivity.
@@ -258,7 +258,7 @@ Claude understands Nitric's stack system and can guide you through:
 Claude Code and Nitric form a powerful combination for modern cloud development. Nitric's declarative approach to infrastructure pairs naturally with Claude Code's ability to understand and generate contextual code. By setting up proper project context, using Claude for route generation and testing, and maintaining cloud-agnostic patterns, you'll accelerate your serverless development significantly.
 
 The key is treating Claude not just as a code generator, but as a development partner that understands your framework choices. With the right context and patterns, your Nitric workflow becomes significantly more productive.
-{% endraw %}
+
 
 ---
 

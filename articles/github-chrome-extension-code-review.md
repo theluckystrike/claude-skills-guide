@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 When you install a Chrome extension that interacts with GitHub, you're trusting that code with access to your repositories, pull requests, and potentially sensitive data. Whether you're evaluating a third-party extension before installation or reviewing code for an extension your team is building, understanding how to properly assess GitHub Chrome extension code protects your projects and users.
 
 This guide covers practical approaches to reviewing Chrome extensions that interact with GitHub, focusing on what matters most to developers and power users who need to verify security, functionality, and code quality.
@@ -205,4 +205,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

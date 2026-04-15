@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Tree-sitter Playground Workflow Guide
 
 Tree-sitter has revolutionized how developers think about parsing and code analysis. When combined with Claude Code, you have a powerful duo that can transform your workflow for exploring grammars, debugging parse trees, and generating parsers. This guide walks you through practical strategies to maximize your productivity with Tree-sitter Playground using Claude Code.
@@ -135,4 +135,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

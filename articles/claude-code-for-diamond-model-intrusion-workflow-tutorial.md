@@ -10,7 +10,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 The Diamond Model of intrusion analysis provides a structured framework for understanding and documenting cyberattacks. By organizing intrusion data around four core elements, Adversary, Victim, Infrastructure, and Capability, security analysts can systematically track threat actors and their tactics. This tutorial shows you how to use Claude Code to build reusable skills that automate and streamline Diamond Model analysis workflows.
 
@@ -204,4 +204,4 @@ Related Reading
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
 
-{% endraw %}
+

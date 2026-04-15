@@ -231,7 +231,7 @@ Claude Code transforms how you work with Gravitee API Gateway by automating conf
 
 Start by integrating Claude Code into your API definition workflow, then expand to policy configuration and GitOps management. The time savings and reduced error rates will quickly justify the initial learning curve.
 
-{% endraw %}
+
 
 ---
 
@@ -256,3 +256,4 @@ Related Reading
 - [Claude Code API Gateway Configuration Guide](/claude-code-api-gateway-configuration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

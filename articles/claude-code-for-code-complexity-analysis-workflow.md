@@ -13,8 +13,8 @@ reviewed: true
 score: 8
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Code complexity analysis is one of the most valuable yet underutilized practices in software development. High cyclomatic complexity, deep nesting, and excessive function lengths are reliable predictors of bugs, maintenance nightmares, and developer frustration. Yet many teams avoid complexity analysis because traditional tools feel disconnected from their actual workflow. Claude Code changes this equation by embedding complexity analysis directly into your development process.
 
 This guide shows you how to set up Claude Code for code complexity analysis, interpret the metrics that matter, and integrate complexity checks into your daily workflow.

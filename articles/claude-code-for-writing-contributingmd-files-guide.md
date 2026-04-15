@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Writing CONTRIBUTING.md Files Guide
 
 A well-crafted CONTRIBUTING.md file is the gateway to your open-source project. It sets expectations, reduces friction for new contributors, and establishes the cultural foundation of your community. This guide shows you how to use Claude Code to create comprehensive, user-friendly contribution guidelines that scale with your project.
@@ -197,7 +197,7 @@ for non-native English speakers while maintaining technical accuracy"
 A well-written CONTRIBUTING.md transforms your project from an opaque codebase into an accessible community resource. By using Claude Code to analyze your project and generate tailored guidelines, you can create documentation that genuinely helps contributors while saving significant time. Remember that your contribution guide is a living document, review and refine it regularly to keep it relevant and welcoming.
 
 Start building your CONTRIBUTING.md today, and watch your contributor community grow.
-{% endraw %}
+
 
 ---
 

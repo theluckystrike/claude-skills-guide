@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Critical CSS is one of the most impactful optimizations you can make for your website's performance. By inlining the CSS needed to render above-the-fold content and deferring the rest, you can dramatically reduce render-blocking resources and improve First Contentful Paint (FCP). In this tutorial, we'll explore how to use Claude Code to automate and streamline your critical CSS workflow.
 
 What is Critical CSS?
@@ -275,7 +275,7 @@ Automating your critical CSS workflow with Claude Code can significantly improve
 Remember, critical CSS is just one piece of the performance puzzle. Combine it with other optimizations like image compression, code splitting, and lazy loading for the best results.
 
 Start implementing critical CSS in your projects today and watch your Core Web Vitals improve!
-{% endraw %}
+
 
 ---
 

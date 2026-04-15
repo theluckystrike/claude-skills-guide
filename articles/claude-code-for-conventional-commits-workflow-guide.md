@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Conventional Commits Workflow Guide
 
 Conventional Commits provide a standardized format for commit messages that make your git history readable, automatic versioning possible, and team collaboration smoother. But remembering the exact syntax and crafting meaningful messages can be challenging. This is where Claude Code becomes your pairing partner for commit excellence.
@@ -218,7 +218,7 @@ It will review each message and provide actionable feedback for improvement.
 ## Conclusion
 
 Claude Code transforms conventional commits from a chore into a conversation. By using AI assistance for message crafting, organization, and validation, you maintain commit standards without sacrificing productivity. Start with one workflow, interactive message generation, and expand as your team matures. Your future self will thank you when browsing the git history.
-{% endraw %}
+
 
 ---
 

@@ -12,7 +12,7 @@ permalink: /why-is-claude-code-reading-the-wrong-directory-entirely/
 reviewed: true
 score: 7
 ---
-{% raw %}
+
 
 Why Is Claude Code Reading the Wrong Directory Entirely?
 
@@ -368,4 +368,4 @@ Related Reading
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

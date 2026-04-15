@@ -13,7 +13,7 @@ score: 7
 permalink: /claude-code-docker-compose-test-setup-guide/
 ---
 
-{% raw %}
+
 
 Running Claude Code skills inside Docker Compose gives you repeatable test environments where you can spin up databases, mock APIs, and isolated skill executions without polluting your host system. This guide walks through practical setups for testing skills that interact with external services, databases, and CI pipelines.
 
@@ -301,4 +301,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

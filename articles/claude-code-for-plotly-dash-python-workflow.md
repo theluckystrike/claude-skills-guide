@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Plotly Dash Python Workflow
 
 Plotly Dash has become one of the most popular frameworks for building analytical web applications in Python. When combined with Claude Code, developers can dramatically accelerate their Dash development workflow, from initial project setup to deployment. This guide explores practical strategies for using Claude Code effectively with Plotly Dash projects, covering project structure, interactive patterns, performance tuning, and production deployment.
@@ -376,7 +376,7 @@ Here are key recommendations for productive Dash development with Claude Code:
 7. Cache aggressively - Data loading is almost always the slowest part of a Dash app
 
 Claude Code serves as an excellent development partner for Dash projects, helping you generate clean code, implement complex patterns, and follow best practices. By integrating it into your workflow, you can focus more on data visualization logic and less on boilerplate code. The most productive approach is to use Claude Code iteratively: generate a working skeleton, run it, identify what needs to change, and prompt Claude Code with specific, context-rich requests for each change rather than describing the entire application in one shot.
-{% endraw %}
+
 
 ---
 

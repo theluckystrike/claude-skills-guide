@@ -12,7 +12,7 @@ score: 8
 permalink: /how-to-make-claude-code-follow-my-naming-conventions/
 ---
 
-{% raw %}
+
 
 Getting Claude Code to consistently respect your naming conventions is essential for maintaining code quality across your projects. Whether you prefer camelCase, PascalCase, snake_case, or any other naming style, you can configure Claude Code to understand and apply your conventions automatically. This guide explores practical methods to ensure AI-generated code matches your project's naming standards from the first line written.
 
@@ -233,7 +233,7 @@ If anything doesn't match, adjust your configuration and retest. Fine-tuning you
 
 Making Claude Code follow your naming conventions is straightforward with the right configuration. Start with `.claude.json` for broad coverage, add a dedicated skill for detailed rules, and implement verification steps to ensure compliance. Once configured, Claude Code becomes an active participant in maintaining your project's naming standards, generating code that's ready to merge from the first draft.
 
-{% endraw %}
+
 
 ---
 

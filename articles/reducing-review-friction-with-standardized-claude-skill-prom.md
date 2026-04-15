@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills, code-review, productivity, standardization]
 ---
 
-{% raw %}
+
 
 ## Reducing Review Friction with Standardized Claude Skill Prompts
 
@@ -126,7 +126,7 @@ Finally, treat review skills as living documents. The goal isn't perfect code, i
 Standardized Claude skill prompts transform code reviews from friction points into streamlined processes. By encoding your team's standards directly into Claude Code, you automate the consistent application of best practices while freeing human reviewers to focus on what matters most: architectural decisions, business logic, and the creative problem-solving that still requires human judgment.
 
 Start small with your most common review issues, build out comprehensive standards over time, and watch your review velocity improve consistently.
-{% endraw %}
+
 
 ---
 

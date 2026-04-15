@@ -326,7 +326,7 @@ Implementing container security with Claude Code and Snyk works best when you fo
 Combining Claude Code's AI-assisted development capabilities with Snyk's container security scanning creates a powerful DevSecOps workflow. This integration helps you catch vulnerabilities earlier, remediate them faster, and maintain continuous security oversight throughout your containerized applications.
 
 Start by implementing basic scanning in your development workflow, then gradually add automation and continuous monitoring as your team's security maturity grows. The investment pays dividends in reduced security incidents and faster remediation when vulnerabilities are discovered.
-{% endraw %}
+
 
 ---
 
@@ -351,3 +351,4 @@ Related Reading
 - [Claude Code for Branch Protection Rules Workflow](/claude-code-for-branch-protection-rules-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

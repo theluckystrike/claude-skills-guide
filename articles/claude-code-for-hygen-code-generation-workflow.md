@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Hygen Code Generation Workflow
 
 Code generation is a powerful technique for maintaining consistency across your projects, but manually creating templates and managing generation scripts can become tedious. Combining Claude Code with Hygen, a scalable code generator, creates a powerful workflow that lets you generate boilerplate code through natural language commands. This guide shows you how to integrate these two tools effectively.
@@ -394,7 +394,7 @@ Combining Claude Code with Hygen creates a powerful code generation workflow tha
 The key is treating code generation as a collaborative process between you and Claude, describe what you need, let Claude handle the template execution, and focus on the unique business logic that only you can write.
 
 Over time, your `_templates/` directory becomes a living record of your team's conventions. Claude Code can read it, extend it, and apply it, turning consistency from a discipline into an automatic outcome.
-{% endraw %}
+
 
 ---
 

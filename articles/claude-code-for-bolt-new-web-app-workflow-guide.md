@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Bolt.new Web App Workflow Guide
 
 Bolt.new has emerged as one of the most powerful AI-driven web application builders, enabling developers to prototype and deploy full-stack applications directly from natural language descriptions. When combined with Claude Code, you get an incredibly productive workflow that lets you iterate faster, customize generated code, and maintain full control over your project's architecture. This guide walks you through integrating Claude Code into your Bolt.new web app development process.
@@ -215,7 +215,7 @@ Integrating Claude Code with your Bolt.new workflow transforms it from a rapid p
 Start with small enhancements, maintain clean separation between generated and custom code, and use Claude Code's analysis and refactoring capabilities. This workflow gives you the best of both worlds: speed from AI-assisted generation and precision from intelligent customization.
 
 The key is treating Bolt.new as a starting point rather than a final destination, and using Claude Code as your development partner to shape the generated code into production-ready applications that meet your exact specifications.
-{% endraw %}
+
 
 ---
 

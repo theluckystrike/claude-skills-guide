@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 ## Introduction
 
@@ -240,7 +240,7 @@ Building a literature review summarization workflow with Claude Code combines po
 
 With the right workflow in place, you can dramatically reduce the time spent on literature reviews while maintaining or improving the depth and accuracy of your synthesis. Claude Code becomes not just a tool for generating summaries, but an intelligent partner in the research process.
 
-{% endraw %}
+
 
 ---
 

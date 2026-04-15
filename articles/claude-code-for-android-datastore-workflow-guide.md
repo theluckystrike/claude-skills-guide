@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Android DataStore Workflow Guide
 
 Android Jetpack DataStore is Google's recommended solution for persistent key-value storage and protocol buffer-based data storage in Android applications. When combined with Claude Code, developers can dramatically accelerate DataStore implementation, migration from SharedPreferences, and data layer architecture. This guide provides practical workflows, code examples, and strategies for integrating DataStore effectively with Claude Code assistance.
@@ -309,7 +309,7 @@ Claude Code significantly accelerates Android DataStore implementation by genera
 Start with Preferences DataStore for simple key-value needs, and migrate to Proto DataStore as your data requirements grow more complex. Use Claude Code to handle the boilerplate, letting you focus on business logic and user experience.
 
 Remember to test your DataStore implementations thoroughly, especially when migrating from SharedPreferences, and always implement proper error handling for production-ready applications.
-{% endraw %}
+
 
 ---
 

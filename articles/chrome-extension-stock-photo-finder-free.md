@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Stock Photo Finder Free: A Developer's Guide
 
 Finding the right stock photo without leaving your browser workflow can significantly speed up content creation and development projects. A Chrome extension stock photo finder free tool integrates directly into your browsing experience, letting you search, preview, and download images from various sources without switching contexts. This guide covers how these extensions work, how to build one yourself, and which approaches work best for developers and power users.
@@ -264,4 +264,4 @@ Related Reading
 - [AI Writing Assistant Chrome Extension Free: A Developer's Guide](/ai-writing-assistant-chrome-extension-free/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

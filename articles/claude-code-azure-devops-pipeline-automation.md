@@ -13,8 +13,8 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Azure DevOps pipeline automation combined with Claude Code transforms how developers ship software. Instead of manually configuring builds, tests, and deployments, you create self-healing pipelines that adapt to your codebase. This guide shows you practical approaches to building Azure DevOps pipelines that use Claude Code's capabilities.
 
 ## Why Automate Azure DevOps Pipelines with Claude Code

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for FZF Fuzzy Finder Workflow Guide
 
 The command line is the heart of developer productivity, and few tools have revolutionized terminal workflows as dramatically as FZF (Fuzzy Finder). When combined with Claude Code, these two powerhouses create an unstoppable productivity tandem that can transform how you navigate files, execute commands, and manage your development environment. This comprehensive guide walks you through building a smooth FZF workflow that uses Claude Code's capabilities to their fullest extent.
@@ -154,7 +154,7 @@ Maintain your scripts: Keep your FZF and Claude Code integration scripts in a de
 FZF and Claude Code together represent a paradigm shift in command-line productivity. FZF's lightning-fast fuzzy matching eliminates the friction of file navigation and command selection, while Claude Code provides intelligent processing of whatever you select. By mastering their integration, you build a workflow that feels like having an AI-powered extension of your own thinking, capable of instantly finding and explaining exactly what you need.
 
 The workflows outlined in this guide provide starting points, but the true power lies in customizing these patterns to your specific needs. As you develop your own combinations, you'll discover that the FZF and Claude Code partnership transforms not just how fast you can work, but how you conceptualize problem-solving at the command line. Start with the basics, build incrementally, and watch your productivity soar.
-{% endraw %}
+
 
 ---
 

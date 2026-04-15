@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for LSP Document Symbol Workflow Guide
 
 The Language Server Protocol (LSP) has revolutionized how development tools communicate about code. Document symbols represent the structural elements of your code, classes, functions, methods, variables, and more. Understanding how to use Claude Code with LSP document symbols can dramatically improve your development workflow, making code navigation faster and refactoring more reliable.
@@ -721,7 +721,7 @@ class OrderService:
 
 The symbol information tells Claude Code the exact parameter types, return type, and method location in the class hierarchy. producing more accurate documentation than asking Claude to infer types from method bodies. Run this documentation generation step as part of your pre-commit hooks to keep docstrings current as signatures evolve.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 WebAssembly (WASM) has become essential for bringing high-performance compute to web applications. When combined with Rust's memory safety and performance, wasm-bindgen provides a powerful toolkit for building fast, interoperable modules. This guide shows you how to use Claude Code to automate and accelerate your wasm-bindgen development workflow.
 
@@ -284,7 +284,7 @@ Claude Code dramatically accelerates wasm-bindgen development by handling the bo
 
 Start with small functions and progressively add complexity as you become comfortable with the Rust-to-JavaScript boundary.
 
-{% endraw %}
+
 
 ---
 

@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for OSS Documentation Contribution Guide
 
 Contributing documentation to open source projects is one of the most valuable ways to give back to the community, yet many developers feel intimidated by the process. Claude Code transforms documentation contribution from a daunting task into a streamlined workflow, helping you understand existing docs, identify gaps, and craft clear, consistent additions.
@@ -268,4 +268,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

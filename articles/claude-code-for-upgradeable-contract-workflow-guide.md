@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Upgradeable Contract Workflow Guide
 
 Upgradeable smart contracts are essential for production blockchain applications where bug fixes and feature additions must be deployed without losing state or requiring users to migrate. This guide shows you how to use Claude Code to streamline the entire upgradeable contract development lifecycle, from initial setup through deployment and subsequent upgrades.
@@ -253,7 +253,7 @@ Ask Claude: "Review my upgradeable contract for storage layout conflicts" or "Ge
 Upgradeable contracts require disciplined workflows and careful attention to storage management. By using Claude Code to assist with script generation, code review, and workflow automation, you can significantly reduce the risk of costly upgrade mistakes. Start with testnets, use timelock controls for production, and always maintain thorough documentation of your upgrade history.
 
 The initial setup overhead pays dividends through the lifetime of your contract, users trust contracts that can be improved without disruption, and proper upgradeability patterns make that possible.
-{% endraw %}
+
 
 ---
 

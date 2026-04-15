@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Vite has transformed how developers build modern web applications with its lightning-fast dev server and optimized production builds. However, achieving optimal bundle sizes and build performance often requires deep knowledge of its configuration options, plugins, and best practices. This is where Claude Code becomes invaluable, acting as an intelligent assistant that understands Vite's ecosystem and can guide you through complex optimization decisions.
 
@@ -503,7 +503,7 @@ Claude Code transforms Vite bundle optimization from a complex, trial-and-error 
 
 Start with a baseline measurement, use Claude to identify opportunities, apply changes incrementally, and monitor continuously. The combination of `rollup-plugin-visualizer` for visibility, `manualChunks` for cache efficiency, dynamic imports for load-time performance, and `bundlesize` for CI enforcement gives you a complete optimization pipeline. Your users will thank you with faster load times and better performance.
 
-{% endraw %}
+
 
 ---
 

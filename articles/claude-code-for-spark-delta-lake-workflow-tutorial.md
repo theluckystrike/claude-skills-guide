@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Delta Lake has become the backbone of modern data lakehouse architectures, providing ACID transactions, time travel, and schema enforcement on top of Apache Spark. But writing and maintaining Delta Lake pipelines can be complex. This tutorial shows you how Claude Code, a CLI-powered AI assistant, can dramatically improve your productivity when working with Spark and Delta Lake.
 
@@ -592,7 +592,7 @@ Claude Code will read the physical plan, identify the missing predicate pushdown
 
 By integrating Claude Code into your Spark Delta Lake development workflow, you gain a powerful assistant that understands data engineering patterns, helps debug issues quickly, and accelerates your path to production. Start small, automate repetitive tasks, and let AI handle the boilerplate while you focus on business logic.
 
-{% endraw %}
+
 
 ---
 

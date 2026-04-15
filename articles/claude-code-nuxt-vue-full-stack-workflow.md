@@ -13,8 +13,8 @@ reviewed: true
 score: 7
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Building modern full stack applications requires coordination between frontend frameworks, backend services, and deployment pipelines. Claude Code combined with Nuxt and Vue provides a powerful workflow that handles everything from scaffolding to testing. This guide walks through a practical approach for developers building production applications.
 
 ## Project Initialization and Structure

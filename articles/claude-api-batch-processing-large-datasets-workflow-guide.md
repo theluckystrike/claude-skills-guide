@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude API Batch Processing Large Datasets Workflow Guide
 
 Processing large datasets with Claude API requires strategic planning to manage costs, maintain performance, and ensure reliability. This guide walks you through practical approaches to batch processing, from simple sequential workflows to sophisticated parallel architectures.
@@ -288,7 +288,7 @@ Claude API batch processing enables powerful dataset analysis at scale. By imple
 
 Start with simpler sequential processing, then add parallelization as you validate your prompts and error handling. The slack-gif-creator skill can help create visual progress indicators for team dashboards. With proper design, batch processing becomes a reliable component of your data infrastructure.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Lag When Switching Tabs. Causes and Solutions for Developers
 
 Chrome lag when switching tabs is a common frustration for developers and power users who work with dozens of open browser windows. The delay between pressing `Cmd+Tab` (or `Ctrl+Tab`) and seeing the new tab render can range from a slight stutter to a multi-second freeze. Understanding why this happens and how to fix it will significantly improve your workflow efficiency.
@@ -240,4 +240,4 @@ Related Reading
 - [Chrome Network Service High CPU Usage: Causes and Solutions for Developers](/chrome-network-service-cpu/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

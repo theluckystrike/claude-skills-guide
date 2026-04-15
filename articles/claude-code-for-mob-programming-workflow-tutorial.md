@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Mob programming transforms how development teams collaborate by having everyone work on the same code simultaneously. When you add Claude Code to your mob programming sessions, you gain an intelligent partner that can explain code, suggest improvements, and accelerate problem-solving. This tutorial shows you how to integrate Claude Code into your mob programming workflow effectively.
 
@@ -207,7 +207,7 @@ The future of mob programming includes AI collaborators that amplify human creat
 - Gather team feedback and refine your approach
 
 Happy mob programming!
-{% endraw %}
+
 
 ---
 

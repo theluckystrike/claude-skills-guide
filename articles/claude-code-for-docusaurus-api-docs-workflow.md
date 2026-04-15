@@ -658,7 +658,7 @@ The workflow described here. skill-driven generation, batch processing scripts, 
 
 The key is to start simple, iterate on your workflows, and continuously improve your documentation generation patterns based on real-world usage. With Claude Code handling the routine documentation tasks, your team can focus on writing great code and providing the human insight that AI cannot replicate.
 
-{% endraw %}
+
 
 ---
 
@@ -683,3 +683,4 @@ Related Reading
 - [Claude Code for API Benchmark Workflow Tutorial Guide](/claude-code-for-api-benchmark-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -257,5 +257,4 @@ Related Reading
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
-
 {% endraw %}

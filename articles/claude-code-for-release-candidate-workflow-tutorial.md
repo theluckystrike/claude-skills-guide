@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Release Candidate Workflow Tutorial
 
 Release candidate (RC) workflows are critical for maintaining software quality while accelerating development cycles. A well-structured RC workflow ensures that only stable, tested code reaches production while providing clear checkpoints for stakeholder review. This tutorial demonstrates how to build a professional release candidate workflow using Claude Code, covering everything from branch management to automated testing and deployment verification.
@@ -279,7 +279,7 @@ Building an effective release candidate workflow with Claude Code transforms a p
 The most important shift is cultural: treating the release process as a first-class engineering concern rather than an afterthought. When Claude Code handles the mechanical parts. scanning for version inconsistencies, drafting changelogs, running verification suites. engineers have more bandwidth to focus on the judgment calls that actually require human expertise: whether a risk is acceptable, whether a change is ready, whether a rollback is warranted.
 
 Start implementing these patterns in your next project, and you'll see immediate improvements in release consistency and team productivity. Claude Code becomes not just a coding assistant but a reliable partner in your entire software delivery lifecycle.
-{% endraw %}
+
 
 ---
 

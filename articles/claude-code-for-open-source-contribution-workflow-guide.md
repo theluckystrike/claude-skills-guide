@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills]
 score: 7
 reviewed: true
 ---
-{% raw %}
+
 
 Open source software powers much of the modern development landscape, and contributing to open source projects is both rewarding and professionally valuable. However, the contribution workflow can be intimidating for newcomers and time-consuming for experienced developers. Claude Code offers powerful capabilities that can streamline every step of the open source contribution process, from finding suitable issues to navigating code review feedback.
 
@@ -263,4 +263,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

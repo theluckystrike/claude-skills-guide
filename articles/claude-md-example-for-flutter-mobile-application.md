@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Creating effective Claude skill files for Flutter mobile applications requires understanding both the skill format and how Claude Code processes cross-platform development workflows. This guide provides practical examples you can adapt immediately for building Flutter apps with Dart.
 
@@ -386,4 +386,4 @@ Provider scope mismatches: When Claude Code creates providers, confirm that the 
 
 Widget test pump timing: If Claude Code generates widget tests and they fail with "widget not found" errors, the issue is usually that an async operation has not settled. Add `await tester.pumpAndSettle()` after user interactions that trigger async state updates.
 
-{% endraw %}
+

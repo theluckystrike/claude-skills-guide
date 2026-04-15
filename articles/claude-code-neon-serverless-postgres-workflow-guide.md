@@ -13,7 +13,7 @@ score: 7
 permalink: /claude-code-neon-serverless-postgres-workflow-guide/
 ---
 
-{% raw %}
+
 Claude Code Neon Serverless Postgres Workflow Guide
 
 Building modern applications requires smooth integration between AI assistants and database infrastructure. Neon, the serverless PostgreSQL platform, provides a compelling solution for developers who need scalable database capabilities without managing infrastructure. When combined with Claude Code's skill system, you can create powerful automated workflows for database management, schema migrations, and data operations.
@@ -213,7 +213,7 @@ Combining Claude Code's skill system with Neon's serverless PostgreSQL creates p
 Start by creating the base Neon skill, then expand with specific workflows for your use cases. The modular approach allows you to build up capabilities gradually as your needs evolve.
 
 Remember to monitor your Neon usage and adjust compute allocation based on actual traffic patterns. With proper configuration, you'll get excellent performance at a fraction of the cost of traditional database hosting.
-{% endraw %}
+
 
 ---
 

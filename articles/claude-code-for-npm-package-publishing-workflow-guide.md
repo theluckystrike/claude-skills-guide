@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for NPM Package Publishing Workflow Guide
 
 Publishing npm packages efficiently requires careful coordination of initialization, testing, versioning, and release processes. Claude Code can serve as an intelligent assistant throughout this entire workflow, helping you set up projects correctly, maintain consistent quality, and automate repetitive tasks. This guide walks you through integrating Claude Code into your npm publishing pipeline.
@@ -219,7 +219,7 @@ Test in a clean environment. Before publishing major changes, verify your packag
 ## Conclusion
 
 Claude Code transforms npm package publishing from a manual, error-prone process into an assisted workflow where you remain in control while benefiting from intelligent automation. By integrating Claude into initialization, quality checks, versioning, and maintenance tasks, you publish faster with greater confidence. Start with the basic skills outlined here, then customize and expand them to match your specific package requirements and organizational standards.
-{% endraw %}
+
 
 ---
 

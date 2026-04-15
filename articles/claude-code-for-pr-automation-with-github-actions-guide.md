@@ -226,7 +226,7 @@ Finally, store Claude outputs as PR comments rather than relying on workflow log
 ## Conclusion
 
 Claude Code combined with GitHub Actions provides a powerful platform for PR automation that can significantly improve your development workflow. Start with simple reviews and gradually add more sophisticated automation as your team gains confidence. The key is focusing on repetitive, objective checks that free your team to focus on higher-value code review while ensuring consistent quality across all pull requests.
-{% endraw %}
+
 
 ---
 
@@ -251,3 +251,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

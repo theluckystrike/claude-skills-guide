@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Web Workers Workflow Guide
 
 Web workers enable you to run JavaScript in background threads, keeping your main thread responsive during computationally intensive operations. However, developing with web workers introduces unique challenges: message passing complexity, debugging difficulties, and state synchronization issues. This guide shows you how to use Claude Code to streamline web worker development, from initial setup to production optimization.
@@ -381,7 +381,7 @@ self.console = {
 Claude Code transforms web worker development from a painful debugging session into a structured, maintainable workflow. By using its code generation, error analysis, and refactoring capabilities, you can focus on solving business problems rather than wrestling with thread synchronization.
 
 Start with simple dedicated workers, then graduate to worker pools and SharedArrayBuffer as your needs grow. The patterns and practices you establish early will pay dividends as your application scales.
-{% endraw %}
+
 
 ---
 

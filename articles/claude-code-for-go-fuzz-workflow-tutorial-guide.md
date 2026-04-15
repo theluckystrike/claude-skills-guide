@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Go Fuzz Workflow Tutorial Guide
 
 Fuzz testing has become an essential part of building secure and solid Go applications. When combined with Claude Code's AI-assisted development capabilities, you can create more effective fuzz tests faster while discovering edge cases that traditional testing might miss. This guide walks you through setting up a complete fuzz testing workflow powered by Claude Code.
@@ -204,7 +204,7 @@ For ongoing security testing, consider deploying continuous fuzzing infrastructu
 Combining Claude Code with Go's native fuzz testing creates a powerful workflow for building more secure applications. By using AI-assisted fuzz target generation, crash analysis, and best practice recommendations, you can establish comprehensive fuzz testing coverage across your codebase more efficiently than ever before.
 
 Start by identifying high-risk functions in your codebase, generate initial fuzz targets with Claude Code's help, and integrate fuzz testing into your development workflow. The time invested in fuzz testing pays dividends through fewer production bugs and improved security posture.
-{% endraw %}
+
 
 ---
 

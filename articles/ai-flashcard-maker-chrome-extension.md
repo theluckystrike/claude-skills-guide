@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool
 
 Creating a Chrome extension that generates flashcards automatically using AI transforms how you capture and retain knowledge from web content. This guide walks you through building a complete AI flashcard maker extension from scratch, covering architecture, implementation patterns, and practical code examples you can adapt for your own projects.
@@ -287,4 +287,4 @@ Related Reading
 - [Chrome Extension Eyedropper Tool: A Developer's Guide](/chrome-extension-eyedropper-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

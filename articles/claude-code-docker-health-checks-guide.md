@@ -198,7 +198,7 @@ Document your health check endpoints. If your API exposes a `/health` endpoint, 
 
 When building Docker-based applications with Claude Code, you can automate health check generation. The supermemory skill stores your project patterns, so health checks for similar services follow consistent patterns. The pdf skill helps generate documentation for your health check configurations. The frontend-design skill ensures any health dashboard you build follows consistent UI patterns.
 
-{% endraw %}
+
 
 ---
 
@@ -223,3 +223,4 @@ Related Reading
 - [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

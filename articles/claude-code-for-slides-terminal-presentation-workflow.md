@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Slides Terminal Presentation Workflow
 
 Gone are the days of wrestling with PowerPoint or struggling with Google Slides' clunky interface. For developers who live in the terminal, there's a better way to create presentations, and when you combine terminal-based slide tools with Claude Code, you get a powerful workflow that can dramatically speed up your presentation creation process.
@@ -273,7 +273,7 @@ Use relative paths for images and ensure they're in an accessible location:
 Terminal-based presentation workflows, sped up with Claude Code, offer developers a powerful alternative to traditional slide software. By staying in your terminal, using version control for your presentations, and using AI assistance, you can create professional slides faster than ever before.
 
 Start small, convert your next presentation to Markdown and see the difference. Once you experience the workflow, you'll never go back to drag-and-drop slide builders.
-{% endraw %}
+
 
 ---
 

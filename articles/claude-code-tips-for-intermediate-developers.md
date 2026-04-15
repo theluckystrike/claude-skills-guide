@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Tips for Intermediate Developers
 
 If you have moved past the basics of Claude Code and are ready to unlock its full potential, these practical tips will help you work smarter, not harder. This guide covers skill selection strategies, prompt engineering patterns, file operation techniques, and automation approaches that developers and power users actually use in production workflows. Each section builds on the assumption that you are already comfortable with basic Claude Code usage and are looking for the kind of depth that separates competent users from truly efficient ones.
@@ -404,4 +404,4 @@ Related Reading
 - [AI Screen Reader Chrome Extension: A Complete Guide for Developers](/ai-screen-reader-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

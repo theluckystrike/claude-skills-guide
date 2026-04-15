@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Managing infrastructure at scale requires reliable automation and intelligent tooling. This guide shows you how to integrate Claude Code into your Terraform Cloud workflow, creating a powerful combination that handles everything from initial provisioning to ongoing state management and compliance checking. Whether you are a solo DevOps engineer or part of a large platform team, the patterns here will help you ship infrastructure changes faster, with fewer manual errors and better audit trails.
 
 ## Why Claude Code Belongs in Your IaC Workflow

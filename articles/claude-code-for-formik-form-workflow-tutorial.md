@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Building forms with Formik is a common task in React applications, but it can involve repetitive boilerplate code. Claude Code can significantly accelerate your Formik development workflow by generating forms, handling validation with Yup, and implementing complex validation logic. This tutorial shows you practical patterns to integrate Claude Code into your Formik projects effectively.
 
@@ -82,7 +82,7 @@ Request tests for specific scenarios like "test that submitting with empty requi
 Claude Code transforms Formik form development from repetitive boilerplate writing to a more strategic activity. By using code generation, pattern application, and automation, you can build forms faster while maintaining quality and consistency. Start with simple forms, then progressively adopt more advanced patterns as you become comfortable with the workflow.
 
 The key is providing clear, specific requirements when working with Claude Code. The more context you give about your form's purpose, validation rules, and UI requirements, the better the generated code will be. Practice describing your form needs precisely, and you'll develop an effective collaboration pattern with Claude Code for all your Formik projects.
-{% endraw %}
+
 
 ---
 

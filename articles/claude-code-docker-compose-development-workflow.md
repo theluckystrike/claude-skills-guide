@@ -13,8 +13,8 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Docker Compose has become an essential tool for developers managing multi-container applications. When combined with Claude Code, you get a powerful development environment where AI assistance handles container orchestration, debugging, and service configuration while you focus on writing code. This guide shows you how to build an efficient development workflow using Claude Code with Docker Compose, covering everything from initial setup to production-ready patterns.
 
 ## Setting Up Your Development Environment

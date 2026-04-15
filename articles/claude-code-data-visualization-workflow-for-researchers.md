@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Data Visualization Workflow for Researchers
 
 Data visualization is a critical skill for researchers across disciplines, from analyzing experimental results to communicating findings in publications. Claude Code offers a powerful, flexible workflow that integrates smoothly with Python, R, and other data science tools. This guide walks you through building an efficient data visualization pipeline using Claude Code, complete with practical examples and actionable strategies.
@@ -286,7 +286,7 @@ print(f"Processed {num_processed} files")
 Claude Code transforms data visualization from a manual, time-consuming process into an efficient, reproducible workflow. By integrating Python's powerful visualization libraries with Claude Code's file handling and iteration capabilities, researchers can focus on insights rather than technical details. Start with the examples above, adapt them to your specific data formats, and build a personalized visualization pipeline that accelerates your research.
 
 The key is to establish consistent patterns early, proper environment setup, standardized figure styling, and automated processing scripts, then let Claude Code handle the iteration and refinement. Your future self will thank you when generating figures for your next publication takes minutes instead of hours.
-{% endraw %}
+
 
 ---
 

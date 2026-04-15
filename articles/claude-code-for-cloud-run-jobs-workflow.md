@@ -448,7 +448,7 @@ Start small: create a skill for your most frequent Cloud Run Jobs operation, the
 ---
 
 *Ready to deepen your Claude Code skills? Explore our guides on building multi-step automation workflows and integrating with other Google Cloud services.*
-{% endraw %}
+
 
 ---
 
@@ -473,3 +473,4 @@ Related Reading
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

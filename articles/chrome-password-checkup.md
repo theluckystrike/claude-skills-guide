@@ -13,8 +13,8 @@ reviewed: true
 score: 8
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 ## Chrome Password Checkup: Complete Guide for Developers and Power Users
 
 Chrome's built-in password checkup feature provides a powerful first line of defense against credential-based attacks. For developers and power users managing numerous accounts across development environments, staging servers, and production services, understanding how to use this tool effectively can prevent security breaches before they occur.

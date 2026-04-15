@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 Building a developer portfolio that actually lands interviews requires more than just listing projects. You need to demonstrate technical depth, show breadth across different technologies, and present your work in a way that resonates with hiring managers. Claude Code accelerates this process significantly by handling repetitive tasks while you focus on architectural decisions and code quality.
 
@@ -300,4 +300,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

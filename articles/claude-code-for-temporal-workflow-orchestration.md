@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Temporal Workflow Orchestration
 
 Temporal has emerged as one of the most powerful platforms for building durable, reliable workflows that can survive failures, retries, and long-running processes. When combined with Claude Code's AI-assisted development capabilities, developers can dramatically accelerate the creation of complex workflow orchestrations. This guide explores how to use Claude Code effectively for Temporal workflow development.
@@ -231,7 +231,7 @@ Test Activities Independently: Before testing full workflows, ensure each activi
 Claude Code significantly accelerates Temporal workflow development by handling boilerplate generation, explaining complex patterns, and assisting with debugging. The combination of AI-assisted development with Temporal's durable execution model enables developers to build more reliable, maintainable workflow applications faster than ever.
 
 Whether you're implementing simple task queues or complex distributed transaction patterns, Claude Code serves as an intelligent partner throughout the development lifecycle. Start small, iterate frequently, and use Claude Code's capabilities to handle the complexity that comes with sophisticated workflow orchestration.
-{% endraw %}
+
 
 ---
 

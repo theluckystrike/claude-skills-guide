@@ -264,7 +264,7 @@ Step 5. Store any new decisions:
 
 Each stage produces specific, actionable findings. The result is faster reviews with fewer inconsistencies, and a growing institutional memory that makes each subsequent review easier.
 
-{% endraw %}
+
 
 ---
 
@@ -294,3 +294,4 @@ Related guides: [Best Way to Use Claude Code for Code Review Prep](/claude-code-
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *
+{% endraw %}

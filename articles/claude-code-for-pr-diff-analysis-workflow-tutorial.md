@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for PR Diff Analysis Workflow Tutorial
 
 Pull request diff analysis is one of the most time-consuming aspects of code review. Manually scanning through dozens of changed files, identifying potential issues, and providing constructive feedback takes hours that could be spent on feature development. In this tutorial, you'll learn how to build a Claude Code skill that automates PR diff analysis, helping you review code faster and more consistently.
@@ -254,4 +254,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

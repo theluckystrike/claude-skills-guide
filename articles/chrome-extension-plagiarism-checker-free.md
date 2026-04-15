@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Plagiarism Checker Free: A Developer Guide
 
 As a developer, you often need to verify the originality of code snippets, documentation, or technical content. Whether you're reviewing pull requests, checking student submissions, or ensuring your own work doesn't inadvertently replicate existing solutions, a reliable plagiarism checker becomes essential. Chrome extensions offer a convenient solution for developers who want quick, browser-based plagiarism detection without additional software installation.
@@ -245,4 +245,4 @@ Related Reading
 - [Chrome Extension Keyword Density Checker: A Developer's Guide](/chrome-extension-keyword-density-checker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

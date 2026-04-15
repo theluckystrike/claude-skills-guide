@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Imgix Image Optimization Workflow
 
 [Imgix](https://imgix.com/) is a real-time image processing service that transforms images on the fly through URL parameters. When combined with Claude Code's automation capabilities, you can build powerful workflows that automate image optimization, generate responsive image sets, and enforce performance standards across your entire image pipeline. This guide shows you how to create Claude skills that handle Imgix integration smoothly.
@@ -475,7 +475,7 @@ claude "Run our complete image optimization workflow:
 ```
 
 Start with the URL generator skill, then add responsive image generation, and finally layer in batch processing as your needs grow. Claude handles the complexity, Imgix delivers the performance.
-{% endraw %}
+
 
 ---
 

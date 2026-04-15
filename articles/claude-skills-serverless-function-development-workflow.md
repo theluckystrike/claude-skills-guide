@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-skills-serverless-function-development-workflow/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [Creating Claude skills that deploy serverless functions](/claude-skill-md-format-complete-specification-guide/) transforms your AI assistant into a powerful infrastructure automation tool. This workflow guides you through building skills that generate, test, and deploy cloud functions across AWS Lambda, Google Cloud Functions, and Azure Functions.
 
 ## Why Serverless Functions in Claude Skills

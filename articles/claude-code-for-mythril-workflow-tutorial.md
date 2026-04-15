@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Mythril Workflow Tutorial
 
 Security analysis of Ethereum smart contracts is critical for any DeFi project, yet it can be time-consuming and error-prone when done manually. This tutorial shows you how to use Claude Code to automate your Mythril security scanning workflow, making vulnerability detection faster and more consistent across your development cycle.
@@ -493,7 +493,7 @@ Integrating Claude Code with Mythril transforms smart contract security from a m
 The combination is particularly powerful because Mythril's raw output is technical and intimidating, while Claude Code turns that output into actionable developer guidance. Developers who struggle to interpret a symbolic execution trace will immediately understand "this function allows an attacker to call back into your contract before you update the balance, add a reentrancy guard."
 
 Start small: create your first mythril skill, run it against the `VulnerableVault.sol` example from this tutorial, and verify Claude Code produces the reentrancy finding with a working patch. Then integrate the pre-commit hook into your active project. The investment in setting up this workflow pays dividends in reduced security incidents, faster code reviews, and a team that develops security intuition over time rather than treating security as someone else's problem.
-{% endraw %}
+
 
 ---
 

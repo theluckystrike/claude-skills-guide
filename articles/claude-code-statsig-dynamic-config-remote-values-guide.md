@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Dynamic configuration has become essential for modern applications, allowing teams to modify behavior without deploying new code. Statsig is a popular platform for feature flags, experiments, and dynamic configurations. This guide shows you how to integrate Claude Code with Statsig to manage remote values effectively.
 
 Why Combine Claude Code with Statsig?
@@ -307,7 +307,7 @@ Integrating Claude Code with Statsig creates a powerful workflow for managing dy
 Start by defining your configuration schema, generate abstractions with Claude Code, and build your application to use these centralized readers. This approach scales well and keeps your configuration management maintainable.
 
 Remember to test configuration behavior thoroughly and always provide sensible defaults. With this foundation, you can safely roll out features, run experiments, and modify behavior without deploying new code.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 ## Introduction to Kubernetes Observability with Pixie and Claude Code
 
@@ -367,7 +367,7 @@ Start by deploying Pixie in your cluster, then use Claude Code to build custom o
 
 The most effective teams treat Claude Code not as a one-time script generator but as an ongoing observability partner. using it to build up a script library, refine alert thresholds over time, and generate runbook documentation that captures institutional knowledge about how your specific cluster behaves.
 
-{% endraw %}
+
 
 ---
 

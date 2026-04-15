@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Performance Monitoring Workflow Guide
 
 Performance monitoring is a critical aspect of modern software development. As applications grow in complexity, ensuring optimal performance becomes increasingly challenging. This guide explores how Claude Code can be integrated into your performance monitoring workflows to identify bottlenecks, track metrics, and optimize your applications effectively.
@@ -339,7 +339,7 @@ Performance monitoring is an ongoing process that requires constant attention an
 Remember that effective performance monitoring is about balancing detail with usability. Track enough metrics to understand your system's behavior, but don't overwhelm yourself with data that doesn't drive action. With Claude Code as your partner, you can continuously improve your monitoring strategies and keep your applications performing at their best.
 
 Start implementing these practices today, and you'll be well on your way to building solid performance monitoring workflows that support your application's growth and reliability.
-{% endraw %}
+
 
 ---
 

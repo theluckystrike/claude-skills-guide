@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for tRPC React Query Workflow
 
 Building type-safe APIs with tRPC combined with React Query (TanStack Query) creates a powerful full-stack TypeScript development experience. However, setting up this workflow efficiently and maintaining it as your application grows requires understanding the integration points. I'll show you how Claude Code can accelerate your tRPC and React Query development workflow.
@@ -275,7 +275,7 @@ To maximize the benefits of the tRPC React Query workflow, follow these best pra
 Claude Code significantly accelerates tRPC and React Query development by generating type-safe boilerplate code, helping you set up proper caching strategies, and ensuring your components handle loading and error states correctly. The key is to first establish a well-structured router, then let Claude Code generate the consuming components with proper types and best practices built in.
 
 By following the patterns in this guide, you'll build more maintainable applications with less boilerplate code and stronger type safety throughout your full-stack TypeScript application.
-{% endraw %}
+
 
 ---
 

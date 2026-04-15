@@ -12,8 +12,8 @@ score: 8
 permalink: /mcp-prompt-injection-attack-prevention-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [The Model Context Protocol (MCP) enables powerful integrations between Claude and external services](/building-your-first-mcp-tool-integration-guide-2026/), but these connections create potential attack surfaces for prompt injection. Understanding how to prevent these attacks is essential for developers building secure MCP-powered applications.
 
 What Is Prompt Injection in MCP?

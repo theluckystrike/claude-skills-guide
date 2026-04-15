@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Building intelligent React applications that can reason, plan, and execute tasks autonomously has become increasingly accessible with Claude Code. A reasoning agent workflow combines large language model capabilities with structured tool execution, enabling your React apps to handle complex, multi-step operations while maintaining user control. This guide walks you through implementing effective reasoning agent workflows in React applications.
 
 ## Understanding Reasoning Agent Architecture
@@ -328,7 +327,7 @@ Several mistakes frequently cause issues in React agent implementations. Don't p
 
 Reasoning agent workflows represent a powerful pattern for building intelligent React applications. By combining Claude's reasoning capabilities with well-structured tool execution, you can create experiences that feel both intelligent and controllable. Start with simple workflows, validate the patterns, then expand to more complex use cases as your confidence grows.
 
-{% endraw %}
+
 
 ---
 
@@ -353,3 +352,4 @@ Related Reading
 - [Claude Code for tRPC React Query Workflow](/claude-code-for-trpc-react-query-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

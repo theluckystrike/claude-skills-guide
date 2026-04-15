@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Custom Elements Workflow Guide
 
 Custom elements extend Claude Code's capabilities by creating reusable tools, skills, and function-calling patterns tailored to your specific development needs. This guide walks you through the workflow of building, integrating, and maintaining custom elements that streamline your AI-assisted development process.
@@ -576,7 +576,7 @@ With this library in place, a developer can ask Claude to "review the new UserPr
 Custom elements transform Claude Code into a powerful, customized development assistant. By following this workflow guide, you can create reliable, maintainable tools that handle your specific development needs. Start small, iterate quickly, and build up a library of custom elements that make your development workflow more efficient.
 
 Remember to version your elements, document thoroughly, and test regularly. With proper custom elements in place, Claude becomes not just a coding assistant, but an integrated team member familiar with your project's unique requirements and patterns. The investment in building a strong element library pays dividends every day your team uses it. and because elements are just text files, they are cheap to write, easy to share, and trivial to update.
-{% endraw %}
+
 
 ---
 

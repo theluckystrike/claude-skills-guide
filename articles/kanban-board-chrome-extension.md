@@ -12,7 +12,7 @@ categories: [guides]
 tags: [chrome-extension, productivity, task-management]
 ---
 
-{% raw %}
+
 Kanban board chrome extensions transform your browser into a powerful task management workspace. For developers and power users, these extensions provide a flexible way to organize projects, track bugs, and manage workflows directly within Chrome, without switching between applications.
 
 ## Understanding Kanban Board Extensions
@@ -285,4 +285,4 @@ Related Reading
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

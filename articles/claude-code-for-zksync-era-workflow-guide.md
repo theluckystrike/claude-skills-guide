@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for zkSync Era Workflow Guide
 
 zkSync Era is a Layer 2 scaling solution for Ethereum that uses zero-knowledge proofs to deliver fast, low-cost transactions while maintaining Ethereum's security guarantees. As a developer working with zkSync Era, establishing an efficient workflow is crucial for building secure and optimized decentralized applications. This guide demonstrates how to use Claude Code to streamline your zkSync Era development process from initial setup through production deployment.
@@ -411,7 +411,7 @@ Developing on zkSync Era offers significant advantages in transaction costs and 
 
 The key to success is understanding the differences between zkSync Era and Ethereum mainnet, particularly around account abstraction, gas mechanics, and deployment patterns. With Claude Code as your development partner, you can navigate these differences confidently and build production-ready applications on one of Ethereum's most promising Layer 2 solutions.
 
-{% endraw %}
+
 
 ---
 

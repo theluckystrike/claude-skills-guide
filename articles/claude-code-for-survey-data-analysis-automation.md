@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Survey Data Analysis Automation
 
 Survey data analysis is a common yet time-consuming task for developers and data analysts. Whether you're processing customer feedback, employee satisfaction surveys, or user research data, the repetitive nature of data cleaning, aggregation, and visualization can drain significant development time. Claude Code offers a powerful solution by automating these workflows while maintaining flexibility for custom analysis pipelines.
@@ -257,7 +257,7 @@ Claude Code transforms survey data analysis from a repetitive manual process int
 Start with simple automation for basic surveys, then gradually add complexity as your analysis needs evolve. The key is building modular, reusable components that can adapt to different survey structures and research questions.
 
 With proper setup and configuration, Claude Code can reduce survey analysis time from hours to minutes while maintaining consistency and accuracy across your research projects.
-{% endraw %}
+
 
 ---
 

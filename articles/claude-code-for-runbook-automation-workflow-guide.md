@@ -12,7 +12,7 @@ score: 8
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Runbook Automation Workflow Guide
 
 Runbooks are essential documentation for operational procedures, but they often remain underutilized due to the manual effort required to execute them. Claude Code transforms static runbooks into executable automation workflows, enabling teams to standardize operations, reduce human error, and respond quickly to incidents. This guide explores practical patterns for building runbook automation with Claude Code.
@@ -256,4 +256,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

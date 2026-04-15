@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code FastAPI Dependency Injection Patterns Guide
 
 FastAPI's dependency injection system is one of its most powerful features, enabling clean architecture and testable code. When combined with Claude Code, you can rapidly implement solid dependency injection patterns that follow best practices. This guide walks you through practical examples and actionable patterns you can apply immediately to your Python APIs.
@@ -463,7 +463,7 @@ FastAPI's dependency injection system provides a solid foundation for building s
 The generator pattern with `yield` should be your default for any resource that needs cleanup. Router-level dependencies are the right tool for applying auth or logging to groups of endpoints without repetition. And `dependency_overrides` makes testing straightforward. you can swap out any dependency in the graph without restructuring your production code.
 
 Remember that the key to successful dependency injection is maintaining clear boundaries between components while keeping your code flexible for testing and future modifications.
-{% endraw %}
+
 
 ---
 

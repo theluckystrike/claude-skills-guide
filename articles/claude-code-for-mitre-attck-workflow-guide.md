@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for MITRE ATT&CK Workflow Guide
 
 Security teams face a persistent challenge: translating raw threat intelligence into actionable detections, mitigations, and compliance documentation. The MITRE ATT&CK framework provides the taxonomy, but the manual effort required to map techniques, write detection rules, and maintain coverage is substantial. This is where Claude Code transforms your workflow.
@@ -443,7 +443,7 @@ The comparison tables in this guide highlight a key insight: detection difficult
 Start small, build one skill for your most common use case, and expand as your detection engineering practice matures. The key is consistency in how you document techniques, version your rules, and track coverage over time.
 
 Remember: the goal isn't perfect coverage of all 190+ techniques, but rather meaningful detection of the techniques most relevant to your organization's threat landscape. A well-tuned detection for T1059.001 (PowerShell) that fires reliably with low false positives is worth more than ten noisy rules that analysts learn to ignore.
-{% endraw %}
+
 
 ---
 

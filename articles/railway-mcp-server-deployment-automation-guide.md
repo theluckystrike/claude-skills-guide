@@ -12,8 +12,8 @@ score: 7
 permalink: /railway-mcp-server-deployment-automation-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Deploying MCP servers to Railway provides a reliable, scalable way to expose Claude Code integrations as networked services. This guide covers deployment patterns, environment configuration, and automation strategies that work with production workloads.
 
 ## Why Railway for MCP Servers

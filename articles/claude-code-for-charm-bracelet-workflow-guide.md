@@ -218,7 +218,7 @@ Next Steps:
 - Explore the skill marketplace for specialized charms
 - Join the community to share your workflow patterns
 
-{% endraw %}
+
 
 ---
 
@@ -243,3 +243,4 @@ Related Reading
 - [Before and After: Switching to Claude Code Workflow](/before-and-after-switching-to-claude-code-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

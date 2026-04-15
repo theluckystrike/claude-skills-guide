@@ -339,7 +339,7 @@ Act transforms how you develop and test GitHub Actions workflows. By running CI/
 
 Start integrating Act into your workflow today, your future self will thank you when you're not waiting for CI builds to complete before discovering a configuration error.
 
-{% endraw %}
+
 
 ---
 
@@ -364,3 +364,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

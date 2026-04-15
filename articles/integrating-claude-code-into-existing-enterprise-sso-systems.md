@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills, enterprise, sso, security]
 ---
 
-{% raw %}
+
 
 Enterprise environments demand solid identity and access management, and integrating AI coding assistants like Claude Code into existing Single Sign-On (SSO) infrastructure requires careful planning. This guide walks you through practical strategies for connecting Claude Code with popular enterprise identity providers while maintaining security and compliance.
 
@@ -201,7 +201,7 @@ Integrating Claude Code with enterprise SSO systems enables organizations to use
 
 The integration approach described here scales from small teams to large enterprises, with configuration that adapts to your specific identity provider and security policies. As your organization evolves, Claude Code's flexible authentication framework accommodates new requirements without significant architectural changes.
 
-{% endraw %}
+
 
 ---
 

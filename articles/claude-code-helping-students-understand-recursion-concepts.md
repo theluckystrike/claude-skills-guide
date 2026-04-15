@@ -12,7 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 ---
-{% raw %}
+
 
 Recursion remains one of the most challenging concepts for computer science students to master. The mental model of a function calling itself, combined with the need to track multiple stack frames and understand base cases, creates a significant learning curve. Claude Code emerges as a powerful teaching assistant that can transform how students approach and understand recursion through interactive dialogue, visual explanations, and scaffolded practice.
 
@@ -119,4 +119,4 @@ Related Reading
 - [Chrome Extension Paraphrase Tool for Students: A.](/chrome-extension-paraphrase-tool-students/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

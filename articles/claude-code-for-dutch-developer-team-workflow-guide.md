@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Dutch Developer Team Workflow Guide
 
 Dutch developer teams have embraced Claude Code as a powerful tool for enhancing productivity and streamlining development workflows. This guide provides practical strategies for integrating Claude Code into your team's daily operations, with specific considerations for how Dutch development teams typically work.
@@ -410,7 +410,7 @@ Claude Code offers Dutch developer teams a powerful tool for enhancing productiv
 Start with small experiments, gather team feedback, and iteratively improve your workflows. The key is finding the right balance between automation and human oversight that works for your specific team dynamics.
 
 The teams that see the most value from Claude Code are not the ones that automate the most. they are the ones that apply AI assistance where human judgment has historically been most bottlenecked. For Dutch developer teams, that typically means code review preparation, documentation, and test generation: the necessary but cognitively expensive work that slows down the parts of development people actually enjoy. Freeing up time there lets your team focus on the architecture decisions, user experience thinking, and domain expertise that make the difference between software that works and software that is genuinely good.
-{% endraw %}
+
 
 ---
 

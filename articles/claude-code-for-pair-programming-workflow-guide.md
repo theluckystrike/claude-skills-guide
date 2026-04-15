@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Pair programming has evolved beyond two human developers sharing a keyboard. With Claude Code, you now have an intelligent partner available 24/7 to collaborate on code, explain concepts, review changes, and debug issues in real-time. This guide shows you how to set up effective pair programming workflows with Claude Code and maximize your productivity as a human-AI pairing team.
 
@@ -263,7 +263,7 @@ Remember: the goal isn't to replace human developers but to augment their capabi
 
 Start your next coding session with clear intent, communicate context generously, and enjoy the benefits of having an expert pair programmer available whenever you need one.
 
-{% endraw %}
+
 
 ---
 

@@ -256,5 +256,4 @@ Related Reading
 - [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 {% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Astro Middleware Workflow Guide
 
 Astro middleware enables you to intercept and modify requests and responses at the edge, making it essential for authentication, logging, redirects, and performance optimizations. This guide shows you how to use Claude Code to build, test, and refine Astro middleware efficiently.
@@ -265,7 +265,7 @@ Ask Claude to generate comprehensive test suites that cover happy paths, edge ca
 Claude Code transforms Astro middleware development from manual coding to collaborative problem-solving. By creating specialized skills, generating boilerplate code, debugging issues, and creating tests, you build solid middleware faster. The key is treating Claude as a pair programmer who understands Astro's middleware API and TypeScript patterns.
 
 Start by creating the `astro-middleware` skill, then iterate on your middleware implementations with Claude's assistance. Your middleware will be more reliable, better tested, and easier to maintain.
-{% endraw %}
+
 
 ---
 

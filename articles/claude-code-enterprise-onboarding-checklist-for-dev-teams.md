@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Enterprise Onboarding Checklist for Dev Teams
 
 Enterprise adoption of AI coding assistants requires more than just installing a tool, it demands thoughtful integration into your existing development workflows, security infrastructure, and team conventions. This checklist guides development teams through a systematic approach to onboarding Claude Code in enterprise environments, ensuring both productivity gains and compliance with organizational standards.
@@ -294,7 +294,7 @@ Maintain your skill ecosystem:
 ---
 
 By following this checklist, your development team can successfully integrate Claude Code while maintaining security compliance, establishing consistent workflows, and maximizing productivity gains. Remember that the goal is not just adoption, it's creating a sustainable AI-assisted development practice that evolves with your organization's needs.
-{% endraw %}
+
 
 ---
 

@@ -12,8 +12,8 @@ score: 9
 permalink: /how-do-i-limit-what-a-claude-skill-can-access-on-disk/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [Claude Code skills extend the AI assistant's capabilities by loading custom instructions from Markdown files](/claude-skill-md-format-complete-specification-guide/) While these skills provide powerful automation for tasks like PDF processing with the pdf skill, spreadsheet automation with xlsx, or test-driven development with tdd, understanding how to control their file system access becomes essential when working with sensitive projects or shared environments.
 
 Disk access control is not just a security nicety. it is a practical requirement for any team that shares codebases, runs automated pipelines, or works on projects that contain credentials, production configurations, or client data. Getting this wrong can mean a skill that helpfully "cleans up" your project directory ends up deleting a `.env` file, touching a migration script you were not ready to run, or reading a secrets vault your CI pipeline expected to stay private. This guide covers the full spectrum of control mechanisms available, from quick shell-level isolation to per-skill path allowlists.

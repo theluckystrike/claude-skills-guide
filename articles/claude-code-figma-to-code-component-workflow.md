@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Figma to Code Component Workflow
 
 Converting Figma designs into clean, functional code is one of the most time-consuming tasks in frontend development. This workflow uses Claude Code skills to automate and streamline the Figma-to-code pipeline, reducing hours of manual work to minutes of structured collaboration.
@@ -244,4 +244,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

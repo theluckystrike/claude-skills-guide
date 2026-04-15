@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Security Hub Workflow: A Developer's Guide
 
 AWS Security Hub provides a comprehensive view of your security posture across AWS accounts, but manually managing security findings and remediation can be time-consuming. Integrating Claude Code into your Security Hub workflow transforms how your team handles security compliance, automating detection, analysis, and remediation tasks that would otherwise require hours of manual effort. This guide shows you practical ways to use Claude Code for security operations, from initial setup through automated remediation workflows.
@@ -145,7 +145,7 @@ Iterate and improve. Security threats evolve, and so should your automation. Reg
 Claude Code transforms Security Hub from a passive alerting system into an active security operations platform. By automating finding analysis, building remediation workflows, establishing continuous compliance monitoring, and generating automated reports, your team can dramatically improve security posture while reducing manual effort.
 
 Start small, perhaps with automated reporting or a single remediation workflow, and expand as you gain confidence. The key is establishing the foundation for automated security operations while maintaining proper controls and oversight. With Claude Code handling the repetitive tasks, your security team can focus on strategic initiatives that require human judgment and expertise.
-{% endraw %}
+
 
 ---
 

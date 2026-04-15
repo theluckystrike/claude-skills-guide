@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Multivariate testing (MVT) allows you to test multiple variations of your application simultaneously, helping you understand which combinations of elements perform best. PostHog provides solid experimentation features that integrate smoothly with modern web applications. This guide shows you how to implement multivariate tests using Claude Code, making experiment setup and analysis more efficient.
 
 ## Understanding Multivariate Tests in PostHog
@@ -602,7 +601,7 @@ Implementing multivariate tests with PostHog and Claude Code is straightforward 
 
 Start with a simple A/B test before moving to multivariate experiments, and always ensure you have enough traffic to reach statistical significance. Use the experiment registry pattern to keep variant configurations centralized and type-safe. Plan sample sizes before launching, monitor for Sample Ratio Mismatch early, and track guardrail metrics alongside your primary conversion goal. With proper implementation, you will be able to make data-driven decisions that improve user experience and conversion rates without the debugging burden that poorly instrumented experiments typically produce.
 
-{% endraw %}
+
 
 ---
 
@@ -627,3 +626,4 @@ Related Reading
 - [Chrome Extension Microphone Test Tool: Developer Guide](/chrome-extension-microphone-test-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -256,7 +256,7 @@ Conclusion
 Claude Code skills for Azure cost management transform manual monitoring into automated, actionable workflows. By using Azure's APIs directly through Claude skills, you can build solutions that alert on budget overruns, detect anomalies, surface optimization recommendations, and integrate with broader monitoring infrastructure.
 
 Start with the basic cost query skill, then progressively add budget alerts, anomaly detection, and optimization recommendations as your cost management mature.
-{% endraw %}
+
 
 ---
 
@@ -282,3 +282,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for TypeScript Declaration Merging Guide
 
 TypeScript's declaration merging is one of the most powerful yet underutilized features in the type system. It allows you to extend existing types, augment libraries, and create sophisticated type definitions that would be impossible in other languages. When combined with Claude Code's AI-assisted development, you can use declaration merging to build more solid, type-safe applications with less manual effort.
@@ -245,7 +245,7 @@ namespace ApiClient {
 4. Use Claude for maintenance: When updating types, ask Claude to propagate changes across all merged declarations to ensure consistency.
 
 Declaration merging is a sophisticated TypeScript feature that enables flexible type definitions and powerful library extensions. By combining this capability with Claude Code's AI assistance, you can create maintainable, comprehensive type systems that scale with your project.
-{% endraw %}
+
 
 ---
 

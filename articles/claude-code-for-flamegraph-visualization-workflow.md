@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Flamegraphs are an essential tool for understanding application performance, showing how CPU time or memory is distributed across function calls. When combined with Claude Code, you can automate flamegraph generation, analyze results more efficiently, and integrate profiling into your development workflow. This guide covers practical approaches to using Claude Code for flamegraph visualization, from setup to interpretation.
 
@@ -164,7 +164,7 @@ Make flamegraph analysis part of your regular workflow rather than a reactive pr
 
 Flamegraph visualization combined with Claude Code creates a powerful workflow for performance optimization. By automating profile collection, integrating with CI/CD, and using Claude Code for analysis, you can systematically identify and fix performance bottlenecks. Start by setting up basic profiling for your application, then gradually integrate these practices into your development process. The insights you gain will directly translate to faster applications and better user experiences.
 
-{% endraw %}
+
 
 ---
 

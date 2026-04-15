@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Laravel Sanctum API Authentication Guide
 
 Building secure APIs requires solid authentication mechanisms. Laravel Sanctum provides a lightweight, token-based authentication system perfect for SPAs, mobile applications, and APIs. This guide walks you through implementing complete API authentication with Laravel Sanctum, from installation to advanced token management, using Claude Code to accelerate the process.
@@ -588,7 +588,7 @@ Claude Code understands the full Laravel ecosystem and can generate the controll
 Laravel Sanctum provides a secure, straightforward solution for API authentication in Laravel applications. Its token-based approach integrates smoothly with Laravel's authentication system while remaining simple enough for quick implementation. By following this guide, you can build solid API authentication that protects your endpoints while providing a smooth experience for API consumers.
 
 The key areas to get right in production are: setting meaningful token expiration, using abilities to scope third-party integrations, implementing rate limiting on auth endpoints, and writing comprehensive tests using `Sanctum::actingAs`. With these practices in place, your Laravel API will have professional-grade authentication ready for production use.
-{% endraw %}
+
 
 ---
 

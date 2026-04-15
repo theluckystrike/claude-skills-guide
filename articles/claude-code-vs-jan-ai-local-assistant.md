@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 The landscape of local AI coding assistants has evolved dramatically, giving developers powerful alternatives to cloud-based solutions. Two prominent contenders in this space are Claude Code and Jan AI. While both aim to bring AI-powered development assistance to your local environment, they take different approaches and excel in distinct areas. This guide breaks down their key differences, strengths, and practical use cases to help you choose the right tool for your workflow.
 
@@ -162,7 +162,7 @@ For most developers, Claude Code's immediate productivity gains and structured s
 
 The best approach? Try both and see which aligns better with your development philosophy and workflow preferences.
 
-{% endraw %}
+
 
 ---
 

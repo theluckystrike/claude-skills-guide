@@ -389,7 +389,7 @@ Secure your real-time channels: Implement proper authentication and authorizatio
 Combining Laravel Livewire with Claude Code creates a powerful workflow for building real-time applications. The AI assistant can help you generate components, debug issues, and optimize performance while you focus on business logic. Start with simple polling-based updates and gradually migrate to full WebSocket implementations as your application scales.
 
 The key to success is understanding when to use each real-time approach, polling for simplicity, WebSockets for instant updates, and proper architectural planning for scalability. With Claude Code guiding your development, you'll build solid real-time features faster than ever before.
-{% endraw %}
+
 
 ---
 
@@ -414,3 +414,4 @@ Related Reading
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

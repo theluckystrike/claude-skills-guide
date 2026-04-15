@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Cargo Make Build Workflow Guide
 
 Cargo Make is a powerful task runner and build automation tool for Rust projects that goes beyond what traditional Makefiles can offer. When combined with Claude Code's AI capabilities, you can create sophisticated build workflows that understand your project structure and adapt to your specific needs. This guide walks you through integrating Claude Code with Cargo Make to streamline your Rust development workflow.
@@ -244,7 +244,7 @@ environment = { RUST_LOG = "debug" }
 Cargo Make combined with Claude Code provides a powerful automation solution for Rust developers. By clearly communicating your build requirements and understanding the generated configurations, you can create sophisticated workflows that streamline your development process. Start with simple configurations, gradually add complexity as needed, and use Claude Code's capabilities to help design and debug your build pipelines.
 
 Remember that the best Cargo Make configuration is one that matches your specific project needs. Don't hesitate to iterate and refine your setup as your project evolves.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 How to Make Claude Code Not Break Type Definitions
 
 When working with Claude Code for code generation and editing, maintaining type safety is crucial. Type definitions serve as the contract between your codebase components, and accidentally modifying them can introduce subtle bugs that are hard to track down. This guide covers practical strategies to use Claude Code's capabilities while preserving type definition integrity.
@@ -354,7 +354,7 @@ The key mindset shift is treating type definitions as protected contracts rather
 
 Remember: Type definitions are the contract of your codebase. Protect them, and they'll protect you from runtime errors.
 
-{% endraw %}
+
 
 ---
 

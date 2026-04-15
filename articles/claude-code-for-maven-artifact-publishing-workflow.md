@@ -13,8 +13,8 @@ reviewed: true
 score: 8
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Maven artifact publishing is a critical part of Java and Kotlin development workflows. Whether you're publishing to Maven Central, GitHub Packages, or a private Nexus repository, the process involves multiple steps that can be error-prone when done manually. This guide shows you how to use Claude Code to automate and streamline your Maven artifact publishing workflow, with real command examples, configuration patterns, and troubleshooting strategies.
 
 ## Understanding the Maven Publishing Pipeline

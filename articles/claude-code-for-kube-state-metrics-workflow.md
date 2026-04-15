@@ -258,7 +258,7 @@ Claude Code transforms Kube State Metrics from a complex configuration task into
 The key is providing Claude Code with clear context about your cluster environment and specific monitoring requirements. Start with basic deployments, then incrementally add custom metrics as your observability needs evolve.
 
 Remember: effective Kubernetes monitoring isn't about collecting every possible metric, it's about collecting the right metrics that help you understand system health and respond quickly to issues. Claude Code can help you identify and implement exactly what you need.
-{% endraw %}
+
 
 ---
 
@@ -283,3 +283,4 @@ Related Reading
 - [Claude Code for Code Review Metrics Workflow Guide](/claude-code-for-code-review-metrics-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for QuickNode RPC Workflow Guide
 
 QuickNode provides developers with high-performance blockchain infrastructure through their RPC (Remote Procedure Call) endpoints. Integrating Claude Code with QuickNode enables intelligent automation of blockchain data queries, transaction handling, and smart contract interactions. This guide walks you through practical workflows that combine Claude Code's AI capabilities with QuickNode's solid RPC services.
@@ -187,7 +187,7 @@ When describing workflows to Claude Code, mention if you have access to these pr
 Integrating Claude Code with QuickNode RPC endpoints unlocks powerful automation possibilities for blockchain development. By clearly articulating your data requirements and workflow objectives, Claude Code can handle the complexity of constructing proper RPC calls, processing responses, and implementing error-handling logic.
 
 Start with simple queries, then progressively build more sophisticated pipelines as you become comfortable with the interaction patterns. The combination of AI-assisted development and reliable blockchain infrastructure makes building Web3 applications more accessible than ever.
-{% endraw %}
+
 
 ---
 

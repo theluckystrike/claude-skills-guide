@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 AI Citation Generator Chrome: A Developer Guide
 
 Citation management remains one of the most tedious aspects of academic and technical writing. For developers and power users who frequently reference research papers, documentation, and online resources, an AI-powered citation generator Chrome extension can dramatically streamline your workflow. This guide covers implementation patterns, practical use cases, and code examples for building or configuring these tools.
@@ -332,4 +332,4 @@ Related Reading
 - [Chrome Extension Bibliography Generator: A Practical Guide](/chrome-extension-bibliography-generator/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

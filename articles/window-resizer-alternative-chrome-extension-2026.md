@@ -13,7 +13,7 @@ score: 7
 tags: [chrome, developer-tools, window-management]
 ---
 
-{% raw %}
+
 Window Resizer Alternative Chrome Extension 2026
 
 Browser window management remains a fundamental need for developers and power users who work with multiple applications simultaneously. While the classic Window Resizer extension served many developers well over the years, the Chrome Web Store ecosystem has evolved significantly. This guide explores practical alternatives and custom solutions for window resizing in 2026, including real-world workflows, a comparison of top options, and a complete custom extension you can build yourself.
@@ -316,4 +316,4 @@ Related Reading
 - [DuckDuckGo vs Chrome Privacy: A Developer & Power User Guide](/duckduckgo-vs-chrome-privacy/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

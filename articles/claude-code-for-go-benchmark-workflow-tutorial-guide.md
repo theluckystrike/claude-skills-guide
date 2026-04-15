@@ -12,6 +12,7 @@ score: 7
 reviewed: true
 render_with_liquid: false
 ---
+
 {% raw %}
 # Claude Code for Go Benchmark Workflow Tutorial Guide
 
@@ -231,5 +232,4 @@ Related Reading
 - [Claude Code for Benchmark Regression Workflow Tutorial](/claude-code-for-benchmark-regression-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 {% endraw %}

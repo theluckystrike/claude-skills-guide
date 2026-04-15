@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Astro Islands Architecture Workflow Detailed look
 
 Astro's islands architecture has revolutionized how developers think about building modern web applications. By treating pages as static HTML by default and selectively hydrating only the interactive components, Astro delivers exceptional performance without sacrificing developer experience. When combined with Claude Code's AI-assisted development capabilities, you have a powerful workflow for building performant, maintainable applications.
@@ -225,7 +225,7 @@ When things don't work as expected, Claude Code can help you diagnose common iss
 Astro's islands architecture provides a powerful foundation for building web applications that are fast by default. By combining it with Claude Code's AI-assisted development workflow, you can rapidly prototype, implement, and optimize interactive experiences without the traditional performance trade-offs.
 
 The key is starting simple, default to static, then add interactivity only where it genuinely improves the user experience. This approach, paired with thoughtful hydration strategies, will help you build Astro applications that are both delightful to develop and a joy to use.
-{% endraw %}
+
 
 ---
 

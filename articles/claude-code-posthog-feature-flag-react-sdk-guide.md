@@ -13,8 +13,8 @@ reviewed: true
 score: 7
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Feature flags have become an essential part of modern software development, enabling teams to ship features incrementally, run A/B tests, and control feature rollouts without deploying new code. PostHog provides a powerful feature flag system, and when combined with React applications, it offers smooth user experience control. This guide shows you how to use Claude Code to work efficiently with PostHog feature flags in your React projects.
 
 ## Setting Up PostHog in Your React Project
@@ -231,7 +231,7 @@ When implementing feature flags with PostHog in React, follow these best practic
 PostHog feature flags combined with React provide a powerful toolkit for progressive delivery and experimentation. Claude Code enhances this workflow by helping you generate configurations, create custom hooks, write tests, and manage your flag lifecycle. Start with simple on/off flags, then gradually adopt multivariate testing and gradual rollouts as your feature flag strategy matures.
 
 The key is to keep your implementation clean, test thoroughly, and remove flags once features are established. With these patterns and Claude Code as your assistant, you'll have a solid feature management system that enables safe, data-driven feature releases.
-{% endraw %}
+
 
 ---
 
@@ -256,3 +256,4 @@ Related Reading
 - [Claude Code i18n Workflow for React Applications Guide](/claude-code-i18n-workflow-for-react-applications-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for CodeSearch Integration Workflow Guide
 
 Modern software development increasingly relies on powerful code search tools to navigate large codebases and find relevant solutions quickly. Claude Code, Anthropic's CLI tool for AI-assisted development, can be smoothly integrated with CodeSearch workflows to amplify your productivity. This guide walks you through setting up and optimizing this integration.
@@ -284,7 +284,7 @@ Remember to keep your configurations secure, implement proper caching, and alway
 ---
 
 *This guide is part of the Claude Skills Guide series, providing practical tutorials for integrating AI tools into your development workflow.*
-{% endraw %}
+
 
 ---
 

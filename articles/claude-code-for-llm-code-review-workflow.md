@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Integrating Large Language Models into your code review workflow represents one of the most impactful applications of AI in software development. Claude Code provides a powerful CLI foundation for building sophisticated LLM-powered review systems that can analyze code, provide feedback, and even suggest improvements in real-time. This guide walks you through creating an effective LLM code review workflow using Claude Code.
 
@@ -157,7 +157,7 @@ Building an LLM-powered code review workflow with Claude Code transforms how tea
 
 Start with a simple implementation focusing on one language or project type, measure the results, and expand incrementally. Your developers will quickly appreciate the faster feedback loop, and you'll wonder how you ever managed without it.
 
-{% endraw %}
+
 
 ---
 

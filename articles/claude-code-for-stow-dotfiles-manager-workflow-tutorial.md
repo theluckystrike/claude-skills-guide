@@ -10,7 +10,7 @@ categories: [tutorials, guides]
 tags: [claude-code, claude-skills, stow, dotfiles, workflow]
 ---
 
-{% raw %}
+
 Claude Code for Stow Dotfiles Manager Workflow Tutorial
 
 Managing dotfiles, those hidden configuration files in your home directory that customize your development environment, is a perennial challenge for developers. From `.zshrc` to `.vimrc`, `.gitconfig` to `.tmux.conf`, these files define your personal workspace. In this tutorial, you'll learn how to combine Claude Code with GNU Stow to create a powerful, organized, and reproducible dotfiles management system.
@@ -182,4 +182,4 @@ Related Reading
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code for dbt Snapshot Workflow Tutorial](/claude-code-for-dbt-snapshot-workflow-tutorial/)
 
-{% endraw %}
+

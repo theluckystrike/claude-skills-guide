@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Contributor License Agreements (CLAs) are essential for open source projects that need legal clarity around contributions. However, managing CLAs manually, tracking who has signed, verifying signatures, and ensuring compliance, can become a significant administrative burden as your project grows. This tutorial shows you how to use Claude Code to automate and streamline your CLA management workflow, reducing manual effort while maintaining legal compliance.
 
 ## Understanding CLA Management Challenges
@@ -185,7 +184,7 @@ Handle edge cases: Plan for contributors who use multiple email addresses, chang
 
 Automating CLA management with Claude Code transforms a tedious administrative task into a streamlined, hands-off process. By setting up automated verification, maintaining a contributor database, and integrating with your pull request workflow, you can ensure CLA compliance without sacrificing development velocity. The initial setup investment pays dividends as your contributor community grows, freeing maintainers to focus on what matters most, building great software together.
 
-{% endraw %}
+
 
 ---
 
@@ -208,3 +207,4 @@ Related Reading
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code for Aurora Serverless V2 Workflow](/claude-code-for-aurora-serverless-v2-workflow/)
 - [Claude Code for Branch Protection Rules Workflow](/claude-code-for-branch-protection-rules-workflow/)
+{% endraw %}

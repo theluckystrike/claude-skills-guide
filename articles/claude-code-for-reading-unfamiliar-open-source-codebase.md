@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Reading Unfamiliar Open Source Codebase
 
 Diving into a new open source project can feel like exploring an unfamiliar city without a map. With thousands of files, complex dependencies, and unfamiliar patterns, understanding where to start, and what to focus on, becomes a significant challenge. Claude Code transforms this process from a weeks-long endeavor into a structured, efficient workflow that helps you understand any codebase in hours rather than days.
@@ -219,7 +219,7 @@ Claude Code fundamentally changes how developers approach unfamiliar codebases. 
 The key is approaching exploration systematically: start with architecture, focus on specific areas relevant to your goals, and build your understanding incrementally through targeted questions. Combined with the practical workflows outlined in this guide, you'll be navigating open source codebases with confidence in no time.
 
 Remember that understanding a codebase is an iterative process. Don't try to understand everything at once, focus on what you need to know now, and let your understanding grow organically as you work with the project.
-{% endraw %}
+
 
 ---
 

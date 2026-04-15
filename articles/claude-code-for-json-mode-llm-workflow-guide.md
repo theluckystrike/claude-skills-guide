@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for JSON Mode LLM Workflow Guide
 
 JSON mode has become an essential feature for developers building production applications with Large Language Models. When you need structured, machine-readable output that integrates smoothly with your codebase, JSON mode transforms raw LLM responses into actionable data. This guide walks you through building solid JSON mode workflows using Claude Code, from basic setup to advanced patterns that handle validation, error recovery, and multi-step pipelines.
@@ -256,7 +256,7 @@ Log for debugging: Capture raw LLM responses alongside parsed data. When issues 
 JSON mode transforms LLM interactions from unpredictable text generation into reliable data extraction pipelines. By combining clear schemas, solid validation, and thoughtful error handling, you can build workflows that produce consistent, actionable results. Claude Code amplifies these capabilities by understanding your project context and generating the supporting code needed for production systems.
 
 Start with simple schemas and gradually add complexity as your confidence grows. The patterns in this guide provide a foundation that scales from quick prototypes to enterprise-grade systems processing thousands of daily requests.
-{% endraw %}
+
 
 ---
 

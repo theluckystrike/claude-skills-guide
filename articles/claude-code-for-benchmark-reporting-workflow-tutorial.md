@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Benchmark Reporting Workflow Tutorial
 
 Automating benchmark reporting is essential for maintaining performance visibility in any software project. Claude Code can serve as the backbone of your benchmark reporting workflow, orchestrating test execution, collecting results, and generating actionable reports. This tutorial walks you through building a complete benchmark reporting pipeline using Claude Code skills and automation patterns.
@@ -258,4 +258,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

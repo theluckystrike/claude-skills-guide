@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 The Anthropic Claude API opens up incredible possibilities for developers who want to integrate advanced AI capabilities into their Python applications. Whether you're building a chatbot, automating content generation, or creating intelligent workflow systems, the Anthropic SDK for Python provides a clean, well-documented interface to use Claude's powerful language model capabilities.
 
@@ -254,7 +254,7 @@ Start with simple integrations and gradually add complexity as you become comfor
 
 Remember to monitor your token usage, implement proper error handling, and take advantage of function calling to create truly interactive applications that can take action in the real world.
 
-{% endraw %}
+
 
 ---
 

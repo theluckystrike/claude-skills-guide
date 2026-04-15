@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Periodic Table Reference: Developer Guide
 
 Chrome extensions transform the browsing experience by adding functionality directly into the browser. Understanding the relationships between extension components, APIs, and manifest configurations is essential for building solid extensions. This guide provides a systematic reference for developers working with Chrome extension architecture.
@@ -389,4 +389,4 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

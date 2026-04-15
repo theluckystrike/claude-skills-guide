@@ -13,7 +13,7 @@ score: 7
 permalink: /how-to-make-claude-code-respect-my-eslint-config/
 ---
 
-{% raw %}
+
 How to Make Claude Code Respect My ESLint Config
 
 When you're working with Claude Code as your AI coding assistant, you want assurance that the code it generates or modifies aligns with your project's linting rules. Nothing breaks the development flow faster than committing code that immediately triggers ESLint errors in CI/CD. This guide walks you through the essential techniques to make Claude Code respect your ESLint configuration consistently.
@@ -185,7 +185,7 @@ If Claude Code consistently ignores your ESLint config, try these solutions:
 Making Claude Code respect your ESLint configuration is entirely achievable through context files, custom skills, pre-commit hooks, and consistent prompting. The investment in setting up these mechanisms pays off in cleaner code, fewer CI/CD failures, and a more productive development workflow.
 
 Start with the context file method for quick results, then progressively add skill configurations and hooks for comprehensive coverage. Your future self, along with your code review teammates, will thank you.
-{% endraw %}
+
 
 ---
 

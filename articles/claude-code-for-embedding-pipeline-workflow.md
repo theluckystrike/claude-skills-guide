@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Embedding pipelines are the backbone of modern AI applications, from semantic search engines to retrieval-augmented generation (RAG) systems. When you need to convert text into dense vector representations that capture semantic meaning, Claude Code can help you design, implement, and optimize embedding pipelines that scale. This guide walks you through building solid embedding workflows using Claude Code, with practical patterns you can apply to your own projects.
 
@@ -192,7 +192,7 @@ Start with a simple pipeline, measure retrieval quality with your actual data, a
 
 With Claude Code assisting your workflow, you can focus on higher-level design decisions while it handles the implementation details and helps you navigate the rapidly evolving embedding ecosystem.
 
-{% endraw %}
+
 
 ---
 

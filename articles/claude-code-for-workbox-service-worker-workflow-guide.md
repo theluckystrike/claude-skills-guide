@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Workbox Service Worker Workflow Guide
 
 Workbox has become the go-to solution for implementing service workers in modern web applications. When paired with Claude Code, you can dramatically accelerate the development of solid offline-capable PWAs while maintaining code quality and following best practices. This guide shows you how to use Claude Code effectively within your Workbox service worker workflow. For a zero-dependency approach using the raw Cache API directly, see the [Service Worker Caching Workflow](/claude-code-for-service-worker-caching-workflow/).
@@ -276,7 +276,7 @@ When working with Claude Code on Workbox projects, keep these recommendations in
 Combining Claude Code with Workbox creates a powerful workflow for building offline-capable PWAs. By using Claude Code's ability to generate contextually appropriate code and explain complex patterns, you can implement professional-grade service worker functionality without becoming a service worker expert. Remember to test thoroughly in production-like environments and keep your caching strategies aligned with your users' needs.
 
 The key to success is starting simple, understanding the caching strategies available, and iterating based on real-world performance data. With Claude Code as your development partner, you have an intelligent assistant that can guide you through Workbox's capabilities while maintaining best practices.
-{% endraw %}
+
 
 ---
 

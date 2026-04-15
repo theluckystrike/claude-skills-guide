@@ -158,7 +158,7 @@ Here's how a typical day looks with Claude integrated:
 Claude Code transforms DevOps workflows from reactive firefighting to proactive infrastructure management. By automating log analysis, pipeline debugging, and incident response, it frees your time for higher-value work like architecture improvements and team enablement. Start with one workflow, morning health checks or incident response, and expand as you build confidence in Claude's capabilities.
 
 The key is treating Claude not as a search engine, but as a senior teammate who understands your entire infrastructure and can take informed actions based on that understanding.
-{% endraw %}
+
 
 ---
 
@@ -183,3 +183,4 @@ Related Reading
 - [How to Run Async Team Retrospectives Using Shared Documents and Recorded Summaries](/async-team-retrospective-using-shared-documents-and-recorded-summaries/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,8 +13,8 @@ categories: [workflows]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Security should never be an afterthought in software development. As applications become more complex and attack surfaces expand, integrating security into your daily workflow is essential. Claude Code offers powerful capabilities that can help developers build security into every stage of the development lifecycle. This guide explores practical tips for using Claude Code as part of your Application Security (AppSec) strategy.
 
 ## Understanding Secure Coding with Claude Code

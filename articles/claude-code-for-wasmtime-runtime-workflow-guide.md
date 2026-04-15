@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 WebAssembly runtimes have become essential for modern application development, offering sandboxed execution with near-native performance. Wasmtime, the fast, standards-compliant WebAssembly runtime by Bytecode Alliance, stands out as a popular choice for embedding WASM in production applications. This guide shows you how to integrate Claude Code into your Wasmtime development workflow for maximum productivity.
 
@@ -263,7 +263,7 @@ Claude Code significantly accelerates Wasmtime development by understanding the 
 
 Start with a well-structured project, configure resource limits early, and use Claude Code to handle the boilerplate and debug tricky runtime issues. Your WASM applications will be more reliable and maintainable as a result.
 
-{% endraw %}
+
 
 ---
 

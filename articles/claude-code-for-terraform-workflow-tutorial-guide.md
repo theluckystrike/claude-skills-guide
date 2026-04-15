@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Terraform Workflow Tutorial Guide
 
 Infrastructure as Code (IaC) has revolutionized how we manage cloud resources, and Terraform stands at the forefront of this transformation. But let's be honest, writing Terraform configurations can sometimes feel repetitive, error-prone, and time-consuming. That's where Claude Code comes in, acting as your intelligent partner to accelerate your Terraform workflow.
@@ -287,4 +287,4 @@ Related Reading
 - [Claude Code for Terraform Backend Migration Workflow](/claude-code-for-terraform-backend-migration-workflow/)
 - [Claude Code for Terraform Cloud Run Workflow Guide](/claude-code-for-terraform-cloud-run-workflow-guide/)
 
-{% endraw %}
+

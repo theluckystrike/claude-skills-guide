@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Timeout & Budget Workflow Tutorial
 
 As developers increasingly adopt AI-powered coding assistants, understanding how to manage their behavior becomes essential. Claude Code offers sophisticated timeout and budget controls that help you balance execution time, token usage, and task completion. This tutorial walks you through practical strategies to optimize your AI-assisted development workflow.
@@ -394,7 +394,7 @@ Remember: the goal isn't restrictive control but rather balanced resource manage
 The instrumentation patterns in this guide, structured JSON logs, exit code inspection, progressive fallback chains, and environment-aware timeouts, represent the difference between a fragile script and a production-worthy tool. Apply them early and you will spend far less time debugging mysterious CI failures and far more time shipping features.
 
 With proper timeout and budget strategies, you'll achieve consistent, predictable results from Claude Code across projects of varying complexity.
-{% endraw %}
+
 
 ---
 

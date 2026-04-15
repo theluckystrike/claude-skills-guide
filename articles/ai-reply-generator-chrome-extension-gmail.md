@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 ## AI Reply Generator Chrome Extension for Gmail: Build Your Own
 
@@ -314,4 +314,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)*
 
-{% endraw %}
+

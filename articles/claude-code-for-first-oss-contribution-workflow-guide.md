@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for First OSS Contribution Workflow Guide
 
 Contributing to open source software (OSS) can seem intimidating for developers making their first contribution. The good news is that Claude Code can significantly streamline the entire process, from finding a suitable project to submitting your first pull request. This guide walks you through a practical workflow for OSS contributions using Claude Code, with actionable steps and real-world examples.
@@ -248,4 +248,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

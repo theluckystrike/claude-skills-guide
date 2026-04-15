@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, chrome-extension, canvas-lms, education-tech]
 ---
 
-{% raw %}
+
 Canvas LMS is a widely-used learning management system in educational institutions, but its interface can feel cluttered for power users managing multiple courses, grading assignments, or integrating external tools. Building a Chrome extension specifically for Canvas allows developers and power users to customize the experience, automate repetitive tasks, and add features that improve productivity.
 
 This guide covers the architecture, implementation patterns, and practical examples for creating a Chrome extension that enhances Canvas LMS functionality.
@@ -563,4 +563,4 @@ Related Reading
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

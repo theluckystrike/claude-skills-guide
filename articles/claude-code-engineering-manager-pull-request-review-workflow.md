@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Mastering Pull Request Reviews with Claude Code: A Guide for Engineering Managers
 
 As an engineering manager, your time is precious. Between team meetings, one-on-ones, and strategic planning, finding time to thoroughly review pull requests can feel like an impossible task. Enter Claude Code, the AI assistant that can transform how you approach code reviews, making them faster, more consistent, and more effective.
@@ -206,7 +206,7 @@ Track your review workflow improvements:
 Claude Code transforms pull request reviews from a bottleneck into a competitive advantage. By automating initial screening, providing deep architectural analysis, and ensuring consistent quality standards, it frees engineering managers to focus on what matters most, building great products and developing their teams.
 
 The key is implementing a thoughtful three-tier strategy that uses Claude Code's strengths while preserving human oversight for strategic decisions. Start small, measure your results, and continuously refine your workflow. Your team, and your schedule, will thank you.
-{% endraw %}
+
 
 ---
 

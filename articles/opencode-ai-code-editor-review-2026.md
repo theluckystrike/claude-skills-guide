@@ -13,7 +13,7 @@ score: 7
 tags: [ai-code-editor, opencode, claude-code]
 ---
 
-{% raw %}
+
 Opencode AI Code Editor Review 2026: A Practical Guide
 
 Finding the right AI code editor in 2026 requires understanding what actually matters for your workflow. This review examines opencode AI code editors, the tools that combine open-source principles with AI assistance, focusing on practical performance, extensibility, and real-world developer experience.
@@ -171,7 +171,7 @@ Claude Code stands as the most capable opencode AI code editor in 2026 for devel
 The key advantage is specificity: you install exactly the skills your project needs, avoiding the generic approach of competitors. Whether you're building a startup MVP, maintaining enterprise systems, or contributing to open source, the extensibility ensures the tool adapts to your requirements rather than forcing you to adapt to the tool.
 
 For developers seeking an AI code editor that combines open-source values with capable AI assistance, Claude Code delivers the practical functionality that matters in daily development work.
-{% endraw %}
+
 
 ---
 

@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Dataflow Analysis Workflow Tutorial
 
 Dataflow analysis is a fundamental technique for understanding how data moves through your codebase. Whether you're debugging mysterious bugs, performing security audits, or refactoring legacy systems, tracing how values propagate through functions and modules is essential. Claude Code provides powerful capabilities to automate these analysis workflows, saving hours of manual tracing and providing reproducible results.
@@ -278,4 +278,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

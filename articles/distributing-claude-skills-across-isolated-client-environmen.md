@@ -396,7 +396,7 @@ Baking the skills into the image rather than cloning at runtime means that build
 Distributing Claude skills across isolated client environments requires thoughtful planning and appropriate tooling. By using version control, configuration management, and proper dependency handling, organizations can ensure consistent skill availability while maintaining the flexibility needed for different environment requirements. Whether you're managing a handful of developer machines or hundreds of automated build systems, these patterns provide a foundation for reliable skill distribution.
 
 The key is to establish clear distribution channels, implement proper versioning, and create validation workflows that catch issues before they impact productivity. Start with a git repository and a simple install script; add configuration management integration and offline bundling as your operational maturity grows. With these practices in place, Claude Code skills become a reliable and consistent extension of your development workflow across all environments.
-{% endraw %}
+
 
 ---
 
@@ -421,3 +421,4 @@ Related Reading
 - [Claude Code Client Library Generation Guide](/claude-code-client-library-generation-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Running Slow? Too Many Extensions Could Be the Cause
 
 Chrome extensions enhance your browsing experience, but every added extension consumes system resources. For developers and power users who rely on Chrome for daily work, understanding how extensions impact performance becomes essential when productivity starts suffering.
@@ -185,4 +185,4 @@ Related Reading
 - [Chrome Omnibox Slow? Here's How to Fix It](/chrome-omnibox-slow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

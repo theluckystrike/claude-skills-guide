@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Migrating VBA Excel Macros to Python with Claude Code
 
 If you're like many business professionals, you've accumulated years of VBA (Visual Basic for Applications) code in Excel macros that power critical business processes. Perhaps you've heard that Python is the future of automation, but the thought of manually rewriting all that code feels overwhelming. Enter Claude Code, your intelligent partner for bridging the gap between legacy VBA and modern Python automation.
@@ -429,7 +429,7 @@ Start small, test often, and use Claude Code's ability to understand your specif
 ---
 
 *Ready to start your migration? Copy one of your VBA macros and ask Claude Code to help you convert it to Python today!*
-{% endraw %}
+
 
 ---
 

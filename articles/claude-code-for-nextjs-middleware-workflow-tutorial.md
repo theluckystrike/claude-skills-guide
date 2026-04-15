@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Next.js Middleware Workflow Tutorial
 
 Next.js middleware is one of the most powerful features for controlling request flows at the edge. When combined with Claude Code, you can create intelligent, context-aware routing and authentication workflows that adapt to your application's needs. This tutorial walks you through building practical middleware solutions with Claude Code's assistance.
@@ -230,7 +230,7 @@ When deploying middleware to production, follow these guidelines:
 Next.js middleware combined with Claude Code creates a powerful workflow for handling authentication, routing, and request processing at the edge. Start with simple implementations and gradually add complexity as your needs grow. Claude Code's ability to generate, explain, and improve middleware code makes it an invaluable tool for Next.js developers.
 
 Remember to always test your middleware thoroughly in development before deploying to production, as middleware errors can block entire routes from loading.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Spot instances can reduce your AWS compute costs by up to 90% compared to on-demand pricing, but managing them effectively requires careful orchestration. you'll learn how to use Claude Code to build automated workflows that handle spot instance lifecycle management, fault tolerance, and cost optimization without manual intervention.
 
 ## Why Spot Instances Matter for Cost-Conscious Teams
@@ -502,7 +502,7 @@ Start small with non-critical workloads, measure your savings, and gradually exp
 The pattern that works best: use Claude Code to generate the scaffolding quickly, test interruption handlers in staging with simulated interruptions, instrument everything with CloudWatch alarms, and only then graduate workloads to spot in production. Done correctly, spot instances stop being a cost optimization trick and become a core part of your infrastructure strategy.
 
 Remember: the goal isn't just saving money, it's freeing up budget for more experiments, faster scaling, and bigger innovations.
-{% endraw %}
+
 
 ---
 

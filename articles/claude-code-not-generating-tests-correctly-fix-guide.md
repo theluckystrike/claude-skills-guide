@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Test-driven development (TDD) is a cornerstone of modern software engineering, and Claude Code can be an invaluable assistant for generating comprehensive test suites. However, developers sometimes encounter situations where Claude Code doesn't generate tests correctly, producing incomplete coverage, incorrect assertions, or tests that simply fail to run. This guide provides practical solutions for diagnosing and fixing these common test generation issues.
 
@@ -208,7 +208,7 @@ Claude Code is a powerful tool for test generation, but it requires clear contex
 
 Remember that test generation is a collaborative process, the more context and feedback you provide, the better the results. Start with clear specifications, verify generated tests thoroughly, and don't hesitate to iterate until your test coverage meets your standards.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Atomico Web Components Workflow
 
 Atomico is a modern web components library that combines the simplicity of custom elements with a React-like developer experience. When paired with Claude Code, you can dramatically accelerate your web components development workflow, from initial scaffolding to testing and optimization. This guide shows you how to use Claude Code effectively for building production-ready Atomico web components.
@@ -207,7 +207,7 @@ Claude Code can help you implement these patterns consistently. When describing 
 Using Claude Code for Atomico web components development significantly accelerates your workflow. The AI assistant understands web component architecture, shadow DOM patterns, and modern JavaScript best practices. By providing clear, detailed requirements and using Claude Code's understanding of Atomico's API, you can generate production-ready components quickly while maintaining high code quality.
 
 Remember to be specific in your prompts, specify accessibility requirements upfront, and take advantage of TypeScript for better developer experience. With these practices, Claude Code becomes an invaluable partner in building solid web components with Atomico.
-{% endraw %}
+
 
 ---
 

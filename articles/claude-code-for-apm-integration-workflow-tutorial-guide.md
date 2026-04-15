@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Application Performance Monitoring (APM) is essential for maintaining reliable software systems. When issues arise, developers need quick access to traces, metrics, and logs to diagnose problems. Claude Code can significantly accelerate your APM integration workflow, from initial setup to ongoing maintenance and incident response. This guide walks you through practical techniques for using Claude Code in your APM workflows.
 
 ## Understanding APM Integration Challenges
@@ -208,7 +207,7 @@ Start small: configure Claude Code with your APM API, create a few basic query s
 
 Remember: Claude Code augments your expertise, it doesn't replace your understanding of your systems. Use it to amplify your capabilities, not to bypass learning your infrastructure's behavior. With the right balance, you'll find your APM workflows become significantly more productive while maintaining the thoroughness required for reliable software operations.
 
-{% endraw %}
+
 
 ---
 
@@ -233,3 +232,4 @@ Related Reading
 - [Claude Code for Benchmark CI Integration Workflow](/claude-code-for-benchmark-ci-integration-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

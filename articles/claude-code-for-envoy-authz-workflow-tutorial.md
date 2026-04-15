@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Envoy Authorization Workflow Tutorial
 
 Authorization is one of the most critical aspects of any API gateway or service mesh. Envoy provides a powerful authorization framework through its External Authorization (ext_authz) filter, but implementing it correctly requires understanding the interaction between Envoy's configuration, your identity provider, and your policy engine. Claude Code dramatically accelerates this process by helping you generate correct configurations, debug authorization failures, and implement complex policy logic.
@@ -403,7 +403,7 @@ Claude Code can help you draft migration plans and generate the incremental conf
 Building authorization workflows with Envoy requires careful attention to configuration details and integration patterns. Claude Code accelerates this process by generating correct configurations, explaining complex interactions, and helping you debug issues when they arise. Start with simple JWT validation, add external authorization for complex policies, and layer RBAC for fine-grained control.
 
 The key to success is understanding that authorization is a defense-in-depth strategy, combine multiple mechanisms rather than relying on any single approach. JWT handles authentication and claim extraction. ext_authz handles complex business logic and policy evaluation. RBAC handles deterministic path and principal rules. With Claude Code guiding your implementation, you can confidently build authorization systems that are both secure and maintainable as your service mesh grows.
-{% endraw %}
+
 
 ---
 

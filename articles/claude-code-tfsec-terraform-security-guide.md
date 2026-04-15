@@ -12,7 +12,7 @@ score: 7
 tags: [claude-code, terraform, tfsec, security, infrastructure]
 ---
 
-{% raw %}
+
 Claude Code Tfsec Terraform Security Guide
 
 Infrastructure-as-code has transformed how teams deploy and manage cloud resources. Terraform leads this space, but writing secure Terraform configurations requires vigilance. tfsec, an open-source security scanner for Terraform, catches common misconfigurations before they reach production. Integrating tfsec into your Claude Code workflow automates security checks and keeps your infrastructure code safe.
@@ -230,4 +230,4 @@ Related Reading
 - [Claude Code disallowedTools Security Configuration](/claude-code-disallowedtools-security-configuration/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Content calendar management remains one of the most time-consuming aspects of running a blog, newsletter, or content-driven website. A chrome extension content calendar manager brings your publishing schedule directly into your browser, eliminating the need to switch between multiple tools and calendar applications. For developers and power users, building or customizing such an extension provides complete control over how you organize, track, and execute your content strategy.
 
 ## Why Build a Content Calendar Chrome Extension
@@ -236,4 +236,4 @@ Related Reading
 - [AI Content Repurposer Chrome Extension: A Developer Guide](/ai-content-repurposer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

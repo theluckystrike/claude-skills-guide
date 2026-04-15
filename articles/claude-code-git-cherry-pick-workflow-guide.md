@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Git Cherry-Pick Workflow Guide
 
 Git cherry-pick stands as one of the most powerful yet underutilized commands in a developer's toolkit. When you need to bring specific commits from one branch into another without merging entire branches, cherry-pick delivers precision control. Combined with Claude Code CLI, you can streamline these workflows, handle conflicts more efficiently, and automate repetitive backporting tasks.
@@ -394,4 +394,4 @@ Related Reading
 - [Claude Code for Delta Git Diff Workflow Guide](/claude-code-for-delta-git-diff-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

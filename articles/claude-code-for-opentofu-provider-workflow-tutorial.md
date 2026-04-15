@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for OpenTofu Provider Workflow Tutorial
 
 OpenTofu providers are plugins that enable OpenTofu to interact with cloud platforms, SaaS services, and other APIs. Managing provider configurations, credentials, and version constraints manually can become tedious, especially when working with multiple cloud environments. Claude Code can automate much of this workflow, from initializing providers to configuring authentication and managing provider versions across your infrastructure.
@@ -252,7 +252,7 @@ When working with Claude Code on OpenTofu provider workflows, keep these practic
 Claude Code significantly reduces the boilerplate and complexity of OpenTofu provider management. By generating configurations, managing versions, and executing workflows, it lets you focus on infrastructure design rather than syntax. The key is providing clear context about your project requirements and always reviewing the generated configurations before applying them to production environments.
 
 Start with simple provider configurations and gradually incorporate more advanced patterns as you become comfortable with the workflow. The combination of Claude Code's automation and OpenTofu's infrastructure-as-code approach creates a powerful, reproducible system for managing modern cloud infrastructure.
-{% endraw %}
+
 
 ---
 

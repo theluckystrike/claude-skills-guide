@@ -13,7 +13,7 @@ categories: [comparisons]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 
 ## Brave vs Chrome Privacy: A Technical Comparison for Developers and Power Users
 
@@ -228,4 +228,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

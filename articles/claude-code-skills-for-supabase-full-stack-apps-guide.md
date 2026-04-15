@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-skills-for-supabase-full-stack-apps-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Building a Supabase-powered full-stack application involves multiple layers: database schema, authentication, backend logic, API endpoints, and frontend interfaces. [Claude Code skills](/claude-skill-md-format-complete-specification-guide/) streamline each phase of this workflow. This guide covers the most useful skills for Supabase development and shows how to invoke them effectively.
 
 ## Setting Up Your Supabase Project

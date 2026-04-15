@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Claim Check Pattern Workflow
 
 The claim check pattern is an essential architectural pattern for building scalable message-driven applications. When working with large message payloads in systems like Azure Service Bus, AWS SQS, Kafka, or RabbitMQ, transmitting the entire payload through the message broker can lead to performance bottlenecks, increased costs, and reliability issues. The claim check pattern solves this by storing the payload separately and passing only a reference (the "claim check") through the message queue. This guide shows you how to implement this pattern effectively using Claude Code.
@@ -192,7 +192,7 @@ The claim check pattern excels in several real-world scenarios. Event-driven arc
 The claim check pattern is a powerful technique for building scalable, cost-effective message-driven architectures. By separating payload storage from message routing, you can handle larger workloads more efficiently while reducing infrastructure costs. Claude Code makes implementing this pattern straightforward by generating platform-specific code, helping debug issues, and optimizing implementations for your specific use cases.
 
 Start by identifying message types in your system that would benefit from smaller payloads, then implement the storage, publishing, and consumption layers with Claude Code's assistance. With proper implementation, you'll see improved message throughput, reduced latency, and better overall system reliability.
-{% endraw %}
+
 
 ---
 

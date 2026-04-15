@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 
 Time tracking remains a persistent challenge for developers and professionals working in browser-centric environments. Whether you're billing clients, tracking project hours, or analyzing your productivity patterns, a well-built Chrome extension work hours logger can automate much of this manual effort. This guide explores how these extensions work, what APIs they use, and how developers can build custom solutions.
 
@@ -253,4 +253,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-for-computer-science-bootcamp-students/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Computer science bootcamps are intensive, fast-paced programs that demand rapid learning and practical skills. Claude Code emerges as an invaluable ally in this journey, offering bootcamp students a powerful tool to accelerate learning, complete projects, and build real-world developer skills. This guide explores how computer science bootcamp students can use Claude Code effectively throughout their program.
 
 ## Why Claude Code Matters for Bootcamp Students
@@ -227,7 +227,7 @@ Claude Code is more than a coding tool, it's a learning companion that can accel
 
 The investment in learning Claude Code pays dividends throughout your career. Start building your skill library today, and you'll have a powerful, personalized development assistant by the time you enter the job market.
 
-{% endraw %}
+
 
 ---
 
@@ -252,3 +252,4 @@ Related Reading
 - [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

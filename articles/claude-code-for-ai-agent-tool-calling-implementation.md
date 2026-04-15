@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for AI Agent Tool Calling Implementation
 
 Tool calling is the mechanism that transforms AI assistants from passive responders into active agents capable of performing real actions. When you implement tool calling in Claude Code, you're enabling your AI to interact with external systems, execute code, manipulate files, and automate workflows. This comprehensive guide walks you through implementing tool calling for AI agents using Claude's capabilities.
@@ -314,7 +314,7 @@ Tool calling transforms AI agents from conversational partners into capable exec
 Start with simple tools and ReAct-style iteration. As your agents grow more sophisticated, add parallel execution and human-in-the-loop approvals. The key is to build incrementally while maintaining safety and observability throughout.
 
 Remember that effective tool calling isn't just about executing actions, it's about creating a reliable loop where the agent can reason about results, adapt its approach, and ultimately deliver meaningful outcomes.
-{% endraw %}
+
 
 ---
 

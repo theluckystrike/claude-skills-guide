@@ -377,7 +377,7 @@ Related guides:
 - Claude Code for Terraform Infrastructure Workflow
 - [Building Immutable Infrastructure with Packer and Terraform](https://learn.hashicorp.com/tutorials/packer/aws-images)
 - [Claude Skills Guides Hub](/guides-hub/)
-{% endraw %}
+
 
 ---
 
@@ -402,3 +402,4 @@ Related Reading
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for LLM Evaluation Workflow Guide
 
 Building a solid LLM evaluation workflow is essential for any team deploying AI-powered applications. Whether you're comparing different models, validating prompt engineering changes, or ensuring consistent quality across deployments, Claude Code provides the infrastructure to automate and scale your evaluation processes. This guide walks you through building a practical evaluation workflow that you can adapt to your specific needs.
@@ -170,7 +170,7 @@ Regularly review human-evaluated samples to ensure your automated metrics align 
 Implementing a structured LLM evaluation workflow with Claude Code transforms model selection and maintenance from guesswork into data-driven decision making. Start small with a representative test dataset, build automated evaluation into your development process, and expand coverage as your system matures. The investment pays dividends through better model decisions, faster iteration cycles, and higher confidence in your production systems.
 
 Remember that evaluation is ongoing, not a one-time setup. As your application evolves and new models become available, your evaluation workflow should adapt accordingly. Claude Code provides the automation infrastructure to make this practical at scale.
-{% endraw %}
+
 
 ---
 

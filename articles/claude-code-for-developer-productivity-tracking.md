@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Developer Productivity Tracking
 
 Developer productivity isn't just about writing more code, it's about solving the right problems efficiently, reducing friction in your workflow, and understanding where your time actually goes. Claude Code offers powerful capabilities for tracking and improving your development productivity through intelligent session tracking, skill-based workflows, and actionable insights. This guide explores practical strategies for using Claude Code as a productivity companion.
@@ -240,7 +240,7 @@ Start small, track consistently, and let the data guide your improvements. Your 
 ---
 
 *Want to dive deeper? Explore our guides on creating effective Claude skills and optimizing your development workflow with AI assistance.*
-{% endraw %}
+
 
 ---
 

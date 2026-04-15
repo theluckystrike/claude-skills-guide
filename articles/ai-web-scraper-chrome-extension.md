@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI web scraper chrome extensions transform how developers and power users extract data from websites. By combining browser automation with artificial intelligence, these extensions can intelligently parse dynamic content, handle complex page structures, and extract structured data without writing brittle XPath or CSS selectors.
 
 ## Understanding AI-Powered Web Scraping
@@ -390,4 +390,4 @@ Related Reading
 - [Chrome Extension Annotate Web Pages: Build Your Own.](/chrome-extension-annotate-web-pages/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

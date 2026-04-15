@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 ## Claude Code for Platform Engineer: Infrastructure Automation Tips
 
 Platform engineers are constantly juggling multiple tools, configurations, and automation pipelines. Claude Code emerges as a powerful ally, transforming how you approach infrastructure automation, configuration management, and DevOps workflows. This guide provides practical tips for using Claude Code effectively in your platform engineering daily tasks.
@@ -220,7 +219,7 @@ Claude Code transforms platform engineering from manual, error-prone work into a
 
 Start by applying one or two of these tips to your daily workflow, you'll quickly discover how Claude Code becomes an invaluable member of your platform team.
 
-{% endraw %}
+
 
 ---
 
@@ -245,3 +244,4 @@ Related Reading
 - [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

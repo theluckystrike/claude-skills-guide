@@ -114,11 +114,11 @@ Data science errors can be cryptic. A shape mismatch in NumPy or a pandas versio
 
 When you encounter a cryptic error like:
 
-{% raw %}
+
 ```
 ValueError: operands could not be broadcast together with shapes (100, 5) (100,)
 ```
-{% endraw %}
+
 
 Claude Code can trace through your code, identify where the shapes diverged, and suggest fixes based on your specific implementation. What makes this more valuable than copying the error into ChatGPT is that Claude Code can see your actual code. It doesn't need you to describe the problem, it reads the relevant files directly.
 

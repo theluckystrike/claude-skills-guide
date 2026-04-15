@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for AWS App Mesh Workflow
 
 AWS App Mesh is a service mesh that provides application-level networking, making it easier to connect, monitor, and secure communications between microservices. However, configuring and managing App Mesh resources can be complex, involving Virtual Nodes, Virtual Routers, Virtual Services, and mesh-wide policies. Claude Code, the CLI assistant from Anthropic, can significantly streamline these workflows by helping you generate configurations, debug issues, and automate repetitive tasks.
@@ -377,7 +377,7 @@ For production meshes, you typically want both: health checks to catch startup f
 ## Conclusion
 
 Claude Code transforms AWS App Mesh development from manual, error-prone configuration to an interactive, assisted workflow. By providing context-specific skills, generating accurate configurations, and debugging traffic issues, Claude helps developers focus on architecture rather than syntax. Start with basic Virtual Node configurations, then progressively adopt advanced patterns like weighted routing, TLS enforcement, and automated validation. The combination of Claude's configuration generation and your domain knowledge about the services being meshed produces reliable infrastructure faster than writing YAML from scratch or consulting documentation for every field name.
-{% endraw %}
+
 
 ---
 

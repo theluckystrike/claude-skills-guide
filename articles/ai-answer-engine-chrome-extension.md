@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI answer engine chrome extensions represent a powerful category of browser extensions that use large language models to provide intelligent responses, automate research, and enhance user productivity. For developers and power users, understanding how these extensions work under the hood opens up possibilities for customization, automation, and building tailored solutions. Whether you want to integrate Claude, GPT-4, or a local model like Ollama, the underlying architecture follows the same patterns. and building your own gives you full control over prompting, privacy, and cost.
 
 ## How AI Answer Engine Extensions Work
@@ -401,4 +401,4 @@ Related Reading
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

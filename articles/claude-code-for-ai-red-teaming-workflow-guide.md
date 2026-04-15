@@ -338,7 +338,7 @@ Measure Progress: Track vulnerability counts and severity over time to demonstra
 Building a solid AI red teaming workflow with Claude Code enables systematic security testing and continuous improvement of your AI systems. By automating test execution, maintaining comprehensive test libraries, and integrating with CI/CD pipelines, you can catch vulnerabilities before they reach production while building more trustworthy AI applications.
 
 Start with the basic patterns in this guide, then expand your test coverage based on your specific use cases and emerging threat patterns. Regular red teaming becomes more effective as your test libraries grow and your team gains experience identifying and addressing AI vulnerabilities.
-{% endraw %}
+
 
 ---
 
@@ -363,3 +363,4 @@ Related Reading
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

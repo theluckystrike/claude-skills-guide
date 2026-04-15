@@ -170,7 +170,7 @@ Finally, monitor your cache hit rates. Add a step to your CI that reports cache 
 Setting up Turborepo remote caching transforms monorepo build performance from a bottleneck into a competitive advantage. Whether you choose Vercel's hosted solution or GitHub Actions for self-hosted caching, the configuration is straightforward and the benefits are immediate. By integrating Claude Code into your workflow, you can optimize configurations, troubleshoot issues, and maintain best practices that keep your team moving fast.
 
 Start with the basic Vercel integration for the quickest wins, then explore GitHub Actions if you need more control. With remote caching properly configured, your team will wonder how they ever managed without it.
-{% endraw %}
+
 
 ---
 
@@ -195,3 +195,4 @@ Related Reading
 - [Claude Code for Prometheus Remote Write Workflow](/claude-code-for-prometheus-remote-write-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

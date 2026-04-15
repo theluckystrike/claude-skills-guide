@@ -10,7 +10,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-sigma-rules-detection-workflow-tutorial/
 ---
 
-{% raw %}
+
 Claude Code for Sigma Rules Detection Workflow Tutorial
 
 Sigma rules are the backbone of modern threat detection. They provide a vendor-neutral format for writing detection logic that can be converted to multiple SIEM platforms like Splunk, Elastic, Microsoft Sentinel, and QRadar. However, creating solid Sigma rules requires understanding both the threat landscape and the Sigma syntax itself. This tutorial shows you how to use Claude Code to streamline the entire Sigma rules detection workflow, from initial concept to production deployment.
@@ -190,4 +190,4 @@ Related Reading
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
-{% endraw %}
+

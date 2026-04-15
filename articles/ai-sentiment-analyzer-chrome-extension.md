@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 
 Building a Chrome extension that uses AI for sentiment analysis opens up powerful possibilities for analyzing text content directly in your browser. Whether you want to gauge the emotional tone of emails, social media posts, or customer feedback, combining Chrome extensions with AI sentiment analysis creates a smooth workflow without requiring server-side processing.
 
@@ -534,4 +534,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

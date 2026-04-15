@@ -13,7 +13,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Few-shot prompting is one of the most powerful techniques for getting high-quality, consistent outputs from Claude Code. By providing carefully chosen examples within your prompts, you teach the model exactly what format, tone, and approach you expect. This guide walks you through a practical workflow for implementing few-shot prompting with Claude Code, complete with real examples and actionable advice you can apply immediately to your projects.
 
 ## Understanding Few-Shot Prompting Fundamentals
@@ -305,5 +304,4 @@ Related Reading
 - [Claude Code for Self-Consistency Prompting Workflow Tutorial](/claude-code-for-self-consistency-prompting-workflow-tutorial/)
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
-
 {% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 When working with Claude Code on memory-intensive tasks, understanding heap allocation becomes crucial for maintaining stable and efficient workflows. This guide explores practical skills and techniques to handle out-of-memory errors, optimize memory usage, and build solid Claude Code experiences.
 
@@ -386,7 +386,7 @@ Managing heap allocation effectively in Claude Code skills requires understandin
 
 Remember: the goal isn't just to fix out-of-memory errors but to prevent them through thoughtful design. Start with memory-efficient patterns, monitor usage in production, and iterate based on real-world performance data. Increasing the heap limit is a valid short-term fix, but the durable solution is always designing skills that keep memory usage proportional to the task rather than to the size of the input.
 
-{% endraw %}
+
 
 ---
 

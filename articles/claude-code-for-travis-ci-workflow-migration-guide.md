@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Migrating from Travis CI to modern AI-assisted workflows doesn't mean losing the automation and reliability that CI/CD provides. With Claude Code, you can create intelligent, adaptable build and deployment pipelines that go beyond traditional CI capabilities. This guide walks you through migrating your Travis CI workflows to Claude Code, with practical examples and actionable steps.
 
@@ -456,7 +456,7 @@ This pre-push hook runs your full CI pipeline locally before the push hits the r
 Migrating from Travis CI to Claude Code opens up new possibilities for intelligent automation. Rather than writing static scripts, you create adaptive workflows that understand your codebase and make smart decisions. Start with simple builds, progressively add complexity, and use Claude Code's AI capabilities to build more efficient and reliable pipelines.
 
 The key is treating this migration as an opportunity to improve your workflows, not just replicate them. The layered approach, Claude Code for local developer automation and a hosted CI runner for server-side triggers, gives you the best of both worlds: the speed and intelligence of AI-assisted development with the reliability and auditability of a traditional CI platform. With Claude Code, you have a powerful partner in automating your development processes.
-{% endraw %}
+
 
 ---
 

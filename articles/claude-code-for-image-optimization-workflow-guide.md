@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Image optimization is a critical yet often tedious task for web developers. Large images slow down your site, hurt SEO rankings, and frustrate users. This guide shows you how to use Claude Code to automate image optimization workflows, saving time while ensuring consistent quality across your project.
 
@@ -452,7 +452,7 @@ Start with the basic script above, customize the configuration for your specific
 
 Your users. and your Lighthouse scores. will thank you.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Cloud Security Posture Workflow
 
 Cloud Security Posture Management (CSPM) has become essential for organizations managing infrastructure across multiple cloud providers. Claude Code provides a powerful foundation for automating security assessments, compliance checks, and remediation workflows. This guide shows you how to build comprehensive CSPM workflows using Claude Code skills and MCP servers.
@@ -218,7 +218,7 @@ Claude Code transforms cloud security posture management from a manual, periodic
 The key is starting simple, implement basic scanning first, then gradually add remediation and reporting capabilities. As your workflow matures, Claude Code becomes an increasingly valuable partner in maintaining cloud security.
 
 Remember that automation amplifies both good and bad practices. Invest time in properly configuring your scanning rules and remediation logic. The initial effort pays dividends in reduced security incidents and compliance violations.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Classic ASP to .NET Migration Guide
 
 Migrating Classic ASP applications to .NET is a significant undertaking that many development teams face. This guide demonstrates how Claude Code can streamline the migration process, helping you analyze, plan, and execute a successful transition from legacy Classic ASP to modern .NET applications.
@@ -177,7 +177,7 @@ Throughout your migration journey, keep these principles in mind:
 ## Conclusion
 
 Claude Code transforms the Classic ASP to .NET migration from an overwhelming challenge into a manageable process. By using its code analysis capabilities, intelligent code generation, and architectural guidance, development teams can accomplish migrations more quickly while maintaining code quality and preserving business logic. Whether you're migrating a small application or enterprise-scale system, Claude Code provides the expertise and automation needed for a successful transition to modern .NET architecture.
-{% endraw %}
+
 
 ---
 

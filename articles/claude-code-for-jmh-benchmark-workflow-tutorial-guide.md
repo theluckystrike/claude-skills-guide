@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for JMH Benchmark Workflow Tutorial Guide
 
 Java Microbenchmark Harness (JMH) is the standard tool for benchmarking Java code, but setting up and running JMH benchmarks effectively can be challenging. Writing benchmarks that produce trustworthy results requires avoiding JIT pitfalls, warmup subtleties, and dead-code elimination. This guide shows you how to use Claude Code to streamline every phase of your JMH workflow, project setup, benchmark implementation, execution, result analysis, and continuous performance regression testing.
@@ -549,4 +549,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

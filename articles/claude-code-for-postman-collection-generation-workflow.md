@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-for-postman-collection-generation-workflow/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Postman collections are essential for API testing, documentation, and team collaboration. But manually creating comprehensive collections for large APIs is time-consuming and error-prone. A typical REST API with 30–50 endpoints, multiple auth schemes, and nested request bodies can take a developer half a day to wire up correctly in Postman. This guide shows you how to use Claude Code to automate Postman collection generation, cutting that process down to minutes while maintaining consistency across every request.
 
 Why Automate Postman Collection Generation?
@@ -685,7 +685,7 @@ Related Resources:
 - [OpenAPI Specification Best Practices](/claude-code-openapi-spec-generation-guide/)
 - [Claude Code API Testing Workflows](/claude-code-skills-for-qa-engineers-automating-test-suites/)
 - [API Authentication Patterns](/claude-code-api-authentication-patterns-guide/)
-{% endraw %}
+
 
 ---
 
@@ -710,3 +710,4 @@ Related Reading
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

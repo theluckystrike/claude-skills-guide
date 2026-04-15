@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 P99 latency optimization is one of the most challenging aspects of building high-performance applications. While average response times might look healthy, the slowest 1% of requests can destroy user experience, trigger timeouts, and cascade into system failures. This guide shows you how to use Claude Code to systematically identify, analyze, and fix P99 latency issues in your applications.
 
@@ -242,7 +242,7 @@ Start with solid instrumentation, focus on high-impact optimizations first, and 
 
 ---
 
-{% endraw %}
+
 
 ---
 

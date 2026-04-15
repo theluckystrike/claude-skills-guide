@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 When working with large codebases, developers need powerful tools to understand, navigate, and modify code efficiently. Two popular options have emerged: Claude Code, Anthropic's AI-powered coding assistant, and Supermaven, a fast AI code completion tool. While both use artificial intelligence to improve developer productivity, they approach codebase navigation quite differently. This article explores how Claude Code excels at large codebase navigation compared to Supermaven, with practical examples to help you choose the right tool.
 
@@ -144,7 +144,7 @@ The ideal approach for most development teams is to use both tools: Supermaven f
 
 If your work primarily involves understanding and navigating large, complex codebases, Claude Code's advanced reasoning and codebase analysis capabilities make it the clear choice. Its ability to answer questions, trace code paths, and provide comprehensive explanations transforms how developers interact with unfamiliar code.
 
-{% endraw %}
+
 
 ---
 

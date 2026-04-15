@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Microbenchmark Workflow Tutorial Guide
 
 Microbenchmarking is essential for understanding code performance at a granular level. Whether you're optimizing a hot path in your application or comparing algorithm implementations, having a streamlined workflow makes repetitive benchmarking tasks much more manageable. Claude Code can be your AI partner throughout this process, helping you set up benchmarks, execute them reliably, analyze results, and iterate on your code.
@@ -519,4 +519,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

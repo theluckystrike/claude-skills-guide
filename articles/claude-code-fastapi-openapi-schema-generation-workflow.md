@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 FastAPI has become one of the most popular Python frameworks for building modern APIs, largely because it automatically generates OpenAPI documentation from your code. When combined with Claude Code, you can streamline the entire workflow of designing, implementing, and documenting your APIs. This guide shows you how to use Claude Code effectively for FastAPI OpenAPI schema generation.
 
@@ -296,7 +296,7 @@ Ensure your FastAPI and Pydantic versions are compatible. FastAPI 0.100+ require
 
 By following this workflow with Claude Code, you can rapidly develop well-documented FastAPI applications with accurate OpenAPI schemas that serve as a single source of truth for your entire API ecosystem.
 
-{% endraw %}
+
 
 ---
 

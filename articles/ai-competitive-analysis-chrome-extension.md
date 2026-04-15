@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 AI Competitive Analysis Chrome Extension: A Developer's Guide
 
 Competitive analysis has traditionally required hours of manual research, screenshot collection, and data synthesis. For developers and power users, Chrome extensions powered by AI offer a way to automate significant portions of this workflow, extracting structured data from competitor websites, summarizing pricing pages, and generating comparative reports without leaving your browser.
@@ -378,4 +378,4 @@ Related Reading
 - [AI Content Repurposer Chrome Extension: A Developer Guide](/ai-content-repurposer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

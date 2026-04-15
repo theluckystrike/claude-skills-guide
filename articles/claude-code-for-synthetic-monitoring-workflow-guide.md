@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Synthetic Monitoring Workflow Guide
 
 Synthetic monitoring simulates user behavior to proactively detect issues before they impact real users. By combining Claude Code with synthetic monitoring workflows, you can create intelligent, adaptive monitoring systems that not only detect problems but also diagnose and potentially resolve them. This guide shows you how to build these workflows effectively.
@@ -319,7 +319,7 @@ When implementing Claude Code in your synthetic monitoring workflow:
 Claude Code transforms synthetic monitoring from reactive alerting into intelligent observability. By combining scripted checks with AI analysis, you reduce alert fatigue, accelerate incident response, and proactively maintain test coverage as your applications evolve.
 
 Start small, integrate Claude for analysis first, then expand to automated remediation as confidence grows. The key is building trust through consistent, explainable recommendations that your team can verify and improve over time.
-{% endraw %}
+
 
 ---
 

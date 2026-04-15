@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Claude RFP Response AI Workflow Tutorial Guide
 
 If you're a developer tasked with responding to Requests for Proposal (RFPs), you know how time-consuming and complex the process can be. Integrating Claude Code into your RFP response workflow can dramatically improve efficiency, consistency, and quality. This comprehensive guide walks you through building an AI-powered RFP response system using Claude Code.
@@ -186,4 +186,4 @@ Related Reading
 - [Claude Code for Lambda Response Streaming Workflow](/claude-code-for-lambda-response-streaming-workflow/)
 - [Claude Code for Streaming LLM Response Workflow](/claude-code-for-streaming-llm-response-workflow/)
 
-{% endraw %}
+

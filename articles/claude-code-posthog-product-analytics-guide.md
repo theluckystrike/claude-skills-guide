@@ -12,7 +12,7 @@ permalink: /claude-code-posthog-product-analytics-guide/
 reviewed: true
 score: 8
 ---
-{% raw %}
+
 
 Product analytics forms the backbone of data-driven decision making in modern software teams. When you combine Claude Code with PostHog, you gain a powerful combination for implementing analytics tracking, analyzing user behavior, and building features that respond to real user data. This guide walks you through practical workflows that developers and power users can apply immediately.
 
@@ -534,4 +534,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

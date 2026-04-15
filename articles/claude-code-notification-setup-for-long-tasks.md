@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Long-running tasks are a common challenge when working with AI-assisted development. Whether you're refactoring a large codebase, generating documentation across multiple files, or running extensive test suites, knowing when your task completes, without constantly monitoring the terminal, improves your workflow significantly.
 
 This guide covers how to set up notification systems for Claude Code to alert you when long tasks finish, using native macOS and Linux tools plus practical integration patterns. By the end, you'll have a complete notification toolkit that keeps you productive while Claude handles heavy lifting in the background.
@@ -508,4 +508,4 @@ Related Reading
 - [Claude Code Upstash QStash Scheduled Tasks Setup Guide](/claude-code-upstash-qstash-scheduled-tasks-setup-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

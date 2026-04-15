@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 Capital One Shopping is a browser extension that automatically finds and applies coupon codes at checkout across thousands of online retailers. While primarily marketed as a consumer savings tool, the extension offers several features that make it worth examining from a technical perspective. This review evaluates the Capital One Shopping Chrome extension through the lens of developers and power users who care about implementation details, privacy implications, and customization possibilities.
 
 ## Extension Architecture Overview
@@ -157,4 +157,4 @@ Related Reading
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

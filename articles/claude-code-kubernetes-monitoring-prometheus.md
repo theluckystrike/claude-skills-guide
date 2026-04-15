@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Monitoring Kubernetes clusters effectively requires the right combination of tools and automation. Prometheus has become the standard for Kubernetes observability, but configuring alerts, managing scrape targets, and debugging metrics can be time-consuming. Claude Code transforms these workflows by acting as an intelligent assistant that understands your infrastructure context and helps you write Prometheus rules, debug alerting issues, and maintain healthy monitoring configurations.
 
 This guide shows you how to integrate Claude Code into your Kubernetes monitoring stack using Prometheus, with practical examples you can apply immediately.

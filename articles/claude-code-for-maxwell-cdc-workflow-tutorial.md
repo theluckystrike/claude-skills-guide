@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Change Data Capture (CDC) has become an essential pattern for modern data architectures, enabling real-time data synchronization between databases and downstream systems. Maxwell CDC, an open-source CDC platform that reads MySQL binlogs, provides a powerful way to stream database changes to Kafka, Redis, or other consumers. Combined with Claude Code's automation capabilities, you can build solid CDC workflows that handle schema changes, error recovery, and monitoring with minimal manual intervention.
 
@@ -247,7 +247,7 @@ Integrating Claude Code with Maxwell CDC transforms your change data capture pip
 
 Start with the basic skill configuration, then expand to handle your specific requirements around schema changes, monitoring alerts, and multi-database setups. Claude Code's ability to understand your project context makes it particularly effective for complex CDC scenarios where you need both automation and flexibility.
 
-{% endraw %}
+
 
 ---
 

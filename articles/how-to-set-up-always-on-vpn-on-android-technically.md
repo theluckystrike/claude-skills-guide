@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 How to Set Up Always-On VPN on Android: Technical Implementation Guide
 
 Always-on VPN is a critical security feature that ensures your Android device maintains a constant VPN connection, automatically reconnecting when connectivity is restored. This technical guide walks you through the implementation options, from built-in Android features to custom VPN app configurations.
@@ -474,4 +474,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

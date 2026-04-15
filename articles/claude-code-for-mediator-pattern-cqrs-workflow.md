@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Mediator Pattern and CQRS Workflow
 
 Modern software architecture increasingly relies on patterns that separate concerns, improve testability, and make systems more maintainable. The mediator pattern and CQRS (Command Query Responsibility Segregation) are two powerful architectural approaches that work exceptionally well together. When implemented in Claude Code skills, they enable you to build more solid and scalable AI-powered workflows.
@@ -73,7 +73,7 @@ Finally, test each handler in isolation. The separation these patterns provide m
 ## Conclusion
 
 The mediator pattern and CQRS workflow provide a solid foundation for building maintainable Claude Code skills. By separating concerns, creating clear boundaries between operations, and centralizing request routing, you create skills that are easier to understand, test, and extend. Start with simple implementations, and progressively add complexity as your needs grow. The patterns scale well, but they work equally well for smaller projects when applied thoughtfully.
-{% endraw %}
+
 
 ---
 

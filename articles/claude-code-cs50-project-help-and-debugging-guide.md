@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code CS50 Project Help and Debugging Guide
 
 CS50 is Harvard's legendary introduction to computer science course, known for its rigorous problem sets and hands-on approach to programming. Whether you're tackling C pointers, Python algorithms, or SQL databases, Claude Code can be your ultimate debugging companion. This guide walks you through how to use Claude Code's capabilities to overcome common CS50 challenges and level up your debugging skills.
@@ -227,7 +227,7 @@ Claude Code transforms debugging from a frustrating chore into a valuable learni
 Remember: the goal isn't to avoid errors, it's to learn from them. With Claude Code as your debugging partner, you'll not only pass CS50 but build skills that serve you throughout your programming career.
 
 Start small, ask questions, and embrace the debugging process. Your future self will thank you when you're building more complex projects with confidence.
-{% endraw %}
+
 
 ---
 

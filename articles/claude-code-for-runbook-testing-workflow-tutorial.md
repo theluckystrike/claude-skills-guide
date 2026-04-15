@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Runbook Testing Workflow Tutorial
 
 Runbooks are essential documentation for DevOps and SRE teams, but they're often neglected because testing them manually is time-consuming and error-prone. This tutorial shows you how to use Claude Code to automate runbook testing, ensuring your operational procedures remain accurate and up-to-date.
@@ -267,7 +267,7 @@ Automated runbook testing with Claude Code transforms static documentation into 
 
 Start small: pick one critical runbook, add testable commands with expected outputs, and prompt Claude Code to execute it. Once you see the value, expand to your full runbook library.
 
-{% endraw %}
+
 
 ---
 

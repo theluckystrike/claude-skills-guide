@@ -298,7 +298,7 @@ Claude Code transforms release automation from a manual, error-prone process int
 Start with the fundamentals outlined in this tutorial, then gradually add complexity as your team's needs evolve. The key is to begin simple, measure results, and continuously improve your automation based on real-world feedback.
 
 Remember that effective release automation is an investment. The initial setup time pays dividends through faster shipping cycles, reduced errors, and more confident deployments. With Claude Code as your automation partner, you have a powerful ally in building the release workflows your team needs to succeed.
-{% endraw %}
+
 
 ---
 
@@ -323,3 +323,4 @@ Related Reading
 - [Claude Code for Browser Automation Workflow Guide](/claude-code-for-browser-automation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Lambda Layers Workflow
 
 AWS Lambda Layers provide an elegant way to manage shared dependencies across multiple Lambda functions, reducing code duplication and simplifying maintenance. When combined with Claude Code's automation capabilities, you can create a powerful workflow for building, testing, and deploying Lambda layers efficiently. This guide walks you through practical patterns for using Claude Code to streamline your Lambda Layers workflow.
@@ -190,7 +190,7 @@ This end-to-end automation reduces manual effort and ensures consistency across 
 ## Conclusion
 
 Lambda Layers combined with Claude Code's automation capabilities create a powerful system for managing serverless dependencies. By implementing the workflows described in this guide, you can reduce duplication, simplify updates, and maintain better control over your Lambda function dependencies. Start with a simple layer structure, then expand as your requirements grow, Claude Code can adapt the workflow to match your evolving needs.
-{% endraw %}
+
 
 ---
 

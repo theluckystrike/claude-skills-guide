@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI Task Prioritizer Chrome Extension: A Practical Guide for Developers
 
 Task management remains one of the most challenging aspects of productivity for developers and power users. An AI task prioritizer Chrome extension brings machine learning capabilities directly into your browser, analyzing task context, estimating effort, and suggesting optimal work sequences. This guide covers the technical implementation of building such an extension from scratch.
@@ -343,4 +343,4 @@ Related Reading
 - [Chrome DevTools Console Commands: A Practical Guide for Developers](/chrome-devtools-console-commands/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Zero Trust Security Workflow Guide
 
 The traditional perimeter-based security model assumes everything inside your network is trusted. This assumption fails in modern development environments where AI assistants like Claude Code interact with your codebase, execute commands, and access sensitive resources. Zero trust security, "never trust, always verify", provides a framework for safely integrating AI into your development workflow.
@@ -405,7 +405,7 @@ Teams that implement the technical controls but skip the cultural practices end 
 Integrating Claude Code into your development workflow doesn't mean abandoning security. Zero trust principles, explicit verification, least privilege, and assume breach, provide a framework for safe AI-assisted development. Implement the patterns in this guide to maintain security while benefiting from AI productivity.
 
 Start with restricted permissions, add verification workflows, and build monitoring. Each layer of defense makes your AI-augmented development more secure without sacrificing the benefits Claude Code provides. The goal is not to make AI assistance harder to use but to make unsafe use of AI assistance structurally difficult.
-{% endraw %}
+
 
 ---
 

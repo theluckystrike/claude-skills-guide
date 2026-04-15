@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 AI-powered screen readers represent a significant advancement in web accessibility. Unlike traditional screen readers that rely on static rule-based parsing, AI screen readers use machine learning models to understand page context, interpret ambiguous UI elements, and provide intelligent verbal descriptions. For developers building Chrome extensions, understanding how to integrate these capabilities opens up powerful accessibility solutions.
 
 ## What Makes AI Screen Readers Different
@@ -427,4 +427,4 @@ function speak(text) { speechSynthesis.cancel(); speechSynthesis.speak(new Speec
 
 AI screen readers transform web accessibility by combining ML context understanding with Chrome extension APIs.
 
-{% endraw %}
+

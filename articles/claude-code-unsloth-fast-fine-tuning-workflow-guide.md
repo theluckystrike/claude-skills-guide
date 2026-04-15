@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code + Unsloth: Fast Fine-Tuning Workflow Guide
 
 Fine-tuning large language models has become an essential skill for developers and data scientists looking to customize AI behavior for specific domains. Unsloth, an optimized fine-tuning library, makes this process dramatically faster and more memory-efficient. Combined with Claude Code's powerful CLI capabilities, you can build production-ready fine-tuning pipelines with unprecedented speed and reliability.
@@ -454,7 +454,7 @@ Start with small models and datasets, iterate quickly, and scale up as you valid
 The most underrated aspect of this combination is debugging velocity. Fine-tuning involves a chain of failures. bad data formats, CUDA OOM errors, bad hyperparameters, poor evaluation metrics. that each waste hours without fast diagnosis. Claude Code shortens every one of those loops. Paste your error, get a fix. Describe your loss curve behavior, get a hypothesis. Ask it to write the next evaluation script, review it, and move on.
 
 Remember to document your experiments, version your data, and always validate your fine-tuned model on held-out test sets before deployment. With this workflow, you're equipped to build production-quality fine-tuned models efficiently and reliably.
-{% endraw %}
+
 
 ---
 

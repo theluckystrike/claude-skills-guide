@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Daily Standup Automation: A Practical Guide
 
 Daily standups are essential for team coordination, but the ritual of documenting what you did yesterday, what you're doing today, and any blockers can become repetitive. A well-built Chrome extension can automate significant portions of this workflow, pulling data from your development tools and generating standup messages automatically.
@@ -324,4 +324,4 @@ Related Reading
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

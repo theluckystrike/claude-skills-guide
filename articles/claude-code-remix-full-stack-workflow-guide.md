@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Building modern full stack applications requires coordinating multiple technologies, managing state across boundaries, and deploying with confidence. Claude Code provides a powerful foundation for this workflow, especially when combined with framework-specific approaches like Remix. This guide walks you through a practical full stack development process that uses Claude's capabilities at every stage. from initial scaffolding through production monitoring.
 
 ## Setting Up Your Development Environment
@@ -402,5 +401,4 @@ Related Reading
 - [Claude Code for Vercel Supabase Clerk Full Stack Development](/claude-code-for-vercel-supabase-clerk-full-stack/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 {% endraw %}

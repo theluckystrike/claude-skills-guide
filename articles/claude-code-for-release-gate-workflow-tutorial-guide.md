@@ -13,8 +13,8 @@ reviewed: true
 score: 8
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Release gates are critical checkpoints in your deployment pipeline that ensure only quality code reaches production. By integrating Claude Code into your release gate workflows, you can automate quality checks, security scans, and compliance validations while maintaining full visibility into the process. This guide walks you through creating effective release gate workflows powered by Claude Code.
 
 ## Understanding Release Gate Fundamentals
@@ -298,7 +298,7 @@ Never ignore gate failures. When a gate fails, investigate and fix the underlyin
 Claude Code transforms release gate implementation from a tedious maintenance task into an intelligent, maintainable process. By generating contextual gate scripts, automating execution, and providing clear reporting, Claude Code helps teams establish solid quality barriers without sacrificing deployment velocity.
 
 Start with a few essential gates, static analysis, security scanning, and basic test coverage. As your processes mature, layer in additional checks for performance, compliance, and specialized quality attributes. With Claude Code handling the implementation details, your team focuses on defining what quality means for your specific context.
-{% endraw %}
+
 
 ---
 
@@ -323,3 +323,4 @@ Related Reading
 - [Claude Code for Multi-Platform Release Workflow Guide](/claude-code-for-multi-platform-release-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

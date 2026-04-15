@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Upstash QStash Scheduled Tasks Setup Guide
 
 Upstash QStash is a serverless message queue and cron service that integrates smoothly with Next.js, Cloudflare Workers, and other serverless platforms. Combined with Claude Code's skill system, you can create powerful automated workflows that handle scheduled tasks intelligently. This guide walks you through setting up QStash scheduled tasks while using Claude Code's capabilities for enhanced productivity. covering everything from basic cron setup to idempotent handlers and production debugging.
@@ -395,7 +395,7 @@ When working with QStash scheduled tasks, keep these practices in mind:
 Upstash QStash combined with Claude Code creates a powerful system for managing scheduled tasks. The serverless approach eliminates infrastructure concerns while providing better visibility, automatic retries, and edge compatibility that traditional cron jobs cannot match. Start with simple repeating schedules, layer in idempotency once your task volume grows, and use dynamic scheduling to adapt execution frequency to real-world conditions.
 
 The combination of small payloads, idempotent handlers, and structured logging gives you a scheduled task system that is reliable enough for production use and observable enough to debug when something goes wrong. With these practices in place, you can schedule tasks confidently and spend your time on product logic rather than infrastructure maintenance.
-{% endraw %}
+
 
 ---
 

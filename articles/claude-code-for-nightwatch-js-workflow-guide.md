@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Nightwatch.js Workflow Guide
 
 Automated browser testing is essential for delivering reliable web applications, and Nightwatch.js has long been a trusted framework for end-to-end testing. However, integrating AI assistance through Claude Code can dramatically improve your testing workflow, from generating test cases faster to debugging failures intelligently. This guide shows you how to use Claude Code as part of your Nightwatch.js development process.
@@ -219,7 +219,7 @@ Integrating Claude Code with Nightwatch.js transforms your testing workflow from
 Start by adding Claude Code to your current testing workflow, perhaps with a single test file, and experience the productivity gains firsthand. As you become more comfortable with the collaboration, you'll discover increasingly sophisticated ways to use AI for comprehensive, reliable automated testing.
 
 Remember that the goal isn't to replace human testers but to augment their capabilities, freeing you to focus on higher-level testing strategy while Claude Code handles the repetitive boilerplate. Your tests will be more thorough, your debugging faster, and your overall test suite more maintainable.
-{% endraw %}
+
 
 ---
 

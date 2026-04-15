@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 Search engines remain the primary gateway to information for developers and power users. Yet the standard search experience often falls short when you need nuanced results, contextual understanding, or specialized filtering. AI search enhancer Chrome extensions bridge this gap by embedding intelligence directly into your browser, transforming how you discover, evaluate, and act upon search results.
 
@@ -408,4 +408,3 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}

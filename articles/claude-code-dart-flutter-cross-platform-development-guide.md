@@ -12,7 +12,7 @@ score: 8
 permalink: /claude-code-dart-flutter-cross-platform-development-guide/
 ---
 
-{% raw %}
+
 Claude Code Dart Flutter Cross Platform Development Guide
 
 [Cross-platform development has become essential for developers](/best-claude-code-skills-to-install-first-2026/) who want to reach users across iOS, Android, web, and desktop from a single codebase. Dart and Flutter provide a mature framework for this goal, and Claude Code accelerates your workflow by handling repetitive tasks, generating boilerplate, and assisting with debugging.
@@ -585,7 +585,7 @@ This workflow reduces context switching and helps maintain focus on what matters
 Claude Code transforms Flutter development from manual coding to collaborative problem-solving. By using skills like tdd for test-driven development, frontend-design for UI implementation, and Claude Code for deployment automation, you build production-quality applications faster.
 
 Start with a clean architecture, write tests first using the tdd workflow, and let Claude handle boilerplate generation. Your cross-platform application will reach iOS, Android, web, and desktop users efficiently.
-{% endraw %}
+
 
 ---
 

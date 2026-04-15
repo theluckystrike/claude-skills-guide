@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 Creating effective Claude skill files for Android Kotlin projects requires understanding both the skill format and how Claude Code processes mobile development workflows. This guide provides practical examples you can adapt immediately for building Android apps with Kotlin.
 
@@ -241,4 +241,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

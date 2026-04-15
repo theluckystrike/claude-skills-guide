@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Kafka Consumer Producer Tutorial Guide
 
 Apache Kafka has become the backbone of modern event-driven architectures. Whether you're building real-time analytics pipelines, microservice communication systems, or streaming applications, understanding how to effectively implement Kafka consumers and producers is essential. This guide walks you through building solid Kafka integrations using Claude Code, with practical examples you can apply immediately to your projects.
@@ -309,4 +309,3 @@ Related Reading
 - [Claude Code for Kafka Schema Evolution Workflow](/claude-code-for-kafka-schema-evolution-workflow/)
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 
-{% endraw %}

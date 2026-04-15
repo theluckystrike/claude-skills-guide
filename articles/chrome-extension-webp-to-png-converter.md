@@ -8,7 +8,7 @@ author: theluckystrike
 permalink: /chrome-extension-webp-to-png-converter/
 ---
 
-{% raw %}
+
 WebP is a modern image format developed by Google that offers superior compression compared to JPEG and PNG. However, compatibility issues still exist in certain workflows, especially when you need to work with legacy systems or specific design tools that haven't adopted WebP support. This is where a Chrome extension for WebP to PNG conversion becomes invaluable.
 
 Why Convert WebP to PNG?
@@ -127,7 +127,7 @@ Chrome extensions that convert WebP to PNG offer a practical solution for develo
 The ability to convert images without external services ensures privacy and speed, making browser-based conversion a valuable addition to any web development or digital design workflow.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+
 
 
 ---

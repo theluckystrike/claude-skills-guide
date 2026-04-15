@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Building a price history Chrome extension gives you the power to track and visualize price changes across any e-commerce site. Unlike basic price trackers that only show current prices, a price history extension stores historical data, allowing users to identify trends, spot seasonal discounts, and make informed purchasing decisions.
 
 This guide covers the technical implementation for developers and power users who want to build custom price tracking solutions.
@@ -446,4 +446,4 @@ Chart not rendering: Chart.js requires the canvas element to be in the DOM when 
 
 Building a price history extension requires handling diverse price formats, managing storage efficiently, and creating useful visualizations.
 
-{% endraw %}
+

@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-skills-for-robotics-ros2-development-workflow/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Developing robotics applications with ROS2 requires managing complex build systems, hardware interfaces, and distributed architectures. Claude Code skills can significantly streamline this workflow by automating repetitive tasks, generating boilerplate code, and maintaining documentation. This guide shows you how to integrate Claude skills into your ROS2 development pipeline effectively.
 
 ## Setting Up Your ROS2 Development Environment

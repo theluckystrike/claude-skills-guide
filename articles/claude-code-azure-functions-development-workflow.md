@@ -600,7 +600,7 @@ When asking Claude to recommend a plan, describe your expected request volume, a
 10. Version your APIs. HTTP trigger functions should include a version prefix in the route to allow breaking changes without coordination across all consumers
 
 Claude Code accelerates each phase of Azure Functions development, from initial setup through production deployment. By providing clear context about your Azure environment and specific requirements, you can use AI assistance to build solid serverless applications efficiently. The most productive pattern is treating Claude as a pair programmer who knows the Azure SDK and service bindings deeply, describe your architecture, review what it generates, and focus your attention on the business logic that differentiates your application.
-{% endraw %}
+
 
 ---
 
@@ -625,3 +625,4 @@ Related Reading
 - [Claude Code Development Workflow Templates](/claude-code-development-workflow-templates/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Tonic gRPC Rust Workflow Guide
 
 Building gRPC services with Tonic and Rust offers exceptional performance and type safety, but setting up the development workflow can be challenging. This guide demonstrates how Claude Code streamlines Tonic gRPC development, from project initialization to production-ready services.
@@ -635,7 +635,7 @@ Claude Code significantly accelerates Tonic gRPC development by understanding yo
 The key advantages of this stack are compile-time guarantees from both Rust's type system and protobuf schemas, zero-cost async abstractions from Tokio, and automatic multi-language client generation. Once your `.proto` files are stable, the cost of adding a new language client drops to near zero.
 
 For more advanced topics, explore bidirectional streaming, custom interceptors, load balancing with the `tower` middleware stack, and integration with service meshes like Linkerd or Istio. Claude Code can generate the boilerplate for each of these patterns given a clear description of your service's behavior.
-{% endraw %}
+
 
 ---
 

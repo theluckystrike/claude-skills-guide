@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Webcam Overlay Recording: A Practical Guide
 
 Recording your screen with a webcam overlay has become essential for tutorials, documentation, and content creation. Chrome extensions provide a powerful way to capture your screen while embedding your camera feed directly into the recording. This guide walks you through building a Chrome extension that handles webcam overlay recording using the MediaStream Recording API and canvas manipulation. By the end, you will have a working extension capable of producing broadcast-quality recordings with a fully configurable picture-in-picture webcam feed.
@@ -754,4 +754,4 @@ Related Reading
 - [AI Tab Organizer Chrome Extension: A Practical Guide for.](/ai-tab-organizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

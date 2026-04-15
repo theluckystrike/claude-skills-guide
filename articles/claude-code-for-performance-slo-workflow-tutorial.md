@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Performance Service Level Objectives (SLOs) help teams define and measure the reliability of their systems. When implemented correctly, SLOs provide clear targets for response times, throughput, and resource usage. This guide shows you how to use Claude Code to create a performance SLO workflow that integrates smoothly into your development process.
 
 ## Understanding Performance SLOs in Practice

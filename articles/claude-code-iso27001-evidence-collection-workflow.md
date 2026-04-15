@@ -869,7 +869,7 @@ Claude Code transforms ISO 27001 evidence collection from a manual, periodic bur
 The workflow demonstrated here provides a foundation. Customize the evidence types, collection methods, and reporting formats to match your specific ISO 27001 scope and organizational context. As your automation library grows, you will find that audit preparation shrinks from weeks of frantic document gathering to a few hours of reviewing what the system has already collected.
 
 The most important shift is cultural: once evidence collection is automated and continuous, your team stops thinking about compliance as a periodic event and starts treating it as a live, always-current view of your security posture.
-{% endraw %}
+
 
 ---
 
@@ -894,3 +894,4 @@ Related Reading
 - [Claude Code CIS Benchmark Hardening Script Automation](/claude-code-cis-benchmark-hardening-script-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

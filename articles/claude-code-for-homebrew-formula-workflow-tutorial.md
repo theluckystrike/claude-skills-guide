@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 tags: [claude-code, claude-skills]
 ---
-{% raw %}
+
 
 Homebrew is the go-to package manager for macOS and Linux developers, making it essential for anyone distributing command-line tools. However, creating and maintaining a Homebrew formula can be tricky, ensuring the formula passes all checks, follows best practices, and integrates smoothly with your release process takes attention to detail. This tutorial shows you how to use Claude Code to automate and simplify your Homebrew formula workflow, from initial creation to ongoing maintenance.
 
@@ -209,4 +209,4 @@ Related Reading
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Blue-Green Deployment Workflow
 
 Blue-green deployment is a release strategy that maintains two identical production environments, called "blue" (current live version) and "green" (new version), allowing you to deploy with zero downtime and instant rollback capabilities. This guide shows you how to use Claude Code to implement, automate, and manage blue-green deployment workflows effectively.
@@ -360,7 +360,7 @@ Automate everything. Manual deployments introduce human error. Use Claude Code t
 Blue-green deployment provides a safe, zero-downtime release strategy that's essential for production applications. Claude Code can significantly accelerate your implementation by generating infrastructure code, automation scripts, and CI/CD pipeline configurations. Start with a simple two-environment setup, automate your deployment and rollback processes, and gradually add health checks and validation to build a solid blue-green deployment workflow.
 
 The key is to start simple, test thoroughly, and iterate. Claude Code is particularly effective at helping you understand the tradeoffs between different deployment strategies and choose the right approach for your specific use case.
-{% endraw %}
+
 
 ---
 

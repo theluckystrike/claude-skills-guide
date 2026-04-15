@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Release Branching Strategy Workflow
 
 Effective release management requires a well-structured branching strategy that balances development velocity with stability. Claude Code transforms how teams implement and execute release workflows by providing intelligent automation and contextual understanding across your entire branching ecosystem.
@@ -209,7 +209,7 @@ Maintain Human Oversight: Claude Code automates execution but you control the pr
 Claude Code transforms release branching from a manual, error-prone process into an automated, reliable workflow. By understanding your conventions and executing context-aware commands, it reduces cognitive load while maintaining release integrity. Start with clear conventions in CLAUDE.md, use descriptive prompts, and gradually expand your automation as your team builds confidence in the workflow.
 
 The result is faster releases with fewer errors, consistent branch management, and more time for actual development work.
-{% endraw %}
+
 
 ---
 

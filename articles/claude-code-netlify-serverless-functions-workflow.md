@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Netlify Serverless Functions Workflow
 
 Building serverless APIs has never been easier than with Netlify Functions combined with Claude Code. This workflow enables you to rapidly develop, test, and deploy backend functionality without managing infrastructure. you'll discover how to use Claude Code to create solid serverless functions that integrate smoothly with your projects.
@@ -499,7 +499,7 @@ Monitor deployment status in the Netlify dashboard. Once deployed, your function
 Combining Claude Code with Netlify Functions creates a powerful development workflow for building serverless APIs. Claude accelerates development through intelligent code generation, debugging assistance, and best practice recommendations. Meanwhile, Netlify handles the infrastructure complexity, letting you focus on writing business logic.
 
 Start with simple functions, gradually adding complexity as you become comfortable with the patterns. Soon you'll be building sophisticated serverless backends faster than ever before.
-{% endraw %}
+
 
 ---
 

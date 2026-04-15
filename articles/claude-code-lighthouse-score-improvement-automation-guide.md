@@ -13,8 +13,8 @@ score: 8
 permalink: /claude-code-lighthouse-score-improvement-automation-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [Performance optimization is a continuous process, not a one-time fix](/best-claude-code-skills-to-install-first-2026/) Automating Lighthouse score improvements with Claude Code skills transforms reactive debugging into proactive performance management. This guide covers practical workflows for identifying bottlenecks, applying fixes automatically, and maintaining high scores over time.
 
 ## Understanding the Lighthouse Automation Challenge

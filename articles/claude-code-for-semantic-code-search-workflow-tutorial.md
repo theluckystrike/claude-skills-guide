@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Semantic Code Search Workflow Tutorial
 
 Traditional code search tools like `grep` and `ack` have served developers well for decades. However, they rely on exact string matching, which means you're often stuck knowing the exact variable name or function signature to find what you need. Enter Claude Code, your AI-powered partner for semantic code search that understands what your code *does*, not just what it *says*.
@@ -214,7 +214,7 @@ The key is treating Claude Code as a pair programmer who already knows your enti
 
 Start with simple queries today, and you'll quickly discover how much more efficient your code exploration workflow can become.
 
-{% endraw %}
+
 
 ---
 

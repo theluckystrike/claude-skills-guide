@@ -12,8 +12,8 @@ score: 7
 permalink: /fly-io-mcp-server-deployment-workflow-guide/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [Deploying a Model Context Protocol (MCP) server to Fly.io gives you](/building-your-first-mcp-tool-integration-guide-2026/) a globally distributed, low-latency endpoint that Claude Code can connect to for enhanced tool-calling capabilities. This guide covers the complete deployment workflow, from containerization to automated deployments using Claude skills.
 
 ## Why Deploy MCP Servers on Fly.io

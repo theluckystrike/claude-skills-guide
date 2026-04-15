@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Vercel Supabase Clerk Full Stack Development
 
 Building a modern full-stack application requires orchestrating multiple powerful services, Vercel for deployment, Supabase for the backend database and real-time features, and Clerk for authentication. Claude Code can dramatically accelerate this workflow by understanding your project structure, generating boilerplate code, and helping you debug complex integration issues. This guide shows you how to use Claude Code effectively for Vercel + Supabase + Clerk full-stack development.
@@ -247,7 +247,7 @@ Migration Assistance: When you need to modify your schema or upgrade Clerk versi
 5. Use Clerk's built-in components: Rather than building custom auth UI, use Clerk's pre-built components which integrate smoothly.
 
 Claude Code transforms full-stack development from a complex orchestration task into a collaborative experience where you describe your intent and receive working, integrated code. For Vercel + Supabase + Clerk applications, this means faster iteration and fewer integration bugs.
-{% endraw %}
+
 
 ---
 

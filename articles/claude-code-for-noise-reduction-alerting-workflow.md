@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Noise Reduction Alerting Workflow
 
 Alert fatigue is a real problem in modern software development. When every system event triggers a notification, critical issues get lost in the noise. Claude Code provides powerful capabilities to build intelligent noise reduction alerting workflows that help teams focus on what matters most.
@@ -462,4 +462,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

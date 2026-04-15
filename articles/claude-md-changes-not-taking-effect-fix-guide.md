@@ -12,6 +12,7 @@ reviewed: true
 score: 8
 permalink: /claude-md-changes-not-taking-effect-fix-guide/
 ---
+
 {% raw %}
 # Claude MD Changes Not Taking Effect Fix Guide
 

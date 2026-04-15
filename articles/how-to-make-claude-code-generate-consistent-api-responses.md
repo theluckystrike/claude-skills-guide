@@ -12,8 +12,8 @@ score: 7
 permalink: /how-to-make-claude-code-generate-consistent-api-responses/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 When building Claude skills that interact with APIs, consistency in response formatting becomes critical. Whether you're creating a skill for generating JSON payloads, building webhook handlers, or designing integration points with external services, predictable output prevents downstream failures and makes debugging significantly easier.
 
 This guide covers practical patterns for making your Claude skills generate consistent API responses across different contexts and use cases. By the end you will have five concrete techniques you can apply immediately, a testing strategy for validating consistency over time, and a clear picture of the pitfalls that silently break downstream consumers.

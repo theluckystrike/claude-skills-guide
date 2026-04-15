@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for ERC-721A Gas Optimization Workflow
 
 Gas optimization is critical when deploying NFT collections on Ethereum. Each unnecessary gas unit translates to higher costs for your users and potentially lower adoption. ERC-721A, an improved implementation of ERC-721, already offers significant gas savings by reducing storage writes during batch minting. However, there's still room for further optimization when implementing custom features. This guide shows you how to use Claude Code CLI to streamline your ERC-721A gas optimization workflow.
@@ -226,7 +226,7 @@ function testGasOnFork() public {
 - Test on mainnet forks before production deployment
 
 By integrating Claude Code into your development workflow and following these optimization patterns, you can significantly reduce deployment and minting costs for your NFT collection while maintaining code clarity and security.
-{% endraw %}
+
 
 ---
 

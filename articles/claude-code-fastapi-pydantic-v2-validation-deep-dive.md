@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code + FastAPI + Pydantic V2 Validation Detailed look
 
 Building solid APIs requires solid input validation. FastAPI combined with Pydantic v2 provides one of the most powerful validation systems available in Python today. This guide dives deep into validation patterns that will help you build production-ready APIs, with practical examples you can apply immediately.
@@ -273,7 +273,7 @@ Claude Code excels at rapidly generating Pydantic models from existing data stru
 Pydantic v2 validation combined with FastAPI provides a solid foundation for building APIs that handle data correctly from the start. By using field validators, model validators, computed fields, and proper error handling, you can create APIs that are both flexible and secure.
 
 Remember: validation is not about restricting your users, it's about providing clear feedback and preventing errors before they reach your business logic. Master these patterns, and you'll build more reliable applications.
-{% endraw %}
+
 
 ---
 

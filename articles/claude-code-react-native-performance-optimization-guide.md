@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code React Native Performance Optimization Guide
 
 Performance optimization is critical for delivering smooth, responsive mobile applications. React Native apps must balance JavaScript execution speed with native rendering performance. Claude Code can be an invaluable partner in identifying bottlenecks, implementing optimizations, and validating improvements. This guide walks you through practical strategies for using Claude Code to optimize your React Native applications.
@@ -213,7 +213,7 @@ Claude Code can help you set up performance benchmarks:
 Optimizing React Native performance is an ongoing process that requires understanding the unique challenges of the platform. Claude Code can be a powerful ally in this process, helping you identify bottlenecks, implement optimizations, and validate improvements. By following the strategies in this guide, optimizing component rendering, reducing bundle size, managing memory, and minimizing bridge overhead, you can create React Native applications that feel smooth and responsive.
 
 Remember that not all optimizations are worth implementing. Focus on the changes that will have the biggest impact on your specific application's performance profile, and always measure before and after making changes.
-{% endraw %}
+
 
 ---
 

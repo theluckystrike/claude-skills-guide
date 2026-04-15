@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 AI Tone Changer Chrome Extension: A Developer Guide
 
 Text transformation tools have evolved beyond simple find-and-replace utilities. AI tone changer Chrome extensions now use large language models to rewrite text with different tonal qualities, converting casual messages into professional emails, informal chat responses into formal communications, or adjusting readability levels for specific audiences. For developers and power users, understanding the technical architecture behind these extensions opens opportunities for customization and building tailored solutions.
@@ -290,4 +290,4 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

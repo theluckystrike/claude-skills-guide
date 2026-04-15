@@ -511,7 +511,7 @@ The practical gains are real: faster onboarding of new animations, fewer product
 
 Remember that the best Lottie workflows combine technical excellence with clear communication between designers and developers. Let Claude Code handle the repetitive tasks while you focus on creating engaging user experiences.
 
-{% endraw %}
+
 
 ---
 
@@ -536,3 +536,4 @@ Related Reading
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

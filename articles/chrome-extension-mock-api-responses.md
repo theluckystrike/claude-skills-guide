@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 When building Chrome extensions that interact with external APIs, you often need to mock responses during development or testing. Rather than relying on actual API calls or setting up a complex backend, you can intercept network requests directly within your extension. This guide shows you how to mock API responses in Chrome extensions using the declarative NetRequest API and background service workers.
 
@@ -345,4 +345,4 @@ Related Reading
 - [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -12,8 +12,8 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 GitBook remains a popular choice for technical documentation, but manually maintaining content across multiple pages, updating screenshots, and keeping examples in sync with your codebase quickly becomes overwhelming. Claude Code transforms this workflow by automating content generation, formatting, and even the publishing pipeline itself.
 
 This guide shows you how to build an efficient GitBook documentation workflow using Claude skills, complete with practical code examples you can adapt for your own projects.

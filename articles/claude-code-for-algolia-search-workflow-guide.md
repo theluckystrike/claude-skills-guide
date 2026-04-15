@@ -12,7 +12,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 ---
-{% raw %}
+
 
 Algolia is a powerful search-as-a-service platform that enables developers to build fast, relevant search experiences. When combined with Claude Code, you can create intelligent search workflows that understand context, handle complex queries, and continuously improve based on user behavior. This guide walks you through integrating Claude Code with Algolia for production-ready search functionality.
 
@@ -200,7 +200,7 @@ Third, implement rate limiting on search requests to control costs and prevent a
 ## Conclusion
 
 Integrating Claude Code with Algolia creates powerful search capabilities that scale with your application. Start with basic indexing and search, then progressively add advanced features like faceting, synonyms, and analytics. The key is structuring your data thoughtfully and continuously iterating based on user behavior metrics. With this workflow foundation, you can build search experiences that feel intuitive and deliver relevant results consistently.
-{% endraw %}
+
 
 ---
 

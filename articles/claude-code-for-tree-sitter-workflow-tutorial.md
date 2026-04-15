@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Tree-sitter Workflow Tutorial
 
 Tree-sitter is a powerful parsing framework that enables developers to generate syntax trees from source code efficiently. When combined with Claude Code's skill system and automation capabilities, you can build sophisticated workflows for code analysis, refactoring, and automated code transformations. This tutorial walks you through practical strategies for integrating Claude Code with Tree-sitter to enhance your development workflow.
@@ -250,7 +250,7 @@ Integrating Claude Code with Tree-sitter opens up powerful possibilities for cod
 Start with simple queries to understand your code's structure, then progressively build more complex automations. The combination of structural parsing and semantic understanding makes this workflow particularly powerful for large-scale codebases and complex refactoring tasks.
 
 Remember that Tree-sitter is most effective when used iteratively, parse, analyze, transform, and verify. With Claude Code handling the reasoning and automation, you have a powerful partner for tackling even the most complex code transformation challenges.
-{% endraw %}
+
 
 ---
 

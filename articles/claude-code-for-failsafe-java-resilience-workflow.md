@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Failsafe Java Resilience Workflow
 
 Building resilient Java applications requires handling failures gracefully, whether from network calls, database operations, or external service integrations. The Failsafe library provides a powerful, composable way to add resilience patterns to your code, and Claude Code can significantly accelerate your implementation workflow. This guide shows you how to combine both effectively.
@@ -178,7 +178,7 @@ Claude Code dramatically accelerates building Failsafe resilience patterns by ge
 Remember that resilience patterns aren't one-size-fits-all. What works for a highly available internal service differs from an unreliable third-party API. Use Claude Code as a collaborative partner to explore different configurations and find what works best for your specific requirements.
 
 With these patterns in place, your Java applications will handle failures gracefully and maintain reliability in production environments. Your users will appreciate the consistency, and your operations team will have fewer late-night pages.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome extension Google Docs citation addons represent a powerful category of browser extensions that streamline academic writing, research documentation, and scholarly work. For developers and power users, understanding how these extensions integrate with Google Docs opens up possibilities for building custom citation workflows, automating bibliography generation, and creating tailored research tools.
 
 ## How Citation Extensions Integrate with Google Docs
@@ -315,4 +315,4 @@ Related Reading
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

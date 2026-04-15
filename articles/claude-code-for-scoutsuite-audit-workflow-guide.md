@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for ScoutSuite Audit Workflow Guide
 
 Cloud security auditing is essential for maintaining solid infrastructure, but manually running scans and analyzing results can be time-consuming. This guide shows you how to use Claude Code to automate your ScoutSuite audit workflow, making security assessments faster, more consistent, and easier to integrate into your development pipeline.
@@ -346,7 +346,7 @@ Combining Claude Code with ScoutSuite transforms cloud security auditing from a 
 - Track security posture improvement over time with historical trending
 
 Start small by running manual audits, then gradually automate the workflow to establish a solid cloud security posture. Remember that automated tools are supplements to. not replacements for. comprehensive security expertise and manual review.
-{% endraw %}
+
 
 ---
 

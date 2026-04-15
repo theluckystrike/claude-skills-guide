@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-skills-for-site-reliability-engineers-sre/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Site reliability engineers need tools that handle incident response, log analysis, [monitoring](/claude-code-sentry-error-tracking-source-maps-workflow/), and system debugging. Claude Code provides skills that integrate with common SRE tooling to accelerate these workflows. This guide covers practical applications for SRE teams.
 
 ## Incident Response Automation
@@ -271,5 +271,4 @@ Inconsistent incident summaries: Instruct Claude to respond with JSON containing
 Metrics context too large: Downsample time series before passing to Claude. Send 48 thirty-minute averages instead of 1,440 one-minute data points.
 
 Postmortem missing action items: Include the explicit moment each mitigation was applied and whether metrics improved. Claude can then infer what worked and what systemic changes would prevent recurrence.
-
 {% endraw %}

@@ -363,7 +363,7 @@ Claude Code transforms Prometheus federation from a manual, error-prone process 
 The key is treating your monitoring infrastructure as code. versioned, documented, and code-generated where possible. Claude Code excels at this pattern, turning descriptions of your infrastructure needs into working Prometheus configurations.
 
 Start small: use Claude Code to generate your first federate configuration, then expand to service discovery, comprehensive alerting, and cardinality auditing. Bring Claude Code into your configuration review process the same way you would a senior SRE: give it context about your infrastructure, ask it to find problems, and let it generate the tedious boilerplate while you focus on architectural decisions.
-{% endraw %}
+
 
 ---
 
@@ -388,3 +388,4 @@ Related Reading
 - [Claude Code for Webpack Federation Workflow Guide](/claude-code-for-webpack-federation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

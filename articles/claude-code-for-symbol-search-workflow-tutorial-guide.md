@@ -12,7 +12,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Symbol Search Workflow Tutorial Guide
 
 Symbol search is one of the most essential skills for navigating large codebases. Whether you're tracing a bug, understanding unfamiliar code, or refactoring, quickly locating where functions, classes, or variables are defined saves hours of manual searching. Claude Code provides powerful tools to perform symbol searches efficiently, and this guide will show you how to use them effectively.
@@ -223,4 +223,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

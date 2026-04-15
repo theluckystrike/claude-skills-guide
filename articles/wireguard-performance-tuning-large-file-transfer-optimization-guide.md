@@ -13,7 +13,7 @@ categories: [guides, security]
 tags: [wireguard, vpn, performance, file-transfer]
 ---
 
-{% raw %}
+
 WireGuard Performance Tuning for Large File Transfer Optimization Guide
 
 WireGuard has revolutionized VPN technology with its minimal codebase and exceptional performance. When it comes to moving large files across WireGuard tunnels, however, default configurations rarely deliver optimal throughput. This guide explores proven techniques to maximize your file transfer speeds while maintaining the security and simplicity that make WireGuard attractive.
@@ -410,4 +410,4 @@ Related Reading
 - [Chrome Check Link Safety: Developer Tools and Techniques](/chrome-check-link-safety/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

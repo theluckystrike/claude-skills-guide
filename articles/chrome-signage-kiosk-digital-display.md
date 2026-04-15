@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Signage Kiosk Digital Display: A Developer Guide
 
 Chrome OS has become a dominant platform for digital signage and kiosk deployments due to its security model, easy management through Google Admin Console, and the familiar Chromium engine that powers it. This guide covers the technical foundations for building Chrome signage kiosk digital display solutions, from initial setup to advanced customization.
@@ -242,4 +242,4 @@ Related Reading
 - [AI Competitive Analysis Chrome Extension: A Developer's Guide](/ai-competitive-analysis-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

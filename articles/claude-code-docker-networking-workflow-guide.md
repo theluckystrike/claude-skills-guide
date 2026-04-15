@@ -619,7 +619,7 @@ The key principles to carry forward are: use custom bridge networks rather than 
 
 When you face a networking challenge, start with inspection commands to understand the current state, escalate to the systematic troubleshooting decision tree, and consider how the audit and diagram generation scripts can be integrated into your team's regular maintenance routines. With these patterns in your toolkit, you will spend less time debugging and more time building.
 
-{% endraw %}
+
 
 ---
 
@@ -644,3 +644,4 @@ Related Reading
 - [Claude Code for Bandwhich Bandwidth Monitor Workflow](/claude-code-for-bandwhich-bandwidth-monitor-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

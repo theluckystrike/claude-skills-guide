@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 If you spend significant time researching topics online, you understand the frustration of losing a carefully curated collection of tabs. Whether you're investigating a complex technical problem, comparing products, or gathering sources for a project, the ability to save and restore research sessions proves invaluable. Chrome extensions designed for session management provide powerful solutions for organizing and preserving your browsing workflow.
 
@@ -157,4 +157,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

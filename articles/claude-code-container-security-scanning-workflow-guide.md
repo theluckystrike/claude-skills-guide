@@ -239,7 +239,7 @@ jq '.Results[].Vulnerabilities[] | select(.FixedVersion != null)' scan.json
 Container security scanning is critical for modern applications. Claude Code skills enable you to automate vulnerability detection, integrate security into CI/CD pipelines, and maintain continuous security posture. Start with basic Trivy scanning and progressively add more sophisticated automation as your security maturity grows.
 
 By implementing the workflows outlined in this guide, you'll catch vulnerabilities before they reach production and maintain a strong security posture throughout your containerized applications.
-{% endraw %}
+
 
 ---
 
@@ -264,3 +264,4 @@ Related Reading
 - [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

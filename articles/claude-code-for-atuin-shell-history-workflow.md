@@ -13,7 +13,7 @@ score: 7
 permalink: /claude-code-for-atuin-shell-history-workflow/
 ---
 
-{% raw %}
+
 
 Shell history is one of the most valuable resources for developers, yet most people underutilize it. Atuin transforms your shell history from a simple linear list into a powerful searchable database with cloud sync, while Claude Code can help you extract even more value from this wealth of command-line knowledge. This guide shows you how to combine these two tools for maximum productivity.
 
@@ -170,7 +170,7 @@ Combining Claude Code with Atuin creates a powerful workflow for managing and us
 
 Start by installing Atuin and letting it collect history for a few days, then begin experimenting with the analysis workflows described in this guide. As your history grows, so does the value you can extract with Claude Code's assistance.
 
-{% endraw %}
+
 
 ---
 

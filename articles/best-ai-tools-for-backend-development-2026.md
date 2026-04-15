@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Best AI Tools for Backend Development 2026
 
 Backend development continues to evolve rapidly as AI assistants become integral to every developer's workflow. Whether you're building APIs, managing databases, or orchestrating microservices, the right AI tools can dramatically accelerate your development cycle. This guide covers the essential AI tools backend developers should consider in 2026.
@@ -160,4 +160,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

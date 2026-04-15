@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code Qwik City Routing SSR Workflow Tutorial
 
 Qwik City is a revolutionary meta-framework that brings resumability to server-side rendering, dramatically improving application performance. Combined with Claude Code, you have a powerful duo for building modern web applications. This tutorial walks you through setting up Qwik City routing with SSR using Claude Code as your development assistant.
@@ -269,7 +269,7 @@ Qwik City combined with Claude Code provides a modern, performant approach to bu
 Start with simple routes, add `routeLoader$` for server data, and progressively add `routeAction$` for form handling. Claude Code can accelerate your learning by generating boilerplate, explaining concepts, and helping debug issues along the way.
 
 Remember: the goal isn't to use every feature, but to use Qwik City's strengths where they matter most, typically in content-heavy pages where SEO and initial load performance are critical.
-{% endraw %}
+
 
 ---
 

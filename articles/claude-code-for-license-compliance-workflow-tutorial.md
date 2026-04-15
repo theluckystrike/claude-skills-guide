@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 License compliance is a critical yet often overlooked aspect of software development. As projects grow and incorporate more open-source dependencies, tracking licenses becomes increasingly complex. This tutorial shows you how to use Claude Code to build an automated license compliance workflow that saves time and reduces legal risk.
 
 ## Understanding License Compliance Challenges
@@ -582,7 +581,7 @@ Start your license compliance journey today:
 
 By automating license compliance with Claude Code, you reduce legal risk while freeing developers to focus on building great software. The time invested in setting up this workflow pays dividends through reduced manual work and fewer compliance surprises. More importantly, it gives your legal team and customers confidence that your software supply chain is understood and controlled.
 
-{% endraw %}
+
 
 ---
 
@@ -607,3 +606,4 @@ Related Reading
 - [Claude Code for Aurora Serverless V2 Workflow](/claude-code-for-aurora-serverless-v2-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 Infrastructure-as-code teams increasingly combine Claude Code with Atlantis to create powerful Terraform automation pipelines. This combination allows you to use AI-assisted infrastructure planning while maintaining established pull request workflows. The result is faster infrastructure changes with better review processes.
 
@@ -155,4 +155,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

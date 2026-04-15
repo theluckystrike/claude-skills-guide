@@ -13,7 +13,7 @@ score: 8
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 Building scalable Laravel applications requires effectively handling asynchronous tasks through queues, jobs, and workers. Claude Code can help you implement solid background processing workflows that improve application performance and user experience. This guide covers practical techniques for working with Laravel's queue system, from basic job creation to advanced worker management.
 
@@ -433,7 +433,7 @@ When building queue-based systems with Claude Code, follow these practical guide
 
 Laravel's queue system provides a powerful foundation for building asynchronous workflows. With Claude Code's assistance, you can rapidly implement solid job classes, configure worker supervision, and build complex chained workflows that scale with your application needs. Remember to monitor your queues in production and implement proper error handling to ensure reliable background task processing.
 
-{% endraw %}
+
 
 ---
 

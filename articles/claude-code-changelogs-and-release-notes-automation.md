@@ -387,7 +387,7 @@ Automating changelog and release notes generation with Claude Code transforms on
 Start simple, generate a basic changelog from your last few releases, and progressively add more sophistication as your workflow matures. The investment pays dividends in time saved, consistency gained, and the professional image your project presents to users.
 
 Remember: the goal isn't to eliminate human involvement entirely, but to handle the mechanical parts so your team can focus on writing code and providing the strategic context that makes release notes truly valuable.
-{% endraw %}
+
 
 ---
 
@@ -412,3 +412,4 @@ Related Reading
 - [Chrome Enterprise Release Schedule 2026: A Practical Guide](/chrome-enterprise-release-schedule-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

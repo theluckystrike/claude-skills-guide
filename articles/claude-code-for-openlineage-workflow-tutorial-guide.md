@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for OpenLineage Workflow Tutorial Guide
 
 OpenLineage has become the de facto standard for metadata collection in modern data ecosystems. This comprehensive guide shows you how to use Claude Code to accelerate your OpenLineage workflow implementation, from initial setup to advanced integrations.
@@ -414,7 +414,7 @@ Establish the habit of including schema facets from the start. Adding them to an
 
 Remember: good lineage is an investment in data governance, debugging, and overall data platform reliability. Let Claude Code help you make that investment efficiently.
 
-{% endraw %}
+
 
 ---
 

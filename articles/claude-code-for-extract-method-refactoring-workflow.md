@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Extract Method Refactoring Workflow
 
 The extract method refactoring is one of the most fundamental and frequently used techniques in code improvement. It involves taking a chunk of code, extracting it into a separate method, and replacing the original code with a call to that new method. When combined with Claude Code, this workflow becomes significantly more efficient and less error-prone. This guide shows you how to use Claude Code to automate and streamline your extract method refactoring workflow.
@@ -214,4 +214,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

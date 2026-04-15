@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Speed Up Chrome When Running Low on RAM: A Developer's Guide
 
 Chrome's memory hunger is legendary among developers. With dozens of tabs, multiple developer tools windows, and browser-based development environments, RAM exhaustion becomes a daily frustration. This guide covers practical methods to reduce Chrome's memory footprint without sacrificing productivity.
@@ -408,4 +408,4 @@ Related Reading
 - [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

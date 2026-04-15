@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Check SSL Certificate: A Developer Guide
 
 Verifying SSL certificates is a fundamental skill for developers and power users who need to diagnose HTTPS issues, validate certificate chains, or troubleshoot connection problems. Chrome provides multiple built-in ways to inspect SSL certificates, each serving different use cases.
@@ -380,4 +380,4 @@ Related Reading
 - [Certificate Transparency Explained](https://certificate.transparency.dev/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

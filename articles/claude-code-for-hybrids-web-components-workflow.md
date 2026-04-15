@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Hybrids is a unique web components library that uses a proxy-based approach to create lightweight, reactive custom elements. Unlike traditional web component libraries, Hybrids embraces a declarative syntax combined with a powerful descriptor system. When you combine this with Claude Code's AI capabilities, you get a streamlined development workflow for building modern, framework-agnostic web components. This guide walks you through an effective workflow for creating, testing, and maintaining Hybrids web components using Claude Code.
 
@@ -215,7 +215,7 @@ Always specify your Hybrids version when asking for code generation, as the API 
 
 Finally, review generated code carefully, especially around descriptor definitions. While Claude Code understands the Hybrids pattern well, always verify that property types, default values, and custom descriptors match your requirements. Use the examples in this guide as templates for your own component creation workflow, and adapt them to your specific project needs.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 If you're currently using Codeium as your AI coding assistant, you might be wondering whether Claude Code is worth the switch. This is a legitimate question that many developers are asking as the AI coding assistant landscape evolves rapidly. Let's break down the key differences, strengths, and practical considerations to help you make an informed decision.
 
@@ -126,7 +126,7 @@ The decision to switch from Codeium to Claude Code ultimately depends on your wo
 
 The best way to determine if Claude Code is right for you is to try it on a real project. Install it, explore its skills, and give it some actual tasks. You might find that the agentic approach transforms how you think about AI-assisted development.
 
-{% endraw %}
+
 
 ---
 

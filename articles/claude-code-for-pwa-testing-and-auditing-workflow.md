@@ -248,7 +248,7 @@ Follow these practices to maintain PWA quality:
 Claude Code transforms PWA testing from a manual, error-prone process into an automated, reliable workflow. By using Claude Code's tool-calling capabilities, you can validate manifests, test service workers, run Lighthouse audits, and integrate testing into your CI/CD pipeline. This ensures your PWAs remain compliant as standards evolve and deliver the reliable, fast, engaging experience users expect.
 
 Start implementing these workflows today, and you'll catch PWA issues before they reach production.
-{% endraw %}
+
 
 ---
 
@@ -273,3 +273,4 @@ Related Reading
 - [Claude Code for Distributed Load Testing Workflow](/claude-code-for-distributed-load-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

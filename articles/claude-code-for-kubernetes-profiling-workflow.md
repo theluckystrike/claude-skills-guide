@@ -357,7 +357,7 @@ Claude Code transforms Kubernetes profiling from a manual, error-prone process i
 Effective Kubernetes profiling is an iterative process. Start with identifying the most critical workloads, establish baseline profiles, and continuously compare against those baselines to catch performance regressions early. The automation Claude Code provides means you spend less time on mechanics. identifying pods, copying files, opening visualizers. and more time on the analysis itself.
 
 The biggest payoff comes when profiling is no longer a special event triggered by incidents. When it is routine, scheduled, and compared against baselines automatically, performance regressions are caught in code review rather than in production alerts.
-{% endraw %}
+
 
 ---
 
@@ -382,3 +382,4 @@ Related Reading
 - [Claude Code for Dhat Memory Profiling Workflow](/claude-code-for-dhat-memory-profiling-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for CDN Optimization Workflow Tutorial
 
 Content Delivery Networks (CDNs) are critical infrastructure for modern web applications, but optimizing them effectively requires understanding caching behaviors, asset patterns, and performance metrics. This tutorial shows you how to use Claude Code to automate CDN optimization tasks, from configuring cache policies to analyzing hit rates and reducing latency.
@@ -388,7 +388,7 @@ Cache invalidation not working: After deploying new assets, the CDN may continue
 
 Inconsistent behavior across CDN PoPs: CDN edge nodes do not share caches. A request routed to a Dallas PoP may get a cache miss while a London PoP has the item cached. This is normal. use shorter TTLs during rollouts and longer TTLs once a deployment is stable.
 
-{% endraw %}
+
 
 ---
 

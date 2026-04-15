@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for grpcurl gRPC Testing Workflow
 
 gRPC services require thorough testing to ensure reliable communication between microservices. While traditional REST APIs have mature testing tools like curl, Postman, and HTTPie, gRPC testing demands specialized approaches that account for Protocol Buffers, bidirectional streaming, and service reflection. This guide demonstrates how to combine Claude Code with grpcurl to create efficient, reproducible gRPC testing workflows that integrate smoothly into your development process.
@@ -407,7 +407,7 @@ Give Claude Code this checklist as context and it can walk through each step aut
 
 By combining Claude Code's reasoning capabilities with grpcurl's gRPC expertise, you can build solid testing workflows that catch interface regressions early, validate error handling thoroughly, and provide genuine confidence in your gRPC services before they reach production.
 
-{% endraw %}
+
 
 ---
 

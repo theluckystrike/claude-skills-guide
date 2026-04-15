@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 ---
 
-{% raw %}
+
 AI Study Helper Chrome Extension: A Developer's Guide
 
 Chrome extensions have become powerful tools for enhancing productivity, and AI-powered study helpers represent one of the most impactful categories. Whether you're building your own extension or customizing an existing one, understanding the architecture and implementation patterns helps you create something truly useful for learners.
@@ -363,4 +363,4 @@ Side panel closing when navigating to a new page: The side panel persists across
 
 Storage filling up with large study sets: Compress the flashcard JSON using `CompressionStream` (Chrome 80+) before storing. A study set of 500 flashcards compresses from ~50 KB to under 5 KB.
 
-{% endraw %}
+

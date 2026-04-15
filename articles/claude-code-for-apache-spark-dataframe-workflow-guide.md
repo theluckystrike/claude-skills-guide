@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Apache Spark DataFrame Workflow Guide
 
 Apache Spark has become the go-to framework for distributed data processing, and DataFrames are at the heart of Spark's API. This guide shows you how to use Claude Code to streamline your Spark DataFrame workflows, from initial setup to production-ready pipelines.
@@ -357,7 +357,7 @@ Start integrating Claude Code into your Spark workflow today, and you'll see imm
 ---
 
 *This guide is part of the Claude Skills Guide series, providing practical developer resources for modern data engineering workflows.*
-{% endraw %}
+
 
 ---
 

@@ -17,7 +17,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Suricata IDS Workflow Guide
 
 Suricata is a powerful open-source network intrusion detection system (IDS) that helps security teams monitor network traffic for malicious activity. Integrating Claude Code into your Suricata workflow can dramatically accelerate rule development, testing, and deployment cycles. This guide walks you through practical strategies for using Claude Code to enhance your Suricata IDS operations.
@@ -200,7 +200,7 @@ Use version control: Track all rule changes in git with descriptive commit messa
 Claude Code significantly enhances Suricata IDS workflow efficiency by accelerating rule development, automating testing, and improving documentation practices. By integrating Claude Code into your security operations, you can maintain solid network detection capabilities while reducing manual effort and potential for errors.
 
 Start by setting up a structured project with proper context, then progressively incorporate Claude Code assistance for rule writing, testing, and maintenance. The investment in establishing good practices will pay dividends in detection reliability and operational efficiency.
-{% endraw %}
+
 
 ---
 

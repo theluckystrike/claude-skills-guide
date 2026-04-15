@@ -200,7 +200,7 @@ A standard version workflow is essential for maintaining professional software r
 
 The key is to start simple and add complexity as your project grows. With Claude Code's assistance, implementing a solid version workflow becomes much more manageable, allowing you to focus on writing code rather than managing release logistics.
 
-{% endraw %}
+
 
 ---
 
@@ -225,3 +225,4 @@ Related Reading
 - [Claude Code for Runbook Version Control Workflow](/claude-code-for-runbook-version-control-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

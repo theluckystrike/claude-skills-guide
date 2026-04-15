@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Setting up a solid logging stack in Kubernetes doesn't have to be overwhelming. This guide walks you through building a production-ready logging pipeline using Fluent Bit, Loki, and Grafana, while showing how Claude Code and its skills accelerate every step of the process.
 
@@ -221,4 +221,4 @@ Related Reading
 - [Claude Code Kubernetes Helm Charts Guide](/claude-code-kubernetes-helm-charts-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

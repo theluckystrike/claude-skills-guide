@@ -12,7 +12,7 @@ score: 8
 categories: [guides]
 ---
 
-{% raw %}
+
 
 ## Best Awesome Screenshot Alternative Chrome Extension for 2026
 
@@ -292,4 +292,4 @@ Related Reading
 - [Chrome Extension Arrow and Text Overlay Screenshot Guide](/chrome-extension-arrow-and-text-overlay-screenshot/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

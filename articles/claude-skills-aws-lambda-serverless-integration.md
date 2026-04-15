@@ -12,8 +12,8 @@ score: 9
 permalink: /claude-skills-aws-lambda-serverless-integration/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 ## Claude Code Skills + AWS Lambda: Serverless Integration
 
 Claude Code skills run locally in your terminal. AWS Lambda runs your code in the cloud. Connecting them means invoking Claude Code. including skill-augmented sessions. from within a Lambda function, then routing the output into your broader AWS infrastructure.
@@ -367,5 +367,4 @@ Cold start latency making the skill feel slow: Pre-warm the Lambda function by i
 Lambda timing out on long Claude responses: The default Lambda timeout is 3 seconds. Increase it to 30-60 seconds for Claude skill calls. Set `max_tokens` in the Anthropic API call appropriately. `max_tokens=4096` can take 10-20 seconds for complex responses.
 
 Secrets Manager adding latency: Cache the API key in a module-level variable after the first retrieval. AWS Lambda reuses execution environments between invocations. the cached key persists across warm invocations without repeated Secrets Manager calls.
-
 {% endraw %}

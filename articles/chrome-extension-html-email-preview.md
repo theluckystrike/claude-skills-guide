@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension HTML Email Preview: A Developer Guide
 
 Creating a Chrome extension that previews HTML emails directly in the browser solves a common problem for developers and email marketers. Instead of sending test emails to yourself or using third-party services, you can render HTML email templates instantly within Chrome. This guide walks you through building a functional HTML email preview extension from scratch.
@@ -435,4 +435,4 @@ Related Reading
 - [How to Check if Your Email Has Been Compromised in a Data Breach](/chrome-check-email-breaches/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code Grafana Dashboard Configuration Workflow Tips
 
 Configuring Grafana dashboards efficiently can significantly impact your monitoring capabilities and team productivity. Claude Code provides powerful capabilities to streamline this process, from generating JSON configurations to automating provisioning workflows. This guide covers practical tips for integrating Claude Code into your Grafana dashboard configuration pipeline.
@@ -292,4 +292,4 @@ Related Reading
 - [Claude Code for Bandwhich Bandwidth Monitor Workflow](/claude-code-for-bandwhich-bandwidth-monitor-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

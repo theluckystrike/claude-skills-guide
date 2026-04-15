@@ -425,7 +425,7 @@ For binding errors, request help converting your code to use proper parameter bi
 Claude Code combined with Cloudflare D1 gives you a powerful development workflow for building edge-ready applications. The AI assistant understands both the database layer and your application code, enabling faster development of solid data-driven features. Start with simple schemas and queries, then progressively add complexity as your application needs grow.
 
 The edge database pattern works exceptionally well for content sites, user-facing dashboards, and API backends where low latency matters. By following the patterns in this guide and using Claude Code's capabilities, you can build production-ready applications with confidence.
-{% endraw %}
+
 
 ---
 
@@ -450,3 +450,4 @@ Related Reading
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

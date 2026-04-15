@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Dual Pane Reader: Building Split-Screen Reading Tools
 
 A Chrome extension dual pane reader transforms your browser into a powerful comparison and reading workstation. Whether you're researching topics, translating documents, or reviewing code changes, the ability to view two web pages side by side within a single browser window dramatically improves productivity. This guide walks you through building a functional dual pane reader extension from scratch.
@@ -256,4 +256,4 @@ Related Reading
 - [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

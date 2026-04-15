@@ -14,7 +14,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Terraform module development is a skill that pays dividends across your entire infrastructure career. Well-crafted modules transform copy-pasted configurations into reusable, versioned building blocks that teams can share and maintain. Claude Code accelerates this process significantly, helping you structure modules correctly, implement best practices automatically, and generate documentation that your team will actually read.
 
 This guide covers practical workflows for developing Terraform modules using Claude Code, with emphasis on structure, testing, and documentation patterns that work in real production environments.
@@ -244,5 +243,4 @@ Related Reading
 - [Claude Code Kubernetes Upgrade Workflow Guide](/claude-code-kubernetes-upgrade-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 {% endraw %}

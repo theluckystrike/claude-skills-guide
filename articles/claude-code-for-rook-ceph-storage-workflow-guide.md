@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Rook Ceph Storage Workflow Guide
 
 Rook Ceph has become the de facto solution for running Ceph storage clusters on Kubernetes. When combined with Claude Code, developers can automate complex storage workflows, manage persistent volumes, and handle disaster recovery scenarios with unprecedented efficiency. This guide walks you through practical applications of Claude Code in managing Rook Ceph storage operations.
@@ -260,7 +260,7 @@ Use the Rook toolbox for debugging. The toolbox pod provides direct Ceph command
 Claude Code transforms Rook Ceph management from manual operations into automated, repeatable workflows. By investing time in building comprehensive scripts for common tasks, pool creation, volume provisioning, snapshots, and monitoring, you'll reduce operational overhead and improve reliability.
 
 Start with the foundational scripts in this guide, then extend them to match your organization's specific requirements. The combination of Kubernetes' orchestration capabilities, Ceph's solid storage primitives, and Claude Code's automation power creates a formidable platform for modern cloud-native applications.
-{% endraw %}
+
 
 ---
 

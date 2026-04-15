@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Pandera Dataframe Validation Workflow Tutorial
 
 Data validation is a critical aspect of any data pipeline, yet it's often overlooked or implemented inconsistently. Pandera is a powerful Python library that brings schema validation to pandas DataFrames, making your data pipelines more solid and maintainable. In this tutorial, you'll learn how to use Claude Code to create efficient Pandera validation workflows that catch data quality issues early.
@@ -234,4 +234,4 @@ Related Reading
 - [Using Claude Code for Data Quality Validation Workflow](/claude-code-for-data-quality-validation-workflow/)
 - [Claude Code for Polars DataFrame Workflow Guide](/claude-code-for-polars-dataframe-workflow-guide/)
 
-{% endraw %}
+

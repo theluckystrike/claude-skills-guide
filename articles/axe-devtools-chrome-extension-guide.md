@@ -11,7 +11,7 @@ score: 8
 categories: [guides]
 ---
 
-{% raw %}
+
 
 Accessibility testing remains one of the most overlooked aspects of web development. The axe DevTools Chrome extension provides a practical solution for developers who want to catch accessibility issues directly in their browser. This guide covers everything you need to integrate automated accessibility testing into your workflow using this powerful tool.
 
@@ -200,4 +200,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

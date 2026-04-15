@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Documentation Review Workflow Guide
 
 Documentation is the backbone of any successful software project. Yet, maintaining consistent quality, catching errors, and ensuring clarity across thousands of lines of technical writing remains a persistent challenge. Enter Claude Code, the command-line companion that transforms how developers approach documentation review workflows.
@@ -212,7 +212,7 @@ Claude Code transforms documentation review from a tedious chore into an efficie
 Start small: implement pre-commit hooks for new documentation, then expand to comprehensive reviews as your team builds confidence. The investment in establishing these workflows pays dividends in reduced support requests, better developer experiences, and more professional project presentation.
 
 Remember: great documentation isn't written once, it's refined through consistent review and continuous improvement. Claude Code makes that refinement sustainable.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ categories: [workflows]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Clerk: Organization Roles, Permissions, and Workflow
 
 Claude Code's clerk functionality provides a powerful framework for managing organizational workflows, role-based access control, and approval processes. This guide walks you through setting up clerk, defining roles, configuring permissions, and building efficient workflows that scale with your organization, from a two-person startup to an enterprise engineering department.
@@ -392,7 +392,7 @@ A practical implementation checklist for a new clerk deployment:
 5. Set up escalation rules before you need them. stalled reviews are discovered at the worst times
 6. Schedule your first permission audit 30 days after initial deployment
 7. Export audit logs to external storage from day one; retroactive exports are possible but incomplete
-{% endraw %}
+
 
 ---
 

@@ -558,7 +558,7 @@ With the `@commitlint/prompt-cli` package, developers can run `npx commit` to ge
 Enforcing Conventional Commits through Claude Code skills, Git hooks, and CI pipelines creates a solid system that improves project maintainability. The initial setup investment pays dividends through automated versioning, meaningful changelogs, and consistent commit history. Start with local validation, add Claude-assisted message generation, then extend enforcement to your CI pipeline for comprehensive coverage.
 
 The real payoff emerges over months of accumulated history: a release process where `npm run release` generates a correct version bump and a fully populated changelog with zero manual effort, and a repository where any developer can understand the shape of the last six months of work at a glance. That is the compounding return on the enforcement infrastructure you build today.
-{% endraw %}
+
 
 ---
 
@@ -583,3 +583,4 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

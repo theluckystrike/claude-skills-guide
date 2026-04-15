@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, hackathon, rapid-prototyping, claude-skills]
 ---
 
-{% raw %}
+
 
 Hackathons demand speed. You have 24, 48, or sometimes just 12 hours to transform an idea into a working prototype that judges can see and interact with. Claude Code becomes your secret weapon when used strategically, it handles the boilerplate, generates test cases, and keeps your codebase organized so you can focus on the creative problem-solving that actually wins competitions.
 
@@ -180,4 +180,3 @@ Related Reading
 - [Claude Code for Chef Cookbook Development Workflow](/claude-code-for-chef-cookbook-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}

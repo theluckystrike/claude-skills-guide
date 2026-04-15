@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 GraphQL persisted queries represent a powerful optimization technique that transforms how your API handles client requests. By pre-registering queries on your server and referencing them by ID instead of sending full query strings, you dramatically reduce payload sizes, improve security, and enhance performance. But managing persisted queries at scale introduces new challenges, versioning, synchronization, and maintaining consistency across environments. This is where Claude Code becomes an invaluable part of your development workflow.
 
 ## Understanding GraphQL Persisted Queries
@@ -564,7 +563,7 @@ Claude Code transforms persisted query management from a manual, error-prone pro
 
 The key is treating persisted queries as first-class artifacts in your development workflow, versioned and managed alongside your code. With Claude Code handling the automation, your team can focus on building features rather than managing API optimization. As your query registry grows, the investment in a solid workflow pays off in faster deployments, fewer incidents, and a meaningfully smaller attack surface for your GraphQL API.
 
-{% endraw %}
+
 
 ---
 
@@ -589,3 +588,4 @@ Related Reading
 - [Claude Code GraphQL Client Codegen Guide (2026)](/claude-code-graphql-client-codegen-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

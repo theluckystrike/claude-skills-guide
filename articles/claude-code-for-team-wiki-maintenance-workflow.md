@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Team wikis are the central nervous system of knowledge sharing in modern engineering organizations. Yet they often become outdated quickly, with stale pages, inconsistent formatting, and abandoned sections that no one trusts. Claude Code transforms wiki maintenance from a dreaded chore into an automated, efficient workflow that keeps your team's knowledge base current and reliable.
 
 ## The Challenge of Wiki Maintenance
@@ -263,4 +263,4 @@ Related Reading
 - [Claude Code for Aurora Serverless V2 Workflow](/claude-code-for-aurora-serverless-v2-workflow/)
 
 Built by theluckystrike. More at zovo.one
-{% endraw %}
+

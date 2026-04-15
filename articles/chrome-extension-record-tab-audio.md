@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Record Tab Audio: A Developer Guide
 
 Building a Chrome extension that captures audio directly from browser tabs requires understanding the MediaRecorder API, tab capture permissions, and the extension messaging system. This guide provides practical implementation patterns for developers who want to record audio playing in Chrome tabs, whether for creating tutorials, archiving web content, or building podcast capture tools.
@@ -258,4 +258,4 @@ Related Reading
 - [Chrome Extension Tab Suspender Memory Saver: A Developer.](/chrome-extension-tab-suspender-memory-saver/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

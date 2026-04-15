@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Human in the Loop Multi Agent Patterns Guide
 
 Human-in-the-loop (HITL) patterns represent a critical design consideration for building solid AI agent systems. While autonomous agents excel at executing tasks quickly and consistently, certain decisions require human judgment, oversight, or approval. Claude Code provides several mechanisms for integrating human oversight into multi-agent workflows, ensuring that critical decisions remain under human control while maintaining agent productivity.
@@ -203,7 +203,7 @@ Human-in-the-loop multi-agent patterns are essential for building reliable, trus
 
 The key is to design clear escalation criteria, provide sufficient context for human decisions, and maintain flexibility in how humans can influence agent behavior. Start with conservative oversight and adjust based on observed performance and user feedback.
 
-{% endraw %}
+
 
 ---
 

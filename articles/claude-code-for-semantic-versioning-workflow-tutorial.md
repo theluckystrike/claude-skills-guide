@@ -13,8 +13,8 @@ reviewed: true
 score: 8
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Semantic versioning provides a standardized approach to communicating project changes, but manually tracking versions, analyzing commits, and generating releases consumes valuable development time. This comprehensive tutorial demonstrates how to build an automated semantic versioning workflow using Claude Code that handles version detection, changelog generation, and release tagging without manual intervention.
 
 ## Prerequisites and Setup
@@ -295,7 +295,7 @@ Automating semantic versioning with Claude Code eliminates manual version tracki
 
 By implementing this tutorial's patterns, your team gains reliable version management that scales with project complexity while maintaining the flexibility to adapt to specific release requirements.
 
-{% endraw %}
+
 
 ---
 
@@ -320,3 +320,4 @@ Related Reading
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

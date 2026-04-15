@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 Boilerplate code has been the bane of software development for decades. Every new project requires the same scaffolding, the same validation patterns, the same API wrappers, and the same test skeletons. Developers spend countless hours copying files, renaming classes, and adjusting imports, work that adds no business value but consumes significant time. Claude Code changed this equation fundamentally.
 
@@ -171,4 +171,4 @@ Related Reading
 - [AI Coding Tools for Accessibility Improvements](/ai-coding-tools-for-accessibility-improvements/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

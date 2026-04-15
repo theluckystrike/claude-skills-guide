@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-code-l10n-testing-automation-workflow-tutorial/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 [Localization (L10n) testing remains one of the most time-consuming aspects of software development](/best-claude-code-skills-to-install-first-2026/) Teams often struggle with maintaining string consistency across languages, validating translated content, and catching encoding issues before deployment. Claude Code skills offer a practical solution by automating repetitive localization testing tasks and creating reproducible workflows.
 
 [This tutorial shows you how to build a complete L10n testing automation pipeline using Claude Code skills](/claude-tdd-skill-test-driven-development-workflow/), focusing on practical implementation rather than theory.

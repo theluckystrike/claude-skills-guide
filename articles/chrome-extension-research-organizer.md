@@ -12,7 +12,7 @@ categories: [guides]
 tags: [claude-code, chrome-extension, productivity]
 ---
 
-{% raw %}
+
 Chrome Extension Research Organizer: A Developer Guide
 
 Building a Chrome extension to organize your research is one of the most practical projects you can undertake. Whether you're collecting resources for a technical project, gathering competitive analysis, or simply managing bookmarks across multiple research threads, a well-designed research organizer extension transforms scattered browser tabs into structured, searchable knowledge bases.
@@ -444,4 +444,4 @@ Related Reading
 - [Chrome Extension Shopping List Organizer: A Developer Guide](/chrome-extension-shopping-list-organizer/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

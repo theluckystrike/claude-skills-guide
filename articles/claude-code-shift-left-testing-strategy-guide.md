@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Shift Left Testing Strategy Guide
 
 Shift-left testing is a software development practice that moves testing earlier in the development lifecycle. Instead of waiting until the end of development to test, teams integrate testing activities from the very beginning. Claude Code provides powerful capabilities to implement shift-left testing strategies effectively, helping developers catch defects when they're least expensive to fix.
@@ -97,7 +97,7 @@ Document test intent and rationale to help future maintainers understand why spe
 Shift-left testing with Claude Code represents a significant advancement in software quality practices. By moving testing earlier in the development lifecycle and automating test generation, teams can catch defects sooner, reduce remediation costs, and deliver higher quality software. Claude Code's capabilities in test generation, code analysis, and workflow automation make it an invaluable tool for implementing effective shift-left strategies.
 
 The key to successful shift-left testing lies in integrating these practices into your daily workflow rather than treating testing as a separate phase. Start with test-driven development, automate test generation for new and existing code, and maintain comprehensive coverage through continuous analysis. With Claude Code supporting your efforts, shift-left testing becomes not just achievable but sustainable across projects of any size.
-{% endraw %}
+
 
 ---
 

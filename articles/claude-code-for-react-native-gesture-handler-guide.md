@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for React Native Gesture Handler Guide
 
 Implementing smooth, performant touch interactions is essential for creating polished React Native mobile experiences. React Native Gesture Handler provides a powerful, native-driven solution for handling complex gesture recognition. When combined with Claude Code, you can rapidly implement, debug, and optimize gesture-based interactions in your mobile applications.
@@ -292,7 +292,7 @@ React Native Gesture Handler combined with Reanimated provides a powerful founda
 Start with simple tap and pan gestures, then progressively add more complex interactions as you become comfortable with the gesture composition patterns. Remember to prioritize accessibility and test your gesture implementations thoroughly across different devices.
 
 With these patterns and Claude Code as your development partner, you'll be building polished gesture-driven interfaces in no time.
-{% endraw %}
+
 
 ---
 

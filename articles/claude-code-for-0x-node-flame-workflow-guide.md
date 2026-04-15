@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for 0x Node Flame Workflow Guide
 
 Building decentralized exchange applications on the 0x protocol requires efficient node management, rapid iteration on smart contract interactions, and streamlined deployment workflows. This guide shows you how to integrate Claude Code into your 0x node operations and "flame" workflow, the hot, fast-paced development cycle that characterizes modern DeFi development. Whether you're deploying relay servers, managing validator nodes, or building custom trading interfaces, Claude Code can significantly accelerate your development workflow.
@@ -195,7 +195,7 @@ Start by configuring a dedicated skill for your 0x operations, then progressivel
 
 Remember: the goal isn't to replace developer expertise but to augment it. Claude Code handles the mechanical aspects of blockchain development, freeing you to focus on architectural decisions and business logic that truly differentiate your application.
 
-{% endraw %}
+
 
 ---
 

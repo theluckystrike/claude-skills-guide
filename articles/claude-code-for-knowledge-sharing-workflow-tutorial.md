@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Knowledge Sharing Workflow Tutorial
 
 Knowledge sharing is one of the most valuable yet underutilized capabilities in modern development teams. When done right, it accelerates onboarding, reduces duplicate work, and preserves institutional knowledge. Claude Code provides powerful primitives for building knowledge sharing workflows that can capture, organize, and distribute information automatically. This tutorial walks you through creating practical knowledge sharing systems using skills, tools, and structured workflows.
@@ -214,4 +214,4 @@ Related Reading
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/). using tools for complex workflows
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

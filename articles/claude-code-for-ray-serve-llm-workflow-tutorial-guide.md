@@ -11,7 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Ray Serve LLM Workflow Tutorial Guide
 
 Building production-ready LLM applications requires solid serving infrastructure. Ray Serve has emerged as a powerful framework for deploying and scaling machine learning models, while Claude Code provides the development companion you need to build, debug, and optimize these workflows. This guide walks you through integrating Claude Code with Ray Serve for efficient LLM application development.
@@ -247,4 +247,4 @@ Related Reading
 - [Claude Code for Streaming LLM Response Workflow](/claude-code-for-streaming-llm-response-workflow/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 
-{% endraw %}
+

@@ -12,8 +12,8 @@ reviewed: true
 score: 7
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Creating a well-structured Java library requires careful planning, clean architecture, and thorough testing. This guide walks you through building production-ready Java libraries using Claude Code, covering project setup, implementation patterns, testing strategies, and publishing workflows.
 
 ## Setting Up Your Java Library Project

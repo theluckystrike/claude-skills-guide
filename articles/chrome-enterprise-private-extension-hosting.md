@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Enterprise Private Extension Hosting
 
 Enterprise organizations often need to distribute custom Chrome extensions internally without publishing them to the public Chrome Web Store. Whether you're building internal tools, security extensions, or custom workflows, private extension hosting provides the control and security your organization requires.
@@ -186,4 +186,3 @@ Related Reading
 - [Chrome Enterprise Release Schedule 2026: A Practical Guide](/chrome-enterprise-release-schedule-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}

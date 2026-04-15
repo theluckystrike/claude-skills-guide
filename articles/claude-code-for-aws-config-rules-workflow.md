@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for AWS Config Rules Workflow
 
 AWS Config Rules provide a powerful way to evaluate the configuration settings of your AWS resources against desired security and compliance standards. However, managing these rules at scale can become complex and time-consuming. This guide shows you how to use Claude Code to streamline your AWS Config Rules workflow, making it more efficient and maintainable.
@@ -213,7 +213,7 @@ Follow these recommendations to get the most out of your AWS Config Rules workfl
 Claude Code transforms AWS Config Rules management from a manual, error-prone process into an automated, reliable workflow. By generating templates, validating configurations, and helping troubleshoot violations, Claude Code enables you to maintain strong security and compliance posture with less effort.
 
 Start by creating a Claude.md file in your infrastructure project, then incrementally adopt the patterns and skills that fit your organization's needs. The time invested in setting up this workflow will pay dividends in reduced manual work and improved compliance outcomes.
-{% endraw %}
+
 
 ---
 

@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Keeping a well-maintained changelog is one of those best practices that every developer acknowledges but few actually follow consistently. The Keep a Changelog specification provides a standardized format, but manually updating it after each release becomes tedious. This is where Claude Code shines, automating the maintenance of your changelog while ensuring it follows the established conventions.
 
 What is Keep a Changelog?
@@ -221,7 +220,7 @@ The key is integrating changelog management into your daily workflow rather than
 
 Start by adding changelog guidance to your CLAUDE.md, configure Conventional Commits for your team, and begin asking Claude to help maintain your CHANGELOG.md on a regular basis. Your future users, and your past self, will thank you.
 
-{% endraw %}
+
 
 ---
 
@@ -246,3 +245,4 @@ Related Reading
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

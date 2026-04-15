@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Publishing Python packages to PyPI (Python Package Index) is a fundamental skill for any Python developer. Whether you're sharing a utility library, a framework, or a tool with the community, having a streamlined workflow saves time and reduces errors. This guide shows you how to use Claude Code to automate and simplify your PyPI publishing workflow, from initial project scaffolding through to automated CI/CD releases.
 
 ## Setting Up Your Project Structure
@@ -644,7 +643,7 @@ Claude Code makes PyPI package publishing straightforward by guiding you through
 
 Remember to always test on Test PyPI before production, use API tokens or Trusted Publishers for authentication, maintain a proper CHANGELOG, and consider setting up CI/CD for automated releases. With these practices in place, sharing your Python packages with the world becomes a reliable and repeatable process. The investment in a solid publishing workflow pays dividends every release cycle. and with Claude Code orchestrating the steps, each release takes minutes rather than the careful manual work that tripped up developers before good tooling existed.
 
-{% endraw %}
+
 
 ---
 
@@ -669,3 +668,4 @@ Related Reading
 - [Claude Code for Cargo Crate Publishing Workflow Guide](/claude-code-for-cargo-crate-publishing-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

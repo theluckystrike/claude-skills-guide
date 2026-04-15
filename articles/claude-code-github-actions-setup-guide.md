@@ -10,7 +10,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 # Claude Code GitHub Actions Setup Guide
 
 ## The Problem

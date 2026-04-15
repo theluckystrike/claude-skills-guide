@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Benchmark Regression Workflow Tutorial
 
 Benchmark regression testing is essential for maintaining consistent performance in any software project. When you're iterating quickly, it's easy to accidentally introduce performance regressions that only surface in production. This tutorial shows you how to build an automated benchmark regression workflow using Claude Code that catches these issues early and keeps your team informed.
@@ -232,7 +232,7 @@ Building a benchmark regression workflow with Claude Code transforms performance
 Start small with a few key benchmarks, establish baselines, and gradually expand coverage. The investment pays dividends in maintained performance and increased developer confidence.
 
 Remember: the best time to catch a regression is before it merges. The second best time is immediately after. Claude Code helps you achieve both.
-{% endraw %}
+
 
 ---
 

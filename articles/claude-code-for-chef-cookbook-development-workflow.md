@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Chef Cookbook Development Workflow
 
 Chef cookbook development has traditionally been a manual and time-consuming process. From scaffolding new cookbooks to writing recipes, managing attributes, and testing across multiple platforms, developers often find themselves repeating the same patterns. Claude Code transforms this workflow by acting as an intelligent pair programmer that understands Chef's domain-specific language and best practices.
@@ -179,7 +179,7 @@ Claude Code transforms Chef cookbook development from a manual, error-prone proc
 Start by integrating Claude Code into new cookbook projects, then expand to refactoring existing cookbooks. The combination of AI assistance with solid testing creates a powerful workflow for infrastructure-as-code development.
 
 The key to success is providing clear context, maintaining testing discipline, and treating generated code as a starting point that you refine based on your specific requirements and organizational standards.
-{% endraw %}
+
 
 ---
 

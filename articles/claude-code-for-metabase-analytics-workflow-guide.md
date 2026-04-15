@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Metabase Analytics Workflow Guide
 
 Metabase is an open-source business intelligence tool that makes data querying accessible to teams without deep SQL expertise. When combined with Claude Code, you can create powerful analytics workflows that automate data exploration, generate insights, and streamline reporting. This guide shows you how to integrate Claude Code with Metabase effectively.
@@ -210,7 +210,7 @@ This chaining approach lets you build sophisticated analytical pipelines that ad
 Integrating Claude Code with Metabase transforms your analytics workflow from manual exploration to automated, intelligent data processing. Start with simple query workflows, then build toward complex automated pipelines that deliver insights directly to your team. The combination of Metabase's visual analytics and Claude Code's natural language processing creates a powerful analytics stack accessible to the whole organization.
 
 Remember to secure your API credentials, implement proper error handling, and gradually expand your automation as your workflows mature. With these practices in place, you'll have a scalable analytics infrastructure that grows with your team's needs.
-{% endraw %}
+
 
 ---
 

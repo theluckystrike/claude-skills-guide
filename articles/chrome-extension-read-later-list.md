@@ -14,7 +14,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Building a Chrome Extension for a Read Later List
 
 A read later list is one of the most useful browser extensions you can build. Whether you're researching a topic, collecting tutorials, or saving articles for weekend reading, having a custom solution gives you full control over your data. This guide walks you through building a functional Chrome extension that saves URLs, titles, and snippets locally.
@@ -269,4 +269,4 @@ Related Reading
 - [Building Apps with Claude API: Anthropic SDK Python Guide](/building-apps-with-claude-api-anthropic-sdk-python-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

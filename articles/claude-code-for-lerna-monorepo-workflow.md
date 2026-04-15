@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Lerna Monorepo Workflow
 
 Lerna has become the industry standard for managing JavaScript and TypeScript monorepos, enabling teams to share code across multiple packages while maintaining independent release cycles. However, coordinating changes across packages, managing interdependencies, and handling version bumps can quickly become complex. This is where Claude Code transforms your workflow, acting as an intelligent assistant that understands your monorepo structure and automates repetitive tasks.
@@ -199,7 +199,7 @@ Claude Code transforms Lerna monorepo management from a complex coordination cha
 The key is providing adequate context about your monorepo structure and creating specialized skills for your team's specific workflows. Start with a basic setup, then refine and expand as you discover more opportunities for automation.
 
 Remember: Claude Code works best when it understands your architecture. Invest time in setting up proper context and conventions, and you'll see significant productivity gains across your monorepo workflows.
-{% endraw %}
+
 
 ---
 

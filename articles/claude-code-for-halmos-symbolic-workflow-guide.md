@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Halmos Symbolic Workflow Guide
 
 Symbolic testing has emerged as one of the most powerful techniques for discovering edge cases and bugs that traditional unit tests often miss. [Halmos](https://github.com/halmos-dev/halmos), a Python symbolic testing library, uses symbolic execution to automatically generate test cases and verify code correctness. When combined with Claude Code's natural language interface, you can create a powerful workflow for symbolic testing that feels almost like having a pair programmer specialized in formal verification at your side.
@@ -227,7 +227,7 @@ Integrating Claude Code with Halmos transforms symbolic testing from an advanced
 
 Start by adding Halmos to one module in your project, create the Claude skill for Halmos workflows, and gradually expand symbolic testing coverage. The initial investment pays dividends in code quality and confidence.
 
-{% endraw %}
+
 
 ---
 

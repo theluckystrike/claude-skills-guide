@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Hopsworks Feature Store Workflow
 
 Feature stores have become the backbone of production machine learning systems, enabling teams to serve consistent features for both training and inference. Hopsworks, a popular open-source feature store, provides a powerful platform for managing features at scale. When combined with Claude Code's AI-assisted development capabilities, you can dramatically accelerate your feature engineering workflows, reduce errors, and maintain better documentation.
@@ -250,7 +250,7 @@ if stats.num_nulls > threshold:
 Integrating Claude Code with Hopsworks Feature Store creates a powerful workflow for managing ML features. By using AI assistance for code generation, documentation, and validation, you can move faster while maintaining high quality standards. Start with feature group creation, build solid pipelines, and establish monitoring practices to keep your feature store healthy in production.
 
 The combination of Claude Code's development assistance and Hopsworks' enterprise-grade feature management gives you the best of both worlds: rapid iteration and production-grade reliability.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Service Worker Caching Workflow
 
 Service workers have become essential for building Progressive Web Apps (PWAs) that deliver fast, reliable experiences. When combined with Claude Code, you can automate the creation, testing, and optimization of service worker caching strategies that would otherwise require significant manual effort. This guide walks you through using Claude Code to implement professional-grade caching workflows using the raw Cache API with no external dependencies. For a library-based approach using Google's Workbox, see the [Workbox Service Worker Workflow Guide](/claude-code-for-workbox-service-worker-workflow-guide/).
@@ -230,7 +230,7 @@ Claude Code can help you recognize and fix these frequent issues:
 Building solid service worker caching doesn't require starting from scratch. By using Claude Code to generate, test, and refine your caching strategies, you can implement professional-grade offline capabilities in a fraction of the time. Start with the patterns in this guide, adapt them to your specific use cases, and continuously monitor performance to optimize the experience for your users.
 
 Remember: the best caching strategy is one that your users never notice, because it just works, smoothly delivering content whether they're online or off.
-{% endraw %}
+
 
 ---
 

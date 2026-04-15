@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Finding the best restaurant deals often requires checking multiple platforms, comparing offers, and manually tracking expiration dates. Building a Chrome extension that automates this process gives developers a practical project that solves real problems while teaching valuable extension development skills.
 
 This guide covers the technical architecture, implementation patterns, and key considerations for building a restaurant deal finder extension.
@@ -350,4 +350,4 @@ function deduplicateDeals(deals) {
 
 The restaurant deal space remains fragmented, with many independent restaurants lacking sophisticated online presence. A well-built extension that aggregates deals across multiple sources fills a genuine gap while providing developers with portfolio-worthy implementation experience.
 
-{% endraw %}
+

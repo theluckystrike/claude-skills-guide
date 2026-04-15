@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Resize Images: A Practical Guide for Developers
 
 Image resizing is one of the most common tasks when working with web content. Whether you are a developer preparing assets for a project or a power user managing photos for social media, having a browser-based solution can significantly streamline your workflow. Chrome extensions that resize images provide this capability directly within your browser, eliminating the need for external tools or software.
@@ -199,4 +199,4 @@ Related Reading
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

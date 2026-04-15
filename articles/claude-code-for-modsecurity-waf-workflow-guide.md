@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for ModSecurity WAF Workflow Guide
 
 ModSecurity is the de facto open-source Web Application Firewall (WAF) that protects web applications from a wide range of attacks, including SQL injection, cross-site scripting (XSS), and other OWASP Top 10 vulnerabilities. Integrating Claude Code into your ModSecurity workflow can dramatically accelerate rule development, simplify configuration management, and help troubleshoot false positives efficiently. This guide walks you through practical workflows for using Claude Code with ModSecurity.
@@ -415,7 +415,7 @@ Follow these recommendations for productive Claude Code workflows:
 ## Conclusion
 
 Claude Code transforms ModSecurity WAF management from a tedious manual process into an efficient, assisted workflow. By using Claude Code for rule generation, configuration review, false positive analysis, and test automation, you can maintain solid web application security without sacrificing development speed. The ability to ask natural-language questions about log entries, receive targeted exclusion rules, and generate CI/CD pipeline integrations means that WAF maintenance shifts from reactive firefighting to deliberate, documented improvement. Start integrating these patterns into your workflow today, and you will see faster rule deployment cycles, more effective protection against web application threats, and a WAF configuration that your entire team can understand and maintain.
-{% endraw %}
+
 
 ---
 

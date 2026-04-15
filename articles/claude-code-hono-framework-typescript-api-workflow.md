@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Building TypeScript APIs with Claude Code and Hono Framework
 
 The landscape of TypeScript web development has evolved dramatically with the introduction of Claude Code, Anthropic's CLI tool that brings AI-assisted development directly to your terminal. When combined with Hono, a lightweight, ultrafast web framework designed for the modern edge runtime, you have a powerful toolkit for building type-safe APIs with remarkable efficiency.
@@ -322,7 +322,7 @@ Key benefits of this workflow:
 As TypeScript continues to dominate web development, the combination of Claude Code and Hono provides an unbeatable foundation for building fast, type-safe APIs that scale effortlessly across edge environments.
 
 Start experimenting today, your next production-ready API is just a prompt away.
-{% endraw %}
+
 
 ---
 

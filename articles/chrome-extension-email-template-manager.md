@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Email template managers as Chrome extensions have become essential productivity tools for developers, support teams, and anyone who sends repetitive emails. These extensions allow you to store, organize, and quickly insert pre-written responses directly into your email client, eliminating the tedium of typing the same messages repeatedly.
 
 ## What Is a Chrome Extension Email Template Manager
@@ -228,5 +227,4 @@ Related Reading
 - [AI Inbox Organizer Chrome Extension: A Developer's Guide to Intelligent Email Management](/ai-inbox-organizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 {% endraw %}

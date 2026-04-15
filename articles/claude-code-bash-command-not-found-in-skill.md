@@ -13,7 +13,7 @@ score: 7
 permalink: /claude-code-bash-command-not-found-in-skill/
 ---
 
-{% raw %}
+
 
 ## Claude Code Bash Command Not Found in Skill: Troubleshooting Guide
 
@@ -207,4 +207,3 @@ Related Reading
 - [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). Complete skill authoring reference
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}

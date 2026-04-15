@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Cloud security scanning is a critical component of any modern DevSecOps pipeline. CloudSploit, an open-source cloud security scanner, helps developers and security teams identify misconfigurations across AWS, Azure, Google Cloud, and Oracle Cloud. However, running CloudSploit effectively requires proper configuration, result parsing, and integration into development workflows. This is where Claude Code shines, automating the entire scanning lifecycle, from setup to remediation tracking.
 
@@ -467,7 +467,7 @@ As your organization scales, extend the workflow to cover multiple cloud account
 
 ---
 
-{% endraw %}
+
 
 ---
 

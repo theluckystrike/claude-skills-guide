@@ -12,7 +12,7 @@ permalink: /claude-code-keeps-generating-placeholder-todo-comments/
 reviewed: true
 score: 7
 ---
-{% raw %}
+
 
 If you've been working with Claude Code, you've probably seen it, those familiar `// TODO: implement error handling` or `// TODO: add validation` comments scattered throughout generated code. While well-intentioned, these placeholder comments can accumulate quickly and become technical debt if not addressed properly.  why Claude Code generates these comments and how you can control this behavior effectively.
 
@@ -319,4 +319,4 @@ Related Reading
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

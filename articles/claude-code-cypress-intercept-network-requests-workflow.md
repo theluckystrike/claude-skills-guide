@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Cypress Intercept Network Requests Workflow
 
 Modern web applications rely heavily on API calls, and testing them effectively is crucial for building reliable software. Cypress has become the go-to solution for end-to-end testing in JavaScript ecosystems, and its `cy.intercept()` command is a powerful feature for mocking and stubbing network requests. When combined with Claude Code, the AI coding assistant, you can dramatically accelerate your Cypress intercept workflow, from writing initial stubs to debugging complex network scenarios.
@@ -452,7 +452,7 @@ Start by identifying the API endpoints in your application, then use Claude to g
 The workflow that delivers the most value day-to-day is the centralized command pattern: a single `cy.mockApi('scenario')` call in your test setup, backed by a scenario map that Claude Code helps you build and expand. When a new feature ships, open the support file and ask Claude to add a scenario for it. that is usually a 30-second task rather than a 30-minute one.
 
 Remember: the goal isn't to mock everything, but to mock strategically. controlling external dependencies while keeping your tests close to real-world behavior.
-{% endraw %}
+
 
 ---
 

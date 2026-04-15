@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Prisma Cloud Workflow Tutorial
 
 Security teams today face the challenge of managing increasingly complex cloud environments while maintaining rapid development cycles. Prisma Cloud provides comprehensive cloud security posture management, but integrating it smoothly into your development workflow requires automation and intelligent tooling. This tutorial shows you how to use Claude Code to streamline your Prisma Cloud workflows, making security checks smooth and automated.
@@ -180,7 +180,7 @@ Consider the following best practices:
 Integrating Claude Code with Prisma Cloud transforms how your team interacts with cloud security. By automating routine tasks, providing natural language access to security data, and enabling intelligent workflow creation, you can shift security left without adding burden to your development teams. Start with the examples in this tutorial, customize them to your specific environment, and progressively build more sophisticated automation as your confidence grows.
 
 The combination of Claude Code's flexibility and Prisma Cloud's comprehensive security capabilities creates a powerful platform for modern cloud security operations. Embrace these tools to build a security-aware culture that scales with your organization.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Carvel imgpkg Workflow Tutorial
 
 Carvel's imgpkg is a powerful tool for packaging Kubernetes configurations and OCI images, enabling reproducible and secure deployments across environments. When combined with Claude Code CLI, you can create intelligent automation workflows that simplify complex image management tasks. This tutorial guides you through integrating Claude Code with imgpkg to build efficient, repeatable processes for your Kubernetes deployments.
@@ -143,7 +143,7 @@ Image reference resolution - When your Kubernetes manifests reference container 
 Combining Claude Code with Carvel imgpkg creates a powerful workflow for managing Kubernetes configurations. Claude Code's contextual understanding helps generate accurate commands, automate repetitive tasks, and maintain consistency across deployments. By following this tutorial, you've learned how to set up the integration, create and manage bundles, automate updates, and implement best practices for production-ready workflows.
 
 As you become more comfortable with these tools, explore advanced topics like bundle dependencies, image relocation for air-gapped environments, and integration with policy controllers for enhanced security. The combination of Claude Code and imgpkg provides a solid foundation for reliable, reproducible Kubernetes deployments at any scale.
-{% endraw %}
+
 
 ---
 

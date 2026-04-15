@@ -13,7 +13,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Database ORM Code Generation Workflow
 
 Database ORM (Object-Relational Mapping) code generation is one of the most repetitive yet critical tasks in modern application development. Writing boilerplate models, repositories, and query builders takes time and often introduces inconsistencies. Fortunately, Claude Code combined with specialized skills can automate much of this workflow while maintaining type safety and best practices.
@@ -244,4 +244,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

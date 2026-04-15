@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome Extension Writing Assistant: A Developer's Guide
 
 Writing assistants integrated as Chrome extensions have become essential tools for developers, technical writers, and content creators. These extensions bring AI-powered writing capabilities directly into your browser, working across web forms, code comments, documentation sites, and communication platforms. This guide explores how these extensions work, practical implementation approaches, and how developers can customize or build their own writing assistants.
@@ -311,4 +311,4 @@ Related Reading
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

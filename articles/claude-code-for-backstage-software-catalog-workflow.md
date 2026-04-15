@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Backstage, Spotify's open-source developer portal, has become the standard for building internal developer platforms. Its Software Catalog is the heart of Backstage, enabling teams to track services, libraries, and components across the organization. Managing this catalog effectively requires careful workflow design, and Claude Code can significantly accelerate how you create, maintain, and automate your Backstage software catalog.
 
@@ -195,7 +195,7 @@ Claude Code transforms Backstage software catalog management from a manual, erro
 
 Start by setting up proper project structure, defining conventions in CLAUDE.md, and gradually automating common tasks like entity creation, validation, and documentation. The investment in establishing these workflows pays dividends in improved discoverability, clearer ownership, and better developer experience across your organization.
 
-{% endraw %}
+
 
 ---
 

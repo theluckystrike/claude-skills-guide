@@ -12,7 +12,7 @@ categories: [guides]
 tags: [chrome-extension, seo, serp]
 ---
 
-{% raw %}
+
 Google Search Engine Results Pages (SERPs) display more than just blue links. Modern search results include rich snippets, featured cards, knowledge panels, and various visual elements that significantly impact click-through rates. For developers and SEO professionals, understanding how Chrome extensions can preview and analyze these elements provides valuable insights into search visibility and result presentation.
 
 Building a SERP preview extension is also one of the better ways to sharpen your Chrome extension development skills, because it forces you to deal with a real, complex DOM that changes frequently, asynchronous messaging between scripts, and meaningful data presentation in a constrained popup UI.
@@ -355,4 +355,4 @@ Related Reading
 - [MozBar Alternative Chrome Extension 2026: Developer SEO Tools](/mozbar-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

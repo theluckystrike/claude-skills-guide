@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Wagmi Hooks Workflow
 
 Building Ethereum dApps with React requires managing wallet connections, contract interactions, and transaction states efficiently. Wagmi provides a powerful set of React hooks abstraction over ethers.js and viem, but writing clean, maintainable hook compositions takes practice. This guide shows how Claude Code can accelerate your Wagmi workflow from project setup to production deployment.
@@ -215,7 +215,7 @@ Finally, version your Wagmi configuration. As the library evolves, maintaining a
 ## Conclusion
 
 Claude Code significantly accelerates Wagmi development by generating consistent hook compositions, handling state patterns uniformly, and creating test infrastructure. The key is providing clear context about your contract interfaces and chain requirements. With proper setup, Claude Code becomes an invaluable partner for building solid Ethereum dApps.
-{% endraw %}
+
 
 ---
 

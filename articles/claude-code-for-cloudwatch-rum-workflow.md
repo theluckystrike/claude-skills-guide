@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for CloudWatch RUM Workflow
 
 AWS CloudWatch RUM (Real User Monitoring) is a powerful service that helps you collect client-side performance metrics, user session data, and behavioral insights from your web applications. Integrating CloudWatch RUM into your workflow can feel overwhelming, but Claude Code makes it straightforward to set up, configure, and maintain. This guide walks you through using Claude Code to streamline your CloudWatch RUM implementation.
@@ -219,7 +219,7 @@ Claude Code can help you debug common CloudWatch RUM integration problems:
 CloudWatch RUM provides invaluable visibility into real user experiences, and Claude Code makes it significantly easier to set up, configure, and maintain. From generating Terraform configurations to creating custom event tracking components, Claude Code accelerates every step of your RUM implementation. Start with basic page load tracking, then progressively add custom events that align with your business metrics. The insights you gain will directly inform your prioritization of performance improvements and bug fixes.
 
 Remember that RUM data is most powerful when combined with your existing monitoring stack, correlate client-side data with backend metrics, logs, and traces to build a complete picture of your application's behavior in production.
-{% endraw %}
+
 
 ---
 

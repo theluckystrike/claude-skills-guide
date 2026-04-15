@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Zellij is a modern terminal multiplexer written in Rust that offers a fresh approach to terminal session management. Unlike traditional multiplexers, Zellij provides a plugin system, layout management, and first-class support for strider plugins that make it particularly well-suited for AI-assisted development workflows. This guide explores how to integrate Claude Code with Zellij to create a powerful, persistent development environment.
 
@@ -225,7 +225,7 @@ Zellij provides a solid foundation for Claude Code workflows through its session
 
 Start with simple layouts and gradually add complexity as you become more comfortable with Zellij's capabilities. The investment in setting up your ideal environment will pay dividends in sustained productivity and reduced context loss throughout your development sessions.
 
-{% endraw %}
+
 
 ---
 

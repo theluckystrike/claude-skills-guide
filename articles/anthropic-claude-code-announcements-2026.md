@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 
 The Claude Code ecosystem continues its rapid evolution throughout 2026, bringing significant improvements for developers building AI-powered workflows. This guide covers the major announcements, their practical implications, and how you can use these new capabilities in your projects.
 
@@ -284,4 +284,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

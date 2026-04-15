@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Bubble No-Code Workflow Guide
 
 Bubble has emerged as one of the most powerful no-code platforms for building sophisticated web applications without writing traditional code. However, as your Bubble applications grow in complexity, you may encounter limitations that require custom solutions, whether it's advanced API integrations, complex backend workflows, or plugin development. This is where Claude Code becomes an invaluable companion for no-code developers.
@@ -147,7 +147,7 @@ Claude Code transforms Bubble development from a purely visual process into a hy
 Start small: identify one area in your current Bubble project where custom code would help, and use Claude Code to generate the implementation. As you become comfortable with this workflow, you'll discover increasingly complex use cases where this combination excels.
 
 The key is balance: use Bubble's strengths for the vast majority of your application, and use Claude Code to fill in the gaps where custom functionality provides meaningful value. This approach maximizes both development speed and application capability.
-{% endraw %}
+
 
 ---
 

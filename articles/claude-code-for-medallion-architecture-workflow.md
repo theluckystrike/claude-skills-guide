@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Medallion Architecture Workflow
 
 Medallion architecture, also known as Bronze, Silver, and Gold, has become a fundamental pattern in modern data engineering. This three-tier approach organizes data pipelines into distinct quality levels, enabling teams to progressively refine raw data into business-ready datasets. Implementing and maintaining medallion architectures requires careful orchestration of ETL processes, solid data quality checks, and clear separation between layers. Claude Code transforms this complexity into a manageable workflow by providing intelligent assistance throughout the development lifecycle.
@@ -241,7 +241,7 @@ Validate data quality at layer transitions using tools like Great Expectations o
 Use Claude Code's strengths by asking it to generate boilerplate code, explain complex transformations, or suggest optimization opportunities. For complex medallion implementations, consider using the dbt skill to define transformations declaratively and maintain clear documentation.
 
 Claude Code accelerates medallion architecture implementation by handling repetitive boilerplate while you focus on business logic. The key is establishing clear separation between layers, implementing solid quality checks, and maintaining comprehensive metadata for observability.
-{% endraw %}
+
 
 ---
 

@@ -281,7 +281,7 @@ useEffect(() => {
 ## Conclusion
 
 Setting up React Native navigation doesn't have to be overwhelming. By following this guide and using Claude Code's capabilities, you can implement solid navigation patterns that provide excellent user experiences. Remember to choose the right navigation types for your app's structure, use TypeScript for type safety, and test thoroughly across platforms. Claude Code can help you extend these patterns further as your app grows in complexity.
-{% endraw %}
+
 
 ---
 
@@ -306,3 +306,4 @@ Related Reading
 - [Claude Code for React Native Push Notifications Guide](/claude-code-for-react-native-push-notifications-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

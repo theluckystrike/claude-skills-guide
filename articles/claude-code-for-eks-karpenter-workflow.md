@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Managing Amazon EKS clusters with Karpenter doesn't have to be complex. With Claude Code, you can automate Karpenter provisioning, optimize node lifecycle management, and build reproducible infrastructure workflows. This guide walks you through practical examples to integrate Claude Code into your EKS Karpenter operations.
 
 ## Understanding the EKS Karpenter Workflow
@@ -672,7 +672,7 @@ Claude Code transforms Karpenter management from manual configuration to intelli
 The workflows in this guide cover the full operational lifecycle: bootstrapping a Karpenter installation, defining NodePools for different workload profiles, implementing cost optimization and alerting, setting up monitoring, and handling disaster recovery. Each workflow is designed to be composable, start with simple Provisioner generation and progressively build more sophisticated automation as your Karpenter deployment grows.
 
 The key is to treat Claude Code as a collaborative partner: describe your requirements clearly, review generated configurations before applying them (always use `--dry-run`), and let automation handle the repetitive tasks while you focus on architecture decisions. With this approach, you get the speed and cost efficiency of Karpenter without the operational toil of managing complex Kubernetes infrastructure manually.
-{% endraw %}
+
 
 ---
 

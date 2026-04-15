@@ -320,7 +320,7 @@ env:
 Integrating Claude Code with Helm hooks transforms your Kubernetes deployments from simple package installations into intelligent, automated workflows. By using Claude Code's analysis capabilities in pre-install validation, post-install verification, and migration hooks, you gain confidence in your deployments while reducing manual oversight.
 
 Start with simple hooks and progressively add more sophisticated Claude Code integration as your workflow matures. The combination of Helm's lifecycle management and Claude Code's intelligent automation creates a powerful foundation for production-grade Kubernetes deployments.
-{% endraw %}
+
 
 ---
 
@@ -345,3 +345,4 @@ Related Reading
 - [Claude Code Git Hooks: Automate Your Pre-Commit Workflow](/claude-code-git-hooks-pre-commit-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

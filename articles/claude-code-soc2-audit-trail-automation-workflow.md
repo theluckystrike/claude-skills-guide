@@ -13,7 +13,7 @@ score: 7
 permalink: /claude-code-soc2-audit-trail-automation-workflow/
 ---
 
-{% raw %}
+
 Claude Code SOC2 Audit Trail Automation Workflow
 
 Audit trails are the backbone of SOC 2 compliance. They provide a chronological record of system activities that helps auditors verify that controls are operating effectively. you'll learn how to use Claude Code skills to build an automated audit trail workflow that captures, organizes, and reports on compliance-relevant events without manual effort.
@@ -282,4 +282,4 @@ Related Reading
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). Quality assurance workflows
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

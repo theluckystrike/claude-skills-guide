@@ -13,7 +13,7 @@ score: 8
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code React Native Mobile App Development Workflow
 
 Building React Native mobile applications with Claude Code combines the power of AI-assisted development with modern cross-platform workflows. This guide walks you through a practical development workflow that uses Claude Code's capabilities to accelerate your mobile app development from initialization to deployment.
@@ -300,7 +300,7 @@ Mobile development prompts succeed when they include these elements:
 Claude Code transforms React Native development by providing intelligent assistance throughout the entire workflow. From project initialization to App Store deployment, using AI help accelerates development while maintaining code quality. Start with Expo for the best developer experience, use TypeScript for type safety, and rely on Claude Code for architectural decisions and debugging support.
 
 Remember to test thoroughly on physical devices, as simulators don't catch all platform-specific issues. With Claude Code as your development partner, you can build production-ready React Native applications more efficiently than ever before.
-{% endraw %}
+
 
 ---
 

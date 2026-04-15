@@ -13,7 +13,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 Claude Code for Database Query Optimization Workflow
 
 Database query performance can make or break your application. Slow queries frustrate users, increase server load, and can cost significantly in cloud infrastructure expenses. The good news: Claude Code combined with systematic optimization workflows can help you identify, analyze, and fix performance bottlenecks faster than ever.
@@ -230,4 +230,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

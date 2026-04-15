@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Rust profiling is essential for understanding your application's performance characteristics, but it can be complex to set up and interpret. Claude Code can streamline this workflow by helping you configure profiling tools, analyze results, and implement optimizations. This guide shows you how to integrate Claude Code into your Rust profiling workflow effectively.
 
@@ -348,7 +348,7 @@ Integrating Claude Code into your Rust profiling workflow significantly reduces 
 
 Start by setting up your profiling tools, create reusable Claude skills for common operations, and establish a workflow that includes regular profiling as part of your development process. With these practices in place, you'll be equipped to maintain optimal performance in your Rust applications.
 
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Cookie Consent Implementation: A Practical Guide
 
 Cookie consent has become a legal requirement across most jurisdictions. Implementing a solid consent system doesn't require starting from scratch, Claude Code combined with the frontend-design skill can generate production-ready consent components tailored to your specific requirements.
@@ -275,7 +275,7 @@ Regular maintenance involves reviewing which scripts your application loads and 
 Set a calendar reminder to audit your cookie inventory every six months. Vendors change what they set, and tools you added years ago may now set cookies they did not originally. Browser developer tools show all cookies set on a page, use them to verify your inventory is current.
 
 Cookie consent implementation doesn't need to be complicated. By building a small, focused consent manager and pairing it with a well-designed UI component, you satisfy regulatory requirements while keeping your codebase maintainable. The patterns here scale from a simple static site to a full single-page application, start with the minimal implementation and layer in complexity only where your specific situation requires it.
-{% endraw %}
+
 
 ---
 

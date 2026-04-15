@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for NeMo Framework Workflow Guide
 
 NVIDIA NeMo Framework is a powerful platform for building, training, and deploying generative AI models, including large language models, speech AI, and multimodal systems. This guide shows you how to integrate Claude Code into your NeMo development workflow to accelerate prototyping, streamline training configurations, and simplify deployment pipelines.
@@ -379,7 +379,7 @@ Claude Code can help you set up experiment tracking or generate training reports
 Integrating Claude Code into your NeMo Framework workflow accelerates development through faster prototyping, intelligent debugging, and automated code generation. Whether you're building LLMs, speech models, or multimodal systems, Claude Code serves as an intelligent development partner throughout the AI development lifecycle.
 
 Start with simple tasks, configuration explanation and code generation, then progressively use its capabilities for complex debugging and optimization challenges. The combination of Claude Code's contextual understanding and NeMo's powerful abstractions enables rapid iteration from prototype to production.
-{% endraw %}
+
 
 ---
 

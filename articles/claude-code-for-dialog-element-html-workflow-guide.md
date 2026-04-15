@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Dialog Element HTML Workflow Guide
 
 The HTML `<dialog>` element has transformed how developers build modal dialogs, offering native accessibility features, built-in focus management, and simplified JavaScript APIs. However, implementing dialogs correctly requires understanding browser behavior, accessibility requirements, and state management patterns. This guide shows you how to use Claude Code to build solid dialog workflows efficiently.
@@ -249,7 +249,7 @@ Request animations with specific requirements: "Add a scale-up entrance animatio
 The HTML dialog element provides a solid foundation for modal interactions. By combining it with Claude Code's ability to generate accessible, well-structured code, you can build sophisticated dialog workflows efficiently. Remember to specify accessibility requirements, consider state management patterns, and test thoroughly in your specific use case.
 
 Key workflow improvements come from clear prompting, describe the dialog's purpose, required behavior, and integration context. Claude Code excels at generating consistent, maintainable patterns once you establish your requirements clearly.
-{% endraw %}
+
 
 ---
 

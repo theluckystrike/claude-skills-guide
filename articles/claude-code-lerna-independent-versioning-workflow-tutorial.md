@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Lerna Independent Versioning Workflow Tutorial
 
 Managing multiple npm packages in a monorepo presents unique versioning challenges. When each package has its own release cycle, dependencies, and consumer base, synchronized versioning becomes a bottleneck. Lerna's independent versioning mode solves this by allowing each package to maintain its own semantic version. Combined with Claude Code's automation capabilities, you can build a powerful workflow that streamlines multi-package releases.
@@ -262,7 +262,7 @@ Lerna's independent versioning mode, combined with Claude Code's automation capa
 Start with the workflow outlined here: initialize in independent mode, adopt conventional commits, and automate releases through CI/CD. Your monorepo will scale cleanly as you add more packages, each with its own release cadence managed efficiently.
 
 The key is consistency, standardized commit messages, automated version detection, and thorough testing. With these practices in place, independent versioning becomes not just possible, but the natural way to manage complex monorepos.
-{% endraw %}
+
 
 ---
 

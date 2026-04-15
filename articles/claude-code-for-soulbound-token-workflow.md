@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Soulbound Token Workflow
 
 Soulbound tokens (SBTs) represent a powerful primitive in Web3 development, non-transferable tokens that bind an asset to a specific wallet address. Unlike traditional NFTs, SBTs cannot be sold or transferred, making them ideal for credentials, memberships, achievements, and identity verification. This guide shows you how to use Claude Code to streamline your soulbound token development workflow.
@@ -439,7 +439,7 @@ Metadata not showing on OpenSea: OpenSea requires `tokenURI` to return a valid J
 
 Tests failing after Hardhat upgrade: Hardhat 3.x changed the way accounts are accessed in tests. Ask Claude Code to migrate your test file to the new `hre.ethers.getSigners()` pattern if you see `TypeError: Cannot read properties of undefined`.
 
-{% endraw %}
+
 
 ---
 

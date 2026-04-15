@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Carvel YTT Workflow Tutorial
 
 If you're working with Kubernetes configurations, you've likely encountered the challenge of managing complex, repetitive YAML files across multiple environments. Carvel ytt (pronounced "white-t") offers a powerful solution for template-based YAML management, but integrating it into your workflow efficiently requires the right tooling. This tutorial shows you how to combine Claude Code with ytt to create a streamlined, AI-assisted configuration management pipeline.
@@ -364,7 +364,7 @@ Combining Claude Code with Carvel ytt creates a powerful workflow for managing K
 The productivity gain is most visible when dealing with overlay complexity and schema design. Those are the places where ytt's power comes with a learning cliff. and where having Claude explain the semantics of `#@overlay/append` vs `#@overlay/replace`, or help you design a schema that validates cleanly, saves significant time.
 
 The key is establishing clear project conventions and maintaining consistent practices across your team. With a well-structured `lib/` directory, a documented schema, and a CI workflow that validates all environments on every PR, Claude becomes an invaluable partner in your ytt workflow rather than just a syntax lookup tool.
-{% endraw %}
+
 
 ---
 

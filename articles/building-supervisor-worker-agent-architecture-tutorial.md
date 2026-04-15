@@ -13,7 +13,7 @@ score: 8
 permalink: /building-supervisor-worker-agent-architecture-tutorial/
 ---
 
-{% raw %}
+
 Building Supervisor Worker Agent Architecture Tutorial
 
 The supervisor-worker agent architecture is one of the most powerful patterns for building sophisticated AI-powered development workflows. This architectural pattern, inspired by distributed systems concepts, enables you to coordinate multiple specialized AI agents under a central supervisor that manages task distribution, handles errors, and ensures coherent execution. In this tutorial, you'll learn how to implement this architecture effectively using Claude Code, with practical examples you can apply immediately to your projects.
@@ -234,7 +234,7 @@ Test the architecture itself. Before deploying a supervisor-worker system, verif
 The supervisor-worker agent architecture transforms Claude Code from a single AI assistant into a scalable development team. By delegating specialized tasks to focused workers while maintaining central coordination, you can tackle larger, more complex projects with greater reliability. Start with simple two-agent setups, a supervisor and one worker, and gradually add complexity as your workflows mature.
 
 This pattern isn't just about efficiency; it's about building maintainable, auditable AI-assisted development processes that you can trust with real production code.
-{% endraw %}
+
 
 ---
 

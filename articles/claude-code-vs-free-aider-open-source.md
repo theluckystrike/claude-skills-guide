@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Claude Code vs Free Aider Open Source: Which One Should You Choose?
 
@@ -316,7 +316,7 @@ Aider's advantage is its openness and flexibility. Being able to swap in local m
 
 The good news is that you do not have to choose permanently. Both tools install in minutes and can coexist in your workflow. Try Aider on your next focused bug-fix session; try Claude Code on your next feature branch where you need to touch multiple files across different layers of the stack. Your own usage patterns will reveal which tool fits your work better than any comparison article can.
 
-{% endraw %}
+
 
 ---
 

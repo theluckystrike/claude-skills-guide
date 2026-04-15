@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Terraform workspaces provide a powerful mechanism for managing infrastructure across multiple environments without duplicating configuration. When combined with Claude Code's AI-assisted development capabilities, you can build solid, maintainable infrastructure workflows that scale with your organization. This guide walks you through practical patterns for integrating Claude Code into your Terraform workspace management.
 
 ## Understanding Terraform Workspaces
@@ -274,7 +273,7 @@ jobs:
 
 Terraform workspaces combined with Claude Code create a powerful infrastructure management system. The key takeaways include: organize your project with environment-specific directories, use variable files for configuration differences, use workspace interpolation for conditional resources, and integrate AI assistance for planning, generation, and troubleshooting. By implementing these patterns, you'll achieve infrastructure as code that scales across environments while remaining maintainable and secure.
 
-{% endraw %}
+
 
 ---
 
@@ -299,3 +298,4 @@ Related Reading
 - [Claude Code for Terraform Cloud Run Workflow Guide](/claude-code-for-terraform-cloud-run-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

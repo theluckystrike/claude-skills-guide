@@ -226,7 +226,7 @@ Integrating Claude Code with Percy creates a powerful visual testing workflow th
 The key is treating visual testing as an integral part of your development process, not an afterthought. With Percy capturing changes and Claude automating execution and analysis, your team can confidently iterate on UI improvements while maintaining visual consistency.
 
 Start with a small set of critical pages, establish baseline acceptance criteria, and gradually expand your visual test coverage. The investment pays dividends in reduced visual bugs and improved user experience.
-{% endraw %}
+
 
 ---
 
@@ -251,3 +251,4 @@ Related Reading
 - [Claude Code for Distributed Load Testing Workflow](/claude-code-for-distributed-load-testing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Wazuh SIEM Workflow Tutorial
 
 Security Information and Event Management (SIEM) systems like Wazuh are essential for modern security operations, but managing alerts, analyzing logs, and responding to threats manually can overwhelm even experienced security teams. This tutorial shows you how to use Claude Code to automate Wazuh SIEM workflows, from alert triage to incident response and reporting.
@@ -323,7 +323,7 @@ Claude will generate a rule like:
 Integrating Claude Code with Wazuh SIEM transforms your security operations from reactive to proactive. By automating alert triage, empowering threat hunting, and orchestrating incident response, your security team can focus on sophisticated threats while Claude handles the repetitive analysis.
 
 Start with simple alert categorization, then progressively add more complex automation as you build confidence in the workflows. The key is maintaining the human-in-the-loop for critical decisions while letting Claude amplify your team's capabilities.
-{% endraw %}
+
 
 ---
 

@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 API versioning remains one of the most challenging aspects of building maintainable software systems. When working with AI-powered applications in 2026, the problem becomes even more complex due to the rapid evolution of AI models, the need for consistent behavior across versions, and the various stakeholders who depend on your APIs. Creating a well-structured CLAUDE.md file that captures your API versioning strategy helps ensure that Claude Code, and your entire development team, understands how to work with your APIs responsibly.
 
@@ -174,4 +174,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

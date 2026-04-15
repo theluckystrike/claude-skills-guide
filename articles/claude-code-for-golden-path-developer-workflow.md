@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Golden Path Developer Workflow
 
 The "Golden Path" concept, pioneered by Spotify and adopted across modern software organizations, represents the opinionated, supported pathway that helps developers ship features quickly while adhering to organizational standards. Rather than leaving developers to navigate countless implementation choices, golden paths provide curated templates, conventions, and automated workflows that balance flexibility with consistency. Claude Code, with its powerful skill system and agentic capabilities, becomes an ideal companion for implementing and following golden path workflows in your daily development work.
@@ -194,7 +194,7 @@ Invest time in documenting your conventions clearly. Claude Code can only enforc
 Finally, measure adoption and gather feedback. Track how long it takes new developers to become productive, monitor code review cycle times, and collect developer satisfaction surveys. Golden path workflows should reduce friction, not create it. Use Claude Code's analytical capabilities to identify where developers deviate from the path and understand whether this indicates a flaw in the golden path or a need for additional guidance.
 
 Claude Code transforms golden path development from a static document into an active, intelligent partner in your development workflow. By encoding organizational knowledge into skills and conventions that Claude can understand and apply, you create a scalable approach to developer productivity that maintains consistency while respecting individual expertise.
-{% endraw %}
+
 
 ---
 

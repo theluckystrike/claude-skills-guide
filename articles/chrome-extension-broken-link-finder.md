@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Broken Link Finder: A Developer Guide
 
 A broken link checker built as a Chrome extension provides real-time link validation directly in the browser. Unlike standalone crawling tools that require separate processes, a browser-based solution can validate links as you browse, check links before you share them, and maintain a persistent history of link health across sessions.
@@ -460,4 +460,4 @@ Related Reading
 - [Chrome Extension Clearance Sale Finder: A Developer's Guide to Finding Deals](/chrome-extension-clearance-sale-finder/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

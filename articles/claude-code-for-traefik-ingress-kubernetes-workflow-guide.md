@@ -10,7 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Traefik Ingress Kubernetes Workflow Guide
 
 Traefik is a powerful reverse proxy and load balancer that has become the go-to choice for Kubernetes ingress routing. When combined with Claude Code, you can automate and streamline your entire Kubernetes ingress workflow, from initial setup to ongoing management. This guide walks you through practical patterns for using Claude Code to manage Traefik ingress resources efficiently.
@@ -250,4 +250,4 @@ Related Reading
 - [Claude Code for K3s Lightweight Kubernetes Workflow](/claude-code-for-k3s-lightweight-kubernetes-workflow/)
 - [Claude Code for k9s Kubernetes Terminal Workflow Guide](/claude-code-for-k9s-kubernetes-terminal-workflow-guide/)
 
-{% endraw %}
+

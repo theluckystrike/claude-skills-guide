@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for ChromaDB Vector Store Workflow
 
 Vector databases have become essential infrastructure for building AI applications that require semantic search, retrieval-augmented generation (RAG), and knowledge management systems. ChromaDB stands out as a popular open-source vector database that's easy to set up and integrates smoothly with Python-based AI workflows. When combined with Claude Code, you can create powerful automation for managing document embeddings, building knowledge bases, and implementing intelligent search systems.
@@ -226,7 +226,7 @@ Monitoring: Track query latency and similarity score distributions to identify w
 ChromaDB combined with Claude Code provides a powerful foundation for building semantic search and knowledge retrieval systems. The workflow patterns covered here, from document ingestion to advanced filtering, give you the tools to create sophisticated AI applications that can reason over large document collections.
 
 Start with the basic implementations, then iterate based on your specific requirements. The modular design of these components makes it easy to swap embedding providers, adjust similarity metrics, or add new filtering criteria as your application evolves.
-{% endraw %}
+
 
 ---
 

@@ -409,7 +409,7 @@ Claude Code transforms Nomad container scheduling from manual CLI operations int
 The combination of Claude Code's intelligence with Nomad's simplicity creates powerful developer experiences that reduce operational complexity while maintaining the flexibility needed for modern distributed systems. Teams that adopt this pattern typically see faster deployment cycles, fewer configuration errors, and more consistent adherence to organizational standards, because Claude Code can encode those standards directly into the job generation logic and validation steps.
 
 As you build out the workflow, consider storing generated job specifications in version control alongside your application code. This gives you a history of every deployment, enables peer review of infrastructure changes, and makes rollback as simple as running the previous version of the job file.
-{% endraw %}
+
 
 ---
 
@@ -434,3 +434,4 @@ Related Reading
 - [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

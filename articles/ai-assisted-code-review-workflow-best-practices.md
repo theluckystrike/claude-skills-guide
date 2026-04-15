@@ -13,8 +13,8 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 AI-assisted code review is transforming how development teams catch bugs, enforce standards, and ship quality code. Instead of waiting hours for human reviewers, developers can get instant feedback on syntax errors, security vulnerabilities, and style violations. This guide covers practical workflows to integrate AI code review into your development process effectively.
 
 ## Setting Up AI Code Review in Your Pipeline

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome extension Notion web clipper tools have become essential for developers and power users who want to capture web content efficiently. Whether you're researching, bookmarking resources, or collecting reference materials, understanding how these extensions interact with Notion's API opens up powerful automation possibilities.
 
 ## Understanding Notion Web Clipper Architecture
@@ -529,4 +529,4 @@ Related Reading
 - [Bolt.new Review: AI Web App Builder 2026](/bolt-new-review-ai-web-app-builder-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

@@ -12,8 +12,8 @@ score: 8
 permalink: /claude-skills-with-github-actions-ci-cd-pipeline/
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 ## Claude Skills with GitHub Actions CI/CD Pipeline
 
 [Integrating Claude Code with a GitHub Actions CI/CD pipeline](/claude-code-github-actions-workflow-matrix-strategy-guide/) gives development teams an automated assistant that participates directly in their build, test, and deployment workflows. This guide covers practical patterns for wiring Claude intelligence into your existing pipelines. from triggering AI-powered code review on pull requests to generating PDF reports from test results.
@@ -345,5 +345,4 @@ Workflow timing out on large diffs: Only pass diffs from `src/` directories. not
 Review comments not appearing: The workflow needs `pull-requests: write` in the `permissions` block. Organization policies may also need to allow write permissions for external contributors.
 
 Inconsistent review quality: Use a structured prompt template specifying what to look for: security vulnerabilities, missing error handling, type safety, and performance. Checklists produce more consistent results than open-ended prompts.
-
 {% endraw %}

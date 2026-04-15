@@ -10,7 +10,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Test Driven Development Workflow Tutorial
 
 Test-driven development (TDD) is a powerful methodology that can dramatically improve your code quality and design. When combined with Claude Code, you get an intelligent partner that can accelerate your TDD cycles while helping you stay focused on the red-green-refactor rhythm. This tutorial shows you how to use Claude Code effectively within a TDD workflow.
@@ -247,4 +247,4 @@ Related Reading
 - [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)
 - [Claude Code Inngest Event Driven Function Workflow Tutorial](/claude-code-inngest-event-driven-function-workflow-tutorial/)
 
-{% endraw %}
+

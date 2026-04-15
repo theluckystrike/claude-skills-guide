@@ -280,7 +280,7 @@ By combining Claude Code's natural language capabilities with Podman's flexible 
 Start with the basic container management skill, then expand into specialized skills for your specific development needs. As you identify repetitive tasks, convert them into new skills, the more you automate, the more time you'll save.
 
 Remember to regularly update your skills as Podman introduces new features, and consider contributing your skills to the community to help others streamline their container workflows.
-{% endraw %}
+
 
 ---
 
@@ -305,3 +305,4 @@ Related Reading
 - [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

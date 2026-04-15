@@ -317,7 +317,7 @@ Distributed tracing transforms debugging from guessing games into informed inves
 Claude Code amplifies these capabilities by helping you write instrumentation code, construct queries, and analyze trace data programmatically. Start with basic instrumentation on your most critical paths, then expand coverage as your understanding of the system improves.
 
 The initial investment pays dividends when production issues arise at 3 AM, instead of guessing which service failed, you'll know exactly where to look.
-{% endraw %}
+
 
 ---
 
@@ -342,3 +342,4 @@ Related Reading
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

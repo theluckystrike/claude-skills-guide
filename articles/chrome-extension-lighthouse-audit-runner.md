@@ -12,7 +12,7 @@ categories: [guides]
 tags: [chrome-extension, lighthouse, performance, auditing, devtools]
 ---
 
-{% raw %}
+
 Chrome Extension Lighthouse Audit Runner: A Developer Guide
 
 Running Lighthouse audits directly from your Chrome extension unlocks powerful possibilities for automated performance monitoring, continuous quality checks, and real-time developer feedback. This guide shows you how to build an extension that executes Lighthouse audits programmatically and integrates the results into your development workflow.
@@ -319,4 +319,4 @@ Related Reading
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

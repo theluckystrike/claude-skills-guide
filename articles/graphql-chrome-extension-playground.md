@@ -13,8 +13,8 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 ## GraphQL Chrome Extension Playground: Test APIs Directly in Your Browser
 
 Testing GraphQL APIs often requires setting up dedicated tools, configuring authentication, or switching between multiple applications. Chrome extensions offer a streamlined alternative, letting you execute queries directly from your browser without leaving your development workflow. For developers and power users who work with multiple GraphQL endpoints daily, these extensions can significantly reduce friction in the API testing process.

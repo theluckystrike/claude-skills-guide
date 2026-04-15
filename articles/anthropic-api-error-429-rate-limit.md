@@ -137,7 +137,7 @@ batch = client.messages.batches.create(
             "params": {
                 "model": "claude-sonnet-4-6",
                 "max_tokens": 1024,
-                "messages": [{% raw %}{"role": "user", "content": prompt}{% endraw %}],
+                "messages": [{"role": "user", "content": prompt}],
             },
         }
         for i, prompt in enumerate(prompts)

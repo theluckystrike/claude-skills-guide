@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Spring WebFlux is Spring's reactive web framework, designed for building asynchronous, non-blocking applications. When combined with Claude Code, you can dramatically accelerate your reactive Spring development workflow, from project setup to testing and deployment. This tutorial provides practical guidance for using Claude Code effectively with Spring WebFlux, with actionable examples you can apply immediately to your projects.
 
@@ -273,7 +273,7 @@ Spring WebFlux opens up powerful possibilities for building responsive, high-con
 
 Start with simple endpoints, practice error handling patterns, and gradually incorporate more advanced reactive patterns as you become comfortable with the paradigm. With these fundamentals, you're well-equipped to build production-ready reactive applications using Spring WebFlux and Claude Code.
 
-{% endraw %}
+
 
 ---
 

@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 AWS CDK Aspects are one of the most powerful yet underutilized features in the CDK ecosystem. They enable you to apply cross-cutting concerns across your entire infrastructure stack during synthesis, making them ideal for enforcement, validation, and governance. Combined with Claude Code's AI-assisted development capabilities, you can build solid CDK projects with automated compliance checks and consistent infrastructure patterns.
 
 This tutorial walks you through practical workflows for creating, testing, and maintaining CDK Aspects using Claude Code.
@@ -409,7 +408,7 @@ CDK Aspects combined with Claude Code create a powerful workflow for infrastruct
 
 Start with simple tag enforcement, then gradually add more sophisticated Aspects as your governance needs grow. Claude Code can help you build and maintain these aspects efficiently, allowing you to focus on your application logic while ensuring your infrastructure meets organizational standards.
 
-{% endraw %}
+
 
 ---
 
@@ -434,3 +433,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

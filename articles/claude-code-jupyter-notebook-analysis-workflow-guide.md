@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code Jupyter Notebook Analysis Workflow Guide
 
 Combining Claude Code with Jupyter notebooks creates a powerful environment for interactive data analysis. This guide walks you through practical workflows, code patterns, and strategies to maximize your productivity when working with notebooks alongside Claude Code, from loading raw CSV files through statistical testing, model evaluation, and reproducible reporting.
@@ -452,7 +452,7 @@ When notebook outputs look cluttered or too verbose:
 The Claude Code and Jupyter notebook combination offers a powerful environment for data analysis. By following these workflow patterns and best practices, you can accelerate your exploratory analysis while maintaining clean, reproducible code. Remember to use Claude Code's strengths, code generation, explanation, and review, throughout your analysis process.
 
 The most impactful places to involve Claude Code are: reviewing cleaning logic for correctness, explaining statistical test selection, generating boilerplate for standard analysis patterns you have done before, and drafting the markdown narrative that turns a sequence of charts into a coherent data story. Start with simple workflows and gradually incorporate more advanced patterns as you become comfortable with the collaboration between Claude Code and Jupyter notebooks.
-{% endraw %}
+
 
 ---
 

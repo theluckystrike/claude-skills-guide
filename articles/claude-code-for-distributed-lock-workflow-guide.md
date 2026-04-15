@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Distributed Lock Workflow Guide
 
 Distributed locking is a critical pattern in modern software architecture when you need to coordinate access to shared resources across multiple servers or processes. Whether you're preventing double bookings in a reservation system, ensuring only one worker processes a task, or managing cache invalidation across a cluster, distributed locks provide the coordination mechanism that keeps your system consistent. This guide shows you how to use Claude Code to implement solid distributed locking workflows in your applications.
@@ -186,7 +186,7 @@ Finally, test your locks under failure conditions. Simulate network partitions, 
 ## Conclusion
 
 Distributed locking is foundational to building reliable distributed systems. With Claude Code, you can rapidly implement various locking patterns, from simple Redis locks to sophisticated fair lease-based systems. The key is understanding your specific requirements, contention levels, failure scenarios, and performance needs, and choosing the appropriate pattern. Start with simple implementations, measure performance, and add complexity only when your requirements demand it.
-{% endraw %}
+
 
 ---
 

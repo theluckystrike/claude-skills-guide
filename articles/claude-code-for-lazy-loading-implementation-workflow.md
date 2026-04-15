@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Lazy Loading Implementation Workflow
 
 Lazy loading is a performance optimization technique that defers the loading of non-critical resources until they are needed. When working with Claude Code, you can use its intelligent context understanding and code generation capabilities to implement lazy loading patterns efficiently across various languages and frameworks. This guide walks you through a practical workflow for implementing lazy loading using Claude Code as your development assistant.
@@ -216,7 +216,7 @@ Test across devices and networks: Lazy loading behavior can vary based on device
 Claude Code makes implementing lazy loading straightforward by understanding your codebase context and generating appropriate code patterns. The workflow, analyze, implement component lazy loading, implement image lazy loading, implement route-based splitting, and verify, provides a structured approach to performance optimization.
 
 By using Claude Code's code generation capabilities, you can quickly implement lazy loading patterns across your project while ensuring the implementation follows best practices for your specific framework and use case.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Finding academic papers efficiently is a common challenge for researchers, students, and developers working in technical fields. Chrome extensions designed for academic paper discovery have evolved significantly, offering various approaches from simple search overlays to sophisticated AI-powered research assistants. This guide covers the ecosystem of available tools and provides implementation patterns for developers interested in building custom solutions.
 
 ## Understanding Academic Paper Finder Extensions
@@ -363,4 +363,4 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

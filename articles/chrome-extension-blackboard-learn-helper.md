@@ -12,7 +12,7 @@ score: 8
 categories: [guides]
 ---
 
-{% raw %}
+
 Chrome Extension Blackboard Learn Helper: A Developer Guide
 
 Blackboard Learn remains one of the most widely deployed learning management systems in educational institutions worldwide. While the platform provides core functionality for course management, assignments, and grade tracking, many users find themselves wishing for additional quality-of-life improvements. Building a Chrome extension to enhance Blackboard Learn addresses common problems and can significantly improve the daily experience for instructors, students, and administrators.
@@ -689,4 +689,4 @@ Related Reading
 - [Chrome Extension Canvas LMS Helper: A Developer Guide](/chrome-extension-canvas-lms-helper/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

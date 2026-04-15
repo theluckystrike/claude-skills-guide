@@ -14,7 +14,8 @@ score: 7
 render_with_liquid: false
 ---
 
-{% raw %}# Claude Code for AI Risk Assessment Workflow Guide
+{% raw %}
+# Claude Code for AI Risk Assessment Workflow Guide
 
 As AI systems become more prevalent in production applications, establishing solid risk assessment workflows has shifted from a nice-to-have to a critical necessity. Whether you're deploying large language models, integrating AI features into existing products, or building AI-first applications, understanding how to evaluate and mitigate risks systematically can save your team from costly failures and reputational damage. This guide shows you how to use Claude Code to build comprehensive AI risk assessment workflows that integrate smoothly into your development pipeline.
 
@@ -203,7 +204,7 @@ AI risk assessment doesn't have to be a bottleneck in your development process. 
 
 The investment in building solid risk assessment workflows pays dividends through reduced incident rates, stronger user trust, and better positioned products for regulatory scrutiny. Let Claude Code help you build these workflows efficiently, so your team can focus on delivering value while maintaining responsible AI practices.
 
-{% endraw %}
+
 
 ---
 
@@ -228,3 +229,4 @@ Related Reading
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

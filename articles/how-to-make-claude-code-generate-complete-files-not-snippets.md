@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 One of the most frustrating experiences when working with Claude Code is asking for a complete file, only to receive a partial snippet that requires manual completion. This behavior often stems from how Claude Code optimizes for token efficiency and follows patterns it has learned from typical coding conversations. Fortunately, there are several proven techniques to ensure you get complete, production-ready files every time.
 
@@ -172,7 +172,7 @@ Getting Claude Code to generate complete files rather than snippets requires exp
 
 Remember: Claude Code is excellent at following detailed specifications. The more complete your initial request, the more complete your generated files will be.
 
-{% endraw %}
+
 
 ---
 

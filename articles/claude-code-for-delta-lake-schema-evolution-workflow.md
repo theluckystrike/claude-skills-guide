@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Delta Lake Schema Evolution Workflow
 
 Delta Lake has become the backbone of modern data lake architectures, providing ACID transactions, time travel, and schema enforcement. But as your data pipelines evolve, managing schema changes, known as schema evolution, can become a significant challenge. This guide shows you how Claude Code can automate and streamline your Delta Lake schema evolution workflow, reducing manual errors and improving pipeline reliability.
@@ -250,7 +250,7 @@ This skill can then be invoked whenever new data arrives, automatically detectin
 Claude Code transforms Delta Lake schema evolution from a manual, error-prone process into an automated, safe workflow. By using Claude Code's ability to execute Python code, analyze schemas, and generate migration logic, you can build solid data pipelines that gracefully handle schema changes over time.
 
 Start by implementing the schema detection script, then gradually add more sophisticated evolution patterns as your pipelines grow. The key is to always preview changes before applying them and maintain an audit trail of all schema modifications.
-{% endraw %}
+
 
 ---
 

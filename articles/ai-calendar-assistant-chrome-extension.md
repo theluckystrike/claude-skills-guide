@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 Building an AI calendar assistant as a Chrome extension combines browser extension development with natural language processing and calendar API integration. This guide walks you through the architecture, implementation patterns, and practical considerations for creating a production-ready AI calendar assistant Chrome extension.
 
 ## Understanding the Architecture
@@ -399,4 +399,4 @@ Related Reading
 - [AI Sentiment Analyzer Chrome Extension: A Developer's Guide](/ai-sentiment-analyzer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

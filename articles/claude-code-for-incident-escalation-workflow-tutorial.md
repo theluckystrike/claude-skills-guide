@@ -296,7 +296,7 @@ Building an incident escalation workflow with Claude Code gives you flexibility,
 
 The key is to balance automation with human judgment - let Claude handle the timing and routing, but ensure experienced team members make critical decisions about severity and response strategies.
 
-{% endraw %}
+
 
 ---
 
@@ -321,3 +321,4 @@ Related Reading
 - [Claude Code for Incident Metrics Workflow Tutorial](/claude-code-for-incident-metrics-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

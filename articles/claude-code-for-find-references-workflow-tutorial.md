@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Finding references across a codebase is one of the most frequent tasks developers perform. Whether you're tracing a function call, understanding a class hierarchy, or preparing to refactor, knowing where code is used saves time and prevents bugs. Claude Code provides powerful capabilities to search and track references across your entire project, making this traditionally tedious task much faster and more accurate.
 
@@ -152,7 +152,7 @@ This approach standardizes reference searches across your team and makes it easy
 Claude Code transforms reference finding from a manual, error-prone task into an efficient, accurate workflow. By understanding code semantics rather than just matching text, it provides context that helps you make informed decisions about your code.
 
 Start using these reference finding techniques in your daily development work. Whether you're preparing a refactor, investigating a bug, or simply exploring an unfamiliar codebase, Claude Code's search capabilities will save you time and help you understand code relationships more clearly.
-{% endraw %}
+
 
 ---
 

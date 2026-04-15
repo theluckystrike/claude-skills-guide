@@ -9,7 +9,7 @@ permalink: /claude-code-for-tree-of-thought-reasoning-workflow-guide/
 categories: [guides, workflows]
 tags: [claude-code, claude-skills]
 ---
-{% raw %}
+
 # Claude Code for Tree of Thought Reasoning Workflow Guide
 
 The Tree of Thought (ToT) reasoning paradigm represents a significant advancement in how AI systems approach complex problem-solving. Unlike linear reasoning chains, ToT enables systematic exploration of multiple solution paths simultaneously, making it particularly powerful for tasks requiring creative problem-solving, debugging, or strategic planning. This guide demonstrates how to implement ToT reasoning workflows using Claude Code.
@@ -178,4 +178,4 @@ Related Reading
 - [Claude Code for Tree-sitter Workflow Tutorial](/claude-code-for-tree-sitter-workflow-tutorial/)
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 
-{% endraw %}
+

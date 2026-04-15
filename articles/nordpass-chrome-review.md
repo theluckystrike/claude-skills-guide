@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 NordPass Chrome Review: A Developer and Power User's Perspective
 
 Password management has become essential for developers who juggle dozens of API keys, service credentials, and deployment secrets. In this NordPass Chrome review, I examine how well this password manager serves technical users who need more than basic password storage.
@@ -241,4 +241,4 @@ Related Reading
 - [How to Spoof User Agent in Chrome for Development and.](/spoof-user-agent-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

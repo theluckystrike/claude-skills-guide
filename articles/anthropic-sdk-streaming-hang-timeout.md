@@ -14,12 +14,11 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 # Fix: Anthropic SDK Streaming Hangs Indefinitely
 
 ## The Error
 
-Your application using `client.messages.stream()` or `client.messages.create({% raw %}{{ stream: true }}{% endraw %})` freezes. No output, no error, no timeout. The process sits at 0% CPU, waiting forever:
+Your application using `client.messages.stream()` or `client.messages.create({{ stream: true }})` freezes. No output, no error, no timeout. The process sits at 0% CPU, waiting forever:
 
 ```bash
 $ ps aux | grep node
@@ -106,9 +105,9 @@ const client = new Anthropic();
 
 async function robustStream(
   params: Anthropic.MessageCreateParamsStreaming,
-  options: {% raw %}{ idleTimeoutMs?: number; maxRetries?: number }{% endraw %} = {}
+  options: { idleTimeoutMs?: number; maxRetries?: number } = {}
 ): Promise<Anthropic.Message> {
-  const {% raw %}{ idleTimeoutMs = 60_000, maxRetries = 3 }{% endraw %} = options;
+  const { idleTimeoutMs = 60_000, maxRetries = 3 } = options;
 
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     const controller = new AbortController();
@@ -152,7 +151,7 @@ async function robustStream(
 const message = await robustStream({
   model: "claude-sonnet-4-6",
   max_tokens: 4096,
-  messages: [{% raw %}{ role: "user", content: "Explain quantum computing" }{% endraw %}],
+  messages: [{ role: "user", content: "Explain quantum computing" }],
   stream: true,
 });
 ```

@@ -442,7 +442,7 @@ Start integrating Claude Code into your ZenML projects today, you'll ship faster
 ---
 
 Next Steps: Explore ZenML's integration with other MLOps tools like MLflow, Kubeflow, and Airflow. Claude Code can help you understand and implement these integrations for a complete end-to-end ML workflow.
-{% endraw %}
+
 
 ---
 
@@ -467,3 +467,4 @@ Related Reading
 - [Claude Code for Mage AI Pipeline Workflow Guide](/claude-code-for-mage-ai-pipeline-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

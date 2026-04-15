@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Chrome Lighthouse provides comprehensive audits for performance, accessibility, progressive web app compliance, SEO, and best practices. A higher Lighthouse score directly correlates with better user experience, improved search rankings, and increased conversion rates. This guide covers actionable techniques to improve your Chrome Lighthouse score across all core metrics.
 
@@ -651,4 +651,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

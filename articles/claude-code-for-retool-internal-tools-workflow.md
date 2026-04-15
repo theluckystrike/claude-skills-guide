@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Retool has transformed how teams build internal tools, but integrating AI assistance into your Retool workflow can speed up your development velocity. This guide shows you how to use Claude Code to accelerate every phase of Retool internal tools development, from initial prototyping to complex API integrations and query optimization.
 
 Why Combine Claude Code with Retool?
@@ -230,7 +229,7 @@ Integrating Claude Code into your Retool development workflow transforms interna
 
 The key is establishing clear context about your Retool resources and following security best practices like parameterized queries. With these patterns in place, you'll wonder how you built Retool apps without AI assistance.
 
-{% endraw %}
+
 
 ---
 
@@ -255,3 +254,4 @@ Related Reading
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

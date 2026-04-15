@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code Cloudinary Image Transformation Workflow Guide
 
 Cloudinary's image transformation API is a powerhouse for developers who need dynamic image processing without managing infrastructure. When combined with Claude Code's skill system, you can create intelligent workflows that understand image contexts, apply appropriate transformations, and deliver optimized assets automatically. This guide walks you through building Claude Code skills that harness Cloudinary's full transformation capabilities.
@@ -151,7 +151,7 @@ When deploying Cloudinary skills in production environments, follow these guidel
 Claude Code skills that understand Cloudinary's transformation API enable powerful image processing workflows without manual intervention. By encoding transformation knowledge into reusable skills, you create assistants that intelligently handle image optimization, format selection, responsive image generation, and complex compositions. Start with basic transformations, then progressively add context-awareness and advanced features as your skills mature.
 
 The combination of Claude Code's understanding capabilities and Cloudinary's transformation engine represents a significant step toward fully automated asset management, letting developers focus on building while Claude handles the image complexity.
-{% endraw %}
+
 
 ---
 

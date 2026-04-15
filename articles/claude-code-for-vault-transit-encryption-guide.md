@@ -12,7 +12,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Vault Transit Encryption Guide
 
 HashiCorp Vault's Transit secrets engine provides encryption as a service, allowing developers to encrypt and decrypt data without managing encryption keys directly. When combined with Claude Code, you can implement solid encryption workflows that are both secure and easy to manage. This guide shows you how to integrate Claude Code with Vault Transit for practical encryption operations.
@@ -317,7 +317,7 @@ Vault Transit encryption combined with Claude Code provides a powerful solution 
 Start with basic encryption operations, then expand to key rotation and batch processing as your needs grow. The combination of Vault's solid encryption infrastructure and Claude Code's automation capabilities makes securing sensitive data accessible to developers at any level.
 
 Remember to always follow security best practices: use separate keys for different data types, implement regular key rotation, and maintain audit logs for compliance. With these patterns in place, you can confidently handle sensitive data encryption in your applications.
-{% endraw %}
+
 
 ---
 

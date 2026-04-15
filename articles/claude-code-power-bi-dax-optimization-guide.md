@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 Power BI reports that feel sluggish often have one culprit: inefficient DAX calculations. Whether you are building complex financial models or real-time dashboards, the difference between a report that loads instantly and one that hangs often comes down to how your DAX expressions are written. This guide shows you how to use Claude Code to analyze, optimize, and refactor DAX formulas for production-grade Power BI deployments.
 
@@ -195,4 +195,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

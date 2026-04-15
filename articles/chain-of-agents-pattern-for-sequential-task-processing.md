@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chain of Agents Pattern for Sequential Task Processing
 
 Large language models excel at individual tasks, but complex workflows often require multiple specialized operations that must execute in sequence. The chain of agents pattern addresses this challenge by coordinating multiple AI agents, each handling a specific stage of a workflow. This approach transforms Claude Code from a single conversational assistant into a powerful orchestration engine capable of executing sophisticated, multi-step processes.
@@ -293,7 +293,7 @@ The chain of agents pattern transforms Claude Code into a flexible workflow orch
 The key is treating each agent as a focused specialist, passing clear outputs between stages, and using Claude Code's conversational context to maintain workflow state. Define your inter-stage schemas before writing prompts, validate at every checkpoint, and store intermediate outputs so failures are recoverable. These engineering practices lift a collection of chained prompts from a fragile script into a production-grade automation system.
 
 This pattern unlocks automation scenarios that go far beyond what any single AI assistant could achieve alone, and it scales cleanly as your workflows grow more complex.
-{% endraw %}
+
 
 ---
 

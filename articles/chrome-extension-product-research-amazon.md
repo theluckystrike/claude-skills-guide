@@ -12,7 +12,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension for Amazon Product Research
 
 Product research on Amazon requires gathering data from multiple pages, tracking price history, analyzing reviews, and identifying trends. For developers and power users, building a custom Chrome extension automates these tasks and provides personalized workflows. This guide covers the architecture, implementation patterns, and practical considerations for creating Amazon product research extensions.
@@ -398,4 +398,4 @@ Reviews paginated across multiple pages: The extension can only read reviews on 
 
 AI analysis of reviews hitting token limits: Amazon review sections can contain hundreds of reviews. Sample a random subset of 15-20 reviews that represent the rating distribution (5 five-star, 5 three-star, 5 one-star) rather than sending all reviews.
 
-{% endraw %}
+

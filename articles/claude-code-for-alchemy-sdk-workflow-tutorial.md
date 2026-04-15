@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Alchemy SDK Workflow Tutorial
 
 Building blockchain applications requires managing complex API interactions, monitoring network events, and handling sensitive operations like transaction signing. Integrating Claude Code with Alchemy SDK creates a powerful development environment where you can automate repetitive tasks, debug smart contract interactions, and build solid dApp backends using natural language commands. This tutorial walks you through setting up and maximizing this workflow combination.
@@ -234,7 +234,7 @@ Use Alchemy's webhook notifications: For production monitoring, configure Alchem
 Integrating Claude Code with Alchemy SDK transforms blockchain development from manual API manipulation into conversational task execution. By describing your requirements naturally, you can generate sophisticated blockchain queries, build monitoring systems, and debug complex transactions without deep expertise in each Alchemy API method. Start with simple queries, then progressively build more complex workflows as you become comfortable with the integration patterns.
 
 The combination of Claude Code's natural language processing and Alchemy's comprehensive blockchain infrastructure creates a development environment where you focus on what you want to achieve, not the implementation details of getting there.
-{% endraw %}
+
 
 ---
 

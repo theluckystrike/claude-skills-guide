@@ -13,7 +13,7 @@ categories: [guides]
 tags: [chrome, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Referrer Blocking Extension: A Developer's Guide
 
 The HTTP Referrer header has been a staple of web analytics since the early days of the internet. However, it also poses significant privacy concerns and can leak sensitive URL information across domains. For developers and power users, understanding how to control or block the Referrer header in Chrome becomes essential for building privacy-respecting applications and protecting user data.
@@ -507,4 +507,4 @@ Related Reading
 - [AI Podcast Summary Chrome Extension: A Developer's Guide.](/ai-podcast-summary-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

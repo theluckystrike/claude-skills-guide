@@ -403,5 +403,4 @@ Related Reading
 - [Claude Code Community Health Metrics Documentation Workflow](/claude-code-community-health-metrics-documentation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
 {% endraw %}

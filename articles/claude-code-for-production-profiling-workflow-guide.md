@@ -13,7 +13,7 @@ score: 7
 reviewed: true
 ---
 
-{% raw %}
+
 
 Production profiling is essential for maintaining application performance, but it can be overwhelming without the right tools and workflows. This guide shows you how to integrate Claude Code into your profiling workflow to identify bottlenecks faster, analyze complex performance data, and implement effective optimizations.
 
@@ -212,4 +212,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

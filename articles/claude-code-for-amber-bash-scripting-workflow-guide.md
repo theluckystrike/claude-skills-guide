@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Amber: Bash Scripting Workflow Guide
 
 Bash scripting remains one of the most powerful tools in a developer's toolkit. Whether you're automating repetitive tasks, managing server infrastructure, or building complex deployment pipelines, shell scripts provide unmatched flexibility. Claude Code brings AI assistance directly into your terminal, transforming how you write and debug bash scripts. This guide walks you through practical workflows that will accelerate your bash scripting productivity.
@@ -476,7 +476,7 @@ The comparison table at the start of this guide highlights an important principl
 The best way to build this skill is to start every new script with a Claude session. Describe what you need. Review what it generates. Ask follow-up questions about anything you don't understand. Over time you'll internalize the patterns Claude consistently recommends, and your manual bash scripting will improve alongside your AI-assisted work.
 
 Remember that Claude Code is a partner in your development process, it handles the heavy lifting while you maintain control over your scripts' behavior. Experiment with different workflows, find what works best for your projects, and enjoy the efficiency gains of AI-assisted bash scripting.
-{% endraw %}
+
 
 ---
 

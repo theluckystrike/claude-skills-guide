@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 The Language Server Protocol (LSP) has revolutionized how development tools provide intelligent code assistance. By standardizing communication between editors and language services, LSP enables features like autocomplete, go-to-definition, symbol search, and real-time diagnostics across any language and editor combination. For developers working with Claude Code, integrating LSP workflows can dramatically enhance your coding experience by combining Claude's AI capabilities with the precise code intelligence that LSP provides.
 
@@ -145,4 +145,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 Apache Flink has emerged as the leading framework for real-time stream processing, enabling developers to build sophisticated event-driven applications that process millions of events per second. This comprehensive tutorial demonstrates how to use Claude Code to accelerate your Flink development workflow, from initial setup to production deployment.
 
@@ -232,7 +232,7 @@ Apache Flink enables powerful real-time processing capabilities, and Claude Code
 
 Start with simple pipelines and gradually incorporate advanced features like complex event processing, stateful streaming, and exactly-once guarantees. With Claude Code assistance, you'll have expert guidance at every step of your Flink journey.
 
-{% endraw %}
+
 
 ---
 

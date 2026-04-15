@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Cloudflare Workers KV Workflow
 
 Building serverless applications with Cloudflare Workers and KV storage becomes remarkably efficient when you use Claude Code's capabilities. This guide walks you through creating a complete workflow for managing key-value data in Cloudflare Workers using Claude Code as your development partner, from initial project setup through production deployment patterns.
@@ -431,7 +431,7 @@ When developing Cloudflare Workers KV applications with Claude Code, follow thes
 Claude Code significantly accelerates Cloudflare Workers KV development by generating boilerplate code, suggesting optimizations, and helping you implement best practices. The key is learning to communicate your requirements clearly, describe what you want to achieve, and Claude Code will help you build solid, production-ready KV workflows.
 
 Start with simple CRUD operations, then gradually add caching, batch processing, and migration capabilities as your application grows. Use Claude Code to help you navigate architectural decisions like when to use KV versus Durable Objects, and to generate the test scripts that give you confidence before every deployment. The combination of Cloudflare's global edge network and Claude Code's development assistance creates a powerful platform for building fast, scalable serverless applications that respond to users from the nearest edge location worldwide.
-{% endraw %}
+
 
 ---
 

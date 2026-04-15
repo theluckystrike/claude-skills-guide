@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Anvil Local Fork Workflow
 
 When developing Ethereum smart contracts, having a reliable local testing environment is essential. Anvil, part of the Foundry toolkit, provides a local Ethereum node with fork capabilities that let you interact with mainnet contracts without spending real ETH. Combined with Claude Code, you can create a powerful, AI-assisted development workflow that accelerates prototyping, debugging, and testing.
@@ -210,7 +210,7 @@ Combining Claude Code with Anvil's local fork workflow gives you a powerful deve
 Start with simple interactions, gradually incorporate more complex scenarios, and soon you'll have a streamlined workflow that accelerates your smart contract development while reducing errors and friction.
 
 The key is treating Claude Code as a development partner that understands both your intent and the technical details of Ethereum development. With practice, you'll find yourself moving faster and with more confidence in your smart contract projects.
-{% endraw %}
+
 
 ---
 

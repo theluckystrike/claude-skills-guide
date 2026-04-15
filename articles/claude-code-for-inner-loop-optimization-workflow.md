@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Inner Loop Optimization Workflow
 
 The inner development loop, the cycle of writing code, building, testing, and debugging, directly impacts your productivity. Every second spent waiting for builds or manually running tests breaks your flow state. Claude Code offers powerful techniques to compress this loop, giving you faster feedback cycles and more time for actual problem-solving.
@@ -279,7 +279,7 @@ To optimize your inner loop with Claude Code:
 These techniques can reduce your inner loop from minutes to seconds for most changes. The key is making every operation as targeted and parallel as possible.
 
 Start with one optimization, targeted tests, for example, and gradually add more. You'll notice the difference in your flow state almost immediately.
-{% endraw %}
+
 
 ---
 

@@ -13,8 +13,8 @@ reviewed: true
 score: 8
 render_with_liquid: false
 ---
-{% raw %}
 
+{% raw %}
 Developer data, including code repositories, configuration files, SSH keys, database dumps, and environment secrets, requires encryption that goes far beyond basic cloud backup. A data breach or ransomware attack that exposes your private keys or production credentials can be catastrophic. This guide evaluates encrypted backup solutions based on zero-knowledge architecture, developer integration, and production-ready security, with enough technical depth to help you make a confident choice.
 
 ## What Developers Need in a Backup Solution

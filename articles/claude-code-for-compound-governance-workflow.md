@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Compound Governance Workflow
 
 Automating decentralized governance is one of the most powerful use cases for Claude Code in the Web3 space. Compound's governance model, which relies on proposers, delegates, and executors, lends itself perfectly to Claude-assisted automation. This guide walks you through building a complete governance workflow using Claude Code, from drafting proposals to executing passed measures.
@@ -373,7 +373,7 @@ To implement a complete Compound governance workflow with Claude Code:
 9. Always follow security best practices for key management and use dry-run mode during development
 
 Claude Code transforms governance from a manual, error-prone process into a reliable, auditable workflow. By treating governance operations as code-configured actions, you gain repeatability and safety in protocol management.
-{% endraw %}
+
 
 ---
 

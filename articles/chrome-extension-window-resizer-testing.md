@@ -13,7 +13,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Chrome Extension Window Resizer Testing: A Practical Guide
 
 Testing window resizing behavior in Chrome extensions presents unique challenges that differ from traditional web application testing. Whether you are building a side panel extension, a popup that needs responsive layouts, or an extension that manipulates browser window dimensions, understanding how to properly test these interactions is essential for delivering a polished user experience.
@@ -240,4 +240,4 @@ Related Reading
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

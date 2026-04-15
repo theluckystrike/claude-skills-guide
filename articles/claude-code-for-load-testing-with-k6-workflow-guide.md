@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for Load Testing with K6: Script Generation and Result Analysis
 
 Load testing is critical for building resilient applications, but writing comprehensive K6 test scripts from scratch and making sense of the output can be time-consuming. This guide focuses on using Claude Code as an AI-assisted authoring and analysis tool, covering how to prompt Claude Code to generate K6 scripts, create realistic user scenarios, and interpret test results to pinpoint performance bottlenecks.
@@ -300,7 +300,7 @@ Start with lenient thresholds and tighten them as you establish baseline perform
 ## Conclusion
 
 Integrating Claude Code with K6 transforms load testing from a manual, time-intensive process into an AI-assisted workflow. Use Claude Code to generate scripts rapidly, analyze results intelligently, and maintain comprehensive test coverage. Start with simple API tests and gradually build complex user scenarios as your confidence grows.
-{% endraw %}
+
 
 ---
 

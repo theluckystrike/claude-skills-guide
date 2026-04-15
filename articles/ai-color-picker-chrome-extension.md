@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 If you have ever spent minutes clicking through color swatches trying to find the exact shade that matches your design system, you understand why AI color picker Chrome extensions have become essential tools for modern web developers. These extensions combine the simplicity of a traditional color picker with intelligent color suggestion, palette generation, and accessibility checking, all powered by machine learning.
 
 ## What Makes an AI Color Picker Different
@@ -209,4 +209,4 @@ Related Reading
 - [AI Competitive Analysis Chrome Extension: A Developer's Guide](/ai-competitive-analysis-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

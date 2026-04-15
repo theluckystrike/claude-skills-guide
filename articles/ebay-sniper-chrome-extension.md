@@ -12,7 +12,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Building an eBay Sniper Chrome Extension: A Developer's Guide
 
 If you're an eBay power user or developer interested in building automation tools for online auctions, understanding how to create an eBay sniper Chrome extension opens up powerful possibilities. This guide walks you through the technical implementation of a Chrome extension that monitors listings, tracks pricing trends, and automates bid placement.
@@ -274,4 +274,4 @@ Related Reading
 - [AI Competitive Analysis Chrome Extension: A Developer's Guide](/ai-competitive-analysis-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

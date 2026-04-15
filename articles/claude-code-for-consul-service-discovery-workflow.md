@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 
 ## Introduction
 
@@ -386,7 +386,7 @@ Key takeaways from this guide include understanding Consul's core concepts, impl
 
 Remember to start with a single-node development setup, thoroughly test your health check configurations, and gradually scale to production clusters while maintaining security best practices throughout.
 
-{% endraw %}
+
 
 ---
 

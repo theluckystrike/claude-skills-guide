@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Engineering wikis are the backbone of knowledge sharing in modern development teams. Whether you're using Confluence, Notion, GitHub Wiki, or a custom solution, maintaining accurate and up-to-date documentation is critical. However, the manual effort required to keep wikis current often leads to stale content and knowledge silos. This is where Claude Code transforms your documentation workflow.
 
 ## Why Claude Code for Wiki Workflows
@@ -280,7 +279,7 @@ Next Steps:
 - Build a custom skill for your most common documentation tasks
 - Integrate wiki generation into your deployment pipeline
 
-{% endraw %}
+
 
 ---
 
@@ -305,3 +304,4 @@ Related Reading
 - [Claude Code for Wiki Analytics Workflow Tutorial Guide](/claude-code-for-wiki-analytics-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

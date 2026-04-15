@@ -13,7 +13,7 @@ categories: [guides]
 tags: [stockx, price tracking, chrome, claude-skills]
 ---
 
-{% raw %}
+
 
 ## Chrome Extension StockX Price Tracker: Monitor Sneaker Market Prices in Real-Time
 
@@ -181,4 +181,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-{% endraw %}
+

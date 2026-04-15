@@ -15,7 +15,6 @@ render_with_liquid: false
 ---
 
 {% raw %}
-
 Fresh is Deno's official web framework, a modern, island-based framework that delivers zero-config TypeScript applications with excellent performance. Combined with Claude Code, the AI-powered CLI companion, you can accelerate Fresh development significantly. This guide walks you through practical workflows to build, debug, and deploy Fresh applications using Claude Code.
 
 Why Combine Fresh with Claude Code?
@@ -268,7 +267,7 @@ Claude Code and Fresh form a powerful combination for modern web development. Fr
 Start with a simple route, add an interactive island, and progressively enhance your application. Claude Code guides you through each step, ensuring you follow Fresh best practices while maintaining full control over your codebase.
 
 Explore Fresh's rich ecosystem, integrations with Tailwind, database adapters, and middleware, while letting Claude Code handle the boilerplate and accelerate your productivity.
-{% endraw %}
+
 
 ---
 
@@ -293,3 +292,4 @@ Related Reading
 - [Claude Code for Nitric Cloud Framework Workflow](/claude-code-for-nitric-cloud-framework-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+{% endraw %}

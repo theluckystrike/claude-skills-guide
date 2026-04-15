@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Chrome extension gift card balance checkers are specialized browser tools that help users retrieve remaining balances on gift cards from various retailers. For developers interested in building such extensions, understanding the underlying mechanisms, API interactions, and practical implementation patterns is essential. This guide covers the technical aspects of creating gift card balance checker extensions.
 
 ## How Gift Card Balance Checking Works
@@ -299,4 +299,4 @@ Related Reading
 - [Chrome Extension Readability Score Checker: A Developer Guide](/chrome-extension-readability-score-checker/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-{% endraw %}
+

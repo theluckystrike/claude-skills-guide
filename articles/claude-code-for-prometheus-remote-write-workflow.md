@@ -13,7 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 ---
 
-{% raw %}
+
 Claude Code for Prometheus Remote Write Workflow
 
 Prometheus Remote Write has become the standard protocol for sending metric data from various sources to centralized Prometheus-compatible backends. Integrating Claude Code into this workflow can dramatically improve how you configure, debug, and maintain your observability infrastructure. This guide walks you through practical approaches to use Claude Code for Prometheus Remote Write operations. from initial setup and configuration generation through production-grade debugging and tuning.
@@ -336,7 +336,7 @@ When deploying Remote Write in production environments, consider these recommend
 Integrating Claude Code with Prometheus Remote Write workflow empowers developers to build more reliable observability pipelines. From configuration generation to debugging complex issues, Claude Code serves as an invaluable assistant throughout the entire lifecycle of your monitoring infrastructure.
 
 By using Claude Code's capabilities. reading your existing configuration files, executing diagnostic commands, generating validated YAML, and analyzing metric patterns. you can automate repetitive configuration tasks, quickly diagnose problems, and focus on building applications rather than wrestling with infrastructure complexity. The combination of Claude Code's contextual understanding and Prometheus Remote Write's flexible protocol gives you a powerful foundation for scalable, maintainable observability.
-{% endraw %}
+
 
 ---
 

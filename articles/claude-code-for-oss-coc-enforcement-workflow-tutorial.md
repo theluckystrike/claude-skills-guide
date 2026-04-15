@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 Claude Code for OSS CoC Enforcement Workflow Tutorial
 
 Open source communities thrive when contributors feel safe and respected. A well-enforced Code of Conduct (CoC) is essential for healthy projects, but manually managing violations can be time-consuming and emotionally draining. This tutorial shows you how to build automated CoC enforcement workflows using Claude Code skills, helping maintainers handle reports consistently while reducing administrative burden.
@@ -217,7 +217,7 @@ Automating your CoC enforcement workflow with Claude Code doesn't replace human 
 The key is starting simple: document your current process, identify repetitive tasks, and let Claude Code handle the scaffolding. Over time, refine your workflow based on real experiences. Your contributors will appreciate knowing there's a fair, transparent system in place.
 
 Remember: enforcement isn't about punishment. It's about creating an environment where everyone can contribute confidently. A well-designed workflow makes that possible.
-{% endraw %}
+
 
 ---
 

@@ -13,7 +13,7 @@ reviewed: true
 score: 8
 ---
 
-{% raw %}
+
 
 If you've been working with Claude Code for any substantial amount of refactoring work, you've likely encountered a frustrating pattern: imports that worked perfectly before suddenly break after a refactoring session. This common issue happens because Claude Code, despite its impressive code understanding capabilities, doesn't always track all the subtle changes happening across your codebase during large-scale refactoring operations. The good news is that with the right strategies, skills, and workflows, you can minimize or even eliminate these import-related headaches entirely.
 
@@ -111,7 +111,7 @@ By implementing these strategies, custom skills, project configuration, pre-refa
 
 Remember that Claude Code works best when it has comprehensive context about your project. The more accurately you can describe your module structure, import patterns, and build configuration, the better it will handle import-related tasks during refactoring operations.
 
-{% endraw %}
+
 
 ---
 

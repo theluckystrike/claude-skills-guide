@@ -13,7 +13,7 @@ reviewed: true
 score: 7
 ---
 
-{% raw %}
+
 Claude Code for Zig Programming Language Workflow
 
 Zig is a systems programming language known for its simplicity, performance, and zero-cost abstractions. When combined with Claude Code, you can dramatically accelerate your Zig development workflow, from scaffolding projects to debugging complex memory issues. This guide shows you how to integrate Claude Code effectively into your Zig programming practice.
@@ -214,7 +214,7 @@ pub fn encode(src: []const u8, allocator: std.mem.Allocator) ![]u8 {
 Claude Code transforms Zig development by handling boilerplate, explaining complex patterns, and accelerating your prototyping cycle. The combination of Zig's explicit design philosophy and Claude's code generation capabilities creates a powerful workflow for systems programmers.
 
 Start by integrating Claude into your project scaffolding process, then gradually expand to debugging and pattern generation. As you become more comfortable with Zig's unique features, you'll find Claude increasingly valuable for handling the language's complexity while maintaining control over your code's behavior.
-{% endraw %}
+
 
 ---
 
