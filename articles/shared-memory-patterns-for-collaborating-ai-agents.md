@@ -458,6 +458,12 @@ Shared memory patterns transform isolated AI agents into collaborative teams. Cl
 
 By implementing these patterns, you can create AI agent systems that scale collaboration effectively, avoid redundant work, and produce higher quality outcomes through coordinated effort. The patterns described here are not theoretical. they are the same coordination mechanisms used in production multi-agent Claude deployments, adapted for the filesystem-centric model that Claude Code's skill architecture makes natural.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=shared-memory-patterns-for-collaborating-ai-agents)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Multi-Agent Orchestration Patterns Guide](/claude-code-multi-agent-orchestration-patterns-guide/)

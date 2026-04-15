@@ -164,6 +164,12 @@ The best approach? Try both and see which aligns better with your development ph
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-jan-ai-local-assistant)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Difference Between AI Agent and AI Assistant Explained](/difference-between-ai-agent-and-ai-assistant-explained/)

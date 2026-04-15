@@ -279,6 +279,12 @@ Claude Code combined with the T3 stack creates a powerful development environmen
 The key is using Claude Code not just for code generation, but as a pair programmer that understands the T3 stack's conventions and can help you navigate the nuances of type-safe API development.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-t3-stack-trpc-nextjs-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for TanStack Start Workflow Guide](/claude-code-for-tanstack-start-workflow-guide/)

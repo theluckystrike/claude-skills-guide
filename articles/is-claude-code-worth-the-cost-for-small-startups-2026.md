@@ -171,6 +171,12 @@ The real question isn't whether you can afford Claude Code. it's whether you can
 
 Start small, measure results, and scale usage as your team sees value. That's how startups should evaluate any tool: prove it works at small scale before committing resources.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=is-claude-code-worth-the-cost-for-small-startups-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Why Is Claude Code Expensive: Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)

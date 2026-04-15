@@ -294,6 +294,12 @@ Monitor Each Protocol: Each protocol has different performance characteristics. 
 
 Remember to provide clear context about your protocol stack when working with Claude Code, specify which protocols are involved in each task, and use protocol-specific skills for specialized assistance. With these approaches, multi-protocol development becomes significantly more manageable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-across-protocol-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)

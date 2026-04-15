@@ -252,6 +252,12 @@ Never commit API keys to version control. Use [environment variables for Claude 
 
 When handling recipient data, [comply with relevant regulations including GDPR](/claude-code-gdpr-data-privacy-implementation-checklist/) and CAN-SPAM. Provide unsubscribe mechanisms in commercial emails and honor opt-out requests promptly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-sendgrid-email-automation-setup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/). core patterns for authenticating and calling third-party services from skills

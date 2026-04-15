@@ -406,6 +406,12 @@ The answers reveal your highest-priority refactoring targets. Skills that fail m
 
 The goal is a skill ecosystem where individual skills remain maintainable, interchangeable, and testable. mirroring the best practices you'd apply to any software project. A well-designed skill ecosystem lets you swap out implementations, add new capabilities, and debug failures efficiently. These properties become more valuable as the ecosystem grows, which is exactly when you will be glad you invested in them early.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-coupling-and-cohesion-improvement)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Code Complexity Reduction Guide](/claude-code-code-complexity-reduction-guide/). Complexity and coupling/cohesion are related metrics

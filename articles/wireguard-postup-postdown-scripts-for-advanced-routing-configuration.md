@@ -429,6 +429,12 @@ WireGuard's PostUp and PostDown directives transform a simple VPN tunnel into a 
 
 Whether you need a simple kill switch or complex multi-peer routing with policy-based forwarding tables, these hooks provide the flexibility to customize your WireGuard deployment precisely. The key is to treat PostUp and PostDown as complementary pairs, every rule added on up must be removed on down, and to move beyond inline commands to external scripts as your configuration grows in complexity. With good logging, idempotent rule checks, and thorough testing across reboot scenarios, a WireGuard configuration built on solid PostUp/PostDown practices will be both reliable and maintainable over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=wireguard-postup-postdown-scripts-for-advanced-routing-configuration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [WireGuard Performance Tuning for Large File Transfer Optimization Guide](/wireguard-performance-tuning-large-file-transfer-optimization-guide/)

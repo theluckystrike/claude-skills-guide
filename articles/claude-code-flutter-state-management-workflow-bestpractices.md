@@ -464,6 +464,12 @@ Remember to organize your code logically, write tests for your state logic, and 
 
 Start with simple providers and progressively adopt more advanced patterns as your application grows. The initial investment in setting up proper state management will pay dividends in code quality and developer productivity. And when you hit a new pattern or edge case, a well-framed Claude Code prompt describing your existing structure and the behavior you need will get you to working code faster than any documentation search.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-flutter-state-management-workflow-bestpractices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Zustand State Management Workflow](/claude-code-for-zustand-state-management-workflow/)

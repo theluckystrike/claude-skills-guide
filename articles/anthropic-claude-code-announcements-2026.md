@@ -262,6 +262,10 @@ For teams adopting these new capabilities, start with one skill that addresses y
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=anthropic-claude-code-announcements-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Enterprise Announcements 2026: What's New.](/claude-code-enterprise-announcements-2026/)

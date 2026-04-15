@@ -262,6 +262,12 @@ Test with various image sizes and formats, including edge cases like extremely w
 
 A well-designed social media image resizer extension eliminates repetitive manual work. The patterns outlined here provide a foundation for building extensions that integrate smoothly with users' existing workflows while handling the diverse requirements of modern social platforms.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-social-media-image-resizer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Bulk Social Media Posting: A Developer.](/chrome-extension-bulk-social-media-posting/)

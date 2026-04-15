@@ -195,6 +195,12 @@ Integrating Claude Code with Emacs combines two powerful paradigms: the extensib
 
 Start with the basic integrations outlined here, then customize them to match your specific needs. The beauty of both Emacs and Claude Code is their flexibility, your integration can evolve as your requirements change.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-emacs-workflow-integration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Meilisearch Integration Workflow](/claude-code-for-meilisearch-integration-workflow/)

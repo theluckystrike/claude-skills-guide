@@ -295,6 +295,12 @@ Start with route-based splitting, then progressively add component-level optimiz
 Implement these techniques in your next project and watch your application load times improve dramatically while maintaining a smooth user experience.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-code-splitting-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)

@@ -198,6 +198,12 @@ For power users running automated tasks, the combination of `--allow` flag and p
 
 Remember: the permission system exists to protect you. The goal isn't to eliminate all prompts but to reduce friction for legitimate operations while blocking accidental or malicious actions. A well-configured project should prompt you rarely during normal work and aggressively when something unexpected is attempted.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-code-keep-asking-for-permission-repeatedly)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/). See also

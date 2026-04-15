@@ -381,6 +381,12 @@ This approach eliminates the friction of re-establishing context and ensures con
 
 These tips represent patterns that working developers use daily. Start with one or two that match your current workflow, then gradually incorporate more as they become natural. The goal is not to use every feature, but to identify which capabilities genuinely improve your productivity and eliminate the friction that slows you down.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-tips-for-intermediate-developers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Speed Up Tips for Developers and Power Users in 2026](/chrome-speed-up-tips-2026/)

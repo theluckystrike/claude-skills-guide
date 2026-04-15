@@ -182,6 +182,12 @@ Integrating Claude Code with Prisma Cloud transforms how your team interacts wit
 The combination of Claude Code's flexibility and Prisma Cloud's comprehensive security capabilities creates a powerful platform for modern cloud security operations. Embrace these tools to build a security-aware culture that scales with your organization.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-prisma-cloud-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Twistlock Prisma Cloud Workflow Tutorial](/claude-code-for-twistlock-prisma-cloud-workflow-tutorial/)

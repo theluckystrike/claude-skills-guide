@@ -195,6 +195,12 @@ The MCP prompt server workflow unlocks powerful capabilities for Claude Code use
 
 Start with a simple server serving a few prompts, then iterate based on your actual workflow requirements. The flexibility of MCP makes it easy to evolve your prompt infrastructure as your needs grow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-mcp-prompt-server-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Fly.io MCP Server Deployment Workflow Guide](/fly-io-mcp-server-deployment-workflow-guide/)

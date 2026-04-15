@@ -213,6 +213,12 @@ For teams, Claude Code's skill system offers a unique advantage. the ability to 
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-cursor-2026-detailed-comparison)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Cursor for React Development](/claude-code-vs-cursor-for-react-development/). A focused comparison for React developers

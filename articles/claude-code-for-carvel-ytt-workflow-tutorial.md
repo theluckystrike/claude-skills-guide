@@ -366,6 +366,12 @@ The productivity gain is most visible when dealing with overlay complexity and s
 The key is establishing clear project conventions and maintaining consistent practices across your team. With a well-structured `lib/` directory, a documented schema, and a CI workflow that validates all environments on every PR, Claude becomes an invaluable partner in your ytt workflow rather than just a syntax lookup tool.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-carvel-ytt-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OpenEBS Storage Workflow Tutorial](/claude-code-for-openebs-storage-workflow-tutorial/)

@@ -162,6 +162,12 @@ Claude Code transforms Cloudflare R2 storage from simple object persistence into
 Start with simple workflows like file organization, then progressively add sophistication as you gain confidence in Claude's operation within your specific use case. The combination of R2's cost-effective storage and Claude's AI capabilities creates a powerful foundation for modern application storage needs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cloudflare-r2-storage-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Cloudflare WAF Rules Workflow](/claude-code-for-cloudflare-waf-rules-workflow/)

@@ -155,6 +155,12 @@ Consider creating a skill specifically for your component generation workflow. A
 
 Claude Code transforms the traditionally manual process of converting design sketches into React components. By providing clear context about your design system, describing visual elements precisely, and specifying interactive behaviors, you can generate production-ready components in minutes rather than hours. The key is structured prompting and maintaining consistent design context across your prompts.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sketch-to-react-component-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Resend React Email Component Workflow](/claude-code-resend-react-email-component-workflow/)

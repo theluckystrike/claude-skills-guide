@@ -249,6 +249,10 @@ The focus on skill interoperability signals a shift toward treating Claude Code 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-march-2026-update-what-is-new)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Updates March 2026: What Developers Need to Know](/anthropic-model-context-protocol-updates-march-2026/)

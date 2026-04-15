@@ -311,6 +311,12 @@ Start with Preferences DataStore for simple key-value needs, and migrate to Prot
 Remember to test your DataStore implementations thoroughly, especially when migrating from SharedPreferences, and always implement proper error handling for production-ready applications.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-android-datastore-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Switching from Android Studio Workflow: A Developer's Guide](/switching-from-android-studio-workflow/)

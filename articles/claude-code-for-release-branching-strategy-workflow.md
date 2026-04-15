@@ -211,6 +211,12 @@ Claude Code transforms release branching from a manual, error-prone process into
 The result is faster releases with fewer errors, consistent branch management, and more time for actual development work.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-release-branching-strategy-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Changesets Monorepo Release Workflow](/claude-code-for-changesets-monorepo-release-workflow/)

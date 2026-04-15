@@ -160,6 +160,10 @@ Claude Code transforms Drizzle ORM schema management from a manual, error-prone 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=using-claude-code-with-drizzle-orm-schema-management)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/). Full CRUD, transactions, advanced queries, testing, and performance optimization

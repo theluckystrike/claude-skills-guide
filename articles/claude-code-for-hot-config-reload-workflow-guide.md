@@ -167,6 +167,12 @@ Finally, separate concerns between development and production configurations. Us
 
 Implementing hot config reload with Claude Code involves three core components: file watching to detect changes, reload handlers to apply new configurations, and skill interfaces to manage the process naturally. Start by setting up a simple file watcher, then build a Claude Code skill to handle reload commands, and finally integrate automatic detection for smooth operation. With these pieces in place, you'll dramatically improve your development velocity while maintaining full control over how configurations are managed and applied.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-hot-config-reload-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Hot Reload Development Setup](/claude-code-hot-reload-development-setup/)

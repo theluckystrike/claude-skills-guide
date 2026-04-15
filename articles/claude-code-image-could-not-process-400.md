@@ -126,6 +126,12 @@ The error appears after running 'npm build' on line 47 of build.js"
 - **Re-encode screenshots**: use `convert image.png -strip clean.png` to remove problematic metadata
 - **Prefer text over images**: error messages, logs, and code are better shared as text
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-image-could-not-process-400)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude API Error 400 Invalid Request Fix](/claude-api-error-400-invalidrequesterror-explained/)

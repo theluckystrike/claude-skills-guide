@@ -166,6 +166,12 @@ Store skill definitions in platform-agnostic formats where possible. Markdown-ba
 
 Backing up Claude skills requires more than copying files. By implementing version control, automated backups, credential management, and tested recovery procedures, you protect the value of your skill investments. The time spent building these systems pays dividends when disaster strikes, and it will.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-disaster-recovery-and-backup-strategies)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/). Use dotfiles management as the foundation for skill backup and cross-machine sync.

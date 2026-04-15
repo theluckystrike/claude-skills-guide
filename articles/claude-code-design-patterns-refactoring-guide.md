@@ -189,6 +189,12 @@ Applying design patterns to Claude skills follows the same principles that make 
 
 The result is skills that are easier to understand, test, and extend. Your future self and your team will thank you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-design-patterns-refactoring-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/). Design patterns implement DRY and SOLID principles

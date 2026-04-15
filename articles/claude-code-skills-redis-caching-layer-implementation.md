@@ -280,6 +280,10 @@ Start with simple key-value caching, then expand to hashes for session data and 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-redis-caching-layer-implementation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/). coordinate agents with Redis as the shared message bus

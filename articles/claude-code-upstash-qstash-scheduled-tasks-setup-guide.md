@@ -397,6 +397,12 @@ Upstash QStash combined with Claude Code creates a powerful system for managing 
 The combination of small payloads, idempotent handlers, and structured logging gives you a scheduled task system that is reliable enough for production use and observable enough to debug when something goes wrong. With these practices in place, you can schedule tasks confidently and spend your time on product logic rather than infrastructure maintenance.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-upstash-qstash-scheduled-tasks-setup-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Deno Deploy Serverless Runtime Guide](/claude-code-for-deno-deploy-serverless-runtime-guide/)

@@ -270,6 +270,12 @@ The Chrome ad-blocking ecosystem has diversified significantly, in large part be
 
 Evaluate your specific needs, whether that's minimal resource usage, privacy automation, corporate deployment, or full customization, to select the best alternative for your workflow. When in doubt, uBlock Origin Lite is the safest starting point: it retains the original project's quality and filter lists in a form that will continue working as Chrome evolves.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ublock-origin-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

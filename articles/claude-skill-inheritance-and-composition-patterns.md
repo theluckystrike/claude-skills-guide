@@ -246,6 +246,12 @@ Claude skill inheritance and composition patterns enable powerful workflow autom
 
 Whether you're combining the pdf skill with tdd for documentation workflows, or building comprehensive code review systems with multiple specialized skills, these patterns provide the foundation for sophisticated AI-assisted development processes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skill-inheritance-and-composition-patterns)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Dependency Injection Patterns](/claude-skill-dependency-injection-patterns/). Complement inheritance and composition patterns with dependency injection for more testable skill architectures.

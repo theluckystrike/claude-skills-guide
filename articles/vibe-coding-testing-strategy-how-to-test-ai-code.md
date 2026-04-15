@@ -382,6 +382,12 @@ The goal is confidence at speed, verifying AI code works without slowing down th
 
 Apply risk-based triage before each coding session, maintain a prompt pattern library for consistent test quality, and treat performance benchmarks as first-class citizens alongside functional tests. With these habits in place, vibe coding sessions can move faster and more safely than traditional development, because the feedback loop between generation and verification is tight, automated, and well-understood.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=vibe-coding-testing-strategy-how-to-test-ai-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Vibe Coding for Web Apps: NextJS + Vercel Guide](/vibe-coding-for-web-apps-nextjs-vercel-guide/)

@@ -425,6 +425,10 @@ Start with the preview deployment workflow, then gradually add production safegu
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vercel-deployment-nextjs-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). DevOps skills for managing preview and production deployments

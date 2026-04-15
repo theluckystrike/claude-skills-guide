@@ -391,6 +391,12 @@ The right implementation depends on how deep your isolation needs go. For most d
 
 The investment in setting up workspaces, whether through a third-party extension or a custom build, pays back quickly. Even saving five minutes per context switch across a day with multiple project jumps adds up to meaningful time recovered each week.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-workspace-switcher)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)

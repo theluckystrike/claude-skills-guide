@@ -252,6 +252,12 @@ For unpublished research, prefer self-hosted grammar solutions or services that 
 
 The ecosystem around AI-powered writing assistance continues to evolve rapidly. Building one yourself gives you full control over the user experience and lets you customize behavior for specific use cases, whether that's technical documentation, code comments, or creative writing.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-grammar-checker-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Color Contrast Checker: A Developer Guide](/chrome-extension-color-contrast-checker/)

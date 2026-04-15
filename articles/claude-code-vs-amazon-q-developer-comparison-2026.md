@@ -60,6 +60,10 @@ Claude Code with skills like `/tdd` excels at application-level development wher
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-amazon-q-developer-comparison-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Claude Code's skills ecosystem is a key differentiator from Amazon Q Developer; this guide maps out what is available

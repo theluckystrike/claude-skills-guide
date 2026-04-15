@@ -256,6 +256,12 @@ Provide actionable recovery paths. Always give users a way forward, whether retr
 Remix's error boundaries combined with nested routes give you precise control over error handling at every level of your application. By strategically placing boundaries in your route hierarchy, you create resilient applications where failures are contained, user experience remains positive, and debugging information is captured. Start with parent-level boundaries for navigation stability, then add granular boundaries for feature-specific error handling as your application grows.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-remix-error-boundaries-nested-routes-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Remix Error Boundary Workflow Guide](/claude-code-for-remix-error-boundary-workflow-guide/)

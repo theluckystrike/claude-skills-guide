@@ -287,6 +287,12 @@ Claude Code transforms soak testing from a manually intensive process into an au
 
 Remember: the best soak tests are those that closely mirror real-world usage patterns over time. Let Claude Code help you build tests that truly stress your system in ways that matter.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-soak-testing-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

@@ -205,6 +205,12 @@ For comprehensive security automation, combine Checkov with other Claude Code ca
 
 This multi-skill approach turns infrastructure security from a point-in-time scan into a continuous improvement practice. Claude becomes your security partner, running scans, explaining findings, generating fixes, and documenting the remediation process.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-checkov-security-scanning-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Container Security Scanning Workflow Guide](/claude-code-container-security-scanning-workflow-guide/)

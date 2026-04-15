@@ -335,6 +335,12 @@ Making Claude Code respect module boundaries requires a combination of configura
 
 These approaches work together to give you precise control over Claude's context, regardless of whether you're using xlsx for data processing, canvas-design for UI prototyping, or any other skill in your workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-respect-module-boundaries)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/). Context management across module boundaries

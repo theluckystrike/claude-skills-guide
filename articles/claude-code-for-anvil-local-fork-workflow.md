@@ -212,6 +212,12 @@ Start with simple interactions, gradually incorporate more complex scenarios, an
 The key is treating Claude Code as a development partner that understands both your intent and the technical details of Ethereum development. With practice, you'll find yourself moving faster and with more confidence in your smart contract projects.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-anvil-local-fork-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Fork and Pull Request Workflow Guide](/claude-code-for-fork-and-pull-request-workflow-guide/)

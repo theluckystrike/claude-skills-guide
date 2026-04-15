@@ -344,6 +344,10 @@ Start with simple retry logic, add checkpointing for longer workflows, and progr
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-multi-agent-error-recovery-strategies)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Opus Orchestrator-Sonnet-Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/). Design fault-tolerant architectures with orchestrators that handle worker failures

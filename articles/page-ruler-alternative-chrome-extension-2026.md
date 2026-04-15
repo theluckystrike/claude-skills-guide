@@ -219,6 +219,12 @@ Measurely and PixelPerfect Pro stand out for their developer-friendly features, 
 
 Experiment with a few options to find what integrates best with your development process, the right measurement tool can save hours of debugging time and ensure your implementations match specifications precisely.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=page-ruler-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

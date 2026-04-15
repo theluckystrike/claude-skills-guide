@@ -234,6 +234,12 @@ Combining multiple Claude skills in one project transforms Claude Code from a si
 
 The best results come from skills that complement each other well. A TDD skill pairs naturally with documentation and security skills. A data analysis skill works alongside visualization and reporting skills. Identify your project's core needs, select skills that address each need, and compose them into cohesive pipelines.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-combine-multiple-claude-skills-in-one-project)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/)

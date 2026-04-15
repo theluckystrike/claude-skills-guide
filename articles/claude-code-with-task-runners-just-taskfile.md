@@ -384,6 +384,12 @@ Claude Code excels at understanding intent and generating appropriate commands. 
 
 The workflow becomes: describe your goal to Claude, which reads your Taskfile, identifies the appropriate task, and executes it with proper dependencies. Complex multi-step processes collapse into single commands. The Taskfile also acts as a shared vocabulary. every developer on the project, and every Claude Code session, speaks the same task names regardless of the underlying toolchain.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-with-task-runners-just-taskfile)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Task Prioritizer Chrome Extension: A Practical Guide for Developers](/ai-task-prioritizer-chrome-extension/)

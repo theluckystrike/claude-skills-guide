@@ -559,6 +559,12 @@ Enforcing Conventional Commits through Claude Code skills, Git hooks, and CI pip
 The real payoff emerges over months of accumulated history: a release process where `npm run release` generates a correct version bump and a fully populated changelog with zero manual effort, and a repository where any developer can understand the shape of the last six months of work at a glance. That is the compounding return on the enforcement infrastructure you build today.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-conventional-commits-enforcement-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Conventional Commits Workflow Guide](/claude-code-for-conventional-commits-workflow-guide/)

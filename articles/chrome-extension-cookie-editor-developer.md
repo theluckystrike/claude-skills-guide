@@ -486,6 +486,12 @@ Common failure reasons:
 
 Building a cookie editor extension requires understanding the Chrome cookies API, proper permission configuration, and security best practices. The methods covered here provide the foundation for creating powerful cookie management tools tailored to your development workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-cookie-editor-developer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Session Storage Editor: Complete.](/chrome-extension-session-storage-editor/)

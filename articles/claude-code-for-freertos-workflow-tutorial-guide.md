@@ -608,6 +608,12 @@ Integrating Claude Code into your FreeRTOS workflow transforms how you develop e
 
 The patterns shown here. static allocation throughout, ISR-safe primitives, watermark monitoring, priority tables, and team skill files. are the foundation of a reliable embedded codebase. Feed Claude Code your FreeRTOSConfig.h, your linker script, and your team skill file at the start of every session, and you will get suggestions that compile, run safely, and fit your project from the first iteration.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-freertos-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

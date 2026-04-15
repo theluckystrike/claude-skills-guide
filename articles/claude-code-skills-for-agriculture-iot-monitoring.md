@@ -223,6 +223,10 @@ The key is defining clear thresholds, providing structured input formats, and sp
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-agriculture-iot-monitoring)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for IoT and Embedded Systems](/claude-skills-for-embedded-systems-iot-firmware/). related patterns for sensor data processing and device management

@@ -171,6 +171,12 @@ Document everything: Use Claude Code to automatically document all actions taken
 Claude Code transforms on-call incident response from a stressful, manual process into an efficient, automated workflow. By investing time in setting up proper skills, integrating with your tooling, and building comprehensive playbooks, you can significantly reduce MTTR while making incident response more manageable for your team.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sre-on-call-incident-response-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Incident Tracking Workflow Tutorial](/claude-code-for-incident-tracking-workflow-tutorial/)

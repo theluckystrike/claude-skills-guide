@@ -181,6 +181,12 @@ Access settings by clicking the gear icon in the DevTools toolbar.
 
 React DevTools transforms how you debug React applications. By mastering these features, you'll identify bugs faster, optimize performance more effectively, and gain deeper insight into how your components work together.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=react-devtools-chrome-extension-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Angular DevTools Chrome Extension Setup: A Complete Guide](/angular-devtools-chrome-extension-setup/)

@@ -345,6 +345,10 @@ Make it executable with `chmod +x .git/hooks/pre-commit`. Now any skill file wit
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skill-yaml-front-matter-parsing-error-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). The canonical reference for valid YAML front matter fields, including all optional configuration keys

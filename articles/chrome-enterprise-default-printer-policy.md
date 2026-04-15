@@ -177,6 +177,12 @@ The key takeaways for implementing these policies effectively:
 - Test policies thoroughly across your target platforms before broad deployment
 - use programmatic deployment tools for consistent policy application at scale
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-default-printer-policy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Bandwidth Management: A Practical Guide](/chrome-enterprise-bandwidth-management/)

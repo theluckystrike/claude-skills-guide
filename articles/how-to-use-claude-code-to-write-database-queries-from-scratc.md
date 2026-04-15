@@ -121,6 +121,12 @@ Claude Code significantly reduces the time and expertise required to write datab
 
 Start with simple queries to build trust in the outputs, then gradually tackle more complex scenarios. Over time, you will find that Claude Code not only generates correct queries but also teaches you new techniques and patterns you can apply independently.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-use-claude-code-to-write-database-queries-from-scratc)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Django ORM Optimization Guide](/claude-code-django-orm-optimization-guide/). See also

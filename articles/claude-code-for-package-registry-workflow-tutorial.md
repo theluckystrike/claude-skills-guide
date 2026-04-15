@@ -231,6 +231,12 @@ Claude Code transforms package registry workflows from manual, error-prone proce
 
 Start with simple workflows like version bumping and dependency checking, then gradually expand to full publication pipelines. The key is maintaining the balance between automation and the oversight necessary to catch issues before they reach your users.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-package-registry-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

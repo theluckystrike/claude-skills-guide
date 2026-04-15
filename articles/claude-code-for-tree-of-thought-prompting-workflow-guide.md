@@ -209,6 +209,12 @@ Tree of Thought prompting transforms Claude Code from a linear problem-solver in
 
 Start by using the `tot-solver` skill for complex tasks, then graduate to custom ToT workflows tailored to your specific domains. The investment in learning ToT patterns pays dividends in solution quality and reasoning transparency.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-tree-of-thought-prompting-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Tree of Thought Reasoning Workflow Guide](/claude-code-for-tree-of-thought-reasoning-workflow-guide/)

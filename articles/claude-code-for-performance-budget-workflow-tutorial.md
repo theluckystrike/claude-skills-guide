@@ -235,6 +235,12 @@ Start small: create the basic audit skill, run it locally, and gradually integra
 
 Remember, the goal isn't to make development slower, it's to make fast applications a sustainable reality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-performance-budget-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GitLab CI Pipeline Docker Registry Tutorial](/claude-code-gitlab-ci-pipeline-docker-registry-tutorial/)

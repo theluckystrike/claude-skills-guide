@@ -205,6 +205,12 @@ Document your cleanup efforts in a CHANGELOG or dedicated notes. This helps team
 Knip combined with Claude Code creates a powerful dead code detection and removal workflow. The integration brings several key advantages: automated scanning during development, intelligent verification before deletion, and systematic cleanup that minimizes risk. By establishing this workflow early in your project and running it consistently, you maintain a cleaner codebase that stays maintainable as it grows. The time invested in setting up this workflow pays dividends through faster builds, smaller bundles, and easier code navigation for your entire team.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-knip-dead-code-finder-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for FZF Fuzzy Finder Workflow Guide](/claude-code-for-fzf-fuzzy-finder-workflow-guide/)

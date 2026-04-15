@@ -278,6 +278,12 @@ Combining Claude Code with huh forms opens up powerful possibilities for buildin
 
 The key is to use Claude Code as an intelligent assistant that enhances user productivity without replacing human decision-making. By following the patterns in this guide, you'll build CLI tools that feel both powerful and approachable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-huh-forms-terminal-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for k9s Kubernetes Terminal Workflow Guide](/claude-code-for-k9s-kubernetes-terminal-workflow-guide/)

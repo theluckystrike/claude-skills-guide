@@ -361,6 +361,12 @@ The extensions you keep should earn their place in your browser. Evaluate them b
 
 For developers, the best extension is the one that does one thing exceptionally well with the minimum resources necessary. Users notice when your extension is fast, and they definitely notice when it isn't.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-slowing-browser)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Sync Slowing Browser: Diagnosis and Solutions for.](/chrome-sync-slowing-browser/)

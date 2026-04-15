@@ -583,6 +583,12 @@ The core implementation is straightforward, but production quality requires atte
 Remember to always provide fallback options for unsupported browsers, and use Claude Code to iterate quickly on your implementation. With these tools and practices, you can create share features that feel natural and effective for your users.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-web-share-api-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)

@@ -351,6 +351,10 @@ Start small, measure results, and expand what works. Within six months, your tea
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=building-ai-coding-culture-in-engineering-teams)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Coding Tool Evaluation Framework for Teams](/ai-coding-tool-evaluation-framework-for-teams/)

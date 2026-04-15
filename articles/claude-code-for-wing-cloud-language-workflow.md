@@ -334,6 +334,12 @@ Claude Code transforms Wing development from manual coding to collaborative crea
 The iterative workflow, describe architecture, generate code, simulate locally, debug with Claude, deploy, fits naturally with how Wing is designed to be used. Start by creating a Wing-specific skill, build up a library of prompt patterns that match your typical workloads, then iterate on your prompts to get exactly the cloud infrastructure you need.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-wing-cloud-language-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beam Cloud ML Workflow Guide](/claude-code-for-beam-cloud-ml-workflow-guide/)

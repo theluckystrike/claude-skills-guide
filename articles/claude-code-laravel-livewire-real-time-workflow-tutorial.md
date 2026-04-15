@@ -390,6 +390,12 @@ Combining Laravel Livewire with Claude Code creates a powerful workflow for buil
 The key to success is understanding when to use each real-time approach, polling for simplicity, WebSockets for instant updates, and proper architectural planning for scalability. With Claude Code guiding your development, you'll build solid real-time features faster than ever before.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-laravel-livewire-real-time-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for WebSocket Real-Time App Development](/claude-code-skills-websocket-real-time-app-development/)

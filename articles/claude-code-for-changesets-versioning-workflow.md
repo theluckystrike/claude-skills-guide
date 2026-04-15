@@ -425,6 +425,12 @@ The `changesets/action` approach. where a "Version Packages" PR accumulates all 
 The key is consistency: write clear changeset descriptions, test locally before pushing, and let Claude handle the repetitive tasks. Your future self (and your users) will thank you when every version tells a clear story of what changed and why.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-changesets-versioning-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Changesets Monorepo Release Workflow](/claude-code-for-changesets-monorepo-release-workflow/)

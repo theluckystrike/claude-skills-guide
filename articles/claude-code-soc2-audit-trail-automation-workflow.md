@@ -260,6 +260,10 @@ Start with the skills and workflows outlined here, then customize them to your o
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-soc2-audit-trail-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code SOC2 Compliance Audit Preparation Guide](/claude-code-soc2-compliance-audit-preparation-guide-2026/). Comprehensive compliance preparation

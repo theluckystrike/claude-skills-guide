@@ -160,6 +160,12 @@ Combining Claude Code with GNU Stow gives you a powerful, reproducible system fo
 
 Your dotfiles are personal, they should evolve with your workflow. With Stow and Claude Code, managing that evolution becomes significantly easier.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-stow-dotfiles-manager-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for ScyllaDB Workflow Tutorial Guide](/claude-code-for-scylladb-workflow-tutorial-guide/)

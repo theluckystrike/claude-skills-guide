@@ -288,6 +288,12 @@ Claude Code transforms data visualization from a manual, time-consuming process 
 The key is to establish consistent patterns early, proper environment setup, standardized figure styling, and automated processing scripts, then let Claude Code handle the iteration and refinement. Your future self will thank you when generating figures for your next publication takes minutes instead of hours.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-data-visualization-workflow-for-researchers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Data Cleaning and Preprocessing Workflow](/claude-code-data-cleaning-and-preprocessing-workflow/)

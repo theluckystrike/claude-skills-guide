@@ -346,6 +346,12 @@ R10 Boot Timeout: Heroku kills dynos that don't bind to `PORT` within 60 seconds
 
 Deploying an MCP server on Heroku bridges the gap between Claude's capabilities and your custom backend services. The platform handles infrastructure concerns, letting you focus on building valuable integrations. With proper configuration and monitoring, your Heroku-hosted MCP server provides a reliable foundation for AI-powered applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=heroku-mcp-server-application-deployment-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

@@ -848,6 +848,12 @@ The key to success is treating Claude Code as a collaborative partner, provide c
 Concretely, the workflow that works best is: describe your model and SLA requirements to Claude Code, let it generate the initial `LitAPI` scaffold with appropriate batching and caching settings, ask it to add observability and tests, then use it to generate the Docker and CI/CD configuration. What would take a senior engineer two to three days to assemble correctly from documentation and Stack Overflow becomes a focused two-to-four hour session. The remaining complexity, tuning batch sizes against your actual traffic patterns, calibrating cache TTLs, setting alert thresholds, requires production data that only your specific deployment can provide.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-litserve-lightning-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

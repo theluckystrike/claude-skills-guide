@@ -146,6 +146,12 @@ Claude Code's indentation behavior is controllable through project settings, Edi
 
 By configuring your indentation preferences once and referencing them consistently, you can focus on writing code rather than constantly fixing formatting. Claude Code is designed to be helpful, and that includes respecting the code style you've carefully established for your projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-keeps-changing-my-indentation-style)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

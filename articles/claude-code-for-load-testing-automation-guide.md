@@ -198,6 +198,12 @@ export default function () {
 
 Claude Code transforms load testing from a manual, sporadic activity into an automated, continuous process. Generate scripts quickly, integrate with CI/CD pipelines, and use AI for result analysis. The combination accelerates feedback loops and catches performance issues before they impact users.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-load-testing-automation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)

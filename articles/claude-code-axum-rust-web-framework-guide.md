@@ -241,6 +241,12 @@ With your Axum foundation in place, explore adding database integration with sql
 
 The combination of Axum's ergonomic design and Claude Code's AI assistance makes Rust web development accessible without sacrificing the language's performance and safety guarantees. Start with simple endpoints, iterate rapidly, and scale confidently.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-axum-rust-web-framework-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)

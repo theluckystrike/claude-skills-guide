@@ -277,6 +277,12 @@ AI text expander chrome extensions bridge the gap between simple text substituti
 
 The most durable implementations treat the snippet library as a first-class data structure. versioned, categorized, and exportable. and give users explicit control over where inference happens. Start with a minimal trigger detection loop, validate it against edge cases like IME and rich text editors, then layer in AI capabilities once the foundation is solid.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-text-expander-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a Chrome Extension Text Expander from Scratch](/chrome-extension-text-expander/)

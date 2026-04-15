@@ -209,6 +209,12 @@ The key is treating alignment as an ongoing process rather than a one-time setup
 
 Start small: create a CLAUDE.md file, connect Linear via MCP, and add one alignment check to your workflow. You'll immediately see the benefits of code that naturally fits your project's goals.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-and-linear-ai-for-project-and-code-alignment)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills with Linear Project Management Tutorial](/claude-skills-with-linear-project-management-tutorial/)

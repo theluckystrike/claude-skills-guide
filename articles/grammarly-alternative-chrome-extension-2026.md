@@ -331,6 +331,12 @@ The right Grammarly alternative depends on your specific requirements:
 
 Each alternative brings distinct advantages. Test several to determine which fits your workflow best, most offer free tiers sufficient for evaluation. The combination that works for most developer teams is LanguageTool (self-hosted) for grammar, a simple Claude skill for document-level review, and CustomCheck for team-specific style enforcement.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=grammarly-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

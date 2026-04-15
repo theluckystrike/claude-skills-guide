@@ -304,6 +304,12 @@ Chrome's default context menu search serves basic needs, but developers and powe
 
 The best context menu search alternative depends on your specific workflow. Try a few options, test the integration with your typical search patterns, and settle on the solution that feels most natural for your development process. For most developers, the sweet spot is a lightweight extension with JSON config import/export, nested submenus, and background tab support. a setup that takes about 20 minutes to configure initially and then operates invisibly for years.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=context-menu-search-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

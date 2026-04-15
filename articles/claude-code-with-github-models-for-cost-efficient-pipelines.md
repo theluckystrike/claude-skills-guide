@@ -167,6 +167,12 @@ Maintain quality gates. Ensure that cost savings don't compromise output quality
 The combination of Claude Code's advanced agentic capabilities with GitHub's economical models represents a significant advancement in practical AI-assisted development. By implementing thoughtful routing and task segmentation, you can build pipelines that deliver high-quality results while maintaining predictable, manageable costs. The key is treating this as an optimization challenge rather than a binary choice between models, each has its place in a well-architected system.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-with-github-models-for-cost-efficient-pipelines)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

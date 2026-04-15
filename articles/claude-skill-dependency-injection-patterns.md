@@ -174,6 +174,12 @@ Claude skills become significantly more powerful when you compose them rather th
 
 Start by identifying repetitive tasks in your Claude workflows. Extract the common operations into focused skills, then build orchestrating skills that compose them. Skills like pdf, xlsx, tdd, supermemory, and frontend-design become building blocks you can recombine for new use cases without rewriting logic.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skill-dependency-injection-patterns)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/). Learn skill inheritance as the foundation for dependency injection and composition.

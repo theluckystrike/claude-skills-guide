@@ -215,6 +215,12 @@ For high availability, consider implementing a cascading replication topology wh
 
 PostgreSQL logical replication is an essential tool for building resilient, distributed database architectures. By using Claude Code to generate SQL configurations, create monitoring scripts, and troubleshoot issues, you can streamline the implementation and maintenance of replication workflows. The combination of PostgreSQL's powerful replication features and AI-assisted development makes it easier than ever to build solid data distribution systems that scale with your application's needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-postgres-logical-replication-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Neon Serverless Postgres Workflow Guide](/claude-code-neon-serverless-postgres-workflow-guide/)

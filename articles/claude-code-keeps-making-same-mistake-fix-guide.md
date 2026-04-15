@@ -145,6 +145,12 @@ The repetition mistake problem isn't about Claude being broken. It's about how f
 
 Start by implementing one or two of these solutions. The skill-based approach works well as an initial step because it requires setup only once but provides ongoing benefits across all your Claude Code sessions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-keeps-making-same-mistake-fix-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/). Broader guide on improving Claude Code output

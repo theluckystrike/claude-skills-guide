@@ -249,6 +249,12 @@ Start with sequential execution when building new workflows, then identify oppor
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-agent-pipeline-sequential-vs-parallel)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Opus Orchestrator-Sonnet-Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/). Design multi-agent systems with specialized workers for complex automated pipelines

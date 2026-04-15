@@ -278,6 +278,12 @@ Combining Claude Code with Workbox creates a powerful workflow for building offl
 The key to success is starting simple, understanding the caching strategies available, and iterating based on real-world performance data. With Claude Code as your development partner, you have an intelligent assistant that can guide you through Workbox's capabilities while maintaining best practices.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-workbox-service-worker-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Service Worker Caching Workflow](/claude-code-for-service-worker-caching-workflow/)

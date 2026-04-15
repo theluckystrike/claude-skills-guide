@@ -172,6 +172,12 @@ Start by installing Atuin and letting it collect history for a few days, then be
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-atuin-shell-history-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Devenv Nix Development Shell Workflow](/claude-code-for-devenv-nix-development-shell-workflow/)

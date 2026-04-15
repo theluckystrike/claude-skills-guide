@@ -200,6 +200,12 @@ async function adaptiveRequest(
 - **Use non-streaming mode for large inputs** when you do not need progressive output
 - **Set explicit timeouts** on the Anthropic client (default is 10 minutes)
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=anthropic-sdk-typeerror-terminated)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Fix: Anthropic SDK Streaming Hangs Indefinitely](/anthropic-sdk-streaming-hang-timeout/)

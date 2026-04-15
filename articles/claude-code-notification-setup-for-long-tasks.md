@@ -485,6 +485,12 @@ The right notification setup depends on your workflow: simple `&&` chains work f
 
 Start with simple notifications using the scripts above, then customize based on your workflow. The investment of a few minutes pays dividends in focused, efficient development sessions. Once the habit forms, you'll find yourself queuing multiple Claude Code tasks in sequence and working on other priorities while the AI does the heavy lifting, checking your screen only when the notification arrives.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-notification-setup-for-long-tasks)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)

@@ -260,6 +260,12 @@ Start with thorough assessment, maintain rigorous testing, and use AI assistance
 
 Related guides: [Best AI Tools for Code Refactoring in 2026](/best-ai-tools-for-code-refactoring-2026/)
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-coding-tools-for-code-migration-projects)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

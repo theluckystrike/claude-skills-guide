@@ -154,6 +154,12 @@ curl -s https://api.anthropic.com/v1/messages \
 - **Monitor the status page:** Subscribe to https://status.anthropic.com for incident notifications before debugging locally.
 - **Log request IDs:** Include the `x-request-id` response header in your logs for faster support resolution.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-error-500-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix Claude API Error 401 — Authentication Failed](/claude-api-error-401-fix) — API key and auth token issues

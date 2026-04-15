@@ -669,6 +669,12 @@ The workflow is clear: start with a solid CLAUDE.md that describes your infrastr
 
 Start with one critical runbook, refine it through actual use, and gradually expand your library. Your future self, and your on-call team, will thank you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-runbook-authoring-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Codemod Authoring Workflow Tutorial](/claude-code-for-codemod-authoring-workflow-tutorial/)

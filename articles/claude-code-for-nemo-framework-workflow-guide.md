@@ -381,6 +381,12 @@ Integrating Claude Code into your NeMo Framework workflow accelerates developmen
 Start with simple tasks, configuration explanation and code generation, then progressively use its capabilities for complex debugging and optimization challenges. The combination of Claude Code's contextual understanding and NeMo's powerful abstractions enables rapid iteration from prototype to production.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nemo-framework-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Fiber Go Web Framework Workflow](/claude-code-for-fiber-go-web-framework-workflow/)

@@ -110,6 +110,12 @@ The best Claude Code courses in 2026 combine structured learning with practical 
 
 Remember that Claude Code proficiency comes from consistent practice rather than passive consumption. Choose courses that encourage active experimentation, and you'll find your skills compound faster than expected.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-claude-code-courses-online-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code YouTube Channels to Follow in 2026](/best-claude-code-youtube-channels-to-follow/)

@@ -470,6 +470,12 @@ Start by deploying simple sidecar configurations and gradually incorporate advan
 Remember: the key to successful sidecar deployments is treating the sidecar as an integral part of your service deployment, not an afterthought. Use the automation capabilities of Claude Code to ensure consistency across all your services. Maintain your Envoy configs in version control alongside your application code, review them in pull requests, and let Claude Code handle the repetitive scaffolding so your team can focus on the design decisions that actually require human judgment.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-ambassador-sidecar-pattern-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for BFF API Pattern Workflow Guide](/claude-code-for-bff-api-pattern-workflow-guide/)

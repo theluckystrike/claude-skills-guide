@@ -272,6 +272,12 @@ Tools like Lighthouse can be integrated into your build process to catch perform
 
 Monitoring Chrome extension performance requires a combination of built-in browser tools, custom instrumentation, and ongoing attention to resource usage. Start with Chrome Task Manager and DevTools for quick diagnostics, then add custom metrics to track operations specific to your extension. Regular monitoring catches issues before they affect your users and helps you maintain a performant extension that users keep installed.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-performance-monitor)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

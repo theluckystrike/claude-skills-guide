@@ -552,6 +552,12 @@ Start with the basic search functionality outlined here, then iterate based on y
 
 Whether you're conducting systematic reviews, staying current with new publications, or building tools for a research team, a custom PubMed search helper extension pays dividends in time saved and improved literature discovery. The E-utilities API is stable, well-documented, and entirely free to use, making it one of the more accessible data sources for healthcare technology projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-pubmed-search-helper)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension APA Citation Formatter: Automate Your.](/chrome-extension-apa-citation-formatter/)

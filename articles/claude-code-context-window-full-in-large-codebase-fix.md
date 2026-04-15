@@ -192,6 +192,12 @@ The context window limitation in Claude Code isn't a blocker for large codebase 
 Remember: The goal isn't to fit your entire codebase into context, but to put exactly the right code in context for each task. With these techniques, you'll spend less time managing constraints and more time building great software.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-context-window-full-in-large-codebase-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Profile Too Large? Fix It Fast (Step-by-Step)](/chrome-profile-too-large/)

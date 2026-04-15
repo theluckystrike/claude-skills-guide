@@ -218,6 +218,12 @@ Implementing effective localization automation requires establishing patterns fr
 
 Claude skills reduce the mechanical burden of localization management, allowing developers and translators to focus on translation quality rather than file manipulation. The combination of persistent context, structured file processing, and validation capabilities creates a powerful automation system for multilingual products.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-localization-i18n-workflow-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude xlsx Skill: Spreadsheet Automation Guide](/claude-xlsx-skill-spreadsheet-automation-tutorial/). Master the xlsx skill for processing translation spreadsheets from external vendors and reviewers.

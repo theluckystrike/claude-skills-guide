@@ -189,6 +189,12 @@ Integrating Claude Code with Argo Rollouts transforms your deployment workflow f
 
 The combination of Claude Code's contextual understanding and Argo Rollouts' powerful progressive delivery creates a solid foundation for confident software releases.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-argo-rollouts-canary-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

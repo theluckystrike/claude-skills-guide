@@ -315,6 +315,12 @@ Edges overlapping nodes on complex maps: Implement a simple force-directed layou
 
 The modular architecture separates concerns cleanly, making it straightforward to add features like deal alerts, real-time collaboration, or integration with Obsidian and Roam Research.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-concept-map-builder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Vocabulary Builder Chrome Extension: A Developer Guide](/ai-vocabulary-builder-chrome-extension/)

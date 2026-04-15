@@ -153,6 +153,12 @@ Document Your Patterns: If your project uses custom Bazel rules or macros, docum
 
 Integrating Claude Code into your Bazel workflow transforms how you handle build configuration and project setup. From generating BUILD files to debugging complex issues, Claude Code acts as an intelligent assistant that understands both your codebase and Bazel's configuration language. By providing context, iterating on feedback, and following best practices, you can significantly accelerate your development workflow while maintaining high-quality, consistent build configurations across your projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-bazel-build-system-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Buck2 Build System Workflow Guide](/claude-code-for-buck2-build-system-workflow-guide/)

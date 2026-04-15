@@ -240,6 +240,12 @@ Container security scanning is critical for modern applications. Claude Code ski
 By implementing the workflows outlined in this guide, you'll catch vulnerabilities before they reach production and maintain a strong security posture throughout your containerized applications.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-container-security-scanning-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Snyk Container Workflow Guide](/claude-code-for-snyk-container-workflow-guide/)

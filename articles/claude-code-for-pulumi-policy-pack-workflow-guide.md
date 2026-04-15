@@ -245,6 +245,12 @@ Pulumi Policy Packs combined with Claude Code create a powerful governance workf
 Start small, implement a few critical policies, and expand gradually. The key is balancing enforcement with developer experience, providing clear guidance when policies are violated so teams can self-correct efficiently.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-pulumi-policy-pack-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)

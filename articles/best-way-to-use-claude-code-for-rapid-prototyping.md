@@ -137,6 +137,12 @@ Finally, don't skip the context setup. The few minutes spent writing a comprehen
 
 Effective rapid prototyping with Claude Code follows a workflow: establish context through `CLAUDE.md`, select relevant skills for your domain, use progressive refinement in your prompts, and maintain quality through built-in testing capabilities. The combination of clear context, iterative refinement, and strategic skill usage transforms Claude Code from a code generator into a genuine prototyping partner.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-use-claude-code-for-rapid-prototyping)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Is Claude Code Worth It for Solo Developers and Freelancers](/is-claude-code-worth-it-for-solo-developers-freelancers/). Solo developers prototype faster with Claude Code

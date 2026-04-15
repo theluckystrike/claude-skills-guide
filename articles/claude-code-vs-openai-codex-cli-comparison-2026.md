@@ -102,6 +102,10 @@ In 2026, Claude Code is the better choice for developers who think of their AI a
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-openai-codex-cli-comparison-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). A deep look at Claude Code's skills ecosystem, a core differentiator not found in OpenAI Codex CLI

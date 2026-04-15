@@ -314,6 +314,12 @@ RESOURCE_EXHAUSTED: You are hitting server-side rate limits or the `max_concurre
 
 For streaming errors, Claude is especially useful for diagnosing back-pressure issues: "My server-streaming RPC slows to a crawl after 1000 messages. Here is my handler code. What is causing the back-pressure?"
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-grpc-api-development-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Development in 2026](/chrome-extension-development-2026/)

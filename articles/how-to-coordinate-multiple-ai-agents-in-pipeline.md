@@ -180,6 +180,12 @@ Coordinating multiple AI agents in pipeline workflows unlocks powerful automatio
 
 The key is treating each pipeline stage as a focused, specialized agent that does one thing well, with clear interfaces for communication between stages. This separation of concerns makes pipelines easier to debug, maintain, and extend over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-coordinate-multiple-ai-agents-in-pipeline)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Agent Swarm Coordination Strategies](/claude-code-agent-swarm-coordination-strategies/)

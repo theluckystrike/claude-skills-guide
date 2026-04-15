@@ -81,6 +81,12 @@ Chrome extensions for Git blame viewing transform how you interact with code his
 
 Whether you're debugging production issues, reviewing pull requests, or exploring unfamiliar codebases, Git blame extensions provide valuable context that accelerates your work. Start with one that matches your primary platform, configure it to your preferences, and notice how much faster you navigate code history.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-git-blame-viewer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome DevTools Performance Profiling: A Practical Guide](/chrome-devtools-performance-profiling/)

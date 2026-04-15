@@ -282,6 +282,12 @@ An AI prompt manager Chrome extension transforms scattered prompts into an organ
 
 The key is starting simple, organize your most-used prompts first, then expand as your library grows. With proper structure and regular maintenance, your prompt library becomes a genuine productivity asset rather than another tool to manage. Treat it like a codebase: review it, refine it, and don't let it rot.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-prompt-manager-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Prompt Chaining Workflows Tutorial Guide](/claude-code-for-prompt-chaining-workflows-tutorial-guide/)

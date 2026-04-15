@@ -115,6 +115,12 @@ To summarize, if Claude Code seems worse than before, consider these potential c
 
 By systematically checking these factors, you can identify the root cause and restore Claude Code to its full potential. Remember that AI tools evolve continuously, and occasional adjustment is normal as you learn to work effectively with new capabilities and features.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-is-claude-code-suddenly-worse-than-it-was-before)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

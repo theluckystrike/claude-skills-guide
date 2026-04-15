@@ -210,6 +210,12 @@ Claude Code's navigation capabilities transform how you interact with code. Rath
 
 Start building your navigation skills today, and you'll find yourself understanding and contributing to complex codebases faster than ever before.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-code-outline-navigation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Multi-Language Navigation Workflow](/claude-code-for-multi-language-navigation-workflow/)

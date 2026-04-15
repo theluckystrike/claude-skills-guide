@@ -277,6 +277,12 @@ Set a calendar reminder to audit your cookie inventory every six months. Vendors
 Cookie consent implementation doesn't need to be complicated. By building a small, focused consent manager and pairing it with a well-designed UI component, you satisfy regulatory requirements while keeping your codebase maintainable. The patterns here scale from a simple static site to a full single-page application, start with the minimal implementation and layer in complexity only where your specific situation requires it.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-cookie-consent-implementation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GDPR Compliance Implementation](/claude-code-gdpr-compliance-implementation/)

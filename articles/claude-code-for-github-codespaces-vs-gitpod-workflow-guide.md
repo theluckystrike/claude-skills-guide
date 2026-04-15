@@ -176,6 +176,12 @@ Start with your chosen platform's free tier to validate the workflow before comm
 
 For teams already invested in GitHub, Codespaces provides the smoothest integration. Developers prioritizing customization and speed should evaluate Gitpod's capabilities. Either choice enables productive AI-assisted development in the cloud.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-github-codespaces-vs-gitpod-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GitHub Codespaces Cloud Development Workflow](/claude-code-github-codespaces-cloud-development-workflow/)

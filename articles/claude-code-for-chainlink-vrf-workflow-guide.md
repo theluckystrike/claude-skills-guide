@@ -398,6 +398,12 @@ Chainlink VRF enables trustless randomness for blockchain applications, and Clau
 
 Remember to start with testnet deployment, validate your implementation thoroughly, and monitor subscription balances in production. With these practices in place, you will be well-equipped to use Chainlink VRF in any project requiring provably fair randomness.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-chainlink-vrf-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

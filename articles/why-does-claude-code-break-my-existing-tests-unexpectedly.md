@@ -175,6 +175,12 @@ Claude Code breaking your tests isn't a flaw in the tool, it's a consequence of 
 
 The key is treating Claude as a collaborator that needs clear, specific guidance about your testing expectations. With these strategies in place, you can enjoy rapid code generation without sacrificing test reliability.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-code-break-my-existing-tests-unexpectedly)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Breaks Existing Tests After Changes Fix](/claude-code-breaks-existing-tests-after-changes-fix/). See also

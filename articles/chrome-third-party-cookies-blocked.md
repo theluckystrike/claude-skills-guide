@@ -256,6 +256,12 @@ Google has committed to complete third-party cookies phase-out by late 2026. Dev
 
 The transition requires architectural changes but results in more privacy-respecting applications that work regardless of browser settings.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-third-party-cookies-blocked)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code SvelteKit Hooks Handle Load Workflow Tutorial](/claude-code-sveltekit-hooks-handle-load-workflow-tutorial/)

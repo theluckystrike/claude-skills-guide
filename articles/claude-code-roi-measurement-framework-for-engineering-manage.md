@@ -222,6 +222,12 @@ Comparing Incommensurables: Don't compare Claude Code-assisted work against pris
 
 Measuring Claude Code ROI isn't about justifying the cost, it's about optimizing value. The best engineering managers use this framework not to defend their tool choices but to understand how to extract maximum value from their AI investments. Start small, track consistently, and let the data guide your decisions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-roi-measurement-framework-for-engineering-manage)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Coding Tool Evaluation Framework for Teams](/ai-coding-tool-evaluation-framework-for-teams/)

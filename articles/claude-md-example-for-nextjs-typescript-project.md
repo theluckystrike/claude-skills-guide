@@ -584,6 +584,12 @@ Claude skills in Markdown format provide a powerful mechanism for standardizing 
 
 The investment in writing a good skill file is small compared to the accumulated time saved across hundreds of code generation tasks. Start with the three core skills. component, API route, and page layout. then extend them as your project's conventions evolve. Every rule you encode in a skill is a convention that no longer needs to be communicated in a code review.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-example-for-nextjs-typescript-project)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude MD Example for Android Kotlin Project](/claude-md-example-for-android-kotlin-project/)

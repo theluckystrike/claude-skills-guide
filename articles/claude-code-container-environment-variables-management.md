@@ -517,6 +517,12 @@ Mastering environment variable management in Claude Code containers is fundament
 Remember: treat your environment variables as first-class configuration citizens, and your containerized applications will be easier to deploy, manage, and scale across different environments. Whether you're running a single Docker container on a personal project or orchestrating hundreds of pods across a Kubernetes cluster, the same principles apply: externalize configuration, validate early, and never hardcode secrets.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-container-environment-variables-management)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/)

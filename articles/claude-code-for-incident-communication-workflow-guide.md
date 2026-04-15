@@ -293,6 +293,12 @@ The key is to let Claude Code handle the mechanical aspects of communication, fo
 
 Start small: create one template, test one integration, and gradually expand your incident communication capabilities. Your future self (and your on-call team) will thank you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-incident-communication-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Incident Escalation Workflow Tutorial](/claude-code-for-incident-escalation-workflow-tutorial/)

@@ -214,6 +214,10 @@ By understanding and properly configuring these permissions, you can build relia
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skill-permissions-what-can-skills-access)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Complete reference for skill front matter fields including `tools` and `max_turns`

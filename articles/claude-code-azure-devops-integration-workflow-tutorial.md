@@ -456,6 +456,10 @@ The key insight is that Claude Code works best as an orchestration layer sitting
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-azure-devops-integration-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Skills for CI/CD pipelines, infrastructure, and automated deployments

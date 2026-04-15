@@ -150,6 +150,12 @@ A well-crafted CLAUDE.md file transforms API versioning from a source of frictio
 
 The investment in writing comprehensive API versioning documentation pays dividends in reduced support burden, smoother client migrations, and fewer unexpected breaking changes. Update your CLAUDE.md whenever your versioning strategy evolves, and treat it as living documentation that grows alongside your API.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=writing-claude-md-files-that-define-your-projects-api-versio)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code REST API Versioning Strategy Workflow Tips](/claude-code-rest-api-versioning-strategy-workflow-tips/)

@@ -126,6 +126,12 @@ For developers and power users, these tools bridge the gap between server config
 
 Start by installing a security headers extension, audit your own projects, and address the findings systematically. The improvements take minutes to implement but provide lasting protection against common attack vectors.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-security-headers-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome DevTools Performance Profiling: A Practical Guide](/chrome-devtools-performance-profiling/)

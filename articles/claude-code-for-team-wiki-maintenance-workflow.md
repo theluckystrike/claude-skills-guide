@@ -240,6 +240,12 @@ The key insight is treating wiki maintenance not as a separate concern but as an
 
 Engineering teams that implement this workflow consistently report that new engineers onboard faster, incident response improves when runbooks are accurate, and the culture around documentation shifts from "something we should do" to "something we actually do."
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-team-wiki-maintenance-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Dutch Developer Team Workflow Guide](/claude-code-for-dutch-developer-team-workflow-guide/)

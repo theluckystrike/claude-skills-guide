@@ -735,6 +735,12 @@ describe("User Service API Contract", () => {
 
 The key is identifying repetitive tasks in your API workflow and letting Claude handle them systematically. Start with simple automations like test generation, then expand to more complex workflows as you become comfortable with the process. A good entry point is to ask Claude Code to audit your existing collection and report on endpoints missing test coverage. this gives you a concrete action list and demonstrates the value of the automation before you commit to a full integration.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-postman-collection-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Brave Search MCP Server for Research Automation](/brave-search-mcp-server-research-automation/)

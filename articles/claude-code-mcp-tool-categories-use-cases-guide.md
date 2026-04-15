@@ -813,6 +813,12 @@ The key to success lies in combining tools thoughtfully rather than relying on a
 
 As you build out your MCP integrations, invest time in error handling, idempotency, and scope control. Workflows that are solid to partial failures and safe to re-run are workflows that your team will actually trust and rely on in production.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mcp-tool-categories-use-cases-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)

@@ -254,6 +254,12 @@ The skills and workflows in this tutorial are starting points. Customize them to
 With Claude handling the operational aspects of incident tracking, your team can focus on what matters most: building reliable systems and responding effectively when issues arise.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-incident-tracking-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Benchmark Reporting Workflow Tutorial](/claude-code-for-benchmark-reporting-workflow-tutorial/)

@@ -132,6 +132,12 @@ Consider adding a "Recent Changes" section to your API reference landing page th
 
 Creating and maintaining API changelog documentation doesn't have to be a tedious process. By using Claude Code for drafting, refining, and automating your changelog workflow, you can ensure your developers always have access to clear, consistent, and actionable information about API changes. The key is establishing good habits early, using consistent formatting, and treating your changelog as a critical part of your API's user experience.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-api-changelog-documentation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Swagger Documentation Workflow (2026)](/claude-code-swagger-documentation-workflow/)

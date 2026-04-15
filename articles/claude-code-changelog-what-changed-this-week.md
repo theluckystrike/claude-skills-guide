@@ -275,6 +275,12 @@ The key insight here is that with proper context isolation, each step in this pi
 
 Each weekly update improves either skill authoring, tool integration, or runtime performance. Bookmark this changelog to stay informed about changes that affect your Claude Code workflows. If you maintain a private skill library or build on top of the MCP framework, the deprecation notice and tool isolation fixes deserve attention before the end of the month.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-changelog-what-changed-this-week)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Changelog Documentation Guide](/claude-code-api-changelog-documentation/)

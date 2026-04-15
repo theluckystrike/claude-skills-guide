@@ -206,6 +206,12 @@ Claude Code transforms Tauri plugin development from a potentially tedious proce
 Start by integrating Claude Code into small parts of your workflow, perhaps just for generating command boilerplate, and gradually expand to more complex tasks like debugging or API design. You'll find that the time invested in learning to communicate effectively with Claude Code pays dividends throughout your Tauri plugin projects.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-tauri-plugin-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for wasm-bindgen Workflow Tutorial](/claude-code-for-wasm-bindgen-workflow-tutorial/)

@@ -227,6 +227,12 @@ Start with simple layouts and gradually add complexity as you become more comfor
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-zellij-terminal-multiplexer-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)

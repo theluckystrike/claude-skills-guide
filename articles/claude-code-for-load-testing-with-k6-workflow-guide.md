@@ -302,6 +302,12 @@ Start with lenient thresholds and tighten them as you establish baseline perform
 Integrating Claude Code with K6 transforms load testing from a manual, time-intensive process into an AI-assisted workflow. Use Claude Code to generate scripts rapidly, analyze results intelligently, and maintain comprehensive test coverage. Start with simple API tests and gradually build complex user scenarios as your confidence grows.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-load-testing-with-k6-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)

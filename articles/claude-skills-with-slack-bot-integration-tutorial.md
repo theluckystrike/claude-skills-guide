@@ -269,6 +269,10 @@ This Claude skills with Slack bot integration tutorial covers the full stack fro
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-with-slack-bot-integration-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The full skills list to consider for Slack bot routing, including tdd, pdf, supermemory, and frontend-design

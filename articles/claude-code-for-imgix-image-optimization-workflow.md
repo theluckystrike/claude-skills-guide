@@ -477,6 +477,12 @@ claude "Run our complete image optimization workflow:
 Start with the URL generator skill, then add responsive image generation, and finally layer in batch processing as your needs grow. Claude handles the complexity, Imgix delivers the performance.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-imgix-image-optimization-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Packer Machine Image Workflow](/claude-code-for-packer-machine-image-workflow/)

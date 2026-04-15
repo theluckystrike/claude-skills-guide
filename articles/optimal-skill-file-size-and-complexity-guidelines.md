@@ -147,6 +147,12 @@ Optimal skill complexity balances comprehensiveness with maintainability. Aim fo
 
 Start with a narrow scope and expand only when clear patterns emerge across multiple use cases. Your future self, and your users, will thank you for the discipline.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=optimal-skill-file-size-and-complexity-guidelines)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best File Structure for a Complex Claude Skill](/what-is-the-best-file-structure-for-a-complex-claude-skill/). Apply these complexity guidelines to a concrete directory structure for larger multi-file skills

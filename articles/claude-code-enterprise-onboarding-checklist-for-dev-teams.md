@@ -296,6 +296,12 @@ Maintain your skill ecosystem:
 By following this checklist, your development team can successfully integrate Claude Code while maintaining security compliance, establishing consistent workflows, and maximizing productivity gains. Remember that the goal is not just adoption, it's creating a sustainable AI-assisted development practice that evolves with your organization's needs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-enterprise-onboarding-checklist-for-dev-teams)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Augment Code AI Review for Enterprise Teams 2026](/augment-code-ai-review-for-enterprise-teams-2026/)

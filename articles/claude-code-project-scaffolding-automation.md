@@ -222,6 +222,12 @@ The key lies in treating scaffolding as an ongoing process rather than a one-tim
 
 Start with simple projects and gradually incorporate more sophisticated automation as your patterns mature. Your future self will thank you when new projects spin up in minutes instead of hours.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-project-scaffolding-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Environment Setup Automation](/claude-code-environment-setup-automation/). Environment setup follows project scaffolding

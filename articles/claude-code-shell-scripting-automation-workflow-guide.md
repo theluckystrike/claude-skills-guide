@@ -442,6 +442,12 @@ The tdd skill helps you identify what cases to test and can generate initial tes
 
 Claude Code transforms shell scripting from a tedious manual process into a collaborative workflow. By describing your automation needs and using Claude's assistance, you can build solid scripts faster while learning best practices along the way. The key habits, structured logging, trap-based cleanup, explicit error handling with `set -euo pipefail`, and version-controlled scripts, apply whether you're writing a 20-line file mover or a 500-line deployment pipeline. Start with simple scripts, gradually tackle more complex workflows, and use Claude to explain unfamiliar patterns as you encounter them.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-shell-scripting-automation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Makefile Build Automation Workflow Guide](/claude-code-makefile-build-automation-workflow-guide/)

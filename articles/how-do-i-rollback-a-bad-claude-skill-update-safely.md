@@ -243,6 +243,10 @@ The `supermemory` skill can help you track which versions work best for your wor
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-rollback-a-bad-claude-skill-update-safely)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/). Version-control your skills with dotfiles so rollback is always one git command away.

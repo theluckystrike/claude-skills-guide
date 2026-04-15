@@ -287,6 +287,12 @@ Start small: parse a file, run a query, understand the output. Then progressivel
 
 Remember: the key is understanding node types as the building blocks of code structure, then using Claude Code to intelligently work with those blocks for analysis and transformation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-tree-sitter-node-types-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)

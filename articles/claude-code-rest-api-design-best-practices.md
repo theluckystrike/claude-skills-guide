@@ -451,6 +451,12 @@ Applying these REST API design patterns creates interfaces that Claude Code can 
 
 The single most impactful change you can make is adopting a consistent response envelope. Everything else. versioning, pagination, field selection. builds on top of that foundation. Start there, document it in OpenAPI, and layer in the remaining patterns as your API grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-rest-api-design-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Documentation OpenAPI Guide](/claude-code-api-documentation-best-practices/). OpenAPI documents REST API designs

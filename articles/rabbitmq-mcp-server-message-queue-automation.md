@@ -681,6 +681,12 @@ RabbitMQ MCP server implementations provide a flexible foundation for message qu
 
 The key to success lies in treating your message infrastructure as a programmable system rather than a simple transport layer. Define your exchange topology before writing consumer code, test DLQ behavior explicitly, and export metrics from the start rather than bolting them on after your first production incident. With proper automation in place, your queues become intelligent pipelines that handle failure gracefully, scale automatically, and connect reliably with broader system architectures.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=rabbitmq-mcp-server-message-queue-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

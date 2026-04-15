@@ -128,6 +128,12 @@ The best way to determine if Claude Code is right for you is to try it on a real
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=should-i-switch-from-codeium-to-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Should I Switch From Continue Dev to Claude? A Practical.](/should-i-switch-from-continue-dev-to-claude/)

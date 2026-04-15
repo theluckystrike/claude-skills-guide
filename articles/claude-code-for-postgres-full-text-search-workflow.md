@@ -146,6 +146,12 @@ Monitor query performance over time. As data grows and access patterns shift, yo
 
 PostgreSQL's full-text search provides a capable, integrated solution that eliminates external dependencies for many applications. With Claude Code assisting your implementation, you can rapidly develop search functionality that scales with your needs while maintaining query performance and result quality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-postgres-full-text-search-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Typesense Full Text Search Setup Tutorial](/claude-code-typesense-full-text-search-setup-tutorial/)

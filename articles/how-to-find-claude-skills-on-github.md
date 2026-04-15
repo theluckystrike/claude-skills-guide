@@ -362,6 +362,12 @@ Set a monthly reminder to review your skills directory. Remove skills you no lon
 
 Finding Claude skills on GitHub requires combining effective search techniques with quality evaluation. Use GitHub's search operators to narrow results, assess skill maintenance and structure before installation, and organize your local collection for maximum utility. Automate installation with scripts when managing large collections, and maintain a registry to track provenance and version information. The community ecosystem continues growing, with new skills appearing regularly that extend Claude Code's capabilities across virtually every development domain.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-find-claude-skills-on-github)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)

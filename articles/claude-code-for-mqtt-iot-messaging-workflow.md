@@ -311,6 +311,12 @@ Claude Code transforms MQTT IoT messaging workflows by automating client generat
 For next steps, explore integrating MQTT with cloud platforms like AWS IoT or Azure IoT Hub, and consider implementing edge computing patterns for latency-sensitive applications.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-mqtt-iot-messaging-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Hyperlane Messaging Workflow](/claude-code-for-hyperlane-messaging-workflow/)

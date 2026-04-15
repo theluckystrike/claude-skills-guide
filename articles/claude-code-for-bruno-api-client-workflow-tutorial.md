@@ -180,6 +180,12 @@ Integrating Claude Code with Bruno creates a powerful workflow for API developme
 
 The combination of Bruno's git-friendly approach and Claude Code's contextual understanding provides a modern, developer-centric workflow that scales with your projects. Whether you're working on a small personal project or managing enterprise APIs, this integration offers flexibility and power for your API testing needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-bruno-api-client-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Celery Chord Workflow Tutorial](/claude-code-for-celery-chord-workflow-tutorial/)

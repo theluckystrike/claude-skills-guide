@@ -193,6 +193,12 @@ anthropic-ratelimit-requests-remaining: 48
 - **Monitor usage:** Track your `ratelimit-*-remaining` headers in dashboards to catch limits before they hit.
 - **Read the `retry-after` header:** On a 429 response, wait exactly the number of seconds specified rather than guessing.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-rate-limit-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix Claude API Error 500 — Internal Server Error](/claude-api-error-500-fix) — Server-side errors

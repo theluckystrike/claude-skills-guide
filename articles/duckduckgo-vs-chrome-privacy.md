@@ -665,6 +665,10 @@ Ultimately, the browsers you use during development shape your mental model of w
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=duckduckgo-vs-chrome-privacy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extensions That Track You: What Developers Need.](/chrome-extensions-that-track-you/)

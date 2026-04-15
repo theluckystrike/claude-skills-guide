@@ -299,6 +299,10 @@ The web clipping ecosystem continues evolving. New tools emerge monthly, and exi
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=evernote-web-clipper-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Canva Alternative: Build Your Own.](/chrome-extension-canva-alternative/)

@@ -209,6 +209,12 @@ Custom Claude MD files for frontend projects transform how you work with AI codi
 
 Start with a basic skill containing your core conventions, then layer in specialized skills like `tdd`, `frontend-design`, and `supermemory` as your workflow matures. The investment in crafting your skill files pays returns in every subsequent coding session.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-for-frontend-projects-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Svelte Transitions Workflow Guide](/claude-code-for-svelte-transitions-workflow-guide/)

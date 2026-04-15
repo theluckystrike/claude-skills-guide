@@ -245,6 +245,12 @@ The key to success lies in establishing clear conventions, maintaining good comm
 Start implementing these practices today, and you'll notice significant improvements in your monorepo's release efficiency and code quality.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-changesets-monorepo-release-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Changesets Versioning Workflow](/claude-code-for-changesets-versioning-workflow/)

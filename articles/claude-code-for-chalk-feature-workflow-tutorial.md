@@ -165,6 +165,12 @@ To maximize Claude Code's effectiveness in your Chalk development workflow:
 
 By integrating Claude Code into your Chalk workflow, you reduce the friction of looking up API details, maintain consistency across your styling, and accelerate the development cycle from idea to working feature.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-chalk-feature-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Feature Flags Workflow Git Guide](/claude-code-feature-flags-workflow-git-guide/)

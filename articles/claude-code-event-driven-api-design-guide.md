@@ -225,6 +225,12 @@ app.get('/health/events', async (req, res) => {
 
 Event-driven API design requires careful attention to acknowledgment patterns, idempotency, ordering, and monitoring. Webhooks handle external events, message queues process internal ones, and SSE or WebSockets push updates to clients. Each pattern serves specific use cases, and Claude Code skills like tdd, supermemory, frontend-design, and pdf help you implement them systematically while maintaining documentation and test coverage.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-event-driven-api-design-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best Claude Skill for REST API Development?](/what-is-the-best-claude-skill-for-rest-api-development/)

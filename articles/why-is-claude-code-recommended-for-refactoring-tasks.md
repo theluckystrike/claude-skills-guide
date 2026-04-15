@@ -371,6 +371,10 @@ For anyone maintaining or improving existing codebases, Claude Code offers tangi
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-is-claude-code-recommended-for-refactoring-tasks)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Cursor: Multi-File Refactoring Comparison](/claude-code-vs-cursor-multi-file-refactoring/). See how Claude Code stacks up against Cursor specifically for multi-file refactoring

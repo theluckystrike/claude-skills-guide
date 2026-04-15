@@ -356,6 +356,12 @@ Remember: Type definitions are the contract of your codebase. Protect them, and 
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-not-break-type-definitions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a Chrome Extension for Break Reminders in.](/chrome-extension-break-reminder-remote-work/)

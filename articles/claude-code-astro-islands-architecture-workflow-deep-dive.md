@@ -227,6 +227,12 @@ Astro's islands architecture provides a powerful foundation for building web app
 The key is starting simple, default to static, then add interactivity only where it genuinely improves the user experience. This approach, paired with thoughtful hydration strategies, will help you build Astro applications that are both delightful to develop and a joy to use.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-astro-islands-architecture-workflow-deep-dive)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Agent Task Queue Architecture Deep Dive](/claude-code-agent-task-queue-architecture-deep-dive/)

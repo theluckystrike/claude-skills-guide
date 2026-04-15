@@ -232,6 +232,12 @@ Start with the Pro plan at $25 monthly. Install skills relevant to your common p
 
 The freelancers who benefit most treat Claude Code as a skilled teammate rather than a magic solution. describing what they need clearly, reviewing the generated code, and focusing their own energy on architecture decisions and client relationships.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=is-claude-code-worth-it-for-solo-developers-freelancers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Solo Developers and Freelancers](/best-claude-skills-for-solo-developers-and-freelancers/). See also

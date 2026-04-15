@@ -171,6 +171,12 @@ Remember that Claude Code acts as an intelligent assistant, it can read and anal
 
 Start implementing these practices in your next SAM project, and you'll notice a significant improvement in your local development velocity and testing coverage.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-sam-local-testing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code L10n Testing Automation Workflow Tutorial](/claude-code-l10n-testing-automation-workflow-tutorial/)

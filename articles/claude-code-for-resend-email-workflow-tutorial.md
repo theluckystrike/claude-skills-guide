@@ -290,6 +290,12 @@ Building email workflows with Resend and Claude Code doesn't have to be complica
 Start with the basics outlined here, then iterate based on your specific use cases. With proper error handling, testing, and monitoring, your email workflows will be reliable and scalable.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-resend-email-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

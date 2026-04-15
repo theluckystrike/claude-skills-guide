@@ -183,6 +183,12 @@ If variable drift persists despite these fixes, try the `/compact` command (if a
 
 Variable name tracking issues in Claude Code are frustrating but solvable. By understanding why they happen and using the right combination of explicit corrections, skill-based memory tools, and coding practices, you can maintain reliable variable awareness even in long, complex sessions. Start with the quick fixes for immediate relief, then implement skills like `supermemory` and `context-manager` for persistent solution.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-keeps-losing-track-of-my-variable-names)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Lost Context Mid Task. How to Recover](/claude-code-lost-context-mid-task-how-to-recover/)

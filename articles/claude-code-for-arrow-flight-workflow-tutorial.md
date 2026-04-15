@@ -444,6 +444,12 @@ Building Arrow Flight workflows with Claude Code combines high-performance data 
 
 For next steps, explore integrating Flight with DuckDB's `read_parquet` over a Flight endpoint for interactive SQL on streaming data, or look into the Arrow Flight SQL extension for drop-in compatibility with JDBC and ODBC clients. Both directions open up Arrow Flight as a universal data interchange layer across your entire data infrastructure.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-arrow-flight-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

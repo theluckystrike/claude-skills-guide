@@ -211,6 +211,12 @@ Automated PR checks with Claude Code transform code review from a bottleneck int
 The investment in setting up these automated checks pays dividends in reduced bugs, improved code consistency, and more efficient human reviews. Your team focuses on creative problem-solving while Claude handles the systematic analysis, exactly the division of labor that modern development requires.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-automated-pr-checks-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)

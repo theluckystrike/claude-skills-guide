@@ -216,6 +216,12 @@ Remember that the best workflow is one that works consistently for you. Experime
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-fork-and-pull-request-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Automated Pull Request Review Workflow Guide](/claude-code-automated-pull-request-review-workflow-guide/)

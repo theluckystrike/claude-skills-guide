@@ -138,6 +138,12 @@ curl -s -o /dev/null -w "%{http_code}" https://api.anthropic.com/v1/messages \
 - **Rotate keys periodically:** Generate new keys in the [Anthropic Console](https://console.anthropic.com/) and update your environment.
 - **Test auth separately:** Before debugging complex requests, verify auth with a minimal test call.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-error-401-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix Claude API Error 500 — Internal Server Error](/claude-api-error-500-fix) — Server-side error troubleshooting

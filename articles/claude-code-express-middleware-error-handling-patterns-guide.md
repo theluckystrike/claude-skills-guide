@@ -267,6 +267,12 @@ Effective Express middleware error handling requires several interconnected patt
 
 These patterns scale from small APIs to enterprise applications. Implement them early in your project to avoid retrofitting error handling later.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-express-middleware-error-handling-patterns-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/). Write tests for your Express error handlers before implementation to catch edge cases systematically.

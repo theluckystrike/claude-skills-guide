@@ -362,6 +362,12 @@ Chrome DevTools performance profiling transforms abstract performance problems i
 
 The most important habit is profiling before optimizing. Every performance change should be driven by a trace that shows the problem, implemented against a measurable target, and validated with another trace that confirms the improvement. This evidence-based approach keeps optimization work focused on what matters and makes it straightforward to explain the impact of performance work to stakeholders.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-devtools-performance-profiling)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Angular DevTools Chrome Extension Setup: A Complete Guide](/angular-devtools-chrome-extension-setup/)

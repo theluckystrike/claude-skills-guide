@@ -304,6 +304,12 @@ Claude Code can help you debug common push notification problems:
 
 Push notifications are a powerful tool for React Native apps, but implementation requires careful attention to platform-specific requirements. Whether you choose Expo's managed approach or need full native control with bare React Native, this guide provides the foundation you need to deliver engaging push notifications that drive user retention and improve your app's success.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-react-native-push-notifications-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for React Native Fabric Renderer Workflow](/claude-code-for-react-native-fabric-renderer-workflow/)

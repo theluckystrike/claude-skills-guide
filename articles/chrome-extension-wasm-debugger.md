@@ -241,6 +241,12 @@ When distributing an extension with WASM, consider inlining the WASM binary usin
 
 For team projects, document the exact compiler flags and toolchain version used to build each WASM binary. Subtle differences between Emscripten versions can produce different memory layouts and calling conventions, which makes debugging across machines much harder than it needs to be.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-wasm-debugger)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Cast Buffering Fix: Practical Solutions for.](/chrome-cast-buffering-fix/)

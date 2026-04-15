@@ -156,6 +156,12 @@ Sharing Claude skills across multiple projects transforms your development workf
 
 Start small with your most valuable skills, then expand as you identify more opportunities for reuse. The initial investment in setting up proper sharing infrastructure pays off quickly as your [skill library grows](/getting-started-hub/).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-share-claude-skills-across-multiple-projects)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/). Extend project-level skill sharing to team-wide distribution with access controls and versioning.

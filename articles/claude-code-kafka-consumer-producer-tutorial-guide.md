@@ -287,6 +287,12 @@ Claude Code generates the schema evolution test that validates a proposed schema
 
 For teams that manage schemas in files rather than through the registry directly, Claude Code generates the CI workflow that registers new schema versions from your schemas directory, enforces your compatibility mode, and fails the CI job if a proposed schema change violates compatibility.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-kafka-consumer-producer-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise vs Consumer Features: A Developer Guide](/chrome-enterprise-vs-consumer-features/)

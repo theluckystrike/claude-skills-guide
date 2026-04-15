@@ -271,6 +271,12 @@ Profiling Chrome extension JavaScript requires understanding the unique contexts
 
 Focus on the areas that most affect user experience: message passing latency, startup time, and background script responsiveness. Small optimizations compound into significant improvements for users running your extension daily.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-javascript-profiler)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome JavaScript Blocker Extension: A Developer's Guide](/chrome-javascript-blocker-extension/)

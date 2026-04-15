@@ -234,6 +234,10 @@ Automating security code review checklists with Claude Code skills transforms se
 Start with the checklist items that affect your project most, build incrementally, and refine based on real findings. The investment in automation pays dividends in reduced security incidents and more efficient development cycles.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-security-code-review-checklist-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/). Enterprise security patterns including SIEM audit logging and ACL enforcement

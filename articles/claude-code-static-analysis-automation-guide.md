@@ -314,6 +314,12 @@ For teams adopting vibe-coding practices, static analysis becomes even more crit
 
 Start small: pick one language in your project, add basic linting, and run it automatically. Measure the results, adjust thresholds, then expand to additional languages and checks. Within a few iterations, you'll have a solid analysis pipeline that improves code quality without adding manual burden.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-static-analysis-automation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code SonarQube Code Quality Workflow](/claude-code-sonarqube-code-quality-workflow/). SonarQube is a leading static analysis platform

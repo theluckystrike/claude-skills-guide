@@ -464,6 +464,12 @@ Integrating Claude Code with GitHub Actions self-hosted runners unlocks powerful
 With proper configuration, Claude Code becomes a valuable team member, handling code reviews, generating documentation, and assisting with complex refactoring tasks, all executing securely within your own infrastructure. The persistent nature of self-hosted runners means you can cache skill files, build up institutional prompts in a `skills/` directory, and run longer multi-step workflows that would time out on ephemeral hosted runners.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-github-actions-self-hosted-runner-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

@@ -383,6 +383,12 @@ Claude Code transforms web worker development from a painful debugging session i
 Start with simple dedicated workers, then graduate to worker pools and SharedArrayBuffer as your needs grow. The patterns and practices you establish early will pay dividends as your application scales.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-web-workers-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/)

@@ -188,6 +188,12 @@ The best approach is to start with your current problems. If you're drowning in 
 
 One final note on cost: Sweep AI has a free tier with limited monthly PR generations and paid plans for higher volume. Claude Code is billed per token through Anthropic's API. For most individual developers, Claude Code's usage costs are predictable and manageable. For teams using Sweep to automate high-volume PR workflows, the cost math depends on your repository's issue velocity. Run both on a trial basis and measure actual value delivered before committing to paid tiers.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=sweep-ai-github-bot-vs-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

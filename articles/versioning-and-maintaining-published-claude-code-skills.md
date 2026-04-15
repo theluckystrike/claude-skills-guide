@@ -467,6 +467,12 @@ Versioning and maintaining Claude Code skills requires the same discipline as ma
 
 The full lifecycle, from initial publish through deprecation and archival, deserves deliberate design. Skills that are well-documented, clearly versioned, and actively maintained attract contributors, reduce support burden, and earn the kind of long-term user trust that makes them foundational pieces of developer workflows. Take the time to establish good versioning practices from the start, and your skills will serve users well for years to come.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=versioning-and-maintaining-published-claude-code-skills)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code SDK Versioning and Release Guide](/claude-code-sdk-versioning-release-guide/)

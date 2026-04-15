@@ -188,6 +188,12 @@ Sometimes imports are so wrong that fixing them individually wastes time. Consid
 
 Incorrect imports from Claude Code usually stem from missing context about your project's module system and directory structure. The fix involves three strategies: providing better upfront context about your project setup, correcting imports immediately when they appear wrong, and maintaining reference documentation Claude Code can access. Most import errors are preventable with proper configuration sharing, and the small effort to set this up pays dividends in cleaner, working code from the start.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-gives-incorrect-imports-how-to-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Keeps Making the Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/). Systematic approach to fixing repeated generation errors

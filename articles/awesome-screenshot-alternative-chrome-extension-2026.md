@@ -271,6 +271,10 @@ Evaluate your specific workflow requirements. whether speed, automation, team co
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=awesome-screenshot-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Nimbus Screenshot Alternative Chrome Extension in 2026](/nimbus-screenshot-alternative-chrome-extension-2026/)

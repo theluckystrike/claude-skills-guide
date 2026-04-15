@@ -321,6 +321,12 @@ Forgetting to include indexes in the schema: If your question involves query opt
 
 Master these techniques, and Claude Code becomes significantly more effective at understanding your database structure and generating precise, optimized SQL for any task.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-feed-claude-code-a-large-sql-schema)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)

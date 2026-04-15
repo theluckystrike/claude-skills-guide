@@ -477,6 +477,12 @@ Keep a validation baseline: Save the expected structured data output for your ke
 
 Testing structured data with Chrome extensions transforms what could be a frustrating, slow debugging process into a fast, iterative workflow. By validating early in development, automating checks in CI, and maintaining awareness of schema updates, you ensure your markup consistently delivers the search visibility your content deserves.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-structured-data-tester)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Data Extractor Chrome Extension: A Developer's Guide](/ai-data-extractor-chrome-extension/)

@@ -276,6 +276,12 @@ Start with basic streaming, then layer on complexity as your requirements demand
 
 With these techniques, you can build responsive AI applications that feel natural and handle the realities of network-based LLM interactions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-streaming-llm-response-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Lambda Response Streaming Workflow](/claude-code-for-lambda-response-streaming-workflow/)

@@ -299,6 +299,12 @@ Claude Code transforms release gate implementation from a tedious maintenance ta
 Start with a few essential gates, static analysis, security scanning, and basic test coverage. As your processes mature, layer in additional checks for performance, compliance, and specialized quality attributes. With Claude Code handling the implementation details, your team focuses on defining what quality means for your specific context.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-release-gate-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Changesets Monorepo Release Workflow](/claude-code-for-changesets-monorepo-release-workflow/)

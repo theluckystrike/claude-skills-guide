@@ -154,6 +154,12 @@ Understanding this distinction helps you choose the right approach for your task
 
 Both models are powerful. The key is matching the tool to the task.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=difference-between-ai-agent-and-ai-assistant-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)

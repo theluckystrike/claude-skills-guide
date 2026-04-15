@@ -339,6 +339,12 @@ Currency mismatch in comparison: If a user is browsing with a VPN, different sit
 
 Extension slowing down hotel search pages: Content scripts that run on every mutation can tax the main thread. Move price extraction to a debounced function that fires at most once every 500 ms, and avoid synchronous `querySelectorAll` on the entire document. Target the smallest subtree that contains the price list instead.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-hotel-price-comparison)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Price Match Finder: A Developer's Guide](/chrome-extension-price-match-finder/)

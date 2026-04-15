@@ -169,6 +169,12 @@ Integrating Claude Code into your Terragrunt modules workflow transforms how you
 
 Whether you're managing a handful of services or hundreds of infrastructure components, this workflow integration scales with your organization. Start by identifying repetitive configuration patterns in your existing setup, then use Claude Code to automate those patterns systematically.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-terragrunt-modules-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Enterprise Approval Workflow: A Practical Guide](/chrome-extension-enterprise-approval-workflow/)

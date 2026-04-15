@@ -202,6 +202,12 @@ Claude Code transforms threat hunting from a purely manual, expertise-dependent 
 
 The key is starting small, automate one hunting workflow, measure the results, and expand gradually. As you build your library of threat hunting skills, you'll create a powerful, reusable toolkit that makes proactive security accessible to your entire development and security team.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-threat-hunting-techniques-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Check Link Safety: Developer Tools and Techniques](/chrome-check-link-safety/)

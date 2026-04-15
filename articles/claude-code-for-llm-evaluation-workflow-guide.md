@@ -172,6 +172,12 @@ Implementing a structured LLM evaluation workflow with Claude Code transforms mo
 Remember that evaluation is ongoing, not a one-time setup. As your application evolves and new models become available, your evaluation workflow should adapt accordingly. Claude Code provides the automation infrastructure to make this practical at scale.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-llm-evaluation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code ML Engineer Model Evaluation Workflow Guide](/claude-code-ml-engineer-model-evaluation-workflow-guide/)

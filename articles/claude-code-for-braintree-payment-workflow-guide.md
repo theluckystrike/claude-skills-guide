@@ -477,6 +477,12 @@ Subscription billing with Braintree. Claude Code generates the subscription crea
 
 Multi-currency support. For international businesses, Braintree supports multiple settlement currencies. Claude Code generates the currency detection logic that selects the appropriate Braintree merchant account based on the customer's currency, and the currency formatting utilities that display amounts correctly for each locale.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-braintree-payment-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

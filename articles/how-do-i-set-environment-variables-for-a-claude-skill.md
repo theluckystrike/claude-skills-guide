@@ -460,6 +460,12 @@ Setting environment variables for Claude skills involves five main approaches: s
 
 For most skills like pdf, tdd, frontend-design, and supermemory, you'll set variables in your shell profile for credentials and optionally create skill-specific configuration files for more granular control. Remember to keep [sensitive keys secure](/getting-started-hub/) and review them periodically. With proper configuration, your Claude skills will have access to the APIs, paths, and settings they need to function effectively across every project in your development workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-set-environment-variables-for-a-claude-skill)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Create a Private Claude Skill Not on GitHub](/how-do-i-create-a-private-claude-skill-not-on-github/). Keep skills and their credentials local without GitHub exposure

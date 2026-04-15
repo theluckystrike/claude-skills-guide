@@ -421,6 +421,12 @@ Integration with note-taking tools: If you use Obsidian, you can write entries d
 
 The beauty of building your own organizer is tailoring it exactly to your workflow. Start with the foundation described here, use it daily for a few weeks, and then add features based on where you actually feel friction. Features built in response to real problems are far more useful than features built speculatively.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-research-organizer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Outline Notes Organizer: A Developer Guide](/chrome-extension-outline-notes-organizer/)

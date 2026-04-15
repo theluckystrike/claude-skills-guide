@@ -560,6 +560,12 @@ Claude Code significantly improves your cargo crate publishing workflow by autom
 Start by implementing the pre-publish checklist, then gradually add more automation as you identify problems in your workflow. Your future self, and your crate's users, will thank you.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cargo-crate-publishing-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Artifact Publishing Workflow Tutorial](/claude-code-for-artifact-publishing-workflow-tutorial/)

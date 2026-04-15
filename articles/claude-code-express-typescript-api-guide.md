@@ -370,6 +370,12 @@ When building Express TypeScript APIs with Claude Code:
 
 For persistent context across sessions, consider the supermemory skill to maintain project memory. When building frontend integrations, the frontend-design skill helps create consistent UI patterns that consume your API.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-express-typescript-api-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Express Middleware Error Handling Patterns Guide](/claude-code-express-middleware-error-handling-patterns-guide/)

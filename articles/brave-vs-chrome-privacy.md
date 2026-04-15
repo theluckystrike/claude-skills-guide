@@ -204,6 +204,12 @@ Brave and Chrome represent different points on the privacy-convenience spectrum.
 
 The best approach often involves using multiple browsers: Brave for research and personal browsing, Chrome (or Chromium) for development when Chrome-specific features are needed, and potentially Firefox for sites that conflict with Brave's aggressive blocking.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=brave-vs-chrome-privacy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Firefox vs Chrome Privacy 2026: A Developer's Technical.](/firefox-vs-chrome-privacy-2026/)

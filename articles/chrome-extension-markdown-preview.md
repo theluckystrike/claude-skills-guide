@@ -339,6 +339,12 @@ The best approach often combines multiple tools: a browser extension for quick p
 
 Whether you adopt an existing extension or build your own, the fundamentals remain constant: choose a well-maintained parser, add syntax highlighting for code blocks, sanitize HTML output, and persist user preferences. Get those four right and you have a preview environment that matches production rendering closely enough to catch formatting errors before they reach your audience.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-markdown-preview)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

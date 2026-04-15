@@ -201,6 +201,12 @@ The key to successful automation lies in treating your MLOps workflows as code, 
 Start by identifying the most repetitive tasks in your current Model Registry workflow, then work with Claude to create skills that automate those specific processes. Over time, you'll build a comprehensive library of MLOps automation that scales with your team's needs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mlflow-model-registry-workflow-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Container Registry Workflow Guide](/claude-code-container-registry-workflow-guide/)

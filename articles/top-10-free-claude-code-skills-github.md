@@ -295,6 +295,12 @@ Save this as `~/.claude/skills/pr-review.md` and invoke it with `/pr-review` fol
 
 Custom skills become especially valuable for team standards that differ from Claude's defaults. enforcing internal naming conventions, specific error handling patterns, or company-wide documentation formats that you would otherwise have to re-explain in every session.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=top-10-free-claude-code-skills-github)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). An in-depth look at which skills deliver the most value across different development contexts and project types

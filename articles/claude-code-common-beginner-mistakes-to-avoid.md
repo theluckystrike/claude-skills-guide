@@ -89,6 +89,12 @@ Avoiding these common mistakes accelerates your learning curve and improves your
 
 Building proficiency with Claude Code takes practice. Start with these principles, experiment with different skills like `pdf`, `xlsx`, `tdd`, and `frontend-design`, and develop workflows that match your specific needs. The investment pays dividends in improved productivity and more reliable results.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-common-beginner-mistakes-to-avoid)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Is Claude Code Worth It? An Honest Beginner Review 2026](/is-claude-code-worth-it-honest-beginner-review-2026/)

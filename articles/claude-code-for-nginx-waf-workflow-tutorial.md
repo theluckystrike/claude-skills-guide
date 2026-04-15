@@ -293,6 +293,12 @@ Follow these recommendations when managing NGINX WAF with Claude Code:
 Claude Code significantly simplifies NGINX WAF management by automating rule creation, testing, and analysis. By integrating Claude into your security workflow, you can deploy solid WAF protection faster while maintaining the flexibility to customize rules for your specific application needs. Start with the basics outlined in this tutorial, then gradually add custom rules as you identify unique threats to your application.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nginx-waf-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for NGINX Ingress Workflow Tutorial](/claude-code-for-nginx-ingress-workflow-tutorial/)

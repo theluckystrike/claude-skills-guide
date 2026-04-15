@@ -202,6 +202,12 @@ Start small by creating one team standards skill and gradually expand your autom
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-tech-lead-cross-team-alignment-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Tech Lead Technical Debt Prioritization Workflow](/claude-code-tech-lead-technical-debt-prioritization-workflow/)

@@ -314,6 +314,12 @@ Claude Code transforms database fixture creation from a tedious manual task into
 The patterns that deliver the most value are: organizing fixtures by feature rather than by table, using named factories for dynamic data, scoping database transactions carefully to avoid test bleed, and treating fixture updates as a first-class part of every schema migration. With Claude Code handling the generation and maintenance work, you can focus on writing test assertions instead of wrestling with setup code.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-database-test-fixtures-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Microphone Test Tool: Developer Guide](/chrome-extension-microphone-test-tool/)

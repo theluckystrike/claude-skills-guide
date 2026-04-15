@@ -214,6 +214,12 @@ Migrating from Ant to Maven or Gradle requires careful analysis and systematic c
 
 For teams managing this transition, consider [creating a reusable migration skill that captures your organization](/claude-skill-md-format-complete-specification-guide/)'s specific patterns. The initial investment in automation pays dividends across multiple projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-ant-to-maven-gradle-build-migration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)

@@ -338,6 +338,12 @@ Over time, you will develop a mental model of when to use AI assistance and when
 
 That is the real benefit: not the code itself, but the enhanced decision-making process and the hours freed from repetitive generation work.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=should-i-use-claude-code-for-writing-infrastructure-scripts)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is Claude Code and Why Developers Love It 2026](/what-is-claude-code-and-why-developers-love-it-2026/)

@@ -217,6 +217,12 @@ This ensures consistent behavior across development environments.
 
 Effective version control for Claude Code skills combines standard Git practices with patterns specific to skill development. By organizing repositories intentionally, maintaining clear commit histories, and implementing automated validation, you build a foundation for collaboration and long-term maintenance. These strategies scale from personal skill collections to enterprise repositories with multiple contributors.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-version-control-strategy-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Cherry-Pick Workflow Guide](/claude-code-git-cherry-pick-workflow-guide/)

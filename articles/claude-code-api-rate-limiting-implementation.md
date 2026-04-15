@@ -383,6 +383,12 @@ Run these tests as part of your skill's continuous integration pipeline. Key tes
 
 Rate limiting protects your Claude Code integrations from unexpected costs and ensures reliable performance. Start with a token bucket implementation using a typed config dataclass, add per-user isolation for multi-user scenarios, and graduate to distributed limiting with Redis and Lua atomicity only when running multi-server deployments. Handle rate limit errors gracefully with proper retry logic, implement hybrid fallback for Redis outages, and always test your implementation under load before production deployment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-api-rate-limiting-implementation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Error Handling Standards](/claude-code-api-error-handling-standards/)

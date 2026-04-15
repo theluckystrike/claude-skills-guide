@@ -215,6 +215,12 @@ Optimizing React Native performance is an ongoing process that requires understa
 Remember that not all optimizations are worth implementing. Focus on the changes that will have the biggest impact on your specific application's performance profile, and always measure before and after making changes.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-react-native-performance-optimization-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code React Native Expo Workflow Debugging Guide](/claude-code-react-native-expo-workflow-debugging-guide/)

@@ -172,6 +172,12 @@ Connection refused errors stem from services not running, incorrect ports, firew
 
 For complex multi-service projects, consider using docker-compose to manage dependencies and ensure all required services start together. The container skill provides detailed guidance for containerized development workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-error-connection-refused-localhost-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code With Docker Container Skill Setup Guide](/using-claude-code-inside-docker-container-tutorial/). See also

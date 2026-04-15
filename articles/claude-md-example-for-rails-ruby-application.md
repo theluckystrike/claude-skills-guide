@@ -426,6 +426,12 @@ This loop keeps documentation current automatically, because the conventions you
 
 Integrating Claude into your Rails and Ruby workflow dramatically improves documentation quality, testing coverage, and code consistency. The key lies in providing rich context through `CLAUDE.md`, maintaining conventions in the supermemory skill, and using specialized skills like tdd for testing, pdf for generated documentation, and supermemory for maintaining project knowledge. Start with one area. perhaps model documentation or test generation. and expand the workflow as your team becomes comfortable. The compound effect of consistent context means every session gets more useful over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-example-for-rails-ruby-application)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude MD Example for Flutter Mobile Application](/claude-md-example-for-flutter-mobile-application/)

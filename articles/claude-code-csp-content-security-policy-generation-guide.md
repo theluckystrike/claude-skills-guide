@@ -352,6 +352,10 @@ The real value of using Claude Code for CSP work is the iteration speed. Going f
 Remember that CSP is not a one-time configuration, it requires ongoing maintenance as your application evolves. New dependencies, new third-party integrations, and architectural changes all affect your resource loading patterns. Regular audits using Claude Code's analysis capabilities help ensure your CSP remains effective against emerging threats.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-csp-content-security-policy-generation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/). Enterprise security framework patterns that complement CSP implementation

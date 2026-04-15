@@ -264,3 +264,10 @@ Building a Chrome extension for Pinterest pin scheduling gives developers and po
 The key to success lies in understanding API rate limits, implementing solid error handling, and maintaining a clean separation between content capture, scheduling logic, and posting operations. With these foundations in place, you can build a reliable scheduling system that integrates smoothly with your existing content creation workflow.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-pinterest-pin-scheduler)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.

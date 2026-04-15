@@ -227,6 +227,12 @@ The key is treating visual testing as an integral part of your development proce
 Start with a small set of critical pages, establish baseline acceptance criteria, and gradually expand your visual test coverage. The investment pays dividends in reduced visual bugs and improved user experience.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-percy-visual-testing-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)

@@ -354,6 +354,12 @@ The DevTools approach is worth explaining in more detail. Open DevTools, go to t
 
 The key takeaway: every extension you install is code running with elevated privileges in your browser. Regular audits and minimal installation policies reduce your exposure to tracking. Treat your extension list the way a security-conscious developer treats their dependency list, review it periodically, remove what you do not use, and investigate anything that requests more access than it needs to function.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extensions-that-track-you)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [DuckDuckGo vs Chrome Privacy: A Developer & Power User Guide](/duckduckgo-vs-chrome-privacy/)

@@ -174,6 +174,12 @@ Remember: Claude Code is excellent at following detailed specifications. The mor
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-generate-complete-files-not-snippets)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Can Claude Skills Generate Images or Multimedia Files?](/can-claude-skills-generate-images-or-handle-multimedia-files/)

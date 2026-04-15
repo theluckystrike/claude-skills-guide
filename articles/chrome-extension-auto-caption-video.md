@@ -217,6 +217,12 @@ Chrome extensions for auto captioning video content are achievable through the W
 
 For production deployments, prioritize user privacy, provide customizable styling, and consider fallback options when speech recognition fails. The techniques covered here provide a foundation for building solid captioning tools or understanding how existing extensions work under the hood.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-auto-caption-video)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

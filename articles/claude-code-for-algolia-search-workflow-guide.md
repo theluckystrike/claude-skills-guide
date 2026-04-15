@@ -202,6 +202,12 @@ Third, implement rate limiting on search requests to control costs and prevent a
 Integrating Claude Code with Algolia creates powerful search capabilities that scale with your application. Start with basic indexing and search, then progressively add advanced features like faceting, synonyms, and analytics. The key is structuring your data thoughtfully and continuously iterating based on user behavior metrics. With this workflow foundation, you can build search experiences that feel intuitive and deliver relevant results consistently.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-algolia-search-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for AST-Based Code Search Workflow](/claude-code-for-ast-based-code-search-workflow/)

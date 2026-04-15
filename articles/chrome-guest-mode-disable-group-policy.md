@@ -360,6 +360,12 @@ For mixed environments, Chrome Browser Cloud Management provides the most compre
 By controlling guest mode, organizations maintain better security posture and ensure all browser activity traces to identifiable user profiles.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-guest-mode-disable-group-policy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Default Printer Policy: A Developer's.](/chrome-enterprise-default-printer-policy/)

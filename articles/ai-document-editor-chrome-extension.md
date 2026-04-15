@@ -269,6 +269,12 @@ Building an AI document editor Chrome extension requires careful attention to ar
 
 Start with a minimal viable feature set, gather feedback from power users, and iterate based on real-world usage patterns. The most successful extensions feel invisible. handling the heavy lifting while users focus on their actual work. A floating toolbar with three well-tuned actions will get more daily use than a feature-heavy panel that requires learning a new workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-document-editor-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

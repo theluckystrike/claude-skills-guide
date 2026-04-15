@@ -311,6 +311,12 @@ Free Chrome extension PDF editors provide substantial functionality for develope
 
 The feature gap between free extensions and paid desktop software has narrowed considerably. For most developer use cases. annotating specs, reviewing contracts, filling vendor forms, marking up architecture diagrams. a well-chosen free Chrome extension covers everything you need without adding another licensed tool to your stack.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-pdf-editor-free)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Document Editor Chrome Extension: A Developer's Guide](/ai-document-editor-chrome-extension/)

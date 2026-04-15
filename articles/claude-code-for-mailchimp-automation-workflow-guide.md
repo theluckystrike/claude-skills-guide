@@ -293,6 +293,12 @@ Claude Code can significantly enhance your Mailchimp automation capabilities by 
 Start with simple automations like welcome sequences, then gradually build more complex workflows as you become comfortable with the API. The time invested in setting up solid automations will pay dividends in improved engagement and reduced manual workload.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-mailchimp-automation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for SRE Toil Automation Workflow](/claude-code-for-sre-toil-automation-workflow/)

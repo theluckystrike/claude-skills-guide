@@ -170,6 +170,12 @@ Remember: The key to getting the most out of Claude Code skills is providing cle
 
 *This guide covers the fundamentals of AI agent skills with a focus on Claude Code. For more in-depth information about specific skills, explore the individual skill guides available in the Claude Skills documentation.*
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=what-are-ai-agent-skills-complete-guide-developers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)

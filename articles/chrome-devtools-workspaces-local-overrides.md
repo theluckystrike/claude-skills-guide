@@ -134,6 +134,12 @@ Choose Local Overrides when you need to modify files from websites you don't con
 
 Both features eliminate the tedious manual sync process that used to plague browser-based development. Once you set them up and understand their strengths, you'll wonder how you ever worked without them.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-devtools-workspaces-local-overrides)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)

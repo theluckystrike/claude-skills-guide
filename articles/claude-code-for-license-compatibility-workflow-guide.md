@@ -228,6 +228,12 @@ License compatibility doesn't have to be a painful part of software development.
 
 Start implementing this workflow in your next project, and you'll find that license management becomes a straightforward part of your development process rather than an afterthought that causes headaches during audits or releases.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-license-compatibility-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for License Compliance Workflow Tutorial](/claude-code-for-license-compliance-workflow-tutorial/)

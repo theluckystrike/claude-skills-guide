@@ -191,6 +191,12 @@ The most successful governance policies are those that developers actually follo
 
 Related guides: [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-tools-security-concerns-enterprise-guide/)
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-coding-tools-governance-policy-for-enterprises)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for Enterprise Architects Governance](/claude-code-skills-for-enterprise-architects-governance/)

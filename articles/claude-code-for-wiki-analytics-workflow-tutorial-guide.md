@@ -235,6 +235,12 @@ Start small, perhaps with basic page statistics, and gradually expand to more so
 
 Remember: the goal isn't just collecting data, but transforming that data into insights that improve your wiki's value as a knowledge resource.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-wiki-analytics-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)

@@ -466,6 +466,12 @@ Start by configuring a `CLAUDE.md` file with your project's locale, timezone, an
 
 Create custom skills for your team's recurring patterns. code review checklists, PR validation, and i18n auditing. so every developer on the team applies the same Japanese-specific standards consistently. The initial setup time pays dividends through consistent code quality, comprehensive documentation, and reduced context-switching overhead. See the [workflows hub](/workflows-hub/) for more developer workflow guides.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-japanese-developers-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/). detailed guide to using supermemory for long-running projects

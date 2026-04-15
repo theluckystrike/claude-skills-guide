@@ -190,6 +190,12 @@ Vibe coding transforms how we build software, but it requires thoughtful project
 
 Start with simple structures and evolve as needed. Your future self, and every AI session, will benefit from the clarity you create today.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=vibe-coding-project-structure-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Vibe Coding for Web Apps: NextJS + Vercel Guide](/vibe-coding-for-web-apps-nextjs-vercel-guide/)

@@ -167,6 +167,12 @@ Claude Code skills transform GitHub Actions workflow development from manual YAM
 
 Start with one skill focused on your most common workflow type, then expand as you identify more opportunities for automation. The investment pays dividends in reduced CI/CD maintenance and fewer pipeline failures.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-creating-github-actions-workflows)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-code-github-actions-workflow-matrix-strategy-guide/). advanced matrix strategies for testing across multiple configurations

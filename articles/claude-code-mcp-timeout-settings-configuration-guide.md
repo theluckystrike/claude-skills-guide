@@ -222,6 +222,12 @@ MCP timeouts in Claude Code are almost always caused by slow server responses, n
 
 For general timeout strategies including input scoping and task decomposition, see the [complete timeout troubleshooting guide](/claude-code-skill-timeout-error-how-to-increase-the-limit/). If your timeouts stem from connection instability rather than MCP server slowness, the [connection timeout fix guide](/claude-code-error-connection-timeout-during-task-fix/) covers network-layer solutions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mcp-timeout-settings-configuration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Reading
 
 - [Claude Code Skill Timeout Error: How to Increase the Limit](/claude-code-skill-timeout-error-how-to-increase-the-limit/) . The main timeout reference covering all timeout causes and workarounds

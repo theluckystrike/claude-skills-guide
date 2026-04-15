@@ -434,6 +434,12 @@ The key insight is that Unbuild eliminates most of the manual Rollup configurati
 Start small: create a new Unbuild project, let Claude generate the initial configuration, then iterate as your library grows. The combination of AI assistance and modern tooling makes library development more accessible than ever.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-unbuild-build-tool-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for wasm-bindgen Workflow Tutorial](/claude-code-for-wasm-bindgen-workflow-tutorial/)

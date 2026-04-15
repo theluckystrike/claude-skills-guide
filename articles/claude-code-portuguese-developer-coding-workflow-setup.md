@@ -329,6 +329,12 @@ O diferencial para times que trabalham em português é a consistência: código
 
 Comece com a configuração básica mostrada neste guia e adicione customizações conforme suas necessidades específicas. Com o tempo, você terá um ambiente de desenvolvimento perfeitamente alinhado com as necessidades do seu time. reduzindo fricção, padronizando saídas e permitindo que o Claude Code funcione como um colaborador que realmente conhece o contexto do seu projeto.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-portuguese-developer-coding-workflow-setup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Competitive Programming Practice Workflow](/claude-code-for-competitive-programming-practice-workflow/)

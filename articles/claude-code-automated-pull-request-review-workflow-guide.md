@@ -220,6 +220,12 @@ Automated PR review workflows powered by Claude Code skills transform how teams 
 The investment in setting up these workflows pays dividends in reduced review time, fewer regressions, and more consistent code across your project.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-automated-pull-request-review-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Pull Request Review Workflow Guide](/claude-code-for-pull-request-review-workflow-guide/)

@@ -293,6 +293,12 @@ Beyond basic citation generation, consider adding these enhancements:
 
 Building your own MLA citation generator gives you complete control over formatting preferences and eliminates dependence on third-party services. The extension runs entirely in your browser, keeping your research data private while providing instant citations whenever you need them.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-mla-citation-generator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)

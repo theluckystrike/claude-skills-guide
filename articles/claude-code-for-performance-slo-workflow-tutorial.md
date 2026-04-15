@@ -221,6 +221,12 @@ Most teams find the greatest impact from tracking API latency and error rates in
 
 Claude Code makes it straightforward to define, measure, and maintain performance objectives without creating excessive overhead. The key is starting with clear, achievable targets and iterating as your understanding of system behavior improves.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-performance-slo-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

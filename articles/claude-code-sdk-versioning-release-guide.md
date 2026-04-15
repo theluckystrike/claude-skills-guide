@@ -300,6 +300,12 @@ The practical habits that separate reliable skill authors from unreliable ones a
 
 By following these practices, you build skills that users trust, skills they can depend on for critical workflows whether they're automating document generation with the pdf skill, designing interfaces with the frontend-design skill, or managing complex development tasks with the tdd skill.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sdk-versioning-release-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Tutorials Hub](/tutorials-hub/)

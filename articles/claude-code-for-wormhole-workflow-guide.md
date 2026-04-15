@@ -253,6 +253,12 @@ Wormhole workflows transform Claude Code from a session-based assistant into a p
 The beauty of wormhole workflows is that they improve with use. Every pattern you capture makes your future sessions more productive, every solution you store makes problem-solving faster, and every team wormhole you create makes your entire organization more efficient.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-wormhole-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)

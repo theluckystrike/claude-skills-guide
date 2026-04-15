@@ -253,6 +253,12 @@ Start with simple API integrations, then progress to on-chain contract interacti
 For deeper integration, explore OpenSea's Seaport contract documentation and consider building custom MCP tools that encapsulate your most frequently used operations. This approach transforms repetitive tasks into reusable, Claude-executable commands that scale with your portfolio management needs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-opensea-protocol-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Solidity Smart Contract Development](/claude-skills-for-solidity-smart-contract-development/)

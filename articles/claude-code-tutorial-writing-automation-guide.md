@@ -354,6 +354,12 @@ Tutorials becoming too long: Set a word count budget per section (e.g., 200 word
 
 Code examples becoming outdated: Add a `date` front matter field and a "last tested with version X" note at the top of each tutorial. Ask Claude Code to flag which libraries or APIs in the tutorial are likely to change in the next 6-12 months.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-tutorial-writing-automation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). Documentation automation paired with tutorial writing

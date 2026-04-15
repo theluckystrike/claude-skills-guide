@@ -277,6 +277,12 @@ For the Surface Duo specifically, the dual-screen layout requires CSS spanning m
 
 Even without foldable-specific testing, get into the habit of testing at unusual widths. 375px, 390px, 414px. because these correspond to common iPhone models at 1x scale and reveal edge cases that clean breakpoint jumps at 320/768/1024 often miss.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-devtools-responsive-design-mode)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome DevTools Console Commands: A Practical Guide for Developers](/chrome-devtools-console-commands/)

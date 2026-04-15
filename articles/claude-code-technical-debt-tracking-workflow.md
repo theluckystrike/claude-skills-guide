@@ -201,6 +201,12 @@ A Claude Code technical debt tracking workflow combines automated detection, str
 
 The skills referenced here, supermemory, tdd, linear-mcp-server, jira-mcp-server, xlsx, pdf, and others, each contribute to different parts of this workflow. Start with simple debt detection, then gradually add tracking and visualization as your process matures.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-technical-debt-tracking-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/). Complexity metrics are a core debt indicator

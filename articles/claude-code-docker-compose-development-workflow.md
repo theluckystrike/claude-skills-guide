@@ -581,6 +581,12 @@ Start everything including tools: `docker compose --profile tools up -d`. By def
 
 Claude Code transforms Docker Compose from a manual orchestration tool into an intelligent development partner. By describing your goals and problems in natural language, you get actionable Docker commands, debugging guidance, and complete Compose configurations tailored to your stack. The key practices covered here. layered override files, health check dependencies, hot-reload volume mounts, per-project naming, and CI integration. make the difference between a fragile local setup and one that works consistently across your entire team. Combined with skills like tdd for containerized testing, pdf for architecture documentation, and supermemory for knowledge retention, you build a development workflow that is both powerful and maintainable from day one.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-compose-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)

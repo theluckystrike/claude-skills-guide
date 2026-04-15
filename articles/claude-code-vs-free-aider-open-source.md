@@ -318,6 +318,12 @@ The good news is that you do not have to choose permanently. Both tools install 
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-free-aider-open-source)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Continue Dev Review: Open Source AI Coding in 2026](/continue-dev-review-open-source-ai-coding-2026/)

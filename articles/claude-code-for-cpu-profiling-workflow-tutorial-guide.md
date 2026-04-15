@@ -162,6 +162,12 @@ CPU profiling doesn't have to be intimidating. By combining powerful profiling t
 
 Remember that profiling is an iterative process. Each optimization reveals new opportunities for improvement. With Claude Code as your assistant, you have a knowledgeable partner to help navigate the nuances of performance optimization at every step.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cpu-profiling-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Dhat Memory Profiling Workflow](/claude-code-for-dhat-memory-profiling-workflow/)

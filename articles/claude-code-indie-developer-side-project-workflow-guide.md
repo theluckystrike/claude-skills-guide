@@ -269,6 +269,12 @@ The workflow described here is not a rigid system. it is a set of habits that co
 
 Start with the foundation: create your `CLAUDE.md` before writing your first line of code, and make generating tests part of every feature implementation. From there, add the other practices as your project grows into them.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-indie-developer-side-project-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Rye Python Project Workflow Guide](/claude-code-for-rye-python-project-workflow-guide/)

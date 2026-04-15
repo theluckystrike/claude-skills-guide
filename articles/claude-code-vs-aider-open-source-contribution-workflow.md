@@ -321,6 +321,12 @@ The most effective approach is knowing when to use each one. Many developers kee
 
 Try both tools with your next OSS contribution and see which workflow feels more natural for your development style.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-aider-open-source-contribution-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Open Source Contribution Workflow Guide](/claude-code-for-open-source-contribution-workflow-guide/)

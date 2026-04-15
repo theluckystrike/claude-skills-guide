@@ -184,6 +184,12 @@ When you find a prompt that produces excellent results, document why it works. I
 
 Using Claude with well-structured markdown files transforms how you develop machine learning projects. The combination of clear prompts, appropriate skills, and comprehensive documentation creates a powerful workflow that scales with your project complexity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-example-for-machine-learning-project)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)

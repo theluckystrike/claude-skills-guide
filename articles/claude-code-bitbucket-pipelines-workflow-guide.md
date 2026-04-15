@@ -232,6 +232,12 @@ Integrating Claude Code with Bitbucket Pipelines transforms your CI/CD workflow 
 
 Start with a single pipeline step, measure the results, and gradually expand your automation. The initial investment in configuration pays dividends in developer time saved and consistent code quality across your project.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-bitbucket-pipelines-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)

@@ -238,6 +238,12 @@ Slack Chrome extension features extend the platform's capabilities far beyond it
 
 The right combination of extensions transforms Slack from a simple messaging app into a productivity hub that supports how modern development teams actually work.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=slack-chrome-extension-features)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Calendar Chrome Extensions for Developers and Power.](/calendar-chrome-extension-best/)

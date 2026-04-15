@@ -278,6 +278,12 @@ When deploying your Costco deal tracker, consider these practical aspects. First
 
 For developers looking to extend this functionality, adding price history visualization, CSV export for price data, or integration with external notification services like Pushover or Discord webhooks provides additional value without significant complexity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-costco-deal-tracker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Black Friday Deal Tracker: A.](/chrome-extension-black-friday-deal-tracker/)

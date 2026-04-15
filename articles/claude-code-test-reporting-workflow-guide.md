@@ -438,6 +438,12 @@ Implementing a solid test reporting workflow with Claude Code transforms raw tes
 
 Remember to regularly review and refine your reporting workflows to ensure they continue meeting your evolving project needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-test-reporting-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Enterprise Approval Workflow: A Practical Guide](/chrome-extension-enterprise-approval-workflow/)

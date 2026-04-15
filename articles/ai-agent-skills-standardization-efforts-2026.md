@@ -175,6 +175,12 @@ One practical step available today: audit your existing skills for platform-spec
 
 The organizations that invest in portable skills now will benefit twice: they retain their accumulated skill knowledge when platforms change, and they can contribute to shared skill registries where the maintenance burden gets distributed across the community instead of concentrated on internal teams.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-agent-skills-standardization-efforts-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Servers vs Claude Skills: What Is the Difference?](/mcp-servers-vs-claude-skills-what-is-the-difference/). Understand the structural foundations that make cross-platform skill standardization possible via MCP.

@@ -246,6 +246,10 @@ The investment is about 20 minutes to write each skill. A well-written incident 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-email-drafting-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Daily Standup Automation Workflow](/claude-skills-daily-standup-automation-workflow/). Automate daily team communications

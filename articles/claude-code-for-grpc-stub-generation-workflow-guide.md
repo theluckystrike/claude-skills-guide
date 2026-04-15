@@ -246,6 +246,12 @@ Claude Code transforms gRPC stub generation from a manual, error-prone process i
 Start by defining clear proto file conventions, create reusable generation templates, and let Claude Code handle the repetitive tasks. Your future self will thank you when maintaining microservices becomes noticeably smoother.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-grpc-stub-generation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)

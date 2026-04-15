@@ -552,6 +552,12 @@ The specialized skills like `frontend-design`, `tdd`, and `supermemory` each con
 
 Start with bundle analysis, implement route-based and component-based code splitting, add image optimization, and layer on runtime optimizations as needed. Measure continuously to ensure your optimizations actually move the metrics that matter. The checklist above gives you a prioritized starting point that works for most Next.js applications, work through it top-to-bottom, measure after each change, and stop when your Core Web Vitals reach acceptable thresholds.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nextjs-performance-optimization)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Next.js Deployment Optimization](/claude-code-nextjs-deployment-optimization/). CI/CD, Docker, environment config, and production release workflows (complements this performance guide)

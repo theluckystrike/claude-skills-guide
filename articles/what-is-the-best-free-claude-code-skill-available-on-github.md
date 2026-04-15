@@ -158,6 +158,12 @@ Many developers install multiple skills and let Claude determine which one appli
 
 Claude skills represent a powerful way to extend Claude Code's capabilities without additional cost. The skills mentioned above represent the most practical and well-maintained options available on GitHub. Start with the skill that aligns closest to your primary work, and expand from there as your needs evolve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=what-is-the-best-free-claude-code-skill-available-on-github)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Directory: Where to Find Skills](/claude-skills-directory-where-to-find-skills/). The comprehensive directory of available Claude skills including free GitHub-hosted options

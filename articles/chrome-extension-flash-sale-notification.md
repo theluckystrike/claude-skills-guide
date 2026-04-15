@@ -303,6 +303,12 @@ For distribution through the Chrome Web Store, you'll need to prepare screenshot
 
 Building a flash sale notification extension combines DOM manipulation, Chrome's extension APIs, and user preference management. Start with basic detection and gradually add features like price tracking, scheduled monitoring, and configurable alerts. The extension you build can save hours of manual browsing and help you never miss a deal again.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-flash-sale-notification)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)

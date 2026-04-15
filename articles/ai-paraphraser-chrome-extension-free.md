@@ -197,6 +197,12 @@ Free AI paraphraser Chrome extensions provide valuable assistance for developers
 
 Whether you use existing extensions or build your own, integrating AI paraphrasing into your browser workflow saves time and improves communication clarity across technical documentation, email, and content creation tasks.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-paraphraser-chrome-extension-free)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Writing Assistant Chrome Extension Free: A Developer's Guide](/ai-writing-assistant-chrome-extension-free/)

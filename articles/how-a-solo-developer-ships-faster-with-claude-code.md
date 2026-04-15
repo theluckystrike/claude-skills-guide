@@ -185,6 +185,10 @@ The goal isn't to use every skill, it's to identify where your time actually goe
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-a-solo-developer-ships-faster-with-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)

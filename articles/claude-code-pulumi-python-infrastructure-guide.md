@@ -360,6 +360,12 @@ The real productivity gains come from Claude Code's ability to hold complex infr
 
 For teams working with complex deployments, integrate the tdd skill for testing infrastructure before it reaches production, and use supermemory for maintaining deployment context across sessions. As your Pulumi codebase grows, Claude Code's ability to analyze and refactor existing stacks becomes increasingly valuable, keeping your infrastructure code clean and maintainable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-pulumi-python-infrastructure-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Apps with Claude API: Anthropic SDK Python Guide](/building-apps-with-claude-api-anthropic-sdk-python-guide/)

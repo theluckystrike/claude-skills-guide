@@ -121,6 +121,12 @@ The combination of LSP's deterministic code intelligence and Claude's flexible A
 
 Start by ensuring your LSP setup works correctly, then layer Claude Code skills on top to automate common tasks and enhance your development experience. The investment in setting up this integrated workflow pays dividends in reduced friction and improved code quality throughout your projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-language-server-protocol-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Astro Server Endpoints Workflow](/claude-code-for-astro-server-endpoints-workflow/)

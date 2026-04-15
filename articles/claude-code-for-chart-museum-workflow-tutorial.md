@@ -183,6 +183,12 @@ Claude Code transforms Chart Museum management from manual CLI work into an inte
 
 The key is treating Claude Code as a developer assistant that understands both your infrastructure and your intent, describe what you want to accomplish, and let it handle the implementation details.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-chart-museum-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Datadog Log Management Workflow Tutorial](/claude-code-datadog-log-management-workflow-tutorial/)

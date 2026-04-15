@@ -324,6 +324,12 @@ Consider starting with a free tier to validate the tool works for your team befo
 
 Effective retrospectives transform team performance over time. The right Chrome extension makes these meetings smooth, accessible, and integrated into your daily workflow, helping your team continuously improve without adding administrative burden.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-retrospective-board)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Check Link Safety: Developer Tools and Techniques](/chrome-check-link-safety/)

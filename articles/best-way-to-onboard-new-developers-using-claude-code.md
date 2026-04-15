@@ -219,6 +219,12 @@ Claude Code transforms developer onboarding from a resource-intensive process in
 
 Start with the essential skills, supermemory for knowledge, tdd for testing patterns, pdf for documentation, and frontend-design for UI conventions, then build custom skills that capture your specific project needs. The upfront investment pays dividends with every new team member who joins and becomes productive faster.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-onboard-new-developers-using-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/). Team integration is part of onboarding

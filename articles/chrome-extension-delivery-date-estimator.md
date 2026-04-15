@@ -268,6 +268,12 @@ The key is starting simple and refining your estimator as you gather more submis
 
 For most teams, the practical impact is not the hours saved on the estimate itself. it is the reduction in last-minute scrambles when a stakeholder asks why the extension is not live yet. Having a calibrated prediction you can point to, and a clear explanation of what drives review time, turns an opaque process into a manageable one.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-delivery-date-estimator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Resale Value Estimator: A Practical.](/chrome-extension-resale-value-estimator/)

@@ -391,6 +391,12 @@ When drift is detected, paste the plan output into Claude Code and ask it to cat
 
 Building automated Terraform Cloud workflows with Claude Code creates a powerful synergy. The AI handles routine operations, explains complex changes, and maintains operational awareness while you focus on architectural decisions. Start with the basic setup, then progressively add automation layers: plan reviews, compliance checking, testing, drift detection, and runbook generation. Each layer compounds on the previous one, and within a few sprints you have a mature infrastructure pipeline that catches problems early, documents itself, and requires far less manual intervention than a traditional Terraform workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-terraform-cloud-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Terraform Cloud Run Workflow Guide](/claude-code-for-terraform-cloud-run-workflow-guide/)

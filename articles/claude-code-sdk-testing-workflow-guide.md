@@ -490,6 +490,12 @@ Property-based testing with Hypothesis. For skills that accept structured data, 
 
 Mutation testing with mutmut. Mutation testing modifies your skill code in small ways and verifies that your tests catch the change. A test suite with high code coverage but low mutation score is not actually verifying correctness. Claude Code generates the mutmut configuration and the CI job that runs mutation testing nightly, reporting the mutation score trend over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sdk-testing-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Tutorials Hub](/tutorials-hub/)

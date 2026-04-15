@@ -544,6 +544,12 @@ Start with the basics: always check tool results and log errors with context. Th
 
 The patterns in this guide compound well together. A workflow that combines validation, structured retries, circuit breakers, checkpointing, and comprehensive logging is genuinely resilient, not just error-handled in the superficial sense of catching exceptions and printing messages, but capable of recovering automatically from the most common real-world failures. Your future self (and your users) will thank you when something inevitably goes wrong.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-claude-error-handling-patterns-workflow-guid)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Express Middleware Error Handling Patterns Guide](/claude-code-express-middleware-error-handling-patterns-guide/)

@@ -273,6 +273,12 @@ The extension approach works particularly well because it operates directly in t
 
 Building an AI content repurposer Chrome extension combines web development skills with AI integration, creating a practical tool that automates repetitive content tasks. The architecture shown here provides a solid foundation that you can extend with additional features like custom templates, saved presets, or integration with specific platforms.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-content-repurposer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Blog Post Outline Generator: A Practical Guide for Content Creators](/chrome-extension-blog-post-outline-generator/)

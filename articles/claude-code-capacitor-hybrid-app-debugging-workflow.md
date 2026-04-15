@@ -189,6 +189,12 @@ This guide assumes your Capacitor project is already initialized and building. I
 Claude Code transforms Capacitor debugging from a frustrating multi-platform challenge into a structured, systematic process. By using its ability to work across your entire project, including native iOS and Android configurations, you can trace issues through every layer of your hybrid application. The key is providing comprehensive context: error messages, platform information, code snippets, and reproduction steps. Combine this with skills like webapp-testing for automated browser testing and bash for build verification, and you have a powerful debugging toolkit for any Capacitor project.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-capacitor-hybrid-app-debugging-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Capacitor Hybrid App Development Guide](/claude-code-capacitor-hybrid-app-development-guide/)

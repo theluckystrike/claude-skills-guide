@@ -286,6 +286,12 @@ The skills system transforms Claude Code from a useful generalist into a special
 
 The investment is small. A well-crafted skill takes 15 to 30 minutes to write. The return on that time is measured in hours of recovered productivity over the months that follow. If you are using Claude Code regularly without a library of project-specific skills, you are getting a fraction of the value the tool is capable of delivering.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-code-work-better-with-skills-loaded)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is Claude Code and Why Developers Love It 2026](/what-is-claude-code-and-why-developers-love-it-2026/)

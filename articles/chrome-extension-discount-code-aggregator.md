@@ -444,6 +444,12 @@ Code field validation rejecting programmatic input: Some sites validate that the
 
 False positives. code "applied" but no discount shown: Parse the order summary after each attempt and compare the total before and after. If the total is unchanged, mark the code as failed even if the page showed a success message (some sites accept invalid codes silently).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-discount-code-aggregator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Military Discount Finder: A Developer Guide](/chrome-extension-military-discount-finder/)

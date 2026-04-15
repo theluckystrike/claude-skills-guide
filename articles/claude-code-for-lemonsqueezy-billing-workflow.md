@@ -231,6 +231,12 @@ Integrating LemonSqueezy billing into your application doesn't have to be comple
 The key is to start with a solid foundation, implement proper webhook handling, and build comprehensive test coverage. With these elements in place, your billing system will be reliable, secure, and ready to handle your growing customer base.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-lemonsqueezy-billing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Zuora Billing Workflow Tutorial](/claude-code-for-zuora-billing-workflow-tutorial/)

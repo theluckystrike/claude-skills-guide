@@ -148,6 +148,10 @@ Finally, treat test code with the same rigor as production code. AI-generated te
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-qa-engineers-use-claude-code-for-test-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for QA Engineers Automating Test Suites](/claude-code-skills-for-qa-engineers-automating-test-suites/)

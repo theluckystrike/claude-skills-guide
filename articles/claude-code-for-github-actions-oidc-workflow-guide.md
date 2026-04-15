@@ -305,6 +305,12 @@ OIDC authentication for GitHub Actions is a significant security improvement ove
 Start by migrating one workflow to OIDC, you'll immediately see the benefits of eliminating secret rotation and gaining fine-grained access control.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-github-actions-oidc-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

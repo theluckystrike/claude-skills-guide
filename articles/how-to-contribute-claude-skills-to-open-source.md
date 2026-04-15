@@ -239,6 +239,10 @@ List your skill in community directories or forums. Skills gain adoption when pe
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-contribute-claude-skills-to-open-source)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). The technical foundation for building any skill

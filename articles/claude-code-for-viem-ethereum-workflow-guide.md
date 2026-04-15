@@ -677,6 +677,12 @@ Key areas where Claude Code saves the most time with Viem:
 Remember: the key to success is starting simple and incrementally adding complexity as your application grows. Claude Code adapts to your needs and scales with your project.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-viem-ethereum-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

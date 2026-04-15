@@ -271,6 +271,12 @@ Start with simple routes, add `routeLoader$` for server data, and progressively 
 Remember: the goal isn't to use every feature, but to use Qwik City's strengths where they matter most, typically in content-heavy pages where SEO and initial load performance are critical.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-qwik-city-routing-ssr-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [WireGuard PostUp/PostDown Scripts for Advanced Routing Configuration](/wireguard-postup-postdown-scripts-for-advanced-routing-configuration/)

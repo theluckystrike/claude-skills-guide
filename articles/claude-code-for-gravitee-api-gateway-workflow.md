@@ -232,6 +232,12 @@ Start by integrating Claude Code into your API definition workflow, then expand 
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-gravitee-api-gateway-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for APISIX API Gateway Workflow Guide](/claude-code-for-apisix-api-gateway-workflow-guide/)

@@ -194,6 +194,12 @@ The claim check pattern is a powerful technique for building scalable, cost-effe
 Start by identifying message types in your system that would benefit from smaller payloads, then implement the storage, publishing, and consumption layers with Claude Code's assistance. With proper implementation, you'll see improved message throughput, reduced latency, and better overall system reliability.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-claim-check-pattern-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Ambassador Sidecar Pattern Workflow](/claude-code-for-ambassador-sidecar-pattern-workflow/)

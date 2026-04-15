@@ -245,6 +245,10 @@ Connect Claude Code to your repository, respect existing patterns, and gradually
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-use-claude-code-with-existing-github-repo)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Project Initialization Best Practices](/claude-code-project-initialization-best-practices/). set up CLAUDE.md and project structure for optimal AI assistance

@@ -177,6 +177,12 @@ Controlling background extension behavior involves multiple approaches. The Chro
 
 For development work, disabling unnecessary background extensions improves performance and reduces noise in debugging tools. For production environments, audit extension permissions regularly and remove anything that no longer serves a clear purpose.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=disable-chrome-background-extensions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)

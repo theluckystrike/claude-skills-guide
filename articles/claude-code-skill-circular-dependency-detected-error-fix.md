@@ -295,6 +295,12 @@ For most cases, extracting a neutral shared module is the cleanest solution and 
 
 The circular dependency detected error in Claude Code skills stems from import loops that break the skill loading process. By identifying the skills involved, breaking the import chain through refactoring or lazy loading, and removing circular metadata declarations, you restore full functionality. Prevent future occurrences by maintaining clear dependency boundaries and testing skill loading after any configuration changes. With these strategies, skills like pdf, tdd, frontend-design, supermemory, and any other skill combination work without conflicts. For broader skill composition patterns that avoid these issues by design, see [Claude skill inheritance and composition patterns](/claude-skill-inheritance-and-composition-patterns/).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skill-circular-dependency-detected-error-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/). Design skills with clean dependency boundaries to prevent circular imports

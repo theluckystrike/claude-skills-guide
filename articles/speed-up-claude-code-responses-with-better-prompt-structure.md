@@ -180,6 +180,12 @@ Better prompt structure doesn't just speed up responses, it makes them more accu
 
 For developers using specialized skills like tdd for test-driven development or pdf for document processing, these structural principles amplify effectiveness. The time invested in writing better prompts pays back multiplied through faster, more precise responses.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=speed-up-claude-code-responses-with-better-prompt-structure)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Optimize Claude Skill Prompts for Accuracy](/how-to-optimize-claude-skill-prompts-for-accuracy/). Companion guide: improving output correctness and quality rather than speed

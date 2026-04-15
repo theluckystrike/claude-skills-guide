@@ -385,6 +385,12 @@ The best extension is the one that disappears into your workflow. tasks appear i
 
 Experiment with different extensions, customize keyboard shortcuts to match your preferences, and build custom integrations when your team requires specific functionality. If you decide to build your own, start with the manifest and service worker skeleton, add offline queuing from the beginning, and keep the popup payload under 50KB. The resulting tool will feel faster than anything available off the shelf because it carries no features you do not use.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=project-management-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Inbox Organizer Chrome Extension: A Developer's Guide to Intelligent Email Management](/ai-inbox-organizer-chrome-extension/)

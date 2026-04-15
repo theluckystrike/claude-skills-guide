@@ -602,6 +602,12 @@ User consent flows should be explicit. Show a brief notice the first time the ex
 
 Ready to build? Start with the manifest and content script above, add your API integration, and test on a single e-commerce site first. Expand to additional sites as you refine your extraction selectors. The most common failure points are selector staleness (sites updating their HTML) and the async message passing pattern. both of which become straightforward once you've debugged them once.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-product-review-summary-ai)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)

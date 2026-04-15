@@ -191,6 +191,12 @@ To get the most from Claude in your Terraform workflow:
 
 The combination of Claude's understanding of Terraform syntax and AWS services creates a powerful pair programming experience. Whether you're bootstrapping new projects or managing complex existing infrastructure, these patterns will help you work more efficiently.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-terraform-aws-provider-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for Infrastructure as Code with Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/). General Terraform workflows: multi-workspace, terraform-docs, Infracost, and skill survey

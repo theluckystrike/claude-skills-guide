@@ -352,6 +352,12 @@ The key is choosing the method that matches your use case: temporary sessions be
 
 With these tools at your disposal, you have complete control over where Claude Code can operate. The effort to set up proper scoping is small and the payoff. faster, more accurate file operations and a reduced risk of accidental modifications. is immediate.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-scope-claude-code-to-a-single-directory)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code disallowedTools Security Configuration](/claude-code-disallowedtools-security-configuration/)

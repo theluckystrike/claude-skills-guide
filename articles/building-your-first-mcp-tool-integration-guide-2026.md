@@ -319,6 +319,12 @@ Now that you've built your first MCP integration, explore these advanced topics:
 
 The MCP ecosystem continues growing in 2026, with new servers appearing regularly. Check the official MCP registry for community-contributed integrations, or build your own to connect to internal systems specific to your organization.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=building-your-first-mcp-tool-integration-guide-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Integration Guide for Claude Code Beginners](/mcp-integration-guide-for-claude-code-beginners/)

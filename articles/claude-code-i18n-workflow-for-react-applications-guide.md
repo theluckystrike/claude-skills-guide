@@ -160,6 +160,12 @@ Claude Code transforms React i18n from a tedious manual process into an automate
 The investment in establishing this workflow pays dividends as your application grows to serve users in more languages and regions. Start with a solid foundation using react-i18next or i18next, then layer in Claude Code automation to handle the repetitive aspects of translation management.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-i18n-workflow-for-react-applications-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Multilingual Codebase Management Guide](/claude-code-multilingual-codebase-management-guide/)

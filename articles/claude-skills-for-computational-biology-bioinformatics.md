@@ -137,6 +137,12 @@ Skills function as collaborative assistants rather than autonomous agents, they 
 
 The bioinformatics community benefits from reproducible, well-documented analysis. Claude skills support these goals by automating documentation generation, test creation, and pipeline construction. Your domain expertise remains essential; skills amplify your productivity without substituting for scientific judgment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-computational-biology-bioinformatics)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Financial Modeling: Excel Alternative](/claude-skills-for-financial-modeling-excel-alternative/). Apply similar data-processing skill workflows to financial modeling and quantitative analysis.

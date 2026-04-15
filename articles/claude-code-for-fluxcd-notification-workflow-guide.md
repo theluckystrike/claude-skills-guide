@@ -468,6 +468,12 @@ Claude Code significantly accelerates FluxCD notification workflow development b
 
 The key is to start simple, get Slack or Discord working first, then layer on complexity as your team's notification needs evolve. Alert fatigue is the silent killer of notification systems; use Claude Code to help audit and tune your exclusion patterns regularly. Claude Code handles the boilerplate so you can focus on crafting the exact alerting logic your team needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-fluxcd-notification-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Courier Notification Workflow Guide](/claude-code-for-courier-notification-workflow-guide/)

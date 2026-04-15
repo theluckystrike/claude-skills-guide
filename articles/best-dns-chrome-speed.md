@@ -224,6 +224,12 @@ The key workflow is: measure baseline first using DevTools or `dig`, apply one c
 
 For enterprise and team environments, push DoH configuration via group policy so that every developer's Chrome instance benefits consistently. and pair it with a DNS provider that offers analytics (NextDNS or Cloudflare for Teams) so you can monitor resolver performance over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-dns-chrome-speed)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Browser Speed Benchmark 2026: A Practical Guide for Developers](/browser-speed-benchmark-2026/)

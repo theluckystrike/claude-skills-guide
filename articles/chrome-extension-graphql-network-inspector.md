@@ -312,6 +312,12 @@ Chrome extensions for GraphQL network inspection bridge the gap between standard
 
 The implementation above provides a foundation. Extend it based on your specific GraphQL setup, whether you work with Apollo, URQL, or vanilla GraphQL clients.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-graphql-network-inspector)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome DevTools Network Throttling: Simulate Slow.](/chrome-devtools-network-throttling/)

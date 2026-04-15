@@ -279,6 +279,10 @@ Build incrementally, test consistently, and deploy automatically. Your static si
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-astro-static-site-generation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Complete frontend skill stack

@@ -267,6 +267,12 @@ Also consider Content Security Policy restrictions on certain sites. Some web ap
 
 AI tone changer Chrome extensions represent practical applications of large language models in everyday productivity tools. The underlying architecture, content scripts, background services, and API integration, provides a template for building similar browser extensions. Careful model selection, loading feedback, transformation history, and privacy-conscious design separate a polished tool from a rough prototype. For developers, the extension pattern enables rapid prototyping of AI-powered browser features. For power users, these tools streamline communication across contexts while maintaining consistent messaging quality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-tone-changer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

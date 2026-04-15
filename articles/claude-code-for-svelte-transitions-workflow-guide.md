@@ -245,6 +245,12 @@ Svelte's transition system provides an excellent foundation for creating polishe
 Start with built-in transitions, customize parameters as needed, and gradually explore custom implementations for unique effects. Your users will appreciate the attention to detail in smooth, thoughtful animations.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-svelte-transitions-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Svelte Animations Workflow Tutorial](/claude-code-for-svelte-animations-workflow-tutorial/). Broader coverage of all three Svelte animation primitives: transitions, spring/tweened motion stores, and flip animations

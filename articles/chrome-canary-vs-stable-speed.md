@@ -229,6 +229,12 @@ Service worker caching: Service worker behavior changes across Chrome versions a
 
 DevTools performance panel accuracy: The performance profiler in Canary sometimes ships timeline improvements that change how flame charts are rendered and how attribution works. If you rely heavily on performance profiling, spending a week with Canary's profiler alongside Stable's can reveal whether you have been misreading timings due to tooling differences rather than code behavior.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-canary-vs-stable-speed)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)

@@ -187,6 +187,12 @@ try {
 3. **Include the request_id**: Every error response includes a `request_id`. Include it when contacting Anthropic support.
 4. **Check model compatibility**: Not all parameters work with all models. Extended thinking requires `budget_tokens >= 1024` and `budget_tokens < max_tokens`.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-error-400-invalidrequesterror-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Opus Prefill Not Supported Error Fix](/claude-opus-prefill-not-supported-error-fix/) -- detailed guide on the prefill restriction for Opus models.

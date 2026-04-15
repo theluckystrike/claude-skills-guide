@@ -223,6 +223,12 @@ When working with Claude Code, describe your parametrization needs clearly. Spec
 
 The combination of pytest's parametrization capabilities and Claude Code's automation creates a powerful testing workflow that scales with your project's complexity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-pytest-parametrize-advanced-workflow-patterns)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Pytest Fixtures Parametrize Workflow Tutorial 20](/claude-code-pytest-fixtures-parametrize-workflow-tutorial-20/)

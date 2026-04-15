@@ -198,6 +198,12 @@ Building a Kubernetes logging stack requires careful coordination between collec
 
 The skills ecosystem amplifies this workflow. Use the grafana-mcp-server for programmatic dashboard creation, the pdf skill for incident documentation, and supermemory for maintaining investigation context across complex incidents.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-kubernetes-logging-stack-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Kubernetes Monitoring with Prometheus](/claude-code-kubernetes-monitoring-prometheus/)

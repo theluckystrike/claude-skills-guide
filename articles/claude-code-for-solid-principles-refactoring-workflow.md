@@ -217,6 +217,12 @@ Refactoring toward SOLID principles doesn't have to be a painful, months-long en
 
 Start with a small, well-contained module to build confidence in the process. Once you see the benefits, easier testing, clearer code organization, simpler debugging, you'll want to apply this workflow across your entire codebase.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-solid-principles-refactoring-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Extract Method Refactoring Workflow](/claude-code-for-extract-method-refactoring-workflow/)

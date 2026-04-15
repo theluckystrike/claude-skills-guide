@@ -199,6 +199,12 @@ When building Docker-based applications with Claude Code, you can automate healt
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-health-checks-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Docker Dashboard: Streamlined Container.](/chrome-extension-docker-dashboard/)

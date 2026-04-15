@@ -227,6 +227,12 @@ app.post('/generate', async (req, res) => {
 
 This kind of visibility makes it much faster to identify whether the problem is in the prompt construction, the model selection, or the downstream parsing of the response.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-email-writer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Check if Your Email Has Been Compromised in a Data Breach](/chrome-check-email-breaches/)

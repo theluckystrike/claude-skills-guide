@@ -309,6 +309,10 @@ A well-maintained CLAUDE.md compounds in value over time, making each subsequent
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-set-up-claude-code-for-new-project)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Project Scaffolding Automation](/claude-code-project-scaffolding-automation/). Scaffold the project structure automatically

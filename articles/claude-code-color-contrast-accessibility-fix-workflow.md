@@ -161,6 +161,10 @@ Addressing color contrast accessibility issues does not require manual testing a
 Implement this workflow in your next project sprint, and you will see measurable improvements in both accessibility compliance and development efficiency.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-color-contrast-accessibility-fix-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/). Frontend skills including accessibility and design system automation

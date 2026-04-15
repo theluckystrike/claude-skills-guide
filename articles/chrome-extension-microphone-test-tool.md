@@ -283,6 +283,12 @@ A chrome extension microphone test tool is essential for developing reliable aud
 
 The patterns shown here, stream testing, audio level measurement, and permission checking, form the foundation for any microphone-enabled Chrome extension. Build these test capabilities into your development workflow to ensure consistent functionality across the diverse ecosystem of browsers and devices your users will employ.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-microphone-test-tool)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Selenium IDE Recorder: Complete Guide.](/chrome-extension-selenium-ide-recorder/)

@@ -275,6 +275,12 @@ Terminal-based presentation workflows, sped up with Claude Code, offer developer
 Start small, convert your next presentation to Markdown and see the difference. Once you experience the workflow, you'll never go back to drag-and-drop slide builders.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-slides-terminal-presentation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Huh Forms Terminal Workflow Guide](/claude-code-for-huh-forms-terminal-workflow-guide/)

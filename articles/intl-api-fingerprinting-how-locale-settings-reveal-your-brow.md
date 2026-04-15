@@ -274,6 +274,12 @@ The Internationalization API represents a subtle but powerful tool in the finger
 
 As with all fingerprinting vectors, the best protection comes from using privacy-focused browsers, keeping software updated, and being aware of the information your browser reveals. The fight against browser fingerprinting is ongoing, and awareness of techniques like Intl API fingerprinting is essential for maintaining online privacy.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=intl-api-fingerprinting-how-locale-settings-reveal-your-brow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Block Phishing Extension: A Developer Guide to.](/chrome-block-phishing-extension/)

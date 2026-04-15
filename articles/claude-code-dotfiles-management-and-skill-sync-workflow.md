@@ -186,6 +186,12 @@ Managing Claude Code dotfiles and skills through git provides consistency across
 
 The initial setup takes maybe thirty minutes, but the time saved over months of use far exceeds the investment. Your Claude configuration becomes as portable as your dotfiles, exactly the way it should be.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-dotfiles-management-and-skill-sync-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/). Distribute your synced skill files across engineering teams with consistent naming and versioning.

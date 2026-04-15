@@ -312,6 +312,10 @@ Automating Lighthouse score improvement with Claude Code skills transforms perfo
 Start with automated audits, then layer in optimization scripts for the highest-impact fixes. Integrate everything into your CI pipeline to catch regressions before they reach production. With proper automation, maintaining Lighthouse scores of 90+ becomes achievable without dedicated performance teams.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-lighthouse-score-improvement-automation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/). Frontend skills for performance optimization and building high-scoring production UIs

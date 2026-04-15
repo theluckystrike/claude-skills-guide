@@ -346,6 +346,12 @@ Warning page not showing: `webNavigation.onBeforeNavigate` cannot cancel navigat
 
 High false positive rate: Only flag URLs where multiple heuristics trigger simultaneously. A single match is rarely sufficient evidence of a phishing attempt.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-block-phishing-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Dangerous Chrome Extensions in 2026: Security Risks Developers Must Know](/dangerous-chrome-extensions-2026/)

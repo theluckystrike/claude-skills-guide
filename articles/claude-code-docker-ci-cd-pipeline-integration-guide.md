@@ -502,6 +502,12 @@ Integrating Claude Code with Docker and CI/CD pipelines transforms your developm
 The combination of Claude Code's intelligent assistance with Docker's containerization capabilities creates a foundation for efficient, automated, and reliable software delivery, empowering developers to focus on building features while AI handles routine DevOps tasks. Whether you are authoring multi-stage builds, configuring layer caching in GitHub Actions, running vulnerability scans, or translating pipelines between CI platforms, Claude Code reduces the configuration burden and catches the kind of subtle mistakes, pinning, permissions, secret handling, that cause production incidents.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-ci-cd-pipeline-integration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

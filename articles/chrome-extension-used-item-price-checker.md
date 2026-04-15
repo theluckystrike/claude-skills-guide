@@ -240,6 +240,12 @@ Building a used item price checker Chrome extension combines web scraping, data 
 
 Start by supporting a single marketplace thoroughly before expanding to additional sources. Focus on accurate price extraction and condition detection first, then add comparison features. The resulting extension provides genuine value for anyone buying or selling used items regularly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-used-item-price-checker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Keyword Density Checker: A Developer's Guide](/chrome-extension-keyword-density-checker/)

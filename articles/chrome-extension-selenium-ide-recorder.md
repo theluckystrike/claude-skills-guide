@@ -353,6 +353,12 @@ For production environments, treat exported tests as a starting point. Apply the
 ---
 
 *
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-selenium-ide-recorder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Selenium Browser Testing Automation Guide](/claude-code-selenium-browser-testing-automation-guide/)

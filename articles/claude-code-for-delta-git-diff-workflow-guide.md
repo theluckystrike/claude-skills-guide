@@ -227,6 +227,12 @@ Start by installing Delta and configuring it as your default git pager. Then cre
 
 The beauty of this integration is its flexibility, you can adapt it to your specific needs, whether you prefer minimal setups or comprehensive automation. Experiment with different Delta options and Claude Code prompts to find the workflow that works best for you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-delta-git-diff-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Cherry-Pick Workflow Guide](/claude-code-git-cherry-pick-workflow-guide/)

@@ -266,6 +266,12 @@ Testing: Use sandbox environments for iOS (APNs sandbox) and Android (FCM testin
 
 Push notifications remain a powerful tool for mobile engagement when implemented thoughtfully. The key takeaways are: properly configure your APNs and FCM credentials, handle device tokens robustly on your backend, implement proper notification interaction handling, and respect user permissions and preferences. With this foundation in place, you can build engaging notification experiences that bring users back to your app at the right moments.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mobile-push-notifications-implementation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for React Native Push Notifications Guide](/claude-code-for-react-native-push-notifications-guide/)

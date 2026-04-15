@@ -237,6 +237,12 @@ Before deploying your zero trust MCP architecture to production, verify these co
 
 Zero trust implementation requires upfront investment, but the security posture it provides protects your MCP infrastructure against both external attacks and internal misuse. Start with authentication, layer in authorization controls, and progressively strengthen your isolation as your deployment matures.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mcp-zero-trust-architecture-implementation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP OAuth 2.1 Authentication Implementation Guide](/mcp-oauth-21-authentication-implementation-guide/)

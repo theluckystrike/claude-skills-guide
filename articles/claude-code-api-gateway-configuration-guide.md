@@ -714,6 +714,12 @@ A practical deployment sequence: start with Nginx reverse proxy and JWT authenti
 
 Remember that Claude Code integrates well with specialized skills like the pdf skill for document generation, canvas-design for visual outputs, and docx for structured reporting. Your gateway configuration should accommodate these varied response types while maintaining consistent security and performance characteristics.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-api-gateway-configuration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for APISIX API Gateway Workflow Guide](/claude-code-for-apisix-api-gateway-workflow-guide/)

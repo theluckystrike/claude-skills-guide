@@ -179,6 +179,12 @@ Throughout your migration journey, keep these principles in mind:
 Claude Code transforms the Classic ASP to .NET migration from an overwhelming challenge into a manageable process. By using its code analysis capabilities, intelligent code generation, and architectural guidance, development teams can accomplish migrations more quickly while maintaining code quality and preserving business logic. Whether you're migrating a small application or enterprise-scale system, Claude Code provides the expertise and automation needed for a successful transition to modern .NET architecture.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-classic-asp-to-dotnet-migration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for jQuery to React Migration Workflow](/claude-code-for-jquery-to-react-migration-workflow/)

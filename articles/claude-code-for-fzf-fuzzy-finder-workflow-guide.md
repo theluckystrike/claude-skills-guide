@@ -156,6 +156,12 @@ FZF and Claude Code together represent a paradigm shift in command-line producti
 The workflows outlined in this guide provide starting points, but the true power lies in customizing these patterns to your specific needs. As you develop your own combinations, you'll discover that the FZF and Claude Code partnership transforms not just how fast you can work, but how you conceptualize problem-solving at the command line. Start with the basics, build incrementally, and watch your productivity soar.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-fzf-fuzzy-finder-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Wormhole Workflow Guide](/claude-code-for-wormhole-workflow-guide/)

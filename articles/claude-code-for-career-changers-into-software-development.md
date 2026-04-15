@@ -183,6 +183,12 @@ Remember that becoming a software developer is a marathon, not a sprint. Use Cla
 
 Start small, build consistently, and use Claude Code's capabilities to accelerate your journey into software development.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-career-changers-into-software-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Development in 2026: A Practical Manifest V3 Guide](/chrome-extension-development-2026/)

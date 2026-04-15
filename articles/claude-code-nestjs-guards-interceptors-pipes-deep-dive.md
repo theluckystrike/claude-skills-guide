@@ -540,6 +540,12 @@ When deciding where to put logic, use this reference:
 By mastering guards, interceptors, and pipes, you'll build NestJS applications that are secure, well-structured, and production-ready. Claude Code can accelerate your learning by generating these patterns while you focus on your business logic.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nestjs-guards-interceptors-pipes-deep-dive)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude API Tool Use and Function Calling Deep Dive Guide](/claude-api-tool-use-function-calling-deep-dive-guide/)

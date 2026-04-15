@@ -413,6 +413,12 @@ Exporting passwords from Chrome is straightforward through the built-in feature,
 
 The plaintext CSV is the weakest link. Every minute it exists unencrypted on a writable filesystem is a minute it could be copied, synced, or read by something it should not be. Treat the export workflow as a race: get in, import, verify, delete.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=export-passwords-chrome-safely)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Export Highlights Notes: A Practical Guide](/chrome-extension-export-highlights-notes/)

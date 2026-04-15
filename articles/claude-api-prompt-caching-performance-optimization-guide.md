@@ -234,6 +234,12 @@ Prompt caching is a powerful optimization that can reduce API costs by 30-70% wh
 Start with simple caching of your system prompts, then expand to knowledge base and conversation history caching as you become more comfortable with the patterns. Your users will appreciate the faster responses, and your infrastructure costs will thank you.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-prompt-caching-performance-optimization-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)

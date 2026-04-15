@@ -406,6 +406,12 @@ Begin with the normalization layer if you work with multiple carriers. Without i
 
 Remember to prioritize customer preferences from the beginning, retrofitting notification controls is significantly more complex than building them into the initial design. With Claude Code handling the orchestration logic, you can focus on crafting the perfect customer experience at each delivery stage.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-courier-notification-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for FluxCD Notification Workflow Guide](/claude-code-for-fluxcd-notification-workflow-guide/)

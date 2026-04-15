@@ -192,6 +192,12 @@ Implement input validation for a registration form:
 - All inputs: SQL injection prevention, XSS prevention, maximum length enforcement
 ```
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-handle-edge-cases-properly)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Write Effective Prompts for Claude Code](/how-to-write-effective-prompts-for-claude-code/)

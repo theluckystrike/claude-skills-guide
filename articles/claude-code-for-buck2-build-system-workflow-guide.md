@@ -175,6 +175,12 @@ By treating Claude Code as a knowledgeable teammate familiar with your project's
 The key is providing sufficient context, Buck2 projects can be complex with many targets and configurations. The more Claude Code knows about your specific setup, the more targeted and useful its assistance becomes.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-buck2-build-system-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bazel Build System Workflow Guide](/claude-code-for-bazel-build-system-workflow-guide/)

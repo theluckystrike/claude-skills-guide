@@ -289,6 +289,12 @@ The ideal solution integrates smoothly with your existing workflow rather than a
 
 The most important criterion is whether the extension reduces the number of decisions you have to make per hour of development work. If you find yourself thinking about the organizer itself rather than your code, switch to something simpler.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-tab-organizer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Tab Organizer Research: A Developer's Guide](/chrome-extension-tab-organizer-research/)

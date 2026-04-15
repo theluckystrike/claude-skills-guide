@@ -262,6 +262,12 @@ Implementing OAuth 2.1 for MCP servers requires attention to security details bu
 
 For deeper integration with Claude's ecosystem, explore how MCP servers can use the [supermemory skill](https://github.com/supermemoryai/supermemory) for context management, or use the [webapp-testing skill](https://github.com/anthropic/claude-code-skills) to verify your authentication flows work correctly in browser environments.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mcp-oauth-21-authentication-implementation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

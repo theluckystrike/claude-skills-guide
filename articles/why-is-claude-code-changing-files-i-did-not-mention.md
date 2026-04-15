@@ -215,6 +215,12 @@ The solution isn't necessarily to prevent all automatic changes, but to understa
 With practice, you'll learn to work with Claude Code's file awareness rather than against it, getting the benefits of automated consistency while maintaining control over your project's evolution.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-is-claude-code-changing-files-i-did-not-mention)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

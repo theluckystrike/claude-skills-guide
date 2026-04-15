@@ -152,6 +152,12 @@ Claude Code transforms SOX financial code audits from a painful periodic exercis
 
 Start with the skills and workflows outlined in this guide, adapt them to your organization's specific requirements, and build a SOX compliance process that strengthens your financial software while reducing audit stress.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sox-financial-code-audit-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Adversarial Robustness Workflow](/claude-code-for-adversarial-robustness-workflow/)

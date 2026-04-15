@@ -312,6 +312,12 @@ GitHub Gist sync. For users who want to back up their card decks without setting
 
 Anki-compatible export. Claude Code generates the Anki deck export function that converts your IndexedDB cards into an Anki-compatible format. Users who want to move to Anki or share their decks with Anki users can export with one click from the extension popup.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-spaced-repetition-tool)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Find Chrome Extensions That Use Memory for Enhanced Productivity](/find-chrome-extension-using-memory/)

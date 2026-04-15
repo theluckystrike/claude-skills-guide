@@ -403,6 +403,10 @@ Both tools will serve you well for standard credential management. The decision 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=bitwarden-vs-lastpass-chrome-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password vs Bitwarden Chrome: Which Password Manager.](/1password-vs-bitwarden-chrome/)

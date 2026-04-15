@@ -539,6 +539,12 @@ The combination of Inspector v2's non-blocking event capture with Claude Code's 
 The key is treating Inspector v2 not as a replacement for your debugging skills, but as an amplifier that makes your expertise more effective. Combined with Claude Code's understanding of your specific codebase, you will have a powerful ally for tackling the most challenging bugs your team encounters.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-inspector-v2-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

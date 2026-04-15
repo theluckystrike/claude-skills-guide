@@ -257,6 +257,12 @@ React Router v7 transforms navigation from a simple routing mechanism into a com
 
 The key is understanding how loaders, actions, and outlets work together to create smooth user experiences. Start with simple routes and progressively adopt advanced patterns as your application grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-react-router-v7-navigation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code React Testing Library Workflow](/claude-code-react-testing-library-workflow/)

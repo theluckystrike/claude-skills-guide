@@ -188,6 +188,12 @@ Claude Code transforms file processing from tedious manual work into an automate
 
 Start with simple batch operations and gradually build more complex workflows as you become comfortable with Claude's capabilities. The skills you build for one project often transfer directly to the next one, compounding the time savings over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-batch-file-processing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Batch Processing with Skills Guide](/claude-code-batch-processing-with-skills-guide/)

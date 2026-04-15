@@ -537,6 +537,12 @@ The key principles to carry forward: set COOP/COEP headers before anything else,
 Remember to always test your SharedArrayBuffer implementations across different browsers and devices, as support and performance characteristics can vary. With proper implementation, you'll unlock significant performance gains for compute-intensive web applications.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-shared-array-buffer-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

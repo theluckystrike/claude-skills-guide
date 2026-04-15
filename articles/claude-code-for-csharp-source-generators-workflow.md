@@ -153,6 +153,12 @@ Integrating Claude Code into your C# source generator workflow accelerates devel
 The key to success lies in iterative development: start with simple generators, validate output, then progressively add complexity. Claude Code serves as an intelligent partner throughout this journey, helping you understand APIs, debug issues, and implement best practices efficiently.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-csharp-source-generators-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Open Source Contribution Workflow Guide](/claude-code-for-open-source-contribution-workflow-guide/)

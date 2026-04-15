@@ -245,6 +245,12 @@ Begin with simple automations and expand incrementally:
 
 Claude skills handle the code generation heavy lifting. Your expertise in financial modeling directs the logic. The combination replaces Excel's manual workflows with sustainable, testable, automatable pipelines.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-financial-modeling-excel-alternative)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-for-data-science-and-jupyter-notebooks/). Complement financial modeling with data science workflows and Jupyter notebook integration.

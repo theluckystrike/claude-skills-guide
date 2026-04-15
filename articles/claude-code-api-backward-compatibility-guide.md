@@ -322,6 +322,12 @@ The core discipline is centralizing every version-specific mapping. parameter re
 
 As Claude Code continues evolving, these patterns ensure your tools and workflows remain functional. Start by auditing your current integrations for backward compatibility gaps, identify which ones lack capability detection, add structured logging to capture version diagnostics in production, then implement the compatibility wrappers and tests described in this guide. Tackle the highest-traffic integrations first and work outward from there.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-api-backward-compatibility-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Updates March 2026: What Developers Need to Know](/anthropic-model-context-protocol-updates-march-2026/)

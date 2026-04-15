@@ -210,6 +210,12 @@ Chrome DevTools Snippets unlock browser-side automation without the overhead of 
 
 Start with one snippet that solves a daily annoyance. Build from there. Your browser will become a more powerful development environment with each addition.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-devtools-snippets-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Angular DevTools Chrome Extension Setup: A Complete Guide](/angular-devtools-chrome-extension-setup/)

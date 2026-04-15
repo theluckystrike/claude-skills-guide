@@ -214,6 +214,12 @@ Claude Code's task queue architecture provides the foundation for sophisticated 
 The key takeaways: tasks flow through a priority-based queue with dependency awareness, skills act as specialized handlers that can schedule subtasks, and parallel execution maximizes throughput while preventing conflicts. Master these patterns, and you'll use the full potential of Claude Code's agent capabilities.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-agent-task-queue-architecture-deep-dive)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Agent Sandbox Skill: Complete Guide (2026)](/claude-agent-sandbox-skill-isolated-environments/)

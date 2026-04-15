@@ -163,6 +163,12 @@ Finding the right Enhancer for YouTube alternative in 2026 requires understandin
 
 For developers, the browser extension development ecosystem has matured significantly. Modern tools, clear documentation, and Manifest V3 standards make creating custom YouTube enhancements more accessible than ever. Start small, iterate based on your actual needs, and enjoy the control that comes with understanding exactly how your viewing experience works.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=enhancer-for-youtube-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Buffer Alternative Chrome Extension 2026](/buffer-alternative-chrome-extension-2026/)

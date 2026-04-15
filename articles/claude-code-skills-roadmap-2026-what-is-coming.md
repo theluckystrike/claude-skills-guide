@@ -115,6 +115,12 @@ For technical writers, the improved `docx` and `pdf` skills will gain awareness 
 
 These cross-functional skills reduce the translation cost between technical and non-technical team members. a friction point that currently consumes significant time in most product development teams.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-roadmap-2026-what-is-coming)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude 4 Skills: New Features and Improvements Guide](/claude-4-skills-improvements-and-new-features/). What's already landed in Claude 4 to set the stage for the 2026 roadmap.

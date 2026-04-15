@@ -114,6 +114,12 @@ Both tools serve distinct purposes in the modern developer's toolkit. Bolt.new d
 
 Your choice depends on your specific needs: speed of initial generation versus control over final implementation, browser-based convenience versus CLI integration, prototype validation versus production reliability. Many developers find value in using both, Bolt.new for exploration, Claude Code for execution.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=bolt-new-vs-claude-code-for-web-apps-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Bolt.new Review: AI Web App Builder 2026](/bolt-new-review-ai-web-app-builder-2026/)

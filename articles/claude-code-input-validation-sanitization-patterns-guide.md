@@ -208,6 +208,10 @@ Log validation failures to understand what inputs cause problems in production. 
 Finally, remember that validation adds latency. Balance thoroughness with performance by applying stricter validation to untrusted external input while trusting data from within your own skill chain.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-input-validation-sanitization-patterns-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/). Enterprise security patterns that build on solid input validation foundations

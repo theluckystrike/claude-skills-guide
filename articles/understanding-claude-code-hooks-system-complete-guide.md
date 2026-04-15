@@ -356,6 +356,10 @@ The hooks system rewards incremental adoption. Start with a simple `post-tool` l
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=understanding-claude-code-hooks-system-complete-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Stateful Agents with Claude Skills](/building-stateful-agents-with-claude-skills-guide/). Hooks are core to stateful agent design

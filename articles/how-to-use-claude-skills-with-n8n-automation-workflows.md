@@ -180,6 +180,10 @@ Connecting Claude to n8n automation uses the Anthropic API directly via HTTP Req
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-use-claude-skills-with-n8n-automation-workflows)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Skills worth integrating into n8n pipelines

@@ -398,6 +398,12 @@ Start small with basic color and typography tokens, then expand to spacing, shad
 The naming convention investment at the start of the project pays off every time you add a new token category. A well-named, consistently structured token file makes every downstream transform. CSS, TypeScript, Tailwind, iOS, Android. a simple traversal rather than a bespoke parsing problem.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-design-token-automation-from-figma-variables)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Generating CSS Variables from Design System](/claude-code-generating-css-variables-from-design-system/)

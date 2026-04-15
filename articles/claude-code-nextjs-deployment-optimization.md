@@ -605,6 +605,12 @@ The combination of proper Next.js configuration (`output: 'standalone'`, securit
 
 Start with the build configuration and Docker setup. those changes have the most immediate impact on deployment speed and container cost. Layer in the health check endpoints and migration job next, then invest in canary releases and automated rollbacks once your deployment frequency justifies the added orchestration complexity. Use skills like `frontend-design`, `tdd`, and `superagent` to continuously improve your deployment workflow over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nextjs-deployment-optimization)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Next.js Performance Optimization](/claude-code-nextjs-performance-optimization/). runtime speed, bundle size, and caching (complements this deployment guide)

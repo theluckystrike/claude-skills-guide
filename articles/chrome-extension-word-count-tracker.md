@@ -468,6 +468,12 @@ If you plan to publish your extension on the Chrome Web Store, there are a few r
 
 Building a word count tracker teaches you essential Chrome extension development skills that transfer directly to more complex projects. The patterns shown here. content script analysis, popup communication, storage integration, and real-time updates. form the foundation for building productivity tools, accessibility checkers, and data extraction extensions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-word-count-tracker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Spending Tracker Chrome: A Developer's Guide](/chrome-extension-spending-tracker-chrome/)

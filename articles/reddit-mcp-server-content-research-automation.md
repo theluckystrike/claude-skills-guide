@@ -462,6 +462,12 @@ Start with simple keyword searches in two or three subreddits. Once you have a w
 
 The key insight is that Reddit's community signal is a leading indicator. Topics that spike in upvotes and comment counts often become mainstream search queries two to four weeks later. Content creators who build research pipelines on this data can publish at exactly the right moment in a topic's growth curve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=reddit-mcp-server-content-research-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

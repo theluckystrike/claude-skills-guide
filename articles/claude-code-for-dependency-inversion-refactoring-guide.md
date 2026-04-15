@@ -249,6 +249,12 @@ Start with the most critical business logic classes, apply the workflow systemat
 
 Remember: the goal isn't abstraction for its own sake, it's about decoupling your business logic from implementation details so changes don't cascade through your system.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-dependency-inversion-refactoring-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Dependency Injection Refactoring](/claude-code-dependency-injection-refactoring/). Applying DI patterns within Claude skills themselves (skill composition and tool abstraction)

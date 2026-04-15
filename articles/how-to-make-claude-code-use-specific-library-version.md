@@ -355,6 +355,12 @@ These methods ensure Claude generates code compatible with your production envir
 
 The most durable setup combines all four: pinned `requirements.txt` or `package.json` in version control, a `CLAUDE.md` with explicit constraints and prohibitions, a virtual environment or container that matches production, and the habit of stating your environment at the start of any session where version accuracy matters. Each layer reinforces the others. The configuration files load automatically, the `CLAUDE.md` provides context before any code is generated, and the runtime environment catches any gaps.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-use-specific-library-version)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Make Claude Code Respect Module Boundaries](/how-to-make-claude-code-respect-module-boundaries/)

@@ -125,6 +125,12 @@ success
 - **Set up CI for heavy tasks:** Do not run full test suites inside Claude Code — trigger CI pipelines instead.
 - **Use incremental builds:** Configure your build system for incremental compilation to stay within timeout limits.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-timeout-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix Claude Code Slow Response and Performance](/claude-code-slow-fix) — General performance optimization

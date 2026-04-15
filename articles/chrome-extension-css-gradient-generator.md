@@ -189,6 +189,12 @@ Chrome extensions that generate CSS gradients eliminate manual syntax writing an
 
 Experiment with a few extensions to find the interface that matches your workflow. The time saved on gradient syntax alone makes these tools worthwhile additions to your browser.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-css-gradient-generator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)

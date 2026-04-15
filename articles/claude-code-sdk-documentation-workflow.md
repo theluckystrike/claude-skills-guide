@@ -217,6 +217,12 @@ The combination of Claude Code skills, `pdf` for output generation, `tdd` for ve
 
 Start with the structure, automate generation, and add tracking. Your SDK users will thank you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sdk-documentation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Tutorials Hub](/tutorials-hub/)

@@ -205,6 +205,12 @@ Chrome extensions for LaTeX equation editing bridge the gap between mathematical
 
 The ecosystem continues evolving with improved rendering engines and better browser APIs. Stay current with the MathJax and KaTeX blogs for updates on performance improvements and new features.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-latex-equation-editor)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)

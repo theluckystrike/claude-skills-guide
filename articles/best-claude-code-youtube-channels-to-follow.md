@@ -141,6 +141,12 @@ One discipline worth developing early: verify claims made in tutorials against t
 
 When a technique from a video does not work as shown, check the release notes before assuming you did something wrong. The mismatch is often a version difference, and knowing that saves significant debugging time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-claude-code-youtube-channels-to-follow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Courses Online 2026: A Developer Guide](/best-claude-code-courses-online-2026/)

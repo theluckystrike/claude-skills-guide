@@ -129,6 +129,12 @@ Test your extension on pages with aggressive styling, like heavily styled framew
 
 Finally, use the Computed panel extensively. It shows you exactly what the browser is rendering, removing any ambiguity about which styles are actually applying.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-inspect-css-styles)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension CSS Peeper Inspect: A Developer's Guide](/chrome-extension-css-peeper-inspect/)

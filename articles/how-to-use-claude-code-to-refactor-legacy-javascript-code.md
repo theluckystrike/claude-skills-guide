@@ -219,6 +219,12 @@ Refactoring legacy JavaScript doesn't have to be a painful manual process. Claud
 
 Start small with low-risk functions, build test coverage using the tdd skill, and progressively tackle more complex refactoring challenges. Your codebase will become more maintainable, easier to test, and better suited for modern JavaScript development practices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-use-claude-code-to-refactor-legacy-javascript-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/). Master test-driven refactoring workflows for safely improving legacy codebases

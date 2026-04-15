@@ -183,6 +183,10 @@ Most tools offer free tiers suitable for individual developers. Experiment with 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-ai-tools-for-frontend-development-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

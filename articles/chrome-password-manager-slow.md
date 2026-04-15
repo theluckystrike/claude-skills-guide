@@ -334,6 +334,12 @@ Chrome password manager slowdowns typically stem from sync operations, database 
 
 Developers with performance-critical workflows should consider CLI-based or system-keychain integrations that eliminate browser overhead entirely. The right solution depends on your workflow: if you need cross-device sync and simplicity, optimize Chrome's settings. If you prioritize speed, scripting access, and control, dedicated tools offer consistently better performance with capabilities Chrome's built-in manager simply doesn't provide.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-password-manager-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Omnibox Slow? Here's How to Fix It](/chrome-omnibox-slow/)

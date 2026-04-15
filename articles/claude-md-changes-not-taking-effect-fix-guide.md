@@ -303,6 +303,12 @@ Adopt these practices to minimize future issues:
 6. Add a smoke-test file to your repository: a minimal .md file that exercises front matter parsing, code blocks, and tables. Run it as part of your CI build to catch rendering pipeline breakage early
 7. Never rely on `render_with_liquid: false` in `_config.yml` defaults for GitHub Pages deployments. always use explicit raw tags in files that contain Liquid-like syntax
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-changes-not-taking-effect-fix-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Skills and Tools
 
 Several Claude skills can assist with markdown and documentation workflows. The docx skill helps generate Word documents from markdown sources. For PDF generation, the pdf skill provides conversion capabilities. When building documentation sites, frontend-design skills assist with layout and styling. The tdd skill can help write tests verifying your markdown renders correctly across different outputs.

@@ -341,6 +341,12 @@ The key is starting simple: generate your first API docs automatically, validate
 
 Documentation debt compounds in the same way that technical debt does. Building automation early means you pay down that debt continuously rather than facing a massive catch-up effort before each release.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-gitbook-documentation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best Claude Skill for Generating Documentation?](/what-is-the-best-claude-skill-for-generating-documentation/)

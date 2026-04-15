@@ -242,6 +242,12 @@ Finally, consider adding manual approval steps for large transfers. While automa
 Claude Code transforms bridge operations from manual, error-prone processes into reliable, automated workflows. By structuring your skills around these patterns, you can handle cross-chain transfers confidently while maintaining the flexibility to adapt to evolving bridge protocols and chain configurations.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-wormhole-bridge-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

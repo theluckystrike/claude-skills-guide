@@ -618,6 +618,12 @@ Integrating Claude Code into your Go pprof workflow transforms raw profiling dat
 
 The key workflow is: collect the right profile type for your symptom, export it as text or describe what you see, pass it to Claude with context about your application, and iterate on the suggested fixes. Differential profiling before and after each change gives you a tight feedback loop that keeps optimization work grounded in measurement rather than guesswork.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-go-pprof-profiling-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Go Fuzz Workflow Tutorial Guide](/claude-code-for-go-fuzz-workflow-tutorial-guide/)

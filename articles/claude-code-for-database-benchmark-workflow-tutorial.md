@@ -336,6 +336,12 @@ Claude Code significantly accelerates database benchmark workflows by automating
 
 Start with simple benchmarks, validate your methodology, then progressively add complexity as you refine your approach. The investment in solid benchmarking pays dividends in optimized queries, appropriate infrastructure sizing, and confident technology choices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-database-benchmark-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)

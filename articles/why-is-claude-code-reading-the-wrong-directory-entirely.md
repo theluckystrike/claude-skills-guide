@@ -344,6 +344,12 @@ The fix is almost always one of: use absolute paths explicitly, run `cd /path/to
 
 By understanding how Claude Code resolves paths and building the habit of confirming directory context at the start of each session, you can avoid this common pitfall entirely. The cost of a five-second directory check at session start is orders of magnitude less than the cost of discovering you edited the wrong file twenty minutes into a complex refactoring task.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-is-claude-code-reading-the-wrong-directory-entirely)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

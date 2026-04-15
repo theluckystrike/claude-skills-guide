@@ -341,6 +341,10 @@ The most impactful changes you can make: audit and remove unused extensions, ena
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=browser-memory-comparison-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Privacy Browser 2026 Ranked: A Developer and Power User Guide](/best-privacy-browser-2026-ranked/)

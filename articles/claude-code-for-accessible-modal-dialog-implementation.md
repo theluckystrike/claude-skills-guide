@@ -254,6 +254,12 @@ Accessible modal dialog implementation requires attention to detail, but the pat
 Remember: an accessible modal isn't just about meeting WCAG requirements, it's about ensuring all users can successfully interact with your application. Invest the time to get it right, and your users will thank you.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-accessible-modal-dialog-implementation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Reading Assistant Chrome: Technical Implementation Guide](/ai-reading-assistant-chrome/)

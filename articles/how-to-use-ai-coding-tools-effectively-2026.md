@@ -316,6 +316,12 @@ Normalize discussing AI tool results in code review. When reviewing AI-generated
 
 Avoid mandating AI use for tasks where individual developers don't find it helpful. The fastest way to generate resentment is requiring AI tool usage for tasks where it doesn't fit a particular developer's workflow. Let adoption follow demonstrated value rather than policy.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-use-ai-coding-tools-effectively-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Keeps Losing Track of My Variable Names](/claude-code-keeps-losing-track-of-my-variable-names/)

@@ -232,6 +232,12 @@ PostHog feature flags combined with React provide a powerful toolkit for progres
 The key is to keep your implementation clean, test thoroughly, and remove flags once features are established. With these patterns and Claude Code as your assistant, you'll have a solid feature management system that enables safe, data-driven feature releases.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-posthog-feature-flag-react-sdk-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code PostHog Feature Flags Analytics Workflow](/claude-code-posthog-feature-flags-analytics-workflow/)

@@ -241,6 +241,12 @@ If building from scratch feels excessive, several established extensions provide
 
 For developers who prefer command-line workflows, integrating with tools like the Claude Code CLI using a custom skill provides similar functionality without browser overhead. The trade-off involves context switching to a terminal versus staying within the browser ecosystem.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-stock-photo-finder-free)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Paraphraser Chrome Extension Free: A Developer's Guide](/ai-paraphraser-chrome-extension-free/)

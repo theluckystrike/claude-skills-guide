@@ -232,6 +232,12 @@ API mocking transforms how you develop and test applications that depend on exte
 
 Combine mocking with Claude skills like tdd for test-driven workflows, supermemory for persistent context, and pdf for extracting API specifications from documentation. These tools work together to create a solid development environment where you can build reliable integrations without waiting for external services.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-api-mocking-development-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/). Contract testing and mocking work together

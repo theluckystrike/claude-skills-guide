@@ -269,6 +269,12 @@ The key is to be explicit about your requirements when working with Claude Code,
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-astro-server-endpoints-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)

@@ -273,6 +273,12 @@ Claude Code can significantly streamline the process of creating and maintaining
 
 Start by setting up a shared configuration base, then gradually migrate components while testing both bundlers. With the right approach, you can enjoy faster build times from Rspack without sacrificing the reliability of your existing Webpack configuration.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-rspack-webpack-compatible-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Webpack Federation Workflow Guide](/claude-code-for-webpack-federation-workflow-guide/)

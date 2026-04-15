@@ -175,6 +175,12 @@ Begin with one configuration file that changes frequently, your shell aliases or
 
 Claude Code transforms dotfiles management from a manual, error-prone process into a conversational workflow. You describe what you want, Claude handles the implementation details across your configuration ecosystem. Your development environment becomes reproducible, portable, and queryable, exactly what modern developer productivity demands.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-dotfiles-configuration-management-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Flutter State Management Workflow Best Practices](/claude-code-flutter-state-management-workflow-bestpractices/)

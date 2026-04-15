@@ -216,6 +216,12 @@ To get the most out of Claude Code with Turborepo:
 The combination of Claude Code's AI capabilities with Turborepo's sophisticated pipeline orchestration creates a development experience that is both intelligent and efficient. By understanding and applying these patterns, you can significantly improve your monorepo development workflow.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-turborepo-pipeline-dependency-graph-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Code Graph Analysis Workflow Guide](/claude-code-for-code-graph-analysis-workflow-guide/)

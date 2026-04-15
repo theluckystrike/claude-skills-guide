@@ -173,6 +173,12 @@ This creates a feedback loop where every line of code contributes to deeper unde
 
 Self-taught developers who use Claude Code's skills ecosystem can compress years of professional experience into months of focused practice. The key is treating Claude Code not just as a coding tool, but as an interactive mentor that guides you toward professional-grade development practices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-self-taught-developer-upskilling)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Can You Use Claude Skills Inside VS Code Extensions?](/can-you-use-claude-skills-inside-vs-code-extensions/)

@@ -250,6 +250,12 @@ Claude Code and Deno Deploy form a productive combination for serverless develop
 
 Build your serverless functions with confidence, describe what you need, let Claude generate the code, test locally with Deno's test runner, then deploy to the edge.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-deno-deploy-serverless-runtime-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Serverless Function Development Workflow](/claude-skills-serverless-function-development-workflow/). general serverless patterns applicable across runtimes

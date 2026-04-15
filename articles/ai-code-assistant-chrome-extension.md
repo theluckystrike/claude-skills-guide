@@ -356,6 +356,12 @@ AI code assistant Chrome extensions serve as valuable companions in your develop
 
 The key is finding the right balance, using AI assistance for repetitive tasks and learning opportunities while maintaining your core coding skills. These extensions augment your abilities without replacing the fundamental understanding that makes you an effective developer. The developers who get the most value from these tools are not the ones who use them to avoid thinking, they are the ones who use them to think faster, catch more issues during review, and spend less time on the mechanical parts of coding so they can focus on the hard problems that actually require human judgment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-code-assistant-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)

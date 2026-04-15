@@ -286,6 +286,12 @@ Building REST APIs with Go and Gin is straightforward when you use Claude Code e
 
 Start with a clear project structure, use middleware for cross-cutting concerns, implement proper error handling, and always write tests. Claude Code can guide you through each phase while following Go best practices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-gin-golang-rest-api-development-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)

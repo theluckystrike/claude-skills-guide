@@ -267,6 +267,12 @@ Implementing an LSP server becomes significantly more manageable with Claude Cod
 
 The key is treating Claude Code as a pair programmer who understands the LSP specification deeply and can explain complex patterns while generating working code. Invoke your implementation skill early and often, and you'll have a solid language server that provides excellent editor integration for your target language.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-lsp-server-implementation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Astro Server Endpoints Workflow](/claude-code-for-astro-server-endpoints-workflow/)

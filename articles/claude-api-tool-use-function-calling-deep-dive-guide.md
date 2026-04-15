@@ -418,6 +418,12 @@ Tool use and function calling transform Claude from a conversational AI into a p
 Start with simple tool definitions, test thoroughly, and gradually add complexity as you become comfortable with the patterns. The key to success lies in well-structured tool descriptions and solid error handling in your implementation. Pay particular attention to message history management in multi-turn workflows, and always keep authentication and authorization in your execution layer where you have full control over what actually runs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-tool-use-function-calling-deep-dive-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

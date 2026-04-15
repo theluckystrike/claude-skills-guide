@@ -525,6 +525,12 @@ This benchmark is complete and correct. It uses Blackhole properly, parameterize
 
 Claude Code makes JMH benchmarking accessible by handling project setup, generating benchmark code, reviewing implementations for common pitfalls, and interpreting results. Start with simple benchmarks that answer a specific question, follow the best practices around warmup and dead code elimination, and let Claude Code guide you through the process. Your performance optimization efforts will benefit from more accurate, reliable benchmark data, and you'll develop a solid understanding of JMH that carries forward to future investigations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-jmh-benchmark-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for API Benchmark Workflow Tutorial Guide](/claude-code-for-api-benchmark-workflow-tutorial-guide/)

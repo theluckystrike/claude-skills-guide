@@ -297,6 +297,12 @@ Building a free screen recorder Chrome extension is achievable using standard we
 
 For developers looking to extend this further, consider adding features like annotation overlays, automatic silence detection, or cloud upload integration. The audio mixing pattern described above opens the door to polished tutorial recordings. The chunked IndexedDB pattern makes long-form recordings practical. And the bug report upload scenario shows how a screen recorder stops being a standalone utility and becomes the capture layer for a larger developer workflow. The APIs provide flexibility. the limiting factor is imagination, not the platform.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=screen-recorder-chrome-extension-free)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Screen Reader Chrome Extension: A Complete Guide for Developers](/ai-screen-reader-chrome-extension/)

@@ -192,6 +192,12 @@ Building background job workflows with Trigger.dev becomes significantly more pr
 
 For more information on related topics, explore the [workflow automation hub](/workflows-hub/) or learn about [event-driven architectures](/claude-skills-event-driven-architecture-setup/) that complement background job patterns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-triggerdev-background-job-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-code-for-trigger-dev-workflow-automation-tutorial/)

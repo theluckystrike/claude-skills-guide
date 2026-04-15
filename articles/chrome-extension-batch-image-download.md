@@ -295,6 +295,12 @@ Chrome's developer tools make debugging straightforward. Use chrome://extensions
 
 Building a solid batch image download extension requires handling many real-world edge cases, but the core patterns covered here provide a solid foundation. With these components in place, you can extend functionality to support downloading videos, documents, or any other file type by adapting the content script selectors and download logic.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-batch-image-download)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)

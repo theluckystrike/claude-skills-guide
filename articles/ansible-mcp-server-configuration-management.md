@@ -529,6 +529,12 @@ The MCP approach does not replace understanding Ansible. you still need to write
 
 The Ansible MCP server transforms how you manage infrastructure configuration. By combining Ansible's reliable configuration management with Claude Code's natural language interface, you reduce the learning curve for team members while maintaining consistency across your environments. The key to getting the most out of this integration is maintaining clean, well-organized inventories and playbooks that Claude can reason about accurately. Start with your most repetitive tasks. patch management, configuration validation, and certificate renewal. and gradually expand as you build confidence in the workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ansible-mcp-server-configuration-management)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

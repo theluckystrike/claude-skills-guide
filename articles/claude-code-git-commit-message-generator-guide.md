@@ -156,6 +156,12 @@ Claude Code commit message skills transform a tedious task into an automated wor
 
 The investment in setup pays dividends in readable commit history and reduced cognitive load during code review. Your future self debugging a production issue will thank you for commits that actually explain what changed and why.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-git-commit-message-generator-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Hooks: Automate Your Pre-Commit Workflow](/claude-code-git-hooks-pre-commit-automation/)

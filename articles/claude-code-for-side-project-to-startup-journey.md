@@ -140,6 +140,12 @@ The journey from side project to startup is challenging but achievable. Claude C
 
 Remember that Claude Code is a tool to amplify your capabilities, not replace your judgment. The best startups combine AI assistance with human insight, creativity, and persistence. Your side project has potential. Let Claude Code help you unlock it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-side-project-to-startup-journey)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Startup Founders and Solopreneurs](/claude-skills-for-startup-founders-and-solopreneurs/)

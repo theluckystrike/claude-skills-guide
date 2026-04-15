@@ -192,6 +192,12 @@ This end-to-end automation reduces manual effort and ensures consistency across 
 Lambda Layers combined with Claude Code's automation capabilities create a powerful system for managing serverless dependencies. By implementing the workflows described in this guide, you can reduce duplication, simplify updates, and maintain better control over your Lambda function dependencies. Start with a simple layer structure, then expand as your requirements grow, Claude Code can adapt the workflow to match your evolving needs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-lambda-layers-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Lambda SnapStart Workflow](/claude-code-for-lambda-snapstart-workflow/)

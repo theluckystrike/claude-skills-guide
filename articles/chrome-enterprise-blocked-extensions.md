@@ -338,6 +338,12 @@ For developers, the key insight is that enterprise restrictions are not obstacle
 
 Whether you are managing a fleet of devices or developing extensions for enterprise deployment, these mechanisms shape how Chrome extensions function in controlled environments.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-blocked-extensions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)

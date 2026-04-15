@@ -254,6 +254,12 @@ Start with simple, focused skills and gradually build more comprehensive analysi
 
 Remember: the best analysis workflow is one you'll actually use. Build skills that address your specific problems and run them regularly to catch issues early.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-dataflow-analysis-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Call Graph Analysis Workflow Tutorial](/claude-code-for-call-graph-analysis-workflow-tutorial/)

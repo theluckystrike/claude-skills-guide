@@ -563,6 +563,12 @@ Claude Code generates code based on patterns it has seen in training data, which
 The key is establishing security as a consistent part of your development workflow. Use the `tdd` skill for test-driven security, create custom security review skills, and automate scanning where possible. With these practices in place, you get the speed benefits of AI-assisted development without sacrificing code security.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-generates-insecure-code-patterns-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)

@@ -191,6 +191,12 @@ The choice between Tor and Chrome depends on your threat model and requirements.
 
 For developers working on privacy-focused applications, testing in both environments reveals how your code behaves under different privacy constraints. Understanding these differences helps build more resilient, privacy-aware software.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=tor-vs-chrome-privacy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Brave vs Chrome Privacy: A Technical Comparison for.](/brave-vs-chrome-privacy/)

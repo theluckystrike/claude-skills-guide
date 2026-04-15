@@ -388,6 +388,12 @@ For teams that need to minimize Chrome's data footprint, here is a practical sta
 
 Chrome's data collection enables features that many users find valuable, sync across devices, security warnings, personalized suggestions. The trade-off between convenience and privacy is one every developer and power user must evaluate based on their specific requirements. The key is making that evaluation deliberately, with accurate information, rather than accepting defaults that were designed to maximize feature utility rather than minimize data exposure.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-data-google-collects)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Block Chrome from Sending Data to Google](/block-chrome-sending-data-google/)

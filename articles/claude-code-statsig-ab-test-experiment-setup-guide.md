@@ -202,6 +202,12 @@ Setting up A/B tests with Statsig and Claude Code creates a powerful experimenta
 Start by integrating Statsig into your project, then use Claude Code to generate exposure tracking and analysis code. As your experimentation program matures, develop custom Claude skills that understand your specific patterns and requirements. With this approach, you'll build a scalable system for data-driven product decisions.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-statsig-ab-test-experiment-setup-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Docker Compose Test Setup Guide](/claude-code-docker-compose-test-setup-guide/)

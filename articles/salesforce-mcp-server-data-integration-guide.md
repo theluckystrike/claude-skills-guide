@@ -156,6 +156,12 @@ Testing: Use Salesforce Sandboxes for all development and testing. The tdd skill
 
 Salesforce MCP server integration opens up powerful automation possibilities for developers building enterprise workflows. From simple query operations to complex multi-system syncs, the MCP approach provides a consistent, AI-friendly interface to your Salesforce data. Start with basic queries, then layer in automation and transformation logic as your integration matures. For patterns on combining MCP servers with skill workflows, see [building stateful agents with Claude skills](/building-stateful-agents-with-claude-skills-guide/).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=salesforce-mcp-server-data-integration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

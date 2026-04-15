@@ -190,6 +190,10 @@ This dual-write pattern lets you migrate data gradually while maintaining consis
 Migrating from MongoDB to PostgreSQL requires careful planning and execution, but Claude Code significantly reduces the manual effort involved. By generating migration scripts, validating data integrity, and assisting with application refactoring, you can complete the transition with confidence. Document your decisions using skills like pdf for reports and supermemory for institutional knowledge, ensuring your team can maintain and evolve the new database architecture effectively.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mongodb-to-postgresql-migration-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Data skills for validating, transforming, and reporting on database migration results

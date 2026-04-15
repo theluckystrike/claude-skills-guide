@@ -375,6 +375,12 @@ Making Claude Code write secure code consistently requires deliberate setup. Con
 
 The effort pays off in reduced vulnerabilities, faster development cycles, and code that meets security standards from the first line written. Security becomes embedded in your development process rather than an afterthought.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-write-secure-code-always)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/). Understand Claude Code's security model first

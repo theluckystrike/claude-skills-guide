@@ -358,6 +358,12 @@ Effective Kubernetes profiling is an iterative process. Start with identifying t
 The biggest payoff comes when profiling is no longer a special event triggered by incidents. When it is routine, scheduled, and compared against baselines automatically, performance regressions are caught in code review rather than in production alerts.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-kubernetes-profiling-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)

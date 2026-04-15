@@ -388,6 +388,12 @@ Where OpenCLAW requires the most discipline is in the initial configuration phas
 
 Stay vigilant, configure explicitly, and treat AI-generated commands with the same scrutiny you would apply to any code from external sources.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=openclaw-security-review-is-it-safe-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Penetration Testing Guide](/claude-code-mcp-server-penetration-testing-guide/). Apply similar penetration testing methodology to Claude Code's MCP server layer

@@ -588,6 +588,12 @@ The key is treating Claude Code not just as a chat interface, but as an integrat
 Start with a single working configuration, build your dataset validation and launch scripts, and progressively add monitoring and post-training automation as your pipeline matures. Each component you automate with Claude Code's help is one less distraction from the core work: building models that actually solve real problems.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-axolotl-qlora-training-script-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Diffusers Stable Diffusion Training Guide](/claude-code-diffusers-stable-diffusion-training-guide/)

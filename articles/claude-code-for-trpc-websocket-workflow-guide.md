@@ -252,6 +252,12 @@ Building real-time applications with tRPC and WebSockets requires understanding 
 Start with basic subscriptions, then layer in reconnection logic, cross-server communication, and performance optimizations as your application grows. The type-safe foundation tRPC provides makes this evolution manageable and maintainable.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-trpc-websocket-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for T3 Stack tRPC Next.js Workflow](/claude-code-for-t3-stack-trpc-nextjs-workflow/)

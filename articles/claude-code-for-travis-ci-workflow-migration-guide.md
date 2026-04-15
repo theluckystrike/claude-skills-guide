@@ -458,6 +458,12 @@ Migrating from Travis CI to Claude Code opens up new possibilities for intellige
 The key is treating this migration as an opportunity to improve your workflows, not just replicate them. The layered approach, Claude Code for local developer automation and a hosted CI runner for server-side triggers, gives you the best of both worlds: the speed and intelligence of AI-assisted development with the reliability and auditability of a traditional CI platform. With Claude Code, you have a powerful partner in automating your development processes.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-travis-ci-workflow-migration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OpenTofu Migration Workflow Guide](/claude-code-for-opentofu-migration-workflow-guide/)

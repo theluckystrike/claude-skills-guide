@@ -266,6 +266,12 @@ Building a Chrome extension for employee recognition gives your team a dedicated
 
 The key is starting simple, capture recognitions, store them locally, and gradually add integrations that matter most to your team.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-employee-recognition-tool)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension OneNote Clipper Setup Guide](/chrome-extension-onenote-clipper-setup/)

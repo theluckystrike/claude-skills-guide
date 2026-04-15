@@ -401,6 +401,10 @@ Remember that continuous testing is a journey, not a destination. Continuously e
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-continuous-testing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Shift Left Testing Strategy Guide](/claude-code-shift-left-testing-strategy-guide/)

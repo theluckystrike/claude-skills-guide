@@ -250,6 +250,10 @@ Building your own text expander gives you full control over triggers, expansions
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-text-expander)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Text to Speech Chrome Extension: A Developer Guide](/ai-text-to-speech-chrome-extension/)

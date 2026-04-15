@@ -259,6 +259,12 @@ Integrating Claude Code with Elastic SIEM opens powerful possibilities for secur
 Start with simple query automation and progressively add more sophisticated detection and response capabilities. The key is building a foundation that you can trust and extend as your security needs evolve.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-elastic-siem-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Elastic APM Integration Workflow](/claude-code-for-elastic-apm-integration-workflow/)

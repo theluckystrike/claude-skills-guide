@@ -582,6 +582,12 @@ Before publishing, verify Tailwind works correctly across all contexts:
 
 The debugging techniques in this guide help you identify and resolve styling issues quickly, leading to a more polished extension experience. Investing time in a proper build pipeline and systematic DevTools workflow pays dividends as the extension grows in complexity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-tailwind-css-devtools)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension CSS Gradient Generator: Tools and Techniques for Developers](/chrome-extension-css-gradient-generator/)

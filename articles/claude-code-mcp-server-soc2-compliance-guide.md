@@ -232,6 +232,12 @@ Building a SOC 2-compliant MCP server requires attention to authentication, auth
 
 Document your implementation clearly. This documentation serves both auditors and future maintainers. Combined with operational controls and regular assessments, your MCP server will meet SOC 2 requirements for production AI deployments.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mcp-server-soc2-compliance-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP OAuth 2.1 Authentication Implementation Guide](/mcp-oauth-21-authentication-implementation-guide/)

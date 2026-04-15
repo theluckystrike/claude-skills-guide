@@ -175,6 +175,12 @@ Finally, add Spectral to your CI/CD pipeline to ensure all API changes are valid
 By combining Spectral's powerful linting capabilities with Claude Code's assistance, you can build APIs that are consistent, well-documented, and aligned with your organization's standards from day one.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-spectral-linting-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Rome Biome Linting Workflow](/claude-code-for-rome-biome-linting-workflow/)

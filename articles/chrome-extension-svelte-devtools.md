@@ -410,6 +410,12 @@ Inside the Svelte panel, you'll see your component hierarchy, the current value 
 
 Your extension is now ready for the Chrome Web Store. The combination of Svelte's developer experience and Chrome's powerful APIs enables you to build sophisticated browser tools with minimal overhead.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-svelte-devtools)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome DevTools Console Commands: A Practical Guide for Developers](/chrome-devtools-console-commands/)

@@ -454,6 +454,12 @@ The Claude Code and Jupyter notebook combination offers a powerful environment f
 The most impactful places to involve Claude Code are: reviewing cleaning logic for correctness, explaining statistical test selection, generating boilerplate for standard analysis patterns you have done before, and drafting the markdown narrative that turns a sequence of charts into a coherent data story. Start with simple workflows and gradually incorporate more advanced patterns as you become comfortable with the collaboration between Claude Code and Jupyter notebooks.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-jupyter-notebook-analysis-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Code Complexity Analysis Workflow](/claude-code-for-code-complexity-analysis-workflow/)

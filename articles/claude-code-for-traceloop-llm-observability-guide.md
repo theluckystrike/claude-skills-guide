@@ -300,6 +300,12 @@ Integrating Claude Code with Traceloop creates a powerful observability stack fo
 
 For more information, visit the Traceloop documentation at docs.traceloop.com.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-traceloop-llm-observability-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for LLM Code Review Workflow](/claude-code-for-llm-code-review-workflow/)

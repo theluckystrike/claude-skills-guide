@@ -276,6 +276,12 @@ A useful framing: each project should answer a different question. One project d
 
 Claude Code accelerates every phase of portfolio development, but the architectural decisions and code quality remain your responsibility. Use the skills as force multipliers for your expertise, not replacements for genuine skill development. The best portfolio projects make it obvious that a thoughtful developer made deliberate choices at every step, Claude Code helps you move fast enough to make those choices carefully rather than rushing past them.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-developer-portfolio-projects-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Coding Tools for Code Migration Projects](/ai-coding-tools-for-code-migration-projects/)

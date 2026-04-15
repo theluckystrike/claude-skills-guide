@@ -212,6 +212,12 @@ Claude Code's tendency to use deprecated API methods stems from training data pa
 
 The most important takeaway: Claude Code needs explicit context about your project's modern stack. Without it, the model defaults to what it knows best, often older, more prevalent patterns in its training data. Help Claude Code help you by making your technology choices clear from the start.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-keeps-using-deprecated-api-methods)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Fixing Claude Code Deprecated API Methods](/claude-code-uses-deprecated-api-methods-fix/). Migrate your own Anthropic API integrations away from deprecated endpoints and parameters

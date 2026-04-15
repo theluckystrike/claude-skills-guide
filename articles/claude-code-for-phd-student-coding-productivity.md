@@ -243,6 +243,12 @@ Start by integrating Claude Code into one project, establish good habits, and gr
 
 Remember: Claude Code amplifies your capabilities. Your research insights, domain expertise, and critical thinking remain irreplaceable. Use AI as a tool to enhance your work, not as a shortcut around the hard thinking that drives academic progress.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-phd-student-coding-productivity)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Vibe Coding Productivity Tips and Best Practices](/vibe-coding-productivity-tips-and-best-practices/)

@@ -209,6 +209,12 @@ Feature flags combined with Git workflows and Claude Code create a powerful deve
 Start small with feature flags in your next project. Use Claude Code to generate the infrastructure, then gradually adopt more sophisticated patterns as your team grows comfortable with the workflow.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-feature-flags-workflow-git-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code PostHog Feature Flags Analytics Workflow](/claude-code-posthog-feature-flags-analytics-workflow/)

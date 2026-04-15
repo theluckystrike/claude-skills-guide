@@ -703,6 +703,12 @@ Claude Code environment setup automation transforms repetitive configuration tas
 
 Start with simple automations, virtual environment activation, dependency installation, and progressively add sophistication as your needs grow. The time invested in setup automation pays dividends across every project you create.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-environment-setup-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Project Scaffolding Automation](/claude-code-project-scaffolding-automation/). Scaffolding is the first step in environment setup

@@ -322,6 +322,12 @@ Finally, test extensively across different Amazon page layouts. Amazon frequentl
 
 A custom Amazon price tracker Chrome extension puts you in control of your shopping data. By implementing the core components outlined here, you can build a tool that precisely matches your price monitoring needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=price-tracker-chrome-extension-amazon)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Price History Chrome Extension: Technical Implementation.](/price-history-chrome-extension/)

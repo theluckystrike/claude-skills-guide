@@ -344,6 +344,12 @@ For the Chromium issue tracker, include your `chrome://gpu` output alongside the
 
 Chrome freezing doesn't have to disrupt your development workflow. These targeted solutions address the most common causes while giving you the tools to diagnose new issues as they arise.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-freezing-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Miro Whiteboard: A Complete Guide for Developers and Power Users](/chrome-extension-miro-whiteboard/)

@@ -222,6 +222,12 @@ class RotatingCredential:
 
 Secure credential management in MCP servers requires layering environment variables for configuration, OAuth flows for user-authenticated requests, secret scanning for prevention, and production-grade patterns like external secrets services and automated rotation. Start with environment variables for simplicity, implement OAuth when user delegation is needed, and add secret scanning and rotation as your deployments scale. The `tdd` skill can validate your credential handling implementation through integration tests, while `supermemory` can help you document your security architecture. Pair this foundation with the [MCP server vulnerability scanning and testing guide](/mcp-server-vulnerability-scanning-and-testing/) to catch weaknesses in your overall security posture.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mcp-credential-management-and-secrets-handling)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)

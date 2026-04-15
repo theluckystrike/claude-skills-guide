@@ -134,6 +134,12 @@ The extensions listed above represent the core tools that most developers find e
 
 The best extension setup evolves over time as your work changes. Periodically review your installed extensions and remove those that no longer serve you. A streamlined browser environment contributes to focused, efficient development work throughout your career.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-developer-chrome-extensions-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)

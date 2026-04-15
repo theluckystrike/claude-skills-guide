@@ -284,6 +284,12 @@ Managing rate limits in skill-intensive workflows:
 
 These strategies keep automated pipelines running reliably without interruption.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=rate-limit-management-claude-code-skill-intensive-workflows)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Caching Strategies for Claude Code Skill Outputs](/caching-strategies-for-claude-code-skill-outputs/). Combine rate limit management with caching to reduce total API consumption across your skill workflows.

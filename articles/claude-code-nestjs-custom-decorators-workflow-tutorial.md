@@ -225,6 +225,12 @@ The workflow patterns demonstrated in this tutorial, from simple user extraction
 Start with simple decorators and progressively build more complex compositions as your application evolves. This incremental approach ensures your decorators remain focused, testable, and maintainable over time.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nestjs-custom-decorators-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Unbuild Build Tool Workflow Guide](/claude-code-for-unbuild-build-tool-workflow-guide/)

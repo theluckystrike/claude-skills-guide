@@ -163,6 +163,12 @@ For pure speed and simplicity, Simple JSON Viewer excels. For comprehensive feat
 
 Experiment with these tools to find the one that fits your workflow. The time invested in finding the right extension pays dividends in daily productivity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=json-formatter-chrome-extension-best)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Password Checkup: Complete Guide for Developers.](/chrome-password-checkup/)

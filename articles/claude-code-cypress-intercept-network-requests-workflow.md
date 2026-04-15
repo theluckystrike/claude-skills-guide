@@ -454,6 +454,12 @@ The workflow that delivers the most value day-to-day is the centralized command 
 Remember: the goal isn't to mock everything, but to mock strategically. controlling external dependencies while keeping your tests close to real-world behavior.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-cypress-intercept-network-requests-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cypress Custom Commands Workflow Best Practices](/claude-code-cypress-custom-commands-workflow-best-practices/)

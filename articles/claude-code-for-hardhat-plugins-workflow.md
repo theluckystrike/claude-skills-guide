@@ -224,6 +224,12 @@ Claude Code significantly enhances your Hardhat development workflow. From confi
 
 Start by adding your Hardhat configuration to Claude Code's context, then iterate on your workflow from there.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-hardhat-plugins-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)

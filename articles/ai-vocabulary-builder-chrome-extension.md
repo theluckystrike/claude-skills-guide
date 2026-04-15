@@ -333,6 +333,12 @@ The Chrome Extension documentation provides comprehensive guidance on Manifest V
 
 The AI vocabulary builder space remains relatively uncrowded compared to other extension categories. Most existing tools offer either basic dictionary lookups without AI or AI lookups without proper spaced repetition scheduling. The combination of contextual AI definitions with a real SM-2 implementation and clean UX represents a meaningful gap in the market. The key differentiator lies in the quality of AI integration and the richness of the learning features. specifically, getting the spaced repetition loop tight enough that users return to the extension daily rather than treating it as a one-off lookup tool.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-vocabulary-builder-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

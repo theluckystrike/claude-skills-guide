@@ -247,6 +247,12 @@ Start with CSP violation reporting since it requires minimal configuration and i
 
 The API integrates smoothly with existing monitoring infrastructure and requires no changes to your application code beyond initial header configuration.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-browser-reporting-api)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)

@@ -176,6 +176,12 @@ Summarize this document in 500 words or fewer
 
 Tracking Claude skill usage requires monitoring via the Anthropic Console for session-level costs, maintaining manual logs for historical analysis, and being intentional about what you load into context. The `pdf`, `tdd`, `xlsx`, `supermemory`, and `frontend-design` skills each have distinct usage patterns based on their function. Track context usage by asking Claude directly during sessions, and log sessions manually for long-term trend analysis. With these approaches, you can monitor costs, optimize workflows, and get maximum value from Claude Code skills.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-see-claude-skill-usage-and-token-costs-breakdown)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Token Usage Profiling and Optimization](/claude-skill-token-usage-profiling-and-optimization/). Measure and reduce token consumption systematically across your skills

@@ -426,6 +426,12 @@ Claude Code combined with Cloudflare D1 gives you a powerful development workflo
 The edge database pattern works exceptionally well for content sites, user-facing dashboards, and API backends where low latency matters. By following the patterns in this guide and using Claude Code's capabilities, you can build production-ready applications with confidence.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cloudflare-d1-database-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Cloudflare MCP Server Edge Automation Workflow](/cloudflare-mcp-server-edge-automation-workflow/)

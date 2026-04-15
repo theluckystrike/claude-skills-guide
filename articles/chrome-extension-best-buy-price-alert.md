@@ -209,6 +209,12 @@ Adding a badge to the extension icon showing the number of price drops can impro
 
 Building a Best Buy price alert extension gives you hands-on experience with Chrome extension APIs while creating a genuinely useful tool. The architecture shown here transfers directly to other retailers, simply adjust the price extraction regex and notification messages for Amazon, Newegg, or any other e-commerce site you want to monitor.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-best-buy-price-alert)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Cashback Chrome Extension Best 2026](/cashback-chrome-extension-best-2026/)

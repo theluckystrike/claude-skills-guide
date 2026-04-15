@@ -207,3 +207,10 @@ A well-designed Chrome extension transforms Facebook Page management from repeti
 The architecture demonstrated here, manifest declaration, content script detection, popup interface, and background worker, provides a foundation you can extend with Facebook Marketing API integration, custom analytics, or team collaboration features.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-facebook-page-manager)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.

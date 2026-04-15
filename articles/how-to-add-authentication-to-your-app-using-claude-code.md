@@ -170,6 +170,12 @@ Adding authentication to your application using Claude Code is straightforward w
 
 The initial investment in proper authentication pays dividends in security and user trust. Claude Code accelerates this process while helping you avoid common pitfalls that lead to security vulnerabilities.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-add-authentication-to-your-app-using-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Write Effective Prompts for Claude Code](/how-to-write-effective-prompts-for-claude-code/)

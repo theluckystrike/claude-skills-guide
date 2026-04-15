@@ -265,6 +265,12 @@ Start with the bug investigator skill setup, practice creating minimal reproduct
 
 Remember: The best bug report is one that helps maintainers understand and fix the issue with minimal back-and-forth. Claude Code is your partner in achieving that goal.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-oss-bug-report-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OSS CoC Enforcement Workflow Tutorial](/claude-code-for-oss-coc-enforcement-workflow-tutorial/)

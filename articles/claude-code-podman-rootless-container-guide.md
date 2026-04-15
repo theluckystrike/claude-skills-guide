@@ -487,6 +487,12 @@ The combination of daemonless operation, user namespace isolation, SELinux label
 
 Start with the alias approach for local development, graduate to the wrapper script when you want to share the workflow with your team, and use the systemd unit when you need the container available the moment you log in.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-podman-rootless-container-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Podman Container Workflow Setup Tutorial](/claude-code-podman-container-workflow-setup-tutorial/)

@@ -196,6 +196,12 @@ MCP server permission auditing is an ongoing process, not a one-time configurati
 
 Build audit frequency into your workflow, weekly checks take minutes but prevent major security incidents. Your future self will thank you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mcp-server-permission-auditing-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Least Privilege Configuration](/claude-code-mcp-server-least-privilege-configuration/)

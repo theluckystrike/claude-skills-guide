@@ -426,6 +426,12 @@ Start small, define one event stream using AsyncAPI and let Claude help you expa
 The combination of Claude Code for generation and iteration, the AsyncAPI CLI for validation, and a disciplined versioning strategy gives your event-driven architecture a solid foundation that scales with both system complexity and team size.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-asyncapi-event-driven-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Event Driven API Design Guide](/claude-code-event-driven-api-design-guide/)

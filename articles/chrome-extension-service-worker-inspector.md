@@ -170,6 +170,12 @@ Mastering the Chrome extension service worker inspector unlocks the ability to b
 
 Remember to test your extension across worker restarts and update cycles. Many production issues stem from assumptions about worker persistence that don't hold in real-world usage patterns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-service-worker-inspector)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a Chrome Extension DOM Inspector Tool: A.](/chrome-extension-dom-inspector-tool/)

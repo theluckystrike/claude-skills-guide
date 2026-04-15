@@ -371,6 +371,12 @@ The practical path forward: pick one workflow in your daily development cycle th
 Start small, create a simple skill for one specific task, and gradually expand as you learn what Claude Code can do. The possibilities are vast, and the productivity gains can be significant.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=using-claude-code-as-a-backend-engine-for-dev-tools)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

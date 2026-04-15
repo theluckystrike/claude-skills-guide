@@ -355,6 +355,12 @@ For self-hosted distribution in enterprise environments, package your extension 
 
 Building a military discount finder extension requires attention to user experience, data accuracy, and verification handling. Start with a core set of 20–30 well-known retailers and expand based on user feedback and analytics. The extension architecture shown here. content script detection, service worker data management, alarm-based sync, and eligibility filtering. provides a foundation that scales well for adding features like discount alerts, price tracking, and community-submitted offers. Keeping the discount database external and updateable independently of the extension binary is the single most important architectural decision: it means you can correct an expired offer the same day without waiting for a store review cycle.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-military-discount-finder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)

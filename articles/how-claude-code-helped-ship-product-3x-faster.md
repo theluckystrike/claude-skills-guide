@@ -145,6 +145,12 @@ Claude Code accelerates product delivery through reusable, codified workflows. T
 
 The 3x improvement comes not from any single feature but from compounding small wins across the development workflow. Start with one skill, measure the time saved, and expand from there.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-claude-code-helped-ship-product-3x-faster)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). Identify the highest-impact skills to start with when building your productivity stack

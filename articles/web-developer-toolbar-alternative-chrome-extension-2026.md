@@ -233,6 +233,12 @@ While the Web Developer Toolbar remains a solid choice for developers who have b
 
 For most developers, a combination of native DevTools plus two or three specialized extensions provides the best workflow without the bloat of a single all-in-one toolbar. Start with what is built into your browser, then add tools precisely where your workflow has friction. That targeted approach will serve you better than any single toolbar ever could.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=web-developer-toolbar-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Responsive Viewer Alternative Chrome Extension 2026](/responsive-viewer-alternative-chrome-extension-2026/)

@@ -236,6 +236,12 @@ Effective codebase context switching as a Claude Code consultant relies on three
 
 Implement this workflow, and you'll find client transitions become smooth, letting you maintain multiple engagements without the mental overhead of constantly recalibrating your approach. Claude Code becomes not just a coding assistant but a context-aware partner that understands exactly which project you're working on and how that project expects to be handled.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-consultant-codebase-context-switching-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Context Window Optimization Workflow Guide](/claude-code-for-context-window-optimization-workflow-guide/)

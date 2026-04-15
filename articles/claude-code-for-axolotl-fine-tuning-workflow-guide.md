@@ -255,6 +255,12 @@ To maximize your productivity with Axolotl and Claude Code:
 By treating Claude Code as an integrated part of your workflow rather than a separate tool, you can move faster while making fewer configuration errors. The key is establishing clear patterns for dataset preparation, configuration validation, and training execution, then letting Claude Code handle the implementation details.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-axolotl-fine-tuning-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for PyTorch LoRA Fine-Tuning Workflow](/claude-code-for-pytorch-lora-fine-tuning-workflow/)

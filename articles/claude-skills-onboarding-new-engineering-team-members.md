@@ -249,6 +249,12 @@ The key insight is that these skills reduce friction during onboarding. Rather t
 
 Start with the five skills listed above, build your supermemory index with team knowledge, and customize your configuration as you learn more about your team's specific workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-onboarding-new-engineering-team-members)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/). Set up the supermemory skill as your team's shared knowledge base that new engineers can query from day one

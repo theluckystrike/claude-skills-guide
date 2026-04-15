@@ -132,6 +132,12 @@ Claude Code skills represent a fundamental shift in test automation approaches. 
 
 Start by installing the tdd, xlsx, pdf, and supermemory skills. Experiment with each individually, then explore combinations that match your specific testing challenges. The learning curve is minimal, and the productivity gains are substantial.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-qa-engineers-automating-test-suites)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Master the tdd skill that powers the QA automation workflows in this guide

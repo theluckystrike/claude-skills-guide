@@ -152,6 +152,12 @@ Each alternative addresses OneTab's core functionality while expanding capabilit
 
 Test multiple options with your actual workflow before committing. Most extensions offer sufficient free tiers for evaluation, and the time invested in finding the right tool pays dividends in daily productivity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=onetab-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

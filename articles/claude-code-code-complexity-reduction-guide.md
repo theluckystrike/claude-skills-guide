@@ -221,6 +221,12 @@ Claude Code skills like tdd, supermemory, and frontend-design provide systematic
 
 Start small: pick one overgrown class or deeply nested function this week and apply one of these patterns. The compounding benefits will become obvious quickly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-code-complexity-reduction-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/). Cyclomatic complexity is a key complexity metric

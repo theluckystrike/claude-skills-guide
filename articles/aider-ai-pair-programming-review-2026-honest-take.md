@@ -158,6 +158,12 @@ The honest take? Aider is a competent tool for basic AI-assisted coding, but Cla
 
 If you're already invested in a terminal-based workflow and need simple code editing with git integration, Aider works. If you want a capable, extensible AI development partner with specialized skills for security, testing, documentation, and more, Claude Code delivers significantly more value.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=aider-ai-pair-programming-review-2026-honest-take)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Pair Programming Workflow Guide](/claude-code-for-pair-programming-workflow-guide/)

@@ -146,6 +146,12 @@ Splitting Claude skills into multiple files becomes worthwhile when skills grow 
 
 For skills like pdf, frontend-design, or tdd, modularity enables better organization and easier extension. For simpler, focused skills like supermemory, a single file remains appropriate. The decision ultimately depends on your specific use case and how the skill evolves over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=when-to-split-one-claude-skill-into-multiple-files)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill .md File Format: Full Specification Guide](/claude-skill-md-format-complete-specification-guide/)

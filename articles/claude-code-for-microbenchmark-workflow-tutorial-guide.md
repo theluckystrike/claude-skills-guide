@@ -495,6 +495,12 @@ The workflow described here scales from a single-developer project with a local 
 
 Remember: good benchmarks are repeatable, comparable, and representative of real-world usage. Claude can help you achieve all three properties more efficiently than manual approaches.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-microbenchmark-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

@@ -346,6 +346,12 @@ Building a white-label developer copilot with Claude Code API offers organizatio
 The key to success lies in thoughtful implementation that considers your team's specific workflows, investing in prompt engineering to capture your organization's best practices, and building proper integrations with your existing toolchain. Start with a simple proxy that injects a strong system prompt, validate that the quality improvement justifies the effort, then layer in context management, tool use, and multi-tenant support as your usage grows. With these elements in place, a Claude-powered copilot becomes an invaluable asset for any development organization.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=white-label-developer-copilot-built-on-claude-code-api)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a CLI DevTool with Claude Code: A Practical.](/building-a-cli-devtool-with-claude-code-walkthrough/)

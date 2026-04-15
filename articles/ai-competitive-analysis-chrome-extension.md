@@ -355,6 +355,12 @@ If you want to try existing tools, search the Chrome Web Store for "AI competiti
 
 The combination of browser automation and AI creates a powerful research assistant that handles the grunt work so you can focus on strategic interpretation. Even a basic implementation that extracts and summarizes a competitor's pricing page on demand will save meaningful time in any product team's workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-competitive-analysis-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

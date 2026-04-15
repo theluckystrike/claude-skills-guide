@@ -144,6 +144,12 @@ The optimal choice depends on your workflow, team structure, and specific projec
 The future of coding is collaborative, between human developers and AI assistants. Whether you choose Claude Code, Cline, or both, you're equipping yourself with powerful tools that will reshape how you approach software development.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=cline-ai-coding-assistant-review-vs-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Cline AI Code Assistant Review 2026](/cline-ai-code-assistant-review-2026/)

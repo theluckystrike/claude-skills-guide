@@ -366,6 +366,12 @@ Before publishing to Chrome Web Store:
 
 The Chrome extension ecosystem offers tremendous flexibility for enhancing browser functionality. By understanding these core patterns and APIs, developers can build extensions that are performant, secure, and provide genuine value to users.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-periodic-table-reference)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

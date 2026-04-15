@@ -188,6 +188,12 @@ Validating Claude Code output before committing requires a systematic approach c
 
 Remember that Claude Code is a powerful tool, but it works best as a collaborative partner in your development process. Validate its output thoroughly, and you'll enjoy improved productivity without sacrificing code quality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-validate-claude-code-output-before-committing)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/)

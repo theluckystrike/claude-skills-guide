@@ -181,6 +181,12 @@ Claude Code loads all skills regardless of origin, and you use them together nat
 
 Building private skills keeps your custom workflows secure and under your control. Start with simple automations, then expand as you discover more opportunities for Claude Code to assist your development workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-create-a-private-claude-skill-not-on-github)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). Master the full skill file format before creating your private skills

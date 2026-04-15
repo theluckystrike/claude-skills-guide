@@ -430,6 +430,12 @@ Input validation forms the foundation of secure MCP server development. By imple
 
 Remember that validation is not a one-time implementation but an ongoing process. Review and update your validation rules as new attack vectors emerge and your system evolves. The threat landscape changes. a validation pattern that was sufficient last year may not cover techniques that are common today. Build validation reviews into your regular security cadence alongside dependency updates and penetration testing.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mcp-server-input-validation-security-patterns)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)

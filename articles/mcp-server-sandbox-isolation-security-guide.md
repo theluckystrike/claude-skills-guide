@@ -416,6 +416,12 @@ Implement logging and monitoring to detect issues early. Test your isolation con
 
 For developers working on complex projects, combining proper MCP server isolation with skills like the tdd skill for test-driven development creates a secure development environment that keeps security considerations front and center throughout your workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mcp-server-sandbox-isolation-security-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Securing MCP Servers in Production Environments](/securing-mcp-servers-in-production-environments/)

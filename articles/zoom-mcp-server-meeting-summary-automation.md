@@ -417,6 +417,12 @@ Start with a simple use case like daily standups, then expand to more complex me
 
 The most important thing is to start narrow. Pick one meeting type that runs on a predictable schedule, build the automation for that type first, and run it in parallel with your existing manual process for two or three weeks before relying on it exclusively. This gives you time to catch edge cases. unusual meeting structures, poor audio quality, meetings where half the discussion happened in chat. and tune your prompts accordingly. Once one meeting type is running reliably, expanding to others is mostly configuration work rather than engineering.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=zoom-mcp-server-meeting-summary-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

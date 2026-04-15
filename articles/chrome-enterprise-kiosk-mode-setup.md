@@ -240,6 +240,10 @@ Chrome Enterprise Kiosk Mode provides a secure, manageable foundation for deploy
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-kiosk-mode-setup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Munki Deployment: Complete Setup Guide](/chrome-enterprise-munki-deployment/)

@@ -432,6 +432,12 @@ Redis pub/sub for horizontal scaling. When your application runs on multiple ser
 
 Event sourcing integration. For applications built on event sourcing, Claude Code generates the WebSocket gateway that subscribes to your event store's change stream and pushes relevant events to subscribed clients in real time, replacing polling-based refresh patterns with instant push notifications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-websocket-implementation-real-time-events-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for WebSocket Real-Time App Development](/claude-code-skills-websocket-real-time-app-development/)

@@ -263,6 +263,12 @@ Chrome extensions for academic reading list management bridge the gap between qu
 
 The best system is one you'll actually use. Start with basic bookmark capture, then add complexity as your needs evolve. With the right extension and workflow, managing hundreds of academic papers becomes manageable and even enjoyable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-reading-list-organizer-academic)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Research Organizer: A Developer Guide](/chrome-extension-research-organizer/)

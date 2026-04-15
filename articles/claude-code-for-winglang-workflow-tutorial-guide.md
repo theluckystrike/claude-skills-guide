@@ -102,6 +102,12 @@ The combination of Winglang's cloud-oriented approach and Claude Code's AI-assis
 
 Remember that both Winglang and Claude Code continue evolving. Stay current with new features by asking Claude Code about recent updates and how they might benefit your specific use cases. The AI-assisted workflow adapts alongside the tools, ensuring your development process remains efficient as technology advances.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-winglang-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

@@ -274,6 +274,12 @@ ps aux | grep "Google Chrome" | sort -k6 -rn | head -20 | awk '{print $6/1024 " 
 
 If the command-line total matches what you expect from Task Manager, the browser is accurately reporting its consumption. If the command-line figure is significantly higher, background helper processes or crash reporter processes may be holding memory that does not appear in the in-browser views.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-vs-firefox-memory-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome vs Edge Memory 2026: Which Browser Uses Less RAM?](/chrome-vs-edge-memory-2026/)

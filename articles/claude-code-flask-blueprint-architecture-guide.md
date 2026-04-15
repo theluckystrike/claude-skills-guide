@@ -394,6 +394,12 @@ The key lies in establishing clear conventions early, consistent naming, directo
 
 Start with two or three blueprints, `auth`, `api`, and `main` covers most applications. Resist the urge to over-blueprint early. Add a new blueprint when a domain grows large enough to warrant its own URL namespace and its own team responsibility. The factory pattern and shared extensions directory make adding blueprints later painless, so there is no need to anticipate every future module on day one.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-flask-blueprint-architecture-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

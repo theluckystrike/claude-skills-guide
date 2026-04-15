@@ -189,6 +189,12 @@ Keep your dependency rules documents current by updating them alongside actual d
 
 By maintaining dependency management rules in Markdown, you create a single source of truth that both humans and AI assistants can follow. This reduces errors, accelerates onboarding, and keeps your projects running smoothly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-for-dependency-management-rules)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Inbox Organizer Chrome Extension: A Developer's Guide to Intelligent Email Management](/ai-inbox-organizer-chrome-extension/)

@@ -371,6 +371,12 @@ The key is establishing consistent patterns: always inspect commits before picki
 
 Start with simple single-commit cherry-picks on non-critical branches to build confidence with the tool. Once you have a feel for how it behaves when things go cleanly and when they conflict, gradually incorporate it into your regular workflow with automation scripts. The investment pays off quickly for teams maintaining multiple release lines.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-git-cherry-pick-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Rebase Interactive Workflow](/claude-code-git-rebase-interactive-workflow/)

@@ -236,6 +236,12 @@ Dev containers transform Claude Code from a locally-installed tool into a portab
 
 For teams adopting Claude Code at scale, investing time in dev container configuration pays dividends in consistency and onboarding speed. Every developer, whether on macOS, Linux, or Windows, gets an identical environment that matches your CI/CD pipeline.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-dev-containers-devcontainer-json-setup-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GitPod Integration Tutorial 2026](/claude-code-gitpod-cloud-ide-integration-tutorial-2026/). Set up Claude Code in cloud-based GitPod workspaces for team environments

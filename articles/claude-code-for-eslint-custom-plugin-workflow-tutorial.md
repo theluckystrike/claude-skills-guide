@@ -232,6 +232,12 @@ Building custom ESLint plugins with Claude Code transforms what used to be a man
 
 Start small with a single rule addressing a specific problem, then expand as you see the benefits. Your team will appreciate the consistency, and future developers will thank you for catching issues before they reach production.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-eslint-custom-plugin-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Tauri Plugin Workflow Tutorial](/claude-code-for-tauri-plugin-workflow-tutorial/)

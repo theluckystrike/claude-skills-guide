@@ -427,6 +427,12 @@ As you build new features, include accessibility requirements in your initial sp
 
 The accessibility skills ecosystem continues to evolve. Stay current by exploring new skills as they become available, and consider contributing your own accessibility-focused skills back to the community.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-for-accessibility-requirements-a11y)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Focus Management Audit Accessibility Guide](/claude-code-focus-management-audit-accessibility-guide/)

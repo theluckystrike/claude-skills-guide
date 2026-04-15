@@ -145,6 +145,12 @@ Claude Code cost estimation becomes intuitive once you understand the token dyna
 
 Remember that skills like the pdf skill, xlsx skill, and other specialized tools can significantly improve efficiency for domain-specific tasks, often reducing overall token consumption compared to general-purpose interactions. Track your actual spending in the first few projects, adjust your multipliers accordingly, and build a reliable estimation system that works for your specific development patterns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-cost-per-project-estimation-calculator-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Why Is Claude Code Expensive: Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)

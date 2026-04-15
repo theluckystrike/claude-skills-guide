@@ -157,6 +157,12 @@ Combining Claude Code with TabNine creates a powerful autocomplete workflow that
 
 Start with the basic setup, create the coordination skill, and gradually develop your personal workflow. The investment in setting up this integrated environment pays dividends in daily productivity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-tabnine-ai-autocomplete-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

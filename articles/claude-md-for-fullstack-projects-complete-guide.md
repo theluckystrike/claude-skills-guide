@@ -782,6 +782,12 @@ Claude .md skill files provide a powerful mechanism for standardizing fullstack 
 
 Start with skills for your most frequent tasks, then expand as you identify patterns worth codifying. Treat skills as living documents that evolve with your codebase. update them after incidents, after convention changes, and whenever Claude's output requires too many corrections. The investment in creating and maintaining your skill library pays dividends in consistent code quality, faster development cycles, and a team that ships with more confidence.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-for-fullstack-projects-complete-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude MD Example for Remix Fullstack Application](/claude-md-example-for-remix-fullstack-application/)

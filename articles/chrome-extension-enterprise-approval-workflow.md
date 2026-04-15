@@ -261,6 +261,12 @@ Start simple and iterate. A spreadsheet-backed workflow suffices for teams under
 
 The Chrome Enterprise documentation provides the authoritative reference for force-installation and policy management. Combine those capabilities with a custom approval front-end, and you have a practical enterprise approval workflow that balances security with usability.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-enterprise-approval-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Release Schedule 2026: A Practical Guide](/chrome-enterprise-release-schedule-2026/)

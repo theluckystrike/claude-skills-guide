@@ -483,6 +483,12 @@ Creating Claude skills for Remix fullstack development significantly improves yo
 
 Combine with complementary skills like `frontend-design`, `tdd`, and `supermemory` for comprehensive development support. Start with the basic template, then extend it each time you correct Claude's output. Within a few sessions, your skill will encode enough project-specific knowledge that Claude feels like a collaborator who has been working on your codebase from the start.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-example-for-remix-fullstack-application)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude MD Example for Elixir Phoenix Application](/claude-md-example-for-elixir-phoenix-application/)

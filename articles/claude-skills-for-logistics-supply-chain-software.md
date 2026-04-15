@@ -189,6 +189,12 @@ def log_shipment_event(event_type, shipment_id, data):
 
 Claude skills transform logistics operations from reactive firefighting into proactive management. By automating document generation, inventory reconciliation, and exception monitoring, your team focuses on optimization rather than data entry. Start with one workflow, shipment documentation or inventory counting, and expand as you prove the value.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-logistics-supply-chain-software)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Can Claude Code Skills Call External APIs Automatically](/can-claude-code-skills-call-external-apis-automatically/). connect logistics skills to ERP and TMS APIs

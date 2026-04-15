@@ -314,6 +314,12 @@ Mutation testing transforms test quality from "lines covered" to "bugs actually 
 
 Start with a single module, establish your baseline survival rate, and iterate. Your test suite becomes genuinely reliable when it consistently catches artificial defects. The combination of Stryker's automated mutation generation and Claude Code's ability to write targeted killing tests makes this approach accessible even for teams that have never done mutation testing before.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mutation-testing-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). TDD is the foundation that mutation testing builds on

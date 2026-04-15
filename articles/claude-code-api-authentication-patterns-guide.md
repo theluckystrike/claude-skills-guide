@@ -400,6 +400,12 @@ Claude Code accelerates API authentication implementation across multiple patter
 
 The most effective approach is to involve Claude Code early. before you start writing code, let it help you choose the right authentication pattern for your use case. Then use it to generate the implementation, build out the test suite, review for security issues, and scaffold monitoring. Authentication is one of those areas where getting the implementation right from the start is far cheaper than patching vulnerabilities discovered later in production.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-api-authentication-patterns-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Laravel Sanctum API Authentication Guide](/claude-code-laravel-sanctum-api-authentication-guide/)

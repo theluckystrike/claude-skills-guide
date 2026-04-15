@@ -208,6 +208,12 @@ Railway provides a production-ready deployment target for MCP servers. The workf
 
 For developers building Claude Code integrations, combining Railway deployment with skills like the TDD skill for test-driven development or the frontend-design skill for UI components creates a powerful development workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=railway-mcp-server-deployment-automation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Credential Management and Secrets Handling](/mcp-credential-management-and-secrets-handling/)

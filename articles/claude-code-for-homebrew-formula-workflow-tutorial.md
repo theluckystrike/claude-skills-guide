@@ -186,6 +186,12 @@ Claude Code transforms Homebrew formula management from a manual, error-prone pr
 
 Remember: automation handles the repetitive parts, but your expertise guides the process. Use Claude Code as a knowledgeable assistant, not a replacement for understanding how Homebrew works under the hood.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-homebrew-formula-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

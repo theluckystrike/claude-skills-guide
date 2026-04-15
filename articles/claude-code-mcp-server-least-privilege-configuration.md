@@ -337,6 +337,12 @@ Avoid these frequent errors when implementing least privilege:
 
 Least privilege configuration for MCP servers requires initial effort but delivers lasting security benefits. By scoping filesystem access, restricting environment variables, allowlisting commands, controlling network access, managing temporary files, and maintaining audit logs, you create a defense-in-depth architecture that protects your development workflow. Maintain separate configurations for development and production contexts, monitor logs for unexpected access patterns, and revisit configurations as your usage patterns evolve. Start with the most permissive servers and progressively restrict permissions until you find the balance between security and functionality your project requires.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mcp-server-least-privilege-configuration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)

@@ -203,6 +203,12 @@ These metrics help justify continued AI tool usage in regulated environments.
 
 Claude Code fits well into German enterprise compliance workflows when configured appropriately. Focus on local processing, audit trails, and data minimization. The tdd, pdf, xlsx, and supermemory skills accelerate common compliance tasks without introducing excessive risk. Establish clear policies for AI tool usage, document all interactions, and maintain human oversight for compliance-critical decisions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-german-enterprise-compliance-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). generate compliance test cases with the TDD skill

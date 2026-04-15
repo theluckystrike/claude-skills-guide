@@ -317,6 +317,12 @@ Structured JSON logs integrate directly with log aggregation services. Query the
 
 Testing and debugging multi-agent workflows requires a different mindset than traditional debugging. By implementing comprehensive logging, checkpointing, and isolation testing, you can build solid multi-agent systems that are maintainable and debuggable. Defining explicit output schemas at every agent boundary converts vague downstream failures into precise, actionable error messages. Claude Code's skill system and verbose logging provide the observability needed to troubleshoot even the most complex agent orchestration scenarios. Combine these tools with structured production logging and you have a full observability stack that supports both development-time debugging and post-mortem analysis of production incidents.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-test-and-debug-multi-agent-workflows)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Crashes When Loading Skill: Debug Guide](/claude-code-crashes-when-loading-skill-debug-steps/)

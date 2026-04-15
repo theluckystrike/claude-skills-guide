@@ -299,6 +299,12 @@ The pdf skill then takes this extracted JSON and generates formatted reports, su
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=can-claude-skills-generate-images-or-handle-multimedia-files)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Batch Processing with Skills Guide](/claude-code-batch-processing-with-skills-guide/). Apply batch processing patterns to multimedia workflows: process many images or documents in one automated run

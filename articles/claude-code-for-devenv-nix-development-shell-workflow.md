@@ -185,6 +185,12 @@ This pulls the latest configurations and rebuilds your environment with any chan
 
 Combining Claude Code with devenv creates a powerful workflow for development environment management. Devenv provides reproducible, declarative environments that eliminate "works on my machine" problems, while Claude Code acts as an intelligent assistant that understands your setup and helps you work more efficiently. Start with a basic configuration, add your tools incrementally, and let Claude Code help you manage and extend your environment as your project grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-devenv-nix-development-shell-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)

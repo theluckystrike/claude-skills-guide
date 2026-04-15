@@ -365,6 +365,12 @@ These optimizations compound over time, delivering smoother development sessions
 
 The key discipline is treating Chrome itself as a tool that requires the same attention you give to your codebase: regular audits, measured improvements, and a clear baseline to compare against.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-speed-up-tips-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Miro Whiteboard: A Complete Guide for Developers and Power Users](/chrome-extension-miro-whiteboard/)

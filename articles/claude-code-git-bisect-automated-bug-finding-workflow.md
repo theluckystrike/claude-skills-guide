@@ -321,6 +321,10 @@ Instead of dreading regressions, you gain confidence that you can quickly identi
 Next time you encounter a mysterious bug, remember: git bisect with Claude Code is your automated detective, systematically narrowing down the search until the culprit is found.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-git-bisect-automated-bug-finding-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Core developer skills for debugging and test-driven bug isolation

@@ -229,6 +229,12 @@ After applying fixes, verify that Claude Code recognizes your new API key:
 
 If errors persist, systematically check each credential location again, it's easy to miss a configuration file storing the old key.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-error-invalid-api-key-after-rotation-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How Do I Set Environment Variables for a Claude Skill?](/how-do-i-set-environment-variables-for-a-claude-skill/). See also

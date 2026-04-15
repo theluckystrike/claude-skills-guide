@@ -462,6 +462,12 @@ public:
 
 When a skill generates new classes, it should follow this pattern automatically. Embedding the convention into the skill definition prevents the gradual include sprawl that degrades build times in large projects. A project with 50+ modules that respects forward declaration boundaries can maintain incremental build times under 30 seconds even as the codebase grows past 500k lines of C++.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-unreal-engine-c-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill .md File Format: Full Specification Guide](/claude-skill-md-format-complete-specification-guide/)

@@ -185,6 +185,12 @@ Chrome Enterprise single app kiosk mode provides a solid foundation for deployin
 
 The key to successful kiosk deployments lies in thoroughly testing your configuration before broad rollout and maintaining clear policies around application updates and session management. With proper implementation, Chrome Enterprise kiosk mode delivers reliable, distraction-free computing experiences for any single-app use case.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-single-app-kiosk)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Kiosk Mode Setup: Complete.](/chrome-enterprise-kiosk-mode-setup/)

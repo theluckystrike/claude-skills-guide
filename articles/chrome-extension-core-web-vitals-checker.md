@@ -254,6 +254,12 @@ Some Single Page Applications may not trigger fresh LCP events on navigation, re
 
 Building this extension gives you a practical tool for quick performance audits while learning the Chrome extension APIs and Performance API in depth.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-core-web-vitals-checker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Web Vitals Optimization: A Practical Guide for.](/chrome-web-vitals-optimization/)

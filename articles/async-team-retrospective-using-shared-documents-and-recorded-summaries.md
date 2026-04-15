@@ -174,6 +174,12 @@ If participation drops or action items go unfinished, the problem likely is not 
 
 One final note: async retrospectives require facilitators who can write clearly and record summaries with warmth and directness. The written medium strips away a lot of social signals, so the facilitator's voice matters more, not less. Teams that invest in facilitation quality consistently report higher satisfaction with the async format than teams that treat it as a checkbox exercise.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=async-team-retrospective-using-shared-documents-and-recorded-summaries)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Async Product Discovery Process for Remote Teams Using Recorded Interviews](/async-product-discovery-process-for-remote-teams-using-recorded-interviews/)

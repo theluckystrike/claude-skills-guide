@@ -165,6 +165,12 @@ Skill quality signals will mature. Right now the main quality signal for a commu
 
 Start with the built-in skills to understand the format, then explore community contributions for domain-specific needs. The trajectory is clear: skills are becoming a first-class artifact of software team infrastructure, and the open source ecosystem is building the shared foundation for that.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=open-source-claude-skills-ecosystem-outlook-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/). Publish your own skill to a GitHub repository and contribute to the community ecosystem.

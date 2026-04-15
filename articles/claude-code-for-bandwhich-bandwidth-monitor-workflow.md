@@ -270,6 +270,12 @@ Start with basic bandwhich usage to understand your network patterns, then layer
 
 The key is starting simple, run bandwhich interactively, explore your network traffic, then progressively add automation for the insights that matter most to your applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-bandwhich-bandwidth-monitor-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Kubernetes Monitoring with Prometheus](/claude-code-kubernetes-monitoring-prometheus/)

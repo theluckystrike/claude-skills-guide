@@ -329,6 +329,10 @@ The playwright skill provides excellent E2E testing capabilities for validating 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nextjs-app-router-migration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Coding Tools for Code Migration Projects](/ai-coding-tools-for-code-migration-projects/)

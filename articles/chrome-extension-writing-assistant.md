@@ -288,6 +288,12 @@ Implementing these considerations creates a responsive extension that provides v
 
 Chrome extension writing assistants represent a practical intersection of AI capabilities and browser functionality. By understanding the core patterns, input detection, API integration, and suggestion display, developers can build customized tools that enhance productivity across the web. Whether improving code comments, drafting documentation, or composing communications, these extensions bring intelligent assistance directly into your workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-writing-assistant)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Writing Assistant Chrome Extension Free: A Developer's Guide](/ai-writing-assistant-chrome-extension-free/)

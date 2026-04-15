@@ -213,6 +213,12 @@ This approach scales well as your domain grows more complex. When combined with 
 
 The key is treating domain knowledge as code: version-controlled, documented, and tested. As your business evolves, your domain definitions evolve with it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-understand-domain-business-logic)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/). CLAUDE.md is the primary place to encode domain rules for Claude

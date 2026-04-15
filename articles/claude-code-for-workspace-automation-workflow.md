@@ -183,6 +183,12 @@ Test each skill in a low-stakes project before relying on it for production work
 
 The key insight is that workspace automation with Claude Code isn't about writing complex scripts, it's about teaching Claude your conventions once and letting it apply them consistently across all your projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-workspace-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Drone CI Workflow Automation](/claude-code-drone-ci-workflow-automation/)

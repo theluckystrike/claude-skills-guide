@@ -232,6 +232,12 @@ Test environment management requires upfront investment that pays dividends thro
 Start with simple local environments using Docker, then expand to CI/CD integration as your testing needs mature. Remember that environment fidelity should match your testing objectives, don't over-engineer local environments for quick feedback loops, but ensure staging environments accurately reflect production conditions for high-stakes validation.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-test-environment-management-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Container Environment Variables Management](/claude-code-container-environment-variables-management/)

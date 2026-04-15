@@ -293,6 +293,12 @@ Organize prompts by function and maintain version control. Use Claude Skills for
 
 Invest time in building your prompt library now, and the returns compound throughout your projects. Each refined prompt becomes a reusable asset that improves with iteration. The best prompt libraries are living documents. regularly reviewed, carefully versioned, and treated with the same discipline as the code they help generate.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-prompt-management-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)

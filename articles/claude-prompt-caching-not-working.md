@@ -172,6 +172,12 @@ The 1-hour cache costs 2x the base input price to write but 0.1x to read, making
 3. **Place cached content first**: System prompts and tool definitions at the start of the prompt are the best cache candidates.
 4. **Right-size your model**: If your system prompt is 2,000 tokens, use Sonnet 4.5 or 4 (1,024 minimum) rather than Opus 4.6 (4,096 minimum).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-prompt-caching-not-working)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Prompt Caching API Guide](/claude-prompt-caching-api-guide/) -- complete guide to implementing prompt caching.

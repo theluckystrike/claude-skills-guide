@@ -150,6 +150,12 @@ Splitting large codebases across specialized Claude agents transforms intractabl
 
 Start by identifying natural boundaries in your codebase, architectural layers, feature domains, or task types, and create focused agents around those divisions. With proper setup, your multi-agent system will handle complexity that would overwhelm a single assistant, delivering consistent, quality results across your entire codebase.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=splitting-large-codebases-across-specialized-claude-agents)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude MD Best Practices for Large Codebases](/claude-md-best-practices-for-large-codebases/)

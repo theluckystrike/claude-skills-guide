@@ -223,6 +223,12 @@ Claude Code transforms performance testing from a manual, sporadic activity into
 
 The key is consistency, run the same tests, compare against the same baselines, and act on the same metrics every time. Claude Code makes this automation accessible without requiring extensive custom tooling.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-performance-testing-strategy-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)

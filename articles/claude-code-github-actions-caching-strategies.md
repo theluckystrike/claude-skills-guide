@@ -301,6 +301,12 @@ Review your workflow summaries to identify which caches provide the most value. 
 
 Implementing proper caching strategies in your GitHub Actions workflows significantly reduces CI/CD execution times. Start with built-in caching via setup actions, expand to manual cache steps for specialized tools and build artifacts, and refine your cache key strategies based on actual hit rates. Every second saved on CI builds compounds over time, a minute saved across hundreds of workflow runs adds up to significant developer hours reclaimed throughout your project lifecycle. Combined with Claude Code skills like tdd, pdf, and frontend-design, efficient caching creates a faster development cycle.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-github-actions-caching-strategies)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

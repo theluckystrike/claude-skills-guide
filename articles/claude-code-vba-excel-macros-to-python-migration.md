@@ -431,6 +431,12 @@ Start small, test often, and use Claude Code's ability to understand your specif
 *Ready to start your migration? Copy one of your VBA macros and ask Claude Code to help you convert it to Python today!*
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vba-excel-macros-to-python-migration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Not Detecting My Virtual Environment Python Fix](/claude-code-not-detecting-my-virtual-environment-python-fix/)

@@ -432,6 +432,12 @@ The comparison table approach is worth building into your team's workflow: when 
 
 Start with one duplicated function today. Extract it, test it, and notice how much easier subsequent changes become. That's the compounding benefit of eliminating duplicate code: each refactoring makes the next one simpler.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-duplicate-code-refactoring-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Code Smell Identification Guide](/claude-code-for-code-smell-detection-workflow-guide/). Duplicate code is a classic code smell

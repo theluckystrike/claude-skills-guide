@@ -222,6 +222,12 @@ Automating changelog reviews with Claude Code skills saves time and ensures cons
 
 Remember: A well-maintained changelog is a gift to future developers (including yourself) who need to understand how your project evolved. Automating its review ensures it stays accurate and useful.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-changelog-review-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)

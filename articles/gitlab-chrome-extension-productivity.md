@@ -194,6 +194,12 @@ GitLab Chrome extensions transform how you interact with your DevOps workflow. B
 
 Start with one or two extensions and expand your toolkit as you identify more time-saving opportunities. The right combination of extensions can significantly accelerate your development process.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=gitlab-chrome-extension-productivity)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Focus Timer Productivity: A Developer Guide](/chrome-extension-focus-timer-productivity/)

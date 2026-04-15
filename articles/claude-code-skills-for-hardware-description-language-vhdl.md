@@ -422,6 +422,12 @@ Claude Code transforms VHDL development by providing structured assistance for t
 
 Start with the skills that match your biggest problem, testbench creation, documentation, or code review, and expand from there. For most VHDL developers, testbench generation with the TDD skill delivers the most immediate time savings, since comprehensive stimulus sequences are time-consuming to write manually and easy for Claude to produce from a plain-English description of your circuit's behavior.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-hardware-description-language-vhdl)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/). Build modular, reusable skills that chain together for complex hardware workflows

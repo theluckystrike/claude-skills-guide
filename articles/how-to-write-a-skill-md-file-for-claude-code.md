@@ -150,6 +150,10 @@ Building skills for Claude Code transforms how you work with AI. Start with simp
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-write-a-skill-md-file-for-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Full format reference with real examples

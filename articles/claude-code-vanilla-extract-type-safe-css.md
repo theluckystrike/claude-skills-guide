@@ -250,6 +250,12 @@ Begin by adding Vanilla Extract to an existing project or creating a fresh skill
 
 The initial setup requires minimal configuration, and the learning curve stays low if you already know TypeScript. Start with simple component styles, then gradually adopt themes and recipes as your skill grows in complexity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vanilla-extract-type-safe-css)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Check if a Chrome Extension is Safe Before Installing](/check-chrome-extension-safe/)

@@ -292,6 +292,12 @@ The biggest gains almost always come from three places: enabling Memory Saver, a
 
 The goal isn't to minimize process count, but to ensure each process is doing useful work. Regular maintenance, discarding unused tabs, managing extensions, and monitoring Task Manager, keeps Chrome running smoothly even with heavy daily use.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-too-many-processes)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Zoom Slow: Diagnosing and Fixing Performance Issues](/chrome-zoom-slow/)

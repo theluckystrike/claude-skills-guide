@@ -163,6 +163,12 @@ Private extension hosting in enterprise environments requires balancing security
 
 Choose your deployment method based on your organization's existing infrastructure, security requirements, and the sensitivity of your extension's functionality. With proper configuration and regular auditing, private extension deployment enables powerful internal tooling while maintaining enterprise security standards.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-private-extension-hosting)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)

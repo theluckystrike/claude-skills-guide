@@ -294,6 +294,12 @@ When the same issue recurs across your team, document the fix. A short internal 
 
 Remember: the simplest solution is often correct. Most Claude Code problems stem from configuration issues, prompt quality, or environment settings, not fundamental tool failures. Resist the urge to escalate until you've ruled out the basics.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-over-engineers-simple-solution-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/)

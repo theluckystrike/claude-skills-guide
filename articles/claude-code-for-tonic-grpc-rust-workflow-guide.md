@@ -637,6 +637,12 @@ The key advantages of this stack are compile-time guarantees from both Rust's ty
 For more advanced topics, explore bidirectional streaming, custom interceptors, load balancing with the `tower` middleware stack, and integration with service meshes like Linkerd or Istio. Claude Code can generate the boilerplate for each of these patterns given a clear description of your service's behavior.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-tonic-grpc-rust-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for gRPC Web Workflow Tutorial](/claude-code-for-grpc-web-workflow-tutorial/)

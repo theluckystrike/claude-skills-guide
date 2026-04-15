@@ -258,6 +258,12 @@ Migrating WebForms to Blazor with Claude Code transforms an intimidating moderni
 Start with a small, low-risk page to establish your migration patterns, then scale systematically across your application. Claude Code's consistent output and ability to maintain context across the migration makes it an invaluable partner in your modernization journey.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-asp-net-webforms-to-blazor-migration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Express to Fastify Migration with Claude Code (2026)](/claude-code-express-to-fastify-migration-tutorial-2026/)

@@ -273,6 +273,12 @@ Building a Chrome extension for screen annotation combines web platform APIs wit
 
 The implementation patterns shown here provide a foundation you can extend with features like cloud sync, team sharing, or integration with documentation systems. Start with the core capture-and-annotate flow, then layer in advanced features based on your users' workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-screen-annotation-tool)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

@@ -371,6 +371,12 @@ Manifest V3's security model shifts the burden from runtime trust to build-time 
 
 For developers, the migration requires upfront investment but delivers lasting security improvements. The Chrome Web Store no longer accepts new Manifest V2 extensions, and V2 extensions are losing visibility in the store. The transition is mandatory for any active extension project. the question is no longer whether to migrate, but how quickly you can do it without breaking existing users.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=manifest-v3-vs-v2-security)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Canva Alternative: Build Your Own.](/chrome-extension-canva-alternative/)

@@ -239,6 +239,12 @@ For quick translations, direct interaction works best. For ongoing projects, cre
 
 Start with a single file to establish your translation pattern, then scale to entire codebases. The key is consistency, establish conventions for technical terms, maintain comment positions, and flag ambiguous translations for human review.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-translate-code-comments-between-languages)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Localization i18n Workflow Automation](/claude-skills-for-localization-i18n-workflow-automation/). automate i18n workflows across your codebase

@@ -284,6 +284,10 @@ Finally, keep your `CLAUDE.md` tool descriptions concise and action-oriented. Cl
 Integrating Claude Code with LangChain unlocks sophisticated agent workflows. Start with simple tool definitions, add memory management as needed, and progressively build more complex chains. The combination gives you the best of CLI-driven development and flexible language model orchestration.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-langchain-integration-agent-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Servers vs Claude Skills: What Is the Difference](/mcp-servers-vs-claude-skills-what-is-the-difference/). Understand how MCP servers and skills compare for agent orchestration

@@ -354,6 +354,12 @@ Claude Code can identify which fragments consumed the most time and suggest targ
 
 Claude Code transforms Apache Drill from an interactive query tool into an automatable workflow engine. By encapsulating connection logic, query templates, and result processing into skills, you enable reproducible data exploration across your organization. Start with simple REST API interactions, then graduate to parameterized workflows that handle real-world analytical requirements. The combination of Drill's schema-free flexibility and Claude Code's automation capabilities creates a powerful foundation for data-driven workflows that scale from individual developer machines to multi-node clusters without requiring changes to your automation layer.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-apache-drill-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)

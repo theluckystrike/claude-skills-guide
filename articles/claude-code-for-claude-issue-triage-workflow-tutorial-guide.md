@@ -207,6 +207,12 @@ Claude Code transforms issue triage from a manual chore into an automated workfl
 
 The key is treating your triage system as a collaborative effort between Claude and your team, automating the routine while keeping humans available for nuanced decisions that require domain expertise or contextual judgment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-claude-issue-triage-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Jira Ticket Creator: Automate Issue.](/chrome-extension-jira-ticket-creator/)

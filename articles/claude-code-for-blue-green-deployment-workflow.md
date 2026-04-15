@@ -362,6 +362,12 @@ Blue-green deployment provides a safe, zero-downtime release strategy that's ess
 The key is to start simple, test thoroughly, and iterate. Claude Code is particularly effective at helping you understand the tradeoffs between different deployment strategies and choose the right approach for your specific use case.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-blue-green-deployment-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Fly.io Deployment Automation Workflow](/claude-code-for-fly-io-deployment-automation-workflow/)

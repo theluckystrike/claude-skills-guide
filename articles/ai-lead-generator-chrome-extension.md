@@ -305,6 +305,12 @@ AI lead generator chrome extensions combine web extraction with AI processing to
 
 The most effective implementations focus on specific niches, whether that's LinkedIn profiles, conference directories, or industry-specific databases, rather than attempting universal scraping. This specialization allows for more accurate extraction and relevant lead data. Start with a single high-value page type, get the extraction and enrichment working well for that format, then generalize from there.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-lead-generator-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Blog Post Generator for Chrome: A Developer's Guide](/ai-blog-post-generator-chrome/)

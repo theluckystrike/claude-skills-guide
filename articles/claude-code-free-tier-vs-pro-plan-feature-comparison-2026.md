@@ -155,6 +155,10 @@ Evaluate your current needs, try the free tier first, and upgrade when your work
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-free-tier-vs-pro-plan-feature-comparison-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Can You Use Claude Skills Without a Claude Max Subscription?](/can-you-use-claude-skills-without-a-claude-max-subscription/). See also

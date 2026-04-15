@@ -128,6 +128,12 @@ Chrome extension font identifier tools have evolved significantly, offering deve
 
 For teams building design systems, combining extension-based detection with custom scripts creates a complete typography audit pipeline. The key is selecting tools that match your specific needs, whether that's quick visual identification or comprehensive font inventory management.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-font-identifier)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

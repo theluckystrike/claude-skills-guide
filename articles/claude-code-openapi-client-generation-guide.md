@@ -315,6 +315,12 @@ Claude Code transforms OpenAPI client generation from a one-size-fits-all approa
 
 The key is providing clear context about your project structure, only requesting the endpoints you need, and specifying your preferred patterns for error handling, caching, and authentication.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-openapi-client-generation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code OpenAPI Spec Generation Guide](/claude-code-openapi-spec-generation-guide/). Generate OpenAPI specs from existing code (the reverse workflow)

@@ -215,6 +215,12 @@ Specify which stages should be idempotent (safe to re-run), which should be skip
 
 For large datasets, document the approximate size of each stage's inputs and outputs. Claude Code uses this information to suggest appropriate chunk sizes for pandas operations and to flag operations likely to exhaust memory. such as a merge that would create a DataFrame too large to fit in RAM given your documented dataset sizes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-example-for-data-science-python-project)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Rye Python Project Workflow Guide](/claude-code-for-rye-python-project-workflow-guide/)

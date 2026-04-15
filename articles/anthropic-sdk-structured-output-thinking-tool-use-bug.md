@@ -276,6 +276,12 @@ async def parse_with_retry(params, max_retries=3):
 - **Implement retry logic** for empty or invalid responses
 - **Keep schemas simple** when combining with other features
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=anthropic-sdk-structured-output-thinking-tool-use-bug)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix: "Compiled grammar is too large" Error](/anthropic-sdk-structured-output-grammar-too-large)

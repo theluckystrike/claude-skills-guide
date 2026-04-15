@@ -272,6 +272,12 @@ const response = await client.messages.create({
 - **Use string-encoded JSON** for deeply nested sub-structures
 - **Always have a non-strict fallback** with manual validation via Zod or similar
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=anthropic-sdk-strict-true-500-error)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix: "Compiled grammar is too large" Error](/anthropic-sdk-structured-output-grammar-too-large)

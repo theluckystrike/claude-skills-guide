@@ -225,6 +225,12 @@ Claude Code transforms Kubernetes development from manual kubectl operations int
 
 Related guides: [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/). Learn how to build custom tools that extend Claude's Kubernetes capabilities
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-kubernetes-helm-charts-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Chaos Engineering Testing Automation Guide](/claude-code-chaos-engineering-testing-automation-guide/)

@@ -133,6 +133,12 @@ Storage limits: Chrome's local storage has quotas. If you're saving many session
 
 Chrome extensions that save research sessions address a genuine problem for anyone who maintains extensive tab collections. Whether you choose a ready-made solution like Session Buddy or build a custom implementation using Chrome's APIs, the ability to preserve and restore your browsing context transforms research efficiency. Start with one of the popular extensions, establish a saving routine, and you'll never lose valuable research tabs again.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-save-research-sessions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Research Assistant Chrome Extension: A Developer's Guide](/ai-research-assistant-chrome-extension/)

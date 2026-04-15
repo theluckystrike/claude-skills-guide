@@ -396,6 +396,12 @@ The instrumentation patterns in this guide, structured JSON logs, exit code insp
 With proper timeout and budget strategies, you'll achieve consistent, predictable results from Claude Code across projects of varying complexity.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-timeout-budget-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Performance Budget Workflow Tutorial](/claude-code-for-performance-budget-workflow-tutorial/)

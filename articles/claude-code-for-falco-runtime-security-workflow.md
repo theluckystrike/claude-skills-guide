@@ -329,6 +329,12 @@ The key is starting simple, begin with investigation workflows before advancing 
 The final architecture goal is a system where NOTICE-level Falco alerts are logged silently, WARNING-level alerts are triaged by Claude and queued for human review, CRITICAL and ALERT-level events trigger Claude investigation with automated containment, and EMERGENCY events trigger immediate containment with simultaneous human escalation. When that pipeline is running smoothly, your security team can focus on tuning rules and post-mortems rather than manually reading raw syscall alerts at 3am.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-falco-runtime-security-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Buildah Container Builds Guide](/claude-code-buildah-container-builds-guide/)

@@ -397,6 +397,12 @@ Composite actions provide the building blocks for reusable Claude Code automatio
 
 The key principle is to invest in the composite action once and reuse it everywhere. Every minute spent designing clean inputs, outputs, and error handling pays back when the action runs hundreds of times across dozens of repositories.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-github-actions-composite-actions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GitHub Actions Approval Workflows](/claude-code-github-actions-approval-workflows/)

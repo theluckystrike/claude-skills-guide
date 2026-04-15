@@ -169,6 +169,12 @@ AI voice typing Chrome extensions combine browser capabilities with cloud-based 
 
 The technology continues to improve, with browser vendors expanding API capabilities and AI providers offering faster, more accurate models. For developers willing to invest in proper implementation, voice typing extensions represent a valuable addition to productivity toolkits.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-voice-typing-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)

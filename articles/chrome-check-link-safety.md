@@ -171,6 +171,12 @@ Chrome provides multiple layers of link safety protection, from Safe Browsing to
 
 The most effective strategy layers manual inspection with automated tools, hover before clicking, verify with extensions when uncertain, and audit links in your own projects regularly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-check-link-safety)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Threat Hunting Techniques Workflow Guide](/claude-code-for-threat-hunting-techniques-workflow-guide/)

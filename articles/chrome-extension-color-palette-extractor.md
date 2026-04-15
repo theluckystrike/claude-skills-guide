@@ -188,6 +188,12 @@ Third, document the source of extracted palettes. When you return to a project m
 
 Chrome extensions for color palette extraction have transformed how designers and developers work with color. These tools save time, ensure accuracy, and provide insights into how successful websites build their visual identities. Whether you use established extensions or build custom extraction tools, incorporating color palette extraction into your workflow improves both efficiency and design quality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-color-palette-extractor)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)

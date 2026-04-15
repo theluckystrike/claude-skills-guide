@@ -493,6 +493,12 @@ The programmers who improve fastest are not the ones who get the most accepted s
 Start implementing these workflows today with a single practice problem, build your template library incrementally, and measure your improvement over the following weeks.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-competitive-programming-practice-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cold Fusion Modernization Workflow Guide](/claude-code-cold-fusion-modernization-workflow-guide/)

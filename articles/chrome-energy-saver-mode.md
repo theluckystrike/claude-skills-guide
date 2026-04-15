@@ -185,6 +185,12 @@ async function monitorBatteryDuringTask(task) {
 
 Chrome Energy Saver Mode offers a practical solution for extending device battery life while maintaining productivity. By understanding how the feature works and configuring it appropriately for your development workflow, you can reduce power consumption without sacrificing the functionality you need for building modern web applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-energy-saver-mode)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Memory Saver Mode: A Developer's Guide to Reducing Browser Memory Usage](/chrome-memory-saver-mode/)

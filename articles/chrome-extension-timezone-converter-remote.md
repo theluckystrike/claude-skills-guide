@@ -383,6 +383,12 @@ Context menu creating duplicates on reload: Call `chrome.contextMenus.create` in
 
 Timezone list not syncing across devices: Use `chrome.storage.sync` instead of `chrome.storage.local`. The 100 KB sync limit is more than enough for a list of timezone names.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-timezone-converter-remote)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a CLI DevTool with Claude Code: A Practical.](/building-a-cli-devtool-with-claude-code-walkthrough/)

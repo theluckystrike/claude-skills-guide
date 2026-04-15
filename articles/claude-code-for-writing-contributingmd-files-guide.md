@@ -199,6 +199,12 @@ A well-written CONTRIBUTING.md transforms your project from an opaque codebase i
 Start building your CONTRIBUTING.md today, and watch your contributor community grow.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-writing-contributingmd-files-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Writing CLAUDE.md Files That Define Your Project's API Versioning Strategy for AI 2026](/writing-claude-md-files-that-define-your-projects-api-versio/)

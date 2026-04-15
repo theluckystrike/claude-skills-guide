@@ -171,6 +171,12 @@ Claude Code transforms K3s cluster management from a series of kubectl commands 
 
 Start with simple deployments and gradually incorporate more advanced patterns as you become comfortable with the workflow. The combination of K3s' lightweight footprint and Claude Code's intelligent assistance creates an efficient development environment suitable for learning, development, and production edge deployments.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-k3s-lightweight-kubernetes-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)

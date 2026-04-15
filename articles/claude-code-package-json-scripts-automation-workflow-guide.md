@@ -256,6 +256,12 @@ Package.json scripts combined with Claude Code's AI capabilities provide a solid
 Start with the basic scripts outlined here, then gradually expand into more complex automation as your project requirements grow. The key is establishing good conventions early and using Claude Code's contextual understanding to adapt scripts to your specific needs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-package-json-scripts-automation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Jira Ticket Creator: Automate Issue.](/chrome-extension-jira-ticket-creator/)

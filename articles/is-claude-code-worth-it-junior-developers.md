@@ -122,6 +122,12 @@ Remember: the goal isn't to replace your learning, it's to accelerate it. Use Cl
 
 Your future self will thank you for this investment. Now go install it and start learning faster.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=is-claude-code-worth-it-junior-developers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Cursor: Debugging Runtime Errors](/claude-code-vs-cursor-debugging-runtime-errors/)

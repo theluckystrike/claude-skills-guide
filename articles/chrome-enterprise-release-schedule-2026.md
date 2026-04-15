@@ -222,6 +222,12 @@ For most enterprises, the Extended Stable channel provides the best balance betw
 
 Understanding these release patterns and implementing appropriate management policies ensures smooth browser deployments while maintaining security compliance across your organization.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-release-schedule-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Stable Channel Management: A Practical Guide](/chrome-enterprise-stable-channel-management/)

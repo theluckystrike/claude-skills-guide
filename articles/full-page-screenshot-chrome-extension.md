@@ -198,3 +198,10 @@ For occasional manual captures, Chrome's built-in DevTools Command Menu or a sim
 The right tool depends on your specific requirements: frequency of captures, need for automation, handling of dynamic content, and integration with your existing workflows.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=full-page-screenshot-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.

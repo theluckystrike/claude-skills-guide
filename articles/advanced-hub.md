@@ -105,6 +105,10 @@ Advanced optimization isn't just about prompts. It's about workflow design:
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=advanced-hub)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Understanding auto-loading is key to controlling token spend

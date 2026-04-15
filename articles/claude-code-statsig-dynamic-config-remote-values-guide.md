@@ -309,6 +309,12 @@ Start by defining your configuration schema, generate abstractions with Claude C
 Remember to test configuration behavior thoroughly and always provide sensible defaults. With this foundation, you can safely roll out features, run experiments, and modify behavior without deploying new code.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-statsig-dynamic-config-remote-values-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code PostHog Feature Flag React SDK Guide](/claude-code-posthog-feature-flag-react-sdk-guide/)

@@ -137,6 +137,12 @@ Claude Code's parallel task execution capabilities enable powerful workflows for
 
 Experiment with different parallelization levels to find the sweet spot for your specific use case. The time savings from parallel execution often outweigh the additional complexity, especially for repetitive tasks across large codebases.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-parallel-task-execution-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Worktree Parallel Development Workflow](/claude-code-git-worktree-parallel-development-workflow/)

@@ -281,6 +281,12 @@ Even a minimal setup. a timing log and a pass/fail count per skill. gives you th
 
 Remember: metrics are a tool, not the objective. Use them to make informed decisions about where to invest your skill development effort.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-metrics-effectiveness-measuring-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)

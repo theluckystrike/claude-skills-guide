@@ -169,6 +169,12 @@ The docx skill also proves valuable when generating coordination reports or stat
 
 Agent swarm coordination transforms Claude Code from a single assistant into a parallel processing platform. Start with the fan-out/fan-in pattern for independent tasks, scale to hierarchical trees for complex projects, and implement checkpointing for production reliability. The key insight: treat agents as disposable workers that communicate through structured channels, and your automation pipelines will scale horizontally with minimal overhead.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-agent-swarm-coordination-strategies)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/). Build the foundational orchestration model before scaling to swarm coordination.

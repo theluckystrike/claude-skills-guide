@@ -83,6 +83,12 @@ The privacy-focused nature of Plausible Analytics aligns well with ethical data 
 
 By implementing these workflows, you'll spend less time navigating dashboards and more time acting on the insights that matter to your business.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-plausible-analytics-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)

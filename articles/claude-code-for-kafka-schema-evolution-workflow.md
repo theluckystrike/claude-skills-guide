@@ -236,6 +236,12 @@ Claude Code transforms Kafka schema evolution from a manual, error-prone process
 
 Start by creating a dedicated schema evolution skill, then progressively add automation for validation, documentation, and CI integration. Your future self, and your downstream consumers, will thank you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-kafka-schema-evolution-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Delta Lake Schema Evolution Workflow](/claude-code-for-delta-lake-schema-evolution-workflow/)

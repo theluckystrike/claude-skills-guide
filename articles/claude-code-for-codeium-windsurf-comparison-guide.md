@@ -202,6 +202,12 @@ The choice between Claude Code, Codeium, and Windsurf ultimately depends on your
 
 Consider trying each tool for a week in your actual development work, the real-world experience will reveal which tool fits best with your mental model and workflow. Many developers find they use different tools for different tasks, using the unique strengths of each.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-codeium-windsurf-comparison-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for WindSurf Cascade Workflow Guide](/claude-code-for-windsurf-cascade-workflow-guide/)

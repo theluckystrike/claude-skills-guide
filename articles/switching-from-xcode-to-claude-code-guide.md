@@ -155,6 +155,12 @@ Switching from Xcode to Claude Code doesn't mean abandoning Apple's development 
 
 The transition requires adjustment, but developers who make the switch typically find the productivity gains worth the initial learning curve. Start with small projects, establish good CLAUDE.md practices, and gradually expand your Claude Code usage as comfort grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=switching-from-xcode-to-claude-code-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Devin AI Software Engineer Review 2026: A Practical Look.](/devin-ai-software-engineer-review-2026/)

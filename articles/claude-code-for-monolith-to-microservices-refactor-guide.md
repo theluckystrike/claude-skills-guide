@@ -282,6 +282,12 @@ Key takeaways:
 
 The transition from monolith to microservices challenges teams across skill levels. Claude Code provides the intelligent assistance needed to navigate this complexity while maintaining system reliability throughout the transformation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-monolith-to-microservices-refactor-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Why Claude Code Is Recommended for Refactoring Tasks](/why-is-claude-code-recommended-for-refactoring-tasks/)

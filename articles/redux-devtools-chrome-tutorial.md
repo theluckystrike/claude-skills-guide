@@ -454,6 +454,12 @@ Redux DevTools is an indispensable tool for Redux developers that pays for its s
 
 With these techniques in hand, you'll debug Redux applications significantly faster and gain much deeper insight into how your state evolves over time. The combination of time-travel, action inspection, and diff views removes most of the guesswork from state-related bugs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=redux-devtools-chrome-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

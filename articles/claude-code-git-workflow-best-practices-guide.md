@@ -598,6 +598,12 @@ The most valuable thing Claude Code does for Git workflows is raise the quality 
 
 Start with these practices: write descriptive commits, use branches intentionally, and let Claude skills like tdd, pdf, and super memory enhance your workflow. The investment in good Git habits pays dividends throughout your project's lifetime.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-git-workflow-best-practices-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Merge Conflict Resolution Guide](/claude-code-merge-conflict-resolution-guide/). Conflict resolution is a core git workflow skill

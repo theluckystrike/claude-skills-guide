@@ -210,6 +210,12 @@ The RTX Tool Version Manager workflow combined with Claude Code creates a powerf
 Remember to keep your `.rtx-version` files updated, verify environments before major builds, and let Claude Code handle the complexity of version compatibility. Your future self will thank you when switching between projects becomes as simple as changing directories.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-rtx-tool-version-manager-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for asdf Version Manager Workflow Guide](/claude-code-for-asdf-version-manager-workflow-guide/)

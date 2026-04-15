@@ -599,6 +599,12 @@ Use this checklist when starting a new operator project with Claude Code and OLM
 
 Claude Code transforms OLM development from manual manifest crafting to AI-assisted creation. By following this guide, you can establish efficient workflows for building, deploying, and managing operators with confidence.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-operator-lifecycle-manager-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)

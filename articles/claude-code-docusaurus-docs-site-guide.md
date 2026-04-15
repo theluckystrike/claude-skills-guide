@@ -192,6 +192,12 @@ Claude Code transforms Docusaurus documentation workflows from manual effort to 
 Whether you're starting fresh or improving existing documentation, Claude Code provides practical assistance at every step. The workflows outlined in this guide represent proven patterns for documentation success in modern development teams.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docusaurus-docs-site-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Documentation Generation in Spanish Tutorial](/claude-code-documentation-generation-in-spanish-tutorial/)

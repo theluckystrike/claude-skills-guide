@@ -377,6 +377,12 @@ Open Props provides a flexible foundation for design token management that pairs
 
 The combination is especially powerful for rapid prototyping. You can go from a rough component description to a fully token-driven, dark-mode-aware implementation in a single prompt cycle, then refine from there. That speed advantage compounds as your token system matures and Claude Code learns your project's conventions through context.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-open-props-design-tokens-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Design System Tokens: A Frontend Developer Guide](/claude-code-design-system-tokens-frontend-developer-guide/)

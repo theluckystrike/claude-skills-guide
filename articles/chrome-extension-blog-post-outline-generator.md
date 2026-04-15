@@ -120,6 +120,12 @@ Chrome extension blog post outline generators represent a practical tool for con
 
 The key lies in treating outlines as flexible frameworks rather than rigid prescriptions. Use the generated structure as a foundation, adapt it to your specific topic and audience, and refine based on your own expertise and reader feedback. Over time, you'll develop an intuitive sense for what makes technical content about Chrome extensions genuinely useful, and your readers will notice the difference in every article you produce.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-blog-post-outline-generator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Bibliography Generator: A Practical Guide](/chrome-extension-bibliography-generator/)

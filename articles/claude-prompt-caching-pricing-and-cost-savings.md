@@ -149,6 +149,12 @@ Use the 1-hour cache TTL with batches since batch processing can take up to an h
 3. **Match TTL to usage pattern**: Use 5-minute for real-time chat, 1-hour for batch processing.
 4. **Right-size your model**: Sonnet 4.5 has a 1,024 token minimum vs Opus 4.6's 4,096 -- smaller prompts can cache on Sonnet but not Opus.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-prompt-caching-pricing-and-cost-savings)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Prompt Caching API Guide](/claude-prompt-caching-api-guide/) -- implementation guide with code examples.

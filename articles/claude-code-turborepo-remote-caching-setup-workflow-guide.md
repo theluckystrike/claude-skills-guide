@@ -171,6 +171,12 @@ Setting up Turborepo remote caching transforms monorepo build performance from a
 Start with the basic Vercel integration for the quickest wins, then explore GitHub Actions if you need more control. With remote caching properly configured, your team will wonder how they ever managed without it.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-turborepo-remote-caching-setup-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bazel Remote Cache Workflow](/claude-code-for-bazel-remote-cache-workflow/)

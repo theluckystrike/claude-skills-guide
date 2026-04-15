@@ -164,6 +164,12 @@ Getting Claude Code to explain existing code effectively comes down to providing
 
 With these techniques, Claude Code becomes an invaluable partner for understanding unfamiliar codebases quickly and thoroughly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-get-claude-code-to-explain-existing-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)

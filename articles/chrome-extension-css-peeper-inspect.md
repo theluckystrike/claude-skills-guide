@@ -160,6 +160,12 @@ Chrome extensions for CSS inspection provide valuable enhancements to your devel
 
 Whether you're reverse-engineering an existing site, creating a new component, or maintaining a large stylesheet, these inspection tools help you work more efficiently with your CSS.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-css-peeper-inspect)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

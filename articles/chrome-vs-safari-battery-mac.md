@@ -290,6 +290,12 @@ The optimal strategy depends on your workflow: use Safari for research, document
 
 The shell aliases and workflow scripts above make switching automatic rather than a conscious decision you have to make each time. Build the habit of treating Chrome as a specialized debugging tool rather than a default browser, and you will notice meaningful improvements in how long your MacBook lasts between charges.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-vs-safari-battery-mac)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Privacy Browser 2026 Ranked: A Developer and Power User Guide](/best-privacy-browser-2026-ranked/)

@@ -232,6 +232,10 @@ Use this table to estimate what you are getting into before you start a new proj
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=projects-hub)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Getting Started Hub](/getting-started-hub/). Foundations: what skills are, the .md format, and writing your first skill

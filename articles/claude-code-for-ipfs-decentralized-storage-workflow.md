@@ -253,6 +253,12 @@ Start with simple single-file uploads, then expand to directory management, pinn
 Remember to always consider your redundancy needs, implement proper error handling, and maintain systematic CID tracking. With these patterns, you're well-equipped to use decentralized storage effectively in your projects.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-ipfs-decentralized-storage-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Cloudflare R2 Storage Workflow Guide](/claude-code-for-cloudflare-r2-storage-workflow-guide/)

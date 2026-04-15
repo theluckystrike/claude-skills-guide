@@ -386,6 +386,12 @@ Setting up hot reload for Claude Code transforms your development experience fro
 
 Start with simple file watching using `chokidar` or `fswatch`, then layer on optimizations as your needs grow. Add debouncing first, then selective watching, then the custom reload coordinator once your skill dependency tree grows complex enough to warrant it. Each layer pays for itself in time saved during development sessions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-hot-reload-development-setup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Local Development Setup Guide](/claude-code-local-development-setup-guide/). Local dev setup includes hot reload configuration

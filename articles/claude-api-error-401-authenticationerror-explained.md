@@ -161,6 +161,12 @@ client = anthropic.AnthropicFoundry()
 3. **Rotate keys safely**: When generating a new key in the Console, update all deployments before revoking the old key.
 4. **Test with a simple request**: After setup, run a minimal "Hello" request to verify authentication before building complex logic.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-error-401-authenticationerror-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [How to Set ANTHROPIC_API_KEY for Claude](/how-to-set-anthropicapikey-for-claude/) -- step-by-step environment variable setup for all platforms.

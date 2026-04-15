@@ -285,6 +285,10 @@ Each worker claims jobs atomically by moving the file before processing. Multipl
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=building-production-ai-agents-with-claude-skills-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Top frontend skills with examples

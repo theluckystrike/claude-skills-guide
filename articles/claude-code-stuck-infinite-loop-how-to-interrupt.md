@@ -328,6 +328,12 @@ In most cases, Claude Code will offer to resume from the last checkpoint when yo
 
 Getting stuck in an infinite loop happens to every developer working with AI assistants. By knowing these interruption techniques, you can maintain control of your development environment and minimize disruption to your workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-stuck-infinite-loop-how-to-interrupt)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Slow Response How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/). Related: performance and responsiveness issues

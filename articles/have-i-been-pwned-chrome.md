@@ -234,6 +234,12 @@ Beyond checking whether you've been pwned, establish habits that minimize your e
 
 The HIBP API and Chrome extensions provide solid tools for staying informed about credential exposure. By integrating these checks into your development workflow and personal security practices, you reduce the risk of account compromise through credential stuffing and targeted attacks that rely on reused passwords.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=have-i-been-pwned-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Calendar Chrome Extensions for Developers and Power.](/calendar-chrome-extension-best/)

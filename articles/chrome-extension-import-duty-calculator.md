@@ -317,6 +317,12 @@ For e-commerce sellers, accurate duty estimates prevent unexpected costs and hel
 
 Start with the basic calculation logic, then progressively add features like real-time API data, trade agreement handling, and multi-currency support as your extension matures.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-import-duty-calculator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Price Per Unit Calculator: A Practical.](/chrome-extension-price-per-unit-calculator/)

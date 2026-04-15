@@ -302,6 +302,12 @@ Resolving conflicting instructions in Claude MD requires explicit strategy rathe
 
 Whether you're combining `pdf` extraction with `tdd` validation, integrating `frontend-design` with testing frameworks, or orchestrating multiple skills through `supermemory` memory management, explicit conflict resolution transforms potential chaos into reliable automation. The investment in defining clear resolution rules pays dividends every time a workflow runs consistently instead of producing unpredictable output.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-conflicting-instructions-resolution-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). Reference the full front matter schema including priority and conflict-related fields

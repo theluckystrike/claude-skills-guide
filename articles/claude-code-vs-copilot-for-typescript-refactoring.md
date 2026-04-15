@@ -192,6 +192,12 @@ GitHub Copilot remains useful for quick inline suggestions and simple refactors 
 The key insight is that TypeScript refactoring is fundamentally a multi-step, cross-file task. Claude Code is designed for exactly this kind of complex, iterative work. Copilot's chat and autocomplete model, while useful for other tasks, is not architected to handle the systematic transformations that proper TypeScript refactoring requires.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-copilot-for-typescript-refactoring)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code for Large File Refactoring](/best-way-to-use-claude-code-for-large-file-refactoring/)

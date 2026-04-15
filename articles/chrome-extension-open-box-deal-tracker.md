@@ -279,6 +279,12 @@ Prepare store listing assets including screenshots showing the popup interface a
 
 Building your own open box deal tracker gives you complete control over which retailers to monitor, how often to check, and exactly when to receive alerts. The investment in building this tool pays dividends through years of automated savings on electronics purchases.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-open-box-deal-tracker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Annotate Web Pages: Build Your Own.](/chrome-extension-annotate-web-pages/)

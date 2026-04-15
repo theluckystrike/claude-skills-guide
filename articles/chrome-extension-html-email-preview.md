@@ -414,6 +414,10 @@ Start with the basic preview functionality, then add features like viewport swit
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-html-email-preview)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Email Writer Chrome Extension: A Developer's Guide](/ai-email-writer-chrome-extension/)

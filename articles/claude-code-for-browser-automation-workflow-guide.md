@@ -221,6 +221,12 @@ Browser automation with Claude Code combines natural language processing with po
 
 Start with simple workflows, validate their reliability, then gradually add complexity. The key is treating browser automation as a skill-building practice: each automation task teaches you something about both the target application and the automation framework itself.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-browser-automation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Drone CI Workflow Automation](/claude-code-drone-ci-workflow-automation/)

@@ -129,6 +129,12 @@ Claude Code's skill system provides powerful capabilities for managing multiling
 
 Start by structuring your translation files properly, then layer in automation through Claude Code skills. Your translators and end users will thank you for the improved consistency and reduced errors. Explore more automation patterns at the [workflows hub](/workflows-hub/).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-multilingual-codebase-management-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Localization i18n Workflow Automation](/claude-skills-for-localization-i18n-workflow-automation/). dedicated i18n automation with Claude skills

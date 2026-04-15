@@ -205,6 +205,10 @@ EOF
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skill-not-triggering-automatically-troubleshoot)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Reference for the exact YAML front matter fields that control how skills are loaded and matched

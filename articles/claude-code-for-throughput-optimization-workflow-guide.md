@@ -248,6 +248,12 @@ Throughput optimization with Claude Code requires a systematic approach combinin
 
 Start by profiling your current workflows to identify the highest-impact optimization opportunities, then apply the techniques that best address your specific bottlenecks. With Claude Code's assistance, building high-throughput systems becomes a more manageable and efficient process.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-throughput-optimization-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code ActiveRecord Query Optimization Workflow Guide](/claude-code-activerecord-query-optimization-workflow-guide/)

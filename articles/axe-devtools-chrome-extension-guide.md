@@ -176,6 +176,12 @@ The axe DevTools Chrome extension transforms accessibility testing from a manual
 
 Start by installing the extension and running scans on your current projects. Address the critical and serious violations first, then gradually expand your testing coverage. Over time, accessibility becomes a natural part of your development process rather than an afterthought.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=axe-devtools-chrome-extension-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Angular DevTools Chrome Extension Setup: A Complete Guide](/angular-devtools-chrome-extension-setup/)

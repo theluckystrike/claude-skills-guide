@@ -186,6 +186,10 @@ Claude Code's power grows as you learn to structure tasks well and customize it 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-beginners-complete-getting-started-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The natural next step: an in-depth look at the most impactful skills to install once you have Claude Code running

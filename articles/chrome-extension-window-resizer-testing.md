@@ -217,6 +217,12 @@ Chrome extension window resizer testing requires understanding the distinct cont
 
 The key is combining automated unit tests that verify logic with manual testing that confirms real-world usability. This dual approach ensures your extension handles the diverse ways users interact with window dimensions in their daily browsing.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-window-resizer-testing)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Window Resizer Alternative Chrome Extension 2026](/window-resizer-alternative-chrome-extension-2026/)

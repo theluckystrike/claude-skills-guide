@@ -102,6 +102,12 @@ Refined GitHub delivers practical improvements for developers who use GitHub dai
 
 For developers toggling between dozens of repositories, managing multiple issues, or reviewing pull requests regularly, these enhancements compound into meaningful time savings. Start with default settings and disable features that don't match your workflow, the modular approach ensures you get only what you need.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=refined-github-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

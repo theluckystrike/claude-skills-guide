@@ -254,6 +254,12 @@ Claude Code is a valuable partner in building solid error boundary workflows in 
 The key is to treat error boundaries as a first-class concern in your application architecture, using Claude Code to maintain consistency and reduce the manual overhead of error handling implementation. The patterns above. hierarchical containment, context-aware messages, retry logic, and observability integration. are the difference between error handling that placates users and error handling that actually helps them complete their goal.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-remix-error-boundary-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Claude Error Handling Patterns Workflow Guide](/claude-code-for-claude-error-handling-patterns-workflow-guid/)

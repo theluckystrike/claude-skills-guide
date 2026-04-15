@@ -271,6 +271,12 @@ The key is to iterate: begin simple, test with real workflows, and expand capabi
 
 Remember, the goal isn't to replicate a visual hover UI, it's to provide the same rich, contextual information through a conversational interface that uses Claude Code's strengths in understanding and explaining code.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-lsp-hover-provider-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cold Fusion Modernization Workflow Guide](/claude-code-cold-fusion-modernization-workflow-guide/)

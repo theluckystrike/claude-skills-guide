@@ -203,6 +203,12 @@ Claude Code streamlines health endpoint implementation by generating boilerplate
 A well-designed health endpoint system improves reliability by enabling Kubernetes to restart failing containers, routing traffic away from unhealthy instances, and providing visibility into system status. With Claude Code handling the implementation details, you can focus on defining what healthy means for your specific application.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-health-endpoint-pattern-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Community Health Metrics Documentation Workflow](/claude-code-community-health-metrics-documentation-workflow/)

@@ -482,6 +482,12 @@ The supervisor-worker pattern and fan-out, fan-in provide the most flexibility f
 
 The most important architectural decision is the decomposition step: identifying which tasks are truly independent before writing a single line of orchestration code. A well-analyzed task graph almost always reveals that many perceived dependencies are actually avoidable, opening up parallelism that was not obvious at first glance. Invest time in the analysis before the implementation, and the implementation will be dramatically simpler.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=parallel-ai-agent-execution-patterns-and-trade-offs)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Agent Swarm Coordination Strategies](/claude-code-agent-swarm-coordination-strategies/)

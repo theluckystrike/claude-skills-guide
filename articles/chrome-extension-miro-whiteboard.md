@@ -567,6 +567,12 @@ The Miro Chrome extension transforms how developers and power users interact wit
 
 Start by installing the extension, pinning it to your toolbar, and exploring your recent boards. Then layer in the Web SDK for programmatic board control, the REST API for automation, and enterprise policy management for secure team-wide deployment. The productivity gains become apparent within the first few sessions, and the automation possibilities compound as your team builds tooling on top of the Miro platform.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-miro-whiteboard)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Session Buddy Alternative Chrome Extension 2026: Top Picks for Power Users](/session-buddy-alternative-chrome-extension-2026/)

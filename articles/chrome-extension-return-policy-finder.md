@@ -350,6 +350,12 @@ Extracted text containing irrelevant navigation content: Narrow the extraction t
 
 For developers integrating this into larger shopping tools, consider adding features like policy comparison, return window tracking, and alert systems for policy changes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-return-policy-finder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Tool Categories and Use Cases Guide](/claude-code-mcp-tool-categories-use-cases-guide/)

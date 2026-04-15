@@ -236,6 +236,10 @@ The deeper productivity gain is qualitative: senior engineers who delegate mecha
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-senior-engineer-productivity)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Focus Timer Productivity: A Developer Guide](/chrome-extension-focus-timer-productivity/)

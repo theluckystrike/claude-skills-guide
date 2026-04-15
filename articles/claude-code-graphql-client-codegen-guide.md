@@ -182,6 +182,12 @@ Claude Code skills transform GraphQL client codegen from a manual, error-prone p
 
 The key lies in proper skill configuration and consistent project organization. Once established, this workflow scales with your project and reduces the friction that often makes developers hesitate with GraphQL adoption.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-graphql-client-codegen-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for GraphQL Code Generation Workflow](/claude-code-for-graphql-code-generation-workflow/). server-side schema and resolver generation from TypeScript models

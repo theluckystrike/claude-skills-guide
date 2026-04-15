@@ -359,6 +359,12 @@ Start integrating Claude Code into your Spark workflow today, and you'll see imm
 *This guide is part of the Claude Skills Guide series, providing practical developer resources for modern data engineering workflows.*
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-apache-spark-dataframe-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Spark ML Workflow](/claude-code-for-apache-spark-ml-workflow/)

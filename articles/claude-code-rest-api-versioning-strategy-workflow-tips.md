@@ -290,6 +290,10 @@ By following these practices, you'll build APIs that evolve gracefully while mai
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-rest-api-versioning-strategy-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Versioning Strategies Guide](/claude-code-api-versioning-strategies-guide/). consuming external versioned APIs from within Claude Skills (Python, version negotiation, fallback logic)

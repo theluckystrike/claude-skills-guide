@@ -408,6 +408,12 @@ Keyboard navigation testing protects accessibility while improving usability for
 
 Start with the manual audit checklist to identify the most critical gaps, then layer in Playwright automation for tab order, focus management, and modal behavior. Add axe-core to the same CI job to catch structural issues that behavioral tests miss. The combination of behavioral keyboard tests and automated WCAG rule checks gives you meaningful confidence that your application is accessible. and defensible evidence if compliance is ever questioned.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-keyboard-navigation-testing-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/). WCAG auditing covers keyboard navigation requirements

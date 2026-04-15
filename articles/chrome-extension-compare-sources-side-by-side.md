@@ -423,6 +423,12 @@ For simple text comparisons, the basic implementation works immediately. For cod
 
 Start with the manifest and content script above, verify the diff output in the browser console, and extend from there based on what your actual workflow demands.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-compare-sources-side-by-side)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [EditThisCookie Alternative: Best Chrome Extensions for.](/editthiscookie-alternative-chrome-extension-2026/)

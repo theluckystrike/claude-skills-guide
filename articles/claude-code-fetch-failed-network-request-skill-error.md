@@ -162,6 +162,12 @@ When building skills that make external requests, always include comprehensive e
 
 Network request failures in Claude Code skills stem from various causes, but systematic diagnosis and proper error handling resolve most issues quickly. Implement retry logic, handle authentication correctly, and configure timeouts appropriately for reliable skill operation. With these practices in place, your Claude Code workflow continues smoothly even when dealing with unreliable external services.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-fetch-failed-network-request-skill-error)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

@@ -340,6 +340,12 @@ Implementing a PWA install prompt workflow doesn't have to be complicated. With 
 The key is to balance visibility with user experience, show the prompt to engaged users, but never force it. With these patterns and practices, you're well on your way to building a successful PWA install workflow.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-pwa-install-prompt-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for MCP Prompt Server Workflow](/claude-code-for-mcp-prompt-server-workflow/)

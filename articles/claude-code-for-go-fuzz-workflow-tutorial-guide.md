@@ -206,6 +206,12 @@ Combining Claude Code with Go's native fuzz testing creates a powerful workflow 
 Start by identifying high-risk functions in your codebase, generate initial fuzz targets with Claude Code's help, and integrate fuzz testing into your development workflow. The time invested in fuzz testing pays dividends through fewer production bugs and improved security posture.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-go-fuzz-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Go pprof Profiling Workflow Tutorial](/claude-code-for-go-pprof-profiling-workflow-tutorial/)

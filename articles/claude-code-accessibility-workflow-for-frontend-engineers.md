@@ -490,6 +490,12 @@ Accessibility review checklist for [ComponentName]:
 
 Claude Code becomes your accessibility partner, catching issues early and teaching your team better practices over time. The investment in accessibility upfront saves massive remediation costs later, and more importantly, ensures your software works for everyone.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-accessibility-workflow-for-frontend-engineers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)

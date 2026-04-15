@@ -185,6 +185,12 @@ Adopting TypeScript strict mode is a journey, not a destination. Start new proje
 
 Combine strict mode with Claude Code's AI capabilities for a powerful development experience. Claude understands type constraints and can suggest fixes, generate properly typed code, and help you navigate complex type systems. The combination makes TypeScript's type safety accessible without sacrificing development speed.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-typescript-strict-mode-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/). TypeScript project setup guide

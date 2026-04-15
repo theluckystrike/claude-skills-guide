@@ -367,6 +367,12 @@ Automating ARIA label implementation in React components through Claude Code tra
 The result is a more inclusive user experience with significantly less manual effort. Start by using the key skills in Claude Code, defining your accessibility conventions in CLAUDE.md, and gradually automating ARIA label implementation across your React codebase.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-aria-label-automation-for-react-components)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude MD for Accessibility Requirements: A Practical.](/claude-md-for-accessibility-requirements-a11y/)

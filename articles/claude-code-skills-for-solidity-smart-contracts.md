@@ -192,6 +192,12 @@ Keep your skills maintainable by following these principles:
 - Test generated code: Always verify the skill output compiles and passes tests
 - Iterate based on findings: Update skills when new vulnerability patterns emerge
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-solidity-smart-contracts)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Solidity Smart Contract Development](/claude-skills-for-solidity-smart-contract-development/). How to *use* existing skills like `/tdd`, `/pdf`, and `/supermemory` in a Solidity project, rather than building new ones

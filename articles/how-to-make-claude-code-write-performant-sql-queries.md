@@ -209,6 +209,12 @@ Making Claude write performant SQL comes down to clear communication. State your
 
 With these patterns, you can confidently delegate SQL writing to Claude while maintaining the performance standards your applications require.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-write-performant-sql-queries)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Profiler Integration Guide](/claude-code-profiler-integration-guide/). Profile SQL queries to identify bottlenecks

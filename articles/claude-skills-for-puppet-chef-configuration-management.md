@@ -277,6 +277,12 @@ Claude skills accelerate Puppet and Chef development by generating manifests, re
 
 Start by describing your infrastructure needs clearly, provide context about your environment, and iterate on the results. The combination of your domain knowledge and Claude's code generation capabilities produces reliable automation that scales with your infrastructure.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-puppet-chef-configuration-management)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Skill recommendations for infrastructure engineers working across cloud environments

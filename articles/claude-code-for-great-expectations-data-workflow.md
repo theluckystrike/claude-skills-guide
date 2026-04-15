@@ -412,6 +412,12 @@ Integrating Claude Code with Great Expectations transforms data validation from 
 
 The combination of Claude's coding assistance and Great Expectations' declarative validation gives you the best of both worlds: rapid development and production-grade data quality. As your pipeline grows, Claude remains useful for explaining cryptic validation failures, suggesting expectation tuning, and keeping your validation code consistent across teams and data sources.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-great-expectations-data-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Data Cleaning and Preprocessing Workflow](/claude-code-data-cleaning-and-preprocessing-workflow/)

@@ -216,6 +216,12 @@ The artifacts-builder skill proves useful when you need to prototype SOLID-compl
 
 Implementing SOLID principles with Claude Code requires explicit guidance, consistent patterns, and proactive refactoring. By prompting for abstractions first, enforcing responsibility boundaries, and maintaining clear contracts, you can use AI assistance while building maintainable software. The key lies in treating Claude Code as a pair programmer that needs clear architectural direction rather than a magic solution that understands implicit requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-solid-principles-implementation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/). DRY and SOLID implementation guide

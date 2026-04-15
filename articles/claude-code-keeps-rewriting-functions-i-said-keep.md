@@ -284,6 +284,12 @@ Preventing unwanted function rewrites comes down to clear communication and stra
 
 The key insight is that Claude Code wants to help by improving your code. Channel that energy by being extremely clear about what should improve and what should stay exactly as it is. With the right prompts and configuration, you can have both, helpful improvements where you want them and perfect preservation where you need it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-keeps-rewriting-functions-i-said-keep)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

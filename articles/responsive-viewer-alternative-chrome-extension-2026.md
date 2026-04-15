@@ -477,6 +477,12 @@ If you are currently using Responsive Viewer and want to transition to native to
 
 The traditional extension model has largely been superseded by these built-in and programmatic options. Browser vendors have recognized the importance of responsive design testing and invested in native solutions that don't require third-party extensions. This shift means fewer extension dependencies, better performance, and access to the latest browser features, including container queries and layer-based CSS, as they become available.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=responsive-viewer-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Web Developer Toolbar Alternative Chrome Extension in 2026](/web-developer-toolbar-alternative-chrome-extension-2026/)

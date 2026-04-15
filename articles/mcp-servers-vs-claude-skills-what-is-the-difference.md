@@ -193,6 +193,10 @@ The Claude skills ecosystem grows in value as you add more MCP servers, because 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mcp-servers-vs-claude-skills-what-is-the-difference)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). A practical guide to the skills worth combining with MCP servers in a production Claude Code workflow

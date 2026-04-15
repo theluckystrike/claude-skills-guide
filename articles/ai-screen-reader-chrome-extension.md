@@ -329,6 +329,12 @@ For accessibility testing, use Chrome DevTools' accessibility pane alongside you
 
 AI screen readers transform how users interact with web content. By combining ML models with Chrome extension APIs, you build tools that understand context rather than just parsing markup.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-screen-reader-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)

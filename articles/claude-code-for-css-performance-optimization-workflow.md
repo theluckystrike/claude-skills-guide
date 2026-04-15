@@ -232,6 +232,12 @@ CSS performance optimization doesn't require sacrificing developer productivity.
 
 Start with a comprehensive audit using Claude, prioritize high-impact changes, and establish ongoing monitoring. This systematic approach ensures your CSS remains performant as your project evolves, delivering faster experiences to users while maintaining development velocity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-css-performance-optimization-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)

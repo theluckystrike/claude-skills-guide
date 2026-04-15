@@ -102,6 +102,12 @@ For developers integrating Claude Code into automated pipelines, consider mainta
 
 The initialization delay exists by design, it enables a flexible, extensible system where you install only the capabilities you need. Understanding this trade-off helps you build workflows that work with the system rather than against it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-code-skill-take-so-long-to-initialize)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Response Latency Optimization with Skills](/claude-code-response-latency-optimization-with-skills/). Apply proven latency optimization patterns after understanding initialization delays from this guide

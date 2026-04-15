@@ -134,6 +134,12 @@ Claude should invoke the MCP tool and return results.
 - **Use absolute paths:** Avoid relying on `PATH` resolution for MCP server commands.
 - **Pin MCP package versions:** Use `npx -y @modelcontextprotocol/server-filesystem@1.0.0` instead of latest to avoid breaking changes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mcp-server-setup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix: Anthropic SDK MCP Empty Arguments Bug](/anthropic-sdk-mcp-empty-arguments-bug/) — Debugging tool discovery

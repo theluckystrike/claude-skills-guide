@@ -245,6 +245,12 @@ Claude Code won't solve the systemic issues around open source sustainability, b
 Start small: create one skill for your most repetitive task, set one bounded session, automate one category of responses. Burnout prevention is a practice, not a one-time fix, and Claude Code can be a valuable partner in building that practice.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-oss-maintainer-burnout-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OSS Maintainer Workflow Tutorial Guide](/claude-code-for-oss-maintainer-workflow-tutorial-guide/)

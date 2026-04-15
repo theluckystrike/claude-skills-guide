@@ -241,6 +241,12 @@ The key is treating migration as a planned operation with proper backups, testin
 Remember: the goal is not just to migrate state, but to maintain infrastructure reliability throughout the process. Take your time, test thoroughly, and use Claude Code's assistance at every step.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-terraform-backend-migration-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for CDKTF Terraform CDK Workflow](/claude-code-for-cdktf-terraform-cdk-workflow/)

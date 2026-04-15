@@ -199,6 +199,10 @@ If you struggle to answer these questions, your task likely needs refinement bef
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-scope-tasks-for-claude-code-success)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Understanding how to write effective skill definitions that guide Claude's behavior

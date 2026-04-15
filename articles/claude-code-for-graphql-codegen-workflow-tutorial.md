@@ -732,6 +732,12 @@ Start implementing this workflow in your project today, and you'll wonder how yo
 Remember to regularly update your Claude Code agents as your project evolves, and keep your codegen configuration in version control to ensure consistency across your team.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-graphql-codegen-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for GraphQL Code Generation Workflow](/claude-code-for-graphql-code-generation-workflow/). server-side schema and resolver generation from TypeScript models

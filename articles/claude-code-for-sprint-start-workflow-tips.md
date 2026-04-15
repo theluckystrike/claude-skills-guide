@@ -163,6 +163,12 @@ The key is consistency, establish patterns once using skill-creator, apply them 
 
 Start with one workflow element this sprint, perhaps test scaffolding or standup preparation, and expand from there. The cumulative effect of these small improvements compounds into substantial velocity gains over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-sprint-start-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for End-of-Day Commit Workflow](/claude-code-for-end-of-day-commit-workflow/). Close the loop on each sprint day with an automated, consistent commit workflow

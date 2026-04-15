@@ -256,6 +256,12 @@ response = client.messages.create(
 3. **Never modify thinking blocks**: Return them exactly as received in multi-turn conversations.
 4. **Use 1-hour cache**: For workloads with extended thinking, the 1-hour cache TTL avoids frequent cache invalidation from thinking parameter changes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-extended-thinking-api-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Extended Thinking Not Working](/claude-extended-thinking-not-working/) -- troubleshoot thinking parameter errors.

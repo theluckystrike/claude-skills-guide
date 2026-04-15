@@ -477,6 +477,12 @@ Claude Code transforms multi-stage Dockerfile generation from a manual, error-pr
 
 The combination of AI assistance and multi-stage builds delivers smaller images, faster deployments, and improved security, all while reducing the cognitive load on developers. As containerized applications grow more complex, this approach becomes increasingly valuable for teams that want efficiency without sacrificing quality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-multi-stage-builds-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/)

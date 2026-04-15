@@ -152,6 +152,12 @@ Finally, use Claude to generate monitoring and observability code that exports N
 
 Integrating Claude Code into your Nacos service registry workflow transforms what was once manual configuration into an automated, intelligent process. From generating service registration configurations to implementing advanced discovery patterns, Claude Code serves as an invaluable assistant for developers building Nacos-powered microservices. By providing clear context about your Nacos setup and specific requirements, you can use Claude Code to accelerate development while maintaining best practices for service registry operations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nacos-service-registry-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Monolith to Microservices Refactor Guide](/claude-code-for-monolith-to-microservices-refactor-guide/)

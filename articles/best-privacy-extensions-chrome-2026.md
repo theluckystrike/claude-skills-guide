@@ -189,6 +189,12 @@ Protecting your privacy in 2026 requires a multi-layered approach. The extension
 
 Remember that no extension can make you completely invisible online, but using these tools together significantly reduces your digital footprint and makes it much harder for trackers to build profiles of your behavior.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-privacy-extensions-chrome-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Fingerprint Test Extension: A Developer's Guide.](/chrome-fingerprint-test-extension/)

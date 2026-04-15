@@ -330,6 +330,12 @@ Integrating Claude Code with Docker Desktop creates a flexible, reproducible dev
 
 For deeper integration, explore combining Docker workflows with specialized skills like tdd for test-driven development, pdf for documentation generation, and supermemory for persistent context across sessions. Each skill benefits from the consistency that containerized environments provide, and the combination produces a development workflow that is both faster and more reliable than either tool achieves alone.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-desktop-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)

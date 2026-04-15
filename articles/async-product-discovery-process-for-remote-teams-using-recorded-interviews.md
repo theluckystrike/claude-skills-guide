@@ -133,6 +133,10 @@ Start small with one discovery cycle using this approach. Measure how team engag
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=async-product-discovery-process-for-remote-teams-using-recorded-interviews)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Run Async Team Retrospectives Using Shared Documents and Recorded Summaries](/async-team-retrospective-using-shared-documents-and-recorded-summaries/)

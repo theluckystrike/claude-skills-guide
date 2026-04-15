@@ -313,6 +313,12 @@ Privacy concerns affect user adoption. Clearly communicate what data your extens
 
 Building a solid auto meeting summary extension takes iteration across different platforms. Start with one meeting provider, perfect the transcript capture for that specific platform, then expand to others. The architecture outlined here provides a foundation you can adapt based on your target users' preferred meeting tools.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-auto-meeting-summary)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Screen Recorder for Meetings: A.](/chrome-extension-screen-recorder-meetings/)

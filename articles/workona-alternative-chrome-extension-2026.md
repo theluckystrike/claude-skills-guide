@@ -373,6 +373,12 @@ The migration itself typically takes 30-60 minutes for users with 10-20 workspac
 
 The ecosystem has matured significantly. Whatever your tab management problem, memory usage, organization, cross-device sync, or workspace isolation, there is a solution that fits without requiring a team subscription. The best choice depends on how you actually work, not on feature checklists.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=workona-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Session Buddy Alternative Chrome Extension 2026: Top Picks for Power Users](/session-buddy-alternative-chrome-extension-2026/)

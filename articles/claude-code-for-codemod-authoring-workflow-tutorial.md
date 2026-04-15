@@ -125,6 +125,12 @@ Finally, consider contributing to the codemod community. Many codemods address c
 
 By combining Claude Code's reasoning capabilities with systematic codemod development practices, you can automate complex refactoring tasks that would otherwise require extensive manual effort. The initial investment in setting up your workflow pays dividends whenever you need to apply consistent changes across large codebases.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-codemod-authoring-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)

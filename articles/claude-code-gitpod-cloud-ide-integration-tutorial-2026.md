@@ -264,6 +264,10 @@ Configure your repository with the appropriate `.gitpod.yml`, sync your skills d
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-gitpod-cloud-ide-integration-tutorial-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-code-skills-to-install-first-2026/). Essential skills to add to your setup

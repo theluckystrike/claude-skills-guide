@@ -228,6 +228,12 @@ Connection pool optimization is an ongoing process, not a one-time fix. Claude C
 
 Remember to test any changes in a staging environment before deploying to production, and always maintain visibility into your connection pool metrics to catch issues before they impact users.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-connection-pool-optimization-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code ActiveRecord Query Optimization Workflow Guide](/claude-code-activerecord-query-optimization-workflow-guide/)

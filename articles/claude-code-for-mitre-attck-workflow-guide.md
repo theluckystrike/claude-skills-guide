@@ -445,6 +445,12 @@ Start small, build one skill for your most common use case, and expand as your d
 Remember: the goal isn't perfect coverage of all 190+ techniques, but rather meaningful detection of the techniques most relevant to your organization's threat landscape. A well-tuned detection for T1059.001 (PowerShell) that fires reliably with low false positives is worth more than ten noisy rules that analysts learn to ignore.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-mitre-attck-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

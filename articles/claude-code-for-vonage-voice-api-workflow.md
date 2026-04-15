@@ -272,6 +272,12 @@ Claude Code transforms Vonage Voice API development from manual JSON crafting to
 
 The key is providing clear context about your Vonage setup and being specific about the call flows you need. With that foundation, Claude becomes an invaluable partner in building solid, scalable voice applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-vonage-voice-api-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bruno API Client Workflow Tutorial](/claude-code-for-bruno-api-client-workflow-tutorial/)

@@ -479,6 +479,12 @@ Start with simple scans using language-native tools like `license-checker` or `p
 Claude Code is well-equipped to help you every step of the way, from initial setup and tool selection to debugging CI failures and drafting exception justifications. The combination of automated scanning and Claude's ability to reason about license implications makes it practical for teams of any size to maintain genuine compliance, not just checkbox compliance.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-license-scanning-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

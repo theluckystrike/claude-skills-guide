@@ -165,6 +165,10 @@ The combination of Claude Code's natural language interface with structured auto
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-penetration-tester-recon-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Resources
 
 - Claude Code Skills Tutorial

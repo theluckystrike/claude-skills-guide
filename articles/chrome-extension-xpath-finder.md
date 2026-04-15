@@ -481,6 +481,12 @@ Start with Chrome's built-in `$x()` console function for quick validation. Use S
 
 Practice writing XPath expressions manually, test them using browser tools, and apply the reliability principles outlined here. Your automation scripts and tests will be more maintainable as a result, and you will spend less time debugging flaky selectors and more time building features.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-xpath-finder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

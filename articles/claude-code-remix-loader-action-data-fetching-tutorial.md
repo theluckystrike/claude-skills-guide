@@ -277,6 +277,12 @@ Remix loaders and actions provide a clean, server-first approach to data fetchin
 
 Claude Code enhances this workflow by assisting with code generation, type definitions, and best practices. Combined with skills like frontend-design for UI development, tdd for testing, and supermemory for context management, you have a powerful toolkit for building production-ready Remix applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-remix-loader-action-data-fetching-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Full Stack Web App with Claude Skills Step-by-Step](/full-stack-web-app-with-claude-skills-step-by-step/). See how Remix-style loaders and actions fit into a complete full-stack application built with Claude skills.

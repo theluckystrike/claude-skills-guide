@@ -259,6 +259,12 @@ Start with simple automation for basic surveys, then gradually add complexity as
 With proper setup and configuration, Claude Code can reduce survey analysis time from hours to minutes while maintaining consistency and accuracy across your research projects.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-survey-data-analysis-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Performance Data Analysis Workflow](/claude-code-for-performance-data-analysis-workflow/)

@@ -178,6 +178,12 @@ Start your migration today by having Claude Code analyze your codebase and provi
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-jquery-to-react-migration-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Perl Script to Python Migration Workflow](/claude-code-perl-script-to-python-migration-workflow/)

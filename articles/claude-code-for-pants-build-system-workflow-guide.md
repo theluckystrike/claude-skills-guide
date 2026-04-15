@@ -195,6 +195,12 @@ Integrating Claude Code with Pants creates a powerful development environment wh
 
 Remember that Pants' declarative nature makes it particularly well-suited for AI-assisted development, the build configuration is explicit and structured, allowing Claude to generate accurate and efficient configurations. As you become more comfortable with this combination, you'll find increasingly sophisticated ways to automate and optimize your build processes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-pants-build-system-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bazel Build System Workflow Guide](/claude-code-for-bazel-build-system-workflow-guide/)

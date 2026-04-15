@@ -221,6 +221,12 @@ Build a documentation habit by generating docs after each feature merge. Use ver
 
 Accurate, well-maintained documentation accelerates onboarding, reduces support questions, and serves as a reliable reference for your entire team.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-jsdoc-typescript-documentation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best Claude Skill for Generating Documentation?](/what-is-the-best-claude-skill-for-generating-documentation/)

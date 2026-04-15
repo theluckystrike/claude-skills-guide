@@ -145,6 +145,12 @@ Combining Claude Code with Carvel imgpkg creates a powerful workflow for managin
 As you become more comfortable with these tools, explore advanced topics like bundle dependencies, image relocation for air-gapped environments, and integration with policy controllers for enhanced security. The combination of Claude Code and imgpkg provides a solid foundation for reliable, reproducible Kubernetes deployments at any scale.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-carvel-imgpkg-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

@@ -218,6 +218,12 @@ jobs:
 
 Claude Code dramatically reduces the effort required for cross-browser testing. By automating test generation, identifying compatibility issues, and helping you build solid testing workflows, it lets frontend developers focus on building features rather than debugging browser-specific quirks. Start integrating Claude Code into your cross-browser testing strategy today, and ship more reliable web applications across all browsers.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-frontend-developer-cross-browser-testing-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Tools for Frontend Development in 2026](/best-ai-tools-for-frontend-development-2026/)

@@ -327,6 +327,12 @@ The most impactful workflows are usually the ones that solve a problem you've be
 
 Remember: the most powerful activation workflows are those that fade into the background. quietly ensuring your project maintains high standards without requiring constant manual intervention.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-unleash-strategy-custom-activation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cypress Custom Commands Workflow Best Practices](/claude-code-cypress-custom-commands-workflow-best-practices/)

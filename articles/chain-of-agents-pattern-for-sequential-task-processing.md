@@ -295,6 +295,12 @@ The key is treating each agent as a focused specialist, passing clear outputs be
 This pattern unlocks automation scenarios that go far beyond what any single AI assistant could achieve alone, and it scales cleanly as your workflows grow more complex.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chain-of-agents-pattern-for-sequential-task-processing)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Task Prioritizer Chrome Extension: A Practical Guide for Developers](/ai-task-prioritizer-chrome-extension/)

@@ -228,6 +228,12 @@ The investment in learning Claude Code pays dividends throughout your career. St
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-computer-science-bootcamp-students)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Students: Homework and Projects](/claude-code-for-students-homework-and-projects/)

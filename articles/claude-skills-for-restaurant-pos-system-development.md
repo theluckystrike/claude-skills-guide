@@ -355,6 +355,10 @@ Start with these skills when building restaurant POS solutions. They handle the 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-restaurant-pos-system-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-xlsx-skill-spreadsheet-automation-tutorial/). full reference for the xlsx skill

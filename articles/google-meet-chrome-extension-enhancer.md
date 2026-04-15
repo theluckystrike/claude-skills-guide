@@ -583,6 +583,12 @@ The key architectural decisions are: use MutationObserver with debouncing rather
 
 The techniques covered here, MutationObservers, dynamic element detection, toolbar injection, settings panels with persistent storage, and tile manipulation, provide a foundation for creating valuable enhancements that improve the meeting experience for users. Start with a single well-implemented feature, validate that it handles edge cases gracefully, then expand from there.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=google-meet-chrome-extension-enhancer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Google Drive Sidebar: Build Your Own](/chrome-extension-google-drive-sidebar/)

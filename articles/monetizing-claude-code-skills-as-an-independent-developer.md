@@ -104,6 +104,12 @@ The most important step is beginning. Set up your portfolio, define your service
 
 Monetizing Claude Code skills isn't about finding shortcuts, it's about being genuinely better at delivering results. That's something clients will always pay for.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=monetizing-claude-code-skills-as-an-independent-developer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)

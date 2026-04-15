@@ -343,6 +343,12 @@ Configuring Claude Code for internal APIs is an investment that pays dividends i
 
 Remember: Claude Code is only as effective as the context you provide. Invest in your API configuration, and Claude will become an expert in your API ecosystem.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-configure-claude-code-to-understand-your-internal-apis)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code Offline Without Internet Access](/best-way-to-use-claude-code-offline-without-internet-access/)

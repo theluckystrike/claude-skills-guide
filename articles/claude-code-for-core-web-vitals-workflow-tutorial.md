@@ -628,6 +628,12 @@ Claude Code handles the heavy lifting at every step, generating audit scripts, i
 
 Remember: good Core Web Vitals scores not only improve user experience but also contribute to better search rankings. Make them a priority in your development workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-core-web-vitals-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for gRPC Web Workflow Tutorial](/claude-code-for-grpc-web-workflow-tutorial/)

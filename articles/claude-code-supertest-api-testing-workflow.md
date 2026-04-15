@@ -480,6 +480,12 @@ Combining Claude Code with Supertest creates a powerful API testing workflow. Us
 
 The most effective pattern is iterative: start by asking Claude Code to generate a test scaffold from your route files, run the suite to find gaps, then ask Claude Code to fill them in. Over time this loop produces a comprehensive suite that documents your API's behavior as clearly as any specification document.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-supertest-api-testing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)

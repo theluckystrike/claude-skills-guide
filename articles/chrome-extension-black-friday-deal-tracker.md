@@ -290,6 +290,12 @@ Building a Chrome extension for Black Friday deal tracking combines practical we
 
 The skills developed through this project transfer directly to other extension types: inventory monitors, availability checkers, and price comparison tools. For developers looking to understand Chrome extension architecture deeply, a deal tracker is an excellent starting point.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-black-friday-deal-tracker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Open Box Deal Tracker: Build Your Own.](/chrome-extension-open-box-deal-tracker/)

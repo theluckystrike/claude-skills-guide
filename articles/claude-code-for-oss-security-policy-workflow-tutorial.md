@@ -209,6 +209,12 @@ Claude Code transforms OSS security management from a manual, error-prone proces
 
 Start by implementing basic dependency audits, then progressively add more sophisticated policies as your team's security practices mature. Claude Code's contextual understanding of your project makes it an invaluable partner in maintaining solid open source security.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-oss-security-policy-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

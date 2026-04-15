@@ -261,6 +261,12 @@ Version your extension semantically and document changes in a `CHANGELOG.md` fil
 
 Building a custom Chrome extension site audit tool gives you precise control over the checks that matter for your projects. Start with simple DOM audits and gradually add performance monitoring, API validation, and accessibility checks. The result is a personalized toolkit that accelerates your development workflow and helps maintain quality standards across your work.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-site-audit-tool)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)

@@ -241,6 +241,12 @@ Claude Code transforms technical writing from a manual, time-consuming process i
 The key is treating your documentation workflow as a system worth optimizing, because well-maintained documentation is as valuable to your project as the code itself.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-technical-writing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Developer Blog Post Writing Workflow](/claude-code-for-developer-blog-post-writing-workflow/)

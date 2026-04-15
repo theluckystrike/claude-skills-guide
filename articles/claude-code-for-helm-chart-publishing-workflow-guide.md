@@ -615,6 +615,12 @@ Start by automating your validation checks, then gradually build toward fully au
 
 Remember: always validate charts before publishing, maintain consistent versioning, document breaking changes explicitly, and automate your publishing process so every release follows the same verified steps.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-helm-chart-publishing-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Artifact Publishing Workflow Tutorial](/claude-code-for-artifact-publishing-workflow-tutorial/)

@@ -270,6 +270,12 @@ The combination of Claude Code and VHS provides a powerful workflow for creating
 Remember to experiment with different themes, fonts, and recording configurations to find the perfect setup for your specific needs. With practice, you'll be producing polished terminal recordings that enhance your documentation and captivate your audience.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-vhs-terminal-recorder-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Huh Forms Terminal Workflow Guide](/claude-code-for-huh-forms-terminal-workflow-guide/)

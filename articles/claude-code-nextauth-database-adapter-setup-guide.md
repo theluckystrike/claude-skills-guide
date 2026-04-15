@@ -295,6 +295,12 @@ Setting up NextAuth with database adapters doesn't have to be complex. Claude Co
 Start with the adapter that matches your existing stack, and use Claude Code's code generation capabilities to accelerate your authentication setup. Remember to always handle sensitive user data according to privacy regulations and security best practices.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nextauth-database-adapter-setup-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Vercel Supabase Clerk Full Stack Development](/claude-code-for-vercel-supabase-clerk-full-stack/)

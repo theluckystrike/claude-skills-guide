@@ -111,6 +111,12 @@ Combining Claude Code with Tree-sitter Playground creates a powerful development
 
 The key is to treat Claude Code as a collaborative partner in your grammar development process. Describe your goals, share your current approach, and let it help you navigate the complexities of parser design. With practice, you'll develop an efficient workflow that makes Tree-sitter development more enjoyable and productive.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-tree-sitter-playground-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)

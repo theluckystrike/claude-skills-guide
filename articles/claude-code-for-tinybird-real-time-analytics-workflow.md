@@ -162,6 +162,12 @@ Building real-time analytics with Tinybird and Claude Code is a powerful combina
 Start small, ingest a single event type and expose one endpoint. As your confidence grows, expand to more complex transformations and multiple data sources. With this workflow, you'll be building production-grade real-time analytics in no time.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-tinybird-real-time-analytics-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)

@@ -160,6 +160,12 @@ Claude skills transform Unity development from manual repetitive work into autom
 
 The investment in creating these skills pays dividends across every future project. Your build process becomes reproducible, your documentation stays current, and your team moves faster with each invocation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-unity-game-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/)

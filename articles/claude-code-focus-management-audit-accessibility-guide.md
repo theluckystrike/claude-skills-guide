@@ -224,6 +224,12 @@ Focus management is fundamental to web accessibility. By using Claude Code skill
 
 Remember: accessible focus management isn't just about compliance; it improves usability for all keyboard users, creating a better experience for everyone.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-focus-management-audit-accessibility-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/)

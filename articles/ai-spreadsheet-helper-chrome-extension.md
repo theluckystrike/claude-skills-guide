@@ -152,6 +152,12 @@ Consider these factors when deciding: data sensitivity requirements, the complex
 
 AI spreadsheet helpers represent a significant productivity advancement for anyone working with data in browser-based spreadsheets. The technology continues maturing, with improvements in model reasoning, response speed, and domain-specific understanding making these tools increasingly valuable for developer workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-spreadsheet-helper-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Study Helper Chrome Extension: A Developer's Guide](/ai-study-helper-chrome-extension/)

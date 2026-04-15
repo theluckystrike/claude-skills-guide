@@ -182,6 +182,12 @@ Claude Code transforms Flux bootstrap from a manual, error-prone process into a 
 The key is providing Claude Code with enough context about your environment, repository structure, cluster names, and specific requirements, to generate accurate configurations. With this foundation, you can build solid, reproducible Kubernetes deployments managed entirely through Git.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-flux-bootstrap-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for ArgoCD Image Updater Workflow](/claude-code-for-argocd-image-updater-workflow/)

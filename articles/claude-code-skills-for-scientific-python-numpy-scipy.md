@@ -443,6 +443,12 @@ Ask for unit tests alongside the implementation. Scientific code is especially p
 
 Request type annotations. Python type hints on NumPy functions (`np.ndarray`, `npt.NDArray[np.float64]`) don't affect runtime behavior but make Claude Code's suggestions more precise on follow-up edits because the shape and dtype intent is explicit.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-scientific-python-numpy-scipy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-for-data-science-and-jupyter-notebooks/)

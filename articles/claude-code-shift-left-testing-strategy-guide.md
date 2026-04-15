@@ -99,6 +99,12 @@ Shift-left testing with Claude Code represents a significant advancement in soft
 The key to successful shift-left testing lies in integrating these practices into your daily workflow rather than treating testing as a separate phase. Start with test-driven development, automate test generation for new and existing code, and maintain comprehensive coverage through continuous analysis. With Claude Code supporting your efforts, shift-left testing becomes not just achievable but sustainable across projects of any size.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-shift-left-testing-strategy-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Performance Testing Strategy Workflow](/claude-code-for-performance-testing-strategy-workflow/)

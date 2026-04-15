@@ -249,6 +249,10 @@ For developers building custom solutions, combining a Chrome extension with a li
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-instagram-post-scheduler)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension LinkedIn Post Scheduler: A Developer's Guide](/chrome-extension-linkedin-post-scheduler/)

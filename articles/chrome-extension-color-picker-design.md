@@ -259,6 +259,12 @@ This storage mechanism allows users to build and maintain custom color libraries
 
 Effective chrome extension color picker design requires balancing functionality, performance, and usability within the constraints of the browser extension environment. The implementation patterns covered here, from native eyedropper APIs to custom canvas rendering, provide a foundation for building professional-grade color selection tools. Focus on supporting multiple color formats, ensuring accessibility, and maintaining responsive performance to create an extension that serves both designers and developers effectively.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-color-picker-design)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)

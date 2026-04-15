@@ -198,6 +198,12 @@ The key to maximizing these benefits is understanding how to effectively collabo
 *This review covers Zed Editor's AI features as of March 2026. Capabilities may vary based on your subscription tier and configuration.*
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=zed-editor-ai-features-review-for-developers-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Gemini CLI for Developers 2026](/claude-code-vs-gemini-cli-for-developers-2026/)

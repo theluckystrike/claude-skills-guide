@@ -371,6 +371,12 @@ Claude Code transforms your BentoML workflow from manual and error-prone to auto
 The combination of Claude Code's intelligent assistance and BentoML's solid serving framework gives you the best of both worlds: rapid development and reliable production performance.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-bentoml-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

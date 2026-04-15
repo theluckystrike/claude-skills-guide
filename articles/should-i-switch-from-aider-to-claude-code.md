@@ -268,6 +268,12 @@ Where Aider wins is simplicity and model flexibility. if your workflow is mostly
 
 The best way to know for certain is to try Claude Code on your next project. Its skill system alone offers capabilities that fundamentally change how you interact with AI coding assistants. and for many developers, that shift in approach is exactly what they have been looking for.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=should-i-switch-from-aider-to-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Should I Switch From Continue Dev to Claude? A Practical.](/should-i-switch-from-continue-dev-to-claude/)

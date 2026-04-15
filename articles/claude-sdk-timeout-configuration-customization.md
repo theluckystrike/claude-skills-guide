@@ -207,6 +207,12 @@ const client = new Anthropic({
 3. **Increase retries in production**: 3-5 retries catches most transient failures without excessive delay.
 4. **Use TCP keep-alive**: The SDKs automatically set TCP keep-alive options to detect broken connections.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-sdk-timeout-configuration-customization)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Streaming Not Working](/claude-streaming-not-working/) -- fix streaming issues that arise from timeout misconfiguration.

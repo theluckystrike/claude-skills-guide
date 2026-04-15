@@ -281,6 +281,12 @@ Building REST APIs with Claude Code combines traditional development practices w
 
 Your next steps: scaffold a new API project, load the tdd skill, and build one endpoint following test-driven development. The workflow becomes intuitive quickly, and the resulting APIs tend to be more reliable and maintainable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=building-a-rest-api-with-claude-code-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)

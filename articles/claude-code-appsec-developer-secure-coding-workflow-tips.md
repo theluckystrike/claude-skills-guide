@@ -428,6 +428,12 @@ The workflow tips in this guide, security-aware code review, early threat modeli
 
 Start implementing these workflow tips today, and you'll see improvements in your code's security posture while also building a culture of security awareness within your development team.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-appsec-developer-secure-coding-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Arabic Interface Development Workflow Tips](/claude-code-arabic-interface-development-workflow-tips/)

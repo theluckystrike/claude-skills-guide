@@ -255,6 +255,12 @@ Upgradeable contracts require disciplined workflows and careful attention to sto
 The initial setup overhead pays dividends through the lifetime of your contract, users trust contracts that can be improved without disruption, and proper upgradeability patterns make that possible.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-upgradeable-contract-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Pact Contract Testing Workflow Guide](/claude-code-for-pact-contract-testing-workflow-guide/)

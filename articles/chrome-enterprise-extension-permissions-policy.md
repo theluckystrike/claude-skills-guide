@@ -374,6 +374,12 @@ Chrome Enterprise extension permissions policy gives organizations powerful cont
 
 Whether you're deploying extensions across thousands of users or developing extensions for enterprise customers, these policies ensure that extension capabilities align with organizational security requirements. The most effective posture combines a default-deny allowlist policy, a lightweight extension review process, regular audits of installed extensions, and runtime monitoring for permission escalation attempts. Starting with these fundamentals gives you a security foundation that scales as your organization and extension fleet grow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-extension-permissions-policy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Split Tunnel Browsing: A Practical Guide](/chrome-enterprise-split-tunnel-browsing/)

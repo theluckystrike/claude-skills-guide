@@ -238,6 +238,10 @@ Building a Claude Code OWASP Top 10 security scanning workflow transforms securi
 Start with the ten categories above, customize the scanning rules to your tech stack, and integrate checks into your development workflow. Security improves dramatically when scanning happens at every code change rather than waiting for dedicated audit phases.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-owasp-top-10-security-scanning-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/). Integrate OWASP scanning into enterprise-grade access control and audit pipelines

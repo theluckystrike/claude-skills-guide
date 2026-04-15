@@ -248,6 +248,12 @@ A practical first exercise: take your next feature request and instead of writin
 
 The key is consistency. Using Claude Code for spec development becomes powerful through regular use, building institutional knowledge that improves over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-product-managers-use-claude-code-for-specs)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Supermemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/)

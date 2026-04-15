@@ -325,6 +325,12 @@ Regular audits of your installed extensions, using separate browser profiles for
 
 For developers in particular, the browser is a critical tool that touches everything from staging environments to production credentials. Treating extension security with the same rigor you apply to dependency management in your codebase is not paranoia. it is sound engineering practice. The same supply chain awareness you bring to npm packages belongs in your Chrome extension evaluation process.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=which-chrome-extensions-safe)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [OpenCLAW Security Review. Is It Safe in 2026?](/openclaw-security-review-is-it-safe-2026/)

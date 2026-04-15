@@ -204,6 +204,12 @@ Many extensions offer free tiers with basic features, while professional version
 
 Chrome extension email template managers represent a significant productivity enhancement for anyone handling repetitive email communication. By using variable placeholders, keyboard shortcuts, and organized template libraries, developers and power users can maintain consistent, personalized communication at scale. The key lies in selecting a tool that matches your specific workflow requirements and integrates smoothly with your email client of choice.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-email-template-manager)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)

@@ -196,6 +196,12 @@ Proper project initialization in Claude Code is not a one-time setup task, it is
 
 The goal is making every session start with Claude having exactly the context it needs, nothing more, nothing less. This precision in initialization translates directly to more productive development sessions and better code outcomes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-project-initialization-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)

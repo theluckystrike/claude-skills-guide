@@ -220,6 +220,12 @@ The key is starting simple, implement basic scanning first, then gradually add r
 Remember that automation amplifies both good and bad practices. Invest time in properly configuring your scanning rules and remediation logic. The initial effort pays dividends in reduced security incidents and compliance violations.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cloud-security-posture-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Container Security Scanning Workflow Guide](/claude-code-container-security-scanning-workflow-guide/)

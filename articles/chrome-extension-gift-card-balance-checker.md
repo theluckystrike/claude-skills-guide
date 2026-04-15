@@ -276,6 +276,12 @@ Building a Chrome extension for gift card balance checking requires understandin
 
 Start with a simple implementation supporting one or two retailers, then expand based on user demand. Focus on accurate balance parsing, clear error messages, and secure handling of sensitive card data.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-gift-card-balance-checker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Color Contrast Checker: A Developer Guide](/chrome-extension-color-contrast-checker/)

@@ -276,6 +276,12 @@ FastAPI background tasks. For FastAPI applications that need to log events to Sc
 
 Kafka consumer persistence. For Kafka consumers that need to persist processed events to ScyllaDB, Claude Code generates the idempotent write pattern that uses the Kafka message offset as part of the ScyllaDB partition key, ensuring that replayed messages do not create duplicate records.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-scylladb-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)

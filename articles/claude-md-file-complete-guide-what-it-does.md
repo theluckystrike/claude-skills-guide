@@ -168,6 +168,12 @@ A Claude MD file is a skill definition document that combines YAML configuration
 
 This simple format underlies the entire Claude skills ecosystem, from basic helpers like `pdf` to complex workflows involving `tdd`, `supermemory`, and `frontend-design`. Understanding how MD files work gives you the foundation to create, customize, and extend Claude's capabilities for your specific needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-file-complete-guide-what-it-does)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)

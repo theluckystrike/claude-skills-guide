@@ -268,6 +268,12 @@ Manifest V3 migration requires rethinking extension architecture around event-dr
 
 The migration investment pays off through better extension performance, improved security posture, and continued access to the Chrome Web Store. Most developers complete migration within a few days, depending on extension complexity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-manifest-v3-migration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

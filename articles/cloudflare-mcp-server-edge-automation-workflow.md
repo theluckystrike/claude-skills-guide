@@ -188,6 +188,12 @@ The Cloudflare MCP server transforms edge infrastructure management into convers
 
 Start with small automations, perhaps DNS queries or single Worker deployments, and expand to complex multi-step workflows as your confidence grows. The MCP server handles the API complexity while you focus on infrastructure intent. For deployment automation strategies, see the [serverless function development workflow](/claude-skills-serverless-function-development-workflow/).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=cloudflare-mcp-server-edge-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

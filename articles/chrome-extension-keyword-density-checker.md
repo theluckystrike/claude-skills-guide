@@ -417,6 +417,12 @@ A working keyword density checker is a solid foundation. Here are natural next s
 
 The Chrome extension format scales well for all of these additions. Because the core architecture separates content extraction (content script), logic (background service worker), and display (popup), each feature can be added without disrupting the others.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-keyword-density-checker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Arrow and Text Overlay Screenshot Guide](/chrome-extension-arrow-and-text-overlay-screenshot/)

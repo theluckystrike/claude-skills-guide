@@ -227,6 +227,12 @@ Calculating the ROI of Claude Code requires tracking both tangible benefits like
 
 Remember that ROI calculations are not one-time exercises. Continuously monitor metrics, refine your calculations, and use the insights to maximize the value your team gets from Claude Code. The most successful teams treat ROI measurement as an ongoing process that drives continuous improvement.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-roi-calculation-for-development-teams)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Measuring ROI of AI Coding Tools for Teams](/measuring-roi-of-ai-coding-tools-for-teams/)

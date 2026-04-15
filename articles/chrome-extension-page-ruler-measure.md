@@ -121,6 +121,12 @@ Chrome extension page ruler and measure tools fill a practical need in web devel
 
 The best approach is to install a couple of options, use them regularly during development, and establish patterns for when measurement verification adds value to your process. Over time, these tools become as essential as the browser developer tools themselves.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-page-ruler-measure)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Check Link Safety: Developer Tools and Techniques](/chrome-check-link-safety/)

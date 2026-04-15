@@ -218,6 +218,12 @@ Developers who plateau after early gains often share a common pattern: they use 
 
 The productivity transformation with Claude Code isn't about replacing developer expertise, it's about amplifying it. By automating routine tasks, providing intelligent suggestions, and maintaining context across complex projects, Claude Code lets developers focus on the creative problem-solving that truly requires human judgment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=developer-productivity-gains-from-using-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bruno API Client Workflow Tutorial](/claude-code-for-bruno-api-client-workflow-tutorial/)

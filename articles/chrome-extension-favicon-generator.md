@@ -393,6 +393,12 @@ Pay particular attention to how your icon reads at 16x16. that's the smallest co
 With correct icon implementation, your extension presents professionally in the browser toolbar, the extensions management page, and the Chrome Web Store. establishing credibility with users from the first interaction and avoiding the blurry-icon problem that plagues many otherwise well-built extensions.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-favicon-generator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

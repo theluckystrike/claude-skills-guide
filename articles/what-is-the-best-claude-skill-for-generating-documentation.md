@@ -239,6 +239,12 @@ A good starting point is to pick one piece of documentation you have been puttin
 
 Documentation generation does not need to be a manual chore. By using Claude skills strategically, you can automate significant portions of your documentation workflow while maintaining high quality standards. The key is matching the right skill to the right output format, combining skills for coverage across multiple audiences, and building documentation into your workflow rather than treating it as something that happens at the end of a project.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=what-is-the-best-claude-skill-for-generating-documentation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). Build a complete automated documentation pipeline that integrates the docx, pdf, and tdd skills

@@ -216,6 +216,12 @@ Token optimization isn't about stripping valuable content, it's about removing r
 
 Start by measuring your current skills, then apply these strategies systematically. You'll likely find that 30-50% token reduction is achievable without any loss in output quality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skill-token-usage-profiling-and-optimization)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Token Usage Optimization Best Practices Guide](/claude-code-token-usage-optimization-best-practices-guide/). If you're a user rather than a skill author, this covers session-level strategies: prompt structuring, context window management, and output constraints.

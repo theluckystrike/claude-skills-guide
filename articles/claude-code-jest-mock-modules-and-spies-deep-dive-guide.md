@@ -279,6 +279,12 @@ Mastering Jest's mocking capabilities transforms your tests from simple assertio
 Remember to keep mocks focused, clean up after tests, and choose the right mocking strategy for your testing context. These practices will lead to more maintainable, reliable test suites that give you confidence in your code's behavior.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-jest-mock-modules-and-spies-deep-dive-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude API Tool Use and Function Calling Deep Dive Guide](/claude-api-tool-use-function-calling-deep-dive-guide/)

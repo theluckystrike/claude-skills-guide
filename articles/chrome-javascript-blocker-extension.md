@@ -185,6 +185,12 @@ Choose your approach based on your primary goal:
 
 For most developers, a combination approach works best: enable automatic blocking for known trackers while maintaining a curated whitelist of domains where you need full functionality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-javascript-blocker-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Distraction Blocker Chrome Extension: A Developer Guide](/ai-distraction-blocker-chrome-extension/)

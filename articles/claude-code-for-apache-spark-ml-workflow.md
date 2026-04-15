@@ -232,6 +232,12 @@ Claude Code significantly enhances your Apache Spark ML workflow by helping you 
 Start by applying these techniques to your current Spark ML projects. Focus on one area at a time, whether it's improving your preprocessing code or implementing proper model versioning, and gradually build comprehensive, production-ready ML pipelines.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-apache-spark-ml-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Spark DataFrame Workflow Guide](/claude-code-for-apache-spark-dataframe-workflow-guide/)

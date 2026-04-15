@@ -433,6 +433,12 @@ Claude Code significantly accelerates Cloudflare Workers KV development by gener
 Start with simple CRUD operations, then gradually add caching, batch processing, and migration capabilities as your application grows. Use Claude Code to help you navigate architectural decisions like when to use KV versus Durable Objects, and to generate the test scripts that give you confidence before every deployment. The combination of Cloudflare's global edge network and Claude Code's development assistance creates a powerful platform for building fast, scalable serverless applications that respond to users from the nearest edge location worldwide.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cloudflare-workers-kv-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Cloudflare R2 Storage Workflow Guide](/claude-code-for-cloudflare-r2-storage-workflow-guide/)

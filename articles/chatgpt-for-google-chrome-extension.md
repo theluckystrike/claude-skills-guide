@@ -261,6 +261,12 @@ Building ChatGPT-powered Chrome extensions requires understanding Chrome's exten
 
 Start with the basics, test thoroughly, and iterate based on your specific use case. The combination of Chrome extensions and ChatGPT creates powerful possibilities for enhancing productivity and building AI-assisted workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chatgpt-for-google-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Block Chrome from Sending Data to Google](/block-chrome-sending-data-google/)

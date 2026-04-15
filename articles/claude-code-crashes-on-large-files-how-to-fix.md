@@ -636,6 +636,10 @@ For teams, document your file handling patterns so everyone understands the limi
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-crashes-on-large-files-how-to-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Slow Response: How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/). Companion guide covering latency and performance problems beyond just file-size crashes

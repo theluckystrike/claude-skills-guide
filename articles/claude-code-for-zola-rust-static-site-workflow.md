@@ -443,6 +443,12 @@ Combining Zola's speed and simplicity with Claude Code's AI capabilities creates
 
 The key is to maintain clear communication with Claude Code about your project structure, content requirements, and design preferences. The more context you provide, through a content brief, existing templates, and specific error messages, the better Claude Code assists you in building a polished, professional static site. Treat Claude Code as a knowledgeable pair programmer who needs context to give its best output, and you will use the full potential of this workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-zola-rust-static-site-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)

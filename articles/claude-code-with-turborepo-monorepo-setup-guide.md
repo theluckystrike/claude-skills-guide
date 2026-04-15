@@ -138,6 +138,12 @@ Integrating Claude Code with Turborepo creates a powerful development environmen
 
 By setting up proper configuration files and using Claude skills appropriately, your team gains an AI partner that comprehends your architecture, respects your package boundaries, and helps maintain consistency across your entire codebase.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-with-turborepo-monorepo-setup-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills Monorepo Management Workflow](/claude-code-skills-monorepo-management-workflow/). See also

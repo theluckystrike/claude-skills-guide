@@ -203,6 +203,12 @@ This interactive approach is distinct from the skills-based approach, where you 
 
 By pairing Claude Code with skills like tdd for testing, pdf for documentation, and supermemory for knowledge management, you build a migration workflow that scales with your project. Start with small, low-risk migrations to build confidence, then expand to more complex schema changes as you trust the workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-use-claude-code-for-database-migrations)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Creating Database Migration Scripts](/claude-skills-for-creating-database-migration-scripts/). Once you know your patterns from interactive use, encode them as a reusable `db-migration` skill

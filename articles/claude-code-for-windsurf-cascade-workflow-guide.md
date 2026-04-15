@@ -197,6 +197,12 @@ By following the patterns and practices outlined in this guide, you can use the 
 
 *This guide is part of the Claude Skills Guide series, providing practical insights for developers working with AI-assisted coding tools.*
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-windsurf-cascade-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Use AI Coding Tools Effectively in 2026](/how-to-use-ai-coding-tools-effectively-2026/)

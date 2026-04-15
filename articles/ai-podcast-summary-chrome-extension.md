@@ -304,6 +304,12 @@ If you're ready to build, start with a minimal viable product: detect audio, sen
 
 For users seeking existing solutions, evaluate based on supported platforms, summary quality, pricing model, and privacy policies. Many offer free tiers sufficient for occasional use.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-podcast-summary-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

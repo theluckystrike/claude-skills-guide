@@ -164,6 +164,12 @@ Setting up LaunchDarkly targeting rules is a critical skill for modern developme
 Remember to follow best practices like clear naming conventions, thorough documentation, and comprehensive testing. With these principles in place, your feature flag system will be a powerful tool for safe, controlled feature releases.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-launchdarkly-targeting-rules-setup-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Branch Protection Rules Workflow](/claude-code-for-branch-protection-rules-workflow/)

@@ -287,6 +287,12 @@ For projects that cannot upgrade immediately, Claude Code can generate a suppres
 
 This keeps your audit clean by distinguishing "we haven't gotten to this yet" from "we have reviewed this and are intentionally waiting," which matters for compliance reviews and security audits.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-c-sharp-dotnet-developers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Server Creation with Claude Code Guide](/claude-code-skills-for-backend-developers-node-and-python/). build custom MCP servers for .NET service integrations

@@ -221,6 +221,12 @@ The key is approaching exploration systematically: start with architecture, focu
 Remember that understanding a codebase is an iterative process. Don't try to understand everything at once, focus on what you need to know now, and let your understanding grow organically as you work with the project.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-reading-unfamiliar-open-source-codebase)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Open Source Contribution Workflow Guide](/claude-code-for-open-source-contribution-workflow-guide/)

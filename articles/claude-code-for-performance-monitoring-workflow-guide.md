@@ -341,6 +341,12 @@ Remember that effective performance monitoring is about balancing detail with us
 Start implementing these practices today, and you'll be well on your way to building solid performance monitoring workflows that support your application's growth and reliability.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-performance-monitoring-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for CSS Performance Optimization Workflow](/claude-code-for-css-performance-optimization-workflow/)

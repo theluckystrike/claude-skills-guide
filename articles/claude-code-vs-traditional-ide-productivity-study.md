@@ -128,6 +128,10 @@ The skill ecosystem, skills like pptx for presentations, xlsx for data analysis,
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-traditional-ide-productivity-study)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Will Claude Skills Replace Traditional IDE Plugins?](/will-claude-skills-replace-traditional-ide-plugins/)

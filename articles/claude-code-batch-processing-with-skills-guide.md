@@ -472,6 +472,12 @@ Claude Code skills combined with shell scripting create powerful batch processin
 
 Invest time in dry-run modes, progress tracking, and retry logic early. These patterns add maybe 20 lines to your script but eliminate the frustration of discovering a batch job failed silently halfway through. With solid infrastructure around the Claude invocation, batch processing scales from a handful of files to thousands without changing your core approach.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-batch-processing-with-skills-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/). Understand when to run batch jobs sequentially versus in parallel for maximum throughput

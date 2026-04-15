@@ -253,6 +253,12 @@ Claude Code transforms OPA/Rego development from a potentially frustrating exper
 The key is treating Claude as a collaborative partner, explain your requirements, ask for explanations when policies are unclear, and iterate quickly based on test results. Combined with OPA's powerful policy engine, you'll have a scalable authorization system that developers and security teams can both understand and maintain.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-opa-rego-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Regula Policy Workflow Guide](/claude-code-for-regula-policy-workflow-guide/)

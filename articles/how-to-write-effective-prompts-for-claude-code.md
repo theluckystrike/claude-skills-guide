@@ -238,6 +238,12 @@ Summary
 
 Effective prompts for Claude Code share common characteristics: clear task framing upfront, relevant context, broken-down steps for complex work, explicit output formats, and well-defined constraints. Practice these techniques and refine based on results. The better your prompts, the more precise and useful Claude Code's responses become.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-write-effective-prompts-for-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). understand how skills auto-invoke so you can prompt more effectively

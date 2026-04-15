@@ -171,6 +171,12 @@ The key to success is providing comprehensive context to Claude Code about your 
 Remember that AI assistance complements rather than replaces developer judgment. Review generated code for correctness, accessibility, and performance. Use the techniques in this guide to build a productive workflow that uses Claude Code's strengths while maintaining the quality standards your project requires.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-styled-components-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)

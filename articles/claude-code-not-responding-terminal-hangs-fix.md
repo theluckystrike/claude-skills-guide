@@ -205,6 +205,12 @@ Terminal hangs with Claude Code frustrate developers, especially when using powe
 
 By understanding the symptoms, applying quick recovery commands, and implementing prevention strategies, you minimize downtime and maintain productivity. For most users, `Ctrl+C` followed by a simple query test handles the situation. For recurring problems, the diagnostic and prevention techniques in this guide provide lasting solutions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-not-responding-terminal-hangs-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Error Connection Timeout During Task Fix](/claude-code-error-connection-timeout-during-task-fix/). Related: timeout vs hang distinction

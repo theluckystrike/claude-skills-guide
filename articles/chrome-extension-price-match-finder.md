@@ -341,6 +341,12 @@ Price comparison API rate limits: Cache API responses for at least 2 hours per p
 
 False positives. same model number, different configuration: Laptops and appliances are often sold in multiple configurations under the same model number but with different specs (RAM, storage). Add a specification fingerprint step that also compares CPU/RAM/storage values extracted from the product page before flagging a price match.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-price-match-finder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Deal Finder Chrome Extension: A Developer's Guide to Building Price Tracking Tools](/deal-finder-chrome-extension/)

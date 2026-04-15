@@ -207,6 +207,12 @@ Integrating Claude Code into your Go benchmark workflow significantly improves p
 
 Remember that benchmarks are most valuable when they reflect real-world usage patterns. Work with Claude Code to create benchmark scenarios that match your production workloads, and your optimization efforts will yield meaningful performance improvements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-go-benchmark-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for API Benchmark Workflow Tutorial Guide](/claude-code-for-api-benchmark-workflow-tutorial-guide/)

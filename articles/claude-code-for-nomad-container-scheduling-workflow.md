@@ -410,6 +410,12 @@ The combination of Claude Code's intelligence with Nomad's simplicity creates po
 As you build out the workflow, consider storing generated job specifications in version control alongside your application code. This gives you a history of every deployment, enables peer review of infrastructure changes, and makes rollback as simple as running the previous version of the job file.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nomad-container-scheduling-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Container Registry Workflow Guide](/claude-code-container-registry-workflow-guide/)

@@ -203,6 +203,12 @@ except anthropic.APIStatusError as e:
 3. **Use the Batch API**: For large workloads, the 256 MB limit gives you 8x more room.
 4. **Chunk documents**: Split large documents into sections and process them individually.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-error-413-requesttoolarge-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude API Error 400 invalid_request_error Fix](/claude-api-error-400-invalidrequesterror-explained/) -- handle format errors that occur before the size check.

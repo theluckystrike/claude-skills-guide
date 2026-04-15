@@ -362,6 +362,10 @@ Following this sequence resolves the vast majority of Chrome WebGL slow issues w
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-webgl-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Autofill Slow: Causes and Solutions for Developers](/chrome-autofill-slow/)

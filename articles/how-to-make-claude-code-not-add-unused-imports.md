@@ -173,6 +173,12 @@ Preventing Claude Code from adding unused imports requires a multi-layered appro
 
 Remember: Claude responds well to explicit instructions. The more clearly you communicate your import preferences, the better Claude Code will follow them. Start with these configurations and adjust based on your specific project needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-not-add-unused-imports)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Make Claude Code Handle Edge Cases Properly](/how-to-make-claude-code-handle-edge-cases-properly/)

@@ -338,6 +338,12 @@ A practical way to deepen your Claude Code skills is to pick one recurring probl
 
 The developers who get the most out of Claude Code treat it as a collaborative partner rather than an autocomplete tool. That means reviewing what it produces, correcting mistakes, and giving it feedback within the session. The more precisely you describe what you want and why, the more accurately Claude Code delivers it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-first-project-tutorial-hello-world)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)

@@ -272,6 +272,12 @@ When combining these tools, keep these recommendations in mind:
 
 Claude Code skills significantly enhance Trigger.dev development through automation, testing, and documentation generation. The combination of tdd for test-first development, pdf and docx for documentation, and supermemory for persistent context creates a powerful development environment. Custom skills tailored to your Trigger.dev patterns multiply these benefits, enabling rapid workflow creation while maintaining code quality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-trigger-dev-workflow-automation-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)

@@ -208,6 +208,12 @@ Claude Code transforms pull request reviews from a bottleneck into a competitive
 The key is implementing a thoughtful three-tier strategy that uses Claude Code's strengths while preserving human oversight for strategic decisions. Start small, measure your results, and continuously refine your workflow. Your team, and your schedule, will thank you.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-engineering-manager-pull-request-review-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password vs Bitwarden Chrome: Which Password Manager.](/1password-vs-bitwarden-chrome/)

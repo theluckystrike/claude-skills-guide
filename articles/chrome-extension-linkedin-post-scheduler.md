@@ -257,6 +257,12 @@ Building a Chrome extension for LinkedIn post scheduling gives you programmatic 
 
 Remember to test thoroughly with LinkedIn's evolving interface, as their DOM structure changes frequently. For production use, implement error handling and user notifications to maintain a reliable scheduling system.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-linkedin-post-scheduler)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Instagram Post Scheduler: A Developer Guide](/chrome-extension-instagram-post-scheduler/)

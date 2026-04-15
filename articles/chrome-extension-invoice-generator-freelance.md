@@ -479,6 +479,12 @@ The print-to-PDF approach produces professional-looking invoices with zero depen
 
 From here, the natural next step is adding your own business details to the invoice template and tweaking the CSS to match your brand colors. The HTML template is entirely self-contained, making visual customization straightforward.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-invoice-generator-freelance)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Blog Post Generator for Chrome: A Developer's Guide](/ai-blog-post-generator-chrome/)

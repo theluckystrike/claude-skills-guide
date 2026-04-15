@@ -92,6 +92,12 @@ The combination of large context, project-specific skills, intelligent tool use,
 
 For teams maintaining large codebases, whether monorepos, legacy systems, or sophisticated modern applications, Claude Code provides a practical way to maintain velocity without sacrificing code quality. The ability to encode team conventions, automatically verify changes, and understand project-wide relationships makes it particularly well-suited for the demands of complex software development.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-is-claude-code-popular-for-complex-codebases)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Why Is Claude Code Good at Understanding Legacy Code](/why-is-claude-code-good-at-understanding-legacy-code/). Complex codebases often include legacy code

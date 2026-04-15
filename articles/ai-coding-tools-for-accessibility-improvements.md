@@ -523,6 +523,12 @@ Accessibility improvements also tend to benefit all users: clearer labels, bette
 
 Related guides: [Claude Code WCAG 2.1 Compliance Checker Workflow Guide](/claude-code-for-wcag-2-2-compliance-workflow-guide/)
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-coding-tools-for-accessibility-improvements)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

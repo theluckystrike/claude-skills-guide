@@ -247,6 +247,12 @@ Execute your migration using this proven approach:
 The migration from Backbone.js to Vue represents moving from an era of manual DOM manipulation to reactive, component-based architecture. Claude Code skills accelerate this journey by automating repetitive transformations and enabling systematic analysis of your existing codebase. Start with isolated components, maintain backward compatibility during the transition, and progressively modernize your application one feature at a time.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-backbone-js-to-vue-migration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Express to Fastify Migration with Claude Code (2026)](/claude-code-express-to-fastify-migration-tutorial-2026/)

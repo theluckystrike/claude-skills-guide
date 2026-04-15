@@ -375,6 +375,12 @@ To implement a complete Compound governance workflow with Claude Code:
 Claude Code transforms governance from a manual, error-prone process into a reliable, auditable workflow. By treating governance operations as code-configured actions, you gain repeatability and safety in protocol management.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-compound-governance-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OSS Governance Workflow Tutorial Guide](/claude-code-for-oss-governance-workflow-tutorial-guide/)

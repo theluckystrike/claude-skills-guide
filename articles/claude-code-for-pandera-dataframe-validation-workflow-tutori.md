@@ -212,6 +212,12 @@ Remember to start simple with basic type checks, then gradually add more sophist
 
 Start implementing Pandera in your next data project and experience the peace of mind that comes from knowing your data meets defined quality standards at every step.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-pandera-dataframe-validation-workflow-tutori)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Spark DataFrame Workflow Guide](/claude-code-for-apache-spark-dataframe-workflow-guide/)

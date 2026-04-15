@@ -113,6 +113,12 @@ The key is to use Claude Code as a learning partner, not a crutch. Ask questions
 
 With these approaches, Claude Code becomes more than a tool, it becomes an interactive learning companion that grows alongside you, adapting to your increasing skill level and helping you tackle ever-more-complex programming challenges.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-students-use-claude-code-for-learning-programming)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)

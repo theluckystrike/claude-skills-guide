@@ -245,6 +245,12 @@ When using Claude Code for firewall management, follow these practices:
 
 Claude Code transforms firewall management from a error-prone manual process into an assisted, validated workflow. By generating configs from specifications, validating for security issues, translating between platforms, and maintaining documentation, you reduce risk while saving significant time. Start with small, low-stakes rules and progressively adopt more Claude Code automation as you build confidence in the workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-network-firewall-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cypress Intercept Network Requests Workflow](/claude-code-cypress-intercept-network-requests-workflow/)

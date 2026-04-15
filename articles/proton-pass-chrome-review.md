@@ -144,6 +144,12 @@ For teams with complex automation needs or those requiring CLI-first workflows, 
 
 The Chrome extension itself performs reliably for day-to-day credential management. Autofill works consistently on mainstream websites, password generation produces secure outputs, and the interface remains uncluttered. If you already use Proton services, the integration provides a smooth experience.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=proton-pass-chrome-review)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [NordPass Chrome Review: A Developer and Power User's.](/nordpass-chrome-review/)

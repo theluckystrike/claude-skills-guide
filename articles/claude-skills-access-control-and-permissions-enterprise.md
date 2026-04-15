@@ -233,6 +233,12 @@ Implementing access control for Claude skills in enterprise environments require
 
 The key is treating permissions as a first-class concern in your Claude Code deployment, not an afterthought. Define your permission model upfront, implement enforcement at each layer, and maintain audit trails for continuous compliance verification.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-access-control-and-permissions-enterprise)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Permissions Model and Security Guide](/claude-code-permissions-model-security-guide-2026/)

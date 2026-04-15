@@ -232,6 +232,12 @@ Claude Code transforms Node.js profiling from a manual, time-consuming process i
 
 Start with this tutorial's techniques, adapt them to your specific use cases, and watch your Node.js applications become faster and more responsive.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nodejs-profiling-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for 0x Node Flame Workflow Guide](/claude-code-for-0x-node-flame-workflow-guide/)

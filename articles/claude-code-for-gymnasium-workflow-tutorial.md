@@ -552,6 +552,12 @@ Document Experiment Results: Ask Claude to generate experiment tracking template
 
 Use Reproducible Seeds: Set seeds consistently in your training scripts to reproduce results. Claude can add seed management to ensure deterministic behavior across runs when needed for benchmarking.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-gymnasium-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First 2026](/best-claude-code-skills-to-install-first-2026/)

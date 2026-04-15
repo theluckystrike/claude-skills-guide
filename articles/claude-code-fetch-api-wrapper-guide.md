@@ -360,6 +360,12 @@ Claude Code generates the streaming reader that processes chunks line-by-line fo
 
 For server-sent events specifically, Claude Code generates the EventSource wrapper with automatic reconnection, last-event-id tracking, and typed event discrimination based on the event type field. This pattern is particularly useful for progress reporting on long-running API operations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-fetch-api-wrapper-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best Claude Skill for REST API Development?](/what-is-the-best-claude-skill-for-rest-api-development/)

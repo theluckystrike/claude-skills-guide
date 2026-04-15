@@ -123,6 +123,12 @@ Start with a simple integration like the filesystem server to get comfortable wi
 
 To explore more MCP servers and integrations, check the official Claude Code documentation and the growing ecosystem of community-contributed MCP servers. With MCP, you can tailor Claude Code to match your specific development workflow and tools.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mcp-integration-guide-for-claude-code-beginners)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

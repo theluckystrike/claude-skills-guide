@@ -185,6 +185,12 @@ To avoid skill directory issues in the future:
 
 The "skill not found" error is almost always a path or naming issue that takes minutes to resolve. Once your skills are properly placed in `~/.claude/skills/` with correct filenames, they'll work reliably across all your Claude Code sessions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skill-not-found-in-skills-directory-how-to-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Why Does Claude Code Ignore My Skill MD File Entirely](/why-does-claude-code-ignore-my-skill-md-file-entirely/). Diagnose cases where skills are found but silently ignored by Claude Code

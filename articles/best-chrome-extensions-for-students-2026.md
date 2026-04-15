@@ -172,6 +172,12 @@ These extensions represent the essential toolkit for students in 2026. They addr
 
 Start with Vimium and Dark Reader for immediate productivity gains, then add the others based on your specific workflow needs. As your projects grow more complex, you will find these extensions becoming indispensable parts of your daily toolkit.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-chrome-extensions-for-students-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Chrome Extension Manager in 2026: A Developer's Guide](/chrome-extension-manager-best-2026/)

@@ -627,6 +627,12 @@ For enterprise deployments, generate a CRX using the Chrome packaging tool, host
 
 Building a Chrome extension for bulk social media posting gives you complete control over your publishing workflow while keeping data under your own control. Start with a single platform, validate the architecture, then expand to additional networks as your implementation matures.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-bulk-social-media-posting)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Hashtag Generator for Social Media: A Developer Guide](/chrome-extension-hashtag-generator-social-media/)

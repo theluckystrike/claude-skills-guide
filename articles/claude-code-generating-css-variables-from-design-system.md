@@ -358,6 +358,12 @@ Claude Code transforms the tedious process of creating CSS variables from design
 
 The most durable benefit is not the time saved on any single token generation, it is the fact that your CSS variables stay synchronized with your design source of truth. When tokens and variables drift apart, the design system loses credibility with engineers and designers alike. Automating the generation step removes drift from the equation entirely.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-generating-css-variables-from-design-system)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Design System Tokens: A Frontend Developer Guide](/claude-code-design-system-tokens-frontend-developer-guide/)

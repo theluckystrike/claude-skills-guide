@@ -379,6 +379,12 @@ Restricting Claude skill file access requires a layered approach:
 
 These controls give you the flexibility to use skills like pdf, xlsx, tdd, and frontend-design while maintaining security boundaries appropriate for your development environment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-limit-what-a-claude-skill-can-access-on-disk)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Permissions Model and Security Guide 2026](/claude-code-permissions-model-security-guide-2026/). Understand the full Claude Code permissions system that governs what skills can access by default

@@ -220,6 +220,12 @@ Claude Code transforms database ORM code generation from a tedious chore into a 
 
 Start with simple entity generation, gradually add repository and service layers, and soon you'll have a complete, maintainable data access layer generated in minutes instead of hours.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-database-orm-code-generation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)

@@ -209,6 +209,12 @@ Using Claude Code for Atomico web components development significantly accelerat
 Remember to be specific in your prompts, specify accessibility requirements upfront, and take advantage of TypeScript for better developer experience. With these practices, Claude Code becomes an invaluable partner in building solid web components with Atomico.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-atomico-web-components-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Web Storage Workflow Guide](/claude-code-for-web-storage-workflow-guide/)

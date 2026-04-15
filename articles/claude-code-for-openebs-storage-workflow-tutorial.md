@@ -415,6 +415,12 @@ Claude Code transforms OpenEBS storage management from manual, error-prone proce
 
 The key is starting with simple workflows and progressively adopting more advanced patterns as your comfort with the tooling grows. Whether you're managing a single development cluster or a multi-node production environment, Claude Code provides the intelligent assistance needed to make storage operations reliable and efficient.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-openebs-storage-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Carvel YTT Workflow Tutorial](/claude-code-for-carvel-ytt-workflow-tutorial/)

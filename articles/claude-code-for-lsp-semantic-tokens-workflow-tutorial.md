@@ -204,6 +204,12 @@ LSP semantic tokens combined with Claude Code create powerful possibilities for 
 
 The key is to treat semantic tokens as structured data that drives intelligent behavior, whether that's generating documentation, performing code reviews, or creating custom visualizations. With Claude Code's flexibility and the foundation of LSP, you're well-equipped to build sophisticated development tools.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-lsp-semantic-tokens-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Custom LSP Diagnostics Workflow](/claude-code-for-custom-lsp-diagnostics-workflow/)

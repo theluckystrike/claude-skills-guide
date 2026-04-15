@@ -111,6 +111,12 @@ Claude Code succeeds at understanding legacy code because it combines the abilit
 
 For developers facing the daunting task of maintaining or modernizing older codebases, Claude Code acts as a knowledgeable partner who can explain what code does, why it was written that way, and how to improve it safely.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-is-claude-code-good-at-understanding-legacy-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Blame Code Archaeology Guide](/claude-code-git-blame-code-archaeology-guide/). Git blame is a key tool for legacy code understanding

@@ -322,6 +322,12 @@ A data retention policy for Claude Code prevents unbounded storage growth while 
 
 The key is automation, set up scheduled runs and let the system manage itself. Your future self will appreciate clean storage and searchable archives when you need to reference decisions from last month.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-data-retention-policy-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cookie Consent Implementation](/claude-code-cookie-consent-implementation/). Cookie consent and data retention work together

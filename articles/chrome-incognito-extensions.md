@@ -348,6 +348,12 @@ Chrome incognito extensions require thoughtful implementation to provide good us
 
 The most important principle is transparency: users who choose incognito mode are making an active choice about their privacy. Your extension should honor that choice by minimizing data collection, clearly communicating limitations, and cleaning up after itself when the private session ends. Extensions that treat incognito as a first-class context, rather than an afterthought, build significantly more user trust and avoid the negative reviews that come from surprising privacy-related behavior.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-incognito-extensions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)

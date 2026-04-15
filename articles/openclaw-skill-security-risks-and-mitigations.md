@@ -228,6 +228,12 @@ When installing skills from the community, review the source code carefully. Ski
 
 The OpenCLAW ecosystem continues evolving, and new attack patterns will emerge. Stay informed about security advisories from the Claude community and regularly audit your deployed skills for vulnerabilities.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=openclaw-skill-security-risks-and-mitigations)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/)

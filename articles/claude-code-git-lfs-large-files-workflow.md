@@ -456,6 +456,12 @@ The key is establishing LFS configuration early in your project and ensuring all
 
 Investing time in a solid CLAUDE.md that documents your LFS setup pays dividends every time you start a new Claude Code session. The assistant can read your configuration, verify LFS health, and remind you of the right commands, turning what can be a confusing workflow into a reliable, automated routine.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-git-lfs-large-files-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/). LFS is part of git best practices for large repos

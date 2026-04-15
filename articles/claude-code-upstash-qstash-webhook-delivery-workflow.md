@@ -231,6 +231,12 @@ Claude Code helps you not just generate initial code, but also debug issues, opt
 Start building your webhook delivery workflow today, and let Claude Code guide you through the implementation details while QStash handles the reliability guarantees.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-upstash-qstash-webhook-delivery-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Fan-Out Parallel Tasks Workflows with Claude.](/claude-code-inngest-fan-out-parallel-tasks-workflow/)

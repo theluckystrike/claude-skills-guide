@@ -385,6 +385,12 @@ For a production extension, consider these enhancements:
 
 Building a price tracker teaches valuable skills in Chrome extension development, web scraping ethics, and real-time notification systems. Use these principles to create useful tools while respecting platform terms of service.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-walmart-price-tracker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Deal Finder Chrome Extension: A Developer's Guide to Building Price Tracking Tools](/deal-finder-chrome-extension/)

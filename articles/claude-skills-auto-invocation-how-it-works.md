@@ -161,6 +161,10 @@ Another common scenario involves compound requests spanning different domains. A
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-auto-invocation-how-it-works)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Understand how skill definitions control auto-invocation triggers

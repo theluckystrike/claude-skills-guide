@@ -306,6 +306,12 @@ Optimizing your Claude Code workflow in 2026 requires attention to skill loading
 
 Experiment with these techniques incrementally. Track what improves your productivity and refine your approach based on actual results rather than theoretical optimization. The developers who get the most out of Claude Code are not the ones who know the most commands. they are the ones who have tuned their habits to match the tool's strengths.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-workflow-optimization-tips-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/)

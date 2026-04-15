@@ -79,6 +79,12 @@ Finally, document your APISIX architecture decisions and configuration patterns.
 
 By using Claude Code throughout your APISIX workflow, you can accelerate configuration development, reduce errors, and implement best practices more consistently. The key is providing adequate context about your infrastructure and requirements, then iterating on the generated configurations based on testing and observability data.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-apisix-api-gateway-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Gravitee API Gateway Workflow](/claude-code-for-gravitee-api-gateway-workflow/)

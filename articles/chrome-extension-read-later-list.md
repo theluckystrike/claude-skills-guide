@@ -246,6 +246,12 @@ Building a read later list extension demonstrates fundamental Chrome extension c
 
 Start with the basics outlined here, then iterate based on how you actually use the extension. The best features often emerge from personal workflow requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-read-later-list)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a CLI DevTool with Claude Code: A Practical.](/building-a-cli-devtool-with-claude-code-walkthrough/)

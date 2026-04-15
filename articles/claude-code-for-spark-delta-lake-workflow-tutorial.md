@@ -594,6 +594,12 @@ By integrating Claude Code into your Spark Delta Lake development workflow, you 
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-spark-delta-lake-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Delta Lake Schema Evolution Workflow](/claude-code-for-delta-lake-schema-evolution-workflow/). detailed look into detecting, migrating, and auditing schema changes specifically

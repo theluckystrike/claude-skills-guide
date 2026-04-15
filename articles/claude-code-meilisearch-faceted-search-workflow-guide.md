@@ -383,6 +383,12 @@ Claude Code transforms faceted search implementation from a complex manual proce
 
 Whether you're building an e-commerce product catalog, a document repository, or an internal knowledge base, the combination of Meilisearch's faceted search capabilities and Claude Code's intelligent assistance creates a powerful foundation for responsive, intuitive search experiences that scale with your data.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-meilisearch-faceted-search-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Meilisearch Integration Workflow](/claude-code-for-meilisearch-integration-workflow/)

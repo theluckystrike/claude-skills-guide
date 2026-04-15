@@ -590,6 +590,12 @@ Laravel Sanctum provides a secure, straightforward solution for API authenticati
 The key areas to get right in production are: setting meaningful token expiration, using abilities to scope third-party integrations, implementing rate limiting on auth endpoints, and writing comprehensive tests using `Sanctum::actingAs`. With these practices in place, your Laravel API will have professional-grade authentication ready for production use.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-laravel-sanctum-api-authentication-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)

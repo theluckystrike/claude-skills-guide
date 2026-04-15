@@ -233,6 +233,12 @@ Claude Code transforms AWS S3 multipart uploads from complex manual processes in
 
 Start by creating a basic skill following the examples above, then extend it with error handling, progress tracking, and resume capability as your requirements grow. With Claude Code managing your S3 workflows, you can focus on your application logic while it handles the intricacies of large file transfers.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-aws-s3-multipart-upload-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)

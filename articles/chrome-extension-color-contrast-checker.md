@@ -171,6 +171,12 @@ For teams, establish a design system with pre-tested color combinations. Documen
 
 The investment in proper contrast pays dividends in broader accessibility, improved SEO (search engines favor accessible sites), and better user experience across all demographics and viewing conditions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-color-contrast-checker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)

@@ -219,6 +219,12 @@ By integrating this into your Claude Code workflow, you ensure every new page or
 
 Skip navigation links are a small but critical piece of web accessibility. With Claude Code and well-crafted Claude Skills, you can automate their implementation, ensure consistency across projects, and verify compliance with accessibility standards. Start by adding a simple skip link to your next project, and gradually expand to multiple skip targets as your navigation becomes more complex.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-skip-navigation-implementation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Reading Assistant Chrome: Technical Implementation Guide](/ai-reading-assistant-chrome/)

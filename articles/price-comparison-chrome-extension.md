@@ -352,6 +352,12 @@ Multiple prices for the same product (variants): Extract the specific variant pr
 
 Building a price comparison extension demonstrates real-world extension development patterns: DOM manipulation, Chrome APIs, data management, and external API integration.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=price-comparison-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Hotel Price Comparison: A Developer Guide](/chrome-extension-hotel-price-comparison/)

@@ -445,6 +445,12 @@ The key question for developers is: does your page spend more time on the CPU (J
 
 Chrome hardware acceleration remains a critical technology for delivering smooth, performant web experiences. By understanding how to configure, debug, and use GPU capabilities, developers can create web applications that fully use modern hardware while providing fallback support for systems with limited capabilities.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-hardware-acceleration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

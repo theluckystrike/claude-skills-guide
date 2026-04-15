@@ -302,6 +302,12 @@ By following these patterns and using Claude Code's capabilities, you can build 
 Remember: clean data is the foundation of reliable analysis. Investing time in building proper preprocessing workflows pays dividends throughout your project's lifecycle.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-data-cleaning-and-preprocessing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)

@@ -270,6 +270,12 @@ Running Claude Code inside Docker containers transforms your development workflo
 
 Start by creating a basic Docker setup, then gradually add complexity as you become comfortable with the workflow. The investment in setting up your containerized development environment pays dividends in consistency and collaboration capabilities.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=using-claude-code-inside-docker-container-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

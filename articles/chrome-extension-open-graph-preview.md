@@ -235,6 +235,12 @@ Test with popular sites like GitHub, Medium, and news websites that implement Op
 
 Building an Open Graph preview extension gives you a practical tool for verifying social metadata while learning Chrome extension development fundamentals. The same techniques apply to more complex extensions that analyze SEO, validate structured data, or extract other page metadata.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-open-graph-preview)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)

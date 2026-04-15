@@ -576,6 +576,12 @@ For cards that represent recurring tasks, Claude Code generates the template clo
 
 Due date management is another area where automation saves time. Claude Code generates the due date monitor that runs daily, finds cards approaching their due date without assignees, and sends a Slack message to the board owner asking for assignment. Cards that pass their due date without being moved get a red label added automatically, making overdue work visible in the board view without manual tracking.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-trello-automation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Mailchimp Automation Workflow Guide](/claude-code-for-mailchimp-automation-workflow-guide/)

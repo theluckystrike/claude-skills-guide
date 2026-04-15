@@ -376,6 +376,12 @@ Enhancement API slow for large images: Resize images to a maximum of 1024px on t
 
 Downloaded enhanced image has wrong filename: The enhanced image URL from the API is a temporary URL with no meaningful filename. Set the download filename explicitly using `chrome.downloads.download({ url, filename: 'enhanced_' + originalFilename })`.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-photo-enhancer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Search Enhancer Chrome Extension: A Developer Guide](/ai-search-enhancer-chrome-extension/)

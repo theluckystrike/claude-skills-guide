@@ -315,6 +315,12 @@ Rust trait objects unlock powerful polymorphic patterns that enable flexible, ex
 
 Remember to profile your code, the dynamic dispatch overhead is small, but in performance-critical hot paths, trait bounds on generics often provide better performance through monomorphization. Use both approaches strategically based on your specific requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-rust-trait-objects-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Rust Profiling Workflow Tutorial Guide](/claude-code-for-rust-profiling-workflow-tutorial-guide/)

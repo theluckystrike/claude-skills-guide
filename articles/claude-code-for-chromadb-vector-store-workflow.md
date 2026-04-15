@@ -228,6 +228,12 @@ ChromaDB combined with Claude Code provides a powerful foundation for building s
 Start with the basic implementations, then iterate based on your specific requirements. The modular design of these components makes it easy to swap embedding providers, adjust similarity metrics, or add new filtering criteria as your application evolves.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-chromadb-vector-store-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for ML Engineer: Feature Store Workflow.](/claude-code-ml-engineer-feature-store-workflow-daily-tips/)

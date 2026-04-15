@@ -203,6 +203,12 @@ Claude Code skills transform monorepo management from a complex, error-prone pro
 
 Start with a basic skill that describes your monorepo structure, then iterate as you discover patterns worth automating. The investment pays off quickly in reduced context-switching and fewer integration errors.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-monorepo-management-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Shared Claude Skills Across Monorepo Multiple Packages](/shared-claude-skills-across-monorepo-multiple-packages/). organize skills so every package in your monorepo can access them

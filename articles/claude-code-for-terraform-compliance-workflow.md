@@ -274,6 +274,12 @@ Claude Code transforms Terraform compliance from a bottleneck into a smooth part
 
 The key is starting simple: set up a compliance context, add basic checks to your workflow, and gradually expand coverage as your team builds confidence. With Claude Code as your compliance partner, maintaining secure, compliant infrastructure becomes sustainable even at scale.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-terraform-compliance-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Audit Logging for Enterprise Compliance Workflow](/claude-code-audit-logging-for-enterprise-compliance-workflow/)

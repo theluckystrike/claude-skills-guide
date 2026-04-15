@@ -265,6 +265,12 @@ Start small, use Claude Code for a single module or one aspect of your infrastru
 
 Remember: Claude Code is a powerful assistant, but always review its suggestions, especially for production infrastructure. Use the `terraform plan` output as your source of truth before applying any changes. Happy infrastructuring!
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-terraform-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for CDKTF Terraform CDK Workflow](/claude-code-for-cdktf-terraform-cdk-workflow/)

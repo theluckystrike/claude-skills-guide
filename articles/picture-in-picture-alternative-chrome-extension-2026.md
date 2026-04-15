@@ -169,6 +169,12 @@ The native Picture-in-Picture feature in Chrome provides basic functionality for
 
 For users who need simple multi-video monitoring, extensions like Picture-in-Picture Side-by-Side provide immediate solutions without coding. For developers building custom applications, the Document Picture-in-Picture API and Chrome Extension APIs offer the flexibility to create tailored multi-stream experiences. The best approach depends on your specific requirements, immediate functionality versus complete customization control.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=picture-in-picture-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

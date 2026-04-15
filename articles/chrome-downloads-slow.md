@@ -290,6 +290,12 @@ Chrome's built-in download manager handles casual downloads well. Switch to CLI 
 
 The root cause of slow Chrome downloads is often one of a few specific settings. Start with enabling parallel downloads and disabling QUIC, then verify with curl comparisons to isolate whether the problem is Chrome or your network. For anything where failure has a real cost. large ISOs, deployment artifacts, dataset downloads. skip Chrome's download manager entirely and use `aria2c` or `wget` with resume enabled from the start.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-downloads-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Remote Desktop Slow? Here's How to Fix Lag and Performance Issues](/chrome-remote-desktop-slow/)

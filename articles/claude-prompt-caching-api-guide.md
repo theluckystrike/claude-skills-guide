@@ -209,6 +209,12 @@ Understanding what invalidates the cache prevents unexpected cache misses:
 3. **Monitor every response**: Check `cache_creation_input_tokens` and `cache_read_input_tokens` to verify caching is active.
 4. **Keep tools stable**: Define tools once and reuse the same definitions across all requests.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-prompt-caching-api-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Prompt Caching Not Working](/claude-prompt-caching-not-working/) -- troubleshoot when caching silently fails.

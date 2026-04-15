@@ -193,6 +193,12 @@ Chrome Enterprise data loss prevention provides essential controls for organizat
 
 Start with audit-only rules, analyze your data flows, then progressively tighten controls based on actual business needs. This measured approach builds solid data protection while maintaining workforce productivity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-data-loss-prevention)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Block Phishing Extension: A Developer Guide to.](/chrome-block-phishing-extension/)

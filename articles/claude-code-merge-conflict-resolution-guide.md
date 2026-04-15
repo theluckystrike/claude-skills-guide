@@ -285,6 +285,12 @@ Teams often prefer rebase for feature branches to maintain a clean, linear commi
 
 Merge conflicts are a normal part of development. With Claude Code and the strategies outlined in this guide, you can resolve conflicts efficiently while maintaining code quality. Remember to communicate with your team, keep branches small, and always verify your resolutions with tests. Using skills like `tdd` for validation and `supermemory` for documentation creates a solid workflow that scales with your team.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-merge-conflict-resolution-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for End of Day Commit Workflow](/claude-code-for-end-of-day-commit-workflow/). Clean commit habits reduce merge conflicts

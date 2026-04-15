@@ -249,6 +249,12 @@ Setting up the OneNote Clipper Chrome extension takes only a few minutes but pro
 
 The key to success lies in establishing your organizational system early, create notebooks and sections that match your workflow, add tags consistently, and review your clips regularly. With proper setup, the OneNote Clipper becomes an essential tool in your productivity arsenal.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-onenote-clipper-setup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Angular DevTools Chrome Extension Setup: A Complete Guide](/angular-devtools-chrome-extension-setup/)

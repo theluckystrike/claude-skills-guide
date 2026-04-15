@@ -342,6 +342,12 @@ Prisma transactions and error handling form the backbone of reliable database op
 
 The patterns shown here scale from simple single-operation skills to complex multi-step workflows, adapt them to your specific use case and your database operations will be rock-solid. The most common mistakes are holding transactions open too long, using generic error handlers that swallow useful detail, and omitting retry logic for connection-level failures. Fixing all three puts your skill in a different class of reliability than most Prisma codebases you will encounter in the wild.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-prisma-transactions-and-error-handling-patterns)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Express Middleware Error Handling Patterns Guide](/claude-code-express-middleware-error-handling-patterns-guide/)

@@ -239,6 +239,12 @@ Browser extension conflicts: Running two password manager extensions simultaneou
 
 Team shared vaults: If your team uses 1Password Teams, switching requires migrating all shared vault items, then updating access grants in the new system. Bitwarden Organizations provides a comparable model, but the access control granularity differs. Map your existing permission structure before the migration rather than rebuilding it from memory afterward.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=1password-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password vs Bitwarden Chrome: Which Password Manager.](/1password-vs-bitwarden-chrome/)

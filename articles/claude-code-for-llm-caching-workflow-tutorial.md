@@ -243,6 +243,12 @@ Implementing LLM caching with Claude Code is straightforward and delivers immedi
 Remember to monitor your metrics, tune your TTL values, and always have fallback mechanisms in place. With proper implementation, you can significantly reduce costs while delivering faster responses to your users.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-llm-caching-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Helicone LLM Gateway Workflow Tutorial](/claude-code-for-helicone-llm-gateway-workflow-tutorial/)

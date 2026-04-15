@@ -115,6 +115,12 @@ Chrome Enterprise sync settings policies provide powerful controls for managing 
 
 For developers, understanding these policies helps you build applications that work correctly in enterprise environments and create tooling to manage Chrome deployments at scale. For IT administrators, mastering these configurations ensures your Chrome installations align with organizational security policies while providing users with the productivity benefits of synchronized browsing data.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-sync-settings-policy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Data Loss Prevention: A Developer Guide](/chrome-enterprise-data-loss-prevention/)

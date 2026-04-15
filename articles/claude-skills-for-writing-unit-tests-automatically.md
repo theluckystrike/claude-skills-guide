@@ -238,6 +238,12 @@ For optimal results:
 
 Claude skills for writing unit tests automatically handle the mechanical parts of test creation, freeing you to focus on test strategy and meaningful assertions that protect your codebase.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-writing-unit-tests-automatically)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/). Build a complete CI/CD testing pipeline around the /tdd skill

@@ -176,6 +176,12 @@ When Claude Code keeps suggesting the same broken solution, it's not misbehaving
 The key insight is that your prompts shape Claude's behavior. Rather than criticizing failures, guide toward successes. Rather than listing what doesn't work, specify what should work. Instead of one more attempt at the same approach, explicitly request alternatives.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-keeps-suggesting-the-same-broken-solution)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

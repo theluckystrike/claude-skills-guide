@@ -480,6 +480,12 @@ The Claude Code SDK transforms how developers build AI-powered features. By unde
 
 Start with simple integrations and progressively adopt more advanced patterns as your requirements grow. The SDK's design supports both rapid prototyping and production-grade deployments. Use the phased workflow pattern, plan, implement, document, harden, as your foundation, and layer in concurrent processing, caching, and agentic capabilities as your scale demands them.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sdk-development-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Tutorials Hub](/tutorials-hub/)

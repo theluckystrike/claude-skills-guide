@@ -368,6 +368,12 @@ Include anti-patterns explicitly. A short "Do NOT do this" section alongside eac
 
 Effective polyglot configuration means Claude spends less time guessing your tooling preferences and more time writing code that fits your project standards. The initial investment in a thorough Claude.md pays back quickly, especially as the number of languages and contributors in your project grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-for-polyglot-multi-language-projects)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Multi-Language Navigation Workflow](/claude-code-for-multi-language-navigation-workflow/)

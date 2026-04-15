@@ -271,6 +271,12 @@ Start small, create a single automated task, then expand to more complex pattern
 
 Remember to check Notion's official API documentation for the latest updates and new endpoints. With this foundation, you're well-equipped to build the perfect Notion workflow for your team's needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-notion-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

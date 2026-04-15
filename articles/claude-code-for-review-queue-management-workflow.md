@@ -210,6 +210,12 @@ Implementing a review queue management workflow with Claude Code transforms how 
 
 Start with the basic queue structure, then progressively add complexity as your needs evolve. The investment in building a solid review queue system pays dividends in faster iteration cycles and improved code quality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-review-queue-management-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)

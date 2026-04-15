@@ -204,6 +204,12 @@ Your extension should include a settings page where users can input their API ke
 
 Building a chrome extension AI image generator is straightforward once you understand the message-passing architecture between components. Focus on secure API key management, graceful error handling, and a clean user interface. The real value comes from integrating AI image generation directly into your existing browser workflow, eliminating context switching and speeding up creative iteration.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-ai-image-generator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension CSS Gradient Generator: Tools and Techniques for Developers](/chrome-extension-css-gradient-generator/)

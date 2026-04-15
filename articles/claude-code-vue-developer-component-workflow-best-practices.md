@@ -210,6 +210,12 @@ The best Vue developers using Claude Code don't just accept generated code, they
 
 *This guide covers core workflows for Vue development with Claude Code. For deeper dives into specific topics like Pinia integration, Vue Router patterns, or testing strategies, explore more articles in our Claude Code guide series.*
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vue-developer-component-workflow-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)

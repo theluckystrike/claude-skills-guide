@@ -202,6 +202,12 @@ Claude Code significantly enhances Suricata IDS workflow efficiency by accelerat
 Start by setting up a structured project with proper context, then progressively incorporate Claude Code assistance for rule writing, testing, and maintenance. The investment in establishing good practices will pay dividends in detection reliability and operational efficiency.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-suricata-ids-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

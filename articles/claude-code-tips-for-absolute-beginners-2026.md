@@ -465,6 +465,12 @@ Remember that mastery comes with practice. Start with simple tasks, gradually ta
 
 The single most important thing a beginner can do is invest in a good CLAUDE.md setup, both global preferences and project-level instructions. This document is how you train Claude Code to understand your style, your stack, and your constraints. A well-maintained CLAUDE.md is the difference between a tool that requires constant re-explaining and one that feels like a collaborator that actually knows your project.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-tips-for-absolute-beginners-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome DevTools Tips and Tricks for 2026](/chrome-devtools-tips-tricks-2026/)

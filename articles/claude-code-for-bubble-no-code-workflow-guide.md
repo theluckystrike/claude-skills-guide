@@ -149,6 +149,12 @@ Start small: identify one area in your current Bubble project where custom code 
 The key is balance: use Bubble's strengths for the vast majority of your application, and use Claude Code to fill in the gaps where custom functionality provides meaningful value. This approach maximizes both development speed and application capability.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-bubble-no-code-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bruno API Client Workflow Tutorial](/claude-code-for-bruno-api-client-workflow-tutorial/)

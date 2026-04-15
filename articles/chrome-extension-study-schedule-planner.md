@@ -630,6 +630,12 @@ For internal distribution within a team, use the Enterprise Management console o
 
 A well-built study schedule planner extension replaces multiple separate tools with an integrated solution. The development effort pays off through better focus, automatic reminders, and data that lives where you need it. The architecture described here scales from a personal tool to a team-distributed extension without requiring fundamental redesign.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-study-schedule-planner)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Google Drive Sidebar: Build Your Own](/chrome-extension-google-drive-sidebar/)

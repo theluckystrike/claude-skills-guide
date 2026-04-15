@@ -246,6 +246,12 @@ claude "Refactor this monolithic fluent-bit.conf into separate files: inputs.con
 
 Claude Code transforms Fluent Bit workflow management from manual configuration editing to an assisted, error-reduced process. By generating configurations, validating syntax, creating deployment skills, and debugging issues, Claude Code becomes an invaluable partner in your log processing infrastructure. Start with simple configurations, progressively add complexity, and use Claude's ability to explain and validate each step along the way.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-fluent-bit-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)

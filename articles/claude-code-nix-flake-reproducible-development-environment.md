@@ -310,6 +310,12 @@ Claude Code accelerates this process by understanding your project's structure a
 
 The goal isn't perfection, it's consistency. A flake that covers 80% of your environment beats hand-crafted setup every time, because that 80% works identically everywhere.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nix-flake-reproducible-development-environment)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-code-dev-containers-devcontainer-json-setup-guide/). Use dev containers as an alternative approach for reproducible environments

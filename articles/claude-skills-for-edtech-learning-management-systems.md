@@ -197,6 +197,12 @@ Claude skills transform LMS platforms from static content repositories into inte
 
 The implementations above provide starting points. Adapt the code snippets to your specific LMS, grading standards, and pedagogical approach. [The most effective EdTech AI tools feel invisible](/how-do-i-combine-two-claude-skills-in-one-workflow/), handling complexity behind the scenes while students and instructors experience consistent, personalized support.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-edtech-learning-management-systems)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Production AI Agents with Claude Skills in 2026](/building-production-ai-agents-with-claude-skills-2026/). architecture patterns for embedding AI in production LMS platforms

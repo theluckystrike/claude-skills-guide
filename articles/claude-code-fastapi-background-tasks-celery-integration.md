@@ -318,6 +318,12 @@ uvicorn app.main:app --reload
 Integrating Celery with FastAPI provides a powerful foundation for handling background processing at scale. Start with simple tasks and progressively adopt advanced patterns like task chaining, scheduling, and comprehensive monitoring as your needs grow. The combination of FastAPI's async capabilities and Celery's solid task queue management enables you to build responsive applications that handle demanding workloads efficiently.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-fastapi-background-tasks-celery-integration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)

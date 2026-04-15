@@ -292,6 +292,12 @@ Chrome extensions for Asana task management bridge the gap between your browser 
 
 For power users, combining these extensions with keyboard shortcuts and custom configurations creates a smooth task management experience that keeps you focused on coding rather than context switching.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-asana-task-manager)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Google Drive Sidebar: Build Your Own](/chrome-extension-google-drive-sidebar/)

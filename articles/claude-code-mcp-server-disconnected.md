@@ -149,6 +149,12 @@ Look for entries matching:
 - If your server must send a terminal progress notification, send it **before** the JSON-RPC response in the same write batch
 - Test your MCP server with Claude Code specifically, not just generic MCP clients, since Claude Code has stricter transport error handling
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mcp-server-disconnected)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/)

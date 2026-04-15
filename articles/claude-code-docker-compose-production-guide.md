@@ -418,6 +418,12 @@ Docker Compose provides a solid foundation for deploying Claude Code in producti
 
 Start with the basic configuration, add production hardening as needed, and use Docker Compose's flexibility to adapt your setup to evolving project requirements. The override file pattern in particular pays off quickly once you are managing more than one environment, a small upfront investment in file organization prevents significant configuration drift over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-compose-production-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Docker Compose API Tutorial Guide](/claude-code-docker-compose-api-tutorial-guide/)

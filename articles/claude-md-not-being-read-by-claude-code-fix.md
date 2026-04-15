@@ -201,6 +201,12 @@ Check the Claude Code documentation for your version, and review any recent chan
 
 Building effective CLAUDE.md files takes iteration. Start with the basics, verify loading works, then progressively add complexity. The investment pays off in more productive Claude Code sessions where your project context is properly understood from the first prompt.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-not-being-read-by-claude-code-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Fix Claude Code Ignoring My claude.md File](/how-to-fix-claude-code-ignoring-my-claude-md-file/)

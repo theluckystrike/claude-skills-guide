@@ -205,6 +205,12 @@ Start by configuring your documentation standards in CLAUDE.md, then gradually a
 Remember: Good documentation is an investment in your future self and your team. Let Claude Code help you make that investment consistently across all your languages.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-multi-language-comment-and-docstring-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Multi-Language Navigation Workflow](/claude-code-for-multi-language-navigation-workflow/)

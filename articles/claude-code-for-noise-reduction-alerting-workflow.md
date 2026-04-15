@@ -438,6 +438,12 @@ Implementing a noise reduction alerting workflow with Claude Code transforms ove
 
 The key is starting with simple rules and progressively adding sophistication as you understand your alert patterns better. Begin with fingerprint-based deduplication and maintenance window suppression, these two techniques alone eliminate the majority of alert noise in most systems. Layer in flapping detection and dependency grouping as you gain confidence in your baseline. With Claude Code's flexibility, you can build a system that scales with your organization's needs and adapts as your infrastructure evolves.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-noise-reduction-alerting-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

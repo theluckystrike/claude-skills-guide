@@ -410,6 +410,12 @@ Building reliable BullMQ delayed retry job workflows requires thoughtful configu
 Remember to always implement dead letter queues for jobs that exceed retry limits, set memory-safe `removeOnComplete` and `removeOnFail` limits, monitor your queue health proactively, and design your retry strategy based on your specific failure modes and business requirements. Claude Code is particularly effective for auditing existing configurations, surfacing subtle misconfigurations, and generating the boilerplate for patterns like flow producers and circuit breakers.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-bullmq-delayed-retry-job-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills Redis Caching Layer Implementation](/claude-code-skills-redis-caching-layer-implementation/)

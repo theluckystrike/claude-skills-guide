@@ -257,6 +257,12 @@ Combining Claude Code with Soda Core transforms data quality from a manual, reac
 Start by creating a simple skill that generates basic checks, then progressively add complexity as your confidence grows. The investment pays dividends in reduced data incidents and increased trust in your analytical outputs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-soda-core-data-quality-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Using Claude Code for Data Quality Validation Workflow](/claude-code-for-data-quality-validation-workflow/)

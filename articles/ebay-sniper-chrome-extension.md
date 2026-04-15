@@ -251,6 +251,12 @@ Building an eBay sniper Chrome extension requires understanding Chrome extension
 
 Remember that successful sniping depends on network reliability, timing precision, and adherence to platform policies. Start with the monitoring features, tracking prices and alerting you to auction endings, before implementing automated bid placement.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ebay-sniper-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

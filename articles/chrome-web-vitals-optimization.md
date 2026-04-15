@@ -341,6 +341,12 @@ Fixing Core Web Vitals is not a one-time task. Run Lighthouse audits during deve
 
 These optimizations compound. Start with the issues affecting your worst-performing metric, then address the others. Most sites can achieve "Good" ratings with focused effort on these areas.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-web-vitals-optimization)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Core Web Vitals Checker: Developer Guide](/chrome-extension-core-web-vitals-checker/)

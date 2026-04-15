@@ -215,6 +215,12 @@ For subagents that consistently fail on the same type of task, examine whether t
 
 File-based communication between subagents reduces debugging complexity. When a parent subagent writes its output to a file and a child subagent reads from that file, you can inspect the intermediate state directly. This makes the subagent pipeline observable in a way that in-memory context passing is not.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=parallel-subagents-claude-code-best-practices-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/). Understand when to choose parallel versus sequential pipeline execution

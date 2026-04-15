@@ -202,6 +202,10 @@ Building a SaaS MVP is a sprint, not a marathon. Claude Code skills eliminate bu
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-build-saas-mvp-with-claude-code-skills-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/) - Top frontend skills with examples

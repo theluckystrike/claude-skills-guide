@@ -264,6 +264,12 @@ Once the core functionality works, consider adding features like spaced repetiti
 
 Building an AI flashcard maker extension demonstrates how browser extensions can use AI to enhance productivity and learning. The patterns shown here, content extraction, background processing, and AI integration, apply broadly to many extension projects beyond flashcard generation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-flashcard-maker-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension MLA Citation Generator: Build Your Own Tool](/chrome-extension-mla-citation-generator/)

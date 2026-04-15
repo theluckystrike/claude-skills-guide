@@ -188,6 +188,12 @@ Start with one of the scenarios above that matches your current challenges. As y
 
 Remember that effective profiling combines tools, processes, and expertise. Claude enhances your team's capabilities but doesn't replace the need for understanding your application's behavior. Use it to amplify your skills and speed up your optimization efforts.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-production-profiling-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for CPU Profiling Workflow Tutorial Guide](/claude-code-for-cpu-profiling-workflow-tutorial-guide/)

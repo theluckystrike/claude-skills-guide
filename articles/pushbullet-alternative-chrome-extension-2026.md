@@ -240,6 +240,12 @@ Migrating from Pushbullet requires evaluating your existing use cases:
 
 For CI/CD notifications specifically, Pushover and ntfy integrate naturally with existing build pipelines. Mobile companion apps ensure you receive alerts regardless of your primary device.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=pushbullet-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

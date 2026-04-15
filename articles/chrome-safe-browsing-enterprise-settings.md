@@ -319,6 +319,12 @@ The key decisions are: which protection level matches your threat model and priv
 
 Test your configuration thoroughly in a staging environment before rolling out organization-wide, and monitor the `chrome://policy` page on representative machines to confirm settings are applied correctly after each change.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-safe-browsing-enterprise-settings)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)

@@ -203,6 +203,12 @@ Remember: SAST is most effective when it's fast, accurate, and integrated into d
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-sast-static-analysis-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Semgrep Static Analysis Workflow](/claude-code-for-semgrep-static-analysis-workflow/)

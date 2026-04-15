@@ -248,6 +248,10 @@ Start with the simple implementation above, test it with real code, then progres
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-diff-checker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Grammar Checker Chrome Extension: A Developer's Guide](/ai-grammar-checker-chrome-extension/)

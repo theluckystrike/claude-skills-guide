@@ -187,6 +187,12 @@ Start with simple function-scoped fixtures, then introduce parametrization for i
 
 Pytest fixtures and parametrize form a complementary duo for efficient test authoring. Fixtures handle setup and teardown logic, keeping tests focused on assertions. Parametrize multiplies test coverage by running the same logic against different inputs. Together, they reduce code duplication and improve test maintainability. Apply these patterns to your projects, and your test suite will grow more manageable as it expands.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-pytest-fixtures-parametrize-workflow-tutorial-20)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/). Scale your pytest workflows into a continuous testing pipeline driven by the TDD skill.

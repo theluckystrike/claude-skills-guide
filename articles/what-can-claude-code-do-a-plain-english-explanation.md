@@ -181,6 +181,12 @@ The key is to start experimenting. Pick a small task, try asking Claude Code for
 *Ready to dive deeper? Explore more guides in the Claude Skills Guide to master AI-assisted development.*
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=what-can-claude-code-do-a-plain-english-explanation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

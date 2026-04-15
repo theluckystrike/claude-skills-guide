@@ -308,6 +308,12 @@ Users will need their own API keys from providers like OpenAI, Anthropic, or oth
 
 AI blog post generator Chrome extensions offer powerful capabilities for content creation workflows. By understanding the underlying architecture and implementing proper security practices, developers can build tools that significantly accelerate the writing process. The streaming, structured output, and direct-injection patterns above move the extension from a simple text generator to a genuine CMS integration layer. Start with the basic popup-to-API flow, then layer in streaming and structured output once the core is working reliably.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-blog-post-generator-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Blog Post Outline Generator: A Practical Guide for Content Creators](/chrome-extension-blog-post-outline-generator/)

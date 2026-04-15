@@ -186,6 +186,12 @@ The ClickUp MCP server transforms Claude into a powerful project management assi
 
 For developers looking to extend this further, explore combining the ClickUp MCP server with skills like frontend-design for automatic design task creation, or pdf for generating automated status reports from your ClickUp data. See [how to combine two Claude skills in one workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/) for orchestration patterns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=clickup-mcp-server-workflow-automation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

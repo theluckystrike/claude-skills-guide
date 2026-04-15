@@ -447,6 +447,12 @@ Start with simple patterns to validate your detection logic, then progressively 
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-flink-cep-pattern-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Flink Workflow Tutorial](/claude-code-for-apache-flink-workflow-tutorial/)

@@ -289,6 +289,12 @@ Combining Claude Code with Rye gives you the best of both worlds: a powerful Pyt
 The key is to let Claude Code handle the cognitive heavy lifting, planning, writing, debugging, and reviewing, while Rye manages the mechanical aspects of Python project management. This separation of concerns allows you to focus on solving problems rather than managing tools.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-rye-python-project-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Brownie Python Workflow Guide](/claude-code-for-brownie-python-workflow-guide/)

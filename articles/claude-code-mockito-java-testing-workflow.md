@@ -515,6 +515,12 @@ Claude can also suggest adding `@MockitoSettings(strictness = Strictness.LENIENT
 
 Claude Code transforms your Mockito testing workflow by generating boilerplate, suggesting edge cases, and helping structure maintainable tests. Focus on writing clear tests that verify behavior rather than implementation details. Use the `tdd` skill for test-first development, create reusable fixtures to reduce duplication, use `ArgumentCaptor` for detailed interaction verification, and integrate testing into your CI pipeline for consistent confidence in your codebase. The combination of Claude's code generation and Mockito's expressive API means you spend more time thinking about what your code should do and less time on the mechanics of writing the tests themselves.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mockito-java-testing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code JUnit5 Test Patterns Guide](/claude-code-junit5-test-patterns-guide/)

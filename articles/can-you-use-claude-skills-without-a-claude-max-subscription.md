@@ -112,6 +112,12 @@ For developers exploring Claude Code skills for the first time, the free tier pr
 
 Only consider Max when your usage patterns exceed free tier capacity. By then, you'll have enough experience to know whether the additional features align with your workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=can-you-use-claude-skills-without-a-claude-max-subscription)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). Start with the highest-impact skills that work great on both free and paid tiers.

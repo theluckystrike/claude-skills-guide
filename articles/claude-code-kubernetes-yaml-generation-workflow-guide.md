@@ -366,6 +366,12 @@ Claude Code produces an updated manifest in one pass, explaining the API version
 Claude Code transforms Kubernetes YAML generation from a tedious manual task into an intelligent, assisted workflow. By understanding your requirements and Kubernetes best practices, it generates production-ready configurations that follow industry standards. The real use comes from iterative refinement, generating a base manifest, validating it, extending it with autoscaling and network policies, then migrating it to Helm as your needs grow. Start integrating Claude Code into your Kubernetes development workflow today and experience the difference in productivity and configuration quality.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-kubernetes-yaml-generation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)

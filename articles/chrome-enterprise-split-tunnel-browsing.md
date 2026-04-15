@@ -133,6 +133,12 @@ Version control operations through Git benefit significantly from split tunnelin
 
 Chrome Enterprise split tunnel browsing represents a practical compromise between security visibility and operational performance. For developers and power users who understand their specific network requirements, configuring split tunnel appropriately delivers measurable improvements in daily workflow efficiency while maintaining access to protected corporate resources.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-split-tunnel-browsing)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Incognito Mode Disable Enterprise: A Complete Guide](/chrome-incognito-mode-disable-enterprise/)

@@ -212,6 +212,10 @@ Claude Code reads `CLAUDE.md` automatically at the start of every session. No sk
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-memory-feature-vs-supermemory-skill-comparison)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Supermemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/) - Complete reference on the supermemory skill

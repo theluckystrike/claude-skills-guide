@@ -164,6 +164,12 @@ Claude Code loops typically stem from ambiguous prompts, missing context, or ove
 
 For persistent problems, examine your project configuration and skill definitions for hidden conflicts. With proper scoping and clear requirements, Claude Code produces focused, accurate outputs without getting trapped in repetitive cycles.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-stuck-in-loop-repeating-same-output-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Fix Claude Skill Infinite Loop Issues](/how-to-fix-claude-skill-infinite-loop-issue/). Skill-author fixes for tool re-invocation loops and exit conditions

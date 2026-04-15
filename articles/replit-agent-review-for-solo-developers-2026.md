@@ -97,6 +97,12 @@ Start with Replit Agent if you're building web applications and want the simples
 
 The key insight for 2026: the best AI coding tool is the one that fits your specific workflow. Replit Agent and Claude Code represent different philosophies, one prioritizes integration and speed, the other emphasizes customization and control. Evaluate your needs, experiment with both, and build your ideal development stack.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=replit-agent-review-for-solo-developers-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Bolt.new vs Claude Code for Web Apps in 2026](/bolt-new-vs-claude-code-for-web-apps-2026/)

@@ -257,6 +257,12 @@ Claude Code skills for Azure cost management transform manual monitoring into au
 Start with the basic cost query skill, then progressively add budget alerts, anomaly detection, and optimization recommendations as your cost management mature.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-azure-cost-management-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)

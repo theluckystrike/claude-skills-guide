@@ -206,6 +206,12 @@ Claude Code transforms Pact contract testing from a manual, error-prone process 
 
 The combination of Claude Code's productivity enhancements and Pact's contract testing methodology creates a powerful foundation for building reliable, maintainable distributed systems.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-pact-contract-testing-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Contract Testing with Pact Guide](/claude-code-contract-testing-pact-guide/)

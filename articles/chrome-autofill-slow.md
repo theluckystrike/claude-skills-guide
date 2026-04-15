@@ -259,6 +259,10 @@ Provide detailed information including Chrome version, OS, any extension conflic
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-autofill-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome WebGL Slow: Causes and Solutions for Developers](/chrome-webgl-slow/)

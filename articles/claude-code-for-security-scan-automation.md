@@ -662,6 +662,12 @@ Pass the diff output to Claude Code with the prompt: "Summarize what's new and w
 
 The key is treating security scanning as code. version controlled, automated, and integrated into your development workflow. Claude Code provides the automation layer that makes this practical without adding friction to your development process.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-security-scan-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Security Code Review Checklist Automation](/claude-code-security-code-review-checklist-automation/)

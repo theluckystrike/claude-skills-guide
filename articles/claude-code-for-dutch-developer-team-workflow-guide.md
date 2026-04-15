@@ -412,6 +412,12 @@ Start with small experiments, gather team feedback, and iteratively improve your
 The teams that see the most value from Claude Code are not the ones that automate the most. they are the ones that apply AI assistance where human judgment has historically been most bottlenecked. For Dutch developer teams, that typically means code review preparation, documentation, and test generation: the necessary but cognitively expensive work that slows down the parts of development people actually enjoy. Freeing up time there lets your team focus on the architecture decisions, user experience thinking, and domain expertise that make the difference between software that works and software that is genuinely good.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-dutch-developer-team-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Team Wiki Maintenance Workflow](/claude-code-for-team-wiki-maintenance-workflow/)

@@ -276,6 +276,12 @@ Follow these recommendations when migrating with Claude Code:
 Claude Code accelerates every step of this migration, from analyzing your GraphQL schema to generating endpoints, transformers, tests, and documentation. By following this systematic approach, you can complete your GraphQL to REST migration efficiently while maintaining API reliability.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-graphql-to-rest-migration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)

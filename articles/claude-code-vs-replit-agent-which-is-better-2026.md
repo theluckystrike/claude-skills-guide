@@ -137,6 +137,10 @@ They are not really competing for the same developer. If you are reading this an
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-replit-agent-which-is-better-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Claude Code's skills ecosystem is a key differentiator; this guide explains what is available and how to evaluate options

@@ -246,6 +246,12 @@ Hybrid search combines the precision of keyword search with the semantic underst
 Start with the basic implementation shown here, then iterate based on your specific use case and user feedback. The combination of BM25 and semantic embeddings provides a strong foundation for virtually any search application.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-hybrid-search-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Capacitor Hybrid App Debugging Workflow](/claude-code-capacitor-hybrid-app-debugging-workflow/)

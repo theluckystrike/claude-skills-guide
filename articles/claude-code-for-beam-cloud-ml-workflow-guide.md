@@ -254,6 +254,12 @@ Start by establishing clear project context, then progressively adopt more advan
 
 Remember to iterate on your workflows based on real-world performance metrics. Claude Code can help you analyze monitoring data and suggest specific optimizations for your unique use case.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-beam-cloud-ml-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Cloud Security Posture Workflow](/claude-code-for-cloud-security-posture-workflow/)

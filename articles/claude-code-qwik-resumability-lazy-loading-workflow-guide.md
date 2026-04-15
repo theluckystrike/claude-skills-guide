@@ -242,6 +242,12 @@ Qwik's resumability model transforms how developers think about application perf
 
 Start with simple components, use signals for reactivity, and progressively adopt advanced patterns as your application grows. The combination of Qwik's architecture and Claude Code's capabilities delivers exceptional user experiences with minimal JavaScript overhead.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-qwik-resumability-lazy-loading-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). The full roster of frontend skills including frontend-design, tdd, and canvas-design for building modern UI applications.

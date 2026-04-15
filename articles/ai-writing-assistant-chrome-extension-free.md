@@ -285,6 +285,12 @@ Free AI writing assistant Chrome extensions provide accessible productivity tool
 
 For developers interested in full customization, building a personal AI writing assistant involves understanding Chrome extension architecture, API integration patterns, and text input handling techniques. The investment pays dividends through tailored functionality and direct control over your AI interactions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-writing-assistant-chrome-extension-free)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Paraphraser Chrome Extension Free: A Developer's Guide](/ai-paraphraser-chrome-extension-free/)

@@ -250,6 +250,12 @@ The key is using Claude Code as a collaborative partner in the review process, u
 
 Start with the workflows outlined here, adapt them to your project's specific needs, and watch your PR review process become more efficient and consistent.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-reviewing-open-source-pull-requests)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Open Source Contributions: 2026 Workflow Guide](/claude-code-open-source-contribution-workflow-guide-2026/)

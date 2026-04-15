@@ -185,6 +185,12 @@ Claude Code represents a significant step forward in developer productivity tool
 The key is starting simple: install the tool, configure basic project context, and begin using it for straightforward tasks like code explanation or bug analysis. As you become comfortable with its capabilities, expand into more sophisticated workflows like automated code review, test generation, and interactive development sessions. Your development workflow will never be the same.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-development-environment-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)

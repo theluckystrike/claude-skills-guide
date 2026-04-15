@@ -203,6 +203,12 @@ The key is treating model cards as integral parts of your development process, a
 
 Start implementing these workflows today, and you'll find that well-documented models lead to better collaboration, easier debugging, and more responsible AI deployment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-model-card-documentation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Community Health Metrics Documentation Workflow](/claude-code-community-health-metrics-documentation-workflow/)

@@ -340,6 +340,10 @@ Consistent branch naming is one of the simplest ways to improve your development
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-git-branch-naming-conventions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/). Branch naming is a core git best practice

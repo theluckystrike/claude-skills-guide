@@ -238,6 +238,12 @@ Claude Code transforms S3 Object Lambda development from a complex, infrastructu
 Remember to start simple, test thoroughly in local environments, and iterate based on real-world performance data. With Claude Code as your development partner, you have an intelligent assistant ready to help at every step of your S3 Object Lambda journey.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-s3-object-lambda-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Lambda Response Streaming Workflow](/claude-code-for-lambda-response-streaming-workflow/)

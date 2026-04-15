@@ -180,6 +180,10 @@ With your skill properly configured, you can invoke it with `/skill-name` and Cl
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-code-not-recognize-my-custom-skill-name)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-code-skill-not-found-in-skills-directory-how-to-fix/). If the skill isn't recognized even after registration, this guide addresses the skill list display issues

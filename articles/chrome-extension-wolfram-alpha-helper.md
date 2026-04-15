@@ -342,6 +342,12 @@ Chrome extensions that integrate Wolfram Alpha bridge the gap between your brows
 
 The key is selecting the approach that matches your workflow: quick address bar queries for speed, sidebar tools for research, or custom extensions for specialized needs. Start with the official extension and expand as your requirements become clearer. If you find yourself wishing for tighter integration with specific sites you visit regularly or wanting to combine Wolfram results with other data sources, building a custom Manifest V3 extension is a straightforward project that pays back in daily time savings.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-wolfram-alpha-helper)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Study Helper Chrome Extension: A Developer's Guide](/ai-study-helper-chrome-extension/)

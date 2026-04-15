@@ -251,6 +251,12 @@ The investment in well-engineered system prompts pays dividends through improved
 Remember: your system prompt is the foundation of every conversation. Build it carefully, test it thoroughly, and maintain it proactively.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-system-prompt-engineering-for-production-apps)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Apps with Claude API: Anthropic SDK Python Guide](/building-apps-with-claude-api-anthropic-sdk-python-guide/)

@@ -476,6 +476,12 @@ ActiveRecord scopes and callbacks, when used correctly, make your Rails applicat
 With these best practices, you'll write Rails models that are both powerful and easy to maintain. The patterns here are opinionated, but they reflect what breaks most often in large Rails codebases. and what Claude Code is best positioned to help you get right the first time.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-activerecord-scopes-callbacks-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code ActiveRecord Query Optimization Workflow Guide](/claude-code-activerecord-query-optimization-workflow-guide/)

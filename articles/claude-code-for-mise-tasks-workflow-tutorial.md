@@ -239,6 +239,12 @@ Combining Claude Code with Mise tasks creates a powerful automation layer for yo
 
 Start with simple tasks, create skills for the most common operations, and gradually build more sophisticated workflows as you become comfortable with the pattern. The result is a development environment that understands your intent and executes the right commands automatically.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-mise-tasks-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bruno API Client Workflow Tutorial](/claude-code-for-bruno-api-client-workflow-tutorial/)

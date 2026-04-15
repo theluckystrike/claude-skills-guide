@@ -246,6 +246,12 @@ Always include clear privacy policies explaining how user text is processed. Stu
 
 Building a paraphrase tool for students is a practical project that teaches core extension development concepts while creating something genuinely useful. Start with the basics, text selection and API integration, then add features based on actual student feedback.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-paraphrase-tool-students)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

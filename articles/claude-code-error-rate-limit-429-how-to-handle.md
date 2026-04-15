@@ -224,6 +224,12 @@ If you frequently encounter 429 errors despite implementing these strategies, co
 
 For teams using Claude Code at scale, implementing request queuing with a dedicated service can abstract rate limiting away from individual developers, allowing everyone to work without manual throttling concerns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-error-rate-limit-429-how-to-handle)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Backward Compatibility Guide](/claude-code-api-backward-compatibility-guide/). Write resilient code that handles API changes gracefully

@@ -212,6 +212,12 @@ Skills ship with Claude Code or can be downloaded from the community. See the [c
 
 The skill system is designed to grow with your workflow. You start with the defaults, discover the gaps, and fill them with custom skills tailored exactly to how your team works. Over time, your `~/.claude/skills/` directory becomes a codified record of your team's best practices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-claude-skills-for-developers-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/)

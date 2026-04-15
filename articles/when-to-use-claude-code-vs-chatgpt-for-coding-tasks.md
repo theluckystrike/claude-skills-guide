@@ -147,6 +147,12 @@ Both tools have legitimate use cases in a developer's toolkit. Claude Code trans
 
 Build your workflow around both tools, using each for what it does best.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=when-to-use-claude-code-vs-chatgpt-for-coding-tasks)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs ChatGPT Code Interpreter Comparison](/claude-code-vs-chatgpt-code-interpreter-comparison/)

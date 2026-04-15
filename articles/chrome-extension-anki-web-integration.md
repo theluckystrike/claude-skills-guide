@@ -276,6 +276,12 @@ This foundation supports many extensions: language learning from news sites, tec
 
 The AnkiConnect API supports additional operations like searching existing cards, updating notes, and managing decks. These enable features like duplicate detection before adding new cards, automatic deck routing based on content source, and bulk import from saved collections.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-anki-web-integration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise VPN Integration - A Practical Guide.](/chrome-enterprise-vpn-integration/)

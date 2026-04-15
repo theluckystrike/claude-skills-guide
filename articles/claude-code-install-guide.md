@@ -164,6 +164,12 @@ docker run -it -e ANTHROPIC_API_KEY="$ANTHROPIC_API_KEY" claude-code
 - **Use nvm for Node.js management:** `nvm install 20 && nvm use 20` lets you switch versions without sudo.
 - **Pin Claude Code version in CI:** Use `npm install -g @anthropic-ai/claude-code@2.1.107` for reproducible builds.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-install-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix Claude Code Login — Cannot Paste Auth Code](/claude-code-login-paste-fix) — Login issues after installation

@@ -339,6 +339,12 @@ Building a solid AI red teaming workflow with Claude Code enables systematic sec
 Start with the basic patterns in this guide, then expand your test coverage based on your specific use cases and emerging threat patterns. Regular red teaming becomes more effective as your test libraries grow and your team gains experience identifying and addressing AI vulnerabilities.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-ai-red-teaming-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

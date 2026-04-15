@@ -117,6 +117,12 @@ Once your skill loads correctly, you'll see it recognized in Claude Code's skill
 
 Building reliable skills takes iteration. Start with a minimal working skill, verify it loads, then incrementally add features. This approach isolates problems as they occur rather than debugging a complex file that fails silently.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-code-ignore-my-skill-md-file-entirely)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How Do I Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/). Go deeper on diagnosing skills that load but produce no output

@@ -451,6 +451,12 @@ Accessing Claude Code beta features opens doors to advanced functionality that e
 
 The beta ecosystem continues expanding with skills like pdf for document processing, docx for Word document manipulation, and xlsx for spreadsheet operations all offering beta variants with enhanced functionality. MCP server support broadens this further, connecting Claude Code to databases, browsers, APIs, and local tools that were previously out of reach. Explore the available options, experiment safely in non-production environments, and provide feedback to help shape the future of Claude Code.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-beta-features-how-to-access)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code Offline Without Internet Access](/best-way-to-use-claude-code-offline-without-internet-access/)

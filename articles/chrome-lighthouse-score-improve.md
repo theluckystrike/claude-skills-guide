@@ -627,6 +627,12 @@ Improving your Chrome Lighthouse score requires addressing multiple dimensions o
 
 Run Lighthouse regularly during development to catch regressions early. A score above 90 across all categories indicates a well-optimized site that provides excellent user experience and ranks well in search results. Use CI budgets to prevent regressions from shipping, and interpret scores as averages across multiple runs rather than single measurements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-lighthouse-score-improve)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Lighthouse Audit Runner: A Developer Guide](/chrome-extension-lighthouse-audit-runner/)

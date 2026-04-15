@@ -311,6 +311,10 @@ Whatever you choose, the non-negotiable requirements are: backup your secrets, t
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-authenticator-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)

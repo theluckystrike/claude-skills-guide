@@ -464,6 +464,12 @@ Chrome extensions for readability scoring provide valuable feedback for content 
 
 Whether you use existing tools or build custom solutions, readability scoring helps ensure your content reaches its intended audience effectively. For developers building documentation systems or content platforms, integrating these metrics into the authoring experience creates measurable improvements in content quality. The most impactful teams go beyond displaying a single number: they use sentence-level highlighting, CI gate checks, and CMS integrations to make readability a built-in part of the content workflow rather than an afterthought.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-readability-score-checker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Color Contrast Checker: A Developer Guide](/chrome-extension-color-contrast-checker/)

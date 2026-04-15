@@ -255,6 +255,12 @@ GitHub Actions environment protection combined with Claude Code skills creates p
 
 The key is finding the right balance between security controls and developer velocity. Too many approval gates create bottlenecks; too few expose you to risk. Review your workflows regularly and adjust based on team size, project criticality, and deployment frequency.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-github-actions-approval-workflows)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/)

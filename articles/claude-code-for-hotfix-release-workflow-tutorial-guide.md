@@ -228,6 +228,12 @@ The key is preparation: build your hotfix skill once, test it in non-emergency s
 
 Remember: speed matters in hotfixes, but so does safety. Let Claude handle the mechanical tasks while you focus on the critical decisions that only a human can make.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-hotfix-release-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Changesets Monorepo Release Workflow](/claude-code-for-changesets-monorepo-release-workflow/)

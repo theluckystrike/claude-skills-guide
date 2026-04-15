@@ -160,6 +160,12 @@ Claude Code transforms code review preparation from a time-consuming chore into 
 
 Start with context loading, add automated checks for your specific domain needs, analyze complex sections with targeted prompts, and document findings systematically. This workflow scales across teams and maintains consistency even as personnel change.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-code-review-preparation-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Augment Code AI Review for Enterprise Teams 2026](/augment-code-ai-review-for-enterprise-teams-2026/)

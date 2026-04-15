@@ -376,6 +376,12 @@ Consider offering a self-hosted option where users run their own AI models, addr
 
 Building an AI calendar assistant Chrome extension requires integrating multiple technologies: browser APIs, calendar services, and AI/ML capabilities. Start with the Google Calendar API, add simple pattern matching for common requests, then layer in AI for complex natural language understanding. The key is balancing functionality with performance and security considerations specific to calendar data.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-calendar-assistant-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Form Filler Chrome Extension: A Developer and Power.](/ai-form-filler-chrome-extension/)

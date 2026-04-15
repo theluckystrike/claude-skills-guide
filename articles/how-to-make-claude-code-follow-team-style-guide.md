@@ -211,6 +211,12 @@ The key is consistency. Every team member should reference the same style guide,
 
 Remember that style guides evolve. Build feedback mechanisms that identify when Claude consistently generates certain patterns that conflict with your current standards. Update your configuration accordingly, and the changes propagate to all future generations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-follow-team-style-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - For an in-depth guide to naming convention enforcement specifically, see [How to Make Claude Code Follow My Naming Conventions](/how-to-make-claude-code-follow-my-naming-conventions/)

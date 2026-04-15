@@ -578,6 +578,12 @@ Custom elements transform Claude Code into a powerful, customized development as
 Remember to version your elements, document thoroughly, and test regularly. With proper custom elements in place, Claude becomes not just a coding assistant, but an integrated team member familiar with your project's unique requirements and patterns. The investment in building a strong element library pays dividends every day your team uses it. and because elements are just text files, they are cheap to write, easy to share, and trivial to update.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-custom-elements-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cypress Custom Commands Workflow Best Practices](/claude-code-cypress-custom-commands-workflow-best-practices/)

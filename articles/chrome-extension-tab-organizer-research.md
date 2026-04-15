@@ -356,6 +356,12 @@ Storage quota exceeded: Compress session data before storing using the Compressi
 
 Building a tab organizer requires balancing functionality with Chrome's API constraints. Start with basic grouping and session save/restore, then layer on intelligent automation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-tab-organizer-research)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Outline Notes Organizer: A Developer Guide](/chrome-extension-outline-notes-organizer/)

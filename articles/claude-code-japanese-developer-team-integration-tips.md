@@ -534,6 +534,12 @@ Common patterns in Japanese development teams show that documentation generation
 
 Use this data to prioritize which skill workflows to document and share in your team wiki. Japanese teams' emphasis on knowledge sharing means documented, reproducible Claude Code workflows spread effectively once the initial adoption friction is overcome. Pairing the measurement data with a short demo session where experienced users show the workflow to the team tends to accelerate adoption significantly in collaborative Japanese team cultures.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-japanese-developer-team-integration-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for Japanese Developers Workflow Guide](/claude-code-skills-for-japanese-developers-workflow-guide/)

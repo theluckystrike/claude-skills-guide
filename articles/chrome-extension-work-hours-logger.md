@@ -229,6 +229,12 @@ Building your own logger gives you complete control over these decisions. Self-h
 
 Whether you need simple time tracking for personal productivity or detailed billing for client work, a chrome extension work hours logger can automate the process. Start with active tab tracking, add idle detection for accuracy, and layer on project categorization as your needs grow. The Chrome APIs provide everything needed to build powerful time tracking directly in your browser.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-work-hours-logger)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)

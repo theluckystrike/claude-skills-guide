@@ -134,6 +134,12 @@ The most effective developers will use both: skills for intelligent assistance a
 
 Rather than asking whether skills will replace plugins, ask which specific workflows benefit from each approach. Your IDE becomes more capable not by choosing one over the other, but by composing them intelligently.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=will-claude-skills-replace-traditional-ide-plugins)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Can You Use Claude Skills Inside VS Code Extensions](/can-you-use-claude-skills-inside-vs-code-extensions/). Explore how skills and VS Code extensions can work together rather than compete

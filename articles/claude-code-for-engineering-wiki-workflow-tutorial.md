@@ -281,6 +281,12 @@ Next Steps:
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-engineering-wiki-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide](/claude-code-for-prompt-engineering-techniques-2026-workflow-/)

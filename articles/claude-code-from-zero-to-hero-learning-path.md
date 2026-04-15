@@ -247,6 +247,12 @@ Your journey from zero to hero with Claude Code follows no fixed timeline. Some 
 
 The investment pays dividends across every aspect of technical work. Whether you generate documentation with the docx skill, create presentations through pptx, or build custom integrations with MCP, Claude Code becomes an extension of your capabilities rather than a separate tool you context-switch into. Start with simple tasks, build confidence, and let your expertise grow naturally through practical application.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-from-zero-to-hero-learning-path)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Hindi Speaking Developers - Getting Started](/claude-code-for-hindi-speaking-developers-getting-started/)

@@ -181,6 +181,12 @@ Claude Code transforms traditional mentorship by providing personalized, patient
 
 Start integrating Claude Code into your teaching practice today. Begin with simple projects, progressively increase complexity, and always encourage learners to question and understand rather than simply accept AI suggestions. The developers who thrive with AI tools are not those who use them the most. they are the ones who have developed the judgment to know when to use them, when to override them, and when to dig deeper on their own.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mentorship-and-teaching-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

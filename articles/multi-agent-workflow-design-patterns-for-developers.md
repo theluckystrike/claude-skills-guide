@@ -292,6 +292,12 @@ Multi-agent workflows represent a significant advancement in AI-assisted develop
 
 The key is starting simple, two-agent handoffs or parallel specialists, and progressively adopting more sophisticated patterns as your workflow requirements demand. Monitor which stages in your workflows are slowest, which fail most often, and which produce the most rework, then invest in better design for those specific stages. With proper design, multi-agent systems become force multipliers for development productivity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=multi-agent-workflow-design-patterns-for-developers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/). Technical detailed look on the Task tool, context management, and error recovery for subagent workflows

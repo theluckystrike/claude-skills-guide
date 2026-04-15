@@ -202,6 +202,12 @@ Claude Code amplifies your productivity, but it also amplifies your architectura
 
 The key is treating Claude as a junior developer: provide clear requirements, establish conventions upfront, and review output against the same standards you'd apply to human-written code. Your documentation skills (whether using `docx` for specifications or `pdf` for reports), testing practices (through `tdd` workflows), and design capabilities (via `frontend-design`) all benefit from this disciplined approach.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-follow-dry-solid-principles)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/). DRY and SOLID reduce complexity

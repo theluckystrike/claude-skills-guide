@@ -353,6 +353,12 @@ The most effective workflow is to use Claude Code as a pair programmer for async
 
 Remember: the event loop is your friend, not your enemy. Embrace asynchronous programming, monitor your lag in production, and your Node.js applications will scale beautifully.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nodejs-event-loop-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for 0x Node Flame Workflow Guide](/claude-code-for-0x-node-flame-workflow-guide/)

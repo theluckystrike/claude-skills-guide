@@ -618,6 +618,12 @@ The `sequence` helper, layout load inheritance, and `Promise.all` parallel fetch
 By internalizing the request flow, from `handle` setting `locals`, through layout loads establishing shared context, to page loads fetching specific data, you'll know exactly where to place each piece of logic and how to debug it when something goes wrong.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sveltekit-hooks-handle-load-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)

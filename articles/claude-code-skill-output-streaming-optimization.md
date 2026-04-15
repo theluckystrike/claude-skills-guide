@@ -227,6 +227,10 @@ The streaming behavior in Claude Code is automatic. Focus on prompt structure an
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skill-output-streaming-optimization)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Token Usage Profiling and Optimization](/claude-skill-token-usage-profiling-and-optimization/). Measure token consumption to identify streaming bottlenecks and optimization opportunities

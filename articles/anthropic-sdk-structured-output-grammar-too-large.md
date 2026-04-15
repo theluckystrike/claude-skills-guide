@@ -260,6 +260,12 @@ except ValidationError as e:
 - **Test incrementally**: add schema properties one at a time, testing after each addition
 - **Use Pydantic validation as primary**: structured outputs are a convenience, not a requirement
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=anthropic-sdk-structured-output-grammar-too-large)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix: Anthropic API 500 Error with strict: true](/anthropic-sdk-strict-true-500-error)

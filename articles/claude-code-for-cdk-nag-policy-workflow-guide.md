@@ -169,6 +169,12 @@ Integrating Claude Code with CDK Nag transforms policy compliance from a manual 
 
 Start by running Nag on your existing CDK stacks and feed the results to Claude. Even a quick "explain these findings" query reveals the immediate value, and from there, you can build toward full pipeline integration with custom skills tailored to your organization's policies.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cdk-nag-policy-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)

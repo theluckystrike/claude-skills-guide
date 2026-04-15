@@ -205,6 +205,12 @@ The key is to design clear escalation criteria, provide sufficient context for h
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=human-in-the-loop-multi-agent-patterns-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Multi-Agent Orchestration Patterns Guide](/claude-code-multi-agent-orchestration-patterns-guide/)

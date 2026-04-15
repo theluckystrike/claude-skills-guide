@@ -249,6 +249,12 @@ Migration Assistance: When you need to modify your schema or upgrade Clerk versi
 Claude Code transforms full-stack development from a complex orchestration task into a collaborative experience where you describe your intent and receive working, integrated code. For Vercel + Supabase + Clerk applications, this means faster iteration and fewer integration bugs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-vercel-supabase-clerk-full-stack)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for Supabase Full Stack Apps Guide](/claude-code-skills-for-supabase-full-stack-apps-guide/)

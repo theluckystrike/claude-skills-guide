@@ -137,6 +137,12 @@ The most reliable approach combines auto invocation as a convenience with manual
 
 As you develop more skills and understand your patterns, you'll naturally gravitate toward the explicit invocation style for important tasks. The auto invocation system continues improving, but it serves best as a helpful assistant rather than a guaranteed mechanism.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-skill-auto-invocation-fail-intermittently)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Understand the auto invocation system deeply before troubleshooting intermittent failures.

@@ -186,6 +186,12 @@ Store your migration skill in your project's `.claude/skills` directory or share
 
 Building effective migration skills takes iteration. Start with a basic version, use it for real migrations, and refine the skill based on what worked and what needed adjustment. The fastest way to seed a skill is to run a few migrations interactively with Claude Code first, those sessions reveal which patterns to encode. Over time, you'll have a specialised tool that handles your database changes reliably and follows your project's conventions precisely, without having to re-explain them on every invocation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-creating-database-migration-scripts)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/). The interactive workflow for generating and reviewing migrations directly with Claude Code before encoding patterns as a skill

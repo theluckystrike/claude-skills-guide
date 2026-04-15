@@ -221,6 +221,12 @@ Start by setting up a basic pipeline, then gradually add complexity with custom 
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cdk-pipelines-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for CDK Nag Policy Workflow Guide](/claude-code-for-cdk-nag-policy-workflow-guide/)

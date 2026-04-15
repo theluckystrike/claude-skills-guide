@@ -370,6 +370,12 @@ While Claude Code sometimes produces non-runnable code, understanding the causes
 
 The key is treating Claude Code as a powerful coding partner rather than a perfect code generator. With the right approach, you can harness its capabilities while avoiding the common pitfalls that lead to non-runnable code.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-is-claude-code-producing-code-that-does-not-run)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

@@ -238,6 +238,12 @@ Start with basic troubleshooting by updating drivers and monitoring Task Manager
 
 Developers building web applications should pay close attention to WebGL context cleanup and canvas lifecycle management, as these are the most common sources of GPU memory that grows over a browser session. Power users benefit most from learning to read `chrome://gpu` output and using Tab Manager combined with selective extension disabling to isolate the source quickly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-gpu-process-high-memory)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Network Service High CPU Usage: Causes and Solutions for Developers](/chrome-network-service-cpu/)

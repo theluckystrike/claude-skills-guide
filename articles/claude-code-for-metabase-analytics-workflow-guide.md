@@ -212,6 +212,12 @@ Integrating Claude Code with Metabase transforms your analytics workflow from ma
 Remember to secure your API credentials, implement proper error handling, and gradually expand your automation as your workflows mature. With these practices in place, you'll have a scalable analytics infrastructure that grows with your team's needs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-metabase-analytics-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)

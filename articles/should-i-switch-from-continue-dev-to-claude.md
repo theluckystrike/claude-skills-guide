@@ -112,6 +112,12 @@ However, if your work centers on quick IDE-based assistance and smaller tasks, C
 
 If you're ready to try Claude Code's advanced capabilities, start with a complex task where you'll clearly see the difference. The skills system alone, unique to Claude Code, can transform how you approach repetitive development patterns. For developers working on substantial projects, the switch often proves transformative.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=should-i-switch-from-continue-dev-to-claude)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Should I Switch from Codeium to Claude Code? A.](/should-i-switch-from-codeium-to-claude-code/)

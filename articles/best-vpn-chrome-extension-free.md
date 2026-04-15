@@ -266,6 +266,12 @@ The "best" free VPN Chrome extension depends on your specific needs. For develop
 
 For production use, consider investing in a reputable paid VPN service that does not log your data. The cost is minimal compared to the privacy risks of free alternatives that monetize through data harvesting. For development workflows specifically, an SSH tunnel through a cloud VM costs nothing extra if you already maintain a VPS and gives you more control than any free extension.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-vpn-chrome-extension-free)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Browser for Old Laptop: A Developer and Power User.](/best-browser-old-laptop/)

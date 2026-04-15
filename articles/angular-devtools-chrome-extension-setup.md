@@ -328,6 +328,12 @@ When you repeat this process before and after performance optimizations, you get
 
 Angular DevTools integrates smoothly with Chrome DevTools, providing Angular-specific insights alongside the browser's standard debugging tools. Once you incorporate this extension into your workflow, debugging Angular applications becomes significantly more efficient and the guesswork of tracking down performance regressions is replaced with measurable, reproducible data.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=angular-devtools-chrome-extension-setup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome DevTools Performance Profiling: A Practical Guide](/chrome-devtools-performance-profiling/)

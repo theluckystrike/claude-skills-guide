@@ -111,6 +111,12 @@ This bypasses OAuth entirely and uses direct API authentication.
 - Add the token export to your shell profile (`~/.bashrc`, `~/.zshrc`) so it persists across sessions
 - For CI/CD environments, store the token as a secret and inject it via environment variable
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-oauth-login-paste-not-working)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix: Claude Code Headless Linux Auth Blocked by Cloudflare](/claude-code-headless-linux-auth)

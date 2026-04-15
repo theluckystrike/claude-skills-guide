@@ -722,6 +722,12 @@ The most important mindset shift is treating live regions as infrastructure, not
 The key to success is treating accessibility as an integral part of your development process rather than an afterthought. With Claude Code as your assistant, implementing and maintaining ARIA live regions becomes a streamlined, efficient workflow that benefits all your users.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-aria-live-regions-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

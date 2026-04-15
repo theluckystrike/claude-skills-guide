@@ -218,6 +218,12 @@ Organizing Claude skills in a monorepo provides structure, reuse, and maintainab
 
 Start with the recommended directory layout, add your skills progressively, and build shared resources as you identify common patterns. Your future self will thank you when debugging a skill invocation takes minutes instead of hunting through scattered files.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=what-is-the-best-way-to-organize-claude-skills-in-a-monorepo)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Shared Claude Skills Across Monorepo Multiple Packages](/shared-claude-skills-across-monorepo-multiple-packages/). If your software project is itself a multi-package monorepo, this companion guide covers how to share skills across those packages using symlinks, overrides, and composition

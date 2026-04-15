@@ -685,6 +685,10 @@ The combination of test-driven development, thoughtful UI implementation, and li
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-websocket-realtime-app-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for GraphQL Schema Design and Testing](/claude-skills-for-graphql-schema-design-and-testing/). Combine WebSocket real-time subscriptions with GraphQL schema design for full-stack real-time APIs.

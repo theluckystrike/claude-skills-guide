@@ -548,6 +548,12 @@ The frontend-design skill complements backend work by generating UI components t
 
 For greenfield projects, a productive sequence is: define your schema and RLS policies with Claude Code, run migrations, then hand the schema to frontend-design and tdd to generate the application layer and test coverage simultaneously.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-with-supabase-backend-integration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for Supabase Full-Stack Apps Guide](/claude-code-skills-for-supabase-full-stack-apps-guide/). See also

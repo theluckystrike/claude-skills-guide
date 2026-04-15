@@ -173,6 +173,12 @@ If your GHES instance uses a self-signed SSL certificate, you may need to config
 
 For organizations managing Chrome through GPO, you can pre-install the trusted certificate via Group Policy, eliminating the manual trust-acceptance step for all managed machines.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=octotree-chrome-extension-github)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

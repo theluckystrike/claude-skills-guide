@@ -364,6 +364,12 @@ The key is treating your monitoring infrastructure as code. versioned, documente
 Start small: use Claude Code to generate your first federate configuration, then expand to service discovery, comprehensive alerting, and cardinality auditing. Bring Claude Code into your configuration review process the same way you would a senior SRE: give it context about your infrastructure, ask it to find problems, and let it generate the tedious boilerplate while you focus on architectural decisions.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-prometheus-federation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for GraphQL Federation Workflow Guide](/claude-code-for-graphql-federation-workflow-guide/)

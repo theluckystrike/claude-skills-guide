@@ -262,6 +262,12 @@ Switch to Firefox when you are debugging CSS layout issues, especially Grid or F
 
 The developers who waste the most time are those who insist on doing everything in one browser. Chrome is the right default. It is not the right tool for every job.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=fastest-browser-web-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Split Tunnel Browsing: A Practical Guide](/chrome-enterprise-split-tunnel-browsing/)

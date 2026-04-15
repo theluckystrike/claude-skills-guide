@@ -188,6 +188,12 @@ Remember that jsPolicy policies are just JavaScript, you have full access to lib
 
 Start with simple policies, validate they work correctly, then gradually add complexity. This incremental approach, combined with Claude's assistance, leads to solid policy sets that secure your Kubernetes environments without unnecessary friction.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-jsolicy-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

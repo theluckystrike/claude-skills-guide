@@ -472,6 +472,12 @@ For local development, a lightweight extension with socket access offers the fas
 
 The most important takeaway is that Docker socket access in a browser extension is not a casual permission, it is equivalent to root on your machine. Treat the forwarded TCP port with the same care you would treat an SSH private key, and the convenience these extensions provide is well worth it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-docker-dashboard)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

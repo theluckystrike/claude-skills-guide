@@ -188,6 +188,12 @@ The rejection message, when available, contains clues about what's wrong. Look f
 
 Building skills for Claude Code becomes straightforward once you understand the parsing requirements. Most [rejection issues come down to front matter formatting](/troubleshooting-hub/) or ambiguous instruction language. Fix those, and your skills load reliably.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-code-reject-my-skill-instruction-block)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skill-yaml-front-matter-parsing-error-fix/). Resolve YAML-specific formatting errors in skill instruction blocks

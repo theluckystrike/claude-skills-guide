@@ -264,6 +264,12 @@ Chrome Enterprise provides a solid set of tools for managing browser bandwidth a
 
 For most organizations, a combination of Data Saver plus disabled prefetching provides the best balance between user experience and bandwidth conservation. For more specific requirements, the Management API enables programmatic policy control that integrates with your existing infrastructure.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-bandwidth-management)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Extension Management API: A Practical.](/chrome-enterprise-extension-management-api/)

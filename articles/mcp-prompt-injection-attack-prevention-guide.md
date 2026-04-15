@@ -307,6 +307,12 @@ Set up alerts for sanitization event rate spikes. A sudden increase in filtered 
 
 Prompt injection prevention requires defense in depth. No single technique eliminates the attack surface entirely, sanitization misses novel patterns, output constraints can be bypassed, and indirect injection through retrieved content presents challenges that sanitization alone cannot solve. The goal is layered resistance: sanitization reduces attack success rate, output constraints limit damage when attacks partially succeed, logging and monitoring enable rapid response when new patterns emerge, and regular testing validates that all of these layers actually work. By combining input sanitization, structured data boundaries, capability isolation, parameterized tool design, and active monitoring, you can build MCP integrations that remain secure against injection attacks. The key is treating all external data as potentially malicious until proven otherwise.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mcp-prompt-injection-attack-prevention-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Tool Description Injection Attack Explained](/mcp-tool-description-injection-attack-explained/)

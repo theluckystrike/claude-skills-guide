@@ -350,6 +350,12 @@ Relying on `fill` without a positioned parent. The `fill` prop requires `positio
 
 Next.js image optimization works best when you understand the component's key features: the `priority` prop for above-the-fold content, the `sizes` prop for responsive images, direct imports for static assets, and proper remote domain configuration. The `fill` layout handles dynamic content where dimensions are unknown, and build-time scripts can generate blur placeholders and manifests to keep components clean. After optimizing images, you can deploy your Next.js app with confidence using [Claude Code's Vercel deployment workflow](/claude-code-vercel-deployment-nextjs-workflow-guide/). Using Claude Code with skills like `frontend-design` and `tdd` accelerates development while maintaining quality through tested implementations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nextjs-image-optimization-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)

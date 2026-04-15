@@ -119,6 +119,12 @@ A slow new tab page usually stems from extension overhead, sync issues, cache co
 
 Most chrome new tab slow problems resolve by disabling unnecessary extensions, clearing corrupted cache, or toggling hardware acceleration. For developers, maintaining a lean extension set and regular browser maintenance prevents these issues from recurring.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-new-tab-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Autofill Slow: Causes and Solutions for Developers](/chrome-autofill-slow/)

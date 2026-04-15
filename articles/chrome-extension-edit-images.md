@@ -222,6 +222,12 @@ Building a Chrome extension for image editing combines web technologies with Chr
 
 The implementation patterns shown here form a foundation you can extend with additional features like filters, transformations, drawing tools, and integration with cloud storage. Start with the core functionality, then add complexity as you understand your users' workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-edit-images)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Resize Images: A Practical Guide for Developers](/chrome-extension-resize-images/)

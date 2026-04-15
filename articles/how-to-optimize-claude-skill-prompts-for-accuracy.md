@@ -404,6 +404,10 @@ The before version would produce anything from a one-liner to a multi-paragraph 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-optimize-claude-skill-prompts-for-accuracy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Speed Up Claude Code Responses with Better Prompt Structure](/speed-up-claude-code-responses-with-better-prompt-structure/). Companion guide: reducing response latency and token usage rather than improving accuracy

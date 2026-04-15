@@ -263,6 +263,12 @@ Claude Code's flexibility makes it an excellent tool for freelancers managing mu
 Start with one client, refine your `CLAUDE.md` and skill templates, then replicate the pattern for each new client. Within a few weeks, you'll have a streamlined system that handles the complexity of multi-client freelance work effortlessly.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-freelancer-multi-client-project-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Axios HTTP Client Workflow](/claude-code-axios-http-client-workflow/)

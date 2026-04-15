@@ -215,6 +215,12 @@ The fan-out fan-in pattern with Claude Code subagents enables scalable, efficien
 
 Start with simple two-agent implementations and progressively add complexity as your requirements grow. The pattern's flexibility allows it to adapt to virtually any parallel processing need in your Claude Code projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=fan-out-fan-in-pattern-claude-code-subagents)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Agent Swarm Coordination Strategies](/claude-code-agent-swarm-coordination-strategies/). Complement fan-out/fan-in with shared state coordination patterns for managing swarms of parallel agents

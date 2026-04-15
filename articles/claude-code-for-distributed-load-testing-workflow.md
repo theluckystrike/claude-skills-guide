@@ -274,6 +274,12 @@ Follow these recommendations to get the most out of your AI-assisted load testin
 Claude Code transforms distributed load testing from a manual, error-prone process into an automated, intelligent workflow. By using AI for test generation, execution, and analysis, you can more quickly identify performance issues and validate system reliability at scale. The key is integrating Claude Code into your existing tooling while maintaining control over test scenarios and success criteria.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-distributed-load-testing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Load Testing with K6 Workflow Guide](/claude-code-for-load-testing-with-k6-workflow-guide/)

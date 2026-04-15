@@ -435,6 +435,12 @@ Callers can then use `errors.Is` to check for sentinel errors and `errors.As` to
 
 Building Go modules with Claude Code combines Go's simplicity and performance with AI-assisted development. Focus on clean package design, comprehensive testing, and clear documentation from the start. Lean on interfaces to create architectural boundaries, use table-driven tests to cover edge cases thoroughly, and establish consistent error handling patterns before your codebase grows large enough to make refactoring painful. The skills ecosystem, including tdd, pdf, and supermemory, provides targeted assistance for different aspects of module development. Start with a solid foundation, ship working code quickly, and iterate based on actual usage patterns rather than speculation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-go-module-development-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Tutorials Hub](/tutorials-hub/)

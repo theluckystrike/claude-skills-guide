@@ -211,6 +211,12 @@ Dhat provides detailed memory allocation insights that are essential for buildin
 
 Remember that memory optimization is often about trade-offs. Not all allocations are problems, and not all optimizations are worth implementing. Use Dhat data to identify the highest-impact opportunities, then work with Claude Code to implement practical solutions that balance performance, readability, and maintainability.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-dhat-memory-profiling-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Memory Profiling Workflow Tutorial](/claude-code-for-memory-profiling-workflow-tutorial/)

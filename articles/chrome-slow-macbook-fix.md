@@ -122,6 +122,12 @@ For developers, creating separate profiles for different workflows provides the 
 
 These optimizations work together, the cumulative effect significantly improves Chrome's responsiveness on MacBooks, letting you focus on your work rather than waiting for pages to load.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-slow-macbook-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Omnibox Slow? Here's How to Fix It](/chrome-omnibox-slow/)

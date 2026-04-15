@@ -359,6 +359,12 @@ The key is treating your branch protection rules as code, version controlled, re
 Remember to regularly review and update your branch protection strategy as your project evolves. What works for a small team may need adjustment as you scale, and Claude Code makes that adaptation straightforward.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-branch-protection-rules-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)

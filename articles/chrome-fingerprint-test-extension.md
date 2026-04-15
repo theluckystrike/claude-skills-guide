@@ -352,6 +352,10 @@ Browser fingerprinting is a sophisticated tracking technique that developers and
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-fingerprint-test-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Incognito Mode Disable Enterprise: A Complete Guide](/chrome-incognito-mode-disable-enterprise/)

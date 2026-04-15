@@ -284,6 +284,12 @@ The declarativeNetRequest API has constraints to be aware of. You can define up 
 
 For users who need more advanced features like password-protected blocking or detailed analytics, consider integrating a backend service or combining with other APIs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-block-distracting-sites)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Block Chrome from Sending Data to Google](/block-chrome-sending-data-google/)

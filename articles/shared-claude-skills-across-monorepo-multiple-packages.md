@@ -228,6 +228,12 @@ Sharing Claude skills across a monorepo with multiple packages requires thoughtf
 
 By configuring Claude with multiple skill paths, using composition to build higher-level workflows, and implementing proper versioning, your team can maintain consistent automation across every package in your monorepo.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=shared-claude-skills-across-monorepo-multiple-packages)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/). The foundational monorepo organization guide that this shared-skills article builds upon for multi-package setups

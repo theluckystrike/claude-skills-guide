@@ -278,6 +278,12 @@ Electric SQL combined with Claude Code provides a powerful toolkit for building 
 
 With these practices, you'll be well-equipped to build solid local-first applications that work smoothly whether your users are online or offline.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-electric-sql-sync-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Feed Claude Code a Large SQL Schema](/best-way-to-feed-claude-code-a-large-sql-schema/)

@@ -272,6 +272,12 @@ Connect your transformed data to visualization tools like Looker, Tableau, or cu
 
 Chrome reporting connectors form essential infrastructure for data-driven browser management. Start with a focused use case, prove the data pipeline works, then expand capabilities incrementally. The patterns outlined here provide a foundation for building enterprise-grade systems that scale with your organization's needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-reporting-connector-enterprise)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Context-Aware Access: Implementation Guide](/chrome-enterprise-context-aware-access/)

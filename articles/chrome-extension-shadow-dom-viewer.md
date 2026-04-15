@@ -146,6 +146,12 @@ Shadow DOM viewer extensions bridge the gap between hidden component internals a
 
 These tools prove essential as web components and shadow DOM usage continues growing across frameworks like React, Vue, and vanilla JavaScript implementations. The ability to quickly inspect isolated component internals saves hours of troubleshooting style encapsulation and DOM structure issues.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-shadow-dom-viewer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Meta Tag Viewer: Inspect HTML Metadata.](/chrome-extension-meta-tag-viewer/)

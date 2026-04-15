@@ -129,6 +129,12 @@ Chrome slow startup stems from extension overload, profile corruption, excessive
 
 With systematic diagnosis and targeted fixes, you can reduce Chrome startup from sluggish to near-instant, reclaiming minutes lost to waiting each day.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-slow-startup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Translate Slow: Fix Performance Issues for Power Users](/chrome-translate-slow/)

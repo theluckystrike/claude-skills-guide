@@ -345,6 +345,12 @@ async function rebuildSearchIndex() {
 
 Chrome extension session management transforms chaotic tab collections into organized, recoverable workflows. Start with basic save and restore, then incrementally add features like tab groups, scheduled backups, and keyboard shortcuts.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-session-manager-tabs)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)

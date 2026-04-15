@@ -164,6 +164,12 @@ Claude Code not detecting your Python virtual environment stems from shell sessi
 
 With your virtual environment properly detected, Claude Code can help you build, test, and deploy Python projects without environment-related interruptions. The AI assistant becomes a reliable development partner that understands your project's specific setup and works within your established tooling.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-not-detecting-my-virtual-environment-python-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/). Document environment setup so Claude always uses the right interpreter

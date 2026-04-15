@@ -214,6 +214,12 @@ Implementing a structured Planetscale MCP server branching workflow transforms d
 
 The patterns in this guide work particularly well when combined with other Claude skills. Use the TDD skill to validate schema changes, the frontend-design skill to build branch management interfaces, and the supermemory skill to maintain institutional knowledge about your database evolution.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=planetscale-mcp-server-branching-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

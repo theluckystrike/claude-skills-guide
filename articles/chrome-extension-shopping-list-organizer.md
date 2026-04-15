@@ -360,6 +360,12 @@ Drag-and-drop not working on touch screens: The HTML5 DnD API does not fire touc
 
 Export button copying empty text: The Clipboard API requires a user gesture. Ensure `navigator.clipboard.writeText()` is called directly inside the button's `click` handler. not inside a `setTimeout` or `Promise.then` that runs after the gesture expires.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-shopping-list-organizer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Jira Ticket Creator: Automate Issue.](/chrome-extension-jira-ticket-creator/)

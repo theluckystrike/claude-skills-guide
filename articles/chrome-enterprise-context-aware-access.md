@@ -157,6 +157,12 @@ When building applications for deployment in context-aware environments, conside
 
 Context-aware access fundamentally changes how we think about browser security. By shifting the access decision from network location to contextual trust, organizations can protect their resources while providing better user experiences. For developers, understanding this model helps build applications that work correctly within enterprise security frameworks.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-context-aware-access)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Reporting Connector Enterprise: Implementation Guide](/chrome-reporting-connector-enterprise/)

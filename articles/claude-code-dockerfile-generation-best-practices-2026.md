@@ -486,6 +486,12 @@ Claude Code transforms Dockerfile generation from a tedious task into a collabor
 The most impactful practices to adopt immediately are: multi-stage builds for every compiled or framework-heavy application, pinned base image versions for reproducibility, non-root users as the default, and a `.dockerignore` file in every repository. Claude Code's skills encode all of these as defaults so you do not have to remember them under deadline pressure.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-dockerfile-generation-best-practices-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)

@@ -225,6 +225,12 @@ Note: With `strict: true`, your schema must include `additionalProperties: false
 4. **Bound your tool loop**: Always set a maximum iteration count to prevent infinite tool call chains.
 5. **Match tool_use_id exactly**: The `tool_use_id` in your `tool_result` must match the `id` from the `tool_use` block.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-tool-use-not-working)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Extended Thinking Not Working](/claude-extended-thinking-not-working/) -- tool_choice restrictions when thinking is enabled.

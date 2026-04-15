@@ -199,6 +199,12 @@ Start by building a basic skill that understands your cluster topology, then pro
 Remember that Submariner's capabilities continue to evolve, keep your Claude Code skills updated to use new features and address emerging challenges in multi-cluster networking.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-submariner-multi-cluster-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Multi-Language Navigation Workflow](/claude-code-for-multi-language-navigation-workflow/)

@@ -443,6 +443,12 @@ Use Claude Code's audit capabilities periodically to review your existing IRSA c
 Remember: IRSA is about security. Always prefer more restrictive trust policies, use dedicated roles per application, tag your roles for discoverability, and regularly audit your configurations. Claude Code makes this disciplined approach practical and scalable.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-eks-irsa-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for EKS Karpenter Workflow: A Complete Guide](/claude-code-for-eks-karpenter-workflow/)

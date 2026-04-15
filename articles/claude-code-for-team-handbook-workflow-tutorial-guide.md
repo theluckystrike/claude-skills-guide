@@ -212,6 +212,12 @@ Building a team handbook with Claude Code transforms static documentation into a
 
 Start with one workflow today, refine it based on usage, and expand gradually. Your future team members will thank you for investing in clear, maintainable documentation that makes getting up to speed straightforward and efficient.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-team-handbook-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)

@@ -209,6 +209,12 @@ Document your driver: Use Claude to help write comprehensive documentation cover
 Claude Code transforms CSI driver development from a daunting undertaking into an iterative, manageable process. By generating boilerplate, explaining complex APIs, and helping debug issues, it lets developers focus on what matters: integrating their storage backend with Kubernetes. Start with small, focused requests and gradually build up to complete driver implementations. The key is understanding that Claude accelerates your learning while you remain responsible for the final implementation's correctness.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-kubernetes-csi-driver-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)

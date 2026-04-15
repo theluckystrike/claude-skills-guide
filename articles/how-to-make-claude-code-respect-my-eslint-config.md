@@ -187,6 +187,12 @@ Making Claude Code respect your ESLint configuration is entirely achievable thro
 Start with the context file method for quick results, then progressively add skill configurations and hooks for comprehensive coverage. Your future self, along with your code review teammates, will thank you.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-respect-my-eslint-config)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

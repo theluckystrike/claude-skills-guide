@@ -169,6 +169,12 @@ Before committing your Linear API key to any config file, review the [MCP creden
 
 The Linear MCP server transforms Claude Code into a powerful issue tracking hub. By creating and managing issues directly in your coding workflow, you maintain focus, preserve context, and keep your team synchronized. Combined with Claude Code skills like tdd for test management, pdf for documentation generation, and supermemory for knowledge recall, you build a cohesive development environment that bridges coding and project management.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=linear-mcp-server-issue-tracking-with-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

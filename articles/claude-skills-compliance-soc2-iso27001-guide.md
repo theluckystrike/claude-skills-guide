@@ -273,6 +273,12 @@ Start with the tdd skill for test-driven security. Add the pdf skill for documen
 
 The goal isn't to use Claude skills for everything, it's to use them strategically where they provide the most value: consistent test coverage, auditable documentation, and maintainable security patterns. Pair skill-generated artifacts with a clear ownership model, every control needs a named owner accountable for its evidence, and your compliance program becomes something auditors can verify rather than something you assemble in a panic.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-compliance-soc2-iso27001-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code SOC 2 Compliance Audit Preparation Guide 2026](/claude-code-soc2-compliance-audit-preparation-guide-2026/)

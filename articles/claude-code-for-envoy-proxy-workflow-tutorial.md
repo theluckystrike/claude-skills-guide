@@ -223,6 +223,12 @@ Start with simple configurations and progressively adopt more advanced features 
 
 The combination of Claude Code's understanding of Envoy's architecture with your specific requirements produces configurations that are both correct and optimized for your use case, turning what was once a specialized skill into an accessible workflow for any developer.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-envoy-proxy-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Envoy Authorization Workflow Tutorial](/claude-code-for-envoy-authz-workflow-tutorial/)

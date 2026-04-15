@@ -289,6 +289,12 @@ ScriptSafe suits security-conscious users and organizations requiring granular c
 
 Evaluate your specific needs: script count, performance requirements, security constraints, and whether you need sync across devices. The best userscript manager is the one that disappears into the background, letting your automation run smoothly without drawing memory or attention.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=tampermonkey-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Violentmonkey Alternative Chrome Extension 2026](/violentmonkey-alternative-chrome-extension-2026/)

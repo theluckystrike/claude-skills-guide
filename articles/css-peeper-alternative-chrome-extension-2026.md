@@ -459,6 +459,12 @@ The extensions available in 2026 have collectively addressed most of CSS Peeper'
 
 Many developers end up using multiple extensions for different tasks, a lightweight option like InspectCSS for quick checks throughout the day and a more feature-rich tool like CSS Stack for comprehensive analysis sessions. Experiment with several to find your optimal combination. The most important criterion is the one that reduces friction in your most frequent workflow; the tool you actually use consistently is more valuable than the theoretically superior one you rarely open.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=css-peeper-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Responsive Viewer Alternative Chrome Extension 2026](/responsive-viewer-alternative-chrome-extension-2026/)

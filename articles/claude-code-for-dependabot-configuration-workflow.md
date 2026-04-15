@@ -486,6 +486,12 @@ Claude Code transforms Dependabot configuration from a manual, error-prone proce
 
 Start with simple configurations for each ecosystem your projects use. Add grouping once the PR volume feels excessive. Enable auto-merge for patch updates once your CI is trustworthy. Use multi-repo audit scripts to close configuration gaps as your organization grows. Each step reduces the cognitive overhead of dependency management so your team can focus on shipping features rather than managing package versions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-dependabot-configuration-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)

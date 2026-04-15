@@ -94,6 +94,12 @@ Understanding why Claude Code costs more with large context windows empowers you
 
 For most development tasks, thoughtful context management keeps costs reasonable while maintaining productivity. Focus on quality interactions rather than quantity of context. Your wallet (and your project timelines) will thank you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-is-claude-code-expensive-large-context-tokens)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/). actionable techniques to cut token consumption without losing capability

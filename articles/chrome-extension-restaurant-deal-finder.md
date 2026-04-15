@@ -247,6 +247,12 @@ Building a restaurant deal finder extension teaches practical skills in browser 
 
 The restaurant deal space remains fragmented, with many independent restaurants lacking sophisticated online presence. A well-built extension that aggregates deals across multiple sources fills a genuine gap in the market while providing developers with portfolio-worthy implementation experience.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-restaurant-deal-finder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Deal Finder Chrome Extension: A Developer's Guide to Building Price Tracking Tools](/deal-finder-chrome-extension/)

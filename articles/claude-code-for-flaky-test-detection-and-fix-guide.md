@@ -227,6 +227,12 @@ Flaky tests don't have to plague your development workflow. By using Claude Code
 
 Remember that fixing flaky tests is an iterative process. Run your tests multiple times after making changes, monitor for new flakiness, and continuously improve your test isolation patterns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-flaky-test-detection-and-fix-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Microphone Test Tool: Developer Guide](/chrome-extension-microphone-test-tool/)

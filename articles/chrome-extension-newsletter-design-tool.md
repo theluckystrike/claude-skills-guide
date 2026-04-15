@@ -224,6 +224,12 @@ The most effective approach combines a capable Chrome extension with version-con
 
 Explore the Chrome Web Store for options that match your specific needs, or consider building a minimal extension tailored to your newsletter format if existing tools don't fit your workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-newsletter-design-tool)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Pieces for Developers AI Review Workflow Tool](/pieces-for-developers-ai-review-workflow-tool/)

@@ -206,6 +206,12 @@ The key is understanding that AI handles the mechanical parts well while humans 
 
 Build the habit of giving Claude Code full context, table sizes, downstream dependencies, known edge cases, and reviewing its output line-by-line before any migration moves past staging. Treat the generated code as a well-informed first draft from a developer who has never seen your production data.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=should-i-use-claude-code-for-production-database-migrations)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is Claude Code and Why Developers Love It 2026](/what-is-claude-code-and-why-developers-love-it-2026/)

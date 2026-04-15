@@ -179,6 +179,12 @@ For offline private codebases, Tabnine offers a more straightforward solution wi
 The key consideration is understanding that Claude Code requires API access for its full capabilities, while Tabnine provides complete offline functionality at the cost of more limited AI assistance. For highly sensitive projects in air-gapped environments, Tabnine remains the practical choice. For organizations with enterprise security frameworks, Claude Code's advanced capabilities become accessible through proper configuration.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-tabnine-offline-private-codebase)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Pro vs ChatGPT Plus: Which Is Better Value for Coders](/claude-pro-vs-chatgpt-plus-which-is-better-value-for-coders/)

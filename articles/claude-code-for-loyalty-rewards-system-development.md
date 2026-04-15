@@ -239,6 +239,12 @@ Claude Code excels at exploring these scenarios with you, describe your concerns
 
 Building a loyalty rewards system is complex, but with the right architecture and AI-assisted development, you can create something scalable and maintainable. Start with solid data modeling, build a flexible points engine, and always prioritize auditability. Your users, and your support team, will appreciate the care put into the foundation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-loyalty-rewards-system-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)

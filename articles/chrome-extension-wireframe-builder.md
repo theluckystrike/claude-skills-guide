@@ -308,6 +308,12 @@ A Chrome extension wireframe builder serves several practical purposes:
 
 Once you have the core functionality, consider adding collaborative features through cloud storage, element libraries for common UI patterns, or integration with design tools like Figma through their APIs. The extension architecture gives you flexibility to expand based on user feedback.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-wireframe-builder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)

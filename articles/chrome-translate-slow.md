@@ -234,6 +234,10 @@ The built-in Chrome translation excels at casual, occasional use. Heavy translat
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-translate-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Slow Startup: Diagnose and Fix Performance Issues](/chrome-slow-startup/)

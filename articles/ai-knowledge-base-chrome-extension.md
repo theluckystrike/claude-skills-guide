@@ -198,6 +198,12 @@ AI knowledge base chrome extensions represent a practical intersection of browse
 
 The key to effective implementation lies in balancing functionality with performance, storing enough context to be useful without overwhelming the browser's storage constraints. Start with a basic implementation using local storage, then iterate based on your specific use cases and performance requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-knowledge-base-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Knowledge Base Workflow Tutorial Guide](/claude-code-for-knowledge-base-workflow-tutorial-guide/)

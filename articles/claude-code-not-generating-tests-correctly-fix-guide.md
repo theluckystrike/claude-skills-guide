@@ -210,6 +210,12 @@ Remember that test generation is a collaborative process, the more context and f
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-not-generating-tests-correctly-fix-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Freezing Fix: Complete Guide for Developers and Power Users](/chrome-freezing-fix/)

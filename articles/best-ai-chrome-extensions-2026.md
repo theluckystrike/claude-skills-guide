@@ -168,6 +168,12 @@ Most AI extensions support customization through their settings pages or config 
 
 The extensions that provide the most value in 2026 share common characteristics: they integrate deeply with tools you already use, respect your privacy, and enhance rather than replace your workflow. Start with one or two that address your biggest problems, then expand your stack as you identify new opportunities for AI assistance.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-ai-chrome-extensions-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)

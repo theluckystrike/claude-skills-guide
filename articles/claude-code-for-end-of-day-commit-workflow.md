@@ -242,6 +242,12 @@ Automating your end-of-day commit workflow with Claude Code removes friction fro
 
 The key is customizing the workflow to match how you actually work. Every team has different priorities, and Claude Code adapts to yours. Whether you need strict pre-commit validation or just a quick way to stage and push before heading home, a well-configured commit skill pays dividends every single day.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-end-of-day-commit-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Gitignore Best Practices](/claude-code-gitignore-best-practices/). Keep your end-of-day commits clean by excluding the right file patterns before staging

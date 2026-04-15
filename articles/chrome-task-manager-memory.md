@@ -216,6 +216,12 @@ The Chrome Task Manager serves as your first line of defense against browser mem
 
 For developers building memory-sensitive applications, regular Task Manager monitoring should be part of your development ritual. The insights it provides are invaluable for creating performant, stable web experiences.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-task-manager-memory)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)

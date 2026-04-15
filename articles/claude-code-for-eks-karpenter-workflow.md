@@ -674,6 +674,12 @@ The workflows in this guide cover the full operational lifecycle: bootstrapping 
 The key is to treat Claude Code as a collaborative partner: describe your requirements clearly, review generated configurations before applying them (always use `--dry-run`), and let automation handle the repetitive tasks while you focus on architecture decisions. With this approach, you get the speed and cost efficiency of Karpenter without the operational toil of managing complex Kubernetes infrastructure manually.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-eks-karpenter-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for EKS IRSA Workflow](/claude-code-for-eks-irsa-workflow/)

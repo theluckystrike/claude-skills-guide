@@ -334,6 +334,12 @@ Building an AI headline writer Chrome extension combines browser APIs with large
 
 For developers interested in further customization, explore adding support for different AI providers, implementing headline scoring algorithms, or integrating with content management systems through additional permissions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-headline-writer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Email Writer Chrome Extension: A Developer's Guide](/ai-email-writer-chrome-extension/)

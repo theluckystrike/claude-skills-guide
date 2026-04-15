@@ -332,6 +332,12 @@ Publication date off by one day: Parse dates with `new Date(dateString).toLocale
 
 Start with the basic implementation, then expand with BibTeX/RIS export and integration with reference managers like Zotero.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-bibliography-generator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Blog Post Outline Generator: A Practical Guide for Content Creators](/chrome-extension-blog-post-outline-generator/)

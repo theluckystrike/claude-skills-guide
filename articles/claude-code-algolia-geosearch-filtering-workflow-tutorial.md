@@ -566,6 +566,12 @@ Building GeoSearch filtering workflows with Claude Code and Algolia combines pow
 
 The combination of Claude Code's workflow guidance and Algolia's GeoSearch creates a solid foundation for any location-aware application, from simple store finders to complex delivery logistics systems. Pay careful attention to index configuration details, particularly `aroundPrecision`, `filterOnly` attributes, and `attributesToRetrieve`, as these small decisions have outsized impact on both result quality and API cost at scale.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-algolia-geosearch-filtering-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Inngest Event Driven Function Workflow Tutorial](/claude-code-inngest-event-driven-function-workflow-tutorial/)

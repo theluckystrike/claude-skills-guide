@@ -548,6 +548,12 @@ async function bulkSnooze(emailIds, snoozeUntil) {
 
 The key is maintaining reliable scheduling even when the browser is closed, which requires combining chrome.alarms with a startup handler that catches missed firings. Pair that with a lightweight OAuth flow and the provider API patterns shown here, and you have a production-grade snooze extension that handles the full lifecycle from snooze to wake without data loss.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-email-snooze-scheduler)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Email Writer Chrome Extension: A Developer's Guide](/ai-email-writer-chrome-extension/)

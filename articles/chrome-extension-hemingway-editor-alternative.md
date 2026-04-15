@@ -235,6 +235,12 @@ The best approach involves testing a few options in your actual writing environm
 
 For most developers, the winning stack is Scribe for daily writing feedback, Readable for documentation audits, and LanguageTool self-hosted for sensitive content. This covers the full range of writing quality concerns, clarity, style, grammar, and readability, while keeping sensitive content off third-party servers.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-hemingway-editor-alternative)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Tab Resize Alternative Chrome Extension: Top Options for Developers in 2026](/tab-resize-alternative-chrome-extension-2026/)

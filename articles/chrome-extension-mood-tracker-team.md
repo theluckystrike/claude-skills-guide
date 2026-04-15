@@ -300,6 +300,12 @@ Iterate based on feedback. A mood tracking tool that team members find intrusive
 
 Building a Chrome extension for team mood tracking requires thoughtful architecture balancing utility with privacy. The implementation patterns shown here provide a foundation, but adapt them to your specific team size, culture, and privacy requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-mood-tracker-team)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building AI Coding Culture in Engineering Teams](/building-ai-coding-culture-in-engineering-teams/)

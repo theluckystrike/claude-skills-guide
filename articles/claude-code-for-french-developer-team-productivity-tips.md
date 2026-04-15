@@ -254,6 +254,12 @@ L'adoption progressive, accompagné d'une documentation claire des processus, ga
 La clé du succès réside dans l'équilibre entre automation et supervision humaine. Claude Code amplifie les capacités des développeurs sans les remplacer. c'est un levier de productivité à maîtriser absolument en 2026.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-french-developer-team-productivity-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Japanese Developer Team Integration Tips](/claude-code-japanese-developer-team-integration-tips/)

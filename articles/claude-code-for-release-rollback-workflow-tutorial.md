@@ -284,6 +284,12 @@ The key is starting simple: create a basic rollback skill, test it regularly, an
 Remember that rollback workflows are like insurance, you hope you never need them, but you'll be grateful they're there when you do. Invest the time to build them properly now, and your future self will thank you during the next production incident.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-release-rollback-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

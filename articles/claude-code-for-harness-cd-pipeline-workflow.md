@@ -545,6 +545,12 @@ Integrating Claude Code into your Harness CD pipeline workflow transforms deploy
 
 Start small, automate one aspect of your pipeline, then expand as you build confidence. The combination of Claude Code's reasoning capabilities and Harness CD's solid deployment platform creates a powerful foundation for intelligent, self-healing deployment workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-harness-cd-pipeline-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)

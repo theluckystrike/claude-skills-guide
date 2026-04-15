@@ -159,6 +159,12 @@ The open source maintainers who've adopted Claude Code consistently report savin
 
 Is Claude Code worth it? For most active open source projects, the answer is increasingly yes. The key is starting with realistic expectations and iterating until you find the workflows that work best for you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=is-claude-code-worth-it-open-source-maintainers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Open Source Contributions: 2026 Workflow Guide](/claude-code-open-source-contribution-workflow-guide-2026/)

@@ -247,6 +247,12 @@ namespace ApiClient {
 Declaration merging is a sophisticated TypeScript feature that enables flexible type definitions and powerful library extensions. By combining this capability with Claude Code's AI assistance, you can create maintainable, comprehensive type systems that scale with your project.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-typescript-declaration-merging-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)

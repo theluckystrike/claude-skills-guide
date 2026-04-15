@@ -470,6 +470,12 @@ Start small, measure results, and iterate based on real feedback. The investment
 *Ready to start scaling Claude Code in your organization? Begin with a pilot team, document your learnings, and expand gradually. The investment in proper implementation will pay dividends in developer productivity and code quality.*
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=scaling-claude-code-usage-across-multiple-engineering-teams)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building AI Coding Culture in Engineering Teams](/building-ai-coding-culture-in-engineering-teams/)

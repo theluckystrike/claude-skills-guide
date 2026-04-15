@@ -358,6 +358,12 @@ Zoom performance issues in Chrome fall into four main categories: extension inte
 
 Start with a clean profile test to isolate extension issues, verify GPU acceleration status at `chrome://gpu`, enable Memory Saver for heavy workloads, and update graphics drivers if hardware acceleration is disabled. Most users resolve their zoom slowdowns through a combination of disabling one problematic extension, updating their GPU driver, and enabling Memory Saver. The deeper system-level fixes (swappiness tuning, display scaling changes, full reinstall) are reserved for cases where the first three categories check out clean.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-zoom-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Too Many Processes: A Developer's Guide to Fixing High Memory Usage](/chrome-too-many-processes/)

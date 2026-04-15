@@ -260,6 +260,12 @@ Claude Code and Nitric form a powerful combination for modern cloud development.
 The key is treating Claude not just as a code generator, but as a development partner that understands your framework choices. With the right context and patterns, your Nitric workflow becomes significantly more productive.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nitric-cloud-framework-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Neon Serverless Postgres Workflow Guide](/claude-code-neon-serverless-postgres-workflow-guide/)

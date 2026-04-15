@@ -228,6 +228,12 @@ A Chrome extension serving as a Canva alternative offers tangible benefits for d
 
 The key is matching the implementation to your use case. Simple quick designs work well with lightweight implementations. Complex projects benefit from solid libraries. API-driven approaches excel when automation and templates take priority over manual control.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-canva-alternative)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Evernote Web Clipper Alternative for Chrome in 2026: A.](/evernote-web-clipper-alternative-chrome-extension-2026/)

@@ -335,6 +335,12 @@ Customizing Claude Code's output format and style is essential for productive hu
 The best approach combines project-level configuration with skill-specific templates, allowing you to maintain consistent standards while retaining flexibility for specialized tasks. Start with basic formatting rules in CLAUDE.md, graduate to skill definitions when you find yourself repeating the same prompt preamble, and add machine-readable output structures only when automation requires it. Refine based on what your team actually finds useful. the goal is less friction, not more configuration.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-customize-claude-code-output-format-style)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)

@@ -219,6 +219,12 @@ Implementing Chrome enterprise security requires a systematic approach. Use this
 
 Chrome's enterprise security model relies on defense in depth. No single configuration makes your deployment secure, but layers of policy enforcement significantly reduce your attack surface. Start with the highest-impact changes, extension control and Safe Browsing, then progressively implement additional hardening as your organization develops security expertise.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-security-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)

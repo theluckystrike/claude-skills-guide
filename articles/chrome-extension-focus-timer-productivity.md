@@ -358,6 +358,12 @@ Another high-value addition is calendar integration. Reading from the Google Cal
 
 The chrome extension focus timer productivity ecosystem continues evolving as developers discover new integration possibilities. Whether using established extensions or building custom solutions, the fundamental principle remains: structured time boxes create space for meaningful deep work in an increasingly distracted digital environment. The browser is where most developers spend their working hours, which makes it the right place to enforce the boundaries that protect those hours.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-focus-timer-productivity)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Focus Mode for Studying: A Practical Guide](/chrome-extension-focus-mode-studying/)

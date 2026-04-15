@@ -138,6 +138,12 @@ Start with a small project, apply these techniques, and gradually scale up to la
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=using-claude-code-to-study-open-source-projects)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OSS Security Policy Workflow Tutorial](/claude-code-for-oss-security-policy-workflow-tutorial/)

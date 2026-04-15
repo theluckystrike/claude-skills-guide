@@ -449,6 +449,12 @@ By following the debugging steps outlined in this guide, you can quickly identif
 If you continue to experience this error after checking your local configurations, it might be worth checking Claude Code's documentation or community forums for known issues with specific versions or configurations. The Claude Code GitHub repository also tracks open issues, so searching for "unexpected end of input" there may surface a version-specific bug or workaround.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-unexpected-end-of-input-json-error)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

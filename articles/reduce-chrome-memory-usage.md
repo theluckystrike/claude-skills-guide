@@ -445,6 +445,12 @@ Start with Memory Saver and tab suspension for immediate results. Gradually impl
 
 Chrome's memory management continues to improve with each release. The techniques in this guide work with the current stable version, but Chrome frequently adds new optimization features. Check `chrome://settings/performance` periodically for new options.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=reduce-chrome-memory-usage)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Memory Saver Mode: A Developer's Guide to Reducing Browser Memory Usage](/chrome-memory-saver-mode/)

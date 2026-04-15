@@ -376,6 +376,12 @@ Security best practices include never hardcoding API keys, using Chrome's secure
 
 Building an AI summarizer Chrome extension gives you a powerful tool tailored to your specific needs while demonstrating practical integration of browser APIs with external AI services. The modular architecture allows you to swap AI providers, add new features, and customize the experience based on your workflow requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-summarizer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a Chrome Extension DOM Inspector Tool: A.](/chrome-extension-dom-inspector-tool/)

@@ -153,6 +153,12 @@ Claude Code has transformed open source maintenance from an overwhelming task in
 
 The maintainers who thrive in 2026 are not those who work hardest, but those who delegate effectively to AI assistants while maintaining human connection with their communities.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-open-source-maintainers-use-claude-code-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Is Claude Code Worth It for Open Source Maintainers? A.](/is-claude-code-worth-it-open-source-maintainers/)

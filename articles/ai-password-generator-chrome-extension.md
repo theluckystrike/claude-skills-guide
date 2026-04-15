@@ -255,6 +255,12 @@ The AI component can be extended to analyze password patterns, detect potential 
 
 Building an AI password generator extension gives you complete control over your password security while learning valuable skills in Chrome extension development, cryptographic implementation, and secure coding practices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-password-generator-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Blog Post Generator for Chrome: A Developer's Guide](/ai-blog-post-generator-chrome/)

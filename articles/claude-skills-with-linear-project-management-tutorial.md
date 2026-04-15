@@ -316,6 +316,12 @@ Duplicate triage comments on retries: Check for existing triage comments before 
 
 Claude skills with Linear transforms routine PM work into automated intelligence. The `tdd` skill makes triage actionable, `supermemory` tracks patterns across sprints, and spec generation saves hours per feature.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-with-linear-project-management-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Covers the tdd and supermemory skills used throughout this Linear integration guide, with usage patterns and invocation tips

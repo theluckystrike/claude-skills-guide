@@ -525,6 +525,12 @@ Automating pull request descriptions with Claude Code improves consistency, save
 The key is to balance automation with human oversight. let Claude handle the mechanical aspects of description writing while you focus on adding the nuanced context that only a human developer can provide. Over time, the generator becomes a mirror of your team's conventions: the sections it produces, the language it uses, and the checklists it includes all reflect how your team thinks about code review quality. That institutional knowledge, encoded in the generator config, persists even as team members come and go.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-pull-request-description-generator-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Automated Pull Request Review Workflow Guide](/claude-code-automated-pull-request-review-workflow-guide/)

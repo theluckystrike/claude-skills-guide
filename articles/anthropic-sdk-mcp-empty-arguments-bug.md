@@ -175,6 +175,12 @@ ph._build_approval_response = _patched_build_response
 - **Use `bypass_permissions`** for development and trusted MCP servers
 - **Pin your SDK version** and test after each upgrade to catch regressions
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=anthropic-sdk-mcp-empty-arguments-bug)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

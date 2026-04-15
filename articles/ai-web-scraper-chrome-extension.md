@@ -367,6 +367,12 @@ The combination of Chrome's extension APIs with AI processing creates powerful p
 
 The practical gaps between a prototype and a production-quality scraper come down to handling dynamic content properly, building resilient JSON parsing around AI responses, offering flexible export options, and enforcing rate limits. Address those four areas and you have a tool people will actually rely on for real work.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-web-scraper-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)

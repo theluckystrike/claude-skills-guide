@@ -235,6 +235,12 @@ Claude skills provide a flexible framework for legal document automation. By def
 
 The combination of Claude's natural language processing and skill-based instruction sets offers a powerful approach to legal technology automation that scales with your practice needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-legal-document-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [GDPR Data Privacy Implementation with Claude Code 2026](/claude-code-gdpr-data-privacy-implementation-checklist/). Ensure automated legal document workflows comply with privacy regulations

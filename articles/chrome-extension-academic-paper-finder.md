@@ -340,6 +340,12 @@ For most researchers, existing extensions like Zotero Connector or the Semantic 
 
 For developers, building even a simple version of an academic paper finder is a useful exercise in Manifest V3 patterns, API integration, and XML/JSON parsing. skills that transfer directly to other extension projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-academic-paper-finder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)

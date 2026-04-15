@@ -235,6 +235,12 @@ Making Claude Code follow your naming conventions is straightforward with the ri
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-follow-my-naming-conventions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - For team-wide style enforcement beyond naming conventions, see [How to Make Claude Code Follow Team Style Guide](/how-to-make-claude-code-follow-team-style-guide/)

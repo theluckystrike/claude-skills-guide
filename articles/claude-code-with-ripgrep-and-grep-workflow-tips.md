@@ -360,6 +360,12 @@ Efficient search workflows combine fast tools with smart strategies. Ripgrep pro
 
 The investment in mastering these tools pays dividends daily. Every minute spent learning efficient search patterns saves multiple minutes across every future search task. Combined with Claude Code's ability to interpret intent, execute searches, and analyze results in context, ripgrep becomes not just a search tool but a core part of your codebase understanding workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-with-ripgrep-and-grep-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Sprint Start: Workflow Tips and Best.](/claude-code-for-sprint-start-workflow-tips/)

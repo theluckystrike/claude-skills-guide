@@ -203,6 +203,12 @@ Redux Toolkit provides a solid foundation for state management in React applicat
 
 Start with simple slices and gradually adopt advanced patterns as your application grows. The initial investment in proper Redux architecture pays dividends in maintainability and developer experience.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-redux-toolkit-state-management-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Flutter State Management Workflow Best Practices](/claude-code-flutter-state-management-workflow-bestpractices/)

@@ -114,6 +114,12 @@ CSS debugging doesn't have to be a frustrating guessing game. With Claude Code a
 
 Remember that most CSS problems have logical explanations once you understand how the cascade, box model, and layout algorithms work. Let Claude Code help you reason through the problem rather than relying on copy-pasting solutions from Stack Overflow. This builds your understanding and makes future debugging faster.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-frontend-developer-css-debugging-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Data Engineer ETL Debugging Daily Workflow](/claude-code-data-engineer-etl-debugging-daily-workflow/)

@@ -276,6 +276,12 @@ Docker Compose provides the isolation and repeatability you need for testing Cla
 
 The key patterns are: isolate each test run with fresh volumes, mock external dependencies, scale horizontally for multi-agent tests, and mirror your local setup in CI for consistent results.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-compose-test-setup-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Test Environment Management Guide](/claude-code-test-environment-management-guide/)

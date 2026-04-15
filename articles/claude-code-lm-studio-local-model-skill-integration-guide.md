@@ -129,6 +129,12 @@ Integrating Claude Code with LM Studio creates a private, controllable AI-assist
 
 The integration requires initial configuration but pays dividends in flexibility and data control. Your development workflow stays entirely local while benefiting from Claude's skill ecosystem.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-lm-studio-local-model-skill-integration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills with Local LLM Ollama Self-Hosted Guide](/claude-skills-with-local-llm-ollama-self-hosted-guide/)

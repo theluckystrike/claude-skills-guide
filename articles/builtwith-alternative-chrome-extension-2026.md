@@ -337,6 +337,12 @@ The most significant shift since 2024 is that the open-source and free alternati
 
 Explore these alternatives, test them against sites you know, and find the combination that best supports your development and research workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=builtwith-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Postman Alternative Chrome Extension: Top Picks for 2026](/postman-alternative-chrome-extension-2026/)

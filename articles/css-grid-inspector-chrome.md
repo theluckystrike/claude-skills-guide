@@ -448,6 +448,12 @@ Strip the `data-grid-debug` attributes before deploying with a build step or a p
 
 For team projects, consider documenting your grid conventions and sharing inspector screenshots in pull requests. A screenshot of the grid overlay alongside the rendered output gives reviewers immediate insight into the layout structure without requiring them to check out the branch and open DevTools locally. This reduces layout-related review cycles significantly and makes it easier for designers to verify implementation against their original specs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=css-grid-inspector-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

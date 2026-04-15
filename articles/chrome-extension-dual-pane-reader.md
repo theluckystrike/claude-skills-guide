@@ -233,6 +233,12 @@ Loading two full web pages simultaneously places significant memory demands on t
 
 The dual pane reader pattern demonstrates how Chrome extensions can fundamentally transform browser behavior to serve specific workflows. By understanding the messaging system between extension components and the DOM manipulation techniques available in content scripts, you can build powerful productivity tools that rival standalone applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-dual-pane-reader)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Screen Reader Chrome Extension: A Complete Guide for Developers](/ai-screen-reader-chrome-extension/)

@@ -175,6 +175,12 @@ Combining Claude Code with Bun runtime creates an efficient development environm
 
 Experiment with this combination in your next project. The tight feedback loop between asking Claude for code and executing it changes how you approach development, faster iterations, more experiments, and ultimately better software.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=using-claude-code-with-bun-runtime-javascript-projects)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Deno Deploy Serverless Runtime Guide](/claude-code-for-deno-deploy-serverless-runtime-guide/). See also

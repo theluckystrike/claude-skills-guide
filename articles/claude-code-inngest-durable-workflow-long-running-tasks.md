@@ -243,6 +243,12 @@ Combining Claude Code with Inngest gives you a powerful toolkit for building rel
 
 The key is to use Claude Code's strengths, understanding intent, generating code, and explaining patterns, while letting Inngest handle the heavy lifting of workflow state management. Together, they make building solid, long-running task systems accessible to developers at any level.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-inngest-durable-workflow-long-running-tasks)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Inngest Event Driven Function Workflow Tutorial](/claude-code-inngest-event-driven-function-workflow-tutorial/)

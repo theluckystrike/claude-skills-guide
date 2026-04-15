@@ -674,6 +674,12 @@ Third, check that each URL actually loads. Startup pages that return 404, requir
 
 Document the test results. which policies applied, which URLs loaded, and any issues encountered. before requesting approval for organization-wide deployment. This documentation also serves as a rollback reference if you need to revert the configuration quickly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-startup-pages-policy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)

@@ -215,6 +215,12 @@ Django ORM optimization requires understanding both your data access patterns an
 
 Start by profiling your most frequently accessed views, then systematically apply these optimizations. Remember that premature optimization is wasteful; measure first, optimize where it matters most.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-django-orm-optimization-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/)

@@ -216,6 +216,12 @@ Claude Code transforms Zig development by handling boilerplate, explaining compl
 Start by integrating Claude into your project scaffolding process, then gradually expand to debugging and pattern generation. As you become more comfortable with Zig's unique features, you'll find Claude increasingly valuable for handling the language's complexity while maintaining control over your code's behavior.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-zig-programming-language-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Competitive Programming Practice Workflow](/claude-code-for-competitive-programming-practice-workflow/)

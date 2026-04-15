@@ -301,6 +301,10 @@ The combination of traditional ADMX policies, JSON configuration, and cloud-base
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-group-policy-templates-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome ADMX Templates for Windows Server: Enterprise.](/chrome-admx-templates-windows-server/)

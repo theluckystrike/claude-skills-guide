@@ -135,6 +135,12 @@ In Edge, `edge://settings/system` provides a slider for the tab sleeping timeout
 
 Combining these settings with a habit of closing tabs you won't return to within the hour keeps browser memory under 1GB in most development workflows, leaving the majority of your RAM available for the tools that actually run your code.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-vs-edge-memory-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Too Many Processes: A Developer's Guide to Fixing High Memory Usage](/chrome-too-many-processes/)

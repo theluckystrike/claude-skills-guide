@@ -314,6 +314,12 @@ Automating Datadog monitoring through MCP servers transforms infrastructure mana
 
 The combination of Datadog's monitoring platform with MCP server automation creates a solid foundation for modern infrastructure management. Start with read-only metric queries to validate your setup, then layer in alert management, incident response, and capacity planning as your confidence grows. The teams that benefit most treat Claude as a persistent monitoring analyst. always available, always contextual, and capable of synthesizing signal from a platform that would otherwise require dedicated tooling expertise to query efficiently.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=datadog-mcp-server-monitoring-automation-claude)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

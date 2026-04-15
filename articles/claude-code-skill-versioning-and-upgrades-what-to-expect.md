@@ -76,6 +76,12 @@ Document any customizations you've made to skills or any specific version requir
 
 Skill versioning in Claude Code follows predictable patterns that, once understood, make managing your skill collection straightforward. By paying attention to version numbers, understanding what each type of update means, and building resilient workflows, you can take advantage of improvements while maintaining the stability your development work requires. Whether you're consuming skills from the registry or building your own, embracing these versioning practices ensures a smoother experience as the ecosystem continues to grow and evolve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skill-versioning-and-upgrades-what-to-expect)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code SDK Versioning and Release Guide](/claude-code-sdk-versioning-release-guide/)

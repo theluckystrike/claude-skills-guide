@@ -472,6 +472,12 @@ The highest-value setup steps in order of impact: write a thorough `CLAUDE.md`, 
 
 The investment in proper configuration pays dividends through faster development cycles, consistent code quality, and reduced context-switching between documentation and implementation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-local-development-setup-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/). Setting up Claude Code as part of local dev

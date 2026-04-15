@@ -453,6 +453,12 @@ Docker bind mount permission errors are common but fully solvable once you under
 
 For Claude Code integration specifically, getting permissions right upfront means Claude can read and write project files, generate outputs, and iterate without hitting dead ends mid-workflow. If you are setting up a containerized Claude Code development environment for the first time, start with the Docker Compose approach (Solution 4) and the Dockerfile non-root user (Solution 6) together, that combination handles the majority of real-world cases.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-permission-denied-bind-mount-error)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

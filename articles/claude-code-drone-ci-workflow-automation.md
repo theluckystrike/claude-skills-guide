@@ -461,6 +461,12 @@ Start by adding Claude to your development workflow, describe your pipeline requ
 
 The most impactful starting point is to bring Claude your most painful pipeline. the one that's slowest, most brittle, or hardest for new team members to understand. and ask it for a complete rewrite with caching, parallelization, and documented step purposes. That single exercise typically cuts build times in half and produces a configuration that becomes the template for every other repository going forward.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-drone-ci-workflow-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Browser Automation Workflow Guide](/claude-code-for-browser-automation-workflow-guide/)

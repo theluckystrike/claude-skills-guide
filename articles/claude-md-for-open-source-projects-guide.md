@@ -265,6 +265,10 @@ Remember: the goal isn't to replace human judgment but to augment it, helping bo
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-for-open-source-projects-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading:
 - [Claude MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Best Claude Code Skills to Install First 2026](/best-claude-code-skills-to-install-first-2026/)

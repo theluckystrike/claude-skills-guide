@@ -244,6 +244,12 @@ Claude will work through each `match` block systematically, flagging patterns li
 
 This audit workflow pairs naturally with the emulator-based testing described above. Use the audit to identify suspicious rules, then write targeted emulator tests that verify the suspicious behaviors are actually blocked. Fix anything the tests expose before the next production deployment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-firebase-security-rules-validation-testing-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Master the tdd skill for structured test-first development, including Firebase emulator test suites

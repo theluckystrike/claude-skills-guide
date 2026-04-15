@@ -354,6 +354,12 @@ Claude MD skills transform architectural guidance from passive documentation int
 
 Start with your most critical patterns, iterate on the skill definitions based on what Claude misses or misinterprets, and watch your architecture remain clean without manual policing. Store the skills in your repository so the rules evolve alongside the code they govern.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-for-enforcing-architecture-patterns)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

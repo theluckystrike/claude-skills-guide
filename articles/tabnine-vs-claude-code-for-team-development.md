@@ -226,6 +226,12 @@ The choice ultimately depends on your team's workflow priorities. If your develo
 
 For teams adopting Claude Code, investing time in building a skill library pays dividends. Skills like `tdd` for test-driven development, `frontend-design` for consistent UI patterns, and `supermemory` for knowledge retention create institutional knowledge that improves over time. This transforms code assistance from a personal productivity tool into a team asset that grows more valuable as engineers contribute to and refine the skill library.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=tabnine-vs-claude-code-for-team-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Cursor for React Development](/claude-code-vs-cursor-for-react-development/)

@@ -553,6 +553,12 @@ International date format handling requires explicit locale awareness, standardi
 
 The key principles remain straightforward: store in ISO 8601, parse with explicit locale context, display in locale-appropriate formats, and test comprehensively across different date patterns. Use the native `Intl.DateTimeFormat` API for zero-cost formatting, validate parsed dates to catch JavaScript's silent rollover behavior, and store IANA timezone identifiers rather than UTC offsets. These practices, applied consistently, eliminate the entire class of ambiguous-date bugs from your application.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-international-date-format-handling-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code i18n Workflow for React Applications](/claude-code-i18n-workflow-for-react-applications-guide/)

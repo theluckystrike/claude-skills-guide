@@ -816,6 +816,12 @@ The practical impact is substantial: Claude Code can reduce setup time from hour
 Start with a simple fine-tuning run on a small dataset, use Claude Code to iterate on hyperparameters and architecture choices, then scale up confidently knowing you have an AI partner that understands your entire stack.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-huggingface-transformers-model-training)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for PyTorch Model Training Workflow](/claude-code-for-pytorch-model-training-workflow/)

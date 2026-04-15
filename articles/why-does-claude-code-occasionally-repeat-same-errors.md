@@ -166,6 +166,12 @@ Understanding why Claude Code occasionally repeats errors helps you work more ef
 
 For developers building production applications, combining Claude Code with skills like tdd for test coverage, proper error handling patterns, and security-focused guidance creates a more reliable development experience. The key is treating Claude as a collaborator that needs clear direction rather than a mind reader that should somehow know your preferences automatically.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-code-occasionally-repeat-same-errors)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Keeps Making Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/). Systematic fix for recurring errors

@@ -385,6 +385,12 @@ The migration path is incremental: start by enabling virtual threads at the cont
 Virtual threads do not replace all concurrency patterns. CPU-bound work still needs dedicated thread pools, and streaming data pipelines may still warrant reactive approaches. But for the common case of I/O-bound microservices with blocking libraries, virtual threads give you reactive-grade scalability with synchronous-grade code simplicity. That tradeoff is hard to beat.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-spring-virtual-threads-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Java Virtual Threads (Loom) Workflow](/claude-code-for-java-virtual-threads-loom-workflow/)

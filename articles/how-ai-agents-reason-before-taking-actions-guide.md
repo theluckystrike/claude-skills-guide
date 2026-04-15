@@ -209,6 +209,12 @@ Understanding failure modes, incomplete context, overconfident planning, ambiguo
 
 Remember: the best AI agent interactions are collaborative. You provide direction, and the agent provides systematic reasoning and precise execution. Together, you can accomplish complex tasks that neither could achieve alone.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-ai-agents-reason-before-taking-actions-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Validate Claude Code Output Before Committing](/best-way-to-validate-claude-code-output-before-committing/)

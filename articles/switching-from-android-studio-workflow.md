@@ -416,6 +416,12 @@ Switching from a purely Android Studio workflow to an AI-assisted approach requi
 
 Start by integrating Claude Code for one feature module. Gradually expand to debugging, documentation, and testing. Within weeks, you will have developed a hybrid workflow that maximizes productivity across both tools.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=switching-from-android-studio-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for WindSurf Cascade Workflow Guide](/claude-code-for-windsurf-cascade-workflow-guide/)

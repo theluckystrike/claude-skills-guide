@@ -238,6 +238,12 @@ Your Kafka MCP server can also integrate with other MCP servers in your ecosyste
 
 Start with the basic producer and consumer patterns shown here, then evolve toward windowed aggregations, complex event processing, and multi-cluster federation as your requirements mature. The MCP abstraction makes this evolution straightforward, you add new tools without restructuring your core integration.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=apache-kafka-mcp-server-event-streaming-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

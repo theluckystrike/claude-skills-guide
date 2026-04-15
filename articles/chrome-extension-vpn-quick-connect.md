@@ -202,6 +202,12 @@ Building a Chrome extension with VPN quick connect functionality requires unders
 
 The implementation shown here provides a foundation you can adapt to your specific VPN service. Focus on reliability, clear user feedback, and handling edge cases gracefully.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-vpn-quick-connect)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)

@@ -217,6 +217,12 @@ Automating version bumps with Claude Code transforms a tedious manual task into 
 
 The key is treating version management not as an afterthought, but as an integral part of your development process, something Claude Code handles reliably while you focus on writing code.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-version-bump-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Benchmark Reporting Workflow Tutorial](/claude-code-for-benchmark-reporting-workflow-tutorial/)

@@ -291,6 +291,12 @@ Start with simple feature flags, establish good documentation practices, and gra
 
 Remember that successful experimentation requires not just technical implementation, but also clear hypotheses, proper statistical analysis, and a culture that values data-driven decision making. Claude Code is a powerful tool to help with the technical aspects, but the strategic decisions still require human judgment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-split-io-experimentation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

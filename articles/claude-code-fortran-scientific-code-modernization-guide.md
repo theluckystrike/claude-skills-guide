@@ -349,6 +349,12 @@ The key is starting small, testing thoroughly, and gradually adopting modern For
 
 With Claude Code as your assistant, you have a powerful partner in preserving and improving your scientific computing infrastructure. The institutional knowledge embedded in decades-old Fortran code is worth protecting. modernization ensures it survives into the next generation of hardware and toolchains.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-fortran-scientific-code-modernization-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cold Fusion Modernization Workflow Guide](/claude-code-cold-fusion-modernization-workflow-guide/)

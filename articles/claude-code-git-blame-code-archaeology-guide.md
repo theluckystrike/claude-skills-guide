@@ -164,6 +164,12 @@ Skills like the tdd skill can integrate testing context, showing whether specifi
 
 Git blame transforms code files from static text into historical documents. Combined with Claude Code's natural language interface, it becomes a powerful tool for code archaeology, understanding why code exists, who wrote it, and what problems it was meant to solve. Start with basic blame commands, then progressively adopt advanced flags like `-w`, `-M`, and `-C` as your investigations require. Build custom skills around your team's common patterns, and your codebase's history becomes an open book rather than a mystery.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-git-blame-code-archaeology-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/). Good practices make blame archaeology easier

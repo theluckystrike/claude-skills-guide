@@ -209,6 +209,12 @@ Start with the basic integration outlined in this guide, then gradually add cust
 
 Remember: quality gates work best when they're collaborative tools that guide developers toward better code, not obstacles that slow down delivery. Use Claude Code's intelligent processing capabilities to create a workflow that educates and empowers your team while protecting your production systems.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-sonarqube-quality-gate-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Using Claude Code for Data Quality Validation Workflow](/claude-code-for-data-quality-validation-workflow/)

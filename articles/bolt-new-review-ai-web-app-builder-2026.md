@@ -187,6 +187,12 @@ The key to success is understanding that Bolt.new handles the "what" of your app
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=bolt-new-review-ai-web-app-builder-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/). Step-by-step guide to integrating Claude Code into your Bolt.new development process, including environment setup, adding custom features, and troubleshooting

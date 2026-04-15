@@ -156,6 +156,12 @@ The Claude Code test data generation workflow transforms what was once a manual,
 
 Whether you're working on a small project or enterprise application, integrating automated test data generation into your workflow pays dividends in developer productivity and code quality. Start small, generate your first dataset today and expand from there as your testing needs grow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-test-data-generation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Test data generation supports TDD workflows

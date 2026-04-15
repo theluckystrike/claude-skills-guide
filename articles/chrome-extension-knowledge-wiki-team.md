@@ -200,6 +200,12 @@ Consider metrics for wiki effectiveness: Are new team members reaching out less 
 
 A well-maintained knowledge wiki transforms how your chrome extension team operates. New developers become productive faster, experienced developers avoid repetitive research, and your team builds institutional knowledge that survives personnel changes. Start with the basics, document your current practices, and expand from there as your team identifies gaps.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-knowledge-wiki-team)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Team Wiki Maintenance Workflow](/claude-code-for-team-wiki-maintenance-workflow/)

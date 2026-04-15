@@ -566,6 +566,12 @@ Claude Code transforms Mage AI pipeline development from a manual process into a
 The key is treating Claude as a pair programmer who understands data engineering concepts and Mage AI specifics. Provide clear requirements, review suggestions critically, and iterate toward solid, production-ready pipelines. Over time, as you build up a history of successful prompts and generated patterns for your specific stack, working with Claude on Mage pipelines becomes dramatically faster than writing every block from scratch.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-mage-ai-pipeline-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Embedding Pipeline Workflow](/claude-code-for-embedding-pipeline-workflow/)

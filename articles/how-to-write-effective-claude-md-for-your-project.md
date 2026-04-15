@@ -179,6 +179,12 @@ A well-written CLAUDE.md transforms Claude Code from a generic assistant into a 
 
 Start with the basics, project overview, coding conventions, and directory structure, then layer in project-specific guidelines and skill references. Your CLAUDE.md will evolve naturally as your project matures, always serving as the authoritative reference for how Claude should work with your codebase.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-write-effective-claude-md-for-your-project)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)

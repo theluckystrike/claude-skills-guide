@@ -371,6 +371,12 @@ File path issues in Claude Code typically stem from working directory confusion 
 
 The most durable solution is a combination of a correct launch directory, a .claude.json config anchoring path conventions, and CLAUDE.md instructions that encode your project's file system layout. These three elements together make path confusion nearly impossible regardless of which skills you use or who on your team is running Claude.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-creates-files-in-wrong-directory-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). understand skill file structure to prevent path configuration issues

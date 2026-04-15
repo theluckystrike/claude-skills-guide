@@ -151,6 +151,12 @@ The key is starting with clear objectives, identify which compliance requirement
 
 Remember that compliance automation augments your security program rather than replacing human oversight. Use Claude Code to handle repetitive verification tasks, freeing your team to focus on complex security challenges that require contextual judgment and creative problem-solving.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-devsecops-compliance-pipeline-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [CCPA Privacy Compliance with Claude Code 2026](/claude-code-ccpa-privacy-compliance-guide/)

@@ -184,6 +184,12 @@ This integrated approach reduces context switching and maintains consistency acr
 
 [Claude skills transform ROS2 development](/use-cases-hub/) and scattered documentation into an organized, automated workflow. By incorporating skills like tdd, pdf, supermemory, frontend-design, and docx into your robotics projects, you accelerate development cycles while maintaining code quality and comprehensive documentation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-robotics-ros2-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for Kubernetes Operator Development](/claude-code-skills-for-kubernetes-operator-development/). Apply similar domain-specific skill patterns to Kubernetes operator development workflows.

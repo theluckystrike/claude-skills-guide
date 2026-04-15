@@ -151,6 +151,12 @@ As you develop with Claude Code, remember that agent sophistication isn't always
 
 Master these agent types, and you'll be well-equipped to build sophisticated AI-assisted applications that use the full power of large language models in 2026.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=types-of-llm-agents-explained-for-developers-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)

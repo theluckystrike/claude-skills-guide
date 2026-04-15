@@ -254,6 +254,12 @@ For production extensions, implement content security policy headers and validat
 
 Building a Twitter analytics Chrome extension requires understanding Chrome's extension architecture, Twitter's API capabilities, and web development best practices. Start with basic engagement tracking, then expand into more sophisticated analytics as you learn the platform's limitations and possibilities.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-twitter-analytics)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Twitter Reply Generator for Chrome: A Developer's Guide](/ai-twitter-reply-generator-chrome/)

@@ -271,6 +271,12 @@ Building a functional APA citation formatter requires attention to both the tech
 
 The Chrome extension platform offers sufficient capabilities to build a professional-grade citation tool that integrates smoothly into research workflows. With careful attention to APA formatting rules and solid metadata extraction, you can significantly reduce the time researchers spend on citation management.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-apa-citation-formatter)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Development in 2026: A Practical Manifest V3 Guide](/chrome-extension-development-2026/)

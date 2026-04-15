@@ -371,6 +371,12 @@ For staging environments, maintain a separate Supabase project and deploy to it 
 
 Building efficient Supabase backends with Claude Code comes down to organized project structure, well-written RLS policies, and automated workflows. Apply these patterns to speed up development and maintain reliable backend infrastructure.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-supabase-backend-development-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Java Backend Developer Spring Boot Workflow Tips](/claude-code-java-backend-developer-spring-boot-workflow-tips/)

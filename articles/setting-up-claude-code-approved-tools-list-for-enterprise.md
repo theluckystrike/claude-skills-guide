@@ -270,6 +270,12 @@ Implementing an approved tools list for Claude Code in enterprise environments r
 
 By following these patterns, security teams can confidently deploy Claude Code across their organization, knowing that tool access aligns with established policies and compliance requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=setting-up-claude-code-approved-tools-list-for-enterprise)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)

@@ -297,6 +297,12 @@ Building a Chrome extension for Amazon product research gives you complete contr
 
 For developers, the extension serves as a foundation for more advanced tools, integrate with external databases, add machine learning for sentiment analysis, or connect to inventory management systems. The browser is your interface, and Amazon's data is your canvas.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-product-research-amazon)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Research Assistant Chrome Extension: A Developer's Guide](/ai-research-assistant-chrome-extension/)

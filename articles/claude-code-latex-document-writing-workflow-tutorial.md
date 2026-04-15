@@ -490,6 +490,12 @@ The most effective use pattern is iterative: draft your content in plain prose, 
 Remember: Claude Code handles the mechanical aspects of LaTeX, but your expertise and content remain central. Use the AI to amplify your capabilities, not replace your knowledge.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-latex-document-writing-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)

@@ -208,6 +208,12 @@ This approach is most effective for:
 
 Avoid this approach for extensions from large companies with formal pricing structures. the person responding to support emails cannot authorize discounts. It works best with solo developers and small teams where the same person built the product and handles pricing decisions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-clearance-sale-finder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Academic Paper Finder: Tools and.](/chrome-extension-academic-paper-finder/)

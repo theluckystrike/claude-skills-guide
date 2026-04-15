@@ -215,6 +215,12 @@ Chrome's privacy story remains complicated by Google's advertising business mode
 
 Your choice depends on your threat model and use case. For maximum privacy, Firefox with Enhanced Tracking Protection and fingerprinting resistance enabled provides the best protection. For those embedded in Google's ecosystem, Chrome's privacy settings can be hardened, though fundamental data collection remains.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=firefox-vs-chrome-privacy-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Brave vs Chrome Privacy: A Technical Comparison for.](/brave-vs-chrome-privacy/)

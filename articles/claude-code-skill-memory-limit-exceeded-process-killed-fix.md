@@ -234,6 +234,12 @@ Solution:
 
 When memory errors persist despite these fixes, consider upgrading your system RAM or using remote compute resources for memory-intensive tasks. The combination of proper environment configuration, monitoring, and incremental task scoping resolves the majority of memory limit exceeded issues with Claude Code skills.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skill-memory-limit-exceeded-process-killed-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/). Fix context window errors alongside memory limit issues for smooth skill performance.

@@ -570,6 +570,12 @@ A complementary approach is to run a dedicated `workflow_dispatch`-triggered tes
 
 Setting up proper GitHub Actions notifications for Claude Code workflows transforms your CI/CD pipeline from a black box into a transparent, observable system. Teams can respond faster to issues, track deployment success rates, and maintain confidence in their automated workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-github-actions-notification-setup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GitHub Actions Matrix Builds Guide](/claude-code-github-actions-matrix-builds-guide/)

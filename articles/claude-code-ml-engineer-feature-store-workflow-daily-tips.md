@@ -161,6 +161,12 @@ Claude Code becomes an invaluable partner in your daily feature store workflow. 
 
 Start with these daily tips and you'll find your feature development speed increasing while maintaining higher quality standards. Claude Code handles the mechanical aspects of feature store engineering, letting you concentrate on feature design and model performance.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-ml-engineer-feature-store-workflow-daily-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code ML Engineer Model Evaluation Workflow Guide](/claude-code-ml-engineer-model-evaluation-workflow-guide/)

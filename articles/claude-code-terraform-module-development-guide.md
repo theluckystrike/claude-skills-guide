@@ -220,6 +220,12 @@ Developing Terraform modules with Claude Code transforms infrastructure from con
 
 Invest time in building modules that follow these patterns, and your team will reap the benefits through consistent, reliable, and maintainable infrastructure for every project.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-terraform-module-development-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Terraform State Management Guide](/claude-code-terraform-state-management-guide/)

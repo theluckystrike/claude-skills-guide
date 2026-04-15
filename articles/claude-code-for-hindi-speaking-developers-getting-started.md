@@ -277,6 +277,12 @@ Claude Code Hindi-बोलने वाले developers के लिए ए�
 
 ## Happy Coding!
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-hindi-speaking-developers-getting-started)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Setup on Mac: Step-by-Step Guide for Developers](/claude-code-setup-on-mac-step-by-step/)

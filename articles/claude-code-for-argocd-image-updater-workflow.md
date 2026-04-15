@@ -254,6 +254,12 @@ The combination is particularly effective during the setup phase, when teams are
 
 Start with simple configurations, gradually add complexity as your understanding grows, and use Claude Code whenever you encounter challenges. This approach makes automated image updates accessible to teams of all experience levels while maintaining reliable, secure deployment workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-argocd-image-updater-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)

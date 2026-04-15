@@ -223,6 +223,12 @@ For organizations requiring multi-agent systems with sophisticated orchestration
 
 The key insight: start with skills for immediate productivity, then layer in framework-based solutions only when your requirements exceed what skills can handle. A skill that solves 90% of your problem in one afternoon is usually better than a framework that solves 100% of it after a week of setup.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-vs-emerging-agentic-frameworks-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Future of AI Agent Skills Beyond Claude Code in 2026](/future-of-ai-agent-skills-beyond-claude-code-2026/). Explore how the AI agent skill ecosystem is evolving beyond the frameworks compared in this article

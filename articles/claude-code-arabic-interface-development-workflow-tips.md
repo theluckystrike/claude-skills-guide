@@ -331,6 +331,10 @@ Start with frontend-design for component scaffolding, then layer in documentatio
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-arabic-interface-development-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Multilingual Codebase Management Guide](/claude-code-multilingual-codebase-management-guide/)

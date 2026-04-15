@@ -210,6 +210,12 @@ Monitoring dashboards should track flash loan usage, success rates, and profit/l
 Claude Code can help you implement all these patterns while maintaining clean, readable code that's easier to audit and maintain. Remember that flash loan contracts handle significant value, security and robustness should always take precedence over clever optimizations.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-aave-flash-loan-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

@@ -254,6 +254,12 @@ Mastering Prisma schema migrations with Claude Code transforms database changes 
 By applying these advanced workflows, atomic migrations, zero-downtime patterns, comprehensive testing, and solid monitoring, you'll build confidence in your database change management process. Claude Code becomes not just an assistant but a strategic partner in maintaining database integrity while moving your application forward rapidly and safely.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-prisma-schema-migrations-advanced-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Using Claude Code with Prisma ORM Database Migrations](/using-claude-code-with-prisma-orm-database-migrations/). Beginner introduction to Prisma migrations with Claude Code

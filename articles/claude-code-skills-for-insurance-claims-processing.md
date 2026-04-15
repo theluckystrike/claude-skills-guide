@@ -242,6 +242,10 @@ Claude Code skills transform insurance claims processing from manual document ha
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-insurance-claims-processing)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). write well-structured skill files for each stage of the claims pipeline

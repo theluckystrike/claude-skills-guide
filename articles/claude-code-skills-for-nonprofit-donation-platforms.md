@@ -619,6 +619,10 @@ Load all of these preferences into your skill files so Claude generates code tha
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-nonprofit-donation-platforms)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). write donation workflow skills with correct metadata and instruction structure

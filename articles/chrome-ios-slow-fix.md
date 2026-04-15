@@ -432,6 +432,12 @@ Set a budget in `lighthouserc.js` to fail builds that regress below your perform
 
 Chrome iOS performance requires understanding the platform's constraints and optimizing accordingly. Focus on reducing JavaScript main thread work, implementing aggressive caching, minimizing network requests, and using iOS-specific APIs. Image optimization, passive scroll listeners, deferred third-party scripts, and proper font loading strategies collectively deliver the largest gains for real users. Regular profiling on actual devices ensures your optimizations deliver measurable improvements rather than theoretical gains from simulation alone.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-ios-slow-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Omnibox Slow? Here's How to Fix It](/chrome-omnibox-slow/)

@@ -447,6 +447,12 @@ Integrating Claude Code into your Spring Boot development workflow significantly
 
 The key is treating Claude Code as a collaborative partner rather than just a code generator. Describe your requirements clearly, review generated code for accuracy, and use its expertise in Spring Boot patterns. Pay particular attention to the areas where Spring Boot has footguns: lazy loading, N+1 queries, the Spring Security 6 migration, and the open-in-view default. Claude Code knows these pitfalls and avoids them in the code it generates. Your development speed and code quality will both improve as a result.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-java-backend-developer-spring-boot-workflow-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Spring Boot Java Microservices Guide 2026](/claude-code-spring-boot-java-microservices-development/). Extends these workflows into microservices architecture: inter-service communication, Docker, Kubernetes, and observability

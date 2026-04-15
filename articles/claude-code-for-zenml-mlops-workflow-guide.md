@@ -404,6 +404,12 @@ The most effective pattern is to treat Claude as a pair programmer who is deeply
 
 Remember that while Claude accelerates development, understanding ZenML's core concepts remains essential. Use Claude as a learning tool and productivity enhancer, but ensure you comprehend the generated code before deploying to production.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-zenml-mlops-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Axolotl QLoRA Training Script Workflow](/claude-code-axolotl-qlora-training-script-workflow/)

@@ -205,6 +205,12 @@ Start with the basics: use focused requests and targeted file reading. As you be
 
 Remember, effective context management isn't about limiting what Claude can see, it's about ensuring Claude sees the right information at the right time. Apply these techniques consistently, and you'll notice significant improvements in your Claude Code workflow productivity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-context-window-optimization-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude MD Too Long Context Window Optimization](/claude-md-too-long-context-window-optimization/)

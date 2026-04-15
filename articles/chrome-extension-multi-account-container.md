@@ -285,6 +285,12 @@ Multi-account container systems transform Chrome extensions from single-purpose 
 
 Start with storage-based isolation for simplicity, add cookie management for authenticated sessions, and layer in proper UI controls for account switching. This architecture scales well and provides the isolation users need when managing multiple identities.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-multi-account-container)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Docker Dashboard: Streamlined Container.](/chrome-extension-docker-dashboard/)

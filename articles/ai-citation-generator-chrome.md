@@ -309,6 +309,12 @@ Building an AI-powered citation generator for Chrome combines web scraping, AI p
 
 Start with the basic extraction logic and a single citation style. Add JSON-LD extraction as a second pass for richer metadata. Layer in AI processing for sources where the metadata is incomplete. Add caching once the basic flow works. The result is a personalized citation workflow that handles the full range of sources you actually encounter. not just the sources that happen to be indexed in academic databases.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-citation-generator-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension MLA Citation Generator: Build Your Own Tool](/chrome-extension-mla-citation-generator/)

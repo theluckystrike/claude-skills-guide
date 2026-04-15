@@ -402,6 +402,12 @@ Once the basic scheduler works, consider adding:
 
 The foundation you build here scales into a full-featured social media management tool. Start with reliable scheduling, then layer on the features that matter to your workflow. The hardest part is not the code, it is keeping up with platform UI changes. Build a test suite for your selectors early, and checking it once a week becomes a five-minute maintenance task rather than an hour of debugging.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-social-media-scheduler)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Bulk Social Media Posting: A Developer.](/chrome-extension-bulk-social-media-posting/)

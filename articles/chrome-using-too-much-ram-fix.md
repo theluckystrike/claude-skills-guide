@@ -227,6 +227,12 @@ Then use the Chrome DevTools Protocol to programmatically discard tabs based on 
 
 Reducing Chrome memory usage requires a combination of built-in features, launch flags, and extension management. Start with Chrome Task Manager to identify specific culprits, then apply targeted fixes. For developers, using command-line flags and automation scripts provides the most control. The goal is not to cripple functionality but to achieve a sustainable memory footprint for your workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-using-too-much-ram-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Profile Too Large? Fix It Fast (Step-by-Step)](/chrome-profile-too-large/)

@@ -198,6 +198,12 @@ Claude Code significantly accelerates CodeCommit migrations through automation, 
 For large-scale enterprise migrations, consider running pilot migrations with non-critical repositories to refine your process before tackling production workloads.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-codecommit-migration-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for AWS PrivateLink Workflow](/claude-code-for-aws-privatelink-workflow/)

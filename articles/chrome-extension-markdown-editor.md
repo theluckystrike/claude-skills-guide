@@ -252,6 +252,12 @@ Once the basic editor functions, consider adding features like syntax highlighti
 
 Building a Chrome extension markdown editor combines familiar web technologies with Chrome's unique APIs. The skills you develop, working with service workers, managing browser storage, and creating polished user interfaces, transfer directly to other extension projects and browser-based applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-markdown-editor)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Open Graph Preview: Implementation Guide](/chrome-extension-open-graph-preview/)

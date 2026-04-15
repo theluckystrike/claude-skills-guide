@@ -378,6 +378,12 @@ AI answer engine chrome extensions bridge the gap between static web content and
 
 The key to a successful implementation lies in understanding the interaction patterns. how users select content, how to extract meaningful context, and how to present AI responses in a way that enhances rather than disrupts the browsing experience. Start with a minimal working extension that handles the content-script-to-background-to-API loop, then layer on caching, error handling, and richer context extraction once the basics are solid.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-answer-engine-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Using Claude Code as a Backend Engine for Dev Tools](/using-claude-code-as-a-backend-engine-for-dev-tools/)

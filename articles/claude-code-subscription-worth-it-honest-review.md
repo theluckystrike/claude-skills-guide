@@ -149,6 +149,10 @@ Start with the free tier to evaluate whether Claude Code fits your workflow. Onc
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-subscription-worth-it-honest-review)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Kilo Code Review: Is It Worth Using in 2026?](/kilo-code-review-is-it-worth-using-2026/)

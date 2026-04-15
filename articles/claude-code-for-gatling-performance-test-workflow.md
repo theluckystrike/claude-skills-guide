@@ -255,6 +255,12 @@ Claude Code transforms Gatling performance testing from a technical chore into a
 Start small, iterate quickly, and let Claude handle the boilerplate while you focus on designing meaningful test scenarios that reveal how your system performs under real-world conditions.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-gatling-performance-test-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for CSS Performance Optimization Workflow](/claude-code-for-css-performance-optimization-workflow/)

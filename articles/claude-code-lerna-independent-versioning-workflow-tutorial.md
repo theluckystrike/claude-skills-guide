@@ -264,6 +264,12 @@ Start with the workflow outlined here: initialize in independent mode, adopt con
 The key is consistency, standardized commit messages, automated version detection, and thorough testing. With these practices in place, independent versioning becomes not just possible, but the natural way to manage complex monorepos.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-lerna-independent-versioning-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Changesets Versioning Workflow](/claude-code-for-changesets-versioning-workflow/)

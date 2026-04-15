@@ -201,6 +201,12 @@ Testing Claude skills doesn't require complex infrastructure, it requires consis
 
 The investment in testing pays dividends in team trust and skill adoption. A well-tested skill becomes a trusted part of your team's workflow; a poorly tested one gets abandoned within days.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-test-a-claude-skill-before-deploying-to-team)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/). Once your skill passes testing, distribute it consistently across all team members using these sharing patterns

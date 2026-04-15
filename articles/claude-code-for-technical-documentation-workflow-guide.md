@@ -239,6 +239,12 @@ Claude Code transforms technical documentation from a tedious chore into an effi
 The key is consistency: regular updates, automated reviews, and treating documentation as a first-class citizen in your development process. With Claude Code handling the heavy lifting, your team can focus on writing great code, and having that code document itself.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-technical-documentation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MkDocs Documentation Workflow](/claude-code-mkdocs-documentation-workflow/)

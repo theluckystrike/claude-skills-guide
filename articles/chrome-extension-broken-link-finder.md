@@ -439,6 +439,10 @@ Start with the basic architecture shown here, then add features based on your sp
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-broken-link-finder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Check Link Safety: Developer Tools and Techniques](/chrome-check-link-safety/)

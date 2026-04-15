@@ -792,6 +792,12 @@ Start by setting up the basic commit parsing, then gradually add features like d
 The single biggest lever in this entire system is consistent conventional commits. Once every developer on your team writes structured commits with accurate types and scopes, the changelog pipeline becomes nearly automatic. The scripts handle the mechanics; Claude Code handles the judgment calls around categorization and human-readable summaries. Together, they reduce one of the most tedious release tasks to a ten-minute review.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-lerna-changelog-generation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for PR Changelog Generation Workflow](/claude-code-for-pr-changelog-generation-workflow/)

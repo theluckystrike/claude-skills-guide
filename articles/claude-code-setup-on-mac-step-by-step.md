@@ -254,6 +254,12 @@ Use it
 cat ~/.claude/prompts/explain-code.txt src/utils.js | claude
 ```
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-setup-on-mac-step-by-step)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)

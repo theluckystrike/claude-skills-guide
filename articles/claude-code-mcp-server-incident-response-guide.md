@@ -406,6 +406,12 @@ MCP server incidents disrupt Claude Code workflows but follow recognizable patte
 
 Regular maintenance, including configuration versioning, health checks, and monitoring, prevents incidents before they impact productivity. Keep your MCP servers running smoothly and maintain uninterrupted development sessions. The investment in a solid diagnostic process pays off quickly: once you have resolved a particular failure type once and documented the fix, you can recover from the same incident in under two minutes on every future occurrence.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mcp-server-incident-response-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

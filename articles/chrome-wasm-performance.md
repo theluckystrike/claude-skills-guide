@@ -359,6 +359,12 @@ async function applyFilter(imageData) {
 
 The key design decisions here reflect all the principles above: one JS-WASM boundary crossing per frame rather than per pixel, direct typed array access to shared memory rather than data copying, and a single exported function that handles the entire operation. Benchmarks on this pattern consistently show 8-15x speedup over equivalent JavaScript for per-pixel operations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-wasm-performance)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Task Prioritizer Chrome Extension: A Practical Guide for Developers](/ai-task-prioritizer-chrome-extension/)

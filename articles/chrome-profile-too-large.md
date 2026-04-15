@@ -260,6 +260,12 @@ Chrome profile bloat stems from cache accumulation, cookie storage, browsing his
 
 Start by checking your current profile size, then apply targeted cleanup based on the largest consumers. Implement a maintenance routine to prevent future buildup. With these strategies, you maintain a responsive browser without sacrificing the convenience of persistent data.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-profile-too-large)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Using Too Much RAM Fix: A Developer's Guide](/chrome-using-too-much-ram-fix/)

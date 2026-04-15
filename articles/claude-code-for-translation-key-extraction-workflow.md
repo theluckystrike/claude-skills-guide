@@ -122,6 +122,12 @@ When integrating with continuous integration systems, configure pipelines to run
 By implementing Claude Code for translation key extraction, development teams transform what was once a painful manual process into an automated workflow that improves over time. The AI's ability to understand context, maintain consistency, and handle complex patterns makes it an invaluable tool for any application requiring multilingual support. Start with the extraction fundamentals outlined in this guide, then progressively integrate more advanced automation as your internationalization needs evolve.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-translation-key-extraction-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code LemonSqueezy License Key Validation Workflow](/claude-code-lemonsqueezy-license-key-validation-workflow/)

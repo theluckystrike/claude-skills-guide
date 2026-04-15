@@ -359,6 +359,12 @@ If you're currently using Lightshot and considering a switch, here is a practica
 
 The right alternative ultimately depends on your workflow. If Lightshot still serves your basic needs, these alternatives become valuable when you need more, OCR for accessibility documentation, API integration for automated bug reporting, or cloud sync for team environments.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=lightshot-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Evernote Web Clipper Alternative for Chrome in 2026: A.](/evernote-web-clipper-alternative-chrome-extension-2026/)

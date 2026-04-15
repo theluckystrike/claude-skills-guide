@@ -363,6 +363,12 @@ Each of these workflows represents a case where switching to a terminal, Python,
 
 A Chrome extension for Base64 encoding and decoding is a valuable tool for developers working with APIs, handling data transfers, or managing binary content in text formats. Building your own gives you complete control over features and ensures you understand the underlying mechanisms. Start with the basic implementation outlined here, then expand with URL-safe variants, file support, and other features that match your specific needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-base64-encoder-decoder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome DevTools Performance Profiling: A Practical Guide](/chrome-devtools-performance-profiling/)

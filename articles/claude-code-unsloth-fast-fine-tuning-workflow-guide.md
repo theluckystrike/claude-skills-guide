@@ -456,6 +456,12 @@ The most underrated aspect of this combination is debugging velocity. Fine-tunin
 Remember to document your experiments, version your data, and always validate your fine-tuned model on held-out test sets before deployment. With this workflow, you're equipped to build production-quality fine-tuned models efficiently and reliably.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-unsloth-fast-fine-tuning-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Unsloth Fast Fine Tuning Workflow Tutorial](/claude-code-for-unsloth-fast-fine-tuning-workflow-tutorial/)

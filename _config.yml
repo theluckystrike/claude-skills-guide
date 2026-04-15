@@ -22,6 +22,10 @@ newsletter:
   # Copy the iframe src URL (starts with https://embeds.beehiiv.com/)
   beehiiv_embed_url: ""
 
+include:
+  - _headers
+  - _redirects
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

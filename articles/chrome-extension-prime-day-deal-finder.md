@@ -308,6 +308,12 @@ When scaling beyond a personal tool, consider these factors:
 
 A custom Chrome extension gives you control over deal discovery that generic shopping tools cannot match. By understanding content scripts, popup interfaces, and storage APIs, developers can build sophisticated filtering and alerting systems. The foundation above provides a starting point, extend it with price history tracking, deal sharing, or category-based alerts based on your specific needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-prime-day-deal-finder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a Chrome Extension for Gaming Deal Finding](/chrome-extension-gaming-deal-finder-chrome/)

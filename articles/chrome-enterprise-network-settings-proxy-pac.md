@@ -300,6 +300,12 @@ Dedicated PAC testing tools like `pacparser` (a C library with Python and Node.j
 
 For Chrome Enterprise deployments, PAC files remain a solid solution for organizations needing fine-grained proxy control without managing complex infrastructure manually.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-network-settings-proxy-pac)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Auto Update Settings: A Developer's Guide](/chrome-enterprise-auto-update-settings/)

@@ -870,6 +870,12 @@ The workflow demonstrated here provides a foundation. Customize the evidence typ
 The most important shift is cultural: once evidence collection is automated and continuous, your team stops thinking about compliance as a periodic event and starts treating it as a live, always-current view of your security posture.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-iso27001-evidence-collection-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Compliance SOC2 ISO27001 Guide](/claude-skills-compliance-soc2-iso27001-guide/)

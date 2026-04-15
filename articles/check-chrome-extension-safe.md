@@ -255,6 +255,12 @@ For developers building extensions, minimize permissions requested. Only ask for
 
 Stay vigilant. Your browser extension security depends on proactive evaluation before installation, and continued attention after.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=check-chrome-extension-safe)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Validate Claude Code Output Before Committing](/best-way-to-validate-claude-code-output-before-committing/)

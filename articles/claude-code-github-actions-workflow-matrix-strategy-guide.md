@@ -313,6 +313,12 @@ GitHub Actions matrix strategies provide powerful parallelism for CI/CD pipeline
 
 For more advanced patterns, explore the `supermemory` skill for tracking matrix performance over time, or the `tdd` skill for deeper test analysis integration.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-github-actions-workflow-matrix-strategy-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/). Integrate Claude skills directly into GitHub Actions workflows beyond matrix strategy patterns.

@@ -470,6 +470,12 @@ For developers managing multiple environments and services, combining Chrome's b
 
 The key is treating password security as an ongoing process rather than a one-time configuration. Schedule monthly checkups, automate what you can, and build the habit of running a breach check any time you onboard a new service or rotate a team member off a project.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-password-checkup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)

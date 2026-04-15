@@ -399,6 +399,12 @@ chrome.tabs.create({ url: chrome.runtime.getURL('editor.html') });
 - For extensions that handle sensitive documentation screenshots, add an auto-clear feature that removes the image from storage after a configurable timeout
 - The blur tool is essential before sharing screenshots in public bug trackers or documentation systems
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-arrow-and-text-overlay-screenshot)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Keyword Density Checker: A Developer's Guide](/chrome-extension-keyword-density-checker/)

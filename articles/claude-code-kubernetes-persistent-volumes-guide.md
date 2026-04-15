@@ -306,6 +306,12 @@ For production workloads, always set appropriate resource requests and limits on
 
 Persistent volumes provide essential durability for stateful applications in Kubernetes. Master the PVC workflow: request storage through claims, select appropriate StorageClasses for your performance needs, and implement backup strategies before deploying to production. Claude Code accelerates this process by generating correct manifests and identifying potential issues in your configuration.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-kubernetes-persistent-volumes-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OpenEBS Storage Workflow Tutorial](/claude-code-for-openebs-storage-workflow-tutorial/)

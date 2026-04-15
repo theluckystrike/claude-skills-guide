@@ -188,6 +188,12 @@ If you've tried all these solutions and Chrome remains slow after updates, consi
 
 Chrome's performance after an update largely depends on your specific setup, extension ecosystem, and how the update changed internal processes. By systematically working through these solutions, starting with the Task Manager baseline and flags before jumping to reinstalls, you can typically restore or even improve browser performance without losing any of your data.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-update-broke-speed-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Too Many Processes: A Developer's Guide to Fixing High Memory Usage](/chrome-too-many-processes/)

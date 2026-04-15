@@ -271,6 +271,12 @@ Beyond basic metrics, you can enhance your extension with several advanced featu
 
 Building a TikTok analytics Chrome extension gives you complete control over how you collect, analyze, and visualize your content performance data. The patterns shown here provide a solid foundation that you can adapt based on your specific requirements and the metrics that matter most for your content strategy.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-tiktok-analytics-tracker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Black Friday Deal Tracker: A.](/chrome-extension-black-friday-deal-tracker/)

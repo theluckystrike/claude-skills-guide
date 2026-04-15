@@ -323,6 +323,10 @@ Stay current with Claude Code updates and new skills. The ecosystem evolves rapi
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=vibe-coding-productivity-tips-and-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Vibe Coding Project Structure Best Practices](/vibe-coding-project-structure-best-practices/)

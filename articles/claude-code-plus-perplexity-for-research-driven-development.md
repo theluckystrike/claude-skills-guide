@@ -130,6 +130,12 @@ Research-driven development does take more time upfront, but the payoff comes in
 
 Claude Code and Perplexity together create a development workflow where implementation is always informed by current research. Rather than relying on outdated assumptions or choosing tools based on past experience alone, every technical decision can be validated against the latest information. This combination doesn't slow you down, it makes your development faster by reducing the rework that comes from uninformed decisions. Start by pairing research sessions with implementation tasks, and watch your codebase become more principled and maintainable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-plus-perplexity-for-research-driven-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Courses Online 2026: A Developer Guide](/best-claude-code-courses-online-2026/)

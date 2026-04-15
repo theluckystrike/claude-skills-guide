@@ -248,6 +248,12 @@ A well-implemented Claude Code standards enforcement workflow transforms coding 
 
 Start with your team's most critical standards, build automation incrementally, and measure your progress. Within a few iterations, you'll have a solid system that keeps your codebase consistent without stifling developer productivity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-team-coding-standards-enforcement-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)

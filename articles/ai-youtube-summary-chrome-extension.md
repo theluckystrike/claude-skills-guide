@@ -245,6 +245,12 @@ For teams, consider implementing collaboration features that allow sharing summa
 
 The ability to quickly extract and summarize video content represents a significant productivity enhancement for developers and researchers. By understanding the underlying architecture and APIs, you can build tailored solutions that fit specific workflows and requirements. Whether you use an off-the-shelf tool or roll your own, the investment in setting up AI-powered YouTube summarization pays back in hours of reclaimed attention every week.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-youtube-summary-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Podcast Summary Chrome Extension: A Developer's Guide.](/ai-podcast-summary-chrome-extension/)

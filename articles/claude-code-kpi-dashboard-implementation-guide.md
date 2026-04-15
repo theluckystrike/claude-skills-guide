@@ -370,6 +370,12 @@ The combination of skills powers a complete solution: canvas-design for visualiz
 
 The most important step is simply starting. A five-metric ASCII dashboard you actually look at every morning is worth more than a 50-metric Grafana deployment that nobody checks. Build the habit first, then add complexity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-kpi-dashboard-implementation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Reading Assistant Chrome: Technical Implementation Guide](/ai-reading-assistant-chrome/)

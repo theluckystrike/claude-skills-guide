@@ -311,6 +311,12 @@ Start with small batches to validate your prompts, then scale up gradually while
 
 Remember to consult the official Anthropic documentation for the latest API specifications and pricing details, as these evolve regularly with new model releases and feature updates.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-claude-batch-api-anthropic-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude API Batch Processing Large Datasets Workflow Guide](/claude-api-batch-processing-large-datasets-workflow-guide/)

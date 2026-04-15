@@ -378,6 +378,12 @@ Here are key recommendations for productive Dash development with Claude Code:
 Claude Code serves as an excellent development partner for Dash projects, helping you generate clean code, implement complex patterns, and follow best practices. By integrating it into your workflow, you can focus more on data visualization logic and less on boilerplate code. The most productive approach is to use Claude Code iteratively: generate a working skeleton, run it, identify what needs to change, and prompt Claude Code with specific, context-rich requests for each change rather than describing the entire application in one shot.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-plotly-dash-python-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Brownie Python Workflow Guide](/claude-code-for-brownie-python-workflow-guide/)

@@ -337,6 +337,12 @@ Before marking any AI-assisted work complete:
 
 Using Claude Code responsibly means balancing productivity with quality. This checklist provides a framework, but adapt it to your team's specific needs and project requirements. The goal is not to slow down development with bureaucratic overhead. it is to build habits that make AI assistance reliable, auditable, and safe to scale across your organization.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-responsible-ai-checklist-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code CMMC Compliance Checklist Automation](/claude-code-cmmc-compliance-checklist-automation/)

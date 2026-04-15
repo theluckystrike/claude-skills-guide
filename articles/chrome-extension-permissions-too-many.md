@@ -203,6 +203,12 @@ Permission warnings exist for a reason. When an extension asks for access that s
 
 Treat your extension list the same way you treat installed software. review it periodically, remove what you no longer use, and question anything that requests more access than its stated function requires.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-permissions-too-many)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Running Slow? Too Many Extensions Could Be the Cause](/chrome-slow-too-many-extensions/)

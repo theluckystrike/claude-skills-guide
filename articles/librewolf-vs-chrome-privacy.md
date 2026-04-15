@@ -232,6 +232,12 @@ For developers working with web platforms, having both browsers installed serves
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=librewolf-vs-chrome-privacy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Mullvad vs Chrome Privacy: A Developer and Power User Guide](/mullvad-vs-chrome-privacy/)

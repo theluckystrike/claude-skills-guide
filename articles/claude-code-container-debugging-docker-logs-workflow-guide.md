@@ -288,6 +288,12 @@ Container debugging requires familiarity with Docker's inspection capabilities, 
 
 Claude Code enhances this workflow through skills that maintain context, generate tests, and extract information efficiently. Combine these tools with solid logging practices and automation scripts to handle container issues confidently in production environments. For monitoring multi-container systems, see [monitoring and logging Claude Code multi-agent systems](/monitoring-and-logging-claude-code-multi-agent-systems/).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-container-debugging-docker-logs-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code with Docker: Container Setup Guide](/using-claude-code-inside-docker-container-tutorial/). Set up Claude Code to run inside Docker containers for consistent debugging environments

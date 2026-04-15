@@ -299,6 +299,12 @@ Start with the fundamentals outlined in this tutorial, then gradually add comple
 Remember that effective release automation is an investment. The initial setup time pays dividends through faster shipping cycles, reduced errors, and more confident deployments. With Claude Code as your automation partner, you have a powerful ally in building the release workflows your team needs to succeed.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-release-automation-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Changelogs and Release Notes Automation](/claude-code-changelogs-and-release-notes-automation/)

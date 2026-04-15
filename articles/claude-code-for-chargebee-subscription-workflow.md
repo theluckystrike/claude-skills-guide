@@ -247,6 +247,12 @@ Claude Code significantly accelerates Chargebee subscription workflow developmen
 Remember to provide Claude Code with relevant context about your existing codebase, test coverage requirements, and any specific business rules that govern your subscription logic. This context enables the AI to generate code that truly fits your project.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-chargebee-subscription-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Can You Use Claude Skills Without a Claude Max Subscription?](/can-you-use-claude-skills-without-a-claude-max-subscription/)

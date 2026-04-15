@@ -313,6 +313,12 @@ Follow these practical recommendations to improve your PySpark workflows:
 
 Claude Code can assist you at every step, reviewing your code, suggesting optimizations, and helping you understand Spark's complex execution model. By combining your domain knowledge with AI-assisted development, you can build solid, efficient Spark pipelines that scale with your data needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-apache-spark-pyspark-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Spark DataFrame Workflow Guide](/claude-code-for-apache-spark-dataframe-workflow-guide/)

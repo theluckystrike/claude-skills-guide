@@ -171,6 +171,12 @@ Claude Code skills aren't replacements for other AI models, they're enhancers. B
 
 The composable nature of skills means your Claude setup grows with your needs. Start with skills like `pdf` for document processing or `tdd` for test-first development, then expand to community skills like `supermemory` for persistent context. The skills layer remains yours, portable and customizable, regardless of how your broader AI stack evolves.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=can-claude-code-skills-work-alongside-other-ai-models)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills vs Emerging Agentic Frameworks in 2026](/claude-skills-vs-emerging-agentic-frameworks-2026/). Compare Claude skills with full agentic frameworks when planning your multi-AI integration strategy.

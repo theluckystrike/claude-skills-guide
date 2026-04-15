@@ -226,6 +226,12 @@ Building a break reminder extension teaches valuable skills about Chrome's exten
 
 Remember: the best productivity tools are the ones you'll actually use. Start with a simple implementation, test it in your daily workflow, and iterate based on what works for your specific remote work situation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-break-reminder-remote-work)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a Chrome Extension for Gaming Deal Finding](/chrome-extension-gaming-deal-finder-chrome/)

@@ -456,6 +456,12 @@ For teams subject to regular privacy audits, this kind of instrumentation is wor
 
 Chrome provides multiple pathways to automatically delete cookies, from simple browser settings to advanced automation scripts. Choose the method that matches your technical comfort level and use case requirements. For developers, integrating cookie cleanup into testing pipelines ensures consistent, reliable results.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-delete-cookies-automatically)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

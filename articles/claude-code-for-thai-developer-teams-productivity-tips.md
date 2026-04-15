@@ -800,6 +800,12 @@ Generate meeting preparation materials. Before architecture discussions or sprin
 จำไว้ว่า Claude Code เป็นเครื่องมือที่ช่วยเพิ่มผลิตภาพ แต่ไม่สามารถแทนที่การตัดสินใจของมนุษย์ได้ การใช้งานร่วมกันอย่างชาญฉลาดจะให้ผลลัพธ์ที่ดีที่สุด
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-thai-developer-teams-productivity-tips)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

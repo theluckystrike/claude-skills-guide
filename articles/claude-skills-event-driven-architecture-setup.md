@@ -229,6 +229,12 @@ Event-driven architecture unlocks powerful automation possibilities with Claude 
 
 The key is gradual adoption, add event triggers for repetitive manual tasks first, then expand as your confidence grows. Your development workflow becomes more automated while you maintain full control over what events trigger what actions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-event-driven-architecture-setup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/). foundational guide to the Claude Code hooks system

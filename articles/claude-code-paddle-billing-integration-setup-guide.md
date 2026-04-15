@@ -399,6 +399,12 @@ Building a Paddle billing integration with Claude Code significantly accelerates
 Remember to thoroughly test your integration in Paddle's sandbox environment before deploying to production. With proper error handling and webhook processing, your billing system will be solid and reliable.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-paddle-billing-integration-setup-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Angular DevTools Chrome Extension Setup: A Complete Guide](/angular-devtools-chrome-extension-setup/)

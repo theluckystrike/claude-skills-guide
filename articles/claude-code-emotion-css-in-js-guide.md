@@ -284,6 +284,12 @@ This prevents styled components from receiving internal props they don't need, r
 
 Emotion provides a flexible, performant approach to styling React applications. Whether you prefer the `css` prop for simplicity or the styled API for component encapsulation, Claude Code helps you implement these patterns effectively. Start with basic styling, progressively adopt theming and global styles, and optimize for production as your application grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-emotion-css-in-js-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)

@@ -363,6 +363,12 @@ Choose direct curl commands for simple, occasional API calls and MCP servers for
 
 With skills like the `tdd` skill for generating tests, the `supermemory` skill for maintaining context, the `pdf` skill for generating documentation, and the `frontend-design` skill for creating UI mockups, you have a powerful toolkit for building comprehensive automation workflows that use external APIs effectively.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=can-claude-code-skills-call-external-apis-automatically)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/). Step-by-step patterns for wiring Claude skills to REST and GraphQL APIs

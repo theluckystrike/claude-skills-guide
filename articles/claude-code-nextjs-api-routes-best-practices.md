@@ -544,6 +544,10 @@ For additional NextJS optimization strategies, explore the guide on NextJS deplo
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nextjs-api-routes-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)

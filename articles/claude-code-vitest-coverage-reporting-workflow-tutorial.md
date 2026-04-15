@@ -336,6 +336,12 @@ Integrating Vitest coverage reporting with Claude Code creates a powerful qualit
 
 With these practices in place, you'll have visibility into your code's test coverage and be able to make informed decisions about where to focus testing efforts next. Coverage reporting is most useful when it's fast, automatic, and visible. once those three conditions are met, the metrics start shaping how your team thinks about writing code, not just testing it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vitest-coverage-reporting-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Jest to Vitest Migration Workflow with Claude Code](/claude-code-jest-to-vitest-migration-workflow-tutorial/)

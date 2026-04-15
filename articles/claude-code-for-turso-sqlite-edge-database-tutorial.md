@@ -357,6 +357,12 @@ With your Turso database connected to Claude Code, you have a powerful setup for
 
 Explore embedding Turso in serverless functions, implementing real-time subscriptions with WebSockets, or adding row-level security for multi-tenant applications. Claude Code's skills like [pdf can help generate documentation for your data layer](/best-claude-code-skills-to-install-first-2026/), while frontend-design skills ensure your application UI properly integrates with your backend.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-turso-sqlite-edge-database-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)

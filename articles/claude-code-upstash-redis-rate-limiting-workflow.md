@@ -303,6 +303,12 @@ Conclusion
 
 Combining Claude Code's automation capabilities with Upstash Redis creates a powerful rate limiting system. The examples in this guide provide starting points for fixed window, sliding window, and token bucket implementations. Adapt these patterns to your specific requirements, and use Claude Code to automate the ongoing management and monitoring of your rate limiting infrastructure.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-upstash-redis-rate-limiting-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Confluence Documentation Guide](/claude-code-confluence-documentation-guide/)

@@ -242,6 +242,10 @@ You can also ask Claude directly in the session: "What tool calls did you make i
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=advanced-claude-skills-with-tool-use-and-function-calling)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). The `tools` and `max_turns` fields that control tool access are fully documented here with annotated examples

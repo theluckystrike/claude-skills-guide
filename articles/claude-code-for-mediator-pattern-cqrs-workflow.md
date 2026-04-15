@@ -75,6 +75,12 @@ Finally, test each handler in isolation. The separation these patterns provide m
 The mediator pattern and CQRS workflow provide a solid foundation for building maintainable Claude Code skills. By separating concerns, creating clear boundaries between operations, and centralizing request routing, you create skills that are easier to understand, test, and extend. Start with simple implementations, and progressively add complexity as your needs grow. The patterns scale well, but they work equally well for smaller projects when applied thoughtfully.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-mediator-pattern-cqrs-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Ambassador Sidecar Pattern Workflow](/claude-code-for-ambassador-sidecar-pattern-workflow/)

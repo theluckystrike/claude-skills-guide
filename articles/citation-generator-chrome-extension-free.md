@@ -244,6 +244,12 @@ The local storage approach means you can implement history search, duplicate det
 
 Building your own citation generator provides a free, private, and customizable alternative to commercial tools. Every feature serves your specific workflow whether you work in academic research, technical documentation, or content creation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=citation-generator-chrome-extension-free)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension MLA Citation Generator: Build Your Own Tool](/chrome-extension-mla-citation-generator/)

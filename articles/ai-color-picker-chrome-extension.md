@@ -186,6 +186,12 @@ A practical checklist before finalizing a palette:
 
 For team projects, export the final accessibility report from the AI color picker and include it in your design review documentation. Having contrast ratios documented prevents regression when designers later adjust brand colors without re-checking accessibility.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-color-picker-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Color Contrast Checker: A Developer Guide](/chrome-extension-color-contrast-checker/)

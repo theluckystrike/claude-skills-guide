@@ -124,6 +124,12 @@ Some teams also benefit from split tunneling, routing only specific traffic thro
 
 Slow Chrome proxy connections usually stem from server latency, DNS issues, protocol mismatches, or authentication delays. By systematically diagnosing each potential cause and applying the corresponding fix, you can restore fast, reliable browsing. Remember to use Chrome's built-in diagnostics and don't hesitate to test different proxy configurations until you find the optimal setup.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-proxy-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Omnibox Slow? Here's How to Fix It](/chrome-omnibox-slow/)

@@ -216,6 +216,12 @@ The key is treating Claude as a collaborative tool, describe your intent clearly
 Start small: generate one component with Claude's help, review the output, and gradually incorporate more AI-assisted workflows into your development process. The combination of Stencil's powerful component architecture and Claude's code generation capabilities creates a productivity boost that scales with your project complexity.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-stencil-web-components-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Fast Web Components Workflow](/claude-code-for-fast-web-components-workflow/)

@@ -152,6 +152,12 @@ Claude Code skills transform governance from a compliance burden into a developm
 
 Start small, measure impact, and expand governance coverage incrementally. Your development teams will appreciate having an always-available expert that helps them ship compliant code faster.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-enterprise-architects-governance)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Governance Security Audit Checklist](/claude-skills-governance-security-audit-checklist/). Apply this security audit checklist before deploying governance-critical skills across your enterprise

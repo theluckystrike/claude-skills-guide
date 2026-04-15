@@ -183,6 +183,12 @@ Code graph analysis with Claude Code transforms how you understand and work with
 
 The investment in setting up these workflows pays dividends in reduced debugging time, safer refactoring, and better architectural decisions throughout your project's lifecycle.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-code-graph-analysis-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Code Complexity Analysis Workflow](/claude-code-for-code-complexity-analysis-workflow/)

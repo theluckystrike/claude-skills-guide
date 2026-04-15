@@ -416,6 +416,12 @@ To get the most from Claude when working with template literal types:
 
 Template literal types unlock sophisticated type-level programming in TypeScript. With Claude Code as your interactive assistant, you can explore these patterns safely, understand complex error messages, and build solid type-safe applications faster than ever before. The combination of AI-guided exploration and TypeScript's type system produces code that is both safer and more self-documenting than traditional approaches.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-typescript-template-literal-types-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for TypeScript Conditional Types Guide](/claude-code-for-typescript-conditional-types-guide/)

@@ -579,6 +579,12 @@ Start small with basic fixtures, then gradually incorporate more complex scenari
 
 The key is treating Claude Code as a collaborative partner in your testing process, describe your needs clearly, review the output, and iteratively refine the results to match your project's specific requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-test-fixture-generation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Test Data Generation Workflow](/claude-code-test-data-generation-workflow/)

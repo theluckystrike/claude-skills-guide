@@ -426,6 +426,12 @@ self.addEventListener('resume', () => {
 
 Handling these events makes your PWA resilient to both Memory Saver discards and OS-level tab suspension, which is important for apps that maintain WebSocket connections or long-polling requests.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-memory-saver-mode)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Reduce Chrome Memory Usage: A Developer's Guide](/reduce-chrome-memory-usage/)

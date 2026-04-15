@@ -223,6 +223,12 @@ Dead code elimination is essential for maintaining healthy codebases. Claude Cod
 
 Remember: the key to effective dead code management is consistency. Regular scans and incremental cleanup prevent dead code accumulation and keep your project healthy long-term.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-dead-code-elimination-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

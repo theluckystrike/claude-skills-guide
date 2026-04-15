@@ -280,6 +280,12 @@ Pitfall: Timeout and resource exhaustion
 6. Define clear ownership: Each agent should own specific paths or responsibilities
 7. Test agent independence: Verify agents work correctly in any execution order
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-multi-agent-orchestration-patterns-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/)

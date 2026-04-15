@@ -217,6 +217,12 @@ Finally, version your Wagmi configuration. As the library evolves, maintaining a
 Claude Code significantly accelerates Wagmi development by generating consistent hook compositions, handling state patterns uniformly, and creating test infrastructure. The key is providing clear context about your contract interfaces and chain requirements. With proper setup, Claude Code becomes an invaluable partner for building solid Ethereum dApps.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-wagmi-hooks-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Helm Hooks Workflow Tutorial](/claude-code-for-helm-hooks-workflow-tutorial/)

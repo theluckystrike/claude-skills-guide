@@ -257,6 +257,12 @@ Building an AI translation Chrome extension requires careful attention to securi
 
 The foundation established here scales from simple selection translation to complex document processing. As AI models improve, your extension can incorporate new capabilities without fundamental architectural changes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-translation-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

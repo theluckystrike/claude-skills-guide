@@ -402,6 +402,12 @@ For personal or team use, keeping the extension unpacked allows direct updates w
 
 Building a YouTube thumbnail downloader extension requires understanding URL patterns, Chrome extension architecture, and JavaScript manipulation of browser functionality. The implementation here provides a solid foundation that you can extend with additional features like format conversion, automatic naming conventions, metadata extraction via the YouTube Data API, or integration with cloud storage services like Dropbox or Google Drive.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-youtube-thumbnail-downloader)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)

@@ -415,6 +415,12 @@ Run this weekly to catch broken automation before it affects team workflows.
 
 The Notion MCP server transforms your knowledge base from passive documentation into an active automation asset. By integrating with Claude Code's reasoning capabilities, you gain a powerful system for maintaining, querying, and evolving your documentation through natural language. For a deeper look at connecting Notion with Claude skills, see the [guide on integrating Claude skills with the Notion API](/how-to-integrate-claude-skills-with-notion-api-guide/).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=notion-mcp-server-knowledge-base-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

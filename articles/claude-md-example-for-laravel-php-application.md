@@ -298,6 +298,12 @@ This project-specific file works alongside the general Laravel skill, giving you
 
 Creating a Claude MD file for your Laravel PHP application significantly improves your development workflow. By defining your conventions, preferred packages, and architectural patterns, Claude generates code that matches your team's standards from the start. Combine this with skills like tdd for testing and supermemory for context retention, and you have a powerful development setup for Laravel projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-example-for-laravel-php-application)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude MD Example for Elixir Phoenix Application](/claude-md-example-for-elixir-phoenix-application/)

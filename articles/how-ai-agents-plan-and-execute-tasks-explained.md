@@ -108,6 +108,12 @@ AI agents like Claude Code combine sophisticated planning with systematic execut
 
 The key insight is this: AI task execution isn't magic. It's a structured process of analysis, planning, and methodical execution that becomes more powerful when you understand how to guide it effectively.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-ai-agents-plan-and-execute-tasks-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)

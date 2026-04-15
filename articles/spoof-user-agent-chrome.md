@@ -307,6 +307,12 @@ For one-off debugging, the DevTools Network Conditions panel is the fastest opti
 
 The key insight is that UA spoofing tests server and delivery logic. it does not substitute for running actual browsers. Use it as part of a broader cross-browser strategy, not as a replacement for it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=spoof-user-agent-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [DuckDuckGo vs Chrome Privacy: A Developer & Power User Guide](/duckduckgo-vs-chrome-privacy/)

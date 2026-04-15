@@ -279,6 +279,12 @@ To get started with Claude Code for BFF development:
 The BFF pattern combined with Claude Code's capabilities allows you to rapidly create optimized API layers that deliver exceptional experiences to each of your frontend clients. Start small, iterate quickly, and let Claude Code handle the boilerplate while you focus on the unique business logic that makes your BFF valuable.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-bff-api-pattern-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude API Batch Processing Large Datasets Workflow Guide](/claude-api-batch-processing-large-datasets-workflow-guide/)

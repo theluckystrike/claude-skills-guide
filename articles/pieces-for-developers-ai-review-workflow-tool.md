@@ -127,6 +127,12 @@ Start with the basic configuration outlined in this guide, then gradually incorp
 
 The future of code review lies in AI-assisted workflows that augment human expertise rather than replacing it. By implementing these tools today, your team builds the foundation for more efficient and effective development practices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=pieces-for-developers-ai-review-workflow-tool)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)

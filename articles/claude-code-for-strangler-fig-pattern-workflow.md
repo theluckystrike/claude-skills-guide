@@ -206,6 +206,12 @@ The incremental nature of the strangler fig pattern means you deliver value cont
 Start small, verify frequently, and let the strangler fig pattern gradually transform your system one feature at a time.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-strangler-fig-pattern-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Ambassador Sidecar Pattern Workflow](/claude-code-for-ambassador-sidecar-pattern-workflow/)

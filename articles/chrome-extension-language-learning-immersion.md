@@ -461,6 +461,12 @@ Start with simple vocabulary highlighting, then progressively add features based
 
 The most effective immersion tools are those you will actually use, so prioritize reliability and minimal disruption to your browsing flow. A tooltip that appears in under 100 milliseconds on hover will be used constantly; one that takes 800 milliseconds will be ignored after the first week.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-language-learning-immersion)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)

@@ -257,6 +257,12 @@ TypeScript errors: Run `npm run build` to see compilation errors. Claude can exp
 Claude Code transforms Grafana plugin development from a complex, multi-step process into a guided workflow. By creating a dedicated skill for plugin development, you get instant access to scaffolding, code generation, and debugging assistance, all tailored to the Grafana plugin SDK. Start with a simple skill definition and expand it as you encounter new plugin patterns. The result is faster development cycles and more reliable plugins.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-grafana-plugin-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)

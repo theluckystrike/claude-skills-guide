@@ -184,6 +184,12 @@ The key components include content extraction scripts, AI integration for questi
 
 For developers and power users, custom quiz generators offer flexibility that pre-built extensions cannot match. Start with basic implementations and iterate based on your specific needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-quiz-generator-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension MLA Citation Generator: Build Your Own Tool](/chrome-extension-mla-citation-generator/)

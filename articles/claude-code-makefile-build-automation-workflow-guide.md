@@ -674,6 +674,12 @@ The patterns in this guide. from file-based dependency tracking to self-document
 
 Start small, iterate, and let Claude Code handle the boilerplate while you focus on your unique business logic.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-makefile-build-automation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Cargo Make Build Workflow Guide](/claude-code-for-cargo-make-build-workflow-guide/)

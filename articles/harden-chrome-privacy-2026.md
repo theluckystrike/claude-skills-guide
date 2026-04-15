@@ -317,6 +317,12 @@ Hardening Chrome privacy requires a layered approach. Command-line flags disable
 
 Start with the settings that match your threat model. For most developers, disabling sync, blocking third-party cookies, and using uBlock Origin provide substantial privacy gains without major usability tradeoffs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=harden-chrome-privacy-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Privacy Browser 2026 Ranked: A Developer and Power User Guide](/best-privacy-browser-2026-ranked/)

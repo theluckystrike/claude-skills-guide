@@ -312,6 +312,12 @@ Fan-out parallel task workflows are a powerful pattern for building scalable app
 Start experimenting with these patterns in your next project, and you'll quickly see how parallel task execution can transform your application's performance and user experience.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-inngest-fan-out-parallel-tasks-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Webhook Delivery Workflows with Claude Code and.](/claude-code-upstash-qstash-webhook-delivery-workflow/)

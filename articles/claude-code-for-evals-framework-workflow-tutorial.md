@@ -215,6 +215,12 @@ Building an evals framework with Claude Code transforms ad-hoc testing into syst
 
 The investment in a solid evals workflow pays dividends through faster iteration, clearer feedback on changes, and confidence in your AI's behavior. Implement the patterns from this tutorial to establish evaluation practices that scale with your project.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-evals-framework-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Jest to Vitest Migration Workflow with Claude Code](/claude-code-jest-to-vitest-migration-workflow-tutorial/)

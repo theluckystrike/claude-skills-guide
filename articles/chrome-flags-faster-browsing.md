@@ -275,6 +275,12 @@ Override Software Rendering List. This forces GPU rendering even when Chrome has
 
 The general rule: if a flag is widely recommended, check whether it still exists at `chrome://flags` before acting on the advice. Chrome moves fast and the flags landscape changes with each major release.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-flags-faster-browsing)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

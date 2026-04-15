@@ -327,6 +327,12 @@ Integrating Claude Code into your Fiber Go web framework workflow dramatically i
 The key is providing clear context, reviewing generated code, and building upon solid foundations. As you become more comfortable with the workflow, you'll discover even more ways Claude Code can accelerate your Fiber development journey.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-fiber-go-web-framework-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/)

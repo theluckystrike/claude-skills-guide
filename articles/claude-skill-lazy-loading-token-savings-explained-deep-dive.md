@@ -203,6 +203,12 @@ Whether you are processing documents with `pdf`, generating tests through `tdd`,
 
 Understanding and applying lazy loading patterns, batching related tasks, sequencing skill usage, and structuring sessions with distinct phases, helps you build more efficient Claude Code workflows while keeping token consumption predictable and minimal. As the skill ecosystem expands and individual skills grow richer in capability, the overhead gap between eager and lazy loading will only widen, making these habits increasingly valuable over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skill-lazy-loading-token-savings-explained-deep-dive)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/)

@@ -402,6 +402,12 @@ Celery chord workflows enable powerful parallel processing patterns in Python ap
 
 The key to success is understanding that chords are just groups with callbacks, once you grasp this fundamental concept, building complex pipelines becomes straightforward. Claude Code can help you at every step, from initial scaffolding to production debugging. When you get stuck, paste the full chord definition and the error traceback into Claude and ask it to explain the execution flow step by step. It will trace the data path from header task return values through the backend to the callback invocation, which is usually enough to pinpoint the root cause.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-celery-chord-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bruno API Client Workflow Tutorial](/claude-code-for-bruno-api-client-workflow-tutorial/)

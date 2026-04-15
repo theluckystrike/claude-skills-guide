@@ -241,6 +241,12 @@ Consistent hashing is an essential tool for building resilient distributed syste
 The key to success is starting simple, measuring continuously, and iterating based on real-world traffic patterns. With Claude Code assisting your workflow, you have a powerful partner for implementing these distributed systems patterns correctly from the start.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-consistent-hashing-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

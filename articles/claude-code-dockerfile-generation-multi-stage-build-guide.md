@@ -180,6 +180,12 @@ When generating or reviewing multi-stage Dockerfiles with Claude Code, remember 
 - Include health checks for long-running services
 - Use appropriate signal handlers for graceful shutdowns
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-dockerfile-generation-multi-stage-build-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Container Environment Variables Management](/claude-code-container-environment-variables-management/)

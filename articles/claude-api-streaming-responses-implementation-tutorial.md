@@ -238,6 +238,12 @@ Implementing streaming responses with the Claude API opens up possibilities for 
 Start with simple implementations and iterate toward more sophisticated features as your requirements grow. The streaming architecture scales well and enables user experiences that feel genuinely conversational and alive.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-streaming-responses-implementation-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Apache Kafka MCP Server for Event Streaming Guide](/apache-kafka-mcp-server-event-streaming-guide/)

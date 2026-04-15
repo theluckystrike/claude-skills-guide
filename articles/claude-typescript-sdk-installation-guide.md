@@ -204,6 +204,12 @@ Use a backend proxy in production instead of exposing your API key client-side.
 3. **Check TypeScript version**: Run `npx tsc --version` and verify it is 4.9 or higher.
 4. **Use Node.js 20+**: Older Node.js versions may have issues with the SDK's streaming implementation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-typescript-sdk-installation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Python SDK Installation Guide](/claude-python-sdk-installation-guide/) -- the Python equivalent of this guide.

@@ -278,6 +278,12 @@ Most users find that clearing history and managing extensions resolves the probl
 
 For developers, the additional steps of vacuuming the SQLite database, profiling extension omnibox handlers, and tuning Chrome flags provide a more thorough optimization path. A well-tuned Chrome profile on modern hardware should deliver omnibox responses in under 10ms, fast enough that the latency is imperceptible.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-omnibox-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome iOS Slow Fix: A Developer's Guide to Speed Optimization](/chrome-ios-slow-fix/)

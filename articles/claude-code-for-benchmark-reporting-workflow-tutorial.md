@@ -234,6 +234,12 @@ Claude Code transforms benchmark reporting from a manual, error-prone process in
 
 With the foundation we've built here, you have everything needed to establish professional-grade performance monitoring that keeps your team informed and your applications optimized.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-benchmark-reporting-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for CDN Optimization Workflow Tutorial](/claude-code-for-cdn-optimization-workflow-tutorial/)

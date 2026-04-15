@@ -345,6 +345,12 @@ Automating function documentation with Claude Code transforms documentation from
 
 The initial setup requires some effort, but the time savings compound quickly. Your future self. and your teammates. will thank you for well-documented code that is easy to understand and maintain.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-document-functions-automatically)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best Claude Skill for Generating Documentation?](/what-is-the-best-claude-skill-for-generating-documentation/)

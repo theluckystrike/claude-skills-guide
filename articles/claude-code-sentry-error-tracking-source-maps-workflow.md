@@ -290,6 +290,12 @@ Output as a markdown table sorted by severity.
 
 Claude's output gives your on-call engineer an immediate triage summary without having to open each issue in Sentry. Combine this with a scheduled GitHub Action that runs every morning and posts the triage table to a Slack channel, and your team starts each day with a prioritized error backlog rather than an undifferentiated list.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sentry-error-tracking-source-maps-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/). Debug containerized applications alongside Sentry source map workflows

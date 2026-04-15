@@ -351,6 +351,12 @@ Start small, use Claude Code for simple store generation, and gradually incorpor
 Remember: Claude Code is a powerful tool that amplifies your capabilities, but the final decisions about your application's architecture should always be made with careful consideration of your specific requirements.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-zustand-state-management-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Flutter State Management Workflow Best Practices](/claude-code-flutter-state-management-workflow-bestpractices/)

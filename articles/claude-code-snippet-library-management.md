@@ -585,6 +585,12 @@ The initial investment in setting up your library pays dividends quickly. Rather
 
 The key habit is extraction. After every project, spend twenty minutes identifying the patterns worth keeping. After every session where you gave Claude ad-hoc instructions about how you want code structured, turn those instructions into a skill entry. Over six months, that discipline produces a library that makes your Claude sessions feel significantly faster and more reliable than those of developers who rely on blank-context prompting.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-snippet-library-management)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Code Generation Templates Guide](/claude-code-for-template-based-code-generation-guide/). Templates and snippets are closely related

@@ -199,6 +199,12 @@ The Vitest and Claude Code combination delivers one of the fastest testing workf
 
 By establishing good habits, writing tests first, using watch mode, and using Claude Code's understanding of your codebase, you'll maintain high test coverage without sacrificing development speed. The key is treating tests as specification documents that guide implementation, not as an afterthought.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vitest-fast-testing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Jest Unit Testing Workflow](/claude-code-jest-unit-testing-workflow-guide/)

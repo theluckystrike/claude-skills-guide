@@ -226,6 +226,12 @@ Select your LastPass alternative based on your priorities:
 
 The Chrome extension experience varies significantly. Bitwarden provides the most feature-complete free extension, while 1Password offers the smoothest overall experience for teams willing to pay.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=lastpass-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

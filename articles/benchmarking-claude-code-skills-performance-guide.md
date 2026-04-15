@@ -233,6 +233,12 @@ Focus on the metrics that impact your specific workflow. A solo developer optimi
 
 Regular benchmarking catches performance regressions early and validates optimization efforts. The tdd, frontend-design, pdf, xlsx, and supermemory skills each have distinct performance profiles. understanding these helps you choose and configure skills for maximum efficiency.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=benchmarking-claude-code-skills-performance-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/)

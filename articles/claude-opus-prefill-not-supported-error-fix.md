@@ -188,6 +188,12 @@ If your code depends on prefilling and you need to use Opus 4.6, switch to struc
 2. **Check model compatibility**: Before using prefilling, verify the model supports it.
 3. **Write model-agnostic code**: Use structured outputs or system prompts so your code works across all Claude models without modification.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-opus-prefill-not-supported-error-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude API Error 400 invalid_request_error Fix](/claude-api-error-400-invalidrequesterror-explained/) -- the error type returned when prefill is used on unsupported models.

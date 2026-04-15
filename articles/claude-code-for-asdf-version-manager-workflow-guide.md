@@ -218,6 +218,12 @@ The combination of asdf's unified version management and Claude Code's AI assist
 
 Start by creating the asdf workflow skill, define your project's versions in `.tool-versions`, and let Claude Code handle the rest. Your future self will thank you when version conflicts become a thing of the past.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-asdf-version-manager-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for RTX Tool Version Manager Workflow](/claude-code-for-rtx-tool-version-manager-workflow/)

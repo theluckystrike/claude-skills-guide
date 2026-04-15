@@ -198,6 +198,12 @@ This hides all requests from your own domain, leaving only third-party requests 
 
 For each slow third-party resource you identify, consider whether it is render-blocking (loaded in `<head>` without `async` or `defer`) or simply network-heavy. Render-blocking resources delay your First Contentful Paint directly; network-heavy resources delay Time to Interactive. Both show up clearly in a throttled session but require different optimization approaches.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=downgrade-chrome-speed)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Browser Speed Benchmark 2026: A Practical Guide for Developers](/browser-speed-benchmark-2026/)

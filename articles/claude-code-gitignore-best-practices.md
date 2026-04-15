@@ -392,6 +392,10 @@ Proper gitignore configuration is foundational to maintain clean repositories wh
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-gitignore-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). Know which skills generate the most filesystem output so you can plan your gitignore patterns ahead of time

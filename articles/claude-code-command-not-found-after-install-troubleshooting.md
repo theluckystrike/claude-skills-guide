@@ -403,6 +403,12 @@ The most common scenario on a fresh macOS machine: npm installed Claude Code int
 
 If you continue experiencing issues after trying these solutions, check the official Claude Code documentation or open an issue on the GitHub repository with details about your operating system and installation method.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-command-not-found-after-install-troubleshooting)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Setup on Mac: Step-by-Step Guide](/claude-code-setup-on-mac-step-by-step/). Full installation walkthrough for macOS

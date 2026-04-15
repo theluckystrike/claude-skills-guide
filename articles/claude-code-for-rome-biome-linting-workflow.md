@@ -309,6 +309,12 @@ Use error for rules where a violation indicates a real bug or security issue. su
 
 The `overrides` feature in biome.json lets you apply different rule sets to different file patterns. Test files often need different rules than production code. for example, tests legitimately use any to mock complex types. Claude Code generates a biome.json with separate rule configurations for test files, generated files, and production source, so each category of code gets appropriate linting without over-broad suppressions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-rome-biome-linting-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Spectral Linting Workflow Tutorial](/claude-code-for-spectral-linting-workflow-tutorial/)

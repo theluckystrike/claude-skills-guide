@@ -498,6 +498,12 @@ Explore combining keybindings with skills like `mcp-builder` for custom integrat
 
 The most productive developers treat their keybinding configuration as living documentation. adding comments via the `_comment` convention in JSON when a binding's purpose is not obvious, and committing their configuration files to a personal dotfiles repository so the setup travels with them across machines.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-custom-keybindings-configuration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome OS Kiosk Mode and Managed Guest Session Configuration](/chrome-os-kiosk-mode-managed-guest/)

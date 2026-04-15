@@ -425,6 +425,12 @@ With your MCP server deployed on Fly.io, explore extending its capabilities. The
 
 Consider adding Fly.io's persistent volumes if your MCP server needs to cache data between restarts or maintain state across requests. Volumes cost a small amount but are far cheaper than adding an external database for simple use cases like caching API responses or storing user preferences.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=fly-io-mcp-server-deployment-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

@@ -201,6 +201,12 @@ Building your own extension, as demonstrated above, provides maximum flexibility
 
 Whether you choose an existing extension or build your own, having a reliable regex tester Chrome extension in your toolkit transforms pattern development from a frustrating guessing game into a streamlined process. The time invested in setting up proper testing tools pays dividends through faster development cycles and more reliable patterns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-regex-tester)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)

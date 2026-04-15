@@ -223,6 +223,12 @@ Expand your documentation workflow with additional Claude skills:
 
 Automated Swagger documentation with Claude Code transforms API documentation from a manual burden into a continuous, self-maintaining process. Your documentation stays accurate, your team stays productive, and your API consumers get the up-to-date references they need.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-swagger-documentation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code OpenAPI Spec Generation Guide](/claude-code-openapi-spec-generation-guide/)

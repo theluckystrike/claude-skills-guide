@@ -429,6 +429,12 @@ Building a license validation workflow with Claude Code and LemonSqueezy combine
 Start by creating the Claude Code skill to handle validation conversations, then implement the proxy server to keep your API key safe. Add caching and offline grace periods to handle the real-world conditions your users will encounter. With proper error handling, activation management, and audit logging, you'll have a production-ready system that protects your software while providing a smooth experience for legitimate customers.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-lemonsqueezy-license-key-validation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Using Claude Code for Data Quality Validation Workflow](/claude-code-for-data-quality-validation-workflow/)

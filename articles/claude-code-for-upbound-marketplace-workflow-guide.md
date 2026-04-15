@@ -302,6 +302,12 @@ The highest-value use cases are the ones that are tedious without help: generati
 
 Start by integrating Claude Code into your daily development cycle, and you'll find that the Marketplace publishing process becomes significantly more manageable and reliable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-upbound-marketplace-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

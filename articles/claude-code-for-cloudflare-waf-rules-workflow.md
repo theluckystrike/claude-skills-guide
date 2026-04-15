@@ -160,6 +160,12 @@ Claude Code transforms Cloudflare WAF rule management from a specialized skill i
 The key is treating your WAF rules as code: version-controlled, tested, and collaboratively maintained. With Claude Code as your assistant, achieving this standard becomes significantly easier.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cloudflare-waf-rules-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for AWS WAF Workflow: A Practical Guide](/claude-code-for-aws-waf-workflow/)

@@ -432,6 +432,12 @@ This creates a clean package ready for the Chrome Web Store upload form.
 
 A well-configured TypeScript playground for Chrome extension development gives you confidence in your code quality and speeds up iteration. The typed message passing, storage abstraction, and permission helpers described here prevent the most common runtime errors while making your codebase easier for collaborators to navigate. The setup described here provides a solid foundation for building solid extensions with modern JavaScript tooling.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-typescript-playground)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)

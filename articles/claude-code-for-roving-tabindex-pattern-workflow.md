@@ -258,6 +258,12 @@ The roving tabindex pattern is fundamental for building accessible, keyboard-nav
 With these techniques and Claude Code as your development partner, you'll be building accessible components that work smoothly with keyboard navigation in no time.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-roving-tabindex-pattern-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Accessibility Workflow for Frontend Engineers](/claude-code-accessibility-workflow-for-frontend-engineers/)

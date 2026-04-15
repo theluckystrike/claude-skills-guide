@@ -273,6 +273,12 @@ Claude Code combined with TanStack Start provides a powerful workflow for buildi
 By following the workflows outlined in this guide, proper project setup, type-safe routing, data loading patterns, and best practices, you'll be well-equipped to build production-ready applications with confidence. The key is using Claude Code's strengths in code generation and pattern implementation while relying on TanStack Start's type-safe foundations for your application's core architecture.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-tanstack-start-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for T3 Stack tRPC Next.js Workflow](/claude-code-for-t3-stack-trpc-nextjs-workflow/)

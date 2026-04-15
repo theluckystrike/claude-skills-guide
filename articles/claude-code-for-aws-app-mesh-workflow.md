@@ -379,6 +379,12 @@ For production meshes, you typically want both: health checks to catch startup f
 Claude Code transforms AWS App Mesh development from manual, error-prone configuration to an interactive, assisted workflow. By providing context-specific skills, generating accurate configurations, and debugging traffic issues, Claude helps developers focus on architecture rather than syntax. Start with basic Virtual Node configurations, then progressively adopt advanced patterns like weighted routing, TLS enforcement, and automated validation. The combination of Claude's configuration generation and your domain knowledge about the services being meshed produces reliable infrastructure faster than writing YAML from scratch or consulting documentation for every field name.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-aws-app-mesh-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code AWS S3 Multipart Upload Workflow Guide](/claude-code-aws-s3-multipart-upload-workflow-guide/)

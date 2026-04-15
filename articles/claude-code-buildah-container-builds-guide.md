@@ -164,6 +164,12 @@ Buildah combined with Claude Code provides a powerful workflow for container ima
 
 Experiment with the patterns in this guide, customize scripts for your specific needs, and use Claude Code's skills to enhance your container development workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-buildah-container-builds-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Container Environment Variables Management](/claude-code-container-environment-variables-management/)

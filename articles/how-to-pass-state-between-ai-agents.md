@@ -218,6 +218,12 @@ Whether you're building a simple two-agent pipeline or a complex autonomous work
 If you are working specifically with Claude Code, the companion guide [Passing Context Between Claude Code Subagents](/passing-context-between-claude-code-subagents-guide/) covers the `/subagent:` invocation syntax, the `.claude/context/` file convention, and integration with Claude skills like tdd, pdf, and xlsx.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-pass-state-between-ai-agents)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Coordinate Multiple AI Agents in Pipeline](/how-to-coordinate-multiple-ai-agents-in-pipeline/)

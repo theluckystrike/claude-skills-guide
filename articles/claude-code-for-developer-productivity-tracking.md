@@ -242,6 +242,12 @@ Start small, track consistently, and let the data guide your improvements. Your 
 *Want to dive deeper? Explore our guides on creating effective Claude skills and optimizing your development workflow with AI assistance.*
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-developer-productivity-tracking)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Focus Timer Productivity: A Developer Guide](/chrome-extension-focus-timer-productivity/)

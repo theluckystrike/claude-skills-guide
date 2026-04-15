@@ -518,6 +518,12 @@ A well-built meeting scheduler Chrome extension reduces the friction between the
 
 For developers who build their own extension, the Manifest V3 patterns above provide a complete foundation. For those evaluating existing extensions, the security checklist and feature comparison tables provide a framework for making an informed choice. Either way, the goal is the same: keep scheduling friction low enough that you actually do it correctly, every time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=meeting-scheduler-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Email Snooze Scheduler - Complete Guide for Developers](/chrome-extension-email-snooze-scheduler/)

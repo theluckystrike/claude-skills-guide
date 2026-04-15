@@ -232,6 +232,12 @@ Start by automating your most painful procedures, those executed frequently unde
 
 The future of operations isn't about choosing between automation and human judgment, it's about combining the speed and consistency of automation with human oversight at the right moments. Claude Code makes this balance achievable for teams of any size.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-runbook-automation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Drone CI Workflow Automation](/claude-code-drone-ci-workflow-automation/)

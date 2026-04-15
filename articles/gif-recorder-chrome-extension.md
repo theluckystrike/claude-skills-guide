@@ -143,6 +143,12 @@ To get the most out of GIF recorder extensions, follow these practical guideline
 
 GIF recorder Chrome extensions fill an important niche in the developer's toolkit. They provide a quick way to capture and share visual information without the overhead of video production. Whether you use existing extensions or build your own implementation, understanding how these tools work helps you communicate more effectively throughout the development process.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=gif-recorder-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)

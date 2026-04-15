@@ -196,6 +196,12 @@ Finally, measure adoption and gather feedback. Track how long it takes new devel
 Claude Code transforms golden path development from a static document into an active, intelligent partner in your development workflow. By encoding organizational knowledge into skills and conventions that Claude can understand and apply, you create a scalable approach to developer productivity that maintains consistency while respecting individual expertise.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-golden-path-developer-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Golden Path Templates & Workflow Tutorial](/claude-code-golden-path-templates-workflow-tutorial/)

@@ -243,6 +243,12 @@ The key is understanding what data you actually need. If you require exact traff
 
 Building your own tooling around free APIs gives you the most flexibility and control, plus the satisfaction of owning your analytics pipeline.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=similarweb-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

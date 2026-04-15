@@ -216,6 +216,12 @@ Claude Code transforms codebase onboarding from a weeks-long process into a matt
 
 The key is being strategic about what you ask. Focus on your immediate goals, use the specialized skills available, and build your knowledge incrementally. With practice, you'll find yourself productive in new codebases far faster than ever before.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-use-claude-code-to-understand-unfamiliar-codebase-qui)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Make Claude Code Match Existing Code Patterns](/how-to-make-claude-code-follow-team-style-guide/). See also

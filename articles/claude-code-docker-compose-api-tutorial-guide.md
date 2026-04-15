@@ -416,6 +416,12 @@ Combining Docker Compose with Claude Code creates a powerful development environ
 
 Start with simple setups and gradually add complexity as your application grows. Remember to implement health checks, proper environment management, and comprehensive testing from the beginning. With these practices in place, you'll have a solid foundation for API development that scales with your project.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-compose-api-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)

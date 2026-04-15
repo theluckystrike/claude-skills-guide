@@ -385,6 +385,12 @@ Integrating Claude Code with git hooks creates a powerful automation layer that 
 
 The key is starting simple and expanding gradually. Begin with basic checks, then layer in more sophisticated validations as your team becomes comfortable with the workflow. Claude Code's contextual understanding combined with pre-commit's automation creates a solid system that improves code quality while reducing review burden.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-git-hooks-pre-commit-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Understanding Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/). Claude Code hooks and git hooks work together

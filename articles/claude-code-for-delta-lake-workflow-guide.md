@@ -312,6 +312,12 @@ By integrating Claude Code into your Delta Lake workflows, you can reduce manual
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-delta-lake-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Delta Lake Schema Evolution Workflow](/claude-code-for-delta-lake-schema-evolution-workflow/)

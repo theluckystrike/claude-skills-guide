@@ -180,6 +180,12 @@ Remember that resilience patterns aren't one-size-fits-all. What works for a hig
 With these patterns in place, your Java applications will handle failures gracefully and maintain reliability in production environments. Your users will appreciate the consistency, and your operations team will have fewer late-night pages.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-failsafe-java-resilience-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Java Virtual Threads (Loom) Workflow](/claude-code-for-java-virtual-threads-loom-workflow/)

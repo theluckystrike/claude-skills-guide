@@ -219,6 +219,12 @@ Building effective Chrome signage kiosk digital display solutions requires under
 
 The Chromium foundation provides excellent digital signage capabilities through kiosk mode, but success depends on building your web application with the same resilience expectations. Design for failure, optimize for long, and test thoroughly under realistic conditions before deployment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-signage-kiosk-digital-display)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

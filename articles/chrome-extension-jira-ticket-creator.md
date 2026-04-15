@@ -605,6 +605,12 @@ AI-Assisted Descriptions: Integrate with Claude or another AI API to generate a 
 
 A well-built Jira ticket creator extension reduces context switching and standardizes how your team captures issues. The foundation established here scales with your workflow needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-jira-ticket-creator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Shopping List Organizer: A Developer Guide](/chrome-extension-shopping-list-organizer/)

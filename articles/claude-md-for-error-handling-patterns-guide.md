@@ -352,6 +352,12 @@ A quick reference for the patterns covered in this guide:
 
 The investment in thoughtful error handling pays dividends every time a skill runs in a real environment with real, messy data. Skills that fail clearly and recover gracefully earn trust. Skills that silently produce wrong output or crash without explanation erode it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-for-error-handling-patterns-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skips Error Handling in Generated Code](/claude-code-skips-error-handling-in-generated-code/)

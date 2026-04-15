@@ -582,6 +582,12 @@ Integrating Claude Code with Brownie transforms your smart contract development 
 
 Start with small tasks, gradually incorporating more complex workflows as you become comfortable with the collaboration pattern. Your Brownie projects will benefit from faster development cycles, improved code quality, and more comprehensive testing,  all while maintaining the security vigilance essential for smart contract development.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-brownie-python-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Plotly Dash Python Workflow](/claude-code-for-plotly-dash-python-workflow/)

@@ -244,6 +244,12 @@ The pipeline script processes retail transactions, applies business rules for di
 
 Claude Code skills provide specialized context for data engineering tasks. The combination of pipeline-specific guidance, testing enforcement, documentation generation, and persistent monitoring creates a powerful workflow for building reliable data systems. Start with the core skills. xlsx, tdd, pdf, and supermemory. and expand to other skills as your needs evolve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-data-engineers-automating-pipelines)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Full coverage of the tdd skill used throughout this data engineering pipeline guide

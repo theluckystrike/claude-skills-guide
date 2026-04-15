@@ -203,6 +203,12 @@ for (const block of response.content) {
 3. **Never modify thinking blocks**: In multi-turn conversations, return them exactly as received.
 4. **Keep thinking params stable**: Changing thinking parameters between turns invalidates cached messages but not cached system prompts or tools.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-extended-thinking-not-working)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Extended Thinking API Guide](/claude-extended-thinking-api-guide/) -- full tutorial on using extended thinking effectively.

@@ -173,6 +173,10 @@ Migrating from Jest to Vitest with Claude Code as your migration assistant follo
 The key to success lies in taking incremental steps rather than attempting a complete migration overnight. Run the migration in stages, verify test coverage at each phase, and use Claude Code to handle the repetitive refactoring work.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-jest-to-vitest-migration-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The tdd skill drives test-first migration workflows for Jest-to-Vitest transitions

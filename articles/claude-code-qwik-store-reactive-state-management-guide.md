@@ -682,6 +682,12 @@ The key insight is that Qwik's fine-grained reactivity means you don't need to t
 
 When using Claude Code to assist with Qwik development, lean on it for generating typed store shapes, scaffolding context providers, and catching serialization issues early. The structured nature of Qwik's state primitives makes it one of the best frameworks for AI-assisted development, the rules are clear and the output is predictable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-qwik-store-reactive-state-management-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Flutter State Management Workflow Best Practices](/claude-code-flutter-state-management-workflow-bestpractices/)

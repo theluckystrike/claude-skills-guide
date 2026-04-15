@@ -259,6 +259,12 @@ Start with the basic configuration shown in this tutorial, then gradually explor
 
 Next Steps: Experiment with custom language configurations for your specific tech stack, and consider integrating tag generation into your development workflow for always-up-to-date code navigation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-ctags-configuration-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)

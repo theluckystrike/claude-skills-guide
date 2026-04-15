@@ -209,6 +209,12 @@ ANTHROPIC_LOG=debug python your_script.py
 3. **Rotate keys regularly**: Generate a new key, update all deployments, then revoke the old key.
 4. **Use workspace API keys**: Workspace-scoped keys limit the blast radius if a key is compromised.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-set-anthropicapikey-for-claude)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude API Error 401 authentication_error Fix](/claude-api-error-401-authenticationerror-explained/) -- troubleshoot when your key is rejected.

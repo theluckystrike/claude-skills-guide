@@ -298,6 +298,12 @@ Astro's View Transitions API combined with Claude Code's automation capabilities
 By following these patterns and workflows, you'll create applications that feel responsive and polished while maintaining Astro's excellent performance characteristics. Claude Code can help you generate components, debug transition issues, and optimize your implementation at every step.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-astro-view-transitions-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)

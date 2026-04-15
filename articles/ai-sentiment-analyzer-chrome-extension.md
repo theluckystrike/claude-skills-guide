@@ -510,6 +510,12 @@ Consider these enhancements for more advanced functionality:
 
 Building an AI sentiment analyzer Chrome extension provides a practical foundation for browser-based AI applications. The architecture demonstrated here scales from simple lexicon-based analysis to complex transformer models, giving you flexibility to balance performance, accuracy, and privacy according to your needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-sentiment-analyzer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

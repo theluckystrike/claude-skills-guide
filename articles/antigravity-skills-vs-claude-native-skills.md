@@ -222,6 +222,10 @@ When evaluating a community skill, read the `.md` file itself before using it. S
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=antigravity-skills-vs-claude-native-skills)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Another key Claude comparison

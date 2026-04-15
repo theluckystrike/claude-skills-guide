@@ -176,6 +176,12 @@ Semantic HTML improvement with Claude Code combines systematic analysis with tar
 
 Good semantics pay dividends in accessibility, SEO, and maintainability. Start with a single file, establish patterns, and expand the practice across your projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-semantic-html-improvement-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Semantic HTML Accessibility Improvement Guide](/claude-code-semantic-html-accessibility-improvement-guide/). WCAG compliance, screen reader testing, ARIA patterns, and accessibility-focused HTML audits

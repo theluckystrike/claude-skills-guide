@@ -458,6 +458,12 @@ Claude Code transforms gRPC service development from a manual, error-prone proce
 Start with well-defined proto files, let Claude Code generate the scaffolding, then iteratively implement and test your service handlers. With these practices in place, you'll have production-ready gRPC services that are maintainable and scalable.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-grpc-service-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)

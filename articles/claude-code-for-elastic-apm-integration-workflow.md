@@ -239,6 +239,12 @@ Integrating Claude Code with Elastic APM opens powerful possibilities for automa
 Start with simple error detection scripts, then gradually add more sophisticated analysis capabilities as your monitoring needs evolve. The combination of Claude Code's flexibility and Elastic APM's comprehensive data creates a foundation for truly intelligent operational workflows.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-elastic-apm-integration-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for APM Integration Workflow Tutorial Guide](/claude-code-for-apm-integration-workflow-tutorial-guide/)

@@ -181,6 +181,12 @@ Claude Code transforms ETL debugging from a manual, time-intensive process into 
 
 Start by creating project-specific context files, then gradually build custom skills for your most common debugging scenarios. Over time, this workflow becomes increasingly powerful as Claude learns your pipeline's unique characteristics and failure modes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-data-engineer-etl-debugging-daily-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Frontend Developer CSS Debugging Workflow Guide](/claude-code-frontend-developer-css-debugging-workflow-guide/)

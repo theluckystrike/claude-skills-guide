@@ -226,6 +226,10 @@ Remember that testing is a skill that improves with practice. Use Claude Code as
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-jest-unit-testing-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Vitest Fast Testing Workflow](/claude-code-vitest-fast-testing-workflow/)

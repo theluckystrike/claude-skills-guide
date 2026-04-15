@@ -352,6 +352,12 @@ Exporting highlights and notes from Chrome extensions requires understanding sto
 
 These patterns work whether you're extending an existing annotation tool or building a new reading companion. Start with the data structure that matches your needs, then layer in export formats as your users require them. Incremental exports, paginated storage reads, and Obsidian-compatible Markdown output are all straightforward additions once the core pipeline is in place. The key is treating the export format as a first-class feature rather than an afterthought, because for knowledge workers, the ability to own and move their data is often more important than any individual annotation feature.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-export-highlights-notes)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Release Schedule 2026: A Practical Guide](/chrome-enterprise-release-schedule-2026/)

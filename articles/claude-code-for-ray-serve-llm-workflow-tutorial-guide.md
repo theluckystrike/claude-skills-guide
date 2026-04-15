@@ -225,6 +225,12 @@ Combining Claude Code with Ray Serve creates a powerful development environment 
 
 The key to success is iterative development: deploy a working baseline, measure performance, identify bottlenecks with Claude Code's assistance, and optimize systematically. With this approach, you can build scalable, efficient LLM workflows that meet production demands.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-ray-serve-llm-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for LLM Code Review Workflow](/claude-code-for-llm-code-review-workflow/)

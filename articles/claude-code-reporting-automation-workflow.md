@@ -151,6 +151,12 @@ The docx skill complements reporting workflows when you need to generate Word do
 
 Building effective reporting automation with Claude Code requires understanding both your project needs and the available tools. Start with simple reports and gradually expand into more complex analysis as you become comfortable with the workflow patterns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-reporting-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)

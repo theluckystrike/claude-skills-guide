@@ -237,6 +237,12 @@ The best bootcamp students combine AI assistance with deep engagement. Let Claud
 
 *Ready to accelerate your bootcamp journey? Start with one project and apply these workflows today. The key is consistency, using Claude Code regularly will build muscle memory and make you a more productive developer.*
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-bootcamp-students-productivity-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Computer Science Bootcamp Students](/claude-code-for-computer-science-bootcamp-students/)

@@ -365,6 +365,12 @@ Never use `innerHTML = scrapedValue` directly. Scraped page content can contain 
 
 Travel deal alert extensions demonstrate practical applications of browser extension development combined with web scraping and notification systems. The patterns shown here provide a foundation for building more sophisticated tools tailored to specific travel monitoring needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-travel-deal-alert)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Black Friday Deal Tracker: A.](/chrome-extension-black-friday-deal-tracker/)

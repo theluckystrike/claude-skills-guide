@@ -161,6 +161,12 @@ DI is one common way to achieve DIP, but they are not the same thing. You can us
 
 If you are working on refactoring real TypeScript or application-level code to follow the Dependency Inversion Principle using Claude Code, see the dedicated guide: [Claude Code for Dependency Inversion Refactoring Guide](/claude-code-for-dependency-inversion-refactoring-guide/).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-dependency-injection-refactoring)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Dependency Inversion Refactoring Guide](/claude-code-for-dependency-inversion-refactoring-guide/). Using Claude Code to apply the Dependency Inversion Principle in real application codebases

@@ -710,6 +710,12 @@ For teams with unique requirements, building custom extensions using the GitHub 
 
 Start with the free extensions, build a label schema that works for your team, and automate triage early. manual triage is the first thing to collapse under load on growing projects.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-github-issues-manager)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

@@ -450,6 +450,12 @@ This pattern ensures your microservice handles errors consistently and validates
 
 Claude Code skills enhance Golang microservices development by automating handler generation, test creation, Docker configuration, and API testing. The `/tdd` and `/webapp-testing` skills, combined with direct prompting for Docker configuration, cover the full development lifecycle. For Go-specific patterns, describing your requirements directly to Claude Code produces idiomatic code that follows established conventions. Explore more backend patterns in the [use cases hub](/use-cases-hub/).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-golang-microservices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/). containerize Go services with production-ready Docker configurations

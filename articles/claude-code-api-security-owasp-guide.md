@@ -733,6 +733,12 @@ Securing Claude Code integrations requires adapting OWASP principles to agentic 
 
 By applying these patterns consistently, you build AI agent systems that are both powerful and secure, capable of autonomous action within clearly defined and enforced boundaries.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-api-security-owasp-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)

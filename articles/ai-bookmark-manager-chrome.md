@@ -214,6 +214,12 @@ API integrations allow building custom processing pipelines. You might route cer
 
 The foundation of effective bookmark management remains consistent: save reliably, retrieve easily, and maintain automatically. AI bookmark managers for Chrome handle the organization burden so you can focus on collecting and consuming knowledge without the maintenance overhead.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-bookmark-manager-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)

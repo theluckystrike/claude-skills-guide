@@ -516,6 +516,12 @@ Many React developers ultimately use both tools for different aspects of their w
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-cursor-for-react-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Cursor 2026: Detailed Comparison for.](/claude-code-vs-cursor-2026-detailed-comparison/)

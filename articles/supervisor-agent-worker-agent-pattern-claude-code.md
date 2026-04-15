@@ -325,6 +325,12 @@ Supervisor and worker using the same context window. These should be separate AP
 
 The supervisor-worker pattern is one of the most effective ways to apply Claude Code at scale. The implementation overhead is modest. roughly 100 lines of Python. and the gains in throughput and fault isolation are substantial.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=supervisor-agent-worker-agent-pattern-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

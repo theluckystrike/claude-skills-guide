@@ -201,6 +201,12 @@ For teams adopting TDD or those who want structured guidance through the red-gre
 
 Experiment with both tools in your projects to find the workflow that best matches your team's needs. The right choice depends on your project complexity, team experience, and personal preferences, but Claude Code's integrated TDD support makes it a strong choice for developers serious about test-driven development.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-aider-for-test-driven-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Plus Perplexity for Research-Driven Development](/claude-code-plus-perplexity-for-research-driven-development/)

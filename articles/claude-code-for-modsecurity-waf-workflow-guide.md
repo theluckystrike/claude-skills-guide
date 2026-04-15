@@ -417,6 +417,12 @@ Follow these recommendations for productive Claude Code workflows:
 Claude Code transforms ModSecurity WAF management from a tedious manual process into an efficient, assisted workflow. By using Claude Code for rule generation, configuration review, false positive analysis, and test automation, you can maintain solid web application security without sacrificing development speed. The ability to ask natural-language questions about log entries, receive targeted exclusion rules, and generate CI/CD pipeline integrations means that WAF maintenance shifts from reactive firefighting to deliberate, documented improvement. Start integrating these patterns into your workflow today, and you will see faster rule deployment cycles, more effective protection against web application threats, and a WAF configuration that your entire team can understand and maintain.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-modsecurity-waf-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for AWS WAF Workflow: A Practical Guide](/claude-code-for-aws-waf-workflow/)

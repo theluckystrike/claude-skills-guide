@@ -465,6 +465,12 @@ Slow local builds despite caching often mean the cache is being invalidated by e
 Claude Code significantly accelerates NX monorepo development by understanding the workspace structure and applying appropriate patterns. From setting up shared libraries to configuring independent deployments, Claude helps you maintain architectural integrity while moving quickly. The key is using NX's built-in tooling and enforcing boundaries through configuration, with Claude handling the implementation details and identifying opportunities for code reuse across your micro frontends. The most effective teams treat Claude as a pair programmer who knows the NX plugin API in detail. describe your intent clearly, provide the relevant configuration context, and let Claude translate that intent into the correct generator commands, TypeScript interfaces, and CI pipeline YAML.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nx-monorepo-micro-frontend-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Tools for Frontend Development in 2026](/best-ai-tools-for-frontend-development-2026/)

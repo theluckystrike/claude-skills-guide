@@ -178,6 +178,12 @@ The Claude Code code example generation workflow transforms how developers creat
 
 The key is treating Claude Code as a collaborative partner rather than a simple code generator. The more context and feedback you provide, the better the examples become. Start with specific requirements, review the output critically, and refine iteratively until your code examples match your project's standards perfectly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-code-example-generation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best Claude Skill for Generating Documentation?](/what-is-the-best-claude-skill-for-generating-documentation/)

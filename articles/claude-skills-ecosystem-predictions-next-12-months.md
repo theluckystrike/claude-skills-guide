@@ -117,6 +117,10 @@ The Claude skills ecosystem is moving from experimental to essential. Organizati
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-ecosystem-predictions-next-12-months)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [The Future of AI Agent Skills Beyond Claude Code in 2026](/future-of-ai-agent-skills-beyond-claude-code-2026/). Explore how the broader AI agent skills ecosystem is evolving alongside the Claude ecosystem.

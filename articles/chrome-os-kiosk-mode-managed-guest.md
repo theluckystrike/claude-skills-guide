@@ -426,6 +426,12 @@ Choose Kiosk Mode when you need absolute control over the user experience, when 
 
 For large-scale deployments, invest time in your policy JSON structure and organizational unit hierarchy before enrolling devices. Restructuring your Admin Console OU tree after enrolling hundreds of devices is painful. Plan for monitoring and alerting from the start so you can detect device failures before users do.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-os-kiosk-mode-managed-guest)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Kiosk Mode Setup: Complete.](/chrome-enterprise-kiosk-mode-setup/)

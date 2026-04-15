@@ -427,6 +427,12 @@ Accessibility regression testing with Claude Code transforms what was once a man
 
 The key is starting small: add accessibility checks to your next pull request, generate tests for your most critical components, and gradually expand coverage. With Claude Code as your accessibility partner, building and maintaining accessible applications becomes achievable for teams of any size. The initial setup investment pays dividends in compliance confidence, user trust, and development velocity.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-accessibility-regression-testing)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/). Axe is a core tool for accessibility regression testing

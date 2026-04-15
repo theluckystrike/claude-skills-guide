@@ -319,6 +319,12 @@ Start with basic encryption operations, then expand to key rotation and batch pr
 Remember to always follow security best practices: use separate keys for different data types, implement regular key rotation, and maintain audit logs for compliance. With these patterns in place, you can confidently handle sensitive data encryption in your applications.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-vault-transit-encryption-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Vault Secrets Management Workflow](/claude-code-for-vault-secrets-management-workflow/)

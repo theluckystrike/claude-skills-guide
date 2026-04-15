@@ -380,6 +380,12 @@ For complex patterns, prose descriptions are ambiguous. Inline code examples in 
 Mistake 5: Ignoring negative space
 Documenting what not to do is equally important as documenting what to do. If moment.js was removed from your project, say so explicitly. If class components are forbidden, say so.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-code-perform-better-with-claude-md)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Write CLAUDE.md File for Your Project](/how-to-write-effective-claude-md-for-your-project/). Write an effective CLAUDE.md that improves performance

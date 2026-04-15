@@ -239,6 +239,12 @@ The key is establishing clear conventions, maintaining schema-first development,
 Start small: use Claude Code to generate one type and its resolver, then expand to cover your entire schema. The incremental approach lets you validate the output and refine your conventions before scaling up.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-graphql-code-generation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for GraphQL Codegen Workflow Tutorial](/claude-code-for-graphql-codegen-workflow-tutorial/). automating the graphql-codegen CLI, codegen.yml configuration, and watch mode

@@ -490,6 +490,12 @@ Structured logs are easier to filter in the dashboard and to pipe into external 
 
 Convex simplifies backend development by handling real-time synchronization automatically. Combined with Claude Code, you have a powerful setup for building reactive applications. Define your schema with proper indexes, write backend functions using the `query`/`mutation`/`internalMutation` primitives, connect your frontend with the `useQuery` and `useMutation` hooks, and let Convex handle the broadcast infrastructure. The real-time updates work across all connected clients without additional configuration, and scheduled jobs give you a clean path for background processing without a separate queue service.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-with-convex-backend-real-time-data-setup)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code WebSocket Implementation Real-Time Events Guide](/claude-code-websocket-implementation-real-time-events-guide/). See also

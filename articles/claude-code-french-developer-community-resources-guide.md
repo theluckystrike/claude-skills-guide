@@ -149,6 +149,10 @@ Your first step: explore one community listed above and share your Claude Code s
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-french-developer-community-resources-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Stateful Agents with Claude Skills Guide](/building-stateful-agents-with-claude-skills-guide/). use supermemory to build a persistent French developer knowledge base

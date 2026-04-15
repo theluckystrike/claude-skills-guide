@@ -284,6 +284,12 @@ Once the core habit tracking works, consider adding features like weekly reports
 
 The foundation built here, manifest configuration, storage patterns, popup UI, and notifications, provides a template for any productivity-focused Chrome extension. Adapt the data model and interfaces to match specific work flows and team needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-habit-tracker-work)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Can Claude Code Skills Work Alongside Other AI Models?](/can-claude-code-skills-work-alongside-other-ai-models/)

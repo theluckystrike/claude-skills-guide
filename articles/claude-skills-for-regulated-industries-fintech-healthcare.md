@@ -692,6 +692,12 @@ Start with the skills matching your primary compliance framework, then expand to
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-regulated-industries-fintech-healthcare)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code HIPAA Compliant Development Workflow Guide](/claude-code-hipaa-compliant-development-workflow-guide/). Comprehensive HIPAA implementation patterns referenced throughout this guide, with deeper PHI handling workflows

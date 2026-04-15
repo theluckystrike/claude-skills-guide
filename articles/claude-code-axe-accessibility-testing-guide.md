@@ -394,6 +394,12 @@ The key is starting simple, run an initial audit, fix critical violations, then 
 
 As your testing matures, extend your axe setup to cover authenticated pages, dynamic content loaded after interaction, and third-party embedded components. The combination of automated axe coverage in CI, manual spot-checks in the browser extension, and Claude-assisted remediation creates a workflow that keeps accessibility issues from accumulating into an unmanageable backlog.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-axe-accessibility-testing-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/). WCAG is the standard axe tests against

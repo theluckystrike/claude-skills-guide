@@ -315,6 +315,12 @@ The limitations, particularly around bulk operations and advanced search, sugges
 
 For teams already invested in the Mendeley ecosystem, the Chrome extension provides practical utility without requiring workflow changes. New users evaluating reference managers should test the web import experience against their primary research sources before committing. Run the five-source import test described in the initial setup section: if your core databases import cleanly and annotations sync reliably, Mendeley fits your workflow. If you hit consistent failures on sources you use daily, that is the signal to evaluate Zotero or Paperpile instead.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mendeley-chrome-extension-review)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)

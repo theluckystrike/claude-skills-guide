@@ -182,6 +182,12 @@ Reviewing GitHub Chrome extension code requires understanding the extension arch
 
 The effort invested in code review protects against malicious extensions and helps the ecosystem maintain higher security standards. Whether you're evaluating third-party tools or building your own, understanding what happens inside GitHub Chrome extensions makes you a more effective and secure developer.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=github-chrome-extension-code-review)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

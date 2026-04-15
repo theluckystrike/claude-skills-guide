@@ -299,6 +299,12 @@ Most media CMS workflows benefit from incremental automation. start with one rep
 
 [The skills handle the formatting and file operations](/how-do-i-combine-two-claude-skills-in-one-workflow/), while your Claude session manages the workflow logic and decision-making. This separation keeps your automation maintainable and adaptable as media management needs evolve. When a stakeholder asks for a new column in the inventory or a different summary format in the report, you modify the script or the skill prompt. not a tangle of manually maintained spreadsheet formulas.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-media-content-management-systems)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). identify the most valuable skills for media and content workflows

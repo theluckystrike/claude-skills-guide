@@ -244,6 +244,12 @@ Start small: find a typo to fix, clarify a confusing sentence, or add an example
 
 Ready to begin? Clone a repository you've been meaning to explore, ask Claude Code to analyze its documentation needs, and make your first contribution today.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-oss-documentation-contribution-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)

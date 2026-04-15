@@ -489,6 +489,12 @@ Implementing authentication with NextAuth in Next.js provides a solid foundation
 
 As your application grows, lean on Claude Code to extend these patterns. adding new providers, implementing account linking, building admin-only sections, or integrating with a database adapter like Prisma or Drizzle. The CLI's ability to read your existing code and extend it coherently saves hours of boilerplate work on each iteration.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nextjs-authentication-next-auth-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for T3 Stack tRPC Next.js Workflow](/claude-code-for-t3-stack-trpc-nextjs-workflow/)

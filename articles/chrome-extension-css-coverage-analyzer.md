@@ -176,6 +176,12 @@ These tools complement runtime coverage analysis by performing static eliminatio
 
 CSS coverage analysis through Chrome DevTools and related extensions provides essential visibility into stylesheet efficiency. By systematically identifying and removing unused CSS, you reduce page weight, improve load times, and simplify stylesheet maintenance. Start with the native coverage tab for quick audits, then explore extensions and build tool integrations for automated, continuous optimization.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-css-coverage-analyzer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Sentiment Analyzer Chrome Extension: A Developer's Guide](/ai-sentiment-analyzer-chrome-extension/)

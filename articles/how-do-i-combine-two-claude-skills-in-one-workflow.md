@@ -175,6 +175,10 @@ Experiment with different combinations. The workflow that solves your specific c
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-combine-two-claude-skills-in-one-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/). Learn the formal patterns behind skill composition that power the workflow chaining described here.

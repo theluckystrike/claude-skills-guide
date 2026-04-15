@@ -292,6 +292,12 @@ Chrome extension Google Docs citation addons bridge the gap between web research
 
 The key to a successful implementation lies in solid metadata extraction, handling the variety of scholarly publishing formats, and providing flexible output options that integrate smoothly with Google Docs and other writing tools.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-google-docs-citation-addon)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

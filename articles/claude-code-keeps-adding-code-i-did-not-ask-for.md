@@ -214,6 +214,12 @@ The goal isn't to eliminate all extra code, it's to have control over what gets 
 
 Claude Code keeps adding code you didn't ask for because it follows best practices learned from millions of codebases. To control this behavior, write specific prompts with explicit constraints, use claude.md to establish persistent preferences, use skills designed for focused changes, and clearly communicate scope limits in every request. The investment in crafting better prompts pays off quickly in cleaner, more predictable code generation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-keeps-adding-code-i-did-not-ask-for)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

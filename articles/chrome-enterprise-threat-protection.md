@@ -483,6 +483,12 @@ Setting `Vary: Origin` is important for CDN and proxy caches, without it, a cach
 
 Chrome Enterprise threat protection provides a solid security foundation, but application-level security remains your responsibility. Understanding these browser security features helps you build applications that work well within enterprise security constraints while protecting your users effectively.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-threat-protection)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)

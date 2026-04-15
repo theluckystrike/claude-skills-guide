@@ -156,6 +156,12 @@ print(f"Request ID: {message._request_id}")
 3. **Log request_id values**: When contacting Anthropic support, the `request_id` lets them trace exactly what happened.
 4. **Use the Batch API**: For bulk workloads, the Batch API processes requests independently so one 500 error does not fail your entire job.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-error-500-apierror-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude API Error 529 overloaded_error Fix](/claude-api-error-529-overloadederror-explained/) -- handle overload errors that are similar to but distinct from 500 errors.

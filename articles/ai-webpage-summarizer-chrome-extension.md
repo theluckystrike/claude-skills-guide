@@ -286,6 +286,12 @@ AI webpage summarizer Chrome extensions combine browser APIs with large language
 
 The key to a successful implementation lies in solid content extraction that handles diverse page structures, efficient API usage through caching and smart prompt design, and a user experience that delivers value without friction.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-webpage-summarizer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI PDF Summarizer Chrome Extension: A Developer Guide](/ai-pdf-summarizer-chrome-extension/)

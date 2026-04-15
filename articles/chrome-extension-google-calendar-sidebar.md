@@ -274,6 +274,12 @@ For internal distribution within organizations, you can use Chrome Enterprise po
 
 Building a Google Calendar sidebar extension requires understanding OAuth flows, the Calendar API, and Chrome extension architecture. The investment pays off in a productivity tool that keeps your calendar visible while working in other browser tabs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-google-calendar-sidebar)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Google Drive Sidebar: Build Your Own](/chrome-extension-google-drive-sidebar/)

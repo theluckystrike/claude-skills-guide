@@ -230,6 +230,12 @@ Building a PR diff analysis skill for Claude Code transforms how you approach co
 
 Start with the basic pr-diff-analyzer skill, extend it with language-specific checks, and gradually build a comprehensive review workflow that fits your team's style. With Claude Code handling the initial legwork, your code reviews will become faster, more consistent, and more thorough.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-pr-diff-analysis-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Benchmark Reporting Workflow Tutorial](/claude-code-for-benchmark-reporting-workflow-tutorial/)

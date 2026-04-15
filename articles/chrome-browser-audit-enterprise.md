@@ -322,6 +322,12 @@ History search returning no results: `chrome.history.search` requires the query 
 
 Audit report too large to export: For organizations with thousands of browser history entries, paginate the history search using `maxResults` and multiple time-windowed queries rather than fetching the entire history in one call.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-browser-audit-enterprise)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Audit Logging for Enterprise Compliance Workflow](/claude-code-audit-logging-for-enterprise-compliance-workflow/)

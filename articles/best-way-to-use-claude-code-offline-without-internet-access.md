@@ -215,6 +215,12 @@ Claude Code can be a powerful offline coding assistant with the right setup. By 
 Start by installing Ollama and pulling a model, then create a few offline-ready skills for your common tasks. Once you've established your offline workflow, you'll wonder how you ever worked without it.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-use-claude-code-offline-without-internet-access)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Configure Claude Code to Understand Your Internal APIs](/best-way-to-configure-claude-code-to-understand-your-internal-apis/)

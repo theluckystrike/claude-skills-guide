@@ -326,6 +326,12 @@ The RabbitMQ Management UI at `http://localhost:15672` provides a real-time view
 RabbitMQ topic exchanges provide the flexibility needed for complex, evolving message routing requirements. By combining Claude Code's development assistance with solid RabbitMQ patterns, you can rapidly build solid messaging systems that scale with your application's needs. Start with simple routing patterns and gradually add complexity as your system grows. Design your routing key taxonomy first, build the topology second, and let Claude Code handle the boilerplate so you can focus on consumer logic that actually differentiates your system.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-rabbitmq-topic-exchange-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

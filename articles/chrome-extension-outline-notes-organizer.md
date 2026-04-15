@@ -311,6 +311,10 @@ Building a functional outline notes organizer extension requires balancing featu
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-outline-notes-organizer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Blog Post Outline Generator: A Practical Guide for Content Creators](/chrome-extension-blog-post-outline-generator/)

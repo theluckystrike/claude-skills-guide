@@ -320,6 +320,12 @@ Start with the basic patterns in this guide, then extend them based on your spec
 Remember to monitor your streams in production, implement proper error handling, and design for scale from the beginning. With these patterns in place, you'll have a solid foundation for building event-driven, AI-powered applications.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-redis-streams-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

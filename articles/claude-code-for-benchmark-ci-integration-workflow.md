@@ -446,6 +446,12 @@ Start with a single benchmark, measure your baseline, and gradually expand to mo
 
 The investment in setting up these workflows pays dividends in reduced bugs, better performance, and more confident releases. Teams that have consistent, automated AI-powered code review in CI develop better intuitions about what kinds of issues Claude Code catches reliably. and that shapes how they write code from the start.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-benchmark-ci-integration-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)

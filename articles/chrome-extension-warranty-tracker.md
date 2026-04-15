@@ -317,6 +317,12 @@ A Chrome extension warranty tracker transforms an overlooked task into a systema
 
 For developers, the project demonstrates practical use of Chrome extension APIs while creating something genuinely useful. The combination of storage sync, notifications, and content scripts creates a complete solution that works across devices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-warranty-tracker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)

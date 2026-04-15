@@ -356,6 +356,12 @@ This approach lets you write integration tests that simulate the full browser SS
 
 Chrome SSO extension implementation requires careful attention to authentication protocols, secure token management, and enterprise deployment requirements. By following the patterns in this guide, developers can build extensions that integrate smoothly with common enterprise identity providers while maintaining security compliance.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-sso-extension-enterprise)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Context-Aware Access: Implementation Guide](/chrome-enterprise-context-aware-access/)

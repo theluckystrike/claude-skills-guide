@@ -259,6 +259,12 @@ Implementing Lambda response streaming with Claude Code is straightforward when 
 
 Streaming responses unlock powerful real-time capabilities for your applications, and with Claude Code's assistance, you can rapidly prototype and deploy these solutions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-lambda-response-streaming-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Streaming LLM Response Workflow](/claude-code-for-streaming-llm-response-workflow/)

@@ -283,6 +283,12 @@ Claude Code significantly streamlines the Calico network policy workflow by gene
 Remember to always test policies in non-production environments before deploying to production, and use Calico's logging and visibility features to understand the impact of your policies in real-time.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-calico-network-policy-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cypress Intercept Network Requests Workflow](/claude-code-cypress-intercept-network-requests-workflow/)

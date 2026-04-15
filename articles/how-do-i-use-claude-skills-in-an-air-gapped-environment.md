@@ -114,6 +114,12 @@ Using Claude skills in air-gapped environments is entirely feasible with proper 
 
 The initial setup requires effort, but the productivity gains for teams working in secure environments make this investment worthwhile. Start by transferring a few core skills, test your workflows, and expand from there based on your specific requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-use-claude-skills-in-an-air-gapped-environment)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Create a Private Claude Skill Not on GitHub](/how-do-i-create-a-private-claude-skill-not-on-github/). Keep skills local for air-gapped or sensitive environments

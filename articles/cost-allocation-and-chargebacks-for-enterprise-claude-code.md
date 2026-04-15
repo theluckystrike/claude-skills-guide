@@ -285,6 +285,12 @@ The key to success is balancing accuracy with administrative simplicity. Most or
 
 With proper cost management in place, your organization can scale Claude Code confidently while maintaining budget control and ensuring fair cost distribution across teams.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=cost-allocation-and-chargebacks-for-enterprise-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Total Cost of Ownership for Enterprise Teams](/claude-code-total-cost-of-ownership-enterprise/)

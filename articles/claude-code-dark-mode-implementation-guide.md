@@ -378,6 +378,12 @@ Keep these principles in mind as you implement dark mode: use CSS custom propert
 
 Dark mode implementation doesn't have to be complicated. By building on CSS custom properties and following these patterns, you create a flexible theming system that serves all users regardless of their preference or device settings. The investment pays off in user satisfaction, accessibility compliance, and a codebase that makes future theme changes straightforward to execute.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-dark-mode-implementation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cookie Consent Implementation: A Practical Guide](/claude-code-cookie-consent-implementation/)

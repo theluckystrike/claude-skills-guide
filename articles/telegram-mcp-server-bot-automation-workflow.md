@@ -472,6 +472,12 @@ The Telegram MCP server transforms Claude Code into a powerful bot development p
 
 The patterns in this guide. from inline keyboards and multi-step forms to CI/CD integrations and health monitoring. represent the range of what is possible when you treat Telegram not just as a messaging app but as an interface layer for your automation infrastructure. The key is to design workflows around what users actually need, handle errors gracefully, and keep security constraints in mind from the beginning.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=telegram-mcp-server-bot-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

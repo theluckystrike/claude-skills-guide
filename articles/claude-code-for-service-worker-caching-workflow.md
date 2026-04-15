@@ -232,6 +232,12 @@ Building solid service worker caching doesn't require starting from scratch. By 
 Remember: the best caching strategy is one that your users never notice, because it just works, smoothly delivering content whether they're online or off.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-service-worker-caching-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Workbox Service Worker Workflow Guide](/claude-code-for-workbox-service-worker-workflow-guide/)

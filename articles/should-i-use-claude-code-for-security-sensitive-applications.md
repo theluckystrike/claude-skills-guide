@@ -297,6 +297,12 @@ The key insight is that security and AI-assisted development are not mutually ex
 
 Evaluate your specific needs, implement the strategies that work for your context, and enjoy the productivity benefits Claude offers, without compromising your security posture.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=should-i-use-claude-code-for-security-sensitive-applications)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/). See also

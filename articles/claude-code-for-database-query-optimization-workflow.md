@@ -206,6 +206,12 @@ Start by documenting your schema, capturing execution plans for slow queries, an
 
 Remember: optimization is iterative. Measure, improve, measure again, and let Claude help you understand the "why" behind each optimization. Your users (and your cloud bill) will thank you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-database-query-optimization-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)

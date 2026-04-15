@@ -338,6 +338,12 @@ Integrating Claude Code with Prometheus Remote Write workflow empowers developer
 By using Claude Code's capabilities. reading your existing configuration files, executing diagnostic commands, generating validated YAML, and analyzing metric patterns. you can automate repetitive configuration tasks, quickly diagnose problems, and focus on building applications rather than wrestling with infrastructure complexity. The combination of Claude Code's contextual understanding and Prometheus Remote Write's flexible protocol gives you a powerful foundation for scalable, maintainable observability.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-prometheus-remote-write-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bazel Remote Cache Workflow](/claude-code-for-bazel-remote-cache-workflow/)

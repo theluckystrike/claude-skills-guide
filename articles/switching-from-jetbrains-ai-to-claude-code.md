@@ -177,6 +177,10 @@ Give yourself two weeks to adapt. The initial friction transforms into productiv
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=switching-from-jetbrains-ai-to-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Ant to Maven Gradle Build Migration](/claude-code-for-ant-to-maven-gradle-build-migration/)

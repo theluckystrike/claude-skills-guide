@@ -182,6 +182,12 @@ To use Claude Code for matrix builds, use prompts like:
 - "Add a matrix strategy to this workflow to test three Python versions"
 - "Optimize my matrix build to use fail-fast and limit parallelism to 4 jobs"
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-github-actions-matrix-builds-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Discover how Claude Code fits into your complete development toolkit

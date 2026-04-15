@@ -167,6 +167,12 @@ Claude Code isn't just a development tool, it's a developer advocacy accelerator
 
 The skills mentioned here, tdd, frontend-design, pdf, supermemory, and skill-creator, form a foundation. Build on it with custom skills that match your specific products and presentation style. Your future self, standing in front of an audience, will thank you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-developer-advocate-demos)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Developer Advocate Demo Content Workflow Tips](/claude-code-developer-advocate-demo-content-workflow-tips/)

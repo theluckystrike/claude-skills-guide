@@ -358,6 +358,12 @@ GDPR compliance requires ongoing attention rather than one-time implementation. 
 
 The most impactful investments are: a thorough data inventory, automated retention enforcement, solid consent management with audit history, and a tested breach response procedure. Build these foundations first and the remaining compliance work becomes incremental rather than overwhelming.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-gdpr-compliance-implementation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code CCPA Privacy Compliance Guide](/claude-code-ccpa-privacy-compliance-guide/)

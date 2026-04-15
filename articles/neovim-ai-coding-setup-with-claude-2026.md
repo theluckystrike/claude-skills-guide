@@ -531,6 +531,12 @@ The most effective path forward is iterative: start with the terminal split inte
 
 Experiment with different skill combinations to find what works best for your specific use case. The modular nature of both Neovim and Claude skills allows for highly personalized setups that match your development style. Developers working on large TypeScript codebases will gravitate toward different skill combinations than those building Python data pipelines or Go microservices. and both configurations can live in the same `init.lua` behind feature flags.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=neovim-ai-coding-setup-with-claude-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Coverage Reporting Setup Guide](/claude-code-coverage-reporting-setup-guide/)

@@ -149,6 +149,12 @@ You can verify which tools are available by running Claude Code with verbose log
 
 When tools you previously used suddenly become unavailable, you may have accidentally modified your configuration file. Restore a known-good configuration or review recent changes. For broader tool restriction at the session level, the [`disallowedTools` security configuration](/claude-code-disallowedtools-security-configuration/) offers a complementary approach to identify the issue.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mcp-tool-allow-and-deny-lists)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

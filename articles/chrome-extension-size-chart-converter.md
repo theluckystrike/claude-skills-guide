@@ -189,6 +189,12 @@ Chrome extensions for size chart conversion bridge the gap between international
 
 The most effective extensions balance accuracy with speed, providing conversions in seconds while acknowledging the inherent variability between brands. As e-commerce continues to be global, having reliable size conversion tools in your browser becomes increasingly valuable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-size-chart-converter)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)

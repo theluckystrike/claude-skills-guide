@@ -309,6 +309,12 @@ Building an image watermarking extension demonstrates practical use of Chrome ex
 
 From here, you can extend functionality by adding custom logo uploads, batch processing controls, different watermark styles (tiled, diagonal), or integration with cloud storage. The foundation established here scales to more complex image processing workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-watermark-images)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)

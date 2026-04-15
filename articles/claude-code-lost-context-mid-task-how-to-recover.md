@@ -363,6 +363,12 @@ The best developers using Claude Code develop a lightweight discipline around co
 
 When context loss does happen, the diagnostic table in this guide helps you match the right recovery method to the severity of the loss. Mild drift gets a one-line correction. Complete loss gets a full reset prompt. Matching the response to the problem keeps you moving without over-engineering a simple correction.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-lost-context-mid-task-how-to-recover)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/)

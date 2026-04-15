@@ -338,6 +338,12 @@ For developers, DevTools provides powerful diagnostic capabilities. Use heap sna
 
 Most performance issues resolve with a combination of extension management, strategic cache clearing, and enabling Chrome's built-in optimization features. If problems persist after trying these solutions, the issue may be hardware-related, consider upgrading RAM or using a browser with lighter resource requirements for your workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-is-chrome-so-slow-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Zoom Slow: Diagnosing and Fixing Performance Issues](/chrome-zoom-slow/)

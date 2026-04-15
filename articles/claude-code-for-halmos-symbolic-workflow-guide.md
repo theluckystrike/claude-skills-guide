@@ -229,6 +229,12 @@ Start by adding Halmos to one module in your project, create the Claude skill fo
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-halmos-symbolic-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Celery Chord Workflow Tutorial](/claude-code-for-celery-chord-workflow-tutorial/)

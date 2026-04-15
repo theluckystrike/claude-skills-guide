@@ -270,6 +270,12 @@ Start with simple workflows and progressively add complexity as your understandi
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-process-manager-pattern-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Ambassador Sidecar Pattern Workflow](/claude-code-for-ambassador-sidecar-pattern-workflow/)

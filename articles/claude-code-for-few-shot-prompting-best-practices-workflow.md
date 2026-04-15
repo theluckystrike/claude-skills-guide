@@ -283,6 +283,12 @@ This approach combines the consistency of few-shot prompting with Claude Code's 
 
 Start implementing few-shot prompting in your Claude Code workflows today, the improvements in output quality and consistency will be immediately noticeable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-few-shot-prompting-best-practices-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Self-Consistency Prompting Workflow Tutorial](/claude-code-for-self-consistency-prompting-workflow-tutorial/)

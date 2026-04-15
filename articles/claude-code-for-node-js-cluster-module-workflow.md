@@ -196,6 +196,12 @@ The Node.js cluster module provides essential tools for building scalable, resil
 
 Remember that cluster is just one approach to scaling Node.js applications, container orchestration, serverless functions, and microservice architectures each have their place. Use Claude Code to evaluate which approach fits your specific use case.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-node-js-cluster-module-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Node.js VM Module Workflow Guide](/claude-code-for-nodejs-vm-module-workflow-guide/)

@@ -217,6 +217,12 @@ Finally, version control your controller definitions alongside your application 
 
 By integrating Claude Code into your Metacontroller workflow, you reduce development time while improving code quality. The AI assistance handles boilerplate generation, suggests improvements, and helps troubleshoot issues when they arise. Start with simple controllers first, then gradually incorporate more advanced patterns as you become comfortable with the workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-metacontroller-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

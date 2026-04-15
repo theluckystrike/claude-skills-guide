@@ -365,6 +365,12 @@ Setting up coverage reporting with Claude Code creates a foundation for sustaine
 
 Start with basic coverage reporting, then gradually add thresholds, CI integration, and enforcement policies as your team develops testing habits. Use Claude Code as an ongoing collaborator, pasting coverage summaries into sessions to get specific test suggestions is one of the most practical ways to close coverage gaps quickly without spending hours analyzing reports manually.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-coverage-reporting-setup-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Vitest Coverage Reporting Workflow Tutorial](/claude-code-vitest-coverage-reporting-workflow-tutorial/)

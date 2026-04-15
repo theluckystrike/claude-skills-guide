@@ -145,6 +145,12 @@ Use Read Before Edit: Always read a file's current contents before requesting ed
 
 File context switching in Claude Code is a real challenge, but it's manageable with the right strategies. By understanding why it happens and implementing explicit file referencing, breaking down large tasks, and regularly verifying context, you can maintain control over which files Claude Code operates on. Remember: the more explicit you are about file paths and the current focus of your work, the more reliably Claude Code will stay on track. With these techniques in your toolkit, you'll spend less time dealing with context confusion and more time being productive.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-keeps-switching-to-wrong-file-context)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

@@ -199,6 +199,12 @@ Debugging GitHub Actions failures in Claude Code skills requires a systematic ap
 
 Remember that most failures stem from authentication, syntax, or environment issues, all of which are solvable with the right debugging strategy. Keep your skills modular, log generously, and test incrementally for the most efficient development experience.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-github-actions-skill-step-failed-debug)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

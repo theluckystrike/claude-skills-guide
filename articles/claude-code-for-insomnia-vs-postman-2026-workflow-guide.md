@@ -196,6 +196,12 @@ Both Insomnia and Postman work effectively with Claude Code in 2026, but your ch
 
 The best approach? Experiment with both tools using the code patterns above, then choose the one that aligns with your team's workflow and scales with your project requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-insomnia-vs-postman-2026-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Insomnia API Testing Workflow](/claude-code-insomnia-api-testing-workflow/)

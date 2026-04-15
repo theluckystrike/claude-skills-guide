@@ -153,6 +153,12 @@ The key insight is that Copilot and Claude Code serve similar but distinct needs
 
 For teams already working in terminal environments, value transparency in AI reasoning, or need specialized capabilities through skills, Claude Code provides a compelling alternative. The migration is not about abandoning Copilot. it is about choosing the tool that fits how your team actually works.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-do-teams-switch-from-copilot-to-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs GitHub Copilot Workspace 2026](/claude-code-vs-github-copilot-workspace-2026/). Direct feature-by-feature comparison

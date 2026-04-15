@@ -170,6 +170,12 @@ The supermemory skill enhances long-running Terraform projects by maintaining co
 
 Effective Terraform state management prevents infrastructure incidents before they happen. By implementing these patterns with Claude Code assistance, you build a foundation for reliable, collaborative infrastructure as code.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-terraform-state-management-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Terraform Module Development Guide](/claude-code-terraform-module-development-guide/)

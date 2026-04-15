@@ -248,6 +248,12 @@ Git worktrees combined with Claude Code create a powerful parallel development e
 
 Whether you're managing feature development alongside bug fixes, conducting code reviews, or experimenting with refactoring, this workflow scales from simple two-branch scenarios to complex multi-context projects. The key advantage is eliminating the mental overhead of state management: each worktree simply *is* its branch, requiring no careful stashing or complex git operations to preserve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-git-worktree-parallel-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Chef Cookbook Development Workflow](/claude-code-for-chef-cookbook-development-workflow/)

@@ -218,6 +218,12 @@ Upstream contribution is rewarding but requires a structured approach. Claude Co
 Remember: every contribution counts, whether it's code, documentation, or simply helping other users in issues and discussions. Happy contributing!
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-upstream-contribution-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OSS Code Review Contribution Guide](/claude-code-for-oss-code-review-contribution-guide/). Complement your upstream contributions by learning how to review other contributors' PRs effectively with Claude Code

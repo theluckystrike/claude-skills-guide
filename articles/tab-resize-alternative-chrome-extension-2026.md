@@ -252,6 +252,12 @@ Consider your specific workflow when selecting an alternative:
 
 The best choice depends on your specific use case, but 2026 offers more options than ever for efficient tab management without relying solely on Tab Resize.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=tab-resize-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [BuiltWith Alternative Chrome Extension: Top Picks for 2026](/builtwith-alternative-chrome-extension-2026/)

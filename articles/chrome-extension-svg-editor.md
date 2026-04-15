@@ -249,6 +249,12 @@ Performance matters when dealing with complex SVG documents. Use efficient DOM q
 
 Building a Chrome extension for SVG editing provides a valuable tool for developers and designers who work with vector graphics regularly. The architecture and code examples here give you a foundation to create a functional editor that integrates smoothly with the browser workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-svg-editor)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Document Editor Chrome Extension: A Developer's Guide](/ai-document-editor-chrome-extension/)

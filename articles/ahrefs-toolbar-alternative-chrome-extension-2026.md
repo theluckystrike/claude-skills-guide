@@ -204,6 +204,12 @@ The Ahrefs toolbar remains excellent, but the alternatives in 2026 have matured 
 
 The best approach often involves combining multiple specialized tools rather than paying for a single comprehensive platform. This modular strategy gives you flexibility, reduces costs, and lets you swap tools as your needs evolve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ahrefs-toolbar-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

@@ -284,6 +284,10 @@ The decision simplifies to this: if you spend most of your day writing and modif
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-gemini-cli-for-developers-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Understanding what the skills ecosystem offers helps you evaluate Claude Code's extensibility advantage over Gemini CLI

@@ -284,6 +284,12 @@ Claude Code transforms web components development from repetitive boilerplate ge
 Start with one component, establish your patterns, and expand your Claude Code skills as your component library grows. The time saved on repetitive tasks quickly compounds into significant productivity gains.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-fast-web-components-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Hybrids Web Components Workflow](/claude-code-for-hybrids-web-components-workflow/)

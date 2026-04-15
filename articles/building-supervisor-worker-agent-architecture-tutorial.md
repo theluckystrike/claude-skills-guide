@@ -236,6 +236,12 @@ The supervisor-worker agent architecture transforms Claude Code from a single AI
 This pattern isn't just about efficiency; it's about building maintainable, auditable AI-assisted development processes that you can trust with real production code.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=building-supervisor-worker-agent-architecture-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

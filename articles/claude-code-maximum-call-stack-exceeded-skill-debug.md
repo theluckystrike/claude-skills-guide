@@ -255,6 +255,12 @@ The "Maximum call stack size exceeded" error is preventable with careful skill d
 
 Remember: Claude Code skills should complete their task and stop. If your skill keeps running, you have a design problem, not a feature.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-maximum-call-stack-exceeded-skill-debug)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

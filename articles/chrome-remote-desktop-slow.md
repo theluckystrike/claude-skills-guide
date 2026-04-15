@@ -306,6 +306,12 @@ Run this script before initiating a session for consistently better performance 
 
 Most users see significant improvement after trying the quick fixes, particularly reducing display quality and using a wired connection. The host-side optimizations around screen resolution and visual effects deliver results that browser settings alone cannot. If problems persist, the advanced solutions like VPN setup or alternative remote desktop software may provide better results.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-remote-desktop-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Omnibox Slow? Here's How to Fix It](/chrome-omnibox-slow/)

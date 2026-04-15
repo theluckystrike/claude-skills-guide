@@ -110,6 +110,12 @@ The best calendar Chrome extension depends on your specific workflow and tool pr
 
 Start with your primary use case, daily scheduling, project tracking, or time logging, and evaluate extensions against that need. The right extension should feel invisible, handling calendar management without drawing attention away from your development work.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=calendar-chrome-extension-best)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)

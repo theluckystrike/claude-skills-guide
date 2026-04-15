@@ -384,6 +384,12 @@ AI search enhancer Chrome extensions represent a practical application of machin
 
 The implementation examples above provide a starting point for developers who want control over how search enhancement works. The caching layer, domain-context system, and resilient selector strategy together form a production-ready foundation you can extend. For those preferring ready-made solutions, the comparison table at the top of this guide and the evaluation criteria in the off-the-shelf section give you a framework for making the right choice. The key is finding an extension. built or bought. that aligns with your specific use cases and provides the customization depth your workflow requires.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-search-enhancer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Photo Enhancer Chrome Extension: A Developer Guide](/ai-photo-enhancer-chrome-extension/)

@@ -316,6 +316,12 @@ Start with simple tools and ReAct-style iteration. As your agents grow more soph
 Remember that effective tool calling isn't just about executing actions, it's about creating a reliable loop where the agent can reason about results, adapt its approach, and ultimately deliver meaningful outcomes.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-ai-agent-tool-calling-implementation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

@@ -166,6 +166,12 @@ Embedded development benefits from systematic approaches. Claude skills support 
 
 For IoT firmware specifically, skills address the tension between development speed and reliability. They generate code following established patterns while accounting for the unique constraints of embedded systems: limited memory, real-time deadlines, and remote deployment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-embedded-systems-iot-firmware)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Guide](/claude-tdd-skill-test-driven-development-workflow/)

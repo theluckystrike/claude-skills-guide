@@ -147,6 +147,12 @@ Build custom MCP servers as your grid integration needs mature. Connect to your 
 
 For utilities and grid operators, these skills reduce development time on data-intensive features while ensuring compliance and reliability requirements are met. The modular nature of Claude skills means you can adopt them incrementally based on your specific use cases.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-energy-smart-grid-applications)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Serverless Function Development Workflow](/claude-skills-serverless-function-development-workflow/). Build and deploy cloud functions that power real-time grid data pipelines

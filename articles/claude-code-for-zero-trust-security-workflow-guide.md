@@ -407,6 +407,12 @@ Integrating Claude Code into your development workflow doesn't mean abandoning s
 Start with restricted permissions, add verification workflows, and build monitoring. Each layer of defense makes your AI-augmented development more secure without sacrificing the benefits Claude Code provides. The goal is not to make AI assistance harder to use but to make unsafe use of AI assistance structurally difficult.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-zero-trust-security-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Container Security Scanning Workflow Guide](/claude-code-container-security-scanning-workflow-guide/)

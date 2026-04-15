@@ -261,6 +261,12 @@ else:
 
 This validation layer prevents the cascading failures that occur when a subagent at step 3 fails because of malformed context set at step 1, a failure mode that's frustrating to diagnose without explicit validation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=passing-context-between-claude-code-subagents-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Pass State Between AI Agents](/how-to-pass-state-between-ai-agents/). Framework-agnostic patterns for state sharing applicable to Claude, LangChain, CrewAI, and other agent runtimes.

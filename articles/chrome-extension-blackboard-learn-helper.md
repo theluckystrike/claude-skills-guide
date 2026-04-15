@@ -666,6 +666,12 @@ Chromebook management via Google Admin: Institutions that manage Chromebooks thr
 
 For extensions that handle sensitive academic data (grades, student IDs, submission content), document your data handling practices clearly and get review from your institution's IT security team before broad deployment. Most institutions have policies governing what data browser extensions may collect, even for internal tools.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-blackboard-learn-helper)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Spreadsheet Helper Chrome Extension: A Developer's Guide](/ai-spreadsheet-helper-chrome-extension/)

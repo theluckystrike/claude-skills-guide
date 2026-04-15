@@ -278,6 +278,12 @@ FastAPI provides excellent async support for Python developers, and Claude Code 
 
 Remember to use connection pooling for databases, implement proper error handling, and test thoroughly with async test clients. Your async Python APIs will be performant, maintainable, and well-documented.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-fastapi-async-python-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Async Product Discovery Process for Remote Teams Using Recorded Interviews](/async-product-discovery-process-for-remote-teams-using-recorded-interviews/)

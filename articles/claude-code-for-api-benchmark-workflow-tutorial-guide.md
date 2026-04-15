@@ -218,6 +218,12 @@ Claude Code transforms API benchmarking from a manual, time-consuming process in
 
 Start small, create a basic benchmark skill for your most critical endpoint, and expand from there. The combination of Claude's understanding of API concepts and its ability to execute commands makes it an ideal companion for any API performance testing strategy.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-api-benchmark-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude API Batch Processing Large Datasets Workflow Guide](/claude-api-batch-processing-large-datasets-workflow-guide/)

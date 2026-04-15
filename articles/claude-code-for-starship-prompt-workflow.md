@@ -190,6 +190,12 @@ Start by using the example prompts above, then customize them to your needs. Wit
 
 *Ready to take your terminal to the better? Try generating your Starship config with Claude Code today.*
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-starship-prompt-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for MCP Prompt Server Workflow](/claude-code-for-mcp-prompt-server-workflow/)

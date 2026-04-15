@@ -297,6 +297,12 @@ The most effective pattern is to treat Claude Code as a pair programmer who has 
 
 For more development tips and AI-assisted workflows, explore additional resources on using Claude Code throughout your project lifecycle.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=using-claude-code-with-prisma-orm-database-migrations)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Prisma Schema Migrations Advanced Workflow Guide](/claude-code-prisma-schema-migrations-advanced-workflow-guide/). Next step: production-grade patterns, zero-downtime migrations, and monorepo strategies

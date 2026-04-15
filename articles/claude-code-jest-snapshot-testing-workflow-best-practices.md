@@ -704,6 +704,12 @@ Remember: snapshots are a tool, not a crutch. Combine them with traditional asse
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-jest-snapshot-testing-workflow-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Jest Unit Testing Workflow Guide](/claude-code-jest-unit-testing-workflow-guide/)

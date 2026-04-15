@@ -129,6 +129,12 @@ Goal decomposition transforms overwhelming AI requests into manageable, trackabl
 
 By embracing this structured approach, you use the full potential of AI agents, achieving results that would be impossible through undifferentiated, monolithic task execution. The next time you have a complex project, remember: break it down, and let Claude Code handle each piece systematically.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-agent-goal-decomposition-how-it-works-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

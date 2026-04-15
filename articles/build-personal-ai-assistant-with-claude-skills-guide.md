@@ -238,6 +238,10 @@ Over two to three weeks, the system accumulates enough context that Claude Code 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=build-personal-ai-assistant-with-claude-skills-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-automated-blog-post-workflow-tutorial/). Apply skills to content creation

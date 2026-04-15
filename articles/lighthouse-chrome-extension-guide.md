@@ -262,6 +262,12 @@ Lighthouse Chrome extension delivers quick, actionable audits without leaving yo
 
 For deeper analysis, explore Chrome DevTools and Lighthouse CI for comprehensive testing capabilities. Regular auditing throughout development ensures consistent performance without last-minute optimization scrambles.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=lighthouse-chrome-extension-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

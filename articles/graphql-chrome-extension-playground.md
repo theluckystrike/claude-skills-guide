@@ -406,6 +406,12 @@ The most productive approach is to combine tools based on context: use GraphQL N
 
 Experiment with different extensions to find the combination that matches your workflow. Invest time in setting up environment configurations and organizing query collections. that upfront work pays dividends through faster iteration, reduced context switching, and the ability to reliably reproduce issues across environments when bugs inevitably appear.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=graphql-chrome-extension-playground)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Configure Claude Code to Understand Your Internal APIs](/best-way-to-configure-claude-code-to-understand-your-internal-apis/)

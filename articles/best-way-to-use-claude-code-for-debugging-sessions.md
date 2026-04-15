@@ -265,6 +265,12 @@ Claude Code struggles most with timing-dependent bugs that require live executio
 
 For best results, match the debugging approach to the problem type. Use Claude Code for analysis and hypothesis generation, then validate with your debugger, test suite, or production monitoring. The combination is significantly faster than either approach alone.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-use-claude-code-for-debugging-sessions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)

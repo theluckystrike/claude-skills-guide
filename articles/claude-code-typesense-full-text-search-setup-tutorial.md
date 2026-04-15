@@ -409,6 +409,12 @@ Integrating Claude Code with Typesense opens up possibilities for building sophi
 With these foundations in place, the next natural extensions are: connecting the indexer to a database change stream (e.g., Postgres logical replication or a webhook), adding vector search embeddings for semantic similarity alongside keyword matching, and building a React-based search UI using the Typesense InstantSearch adapter. Claude Code can accelerate every one of these steps by generating boilerplate, explaining API options, and catching edge cases before they reach production.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-typesense-full-text-search-setup-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for PostgreSQL Full-Text Search Workflow](/claude-code-for-postgres-full-text-search-workflow/)

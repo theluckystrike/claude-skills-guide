@@ -175,6 +175,12 @@ Build skills that declare their requirements clearly and handle missing dependen
 
 The gap between your machine and CI runners is real, but it's a [gap you can close with proper tooling](/troubleshooting-hub/) and explicit dependency management.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-my-claude-skill-work-locally-but-fail-in-ci)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How Do I Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/). Apply systematic debugging to CI failures that produce no useful output

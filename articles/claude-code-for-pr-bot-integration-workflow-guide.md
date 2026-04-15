@@ -234,6 +234,12 @@ Integrating Claude Code into your PR bot workflows transforms automated code rev
 
 Remember to iterate on your configuration based on real feedback. The most successful implementations evolve with team needs, continuously improving to catch issues that matter while avoiding noise that frustrates developers.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-pr-bot-integration-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)

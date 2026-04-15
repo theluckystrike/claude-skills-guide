@@ -404,6 +404,12 @@ The choice ultimately depends on your development style and project requirements
 
 For complex Spring Boot applications requiring deep framework knowledge, architectural consistency across many files, and the ability to encode team conventions into reusable skills, Claude Code's understanding of Spring patterns gives it a meaningful edge. But for developers who live in IntelliJ and want smart completions that feel native to their workflow, Codeium is hard to beat.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-codeium-for-java-spring-boot)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Java Backend Developer Spring Boot Workflow Tips](/claude-code-java-backend-developer-spring-boot-workflow-tips/)

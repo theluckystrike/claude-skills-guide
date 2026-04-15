@@ -303,6 +303,12 @@ Claude Code transforms gaming backend development by providing intelligent assis
 
 The skills demonstrated here form the foundation of scalable multiplayer game infrastructure. Build upon these patterns to handle larger player counts, more complex game modes, and stricter latency requirements as your game grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-gaming-backend-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for WebSocket Real-Time App Development](/claude-code-skills-websocket-real-time-app-development/). implement WebSocket connections for multiplayer game communication

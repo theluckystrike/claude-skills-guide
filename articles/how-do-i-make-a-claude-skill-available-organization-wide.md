@@ -193,6 +193,12 @@ Making Claude skills available organization-wide involves distributing skill fil
 
 Regardless of distribution method, [invest time in documenting skill usage](/getting-started-hub/) and testing changes before deployment. A well-organized skill library accelerates onboarding and ensures consistent development practices across your entire organization.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-make-a-claude-skill-available-organization-wide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/). Start with team-level sharing before scaling to organization-wide distribution.

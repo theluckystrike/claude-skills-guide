@@ -277,6 +277,12 @@ Editing sessionStorage in Chrome extensions is essential for effective debugging
 
 For more guides on Chrome extension development and debugging tools, explore our collection of articles covering extension development, storage APIs, and development workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-session-storage-editor)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Cookie Editor: A Developer's Guide](/chrome-extension-cookie-editor-developer/)

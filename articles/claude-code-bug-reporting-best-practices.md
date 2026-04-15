@@ -195,6 +195,12 @@ Several Claude skills can improve your bug reporting workflow:
 
 Quality bug reports respect maintainer time. By following these practices, you contribute to a healthier Claude Code ecosystem where issues get resolved faster and skills improve more rapidly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-bug-reporting-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Keeps Adding Unnecessary Console Log.](/claude-code-keeps-adding-unnecessary-console-log-statements/)

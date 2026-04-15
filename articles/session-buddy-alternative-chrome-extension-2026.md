@@ -223,6 +223,12 @@ The Chrome extension landscape in 2026 offers Session Buddy alternatives that ca
 
 Evaluate your specific needs, export capabilities, sync requirements, interface preferences, and select the tool that aligns with how you actually work. The best session management solution is the one that disappears into your workflow, letting you focus on the actual work rather than managing tabs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=session-buddy-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Workona Alternative Chrome Extension 2026: Top Picks for Power Users](/workona-alternative-chrome-extension-2026/)

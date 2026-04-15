@@ -212,6 +212,12 @@ An efficient issue triage workflow is crucial for healthy open source projects. 
 Remember: the goal isn't to replace human judgment, but to handle repetitive tasks so maintainers can focus on building and shipping great software.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-open-source-issue-triage-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Claude Issue Triage Workflow Tutorial Guide](/claude-code-for-claude-issue-triage-workflow-tutorial-guide/)

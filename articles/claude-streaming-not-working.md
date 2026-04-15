@@ -197,6 +197,12 @@ async with client.messages.stream(
 3. **Wrap streams in error handling**: Mid-stream errors are possible. Always use try/except around stream iteration.
 4. **Use get_final_message() / finalMessage()**: When you do not need real-time output but want to avoid the 10-minute timeout, these methods give you the complete message object.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-streaming-not-working)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Streaming API Guide](/claude-streaming-api-guide/) -- complete tutorial on all streaming event types and patterns.

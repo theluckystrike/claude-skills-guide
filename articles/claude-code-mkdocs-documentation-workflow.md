@@ -213,6 +213,12 @@ Each extension adds a small piece of functionality without disrupting the core w
 
 This approach scales from small personal projects to larger team documentation. The key insight is that documentation generation and code development happen in the same environment, using the same tools, driven by Claude's understanding of your codebase.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mkdocs-documentation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best Claude Skill for Generating Documentation?](/what-is-the-best-claude-skill-for-generating-documentation/)

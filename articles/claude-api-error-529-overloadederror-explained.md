@@ -157,6 +157,12 @@ with client.messages.stream(
 3. **Implement model fallback**: Have a ranked list of acceptable models and try each one in order.
 4. **Monitor with request_id**: Include the `request_id` from error responses when contacting Anthropic support for persistent issues.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-error-529-overloadederror-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude API Error 429 rate_limit_error Fix](/claude-api-error-429-ratelimiterror-explained/) -- distinguish between per-account rate limits and platform-wide overload.

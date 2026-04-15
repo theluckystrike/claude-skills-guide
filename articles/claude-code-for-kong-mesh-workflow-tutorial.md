@@ -250,6 +250,12 @@ Claude Code transforms Kong Mesh workflows from complex manual configuration to 
 
 Start experimenting with Kong Mesh and Claude Code today, your future self will thank you for the time saved on configuration and debugging.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-kong-mesh-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Envoy Proxy Workflow Tutorial](/claude-code-for-envoy-proxy-workflow-tutorial/)

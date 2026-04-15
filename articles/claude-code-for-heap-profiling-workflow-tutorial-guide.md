@@ -218,6 +218,12 @@ Heap profiling doesn't have to be a daunting task. With Claude Code assisting yo
 
 By integrating Claude Code into your heap profiling workflow, you'll not only solve memory issues faster but also develop a deeper understanding of your application's memory behavior. Start small, profile regularly, and let Claude Code help you build more efficient, memory-conscious applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-heap-profiling-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for CPU Profiling Workflow Tutorial Guide](/claude-code-for-cpu-profiling-workflow-tutorial-guide/)

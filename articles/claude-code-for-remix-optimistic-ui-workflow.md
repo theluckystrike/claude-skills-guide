@@ -518,6 +518,12 @@ Claude Code makes this workflow even more efficient by helping you identify oppo
 
 The key points to take forward: derive optimistic values from `fetcher.formData` and `navigation.formData` wherever possible rather than duplicating state; always handle the error case by detecting `fetcher.data?.error` after the state returns to idle; test under slow network conditions; and use the comparison table to decide which interactions are actually worth optimistic treatment versus which ones need accurate server feedback before updating the UI.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-remix-optimistic-ui-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Remix Error Boundary Workflow Guide](/claude-code-for-remix-error-boundary-workflow-guide/)

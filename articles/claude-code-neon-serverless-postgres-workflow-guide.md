@@ -215,6 +215,12 @@ Start by creating the base Neon skill, then expand with specific workflows for y
 Remember to monitor your Neon usage and adjust compute allocation based on actual traffic patterns. With proper configuration, you'll get excellent performance at a fraction of the cost of traditional database hosting.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-neon-serverless-postgres-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Postgres Logical Replication Workflow](/claude-code-for-postgres-logical-replication-workflow/)

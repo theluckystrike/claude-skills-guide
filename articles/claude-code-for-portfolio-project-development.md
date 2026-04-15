@@ -423,6 +423,12 @@ Claude Code transforms portfolio development from a tedious chore into an effici
 
 Remember that your portfolio tells a story about who you are as a developer. Use Claude Code strategically to tell that story effectively, showing employers exactly why they should invest in your capabilities. The developers who stand out are not necessarily those who write the most impressive algorithms, they are the ones who demonstrate judgment, communication, and discipline across every aspect of their work. Claude Code helps you build and showcase all three.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-portfolio-project-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)

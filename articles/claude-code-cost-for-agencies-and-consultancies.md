@@ -320,6 +320,10 @@ The agencies seeing the best returns are not just using Claude Code, they have b
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-cost-for-agencies-and-consultancies)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Monthly Cost Breakdown: Realistic Usage.](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/)

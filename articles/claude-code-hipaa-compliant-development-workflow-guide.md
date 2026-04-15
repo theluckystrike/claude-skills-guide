@@ -322,6 +322,10 @@ Treat security as code: version control your compliance skills, review them alon
 Remember that HIPAA compliance is an ongoing process, not a one-time achievement. Stay updated with the latest security recommendations and regularly review your application's compliance status.
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-hipaa-compliant-development-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/). Audit logging, access controls, and compliance frameworks for regulated environments

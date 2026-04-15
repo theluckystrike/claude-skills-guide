@@ -287,6 +287,12 @@ When Chrome slows after an update, work through this sequence:
 
 Chrome slow after an update usually stems from cache incompatibilities, extension conflicts, or profile corruption. Start by testing in Incognito mode to isolate the cause, then work through clearing cache, disabling hardware acceleration, updating extensions, and rebuilding the profile if needed. For development teams, maintaining clean profiles and staying on top of extension updates prevents most regressions. When you encounter a genuine regression that survives all fixes, reporting it with a performance trace helps the Chrome team prioritize the fix for everyone.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-slow-after-update)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Autofill Slow: Causes and Solutions for Developers](/chrome-autofill-slow/)

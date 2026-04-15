@@ -158,6 +158,12 @@ Controlling Claude Code's tendency toward over-engineering requires explicit sco
 
 The goal isn't to limit Claude Code's capabilities, it's to direct them toward your actual needs. Start simple, expand when necessary, and never accept complexity you haven't explicitly requested.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-not-over-engineer-solutions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Make Claude Code Make Smaller Focused Changes](/how-to-make-claude-code-make-smaller-focused-changes/). Smaller changes prevent over-engineering

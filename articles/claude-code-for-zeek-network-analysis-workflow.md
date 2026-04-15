@@ -654,6 +654,12 @@ Claude Code transforms Zeek network analysis from a manual, time-intensive proce
 
 The key is starting simple: set up proper log organization, create your first analysis scripts, and progressively build more sophisticated automation as your needs evolve. With Claude Code as your analysis partner, you have a powerful ally for navigating even the most complex network security investigations. The combination of Zeek's deep protocol visibility and Claude Code's ability to rapidly generate, test, and refine analysis scripts gives your team a significant edge in both proactive threat hunting and reactive incident response.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-zeek-network-analysis-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Go Fuzz Workflow Tutorial Guide](/claude-code-for-go-fuzz-workflow-tutorial-guide/)

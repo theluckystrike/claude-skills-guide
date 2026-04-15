@@ -204,6 +204,12 @@ Consider stdio inheritance for debugging. During development, you can set `{ std
 
 Claude Code can review your child process code, suggest improvements, and help you implement these patterns correctly. Don't hesitate to ask for explanations of specific behaviors or recommendations for your particular use case.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nodejs-child-process-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for 0x Node Flame Workflow Guide](/claude-code-for-0x-node-flame-workflow-guide/)

@@ -246,6 +246,12 @@ This basic structure provides the foundation for a fully functional highlight-an
 
 The Chrome extension platform provides solid APIs for capturing and storing text selections. Whether you need a simple personal tool or a feature-rich solution with cross-device synchronization, the building blocks are readily available and well-documented in Chrome's official extension documentation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-highlight-text-save)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

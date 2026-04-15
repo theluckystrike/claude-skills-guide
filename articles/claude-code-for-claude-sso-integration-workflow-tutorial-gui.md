@@ -264,6 +264,12 @@ Integrating Claude Code with your SSO workflow provides secure, centralized auth
 
 Remember to regularly review and update your security configurations, stay current with your IdP's documentation, and implement the best practices outlined here for a secure and reliable authentication experience.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-claude-sso-integration-workflow-tutorial-gui)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for CORS Misconfiguration Fix Workflow Guide](/claude-code-for-cors-misconfiguration-fix-workflow-guide/)

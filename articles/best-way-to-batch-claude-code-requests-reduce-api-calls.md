@@ -205,6 +205,12 @@ Batching Claude Code requests effectively is one of the most powerful ways to re
 
 The key is to think in terms of complete tasks rather than individual actions. Every time you would naturally say "now do this next thing," consider whether it can be incorporated into your current batch of operations instead.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-batch-claude-code-requests-reduce-api-calls)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)

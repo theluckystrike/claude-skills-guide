@@ -205,6 +205,12 @@ Claude Code transforms methodology writing from a tedious task into a structured
 
 Start by establishing your research context, generate structured outlines, expand sections with specific details, and refine for your target audience. With practice, this workflow becomes second nature, allowing you to document research methodologies consistently and professionally.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-writing-research-methodology-sections)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Research Assistant Chrome Extension: A Developer's Guide](/ai-research-assistant-chrome-extension/)

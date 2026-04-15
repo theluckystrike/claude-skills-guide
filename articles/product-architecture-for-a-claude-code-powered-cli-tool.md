@@ -195,6 +195,12 @@ Building a CLI tool powered by Claude Code requires thoughtful architecture that
 
 The key is to view Claude Code not just as a wrapper around existing commands, but as an intelligent agent that can understand context, make decisions, and execute complex workflows on behalf of the user. With proper architectural design, your CLI tool can transform how developers work, automating repetitive tasks while handling complexity that would be impractical to script manually.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=product-architecture-for-a-claude-code-powered-cli-tool)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

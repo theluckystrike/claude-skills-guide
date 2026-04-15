@@ -429,6 +429,12 @@ A self-hosted Chrome extension store provides the control enterprises need for s
 
 Start small, host a single internal tool, verify the update cycle works end-to-end, then expand. Pay particular attention to key management and cache headers; those two areas cause the majority of real-world deployment failures. The investment pays off in security, compliance, and operational control over every extension running on your managed fleet.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-self-hosted-extension-store)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-tools-security-concerns-enterprise-guide/)

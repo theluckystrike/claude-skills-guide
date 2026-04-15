@@ -508,6 +508,12 @@ The patterns shown here. search interfaces, API integration, multi-provider para
 
 As you scale toward production, the most important investments are rate limit caching, proper API key security through an options page or backend proxy, and a clear attribution record for every image your users download. These three measures address the practical problems that most hobby implementations ignore and that production tools can't afford to skip.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-royalty-free-image-search)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Paraphraser Chrome Extension Free: A Developer's Guide](/ai-paraphraser-chrome-extension-free/)

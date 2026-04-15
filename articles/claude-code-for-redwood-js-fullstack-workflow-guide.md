@@ -776,6 +776,12 @@ Building with RedwoodJS and Claude Code combines the best of modern fullstack de
 The patterns in this guide, layered architecture, typed services, Cell-based data fetching, role-based auth, and staged deployment, form a foundation that scales from side project to production application. Claude Code is most powerful when you understand the framework well enough to evaluate what it generates. Invest in learning Redwood's conventions, and Claude becomes a force multiplier rather than a source of mystery code.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-redwood-js-fullstack-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

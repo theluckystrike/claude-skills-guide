@@ -235,6 +235,12 @@ Claude Code transforms version matrix workflows from a painful manual process in
 
 The key is treating your matrix not as a static configuration file, but as a living system that evolves with your project, and Claude Code is the perfect partner for that evolution.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-version-matrix-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for asdf Version Manager Workflow Guide](/claude-code-for-asdf-version-manager-workflow-guide/)

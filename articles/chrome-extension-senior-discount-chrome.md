@@ -297,6 +297,12 @@ Building a senior discount Chrome extension combines web scraping, browser exten
 
 Start with a curated list of major retailers, then expand through community contributions and automated discovery. The extension can evolve from a simple notification system to a comprehensive savings tool that tracks price histories and notifies users of discount eligibility.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-senior-discount-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building a CLI DevTool with Claude Code: A Practical.](/building-a-cli-devtool-with-claude-code-walkthrough/)

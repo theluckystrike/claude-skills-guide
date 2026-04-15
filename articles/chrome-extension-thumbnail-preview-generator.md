@@ -307,6 +307,12 @@ Common issues include CORS restrictions, timing problems with dynamic content, a
 
 Building a thumbnail preview generator for Chrome extensions requires understanding canvas rendering, DOM manipulation, and extension APIs. The implementations covered here provide a foundation for creating previews for images, DOM elements, and link metadata. Start with the basic image generator, then expand to handle more complex use cases as your extension grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-thumbnail-preview-generator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

@@ -579,6 +579,12 @@ Tree-sitter syntax highlighting transforms code visualization from simple patter
 The investment in well-crafted Tree-sitter queries pays dividends every time you open your editor and instantly recognize code structure at a glance.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-tree-sitter-syntax-highlighting-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)

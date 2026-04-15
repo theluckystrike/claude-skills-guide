@@ -207,6 +207,12 @@ Start by implementing one or two of the techniques in this guide, perhaps the st
 
 With Claude Code handling the heavy lifting of identification and suggestion, your team can focus on what matters most: writing great code and shipping features.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-stale-pr-management-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Dotfiles Configuration Management Workflow](/claude-code-dotfiles-configuration-management-workflow/)

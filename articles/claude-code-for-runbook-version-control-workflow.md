@@ -233,6 +233,12 @@ Push your branch and create a pull request with a detailed description of what c
 
 Implementing version control for runbooks transforms them from static documentation into a living, trustworthy operational knowledge base. Claude Code accelerates this transformation by helping you create consistent procedures, validate changes automatically, and maintain documentation as infrastructure evolves. Start with a clean repository structure, establish a branching workflow, and let Claude Code help you maintain runbooks that your team can truly rely on when things go wrong.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-runbook-version-control-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for asdf Version Manager Workflow Guide](/claude-code-for-asdf-version-manager-workflow-guide/)

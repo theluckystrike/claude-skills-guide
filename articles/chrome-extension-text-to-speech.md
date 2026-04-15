@@ -426,6 +426,12 @@ Content moderation and review pipelines. Internal tools where staff review large
 
 Building a Chrome extension with text-to-speech functionality combines straightforward Web Speech API usage with the architectural flexibility Chrome extensions provide. Start with basic page reading, then expand based on user feedback. whether that means adding voice selection, offline support, or integration with external TTS services.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-text-to-speech)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Text to Speech Chrome Extension: A Developer Guide](/ai-text-to-speech-chrome-extension/)

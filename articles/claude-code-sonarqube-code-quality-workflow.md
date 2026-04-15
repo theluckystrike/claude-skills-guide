@@ -300,6 +300,12 @@ The key is establishing the workflow early in project setup, running analysis co
 
 Over weeks and months, you will see measurable improvements in code quality metrics, fewer production defects traced to maintainability issues, and faster onboarding as new developers navigate a cleaner, more consistent codebase.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sonarqube-code-quality-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Static Analysis Automation Guide](/claude-code-static-analysis-automation-guide/). SonarQube is a static analysis platform

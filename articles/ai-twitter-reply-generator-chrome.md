@@ -335,6 +335,12 @@ To test your extension locally:
 
 AI Twitter reply generator Chrome extensions combine browser automation with AI capabilities to streamline social media engagement. The architecture shown here provides a solid foundation, extend it with features like sentiment analysis, reply templates, or integration with other social platforms. Build thoughtfully, and these tools can significantly enhance your Twitter workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-twitter-reply-generator-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

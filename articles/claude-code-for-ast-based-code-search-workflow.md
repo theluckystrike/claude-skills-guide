@@ -224,6 +224,12 @@ Finally, combine AST search with Claude Code's AI capabilities. Use natural lang
 
 Start with one query, refine it, and expand from there. Your future self will thank you when the next major refactoring takes hours instead of weeks.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-ast-based-code-search-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Algolia Search Workflow Guide](/claude-code-for-algolia-search-workflow-guide/)

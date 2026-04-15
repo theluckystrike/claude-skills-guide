@@ -198,6 +198,12 @@ Without guidance, Claude Code optimizes for simplicity and assumes success. By e
 
 The investment in teaching Claude Code proper async error handling pays dividends in production reliability. Your applications will handle network failures, timeouts, and unexpected errors without bringing down entire processes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-handle-async-errors-properly)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skips Error Handling in Generated Code](/claude-code-skips-error-handling-in-generated-code/). Understanding why Claude skips error handling

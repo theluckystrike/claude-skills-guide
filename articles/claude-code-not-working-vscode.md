@@ -125,6 +125,12 @@ After fixes, test in VS Code:
 - **Keep CLI and extension in sync:** Update both together with `npm update -g @anthropic-ai/claude-code` and VS Code extension auto-update.
 - **Use `ANTHROPIC_API_KEY` in WSL:** Browser-based OAuth is unreliable in WSL; environment variable auth is more stable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-not-working-vscode)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Install Claude Code — All Platforms Guide](/claude-code-install-guide) — Fresh installation instructions

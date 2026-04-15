@@ -525,6 +525,12 @@ Claude Code transforms Storybook component testing from a manual, time-consuming
 Start by integrating Claude Code into your next component project, you'll quickly discover how it accelerates story creation, improves test coverage, and simplifies debugging across your entire component library.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-storybook-component-testing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)

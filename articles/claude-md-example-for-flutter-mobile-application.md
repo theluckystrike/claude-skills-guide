@@ -265,6 +265,12 @@ Claude skill files transform how you work with Flutter by encoding your project 
 
 For Flutter development, consider installing complementary skills like the `frontend-design` skill for UI/UX consistency, the `tdd` skill for test-driven development workflows, and the `supermemory` skill to maintain context across Flutter development sessions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-example-for-flutter-mobile-application)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Expo EAS Build Submission Workflow Guide](/claude-code-expo-eas-build-submission-workflow-guide/)

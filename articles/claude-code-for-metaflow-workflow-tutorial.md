@@ -276,6 +276,12 @@ Claude Code significantly accelerates Metaflow workflow development by handling 
 Start with simple flows, then gradually incorporate more advanced patterns like branching, parallel processing, and conditional logic as you become comfortable with the framework.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-metaflow-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

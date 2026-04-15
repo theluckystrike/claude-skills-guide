@@ -193,6 +193,12 @@ When:
 
 Following these patterns keeps your Claude skill workflows secure while maintaining the flexibility needed for complex development tasks. The key principle: secrets should flow through Claude's context without ever being written to persistent storage beyond your secure vault.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-secrets-and-sensitive-info-handling)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Permissions Explained: A Developer's Guide](/chrome-extension-permissions-explained/)

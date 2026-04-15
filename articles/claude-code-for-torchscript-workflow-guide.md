@@ -575,6 +575,12 @@ When working with Claude Code for TorchScript development, keep these principles
 Claude Code can dramatically accelerate your TorchScript workflow by generating boilerplate, suggesting optimizations, and debugging compilation errors. The key is providing clear context about your model's architecture and deployment targets.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-torchscript-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)

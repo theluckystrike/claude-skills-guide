@@ -187,6 +187,12 @@ The PagerDuty MCP server transforms incident management from reactive firefighti
 
 Start with simple automations like incident acknowledgment and resolution notes, then expand into more complex workflows as your confidence grows. The combination of PagerDuty's incident management with Claude's AI capabilities creates a powerful foundation for modern DevOps practices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=pagerduty-mcp-server-incident-management-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

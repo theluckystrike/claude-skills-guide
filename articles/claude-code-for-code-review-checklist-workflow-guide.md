@@ -170,6 +170,12 @@ Claude Code transforms code reviews from inconsistent, error-prone manual proces
 
 Start small: create one basic code review skill today, use it for your next few reviews, and refine based on what works. You'll quickly see how this approach leads to more consistent, thorough code reviews that benefit your entire team.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-code-review-checklist-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)

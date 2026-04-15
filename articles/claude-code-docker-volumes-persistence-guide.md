@@ -445,6 +445,12 @@ Configure volumes based on your workflow: bind mounts for active development sou
 
 With a well-designed volume strategy, your Claude Code environment becomes a reliable, reproducible workspace that persists exactly the state you need across sessions, container rebuilds, and team handoffs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-volumes-persistence-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Docker Dashboard: Streamlined Container.](/chrome-extension-docker-dashboard/)

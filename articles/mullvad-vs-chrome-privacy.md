@@ -337,6 +337,12 @@ Opening these flows in Mullvad Browser guarantees you are testing the true first
 
 The practical workflow: use Chrome for active development and state-dependent debugging, then switch to Mullvad Browser to validate the first-visit user experience before shipping. The two tools complement each other rather than compete.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mullvad-vs-chrome-privacy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Librewolf vs Chrome Privacy: A Developer and Power User.](/librewolf-vs-chrome-privacy/)

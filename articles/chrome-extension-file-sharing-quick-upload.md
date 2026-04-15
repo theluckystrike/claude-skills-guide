@@ -460,6 +460,12 @@ For personal or team use, you can skip the Web Store entirely by enabling Develo
 
 Chrome extensions provide a powerful platform for quick file sharing. By using modern APIs like File System Access, Desktop Capture, and chrome.storage, you can create streamlined workflows that eliminate friction from file transfers. The combination of keyboard shortcuts, drag-and-drop support, and a persistent upload history gives users a tool that genuinely replaces multi-step manual workflows with a single gesture. Start with the basic implementation outlined here, then customize based on your specific needs, whether that's integrating with particular cloud providers, adding compression, or implementing end-to-end encryption for sensitive documents.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-file-sharing-quick-upload)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code for Large File Refactoring](/best-way-to-use-claude-code-for-large-file-refactoring/)

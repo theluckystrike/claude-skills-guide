@@ -361,6 +361,12 @@ Building an AI reading assistant Chrome extension requires understanding content
 
 The streaming response pattern and hierarchical summarization for long content are the two improvements most likely to make a real difference in day-to-day use. A reading assistant that responds instantly and handles full-length technical articles without truncation is genuinely useful. One that takes 8 seconds and cuts off halfway through the document gets disabled after a week.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-reading-assistant-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Thumbnail Preview Generator: Complete Implementation Guide](/chrome-extension-thumbnail-preview-generator/)

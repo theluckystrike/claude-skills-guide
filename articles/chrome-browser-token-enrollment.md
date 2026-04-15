@@ -403,6 +403,12 @@ The approach works particularly well for organizations with existing device mana
 
 For organizations starting fresh, the simplest path to production is: deploy the Node.js enrollment server on an internal HTTPS endpoint, seed your device inventory with serial numbers from your procurement system, set the enrollment URL via Group Policy or MDM profile, and verify using `chrome://policy` on the first enrolled machine. From that baseline, you can incrementally add policy groups, token expiration, KMS-based key management, and TPM attestation as your requirements grow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-browser-token-enrollment)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Browser Speed Benchmark 2026: A Practical Guide for Developers](/browser-speed-benchmark-2026/)

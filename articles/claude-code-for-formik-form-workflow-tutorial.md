@@ -84,6 +84,12 @@ Claude Code transforms Formik form development from repetitive boilerplate writi
 The key is providing clear, specific requirements when working with Claude Code. The more context you give about your form's purpose, validation rules, and UI requirements, the better the generated code will be. Practice describing your form needs precisely, and you'll develop an effective collaboration pattern with Claude Code for all your Formik projects.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-formik-form-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

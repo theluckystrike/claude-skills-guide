@@ -311,6 +311,12 @@ Build cache invalidation after schema changes. Astro caches compiled content bet
 
 TypeScript errors in page components. After a schema change, TypeScript errors appear in components that access collection entry properties. Claude Code performs a project-wide type check targeting only files that import from content/config.ts and lists all the affected access patterns that need updating, prioritizing fixes by frequency of occurrence.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-with-astro-content-collections-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)

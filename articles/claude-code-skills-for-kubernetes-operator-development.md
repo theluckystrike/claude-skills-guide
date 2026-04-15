@@ -208,6 +208,12 @@ Claude Code skills transform Kubernetes operator development from a manually int
 
 By integrating these skills into your development pipeline, you ship operators faster with better test coverage and cleaner code. The key is treating Claude as a pair programmer that remembers the boilerplate so you can focus on the business logic that makes your operator valuable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-kubernetes-operator-development)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Top skills for CI/CD, infrastructure management, and cloud deployments

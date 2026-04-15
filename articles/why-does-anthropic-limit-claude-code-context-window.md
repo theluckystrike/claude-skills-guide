@@ -113,6 +113,12 @@ The context window limit in Claude Code exists because of real engineering const
 
 By understanding why the limits exist and learning strategies to work within them, you become a more effective Claude Code user. Skills like tdd, supermemory, and frontend-design are built around these principles, helping you get the most out of Claude Code regardless of context limitations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-anthropic-limit-claude-code-context-window)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/). Practical techniques to work within context limits

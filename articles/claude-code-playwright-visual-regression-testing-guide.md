@@ -481,6 +481,12 @@ The combination of Playwright's deterministic browser control and Claude Code's 
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-playwright-visual-regression-testing-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Playwright API Testing Workflow Tutorial](/claude-code-playwright-api-testing-workflow-tutorial/)

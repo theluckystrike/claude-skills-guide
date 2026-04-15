@@ -472,6 +472,12 @@ As your system grows, you'll find transaction tracing invaluable for diagnosing 
 
 Remember: effective tracing requires balance. Instrument too little, and you won't have enough visibility. Instrument too much, and you'll overwhelm your analysis tools with noise. Start with critical business operations and expand from there. Claude Code is a practical partner for making those judgment calls. ask it to review your current instrumentation coverage and it will point out the gaps that matter most.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-transaction-tracing-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

@@ -222,6 +222,12 @@ This pattern ensures your automation handles duplicate emails gracefully rather 
 
 Start with a single automation, perhaps syncing new user signups, and expand as you validate the workflow. The MCP architecture makes it straightforward to add new tools as your customer data needs evolve. Document your tool definitions so team members understand what automated operations are possible.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=intercom-mcp-server-customer-data-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

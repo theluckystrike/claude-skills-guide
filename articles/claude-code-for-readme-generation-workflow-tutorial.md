@@ -288,6 +288,12 @@ Claude Code transforms README generation from a tedious manual task into an auto
 Start with simple templates and gradually expand your README generation capabilities. The investment in setting up this workflow pays dividends through improved project documentation and reduced maintenance overhead. With Claude Code handling the heavy lifting, you can focus on writing code while maintaining excellent project documentation.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-readme-generation-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Runbook Documentation Guide](/claude-code-runbook-documentation-guide/)

@@ -143,6 +143,12 @@ At key moments, the AI pauses and asks for confirmation or clarification. Claude
 
 The next time you use Claude Code, watch for the agent loop in action. You'll see a powerful, iterative process working to solve your problems, one small step at a time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=what-is-an-ai-agent-loop-explained-simply)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Human in the Loop Multi Agent Patterns Guide](/human-in-the-loop-multi-agent-patterns-guide/)

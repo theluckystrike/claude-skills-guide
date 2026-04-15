@@ -243,6 +243,10 @@ A quarterly skill audit. thirty minutes in a team meeting. is enough to keep the
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-share-claude-skills-with-your-team)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/). Full contribution walkthrough

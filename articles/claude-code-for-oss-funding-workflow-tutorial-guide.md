@@ -290,6 +290,12 @@ Claude Code is a powerful ally in building sustainable open source projects. By 
 Start small: create your FUNDING.yml today, then gradually add more sophisticated funding workflows as your project grows. Your future self (and your sponsors) will thank you.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-oss-funding-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)

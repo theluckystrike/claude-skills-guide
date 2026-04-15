@@ -302,6 +302,12 @@ Claude Code transforms React Native development by providing intelligent assista
 Remember to test thoroughly on physical devices, as simulators don't catch all platform-specific issues. With Claude Code as your development partner, you can build production-ready React Native applications more efficiently than ever before.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-react-native-mobile-app-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for React Native Fabric Renderer Workflow](/claude-code-for-react-native-fabric-renderer-workflow/)

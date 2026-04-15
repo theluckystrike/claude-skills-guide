@@ -173,6 +173,12 @@ The key advantage is specificity: you install exactly the skills your project ne
 For developers seeking an AI code editor that combines open-source values with capable AI assistance, Claude Code delivers the practical functionality that matters in daily development work.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=opencode-ai-code-editor-review-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Windsurf Editor Review for Professional Developers 2026](/windsurf-editor-review-for-professional-developers-2026/)

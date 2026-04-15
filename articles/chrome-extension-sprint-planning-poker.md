@@ -127,6 +127,12 @@ Most extensions work immediately without configuration. If your team adopts plan
 
 The convenience of browser-based planning poker makes it accessible for teams wanting to try estimation games without committing to additional software. As your team grows more comfortable with sprint estimation, you can evaluate whether the extension meets your needs or whether a more full-featured platform would serve better.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-sprint-planning-poker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

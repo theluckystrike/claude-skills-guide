@@ -388,6 +388,12 @@ Start simple, generate a basic changelog from your last few releases, and progre
 Remember: the goal isn't to eliminate human involvement entirely, but to handle the mechanical parts so your team can focus on writing code and providing the strategic context that makes release notes truly valuable.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-changelogs-and-release-notes-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Release Automation Workflow Tutorial](/claude-code-for-release-automation-workflow-tutorial/)

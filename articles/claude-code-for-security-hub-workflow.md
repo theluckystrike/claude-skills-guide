@@ -147,6 +147,12 @@ Claude Code transforms Security Hub from a passive alerting system into an activ
 Start small, perhaps with automated reporting or a single remediation workflow, and expand as you gain confidence. The key is establishing the foundation for automated security operations while maintaining proper controls and oversight. With Claude Code handling the repetitive tasks, your security team can focus on strategic initiatives that require human judgment and expertise.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-security-hub-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

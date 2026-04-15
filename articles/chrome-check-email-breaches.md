@@ -265,6 +265,12 @@ For developers, integrating breach checking into your security tooling provides 
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-check-email-breaches)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Data Extractor Chrome Extension: A Developer's Guide](/ai-data-extractor-chrome-extension/)

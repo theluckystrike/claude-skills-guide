@@ -322,6 +322,12 @@ Optimizing batch processing workflows requires balancing throughput, reliability
 
 The key is to measure first, optimize second, use the monitoring patterns shown here to identify bottlenecks before diving into complex optimizations. With these patterns in your toolkit, you'll be equipped to handle batch processing challenges at any scale.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-batch-processing-optimization-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude API Batch Processing Large Datasets Workflow Guide](/claude-api-batch-processing-large-datasets-workflow-guide/)

@@ -145,6 +145,12 @@ For Python data workflows, the xlsx skill offers the best starting point due to 
 
 The beauty of Claude skills is their composability, you're not locked into a single choice. Start with one, measure the impact on your productivity, and expand as your needs evolve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=what-is-the-best-claude-skill-for-python-data-workflows)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-for-computational-biology-bioinformatics/). Apply Python data skills to specialized scientific computing domains

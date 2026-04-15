@@ -262,6 +262,12 @@ Kanban board chrome extensions provide developers with a flexible, customizable 
 
 Start with a minimal viable board, then add features like tagging, filtering, and external integrations as your workflow demands. The extension ecosystem rewards incremental development, you're not building a product, you're building a tool tailored exactly to how you work.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=kanban-board-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Asana Task Manager: A Developer's Guide](/chrome-extension-asana-task-manager/)

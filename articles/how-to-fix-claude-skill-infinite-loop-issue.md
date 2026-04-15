@@ -223,6 +223,10 @@ If a loop consumed significant tokens or left your codebase in a partial state:
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-fix-claude-skill-infinite-loop-issue)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Stuck in Loop Repeating Same Output Fix](/claude-code-stuck-in-loop-repeating-same-output-fix/). Prompt-level fixes for end users experiencing repetition loops

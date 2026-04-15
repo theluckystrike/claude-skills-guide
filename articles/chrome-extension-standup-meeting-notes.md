@@ -359,6 +359,12 @@ Start with this basic version. Refine the fields based on your team's specific f
 
 The total implementation. manifest, HTML, CSS, JavaScript. is under 150 lines of code. That is the right size for a focused tool. Resist scope creep. The extension should open in under 100 milliseconds, fit on screen without scrolling, and get out of your way after you have typed three short answers.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-standup-meeting-notes)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Auto Meeting Summary: A Developer Guide](/chrome-extension-auto-meeting-summary/)

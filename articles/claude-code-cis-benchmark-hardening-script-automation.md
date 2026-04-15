@@ -244,6 +244,12 @@ Version Control Your Scripts: Store your hardening scripts in git with clear ver
 Claude Code transforms CIS benchmark compliance from a manual, error-prone process into an automated, reproducible workflow. By creating dedicated skills for security hardening, you can audit systems, generate remediation scripts, implement continuous monitoring, and integrate with configuration management, all through natural language interactions. This approach ensures consistent security compliance while saving significant time and reducing human error in your security operations.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-cis-benchmark-hardening-script-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code ISO 27001 Evidence Collection Workflow](/claude-code-iso27001-evidence-collection-workflow/)

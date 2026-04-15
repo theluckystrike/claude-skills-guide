@@ -269,6 +269,12 @@ Start with a simple route, add an interactive island, and progressively enhance 
 Explore Fresh's rich ecosystem, integrations with Tailwind, database adapters, and middleware, while letting Claude Code handle the boilerplate and accelerate your productivity.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-fresh-deno-framework-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Fiber Go Web Framework Workflow](/claude-code-for-fiber-go-web-framework-workflow/)

@@ -499,6 +499,12 @@ For frontend testing scenarios, the frontend-design skill complements JUnit 5 by
 
 Writing solid tests takes practice, but JUnit 5's modern features make the process more enjoyable than ever. These patterns provide a foundation you can build upon as your testing skills mature.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-junit5-test-patterns-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cypress Component Testing Guide](/claude-code-cypress-component-testing-guide/)

@@ -253,6 +253,12 @@ Integrating Claude Code into your Optimism Bedrock workflow dramatically improve
 
 Remember to always test thoroughly on testnet before deploying to mainnet, and take advantage of Bedrock's Ethereum equivalence to use existing Ethereum tooling and knowledge.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-optimism-bedrock-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for Solidity Smart Contracts](/claude-code-skills-for-solidity-smart-contracts/)

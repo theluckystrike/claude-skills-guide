@@ -217,6 +217,12 @@ While updates to Claude Code can temporarily disrupt your workflow, most issues 
 
 Keeping your skills modular, well-documented, and using environment-aware path handling will make future updates much smoother. The investment in making your skills resilient to change pays off in reduced downtime and more reliable automation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-not-working-after-update-how-to-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How Do I Rollback a Bad Claude Skill Update Safely?](/how-do-i-rollback-a-bad-claude-skill-update-safely/). See also

@@ -169,6 +169,12 @@ AI agents like Claude Code use tools and skills to bridge the gap between theore
 The key is providing clear context through skills, understanding which tools are available, and structuring your requests in ways that help Claude identify the best path to accomplish your goals.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-ai-agents-use-tools-and-skills-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)

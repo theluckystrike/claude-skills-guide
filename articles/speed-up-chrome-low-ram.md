@@ -385,6 +385,12 @@ Reducing Chrome's RAM usage requires a multi-layered approach:
 
 These techniques work together. A single optimization might save 100 MB; combined, they can reduce Chrome's footprint by 30–50%, leaving your system responsive even with dozens of tabs open. On an 8 GB machine, the difference between an unoptimized Chrome session and a well-tuned one is often the difference between constant thrashing and a comfortable working environment for a full 8-hour day.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=speed-up-chrome-low-ram)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Browser for Low RAM in 2026 - A Developer's Guide](/best-browser-low-ram-2026/)

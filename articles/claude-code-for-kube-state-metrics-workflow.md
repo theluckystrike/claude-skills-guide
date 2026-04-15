@@ -259,6 +259,12 @@ The key is providing Claude Code with clear context about your cluster environme
 Remember: effective Kubernetes monitoring isn't about collecting every possible metric, it's about collecting the right metrics that help you understand system health and respond quickly to issues. Claude Code can help you identify and implement exactly what you need.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-kube-state-metrics-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Community Health Metrics Documentation Workflow](/claude-code-community-health-metrics-documentation-workflow/)

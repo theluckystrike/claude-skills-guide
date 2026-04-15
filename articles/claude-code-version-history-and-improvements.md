@@ -227,6 +227,12 @@ Claude Code continues to evolve with regular improvements to model capabilities,
 
 Understanding this evolution helps developers use Claude Code effectively. The skills you write today will continue working while benefiting from underlying improvements to the platform. The teams that get the most from the platform are those that revisit their skill libraries periodically. not to rewrite from scratch, but to remove constraints that made sense under older limitations and add structured metadata that current versions actually use.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-version-history-and-improvements)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Coding Tools for Accessibility Improvements](/ai-coding-tools-for-accessibility-improvements/)

@@ -703,6 +703,10 @@ The incremental approach is the key to a low-risk migration. Migrate one route g
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-express-to-fastify-migration-tutorial-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The tdd and supermemory skills power migration workflows

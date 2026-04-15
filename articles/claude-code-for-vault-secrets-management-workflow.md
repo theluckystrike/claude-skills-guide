@@ -239,6 +239,12 @@ Remember that security is paramount, always use proper authentication, implement
 The combination of Claude Code and Vault empowers teams to manage secrets efficiently while maintaining the security standards modern applications require.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-vault-secrets-management-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Docker Secrets Management Guide](/claude-code-docker-secrets-management-guide/)

@@ -176,6 +176,12 @@ The AWS MCP server transforms cloud automation from console clicking or script w
 
 Start with simple queries to verify your setup, then gradually introduce more complex automation. The combination of natural language interface and programmatic AWS access makes infrastructure management accessible to developers across skill levels.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=aws-mcp-server-cloud-automation-with-claude-code)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

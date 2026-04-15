@@ -159,6 +159,12 @@ The skill system in Claude Code pairs well with other tools, you can use Claude 
 
 Your choice ultimately depends on where you spend most of your development time and how much control you want over AI-assisted changes. Start with the tool that matches your current workflow, then explore others as your needs evolve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=cursor-vs-github-copilot-vs-claude-code-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

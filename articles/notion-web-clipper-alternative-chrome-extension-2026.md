@@ -281,6 +281,12 @@ Pipe the output to a JSON file, then use a transform script to map it into whate
 
 The key advantage of these alternatives is escaping vendor lock-in. By using open standards like Markdown, local storage, or APIs, your clipped content remains portable and accessible regardless of platform changes. The official Notion Web Clipper is convenient, but convenience that locks data into a proprietary format has a cost that compounds over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=notion-web-clipper-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Evernote Web Clipper Alternative for Chrome in 2026: A.](/evernote-web-clipper-alternative-chrome-extension-2026/)

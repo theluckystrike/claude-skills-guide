@@ -203,6 +203,12 @@ Migrating from Cursor rules to Claude Code skills involves three main steps: exp
 
 Start by migrating your most-used rules first. Test each skill thoroughly. Over time, you will build a personalized toolkit that makes Claude Code feel like an expert partner for every type of task you encounter.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-migrate-from-cursor-rules-to-claude-skills)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Cursor 2026 Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/). Compare Claude Code and Cursor fully before deciding on your migration strategy.

@@ -540,6 +540,12 @@ Start with simple quality-of-life features like keyboard shortcuts or visual ind
 
 The extensions you build can significantly reduce the time spent on repetitive course management tasks. instructors who grade 30 assignments a week at 2 minutes each save over an hour per week with well-designed keyboard navigation and templated feedback alone.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-canvas-lms-helper)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Study Helper Chrome Extension: A Developer's Guide](/ai-study-helper-chrome-extension/)

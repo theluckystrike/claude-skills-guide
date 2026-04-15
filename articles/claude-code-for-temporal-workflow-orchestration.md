@@ -233,6 +233,12 @@ Claude Code significantly accelerates Temporal workflow development by handling 
 Whether you're implementing simple task queues or complex distributed transaction patterns, Claude Code serves as an intelligent partner throughout the development lifecycle. Start small, iterate frequently, and use Claude Code's capabilities to handle the complexity that comes with sophisticated workflow orchestration.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-temporal-workflow-orchestration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Kestra Workflow Orchestration Guide](/claude-code-for-kestra-workflow-orchestration-guide/)

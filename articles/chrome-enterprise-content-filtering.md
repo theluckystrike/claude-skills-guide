@@ -414,6 +414,12 @@ Configuring the connector to send data to a SIEM like Splunk or Microsoft Sentin
 
 Chrome Enterprise content filtering gives developers and IT administrators powerful tools to balance security with productivity. By using URL filtering, download restrictions, extension controls, and the management API, you can create tailored browsing policies that meet your organization's specific needs. The key to maintaining these policies long-term is treating them as code: version-controlling your policy JSON, automating deployment through the API, and building self-service workflows that reduce the manual burden on your IT team while keeping users productive.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-content-filtering)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Bandwidth Management: A Practical Guide](/chrome-enterprise-bandwidth-management/)

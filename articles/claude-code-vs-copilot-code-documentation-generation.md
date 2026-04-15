@@ -128,6 +128,12 @@ The key advantage lies in Claude Code's proactive approach, it doesn't just comp
 
 For teams serious about documentation quality, Claude Code represents a significant advancement over traditional AI-assisted documentation tools, making it the preferred choice for projects where clear, comprehensive documentation matters.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-copilot-code-documentation-generation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Documentation Generation Workflow](/automated-code-documentation-workflow-with-claude-skills/). Step-by-step guide to implementing automated documentation with Claude Code

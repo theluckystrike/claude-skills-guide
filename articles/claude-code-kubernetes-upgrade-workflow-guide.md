@@ -169,6 +169,12 @@ Kubernetes upgrades don't have to be stressful events that require manual interv
 
 Combine this workflow with skills like pdf for report generation, docx for runbook creation, and supermemory for institutional knowledge retention. Each upgrade becomes an opportunity to improve your infrastructure automation and build confidence in your cluster management practices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-kubernetes-upgrade-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Kubernetes Cost Optimization Guide](/claude-code-kubernetes-cost-optimization-guide/)

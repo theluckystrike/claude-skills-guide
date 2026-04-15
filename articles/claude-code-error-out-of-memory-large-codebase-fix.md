@@ -294,6 +294,12 @@ Work incrementally with the `tdd` skill. The `tdd` skill keeps focus on one test
 
 Claude Code out-of-memory errors with large codebases are solvable at every scale. Start with the quick fix of increasing Node.js memory via `NODE_OPTIONS`, then optimize your project configuration with `.claudeignore` and `claude.json`. Pre-filter with grep before asking Claude to scan broadly, work in package-scoped sessions on monorepos, and restart sessions periodically during long working days. When the codebase genuinely outgrows single-session processing, use the `tdd` skill to work incrementally and rely on external tools like LSP servers and ripgrep for navigation. These strategies keep your workflow productive regardless of codebase size.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-error-out-of-memory-large-codebase-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Crashes on Large Files How to Fix](/claude-code-crashes-on-large-files-how-to-fix/). Similar issue: crashes vs OOM on large codebases

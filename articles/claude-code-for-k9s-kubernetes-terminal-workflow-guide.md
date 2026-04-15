@@ -268,6 +268,12 @@ Combining Claude Code with k9s transforms Kubernetes management from manual navi
 
 Remember to always verify destructive operations, use namespace isolation, and test your automation scripts in non-production environments first.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-k9s-kubernetes-terminal-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)

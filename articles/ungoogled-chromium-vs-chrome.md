@@ -133,6 +133,12 @@ Create separate profiles in each browser to keep your development environment or
 
 The choice between Ungoogled Chromium and Chrome ultimately comes down to your threat model, workflow preferences, and how much control you want over your browser's behavior. For developers who value transparency and privacy without sacrificing Chromium's excellent developer tools, Ungoogled Chromium provides a compelling alternative that integrates smoothly into existing workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ungoogled-chromium-vs-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Librewolf vs Chrome Privacy: A Developer and Power User.](/librewolf-vs-chrome-privacy/)

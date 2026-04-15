@@ -151,6 +151,12 @@ Finally, connect debt management to your team's definition of done. Require debt
 Claude Code transforms technical debt management from a reactive, manual process into a proactive, automated workflow. By using its skill system, file operations, and bash execution capabilities, tech leads can build comprehensive debt discovery, categorization, and prioritization pipelines. The key is starting simple, iterating on your categorization criteria, and integrating debt awareness into daily development activities. With Claude Code handling the mechanical aspects of debt tracking, tech leads can focus on strategic decisions about what to address and when.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-tech-lead-technical-debt-prioritization-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Tech Lead Cross-Team Alignment Workflow Tips](/claude-code-tech-lead-cross-team-alignment-workflow-tips/)

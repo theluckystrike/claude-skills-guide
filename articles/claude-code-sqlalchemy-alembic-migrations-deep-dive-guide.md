@@ -162,6 +162,12 @@ Database migrations don't have to be a source of stress. By using Claude Code to
 
 Start by integrating Claude into your migration workflow on a small project, then expand to production systems once you're comfortable with the collaboration pattern. Your future self, deployed at 3 AM during a critical release, will appreciate the investment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sqlalchemy-alembic-migrations-deep-dive-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)

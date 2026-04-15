@@ -419,6 +419,12 @@ Effective data visualization combines appropriate chart selection, clean data pr
 
 The biggest use comes from investing in reusable data preparation functions and chart configuration registries early. Once those foundations are in place, generating a new chart for a new dataset takes minutes rather than hours.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-data-visualization-best-practices)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Data Visualization Workflow for Researchers](/claude-code-data-visualization-workflow-for-researchers/)

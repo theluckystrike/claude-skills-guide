@@ -417,6 +417,12 @@ This specificity, combined with Claude Code's ability to read and understand you
 
 The workflow becomes faster not because Claude Code writes code magically, but because it handles the mechanical translation from requirements to idiomatic code, letting you focus on the architectural decisions that truly matter. Schema design, WebSocket topology, pagination strategy, these are decisions you drive. Claude Code executes them consistently across frontend, backend, and tests so nothing gets missed in the translation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-full-stack-developer-feature-shipping-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Nuxt Vue Full Stack Workflow](/claude-code-nuxt-vue-full-stack-workflow/)

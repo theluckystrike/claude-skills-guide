@@ -199,6 +199,12 @@ You can view your loaded skills at any time using the skills list command, and s
 
 The .NET skills work well with other Claude skills. The pdf skill helps generate documentation from your API specs. The supermemory skill maintains context across sessions about your project decisions. The canvas-design skill assists with architecture diagrams and flowcharts.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-example-for-dotnet-aspnet-core-project)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude MD Example for Android Kotlin Project](/claude-md-example-for-android-kotlin-project/)

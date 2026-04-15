@@ -190,6 +190,12 @@ The skill can include prompts for each step of the workflow, examples from your 
 
 Claude Code transforms extract method refactoring from a manual, error-prone process into a structured, assisted workflow. By following this systematic approach, identifying candidates, designing signatures, creating methods, replacing code, and verifying with tests, you can refactor with confidence while maintaining code quality. The key is treating Claude as a partner that handles the mechanical aspects while you focus on architectural decisions.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-extract-method-refactoring-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for SOLID Principles Refactoring Workflow](/claude-code-for-solid-principles-refactoring-workflow/)

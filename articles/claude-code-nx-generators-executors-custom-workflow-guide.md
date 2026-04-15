@@ -363,6 +363,12 @@ When combined with Claude Code's ability to understand and interact with your co
 Start small with a single custom generator, then expand your collection over time. Your team will thank you for the consistency and time savings.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nx-generators-executors-custom-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Cypress Custom Commands Workflow Best Practices](/claude-code-cypress-custom-commands-workflow-best-practices/)

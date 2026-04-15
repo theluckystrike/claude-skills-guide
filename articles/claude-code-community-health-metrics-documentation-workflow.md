@@ -258,6 +258,12 @@ Start building your community health metrics documentation today:
 By establishing a solid community health metrics documentation workflow, you create the foundation for a sustainable, thriving community around your Claude Code skills. The investment pays dividends in better decision-making, increased contributor engagement, and a clearer picture of your project's impact.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-community-health-metrics-documentation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Code Review Metrics Workflow Guide](/claude-code-for-code-review-metrics-workflow-guide/)

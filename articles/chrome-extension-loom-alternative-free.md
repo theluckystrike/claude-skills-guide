@@ -153,6 +153,12 @@ Free Loom alternatives exist and some exceed Loom's free tier capabilities. Scre
 
 The "free" label sometimes masks limitations, watch for recording time caps, watermarks, or restricted export options. Screenity's unlimited recording without watermarks makes it the most honest free alternative. For professional workflows, OBS Studio's zero cost combined with maximum flexibility earns its place in any developer's toolkit.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-loom-alternative-free)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

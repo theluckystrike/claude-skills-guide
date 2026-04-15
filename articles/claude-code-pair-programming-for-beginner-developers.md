@@ -192,6 +192,12 @@ Claude Code pair programming represents a new paradigm in software development, 
 The key is to treat Claude as a partner rather than a tool. Engage with it, ask questions, and you'll not only write better code but also become a better developer yourself. Start with small projects, practice the workflow, and gradually take on more complex challenges. Your AI pair programming partner is ready to help you grow.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-pair-programming-for-beginner-developers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Building Supervisor Worker Agent Architecture Tutorial](/building-supervisor-worker-agent-architecture-tutorial/)

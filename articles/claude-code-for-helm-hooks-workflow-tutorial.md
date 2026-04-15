@@ -321,6 +321,12 @@ Integrating Claude Code with Helm hooks transforms your Kubernetes deployments f
 Start with simple hooks and progressively add more sophisticated Claude Code integration as your workflow matures. The combination of Helm's lifecycle management and Claude Code's intelligent automation creates a powerful foundation for production-grade Kubernetes deployments.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-helm-hooks-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Helm Chart Publishing Workflow Guide](/claude-code-for-helm-chart-publishing-workflow-guide/)

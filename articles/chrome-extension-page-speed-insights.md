@@ -220,6 +220,12 @@ Chrome extensions analyzing page speed serve various use cases. Development team
 
 The key to building a useful tool is presenting data in context. Don't just show scores, explain what they mean and provide concrete next steps for improvement.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-page-speed-insights)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Lighthouse Audit Runner: A Developer Guide](/chrome-extension-lighthouse-audit-runner/)

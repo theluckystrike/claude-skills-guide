@@ -157,6 +157,12 @@ With frontend-design for rapid UI, tdd for reliable code, supermemory for contin
 
 The best hackathon code isn't the most complex, it's the code that demonstrates a compelling idea through a working demo. Claude Code handles the infrastructure so you can focus on innovation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-hackathon-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Use Claude Code for Rapid Prototyping](/best-way-to-use-claude-code-for-rapid-prototyping/)

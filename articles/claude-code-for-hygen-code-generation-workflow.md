@@ -396,6 +396,12 @@ The key is treating code generation as a collaborative process between you and C
 Over time, your `_templates/` directory becomes a living record of your team's conventions. Claude Code can read it, extend it, and apply it, turning consistency from a discipline into an automatic outcome.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-hygen-code-generation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)

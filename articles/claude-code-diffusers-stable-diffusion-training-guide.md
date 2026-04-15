@@ -294,6 +294,12 @@ With these foundations, you can:
 Claude Code skills transform the complex landscape of diffusion model training into manageable, reproducible workflows. Start with LoRA fine-tuning on a small dataset, then progressively tackle more advanced techniques as you build confidence. The ability to quickly generate, test, and iterate on training scripts makes Claude Code a practical force-multiplier for anyone working in the diffusion model space.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-diffusers-stable-diffusion-training-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Axolotl QLoRA Training Script Workflow](/claude-code-axolotl-qlora-training-script-workflow/)

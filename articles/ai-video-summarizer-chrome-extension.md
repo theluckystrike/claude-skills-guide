@@ -342,6 +342,12 @@ Extension settings pages let users input their API credentials without exposing 
 
 Building this extension requires balancing API costs, user experience, and platform compatibility. The architecture presented here provides a solid foundation that scales from personal use to broader distribution. With the foundation in place, you can extend support to additional video platforms, integrate different AI models, or add features like timestamped highlights and saved collections.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-video-summarizer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)

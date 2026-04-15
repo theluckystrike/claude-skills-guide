@@ -210,6 +210,12 @@ As of 2024, the EyeDropper API is supported in Chrome 95+, Edge 95+, and Opera 8
 
 The Chrome Eyedropper API provides a straightforward way to integrate color sampling into your extensions and web applications. With just a few lines of code, you can give users the ability to pick any color visible on their screen. The promise-based API is easy to work with, and the integration shown here can serve as a starting point for more sophisticated color management tools.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-eyedropper-tool)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)

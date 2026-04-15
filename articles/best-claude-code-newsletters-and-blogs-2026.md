@@ -257,6 +257,12 @@ Building an information pipeline around Claude Code doesn't require subscribing 
 
 Test new techniques in isolation before deploying them. Skills like tdd help validate that optimizations work as expected. Use the reading queue skill pattern to build a personal knowledge base that compounds over time. The combination of curated information sources, rigorous testing, and a deliberate weekly reading habit creates a sustainable workflow for staying current with Claude Code development without drowning in content.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-claude-code-newsletters-and-blogs-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)

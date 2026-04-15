@@ -200,6 +200,12 @@ To implement this workflow effectively:
 Claude Code transforms developer blog writing from a solitary struggle into a collaborative process. By handling the mechanical aspects of writing, formatting, code accuracy, structure, it frees you to focus on what matters most: sharing knowledge that helps other developers grow.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-developer-blog-post-writing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Blog Post Generator for Chrome: A Developer's Guide](/ai-blog-post-generator-chrome/)

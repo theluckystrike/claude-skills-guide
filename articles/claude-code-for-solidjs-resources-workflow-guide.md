@@ -471,6 +471,12 @@ The most productive workflow combines clear CLAUDE.md context, specific prompts 
 Start with small tasks, gradually tackle more complex patterns, and let Claude Code help you learn SolidJS idioms along the way. The investment in writing precise prompts pays back quickly once you see the quality of idiomatic SolidJS code that results.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-solidjs-resources-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

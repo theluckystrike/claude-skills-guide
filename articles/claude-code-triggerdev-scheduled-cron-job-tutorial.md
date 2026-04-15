@@ -223,6 +223,12 @@ Start with simple scheduled jobs and gradually incorporate more complex AI-power
 
 Remember to monitor your jobs initially and adjust timeouts and schedules based on actual execution times. With these tools, you can focus on higher-level development tasks while routine operations run automatically in the background.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-triggerdev-scheduled-cron-job-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code BullMQ Delayed Retry Job Workflow Guide](/claude-code-bullmq-delayed-retry-job-workflow-guide/)

@@ -261,6 +261,12 @@ console.log('API Capabilities:', capabilities);
 
 The Privacy Sandbox represents a fundamental shift in how web advertising works. By implementing these APIs now, you prepare your applications for a future where third-party cookies are gone. The transition requires investment, but the result is a web that's more privacy-respecting while still supporting the ecosystem that funds free content.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-privacy-sandbox-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extensions That Track You: What Developers Need.](/chrome-extensions-that-track-you/)

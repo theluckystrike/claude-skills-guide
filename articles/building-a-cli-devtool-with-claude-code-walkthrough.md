@@ -235,6 +235,12 @@ Building a CLI devtool with Claude Code unlocks powerful automation possibilitie
 
 Start with simple commands and gradually add more sophisticated features. The skill system provides ready-made capabilities you can integrate immediately, while the flexible prompt-based interface allows for completely custom functionality. Your CLI devtool becomes more valuable over time as you tailor it to your specific needs and workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=building-a-cli-devtool-with-claude-code-walkthrough)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)

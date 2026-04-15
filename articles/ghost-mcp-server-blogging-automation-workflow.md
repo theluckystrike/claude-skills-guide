@@ -210,6 +210,12 @@ The Ghost MCP server transforms how you manage blog content with Claude. By conn
 
 For teams managing regular content schedules, this automation significantly reduces manual effort while maintaining quality control through human review of generated drafts.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ghost-mcp-server-blogging-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

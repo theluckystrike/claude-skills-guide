@@ -259,6 +259,12 @@ Once the basic status tracking works, consider these enhancements:
 
 Building a Chrome extension for team status tracking requires balancing local responsiveness with synchronization reliability. Start with the basic storage and polling implementation, then layer in complexity as your team needs evolve. The patterns shown here scale from small teams to enterprise deployments when combined with appropriate backend infrastructure.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-team-status-tracker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)

@@ -138,6 +138,12 @@ ssh user@headless-server "
 - **Never rely on interactive OAuth** for unattended or headless environments
 - **Monitor token expiry**: check `~/.claude/.credentials.json` for `expiresAt` timestamps if you must use OAuth
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-headless-linux-auth)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Fix: Claude Code OAuth Login Paste Not Working](/claude-code-oauth-login-paste-not-working/)

@@ -322,6 +322,12 @@ Mocking API responses in Chrome extensions is straightforward with the declarati
 
 Start with simple redirects to local JSON files, then layer in latency simulation, toggle UI, and auth-flow mocks as your extension grows in complexity. The investment pays off the first time you catch a race condition in local testing that would have been a production bug.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-mock-api-responses)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Make Claude Code Generate Consistent API Responses](/how-to-make-claude-code-generate-consistent-api-responses/)

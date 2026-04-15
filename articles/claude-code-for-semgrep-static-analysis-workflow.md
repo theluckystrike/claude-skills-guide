@@ -242,6 +242,12 @@ Start by running basic scans, then progressively build custom rules and automati
 *This guide is part of the Claude Skills Guide series, providing practical workflows for developers integrating AI assistance into their development pipelines.*
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-semgrep-static-analysis-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for SAST Static Analysis Workflow Tips](/claude-code-for-sast-static-analysis-workflow-tips/)

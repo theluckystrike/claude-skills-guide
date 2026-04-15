@@ -375,6 +375,12 @@ Template repository with CLAUDE.md scaffolding. Create a GitHub template reposit
 
 Pre-commit hook compliance check. Claude Code generates a pre-commit hook that runs a static analysis check against your CLAUDE.md rules. The hook uses AST-based analysis for rules like required docstrings and consistent error handling patterns, and line-based analysis for simpler rules like banned imports and prohibited function names.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-template-for-new-projects-starter-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)

@@ -485,6 +485,12 @@ CMD ["./server"]
 
 Integrating Claude Code into your Go Fiber workflow accelerates development across the entire project lifecycle. From initial scaffolding through testing, documentation, and deployment, Claude's capabilities complement Fiber's performance with genuine developer productivity. The key is being specific: the more context you share about your data model, your middleware chain, and your business rules, the more directly usable the generated code becomes. Start with interfaces and structs, let Claude fill in the implementations, then refine. This combination enables you to build production-ready APIs faster while maintaining code quality through intelligent assistance and established patterns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-example-for-go-fiber-api-project)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude MD Example for Android Kotlin Project](/claude-md-example-for-android-kotlin-project/)

@@ -352,6 +352,12 @@ Claude Code streamlines this entire workflow by generating boilerplate, suggesti
 
 With this workflow guide, you're equipped to implement webhook handlers that are secure, reliable, and maintainable. The combination of proper architecture, thorough testing, and Claude Code's assistance ensures your webhook integrations stand up to production demands.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-webhook-handler-implementation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Event Driven API Design Guide](/claude-code-event-driven-api-design-guide/)

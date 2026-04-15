@@ -246,6 +246,12 @@ Cargo Make combined with Claude Code provides a powerful automation solution for
 Remember that the best Cargo Make configuration is one that matches your specific project needs. Don't hesitate to iterate and refine your setup as your project evolves.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cargo-make-build-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Makefile Build Automation Workflow Guide](/claude-code-makefile-build-automation-workflow-guide/)

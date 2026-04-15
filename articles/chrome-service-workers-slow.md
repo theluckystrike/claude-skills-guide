@@ -214,6 +214,12 @@ self.addEventListener('fetch', (event) => {
 
 Service worker performance directly affects your application's responsiveness. By keeping fetch handlers lean, managing cache sizes, and strategically skipping unnecessary processing, you can build PWAs that deliver fast, reliable experiences across all devices.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-service-workers-slow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Cast Buffering Fix: Practical Solutions for.](/chrome-cast-buffering-fix/)

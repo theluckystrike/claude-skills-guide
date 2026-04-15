@@ -96,6 +96,12 @@ The Perplexity Chrome extension proves valuable for developers who need efficien
 
 For teams evaluating AI-powered research tools, the extension offers a low-friction starting point that integrates directly into the browser workflow you already use daily. The key is understanding its role as a research accelerator rather than an authoritative source, and using it in conjunction with official documentation and community resources.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=perplexity-chrome-extension-review)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Product Review Summary AI: A Developer Guide](/chrome-extension-product-review-summary-ai/)

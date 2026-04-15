@@ -255,6 +255,12 @@ Claude Code pipelines transform code generation from a manual, error-prone proce
 
 Start with a simple pipeline for one component type, validate the output thoroughly, then expand gradually. Your team will appreciate the consistency and speed gains as the pipeline becomes a standard part of your development workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-code-generation-pipeline-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)

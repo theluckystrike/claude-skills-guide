@@ -282,6 +282,12 @@ useEffect(() => {
 Setting up React Native navigation doesn't have to be overwhelming. By following this guide and using Claude Code's capabilities, you can implement solid navigation patterns that provide excellent user experiences. Remember to choose the right navigation types for your app's structure, use TypeScript for type safety, and test thoroughly across platforms. Claude Code can help you extend these patterns further as your app grows in complexity.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-react-native-navigation-setup-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for React Native Fabric Renderer Workflow](/claude-code-for-react-native-fabric-renderer-workflow/)

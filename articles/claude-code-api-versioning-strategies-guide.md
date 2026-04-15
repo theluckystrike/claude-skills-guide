@@ -443,6 +443,12 @@ API versioning directly impacts how maintainable and extensible your Claude Skil
 
 Choose based on your specific use case: external APIs you consume may mandate certain approaches, while your own skill endpoints benefit from thoughtful selection. Regardless of strategy, centralize version configuration, log deprecation warnings, write parametrized tests, and implement fallback logic. The pdf skill for document generation and supermemory for persistent storage both demonstrate how version-aware design prevents integration rot as services evolve. Applied consistently, these practices mean version migrations become deliberate, testable events rather than emergency hotfixes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-api-versioning-strategies-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code REST API Versioning Strategy Workflow Tips](/claude-code-rest-api-versioning-strategy-workflow-tips/). building your own versioned REST API with Express.js, contract testing, and deployment

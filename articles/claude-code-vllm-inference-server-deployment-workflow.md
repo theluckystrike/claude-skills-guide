@@ -207,6 +207,12 @@ The key is loading the appropriate skills before starting your deployment projec
 If you have not yet written the vLLM inference server itself, the companion guide [Claude Code for vLLM Inference Server Workflow](/claude-code-for-vllm-inference-server-workflow/) covers using Claude Code to build the FastAPI server, initialize the LLM engine, and add inline Prometheus instrumentation before you containerize and deploy.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vllm-inference-server-deployment-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for vLLM Inference Server Workflow](/claude-code-for-vllm-inference-server-workflow/)

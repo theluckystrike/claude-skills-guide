@@ -217,6 +217,12 @@ Claude skill files transform how you work with Claude Code on Android Kotlin pro
 
 Start with one skill covering your core architecture, then expand as you identify more specific needs. The investment in creating well-structured skills pays dividends in faster development and fewer code review iterations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-example-for-android-kotlin-project)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Kotlin Android Development with Claude Code Guide](/claude-code-kotlin-android-development-workflow-guide/)

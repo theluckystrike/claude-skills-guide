@@ -523,6 +523,12 @@ The most important mindset shift is treating debugging as measurement, not guess
 Remember that successful RAG debugging is iterative. continuously monitor, analyze, and refine your pipeline based on real-world performance and user feedback.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-llamaindex-rag-pipeline-debugging)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)

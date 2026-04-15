@@ -320,6 +320,12 @@ TrelloPowerUp.initialize({ 'card-buttons': (t) => [{ text: 'My Action', callback
 
 The combination of Chrome extension capabilities with Trello's Power-Up framework gives you a powerful integration layer for custom project management automation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-trello-power-up)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Form Filler Chrome Extension: A Developer and Power.](/ai-form-filler-chrome-extension/)

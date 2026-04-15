@@ -425,6 +425,10 @@ Focus on creating a reliable, user-friendly tool that respects legal boundaries 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-video-downloader)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Build an AI Video Summarizer Chrome Extension](/ai-video-summarizer-chrome-extension/)

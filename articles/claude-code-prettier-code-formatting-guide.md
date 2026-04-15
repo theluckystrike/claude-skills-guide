@@ -201,6 +201,12 @@ For documentation generation with the pdf skill, ensure Markdown files are prope
 
 Prettier integration with Claude Code simplifies code formatting significantly. Install it as a project dependency, create a sensible configuration, and invoke it through Claude Code's natural language interface. For teams, pre-commit hooks and CI checks ensure consistency. The tdd, frontend-design, and pdf skills work well alongside formatting, creating a complete development workflow where code quality happens automatically.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-prettier-code-formatting-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Hooks Pre-Commit Automation](/claude-code-git-hooks-pre-commit-automation/). Pre-commit hooks run Prettier automatically

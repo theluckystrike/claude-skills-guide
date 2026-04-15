@@ -177,6 +177,12 @@ Choosing the right MCP server comes down to understanding your actual workflow n
 
 The MCP ecosystem continues growing, with new servers appearing regularly. The principles in this guide, assess your needs, prioritize security, and start minimal, will serve you well regardless of which servers you choose.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-choose-the-right-mcp-server)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Top MCP Servers for Claude Code Developers in 2026](/top-mcp-servers-for-claude-code-developers-2026/)

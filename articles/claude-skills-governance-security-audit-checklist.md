@@ -127,6 +127,12 @@ Document your governance decisions. When you approve a skill for production use,
 
 Regular review keeps your governance effective as the Claude skills ecosystem evolves. New skills release frequently, and the threat field changes. Your audit checklist should be a living document, updated as you learn and as the ecosystem matures.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-governance-security-audit-checklist)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How Do I Limit What a Claude Skill Can Access on Disk](/how-do-i-limit-what-a-claude-skill-can-access-on-disk/). Implement the disk access controls this audit checklist requires before deploying skills to production

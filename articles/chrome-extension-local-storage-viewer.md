@@ -219,6 +219,12 @@ chrome.storage.local.set({ key: 'value' }).catch((error) => {
 
 Understanding how to view and manage storage is fundamental to Chrome extension development. Whether you rely on DevTools for quick inspection or build custom viewer interfaces, having visibility into your extension's storage enables faster debugging and more reliable applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-local-storage-viewer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Git Blame Viewer: A Practical Guide for.](/chrome-extension-git-blame-viewer/)

@@ -232,6 +232,12 @@ Start with simple templates and gradually add complexity. Monitor what patterns 
 
 Template-based code generation with Claude Code transforms how you approach repetitive coding tasks. By investing time in creating well-designed templates, you gain consistency, speed, and reliability across your codebase. Start small, iterate frequently, and watch your development velocity increase.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-template-based-code-generation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Cornell Notes Template: A Developer Guide](/chrome-extension-cornell-notes-template/)

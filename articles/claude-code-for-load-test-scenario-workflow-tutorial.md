@@ -322,6 +322,12 @@ Your CI pipeline passes the appropriate environment variables:
 
 This pattern means the same test script runs locally with minimal load and in CI with staging-appropriate parameters, with no code changes required between environments. Claude Code can generate these parameterized scripts from your existing endpoint documentation, adapting the check conditions and threshold values to match your SLA requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-load-test-scenario-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Rootly Incident Workflow Tutorial](/claude-code-for-rootly-incident-workflow-tutorial/)

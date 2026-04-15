@@ -215,6 +215,12 @@ Claude Code transforms AWS Config Rules management from a manual, error-prone pr
 Start by creating a Claude.md file in your infrastructure project, then incrementally adopt the patterns and skills that fit your organization's needs. The time invested in setting up this workflow will pay dividends in reduced manual work and improved compliance outcomes.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-aws-config-rules-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for AWS PrivateLink Workflow](/claude-code-for-aws-privatelink-workflow/)

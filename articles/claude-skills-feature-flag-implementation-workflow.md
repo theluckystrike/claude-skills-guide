@@ -211,6 +211,12 @@ Feature flags transform how you develop and ship Claude skills. By implementing 
 
 The key is consistency: check flags consistently, log evaluations thoroughly, and maintain your configuration as version-controlled infrastructure. This discipline pays dividends as your skill ecosystem grows. Explore related workflows at the [workflows hub](/workflows-hub/).
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-feature-flag-implementation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Versioning: Semver Best Practices](/claude-skill-versioning-semver-best-practices/). version control strategies for skill releases

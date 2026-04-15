@@ -421,6 +421,12 @@ Server-Sent Events offer a straightforward solution for real-time streaming in w
 
 Whether you're streaming AI responses, live logs, or notification updates, SSE provides a reliable foundation that integrates well with modern development workflows. The key operational details. cache control headers, nginx buffering configuration, authenticated fetch streams, and reconnection ID tracking. are where most real-world SSE implementations succeed or fail. Get those details right from the start and SSE will serve you well at scale.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-server-sent-events-api-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - Claude Code WebSocket API Implementation

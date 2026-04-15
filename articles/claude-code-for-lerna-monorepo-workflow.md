@@ -201,6 +201,12 @@ The key is providing adequate context about your monorepo structure and creating
 Remember: Claude Code works best when it understands your architecture. Invest time in setting up proper context and conventions, and you'll see significant productivity gains across your monorepo workflows.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-lerna-monorepo-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Changesets Monorepo Release Workflow](/claude-code-for-changesets-monorepo-release-workflow/)

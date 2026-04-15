@@ -472,6 +472,10 @@ Keep your schema definitions in dedicated files and import them consistently. Us
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-drizzle-orm-typescript-database-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Using Claude Code with Drizzle ORM Schema Management](/using-claude-code-with-drizzle-orm-schema-management/). Schema management workflow, common pitfalls, and documentation automation

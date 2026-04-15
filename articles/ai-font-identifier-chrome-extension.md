@@ -448,6 +448,12 @@ AI font identifier Chrome extensions have evolved from simple utilities to sophi
 
 The real use comes from going beyond the extension itself. The same font inspection APIs that power these tools are fully accessible in your own JavaScript, Puppeteer scripts, and CI pipelines. Building font auditing into automated test suites, design system documentation generators, and deployment validation workflows gives you coverage no manual extension workflow can match, and ensures that the typography your team spends time choosing actually reaches your users as intended.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-font-identifier-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

@@ -320,6 +320,12 @@ Regulatory landscape: European regulators have raised questions about whether To
 
 Building with the Topics API today positions your projects for a web where privacy is a feature, not a compromise. The API provides enough signal for effective advertising while keeping user data where it belongs: on the user's device, under the user's control.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-topics-api-privacy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Fingerprint Test Extension: A Developer's Guide.](/chrome-fingerprint-test-extension/)

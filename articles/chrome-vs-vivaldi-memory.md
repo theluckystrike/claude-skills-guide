@@ -214,6 +214,12 @@ If you need Chrome-specific extensions like AWS Console, Azure DevOps, or specia
 
 For users with 32GB+ RAM who need maximum functionality, both browsers perform adequately when managed properly. The choice then depends on preferred workflow, Vivaldi's all-in-one approach versus Chrome's extension ecosystem.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-vs-vivaldi-memory)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)

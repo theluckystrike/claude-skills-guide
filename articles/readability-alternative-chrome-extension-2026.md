@@ -273,6 +273,12 @@ The built-in Chrome reader mode provides a no-install alternative for basic need
 
 Evaluate based on your specific use case: quick reading, content extraction, research organization, or integration with existing tooling. Each option here delivers solid performance without requiring paid subscriptions for core functionality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=readability-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

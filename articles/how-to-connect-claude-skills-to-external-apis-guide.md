@@ -445,6 +445,12 @@ Timeouts on slow APIs: Set an `AbortController` timeout to prevent the skill fro
 
 API responses changing schema: Pin the API version in the URL (e.g., `/v2/`) and add a schema validation step using `zod` so the skill fails fast with a clear error if the API changes its response shape rather than silently passing malformed data to the model.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-connect-claude-skills-to-external-apis-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Profiles the skills most commonly wired to external APIs (tdd, pdf, supermemory) with practical invocation patterns

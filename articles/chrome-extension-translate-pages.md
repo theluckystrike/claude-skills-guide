@@ -306,6 +306,12 @@ The key is starting simple, extracting text, translating through an API, and dis
 
 For developers looking to customize their translation experience, the Chrome Extension APIs offer flexibility in how you capture, process, and display translated content. Power users benefit from having translation functionality integrated directly into their browser workflow without needing separate tools or copy-pasting content between applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-translate-pages)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Startup Pages Policy: A Practical Guide](/chrome-enterprise-startup-pages-policy/)

@@ -217,6 +217,12 @@ YAML syntax errors in Claude skills are frustrating but avoidable. Remember thes
 
 When debugging, start by validating your YAML, then isolate problematic sections, and finally check for encoding issues. With practice, you'll spot and fix these errors in seconds rather than minutes.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skill-invalid-yaml-syntax-error-how-to-debug)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skill-yaml-front-matter-parsing-error-fix/). Handle YAML parsing errors in the front matter with more targeted fixes for specific error types

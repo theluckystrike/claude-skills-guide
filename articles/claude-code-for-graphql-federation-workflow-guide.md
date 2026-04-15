@@ -447,6 +447,12 @@ Use @override for migrations: When moving a field from one subgraph to another, 
 
 Claude Code transforms GraphQL Federation development from manual schema coordination into an assisted workflow. By defining federation-specific skills, you get intelligent help with schema design, configuration, debugging, and testing. Start by creating a GraphQL Federation skill tailored to your architecture, and watch your development velocity increase as Claude handles the boilerplate and helps troubleshoot complex composition issues. The biggest gains come from schema design reviews before changes are published, and from composition error diagnosis. both tasks where having an assistant that can read multiple schema files simultaneously and reason about their relationships saves substantial time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-graphql-federation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for GraphQL Code Generation Workflow](/claude-code-for-graphql-code-generation-workflow/)

@@ -138,6 +138,12 @@ Start small. Pick one core feature. Describe it clearly. Test the result. Iterat
 
 The startup building process has fundamentally changed. Non-technical founders now have a genuine path to MVP creation. The only remaining question is what you'll build.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=vibe-coding-for-startup-founders-non-technical)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Tools for Vibe Coding Developers in 2026](/best-tools-for-vibe-coding-developers-2026/)

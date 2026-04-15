@@ -330,6 +330,12 @@ The `/add` command, output formatting instructions, parallel task execution, and
 
 Experiment with these capabilities gradually. Start with one feature. perhaps the CLAUDE.md system or a single MCP server. and expand as you become comfortable. The productivity gains compound quickly once you integrate these tools into daily workflows. Developers who invest a few hours learning these hidden features typically report saving multiple hours per week within the first month.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-hidden-features-most-developers-miss)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide]/claude-code-for-beginners-complete-getting-started-2026/)

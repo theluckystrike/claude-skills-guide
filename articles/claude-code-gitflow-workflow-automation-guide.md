@@ -169,6 +169,12 @@ Claude Code transforms GitFlow from a manual branching strategy into an intellig
 
 The key benefits include: consistent branch management, automatic cleanup of merged branches, intelligent merge handling, and integration with other Claude skills for comprehensive automation. Start with one workflow element, feature branches, for instance, and expand as you recognize patterns worth automating.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-gitflow-workflow-automation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/). Git best practices that gitflow builds on

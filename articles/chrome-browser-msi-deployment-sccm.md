@@ -189,6 +189,12 @@ Before rolling out to production, verify:
 
 Deploying Chrome through SCCM provides centralized control, consistent configuration, and enterprise-grade update management. The initial setup effort pays dividends through simplified ongoing maintenance and improved security posture across your organization.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-browser-msi-deployment-sccm)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Memory Saver Mode: A Developer's Guide to Reducing Browser Memory Usage](/chrome-memory-saver-mode/)

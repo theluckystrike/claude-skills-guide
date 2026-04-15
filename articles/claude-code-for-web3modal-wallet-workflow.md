@@ -817,6 +817,12 @@ Building a reliable Web3Modal wallet workflow requires handling initialization, 
 
 These workflows integrate smoothly with Claude Code's development assistance, making your Web3 dApp development faster and more reliable. When you hit a wall, whether that is a cryptic EIP-1193 error code, a hydration mismatch from SSR wallet state, or a missing chain configuration, Claude Code can analyze your specific setup and suggest targeted fixes. Remember to test with multiple wallet providers during development to ensure broad compatibility.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-web3modal-wallet-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/)

@@ -289,6 +289,12 @@ Blocking Chrome from sending data to Google requires multiple layers:
 
 For most users, combining hosts file blocking with disabled sync provides adequate privacy. Developers requiring full control should consider alternative browsers or running Chromium builds compiled without Google services.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=block-chrome-sending-data-google)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Chrome Data Google Collects: A Technical Guide for.](/chrome-data-google-collects/)

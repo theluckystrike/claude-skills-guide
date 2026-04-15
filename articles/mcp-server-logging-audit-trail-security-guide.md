@@ -329,6 +329,12 @@ For regulated environments, common requirements are:
 
 The `query` method on the `AuditTrail` class shown earlier enables targeted deletion: `DELETE FROM audit_log WHERE user_id = ?` satisfies a GDPR erasure request without touching other users' records. Build this endpoint into your MCP server's admin tooling before you need it. responding to a data subject request under time pressure is significantly harder than having the mechanism already in place.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=mcp-server-logging-audit-trail-security-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)

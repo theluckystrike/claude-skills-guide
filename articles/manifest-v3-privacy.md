@@ -330,6 +330,12 @@ For developers, building privacy-respecting extensions isn't just about complian
 
 The Manifest V3 privacy model isn't perfect, but it represents meaningful progress toward a browser extension ecosystem where user privacy is the default rather than the exception.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=manifest-v3-privacy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Block Phishing Extension: A Developer Guide to.](/chrome-block-phishing-extension/)

@@ -217,6 +217,12 @@ Chrome lag when switching tabs stems from memory management, background JavaScri
 
 For developers building web applications, implementing proper visibility handling and minimizing main thread blocking ensures your pages remain responsive during tab switches. This improves user experience and reduces the likelihood of users abandoning your application due to perceived slowness.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-lag-switching-tabs)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Autofill Slow: Causes and Solutions for Developers](/chrome-autofill-slow/)

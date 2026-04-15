@@ -512,6 +512,12 @@ Claude Code transforms WebDriverIO development from a solo endeavor into a colla
 
 Start by applying these patterns to a single test suite, then expand as you build confidence in the AI-assisted workflow. Over time, Claude becomes familiar enough with your project conventions that generating a new page object or debugging a flaky test takes minutes rather than hours, compounding the investment across every sprint.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-webdriverio-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Drone CI Workflow Automation](/claude-code-drone-ci-workflow-automation/)

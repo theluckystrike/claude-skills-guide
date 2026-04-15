@@ -96,6 +96,12 @@ This confidence-building aspect addresses a significant barrier in recursion lea
 
 Recursion education benefits enormously from interactive, personalized guidance, the exact strengths that Claude Code provides. Through step-by-step tracing, visual representations, scaffolded problem solving, debugging assistance, real-world analogies, and confidence-building interaction, Claude Code transforms recursion from an intimidating abstract concept into an accessible skill that students can master through practice and exploration. As AI assistants become more integrated into educational settings, they offer a powerful complement to traditional instruction, helping each student develop their understanding at their own pace with support available whenever they need it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-helping-students-understand-recursion-concepts)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Way to Configure Claude Code to Understand Your Internal APIs](/best-way-to-configure-claude-code-to-understand-your-internal-apis/)

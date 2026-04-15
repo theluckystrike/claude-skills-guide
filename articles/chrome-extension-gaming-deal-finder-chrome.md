@@ -282,6 +282,12 @@ When publishing to the Chrome Web Store, ensure your extension handles edge case
 
 Consider adding support for multiple language regions and currency preferences for international users. The CheapShark API supports multiple store regions, which you can use for a more comprehensive deal-finding experience.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-gaming-deal-finder-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Deal Finder Chrome Extension: A Developer Guide](/deal-finder-chrome-extension/). General-purpose price tracking across any retailer

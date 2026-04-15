@@ -158,6 +158,12 @@ Runtime error debugging doesn't have to be a solitary struggle. Both Claude Code
 The best debugging approach depends on your situation. For mysterious errors in unfamiliar code, Claude Code's conversational debugging helps you learn quickly. For precise, known-location errors, Cursor's integrated debugger offers faster time-to-inspection. Master both, and you'll handle any runtime error with confidence.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-cursor-debugging-runtime-errors)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Cursor 2026: Detailed Comparison for.](/claude-code-vs-cursor-2026-detailed-comparison/)

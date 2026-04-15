@@ -301,6 +301,12 @@ Horizontal Pod Autoscaling transforms Kubernetes deployments into responsive, co
 
 Claude Code streamlines configuration generation and helps maintain best practices across your cluster. Use it to audit existing HPA configurations, generate Prometheus adapter rules, and review whether your resource requests match your observed usage. Combine HPA with other infrastructure patterns. rolling update deployments for zero-downtime releases, pod disruption budgets to protect against simultaneous scaling and node maintenance, and cluster autoscaling to handle the case where HPA wants more pods but the cluster lacks available nodes. Together these tools create solid, self-adjusting workloads that serve users effectively while controlling infrastructure costs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-kubernetes-hpa-autoscaling-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Kubernetes Cost Optimization Guide](/claude-code-kubernetes-cost-optimization-guide/)

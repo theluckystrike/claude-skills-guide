@@ -346,6 +346,12 @@ The key is finding tools that integrate naturally into your development process 
 
 Responsive design failures are preventable. With the right tools and a systematic testing approach, you can ship layouts that work reliably across the full spectrum of devices your users actually use. not just on the development machine they happened to be designed on.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-responsive-design-tester)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

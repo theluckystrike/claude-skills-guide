@@ -345,6 +345,12 @@ The most effective approach starts simple. track basic time allocation, review t
 
 Start with a one-file prototype in 50 lines of JavaScript, run it for a week, and let the data tell you what to build next. That discipline. measure first, optimize second. is what separates useful productivity tools from abandoned experiments.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-workload-balance-tracker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Black Friday Deal Tracker: A.](/chrome-extension-black-friday-deal-tracker/)

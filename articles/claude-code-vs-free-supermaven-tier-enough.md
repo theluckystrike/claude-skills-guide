@@ -169,6 +169,12 @@ The free Supermaven tier might be "enough" for casual coding, but for profession
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-free-supermaven-tier-enough)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Code Completion Tools vs Claude Code in 2026](/best-ai-code-completion-tools-vs-claude-code/)

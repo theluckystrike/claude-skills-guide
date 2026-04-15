@@ -154,6 +154,12 @@ Claude Code transforms reference finding from a manual, error-prone task into an
 Start using these reference finding techniques in your daily development work. Whether you're preparing a refactor, investigating a bug, or simply exploring an unfamiliar codebase, Claude Code's search capabilities will save you time and help you understand code relationships more clearly.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-find-references-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

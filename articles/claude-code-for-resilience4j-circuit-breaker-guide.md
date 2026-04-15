@@ -456,6 +456,12 @@ Resilience4j provides a solid, lightweight solution for implementing circuit bre
 The key to success is treating circuit breakers as living components that require ongoing attention and refinement as your system evolves. A circuit breaker configured for last year's traffic profile will not serve you well as your service scales, and Claude Code can help you revisit and update configurations as your observability data reveals new patterns.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-resilience4j-circuit-breaker-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Failsafe Java Resilience Workflow](/claude-code-for-failsafe-java-resilience-workflow/)

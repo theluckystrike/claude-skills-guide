@@ -589,6 +589,10 @@ Start with a clean architecture, write tests first using the tdd workflow, and l
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-dart-flutter-cross-platform-development-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/). Frontend-focused skills for building polished interfaces

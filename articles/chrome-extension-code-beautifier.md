@@ -275,6 +275,12 @@ Chrome extension code beautifiers are essential tools for developers who work wi
 
 The key is finding an extension that matches your specific needs, whether you require broad language support, deep DevTools integration, or simple one-click formatting. With the right beautifier installed, you can handle any code formatting task directly within Chrome.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-code-beautifier)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

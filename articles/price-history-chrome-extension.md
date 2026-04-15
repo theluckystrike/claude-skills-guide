@@ -372,6 +372,12 @@ Monitor console logs in both the popup and service worker for debugging. Use Chr
 
 Building a price history extension requires handling diverse price formats, managing storage efficiently, and creating useful visualizations. The implementation above provides a solid foundation that you can customize for specific retailers or add features like price drop alerts and shopping lists.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=price-history-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Price Tracker Chrome Extension for Amazon: A Developer Guide](/price-tracker-chrome-extension-amazon/)

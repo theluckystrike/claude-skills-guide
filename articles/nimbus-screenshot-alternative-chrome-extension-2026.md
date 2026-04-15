@@ -407,6 +407,12 @@ The right alternative ultimately depends on where screenshots fit into your deve
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=nimbus-screenshot-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Buffer Alternative Chrome Extension 2026](/buffer-alternative-chrome-extension-2026/)

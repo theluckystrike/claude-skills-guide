@@ -234,6 +234,12 @@ The "best" lightest browser ultimately depends on your specific workflow. Test e
 
 A practical recommendation: use Brave as your primary browser and supplement it with Falkon for read-only documentation browsing. Install your most-used web apps as PWAs to move them out of the browser tab pool. Enable Memory Saver in any Chromium-based browser you use. Audit your extensions quarterly. These steps will improve browser performance on any Chromebook more reliably than any single browser swap.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=lightest-browser-chromebook)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Browser MSI Deployment with SCCM: A Complete Guide](/chrome-browser-msi-deployment-sccm/)

@@ -348,6 +348,12 @@ Sidebar injecting on all pages instead of target domains: Add a content script `
 
 Drive API returning 403 for some files: If the user's Drive contains files owned by an organization with domain-restricted sharing, the API may return files that cannot be opened by the extension's OAuth client. Filter the file list to exclude items where `capabilities.canDownload` is false.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-google-drive-sidebar)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Asana Task Manager: A Developer's Guide](/chrome-extension-asana-task-manager/)

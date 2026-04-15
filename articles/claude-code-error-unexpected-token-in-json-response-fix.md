@@ -325,6 +325,12 @@ The "unexpected token in JSON response" error is manageable once you understand 
 
 Remember to test your integrations thoroughly, especially when combining multiple skills like supermemory with custom API calls. Most importantly, always implement error handling that catches JSON parsing failures early. before they reach Claude Code's processing layer. The error message's unexpected token character is your first diagnostic clue: use it to narrow down whether you're dealing with an HTML response, a plain-text error, truncated data, or a genuine JSON syntax problem, then apply the appropriate fix from this guide.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-error-unexpected-token-in-json-response-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Invalid YAML Syntax Error: How to Debug](/claude-code-skill-invalid-yaml-syntax-error-how-to-debug/). See also

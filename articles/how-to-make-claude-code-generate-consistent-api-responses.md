@@ -411,6 +411,10 @@ Automate these tests in your CI pipeline to catch regressions immediately. When 
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-generate-consistent-api-responses)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/). Contract testing enforces response consistency

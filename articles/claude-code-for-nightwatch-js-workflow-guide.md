@@ -221,6 +221,12 @@ Start by adding Claude Code to your current testing workflow, perhaps with a sin
 Remember that the goal isn't to replace human testers but to augment their capabilities, freeing you to focus on higher-level testing strategy while Claude Code handles the repetitive boilerplate. Your tests will be more thorough, your debugging faster, and your overall test suite more maintainable.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nightwatch-js-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)

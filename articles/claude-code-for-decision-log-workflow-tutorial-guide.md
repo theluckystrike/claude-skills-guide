@@ -259,6 +259,12 @@ Next Steps:
 - Add decision logging to your project instructions
 - Next time you make a technical choice, ask Claude Code to document it
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-decision-log-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Benchmark Reporting Workflow Tutorial](/claude-code-for-benchmark-reporting-workflow-tutorial/)

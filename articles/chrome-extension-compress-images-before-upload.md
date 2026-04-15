@@ -261,6 +261,12 @@ Building an image compression Chrome extension requires understanding browser AP
 
 The implementation above provides a foundation that handles standard file inputs, drag-and-drop zones, and provides caching for repeated uploads. Adjust quality settings and maximum dimensions based on your specific use case requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-compress-images-before-upload)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Edit Images: A Practical Guide for Developers](/chrome-extension-edit-images/)

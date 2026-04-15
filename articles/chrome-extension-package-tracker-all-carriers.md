@@ -491,6 +491,12 @@ For developers looking to extend this foundation, consider adding delivery notif
 
 The most impactful single improvement for user experience is the content script that auto-detects tracking numbers on order pages. Users should not have to copy-paste tracking numbers manually, that friction is what separates a useful extension from one that sits unused after the first week.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-package-tracker-all-carriers)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Black Friday Deal Tracker: A.](/chrome-extension-black-friday-deal-tracker/)

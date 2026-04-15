@@ -414,6 +414,12 @@ The patterns covered here, validation hooks, warmup schedulers, mixed precision 
 The key is to view Claude Code not as a replacement for your expertise, but as a powerful tool that amplifies your capabilities and accelerates your development cycle. The best results come from pairing it with clear project context and iterative refinement of its suggestions.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-pytorch-model-training-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Axolotl QLoRA Training Script Workflow](/claude-code-axolotl-qlora-training-script-workflow/)

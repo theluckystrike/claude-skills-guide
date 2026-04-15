@@ -478,6 +478,12 @@ The best way to build this skill is to start every new script with a Claude sess
 Remember that Claude Code is a partner in your development process, it handles the heavy lifting while you maintain control over your scripts' behavior. Experiment with different workflows, find what works best for your projects, and enjoy the efficiency gains of AI-assisted bash scripting.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-amber-bash-scripting-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Shell Scripting Automation Workflow Guide](/claude-code-shell-scripting-automation-workflow-guide/)

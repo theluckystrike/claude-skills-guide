@@ -209,6 +209,12 @@ The `frontend-design` skill can help you build monitoring interfaces if you need
 
 Monitoring multi-agent Claude Code systems requires deliberate architecture. Start with structured logging, add health checks, and progressively build toward comprehensive observability as your system grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=monitoring-and-logging-claude-code-multi-agent-systems)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/). Build the multi-agent architecture you will monitor and instrument for observability.

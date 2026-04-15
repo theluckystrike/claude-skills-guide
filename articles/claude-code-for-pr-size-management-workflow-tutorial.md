@@ -203,6 +203,12 @@ Start small: implement pre-commit checks today, measure your PR sizes for a week
 
 Remember: the best PR is one that reviewers can understand, test, and approve in a single sitting. Claude Code can help you get there.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-pr-size-management-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Incident Management Workflow Tutorial](/claude-code-for-incident-management-workflow-tutorial/)

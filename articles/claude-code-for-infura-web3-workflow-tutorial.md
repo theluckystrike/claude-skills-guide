@@ -427,6 +427,12 @@ The key insight is that Infura handles the infrastructure complexity of blockcha
 Remember to always test on testnets before deploying to mainnet, keep your credentials secure throughout the development process, and use Claude Code's conversational debugging capability whenever you hit an unexpected error.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-infura-web3-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for gRPC Web Workflow Tutorial](/claude-code-for-grpc-web-workflow-tutorial/)

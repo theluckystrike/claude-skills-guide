@@ -296,6 +296,12 @@ After a suspender with a 10-minute idle threshold runs on the same session, the 
 
 The RAM freed by the suspender is immediately available to other processes. locally running servers, Docker containers, or the IDE. which often shows more visible performance improvement than the browser itself.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-tab-suspender-memory-saver)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Memory Saver Mode: A Developer's Guide to Reducing Browser Memory Usage](/chrome-memory-saver-mode/)

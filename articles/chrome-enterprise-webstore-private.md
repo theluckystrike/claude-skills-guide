@@ -120,6 +120,12 @@ Chrome Enterprise Webstore Private provides a solid solution for organizations n
 
 Start by enabling Chrome Browser Cloud Management in your Google Admin console, then work with your development team to prepare extensions for enterprise deployment. The initial setup effort pays off through streamlined distribution and centralized management capabilities.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-webstore-private)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Force Install Extensions via GPO: Enterprise.](/chrome-force-install-extensions-gpo/)

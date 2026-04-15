@@ -238,6 +238,12 @@ This approach produces better-focused tests and avoids timeout issues.
 2. Work module-by-module or section-by-section
 3. Use `/supermemory` to preserve results across sessions rather than re-running expensive operations
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skill-timeout-error-how-to-increase-the-limit)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skill Exceeded Maximum Output Length Error Fix](/claude-code-skill-exceeded-maximum-output-length-error-fix/). Handle output length limits alongside timeout constraints for large operations

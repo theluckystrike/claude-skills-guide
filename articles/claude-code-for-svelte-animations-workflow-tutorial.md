@@ -289,6 +289,12 @@ Svelte's animation system is remarkably powerful yet approachable. By combining 
 Remember to respect user preferences, keep animations brief, and use easing functions to create natural-feeling motion. With practice, you'll be building polished, animated interfaces that delight users without sacrificing performance.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-svelte-animations-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Svelte Transitions Workflow Guide](/claude-code-for-svelte-transitions-workflow-guide/). Detailed look on `svelte/transition`: custom transitions, SvelteKit page routing, and Motion One integration

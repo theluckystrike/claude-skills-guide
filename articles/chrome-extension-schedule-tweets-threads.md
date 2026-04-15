@@ -387,6 +387,10 @@ Chrome extensions for tweet scheduling serve as foundational examples for buildi
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-schedule-tweets-threads)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Study Schedule Planner: Build Your Own](/chrome-extension-study-schedule-planner/)

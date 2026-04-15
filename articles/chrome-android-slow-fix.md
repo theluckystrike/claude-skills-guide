@@ -304,6 +304,12 @@ These solutions should resolve most Chrome Android slow fix scenarios. Start wit
 
 For developers, building ADB-based monitoring scripts into your CI or device lab workflow lets you catch performance regressions before users do. The combination of `dumpsys meminfo`, targeted cache clearing, and flag-based experimentation gives you precise control over Chrome's behavior on Android in ways that the standard Settings UI simply cannot provide.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-android-slow-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Zoom Slow: Diagnosing and Fixing Performance Issues](/chrome-zoom-slow/)

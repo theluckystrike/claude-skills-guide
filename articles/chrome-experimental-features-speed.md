@@ -195,6 +195,12 @@ Start with one or two flags, measure the impact, and gradually build a Chrome co
 
 Remember to periodically revisit chrome://flags as Google constantly adds and modifies experimental features. The next performance breakthrough might be just a flag away.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-experimental-features-speed)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)

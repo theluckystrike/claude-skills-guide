@@ -350,6 +350,12 @@ AI tools transform incident debugging from a frantic guessing game into a system
 
 The key is integrating these tools into your existing workflows rather than treating them as replacements for human judgment. Used correctly, AI assistance means faster recovery times, better postmortems, and ultimately more resilient systems. Start with a single use case, log analysis during active incidents, or postmortem drafting after the fact, and build out your AI-assisted incident toolkit from there.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-tools-for-incident-debugging-and-postmortems)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Developer Tools Running Slow? Here is How to Fix It](/chrome-developer-tools-slow/)

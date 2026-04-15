@@ -183,6 +183,12 @@ Preventing data exfiltration through Claude Code MCP servers requires a defense-
 
 The convenience of MCP-powered skills shouldn't come at the cost of security. Take time to configure access controls properly, and your development workflow will remain both productive and secure.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mcp-server-data-exfiltration-prevention)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

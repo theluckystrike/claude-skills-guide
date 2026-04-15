@@ -356,6 +356,12 @@ Docker secrets management balances security requirements with developer workflow
 
 Start with simple secret configurations and mature your approach as your infrastructure grows. The investment in proper secrets management pays dividends through reduced security incidents and easier compliance audits. With Claude Code generating your scaffolding, rotation scripts, and validation logic, you can implement production-grade secrets handling in a fraction of the time it would take to write it from scratch.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-secrets-management-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Vault Secrets Management Workflow](/claude-code-for-vault-secrets-management-workflow/)

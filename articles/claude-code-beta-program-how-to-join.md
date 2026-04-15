@@ -149,6 +149,12 @@ Joining the Claude Code beta program is a straightforward process that opens the
 
 The beta program is your opportunity to shape the future of AI-assisted coding. Take advantage of this resource, and you will likely find that Claude Code becomes an indispensable part of your development toolkit.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-beta-program-how-to-join)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Beta Features: How to Access and Use Them](/claude-code-beta-features-how-to-access/)

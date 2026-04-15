@@ -236,6 +236,12 @@ The short list that consistently passes scrutiny:
 
 Avoid installing extensions that require broad permissions ("Read and change all your data on the websites you visit") unless they are foundational tools like uBlock Origin where the permission is inherent to the function. Even then, review the extension's changelog after each update.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-privacy-browser-2026-ranked)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Encrypted Backup Solution for Developers: A 2026 Technical Guide](/best-encrypted-backup-solution-for-developers/)

@@ -324,6 +324,12 @@ The choice between Claude Code and manual coding is not binary. Understanding th
 
 The developers who get the most value from Claude Code are those who treat it as a capable first-draft collaborator. fast, knowledgeable, and tireless. while retaining their own judgment for architecture, optimization, and security. That combination is more powerful than either approach alone.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=when-to-use-claude-code-vs-manual-coding-tradeoffs)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Is Claude Code Worth It for Solo Developers and Freelancers](/is-claude-code-worth-it-for-solo-developers-freelancers/)

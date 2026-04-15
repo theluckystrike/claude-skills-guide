@@ -113,6 +113,12 @@ Remember that Claude Code works best when it has comprehensive context about you
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-keeps-breaking-imports-when-refactoring)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Keeps Adding Unnecessary Console Log.](/claude-code-keeps-adding-unnecessary-console-log-statements/)

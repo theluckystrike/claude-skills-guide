@@ -220,6 +220,12 @@ Call graph analysis with Claude Code transforms how you understand and work with
 Remember: the goal isn't just to generate a call graph, but to answer specific questions about your code's structure and behavior. Let your analysis questions guide the process, and Claude will help you build a clear picture of your program's architecture.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-call-graph-analysis-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Dataflow Analysis Workflow Tutorial](/claude-code-for-dataflow-analysis-workflow-tutorial/)

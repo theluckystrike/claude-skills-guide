@@ -138,6 +138,12 @@ Response time: ~3s (was ~30s)
 - **Use `/compact` proactively:** Compact before context reaches 70%, not after it hits 95%.
 - **Profile MCP overhead:** Remove MCP servers that add tools you rarely use.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-slow-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/) — When memory usage grows unbounded

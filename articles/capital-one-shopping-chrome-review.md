@@ -134,6 +134,12 @@ However, privacy-conscious users should weigh the data collection requirements a
 
 The extension succeeds at its core function, finding and applying discount codes, but the trade-offs between convenience, privacy, and customization depend on individual user priorities. Understanding these technical details helps developers and power users make informed decisions about incorporating such tools into their browsing workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=capital-one-shopping-chrome-review)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Shopping List Organizer: A Developer Guide](/chrome-extension-shopping-list-organizer/)

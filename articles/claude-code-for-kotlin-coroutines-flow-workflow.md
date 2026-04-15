@@ -274,6 +274,12 @@ Kotlin Coroutines Flow provides a powerful foundation for reactive programming i
 Start your next flow-based project with Claude Code, and experience how AI-assisted development transforms complex async logic into maintainable, testable code.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-kotlin-coroutines-flow-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Kotlin Delegation Pattern Workflow](/claude-code-for-kotlin-delegation-pattern-workflow/)

@@ -213,6 +213,12 @@ The chrome extension content calendar manager foundation supports numerous enhan
 
 For developers comfortable with web technologies, the extension serves as a practical project that demonstrates browser extension development while solving a genuine productivity challenge. The combination of storage, alarms, notifications, and messaging APIs provides everything needed to build a sophisticated productivity tool.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-content-calendar-manager)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)

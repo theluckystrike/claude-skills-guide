@@ -335,6 +335,12 @@ Chrome site isolation represents a fundamental shift in browser security archite
 
 The default isolation level suits most applications. Developers building performance-sensitive applications that need `SharedArrayBuffer` or high-resolution timers should implement COOP and COEP headers. Developers debugging subdomain state-sharing issues should audit their use of `localStorage` and `document.domain`. Browser vendors continue to refine these protections as new vulnerabilities emerge, making Chrome's process architecture meaningfully more secure with each release.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-site-isolation-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Site Audit Tool: A Developer's Guide](/chrome-extension-site-audit-tool/)

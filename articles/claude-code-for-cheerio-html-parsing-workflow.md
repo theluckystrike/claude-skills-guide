@@ -251,6 +251,12 @@ Cheerio provides a solid foundation for HTML parsing in Node.js, and when combin
 
 Remember to always scrape responsibly, respect server resources, implement appropriate delays, and verify you're allowed to access the data you need before building production scrapers.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-cheerio-html-parsing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Dialog Element HTML Workflow Guide](/claude-code-for-dialog-element-html-workflow-guide/)

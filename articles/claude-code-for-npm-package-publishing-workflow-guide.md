@@ -221,6 +221,12 @@ Test in a clean environment. Before publishing major changes, verify your packag
 Claude Code transforms npm package publishing from a manual, error-prone process into an assisted workflow where you remain in control while benefiting from intelligent automation. By integrating Claude into initialization, quality checks, versioning, and maintenance tasks, you publish faster with greater confidence. Start with the basic skills outlined here, then customize and expand them to match your specific package requirements and organizational standards.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-npm-package-publishing-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for PyPI Package Publishing Workflow Guide](/claude-code-for-pypi-package-publishing-workflow-guide/)

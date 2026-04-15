@@ -83,6 +83,12 @@ Kubernetes cost optimization requires systematic attention rather than occasiona
 
 The skills and tools available through Claude Code and the broader ecosystem provide powerful capabilities for managing infrastructure costs. By automating repetitive analysis and configuration tasks, you free your team to focus on application development while maintaining control over cloud spending.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-kubernetes-cost-optimization-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Kubernetes Helm Charts Guide](/claude-code-kubernetes-helm-charts-guide/)

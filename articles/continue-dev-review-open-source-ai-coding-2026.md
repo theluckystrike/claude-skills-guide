@@ -404,6 +404,12 @@ The key to productivity is understanding the division of labor: Continue for spe
 
 As the ecosystem continues to evolve, the open source nature of Continue.dev means practitioners can extend and improve the tooling, creating a feedback loop where the community's real-world configurations become available to everyone. That transparency, knowing exactly what prompts run and why, is what makes the combination of Continue.dev and Claude Code skills a durable choice rather than a vendor-locked one.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=continue-dev-review-open-source-ai-coding-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Free Aider Open Source: Which One Should.](/claude-code-vs-free-aider-open-source/)

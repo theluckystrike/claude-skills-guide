@@ -349,6 +349,12 @@ Chrome Enterprise printing settings offer the control that organizations need to
 
 Whether you're scripting automated setups, building internal tooling, or reducing print costs through sensible defaults, these configuration options provide the foundation for reliable enterprise printing. Start by deploying a baseline policy that sets paper size and duplex defaults, then layer on more specific controls as you identify problems in your environment.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-printing-settings)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Privacy Browser 2026 Ranked: A Developer and Power User Guide](/best-privacy-browser-2026-ranked/)

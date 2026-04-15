@@ -214,6 +214,12 @@ client = anthropic.Anthropic(timeout=600.0)  # 10 min
 - **Log the last SSE event timestamp** so you can diagnose stalls in production
 - **Consider non-streaming for short requests** -- only use streaming when you need progressive output. Use `.stream()` with `.finalMessage()` (TypeScript) or `.get_final_message()` (Python) to get the complete Message object
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=anthropic-sdk-streaming-hang-timeout)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Fix: Anthropic SDK TypeError: terminated](/anthropic-sdk-typeerror-terminated/)

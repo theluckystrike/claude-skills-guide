@@ -256,6 +256,12 @@ If completion rates are low, the templates are not the problem. meeting cadence 
 
 If all action items consistently get completed, consider whether the meetings themselves could be shorter or replaced with async updates. A team that reliably completes everything between meetings may only need a synchronous touchpoint for decisions that genuinely require live discussion, not routine status updates that could be a shared document.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-meeting-agenda-template)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Auto Meeting Summary: A Developer Guide](/chrome-extension-auto-meeting-summary/)

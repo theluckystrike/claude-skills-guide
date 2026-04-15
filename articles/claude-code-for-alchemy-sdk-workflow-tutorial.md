@@ -236,6 +236,12 @@ Integrating Claude Code with Alchemy SDK transforms blockchain development from 
 The combination of Claude Code's natural language processing and Alchemy's comprehensive blockchain infrastructure creates a development environment where you focus on what you want to achieve, not the implementation details of getting there.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-alchemy-sdk-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Thirdweb SDK Workflow Tutorial](/claude-code-for-thirdweb-sdk-workflow-tutorial/)

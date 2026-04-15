@@ -242,6 +242,10 @@ For persistent issues, checking the skill's documentation and ensuring it was bu
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-permission-denied-when-executing-skill-commands)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Permissions Model and Security Guide 2026](/claude-code-permissions-model-security-guide-2026/). Understand the full permissions model that governs what skill commands can execute in your environment

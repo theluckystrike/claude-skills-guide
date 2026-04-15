@@ -723,6 +723,12 @@ The symbol information tells Claude Code the exact parameter types, return type,
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-lsp-document-symbol-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Custom LSP Diagnostics Workflow](/claude-code-for-custom-lsp-diagnostics-workflow/)

@@ -194,6 +194,12 @@ For developers and power users on older laptops, Firefox with optimized configur
 
 The specific choice depends on your workflow requirements. Test multiple options with your actual workload rather than relying solely on generic benchmarks. The best browser for your old laptop is the one that handles your most common tasks without causing system slowdowns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-browser-old-laptop)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Free VPN Chrome Extension: A Developer and Power.](/best-vpn-chrome-extension-free/)

@@ -328,6 +328,12 @@ User Privacy: Be transparent about what data you collect. Avoid storing unnecess
 
 Building a deal finder chrome extension requires careful attention to web scraping challenges, browser extension constraints, and user experience. Start with a minimal viable product that tracks prices on a few major retailers, then expand functionality based on user feedback.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=deal-finder-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Price Match Finder: A Developer's Guide](/chrome-extension-price-match-finder/)

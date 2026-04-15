@@ -334,6 +334,10 @@ For developers building applications that interact with Chrome, understanding th
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-auto-update-settings)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Safe Browsing Enterprise Settings: A Developer's Guide](/chrome-safe-browsing-enterprise-settings/)

@@ -198,6 +198,12 @@ The best debugging happens before problems occur:
 
 Silent failures in Claude skills usually stem from permission issues, YAML syntax errors, missing dependencies, or misconfigured triggers. Start with the basics, verify the skill loads, test with minimal input, and check tool availability. Use verbose mode to expose hidden execution paths, and isolate problems by simplifying your test cases. Most silent failures become obvious once you can see what the skill is actually doing internally.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-debug-a-claude-skill-that-silently-fails)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-code-skill-not-found-in-skills-directory-how-to-fix/). Fix skills that don't appear in the skill list at all

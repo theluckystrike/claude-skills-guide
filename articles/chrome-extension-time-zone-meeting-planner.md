@@ -186,6 +186,12 @@ Chrome extensions for time zone meeting planning eliminate the friction of coord
 
 The best extension for you depends on your specific needs, team size, meeting frequency, and existing calendar tools. Start with one of the established options, and if your requirements are more specialized, the development patterns covered here provide a foundation for building your own solution.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-time-zone-meeting-planner)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Auto Meeting Summary: A Developer Guide](/chrome-extension-auto-meeting-summary/)

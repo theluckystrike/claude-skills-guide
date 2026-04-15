@@ -472,6 +472,12 @@ For webhook events (opens, clicks, bounces), register a Resend webhook endpoint 
 
 The combination of Claude Code, React Email, and Resend creates a powerful email development workflow. React Email's component-based approach makes templates maintainable, Resend's API simplifies delivery, and Claude Code accelerates development and debugging. Start with a shared base layout and one or two templates, establish consistent patterns early, and expand your email system as your needs grow. The investment in a clean component architecture pays dividends quickly as your email types multiply.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-resend-react-email-component-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code React Testing Library Workflow](/claude-code-react-testing-library-workflow/)

@@ -359,6 +359,12 @@ The popup lets users type a domain and click "Block" or "Unblock". The backgroun
 
 Building a network request blocker is a straightforward process once you understand the `declarativeNetRequest` API. Whether you're creating a privacy tool, debugging API calls, or developing developer utilities, the declarative approach provides the performance and flexibility needed for production-quality extensions that pass Chrome Web Store review.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-network-request-blocker)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

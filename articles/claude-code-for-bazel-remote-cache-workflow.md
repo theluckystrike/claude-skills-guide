@@ -677,6 +677,12 @@ Integrating Claude Code with Bazel remote caching creates a powerful workflow fo
 The key is starting simple, configure a basic remote cache, verify it works, then layer on Claude Code skills to handle the operational complexities. Use the cache hit rate analysis scripts to identify your worst-performing targets, consult Claude Code to understand why those targets miss, and apply the targeted fixes from the troubleshooting table. Your team will thank you when those build times drop from minutes to seconds, and your CI queue times shrink to match.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-bazel-remote-cache-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Bazel Build System Workflow Guide](/claude-code-for-bazel-build-system-workflow-guide/)

@@ -129,6 +129,12 @@ For me, the switch was worth it. The skill system alone has transformed how I wo
 
 The honest truth is that both tools are excellent. Claude Code offers more power and customization at the cost of simplicity. Copilot offers frictionless assistance at the cost of depth. The right choice depends on what you're optimizing for.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=switching-from-copilot-to-claude-code-honest-review)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Aider AI Pair Programming Review 2026: An Honest Take](/aider-ai-pair-programming-review-2026-honest-take/)

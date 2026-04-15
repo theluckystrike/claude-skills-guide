@@ -510,6 +510,12 @@ Implementing product analytics successfully requires discipline and tooling. Cla
 
 The combination of Claude Code and PostHog gives you complete control over your product analytics infrastructure. Whether you're tracking basic events or building sophisticated multi-segment analysis workflows, this integration scales with your needs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-posthog-product-analytics-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code PostHog Feature Flags Analytics Workflow](/claude-code-posthog-feature-flags-analytics-workflow/)

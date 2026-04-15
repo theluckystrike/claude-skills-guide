@@ -407,6 +407,12 @@ The following table summarizes what each control method can achieve and where it
 
 Building a webcam settings adjuster demonstrates the intersection of extension development and web APIs. The techniques covered here. MediaDevices enumeration, constraint application, CSS video filtering, and cross-context messaging. apply broadly to other camera-related projects. Once you understand how tracks, constraints, and cross-context message passing work together, you have the foundation to build screen recorders, virtual background processors, or even real-time video effects pipelines entirely within a Chrome extension.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-webcam-settings-adjuster)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best DNS Settings for Chrome to Speed Up Your Browser](/best-dns-chrome-speed/)

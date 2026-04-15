@@ -395,6 +395,12 @@ The investment compounds over time. Each improvement to the review skill benefit
 Start small: create one review skill, test it on your existing runbooks, and expand from there. The investment pays dividends in reduced incident duration and increased team confidence.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-runbook-review-process-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)

@@ -354,6 +354,12 @@ Disabling Chrome Developer Tools through Group Policy provides a straightforward
 
 For most organizational use cases, combining Developer Tools restrictions with other Chrome policies creates an effective control mechanism that balances security with usability.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-disable-developer-tools-group-policy)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Disable Chrome Guest Mode via Group Policy](/chrome-guest-mode-disable-group-policy/)

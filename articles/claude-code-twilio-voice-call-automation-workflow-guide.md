@@ -277,6 +277,12 @@ Claude Code combined with Twilio enables powerful voice automation workflows tha
 
 Start with simple inbound call handling, progressively add complexity as you validate each component, and always monitor production deployments closely. With this workflow guide as your foundation, you're well-equipped to build voice automation that delivers exceptional customer experiences while reducing operational overhead.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-twilio-voice-call-automation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Drone CI Workflow Automation](/claude-code-drone-ci-workflow-automation/)

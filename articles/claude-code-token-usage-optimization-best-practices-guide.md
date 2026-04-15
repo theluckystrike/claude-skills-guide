@@ -209,6 +209,12 @@ Token optimization in Claude Code balances efficiency with effectiveness. The co
 
 These practices reduce costs and often improve response quality, focused prompts yield focused answers. Implement them incrementally, and you'll find the right balance for your development workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-token-usage-optimization-best-practices-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Token Usage Profiling and Optimization](/claude-skill-token-usage-profiling-and-optimization/). If you're building or maintaining skills, this covers how to measure and trim the skill body tokens themselves.

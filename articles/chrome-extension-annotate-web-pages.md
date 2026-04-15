@@ -347,6 +347,12 @@ Before publishing to the Chrome Web Store, address these requirements:
 
 Building a web annotation extension demonstrates fundamental Chrome extension patterns while creating a genuinely useful tool for daily browser work.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-annotate-web-pages)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Employee Recognition Tool: Build Your Own](/chrome-extension-employee-recognition-tool/)

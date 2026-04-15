@@ -139,6 +139,12 @@ Large file refactoring doesn't have to be terrifying. Claude Code's file reading
 
 Start applying these techniques on your next large file refactoring project. You'll find that what once seemed impossible becomes entirely achievable, one carefully refactored chunk at a time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-use-claude-code-for-large-file-refactoring)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

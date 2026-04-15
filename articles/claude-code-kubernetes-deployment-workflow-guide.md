@@ -195,6 +195,12 @@ Claude Code transforms Kubernetes deployment from a manual, error-prone process 
 
 Start with the basics: generate your first manifest, set up environment configurations, and add CI/CD automation. Each layer builds on the previous one, creating a deployment system that scales with your project.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-kubernetes-deployment-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)

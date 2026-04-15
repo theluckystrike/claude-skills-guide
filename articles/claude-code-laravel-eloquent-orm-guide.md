@@ -653,6 +653,12 @@ Claude Code transforms Laravel Eloquent ORM development by generating correct re
 
 Combine Claude Code with Laravel's built-in features like scopes, accessors, eager loading, observers, and soft deletes to build performant, maintainable applications. Use it to catch N+1 problems early, generate factory-based tests, and produce cast classes that keep your data layer consistent. Remember to test your Eloquent models thoroughly using the TDD skill to ensure your data layer remains reliable as your application grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-laravel-eloquent-orm-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Django ORM Optimization Guide](/claude-code-django-orm-optimization-guide/)

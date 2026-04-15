@@ -240,6 +240,12 @@ Start small, experiment with the examples in this tutorial, and gradually incorp
 
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-jetbrains-plugin-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Backstage Plugin Workflow Tutorial](/claude-code-for-backstage-plugin-workflow-tutorial/)

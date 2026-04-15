@@ -220,6 +220,12 @@ It will review each message and provide actionable feedback for improvement.
 Claude Code transforms conventional commits from a chore into a conversation. By using AI assistance for message crafting, organization, and validation, you maintain commit standards without sacrificing productivity. Start with one workflow, interactive message generation, and expand as your team matures. Your future self will thank you when browsing the git history.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-conventional-commits-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Conventional Commits Enforcement Workflow](/claude-code-conventional-commits-enforcement-workflow/)

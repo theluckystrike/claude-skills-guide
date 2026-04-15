@@ -239,6 +239,12 @@ Claude Code understands backend configuration and can help you set up state mana
 
 OpenTofu provides a mature, open-source alternative to Terraform that works smoothly with Claude Code's AI-assisted workflow. The combination enables you to write infrastructure configurations more efficiently, validate changes before deployment, and maintain well-organized codebases. With practical examples like the EC2 instance and module patterns shown here, you can start applying these techniques to your own projects immediately.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-opentofu-terraform-alternative-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OpenTofu Provider Workflow Tutorial](/claude-code-for-opentofu-provider-workflow-tutorial/)

@@ -516,6 +516,12 @@ The extension APIs most worth studying after this foundation are `chrome.alarms`
 
 Building real extensions, even simple ones, provides the best learning experience. Start with a problem you want to solve, then work through the implementation details using these patterns as reference. Publish to the Chrome Web Store early, even as an unlisted extension: the review process and the store's detailed crash reporting surface issues that are impossible to reproduce locally.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-coding-practice-problems)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension LeetCode Helper: Boost Your Coding.](/chrome-extension-leetcode-helper/)

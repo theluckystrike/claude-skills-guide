@@ -387,6 +387,12 @@ You can also press `Ctrl+L` (or `Cmd+K` on Mac) to clear without touching the ke
 
 Mastering these commands transforms the console from a print statement dumping ground into a proper interactive debugging environment. Start with `console.table()` and `console.time()` if you're new to the advanced APIs, those two alone will visibly improve how quickly you can diagnose data shape problems and performance bottlenecks.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-devtools-console-commands)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - Chrome DevTools Tips for Frontend Developers. Additional techniques for maximizing your DevTools workflow

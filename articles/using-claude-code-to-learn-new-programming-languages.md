@@ -103,6 +103,12 @@ The ultimate goal is fluency, the ability to think in the language, not just tra
 
 Start with a small project in your target language, invite Claude to work alongside you, and treat every line of code as a learning opportunity. The combination of practical application and instant feedback makes language acquisition faster and more enjoyable than traditional study methods.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=using-claude-code-to-learn-new-programming-languages)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Aider AI Pair Programming Review 2026: An Honest Take](/aider-ai-pair-programming-review-2026-honest-take/)

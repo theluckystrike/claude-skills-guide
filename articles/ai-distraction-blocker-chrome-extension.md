@@ -569,6 +569,12 @@ Building an AI distraction blocker Chrome extension combines web development ski
 
 The progression from static selectors to heuristic scoring to local model inference maps naturally to increasing levels of sophistication. You can ship a useful v1 in an afternoon with CSS hiding and `declarativeNetRequest` rules, then iterate toward context-aware intelligence over time. Focus on your own workflow first. block the specific sites and UI patterns that pull you away from flow state. and generalize from there.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-distraction-blocker-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Network Request Blocker: A Developer's Guide](/chrome-extension-network-request-blocker/)

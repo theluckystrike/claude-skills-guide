@@ -162,6 +162,12 @@ Regular extension audits, thoughtful management of enabled extensions, and atten
 
 The key is balance, keeping the extensions you need while eliminating those that drain resources without providing proportional value. Your browser should work for you, not against you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-slow-too-many-extensions)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Cookie Manager Chrome Extensions for Developers in 2026](/best-cookie-manager-chrome/)

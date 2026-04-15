@@ -446,6 +446,12 @@ Integrating Claude Code with Memcached unlocks powerful automation possibilities
 The combination of Claude Code's scripting capabilities and Memcached's performance makes for a formidable toolset in any developer's arsenal. Start small with the cache-aside pattern and a single node, then add connection pooling, monitoring, and warming scripts as your traffic grows. Use Claude Code to generate boilerplate, review configurations, and suggest optimizations. treating it as a knowledgeable pair programmer that understands both your codebase and Memcached's internals. Continuously optimize based on real-world metrics, and you'll find that a well-tuned Memcached layer can eliminate the majority of your database load at peak traffic.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-memcached-caching-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Service Worker Caching Workflow](/claude-code-for-service-worker-caching-workflow/)

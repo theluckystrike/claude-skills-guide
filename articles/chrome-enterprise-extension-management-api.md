@@ -415,6 +415,12 @@ Finally, establish automated policies that trigger extension reviews when new pe
 
 The Chrome Enterprise Extension Management API transforms browser extension administration from a manual, time-consuming process into a scalable, automated workflow. By integrating these capabilities into your IT operations, you gain precise control over the browser environment while reducing administrative overhead, and you build the kind of institutional knowledge and tooling that makes the next security incident a manageable operational task rather than a scramble.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-extension-management-api)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Bandwidth Management: A Practical Guide](/chrome-enterprise-bandwidth-management/)

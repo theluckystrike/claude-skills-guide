@@ -268,6 +268,12 @@ Test your extension against multiple websites to verify compatibility. Some site
 
 Building a user agent switcher in Chrome extensions requires understanding the Declarative Net Request API and its limitations. Choose the method that matches your use case: declarative rules for simple global switching, runtime messaging for dynamic control, or content script injection for per-tab customization. The Manifest V3 approach provides the most reliable results for HTTP header modification.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-user-agent-switcher-developer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Spoof User Agent in Chrome for Development and.](/spoof-user-agent-chrome/)

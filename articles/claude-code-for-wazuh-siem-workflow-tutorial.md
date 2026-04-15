@@ -325,6 +325,12 @@ Integrating Claude Code with Wazuh SIEM transforms your security operations from
 Start with simple alert categorization, then progressively add more complex automation as you build confidence in the workflows. The key is maintaining the human-in-the-loop for critical decisions while letting Claude amplify your team's capabilities.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-wazuh-siem-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)

@@ -383,6 +383,12 @@ The right answer depends on your context. Browser extensions are fastest to set 
 
 Evaluate your specific workflow needs, test the extensions that match your requirements, and consider building custom solutions when off-the-shelf tools fall short.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=colorpick-eyedropper-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Arrow and Text Overlay Screenshot Guide](/chrome-extension-arrow-and-text-overlay-screenshot/)

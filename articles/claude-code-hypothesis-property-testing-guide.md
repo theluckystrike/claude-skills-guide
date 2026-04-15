@@ -632,6 +632,10 @@ Your tests become more comprehensive with less manual effort. That's the power o
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-hypothesis-property-testing-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Topics
 
 - Test-Driven Development with Claude Code

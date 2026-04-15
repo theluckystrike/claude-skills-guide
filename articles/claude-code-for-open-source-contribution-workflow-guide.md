@@ -239,6 +239,12 @@ Remember that open source communities value the effort you put in, not just the 
 
 Start with small contributions, learn from each experience, and gradually take on more complex issues. Claude Code is here to support you at every step of your open source journey.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-open-source-contribution-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Aider: Open Source Contribution Workflow.](/claude-code-vs-aider-open-source-contribution-workflow/)

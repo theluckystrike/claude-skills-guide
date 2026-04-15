@@ -213,6 +213,12 @@ Claude Code emerges as the most capable free option in 2026, particularly for de
 
 The best approach: try each tool for a week on real work. Your specific codebase, workflow, and preferences will reveal which free assistant provides the most value for your situation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-free-ai-coding-assistants-2026-comparison)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code vs Gemini CLI for Developers 2026](/claude-code-vs-gemini-cli-for-developers-2026/)

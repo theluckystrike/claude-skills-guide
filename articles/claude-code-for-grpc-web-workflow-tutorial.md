@@ -205,6 +205,12 @@ Integrating Claude Code into your gRPC-Web workflow transforms how you build and
 
 Start by setting up your environment, defining your first proto service, and generating client code. As you build more complex gRPC-Web applications, you'll find Claude Code increasingly valuable for maintaining code quality and quickly resolving integration challenges.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-grpc-web-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)

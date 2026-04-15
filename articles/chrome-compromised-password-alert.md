@@ -207,6 +207,12 @@ For high-security environments, combine Chrome's alerts with dedicated password 
 
 Chrome's compromised password alert provides a solid baseline security feature for users who rely on the browser's built-in password management. Developers can use the same k-anonymity API to build solid breach detection into their own applications, creating layered security approaches that protect users across multiple platforms.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-compromised-password-alert)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Password Generator Chrome Extension: A Developer Guide](/ai-password-generator-chrome-extension/)

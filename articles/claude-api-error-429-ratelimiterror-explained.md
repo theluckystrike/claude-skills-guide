@@ -126,6 +126,12 @@ print(f"Reset at: {reset_time}")
 3. **Upgrade your spend tier**: Higher tiers get higher rate limits. Tier 1 starts at $5 credit purchase; Tier 4 requires $400.
 4. **Set workspace limits**: Configure per-workspace limits to prevent one service from consuming your entire organization's quota.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-error-429-ratelimiterror-explained)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude API Error 529 overloaded_error Fix](/claude-api-error-529-overloadederror-explained/) -- handle API overload errors that look similar to rate limits.

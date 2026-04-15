@@ -429,6 +429,12 @@ OpenTelemetry tracing provides visibility into your application's behavior acros
 
 Remember to iterate: start with basic setup, add meaningful attributes, implement proper context propagation, and refine with sampling strategies as your observability needs grow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-opentelemetry-tracing-instrumentation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Kubernetes Monitoring with Prometheus](/claude-code-kubernetes-monitoring-prometheus/)

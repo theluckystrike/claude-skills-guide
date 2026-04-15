@@ -389,6 +389,12 @@ Implementing ARIA labels correctly requires understanding both the attributes av
 
 The combination of skills like frontend-design for component patterns, tdd for verification, and pdf for documentation creates a workflow that maintains accessibility as your project grows. Remember: accessible interfaces benefit everyone, not just screen reader users. Form labels improve usability for all users. Clear error messages help everyone understand what went wrong. Good focus management makes keyboard power users faster. ARIA done right is good product design.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-aria-labels-implementation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/). WCAG audits identify missing ARIA labels

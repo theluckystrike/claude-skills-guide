@@ -112,6 +112,12 @@ The service has grown substantially and appears committed to continued developme
 
 *This review reflects Proton Drive's features and pricing as of March 2026. Cloud services frequently update their offerings, so verify current details before making purchasing decisions.*
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=proton-drive-review-honest-assessment-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Encrypted Backup Solution for Developers: A 2026 Technical Guide](/best-encrypted-backup-solution-for-developers/)

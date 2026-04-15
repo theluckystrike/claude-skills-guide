@@ -310,6 +310,12 @@ Start by creating your project structure, building basic validation scripts, and
 *This tutorial covers practical Varnish Cache workflows using Claude Code CLI. For more advanced topics like Varnish Enterprise features, ESI (Edge Side Includes), or VMOD development, explore our additional guides.*
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-varnish-cache-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

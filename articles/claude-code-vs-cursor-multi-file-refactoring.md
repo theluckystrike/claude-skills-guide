@@ -152,6 +152,12 @@ The key insight is that Claude Code treats refactoring as a workflow that can be
 
 *This comparison reflects the current capabilities of both tools as of early 2026. Both platforms continue to evolve rapidly, so specific features may change.*
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-vs-cursor-multi-file-refactoring)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Why Is Claude Code Recommended for Refactoring Tasks](/why-is-claude-code-recommended-for-refactoring-tasks/). Detailed look into Claude Code's refactoring strengths independent of any tool comparison

@@ -281,6 +281,12 @@ Start with the basic container management skill, then expand into specialized sk
 Remember to regularly update your skills as Podman introduces new features, and consider contributing your skills to the community to help others streamline their container workflows.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-podman-container-workflow-setup-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Container Registry Workflow Guide](/claude-code-container-registry-workflow-guide/)

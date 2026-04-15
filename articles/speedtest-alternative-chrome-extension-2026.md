@@ -343,6 +343,12 @@ For teams requiring automated performance monitoring, Lighthouse CI integrates w
 
 The best approach combines multiple tools: a quick extension for spot checks, DevTools for detailed analysis, and CI integration for continuous monitoring. Each serves a different purpose in a complete developer toolkit. Treat your network testing infrastructure the same way you treat your test suite. multiple layers, each catching different categories of problems.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=speedtest-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [1Password Alternative Chrome Extension in 2026](/1password-alternative-chrome-extension-2026/)

@@ -252,6 +252,12 @@ Integrating Claude Code with Hopsworks Feature Store creates a powerful workflow
 The combination of Claude Code's development assistance and Hopsworks' enterprise-grade feature management gives you the best of both worlds: rapid iteration and production-grade reliability.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-hopsworks-feature-store-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Full Stack Developer Feature Shipping Workflow](/claude-code-full-stack-developer-feature-shipping-workflow/)

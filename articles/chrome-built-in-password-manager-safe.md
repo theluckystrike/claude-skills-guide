@@ -270,6 +270,12 @@ Run: audit_passwords('/path/to/exported_passwords.csv')
 
 The exported CSV contains plaintext credentials, so treat it with extreme care, run the analysis on a trusted machine, never upload the file anywhere, and delete it immediately after.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-built-in-password-manager-safe)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Cookie Manager Chrome Extensions for Developers in 2026](/best-cookie-manager-chrome/)

@@ -293,6 +293,12 @@ The best choice depends on your specific workflow. If you need quick viewport te
 
 Explore the options that align with your development environment and workflow patterns. Window management may seem like a small detail, but consistent viewport control significantly improves testing accuracy and productivity over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=window-resizer-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Password Checkup: Complete Guide for Developers.](/chrome-password-checkup/)

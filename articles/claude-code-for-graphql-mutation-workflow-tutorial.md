@@ -472,6 +472,12 @@ The key is treating Claude Code as a collaborative partner, provide clear contex
 As your API grows, return to Claude Code for ongoing tasks: refactoring resolvers to adopt new patterns, generating migration scripts when schemas change, reviewing resolver logic for N+1 query problems, and keeping your test suite current with new mutation scenarios. The compounding productivity gain across the full development lifecycle is where Claude Code's value really shows.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-graphql-mutation-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)

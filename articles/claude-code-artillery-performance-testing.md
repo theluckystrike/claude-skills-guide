@@ -244,6 +244,12 @@ By combining these tools, you build a comprehensive testing pipeline that catche
 
 Claude Code and Artillery together form a practical combination for modern performance testing. Automate test generation, run scalable load scenarios, and analyze results systematically. Start with simple configurations, gradually add complexity, and integrate testing into your development workflow. Your users will thank you when the application handles production traffic without breaking a sweat.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-artillery-performance-testing)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Combine TDD practices with load testing to ensure new features ship with both functional and performance coverage

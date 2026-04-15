@@ -277,6 +277,12 @@ Gateway routing patterns are essential for building scalable, maintainable micro
 Remember that gateway routing is not a set-it-and-forget-it configuration. Continuously monitor your routing behavior, use Claude Code to analyze performance data, and iteratively improve your routing strategy as your services evolve.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-gateway-routing-pattern-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Benchmark Reporting Workflow Tutorial](/claude-code-for-benchmark-reporting-workflow-tutorial/)

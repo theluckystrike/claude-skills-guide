@@ -259,6 +259,12 @@ This last technique is underused. The model can sometimes detect its own potenti
 
 Understanding that hallucinations are an inherent characteristic of current AI models, not a bug to eliminate, helps you develop more effective debugging and verification habits. The combination of human oversight and AI assistance, when properly balanced, produces better results than relying on either alone. The developers who get the most value from Claude Code are those who treat it as a knowledgeable but fallible collaborator: capable of producing excellent first drafts that still benefit from a human expert's critical review.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=why-does-claude-code-hallucinate-code-sometimes)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Keeps Making Same Mistake Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/). Hallucinations can become recurring mistakes

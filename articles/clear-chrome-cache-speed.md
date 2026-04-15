@@ -207,6 +207,12 @@ Clearing Chrome cache is a fundamental troubleshooting skill. The method you cho
 
 Integrating cache clearing into your development workflow catches issues early and keeps debugging efficient.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=clear-chrome-cache-speed)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Managed Profiles: Separating Work and Personal Browsing](/chrome-managed-profiles-work-personal/)

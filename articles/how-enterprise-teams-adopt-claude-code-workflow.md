@@ -118,6 +118,12 @@ Enterprise teams adopting Claude Code workflows benefit from starting small, sta
 
 The key to successful adoption is viewing Claude Code as an enhancement to developer capabilities rather than a replacement for human expertise. Teams that embrace this perspective consistently achieve the productivity gains and quality improvements that make enterprise AI adoption worthwhile.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-enterprise-teams-adopt-claude-code-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Augment Code AI Review for Enterprise Teams 2026](/augment-code-ai-review-for-enterprise-teams-2026/)

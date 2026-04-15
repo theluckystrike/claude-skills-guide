@@ -308,6 +308,12 @@ Automating Confluence workflows with Claude Code transforms how your team manage
 
 Remember to test thoroughly in a non-production environment before deploying automation scripts. With proper error handling and logging, your Confluence automation will become a reliable asset in your development workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-confluence-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

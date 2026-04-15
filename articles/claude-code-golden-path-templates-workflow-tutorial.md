@@ -447,6 +447,12 @@ The real payoff from golden paths is compounding. Each workflow you build encode
 
 Remember: golden paths work best when they are focused, configurable, and well-documented. Begin with simple workflows and iterate toward more sophisticated automation as your needs evolve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-golden-path-templates-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Golden Path Developer Workflow](/claude-code-for-golden-path-developer-workflow/)

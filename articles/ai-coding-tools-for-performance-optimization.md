@@ -187,6 +187,12 @@ Performance optimization is iterative. Use AI to identify opportunities, measure
 
 Related guides: [Claude Code Performance Bottleneck Finding](/claude-code-performance-bottleneck-finding/)
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-coding-tools-for-performance-optimization)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)

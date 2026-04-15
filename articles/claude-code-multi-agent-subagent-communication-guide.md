@@ -381,6 +381,12 @@ Subagents producing inconsistent output formats: Define a strict JSON schema for
 
 Deadlocks in bidirectional agent communication: If agent A waits for agent B and agent B waits for agent A, the workflow hangs. Prevent this by using a unidirectional communication pattern: agents only write to the shared store, the orchestrator is the only reader, and agents never directly call each other.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-multi-agent-subagent-communication-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The skills most suited for subagent use (tdd, pdf, frontend-design) are profiled here with invocation patterns that translate to multi-agent workflows

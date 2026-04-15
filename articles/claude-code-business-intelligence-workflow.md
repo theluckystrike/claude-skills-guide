@@ -161,6 +161,12 @@ As your BI needs grow, consider these expansion strategies:
 
 Claude Code's skill system provides the flexibility to start simple and expand incrementally. Begin with one data source and one report, then add complexity as your requirements evolve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-business-intelligence-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)

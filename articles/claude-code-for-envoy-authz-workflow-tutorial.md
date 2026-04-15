@@ -405,6 +405,12 @@ Building authorization workflows with Envoy requires careful attention to config
 The key to success is understanding that authorization is a defense-in-depth strategy, combine multiple mechanisms rather than relying on any single approach. JWT handles authentication and claim extraction. ext_authz handles complex business logic and policy evaluation. RBAC handles deterministic path and principal rules. With Claude Code guiding your implementation, you can confidently build authorization systems that are both secure and maintainable as your service mesh grows.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-envoy-authz-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Envoy Proxy Workflow Tutorial](/claude-code-for-envoy-proxy-workflow-tutorial/)

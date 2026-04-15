@@ -221,6 +221,12 @@ Virtual background Chrome extensions demonstrate how browser APIs and machine le
 
 The technology continues improving as segmentation models become more accurate and browser performance increases. For developers interested in this space, starting with MediaPipe's selfie segmentation and progressively adding optimization layers provides a solid foundation.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=virtual-background-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Remove Image Background: A Developer and Power User Guide](/chrome-extension-remove-image-background/)

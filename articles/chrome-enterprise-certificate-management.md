@@ -213,6 +213,12 @@ Effective Chrome Enterprise certificate management follows several principles. F
 
 Chrome Enterprise certificate management provides the controls necessary for secure, manageable browser deployments in enterprise environments. By using group policies appropriately, you can ensure consistent certificate handling across all managed Chrome installations while maintaining the flexibility needed for development and internal application access.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-certificate-management)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Bandwidth Management: A Practical Guide](/chrome-enterprise-bandwidth-management/)

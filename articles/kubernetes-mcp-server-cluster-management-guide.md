@@ -359,6 +359,12 @@ The investment in setting up these connections pays dividends through reduced co
 
 The most impactful gains come not from replacing human judgment, but from eliminating the tedious data-gathering steps that precede every decision. When Claude handles the assembly of facts and Claude handles the formatting of reports, your engineers spend their time on analysis, architecture, and decisions. the work that actually requires human expertise.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=kubernetes-mcp-server-cluster-management-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)

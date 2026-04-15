@@ -158,6 +158,12 @@ For example, if the pdf skill struggles with your specific document structure, l
 
 Performance optimization for Claude Code is an ongoing process rather than a one-time fix. By regularly profiling your skills, analyzing tool call patterns, and monitoring resource usage, you maintain a responsive and efficient AI-assisted development environment. Start with the techniques in this guide, establish baseline metrics, and iterate toward the performance characteristics that best support your workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-performance-bottleneck-finding)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Profiler Integration Guide](/claude-code-profiler-integration-guide/). Profiling is the primary tool for finding bottlenecks

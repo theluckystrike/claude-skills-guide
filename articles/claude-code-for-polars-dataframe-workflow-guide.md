@@ -309,6 +309,12 @@ To get the most out of combining Claude Code with Polars:
 
 By integrating Claude Code into your Polars workflows, you gain a collaborative partner that helps generate efficient code, debug issues, and optimize your data processing pipelines. The combination of natural language interaction and programmatic data manipulation creates a powerful workflow for data professionals at any skill level.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-polars-dataframe-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-for-data-science-and-jupyter-notebooks/)

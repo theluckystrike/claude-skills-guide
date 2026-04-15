@@ -167,6 +167,12 @@ Policy Sync Delays: If you're programmatically pushing VPN configurations, allow
 
 Chrome Enterprise VPN integration into developer workflows requires understanding both the browser's network architecture and your organization's specific VPN configuration. Start with basic connectivity verification, then layer in more sophisticated automation as your requirements demand.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-enterprise-vpn-integration)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Anki Web Integration: A Developer Guide](/chrome-extension-anki-web-integration/)

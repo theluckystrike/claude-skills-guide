@@ -166,6 +166,12 @@ When preparing TypeScript projects for production, Claude Code helps with:
 
 The best way to use Claude Code with TypeScript projects is treating types as a communication bridge. Clear, well-documented types produce better Claude Code outputs. Invest time in your TypeScript configuration and type definitions, and Claude Code will generate code that matches your standards.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-way-to-use-claude-code-with-typescript-projects)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Frontend skills work great with TypeScript

@@ -128,6 +128,12 @@ dig api.anthropic.com
 - **Kill old sessions**: check for zombie Claude processes before starting new work
 - **Monitor API status**: bookmark https://status.anthropic.com
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-slow-response-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Fix: Claude API Error 429 Rate Limit](/anthropic-api-error-429-rate-limit/)

@@ -584,6 +584,12 @@ Work through features in this order: define your data model and Prisma schema fi
 
 For documentation needs, the pdf skill generates project documentation directly from your source code and route structure, keeping your docs synchronized with implementation. Use it at the end of each feature cycle to capture the API surface before it gets stale.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-sveltekit-full-stack-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Vercel Supabase Clerk Full Stack Development](/claude-code-for-vercel-supabase-clerk-full-stack/)

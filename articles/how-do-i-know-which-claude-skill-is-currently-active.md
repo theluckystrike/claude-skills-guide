@@ -187,6 +187,12 @@ Remember that skills only affect Claude's behavior within your current session. 
 
 Understanding your active skill context transforms Claude Code from a general-purpose AI assistant into a specialized tool that adapts to your specific needs. Whether you're writing tests with the tdd skill, handling documents with the pdf skill, or building interfaces with frontend-design, knowing which skill is active puts you in control of your workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-know-which-claude-skill-is-currently-active)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill Not Triggering: Troubleshoot Guide (2026)](/claude-skill-not-triggering-automatically-troubleshoot/). Diagnose why a skill you expected to be active is not behaving as expected.

@@ -277,6 +277,12 @@ Consider performance implications of complex policy evaluation. Cache attribute 
 Attribute-Based Access Control provides the flexibility modern applications need to implement sophisticated authorization logic. By understanding the fundamental concepts, subject, resource, action, and environment attributes, you can design policies that accurately reflect your organization's security requirements. Claude Code accelerates ABAC implementation by generating core engine code, creating policy structures, and helping you reason through complex authorization scenarios. Start with simple policies, test thoroughly, and iteratively add complexity as your requirements evolve.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-abac-attribute-based-access-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills Access Control and Permissions Enterprise G...](/claude-skills-access-control-and-permissions-enterprise/)

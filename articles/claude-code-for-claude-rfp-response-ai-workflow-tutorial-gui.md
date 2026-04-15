@@ -164,6 +164,12 @@ Claude Code transforms RFP response from a painful manual process into an effici
 
 The initial investment in setting up proper templates, skills, and pipelines pays dividends across every subsequent RFP. Your competition is still wrestling with spreadsheets and email threads, position yourself ahead with AI-powered workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-claude-rfp-response-ai-workflow-tutorial-gui)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Incident Response Runbook Workflow](/claude-code-for-incident-response-runbook-workflow/)

@@ -202,6 +202,12 @@ Your frontend deployment (Vercel, Netlify, or similar) needs to point to your Ra
 
 This workflow combines Rails' backend strength with Claude Code's AI capabilities, creating a development experience that handles the entire full stack development cycle. The key is maintaining clear API contracts and using Claude Code's skills for testing and documentation generation at each layer of your application.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-rails-api-mode-full-stack-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Full Stack Developer Feature Shipping Workflow](/claude-code-full-stack-developer-feature-shipping-workflow/)

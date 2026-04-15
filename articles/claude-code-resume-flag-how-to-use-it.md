@@ -313,6 +313,12 @@ The `--resume` flag is an essential tool for developers working on complex, mult
 
 Used well, `--resume` turns Claude Code from a session-based assistant into something closer to a persistent collaborator, one that remembers what you were building, what decisions were made, and exactly where you left off. Combine it with good checkpoint practices, a well-maintained CLAUDE.md, and the supermemory skill for the most solid interrupted-task recovery workflow available in Claude Code today.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-resume-flag-how-to-use-it)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide]/claude-code-for-beginners-complete-getting-started-2026/)

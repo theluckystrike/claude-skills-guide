@@ -616,6 +616,12 @@ functions:
 
 The key is maintaining a clear structure: separate templates for each runtime, test locally before deploying, use environment variables for configuration, and follow least-privilege IAM patterns from the start. With this workflow, you can generate and deploy functions in minutes rather than hours. As you refine the skill, add patterns for your specific stack. RDS Proxy connection pooling, specific SQS batch error handling, or DynamoDB single-table design templates. so each conversation picks up exactly where your team's standards begin.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-serverless-function-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). structure serverless deployment skills with proper configuration

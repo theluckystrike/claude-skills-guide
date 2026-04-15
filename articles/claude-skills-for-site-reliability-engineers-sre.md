@@ -199,6 +199,12 @@ Start by integrating Claude into your most frequent SRE tasks. Build reusable sc
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-site-reliability-engineers-sre)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). DevOps skill recommendations relevant to SRE on-call and deployment workflows

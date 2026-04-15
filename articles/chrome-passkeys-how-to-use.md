@@ -172,6 +172,12 @@ The private key never leaves your device and is protected by the operating syste
 
 Chrome passkeys offer a secure, convenient alternative to passwords. Setting them up takes minutes, and using them is faster than typing any password. For developers, the WebAuthn API provides a straightforward path to implementing passkey support in your applications. Start converting your most important accounts to passkeys today and experience passwordless authentication at its finest.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-passkeys-how-to-use)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Check Link Safety: Developer Tools and Techniques](/chrome-check-link-safety/)

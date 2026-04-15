@@ -151,6 +151,12 @@ Combining Claude Code with Insomnia transforms API testing from a manual, error-
 
 Start by organizing your Insomnia workspace, then progressively adopt these workflows for request creation, test generation, and debugging. The efficiency gains will be immediately apparent, and your APIs will be more reliable as a result.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-insomnia-api-testing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Snapshot Testing Guide](/claude-code-api-snapshot-testing-guide/)

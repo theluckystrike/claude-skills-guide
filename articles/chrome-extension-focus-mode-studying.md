@@ -289,6 +289,12 @@ This means block list changes made on a laptop automatically appear on the user'
 
 For users who want centrally managed focus schedules without per-device configuration. such as students in a managed classroom environment. the same GPO-based deployment approach that forces extension installation can also push pre-configured block lists via managed extension storage.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-focus-mode-studying)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)

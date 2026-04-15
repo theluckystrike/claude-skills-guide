@@ -326,6 +326,12 @@ Reward rates out of date: Add a "Last updated" timestamp and show a warning badg
 
 For comprehensive optimization, pair your extension with manual tracking for offline purchases and annual fee calculations. The extension handles quick checkout decisions; strategic card selection requires a broader view.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-credit-card-rewards-optimizer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Gift Card Balance Checker: A Developer Guide](/chrome-extension-gift-card-balance-checker/)

@@ -221,6 +221,12 @@ Claude Code's testing capabilities extend beyond Playwright. For comprehensive t
 
 Combine these tools based on your project's specific needs. Playwright handles browser automation while these complementary skills address other testing scenarios.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-playwright-e2e-testing-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Window Resizer Testing: A Practical Guide](/chrome-extension-window-resizer-testing/)

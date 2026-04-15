@@ -141,6 +141,12 @@ Claude Code's weekly digest resources provide a steady stream of new techniques 
 
 Pick one new skill each week, integrate it into your workflow, and track the time savings. Over months, these incremental improvements compound into significant productivity gains.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-weekly-digest-resources)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). Start your weekly skill exploration with the highest-impact skills proven to save the most time

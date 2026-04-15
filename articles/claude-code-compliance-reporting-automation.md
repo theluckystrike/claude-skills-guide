@@ -339,6 +339,12 @@ Claude Code transforms compliance reporting from a manual, error-prone process i
 
 Start with one automation use case. dependency auditing is a strong choice because the tooling is mature and the findings are unambiguous. Measure the time savings, refine the output format based on what your auditors actually need, then expand to code scanning and report generation. The cumulative effect of automated compliance reporting significantly reduces technical debt and improves overall security posture, while creating the documented evidence trail that formal audits require.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-compliance-reporting-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GDPR Compliance Implementation](/claude-code-gdpr-compliance-implementation/)

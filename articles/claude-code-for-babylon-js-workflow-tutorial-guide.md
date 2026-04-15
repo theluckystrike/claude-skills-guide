@@ -200,6 +200,12 @@ Integrating Claude Code into your Babylon.js workflow transforms how you approac
 The combination of Babylon.js's powerful 3D capabilities and Claude Code's assistance creates a productive environment for game developers of all skill levels. Experiment with different prompts, track which approaches work best for your workflow, and continuously refine your process.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-babylon-js-workflow-tutorial-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

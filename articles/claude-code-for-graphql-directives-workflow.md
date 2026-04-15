@@ -388,6 +388,12 @@ The key is to build incrementally, adding capabilities as you identify problems 
 The payoff compounds: a schema with well-managed directives is easier to audit, easier to document, easier to migrate, and easier to hand off to new developers who can read the intent of every field directly from its annotations.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-graphql-directives-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for GraphQL Code Generation Workflow](/claude-code-for-graphql-code-generation-workflow/)

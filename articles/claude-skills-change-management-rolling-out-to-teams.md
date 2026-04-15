@@ -247,6 +247,12 @@ Effective change management for Claude skills mirrors software engineering best 
 
 Start with a small pilot group, iterate on your processes, and scale up as your team develops confidence in the skill management workflow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-change-management-rolling-out-to-teams)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/). The distribution mechanics covered in this change management guide. install scripts, shared repos, and onboarding

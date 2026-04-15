@@ -201,6 +201,10 @@ Evaluate based on where your credentials live, cloud services, local infrastruct
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-password-manager-chrome-free)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Ad Blocker for Chrome in 2026](/best-ad-blocker-chrome-2026/)

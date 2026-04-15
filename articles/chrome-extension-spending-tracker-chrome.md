@@ -314,6 +314,12 @@ const csvContent = '\uFEFF' + [headers, ...rows].map(r => r.join(',')).join('\n'
 
 This extension keeps your financial data in your browser with no subscriptions and no data harvesting. just functional expense tracking built to your exact specifications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-spending-tracker-chrome)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Word Count Tracker: A Developer Guide](/chrome-extension-word-count-tracker/)

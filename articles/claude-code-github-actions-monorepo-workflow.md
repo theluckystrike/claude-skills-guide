@@ -272,6 +272,12 @@ Building a monorepo CI/CD pipeline with Claude Code and GitHub Actions requires 
 
 Start with basic path filters, then layer on matrix strategies and caching as your monorepo grows. Use Claude Code skills to automate workflow maintenance and keep your pipelines optimized over time. The combination of Claude Code's automation capabilities and GitHub Actions' flexible configuration creates a solid foundation for monorepo development at any scale.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-github-actions-monorepo-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

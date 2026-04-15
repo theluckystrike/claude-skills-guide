@@ -495,6 +495,12 @@ The combination is particularly powerful because Mythril's raw output is technic
 Start small: create your first mythril skill, run it against the `VulnerableVault.sol` example from this tutorial, and verify Claude Code produces the reentrancy finding with a working patch. Then integrate the pre-commit hook into your active project. The investment in setting up this workflow pays dividends in reduced security incidents, faster code reviews, and a team that develops security intuition over time rather than treating security as someone else's problem.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-mythril-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Solidity Smart Contract Development](/claude-skills-for-solidity-smart-contract-development/)

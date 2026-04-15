@@ -251,6 +251,12 @@ AI PDF summarizer Chrome extensions combine PDF parsing, AI integration, and bro
 
 The foundation established here with Manifest V3, PDF.js integration, and message-passing architecture provides a solid starting point for building sophisticated document processing extensions tailored to specific workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-pdf-summarizer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)

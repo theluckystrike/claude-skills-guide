@@ -188,6 +188,12 @@ Finally, test your locks under failure conditions. Simulate network partitions, 
 Distributed locking is foundational to building reliable distributed systems. With Claude Code, you can rapidly implement various locking patterns, from simple Redis locks to sophisticated fair lease-based systems. The key is understanding your specific requirements, contention levels, failure scenarios, and performance needs, and choosing the appropriate pattern. Start with simple implementations, measure performance, and add complexity only when your requirements demand it.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-distributed-lock-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Distributed Load Testing Workflow](/claude-code-for-distributed-load-testing-workflow/)

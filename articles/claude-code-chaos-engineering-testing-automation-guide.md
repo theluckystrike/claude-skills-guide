@@ -335,6 +335,12 @@ Claude Code transforms chaos engineering from a complex, tool-heavy discipline i
 
 The key is starting simple, run one small experiment, learn from the results, and iterate. Over time, you'll build a library of experiments that continuously validate your system's ability to handle reality.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-chaos-engineering-testing-automation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)

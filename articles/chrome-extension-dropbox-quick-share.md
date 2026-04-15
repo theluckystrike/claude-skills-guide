@@ -307,6 +307,12 @@ Building a Chrome extension for Dropbox quick share combines web APIs, browser e
 
 The Dropbox API offers extensive capabilities beyond basic sharing. Explore the official API documentation to add features like shared folder management, team spaces, or file request creation. With the foundation in place, you can continuously improve your extension based on user feedback and workflow requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-dropbox-quick-share)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension File Sharing Quick Upload: A.](/chrome-extension-file-sharing-quick-upload/)

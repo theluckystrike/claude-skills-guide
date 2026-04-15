@@ -245,6 +245,12 @@ Effective Firebase debugging requires the right tools and techniques. Chrome ext
 
 For more Firebase development tips, explore our guides on Firebase security rules, Cloud Functions optimization, and building scalable Firebase architectures.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-firebase-debugger)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension WASM Debugger: A Practical Guide](/chrome-extension-wasm-debugger/)

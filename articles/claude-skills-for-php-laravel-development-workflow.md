@@ -215,6 +215,12 @@ Start with the two or three most repetitive tasks your team does: usually contro
 
 Claude skills for PHP Laravel development transform how you build applications. By codifying your team's conventions, automating repetitive tasks, and integrating with Laravel's artisan CLI, you focus on business logic rather than boilerplate. Start with the skills outlined here, customize them to your project structure, and watch your development velocity increase significantly.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skills-for-php-laravel-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). create your own Laravel-specific skills from scratch

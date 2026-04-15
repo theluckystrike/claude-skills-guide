@@ -179,6 +179,12 @@ Integrating Claude Code with Warp terminal creates a powerful development enviro
 
 The key is to start simple: generate commands, explain errors, and create basic scripts. As you grow familiar with the capabilities, move toward building custom workflows and automation that match your specific development needs. With both tools evolving rapidly, staying current with new features ensures you continue extracting maximum value from this powerful combination.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-warp-terminal-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Huh Forms Terminal Workflow Guide](/claude-code-for-huh-forms-terminal-workflow-guide/)

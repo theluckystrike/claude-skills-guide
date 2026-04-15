@@ -189,6 +189,12 @@ Modular architecture in NestJS isn't about following rigid rules, it's about mak
 
 The patterns shown here scale from small projects to enterprise applications. Start with clean modules from day one, and refactor when the domain reveals better boundaries. Your future self, and your teammates, will thank you.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-nestjs-modular-architecture-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

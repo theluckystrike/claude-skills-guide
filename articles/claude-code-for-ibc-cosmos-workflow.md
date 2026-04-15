@@ -323,6 +323,12 @@ Claude Code significantly accelerates IBC Cosmos workflow development by automat
 Start with clear configuration in your CLAUDE.md, break complex tasks into manageable steps, and always validate generated code on testnets before production deployment. With these practices, you can build solid cross-chain applications efficiently.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-ibc-cosmos-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OpenSea Protocol Workflow Guide](/claude-code-for-opensea-protocol-workflow-guide/)

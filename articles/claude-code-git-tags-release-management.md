@@ -193,6 +193,12 @@ Git tags combined with Claude Code's automation capabilities form the foundation
 
 Start with annotated tags for releases, establish clear naming conventions, and integrate pre-release validation through testing skills. Your deployment pipelines become more predictable, and your team gains confidence in the release process.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-git-tags-release-management)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Changelog Generation Workflow](/claude-code-changelogs-and-release-notes-automation/). Tags trigger changelog generation

@@ -153,6 +153,12 @@ Claude Code skills that understand Cloudinary's transformation API enable powerf
 The combination of Claude Code's understanding capabilities and Cloudinary's transformation engine represents a significant step toward fully automated asset management, letting developers focus on building while Claude handles the image complexity.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-cloudinary-image-transformation-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for ArgoCD Image Updater Workflow](/claude-code-for-argocd-image-updater-workflow/)

@@ -249,6 +249,12 @@ AI research assistant Chrome extensions bridge the gap between passive browsing 
 
 The patterns covered here, content script injection, background service worker architecture, and AI provider integration, form the foundation for building extensions that scale from personal projects to production releases used by thousands of researchers.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-research-assistant-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

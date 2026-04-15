@@ -425,6 +425,12 @@ The key benefits for developers and power users:
 
 Start with two profiles. Work and Personal. and expand as your needs evolve. Many developers add a third Dev profile once they experience the benefits of keeping development tooling and debugging extensions separate from their everyday work profile. The overhead is minimal while the organization benefits compound over time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-managed-profiles-work-personal)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Safe Browsing Enterprise Settings: A Developer's Guide](/chrome-safe-browsing-enterprise-settings/)

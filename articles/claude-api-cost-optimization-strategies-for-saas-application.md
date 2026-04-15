@@ -246,6 +246,12 @@ Cost optimization is iterative. Start with the highest-impact strategies first:
 The goal isn't to reduce quality, it's to ensure every token spent delivers genuine value. With these strategies, you can build AI-powered features that delight users while maintaining sustainable economics.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-api-cost-optimization-strategies-for-saas-application)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude API Prompt Caching Performance Optimization Guide](/claude-api-prompt-caching-performance-optimization-guide/)

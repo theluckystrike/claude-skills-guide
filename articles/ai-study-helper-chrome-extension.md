@@ -265,6 +265,12 @@ Once your extension is ready:
 
 Building an AI study helper Chrome extension combines web development skills with AI integration, creating a genuinely useful tool for learners. Start with the basics - text selection and analysis - then iterate based on user feedback.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-study-helper-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Canvas LMS Helper: A Developer Guide](/chrome-extension-canvas-lms-helper/)

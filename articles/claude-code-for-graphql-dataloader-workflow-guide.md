@@ -244,6 +244,12 @@ When implementing DataLoader with Claude Code, keep these recommendations in min
 
 DataLoader transforms GraphQL from a potential performance trap into a highly efficient data layer. By following these patterns and integrating them properly with Claude Code workflows, you'll build GraphQL APIs that scale gracefully without the N+1 nightmare.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-graphql-dataloader-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for GraphQL Code Generation Workflow](/claude-code-for-graphql-code-generation-workflow/)

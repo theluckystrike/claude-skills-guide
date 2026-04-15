@@ -154,6 +154,12 @@ The combination of Claude Code and GitHub Codespaces creates a powerful cloud de
 
 Experiment with different configurations to find what works best for your projects. Whether you're a solo developer seeking flexibility or part of a team needing consistent environments, this workflow provides a solid foundation for modern software development.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-github-codespaces-cloud-development-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/). Sync your Claude Code skills and dotfiles to GitHub Codespaces so your environment is ready on first launch

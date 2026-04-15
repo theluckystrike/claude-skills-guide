@@ -313,6 +313,10 @@ Integrating Claude skills with the Notion API creates a knowledge management pip
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-integrate-claude-skills-with-notion-api-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Covers the pdf and xlsx skills in depth, both of which feed directly into Notion database pipelines like the one described here

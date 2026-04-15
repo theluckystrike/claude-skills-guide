@@ -134,6 +134,12 @@ Running tests, fetching documentation, or processing log files can consume signi
 - **Be specific with file reads** -- do not let Claude scan your entire project
 - **Move specialized instructions to skills** -- keep CLAUDE.md under 200 lines
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-high-token-usage)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Fix: Claude Code Slow Response Times](/claude-code-slow-response-fix/)

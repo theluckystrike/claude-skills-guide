@@ -194,6 +194,12 @@ Claude Code and GrowthBook's visual editor form a powerful combination for data-
 
 Start with simple experiments, headline changes or button colors, before attempting more complex modifications. As your team builds confidence with the workflow, expand to testing entire page sections, checkout flows, or feature flags. The key is establishing a culture of continuous experimentation backed by reliable data analysis.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-growthbook-visual-editor-ab-test-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GrowthBook Experiment Analysis Workflow Tutorial](/claude-code-growthbook-experiment-analysis-workflow-tutorial/)

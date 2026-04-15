@@ -225,6 +225,12 @@ Chrome extension mind map generators bridge the gap between browser-based resear
 
 For developers, the extension platform provides reliable APIs for storage, cross-page communication, and file handling, making it feasible to create fully-featured mind mapping tools that integrate smoothly into everyday browsing workflows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-mind-map-generator)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Annotate Web Pages: Build Your Own.](/chrome-extension-annotate-web-pages/)

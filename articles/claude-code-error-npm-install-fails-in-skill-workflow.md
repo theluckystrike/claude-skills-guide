@@ -353,6 +353,12 @@ node -e "require('child_process').exec('python3 --version', console.log)"
 
 Most npm install failures in Claude Code skill workflows resolve with cache clearing, permission fixes, or network adjustments. The skills ecosystem continues to mature, and community-maintained skills frequently update to address compatibility issues with newer Node.js versions. Working through the diagnostic checklist at the top of this guide systematically is faster than trying solutions at random.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-error-npm-install-fails-in-skill-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Command Not Found After Install Troubleshooting](/claude-code-command-not-found-after-install-troubleshooting/). Related: install and PATH issues

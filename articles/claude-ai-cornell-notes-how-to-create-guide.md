@@ -161,6 +161,10 @@ The key takeaway: Claude AI does not replace the thinking that makes Cornell Not
 
 ---
 
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-ai-cornell-notes-how-to-create-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Write Effective Prompts for Claude Code](/how-to-write-effective-prompts-for-claude-code/). improve the prompts you send to Claude for any task, including note generation

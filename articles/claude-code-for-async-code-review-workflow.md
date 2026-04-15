@@ -354,6 +354,12 @@ Claude Code transforms async code review from a bottleneck into a competitive ad
 Implement these practices gradually, measure your outcomes, and continuously refine your prompts based on what works best for your team's unique composition and goals.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-async-code-review-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)

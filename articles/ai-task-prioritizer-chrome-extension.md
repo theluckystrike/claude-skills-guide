@@ -320,6 +320,12 @@ Building an AI task prioritizer Chrome extension combines browser APIs, local st
 
 The code patterns shown here provide a foundation, you can extend the scoring algorithm, integrate more sophisticated AI services, or add features like calendar synchronization, time tracking, and team collaboration. Start with a minimal viable version and iterate based on your own productivity patterns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-task-prioritizer-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)

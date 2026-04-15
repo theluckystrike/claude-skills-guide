@@ -206,6 +206,12 @@ Schedule this script to run weekly via a logon script GPO and collect the CSVs o
 
 For organizations with more sophisticated endpoint management, most modern platforms (Intune, SCCM, Jamf) provide native extension inventory reporting. The registry approach above serves as a lightweight alternative when dedicated tooling is not available.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-force-install-extensions-gpo)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Webstore Private: Deploying Extensions to Your Organization](/chrome-enterprise-webstore-private/)

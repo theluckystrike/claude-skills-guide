@@ -223,6 +223,12 @@ The best screenshot Chrome extension depends on your specific developer workflow
 
 Evaluate your daily screenshot requirements, test the extensions with your typical workflows, and choose the option that integrates most smoothly with your existing toolchain. For most development teams, the combination of one quick-capture tool and one specialized tool covers the full range of screenshot needs without adding unnecessary extension weight to the browser.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=best-screenshot-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Best Ad Blocker for Chrome in 2026](/best-ad-blocker-chrome-2026/)

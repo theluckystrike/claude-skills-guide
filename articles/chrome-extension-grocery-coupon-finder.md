@@ -412,6 +412,12 @@ A few things that meaningfully improve Chrome Web Store conversion: screenshot y
 
 Building a grocery coupon finder requires balancing functionality with performance. Focus on supporting major grocery store websites first, then expand to regional chains. The key is providing genuine value without overwhelming users with irrelevant offers.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-grocery-coupon-finder)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)

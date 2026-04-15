@@ -372,6 +372,12 @@ For Claude Code workflows specifically, evaluate which capabilities your contain
 
 The optimization process is incremental. Start with multi-stage builds. Measure the result. Move to a slimmer base image. Measure again. Add BuildKit caching. Add size checks to CI. Each step compounds, and the cumulative effect across a fleet of services adds up to real money and real time saved.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-image-size-reduction-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Docker Image Publishing Workflow Guide](/claude-code-for-docker-image-publishing-workflow-guide/)

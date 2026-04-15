@@ -583,6 +583,12 @@ Start with well-structured prompts that include specific paper sections and nota
 With practice, you will find implementing ArXiv papers becomes a reproducible workflow rather than a one-off challenge. The combination of Claude's ability to parse academic notation and your domain knowledge produces implementations that are both correct and maintainable.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-arxiv-paper-implementation-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Reading Assistant Chrome: Technical Implementation Guide](/ai-reading-assistant-chrome/)

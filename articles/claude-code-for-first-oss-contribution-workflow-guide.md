@@ -224,6 +224,12 @@ Start small, stay curious, and keep contributing. Each PR makes you more comfort
 
 ## Good luck with your OSS journey!
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-first-oss-contribution-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for OSS Good First Issue Workflow Guide](/claude-code-for-oss-good-first-issue-workflow-guide/)

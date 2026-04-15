@@ -189,6 +189,12 @@ Improving code coverage with Claude Code combines automated assistance with stra
 
 Coverage metrics serve as a guide, not a scorecard. The real goal is confidence in your code, knowing that changes won't break existing functionality, and that edge cases receive proper handling.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-code-coverage-improvement-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). TDD naturally drives higher coverage

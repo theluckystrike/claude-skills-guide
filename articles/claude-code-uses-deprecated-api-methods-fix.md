@@ -211,6 +211,12 @@ Fixing deprecated API methods in Claude Code involves three main steps: identify
 
 By keeping your SDK updated, using environment variables for configuration, and running regular validation checks, you can maintain stable integrations with the Anthropic API and avoid unexpected breakage from future deprecations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-uses-deprecated-api-methods-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Keeps Using Deprecated API Methods](/claude-code-keeps-using-deprecated-api-methods/). Stop Claude from generating deprecated third-party library patterns in the code it writes for you

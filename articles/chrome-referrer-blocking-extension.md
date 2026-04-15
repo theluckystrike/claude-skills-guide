@@ -484,6 +484,12 @@ Building a Chrome referrer blocking extension requires understanding the declara
 
 For production deployments, consider adding user controls for different blocking modes (no-referrer vs. origin vs. same-origin), a logging panel for debugging, and compatibility testing across different Chrome versions. The combination of header-level rules and content script link patching provides defense in depth that handles both standard navigation and dynamically generated content in modern SPAs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-referrer-blocking-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)

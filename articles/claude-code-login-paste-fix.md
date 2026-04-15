@@ -109,6 +109,12 @@ API: Anthropic
 - **Use API key auth for automated environments:** Set `ANTHROPIC_API_KEY` in CI/CD, containers, and remote sessions.
 - **Pin working versions:** If paste regressions recur, pin to a known working version with `npm install -g @anthropic-ai/claude-code@2.1.104`.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-login-paste-fix)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Fix Claude API Error 401 — Unauthorized](/claude-api-error-401-fix/) — Auth token expired or invalid

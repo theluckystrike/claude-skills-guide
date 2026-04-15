@@ -480,6 +480,12 @@ For organizations using both Jira Cloud and Jira Server, the MCP server requires
 
 When querying, specify which server to use: "Using jira-cloud, find all tickets..." This distinction matters for teams migrating from Server to Cloud who run both instances during the transition period.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=jira-mcp-server-claude-code-integration-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Salesforce MCP Server Data Integration Guide](/salesforce-mcp-server-data-integration-guide/)

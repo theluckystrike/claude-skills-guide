@@ -131,6 +131,12 @@ Combining Claude Code with Atlantis creates a solid infrastructure automation pi
 
 The workflow suits teams of all sizes, from small startups managing a few resources to enterprises running complex multi-environment deployments. By automating routine tasks and providing intelligent assistance, Claude Code and Atlantis together enable infrastructure teams to move faster without sacrificing quality or security.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-atlantis-terraform-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Brave Search MCP Server for Research Automation](/brave-search-mcp-server-research-automation/)

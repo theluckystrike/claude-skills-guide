@@ -368,6 +368,12 @@ Element highlighting flicker: Throttle the `mouseover` handler with `requestAnim
 
 CSS selector not unique: Fall back to XPath when `document.querySelectorAll(selector).length > 1`. Use `document.evaluate()` to compute the XPath and switch to it automatically.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-dom-inspector-tool)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)

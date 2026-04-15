@@ -259,6 +259,12 @@ Building a Claude Code L10n testing automation workflow reduces manual validatio
 Start with the string consistency checks, add placeholder validation, then layer in encoding and documentation testing. Each component addresses a specific failure mode in localization workflows, and together they form a thorough defense against translation bugs.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-l10n-testing-automation-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code i18n Workflow for React Applications](/claude-code-i18n-workflow-for-react-applications-guide/)

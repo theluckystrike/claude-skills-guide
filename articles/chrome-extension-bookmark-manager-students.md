@@ -278,6 +278,12 @@ Effective bookmark management significantly impacts student productivity, partic
 
 The key lies in establishing consistent organizational patterns early, maintaining regular cleanup routines, and using available tools to match specific workflow needs. For developers, the Chrome Bookmarks API provides enough depth to build a fully functional personal knowledge management tool with relatively modest effort, making it a strong candidate for a weekend project that pays off daily.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-bookmark-manager-students)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)

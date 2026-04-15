@@ -218,6 +218,12 @@ Claude Code makes implementing lazy loading straightforward by understanding you
 By using Claude Code's code generation capabilities, you can quickly implement lazy loading patterns across your project while ensuring the implementation follows best practices for your specific framework and use case.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-lazy-loading-implementation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Font Loading Optimization Workflow](/claude-code-for-font-loading-optimization-workflow/)

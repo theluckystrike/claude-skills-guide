@@ -226,6 +226,12 @@ Signed URLs provide the foundation for secure, flexible file handling in Supabas
 
 The key is maintaining security through short expirations and proper validation while using Claude Code's AI capabilities to add intelligence to your file operations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-supabase-storage-signed-url-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Supabase Auth Row Level Security Guide](/claude-code-supabase-auth-row-level-security-guide/)

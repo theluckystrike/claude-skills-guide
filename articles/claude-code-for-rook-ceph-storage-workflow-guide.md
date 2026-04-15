@@ -262,6 +262,12 @@ Claude Code transforms Rook Ceph management from manual operations into automate
 Start with the foundational scripts in this guide, then extend them to match your organization's specific requirements. The combination of Kubernetes' orchestration capabilities, Ceph's solid storage primitives, and Claude Code's automation power creates a formidable platform for modern cloud-native applications.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-rook-ceph-storage-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Cloudflare R2 Storage Workflow Guide](/claude-code-for-cloudflare-r2-storage-workflow-guide/)

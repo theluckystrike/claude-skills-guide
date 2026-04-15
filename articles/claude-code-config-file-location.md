@@ -198,6 +198,12 @@ claude
 - **Use `settings.local.json` for machine-specific overrides:** This file is not committed to version control and sits above project settings in priority.
 - **Use environment variables for secrets:** Never put API keys in settings files; use `ANTHROPIC_API_KEY` and `GITHUB_TOKEN` env vars.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-config-file-location)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Issues
 
 - [Set Up MCP Servers in Claude Code](/claude-code-mcp-server-setup) — MCP configuration details

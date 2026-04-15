@@ -267,6 +267,12 @@ async function cachedSearch(query, type = 'web') {
 
 Brave Search MCP server integration enables powerful research automation within Claude Code. The straightforward API, combined with Claude's analysis capabilities, creates a research workflow that would otherwise require significant manual effort. Start with the basic server setup, then expand into specialized skills like tdd for technical validation or supermemory for persistent knowledge storage.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=brave-search-mcp-server-research-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [MCP Credential Management and Secrets Handling](/mcp-credential-management-and-secrets-handling/). Secure API keys for your MCP server integrations

@@ -258,6 +258,12 @@ JSON mode transforms LLM interactions from unpredictable text generation into re
 Start with simple schemas and gradually add complexity as your confidence grows. The patterns in this guide provide a foundation that scales from quick prototypes to enterprise-grade systems processing thousands of daily requests.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-json-mode-llm-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Helicone LLM Gateway Workflow Tutorial](/claude-code-for-helicone-llm-gateway-workflow-tutorial/)

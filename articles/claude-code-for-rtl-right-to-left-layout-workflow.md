@@ -223,6 +223,12 @@ Claude Code becomes an invaluable partner in RTL development when you provide cl
 The initial investment in proper RTL architecture pays dividends as your application grows. With logical CSS properties, proper content handling, and thorough testing, you'll create experiences that feel truly localized for RTL language speakers.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-rtl-right-to-left-layout-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code German Developer Localization Workflow Guide](/claude-code-german-developer-localization-workflow-guide/)

@@ -239,6 +239,12 @@ A Chrome extension meta tag viewer transforms metadata inspection from a multi-s
 
 The complete code above provides a functional foundation. From here, you can add features like tag filtering, export capabilities, or integration with APIs for automated testing. Metadata affects how your content appears across the web, and having the right tools to inspect it quickly saves development time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-meta-tag-viewer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Shadow DOM Viewer: Inspect Hidden.](/chrome-extension-shadow-dom-viewer/)

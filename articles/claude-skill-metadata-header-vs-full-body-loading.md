@@ -250,6 +250,12 @@ Claude Code skills have a simple structure: minimal front matter with `name` and
 
 The front matter identifies the skill. The body defines its behavior. Everything else. version numbers, tags, permissions. belongs outside the skill file entirely, perhaps in a README or team documentation. Keep this separation clear and your skill library will stay organized as it grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-skill-metadata-header-vs-full-body-loading)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/). Validate skill structure and behavior before sharing with teammates

@@ -317,6 +317,12 @@ PostHog and Sentry integration. Tag PostHog events with the active feature flag 
 
 Claude Code combined with PostHog creates a powerful automation layer for feature management and product analytics. By wrapping PostHog's API in custom skills, you can manage feature flags through natural language commands, build automated experiment analysis pipelines, and set up real-time monitoring that keeps your team informed of important metric changes. The key is starting simple, perhaps just flag toggling, and gradually expanding to more sophisticated analytics workflows as your needs grow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-posthog-feature-flags-analytics-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code PostHog Feature Flag React SDK Guide](/claude-code-posthog-feature-flag-react-sdk-guide/)

@@ -247,6 +247,12 @@ Chrome Helper high CPU on Mac typically stems from problematic extensions, hardw
 Implement preventive measures like regular cache clearing, extension audits, and keeping Chrome updated to maintain optimal performance. Your Mac will run cooler, battery life improves, and your development workflow remains uninterrupted.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-helper-high-cpu-mac)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)

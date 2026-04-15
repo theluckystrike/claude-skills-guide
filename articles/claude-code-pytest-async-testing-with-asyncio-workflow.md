@@ -245,6 +245,12 @@ Async testing with pytest and pytest-asyncio follows clear patterns once you und
 
 By applying the patterns and practices in this guide, you'll be writing reliable async tests that give you confidence in your asynchronous Python code. The initial setup investment pays dividends in test reliability and developer productivity as your async codebase grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-pytest-async-testing-with-asyncio-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)

@@ -374,6 +374,12 @@ The userscript ecosystem in 2026 offers solid alternatives to Violentmonkey, eac
 
 For most developers and power users, Tampermonkey or ScriptCat will provide the best experience. The key is evaluating your specific requirements. whether that is script compatibility, development features, background task support, or resource efficiency. and selecting the manager that aligns with your workflow. The MV3 transition has pushed all four managers to ship more thoughtful architectures, and any of them is a solid choice for a well-maintained script library in 2026.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=violentmonkey-alternative-chrome-extension-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [TamperMonkey Alternative Chrome Extension in 2026](/tampermonkey-alternative-chrome-extension-2026/)

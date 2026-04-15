@@ -250,6 +250,12 @@ Storage quotas: `chrome.storage.local` gives you 10 MB by default. For larger ne
 
 Popup lifecycle: The popup DOM is destroyed when the popup closes. Do not store important state in popup variables. Persist to `chrome.storage`.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-development-2026)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for gRPC API Development](/claude-code-grpc-api-development-guide/)

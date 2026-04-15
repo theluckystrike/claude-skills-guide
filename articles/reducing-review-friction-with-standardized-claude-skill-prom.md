@@ -128,6 +128,12 @@ Standardized Claude skill prompts transform code reviews from friction points in
 Start small with your most common review issues, build out comprehensive standards over time, and watch your review velocity improve consistently.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=reducing-review-friction-with-standardized-claude-skill-prom)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Make Claude Code Review Its Own Output](/how-to-make-claude-code-review-its-own-output/)

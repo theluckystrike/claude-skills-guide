@@ -274,6 +274,12 @@ Start small: generate your first ingress resource, apply it, then expand to more
 Remember that Claude Code is a collaborator, not a replacement for understanding your infrastructure. Review generated configurations, especially security-related settings, before applying them to production environments.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-nginx-ingress-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for NGINX WAF Workflow Tutorial](/claude-code-for-nginx-waf-workflow-tutorial/)

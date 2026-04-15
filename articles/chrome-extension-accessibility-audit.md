@@ -455,6 +455,12 @@ Regular accessibility audits protect all users, particularly those relying on as
 
 The effort required for accessibility auditing is modest compared to the impact: inclusive extensions reach more users and comply with store policies. Start with the automated tools, add keyboard and screen reader testing, and maintain accessibility as a continuous priority.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-accessibility-audit)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome DevTools Performance Profiling: A Practical Guide](/chrome-devtools-performance-profiling/)

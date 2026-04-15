@@ -170,6 +170,12 @@ Remember: the key is ensuring Claude Code always has visibility into the current
 
 Start applying these techniques today, and you'll never have to recover overwritten edits again.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-to-make-claude-code-stop-overwriting-my-edits)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Stop Claude Code from Using Snake Case in TypeScript](/how-to-stop-claude-code-from-using-snake-case-in-typescript/)

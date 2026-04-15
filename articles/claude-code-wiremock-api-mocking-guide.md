@@ -210,6 +210,12 @@ Or press `Ctrl+C` in the terminal where it runs.
 
 WireMock transforms how you test HTTP-dependent code. By running a local mock server, you gain control over external dependencies, test edge cases including errors and timeouts, and verify that your application sends the right requests. Combined with Claude Code's bash execution and file handling capabilities, you can automate stub creation, integrate mocks into your test suite, and build reliable, maintainable integrations.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-wiremock-api-mocking-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [What Is the Best Claude Skill for REST API Development?](/what-is-the-best-claude-skill-for-rest-api-development/)

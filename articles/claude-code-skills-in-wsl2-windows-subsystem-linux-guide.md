@@ -262,6 +262,12 @@ Running Claude Code skills in WSL2 combines the best of both worlds: Windows as 
 
 The key steps are installing Claude Code within WSL2, creating the skills directory structure, adding skill files, and invoking them with slash commands. With this setup, you have a consistent development experience that uses WSL2's capabilities while maintaining access to Claude Code's powerful skill ecosystem.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-in-wsl2-windows-subsystem-linux-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/). Sync your Claude Code skills and dotfiles from WSL2 to other environments consistently

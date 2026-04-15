@@ -477,6 +477,12 @@ Keep security front of mind: never ship API keys in extension source code, and r
 
 With the patterns and examples in this guide, you can build anything from a simple metadata extractor to a sophisticated AI-powered research assistant. The extension ecosystem gives you direct access to browser functionality while the AI APIs provide the intelligence layer to make sense of extracted data.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=ai-data-extractor-chrome-extension)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [How to Check if Your Email Has Been Compromised in a Data Breach](/chrome-check-email-breaches/)

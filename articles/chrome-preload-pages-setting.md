@@ -376,6 +376,12 @@ Chrome's preload pages setting offers a spectrum of tradeoffs between performanc
 
 The key is finding the right balance for your workflow. Test different settings, monitor resource usage, and adjust based on your actual browsing patterns and performance requirements. For production web apps, the Speculation Rules API represents the current best practice. it gives you fine-grained control, respects user preferences, and integrates cleanly with modern browser infrastructure. For your development environment, consider disabling Chrome's built-in prediction to get clean, reproducible performance measurements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-preload-pages-setting)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Startup Pages Policy: A Practical Guide](/chrome-enterprise-startup-pages-policy/)

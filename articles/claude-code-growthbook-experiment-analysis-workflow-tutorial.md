@@ -169,6 +169,12 @@ The key is establishing clear processes around your experiment analysis, using C
 
 Remember: the goal isn't just to run experiments, but to learn from them effectively. Claude Code helps you extract meaningful insights from your GrowthBook data, turning raw numbers into product decisions that drive real business value.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-growthbook-experiment-analysis-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GrowthBook Visual Editor A/B Test Guide](/claude-code-growthbook-visual-editor-ab-test-guide/)

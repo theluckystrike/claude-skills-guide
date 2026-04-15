@@ -222,6 +222,12 @@ Success in technical interviews comes from consistent practice and clear communi
 
 Start with one skill, build a habit, and iterate. Your next interview will be better for it.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=using-claude-code-to-prepare-for-coding-interviews)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Mastering Coding Interviews with Claude Code: A Complete.](/claude-code-for-coding-interview-preparation-workflow/)

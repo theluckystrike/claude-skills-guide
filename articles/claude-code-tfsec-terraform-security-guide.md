@@ -207,6 +207,12 @@ tfsec brings professional-grade security scanning to your Terraform workflow wit
 
 Start by installing tfsec and running it against your current Terraform projects. Integrate it into your development workflow using the scripts and patterns from this guide. The initial effort pays dividends through reduced security incidents and compliance confidence.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-tfsec-terraform-security-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Terraform Module Development Guide](/claude-code-terraform-module-development-guide/)

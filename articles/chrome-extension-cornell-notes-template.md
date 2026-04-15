@@ -207,6 +207,12 @@ Building a Cornell Notes Chrome extension requires understanding Manifest V3 arc
 
 The Cornell method's separation of cues, notes, and summary encourages active engagement with captured content, a principle that translates well to digital workflows when implemented thoughtfully. Start with the core components outlined above, then iterate based on your specific use cases and user feedback.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-cornell-notes-template)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Email Template Manager: A Complete Guide](/chrome-extension-email-template-manager/)

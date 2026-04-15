@@ -248,6 +248,12 @@ Load testing with Locust and Claude Code forms a powerful combination for ensuri
 Start with simple tests, iterate on them as your application evolves, and build a comprehensive testing strategy that scales with your needs.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-load-testing-with-locust-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Distributed Load Testing Workflow](/claude-code-for-distributed-load-testing-workflow/)

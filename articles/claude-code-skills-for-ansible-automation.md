@@ -185,6 +185,12 @@ Start with a simple skill that generates basic playbooks, then expand to handle 
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-ansible-automation)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for Infrastructure as Code (Terraform)](/claude-code-skills-for-infrastructure-as-code-terraform/). compare Ansible skill patterns with Terraform IaC approaches

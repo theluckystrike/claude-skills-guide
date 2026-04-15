@@ -228,6 +228,12 @@ Start small: generate your first Zod schema from an OpenAPI spec, then expand to
 Remember: type safety isn't just about catching bugs, it's about documentation that never lies and refactoring with confidence. Let Claude Code help you achieve both.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-openapi-zod-client-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Axios HTTP Client Workflow](/claude-code-axios-http-client-workflow/)

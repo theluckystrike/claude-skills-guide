@@ -270,6 +270,12 @@ ant messages create --stream --format jsonl \
 3. **Handle stream errors**: Wrap streaming code in try/except because errors can arrive mid-stream after a 200 response.
 4. **Use get_final_message() for batch-style workloads**: When you need the complete response without implementing event handling.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-streaming-api-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 ## Related Guides
 
 - [Claude Streaming Not Working](/claude-streaming-not-working/) -- troubleshoot streaming failures and mid-stream errors.

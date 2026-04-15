@@ -264,6 +264,12 @@ Combining Claude Code with Fly.io creates a powerful deployment automation syste
 
 The scripts and strategies in this guide provide a foundation you can customize for your specific application requirements. Start with the basic deployment script, then add complexity as your needs evolve.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-fly-io-deployment-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-code-github-actions-workflow-matrix-strategy-guide/). extend your Fly.io CI with matrix testing strategies

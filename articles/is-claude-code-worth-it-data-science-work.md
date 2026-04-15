@@ -265,6 +265,12 @@ If you're primarily doing ad-hoc analysis in notebooks with limited coding, the 
 
 *Claude Code represents a shift in how data scientists approach their work. It's not about replacing the data scientist, it's about removing friction so you can focus on what matters: extracting insights from data.*
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=is-claude-code-worth-it-data-science-work)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-for-data-science-and-jupyter-notebooks/)

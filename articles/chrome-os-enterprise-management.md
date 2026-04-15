@@ -236,6 +236,12 @@ Chrome OS enterprise management involves sensitive administrative capabilities. 
 
 Chrome OS enterprise management provides developers and IT professionals with solid tools for securing and maintaining Chrome devices at scale. The combination of Google Admin Console, Enterprise policies, and programmatic APIs enables automation of repetitive tasks while maintaining security compliance. Start with basic policy configuration, then progressively adopt API-driven automation as your deployment grows.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-os-enterprise-management)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Enterprise Bandwidth Management: A Practical Guide](/chrome-enterprise-bandwidth-management/)

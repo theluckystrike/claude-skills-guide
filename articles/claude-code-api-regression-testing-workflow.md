@@ -757,6 +757,12 @@ API regression testing is essential for maintaining reliable integrations in mod
 
 Start with the foundational configuration and zod schemas, add snapshot tests for your most critical endpoints, and integrate the CI workflow immediately. even a minimal setup catches the most common and costly regressions. Expand to contract testing as your API surface is consumed by more teams. Regular maintenance of your test suite ensures it remains effective as your application evolves, and centralizing schemas as living documentation keeps the whole team aligned on what each endpoint is expected to return.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-api-regression-testing-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Accessibility Regression Testing Guide](/claude-code-accessibility-regression-testing/)

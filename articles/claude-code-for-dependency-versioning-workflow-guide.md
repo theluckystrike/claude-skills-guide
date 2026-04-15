@@ -203,6 +203,12 @@ Claude Code transforms dependency versioning from a chore into a systematic work
 
 The investment in setting up these workflows pays dividends in reduced debugging time, fewer production incidents, and a more confident team that trusts their dependency management.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-dependency-versioning-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Changesets Versioning Workflow](/claude-code-for-changesets-versioning-workflow/)

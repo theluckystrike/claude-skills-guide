@@ -323,6 +323,12 @@ Start small: pick one high-frequency toil task, automate it with Claude Code, me
 Remember: the goal isn't to eliminate all manual work, it's to eliminate work that doesn't require human judgment, freeing your team to focus on reliability, innovation, and solving novel problems.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-sre-toil-automation-workflow)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Mailchimp Automation Workflow Guide](/claude-code-for-mailchimp-automation-workflow-guide/)

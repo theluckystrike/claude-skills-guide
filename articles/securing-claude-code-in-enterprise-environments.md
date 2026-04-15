@@ -113,6 +113,12 @@ Start with restrictive defaults, expand deliberately, and maintain comprehensive
 
 Remember that security configurations require regular review as your organization and the AI platform evolve. The patterns outlined here provide a foundation, but your specific implementation should reflect your unique risk profile and compliance requirements.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=securing-claude-code-in-enterprise-environments)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/)

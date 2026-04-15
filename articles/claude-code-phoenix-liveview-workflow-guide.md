@@ -221,6 +221,12 @@ Claude Code transforms Phoenix LiveView development by providing intelligent cod
 
 For Elixir developers transitioning from other frameworks, Claude Code helps bridge knowledge gaps by explaining Phoenix-specific patterns and idioms. The combination of real-time capabilities with AI-assisted development creates a powerful workflow for building modern web applications.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-phoenix-liveview-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

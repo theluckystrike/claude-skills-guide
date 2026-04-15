@@ -234,6 +234,12 @@ Start small with a few key benchmarks, establish baselines, and gradually expand
 Remember: the best time to catch a regression is before it merges. The second best time is immediately after. Claude Code helps you achieve both.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-benchmark-regression-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)

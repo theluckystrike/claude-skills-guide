@@ -378,6 +378,12 @@ The key architectural principles to keep in mind: put data fetching in loaders, 
 
 Start simple, add complexity only when justified by real requirements, and let Remix handle the heavy lifting. Focus your energy on the unique business logic that differentiates your application, and use Claude to handle the boilerplate that would otherwise slow you down.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-remix-full-stack-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Skills for Product Engineers Building Full Stack](/claude-code-skills-for-product-engineers-building-full-stack/)

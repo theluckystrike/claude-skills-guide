@@ -139,6 +139,12 @@ The Rakuten Chrome extension serves its core purpose, helping users earn cashbac
 
 The extension represents a mature, well-maintained product that prioritizes simplicity over complexity. If you need basic cashback functionality with minimal configuration, it delivers. Developers looking for extensibility will need to look elsewhere or build independent solutions using Rakuten's official APIs.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=rakuten-chrome-extension-review)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Product Review Summary AI: A Developer Guide](/chrome-extension-product-review-summary-ai/)

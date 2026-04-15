@@ -326,6 +326,12 @@ Scheduled flows not running: Verify the Prefect agent or worker is running and c
 
 Combining Claude Code with Prefect creates a powerful development environment for ML workflows. Claude Code generates boilerplate and suggests optimizations; Prefect handles orchestration, scheduling, and monitoring. Start with simple flows and add complexity as your pipelines grow.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-prefect-ml-workflow-tutorial)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)

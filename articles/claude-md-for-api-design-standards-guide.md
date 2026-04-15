@@ -395,6 +395,12 @@ The workflow compounds in value over time. Early sessions with a thin CLAUDE.md 
 
 Start with the essentials: naming conventions, response envelope format, and HTTP status code usage. Those three sections alone eliminate the most common inconsistencies. Add error format standardization, pagination conventions, and versioning strategy as you encounter the problems they solve. Over time, your CLAUDE.md becomes the single source of truth that keeps your entire API ecosystem coherent and maintainable.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-md-for-api-design-standards-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code API Error Handling Standards](/claude-code-api-error-handling-standards/)

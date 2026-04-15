@@ -354,28 +354,31 @@
     var path = window.location.pathname.toLowerCase();
     var isExtension = (path.indexOf('chrome-extension') !== -1 || path.indexOf('extension') !== -1);
 
+    var slug = path.replace(/^\//, '').replace(/\/$/, '').replace(/[^a-z0-9-]/g, '-');
+    var utmUrl = 'https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=' + slug;
+
     var html;
     if (isExtension) {
-      html = '<aside class="incontent-cta" aria-label="Chrome extension resources">' +
-        '<h2 class="incontent-cta-title">\uD83E\uDDE9 Building Chrome Extensions?</h2>' +
+      html = '<aside class="incontent-cta" aria-label="Claude Code Mastery">' +
+        '<h2 class="incontent-cta-title">\uD83D\uDE80 Ship Extensions Faster with Claude Code Mastery</h2>' +
         '<div class="incontent-cta-body">' +
-          '<p>I\u2019ve shipped 20+ extensions to 5,000+ users. Zovo gives you the Extension Engine boilerplate, CWS playbook, distribution across 248K+ indexed pages, and direct access to the developer.</p>' +
+          '<p>16 battle-tested CLAUDE.md templates \u00B7 80+ prompts \u00B7 orchestration configs \u00B7 sprint playbooks. Built by a developer who shipped 20+ extensions to 5,000+ users.</p>' +
         '</div>' +
         '<div class="incontent-cta-actions">' +
-          '<a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--primary">Browse Extensions \u2192</a>' +
+          '<a href="' + utmUrl + '" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--primary">Get Zovo Lifetime \u2014 $99 once \u2192</a>' +
           '<a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--secondary">Join Builder Discord \u2192</a>' +
         '</div>' +
       '</aside>';
     } else {
-      html = '<aside class="incontent-cta" aria-label="About the author and community">' +
-        '<h2 class="incontent-cta-title">\uD83D\uDC4B These guides are part of a bigger project.</h2>' +
+      html = '<aside class="incontent-cta" aria-label="Claude Code Mastery">' +
+        '<h2 class="incontent-cta-title">\uD83D\uDE80 Level Up Your Claude Code Workflow</h2>' +
         '<div class="incontent-cta-body">' +
-          '<p>I\u2019m Michael \u2014 I build AI-powered Chrome extensions and developer tools at Zovo. This tutorial site, the extensions, and the builder community are all connected.</p>' +
-          '<p>If you\u2019re building with Claude and want to connect with other developers:</p>' +
+          '<p>Get 16 CLAUDE.md templates, 80+ tested prompts, orchestration configs, and sprint playbooks \u2014 everything you need to go from asking questions to shipping production code.</p>' +
+          '<p><strong>Included free in Zovo Lifetime ($99 once, yours forever).</strong></p>' +
         '</div>' +
         '<div class="incontent-cta-actions">' +
-          '<a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--primary">Join the Discord \u2192</a>' +
-          '<a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--secondary">See what I\u2019m building \u2192</a>' +
+          '<a href="' + utmUrl + '" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--primary">Get Claude Code Mastery \u2192</a>' +
+          '<a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="incontent-cta-btn incontent-cta-btn--secondary">Join the Discord \u2192</a>' +
         '</div>' +
       '</aside>';
     }
@@ -446,8 +449,8 @@
   <!-- Sticky Footer CTA Bar -->
   <aside class="cta-footer-bar" id="ctaFooterBar" aria-label="Community invitation">
     <div class="cta-footer-bar-inner">
-      <span class="cta-footer-bar-text">&#128295; These guides are built by the developer behind 20+ Chrome extensions.</span>
-      <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="cta-footer-bar-btn">Join the Community &#8594;</a>
+      <span class="cta-footer-bar-text">&#128295; 16 CLAUDE.md templates + 80 prompts + sprint playbooks &mdash; $99 once, free forever.</span>
+      <a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=footer-bar&utm_campaign=sticky" target="_blank" rel="noopener noreferrer" class="cta-footer-bar-btn">Get Zovo Lifetime &#8594;</a>
       <button type="button" class="cta-footer-bar-dismiss" id="ctaFooterDismiss" aria-label="Dismiss community banner">&#10005;</button>
     </div>
   </aside>

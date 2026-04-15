@@ -214,6 +214,12 @@ Claude Code transforms ColdFusion modernization from an error-prone manual effor
 
 Start your modernization journey today by installing the cold-fusion-analyzer skill and running your first inventory scan. Your legacy codebase contains years of business value, Claude helps you unlock it for the next generation of application architecture.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-cold-fusion-modernization-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Fortran Scientific Code Modernization Guide](/claude-code-fortran-scientific-code-modernization-guide/)

@@ -257,6 +257,12 @@ Building a chrome extension image format converter uses powerful browser APIs to
 
 The patterns shown here scale from single-image conversions to batch processing systems. Start with the core conversion logic, add the input methods that match your users' workflows, and refine the experience based on real usage patterns.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-image-format-converter)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)

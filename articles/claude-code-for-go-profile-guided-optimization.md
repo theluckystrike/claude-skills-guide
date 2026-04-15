@@ -209,6 +209,12 @@ Claude Code can help you implement all of these practices, from generating profi
 The key is treating PGO as part of an ongoing performance engineering process rather than a one-time optimization. With Claude Code's help, you can establish this cycle and continuously improve your application's performance over time.
 {% endraw %}
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-go-profile-guided-optimization)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)

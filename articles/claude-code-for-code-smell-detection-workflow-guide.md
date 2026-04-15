@@ -256,6 +256,12 @@ Remember: the goal isn't perfection, it's continuous improvement. Start small, t
 
 *Ready to improve your code quality workflow? Start by scanning your most problematic module today, and you'll be surprised at how quickly you can identify and address the issues holding your project back.*
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-code-smell-detection-workflow-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude Code for Sigma Rules Detection Workflow Tutorial](/claude-code-for-sigma-rules-detection-workflow-tutorial/)

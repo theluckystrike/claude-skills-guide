@@ -305,6 +305,12 @@ Review this log periodically. Clusters of similar failures indicate either a gap
 
 Integration testing for Claude Code skills combines input-output validation, tool mocking, and state persistence checks into a comprehensive quality assurance strategy. Build tests around skill boundaries, automate execution in CI pipelines, and continuously expand coverage based on production failures. This approach ensures your skills work reliably across the diverse scenarios they'll encounter in real-world use.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-integration-testing-strategy-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/)

@@ -288,6 +288,12 @@ Chrome extensions that enhance the AWS Console address real problems in daily cl
 
 For teams with unique internal requirements, building a custom extension is straightforward and gives you complete control over what runs on your most sensitive AWS accounts. A few hours of development can save your team hundreds of hours per year in console navigation time.
 
+---
+
+**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=chrome-extension-aws-console-enhancer)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+
 Related Reading
 
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
