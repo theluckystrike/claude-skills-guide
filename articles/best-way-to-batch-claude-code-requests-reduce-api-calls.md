@@ -211,13 +211,13 @@ The key is to think in terms of complete tasks rather than individual actions. E
 
 <div class="mastery-cta">
 
-**Claude Code burning tokens? It's reading your entire codebase because it doesn't know what matters.**
+Claude Code is expensive because it's reading your entire codebase every time. A CLAUDE.md tells it what matters upfront — architecture, conventions, boundaries. Less scanning. Fewer wrong turns. Lower bills.
 
-A CLAUDE.md file tells Claude your architecture, conventions, and boundaries upfront. Less context scanning. Fewer wrong turns. Lower token bills. Better output on the first try.
+I spend $200+/month on Claude subs. These configs are how I keep the output worth the cost.
 
-**[See how fast setups work →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-perf&utm_campaign=best-way-to-batch-claude-code-requests-reduce-api-calls)**
+**[Get the configs →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-perf&utm_campaign=best-way-to-batch-claude-code-requests-reduce-api-calls)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. Pays for itself in saved tokens within a week.
 
 </div>
 

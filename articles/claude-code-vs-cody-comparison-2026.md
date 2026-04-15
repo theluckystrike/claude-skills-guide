@@ -194,21 +194,22 @@ The tools complement each other well:
 
 
 <div class="author-bio">
-<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
-<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+
+**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+
 </div>
 
 ---
 
 <div class="mastery-cta">
 
-**Still comparing tools? Here's what actually moves the needle.**
+I've tried them all. Claude Code wins — but only if you set it up right.
 
-The gap between developers who "use Claude Code" and developers who ship with it isn't the tool — it's the setup. The CLAUDE.md, the prompts, the workflow. Get the setup that ships production code.
+The gap isn't the tool. It's the CLAUDE.md, the prompts, the workflow. I run 5 Claude Max subscriptions in parallel with autonomous agent fleets. These are my actual configs — the ones that let a solo dev outproduce a small team.
 
-**[See the setup that ships →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-compare&utm_campaign=claude-code-vs-cody-comparison-2026)**
+**[See the full setup →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-compare&utm_campaign=claude-code-vs-cody-comparison-2026)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99. Once. Everything I use to ship.
 
 </div>
 

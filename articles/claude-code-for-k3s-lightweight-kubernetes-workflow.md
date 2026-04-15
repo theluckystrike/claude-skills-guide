@@ -177,13 +177,13 @@ Start with simple deployments and gradually incorporate more advanced patterns a
 
 <div class="mastery-cta">
 
-**Deploy configs are write-once if you write them right.**
+This took me 3 hours to figure out. I put it in a CLAUDE.md so I'd never figure it out again. Now Claude gets it right on the first try, every project.
 
-Production Dockerfiles, CI/CD templates, and deployment playbooks. Copy-paste infrastructure that a senior engineer actually tested. Stop rebuilding deploy pipelines from Stack Overflow snippets.
+16 framework templates. Next.js, FastAPI, Laravel, Rails, Go, Rust, Terraform, and 9 more. Each one 300+ lines of "here's exactly how this stack works." Copy into your project. Done.
 
-**[Get the production Dockerfile →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-deploy&utm_campaign=claude-code-for-k3s-lightweight-kubernetes-workflow)**
+**[See the templates →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-deploy&utm_campaign=claude-code-for-k3s-lightweight-kubernetes-workflow)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. Yours forever. I keep adding templates monthly.
 
 </div>
 

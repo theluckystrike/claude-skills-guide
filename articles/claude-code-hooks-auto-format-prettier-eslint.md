@@ -191,21 +191,22 @@ The developers who get the most out of Claude Code aren't just fixing errors —
 
 
 <div class="author-bio">
-<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
-<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+
+**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+
 </div>
 
 ---
 
 <div class="mastery-cta">
 
-**Still building from scratch every time?**
+This site was built by 5 autonomous agents running in tmux while I was in Bali. 2,500 articles. Zero manual work. 100% quality gate pass rate.
 
-16 production CLAUDE.md templates. 80 tested prompts. Multi-agent orchestration configs. Everything a senior developer uses to ship with Claude Code — ready to copy into your project in 30 seconds.
+The orchestration configs, sprint templates, and quality gates that made that possible are in the Zovo Lifetime bundle. Along with 16 CLAUDE.md templates and 80 tested prompts.
 
-**[Start with a tested template →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-skills&utm_campaign=claude-code-hooks-auto-format-prettier-eslint)**
+**[See how the pipeline works →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-skills&utm_campaign=claude-code-hooks-auto-format-prettier-eslint)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 </div>
 

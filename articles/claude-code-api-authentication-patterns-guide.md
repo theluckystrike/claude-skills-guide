@@ -406,13 +406,13 @@ The most effective approach is to involve Claude Code early. before you start wr
 
 <div class="mastery-cta">
 
-**You're configuring this manually. There's a faster way.**
+This took me 3 hours to figure out. I put it in a CLAUDE.md so I'd never figure it out again. Now Claude gets it right on the first try, every project.
 
-Production-ready CLAUDE.md templates for 16 frameworks. Copy into your project, Claude Code immediately understands your stack — right conventions, right patterns, right versions. No more fixing what it gets wrong.
+16 framework templates. Next.js, FastAPI, Laravel, Rails, Go, Rust, Terraform, and 9 more. Each one 300+ lines of "here's exactly how this stack works." Copy into your project. Done.
 
-**[Get the production config →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-config&utm_campaign=claude-code-api-authentication-patterns-guide)**
+**[See the templates →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-config&utm_campaign=claude-code-api-authentication-patterns-guide)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. Yours forever. I keep adding templates monthly.
 
 </div>
 

@@ -168,37 +168,45 @@ docker run -it -e ANTHROPIC_API_KEY="$ANTHROPIC_API_KEY" claude-code
 
 
 <div class="author-bio">
-<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
-<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+
+**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+
 </div>
 
 ---
 
 
 <div class="before-after">
-<div class="before">
-<h4>Without CLAUDE.md</h4>
-<p>You: "Add authentication to my Next.js app"</p>
-<p>Claude Code generates a <code>pages/</code> directory (your App Router uses <code>app/</code>), picks NextAuth v4 (v5 is current), creates <code>.js</code> files in a TypeScript project, and uses <code>getServerSession</code> incorrectly with the wrong adapter pattern.</p>
-<p><strong>Result:</strong> You spend 45 minutes fixing what Claude broke.</p>
-</div>
-<div class="after">
-<h4>With a Professional CLAUDE.md</h4>
-<p>You: Same prompt.</p>
-<p>Claude Code reads CLAUDE.md &rarr; knows App Router + TypeScript strict + NextAuth v5 &rarr; generates <code>app/api/auth/[...nextauth]/route.ts</code> with correct session handling, middleware config, and type-safe session types that match your existing schema.</p>
-<p><strong>Result:</strong> It works on the first run. You ship.</p>
-</div>
+
+**Without a CLAUDE.md — what actually happens:**
+
+You type: "Add auth to my Next.js app"
+
+Claude generates: `pages/api/auth/[...nextauth].js` — wrong directory (you're on App Router), wrong file extension (you use TypeScript), wrong NextAuth version (v4 patterns, you need v5), session handling that doesn't match your middleware setup.
+
+You spend 40 minutes reverting and rewriting. Claude was "helpful."
+
+**With the Zovo Lifetime CLAUDE.md:**
+
+Same prompt. Claude reads 300 lines of context about YOUR project. Generates: `app/api/auth/[...nextauth]/route.ts` with v5 patterns, your session types, your middleware config, your test patterns.
+
+Works on first run. You commit and move on.
+
+That's the difference a $99 file makes.
+
+**[Get the CLAUDE.md for your stack →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-beforeafter&utm_campaign=claude-code-install-guide)**
+
 </div>
 
 <div class="mastery-cta">
 
-**You're configuring this manually. There's a faster way.**
+This took me 3 hours to figure out. I put it in a CLAUDE.md so I'd never figure it out again. Now Claude gets it right on the first try, every project.
 
-Production-ready CLAUDE.md templates for 16 frameworks. Copy into your project, Claude Code immediately understands your stack — right conventions, right patterns, right versions. No more fixing what it gets wrong.
+16 framework templates. Next.js, FastAPI, Laravel, Rails, Go, Rust, Terraform, and 9 more. Each one 300+ lines of "here's exactly how this stack works." Copy into your project. Done.
 
-**[Get the production config →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-config&utm_campaign=claude-code-install-guide)**
+**[See the templates →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-config&utm_campaign=claude-code-install-guide)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. Yours forever. I keep adding templates monthly.
 
 </div>
 

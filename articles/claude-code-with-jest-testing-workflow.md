@@ -172,37 +172,45 @@ The developers who get the most out of Claude Code aren't just fixing errors —
 
 
 <div class="author-bio">
-<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
-<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+
+**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+
 </div>
 
 ---
 
 
 <div class="before-after">
-<div class="before">
-<h4>Without CLAUDE.md</h4>
-<p>You: "Write tests for my React components"</p>
-<p>Claude Code generates Enzyme shallow renders (deprecated since React 18), tests implementation details like state variables, mocks <code>fetch</code> with manual stubs, and asserts on snapshot strings that break every time you change a CSS class.</p>
-<p><strong>Result:</strong> Tests pass once, then become a maintenance burden nobody trusts.</p>
-</div>
-<div class="after">
-<h4>With a Professional CLAUDE.md</h4>
-<p>You: Same prompt.</p>
-<p>Claude Code reads CLAUDE.md &rarr; knows React Testing Library + MSW + Vitest &rarr; generates user-centric tests with <code>screen.getByRole</code>, MSW handlers for API mocking, and assertions on visible behavior rather than implementation details.</p>
-<p><strong>Result:</strong> Tests survive three refactors without a single update. Your team actually runs them.</p>
-</div>
+
+**Without a CLAUDE.md — what actually happens:**
+
+You type: "Add auth to my Next.js app"
+
+Claude generates: `pages/api/auth/[...nextauth].js` — wrong directory (you're on App Router), wrong file extension (you use TypeScript), wrong NextAuth version (v4 patterns, you need v5), session handling that doesn't match your middleware setup.
+
+You spend 40 minutes reverting and rewriting. Claude was "helpful."
+
+**With the Zovo Lifetime CLAUDE.md:**
+
+Same prompt. Claude reads 300 lines of context about YOUR project. Generates: `app/api/auth/[...nextauth]/route.ts` with v5 patterns, your session types, your middleware config, your test patterns.
+
+Works on first run. You commit and move on.
+
+That's the difference a $99 file makes.
+
+**[Get the CLAUDE.md for your stack →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-beforeafter&utm_campaign=claude-code-with-jest-testing-workflow)**
+
 </div>
 
 <div class="mastery-cta">
 
-**What if Claude Code got it right the first time?**
+I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel.
 
-16 CLAUDE.md templates for popular frameworks. 80 tested prompts. Multi-agent configs. Workflow playbooks. The complete toolkit for shipping production code with Claude Code.
+These are my actual CLAUDE.md templates, orchestration configs, and prompts. Not a course. Not theory. The files I copy into every project before I write a line of code.
 
-**[See the setup that ships →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-default&utm_campaign=claude-code-with-jest-testing-workflow)**
+**[See what's inside →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-default&utm_campaign=claude-code-with-jest-testing-workflow)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. Free forever. 47/500 founding spots left.
 
 </div>
 

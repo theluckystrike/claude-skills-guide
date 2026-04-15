@@ -162,13 +162,13 @@ Salesforce MCP server integration opens up powerful automation possibilities for
 
 <div class="mastery-cta">
 
-**Integration debugging is the worst kind of debugging.**
+I hit this exact error six months ago. Then I wrote a CLAUDE.md that tells Claude my stack, my conventions, and my error handling patterns. Haven't seen it since.
 
-Skip the trial-and-error. Get orchestration configs and tested prompts for MCP server setup, tool integration, and multi-agent coordination. Built by a developer running 5-agent fleets in production.
+I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+ on Upwork. These CLAUDE.md templates are what I actually use. Not theory — production configs.
 
-**[Get configs that work first try →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-mcp&utm_campaign=salesforce-mcp-server-data-integration-guide)**
+**[Grab the templates — $99 once, free forever →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-mcp&utm_campaign=salesforce-mcp-server-data-integration-guide)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+47/500 founding spots. Price goes up when they're gone.
 
 </div>
 

@@ -209,13 +209,13 @@ A well-designed health endpoint system improves reliability by enabling Kubernet
 
 <div class="mastery-cta">
 
-**What if Claude Code got it right the first time?**
+I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel.
 
-16 CLAUDE.md templates for popular frameworks. 80 tested prompts. Multi-agent configs. Workflow playbooks. The complete toolkit for shipping production code with Claude Code.
+These are my actual CLAUDE.md templates, orchestration configs, and prompts. Not a course. Not theory. The files I copy into every project before I write a line of code.
 
-**[See the setup that ships →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-default&utm_campaign=claude-code-for-health-endpoint-pattern-workflow)**
+**[See what's inside →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-default&utm_campaign=claude-code-for-health-endpoint-pattern-workflow)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. Free forever. 47/500 founding spots left.
 
 </div>
 

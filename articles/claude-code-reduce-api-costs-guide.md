@@ -174,37 +174,45 @@ The developers who get the most out of Claude Code aren't just fixing errors —
 
 
 <div class="author-bio">
-<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
-<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+
+**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+
 </div>
 
 ---
 
 
 <div class="before-after">
-<div class="before">
-<h4>Without CLAUDE.md</h4>
-<p>You: "Add error handling to my API routes"</p>
-<p>Claude Code wraps everything in <code>try/catch</code> with <code>console.log(error)</code>, returns generic 500s with no error codes, leaks stack traces to the client in production, and swallows errors silently in three different middleware functions.</p>
-<p><strong>Result:</strong> Your first production incident takes 4 hours to debug because there are no structured logs.</p>
-</div>
-<div class="after">
-<h4>With a Professional CLAUDE.md</h4>
-<p>You: Same prompt.</p>
-<p>Claude Code reads CLAUDE.md &rarr; knows your error hierarchy + structured logging + error boundary patterns &rarr; generates typed error classes (<code>AppError</code>, <code>ValidationError</code>, <code>NotFoundError</code>), a centralized error handler, structured JSON logs with correlation IDs, and client-safe error responses.</p>
-<p><strong>Result:</strong> Your first production incident takes 12 minutes to find because every error has a trace.</p>
-</div>
+
+**Without a CLAUDE.md — what actually happens:**
+
+You type: "Add auth to my Next.js app"
+
+Claude generates: `pages/api/auth/[...nextauth].js` — wrong directory (you're on App Router), wrong file extension (you use TypeScript), wrong NextAuth version (v4 patterns, you need v5), session handling that doesn't match your middleware setup.
+
+You spend 40 minutes reverting and rewriting. Claude was "helpful."
+
+**With the Zovo Lifetime CLAUDE.md:**
+
+Same prompt. Claude reads 300 lines of context about YOUR project. Generates: `app/api/auth/[...nextauth]/route.ts` with v5 patterns, your session types, your middleware config, your test patterns.
+
+Works on first run. You commit and move on.
+
+That's the difference a $99 file makes.
+
+**[Get the CLAUDE.md for your stack →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-beforeafter&utm_campaign=claude-code-reduce-api-costs-guide)**
+
 </div>
 
 <div class="mastery-cta">
 
-**Claude Code burning tokens? It's reading your entire codebase because it doesn't know what matters.**
+Claude Code is expensive because it's reading your entire codebase every time. A CLAUDE.md tells it what matters upfront — architecture, conventions, boundaries. Less scanning. Fewer wrong turns. Lower bills.
 
-A CLAUDE.md file tells Claude your architecture, conventions, and boundaries upfront. Less context scanning. Fewer wrong turns. Lower token bills. Better output on the first try.
+I spend $200+/month on Claude subs. These configs are how I keep the output worth the cost.
 
-**[See how fast setups work →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-perf&utm_campaign=claude-code-reduce-api-costs-guide)**
+**[Get the configs →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-perf&utm_campaign=claude-code-reduce-api-costs-guide)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. Pays for itself in saved tokens within a week.
 
 </div>
 

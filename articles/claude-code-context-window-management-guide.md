@@ -161,21 +161,22 @@ The developers who get the most out of Claude Code aren't just fixing errors —
 
 
 <div class="author-bio">
-<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
-<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+
+**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+
 </div>
 
 ---
 
 <div class="mastery-cta">
 
-**Claude Code burning tokens? It's reading your entire codebase because it doesn't know what matters.**
+Claude Code is expensive because it's reading your entire codebase every time. A CLAUDE.md tells it what matters upfront — architecture, conventions, boundaries. Less scanning. Fewer wrong turns. Lower bills.
 
-A CLAUDE.md file tells Claude your architecture, conventions, and boundaries upfront. Less context scanning. Fewer wrong turns. Lower token bills. Better output on the first try.
+I spend $200+/month on Claude subs. These configs are how I keep the output worth the cost.
 
-**[See how fast setups work →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-perf&utm_campaign=claude-code-context-window-management-guide)**
+**[Get the configs →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-perf&utm_campaign=claude-code-context-window-management-guide)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. Pays for itself in saved tokens within a week.
 
 </div>
 

@@ -170,37 +170,45 @@ The developers who get the most out of Claude Code aren't just fixing errors —
 
 
 <div class="author-bio">
-<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
-<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+
+**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+
 </div>
 
 ---
 
 
 <div class="before-after">
-<div class="before">
-<h4>Without CLAUDE.md</h4>
-<p>You: "Create a Dockerfile for my Node.js app"</p>
-<p>Claude Code generates a single-stage build: <code>FROM node:20</code>, copies everything including <code>node_modules</code> and <code>.git</code>, runs as root, no <code>.dockerignore</code>, no health check. Final image: <strong>1.2 GB</strong>. Fails security audit on day one.</p>
-<p><strong>Result:</strong> CI takes 8 minutes. Your security team sends it back.</p>
-</div>
-<div class="after">
-<h4>With a Professional CLAUDE.md</h4>
-<p>You: Same prompt.</p>
-<p>Claude Code reads CLAUDE.md &rarr; knows multi-stage builds + Alpine + non-root user &rarr; generates a build stage, a production stage with <code>node:20-alpine</code>, proper <code>.dockerignore</code>, <code>HEALTHCHECK</code>, <code>USER node</code>, and pinned dependencies. Final image: <strong>89 MB</strong>.</p>
-<p><strong>Result:</strong> CI runs in 90 seconds. Security passes it without comments.</p>
-</div>
+
+**Without a CLAUDE.md — what actually happens:**
+
+You type: "Add auth to my Next.js app"
+
+Claude generates: `pages/api/auth/[...nextauth].js` — wrong directory (you're on App Router), wrong file extension (you use TypeScript), wrong NextAuth version (v4 patterns, you need v5), session handling that doesn't match your middleware setup.
+
+You spend 40 minutes reverting and rewriting. Claude was "helpful."
+
+**With the Zovo Lifetime CLAUDE.md:**
+
+Same prompt. Claude reads 300 lines of context about YOUR project. Generates: `app/api/auth/[...nextauth]/route.ts` with v5 patterns, your session types, your middleware config, your test patterns.
+
+Works on first run. You commit and move on.
+
+That's the difference a $99 file makes.
+
+**[Get the CLAUDE.md for your stack →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-beforeafter&utm_campaign=claude-code-github-actions-setup-guide)**
+
 </div>
 
 <div class="mastery-cta">
 
-**Deploy configs are write-once if you write them right.**
+This took me 3 hours to figure out. I put it in a CLAUDE.md so I'd never figure it out again. Now Claude gets it right on the first try, every project.
 
-Production Dockerfiles, CI/CD templates, and deployment playbooks. Copy-paste infrastructure that a senior engineer actually tested. Stop rebuilding deploy pipelines from Stack Overflow snippets.
+16 framework templates. Next.js, FastAPI, Laravel, Rails, Go, Rust, Terraform, and 9 more. Each one 300+ lines of "here's exactly how this stack works." Copy into your project. Done.
 
-**[Get the production Dockerfile →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-deploy&utm_campaign=claude-code-github-actions-setup-guide)**
+**[See the templates →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-deploy&utm_campaign=claude-code-github-actions-setup-guide)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. Yours forever. I keep adding templates monthly.
 
 </div>
 

@@ -225,13 +225,13 @@ Applying this checklist to a mature but unoptimized skill typically reduces its 
 
 <div class="mastery-cta">
 
-**Still building from scratch every time?**
+This site was built by 5 autonomous agents running in tmux while I was in Bali. 2,500 articles. Zero manual work. 100% quality gate pass rate.
 
-16 production CLAUDE.md templates. 80 tested prompts. Multi-agent orchestration configs. Everything a senior developer uses to ship with Claude Code — ready to copy into your project in 30 seconds.
+The orchestration configs, sprint templates, and quality gates that made that possible are in the Zovo Lifetime bundle. Along with 16 CLAUDE.md templates and 80 tested prompts.
 
-**[Start with a tested template →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-skills&utm_campaign=claude-skills-token-optimization-reduce-api-costs)**
+**[See how the pipeline works →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-skills&utm_campaign=claude-skills-token-optimization-reduce-api-costs)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 </div>
 

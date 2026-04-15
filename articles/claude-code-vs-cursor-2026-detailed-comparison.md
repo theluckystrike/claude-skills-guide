@@ -219,13 +219,13 @@ For teams, Claude Code's skill system offers a unique advantage. the ability to 
 
 <div class="mastery-cta">
 
-**Still comparing tools? Here's what actually moves the needle.**
+I've tried them all. Claude Code wins — but only if you set it up right.
 
-The gap between developers who "use Claude Code" and developers who ship with it isn't the tool — it's the setup. The CLAUDE.md, the prompts, the workflow. Get the setup that ships production code.
+The gap isn't the tool. It's the CLAUDE.md, the prompts, the workflow. I run 5 Claude Max subscriptions in parallel with autonomous agent fleets. These are my actual configs — the ones that let a solo dev outproduce a small team.
 
-**[See the setup that ships →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-compare&utm_campaign=claude-code-vs-cursor-2026-detailed-comparison)**
+**[See the full setup →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-compare&utm_campaign=claude-code-vs-cursor-2026-detailed-comparison)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99. Once. Everything I use to ship.
 
 </div>
 

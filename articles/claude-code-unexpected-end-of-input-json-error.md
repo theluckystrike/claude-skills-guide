@@ -455,13 +455,13 @@ If you continue to experience this error after checking your local configuration
 
 <div class="mastery-cta">
 
-**You just spent mass time debugging this.**
+I hit this exact error six months ago. Then I wrote a CLAUDE.md that tells Claude my stack, my conventions, and my error handling patterns. Haven't seen it since.
 
-What if Claude Code got it right the first time? The developers shipping fastest aren't smarter — they have better CLAUDE.md files. One file tells Claude exactly how your stack works so it stops guessing and starts engineering.
+I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+ on Upwork. These CLAUDE.md templates are what I actually use. Not theory — production configs.
 
-**[See what prevents these errors →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-error&utm_campaign=claude-code-unexpected-end-of-input-json-error)**
+**[Grab the templates — $99 once, free forever →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-error&utm_campaign=claude-code-unexpected-end-of-input-json-error)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+47/500 founding spots. Price goes up when they're gone.
 
 </div>
 

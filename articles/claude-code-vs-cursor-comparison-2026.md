@@ -112,37 +112,45 @@ The developers who get the most out of Claude Code aren't just fixing errors —
 
 
 <div class="author-bio">
-<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
-<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+
+**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+
 </div>
 
 ---
 
 
 <div class="before-after">
-<div class="before">
-<h4>Without CLAUDE.md</h4>
-<p>You: "Add authentication to my Next.js app"</p>
-<p>Claude Code generates a <code>pages/</code> directory (your App Router uses <code>app/</code>), picks NextAuth v4 (v5 is current), creates <code>.js</code> files in a TypeScript project, and uses <code>getServerSession</code> incorrectly with the wrong adapter pattern.</p>
-<p><strong>Result:</strong> You spend 45 minutes fixing what Claude broke.</p>
-</div>
-<div class="after">
-<h4>With a Professional CLAUDE.md</h4>
-<p>You: Same prompt.</p>
-<p>Claude Code reads CLAUDE.md &rarr; knows App Router + TypeScript strict + NextAuth v5 &rarr; generates <code>app/api/auth/[...nextauth]/route.ts</code> with correct session handling, middleware config, and type-safe session types that match your existing schema.</p>
-<p><strong>Result:</strong> It works on the first run. You ship.</p>
-</div>
+
+**Without a CLAUDE.md — what actually happens:**
+
+You type: "Add auth to my Next.js app"
+
+Claude generates: `pages/api/auth/[...nextauth].js` — wrong directory (you're on App Router), wrong file extension (you use TypeScript), wrong NextAuth version (v4 patterns, you need v5), session handling that doesn't match your middleware setup.
+
+You spend 40 minutes reverting and rewriting. Claude was "helpful."
+
+**With the Zovo Lifetime CLAUDE.md:**
+
+Same prompt. Claude reads 300 lines of context about YOUR project. Generates: `app/api/auth/[...nextauth]/route.ts` with v5 patterns, your session types, your middleware config, your test patterns.
+
+Works on first run. You commit and move on.
+
+That's the difference a $99 file makes.
+
+**[Get the CLAUDE.md for your stack →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-beforeafter&utm_campaign=claude-code-vs-cursor-comparison-2026)**
+
 </div>
 
 <div class="mastery-cta">
 
-**Still comparing tools? Here's what actually moves the needle.**
+I've tried them all. Claude Code wins — but only if you set it up right.
 
-The gap between developers who "use Claude Code" and developers who ship with it isn't the tool — it's the setup. The CLAUDE.md, the prompts, the workflow. Get the setup that ships production code.
+The gap isn't the tool. It's the CLAUDE.md, the prompts, the workflow. I run 5 Claude Max subscriptions in parallel with autonomous agent fleets. These are my actual configs — the ones that let a solo dev outproduce a small team.
 
-**[See the setup that ships →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-compare&utm_campaign=claude-code-vs-cursor-comparison-2026)**
+**[See the full setup →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-compare&utm_campaign=claude-code-vs-cursor-comparison-2026)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99. Once. Everything I use to ship.
 
 </div>
 

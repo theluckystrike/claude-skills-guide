@@ -378,21 +378,22 @@ Add Lambda development rules to your CLAUDE.md:
 
 
 <div class="author-bio">
-<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
-<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+
+**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+
 </div>
 
 ---
 
 <div class="mastery-cta">
 
-**Deploy configs are write-once if you write them right.**
+This took me 3 hours to figure out. I put it in a CLAUDE.md so I'd never figure it out again. Now Claude gets it right on the first try, every project.
 
-Production Dockerfiles, CI/CD templates, and deployment playbooks. Copy-paste infrastructure that a senior engineer actually tested. Stop rebuilding deploy pipelines from Stack Overflow snippets.
+16 framework templates. Next.js, FastAPI, Laravel, Rails, Go, Rust, Terraform, and 9 more. Each one 300+ lines of "here's exactly how this stack works." Copy into your project. Done.
 
-**[Get the production Dockerfile →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-deploy&utm_campaign=claude-code-aws-lambda-deployment-guide)**
+**[See the templates →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-deploy&utm_campaign=claude-code-aws-lambda-deployment-guide)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+$99 once. Yours forever. I keep adding templates monthly.
 
 </div>
 

@@ -138,37 +138,45 @@ Claude should invoke the MCP tool and return results.
 
 
 <div class="author-bio">
-<strong>Built by Michael</strong> · Top Rated Plus on Upwork · $400K+ earned building with AI · 16 Chrome extensions · 3,000+ users · Building with Claude Code since launch.
-<a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=author-bio&utm_campaign=social-proof">See what I ship with →</a>
+
+**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+
 </div>
 
 ---
 
 
 <div class="before-after">
-<div class="before">
-<h4>Without CLAUDE.md</h4>
-<p>You: "Set up a database layer for my FastAPI project"</p>
-<p>Claude Code generates synchronous SQLAlchemy with hardcoded <code>sqlite:///./test.db</code>, no migrations, connection strings in source code, and blocking I/O calls inside async route handlers that tank your throughput.</p>
-<p><strong>Result:</strong> You discover the performance cliff in staging. Rewrite takes a full day.</p>
-</div>
-<div class="after">
-<h4>With a Professional CLAUDE.md</h4>
-<p>You: Same prompt.</p>
-<p>Claude Code reads CLAUDE.md &rarr; knows async SQLAlchemy 2.0 + <code>.env</code> config + Alembic &rarr; generates <code>AsyncSession</code>, proper connection pooling, an initial Alembic migration, and a <code>get_db</code> dependency that handles lifecycle correctly.</p>
-<p><strong>Result:</strong> Production-ready from the first commit. Zero rewrites.</p>
-</div>
+
+**Without a CLAUDE.md — what actually happens:**
+
+You type: "Add auth to my Next.js app"
+
+Claude generates: `pages/api/auth/[...nextauth].js` — wrong directory (you're on App Router), wrong file extension (you use TypeScript), wrong NextAuth version (v4 patterns, you need v5), session handling that doesn't match your middleware setup.
+
+You spend 40 minutes reverting and rewriting. Claude was "helpful."
+
+**With the Zovo Lifetime CLAUDE.md:**
+
+Same prompt. Claude reads 300 lines of context about YOUR project. Generates: `app/api/auth/[...nextauth]/route.ts` with v5 patterns, your session types, your middleware config, your test patterns.
+
+Works on first run. You commit and move on.
+
+That's the difference a $99 file makes.
+
+**[Get the CLAUDE.md for your stack →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-beforeafter&utm_campaign=claude-code-mcp-server-setup)**
+
 </div>
 
 <div class="mastery-cta">
 
-**Integration debugging is the worst kind of debugging.**
+I hit this exact error six months ago. Then I wrote a CLAUDE.md that tells Claude my stack, my conventions, and my error handling patterns. Haven't seen it since.
 
-Skip the trial-and-error. Get orchestration configs and tested prompts for MCP server setup, tool integration, and multi-agent coordination. Built by a developer running 5-agent fleets in production.
+I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+ on Upwork. These CLAUDE.md templates are what I actually use. Not theory — production configs.
 
-**[Get configs that work first try →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-mcp&utm_campaign=claude-code-mcp-server-setup)**
+**[Grab the templates — $99 once, free forever →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-mcp&utm_campaign=claude-code-mcp-server-setup)**
 
-$99 once. Yours forever. 47/500 founding spots left.
+47/500 founding spots. Price goes up when they're gone.
 
 </div>
 
