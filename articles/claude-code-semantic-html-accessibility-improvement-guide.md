@@ -350,11 +350,13 @@ Accessibility isn't a destination but an ongoing commitment. With Claude Code as
 
 ---
 
-### Make Accessibility Your Competitive Edge
+### Level Up Your Claude Code Workflow
 
-Teams that build accessibility-first don't just check legal boxes — they reach wider audiences, improve SEO through better semantic HTML, and create products that work for everyone. Claude Code's understanding of WCAG standards and semantic patterns makes it easier to embed accessibility into every line you write, from the first commit.
+The developers who get the most out of Claude Code aren't just fixing errors — they're running multi-agent pipelines, using battle-tested CLAUDE.md templates, and shipping with production-grade operating principles.
 
-**[Claude Code Mastery →](https://zovo.one/pricing?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-semantic-html-accessibility-improvement-guide)**
+**[Get Claude Code Mastery — included in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-semantic-html-accessibility-improvement-guide)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. $99 once, free forever.
 
 ---
 

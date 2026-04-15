@@ -403,11 +403,15 @@ The combination of Claude's understanding of both design principles and Tailwind
 
 ---
 
-### Accelerate Your Design-to-Code Workflow
+### Level Up Your Claude Code Workflow
 
-Converting Figma to code doesn't have to take hours of manual work. With Claude Code handling the heavy lifting — reading designs, generating components, and maintaining consistency with your design tokens — you can ship design changes to production in minutes instead of days. That's the kind of velocity that compounds over a quarter.
+The developers who get the most out of Claude Code aren't just fixing errors — they're running multi-agent pipelines, using battle-tested CLAUDE.md templates, and shipping with production-grade operating principles.
 
-**[Claude Code Mastery →](https://zovo.one/pricing?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-figma-to-tailwind-component-conversion)**
+**[Get Claude Code Mastery — included in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-figma-to-tailwind-component-conversion)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. $99 once, free forever.
+
+---
 
 Related Reading
 

@@ -305,11 +305,15 @@ The most durable habit is consistent use of supermemory across every project. On
 
 ---
 
-### Master the Full Skill Stack
+### Level Up Your Claude Code Workflow
 
-The developers who treat Claude Code as a complete development platform — not just a code completion tool — are shipping features that would take traditional teams weeks to build. By combining skills strategically and building your own skill composition patterns, you unlock compound productivity gains that grow with every project. The cookbook becomes your operating manual.
+The developers who get the most out of Claude Code aren't just fixing errors — they're running multi-agent pipelines, using battle-tested CLAUDE.md templates, and shipping with production-grade operating principles.
 
-**[Claude Code Mastery →](https://zovo.one/pricing?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-cookbook-recipes-collection)**
+**[Get Claude Code Mastery — included in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-cookbook-recipes-collection)**
+
+16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. $99 once, free forever.
+
+---
 
 Related Reading
 
