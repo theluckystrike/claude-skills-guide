@@ -182,7 +182,7 @@ winget install Anthropic.ClaudeCode
 
 The developers who get the most out of Claude Code aren't just fixing errors — they're running multi-agent pipelines, using battle-tested CLAUDE.md templates, and shipping with production-grade operating principles.
 
-**[Claude Code Mastery →](https://claudecodeguides.com/mastery/?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-command-not-found-after-install-fix)**
+**[Claude Code Mastery →](https://zovo.one/pricing?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-command-not-found-after-install-fix)**
 Templates, configs, and orchestration playbooks used by a Top Rated Plus developer with $400K+ earned building with Claude Code.
 
 $19/month · $149 lifetime · No fluff, no courses, just tools that ship.

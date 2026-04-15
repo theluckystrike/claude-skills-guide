@@ -1,6 +1,6 @@
 ---
 title: "Claude Code Mastery — Templates, Configs, and Playbooks"
-description: "Stop guessing. Start shipping. Production-ready CLAUDE.md templates, multi-agent orchestration configs, and sprint playbooks from a developer who builds with Claude Code daily."
+description: "Stop guessing. Start shipping. Production-ready CLAUDE.md templates, multi-agent orchestration configs, and sprint playbooks — included with Zovo Lifetime membership."
 layout: default
 permalink: /mastery/
 ---
@@ -9,7 +9,7 @@ permalink: /mastery/
 
 <h1 style="font-size: 2.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 16px;">Stop Guessing. Start Shipping.</h1>
 
-<p style="font-size: 1.25rem; color: #555; margin-bottom: 32px;">Templates, configs, and orchestration playbooks from a developer who builds with Claude Code every day.</p>
+<p style="font-size: 1.25rem; color: #555; margin-bottom: 32px;">Templates, configs, and orchestration playbooks from a developer who builds with Claude Code every day — included with every Zovo Lifetime membership.</p>
 
 <hr style="margin: 32px 0;">
 
@@ -34,9 +34,11 @@ permalink: /mastery/
 
 <p>This is not a course. There are no videos to watch. You get files you can use <em>today</em>.</p>
 
+<p>Claude Code Mastery is included with <strong>Zovo Lifetime</strong> — along with a full suite of tools for Chrome extension builders.</p>
+
 <hr style="margin: 32px 0;">
 
-<h2 style="font-size: 1.5rem;">What's Inside</h2>
+<h2 style="font-size: 1.5rem;">What's Inside Claude Code Mastery</h2>
 
 <h3>8 CLAUDE.md Templates</h3>
 <p>Production-ready CLAUDE.md files for the stacks you actually use. Each one is 200-300+ lines of specific rules, patterns, and constraints that make Claude Code produce consistent, high-quality code.</p>
@@ -80,23 +82,38 @@ permalink: /mastery/
 
 <hr style="margin: 32px 0;">
 
-<h2 style="font-size: 1.5rem;">Pricing</h2>
+<h2 style="font-size: 1.5rem;">Get Access Through Zovo Lifetime</h2>
+
+<p>Claude Code Mastery is included with <strong>Zovo Lifetime membership</strong>. Pay once, free forever after.</p>
 
 <div style="display: flex; gap: 24px; flex-wrap: wrap; margin: 24px 0;">
 
-<div style="flex: 1; min-width: 280px; border: 2px solid #e5e7eb; border-radius: 12px; padding: 24px;">
-<h3 style="margin-top: 0;">Monthly</h3>
-<p style="font-size: 2rem; font-weight: 700; margin: 8px 0;">$19<span style="font-size: 1rem; font-weight: 400; color: #666;">/month</span></p>
-<p style="color: #666;">Access to all resources. Cancel anytime. Updates included.</p>
-<a href="#" id="monthly-cta" style="display: inline-block; background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 12px;">Get Monthly Access</a>
-</div>
+<div style="flex: 1; min-width: 320px; border: 2px solid #2563eb; border-radius: 12px; padding: 32px; position: relative;">
+<span style="position: absolute; top: -12px; right: 16px; background: #2563eb; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">FOUNDING MEMBER</span>
+<h3 style="margin-top: 0;">Zovo Lifetime</h3>
+<p style="font-size: 2.5rem; font-weight: 700; margin: 8px 0;">$99<span style="font-size: 1rem; font-weight: 400; color: #666;"> once</span></p>
+<p style="color: #555; font-size: 0.95rem; margin-bottom: 4px;">$0.27/day year one, then <strong>$0/day forever</strong></p>
+<p style="color: #666; margin-bottom: 16px;">Pay once. Free forever after. Everything included.</p>
 
-<div style="flex: 1; min-width: 280px; border: 2px solid #2563eb; border-radius: 12px; padding: 24px; position: relative;">
-<span style="position: absolute; top: -12px; right: 16px; background: #2563eb; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">BEST VALUE</span>
-<h3 style="margin-top: 0;">Lifetime</h3>
-<p style="font-size: 2rem; font-weight: 700; margin: 8px 0;">$149<span style="font-size: 1rem; font-weight: 400; color: #666;"> one-time</span></p>
-<p style="color: #666;">Permanent access. All future updates included. Pay once, use forever.</p>
-<a href="#" id="lifetime-cta" style="display: inline-block; background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 12px;">Get Lifetime Access</a>
+<ul style="list-style: none; padding: 0; margin: 0 0 20px 0; font-size: 0.95rem;">
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">Claude Code Mastery templates, configs, playbooks</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">248,805-extension market intelligence database</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">Extension Engine boilerplate ($999 value)</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">CWS playbook: localization, ranking, reviews</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">Distribution across 248K+ indexed pages</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">Do-follow backlink from zovo.one</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">Weekly picks, comparison pages, newsletters</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">30% affiliate program</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">Monthly live builder calls & extension teardowns</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">Private Discord: verified builders only</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">Direct access to the developer</li>
+<li style="padding: 6px 0; border-bottom: 1px solid #f0f0f0;">Every future extension built (50+ planned)</li>
+<li style="padding: 6px 0;">Founding member status</li>
+</ul>
+
+<a href="https://zovo.one/pricing" id="lifetime-cta" style="display: inline-block; background: #2563eb; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem; width: 100%; text-align: center; box-sizing: border-box;">Get Zovo Lifetime — $99</a>
+
+<p style="color: #c53030; font-weight: 600; font-size: 0.9rem; margin-top: 12px; text-align: center;">47/500 founding spots claimed. Price increases to $149 after 50 members.</p>
 </div>
 
 </div>
@@ -112,10 +129,10 @@ Markdown files. You can open them in any editor, copy-paste into your projects, 
 No. The CLAUDE.md templates work with any Claude Code plan. The orchestration configs work best with Pro or Max (multiple concurrent sessions), but the templates and principles work with any tier.</p>
 
 <p><strong>Will there be updates?</strong><br>
-Yes. When Claude Code adds new features or I discover better patterns, I update the templates. Both monthly and lifetime plans get updates.</p>
+Yes. When Claude Code adds new features or I discover better patterns, I update the templates. Zovo Lifetime members get all updates forever — it's a one-time payment.</p>
 
-<p><strong>Can I get a refund?</strong><br>
-Monthly: cancel anytime. Lifetime: 30-day refund if it's not useful. No questions.</p>
+<p><strong>Why is Claude Code Mastery bundled with Zovo?</strong><br>
+Because the best Claude Code users are builders. Zovo Lifetime gives you the AI development templates <em>and</em> the market intelligence, distribution, and community to actually ship and grow what you build.</p>
 
 <p><strong>Is this just AI-generated content?</strong><br>
 These templates are extracted from real projects and refined through production use. The quality gate config, for example, evolved over 3 sprints of actually shipping content — with specific lessons from a 37% pass rate on Sprint 1 to 100% on Sprint 2. That refinement can't be generated from scratch.</p>
@@ -127,8 +144,8 @@ Most CLAUDE.md files are 10-20 lines of generic instructions. These templates ar
 
 <div style="text-align: center; padding: 32px 0;">
 <p style="font-size: 1.25rem; font-weight: 600;">Ready to stop guessing?</p>
-<a href="#" id="final-cta" style="display: inline-block; background: #2563eb; color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem;">Get Claude Code Mastery</a>
-<p style="color: #888; margin-top: 12px; font-size: 0.9rem;">16 production resources. Immediate access. 30-day guarantee.</p>
+<a href="https://zovo.one/pricing" id="final-cta" style="display: inline-block; background: #2563eb; color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem;">Get Zovo Lifetime — $99</a>
+<p style="color: #888; margin-top: 12px; font-size: 0.9rem;">16 production resources. 248K+ extension database. Everything included. Pay once.</p>
 </div>
 
 </div>

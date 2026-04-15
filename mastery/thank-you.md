@@ -1,21 +1,21 @@
 ---
-title: "Welcome to Claude Code Mastery"
-description: "Your Claude Code Mastery resources are ready. Here's how to get started."
+title: "Welcome to Zovo Lifetime"
+description: "Your Zovo Lifetime membership is active. Here's how to get started with Claude Code Mastery and everything else."
 layout: default
 permalink: /mastery/thank-you/
 ---
 
 <div style="max-width: 700px; margin: 0 auto; padding: 40px 20px;">
 
-<h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">You're In.</h1>
+<h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">You're In. Welcome to Zovo Lifetime.</h1>
 
-<p style="font-size: 1.15rem; color: #555; margin-bottom: 32px;">Your Claude Code Mastery resources are ready. Here's how to get the most out of them.</p>
+<p style="font-size: 1.15rem; color: #555; margin-bottom: 32px;">Your membership is active. Here's how to get started with Claude Code Mastery and everything else included in Zovo Lifetime.</p>
 
 <hr style="margin: 24px 0;">
 
-<h2>Step 1 — Download Your Resources</h2>
+<h2>Step 1 — Access Your Claude Code Mastery Resources</h2>
 
-<p>Check your email for the download link. You'll receive a ZIP file with all 16 resources organized into folders:</p>
+<p>Check your email for access details. Your Claude Code Mastery resources include 16 files organized into folders:</p>
 
 <pre><code>claude-code-mastery/
 ├── claude-md-templates/        (8 stack-specific CLAUDE.md files)
@@ -49,18 +49,27 @@ permalink: /mastery/thank-you/
 <li>Compare the review quality to what you've been getting manually</li>
 </ol>
 
-<h2>Step 4 — Read the Operating Principles</h2>
+<h2>Step 4 — Explore the Rest of Zovo Lifetime</h2>
 
-<p>The NASA Power of 10 guide isn't just theory. The "Enforcement" blocks at the end of each rule are designed to be copied directly into your CLAUDE.md. Pick the rules most relevant to your codebase and add them.</p>
+<p>Claude Code Mastery is just one part of your membership. Head to <a href="https://zovo.one/pricing">zovo.one</a> to explore:</p>
+
+<ul>
+<li>The 248,805-extension market intelligence database</li>
+<li>Extension Engine boilerplate</li>
+<li>CWS playbook for localization, ranking, and reviews</li>
+<li>Distribution across 248K+ indexed pages</li>
+<li>Private Discord for verified builders</li>
+<li>Monthly live builder calls and extension teardowns</li>
+</ul>
 
 <hr style="margin: 24px 0;">
 
 <h2>Need Help?</h2>
 
-<p>If you have questions about any resource or need help adapting a template to your stack, email <a href="mailto:support@claudecodeguides.com">support@claudecodeguides.com</a>.</p>
+<p>As a Zovo Lifetime member, you have direct access to the developer. Reach out through the Private Discord or email <a href="mailto:support@zovo.one">support@zovo.one</a>.</p>
 
 <hr style="margin: 24px 0;">
 
-<p style="text-align: center; color: #888; font-size: 0.9rem;">Thank you for your purchase. Now go ship something.</p>
+<p style="text-align: center; color: #888; font-size: 0.9rem;">Welcome to the founding team. Now go ship something.</p>
 
 </div>
