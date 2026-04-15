@@ -140,9 +140,9 @@ Response time: ~3s (was ~30s)
 
 ## Related Issues
 
-- [Claude Code Memory Leak Fix](/claude-code-memory-leak-fix) — When memory usage grows unbounded
-- [Claude Code Context Window Management](/claude-code-context-window) — Understanding context limits
-- [Hub: Performance & Speed Issues](/claude-code-performance-hub) — Browse all performance guides
+- [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/) — When memory usage grows unbounded
+- [Claude Code Context Window Full in Large Codebase Fix](/claude-code-context-window-full-in-large-codebase-fix/) — Understanding context limits
+- [Benchmarking Claude Code Skills Performance Guide](/benchmarking-claude-code-skills-performance-guide/) — Browse all performance guides
 
 ---
 

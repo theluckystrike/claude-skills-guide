@@ -111,9 +111,9 @@ API: Anthropic
 
 ## Related Issues
 
-- [Fix Claude Code Error 401 — Unauthorized](/claude-code-error-401-fix) — Auth token expired or invalid
-- [Claude Code Config File Location](/claude-code-config-location) — Where settings and credentials are stored
-- [Hub: Authentication & Login Issues](/claude-code-auth-login-hub) — Browse all auth guides
+- [Fix Claude API Error 401 — Unauthorized](/claude-api-error-401-fix/) — Auth token expired or invalid
+- [Claude Code Config File Location](/claude-code-config-file-location/) — Where settings and credentials are stored
+- [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/) — Browse all auth guides
 
 ---
 

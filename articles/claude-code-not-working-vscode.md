@@ -129,7 +129,7 @@ After fixes, test in VS Code:
 
 - [Install Claude Code — All Platforms Guide](/claude-code-install-guide) — Fresh installation instructions
 - [Fix Claude Code Login — Cannot Paste Auth Code](/claude-code-login-paste-fix) — Authentication issues
-- [Hub: Desktop & IDE Integration](/claude-code-desktop-ide-hub) — Browse all IDE guides
+- [Claude Code Docker Desktop Workflow Tips](/claude-code-docker-desktop-workflow-tips/) — Browse all IDE guides
 
 ---
 

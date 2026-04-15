@@ -8,8 +8,10 @@ author: "Claude Code Guides"
 permalink: /anthropic-sdk-structured-output-thinking-tool-use-bug/
 reviewed: true
 categories: [troubleshooting]
-tags: []
+tags: [anthropic-sdk, python, error, troubleshooting, api, structured-output, streaming]
 ---
+
+# Fix: Structured Output + Thinking + Tool Use Bugs
 
 ## The Error
 
@@ -277,8 +279,8 @@ async def parse_with_retry(params, max_retries=3):
 ## Related Issues
 
 - [Fix: "Compiled grammar is too large" Error](/anthropic-sdk-structured-output-grammar-too-large)
-- [Anthropic SDK Tool Use Guide](/anthropic-sdk-tool-use-guide)
-- [Fix: Claude API Error 400 Invalid Request](/anthropic-api-error-400-invalid-request)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
+- [Fix: Claude API Error 400 Invalid Request](/claude-api-error-400-invalidrequesterror-explained/)
 
 ## Tools That Help
 

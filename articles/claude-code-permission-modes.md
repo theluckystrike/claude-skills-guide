@@ -156,9 +156,9 @@ claude --permission-mode allowEdits
 
 ## Related Issues
 
-- [Claude Code Bypassed Security Settings](/claude-code-security-bypass) — When permissions are ignored
-- [Fix Claude Code Destructive Command Warning](/claude-code-destructive-command-fix) — Preventing dangerous operations
-- [Hub: Permissions & Security](/claude-code-permissions-hub) — Browse all permissions guides
+- [Claude Code API Security OWASP Guide](/claude-code-api-security-owasp-guide/) — When permissions are ignored
+- [Claude Code PreToolUse Hooks Bypassed Fix](/claude-code-pretooluse-hooks-bypassed/) — Preventing dangerous operations
+- [Claude Code Permission Modes Explained](/claude-code-permission-modes/) — Browse all permissions guides
 
 ---
 

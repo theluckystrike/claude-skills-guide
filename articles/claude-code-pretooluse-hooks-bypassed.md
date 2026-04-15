@@ -8,8 +8,10 @@ author: "Claude Code Guides"
 permalink: /claude-code-pretooluse-hooks-bypassed/
 reviewed: true
 categories: [troubleshooting]
-tags: []
+tags: [claude-code, hooks, permissions, error, troubleshooting]
 ---
+
+# Fix: Claude Code PreToolUse Hooks Stop Working
 
 ## The Error
 
@@ -176,9 +178,9 @@ Key points:
 
 ## Related Issues
 
-- [Fix: Claude Code Permissions Break After Compact](/claude-code-permission-bypass-after-compact)
-- [Fix: Claude Code Plan Mode Executes Commands](/claude-code-plan-mode-executes-commands)
-- [Claude Code Hooks Configuration Guide](/claude-code-hooks-configuration)
+- [Fix: Claude Code PreToolUse Hooks Bypassed](/claude-code-pretooluse-hooks-bypassed/)
+- [Claude Code Permission Modes Explained](/claude-code-permission-modes/)
+- [Claude Code 2026 New Features: Skills and Hooks Roundup](/claude-code-2026-new-features-skills-and-hooks-roundup/)
 
 ## Tools That Help
 

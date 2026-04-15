@@ -204,6 +204,6 @@ async function adaptiveRequest(
 
 - [Fix: Anthropic SDK Streaming Hangs Indefinitely](/anthropic-sdk-streaming-hang-timeout/)
 - [Fix: Claude API Error 429 Rate Limit](/anthropic-api-error-429-rate-limit/)
-- [Anthropic TypeScript SDK Guide](/anthropic-typescript-sdk-guide/)
-- [Streaming Messages Reference](/streaming-messages-reference/)
-- [Anthropic API Error Reference](/claude-api-error-reference/)
+- [Claude Code API Client TypeScript Guide](/claude-code-api-client-typescript-guide/)
+- [Claude API Streaming Responses Implementation Tutorial](/claude-api-streaming-responses-implementation-tutorial/)
+- [Claude API Error 400 Invalid Request Fix](/claude-api-error-400-invalidrequesterror-explained/)

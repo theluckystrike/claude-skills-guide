@@ -8,8 +8,10 @@ author: "Claude Code Guides"
 permalink: /claude-code-oauth-login-paste-not-working/
 reviewed: true
 categories: [troubleshooting]
-tags: []
+tags: [claude-code, oauth, authentication, error, troubleshooting]
 ---
+
+# Fix: Claude Code OAuth Login Paste Not Working
 
 ## The Error
 
@@ -112,8 +114,8 @@ This bypasses OAuth entirely and uses direct API authentication.
 ## Related Issues
 
 - [Fix: Claude Code Headless Linux Auth Blocked by Cloudflare](/claude-code-headless-linux-auth)
-- [Fix: Claude Code SSH Remote Setup Guide](/claude-code-ssh-remote-setup)
-- [Fix: Claude Code Error 401 Unauthorized](/claude-code-error-401-fix)
+- [Fix: Claude Code Headless Linux Auth](/claude-code-headless-linux-auth/)
+- [Fix: Claude API Error 401 Unauthorized](/claude-api-error-401-fix/)
 
 ## Tools That Help
 

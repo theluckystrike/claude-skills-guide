@@ -192,6 +192,6 @@ If your code depends on prefilling and you need to use Opus 4.6, switch to struc
 
 - [Claude API Error 400 invalid_request_error Fix](/claude-api-error-400-invalidrequesterror-explained/) -- the error type returned when prefill is used on unsupported models.
 - [Claude Extended Thinking API Guide](/claude-extended-thinking-api-guide/) -- Opus 4.6 capabilities beyond prefilling.
-- [Claude Messages Create API Guide](/claude-messages-create-api-guide/) -- full parameter reference including output_config.
+- [Claude API Tool Use Function Calling Deep Dive Guide](/claude-api-tool-use-function-calling-deep-dive-guide/) -- full parameter reference including output_config.
 - [Claude Python SDK Getting Started](/claude-python-sdk-getting-started-example/) -- basic SDK setup.
 - [Claude TypeScript SDK Installation Guide](/claude-typescript-sdk-installation-guide/) -- TypeScript SDK setup for structured outputs.

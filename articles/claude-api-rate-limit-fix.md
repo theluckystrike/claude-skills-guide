@@ -3,7 +3,7 @@ layout: default
 title: "Fix Claude API Rate Limit Errors (HTTP 429)"
 description: "Resolve Claude API rate limit errors with exponential backoff, request batching, and tier upgrades. Includes Python and TypeScript examples."
 date: 2026-04-14
-last_modified_at: 2026-04-14
+last_modified_at: 2026-04-15
 author: "Claude Code Guides"
 permalink: /claude-api-rate-limit-fix/
 reviewed: true
@@ -24,23 +24,20 @@ Your Claude API calls start failing with HTTP 429:
   "type": "error",
   "error": {
     "type": "rate_limit_error",
-    "message": "Rate limit reached. Please retry after X seconds."
+    "message": "Rate limit exceeded. Please retry after X seconds."
   }
 }
 ```
 
-Or you see a variation like "You've hit your limit" that resets at a specific time.
-
 ## Why This Happens
 
-Anthropic enforces rate limits at multiple levels:
+Anthropic enforces rate limits across three dimensions:
 
-- **Requests per minute (RPM):** How many API calls you can make per minute
-- **Tokens per minute (TPM):** Total input + output tokens per minute
-- **Tokens per day (TPD):** Daily token budget (varies by plan tier)
-- **Concurrent requests:** Maximum simultaneous in-flight requests
+- **Requests per minute (RPM):** How many API calls you can make per minute.
+- **Input tokens per minute (ITPM):** Total input tokens consumed per minute.
+- **Output tokens per minute (OTPM):** Total output tokens generated per minute.
 
-Limits vary by plan tier (Free, Build, Scale, Enterprise) and by model. Opus models typically have lower limits than Sonnet or Haiku.
+Limits vary by usage tier (Tier 1, Tier 2, Tier 3, Tier 4, and Monthly Invoicing) and by model. Opus models typically have lower limits than Sonnet or Haiku. You can view your current tier and limits in the [Anthropic Console](https://console.anthropic.com/settings/limits).
 
 ## The Fix
 
@@ -56,11 +53,20 @@ curl -s -D - https://api.anthropic.com/v1/messages \
   -o /dev/null 2>&1 | grep -i "rate\|limit\|retry"
 ```
 
-Key response headers:
-- `anthropic-ratelimit-requests-limit` — Your RPM cap
-- `anthropic-ratelimit-requests-remaining` — Remaining requests this window
-- `anthropic-ratelimit-requests-reset` — When the window resets
-- `retry-after` — Seconds to wait before retrying (on 429 responses)
+Key response headers returned on every request:
+
+```text
+anthropic-ratelimit-requests-limit        — Your RPM cap
+anthropic-ratelimit-requests-remaining    — Remaining requests this window
+anthropic-ratelimit-requests-reset        — When the RPM window resets (ISO 8601)
+anthropic-ratelimit-input-tokens-limit    — Your ITPM cap
+anthropic-ratelimit-input-tokens-remaining
+anthropic-ratelimit-input-tokens-reset
+anthropic-ratelimit-output-tokens-limit   — Your OTPM cap
+anthropic-ratelimit-output-tokens-remaining
+anthropic-ratelimit-output-tokens-reset
+retry-after                               — Seconds to wait before retrying (on 429 responses)
+```
 
 ### Step 2 — Implement Proper Retry Logic
 
@@ -156,7 +162,7 @@ async def main():
 ### Step 4 — Verify Rate Limits Are Not Exhausted
 
 ```bash
-# Check remaining quota
+# Check remaining quota from response headers
 curl -s -D - https://api.anthropic.com/v1/messages \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
@@ -167,7 +173,7 @@ curl -s -D - https://api.anthropic.com/v1/messages \
 
 **Expected output:**
 
-```
+```text
 anthropic-ratelimit-requests-remaining: 48
 ```
 
@@ -175,23 +181,24 @@ anthropic-ratelimit-requests-remaining: 48
 
 | Scenario | Cause | Quick Fix |
 |----------|-------|-----------|
-| 429 on first request of the day | Daily token limit hit (rolls over) | Wait for reset time shown in error |
-| 429 only with Opus | Lower per-model RPM limits | Switch to Sonnet for high-throughput tasks |
-| 429 in parallel workers | Concurrent request limit | Add a semaphore / rate limiter |
-| "You've hit your limit" | Plan-level daily cap | Upgrade tier or wait for reset |
+| 429 only with Opus | Lower per-model RPM/ITPM limits | Switch to Sonnet for high-throughput tasks |
+| 429 in parallel workers | Too many simultaneous requests hitting RPM | Add a semaphore / rate limiter |
+| Consistent 429 at start of each minute | ITPM or OTPM exhausted before RPM | Reduce prompt size or output `max_tokens` |
+| Need higher limits | Current tier caps too low | Upgrade usage tier in the Anthropic Console |
 
 ## Prevention
 
 - **Use Haiku for high-volume tasks:** Haiku has much higher rate limits than Opus or Sonnet.
 - **Cache responses:** Avoid redundant API calls by caching deterministic responses locally.
 - **Monitor usage:** Track your `ratelimit-*-remaining` headers in dashboards to catch limits before they hit.
+- **Read the `retry-after` header:** On a 429 response, wait exactly the number of seconds specified rather than guessing.
 
 ## Related Issues
 
 - [Fix Claude API Error 500 — Internal Server Error](/claude-api-error-500-fix) — Server-side errors
 - [Fix Claude API Error 401 — Authentication Failed](/claude-api-error-401-fix) — API key issues
-- [Hub: API Errors & HTTP Status Codes](/claude-api-errors-hub) — Browse all API error guides
+- [Claude API Error 400 Invalid Request Fix](/claude-api-error-400-invalidrequesterror-explained/) — Browse all API error guides
 
 ---
 
-*Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*
+*Last verified: 2026-04-15. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*

@@ -193,4 +193,4 @@ try {
 - [Claude API Error 413 request_too_large Fix](/claude-api-error-413-requesttoolarge-explained/) -- handle oversized request payloads.
 - [Claude Extended Thinking API Guide](/claude-extended-thinking-api-guide/) -- correct parameter usage for thinking mode.
 - [Claude Tool Use Not Working](/claude-tool-use-not-working/) -- debug tool definition validation errors.
-- [Claude Messages Create API Guide](/claude-messages-create-api-guide/) -- full parameter reference for the Messages endpoint.
+- [Claude API Tool Use Function Calling Deep Dive Guide](/claude-api-tool-use-function-calling-deep-dive-guide/) -- full parameter reference for the Messages endpoint.

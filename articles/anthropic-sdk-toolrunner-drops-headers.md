@@ -8,8 +8,10 @@ author: "Claude Code Guides"
 permalink: /anthropic-sdk-toolrunner-drops-headers/
 reviewed: true
 categories: [troubleshooting]
-tags: []
+tags: [anthropic-sdk, typescript, authentication, error, troubleshooting, api]
 ---
+
+# Fix: Anthropic SDK toolRunner Drops Headers
 
 ## The Error
 
@@ -238,8 +240,8 @@ const result = await generateText({
 ## Related Issues
 
 - [Fix: Anthropic SDK Streaming Hangs Indefinitely](/anthropic-sdk-streaming-hang-timeout)
-- [Fix: Anthropic API Error 401 Authentication](/anthropic-api-error-401-authentication)
-- [Anthropic SDK Tool Use Guide](/anthropic-sdk-tool-use-guide)
+- [Fix: Claude API Error 401 Authentication](/claude-api-error-401-authenticationerror-explained/)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 
 ## Tools That Help
 

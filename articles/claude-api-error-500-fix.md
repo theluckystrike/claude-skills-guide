@@ -158,7 +158,7 @@ curl -s https://api.anthropic.com/v1/messages \
 
 - [Fix Claude API Error 401 — Authentication Failed](/claude-api-error-401-fix) — API key and auth token issues
 - [Fix Claude API Rate Limit Errors](/claude-api-rate-limit-fix) — HTTP 429 rate limiting solutions
-- [Hub: API Errors & HTTP Status Codes](/claude-api-errors-hub) — Browse all API error guides
+- [Claude API Error 400 Invalid Request Fix](/claude-api-error-400-invalidrequesterror-explained/) — Browse all API error guides
 
 ---
 

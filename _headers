@@ -14,4 +14,4 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:;
+  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src fonts.gstatic.com; script-src 'self' 'unsafe-inline' pagead2.googlesyndication.com *.googlesyndication.com *.google.com googleads.g.doubleclick.net; frame-src 'self' pagead2.googlesyndication.com tpc.googlesyndication.com *.google.com *.doubleclick.net; connect-src 'self' pagead2.googlesyndication.com *.google-analytics.com; img-src 'self' data: https:;

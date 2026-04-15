@@ -151,7 +151,7 @@ Look for entries matching:
 
 ## Related Guides
 
-- [Claude Code MCP Integration Guide](/claude-code-mcp-integration/)
-- [MCP Server Configuration Reference](/mcp-server-configuration/)
-- [Fix: Claude Code MCP Server Timeout](/claude-code-mcp-server-timeout/)
-- [MCP Protocol Progress Notifications](/mcp-progress-notifications/)
+- [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/)
+- [Anthropic SDK MCP Empty Arguments Bug](/anthropic-sdk-mcp-empty-arguments-bug/)
+- [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
+- [Apache Kafka MCP Server Event Streaming Guide](/apache-kafka-mcp-server-event-streaming-guide/)

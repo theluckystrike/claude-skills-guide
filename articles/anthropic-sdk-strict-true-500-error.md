@@ -8,8 +8,10 @@ author: "Claude Code Guides"
 permalink: /anthropic-sdk-strict-true-500-error/
 reviewed: true
 categories: [troubleshooting]
-tags: []
+tags: [anthropic-sdk, typescript, error, troubleshooting, api, structured-output]
 ---
+
+# Fix: Anthropic API 500 Error with strict: true Tools
 
 ## The Error
 
@@ -273,8 +275,8 @@ const response = await client.messages.create({
 ## Related Issues
 
 - [Fix: "Compiled grammar is too large" Error](/anthropic-sdk-structured-output-grammar-too-large)
-- [Fix: Claude API Error 400 Invalid Request](/anthropic-api-error-400-invalid-request)
-- [Anthropic SDK Tool Use Guide](/anthropic-sdk-tool-use-guide)
+- [Fix: Claude API Error 400 Invalid Request](/claude-api-error-400-invalidrequesterror-explained/)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 
 ## Tools That Help
 

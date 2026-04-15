@@ -8,8 +8,10 @@ author: "Claude Code Guides"
 permalink: /anthropic-sdk-structured-output-grammar-too-large/
 reviewed: true
 categories: [troubleshooting]
-tags: []
+tags: [anthropic-sdk, python, error, troubleshooting, api, structured-output]
 ---
+
+# Fix: 'Compiled Grammar Is Too Large' Anthropic Error
 
 ## The Error
 
@@ -261,8 +263,8 @@ except ValidationError as e:
 ## Related Issues
 
 - [Fix: Anthropic API 500 Error with strict: true](/anthropic-sdk-strict-true-500-error)
-- [Anthropic SDK Structured Output Guide](/anthropic-sdk-structured-output-guide)
-- [Fix: Claude API Error 400 Invalid Request](/anthropic-api-error-400-invalid-request)
+- [Anthropic SDK Structured Output Thinking Tool Use Bug](/anthropic-sdk-structured-output-thinking-tool-use-bug/)
+- [Fix: Claude API Error 400 Invalid Request](/claude-api-error-400-invalidrequesterror-explained/)
 
 ## Tools That Help
 

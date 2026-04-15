@@ -128,8 +128,8 @@ success
 ## Related Issues
 
 - [Fix Claude Code Slow Response and Performance](/claude-code-slow-fix) — General performance optimization
-- [Claude Code Bash Tool Reference](/claude-code-bash-tool) — Understanding Bash tool capabilities and limits
-- [Hub: Performance & Speed Issues](/claude-code-performance-hub) — Browse all performance guides
+- [Claude Code Bash Command Not Found in Skill](/claude-code-bash-command-not-found-in-skill/) — Understanding Bash tool capabilities and limits
+- [Benchmarking Claude Code Skills Performance Guide](/benchmarking-claude-code-skills-performance-guide/) — Browse all performance guides
 
 ---
 

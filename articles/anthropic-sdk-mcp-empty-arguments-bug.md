@@ -8,8 +8,10 @@ author: "Claude Code Guides"
 permalink: /anthropic-sdk-mcp-empty-arguments-bug/
 reviewed: true
 categories: [troubleshooting]
-tags: []
+tags: [anthropic-sdk, mcp, python, permissions, error, troubleshooting, api]
 ---
+
+# Fix: Anthropic SDK MCP Tools Get Empty Arguments
 
 ## The Error
 
@@ -175,9 +177,9 @@ ph._build_approval_response = _patched_build_response
 
 ## Related Issues
 
-- [Anthropic SDK Tool Use Guide](/anthropic-sdk-tool-use-guide)
+- [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Fix: Claude Code MCP Server Disconnected](/claude-code-mcp-server-disconnected)
-- [Fix: Claude API Error 400 Invalid Request](/anthropic-api-error-400-invalid-request)
+- [Fix: Claude API Error 400 Invalid Request](/claude-api-error-400-invalidrequesterror-explained/)
 
 ## Tools That Help
 

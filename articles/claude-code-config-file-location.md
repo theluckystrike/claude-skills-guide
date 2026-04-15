@@ -3,7 +3,7 @@ layout: default
 title: "Claude Code Config File Location and Settings"
 description: "Find and configure Claude Code settings files — global settings.json, project settings, MCP config, and environment variables."
 date: 2026-04-14
-last_modified_at: 2026-04-14
+last_modified_at: 2026-04-15
 author: "Claude Code Guides"
 permalink: /claude-code-config-file-location/
 reviewed: true
@@ -13,7 +13,7 @@ tags: ["claude-code", "config", "settings", "configuration"]
 
 # Claude Code Config File Location and Settings
 
-> **TL;DR:** Global settings live at `~/.claude/settings.json`. Project settings at `.claude/settings.json` in your repo root. MCP servers, permissions, and hooks are all configured through these files.
+> **TL;DR:** Global settings live at `~/.claude/settings.json`. Project settings at `.claude/settings.json` in your repo root. MCP servers are configured separately in `~/.claude.json` (user scope) or `.mcp.json` (project scope).
 
 ## The Problem
 
@@ -32,32 +32,39 @@ Claude Code reads settings from these locations, in order of precedence (highest
 | Priority | Location | Scope |
 |----------|----------|-------|
 | 1 | CLI flags | Current session only |
-| 2 | Environment variables | Current shell session |
-| 3 | `.claude/settings.json` | Current project |
-| 4 | `~/.claude/settings.json` | Global (all projects) |
-| 5 | `CLAUDE_CONFIG_DIR/settings.json` | Custom config directory |
+| 2 | `~/.claude/settings.local.json` | Local (machine-specific, not committed) |
+| 3 | `.claude/settings.json` | Project (committed to repo) |
+| 4 | `~/.claude/settings.json` | User (all projects) |
+
+> **Note:** Enterprise deployments may also have a "Managed" policy layer that sits above CLI flags and cannot be overridden by users.
 
 ### Step 2 — Find Your Config Files
 
 ```bash
-# Global settings
+# User settings (applies to all projects)
 ls -la ~/.claude/settings.json
 
-# Project settings (from your repo root)
+# Local settings (machine-specific overrides, not committed)
+ls -la ~/.claude/settings.local.json
+
+# Project settings (from your repo root, committed to version control)
 ls -la .claude/settings.json
 
-# Custom config directory (if CLAUDE_CONFIG_DIR is set)
-echo "$CLAUDE_CONFIG_DIR"
+# MCP server config — user scope
+ls -la ~/.claude.json
+
+# MCP server config — project scope
+ls -la .mcp.json
 
 # Memory files
 ls -la ~/.claude/CLAUDE.md
-ls -la .claude/CLAUDE.md
+ls -la CLAUDE.md
 
 # Credentials (macOS uses Keychain, Linux uses this file)
 ls -la ~/.claude/credentials.json
 ```
 
-### Step 3 — Edit Global Settings
+### Step 3 — Edit User Settings
 
 ```bash
 # Create the directory if needed
@@ -67,19 +74,12 @@ mkdir -p ~/.claude
 ${EDITOR:-nano} ~/.claude/settings.json
 ```
 
-**Common global settings:**
+**Common user settings (`~/.claude/settings.json`):**
 
 ```json
 {
-  "defaultMode": "allowEdits",
+  "defaultMode": "acceptEdits",
   "skipDangerousModePermissionPrompt": false,
-  "autoCompactThreshold": 80,
-  "mcpServers": {
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/user"]
-    }
-  },
   "permissions": {
     "allow": [
       "Bash(git *)",
@@ -96,6 +96,8 @@ ${EDITOR:-nano} ~/.claude/settings.json
 }
 ```
 
+> **Valid `defaultMode` values:** `default` (plan/ask mode), `acceptEdits` (auto-accept file edits), `fullAuto` (no prompts).
+
 ### Step 4 — Edit Project Settings
 
 ```bash
@@ -104,16 +106,10 @@ mkdir -p .claude
 ${EDITOR:-nano} .claude/settings.json
 ```
 
-**Common project settings:**
+**Common project settings (`.claude/settings.json`):**
 
 ```json
 {
-  "mcpServers": {
-    "project-db": {
-      "command": "node",
-      "args": ["./tools/mcp-server.js"]
-    }
-  },
   "permissions": {
     "allow": [
       "Bash(npm test)",
@@ -123,7 +119,40 @@ ${EDITOR:-nano} .claude/settings.json
 }
 ```
 
-### Step 5 — Configure Memory Files
+### Step 5 — Configure MCP Servers
+
+MCP servers are **not** configured inside `settings.json`. They have their own dedicated config files:
+
+- **User scope** (`~/.claude.json`): MCP servers available in all projects.
+- **Project scope** (`.mcp.json` in your repo root): MCP servers for a specific project, committed to version control.
+
+**User-scoped MCP config (`~/.claude.json`):**
+
+```json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/user"]
+    }
+  }
+}
+```
+
+**Project-scoped MCP config (`.mcp.json`):**
+
+```json
+{
+  "mcpServers": {
+    "project-db": {
+      "command": "node",
+      "args": ["./tools/mcp-server.js"]
+    }
+  }
+}
+```
+
+### Step 6 — Configure Memory Files
 
 Claude Code reads `CLAUDE.md` files for persistent context:
 
@@ -137,7 +166,7 @@ cat > ~/.claude/CLAUDE.md << 'EOF'
 EOF
 
 # Project memory (loaded when in this project)
-cat > .claude/CLAUDE.md << 'EOF'
+cat > CLAUDE.md << 'EOF'
 # Project: My App
 - This is a Next.js 14 app with App Router
 - Database: PostgreSQL via Prisma
@@ -145,7 +174,7 @@ cat > .claude/CLAUDE.md << 'EOF'
 EOF
 ```
 
-### Step 6 — Verify Settings Are Loaded
+### Step 7 — Verify Settings Are Loaded
 
 ```bash
 # Use /config command inside Claude Code to see active settings
@@ -157,23 +186,24 @@ claude
 
 | Scenario | Cause | Quick Fix |
 |----------|-------|-----------|
-| Settings not taking effect | Wrong file location | Check both global and project paths |
-| `CLAUDE_CONFIG_DIR` not isolating | Credentials use Keychain (macOS) | On Linux, set `CLAUDE_CONFIG_DIR` fully |
-| MCP servers not loading | Config in project, running from different dir | Use absolute paths in MCP command |
+| Settings not taking effect | Wrong file location | Check both user and project paths |
+| MCP servers not loading | Config placed in `settings.json` instead of `~/.claude.json` or `.mcp.json` | Move MCP config to the correct file |
+| Project MCP servers not found | Running Claude from a different directory | Use absolute paths in MCP server command args |
 | `/config` freezes terminal | Known bug in v2.1.104 | Do not run `/config` twice; restart session |
 | Settings reset after update | npm reinstall overwrites defaults | Settings files are not overwritten by updates |
 
 ## Prevention
 
-- **Version control project settings:** Commit `.claude/settings.json` and `.claude/CLAUDE.md` so all team members share the same config.
-- **Use environment variables for secrets:** Never put API keys in settings.json; use `ANTHROPIC_API_KEY` and `GITHUB_TOKEN` env vars.
+- **Version control project settings:** Commit `.claude/settings.json`, `CLAUDE.md`, and `.mcp.json` so all team members share the same config.
+- **Use `settings.local.json` for machine-specific overrides:** This file is not committed to version control and sits above project settings in priority.
+- **Use environment variables for secrets:** Never put API keys in settings files; use `ANTHROPIC_API_KEY` and `GITHUB_TOKEN` env vars.
 
 ## Related Issues
 
 - [Set Up MCP Servers in Claude Code](/claude-code-mcp-server-setup) — MCP configuration details
 - [Claude Code Permission Modes Explained](/claude-code-permission-modes) — Permission configuration
-- [Hub: Installation & Setup](/claude-code-installation-hub) — Browse all setup guides
+- [Claude Code Install Guide](/claude-code-install-guide/) — Browse all setup guides
 
 ---
 
-*Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*
+*Last verified: 2026-04-15. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*

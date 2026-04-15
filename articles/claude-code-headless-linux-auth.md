@@ -141,6 +141,6 @@ ssh user@headless-server "
 ## Related Guides
 
 - [Fix: Claude Code OAuth Login Paste Not Working](/claude-code-oauth-login-paste-not-working/)
-- [Claude Code Setup Guide](/claude-code-setup-guide/)
-- [Claude Code Common Errors](/claude-code-common-errors/)
-- [Anthropic API Authentication Guide](/anthropic-api-auth-guide/)
+- [Claude Code Install Guide](/claude-code-install-guide/)
+- [Fix: Claude API Error 400 Invalid Request](/claude-api-error-400-invalidrequesterror-explained/)
+- [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)

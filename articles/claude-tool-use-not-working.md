@@ -230,5 +230,5 @@ Note: With `strict: true`, your schema must include `additionalProperties: false
 - [Claude Extended Thinking Not Working](/claude-extended-thinking-not-working/) -- tool_choice restrictions when thinking is enabled.
 - [Claude API Error 400 invalid_request_error Fix](/claude-api-error-400-invalidrequesterror-explained/) -- covers tool schema validation errors.
 - [Claude Streaming API Guide](/claude-streaming-api-guide/) -- stream tool use responses for real-time feedback.
-- [Claude Messages Create API Guide](/claude-messages-create-api-guide/) -- full parameter reference including tools and tool_choice.
+- [Claude API Tool Use Function Calling Deep Dive Guide](/claude-api-tool-use-function-calling-deep-dive-guide/) -- full parameter reference including tools and tool_choice.
 - [Claude Python SDK Getting Started](/claude-python-sdk-getting-started-example/) -- basic SDK setup before implementing tools.

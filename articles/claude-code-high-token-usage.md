@@ -137,6 +137,6 @@ Running tests, fetching documentation, or processing log files can consume signi
 ## Related Guides
 
 - [Fix: Claude Code Slow Response Times](/claude-code-slow-response-fix/)
-- [Claude Code Cost Management Guide](/claude-code-costs/)
-- [Claude Code Model Configuration](/claude-code-model-config/)
+- [Claude Code Cost for Agencies and Consultancies](/claude-code-cost-for-agencies-and-consultancies/)
+- [Claude Code Cost per Project Estimation Calculator Guide](/claude-code-cost-per-project-estimation-calculator-guide/)
 - [Fix: Claude Code Timeout 2m Bash Command Limit](/claude-code-timeout-2m-fix/)

@@ -218,6 +218,6 @@ client = anthropic.Anthropic(timeout=600.0)  # 10 min
 
 - [Fix: Anthropic SDK TypeError: terminated](/anthropic-sdk-typeerror-terminated/)
 - [Fix: Claude API Error 429 Rate Limit](/anthropic-api-error-429-rate-limit/)
-- [Anthropic TypeScript SDK Guide](/anthropic-typescript-sdk-guide/)
-- [Anthropic Python SDK Guide](/anthropic-python-sdk-guide/)
-- [Streaming Messages Reference](/streaming-messages-reference/)
+- [Claude Code API Client TypeScript Guide](/claude-code-api-client-typescript-guide/)
+- [Claude Python SDK Installation Guide](/claude-python-sdk-installation-guide/)
+- [Claude API Streaming Responses Implementation Tutorial](/claude-api-streaming-responses-implementation-tutorial/)

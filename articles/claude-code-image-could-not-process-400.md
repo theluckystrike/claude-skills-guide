@@ -128,7 +128,7 @@ The error appears after running 'npm build' on line 47 of build.js"
 
 ## Related Guides
 
-- [Anthropic API Error Reference](/claude-api-error-reference/)
-- [Claude Vision Capabilities Guide](/claude-vision-guide/)
-- [Claude Code Common Errors](/claude-code-common-errors/)
-- [Understanding API Request Size Limits](/api-request-size-limits/)
+- [Claude API Error 400 Invalid Request Fix](/claude-api-error-400-invalidrequesterror-explained/)
+- [Claude API Error 413 Request Too Large Fix](/claude-api-error-413-requesttoolarge-explained/)
+- [Claude API Error 429 Rate Limit Fix](/anthropic-api-error-429-rate-limit/)
+- [Claude API Error 413 Request Too Large Explained](/claude-api-error-413-requesttoolarge-explained/)

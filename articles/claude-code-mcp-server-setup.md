@@ -136,9 +136,9 @@ Claude should invoke the MCP tool and return results.
 
 ## Related Issues
 
-- [Fix MCP Tools Not Appearing in Claude Code](/claude-mcp-tools-not-loading) — Debugging tool discovery
-- [Fix MCP Permission Loop Error](/claude-mcp-permission-loop-fix) — Endless permission prompts
-- [Hub: MCP Server Configuration](/claude-mcp-server-setup-hub) — Browse all MCP guides
+- [Fix: Anthropic SDK MCP Empty Arguments Bug](/anthropic-sdk-mcp-empty-arguments-bug/) — Debugging tool discovery
+- [Fix: Claude Code MCP Server Disconnected](/claude-code-mcp-server-disconnected/) — Endless permission prompts
+- [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/) — Browse all MCP guides
 
 ---
 

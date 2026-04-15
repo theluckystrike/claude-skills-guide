@@ -174,6 +174,6 @@ Monitor the `remaining` headers to throttle your requests before hitting the lim
 
 - [Fix: Anthropic SDK Streaming Hangs Indefinitely](/anthropic-sdk-streaming-hang-timeout/)
 - [Fix: Anthropic SDK TypeError: terminated](/anthropic-sdk-typeerror-terminated/)
-- [Anthropic API Error Reference](/claude-api-error-reference/)
-- [Understanding Claude Model Pricing](/claude-model-pricing/)
-- [Batch Processing Guide](/batch-processing-guide/)
+- [Claude API Error 400 Invalid Request Fix](/claude-api-error-400-invalidrequesterror-explained/)
+- [Claude Prompt Caching Pricing and Cost Savings](/claude-prompt-caching-pricing-and-cost-savings/)
+- [Claude API Batch Processing Large Datasets Workflow Guide](/claude-api-batch-processing-large-datasets-workflow-guide/)

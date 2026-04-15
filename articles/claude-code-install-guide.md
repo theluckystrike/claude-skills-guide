@@ -167,8 +167,8 @@ docker run -it -e ANTHROPIC_API_KEY="$ANTHROPIC_API_KEY" claude-code
 ## Related Issues
 
 - [Fix Claude Code Login — Cannot Paste Auth Code](/claude-code-login-paste-fix) — Login issues after installation
-- [Claude Code Docker Setup Guide](/claude-code-docker-setup) — Full Docker configuration
-- [Hub: Installation & Setup](/claude-code-installation-hub) — Browse all installation guides
+- [Claude Code Docker CI/CD Pipeline Integration Guide](/claude-code-docker-ci-cd-pipeline-integration-guide/) — Full Docker configuration
+- [Claude Code Command Not Found After Install Troubleshooting](/claude-code-command-not-found-after-install-troubleshooting/) — Browse all installation guides
 
 ---
 

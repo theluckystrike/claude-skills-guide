@@ -132,5 +132,5 @@ dig api.anthropic.com
 
 - [Fix: Claude API Error 429 Rate Limit](/anthropic-api-error-429-rate-limit/)
 - [Fix: Anthropic SDK Streaming Hangs Indefinitely](/anthropic-sdk-streaming-hang-timeout/)
-- [Claude Code Common Errors](/claude-code-common-errors/)
-- [Claude Code Performance Tips](/claude-code-performance-tips/)
+- [Claude API Error 400 Invalid Request Fix](/claude-api-error-400-invalidrequesterror-explained/)
+- [Fix: Claude Code Slow Response and Performance](/claude-code-slow-fix/)

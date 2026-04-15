@@ -118,6 +118,6 @@ npm ci && echo "DONE: npm ci"
 ## Related Guides
 
 - [Fix: Claude Code Slow Response Times](/claude-code-slow-response-fix/)
-- [Claude Code Environment Variables Reference](/claude-code-env-vars/)
-- [Claude Code Performance Tips](/claude-code-performance-tips/)
-- [Claude Code Common Workflows](/claude-code-common-workflows/)
+- [Claude Code Dotenv Configuration Workflow](/claude-code-dotenv-configuration-workflow/)
+- [Fix: Claude Code Slow Response and Performance](/claude-code-slow-fix/)
+- [Before and After Switching to Claude Code Workflow](/before-and-after-switching-to-claude-code-workflow/)

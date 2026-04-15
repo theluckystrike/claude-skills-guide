@@ -165,6 +165,6 @@ client = anthropic.AnthropicFoundry()
 
 - [How to Set ANTHROPIC_API_KEY for Claude](/how-to-set-anthropicapikey-for-claude/) -- step-by-step environment variable setup for all platforms.
 - [Claude Python SDK Installation Guide](/claude-python-sdk-installation-guide/) -- full setup from install to first API call.
-- [Claude API Error 403 permission_error Fix](/claude-api-error-403-permissionerror-explained/) -- similar error when your key lacks specific permissions.
-- [Claude API Error 402 billing_error Fix](/claude-api-error-402-billingerror-explained/) -- authentication succeeds but billing is not configured.
+- [Claude Code Permission Modes Explained](/claude-code-permission-modes/) -- similar error when your key lacks specific permissions.
+- [Claude Code API Key vs Pro Subscription Billing](/claude-code-api-key-vs-pro-subscription-billing/) -- authentication succeeds but billing is not configured.
 - [Claude TypeScript SDK Installation Guide](/claude-typescript-sdk-installation-guide/) -- TypeScript-specific setup and auth configuration.

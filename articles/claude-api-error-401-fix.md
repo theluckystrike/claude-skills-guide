@@ -142,7 +142,7 @@ curl -s -o /dev/null -w "%{http_code}" https://api.anthropic.com/v1/messages \
 
 - [Fix Claude API Error 500 — Internal Server Error](/claude-api-error-500-fix) — Server-side error troubleshooting
 - [Fix Claude API Rate Limit Errors](/claude-api-rate-limit-fix) — HTTP 429 rate limiting solutions
-- [Hub: API Errors & HTTP Status Codes](/claude-api-errors-hub) — Browse all API error guides
+- [Claude API Error 400 Invalid Request Fix](/claude-api-error-400-invalidrequesterror-explained/) — Browse all API error guides
 
 ---
 
