@@ -278,9 +278,19 @@ The key patterns are: isolate each test run with fresh volumes, mock external de
 
 ---
 
-**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-docker-compose-test-setup-guide)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+<div class="mastery-cta">
+
+**Deploy configs are write-once if you write them right.**
+
+Production Dockerfiles, CI/CD templates, and deployment playbooks. Copy-paste infrastructure that a senior engineer actually tested. Stop rebuilding deploy pipelines from Stack Overflow snippets.
+
+**[Get the production Dockerfile →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-deploy&utm_campaign=claude-code-docker-compose-test-setup-guide)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 Related Reading
 

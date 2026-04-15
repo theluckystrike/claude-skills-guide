@@ -1375,3 +1375,128 @@
         justify-content: center;
       }
     }
+
+    /* ============================================
+       MASTERY CTA (inline markdown — cluster-specific)
+       ============================================ */
+    .mastery-cta {
+      background: linear-gradient(135deg, #1a1918, #1e1d1b);
+      border: 1px solid #d97757;
+      border-radius: 10px;
+      padding: 1.75rem 1.5rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .mastery-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #d97757, #e8a87c, #d97757);
+    }
+    .mastery-cta p {
+      color: #b0aea5;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0 0 0.75rem 0;
+    }
+    .mastery-cta p:first-child strong {
+      color: #e8d5b5;
+      font-size: 1.05rem;
+    }
+    .mastery-cta p:last-child {
+      color: #8b8983;
+      font-size: 0.85rem;
+      margin-bottom: 0;
+    }
+    .mastery-cta a {
+      color: #d97757;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+    .mastery-cta a:hover {
+      border-bottom-color: #d97757;
+    }
+    @media (max-width: 480px) {
+      .mastery-cta {
+        padding: 1.25rem 1rem;
+      }
+    }
+
+    /* ============================================
+       BEFORE/AFTER COMPARISON BLOCK
+       ============================================ */
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .before-after .before,
+    .before-after .after {
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .before-after .before {
+      background: #1c1210;
+      border: 1px solid #5c2d2d;
+    }
+    .before-after .after {
+      background: #101c12;
+      border: 1px solid #2d5c33;
+    }
+    .before-after h4 {
+      margin: 0 0 0.75rem 0;
+      font-size: 0.95rem;
+    }
+    .before-after p,
+    .before-after code {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .before-after .before p {
+      color: #c9a0a0;
+    }
+    .before-after .after p {
+      color: #a0c9a5;
+    }
+    @media (max-width: 600px) {
+      .before-after {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============================================
+       AUTHOR BIO + TRUST STRIP
+       ============================================ */
+    .author-bio {
+      background: #161514;
+      border: 1px solid #2a2928;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.88rem;
+      color: #8b8983;
+      line-height: 1.5;
+    }
+    .author-bio strong {
+      color: #c9c5be;
+    }
+    .author-bio a {
+      color: #d97757;
+    }
+    .trust-strip {
+      text-align: center;
+      padding: 1rem;
+      margin: 2rem 0;
+      font-size: 0.85rem;
+      color: #8b8983;
+      border-top: 1px solid #2a2928;
+      border-bottom: 1px solid #2a2928;
+      letter-spacing: 0.02em;
+    }

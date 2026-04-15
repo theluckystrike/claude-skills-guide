@@ -257,9 +257,19 @@ For now, the practical choice comes down to your technical comfort level and the
 
 ---
 
-**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=extensity-alternative-chrome-extension-2026)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+<div class="mastery-cta">
+
+**Still comparing tools? Here's what actually moves the needle.**
+
+The gap between developers who "use Claude Code" and developers who ship with it isn't the tool — it's the setup. The CLAUDE.md, the prompts, the workflow. Get the setup that ships production code.
+
+**[See the setup that ships →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-compare&utm_campaign=extensity-alternative-chrome-extension-2026)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 Related Reading
 

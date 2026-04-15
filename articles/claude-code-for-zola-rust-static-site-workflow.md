@@ -445,9 +445,19 @@ The key is to maintain clear communication with Claude Code about your project s
 
 ---
 
-**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-for-zola-rust-static-site-workflow)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+<div class="mastery-cta">
+
+**What if Claude Code got it right the first time?**
+
+16 CLAUDE.md templates for popular frameworks. 80 tested prompts. Multi-agent configs. Workflow playbooks. The complete toolkit for shipping production code with Claude Code.
+
+**[See the setup that ships →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-default&utm_campaign=claude-code-for-zola-rust-static-site-workflow)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 Related Reading
 

@@ -281,9 +281,19 @@ This automation ensures team members stay informed about bundle size trends and 
 Migrating from Webpack to Vite provides a strong foundation for bundle size reduction, but the real gains come from proper configuration and ongoing monitoring. Use dynamic imports strategically, split vendor code intelligently, and replace large dependencies with modular alternatives. The workflow combining Vite's built-in optimizations with Claude Code skills like frontend-design, tdd, and supermemory creates a repeatable process for maintaining lean bundles as your application evolves.
 ---
 
-**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-bundle-size-reduction-webpack-vite-workflow)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+<div class="mastery-cta">
+
+**What if Claude Code got it right the first time?**
+
+16 CLAUDE.md templates for popular frameworks. 80 tested prompts. Multi-agent configs. Workflow playbooks. The complete toolkit for shipping production code with Claude Code.
+
+**[See the setup that ships →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-default&utm_campaign=claude-code-bundle-size-reduction-webpack-vite-workflow)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 Related Reading
 

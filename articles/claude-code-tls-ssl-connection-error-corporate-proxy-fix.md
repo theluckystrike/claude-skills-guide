@@ -170,9 +170,21 @@ Distribute this as a managed settings file to standardize the configuration acro
 
 The developers who get the most out of Claude Code aren't just fixing errors — they're running multi-agent pipelines, using battle-tested CLAUDE.md templates, and shipping with production-grade operating principles.
 
-**[Get Claude Code Mastery — included in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-tls-ssl-connection-error-corporate-proxy-fix)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. $99 once, free forever.
+---
+
+<div class="mastery-cta">
+
+**You're configuring this manually. There's a faster way.**
+
+Production-ready CLAUDE.md templates for 16 frameworks. Copy into your project, Claude Code immediately understands your stack — right conventions, right patterns, right versions. No more fixing what it gets wrong.
+
+**[Get the production config →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-config&utm_campaign=claude-code-tls-ssl-connection-error-corporate-proxy-fix)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 ---
 

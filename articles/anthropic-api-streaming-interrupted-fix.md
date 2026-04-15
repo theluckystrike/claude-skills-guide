@@ -189,9 +189,21 @@ Monitor for 529 errors in your logs. Frequent 529s indicate you should reduce co
 
 The developers who get the most out of Claude Code aren't just fixing errors — they're running multi-agent pipelines, using battle-tested CLAUDE.md templates, and shipping with production-grade operating principles.
 
-**[Get Claude Code Mastery — included in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=anthropic-api-streaming-interrupted-fix)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. $99 once, free forever.
+---
+
+<div class="mastery-cta">
+
+**You just spent mass time debugging this.**
+
+What if Claude Code got it right the first time? The developers shipping fastest aren't smarter — they have better CLAUDE.md files. One file tells Claude exactly how your stack works so it stops guessing and starts engineering.
+
+**[See what prevents these errors →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-error&utm_campaign=anthropic-api-streaming-interrupted-fix)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 ---
 

@@ -205,9 +205,19 @@ Start by migrating your most-used rules first. Test each skill thoroughly. Over 
 
 ---
 
-**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=how-do-i-migrate-from-cursor-rules-to-claude-skills)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+<div class="mastery-cta">
+
+**Still comparing tools? Here's what actually moves the needle.**
+
+The gap between developers who "use Claude Code" and developers who ship with it isn't the tool — it's the setup. The CLAUDE.md, the prompts, the workflow. Get the setup that ships production code.
+
+**[See the setup that ships →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-compare&utm_campaign=how-do-i-migrate-from-cursor-rules-to-claude-skills)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 Related Reading
 

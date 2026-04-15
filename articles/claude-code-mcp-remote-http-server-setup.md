@@ -165,9 +165,21 @@ Periodically check server status with `/mcp` to catch configuration drift or exp
 
 The developers who get the most out of Claude Code aren't just fixing errors — they're running multi-agent pipelines, using battle-tested CLAUDE.md templates, and shipping with production-grade operating principles.
 
-**[Get Claude Code Mastery — included in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-mcp-remote-http-server-setup)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. $99 once, free forever.
+---
+
+<div class="mastery-cta">
+
+**Integration debugging is the worst kind of debugging.**
+
+Skip the trial-and-error. Get orchestration configs and tested prompts for MCP server setup, tool integration, and multi-agent coordination. Built by a developer running 5-agent fleets in production.
+
+**[Get configs that work first try →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-mcp&utm_campaign=claude-code-mcp-remote-http-server-setup)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 ---
 

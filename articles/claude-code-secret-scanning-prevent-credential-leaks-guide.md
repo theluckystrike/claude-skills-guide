@@ -176,9 +176,19 @@ Implementing secret scanning in your Claude Code workflows protects against cred
 The investment in proper secret scanning pays dividends in reduced incident response costs, compliance posture, and developer confidence. Start with basic pattern matching, layer in git hooks, and expand to comprehensive monitoring as your workflows mature.
 ---
 
-**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-secret-scanning-prevent-credential-leaks-guide)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+<div class="mastery-cta">
+
+**You're configuring this manually. There's a faster way.**
+
+Production-ready CLAUDE.md templates for 16 frameworks. Copy into your project, Claude Code immediately understands your stack — right conventions, right patterns, right versions. No more fixing what it gets wrong.
+
+**[Get the production config →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-config&utm_campaign=claude-code-secret-scanning-prevent-credential-leaks-guide)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 Related Reading
 

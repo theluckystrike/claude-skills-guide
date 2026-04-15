@@ -174,9 +174,19 @@ The 1-hour cache costs 2x the base input price to write but 0.1x to read, making
 
 ---
 
-**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-prompt-caching-not-working)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+<div class="mastery-cta">
+
+**You just spent mass time debugging this.**
+
+What if Claude Code got it right the first time? The developers shipping fastest aren't smarter — they have better CLAUDE.md files. One file tells Claude exactly how your stack works so it stops guessing and starts engineering.
+
+**[See what prevents these errors →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-error&utm_campaign=claude-prompt-caching-not-working)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 ## Related Guides
 

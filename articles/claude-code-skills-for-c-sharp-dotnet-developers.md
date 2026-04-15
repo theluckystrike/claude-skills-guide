@@ -289,9 +289,19 @@ This keeps your audit clean by distinguishing "we haven't gotten to this yet" fr
 
 ---
 
-**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-skills-for-c-sharp-dotnet-developers)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+<div class="mastery-cta">
+
+**Still building from scratch every time?**
+
+16 production CLAUDE.md templates. 80 tested prompts. Multi-agent orchestration configs. Everything a senior developer uses to ship with Claude Code — ready to copy into your project in 30 seconds.
+
+**[Start with a tested template →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-skills&utm_campaign=claude-code-skills-for-c-sharp-dotnet-developers)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 Related Reading
 

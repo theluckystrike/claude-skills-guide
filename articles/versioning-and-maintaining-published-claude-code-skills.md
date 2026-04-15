@@ -469,9 +469,19 @@ The full lifecycle, from initial publish through deprecation and archival, deser
 
 ---
 
-**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=versioning-and-maintaining-published-claude-code-skills)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+<div class="mastery-cta">
+
+**Still building from scratch every time?**
+
+16 production CLAUDE.md templates. 80 tested prompts. Multi-agent orchestration configs. Everything a senior developer uses to ship with Claude Code — ready to copy into your project in 30 seconds.
+
+**[Start with a tested template →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-skills&utm_campaign=versioning-and-maintaining-published-claude-code-skills)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 Related Reading
 

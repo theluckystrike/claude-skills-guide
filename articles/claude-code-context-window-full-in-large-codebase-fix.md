@@ -194,9 +194,19 @@ Remember: The goal isn't to fit your entire codebase into context, but to put ex
 
 ---
 
-**[Get the Claude Code Mastery Bundle — included free in Zovo Lifetime →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=article&utm_campaign=claude-code-context-window-full-in-large-codebase-fix)**
+---
 
-16 CLAUDE.md templates · 80+ prompts · orchestration configs · workflow playbooks. One payment, lifetime access.
+<div class="mastery-cta">
+
+**Claude Code burning tokens? It's reading your entire codebase because it doesn't know what matters.**
+
+A CLAUDE.md file tells Claude your architecture, conventions, and boundaries upfront. Less context scanning. Fewer wrong turns. Lower token bills. Better output on the first try.
+
+**[See how fast setups work →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-perf&utm_campaign=claude-code-context-window-full-in-large-codebase-fix)**
+
+$99 once. Yours forever. 47/500 founding spots left.
+
+</div>
 
 Related Reading
 
