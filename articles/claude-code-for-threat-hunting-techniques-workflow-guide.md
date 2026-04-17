@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Threat Hunting Techniques Workflow Guide"
-description: "Learn how to use Claude Code for threat hunting techniques. This comprehensive guide covers automated threat detection, log analysis workflows, and."
+title: "Threat Hunting with Claude Code: Detection Guide"
+description: "Automate threat hunting with Claude Code. Covers log analysis, IOC correlation, detection rule generation, and incident investigation workflows."
 date: 2026-03-20
 last_modified_at: 2026-04-17
 author: Claude Skills Guide

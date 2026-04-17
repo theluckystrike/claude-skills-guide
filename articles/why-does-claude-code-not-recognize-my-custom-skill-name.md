@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Keeps Timing Out — Skill Fix Guide"
-description: "Fix Claude Code timing out and skill recognition failures. Debug skill loading, registration issues, and initialization delays."
+title: "Claude Skill Not Recognized — Fix Custom Name"
+description: "Fix Claude Code not recognizing custom skill names. Debug file naming, directory placement, registration issues, and skill loading failures."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]

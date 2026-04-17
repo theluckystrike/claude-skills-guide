@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Career Changers into Software Development"
-description: "A practical guide for professionals transitioning into software development using Claude Code. Learn how to use AI-assisted coding to accelerate."
+title: "Career Change to Software Development with AI"
+description: "Switch careers into software development using Claude Code as your AI pair programmer. Build real projects, learn faster, and skip tutorial purgatory."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]

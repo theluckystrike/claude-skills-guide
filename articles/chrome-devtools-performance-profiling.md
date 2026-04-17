@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Devtools Performance Profiling — Developer Guide"
+title: "Chrome DevTools Performance Profiling Guide"
 description: "Master Chrome DevTools performance profiling to identify bottlenecks, optimize rendering, and build faster web applications. Includes practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

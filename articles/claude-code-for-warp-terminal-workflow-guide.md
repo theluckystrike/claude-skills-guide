@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Warp vs Windows Terminal for Claude Code: Comparison"
-description: "Warp vs Windows Terminal for Claude Code compared. Setup, features, and which terminal gives you the best AI coding workflow in 2026."
+title: "Claude Code + Warp Terminal: Workflow Guide"
+description: "Set up Claude Code with Warp terminal for AI-assisted development. Configuration, commands, and workflow tips for maximum productivity."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

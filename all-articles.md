@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "All Articles"
-description: "Complete list of all Claude Code guides, tutorials, and resources."
+title: "All Claude Code Guides and Tutorials"
+description: "Browse 2,500+ Claude Code guides, tutorials, skill references, and troubleshooting articles for developers."
 permalink: /all-articles/
 ---
 # All Articles

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Tree-Sitter Prompting Workflow Guide"
-description: "Claude code tree sitter and tree-of-thought prompting workflows. Systematic problem-solving strategies with practical code examples."
+title: "Tree of Thought Prompting with Claude Code"
+description: "Use tree-of-thought prompting with Claude Code to explore multiple solution paths. Systematic problem-solving strategies with practical examples."
 date: 2026-03-20
 last_modified_at: 2026-04-17
 author: Claude Skills Guide

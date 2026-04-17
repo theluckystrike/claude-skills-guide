@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code FastAPI Pydantic V2 — Developer Guide"
+title: "FastAPI Pydantic V2 Validation with Claude Code"
 description: "Master input validation in FastAPI with Pydantic v2. Learn advanced validation techniques, custom validators, and how Claude Code can help you build."
 date: 2026-03-14
 last_modified_at: 2026-04-17

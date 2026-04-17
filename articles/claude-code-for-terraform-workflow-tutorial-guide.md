@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Terraform Workflow Tutorial Guide"
-description: "Learn how to integrate Claude Code into your Terraform workflow to automate infrastructure management, write better configurations, and streamline..."
+title: "Terraform with Claude Code: Setup and Workflow"
+description: "Use Claude Code to write, review, and debug Terraform configurations. Covers module generation, plan analysis, state management, and CI/CD integration."
 date: 2026-03-20
 last_modified_at: 2026-04-17
 author: Claude Skills Guide

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Proxy and Keybindings Configuration"
-description: "Configure Claude Code proxy settings and custom keybindings. Set up http_proxy, shortcuts, and key mappings for an optimized workflow."
+title: "Claude Code Custom Keybindings Configuration"
+description: "Configure custom keybindings in Claude Code. Set up shortcuts, key mappings, and keyboard-driven workflows for faster development."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

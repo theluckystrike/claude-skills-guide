@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Container Environment Variables Management"
-description: "Master environment variable handling in Claude Code containers. Learn how to set, access, and manage environment variables for secure and efficient."
+title: "Container Environment Variables in Claude Code"
+description: "Set up and manage environment variables in Claude Code containers. Covers secrets, config injection, Docker Compose, and production-ready patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]

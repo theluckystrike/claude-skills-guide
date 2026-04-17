@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Next.js Performance — Developer Guide"
+title: "Next.js Performance Optimization with Claude Code"
 description: "Learn how to use Claude Code and specialized skills to optimize Next.js applications for speed, bundle size, and runtime performance."
 date: 2026-03-14
 last_modified_at: 2026-04-17
