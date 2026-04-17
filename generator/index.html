@@ -916,7 +916,7 @@ select:focus-visible, textarea:focus-visible {
     overview: "This is a Django application following the MVT (Model-View-Template) pattern. Apps are self-contained modules. All database access goes through the ORM.",
     structure: "project/       — Project settings and root URL config\napps/          — Django apps (models, views, templates)\ntemplates/     — Global templates\nstatic/        — Static files\nmanage.py      — Django management CLI",
     commands: "python manage.py runserver    — Start dev server\npython manage.py migrate      — Run migrations\npython manage.py makemigrations — Generate migrations\npython manage.py test         — Run tests\npython manage.py shell        — Interactive shell",
-    pitfalls: "- Do NOT write raw SQL unless the ORM genuinely cannot express the query\n- Do NOT put business logic in views; use model methods or service layers\n- Always create migrations when changing models; never edit the DB directly\n- Use `select_related()` and `prefetch_related()` to avoid N+1 queries\n- Never hardcode URLs; use `reverse()` or `{% url %}` template tag\n- Keep secrets in environment variables, not settings.py",
+    pitfalls: "- Do NOT write raw SQL unless the ORM genuinely cannot express the query\n- Do NOT put business logic in views; use model methods or service layers\n- Always create migrations when changing models; never edit the DB directly\n- Use `select_related()` and `prefetch_related()` to avoid N+1 queries\n- Never hardcode URLs; use `reverse()` or the url template tag\n- Keep secrets in environment variables, not settings.py",
     prompts: [
       "Create a new Django app with model, serializer, and API views",
       "Add a custom management command that processes data in batches",
