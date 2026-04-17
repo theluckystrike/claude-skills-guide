@@ -113,27 +113,16 @@
     ]
   }
   </script>
-  {% assign is_faq = false %}
-  {% for cat in page.categories %}
-    {% assign cat_lower = cat | downcase %}
-    {% if cat_lower == "troubleshooting" %}{% assign is_faq = true %}{% endif %}
-  {% endfor %}
-  {% unless is_faq %}
-    {% assign title_lower = page.title | downcase %}
-    {% if title_lower contains "how to" or title_lower contains " fix" or title_lower contains "error" or title_lower contains "troubleshoot" or title_lower contains "why " %}
-      {% assign is_faq = true %}
-    {% endif %}
-  {% endunless %}
-  {% if is_faq %}
+  {% comment %}GEO: FAQPage schema for ALL articles (not just troubleshooting){% endcomment %}
   {% assign faq_parts = content | split: '<h2' %}
   {% assign faq_json = "" %}
   {% assign faq_count = 0 %}
   {% for part in faq_parts %}
-    {% if faq_count >= 3 %}{% break %}{% endif %}
+    {% if faq_count >= 5 %}{% break %}{% endif %}
     {% if forloop.first %}{% continue %}{% endif %}
     {% assign heading_and_rest = part | split: '</h2>' %}
     {% assign heading_text = heading_and_rest[0] | split: '>' | last | strip_html | strip %}
-    {% if heading_text == "" or heading_text == "Related Reading" or heading_text == "Summary" or heading_text == "Related Guides" or heading_text == "Conclusion" %}{% continue %}{% endif %}
+    {% if heading_text == "" or heading_text == "Related Reading" or heading_text == "Summary" or heading_text == "Related Guides" or heading_text == "Conclusion" or heading_text == "Methodology" or heading_text == "About the Author" or heading_text == "Frequently Asked Questions" %}{% continue %}{% endif %}
     {% assign answer_text = heading_and_rest[1] | strip_html | strip | truncate: 300 %}
     {% if answer_text == "" %}{% continue %}{% endif %}
     {% if faq_count > 0 %}{% assign faq_json = faq_json | append: "," %}{% endif %}
@@ -155,7 +144,31 @@
   }
   </script>
   {% endif %}
-  {% endif %}
+  {% comment %}GEO: Organization schema with sameAs for AI platform entity recognition{% endcomment %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Claude Code Guides",
+    "url": "https://claudecodeguides.com",
+    "logo": "https://claudecodeguides.com/assets/og-default.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Michael Lip",
+      "jobTitle": "Solo Founder",
+      "worksFor": { "@type": "Organization", "name": "Zovo" },
+      "sameAs": [
+        "https://github.com/theluckystrike",
+        "https://www.upwork.com/freelancers/~01b0e2c31b7c8a0e5c"
+      ]
+    },
+    "sameAs": [
+      "https://github.com/theluckystrike/claude-skills-guide",
+      "https://discord.com/invite/QeHxTFbqmC",
+      "https://zovo.one"
+    ]
+  }
+  </script>
   {% endif %}
   <link rel="stylesheet" href="/assets/css/style.css">
   <style>

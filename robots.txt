@@ -1,7 +1,50 @@
 User-agent: *
 Allow: /
 
+# GEO: Explicitly allow AI search and citation bots
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
+# GEO: Allow AI training crawlers (builds brand in model weights)
+User-agent: GPTBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Block aggressive crawlers
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
 Sitemap: https://claudecodeguides.com/sitemap-index.xml
+Sitemap: https://claudecodeguides.com/sitemap.xml

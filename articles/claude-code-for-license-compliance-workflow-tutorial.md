@@ -4,7 +4,7 @@ layout: default
 title: "Claude Code for License Compliance Workflow Tutorial"
 description: "Learn how to automate software license compliance using Claude Code. This comprehensive guide covers practical workflows, code examples, and actionable."
 date: 2026-03-15
-last_modified_at: 2026-03-15
+last_modified_at: 2026-04-17
 author: Claude Skills Guide
 permalink: /claude-code-for-license-compliance-workflow-tutorial/
 categories: [guides, workflows]
@@ -12,8 +12,10 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 render_with_liquid: false
+geo_optimized: true
 ---
 
+<!-- answer-capsule -->
 {% raw %}
 License compliance is a critical yet often overlooked aspect of software development. As projects grow and incorporate more open-source dependencies, tracking licenses becomes increasingly complex. This tutorial shows you how to use Claude Code to build an automated license compliance workflow that saves time and reduces legal risk.
 
@@ -60,10 +62,10 @@ $ claude /license-compliance
 You can also configure the skill to accept arguments for different scanning modes:
 
 ```
-$ claude /license-compliance --scan          # Full dependency scan
-$ claude /license-compliance --check react   # Check a single package
-$ claude /license-compliance --report spdx   # Generate SPDX report
-$ claude /license-compliance --ci            # CI-mode with exit codes
+$ claude /license-compliance --scan # Full dependency scan
+$ claude /license-compliance --check react # Check a single package
+$ claude /license-compliance --report spdx # Generate SPDX report
+$ claude /license-compliance --ci # CI-mode with exit codes
 ```
 
 When building the skill prompt, give Claude Code clear instructions about what license categories are acceptable for your project type. A commercial closed-source product has different requirements than a GPL-licensed open source project.
@@ -90,38 +92,38 @@ const fs = require('fs');
 const path = require('path');
 
 function scanNodeDependencies(projectRoot) {
-  const results = [];
+ const results = [];
 
-  // Get the full dependency tree
-  const output = execSync('npm ls --all --json', {
-    cwd: projectRoot,
-    encoding: 'utf8'
-  });
+ // Get the full dependency tree
+ const output = execSync('npm ls --all --json', {
+ cwd: projectRoot,
+ encoding: 'utf8'
+ });
 
-  const tree = JSON.parse(output);
+ const tree = JSON.parse(output);
 
-  function traverseDeps(deps, depth = 0) {
-    if (!deps) return;
-    for (const [name, info] of Object.entries(deps)) {
-      const pkgPath = path.join(projectRoot, 'node_modules', name, 'package.json');
+ function traverseDeps(deps, depth = 0) {
+ if (!deps) return;
+ for (const [name, info] of Object.entries(deps)) {
+ const pkgPath = path.join(projectRoot, 'node_modules', name, 'package.json');
 
-      if (fs.existsSync(pkgPath)) {
-        const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-        results.push({
-          name,
-          version: info.version || pkg.version,
-          license: pkg.license || 'UNKNOWN',
-          depth,
-          homepage: pkg.homepage || ''
-        });
-      }
+ if (fs.existsSync(pkgPath)) {
+ const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
+ results.push({
+ name,
+ version: info.version || pkg.version,
+ license: pkg.license || 'UNKNOWN',
+ depth,
+ homepage: pkg.homepage || ''
+ });
+ }
 
-      traverseDeps(info.dependencies, depth + 1);
-    }
-  }
+ traverseDeps(info.dependencies, depth + 1);
+ }
+ }
 
-  traverseDeps(tree.dependencies);
-  return results;
+ traverseDeps(tree.dependencies);
+ return results;
 }
 ```
 
@@ -143,48 +145,48 @@ import subprocess
 import json
 
 def scan_python_dependencies():
-    results = []
+ results = []
 
-    # Get installed packages
-    installed = subprocess.run(
-        ['pip', 'list', '--format=json'],
-        capture_output=True, text=True
-    )
-    packages = json.loads(installed.stdout)
+ # Get installed packages
+ installed = subprocess.run(
+ ['pip', 'list', '--format=json'],
+ capture_output=True, text=True
+ )
+ packages = json.loads(installed.stdout)
 
-    for pkg in packages:
-        name = pkg['name']
-        version = pkg['version']
+ for pkg in packages:
+ name = pkg['name']
+ version = pkg['version']
 
-        try:
-            meta = importlib.metadata.metadata(name)
-            license_val = meta.get('License', 'UNKNOWN')
-            classifiers = meta.get_all('Classifier') or []
+ try:
+ meta = importlib.metadata.metadata(name)
+ license_val = meta.get('License', 'UNKNOWN')
+ classifiers = meta.get_all('Classifier') or []
 
-            # Extract license from classifiers if License field is empty
-            if license_val == 'UNKNOWN' or not license_val:
-                for classifier in classifiers:
-                    if classifier.startswith('License ::'):
-                        parts = classifier.split(' :: ')
-                        if len(parts) >= 3:
-                            license_val = parts[-1]
-                            break
+ # Extract license from classifiers if License field is empty
+ if license_val == 'UNKNOWN' or not license_val:
+ for classifier in classifiers:
+ if classifier.startswith('License ::'):
+ parts = classifier.split(' :: ')
+ if len(parts) >= 3:
+ license_val = parts[-1]
+ break
 
-            results.append({
-                'name': name,
-                'version': version,
-                'license': license_val,
-                'home_page': meta.get('Home-page', '')
-            })
-        except importlib.metadata.PackageNotFoundError:
-            results.append({
-                'name': name,
-                'version': version,
-                'license': 'UNKNOWN',
-                'home_page': ''
-            })
+ results.append({
+ 'name': name,
+ 'version': version,
+ 'license': license_val,
+ 'home_page': meta.get('Home-page', '')
+ })
+ except importlib.metadata.PackageNotFoundError:
+ results.append({
+ 'name': name,
+ 'version': version,
+ 'license': 'UNKNOWN',
+ 'home_page': ''
+ })
 
-    return results
+ return results
 ```
 
 For Go projects, you can scan using `go list`:
@@ -203,28 +205,28 @@ Create a JSON or YAML file to track licenses:
 
 ```json
 {
-  "dependencies": [
-    {
-      "name": "express",
-      "version": "4.18.2",
-      "license": "MIT",
-      "category": "permissive"
-    },
-    {
-      "name": "react",
-      "version": "18.2.0",
-      "license": "MIT",
-      "category": "permissive"
-    },
-    {
-      "name": "lodash",
-      "version": "4.17.21",
-      "license": "MIT",
-      "category": "permissive"
-    }
-  ],
-  "conflicts": [],
-  "action_required": []
+ "dependencies": [
+ {
+ "name": "express",
+ "version": "4.18.2",
+ "license": "MIT",
+ "category": "permissive"
+ },
+ {
+ "name": "react",
+ "version": "18.2.0",
+ "license": "MIT",
+ "category": "permissive"
+ },
+ {
+ "name": "lodash",
+ "version": "4.17.21",
+ "license": "MIT",
+ "category": "permissive"
+ }
+ ],
+ "conflicts": [],
+ "action_required": []
 }
 ```
 
@@ -232,38 +234,38 @@ A more complete inventory schema should also capture approval status, review dat
 
 ```json
 {
-  "project": "my-commercial-app",
-  "project_license": "PROPRIETARY",
-  "last_scanned": "2026-03-15T14:32:00Z",
-  "policy": {
-    "allowed": ["MIT", "ISC", "BSD-2-Clause", "BSD-3-Clause", "Apache-2.0"],
-    "review_required": ["LGPL-2.1", "LGPL-3.0", "MPL-2.0"],
-    "forbidden": ["GPL-2.0", "GPL-3.0", "AGPL-3.0"]
-  },
-  "dependencies": [
-    {
-      "name": "axios",
-      "version": "1.6.0",
-      "license": "MIT",
-      "category": "permissive",
-      "approved": true,
-      "approved_by": "legal-team",
-      "approved_date": "2026-01-10"
-    },
-    {
-      "name": "some-lgpl-utility",
-      "version": "2.1.0",
-      "license": "LGPL-3.0",
-      "category": "weak-copyleft",
-      "approved": true,
-      "approved_by": "cto",
-      "approved_date": "2026-02-15",
-      "notes": "Used as a dynamically linked library only. Compliant with LGPL terms.",
-      "exception_ticket": "LEGAL-42"
-    }
-  ],
-  "conflicts": [],
-  "action_required": []
+ "project": "my-commercial-app",
+ "project_license": "PROPRIETARY",
+ "last_scanned": "2026-03-15T14:32:00Z",
+ "policy": {
+ "allowed": ["MIT", "ISC", "BSD-2-Clause", "BSD-3-Clause", "Apache-2.0"],
+ "review_required": ["LGPL-2.1", "LGPL-3.0", "MPL-2.0"],
+ "forbidden": ["GPL-2.0", "GPL-3.0", "AGPL-3.0"]
+ },
+ "dependencies": [
+ {
+ "name": "axios",
+ "version": "1.6.0",
+ "license": "MIT",
+ "category": "permissive",
+ "approved": true,
+ "approved_by": "legal-team",
+ "approved_date": "2026-01-10"
+ },
+ {
+ "name": "some-lgpl-utility",
+ "version": "2.1.0",
+ "license": "LGPL-3.0",
+ "category": "weak-copyleft",
+ "approved": true,
+ "approved_by": "cto",
+ "approved_date": "2026-02-15",
+ "notes": "Used as a dynamically linked library only. Compliant with LGPL terms.",
+ "exception_ticket": "LEGAL-42"
+ }
+ ],
+ "conflicts": [],
+ "action_required": []
 }
 ```
 
@@ -299,49 +301,49 @@ When Claude Code scans your dependencies, it should flag issues:
 ```
 Example conflict detection output:
 Package 'some-gpl-package' (v1.0.0) uses GPL-3.0 license
-  This may conflict with proprietary components in your project
-  Consider: finding an MIT-licensed alternative or contacting the maintainer
+ This may conflict with proprietary components in your project
+ Consider: finding an MIT-licensed alternative or contacting the maintainer
 ```
 
 A more sophisticated conflict detection approach uses a compatibility matrix that Claude Code can reason against:
 
 ```python
 COPYLEFT_LICENSES = {
-    'GPL-2.0', 'GPL-2.0-only', 'GPL-2.0-or-later',
-    'GPL-3.0', 'GPL-3.0-only', 'GPL-3.0-or-later',
-    'AGPL-3.0', 'AGPL-3.0-only', 'AGPL-3.0-or-later',
+ 'GPL-2.0', 'GPL-2.0-only', 'GPL-2.0-or-later',
+ 'GPL-3.0', 'GPL-3.0-only', 'GPL-3.0-or-later',
+ 'AGPL-3.0', 'AGPL-3.0-only', 'AGPL-3.0-or-later',
 }
 
 WEAK_COPYLEFT = {
-    'LGPL-2.0', 'LGPL-2.1', 'LGPL-3.0',
-    'MPL-2.0', 'EUPL-1.2'
+ 'LGPL-2.0', 'LGPL-2.1', 'LGPL-3.0',
+ 'MPL-2.0', 'EUPL-1.2'
 }
 
 PERMISSIVE = {
-    'MIT', 'ISC', 'BSD-2-Clause', 'BSD-3-Clause',
-    'Apache-2.0', 'Unlicense', '0BSD', 'CC0-1.0'
+ 'MIT', 'ISC', 'BSD-2-Clause', 'BSD-3-Clause',
+ 'Apache-2.0', 'Unlicense', '0BSD', 'CC0-1.0'
 }
 
 def check_conflict(dep_license, project_type):
-    conflicts = []
+ conflicts = []
 
-    if project_type == 'proprietary':
-        if dep_license in COPYLEFT_LICENSES:
-            conflicts.append({
-                'severity': 'CRITICAL',
-                'license': dep_license,
-                'reason': 'Strong copyleft license incompatible with proprietary software',
-                'action': 'Remove dependency or seek commercial license'
-            })
-        elif dep_license in WEAK_COPYLEFT:
-            conflicts.append({
-                'severity': 'WARNING',
-                'license': dep_license,
-                'reason': 'Weak copyleft may have obligations depending on usage',
-                'action': 'Review usage pattern and consult legal team'
-            })
+ if project_type == 'proprietary':
+ if dep_license in COPYLEFT_LICENSES:
+ conflicts.append({
+ 'severity': 'CRITICAL',
+ 'license': dep_license,
+ 'reason': 'Strong copyleft license incompatible with proprietary software',
+ 'action': 'Remove dependency or seek commercial license'
+ })
+ elif dep_license in WEAK_COPYLEFT:
+ conflicts.append({
+ 'severity': 'WARNING',
+ 'license': dep_license,
+ 'reason': 'Weak copyleft may have obligations depending on usage',
+ 'action': 'Review usage pattern and consult legal team'
+ })
 
-    return conflicts
+ return conflicts
 ```
 
 Real-world scenarios where this detection saves significant headaches include:
@@ -427,18 +429,18 @@ name: License Compliance Check
 on: [push, pull_request]
 
 jobs:
-  license-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run License Compliance
-        run: |
-          claude /license-compliance --scan
-      - name: Upload Results
-        uses: actions/upload-artifact@v3
-        with:
-          name: license-report
-          path: license-report.json
+ license-check:
+ runs-on: ubuntu-latest
+ steps:
+ - uses: actions/checkout@v3
+ - name: Run License Compliance
+ run: |
+ claude /license-compliance --scan
+ - name: Upload Results
+ uses: actions/upload-artifact@v3
+ with:
+ name: license-report
+ path: license-report.json
 ```
 
 A more solid CI pipeline also fails the build when policy violations are detected:
@@ -446,44 +448,44 @@ A more solid CI pipeline also fails the build when policy violations are detecte
 ```yaml
 name: License Compliance Check
 on:
-  push:
-    branches: [main, develop]
-  pull_request:
-    paths:
-      - 'package.json'
-      - 'package-lock.json'
-      - 'requirements.txt'
-      - 'pyproject.toml'
-      - 'go.mod'
+ push:
+ branches: [main, develop]
+ pull_request:
+ paths:
+ - 'package.json'
+ - 'package-lock.json'
+ - 'requirements.txt'
+ - 'pyproject.toml'
+ - 'go.mod'
 
 jobs:
-  license-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+ license-check:
+ runs-on: ubuntu-latest
+ steps:
+ - uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+ - name: Setup Node.js
+ uses: actions/setup-node@v3
+ with:
+ node-version: '20'
 
-      - name: Install dependencies
-        run: npm ci
+ - name: Install dependencies
+ run: npm ci
 
-      - name: Run license scan
-        run: npx license-checker --production --json --out license-report.json
+ - name: Run license scan
+ run: npx license-checker --production --json --out license-report.json
 
-      - name: Check for policy violations
-        run: |
-          node scripts/check-license-policy.js license-report.json
+ - name: Check for policy violations
+ run: |
+ node scripts/check-license-policy.js license-report.json
 
-      - name: Upload license report
-        uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: license-report-${{ github.sha }}
-          path: license-report.json
-          retention-days: 90
+ - name: Upload license report
+ uses: actions/upload-artifact@v3
+ if: always()
+ with:
+ name: license-report-${{ github.sha }}
+ path: license-report.json
+ retention-days: 90
 ```
 
 The `check-license-policy.js` script that Claude Code can help you write:
@@ -500,26 +502,26 @@ let violations = 0;
 let warnings = 0;
 
 for (const [pkg, info] of Object.entries(report)) {
-  const licenses = info.licenses;
+ const licenses = info.licenses;
 
-  if (FORBIDDEN.some(f => licenses.includes(f))) {
-    console.error(`FAIL: ${pkg} uses forbidden license: ${licenses}`);
-    violations++;
-  } else if (REVIEW_REQUIRED.some(r => licenses.includes(r))) {
-    console.warn(`WARN: ${pkg} uses license requiring review: ${licenses}`);
-    warnings++;
-  }
+ if (FORBIDDEN.some(f => licenses.includes(f))) {
+ console.error(`FAIL: ${pkg} uses forbidden license: ${licenses}`);
+ violations++;
+ } else if (REVIEW_REQUIRED.some(r => licenses.includes(r))) {
+ console.warn(`WARN: ${pkg} uses license requiring review: ${licenses}`);
+ warnings++;
+ }
 }
 
 console.log(`\nScan complete: ${violations} violations, ${warnings} warnings`);
 
 if (violations > 0) {
-  console.error('\nBuild failed: license policy violations found.');
-  process.exit(1);
+ console.error('\nBuild failed: license policy violations found.');
+ process.exit(1);
 }
 
 if (warnings > 0) {
-  console.warn('\nWarnings found: manual review required before merging.');
+ console.warn('\nWarnings found: manual review required before merging.');
 }
 ```
 
@@ -533,9 +535,9 @@ echo "Running license compliance check..."
 claude /license-compliance --ci
 
 if [ $? -ne 0 ]; then
-  echo "License compliance check failed. Commit blocked."
-  echo "Run 'claude /license-compliance' for details."
-  exit 1
+ echo "License compliance check failed. Commit blocked."
+ echo "Run 'claude /license-compliance' for details."
+ exit 1
 fi
 ```
 
@@ -607,3 +609,34 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
+
+
+
+---
+
+## Frequently Asked Questions
+
+### What is Understanding License Compliance Challenges?
+
+See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+
+### What is License Categories You Need to Understand?
+
+See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+
+### What is Setting Up Your License Compliance Skill?
+
+See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+
+### What is Automated Dependency Scanning?
+
+See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+
+### What is Building a License Inventory Database?
+
+See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+
+
+## Methodology
+
+This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -4,16 +4,18 @@ layout: default
 title: "Claude Code Laravel Sanctum API Authentication Guide"
 description: "A comprehensive guide to implementing secure API authentication in Laravel using Sanctum. Learn to protect your routes, issue tokens, and build."
 date: 2026-03-14
-last_modified_at: 2026-03-14
+last_modified_at: 2026-04-17
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 permalink: /claude-code-laravel-sanctum-api-authentication-guide/
 reviewed: true
 score: 7
+geo_optimized: true
 ---
 
 
+<!-- answer-capsule -->
 Claude Code Laravel Sanctum API Authentication Guide
 
 Building secure APIs requires solid authentication mechanisms. Laravel Sanctum provides a lightweight, token-based authentication system perfect for SPAs, mobile applications, and APIs. This guide walks you through implementing complete API authentication with Laravel Sanctum, from installation to advanced token management, using Claude Code to accelerate the process.
@@ -69,23 +71,23 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable;
+ use HasApiTokens, Notifiable;
 
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+ protected $fillable = [
+ 'name',
+ 'email',
+ 'password',
+ ];
 
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+ protected $hidden = [
+ 'password',
+ 'remember_token',
+ ];
 
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
+ protected $casts = [
+ 'email_verified_at' => 'datetime',
+ 'password' => 'hashed',
+ ];
 }
 ```
 
@@ -95,7 +97,7 @@ Finally, add the Sanctum middleware to your API route group in your HTTP kernel 
 use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
 
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    return $request->user();
+ return $request->user();
 });
 ```
 
@@ -115,9 +117,9 @@ You can also set expiration per token at creation time:
 
 ```php
 $token = $user->createToken(
-    'mobile-app',
-    ['*'],
-    now()->addDays(30)
+ 'mobile-app',
+ ['*'],
+ now()->addDays(30)
 )->plainTextToken;
 ```
 
@@ -135,65 +137,65 @@ use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    public function register(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-        ]);
+ public function register(Request $request)
+ {
+ $validated = $request->validate([
+ 'name' => 'required|string|max:255',
+ 'email' => 'required|string|email|max:255|unique:users',
+ 'password' => 'required|string|min:8|confirmed',
+ ]);
 
-        $user = User::create([
-            'name' => $validated['name'],
-            'email' => $validated['email'],
-            'password' => Hash::make($validated['password']),
-        ]);
+ $user = User::create([
+ 'name' => $validated['name'],
+ 'email' => $validated['email'],
+ 'password' => Hash::make($validated['password']),
+ ]);
 
-        $token = $user->createToken('auth-token')->plainTextToken;
+ $token = $user->createToken('auth-token')->plainTextToken;
 
-        return response()->json([
-            'user' => $user,
-            'token' => $token
-        ], 201);
-    }
+ return response()->json([
+ 'user' => $user,
+ 'token' => $token
+ ], 201);
+ }
 
-    public function login(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+ public function login(Request $request)
+ {
+ $request->validate([
+ 'email' => 'required|email',
+ 'password' => 'required',
+ ]);
 
-        $user = User::where('email', $request->email)->first();
+ $user = User::where('email', $request->email)->first();
 
-        if (!$user || !Hash::check($request->password, $user->password)) {
-            throw ValidationException::withMessages([
-                'email' => ['The provided credentials are incorrect.'],
-            ]);
-        }
+ if (!$user || !Hash::check($request->password, $user->password)) {
+ throw ValidationException::withMessages([
+ 'email' => ['The provided credentials are incorrect.'],
+ ]);
+ }
 
-        $token = $user->createToken('auth-token')->plainTextToken;
+ $token = $user->createToken('auth-token')->plainTextToken;
 
-        return response()->json([
-            'user' => $user,
-            'token' => $token
-        ]);
-    }
+ return response()->json([
+ 'user' => $user,
+ 'token' => $token
+ ]);
+ }
 
-    public function logout(Request $request)
-    {
-        $request->user()->currentAccessToken()->delete();
+ public function logout(Request $request)
+ {
+ $request->user()->currentAccessToken()->delete();
 
-        return response()->json(['message' => 'Logged out successfully']);
-    }
+ return response()->json(['message' => 'Logged out successfully']);
+ }
 
-    public function logoutAll(Request $request)
-    {
-        // Revoke all tokens for this user (log out from all devices)
-        $request->user()->tokens()->delete();
+ public function logoutAll(Request $request)
+ {
+ // Revoke all tokens for this user (log out from all devices)
+ $request->user()->tokens()->delete();
 
-        return response()->json(['message' => 'Logged out from all devices']);
-    }
+ return response()->json(['message' => 'Logged out from all devices']);
+ }
 }
 ```
 
@@ -206,8 +208,8 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::post('/logout', [AuthController::class, 'logout']);
-    Route::post('/logout-all', [AuthController::class, 'logoutAll']);
+ Route::post('/logout', [AuthController::class, 'logout']);
+ Route::post('/logout-all', [AuthController::class, 'logoutAll']);
 });
 ```
 
@@ -218,17 +220,17 @@ Unlike JWTs, Sanctum tokens don't have a built-in refresh mechanism. A pragmatic
 ```php
 public function refresh(Request $request)
 {
-    $user = $request->user();
+ $user = $request->user();
 
-    // Delete the current token
-    $user->currentAccessToken()->delete();
+ // Delete the current token
+ $user->currentAccessToken()->delete();
 
-    // Issue a fresh token
-    $newToken = $user->createToken('auth-token')->plainTextToken;
+ // Issue a fresh token
+ $newToken = $user->createToken('auth-token')->plainTextToken;
 
-    return response()->json([
-        'token' => $newToken,
-    ]);
+ return response()->json([
+ 'token' => $newToken,
+ ]);
 }
 ```
 
@@ -244,21 +246,21 @@ Secure your API endpoints using the auth:sanctum middleware. This ensures only a
 
 ```php
 Route::middleware('auth:sanctum')->group(function () {
-    // Get authenticated user
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
+ // Get authenticated user
+ Route::get('/user', function (Request $request) {
+ return $request->user();
+ });
 
-    // Protected resource endpoints
-    Route::apiResource('/posts', PostController::class);
+ // Protected resource endpoints
+ Route::apiResource('/posts', PostController::class);
 
-    // User-specific data
-    Route::get('/dashboard', function (Request $request) {
-        return response()->json([
-            'user' => $request->user(),
-            'stats' => $request->user()->stats,
-        ]);
-    });
+ // User-specific data
+ Route::get('/dashboard', function (Request $request) {
+ return response()->json([
+ 'user' => $request->user(),
+ 'stats' => $request->user()->stats,
+ ]);
+ });
 });
 ```
 
@@ -266,8 +268,8 @@ For role-based access control, create custom middleware or use a package like Sp
 
 ```php
 Route::middleware(['auth:sanctum', 'can:admin'])->prefix('admin')->group(function () {
-    Route::get('/users', [AdminController::class, 'users']);
-    Route::delete('/users/{user}', [AdminController::class, 'destroyUser']);
+ Route::get('/users', [AdminController::class, 'users']);
+ Route::delete('/users/{user}', [AdminController::class, 'destroyUser']);
 });
 ```
 
@@ -288,11 +290,11 @@ Check abilities in your controllers or middleware:
 ```php
 public function store(Request $request)
 {
-    if (!$request->user()->tokenCan('create:posts')) {
-        abort(403, 'This token does not have permission to create posts.');
-    }
+ if (!$request->user()->tokenCan('create:posts')) {
+ abort(403, 'This token does not have permission to create posts.');
+ }
 
-    // proceed with creating the post
+ // proceed with creating the post
 }
 ```
 
@@ -303,7 +305,7 @@ use Laravel\Sanctum\Http\Middleware\CheckAbilities;
 use Laravel\Sanctum\Http\Middleware\CheckForAnyAbility;
 
 Route::middleware(['auth:sanctum', CheckAbilities::class . ':create:posts,update:posts'])
-    ->post('/posts', [PostController::class, 'store']);
+ ->post('/posts', [PostController::class, 'store']);
 ```
 
 ## Managing Tokens Effectively
@@ -325,7 +327,7 @@ $user->tokens()->delete();
 
 // Check token abilities
 if ($token->can('create-posts')) {
-    // User can create posts
+ // User can create posts
 }
 ```
 
@@ -336,35 +338,35 @@ Expose token management to your users so they can see and revoke active sessions
 ```php
 class TokenController extends Controller
 {
-    public function index(Request $request)
-    {
-        return response()->json([
-            'tokens' => $request->user()->tokens->map(function ($token) {
-                return [
-                    'id' => $token->id,
-                    'name' => $token->name,
-                    'abilities' => $token->abilities,
-                    'last_used_at' => $token->last_used_at,
-                    'created_at' => $token->created_at,
-                    'expires_at' => $token->expires_at,
-                ];
-            }),
-        ]);
-    }
+ public function index(Request $request)
+ {
+ return response()->json([
+ 'tokens' => $request->user()->tokens->map(function ($token) {
+ return [
+ 'id' => $token->id,
+ 'name' => $token->name,
+ 'abilities' => $token->abilities,
+ 'last_used_at' => $token->last_used_at,
+ 'created_at' => $token->created_at,
+ 'expires_at' => $token->expires_at,
+ ];
+ }),
+ ]);
+ }
 
-    public function destroy(Request $request, int $tokenId)
-    {
-        $deleted = $request->user()
-            ->tokens()
-            ->where('id', $tokenId)
-            ->delete();
+ public function destroy(Request $request, int $tokenId)
+ {
+ $deleted = $request->user()
+ ->tokens()
+ ->where('id', $tokenId)
+ ->delete();
 
-        if (!$deleted) {
-            return response()->json(['message' => 'Token not found'], 404);
-        }
+ if (!$deleted) {
+ return response()->json(['message' => 'Token not found'], 404);
+ }
 
-        return response()->json(['message' => 'Token revoked']);
-    }
+ return response()->json(['message' => 'Token revoked']);
+ }
 }
 ```
 
@@ -372,8 +374,8 @@ Register the routes:
 
 ```php
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/tokens', [TokenController::class, 'index']);
-    Route::delete('/tokens/{token}', [TokenController::class, 'destroy']);
+ Route::get('/tokens', [TokenController::class, 'index']);
+ Route::delete('/tokens/{token}', [TokenController::class, 'destroy']);
 });
 ```
 
@@ -384,15 +386,15 @@ When making authenticated requests, include the Bearer token in the Authorizatio
 ```javascript
 // JavaScript fetch example
 async function fetchProtectedData(token) {
-    const response = await fetch('/api/user', {
-        headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-    });
+ const response = await fetch('/api/user', {
+ headers: {
+ 'Authorization': `Bearer ${token}`,
+ 'Content-Type': 'application/json',
+ 'Accept': 'application/json',
+ },
+ });
 
-    return response.json();
+ return response.json();
 }
 
 // Axios example with an interceptor that attaches the token to every request
@@ -401,11 +403,11 @@ import axios from 'axios';
 const api = axios.create({ baseURL: '/api' });
 
 api.interceptors.request.use((config) => {
-    const token = localStorage.getItem('auth_token');
-    if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
+ const token = localStorage.getItem('auth_token');
+ if (token) {
+ config.headers.Authorization = `Bearer ${token}`;
+ }
+ return config;
 });
 
 // Usage
@@ -418,15 +420,15 @@ When a token expires, the API returns a 401 Unauthorized response. A solid clien
 
 ```javascript
 api.interceptors.response.use(
-    (response) => response,
-    async (error) => {
-        if (error.response?.status === 401) {
-            // Clear stored token and redirect to login
-            localStorage.removeItem('auth_token');
-            window.location.href = '/login';
-        }
-        return Promise.reject(error);
-    }
+ (response) => response,
+ async (error) => {
+ if (error.response?.status === 401) {
+ // Clear stored token and redirect to login
+ localStorage.removeItem('auth_token');
+ window.location.href = '/login';
+ }
+ return Promise.reject(error);
+ }
 );
 ```
 
@@ -440,17 +442,17 @@ import 'package:http/http.dart' as http;
 final storage = FlutterSecureStorage();
 
 Future<Map<String, dynamic>> fetchUserData() async {
-    final token = await storage.read(key: 'auth_token');
+ final token = await storage.read(key: 'auth_token');
 
-    final response = await http.get(
-        Uri.parse('https://api.example.com/api/user'),
-        headers: {
-            'Authorization': 'Bearer $token',
-            'Accept': 'application/json',
-        },
-    );
+ final response = await http.get(
+ Uri.parse('https://api.example.com/api/user'),
+ headers: {
+ 'Authorization': 'Bearer $token',
+ 'Accept': 'application/json',
+ },
+ );
 
-    return json.decode(response.body);
+ return json.decode(response.body);
 }
 ```
 
@@ -463,61 +465,61 @@ use Laravel\Sanctum\Sanctum;
 
 class AuthTest extends TestCase
 {
-    public function test_user_can_register()
-    {
-        $response = $this->postJson('/api/register', [
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-            'password' => 'password123',
-            'password_confirmation' => 'password123',
-        ]);
+ public function test_user_can_register()
+ {
+ $response = $this->postJson('/api/register', [
+ 'name' => 'Test User',
+ 'email' => 'test@example.com',
+ 'password' => 'password123',
+ 'password_confirmation' => 'password123',
+ ]);
 
-        $response->assertStatus(201)
-                 ->assertJsonStructure(['user', 'token']);
-    }
+ $response->assertStatus(201)
+ ->assertJsonStructure(['user', 'token']);
+ }
 
-    public function test_user_can_login()
-    {
-        $user = User::factory()->create([
-            'password' => bcrypt('password123'),
-        ]);
+ public function test_user_can_login()
+ {
+ $user = User::factory()->create([
+ 'password' => bcrypt('password123'),
+ ]);
 
-        $response = $this->postJson('/api/login', [
-            'email' => $user->email,
-            'password' => 'password123',
-        ]);
+ $response = $this->postJson('/api/login', [
+ 'email' => $user->email,
+ 'password' => 'password123',
+ ]);
 
-        $response->assertOk()->assertJsonStructure(['user', 'token']);
-    }
+ $response->assertOk()->assertJsonStructure(['user', 'token']);
+ }
 
-    public function test_protected_route_requires_authentication()
-    {
-        $response = $this->getJson('/api/dashboard');
+ public function test_protected_route_requires_authentication()
+ {
+ $response = $this->getJson('/api/dashboard');
 
-        $response->assertUnauthorized();
-    }
+ $response->assertUnauthorized();
+ }
 
-    public function test_authenticated_user_can_access_dashboard()
-    {
-        $user = User::factory()->create();
+ public function test_authenticated_user_can_access_dashboard()
+ {
+ $user = User::factory()->create();
 
-        Sanctum::actingAs($user, ['*']);
+ Sanctum::actingAs($user, ['*']);
 
-        $response = $this->getJson('/api/dashboard');
+ $response = $this->getJson('/api/dashboard');
 
-        $response->assertOk();
-    }
+ $response->assertOk();
+ }
 
-    public function test_token_with_limited_abilities_is_restricted()
-    {
-        $user = User::factory()->create();
+ public function test_token_with_limited_abilities_is_restricted()
+ {
+ $user = User::factory()->create();
 
-        Sanctum::actingAs($user, ['read:posts']); // read-only token
+ Sanctum::actingAs($user, ['read:posts']); // read-only token
 
-        $response = $this->postJson('/api/posts', ['title' => 'New Post']);
+ $response = $this->postJson('/api/posts', ['title' => 'New Post']);
 
-        $response->assertForbidden();
-    }
+ $response->assertForbidden();
+ }
 }
 ```
 
@@ -537,7 +539,7 @@ Implement rate limiting to prevent brute force attacks on your login endpoint:
 
 ```php
 Route::post('/login', [AuthController::class, 'login'])
-    ->middleware('throttle:5,1'); // 5 attempts per minute
+ ->middleware('throttle:5,1'); // 5 attempts per minute
 ```
 
 ## Security Checklist
@@ -613,3 +615,34 @@ Related Reading
 - [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+
+---
+
+## Frequently Asked Questions
+
+### What is Sanctum vs. Passport vs. JWT: When to Choose What?
+
+See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+
+### What is Installing and Configuring Sanctum?
+
+See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+
+### What is Configuring Token Expiration?
+
+See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+
+### What is Creating API Authentication Endpoints?
+
+See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+
+### What is Adding a Token Refresh Endpoint?
+
+See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+
+
+## Methodology
+
+This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

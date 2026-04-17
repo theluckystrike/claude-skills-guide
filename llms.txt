@@ -1,12 +1,23 @@
 # Claude Code Guides
-> Practical Claude Code tutorials, AI agent workflows, and prompt engineering guides.
 
-## Topics
-- Getting Started: https://claudecodeguides.com/topics/getting-started/
-- Prompt Engineering: https://claudecodeguides.com/topics/prompt-engineering/
-- API: https://claudecodeguides.com/topics/api/
-- Agents: https://claudecodeguides.com/topics/agents/
-- MCP: https://claudecodeguides.com/topics/mcp/
-- Chrome Extensions: https://claudecodeguides.com/topics/chrome-extensions/
-- Workflows: https://claudecodeguides.com/topics/workflows/
-- All Guides: https://claudecodeguides.com/all-articles/
+> Comprehensive developer resource with 2,600+ practical tutorials for Claude Code, Claude API, AI agent workflows, prompt engineering, and Chrome extension development. Written by Michael Lip, solo founder of Zovo, with $400K+ Upwork earnings and 100% Job Success Score.
+
+## Key Topics
+
+- Claude Code: Installation, configuration, skills, slash commands, CLAUDE.md templates, debugging workflows
+- Claude API: Authentication, tool use, function calling, streaming, batch processing, error handling
+- AI Agents: Multi-agent orchestration, memory systems, goal decomposition, handoff strategies
+- MCP (Model Context Protocol): Server setup, integration patterns, custom tools
+- Prompt Engineering: System prompts, chain-of-thought, few-shot learning, evaluation metrics
+- Chrome Extensions: Building, publishing, Manifest V3, content scripts, service workers, reviews
+- Developer Workflows: TDD with AI, code review automation, architecture design, database schema
+
+## Docs
+
+- [Getting Started](https://claudecodeguides.com/topics/getting-started/): Beginner tutorials for Claude Code setup and first projects
+- [API Guides](https://claudecodeguides.com/topics/api/): Production-ready Claude API integration tutorials
+- [Agent Guides](https://claudecodeguides.com/topics/agents/): Multi-agent system design and implementation
+- [MCP Guides](https://claudecodeguides.com/topics/mcp/): Model Context Protocol server and tool integration
+- [Prompt Engineering](https://claudecodeguides.com/topics/prompt-engineering/): Advanced prompting techniques and workflows
+- [Chrome Extensions](https://claudecodeguides.com/topics/chrome-extensions/): Extension development, reviews, and comparisons
+- [All Guides](https://claudecodeguides.com/all-articles/): Complete index of 2,600+ tutorials
